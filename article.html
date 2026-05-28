@@ -40,6 +40,10 @@
             class="text-xs px-2 py-1 rounded border hover:bg-slate-50 hidden lg:inline-flex">
             <span x-text="mode === 'compare' ? '🔄 切换' : '↔ 对照'"></span>
           </button>
+          <button @click="openPolish()"
+            class="text-xs px-2 py-1 rounded bg-amber-100 text-amber-800 hover:bg-amber-200 border border-amber-300">
+            <span x-text="polishStatus"></span>
+          </button>
         </div>
       </div>
     </header>
@@ -324,6 +328,55 @@
           </template>
         </div>
       </div>
+
+      <!-- 润色编辑模式 -->
+      <div x-show="mode === 'polish'" class="reader-grid h-full">
+        <!-- 左：原译文参考 -->
+        <div class="reader-pane cn">
+          <div class="w-full py-4">
+            <div class="text-xs text-slate-500 mb-2">📖 参考原译文（只读）</div>
+            <h2 class="text-xl font-bold mb-1" x-text="article?.cn_title"></h2>
+            <p class="text-sm text-slate-500 italic mb-4" x-text="article?.cn_subtitle || article?.summary || ''"></p>
+            <template x-for="(p, idx) in article?.paragraphs || []" :key="idx">
+              <p class="mb-3 leading-relaxed text-sm text-slate-700" x-text="p.cn"></p>
+            </template>
+          </div>
+        </div>
+        <!-- 右：你的润色输入 -->
+        <div class="reader-pane en bg-amber-50/30">
+          <div class="w-full py-4">
+            <div class="flex items-center justify-between mb-3 sticky top-0 bg-amber-50/95 py-2 -my-2 z-10">
+              <div class="text-sm font-semibold text-amber-900">✏️ 我的润色版本</div>
+              <div class="flex items-center gap-2">
+                <span x-show="polishDirty" class="text-xs text-orange-600">未保存</span>
+                <span x-show="polishSaving" class="text-xs text-blue-600">保存中...</span>
+                <span x-show="polishSavedAt" class="text-xs text-slate-500" x-text="`已保存 ${polishSavedAt}`"></span>
+                <button @click="resetPolishFromTranslation()"
+                  class="text-xs px-2 py-1 rounded border hover:bg-amber-100 text-slate-600"
+                  title="用最新译文重置输入区（当前修改会丢失）">↻ 重置</button>
+                <button @click="savePolish(true)" :disabled="polishSaving"
+                  class="text-xs px-2 py-1 rounded bg-amber-600 text-white hover:bg-amber-700 disabled:bg-slate-300">
+                  💾 保存
+                </button>
+              </div>
+            </div>
+
+            <label class="block text-xs font-medium mb-1 text-slate-600">标题</label>
+            <input type="text" x-model="polishData.title" @input="onPolishInput()"
+              class="w-full px-3 py-2 border rounded mb-3 text-base font-bold">
+
+            <label class="block text-xs font-medium mb-1 text-slate-600">副标题 / 摘要</label>
+            <input type="text" x-model="polishData.subtitle" @input="onPolishInput()"
+              class="w-full px-3 py-2 border rounded mb-3 text-sm italic">
+
+            <label class="block text-xs font-medium mb-1 text-slate-600">正文（每段一行，空行区隔）</label>
+            <textarea x-model="polishData.body" @input="onPolishInput()"
+              class="w-full px-3 py-2 border rounded text-sm leading-relaxed font-mono"
+              rows="30"
+              placeholder="每段译文一行，中间用空行隔开..."></textarea>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -372,6 +425,15 @@
         showImagesPanel: true,
         imageDownloading: false,
         imageProgress: 0,
+        // ---- 润色编辑 ----
+        polishData: { title: '', subtitle: '', body: '', updated_at: null },
+        polishDirty: false,
+        polishSaving: false,
+        polishSavedAt: '',
+        polishStatus: '✏️ 润色',
+        polishExists: false,
+        polishSaveTimer: null,
+
 
         async init() {
           // 主题图标
@@ -399,6 +461,8 @@
           }
           // 加载反馈
           this.loadFeedback();
+          // 加载润色版本
+          this.loadPolish();
                     // 预加载词库
           try {
             const dictRes = await fetch('data/dict.json?t=' + Date.now());
@@ -938,6 +1002,123 @@
             this.flash(`⚠️ 已下载 ${okCount} 张，${failCount} 张被CORS阻止`, 5000);
           } else {
             this.flash(`✅ 已下载 ${okCount} 张图片`);
+          }
+        },
+
+        // ---- 润色 ----
+        async loadPolish() {
+          const params = new URLSearchParams(location.search);
+          const date = params.get('date');
+          const id = params.get('id');
+          if (!date || !id) return;
+
+          // 用文件名 = ID + cn_title 推断
+          const filename = this.makePolishFilename();
+          const url = `data/${date}/polished/${filename}.json?t=${Date.now()}`;
+          try {
+            const res = await fetch(url);
+            if (res.ok) {
+              const d = await res.json();
+              this.polishData = {
+                title: d.title || '',
+                subtitle: d.subtitle || '',
+                body: d.body || '',
+                updated_at: d.updated_at || null,
+              };
+              this.polishExists = true;
+              this.polishStatus = '✏️ 已润色';
+              if (d.updated_at) {
+                this.polishSavedAt = this.fmtTime(d.updated_at);
+              }
+            } else {
+              // 没润色版 → 用翻译版预填
+              this.fillPolishFromTranslation();
+              this.polishExists = false;
+              this.polishStatus = '✏️ 润色';
+            }
+          } catch (e) {
+            this.fillPolishFromTranslation();
+          }
+        },
+
+        fillPolishFromTranslation() {
+          if (!this.article) return;
+          this.polishData = {
+            title: this.article.cn_title || '',
+            subtitle: this.article.cn_subtitle || this.article.summary || '',
+            body: (this.article.paragraphs || []).map(p => p.cn).join('\n\n'),
+            updated_at: null,
+          };
+          this.polishDirty = false;
+        },
+
+        resetPolishFromTranslation() {
+          if (!confirm('确定用最新翻译重置润色区？当前修改会丢失。')) return;
+          this.fillPolishFromTranslation();
+          this.polishDirty = true;
+        },
+
+        openPolish() {
+          this.mode = 'polish';
+        },
+
+        onPolishInput() {
+          this.polishDirty = true;
+          // 防抖：3秒后自动保存
+          clearTimeout(this.polishSaveTimer);
+          this.polishSaveTimer = setTimeout(() => this.savePolish(false), 3000);
+        },
+
+        makePolishFilename() {
+          if (!this.article) return '';
+          const id = String(this.article.id).padStart(2, '0');
+          const title = (this.article.cn_title || 'untitled')
+            .replace(/[\\/:*?"<>|《》「」]/g, '')
+            .replace(/\s+/g, '_')
+            .slice(0, 60);
+          return `${id}_${title}`;
+        },
+
+        fmtTime(iso) {
+          try {
+            const d = new Date(iso);
+            const M = String(d.getMonth()+1).padStart(2,'0');
+            const D = String(d.getDate()).padStart(2,'0');
+            const h = String(d.getHours()).padStart(2,'0');
+            const m = String(d.getMinutes()).padStart(2,'0');
+            return `${M}-${D} ${h}:${m}`;
+          } catch { return iso; }
+        },
+
+        async savePolish(manual) {
+          if (this.polishSaving) return;
+          this.polishSaving = true;
+          const params = new URLSearchParams(location.search);
+          const date = params.get('date');
+          const filename = this.makePolishFilename();
+          const path = `data/${date}/polished/${filename}.json`;
+          const now = new Date().toISOString();
+          this.polishData.updated_at = now;
+          const payload = {
+            id: this.article.id,
+            cn_title: this.article.cn_title,
+            en_title: this.article.en_title,
+            url: this.article.url,
+            category: this.article.category,
+            ...this.polishData,
+          };
+          try {
+            await GH.putFile(path, JSON.stringify(payload, null, 2), `polish: ${this.article.cn_title}`);
+            this.polishDirty = false;
+            this.polishExists = true;
+            this.polishStatus = '✏️ 已润色';
+            this.polishSavedAt = this.fmtTime(now);
+            if (manual) this.flash('✅ 润色已保存');
+          } catch (e) {
+            console.error('Save polish failed:', e);
+            if (manual) this.flash('❌ 保存失败：' + e.message, 5000);
+          } finally {
+            this.polishSaving = false;
           }
         }
       }
