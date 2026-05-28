@@ -1012,9 +1012,19 @@
           const id = params.get('id');
           if (!date || !id) return;
 
-          // 用文件名 = ID + cn_title 推断
-          const filename = this.makePolishFilename();
-          const url = `data/${date}/polished/${filename}.json?t=${Date.now()}`;
+          // 先读索引 _index.json 查找该 id 的实际文件名
+          let actualPath = null;
+          try {
+            const idxRes = await fetch(`data/${date}/polished/_index.json?t=${Date.now()}`);
+            if (idxRes.ok) {
+              const idx = await idxRes.json();
+              actualPath = idx[String(id)];
+            }
+          } catch (_) {}
+
+          // 如果索引有则使用实际文件名；否则从当前 cn_title 推断（能匹配上则取，否则 fillFromTrans）
+          const filename = actualPath || (this.makePolishFilename() + '.json');
+          const url = `data/${date}/polished/${filename}?t=${Date.now()}`;
           try {
             const res = await fetch(url);
             if (res.ok) {
@@ -1072,9 +1082,10 @@
         makePolishFilename() {
           if (!this.article) return '';
           const id = String(this.article.id).padStart(2, '0');
+          // 只保留中文、字母、数字；其他全部转为 _
           const title = (this.article.cn_title || 'untitled')
-            .replace(/[\\/:*?"<>|《》「」]/g, '')
-            .replace(/\s+/g, '_')
+            .replace(/[^\u4e00-\u9fa5A-Za-z0-9]+/g, '_')
+            .replace(/^_+|_+$/g, '')
             .slice(0, 60);
           return `${id}_${title}`;
         },
@@ -1095,8 +1106,8 @@
           this.polishSaving = true;
           const params = new URLSearchParams(location.search);
           const date = params.get('date');
-          const filename = this.makePolishFilename();
-          const path = `data/${date}/polished/${filename}.json`;
+          const filename = this.makePolishFilename() + '.json';
+          const path = `data/${date}/polished/${filename}`;
           const now = new Date().toISOString();
           this.polishData.updated_at = now;
           const payload = {
@@ -1109,6 +1120,15 @@
           };
           try {
             await GH.putFile(path, JSON.stringify(payload, null, 2), `polish: ${this.article.cn_title}`);
+            // 同步更新索引文件
+            const idxPath = `data/${date}/polished/_index.json`;
+            let idx = {};
+            try {
+              const cur = await GH.getFile(idxPath);
+              idx = JSON.parse(cur.content);
+            } catch (_) {}
+            idx[String(this.article.id)] = filename;
+            await GH.putFile(idxPath, JSON.stringify(idx, null, 2), `polish index: #${this.article.id}`);
             this.polishDirty = false;
             this.polishExists = true;
             this.polishStatus = '✏️ 已润色';
