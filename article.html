@@ -808,46 +808,82 @@
               for (const en of Object.keys(m)) {
                 const v = m[en];
                 const cn = (v && typeof v === 'object') ? v.cn : v;
-                if (cn && cn !== en) all[en] = cn;
+                if (cn) all[en] = cn;
               }
             }
-            const entries = Object.entries(all).sort((a, b) => b[0].length - a[0].length);
 
             // 2. 拉取本文 translation
             const fresh = await GH.getFile(path);
             const data = JSON.parse(fresh.content);
 
-            // 3. 执行替换
+            // 3. 构建两阶段替换集
+            // 阶段 A: en -> latest_cn (适用于译文里保留了原英文的词)
+            const stageA = Object.entries(all).filter(([en, cn]) => cn !== en);
+            stageA.sort((a, b) => b[0].length - a[0].length);
+
+            // 阶段 B: old_cn -> latest_cn (适用于已意译过的词，需要 translated_terms 快照)
+            const stageB = [];
+            const tt = data.translated_terms || {};
+            for (const [en, oldCn] of Object.entries(tt)) {
+              const latestCn = all[en];
+              // 只在: 词库有该词 且 新译名 ≠ 旧译名 且 旧译名遵循中文译法（!= en）
+              if (latestCn && latestCn !== oldCn && oldCn !== en) {
+                stageB.push([oldCn, latestCn]);
+              }
+            }
+            stageB.sort((a, b) => b[0].length - a[0].length);
+
+            // 4. 执行替换
             let paraReplaced = 0;
             const hits = new Set();
-            for (const para of (data.paragraphs || [])) {
-              if (!para.cn) continue;
-              const before = para.cn;
-              for (const [en, cn] of entries) {
-                if (para.cn.includes(en)) {
-                  para.cn = para.cn.split(en).join(cn);
+
+            const applyToText = (text) => {
+              let t = text;
+              for (const [en, cn] of stageA) {
+                if (t.includes(en)) {
+                  t = t.split(en).join(cn);
                   hits.add(`${en}→${cn}`);
                 }
               }
+              for (const [oldCn, newCn] of stageB) {
+                if (t.includes(oldCn)) {
+                  t = t.split(oldCn).join(newCn);
+                  hits.add(`${oldCn}→${newCn} (重译)`);
+                }
+              }
+              return t;
+            };
+
+            for (const para of (data.paragraphs || [])) {
+              if (!para.cn) continue;
+              const before = para.cn;
+              para.cn = applyToText(para.cn);
               if (para.cn !== before) paraReplaced++;
             }
-            if (data.cn_title) {
-              for (const [en, cn] of entries) data.cn_title = data.cn_title.split(en).join(cn);
+            if (data.cn_title) data.cn_title = applyToText(data.cn_title);
+            if (data.summary) data.summary = applyToText(data.summary);
+
+            // 5. 同步更新 translated_terms 快照（带上本次 stageB 所改的名字）
+            for (const [en] of stageA) {
+              tt[en] = all[en];
             }
-            if (data.summary) {
-              for (const [en, cn] of entries) data.summary = data.summary.split(en).join(cn);
+            for (const [oldCn, newCn] of stageB) {
+              for (const en of Object.keys(tt)) {
+                if (tt[en] === oldCn) tt[en] = newCn;
+              }
             }
+            data.translated_terms = tt;
 
             if (paraReplaced === 0 && hits.size === 0) {
               this.flash('ℹ️ 没有发现可替换的词汇，译文未变', 3000);
               return;
             }
 
-            // 4. 写回
+            // 6. 写回
             const msg = `reapply dict: ${hits.size} terms replaced in #${id} (${paraReplaced} paragraphs)`;
             await GH.putFile(path, JSON.stringify(data, null, 2), msg);
 
-            // 5. 同步到本地 article 对象 (不刷页也能看到)
+            // 7. 同步到本地 article 对象
             this.article.paragraphs = data.paragraphs;
             if (data.cn_title) this.article.cn_title = data.cn_title;
             if (data.summary) this.article.summary = data.summary;
