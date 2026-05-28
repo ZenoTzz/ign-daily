@@ -118,6 +118,9 @@ function appData() {
     searchTimer: null,
     searchCache: null,  // 历史文章总表，加载一次
 
+    // 润色过的文章 ID 集合
+    polishedIds: new Set(),
+
     async init() {
       // 初始主题图标
       const cur = localStorage.getItem('theme') || 'auto';
@@ -154,6 +157,16 @@ function appData() {
             }
           }
         } catch (_) { /* 没有 requests.json 是正常的 */ }
+
+        // 加载润色索引
+        this.polishedIds = new Set();
+        try {
+          const polRes = await fetch(`data/${date}/polished/_index.json?t=${Date.now()}`);
+          if (polRes.ok) {
+            const polIdx = await polRes.json();
+            this.polishedIds = new Set(Object.keys(polIdx).map(k => parseInt(k)));
+          }
+        } catch (_) { /* 没有润色索引是正常的 */ }
 
         this.loading = false;
 
@@ -217,6 +230,9 @@ function appData() {
       if (this.filterCat === 'all') return this.data.articles;
       if (this.filterCat === '__translated__') {
         return this.data.articles.filter(a => a.translation_status === 'done');
+      }
+      if (this.filterCat === '__polished__') {
+        return this.data.articles.filter(a => this.polishedIds.has(a.id));
       }
       return this.data.articles.filter(a => a.category === this.filterCat);
     },

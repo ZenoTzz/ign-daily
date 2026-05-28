@@ -105,6 +105,12 @@
           ✅ 已翻译
           <span class="ml-1 opacity-70" x-text="`(${translatedCount})`"></span>
         </button>
+        <button @click="filterCat = '__polished__'" x-show="polishedIds.size > 0"
+          :class="filterCat === '__polished__' ? 'bg-amber-600 text-white' : 'bg-white text-amber-700 hover:bg-amber-50 border-amber-300'"
+          class="px-3 py-1.5 rounded-lg text-xs sm:text-sm whitespace-nowrap border">
+          ✏️ 已润色
+          <span class="ml-1 opacity-70" x-text="`(${polishedIds.size})`"></span>
+        </button>
       </div>
 
       <!-- Articles -->
@@ -131,6 +137,9 @@
                   </template>
                   <template x-if="art.translation_status === 'requested'">
                     <span class="text-xs px-2 py-0.5 rounded-full bg-amber-100 text-amber-700">⏳ 翻译中</span>
+                  </template>
+                  <template x-if="polishedIds.has(art.id)">
+                    <span class="text-xs px-2 py-0.5 rounded-full bg-amber-100 text-amber-800 border border-amber-300">✏️ 已润色</span>
                   </template>
                 </div>
 
