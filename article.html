@@ -8,6 +8,7 @@
   <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
   <link rel="stylesheet" href="assets/style.css">
   <script src="assets/app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
   <script>
     tailwind.config = {
       theme: { extend: { colors: { brand: { 600:'#a01620',700:'#7e1219' }}}}
@@ -176,6 +177,38 @@
               <span x-show="feedbackComment" class="text-xs text-slate-500 self-center ml-2" x-text="`：${feedbackComment}`"></span>
             </div>
 
+            <!-- 图片面板 -->
+            <div x-show="article?.images?.length > 0" x-cloak class="bg-slate-50 border rounded-lg mb-4">
+              <div class="p-2 border-b flex items-center justify-between">
+                <div class="text-sm font-semibold">📸 文章配图 (<span x-text="article?.images?.length"></span>)</div>
+                <div class="flex gap-1">
+                  <button @click="showImagesPanel = !showImagesPanel" class="text-xs text-slate-500 hover:text-brand-600">
+                    <span x-text="showImagesPanel ? '收起' : '展开'"></span>
+                  </button>
+                  <button @click="downloadAllImages()" :disabled="imageDownloading"
+                    class="text-xs px-2 py-0.5 bg-brand-600 text-white rounded disabled:bg-slate-300"
+                    title="打包 ZIP 下载所有图片">
+                    <span x-show="!imageDownloading">⬇ 打包下载</span>
+                    <span x-show="imageDownloading" x-text="`打包中 ${imageProgress}/${article?.images?.length}`"></span>
+                  </button>
+                </div>
+              </div>
+              <div x-show="showImagesPanel" class="p-2 grid grid-cols-2 sm:grid-cols-3 gap-2">
+                <template x-for="(img, i) in article?.images || []" :key="i">
+                  <div class="relative group bg-white rounded border overflow-hidden">
+                    <img :src="img.url" :alt="img.alt" class="w-full h-24 object-cover" loading="lazy"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="hidden h-24 items-center justify-center text-xs text-slate-400 bg-slate-100">加载失败</div>
+                    <button @click="downloadOneImage(img.url, i)"
+                      class="absolute bottom-1 right-1 bg-black/60 hover:bg-black/80 text-white rounded text-xs px-2 py-0.5 opacity-0 group-hover:opacity-100">⬇</button>
+                    <a :href="img.url" target="_blank" rel="noopener"
+                      class="absolute top-1 right-1 bg-black/60 hover:bg-black/80 text-white rounded text-xs px-1 py-0.5 opacity-0 group-hover:opacity-100" title="原图查看">🔍</a>
+                    <div x-show="i === 0" class="absolute top-1 left-1 bg-amber-500 text-white text-[10px] px-1 rounded">封面</div>
+                  </div>
+                </template>
+              </div>
+            </div>
+
             <!-- 待入库候选词面板 -->
             <div x-show="article?.pending_dict?.length > 0" x-cloak
                  class="bg-amber-50 border border-amber-200 rounded-lg p-3 mb-4">
@@ -334,6 +367,11 @@
         feedbackComment: '',
         showFeedbackModal: false,
         feedbackInput: '',
+
+        // 图片下载
+        showImagesPanel: true,
+        imageDownloading: false,
+        imageProgress: 0,
 
         async init() {
           // 主题图标
@@ -837,6 +875,70 @@
               this.feedbackComment = fb[id].comment || '';
             }
           } catch (_) {}
+        },
+
+        // ---- 图片下载 ----
+        async downloadOneImage(url, idx) {
+          try {
+            const res = await fetch(url, { mode: 'cors' });
+            const blob = await res.blob();
+            const ext = (url.split('.').pop() || 'jpg').split('?')[0].slice(0,5);
+            const filename = `image-${String(idx+1).padStart(2,'0')}.${ext}`;
+            const a = document.createElement('a');
+            a.href = URL.createObjectURL(blob);
+            a.download = filename;
+            a.click();
+            URL.revokeObjectURL(a.href);
+          } catch (e) {
+            // CORS 阻止 fetch → 直接打开新标签（用户右键保存）
+            window.open(url, '_blank');
+            this.flash('受 CORS 限制，已在新标签打开，请右键另存', 4000);
+          }
+        },
+
+        async downloadAllImages() {
+          if (!this.article?.images?.length || !window.JSZip) return;
+          this.imageDownloading = true;
+          this.imageProgress = 0;
+          const zip = new JSZip();
+          let okCount = 0, failCount = 0;
+          for (let i = 0; i < this.article.images.length; i++) {
+            const img = this.article.images[i];
+            try {
+              const res = await fetch(img.url, { mode: 'cors' });
+              if (!res.ok) throw new Error('HTTP ' + res.status);
+              const blob = await res.blob();
+              const ext = (img.url.split('.').pop() || 'jpg').split('?')[0].slice(0,5);
+              const filename = `${String(i+1).padStart(2,'0')}-${img.alt ? img.alt.replace(/[^\w\u4e00-\u9fa5-]+/g, '_').slice(0,30) : 'image'}.${ext}`;
+              zip.file(filename, blob);
+              okCount++;
+            } catch (e) {
+              failCount++;
+              console.warn('Failed:', img.url, e);
+            }
+            this.imageProgress = i + 1;
+          }
+          if (okCount === 0) {
+            this.flash('❌ 所有图片下载均被CORS阻止，建议手动逐张右键另存', 6000);
+            this.imageDownloading = false;
+            return;
+          }
+          const date = (new URLSearchParams(location.search)).get('date');
+          const id = (new URLSearchParams(location.search)).get('id');
+          const safeTitle = (this.article.cn_title || 'images').replace(/[^\w\u4e00-\u9fa5-]+/g, '_').slice(0,30);
+          const zipName = `${date}_${id}_${safeTitle}.zip`;
+          const blob = await zip.generateAsync({ type: 'blob' });
+          const a = document.createElement('a');
+          a.href = URL.createObjectURL(blob);
+          a.download = zipName;
+          a.click();
+          URL.revokeObjectURL(a.href);
+          this.imageDownloading = false;
+          if (failCount > 0) {
+            this.flash(`⚠️ 已下载 ${okCount} 张，${failCount} 张被CORS阻止`, 5000);
+          } else {
+            this.flash(`✅ 已下载 ${okCount} 张图片`);
+          }
         }
       }
     }
