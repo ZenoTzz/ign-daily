@@ -64,28 +64,44 @@
 
         async init() {
           // 从 data/index-list.json 读取已归档日期清单
+          let baseList = [];
           try {
-            const res = await fetch('data/index-list.json?t=' + Date.now());
-            if (!res.ok) throw new Error();
-            const list = await res.json(); // 期望: [{date, total, translated, translatedTitles}]
-            this.dates = list.sort((a, b) => b.date.localeCompare(a.date));
-          } catch (e) {
-            // 如果没有清单，尝试当天
-            const today = new Date().toISOString().slice(0, 10);
-            try {
-              const r = await fetch(`data/${today}/index.json?t=${Date.now()}`);
-              if (r.ok) {
-                const data = await r.json();
-                const translated = data.articles.filter(a => a.translation_status === 'done');
-                this.dates = [{
-                  date: today,
-                  total: data.total,
-                  translated: translated.length,
-                  translatedTitles: translated.map(a => ({ id: a.id, cn_title: a.cn_title }))
-                }];
+            const res = await fetch('data/index-list.json?t=' + Date.now(), { cache: 'no-store' });
+            if (res.ok) {
+              baseList = await res.json();
+            }
+          } catch (e) {}
+
+          // 今天的数据总是从 index.json 实时读取（保证翻译计数最新）
+          const today = new Date().toLocaleDateString('zh-CN', {
+            timeZone: 'Asia/Shanghai',
+            year: 'numeric', month: '2-digit', day: '2-digit'
+          }).replace(/\//g, '-');
+          // toLocaleDateString 可能返回 2026-05-28 或 2026/05/28，统一处理
+          const todayKey = today.split('-').map(s => s.padStart(2, '0')).join('-');
+
+          try {
+            const r = await fetch(`data/${todayKey}/index.json?t=${Date.now()}`, { cache: 'no-store' });
+            if (r.ok) {
+              const data = await r.json();
+              const translated = data.articles.filter(a => a.translation_status === 'done');
+              const todayEntry = {
+                date: todayKey,
+                total: data.total,
+                translated: translated.length,
+                translatedTitles: translated.map(a => ({ id: a.id, cn_title: a.cn_title }))
+              };
+              // 在 baseList 中替换/插入今天的条目
+              const existIdx = baseList.findIndex(d => d.date === todayKey);
+              if (existIdx >= 0) {
+                baseList[existIdx] = todayEntry;
+              } else {
+                baseList.unshift(todayEntry);
               }
-            } catch (_) {}
-          }
+            }
+          } catch (_) {}
+
+          this.dates = baseList.sort((a, b) => b.date.localeCompare(a.date));
           this.loading = false;
         }
       }
