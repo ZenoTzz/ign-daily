@@ -86,6 +86,14 @@ function appData() {
     pendingProcessing: false,
 
     async init() {
+      // 马上绑 beforeunload 保护
+      window.addEventListener('beforeunload', (e) => {
+        if (this.pendingProcessing || this.pendingQueue.length > 0) {
+          e.preventDefault();
+          e.returnValue = '后台还有未保存的位术修改，确定要离开吗？';
+          return e.returnValue;
+        }
+      });
       try {
         const date = new URLSearchParams(location.search).get('date') || todayBeijingDate();
         const res = await fetch(`data/${date}/index.json?t=${Date.now()}`);

@@ -172,6 +172,15 @@
       <span class="text-sm font-semibold">待确认 <span x-text="globalPending.length"></span> 词</span>
     </button>
 
+    <!-- 后台保存进度提示 -->
+    <div x-show="pendingProcessing || pendingQueue.length > 0" x-cloak
+         class="fixed bottom-20 right-4 sm:bottom-24 sm:right-6 z-30 bg-blue-600 text-white rounded-lg shadow-lg px-3 py-2 flex items-center gap-2 text-xs">
+      <svg class="animate-spin h-4 w-4" viewBox="0 0 24 24" fill="none">
+        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="3" stroke-dasharray="50" stroke-linecap="round"></circle>
+      </svg>
+      <span>后台保存中... 请勿刷新</span>
+    </div>
+
     <!-- 全局待确认面板 -->
     <div x-show="showPendingPanel" x-cloak
          @keydown.escape.window="showPendingPanel=false"
