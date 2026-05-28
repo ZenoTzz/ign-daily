@@ -106,11 +106,43 @@ function appData() {
         } catch (_) { /* 没有 requests.json 是正常的 */ }
 
         this.loading = false;
+
+        // 恢复之前的筛选/滚动状态
+        this.restoreState();
       } catch (e) {
         console.error(e);
         this.error = '加载失败：' + e.message;
         this.loading = false;
       }
+    },
+
+    saveState() {
+      try {
+        sessionStorage.setItem('ign_index_state', JSON.stringify({
+          filterCat: this.filterCat,
+          scrollY: window.scrollY,
+          date: this.data?.date,
+          ts: Date.now()
+        }));
+      } catch (_) {}
+    },
+
+    restoreState() {
+      try {
+        const raw = sessionStorage.getItem('ign_index_state');
+        if (!raw) return;
+        const s = JSON.parse(raw);
+        // 超过一天过期
+        if (Date.now() - s.ts > 24 * 3600 * 1000) return;
+        if (s.date !== this.data?.date) return;
+        if (s.filterCat) this.filterCat = s.filterCat;
+        // 等 DOM 渲染完再滚到原位置
+        this.$nextTick(() => {
+          setTimeout(() => {
+            window.scrollTo({ top: s.scrollY, behavior: 'instant' });
+          }, 50);
+        });
+      } catch (_) {}
     },
 
     get categories() {

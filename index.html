@@ -132,6 +132,7 @@
                 <!-- 标题：已翻译可点 -->
                 <template x-if="art.translation_status === 'done'">
                   <a :href="`article.html?date=${data.date}&id=${art.id}`"
+                    @click="saveState()"
                     class="block font-semibold text-sm sm:text-base mb-1 leading-tight text-slate-800 hover:text-brand-600"
                     x-text="art.cn_title"></a>
                 </template>
@@ -146,6 +147,7 @@
                     class="text-slate-500 hover:text-brand-600">🔗 IGN原文</a>
                   <template x-if="art.translation_status === 'done'">
                     <a :href="`article.html?date=${data.date}&id=${art.id}`"
+                      @click="saveState()"
                       class="text-brand-600 font-medium hover:text-brand-700">📖 查看翻译</a>
                   </template>
                 </div>
