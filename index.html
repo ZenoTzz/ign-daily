@@ -77,10 +77,11 @@
       <!-- Articles -->
       <div x-show="data && !loading" class="space-y-2 sm:space-y-3">
         <template x-for="art in filteredArticles" :key="art.id">
-          <article class="bg-white rounded-xl border p-3 sm:p-4 shadow-sm hover:shadow transition">
-            <div class="flex items-start gap-3">
+          <article class="bg-white rounded-xl border shadow-sm hover:shadow hover:border-brand-600/40 transition"
+            :class="art.translation_status === 'done' ? 'cursor-pointer' : ''">
+            <div class="flex items-start gap-3 p-3 sm:p-4">
               <!-- Checkbox -->
-              <label class="flex items-center shrink-0 mt-0.5">
+              <label @click.stop class="flex items-center shrink-0 mt-0.5">
                 <input type="checkbox" :value="art.id" x-model="selected"
                   :disabled="art.translation_status === 'done'"
                   class="w-5 h-5 rounded border-slate-300 text-brand-600 focus:ring-brand-500 disabled:opacity-50">
@@ -99,11 +100,21 @@
                     <span class="text-xs px-2 py-0.5 rounded-full bg-amber-100 text-amber-700">⏳ 翻译中</span>
                   </template>
                 </div>
-                <h3 class="font-semibold text-sm sm:text-base mb-1 leading-tight" x-text="art.cn_title"></h3>
+
+                <!-- 标题：已翻译可点 -->
+                <template x-if="art.translation_status === 'done'">
+                  <a :href="`article.html?date=${data.date}&id=${art.id}`"
+                    class="block font-semibold text-sm sm:text-base mb-1 leading-tight text-slate-800 hover:text-brand-600"
+                    x-text="art.cn_title"></a>
+                </template>
+                <template x-if="art.translation_status !== 'done'">
+                  <h3 class="font-semibold text-sm sm:text-base mb-1 leading-tight" x-text="art.cn_title"></h3>
+                </template>
+
                 <p class="text-xs sm:text-sm text-slate-500 mb-2 line-clamp-1" x-text="art.en_title"></p>
                 <p class="text-xs sm:text-sm text-slate-600 line-clamp-2" x-text="art.summary"></p>
                 <div class="flex items-center gap-3 mt-2 text-xs">
-                  <a :href="art.url" target="_blank" rel="noopener"
+                  <a :href="art.url" target="_blank" rel="noopener" @click.stop
                     class="text-slate-500 hover:text-brand-600">🔗 IGN原文</a>
                   <template x-if="art.translation_status === 'done'">
                     <a :href="`article.html?date=${data.date}&id=${art.id}`"
@@ -112,6 +123,12 @@
                 </div>
               </div>
             </div>
+
+            <!-- 整卡可点（已翻译时） -->
+            <template x-if="art.translation_status === 'done'">
+              <a :href="`article.html?date=${data.date}&id=${art.id}`"
+                class="absolute inset-0" aria-label="打开翻译" style="display:none;"></a>
+            </template>
           </article>
         </template>
       </div>
