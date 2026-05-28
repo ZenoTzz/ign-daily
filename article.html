@@ -44,6 +44,11 @@
             class="text-xs px-2 py-1 rounded bg-amber-100 text-amber-800 hover:bg-amber-200 border border-amber-300">
             <span x-text="polishStatus"></span>
           </button>
+          <button @click="reapplyDict()"
+            class="text-xs px-2 py-1 rounded bg-blue-50 text-blue-700 hover:bg-blue-100 border border-blue-200"
+            title="按最新词库重新扫描译文、替换中文名">
+            🔄 重新应用词库
+          </button>
         </div>
       </div>
     </header>
@@ -780,6 +785,79 @@
           }
           await GH.putFile(path, JSON.stringify(data, null, 2),
             `pending_dict + paragraphs: update for #${id}`);
+        },
+
+        // ✨ 重新应用词库：拉取最新 dict.json，按词库全量扫描替换本文译文
+        async reapplyDict() {
+          if (!confirm('将按最新词库重新扫描本文，把所有能识别的英文专有名词替换为中文译名。\n\n该操作会修改译文。继续吗？')) return;
+          this.flash('🔄 重新应用词库中...', 30000);
+          try {
+            const params = new URLSearchParams(location.search);
+            const date = params.get('date');
+            const id = params.get('id');
+            const padded = String(id).padStart(2, '0');
+            const path = `data/${date}/translations/${padded}.json`;
+
+            // 1. 拉取最新 dict.json
+            const dictRes = await fetch(`data/dict.json?t=${Date.now()}`);
+            const dict = await dictRes.json();
+            // 汇总所有词条 (en -> cn)
+            const all = {};
+            for (const cat of ['games','movies_tv','companies','people','media','terms']) {
+              const m = dict[cat] || {};
+              for (const en of Object.keys(m)) {
+                const v = m[en];
+                const cn = (v && typeof v === 'object') ? v.cn : v;
+                if (cn && cn !== en) all[en] = cn;
+              }
+            }
+            const entries = Object.entries(all).sort((a, b) => b[0].length - a[0].length);
+
+            // 2. 拉取本文 translation
+            const fresh = await GH.getFile(path);
+            const data = JSON.parse(fresh.content);
+
+            // 3. 执行替换
+            let paraReplaced = 0;
+            const hits = new Set();
+            for (const para of (data.paragraphs || [])) {
+              if (!para.cn) continue;
+              const before = para.cn;
+              for (const [en, cn] of entries) {
+                if (para.cn.includes(en)) {
+                  para.cn = para.cn.split(en).join(cn);
+                  hits.add(`${en}→${cn}`);
+                }
+              }
+              if (para.cn !== before) paraReplaced++;
+            }
+            if (data.cn_title) {
+              for (const [en, cn] of entries) data.cn_title = data.cn_title.split(en).join(cn);
+            }
+            if (data.summary) {
+              for (const [en, cn] of entries) data.summary = data.summary.split(en).join(cn);
+            }
+
+            if (paraReplaced === 0 && hits.size === 0) {
+              this.flash('ℹ️ 没有发现可替换的词汇，译文未变', 3000);
+              return;
+            }
+
+            // 4. 写回
+            const msg = `reapply dict: ${hits.size} terms replaced in #${id} (${paraReplaced} paragraphs)`;
+            await GH.putFile(path, JSON.stringify(data, null, 2), msg);
+
+            // 5. 同步到本地 article 对象 (不刷页也能看到)
+            this.article.paragraphs = data.paragraphs;
+            if (data.cn_title) this.article.cn_title = data.cn_title;
+            if (data.summary) this.article.summary = data.summary;
+
+            this.flash(`✅ 已替换 ${hits.size} 个词（${paraReplaced} 个段落）`, 4000);
+            console.log('Replaced:', [...hits]);
+          } catch (e) {
+            console.error(e);
+            this.flash('❌ 重新应用失败：' + e.message, 5000);
+          }
         },
 
         // ---- 主题 ----
