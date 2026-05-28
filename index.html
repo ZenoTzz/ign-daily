@@ -164,6 +164,81 @@
       </div>
     </main>
 
+    <!-- 全局待确认词库：右下角浮动按钮 -->
+    <button x-show="globalPending.length > 0" x-cloak
+            @click="showPendingPanel = true"
+            class="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-30 bg-amber-500 hover:bg-amber-600 text-white rounded-full shadow-lg px-4 py-3 flex items-center gap-2">
+      <span class="text-xl">📝</span>
+      <span class="text-sm font-semibold">待确认 <span x-text="globalPending.length"></span> 词</span>
+    </button>
+
+    <!-- 全局待确认面板 -->
+    <div x-show="showPendingPanel" x-cloak
+         @keydown.escape.window="showPendingPanel=false"
+         class="fixed inset-0 z-40 bg-black/40 flex justify-end"
+         @click.self="showPendingPanel=false">
+      <div class="bg-white w-full max-w-md h-full overflow-y-auto shadow-2xl flex flex-col">
+        <div class="p-4 border-b sticky top-0 bg-white">
+          <div class="flex items-center justify-between mb-2">
+            <h2 class="text-base font-bold">📝 全局待确认词库</h2>
+            <button @click="showPendingPanel=false" class="text-slate-400 hover:text-slate-600">✕</button>
+          </div>
+          <p class="text-xs text-slate-500">以下词是在译文里遇到、等待你决定是否入库的候选。决定后会在后台提交。</p>
+          <div class="mt-2 flex gap-2" x-show="globalPending.length > 1">
+            <button @click="approveAllGlobal()"
+              class="px-2 py-1 bg-green-600 text-white rounded text-xs hover:bg-green-700">✅✅ 全部入库</button>
+            <button @click="ignoreAllGlobal()"
+              class="px-2 py-1 border text-slate-600 rounded text-xs hover:bg-slate-100">🗑 全部忽略</button>
+          </div>
+        </div>
+        <div class="flex-1 p-3 space-y-2">
+          <template x-for="(c, i) in globalPending" :key="`${c._articleId}-${i}-${c.en}`">
+            <div class="bg-amber-50 border border-amber-200 rounded p-2">
+              <div class="text-xs text-slate-500 mb-1">
+                来自 <a :href="`article.html?date=${data.date}&id=${c._articleId}`"
+                  class="text-brand-600 hover:underline"
+                  x-text="`#${c._articleId} ${c._articleTitle}`"></a>
+              </div>
+              <div class="text-sm flex items-center flex-wrap gap-1">
+                <span class="font-semibold" x-text="c.en"></span>
+                <span class="text-slate-400">→</span>
+                <input type="text" x-model="c.cn"
+                  class="text-sm border-b border-slate-300 px-1 py-0.5 bg-transparent focus:outline-none focus:border-brand-600"
+                  :style="`width: ${Math.max((c.cn||'').length * 14 + 20, 100)}px;`">
+              </div>
+              <div class="text-xs text-slate-500 mt-1 flex items-center gap-2 flex-wrap">
+                <select x-model="c.cat" class="border rounded px-1 py-0.5 text-xs">
+                  <option value="games">games</option>
+                  <option value="movies_tv">movies_tv</option>
+                  <option value="companies">companies</option>
+                  <option value="people">people</option>
+                  <option value="media">media</option>
+                  <option value="terms">terms</option>
+                </select>
+                <select x-model="c.source" class="border rounded px-1 py-0.5 text-xs">
+                  <option value="user">user</option>
+                  <option value="ign_cn">ign_cn</option>
+                  <option value="bilibili">bilibili</option>
+                  <option value="consensus">consensus</option>
+                  <option value="ai_guess">ai_guess</option>
+                </select>
+                <span x-show="c.note" class="text-amber-700 italic" x-text="'• ' + c.note"></span>
+              </div>
+              <div class="flex gap-1 mt-2">
+                <button @click="approveGlobalPending(i)"
+                  class="px-2 py-1 bg-green-600 text-white rounded text-xs hover:bg-green-700">✅ 入库</button>
+                <button @click="ignoreGlobalPending(i)"
+                  class="px-2 py-1 border border-slate-300 text-slate-600 rounded text-xs hover:bg-slate-100">🗑 忽略</button>
+              </div>
+            </div>
+          </template>
+          <div x-show="globalPending.length === 0" class="text-center text-slate-400 text-sm py-8">
+            🎉 所有候选词均已处理
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Settings Modal -->
     <div x-show="showSettings" x-cloak @keydown.escape.window="showSettings=false"
          class="fixed inset-0 bg-black/40 flex items-center justify-center z-20 p-4" @click.self="showSettings=false">

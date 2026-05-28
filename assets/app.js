@@ -79,6 +79,12 @@ function appData() {
     token: localStorage.getItem('gh_token') || '',
     toast: '',
 
+    // 全局待确认词库
+    globalPending: [],
+    showPendingPanel: false,
+    pendingQueue: [],
+    pendingProcessing: false,
+
     async init() {
       try {
         const date = new URLSearchParams(location.search).get('date') || todayBeijingDate();
@@ -109,6 +115,9 @@ function appData() {
 
         // 恢复之前的筛选/滚动状态
         this.restoreState();
+
+        // 加载全局待确认词库
+        this.loadGlobalPending();
       } catch (e) {
         console.error(e);
         this.error = '加载失败：' + e.message;
@@ -229,6 +238,142 @@ function appData() {
     flash(msg, ms = 2500) {
       this.toast = msg;
       setTimeout(() => { this.toast = ''; }, ms);
+    },
+
+    // ---- 全局待确认词库 ----
+    async loadGlobalPending() {
+      if (!this.data) return;
+      const pending = [];
+      const translated = this.data.articles.filter(a => a.translation_status === 'done');
+      // 并发拉取所有译文
+      await Promise.all(translated.map(async (a) => {
+        const padded = String(a.id).padStart(2, '0');
+        try {
+          const res = await fetch(`data/${this.data.date}/translations/${padded}.json?t=${Date.now()}`);
+          if (!res.ok) return;
+          const tr = await res.json();
+          if (Array.isArray(tr.pending_dict) && tr.pending_dict.length > 0) {
+            for (const c of tr.pending_dict) {
+              pending.push({
+                ...c,
+                _articleId: a.id,
+                _articleTitle: a.cn_title.length > 16 ? a.cn_title.slice(0,16)+'…' : a.cn_title
+              });
+            }
+          }
+        } catch (_) {}
+      }));
+      this.globalPending = pending;
+    },
+
+    approveGlobalPending(idx) {
+      const c = this.globalPending[idx];
+      if (!c.en || !c.cn) {
+        this.flash('❌ 译名不能为空', 3000);
+        return;
+      }
+      if (!localStorage.getItem('gh_token')) {
+        this.flash('❌ 未配置 GitHub Token，请右上角⚙️设置', 4000);
+        return;
+      }
+      const candidate = { ...c };
+      this.globalPending.splice(idx, 1);
+      this.flash(`入库中: ${candidate.en} → ${candidate.cn}`);
+      this.pendingQueue.push({ type: 'approve', candidate });
+      this.processGlobalQueue();
+    },
+
+    ignoreGlobalPending(idx) {
+      const c = this.globalPending[idx];
+      this.globalPending.splice(idx, 1);
+      if (!localStorage.getItem('gh_token')) return;
+      this.pendingQueue.push({ type: 'ignore', candidate: c });
+      this.processGlobalQueue();
+    },
+
+    approveAllGlobal() {
+      if (!localStorage.getItem('gh_token')) {
+        this.flash('❌ 未配置 GitHub Token', 4000);
+        return;
+      }
+      const candidates = this.globalPending.filter(c => c.en && c.cn).map(c => ({ ...c }));
+      this.globalPending = [];
+      this.flash(`入库中: ${candidates.length} 条...`);
+      for (const c of candidates) this.pendingQueue.push({ type: 'approve', candidate: c });
+      this.processGlobalQueue();
+    },
+
+    ignoreAllGlobal() {
+      const all = [...this.globalPending];
+      this.globalPending = [];
+      if (!localStorage.getItem('gh_token')) return;
+      for (const c of all) this.pendingQueue.push({ type: 'ignore', candidate: c });
+      this.processGlobalQueue();
+    },
+
+    async processGlobalQueue() {
+      if (this.pendingProcessing) return;
+      this.pendingProcessing = true;
+      try {
+        while (this.pendingQueue.length > 0) {
+          // 批量拿出队列里全部任务
+          const batch = this.pendingQueue.splice(0, this.pendingQueue.length);
+          const approves = batch.filter(x => x.type === 'approve').map(x => x.candidate);
+          // 1. 批量入库
+          if (approves.length > 0) {
+            await this.batchApproveDict(approves);
+          }
+          // 2. 按文章分组更新各自的 pending_dict
+          const byArticle = {};
+          for (const item of batch) {
+            const aid = item.candidate._articleId;
+            if (!byArticle[aid]) byArticle[aid] = [];
+            byArticle[aid].push(item.candidate);
+          }
+          for (const [aid, removed] of Object.entries(byArticle)) {
+            await this.removeFromArticlePending(parseInt(aid), removed);
+          }
+        }
+        if (this.globalPending.length === 0) {
+          this.flash('✅ 全部处理完成');
+        }
+      } catch (e) {
+        this.flash('❌ 后台保存失败：' + e.message, 5000);
+      } finally {
+        this.pendingProcessing = false;
+      }
+    },
+
+    async batchApproveDict(approves) {
+      const fresh = await GH.getFile('data/dict.json');
+      const dict = JSON.parse(fresh.content);
+      for (const c of approves) {
+        for (const cat of ['games','movies_tv','companies','people','media','terms']) {
+          if (cat !== c.cat && dict[cat]?.[c.en]) delete dict[cat][c.en];
+        }
+        if (!dict[c.cat]) dict[c.cat] = {};
+        dict[c.cat][c.en] = { cn: c.cn, source: c.source };
+      }
+      dict._meta = dict._meta || {};
+      dict._meta.last_updated = new Date().toISOString().slice(0,10);
+      const msg = approves.length === 1
+        ? `dict: approve ${approves[0].en} → ${approves[0].cn}`
+        : `dict: approve ${approves.length} entries (global panel)`;
+      await GH.putFile('data/dict.json', JSON.stringify(dict, null, 2), msg);
+    },
+
+    async removeFromArticlePending(articleId, removedCandidates) {
+      const padded = String(articleId).padStart(2, '0');
+      const path = `data/${this.data.date}/translations/${padded}.json`;
+      const fresh = await GH.getFile(path);
+      const data = JSON.parse(fresh.content);
+      // 从 pending_dict 里移除这些候选（按 en+cat 匹配）
+      const removeSet = new Set(removedCandidates.map(c => `${c.en}|${c.cat}`));
+      data.pending_dict = (data.pending_dict || []).filter(
+        c => !removeSet.has(`${c.en}|${c.cat}`)
+      );
+      await GH.putFile(path, JSON.stringify(data, null, 2),
+        `pending_dict: clear processed for #${articleId}`);
     }
   };
 }
