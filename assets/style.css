@@ -71,6 +71,13 @@ html.dark thead.bg-slate-50 { background-color: #1e293b !important; }
 .reader-pane.cn { background: #fff; border-right: 1px solid #e2e8f0; }
 .reader-pane.en { background: #fafafa; }
 
+/* 译文内容居中限宽 */
+.reader-pane.cn > .w-full,
+.reader-pane.cn > div {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
 @media (max-width: 1023px) {
   .reader-grid {
     grid-template-rows: 1fr;
