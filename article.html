@@ -162,11 +162,11 @@
                         </div>
                       </div>
                       <div class="flex gap-1 shrink-0">
-                        <button @click="approvePending(i)" :disabled="pendingSaving"
-                          class="px-2 py-1 bg-green-600 text-white rounded text-xs hover:bg-green-700 disabled:bg-slate-300">
+                        <button @click="approvePending(i)"
+                          class="px-2 py-1 bg-green-600 text-white rounded text-xs hover:bg-green-700">
                           ✅ 入库
                         </button>
-                        <button @click="ignorePending(i)" :disabled="pendingSaving"
+                        <button @click="ignorePending(i)"
                           class="px-2 py-1 border border-slate-300 text-slate-600 rounded text-xs hover:bg-slate-100">
                           🗑 忽略
                         </button>
@@ -176,11 +176,11 @@
                 </template>
               </div>
               <div x-show="article.pending_dict.length > 1" class="mt-2 flex gap-2">
-                <button @click="approveAllPending()" :disabled="pendingSaving"
-                  class="px-2 py-1 bg-green-600 text-white rounded text-xs hover:bg-green-700 disabled:bg-slate-300">
+                <button @click="approveAllPending()"
+                  class="px-2 py-1 bg-green-600 text-white rounded text-xs hover:bg-green-700">
                   ✅✅ 全部入库
                 </button>
-                <button @click="ignoreAllPending()" :disabled="pendingSaving"
+                <button @click="ignoreAllPending()"
                   class="px-2 py-1 border text-slate-600 rounded text-xs hover:bg-slate-100">
                   🗑 全部忽略
                 </button>
@@ -252,6 +252,8 @@
 
         // 待入库候选词
         pendingSaving: false,
+        pendingQueue: [],  // 后台任务队列
+        pendingProcessing: false,  // 队列是否在跑
 
         async init() {
           const params = new URLSearchParams(location.search);
@@ -382,8 +384,8 @@
           setTimeout(() => { this.toast = ''; }, ms);
         },
 
-        // 待入库候选词
-        async approvePending(idx) {
+        // 待入库候选词——本地立即移除 + 后台异步保存
+        approvePending(idx) {
           const c = this.article.pending_dict[idx];
           if (!c.en || !c.cn) {
             this.flash('❌ 译名不能为空', 3000);
@@ -393,46 +395,66 @@
             this.flash('❌ 未配置 GitHub Token，请在首页右上角⚙️设置', 4000);
             return;
           }
-          this.pendingSaving = true;
+          // 1. 本地立即移除，用户马上可以点下一条
+          const candidate = { ...c };
+          this.article.pending_dict.splice(idx, 1);
+          this.flash(`入库中: ${candidate.en} → ${candidate.cn}`);
+          // 2. 后台任务入队串行执行（避免409冲突）
+          this.pendingQueue.push({ type: 'approve', candidate });
+          this.processPendingQueue();
+        },
+
+        ignorePending(idx) {
+          // 本地立即移除
+          const c = this.article.pending_dict[idx];
+          this.article.pending_dict.splice(idx, 1);
+          if (!localStorage.getItem('gh_token')) return;  // 未配 token 也可以本地隐藏
+          this.pendingQueue.push({ type: 'ignore', candidate: c });
+          this.processPendingQueue();
+        },
+
+        async processPendingQueue() {
+          if (this.pendingProcessing) return;
+          this.pendingProcessing = true;
           try {
-            // 1. 更新词库
-            const fresh = await GH.getFile('data/dict.json');
-            const dict = JSON.parse(fresh.content);
+            while (this.pendingQueue.length > 0) {
+              // 批量拿出当前队列里的任务一起处理（同一轮合并提交）
+              const batch = this.pendingQueue.splice(0, this.pendingQueue.length);
+              const approves = batch.filter(x => x.type === 'approve').map(x => x.candidate);
+              if (approves.length > 0) {
+                await this.batchApproveToDict(approves);
+              }
+              // 保存当前 pending_dict 状态到 GitHub
+              await this.savePendingDict(this.article.pending_dict);
+            }
+          } catch (e) {
+            this.flash('❌ 后台保存失败：' + e.message, 5000);
+          } finally {
+            this.pendingProcessing = false;
+          }
+        },
+
+        async batchApproveToDict(approves) {
+          const fresh = await GH.getFile('data/dict.json');
+          const dict = JSON.parse(fresh.content);
+          for (const c of approves) {
             for (const cat of ['games','movies_tv','companies','people','media','terms']) {
               if (cat !== c.cat && dict[cat]?.[c.en]) delete dict[cat][c.en];
             }
             if (!dict[c.cat]) dict[c.cat] = {};
             dict[c.cat][c.en] = { cn: c.cn, source: c.source };
-            dict._meta = dict._meta || {};
-            dict._meta.last_updated = new Date().toISOString().slice(0,10);
-            await GH.putFile('data/dict.json', JSON.stringify(dict, null, 2),
-              `dict: approve ${c.en} → ${c.cn} (${c.source})`);
-            this.dictData = dict;
-
-            // 2. 从译文 pending_dict 里删除
-            await this.removeFromPending(idx);
-            this.flash(`✅ 已入库：${c.en} → ${c.cn}`);
-          } catch (e) {
-            this.flash('❌ 保存失败：' + e.message, 5000);
-          } finally {
-            this.pendingSaving = false;
           }
-        },
-
-        async ignorePending(idx) {
-          if (!localStorage.getItem('gh_token')) {
-            // 未配 token 也可以本地隐藏
-            this.article.pending_dict.splice(idx, 1);
-            return;
-          }
-          this.pendingSaving = true;
-          try {
-            await this.removeFromPending(idx);
-            this.flash('已忽略');
-          } catch (e) {
-            this.flash('❌ 失败：' + e.message, 4000);
-          } finally {
-            this.pendingSaving = false;
+          dict._meta = dict._meta || {};
+          dict._meta.last_updated = new Date().toISOString().slice(0,10);
+          const msg = approves.length === 1
+            ? `dict: approve ${approves[0].en} → ${approves[0].cn}`
+            : `dict: approve ${approves.length} entries`;
+          await GH.putFile('data/dict.json', JSON.stringify(dict, null, 2), msg);
+          this.dictData = dict;
+          if (approves.length === 1) {
+            this.flash(`✅ 已入库：${approves[0].en} → ${approves[0].cn}`);
+          } else {
+            this.flash(`✅ 已入库 ${approves.length} 条`);
           }
         },
 
@@ -441,58 +463,18 @@
             this.flash('❌ 未配置 GitHub Token', 4000);
             return;
           }
-          this.pendingSaving = true;
-          try {
-            const fresh = await GH.getFile('data/dict.json');
-            const dict = JSON.parse(fresh.content);
-            const candidates = [...this.article.pending_dict];
-            for (const c of candidates) {
-              if (!c.en || !c.cn) continue;
-              for (const cat of ['games','movies_tv','companies','people','media','terms']) {
-                if (cat !== c.cat && dict[cat]?.[c.en]) delete dict[cat][c.en];
-              }
-              if (!dict[c.cat]) dict[c.cat] = {};
-              dict[c.cat][c.en] = { cn: c.cn, source: c.source };
-            }
-            dict._meta = dict._meta || {};
-            dict._meta.last_updated = new Date().toISOString().slice(0,10);
-            await GH.putFile('data/dict.json', JSON.stringify(dict, null, 2),
-              `dict: approve ${candidates.length} entries from #${this.article.id}`);
-            this.dictData = dict;
-
-            // 清空 pending_dict
-            await this.savePendingDict([]);
-            this.article.pending_dict = [];
-            this.flash(`✅ 已全部入库（${candidates.length}条）`);
-          } catch (e) {
-            this.flash('❌ 失败：' + e.message, 5000);
-          } finally {
-            this.pendingSaving = false;
-          }
+          const candidates = [...this.article.pending_dict].filter(c => c.en && c.cn);
+          this.article.pending_dict = [];
+          this.flash(`入库中: ${candidates.length} 条...`);
+          for (const c of candidates) this.pendingQueue.push({ type: 'approve', candidate: c });
+          this.processPendingQueue();
         },
 
-        async ignoreAllPending() {
-          if (!localStorage.getItem('gh_token')) {
-            this.article.pending_dict = [];
-            return;
-          }
-          this.pendingSaving = true;
-          try {
-            await this.savePendingDict([]);
-            this.article.pending_dict = [];
-            this.flash('已全部忽略');
-          } catch (e) {
-            this.flash('❌ 失败：' + e.message, 4000);
-          } finally {
-            this.pendingSaving = false;
-          }
-        },
-
-        async removeFromPending(idx) {
-          const newPending = [...this.article.pending_dict];
-          newPending.splice(idx, 1);
-          await this.savePendingDict(newPending);
-          this.article.pending_dict = newPending;
+        ignoreAllPending() {
+          this.article.pending_dict = [];
+          if (!localStorage.getItem('gh_token')) return;
+          this.pendingQueue.push({ type: 'sync_only' });
+          this.processPendingQueue();
         },
 
         async savePendingDict(newPending) {
