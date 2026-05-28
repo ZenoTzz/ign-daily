@@ -36,6 +36,81 @@
     <!-- Body -->
     <div x-show="error" class="p-6 text-red-600" x-text="error"></div>
 
+    <!-- 划词加词库按钮（跟随鼠标） -->
+    <div x-show="selectionText && selectionRect"
+         x-cloak
+         :style="`top:${selectionRect?.top - 40}px; left:${selectionRect?.left}px;`"
+         class="fixed z-30">
+      <button @click="openDictModal()"
+        class="bg-brand-600 text-white px-3 py-1.5 rounded-lg shadow-lg text-xs hover:bg-brand-700">
+        ➕ 加入词库
+      </button>
+    </div>
+
+    <!-- 加词弹窗 -->
+    <div x-show="showDictModal" x-cloak
+         @keydown.escape.window="showDictModal=false"
+         class="fixed inset-0 bg-black/40 flex items-center justify-center z-40 p-4"
+         @click.self="showDictModal=false">
+      <div class="bg-white rounded-xl p-5 max-w-md w-full">
+        <h3 class="text-lg font-bold mb-3">➕ 加入词库</h3>
+
+        <label class="block text-xs font-medium mb-1 text-slate-600">英文原词</label>
+        <input type="text" x-model="dictForm.en"
+          class="w-full px-3 py-2 border rounded-lg text-sm mb-2"
+          placeholder="e.g. Final Fantasy Tactics">
+
+        <label class="block text-xs font-medium mb-1 text-slate-600">中文译名</label>
+        <input type="text" x-model="dictForm.cn"
+          class="w-full px-3 py-2 border rounded-lg text-sm mb-2"
+          placeholder="如：最终幻想战略版">
+
+        <div class="grid grid-cols-2 gap-2 mb-3">
+          <div>
+            <label class="block text-xs font-medium mb-1 text-slate-600">分类</label>
+            <select x-model="dictForm.cat" class="w-full px-3 py-2 border rounded-lg text-sm">
+              <option value="games">游戏 games</option>
+              <option value="movies_tv">影视 movies_tv</option>
+              <option value="companies">公司 companies</option>
+              <option value="people">人物 people</option>
+              <option value="media">媒体 media</option>
+              <option value="terms">术语 terms</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs font-medium mb-1 text-slate-600">来源</label>
+            <select x-model="dictForm.source" class="w-full px-3 py-2 border rounded-lg text-sm">
+              <option value="user">user（用户确认）</option>
+              <option value="ign_cn">ign_cn</option>
+              <option value="bilibili">bilibili</option>
+              <option value="consensus">consensus</option>
+              <option value="ai_guess">ai_guess</option>
+            </select>
+          </div>
+        </div>
+
+        <div x-show="dictExisting" class="text-xs text-amber-700 bg-amber-50 border border-amber-200 rounded p-2 mb-2">
+          ⚠️ 词库已存在该词：<span x-text="dictExisting?.cn"></span> （来源: <span x-text="dictExisting?.source"></span>）
+          <br>保存将覆盖。
+        </div>
+
+        <div class="flex gap-2">
+          <button @click="saveDict()"
+            :disabled="!dictForm.en || !dictForm.cn || dictSaving"
+            class="px-3 py-1.5 bg-brand-600 text-white rounded-lg text-sm disabled:bg-slate-300">
+            <span x-show="!dictSaving">💾 保存</span>
+            <span x-show="dictSaving">保存中...</span>
+          </button>
+          <button @click="showDictModal=false" class="px-3 py-1.5 text-slate-500 text-sm">取消</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Toast -->
+    <div x-show="toast" x-cloak x-transition.opacity
+         class="fixed bottom-4 left-1/2 -translate-x-1/2 bg-slate-900 text-white px-4 py-2 rounded-lg shadow-lg text-sm z-50"
+         x-text="toast"></div>
+
     <div x-show="article" class="flex-1 min-h-0 overflow-hidden">
       <!-- Two-pane: 左译文 / 右原文iframe -->
       <div x-show="mode === 'compare'" class="reader-grid h-full">
@@ -98,6 +173,16 @@
         iframeFailed: false,
         mode: 'compare',  // compare | cn
 
+        // 加词相关
+        selectionText: '',
+        selectionRect: null,
+        showDictModal: false,
+        dictForm: { en: '', cn: '', cat: 'games', source: 'user' },
+        dictData: null,
+        dictExisting: null,
+        dictSaving: false,
+        toast: '',
+
         async init() {
           const params = new URLSearchParams(location.search);
           const date = params.get('date');
@@ -117,7 +202,114 @@
             }, 5000);
           } catch (e) {
             this.error = '加载译文失败：' + e.message;
+            return;
           }
+          // 预加载词库
+          try {
+            const dictRes = await fetch('data/dict.json?t=' + Date.now());
+            this.dictData = await dictRes.json();
+          } catch (_) {}
+
+          // 监听选中文本
+          this.bindSelection();
+        },
+
+        bindSelection() {
+          document.addEventListener('mouseup', () => {
+            setTimeout(() => {
+              const sel = window.getSelection();
+              const text = sel?.toString().trim() || '';
+              if (text && text.length > 0 && text.length < 100) {
+                const range = sel.getRangeAt(0);
+                const rect = range.getBoundingClientRect();
+                this.selectionText = text;
+                this.selectionRect = { top: rect.top, left: rect.left };
+              } else {
+                this.selectionText = '';
+                this.selectionRect = null;
+              }
+            }, 10);
+          });
+          // 点别处取消
+          document.addEventListener('mousedown', (e) => {
+            if (!e.target.closest('.fixed.z-30') && !e.target.closest('.fixed.z-40')) {
+              this.selectionText = '';
+              this.selectionRect = null;
+            }
+          });
+        },
+
+        openDictModal() {
+          // 检测是中文还是英文
+          const text = this.selectionText;
+          const isChinese = /[\u4e00-\u9fa5]/.test(text);
+          if (isChinese) {
+            this.dictForm = { en: '', cn: text, cat: 'games', source: 'user' };
+          } else {
+            this.dictForm = { en: text, cn: '', cat: 'games', source: 'user' };
+          }
+          // 检测是否已存在
+          this.checkDictExisting();
+          this.showDictModal = true;
+          this.selectionText = '';
+          this.selectionRect = null;
+        },
+
+        checkDictExisting() {
+          this.dictExisting = null;
+          if (!this.dictData || !this.dictForm.en) return;
+          for (const cat of ['games','movies_tv','companies','people','media','terms']) {
+            const e = this.dictData[cat]?.[this.dictForm.en];
+            if (e) {
+              this.dictExisting = { ...e, cat };
+              this.dictForm.cat = cat;
+              return;
+            }
+          }
+        },
+
+        async saveDict() {
+          if (!this.dictForm.en || !this.dictForm.cn) return;
+          if (!localStorage.getItem('gh_token')) {
+            this.flash('❌ 未配置 GitHub Token，请在首页右上角⚙️设置', 4000);
+            return;
+          }
+          this.dictSaving = true;
+          try {
+            // 拉最新词库（避免覆盖别人的修改）
+            const fresh = await GH.getFile('data/dict.json');
+            const dict = JSON.parse(fresh.content);
+
+            // 如果该词在别的分类里存在，先删掉旧的
+            for (const cat of ['games','movies_tv','companies','people','media','terms']) {
+              if (cat !== this.dictForm.cat && dict[cat]?.[this.dictForm.en]) {
+                delete dict[cat][this.dictForm.en];
+              }
+            }
+
+            if (!dict[this.dictForm.cat]) dict[this.dictForm.cat] = {};
+            dict[this.dictForm.cat][this.dictForm.en] = {
+              cn: this.dictForm.cn,
+              source: this.dictForm.source
+            };
+            dict._meta = dict._meta || {};
+            dict._meta.last_updated = new Date().toISOString().slice(0,10);
+
+            await GH.putFile('data/dict.json', JSON.stringify(dict, null, 2),
+              `dict: add ${this.dictForm.en} → ${this.dictForm.cn} (${this.dictForm.source})`);
+            this.dictData = dict;
+            this.flash(`✅ 已保存：${this.dictForm.en} → ${this.dictForm.cn}`);
+            this.showDictModal = false;
+          } catch (e) {
+            this.flash('❌ 保存失败：' + e.message, 5000);
+          } finally {
+            this.dictSaving = false;
+          }
+        },
+
+        flash(msg, ms = 2500) {
+          this.toast = msg;
+          setTimeout(() => { this.toast = ''; }, ms);
         }
       }
     }
