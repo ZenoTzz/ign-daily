@@ -45,11 +45,7 @@
             <h2 class="text-xl font-bold mb-1" x-text="article?.cn_title"></h2>
             <p class="text-sm text-slate-400 mb-4" x-text="`翻译于 ${article?.translated_at || ''}`"></p>
             <template x-for="(p, idx) in article?.paragraphs || []" :key="idx">
-              <div class="para-row"
-                   :data-idx="idx"
-                   @mouseenter="hoverIdx = idx"
-                   @mouseleave="hoverIdx = -1"
-                   :class="hoverIdx === idx ? 'hl' : ''">
+              <div class="para-row">
                 <p class="para-cn" x-text="p.cn"></p>
                 <p class="para-en lg:hidden mt-1" x-text="p.en"></p>
               </div>
@@ -69,12 +65,7 @@
             </div>
             <h2 class="text-xl font-bold mb-1" x-text="article?.en_title"></h2>
             <template x-for="(p, idx) in article?.paragraphs || []" :key="idx">
-              <p class="para-block leading-relaxed text-sm text-slate-700"
-                 :data-idx="idx"
-                 @mouseenter="hoverIdx = idx"
-                 @mouseleave="hoverIdx = -1"
-                 :class="hoverIdx === idx ? 'hl' : ''"
-                 x-text="p.en"></p>
+              <p class="mb-3 leading-relaxed text-sm text-slate-700" x-text="p.en"></p>
             </template>
           </div>
           <iframe x-show="!iframeFailed" :src="article?.url"
@@ -106,7 +97,6 @@
         iframeLoaded: false,
         iframeFailed: false,
         mode: 'compare',  // compare | cn
-        hoverIdx: -1,
 
         async init() {
           const params = new URLSearchParams(location.search);
