@@ -110,7 +110,15 @@ function appData() {
     get filteredArticles() {
       if (!this.data) return [];
       if (this.filterCat === 'all') return this.data.articles;
+      if (this.filterCat === '__translated__') {
+        return this.data.articles.filter(a => a.translation_status === 'done');
+      }
       return this.data.articles.filter(a => a.category === this.filterCat);
+    },
+
+    get translatedCount() {
+      if (!this.data) return 0;
+      return this.data.articles.filter(a => a.translation_status === 'done').length;
     },
 
     saveToken() {

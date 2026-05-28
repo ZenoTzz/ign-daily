@@ -72,6 +72,12 @@
             <span class="ml-1 opacity-70" x-text="`(${cat.count})`"></span>
           </button>
         </template>
+        <button @click="filterCat = '__translated__'"
+          :class="filterCat === '__translated__' ? 'bg-green-600 text-white' : 'bg-white text-green-700 hover:bg-green-50 border-green-300'"
+          class="px-3 py-1.5 rounded-lg text-xs sm:text-sm whitespace-nowrap border ml-1">
+          ✅ 已翻译
+          <span class="ml-1 opacity-70" x-text="`(${translatedCount})`"></span>
+        </button>
       </div>
 
       <!-- Articles -->
