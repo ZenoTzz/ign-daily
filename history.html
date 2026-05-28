@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>历史 — IGN Daily</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <link rel="stylesheet" href="assets/style.css">
+  <script>
+    tailwind.config = { theme: { extend: { colors: { brand: { 600:'#a01620',700:'#7e1219' }}}}}
+  </script>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased">
+  <div x-data="historyData()" x-init="init()" class="min-h-screen">
+    <header class="bg-white border-b sticky top-0 z-10">
+      <div class="max-w-5xl mx-auto px-4 py-3 flex items-center gap-3">
+        <a href="index.html" class="text-slate-500 hover:text-brand-600">←</a>
+        <h1 class="text-lg font-bold">📅 历史归档</h1>
+      </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-4 py-4">
+      <div x-show="loading" class="text-center py-12 text-slate-400">加载中...</div>
+
+      <div x-show="!loading && dates.length === 0" class="text-center py-12 text-slate-400">
+        暂无历史数据
+      </div>
+
+      <div class="space-y-4">
+        <template x-for="d in dates" :key="d.date">
+          <div class="bg-white rounded-xl border p-4 shadow-sm">
+            <div class="flex items-center justify-between mb-2">
+              <h2 class="font-semibold">
+                <a :href="`index.html?date=${d.date}`" class="hover:text-brand-600" x-text="d.date"></a>
+              </h2>
+              <span class="text-xs text-slate-500">
+                <span x-text="`共 ${d.total} 条`"></span> · 
+                <span class="text-green-600" x-text="`${d.translated} 篇已翻译`"></span>
+              </span>
+            </div>
+            <div x-show="d.translatedTitles.length > 0" class="text-sm space-y-1">
+              <template x-for="t in d.translatedTitles">
+                <div class="flex items-center gap-2">
+                  <span class="text-xs text-slate-400" x-text="`#${t.id}`"></span>
+                  <a :href="`article.html?date=${d.date}&id=${t.id}`"
+                    class="text-slate-700 hover:text-brand-600" x-text="t.cn_title"></a>
+                </div>
+              </template>
+            </div>
+          </div>
+        </template>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    function historyData() {
+      return {
+        loading: true,
+        dates: [],
+
+        async init() {
+          // 从 data/index-list.json 读取已归档日期清单
+          try {
+            const res = await fetch('data/index-list.json?t=' + Date.now());
+            if (!res.ok) throw new Error();
+            const list = await res.json(); // 期望: [{date, total, translated, translatedTitles}]
+            this.dates = list.sort((a, b) => b.date.localeCompare(a.date));
+          } catch (e) {
+            // 如果没有清单，尝试当天
+            const today = new Date().toISOString().slice(0, 10);
+            try {
+              const r = await fetch(`data/${today}/index.json?t=${Date.now()}`);
+              if (r.ok) {
+                const data = await r.json();
+                const translated = data.articles.filter(a => a.translation_status === 'done');
+                this.dates = [{
+                  date: today,
+                  total: data.total,
+                  translated: translated.length,
+                  translatedTitles: translated.map(a => ({ id: a.id, cn_title: a.cn_title }))
+                }];
+              }
+            } catch (_) {}
+          }
+          this.loading = false;
+        }
+      }
+    }
+  </script>
+</body>
+</html>

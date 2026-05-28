@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IGN Daily News</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <link rel="stylesheet" href="assets/style.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ign: '#BF1B26',
+            brand: { 50:'#fef2f2',500:'#BF1B26',600:'#a01620',700:'#7e1219' }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased">
+  <div x-data="appData()" x-init="init()" class="min-h-screen">
+    <!-- Header -->
+    <header class="bg-white border-b sticky top-0 z-10">
+      <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <span class="text-2xl">📰</span>
+          <h1 class="text-lg sm:text-xl font-bold text-brand-600">IGN Daily</h1>
+          <span x-show="data" class="text-xs text-slate-400 ml-2" x-text="data?.date"></span>
+        </div>
+        <nav class="flex items-center gap-3 sm:gap-4 text-sm">
+          <a href="dict.html" class="text-slate-600 hover:text-brand-600">📖 词库</a>
+          <a href="history.html" class="text-slate-600 hover:text-brand-600">📅 历史</a>
+          <button @click="showSettings = true" class="text-slate-600 hover:text-brand-600">⚙️</button>
+        </nav>
+      </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-4 py-4 sm:py-6">
+      <!-- Loading / Error -->
+      <div x-show="loading" class="text-center py-12 text-slate-400">加载中...</div>
+      <div x-show="error" class="bg-red-50 border border-red-200 rounded-lg p-4 text-red-700 text-sm" x-text="error"></div>
+
+      <!-- Summary -->
+      <div x-show="data && !loading" class="bg-white rounded-xl border p-4 mb-4 sm:mb-6 shadow-sm">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+          <div>
+            <h2 class="text-base sm:text-lg font-semibold">今日新闻 <span class="text-slate-500" x-text="`(共 ${data?.total} 条)`"></span></h2>
+            <p class="text-xs text-slate-500 mt-1" x-text="data?.window"></p>
+          </div>
+          <div class="flex items-center gap-2 text-sm">
+            <span class="text-slate-500">已选</span>
+            <span class="font-semibold text-brand-600" x-text="selected.length"></span>
+            <button @click="submitRequest()"
+              :disabled="selected.length === 0"
+              class="px-3 py-1.5 bg-brand-600 text-white rounded-lg hover:bg-brand-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-xs sm:text-sm">
+              📨 提交翻译请求
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Filter tabs -->
+      <div x-show="data && !loading" class="flex gap-2 mb-4 overflow-x-auto pb-1">
+        <template x-for="cat in categories" :key="cat.key">
+          <button @click="filterCat = cat.key"
+            :class="filterCat === cat.key ? 'bg-brand-600 text-white' : 'bg-white text-slate-700 hover:bg-slate-100'"
+            class="px-3 py-1.5 rounded-lg text-xs sm:text-sm whitespace-nowrap border">
+            <span x-text="cat.label"></span>
+            <span class="ml-1 opacity-70" x-text="`(${cat.count})`"></span>
+          </button>
+        </template>
+      </div>
+
+      <!-- Articles -->
+      <div x-show="data && !loading" class="space-y-2 sm:space-y-3">
+        <template x-for="art in filteredArticles" :key="art.id">
+          <article class="bg-white rounded-xl border p-3 sm:p-4 shadow-sm hover:shadow transition">
+            <div class="flex items-start gap-3">
+              <!-- Checkbox -->
+              <label class="flex items-center shrink-0 mt-0.5">
+                <input type="checkbox" :value="art.id" x-model="selected"
+                  :disabled="art.translation_status === 'done'"
+                  class="w-5 h-5 rounded border-slate-300 text-brand-600 focus:ring-brand-500 disabled:opacity-50">
+              </label>
+
+              <!-- Content -->
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center gap-2 mb-1 flex-wrap">
+                  <span class="text-xs font-semibold text-slate-400" x-text="`#${art.id}`"></span>
+                  <span class="text-base sm:text-lg" x-text="art.emoji"></span>
+                  <span class="text-xs px-2 py-0.5 rounded-full bg-slate-100 text-slate-600" x-text="art.category"></span>
+                  <template x-if="art.translation_status === 'done'">
+                    <span class="text-xs px-2 py-0.5 rounded-full bg-green-100 text-green-700">✅ 已翻译</span>
+                  </template>
+                  <template x-if="art.translation_status === 'requested'">
+                    <span class="text-xs px-2 py-0.5 rounded-full bg-amber-100 text-amber-700">⏳ 翻译中</span>
+                  </template>
+                </div>
+                <h3 class="font-semibold text-sm sm:text-base mb-1 leading-tight" x-text="art.cn_title"></h3>
+                <p class="text-xs sm:text-sm text-slate-500 mb-2 line-clamp-1" x-text="art.en_title"></p>
+                <p class="text-xs sm:text-sm text-slate-600 line-clamp-2" x-text="art.summary"></p>
+                <div class="flex items-center gap-3 mt-2 text-xs">
+                  <a :href="art.url" target="_blank" rel="noopener"
+                    class="text-slate-500 hover:text-brand-600">🔗 IGN原文</a>
+                  <template x-if="art.translation_status === 'done'">
+                    <a :href="`article.html?date=${data.date}&id=${art.id}`"
+                      class="text-brand-600 font-medium hover:text-brand-700">📖 查看翻译</a>
+                  </template>
+                </div>
+              </div>
+            </div>
+          </article>
+        </template>
+      </div>
+    </main>
+
+    <!-- Settings Modal -->
+    <div x-show="showSettings" x-cloak @keydown.escape.window="showSettings=false"
+         class="fixed inset-0 bg-black/40 flex items-center justify-center z-20 p-4" @click.self="showSettings=false">
+      <div class="bg-white rounded-xl p-5 sm:p-6 max-w-md w-full">
+        <h3 class="text-lg font-bold mb-3">⚙️ 设置</h3>
+        <label class="block text-sm font-medium mb-1">GitHub Personal Access Token</label>
+        <p class="text-xs text-slate-500 mb-2">用于把翻译请求和词库改动提交回仓库。仅保存在你本地浏览器，不会上传。</p>
+        <input type="password" x-model="token" placeholder="ghp_xxx 或 github_pat_xxx"
+          class="w-full px-3 py-2 border rounded-lg text-sm">
+        <div class="flex gap-2 mt-3">
+          <button @click="saveToken()" class="px-3 py-1.5 bg-brand-600 text-white rounded-lg text-sm">保存</button>
+          <button @click="clearToken()" class="px-3 py-1.5 bg-slate-200 text-slate-700 rounded-lg text-sm">清除</button>
+          <button @click="showSettings=false" class="ml-auto px-3 py-1.5 text-slate-500 text-sm">关闭</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Toast -->
+    <div x-show="toast" x-cloak x-transition.opacity
+         class="fixed bottom-4 left-1/2 -translate-x-1/2 bg-slate-900 text-white px-4 py-2 rounded-lg shadow-lg text-sm z-30"
+         x-text="toast"></div>
+  </div>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>

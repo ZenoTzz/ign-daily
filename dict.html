@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>词库 — IGN Daily</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <link rel="stylesheet" href="assets/style.css">
+  <script>
+    tailwind.config = { theme: { extend: { colors: { brand: { 600:'#a01620',700:'#7e1219' }}}}}
+  </script>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased">
+  <div x-data="dictData()" x-init="init()" class="min-h-screen">
+    <!-- Header -->
+    <header class="bg-white border-b sticky top-0 z-10">
+      <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <a href="index.html" class="text-slate-500 hover:text-brand-600">←</a>
+          <h1 class="text-lg font-bold">📖 词库管理</h1>
+          <span class="text-xs text-slate-400" x-show="data" x-text="`v ${data?._meta?.last_updated}`"></span>
+        </div>
+        <div class="flex items-center gap-2">
+          <span x-show="changedKeys.length > 0" class="text-xs text-amber-600">
+            <span x-text="changedKeys.length"></span> 项待保存
+          </span>
+          <button @click="saveAll()" :disabled="changedKeys.length === 0"
+            class="px-3 py-1.5 bg-brand-600 text-white rounded-lg disabled:bg-slate-300 text-xs sm:text-sm">
+            💾 保存
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 py-4">
+      <!-- Search + filter -->
+      <div class="bg-white rounded-xl border p-3 mb-4 flex flex-col sm:flex-row gap-2">
+        <input type="text" x-model="search" placeholder="🔍 搜索英文/中文..."
+          class="flex-1 px-3 py-2 border rounded-lg text-sm">
+        <div class="flex gap-2 overflow-x-auto">
+          <template x-for="cat in categories" :key="cat.key">
+            <button @click="filterCat = cat.key"
+              :class="filterCat === cat.key ? 'bg-brand-600 text-white' : 'bg-slate-100 text-slate-700'"
+              class="px-3 py-1.5 rounded-lg text-xs whitespace-nowrap">
+              <span x-text="cat.label"></span>
+              <span class="ml-1 opacity-70" x-text="`(${cat.count})`"></span>
+            </button>
+          </template>
+        </div>
+      </div>
+
+      <!-- Source filter -->
+      <div class="flex gap-1 mb-3 text-xs flex-wrap">
+        <span class="text-slate-500">来源：</span>
+        <template x-for="src in ['all','user','ign_cn','bilibili','consensus','ai_guess']">
+          <button @click="filterSource = src"
+            :class="filterSource === src ? 'bg-slate-700 text-white' : 'bg-slate-100 text-slate-600'"
+            class="px-2 py-0.5 rounded">
+            <span x-text="src"></span>
+          </button>
+        </template>
+      </div>
+
+      <!-- Loading -->
+      <div x-show="!data" class="text-center py-12 text-slate-400">加载中...</div>
+
+      <!-- Table -->
+      <div x-show="data" class="bg-white rounded-xl border overflow-x-auto">
+        <table class="w-full text-sm">
+          <thead class="bg-slate-50 text-xs text-slate-500 uppercase">
+            <tr>
+              <th class="text-left px-3 py-2 w-1/3">英文</th>
+              <th class="text-left px-3 py-2 w-1/3">中文</th>
+              <th class="text-left px-3 py-2 w-24">来源</th>
+              <th class="text-left px-3 py-2 w-24">分类</th>
+              <th class="px-3 py-2 w-12"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <template x-for="entry in pagedEntries" :key="entry.key">
+              <tr class="dict-row border-t" :class="changedKeys.includes(entry.key) ? 'changed' : ''">
+                <td class="font-mono text-xs sm:text-sm" x-text="entry.en"></td>
+                <td>
+                  <input type="text" class="dict-input" :value="entry.cn"
+                    @input="updateCn(entry, $event.target.value)">
+                </td>
+                <td>
+                  <select class="dict-input text-xs" :value="entry.source"
+                    @change="updateSource(entry, $event.target.value)">
+                    <option value="user">user</option>
+                    <option value="ign_cn">ign_cn</option>
+                    <option value="bilibili">bilibili</option>
+                    <option value="consensus">consensus</option>
+                    <option value="ai_guess">ai_guess</option>
+                  </select>
+                </td>
+                <td class="text-xs text-slate-500" x-text="entry.cat"></td>
+                <td>
+                  <button @click="removeEntry(entry)" class="text-red-500 hover:text-red-700 text-sm" title="删除">🗑️</button>
+                </td>
+              </tr>
+            </template>
+          </tbody>
+        </table>
+        <!-- Pagination -->
+        <div class="flex items-center justify-between p-3 border-t text-xs text-slate-500">
+          <span>共 <span x-text="filteredEntries.length"></span> 条 / 总 <span x-text="allEntries.length"></span> 条</span>
+          <div class="flex items-center gap-2">
+            <button @click="page = Math.max(0, page - 1)" :disabled="page === 0"
+              class="px-2 py-1 border rounded disabled:opacity-30">←</button>
+            <span x-text="`${page + 1} / ${Math.ceil(filteredEntries.length / pageSize) || 1}`"></span>
+            <button @click="page = Math.min(Math.ceil(filteredEntries.length / pageSize) - 1, page + 1)"
+              :disabled="(page + 1) * pageSize >= filteredEntries.length"
+              class="px-2 py-1 border rounded disabled:opacity-30">→</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Toast -->
+    <div x-show="toast" x-cloak x-transition.opacity
+         class="fixed bottom-4 left-1/2 -translate-x-1/2 bg-slate-900 text-white px-4 py-2 rounded-lg shadow-lg text-sm z-30"
+         x-text="toast"></div>
+  </div>
+
+  <script src="assets/app.js"></script>
+  <script>
+    function dictData() {
+      return {
+        data: null,
+        originalData: null,
+        search: '',
+        filterCat: 'all',
+        filterSource: 'all',
+        page: 0,
+        pageSize: 50,
+        changedKeys: [],  // 形如 'games::Final Fantasy Tactics'
+        toast: '',
+
+        async init() {
+          try {
+            const res = await fetch(`data/dict.json?t=${Date.now()}`);
+            this.data = await res.json();
+            this.originalData = JSON.parse(JSON.stringify(this.data));
+          } catch (e) {
+            console.error(e);
+          }
+        },
+
+        get categories() {
+          if (!this.data) return [];
+          const cats = ['games','movies_tv','companies','people','media','terms'];
+          const counts = { all: 0 };
+          for (const c of cats) {
+            const n = Object.keys(this.data[c] || {}).length;
+            counts[c] = n;
+            counts.all += n;
+          }
+          const labels = { all:'全部', games:'游戏', movies_tv:'影视', companies:'公司', people:'人物', media:'媒体', terms:'术语' };
+          return [
+            { key: 'all', label: labels.all, count: counts.all },
+            ...cats.filter(c => counts[c]).map(c => ({ key: c, label: labels[c], count: counts[c] }))
+          ];
+        },
+
+        get allEntries() {
+          if (!this.data) return [];
+          const cats = ['games','movies_tv','companies','people','media','terms'];
+          const list = [];
+          for (const c of cats) {
+            for (const [en, info] of Object.entries(this.data[c] || {})) {
+              list.push({
+                key: `${c}::${en}`,
+                en, cat: c,
+                cn: info?.cn || '',
+                source: info?.source || ''
+              });
+            }
+          }
+          return list;
+        },
+
+        get filteredEntries() {
+          let list = this.allEntries;
+          if (this.filterCat !== 'all') list = list.filter(e => e.cat === this.filterCat);
+          if (this.filterSource !== 'all') list = list.filter(e => e.source === this.filterSource);
+          if (this.search.trim()) {
+            const q = this.search.trim().toLowerCase();
+            list = list.filter(e => e.en.toLowerCase().includes(q) || e.cn.includes(this.search.trim()));
+          }
+          return list;
+        },
+
+        get pagedEntries() {
+          const start = this.page * this.pageSize;
+          return this.filteredEntries.slice(start, start + this.pageSize);
+        },
+
+        markChanged(key) {
+          if (!this.changedKeys.includes(key)) this.changedKeys.push(key);
+        },
+
+        updateCn(entry, val) {
+          this.data[entry.cat][entry.en].cn = val;
+          this.markChanged(entry.key);
+        },
+
+        updateSource(entry, val) {
+          this.data[entry.cat][entry.en].source = val;
+          this.markChanged(entry.key);
+        },
+
+        removeEntry(entry) {
+          if (!confirm(`确定删除 "${entry.en}"？`)) return;
+          delete this.data[entry.cat][entry.en];
+          this.markChanged(entry.key);
+        },
+
+        async saveAll() {
+          if (this.changedKeys.length === 0) return;
+          try {
+            const today = new Date().toISOString().slice(0, 10);
+            this.data._meta.last_updated = today;
+            const json = JSON.stringify(this.data, null, 2);
+            await GH.putFile('data/dict.json', json,
+              `update dict: ${this.changedKeys.length} entries (${today})`);
+            this.flash(`✅ 已保存 ${this.changedKeys.length} 项变更`);
+            this.changedKeys = [];
+            this.originalData = JSON.parse(JSON.stringify(this.data));
+          } catch (e) {
+            this.flash('❌ 保存失败：' + e.message, 4000);
+          }
+        },
+
+        flash(msg, ms = 2500) {
+          this.toast = msg;
+          setTimeout(() => { this.toast = ''; }, ms);
+        }
+      }
+    }
+  </script>
+</body>
+</html>

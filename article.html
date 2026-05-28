@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>译文 — IGN Daily</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <link rel="stylesheet" href="assets/style.css">
+  <script>
+    tailwind.config = {
+      theme: { extend: { colors: { brand: { 600:'#a01620',700:'#7e1219' }}}}
+    }
+  </script>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased">
+  <div x-data="articleData()" x-init="init()" class="h-screen flex flex-col">
+    <!-- Header -->
+    <header class="bg-white border-b shrink-0">
+      <div class="px-4 py-2 flex items-center justify-between">
+        <div class="flex items-center gap-3 min-w-0">
+          <a href="index.html" class="text-slate-500 hover:text-brand-600 shrink-0">← 返回</a>
+          <h1 class="font-semibold text-sm sm:text-base truncate" x-text="article?.cn_title || '加载中...'"></h1>
+        </div>
+        <div class="flex items-center gap-2 shrink-0">
+          <a x-show="article" :href="article?.url" target="_blank" rel="noopener"
+            class="text-xs text-slate-500 hover:text-brand-600">🔗 IGN</a>
+          <button @click="mode = mode === 'compare' ? 'cn' : 'compare'"
+            class="text-xs px-2 py-1 rounded border hover:bg-slate-50 hidden lg:inline-flex">
+            <span x-text="mode === 'compare' ? '🔄 切换' : '↔ 对照'"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Body -->
+    <div x-show="error" class="p-6 text-red-600" x-text="error"></div>
+
+    <div x-show="article" class="flex-1 min-h-0 overflow-hidden">
+      <!-- Two-pane: 左译文 / 右原文iframe -->
+      <div x-show="mode === 'compare'" class="reader-grid h-full">
+        <!-- 左：中文译文（按段落对照） -->
+        <div class="reader-pane cn">
+          <div class="max-w-prose mx-auto">
+            <h2 class="text-xl font-bold mb-1" x-text="article?.cn_title"></h2>
+            <p class="text-sm text-slate-400 mb-4" x-text="`翻译于 ${article?.translated_at || ''}`"></p>
+            <template x-for="(p, idx) in article?.paragraphs || []" :key="idx">
+              <div class="para-row">
+                <p class="para-cn" x-text="p.cn"></p>
+                <p class="para-en lg:hidden mt-1" x-text="p.en"></p>
+              </div>
+            </template>
+          </div>
+        </div>
+
+        <!-- 右：IGN 原文 iframe（可能被IGN拒绝） -->
+        <div class="reader-pane en p-0 hidden lg:block relative">
+          <div x-show="!iframeLoaded && !iframeFailed" class="absolute inset-0 flex items-center justify-center text-slate-400 text-sm">
+            正在尝试加载 IGN 原网页...
+          </div>
+          <div x-show="iframeFailed" class="p-4">
+            <div class="bg-amber-50 border border-amber-200 text-amber-800 rounded-lg p-3 text-sm mb-3">
+              ⚠️ IGN 不允许在 iframe 中嵌入。下方显示的是抓取的英文原文段落（与左侧译文一一对应）。
+              <a :href="article?.url" target="_blank" class="underline">在新标签打开IGN原文</a>
+            </div>
+            <h2 class="text-xl font-bold mb-1" x-text="article?.en_title"></h2>
+            <template x-for="(p, idx) in article?.paragraphs || []" :key="idx">
+              <p class="para-en mb-3 leading-relaxed" x-text="p.en"></p>
+            </template>
+          </div>
+          <iframe x-show="!iframeFailed" :src="article?.url"
+            class="w-full h-full border-0"
+            @load="iframeLoaded = true"
+            @error="iframeFailed = true"
+            sandbox="allow-same-origin allow-scripts allow-forms allow-popups"></iframe>
+        </div>
+      </div>
+
+      <!-- 仅中文模式 -->
+      <div x-show="mode === 'cn'" class="reader-pane cn h-full overflow-y-auto">
+        <div class="max-w-prose mx-auto py-4">
+          <h2 class="text-xl font-bold mb-1" x-text="article?.cn_title"></h2>
+          <p class="text-sm text-slate-400 mb-4" x-text="`翻译于 ${article?.translated_at || ''}`"></p>
+          <template x-for="(p, idx) in article?.paragraphs || []" :key="idx">
+            <p class="para-cn mb-4 leading-relaxed" x-text="p.cn"></p>
+          </template>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function articleData() {
+      return {
+        article: null,
+        error: '',
+        iframeLoaded: false,
+        iframeFailed: false,
+        mode: 'compare',  // compare | cn
+
+        async init() {
+          const params = new URLSearchParams(location.search);
+          const date = params.get('date');
+          const id = params.get('id');
+          if (!date || !id) {
+            this.error = 'URL 缺少 date 或 id 参数';
+            return;
+          }
+          const padded = String(id).padStart(2, '0');
+          try {
+            const res = await fetch(`data/${date}/translations/${padded}.json?t=${Date.now()}`);
+            if (!res.ok) throw new Error(`HTTP ${res.status}`);
+            this.article = await res.json();
+            // iframe 5秒超时则降级
+            setTimeout(() => {
+              if (!this.iframeLoaded) this.iframeFailed = true;
+            }, 5000);
+          } catch (e) {
+            this.error = '加载译文失败：' + e.message;
+          }
+        }
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,1785 @@
+{
+  "_meta": {
+    "description": "游戏/影视名称中英文对照词库，翻译时必须查询此词库，有匹配则直接使用",
+    "source": "IGN中国 (ign.com.cn) + B站IGN中国 (space.bilibili.com/652239032) + 中国玩家圈公认译名",
+    "last_updated": "2026-05-28",
+    "source_legend": {
+      "ign_cn": "IGN中国官网 ign.com.cn 确认",
+      "bilibili": "B站IGN中国主页视频标题/简介确认",
+      "user": "用户手动校正（最高优先级）",
+      "consensus": "中国玩家圈公认译名",
+      "ai_guess": "AI推测（未经验证，需核实）"
+    }
+  },
+  "games": {
+    "Darkest Dungeon": {
+      "cn": "暗黑地牢",
+      "source": "consensus"
+    },
+    "Crimson Desert": {
+      "cn": "红色沙漠",
+      "source": "ign_cn"
+    },
+    "The Elder Scrolls IV: Oblivion Remastered": {
+      "cn": "上古卷轴4：湮灭 复刻版",
+      "source": "ign_cn"
+    },
+    "The Elder Scrolls IV: Oblivion": {
+      "cn": "上古卷轴4：湮灭",
+      "source": "ign_cn"
+    },
+    "The Elder Scrolls V: Skyrim": {
+      "cn": "上古卷轴5：天际",
+      "source": "consensus"
+    },
+    "The Elder Scrolls VI": {
+      "cn": "上古卷轴6",
+      "source": "consensus"
+    },
+    "Final Fantasy 7 Remake": {
+      "cn": "最终幻想7 重制版",
+      "source": "ign_cn"
+    },
+    "Final Fantasy 7 Rebirth": {
+      "cn": "最终幻想7 重生",
+      "source": "ign_cn"
+    },
+    "Final Fantasy VII Remake": {
+      "cn": "最终幻想7 重制版",
+      "source": "ign_cn"
+    },
+    "Final Fantasy VII Rebirth": {
+      "cn": "最终幻想7 重生",
+      "source": "ign_cn"
+    },
+    "Grand Theft Auto 6": {
+      "cn": "GTA6",
+      "source": "consensus"
+    },
+    "Grand Theft Auto V": {
+      "cn": "GTA5",
+      "source": "consensus"
+    },
+    "GTA 6": {
+      "cn": "GTA6",
+      "source": "consensus"
+    },
+    "GTA 5": {
+      "cn": "GTA5",
+      "source": "consensus"
+    },
+    "Assassin's Creed Black Flag Resynced": {
+      "cn": "刺客信条：黑旗 记忆重置",
+      "source": "user"
+    },
+    "Assassin's Creed Shadows": {
+      "cn": "刺客信条：影",
+      "source": "consensus"
+    },
+    "Assassin's Creed Mirage": {
+      "cn": "刺客信条：幻景",
+      "source": "consensus"
+    },
+    "Assassin's Creed Valhalla": {
+      "cn": "刺客信条：英灵殿",
+      "source": "consensus"
+    },
+    "Kingdom Come: Deliverance 2": {
+      "cn": "天国：拯救2",
+      "source": "consensus"
+    },
+    "Kingdom Come: Deliverance": {
+      "cn": "天国：拯救",
+      "source": "consensus"
+    },
+    "Pragmata": {
+      "cn": "识质存在",
+      "source": "ign_cn"
+    },
+    "Battlefield 6": {
+      "cn": "战地风云6",
+      "source": "user"
+    },
+    "Battlefield": {
+      "cn": "战地风云",
+      "source": "user"
+    },
+    "Warhammer 40,000: Space Marine 2": {
+      "cn": "战锤40K：星际战士2",
+      "source": "consensus"
+    },
+    "Total War: Warhammer 40,000": {
+      "cn": "全面战争：战锤40K",
+      "source": "consensus"
+    },
+    "Total War": {
+      "cn": "全面战争",
+      "source": "consensus"
+    },
+    "Subnautica 2": {
+      "cn": "深海迷航2",
+      "source": "consensus"
+    },
+    "Subnautica": {
+      "cn": "深海迷航",
+      "source": "consensus"
+    },
+    "The Outer Worlds": {
+      "cn": "天外世界",
+      "source": "consensus"
+    },
+    "Forza Horizon 6": {
+      "cn": "极限竞速：地平线6",
+      "source": "ign_cn"
+    },
+    "Forza Horizon 5": {
+      "cn": "极限竞速：地平线5",
+      "source": "ign_cn"
+    },
+    "Forza Horizon": {
+      "cn": "极限竞速：地平线",
+      "source": "consensus"
+    },
+    "Resident Evil": {
+      "cn": "生化危机",
+      "source": "consensus"
+    },
+    "Dungeon Crawler Carl": {
+      "cn": "地下城爬行者卡尔",
+      "source": "consensus"
+    },
+    "Pokémon": {
+      "cn": "宝可梦",
+      "source": "consensus"
+    },
+    "Pokemon": {
+      "cn": "宝可梦",
+      "source": "consensus"
+    },
+    "Above Land: Rhapsody": {
+      "cn": "鲲歌",
+      "source": "ign_cn"
+    },
+    "Phasmophobia": {
+      "cn": "恐鬼症",
+      "source": "consensus"
+    },
+    "GreedFall": {
+      "cn": "贪婪之秋",
+      "source": "consensus"
+    },
+    "Undisputed": {
+      "cn": "无可争辩",
+      "source": "consensus"
+    },
+    "Invincible VS": {
+      "cn": "无敌少侠：对决",
+      "source": "ign_cn"
+    },
+    "Bully": {
+      "cn": "恶霸鲁尼",
+      "source": "consensus"
+    },
+    "Cyberpunk 2077": {
+      "cn": "赛博朋克2077",
+      "source": "consensus"
+    },
+    "The Witcher 3": {
+      "cn": "巫师3",
+      "source": "consensus"
+    },
+    "The Blood of Dawnwalker": {
+      "cn": "黎明行者之血",
+      "source": "consensus"
+    },
+    "Elden Ring": {
+      "cn": "艾尔登法环",
+      "source": "consensus"
+    },
+    "Elden Ring: Nightreign": {
+      "cn": "艾尔登法环：黑夜君临",
+      "source": "user"
+    },
+    "Dark Souls": {
+      "cn": "黑暗之魂",
+      "source": "consensus"
+    },
+    "Bloodborne": {
+      "cn": "血源诅咒",
+      "source": "consensus"
+    },
+    "Monster Hunter Wilds": {
+      "cn": "怪物猎人：荒野",
+      "source": "ign_cn"
+    },
+    "Monster Hunter": {
+      "cn": "怪物猎人",
+      "source": "consensus"
+    },
+    "Death Stranding": {
+      "cn": "死亡搁浅",
+      "source": "consensus"
+    },
+    "Ghost of Tsushima": {
+      "cn": "对马岛之魂",
+      "source": "consensus"
+    },
+    "God of War Ragnarök": {
+      "cn": "战神：诸神黄昏",
+      "source": "consensus"
+    },
+    "God of War": {
+      "cn": "战神",
+      "source": "consensus"
+    },
+    "Horizon Forbidden West": {
+      "cn": "地平线：西之绝境",
+      "source": "consensus"
+    },
+    "Horizon Zero Dawn": {
+      "cn": "地平线：零之曙光",
+      "source": "consensus"
+    },
+    "The Last of Us": {
+      "cn": "最后生还者",
+      "source": "consensus"
+    },
+    "The Last of Us Part II": {
+      "cn": "最后生还者 Part II",
+      "source": "consensus"
+    },
+    "Uncharted": {
+      "cn": "神秘海域",
+      "source": "consensus"
+    },
+    "Spider-Man": {
+      "cn": "蜘蛛侠",
+      "source": "consensus"
+    },
+    "Marvel's Spider-Man 2": {
+      "cn": "漫威蜘蛛侠2",
+      "source": "consensus"
+    },
+    "Zelda": {
+      "cn": "塞尔达",
+      "source": "consensus"
+    },
+    "The Legend of Zelda": {
+      "cn": "塞尔达传说",
+      "source": "consensus"
+    },
+    "Tears of the Kingdom": {
+      "cn": "王国之泪",
+      "source": "consensus"
+    },
+    "Breath of the Wild": {
+      "cn": "旷野之息",
+      "source": "consensus"
+    },
+    "Super Mario": {
+      "cn": "超级马力欧",
+      "source": "consensus"
+    },
+    "Mario Kart": {
+      "cn": "马力欧卡丁车",
+      "source": "consensus"
+    },
+    "Animal Crossing": {
+      "cn": "集合啦 动物森友会",
+      "source": "user"
+    },
+    "Splatoon": {
+      "cn": "斯普拉遁",
+      "source": "consensus"
+    },
+    "Metroid": {
+      "cn": "密特罗德",
+      "source": "user"
+    },
+    "Fire Emblem": {
+      "cn": "火焰纹章",
+      "source": "consensus"
+    },
+    "Xenoblade Chronicles": {
+      "cn": "异度神剑",
+      "source": "consensus"
+    },
+    "Nintendo Switch 2": {
+      "cn": "Nintendo Switch 2",
+      "source": "consensus"
+    },
+    "Halo": {
+      "cn": "光环",
+      "source": "consensus"
+    },
+    "Gears of War": {
+      "cn": "战争机器",
+      "source": "consensus"
+    },
+    "Starfield": {
+      "cn": "星空",
+      "source": "consensus"
+    },
+    "Fallout": {
+      "cn": "辐射",
+      "source": "consensus"
+    },
+    "Fallout 5": {
+      "cn": "辐射5",
+      "source": "consensus"
+    },
+    "Diablo 4": {
+      "cn": "暗黑破坏神4",
+      "source": "ign_cn"
+    },
+    "Diablo IV": {
+      "cn": "暗黑破坏神4",
+      "source": "ign_cn"
+    },
+    "World of Warcraft": {
+      "cn": "魔兽世界",
+      "source": "consensus"
+    },
+    "Overwatch 2": {
+      "cn": "守望先锋2",
+      "source": "consensus"
+    },
+    "Call of Duty": {
+      "cn": "使命召唤",
+      "source": "consensus"
+    },
+    "Destiny 2": {
+      "cn": "命运2",
+      "source": "consensus"
+    },
+    "Apex Legends": {
+      "cn": "Apex英雄",
+      "source": "ign_cn"
+    },
+    "Valorant": {
+      "cn": "无畏契约",
+      "source": "consensus"
+    },
+    "League of Legends": {
+      "cn": "英雄联盟",
+      "source": "consensus"
+    },
+    "Dota 2": {
+      "cn": "Dota2",
+      "source": "consensus"
+    },
+    "Counter-Strike 2": {
+      "cn": "反恐精英2",
+      "source": "consensus"
+    },
+    "Red Dead Redemption": {
+      "cn": "荒野大镖客：救赎",
+      "source": "consensus"
+    },
+    "Red Dead Redemption 2": {
+      "cn": "荒野大镖客：救赎2",
+      "source": "consensus"
+    },
+    "Wuchang: Fallen Feathers": {
+      "cn": "明末：渊虚之羽",
+      "source": "user"
+    },
+    "Black Myth: Wukong": {
+      "cn": "黑神话：悟空",
+      "source": "ign_cn"
+    },
+    "Saros": {
+      "cn": "沙罗周期",
+      "source": "ign_cn"
+    },
+    "Metro 2039": {
+      "cn": "地铁2039",
+      "source": "ign_cn"
+    },
+    "007 First Light": {
+      "cn": "007 初露锋芒",
+      "source": "ign_cn"
+    },
+    "Resident Evil Requiem": {
+      "cn": "生化危机：安魂曲",
+      "source": "ign_cn"
+    },
+    "Marathon": {
+      "cn": "失落星船：马拉松",
+      "source": "user"
+    },
+    "Magic: The Gathering": {
+      "cn": "万智牌",
+      "source": "ign_cn"
+    },
+    "Diablo IV: Lord of Hatred": {
+      "cn": "暗黑破坏神4：憎恨之王",
+      "source": "ign_cn"
+    },
+    "Steam Controller": {
+      "cn": "Steam Controller",
+      "source": "user"
+    },
+    "Apex Legends: Overcharged": {
+      "cn": "Apex英雄：超频",
+      "source": "ign_cn"
+    },
+    "Subnautica 2: Alien Waters": {
+      "cn": "深海迷航2：异星水域",
+      "source": "ign_cn"
+    },
+    "Commandos: Origins": {
+      "cn": "盟军敢死队：起源",
+      "source": "ign_cn"
+    },
+    "Fatal Fury: City of the Wolves": {
+      "cn": "饿狼传说：群狼之城",
+      "source": "ign_cn"
+    },
+    "Microsoft Flight Simulator 2024": {
+      "cn": "微软飞行模拟2024",
+      "source": "ign_cn"
+    },
+    "Star Wars: Galactic Racer": {
+      "cn": "星球大战：银河赛车手",
+      "source": "ign_cn"
+    },
+    "Neverness to Everness": {
+      "cn": "异环",
+      "source": "ign_cn"
+    },
+    "Mandate Order": {
+      "cn": "锋沙",
+      "source": "ign_cn"
+    },
+    "Spark Ignites": {
+      "cn": "星火燎原",
+      "source": "ign_cn"
+    },
+    "Mouse P.I. For Hire": {
+      "cn": "神探杰克鼠",
+      "source": "ign_cn"
+    },
+    "Dreadmoor": {
+      "cn": "渊舟蚀影",
+      "source": "ign_cn"
+    },
+    "Sekiro: Shadows Die Twice": {
+      "cn": "只狼：影逝二度",
+      "source": "consensus"
+    },
+    "Lies of P": {
+      "cn": "匹诺曹的谎言",
+      "source": "consensus"
+    },
+    "Stellar Blade": {
+      "cn": "剑星",
+      "source": "user"
+    },
+    "Astro Bot": {
+      "cn": "宇宙机器人",
+      "source": "consensus"
+    },
+    "Silent Hill 2": {
+      "cn": "寂静岭 2",
+      "source": "user"
+    },
+    "Silent Hill": {
+      "cn": "寂静岭",
+      "source": "consensus"
+    },
+    "Metal Gear Solid": {
+      "cn": "潜龙谍影",
+      "source": "user"
+    },
+    "Metal Gear Solid Delta: Snake Eater": {
+      "cn": "合金装备Delta：食蛇者",
+      "source": "consensus"
+    },
+    "Tekken 8": {
+      "cn": "铁拳8",
+      "source": "consensus"
+    },
+    "Street Fighter 6": {
+      "cn": "街头霸王6",
+      "source": "consensus"
+    },
+    "Mortal Kombat 1": {
+      "cn": "真人快打1",
+      "source": "consensus"
+    },
+    "Baldur's Gate 3": {
+      "cn": "博德之门3",
+      "source": "consensus"
+    },
+    "Hogwarts Legacy": {
+      "cn": "霍格沃茨之遗",
+      "source": "consensus"
+    },
+    "Palworld": {
+      "cn": "幻兽帕鲁",
+      "source": "consensus"
+    },
+    "Helldivers 2": {
+      "cn": "绝地潜兵2",
+      "source": "consensus"
+    },
+    "Dragon Age: The Veilguard": {
+      "cn": "龙腾世纪：帷幕守护者",
+      "source": "consensus"
+    },
+    "Indiana Jones and the Great Circle": {
+      "cn": "夺宝奇兵：古老之圈",
+      "source": "user"
+    },
+    "Alan Wake 2": {
+      "cn": "心灵杀手2",
+      "source": "consensus"
+    },
+    "Alan Wake": {
+      "cn": "心灵杀手",
+      "source": "consensus"
+    },
+    "Remnant 2": {
+      "cn": "遗迹2",
+      "source": "consensus"
+    },
+    "Armored Core VI": {
+      "cn": "装甲核心6",
+      "source": "consensus"
+    },
+    "Dead Space": {
+      "cn": "死亡空间",
+      "source": "consensus"
+    },
+    "The Callisto Protocol": {
+      "cn": "木卫四协议",
+      "source": "consensus"
+    },
+    "Stardew Valley": {
+      "cn": "星露谷物语",
+      "source": "consensus"
+    },
+    "Hollow Knight": {
+      "cn": "空洞骑士",
+      "source": "consensus"
+    },
+    "Hollow Knight: Silksong": {
+      "cn": "空洞骑士：丝之歌",
+      "source": "consensus"
+    },
+    "Celeste": {
+      "cn": "蔚蓝",
+      "source": "consensus"
+    },
+    "Hades": {
+      "cn": "哈迪斯",
+      "source": "consensus"
+    },
+    "Hades II": {
+      "cn": "哈迪斯2",
+      "source": "consensus"
+    },
+    "Disco Elysium": {
+      "cn": "极乐迪斯科",
+      "source": "consensus"
+    },
+    "Outer Wilds": {
+      "cn": "星际拓荒",
+      "source": "consensus"
+    },
+    "It Takes Two": {
+      "cn": "双人成行",
+      "source": "consensus"
+    },
+    "Marvel Rivals": {
+      "cn": "漫威争锋",
+      "source": "consensus"
+    },
+    "Clair Obscur: Expedition 33": {
+      "cn": "光与影：33号远征队",
+      "source": "user"
+    },
+    "Exodus": {
+      "cn": "Exodus",
+      "source": "consensus"
+    },
+    "The Expanse": {
+      "cn": "苍穹浩瀚",
+      "source": "consensus"
+    },
+    "Doom: The Dark Ages": {
+      "cn": "毁灭战士：黑暗时代",
+      "source": "user"
+    },
+    "Fable": {
+      "cn": "神鬼寓言",
+      "source": "consensus"
+    },
+    "Avowed": {
+      "cn": "宣誓",
+      "source": "consensus"
+    },
+    "Perfect Dark": {
+      "cn": "完美黑暗",
+      "source": "consensus"
+    },
+    "State of Decay 3": {
+      "cn": "腐烂国度3",
+      "source": "consensus"
+    },
+    "South of Midnight": {
+      "cn": "午夜之南",
+      "source": "consensus"
+    },
+    "InZOI": {
+      "cn": "inZOI 云族裔",
+      "source": "user"
+    },
+    "The Sims 5": {
+      "cn": "模拟人生5",
+      "source": "consensus"
+    },
+    "Last of Us Part III": {
+      "cn": "最后生还者 Part III",
+      "source": "consensus"
+    },
+    "Ghost of Yotei": {
+      "cn": "羊蹄山之魂",
+      "source": "user"
+    },
+    "Wolverine": {
+      "cn": "金刚狼",
+      "source": "consensus"
+    },
+    "Path of Exile 2": {
+      "cn": "流放之路2",
+      "source": "consensus"
+    },
+    "Path of Exile": {
+      "cn": "流放之路",
+      "source": "consensus"
+    },
+    "Doom Eternal": {
+      "cn": "毁灭战士：永恒",
+      "source": "consensus"
+    },
+    "Doom": {
+      "cn": "毁灭战士",
+      "source": "consensus"
+    },
+    "Wolfenstein": {
+      "cn": "德军总部",
+      "source": "consensus"
+    },
+    "Persona 5": {
+      "cn": "女神异闻录5",
+      "source": "consensus"
+    },
+    "Persona": {
+      "cn": "女神异闻录",
+      "source": "consensus"
+    },
+    "Final Fantasy XVI": {
+      "cn": "最终幻想16",
+      "source": "consensus"
+    },
+    "Dragon Quest": {
+      "cn": "勇者斗恶龙",
+      "source": "consensus"
+    },
+    "Ni no Kuni": {
+      "cn": "二之国",
+      "source": "consensus"
+    },
+    "Tales of Arise": {
+      "cn": "破晓传说",
+      "source": "consensus"
+    },
+    "Star Ocean": {
+      "cn": "星之海洋",
+      "source": "consensus"
+    },
+    "NieR: Automata": {
+      "cn": "尼尔：自动人形",
+      "source": "user"
+    },
+    "NieR": {
+      "cn": "尼尔",
+      "source": "consensus"
+    },
+    "Hitman": {
+      "cn": "杀手",
+      "source": "consensus"
+    },
+    "Freedom Fighters": {
+      "cn": "自由战士",
+      "source": "consensus"
+    },
+    "Kane and Lynch": {
+      "cn": "凯恩与林奇",
+      "source": "consensus"
+    },
+    "Mixtape": {
+      "cn": "Mixtape",
+      "source": "consensus"
+    },
+    "The Artful Escape": {
+      "cn": "奇妙逃亡",
+      "source": "consensus"
+    },
+    "Outbound": {
+      "cn": "拾光旅人",
+      "source": "consensus"
+    },
+    "Call of the Elder Gods": {
+      "cn": "古神之呼唤",
+      "source": "user"
+    },
+    "Descenders Next": {
+      "cn": "下一代速降王者",
+      "source": "consensus"
+    },
+    "Ben 10 Power Trip": {
+      "cn": "少年骇客：力量之旅",
+      "source": "consensus"
+    },
+    "Call of the Sea": {
+      "cn": "海之呼唤",
+      "source": "consensus"
+    },
+    "Wheel World": {
+      "cn": "Wheel World",
+      "source": "consensus"
+    },
+    "Wildgate": {
+      "cn": "无主星渊",
+      "source": "consensus"
+    },
+    "Black Jacket": {
+      "cn": "地狱黑杰克",
+      "source": "user"
+    },
+    "Galacticare": {
+      "cn": "Galacticare",
+      "source": "consensus"
+    },
+    "Go Mecha Ball": {
+      "cn": "进击的机甲球",
+      "source": "consensus"
+    },
+    "Planet of Lana": {
+      "cn": "拉娜的星球",
+      "source": "consensus"
+    },
+    "Paw Patrol Rescue Wheels: Championship": {
+      "cn": "汪汪队立大功™ Rescue Wheels™：锦标赛",
+      "source": "user"
+    },
+    "Diablo 3": {
+      "cn": "暗黑破坏神3",
+      "source": "consensus"
+    },
+    "Whimsyshire": {
+      "cn": "欢乐谷",
+      "source": "consensus"
+    },
+    "Donkey Kong Bananza": {
+      "cn": "咚奇刚：蕉力全开",
+      "source": "consensus"
+    },
+    "Mario Kart World": {
+      "cn": "马力欧卡丁车世界",
+      "source": "consensus"
+    },
+    "Pokémon Pokopia": {
+      "cn": "宝可梦Pokopia",
+      "source": "consensus"
+    },
+    "Game Preview": {
+      "cn": "抢先体验版",
+      "source": "user"
+    },
+    "Gears of War: E-Day": {
+      "cn": "战争机器：事变日",
+      "source": "user"
+    },
+    "Black Desert": {
+      "cn": "黑色沙漠",
+      "source": "ai_guess"
+    },
+    "Tomodachi Life: Living the Dream": {
+      "cn": "朋友收集 梦想生活",
+      "source": "user"
+    },
+    "Fire Emblem: Fortune's Weave": {
+      "cn": "火焰纹章 万缕千丝",
+      "source": "user"
+    },
+    "Splatoon Raiders": {
+      "cn": "斯普拉遁 涂击队",
+      "source": "user"
+    },
+    "Rhythm Heaven Groove": {
+      "cn": "节奏天国 奇迹之星",
+      "source": "user"
+    },
+    "Pokémon Winds and Waves": {
+      "cn": "宝可梦 风与波",
+      "source": "user"
+    },
+    "Metroid Prime 4: Beyond": {
+      "cn": "密特罗德 究极4 穿越未知",
+      "source": "user"
+    },
+    "Psychonauts": {
+      "cn": "意航员",
+      "source": "user"
+    },
+    "Lego Batman: Legacy of the Dark Knight": {
+      "cn": "乐高蝙蝠侠：黑暗骑士之遗",
+      "source": "user"
+    },
+    "Batman: Arkham Knight": {
+      "cn": "蝙蝠侠：阿卡姆骑士",
+      "source": "consensus"
+    },
+    "Mortal Kombat": {
+      "cn": "真人快打",
+      "source": "user"
+    },
+    "Mortal Kombat II": {
+      "cn": "真人快打2",
+      "source": "user"
+    },
+    "Borderlands 4": {
+      "cn": "无主之地4",
+      "source": "consensus"
+    },
+    "Halo: Campaign Evolved": {
+      "cn": "光环：战役进化",
+      "source": "consensus"
+    },
+    "Grounded": {
+      "cn": "禁闭求生",
+      "source": "consensus"
+    },
+    "Cities Skylines": {
+      "cn": "城市：天际线",
+      "source": "consensus"
+    },
+    "Dishonored 2": {
+      "cn": "耻辱2",
+      "source": "consensus"
+    },
+    "Dishonored": {
+      "cn": "耻辱",
+      "source": "consensus"
+    },
+    "Fallout 4": {
+      "cn": "辐射4",
+      "source": "consensus"
+    },
+    "Gears of War 5": {
+      "cn": "战争机器5",
+      "source": "consensus"
+    },
+    "Yoshi and the Mysterious Book": {
+      "cn": "耀西与不可思议的图鉴",
+      "source": "ign_cn"
+    },
+    "Star Fox": {
+      "cn": "星际火狐",
+      "source": "consensus"
+    },
+    "The Duskbloods": {
+      "cn": "The Duskbloods",
+      "source": "consensus"
+    },
+    "The Legend of Zelda: Ocarina of Time": {
+      "cn": "塞尔达传说：时之笛",
+      "source": "consensus"
+    },
+    "DayZ": {
+      "cn": "DayZ",
+      "source": "consensus"
+    },
+    "Stellar Blade 2": {
+      "cn": "剑星2",
+      "source": "user"
+    },
+    "Hyrule Warriors: Age of Imprisonment": {
+      "cn": "塞尔达无双 封印战记",
+      "source": "user"
+    },
+    "Persona 4": {
+      "cn": "女神异闻录4",
+      "source": "consensus"
+    },
+    "Persona 4 Golden": {
+      "cn": "女神异闻录4 黄金版",
+      "source": "consensus"
+    },
+    "Persona 4 Revival": {
+      "cn": "女神异闻录4：复兴版",
+      "source": "user"
+    },
+    "Star Wars Outlaws": {
+      "cn": "星球大战：亡命之徒",
+      "source": "user"
+    },
+    "Bramble: The Mountain King": {
+      "cn": "荆棘：群山之王",
+      "source": "user"
+    },
+    "The Thaumaturge": {
+      "cn": "奇唤士",
+      "source": "user"
+    },
+    "Flintlock: The Siege of Dawn": {
+      "cn": "燧石枪：黎明之围",
+      "source": "user"
+    },
+    "Enotria: The Last Song": {
+      "cn": "艾诺提亚：失落之歌",
+      "source": "user"
+    },
+    "Silent Hill 2 Remake": {
+      "cn": "寂静岭 2 重制版",
+      "source": "user"
+    },
+    "Silent Hill f": {
+      "cn": "寂静岭 f",
+      "source": "user"
+    },
+    "Dissidia Duellum Final Fantasy": {
+      "cn": "最终幻想 纷争 决斗",
+      "source": "ai_guess"
+    },
+    "Final Fantasy 7 Remake Part 3": {
+      "cn": "最终幻想7 重制版 第三部",
+      "source": "ai_guess"
+    },
+    "Rocket League": {
+      "cn": "火箭联盟",
+      "source": "consensus"
+    },
+    "Rocket League Championship Series": {
+      "cn": "RLCS《火箭联盟》锦标赛系列",
+      "source": "consensus"
+    },
+    "RLCS": {
+      "cn": "RLCS",
+      "source": "consensus"
+    },
+    "Unreal Engine 6": {
+      "cn": "Unreal Engine 6",
+      "source": "user"
+    },
+    "Unreal Engine 5": {
+      "cn": "Unreal Engine 5",
+      "source": "user"
+    },
+    "Unreal Engine": {
+      "cn": "Unreal Engine",
+      "source": "user"
+    },
+    "Concord": {
+      "cn": "星鸣特攻",
+      "source": "consensus"
+    },
+    "Call of Duty: Black Ops Cold War": {
+      "cn": "使命召唤17：黑色行动 冷战",
+      "source": "consensus"
+    },
+    "Black Ops Cold War": {
+      "cn": "黑色行动 冷战",
+      "source": "consensus"
+    },
+    "The Final Shape": {
+      "cn": "终极形态",
+      "source": "consensus"
+    },
+    "Destiny 3": {
+      "cn": "命运3",
+      "source": "consensus"
+    },
+    "Destiny": {
+      "cn": "命运",
+      "source": "consensus"
+    },
+    "Fortnite": {
+      "cn": "堡垒之夜",
+      "source": "consensus"
+    },
+    "LittleBigPlanet": {
+      "cn": "小小大星球",
+      "source": "consensus"
+    },
+    "LittleBigPlanet 3": {
+      "cn": "小小大星球3",
+      "source": "consensus"
+    },
+    "Dreams": {
+      "cn": "梦想大创造",
+      "source": "user",
+      "note": "PlayStation官方中文译名（用户校正于2026-05-26，原consensus译名「梦境」错误）"
+    },
+    "Sackboy": {
+      "cn": "麻布仔",
+      "source": "consensus"
+    },
+    "Sackboy: A Big Adventure": {
+      "cn": "麻布仔大冒险",
+      "source": "consensus"
+    },
+    "Media Molecule": {
+      "cn": "Media Molecule",
+      "source": "consensus"
+    },
+    "Sumo Digital": {
+      "cn": "Sumo Digital",
+      "source": "consensus"
+    },
+    "Lego 2K Drive": {
+      "cn": "乐高2K竞速",
+      "source": "user",
+      "note": "用户校正于2026-05-26，原'乐高2K驾驶'修正为'乐高2K竞速'"
+    },
+    "Lego Voyagers": {
+      "cn": "乐高旅行者",
+      "source": "consensus"
+    },
+    "Lego Harry Potter": {
+      "cn": "乐高哈利·波特",
+      "source": "consensus"
+    },
+    "Lego Harry Potter: Years 1-4": {
+      "cn": "乐高哈利·波特：1-4年",
+      "source": "consensus"
+    },
+    "Lego Harry Potter: Years 5-7": {
+      "cn": "乐高哈利·波特：5-7年",
+      "source": "consensus"
+    },
+    "Lego Harry Potter Collection": {
+      "cn": "乐高哈利·波特合集",
+      "source": "consensus"
+    },
+    "Lego Party": {
+      "cn": "乐高派对",
+      "source": "consensus"
+    },
+    "Lego Batman 2: DC Super Heroes": {
+      "cn": "乐高蝙蝠侠2：DC超级英雄",
+      "source": "consensus"
+    },
+    "Lego Star Wars: The Complete Saga": {
+      "cn": "乐高星球大战：完整的传奇",
+      "source": "user",
+      "note": "用户校正于2026-05-26"
+    },
+    "Lego Star Wars 2: The Original Trilogy": {
+      "cn": "乐高星球大战2：原创三部曲",
+      "source": "consensus"
+    },
+    "Lego Star Wars: The Skywalker Saga": {
+      "cn": "乐高星球大战：天行者传奇",
+      "source": "consensus"
+    },
+    "Lego City Undercover": {
+      "cn": "乐高城市：卧底风云",
+      "source": "user",
+      "note": "用户校正于2026-05-26"
+    },
+    "Lego Marvel Super Heroes": {
+      "cn": "乐高漫威超级英雄",
+      "source": "consensus"
+    },
+    "Lego Marvel Super Heroes 2": {
+      "cn": "乐高漫威超级英雄2",
+      "source": "consensus"
+    },
+    "Lego Marvel's Avengers": {
+      "cn": "乐高漫威复仇者联盟",
+      "source": "consensus"
+    },
+    "Lego Builder's Journey": {
+      "cn": "乐高建造者之旅",
+      "source": "consensus"
+    },
+    "Lego Island 2: The Brickster's Revenge": {
+      "cn": "乐高岛2：砖块人的复仇",
+      "source": "consensus"
+    },
+    "Mario Party": {
+      "cn": "马力欧派对",
+      "source": "ign_cn"
+    },
+    "Burnout Paradise": {
+      "cn": "横冲直撞：天堂",
+      "source": "consensus"
+    },
+    "Split Fiction": {
+      "cn": "双影奇境",
+      "source": "consensus",
+      "note": "Hazelight 2025游戏，国内通行译名"
+    },
+    "Grand Theft Auto": {
+      "cn": "侠盗猎车手",
+      "source": "consensus"
+    },
+    "Intergalactic: The Heretic Prophet": {
+      "cn": "星际：异端先知",
+      "source": "user"
+    },
+    "Metal Gear": {
+      "cn": "潜龙谍影",
+      "source": "user"
+    },
+    "Gran Turismo": {
+      "cn": "跑车浪漫旅",
+      "source": "user"
+    },
+    "GT Sport": {
+      "cn": "跑车浪漫旅Sport",
+      "source": "user"
+    },
+    "Gran Turismo 7": {
+      "cn": "跑车浪漫旅7",
+      "source": "user"
+    },
+    "Destruction AllStars": {
+      "cn": "破坏全明星",
+      "source": "user"
+    },
+    "Blur": {
+      "cn": "疾驰残影",
+      "source": "user"
+    },
+    "Wo Long: Fallen Dynasty": {
+      "cn": "卧龙：苍天陨落",
+      "source": "user"
+    },
+    "Nickelodeon All-Star Brawl 2": {
+      "cn": "尼克动画全明星大乱斗2",
+      "source": "user"
+    },
+    "Nickelodeon All-Star Brawl": {
+      "cn": "尼克动画全明星大乱斗",
+      "source": "user"
+    },
+    "Warhammer 40,000: Darktide": {
+      "cn": "战锤40K：暗潮",
+      "source": "user"
+    },
+    "Final Fantasy Tactics: The Ivalice Chronicles": {
+      "cn": "最终幻想战略版：伊瓦利斯战记",
+      "source": "user"
+    },
+    "Final Fantasy Tactics": {
+      "cn": "最终幻想战略版",
+      "source": "user"
+    },
+    "Ivalice": {
+      "cn": "伊瓦利斯",
+      "source": "user"
+    },
+    "Horizon Hunters Gathering": {
+      "cn": "地平线 猎人集结",
+      "source": "user"
+    },
+    "Phantom Blade Zero": {
+      "cn": "影之刃零",
+      "source": "user"
+    },
+    "Tomb Raider: Legacy of Atlantis": {
+      "cn": "古墓丽影：亚特兰蒂斯遗迹",
+      "source": "user"
+    },
+    "The Sims": {
+      "cn": "模拟人生",
+      "source": "consensus"
+    },
+    "The Sims 4": {
+      "cn": "模拟人生4",
+      "source": "consensus"
+    },
+    "The Sims 2": {
+      "cn": "模拟人生2",
+      "source": "consensus"
+    },
+    "Paralives": {
+      "cn": "Paralives",
+      "source": "user"
+    }
+  },
+  "movies_tv": {
+    "Avengers: Doomsday": {
+      "cn": "复仇者联盟：末日",
+      "source": "consensus"
+    },
+    "The Mandalorian and Grogu": {
+      "cn": "曼达洛人与格罗古",
+      "source": "consensus"
+    },
+    "Star Wars": {
+      "cn": "星球大战",
+      "source": "consensus"
+    },
+    "The Lord of the Rings": {
+      "cn": "指环王",
+      "source": "consensus"
+    },
+    "The Hunt for Gollum": {
+      "cn": "追寻咕噜",
+      "source": "consensus"
+    },
+    "Daredevil: Born Again": {
+      "cn": "夜魔侠：重生",
+      "source": "consensus"
+    },
+    "The Boys": {
+      "cn": "黑袍纠察队",
+      "source": "consensus"
+    },
+    "Stranger Things": {
+      "cn": "怪奇物语",
+      "source": "consensus"
+    },
+    "X-Men '97": {
+      "cn": "X战警97",
+      "source": "consensus"
+    },
+    "Monarch: Legacy of Monsters": {
+      "cn": "帝王组织：怪兽遗产",
+      "source": "consensus"
+    },
+    "For All Mankind": {
+      "cn": "为全人类",
+      "source": "consensus"
+    },
+    "The Crown": {
+      "cn": "王冠",
+      "source": "consensus"
+    },
+    "Toy Story": {
+      "cn": "玩具总动员",
+      "source": "consensus"
+    },
+    "Tangled": {
+      "cn": "魔发奇缘",
+      "source": "consensus"
+    },
+    "The Odyssey": {
+      "cn": "奥德赛",
+      "source": "consensus"
+    },
+    "Dexter: Resurrection": {
+      "cn": "嗜血法医：复活",
+      "source": "consensus"
+    },
+    "Casper the Friendly Ghost": {
+      "cn": "鬼马小精灵",
+      "source": "consensus"
+    },
+    "My Hero Academia": {
+      "cn": "我的英雄学院",
+      "source": "consensus"
+    },
+    "Narnia": {
+      "cn": "纳尼亚传奇",
+      "source": "consensus"
+    },
+    "The Devil Wears Prada": {
+      "cn": "穿普拉达的女王",
+      "source": "consensus"
+    },
+    "Jurassic Park": {
+      "cn": "侏罗纪公园",
+      "source": "consensus"
+    },
+    "Hoppers": {
+      "cn": "Hoppers",
+      "source": "consensus"
+    },
+    "Project Hail Mary": {
+      "cn": "挽救计划",
+      "source": "consensus"
+    },
+    "The Super Mario Galaxy Movie": {
+      "cn": "超级马力欧银河大电影",
+      "source": "user"
+    },
+    "Michael": {
+      "cn": "迈克尔",
+      "source": "consensus"
+    },
+    "The Martian": {
+      "cn": "火星救援",
+      "source": "consensus"
+    },
+    "Mortal Kombat II": {
+      "cn": "真人快打II",
+      "source": "consensus"
+    },
+    "Mortal Kombat": {
+      "cn": "真人快打",
+      "source": "consensus"
+    },
+    "The Devil Wears Prada 2": {
+      "cn": "穿普拉达的女王2",
+      "source": "consensus"
+    },
+    "The Batman": {
+      "cn": "新蝙蝠侠",
+      "source": "user",
+      "note": "用户校正于2026-05-26，区别于旧版蝙蝠侠系列"
+    },
+    "The Batman: Part II": {
+      "cn": "新蝙蝠侠2",
+      "source": "user",
+      "note": "用户校正于2026-05-26，原「蝙蝠侠：第二章」修正为「新蝙蝠侠2」"
+    },
+    "Batman: The Long Halloween": {
+      "cn": "蝙蝠侠：漫长的万圣节",
+      "source": "consensus"
+    },
+    "Under the Skin": {
+      "cn": "皮囊之下",
+      "source": "consensus"
+    },
+    "Sharper": {
+      "cn": "骗中骗",
+      "source": "consensus"
+    },
+    "Fjord": {
+      "cn": "Fjord",
+      "source": "ai_guess"
+    },
+    "Revenge of the Sith": {
+      "cn": "星球大战3：西斯的复仇",
+      "source": "consensus"
+    },
+    "Rise of Skywalker": {
+      "cn": "星球大战9：天行者崛起",
+      "source": "consensus"
+    }
+  },
+  "companies": {
+    "Bethesda": {
+      "cn": "B社/贝塞斯达",
+      "source": "consensus"
+    },
+    "Square Enix": {
+      "cn": "史克威尔艾尼克斯",
+      "source": "consensus"
+    },
+    "Ubisoft": {
+      "cn": "育碧",
+      "source": "consensus"
+    },
+    "Rockstar Games": {
+      "cn": "Rockstar",
+      "source": "user"
+    },
+    "Take-Two": {
+      "cn": "Take-Two",
+      "source": "consensus"
+    },
+    "CD Projekt Red": {
+      "cn": "CDPR",
+      "source": "consensus"
+    },
+    "Naughty Dog": {
+      "cn": "顽皮狗",
+      "source": "consensus"
+    },
+    "Santa Monica Studio": {
+      "cn": "圣莫妮卡工作室",
+      "source": "consensus"
+    },
+    "FromSoftware": {
+      "cn": "From Software",
+      "source": "consensus"
+    },
+    "Capcom": {
+      "cn": "卡普空",
+      "source": "consensus"
+    },
+    "Konami": {
+      "cn": "科乐美",
+      "source": "consensus"
+    },
+    "Bandai Namco": {
+      "cn": "万代南梦宫",
+      "source": "consensus"
+    },
+    "Sega": {
+      "cn": "世嘉",
+      "source": "consensus"
+    },
+    "Nintendo": {
+      "cn": "任天堂",
+      "source": "consensus"
+    },
+    "Sony Interactive Entertainment": {
+      "cn": "索尼互动娱乐",
+      "source": "consensus"
+    },
+    "Microsoft": {
+      "cn": "微软",
+      "source": "consensus"
+    },
+    "Electronic Arts": {
+      "cn": "EA",
+      "source": "consensus"
+    },
+    "Activision Blizzard": {
+      "cn": "动视暴雪",
+      "source": "consensus"
+    },
+    "Valve": {
+      "cn": "Valve",
+      "source": "user"
+    },
+    "Epic Games": {
+      "cn": "Epic Games",
+      "source": "consensus"
+    },
+    "Digital Foundry": {
+      "cn": "Digital Foundry",
+      "source": "consensus"
+    },
+    "Virtuos": {
+      "cn": "维塔士",
+      "source": "consensus"
+    },
+    "Spiders": {
+      "cn": "Spiders",
+      "source": "consensus"
+    },
+    "Nacon": {
+      "cn": "Nacon",
+      "source": "consensus"
+    },
+    "505 Games": {
+      "cn": "505 Games",
+      "source": "consensus"
+    },
+    "Digital Bros.": {
+      "cn": "Digital Bros.",
+      "source": "consensus"
+    },
+    "Wizards of the Coast": {
+      "cn": "威世智",
+      "source": "ign_cn"
+    },
+    "Arc System Works": {
+      "cn": "Arc System Works",
+      "source": "consensus"
+    },
+    "Bungie": {
+      "cn": "Bungie",
+      "source": "consensus"
+    },
+    "Obsidian Entertainment": {
+      "cn": "黑曜石",
+      "source": "consensus"
+    },
+    "Larian Studios": {
+      "cn": "拉瑞安工作室",
+      "source": "consensus"
+    },
+    "Grinding Gear Games": {
+      "cn": "GGG",
+      "source": "consensus"
+    },
+    "Supergiant Games": {
+      "cn": "Supergiant Games",
+      "source": "consensus"
+    },
+    "Atlus": {
+      "cn": "Atlus",
+      "source": "consensus"
+    },
+    "PlatinumGames": {
+      "cn": "白金工作室",
+      "source": "consensus"
+    },
+    "Team Ninja": {
+      "cn": "Team Ninja",
+      "source": "consensus"
+    },
+    "Koei Tecmo": {
+      "cn": "光荣特库摩",
+      "source": "consensus"
+    },
+    "TT Games": {
+      "cn": "TT Games",
+      "source": "user"
+    },
+    "Warner Bros. Games": {
+      "cn": "华纳兄弟游戏",
+      "source": "consensus"
+    },
+    "Circana": {
+      "cn": "Circana",
+      "source": "consensus"
+    },
+    "Psyonix": {
+      "cn": "Psyonix",
+      "source": "user"
+    },
+    "IO Interactive": {
+      "cn": "IO Interactive",
+      "source": "user"
+    },
+    "IOI": {
+      "cn": "IOI",
+      "source": "user"
+    },
+    "Firewalk Studios": {
+      "cn": "Firewalk Studios",
+      "source": "consensus"
+    },
+    "Sony": {
+      "cn": "索尼",
+      "source": "consensus"
+    },
+    "PlayStation": {
+      "cn": "PlayStation",
+      "source": "consensus"
+    },
+    "Bloomberg": {
+      "cn": "彭博社",
+      "source": "consensus"
+    },
+    "Kotaku": {
+      "cn": "Kotaku",
+      "source": "consensus"
+    },
+    "Federal Trade Commission": {
+      "cn": "联邦贸易委员会",
+      "source": "consensus"
+    },
+    "Rockstar": {
+      "cn": "Rockstar",
+      "source": "user"
+    }
+  },
+  "people": {
+    "Todd Howard": {
+      "cn": "陶德·霍华德",
+      "source": "user"
+    },
+    "Naoki Hamaguchi": {
+      "cn": "滨口直树",
+      "source": "consensus"
+    },
+    "Hideo Kojima": {
+      "cn": "小岛秀夫",
+      "source": "consensus"
+    },
+    "Shigeru Miyamoto": {
+      "cn": "宫本茂",
+      "source": "user"
+    },
+    "Hidetaka Miyazaki": {
+      "cn": "宫崎英高",
+      "source": "consensus"
+    },
+    "Phil Spencer": {
+      "cn": "菲尔·斯宾塞",
+      "source": "consensus"
+    },
+    "Takashi Tezuka": {
+      "cn": "手冢卓志",
+      "source": "user"
+    },
+    "Hideaki Nishino": {
+      "cn": "西野秀明",
+      "source": "user"
+    },
+    "Homelander": {
+      "cn": "祖国人",
+      "source": "consensus"
+    },
+    "Asha Sharma": {
+      "cn": "阿莎·夏尔玛",
+      "source": "consensus"
+    },
+    "Lu Zhang": {
+      "cn": "Lu Zhang",
+      "source": "consensus"
+    },
+    "Shuntaro Furukawa": {
+      "cn": "古川俊太郎",
+      "source": "user"
+    },
+    "Naoki Yoshida": {
+      "cn": "吉田直树",
+      "source": "consensus"
+    },
+    "Yoshi-P": {
+      "cn": "吉田直树",
+      "source": "consensus"
+    },
+    "Harley Casto": {
+      "cn": "Harley Casto",
+      "source": "user"
+    },
+    "Jason Schreier": {
+      "cn": "Jason Schreier",
+      "source": "consensus"
+    },
+    "Michael Cripe": {
+      "cn": "Michael Cripe",
+      "source": "user"
+    },
+    "Michael Peyton": {
+      "cn": "Michael Peyton",
+      "source": "user"
+    },
+    "Wesley Yin-Poole": {
+      "cn": "Wesley Yin-Poole",
+      "source": "user"
+    },
+    "ShiinaBR": {
+      "cn": "ShiinaBR",
+      "source": "user"
+    },
+    "James Bond": {
+      "cn": "詹姆斯·邦德",
+      "source": "consensus"
+    },
+    "Sebastian Stan": {
+      "cn": "塞巴斯蒂安·斯坦",
+      "source": "consensus"
+    },
+    "Matt Reeves": {
+      "cn": "马特·里维斯",
+      "source": "consensus"
+    },
+    "Robert Pattinson": {
+      "cn": "罗伯特·帕丁森",
+      "source": "consensus"
+    },
+    "Scarlett Johansson": {
+      "cn": "斯嘉丽·约翰逊",
+      "source": "consensus"
+    },
+    "Harvey Dent": {
+      "cn": "哈维·邓特",
+      "source": "consensus"
+    },
+    "Two-Face": {
+      "cn": "双面人",
+      "source": "consensus"
+    },
+    "Gilda Dent": {
+      "cn": "吉尔达·邓特",
+      "source": "consensus"
+    },
+    "Kratos": {
+      "cn": "奎托斯",
+      "source": "user"
+    }
+  },
+  "terms": {
+    "GCPD": {
+      "cn": "哥谭警局",
+      "source": "consensus"
+    },
+    "Gotham": {
+      "cn": "哥谭",
+      "source": "consensus"
+    },
+    "Gotham City": {
+      "cn": "哥谭市",
+      "source": "consensus"
+    },
+    "Cannes Film Festival": {
+      "cn": "戛纳电影节",
+      "source": "consensus"
+    },
+    "Palme d'Or": {
+      "cn": "金棕榈奖",
+      "source": "consensus"
+    },
+    "Liverpool": {
+      "cn": "利物浦",
+      "source": "consensus"
+    },
+    "Glasgow": {
+      "cn": "格拉斯哥",
+      "source": "consensus"
+    },
+    "St George's Hall": {
+      "cn": "圣乔治大厅",
+      "source": "consensus"
+    },
+    "Queensway Tunnel": {
+      "cn": "皇后大道隧道",
+      "source": "consensus"
+    },
+    "Birkenhead Tunnel": {
+      "cn": "伯肯黑德隧道",
+      "source": "consensus"
+    },
+    "BBC": {
+      "cn": "BBC",
+      "source": "consensus"
+    },
+    "Deadline": {
+      "cn": "Deadline",
+      "source": "consensus"
+    },
+    "District Attorney": {
+      "cn": "地区检察官",
+      "source": "consensus"
+    }
+  },
+  "media": {
+    "Bloomberg": {
+      "cn": "彭博社",
+      "source": "user"
+    },
+    "Reuters": {
+      "cn": "路透社",
+      "source": "user"
+    },
+    "BBC": {
+      "cn": "BBC",
+      "source": "user"
+    },
+    "The New York Times": {
+      "cn": "纽约时报",
+      "source": "user"
+    },
+    "The Washington Post": {
+      "cn": "华盛顿邮报",
+      "source": "user"
+    },
+    "The Guardian": {
+      "cn": "卫报",
+      "source": "user"
+    },
+    "Wall Street Journal": {
+      "cn": "华尔街日报",
+      "source": "user"
+    },
+    "Associated Press": {
+      "cn": "美联社",
+      "source": "user"
+    },
+    "Variety": {
+      "cn": "综艺",
+      "source": "user"
+    },
+    "The Hollywood Reporter": {
+      "cn": "好莱坞报道者",
+      "source": "user"
+    }
+  }
+}
