@@ -505,8 +505,42 @@ function appData() {
       data.pending_dict = (data.pending_dict || []).filter(
         c => !removeSet.has(`${c.en}|${c.cat}`)
       );
-      await GH.putFile(path, JSON.stringify(data, null, 2),
-        `pending_dict: clear processed for #${articleId}`);
-    }
+
+      // ✨ 新：即时替换段落里的译文
+      let replacedCount = 0;
+      const replacements = [];
+      for (const c of removedCandidates) {
+        // 只处理被批准的（有 cn 且 en !== cn）
+        if (!c.cn || c.cn === c.en) continue;
+        replacements.push({ en: c.en, cn: c.cn });
+      }
+      // 按长度降序，避免短名覆盖长名的一部分
+      replacements.sort((a, b) => b.en.length - a.en.length);
+
+      if (replacements.length > 0 && Array.isArray(data.paragraphs)) {
+        for (const para of data.paragraphs) {
+          if (!para.cn) continue;
+          const before = para.cn;
+          for (const r of replacements) {
+            // 只替换 cn 里还是原英文的地方，避免中文已绑定的文本被重复覆写
+            // 用不能是单词边界（中文没有 \b），用 split-join 避免 regex 转义
+            para.cn = para.cn.split(r.en).join(r.cn);
+          }
+          if (para.cn !== before) replacedCount++;
+        }
+        // 同时替换标题和摘要
+        if (data.cn_title) {
+          for (const r of replacements) data.cn_title = data.cn_title.split(r.en).join(r.cn);
+        }
+        if (data.summary) {
+          for (const r of replacements) data.summary = data.summary.split(r.en).join(r.cn);
+        }
+      }
+
+      const msg = replacedCount > 0
+        ? `pending_dict: applied ${replacements.length} terms in #${articleId} (${replacedCount} paragraphs)`
+        : `pending_dict: clear processed for #${articleId}`;
+      await GH.putFile(path, JSON.stringify(data, null, 2), msg);
+    },
   };
 }
