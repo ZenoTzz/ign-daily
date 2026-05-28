@@ -186,10 +186,16 @@ function appData() {
       // 重新拉今天 index + requests + polished_index
       this.loading = true;
       this.data = null;
+      this.error = '';
       this.polishedIds = new Set();
       this.searchCache = null;
-      await this.load();
-      if (this.flash) this.flash('✅ 已刷新', 1500);
+      try {
+        await this.init();
+        if (this.flash) this.flash('✅ 已刷新', 1500);
+      } catch (e) {
+        this.error = '刷新失败：' + e.message;
+        this.loading = false;
+      }
     },
 
     saveState() {
