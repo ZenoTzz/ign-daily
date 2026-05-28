@@ -71,14 +71,16 @@ html.dark thead.bg-slate-50 { background-color: #1e293b !important; }
 .reader-pane.cn { background: #fff; border-right: 1px solid #e2e8f0; }
 .reader-pane.en { background: #fafafa; }
 
-/* 译文内容居中限宽（提高阅读舒适度） */
-.reader-pane.cn > .w-full {
-  max-width: 680px;
-  margin: 0 auto;
-  padding: 0 0.5rem;
+/* 译文区：内容居中限宽，以提高阅读舒适度 */
+.reader-pane.cn { display: flex; justify-content: center; }
+.reader-pane.cn > * {
+  width: 100%;
+  max-width: 720px;
 }
+
 @media (max-width: 1023px) {
-  .reader-pane.cn > .w-full { max-width: 100%; padding: 0; }
+  .reader-pane.cn { display: block; }
+  .reader-pane.cn > * { max-width: 100%; }
 }
 
 @media (max-width: 1023px) {
