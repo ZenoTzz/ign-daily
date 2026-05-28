@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <title>学习日志 — IGN Daily</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <link rel="stylesheet" href="assets/style.css?v=20260528b">
+  <script src="assets/app.js?v=20260528b"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: { colors: { brand: { 600:'#a01620',700:'#7e1219' }}}}
+    }
+  </script>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased">
+  <div x-data="learningData()" x-init="init()" class="min-h-screen flex flex-col">
+    <!-- Header -->
+    <header class="bg-white border-b border-slate-200 sticky top-0 z-10">
+      <div class="max-w-4xl mx-auto px-4 py-3 flex items-center gap-3">
+        <a href="index.html" class="text-2xl font-bold text-brand-600">IGN Daily</a>
+        <span class="text-slate-400">|</span>
+        <span class="text-slate-600 font-medium">📊 学习日志</span>
+        <div class="flex-1"></div>
+        <a href="index.html" class="text-sm text-slate-500 hover:text-brand-600">← 返回首页</a>
+      </div>
+    </header>
+
+    <!-- Main -->
+    <main class="flex-1 max-w-4xl w-full mx-auto px-4 py-6">
+      <p class="text-sm text-slate-500 mb-6">
+        每天 22:30 自动学习你润色过的文章，沉淀风格偏好。你可以为每条规则添加批注，反馈给我下次改进。
+      </p>
+
+      <!-- Loading -->
+      <template x-if="loading">
+        <div class="text-center text-slate-400 py-20">加载中...</div>
+      </template>
+
+      <!-- Error -->
+      <template x-if="error">
+        <div class="bg-rose-50 border border-rose-200 text-rose-800 rounded p-4" x-text="error"></div>
+      </template>
+
+      <!-- Date list -->
+      <template x-if="!loading && !error && dates.length === 0">
+        <div class="text-center text-slate-500 py-20">还没有学习日志。等今晚 22:30 自动跑完就有了～</div>
+      </template>
+
+      <template x-for="date in dates" :key="date">
+        <section class="mb-8 bg-white rounded-lg border border-slate-200 overflow-hidden">
+          <header class="bg-slate-50 px-5 py-3 border-b border-slate-200 flex items-center gap-3">
+            <h2 class="text-lg font-bold text-slate-700" x-text="`📅 ${date}`"></h2>
+            <span class="text-sm text-slate-500" x-text="logs[date] ? `分析了 ${logs[date].articles_analyzed} 篇` : ''"></span>
+            <div class="flex-1"></div>
+            <button @click="expanded[date] = !expanded[date]"
+                    class="text-sm text-brand-600 hover:underline"
+                    x-text="expanded[date] ? '收起' : '展开'"></button>
+          </header>
+
+          <div x-show="expanded[date] && logs[date]" class="p-5 space-y-6">
+            <!-- 已确认的规则 -->
+            <div>
+              <h3 class="text-base font-semibold text-slate-700 mb-3 flex items-center gap-2">
+                ✅ 已确认的规则
+                <span class="text-xs text-slate-400 font-normal" x-text="`（${logs[date].rules_confirmed.length} 条）`"></span>
+              </h3>
+              <div class="space-y-3">
+                <template x-for="rule in logs[date].rules_confirmed" :key="rule.id">
+                  <article class="bg-slate-50 rounded p-4 border border-slate-200">
+                    <header class="flex items-start gap-2 mb-2">
+                      <span class="bg-emerald-100 text-emerald-700 text-xs px-2 py-0.5 rounded font-medium" x-text="rule.category"></span>
+                      <h4 class="font-semibold flex-1" x-text="rule.title"></h4>
+                      <span class="text-xs text-slate-500" x-text="rule.evidence"></span>
+                    </header>
+                    <p class="text-sm text-slate-600 mb-2" x-text="rule.detail"></p>
+                    <details class="text-xs text-slate-500" x-show="rule.examples && rule.examples.length">
+                      <summary class="cursor-pointer hover:text-slate-700">📝 案例 (<span x-text="rule.examples.length"></span>)</summary>
+                      <ul class="list-disc list-inside ml-2 mt-1 space-y-1">
+                        <template x-for="ex in rule.examples"><li x-text="ex"></li></template>
+                      </ul>
+                    </details>
+                    <!-- 批注区 -->
+                    <div class="mt-3 pt-3 border-t border-slate-200">
+                      <template x-if="getFeedback(date, rule.id)">
+                        <div class="bg-amber-50 border-l-4 border-amber-400 p-2 mb-2 text-sm">
+                          <span class="text-amber-700 font-medium">💬 你的批注：</span>
+                          <span class="text-slate-700" x-text="getFeedback(date, rule.id)"></span>
+                          <button @click="editFeedback(date, rule.id)" class="text-xs text-blue-600 hover:underline ml-2">修改</button>
+                          <button @click="deleteFeedback(date, rule.id)" class="text-xs text-rose-600 hover:underline ml-2">删除</button>
+                        </div>
+                      </template>
+                      <template x-if="!getFeedback(date, rule.id)">
+                        <button @click="addFeedback(date, rule.id, rule.title)"
+                                class="text-xs text-blue-600 hover:underline">💬 添加批注</button>
+                      </template>
+                    </div>
+                  </article>
+                </template>
+              </div>
+            </div>
+
+            <!-- 词库更新 -->
+            <div x-show="logs[date].dict_updates && logs[date].dict_updates.length">
+              <h3 class="text-base font-semibold text-slate-700 mb-3 flex items-center gap-2">
+                📚 词库更新
+                <span class="text-xs text-slate-400 font-normal" x-text="`（${logs[date].dict_updates.length} 条）`"></span>
+              </h3>
+              <table class="w-full text-sm border-collapse">
+                <thead>
+                  <tr class="bg-slate-100 text-left">
+                    <th class="px-3 py-2 border border-slate-200">英文</th>
+                    <th class="px-3 py-2 border border-slate-200">原中文</th>
+                    <th class="px-3 py-2 border border-slate-200">新中文</th>
+                    <th class="px-3 py-2 border border-slate-200">来源</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <template x-for="up in logs[date].dict_updates">
+                    <tr class="hover:bg-slate-50">
+                      <td class="px-3 py-2 border border-slate-200 font-mono text-xs" x-text="up.en"></td>
+                      <td class="px-3 py-2 border border-slate-200 text-slate-400" x-text="up.old_cn"></td>
+                      <td class="px-3 py-2 border border-slate-200 font-medium text-emerald-700" x-text="up.new_cn"></td>
+                      <td class="px-3 py-2 border border-slate-200 text-xs text-slate-500" x-text="up.source"></td>
+                    </tr>
+                  </template>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- 待观察 -->
+            <div x-show="logs[date].observations && logs[date].observations.length">
+              <h3 class="text-base font-semibold text-slate-700 mb-3 flex items-center gap-2">
+                👀 待观察
+                <span class="text-xs text-slate-400 font-normal">（出现次数不够，需要更多样本）</span>
+              </h3>
+              <div class="space-y-2">
+                <template x-for="obs in logs[date].observations" :key="obs.id">
+                  <article class="bg-yellow-50 border border-yellow-200 rounded p-3">
+                    <header class="flex items-start gap-2 mb-1">
+                      <h4 class="text-sm font-medium flex-1" x-text="obs.title"></h4>
+                      <span class="text-xs text-slate-500" x-text="`出现 ${obs.occurrences} 次`"></span>
+                    </header>
+                    <p class="text-xs text-slate-600 mb-2" x-text="obs.detail"></p>
+                    <!-- 批注 -->
+                    <template x-if="getFeedback(date, obs.id)">
+                      <div class="bg-white p-2 rounded text-xs">
+                        <span class="text-amber-700 font-medium">💬</span>
+                        <span x-text="getFeedback(date, obs.id)"></span>
+                        <button @click="editFeedback(date, obs.id)" class="text-blue-600 hover:underline ml-2">修改</button>
+                        <button @click="deleteFeedback(date, obs.id)" class="text-rose-600 hover:underline ml-2">删除</button>
+                      </div>
+                    </template>
+                    <template x-if="!getFeedback(date, obs.id)">
+                      <button @click="addFeedback(date, obs.id, obs.title)"
+                              class="text-xs text-blue-600 hover:underline">💬 添加批注</button>
+                    </template>
+                  </article>
+                </template>
+              </div>
+            </div>
+          </div>
+        </section>
+      </template>
+    </main>
+
+    <!-- Toast -->
+    <div x-show="toast" x-transition
+         class="fixed bottom-4 right-4 bg-slate-800 text-white px-4 py-2 rounded shadow-lg z-50"
+         x-text="toast"></div>
+  </div>
+
+  <script>
+    function learningData() {
+      return {
+        loading: true,
+        error: '',
+        dates: [],
+        logs: {},
+        feedback: {},  // { 'YYYY-MM-DD': { rule_id: text } }
+        expanded: {},
+        toast: '',
+
+        async init() {
+          this.loading = true;
+          try {
+            // 拉学习日志清单
+            const idxRes = await fetch('data/learning_log/_index.json?t=' + Date.now(), { cache: 'no-store' });
+            if (!idxRes.ok) throw new Error('暂无学习日志');
+            const idx = await idxRes.json();
+            this.dates = idx.dates || [];
+
+            // 拉每天的日志
+            for (const d of this.dates) {
+              try {
+                const r = await fetch(`data/learning_log/${d}.json?t=${Date.now()}`, { cache: 'no-store' });
+                if (r.ok) this.logs[d] = await r.json();
+              } catch (_) {}
+              // 拉每天的批注
+              try {
+                const fr = await fetch(`data/learning_log/${d}_feedback.json?t=${Date.now()}`, { cache: 'no-store' });
+                if (fr.ok) this.feedback[d] = await fr.json();
+              } catch (_) {}
+            }
+
+            // 默认展开第一项
+            if (this.dates.length) this.expanded[this.dates[0]] = true;
+            this.loading = false;
+          } catch (e) {
+            this.error = e.message;
+            this.loading = false;
+          }
+        },
+
+        getFeedback(date, ruleId) {
+          return (this.feedback[date] || {})[ruleId];
+        },
+
+        async addFeedback(date, ruleId, ruleTitle) {
+          const text = prompt(`为「${ruleTitle}」添加批注：\n（你的反馈会用于改进未来翻译）`);
+          if (!text || !text.trim()) return;
+          await this.saveFeedback(date, ruleId, text.trim());
+        },
+
+        async editFeedback(date, ruleId) {
+          const cur = this.getFeedback(date, ruleId) || '';
+          const text = prompt('修改批注：', cur);
+          if (text === null) return;  // 取消
+          if (!text.trim()) {
+            await this.deleteFeedback(date, ruleId, true);
+            return;
+          }
+          await this.saveFeedback(date, ruleId, text.trim());
+        },
+
+        async deleteFeedback(date, ruleId, silent) {
+          if (!silent && !confirm('删除这条批注？')) return;
+          if (this.feedback[date]) delete this.feedback[date][ruleId];
+          await this.persistFeedback(date);
+          this.flash('🗑 批注已删除');
+        },
+
+        async saveFeedback(date, ruleId, text) {
+          if (!this.feedback[date]) this.feedback[date] = {};
+          this.feedback[date][ruleId] = text;
+          await this.persistFeedback(date);
+          this.flash('✅ 批注已保存');
+        },
+
+        async persistFeedback(date) {
+          const path = `data/learning_log/${date}_feedback.json`;
+          const data = this.feedback[date] || {};
+          try {
+            await GH.putFile(path, JSON.stringify(data, null, 2),
+              `learning feedback on ${date}`);
+          } catch (e) {
+            this.flash('❌ 保存失败：' + e.message);
+            console.error(e);
+          }
+        },
+
+        flash(msg, ms = 2000) {
+          this.toast = msg;
+          setTimeout(() => this.toast = '', ms);
+        }
+      };
+    }
+  </script>
+</body>
+</html>

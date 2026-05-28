@@ -1,0 +1,99 @@
+{
+  "date": "2026-05-28",
+  "articles_analyzed": 8,
+  "article_ids": [
+    6,
+    9,
+    12,
+    13,
+    14,
+    22,
+    31,
+    32
+  ],
+  "rules_confirmed": [
+    {
+      "id": "rm_update_time",
+      "category": "句式偏好",
+      "title": "删除「更新时间」段落",
+      "evidence": "6/8 篇（强信号）",
+      "detail": "你润色时基本都删掉了「更新时间：YYYY-MM-DD HH:MM UTC（北京时间...）」这段，未来翻译默认不带这个段落",
+      "examples": [
+        "#6 Steam Deck",
+        "#9 斯坦·李",
+        "#12 007",
+        "#13 命运2",
+        "#31 指环王",
+        "#32 GTA5"
+      ]
+    },
+    {
+      "id": "subtitle_required",
+      "category": "标题/副标题偏好",
+      "title": "每篇必须有副标题",
+      "evidence": "8/8 篇（强信号）",
+      "detail": "你给所有 8 篇都加了 1-6 字的副标题，作为正文情绪/角度的高度浓缩",
+      "examples": [
+        "#6「老问题」",
+        "#9「斯坦始终相信，要在粉丝所在的地方与他们见面」",
+        "#12「经典旋律」",
+        "#13「最后一搏」",
+        "#14「本质动画公司」",
+        "#22「或许马上就要官宣」",
+        "#31「中土世界又有新游戏了」",
+        "#32「收编」"
+      ]
+    },
+    {
+      "id": "company_as_subject",
+      "category": "标题偏好",
+      "title": "公司名直接做主语",
+      "evidence": "#14",
+      "detail": "你倾向「暴雪：...」而非「暴雪老板：...」",
+      "examples": [
+        "「暴雪老板：《守望先锋2》动画剧集不排除可能」 → 「暴雪：不排除《守望先锋2》动画剧集的可能性」"
+      ]
+    },
+    {
+      "id": "title_concise",
+      "category": "语气/风格偏好",
+      "title": "标题更精炼",
+      "evidence": "#12, #31",
+      "detail": "剥离冗余修饰词，用更准确的动词",
+      "examples": [
+        "#12「作曲师揭秘新邦德游戏配乐的唯一规则」 → 「配乐团队揭秘创作思路」",
+        "#31「预告其《指环王》开放世界RPG」 → 「放出《指环王》开放世界RPG新信息」"
+      ]
+    }
+  ],
+  "dict_updates": [
+    {
+      "en": "Planet Zoo",
+      "old_cn": "（保留英文）",
+      "new_cn": "动物园之星",
+      "source": "user/#22"
+    },
+    {
+      "en": "Planet Zoo 2",
+      "old_cn": "（无）",
+      "new_cn": "动物园之星2",
+      "source": "user/#22"
+    }
+  ],
+  "observations": [
+    {
+      "id": "product_name_order",
+      "title": "产品+型号顺序",
+      "occurrences": 1,
+      "detail": "\"OLED Steam Deck\" → \"Steam Deck OLED\"（#6 标题）",
+      "needs_more_samples": true
+    },
+    {
+      "id": "passive_voice_title",
+      "title": "标题被动语态加修饰",
+      "occurrences": 1,
+      "detail": "#9 标题\"声音与形象**被**授权\"",
+      "needs_more_samples": true
+    }
+  ]
+}
