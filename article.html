@@ -1199,10 +1199,54 @@
           this.polishDirty = false;
         },
 
-        resetPolishFromTranslation() {
-          if (!confirm('确定用最新翻译重置润色区？当前修改会丢失。')) return;
+        async resetPolishFromTranslation() {
+          if (!confirm('重置会删除本篇的润色记录（润色文件 + 索引），该文章将被视为未润色，不会计入夜间学习。继续吗？')) return;
+          // 1. 本地状态重置
           this.fillPolishFromTranslation();
-          this.polishDirty = true;
+          this.polishDirty = false;
+          this.polishStatus = '✏️ 润色';
+
+          // 2. 删除 GitHub 上的润色文件 + 从 _index.json 中移除
+          try {
+            const params = new URLSearchParams(location.search);
+            const date = params.get('date');
+            const id = params.get('id');
+            const indexPath = `data/${date}/polished/_index.json`;
+
+            // 读索引找到该 id 对应的文件名
+            let filename = null;
+            try {
+              const idxFresh = await GH.getFile(indexPath);
+              const idxData = JSON.parse(idxFresh.content);
+              filename = idxData[String(id)] || idxData[id];
+              // 从索引中移除
+              delete idxData[String(id)];
+              delete idxData[id];
+              await GH.putFile(indexPath, JSON.stringify(idxData, null, 2),
+                `polish: remove #${id} from index (reset)`);
+            } catch (e) {
+              console.warn('读/写 _index.json 失败:', e);
+            }
+
+            // 删除润色文件本身
+            if (filename) {
+              try {
+                const filePath = `data/${date}/polished/${filename}`;
+                const fileFresh = await GH.getFile(filePath);
+                if (fileFresh && fileFresh.sha) {
+                  await GH.deleteFile(filePath, fileFresh.sha,
+                    `polish: delete #${id} (reset)`);
+                }
+              } catch (e) {
+                console.warn('删除润色文件失败:', e);
+              }
+            }
+
+            this.flash('✅ 润色记录已删除', 2500);
+          } catch (e) {
+            console.error(e);
+            this.flash('❌ 重置失败：' + e.message, 4000);
+          }
         },
 
         openPolish() {

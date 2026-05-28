@@ -75,6 +75,24 @@ const GH = {
       throw new Error(`PUT ${path} failed: ${res.status} ${err.message || ''}`);
     }
     return res.json();
+  },
+
+  async deleteFile(path, sha, message) {
+    const token = localStorage.getItem('gh_token');
+    if (!token) throw new Error('未配置 GitHub Token，请在右上角 ⚙️ 设置');
+    const res = await fetch(`${this.apiBase}/repos/${this.owner}/${this.repo}/contents/${path}`, {
+      method: 'DELETE',
+      headers: {
+        Authorization: `token ${token}`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ message, sha, branch: this.branch })
+    });
+    if (!res.ok) {
+      const err = await res.json().catch(() => ({}));
+      throw new Error(`DELETE ${path} failed: ${res.status} ${err.message || ''}`);
+    }
+    return res.json();
   }
 };
 
