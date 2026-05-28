@@ -135,7 +135,7 @@ function appData() {
       });
       try {
         const date = new URLSearchParams(location.search).get('date') || todayBeijingDate();
-        const res = await fetch(`data/${date}/index.json?t=${Date.now()}`);
+        const res = await fetch(`data/${date}/index.json?t=${Date.now()}`, { cache: 'no-store' });
         if (!res.ok) {
           // 找不到今日，回退尝试最近一天
           this.error = `${date} 还没有数据，请等待早晨8:30的cron推送，或访问 历史 页面查看过往内容。`;
@@ -146,7 +146,7 @@ function appData() {
 
         // 同步 requests.json：把已请求但还没翻译的标记为 requested
         try {
-          const reqRes = await fetch(`data/${date}/requests.json?t=${Date.now()}`);
+          const reqRes = await fetch(`data/${date}/requests.json?t=${Date.now()}`, { cache: 'no-store' });
           if (reqRes.ok) {
             const reqData = await reqRes.json();
             const requested = new Set(reqData.requested_ids || []);
@@ -161,7 +161,7 @@ function appData() {
         // 加载润色索引
         this.polishedIds = new Set();
         try {
-          const polRes = await fetch(`data/${date}/polished/_index.json?t=${Date.now()}`);
+          const polRes = await fetch(`data/${date}/polished/_index.json?t=${Date.now()}`, { cache: 'no-store' });
           if (polRes.ok) {
             const polIdx = await polRes.json();
             this.polishedIds = new Set(Object.keys(polIdx).map(k => parseInt(k)));
