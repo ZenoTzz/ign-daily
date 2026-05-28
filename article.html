@@ -346,6 +346,18 @@
             this.flash('❌ 未配置 GitHub Token，请在首页右上角⚙️设置', 4000);
             return;
           }
+          // 记录入库前的旧译名（同步译文要用）
+          let oldCn = null;
+          for (const cat of ['games','movies_tv','companies','people','media','terms']) {
+            if (this.dictData?.[cat]?.[this.dictForm.en]) {
+              oldCn = this.dictData[cat][this.dictForm.en].cn;
+              break;
+            }
+          }
+          // 本地立即关闭弹窗，后台保存
+          const form = { ...this.dictForm };
+          this.showDictModal = false;
+          this.flash(`入库中: ${form.en} → ${form.cn}`);
           this.dictSaving = true;
           try {
             // 拉最新词库（避免覆盖别人的修改）
@@ -354,29 +366,67 @@
 
             // 如果该词在别的分类里存在，先删掉旧的
             for (const cat of ['games','movies_tv','companies','people','media','terms']) {
-              if (cat !== this.dictForm.cat && dict[cat]?.[this.dictForm.en]) {
-                delete dict[cat][this.dictForm.en];
+              if (cat !== form.cat && dict[cat]?.[form.en]) {
+                delete dict[cat][form.en];
               }
             }
 
-            if (!dict[this.dictForm.cat]) dict[this.dictForm.cat] = {};
-            dict[this.dictForm.cat][this.dictForm.en] = {
-              cn: this.dictForm.cn,
-              source: this.dictForm.source
+            if (!dict[form.cat]) dict[form.cat] = {};
+            dict[form.cat][form.en] = {
+              cn: form.cn,
+              source: form.source
             };
             dict._meta = dict._meta || {};
             dict._meta.last_updated = new Date().toISOString().slice(0,10);
 
             await GH.putFile('data/dict.json', JSON.stringify(dict, null, 2),
-              `dict: add ${this.dictForm.en} → ${this.dictForm.cn} (${this.dictForm.source})`);
+              `dict: add ${form.en} → ${form.cn} (${form.source})`);
             this.dictData = dict;
-            this.flash(`✅ 已保存：${this.dictForm.en} → ${this.dictForm.cn}`);
-            this.showDictModal = false;
+
+            // 同步到当前译文
+            const synced = await this.syncSingleToCurrentArticle(form.en, form.cn, oldCn);
+            if (synced > 0) {
+              this.flash(`✅ 已入库，译文同步了 ${synced} 处`);
+            } else {
+              this.flash(`✅ 已入库：${form.en} → ${form.cn}`);
+            }
           } catch (e) {
             this.flash('❌ 保存失败：' + e.message, 5000);
           } finally {
             this.dictSaving = false;
           }
+        },
+
+        async syncSingleToCurrentArticle(en, newCn, oldCn) {
+          if (!this.article || !Array.isArray(this.article.paragraphs)) return 0;
+          let modified = 0;
+          let changed = false;
+          for (const p of this.article.paragraphs) {
+            const cn = p.cn || '';
+            if (oldCn && oldCn !== newCn && cn.includes(oldCn)) {
+              p.cn = cn.replaceAll(oldCn, newCn);
+              modified++;
+              changed = true;
+            } else if (cn.includes(en) && !cn.includes(newCn)) {
+              p.cn = cn.replaceAll(en, newCn);
+              modified++;
+              changed = true;
+            }
+          }
+          if (changed) {
+            // 保存译文改动
+            const params = new URLSearchParams(location.search);
+            const date = params.get('date');
+            const id = params.get('id');
+            const padded = String(id).padStart(2, '0');
+            const path = `data/${date}/translations/${padded}.json`;
+            const fresh = await GH.getFile(path);
+            const data = JSON.parse(fresh.content);
+            data.paragraphs = this.article.paragraphs;
+            await GH.putFile(path, JSON.stringify(data, null, 2),
+              `sync dict to article #${id}: ${en} → ${newCn}`);
+          }
+          return modified;
         },
 
         flash(msg, ms = 2500) {
@@ -423,6 +473,8 @@
               const approves = batch.filter(x => x.type === 'approve').map(x => x.candidate);
               if (approves.length > 0) {
                 await this.batchApproveToDict(approves);
+                // 同步到当前译文（替换译文中的旧译名）
+                await this.syncApprovesToCurrentArticle(approves);
               }
               // 保存当前 pending_dict 状态到 GitHub
               await this.savePendingDict(this.article.pending_dict);
@@ -432,6 +484,47 @@
           } finally {
             this.pendingProcessing = false;
           }
+        },
+
+        async syncApprovesToCurrentArticle(approves) {
+          // 检测该译文中哪些段落需要替换
+          if (!this.article || !Array.isArray(this.article.paragraphs)) return;
+          let modifiedCount = 0;
+          let articleChanged = false;
+
+          // 先拿老词库（在入库前的状态）才能知道原中文译名
+          // batchApproveToDict 已经入库了，但我们从 this.dictData 看以前的
+          for (const c of approves) {
+            const oldEntry = this.dictData?.[c.cat]?.[c.en];
+            const oldCn = oldEntry?.cn;  // 之前的译名（如果有）
+            const newCn = c.cn;
+
+            for (let i = 0; i < this.article.paragraphs.length; i++) {
+              const p = this.article.paragraphs[i];
+              const cn = p.cn || '';
+              if (oldCn && oldCn !== newCn && cn.includes(oldCn)) {
+                p.cn = cn.replaceAll(oldCn, newCn);
+                articleChanged = true;
+                modifiedCount++;
+              } else if (cn.includes(c.en) && !cn.includes(newCn)) {
+                // 段落里还使用英文原词，也同步为中文
+                p.cn = cn.replaceAll(c.en, newCn);
+                articleChanged = true;
+                modifiedCount++;
+              }
+            }
+          }
+
+          if (!articleChanged) return;
+
+          // 更新 dictData（本地缓存）让下一次同步能拿到最新状态
+          for (const c of approves) {
+            if (!this.dictData[c.cat]) this.dictData[c.cat] = {};
+            this.dictData[c.cat][c.en] = { cn: c.cn, source: c.source };
+          }
+
+          // 保存译文（savePendingDict 会一起保存 paragraphs 和 pending_dict）
+          this.flash(`✅ 译文同步了 ${modifiedCount} 处`);
         },
 
         async batchApproveToDict(approves) {
@@ -486,8 +579,12 @@
           const fresh = await GH.getFile(path);
           const data = JSON.parse(fresh.content);
           data.pending_dict = newPending;
+          // 同步本地 paragraphs 修改（如果有）
+          if (Array.isArray(this.article?.paragraphs)) {
+            data.paragraphs = this.article.paragraphs;
+          }
           await GH.putFile(path, JSON.stringify(data, null, 2),
-            `pending_dict: update for #${id}`);
+            `pending_dict + paragraphs: update for #${id}`);
         }
       }
     }
