@@ -119,6 +119,72 @@
           <div class="w-full">
             <h2 class="text-xl font-bold mb-1" x-text="article?.cn_title"></h2>
             <p class="text-sm text-slate-400 mb-4" x-text="`翻译于 ${article?.translated_at || ''}`"></p>
+
+            <!-- 待入库候选词面板 -->
+            <div x-show="article?.pending_dict?.length > 0" x-cloak
+                 class="bg-amber-50 border border-amber-200 rounded-lg p-3 mb-4">
+              <div class="flex items-center justify-between mb-2">
+                <h3 class="text-sm font-semibold text-amber-900">
+                  📝 本文新词候选 (<span x-text="article.pending_dict.length"></span>)
+                </h3>
+                <span class="text-xs text-amber-700">你决定是否入库</span>
+              </div>
+              <div class="space-y-2">
+                <template x-for="(c, i) in article.pending_dict" :key="i">
+                  <div class="bg-white rounded border border-amber-200 p-2">
+                    <div class="flex items-start gap-2 flex-wrap">
+                      <div class="flex-1 min-w-0">
+                        <div class="text-sm">
+                          <span class="font-semibold" x-text="c.en"></span>
+                          <span class="text-slate-400 mx-1">→</span>
+                          <input type="text" x-model="c.cn"
+                            class="text-sm border-b border-slate-300 px-1 py-0.5 bg-transparent focus:outline-none focus:border-brand-600"
+                            :style="`width: ${Math.max(c.cn.length * 14 + 20, 100)}px;`">
+                        </div>
+                        <div class="text-xs text-slate-500 mt-1 flex items-center gap-2 flex-wrap">
+                          <select x-model="c.cat" class="border rounded px-1 py-0.5 text-xs">
+                            <option value="games">games</option>
+                            <option value="movies_tv">movies_tv</option>
+                            <option value="companies">companies</option>
+                            <option value="people">people</option>
+                            <option value="media">media</option>
+                            <option value="terms">terms</option>
+                          </select>
+                          <select x-model="c.source" class="border rounded px-1 py-0.5 text-xs">
+                            <option value="user">user</option>
+                            <option value="ign_cn">ign_cn</option>
+                            <option value="bilibili">bilibili</option>
+                            <option value="consensus">consensus</option>
+                            <option value="ai_guess">ai_guess</option>
+                          </select>
+                          <span x-show="c.note" class="text-amber-700 italic" x-text="'• ' + c.note"></span>
+                        </div>
+                      </div>
+                      <div class="flex gap-1 shrink-0">
+                        <button @click="approvePending(i)" :disabled="pendingSaving"
+                          class="px-2 py-1 bg-green-600 text-white rounded text-xs hover:bg-green-700 disabled:bg-slate-300">
+                          ✅ 入库
+                        </button>
+                        <button @click="ignorePending(i)" :disabled="pendingSaving"
+                          class="px-2 py-1 border border-slate-300 text-slate-600 rounded text-xs hover:bg-slate-100">
+                          🗑 忽略
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </template>
+              </div>
+              <div x-show="article.pending_dict.length > 1" class="mt-2 flex gap-2">
+                <button @click="approveAllPending()" :disabled="pendingSaving"
+                  class="px-2 py-1 bg-green-600 text-white rounded text-xs hover:bg-green-700 disabled:bg-slate-300">
+                  ✅✅ 全部入库
+                </button>
+                <button @click="ignoreAllPending()" :disabled="pendingSaving"
+                  class="px-2 py-1 border text-slate-600 rounded text-xs hover:bg-slate-100">
+                  🗑 全部忽略
+                </button>
+              </div>
+            </div>
             <template x-for="(p, idx) in article?.paragraphs || []" :key="idx">
               <div class="para-row">
                 <p class="para-cn" x-text="p.cn"></p>
@@ -182,6 +248,9 @@
         dictExisting: null,
         dictSaving: false,
         toast: '',
+
+        // 待入库候选词
+        pendingSaving: false,
 
         async init() {
           const params = new URLSearchParams(location.search);
@@ -310,6 +379,132 @@
         flash(msg, ms = 2500) {
           this.toast = msg;
           setTimeout(() => { this.toast = ''; }, ms);
+        },
+
+        // 待入库候选词
+        async approvePending(idx) {
+          const c = this.article.pending_dict[idx];
+          if (!c.en || !c.cn) {
+            this.flash('❌ 译名不能为空', 3000);
+            return;
+          }
+          if (!localStorage.getItem('gh_token')) {
+            this.flash('❌ 未配置 GitHub Token，请在首页右上角⚙️设置', 4000);
+            return;
+          }
+          this.pendingSaving = true;
+          try {
+            // 1. 更新词库
+            const fresh = await GH.getFile('data/dict.json');
+            const dict = JSON.parse(fresh.content);
+            for (const cat of ['games','movies_tv','companies','people','media','terms']) {
+              if (cat !== c.cat && dict[cat]?.[c.en]) delete dict[cat][c.en];
+            }
+            if (!dict[c.cat]) dict[c.cat] = {};
+            dict[c.cat][c.en] = { cn: c.cn, source: c.source };
+            dict._meta = dict._meta || {};
+            dict._meta.last_updated = new Date().toISOString().slice(0,10);
+            await GH.putFile('data/dict.json', JSON.stringify(dict, null, 2),
+              `dict: approve ${c.en} → ${c.cn} (${c.source})`);
+            this.dictData = dict;
+
+            // 2. 从译文 pending_dict 里删除
+            await this.removeFromPending(idx);
+            this.flash(`✅ 已入库：${c.en} → ${c.cn}`);
+          } catch (e) {
+            this.flash('❌ 保存失败：' + e.message, 5000);
+          } finally {
+            this.pendingSaving = false;
+          }
+        },
+
+        async ignorePending(idx) {
+          if (!localStorage.getItem('gh_token')) {
+            // 未配 token 也可以本地隐藏
+            this.article.pending_dict.splice(idx, 1);
+            return;
+          }
+          this.pendingSaving = true;
+          try {
+            await this.removeFromPending(idx);
+            this.flash('已忽略');
+          } catch (e) {
+            this.flash('❌ 失败：' + e.message, 4000);
+          } finally {
+            this.pendingSaving = false;
+          }
+        },
+
+        async approveAllPending() {
+          if (!localStorage.getItem('gh_token')) {
+            this.flash('❌ 未配置 GitHub Token', 4000);
+            return;
+          }
+          this.pendingSaving = true;
+          try {
+            const fresh = await GH.getFile('data/dict.json');
+            const dict = JSON.parse(fresh.content);
+            const candidates = [...this.article.pending_dict];
+            for (const c of candidates) {
+              if (!c.en || !c.cn) continue;
+              for (const cat of ['games','movies_tv','companies','people','media','terms']) {
+                if (cat !== c.cat && dict[cat]?.[c.en]) delete dict[cat][c.en];
+              }
+              if (!dict[c.cat]) dict[c.cat] = {};
+              dict[c.cat][c.en] = { cn: c.cn, source: c.source };
+            }
+            dict._meta = dict._meta || {};
+            dict._meta.last_updated = new Date().toISOString().slice(0,10);
+            await GH.putFile('data/dict.json', JSON.stringify(dict, null, 2),
+              `dict: approve ${candidates.length} entries from #${this.article.id}`);
+            this.dictData = dict;
+
+            // 清空 pending_dict
+            await this.savePendingDict([]);
+            this.article.pending_dict = [];
+            this.flash(`✅ 已全部入库（${candidates.length}条）`);
+          } catch (e) {
+            this.flash('❌ 失败：' + e.message, 5000);
+          } finally {
+            this.pendingSaving = false;
+          }
+        },
+
+        async ignoreAllPending() {
+          if (!localStorage.getItem('gh_token')) {
+            this.article.pending_dict = [];
+            return;
+          }
+          this.pendingSaving = true;
+          try {
+            await this.savePendingDict([]);
+            this.article.pending_dict = [];
+            this.flash('已全部忽略');
+          } catch (e) {
+            this.flash('❌ 失败：' + e.message, 4000);
+          } finally {
+            this.pendingSaving = false;
+          }
+        },
+
+        async removeFromPending(idx) {
+          const newPending = [...this.article.pending_dict];
+          newPending.splice(idx, 1);
+          await this.savePendingDict(newPending);
+          this.article.pending_dict = newPending;
+        },
+
+        async savePendingDict(newPending) {
+          const params = new URLSearchParams(location.search);
+          const date = params.get('date');
+          const id = params.get('id');
+          const padded = String(id).padStart(2, '0');
+          const path = `data/${date}/translations/${padded}.json`;
+          const fresh = await GH.getFile(path);
+          const data = JSON.parse(fresh.content);
+          data.pending_dict = newPending;
+          await GH.putFile(path, JSON.stringify(data, null, 2),
+            `pending_dict: update for #${id}`);
         }
       }
     }

@@ -94,5 +94,42 @@
       "en": "Jackie Thomas is the Hardware and Buying Guides Editor at IGN and the PC components queen. You can follow her @Jackiecobra",
       "cn": "Jackie Thomas是IGN的硬件与购买指南编辑，也是PC配件领域的女王。你可以在@Jackiecobra关注她。"
     }
+  ],
+  "pending_dict": [
+    {
+      "en": "Steam Deck",
+      "cn": "Steam Deck",
+      "cat": "games",
+      "source": "consensus",
+      "note": "品牌名不译，点入库可锁定不被误译"
+    },
+    {
+      "en": "Steam Machine",
+      "cn": "Steam Machine",
+      "cat": "games",
+      "source": "consensus",
+      "note": "Valve主机，品牌名保留英文"
+    },
+    {
+      "en": "Anshel Sag",
+      "cn": "Anshel Sag",
+      "cat": "people",
+      "source": "consensus",
+      "note": "让你选是否译中文"
+    },
+    {
+      "en": "Jackie Thomas",
+      "cn": "杰奎·托马斯",
+      "cat": "people",
+      "source": "ai_guess",
+      "note": "IGN记者，译名仅供参考"
+    },
+    {
+      "en": "Xbox Ally",
+      "cn": "Xbox Ally",
+      "cat": "games",
+      "source": "consensus",
+      "note": "Asus ROG掌机，品牌名保留"
+    }
   ]
 }
