@@ -8,11 +8,11 @@ const GH = {
   apiBase: 'https://api.github.com',
 
   async getFile(path) {
-    const url = `${this.apiBase}/repos/${this.owner}/${this.repo}/contents/${path}?ref=${this.branch}`;
+    const url = `${this.apiBase}/repos/${this.owner}/${this.repo}/contents/${path}?ref=${this.branch}&t=${Date.now()}`;
     const token = localStorage.getItem('gh_token') || '';
-    const res = await fetch(url, {
-      headers: token ? { Authorization: `token ${token}` } : {}
-    });
+    const headers = { 'Cache-Control': 'no-cache' };
+    if (token) headers.Authorization = `token ${token}`;
+    const res = await fetch(url, { headers, cache: 'no-store' });
     if (res.status === 404) return null;
     if (!res.ok) throw new Error(`GET ${path} failed: ${res.status}`);
     const data = await res.json();
@@ -22,7 +22,7 @@ const GH = {
     };
   },
 
-  async putFile(path, content, message) {
+  async putFile(path, content, message, retry = 2) {
     const token = localStorage.getItem('gh_token');
     if (!token) throw new Error('未配置 GitHub Token，请在右上角 ⚙️ 设置');
 
@@ -43,6 +43,11 @@ const GH = {
       body: JSON.stringify(body)
     });
     if (!res.ok) {
+      // 409 sha mismatch → 重试（拿最新sha再PUT）
+      if (res.status === 409 && retry > 0) {
+        await new Promise(r => setTimeout(r, 300));
+        return this.putFile(path, content, message, retry - 1);
+      }
       const err = await res.json().catch(() => ({}));
       throw new Error(`PUT ${path} failed: ${res.status} ${err.message || ''}`);
     }
