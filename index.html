@@ -35,6 +35,9 @@
           <button @click="showGlobalSearch=true" class="text-slate-600 hover:text-brand-600" title="搜索历史文章">🔍</button>
           <a href="dict.html" class="text-slate-600 hover:text-brand-600">📖 词库</a>
           <a href="history.html" class="text-slate-600 hover:text-brand-600">📅 历史</a>
+          <button @click="refreshAll()" :disabled="loading" class="text-slate-600 hover:text-brand-600 disabled:opacity-50" title="刷新">
+            <span x-text="loading ? '⏳' : '🔄'"></span>
+          </button>
           <button @click="toggleTheme()" class="text-slate-600 hover:text-brand-600" title="主题切换">
             <span x-text="themeIcon"></span>
           </button>

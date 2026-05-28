@@ -182,6 +182,16 @@ function appData() {
       }
     },
 
+    async refreshAll() {
+      // 重新拉今天 index + requests + polished_index
+      this.loading = true;
+      this.data = null;
+      this.polishedIds = new Set();
+      this.searchCache = null;
+      await this.load();
+      if (this.flash) this.flash('✅ 已刷新', 1500);
+    },
+
     saveState() {
       try {
         sessionStorage.setItem('ign_index_state', JSON.stringify({
