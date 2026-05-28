@@ -171,7 +171,7 @@ function appData() {
         const date = this.data.date;
         const payload = {
           date,
-          requested_ids: [...this.selected].sort((a,b) => a-b),
+          requested_ids: [...this.selected].map(x => Number(x)).sort((a,b) => a-b),
           requested_at: new Date().toISOString()
         };
         const path = `data/${date}/requests.json`;
