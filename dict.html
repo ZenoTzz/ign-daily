@@ -122,6 +122,62 @@
     <div x-show="toast" x-cloak x-transition.opacity
          class="fixed bottom-4 left-1/2 -translate-x-1/2 bg-slate-900 text-white px-4 py-2 rounded-lg shadow-lg text-sm z-30"
          x-text="toast"></div>
+
+    <!-- 译文同步预览弹窗 -->
+    <div x-show="showSyncDialog" x-cloak
+         @keydown.escape.window="showSyncDialog=false"
+         class="fixed inset-0 bg-black/50 flex items-center justify-center z-40 p-4"
+         @click.self="showSyncDialog=false">
+      <div class="bg-white rounded-xl max-w-3xl w-full max-h-[85vh] flex flex-col">
+        <div class="p-4 border-b">
+          <h2 class="text-base font-bold mb-1">🔄 词库已保存，是否同步译文？</h2>
+          <p class="text-xs text-slate-500">以下是检测到的需要替换的位置，勾选后点「同步选中项」。</p>
+        </div>
+        <div class="p-3 flex-1 overflow-y-auto space-y-3">
+          <div x-show="syncImpact.length === 0" class="text-center text-slate-400 py-6">
+            未在译文中检测到需要同步的内容。
+          </div>
+          <template x-for="(impact, idx) in syncImpact" :key="`${impact.articleId}-${impact.en}-${idx}`">
+            <div class="border rounded-lg p-2">
+              <div class="flex items-start gap-2">
+                <input type="checkbox" x-model="impact.selected" class="mt-1">
+                <div class="flex-1 min-w-0">
+                  <div class="text-xs text-slate-500 mb-1">
+                    文章 <span class="font-mono" x-text="`#${impact.articleId}`"></span>
+                    | 词条 <span class="font-semibold" x-text="impact.en"></span>
+                    → <span class="text-green-700" x-text="impact.newCn"></span>
+                    <span x-show="impact.oldCn" class="text-slate-400">（原：<span x-text="impact.oldCn"></span>）</span>
+                  </div>
+                  <div class="text-xs space-y-1">
+                    <template x-for="(loc, j) in impact.locations" :key="j">
+                      <div class="bg-slate-50 rounded p-1.5">
+                        <div class="text-slate-400 text-[10px] mb-0.5">段落 <span x-text="loc.paraIdx + 1"></span>:</div>
+                        <div x-html="loc.preview"></div>
+                      </div>
+                    </template>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </template>
+        </div>
+        <div class="p-3 border-t flex justify-between items-center bg-slate-50">
+          <div class="flex gap-2 text-xs">
+            <button @click="toggleAllSync(true)" class="text-slate-600 hover:text-brand-600">全选</button>
+            <button @click="toggleAllSync(false)" class="text-slate-600 hover:text-brand-600">全不选</button>
+            <span class="text-slate-400" x-text="`已选 ${selectedSyncCount} 项`"></span>
+          </div>
+          <div class="flex gap-2">
+            <button @click="showSyncDialog=false" class="px-3 py-1.5 text-slate-500 text-sm">取消（不同步）</button>
+            <button @click="applySyncToTranslations()" :disabled="selectedSyncCount === 0 || syncSaving"
+              class="px-3 py-1.5 bg-brand-600 text-white rounded-lg text-sm disabled:bg-slate-300">
+              <span x-show="!syncSaving">同步选中项 (<span x-text="selectedSyncCount"></span>)</span>
+              <span x-show="syncSaving">同步中...</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <script src="assets/app.js"></script>
@@ -137,6 +193,12 @@
         pageSize: 50,
         changedKeys: [],  // 形如 'games::Final Fantasy Tactics'
         toast: '',
+
+        // 译文同步模式
+        showSyncDialog: false,
+        syncImpact: [],  // [{ articleId, en, newCn, oldCn, locations: [{paraIdx, preview}], selected }]
+        syncSaving: false,
+        pendingChanges: [],  // 保存词库后的变更详情
 
         async init() {
           try {
@@ -219,17 +281,180 @@
 
         async saveAll() {
           if (this.changedKeys.length === 0) return;
+          // 1. 记录变更详情（后续扫描译文要用）
+          this.pendingChanges = this.changedKeys.map(key => {
+            const [cat, en] = key.split('::');
+            const newEntry = this.data[cat]?.[en];
+            const oldEntry = this.originalData[cat]?.[en];
+            return {
+              key, cat, en,
+              newCn: newEntry?.cn || null,  // null = 被删除
+              oldCn: oldEntry?.cn || ''
+            };
+          });
+          // 2. 保存词库
           try {
             const today = new Date().toISOString().slice(0, 10);
             this.data._meta.last_updated = today;
             const json = JSON.stringify(this.data, null, 2);
             await GH.putFile('data/dict.json', json,
               `update dict: ${this.changedKeys.length} entries (${today})`);
-            this.flash(`✅ 已保存 ${this.changedKeys.length} 项变更`);
+            this.flash(`✅ 词库已保存 ${this.changedKeys.length} 项变更，扫描译文中...`);
             this.changedKeys = [];
             this.originalData = JSON.parse(JSON.stringify(this.data));
+            // 3. 扫描译文查看是否需要同步
+            await this.scanTranslationImpact();
           } catch (e) {
             this.flash('❌ 保存失败：' + e.message, 4000);
+          }
+        },
+
+        async scanTranslationImpact() {
+          // 扫描所有日期下的译文（仅今日+最近7天，避免量过大）
+          this.flash('🔍 扫描译文中...');
+          try {
+            const histRes = await fetch(`data/index-list.json?t=${Date.now()}`);
+            const hist = histRes.ok ? await histRes.json() : [];
+            const recent = hist.slice(0, 7);  // 只扫近7天
+
+            const impacts = [];
+            for (const day of recent) {
+              const date = day.date;
+              try {
+                const idxRes = await fetch(`data/${date}/index.json?t=${Date.now()}`);
+                if (!idxRes.ok) continue;
+                const dayIdx = await idxRes.json();
+                const translated = dayIdx.articles.filter(a => a.translation_status === 'done');
+                // 并发拉取当日译文
+                await Promise.all(translated.map(async (a) => {
+                  const padded = String(a.id).padStart(2, '0');
+                  const trRes = await fetch(`data/${date}/translations/${padded}.json?t=${Date.now()}`);
+                  if (!trRes.ok) return;
+                  const tr = await trRes.json();
+                  for (const change of this.pendingChanges) {
+                    if (!change.newCn) continue;  // 删除不同步
+                    if (change.newCn === change.oldCn) continue;  // 译名没变
+                    const impact = this.findInArticle(tr, change, date, a.id);
+                    if (impact) impacts.push(impact);
+                  }
+                }));
+              } catch (_) {}
+            }
+
+            this.pendingChanges = [];
+            if (impacts.length === 0) {
+              this.flash(`✅ 译文中未检测到需同步的内容`);
+              return;
+            }
+            this.syncImpact = impacts;
+            this.showSyncDialog = true;
+          } catch (e) {
+            console.error(e);
+            this.flash('❌ 扫描失败：' + e.message, 4000);
+          }
+        },
+
+        findInArticle(tr, change, date, articleId) {
+          // 在译文的 paragraphs[].cn 或 paragraphs[].en 里查找 原oldCn 或 en 出现位置
+          const locations = [];
+          const oldCn = change.oldCn;
+          const en = change.en;
+          const newCn = change.newCn;
+          if (!Array.isArray(tr.paragraphs)) return null;
+
+          for (let i = 0; i < tr.paragraphs.length; i++) {
+            const p = tr.paragraphs[i];
+            const cn = p.cn || '';
+            // 优先查找原中文译名（如果有）
+            let matched = false;
+            let preview = '';
+            if (oldCn && oldCn !== newCn && cn.includes(oldCn)) {
+              matched = true;
+              preview = this.makePreview(cn, oldCn, newCn);
+            } else if (cn.includes(en) && !cn.includes(newCn)) {
+              // 译文里还在用英文（没被译）→ 可选同步为中文
+              matched = true;
+              preview = this.makePreview(cn, en, newCn);
+            }
+            if (matched) {
+              locations.push({ paraIdx: i, preview });
+            }
+          }
+          if (locations.length === 0) return null;
+          return {
+            articleId, date, en,
+            newCn, oldCn,
+            locations,
+            selected: true,
+          };
+        },
+
+        makePreview(text, oldStr, newStr) {
+          // 生成高亮预览：oldStr 标红删除线，newStr 标绿下划线
+          const idx = text.indexOf(oldStr);
+          if (idx < 0) return this.escapeHtml(text);
+          const start = Math.max(0, idx - 30);
+          const end = Math.min(text.length, idx + oldStr.length + 30);
+          const before = (start > 0 ? '…' : '') + this.escapeHtml(text.slice(start, idx));
+          const oldHtml = `<span class="bg-red-100 line-through text-red-700">${this.escapeHtml(oldStr)}</span>`;
+          const newHtml = `<span class="bg-green-100 text-green-700">${this.escapeHtml(newStr)}</span>`;
+          const after = this.escapeHtml(text.slice(idx + oldStr.length, end)) + (end < text.length ? '…' : '');
+          return before + oldHtml + newHtml + after;
+        },
+
+        escapeHtml(s) {
+          return s.replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+        },
+
+        get selectedSyncCount() {
+          return this.syncImpact.filter(x => x.selected).length;
+        },
+
+        toggleAllSync(val) {
+          for (const i of this.syncImpact) i.selected = val;
+        },
+
+        async applySyncToTranslations() {
+          const selected = this.syncImpact.filter(x => x.selected);
+          if (selected.length === 0) return;
+          this.syncSaving = true;
+          try {
+            // 按 articleId+date 分组
+            const groups = {};
+            for (const it of selected) {
+              const key = `${it.date}::${it.articleId}`;
+              if (!groups[key]) groups[key] = { date: it.date, articleId: it.articleId, items: [] };
+              groups[key].items.push(it);
+            }
+
+            // 逐个文章更新
+            for (const g of Object.values(groups)) {
+              const padded = String(g.articleId).padStart(2, '0');
+              const path = `data/${g.date}/translations/${padded}.json`;
+              const fresh = await GH.getFile(path);
+              const tr = JSON.parse(fresh.content);
+              for (const it of g.items) {
+                for (const loc of it.locations) {
+                  const p = tr.paragraphs[loc.paraIdx];
+                  if (!p) continue;
+                  const cn = p.cn || '';
+                  if (it.oldCn && it.oldCn !== it.newCn && cn.includes(it.oldCn)) {
+                    p.cn = cn.replaceAll(it.oldCn, it.newCn);
+                  } else if (cn.includes(it.en) && !cn.includes(it.newCn)) {
+                    p.cn = cn.replaceAll(it.en, it.newCn);
+                  }
+                }
+              }
+              await GH.putFile(path, JSON.stringify(tr, null, 2),
+                `sync dict: update #${g.articleId} (${g.items.length} entries)`);
+            }
+            this.flash(`✅ 已同步 ${selected.length} 项到 ${Object.keys(groups).length} 篇译文`);
+            this.showSyncDialog = false;
+            this.syncImpact = [];
+          } catch (e) {
+            this.flash('❌ 同步失败：' + e.message, 5000);
+          } finally {
+            this.syncSaving = false;
           }
         },
 
