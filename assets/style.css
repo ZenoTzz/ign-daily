@@ -2,6 +2,39 @@
 
 [x-cloak] { display: none !important; }
 
+/* ====== 暗黑模式 ====== */
+html.dark { color-scheme: dark; }
+html.dark body { background-color: #0f172a !important; color: #e2e8f0 !important; }
+html.dark .bg-white { background-color: #1e293b !important; }
+html.dark .bg-slate-50 { background-color: #0f172a !important; }
+html.dark .bg-slate-100 { background-color: #334155 !important; }
+html.dark .text-slate-800 { color: #e2e8f0 !important; }
+html.dark .text-slate-700 { color: #cbd5e1 !important; }
+html.dark .text-slate-600 { color: #94a3b8 !important; }
+html.dark .text-slate-500 { color: #94a3b8 !important; }
+html.dark .text-slate-400 { color: #64748b !important; }
+html.dark .border, html.dark .border-t, html.dark .border-b { border-color: #334155 !important; }
+html.dark .reader-pane.cn { background: #1e293b; border-right-color: #334155; }
+html.dark .reader-pane.en { background: #0f172a; }
+html.dark .para-row { border-bottom-color: #334155; }
+html.dark .para-row .para-cn { color: #e2e8f0; }
+html.dark .para-row .para-en { color: #94a3b8; }
+html.dark input, html.dark select, html.dark textarea {
+  background-color: #1e293b !important; color: #e2e8f0 !important; border-color: #475569 !important;
+}
+html.dark .bg-amber-50 { background-color: rgba(120, 53, 15, 0.3) !important; }
+html.dark .bg-amber-200 { background-color: rgba(217, 119, 6, 0.4) !important; }
+html.dark .border-amber-200 { border-color: rgba(217, 119, 6, 0.5) !important; }
+html.dark .text-amber-700, html.dark .text-amber-900, html.dark .text-amber-800 { color: #fcd34d !important; }
+html.dark .bg-green-100 { background-color: rgba(6, 95, 70, 0.4) !important; }
+html.dark .text-green-700 { color: #6ee7b7 !important; }
+html.dark .bg-red-100 { background-color: rgba(127, 29, 29, 0.4) !important; }
+html.dark .text-red-700 { color: #fca5a5 !important; }
+html.dark .dict-row.changed { background: rgba(120, 53, 15, 0.4) !important; }
+html.dark .dict-input:hover { background: #334155 !important; border-color: #475569 !important; }
+html.dark .dict-input:focus { background: #1e293b !important; border-color: #BF1B26 !important; }
+html.dark thead.bg-slate-50 { background-color: #1e293b !important; }
+
 .line-clamp-1 {
   display: -webkit-box;
   -webkit-line-clamp: 1;
@@ -47,6 +80,11 @@
     height: auto;
   }
   .reader-pane.cn { border-right: none; border-bottom: 1px solid #e2e8f0; }
+  /* 移动端 viewMode 控制 */
+  .para-row.mobile-hide-en .para-en { display: none; }
+  .para-row.mobile-hide-cn .para-cn-wrap { display: none; }
+  .para-row.mobile-hide-cn .para-en { color: #1e293b; font-size: 0.95rem; }
+  html.dark .para-row.mobile-hide-cn .para-en { color: #e2e8f0; }
 }
 
 /* Aligned paragraph rows for sentence-level alignment */
@@ -84,3 +122,51 @@
 .dict-input:hover { border-color: #cbd5e1; background: #f8fafc; }
 .dict-input:focus { outline: none; border-color: #BF1B26; background: #fff; }
 .dict-row.changed { background: #fef3c7; }
+
+/* ===== 未入库英文高亮 ===== */
+.miss-en {
+  background: #fef3c7;
+  border-bottom: 1px dashed #d97706;
+  cursor: pointer;
+  padding: 0 2px;
+  border-radius: 3px;
+  transition: background 0.15s;
+}
+.miss-en:hover { background: #fcd34d; }
+html.dark .miss-en {
+  background: rgba(217, 119, 6, 0.3);
+  border-bottom-color: #fcd34d;
+}
+html.dark .miss-en:hover { background: rgba(217, 119, 6, 0.5); }
+
+/* ===== 段落编辑按钮 ===== */
+.para-cn-wrap { position: relative; }
+.para-cn-wrap .para-edit-btn {
+  position: absolute;
+  top: 0; right: -28px;
+  opacity: 0;
+  transition: opacity 0.15s;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 2px 4px;
+}
+.para-cn-wrap:hover .para-edit-btn { opacity: 0.6; }
+.para-cn-wrap .para-edit-btn:hover { opacity: 1; }
+
+/* ===== 评分按钮 ===== */
+.feedback-bar { display: flex; gap: 6px; }
+.feedback-bar button {
+  border: 1px solid #e2e8f0;
+  background: white;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.feedback-bar button:hover { border-color: #BF1B26; }
+.feedback-bar button.active { background: #BF1B26; color: white; border-color: #BF1B26; }
+html.dark .feedback-bar button { background: #1e293b; border-color: #475569; color: #cbd5e1; }
+

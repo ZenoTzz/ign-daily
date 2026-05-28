@@ -7,6 +7,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
   <link rel="stylesheet" href="assets/style.css">
+  <script src="assets/app.js"></script>
   <script>
     tailwind.config = {
       theme: {
@@ -31,8 +32,12 @@
           <span x-show="data" class="text-xs text-slate-400 ml-2" x-text="data?.date"></span>
         </div>
         <nav class="flex items-center gap-3 sm:gap-4 text-sm">
+          <button @click="showGlobalSearch=true" class="text-slate-600 hover:text-brand-600" title="搜索历史文章">🔍</button>
           <a href="dict.html" class="text-slate-600 hover:text-brand-600">📖 词库</a>
           <a href="history.html" class="text-slate-600 hover:text-brand-600">📅 历史</a>
+          <button @click="toggleTheme()" class="text-slate-600 hover:text-brand-600" title="主题切换">
+            <span x-text="themeIcon"></span>
+          </button>
           <button @click="showSettings = true" class="text-slate-600 hover:text-brand-600">⚙️</button>
         </nav>
       </div>
@@ -243,6 +248,41 @@
           </template>
           <div x-show="globalPending.length === 0" class="text-center text-slate-400 text-sm py-8">
             🎉 所有候选词均已处理
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 全局搜索 -->
+    <div x-show="showGlobalSearch" x-cloak
+         @keydown.escape.window="showGlobalSearch=false"
+         class="fixed inset-0 bg-black/50 flex items-start justify-center z-40 p-4 pt-16"
+         @click.self="showGlobalSearch=false">
+      <div class="bg-white rounded-xl max-w-2xl w-full max-h-[80vh] flex flex-col shadow-2xl">
+        <div class="p-3 border-b flex items-center gap-2">
+          <span class="text-xl">🔍</span>
+          <input type="text" x-model="searchQuery" @input="runGlobalSearch()" autofocus
+            placeholder="搜索标题/摘要/译文内容..."
+            class="flex-1 px-2 py-1 outline-none text-sm">
+          <button @click="showGlobalSearch=false" class="text-slate-400 hover:text-slate-600">✕</button>
+        </div>
+        <div class="flex-1 overflow-y-auto p-3">
+          <div x-show="searchLoading" class="text-center text-slate-400 text-sm py-4">搜索中...</div>
+          <div x-show="!searchLoading && searchResults.length === 0 && searchQuery.trim()" class="text-center text-slate-400 text-sm py-4">
+            未找到匹配结果
+          </div>
+          <div class="space-y-2">
+            <template x-for="r in searchResults" :key="`${r.date}-${r.id}`">
+              <a :href="`article.html?date=${r.date}&id=${r.id}`"
+                class="block bg-slate-50 hover:bg-slate-100 rounded-lg p-3 border border-transparent hover:border-brand-600/40">
+                <div class="text-xs text-slate-400 mb-1">
+                  <span x-text="r.date"></span> | #<span x-text="r.id"></span> | <span x-text="r.category"></span>
+                </div>
+                <div class="font-semibold text-sm" x-html="highlightMatch(r.cn_title)"></div>
+                <div class="text-xs text-slate-500 mt-0.5" x-html="highlightMatch(r.en_title)"></div>
+                <div x-show="r.matchedSnippet" class="text-xs text-slate-600 mt-1" x-html="r.matchedSnippet"></div>
+              </a>
+            </template>
           </div>
         </div>
       </div>

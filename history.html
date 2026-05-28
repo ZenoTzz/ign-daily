@@ -7,6 +7,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
   <link rel="stylesheet" href="assets/style.css">
+  <script src="assets/app.js"></script>
   <script>
     tailwind.config = { theme: { extend: { colors: { brand: { 600:'#a01620',700:'#7e1219' }}}}}
   </script>
@@ -17,6 +18,7 @@
       <div class="max-w-5xl mx-auto px-4 py-3 flex items-center gap-3">
         <a href="index.html" class="text-slate-500 hover:text-brand-600">←</a>
         <h1 class="text-lg font-bold">📅 历史归档</h1>
+        <button @click="window.appTheme.toggleTheme()" class="text-slate-500 hover:text-brand-600 text-sm ml-auto" title="主题切换">🌗</button>
       </div>
     </header>
 

@@ -1,5 +1,28 @@
 // ign-daily / app.js
 
+// ====== 暗黑模式（全局，所有页面必须在加载时调用） ======
+function initDarkMode() {
+  const saved = localStorage.getItem('theme') || 'auto';
+  applyTheme(saved);
+}
+function applyTheme(theme) {
+  const html = document.documentElement;
+  let isDark = false;
+  if (theme === 'dark') isDark = true;
+  else if (theme === 'light') isDark = false;
+  else { isDark = window.matchMedia('(prefers-color-scheme: dark)').matches; }
+  html.classList.toggle('dark', isDark);
+}
+function toggleTheme() {
+  const cur = localStorage.getItem('theme') || 'auto';
+  const next = cur === 'dark' ? 'light' : (cur === 'light' ? 'auto' : 'dark');
+  localStorage.setItem('theme', next);
+  applyTheme(next);
+  return next;
+}
+(function(){ try { initDarkMode(); } catch(_){} })();
+window.appTheme = { initDarkMode, applyTheme, toggleTheme };
+
 // ---- GitHub API helper (用于写回) ----
 const GH = {
   owner: 'ZenoTzz',
@@ -85,7 +108,20 @@ function appData() {
     pendingQueue: [],
     pendingProcessing: false,
 
+    // 主题
+    themeIcon: '🌗',
+    // 全局搜索
+    showGlobalSearch: false,
+    searchQuery: '',
+    searchResults: [],
+    searchLoading: false,
+    searchTimer: null,
+    searchCache: null,  // 历史文章总表，加载一次
+
     async init() {
+      // 初始主题图标
+      const cur = localStorage.getItem('theme') || 'auto';
+      this.themeIcon = cur === 'dark' ? '☀️' : (cur === 'light' ? '🌒' : '🌗');
       // 马上绑 beforeunload 保护
       window.addEventListener('beforeunload', (e) => {
         if (this.pendingProcessing || this.pendingQueue.length > 0) {
@@ -246,6 +282,69 @@ function appData() {
     flash(msg, ms = 2500) {
       this.toast = msg;
       setTimeout(() => { this.toast = ''; }, ms);
+    },
+
+    // ---- 主题 ----
+    toggleTheme() {
+      const next = window.appTheme.toggleTheme();
+      this.themeIcon = next === 'dark' ? '☀️' : (next === 'light' ? '🌒' : '🌗');
+      this.flash('主题：' + (next === 'auto' ? '跟随系统' : (next === 'dark' ? '深色' : '浅色')));
+    },
+
+    // ---- 全局搜索 ----
+    runGlobalSearch() {
+      clearTimeout(this.searchTimer);
+      const q = this.searchQuery.trim().toLowerCase();
+      if (!q) { this.searchResults = []; return; }
+      this.searchLoading = true;
+      this.searchTimer = setTimeout(async () => {
+        try {
+          // 首次加载历史总索引
+          if (!this.searchCache) {
+            const histRes = await fetch('data/index-list.json?t=' + Date.now());
+            const hist = histRes.ok ? await histRes.json() : [];
+            // 只扫近 14 天
+            const recent = hist.slice(0, 14);
+            const pages = await Promise.all(recent.map(async (d) => {
+              try {
+                const r = await fetch(`data/${d.date}/index.json?t=${Date.now()}`);
+                if (!r.ok) return [];
+                const j = await r.json();
+                return j.articles.map(a => ({ ...a, date: d.date }));
+              } catch (_) { return []; }
+            }));
+            this.searchCache = pages.flat();
+          }
+          // 在总索引里模糊q查 cn_title/en_title/summary/category
+          const results = [];
+          for (const a of this.searchCache) {
+            const fields = [a.cn_title, a.en_title, a.summary || '', a.category || ''].join(' ・ ').toLowerCase();
+            if (fields.includes(q)) {
+              results.push({
+                date: a.date, id: a.id, cn_title: a.cn_title, en_title: a.en_title,
+                category: a.category, matchedSnippet: ''
+              });
+            }
+          }
+          this.searchResults = results.slice(0, 50);
+        } catch (e) {
+          console.error(e);
+        } finally {
+          this.searchLoading = false;
+        }
+      }, 200);
+    },
+
+    highlightMatch(text) {
+      if (!text) return '';
+      const q = this.searchQuery.trim();
+      if (!q) return this.escapeHtml(text);
+      const safe = this.escapeHtml(text);
+      const re = new RegExp('(' + q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi');
+      return safe.replace(re, '<mark class="bg-amber-200">$1</mark>');
+    },
+    escapeHtml(s) {
+      return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
     },
 
     // ---- 全局待确认词库 ----

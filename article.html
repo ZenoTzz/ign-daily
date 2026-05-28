@@ -26,6 +26,15 @@
         <div class="flex items-center gap-2 shrink-0">
           <a x-show="article" :href="article?.url" target="_blank" rel="noopener"
             class="text-xs text-slate-500 hover:text-brand-600">🔗 IGN</a>
+          <!-- 移动端切换派中/双/原 -->
+          <select x-model="viewMode" class="text-xs px-2 py-1 rounded border lg:hidden">
+            <option value="cn">中文</option>
+            <option value="en">原文</option>
+            <option value="both">双语</option>
+          </select>
+          <button @click="toggleTheme()" class="text-xs text-slate-500 hover:text-brand-600" title="主题切换">
+            <span x-text="themeIcon"></span>
+          </button>
           <button @click="mode = mode === 'compare' ? 'cn' : 'compare'"
             class="text-xs px-2 py-1 rounded border hover:bg-slate-50 hidden lg:inline-flex">
             <span x-text="mode === 'compare' ? '🔄 切换' : '↔ 对照'"></span>
@@ -107,6 +116,45 @@
       </div>
     </div>
 
+    <!-- 段落编辑弹窗 -->
+    <div x-show="showEditPara" x-cloak
+         @keydown.escape.window="showEditPara=false"
+         class="fixed inset-0 bg-black/40 flex items-center justify-center z-40 p-4"
+         @click.self="showEditPara=false">
+      <div class="bg-white rounded-xl p-5 max-w-2xl w-full">
+        <h3 class="text-base font-bold mb-3">✏️ 编辑译文（段 <span x-text="editParaIdx + 1"></span>）</h3>
+        <div class="text-xs text-slate-500 mb-1">英文原文：</div>
+        <div class="text-xs bg-slate-50 rounded p-2 mb-3 leading-relaxed" x-text="editParaEn"></div>
+        <div class="text-xs text-slate-500 mb-1">中文译文：</div>
+        <textarea x-model="editParaCn" rows="6"
+          class="w-full px-3 py-2 border rounded-lg text-sm leading-relaxed font-sans"></textarea>
+        <div class="flex gap-2 mt-3 justify-end">
+          <button @click="showEditPara=false" class="px-3 py-1.5 text-slate-500 text-sm">取消</button>
+          <button @click="saveEditPara()" :disabled="editParaSaving"
+            class="px-3 py-1.5 bg-brand-600 text-white rounded-lg text-sm disabled:bg-slate-300">
+            <span x-show="!editParaSaving">💾 保存</span>
+            <span x-show="editParaSaving">保存中...</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 反馈评论弹窗 -->
+    <div x-show="showFeedbackModal" x-cloak
+         @keydown.escape.window="showFeedbackModal=false"
+         class="fixed inset-0 bg-black/40 flex items-center justify-center z-40 p-4"
+         @click.self="showFeedbackModal=false">
+      <div class="bg-white rounded-xl p-5 max-w-md w-full">
+        <h3 class="text-base font-bold mb-3">👎 反馈问题</h3>
+        <textarea x-model="feedbackInput" rows="4" placeholder="什么地方译得不好？希望怎么调整？"
+          class="w-full px-3 py-2 border rounded-lg text-sm"></textarea>
+        <div class="flex gap-2 mt-3 justify-end">
+          <button @click="showFeedbackModal=false" class="px-3 py-1.5 text-slate-500 text-sm">取消</button>
+          <button @click="saveFeedback()" class="px-3 py-1.5 bg-brand-600 text-white rounded-lg text-sm">保存反馈</button>
+        </div>
+      </div>
+    </div>
+
     <!-- Toast -->
     <div x-show="toast" x-cloak x-transition.opacity
          class="fixed bottom-4 left-1/2 -translate-x-1/2 bg-slate-900 text-white px-4 py-2 rounded-lg shadow-lg text-sm z-50"
@@ -119,7 +167,14 @@
         <div class="reader-pane cn">
           <div class="w-full">
             <h2 class="text-xl font-bold mb-1" x-text="article?.cn_title"></h2>
-            <p class="text-sm text-slate-400 mb-4" x-text="`翻译于 ${article?.translated_at || ''}`"></p>
+            <p class="text-sm text-slate-400 mb-2" x-text="`翻译于 ${article?.translated_at || ''}`"></p>
+
+            <!-- 评分条 -->
+            <div class="feedback-bar mb-4">
+              <button :class="feedback === 'good' ? 'active' : ''" @click="submitFeedback('good')">👍 不错</button>
+              <button :class="feedback === 'bad' ? 'active' : ''" @click="submitFeedback('bad')">👎 有问题</button>
+              <span x-show="feedbackComment" class="text-xs text-slate-500 self-center ml-2" x-text="`：${feedbackComment}`"></span>
+            </div>
 
             <!-- 待入库候选词面板 -->
             <div x-show="article?.pending_dict?.length > 0" x-cloak
@@ -160,6 +215,8 @@
                           </select>
                           <span x-show="c.note" class="text-amber-700 italic" x-text="'• ' + c.note"></span>
                         </div>
+                        <!-- 上下文预览 -->
+                        <div x-show="findContext(c.en)" class="text-xs bg-slate-50 rounded mt-1 p-1.5 leading-relaxed" x-html="findContext(c.en)"></div>
                       </div>
                       <div class="flex gap-1 shrink-0">
                         <button @click="approvePending(i)"
@@ -187,9 +244,12 @@
               </div>
             </div>
             <template x-for="(p, idx) in article?.paragraphs || []" :key="idx">
-              <div class="para-row">
-                <p class="para-cn" x-text="p.cn"></p>
-                <p class="para-en lg:hidden mt-1" x-text="p.en"></p>
+              <div class="para-row" :class="{'mobile-hide-en': viewMode==='cn', 'mobile-hide-cn': viewMode==='en'}">
+                <div class="para-cn-wrap">
+                  <p class="para-cn" x-html="highlightMissEn(p.cn)"></p>
+                  <button class="para-edit-btn" @click="openEditPara(idx)" title="编辑该段译文">✏️</button>
+                </div>
+                <p class="para-en lg:block" :class="{'lg:hidden': viewMode==='cn' || viewMode==='en'}" x-text="p.en"></p>
               </div>
             </template>
           </div>
@@ -224,7 +284,10 @@
           <h2 class="text-xl font-bold mb-1" x-text="article?.cn_title"></h2>
           <p class="text-sm text-slate-400 mb-4" x-text="`翻译于 ${article?.translated_at || ''}`"></p>
           <template x-for="(p, idx) in article?.paragraphs || []" :key="idx">
-            <p class="para-cn mb-4 leading-relaxed" x-text="p.cn"></p>
+            <div class="para-cn-wrap">
+              <p class="para-cn mb-4 leading-relaxed" x-html="highlightMissEn(p.cn)"></p>
+              <button class="para-edit-btn" @click="openEditPara(idx)" title="编辑该段译文">✏️</button>
+            </div>
           </template>
         </div>
       </div>
@@ -255,7 +318,27 @@
         pendingQueue: [],  // 后台任务队列
         pendingProcessing: false,  // 队列是否在跑
 
+        // 视图模式（手机端）
+        viewMode: 'cn',  // cn | en | both
+        themeIcon: '🌗',
+
+        // 段落编辑
+        showEditPara: false,
+        editParaIdx: -1,
+        editParaCn: '',
+        editParaEn: '',
+        editParaSaving: false,
+
+        // 反馈
+        feedback: null,
+        feedbackComment: '',
+        showFeedbackModal: false,
+        feedbackInput: '',
+
         async init() {
+          // 主题图标
+          const cur = localStorage.getItem('theme') || 'auto';
+          this.themeIcon = cur === 'dark' ? '☀️' : (cur === 'light' ? '🌒' : '🌗');
           const params = new URLSearchParams(location.search);
           const date = params.get('date');
           const id = params.get('id');
@@ -276,11 +359,21 @@
             this.error = '加载译文失败：' + e.message;
             return;
           }
-          // 预加载词库
+          // 加载反馈
+          this.loadFeedback();
+                    // 预加载词库
           try {
             const dictRes = await fetch('data/dict.json?t=' + Date.now());
             this.dictData = await dictRes.json();
           } catch (_) {}
+
+          // 监听未入库英文点击
+          window.addEventListener('miss-en-click', (e) => {
+            const en = e.detail;
+            this.dictForm = { en, cn: '', cat: 'games', source: 'user' };
+            this.checkDictExisting();
+            this.showDictModal = true;
+          });
 
           // 监听选中文本
           this.bindSelection();
@@ -585,6 +678,165 @@
           }
           await GH.putFile(path, JSON.stringify(data, null, 2),
             `pending_dict + paragraphs: update for #${id}`);
+        },
+
+        // ---- 主题 ----
+        toggleTheme() {
+          const next = window.appTheme.toggleTheme();
+          this.themeIcon = next === 'dark' ? '☀️' : (next === 'light' ? '🌒' : '🌗');
+          this.flash('主题：' + (next === 'auto' ? '跟随系统' : (next === 'dark' ? '深色' : '浅色')));
+        },
+
+        // ---- 未入库英文词高亮 ----
+        highlightMissEn(text) {
+          if (!text) return '';
+          if (!this.dictData) return this.escapeHtml(text);
+          // 提取所有英文词组（连续2+字符的英文token）
+          const escaped = this.escapeHtml(text);
+          // 已知词的所有英文keys，按长度倒序避免短词截断长词
+          const known = new Set();
+          for (const cat of ['games','movies_tv','companies','people','media','terms']) {
+            for (const en of Object.keys(this.dictData[cat] || {})) known.add(en);
+          }
+          // 匹配连续英文片段（含空格、连字符、撇号、数字）
+          // 只标记长度>=2的纯英文片段
+          return escaped.replace(/[A-Za-z][A-Za-z0-9'\-]*(?:\s+[A-Za-z][A-Za-z0-9'\-]*){0,4}/g, (match) => {
+            const trimmed = match.trim();
+            if (trimmed.length < 2) return match;
+            // 数字/常见小词忽略
+            if (/^(of|the|a|an|in|on|at|to|is|or|by|for|and|as|it)$/i.test(trimmed)) return match;
+            // 已在词库 → 不标
+            if (known.has(trimmed)) return match;
+            // 也检查更短的子集：如果只是单词且词库里有，跳过
+            const words = trimmed.split(/\s+/);
+            if (words.length === 1 && words[0].length < 3) return match;
+            return `<span class="miss-en" onclick="window.dispatchEvent(new CustomEvent('miss-en-click',{detail:'${trimmed.replace(/'/g,'\\\'')}'}))">${match}</span>`;
+          });
+        },
+
+        // ---- 候选词上下文预览 ----
+        findContext(en) {
+          if (!en || !this.article || !Array.isArray(this.article.paragraphs)) return '';
+          for (const p of this.article.paragraphs) {
+            const cn = p.cn || '';
+            const en_ = p.en || '';
+            // 中文段里包含该英文（保留英文的情况）
+            if (cn.includes(en)) {
+              return this.makeSnippet(cn, en);
+            }
+            // 英文段里包含 → 显示对应中文段
+            if (en_.includes(en)) {
+              return this.makeSnippet(cn, '') + ' <span class="text-slate-400">（英文段）</span>';
+            }
+          }
+          return '';
+        },
+
+        makeSnippet(text, highlight) {
+          if (!highlight) {
+            return this.escapeHtml(text.length > 80 ? text.slice(0,80)+'…' : text);
+          }
+          const idx = text.indexOf(highlight);
+          if (idx < 0) return this.escapeHtml(text.slice(0,80));
+          const start = Math.max(0, idx - 20);
+          const end = Math.min(text.length, idx + highlight.length + 30);
+          const before = (start>0?'…':'') + this.escapeHtml(text.slice(start, idx));
+          const hl = `<mark class="bg-amber-200">${this.escapeHtml(highlight)}</mark>`;
+          const after = this.escapeHtml(text.slice(idx+highlight.length, end)) + (end<text.length?'…':'');
+          return before + hl + after;
+        },
+
+        escapeHtml(s) {
+          return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+        },
+
+        // ---- 段落编辑 ----
+        openEditPara(idx) {
+          this.editParaIdx = idx;
+          const p = this.article.paragraphs[idx];
+          this.editParaCn = p.cn || '';
+          this.editParaEn = p.en || '';
+          this.showEditPara = true;
+        },
+
+        async saveEditPara() {
+          const idx = this.editParaIdx;
+          if (idx < 0) return;
+          this.editParaSaving = true;
+          try {
+            this.article.paragraphs[idx].cn = this.editParaCn;
+            const params = new URLSearchParams(location.search);
+            const date = params.get('date');
+            const id = params.get('id');
+            const padded = String(id).padStart(2, '0');
+            const path = `data/${date}/translations/${padded}.json`;
+            const fresh = await GH.getFile(path);
+            const data = JSON.parse(fresh.content);
+            data.paragraphs = this.article.paragraphs;
+            await GH.putFile(path, JSON.stringify(data, null, 2),
+              `edit paragraph ${idx+1} of #${id}`);
+            this.flash('✅ 段落已保存');
+            this.showEditPara = false;
+          } catch (e) {
+            this.flash('❌ 保存失败：' + e.message, 4000);
+          } finally {
+            this.editParaSaving = false;
+          }
+        },
+
+        // ---- 反馈 ----
+        async submitFeedback(type) {
+          if (type === 'bad') {
+            this.feedbackInput = this.feedbackComment || '';
+            this.showFeedbackModal = true;
+            this.feedback = type;
+            return;
+          }
+          this.feedback = type;
+          await this.saveFeedbackToFile();
+          this.flash('👍 已记录');
+        },
+
+        async saveFeedback() {
+          this.feedbackComment = this.feedbackInput.trim();
+          this.showFeedbackModal = false;
+          await this.saveFeedbackToFile();
+          this.flash('👎 反馈已保存');
+        },
+
+        async saveFeedbackToFile() {
+          const params = new URLSearchParams(location.search);
+          const date = params.get('date');
+          const id = params.get('id');
+          if (!localStorage.getItem('gh_token')) {
+            this.flash('未配置 GitHub Token，反馈仅保存到本地', 3000);
+            localStorage.setItem(`feedback_${date}_${id}`, JSON.stringify({type:this.feedback, comment:this.feedbackComment}));
+            return;
+          }
+          const path = `data/${date}/feedback.json`;
+          let feedback = {};
+          try {
+            const fresh = await GH.getFile(path);
+            if (fresh) feedback = JSON.parse(fresh.content);
+          } catch (_) {}
+          feedback[id] = { type: this.feedback, comment: this.feedbackComment, at: new Date().toISOString() };
+          await GH.putFile(path, JSON.stringify(feedback, null, 2),
+            `feedback for #${id}: ${this.feedback}`);
+        },
+
+        async loadFeedback() {
+          const params = new URLSearchParams(location.search);
+          const date = params.get('date');
+          const id = params.get('id');
+          try {
+            const res = await fetch(`data/${date}/feedback.json?t=${Date.now()}`);
+            if (!res.ok) return;
+            const fb = await res.json();
+            if (fb[id]) {
+              this.feedback = fb[id].type;
+              this.feedbackComment = fb[id].comment || '';
+            }
+          } catch (_) {}
         }
       }
     }
