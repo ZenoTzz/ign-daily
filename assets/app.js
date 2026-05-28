@@ -90,7 +90,7 @@ function appData() {
       window.addEventListener('beforeunload', (e) => {
         if (this.pendingProcessing || this.pendingQueue.length > 0) {
           e.preventDefault();
-          e.returnValue = '后台还有未保存的位术修改，确定要离开吗？';
+          e.returnValue = '后台还有未保存的词库修改，确定要离开吗？';
           return e.returnValue;
         }
       });
