@@ -879,9 +879,32 @@
               return;
             }
 
-            // 6. 写回
+            // 6. 写回 translation
             const msg = `reapply dict: ${hits.size} terms replaced in #${id} (${paraReplaced} paragraphs)`;
             await GH.putFile(path, JSON.stringify(data, null, 2), msg);
+
+            // 6.5 同步更新 index.json 里该文章的 cn_title / summary 让首页同步
+            try {
+              const idxPath = `data/${date}/index.json`;
+              const idxFresh = await GH.getFile(idxPath);
+              const idxData = JSON.parse(idxFresh.content);
+              const art = (idxData.articles || []).find(a => a.id === parseInt(id));
+              if (art) {
+                let idxChanged = false;
+                if (data.cn_title && art.cn_title !== data.cn_title) {
+                  art.cn_title = data.cn_title; idxChanged = true;
+                }
+                if (data.summary && art.summary !== data.summary) {
+                  art.summary = data.summary; idxChanged = true;
+                }
+                if (idxChanged) {
+                  await GH.putFile(idxPath, JSON.stringify(idxData, null, 2),
+                    `index.json: sync title/summary for #${id} after reapply`);
+                }
+              }
+            } catch (e) {
+              console.warn('index.json 同步失败:', e);
+            }
 
             // 7. 同步到本地 article 对象
             this.article.paragraphs = data.paragraphs;
