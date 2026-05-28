@@ -183,19 +183,11 @@ function appData() {
     },
 
     async refreshAll() {
-      // 重新拉今天 index + requests + polished_index
-      this.loading = true;
-      this.data = null;
-      this.error = '';
-      this.polishedIds = new Set();
-      this.searchCache = null;
-      try {
-        await this.init();
-        if (this.flash) this.flash('✅ 已刷新', 1500);
-      } catch (e) {
-        this.error = '刷新失败：' + e.message;
-        this.loading = false;
-      }
+      // 使用 location.reload 硬刷，避免状态吐不干净问题
+      // 追加 cache-bust 参数并跳到不带 query的纯净 url
+      const url = new URL(location.href);
+      url.searchParams.set('_t', Date.now());
+      location.href = url.toString();
     },
 
     saveState() {
