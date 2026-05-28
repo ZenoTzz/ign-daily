@@ -60,6 +60,28 @@
             </button>
           </div>
         </div>
+
+        <!-- 翻译中状态提示 -->
+        <div x-show="requestedCount > 0"
+             class="mt-3 pt-3 border-t flex items-start gap-2 text-sm">
+          <span class="text-amber-600 shrink-0 mt-0.5">⏳</span>
+          <div class="flex-1">
+            <div class="font-medium text-amber-700">
+              正在翻译 <span x-text="requestedCount"></span> 篇
+            </div>
+            <div class="text-xs text-slate-500 mt-0.5">
+              请耐心等待主session处理，翻译完成后状态会变为「✅ 已翻译」。可随时刷新页面查看最新进度。
+            </div>
+            <div class="flex flex-wrap gap-1 mt-2">
+              <template x-for="a in requestedArticles" :key="a.id">
+                <span class="text-xs px-2 py-0.5 rounded-full bg-amber-100 text-amber-800">
+                  #<span x-text="a.id"></span> <span x-text="a.cn_title.length > 18 ? a.cn_title.slice(0,18)+'…' : a.cn_title"></span>
+                </span>
+              </template>
+            </div>
+            <button @click="refreshData()" class="mt-2 text-xs text-brand-600 hover:text-brand-700">🔄 手动刷新</button>
+          </div>
+        </div>
       </div>
 
       <!-- Filter tabs -->

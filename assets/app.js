@@ -85,6 +85,21 @@ function appData() {
           return;
         }
         this.data = await res.json();
+
+        // 同步 requests.json：把已请求但还没翻译的标记为 requested
+        try {
+          const reqRes = await fetch(`data/${date}/requests.json?t=${Date.now()}`);
+          if (reqRes.ok) {
+            const reqData = await reqRes.json();
+            const requested = new Set(reqData.requested_ids || []);
+            for (const a of this.data.articles) {
+              if (requested.has(a.id) && a.translation_status !== 'done') {
+                a.translation_status = 'requested';
+              }
+            }
+          }
+        } catch (_) { /* 没有 requests.json 是正常的 */ }
+
         this.loading = false;
       } catch (e) {
         console.error(e);
@@ -119,6 +134,23 @@ function appData() {
     get translatedCount() {
       if (!this.data) return 0;
       return this.data.articles.filter(a => a.translation_status === 'done').length;
+    },
+
+    get requestedCount() {
+      if (!this.data) return 0;
+      return this.data.articles.filter(a => a.translation_status === 'requested').length;
+    },
+
+    get requestedArticles() {
+      if (!this.data) return [];
+      return this.data.articles.filter(a => a.translation_status === 'requested');
+    },
+
+    async refreshData() {
+      this.loading = true;
+      this.data = null;
+      await this.init();
+      this.flash('🔄 已刷新');
     },
 
     saveToken() {
