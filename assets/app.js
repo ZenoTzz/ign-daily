@@ -10,7 +10,7 @@ const GH = {
   async getFile(path) {
     const url = `${this.apiBase}/repos/${this.owner}/${this.repo}/contents/${path}?ref=${this.branch}&t=${Date.now()}`;
     const token = localStorage.getItem('gh_token') || '';
-    const headers = { 'Cache-Control': 'no-cache' };
+    const headers = {};
     if (token) headers.Authorization = `token ${token}`;
     const res = await fetch(url, { headers, cache: 'no-store' });
     if (res.status === 404) return null;
