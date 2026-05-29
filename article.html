@@ -1231,11 +1231,11 @@
           // 3. 多余空格 / 换行处理
           s = s.replace(/[ \t]+\n/g, '\n');                  // 行尾空格
           s = s.replace(/\n{3,}/g, '\n\n');                  // 连续空行
-          // 中文与中文之间不该有空格（循环直到不变）
+          // 中文与中文之间不该有空格（仅同行内，不跨换行）
           let prev;
           do {
             prev = s;
-            s = s.replace(/([\u4e00-\u9fff])\s+([\u4e00-\u9fff])/g, '$1$2');
+            s = s.replace(/([\u4e00-\u9fff])[ \t]+([\u4e00-\u9fff])/g, '$1$2');
           } while (s !== prev);
           // 中文标点两侧不该有空格
           s = s.replace(/\s+([\u3000-\u303f\uff00-\uffef\u300c\u300d\u300e\u300f])/g, '$1');
