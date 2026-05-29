@@ -54,7 +54,7 @@
           </button>
           <button @click="copyArticle()"
             class="text-xs px-2 py-1 rounded bg-emerald-50 text-emerald-700 hover:bg-emerald-100 border border-emerald-200"
-            title="复制中文译文（自动全角标点，去 markdown）">
+            title="复制中文全文（自动全角标点，去 markdown）">
             <span x-text="copyBtnText"></span>
           </button>
         </div>
@@ -193,7 +193,14 @@
               <div class="flex items-start gap-2">
                 <span class="text-amber-600 text-sm font-bold">🎯</span>
                 <div class="flex-1">
-                  <div class="text-xs text-amber-700 font-medium mb-1">极简总结（AI 生成）</div>
+                  <div class="flex items-center gap-2 mb-1">
+                    <div class="text-xs text-amber-700 font-medium">极简总结（AI 生成）</div>
+                    <button @click="copyOpusSummary()"
+                            class="text-xs px-2 py-0.5 rounded bg-amber-100 text-amber-800 hover:bg-amber-200 border border-amber-300"
+                            title="复制 70 字总结">
+                      <span x-text="summaryBtnText"></span>
+                    </button>
+                  </div>
                   <p class="text-sm text-slate-700 leading-relaxed" x-text="article?.opus_summary"></p>
                 </div>
               </div>
@@ -352,7 +359,14 @@
             <div class="flex items-start gap-2">
               <span class="text-amber-600 text-sm font-bold">🎯</span>
               <div class="flex-1">
-                <div class="text-xs text-amber-700 font-medium mb-1">极简总结（AI 生成）</div>
+                <div class="flex items-center gap-2 mb-1">
+                  <div class="text-xs text-amber-700 font-medium">极简总结（AI 生成）</div>
+                  <button @click="copyOpusSummary()"
+                          class="text-xs px-2 py-0.5 rounded bg-amber-100 text-amber-800 hover:bg-amber-200 border border-amber-300"
+                          title="复制 70 字总结">
+                    <span x-text="summaryBtnText"></span>
+                  </button>
+                </div>
                 <p class="text-sm text-slate-700 leading-relaxed" x-text="article?.opus_summary"></p>
               </div>
             </div>
@@ -463,7 +477,8 @@
         imageDownloading: false,
         imageProgress: 0,
         // ---- 复制按钮 ----
-        copyBtnText: '📋 复制总结',
+        copyBtnText: '📋 复制全文',
+        summaryBtnText: '📋 复制总结',
         // ---- 润色编辑 ----
         polishData: { title: '', subtitle: '', body: '', updated_at: null },
         polishDirty: false,
@@ -1234,17 +1249,21 @@
             this.flash('❌ 译文未加载', 2000);
             return;
           }
-          const summary = this.article.opus_summary || this.article.summary || '';
-          if (!summary.trim()) {
-            this.flash('⚠️ 该文章暂无 70 字总结', 3000);
+          const cnTitle = this.article.cn_title || '';
+          const paragraphs = this.article.paragraphs || [];
+          const cnLines = paragraphs.map(p => (p.cn || '').trim()).filter(s => s);
+          if (!cnLines.length) {
+            this.flash('⚠️ 该文章无译文段落', 2500);
             return;
           }
-          const text = this.normalizePunctuation(summary);
+          const raw = (cnTitle ? cnTitle + '\n\n' : '') + cnLines.join('\n\n');
+          const text = this.normalizePunctuation(raw);
 
+          const reset = () => setTimeout(() => { this.copyBtnText = '📋 复制全文'; }, 2000);
           try {
             await navigator.clipboard.writeText(text);
             this.copyBtnText = '✅ 已复制';
-            setTimeout(() => { this.copyBtnText = '📋 复制总结'; }, 2000);
+            reset();
           } catch (e) {
             const ta = document.createElement('textarea');
             ta.value = text;
@@ -1255,15 +1274,51 @@
             try {
               document.execCommand('copy');
               this.copyBtnText = '✅ 已复制';
-              setTimeout(() => { this.copyBtnText = '📋 复制总结'; }, 2000);
+              reset();
             } catch (err) {
-              this.flash('❌ 复制失败：' + err.message, 3000);
+              this.flash('❌ 复制失败：' + (err?.message || err), 3000);
+            } finally {
+              document.body.removeChild(ta);
             }
-            document.body.removeChild(ta);
           }
         },
 
-        async downloadAllImages() {
+        async copyOpusSummary() {
+          if (!this.article) {
+            this.flash('❌ 译文未加载', 2000);
+            return;
+          }
+          const summary = (this.article.opus_summary || '').trim();
+          if (!summary) {
+            this.flash('⚠️ 该文章暂无 70 字总结', 2500);
+            return;
+          }
+          const text = this.normalizePunctuation(summary);
+          const reset = () => setTimeout(() => { this.summaryBtnText = '📋 复制总结'; }, 2000);
+          try {
+            await navigator.clipboard.writeText(text);
+            this.summaryBtnText = '✅ 已复制';
+            reset();
+          } catch (e) {
+            const ta = document.createElement('textarea');
+            ta.value = text;
+            ta.style.position = 'fixed';
+            ta.style.opacity = '0';
+            document.body.appendChild(ta);
+            ta.select();
+            try {
+              document.execCommand('copy');
+              this.summaryBtnText = '✅ 已复制';
+              reset();
+            } catch (err) {
+              this.flash('❌ 复制失败：' + (err?.message || err), 3000);
+            } finally {
+              document.body.removeChild(ta);
+            }
+          }
+        },
+
+                async downloadAllImages() {
           if (!this.article?.images?.length || !window.JSZip) return;
           this.imageDownloading = true;
           this.imageProgress = 0;
