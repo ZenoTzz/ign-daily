@@ -87,11 +87,24 @@
                     <!-- 批注区 -->
                     <div class="mt-3 pt-3 border-t border-slate-200">
                       <template x-if="getFeedback(date, rule.id)">
-                        <div class="bg-amber-50 border-l-4 border-amber-400 p-2 mb-2 text-sm">
-                          <span class="text-amber-700 font-medium">💬 你的批注：</span>
-                          <span class="text-slate-700" x-text="getFeedback(date, rule.id)"></span>
-                          <button @click="editFeedback(date, rule.id)" class="text-xs text-blue-600 hover:underline ml-2">修改</button>
-                          <button @click="deleteFeedback(date, rule.id)" class="text-xs text-rose-600 hover:underline ml-2">删除</button>
+                        <div>
+                          <div class="bg-amber-50 border-l-4 border-amber-400 p-2 mb-2 text-sm">
+                            <span class="text-amber-700 font-medium">💬 你的批注：</span>
+                            <span class="text-slate-700" x-text="getFeedback(date, rule.id)"></span>
+                            <button @click="editFeedback(date, rule.id)" class="text-xs text-blue-600 hover:underline ml-2">修改</button>
+                            <button @click="deleteFeedback(date, rule.id)" class="text-xs text-rose-600 hover:underline ml-2">删除</button>
+                          </div>
+                          <template x-if="getResponse(date, rule.id)">
+                            <div :class="{
+                              'bg-emerald-50 border-l-4 border-emerald-400': getResponse(date, rule.id).kind === 'confirm',
+                              'bg-rose-50 border-l-4 border-rose-400': getResponse(date, rule.id).kind === 'reject',
+                              'bg-blue-50 border-l-4 border-blue-400': getResponse(date, rule.id).kind === 'refine',
+                              'bg-slate-50 border-l-4 border-slate-400': getResponse(date, rule.id).kind === 'unclear'
+                            }" class="p-2 text-sm">
+                              <span class="font-medium mr-1">🤖 我的回复：</span>
+                              <span class="text-slate-700" x-text="getResponse(date, rule.id).text"></span>
+                            </div>
+                          </template>
                         </div>
                       </template>
                       <template x-if="!getFeedback(date, rule.id)">
@@ -148,11 +161,24 @@
                     <p class="text-xs text-slate-600 mb-2" x-text="obs.detail"></p>
                     <!-- 批注 -->
                     <template x-if="getFeedback(date, obs.id)">
-                      <div class="bg-white p-2 rounded text-xs">
-                        <span class="text-amber-700 font-medium">💬</span>
-                        <span x-text="getFeedback(date, obs.id)"></span>
-                        <button @click="editFeedback(date, obs.id)" class="text-blue-600 hover:underline ml-2">修改</button>
-                        <button @click="deleteFeedback(date, obs.id)" class="text-rose-600 hover:underline ml-2">删除</button>
+                      <div>
+                        <div class="bg-white p-2 rounded text-xs mb-1">
+                          <span class="text-amber-700 font-medium">💬</span>
+                          <span x-text="getFeedback(date, obs.id)"></span>
+                          <button @click="editFeedback(date, obs.id)" class="text-blue-600 hover:underline ml-2">修改</button>
+                          <button @click="deleteFeedback(date, obs.id)" class="text-rose-600 hover:underline ml-2">删除</button>
+                        </div>
+                        <template x-if="getResponse(date, obs.id)">
+                          <div :class="{
+                            'bg-emerald-50 border-l-4 border-emerald-400': getResponse(date, obs.id).kind === 'confirm',
+                            'bg-rose-50 border-l-4 border-rose-400': getResponse(date, obs.id).kind === 'reject',
+                            'bg-blue-50 border-l-4 border-blue-400': getResponse(date, obs.id).kind === 'refine',
+                            'bg-slate-50 border-l-4 border-slate-400': getResponse(date, obs.id).kind === 'unclear'
+                          }" class="p-2 text-xs">
+                            <span class="font-medium mr-1">🤖 我的回复：</span>
+                            <span class="text-slate-700" x-text="getResponse(date, obs.id).text"></span>
+                          </div>
+                        </template>
                       </div>
                     </template>
                     <template x-if="!getFeedback(date, obs.id)">
@@ -182,6 +208,7 @@
         dates: [],
         logs: {},
         feedback: {},  // { 'YYYY-MM-DD': { rule_id: text } }
+        responses: {}, // { 'YYYY-MM-DD': { rule_id: { kind, text, ... } } }
         expanded: {},
         toast: '',
 
@@ -205,6 +232,11 @@
                 const fr = await fetch(`data/learning_log/${d}_feedback.json?t=${Date.now()}`, { cache: 'no-store' });
                 if (fr.ok) this.feedback[d] = await fr.json();
               } catch (_) {}
+              // 拉每天的机器人响应
+              try {
+                const rr = await fetch(`data/learning_log/${d}_response.json?t=${Date.now()}`, { cache: 'no-store' });
+                if (rr.ok) this.responses[d] = await rr.json();
+              } catch (_) {}
             }
 
             // 默认展开第一项
@@ -218,6 +250,10 @@
 
         getFeedback(date, ruleId) {
           return (this.feedback[date] || {})[ruleId];
+        },
+
+        getResponse(date, ruleId) {
+          return (this.responses[date] || {})[ruleId];
         },
 
         async addFeedback(date, ruleId, ruleTitle) {
@@ -241,6 +277,7 @@
           if (!silent && !confirm('删除这条批注？')) return;
           if (this.feedback[date]) delete this.feedback[date][ruleId];
           await this.persistFeedback(date);
+          await this.deleteResponseEntry(date, ruleId);
           this.flash('🗑 批注已删除');
         },
 
@@ -248,7 +285,9 @@
           if (!this.feedback[date]) this.feedback[date] = {};
           this.feedback[date][ruleId] = text;
           await this.persistFeedback(date);
-          this.flash('✅ 批注已保存');
+          // 同步生成响应
+          await this.generateAndSaveResponse(date, ruleId, text);
+          this.flash('✅ 批注已保存，我已回复');
         },
 
         async persistFeedback(date) {
@@ -260,6 +299,74 @@
           } catch (e) {
             this.flash('❌ 保存失败：' + e.message);
             console.error(e);
+          }
+        },
+
+        // 前端生成响应并保存到 _response.json。与后端 Python 脚本逻辑保持一致。
+        classifyFeedback(text) {
+          const t = (text || '').trim();
+          const NEG = ['不需要','不要','不对','不是','错了','错误','例外','取消','不适用','不适合','不该','不能','重新','广州'];
+          const POS = ['这个好','这样好','按这样','按这么','同意','对的','可以','不错','这个可以','以后都','一律'];
+          const hasNeg = NEG.some(w => t.includes(w));
+          const hasPos = POS.some(w => t.includes(w));
+          if (hasNeg && !hasPos) return 'reject';
+          if (hasPos && !hasNeg) return 'confirm';
+          if (hasNeg && hasPos) return 'refine';
+          if (t.length > 10) return 'refine';
+          return 'unclear';
+        },
+
+        findRuleById(date, ruleId) {
+          const log = this.logs[date];
+          if (!log) return null;
+          const all = (log.rules_confirmed || []).concat(log.observations || []);
+          return all.find(r => r.id === ruleId);
+        },
+
+        genResponseText(rule, feedbackText, kind) {
+          const title = (rule && (rule.title || rule.id)) || '（未命名）';
+          if (kind === 'confirm') {
+            return `✅ 收到，后续翻译会按「${title}」这条规则执行。已记入 STYLE_PROFILE。`;
+          }
+          if (kind === 'reject') {
+            return `⚠️ 收到，「${title}」不作为通用规则。本条仅根据单次证据推荐，已从 STYLE_PROFILE 里删除。以后遇到类似场景会谨慎采用。`;
+          }
+          if (kind === 'refine') {
+            return `✍️ 收到。你对「${title}」的修正意见已记入：『${feedbackText}』。后续这条规则会按你的说明调整后纳入 STYLE_PROFILE。`;
+          }
+          return `🤔 「${title}」的批注我还没完全听懂（原文：『${feedbackText}』）。下次遇到类似总结会看你会不会重复提，如果是误报可以双击“修改”补充说明。`;
+        },
+
+        async generateAndSaveResponse(date, ruleId, feedbackText) {
+          const rule = this.findRuleById(date, ruleId);
+          if (!rule) return;
+          const kind = this.classifyFeedback(feedbackText);
+          const text = this.genResponseText(rule, feedbackText, kind);
+          if (!this.responses[date]) this.responses[date] = {};
+          this.responses[date][ruleId] = {
+            kind, text,
+            feedback_snapshot: feedbackText,
+            generated_at: new Date().toISOString(),
+          };
+          // 保存 _response.json
+          const path = `data/learning_log/${date}_response.json`;
+          try {
+            await GH.putFile(path, JSON.stringify(this.responses[date], null, 2),
+              `learning response on ${date}: ${ruleId}`);
+          } catch (e) {
+            console.error('save response failed:', e);
+          }
+        },
+
+        async deleteResponseEntry(date, ruleId) {
+          if (!this.responses[date]) return;
+          delete this.responses[date][ruleId];
+          const path = `data/learning_log/${date}_response.json`;
+          try {
+            await GH.putFile(path, JSON.stringify(this.responses[date], null, 2),
+              `learning response on ${date}: remove ${ruleId}`);
+          } catch (e) {
+            console.error('save response failed:', e);
           }
         },
 
