@@ -69,7 +69,7 @@
         <a x-show="article" :href="article?.url" target="_blank" rel="noopener" class="fab-item">
           🔗 IGN 原文
         </a>
-        <button @click="openPolish(); fabOpen=false" class="fab-item">
+        <button @click="openPolish(); fabOpen=false" class="fab-item hidden">
           <span x-text="polishStatus"></span>
         </button>
         <button @click="reapplyDict(); fabOpen=false" class="fab-item">
@@ -410,8 +410,8 @@
         </div>
       </div>
 
-      <!-- 润色编辑模式 -->
-      <div x-show="mode === 'polish'" class="reader-grid h-full">
+      <!-- 润色编辑模式（仅桌面端） -->
+      <div x-show="mode === 'polish'" class="reader-grid h-full hidden sm:grid">
         <!-- 左：原译文参考 -->
         <div class="reader-pane cn">
           <div class="w-full py-4">
@@ -1503,6 +1503,7 @@
         },
 
         openPolish() {
+          if (window.innerWidth < 640) return; // 移动端不支持润色编辑
           this.mode = 'polish';
         },
 
