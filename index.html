@@ -140,8 +140,9 @@
 
       <!-- Articles -->
       <div x-show="data && !loading" class="space-y-2 sm:space-y-3">
-        <template x-for="art in filteredArticles" :key="art.id">
-          <article class="bg-white rounded-xl border shadow-sm hover:shadow hover:border-brand-600/40 transition"
+        <template x-for="(art, idx) in filteredArticles" :key="art.id">
+          <article class="bg-white rounded-xl border shadow-sm hover:shadow hover:border-brand-600/40 transition card-animate"
+            :style="`animation-delay: ${idx * 50}ms`"
             :class="art.translation_status === 'done' ? 'cursor-pointer' : ''">
             <div class="flex items-start gap-3 p-3 sm:p-4">
               <!-- Checkbox -->
@@ -209,27 +210,30 @@
       <!-- Expanded menu items -->
       <div x-show="fabOpen" x-cloak x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 scale-90" x-transition:enter-end="opacity-100 scale-100" x-transition:leave="transition ease-in duration-100" x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-90"
            class="mb-3 flex flex-col gap-2 items-end">
-        <a href="dict.html" class="flex items-center gap-2 bg-white border shadow-lg rounded-full px-4 py-2 text-sm text-slate-700 hover:bg-slate-50">
+        <a href="dict.html" class="fab-item">
           📖 词库
         </a>
-        <a href="history.html" class="flex items-center gap-2 bg-white border shadow-lg rounded-full px-4 py-2 text-sm text-slate-700 hover:bg-slate-50">
+        <a href="history.html" class="fab-item">
           📅 历史
         </a>
-        <a href="learning.html" class="flex items-center gap-2 bg-white border shadow-lg rounded-full px-4 py-2 text-sm text-slate-700 hover:bg-slate-50">
+        <a href="learning.html" class="fab-item">
           📊 学习
         </a>
-        <button @click="toggleTheme(); fabOpen=false" class="flex items-center gap-2 bg-white border shadow-lg rounded-full px-4 py-2 text-sm text-slate-700 hover:bg-slate-50">
+        <button @click="toggleTheme(); fabOpen=false" class="fab-item">
           <span x-text="themeIcon"></span> 主题
         </button>
-        <button @click="showSettings=true; fabOpen=false" class="flex items-center gap-2 bg-white border shadow-lg rounded-full px-4 py-2 text-sm text-slate-700 hover:bg-slate-50">
+        <button @click="showSettings=true; fabOpen=false" class="fab-item">
           ⚙️ 设置
         </button>
       </div>
       <!-- FAB button -->
       <button @click="fabOpen = !fabOpen" @click.away="fabOpen = false"
-              class="w-12 h-12 bg-brand-600 hover:bg-brand-700 text-white rounded-full shadow-lg flex items-center justify-center text-xl transition-transform"
-              :class="fabOpen ? 'rotate-45' : ''">
-        ➕
+              class="fab-btn"
+              :class="fabOpen ? 'fab-open' : ''">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="12" y1="5" x2="12" y2="19"></line>
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+        </svg>
       </button>
     </div>
 
