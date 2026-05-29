@@ -305,6 +305,13 @@ html, body {
     touch-action: pan-y;
   }
 }
+
+/* Safari PWA 弹性滚动修复 */
+html {
+  overflow-x: hidden;
+  overscroll-behavior-x: none;
+  -webkit-overflow-scrolling: touch;
+}
 * {
   scroll-behavior: smooth;
 }
