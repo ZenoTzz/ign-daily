@@ -284,3 +284,8 @@ html.dark .fab-item:hover {
   scroll-behavior: smooth;
 }
 
+/* 移动端防止双击缩放 -->
+button, a, select, input, label {
+  touch-action: manipulation;
+}
+
