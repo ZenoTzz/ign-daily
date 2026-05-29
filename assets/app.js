@@ -1,21 +1,5 @@
 // ign-daily / app.js
 
-// ====== 禁止水平滚动（Safari PWA 兼容） ======
-(function() {
-  let startX = 0;
-  document.addEventListener('touchstart', function(e) {
-    startX = e.touches[0].clientX;
-  }, { passive: true });
-  document.addEventListener('touchmove', function(e) {
-    const dx = Math.abs(e.touches[0].clientX - startX);
-    const dy = Math.abs(e.touches[0].clientY - (e.touches[0]._startY || e.touches[0].clientY));
-    // 如果水平移动距离 > 垂直，阻止
-    if (dx > 10 && dx > dy) {
-      e.preventDefault();
-    }
-  }, { passive: false });
-})();
-
 // ====== 暗黑模式（全局，所有页面必须在加载时调用） ======
 function initDarkMode() {
   const saved = localStorage.getItem('theme') || 'auto';
