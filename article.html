@@ -52,6 +52,11 @@
             title="按最新词库重新扫描译文、替换中文名">
             🔄 重新应用词库
           </button>
+          <button @click="copyArticle()"
+            class="text-xs px-2 py-1 rounded bg-emerald-50 text-emerald-700 hover:bg-emerald-100 border border-emerald-200"
+            title="复制中文译文（自动全角标点，去 markdown）">
+            <span x-text="copyBtnText"></span>
+          </button>
         </div>
       </div>
     </header>
@@ -456,6 +461,8 @@
         showImagesPanel: true,
         imageDownloading: false,
         imageProgress: 0,
+        // ---- 复制按钮 ----
+        copyBtnText: '📋 复制译文',
         // ---- 润色编辑 ----
         polishData: { title: '', subtitle: '', body: '', updated_at: null },
         polishDirty: false,
@@ -1120,6 +1127,140 @@
             // CORS 阻止 fetch → 直接打开新标签（用户右键保存）
             window.open(url, '_blank');
             this.flash('受 CORS 限制，已在新标签打开，请右键另存', 4000);
+          }
+        },
+
+        // ---- 一键复制译文（全角标点 + 去 markdown）----
+        normalizePunctuation(text) {
+          if (!text) return '';
+          let s = String(text);
+
+          // 1. 去 markdown / HTML 标记
+          s = s.replace(/<[^>]+>/g, '');                    // HTML 标签
+          s = s.replace(/\*\*([^*]+)\*\*/g, '$1');           // **bold**
+          s = s.replace(/\*([^*]+)\*/g, '$1');               // *italic*
+          s = s.replace(/__([^_]+)__/g, '$1');               // __bold__
+          s = s.replace(/_([^_]+)_/g, '$1');                 // _italic_
+          s = s.replace(/`([^`]+)`/g, '$1');                 // `code`
+          s = s.replace(/^#{1,6}\s+/gm, '');                 // # heading
+          s = s.replace(/^[-*+]\s+/gm, '');                  // - list
+          s = s.replace(/^\d+\.\s+/gm, '');                  // 1. ordered list
+          s = s.replace(/^>\s+/gm, '');                      // > quote
+          s = s.replace(/!?\[([^\]]*)\]\([^)]+\)/g, '$1');   // [text](url) / ![alt](src)
+
+          // 2. ASCII 标点 → 全角（中英文夹杂下谨慎转换）
+          //    仅在中文上下文转换引号、逗号、句号、问号、感叹号、冒号、分号、括号
+          //    法：前后至少一侧是中文 / 句首 / 句尾 才转换
+          const CN = /[\u4e00-\u9fff\u3000-\u303f\uff00-\uffef]/;
+          const isCN = c => c && CN.test(c);
+
+          // 逗号 ,
+          s = s.replace(/(.)?,(.)?/g, (m, a, b) => {
+            if (a === undefined && b === undefined) return m;
+            if ((a && isCN(a)) || (b && isCN(b))) return (a || '') + '，' + (b || '');
+            return m;
+          });
+          // 句号 . （小心小数 1.5 / 网址，只在中文环境且后面不是数字/字母时转）
+          s = s.replace(/(.)\.(?=\s|$|[\u4e00-\u9fff])/g, (m, a) => {
+            if (a && isCN(a)) return a + '。';
+            return m;
+          });
+          // 问号 ?
+          s = s.replace(/(.)?\?(.)?/g, (m, a, b) => {
+            if ((a && isCN(a)) || (b && isCN(b))) return (a || '') + '？' + (b || '');
+            return m;
+          });
+          // 感叹号 !
+          s = s.replace(/(.)?!(.)?/g, (m, a, b) => {
+            if ((a && isCN(a)) || (b && isCN(b))) return (a || '') + '！' + (b || '');
+            return m;
+          });
+          // 冒号 :
+          s = s.replace(/(.)?:(.)?/g, (m, a, b) => {
+            if ((a && isCN(a)) || (b && isCN(b))) return (a || '') + '：' + (b || '');
+            return m;
+          });
+          // 分号 ;
+          s = s.replace(/(.)?;(.)?/g, (m, a, b) => {
+            if ((a && isCN(a)) || (b && isCN(b))) return (a || '') + '；' + (b || '');
+            return m;
+          });
+
+          // 括号 ( ) → （ ）仅当包裹中文时
+          s = s.replace(/\(([^()]*)\)/g, (m, inner) => {
+            return CN.test(inner) ? '（' + inner + '）' : m;
+          });
+
+          // 双引号 " → 「」 （成对出现才转）
+          let quoteOpen = true;
+          s = s.replace(/"/g, () => {
+            const ch = quoteOpen ? '「' : '」';
+            quoteOpen = !quoteOpen;
+            return ch;
+          });
+          // 单引号 ' → ‘’ 不动（英文缩写会误伤，it's etc.）
+
+          // 3. 多余空格 / 换行处理
+          s = s.replace(/[ \t]+\n/g, '\n');                  // 行尾空格
+          s = s.replace(/\n{3,}/g, '\n\n');                  // 连续空行
+          // 中文与中文之间不该有空格（循环直到不变）
+          let prev;
+          do {
+            prev = s;
+            s = s.replace(/([\u4e00-\u9fff])\s+([\u4e00-\u9fff])/g, '$1$2');
+          } while (s !== prev);
+          // 中文标点两侧不该有空格
+          s = s.replace(/\s+([\u3000-\u303f\uff00-\uffef\u300c\u300d\u300e\u300f])/g, '$1');
+          s = s.replace(/([\u3000-\u303f\uff00-\uffef\u300c\u300d\u300e\u300f])\s+/g, '$1');
+
+          return s.trim();
+        },
+
+        async copyArticle() {
+          if (!this.article) {
+            this.flash('❌ 译文未加载', 2000);
+            return;
+          }
+          const lines = [];
+          // 标题
+          if (this.article.cn_title) {
+            lines.push(this.normalizePunctuation(this.article.cn_title));
+            lines.push('');
+          }
+          // 各段中文
+          for (const p of (this.article.paragraphs || [])) {
+            const cn = this.normalizePunctuation(p.cn || '');
+            if (cn) {
+              lines.push(cn);
+              lines.push('');
+            }
+          }
+          // 贴原文链接（可选）
+          if (this.article.url) {
+            lines.push('原文：' + this.article.url);
+          }
+          const text = lines.join('\n').replace(/\n+$/, '');
+
+          try {
+            await navigator.clipboard.writeText(text);
+            this.copyBtnText = '✅ 已复制';
+            setTimeout(() => { this.copyBtnText = '📋 复制译文'; }, 2000);
+          } catch (e) {
+            // fallback: 选中 + execCommand
+            const ta = document.createElement('textarea');
+            ta.value = text;
+            ta.style.position = 'fixed';
+            ta.style.opacity = '0';
+            document.body.appendChild(ta);
+            ta.select();
+            try {
+              document.execCommand('copy');
+              this.copyBtnText = '✅ 已复制';
+              setTimeout(() => { this.copyBtnText = '📋 复制译文'; }, 2000);
+            } catch (err) {
+              this.flash('❌ 复制失败：' + err.message, 3000);
+            }
+            document.body.removeChild(ta);
           }
         },
 
