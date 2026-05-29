@@ -38,29 +38,16 @@
   ],
   "rules_confirmed": [
     {
-      "id": "merge_paragraphs",
-      "title": "段落合并为整段",
-      "signal": "强信号",
-      "examples": [
-        "#2: 5段→1段",
-        "#6: 15段→1段+原诗+续段",
-        "#11: 12段→1段"
-      ],
-      "evidence": "7/7",
-      "detail": "用户把5-15个短段落合并成1-2个长段,整篇连贯呈现。AI不应拆段过碎,每篇最多3-5段为宜。",
-      "category": "句式偏好"
-    },
-    {
       "id": "no_en_annotation",
-      "title": "去掉英文注释括号",
+      "title": "英文注释规则细化",
       "signal": "强信号",
       "examples": [
-        "#7: (Call of Duty: Warzone)删除",
-        "#18: (Subnautica 2)删除",
-        "#6: (Blood and Wine)删除"
+        "《巫师3》(有官方译名,不注英文)",
+        "《平行人生(Paralives)》(无官方,有社区译名)",
+        "Build a Rocket Boy(完全无中文名,保留英文)"
       ],
       "evidence": "7/7",
-      "detail": "不再写 (Call of Duty: Warzone)、(Subnautica 2)、(Blood and Wine) 等英文原名注释。只有《》书名号内写中文译名。",
+      "detail": "有官方中文译名→直接用中文不注英文；无官方但有社区流传译名→《中文名（英文名）》；完全无中文译名→保留英文原名。",
       "category": "句式偏好"
     },
     {
@@ -78,16 +65,15 @@
     },
     {
       "id": "rm_hook_sentence",
-      "title": "删除首段短句hook",
+      "title": "IGN副标题保留但可修改",
       "signal": "强信号",
       "examples": [
-        "#2: 「热血再启。」删除",
-        "#6: 「这是一把非常重要的剑……」删除",
-        "#18: 「不差钱。」删除"
+        "#2: 副标题由用户改为「第N滴血」",
+        "#6: 副标题由用户改为「急急急急急」"
       ],
       "evidence": "7/7",
-      "detail": "AI翻译的第一段往往是1句话的hook（如「不差钱。」「热血再启。」），用户全部删除。未来不再生成这种hook开头。",
-      "category": "语气/风格偏好"
+      "detail": "首段短句是IGN原文的副标题(subheadline),翻译时保留,用户有时会修改内容但不删除。不要误判为AI自创hook。",
+      "category": "标题/副标题偏好"
     },
     {
       "id": "rm_embedded_titles",

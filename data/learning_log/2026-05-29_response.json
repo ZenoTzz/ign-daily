@@ -1,62 +1,52 @@
 {
   "fullwidth_comma_title": {
-    "kind": "refine",
-    "text": "✏️ 记下了：对，之后都用中文标点。",
-    "feedback_snapshot": "对，之后都用中文标点。",
-    "generated_at": "2026-05-29T08:53:10.286Z"
+    "kind": "confirm",
+    "text": "✅ 好，标题一律全角标点。",
+    "generated_at": "2026-05-29T17:00:00+08:00"
   },
   "platform_short": {
-    "kind": "refine",
-    "text": "✏️ 记下了：以后的翻译也按照我这样来",
-    "feedback_snapshot": "以后的翻译也按照我这样来",
-    "generated_at": "2026-05-29T08:53:30.916Z"
+    "kind": "confirm",
+    "text": "✅ 好，PS5/Xbox Series/Switch 2 这种简写以后都用。",
+    "generated_at": "2026-05-29T17:00:00+08:00"
   },
   "rm_embedded_titles": {
-    "kind": "unclear",
-    "text": "🤔 这条我没看懂，可以点「修改」再写详细点。",
-    "feedback_snapshot": "正确的",
-    "generated_at": "2026-05-29T08:54:00.704Z"
+    "kind": "confirm",
+    "text": "✅ 好，IGN 内嵌推荐标题一律删。",
+    "generated_at": "2026-05-29T17:00:00+08:00"
   },
   "rm_hook_sentence": {
     "kind": "refine",
-    "text": "✏️ 记下了：你添加的这个是IGN官方的副标题，我有时候会做修改",
-    "feedback_snapshot": "你添加的这个是IGN官方的副标题，我有时候会做修改",
-    "generated_at": "2026-05-29T08:54:02.300Z"
+    "text": "✏️ 明白了——那个是 IGN 原文副标题，不是我自创的。以后保留，你改内容我跟着学。",
+    "generated_at": "2026-05-29T17:00:00+08:00"
   },
   "keep_name_en": {
-    "kind": "unclear",
-    "text": "🤔 这条我没看懂，可以点「修改」再写详细点。",
-    "feedback_snapshot": "对",
-    "generated_at": "2026-05-29T08:54:15.137Z"
+    "kind": "confirm",
+    "text": "✅ 好，不知名人物保留英文。",
+    "generated_at": "2026-05-29T17:00:00+08:00"
   },
   "merge_paragraphs": {
     "kind": "reject",
-    "text": "❌ 收到，「段落合并为整段」不当作通用规则。",
-    "feedback_snapshot": "没有吧，这个应该是你出问题了，我一般都是换行分段的，是不是因为我只换了一行你觉得这样不算分段？",
-    "generated_at": "2026-05-29T08:54:56.728Z"
+    "text": "❌ 收到，这是 diff 脚本误判。你是正常分段的，可能是编辑器保存格式问题。我把这条规则撤了。",
+    "generated_at": "2026-05-29T17:00:00+08:00"
   },
   "no_en_annotation": {
-    "kind": "reject",
-    "text": "❌ 收到，「去掉英文注释括号」不当作通用规则。",
-    "feedback_snapshot": "没有官方中文译名的，大部分时候保留原英文，或者有社区流传广泛名字但没有官方中文名称时，一般采用《中文名（英文名）》。有官方中文译名的就采用官方译名，不需要注明原文。",
-    "generated_at": "2026-05-29T08:56:08.293Z"
+    "kind": "refine",
+    "text": "✏️ 明白了，细化为三档：有官方译名→纯中文；有社区译名→《中文（英文）》；无译名→保留英文。",
+    "generated_at": "2026-05-29T17:00:00+08:00"
   },
   "dandelion_cn": {
-    "kind": "unclear",
-    "text": "🤔 这条我没看懂，可以点「修改」再写详细点。",
-    "feedback_snapshot": "以我的为准",
-    "generated_at": "2026-05-29T08:56:54.111Z"
+    "kind": "confirm",
+    "text": "✅ 好，丹德里恩，以你为准。",
+    "generated_at": "2026-05-29T17:00:00+08:00"
   },
   "songs_of_past_rename": {
-    "kind": "unclear",
-    "text": "🤔 这条我没看懂，可以点「修改」再写详细点。",
-    "feedback_snapshot": "就用旧时曲",
-    "generated_at": "2026-05-29T08:56:56.014Z"
+    "kind": "confirm",
+    "text": "✅ 好，旧时曲。",
+    "generated_at": "2026-05-29T17:00:00+08:00"
   },
   "paralives_cn_name": {
-    "kind": "unclear",
-    "text": "🤔 这条我没看懂，可以点「修改」再写详细点。",
-    "feedback_snapshot": "以我的为准，入词库",
-    "generated_at": "2026-05-29T08:57:11.330Z"
+    "kind": "confirm",
+    "text": "✅ 好，平行人生，已入词库。",
+    "generated_at": "2026-05-29T17:00:00+08:00"
   }
 }
