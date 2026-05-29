@@ -50,16 +50,31 @@
         </div>
         <nav class="flex items-center gap-3 sm:gap-4 text-sm">
           <button @click="showGlobalSearch=true" class="text-slate-600 hover:text-brand-600" title="搜索历史文章">🔍</button>
-          <a href="dict.html" class="text-slate-600 hover:text-brand-600">📖 词库</a>
-          <a href="history.html" class="text-slate-600 hover:text-brand-600">📅 历史</a>
-          <a href="learning.html" class="text-slate-600 hover:text-brand-600" title="查看我的学习记录、添加批注">📊 学习</a>
           <button @click="refreshAll()" :disabled="loading" class="text-slate-600 hover:text-brand-600 disabled:opacity-50" title="刷新">
             <span x-text="loading ? '⏳' : '🔄'"></span>
           </button>
-          <button @click="toggleTheme()" class="text-slate-600 hover:text-brand-600" title="主题切换">
+          <!-- Desktop: show all links -->
+          <a href="dict.html" class="hidden sm:inline text-slate-600 hover:text-brand-600">📖 词库</a>
+          <a href="history.html" class="hidden sm:inline text-slate-600 hover:text-brand-600">📅 历史</a>
+          <a href="learning.html" class="hidden sm:inline text-slate-600 hover:text-brand-600" title="查看我的学习记录、添加批注">📊 学习</a>
+          <button @click="toggleTheme()" class="hidden sm:inline text-slate-600 hover:text-brand-600" title="主题切换">
             <span x-text="themeIcon"></span>
           </button>
-          <button @click="showSettings = true" class="text-slate-600 hover:text-brand-600">⚙️</button>
+          <button @click="showSettings = true" class="hidden sm:inline text-slate-600 hover:text-brand-600">⚙️</button>
+          <!-- Mobile: hamburger menu -->
+          <div class="relative sm:hidden">
+            <button @click="showMobileMenu = !showMobileMenu" class="text-slate-600 hover:text-brand-600 text-lg">⋯</button>
+            <div x-show="showMobileMenu" x-cloak @click.away="showMobileMenu=false"
+                 class="absolute right-0 top-8 z-50 bg-white border rounded-lg shadow-xl w-36 py-1">
+              <a href="dict.html" class="block px-4 py-2 text-slate-700 hover:bg-slate-50">📖 词库</a>
+              <a href="history.html" class="block px-4 py-2 text-slate-700 hover:bg-slate-50">📅 历史</a>
+              <a href="learning.html" class="block px-4 py-2 text-slate-700 hover:bg-slate-50">📊 学习</a>
+              <button @click="toggleTheme(); showMobileMenu=false" class="block w-full text-left px-4 py-2 text-slate-700 hover:bg-slate-50">
+                <span x-text="themeIcon"></span> 主题
+              </button>
+              <button @click="showSettings=true; showMobileMenu=false" class="block w-full text-left px-4 py-2 text-slate-700 hover:bg-slate-50">⚙️ 设置</button>
+            </div>
+          </div>
         </nav>
       </div>
     </header>

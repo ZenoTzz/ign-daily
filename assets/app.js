@@ -117,6 +117,7 @@ function appData() {
     currentDate: '',
     availableDates: [],
     showDatePicker: false,
+    showMobileMenu: false,
     selected: [],
     copyBtnText: '📋 复制摘要',
     filterCat: 'all',
