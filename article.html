@@ -97,7 +97,7 @@
     <!-- 划词加词库按钮（跟随鼠标） -->
     <div x-show="selectionText && selectionRect"
          x-cloak
-         :style="`top:${selectionRect?.top - 40}px; left:${selectionRect?.left}px;`"
+         :style="`top:${selectionRect?.top - 40}px; left:${Math.min(selectionRect?.left || 0, window.innerWidth - 120)}px;`"
          class="fixed z-30">
       <button @click="openDictModal()"
         class="bg-brand-600 text-white px-3 py-1.5 rounded-lg shadow-lg text-xs hover:bg-brand-700">
