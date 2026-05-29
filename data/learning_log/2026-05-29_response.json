@@ -28,5 +28,11 @@
     "text": "🤔 这条我没看懂，可以点「修改」再写详细点。",
     "feedback_snapshot": "对",
     "generated_at": "2026-05-29T08:54:15.137Z"
+  },
+  "merge_paragraphs": {
+    "kind": "reject",
+    "text": "❌ 收到，「段落合并为整段」不当作通用规则。",
+    "feedback_snapshot": "没有吧，这个应该是你出问题了，我一般都是换行分段的，是不是因为我只换了一行你觉得这样不算分段？",
+    "generated_at": "2026-05-29T08:54:56.728Z"
   }
 }
