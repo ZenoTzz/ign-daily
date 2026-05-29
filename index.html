@@ -27,12 +27,26 @@
 <body class="bg-slate-50 text-slate-800 antialiased">
   <div x-data="appData()" x-init="init()" class="min-h-screen">
     <!-- Header -->
-    <header class="bg-white border-b sticky top-0 z-10">
+    <header class="bg-white border-b sticky top-0 z-10 relative">
       <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
         <div class="flex items-center gap-2">
           <span class="text-2xl">📰</span>
           <h1 class="text-lg sm:text-xl font-bold text-brand-600">IGN Daily</h1>
-          <span x-show="data" class="text-xs text-slate-400 ml-2" x-text="data?.date"></span>
+          <div x-show="data" class="flex items-center gap-1 ml-2">
+            <button @click="navigateDate('prev')" :disabled="!canGoPrev()" class="text-slate-400 hover:text-brand-600 disabled:opacity-30 text-sm px-1">◀</button>
+            <button @click="showDatePicker = !showDatePicker" class="text-xs text-slate-500 hover:text-brand-600 px-1 py-0.5 rounded hover:bg-slate-100" x-text="currentDate"></button>
+            <button @click="navigateDate('next')" :disabled="!canGoNext()" class="text-slate-400 hover:text-brand-600 disabled:opacity-30 text-sm px-1">▶</button>
+          </div>
+          <!-- 日期下拉 -->
+          <div x-show="showDatePicker" x-cloak @click.away="showDatePicker=false"
+               class="absolute top-12 left-16 z-50 bg-white border rounded-lg shadow-xl max-h-64 overflow-y-auto w-40">
+            <template x-for="d in availableDates" :key="d">
+              <button @click="goToDate(d); showDatePicker=false"
+                :class="d === currentDate ? 'bg-brand-50 text-brand-700 font-semibold' : 'text-slate-700 hover:bg-slate-50'"
+                class="block w-full text-left text-sm px-3 py-1.5 border-b border-slate-100 last:border-0"
+                x-text="d"></button>
+            </template>
+          </div>
         </div>
         <nav class="flex items-center gap-3 sm:gap-4 text-sm">
           <button @click="showGlobalSearch=true" class="text-slate-600 hover:text-brand-600" title="搜索历史文章">🔍</button>
@@ -59,7 +73,7 @@
       <div x-show="data && !loading" class="bg-white rounded-xl border p-4 mb-4 sm:mb-6 shadow-sm">
         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
           <div>
-            <h2 class="text-base sm:text-lg font-semibold">今日新闻 <span class="text-slate-500" x-text="`(共 ${data?.total} 条)`"></span></h2>
+            <h2 class="text-base sm:text-lg font-semibold"><span x-text="isToday() ? '今日新闻' : currentDate + ' 新闻'"></span> <span class="text-slate-500" x-text="`(共 ${data?.total} 条)`"></span></h2>
             <p class="text-xs text-slate-500 mt-1" x-text="data?.window"></p>
           </div>
           <div class="flex items-center gap-2 text-sm">
@@ -142,6 +156,7 @@
                   <span class="text-xs font-semibold text-slate-400" x-text="`#${art.id}`"></span>
                   <span class="text-base sm:text-lg" x-text="art.emoji"></span>
                   <span class="text-xs px-2 py-0.5 rounded-full bg-slate-100 text-slate-600" x-text="art.category"></span>
+                  <span class="text-xs text-slate-400" x-text="(art.publish_time_cn || art.pubDate_cst || '').slice(11)"></span>
                   <template x-if="art.translation_status === 'done'">
                     <span class="text-xs px-2 py-0.5 rounded-full bg-green-100 text-green-700">✅ 已翻译</span>
                   </template>

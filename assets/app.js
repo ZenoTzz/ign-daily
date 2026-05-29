@@ -114,6 +114,9 @@ function appData() {
     loading: true,
     error: '',
     data: null,
+    currentDate: '',
+    availableDates: [],
+    showDatePicker: false,
     selected: [],
     copyBtnText: '📋 复制摘要',
     filterCat: 'all',
@@ -154,6 +157,15 @@ function appData() {
       });
       try {
         const date = new URLSearchParams(location.search).get('date') || todayBeijingDate();
+        this.currentDate = date;
+        // 加载可用日期列表
+        try {
+          const ilRes = await fetch('data/index-list.json?t=' + Date.now(), { cache: 'no-store' });
+          if (ilRes.ok) {
+            const il = await ilRes.json();
+            this.availableDates = (Array.isArray(il) ? il.map(x => x.date || x) : (il.dates || [])).sort().reverse();
+          }
+        } catch (_) {}
         const res = await fetch(`data/${date}/index.json?t=${Date.now()}`, { cache: 'no-store' });
         if (!res.ok) {
           // 找不到今日，回退尝试最近一天
@@ -162,6 +174,10 @@ function appData() {
           return;
         }
         this.data = await res.json();
+        // 按发布时间从新到旧排序
+        if (this.data && this.data.articles) {
+          this.data.articles.sort((a, b) => (b.publish_time_cn || b.pubDate_cst || '').localeCompare(a.publish_time_cn || a.pubDate_cst || ''));
+        }
 
         // 同步 requests.json：把已请求但还没翻译的标记为 requested
         try {
@@ -199,6 +215,36 @@ function appData() {
         this.error = '加载失败：' + e.message;
         this.loading = false;
       }
+    },
+
+
+    // ==== 日期导航 ====
+    navigateDate(direction) {
+      const idx = this.availableDates.indexOf(this.currentDate);
+      let newIdx;
+      if (direction === 'prev') {
+        // 上一天 = 日期列表中当前位置的下一个（因为是倒序）
+        newIdx = idx + 1;
+      } else {
+        newIdx = idx - 1;
+      }
+      if (newIdx >= 0 && newIdx < this.availableDates.length) {
+        window.location.href = `?date=${this.availableDates[newIdx]}`;
+      }
+    },
+    canGoPrev() {
+      const idx = this.availableDates.indexOf(this.currentDate);
+      return idx < this.availableDates.length - 1;
+    },
+    canGoNext() {
+      const idx = this.availableDates.indexOf(this.currentDate);
+      return idx > 0;
+    },
+    goToDate(d) {
+      window.location.href = `?date=${d}`;
+    },
+    isToday() {
+      return this.currentDate === todayBeijingDate();
     },
 
     async refreshAll() {
