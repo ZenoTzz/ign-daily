@@ -463,7 +463,7 @@
         imageDownloading: false,
         imageProgress: 0,
         // ---- 复制按钮 ----
-        copyBtnText: '📋 复制译文',
+        copyBtnText: '📋 复制总结',
         // ---- 润色编辑 ----
         polishData: { title: '', subtitle: '', body: '', updated_at: null },
         polishDirty: false,
@@ -1234,32 +1234,18 @@
             this.flash('❌ 译文未加载', 2000);
             return;
           }
-          const lines = [];
-          // 标题
-          if (this.article.cn_title) {
-            lines.push(this.normalizePunctuation(this.article.cn_title));
-            lines.push('');
+          const summary = this.article.opus_summary || this.article.summary || '';
+          if (!summary.trim()) {
+            this.flash('⚠️ 该文章暂无 70 字总结', 3000);
+            return;
           }
-          // 各段中文
-          for (const p of (this.article.paragraphs || [])) {
-            const cn = this.normalizePunctuation(p.cn || '');
-            if (cn) {
-              lines.push(cn);
-              lines.push('');
-            }
-          }
-          // 贴原文链接（可选）
-          if (this.article.url) {
-            lines.push('原文：' + this.article.url);
-          }
-          const text = lines.join('\n').replace(/\n+$/, '');
+          const text = this.normalizePunctuation(summary);
 
           try {
             await navigator.clipboard.writeText(text);
             this.copyBtnText = '✅ 已复制';
-            setTimeout(() => { this.copyBtnText = '📋 复制译文'; }, 2000);
+            setTimeout(() => { this.copyBtnText = '📋 复制总结'; }, 2000);
           } catch (e) {
-            // fallback: 选中 + execCommand
             const ta = document.createElement('textarea');
             ta.value = text;
             ta.style.position = 'fixed';
@@ -1269,7 +1255,7 @@
             try {
               document.execCommand('copy');
               this.copyBtnText = '✅ 已复制';
-              setTimeout(() => { this.copyBtnText = '📋 复制译文'; }, 2000);
+              setTimeout(() => { this.copyBtnText = '📋 复制总结'; }, 2000);
             } catch (err) {
               this.flash('❌ 复制失败：' + err.message, 3000);
             }

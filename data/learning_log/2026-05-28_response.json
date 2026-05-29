@@ -1,26 +1,26 @@
 {
   "rm_update_time": {
     "kind": "confirm",
-    "text": "✅ 收到，后续翻译会按「删除「更新时间」段落」这条规则执行。已记入 STYLE_PROFILE。",
+    "text": "✅ 好，后面都这样译。",
     "feedback_snapshot": "这个好",
-    "generated_at": "2026-05-29T10:59:52.814396+08:00"
+    "generated_at": "2026-05-29T11:58:44.977200+08:00"
   },
   "product_name_order": {
     "kind": "confirm",
-    "text": "✅ 收到，后续翻译会按「产品+型号顺序」这条规则执行。已记入 STYLE_PROFILE。",
+    "text": "✅ 好，后面都这样译。",
     "feedback_snapshot": "这个以后都一律按这样排序",
-    "generated_at": "2026-05-29T10:59:52.814396+08:00"
+    "generated_at": "2026-05-29T11:58:44.977200+08:00"
   },
   "company_as_subject": {
     "kind": "reject",
-    "text": "⚠️ 收到，「公司名直接做主语」不作为通用规则。本条仅根据単次证据推荐，已从 STYLE_PROFILE 里删除。以后遇到类似场景会谨慎采用。",
+    "text": "❌ 收到，「公司名直接做主语」不当作通用规则。",
     "feedback_snapshot": "这是个例，这个不需要",
-    "generated_at": "2026-05-29T10:59:52.814396+08:00"
+    "generated_at": "2026-05-29T11:58:44.977200+08:00"
   },
   "subtitle_required": {
     "kind": "confirm",
-    "text": "✅ 收到，后续翻译会按「每篇必须有副标题」这条规则执行。已记入 STYLE_PROFILE。",
+    "text": "✅ 好，后面都这样译。",
     "feedback_snapshot": "这个好",
-    "generated_at": "2026-05-29T10:59:52.814396+08:00"
+    "generated_at": "2026-05-29T11:58:44.977200+08:00"
   }
 }
