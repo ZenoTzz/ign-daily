@@ -6,3 +6,8 @@ node_modules/
 .idea/
 __pycache__/
 *.pyc
+
+.env
+.env.*
+*.pat
+
