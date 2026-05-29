@@ -156,7 +156,7 @@
                   <span class="text-xs font-semibold text-slate-400" x-text="`#${art.id}`"></span>
                   <span class="text-base sm:text-lg" x-text="art.emoji"></span>
                   <span class="text-xs px-2 py-0.5 rounded-full bg-slate-100 text-slate-600" x-text="art.category"></span>
-                  <span class="text-xs text-slate-400" x-text="(art.publish_time_cn || art.pubDate_cst || '').slice(11)"></span>
+                  <span class="text-xs text-slate-400" x-text="art.publish_time_cn || art.pubDate_cst || ''"></span>
                   <template x-if="art.translation_status === 'done'">
                     <span class="text-xs px-2 py-0.5 rounded-full bg-green-100 text-green-700">✅ 已翻译</span>
                   </template>
