@@ -225,12 +225,13 @@
               <div x-show="showImagesPanel" class="p-2 grid grid-cols-2 sm:grid-cols-3 gap-2">
                 <template x-for="(img, i) in article?.images || []" :key="i">
                   <div class="relative group bg-white rounded border overflow-hidden">
-                    <img :src="img.url" :alt="img.alt" class="w-full h-24 object-cover" loading="lazy"
+                    <img :src="imgUrl(img)" :alt="imgAlt(img)" class="w-full h-24 object-cover" loading="lazy"
+                         referrerpolicy="no-referrer"
                          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                     <div class="hidden h-24 items-center justify-center text-xs text-slate-400 bg-slate-100">加载失败</div>
-                    <button @click="downloadOneImage(img.url, i)"
+                    <button @click="downloadOneImage(imgUrl(img), i)"
                       class="absolute bottom-1 right-1 bg-black/60 hover:bg-black/80 text-white rounded text-xs px-2 py-0.5 opacity-0 group-hover:opacity-100">⬇</button>
-                    <a :href="img.url" target="_blank" rel="noopener"
+                    <a :href="imgUrl(img)" target="_blank" rel="noopener"
                       class="absolute top-1 right-1 bg-black/60 hover:bg-black/80 text-white rounded text-xs px-1 py-0.5 opacity-0 group-hover:opacity-100" title="原图查看">🔍</a>
                     <div x-show="i === 0" class="absolute top-1 left-1 bg-amber-500 text-white text-[10px] px-1 rounded">封面</div>
                   </div>
@@ -1130,6 +1131,18 @@
           }
         },
 
+        // ---- 图片字段兼容（旧格式是 string，新格式是 {url, alt}）----
+        imgUrl(img) {
+          if (!img) return '';
+          if (typeof img === 'string') return img;
+          return img.url || img.src || '';
+        },
+        imgAlt(img) {
+          if (!img) return '';
+          if (typeof img === 'string') return '';
+          return img.alt || img.title || '';
+        },
+
         // ---- 一键复制译文（全角标点 + 去 markdown）----
         normalizePunctuation(text) {
           if (!text) return '';
@@ -1272,17 +1285,19 @@
           let okCount = 0, failCount = 0;
           for (let i = 0; i < this.article.images.length; i++) {
             const img = this.article.images[i];
+            const url = this.imgUrl(img);
+            const alt = this.imgAlt(img);
             try {
-              const res = await fetch(img.url, { mode: 'cors' });
+              const res = await fetch(url, { mode: 'cors' });
               if (!res.ok) throw new Error('HTTP ' + res.status);
               const blob = await res.blob();
-              const ext = (img.url.split('.').pop() || 'jpg').split('?')[0].slice(0,5);
-              const filename = `${String(i+1).padStart(2,'0')}-${img.alt ? img.alt.replace(/[^\w\u4e00-\u9fa5-]+/g, '_').slice(0,30) : 'image'}.${ext}`;
+              const ext = (url.split('.').pop() || 'jpg').split('?')[0].slice(0,5);
+              const filename = `${String(i+1).padStart(2,'0')}-${alt ? alt.replace(/[^\w\u4e00-\u9fa5-]+/g, '_').slice(0,30) : 'image'}.${ext}`;
               zip.file(filename, blob);
               okCount++;
             } catch (e) {
               failCount++;
-              console.warn('Failed:', img.url, e);
+              console.warn('Failed:', url, e);
             }
             this.imageProgress = i + 1;
           }
