@@ -10,84 +10,114 @@
     13,
     18
   ],
-  "confirmed_rules": [
+  "observations": [
+    {
+      "id": "paralives_cn_name",
+      "title": "Paralives → 《平行人生》",
+      "occurrences": 1,
+      "detail": "用户在#13标题中将裸名Paralives改为《平行人生》,入词库"
+    },
+    {
+      "id": "songs_of_past_rename",
+      "title": "Songs of the Past → 旧时曲(非往日之歌)",
+      "occurrences": 1,
+      "detail": "用户在#6改为《旧时曲》,与之前的「往日之歌」不同,以用户版本为准"
+    },
+    {
+      "id": "dandelion_cn",
+      "title": "Dandelion → 丹德里恩(非亚斯克尔)",
+      "occurrences": 1,
+      "detail": "用户在#6正文使用「丹德里恩」而非我的「亚斯克尔」"
+    },
+    {
+      "id": "national_price",
+      "title": "补充国区Steam定价",
+      "occurrences": 1,
+      "detail": "用户在#10补了「国区Steam商店定价200元」,我只写了美元换算"
+    }
+  ],
+  "rules_confirmed": [
     {
       "id": "merge_paragraphs",
       "title": "段落合并为整段",
-      "evidence_ratio": "7/7",
       "signal": "强信号",
-      "description": "用户把5-15个短段落合并成1-2个长段,整篇连贯呈现。AI不应拆段过碎,每篇最多3-5段为宜。",
       "examples": [
         "#2: 5段→1段",
         "#6: 15段→1段+原诗+续段",
         "#11: 12段→1段"
-      ]
+      ],
+      "evidence": "7/7",
+      "detail": "用户把5-15个短段落合并成1-2个长段,整篇连贯呈现。AI不应拆段过碎,每篇最多3-5段为宜。",
+      "category": "句式偏好"
     },
     {
       "id": "no_en_annotation",
       "title": "去掉英文注释括号",
-      "evidence_ratio": "7/7",
       "signal": "强信号",
-      "description": "不再写 (Call of Duty: Warzone)、(Subnautica 2)、(Blood and Wine) 等英文原名注释。只有《》书名号内写中文译名。",
       "examples": [
         "#7: (Call of Duty: Warzone)删除",
         "#18: (Subnautica 2)删除",
         "#6: (Blood and Wine)删除"
-      ]
+      ],
+      "evidence": "7/7",
+      "detail": "不再写 (Call of Duty: Warzone)、(Subnautica 2)、(Blood and Wine) 等英文原名注释。只有《》书名号内写中文译名。",
+      "category": "句式偏好"
     },
     {
       "id": "keep_name_en",
       "title": "不知名人物保留英文名",
-      "evidence_ratio": "7/7",
       "signal": "强信号",
-      "description": "如 Ted Gill、Alex Massé、Noah Centineo 等不翻译成中文音译。只有极知名人物(如西尔维斯特·史泰龙)才用中文。",
       "examples": [
         "#2: 诺亚·森提内奥→Noah Centineo",
         "#18: 泰德·吉尔→Ted Gill",
         "#13: 亚历克斯·马塞→Alex Massé"
-      ]
+      ],
+      "evidence": "7/7",
+      "detail": "如 Ted Gill、Alex Massé、Noah Centineo 等不翻译成中文音译。只有极知名人物(如西尔维斯特·史泰龙)才用中文。",
+      "category": "词汇偏好"
     },
     {
       "id": "rm_hook_sentence",
       "title": "删除首段短句hook",
-      "evidence_ratio": "7/7",
       "signal": "强信号",
-      "description": "AI翻译的第一段往往是1句话的hook（如「不差钱。」「热血再启。」），用户全部删除。未来不再生成这种hook开头。",
       "examples": [
         "#2: 「热血再启。」删除",
         "#6: 「这是一把非常重要的剑……」删除",
         "#18: 「不差钱。」删除"
-      ]
+      ],
+      "evidence": "7/7",
+      "detail": "AI翻译的第一段往往是1句话的hook（如「不差钱。」「热血再启。」），用户全部删除。未来不再生成这种hook开头。",
+      "category": "语气/风格偏好"
     },
     {
       "id": "rm_embedded_titles",
       "title": "删除文内嵌入标题",
-      "evidence_ratio": "5/7",
       "signal": "强信号",
-      "description": "IGN原文中穿插的推荐卡片标题(如「CDPR当前在研全部作品」「《GTA6》预告片99处细节图集」「《使命召唤》系列最佳战役模式」)应在翻译时直接剥离。",
       "examples": [
         "#6: 「CDPR当前在研全部作品」删除",
         "#11: 「《GTA6》预告片99处细节图集」删除",
         "#7: 「《使命召唤》系列最佳战役模式」删除"
-      ]
+      ],
+      "evidence": "5/7",
+      "detail": "IGN原文中穿插的推荐卡片标题(如「CDPR当前在研全部作品」「《GTA6》预告片99处细节图集」「《使命召唤》系列最佳战役模式」)应在翻译时直接剥离。",
+      "category": "句式偏好"
     },
     {
       "id": "platform_short",
       "title": "平台名简写",
-      "evidence_ratio": "5/7",
       "signal": "强信号",
-      "description": "PlayStation 5→PS5, Xbox Series X/S→Xbox Series, Nintendo Switch 2→Switch 2",
       "examples": [
         "#7: PlayStation 4→PS4",
         "#10: PlayStation 5→PS5, Xbox Series X/S→Xbox Series"
-      ]
+      ],
+      "evidence": "5/7",
+      "detail": "PlayStation 5→PS5, Xbox Series X/S→Xbox Series, Nintendo Switch 2→Switch 2",
+      "category": "词汇偏好"
     },
     {
       "id": "subtitle_required",
       "title": "每篇必须有副标题",
-      "evidence_ratio": "7/7",
       "signal": "强信号(连续两天确认)",
-      "description": "2-6字极简副标题,浓缩正文情绪/角度。如「急急急急急」「再见了,老朋友」「新园长上工」「不差钱」",
       "examples": [
         "#2→第N滴血",
         "#6→急急急急急",
@@ -95,43 +125,21 @@
         "#10→新园长上工",
         "#11→「做出爆款似乎越来越难了」",
         "#18→不差钱"
-      ]
+      ],
+      "evidence": "7/7",
+      "detail": "2-6字极简副标题,浓缩正文情绪/角度。如「急急急急急」「再见了,老朋友」「新园长上工」「不差钱」",
+      "category": "标题/副标题偏好"
     },
     {
       "id": "fullwidth_comma_title",
       "title": "标题用全角逗号",
-      "evidence_ratio": "5/7",
       "signal": "中等信号",
-      "description": "标题中半角逗号,改为全角，",
       "examples": [
         "#7: 战区:→战区：, #10: 推出,→推出，"
-      ]
-    }
-  ],
-  "observations": [
-    {
-      "id": "paralives_cn_name",
-      "title": "Paralives → 《平行人生》",
-      "description": "用户在#13标题中将裸名Paralives改为《平行人生》,入词库",
-      "occurrences": 1
-    },
-    {
-      "id": "songs_of_past_rename",
-      "title": "Songs of the Past → 旧时曲(非往日之歌)",
-      "description": "用户在#6改为《旧时曲》,与之前的「往日之歌」不同,以用户版本为准",
-      "occurrences": 1
-    },
-    {
-      "id": "dandelion_cn",
-      "title": "Dandelion → 丹德里恩(非亚斯克尔)",
-      "description": "用户在#6正文使用「丹德里恩」而非我的「亚斯克尔」",
-      "occurrences": 1
-    },
-    {
-      "id": "national_price",
-      "title": "补充国区Steam定价",
-      "description": "用户在#10补了「国区Steam商店定价200元」,我只写了美元换算",
-      "occurrences": 1
+      ],
+      "evidence": "5/7",
+      "detail": "标题中半角逗号,改为全角，",
+      "category": "标题/副标题偏好"
     }
   ]
 }

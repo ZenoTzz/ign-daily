@@ -219,7 +219,7 @@
             const idxRes = await fetch('data/learning_log/_index.json?t=' + Date.now(), { cache: 'no-store' });
             if (!idxRes.ok) throw new Error('暂无学习日志');
             const idx = await idxRes.json();
-            this.dates = idx.dates || [];
+            this.dates = (idx.dates || []).slice().reverse();
 
             // 拉每天的日志
             for (const d of this.dates) {
