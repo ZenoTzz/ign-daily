@@ -1,56 +1,33 @@
-"""把今天5/28的数据导出到 ign-daily/data/2026-05-28/"""
+"""
+通用版 build_today.py - 把 ign_daily_index.json 发布到 ign-daily/data/{today}/
+不依赖具体日期常量。
+
+修订:
+- DATE 自动取当天
+- translation_status 全部 'none'（早报阶段还没翻译）
+- index-list.json: 读取已有列表，**追加/更新**今天那条，不是覆写
+"""
 import json
 import os
 import shutil
-from datetime import datetime
+from datetime import datetime, timezone, timedelta
 
 REPO = r'C:\Users\Administrator\.openclaw\workspace\ign-daily'
 INDEX = r'C:\Users\Administrator\.openclaw\workspace\ign_daily_index.json'
 DICT_SRC = r'C:\Users\Administrator\.openclaw\workspace\game_names_dict.json'
 
-DATE = '2026-05-28'
+# 北京时间
+CST = timezone(timedelta(hours=8))
+TODAY = datetime.now(CST).strftime('%Y-%m-%d')
 
 with open(INDEX, 'r', encoding='utf-8') as f:
     raw = json.load(f)
 
-# 促销过滤
-def is_promo(art):
-    title_en = (art.get('en_title','') or '').lower()
-    title_cn = art.get('cn_title','') or ''
-    url = (art.get('url','') or '').lower()
-    
-    url_keys = ['deal', 'sale', 'discount', 'memorial-day', 'black-friday', 
-                'prime-day', 'amazon-deal', 'best-buy-deal', 'coupon']
-    for k in url_keys:
-        if k in url:
-            return True
-    
-    promo_en = ['save $', 'all-time low', 'drops to', 'lowest price']
-    for k in promo_en:
-        if k in title_en:
-            return True
-    
-    cn_promo = ['降价', '史低', '纪念日特卖', '直降', '降至', '特卖', '会员日', '今日精选']
-    for k in cn_promo:
-        if k in title_cn:
-            if '涨到' in title_cn or '涨价' in title_cn:
-                continue
-            return True
-    return False
-
-# 分类排序：others先按id，roundup次之，review末尾
+# 排序: 普通新闻 → 盘点 → 评测
 review = [a for a in raw['articles'] if a.get('category') == '评测评分']
 roundup = [a for a in raw['articles'] if a.get('category') == '盘点推荐']
 others = [a for a in raw['articles'] if a.get('category') not in ('评测评分', '盘点推荐')]
-
-others_filtered = [a for a in others if not is_promo(a)]
-roundup_filtered = [a for a in roundup if not is_promo(a)]
-review_filtered = [a for a in review if not is_promo(a)]
-
-push_order = others_filtered + roundup_filtered + review_filtered
-
-# 已翻译的 json id（今天用户选了10篇）
-translated_json_ids = {10, 11, 15, 21, 22, 23, 33, 34, 44, 45}
+push_order = others + roundup + review
 
 emoji_map = {
     '游戏新闻': '🎮', '评测评分': '⭐', '影视资讯': '🎬',
@@ -58,7 +35,6 @@ emoji_map = {
     '盘点推荐': '📋',
 }
 
-# 推送编号 1开始（剔除促销后）
 articles = []
 for idx, a in enumerate(push_order, 1):
     art = {
@@ -70,47 +46,68 @@ for idx, a in enumerate(push_order, 1):
         'cn_title': a.get('cn_title', ''),
         'summary': a.get('summary', ''),
         'url': a.get('url', ''),
-        'publish_time_cn': a.get('publish_time_cn', '') or a.get('publish_time', ''),
-        'translation_status': 'done' if a.get('id') in translated_json_ids else 'none',
-        'translation_path': f'translations/{idx:02d}.json' if a.get('id') in translated_json_ids else None,
+        'publish_time_cn': a.get('pubDate_cst', '') or a.get('publish_time_cn', '') or a.get('publish_time', ''),
+        'translation_status': 'none',
+        'translation_path': None,
     }
     articles.append(art)
 
-# 保存当日 index.json
-out_dir = os.path.join(REPO, 'data', DATE)
+# 写当日 index.json
+out_dir = os.path.join(REPO, 'data', TODAY)
 os.makedirs(out_dir, exist_ok=True)
 os.makedirs(os.path.join(out_dir, 'translations'), exist_ok=True)
 
-index = {
-    'date': DATE,
+index_obj = {
+    'date': TODAY,
     'window': raw.get('window', ''),
     'total': len(articles),
     'articles': articles,
 }
 with open(os.path.join(out_dir, 'index.json'), 'w', encoding='utf-8') as f:
-    json.dump(index, f, ensure_ascii=False, indent=2)
-print(f'Saved index.json with {len(articles)} articles')
+    json.dump(index_obj, f, ensure_ascii=False, indent=2)
+print(f'[OK] data/{TODAY}/index.json  ({len(articles)} articles)')
 
 # 复制词库
 shutil.copy(DICT_SRC, os.path.join(REPO, 'data', 'dict.json'))
-print('Copied dict.json')
+print('[OK] data/dict.json')
 
-# 生成 index-list.json (历史清单，目前只有今天)
-hist = [{
-    'date': DATE,
+# 更新历史清单 index-list.json（追加/更新今天）
+hist_path = os.path.join(REPO, 'data', 'index-list.json')
+if os.path.exists(hist_path):
+    with open(hist_path, 'r', encoding='utf-8') as f:
+        hist = json.load(f)
+    if not isinstance(hist, list):
+        hist = []
+else:
+    hist = []
+
+today_entry = {
+    'date': TODAY,
     'total': len(articles),
-    'translated': sum(1 for a in articles if a['translation_status'] == 'done'),
-    'translatedTitles': [
-        {'id': a['id'], 'cn_title': a['cn_title']}
-        for a in articles if a['translation_status'] == 'done'
-    ],
-}]
-with open(os.path.join(REPO, 'data', 'index-list.json'), 'w', encoding='utf-8') as f:
-    json.dump(hist, f, ensure_ascii=False, indent=2)
-print('Saved index-list.json')
+    'translated': 0,
+    'translatedTitles': [],
+}
 
-print('\n推送编号 → 标题 → 翻译状态')
-for a in articles[:15]:
-    s = '✅' if a['translation_status'] == 'done' else '⚪'
-    print(f"{s} #{a['id']} [{a['category']}] {a['cn_title']}")
-print(f'... (共 {len(articles)} 条)')
+# 删除旧的今天条目，再追加新的
+hist = [h for h in hist if h.get('date') != TODAY]
+hist.append(today_entry)
+# 按日期降序
+hist.sort(key=lambda x: x.get('date', ''), reverse=True)
+
+with open(hist_path, 'w', encoding='utf-8') as f:
+    json.dump(hist, f, ensure_ascii=False, indent=2)
+print(f'[OK] data/index-list.json  (total {len(hist)} dates)')
+
+# 简要打印
+print(f'\n推送顺序 (前 10):')
+for a in articles[:10]:
+    print(f"  #{a['id']:2d} {a['emoji']} [{a['category']}] {a['cn_title']}")
+if len(articles) > 10:
+    print(f'  ... 共 {len(articles)} 条')
+
+# 统计
+from collections import Counter
+c = Counter(a['category'] for a in articles)
+print(f'\n分类: {dict(c)}')
+
+print(f'\n下一步: cd {REPO} && git add -A && git commit -m "{TODAY} daily news" && git push')
