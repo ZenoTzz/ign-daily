@@ -65,6 +65,9 @@
           <div class="flex items-center gap-2 text-sm">
             <span class="text-slate-500">已选</span>
             <span class="font-semibold text-brand-600" x-text="selected.length"></span>
+            <button @click="copyDigest()"
+              class="px-3 py-1.5 bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 text-xs sm:text-sm"
+              x-text="copyBtnText">📋 复制摘要</button>
             <button @click="submitRequest()"
               :disabled="selected.length === 0"
               class="px-3 py-1.5 bg-brand-600 text-white rounded-lg hover:bg-brand-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-xs sm:text-sm">

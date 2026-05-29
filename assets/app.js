@@ -115,6 +115,7 @@ function appData() {
     error: '',
     data: null,
     selected: [],
+    copyBtnText: '📋 复制摘要',
     filterCat: 'all',
     showSettings: false,
     token: localStorage.getItem('gh_token') || '',
@@ -295,6 +296,100 @@ function appData() {
       localStorage.removeItem('gh_token');
       this.token = '';
       this.flash('Token 已清除');
+    },
+
+    // ---- 一键复制今日摘要（中文标点 + 去 markdown）----
+    normalizePunctuation(text) {
+      if (!text) return '';
+      let s = String(text);
+      // 1. 去 HTML/markdown 标记
+      s = s.replace(/<[^>]+>/g, '');
+      s = s.replace(/\[([^\]]+)\]\([^)]+\)/g, '$1');         // [text](url)
+      s = s.replace(/\*\*([^*]+)\*\*/g, '$1');                 // **bold**
+      s = s.replace(/__([^_]+)__/g, '$1');                     // __bold__
+      s = s.replace(/(?<!\*)\*([^*\n]+)\*(?!\*)/g, '$1');     // *italic*
+      s = s.replace(/(?<!_)_([^_\n]+)_(?!_)/g, '$1');          // _italic_
+      s = s.replace(/`([^`]+)`/g, '$1');                       // `code`
+      s = s.replace(/^\s{0,3}#{1,6}\s+/gm, '');                // # heading
+      s = s.replace(/^\s{0,3}>\s+/gm, '');                     // > quote
+      s = s.replace(/^\s{0,3}[-*+]\s+/gm, '');                 // - list
+      s = s.replace(/^\s{0,3}\d+\.\s+/gm, '');                 // 1. list
+      // 2. 上下文感知 ASCII → 全角
+      const CJK = '[\u4e00-\u9fff]';
+      s = s.replace(new RegExp(`(${CJK})\\s*,\\s*(${CJK}|$|\\n)`, 'g'), '$1，$2');
+      s = s.replace(new RegExp(`(${CJK}|^|\\n)\\s*,\\s*(${CJK})`, 'g'), '$1，$2');
+      s = s.replace(new RegExp(`(${CJK})\\s*\\.\\s*(${CJK}|$|\\n)`, 'g'), '$1。$2');
+      s = s.replace(new RegExp(`(${CJK})\\.(\\s|$)`, 'g'), '$1。$2');
+      s = s.replace(new RegExp(`(${CJK})\\s*\\?\\s*`, 'g'), '$1？');
+      s = s.replace(new RegExp(`(${CJK})\\s*!\\s*`, 'g'), '$1！');
+      s = s.replace(new RegExp(`(${CJK})\\s*:\\s*(${CJK}|$|\\n|\\s)`, 'g'), '$1：$2');
+      s = s.replace(new RegExp(`(${CJK})\\s*;\\s*`, 'g'), '$1；');
+      // 含 CJK 的括号 → 全角
+      s = s.replace(/\(([^()]*[\u4e00-\u9fff][^()]*)\)/g, '（$1）');
+      // 全角双引号 + ASCII 双引号 交替换 「」
+      let open = true;
+      s = s.replace(/["“”]/g, () => {
+        const c = open ? '「' : '」';
+        open = !open;
+        return c;
+      });
+      // 3. 多余空格
+      s = s.replace(/[ \t]+\n/g, '\n');
+      s = s.replace(/\n{3,}/g, '\n\n');
+      let prev;
+      do {
+        prev = s;
+        s = s.replace(/([\u4e00-\u9fff])\s+([\u4e00-\u9fff])/g, '$1$2');
+      } while (s !== prev);
+      s = s.replace(/\s+([\u3000-\u303f\uff00-\uffef\u300c\u300d\u300e\u300f])/g, '$1');
+      s = s.replace(/([\u3000-\u303f\uff00-\uffef\u300c\u300d\u300e\u300f])\s+/g, '$1');
+      return s.trim();
+    },
+
+    async copyDigest() {
+      if (!this.data || !this.data.articles?.length) {
+        this.flash('⚠️ 今日暂无文章', 2000);
+        return;
+      }
+      // 如果选中了部分则只复制选中的，否则复制全部
+      const sel = this.selected && this.selected.length > 0
+        ? new Set(this.selected.map(x => Number(x)))
+        : null;
+      const articles = this.data.articles.filter(a => !sel || sel.has(a.id));
+
+      const lines = [];
+      lines.push(`📰 IGN Daily News | ${this.data.date}`);
+      lines.push(`共 ${articles.length} 条${sel ? '（已选）' : ''}`);
+      lines.push('');
+      articles.forEach((a, i) => {
+        const idx = i + 1;
+        const emoji = a.emoji || '📰';
+        const enT = (a.en_title || '').trim();
+        const cnT = this.normalizePunctuation(a.cn_title || '');
+        const sumT = this.normalizePunctuation(a.summary || '');
+        lines.push(`${idx}. ${emoji} ${enT}（${cnT}）`);
+        if (sumT) lines.push(sumT);
+        lines.push('');
+      });
+      const out = lines.join('\n').trim();
+
+      try {
+        if (navigator.clipboard && window.isSecureContext) {
+          await navigator.clipboard.writeText(out);
+        } else {
+          const ta = document.createElement('textarea');
+          ta.value = out;
+          ta.style.position = 'fixed'; ta.style.left = '-9999px';
+          document.body.appendChild(ta);
+          ta.select();
+          document.execCommand('copy');
+          document.body.removeChild(ta);
+        }
+        this.copyBtnText = '✅ 已复制';
+        setTimeout(() => { this.copyBtnText = '📋 复制摘要'; }, 2000);
+      } catch (e) {
+        this.flash('❌ 复制失败：' + e.message, 3000);
+      }
     },
 
     async submitRequest() {
