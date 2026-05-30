@@ -74,7 +74,7 @@
       <div x-show="data && !loading" class="bg-white rounded-xl border p-4 mb-4 sm:mb-6 shadow-sm">
         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
           <div>
-            <h2 class="text-base sm:text-lg font-semibold"><span x-text="isToday() ? '今日新闻' : currentDate + ' 新闻'"></span> <span class="text-slate-500" x-text="`(共 ${data?.total} 条)`"></span></h2>
+            <h2 class="text-base sm:text-lg font-semibold"><span x-text="isToday() ? '今日新闻' : currentDate + ' 新闻'"></span> <span class="text-slate-500" x-text="`(共 ${data?.total ?? data?.articles?.length ?? 0} 条)`"></span></h2>
             <p class="text-xs text-slate-500 mt-1" x-text="data?.window"></p>
           </div>
           <div class="flex items-center gap-2 text-sm">
