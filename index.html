@@ -116,17 +116,9 @@
 
       <!-- Filter tabs -->
       <div x-show="data && !loading" class="flex gap-2 mb-4 overflow-x-auto pb-1">
-        <template x-for="cat in categories" :key="cat.key">
-          <button @click="filterCat = cat.key"
-            :class="filterCat === cat.key ? 'bg-brand-600 text-white' : 'bg-white text-slate-700 hover:bg-slate-100'"
-            class="px-3 py-1.5 rounded-lg text-xs sm:text-sm whitespace-nowrap border">
-            <span x-text="cat.label"></span>
-            <span class="ml-1 opacity-70" x-text="`(${cat.count})`"></span>
-          </button>
-        </template>
         <button @click="filterCat = '__translated__'"
           :class="filterCat === '__translated__' ? 'bg-green-600 text-white' : 'bg-white text-green-700 hover:bg-green-50 border-green-300'"
-          class="px-3 py-1.5 rounded-lg text-xs sm:text-sm whitespace-nowrap border ml-1">
+          class="px-3 py-1.5 rounded-lg text-xs sm:text-sm whitespace-nowrap border">
           ✅ 已翻译
           <span class="ml-1 opacity-70" x-text="`(${translatedCount})`"></span>
         </button>
@@ -136,6 +128,14 @@
           ✏️ 已润色
           <span class="ml-1 opacity-70" x-text="`(${polishedIds.size})`"></span>
         </button>
+        <template x-for="cat in categories" :key="cat.key">
+          <button @click="filterCat = cat.key"
+            :class="filterCat === cat.key ? 'bg-brand-600 text-white' : 'bg-white text-slate-700 hover:bg-slate-100'"
+            class="px-3 py-1.5 rounded-lg text-xs sm:text-sm whitespace-nowrap border">
+            <span x-text="cat.label"></span>
+            <span class="ml-1 opacity-70" x-text="`(${cat.count})`"></span>
+          </button>
+        </template>
       </div>
 
       <!-- Articles -->
