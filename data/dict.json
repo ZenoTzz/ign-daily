@@ -2,7 +2,7 @@
   "_meta": {
     "description": "游戏/影视名称中英文对照词库，翻译时必须查询此词库，有匹配则直接使用",
     "source": "IGN中国 (ign.com.cn) + B站IGN中国 (space.bilibili.com/652239032) + 中国玩家圈公认译名",
-    "last_updated": "2026-05-29",
+    "last_updated": "2026-05-30",
     "source_legend": {
       "ign_cn": "IGN中国官网 ign.com.cn 确认",
       "bilibili": "B站IGN中国主页视频标题/简介确认",
@@ -1228,6 +1228,10 @@
     "MindsEye": {
       "cn": "《心之眼》",
       "source": "ai_guess"
+    },
+    "Control Resonant": {
+      "cn": "控制：共振",
+      "source": "user"
     }
   },
   "movies_tv": {
