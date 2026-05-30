@@ -1,5 +1,9 @@
 # IGN Daily News
 
+> 📖 **AI Agent / 开发者？请先读 [→ AGENT_HANDOFF.md](AGENT_HANDOFF.md)** — 完整的项目交接文档，包含架构、数据格式、翻译规则、常见坑、脚本说明等一切。
+
+---
+
 一个个人化的IGN每日新闻翻译协作平台。每天早晨自动抓取IGN新闻，在网页上选择需要翻译的文章，翻译完成后以左译文-右原文的对照形式呈现，并支持词库的在线编辑。
 
 🌐 **在线访问**: https://zenotzz.github.io/ign-daily/
