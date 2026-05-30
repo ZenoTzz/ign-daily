@@ -215,6 +215,8 @@
         <div class="reader-pane cn">
           <div class="w-full">
             <h2 class="text-xl font-bold mb-1" x-text="article?.cn_title"></h2>
+            <p x-show="article?.subtitle" class="text-base text-slate-600 leading-snug mb-2" x-text="article?.subtitle"></p>
+            <p x-show="article?.en_title" class="text-sm text-slate-400 italic mb-1" x-text="article?.en_title"></p>
             <p class="text-sm text-slate-400 mb-2" x-text="`翻译于 ${article?.translated_at || ''}`"></p>
 
             <!-- AI 极简总结 -->
@@ -382,6 +384,8 @@
       <div x-show="mode === 'cn'" class="reader-pane cn h-full overflow-y-auto">
         <div class="w-full py-4">
           <h2 class="text-xl font-bold mb-1" x-text="article?.cn_title"></h2>
+          <p x-show="article?.subtitle" class="text-base text-slate-600 leading-snug mb-2" x-text="article?.subtitle"></p>
+          <p x-show="article?.en_title" class="text-sm text-slate-400 italic mb-1" x-text="article?.en_title"></p>
           <p class="text-sm text-slate-400 mb-4" x-text="`翻译于 ${article?.translated_at || ''}`"></p>
           <!-- AI 极简总结 -->
           <div x-show="article?.opus_summary" x-cloak
