@@ -316,6 +316,33 @@ function appData() {
       return this.data.articles.filter(a => a.translation_status === 'done').length;
     },
 
+    getCatIcon(category) {
+      const map = {
+        '游戏新闻': 'gamepad',
+        '评测评分': 'star',
+        '影视资讯': 'film',
+        '人物新闻': 'sparkle',
+        '行业动态': 'briefcase',
+        '科技新闻': 'microscope',
+        '盘点推荐': 'list'
+      };
+      return map[category] || 'gamepad';
+    },
+
+    getCatColor(catKey) {
+      if (catKey === 'all') return 'var(--accent)';
+      const map = {
+        '游戏新闻': '#e50914',
+        '评测评分': '#f59e0b',
+        '影视资讯': '#8b5cf6',
+        '人物新闻': '#ec4899',
+        '行业动态': '#3b82f6',
+        '科技新闻': '#06b6d4',
+        '盘点推荐': '#22c55e'
+      };
+      return map[catKey] || '#6b7280';
+    },
+
     get requestedCount() {
       if (!this.data) return 0;
       return this.data.articles.filter(a => a.translation_status === 'requested').length;

@@ -1,0 +1,291 @@
+/* article-dark.css — Dark theme override for article.html (Tailwind compat layer) */
+/* Applies dark theme from the main style.css variables onto Tailwind-based article page */
+
+/* Base overrides */
+body {
+  background: var(--bg-primary, #0d0d14) !important;
+  color: var(--text-primary, #f0f0f5) !important;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif !important;
+}
+
+/* Header */
+header.bg-white, header {
+  background: var(--bg-secondary, #14141f) !important;
+  border-color: var(--border-primary, #2a2a40) !important;
+}
+
+header h1, header a, header button, header span, header select {
+  color: var(--text-primary, #f0f0f5) !important;
+}
+
+header a:hover, header button:hover {
+  color: var(--accent, #e50914) !important;
+}
+
+/* Card / article backgrounds */
+.bg-white, .bg-slate-50, .bg-slate-100, [class*="bg-white"] {
+  background: var(--bg-card, #1a1a2e) !important;
+}
+
+.bg-amber-50, .bg-amber-100, [class*="bg-amber-50"], [class*="from-amber-50"] {
+  background: var(--amber-soft, rgba(245, 158, 11, 0.15)) !important;
+}
+
+.bg-green-50, .bg-green-100, [class*="bg-green-50"] {
+  background: var(--green-soft, rgba(34, 197, 94, 0.15)) !important;
+}
+
+.bg-blue-50, .bg-blue-100, [class*="bg-blue-50"] {
+  background: var(--blue-soft, rgba(59, 130, 246, 0.15)) !important;
+}
+
+.bg-red-50 {
+  background: var(--accent-soft, rgba(229, 9, 20, 0.15)) !important;
+}
+
+/* Text colors */
+.text-slate-800, .text-slate-700, .text-slate-900, [class*="text-slate-8"], [class*="text-slate-7"], [class*="text-slate-9"] {
+  color: var(--text-primary, #f0f0f5) !important;
+}
+
+.text-slate-500, .text-slate-400, .text-slate-600, [class*="text-slate-5"], [class*="text-slate-4"], [class*="text-slate-6"] {
+  color: var(--text-secondary, #a0a0b8) !important;
+}
+
+.text-amber-800, .text-amber-700, .text-amber-900, [class*="text-amber-"] {
+  color: var(--amber, #f59e0b) !important;
+}
+
+.text-green-700, .text-green-800, [class*="text-green-"] {
+  color: var(--green, #22c55e) !important;
+}
+
+.text-blue-700, .text-blue-800, [class*="text-blue-"] {
+  color: var(--blue, #3b82f6) !important;
+}
+
+.text-red-600, .text-red-700, [class*="text-red-"] {
+  color: var(--accent, #e50914) !important;
+}
+
+/* Border overrides */
+.border, .border-b, .border-t, .border-l, [class*="border-slate"], [class*="border-gray"] {
+  border-color: var(--border-primary, #2a2a40) !important;
+}
+
+.border-amber-300, .border-amber-400, [class*="border-amber"] {
+  border-color: var(--amber-border, rgba(245, 158, 11, 0.3)) !important;
+}
+
+.border-green-300, [class*="border-green"] {
+  border-color: var(--green-border, rgba(34, 197, 94, 0.3)) !important;
+}
+
+.border-blue-200, .border-blue-300 {
+  border-color: rgba(59, 130, 246, 0.3) !important;
+}
+
+.border-l-4.border-amber-400 {
+  border-left-color: var(--amber, #f59e0b) !important;
+}
+
+/* Inputs and selects */
+input, textarea, select {
+  background: var(--bg-input, #16162a) !important;
+  color: var(--text-primary, #f0f0f5) !important;
+  border-color: var(--border-primary, #2a2a40) !important;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: var(--accent, #e50914) !important;
+  outline: none;
+  box-shadow: 0 0 0 2px var(--accent-soft) !important;
+}
+
+/* Buttons */
+button.bg-brand-600, .bg-brand-600 {
+  background: var(--accent, #e50914) !important;
+  color: white !important;
+}
+
+button.bg-brand-600:hover, .bg-brand-600:hover {
+  background: var(--accent-hover, #ff1a1a) !important;
+}
+
+button.bg-amber-600 {
+  background: var(--amber) !important;
+}
+
+button.bg-emerald-50, .bg-emerald-50 {
+  background: var(--green-soft) !important;
+}
+
+.text-emerald-700 {
+  color: var(--green) !important;
+}
+
+.border-emerald-200 {
+  border-color: var(--green-border) !important;
+}
+
+/* Hover states */
+.hover\:bg-slate-50:hover, .hover\:bg-slate-100:hover {
+  background: var(--bg-card-hover, #1f1f35) !important;
+}
+
+.hover\:text-brand-600:hover, .hover\:text-brand-600:hover {
+  color: var(--accent, #e50914) !important;
+}
+
+/* Reader panes */
+.reader-pane {
+  background: var(--bg-card, #1a1a2e) !important;
+  border-color: var(--border-primary, #2a2a40) !important;
+}
+
+.reader-pane.en, .reader-pane.en.bg-amber-50\/30 {
+  background: var(--bg-secondary, #14141f) !important;
+}
+
+/* Paragraph styles */
+.para-cn, .para-en {
+  color: var(--text-primary, #f0f0f5) !important;
+}
+
+.para-en {
+  color: var(--text-secondary, #a0a0b8) !important;
+}
+
+.para-cn-wrap {
+  border-color: var(--border-subtle, #1f1f35) !important;
+}
+
+.para-edit-btn {
+  color: var(--text-muted) !important;
+  background: var(--bg-elevated, #222238) !important;
+  border-color: var(--border-primary) !important;
+}
+
+.para-edit-btn:hover {
+  color: var(--accent) !important;
+  border-color: var(--accent) !important;
+}
+
+/* Modals / Overlays */
+.fixed.inset-0.bg-black\/40 {
+  background: rgba(0, 0, 0, 0.7) !important;
+}
+
+.fixed.inset-0 > .bg-white, .fixed.inset-0 > div > .bg-white {
+  background: var(--bg-elevated, #222238) !important;
+  color: var(--text-primary) !important;
+}
+
+/* Rounded containers inside modals */
+.rounded-xl.bg-white, .rounded-lg.bg-white, div[class*="bg-white"][class*="rounded"] {
+  background: var(--bg-elevated, #222238) !important;
+  color: var(--text-primary) !important;
+  border: 1px solid var(--border-primary) !important;
+}
+
+/* FAB */
+.fab-btn, .fab-item {
+  background: var(--bg-elevated, #222238) !important;
+  color: var(--text-primary) !important;
+  border: 1px solid var(--border-primary) !important;
+  box-shadow: var(--shadow-md) !important;
+}
+
+.fab-btn:hover, .fab-item:hover {
+  border-color: var(--accent) !important;
+  color: var(--accent) !important;
+}
+
+/* Toast */
+.fixed.bottom-4 {
+  background: var(--bg-elevated) !important;
+  border: 1px solid var(--border-primary) !important;
+}
+
+/* opus_summary card - gradient override */
+.bg-gradient-to-br {
+  background: var(--amber-soft) !important;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-primary);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+
+/* Feedback bar */
+.feedback-bar button {
+  background: var(--bg-elevated) !important;
+  color: var(--text-secondary) !important;
+  border: 1px solid var(--border-primary) !important;
+}
+
+.feedback-bar button:hover {
+  border-color: var(--accent) !important;
+  color: var(--text-primary) !important;
+}
+
+.feedback-bar button.active {
+  background: var(--accent-soft) !important;
+  border-color: var(--accent) !important;
+  color: var(--accent) !important;
+}
+
+/* Image panel */
+.bg-slate-50.border.rounded-lg {
+  background: var(--bg-secondary) !important;
+  border-color: var(--border-primary) !important;
+}
+
+/* Sticky header in polish mode */
+.sticky.top-0 {
+  background: var(--bg-card) !important;
+}
+
+/* Miss-en highlights */
+.miss-en {
+  color: var(--amber) !important;
+  background: var(--amber-soft) !important;
+  border-radius: 2px;
+  padding: 0 2px;
+}
+
+/* Link styles */
+a {
+  color: var(--accent);
+}
+
+a:hover {
+  color: var(--accent-hover);
+}
+
+/* Selection popup button */
+.fixed.z-30 button {
+  background: var(--accent) !important;
+  color: white !important;
+  box-shadow: var(--shadow-md) !important;
+}
+
+/* antialiased body override */
+.antialiased {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

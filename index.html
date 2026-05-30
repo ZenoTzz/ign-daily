@@ -4,292 +4,356 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-  <meta http-equiv="Pragma" content="no-cache">
-  <meta http-equiv="Expires" content="0">
   <title>IGN Daily News</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
-  <link rel="stylesheet" href="assets/style.css?v=20260528b">
-  <script src="assets/app.js?v=20260528b"></script></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            ign: '#BF1B26',
-            brand: { 50:'#fef2f2',500:'#BF1B26',600:'#a01620',700:'#7e1219' }
-          }
-        }
-      }
-    }
-  </script>
+  <link rel="stylesheet" href="assets/style.css?v=20260531">
+  <script src="assets/app.js?v=20260531"></script>
 </head>
-<body class="bg-slate-50 text-slate-800 antialiased">
+<body>
+  <!-- SVG Icon Definitions -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+    <symbol id="icon-gamepad" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="2" y="6" width="20" height="12" rx="3"/><line x1="6" y1="12" x2="10" y2="12"/><line x1="8" y1="10" x2="8" y2="14"/><circle cx="15" cy="10" r="1" fill="currentColor" stroke="none"/><circle cx="17" cy="12" r="1" fill="currentColor" stroke="none"/>
+    </symbol>
+    <symbol id="icon-star" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+    </symbol>
+    <symbol id="icon-film" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="2" y="2" width="20" height="20" rx="2"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/><line x1="2" y1="7" x2="7" y2="7"/><line x1="2" y1="17" x2="7" y2="17"/><line x1="17" y1="7" x2="22" y2="7"/><line x1="17" y1="17" x2="22" y2="17"/>
+    </symbol>
+    <symbol id="icon-sparkle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 2L14 8L20 8L15 12L17 18L12 14L7 18L9 12L4 8L10 8Z"/>
+    </symbol>
+    <symbol id="icon-briefcase" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="2" y1="13" x2="22" y2="13"/>
+    </symbol>
+    <symbol id="icon-microscope" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M6 18h8"/><path d="M3 22h18"/><path d="M14 22a7 7 0 1 0 0-14h-1"/><path d="M9 14h2"/><path d="M9 12a2 2 0 0 1-2-2V6h6v4a2 2 0 0 1-2 2Z"/><path d="M12 6V3a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v3"/>
+    </symbol>
+    <symbol id="icon-list" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/>
+    </symbol>
+    <symbol id="icon-check-circle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>
+    </symbol>
+    <symbol id="icon-pencil" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/><path d="m15 5 4 4"/>
+    </symbol>
+    <symbol id="icon-arrow-left" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/>
+    </symbol>
+    <symbol id="icon-arrow-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+    </symbol>
+    <symbol id="icon-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+    </symbol>
+    <symbol id="icon-refresh" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/>
+    </symbol>
+    <symbol id="icon-external" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>
+    </symbol>
+    <symbol id="icon-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+    </symbol>
+    <symbol id="icon-download" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
+    </symbol>
+    <symbol id="icon-chevron-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="6 9 12 15 18 9"/>
+    </symbol>
+    <symbol id="icon-settings" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+    </symbol>
+    <symbol id="icon-book" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+    </symbol>
+    <symbol id="icon-calendar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+    </symbol>
+    <symbol id="icon-chart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/>
+    </symbol>
+    <symbol id="icon-send" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/>
+    </symbol>
+    <symbol id="icon-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+    </symbol>
+    <symbol id="icon-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+    </symbol>
+    <symbol id="icon-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+    </symbol>
+  </svg>
+
   <div x-data="appData()" x-init="init()" class="min-h-screen">
     <!-- Header -->
-    <header class="bg-white border-b sticky top-0 z-10 relative">
-      <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
-        <div class="flex items-center gap-2">
-          <span class="text-2xl">📰</span>
-          <h1 class="text-lg sm:text-xl font-bold text-brand-600">IGN Daily</h1>
-          <div x-show="data" class="flex items-center gap-1 ml-2">
-            <button @click="navigateDate('prev')" :disabled="!canGoPrev()" class="text-slate-400 hover:text-brand-600 disabled:opacity-30 text-sm px-1">◀</button>
-            <button @click="showDatePicker = !showDatePicker" class="text-xs text-slate-500 hover:text-brand-600 px-1 py-0.5 rounded hover:bg-slate-100" x-text="currentDate"></button>
-            <button @click="navigateDate('next')" :disabled="!canGoNext()" class="text-slate-400 hover:text-brand-600 disabled:opacity-30 text-sm px-1">▶</button>
+    <header class="site-header">
+      <div class="header-inner">
+        <div class="brand">
+          <svg class="brand-logo"><use href="#icon-gamepad"/></svg>
+          <span class="brand-title">IGN Daily</span>
+          <div x-show="data" class="date-nav">
+            <button @click="navigateDate('prev')" :disabled="!canGoPrev()" class="date-nav-btn" title="上一天">
+              <svg width="14" height="14"><use href="#icon-arrow-left"/></svg>
+            </button>
+            <button @click="showDatePicker = !showDatePicker" class="date-nav-label" x-text="currentDate"></button>
+            <button @click="navigateDate('next')" :disabled="!canGoNext()" class="date-nav-btn" title="下一天">
+              <svg width="14" height="14"><use href="#icon-arrow-right"/></svg>
+            </button>
           </div>
-          <!-- 日期下拉 -->
-          <div x-show="showDatePicker" x-cloak @click.away="showDatePicker=false"
-               class="absolute top-12 left-16 z-50 bg-white border rounded-lg shadow-xl max-h-64 overflow-y-auto w-40">
+          <!-- Date Dropdown -->
+          <div x-show="showDatePicker" x-cloak @click.away="showDatePicker=false" class="date-dropdown">
             <template x-for="d in availableDates" :key="d">
               <button @click="goToDate(d); showDatePicker=false"
-                :class="d === currentDate ? 'bg-brand-50 text-brand-700 font-semibold' : 'text-slate-700 hover:bg-slate-50'"
-                class="block w-full text-left text-sm px-3 py-1.5 border-b border-slate-100 last:border-0"
+                :class="d === currentDate ? 'active' : ''"
+                class="date-dropdown-item"
                 x-text="d"></button>
             </template>
           </div>
         </div>
-        <nav class="flex items-center gap-3 sm:gap-4 text-sm">
-          <button @click="showGlobalSearch=true" class="text-slate-600 hover:text-brand-600 p-2 -m-1" title="搜索历史文章">🔍</button>
-          <button @click="refreshAll()" :disabled="loading" class="text-slate-600 hover:text-brand-600 disabled:opacity-50 p-2 -m-1" title="刷新">
-            <span x-text="loading ? '⏳' : '🔄'"></span>
+        <nav class="nav-actions">
+          <button @click="showGlobalSearch=true" class="nav-btn" title="搜索历史文章">
+            <svg><use href="#icon-search"/></svg>
           </button>
-          <!-- Desktop: show all links -->
-          <a href="dict.html" class="hidden sm:inline text-slate-600 hover:text-brand-600">📖 词库</a>
-          <a href="history.html" class="hidden sm:inline text-slate-600 hover:text-brand-600">📅 历史</a>
-          <a href="learning.html" class="hidden sm:inline text-slate-600 hover:text-brand-600" title="查看我的学习记录、添加批注">📊 学习</a>
-          <button @click="toggleTheme()" class="hidden sm:inline text-slate-600 hover:text-brand-600" title="主题切换">
-            <span x-text="themeIcon"></span>
+          <button @click="refreshAll()" :disabled="loading" class="nav-btn" title="刷新">
+            <svg><use href="#icon-refresh"/></svg>
           </button>
-          <button @click="showSettings = true" class="hidden sm:inline text-slate-600 hover:text-brand-600">⚙️</button>
+          <a href="dict.html" class="nav-btn hidden sm:flex">
+            <svg><use href="#icon-book"/></svg>
+            <span>词库</span>
+          </a>
+          <a href="history.html" class="nav-btn hidden sm:flex">
+            <svg><use href="#icon-calendar"/></svg>
+            <span>历史</span>
+          </a>
+          <a href="learning.html" class="nav-btn hidden sm:flex" title="学习记录">
+            <svg><use href="#icon-chart"/></svg>
+            <span>学习</span>
+          </a>
+          <button @click="showSettings = true" class="nav-btn hidden sm:flex">
+            <svg><use href="#icon-settings"/></svg>
+          </button>
         </nav>
       </div>
     </header>
 
-    <main class="max-w-5xl mx-auto px-4 py-4 sm:py-6">
-      <!-- Loading / Error -->
-      <div x-show="loading" class="text-center py-12 text-slate-400">加载中...</div>
-      <div x-show="error" class="bg-red-50 border border-red-200 rounded-lg p-4 text-red-700 text-sm" x-text="error"></div>
+    <main class="container" style="padding-top:1.25rem; padding-bottom:2rem;">
+      <!-- Loading -->
+      <div x-show="loading" class="loading-text">加载中...</div>
+      <!-- Error -->
+      <div x-show="error" class="error-box" x-text="error"></div>
 
-      <!-- Summary -->
-      <div x-show="data && !loading" class="bg-white rounded-xl border p-4 mb-4 sm:mb-6 shadow-sm">
-        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+      <!-- Summary Bar -->
+      <div x-show="data && !loading" class="summary-bar">
+        <div class="summary-header">
           <div>
-            <h2 class="text-base sm:text-lg font-semibold"><span x-text="isToday() ? '今日新闻' : currentDate + ' 新闻'"></span> <span class="text-slate-500" x-text="`(共 ${data?.total ?? data?.articles?.length ?? 0} 条)`"></span></h2>
-            <p class="text-xs text-slate-500 mt-1" x-text="data?.window"></p>
+            <h2 class="summary-title">
+              <span x-text="isToday() ? '今日新闻' : currentDate + ' 新闻'"></span>
+              <span class="count" x-text="`(${data?.total ?? data?.articles?.length ?? 0} 条)`"></span>
+            </h2>
+            <p style="font-size:0.7rem; color:var(--text-muted); margin-top:0.25rem;" x-text="data?.window"></p>
           </div>
-          <div class="flex items-center gap-2 text-sm">
-            <span class="text-slate-500">已选</span>
-            <span class="font-semibold text-brand-600" x-text="selected.length"></span>
-            <button @click="copyDigest()"
-              class="px-3 py-1.5 bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 text-xs sm:text-sm"
-              x-text="copyBtnText">📋 复制摘要</button>
-            <button @click="submitRequest()"
-              :disabled="selected.length === 0"
-              class="px-3 py-1.5 bg-brand-600 text-white rounded-lg hover:bg-brand-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-xs sm:text-sm">
-              📨 提交翻译请求
+          <div class="summary-actions">
+            <span class="selected-count">已选 <strong x-text="selected.length"></strong></span>
+            <button @click="copyDigest()" class="btn btn-green" x-text="copyBtnText"></button>
+            <button @click="submitRequest()" :disabled="selected.length === 0" class="btn btn-primary">
+              <svg><use href="#icon-send"/></svg>
+              提交翻译
             </button>
           </div>
         </div>
 
-        <!-- 翻译中状态提示 -->
-        <div x-show="requestedCount > 0"
-             class="mt-3 pt-3 border-t flex items-start gap-2 text-sm">
-          <span class="text-amber-600 shrink-0 mt-0.5">⏳</span>
-          <div class="flex-1">
-            <div class="font-medium text-amber-700">
-              正在翻译 <span x-text="requestedCount"></span> 篇
-            </div>
-            <div class="text-xs text-slate-500 mt-0.5">
-              请耐心等待主session处理，翻译完成后状态会变为「✅ 已翻译」。可随时刷新页面查看最新进度。
-            </div>
-            <div class="flex flex-wrap gap-1 mt-2">
+        <!-- Pending translation banner -->
+        <div x-show="requestedCount > 0" class="pending-banner">
+          <svg class="pending-icon" width="16" height="16"><use href="#icon-clock"/></svg>
+          <div style="flex:1;">
+            <div class="pending-title">正在翻译 <span x-text="requestedCount"></span> 篇</div>
+            <p style="font-size:0.7rem; color:var(--text-muted); margin-top:0.2rem;">请耐心等待主session处理，翻译完成后状态会变为「已翻译」。</p>
+            <div class="pending-pills">
               <template x-for="a in requestedArticles" :key="a.id">
-                <span class="text-xs px-2 py-0.5 rounded-full bg-amber-100 text-amber-800">
-                  #<span x-text="a.id"></span> <span x-text="a.cn_title.length > 18 ? a.cn_title.slice(0,18)+'…' : a.cn_title"></span>
-                </span>
+                <span class="pending-pill">#<span x-text="a.id"></span> <span x-text="a.cn_title.length > 18 ? a.cn_title.slice(0,18)+'…' : a.cn_title"></span></span>
               </template>
             </div>
-            <button @click="refreshData()" class="mt-2 text-xs text-brand-600 hover:text-brand-700">🔄 手动刷新</button>
+            <button @click="refreshData()" class="btn btn-ghost" style="margin-top:0.5rem; font-size:0.7rem;">
+              <svg width="12" height="12"><use href="#icon-refresh"/></svg> 手动刷新
+            </button>
           </div>
         </div>
       </div>
 
-      <!-- Filter tabs -->
-      <div x-show="data && !loading" class="flex gap-2 mb-4 overflow-x-auto pb-1">
+      <!-- Filter Tags -->
+      <div x-show="data && !loading" class="filter-bar">
         <button @click="filterCat = '__translated__'"
-          :class="filterCat === '__translated__' ? 'bg-green-600 text-white' : 'bg-white text-green-700 hover:bg-green-50 border-green-300'"
-          class="px-3 py-1.5 rounded-lg text-xs sm:text-sm whitespace-nowrap border">
-          ✅ 已翻译
-          <span class="ml-1 opacity-70" x-text="`(${translatedCount})`"></span>
+          :class="filterCat === '__translated__' ? 'active-green' : ''"
+          class="filter-tag">
+          <svg width="12" height="12"><use href="#icon-check-circle"/></svg>
+          已翻译
+          <span class="tag-count" x-text="`(${translatedCount})`"></span>
         </button>
         <button @click="filterCat = '__polished__'" x-show="polishedIds.size > 0"
-          :class="filterCat === '__polished__' ? 'bg-amber-600 text-white' : 'bg-white text-amber-700 hover:bg-amber-50 border-amber-300'"
-          class="px-3 py-1.5 rounded-lg text-xs sm:text-sm whitespace-nowrap border">
-          ✏️ 已润色
-          <span class="ml-1 opacity-70" x-text="`(${polishedIds.size})`"></span>
+          :class="filterCat === '__polished__' ? 'active-amber' : ''"
+          class="filter-tag">
+          <svg width="12" height="12"><use href="#icon-pencil"/></svg>
+          已润色
+          <span class="tag-count" x-text="`(${polishedIds.size})`"></span>
         </button>
         <template x-for="cat in categories" :key="cat.key">
           <button @click="filterCat = cat.key"
-            :class="filterCat === cat.key ? 'bg-brand-600 text-white' : 'bg-white text-slate-700 hover:bg-slate-100'"
-            class="px-3 py-1.5 rounded-lg text-xs sm:text-sm whitespace-nowrap border">
+            :class="filterCat === cat.key ? 'active' : ''"
+            class="filter-tag">
+            <span class="cat-dot" :style="`background:${getCatColor(cat.key)}`"></span>
             <span x-text="cat.label"></span>
-            <span class="ml-1 opacity-70" x-text="`(${cat.count})`"></span>
+            <span class="tag-count" x-text="`(${cat.count})`"></span>
           </button>
         </template>
       </div>
 
-      <!-- Articles -->
-      <div x-show="data && !loading" class="space-y-2 sm:space-y-3">
+      <!-- Article List -->
+      <div x-show="data && !loading" class="article-list">
         <template x-for="(art, idx) in filteredArticles" :key="art.id">
-          <article class="bg-white rounded-xl border shadow-sm hover:shadow hover:border-brand-600/40 transition card-animate"
-            :style="`animation-delay: ${idx * 50}ms`"
-            :class="art.translation_status === 'done' ? 'cursor-pointer' : ''">
-            <div class="flex items-start gap-3 p-3 sm:p-4">
+          <article class="article-card" :style="`animation-delay: ${idx * 40}ms`">
+            <div class="card-inner">
               <!-- Checkbox -->
-              <label @click.stop class="flex items-center shrink-0 mt-0.5">
+              <label class="card-checkbox" @click.stop>
                 <input type="checkbox" :value="art.id" x-model="selected"
-                  :disabled="art.translation_status === 'done'"
-                  class="w-5 h-5 rounded border-slate-300 text-brand-600 focus:ring-brand-500 disabled:opacity-50">
+                  :disabled="art.translation_status === 'done'">
               </label>
 
+              <!-- Cover image -->
+              <div class="card-cover" x-show="art.cover_image">
+                <img :src="art.cover_image" :alt="art.cn_title" loading="lazy" referrerpolicy="no-referrer"
+                     onerror="this.parentElement.style.display='none'">
+              </div>
+
               <!-- Content -->
-              <div class="flex-1 min-w-0">
-                <div class="flex items-center gap-2 mb-1 flex-wrap">
-                  <span class="text-xs font-semibold text-slate-400" x-text="`#${art.id}`"></span>
-                  <span class="text-base sm:text-lg" x-text="art.emoji"></span>
-                  <span class="text-xs px-2 py-0.5 rounded-full bg-slate-100 text-slate-600" x-text="art.category"></span>
-                  <span class="text-xs text-slate-400" x-text="art.publish_time_cn || art.pubDate_cst || ''"></span>
+              <div class="card-body">
+                <div class="card-meta">
+                  <span class="card-id" x-text="`#${art.id}`"></span>
+                  <svg class="card-cat-icon"><use :href="`#icon-${getCatIcon(art.category)}`"/></svg>
+                  <span class="card-cat-badge" x-text="art.category"></span>
+                  <span class="card-time" x-text="art.publish_time_cn || art.pubDate_cst || ''"></span>
                   <template x-if="art.translation_status === 'done'">
-                    <span class="text-xs px-2 py-0.5 rounded-full bg-green-100 text-green-700">✅ 已翻译</span>
+                    <span class="card-status status-done">
+                      <svg><use href="#icon-check-circle"/></svg> 已翻译
+                    </span>
                   </template>
                   <template x-if="art.translation_status === 'requested'">
-                    <span class="text-xs px-2 py-0.5 rounded-full bg-amber-100 text-amber-700">⏳ 翻译中</span>
+                    <span class="card-status status-requested">
+                      <svg><use href="#icon-clock"/></svg> 翻译中
+                    </span>
                   </template>
                   <template x-if="polishedIds.has(art.id)">
-                    <span class="text-xs px-2 py-0.5 rounded-full bg-amber-100 text-amber-800 border border-amber-300">✏️ 已润色</span>
+                    <span class="card-status status-polished">
+                      <svg><use href="#icon-pencil"/></svg> 已润色
+                    </span>
                   </template>
                 </div>
 
-                <!-- 标题：已翻译可点 -->
+                <!-- Title -->
                 <template x-if="art.translation_status === 'done'">
                   <a :href="`article.html?date=${data.date}&id=${art.id}`"
                     @click="saveState()"
-                    class="block font-semibold text-sm sm:text-base mb-1 leading-tight text-slate-800 hover:text-brand-600"
+                    class="card-title" style="display:block;"
                     x-text="art.cn_title"></a>
                 </template>
                 <template x-if="art.translation_status !== 'done'">
-                  <h3 class="font-semibold text-sm sm:text-base mb-1 leading-tight" x-text="art.cn_title"></h3>
+                  <h3 class="card-title" x-text="art.cn_title"></h3>
                 </template>
 
-                <p class="text-xs sm:text-sm text-slate-500 mb-2 line-clamp-1" x-text="art.en_title"></p>
-                <p class="text-xs sm:text-sm text-slate-600" x-text="art.summary"></p>
-                <div class="flex items-center gap-3 mt-2 text-xs">
-                  <a :href="art.url" target="_blank" rel="noopener" @click.stop
-                    class="text-slate-500 hover:text-brand-600">🔗 IGN原文</a>
+                <p class="card-en-title" x-text="art.en_title"></p>
+                <p class="card-summary" x-text="art.summary"></p>
+
+                <div class="card-actions">
+                  <a :href="art.url" target="_blank" rel="noopener" @click.stop class="card-link">
+                    <svg><use href="#icon-external"/></svg> IGN原文
+                  </a>
                   <template x-if="art.translation_status === 'done'">
                     <a :href="`article.html?date=${data.date}&id=${art.id}`"
                       @click="saveState()"
-                      class="text-brand-600 font-medium hover:text-brand-700">📖 查看翻译</a>
+                      class="card-link" style="color:var(--accent); font-weight:600;">
+                      <svg><use href="#icon-book"/></svg> 查看翻译
+                    </a>
                   </template>
                 </div>
               </div>
             </div>
-
-            <!-- 整卡可点（已翻译时） -->
-            <template x-if="art.translation_status === 'done'">
-              <a :href="`article.html?date=${data.date}&id=${art.id}`"
-                class="absolute inset-0" aria-label="打开翻译" style="display:none;"></a>
-            </template>
           </article>
         </template>
       </div>
     </main>
 
-    <!-- Mobile FAB Menu (悬浮球导航) -->
-    <div class="sm:hidden fixed bottom-20 right-4 z-40" x-data="{ fabOpen: false }">
-      <!-- Expanded menu items -->
+    <!-- Mobile FAB Menu -->
+    <div class="fab-container sm:hidden" x-data="{ fabOpen: false }">
       <div x-show="fabOpen" x-cloak x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 scale-90" x-transition:enter-end="opacity-100 scale-100" x-transition:leave="transition ease-in duration-100" x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-90"
-           class="mb-3 flex flex-col gap-2 items-end">
-        <a href="dict.html" class="fab-item">
-          📖 词库
-        </a>
-        <a href="history.html" class="fab-item">
-          📅 历史
-        </a>
-        <a href="learning.html" class="fab-item">
-          📊 学习
-        </a>
-        <button @click="toggleTheme(); fabOpen=false" class="fab-item">
-          <span x-text="themeIcon"></span> 主题
-        </button>
-        <button @click="showSettings=true; fabOpen=false" class="fab-item">
-          ⚙️ 设置
-        </button>
+           class="fab-menu">
+        <a href="dict.html" class="fab-item"><svg width="14" height="14"><use href="#icon-book"/></svg> 词库</a>
+        <a href="history.html" class="fab-item"><svg width="14" height="14"><use href="#icon-calendar"/></svg> 历史</a>
+        <a href="learning.html" class="fab-item"><svg width="14" height="14"><use href="#icon-chart"/></svg> 学习</a>
+        <button @click="showSettings=true; fabOpen=false" class="fab-item"><svg width="14" height="14"><use href="#icon-settings"/></svg> 设置</button>
       </div>
-      <!-- FAB button -->
       <button @click="fabOpen = !fabOpen" @click.away="fabOpen = false"
-              class="fab-btn"
-              :class="fabOpen ? 'fab-open' : ''">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <line x1="12" y1="5" x2="12" y2="19"></line>
-          <line x1="5" y1="12" x2="19" y2="12"></line>
-        </svg>
+              class="fab-btn" :class="fabOpen ? 'fab-open' : ''">
+        <svg><use href="#icon-plus"/></svg>
       </button>
     </div>
 
-    <!-- 全局待确认词库：右下角浮动按钮 -->
+    <!-- Pending Words FAB -->
     <button x-show="globalPending.length > 0" x-cloak
-            @click="showPendingPanel = true"
-            class="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-30 bg-amber-500 hover:bg-amber-600 text-white rounded-full shadow-lg px-4 py-3 flex items-center gap-2">
-      <span class="text-xl">📝</span>
-      <span class="text-sm font-semibold">待确认 <span x-text="globalPending.length"></span> 词</span>
+            @click="showPendingPanel = true" class="pending-fab">
+      <svg><use href="#icon-pencil"/></svg>
+      待确认 <span x-text="globalPending.length"></span> 词
     </button>
 
-    <!-- 后台保存进度提示 -->
-    <div x-show="pendingProcessing || pendingQueue.length > 0" x-cloak
-         class="fixed bottom-20 right-4 sm:bottom-24 sm:right-6 z-30 bg-blue-600 text-white rounded-lg shadow-lg px-3 py-2 flex items-center gap-2 text-xs">
-      <svg class="animate-spin h-4 w-4" viewBox="0 0 24 24" fill="none">
-        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="3" stroke-dasharray="50" stroke-linecap="round"></circle>
+    <!-- Processing indicator -->
+    <div x-show="pendingProcessing || pendingQueue.length > 0" x-cloak class="processing-badge">
+      <svg class="animate-spin" width="14" height="14" viewBox="0 0 24 24" fill="none">
+        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="3" stroke-dasharray="50" stroke-linecap="round"/>
       </svg>
-      <span>后台保存中... 请勿刷新</span>
+      后台保存中...
     </div>
 
-    <!-- 全局待确认面板 -->
+    <!-- Pending Panel -->
     <div x-show="showPendingPanel" x-cloak
          @keydown.escape.window="showPendingPanel=false"
-         class="fixed inset-0 z-40 bg-black/40 flex justify-end"
-         @click.self="showPendingPanel=false">
-      <div class="bg-white w-full max-w-md h-full overflow-y-auto shadow-2xl flex flex-col">
-        <div class="p-4 border-b sticky top-0 bg-white">
-          <div class="flex items-center justify-between mb-2">
-            <h2 class="text-base font-bold">📝 全局待确认词库</h2>
-            <button @click="showPendingPanel=false" class="text-slate-400 hover:text-slate-600">✕</button>
+         class="pending-panel" @click.self="showPendingPanel=false">
+      <div class="pending-panel-inner">
+        <div class="pending-panel-header">
+          <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:0.5rem;">
+            <h2 style="font-size:1rem; font-weight:700; display:flex; align-items:center; gap:0.4rem;">
+              <svg width="18" height="18" style="color:var(--amber)"><use href="#icon-pencil"/></svg>
+              全局待确认词库
+            </h2>
+            <button @click="showPendingPanel=false" class="modal-close"><svg width="18" height="18"><use href="#icon-x"/></svg></button>
           </div>
-          <p class="text-xs text-slate-500">以下词是在译文里遇到、等待你决定是否入库的候选。决定后会在后台提交。</p>
-          <div class="mt-2 flex gap-2" x-show="globalPending.length > 1">
-            <button @click="approveAllGlobal()"
-              class="px-2 py-1 bg-green-600 text-white rounded text-xs hover:bg-green-700">✅✅ 全部入库</button>
-            <button @click="ignoreAllGlobal()"
-              class="px-2 py-1 border text-slate-600 rounded text-xs hover:bg-slate-100">🗑 全部忽略</button>
+          <p style="font-size:0.7rem; color:var(--text-muted);">以下词是在译文里遇到、等待你决定是否入库的候选。</p>
+          <div style="margin-top:0.5rem; display:flex; gap:0.4rem;" x-show="globalPending.length > 1">
+            <button @click="approveAllGlobal()" class="btn btn-green" style="font-size:0.7rem;">全部入库</button>
+            <button @click="ignoreAllGlobal()" class="btn btn-ghost" style="font-size:0.7rem;">全部忽略</button>
           </div>
         </div>
-        <div class="flex-1 p-3 space-y-2">
+        <div style="flex:1; padding:0.75rem; display:flex; flex-direction:column; gap:0.5rem;">
           <template x-for="(c, i) in globalPending" :key="`${c._articleId}-${i}-${c.en}`">
-            <div class="bg-amber-50 border border-amber-200 rounded p-2">
-              <div class="text-xs text-slate-500 mb-1">
+            <div class="pending-card">
+              <div style="font-size:0.7rem; color:var(--text-muted); margin-bottom:0.3rem;">
                 来自 <a :href="`article.html?date=${data.date}&id=${c._articleId}`"
-                  class="text-brand-600 hover:underline"
+                  style="color:var(--accent);"
                   x-text="`#${c._articleId} ${c._articleTitle}`"></a>
               </div>
-              <div class="text-sm flex items-center flex-wrap gap-1">
-                <span class="font-semibold" x-text="c.en"></span>
-                <span class="text-slate-400">→</span>
+              <div style="font-size:0.85rem; display:flex; align-items:center; gap:0.3rem; flex-wrap:wrap;">
+                <span style="font-weight:600;" x-text="c.en"></span>
+                <span style="color:var(--text-muted);">→</span>
                 <input type="text" x-model="c.cn"
-                  class="text-sm border-b border-slate-300 px-1 py-0.5 bg-transparent focus:outline-none focus:border-brand-600"
-                  :style="`width: ${Math.max((c.cn||'').length * 14 + 20, 100)}px;`">
+                  style="width:auto; min-width:6rem; max-width:14rem; padding:0.2rem 0.4rem; font-size:0.85rem;">
               </div>
-              <div class="text-xs text-slate-500 mt-1 flex items-center gap-2 flex-wrap">
-                <select x-model="c.cat" class="border rounded px-1 py-0.5 text-xs">
+              <div style="font-size:0.7rem; color:var(--text-muted); margin-top:0.3rem; display:flex; gap:0.4rem; align-items:center; flex-wrap:wrap;">
+                <select x-model="c.cat" style="width:auto; padding:0.15rem 1.5rem 0.15rem 0.4rem; font-size:0.7rem;">
                   <option value="games">games</option>
                   <option value="movies_tv">movies_tv</option>
                   <option value="companies">companies</option>
@@ -297,88 +361,84 @@
                   <option value="media">media</option>
                   <option value="terms">terms</option>
                 </select>
-                <select x-model="c.source" class="border rounded px-1 py-0.5 text-xs">
+                <select x-model="c.source" style="width:auto; padding:0.15rem 1.5rem 0.15rem 0.4rem; font-size:0.7rem;">
                   <option value="user">user</option>
                   <option value="ign_cn">ign_cn</option>
                   <option value="bilibili">bilibili</option>
                   <option value="consensus">consensus</option>
                   <option value="ai_guess">ai_guess</option>
                 </select>
-                <span x-show="c.note" class="text-amber-700 italic" x-text="'• ' + c.note"></span>
+                <span x-show="c.note" style="color:var(--amber); font-style:italic;" x-text="'• ' + c.note"></span>
               </div>
-              <div class="flex gap-1 mt-2">
-                <button @click="approveGlobalPending(i)"
-                  class="px-2 py-1 bg-green-600 text-white rounded text-xs hover:bg-green-700">✅ 入库</button>
-                <button @click="ignoreGlobalPending(i)"
-                  class="px-2 py-1 border border-slate-300 text-slate-600 rounded text-xs hover:bg-slate-100">🗑 忽略</button>
+              <div style="display:flex; gap:0.3rem; margin-top:0.4rem;">
+                <button @click="approveGlobalPending(i)" class="btn btn-green" style="font-size:0.7rem; padding:0.3rem 0.6rem;">
+                  <svg width="12" height="12"><use href="#icon-check-circle"/></svg> 入库
+                </button>
+                <button @click="ignoreGlobalPending(i)" class="btn btn-ghost" style="font-size:0.7rem; padding:0.3rem 0.6rem;">忽略</button>
               </div>
             </div>
           </template>
-          <div x-show="globalPending.length === 0" class="text-center text-slate-400 text-sm py-8">
-            🎉 所有候选词均已处理
+          <div x-show="globalPending.length === 0" style="text-align:center; color:var(--text-muted); font-size:0.85rem; padding:2rem 0;">
+            所有候选词均已处理
           </div>
         </div>
       </div>
     </div>
 
-    <!-- 全局搜索 -->
+    <!-- Global Search -->
     <div x-show="showGlobalSearch" x-cloak
          @keydown.escape.window="showGlobalSearch=false"
-         class="fixed inset-0 bg-black/50 flex items-start justify-center z-40 p-4 pt-16"
-         @click.self="showGlobalSearch=false">
-      <div class="bg-white rounded-xl max-w-2xl w-full max-h-[80vh] flex flex-col shadow-2xl">
-        <div class="p-3 border-b flex items-center gap-2">
-          <span class="text-xl">🔍</span>
+         class="search-modal" @click.self="showGlobalSearch=false">
+      <div class="search-panel">
+        <div class="search-input-row">
+          <svg><use href="#icon-search"/></svg>
           <input type="text" x-model="searchQuery" @input="runGlobalSearch()" autofocus
-            placeholder="搜索标题/摘要/译文内容..."
-            class="flex-1 px-2 py-1 outline-none text-sm">
-          <button @click="showGlobalSearch=false" class="text-slate-400 hover:text-slate-600">✕</button>
+            placeholder="搜索标题/摘要/译文内容...">
+          <button @click="showGlobalSearch=false" class="modal-close"><svg width="16" height="16"><use href="#icon-x"/></svg></button>
         </div>
-        <div class="flex-1 overflow-y-auto p-3">
-          <div x-show="searchLoading" class="text-center text-slate-400 text-sm py-4">搜索中...</div>
-          <div x-show="!searchLoading && searchResults.length === 0 && searchQuery.trim()" class="text-center text-slate-400 text-sm py-4">
-            未找到匹配结果
-          </div>
-          <div class="space-y-2">
-            <template x-for="r in searchResults" :key="`${r.date}-${r.id}`">
-              <a :href="`article.html?date=${r.date}&id=${r.id}`"
-                class="block bg-slate-50 hover:bg-slate-100 rounded-lg p-3 border border-transparent hover:border-brand-600/40">
-                <div class="text-xs text-slate-400 mb-1">
-                  <span x-text="r.date"></span> | #<span x-text="r.id"></span> | <span x-text="r.category"></span>
-                </div>
-                <div class="font-semibold text-sm" x-html="highlightMatch(r.cn_title)"></div>
-                <div class="text-xs text-slate-500 mt-0.5" x-html="highlightMatch(r.en_title)"></div>
-                <div x-show="r.matchedSnippet" class="text-xs text-slate-600 mt-1" x-html="r.matchedSnippet"></div>
-              </a>
-            </template>
-          </div>
+        <div class="search-results">
+          <div x-show="searchLoading" class="loading-text" style="padding:1rem;">搜索中...</div>
+          <div x-show="!searchLoading && searchResults.length === 0 && searchQuery.trim()" class="loading-text" style="padding:1rem;">未找到匹配结果</div>
+          <template x-for="r in searchResults" :key="`${r.date}-${r.id}`">
+            <a :href="`article.html?date=${r.date}&id=${r.id}`" class="search-result-item">
+              <div class="meta"><span x-text="r.date"></span> | #<span x-text="r.id"></span> | <span x-text="r.category"></span></div>
+              <div class="title" x-html="highlightMatch(r.cn_title)"></div>
+              <div class="subtitle" x-html="highlightMatch(r.en_title)"></div>
+              <div x-show="r.matchedSnippet" class="subtitle" style="margin-top:0.2rem;" x-html="r.matchedSnippet"></div>
+            </a>
+          </template>
         </div>
       </div>
     </div>
 
     <!-- Settings Modal -->
     <div x-show="showSettings" x-cloak @keydown.escape.window="showSettings=false"
-         class="fixed inset-0 bg-black/40 flex items-center justify-center z-20 p-4" @click.self="showSettings=false">
-      <div class="bg-white rounded-xl p-5 sm:p-6 max-w-md w-full">
-        <h3 class="text-lg font-bold mb-3">⚙️ 设置</h3>
-        <label class="block text-sm font-medium mb-1">GitHub Personal Access Token</label>
-        <p class="text-xs text-slate-500 mb-2">用于把翻译请求和词库改动提交回仓库。仅保存在你本地浏览器，不会上传。</p>
-        <input type="password" x-model="token" placeholder="ghp_xxx 或 github_pat_xxx"
-          class="w-full px-3 py-2 border rounded-lg text-sm">
-        <div class="flex gap-2 mt-3">
-          <button @click="saveToken()" class="px-3 py-1.5 bg-brand-600 text-white rounded-lg text-sm">保存</button>
-          <button @click="clearToken()" class="px-3 py-1.5 bg-slate-200 text-slate-700 rounded-lg text-sm">清除</button>
-          <button @click="showSettings=false" class="ml-auto px-3 py-1.5 text-slate-500 text-sm">关闭</button>
+         class="overlay" @click.self="showSettings=false">
+      <div class="modal">
+        <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:1rem;">
+          <h3 class="modal-title"><svg><use href="#icon-settings"/></svg> 设置</h3>
+          <button @click="showSettings=false" class="modal-close"><svg width="18" height="18"><use href="#icon-x"/></svg></button>
+        </div>
+        <label>GitHub Personal Access Token</label>
+        <p style="font-size:0.7rem; color:var(--text-muted); margin-bottom:0.5rem;">用于把翻译请求和词库改动提交回仓库。仅保存在本地浏览器。</p>
+        <input type="password" x-model="token" placeholder="ghp_xxx 或 github_pat_xxx">
+        <div style="display:flex; gap:0.5rem; margin-top:0.75rem;">
+          <button @click="saveToken()" class="btn btn-primary">保存</button>
+          <button @click="clearToken()" class="btn btn-ghost">清除</button>
         </div>
       </div>
     </div>
 
     <!-- Toast -->
-    <div x-show="toast" x-cloak x-transition.opacity
-         class="fixed bottom-4 left-1/2 -translate-x-1/2 bg-slate-900 text-white px-4 py-2 rounded-lg shadow-lg text-sm z-30"
-         x-text="toast"></div>
+    <div x-show="toast" x-cloak x-transition.opacity class="toast" x-text="toast"></div>
   </div>
 
-  <script src="assets/app.js"></script>
+  <!-- sm:hidden / sm:flex utility (minimal inline since no Tailwind) -->
+  <style>
+    @media (min-width: 640px) { .sm\:hidden { display: none !important; } }
+    @media (max-width: 639px) { .hidden.sm\:flex, .sm\:flex { display: none !important; } }
+    @media (min-width: 640px) { .hidden.sm\:flex { display: flex !important; } }
+    .min-h-screen { min-height: 100vh; }
+  </style>
 </body>
 </html>
