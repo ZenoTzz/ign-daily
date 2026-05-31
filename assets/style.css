@@ -1078,9 +1078,9 @@ label {
 /* ====== Processing indicator ====== */
 .processing-badge {
   position: fixed;
-  bottom: 5rem;
+  bottom: 9rem;
   right: 1rem;
-  z-index: 150;
+  z-index: 160;
   background: var(--blue-soft);
   border: 1px solid rgba(59, 130, 246, 0.3);
   color: var(--blue);
