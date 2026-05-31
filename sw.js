@@ -1,8 +1,9 @@
-const CACHE_NAME = 'ign-daily-v1';
+const CACHE_NAME = 'ign-daily-v2';
 const STATIC_ASSETS = [
   '/ign-daily/',
   '/ign-daily/index.html',
   '/ign-daily/article.html',
+  '/ign-daily/calendar.html',
   '/ign-daily/assets/style.css',
   '/ign-daily/assets/app.js',
 ];

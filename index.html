@@ -143,6 +143,10 @@
             <svg><use href="#icon-chart"/></svg>
             <span>学习</span>
           </a>
+          <a href="calendar.html" class="nav-btn hidden sm:flex" title="游戏日历">
+            <svg><use href="#icon-calendar"/></svg>
+            <span>日历</span>
+          </a>
           <button @click="showSettings = true" class="nav-btn hidden sm:flex">
             <svg><use href="#icon-settings"/></svg>
           </button>
@@ -302,6 +306,7 @@
         <a href="dict.html" class="fab-item"><svg width="14" height="14"><use href="#icon-book"/></svg> 词库</a>
         <a href="history.html" class="fab-item"><svg width="14" height="14"><use href="#icon-calendar"/></svg> 历史</a>
         <a href="learning.html" class="fab-item"><svg width="14" height="14"><use href="#icon-chart"/></svg> 学习</a>
+        <a href="calendar.html" class="fab-item"><svg width="14" height="14"><use href="#icon-calendar"/></svg> 游戏日历</a>
         <button @click="showSettings=true; fabOpen=false" class="fab-item"><svg width="14" height="14"><use href="#icon-settings"/></svg> 设置</button>
       </div>
       <button @click="fabOpen = !fabOpen" @click.away="fabOpen = false"

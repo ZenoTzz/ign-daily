@@ -1,0 +1,1480 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap">
+<title>🎮 游戏大事件日历 | Gaming History Calendar</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#0d0d14;--card:#1a1a2e;--card2:#1f1f35;--border:#2a2a40;
+  --text:#f0f0f5;--text2:#a0a0b8;--accent:#e50914;--accent2:#b91c1c;
+  --game:#22c55e;--console:#f78166;--event:#d2a8ff;--milestone:#f0c000;--upcoming:#ff6b6b;
+  --hover:#222238;
+}
+body{background:var(--bg);color:var(--text);font-family:'Inter',-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;min-height:100vh}
+/* Custom scrollbar */
+::-webkit-scrollbar{width:8px;height:8px}
+::-webkit-scrollbar-track{background:var(--bg);border-radius:4px}
+::-webkit-scrollbar-thumb{background:var(--border);border-radius:4px;border:2px solid var(--bg)}
+::-webkit-scrollbar-thumb:hover{background:var(--text2)}
+::-webkit-scrollbar-corner{background:var(--bg)}
+*{scrollbar-width:thin;scrollbar-color:var(--border) var(--bg)}
+.header{text-align:center;padding:30px 20px 20px;border-bottom:1px solid var(--border)}
+.header h1{font-size:1.8em;background:linear-gradient(90deg,var(--accent),var(--event),var(--game));-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:6px}
+.header p{color:var(--text2);font-size:.9em}
+.filters{display:flex;justify-content:center;gap:10px;padding:16px 20px;flex-wrap:wrap}
+.filter-btn{padding:6px 14px;border-radius:20px;border:1px solid var(--border);background:transparent;color:var(--text2);cursor:pointer;font-size:.85em;transition:.2s}
+.filter-btn:hover,.filter-btn.active{border-color:var(--accent);color:var(--accent);background:rgba(88,166,255,.1)}
+.filter-btn[data-type="game"].active{border-color:var(--game);color:var(--game);background:rgba(63,185,80,.1)}
+.filter-btn[data-type="console"].active{border-color:var(--console);color:var(--console);background:rgba(247,129,102,.1)}
+.filter-btn[data-type="event"].active{border-color:var(--event);color:var(--event);background:rgba(210,168,255,.1)}
+.filter-btn[data-type="milestone"].active{border-color:var(--milestone);color:var(--milestone);background:rgba(240,192,0,.1)}
+.filter-btn[data-type="upcoming"].active{border-color:var(--upcoming);color:var(--upcoming);background:rgba(255,107,107,.1)}
+.month-nav{display:flex;align-items:center;justify-content:center;gap:10px;padding:12px}
+.month-nav button{background:var(--card);border:1px solid var(--border);color:var(--text);padding:8px 14px;border-radius:8px;cursor:pointer;font-size:1em;transition:.2s}
+.month-nav button:hover{background:var(--accent2);border-color:var(--accent)}
+.month-dropdown{
+  padding:8px 14px;
+  border-radius:8px;
+  border:1px solid var(--border);
+  background:var(--card);
+  color:var(--text);
+  font-size:1.1em;
+  font-weight:700;
+  cursor:pointer;
+  font-family:inherit;
+  transition:.2s;
+  text-align:center;
+  min-width:100px;
+  appearance:none;-webkit-appearance:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%238b949e' d='M2 4l4 4 4-4'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right 10px center;
+  padding-right:28px;
+}
+.month-dropdown:hover,.month-dropdown:focus{border-color:var(--accent);outline:none}
+.month-dropdown option{background:var(--card);color:var(--text)}
+.main-layout{display:flex;max-width:1800px;margin:0 auto;padding:10px 10px 40px;gap:12px;align-items:start}
+.calendar-container{flex:1;min-width:0}
+.sidebar{width:220px;flex-shrink:0;position:sticky;top:10px}
+.sidebar-left{order:-1}
+.sidebar-right{order:1}
+.sidebar-title{font-size:1em;color:var(--accent);margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid var(--border)}
+.sidebar-list{display:flex;flex-direction:column;gap:8px;overflow-y:auto}
+.sb-card{padding:10px 12px;border-radius:8px;background:var(--card);border:1px solid var(--border);cursor:pointer;transition:.2s}
+.sb-card:hover{border-color:var(--accent);background:var(--hover)}
+.sb-card.sb-imp3{border-left:3px solid #ffd700}
+.sb-card.sb-imp2{border-left:3px solid var(--accent)}
+.sb-card .sb-date{font-size:.72em;color:var(--text2)}
+.sb-card .sb-name{font-size:.9em;font-weight:600;margin:2px 0}
+.sb-card .sb-ann{font-size:.72em;font-weight:700;color:#ffd700}
+.sb-card .sb-desc{font-size:.78em;color:var(--text2);margin-top:3px;line-height:1.4}
+.sb-card.sb-current{background:var(--card2);border-color:var(--accent)}
+.sb-section{font-size:.85em;font-weight:700;color:var(--text);padding:10px 0 6px;margin-top:8px;border-bottom:1px solid var(--border)}
+.sb-section:first-child{margin-top:0}
+.sb-empty{color:var(--text2);font-size:.85em;padding:20px 0;text-align:center}
+
+/* ===== DESKTOP CALENDAR GRID ===== */
+.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:3px;background:var(--border);border:2px solid var(--border);border-radius:12px;padding:3px;overflow:hidden}
+.cal-head{text-align:center;font-size:.8em;color:var(--text2);padding:8px 0;font-weight:600;background:var(--card2)}
+
+.cal-cell{
+  border-radius:8px;
+  display:flex;flex-direction:column;
+  cursor:default;
+  position:relative;
+  transition:.15s;
+  border:1px solid transparent;
+  min-height:110px;
+  padding:5px 5px 4px;
+  overflow:hidden;
+  background:var(--bg);
+}
+.cal-cell.has-events{cursor:pointer;background:var(--card);border-color:var(--border)}
+.cal-cell.has-events:hover{background:var(--hover);border-color:var(--accent);z-index:2;box-shadow:0 4px 16px rgba(88,166,255,.18)}
+.cal-cell.today{border:2px solid var(--accent) !important;box-shadow:0 0 12px rgba(88,166,255,.3)}
+.cal-cell.has-major{box-shadow:inset 0 0 0 1px rgba(255,215,0,.3)}
+.cal-cell.empty{min-height:110px;background:var(--bg)}
+
+.day-num{font-size:.95em;font-weight:600;line-height:1;margin-bottom:5px;flex-shrink:0}
+.cal-cell.empty .day-num{color:var(--border)}
+.cal-cell.today .day-num{color:var(--accent)}
+
+.ann-badge{position:absolute;top:4px;right:5px;font-size:.65em;color:#ffd700;line-height:1}
+
+.cell-events{display:flex;flex-direction:column;gap:2px;flex:1;overflow:hidden}
+
+.cell-event-item{
+  font-size:.68em;
+  line-height:1.2;
+  padding:1px 3px;
+  border-radius:3px;
+  white-space:normal;
+  word-break:break-all;
+  overflow:hidden;
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;
+  max-width:100%;
+}
+.cell-event-item.imp-high{font-weight:700;color:#ffd700}
+.cell-event-item.imp-mid{color:var(--text)}
+.cell-event-item.imp-low{color:var(--text2)}
+.cell-event-item.type-game{background:rgba(63,185,80,.12)}
+.cell-event-item.type-console{background:rgba(247,129,102,.12)}
+.cell-event-item.type-event{background:rgba(210,168,255,.12)}
+.cell-event-item.type-milestone{background:rgba(240,192,0,.12)}
+.cell-event-item.type-upcoming{background:rgba(255,107,107,.12)}
+
+.cell-more{font-size:.65em;color:var(--text2);padding:1px 4px;font-style:italic}
+
+/* ===== MOBILE TIMELINE VIEW ===== */
+.mobile-timeline{display:none;padding:0 0 40px}
+.tl-day{display:flex;gap:12px;padding:10px 16px;border-bottom:1px solid var(--border);cursor:pointer;transition:.15s}
+.tl-day:hover{background:var(--hover)}
+.tl-date-col{flex-shrink:0;width:52px;text-align:center;padding-top:2px}
+.tl-date-num{font-size:1.3em;font-weight:700;line-height:1;color:var(--text)}
+.tl-date-wd{font-size:.7em;color:var(--text2);margin-top:1px}
+.tl-date-col.today-col .tl-date-num{color:var(--accent)}
+.tl-date-col.today-col .tl-date-wd{color:var(--accent)}
+.tl-events-col{flex:1;display:flex;flex-direction:column;gap:4px;min-width:0}
+.tl-event-item{
+  font-size:.82em;
+  padding:3px 8px;
+  border-radius:5px;
+  line-height:1.3;
+  display:flex;align-items:center;gap:4px;
+}
+.tl-event-item.imp-high{font-weight:700;color:#ffd700}
+.tl-event-item.imp-mid{color:var(--text)}
+.tl-event-item.imp-low{color:var(--text2)}
+.tl-event-item.type-game{background:rgba(63,185,80,.12)}
+.tl-event-item.type-console{background:rgba(247,129,102,.12)}
+.tl-event-item.type-event{background:rgba(210,168,255,.12)}
+.tl-event-item.type-milestone{background:rgba(240,192,0,.12)}
+.tl-event-item.type-upcoming{background:rgba(255,107,107,.12)}
+.tl-ann-tag{font-size:.7em;font-weight:700;color:#ffd700;flex-shrink:0}
+
+/* ===== MODAL ===== */
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:100;justify-content:center;align-items:center;padding:20px}
+.modal-overlay.open{display:flex}
+.modal{background:var(--card);border:1px solid var(--border);border-radius:16px;max-width:620px;width:100%;max-height:85vh;overflow-y:auto;padding:0}
+.modal-header{padding:20px 24px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;background:var(--card);border-radius:16px 16px 0 0;z-index:1}
+.modal-header h2{font-size:1.2em}
+.modal-close{background:none;border:none;color:var(--text2);font-size:1.5em;cursor:pointer;padding:4px 8px;border-radius:6px}
+.modal-close:hover{background:var(--hover);color:var(--text)}
+.modal-body{padding:16px 24px 24px}
+
+/* Event card with image */
+.event-card{
+  padding:14px;border-radius:10px;background:var(--card2);
+  margin-bottom:10px;cursor:pointer;transition:.2s;
+  border:1px solid transparent;
+}
+.event-card:hover{border-color:var(--accent)}
+.event-card:last-child{margin-bottom:0}
+.event-card.imp3{border-left:3px solid #ffd700}
+.event-card.imp2{border-left:3px solid var(--accent)}
+.event-card.imp1{border-left:3px solid var(--border)}
+
+.event-card-inner{display:flex;gap:12px;align-items:flex-start}
+.event-img-wrap{
+  flex-shrink:0;width:80px;height:80px;
+  border-radius:8px;overflow:hidden;
+  background:var(--bg);
+  display:flex;align-items:center;justify-content:center;
+  border:1px solid var(--border);
+  font-size:2em;
+  position:relative;
+}
+.event-img-wrap img{
+  width:100%;height:100%;object-fit:cover;
+  display:none;
+  border-radius:7px;
+}
+.event-img-wrap img.loaded{display:block}
+.event-img-placeholder{font-size:2em;line-height:1}
+.event-info{flex:1;min-width:0}
+.event-year{font-size:.8em;color:var(--text2);margin-bottom:4px}
+.event-title{font-size:1.05em;font-weight:600;margin-bottom:2px}
+.event-title-en{font-size:.85em;color:var(--text2);margin-bottom:6px}
+.event-desc{font-size:.88em;color:var(--text2);line-height:1.5}
+.event-ann-row{margin-top:5px}
+
+.anniversary{display:inline-block;padding:2px 8px;border-radius:10px;font-size:.75em;font-weight:700;margin-right:4px}
+.anniversary.big{background:rgba(255,215,0,.2);color:#ffd700;border:1px solid rgba(255,215,0,.3)}
+.anniversary.normal{background:rgba(255,255,255,.08);color:var(--text2)}
+.importance{margin-right:4px;font-size:.9em}
+.event-tag{display:inline-block;padding:2px 8px;border-radius:10px;font-size:.72em;font-weight:600;margin-left:6px;vertical-align:middle}
+.event-tag.game{background:rgba(63,185,80,.15);color:var(--game)}
+.event-tag.console{background:rgba(247,129,102,.15);color:var(--console)}
+.event-tag.event{background:rgba(210,168,255,.15);color:var(--event)}
+.event-tag.milestone{background:rgba(240,192,0,.15);color:var(--milestone)}
+.event-tag.upcoming{background:rgba(255,107,107,.15);color:var(--upcoming)}
+.link-icon{font-size:.8em;margin-left:4px;opacity:.5}
+
+/* Stats bar */
+.stats{text-align:center;padding:8px;color:var(--text2);font-size:.82em}
+
+/* ===== SEARCH ===== */
+.search-wrap{display:flex;justify-content:center;padding:8px 20px 4px}
+.search-box{position:relative;width:100%;max-width:500px}
+.search-box input{
+  width:100%;padding:9px 36px 9px 36px;
+  border-radius:24px;border:1px solid var(--border);
+  background:var(--card);color:var(--text);font-size:.95em;
+  outline:none;transition:.2s;
+}
+.search-box input:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(88,166,255,.15)}
+.search-box input::placeholder{color:var(--text2)}
+.search-icon{position:absolute;left:11px;top:50%;transform:translateY(-50%);font-size:1em;pointer-events:none;color:var(--text2)}
+.search-clear{
+  position:absolute;right:10px;top:50%;transform:translateY(-50%);
+  background:none;border:none;color:var(--text2);cursor:pointer;
+  font-size:1em;padding:2px 4px;border-radius:50%;display:none;
+  line-height:1;
+}
+.search-clear:hover{color:var(--text);background:var(--hover)}
+.search-results{
+  display:none;
+  max-width:1800px;margin:0 auto;
+  padding:10px 10px 40px;
+}
+.search-results-inner{
+  max-width:860px;margin:0 auto;
+}
+.search-count{color:var(--text2);font-size:.85em;margin-bottom:12px;padding:0 4px}
+.search-empty{text-align:center;padding:60px 20px;color:var(--text2);font-size:1em}
+.search-year-group{margin-bottom:24px}
+.search-year-label{
+  font-size:.85em;font-weight:700;color:var(--accent);
+  padding:4px 0 10px;border-bottom:1px solid var(--border);margin-bottom:10px;
+}
+.search-card{
+  display:flex;gap:12px;align-items:flex-start;
+  padding:12px 14px;border-radius:10px;background:var(--card);
+  border:1px solid var(--border);margin-bottom:8px;
+  cursor:pointer;transition:.2s;
+}
+.search-card:hover{border-color:var(--accent);background:var(--hover)}
+.search-card.imp3{border-left:3px solid #ffd700}
+.search-card.imp2{border-left:3px solid var(--accent)}
+.search-card-date{
+  flex-shrink:0;min-width:70px;
+  text-align:center;padding-top:2px;
+}
+.search-card-date .sc-month-day{font-size:1.1em;font-weight:700;color:var(--text);line-height:1}
+.search-card-date .sc-year{font-size:.75em;color:var(--text2);margin-top:2px}
+.search-card-body{flex:1;min-width:0}
+.search-card-title{font-size:1em;font-weight:600;margin-bottom:2px}
+.search-card-title-en{font-size:.82em;color:var(--text2);margin-bottom:5px}
+.search-card-meta{display:flex;flex-wrap:wrap;gap:5px;align-items:center;margin-bottom:5px}
+.search-card-desc{font-size:.85em;color:var(--text2);line-height:1.5}
+.sc-tag{display:inline-block;padding:2px 8px;border-radius:10px;font-size:.72em;font-weight:600}
+.sc-tag.game{background:rgba(63,185,80,.15);color:var(--game)}
+.sc-tag.console{background:rgba(247,129,102,.15);color:var(--console)}
+.sc-tag.event{background:rgba(210,168,255,.15);color:var(--event)}
+.sc-tag.milestone{background:rgba(240,192,0,.15);color:var(--milestone)}
+.sc-tag.upcoming{background:rgba(255,107,107,.15);color:var(--upcoming)}
+.sc-imp{font-size:.85em}
+.sc-ann{display:inline-block;padding:2px 8px;border-radius:10px;font-size:.72em;font-weight:700}
+.sc-ann.big{background:rgba(255,215,0,.2);color:#ffd700;border:1px solid rgba(255,215,0,.3)}
+.sc-ann.normal{background:rgba(255,255,255,.08);color:var(--text2)}
+
+/* ===== YEAR SELECTOR ===== */
+.year-selector-wrap{padding:6px 20px 2px;display:flex;justify-content:center}
+.year-selector-inner{width:100%;max-width:600px;position:relative}
+.year-select-row{display:flex;align-items:center;gap:8px;justify-content:center}
+.year-dropdown{
+  padding:6px 12px;
+  border-radius:8px;
+  border:1px solid var(--border);
+  background:var(--card);
+  color:var(--text);
+  font-size:.9em;
+  cursor:pointer;
+  font-family:inherit;
+  transition:.2s;
+  appearance:none;-webkit-appearance:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%238b949e' d='M2 4l4 4 4-4'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right 8px center;
+  padding-right:28px;
+}
+.year-dropdown:hover,.year-dropdown:focus{border-color:var(--accent);outline:none}
+.year-dropdown option{background:var(--card);color:var(--text)}
+.year-dropdown optgroup{color:var(--text2);font-weight:700}
+.yr-clear-btn{
+  padding:4px 10px;
+  border-radius:6px;
+  border:1px solid var(--border);
+  background:transparent;
+  color:var(--text2);
+  cursor:pointer;
+  font-size:.8em;
+  transition:.2s;
+  display:none;
+}
+.yr-clear-btn:hover{border-color:var(--accent);color:var(--accent)}
+.yr-clear-btn.show{display:inline-block}
+
+/* ===== YEAR REVIEW PAGE ===== */
+.year-review{
+  display:none;
+  max-width:860px;
+  margin:0 auto;
+  padding:0 16px 60px;
+}
+.yr-page{padding-top:20px;animation:yrFadeIn .4s ease}
+@keyframes yrFadeIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.yr-header{
+  text-align:center;
+  padding:30px 20px 24px;
+  border-bottom:1px solid var(--border);
+  margin-bottom:32px;
+  animation:yrSlideDown .5s ease;
+}
+@keyframes yrSlideDown{from{opacity:0;transform:translateY(-15px)}to{opacity:1;transform:translateY(0)}}
+.yr-header h1{
+  font-size:4.5em;
+  font-weight:900;
+  line-height:1;
+  background:linear-gradient(135deg,var(--accent),var(--event),var(--game));
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  margin-bottom:8px;
+  letter-spacing:-2px;
+}
+.yr-subtitle{
+  font-size:1.1em;
+  color:var(--text2);
+  font-style:italic;
+}
+.yr-section{
+  margin-bottom:32px;
+  animation:yrFadeIn .5s ease backwards;
+}
+.yr-section:nth-child(2){animation-delay:.1s}
+.yr-section:nth-child(3){animation-delay:.2s}
+.yr-section:nth-child(4){animation-delay:.3s}
+.yr-section:nth-child(5){animation-delay:.4s}
+.yr-section:nth-child(6){animation-delay:.5s}
+.yr-section h2{
+  font-size:1.2em;
+  font-weight:700;
+  color:var(--accent);
+  margin-bottom:12px;
+  padding-bottom:8px;
+  border-bottom:1px solid var(--border);
+}
+.yr-content{
+  font-size:.95em;
+  line-height:1.8;
+  color:var(--text);
+}
+.yr-content p{margin-bottom:12px}
+.yr-content ul{margin:8px 0 12px 20px}
+.yr-content li{margin-bottom:6px}
+.yr-content strong{color:var(--text)}
+.yr-content em{color:var(--text2)}
+.yr-events-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
+  gap:10px;
+}
+.yr-event-card{
+  padding:10px 12px;
+  border-radius:8px;
+  background:var(--card);
+  border:1px solid var(--border);
+  cursor:pointer;
+  transition:all .25s ease;
+  animation:yrCardIn .3s ease backwards;
+}
+.yr-event-card:hover{border-color:var(--accent);background:var(--hover);transform:translateY(-2px);box-shadow:0 4px 12px rgba(88,166,255,.15)}
+@keyframes yrCardIn{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}
+.yr-event-card.imp3{border-left:3px solid #ffd700}
+.yr-event-card.imp2{border-left:3px solid var(--accent)}
+.yr-ev-date{font-size:.72em;color:var(--text2)}
+.yr-ev-name{font-size:.9em;font-weight:600;margin:2px 0}
+.yr-ev-en{font-size:.78em;color:var(--text2)}
+.yr-back{
+  text-align:center;
+  padding:30px 0;
+}
+.yr-back button{
+  padding:10px 24px;
+  border-radius:20px;
+  border:1px solid var(--border);
+  background:transparent;
+  color:var(--text);
+  cursor:pointer;
+  font-size:.95em;
+  transition:.2s;
+}
+.yr-back button:hover{border-color:var(--accent);color:var(--accent);background:rgba(88,166,255,.1)}
+.yr-btn{font-family:inherit}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:1200px){
+  .sidebar{width:220px}
+  .cal-cell{min-height:80px}
+}
+@media(max-width:900px){
+  .main-layout{flex-direction:column}
+  .sidebar{width:100%}
+  .sidebar-left{order:2}
+  .sidebar-right{order:3}
+  .sidebar-list{max-height:none}
+  .cal-cell{min-height:72px}
+  .sidebar{position:static}
+  /* Collapsible sidebar on mobile */
+  .sidebar-title{cursor:pointer;user-select:none;position:relative;padding-right:30px}
+  .sidebar-title::after{content:'▼';position:absolute;right:0;font-size:.7em;transition:transform .2s}
+  .sidebar-title.collapsed::after{transform:rotate(-90deg)}
+  .sidebar-list.collapsed{display:none}
+}
+@media(max-width:767px){
+  /* Hide desktop calendar on mobile */
+  .calendar-container{display:none}
+  .month-nav{display:flex}
+
+  /* Show timeline */
+  .mobile-timeline{display:block}
+
+  .modal{max-width:100%;border-radius:12px}
+  .event-img-wrap{width:64px;height:64px}
+  .event-card-inner{gap:8px}
+}
+@media(min-width:768px){
+  .mobile-timeline{display:none !important}
+}
+@media(max-width:480px){
+  .header h1{font-size:1.3em}
+  .tl-day{padding:8px 12px}
+}
+/* ====== Site Navigation ====== */
+.site-nav{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:10px 16px;border-bottom:1px solid var(--border);
+  background:var(--card);position:sticky;top:0;z-index:300;
+}
+.nav-link{
+  color:var(--accent);text-decoration:none;font-size:.85em;font-weight:600;
+  padding:4px 10px;border-radius:6px;border:1px solid var(--accent);
+  transition:.2s;
+}
+.nav-link:hover{background:var(--accent);color:#fff}
+.nav-title{font-size:.85em;color:var(--text2);font-weight:600}
+</style>
+</head>
+<body>
+<nav class="site-nav">
+  <a href="./index.html" class="nav-link">← IGN Daily</a>
+  <span class="nav-title">🎮 游戏日历</span>
+</nav>
+<div class="header">
+  <h1>🎮 游戏大事件日历</h1>
+  <p id="headerSub">Gaming History Calendar</p>
+</div>
+<div class="filters">
+  <button class="filter-btn active" data-type="all">全部</button>
+  <button class="filter-btn" data-type="game">🎮 游戏发售</button>
+  <button class="filter-btn" data-type="console">🕹️ 主机发售</button>
+  <button class="filter-btn" data-type="event">📅 展会活动</button>
+  <button class="filter-btn" data-type="milestone">🏆 里程碑</button>
+  <button class="filter-btn" data-type="upcoming">🔥 即将发售</button>
+</div>
+<div class="stats" id="stats"></div>
+<div class="search-wrap">
+  <div class="search-box">
+    <span class="search-icon">🔍</span>
+    <input type="text" id="searchInput" placeholder="搜索游戏、主机、事件… 支持中文、英文、年份" autocomplete="off" />
+    <button class="search-clear" id="searchClear" title="清空搜索">✕</button>
+  </div>
+</div>
+<div class="year-selector-wrap" id="yearSelectorWrap">
+  <div class="year-selector-inner">
+    <div class="year-select-row">
+      <span style="font-size:.85em;color:var(--text2)">📅 年份</span>
+      <select class="year-dropdown" id="yearDropdown">
+        <option value="">选择年份查看回顾...</option>
+      </select>
+      <button class="yr-clear-btn" id="yrClearBtn">✕ 返回日历</button>
+    </div>
+  </div>
+</div>
+
+<!-- Year Review Page -->
+<div class="year-review" id="yearReview"></div>
+
+<div class="month-nav" id="monthNav">
+  <button id="prevMonth">◀</button>
+  <select class="month-dropdown" id="monthDropdown"></select>
+  <button id="nextMonth">▶</button>
+</div>
+
+<!-- Desktop: 3-column layout with calendar -->
+<div class="main-layout">
+  <div class="sidebar sidebar-left" id="sidebarAnn">
+    <h3 class="sidebar-title" id="sidebarAnnTitle">🎉 整周年纪念</h3>
+    <div class="sidebar-list" id="sidebarAnnList"></div>
+  </div>
+  <div class="calendar-container">
+    <div class="cal-grid" id="calGrid"></div>
+  </div>
+  <div class="sidebar sidebar-right" id="sidebar">
+    <h3 class="sidebar-title" id="sidebarTitle">📌 本月重点</h3>
+    <div class="sidebar-list" id="sidebarList"></div>
+  </div>
+</div>
+
+<!-- Search results panel -->
+<div class="search-results" id="searchResults">
+  <div class="search-results-inner">
+    <div class="search-count" id="searchCount"></div>
+    <div id="searchResultsBody"></div>
+  </div>
+</div>
+
+<!-- Mobile: timeline list view -->
+<div class="mobile-timeline" id="mobileTimeline"></div>
+
+<!-- Modal -->
+<div class="modal-overlay" id="modal">
+  <div class="modal">
+    <div class="modal-header">
+      <h2 id="modalTitle"></h2>
+      <button class="modal-close" id="modalClose">×</button>
+    </div>
+    <div class="modal-body" id="modalBody"></div>
+  </div>
+</div>
+
+<script>
+const EVENTS=[{"month": 10, "day": 18, "year": 1985, "title_cn": "任天堂红白机", "title_en": "Famicom/NES", "type": "console", "desc": "FC在北美以NES名称发售，开启家用主机新时代", "wiki": "https://en.wikipedia.org/wiki/Nintendo_Entertainment_System", "importance": 3}, {"month": 1, "day": 9, "year": 2007, "title_cn": "初代iPhone发布", "title_en": "iPhone Announcement", "type": "milestone", "desc": "乔布斯发布iPhone，移动游戏时代的序幕", "wiki": "https://en.wikipedia.org/wiki/IPhone_(1st_generation)", "importance": 1}, {"month": 1, "day": 31, "year": 2001, "title_cn": "世嘉退出硬件市场", "title_en": "Sega Exits Hardware", "type": "milestone", "desc": "世嘉宣布停产Dreamcast，退出家用主机市场", "wiki": "https://en.wikipedia.org/wiki/Dreamcast", "importance": 3}, {"month": 2, "day": 5, "year": 2009, "title_cn": "《恶魔之魂》", "title_en": "Demon's Souls", "type": "game", "desc": "FromSoftware魂系列开山之作在日本发售", "wiki": "https://en.wikipedia.org/wiki/Demon%27s_Souls", "importance": 2}, {"month": 1, "day": 21, "year": 2000, "title_cn": "《生化危机 代号：维罗妮卡》", "title_en": "Resident Evil CODE: Veronica", "type": "game", "desc": "系列首部128位主机作品在Dreamcast发售", "wiki": "https://en.wikipedia.org/wiki/Resident_Evil_%E2%80%93_Code:_Veronica", "importance": 1}, {"month": 1, "day": 26, "year": 2010, "title_cn": "《质量效应2》", "title_en": "Mass Effect 2", "type": "game", "desc": "BioWare科幻RPG巅峰之作发售", "wiki": "https://en.wikipedia.org/wiki/Mass_Effect_2", "importance": 2}, {"month": 1, "day": 27, "year": 1998, "title_cn": "《生化危机2》", "title_en": "Resident Evil 2", "type": "game", "desc": "卡普空经典生存恐怖续作在PS1发售", "wiki": "https://en.wikipedia.org/wiki/Resident_Evil_2", "importance": 2}, {"month": 1, "day": 31, "year": 2006, "title_cn": "《旺达与巨像》", "title_en": "Shadow of the Colossus", "type": "game", "desc": "上田文人执导的PS2经典在北美发售", "wiki": "https://en.wikipedia.org/wiki/Shadow_of_the_Colossus", "importance": 2}, {"month": 2, "day": 1, "year": 2005, "title_cn": "战神", "title_en": "God of War", "type": "game", "desc": "圣莫尼卡工作室开创性动作游戏在PS2发售", "wiki": "https://en.wikipedia.org/wiki/God_of_War_(2005_video_game)", "importance": 2}, {"month": 2, "day": 4, "year": 2003, "title_cn": "《塞尔达传说：风之杖》", "title_en": "The Legend of Zelda: The Wind Waker", "type": "game", "desc": "塞尔达系列卡通渲染风格作品在NGC日本发售", "wiki": "https://en.wikipedia.org/wiki/The_Legend_of_Zelda:_The_Wind_Waker", "importance": 1}, {"month": 2, "day": 10, "year": 2009, "title_cn": "《街头霸王IV》", "title_en": "Street Fighter IV", "type": "game", "desc": "卡普空格斗经典系列回归之作在北美发售", "wiki": "https://en.wikipedia.org/wiki/Street_Fighter_IV", "importance": 1}, {"month": 2, "day": 12, "year": 2004, "title_cn": "任天堂DS", "title_en": "Nintendo DS", "type": "console", "desc": "任天堂双屏掌机在日本发售", "wiki": "https://en.wikipedia.org/wiki/Nintendo_DS", "importance": 1}, {"month": 2, "day": 14, "year": 2024, "title_cn": "最终幻想7 重生", "title_en": "Final Fantasy VII Rebirth", "type": "game", "desc": "SE最终幻想VII重制三部曲第二部发售", "wiki": "https://en.wikipedia.org/wiki/Final_Fantasy_VII_Rebirth", "importance": 2}, {"month": 2, "day": 20, "year": 2018, "title_cn": "《怪物猎人：世界》", "title_en": "Monster Hunter: World", "type": "game", "desc": "卡普空怪猎系列首部全球大卖作品PC版发售", "wiki": "https://en.wikipedia.org/wiki/Monster_Hunter:_World", "importance": 1}, {"month": 2, "day": 21, "year": 1986, "title_cn": "塞尔达传说", "title_en": "The Legend of Zelda", "type": "game", "desc": "任天堂传奇系列首作在日本FC磁碟机发售", "wiki": "https://en.wikipedia.org/wiki/The_Legend_of_Zelda_(video_game)", "importance": 3}, {"month": 2, "day": 22, "year": 2011, "title_cn": "PlayStation Vita", "title_en": "PlayStation Vita", "type": "console", "desc": "索尼次世代掌机PSV在日本发售", "wiki": "https://en.wikipedia.org/wiki/PlayStation_Vita", "importance": 1}, {"month": 2, "day": 25, "year": 2022, "title_cn": "艾尔登法环", "title_en": "Elden Ring", "type": "game", "desc": "FromSoftware与宫崎英高、乔治·R·R·马丁合作的开放世界魂系巨作发售", "wiki": "https://en.wikipedia.org/wiki/Elden_Ring", "importance": 3}, {"month": 2, "day": 27, "year": 1996, "title_cn": "《宝可梦 红/绿》", "title_en": "Pokémon Red/Green", "type": "game", "desc": "Game Freak开创性RPG在日本Game Boy发售，全球现象的起点", "wiki": "https://en.wikipedia.org/wiki/Pok%C3%A9mon_Red_and_Blue", "importance": 3}, {"month": 3, "day": 3, "year": 2017, "title_cn": "任天堂Switch", "title_en": "Nintendo Switch", "type": "console", "desc": "任天堂划时代混合型主机全球发售", "wiki": "https://en.wikipedia.org/wiki/Nintendo_Switch", "importance": 3}, {"month": 3, "day": 3, "year": 2017, "title_cn": "《塞尔达传说：旷野之息》", "title_en": "The Legend of Zelda: Breath of the Wild", "type": "game", "desc": "塞尔达系列革命性开放世界作品随Switch首发", "wiki": "https://en.wikipedia.org/wiki/The_Legend_of_Zelda:_Breath_of_the_Wild", "importance": 3}, {"month": 3, "day": 4, "year": 2000, "title_cn": "PlayStation 2", "title_en": "PlayStation 2", "type": "console", "desc": "史上最畅销游戏主机PS2在日本发售", "wiki": "https://en.wikipedia.org/wiki/PlayStation_2", "importance": 3}, {"month": 3, "day": 8, "year": 2005, "title_cn": "PlayStation Portable", "title_en": "PSP", "type": "console", "desc": "索尼首款掌机PSP在北美发售", "wiki": "https://en.wikipedia.org/wiki/PlayStation_Portable", "importance": 1}, {"month": 9, "day": 13, "year": 1985, "title_cn": "《超级马力欧兄弟》", "title_en": "Super Mario Bros.", "type": "game", "desc": "宫本茂创作的平台游戏巅峰之作在日本发售", "wiki": "https://en.wikipedia.org/wiki/Super_Mario_Bros.", "importance": 3}, {"month": 3, "day": 20, "year": 2020, "title_cn": "《集合啦！动物森友会》", "title_en": "Animal Crossing: New Horizons", "type": "game", "desc": "疫情期间全球大热的任天堂生活模拟游戏发售", "wiki": "https://en.wikipedia.org/wiki/Animal_Crossing:_New_Horizons", "importance": 2}, {"month": 3, "day": 22, "year": 2022, "title_cn": "GDC 2022", "title_en": "GDC 2022", "type": "event", "desc": "游戏开发者大会2022在旧金山举办", "wiki": "https://en.wikipedia.org/wiki/Game_Developers_Conference", "importance": 1}, {"month": 3, "day": 28, "year": 2006, "title_cn": "上古卷轴4：湮灭", "title_en": "The Elder Scrolls IV: Oblivion", "type": "game", "desc": "Bethesda开放世界RPG在Xbox 360和PC发售", "wiki": "https://en.wikipedia.org/wiki/The_Elder_Scrolls_IV:_Oblivion", "importance": 2}, {"month": 3, "day": 31, "year": 1998, "title_cn": "《星际争霸》", "title_en": "StarCraft", "type": "game", "desc": "暴雪经典即时战略游戏发售，电竞史上里程碑", "wiki": "https://en.wikipedia.org/wiki/StarCraft_(video_game)", "importance": 3}, {"month": 4, "day": 2, "year": 2014, "title_cn": "《黑暗之魂II》", "title_en": "Dark Souls II", "type": "game", "desc": "FromSoftware魂系列第二部正统续作发售", "wiki": "https://en.wikipedia.org/wiki/Dark_Souls_II", "importance": 1}, {"month": 4, "day": 14, "year": 2015, "title_cn": "血源诅咒", "title_en": "Bloodborne", "type": "game", "desc": "宫崎英高执导的PS4独占哥特式动作RPG发售", "wiki": "https://en.wikipedia.org/wiki/Bloodborne", "importance": 2}, {"month": 4, "day": 20, "year": 2018, "title_cn": "《战神》(2018)", "title_en": "God of War (2018)", "type": "game", "desc": "圣莫尼卡工作室重启战神系列，北欧神话新篇章", "wiki": "https://en.wikipedia.org/wiki/God_of_War_(2018_video_game)", "importance": 2}, {"month": 4, "day": 21, "year": 1989, "title_cn": "Game Boy", "title_en": "Game Boy", "type": "console", "desc": "任天堂经典掌机在日本发售，掌机游戏时代开启", "wiki": "https://en.wikipedia.org/wiki/Game_Boy", "importance": 2}, {"month": 11, "day": 21, "year": 1990, "title_cn": "《超级马力欧世界》", "title_en": "Super Mario World", "type": "game", "desc": "超任/SFC首发护航大作，系列巅峰之一", "wiki": "https://en.wikipedia.org/wiki/Super_Mario_World", "importance": 2}, {"month": 4, "day": 26, "year": 2016, "title_cn": "《神秘海域4：盗贼末路》", "title_en": "Uncharted 4: A Thief's End", "type": "game", "desc": "顽皮狗动作冒险系列完结篇在PS4发售", "wiki": "https://en.wikipedia.org/wiki/Uncharted_4:_A_Thief%27s_End", "importance": 2}, {"month": 4, "day": 27, "year": 2010, "title_cn": "荒野大镖客：救赎", "title_en": "Red Dead Redemption", "type": "game", "desc": "R星西部开放世界大作在PS3/X360发售", "wiki": "https://en.wikipedia.org/wiki/Red_Dead_Redemption", "importance": 2}, {"month": 4, "day": 29, "year": 2003, "title_cn": "《真·三国无双3》", "title_en": "Dynasty Warriors 4", "type": "game", "desc": "光荣割草游戏系列经典之作", "wiki": "https://en.wikipedia.org/wiki/Dynasty_Warriors_4", "importance": 1}, {"month": 5, "day": 5, "year": 2023, "title_cn": "《塞尔达传说：王国之泪》", "title_en": "The Legend of Zelda: Tears of the Kingdom", "type": "game", "desc": "旷野之息续作发售，开放世界新高度", "wiki": "https://en.wikipedia.org/wiki/The_Legend_of_Zelda:_Tears_of_the_Kingdom", "importance": 2}, {"month": 5, "day": 10, "year": 2016, "title_cn": "《守望先锋》", "title_en": "Overwatch", "type": "game", "desc": "暴雪首款FPS团队射击游戏正式发售", "wiki": "https://en.wikipedia.org/wiki/Overwatch_(video_game)", "importance": 2}, {"month": 5, "day": 12, "year": 2023, "title_cn": "E3 2023取消", "title_en": "E3 2023 Cancelled", "type": "milestone", "desc": "E3展会正式宣布取消，标志游戏展会时代变迁", "wiki": "https://en.wikipedia.org/wiki/E3", "importance": 1}, {"month": 5, "day": 15, "year": 2014, "title_cn": "《马力欧赛车8》", "title_en": "Mario Kart 8", "type": "game", "desc": "任天堂经典赛车游戏系列最新作在Wii U发售", "wiki": "https://en.wikipedia.org/wiki/Mario_Kart_8", "importance": 1}, {"month": 5, "day": 19, "year": 2015, "title_cn": "《巫师3：狂猎》", "title_en": "The Witcher 3: Wild Hunt", "type": "game", "desc": "CD Projekt RED开放世界RPG巨作发售，年度游戏", "wiki": "https://en.wikipedia.org/wiki/The_Witcher_3:_Wild_Hunt", "importance": 2}, {"month": 5, "day": 24, "year": 2002, "title_cn": "初代Xbox在日本发售", "title_en": "Xbox Japan Launch", "type": "console", "desc": "微软Xbox主机登陆日本市场", "wiki": "https://en.wikipedia.org/wiki/Xbox_(console)", "importance": 1}, {"month": 5, "day": 26, "year": 2020, "title_cn": "《异度神剑 终极版》", "title_en": "Xenoblade Chronicles: Definitive Edition", "type": "game", "desc": "Monolith Soft经典JRPG重制版在Switch发售", "wiki": "https://en.wikipedia.org/wiki/Xenoblade_Chronicles:_Definitive_Edition", "importance": 1}, {"month": 5, "day": 29, "year": 1993, "title_cn": "《最终幻想V》", "title_en": "Final Fantasy V", "type": "game", "desc": "SE（原史克威尔）经典RPG续作在SFC发售", "wiki": "https://en.wikipedia.org/wiki/Final_Fantasy_V", "importance": 1}, {"month": 6, "day": 1, "year": 2001, "title_cn": "《暗黑破坏神II：毁灭之王》", "title_en": "Diablo II: Lord of Destruction", "type": "game", "desc": "暴雪经典ARPG资料片发售", "wiki": "https://en.wikipedia.org/wiki/Diablo_II:_Lord_of_Destruction", "importance": 1}, {"month": 6, "day": 5, "year": 1995, "title_cn": "E3首届", "title_en": "First E3", "type": "event", "desc": "首届电子娱乐博览会在洛杉矶举办", "wiki": "https://en.wikipedia.org/wiki/E3_1995", "importance": 3}, {"month": 6, "day": 11, "year": 2002, "title_cn": "《王国之心》", "title_en": "Kingdom Hearts", "type": "game", "desc": "史克威尔与迪士尼合作RPG在日本PS2发售", "wiki": "https://en.wikipedia.org/wiki/Kingdom_Hearts_(video_game)", "importance": 2}, {"month": 6, "day": 12, "year": 2019, "title_cn": "E3 2019", "title_en": "E3 2019", "type": "event", "desc": "E3 2019在洛杉矶举办，多款重磅游戏公布", "wiki": "https://en.wikipedia.org/wiki/E3_2019", "importance": 1}, {"month": 6, "day": 14, "year": 2005, "title_cn": "《吉他英雄》", "title_en": "Guitar Hero", "type": "game", "desc": "开创音乐游戏热潮的经典之作发售", "wiki": "https://en.wikipedia.org/wiki/Guitar_Hero_(video_game)", "importance": 1}, {"month": 6, "day": 19, "year": 2018, "title_cn": "《堡垒之夜》登陆Switch", "title_en": "Fortnite on Switch", "type": "milestone", "desc": "Epic大逃杀现象级游戏登陆任天堂Switch", "wiki": "https://en.wikipedia.org/wiki/Fortnite_Battle_Royale", "importance": 1}, {"month": 6, "day": 23, "year": 1996, "title_cn": "任天堂64", "title_en": "Nintendo 64", "type": "console", "desc": "任天堂第三代家用主机N64在日本发售", "wiki": "https://en.wikipedia.org/wiki/Nintendo_64", "importance": 3}, {"month": 6, "day": 23, "year": 1996, "title_cn": "《超级马力欧64》", "title_en": "Super Mario 64", "type": "game", "desc": "3D平台游戏开山之作，随N64首发", "wiki": "https://en.wikipedia.org/wiki/Super_Mario_64", "importance": 3}, {"month": 6, "day": 29, "year": 2000, "title_cn": "《暗黑破坏神II》", "title_en": "Diablo II", "type": "game", "desc": "暴雪经典ARPG系列第二部发售", "wiki": "https://en.wikipedia.org/wiki/Diablo_II", "importance": 2}, {"month": 7, "day": 1, "year": 1983, "title_cn": "《大金刚》街机", "title_en": "Donkey Kong (Arcade)", "type": "game", "desc": "宫本茂设计的经典街机游戏，马力欧首次登场", "wiki": "https://en.wikipedia.org/wiki/Donkey_Kong_(video_game)", "importance": 1}, {"month": 7, "day": 7, "year": 1999, "title_cn": "《超级粉碎兄弟》", "title_en": "Super Smash Bros.", "type": "game", "desc": "任天堂全明星格斗游戏初代在日本N64发售", "wiki": "https://en.wikipedia.org/wiki/Super_Smash_Bros._(video_game)", "importance": 2}, {"month": 7, "day": 15, "year": 1983, "title_cn": "FC/红白机", "title_en": "Family Computer", "type": "console", "desc": "任天堂红白机在日本发售，拯救了北美游戏市场崩溃", "wiki": "https://en.wikipedia.org/wiki/Nintendo_Entertainment_System", "importance": 3}, {"month": 7, "day": 17, "year": 2020, "title_cn": "对马岛之魂", "title_en": "Ghost of Tsushima", "type": "game", "desc": "Sucker Punch开放世界武士动作游戏在PS4发售", "wiki": "https://en.wikipedia.org/wiki/Ghost_of_Tsushima", "importance": 2}, {"month": 7, "day": 21, "year": 2017, "title_cn": "《斯普拉遁2》", "title_en": "Splatoon 2", "type": "game", "desc": "任天堂彩墨射击游戏续作在Switch发售", "wiki": "https://en.wikipedia.org/wiki/Splatoon_2", "importance": 1}, {"month": 7, "day": 25, "year": 2005, "title_cn": "Steam", "title_en": "Steam", "type": "milestone", "desc": "Valve的Steam平台开始向第三方开发者开放", "wiki": "https://en.wikipedia.org/wiki/Steam_(service)", "importance": 1}, {"month": 7, "day": 29, "year": 2016, "title_cn": "《精灵宝可梦GO》", "title_en": "Pokémon GO", "type": "game", "desc": "Niantic AR手游在日本上线，全球现象级游戏", "wiki": "https://en.wikipedia.org/wiki/Pok%C3%A9mon_Go", "importance": 3}, {"month": 8, "day": 6, "year": 2024, "title_cn": "Gamescom 2024", "title_en": "Gamescom 2024", "type": "event", "desc": "欧洲最大游戏展会Gamescom在科隆开幕", "wiki": "https://en.wikipedia.org/wiki/Gamescom", "importance": 1}, {"month": 8, "day": 14, "year": 2007, "title_cn": "《生化奇兵》", "title_en": "BioShock", "type": "game", "desc": "Irrational Games沉浸式射击经典在X360/PC发售", "wiki": "https://en.wikipedia.org/wiki/BioShock", "importance": 2}, {"month": 8, "day": 21, "year": 2012, "title_cn": "《反恐精英：全球攻势》", "title_en": "Counter-Strike: Global Offensive", "type": "game", "desc": "Valve经典FPS续作CS:GO发售", "wiki": "https://en.wikipedia.org/wiki/Counter-Strike:_Global_Offensive", "importance": 2}, {"month": 8, "day": 24, "year": 2004, "title_cn": "《末日之战》", "title_en": "Doom 3", "type": "game", "desc": "id Software经典FPS系列第三部发售", "wiki": "https://en.wikipedia.org/wiki/Doom_3", "importance": 1}, {"month": 8, "day": 25, "year": 2017, "title_cn": "《全面战争：战锤II》", "title_en": "Total War: Warhammer II", "type": "game", "desc": "Creative Assembly策略大作续作发售", "wiki": "https://en.wikipedia.org/wiki/Total_War:_Warhammer_II", "importance": 1}, {"month": 9, "day": 1, "year": 1998, "title_cn": "合金装备", "title_en": "Metal Gear Solid", "type": "game", "desc": "小岛秀夫潜行动作经典之作在日本PS1发售", "wiki": "https://en.wikipedia.org/wiki/Metal_Gear_Solid", "importance": 2}, {"month": 9, "day": 9, "year": 1995, "title_cn": "PlayStation", "title_en": "PlayStation", "type": "console", "desc": "索尼初代PlayStation在北美发售，改变游戏业格局", "wiki": "https://en.wikipedia.org/wiki/PlayStation_(console)", "importance": 3}, {"month": 9, "day": 9, "year": 1999, "title_cn": "世嘉Dreamcast", "title_en": "Sega Dreamcast", "type": "console", "desc": "世嘉最后一款家用主机在北美发售", "wiki": "https://en.wikipedia.org/wiki/Dreamcast", "importance": 2}, {"month": 9, "day": 12, "year": 2006, "title_cn": "TGS 2006", "title_en": "Tokyo Game Show 2006", "type": "event", "desc": "东京电玩展2006开幕", "wiki": "https://en.wikipedia.org/wiki/Tokyo_Game_Show", "importance": 1}, {"month": 9, "day": 13, "year": 1985, "title_cn": "《超级马力欧兄弟》", "title_en": "Super Mario Bros.", "type": "game", "desc": "FC/NES平台游戏传奇之作在日本发售", "wiki": "https://en.wikipedia.org/wiki/Super_Mario_Bros.", "importance": 3}, {"month": 9, "day": 14, "year": 2007, "title_cn": "《光环3》", "title_en": "Halo 3", "type": "game", "desc": "Bungie经典FPS三部曲终章在Xbox 360发售", "wiki": "https://en.wikipedia.org/wiki/Halo_3", "importance": 2}, {"month": 9, "day": 17, "year": 2013, "title_cn": "GTA5", "title_en": "Grand Theft Auto V", "type": "game", "desc": "R星开放世界巨作GTA5在PS3/X360发售，史上最畅销游戏之一", "wiki": "https://en.wikipedia.org/wiki/Grand_Theft_Auto_V", "importance": 3}, {"month": 9, "day": 20, "year": 2016, "title_cn": "TGS 2016", "title_en": "Tokyo Game Show 2016", "type": "event", "desc": "东京电玩展2016开幕", "wiki": "https://en.wikipedia.org/wiki/Tokyo_Game_Show", "importance": 1}, {"month": 9, "day": 22, "year": 2004, "title_cn": "《星球大战：旧共和国武士II》", "title_en": "Star Wars: KOTOR II", "type": "game", "desc": "黑曜石经典星战RPG续作发售", "wiki": "https://en.wikipedia.org/wiki/Star_Wars_Knights_of_the_Old_Republic_II:_The_Sith_Lords", "importance": 1}, {"month": 9, "day": 25, "year": 2018, "title_cn": "TGS 2018", "title_en": "Tokyo Game Show 2018", "type": "event", "desc": "东京电玩展2018开幕", "wiki": "https://en.wikipedia.org/wiki/Tokyo_Game_Show", "importance": 1}, {"month": 9, "day": 29, "year": 2011, "title_cn": "黑暗之魂", "title_en": "Dark Souls", "type": "game", "desc": "FromSoftware魂系列奠基之作在PS3/X360发售", "wiki": "https://en.wikipedia.org/wiki/Dark_Souls", "importance": 2}, {"month": 10, "day": 7, "year": 2003, "title_cn": "《星球大战：旧共和国武士》", "title_en": "Star Wars: Knights of the Old Republic", "type": "game", "desc": "BioWare经典星战RPG在PC发售", "wiki": "https://en.wikipedia.org/wiki/Star_Wars:_Knights_of_the_Old_Republic_(video_game)", "importance": 1}, {"month": 10, "day": 10, "year": 2023, "title_cn": "微软完成收购动视暴雪", "title_en": "Microsoft Acquires Activision Blizzard", "type": "milestone", "desc": "微软以687亿美元完成收购动视暴雪，游戏史上最大收购", "wiki": "https://en.wikipedia.org/wiki/Proposed_acquisition_of_Activision_Blizzard_by_Microsoft", "importance": 3}, {"month": 10, "day": 18, "year": 2011, "title_cn": "《蝙蝠侠：阿卡姆之城》", "title_en": "Batman: Arkham City", "type": "game", "desc": "Rocksteady超级英雄动作游戏续作发售", "wiki": "https://en.wikipedia.org/wiki/Batman:_Arkham_City", "importance": 1}, {"month": 10, "day": 20, "year": 2020, "title_cn": "Xbox Series X/S", "title_en": "Xbox Series X/S", "type": "console", "desc": "微软次世代主机全球发售", "wiki": "https://en.wikipedia.org/wiki/Xbox_Series_X_and_Series_S", "importance": 2}, {"month": 10, "day": 25, "year": 2019, "title_cn": "《使命召唤：现代战争》(2019)", "title_en": "Call of Duty: Modern Warfare", "type": "game", "desc": "动视重启经典FPS系列发售", "wiki": "https://en.wikipedia.org/wiki/Call_of_Duty:_Modern_Warfare_(2019_video_game)", "importance": 1}, {"month": 10, "day": 26, "year": 2018, "title_cn": "荒野大镖客：救赎2", "title_en": "Red Dead Redemption 2", "type": "game", "desc": "R星西部开放世界史诗巨作在PS4/Xbox One发售", "wiki": "https://en.wikipedia.org/wiki/Red_Dead_Redemption_2", "importance": 2}, {"month": 10, "day": 27, "year": 2010, "title_cn": "《辐射：新维加斯》", "title_en": "Fallout: New Vegas", "type": "game", "desc": "黑曜石开发的经典开放世界RPG发售", "wiki": "https://en.wikipedia.org/wiki/Fallout:_New_Vegas", "importance": 2}, {"month": 10, "day": 31, "year": 2000, "title_cn": "《鬼泣》", "title_en": "Devil May Cry", "type": "game", "desc": "卡普空开创性动作游戏在日本PS2发售", "wiki": "https://en.wikipedia.org/wiki/Devil_May_Cry_(video_game)", "importance": 1}, {"month": 11, "day": 1, "year": 2004, "title_cn": "《光环2》", "title_en": "Halo 2", "type": "game", "desc": "Bungie经典FPS续作在Xbox发售", "wiki": "https://en.wikipedia.org/wiki/Halo_2", "importance": 2}, {"month": 11, "day": 3, "year": 2003, "title_cn": "使命召唤", "title_en": "Call of Duty", "type": "game", "desc": "Infinity Ward经典FPS系列首作发售", "wiki": "https://en.wikipedia.org/wiki/Call_of_Duty_(video_game)", "importance": 1}, {"month": 11, "day": 5, "year": 2011, "title_cn": "《使命召唤：现代战争3》", "title_en": "Call of Duty: Modern Warfare 3", "type": "game", "desc": "首日销售额创娱乐产品纪录", "wiki": "https://en.wikipedia.org/wiki/Call_of_Duty:_Modern_Warfare_3", "importance": 1}, {"month": 11, "day": 6, "year": 2007, "title_cn": "《使命召唤4：现代战争》", "title_en": "Call of Duty 4: Modern Warfare", "type": "game", "desc": "革命性FPS经典，开启现代战争子系列", "wiki": "https://en.wikipedia.org/wiki/Call_of_Duty_4:_Modern_Warfare", "importance": 2}, {"month": 11, "day": 7, "year": 2006, "title_cn": "战争机器", "title_en": "Gears of War", "type": "game", "desc": "Epic Games第三人称射击大作在Xbox 360发售", "wiki": "https://en.wikipedia.org/wiki/Gears_of_War_(video_game)", "importance": 1}, {"month": 11, "day": 23, "year": 2004, "title_cn": "魔兽世界", "title_en": "World of Warcraft", "type": "game", "desc": "暴雪传奇MMORPG在北美发售，改变网游历史", "wiki": "https://en.wikipedia.org/wiki/World_of_Warcraft", "importance": 3}, {"month": 11, "day": 10, "year": 2020, "title_cn": "Xbox Series X/S", "title_en": "Xbox Series X/S", "type": "console", "desc": "微软次世代主机全球发售", "wiki": "https://en.wikipedia.org/wiki/Xbox_Series_X_and_Series_S", "importance": 2}, {"month": 11, "day": 11, "year": 2011, "title_cn": "上古卷轴5：天际", "title_en": "The Elder Scrolls V: Skyrim", "type": "game", "desc": "Bethesda开放世界RPG传奇之作发售", "wiki": "https://en.wikipedia.org/wiki/The_Elder_Scrolls_V:_Skyrim", "importance": 3}, {"month": 11, "day": 11, "year": 2020, "title_cn": "PlayStation 5", "title_en": "PlayStation 5", "type": "console", "desc": "索尼次世代主机PS5在北美发售", "wiki": "https://en.wikipedia.org/wiki/PlayStation_5", "importance": 3}, {"month": 11, "day": 12, "year": 2006, "title_cn": "PlayStation 3", "title_en": "PlayStation 3", "type": "console", "desc": "索尼第三代家用主机PS3在日本发售", "wiki": "https://en.wikipedia.org/wiki/PlayStation_3", "importance": 2}, {"month": 11, "day": 15, "year": 2001, "title_cn": "初代Xbox", "title_en": "Xbox", "type": "console", "desc": "微软首款家用主机Xbox在北美发售", "wiki": "https://en.wikipedia.org/wiki/Xbox_(console)", "importance": 3}, {"month": 11, "day": 15, "year": 2001, "title_cn": "《光环：战斗进化》", "title_en": "Halo: Combat Evolved", "type": "game", "desc": "Bungie经典FPS随Xbox首发，定义主机FPS", "wiki": "https://en.wikipedia.org/wiki/Halo:_Combat_Evolved", "importance": 3}, {"month": 11, "day": 17, "year": 2006, "title_cn": "任天堂Wii", "title_en": "Nintendo Wii", "type": "console", "desc": "任天堂体感革命主机Wii在北美发售", "wiki": "https://en.wikipedia.org/wiki/Wii", "importance": 2}, {"month": 11, "day": 18, "year": 2011, "title_cn": "《我的世界》正式版", "title_en": "Minecraft", "type": "game", "desc": "Mojang沙盒游戏正式版发布，后来成为史上最畅销游戏", "wiki": "https://en.wikipedia.org/wiki/Minecraft", "importance": 3}, {"month": 11, "day": 19, "year": 2006, "title_cn": "《塞尔达传说：黄昏公主》", "title_en": "The Legend of Zelda: Twilight Princess", "type": "game", "desc": "塞尔达系列Wii/NGC作品发售", "wiki": "https://en.wikipedia.org/wiki/The_Legend_of_Zelda:_Twilight_Princess", "importance": 2}, {"month": 11, "day": 19, "year": 2021, "title_cn": "《宝可梦 晶灿钻石/明亮珍珠》", "title_en": "Pokémon Brilliant Diamond/Shining Pearl", "type": "game", "desc": "宝可梦第四世代重制版在Switch发售", "wiki": "https://en.wikipedia.org/wiki/Pok%C3%A9mon_Brilliant_Diamond_and_Shining_Pearl", "importance": 1}, {"month": 11, "day": 20, "year": 1998, "title_cn": "塞尔达传说：时之笛", "title_en": "The Legend of Zelda: Ocarina of Time", "type": "game", "desc": "史上评分最高的游戏之一，在N64发售", "wiki": "https://en.wikipedia.org/wiki/The_Legend_of_Zelda:_Ocarina_of_Time", "importance": 3}, {"month": 11, "day": 21, "year": 2004, "title_cn": "任天堂DS", "title_en": "Nintendo DS", "type": "console", "desc": "任天堂双屏掌机在北美发售", "wiki": "https://en.wikipedia.org/wiki/Nintendo_DS", "importance": 1}, {"month": 11, "day": 22, "year": 2005, "title_cn": "Xbox 360", "title_en": "Xbox 360", "type": "console", "desc": "微软第二代主机Xbox 360在北美发售", "wiki": "https://en.wikipedia.org/wiki/Xbox_360", "importance": 2}, {"month": 11, "day": 23, "year": 2004, "title_cn": "《合金装备3：食蛇者》", "title_en": "Metal Gear Solid 3: Snake Eater", "type": "game", "desc": "小岛秀夫经典潜行动作续作在PS2发售", "wiki": "https://en.wikipedia.org/wiki/Metal_Gear_Solid_3:_Snake_Eater", "importance": 2}, {"month": 11, "day": 30, "year": 2012, "title_cn": "任天堂Wii U", "title_en": "Nintendo Wii U", "type": "console", "desc": "任天堂第六代家用主机Wii U在日本发售", "wiki": "https://en.wikipedia.org/wiki/Wii_U", "importance": 1}, {"month": 12, "day": 1, "year": 1994, "title_cn": "PlayStation", "title_en": "PlayStation", "type": "console", "desc": "索尼初代PlayStation在日本发售", "wiki": "https://en.wikipedia.org/wiki/PlayStation_(console)", "importance": 3}, {"month": 1, "day": 31, "year": 1997, "title_cn": "《最终幻想VII》", "title_en": "Final Fantasy VII", "type": "game", "desc": "史克威尔传奇RPG在日本PS1发售，JRPG走向世界", "wiki": "https://en.wikipedia.org/wiki/Final_Fantasy_VII", "importance": 3}, {"month": 12, "day": 5, "year": 2017, "title_cn": "TGA 2017", "title_en": "The Game Awards 2017", "type": "event", "desc": "年度游戏颁奖典礼举办", "wiki": "https://en.wikipedia.org/wiki/The_Game_Awards_2017", "importance": 1}, {"month": 12, "day": 7, "year": 2017, "title_cn": "《绝地求生》", "title_en": "PUBG", "type": "game", "desc": "大逃杀品类开创者正式版在Steam发售", "wiki": "https://en.wikipedia.org/wiki/PUBG:_Battlegrounds", "importance": 2}, {"month": 12, "day": 8, "year": 2022, "title_cn": "TGA 2022", "title_en": "The Game Awards 2022", "type": "event", "desc": "年度游戏颁奖典礼举办", "wiki": "https://en.wikipedia.org/wiki/The_Game_Awards_2022", "importance": 1}, {"month": 12, "day": 10, "year": 2020, "title_cn": "赛博朋克2077", "title_en": "Cyberpunk 2077", "type": "game", "desc": "CD Projekt RED开放世界赛博朋克RPG发售", "wiki": "https://en.wikipedia.org/wiki/Cyberpunk_2077", "importance": 2}, {"month": 12, "day": 12, "year": 2019, "title_cn": "TGA 2019", "title_en": "The Game Awards 2019", "type": "event", "desc": "年度游戏颁奖典礼举办", "wiki": "https://en.wikipedia.org/wiki/The_Game_Awards_2019", "importance": 1}, {"month": 12, "day": 14, "year": 2006, "title_cn": "《战争机器》PC版", "title_en": "Gears of War PC", "type": "game", "desc": "Epic经典TPS登陆PC平台", "wiki": "https://en.wikipedia.org/wiki/Gears_of_War_(video_game)", "importance": 1}, {"month": 12, "day": 18, "year": 2014, "title_cn": "《龙腾世纪：审判》", "title_en": "Dragon Age: Inquisition", "type": "game", "desc": "BioWare开放世界RPG，获TGA年度游戏", "wiki": "https://en.wikipedia.org/wiki/Dragon_Age:_Inquisition", "importance": 1}, {"month": 12, "day": 20, "year": 2019, "title_cn": "《星球大战绝地：陨落的武士团》", "title_en": "Star Wars Jedi: Fallen Order", "type": "game", "desc": "Respawn星战动作冒险游戏发售", "wiki": "https://en.wikipedia.org/wiki/Star_Wars_Jedi:_Fallen_Order", "importance": 1}, {"month": 2, "day": 10, "year": 1988, "title_cn": "《勇者斗恶龙III》", "title_en": "Dragon Quest III", "type": "game", "desc": "国民RPG系列经典之作在日本FC发售，引发社会现象", "wiki": "https://en.wikipedia.org/wiki/Dragon_Quest_III", "importance": 2}, {"month": 12, "day": 25, "year": 2003, "title_cn": "Steam平台发售首款第三方游戏", "title_en": "Steam Third-Party Games", "type": "milestone", "desc": "Valve的Steam平台开始销售第三方游戏", "wiki": "https://en.wikipedia.org/wiki/Steam_(service)", "importance": 1}, {"month": 3, "day": 20, "year": 2025, "title_cn": "刺客信条：影", "title_en": "Assassin's Creed Shadows", "type": "game", "desc": "育碧开放世界动作RPG，以日本封建时代为背景，双主角弥助与直江", "wiki": "https://en.wikipedia.org/wiki/Assassin%27s_Creed_Shadows", "importance": 2}, {"month": 6, "day": 5, "year": 2025, "title_cn": "Nintendo Switch 2", "title_en": "Nintendo Switch 2", "type": "console", "desc": "任天堂下一代混合型主机全球发售，售价449.99美元", "wiki": "https://en.wikipedia.org/wiki/Nintendo_Switch_2", "importance": 3}, {"month": 6, "day": 26, "year": 2025, "title_cn": "《死亡搁浅2：冥滩之上》", "title_en": "Death Stranding 2: On the Beach", "type": "game", "desc": "小岛秀夫续作在PS5发售，PC版2026年3月19日", "wiki": "https://en.wikipedia.org/wiki/Death_Stranding_2:_On_the_Beach", "importance": 2}, {"month": 2, "day": 27, "year": 2026, "title_cn": "生化危机：安魂曲", "title_en": "Resident Evil Requiem", "type": "game", "desc": "卡普空生化危机系列第九部正统续作，2025 Summer Game Fest公布", "wiki": "https://en.wikipedia.org/wiki/Resident_Evil", "importance": 2}, {"month": 3, "day": 19, "year": 2026, "title_cn": "《死亡搁浅2：冥滩之上》PC版", "title_en": "Death Stranding 2: On the Beach (PC)", "type": "game", "desc": "小岛秀夫续作PC版发售", "wiki": "https://en.wikipedia.org/wiki/Death_Stranding_2:_On_the_Beach", "importance": 1}, {"month": 11, "day": 19, "year": 2026, "title_cn": "《侠盗猎车手VI》", "title_en": "Grand Theft Auto VI", "type": "upcoming", "desc": "R星十年磨一剑的开放世界巨作，舞台Vice City，PS5/XSX|S", "wiki": "https://en.wikipedia.org/wiki/Grand_Theft_Auto_VI", "importance": 3}, {"month": 11, "day": 2, "year": 2025, "title_cn": "红色沙漠", "title_en": "Crimson Desert", "type": "game", "desc": "Pearl Abyss开放世界动作冒险大作", "wiki": "https://en.wikipedia.org/wiki/Crimson_Desert", "importance": 2}, {"month": 10, "day": 18, "year": 1958, "title_en": "Tennis for Two", "title_cn": "双人网球", "type": "milestone", "desc": "威廉·希金博特姆在布鲁克海文国家实验室制作的示波器游戏，被认为是最早的电子游戏之一", "wiki": "https://en.wikipedia.org/wiki/Tennis_for_Two", "importance": 3}, {"month": 4, "day": 1, "year": 1962, "title_en": "Spacewar!", "title_cn": "太空战争！", "type": "milestone", "desc": "MIT学生在PDP-1上开发的开创性电子游戏，影响了整个游戏产业", "wiki": "https://en.wikipedia.org/wiki/Spacewar!", "importance": 3}, {"month": 9, "day": 1, "year": 1972, "title_en": "Magnavox Odyssey", "title_cn": "米罗华奥德赛", "type": "console", "desc": "世界上第一款家用电子游戏机，由拉尔夫·贝尔设计", "wiki": "https://en.wikipedia.org/wiki/Magnavox_Odyssey", "importance": 3}, {"month": 11, "day": 29, "year": 1972, "title_en": "Pong", "title_cn": "乒", "type": "game", "desc": "雅达利推出的街机游戏，电子游戏商业化的开端", "wiki": "https://en.wikipedia.org/wiki/Pong", "importance": 3}, {"month": 6, "day": 27, "year": 1972, "title_en": "Atari Founded", "title_cn": "雅达利成立", "type": "milestone", "desc": "诺兰·布什内尔创立雅达利公司，开启街机游戏黄金时代", "wiki": "https://en.wikipedia.org/wiki/Atari", "importance": 3}, {"month": 9, "day": 11, "year": 1977, "title_en": "Atari 2600", "title_cn": "雅达利2600", "type": "console", "desc": "第二世代家用游戏机代表作，首次使用可替换卡带", "wiki": "https://en.wikipedia.org/wiki/Atari_2600", "importance": 3}, {"month": 4, "day": 1, "year": 1978, "title_en": "Space Invaders", "title_cn": "太空侵略者", "type": "game", "desc": "太东推出的街机射击游戏，引发日本百元硬币短缺", "wiki": "https://en.wikipedia.org/wiki/Space_Invaders", "importance": 3}, {"month": 5, "day": 22, "year": 1980, "title_en": "Pac-Man", "title_cn": "吃豆人", "type": "game", "desc": "南梦宫经典街机游戏，史上最具标志性的游戏角色之一", "wiki": "https://en.wikipedia.org/wiki/Pac-Man", "importance": 3}, {"month": 12, "day": 1, "year": 1982, "title_en": "E.T. the Extra-Terrestrial", "title_cn": "E.T.外星人", "type": "game", "desc": "雅达利为Atari 2600开发的游戏，被视为雅达利大崩溃的导火索", "wiki": "https://en.wikipedia.org/wiki/E.T._the_Extra-Terrestrial_(video_game)", "importance": 2}, {"month": 1, "day": 1, "year": 1983, "title_en": "North American Video Game Crash", "title_cn": "雅达利大崩溃", "type": "milestone", "desc": "北美电子游戏市场崩盘，产业规模缩水97%，直到任天堂FC拯救", "wiki": "https://en.wikipedia.org/wiki/Video_game_crash_of_1983", "importance": 3}, {"month": 6, "day": 14, "year": 1989, "title_en": "Tetris (Game Boy)", "title_cn": "俄罗斯方块（Game Boy）", "type": "game", "desc": "随Game Boy捆绑发售，成为史上最畅销的掌机游戏之一", "wiki": "https://en.wikipedia.org/wiki/Tetris_(Game_Boy)", "importance": 2}, {"month": 6, "day": 23, "year": 1991, "title_en": "Sonic the Hedgehog", "title_cn": "刺猬索尼克", "type": "game", "desc": "世嘉推出的平台游戏，与马力欧展开主机大战", "wiki": "https://en.wikipedia.org/wiki/Sonic_the_Hedgehog_(1991_video_game)", "importance": 2}, {"month": 3, "day": 7, "year": 1991, "title_en": "Street Fighter II", "title_cn": "街头霸王II", "type": "game", "desc": "卡普空格斗游戏，定义了格斗游戏的标准范式", "wiki": "https://en.wikipedia.org/wiki/Street_Fighter_II", "importance": 2}, {"month": 11, "day": 21, "year": 1991, "title_en": "The Legend of Zelda: A Link to the Past", "title_cn": "塞尔达传说：众神的三角力量", "type": "game", "desc": "SFC上的塞尔达传说，确立了系列的经典公式", "wiki": "https://en.wikipedia.org/wiki/The_Legend_of_Zelda:_A_Link_to_the_Past", "importance": 2}, {"month": 3, "day": 19, "year": 1994, "title_en": "Super Metroid", "title_cn": "超级银河战士", "type": "game", "desc": "SFC上的经典动作冒险，银河城类型的奠基作之一", "wiki": "https://en.wikipedia.org/wiki/Super_Metroid", "importance": 2}, {"month": 4, "day": 2, "year": 1994, "title_en": "Final Fantasy VI", "title_cn": "最终幻想VI", "type": "game", "desc": "SE在SFC上的RPG巅峰之作，被誉为2D RPG的最高杰作", "wiki": "https://en.wikipedia.org/wiki/Final_Fantasy_VI", "importance": 2}, {"month": 3, "day": 11, "year": 1995, "title_en": "Chrono Trigger", "title_cn": "时空之轮", "type": "game", "desc": "史克威尔的时间旅行RPG，梦幻团队打造的不朽经典", "wiki": "https://en.wikipedia.org/wiki/Chrono_Trigger", "importance": 2}, {"month": 3, "day": 22, "year": 1996, "title_en": "Resident Evil", "title_cn": "生化危机", "type": "game", "desc": "卡普空开创生存恐怖类型的里程碑之作", "wiki": "https://en.wikipedia.org/wiki/Resident_Evil_(1996_video_game)", "importance": 2}, {"month": 6, "day": 22, "year": 1996, "title_en": "Quake", "title_cn": "雷神之锤", "type": "game", "desc": "id Software的3D FPS先驱，推动了电子竞技和Mod文化", "wiki": "https://en.wikipedia.org/wiki/Quake_(video_game)", "importance": 2}, {"month": 8, "day": 25, "year": 1997, "title_en": "GoldenEye 007", "title_cn": "黄金眼007", "type": "game", "desc": "Rare为N64开发的FPS，证明主机也能做好射击游戏", "wiki": "https://en.wikipedia.org/wiki/GoldenEye_007_(1997_video_game)", "importance": 2}, {"month": 11, "day": 19, "year": 1998, "title_en": "Half-Life", "title_cn": "半条命", "type": "game", "desc": "Valve的FPS革命之作，重新定义了叙事驱动的射击游戏", "wiki": "https://en.wikipedia.org/wiki/Half-Life_(video_game)", "importance": 3}, {"month": 1, "day": 31, "year": 1999, "title_en": "Silent Hill", "title_cn": "寂静岭", "type": "game", "desc": "科乐美心理恐怖游戏，以氛围和心理暗示著称", "wiki": "https://en.wikipedia.org/wiki/Silent_Hill_(video_game)", "importance": 2}, {"month": 7, "day": 19, "year": 2001, "title_en": "Final Fantasy X", "title_cn": "最终幻想X", "type": "game", "desc": "PS2上的首款FF，全语音剧情和球形水中运动Blitzball", "wiki": "https://en.wikipedia.org/wiki/Final_Fantasy_X", "importance": 2}, {"month": 11, "day": 13, "year": 2001, "title_en": "Metal Gear Solid 2: Sons of Liberty", "title_cn": "合金装备2：自由之子", "type": "game", "desc": "小岛秀夫的后现代叙事实验，至今仍引发讨论", "wiki": "https://en.wikipedia.org/wiki/Metal_Gear_Solid_2:_Sons_of_Liberty", "importance": 2}, {"month": 9, "day": 6, "year": 2001, "title_en": "ICO", "title_cn": "ICO", "type": "game", "desc": "上田文人的极简主义杰作，游戏作为艺术的标杆", "wiki": "https://en.wikipedia.org/wiki/Ico", "importance": 2}, {"month": 11, "day": 17, "year": 2002, "title_en": "Metroid Prime", "title_cn": "银河战士Prime", "type": "game", "desc": "Retro Studios将2D银河战士完美转化为第一人称3D", "wiki": "https://en.wikipedia.org/wiki/Metroid_Prime", "importance": 2}, {"month": 12, "day": 10, "year": 1993, "title_en": "Doom", "title_cn": "毁灭战士", "type": "game", "desc": "id Software的FPS开山之作，塑造了整个射击游戏类型", "wiki": "https://en.wikipedia.org/wiki/Doom_(1993_video_game)", "importance": 3}, {"month": 11, "day": 16, "year": 2004, "title_en": "Half-Life 2", "title_cn": "半条命2", "type": "game", "desc": "Valve的FPS续作，物理引擎和叙事的双重革命", "wiki": "https://en.wikipedia.org/wiki/Half-Life_2", "importance": 3}, {"month": 10, "day": 26, "year": 2004, "title_en": "Grand Theft Auto: San Andreas", "title_cn": "侠盗猎车手：圣安地列斯", "type": "game", "desc": "R星开放世界RPG巅峰，PS2上最畅销游戏之一", "wiki": "https://en.wikipedia.org/wiki/Grand_Theft_Auto:_San_Andreas", "importance": 2}, {"month": 1, "day": 11, "year": 2005, "title_en": "Resident Evil 4", "title_cn": "生化危机4", "type": "game", "desc": "卡普空重新定义动作恐怖游戏，越肩视角的开创者", "wiki": "https://en.wikipedia.org/wiki/Resident_Evil_4", "importance": 2}, {"month": 11, "day": 19, "year": 2006, "title_en": "Wii Sports", "title_cn": "Wii运动", "type": "game", "desc": "随Wii捆绑的体感游戏，让全球非玩家群体也拿起了手柄", "wiki": "https://en.wikipedia.org/wiki/Wii_Sports", "importance": 2}, {"month": 10, "day": 10, "year": 2007, "title_en": "Portal", "title_cn": "传送门", "type": "game", "desc": "Valve的创意解谜FPS，'蛋糕是假的'成为游戏文化梗", "wiki": "https://en.wikipedia.org/wiki/Portal_(video_game)", "importance": 2}, {"month": 11, "day": 20, "year": 2007, "title_en": "Mass Effect", "title_cn": "质量效应", "type": "game", "desc": "BioWare的太空歌剧RPG，开创了以选择驱动叙事的新标杆", "wiki": "https://en.wikipedia.org/wiki/Mass_Effect_(video_game)", "importance": 2}, {"month": 4, "day": 29, "year": 2008, "title_en": "Grand Theft Auto IV", "title_cn": "侠盗猎车手IV", "type": "game", "desc": "R星开放世界巨作，Niko Bellic的美国梦故事", "wiki": "https://en.wikipedia.org/wiki/Grand_Theft_Auto_IV", "importance": 2}, {"month": 10, "day": 28, "year": 2009, "title_en": "Uncharted 2: Among Thieves", "title_cn": "神秘海域2：纵横四海", "type": "game", "desc": "顽皮狗动作冒险巅峰，重新定义了电影化游戏叙事", "wiki": "https://en.wikipedia.org/wiki/Uncharted_2:_Among_Thieves", "importance": 2}, {"month": 8, "day": 25, "year": 2009, "title_en": "Batman: Arkham Asylum", "title_cn": "蝙蝠侠：阿卡姆疯人院", "type": "game", "desc": "Rocksteady打破超级英雄游戏的诅咒，战斗系统成为行业标杆", "wiki": "https://en.wikipedia.org/wiki/Batman:_Arkham_Asylum", "importance": 2}, {"month": 10, "day": 29, "year": 2009, "title_en": "Bayonetta", "title_cn": "猎天使魔女", "type": "game", "desc": "神谷英树的华丽动作游戏，将动作游戏推向极致", "wiki": "https://en.wikipedia.org/wiki/Bayonetta_(video_game)", "importance": 1}, {"month": 4, "day": 19, "year": 2011, "title_en": "Portal 2", "title_cn": "传送门2", "type": "game", "desc": "Valve解谜FPS续作，合作模式和叙事都是满分", "wiki": "https://en.wikipedia.org/wiki/Portal_2", "importance": 2}, {"month": 6, "day": 6, "year": 2011, "title_en": "Twitch.tv Launch", "title_cn": "Twitch上线", "type": "milestone", "desc": "游戏直播平台上线，彻底改变了游戏观看和电竞文化", "wiki": "https://en.wikipedia.org/wiki/Twitch_(service)", "importance": 2}, {"month": 4, "day": 24, "year": 2012, "title_en": "The Walking Dead (Telltale)", "title_cn": "行尸走肉（Telltale）", "type": "game", "desc": "Telltale的叙事冒险游戏，证明选择驱动的故事也能催人泪下", "wiki": "https://en.wikipedia.org/wiki/The_Walking_Dead_(video_game)", "importance": 1}, {"month": 3, "day": 13, "year": 2012, "title_en": "Journey", "title_cn": "风之旅人", "type": "game", "desc": "thatgamecompany的艺术杰作，无言的多人体验", "wiki": "https://en.wikipedia.org/wiki/Journey_(2012_video_game)", "importance": 1}, {"month": 3, "day": 26, "year": 2013, "title_en": "BioShock Infinite", "title_cn": "生化奇兵：无限", "type": "game", "desc": "Ken Levine的天空之城Columbia，叙事与世界观的巅峰", "wiki": "https://en.wikipedia.org/wiki/BioShock_Infinite", "importance": 2}, {"month": 6, "day": 14, "year": 2013, "title_en": "The Last of Us", "title_cn": "最后生还者", "type": "game", "desc": "顽皮狗末日题材杰作，Joel和Ellie的故事感动了全世界", "wiki": "https://en.wikipedia.org/wiki/The_Last_of_Us", "importance": 3}, {"month": 9, "day": 15, "year": 2015, "title_en": "Undertale", "title_cn": "传说之下", "type": "game", "desc": "Toby Fox独立制作的RPG，颠覆了玩家对RPG战斗的认知", "wiki": "https://en.wikipedia.org/wiki/Undertale", "importance": 2}, {"month": 2, "day": 26, "year": 2016, "title_en": "Stardew Valley", "title_cn": "星露谷物语", "type": "game", "desc": "ConcernedApe一人开发的农场模拟，独立游戏的奇迹", "wiki": "https://en.wikipedia.org/wiki/Stardew_Valley", "importance": 2}, {"month": 3, "day": 24, "year": 2016, "title_en": "Dark Souls III", "title_cn": "黑暗之魂III", "type": "game", "desc": "FromSoftware魂系列的最终章，将动作RPG难度推向极致", "wiki": "https://en.wikipedia.org/wiki/Dark_Souls_III", "importance": 2}, {"month": 9, "day": 15, "year": 2016, "title_en": "Persona 5", "title_cn": "女神异闻录5", "type": "game", "desc": "Atlus的时尚JRPG，以独特美术风格征服全球", "wiki": "https://en.wikipedia.org/wiki/Persona_5", "importance": 2}, {"month": 2, "day": 28, "year": 2017, "title_en": "Horizon Zero Dawn", "title_cn": "地平线：零之曙光", "type": "game", "desc": "Guerrilla Games开放世界动作RPG，机械恐龙的末世冒险", "wiki": "https://en.wikipedia.org/wiki/Horizon_Zero_Dawn", "importance": 2}, {"month": 2, "day": 24, "year": 2017, "title_en": "Hollow Knight", "title_cn": "空洞骑士", "type": "game", "desc": "Team Cherry的银河城杰作，独立游戏的标杆之一", "wiki": "https://en.wikipedia.org/wiki/Hollow_Knight", "importance": 2}, {"month": 9, "day": 29, "year": 2017, "title_en": "Cuphead", "title_cn": "茶杯头", "type": "game", "desc": "StudioMDHR的1930s卡通风格射击游戏，手绘动画惊艳全球", "wiki": "https://en.wikipedia.org/wiki/Cuphead", "importance": 1}, {"month": 2, "day": 23, "year": 2017, "title_en": "NieR: Automata", "title_cn": "尼尔：自动人形", "type": "game", "desc": "横尾太郎与白金工作室的哲学动作RPG，E结局令人震撼", "wiki": "https://en.wikipedia.org/wiki/Nier:_Automata", "importance": 2}, {"month": 6, "day": 1, "year": 2017, "title_en": "Xbox Game Pass Launch", "title_cn": "Xbox Game Pass上线", "type": "milestone", "desc": "微软推出游戏订阅服务，改变了游戏行业的商业模式", "wiki": "https://en.wikipedia.org/wiki/Xbox_Game_Pass", "importance": 2}, {"month": 1, "day": 25, "year": 2018, "title_en": "Celeste", "title_cn": "蔚蓝", "type": "game", "desc": "Matt Thorson的精确平台跳跃杰作，探讨焦虑与自我接纳", "wiki": "https://en.wikipedia.org/wiki/Celeste_(video_game)", "importance": 1}, {"month": 9, "day": 7, "year": 2018, "title_en": "Marvel's Spider-Man", "title_cn": "漫威蜘蛛侠", "type": "game", "desc": "Insomniac的PS4独占动作游戏，最好的超级英雄游戏之一", "wiki": "https://en.wikipedia.org/wiki/Spider-Man_(2018_video_game)", "importance": 2}, {"month": 12, "day": 6, "year": 2018, "title_en": "Epic Games Store Launch", "title_cn": "Epic Games商城上线", "type": "milestone", "desc": "Epic推出PC游戏商城，以独占策略挑战Steam垄断", "wiki": "https://en.wikipedia.org/wiki/Epic_Games_Store", "importance": 1}, {"month": 3, "day": 22, "year": 2019, "title_en": "Sekiro: Shadows Die Twice", "title_cn": "只狼：影逝二度", "type": "game", "desc": "FromSoftware的忍者动作游戏，年度游戏，弹刀系统令人上瘾", "wiki": "https://en.wikipedia.org/wiki/Sekiro:_Shadows_Die_Twice", "importance": 2}, {"month": 10, "day": 15, "year": 2019, "title_en": "Disco Elysium", "title_cn": "极乐迪斯科", "type": "game", "desc": "ZA/UM的文字RPG杰作，以思维阁重新定义了RPG对话系统", "wiki": "https://en.wikipedia.org/wiki/Disco_Elysium", "importance": 2}, {"month": 11, "day": 8, "year": 2019, "title_en": "Death Stranding", "title_cn": "死亡搁浅", "type": "game", "desc": "小岛秀夫独立后首作，开创'连接'类型的游戏", "wiki": "https://en.wikipedia.org/wiki/Death_Stranding", "importance": 2}, {"month": 6, "day": 19, "year": 2020, "title_en": "The Last of Us Part II", "title_cn": "最后生还者 Part II", "type": "game", "desc": "顽皮狗续作，以大胆叙事引发巨大争议，也收获无数大奖", "wiki": "https://en.wikipedia.org/wiki/The_Last_of_Us_Part_II", "importance": 2}, {"month": 9, "day": 17, "year": 2020, "title_en": "Hades", "title_cn": "哈迪斯", "type": "game", "desc": "Supergiant Games的Roguelike杰作，完美融合叙事与重复游玩", "wiki": "https://en.wikipedia.org/wiki/Hades_(video_game)", "importance": 2}, {"month": 4, "day": 30, "year": 2021, "title_en": "Returnal", "title_cn": "死亡回归", "type": "game", "desc": "Housemarque的PS5独占Roguelike射击，展示了次世代手柄的触觉反馈", "wiki": "https://en.wikipedia.org/wiki/Returnal_(video_game)", "importance": 1}, {"month": 1, "day": 28, "year": 2022, "title_en": "Sony Acquires Bungie", "title_cn": "索尼收购Bungie", "type": "milestone", "desc": "索尼以36亿美元收购《命运》开发商Bungie", "wiki": "https://en.wikipedia.org/wiki/Bungie#Acquisition_by_Sony", "importance": 1}, {"month": 8, "day": 3, "year": 2023, "title_en": "Baldur's Gate 3", "title_cn": "博德之门3", "type": "game", "desc": "Larian Studios的D&D RPG巨作，年度游戏大满贯", "wiki": "https://en.wikipedia.org/wiki/Baldur%27s_Gate_3", "importance": 3}];
+
+const MONTH_NAMES=["一月","二月","三月","四月","五月","六月","七月","八月","九月","十月","十一月","十二月"];
+const DAY_NAMES=["日","一","二","三","四","五","六"];
+const TYPE_LABELS={game:"游戏发售",console:"主机发售",event:"展会活动",milestone:"里程碑",upcoming:"即将发售"};
+const TYPE_EMOJI={game:"🎮",console:"🕹️",event:"📅",milestone:"🏆",upcoming:"🔥"};
+const TYPE_FALLBACK={game:"🎮",console:"🕹️",event:"📅",milestone:"🏆",upcoming:"🔥"};
+
+
+const YEAR_REVIEWS = {
+  1958: {
+    subtitle: "电子游戏的第一缕曙光",
+    sections: [
+      {title:"🎮 开创性时刻",content:"<p>1958年10月18日，物理学家<strong>威廉·希金博特姆</strong>在美国布鲁克海文国家实验室公开展示了<strong>Tennis for Two</strong>——一个用示波器和模拟计算机运行的网球游戏。这被广泛认为是人类历史上最早的电子游戏之一。</p><p>虽然它只是实验室开放日的一个展示项目，从未商业化，但它证明了一个革命性的概念：<em>计算机可以用来娱乐</em>。</p>"},
+      {title:"🔬 科技背景",content:"<p>1958年正值冷战高峰期，计算机主要服务于军事和科研。同年，<strong>NASA成立</strong>，美国正式开启太空竞赛。<strong>集成电路</strong>（IC）刚被发明，为后来的电子游戏硬件奠定了基础。</p>"},
+      {title:"📊 历史意义",content:"<p>Tennis for Two证明了交互式电子娱乐的可能性。从这一刻起，一个价值数千亿美元的产业开始萌芽。不过，真正的商业化还要等到14年后的Pong。</p>"}
+    ]
+  },
+  1972: {
+    subtitle: "商业游戏元年——Pong与雅达利",
+    sections: [
+      {title:"🎮 关键事件",content:"<p>1972年是电子游戏商业化的元年：</p><ul><li><strong>6月：雅达利成立</strong>——诺兰·布什内尔和特德·达布尼创立了这家改变世界的公司</li><li><strong>9月：Magnavox Odyssey发售</strong>——世界上第一款家用电子游戏机，由拉尔夫·贝尔设计</li><li><strong>11月：Pong上市</strong>——雅达利的街机游戏大获成功，酒吧里排着长队等着玩</li></ul>"},
+      {title:"🔬 科技背景",content:"<p>1972年，<strong>Intel推出8008处理器</strong>，个人计算机时代即将来临。<strong>阿波罗17号</strong>完成了人类最后一次登月任务。HP推出了第一款科学计算器。</p>"},
+      {title:"📊 历史意义",content:"<p>Pong的成功证明了电子游戏的商业价值。雅达利从一个车库起步，迅速成长为科技巨头。Magnavox Odyssey虽然销量平平，却开创了家用游戏机的概念——这个概念将在未来50年持续塑造整个行业。</p>"}
+    ]
+  },
+  1977: {
+    subtitle: "家用主机时代真正开启",
+    sections: [
+      {title:"🎮 年度焦点",content:"<p><strong>Atari 2600</strong>（原名Atari VCS）于9月发售，首次采用可更换卡带设计，让玩家不再被锁定在固定游戏上。这款主机最终全球售出超过3000万台，定义了第二世代主机。</p>"},
+      {title:"🔬 科技背景",content:"<p>1977年同样是个人电脑的重要年份：<strong>Apple II</strong>、<strong>Commodore PET</strong>和<strong>TRS-80</strong>同年发售，被称为「1977年三剑客」。<strong>星球大战</strong>上映，科幻文化迎来爆发。</p>"},
+      {title:"📊 历史意义",content:"<p>Atari 2600的卡带模式成为行业标准，催生了第三方游戏开发商（如Activision的诞生）。但这种开放的生态也为1983年的大崩溃埋下了隐患——任何人都可以为2600开发游戏，质量参差不齐。</p>"}
+    ]
+  },
+  1983: {
+    subtitle: "雅达利大崩溃——游戏业的至暗时刻",
+    sections: [
+      {title:"🎮 大崩溃",content:"<p>北美电子游戏市场在1983年<strong>崩盘</strong>，产业规模从32亿美元暴跌至1985年的1亿美元——<strong>缩水97%</strong>。</p><p>导火索包括：</p><ul><li>《E.T.外星人》的灾难性口碑——数百万卡带被填埋在新墨西哥沙漠</li><li>市场上充斥着低质量游戏，消费者信心崩溃</li><li>个人电脑（C64等）价格下降，分流了游戏用户</li></ul>"},
+      {title:"🕹️ 任天堂崛起",content:"<p>就在北美市场一片废墟之际，<strong>任天堂</strong>于7月15日在日本推出了<strong>Family Computer（FC/红白机）</strong>。首发价14800日元，首年销量突破250万台。</p><p>任天堂证明了：只要游戏品质够高，市场就永远存在。FC的严格质控体系（「任天堂品质认证」）成为行业标准。</p>"},
+      {title:"🔬 科技背景",content:"<p>1983年，<strong>互联网从ARPANET正式转向TCP/IP协议</strong>，现代互联网诞生。微软发布了Word 1.0。CD光盘开始商用。</p>"},
+      {title:"📊 历史意义",content:"<p>雅达利大崩溃是游戏史上最重要的转折点之一。它清洗了劣质产品，为任天堂「品质至上」的理念铺平了道路。没有这次崩溃，就没有后来任天堂主导的游戏业复兴，也就不会有我们今天的游戏行业。</p>"}
+    ]
+  },
+  1985: {
+    subtitle: "超级马力欧拯救世界",
+    sections: [
+      {title:"🎮 年度之作",content:"<p><strong>《超级马力欧兄弟》</strong>于9月13日随NES在北美发售，成为游戏史上最重要的作品之一。宫本茂设计的关卡至今仍是教科书级别的范例。</p><p>这款游戏几乎凭一己之力让北美消费者重新相信电子游戏。NES最终在北美售出超过3400万台。</p>"},
+      {title:"🔬 科技背景",content:"<p>1985年，<strong>微软推出Windows 1.0</strong>，虽然初版简陋，但开启了图形化操作系统的时代。<strong>乔布斯离开苹果</strong>创立了NeXT。任天堂的成功让日本电子游戏产业走向全球舞台。</p>"},
+      {title:"📊 历史意义",content:"<p>如果说1983年是游戏业的至暗时刻，1985年就是黎明。任天堂不仅复活了主机市场，还建立了沿用至今的行业规则：平台许可制、品质认证、第一方与第三方分工。马力欧成为全球最知名的游戏角色。</p>"}
+    ]
+  },
+  1994: {
+    subtitle: "2D游戏的黄金巅峰",
+    sections: [
+      {title:"🎮 神作井喷",content:"<p>1994年可能是2D游戏最辉煌的一年：</p><ul><li><strong>《超级银河战士》</strong>（3月）——银河城类型的奠基之作</li><li><strong>《最终幻想VI》</strong>（4月）——被誉为2D RPG的最高杰作</li><li><strong>PlayStation发售</strong>（12月，日本）——3D时代的号角</li></ul><p>讽刺的是，2D游戏在达到巅峰的同一年，被3D的浪潮取代。</p>"},
+      {title:"🔬 科技背景",content:"<p>1994年，<strong>网景浏览器发布</strong>，互联网走向大众。Amazon和Yahoo!同年创立。PlayStation采用CD-ROM而非卡带，存储革命开始。</p>"},
+      {title:"📊 历史意义",content:"<p>1994年是2D游戏的天鹅之歌，也是3D时代的破晓。PlayStation的发售标志着索尼正式加入主机大战，打破了任天堂和世嘉的双雄格局，开创了三足鼎立的新时代。</p>"}
+    ]
+  },
+  1996: {
+    subtitle: "3D革命——游戏进入新维度",
+    sections: [
+      {title:"🎮 3D开天辟地",content:"<p>1996年是游戏从2D跨入3D的关键年：</p><ul><li><strong>《宝可梦 红/绿》</strong>（2月）——Game Boy上诞生的文化现象</li><li><strong>Nintendo 64发售</strong>（6月）——与《超级马力欧64》同步发售</li><li><strong>《超级马力欧64》</strong>——定义了3D平台游戏的标准操作方式</li><li><strong>《生化危机》</strong>（3月）——生存恐怖类型的开创者</li><li><strong>《雷神之锤》</strong>（6月）——真3D FPS先驱，推动电竞文化</li><li><strong>《最终幻想VII》</strong>（日本，12月）——JRPG走向全球的里程碑</li></ul>"},
+      {title:"🔬 科技背景",content:"<p>1996年，<strong>DVD标准正式确立</strong>。<strong>ICQ</strong>即时通讯上线。Palm Pilot发售，开启了掌上电脑时代。3D图形加速卡（Voodoo）开始普及。</p>"},
+      {title:"📊 历史意义",content:"<p>1996年可以说是游戏史上最重要的年份之一。马力欧64证明了3D游戏可以和2D一样好玩，宝可梦开创了一个超越游戏的文化帝国，FF7让全世界接受了JRPG。这一年奠定了此后二十年游戏设计的基本范式。</p>"}
+    ]
+  },
+  1998: {
+    subtitle: "RPG黄金年——无与伦比的1998",
+    sections: [
+      {title:"🎮 封神之年",content:"<p>1998年被广泛认为是游戏史上最伟大的一年之一：</p><ul><li><strong>《生化危机2》</strong>（1月）——恐怖游戏的巅峰</li><li><strong>《星际争霸》</strong>（3月）——RTS之王，韩国电竞的起点</li><li><strong>《合金装备》</strong>（9月）——小岛秀夫的电影化叙事革命</li><li><strong>《塞尔达传说：时之笛》</strong>（11月）——被无数评选列为史上最佳游戏</li><li><strong>《半条命》</strong>（11月）——重新定义FPS叙事</li></ul><p>世嘉Dreamcast在日本率先开启第六世代。</p>"},
+      {title:"🔬 科技背景",content:"<p><strong>Google成立</strong>（9月）。iMac G3发售，苹果开始复兴。MP3音乐格式开始流行。Windows 98发布。</p>"},
+      {title:"📊 历史意义",content:"<p>1998年的游戏质量密度可能至今无人超越。这一年诞生的作品中，多部至今仍位列「史上最伟大游戏」的榜首位置。时之笛定义了3D动作冒险，半条命定义了叙事FPS，星际争霸定义了竞技RTS。</p>"}
+    ]
+  },
+  2001: {
+    subtitle: "新世代——Xbox入局，三国争霸",
+    sections: [
+      {title:"🎮 主机新格局",content:"<p>2001年主机市场迎来巨变：</p><ul><li><strong>Xbox发售</strong>（11月）——微软携《光环》强势入局</li><li><strong>《光环：战斗进化》</strong>——定义了主机FPS的标杆</li><li><strong>《合金装备2》</strong>（11月）——后现代叙事的大胆实验</li><li><strong>《ICO》</strong>（12月）——游戏作为艺术的证明</li><li><strong>《最终幻想X》</strong>（7月）——首款全语音FF</li></ul><p>世嘉宣布退出硬件市场，Dreamcast成为绝唱。</p>"},
+      {title:"🔬 科技背景",content:"<p>2001年：<strong>iPod发布</strong>，改变音乐产业。<strong>维基百科上线</strong>。9/11事件深刻改变了世界格局。Xbox Live的联网理念预示了游戏的在线未来。</p>"},
+      {title:"📊 历史意义",content:"<p>微软的加入让主机大战从「任天堂vs索尼」变成了三足鼎立。世嘉的退出令人唏嘘，但也说明主机市场的竞争已经进入资本密集型阶段。光环证明了FPS在主机上可以比PC更受欢迎。</p>"}
+    ]
+  },
+  2004: {
+    subtitle: "网游时代与FPS革命",
+    sections: [
+      {title:"🎮 改变规则的一年",content:"<ul><li><strong>《魔兽世界》</strong>（11月）——MMORPG之王，巅峰1200万订阅用户</li><li><strong>《半条命2》</strong>（11月）——物理引擎革命，顺带推广了Steam</li><li><strong>《GTA：圣安地列斯》</strong>（10月）——开放世界的极致</li><li><strong>《光环2》</strong>（11月）——Xbox Live黄金时代</li><li><strong>Nintendo DS发售</strong>——双屏触控，开辟新市场</li></ul>"},
+      {title:"🔬 科技背景",content:"<p><strong>Facebook成立</strong>（2月）。Gmail发布。Firefox浏览器推出。社交网络时代开始。宽带互联网在欧美普及，为网游爆发铺路。</p>"},
+      {title:"📊 历史意义",content:"<p>魔兽世界的成功让整个行业看到了「游戏即服务」的潜力——玩家不再买断，而是持续付费。半条命2强制绑定Steam的争议策略，在15年后被证明是天才之举：Steam成为PC游戏最大的分发平台。</p>"}
+    ]
+  },
+  2006: {
+    subtitle: "体感革命——Wii改变游戏定义",
+    sections: [
+      {title:"🎮 三雄争霸",content:"<ul><li><strong>PlayStation 3发售</strong>（11月）——蓝光+Cell处理器，价格争议</li><li><strong>Nintendo Wii发售</strong>（11月）——体感操控席卷全球</li><li><strong>《Wii运动》</strong>——让你奶奶也拿起了手柄</li><li><strong>《上古卷轴IV：湮灭》</strong>（3月）——开放世界RPG新标杆</li><li><strong>《塞尔达传说：黄昏公主》</strong>（11月）——Wii首发护航大作</li></ul>"},
+      {title:"🔬 科技背景",content:"<p><strong>Twitter成立</strong>。<strong>Google收购YouTube</strong>。任天堂用创意而非机能赢得了这一世代——Wii的硬件远弱于PS3和Xbox 360，但全球销量超过1亿台。</p>"},
+      {title:"📊 历史意义",content:"<p>Wii证明了游戏不一定要追求画面极致，好的创意和交互方式同样能征服市场。这个理念深刻影响了后来的Switch。PS3高昂的价格（599美元）成为经典教训。</p>"}
+    ]
+  },
+  2007: {
+    subtitle: "现代游戏元年",
+    sections: [
+      {title:"🎮 改变一切的一年",content:"<ul><li><strong>《生化奇兵》</strong>（8月）——叙事与世界观的巅峰</li><li><strong>《光环3》</strong>（9月）——Xbox 360最大的系统卖</li><li><strong>《使命召唤4：现代战争》</strong>（11月）——重新定义多人FPS</li><li><strong>《传送门》</strong>（10月）——最具创意的解谜FPS</li><li><strong>《质量效应》</strong>（11月）——选择驱动叙事的新标杆</li></ul>"},
+      {title:"🔬 科技背景",content:"<p><strong>iPhone发布</strong>（1月发布会，6月上市）——智能手机时代开启，后来催生了手游市场。Kindle发布，数字内容分发加速。</p>"},
+      {title:"📊 历史意义",content:"<p>2007年是现代游戏的元年。COD4的多人模式定义了此后十年FPS的模板，iPhone最终催生了数十亿美元的手游产业。这一年发售的游戏，每一款都在各自领域留下了不可磨灭的印记。</p>"}
+    ]
+  },
+  2011: {
+    subtitle: "魂系列崛起与开放世界新篇",
+    sections: [
+      {title:"🎮 经典频出",content:"<ul><li><strong>《黑暗之魂》</strong>（9月）——「魂系列」定义了一整个游戏子类型</li><li><strong>《上古卷轴5：天际》</strong>（11月）——开放世界RPG的新王者</li><li><strong>《我的世界》正式版</strong>（11月）——沙盒游戏的巅峰，至今全球销量超3亿</li><li><strong>《传送门2》</strong>（4月）——Valve最后的杰作之一</li><li><strong>Twitch上线</strong>（6月）——游戏直播时代开启</li></ul>"},
+      {title:"🔬 科技背景",content:"<p><strong>乔布斯去世</strong>（10月）。<strong>IBM Watson赢得Jeopardy!</strong>——AI的早期惊艳。Siri随iPhone 4S发布。4G LTE开始普及。</p>"},
+      {title:"📊 历史意义",content:"<p>黑暗之魂开创的高难度公式影响了此后十年的无数游戏。天际让「开放世界RPG」成为主流追求。Minecraft正式版发布后成为游戏史上销量冠军。Twitch则改变了人们消费游戏内容的方式——看别人玩游戏也可以是一种娱乐。</p>"}
+    ]
+  },
+  2013: {
+    subtitle: "次世代前夜——最后生还者封神",
+    sections: [
+      {title:"🎮 世代交替",content:"<ul><li><strong>《最后生还者》</strong>（6月）——PS3时代的完美句号</li><li><strong>《GTA5》</strong>（9月）——R星又一次创造历史</li><li><strong>《生化奇兵：无限》</strong>（3月）——天空之城Columbia</li><li><strong>PS4发售</strong>（11月）——索尼吸取PS3教训，以玩家为先</li><li><strong>Xbox One发售</strong>（11月）——「always online」的争议</li></ul>"},
+      {title:"🔬 科技背景",content:"<p><strong>斯诺登事件</strong>。4K电视开始商用。PS4和Xbox One都采用x86架构，向PC靠拢。</p>"},
+      {title:"📊 历史意义",content:"<p>最后生还者证明了游戏可以像电影一样讲出催人泪下的故事。GTA5成为娱乐产品史上最赚钱的作品。PS4的成功和Xbox One的失误奠定了索尼在第八世代的统治地位。</p>"}
+    ]
+  },
+  2017: {
+    subtitle: "Switch与旷野之息——任天堂的完美逆袭",
+    sections: [
+      {title:"🎮 任天堂之年",content:"<ul><li><strong>Nintendo Switch发售</strong>（3月）——混合型主机概念大获成功</li><li><strong>《塞尔达传说：旷野之息》</strong>（3月）——重新定义开放世界</li><li><strong>《尼尔：自动人形》</strong>（2月）——横尾太郎的哲学杰作</li><li><strong>《空洞骑士》</strong>（2月）——银河城的新标杆</li><li><strong>《地平线：零之曙光》</strong>（2月）——机械恐龙的末世冒险</li><li><strong>Xbox Game Pass上线</strong>（6月）——游戏订阅模式</li><li><strong>PUBG大火</strong>（12月正式版）——大逃杀品类爆发</li></ul>"},
+      {title:"🔬 科技背景",content:"<p><strong>比特币突破1万美元</strong>。<strong>AlphaGo击败柯洁</strong>。iPhone X发布（Face ID、全面屏）。Switch证明了便携性和家用体验可以完美统一。</p>"},
+      {title:"📊 历史意义",content:"<p>Wii U的惨败之后，Switch的成功证明了任天堂的核心竞争力从来不是机能，而是创意。旷野之息让所有开放世界游戏重新思考「自由」的含义。Game Pass则开启了游戏行业的「Netflix化」探索。</p>"}
+    ]
+  },
+  2020: {
+    subtitle: "疫情与次世代——游戏成为全民刚需",
+    sections: [
+      {title:"🎮 疫情中的游戏业",content:"<ul><li><strong>《动物森友会》</strong>（3月）——疫情中的精神避风港，Switch断货</li><li><strong>PlayStation 5发售</strong>（11月）——次世代来临</li><li><strong>Xbox Series X|S发售</strong>（11月）——Game Pass成为核心卖点</li><li><strong>《赛博朋克2077》</strong>（12月）——巨大期望与灾难发售</li><li><strong>《最后生还者 Part II》</strong>（6月）——大胆叙事引发空前争议</li><li><strong>《对马岛之魂》</strong>（7月）——开放世界的优雅</li><li><strong>《哈迪斯》</strong>（9月）——Roguelike叙事的完美典范</li></ul>"},
+      {title:"🔬 科技背景",content:"<p><strong>COVID-19全球大流行</strong>，居家令推动游戏行业收入暴增至1800亿美元。<strong>5G商用</strong>。光线追踪成为次世代标配。数字游戏销售首次全面超越实体。</p>"},
+      {title:"📊 历史意义",content:"<p>疫情让全世界发现游戏不只是娱乐，更是社交和心理慰藉。动物森友会成为文化现象。赛博朋克2077的翻车则成为行业过度炒作的反面教材（虽然后来靠更新挽回了口碑）。次世代主机的抢购热潮和芯片短缺让供应链问题成为新常态。</p>"}
+    ]
+  },
+  2022: {
+    subtitle: "艾尔登法环——开放世界的新定义",
+    sections: [
+      {title:"🎮 法环之年",content:"<ul><li><strong>《艾尔登法环》</strong>（2月）——宫崎英高×宫崎骏（误）×乔治·R·R·马丁，年度游戏大满贯</li><li><strong>微软收购动视暴雪</strong>（1月宣布，10月完成）——687亿美元，游戏史上最大收购</li><li><strong>索尼收购Bungie</strong>（1月）——36亿美元</li><li><strong>《异度神剑3》《战神：诸神黄昏》</strong>等大作</li></ul>"},
+      {title:"🔬 科技背景",content:"<p><strong>ChatGPT发布</strong>（11月）——AI大语言模型引爆全球关注。<strong>稳定扩散</strong>（Stable Diffusion）开源。Steam Deck发售，掌机复兴。</p>"},
+      {title:"📊 历史意义",content:"<p>艾尔登法环证明了「魂系列」的公式可以完美适配开放世界，全球销量突破2500万。微软收购动视暴雪重塑了行业版图。年底ChatGPT的发布则预示着AI将深刻改变游戏开发流程。</p>"}
+    ]
+  },
+  2023: {
+    subtitle: "博德之门3——CRPG的文艺复兴",
+    sections: [
+      {title:"🎮 独立与3A齐飞",content:"<ul><li><strong>《博德之门3》</strong>（8月）——Larian Studios的D&D史诗，年度游戏大满贯</li><li><strong>《塞尔达传说：王国之泪》</strong>（5月）——旷野之息的完美续章</li><li><strong>E3正式取消</strong>（5月宣布）——一个时代的终结</li></ul>"},
+      {title:"🔬 科技背景",content:"<p><strong>GPT-4发布</strong>。AI生成内容（AIGC）席卷创意行业。游戏工作室开始探索AI辅助开发。Vision Pro发布，空间计算概念兴起。</p>"},
+      {title:"📊 历史意义",content:"<p>博德之门3用「不妥协」的设计理念赢得了全世界的心——它证明了尊重玩家智商的游戏依然可以大卖。E3的取消标志着游戏展会模式的彻底转型，线上直面会成为新常态。</p>"}
+    ]
+  },
+  2025: {
+    subtitle: "Switch 2与新世代展望",
+    sections: [
+      {title:"🎮 新主机新时代",content:"<ul><li><strong>Nintendo Switch 2发售</strong>（6月）——449.99美元，任天堂下一代混合主机</li><li><strong>《刺客信条：影》</strong>（3月）——日本封建时代的开放世界冒险</li><li><strong>《红色沙漠》</strong>（11月）——Pearl Abyss的开放世界大作</li><li><strong>《死亡搁浅2：冥滩之上》</strong>（6月）——小岛秀夫续作</li></ul>"},
+      {title:"🔬 科技背景",content:"<p>AI Agent技术爆发。NVIDIA GPU性能持续飙升。云游戏逐渐成熟。游戏开发中AI辅助美术和QA测试已成常态。</p>"},
+      {title:"📊 历史意义",content:"<p>Switch 2延续了混合主机的理念，任天堂继续走「创意优先」路线。游戏行业在经历2024年的大规模裁员潮后，开始重新审视增长模式和成本控制。</p>"}
+    ]
+  },
+  2026: {
+    subtitle: "GTA VI之年——最被期待的游戏",
+    sections: [
+      {title:"🎮 万众瞩目",content:"<ul><li><strong>《GTA VI》</strong>（11月19日）——R星十年磨一剑，可能是游戏史上最被期待的作品</li><li><strong>《生化危机：安魂曲》</strong>（2月）——卡普空生化系列第九部正统续作</li><li><strong>《死亡搁浅2》PC版</strong>（3月）——小岛秀夫续作登陆PC</li></ul>"},
+      {title:"🔬 科技背景",content:"<p>AI在游戏开发中的应用进入深水区——NPC对话生成、程序化内容、AI测试等已成为行业标配。</p>"},
+      {title:"📊 历史意义",content:"<p>GTA VI的发售将是2026年最大的游戏事件。从GTA V到GTA VI跨越了13年，这期间游戏行业发生了翻天覆地的变化。R星将如何回应这些年来的技术与设计进步，全世界都在关注。</p>"}
+    ]
+  }
+};
+
+let selectedYear=null;
+
+function initYearSelector(){
+  const eventYears=new Set(EVENTS.map(e=>e.year));
+  const reviewYears=new Set(Object.keys(typeof YEAR_REVIEWS!=='undefined'?YEAR_REVIEWS:{}).map(Number));
+  const allYears=[...new Set([...eventYears,...reviewYears])].sort((a,b)=>a-b);
+  const dropdown=document.getElementById('yearDropdown');
+  const clearBtn=document.getElementById('yrClearBtn');
+  
+  // Group by decade
+  const decades={};
+  allYears.forEach(y=>{
+    const d=Math.floor(y/10)*10;
+    if(!decades[d])decades[d]=[];
+    decades[d].push(y);
+  });
+  
+  let html='<option value="">\u9009\u62e9\u5e74\u4efd\u67e5\u770b\u56de\u987e...</option>';
+  Object.keys(decades).sort((a,b)=>Number(a)-Number(b)).forEach(d=>{
+    html+=`<optgroup label="${d}\u5e74\u4ee3">`;
+    decades[d].forEach(y=>{
+      const hasReview=reviewYears.has(y);
+      const marker=hasReview?' \u2605':'';
+      html+=`<option value="${y}">${y}${marker}</option>`;
+    });
+    html+='</optgroup>';
+  });
+  dropdown.innerHTML=html;
+  
+  dropdown.addEventListener('change',()=>{
+    const yr=dropdown.value;
+    if(!yr){
+      clearYearReview();
+      clearBtn.classList.remove('show');
+    }else{
+      selectedYear=parseInt(yr);
+      showYearReview(selectedYear);
+      clearBtn.classList.add('show');
+    }
+  });
+  
+  clearBtn.addEventListener('click',()=>{
+    dropdown.value='';
+    clearYearReview();
+    clearBtn.classList.remove('show');
+  });
+}
+
+function showYearReview(year){
+  const review=typeof YEAR_REVIEWS!=='undefined'?YEAR_REVIEWS[year]:null;
+  const yearEvents=EVENTS.filter(e=>e.year===year).sort((a,b)=>a.month-b.month||a.day-b.day);
+  const thisYear=new Date().getFullYear();
+  
+  let html='<div class="yr-page">';
+  html+=`<div class="yr-header"><h1>${year}\u5e74</h1>`;
+  if(review){
+    html+=`<p class="yr-subtitle">${review.subtitle}</p>`;
+  }
+  html+='</div>';
+  
+  if(review){
+    review.sections.forEach(s=>{
+      html+=`<div class="yr-section"><h2>${s.title}</h2><div class="yr-content">${s.content}</div></div>`;
+    });
+  }else{
+    html+='<div class="yr-section"><h2>\ud83d\udcc5 \u672c\u5e74\u4e8b\u4ef6</h2><div class="yr-content">';
+    if(yearEvents.length){
+      html+='<ul>';
+      yearEvents.forEach(e=>{
+        const emoji=(typeof TYPE_EMOJI!=='undefined'?TYPE_EMOJI[e.type]:'')||'\ud83c\udfae';
+        const years=thisYear-e.year;
+        const ann=years>0&&(years%10===0||years%25===0)?` \ud83c\udf89 ${years}\u5468\u5e74`:'';
+        html+=`<li><strong>${e.month}\u6708${e.day}\u65e5</strong> ${emoji} ${e.title_cn}${e.title_en?' ('+e.title_en+')':''}${ann} \u2014 ${e.desc||''}</li>`;
+      });
+      html+='</ul>';
+    }else{
+      html+='<p>\u8be5\u5e74\u6682\u65e0\u6536\u5f55\u4e8b\u4ef6\u3002</p>';
+    }
+    html+='</div></div>';
+  }
+  
+  // Always show event list at bottom
+  if(review && yearEvents.length){
+    html+='<div class="yr-section"><h2>\ud83d\udcca \u672c\u5e74\u6536\u5f55\u4e8b\u4ef6 ('+yearEvents.length+')</h2><div class="yr-content"><div class="yr-events-grid">';
+    yearEvents.forEach(e=>{
+      const imp=e.importance||1;
+      const impCls=imp>=3?'imp3':imp>=2?'imp2':'';
+      const emoji=(typeof TYPE_EMOJI!=='undefined'?TYPE_EMOJI[e.type]:'')||'\ud83c\udfae';
+      html+=`<div class="yr-event-card ${impCls}" onclick="window.open('${e.wiki}','_blank')">
+        <div class="yr-ev-date">${e.month}\u6708${e.day}\u65e5</div>
+        <div class="yr-ev-name">${emoji} ${e.title_cn}</div>
+        <div class="yr-ev-en">${e.title_en}</div>
+      </div>`;
+    });
+    html+='</div></div></div>';
+  }
+  
+  html+='<div class="yr-back"><button onclick="clearYearReview()">\u2190 \u8fd4\u56de\u65e5\u5386</button></div>';
+  html+='</div>';
+  
+  document.getElementById('yearReview').innerHTML=html;
+  document.getElementById('yearReview').style.display='block';
+  document.querySelector('.main-layout').style.display='none';
+  document.getElementById('monthNav').style.display='none';
+}
+
+function clearYearReview(){
+  selectedYear=null;
+  document.getElementById('yearReview').style.display='none';
+  document.getElementById('yearReview').innerHTML='';
+  document.querySelector('.main-layout').style.display='';
+  document.getElementById('monthNav').style.display='';
+  document.getElementById('yearDropdown').value='';
+  document.getElementById('yrClearBtn').classList.remove('show');
+}
+
+let currentMonth=new Date().getMonth();
+let activeFilter="all";
+
+// Wikipedia image cache
+const wikiCache={};
+
+function getWikiTitle(wikiUrl){
+  if(!wikiUrl)return null;
+  try{
+    const url=new URL(wikiUrl);
+    const parts=url.pathname.split('/wiki/');
+    if(parts.length>1)return decodeURIComponent(parts[1]);
+  }catch(e){}
+  return null;
+}
+
+async function fetchWikiImage(wikiUrl,imgEl,placeholderEl,type){
+  const title=getWikiTitle(wikiUrl);
+  if(!title){
+    if(placeholderEl)placeholderEl.textContent=TYPE_FALLBACK[type]||'🎮';
+    return;
+  }
+  const cacheKey='wiki_img_'+title;
+
+  // Check sessionStorage first
+  try{
+    const cached=sessionStorage.getItem(cacheKey);
+    if(cached){
+      if(cached==='null'){
+        if(placeholderEl)placeholderEl.textContent=TYPE_FALLBACK[type]||'🎮';
+        return;
+      }
+      if(imgEl){imgEl.src=cached;imgEl.classList.add('loaded');if(placeholderEl)placeholderEl.style.display='none';}
+      return;
+    }
+  }catch(e){}
+
+  // In-memory cache
+  if(wikiCache[cacheKey]!==undefined){
+    const src=wikiCache[cacheKey];
+    if(!src){if(placeholderEl)placeholderEl.textContent=TYPE_FALLBACK[type]||'🎮';return;}
+    if(imgEl){imgEl.src=src;imgEl.classList.add('loaded');if(placeholderEl)placeholderEl.style.display='none';}
+    return;
+  }
+
+  try{
+    const resp=await fetch(`https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(title)}`);
+    if(!resp.ok)throw new Error('HTTP '+resp.status);
+    const data=await resp.json();
+    const src=data.thumbnail&&data.thumbnail.source?data.thumbnail.source:null;
+    wikiCache[cacheKey]=src;
+    try{sessionStorage.setItem(cacheKey,src||'null');}catch(e){}
+    if(src&&imgEl){
+      imgEl.src=src;imgEl.classList.add('loaded');
+      if(placeholderEl)placeholderEl.style.display='none';
+    }else{
+      if(placeholderEl)placeholderEl.textContent=TYPE_FALLBACK[type]||'🎮';
+    }
+  }catch(e){
+    wikiCache[cacheKey]=null;
+    try{sessionStorage.setItem(cacheKey,'null');}catch(ex){}
+    if(placeholderEl)placeholderEl.textContent=TYPE_FALLBACK[type]||'🎮';
+  }
+}
+
+// Index events by month-day
+const eventIndex={};
+EVENTS.forEach(e=>{
+  const key=`${e.month}-${e.day}`;
+  if(!eventIndex[key])eventIndex[key]=[];
+  eventIndex[key].push(e);
+});
+
+function getFilteredEvents(month,day){
+  const key=`${month}-${day}`;
+  const evts=eventIndex[key]||[];
+  if(activeFilter==="all")return evts;
+  return evts.filter(e=>e.type===activeFilter);
+}
+
+function getMonthFilteredCount(month){
+  let count=0;
+  for(let d=1;d<=31;d++){count+=getFilteredEvents(month+1,d).length;}
+  return count;
+}
+
+function getCellEventLabel(e){
+  const yr=new Date().getFullYear();
+  const years=yr-e.year;
+  const isBigAnn=years>0&&(years%10===0||years%25===0);
+  const isAnn=years>0&&years%5===0;
+  const emoji=TYPE_EMOJI[e.type]||'🎮';
+  let prefix=emoji+' ';
+  if(isBigAnn||isAnn){
+    prefix=`🎉${years}周年 `;
+  }
+  const name=e.title_cn.replace(/^《|》$/g,'');
+  const needBrackets=(e.type==='game'||e.type==='upcoming');
+  return prefix+(needBrackets?'《'+name+'》':name);
+}
+
+function render(){
+  const today=new Date();
+  const year=today.getFullYear();
+  const m=currentMonth;
+  const firstDay=new Date(year,m,1).getDay();
+  const daysInMonth=new Date(year,m+1,0).getDate();
+
+  const md=document.getElementById('monthDropdown');
+  if(!md.options.length){
+    MONTH_NAMES.forEach((name,i)=>{
+      const opt=document.createElement('option');
+      opt.value=i;
+      const cnt=getMonthFilteredCount(i);
+      opt.textContent=name+(cnt?` (${cnt})`:'');
+      md.appendChild(opt);
+    });
+    md.addEventListener('change',()=>{
+      currentMonth=parseInt(md.value);
+      render();
+    });
+  }
+  md.value=m;
+  // Update option counts
+  Array.from(md.options).forEach((opt,i)=>{
+    const cnt=getMonthFilteredCount(i);
+    opt.textContent=MONTH_NAMES[i]+(cnt?` (${cnt})`:'');
+  });
+
+  const totalFiltered=activeFilter==="all"?EVENTS.length:EVENTS.filter(e=>e.type===activeFilter).length;
+  document.getElementById("stats").textContent=`共收录 ${totalFiltered} 个事件 · 本月 ${getMonthFilteredCount(m)} 个`;
+
+  /* ===== Desktop Calendar Grid ===== */
+  const yr=year;
+  let html=DAY_NAMES.map(d=>`<div class="cal-head">${d}</div>`).join("");
+
+  for(let i=0;i<firstDay;i++){
+    html+=`<div class="cal-cell empty"><span class="day-num"></span></div>`;
+  }
+
+  for(let d=1;d<=daysInMonth;d++){
+    const evts=getFilteredEvents(m+1,d);
+    const isToday=(d===today.getDate()&&m===today.getMonth());
+    const cls=["cal-cell"];
+    if(evts.length)cls.push("has-events");
+    if(isToday)cls.push("today");
+    const hasMajor=evts.some(e=>(e.importance||1)>=3);
+    const hasAnn=evts.some(e=>{const a=yr-e.year;return a>0&&(a%10===0||a%25===0);});
+    if(hasMajor)cls.push('has-major');
+    const annBadge=hasAnn?'<span class="ann-badge">🎂</span>':'';
+
+    let eventsHTML='';
+    if(evts.length){
+      const MAX_SHOW=3;
+      const shown=evts.slice(0,MAX_SHOW);
+      shown.forEach(e=>{
+        const imp=e.importance||1;
+        const impCls=imp>=3?'imp-high':imp>=2?'imp-mid':'imp-low';
+        const label=getCellEventLabel(e);
+        eventsHTML+=`<div class="cell-event-item type-${e.type} ${impCls}" title="${e.title_cn} (${e.year})">${label}</div>`;
+      });
+      if(evts.length>MAX_SHOW){
+        eventsHTML+=`<div class="cell-more">+${evts.length-MAX_SHOW} 更多</div>`;
+      }
+    }
+
+    html+=`<div class="${cls.join(" ")}" data-day="${d}">
+      ${annBadge}
+      <span class="day-num">${d}</span>
+      <div class="cell-events">${eventsHTML}</div>
+    </div>`;
+  }
+
+  document.getElementById("calGrid").innerHTML=html;
+
+  document.querySelectorAll(".cal-cell.has-events").forEach(cell=>{
+    cell.addEventListener("click",()=>{
+      const day=parseInt(cell.dataset.day);
+      openModal(m+1,day);
+    });
+  });
+
+  /* ===== Mobile Timeline ===== */
+  let tlHTML='';
+  for(let d=1;d<=daysInMonth;d++){
+    const evts=getFilteredEvents(m+1,d);
+    if(!evts.length)continue;
+    const isToday=(d===today.getDate()&&m===today.getMonth());
+    const dt=new Date(year,m,d);
+    const wd=DAY_NAMES[dt.getDay()];
+    const todayCls=isToday?'today-col':'';
+    let evtItems='';
+    evts.forEach(e=>{
+      const imp=e.importance||1;
+      const impCls=imp>=3?'imp-high':imp>=2?'imp-mid':'imp-low';
+      const years=yr-e.year;
+      const isBigAnn=years>0&&(years%10===0||years%25===0);
+      const isAnn=years>0&&years%5===0;
+      let annTag='';
+      if(isBigAnn)annTag=`<span class="tl-ann-tag">🎉${years}周年</span>`;
+      else if(isAnn)annTag=`<span class="tl-ann-tag">${years}周年</span>`;
+      const emoji=TYPE_EMOJI[e.type]||'🎮';
+      evtItems+=`<div class="tl-event-item type-${e.type} ${impCls}">${emoji} ${e.title_cn}${annTag?'&nbsp;'+annTag:''}</div>`;
+    });
+    tlHTML+=`<div class="tl-day" data-month="${m+1}" data-day="${d}">
+      <div class="tl-date-col ${todayCls}">
+        <div class="tl-date-num">${d}</div>
+        <div class="tl-date-wd">${wd}</div>
+      </div>
+      <div class="tl-events-col">${evtItems}</div>
+    </div>`;
+  }
+  document.getElementById('mobileTimeline').innerHTML=tlHTML||'<div style="text-align:center;padding:40px;color:var(--text2)">本月暂无事件</div>';
+  document.querySelectorAll('.tl-day').forEach(row=>{
+    row.addEventListener('click',()=>{
+      openModal(parseInt(row.dataset.month),parseInt(row.dataset.day));
+    });
+  });
+
+  /* ===== Left Sidebar: Whole-year anniversaries ===== */
+  let allYearAnns=[];
+  EVENTS.forEach(e=>{
+    const years=yr-e.year;
+    const isBigAnn=years>0&&(years%10===0||years%25===0);
+    if(isBigAnn){allYearAnns.push({...e,years,isThisMonth:e.month===m+1});}
+  });
+  allYearAnns.sort((a,b)=>a.month!==b.month?a.month-b.month:a.day-b.day);
+  let annHTML='';
+  if(allYearAnns.length){
+    allYearAnns.forEach(h=>{
+      const impCls=h.importance>=3?'sb-imp3':h.importance>=2?'sb-imp2':'';
+      const isCurrent=h.isThisMonth?'sb-current':'';
+      const stars='⭐'.repeat(h.importance||1);
+      annHTML+=`<div class="sb-card ${impCls} ${isCurrent}" onclick="window.open('${h.wiki}','_blank')">
+        <div class="sb-date">${h.month}月${h.day}日 · ${h.year}年 ${stars}</div>
+        <div class="sb-name">${h.title_cn}</div>
+        <div class="sb-ann">🎉 ${h.years}周年</div>
+      </div>`;
+    });
+  }else{
+    annHTML='<div class="sb-empty">今年暂无整周年事件</div>';
+  }
+  document.getElementById('sidebarAnnTitle').textContent=`🎉 ${yr}年整周年纪念 (${allYearAnns.length})`;
+  document.getElementById('sidebarAnnList').innerHTML=annHTML;
+
+  /* ===== Right Sidebar: This month's highlights ===== */
+  let highlights=[];
+  for(let d=1;d<=daysInMonth;d++){
+    const evts=getFilteredEvents(m+1,d);
+    evts.forEach(e=>{
+      const years=yr-e.year;
+      const isFuture=years<0;
+      const imp=e.importance||1;
+      if(imp>=2||isFuture){highlights.push({...e,day:d,years,isFuture});}
+    });
+  }
+  highlights.sort((a,b)=>{
+    if((a.importance||1)!==(b.importance||1))return (b.importance||1)-(a.importance||1);
+    return a.day-b.day;
+  });
+  let sbHTML='';
+  if(highlights.length){
+    highlights.forEach(h=>{
+      const impCls=h.importance>=3?'sb-imp3':h.importance>=2?'sb-imp2':'';
+      const stars='⭐'.repeat(h.importance||1);
+      let annText='';
+      if(h.isFuture){annText='🔥 即将发售';}
+      else if(h.years>0){annText=h.years+'周年';}
+      sbHTML+=`<div class="sb-card ${impCls}" onclick="window.open('${h.wiki}','_blank')">
+        <div class="sb-date">${m+1}月${h.day}日 · ${h.year}年 ${stars}</div>
+        <div class="sb-name">${h.title_cn}</div>
+        ${annText?`<div class="sb-ann">${annText}</div>`:''}
+      </div>`;
+    });
+  }else{
+    sbHTML='<div class="sb-empty">本月暂无重点事件</div>';
+  }
+  document.getElementById('sidebarTitle').textContent=`📌 ${MONTH_NAMES[m]}重点事件 (${highlights.length})`;
+  document.getElementById('sidebarList').innerHTML=sbHTML;
+
+  // Sync sidebar heights with calendar (desktop only)
+  requestAnimationFrame(()=>{
+    const isMobile=window.innerWidth<=900;
+    if(isMobile){
+      // Remove max-height on mobile
+      document.getElementById('sidebarAnnList').style.maxHeight='';
+      document.getElementById('sidebarList').style.maxHeight='';
+      // Default collapsed on mobile
+      ['sidebarAnnTitle','sidebarTitle'].forEach(id=>{
+        const title=document.getElementById(id);
+        const list=title.nextElementSibling;
+        if(!title.hasAttribute('data-collapse-init')){
+          title.classList.add('collapsed');
+          list.classList.add('collapsed');
+          title.setAttribute('data-collapse-init','1');
+          title.addEventListener('click',()=>{
+            title.classList.toggle('collapsed');
+            list.classList.toggle('collapsed');
+          });
+        }
+      });
+    }else{
+      const calH=document.getElementById('calGrid').offsetHeight;
+      if(calH>0){
+        const titleH1=document.getElementById('sidebarAnnTitle').offsetHeight;
+        const titleH2=document.getElementById('sidebarTitle').offsetHeight;
+        document.getElementById('sidebarAnnList').style.maxHeight=(calH-titleH1-20)+'px';
+        document.getElementById('sidebarList').style.maxHeight=(calH-titleH2-20)+'px';
+      }
+      // Remove collapsed state on desktop
+      ['sidebarAnnTitle','sidebarTitle'].forEach(id=>{
+        const title=document.getElementById(id);
+        const list=title.nextElementSibling;
+        title.classList.remove('collapsed');
+        list.classList.remove('collapsed');
+      });
+    }
+  });
+}
+
+function openModal(month,day){
+  const evts=getFilteredEvents(month,day);
+  if(!evts.length)return;
+  evts.sort((a,b)=>a.year-b.year);
+  document.getElementById("modalTitle").textContent=`${month}月${day}日 · ${evts.length}个事件`;
+
+  const thisYear=new Date().getFullYear();
+  let html="";
+  const cardData=[];
+
+  evts.forEach((e,idx)=>{
+    const years=thisYear-e.year;
+    const isFuture=years<0;
+    let annHTML='';
+    if(!isFuture&&years>0){
+      const isBig=(years%10===0)||(years%25===0);
+      const cls=isBig?'big':'normal';
+      const suffix=isBig?' 🎉':'';
+      annHTML=`<span class="anniversary ${cls}">${years}周年${suffix}</span>`;
+    }
+    const imp=e.importance||1;
+    const impStars='⭐'.repeat(imp);
+    const impCls=`imp${imp}`;
+    const cardId=`ecard-${month}-${day}-${idx}`;
+
+    html+=`<div class="event-card ${impCls}" id="${cardId}" onclick="window.open('${e.wiki}','_blank')">
+      <div class="event-card-inner">
+        <div class="event-img-wrap" id="imgwrap-${cardId}">
+          <span class="event-img-placeholder" id="ph-${cardId}">${TYPE_EMOJI[e.type]||'🎮'}</span>
+          <img id="img-${cardId}" alt="${e.title_en}" onerror="this.style.display='none';document.getElementById('ph-${cardId}').style.display='';" />
+        </div>
+        <div class="event-info">
+          <div class="event-year"><span class="importance">${impStars}</span>${e.year}年 <span class="event-tag ${e.type}">${TYPE_LABELS[e.type]}</span></div>
+          <div class="event-title">${e.title_cn} <span class="link-icon">🔗</span></div>
+          <div class="event-title-en">${e.title_en}</div>
+          <div class="event-desc">${e.desc}</div>
+          ${annHTML?`<div class="event-ann-row">${annHTML}</div>`:''}
+        </div>
+      </div>
+    </div>`;
+    cardData.push({id:cardId,wiki:e.wiki,type:e.type});
+  });
+
+  document.getElementById("modalBody").innerHTML=html;
+  document.getElementById("modal").classList.add("open");
+
+  // Async load wiki images after modal renders
+  cardData.forEach(({id,wiki,type})=>{
+    const imgEl=document.getElementById('img-'+id);
+    const phEl=document.getElementById('ph-'+id);
+    fetchWikiImage(wiki,imgEl,phEl,type);
+  });
+}
+
+/* ===== Event Listeners ===== */
+document.getElementById("modalClose").addEventListener("click",()=>{
+  document.getElementById("modal").classList.remove("open");
+});
+document.getElementById("modal").addEventListener("click",e=>{
+  if(e.target===document.getElementById("modal"))
+    document.getElementById("modal").classList.remove("open");
+});
+document.getElementById("prevMonth").addEventListener("click",()=>{
+  currentMonth=(currentMonth-1+12)%12;render();
+});
+document.getElementById("nextMonth").addEventListener("click",()=>{
+  currentMonth=(currentMonth+1)%12;render();
+});
+document.querySelectorAll(".filter-btn").forEach(btn=>{
+  btn.addEventListener("click",()=>{
+    document.querySelectorAll(".filter-btn").forEach(b=>b.classList.remove("active"));
+    btn.classList.add("active");
+    activeFilter=btn.dataset.type;
+    render();
+  });
+});
+document.addEventListener("keydown",e=>{
+  if(e.key==="Escape"){
+    document.getElementById("modal").classList.remove("open");
+    // Also clear search on Escape if focused
+    if(document.activeElement===document.getElementById('searchInput')){
+      clearSearch();
+    }
+  }
+  if(!document.getElementById('searchResults').style.display||document.getElementById('searchResults').style.display==='none'){
+    if(e.key==="ArrowLeft"){currentMonth=(currentMonth-1+12)%12;render();}
+    if(e.key==="ArrowRight"){currentMonth=(currentMonth+1)%12;render();}
+  }
+});
+
+/* ===== SEARCH LOGIC ===== */
+let searchDebounceTimer=null;
+
+// Alias map: value is array of phrases (match any phrase as whole)
+const SEARCH_ALIASES={
+  'cod':['call of duty','使命召唤'],'cs':['counter-strike','反恐精英'],'csgo':['counter-strike: global offensive'],
+  'cs2':['counter-strike 2','反恐精英2'],'bf':['battlefield','战地'],'mw':['modern warfare'],
+  'ow':['overwatch','守望先锋'],'ow2':['overwatch 2','守望先锋2'],
+  'pubg':['pubg','playerunknown','绝地求生'],'apex':['apex legends'],
+  'ff':['final fantasy','最终幻想'],'ff7':['final fantasy vii','最终幻想7'],
+  'ff6':['final fantasy vi','最终幻想6'],'ff10':['final fantasy x','最终幻想x'],
+  'ffx':['final fantasy x','最终幻想x'],
+  'bg3':['baldur\'s gate 3','博德之门3'],'tes':['elder scrolls','上古卷轴'],
+  'p5':['persona 5','女神异闻录5'],'dq':['dragon quest','勇者斗恶龙'],
+  'mgs':['metal gear solid','合金装备'],
+  'ds':['dark souls','黑暗之魂'],'ds3':['dark souls iii','黑暗之魂3'],
+  'er':['elden ring','艾尔登法环'],'bb':['bloodborne','血源诅咒'],
+  'gta':['grand theft auto','侠盗猎车','gta'],'gta5':['grand theft auto v','gta5'],
+  'gta6':['grand theft auto vi','gta6'],'gta4':['grand theft auto iv'],
+  'gtasa':['grand theft auto: san andreas','圣安地列斯'],
+  'rdr':['red dead redemption','荒野大镖客'],'rdr2':['red dead redemption 2','荒野大镖客2'],
+  'tlou':['last of us','最后生还者'],'tlou2':['last of us part ii'],
+  'gow':['god of war','战神'],'botw':['breath of the wild','旷野之息'],
+  'totk':['tears of the kingdom','王国之泪'],'oot':['ocarina of time','时之笛'],
+  'alttp':['link to the past','众神的三角力量'],
+  'got':['ghost of tsushima','对马岛之魂'],'re':['resident evil','生化危机'],
+  're2':['resident evil 2'],'re4':['resident evil 4'],
+  'sh':['silent hill','寂静岭'],'dmc':['devil may cry'],
+  'mh':['monster hunter','怪物猎人'],'cp2077':['cyberpunk 2077','赛博朋克'],
+  'smb':['super mario bros','超级马力欧'],'ssb':['super smash bros'],
+  'mk':['mario kart','马力欧卡丁车'],'mk8':['mario kart 8'],
+  'ac':['animal crossing','动物森友会'],'acnh':['animal crossing: new horizons'],
+  'wow':['world of warcraft','魔兽世界'],'d2':['diablo ii','暗黑破坏神2'],
+  'd3':['diablo 3','暗黑破坏神3'],'d4':['diablo iv','暗黑破坏神4'],
+  'sc':['starcraft','星际争霸'],
+  'hl':['half-life','半条命'],'hl2':['half-life 2','半条命2'],
+  'hk':['hollow knight','空洞骑士'],'sv':['stardew valley','星露谷物语'],
+  'sdv':['stardew valley'],'ut':['undertale','传说之下'],
+  'de':['disco elysium','极乐迪斯科'],
+  'ps':['playstation'],'ps1':['playstation'],'ps2':['playstation 2'],'ps3':['playstation 3'],
+  'ps5':['playstation 5'],'psp':['playstation portable'],
+  'n64':['nintendo 64'],'gb':['game boy'],'ns':['nintendo switch'],'ns2':['nintendo switch 2'],
+  'fc':['family computer','famicom','红白机'],'dc':['dreamcast'],
+  '360':['xbox 360'],'xsx':['xbox series'],
+  '老滚':['elder scrolls','上古卷轴'],'老滚5':['skyrim','上古卷轴5','天际'],
+  '魂系列':['dark souls','elden ring','bloodborne'],'魂':['dark souls','黑暗之魂'],
+  '法环':['elden ring','艾尔登法环'],'血源':['bloodborne','血源诅咒'],
+  '只狼':['sekiro','影逝二度'],'塞尔达':['zelda','塞尔达传说'],
+  '马力欧':['mario'],'马里奥':['mario'],
+  '大表哥':['red dead redemption','荒野大镖客'],
+  '大镖客':['red dead redemption'],
+  '巫师':['witcher'],'巫师3':['witcher 3'],'赛朋':['cyberpunk 2077','赛博朋克'],
+  '大乱斗':['smash bros'],'宝可梦':['pokemon','pok\u00e9mon'],
+  '精灵宝可梦':['pokemon'],'口袋妖怪':['pokemon'],
+  '任天堂':['nintendo'],'索尼':['sony','playstation'],'微软':['microsoft','xbox'],'世嘉':['sega'],
+  '卡普空':['capcom'],'暴雪':['blizzard'],
+  'v社':['valve'],'r星':['rockstar'],
+  '顽皮狗':['naughty dog'],'小岛':['kojima'],
+  '宫崎英高':['fromsoftware','dark souls','elden ring'],
+  '吃鸡':['pubg','绝地求生'],'堡垒之夜':['fortnite'],
+  '我的世界':['minecraft'],'mc':['minecraft','我的世界'],
+  '大逃杀':['pubg','fortnite','battle royale'],
+};
+
+function expandAliases(tokens){
+  const expanded=[];
+  tokens.forEach(t=>{
+    if(SEARCH_ALIASES[t]){
+      expanded.push(t);
+      SEARCH_ALIASES[t].split(/\s+/).forEach(a=>{if(a)expanded.push(a);});
+    }else{
+      expanded.push(t);
+    }
+  });
+  return [...new Set(expanded)];
+}
+
+function performSearch(query){
+  const trimmed=query.trim();
+  const resultsEl=document.getElementById('searchResults');
+  const calendarArea=document.querySelector('.main-layout');
+  const mobileTimeline=document.getElementById('mobileTimeline');
+  const monthNav=document.querySelector('.month-nav');
+
+  if(!trimmed){
+    // Restore calendar view
+    resultsEl.style.display='none';
+    calendarArea.style.display='';
+    if(mobileTimeline)mobileTimeline.style.display='';
+    monthNav.style.display='';
+    document.getElementById('searchClear').style.display='none';
+    return;
+  }
+
+  // Show clear button
+  document.getElementById('searchClear').style.display='';
+
+  // Tokenize by whitespace, expand aliases, all original tokens must match (AND) with alias expansion
+  const tokens=trimmed.toLowerCase().split(/\s+/).filter(Boolean);
+
+  const year=new Date().getFullYear();
+
+  const matched=EVENTS.filter(e=>{
+    const haystack=[
+      e.title_cn||'',
+      e.title_en||'',
+      e.desc||'',
+      String(e.year||''),
+      String(e.month||''),
+      TYPE_LABELS[e.type]||'',
+      e.type||''
+    ].join(' ').toLowerCase();
+    // Each original token must match: either directly or via any of its alias phrases
+    return tokens.every(t=>{
+      if(haystack.includes(t))return true;
+      const aliasPhrases=SEARCH_ALIASES[t];
+      if(aliasPhrases){
+        return aliasPhrases.some(phrase=>haystack.includes(phrase.toLowerCase()));
+      }
+      return false;
+    });
+  });
+
+  // Sort by year then month then day
+  matched.sort((a,b)=>{
+    if(a.year!==b.year)return a.year-b.year;
+    if(a.month!==b.month)return a.month-b.month;
+    return a.day-b.day;
+  });
+
+  // Hide calendar, show results
+  calendarArea.style.display='none';
+  if(mobileTimeline)mobileTimeline.style.display='none';
+  monthNav.style.display='none';
+  resultsEl.style.display='block';
+
+  document.getElementById('searchCount').textContent=
+    matched.length>0?`找到 ${matched.length} 个匹配事件（关键词："${trimmed}"）`:`共搜索 ${EVENTS.length} 个事件`;
+
+  if(!matched.length){
+    document.getElementById('searchResultsBody').innerHTML=
+      '<div class="search-empty">😶 未找到相关事件，换个关键词试试？</div>';
+    return;
+  }
+
+  // Group by year
+  const groups={};
+  matched.forEach(e=>{
+    if(!groups[e.year])groups[e.year]=[];
+    groups[e.year].push(e);
+  });
+
+  let html='';
+  Object.keys(groups).sort((a,b)=>Number(a)-Number(b)).forEach(yr=>{
+    html+=`<div class="search-year-group">`;
+    html+=`<div class="search-year-label">${yr} 年 · ${groups[yr].length} 个事件</div>`;
+    groups[yr].forEach(e=>{
+      const years=year-e.year;
+      const isFuture=years<0;
+      const imp=e.importance||1;
+      const impCls=imp>=3?'imp3':imp>=2?'imp2':'';
+      const stars='⭐'.repeat(imp);
+      let annHTML='';
+      if(!isFuture&&years>0){
+        const isBig=(years%10===0)||(years%25===0);
+        const cls=isBig?'big':'normal';
+        const suffix=isBig?' 🎉':'';
+        annHTML=`<span class="sc-ann ${cls}">${years}周年${suffix}</span>`;
+      }
+      const emoji=TYPE_EMOJI[e.type]||'🎮';
+      html+=`<div class="search-card ${impCls}" data-month="${e.month}" data-day="${e.day}" onclick="handleSearchCardClick(${e.month},${e.day})">
+        <div class="search-card-date">
+          <div class="sc-month-day">${e.month}月${e.day}日</div>
+          <div class="sc-year">${e.year}</div>
+        </div>
+        <div class="search-card-body">
+          <div class="search-card-title">${e.title_cn}</div>
+          <div class="search-card-title-en">${e.title_en}</div>
+          <div class="search-card-meta">
+            <span class="sc-tag ${e.type}">${emoji} ${TYPE_LABELS[e.type]||e.type}</span>
+            <span class="sc-imp">${stars}</span>
+            ${annHTML}
+          </div>
+          ${e.desc?`<div class="search-card-desc">${e.desc}</div>`:''}
+        </div>
+      </div>`;
+    });
+    html+='</div>';
+  });
+
+  document.getElementById('searchResultsBody').innerHTML=html;
+}
+
+function handleSearchCardClick(month,day){
+  // Navigate to the month and open modal
+  clearSearch();
+  currentMonth=month-1;
+  render();
+  // Small delay to let calendar render
+  setTimeout(()=>openModal(month,day),80);
+}
+
+function clearSearch(){
+  const input=document.getElementById('searchInput');
+  input.value='';
+  performSearch('');
+}
+
+// Debounced input handler
+document.getElementById('searchInput').addEventListener('input',function(){
+  clearTimeout(searchDebounceTimer);
+  searchDebounceTimer=setTimeout(()=>performSearch(this.value),300);
+});
+
+document.getElementById('searchClear').addEventListener('click',()=>{
+  clearSearch();
+  document.getElementById('searchInput').focus();
+});
+
+initYearSelector();
+// Set header subtitle dynamically
+const _years=EVENTS.map(e=>e.year);
+const _minY=Math.min(..._years),_maxY=Math.max(..._years);
+document.getElementById('headerSub').textContent=`Gaming History Calendar \u00b7 ${_minY} \u2013 ${_maxY>new Date().getFullYear()?'Future':_maxY}`;
+render();
+</script>
+</body>
+</html>
