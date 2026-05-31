@@ -470,9 +470,16 @@ function appData() {
       if (this.selected.length === 0) return;
       try {
         const date = this.data.date;
+        const selIds = [...this.selected].map(x => Number(x)).sort((a,b) => a-b);
+        // Build URL map so heartbeat can match by URL even if IDs shift
+        const requested_articles = selIds.map(id => {
+          const art = this.data.articles.find(a => a.id === id);
+          return art ? { id, url: art.url, en_title: art.en_title } : { id };
+        });
         const payload = {
           date,
-          requested_ids: [...this.selected].map(x => Number(x)).sort((a,b) => a-b),
+          requested_ids: selIds,
+          requested_articles,
           requested_at: new Date().toISOString()
         };
         const path = `data/${date}/requests.json`;
