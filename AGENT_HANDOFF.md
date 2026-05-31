@@ -40,13 +40,17 @@
 ign-daily/                          # GitHub Pages 仓库
 ├── index.html                      # 主页(新闻列表、日期切换、勾选翻译)
 ├── article.html                    # 译文详情页
+├── manifest.json                   # PWA manifest(2026-05-31 新增)
+├── sw.js                           # Service Worker(离线缓存)
 ├── dict.html                       # 词库管理页
 ├── history.html                    # 历史浏览
 ├── learning.html                   # 学习日志 & 批注
 ├── STYLE_PROFILE.md                # AI 学到的翻译风格规则
 ├── assets/
-│   ├── app.js                      # 主页 Alpine.js 逻辑
-│   └── style.css                   # 样式
+│   ├── app.js                      # 主页 Alpine.js 逻辑 + SW 注册
+│   ├── style.css                   # 样式
+│   ├── icon-192.png                # PWA 图标 192x192
+│   └── icon-512.png                # PWA 图标 512x512
 ├── scripts/
 │   ├── build_today.py              # 构建脚本
 │   └── ...
@@ -204,11 +208,20 @@ workspace/
 {
   "date": "2026-05-29",
   "requested_ids": [2, 6, 7, 10],
+  "requested_articles": [
+    { "id": 2, "url": "https://www.ign.com/articles/...", "en_title": "..." },
+    { "id": 6, "url": "https://www.ign.com/articles/...", "en_title": "..." }
+  ],
   "requested_at": "2026-05-29T01:16:00.936Z"
 }
 ```
 
 由前端提交到 GitHub(用户浏览器里的 PAT 直接 commit)。
+
+**⚠️ ID 偏移防护(2026-05-31):**
+- 心跳增量抓取会在 index.json 前面插入新文章，导致已有文章 ID 偏移
+- 新格式包含 `requested_articles` 数组（含 URL 和标题），心跳翻译时**必须按 URL 匹配**当前 ID
+- 旧格式只有 `requested_ids`（兼容：直接按 ID 匹配）
 
 ### index-list.json (日期列表)
 
@@ -255,6 +268,21 @@ workspace/
 - **输出:** `✅ CURRENCY_CHECK: All amounts have CNY conversions.` 或报错并建议修正值
 - **何时跑:** 翻译完成后、git push 前(必须通过才能 push)
 
+### `scripts/post_translate_check.py` - 翻译后综合校验(2026-05-31 新增)
+
+- **用法:** `python3 scripts/post_translate_check.py [YYYY-MM-DD]`
+- **做什么:** 一次性检查所有 translation_status=done 的译文:
+  - ✅ cover 非空且无压缩参数
+  - ✅ translated_terms 存在
+  - ✅ paragraphs 非空
+  - ✅ subtitle 存在
+  - ✅ opus_summary 存在
+  - ✅ 无 ASCII 双引号残留
+  - ✅ 金额有 CNY 折算
+  - ✅ AGENT_HANDOFF.md 同步提醒
+- **输出:** 有 error 则 exit(1) 阻断 push; 只有 warning 则 exit(0) 但提示
+- **何时跑:** **每次翻译完成后、git push 前必跑**
+
 ### `scripts/nightly_polish_diff.py` - 夜间学习
 
 - **用法:** `python3 scripts/nightly_polish_diff.py`
@@ -276,7 +304,8 @@ workspace/
 8. AI 推测新词写 `pending_dict`，不静默入库
 9. **副标题 `subtitle`：2-15字创意短句，自拟，不是 paragraphs[0]**
 10. **文件名补零：** id=5 → `05.json`，不补零前端 404
-11. **push 前必跑：** `check_currency.py` + `enforce_dict_titles.py`
+11. **push 前必跑：** `post_translate_check.py` + `check_currency.py` + `enforce_dict_titles.py`
+12. **改了代码/流程必同步：** AGENT_HANDOFF.md + IGN_TRANSLATE_INSTRUCTIONS.md + HEARTBEAT.md
 
 ---
 
