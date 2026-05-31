@@ -104,7 +104,10 @@
     <header class="site-header">
       <div class="header-inner">
         <div class="brand">
-          <svg class="brand-logo"><use href="#icon-gamepad"/></svg>
+          <svg class="brand-logo" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+            <rect width="32" height="32" rx="6" fill="#e50914"/>
+            <text x="16" y="22.5" text-anchor="middle" font-family="Satoshi, Arial Black, sans-serif" font-weight="900" font-size="14" fill="white" letter-spacing="-0.5">IGN</text>
+          </svg>
           <span class="brand-title">IGN Daily</span>
           <div x-show="data" class="date-nav">
             <button @click="navigateDate('prev')" :disabled="!canGoPrev()" class="date-nav-btn" title="上一天">

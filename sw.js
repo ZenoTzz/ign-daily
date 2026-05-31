@@ -1,4 +1,4 @@
-const CACHE_NAME = 'ign-daily-v2';
+const CACHE_NAME = 'ign-daily-v3';
 const STATIC_ASSETS = [
   '/ign-daily/',
   '/ign-daily/index.html',
