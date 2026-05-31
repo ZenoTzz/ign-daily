@@ -369,20 +369,19 @@ workspace/
 
 ### 场景2:用户勾选翻译
 ```
-1. git pull → 读 requests.json → 找出 translation_status != 'done' 的
-2. 对每篇:
-   a. web_fetch 原文页
-   b. 提取 og:image → cover(去压缩参数)
-   c. 提取正文图片 → images[]
-   d. 读词库匹配
-   e. Opus 翻译(paragraphs 格式)
-   f. 生成 opus_summary(50-80字)
-   g. 写 translated_terms 快照
-   h. 新词写 pending_dict
-3. 写 translations/NN.json
-4. 更新 index.json 的 translation_status: 'done'
-5. 更新 index-list.json 的 translated 计数
-6. git push
+1. git pull → 读 requests.json
+2. 按 URL 匹配当前 ID（新格式）或直接按 ID（旧格式）
+3. 对每篇:
+   a. python3 scripts/translate_pipeline.py {date} {id} --prep
+      (获取 cover + 词库命中列表)
+   b. web_fetch 原文页
+   c. Opus 翻译(paragraphs + cn_title + opus_summary + subtitle)
+   d. 新词写 pending_dict
+   e. 写 translations/NN.json
+   f. python3 scripts/translate_pipeline.py {date} {id} --post
+      (自动补 cover/images/translated_terms + 清理 + 同步)
+4. python3 scripts/post_translate_check.py {date}
+5. python3 scripts/git_push.py
 ```
 
 ### 场景3:用户发临时文章链接
@@ -402,7 +401,7 @@ workspace/
 
 ---
 
-*最后更新:2026-05-30*
+*最后更新:2026-05-31*
 
 
 ---
