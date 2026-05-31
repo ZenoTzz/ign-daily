@@ -9,59 +9,61 @@
   <title>学习日志 — IGN Daily</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
-  <link rel="stylesheet" href="assets/style.css?v=20260528b">
-  <script src="assets/app.js?v=20260528b"></script>
+  <link rel="stylesheet" href="assets/style.css?v=20260531b">
+  <script src="assets/app.js?v=20260531"></script>
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet">
   <script>
     tailwind.config = {
-      theme: { extend: { colors: { brand: { 600:'#a01620',700:'#7e1219' }}}}
+      darkMode: 'class',
+      theme: { extend: { colors: { brand: { 600:'#e50914',700:'#b91c1c' }}}}
     }
   </script>
 </head>
-<body class="bg-slate-50 text-slate-800 antialiased">
+<body class="bg-[#08080f] text-[#f2f2f7] antialiased dark">
   <div x-data="learningData()" x-init="init()" class="min-h-screen flex flex-col">
     <!-- Header -->
-    <header class="bg-white border-b border-slate-200 sticky top-0 z-10">
+    <header class="bg-[#0f0f1a]/90 border-b border-white/5 sticky top-0 z-10 backdrop-blur-xl">
       <div class="max-w-4xl mx-auto px-4 py-3 flex items-center gap-3">
-        <a href="index.html" class="text-2xl font-bold text-brand-600">IGN Daily</a>
-        <span class="text-slate-400">|</span>
-        <span class="text-slate-600 font-medium">📊 学习日志</span>
+        <a href="index.html" class="text-2xl font-bold bg-gradient-to-r from-red-600 to-orange-500 bg-clip-text text-transparent">IGN Daily</a>
+        <span class="text-white/20">|</span>
+        <span class="text-white/60 font-medium">📊 学习日志</span>
         <div class="flex-1"></div>
-        <a href="index.html" class="text-sm text-slate-500 hover:text-brand-600">← 返回首页</a>
+        <a href="index.html" class="text-sm text-white/40 hover:text-red-500">← 返回首页</a>
       </div>
     </header>
 
     <!-- Main -->
     <main class="flex-1 max-w-4xl w-full mx-auto px-4 py-6">
-      <p class="text-sm text-slate-500 mb-6">
+      <p class="text-sm text-white/40 mb-6">
         每天 22:30 自动学习你润色过的文章，沉淀风格偏好。你可以为每条规则添加批注，反馈给我下次改进。
       </p>
 
       <!-- 📝 风格总结卡片 -->
-      <section class="mb-8 bg-white rounded-lg border border-slate-200 overflow-hidden">
-        <header class="bg-gradient-to-r from-indigo-50 to-purple-50 px-5 py-3 border-b border-slate-200 flex items-center gap-3">
-          <h2 class="text-lg font-bold text-slate-700">🎨 翻译风格总结</h2>
-          <span class="text-xs text-slate-400">基于所有润色学习自动生成</span>
+      <section class="mb-8 bg-[#14141f]/70 rounded-lg border border-white/5 overflow-hidden">
+        <header class="bg-gradient-to-r from-indigo-50 to-purple-50 px-5 py-3 border-b border-white/5 flex items-center gap-3">
+          <h2 class="text-lg font-bold text-white/80">🎨 翻译风格总结</h2>
+          <span class="text-xs text-white/30">基于所有润色学习自动生成</span>
           <div class="flex-1"></div>
           <button @click="styleExpanded = !styleExpanded"
-                  class="text-sm text-brand-600 hover:underline"
+                  class="text-sm text-red-500 hover:underline"
                   x-text="styleExpanded ? '收起' : '展开'"></button>
         </header>
         <div x-show="styleExpanded" class="p-5">
           <template x-if="styleLoading">
-            <div class="text-center text-slate-400 py-4">加载中...</div>
+            <div class="text-center text-white/30 py-4">加载中...</div>
           </template>
           <template x-if="!styleLoading && styleSummary">
-            <div class="prose prose-sm max-w-none text-slate-700 space-y-3" x-html="styleSummary"></div>
+            <div class="prose prose-sm max-w-none text-white/80 space-y-3" x-html="styleSummary"></div>
           </template>
           <template x-if="!styleLoading && !styleSummary">
-            <div class="text-slate-400 text-sm">暂无风格数据，等待第一次学习完成后生成。</div>
+            <div class="text-white/30 text-sm">暂无风格数据，等待第一次学习完成后生成。</div>
           </template>
         </div>
       </section>
 
       <!-- Loading -->
       <template x-if="loading">
-        <div class="text-center text-slate-400 py-20">加载中...</div>
+        <div class="text-center text-white/30 py-20">加载中...</div>
       </template>
 
       <!-- Error -->
@@ -71,44 +73,44 @@
 
       <!-- Date list -->
       <template x-if="!loading && !error && dates.length === 0">
-        <div class="text-center text-slate-500 py-20">还没有学习日志。等今晚 22:30 自动跑完就有了～</div>
+        <div class="text-center text-white/40 py-20">还没有学习日志。等今晚 22:30 自动跑完就有了～</div>
       </template>
 
       <template x-for="date in dates" :key="date">
-        <section class="mb-8 bg-white rounded-lg border border-slate-200 overflow-hidden">
-          <header class="bg-slate-50 px-5 py-3 border-b border-slate-200 flex items-center gap-3">
-            <h2 class="text-lg font-bold text-slate-700" x-text="`📅 ${date}`"></h2>
-            <span class="text-sm text-slate-500" x-text="logs[date] ? `分析了 ${logs[date].articles_analyzed} 篇` : ''"></span>
+        <section class="mb-8 bg-[#14141f]/70 rounded-lg border border-white/5 overflow-hidden">
+          <header class="bg-[#08080f] px-5 py-3 border-b border-white/5 flex items-center gap-3">
+            <h2 class="text-lg font-bold text-white/80" x-text="`📅 ${date}`"></h2>
+            <span class="text-sm text-white/40" x-text="logs[date] ? `分析了 ${logs[date].articles_analyzed} 篇` : ''"></span>
             <div class="flex-1"></div>
             <button @click="expanded[date] = !expanded[date]"
-                    class="text-sm text-brand-600 hover:underline"
+                    class="text-sm text-red-500 hover:underline"
                     x-text="expanded[date] ? '收起' : '展开'"></button>
           </header>
 
           <div x-show="expanded[date] && logs[date]" class="p-5 space-y-6">
             <!-- 已确认的规则 -->
             <div>
-              <h3 class="text-base font-semibold text-slate-700 mb-3 flex items-center gap-2">
+              <h3 class="text-base font-semibold text-white/80 mb-3 flex items-center gap-2">
                 ✅ 已确认的规则
-                <span class="text-xs text-slate-400 font-normal" x-text="`（${logs[date].rules_confirmed.length} 条）`"></span>
+                <span class="text-xs text-white/30 font-normal" x-text="`（${logs[date].rules_confirmed.length} 条）`"></span>
               </h3>
               <div class="space-y-3">
                 <template x-for="rule in logs[date].rules_confirmed" :key="rule.id">
-                  <article class="bg-slate-50 rounded p-4 border border-slate-200">
+                  <article class="bg-[#08080f] rounded p-4 border border-white/5">
                     <header class="flex items-start gap-2 mb-2">
                       <span class="bg-emerald-100 text-emerald-700 text-xs px-2 py-0.5 rounded font-medium" x-text="rule.category"></span>
                       <h4 class="font-semibold flex-1" x-text="rule.title"></h4>
-                      <span class="text-xs text-slate-500" x-text="rule.evidence"></span>
+                      <span class="text-xs text-white/40" x-text="rule.evidence"></span>
                     </header>
-                    <p class="text-sm text-slate-600 mb-2" x-text="rule.detail"></p>
-                    <details class="text-xs text-slate-500" x-show="rule.examples && rule.examples.length">
-                      <summary class="cursor-pointer hover:text-slate-700">📝 案例 (<span x-text="rule.examples.length"></span>)</summary>
+                    <p class="text-sm text-white/60 mb-2" x-text="rule.detail"></p>
+                    <details class="text-xs text-white/40" x-show="rule.examples && rule.examples.length">
+                      <summary class="cursor-pointer hover:text-white/80">📝 案例 (<span x-text="rule.examples.length"></span>)</summary>
                       <ul class="list-disc list-inside ml-2 mt-1 space-y-1">
                         <template x-for="ex in rule.examples"><li x-text="ex"></li></template>
                       </ul>
                     </details>
                     <!-- 批注区 -->
-                    <div class="mt-3 pt-3 border-t border-slate-200">
+                    <div class="mt-3 pt-3 border-t border-white/5">
                       <template x-if="getFeedback(date, rule.id)">
                         <div>
                           <div class="bg-amber-100 border-l-4 border-amber-500 p-2 mb-2 text-sm">
@@ -122,7 +124,7 @@
                               'bg-emerald-100 border-l-4 border-emerald-500': getResponse(date, rule.id).kind === 'confirm',
                               'bg-rose-100 border-l-4 border-rose-500': getResponse(date, rule.id).kind === 'reject',
                               'bg-blue-100 border-l-4 border-blue-500': getResponse(date, rule.id).kind === 'refine',
-                              'bg-slate-100 border-l-4 border-slate-500': getResponse(date, rule.id).kind === 'unclear'
+                              'bg-[#0f0f1a] border-l-4 border-slate-500': getResponse(date, rule.id).kind === 'unclear'
                             }" class="p-2 text-sm">
                               <span class="font-bold text-slate-900 mr-1">🤖 我的回复：</span>
                               <span class="text-slate-900" x-text="getResponse(date, rule.id).text"></span>
@@ -142,26 +144,26 @@
 
             <!-- 词库更新 -->
             <div x-show="logs[date].dict_updates && logs[date].dict_updates.length">
-              <h3 class="text-base font-semibold text-slate-700 mb-3 flex items-center gap-2">
+              <h3 class="text-base font-semibold text-white/80 mb-3 flex items-center gap-2">
                 📚 词库更新
-                <span class="text-xs text-slate-400 font-normal" x-text="`（${logs[date].dict_updates.length} 条）`"></span>
+                <span class="text-xs text-white/30 font-normal" x-text="`（${logs[date].dict_updates.length} 条）`"></span>
               </h3>
               <table class="w-full text-sm border-collapse">
                 <thead>
-                  <tr class="bg-slate-100 text-left">
-                    <th class="px-3 py-2 border border-slate-200">英文</th>
-                    <th class="px-3 py-2 border border-slate-200">原中文</th>
-                    <th class="px-3 py-2 border border-slate-200">新中文</th>
-                    <th class="px-3 py-2 border border-slate-200">来源</th>
+                  <tr class="bg-[#0f0f1a] text-left">
+                    <th class="px-3 py-2 border border-white/5">英文</th>
+                    <th class="px-3 py-2 border border-white/5">原中文</th>
+                    <th class="px-3 py-2 border border-white/5">新中文</th>
+                    <th class="px-3 py-2 border border-white/5">来源</th>
                   </tr>
                 </thead>
                 <tbody>
                   <template x-for="up in logs[date].dict_updates">
-                    <tr class="hover:bg-slate-50">
-                      <td class="px-3 py-2 border border-slate-200 font-mono text-xs" x-text="up.en"></td>
-                      <td class="px-3 py-2 border border-slate-200 text-slate-400" x-text="up.old_cn"></td>
-                      <td class="px-3 py-2 border border-slate-200 font-medium text-emerald-700" x-text="up.new_cn"></td>
-                      <td class="px-3 py-2 border border-slate-200 text-xs text-slate-500" x-text="up.source"></td>
+                    <tr class="hover:bg-[#08080f]">
+                      <td class="px-3 py-2 border border-white/5 font-mono text-xs" x-text="up.en"></td>
+                      <td class="px-3 py-2 border border-white/5 text-white/30" x-text="up.old_cn"></td>
+                      <td class="px-3 py-2 border border-white/5 font-medium text-emerald-700" x-text="up.new_cn"></td>
+                      <td class="px-3 py-2 border border-white/5 text-xs text-white/40" x-text="up.source"></td>
                     </tr>
                   </template>
                 </tbody>
@@ -170,22 +172,22 @@
 
             <!-- 待观察 -->
             <div x-show="logs[date].observations && logs[date].observations.length">
-              <h3 class="text-base font-semibold text-slate-700 mb-3 flex items-center gap-2">
+              <h3 class="text-base font-semibold text-white/80 mb-3 flex items-center gap-2">
                 👀 待观察
-                <span class="text-xs text-slate-400 font-normal">（出现次数不够，需要更多样本）</span>
+                <span class="text-xs text-white/30 font-normal">（出现次数不够，需要更多样本）</span>
               </h3>
               <div class="space-y-2">
                 <template x-for="obs in logs[date].observations" :key="obs.id">
                   <article class="bg-yellow-50 border border-yellow-200 rounded p-3">
                     <header class="flex items-start gap-2 mb-1">
                       <h4 class="text-sm font-medium flex-1" x-text="obs.title"></h4>
-                      <span class="text-xs text-slate-500" x-text="`出现 ${obs.occurrences} 次`"></span>
+                      <span class="text-xs text-white/40" x-text="`出现 ${obs.occurrences} 次`"></span>
                     </header>
-                    <p class="text-xs text-slate-600 mb-2" x-text="obs.detail"></p>
+                    <p class="text-xs text-white/60 mb-2" x-text="obs.detail"></p>
                     <!-- 批注 -->
                     <template x-if="getFeedback(date, obs.id)">
                       <div>
-                        <div class="bg-white p-2 rounded text-xs mb-1">
+                        <div class="bg-[#14141f]/70 p-2 rounded text-xs mb-1">
                           <span class="text-amber-700 font-medium">💬</span>
                           <span class="text-slate-900 font-medium" x-text="getFeedback(date, obs.id)"></span>
                           <button @click="editFeedback(date, obs.id)" class="text-blue-600 hover:underline ml-2">修改</button>
@@ -196,7 +198,7 @@
                             'bg-emerald-100 border-l-4 border-emerald-500': getResponse(date, obs.id).kind === 'confirm',
                             'bg-rose-100 border-l-4 border-rose-500': getResponse(date, obs.id).kind === 'reject',
                             'bg-blue-100 border-l-4 border-blue-500': getResponse(date, obs.id).kind === 'refine',
-                            'bg-slate-100 border-l-4 border-slate-500': getResponse(date, obs.id).kind === 'unclear'
+                            'bg-[#0f0f1a] border-l-4 border-slate-500': getResponse(date, obs.id).kind === 'unclear'
                           }" class="p-2 text-xs">
                             <span class="font-bold text-slate-900 mr-1">🤖 我的回复：</span>
                             <span class="text-slate-900" x-text="getResponse(date, obs.id).text"></span>
@@ -312,13 +314,13 @@
           }
           // 简化 Markdown → HTML
           let html = section
-            .replace(/^### (.+)$/gm, '<h4 class="font-bold text-slate-800 mt-4 mb-1">$1</h4>')
+            .replace(/^### (.+)$/gm, '<h4 class="font-bold text-[#f2f2f7] mt-4 mb-1">$1</h4>')
             .replace(/^## (.+)$/gm, '<h3 class="font-bold text-lg text-slate-900 mt-5 mb-2">$1</h3>')
-            .replace(/^\d+\. \*\*(.+?)\*\*(.*)$/gm, '<div class="mb-2"><span class="font-bold text-slate-800">$1</span><span class="text-slate-600">$2</span></div>')
-            .replace(/^   - (.+)$/gm, '<div class="ml-4 text-sm text-slate-600">• $1</div>')
-            .replace(/^- (.+)$/gm, '<div class="text-sm text-slate-600 ml-2">• $1</div>')
+            .replace(/^\d+\. \*\*(.+?)\*\*(.*)$/gm, '<div class="mb-2"><span class="font-bold text-[#f2f2f7]">$1</span><span class="text-white/60">$2</span></div>')
+            .replace(/^   - (.+)$/gm, '<div class="ml-4 text-sm text-white/60">• $1</div>')
+            .replace(/^- (.+)$/gm, '<div class="text-sm text-white/60 ml-2">• $1</div>')
             .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
-            .replace(/`(.+?)`/g, '<code class="text-xs bg-slate-100 px-1 rounded">$1</code>')
+            .replace(/`(.+?)`/g, '<code class="text-xs bg-[#0f0f1a] px-1 rounded">$1</code>')
             .replace(/\n\n+/g, '<br><br>')
             .replace(/\n/g, '<br>');
           return html;
