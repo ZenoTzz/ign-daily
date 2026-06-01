@@ -1,6 +1,16 @@
 {
   "date": "2026-06-01",
-  "requested_ids": [],
-  "requested_articles": [],
-  "completed_note": "Backrooms request fulfilled in translations/02.json; queue cleared after URL verification."
+  "requested_ids": [
+    5
+  ],
+  "requested_articles": [
+    {
+      "id": 5,
+      "url": "https://www.ign.com/articles/star-wars-the-mandalorian-and-grogu-suffers-69-drop-at-the-box-office",
+      "en_title": "Star Wars: The Mandalorian and Grogu Suffers 69% Drop at the Box Office",
+      "cn_title": "《星球大战：曼达洛人与古古》次周票房暴跌69%",
+      "publish_time_cn": "2026-05-31 08:20"
+    }
+  ],
+  "requested_at": "2026-06-01T11:46:06.379Z"
 }
