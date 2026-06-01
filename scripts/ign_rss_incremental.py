@@ -16,10 +16,12 @@ import sys
 from datetime import datetime, timezone, timedelta
 from email.utils import parsedate_to_datetime
 from pathlib import Path
+from common_paths import REPO_ROOT, configure_utf8_stdio
+
+configure_utf8_stdio()
 
 CST = timezone(timedelta(hours=8))
-WORKSPACE = r'C:\Users\Administrator\.openclaw\workspace'
-IGN_DAILY = os.path.join(WORKSPACE, 'ign-daily')
+IGN_DAILY = str(REPO_ROOT)
 
 # 确定当前日期归属
 now = datetime.now(CST)
@@ -122,7 +124,7 @@ for rss_url in RSS_PAGES:
 
 # 输出新文章到 ign_rss_new.json（供心跳翻译标题用）
 # 同时写入 index.json + need_titles.json 队列
-output_path = os.path.join(WORKSPACE, 'ign_rss_new.json')
+output_path = os.path.join(IGN_DAILY, 'ign_rss_new.json')
 with open(output_path, 'w', encoding='utf-8') as f:
     json.dump({
         'target_date': target_date,
@@ -154,6 +156,7 @@ if new_articles:
             'cn_title': a['title'],  # 临时英文，心跳替换
             'summary': '',
             'url': a['url'],
+            'publish_time_cn': a['pubDate_cst'],
             'pub_date': a['pubDate_cst'],
             'cover_image': '',
             'translation_status': 'none',
@@ -207,10 +210,20 @@ if new_articles:
     # 4) git add+commit+push
     import subprocess
     os.chdir(IGN_DAILY)
-    subprocess.run(['git', 'add', '-A'], capture_output=True)
-    subprocess.run(['git', 'commit', '-m', f'feat: incremental RSS {len(new_articles)} new articles for {target_date}'], capture_output=True)
-    push_script = os.path.join(WORKSPACE, 'ign-daily', 'scripts', 'git_push.py')
+    add = subprocess.run(['git', 'add', '-A'], capture_output=True, text=True)
+    if add.returncode != 0:
+        print(f"[ERR] git add failed: {add.stderr}")
+        sys.exit(add.returncode)
+    commit = subprocess.run(['git', 'commit', '-m', f'feat: incremental RSS {len(new_articles)} new articles for {target_date}'], capture_output=True, text=True)
+    if commit.returncode != 0 and 'nothing to commit' not in (commit.stdout + commit.stderr).lower():
+        print(f"[ERR] git commit failed: {commit.stderr}")
+        sys.exit(commit.returncode)
+    push_script = os.path.join(IGN_DAILY, 'scripts', 'git_push.py')
     if os.path.exists(push_script):
-        subprocess.run([sys.executable, push_script], capture_output=True)
+        push = subprocess.run([sys.executable, push_script], capture_output=True, text=True)
+        if push.returncode != 0:
+            print(push.stdout)
+            print(push.stderr)
+            sys.exit(push.returncode)
 else:
     print("📭 No new articles")

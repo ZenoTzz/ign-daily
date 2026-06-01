@@ -1,10 +1,11 @@
 """检查今天是否有润色（用于夜间学习按需触发）"""
 import json, datetime, os, sys
+from common_paths import DATA_DIR
 
 date = datetime.datetime.now().strftime('%Y-%m-%d')
-p = f'C:/Users/Administrator/.openclaw/workspace/ign-daily/data/{date}/polished/_index.json'
+p = DATA_DIR / date / 'polished' / '_index.json'
 
-if not os.path.exists(p):
+if not p.exists():
     print('NO_POLISH')
     sys.exit(0)
 

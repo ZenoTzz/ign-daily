@@ -1,8 +1,9 @@
 """根据当前 data/{date}/index.json 重建 index-list.json"""
 import json, os, glob
 from pathlib import Path
+from common_paths import DATA_DIR
 
-ROOT = Path(r'C:\Users\Administrator\.openclaw\workspace\ign-daily\data')
+ROOT = DATA_DIR
 list_path = ROOT / 'index-list.json'
 
 # 找所有日期文件夹

@@ -6,8 +6,9 @@ import json
 import urllib.request
 from datetime import datetime
 import os, sys
+from common_paths import exchange_rates_path
 
-OUT = r'C:\Users\Administrator\.openclaw\workspace\exchange_rates.json'
+OUT = exchange_rates_path()
 
 URLS = [
     'https://open.er-api.com/v6/latest/USD',

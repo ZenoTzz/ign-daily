@@ -55,7 +55,7 @@
 | 字段 | 要求 |
 |------|------|
 | `cn_title` | 精炼中文标题，≤20字，词库译名强制使用，作品名用《》 |
-| **副标题** (`cn_subtitle`) | **每篇必须有**，2-15 字，风格多样（情绪词/短引用/短语） |
+| **副标题** (`subtitle`) | **每篇必须有**，2-15 字，风格多样（情绪词/短引用/短语） |
 | `paragraphs` | 逐段翻译，每段独立（`{en, cn}` 对），不合并段落 |
 | `opus_summary` | 50-70 字极简总结（谁/做了什么/关键细节，2-3句） |
 | `translated_terms` | 本篇用到的专有名词译法快照 |
@@ -259,7 +259,7 @@ Rockstar、Valve、Bungie、Bethesda、Naughty Dog、Insomniac、Activision、CD
 {
   "id": 1,
   "cn_title": "《使命召唤》新作提前泄露",
-  "cn_subtitle": "急急急急急",
+  "subtitle": "急急急急急",
   "paragraphs": [
     {"en": "English paragraph...", "cn": "中文段落..."}
   ],
@@ -330,7 +330,7 @@ Rockstar、Valve、Bungie、Bethesda、Naughty Dog、Insomniac、Activision、CD
 
 ### 文件位置
 
-- JSON: `workspace/game_names_dict.json`
+- JSON: `data/dict.json`（前端和脚本共同使用；旧工作区里的 `game_names_dict.json` 只作为兼容回退）
 - 结构: 顶层 key 是分类（games/movies_tv/companies/people/media/terms）
 - 每个条目: `{"cn": "中文译名", "source": "来源"}`
 

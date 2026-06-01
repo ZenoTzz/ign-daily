@@ -8,11 +8,10 @@ Usage: python3 scripts/check_currency.py [YYYY-MM-DD]
 Default: today's date.
 """
 import json, re, sys
-from pathlib import Path
 from datetime import datetime, timezone, timedelta
+from common_paths import DATA_DIR, exchange_rates_path, configure_utf8_stdio
 
-WORKSPACE = Path(r'C:\Users\Administrator\.openclaw\workspace')
-TRANS_BASE = WORKSPACE / 'ign-daily' / 'data'
+configure_utf8_stdio()
 
 # Determine date
 if len(sys.argv) > 1:
@@ -21,13 +20,13 @@ else:
     cst = timezone(timedelta(hours=8))
     date_str = datetime.now(cst).strftime('%Y-%m-%d')
 
-TRANS_DIR = TRANS_BASE / date_str / 'translations'
+TRANS_DIR = DATA_DIR / date_str / 'translations'
 if not TRANS_DIR.exists():
     print(f"No translations dir for {date_str}")
     sys.exit(0)
 
 # Load exchange rates
-rates_path = WORKSPACE / 'exchange_rates.json'
+rates_path = exchange_rates_path()
 if rates_path.exists():
     with open(rates_path, 'r') as f:
         rates_data = json.load(f)

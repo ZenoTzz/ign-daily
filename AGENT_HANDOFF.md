@@ -81,13 +81,13 @@ ign-daily/                          # GitHub Pages 仓库
 
 ```
 workspace/
-├── game_names_dict.json            # 🔴 词库(翻译必查)
+├── ign-daily/data/dict.json        # 🔴 词库(翻译必查，前端和脚本共同使用)
 ├── exchange_rates.json             # 汇率(金额翻译用)
 ├── ign_rss_fetch.py                # 完整 RSS 抓取脚本(cron 用)
 ├── ign_cron_message.txt            # cron 任务指令文本
 ├── ign_rss_raw.json                # 上次完整抓取的原始结果
 ├── ign_rss_new.json                # 增量脚本发现的新文章
-├── IGN_TRANSLATE_INSTRUCTIONS.md   # 🔴 翻译详细规则
+├── ign-daily/TRANSLATION_GUIDE.md  # 🔴 翻译详细规则
 ├── STYLE_PROFILE.md → ign-daily/   # 风格学习结果(仓库里也有)
 ├── scripts/
 │   ├── ign_rss_incremental.py      # 心跳增量抓取脚本
@@ -100,7 +100,7 @@ workspace/
 
 ---
 
-## 🔴 词库 (game_names_dict.json)
+## 🔴 词库 (`data/dict.json`)
 
 ### 结构
 
@@ -331,7 +331,7 @@ workspace/
 
 ## 🔧 翻译规则速查
 
-详见 `IGN_TRANSLATE_INSTRUCTIONS.md`，核心：
+详见 `TRANSLATION_GUIDE.md`，核心：
 
 1. **翻译前必须 grep 词库**
 2. 英文和中文之间不留空格
@@ -350,13 +350,13 @@ workspace/
     python3 scripts/enforce_dict_titles.py {date}
     ```
     三个都必须通过才能 push。
-12. **改了代码/流程必同步：** AGENT_HANDOFF.md + IGN_TRANSLATE_INSTRUCTIONS.md + HEARTBEAT.md
+12. **改了代码/流程必同步：** AGENT_HANDOFF.md + TRANSLATION_GUIDE.md + scripts/README.md
 
 ---
 
 ## 🚀 Git 推送
 
-**永远使用:** `python3 C:\Users\Administrator\.openclaw\workspace\scripts\git_push.py`
+**永远使用:** `python3 scripts/git_push.py`
 
 不要用裸 `git push`(GCM 凭证已过期会弹窗卡死)。
 
@@ -380,7 +380,7 @@ workspace/
 
 ## 🧠 心跳任务(60分钟)
 
-参见 `HEARTBEAT.md`,两件事（严格按顺序）:
+心跳任务两件事（严格按顺序）:
 1. **翻译待处理标题**: 检查 `data/{今天}/need_titles.json` → 有未处理的用 Opus 逐篇翻译 cn_title+summary → 更新 index.json 并移除队列条目 → push
    - 翻译前必须 web_fetch 抓原文，查词库，判断 category/emoji
    - 严格遵循词库规则、公司名规则、金额格式
@@ -407,7 +407,7 @@ workspace/
 ### 场景1:心跳发现新文章
 ```
 1. python3 scripts/ign_rss_incremental.py → "✅ Found 3 new articles"
-2. 读 game_names_dict.json
+2. 读 data/dict.json
 3. 对 3 篇文章翻译标题+分类+摘要(查词库!)
 4. 追加到 ign-daily/data/{target_date}/index.json
 5. 更新 data/index-list.json
@@ -456,7 +456,7 @@ workspace/
 
 ## 📌 维护原则
 
-**对这个项目做任何改动后,都必须同步更新本文件(AGENT_HANDOFF.md)和相关指令文档(IGN_TRANSLATE_INSTRUCTIONS.md / HEARTBEAT.md)。**
+**对这个项目做任何改动后,都必须同步更新本文件(AGENT_HANDOFF.md)和相关指令文档(TRANSLATION_GUIDE.md / scripts/README.md)。**
 
 改动包括但不限于:
 - 新增/修改前端展示字段
@@ -466,3 +466,15 @@ workspace/
 - 修复 bug 后的经验教训
 
 原则:下一个接手的 agent 或人类只读这一份文件就能完整理解和运维整个系统。
+
+---
+
+## 2026-06-01 维护补充：路径、词库与校验
+
+- 脚本统一通过 `scripts/common_paths.py` 推导仓库根目录、`data/`、词库和 `.env` 路径。
+- 新脚本不要再硬编码 `C:\Users\Administrator\.openclaw\workspace`；旧路径只保留为兼容回退。
+- 词库统一优先使用 `data/dict.json`。前端词库管理页和后端校验/管道必须读写同一个文件。
+- 副标题字段统一为 `subtitle`。`cn_subtitle` 只作为历史兼容读取，不作为新译文写入字段。
+- `ign_rss_incremental.py` 新增文章必须同时写 `publish_time_cn`，避免前端排序拿不到发布时间。
+- push 前三连校验必须扫描真实的 `data/{date}`。如果输出 `No index.json` 或 `No translations dir`，不能视为通过，应先确认日期或路径。
+- `scripts/legacy/` 仅存放历史一次性修复/导入脚本，不得接入 cron、heartbeat 或日常翻译流程。

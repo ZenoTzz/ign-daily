@@ -28,7 +28,7 @@ ign-daily/
 ├── assets/
 │   ├── app.js              # 前端逻辑
 │   ├── style.css           # 样式
-│   └── github-api.js       # GitHub API 写回工具
+│   └── alpine.min.js       # 本地托管 AlpineJS
 ├── data/
 │   ├── dict.json           # 词库
 │   ├── 2026-05-28/         # 每日数据目录
@@ -39,7 +39,9 @@ ign-daily/
 │   │       └── ...
 │   └── ...
 └── scripts/
-    └── push_daily.py       # 每日推送数据到仓库的脚本
+    ├── ign_rss_incremental.py # RSS 增量抓取
+    ├── translate_pipeline.py  # 翻译预处理/后处理
+    └── git_push.py            # PAT 推送工具
 ```
 
 ## 🚀 本地预览
@@ -91,6 +93,7 @@ python -m http.server 8000
 ### 关键变更记录
 
 - **2026-06-01**: 修复 article.html 中 `article.pending_dict` 缺少可选链 `?.` 导致的 Alpine 表达式异常；所有按钮和右侧 pane 移除 `hidden sm:inline / lg:inline-flex / hidden lg:block` 响应式隐藏类；AlpineJS 从 unpkg CDN 改为 `assets/alpine.min.js` 本地托管。修复旧翻译 JSON 缺少 `url`/`en_title` 导致 iframe 右侧空白的问题；pipeline `--post` 模式新增自动补 `url`/`en_title`。
+- **2026-06-01**: 脚本统一从仓库根目录推导路径，三连校验不再扫描 `repo/ign-daily/data` 或旧 `C:\Users\Administrator\.openclaw\workspace`；词库统一优先使用 `data/dict.json`；副标题字段统一为 `subtitle`。
 
 ## 📝 License
 

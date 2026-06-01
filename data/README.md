@@ -52,12 +52,20 @@ Cron 仅负责创建新日期文件夹，不得覆盖/清理/合并旧日期。
   "cn_title": "...",
   "url": "https://www.ign.com/...",
   "translated_at": "2026-05-28T11:30+08:00",
+  "subtitle": "急急急急急",
+  "opus_summary": "50-70字总结",
+  "translated_terms": {},
+  "pending_dict": [],
+  "cover": "https://assets-prd.ignimgs.com/...",
+  "images": [{"url": "https://assets-prd.ignimgs.com/...", "caption": ""}],
   "paragraphs": [
     {"en": "...", "cn": "..."},
     {"en": "...", "cn": "..."}
   ]
 }
 ```
+
+副标题字段统一使用 `subtitle`。旧字段 `cn_subtitle` 仅作为历史兼容读取，不再作为新译文写入字段。
 
 ## dict.json（词库）
 
@@ -86,6 +94,11 @@ Cron 仅负责创建新日期文件夹，不得覆盖/清理/合并旧日期。
 {
   "date": "2026-05-28",
   "requested_ids": [5, 14, 22],
+  "requested_articles": [
+    {"id": 5, "url": "https://www.ign.com/articles/...", "en_title": "..."}
+  ],
   "requested_at": "2026-05-28T09:00+08:00"
 }
 ```
+
+新请求必须尽量写入 `requested_articles`，这样后端可按 URL 重新匹配当前 ID，避免增量抓取插入新文章后出现 ID 偏移。`requested_ids` 只作为旧格式兼容。

@@ -10,11 +10,12 @@ import os
 import re
 import sys
 from datetime import datetime, timezone, timedelta
+from common_paths import REPO_ROOT
 
 CST = timezone(timedelta(hours=8))
 NOW_ISO = datetime.now(CST).isoformat()
 
-REPO = r'C:\Users\Administrator\.openclaw\workspace\ign-daily'
+REPO = str(REPO_ROOT)
 LOG_DIR = os.path.join(REPO, 'data', 'learning_log')
 
 

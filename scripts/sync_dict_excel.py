@@ -3,9 +3,10 @@ import json
 import os
 from openpyxl import Workbook
 from openpyxl.styles import Font, PatternFill, Border, Side, Alignment
+from common_paths import dict_path, REPO_ROOT
 
-JSON_PATH = r'C:\Users\Administrator\.openclaw\workspace\game_names_dict.json'
-XLSX_PATH = r'X:\IGN_Daily_News\游戏影视名称词库.xlsx'
+JSON_PATH = dict_path()
+XLSX_PATH = os.environ.get('DICT_XLSX_PATH') or str(REPO_ROOT / '游戏影视名称词库.xlsx')
 
 with open(JSON_PATH, 'r', encoding='utf-8') as f:
     d = json.load(f)

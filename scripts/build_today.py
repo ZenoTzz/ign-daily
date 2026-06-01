@@ -11,10 +11,11 @@ import json
 import os
 import shutil
 from datetime import datetime, timezone, timedelta
+from common_paths import REPO_ROOT, dict_path
 
-REPO = r'C:\Users\Administrator\.openclaw\workspace\ign-daily'
-INDEX = r'C:\Users\Administrator\.openclaw\workspace\ign_daily_index.json'
-DICT_SRC = r'C:\Users\Administrator\.openclaw\workspace\game_names_dict.json'
+REPO = str(REPO_ROOT)
+INDEX = os.environ.get('IGN_DAILY_INDEX_JSON') or str(REPO_ROOT / 'ign_daily_index.json')
+DICT_SRC = str(dict_path())
 
 # 北京时间
 CST = timezone(timedelta(hours=8))
@@ -67,8 +68,10 @@ with open(os.path.join(out_dir, 'index.json'), 'w', encoding='utf-8') as f:
     json.dump(index_obj, f, ensure_ascii=False, indent=2)
 print(f'[OK] data/{TODAY}/index.json  ({len(articles)} articles)')
 
-# 复制词库
-shutil.copy(DICT_SRC, os.path.join(REPO, 'data', 'dict.json'))
+# 复制词库（如果来源已经是 data/dict.json，则跳过）
+dict_dest = os.path.join(REPO, 'data', 'dict.json')
+if os.path.abspath(DICT_SRC) != os.path.abspath(dict_dest):
+    shutil.copy(DICT_SRC, dict_dest)
 print('[OK] data/dict.json')
 
 # 更新历史清单 index-list.json（追加/更新今天）

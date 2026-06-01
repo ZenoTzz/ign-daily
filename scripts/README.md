@@ -18,9 +18,13 @@
 | 脚本 | 用途 |
 |------|------|
 | `ign_image_fetch.py` | 从 IGN 文章页抓取图片 URL |
-| `backfill_images_today.py` | 为今天已翻译文章补抓图片 |
 | `generate_annotation_response.py` | 为用户批注生成 AI 回复 |
 | `sync_dict_excel.py` | 同步 JSON 词库到 Excel 版本 |
+
+## 旧脚本
+
+`scripts/legacy/` 里的脚本是历史一次性修复/导入脚本，可能包含固定日期、
+固定文章 ID 或旧机器路径。不要把它们接入 cron、heartbeat 或日常翻译流程。
 
 ## 环境配置
 
@@ -31,9 +35,25 @@
 
 ## 路径说明
 
-脚本中的路径默认指向 `C:\Users\Administrator\.openclaw\workspace\`。
-如果新 agent 在不同机器运行，需要修改：
-- `git_push.py` 中的 `DEFAULT_REPO` 和 `.env` 路径
-- `ign_rss_incremental.py` 中的 workspace 路径
+脚本统一通过 `scripts/common_paths.py` 从当前仓库推导路径，默认不再依赖
+`C:\Users\Administrator\.openclaw\workspace\`。
 
-建议新 agent 用环境变量 `WORKSPACE` 统一管理，或修改脚本顶部的路径常量。
+- 仓库根目录：`Path(__file__).parents[1]`
+- 数据目录：`data/`
+- 词库：优先 `data/dict.json`，旧 `game_names_dict.json` 只作为兼容回退
+- `.env`：优先仓库根目录 `.env`，其次 `scripts/.env`
+
+如果新增脚本，不要再硬编码个人机器路径；应复用 `common_paths.py`。
+
+## 校验说明
+
+翻译完成后仍必须跑三连：
+
+```bash
+python3 scripts/post_translate_check.py {date}
+python3 scripts/check_currency.py {date}
+python3 scripts/enforce_dict_titles.py {date}
+```
+
+这三个脚本必须扫描 `data/{date}` 下的真实文件。如果输出 `No index.json` 或
+`No translations dir`，不要当作通过，先确认日期和路径是否正确。

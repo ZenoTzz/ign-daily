@@ -34,21 +34,14 @@ IGN Daily Translation Pipeline - 统一自动化管道
 import json, os, sys, re, urllib.request, urllib.parse
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
+from common_paths import REPO_ROOT, dict_path, exchange_rates_path, configure_utf8_stdio
+
+configure_utf8_stdio()
 
 CST = timezone(timedelta(hours=8))
-WORKSPACE = Path(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))).resolve()
-# 如果 WORKSPACE 是 ign-daily 的子目录（如 scripts 里运行），退回一层
-IGN_DAILY = WORKSPACE
-# 但确保 ign-daily/scripts/ 下运行时路径正确
-if (WORKSPACE / 'ign-daily').exists():
-    IGN_DAILY = WORKSPACE / 'ign-daily'
-elif (WORKSPACE / 'data').exists():
-    IGN_DAILY = WORKSPACE
-elif not (WORKSPACE / 'scripts' / 'git_push.py').exists():
-    # fallback: 从运行目录反推
-    IGN_DAILY = Path.cwd().resolve()
-DICT_PATH = WORKSPACE / 'game_names_dict.json'
-EXCHANGE_PATH = WORKSPACE / 'exchange_rates.json'
+IGN_DAILY = REPO_ROOT
+DICT_PATH = dict_path()
+EXCHANGE_PATH = exchange_rates_path()
 
 
 def load_dict():

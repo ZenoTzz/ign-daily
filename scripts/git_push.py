@@ -13,8 +13,9 @@ import os
 import sys
 import subprocess
 from pathlib import Path
+from common_paths import REPO_ROOT, env_paths
 
-DEFAULT_REPO = r'C:\Users\Administrator\.openclaw\workspace\ign-daily'
+DEFAULT_REPO = str(REPO_ROOT)
 DEFAULT_BRANCH = 'main'
 
 
@@ -37,7 +38,7 @@ def main():
     repo = sys.argv[1] if len(sys.argv) > 1 else DEFAULT_REPO
     branch = sys.argv[2] if len(sys.argv) > 2 else DEFAULT_BRANCH
 
-    env_path = r'C:\Users\Administrator\.openclaw\workspace\.env'
+    env_path = next((p for p in env_paths() if p.exists()), env_paths()[0])
     env = load_env(env_path)
     pat = env.get('GITHUB_PAT_IGN_DAILY') or os.environ.get('GITHUB_PAT_IGN_DAILY')
     user = env.get('GITHUB_USER_IGN_DAILY', 'ZenoTzz')

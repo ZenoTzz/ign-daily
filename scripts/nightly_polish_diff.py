@@ -9,8 +9,7 @@
 import json, os, glob, sys, re, urllib.request, datetime
 
 DATE = sys.argv[1] if len(sys.argv) > 1 else datetime.datetime.now().strftime('%Y-%m-%d')
-ROOT = r'C:\Users\Administrator\.openclaw\workspace'
-REPO = os.path.join(ROOT, 'ign-daily')
+REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DAY_DIR = os.path.join(REPO, 'data', DATE)
 PROFILE = os.path.join(REPO, 'STYLE_PROFILE.md')
 
@@ -97,7 +96,7 @@ def collect_diffs(date):
         # 副标题对比
         subtitle_diff = None
         polish_sub = (polish.get('subtitle') or '').strip()
-        trans_sub = (trans.get('cn_subtitle') or trans.get('summary') or '').strip()
+        trans_sub = (trans.get('subtitle') or trans.get('cn_subtitle') or trans.get('summary') or '').strip()
         if polish_sub != trans_sub:
             subtitle_diff = {
                 'mine': trans_sub,

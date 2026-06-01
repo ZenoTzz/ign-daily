@@ -1464,7 +1464,7 @@
           if (!this.article) return;
           this.polishData = {
             title: this.article.cn_title || '',
-            subtitle: this.article.cn_subtitle || this.article.summary || '',
+            subtitle: this.article.subtitle || this.article.cn_subtitle || this.article.summary || '',
             body: (this.article.paragraphs || []).map(p => p.cn).join('\n\n'),
             updated_at: null,
           };

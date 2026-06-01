@@ -7,6 +7,9 @@ Default: today's date (Asia/Shanghai)
 """
 import json, os, sys, re
 from datetime import datetime, timezone, timedelta
+from common_paths import DATA_DIR, REPO_ROOT, configure_utf8_stdio
+
+configure_utf8_stdio()
 
 CST = timezone(timedelta(hours=8))
 if len(sys.argv) > 1:
@@ -14,20 +17,19 @@ if len(sys.argv) > 1:
 else:
     date_str = datetime.now(CST).strftime('%Y-%m-%d')
 
-DATA_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'ign-daily', 'data', date_str)
-TRANS_DIR = os.path.join(DATA_DIR, 'translations')
-WORKSPACE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+DAY_DIR = DATA_DIR / date_str
+TRANS_DIR = DAY_DIR / 'translations'
 
 errors = []
 warnings = []
 
-if not os.path.exists(TRANS_DIR):
+if not TRANS_DIR.exists():
     print(f"No translations directory for {date_str}")
     sys.exit(0)
 
 # Load index to find which are 'done'
-idx_path = os.path.join(DATA_DIR, 'index.json')
-if not os.path.exists(idx_path):
+idx_path = DAY_DIR / 'index.json'
+if not idx_path.exists():
     print(f"No index.json for {date_str}")
     sys.exit(1)
 
@@ -38,9 +40,9 @@ done_ids = [a['id'] for a in idx['articles'] if a.get('translation_status') == '
 
 for aid in done_ids:
     fname = f"{aid:02d}.json"
-    fpath = os.path.join(TRANS_DIR, fname)
+    fpath = TRANS_DIR / fname
     
-    if not os.path.exists(fpath):
+    if not fpath.exists():
         errors.append(f"#{aid}: translation file {fname} MISSING but status=done")
         continue
     
@@ -136,13 +138,13 @@ import subprocess
 try:
     result = subprocess.run(
         ['git', 'log', '--oneline', '--since=today', '--', 'assets/app.js', 'index.html', 'article.html', 'sw.js', 'manifest.json'],
-        capture_output=True, text=True, cwd=os.path.join(WORKSPACE, 'ign-daily')
+        capture_output=True, text=True, cwd=REPO_ROOT
     )
     code_changes = result.stdout.strip()
     
     result2 = subprocess.run(
         ['git', 'log', '--oneline', '--since=today', '--', 'AGENT_HANDOFF.md'],
-        capture_output=True, text=True, cwd=os.path.join(WORKSPACE, 'ign-daily')
+        capture_output=True, text=True, cwd=REPO_ROOT
     )
     doc_changes = result2.stdout.strip()
     

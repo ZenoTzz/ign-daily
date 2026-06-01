@@ -11,6 +11,9 @@ import json
 import sys
 import os
 from datetime import datetime, timezone, timedelta
+from common_paths import DATA_DIR, dict_path, configure_utf8_stdio
+
+configure_utf8_stdio()
 
 CST = timezone(timedelta(hours=8))
 
@@ -87,15 +90,18 @@ def enforce(index_path, dict_terms):
 
 def main():
     date = get_date()
-    workspace = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    dict_path = os.path.join(workspace, 'game_names_dict.json')
-    index_path = os.path.join(workspace, 'ign-daily', 'data', date, 'index.json')
+    active_dict_path = dict_path()
+    index_path = DATA_DIR / date / 'index.json'
     
-    if not os.path.exists(index_path):
+    if not index_path.exists():
         print(f"No index.json for {date}")
         sys.exit(0)
     
-    dict_terms = load_dict(dict_path)
+    if not active_dict_path.exists():
+        print(f"No dictionary found at {active_dict_path}")
+        sys.exit(1)
+    
+    dict_terms = load_dict(active_dict_path)
     fixes, data = enforce(index_path, dict_terms)
     
     if not fixes:
