@@ -45,7 +45,7 @@
             <option value="both">双语</option>
           </select>
           <!-- 桌面端显示所有按钮 -->
-          <a x-show="article" :href="article?.url" target="_blank" rel="noopener"
+          <a x-show="article?.url" :href="article?.url" target="_blank" rel="noopener"
             class="text-xs text-slate-500 hover:text-brand-600">🔗 IGN</a>
           <button @click="toggleTheme()" class="text-xs text-slate-500 hover:text-brand-600" title="主题切换">
             <span x-text="themeIcon"></span>
@@ -76,7 +76,7 @@
     <div class="sm:hidden fixed bottom-6 right-4 z-40" x-data="{ fabOpen: false }">
       <div x-show="fabOpen" x-cloak x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 scale-90" x-transition:enter-end="opacity-100 scale-100" x-transition:leave="transition ease-in duration-100" x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-90"
            class="mb-3 flex flex-col gap-2 items-end">
-        <a x-show="article" :href="article?.url" target="_blank" rel="noopener" class="fab-item">
+        <a x-show="article?.url" :href="article?.url" target="_blank" rel="noopener" class="fab-item">
           🔗 IGN 原文
         </a>
         <button @click="openPolish(); fabOpen=false" class="fab-item hidden">
@@ -375,14 +375,14 @@
           <div x-show="iframeFailed" class="p-4">
             <div class="bg-amber-50 border border-amber-200 text-amber-800 rounded-lg p-3 text-sm mb-3">
               ⚠️ IGN 不允许在 iframe 中嵌入。下方显示的是抓取的英文原文段落（与左侧译文一一对应）。
-              <a :href="article?.url" target="_blank" class="underline">在新标签打开IGN原文</a>
+              <a x-show="article?.url" :href="article?.url" target="_blank" class="underline">在新标签打开IGN原文</a>
             </div>
             <h2 class="text-xl font-bold mb-1" x-text="article?.en_title"></h2>
             <template x-for="(p, idx) in article?.paragraphs || []" :key="idx">
               <p class="mb-3 leading-relaxed text-sm text-slate-700" x-text="p.en"></p>
             </template>
           </div>
-          <iframe x-show="!iframeFailed" :src="article?.url"
+          <iframe x-show="!iframeFailed && article?.url" :src="article?.url"
             class="w-full h-full border-0"
             @load="iframeLoaded = true"
             @error="iframeFailed = true"
@@ -549,10 +549,15 @@
             const res = await fetch(`data/${date}/translations/${padded}.json?t=${Date.now()}`);
             if (!res.ok) throw new Error(`HTTP ${res.status}`);
             this.article = await res.json();
-            // iframe 5秒超时则降级
-            setTimeout(() => {
-              if (!this.iframeLoaded) this.iframeFailed = true;
-            }, 5000);
+            // 如果没有原文 URL（旧数据缺少 url 字段），直接降级
+            if (!this.article?.url) {
+              this.iframeFailed = true;
+            } else {
+              // 有 url 则 5 秒超时降级
+              setTimeout(() => {
+                if (!this.iframeLoaded) this.iframeFailed = true;
+              }, 5000);
+            }
           } catch (e) {
             this.error = '加载译文失败：' + e.message;
             return;
