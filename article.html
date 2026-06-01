@@ -1305,7 +1305,7 @@
             this.flash('⚠️ 该文章无译文段落', 2500);
             return;
           }
-          const raw = (cnTitle ? cnTitle + '\n\n' : '') + cnLines.join('\n\n');
+          const raw = (cnTitle ? cnTitle + '\n\n\n' : '') + cnLines.join('\n\n\n');
           const text = this.normalizePunctuation(raw);
 
           const reset = () => setTimeout(() => { this.copyBtnText = '📋 复制全文'; }, 2000);
