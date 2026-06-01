@@ -36,8 +36,17 @@ from datetime import datetime, timezone, timedelta
 from pathlib import Path
 
 CST = timezone(timedelta(hours=8))
-WORKSPACE = Path(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-IGN_DAILY = WORKSPACE / 'ign-daily'
+WORKSPACE = Path(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))).resolve()
+# 如果 WORKSPACE 是 ign-daily 的子目录（如 scripts 里运行），退回一层
+IGN_DAILY = WORKSPACE
+# 但确保 ign-daily/scripts/ 下运行时路径正确
+if (WORKSPACE / 'ign-daily').exists():
+    IGN_DAILY = WORKSPACE / 'ign-daily'
+elif (WORKSPACE / 'data').exists():
+    IGN_DAILY = WORKSPACE
+elif not (WORKSPACE / 'scripts' / 'git_push.py').exists():
+    # fallback: 从运行目录反推
+    IGN_DAILY = Path.cwd().resolve()
 DICT_PATH = WORKSPACE / 'game_names_dict.json'
 EXCHANGE_PATH = WORKSPACE / 'exchange_rates.json'
 
