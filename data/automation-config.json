@@ -1,6 +1,6 @@
 {
-  "title_translator": "openclaw",
-  "fulltext_translator": "openclaw",
+  "title_translator": "api",
+  "fulltext_translator": "api",
   "nightly_learner": "openclaw",
   "api_provider": "openai-compatible",
   "api_model": "deepseek-v4-flash",
@@ -8,6 +8,6 @@
   "api_fulltext_model": "deepseek-v4-pro",
   "api_nightly_model": "deepseek-v4-flash",
   "api_base_url": "https://api.deepseek.com",
-  "updated_at": "2026-06-02T00:00:00Z",
+  "updated_at": "2026-06-01T15:41:31.014Z",
   "notes": "Public switch only. API keys must stay in GitHub Actions Secrets."
 }
