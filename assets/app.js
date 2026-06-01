@@ -155,6 +155,7 @@ function appData() {
     },
     automationSaving: false,
     automationTriggering: false,
+    rssTriggering: false,
     automationExpanded: false,
     toast: '',
 
@@ -191,6 +192,7 @@ function appData() {
       });
       try {
         await this.loadAutomationConfig();
+        this.triggerRssOnRefresh();
         const date = new URLSearchParams(location.search).get('date') || todayBeijingDate();
         this.currentDate = date;
         // 加载可用日期列表
@@ -391,6 +393,7 @@ function appData() {
     async refreshData() {
       this.loading = true;
       this.data = null;
+      await this.triggerRssOnRefresh(true);
       await this.init();
       this.flash('🔄 已刷新');
     },
@@ -477,6 +480,31 @@ function appData() {
         this.flash('触发 API 翻译失败：' + e.message, 6000);
       } finally {
         this.automationTriggering = false;
+      }
+    },
+
+    isApiMode(kind) {
+      const value = this.automationConfig?.[kind];
+      return value === 'api' || value === 'deepseek';
+    },
+
+    async triggerRssOnRefresh(force = false) {
+      const token = localStorage.getItem('gh_token');
+      if (!token || this.rssTriggering) return false;
+      const key = 'ign_daily_last_rss_dispatch_at';
+      const now = Date.now();
+      const last = Number(localStorage.getItem(key) || 0);
+      const cooldownMs = 10 * 60 * 1000;
+      if (!force && now - last < cooldownMs) return false;
+      try {
+        this.rssTriggering = true;
+        await GH.dispatchWorkflow('hourly-rss.yml');
+        localStorage.setItem(key, String(now));
+        return true;
+      } catch (_) {
+        return false;
+      } finally {
+        this.rssTriggering = false;
       }
     },
 
@@ -598,7 +626,14 @@ function appData() {
         const path = `data/${date}/requests.json`;
         await GH.putFile(path, JSON.stringify(payload, null, 2),
           `request translation for ${date}: ${payload.requested_ids.join(',')}`);
-        this.flash(`✅ 已请求翻译 ${this.selected.length} 篇，主session会处理`);
+        const apiFulltext = this.isApiMode('fulltext_translator');
+        if (apiFulltext) {
+          await this.saveAutomationConfig();
+          await GH.dispatchWorkflow('api-translation.yml');
+          this.flash(`✅ 已请求翻译 ${this.selected.length} 篇，API Actions 已开始处理`);
+        } else {
+          this.flash(`✅ 已请求翻译 ${this.selected.length} 篇，OpenClaw 会处理`);
+        }
         // 标记 requested
         for (const id of this.selected) {
           const a = this.data.articles.find(x => x.id === id);

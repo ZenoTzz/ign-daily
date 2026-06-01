@@ -17,7 +17,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <script defer src="assets/alpine.min.js"></script>
   <link rel="stylesheet" href="assets/style.css?v=20260531b">
-  <script src="assets/app.js?v=20260602f"></script>
+  <script src="assets/app.js?v=20260602g"></script>
 </head>
 <body>
   <!-- SVG Icon Definitions -->
@@ -189,7 +189,7 @@
           <svg class="pending-icon" width="16" height="16"><use href="#icon-clock"/></svg>
           <div style="flex:1;">
             <div class="pending-title">正在翻译 <span x-text="requestedCount"></span> 篇</div>
-            <p style="font-size:0.7rem; color:var(--text-muted); margin-top:0.2rem;">请耐心等待主session处理，翻译完成后状态会变为「已翻译」。</p>
+            <p style="font-size:0.7rem; color:var(--text-muted); margin-top:0.2rem;">API 模式会自动触发 Actions；OpenClaw 模式由 OpenClaw 处理。完成后状态会变为「已翻译」。</p>
             <div class="pending-pills">
               <template x-for="a in requestedArticles" :key="a.id">
                 <span class="pending-pill">#<span x-text="a.id"></span> <span x-text="a.cn_title.length > 18 ? a.cn_title.slice(0,18)+'…' : a.cn_title"></span></span>
