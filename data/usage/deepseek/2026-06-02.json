@@ -1,0 +1,33 @@
+{
+  "date": "2026-06-02",
+  "records": [
+    {
+      "time_cn": "2026-06-02 00:29:25",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 13,
+      "article_url": "https://www.ign.com/articles/new-playstation-hardware-hands-on",
+      "article_date": "2026-06-02",
+      "detail": "",
+      "prompt_tokens": 7882,
+      "completion_tokens": 350,
+      "total_tokens": 8232,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 7882
+    },
+    {
+      "time_cn": "2026-06-02 00:29:28",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 14,
+      "article_url": "https://www.ign.com/articles/the-marvel-legends-series-spider-man-noir-action-figure-is-up-for-preorder-exclusively-at-amazon",
+      "article_date": "2026-06-02",
+      "detail": "",
+      "prompt_tokens": 6533,
+      "completion_tokens": 150,
+      "total_tokens": 6683,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 6533
+    }
+  ]
+}
