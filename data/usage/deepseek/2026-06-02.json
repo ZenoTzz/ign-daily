@@ -28,6 +28,34 @@
       "total_tokens": 6683,
       "prompt_cache_hit_tokens": 0,
       "prompt_cache_miss_tokens": 6533
+    },
+    {
+      "time_cn": "2026-06-02 00:30:26",
+      "task": "fulltext",
+      "model": "deepseek-v4-pro",
+      "article_id": 3,
+      "article_url": "https://www.ign.com/articles/official-baldurs-gate-2-remake-reportedly-in-development-at-wizards-of-the-coast",
+      "article_date": "2026-06-02",
+      "detail": "",
+      "prompt_tokens": 6844,
+      "completion_tokens": 1560,
+      "total_tokens": 8404,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 6844
+    },
+    {
+      "time_cn": "2026-06-02 00:31:02",
+      "task": "fulltext",
+      "model": "deepseek-v4-pro",
+      "article_id": 4,
+      "article_url": "https://www.ign.com/articles/video-games-could-have-movie-style-product-placement-to-counter-rising-costs-ex-dragon-age-boss-says",
+      "article_date": "2026-06-02",
+      "detail": "",
+      "prompt_tokens": 7136,
+      "completion_tokens": 2101,
+      "total_tokens": 9237,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 7136
     }
   ]
 }

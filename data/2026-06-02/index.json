@@ -67,8 +67,8 @@
       "url": "https://www.ign.com/articles/official-baldurs-gate-2-remake-reportedly-in-development-at-wizards-of-the-coast",
       "publish_time_cn": "2026-06-01 20:47",
       "pub_date": "2026-06-01 20:47",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/06/01/bg2-1780317973808.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/01/bg2-1780317973808.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/01/bg2-1780317973808.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/01/bg2-1780317973808.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -84,7 +84,11 @@
           "cn": "Kevin Martens",
           "reason": "不知名人物，保留英文"
         }
-      ]
+      ],
+      "translation_path": "translations/03.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro"
     },
     {
       "id": 4,
@@ -96,8 +100,8 @@
       "url": "https://www.ign.com/articles/video-games-could-have-movie-style-product-placement-to-counter-rising-costs-ex-dragon-age-boss-says",
       "publish_time_cn": "2026-06-01 20:09",
       "pub_date": "2026-06-01 20:09",
-      "cover_image": "https://assets-prd.ignimgs.com/2022/10/26/dragonageinquisitionjpg-a2a564-1280w-1415667815153-1666759988152.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2022/10/26/dragonageinquisitionjpg-a2a564-1280w-1415667815153-1666759988152.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2022/10/26/dragonageinquisitionjpg-a2a564-1280w-1415667815153-1666759988152.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2022/10/26/dragonageinquisitionjpg-a2a564-1280w-1415667815153-1666759988152.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -138,7 +142,11 @@
           "cn": "贝斯卡",
           "reason": "《曼达洛人》金属名，词库无，建议确认"
         }
-      ]
+      ],
+      "translation_path": "translations/04.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro"
     },
     {
       "id": 5,
