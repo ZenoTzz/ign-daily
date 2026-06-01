@@ -11,7 +11,8 @@
   网页 (GitHub Pages) ← 用户浏览新闻、勾选翻译、润色译文
 
 后端(AI agent + cron + heartbeat):
-  [心跳 每小时] RSS增量抓取 → 翻译标题/摘要 → push 到 GitHub
+  [cron 每小时] RSS增量抓取 → 写 index.json(英文标题) + need_titles.json → push
+  [心跳 60分钟] 检查 need_titles.json → Opus 翻译标题+摘要 → push
   [cron 8:20 AM] 兜底校验补漏 → 生成 Excel → 发通知
   [心跳 检测翻译请求] 用户勾选后 → Opus 翻译全文 → push
   [cron 22:30] nightly polish-diff 学习 → 更新 STYLE_PROFILE
@@ -21,10 +22,13 @@
 
 | 阶段 | 触发 | 做什么 | 模型 |
 |------|------|--------|------|
-| RSS 抓取 | 心跳(每小时) | 增量抓 RSS → 翻译标题摘要 → push 网页 | Sonnet(轻量) |
-| 兜底校验 | cron 8:20 | 重跑完整 RSS 对比补漏 → 生成 Excel → 通知 | Sonnet |
-| 全文翻译 | 用户勾选 | web_fetch 原文 → 词库匹配 → Opus 翻译 → push | **Opus(最好模型)** |
+| RSS 抓取 | cron(每小时) | 增量抓 RSS → 追加到 index.json + 写 need_titles.json → push | cron子代理(轻量) |
+| 标题翻译 | 心跳(60分钟) | 检查 need_titles.json → web_fetch原文 → Opus 翻译 cn_title+summary → 更新 index.json → push | **Opus(最好模型)** |
+| 兜底校验 | cron 8:20 | 重跑完整 RSS 对比补漏 → 生成 Excel → 通知 | cron子代理 |
+| 全文翻译 | 用户勾选 | web_fetch 原文 → 词库匹配 → Opus 翻译全文 → push | **Opus(最好模型)** |
 | 夜间学习 | cron 22:30 | 对比润色前后 diff → 提取风格规则 → 更新 STYLE_PROFILE | Opus |
+
+> ⚠️ **标题+摘要翻译原则**: 所有文章在首页必须显示中文标题和摘要，不能显示英文占位。cron 只负责抓取和写 need_titles.json 队列，翻译工作必须在主 session 用 Opus 完成。
 
 ### 日期归属规则
 
@@ -232,6 +236,30 @@ workspace/
 ]
 ```
 
+### need_titles.json (待翻译标题队列)
+
+由 `ign_rss_incremental.py` 在抓到新文章后生成，心跳检查并处理。
+
+```json
+[
+  {
+    "id": 18,
+    "url": "https://www.ign.com/articles/...",
+    "en_title": "New IGN Article Title",
+    "pub_date": "2026-06-01 14:30"
+  }
+]
+```
+
+**处理流程:**
+1. 心跳检测到 need_titles.json 有内容
+2. 逐条处理：web_fetch 抓原文 → 翻译 cn_title+summary → 更新 index.json
+3. 从 need_titles.json 移除已处理的条目
+4. 队列清空后 → git add+commit+push
+5. 如果 need_titles.json 为空或不存在，跳过此任务
+
+> ⚠️ **不要跳过标题翻译**：所有文章在首页必须显示中文标题和摘要。英文标题只作为中间占位，心跳必须尽快翻译。
+
 ---
 
 ## ⚙️ 关键脚本说明
@@ -239,9 +267,15 @@ workspace/
 ### `scripts/ign_rss_incremental.py` - 心跳增量抓取
 
 - **用法:** `python3 scripts/ign_rss_incremental.py`
-- **做什么:** 抓 3 页 RSS(60 条),与当天 index.json 去重,过滤促销,输出新文章到 `ign_rss_new.json`
+- **做什么:** 抓 3 页 RSS(60 条),与当天 index.json 去重,过滤促销
+- **产出:**
+  1. 追加新文章到 `data/{target_date}/index.json`（英文标题+空摘要占位）
+  2. 更新 `data/index-list.json`
+  3. 写入 `data/{target_date}/need_titles.json` 队列（供心跳翻译标题用）
+  4. 同时输出到 `ign_rss_new.json`（兼容旧流程）
+  5. git add + commit + push
 - **日期逻辑:** 8:00 前 → target_date=今天; 8:00 后 → target_date=明天
-- **输出:** `workspace/ign_rss_new.json`(含 target_date、next_id、articles)
+- **注意:** 此脚本**只抓取不翻译**，标题翻译由主 session 心跳处理
 
 ### `ign_rss_fetch.py` - 完整抓取(cron 兜底用)
 
@@ -333,11 +367,13 @@ workspace/
 
 ---
 
-## 🧠 心跳任务(每小时)
+## 🧠 心跳任务(60分钟)
 
-参见 `HEARTBEAT.md`,两件事:
-1. 跑 `ign_rss_incremental.py` → 有新文章就翻译标题摘要 → push
-2. 检查 `requests.json` → 有未翻译的就执行全文翻译(用 Opus)→ push
+参见 `HEARTBEAT.md`,两件事（严格按顺序）:
+1. **翻译待处理标题**: 检查 `data/{今天}/need_titles.json` → 有未处理的用 Opus 逐篇翻译 cn_title+summary → 更新 index.json 并移除队列条目 → push
+   - 翻译前必须 web_fetch 抓原文，查词库，判断 category/emoji
+   - 严格遵循词库规则、公司名规则、金额格式
+2. **翻译请求**: 检查 `requests.json` → 有未翻译的用 Opus 全文翻译 → push
 
 ---
 

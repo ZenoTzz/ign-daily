@@ -52,10 +52,13 @@ ign-daily/
 ## 日常工作流
 
 ### 心跳（每小时自动触发）
-1. 运行 `python3 scripts/ign_rss_incremental.py` 检查新文章
-2. 有新文章 → 翻译标题+摘要 → 追加到 `data/{date}/index.json` → push
-3. 检查 `data/{date}/requests.json` 有无用户勾选的翻译请求
-4. 有请求 → 在主 session 直接翻译（不用子代理）→ push → 通知用户
+1. 运行 `python3 scripts/ign_rss_incremental.py` → 自动抓新文章、写 index.json、写 need_titles.json 队列
+2. 检查 `data/{today}/need_titles.json` 队列
+3. 有未翻译标题 → web_fetch 抓原文 → Opus 翻译 cn_title+summary → 更新 index.json → 从队列移除 → push
+4. 检查 `data/{date}/requests.json` 有无用户勾选的翻译请求
+5. 有请求 → 在主 session 直接翻译，更新 index.json 的 cn_title+summary → push → 通知用户
+
+> ⚠️ **首页显示原则**：所有文章必须有中文标题+摘要。如果 index.json 的 cn_title 等于 en_title（英文），说明 need_titles 还没被心跳处理，这是 bug。
 
 ### 用户说"翻译"
 等同于心跳任务2：检查 requests.json，翻译未完成的文章。
