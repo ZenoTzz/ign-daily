@@ -69,7 +69,7 @@ python3 scripts/agent_doctor.py
 标题摘要/正文翻译由网页设置写入 `data/automation-config.json`：
 
 - `openclaw`：保留队列，由 OpenClaw 独立 cron 处理。
-- `api`：GitHub Actions 读取 Secret `TRANSLATOR_API_KEY` 并运行：
+- `api`：GitHub Actions 读取 Secret `TRANSLATOR_API_KEY`，再从 `data/automation-config.json` 读取 `api_model`/`api_base_url` 并运行：
 
 ```bash
 python3 scripts/translate_titles_deepseek.py {date}

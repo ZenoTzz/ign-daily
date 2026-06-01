@@ -97,7 +97,7 @@ python -m http.server 8000
 - **2026-06-01**: 「复制全文」改为同时写入纯文本和 HTML 段落，粘贴到腾讯文档/Word/飞书时保留原译文分段。
 - **2026-06-01**: 首页发布时间兼容 `pub_date`，并回填 2026-06-01 数据的 `publish_time_cn`；`agent_doctor.py` 新增缺失发布时间检查。
 - **2026-06-01**: RSS 增量抓取迁移到 GitHub Actions `.github/workflows/hourly-rss.yml`；CI 使用 `IGN_DAILY_SKIP_GIT=1` 让脚本只写数据，再由 workflow 跑 `rss_queue_check.py`/`agent_doctor.py` 后提交。
-- **2026-06-02**: 新增网页可视化自动化开关 `data/automation-config.json`。标题摘要和正文可分别选择 `openclaw` 或 `api`；API 模式读取 GitHub Secret `TRANSLATOR_API_KEY`，严格跑现有校验脚本，不通过不 push。
+- **2026-06-02**: 新增网页可视化自动化开关 `data/automation-config.json`。标题摘要和正文可分别选择 `openclaw` 或 `api`，并可切换 `deepseek-v4-flash`/`deepseek-v4-pro`；API 模式读取 GitHub Secret `TRANSLATOR_API_KEY`，严格跑现有校验脚本，不通过不 push。
 
 ## 📝 License
 

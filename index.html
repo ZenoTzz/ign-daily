@@ -17,7 +17,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <script defer src="assets/alpine.min.js"></script>
   <link rel="stylesheet" href="assets/style.css?v=20260531b">
-  <script src="assets/app.js?v=20260602b"></script>
+  <script src="assets/app.js?v=20260602c"></script>
 </head>
 <body>
   <!-- SVG Icon Definitions -->
@@ -219,6 +219,15 @@
           <option value="openclaw">OpenClaw</option>
           <option value="api">API</option>
         </select>
+
+        <label style="display:block; margin-top:0.75rem;">API 模型</label>
+        <select x-model="automationConfig.api_model" style="width:100%; margin-top:0.35rem;">
+          <option value="deepseek-v4-flash">DeepSeek V4 Flash</option>
+          <option value="deepseek-v4-pro">DeepSeek V4 Pro</option>
+        </select>
+
+        <label style="display:block; margin-top:0.75rem;">API Base URL</label>
+        <input type="text" x-model="automationConfig.api_base_url" placeholder="https://api.deepseek.com" style="width:100%; margin-top:0.35rem;">
 
         <p style="font-size:0.68rem; color:var(--text-muted); margin-top:0.75rem;">
           当前配置文件：data/automation-config.json。OpenClaw 每次启动也会读取它；API 模式下应静默跳过对应任务。

@@ -126,7 +126,9 @@ function appData() {
     automationConfig: {
       title_translator: 'openclaw',
       fulltext_translator: 'openclaw',
-      api_provider: 'openai-compatible'
+      api_provider: 'openai-compatible',
+      api_model: 'deepseek-v4-flash',
+      api_base_url: 'https://api.deepseek.com'
     },
     automationSaving: false,
     toast: '',
@@ -390,6 +392,8 @@ function appData() {
           title_translator: cfg.title_translator || 'openclaw',
           fulltext_translator: cfg.fulltext_translator || 'openclaw',
           api_provider: cfg.api_provider || 'openai-compatible',
+          api_model: cfg.api_model || 'deepseek-v4-flash',
+          api_base_url: cfg.api_base_url || 'https://api.deepseek.com',
           updated_at: cfg.updated_at || ''
         };
       } catch (_) {}
@@ -402,6 +406,8 @@ function appData() {
           title_translator: this.automationConfig.title_translator || 'openclaw',
           fulltext_translator: this.automationConfig.fulltext_translator || 'openclaw',
           api_provider: 'openai-compatible',
+          api_model: this.automationConfig.api_model || 'deepseek-v4-flash',
+          api_base_url: this.automationConfig.api_base_url || 'https://api.deepseek.com',
           updated_at: new Date().toISOString(),
           notes: 'Public switch only. API keys must stay in GitHub Actions Secrets.'
         };

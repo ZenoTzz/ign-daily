@@ -2,6 +2,8 @@
   "title_translator": "openclaw",
   "fulltext_translator": "openclaw",
   "api_provider": "openai-compatible",
+  "api_model": "deepseek-v4-flash",
+  "api_base_url": "https://api.deepseek.com",
   "updated_at": "2026-06-02T00:00:00Z",
   "notes": "Public switch only. API keys must stay in GitHub Actions Secrets."
 }
