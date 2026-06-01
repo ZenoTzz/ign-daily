@@ -46,25 +46,25 @@
           </select>
           <!-- 桌面端显示所有按钮 -->
           <a x-show="article" :href="article?.url" target="_blank" rel="noopener"
-            class="hidden sm:inline text-xs text-slate-500 hover:text-brand-600">🔗 IGN</a>
-          <button @click="toggleTheme()" class="hidden sm:inline text-xs text-slate-500 hover:text-brand-600" title="主题切换">
+            class="text-xs text-slate-500 hover:text-brand-600">🔗 IGN</a>
+          <button @click="toggleTheme()" class="text-xs text-slate-500 hover:text-brand-600" title="主题切换">
             <span x-text="themeIcon"></span>
           </button>
           <button @click="mode = mode === 'compare' ? 'cn' : 'compare'"
-            class="text-xs px-2 py-1 rounded border hover:bg-slate-50 hidden lg:inline-flex">
+            class="text-xs px-2 py-1 rounded border hover:bg-slate-50">
             <span x-text="mode === 'compare' ? '🔄 切换' : '↔ 对照'"></span>
           </button>
           <button @click="openPolish()"
-            class="hidden sm:inline text-xs px-2 py-1 rounded bg-amber-100 text-amber-800 hover:bg-amber-200 border border-amber-300">
+            class="text-xs px-2 py-1 rounded bg-amber-100 text-amber-800 hover:bg-amber-200 border border-amber-300">
             <span x-text="polishStatus"></span>
           </button>
           <button @click="reapplyDict()"
-            class="hidden sm:inline text-xs px-2 py-1 rounded bg-blue-50 text-blue-700 hover:bg-blue-100 border border-blue-200"
+            class="text-xs px-2 py-1 rounded bg-blue-50 text-blue-700 hover:bg-blue-100 border border-blue-200"
             title="按最新词库重新扫描译文、替换中文名">
             🔄 重新应用词库
           </button>
           <button @click="copyArticle()"
-            class="hidden sm:inline text-xs px-2 py-1 rounded bg-emerald-50 text-emerald-700 hover:bg-emerald-100 border border-emerald-200"
+            class="text-xs px-2 py-1 rounded bg-emerald-50 text-emerald-700 hover:bg-emerald-100 border border-emerald-200"
             title="复制中文全文（自动全角标点，去 markdown）">
             <span x-text="copyBtnText"></span>
           </button>
@@ -368,7 +368,7 @@
         </div>
 
         <!-- 右：IGN 原文 iframe（可能被IGN拒绝） -->
-        <div class="reader-pane en p-0 hidden lg:block relative">
+        <div class="reader-pane en p-0 relative">
           <div x-show="!iframeLoaded && !iframeFailed" class="absolute inset-0 flex items-center justify-center text-slate-400 text-sm">
             正在尝试加载 IGN 原网页...
           </div>
