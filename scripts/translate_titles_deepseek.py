@@ -93,6 +93,26 @@ def matched_terms(text: str, limit: int = 30) -> dict[str, str]:
     return hits
 
 
+def term_in_text(en_term: str, text: str) -> bool:
+    pattern = r"(?<![A-Za-z0-9])" + re.escape(en_term) + r"(?![A-Za-z0-9])"
+    return re.search(pattern, text, flags=re.I) is not None
+
+
+def apply_title_dictionary(en_title: str, cn_title: str) -> str:
+    """Force dictionary names into a title when the English title contains them."""
+    title = cn_title or ""
+    for en_term, cn_term in sorted(flatten_dict_terms().items(), key=lambda kv: len(kv[0]), reverse=True):
+        if not term_in_text(en_term, en_title or "") or not cn_term or cn_term in title:
+            continue
+        prefix = cn_term.split("：", 1)[0].split(":", 1)[0]
+        if prefix and prefix in title:
+            title = re.sub(rf"《{re.escape(prefix)}[^》]*》", f"《{cn_term}》", title)
+            if cn_term in title:
+                continue
+        title = f"《{cn_term}》{title}"
+    return title
+
+
 def fetch_article_text(url: str, max_chars: int = 9000) -> str:
     req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
     with urllib.request.urlopen(req, timeout=25) as resp:
@@ -248,7 +268,7 @@ def translate_date(date: str, limit: int = 8) -> int:
             result = normalize_result(extract_json(raw))
             if not result["cn_title"] or not result["summary"]:
                 raise ValueError("model returned empty cn_title or summary")
-            article["cn_title"] = result["cn_title"]
+            article["cn_title"] = apply_title_dictionary(article.get("en_title", ""), result["cn_title"])
             article["summary"] = result["summary"]
             article["category"] = result["category"]
             article["emoji"] = result["emoji"]

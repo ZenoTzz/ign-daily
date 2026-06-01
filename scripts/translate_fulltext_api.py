@@ -22,7 +22,7 @@ from pathlib import Path
 from typing import Any
 
 from common_paths import DATA_DIR, REPO_ROOT, configure_utf8_stdio, dict_path, env_paths
-from translate_titles_deepseek import call_deepseek, extract_json, flatten_dict_terms
+from translate_titles_deepseek import apply_title_dictionary, call_deepseek, extract_json, flatten_dict_terms
 
 
 configure_utf8_stdio()
@@ -238,7 +238,10 @@ def normalize_translation(article: dict[str, Any], result: dict[str, Any], parag
         "id": article["id"],
         "url": article["url"],
         "en_title": article["en_title"],
-        "cn_title": str(result.get("cn_title") or article.get("cn_title") or article["en_title"]).strip(),
+        "cn_title": apply_title_dictionary(
+            article.get("en_title", ""),
+            str(result.get("cn_title") or article.get("cn_title") or article["en_title"]).strip(),
+        ),
         "subtitle": str(result.get("subtitle") or article.get("subtitle") or "看点来了").strip(),
         "opus_summary": str(result.get("opus_summary") or result.get("summary") or article.get("summary") or article.get("cn_title") or "").strip(),
         "publish_time_cn": article.get("publish_time_cn") or article.get("pub_date") or "",
