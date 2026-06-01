@@ -3,11 +3,11 @@
   "articles": [
     {
       "id": 1,
-      "category": "游戏新闻",
-      "emoji": "🎮",
+      "category": "影视资讯",
+      "emoji": "🌈",
       "en_title": "Pink Monsters Is the Perfect Graphic Novel to Kick Off Pride Month",
-      "cn_title": "Pink Monsters Is the Perfect Graphic Novel to Kick Off Pride Month",
-      "summary": "",
+      "cn_title": "《粉色怪物》：开启骄傲月的完美图像小说",
+      "summary": "德国漫画创作者Claus Daniel Herrmann的美国首秀作品《粉色怪物》英文版由Oni Press出版，讲述一位陷入困境的艺术少年接受性取向与自我定位的故事。IGN独家预览该书，作者透露画作被涂掉的场景源自亲身经历，强烈情感成为创作灵感。",
       "url": "https://www.ign.com/articles/pink-monsters-is-the-perfect-graphic-novel-to-kick-off-pride-month",
       "publish_time_cn": "2026-06-01 22:00",
       "pub_date": "2026-06-01 22:00",
@@ -21,15 +21,27 @@
         "https://assets-prd.ignimgs.com/2026/05/29/mixcollage-29-may-2026-03-58-pm-4436-1780084701707.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-01T23:41:39+08:00"
+      "source_fetched_at": "2026-06-01T23:41:39+08:00",
+      "pending_dict": [
+        {
+          "en": "Claus Daniel Herrmann",
+          "cn": "克劳斯·丹尼尔·赫尔曼",
+          "reason": "不知名人物，保留英文名"
+        },
+        {
+          "en": "Oni Press",
+          "cn": "Oni Press",
+          "reason": "无官方中文译名，保留英文"
+        }
+      ]
     },
     {
       "id": 2,
       "category": "游戏新闻",
-      "emoji": "🎮",
+      "emoji": "🎴",
       "en_title": "Pokémon Trading Card Game's 30th Anniversary Set Features All Foil Cards and 30 New Pikachu Designs",
-      "cn_title": "Pokémon Trading Card Game's 30th Anniversary Set Features All Foil Cards and 30 New Pikachu Designs",
-      "summary": "",
+      "cn_title": "《宝可梦》集换式卡牌30周年纪念包：全闪卡+30款新皮卡丘",
+      "summary": "为庆祝宝可梦卡牌30周年，宝可梦公司宣布推出全闪卡纪念包《30th Celebration》，包含初代喷火龙、超梦、梦幻等经典卡牌，以及30款全新皮卡丘插画。每包内含5张闪卡和1张闪能卡，并引入全新稀有度「未来稀有」。该包将于9月16日全球同步发售。",
       "url": "https://www.ign.com/articles/pokemon-trading-card-games-30th-anniversary-set-features-all-foil-cards-and-30-new-pikachu-designs",
       "publish_time_cn": "2026-06-01 21:46",
       "pub_date": "2026-06-01 21:46",
@@ -50,8 +62,8 @@
       "category": "游戏新闻",
       "emoji": "🎮",
       "en_title": "Official Baldur's Gate 2 Remake Reportedly in Development at Wizards of the Coast",
-      "cn_title": "Official Baldur's Gate 2 Remake Reportedly in Development at Wizards of the Coast",
-      "summary": "",
+      "cn_title": "《威世智》《博德之门2》重制版据报已在开发中",
+      "summary": "据外媒报道，威世智正在开发《博德之门》1和2的重制版，由前BioWare开发者、原《博德之门2》联合主设计师Kevin Martens负责。两款重制版可能同步推出，但具体规模和玩法（是否采用《博德之门3》的回合制）尚未明确。威世智母公司孩之宝拒绝置评。",
       "url": "https://www.ign.com/articles/official-baldurs-gate-2-remake-reportedly-in-development-at-wizards-of-the-coast",
       "publish_time_cn": "2026-06-01 20:47",
       "pub_date": "2026-06-01 20:47",
@@ -65,15 +77,22 @@
         "https://assets-prd.ignimgs.com/2026/06/01/bg2-1780317973808.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-01T23:41:40+08:00"
+      "source_fetched_at": "2026-06-01T23:41:40+08:00",
+      "pending_dict": [
+        {
+          "en": "Kevin Martens",
+          "cn": "Kevin Martens",
+          "reason": "不知名人物，保留英文"
+        }
+      ]
     },
     {
       "id": 4,
-      "category": "游戏新闻",
-      "emoji": "🎮",
+      "category": "行业动态",
+      "emoji": "💡",
       "en_title": "Video Games Could Have Movie-Style Product Placement to Counter Rising Costs, Ex-Dragon Age Boss Says",
-      "cn_title": "Video Games Could Have Movie-Style Product Placement to Counter Rising Costs, Ex-Dragon Age Boss Says",
-      "summary": "",
+      "cn_title": "前《龙腾世纪》制作人：游戏可学电影植入广告降成本",
+      "summary": "前BioWare制作人Mark Darrah指出，3A游戏开发成本飙升，可借鉴电影植入广告模式。他以《蓝精灵》真人电影靠植入广告收回全部成本为例，认为游戏行业过度依赖内购和通行证，导致玩法同质化。他建议游戏探索产品植入等新收入来源，避免所有3A游戏都变成服务型游戏。",
       "url": "https://www.ign.com/articles/video-games-could-have-movie-style-product-placement-to-counter-rising-costs-ex-dragon-age-boss-says",
       "publish_time_cn": "2026-06-01 20:09",
       "pub_date": "2026-06-01 20:09",
@@ -87,15 +106,47 @@
         "https://assets-prd.ignimgs.com/2022/10/26/dragonageinquisitionjpg-a2a564-1280w-1415667815153-1666759988152.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-01T23:41:41+08:00"
+      "source_fetched_at": "2026-06-01T23:41:41+08:00",
+      "pending_dict": [
+        {
+          "en": "Mark Darrah",
+          "cn": "Mark Darrah",
+          "reason": "不知名人物，保留英文"
+        },
+        {
+          "en": "Smurfs",
+          "cn": "蓝精灵",
+          "reason": "词库无，但中文通用译名"
+        },
+        {
+          "en": "Old Spice",
+          "cn": "Old Spice",
+          "reason": "品牌名，保留英文"
+        },
+        {
+          "en": "Mountain Dew",
+          "cn": "激浪",
+          "reason": "词库无，但中文通用译名"
+        },
+        {
+          "en": "Fereldan",
+          "cn": "费雷登",
+          "reason": "《龙腾世纪》地名，词库无，建议确认"
+        },
+        {
+          "en": "beskar",
+          "cn": "贝斯卡",
+          "reason": "《曼达洛人》金属名，词库无，建议确认"
+        }
+      ]
     },
     {
       "id": 5,
-      "category": "游戏新闻",
-      "emoji": "🎮",
+      "category": "影视资讯",
+      "emoji": "📺",
       "en_title": "BBC Update on Doctor Who Future Imminent, Showrunner States, Amid Concern Its Return Has Now Been Scrapped or Postponed",
-      "cn_title": "BBC Update on Doctor Who Future Imminent, Showrunner States, Amid Concern Its Return Has Now Been Scrapped or Postponed",
-      "summary": "",
+      "cn_title": "《神秘博士》命运即将揭晓，剧集主管称BBC声明在即",
+      "summary": "《神秘博士》剧集主管拉塞尔·T·戴维斯确认，BBC将在本月内发布关于该剧未来的官方声明。此前有报道称，原定的圣诞特辑可能被取消或推迟至2027年，且BBC仍在寻找新任主演。戴维斯在BBC广播2台表示，新闻稿正在内部审核中，预计一到两周内发布。粉丝猜测声明可能涉及新合作方、剧集主管或主演人选，但也有分析认为圣诞特辑今年恐难制作。",
       "url": "https://www.ign.com/articles/bbc-update-on-doctor-who-future-imminent-showrunner-states-amid-concern-its-return-has-now-been-scrapped-or-postponed",
       "publish_time_cn": "2026-06-01 19:02",
       "pub_date": "2026-06-01 19:02",
@@ -109,15 +160,47 @@
         "https://assets-prd.ignimgs.com/2025/03/24/doctorwhoseason2trailer-ign-blogroll-1742837933082.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-01T23:41:42+08:00"
+      "source_fetched_at": "2026-06-01T23:41:42+08:00",
+      "pending_dict": [
+        {
+          "en": "Russell T Davies",
+          "cn": "拉塞尔·T·戴维斯",
+          "reason": "词库中无此人物，但为知名剧集主管，建议确认译名"
+        },
+        {
+          "en": "Radio Free Skaro",
+          "cn": "自由斯卡罗电台",
+          "reason": "《神秘博士》粉丝播客，无官方中文名，建议确认"
+        },
+        {
+          "en": "Gallifrey Base",
+          "cn": "伽里弗雷基地",
+          "reason": "《神秘博士》粉丝论坛，无官方中文名，建议确认"
+        },
+        {
+          "en": "Tom Spilsbury",
+          "cn": "汤姆·斯皮尔斯伯里",
+          "reason": "前《神秘博士》杂志编辑，无官方中文名，建议确认"
+        },
+        {
+          "en": "Rich Johnston",
+          "cn": "里奇·约翰斯顿",
+          "reason": "Bleeding Cool创始人，无官方中文名，建议确认"
+        },
+        {
+          "en": "Bleeding Cool",
+          "cn": "Bleeding Cool",
+          "reason": "娱乐新闻网站，无官方中文名，建议保留英文"
+        }
+      ]
     },
     {
       "id": 6,
       "category": "游戏新闻",
-      "emoji": "🎮",
+      "emoji": "👑",
       "en_title": "New Warhammer 40,000 Cinematic Stuns Fans With Official Look at the Emperor",
-      "cn_title": "New Warhammer 40,000 Cinematic Stuns Fans With Official Look at the Emperor",
-      "summary": "",
+      "cn_title": "《战锤40K》新CG首曝帝皇真容，粉丝沸腾",
+      "summary": "Games Workshop发布《战锤40K》第11版预告片，首次以官方CG形式呈现人类帝皇端坐黄金王座的震撼画面。预告片通过朝圣者视角展现帝皇三种形态：荣耀之姿、被灵能者献祭吸干的枯槁之态，以及近乎骷髅的残骸。官方强调帝皇的真实状态仍是未解之谜，引发社区对剧情走向的热烈讨论。",
       "url": "https://www.ign.com/articles/new-warhammer-40000-cinematic-stuns-fans-with-official-look-at-the-emperor",
       "publish_time_cn": "2026-06-01 18:53",
       "pub_date": "2026-06-01 18:53",
@@ -137,11 +220,11 @@
     },
     {
       "id": 7,
-      "category": "游戏新闻",
-      "emoji": "🎮",
+      "category": "影视资讯",
+      "emoji": "🕷️",
       "en_title": "Fans Think New Spider-Man: Brand New Day Poster Confirms MJ's New Boyfriend Is Boomerang — and There's Evidence From the Comics to Back This Up",
-      "cn_title": "Fans Think New Spider-Man: Brand New Day Poster Confirms MJ's New Boyfriend Is Boomerang — and There's Evidence From the Comics to Back This Up",
-      "summary": "",
+      "cn_title": "粉丝发现《蜘蛛侠4》新海报暗示MJ新男友是回旋镖，漫画早有伏笔",
+      "summary": "《蜘蛛侠：崭新的一天》新海报引发粉丝猜测：MJ的新男友可能是反派回旋镖。海报中回旋镖头盔下露出的半张脸与饰演MJ新男友的演员Eman Esfandi高度吻合。漫画中回旋镖曾与彼得·帕克做室友，两人互不知对方身份，这一设定让粉丝认为电影可能借鉴此情节。",
       "url": "https://www.ign.com/articles/fans-think-new-spider-man-brand-new-day-poster-confirms-mjs-new-boyfriend-is-boomerang-and-theres-evidence-from-the-comics-to-back-this-up",
       "publish_time_cn": "2026-06-01 18:18",
       "pub_date": "2026-06-01 18:18",
@@ -156,15 +239,27 @@
         "https://assets-prd.ignimgs.com/2026/06/01/marvel-spider-man-brand-new-day-2026-duo-u-l-q1tyepx0-1780308613044.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-01T23:41:44+08:00"
+      "source_fetched_at": "2026-06-01T23:41:44+08:00",
+      "pending_dict": [
+        {
+          "en": "Boomerang",
+          "cn": "回旋镖",
+          "reason": "蜘蛛侠反派，中文社区常用译名，但需确认是否为官方译名"
+        },
+        {
+          "en": "Eman Esfandi",
+          "cn": "Eman Esfandi",
+          "reason": "不知名演员，保留英文名"
+        }
+      ]
     },
     {
       "id": 8,
       "category": "游戏新闻",
-      "emoji": "🎮",
+      "emoji": "🏭",
       "en_title": "Factorio Set for Its Last Major Update, a Decade After Launch",
-      "cn_title": "Factorio Set for Its Last Major Update, a Decade After Launch",
-      "summary": "",
+      "cn_title": "《异星工厂》十年后迎来最后一次重大更新",
+      "summary": "开发商Wube Software宣布，《异星工厂》将在推出十年后迎来最后一次重大更新2.1版。该更新专注于生活质量和模组改进，不会增加新星球或敌人。2.1版将于6月底发布实验版，之后开发重心将转向长期支持。",
       "url": "https://www.ign.com/articles/factorio-set-for-its-last-major-update-a-decade-after-launch",
       "publish_time_cn": "2026-06-01 17:46",
       "pub_date": "2026-06-01 17:46",
