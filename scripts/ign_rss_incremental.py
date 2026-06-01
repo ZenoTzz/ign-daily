@@ -208,6 +208,11 @@ if new_articles:
     print(f"\n[QUEUE] {len(new_articles)} articles queued for title translation")
     
     # 4) git add+commit+push
+    # GitHub Actions sets IGN_DAILY_SKIP_GIT=1 and handles validation/commit itself.
+    if os.environ.get('IGN_DAILY_SKIP_GIT') == '1':
+        print("[SKIP_GIT] RSS files updated; caller will validate and commit.")
+        sys.exit(0)
+
     import subprocess
     os.chdir(IGN_DAILY)
     add = subprocess.run(['git', 'add', '-A'], capture_output=True, text=True)

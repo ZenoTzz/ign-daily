@@ -118,4 +118,12 @@ python3 scripts/git_push.py
 - `MISSING subtitle/cover/translated_terms/opus_summary`：修译文 JSON。
 - `CURRENCY_CHECK` 失败：补人民币换算。
 
+## 自动化分工
+
+- GitHub Actions `.github/workflows/hourly-rss.yml` 每小时第 5 分钟跑 RSS 增量抓取。
+- Actions 会设置 `IGN_DAILY_SKIP_GIT=1`，所以 `scripts/ign_rss_incremental.py` 只写数据，不自己 commit/push。
+- RSS-only 提交前跑 `python3 scripts/rss_queue_check.py {date}` 和 `python3 scripts/agent_doctor.py`。
+- OpenClaw 独立自动化 session 只处理 `need_titles.json` 的标题/摘要翻译；不要依赖正在聊天的主 session 心跳。
+- 翻译完成后的 push 仍然跑 `python3 scripts/pre_push_check.py {date}`。
+
 最后记住：**不确定就先跑脚本，脚本比记忆可靠。**

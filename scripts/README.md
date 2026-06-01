@@ -10,6 +10,7 @@
 | `ign_rss_incremental.py` | 增量 RSS 抓取（去重、过滤促销、时间窗口） | 心跳每小时 |
 | `agent_doctor.py` | 新 agent 接手时检查仓库关键不变量 | 接手/大改后 |
 | `pre_push_check.py` | 包装三连校验，防止忘跑某一步 | 每次 push 前 |
+| `rss_queue_check.py` | 校验 RSS-only 自动化写出的 index/need_titles 队列 | GitHub Actions RSS 提交前 |
 | `nightly_polish_diff.py` | 对比用户润色与原译，提取风格规律 | 每晚 22:30 cron |
 | `check_polish_today.py` | 检查今天是否有润色记录（无则跳过学习） | 夜间学习入口 |
 | `fetch_exchange_rates.py` | 拉取当日汇率写入 exchange_rates.json | 每天 8:20 cron |
@@ -53,6 +54,14 @@
 
 ```bash
 python3 scripts/pre_push_check.py {date}
+```
+
+RSS-only 自动化不要用 `pre_push_check.py` 拦截未翻译的标题队列；GitHub Actions 使用：
+
+```bash
+IGN_DAILY_SKIP_GIT=1 python3 scripts/ign_rss_incremental.py
+python3 scripts/rss_queue_check.py {date}
+python3 scripts/agent_doctor.py
 ```
 
 它会依次跑三连：

@@ -491,3 +491,12 @@ workspace/
 - `scripts/legacy/` 仅存放历史一次性修复/导入脚本，不得接入 cron、heartbeat 或日常翻译流程。
 - `article.html` 的「复制全文」必须同时写入 `text/plain` 和 `text/html`；正文段落要复制为独立 `<p>`，否则粘贴到腾讯文档等富文本编辑器时可能丢失分段。
 - `index.json` 每篇文章必须写 `publish_time_cn`。前端显示和排序优先使用该字段；`pub_date`/`pubDate_cst` 只作为历史兼容。
+
+## 2026-06-01 自动化更新
+
+- RSS 增量抓取已迁移到 GitHub Actions：`.github/workflows/hourly-rss.yml`，每小时第 5 分钟运行。
+- Actions 调用 `scripts/ign_rss_incremental.py` 时会设置 `IGN_DAILY_SKIP_GIT=1`，避免脚本在 CI 内自行 commit/push。
+- RSS-only 自动提交前必须跑 `python3 scripts/rss_queue_check.py {date}` 和 `python3 scripts/agent_doctor.py`。
+- `scripts/rss_queue_check.py` 只校验 RSS 队列数据形状、URL/ID 去重、`publish_time_cn` 和 `need_titles.json` 一致性；它不要求标题摘要已经翻译。
+- `scripts/pre_push_check.py {date}` 仍然用于标题摘要或全文翻译完成后的 push。
+- 主聊天 session 不再承担每小时 RSS 心跳；OpenClaw 如需自动化，只开独立 session 处理 `need_titles.json` 的标题/摘要翻译。

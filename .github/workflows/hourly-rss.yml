@@ -1,0 +1,81 @@
+name: Hourly RSS
+
+on:
+  schedule:
+    - cron: "5 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: hourly-rss-main
+  cancel-in-progress: false
+
+jobs:
+  rss:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Configure Git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Run RSS incremental fetch
+        id: rss
+        env:
+          IGN_DAILY_SKIP_GIT: "1"
+        run: |
+          set -euo pipefail
+          python3 scripts/ign_rss_incremental.py
+          python3 - <<'PY' >> "$GITHUB_OUTPUT"
+          import json
+          from pathlib import Path
+
+          path = Path("ign_rss_new.json")
+          if not path.exists():
+              print("new_count=0")
+              print("target_date=")
+              raise SystemExit
+
+          data = json.loads(path.read_text(encoding="utf-8-sig"))
+          print(f"new_count={data.get('new_count', 0)}")
+          print(f"target_date={data.get('target_date', '')}")
+          PY
+
+      - name: Stop when there are no new articles
+        if: steps.rss.outputs.new_count == '0'
+        run: |
+          rm -f ign_rss_new.json
+          echo "No new RSS articles."
+
+      - name: Validate RSS queue
+        if: steps.rss.outputs.new_count != '0'
+        run: |
+          python3 scripts/rss_queue_check.py "${{ steps.rss.outputs.target_date }}"
+          python3 scripts/agent_doctor.py
+
+      - name: Commit and push RSS update
+        if: steps.rss.outputs.new_count != '0'
+        run: |
+          set -euo pipefail
+          git add data ign_rss_new.json
+          if git diff --cached --quiet; then
+            echo "No tracked RSS changes to commit."
+            exit 0
+          fi
+          git commit -m "feat: hourly RSS ${{ steps.rss.outputs.new_count }} new articles for ${{ steps.rss.outputs.target_date }}"
+          git pull --rebase origin main
+          git push origin HEAD:main
