@@ -17,7 +17,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <script defer src="assets/alpine.min.js"></script>
   <link rel="stylesheet" href="assets/style.css?v=20260531b">
-  <script src="assets/app.js?v=20260601b"></script>
+  <script src="assets/app.js?v=20260602a"></script>
 </head>
 <body>
   <!-- SVG Icon Definitions -->
@@ -249,7 +249,7 @@
               <!-- Content -->
               <div class="card-body">
                 <div class="card-meta">
-                  <span class="card-id" x-text="`#${art.id}`"></span>
+                  <span class="card-id" :title="`stable id #${art.id}`" x-text="`#${idx + 1}`"></span>
                   <svg class="card-cat-icon"><use :href="`#icon-${getCatIcon(art.category)}`"/></svg>
                   <span class="card-cat-badge" x-text="art.category"></span>
                   <span class="card-time" x-text="art.publish_time_cn || art.pub_date || art.pubDate_cst || ''"></span>

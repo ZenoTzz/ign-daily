@@ -199,7 +199,17 @@ def update_index_list(data_dir):
     return len(dates)
 
 
-def prep_mode(date_str, article_id):
+def resolve_article(articles, article_ref):
+    """Resolve either a numeric id or the stable URL stored in requests.json."""
+    ref = str(article_ref)
+    if ref.isdigit():
+        article_id = int(ref)
+        return article_id, next((a for a in articles if a.get('id') == article_id), None)
+    art = next((a for a in articles if a.get('url') == ref), None)
+    return (art.get('id') if art else None), art
+
+
+def prep_mode(date_str, article_ref):
     """预处理模式: 抓图+词库匹配"""
     idx_path = IGN_DAILY / 'data' / date_str / 'index.json'
     if not idx_path.exists():
@@ -209,9 +219,9 @@ def prep_mode(date_str, article_id):
     with open(idx_path, 'r', encoding='utf-8') as f:
         idx = json.load(f)
 
-    art = next((a for a in idx['articles'] if a['id'] == article_id), None)
+    article_id, art = resolve_article(idx['articles'], article_ref)
     if not art:
-        print(f"❌ Article #{article_id} not found in index")
+        print(f"❌ Article {article_ref} not found in index")
         return False
 
     url = art.get('url', '')
@@ -251,10 +261,21 @@ def prep_mode(date_str, article_id):
     return True
 
 
-def post_mode(date_str, article_id):
+def post_mode(date_str, article_ref):
     """后处理模式: 补字段+清理+校验+同步"""
-    trans_path = IGN_DAILY / 'data' / date_str / 'translations' / f'{article_id:02d}.json'
     idx_path = IGN_DAILY / 'data' / date_str / 'index.json'
+
+    if not str(article_ref).isdigit():
+        with open(idx_path, 'r', encoding='utf-8') as f:
+            idx_for_url = json.load(f)
+        resolved_id, art_for_url = resolve_article(idx_for_url['articles'], article_ref)
+        if not art_for_url:
+            print(f"鉂?Article {article_ref} not in index")
+            return False
+        return post_mode(date_str, str(resolved_id))
+
+    article_id = int(article_ref)
+    trans_path = IGN_DAILY / 'data' / date_str / 'translations' / f'{article_id:02d}.json'
 
     if not trans_path.exists():
         print(f"❌ Translation file not found: {trans_path}")
@@ -272,6 +293,16 @@ def post_mode(date_str, article_id):
         return False
 
     url = art.get('url', '')
+    if data.get('url') and data.get('url') != url:
+        print(f"ERROR: Translation URL mismatch for #{article_id}")
+        print(f"  index: {url}")
+        print(f"  json : {data.get('url')}")
+        return False
+    if data.get('en_title') and data.get('en_title') != art.get('en_title'):
+        print(f"ERROR: Translation title mismatch for #{article_id}")
+        print(f"  index: {art.get('en_title')}")
+        print(f"  json : {data.get('en_title')}")
+        return False
     changed = False
     print(f"\n{'='*60}")
     print(f"POST: #{article_id} - {data.get('cn_title', '')[:40]}")
@@ -427,17 +458,17 @@ def main():
         sys.exit(1)
     
     date_str = args[0]
-    article_id = int(args[1])
+    article_ref = args[1]
     mode = args[2] if len(args) > 2 else '--all'
     
     if mode == '--prep':
-        prep_mode(date_str, article_id)
+        prep_mode(date_str, article_ref)
     elif mode == '--post':
-        success = post_mode(date_str, article_id)
+        success = post_mode(date_str, article_ref)
         sys.exit(0 if success else 1)
     else:
         # Full pipeline
-        prep_mode(date_str, article_id)
+        prep_mode(date_str, article_ref)
         print("\n" + "="*60)
         print("⏸️  Now write the translation JSON, then run with --post")
         print("="*60)

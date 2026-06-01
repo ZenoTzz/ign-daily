@@ -20,6 +20,7 @@ IGN Daily 是一个个人化 IGN 英文新闻翻译工作流：
 5. 新请求优先按 `requested_articles[].url` 匹配当前文章，不要只信旧 ID。
 6. 不要删除任何历史 `data/{date}/`。
 7. push 前跑：`python3 scripts/pre_push_check.py {date}`。
+8. 日期归属按 8:00 分界：`data/2026-06-02` 只能放 `2026-06-01 08:00 <= publish_time_cn < 2026-06-02 08:00` 的文章。
 
 ## 项目层级
 
@@ -89,7 +90,7 @@ data/{date}/need_titles.json
 data/{date}/requests.json
 ```
 
-优先用 `requested_articles[].url` 匹配当前 `index.json` 里的文章 ID。翻译前跑：
+优先用 `requested_articles[].url` 匹配当前 `index.json` 里的文章 ID。不要只拿 `requested_ids` 直接翻译，RSS 增量可能让旧 ID 失效。翻译前跑：
 
 ```bash
 python3 scripts/translate_pipeline.py {date} {id} --prep

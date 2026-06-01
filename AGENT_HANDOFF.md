@@ -501,3 +501,11 @@ workspace/
 - `scripts/pre_push_check.py {date}` 仍然用于标题摘要或全文翻译完成后的 push。
 - 主聊天 session 不再承担每小时 RSS 心跳；OpenClaw 如需自动化，只开独立 session 处理 `need_titles.json` 的标题/摘要翻译。
 - OpenClaw 标题摘要 cron 启动时读取仓库根目录 `AGENT_TITLE_TRANSLATOR.md`，按 URL 匹配队列文章，不要按旧 ID 直接改。
+
+## 2026-06-02 维护补充：展示序号、请求匹配、日期窗口
+
+- 首页卡片左上角 `#N` 是排序/筛选后的展示序号，不再等同稳定 `id`；稳定 `id` 仍用于 `article.html?date=...&id=...` 和 `translations/NN.json`。
+- 用户全文翻译请求必须按 `requests.json.requested_articles[].url` 匹配当前 `index.json` 文章；`requested_ids` 只作兼容显示，不得作为唯一依据。
+- `scripts/translate_pipeline.py` post 阶段会校验译文 JSON 的 `url`/`en_title` 与 index 文章一致，不一致必须停止，避免 A 文请求错写到 B 文。
+- 日期归属固定按 8:00 CST 分界：`data/YYYY-MM-DD` 覆盖前一天 08:00 到当天 08:00，左闭右开。例：`data/2026-06-02` 只能放 `2026-06-01 08:00 <= publish_time_cn < 2026-06-02 08:00`。
+- `scripts/rss_queue_check.py` 和 `scripts/agent_doctor.py` 会检查最新/目标 index 的 `publish_time_cn` 是否落在对应日期窗口内。

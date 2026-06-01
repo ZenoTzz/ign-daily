@@ -35,6 +35,11 @@ def load_json(path: Path):
         return json.load(f)
 
 
+def date_window(date: str) -> tuple[datetime, datetime]:
+    end = datetime.strptime(date, "%Y-%m-%d").replace(tzinfo=CST, hour=8, minute=0, second=0, microsecond=0)
+    return end - timedelta(days=1), end
+
+
 def fail(errors: list[str], message: str) -> None:
     errors.append(message)
     print(f"[FAIL] {message}")
@@ -61,6 +66,7 @@ def main() -> int:
     seen_ids: set[int] = set()
     seen_urls: set[str] = set()
     by_url: dict[str, dict] = {}
+    window_start, window_end = date_window(date)
     for article in articles:
         aid = article.get("id")
         url = article.get("url")
@@ -86,6 +92,10 @@ def main() -> int:
         publish_time = article.get("publish_time_cn", "")
         if publish_time and not TIME_RE.match(publish_time):
             fail(errors, f"article #{aid} invalid publish_time_cn: {publish_time!r}")
+        elif publish_time:
+            publish_dt = datetime.strptime(publish_time, "%Y-%m-%d %H:%M").replace(tzinfo=CST)
+            if publish_dt < window_start or publish_dt >= window_end:
+                fail(errors, f"article #{aid} publish_time_cn outside {date} window: {publish_time!r}")
 
     if index.get("total") != len(articles):
         fail(errors, f"index total {index.get('total')} != article count {len(articles)}")

@@ -102,6 +102,8 @@ feat: translate queued titles for {date}
 - Do not overwrite remote changes. If `git pull --rebase` conflicts, stop and notify the user.
 - If there are no queued titles, exit quietly.
 - If queue processing takes too long, process a small batch and leave the rest for the next run.
+- For full-article translation requests, always match `requests.json.requested_articles[].url` to the current `index.json` article. Do not trust `requested_ids` alone.
+- Respect the 8:00 CST publishing window: `data/YYYY-MM-DD` covers the previous day 08:00 through that date 08:00.
 
 ## Completion Report
 

@@ -186,8 +186,9 @@ function appData() {
           if (reqRes.ok) {
             const reqData = await reqRes.json();
             const requested = new Set(reqData.requested_ids || []);
+            const requestedUrls = new Set((reqData.requested_articles || []).map(x => x.url).filter(Boolean));
             for (const a of this.data.articles) {
-              if (requested.has(a.id) && a.translation_status !== 'done') {
+              if ((requestedUrls.has(a.url) || requested.has(a.id)) && a.translation_status !== 'done') {
                 a.translation_status = 'requested';
               }
             }
@@ -474,7 +475,13 @@ function appData() {
         // Build URL map so heartbeat can match by URL even if IDs shift
         const requested_articles = selIds.map(id => {
           const art = this.data.articles.find(a => a.id === id);
-          return art ? { id, url: art.url, en_title: art.en_title } : { id };
+          return art ? {
+            id,
+            url: art.url,
+            en_title: art.en_title,
+            cn_title: art.cn_title,
+            publish_time_cn: art.publish_time_cn || art.pub_date || art.pubDate_cst || ''
+          } : { id };
         });
         const payload = {
           date,

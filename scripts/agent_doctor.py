@@ -12,12 +12,14 @@ from __future__ import annotations
 
 import ast
 import json
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 from common_paths import DATA_DIR, REPO_ROOT, configure_utf8_stdio, dict_path
 
 
 configure_utf8_stdio()
+CST = timezone(timedelta(hours=8))
 
 
 def ok(msg: str) -> None:
@@ -27,6 +29,11 @@ def ok(msg: str) -> None:
 def fail(errors: list[str], msg: str) -> None:
     errors.append(msg)
     print(f"[FAIL] {msg}")
+
+
+def date_window(date: str) -> tuple[datetime, datetime]:
+    end = datetime.strptime(date, "%Y-%m-%d").replace(tzinfo=CST, hour=8, minute=0, second=0, microsecond=0)
+    return end - timedelta(days=1), end
 
 
 def main() -> int:
@@ -76,10 +83,18 @@ def main() -> int:
     latest_index = dated_indexes[-1] if dated_indexes else None
     for index_path in [latest_index] if latest_index else []:
         data = json.loads(index_path.read_text(encoding="utf-8-sig"))
+        window_start, window_end = date_window(index_path.parent.name)
         for article in data.get("articles", []):
             if not article.get("publish_time_cn"):
                 fail(errors, f"latest index missing publish_time_cn: {index_path.parent.name} #{article.get('id')}")
                 break
+            try:
+                publish_dt = datetime.strptime(article["publish_time_cn"], "%Y-%m-%d %H:%M").replace(tzinfo=CST)
+            except ValueError:
+                fail(errors, f"latest index invalid publish_time_cn: {index_path.parent.name} #{article.get('id')}")
+                continue
+            if publish_dt < window_start or publish_dt >= window_end:
+                fail(errors, f"latest index publish_time outside date window: {index_path.parent.name} #{article.get('id')}")
         for article in data.get("articles", []):
             if article.get("translation_status") != "done":
                 continue
