@@ -56,6 +56,20 @@
       "total_tokens": 9237,
       "prompt_cache_hit_tokens": 0,
       "prompt_cache_miss_tokens": 7136
+    },
+    {
+      "time_cn": "2026-06-02 00:44:00",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 15,
+      "article_url": "https://www.ign.com/articles/azure-latch-codes",
+      "article_date": "2026-06-02",
+      "detail": "",
+      "prompt_tokens": 6392,
+      "completion_tokens": 196,
+      "total_tokens": 6588,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 6392
     }
   ]
 }
