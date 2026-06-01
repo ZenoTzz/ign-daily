@@ -177,7 +177,7 @@ function appData() {
         this.data = await res.json();
         // 按发布时间从新到旧排序
         if (this.data && this.data.articles) {
-          this.data.articles.sort((a, b) => (b.publish_time_cn || b.pubDate_cst || '').localeCompare(a.publish_time_cn || a.pubDate_cst || ''));
+          this.data.articles.sort((a, b) => (b.publish_time_cn || b.pub_date || b.pubDate_cst || '').localeCompare(a.publish_time_cn || a.pub_date || a.pubDate_cst || ''));
         }
 
         // 同步 requests.json：把已请求但还没翻译的标记为 requested

@@ -39,6 +39,7 @@ Cron 仅负责创建新日期文件夹，不得覆盖/清理/合并旧日期。
 - `id` 推送顺序编号（1开始，与网页和聊天里的编号完全一致）
 - `json_id` 原始 ign_daily_index.json 中的 id（备查）
 - `publish_time_cn` 是发布时间主字段；旧 `pub_date` 只做兼容读取。
+- 所有新写入文章都必须包含 `publish_time_cn`，否则首页时间会空白，排序也可能失效。
 - `translation_status`:
   - `none`：未翻译
   - `requested`：用户已请求翻译，主session待处理

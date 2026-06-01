@@ -490,3 +490,4 @@ workspace/
 - push 前优先跑 `scripts/pre_push_check.py {date}`，它会扫描真实的 `data/{date}`。如果输出 `No index.json` 或 `No translations dir`，不能视为通过，应先确认日期或路径。
 - `scripts/legacy/` 仅存放历史一次性修复/导入脚本，不得接入 cron、heartbeat 或日常翻译流程。
 - `article.html` 的「复制全文」必须同时写入 `text/plain` 和 `text/html`；正文段落要复制为独立 `<p>`，否则粘贴到腾讯文档等富文本编辑器时可能丢失分段。
+- `index.json` 每篇文章必须写 `publish_time_cn`。前端显示和排序优先使用该字段；`pub_date`/`pubDate_cst` 只作为历史兼容。

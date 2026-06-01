@@ -72,6 +72,15 @@ def main() -> int:
     if not any("json parse error" in e for e in errors):
         ok("all JSON files parse")
 
+    dated_indexes = sorted(DATA_DIR.glob("20??-??-??/index.json"))
+    latest_index = dated_indexes[-1] if dated_indexes else None
+    for index_path in [latest_index] if latest_index else []:
+        data = json.loads(index_path.read_text(encoding="utf-8-sig"))
+        for article in data.get("articles", []):
+            if not article.get("publish_time_cn"):
+                fail(errors, f"latest index missing publish_time_cn: {index_path.parent.name} #{article.get('id')}")
+                break
+
     stale_patterns = [
         "IGN_TRANSLATE_INSTRUCTIONS.md",
         "HEARTBEAT.md",
@@ -98,4 +107,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

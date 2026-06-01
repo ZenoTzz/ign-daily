@@ -17,7 +17,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <script defer src="assets/alpine.min.js"></script>
   <link rel="stylesheet" href="assets/style.css?v=20260531b">
-  <script src="assets/app.js?v=20260531"></script>
+  <script src="assets/app.js?v=20260601b"></script>
 </head>
 <body>
   <!-- SVG Icon Definitions -->
@@ -252,7 +252,7 @@
                   <span class="card-id" x-text="`#${art.id}`"></span>
                   <svg class="card-cat-icon"><use :href="`#icon-${getCatIcon(art.category)}`"/></svg>
                   <span class="card-cat-badge" x-text="art.category"></span>
-                  <span class="card-time" x-text="art.publish_time_cn || art.pubDate_cst || ''"></span>
+                  <span class="card-time" x-text="art.publish_time_cn || art.pub_date || art.pubDate_cst || ''"></span>
                   <template x-if="art.translation_status === 'done'">
                     <span class="card-status status-done">
                       <svg><use href="#icon-check-circle"/></svg> 已翻译
