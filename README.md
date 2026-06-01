@@ -90,7 +90,7 @@ python -m http.server 8000
 
 ### 关键变更记录
 
-- **2026-06-01**: 修复 article.html 中 `article.pending_dict` 缺少可选链 `?.` 导致的 Alpine 表达式异常；所有按钮和右侧 pane 移除 `hidden sm:inline / lg:inline-flex / hidden lg:block` 响应式隐藏类；AlpineJS 从 unpkg CDN 改为 `assets/alpine.min.js` 本地托管。
+- **2026-06-01**: 修复 article.html 中 `article.pending_dict` 缺少可选链 `?.` 导致的 Alpine 表达式异常；所有按钮和右侧 pane 移除 `hidden sm:inline / lg:inline-flex / hidden lg:block` 响应式隐藏类；AlpineJS 从 unpkg CDN 改为 `assets/alpine.min.js` 本地托管。修复旧翻译 JSON 缺少 `url`/`en_title` 导致 iframe 右侧空白的问题；pipeline `--post` 模式新增自动补 `url`/`en_title`。
 
 ## 📝 License
 

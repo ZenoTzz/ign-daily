@@ -179,6 +179,8 @@ workspace/
   "emoji": "...",
   "publish_time_cn": "...",
   "translated_at": "2026-05-29T09:30:00+08:00",
+  "en_title": "...",
+  "url": "...",  // 🔴 必须有!iframe+降级依赖此字段,缺了右侧会空白
   "cover": "https://assets-prd.ignimgs.com/...(去掉压缩参数)",
   "images": ["url1", "url2"],
   "opus_summary": "50-80字的精炼总结",
@@ -423,8 +425,9 @@ workspace/
    c. Opus 翻译(paragraphs + cn_title + opus_summary + subtitle)
    d. 新词写 pending_dict
    e. 写 translations/NN.json
+      🔴 必须包含 en_title 和 url 字段(从 index.json 取)
    f. python3 scripts/translate_pipeline.py {date} {id} --post
-      (自动补 cover/images/translated_terms + 清理 + 同步)
+      (自动补 cover/images/translated_terms + url/en_title + 清理 + 同步)
 4. python3 scripts/post_translate_check.py {date}
 5. python3 scripts/git_push.py
 ```
