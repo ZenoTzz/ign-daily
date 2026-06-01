@@ -1298,28 +1298,63 @@
             this.flash('❌ 译文未加载', 2000);
             return;
           }
-          const cnTitle = this.article.cn_title || '';
+          const cnTitle = this.normalizePunctuation(this.article.cn_title || '');
+          const subtitle = this.normalizePunctuation(this.article.subtitle || '');
           const paragraphs = this.article.paragraphs || [];
-          const cnLines = paragraphs.map(p => (p.cn || '').trim()).filter(s => s);
+          const cnLines = paragraphs
+            .map(p => this.normalizePunctuation((p.cn || '').trim()))
+            .filter(s => s);
           if (!cnLines.length) {
             this.flash('⚠️ 该文章无译文段落', 2500);
             return;
           }
-          const raw = (cnTitle ? cnTitle + '\n\n\n' : '') + cnLines.join('\n\n\n');
-          const text = this.normalizePunctuation(raw);
+          const textParts = [];
+          if (cnTitle) textParts.push(cnTitle);
+          if (subtitle) textParts.push(subtitle);
+          textParts.push(...cnLines);
+          const text = textParts.join('\n\n');
+          const esc = (s) => String(s).replace(/[&<>"']/g, c => ({
+            '&': '&amp;',
+            '<': '&lt;',
+            '>': '&gt;',
+            '"': '&quot;',
+            "'": '&#39;'
+          }[c]));
+          const html = [
+            '<article>',
+            cnTitle ? `<h1>${esc(cnTitle)}</h1>` : '',
+            subtitle ? `<p><em>${esc(subtitle)}</em></p>` : '',
+            ...cnLines.map(p => `<p>${esc(p).replace(/\n/g, '<br>')}</p>`),
+            '</article>'
+          ].join('');
 
           const reset = () => setTimeout(() => { this.copyBtnText = '📋 复制全文'; }, 2000);
           try {
-            await navigator.clipboard.writeText(text);
+            if (navigator.clipboard?.write && window.ClipboardItem) {
+              await navigator.clipboard.write([
+                new ClipboardItem({
+                  'text/plain': new Blob([text], { type: 'text/plain' }),
+                  'text/html': new Blob([html], { type: 'text/html' }),
+                })
+              ]);
+            } else {
+              await navigator.clipboard.writeText(text);
+            }
             this.copyBtnText = '✅ 已复制';
             reset();
           } catch (e) {
-            const ta = document.createElement('textarea');
-            ta.value = text;
-            ta.style.position = 'fixed';
-            ta.style.opacity = '0';
-            document.body.appendChild(ta);
-            ta.select();
+            const holder = document.createElement('div');
+            holder.contentEditable = 'true';
+            holder.innerHTML = html;
+            holder.style.position = 'fixed';
+            holder.style.left = '-9999px';
+            holder.style.top = '0';
+            document.body.appendChild(holder);
+            const range = document.createRange();
+            range.selectNodeContents(holder);
+            const sel = window.getSelection();
+            sel.removeAllRanges();
+            sel.addRange(range);
             try {
               document.execCommand('copy');
               this.copyBtnText = '✅ 已复制';
@@ -1327,7 +1362,8 @@
             } catch (err) {
               this.flash('❌ 复制失败：' + (err?.message || err), 3000);
             } finally {
-              document.body.removeChild(ta);
+              sel.removeAllRanges();
+              document.body.removeChild(holder);
             }
           }
         },
