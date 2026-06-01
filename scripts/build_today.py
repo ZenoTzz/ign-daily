@@ -113,4 +113,4 @@ from collections import Counter
 c = Counter(a['category'] for a in articles)
 print(f'\n分类: {dict(c)}')
 
-print(f'\n下一步: cd {REPO} && git add -A && git commit -m "{TODAY} daily news" && git push')
+print(f'\n下一步: cd {REPO} && python3 scripts/pre_push_check.py {TODAY} && python3 scripts/git_push.py')

@@ -4,6 +4,24 @@
 
 ---
 
+## 先跑脚本，不靠记忆
+
+新 agent 接手先跑：
+
+```bash
+python3 scripts/agent_doctor.py
+```
+
+每次翻译完成、push 前只跑一个总入口：
+
+```bash
+python3 scripts/pre_push_check.py {date}
+```
+
+它会依次调用 `post_translate_check.py`、`check_currency.py`、`enforce_dict_titles.py`。任何失败都不能 push。
+
+---
+
 ## 🏗 架构总览
 
 ```
@@ -82,11 +100,8 @@ ign-daily/                          # GitHub Pages 仓库
 ```
 workspace/
 ├── ign-daily/data/dict.json        # 🔴 词库(翻译必查，前端和脚本共同使用)
-├── exchange_rates.json             # 汇率(金额翻译用)
-├── ign_rss_fetch.py                # 完整 RSS 抓取脚本(cron 用)
-├── ign_cron_message.txt            # cron 任务指令文本
-├── ign_rss_raw.json                # 上次完整抓取的原始结果
-├── ign_rss_new.json                # 增量脚本发现的新文章
+├── exchange_rates.json             # 汇率(金额翻译用，脚本会自动查找)
+├── ign_rss_new.json                # 增量脚本发现的新文章（仓库根目录兼容输出）
 ├── ign-daily/TRANSLATION_GUIDE.md  # 🔴 翻译详细规则
 ├── STYLE_PROFILE.md → ign-daily/   # 风格学习结果(仓库里也有)
 ├── scripts/
@@ -179,10 +194,8 @@ workspace/
   "emoji": "...",
   "publish_time_cn": "...",
   "translated_at": "2026-05-29T09:30:00+08:00",
-  "en_title": "...",
-  "url": "...",  // 🔴 必须有!iframe+降级依赖此字段,缺了右侧会空白
   "cover": "https://assets-prd.ignimgs.com/...(去掉压缩参数)",
-  "images": ["url1", "url2"],
+  "images": [{"url": "url1", "caption": ""}],
   "opus_summary": "50-80字的精炼总结",
   "paragraphs": [
     { "type": "text", "en": "English paragraph", "cn": "中文翻译" },
@@ -248,7 +261,7 @@ workspace/
     "id": 18,
     "url": "https://www.ign.com/articles/...",
     "en_title": "New IGN Article Title",
-    "pub_date": "2026-06-01 14:30"
+    "publish_time_cn": "2026-06-01 14:30"
   }
 ]
 ```
@@ -257,7 +270,7 @@ workspace/
 1. 心跳检测到 need_titles.json 有内容
 2. 逐条处理：web_fetch 抓原文 → 翻译 cn_title+summary → 更新 index.json
 3. 从 need_titles.json 移除已处理的条目
-4. 队列清空后 → git add+commit+push
+4. 队列清空后 → `python3 scripts/pre_push_check.py {date}` → `python3 scripts/git_push.py`
 5. 如果 need_titles.json 为空或不存在，跳过此任务
 
 > ⚠️ **不要跳过标题翻译**：所有文章在首页必须显示中文标题和摘要。英文标题只作为中间占位，心跳必须尽快翻译。
@@ -277,15 +290,14 @@ workspace/
   1. 追加新文章到 `data/{target_date}/index.json`（英文标题+空摘要占位）
   2. 更新 `data/index-list.json`
   3. 写入 `data/{target_date}/need_titles.json` 队列（供心跳翻译标题用）
-  4. 同时输出到 `ign_rss_new.json`（兼容旧流程）
+  4. 同时输出到仓库根目录 `ign_rss_new.json`（兼容旧流程）
   5. git add + commit + push
 - **日期逻辑:** 8:00 前 → target_date=今天; 8:00 后 → target_date=明天
 - **注意:** 此脚本**只抓取不翻译**，标题翻译由主 session 心跳处理
 
-### `ign_rss_fetch.py` - 完整抓取(cron 兜底用)
+### 完整 RSS 兜底脚本
 
-- **用法:** `python3 ign_rss_fetch.py [YYYY-MM-DD]`
-- **做什么:** 抓 3 页 RSS,按 24h 窗口过滤,输出全部文章到 `ign_rss_raw.json`
+当前仓库没有 `ign_rss_fetch.py`。如果 cron 兜底仍在使用完整抓取脚本，它属于仓库外部运行环境；不要在仓库内假定该文件存在。仓库内的标准抓取入口是 `scripts/ign_rss_incremental.py`。
 
 ### `scripts/git_push.py` - GitHub push
 
@@ -345,9 +357,7 @@ workspace/
 10. **文件名补零：** id=5 → `05.json`，不补零前端 404
 11. **push 前必跑三连校验（按顺序）**
     ```bash
-    python3 scripts/post_translate_check.py {date}
-    python3 scripts/check_currency.py {date}
-    python3 scripts/enforce_dict_titles.py {date}
+    python3 scripts/pre_push_check.py {date}
     ```
     三个都必须通过才能 push。
 12. **改了代码/流程必同步：** AGENT_HANDOFF.md + TRANSLATION_GUIDE.md + scripts/README.md
@@ -411,7 +421,8 @@ workspace/
 3. 对 3 篇文章翻译标题+分类+摘要(查词库!)
 4. 追加到 ign-daily/data/{target_date}/index.json
 5. 更新 data/index-list.json
-6. git add + commit + python3 scripts/git_push.py
+6. python3 scripts/pre_push_check.py {target_date}
+7. python3 scripts/git_push.py
 ```
 
 ### 场景2:用户勾选翻译
@@ -428,7 +439,7 @@ workspace/
       🔴 必须包含 en_title 和 url 字段(从 index.json 取)
    f. python3 scripts/translate_pipeline.py {date} {id} --post
       (自动补 cover/images/translated_terms + url/en_title + 清理 + 同步)
-4. python3 scripts/post_translate_check.py {date}
+4. python3 scripts/pre_push_check.py {date}
 5. python3 scripts/git_push.py
 ```
 
@@ -476,5 +487,5 @@ workspace/
 - 词库统一优先使用 `data/dict.json`。前端词库管理页和后端校验/管道必须读写同一个文件。
 - 副标题字段统一为 `subtitle`。`cn_subtitle` 只作为历史兼容读取，不作为新译文写入字段。
 - `ign_rss_incremental.py` 新增文章必须同时写 `publish_time_cn`，避免前端排序拿不到发布时间。
-- push 前三连校验必须扫描真实的 `data/{date}`。如果输出 `No index.json` 或 `No translations dir`，不能视为通过，应先确认日期或路径。
+- push 前优先跑 `scripts/pre_push_check.py {date}`，它会扫描真实的 `data/{date}`。如果输出 `No index.json` 或 `No translations dir`，不能视为通过，应先确认日期或路径。
 - `scripts/legacy/` 仅存放历史一次性修复/导入脚本，不得接入 cron、heartbeat 或日常翻译流程。

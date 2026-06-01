@@ -18,7 +18,7 @@
 - `cn_title` — 精炼中文标题（≤20字），作品名用《》，词库译名强制使用
 - `summary` — 2-3 句核心信息摘要，包含关键数字/人名/评分，50-70字
 - `category` — 正确分类（游戏新闻/影视资讯/行业动态/科技新闻/评测评分/人物新闻/盘点推荐）
-- `pub_date` — 发布时间（北京时间）
+- `publish_time_cn` — 发布时间（北京时间，主字段；旧 `pub_date` 仅兼容读取）
 
 **特殊要求：**
 - 不需要 paragraph 翻译、副标题、cover_image、translated_terms
@@ -42,7 +42,7 @@
 ## 🎯 核心原则（优先级从高到低）
 
 1. **忠实原文** — 每一句都要翻译，绝不跳过、合并或删减。翻完逐段对照检查。
-2. **词库优先** — `game_names_dict.json` 里有的译名必须使用，不能自行翻译。
+2. **词库优先** — `data/dict.json` 里有的译名必须使用，不能自行翻译。
 3. **风格一致** — 遵循本文件所有规则，不要「觉得更好」就自作主张改。
 4. **自然流畅** — 不能有机翻腔，但也不能过度意译丢信息。
 
@@ -130,7 +130,7 @@
 
 - 必须联网查当天最新汇率（不用记忆中的旧值）
 - 优先：`https://api.frankfurter.app/latest?from=USD&to=CNY`
-- 或读取 `workspace/exchange_rates.json`（cron 每天更新）
+- 或读取 `exchange_rates.json`（脚本会通过 `scripts/common_paths.py` 查找）
 - 取整数
 
 ### 其他单位
@@ -177,7 +177,7 @@ Rockstar、Valve、Bungie、Bethesda、Naughty Dog、Insomniac、Activision、CD
 
 ### 词库强制
 
-- 翻译前必须查 `game_names_dict.json`
+- 翻译前必须查 `data/dict.json`
 - 词库有的必须用，**不能自行翻译**
 
 ### 词库查不到时
@@ -338,7 +338,7 @@ Rockstar、Valve、Bungie、Bethesda、Naughty Dog、Insomniac、Activision、CD
 
 ```python
 import json
-d = json.load(open('game_names_dict.json', 'r', encoding='utf-8'))
+d = json.load(open('data/dict.json', 'r', encoding='utf-8'))
 all_terms = {}
 for cat in ['games','movies_tv','companies','people','media','terms']:
     for k, v in d.get(cat, {}).items():

@@ -15,7 +15,7 @@ Cron 仅负责创建新日期文件夹，不得覆盖/清理/合并旧日期。
 ```json
 {
   "date": "2026-05-28",
-  "window": "2026-05-27 08:30 → 2026-05-28 08:30 (CST)",
+  "window": "2026-05-27 08:00 → 2026-05-28 08:00 (CST)",
   "total": 38,
   "articles": [
     {
@@ -38,6 +38,7 @@ Cron 仅负责创建新日期文件夹，不得覆盖/清理/合并旧日期。
 字段说明：
 - `id` 推送顺序编号（1开始，与网页和聊天里的编号完全一致）
 - `json_id` 原始 ign_daily_index.json 中的 id（备查）
+- `publish_time_cn` 是发布时间主字段；旧 `pub_date` 只做兼容读取。
 - `translation_status`:
   - `none`：未翻译
   - `requested`：用户已请求翻译，主session待处理

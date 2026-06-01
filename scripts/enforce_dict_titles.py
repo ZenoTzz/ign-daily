@@ -1,7 +1,7 @@
 """
 Post-generation dictionary enforcement.
-Run after index.json is generated/updated to auto-correct cn_titles
-that don't match the game_names_dict.json entries.
+Run after index.json is generated/updated to flag cn_titles that do not match
+the active dictionary entries. The active dictionary is normally data/dict.json.
 
 Usage:
     python3 scripts/enforce_dict_titles.py [date]

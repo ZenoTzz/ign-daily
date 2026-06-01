@@ -4,7 +4,7 @@
 - 调用 Claude Opus 4.7 分析改动模式
 - 输出到 data/{date}/diff_analysis.json
 - 累积到 STYLE_PROFILE.md
-- 词库错译写回 game_names_dict.json
+- 词库错译记录供后续写回 data/dict.json
 """
 import json, os, glob, sys, re, urllib.request, datetime
 
