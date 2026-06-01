@@ -128,6 +128,7 @@ python3 scripts/git_push.py
 - 网页设置会写 `data/automation-config.json`：`title_translator` 和 `fulltext_translator` 可分别设为 `openclaw` 或 `api`。
 - API 模式读取 GitHub Secret `TRANSLATOR_API_KEY`（兼容 `DEEPSEEK_API_KEY`）。模型和 base URL 从 `data/automation-config.json` 读取，可在网页设置里切 `deepseek-v4-flash`/`deepseek-v4-pro`。密钥不得写入网页或仓库。
 - OpenClaw 独立自动化 session 只在对应配置不是 `api` 时处理队列；不要依赖正在聊天的主 session 心跳。
+- OpenClaw cron 启动后先跑 `python3 scripts/automation_guard.py title|fulltext`。输出 `SKIP` 就静默退出，输出 `RUN` 才继续。
 - 翻译完成后的 push 仍然跑 `python3 scripts/pre_push_check.py {date}`。
 
 最后记住：**不确定就先跑脚本，脚本比记忆可靠。**

@@ -13,6 +13,7 @@
 | `rss_queue_check.py` | 校验 RSS-only 自动化写出的 index/need_titles 队列 | GitHub Actions RSS 提交前 |
 | `translate_titles_deepseek.py` | 可选 DeepSeek API 标题摘要翻译，只处理 need_titles 队列 | `TITLE_TRANSLATOR=deepseek` |
 | `translate_fulltext_api.py` | 可选 OpenAI-compatible API 正文翻译，强制跑后处理和校验 | `fulltext_translator=api` |
+| `automation_guard.py` | 给 OpenClaw cron 判断当前任务归 API 还是 OpenClaw | 每次 OpenClaw cron 启动后 |
 | `nightly_polish_diff.py` | 对比用户润色与原译，提取风格规律 | 每晚 22:30 cron |
 | `check_polish_today.py` | 检查今天是否有润色记录（无则跳过学习） | 夜间学习入口 |
 | `fetch_exchange_rates.py` | 拉取当日汇率写入 exchange_rates.json | 每天 8:20 cron |

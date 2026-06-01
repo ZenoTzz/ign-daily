@@ -513,6 +513,7 @@ workspace/
 - 正文 API 脚本处理 `requests.json`，写 `translations/NN.json` 后必须跑 `translate_pipeline.py --post` 和 `pre_push_check.py`，不通过就不 push。
 - API 标题/正文脚本都会读取 `TRANSLATION_GUIDE.md` 和 `STYLE_PROFILE.md`；夜间学习任务更新 `STYLE_PROFILE.md` 后，下一轮 API 翻译会自动吃到新风格。
 - OpenClaw cron 每次启动必须先读 `data/automation-config.json`；对应任务为 `api` 时应静默退出，避免两边同时改同一队列。
+- 更稳的入口是先运行 `python3 scripts/automation_guard.py title` 或 `python3 scripts/automation_guard.py fulltext`。输出 `AUTOMATION_GUARD SKIP` 就直接返回 `HEARTBEAT_OK`，输出 `RUN` 才继续处理队列。
 
 ## 2026-06-02 维护补充：展示序号、请求匹配、日期窗口
 

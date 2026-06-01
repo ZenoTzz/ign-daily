@@ -28,6 +28,14 @@ If `title_translator` is `api` or `deepseek`, exit quietly with `HEARTBEAT_OK`.
 GitHub Actions will handle title/summary translation in API mode. Do not also
 edit `need_titles.json`.
 
+Recommended guard command:
+
+```bash
+python3 scripts/automation_guard.py title
+```
+
+If it prints `AUTOMATION_GUARD SKIP`, stop immediately and return `HEARTBEAT_OK`.
+
 2. Find the target date.
 
 Check recent folders under `data/` and process any `need_titles.json` that exists
