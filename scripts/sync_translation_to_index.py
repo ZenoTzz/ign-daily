@@ -72,6 +72,10 @@ def sync(date, article_id=None):
         if cover and not art.get('cover_image'):
             art['cover_image'] = cover
             changed = True
+        for meta_key in ('translator', 'translator_provider', 'translator_model'):
+            if trans.get(meta_key) and art.get(meta_key) != trans[meta_key]:
+                art[meta_key] = trans[meta_key]
+                changed = True
         
         if changed:
             print(f"  [SYNC] #{aid}: cn_title='{cn_title[:40]}' summary='{summary[:40]}...'")

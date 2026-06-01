@@ -488,6 +488,21 @@ function appData() {
       return value === 'api' || value === 'deepseek';
     },
 
+    formatTranslatorModel(model) {
+      const raw = String(model || '').trim();
+      if (!raw) return '';
+      const lower = raw.toLowerCase();
+      if (lower.includes('deepseek') && lower.includes('v4') && lower.includes('pro')) return 'DeepSeek V4 Pro';
+      if (lower.includes('deepseek') && lower.includes('v4') && lower.includes('flash')) return 'DeepSeek V4 Flash';
+      if (lower.includes('deepseek')) return raw.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+      return raw;
+    },
+
+    translatorLabel(article) {
+      const model = this.formatTranslatorModel(article?.translator_model);
+      return model ? `由 ${model} 翻译` : '';
+    },
+
     async triggerRssOnRefresh(force = false) {
       const token = localStorage.getItem('gh_token');
       if (!token || this.rssTriggering) return false;

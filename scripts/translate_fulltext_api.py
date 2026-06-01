@@ -341,6 +341,9 @@ def translate_date(date: str, limit: int = 2) -> int:
         except ValueError as exc:
             print(f"[RETRY] fulltext #{article['id']} paragraph format issue: {exc}")
             data = normalize_translation(article, {**result, "paragraphs": translate_paragraph_chunks(api_key, model, base_url, article, paragraphs_en, terms)}, paragraphs_en)
+        data["translator"] = "api"
+        data["translator_provider"] = "openai-compatible"
+        data["translator_model"] = model
         if source:
             if not data.get("cover") and source.get("cover_image"):
                 data["cover"] = source["cover_image"]

@@ -404,6 +404,10 @@ def post_mode(date_str, article_ref):
             if data.get('cover') and a.get('cover_image') != data['cover']:
                 a['cover_image'] = data['cover']
                 idx_changed = True
+            for meta_key in ('translator', 'translator_provider', 'translator_model'):
+                if data.get(meta_key) and a.get(meta_key) != data[meta_key]:
+                    a[meta_key] = data[meta_key]
+                    idx_changed = True
             break
 
     if idx_changed:

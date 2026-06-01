@@ -17,7 +17,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <script defer src="assets/alpine.min.js"></script>
   <link rel="stylesheet" href="assets/style.css?v=20260531b">
-  <script src="assets/app.js?v=20260602g"></script>
+  <script src="assets/app.js?v=20260602h"></script>
 </head>
 <body>
   <!-- SVG Icon Definitions -->
@@ -337,6 +337,9 @@
                     <span class="card-status status-done">
                       <svg><use href="#icon-check-circle"/></svg> 已翻译
                     </span>
+                  </template>
+                  <template x-if="art.translation_status === 'done' && translatorLabel(art)">
+                    <span class="card-status status-done" x-text="translatorLabel(art)"></span>
                   </template>
                   <template x-if="art.translation_status === 'requested'">
                     <span class="card-status status-requested">

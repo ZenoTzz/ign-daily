@@ -227,7 +227,10 @@
             <h2 class="text-xl font-bold mb-1" x-text="article?.cn_title"></h2>
             <p x-show="article?.subtitle" class="text-base text-slate-600 leading-snug mb-2" x-text="article?.subtitle"></p>
             <p x-show="article?.en_title" class="text-sm text-slate-400 italic mb-1" x-text="article?.en_title"></p>
-            <p class="text-sm text-slate-400 mb-2" x-text="`翻译于 ${article?.translated_at || ''}`"></p>
+            <p class="text-sm text-slate-400 mb-2">
+              <span x-text="`翻译于 ${article?.translated_at || ''}`"></span>
+              <span x-show="translatorLabel(article)" x-text="` · ${translatorLabel(article)}`"></span>
+            </p>
 
             <!-- AI 极简总结 -->
             <div x-show="article?.opus_summary" x-cloak
@@ -396,7 +399,10 @@
           <h2 class="text-xl font-bold mb-1" x-text="article?.cn_title"></h2>
           <p x-show="article?.subtitle" class="text-base text-slate-600 leading-snug mb-2" x-text="article?.subtitle"></p>
           <p x-show="article?.en_title" class="text-sm text-slate-400 italic mb-1" x-text="article?.en_title"></p>
-          <p class="text-sm text-slate-400 mb-4" x-text="`翻译于 ${article?.translated_at || ''}`"></p>
+          <p class="text-sm text-slate-400 mb-4">
+            <span x-text="`翻译于 ${article?.translated_at || ''}`"></span>
+            <span x-show="translatorLabel(article)" x-text="` · ${translatorLabel(article)}`"></span>
+          </p>
           <!-- AI 极简总结 -->
           <div x-show="article?.opus_summary" x-cloak
                class="bg-gradient-to-br from-amber-50 to-orange-50 border-l-4 border-amber-400 p-3 mb-4 rounded">
@@ -1184,6 +1190,21 @@
           feedback[id] = { type: this.feedback, comment: this.feedbackComment, at: new Date().toISOString() };
           await GH.putFile(path, JSON.stringify(feedback, null, 2),
             `feedback for #${id}: ${this.feedback}`);
+        },
+
+        formatTranslatorModel(model) {
+          const raw = String(model || '').trim();
+          if (!raw) return '';
+          const lower = raw.toLowerCase();
+          if (lower.includes('deepseek') && lower.includes('v4') && lower.includes('pro')) return 'DeepSeek V4 Pro';
+          if (lower.includes('deepseek') && lower.includes('v4') && lower.includes('flash')) return 'DeepSeek V4 Flash';
+          if (lower.includes('deepseek')) return raw.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+          return raw;
+        },
+
+        translatorLabel(article) {
+          const model = this.formatTranslatorModel(article?.translator_model);
+          return model ? `由 ${model} 翻译` : '';
         },
 
         async loadFeedback() {
