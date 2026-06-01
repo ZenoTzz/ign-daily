@@ -382,7 +382,7 @@ def translate_date(date: str, limit: int = 2) -> int:
 
 def main() -> int:
     target = sys.argv[1] if len(sys.argv) > 1 and sys.argv[1] else default_date()
-    limit = int(os.environ.get("TRANSLATOR_FULLTEXT_LIMIT", "2"))
+    limit = int(os.environ.get("TRANSLATOR_FULLTEXT_LIMIT", "5"))
     if target == "--all":
         total = 0
         for req_path in sorted(DATA_DIR.glob("20??-??-??/requests.json")):
