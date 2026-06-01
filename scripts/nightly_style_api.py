@@ -16,7 +16,8 @@ from pathlib import Path
 from typing import Any
 
 from common_paths import DATA_DIR, REPO_ROOT, configure_utf8_stdio, env_paths
-from translate_titles_deepseek import call_deepseek, extract_json
+from translate_titles_deepseek import call_deepseek_response, extract_json
+from usage_logger import record_deepseek_usage_safe
 
 
 configure_utf8_stdio()
@@ -132,7 +133,14 @@ def run(date: str) -> int:
         print(f"NIGHTLY_STYLE_API_SKIP: no completed translations for {date}")
         return 0
 
-    raw = call_deepseek(api_key, model, base_url, build_messages(date, current, samples), max_tokens=5000)
+    raw, usage = call_deepseek_response(api_key, model, base_url, build_messages(date, current, samples), max_tokens=5000)
+    record_deepseek_usage_safe(
+        task="nightly",
+        model=model,
+        usage=usage,
+        article_date=date,
+        detail=f"samples={len(samples)}",
+    )
     result = extract_json(raw)
     new_profile = str(result.get("style_profile_md") or "").strip()
     if len(new_profile) < 300 or "STYLE_PROFILE" not in new_profile[:400]:

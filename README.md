@@ -104,6 +104,7 @@ python -m http.server 8000
 - **2026-06-02**: API 正文模式下，用户勾选文章并提交翻译后，网页会立即触发 `api-translation.yml`。网页加载/刷新时会通过 `workflow_dispatch` 触发 `hourly-rss.yml` 抓最新 RSS 和缓存图片/正文；浏览器本地 10 分钟节流，避免连续刷新堆积 Actions。
 - **2026-06-02**: 标题摘要 API 单轮处理上限从 8 篇调到 30 篇，避免一次 RSS 抓到多篇时只翻译前 8 篇、后续文章留在 `need_titles.json`。
 - **2026-06-02**: API 正文翻译会在 `translations/NN.json` 写入 `translator_model`，并同步到首页 `index.json`；首页卡片和文章页会显示“由 DeepSeek V4 Pro/Flash 翻译”。
+- **2026-06-02**: 新增 `usage.html` DeepSeek API 用量看板。API 脚本会记录 `usage` 中的总 tokens、输入/输出 tokens、`prompt_cache_hit_tokens`、`prompt_cache_miss_tokens`；`.github/workflows/deepseek-usage.yml` 定期查询 DeepSeek `/user/balance` 写入余额快照。用量记录是旁路数据，不影响正常翻译工作流。
 
 ## 📝 License
 

@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <title>DeepSeek API 用量 - IGN Daily</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #090914;
+      --panel: #141421;
+      --panel-2: #1b1b2b;
+      --border: #2b2b40;
+      --text: #f3f4f8;
+      --muted: #9ca3b8;
+      --red: #e50914;
+      --green: #2dd4bf;
+      --amber: #fbbf24;
+      --purple: #8b5cf6;
+      --blue: #60a5fa;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+    a { color: inherit; text-decoration: none; }
+    .shell { max-width: 1220px; margin: 0 auto; padding: 22px; }
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+    .brand { display: flex; align-items: center; gap: 12px; }
+    .logo {
+      width: 36px; height: 36px; border-radius: 8px; background: var(--red);
+      display: grid; place-items: center; font-weight: 900; letter-spacing: -0.05em;
+    }
+    h1 { margin: 0; font-size: 1.25rem; }
+    .sub { color: var(--muted); font-size: 0.82rem; margin-top: 4px; }
+    .nav { display: flex; gap: 8px; flex-wrap: wrap; }
+    .btn, .seg button {
+      border: 1px solid var(--border);
+      color: var(--text);
+      background: var(--panel);
+      border-radius: 8px;
+      padding: 8px 11px;
+      font-weight: 700;
+      font-size: 0.82rem;
+      cursor: pointer;
+    }
+    .btn:hover, .seg button:hover { border-color: #4b4b67; }
+    .seg { display: flex; gap: 6px; flex-wrap: wrap; margin: 12px 0 18px; }
+    .seg button.active { background: var(--red); border-color: var(--red); }
+    .grid { display: grid; gap: 14px; }
+    .cards { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .two { grid-template-columns: 1.1fr 0.9fr; margin-top: 14px; }
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      min-width: 0;
+    }
+    .label { color: var(--muted); font-size: 0.76rem; font-weight: 700; }
+    .value { font-size: 1.55rem; font-weight: 800; margin-top: 8px; }
+    .hint { color: var(--muted); font-size: 0.75rem; margin-top: 7px; }
+    .chart-title { display:flex; justify-content:space-between; gap:12px; align-items:flex-start; margin-bottom:14px; }
+    .bar-row { display: grid; grid-template-columns: 150px 1fr 90px; gap: 10px; align-items: center; margin: 10px 0; }
+    .bar-label { color: var(--muted); font-size: 0.8rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .bar-track { height: 14px; background: #25253a; border-radius: 4px; overflow: hidden; display: flex; }
+    .bar-fill { height: 100%; }
+    .flash { background: var(--blue); }
+    .pro { background: var(--purple); }
+    .other { background: var(--amber); }
+    .bar-num { color: var(--muted); font-size: 0.78rem; text-align: right; }
+    .donut-wrap { display: flex; align-items: center; gap: 22px; flex-wrap: wrap; }
+    .donut {
+      width: 180px; height: 180px; border-radius: 50%;
+      background: conic-gradient(var(--green) 0deg, var(--green) var(--hit-deg), var(--amber) var(--hit-deg), var(--amber) 360deg);
+      position: relative;
+      flex: none;
+    }
+    .donut::after {
+      content: "";
+      position: absolute; inset: 28px;
+      background: var(--panel);
+      border-radius: 50%;
+    }
+    .donut-center {
+      position: absolute; inset: 0;
+      display: grid; place-items: center;
+      z-index: 1;
+      font-size: 1.35rem;
+      font-weight: 800;
+    }
+    .legend { display: grid; gap: 8px; min-width: 220px; }
+    .legend-row { display: flex; justify-content: space-between; gap: 12px; color: var(--muted); font-size: 0.84rem; }
+    .dot { display:inline-block; width:10px; height:10px; border-radius:3px; margin-right:7px; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.8rem; }
+    th, td { text-align: left; padding: 10px 8px; border-bottom: 1px solid var(--border); vertical-align: top; }
+    th { color: var(--muted); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.04em; }
+    .pill { display:inline-flex; align-items:center; border:1px solid var(--border); border-radius:999px; padding:3px 8px; font-size:0.72rem; color:var(--muted); }
+    .empty { color: var(--muted); padding: 32px 0; text-align: center; }
+    @media (max-width: 860px) {
+      .shell { padding: 16px; }
+      .topbar { align-items: flex-start; flex-direction: column; }
+      .cards, .two { grid-template-columns: 1fr; }
+      .bar-row { grid-template-columns: 92px 1fr 72px; }
+      .table-wrap { overflow-x: auto; }
+      table { min-width: 720px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <div class="topbar">
+      <div class="brand">
+        <div class="logo">IGN</div>
+        <div>
+          <h1>DeepSeek API 用量</h1>
+          <div class="sub" id="subtitle">读取本地用量日志中...</div>
+        </div>
+      </div>
+      <div class="nav">
+        <a class="btn" href="index.html">返回首页</a>
+        <button class="btn" id="refreshBtn">刷新看板</button>
+      </div>
+    </div>
+
+    <div class="seg" id="rangeSeg">
+      <button data-range="day" class="active">今日</button>
+      <button data-range="week">近 7 天</button>
+      <button data-range="month">近 30 天</button>
+      <button data-range="all">总量</button>
+    </div>
+
+    <section class="grid cards">
+      <div class="card">
+        <div class="label">总 Tokens</div>
+        <div class="value" id="totalTokens">0</div>
+        <div class="hint" id="requestCount">0 次 API 调用</div>
+      </div>
+      <div class="card">
+        <div class="label">缓存命中率</div>
+        <div class="value" id="cacheRate">0%</div>
+        <div class="hint" id="cacheTokens">命中 0 / 未命中 0</div>
+      </div>
+      <div class="card">
+        <div class="label">输出 Tokens</div>
+        <div class="value" id="completionTokens">0</div>
+        <div class="hint" id="promptTokens">输入 0</div>
+      </div>
+      <div class="card">
+        <div class="label">DeepSeek 余额</div>
+        <div class="value" id="balanceValue">--</div>
+        <div class="hint" id="balanceHint">等待余额快照</div>
+      </div>
+    </section>
+
+    <section class="grid two">
+      <div class="card">
+        <div class="chart-title">
+          <div>
+            <div class="label">按模型统计</div>
+            <div class="hint">总量、输入、输出、缓存命中都会按模型汇总</div>
+          </div>
+        </div>
+        <div id="modelBars"></div>
+      </div>
+      <div class="card">
+        <div class="chart-title">
+          <div>
+            <div class="label">缓存命中 / 未命中</div>
+            <div class="hint">来自 DeepSeek usage.prompt_cache_*_tokens</div>
+          </div>
+        </div>
+        <div class="donut-wrap">
+          <div class="donut" id="cacheDonut" style="--hit-deg:0deg"><div class="donut-center" id="donutCenter">0%</div></div>
+          <div class="legend">
+            <div class="legend-row"><span><i class="dot" style="background:var(--green)"></i>缓存命中</span><strong id="hitLegend">0</strong></div>
+            <div class="legend-row"><span><i class="dot" style="background:var(--amber)"></i>缓存未命中</span><strong id="missLegend">0</strong></div>
+            <div class="legend-row"><span>输入 tokens</span><strong id="inputLegend">0</strong></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" style="margin-top:14px;">
+      <div class="chart-title">
+        <div>
+          <div class="label">最近 API 调用</div>
+          <div class="hint">显示最近 30 条记录</div>
+        </div>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>时间</th>
+              <th>任务</th>
+              <th>模型</th>
+              <th>总量</th>
+              <th>输入/输出</th>
+              <th>缓存</th>
+            </tr>
+          </thead>
+          <tbody id="recordsBody"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const state = { range: 'day', dates: [], records: [], balance: null };
+
+    function todayCN() {
+      const now = new Date();
+      const utc = now.getTime() + now.getTimezoneOffset() * 60000;
+      const cn = new Date(utc + 8 * 3600000);
+      return cn.toISOString().slice(0, 10);
+    }
+    function fmt(n) { return Number(n || 0).toLocaleString('zh-CN'); }
+    function modelName(model) {
+      const raw = String(model || 'unknown');
+      const lower = raw.toLowerCase();
+      if (lower.includes('deepseek') && lower.includes('v4') && lower.includes('pro')) return 'DeepSeek V4 Pro';
+      if (lower.includes('deepseek') && lower.includes('v4') && lower.includes('flash')) return 'DeepSeek V4 Flash';
+      return raw.replace(/-/g, ' ');
+    }
+    function modelClass(model) {
+      const lower = String(model || '').toLowerCase();
+      if (lower.includes('pro')) return 'pro';
+      if (lower.includes('flash')) return 'flash';
+      return 'other';
+    }
+    async function fetchJson(path, fallback) {
+      try {
+        const res = await fetch(path + '?t=' + Date.now(), { cache: 'no-store' });
+        if (!res.ok) return fallback;
+        return await res.json();
+      } catch (_) {
+        return fallback;
+      }
+    }
+    function filterRecords() {
+      const today = todayCN();
+      const start = new Date(today + 'T00:00:00+08:00');
+      const days = state.range === 'day' ? 1 : state.range === 'week' ? 7 : state.range === 'month' ? 30 : 100000;
+      return state.records.filter(r => {
+        if (state.range === 'all') return true;
+        const d = new Date(String(r.time_cn || '').replace(' ', 'T') + '+08:00');
+        return !Number.isNaN(d.getTime()) && d >= new Date(start.getTime() - (days - 1) * 86400000);
+      });
+    }
+    function summarize(records) {
+      const total = records.reduce((s, r) => s + Number(r.total_tokens || 0), 0);
+      const prompt = records.reduce((s, r) => s + Number(r.prompt_tokens || 0), 0);
+      const completion = records.reduce((s, r) => s + Number(r.completion_tokens || 0), 0);
+      const hit = records.reduce((s, r) => s + Number(r.prompt_cache_hit_tokens || 0), 0);
+      const miss = records.reduce((s, r) => s + Number(r.prompt_cache_miss_tokens || 0), 0);
+      const byModel = {};
+      for (const r of records) {
+        const key = r.model || 'unknown';
+        byModel[key] ||= { total: 0, prompt: 0, completion: 0, hit: 0, miss: 0, count: 0 };
+        byModel[key].total += Number(r.total_tokens || 0);
+        byModel[key].prompt += Number(r.prompt_tokens || 0);
+        byModel[key].completion += Number(r.completion_tokens || 0);
+        byModel[key].hit += Number(r.prompt_cache_hit_tokens || 0);
+        byModel[key].miss += Number(r.prompt_cache_miss_tokens || 0);
+        byModel[key].count += 1;
+      }
+      return { total, prompt, completion, hit, miss, byModel, count: records.length };
+    }
+    function renderBalance() {
+      const el = document.getElementById('balanceValue');
+      const hint = document.getElementById('balanceHint');
+      const b = state.balance;
+      if (!b || !b.ok) {
+        el.textContent = '--';
+        hint.textContent = b?.error ? '余额获取失败' : '等待余额快照';
+        return;
+      }
+      const first = (b.balance_infos || [])[0];
+      if (!first) {
+        el.textContent = b.is_available ? '可用' : '不可用';
+        hint.textContent = `更新于 ${b.updated_at_cn || '--'}`;
+        return;
+      }
+      el.textContent = `${first.total_balance} ${first.currency}`;
+      hint.textContent = `赠额 ${first.granted_balance} / 充值 ${first.topped_up_balance}，更新于 ${b.updated_at_cn || '--'}`;
+    }
+    function render() {
+      const records = filterRecords();
+      const sum = summarize(records);
+      document.getElementById('subtitle').textContent = `已读取 ${state.dates.length} 个日期的用量日志`;
+      document.getElementById('totalTokens').textContent = fmt(sum.total);
+      document.getElementById('requestCount').textContent = `${sum.count} 次 API 调用`;
+      document.getElementById('completionTokens').textContent = fmt(sum.completion);
+      document.getElementById('promptTokens').textContent = `输入 ${fmt(sum.prompt)}`;
+      const input = sum.hit + sum.miss;
+      const rate = input ? Math.round(sum.hit / input * 100) : 0;
+      document.getElementById('cacheRate').textContent = `${rate}%`;
+      document.getElementById('cacheTokens').textContent = `命中 ${fmt(sum.hit)} / 未命中 ${fmt(sum.miss)}`;
+      document.getElementById('cacheDonut').style.setProperty('--hit-deg', `${input ? sum.hit / input * 360 : 0}deg`);
+      document.getElementById('donutCenter').textContent = `${rate}%`;
+      document.getElementById('hitLegend').textContent = fmt(sum.hit);
+      document.getElementById('missLegend').textContent = fmt(sum.miss);
+      document.getElementById('inputLegend').textContent = fmt(input || sum.prompt);
+      renderBalance();
+
+      const bars = document.getElementById('modelBars');
+      const rows = Object.entries(sum.byModel).sort((a, b) => b[1].total - a[1].total);
+      const max = Math.max(1, ...rows.map(([, v]) => v.total));
+      bars.innerHTML = rows.length ? rows.map(([model, v]) => `
+        <div class="bar-row">
+          <div class="bar-label" title="${modelName(model)}">${modelName(model)}</div>
+          <div class="bar-track"><div class="bar-fill ${modelClass(model)}" style="width:${Math.max(2, v.total / max * 100)}%"></div></div>
+          <div class="bar-num">${fmt(v.total)}</div>
+        </div>
+        <div class="hint" style="margin: -4px 0 8px 160px;">${v.count} 次，请求输入 ${fmt(v.prompt)}，输出 ${fmt(v.completion)}，缓存命中 ${fmt(v.hit)}</div>
+      `).join('') : '<div class="empty">当前范围内还没有 API 用量记录</div>';
+
+      const tbody = document.getElementById('recordsBody');
+      const latest = [...records].sort((a, b) => String(b.time_cn).localeCompare(String(a.time_cn))).slice(0, 30);
+      tbody.innerHTML = latest.length ? latest.map(r => `
+        <tr>
+          <td>${r.time_cn || ''}</td>
+          <td><span class="pill">${r.task || ''}</span></td>
+          <td>${modelName(r.model)}</td>
+          <td>${fmt(r.total_tokens)}</td>
+          <td>${fmt(r.prompt_tokens)} / ${fmt(r.completion_tokens)}</td>
+          <td>${fmt(r.prompt_cache_hit_tokens)} / ${fmt(r.prompt_cache_miss_tokens)}</td>
+        </tr>
+      `).join('') : '<tr><td colspan="6" class="empty">暂无记录</td></tr>';
+    }
+    async function load() {
+      state.dates = await fetchJson('data/usage/deepseek/index.json', []);
+      state.balance = await fetchJson('data/usage/deepseek-balance.json', null);
+      const loaded = [];
+      for (const date of state.dates) {
+        const data = await fetchJson(`data/usage/deepseek/${date}.json`, null);
+        if (data && Array.isArray(data.records)) loaded.push(...data.records);
+      }
+      state.records = loaded;
+      render();
+    }
+    document.getElementById('rangeSeg').addEventListener('click', e => {
+      const btn = e.target.closest('button[data-range]');
+      if (!btn) return;
+      state.range = btn.dataset.range;
+      document.querySelectorAll('#rangeSeg button').forEach(b => b.classList.toggle('active', b === btn));
+      render();
+    });
+    document.getElementById('refreshBtn').addEventListener('click', load);
+    load();
+  </script>
+</body>
+</html>

@@ -21,7 +21,8 @@ from pathlib import Path
 from typing import Any
 
 from common_paths import DATA_DIR, REPO_ROOT, configure_utf8_stdio, dict_path, env_paths
-from translate_titles_deepseek import apply_title_dictionary, call_deepseek, extract_article_text, extract_json, flatten_dict_terms
+from translate_titles_deepseek import apply_title_dictionary, call_deepseek_response, extract_article_text, extract_json, flatten_dict_terms
+from usage_logger import record_deepseek_usage_safe
 
 
 configure_utf8_stdio()
@@ -229,18 +230,28 @@ def translate_paragraph_chunks(
     article: dict[str, Any],
     paragraphs_en: list[str],
     terms: dict[str, str],
+    article_date: str | None = None,
 ) -> list[dict[str, str]]:
     translated: dict[int, str] = {}
     chunk_size = int(os.environ.get("TRANSLATOR_FULLTEXT_CHUNK_SIZE", "6"))
     indexed = list(enumerate(paragraphs_en, start=1))
     for start in range(0, len(indexed), chunk_size):
         chunk = indexed[start:start + chunk_size]
-        raw = call_deepseek(
+        raw, usage = call_deepseek_response(
             api_key,
             model,
             base_url,
             build_chunk_messages(article, chunk, terms),
             max_tokens=int(os.environ.get("TRANSLATOR_FULLTEXT_CHUNK_MAX_TOKENS", "4000")),
+        )
+        record_deepseek_usage_safe(
+            task="fulltext_chunk",
+            model=model,
+            usage=usage,
+            article_id=article.get("id"),
+            article_url=article.get("url"),
+            article_date=article_date,
+            detail=f"paragraphs {chunk[0][0]}-{chunk[-1][0]}",
         )
         result = extract_json(raw)
         items = extract_paragraph_items(result)
@@ -334,13 +345,21 @@ def translate_date(date: str, limit: int = 2) -> int:
             raise RuntimeError(f"no paragraphs extracted for #{article['id']}")
         terms = matched_terms(article.get("en_title", "") + "\n" + text)
         max_tokens = int(os.environ.get("TRANSLATOR_FULLTEXT_MAX_TOKENS", "12000"))
-        raw = call_deepseek(api_key, model, base_url, build_messages(article, paragraphs_en, terms), max_tokens=max_tokens)
+        raw, usage = call_deepseek_response(api_key, model, base_url, build_messages(article, paragraphs_en, terms), max_tokens=max_tokens)
+        record_deepseek_usage_safe(
+            task="fulltext",
+            model=model,
+            usage=usage,
+            article_id=article.get("id"),
+            article_url=article.get("url"),
+            article_date=date,
+        )
         result = extract_json(raw)
         try:
             data = normalize_translation(article, result, paragraphs_en)
         except ValueError as exc:
             print(f"[RETRY] fulltext #{article['id']} paragraph format issue: {exc}")
-            data = normalize_translation(article, {**result, "paragraphs": translate_paragraph_chunks(api_key, model, base_url, article, paragraphs_en, terms)}, paragraphs_en)
+            data = normalize_translation(article, {**result, "paragraphs": translate_paragraph_chunks(api_key, model, base_url, article, paragraphs_en, terms, article_date=date)}, paragraphs_en)
         data["translator"] = "api"
         data["translator_provider"] = "openai-compatible"
         data["translator_model"] = model

@@ -64,6 +64,7 @@ jobs:
             exit 1
           fi
           python3 scripts/nightly_style_api.py
+          python3 scripts/deepseek_balance.py
           python3 scripts/agent_doctor.py
 
       - name: Commit and push nightly style update

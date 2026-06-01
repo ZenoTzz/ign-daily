@@ -28,6 +28,7 @@ from pathlib import Path
 from typing import Any
 
 from common_paths import DATA_DIR, REPO_ROOT, configure_utf8_stdio, dict_path, env_paths
+from usage_logger import record_deepseek_usage_safe
 
 
 configure_utf8_stdio()
@@ -255,7 +256,7 @@ def extract_json(text: str) -> dict[str, Any]:
         return json.loads(match.group(0))
 
 
-def call_deepseek(api_key: str, model: str, base_url: str, messages: list[dict[str, str]], max_tokens: int | None = None) -> str:
+def call_deepseek_response(api_key: str, model: str, base_url: str, messages: list[dict[str, str]], max_tokens: int | None = None) -> tuple[str, dict[str, Any]]:
     endpoint = base_url.rstrip("/") + "/chat/completions"
     payload = {
         "model": model,
@@ -278,7 +279,12 @@ def call_deepseek(api_key: str, model: str, base_url: str, messages: list[dict[s
     )
     with urllib.request.urlopen(req, timeout=60) as resp:
         data = json.loads(resp.read().decode("utf-8"))
-    return data["choices"][0]["message"]["content"]
+    return data["choices"][0]["message"]["content"], data.get("usage") or {}
+
+
+def call_deepseek(api_key: str, model: str, base_url: str, messages: list[dict[str, str]], max_tokens: int | None = None) -> str:
+    content, _usage = call_deepseek_response(api_key, model, base_url, messages, max_tokens=max_tokens)
+    return content
 
 
 def build_messages(article: dict[str, Any], article_text: str, terms: dict[str, str]) -> list[dict[str, str]]:
@@ -371,7 +377,15 @@ def translate_date(date: str, limit: int = 8) -> int:
             article_text = cached_article_text(date, article) or fetch_article_text(url)
             terms = matched_terms((article.get("en_title") or "") + "\n" + article_text)
             messages = build_messages(article, article_text, terms)
-            raw = call_deepseek(api_key, model, base_url, messages)
+            raw, usage = call_deepseek_response(api_key, model, base_url, messages)
+            record_deepseek_usage_safe(
+                task="title",
+                model=model,
+                usage=usage,
+                article_id=article.get("id"),
+                article_url=article.get("url"),
+                article_date=date,
+            )
             result = normalize_result(extract_json(raw))
             if not result["cn_title"] or not result["summary"]:
                 raise ValueError("model returned empty cn_title or summary")

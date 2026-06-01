@@ -67,6 +67,33 @@ Cron 仅负责创建新日期文件夹，不得覆盖/清理/合并旧日期。
 
 标题摘要 API 和正文 API 必须优先读取这个缓存；只有缓存缺失时才允许临时抓网页。不要把整页 HTML 或导航/页脚文本喂给模型。
 
+## usage/deepseek（API 用量看板）
+
+API 脚本会把 DeepSeek 返回的 `usage` 写入：
+
+```text
+data/usage/deepseek/{YYYY-MM-DD}.json
+data/usage/deepseek/index.json
+data/usage/deepseek-balance.json
+```
+
+单条记录字段：
+
+```json
+{
+  "time_cn": "2026-06-02 23:30:00",
+  "task": "title|fulltext|fulltext_chunk|nightly",
+  "model": "deepseek-v4-pro",
+  "prompt_tokens": 1000,
+  "completion_tokens": 500,
+  "total_tokens": 1500,
+  "prompt_cache_hit_tokens": 600,
+  "prompt_cache_miss_tokens": 400
+}
+```
+
+这是旁路观测数据。写入失败不得阻断翻译流程；余额快照失败也不得阻断任何自动化。
+
 ## translations/NN.json（单篇译文）
 
 ```json

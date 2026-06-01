@@ -89,7 +89,12 @@ jobs:
 
       - name: Validate repository
         if: steps.config.outputs.title_translator == 'api' || steps.config.outputs.title_translator == 'deepseek' || steps.config.outputs.fulltext_translator == 'api' || steps.config.outputs.fulltext_translator == 'deepseek'
-        run: python3 scripts/agent_doctor.py
+        env:
+          TRANSLATOR_API_KEY: ${{ secrets.TRANSLATOR_API_KEY || secrets.DEEPSEEK_API_KEY }}
+          TRANSLATOR_BASE_URL: ${{ steps.config.outputs.api_base_url || vars.TRANSLATOR_BASE_URL || vars.DEEPSEEK_BASE_URL || 'https://api.deepseek.com' }}
+        run: |
+          python3 scripts/deepseek_balance.py
+          python3 scripts/agent_doctor.py
 
       - name: Commit and push API translation update
         if: steps.config.outputs.title_translator == 'api' || steps.config.outputs.title_translator == 'deepseek' || steps.config.outputs.fulltext_translator == 'api' || steps.config.outputs.fulltext_translator == 'deepseek'

@@ -50,7 +50,10 @@ def main() -> int:
         ".github/workflows/hourly-rss.yml",
         ".github/workflows/api-translation.yml",
         ".github/workflows/nightly-style.yml",
+        ".github/workflows/deepseek-usage.yml",
         "data/automation-config.json",
+        "data/usage/deepseek/index.json",
+        "data/usage/deepseek-balance.json",
         "data/dict.json",
         "data/index-list.json",
     ]
