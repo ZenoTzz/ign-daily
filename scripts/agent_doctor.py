@@ -46,6 +46,7 @@ def main() -> int:
         "scripts/common_paths.py",
         "scripts/pre_push_check.py",
         "scripts/article_cache.py",
+        "scripts/prompt_blocks.py",
         "scripts/nightly_style_api.py",
         ".github/workflows/hourly-rss.yml",
         ".github/workflows/api-translation.yml",

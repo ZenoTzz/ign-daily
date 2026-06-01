@@ -17,7 +17,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <script defer src="assets/alpine.min.js"></script>
   <link rel="stylesheet" href="assets/style.css?v=20260531b">
-  <script src="assets/app.js?v=20260602h"></script>
+  <script src="assets/app.js?v=20260602i"></script>
 </head>
 <body>
   <!-- SVG Icon Definitions -->
@@ -260,6 +260,13 @@
             <select x-model="automationConfig.api_fulltext_model" style="width:100%; margin-top:0.35rem;">
               <option value="deepseek-v4-pro">DeepSeek V4 Pro</option>
               <option value="deepseek-v4-flash">DeepSeek V4 Flash</option>
+            </select>
+
+            <label style="display:block; margin-top:0.75rem;">手动触发正文批量</label>
+            <select x-model="automationConfig.api_fulltext_batch" style="width:100%; margin-top:0.35rem;">
+              <option value="5">普通：最多 5 篇</option>
+              <option value="10">批量：最多 10 篇</option>
+              <option value="all">尽量全部（到时间预算自动暂停）</option>
             </select>
 
             <label style="display:block; margin-top:0.75rem;">夜间学习 API 模型</label>

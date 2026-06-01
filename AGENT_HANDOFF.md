@@ -528,6 +528,8 @@ workspace/
 - 标题摘要 API 脚本只处理 `need_titles.json`，不会翻译全文，也不会写 `translations/NN.json`。
 - 正文 API 脚本处理 `requests.json`，写 `translations/NN.json` 后必须跑 `translate_pipeline.py --post` 和 `pre_push_check.py`，不通过就不 push。
 - DeepSeek API 用量看板在 `usage.html`。API 脚本通过 `scripts/usage_logger.py` 写 `data/usage/deepseek/{date}.json`；`scripts/deepseek_balance.py` 调官方 `/user/balance` 写 `data/usage/deepseek-balance.json`。这些是旁路观测数据，失败不得阻断翻译、RSS 或夜间学习。
+- API prompt 长规则块统一由 `scripts/prompt_blocks.py` 生成，以提高 DeepSeek 自动缓存命中；不要在标题/正文/夜间学习脚本里复制不同版本的规则 prompt。
+- 正文 API 手动触发支持批量：`fulltext_limit=5|10|999`。定时任务默认 5；`999` 表示尽量全部，但脚本会按 `TRANSLATOR_FULLTEXT_TIME_BUDGET_SECONDS` 到点暂停并保留剩余请求，避免 Actions 超时。
 - API 标题/正文脚本都会读取 `TRANSLATION_GUIDE.md` 和 `STYLE_PROFILE.md`；夜间学习任务更新 `STYLE_PROFILE.md` 后，下一轮 API 翻译会自动吃到新风格。
 - OpenClaw cron 每次启动必须先读 `data/automation-config.json`；对应任务为 `api` 时应静默退出，避免两边同时改同一队列。
 - 更稳的入口是先运行 `python3 scripts/automation_guard.py title|fulltext|nightly`。输出 `AUTOMATION_GUARD SKIP` 就直接返回 `HEARTBEAT_OK`，输出 `RUN` 才继续处理对应任务。

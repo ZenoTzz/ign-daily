@@ -17,6 +17,7 @@
 | `automation_guard.py` | 给 OpenClaw cron 判断当前任务归 API 还是 OpenClaw | 每次 OpenClaw cron 启动后 |
 | `nightly_polish_diff.py` | 对比用户润色与原译，提取风格规律 | 每晚 22:30 cron |
 | `nightly_style_api.py` | 用 API 从已完成译文/润色样本学习并更新 STYLE_PROFILE.md | `nightly_learner=api` |
+| `prompt_blocks.py` | 统一稳定 prompt 前缀，提高 DeepSeek cache 命中 | 所有 API prompt 构造 |
 | `usage_logger.py` | 记录 DeepSeek usage tokens/cache 命中数据 | API 脚本调用后 |
 | `deepseek_balance.py` | 调 DeepSeek `/user/balance` 写余额快照 | usage workflow / API workflow |
 | `check_polish_today.py` | 检查今天是否有润色记录（无则跳过学习） | 夜间学习入口 |
@@ -88,6 +89,10 @@ python3 scripts/nightly_style_api.py {date}
 标题摘要 API 脚本不会翻译全文，也不会写 `translations/NN.json`。正文 API 脚本会写译文，但必须通过 `translate_pipeline.py --post` 和 `pre_push_check.py`。正文 API 输出较长，workflow 会设置 `TRANSLATOR_FULLTEXT_MAX_TOKENS=12000`，不要沿用标题摘要的短输出上限。API 抓正文必须使用脚本内的 `extract_article_text()` 或 `article_cache.py`，优先抽取 IGN 的正文段落并过滤导航、页脚、作者简介、推荐链接；不要再用整页 HTML 去标签的方式喂给模型。
 
 DeepSeek 用量看板读取 `data/usage/deepseek/*.json` 和 `data/usage/deepseek-balance.json`。这些文件是旁路观测数据：记录失败不得中断翻译；余额查询失败不得影响 RSS、标题摘要、正文翻译或夜间学习。
+
+API prompt 的长规则块必须通过 `scripts/prompt_blocks.py` 生成，尽量保持字段顺序、文本和位置稳定，方便 DeepSeek 自动上下文缓存命中。不要在各脚本里复制粘贴不同版本的 `TRANSLATION_GUIDE.md` / `STYLE_PROFILE.md` prompt。
+
+正文 API 支持批量模式：定时任务默认 `TRANSLATOR_FULLTEXT_LIMIT=5`；网页手动触发可传 `fulltext_limit=10` 或 `999`。脚本同时读取 `TRANSLATOR_FULLTEXT_TIME_BUDGET_SECONDS`，达到时间预算会暂停并保留剩余 `requests.json`，避免 GitHub Actions 超时导致已完成译文无法提交。
 
 它会依次跑三连：
 

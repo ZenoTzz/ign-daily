@@ -28,6 +28,7 @@ from pathlib import Path
 from typing import Any
 
 from common_paths import DATA_DIR, REPO_ROOT, configure_utf8_stdio, dict_path, env_paths
+from prompt_blocks import title_user_payload
 from usage_logger import record_deepseek_usage_safe
 
 
@@ -293,24 +294,7 @@ def build_messages(article: dict[str, Any], article_text: str, terms: dict[str, 
         "不要翻译全文，不要写 Markdown。标题要自然、有新闻感；摘要 80-160 个中文字符。"
         "如果词库中有译名，必须使用词库译名。"
     )
-    user = {
-        "en_title": article.get("en_title", ""),
-        "current_cn_title": article.get("cn_title", ""),
-        "url": article.get("url", ""),
-        "publish_time_cn": article.get("publish_time_cn") or article.get("pub_date") or "",
-        "allowed_categories": CATEGORIES,
-        "matched_dictionary_terms": terms,
-        "translation_guide": read_optional("TRANSLATION_GUIDE.md", 9000),
-        "style_profile": read_optional("STYLE_PROFILE.md", 7000),
-        "article_text_excerpt": article_text,
-        "required_json_schema": {
-            "cn_title": "中文标题",
-            "summary": "中文摘要，80-160字",
-            "category": "必须从 allowed_categories 选一个",
-            "emoji": "一个相关 emoji",
-            "pending_dict": [{"en": "未确认英文名", "cn": "建议译名", "reason": "为什么需要人工确认"}],
-        },
-    }
+    user = title_user_payload(article=article, article_text=article_text, terms=terms, allowed_categories=CATEGORIES)
     return [
         {"role": "system", "content": system},
         {"role": "user", "content": json.dumps(user, ensure_ascii=False)},

@@ -95,7 +95,7 @@ const GH = {
     return res.json();
   },
 
-  async dispatchWorkflow(workflowFile) {
+  async dispatchWorkflow(workflowFile, inputs = {}) {
     const token = localStorage.getItem('gh_token');
     if (!token) throw new Error('未配置 GitHub Token，请在右上角 ⚙️ 设置');
     const res = await fetch(`${this.apiBase}/repos/${this.owner}/${this.repo}/actions/workflows/${workflowFile}/dispatches`, {
@@ -105,7 +105,7 @@ const GH = {
         Accept: 'application/vnd.github+json',
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({ ref: this.branch })
+      body: JSON.stringify({ ref: this.branch, inputs })
     });
     if (!res.ok) {
       const err = await res.json().catch(() => ({}));
@@ -151,7 +151,8 @@ function appData() {
       api_title_model: 'deepseek-v4-flash',
       api_fulltext_model: 'deepseek-v4-pro',
       api_nightly_model: 'deepseek-v4-flash',
-      api_base_url: 'https://api.deepseek.com'
+      api_base_url: 'https://api.deepseek.com',
+      api_fulltext_batch: '5'
     },
     automationSaving: false,
     automationTriggering: false,
@@ -426,6 +427,7 @@ function appData() {
           api_fulltext_model: cfg.api_fulltext_model || 'deepseek-v4-pro',
           api_nightly_model: cfg.api_nightly_model || cfg.api_model || 'deepseek-v4-flash',
           api_base_url: cfg.api_base_url || 'https://api.deepseek.com',
+          api_fulltext_batch: cfg.api_fulltext_batch || '5',
           updated_at: cfg.updated_at || ''
         };
       } catch (_) {}
@@ -444,6 +446,7 @@ function appData() {
           api_fulltext_model: this.automationConfig.api_fulltext_model || 'deepseek-v4-pro',
           api_nightly_model: this.automationConfig.api_nightly_model || this.automationConfig.api_model || 'deepseek-v4-flash',
           api_base_url: this.automationConfig.api_base_url || 'https://api.deepseek.com',
+          api_fulltext_batch: this.automationConfig.api_fulltext_batch || '5',
           updated_at: new Date().toISOString(),
           notes: 'Public switch only. API keys must stay in GitHub Actions Secrets.'
         };
@@ -463,6 +466,13 @@ function appData() {
       }
     },
 
+    apiTranslationInputs() {
+      const mode = String(this.automationConfig.api_fulltext_batch || '5');
+      if (mode === '10') return { fulltext_limit: '10', time_budget_seconds: '1200' };
+      if (mode === 'all') return { fulltext_limit: '999', time_budget_seconds: '1320' };
+      return { fulltext_limit: '5', time_budget_seconds: '1200' };
+    },
+
     async runApiTranslationNow() {
       const titleApi = this.automationConfig.title_translator === 'api' || this.automationConfig.title_translator === 'deepseek';
       const fulltextApi = this.automationConfig.fulltext_translator === 'api' || this.automationConfig.fulltext_translator === 'deepseek';
@@ -474,7 +484,7 @@ function appData() {
         this.automationTriggering = true;
         const saved = await this.saveAutomationConfig();
         if (!saved) return;
-        await GH.dispatchWorkflow('api-translation.yml');
+        await GH.dispatchWorkflow('api-translation.yml', this.apiTranslationInputs());
         this.flash('已触发 API 翻译，稍后刷新查看结果', 4500);
       } catch (e) {
         this.flash('触发 API 翻译失败：' + e.message, 6000);
@@ -644,7 +654,7 @@ function appData() {
         const apiFulltext = this.isApiMode('fulltext_translator');
         if (apiFulltext) {
           await this.saveAutomationConfig();
-          await GH.dispatchWorkflow('api-translation.yml');
+          await GH.dispatchWorkflow('api-translation.yml', this.apiTranslationInputs());
           this.flash(`✅ 已请求翻译 ${this.selected.length} 篇，API Actions 已开始处理`);
         } else {
           this.flash(`✅ 已请求翻译 ${this.selected.length} 篇，OpenClaw 会处理`);

@@ -16,6 +16,7 @@ from pathlib import Path
 from typing import Any
 
 from common_paths import DATA_DIR, REPO_ROOT, configure_utf8_stdio, env_paths
+from prompt_blocks import nightly_user_payload
 from translate_titles_deepseek import call_deepseek_response, extract_json
 from usage_logger import record_deepseek_usage_safe
 
@@ -95,22 +96,7 @@ def build_messages(date: str, current_profile: str, samples: list[dict[str, Any]
         "更新 STYLE_PROFILE.md。不要改代码，不要改文章数据，不要凭空发明术语。"
         "输出严格 JSON。"
     )
-    user = {
-        "date": date,
-        "current_STYLE_PROFILE_md": current_profile,
-        "translation_guide_excerpt": read_text(REPO_ROOT / "TRANSLATION_GUIDE.md", 14000),
-        "samples": samples,
-        "rules": [
-            "保留已有有效规则，删除重复或互相冲突的规则。",
-            "只新增可复用的风格规律，不记录单篇文章细节。",
-            "如果样本不足，原样返回 STYLE_PROFILE.md，并在 learning_notes 说明 skipped。",
-            "STYLE_PROFILE.md 必须是简洁 Markdown，方便后续模型读取。"
-        ],
-        "required_json_schema": {
-            "style_profile_md": "完整的新 STYLE_PROFILE.md 内容",
-            "learning_notes": ["本次学习到或跳过的原因"]
-        },
-    }
+    user = nightly_user_payload(date, current_profile, samples)
     return [
         {"role": "system", "content": system},
         {"role": "user", "content": json.dumps(user, ensure_ascii=False)},

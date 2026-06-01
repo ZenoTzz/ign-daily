@@ -15,12 +15,14 @@ import os
 import re
 import subprocess
 import sys
+import time
 import urllib.request
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any
 
 from common_paths import DATA_DIR, REPO_ROOT, configure_utf8_stdio, dict_path, env_paths
+from prompt_blocks import chunk_user_payload, fulltext_user_payload
 from translate_titles_deepseek import apply_title_dictionary, call_deepseek_response, extract_article_text, extract_json, flatten_dict_terms
 from usage_logger import record_deepseek_usage_safe
 
@@ -132,34 +134,7 @@ def build_messages(article: dict[str, Any], paragraphs: list[str], terms: dict[s
         "逐段翻译 paragraphs_en，保持段落数量和顺序一致。"
         "必须遵守翻译指南、风格画像和词库命中。金额必须补人民币换算；中文标点使用全角；作品名用《》。"
     )
-    user = {
-        "article": {
-            "id": article.get("id"),
-            "url": article.get("url"),
-            "en_title": article.get("en_title"),
-            "cn_title": article.get("cn_title"),
-            "publish_time_cn": article.get("publish_time_cn") or article.get("pub_date") or "",
-            "summary": article.get("summary", ""),
-        },
-        "translation_guide": read_optional("TRANSLATION_GUIDE.md", 14000),
-        "style_profile": read_optional("STYLE_PROFILE.md", 8000),
-        "matched_dictionary_terms": terms,
-        "paragraphs_en": paragraphs,
-        "required_json_schema": {
-            "id": article.get("id"),
-            "url": article.get("url"),
-            "en_title": article.get("en_title"),
-            "cn_title": "中文标题",
-            "subtitle": "2-15字中文创意短句",
-            "opus_summary": "150-260字中文总述",
-            "publish_time_cn": article.get("publish_time_cn") or article.get("pub_date") or "",
-            "paragraphs": [{"en": "原文段落", "cn": "中文译文"}],
-            "pending_dict": [{"en": "未确认英文名", "cn": "建议译名", "reason": "原因"}],
-            "translated_terms": {},
-            "cover": "",
-            "images": [],
-        },
-    }
+    user = fulltext_user_payload(article=article, paragraphs=paragraphs, terms=terms)
     return [
         {"role": "system", "content": system},
         {"role": "user", "content": json.dumps(user, ensure_ascii=False)},
@@ -203,20 +178,7 @@ def build_chunk_messages(article: dict[str, Any], chunk: list[tuple[int, str]], 
         "必须返回与 paragraphs_en 数量完全一致的 paragraphs 数组。"
         "每个元素必须包含 index 和 cn。中文标点用全角，作品名用《》。"
     )
-    user = {
-        "article": {
-            "id": article.get("id"),
-            "url": article.get("url"),
-            "en_title": article.get("en_title"),
-            "cn_title": article.get("cn_title"),
-        },
-        "matched_dictionary_terms": terms,
-        "style_profile": read_optional("STYLE_PROFILE.md", 5000),
-        "paragraphs_en": [{"index": idx, "en": en} for idx, en in chunk],
-        "required_json_schema": {
-            "paragraphs": [{"index": 1, "cn": "中文译文"}]
-        },
-    }
+    user = chunk_user_payload(article=article, chunk=chunk, terms=terms)
     return [
         {"role": "system", "content": system},
         {"role": "user", "content": json.dumps(user, ensure_ascii=False)},
@@ -337,7 +299,12 @@ def translate_date(date: str, limit: int = 2) -> int:
         print(f"API_FULLTEXT_SKIP: no requested articles for {date}")
         return 0
     translated = 0
+    started = time.monotonic()
+    budget_seconds = int(os.environ.get("TRANSLATOR_FULLTEXT_TIME_BUDGET_SECONDS", "1200"))
     for article in requested[:limit]:
+        if time.monotonic() - started > budget_seconds:
+            print(f"API_FULLTEXT_PAUSE: time budget reached after {translated} article(s)")
+            break
         source = load_cached_source(date, article)
         text = source_text(source) or fetch_article_text(article["url"])
         paragraphs_en = split_paragraphs(text)
