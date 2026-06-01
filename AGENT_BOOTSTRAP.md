@@ -125,7 +125,8 @@ python3 scripts/git_push.py
 - GitHub Actions `.github/workflows/hourly-rss.yml` 每小时第 5 分钟跑 RSS 增量抓取。
 - Actions 会设置 `IGN_DAILY_SKIP_GIT=1`，所以 `scripts/ign_rss_incremental.py` 只写数据，不自己 commit/push。
 - RSS-only 提交前跑 `python3 scripts/rss_queue_check.py {date}` 和 `python3 scripts/agent_doctor.py`。
-- OpenClaw 独立自动化 session 只处理 `need_titles.json` 的标题/摘要翻译；不要依赖正在聊天的主 session 心跳。
+- 标题摘要翻译有开关：仓库变量 `TITLE_TRANSLATOR=openclaw|deepseek`。默认/空值按 `openclaw`，保留 `need_titles.json` 给 OpenClaw；设为 `deepseek` 且配置 Secret `DEEPSEEK_API_KEY` 后，Actions 会跑 `scripts/translate_titles_deepseek.py` 自动翻译队列。
+- OpenClaw 独立自动化 session 只在 `TITLE_TRANSLATOR` 不是 `deepseek` 时处理 `need_titles.json`；不要依赖正在聊天的主 session 心跳。
 - 翻译完成后的 push 仍然跑 `python3 scripts/pre_push_check.py {date}`。
 
 最后记住：**不确定就先跑脚本，脚本比记忆可靠。**

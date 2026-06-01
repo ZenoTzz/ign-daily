@@ -67,6 +67,22 @@ jobs:
           python3 scripts/rss_queue_check.py "${{ steps.rss.outputs.target_date }}"
           python3 scripts/agent_doctor.py
 
+      - name: Translate queued titles with DeepSeek
+        if: steps.rss.outputs.new_count != '0' && vars.TITLE_TRANSLATOR == 'deepseek'
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          DEEPSEEK_MODEL: ${{ vars.DEEPSEEK_MODEL || 'deepseek-v4-flash' }}
+          DEEPSEEK_BASE_URL: ${{ vars.DEEPSEEK_BASE_URL || 'https://api.deepseek.com' }}
+        run: |
+          set -euo pipefail
+          if [ -z "${DEEPSEEK_API_KEY:-}" ]; then
+            echo "TITLE_TRANSLATOR=deepseek but DEEPSEEK_API_KEY is not set."
+            exit 1
+          fi
+          python3 scripts/translate_titles_deepseek.py "${{ steps.rss.outputs.target_date }}"
+          python3 scripts/pre_push_check.py "${{ steps.rss.outputs.target_date }}"
+          python3 scripts/agent_doctor.py
+
       - name: Commit and push RSS update
         if: steps.rss.outputs.new_count != '0'
         run: |

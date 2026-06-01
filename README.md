@@ -97,6 +97,7 @@ python -m http.server 8000
 - **2026-06-01**: 「复制全文」改为同时写入纯文本和 HTML 段落，粘贴到腾讯文档/Word/飞书时保留原译文分段。
 - **2026-06-01**: 首页发布时间兼容 `pub_date`，并回填 2026-06-01 数据的 `publish_time_cn`；`agent_doctor.py` 新增缺失发布时间检查。
 - **2026-06-01**: RSS 增量抓取迁移到 GitHub Actions `.github/workflows/hourly-rss.yml`；CI 使用 `IGN_DAILY_SKIP_GIT=1` 让脚本只写数据，再由 workflow 跑 `rss_queue_check.py`/`agent_doctor.py` 后提交。
+- **2026-06-02**: 新增标题摘要翻译开关 `TITLE_TRANSLATOR=openclaw|deepseek`。`deepseek` 模式读取 GitHub Secret `DEEPSEEK_API_KEY`，由 `scripts/translate_titles_deepseek.py` 自动处理 `need_titles.json`；默认仍保留 OpenClaw 流程。
 
 ## 📝 License
 

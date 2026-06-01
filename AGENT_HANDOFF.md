@@ -502,6 +502,15 @@ workspace/
 - 主聊天 session 不再承担每小时 RSS 心跳；OpenClaw 如需自动化，只开独立 session 处理 `need_titles.json` 的标题/摘要翻译。
 - OpenClaw 标题摘要 cron 启动时读取仓库根目录 `AGENT_TITLE_TRANSLATOR.md`，按 URL 匹配队列文章，不要按旧 ID 直接改。
 
+## 标题摘要翻译开关
+
+- GitHub Actions 支持仓库变量 `TITLE_TRANSLATOR`：
+  - 空值或 `openclaw`：RSS 只生成 `need_titles.json`，由 OpenClaw `IGN Title Summary Translator` 处理。
+  - `deepseek`：RSS 后直接调用 `scripts/translate_titles_deepseek.py`，用 DeepSeek API 翻译 `cn_title`、`summary`、`category`、`emoji`。
+- DeepSeek 模式需要 GitHub Secret `DEEPSEEK_API_KEY`，可选变量 `DEEPSEEK_MODEL`（默认 `deepseek-v4-flash`）和 `DEEPSEEK_BASE_URL`（默认 `https://api.deepseek.com`）。
+- DeepSeek 脚本只处理 `need_titles.json`，不会翻译全文，也不会写 `translations/NN.json`。
+- 如果 `TITLE_TRANSLATOR=deepseek`，OpenClaw 标题摘要 cron 应暂停或只作为人工备用，避免两边同时改 `need_titles.json`。
+
 ## 2026-06-02 维护补充：展示序号、请求匹配、日期窗口
 
 - 首页卡片左上角 `#N` 是排序/筛选后的展示序号，不再等同稳定 `id`；稳定 `id` 仍用于 `article.html?date=...&id=...` 和 `translations/NN.json`。

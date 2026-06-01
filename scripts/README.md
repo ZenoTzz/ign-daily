@@ -11,6 +11,7 @@
 | `agent_doctor.py` | 新 agent 接手时检查仓库关键不变量 | 接手/大改后 |
 | `pre_push_check.py` | 包装三连校验，防止忘跑某一步 | 每次 push 前 |
 | `rss_queue_check.py` | 校验 RSS-only 自动化写出的 index/need_titles 队列 | GitHub Actions RSS 提交前 |
+| `translate_titles_deepseek.py` | 可选 DeepSeek API 标题摘要翻译，只处理 need_titles 队列 | `TITLE_TRANSLATOR=deepseek` |
 | `nightly_polish_diff.py` | 对比用户润色与原译，提取风格规律 | 每晚 22:30 cron |
 | `check_polish_today.py` | 检查今天是否有润色记录（无则跳过学习） | 夜间学习入口 |
 | `fetch_exchange_rates.py` | 拉取当日汇率写入 exchange_rates.json | 每天 8:20 cron |
@@ -63,6 +64,17 @@ IGN_DAILY_SKIP_GIT=1 python3 scripts/ign_rss_incremental.py
 python3 scripts/rss_queue_check.py {date}
 python3 scripts/agent_doctor.py
 ```
+
+标题摘要翻译有两种模式：
+
+- `TITLE_TRANSLATOR=openclaw` 或不设置：保留 `need_titles.json`，由 OpenClaw 独立 cron 处理。
+- `TITLE_TRANSLATOR=deepseek`：GitHub Actions 读取 Secret `DEEPSEEK_API_KEY` 并运行：
+
+```bash
+python3 scripts/translate_titles_deepseek.py {date}
+```
+
+DeepSeek 脚本不会翻译全文，也不会写 `translations/NN.json`。
 
 它会依次跑三连：
 
