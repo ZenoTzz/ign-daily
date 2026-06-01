@@ -120,7 +120,8 @@ for rss_url in RSS_PAGES:
     except Exception as e:
         print(f"  WARN: {rss_url} failed: {e}")
 
-# 输出
+# 输出新文章到 ign_rss_new.json（供心跳翻译标题用）
+# 同时写入 index.json + need_titles.json 队列
 output_path = os.path.join(WORKSPACE, 'ign_rss_new.json')
 with open(output_path, 'w', encoding='utf-8') as f:
     json.dump({
@@ -130,9 +131,86 @@ with open(output_path, 'w', encoding='utf-8') as f:
         'articles': new_articles
     }, f, ensure_ascii=False, indent=2)
 
+# 如果有新文章，追加到 index.json 并写入 need_titles.json 队列
 if new_articles:
-    print(f"✅ Found {len(new_articles)} new articles (next_id={max_id+1})")
+    # 1) 追加到 index.json
+    
+    # 读取或创建 index.json
+    if os.path.exists(index_path):
+        idx = json.loads(open(index_path, encoding='utf-8').read())
+    else:
+        os.makedirs(os.path.join(IGN_DAILY, 'data', target_date), exist_ok=True)
+        os.makedirs(os.path.join(IGN_DAILY, 'data', target_date, 'translations'), exist_ok=True)
+        idx = {'date': target_date, 'articles': [], 'total': 0}
+    
+    # 追加新文章
     for a in new_articles:
-        print(f"  • {a['title'][:60]}")
+        max_id += 1
+        new_art = {
+            'id': max_id,
+            'category': '游戏新闻',
+            'emoji': '🎮',
+            'en_title': a['title'],
+            'cn_title': a['title'],  # 临时英文，心跳替换
+            'summary': '',
+            'url': a['url'],
+            'pub_date': a['pubDate_cst'],
+            'cover_image': '',
+            'translation_status': 'none',
+        }
+        idx['articles'].append(new_art)
+        print(f"  [+] #{max_id} {a['title'][:60]}")
+    
+    idx['total'] = len(idx['articles'])
+    with open(index_path, 'w', encoding='utf-8') as f:
+        json.dump(idx, f, ensure_ascii=False, indent=2)
+    
+    # 2) 更新 index-list.json
+    hist_path = os.path.join(IGN_DAILY, 'data', 'index-list.json')
+    if os.path.exists(hist_path):
+        hist = json.loads(open(hist_path, encoding='utf-8').read())
+        if not isinstance(hist, list):
+            hist = []
+    else:
+        hist = []
+    found = False
+    for h in hist:
+        if h.get('date') == target_date:
+            h['total'] = idx['total']
+            found = True
+            break
+    if not found:
+        hist.append({'date': target_date, 'total': idx['total'], 'translated': 0, 'translatedTitles': []})
+    hist.sort(key=lambda x: x.get('date', ''), reverse=True)
+    with open(hist_path, 'w', encoding='utf-8') as f:
+        json.dump(hist, f, ensure_ascii=False, indent=2)
+    
+    # 3) 写入 need_titles.json 队列（供心跳翻译标题用）
+    need_path = os.path.join(IGN_DAILY, 'data', target_date, 'need_titles.json')
+    need_queue = []
+    if os.path.exists(need_path):
+        need_queue = json.loads(open(need_path, encoding='utf-8').read())
+    for a in new_articles:
+        aid = max_id - (len(new_articles) - new_articles.index(a)) + 1
+        if any(q['url'] == a['url'] for q in need_queue):
+            continue
+        need_queue.append({
+            'id': aid,
+            'url': a['url'],
+            'en_title': a['title'],
+            'pub_date': a['pubDate_cst'],
+        })
+    with open(need_path, 'w', encoding='utf-8') as f:
+        json.dump(need_queue, f, ensure_ascii=False, indent=2)
+    print(f"\n[QUEUE] {len(new_articles)} articles queued for title translation")
+    
+    # 4) git add+commit+push
+    import subprocess
+    os.chdir(IGN_DAILY)
+    subprocess.run(['git', 'add', '-A'], capture_output=True)
+    subprocess.run(['git', 'commit', '-m', f'feat: incremental RSS {len(new_articles)} new articles for {target_date}'], capture_output=True)
+    push_script = os.path.join(WORKSPACE, 'ign-daily', 'scripts', 'git_push.py')
+    if os.path.exists(push_script):
+        subprocess.run([sys.executable, push_script], capture_output=True)
 else:
     print("📭 No new articles")
