@@ -72,6 +72,11 @@ python3 scripts/rss_queue_check.py {date}
 python3 scripts/agent_doctor.py
 ```
 
+RSS 抓取阶段必须先过滤促销/导购/购物文章，包括 deal/sale/discount/coupon、
+preorder、where to buy、exclusively at、action figure、collectible、merch、
+LEGO set 等购物意图词。被拦截的条目会在 Actions 日志里显示 `[skip promo]`，
+不要再把这类文章写入 `index.json` 或 `need_titles.json`。
+
 标题摘要/正文翻译/夜间学习由网页设置写入 `data/automation-config.json`：
 
 - `openclaw`：保留队列，由 OpenClaw 独立 cron 处理。
@@ -91,6 +96,10 @@ python3 scripts/nightly_style_api.py {date}
 DeepSeek 用量看板读取 `data/usage/deepseek/*.json` 和 `data/usage/deepseek-balance.json`。这些文件是旁路观测数据：记录失败不得中断翻译；余额查询失败不得影响 RSS、标题摘要、正文翻译或夜间学习。
 
 API prompt 的长规则块必须通过 `scripts/prompt_blocks.py` 生成，尽量保持字段顺序、文本和位置稳定，方便 DeepSeek 自动上下文缓存命中。不要在各脚本里复制粘贴不同版本的 `TRANSLATION_GUIDE.md` / `STYLE_PROFILE.md` prompt。
+
+所有会写仓库数据的 Actions（RSS、API 翻译、DeepSeek 用量快照、夜间学习）
+必须使用同一个 `concurrency.group: ign-daily-write-main`，避免多个任务同时写
+`data/*.json` 造成 rebase 冲突。
 
 正文 API 支持批量模式：定时任务默认 `TRANSLATOR_FULLTEXT_LIMIT=5`；网页手动触发可传 `fulltext_limit=10` 或 `999`。脚本同时读取 `TRANSLATOR_FULLTEXT_TIME_BUDGET_SECONDS`，达到时间预算会暂停并保留剩余 `requests.json`，避免 GitHub Actions 超时导致已完成译文无法提交。
 

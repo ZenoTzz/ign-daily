@@ -127,8 +127,10 @@ python3 scripts/git_push.py
 ## 自动化分工
 
 - GitHub Actions `.github/workflows/hourly-rss.yml` 每小时第 5 分钟跑 RSS 增量抓取。
+- RSS 抓取阶段必须过滤促销/导购/购物稿：deal/sale/discount/coupon、preorder、where to buy、exclusively at、action figure、collectible、merch、LEGO set 等不要写入 `index.json` 或 `need_titles.json`。
 - Actions 会设置 `IGN_DAILY_SKIP_GIT=1`，所以 `scripts/ign_rss_incremental.py` 只写数据，不自己 commit/push。
 - RSS-only 提交前跑 `python3 scripts/rss_queue_check.py {date}`、`python3 scripts/article_cache.py {date} --missing` 和 `python3 scripts/agent_doctor.py`。
+- 所有会写仓库数据的 Actions 必须使用 `concurrency.group: ign-daily-write-main`，避免 RSS、API 翻译、用量快照、夜间学习同时 push 造成 rebase 冲突。
 - 网页设置会写 `data/automation-config.json`：`title_translator`、`fulltext_translator`、`nightly_learner` 可分别设为 `openclaw` 或 `api`。
 - API 模式读取 GitHub Secret `TRANSLATOR_API_KEY`（兼容 `DEEPSEEK_API_KEY`）。标题/正文/夜间学习可分别用 `api_title_model`、`api_fulltext_model`、`api_nightly_model`，base URL 从 `api_base_url` 读取。密钥不得写入网页或仓库。
 - OpenClaw 独立自动化 session 只在对应配置不是 `api` 时处理队列；不要依赖正在聊天的主 session 心跳。

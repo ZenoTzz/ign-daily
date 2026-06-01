@@ -42,22 +42,37 @@ RSS_PAGES = [
     "https://www.ign.com/rss/articles/feed?start=40&count=20",
 ]
 
-# 过滤关键词（与 ign_rss_fetch.py 保持一致）
+# RSS 入口先挡掉促销、导购、周边售卖稿，避免后续缓存和 API 翻译浪费 token。
 FILTER_PATTERNS = [
     r'\bsave \d+%', r'\bsave \$\d', r'\bdrops? to \$', r'\bdrops? to the lowest',
     r'\bbest .+ deals?\b', r'\bon sale\b', r'\bdiscount\b', r'\bcoupon\b',
     r'\bpromo(?:tion)?\b', r'\bmemorial.day\b', r'\bblack.friday\b',
     r'\bprime.day\b', r'\bcyber.monday\b', r'\bamazon.deal\b',
     r'\bbest.buy.deal\b', r'\bwalmart.deal\b', r'\ball-time low\b',
+    r'\bpre[- ]?orders?\b', r'\bup for pre[- ]?order\b',
+    r'\bwhere to buy\b', r'\bexclusively at\b',
+    r'\bavailable (?:now )?(?:at|from)\b', r'\bbuy .+ (?:at|from)\b',
+    r'\baction figures?\b', r'\bcollectibles?\b', r'\bmerch(?:andise)?\b',
+    r'\blego sets?\b', r"\bcollector'?s edition\b", r'\blimited edition\b',
+    r'\bunder \$\d+', r'\bfor only \$\d+', r'\blowest price\b',
 ]
 FILTER_URL = ['deal', 'sale', 'discount', 'promo', 'memorial-day', 'black-friday',
               'prime-day', 'cyber-monday', 'amazon-deal', 'best-buy-deal',
-              'walmart-deal', 'coupon', 'codes-']
+              'walmart-deal', 'coupon', 'codes-', 'preorder', 'pre-order',
+              'where-to-buy', 'action-figure', 'collectible', 'collectibles',
+              'merchandise', 'merch', 'lego-set', 'exclusively-at',
+              'lowest-price', 'under-']
+FILTER_CATEGORY_PATTERNS = [
+    r'\bdeals?\b', r'\bshopping\b', r'\bcommerce\b',
+]
 
-def is_promo(title, url):
-    t = title.lower()
+def is_promo(title, url, description='', categories=''):
+    text = ' '.join(part for part in (title, description, categories) if part).lower()
     for p in FILTER_PATTERNS:
-        if re.search(p, t, re.IGNORECASE):
+        if re.search(p, text, re.IGNORECASE):
+            return True
+    for p in FILTER_CATEGORY_PATTERNS:
+        if re.search(p, categories or '', re.IGNORECASE):
             return True
     u = url.lower()
     for k in FILTER_URL:
@@ -95,6 +110,8 @@ for rss_url in RSS_PAGES:
             title = (item.findtext('title') or '').strip()
             link = (item.findtext('link') or '').strip()
             pub_str = item.findtext('pubDate') or ''
+            description = (item.findtext('description') or '').strip()
+            categories = ' '.join((c.text or '').strip() for c in item.findall('category'))
             
             if not title or not link:
                 continue
@@ -110,7 +127,8 @@ for rss_url in RSS_PAGES:
             if pub_dt < window_start or pub_dt >= window_end:
                 continue
             
-            if is_promo(title, link):
+            if is_promo(title, link, description, categories):
+                print(f"  [skip promo] {title[:80]}")
                 continue
             
             existing_urls.add(link)

@@ -105,6 +105,7 @@ python -m http.server 8000
 - **2026-06-02**: 标题摘要 API 单轮处理上限从 8 篇调到 30 篇，避免一次 RSS 抓到多篇时只翻译前 8 篇、后续文章留在 `need_titles.json`。
 - **2026-06-02**: API 正文翻译会在 `translations/NN.json` 写入 `translator_model`，并同步到首页 `index.json`；首页卡片和文章页会显示“由 DeepSeek V4 Pro/Flash 翻译”。
 - **2026-06-02**: 新增 `usage.html` DeepSeek API 用量看板。API 脚本会记录 `usage` 中的总 tokens、输入/输出 tokens、`prompt_cache_hit_tokens`、`prompt_cache_miss_tokens`；`.github/workflows/deepseek-usage.yml` 定期查询 DeepSeek `/user/balance` 写入余额快照。用量记录是旁路数据，不影响正常翻译工作流。
+- **2026-06-02**: RSS 过滤补强为“购物意图”过滤，会跳过促销、导购、预购、亚马逊独占、手办/周边/LEGO set 等商业稿；所有会写仓库数据的 Actions 统一使用 `ign-daily-write-main` 并发组，避免 API 翻译和 RSS/用量快照同时 push 时冲突。
 - **2026-06-02**: 正文 API 单轮处理上限从 2 篇调到 5 篇，避免一次勾选多篇时只翻译前两篇、剩余请求继续留在 `requests.json`。
 - **2026-06-02**: 正文 API 支持手动批量模式：普通 5 篇、批量 10 篇、尽量全部。`api-translation.yml` 接收 `workflow_dispatch` 输入并由 `translate_fulltext_api.py` 按时间预算自动暂停，避免 Actions 超时。
 - **2026-06-02**: 新增 `scripts/prompt_blocks.py`，标题摘要、正文、夜间学习共享稳定 prompt 前缀，提升 DeepSeek 自动上下文缓存命中率，并可在 `usage.html` 观察命中/未命中 tokens。

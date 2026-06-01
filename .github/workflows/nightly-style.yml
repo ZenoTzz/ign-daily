@@ -9,7 +9,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: nightly-style-main
+  group: ign-daily-write-main
   cancel-in-progress: false
 
 jobs:

@@ -18,7 +18,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: api-translation-main
+  group: ign-daily-write-main
   cancel-in-progress: false
 
 jobs:
