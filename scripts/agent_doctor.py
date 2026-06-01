@@ -80,6 +80,14 @@ def main() -> int:
             if not article.get("publish_time_cn"):
                 fail(errors, f"latest index missing publish_time_cn: {index_path.parent.name} #{article.get('id')}")
                 break
+        for article in data.get("articles", []):
+            if article.get("translation_status") != "done":
+                continue
+            aid = article.get("id")
+            if article.get("cn_title") == article.get("en_title"):
+                fail(errors, f"latest done article title still English: {index_path.parent.name} #{aid}")
+            if not article.get("summary"):
+                fail(errors, f"latest done article missing summary: {index_path.parent.name} #{aid}")
 
     stale_patterns = [
         "IGN_TRANSLATE_INSTRUCTIONS.md",

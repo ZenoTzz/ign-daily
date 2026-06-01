@@ -54,6 +54,8 @@ def sync(date, article_id=None):
         art = articles_map[aid]
         cn_title = trans.get('cn_title', '')
         summary = trans.get('opus_summary', '')
+        publish_time_cn = trans.get('publish_time_cn', '')
+        cover = trans.get('cover', '')
         
         changed = False
         if cn_title and art.get('cn_title') != cn_title:
@@ -61,6 +63,14 @@ def sync(date, article_id=None):
             changed = True
         if summary and art.get('summary') != summary:
             art['summary'] = summary
+            changed = True
+        if publish_time_cn and art.get('publish_time_cn') != publish_time_cn:
+            art['publish_time_cn'] = publish_time_cn
+            if not art.get('pub_date'):
+                art['pub_date'] = publish_time_cn
+            changed = True
+        if cover and not art.get('cover_image'):
+            art['cover_image'] = cover
             changed = True
         
         if changed:
