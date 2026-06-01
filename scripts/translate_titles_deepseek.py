@@ -128,13 +128,13 @@ def extract_json(text: str) -> dict[str, Any]:
         return json.loads(match.group(0))
 
 
-def call_deepseek(api_key: str, model: str, base_url: str, messages: list[dict[str, str]]) -> str:
+def call_deepseek(api_key: str, model: str, base_url: str, messages: list[dict[str, str]], max_tokens: int | None = None) -> str:
     endpoint = base_url.rstrip("/") + "/chat/completions"
     payload = {
         "model": model,
         "messages": messages,
         "temperature": 0.2,
-        "max_tokens": 1200,
+        "max_tokens": max_tokens or 1200,
         "stream": False,
         "thinking": {"type": "disabled"},
         "response_format": {"type": "json_object"},

@@ -72,6 +72,7 @@ jobs:
           TRANSLATOR_MODEL: ${{ steps.config.outputs.api_model || vars.TRANSLATOR_MODEL || vars.DEEPSEEK_MODEL || 'deepseek-v4-flash' }}
           TRANSLATOR_BASE_URL: ${{ steps.config.outputs.api_base_url || vars.TRANSLATOR_BASE_URL || vars.DEEPSEEK_BASE_URL || 'https://api.deepseek.com' }}
           TRANSLATOR_FULLTEXT_LIMIT: "2"
+          TRANSLATOR_FULLTEXT_MAX_TOKENS: "12000"
         run: |
           set -euo pipefail
           if [ -z "${TRANSLATOR_API_KEY:-}" ]; then

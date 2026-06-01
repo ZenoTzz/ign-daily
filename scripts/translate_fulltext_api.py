@@ -215,7 +215,8 @@ def translate_date(date: str, limit: int = 2) -> int:
         if not paragraphs_en:
             raise RuntimeError(f"no paragraphs extracted for #{article['id']}")
         terms = matched_terms(article.get("en_title", "") + "\n" + text)
-        raw = call_deepseek(api_key, model, base_url, build_messages(article, paragraphs_en, terms))
+        max_tokens = int(os.environ.get("TRANSLATOR_FULLTEXT_MAX_TOKENS", "12000"))
+        raw = call_deepseek(api_key, model, base_url, build_messages(article, paragraphs_en, terms), max_tokens=max_tokens)
         data = normalize_translation(article, extract_json(raw), paragraphs_en)
         trans_path = DATA_DIR / date / "translations" / f"{article['id']:02d}.json"
         write_json(trans_path, data)
