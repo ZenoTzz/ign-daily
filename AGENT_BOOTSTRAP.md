@@ -41,6 +41,7 @@ ign-daily/
 │   ├── ign_rss_incremental.py    # RSS 增量抓取
 │   └── git_push.py               # PAT push 工具
 ├── AGENT_HANDOFF.md              # 运维流程
+├── AGENT_TITLE_TRANSLATOR.md     # OpenClaw 标题摘要翻译 cron 指引
 ├── TRANSLATION_GUIDE.md          # 翻译风格
 └── STYLE_PROFILE.md              # 用户润色偏好
 ```

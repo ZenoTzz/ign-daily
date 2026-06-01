@@ -500,3 +500,4 @@ workspace/
 - `scripts/rss_queue_check.py` 只校验 RSS 队列数据形状、URL/ID 去重、`publish_time_cn` 和 `need_titles.json` 一致性；它不要求标题摘要已经翻译。
 - `scripts/pre_push_check.py {date}` 仍然用于标题摘要或全文翻译完成后的 push。
 - 主聊天 session 不再承担每小时 RSS 心跳；OpenClaw 如需自动化，只开独立 session 处理 `need_titles.json` 的标题/摘要翻译。
+- OpenClaw 标题摘要 cron 启动时读取仓库根目录 `AGENT_TITLE_TRANSLATOR.md`，按 URL 匹配队列文章，不要按旧 ID 直接改。
