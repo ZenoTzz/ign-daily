@@ -69,6 +69,29 @@ python -m http.server 8000
 
 详见 [data/README.md](data/README.md)。
 
+## ⚙️ 技术说明
+
+### 为什么 AlpineJS 是本地托管而非 CDN？
+
+`assets/alpine.min.js` 是从 unpkg.com 下载后本地托管的。原因：
+
+1. **Tracking Prevention / 广告拦截器**：某些浏览器（如 Edge）和插件会屏蔽 `unpkg.com`、`cdn.jsdelivr.net` 等 CDN 域名，导致 AlpineJS 加载失败，`article.html` 的所有 `x-show`、`x-text`、`x-for` 等 Alpine 指令全部失效，页面按钮和右侧对照区域不渲染。
+2. **企业内网**：部分企业网络也会限制外部 CDN 资源。
+
+### 文章页右侧空白怎么办？
+
+`article.html` 的右侧面板（IGN 原文 / 降级英文段落）和所有功能按钮（对照、润色、词库等）依赖 AlpineJS 正常工作。如果右侧空白，请检查：
+
+1. **浏览器 Console**（F12）是否有 `Alpine Expression Error`？如有，说明 `article` 数据的某个字段在渲染时仍为 `null`，需要加 `?.` 可选链。
+2. **浏览器是否屏蔽了 CDN 资源**（Console 中是否有 `Tracking Prevention blocked access to storage` 警告）？本项目的 AlpineJS 已本地托管，通常无需担心。
+3. **浏览器缓存**：按 `Ctrl+F5` 强制刷新。
+
+右侧 IGN 原文默认通过 iframe 加载，由于 IGN 设置了 `X-Frame-Options: DENY`，iframe 会被浏览器拒绝。5 秒后将自动降级为显示抓取的英文原文段落（与左侧中文译文一一对应）。
+
+### 关键变更记录
+
+- **2026-06-01**: 修复 article.html 中 `article.pending_dict` 缺少可选链 `?.` 导致的 Alpine 表达式异常；所有按钮和右侧 pane 移除 `hidden sm:inline / lg:inline-flex / hidden lg:block` 响应式隐藏类；AlpineJS 从 unpkg CDN 改为 `assets/alpine.min.js` 本地托管。
+
 ## 📝 License
 
 MIT
