@@ -293,12 +293,12 @@
                  class="bg-amber-50 border border-amber-200 rounded-lg p-3 mb-4">
               <div class="flex items-center justify-between mb-2">
                 <h3 class="text-sm font-semibold text-amber-900">
-                  📝 本文新词候选 (<span x-text="article.pending_dict.length"></span>)
+                  📝 本文新词候选 (<span x-text="article?.pending_dict?.length"></span>)
                 </h3>
                 <span class="text-xs text-amber-700">你决定是否入库</span>
               </div>
               <div class="space-y-2">
-                <template x-for="(c, i) in article.pending_dict" :key="i">
+                <template x-for="(c, i) in article?.pending_dict || []" :key="i">
                   <div class="bg-white rounded border border-amber-200 p-2">
                     <div class="flex items-start gap-2 flex-wrap">
                       <div class="flex-1 min-w-0">
@@ -344,7 +344,7 @@
                   </div>
                 </template>
               </div>
-              <div x-show="article.pending_dict.length > 1" class="mt-2 flex gap-2">
+              <div x-show="article?.pending_dict?.length > 1" class="mt-2 flex gap-2">
                 <button @click="approveAllPending()"
                   class="px-2 py-1 bg-green-600 text-white rounded text-xs hover:bg-green-700">
                   ✅✅ 全部入库
