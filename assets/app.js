@@ -151,6 +151,7 @@ function appData() {
     },
     automationSaving: false,
     automationTriggering: false,
+    automationExpanded: false,
     toast: '',
 
     // 全局待确认词库
