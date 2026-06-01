@@ -102,6 +102,7 @@ python -m http.server 8000
 - **2026-06-02**: 每小时 RSS 后新增 `scripts/article_cache.py`，把干净英文正文、封面图、正文图缓存到 `data/{date}/sources/NN.json`。API 标题摘要和正文翻译优先复用缓存，减少重复抓取和 token 浪费。
 - **2026-06-02**: 夜间学习也接入 `data/automation-config.json.nightly_learner`，可在网页里切换 `openclaw` / `api`。API 路径由 `.github/workflows/nightly-style.yml` 调用 `scripts/nightly_style_api.py` 更新 `STYLE_PROFILE.md`。
 - **2026-06-02**: API 正文模式下，用户勾选文章并提交翻译后，网页会立即触发 `api-translation.yml`。网页加载/刷新时会通过 `workflow_dispatch` 触发 `hourly-rss.yml` 抓最新 RSS 和缓存图片/正文；浏览器本地 10 分钟节流，避免连续刷新堆积 Actions。
+- **2026-06-02**: 标题摘要 API 单轮处理上限从 8 篇调到 30 篇，避免一次 RSS 抓到多篇时只翻译前 8 篇、后续文章留在 `need_titles.json`。
 
 ## 📝 License
 

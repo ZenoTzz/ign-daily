@@ -396,7 +396,7 @@ def translate_date(date: str, limit: int = 8) -> int:
 
 def main() -> int:
     target = sys.argv[1] if len(sys.argv) > 1 and sys.argv[1] else default_date()
-    limit = int(os.environ.get("TRANSLATOR_TITLE_LIMIT") or os.environ.get("DEEPSEEK_TITLE_LIMIT") or "8")
+    limit = int(os.environ.get("TRANSLATOR_TITLE_LIMIT") or os.environ.get("DEEPSEEK_TITLE_LIMIT") or "30")
     if target == "--all":
         total = 0
         for queue_path in sorted(DATA_DIR.glob("20??-??-??/need_titles.json")):
