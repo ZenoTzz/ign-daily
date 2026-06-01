@@ -17,12 +17,11 @@ import subprocess
 import sys
 import urllib.request
 from datetime import datetime, timedelta, timezone
-from html import unescape
 from pathlib import Path
 from typing import Any
 
 from common_paths import DATA_DIR, REPO_ROOT, configure_utf8_stdio, dict_path, env_paths
-from translate_titles_deepseek import apply_title_dictionary, call_deepseek, extract_json, flatten_dict_terms
+from translate_titles_deepseek import apply_title_dictionary, call_deepseek, extract_article_text, extract_json, flatten_dict_terms
 
 
 configure_utf8_stdio()
@@ -63,19 +62,23 @@ def fetch_article_text(url: str, max_chars: int = 18000) -> str:
     req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
     with urllib.request.urlopen(req, timeout=30) as resp:
         html = resp.read().decode("utf-8", errors="replace")
-    html = re.sub(r"(?is)<script.*?</script>|<style.*?</style>|<noscript.*?</noscript>", " ", html)
-    html = re.sub(r"(?is)<(br|p|div|section|article|h[1-6]|li)\b[^>]*>", "\n", html)
-    text = re.sub(r"(?s)<[^>]+>", " ", html)
-    text = unescape(text)
-    text = re.sub(r"[ \t\r\f\v]+", " ", text)
-    text = re.sub(r"\n\s*", "\n", text)
-    text = re.sub(r"\n{3,}", "\n\n", text).strip()
-    return text[:max_chars]
+    return extract_article_text(html, max_chars)
 
 
 def split_paragraphs(text: str) -> list[str]:
     chunks = [p.strip() for p in re.split(r"\n{1,}", text) if p.strip()]
-    bad = ("advertisement", "ign recommends", "continue reading", "sign up")
+    bad = (
+        "advertisement",
+        "ign recommends",
+        "continue reading",
+        "sign up",
+        "privacy policy",
+        "terms of use",
+        "contact us",
+        "howlongtobeat",
+        "mapgenie",
+        "ign youtube",
+    )
     return [p for p in chunks if len(p) >= 40 and not any(b in p.lower() for b in bad)][:35]
 
 

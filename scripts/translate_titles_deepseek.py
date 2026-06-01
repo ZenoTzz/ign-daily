@@ -113,18 +113,107 @@ def apply_title_dictionary(en_title: str, cn_title: str) -> str:
     return title
 
 
-def fetch_article_text(url: str, max_chars: int = 9000) -> str:
-    req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
-    with urllib.request.urlopen(req, timeout=25) as resp:
-        html = resp.read().decode("utf-8", errors="replace")
-    html = re.sub(r"(?is)<script.*?</script>|<style.*?</style>|<noscript.*?</noscript>", " ", html)
-    html = re.sub(r"(?is)<(br|p|div|section|article|h[1-6])\b[^>]*>", "\n", html)
+NOISE_PHRASES = (
+    "advertisement",
+    "ign recommends",
+    "continue reading",
+    "sign up",
+    "newsletter",
+    "privacy policy",
+    "terms of use",
+    "contact us",
+    "all rights reserved",
+    "mapgenie",
+    "howlongtobeat",
+    "rock paper shotgun",
+    "eurogamer",
+    "maxroll",
+    "vg247",
+    "ign youtube",
+    "ign tiktok",
+    "ign's x",
+    "is a freelance writer with ign",
+    "contributed to ign",
+    "be sure to give",
+    "follow him on",
+    "follow her on",
+)
+
+
+def remove_html_noise(html: str) -> str:
+    html = re.sub(r"(?is)<script\b.*?</script>|<style\b.*?</style>|<noscript\b.*?</noscript>", " ", html)
+    html = re.sub(r"(?is)<svg\b.*?</svg>|<picture\b.*?</picture>|<figure\b.*?</figure>", " ", html)
+    html = re.sub(r"(?is)<(header|nav|footer|aside|form|button)\b.*?</\1>", " ", html)
+    html = re.sub(r"(?is)<[^>]+(?:nav|footer|header|sidebar|menu|breadcrumb|social|share|newsletter|promo|ad-|advert|recommend)[^>]*>.*?</[^>]+>", " ", html)
+    return html
+
+
+def html_to_text(html: str) -> str:
+    html = remove_html_noise(html)
+    html = re.sub(r"(?is)<(br|p|div|section|article|main|h[1-6]|li|blockquote)\b[^>]*>", "\n", html)
     text = re.sub(r"(?s)<[^>]+>", " ", html)
     text = unescape(text)
     text = re.sub(r"[ \t\r\f\v]+", " ", text)
     text = re.sub(r"\n\s*", "\n", text)
-    text = re.sub(r"\n{3,}", "\n\n", text).strip()
-    return text[:max_chars]
+    return re.sub(r"\n{3,}", "\n\n", text).strip()
+
+
+def is_noise_line(line: str) -> bool:
+    text = re.sub(r"\s+", " ", line).strip()
+    if not text:
+        return True
+    lower = text.lower()
+    if any(p in lower for p in NOISE_PHRASES):
+        return True
+    if text.count("•") >= 3 or text.count("|") >= 4:
+        return True
+    if len(text) < 35 and re.search(r"^(news|reviews|guides|videos|games|movies|tv|deals)\b", lower):
+        return True
+    return False
+
+
+def clean_article_text(text: str, max_chars: int) -> str:
+    lines = [line.strip() for line in text.splitlines()]
+    lines = [line for line in lines if not is_noise_line(line)]
+    return re.sub(r"\n{3,}", "\n\n", "\n".join(lines)).strip()[:max_chars]
+
+
+def extract_article_text(html: str, max_chars: int) -> str:
+    html = remove_html_noise(html)
+    paragraph_hits = []
+    for match in re.finditer(r"(?is)<p\b([^>]*)>(.*?)</p>", html):
+        attrs, body = match.group(1), match.group(2)
+        if re.search(r'data-cy=["\']paragraph["\']', attrs, re.I) or re.search(r'class=["\'][^"\']*\bparagraph\b', attrs, re.I):
+            line = clean_article_text(html_to_text(body), max_chars=max_chars)
+            if line:
+                paragraph_hits.append(line)
+    if len(paragraph_hits) >= 2:
+        return clean_article_text("\n\n".join(paragraph_hits), max_chars=max_chars)
+
+    candidates = []
+    for pattern in (
+        r"(?is)<article\b[^>]*>(.*?)</article>",
+        r"(?is)<main\b[^>]*>(.*?)</main>",
+        r"(?is)<div\b[^>]*(?:article|content|page-content|post-content|article-content)[^>]*>(.*?)</div>",
+    ):
+        candidates.extend(match.group(1) for match in re.finditer(pattern, html))
+    candidates.append(html)
+    best = ""
+    best_score = -1
+    for candidate in candidates:
+        text = clean_article_text(html_to_text(candidate), max_chars=max_chars * 2)
+        score = len(text) - 600 * sum(1 for p in NOISE_PHRASES if p in text.lower()) - 120 * text.count("•")
+        if score > best_score:
+            best = text
+            best_score = score
+    return best[:max_chars]
+
+
+def fetch_article_text(url: str, max_chars: int = 9000) -> str:
+    req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+    with urllib.request.urlopen(req, timeout=25) as resp:
+        html = resp.read().decode("utf-8", errors="replace")
+    return extract_article_text(html, max_chars)
 
 
 def read_optional(path: str, max_chars: int = 10000) -> str:
