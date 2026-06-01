@@ -4,6 +4,17 @@
 
 ---
 
+## 2026-06-02 权威流程摘要（新 agent 先读这里）
+
+下面这几条是当前唯一可信的自动化分工；如果本文档旧段落出现“主 session 心跳”“Opus 必须处理标题/正文”等旧说法，以本节为准。
+
+1. RSS 抓取只由 GitHub Actions `.github/workflows/hourly-rss.yml` 负责，每小时第 5 分钟运行，产出 `index.json` 和 `need_titles.json`。
+2. 标题/摘要翻译由 `data/automation-config.json.title_translator` 决定：`api` 时由 GitHub Actions/API 脚本处理；`openclaw` 时由 OpenClaw 独立 cron 处理。
+3. 正文翻译由 `data/automation-config.json.fulltext_translator` 决定：`api` 时由 GitHub Actions/API 脚本处理；`openclaw` 时由 OpenClaw/主 session 处理。
+4. OpenClaw 每次执行标题或正文翻译前，必须先跑 `python3 scripts/automation_guard.py title` 或 `python3 scripts/automation_guard.py fulltext`。输出 `AUTOMATION_GUARD SKIP` 就立刻返回 `HEARTBEAT_OK`，不要读写队列；输出 `AUTOMATION_GUARD RUN` 才继续。
+5. 夜间学习不受 API/OpenClaw 开关影响，仍由 22:30 cron 对比 `translations/` 和 `polished/`，更新 `STYLE_PROFILE.md`。
+6. `scripts/rss_queue_check.py {date}` 只用于本次 RSS 目标日期，不要拿它全量扫描旧历史日期；旧数据可能没有 `publish_time_cn`。
+
 ## 先跑脚本，不靠记忆
 
 新 agent 接手先跑：

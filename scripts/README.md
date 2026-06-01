@@ -7,11 +7,11 @@
 | 脚本 | 用途 | 调用时机 |
 |------|------|----------|
 | `git_push.py` | 安全推送到 GitHub（内嵌 PAT，绕开 GCM） | 每次需要 push 时 |
-| `ign_rss_incremental.py` | 增量 RSS 抓取（去重、过滤促销、时间窗口） | 心跳每小时 |
+| `ign_rss_incremental.py` | 增量 RSS 抓取（去重、过滤促销、时间窗口） | GitHub Actions 每小时第 5 分钟 |
 | `agent_doctor.py` | 新 agent 接手时检查仓库关键不变量 | 接手/大改后 |
 | `pre_push_check.py` | 包装三连校验，防止忘跑某一步 | 每次 push 前 |
 | `rss_queue_check.py` | 校验 RSS-only 自动化写出的 index/need_titles 队列 | GitHub Actions RSS 提交前 |
-| `translate_titles_deepseek.py` | 可选 DeepSeek API 标题摘要翻译，只处理 need_titles 队列 | `TITLE_TRANSLATOR=deepseek` |
+| `translate_titles_deepseek.py` | OpenAI-compatible API 标题摘要翻译，只处理 need_titles 队列 | `title_translator=api` |
 | `translate_fulltext_api.py` | 可选 OpenAI-compatible API 正文翻译，强制跑后处理和校验 | `fulltext_translator=api` |
 | `automation_guard.py` | 给 OpenClaw cron 判断当前任务归 API 还是 OpenClaw | 每次 OpenClaw cron 启动后 |
 | `nightly_polish_diff.py` | 对比用户润色与原译，提取风格规律 | 每晚 22:30 cron |
