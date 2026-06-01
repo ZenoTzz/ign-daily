@@ -11,10 +11,12 @@
 | `agent_doctor.py` | 新 agent 接手时检查仓库关键不变量 | 接手/大改后 |
 | `pre_push_check.py` | 包装三连校验，防止忘跑某一步 | 每次 push 前 |
 | `rss_queue_check.py` | 校验 RSS-only 自动化写出的 index/need_titles 队列 | GitHub Actions RSS 提交前 |
+| `article_cache.py` | 抓取并缓存干净英文正文、封面图、正文图 | RSS 后、API 翻译前 |
 | `translate_titles_deepseek.py` | OpenAI-compatible API 标题摘要翻译，只处理 need_titles 队列 | `title_translator=api` |
 | `translate_fulltext_api.py` | 可选 OpenAI-compatible API 正文翻译，强制跑后处理和校验 | `fulltext_translator=api` |
 | `automation_guard.py` | 给 OpenClaw cron 判断当前任务归 API 还是 OpenClaw | 每次 OpenClaw cron 启动后 |
 | `nightly_polish_diff.py` | 对比用户润色与原译，提取风格规律 | 每晚 22:30 cron |
+| `nightly_style_api.py` | 用 API 从已完成译文/润色样本学习并更新 STYLE_PROFILE.md | `nightly_learner=api` |
 | `check_polish_today.py` | 检查今天是否有润色记录（无则跳过学习） | 夜间学习入口 |
 | `fetch_exchange_rates.py` | 拉取当日汇率写入 exchange_rates.json | 每天 8:20 cron |
 | `rebuild_index_list.py` | 重建 data/index-list.json（所有日期列表） | 数据修复时 |
@@ -67,17 +69,21 @@ python3 scripts/rss_queue_check.py {date}
 python3 scripts/agent_doctor.py
 ```
 
-标题摘要/正文翻译由网页设置写入 `data/automation-config.json`：
+标题摘要/正文翻译/夜间学习由网页设置写入 `data/automation-config.json`：
 
 - `openclaw`：保留队列，由 OpenClaw 独立 cron 处理。
-- `api`：GitHub Actions 读取 Secret `TRANSLATOR_API_KEY`，再从 `data/automation-config.json` 读取 `api_model`/`api_base_url` 并运行：
+- `api`：GitHub Actions 读取 Secret `TRANSLATOR_API_KEY`，再从 `data/automation-config.json` 读取模型和 `api_base_url` 并运行：
 
 ```bash
+python3 scripts/article_cache.py {date} --queued --missing
 python3 scripts/translate_titles_deepseek.py {date}
 python3 scripts/translate_fulltext_api.py {date}
+python3 scripts/nightly_style_api.py {date}
 ```
 
-标题摘要 API 脚本不会翻译全文，也不会写 `translations/NN.json`。正文 API 脚本会写译文，但必须通过 `translate_pipeline.py --post` 和 `pre_push_check.py`。正文 API 输出较长，workflow 会设置 `TRANSLATOR_FULLTEXT_MAX_TOKENS=12000`，不要沿用标题摘要的短输出上限。API 抓正文必须使用脚本内的 `extract_article_text()`，优先抽取 IGN 的正文段落并过滤导航、页脚、作者简介、推荐链接；不要再用整页 HTML 去标签的方式喂给模型。
+`article_cache.py` 会写 `data/{date}/sources/NN.json`，里面保存 `body_en`、`paragraphs_en`、`cover_image` 和 `images`。标题摘要和正文 API 都优先读取这个缓存；只有缓存缺失才会临时抓网页。不要让模型负责抓正文或图片。
+
+标题摘要 API 脚本不会翻译全文，也不会写 `translations/NN.json`。正文 API 脚本会写译文，但必须通过 `translate_pipeline.py --post` 和 `pre_push_check.py`。正文 API 输出较长，workflow 会设置 `TRANSLATOR_FULLTEXT_MAX_TOKENS=12000`，不要沿用标题摘要的短输出上限。API 抓正文必须使用脚本内的 `extract_article_text()` 或 `article_cache.py`，优先抽取 IGN 的正文段落并过滤导航、页脚、作者简介、推荐链接；不要再用整页 HTML 去标签的方式喂给模型。
 
 它会依次跑三连：
 

@@ -7,8 +7,9 @@
 IGN Daily 是一个个人化 IGN 英文新闻翻译工作流：
 
 1. RSS 抓取 IGN 英文新闻，写入 `data/{date}/index.json`。
-2. agent 先补中文标题 `cn_title` 和中文摘要 `summary`，首页必须显示中文。
-3. 用户在网页勾选文章后，agent 翻译全文到 `data/{date}/translations/NN.json`。
+2. RSS 后先缓存干净英文正文和图片到 `data/{date}/sources/NN.json`。
+3. agent/API 先补中文标题 `cn_title` 和中文摘要 `summary`，首页必须显示中文。
+4. 用户在网页勾选文章后，agent/API 复用缓存翻译全文到 `data/{date}/translations/NN.json`。
 4. push 前必须跑验证脚本，通过才允许推送。
 
 ## 只需要记住 7 条
@@ -19,8 +20,9 @@ IGN Daily 是一个个人化 IGN 英文新闻翻译工作流：
 4. 副标题字段统一叫 `subtitle`，不要新写 `cn_subtitle`。
 5. 新请求优先按 `requested_articles[].url` 匹配当前文章，不要只信旧 ID。
 6. 不要删除任何历史 `data/{date}/`。
-7. push 前跑：`python3 scripts/pre_push_check.py {date}`。
-8. 日期归属按 8:00 分界：`data/2026-06-02` 只能放 `2026-06-01 08:00 <= publish_time_cn < 2026-06-02 08:00` 的文章。
+7. API/OpenClaw 分工只看 `scripts/automation_guard.py title|fulltext|nightly` 输出。
+8. push 前跑：`python3 scripts/pre_push_check.py {date}`。
+9. 日期归属按 8:00 分界：`data/2026-06-02` 只能放 `2026-06-01 08:00 <= publish_time_cn < 2026-06-02 08:00` 的文章。
 
 ## 项目层级
 
@@ -33,6 +35,7 @@ ign-daily/
 │       ├── index.json            # 当天新闻索引
 │       ├── requests.json         # 用户勾选请求
 │       ├── need_titles.json      # 待补中文标题/摘要队列
+│       ├── sources/NN.json       # 干净英文正文、封面图、正文图缓存
 │       └── translations/NN.json  # 全文译文
 ├── scripts/
 │   ├── common_paths.py           # 所有脚本共用路径
@@ -40,6 +43,7 @@ ign-daily/
 │   ├── pre_push_check.py         # push 前总校验
 │   ├── translate_pipeline.py     # 翻译前/后处理
 │   ├── ign_rss_incremental.py    # RSS 增量抓取
+│   ├── article_cache.py          # 英文正文/图片缓存
 │   └── git_push.py               # PAT push 工具
 ├── AGENT_HANDOFF.md              # 运维流程
 ├── AGENT_TITLE_TRANSLATOR.md     # OpenClaw 标题摘要翻译 cron 指引
@@ -124,11 +128,11 @@ python3 scripts/git_push.py
 
 - GitHub Actions `.github/workflows/hourly-rss.yml` 每小时第 5 分钟跑 RSS 增量抓取。
 - Actions 会设置 `IGN_DAILY_SKIP_GIT=1`，所以 `scripts/ign_rss_incremental.py` 只写数据，不自己 commit/push。
-- RSS-only 提交前跑 `python3 scripts/rss_queue_check.py {date}` 和 `python3 scripts/agent_doctor.py`。
-- 网页设置会写 `data/automation-config.json`：`title_translator` 和 `fulltext_translator` 可分别设为 `openclaw` 或 `api`。
-- API 模式读取 GitHub Secret `TRANSLATOR_API_KEY`（兼容 `DEEPSEEK_API_KEY`）。模型和 base URL 从 `data/automation-config.json` 读取，可在网页设置里切 `deepseek-v4-flash`/`deepseek-v4-pro`。密钥不得写入网页或仓库。
+- RSS-only 提交前跑 `python3 scripts/rss_queue_check.py {date}`、`python3 scripts/article_cache.py {date} --missing` 和 `python3 scripts/agent_doctor.py`。
+- 网页设置会写 `data/automation-config.json`：`title_translator`、`fulltext_translator`、`nightly_learner` 可分别设为 `openclaw` 或 `api`。
+- API 模式读取 GitHub Secret `TRANSLATOR_API_KEY`（兼容 `DEEPSEEK_API_KEY`）。标题/正文/夜间学习可分别用 `api_title_model`、`api_fulltext_model`、`api_nightly_model`，base URL 从 `api_base_url` 读取。密钥不得写入网页或仓库。
 - OpenClaw 独立自动化 session 只在对应配置不是 `api` 时处理队列；不要依赖正在聊天的主 session 心跳。
-- OpenClaw cron 启动后先跑 `python3 scripts/automation_guard.py title|fulltext`。输出 `SKIP` 就静默退出，输出 `RUN` 才继续。
+- OpenClaw cron 启动后先跑 `python3 scripts/automation_guard.py title|fulltext|nightly`。输出 `SKIP` 就静默退出，输出 `RUN` 才继续。
 - 翻译完成后的 push 仍然跑 `python3 scripts/pre_push_check.py {date}`。
 
 最后记住：**不确定就先跑脚本，脚本比记忆可靠。**

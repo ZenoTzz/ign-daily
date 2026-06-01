@@ -45,6 +45,28 @@ Cron 仅负责创建新日期文件夹，不得覆盖/清理/合并旧日期。
   - `requested`：用户已请求翻译，主session待处理
   - `done`：翻译已完成
 
+## sources/NN.json（英文原文缓存）
+
+每小时 RSS 发现新文章后，`scripts/article_cache.py` 会抓取一次 IGN 页面并写入：
+
+```json
+{
+  "id": 1,
+  "url": "https://www.ign.com/articles/...",
+  "title_en": "...",
+  "summary_en": "...",
+  "body_en": "clean English article body",
+  "paragraphs_en": ["paragraph 1", "paragraph 2"],
+  "cover_image": "https://assets-prd.ignimgs.com/...",
+  "images": ["https://assets-prd.ignimgs.com/..."],
+  "publish_time_cn": "2026-06-01 10:20",
+  "fetched_at": "2026-06-01T22:30:00+08:00",
+  "extractor_version": "article_cache_v1"
+}
+```
+
+标题摘要 API 和正文 API 必须优先读取这个缓存；只有缓存缺失时才允许临时抓网页。不要把整页 HTML 或导航/页脚文本喂给模型。
+
 ## translations/NN.json（单篇译文）
 
 ```json

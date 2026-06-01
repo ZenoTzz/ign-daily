@@ -43,7 +43,10 @@ jobs:
           data = json.loads(path.read_text(encoding="utf-8")) if path.exists() else {}
           print(f"title_translator={data.get('title_translator', 'openclaw')}")
           print(f"fulltext_translator={data.get('fulltext_translator', 'openclaw')}")
+          print(f"nightly_learner={data.get('nightly_learner', 'openclaw')}")
           print(f"api_model={data.get('api_model', '')}")
+          print(f"api_title_model={data.get('api_title_model', data.get('api_model', ''))}")
+          print(f"api_fulltext_model={data.get('api_fulltext_model', '')}")
           print(f"api_base_url={data.get('api_base_url', '')}")
           PY
 
@@ -55,7 +58,7 @@ jobs:
         if: steps.config.outputs.title_translator == 'api' || steps.config.outputs.title_translator == 'deepseek'
         env:
           TRANSLATOR_API_KEY: ${{ secrets.TRANSLATOR_API_KEY || secrets.DEEPSEEK_API_KEY }}
-          TRANSLATOR_MODEL: ${{ steps.config.outputs.api_model || vars.TRANSLATOR_MODEL || vars.DEEPSEEK_MODEL || 'deepseek-v4-flash' }}
+          TRANSLATOR_MODEL: ${{ steps.config.outputs.api_title_model || steps.config.outputs.api_model || vars.TRANSLATOR_TITLE_MODEL || vars.TRANSLATOR_MODEL || vars.DEEPSEEK_MODEL || 'deepseek-v4-flash' }}
           TRANSLATOR_BASE_URL: ${{ steps.config.outputs.api_base_url || vars.TRANSLATOR_BASE_URL || vars.DEEPSEEK_BASE_URL || 'https://api.deepseek.com' }}
         run: |
           set -euo pipefail
@@ -63,13 +66,14 @@ jobs:
             echo "title_translator=api but TRANSLATOR_API_KEY/DEEPSEEK_API_KEY is not set."
             exit 1
           fi
+          python3 scripts/article_cache.py --all --queued --missing --limit 8
           python3 scripts/translate_titles_deepseek.py --all
 
       - name: Translate requested full articles
         if: steps.config.outputs.fulltext_translator == 'api' || steps.config.outputs.fulltext_translator == 'deepseek'
         env:
           TRANSLATOR_API_KEY: ${{ secrets.TRANSLATOR_API_KEY || secrets.DEEPSEEK_API_KEY }}
-          TRANSLATOR_MODEL: ${{ steps.config.outputs.api_model || vars.TRANSLATOR_MODEL || vars.DEEPSEEK_MODEL || 'deepseek-v4-flash' }}
+          TRANSLATOR_MODEL: ${{ steps.config.outputs.api_fulltext_model || vars.TRANSLATOR_FULLTEXT_MODEL || steps.config.outputs.api_model || vars.TRANSLATOR_MODEL || vars.DEEPSEEK_MODEL || 'deepseek-v4-pro' }}
           TRANSLATOR_BASE_URL: ${{ steps.config.outputs.api_base_url || vars.TRANSLATOR_BASE_URL || vars.DEEPSEEK_BASE_URL || 'https://api.deepseek.com' }}
           TRANSLATOR_FULLTEXT_LIMIT: "2"
           TRANSLATOR_FULLTEXT_MAX_TOKENS: "12000"
@@ -79,6 +83,7 @@ jobs:
             echo "fulltext_translator=api but TRANSLATOR_API_KEY/DEEPSEEK_API_KEY is not set."
             exit 1
           fi
+          python3 scripts/article_cache.py --all --queued --missing --limit 4
           python3 scripts/translate_fulltext_api.py --all
 
       - name: Validate repository

@@ -8,11 +8,11 @@
 
 下面这几条是当前唯一可信的自动化分工；如果本文档旧段落出现“主 session 心跳”“Opus 必须处理标题/正文”等旧说法，以本节为准。
 
-1. RSS 抓取只由 GitHub Actions `.github/workflows/hourly-rss.yml` 负责，每小时第 5 分钟运行，产出 `index.json` 和 `need_titles.json`。
+1. RSS 抓取只由 GitHub Actions `.github/workflows/hourly-rss.yml` 负责，每小时第 5 分钟运行，产出 `index.json`、`need_titles.json`，并用 `scripts/article_cache.py` 缓存 `sources/NN.json`。
 2. 标题/摘要翻译由 `data/automation-config.json.title_translator` 决定：`api` 时由 GitHub Actions/API 脚本处理；`openclaw` 时由 OpenClaw 独立 cron 处理。
-3. 正文翻译由 `data/automation-config.json.fulltext_translator` 决定：`api` 时由 GitHub Actions/API 脚本处理；`openclaw` 时由 OpenClaw/主 session 处理。
-4. OpenClaw 每次执行标题或正文翻译前，必须先跑 `python3 scripts/automation_guard.py title` 或 `python3 scripts/automation_guard.py fulltext`。输出 `AUTOMATION_GUARD SKIP` 就立刻返回 `HEARTBEAT_OK`，不要读写队列；输出 `AUTOMATION_GUARD RUN` 才继续。
-5. 夜间学习不受 API/OpenClaw 开关影响，仍由 22:30 cron 对比 `translations/` 和 `polished/`，更新 `STYLE_PROFILE.md`。
+3. 正文翻译由 `data/automation-config.json.fulltext_translator` 决定：`api` 时由 GitHub Actions/API 脚本复用 `sources/NN.json`；`openclaw` 时由 OpenClaw/主 session 处理。
+4. 夜间学习由 `data/automation-config.json.nightly_learner` 决定：`api` 时由 `.github/workflows/nightly-style.yml` 更新 `STYLE_PROFILE.md`；`openclaw` 时由 OpenClaw 22:30 cron 处理。
+5. OpenClaw 每次执行标题、正文或夜间学习前，必须先跑 `python3 scripts/automation_guard.py title|fulltext|nightly`。输出 `AUTOMATION_GUARD SKIP` 就立刻返回 `HEARTBEAT_OK`，不要读写队列或 `STYLE_PROFILE.md`；输出 `AUTOMATION_GUARD RUN` 才继续。
 6. `scripts/rss_queue_check.py {date}` 只用于本次 RSS 目标日期，不要拿它全量扫描旧历史日期；旧数据可能没有 `publish_time_cn`。
 
 ## 先跑脚本，不靠记忆
@@ -40,24 +40,24 @@ python3 scripts/pre_push_check.py {date}
   网页 (GitHub Pages) ← 用户浏览新闻、勾选翻译、润色译文
 
 后端(AI agent + cron + heartbeat):
-  [cron 每小时] RSS增量抓取 → 写 index.json(英文标题) + need_titles.json → push
-  [心跳 60分钟] 检查 need_titles.json → Opus 翻译标题+摘要 → push
+  [cron 每小时] RSS增量抓取 → 写 index.json + need_titles.json + sources/NN.json → push
+  [Actions/OpenClaw] 检查 need_titles.json → 翻译标题+摘要 → push
   [cron 8:20 AM] 兜底校验补漏 → 生成 Excel → 发通知
-  [心跳 检测翻译请求] 用户勾选后 → Opus 翻译全文 → push
-  [cron 22:30] nightly polish-diff 学习 → 更新 STYLE_PROFILE
+  [Actions/OpenClaw] 用户勾选后 → 复用 sources/NN.json 翻译全文 → push
+  [Actions/OpenClaw 22:30] nightly 学习 → 更新 STYLE_PROFILE
 ```
 
 ### 核心工作流
 
 | 阶段 | 触发 | 做什么 | 模型 |
 |------|------|--------|------|
-| RSS 抓取 | cron(每小时) | 增量抓 RSS → 追加到 index.json + 写 need_titles.json → push | cron子代理(轻量) |
-| 标题翻译 | 心跳(60分钟) | 检查 need_titles.json → web_fetch原文 → Opus 翻译 cn_title+summary → 更新 index.json → push | **Opus(最好模型)** |
+| RSS 抓取 | GitHub Actions 每小时 | 增量抓 RSS → 追加 index.json + need_titles.json + sources/NN.json → push | 脚本 |
+| 标题翻译 | Actions 或 OpenClaw | 检查 need_titles.json → 复用 sources/NN.json → 翻译 cn_title+summary → push | Flash/API 或 OpenClaw |
 | 兜底校验 | cron 8:20 | 重跑完整 RSS 对比补漏 → 生成 Excel → 通知 | cron子代理 |
-| 全文翻译 | 用户勾选 | web_fetch 原文 → 词库匹配 → Opus 翻译全文 → push | **Opus(最好模型)** |
-| 夜间学习 | cron 22:30 | 对比润色前后 diff → 提取风格规则 → 更新 STYLE_PROFILE | Opus |
+| 全文翻译 | 用户勾选 | 复用 sources/NN.json → 词库匹配 → 翻译全文 → push | Pro/API 或 OpenClaw |
+| 夜间学习 | 22:30 | 从译文/润色样本学习 → 更新 STYLE_PROFILE | API 或 OpenClaw |
 
-> ⚠️ **标题+摘要翻译原则**: 所有文章在首页必须显示中文标题和摘要，不能显示英文占位。cron 只负责抓取和写 need_titles.json 队列，翻译工作必须在主 session 用 Opus 完成。
+> ⚠️ **标题+摘要翻译原则**: 所有文章在首页必须显示中文标题和摘要，不能显示英文占位。RSS 只负责发现和缓存，标题摘要由当前开关指定的 API 或 OpenClaw 完成。
 
 ### 日期归属规则
 
@@ -518,14 +518,16 @@ workspace/
 - 网页设置面板会写 `data/automation-config.json`：
   - `title_translator=openclaw|api`
   - `fulltext_translator=openclaw|api`
+- `nightly_learner=openclaw|api`
 - `openclaw`：保留队列给 OpenClaw；`api`：GitHub Actions 调用 OpenAI-compatible API。
-- API 模式需要 GitHub Secret `TRANSLATOR_API_KEY`（兼容旧名 `DEEPSEEK_API_KEY`）。网页会把 `api_model` 和 `api_base_url` 写入 `data/automation-config.json`，Actions 优先使用这里的模型；常用值是 `deepseek-v4-flash` 或 `deepseek-v4-pro`。
+- API 模式需要 GitHub Secret `TRANSLATOR_API_KEY`（兼容旧名 `DEEPSEEK_API_KEY`）。网页会把 `api_title_model`、`api_fulltext_model`、`api_nightly_model` 和 `api_base_url` 写入 `data/automation-config.json`；建议标题摘要用 Flash，正文用 Pro，夜间学习用 Flash。
 - 网页设置面板的“立即运行 API 翻译”按钮会先保存 `data/automation-config.json`，再触发 GitHub Actions `api-translation.yml` 的 `workflow_dispatch`；按钮依赖浏览器本地 PAT 具备 Actions 写权限。
+- 每小时 RSS 后会运行 `scripts/article_cache.py {date} --missing`，把干净英文正文和图片写入 `data/{date}/sources/NN.json`；API 标题和正文都优先读这个缓存。
 - 标题摘要 API 脚本只处理 `need_titles.json`，不会翻译全文，也不会写 `translations/NN.json`。
 - 正文 API 脚本处理 `requests.json`，写 `translations/NN.json` 后必须跑 `translate_pipeline.py --post` 和 `pre_push_check.py`，不通过就不 push。
 - API 标题/正文脚本都会读取 `TRANSLATION_GUIDE.md` 和 `STYLE_PROFILE.md`；夜间学习任务更新 `STYLE_PROFILE.md` 后，下一轮 API 翻译会自动吃到新风格。
 - OpenClaw cron 每次启动必须先读 `data/automation-config.json`；对应任务为 `api` 时应静默退出，避免两边同时改同一队列。
-- 更稳的入口是先运行 `python3 scripts/automation_guard.py title` 或 `python3 scripts/automation_guard.py fulltext`。输出 `AUTOMATION_GUARD SKIP` 就直接返回 `HEARTBEAT_OK`，输出 `RUN` 才继续处理队列。
+- 更稳的入口是先运行 `python3 scripts/automation_guard.py title|fulltext|nightly`。输出 `AUTOMATION_GUARD SKIP` 就直接返回 `HEARTBEAT_OK`，输出 `RUN` 才继续处理对应任务。
 
 ## 2026-06-02 维护补充：展示序号、请求匹配、日期窗口
 

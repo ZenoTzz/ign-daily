@@ -27,6 +27,7 @@ def load_config() -> dict:
         return {
             "title_translator": "openclaw",
             "fulltext_translator": "openclaw",
+            "nightly_learner": "openclaw",
             "api_model": "deepseek-v4-flash",
         }
     with CONFIG_PATH.open("r", encoding="utf-8-sig") as f:
@@ -42,10 +43,14 @@ def main() -> int:
     cfg = load_config()
     title_mode = cfg.get("title_translator", "openclaw")
     fulltext_mode = cfg.get("fulltext_translator", "openclaw")
+    nightly_mode = cfg.get("nightly_learner", "openclaw")
     model = cfg.get("api_model", "")
 
     if task == "nightly":
-        print(f"AUTOMATION_GUARD RUN task=nightly reason=style-learning-always-runs model={model}")
+        if nightly_mode in {"api", "deepseek"}:
+            print(f"AUTOMATION_GUARD SKIP task=nightly owner=api model={cfg.get('api_nightly_model') or model}")
+            return 0
+        print(f"AUTOMATION_GUARD RUN task=nightly owner=openclaw model={model}")
         return 0
 
     mode = title_mode if task == "title" else fulltext_mode

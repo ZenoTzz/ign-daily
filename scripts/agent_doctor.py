@@ -45,6 +45,12 @@ def main() -> int:
         "TRANSLATION_GUIDE.md",
         "scripts/common_paths.py",
         "scripts/pre_push_check.py",
+        "scripts/article_cache.py",
+        "scripts/nightly_style_api.py",
+        ".github/workflows/hourly-rss.yml",
+        ".github/workflows/api-translation.yml",
+        ".github/workflows/nightly-style.yml",
+        "data/automation-config.json",
         "data/dict.json",
         "data/index-list.json",
     ]

@@ -17,7 +17,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <script defer src="assets/alpine.min.js"></script>
   <link rel="stylesheet" href="assets/style.css?v=20260531b">
-  <script src="assets/app.js?v=20260602e"></script>
+  <script src="assets/app.js?v=20260602f"></script>
 </head>
 <body>
   <!-- SVG Icon Definitions -->
@@ -217,8 +217,10 @@
             <span class="filter-tag" style="font-size:0.68rem; padding:0.25rem 0.55rem;"
                   x-text="'正文 ' + (automationConfig.fulltext_translator === 'api' ? 'API' : 'OpenClaw')"></span>
             <span class="filter-tag" style="font-size:0.68rem; padding:0.25rem 0.55rem;"
-                  x-show="automationConfig.title_translator === 'api' || automationConfig.fulltext_translator === 'api'"
-                  x-text="automationConfig.api_model"></span>
+                  x-text="'学习 ' + (automationConfig.nightly_learner === 'api' ? 'API' : 'OpenClaw')"></span>
+            <span class="filter-tag" style="font-size:0.68rem; padding:0.25rem 0.55rem;"
+                  x-show="automationConfig.title_translator === 'api' || automationConfig.fulltext_translator === 'api' || automationConfig.nightly_learner === 'api'"
+                  x-text="automationConfig.api_title_model || automationConfig.api_model"></span>
           </div>
 
           <div x-show="automationExpanded" style="margin-top:0.75rem;">
@@ -238,8 +240,26 @@
               <option value="api">API</option>
             </select>
 
-            <label style="display:block; margin-top:0.75rem;">API 模型</label>
-            <select x-model="automationConfig.api_model" style="width:100%; margin-top:0.35rem;">
+            <label style="display:block; margin-top:0.75rem;">夜间学习</label>
+            <select x-model="automationConfig.nightly_learner" style="width:100%; margin-top:0.35rem;">
+              <option value="openclaw">OpenClaw</option>
+              <option value="api">API</option>
+            </select>
+
+            <label style="display:block; margin-top:0.75rem;">标题/摘要 API 模型</label>
+            <select x-model="automationConfig.api_title_model" style="width:100%; margin-top:0.35rem;">
+              <option value="deepseek-v4-flash">DeepSeek V4 Flash</option>
+              <option value="deepseek-v4-pro">DeepSeek V4 Pro</option>
+            </select>
+
+            <label style="display:block; margin-top:0.75rem;">正文 API 模型</label>
+            <select x-model="automationConfig.api_fulltext_model" style="width:100%; margin-top:0.35rem;">
+              <option value="deepseek-v4-pro">DeepSeek V4 Pro</option>
+              <option value="deepseek-v4-flash">DeepSeek V4 Flash</option>
+            </select>
+
+            <label style="display:block; margin-top:0.75rem;">夜间学习 API 模型</label>
+            <select x-model="automationConfig.api_nightly_model" style="width:100%; margin-top:0.35rem;">
               <option value="deepseek-v4-flash">DeepSeek V4 Flash</option>
               <option value="deepseek-v4-pro">DeepSeek V4 Pro</option>
             </select>

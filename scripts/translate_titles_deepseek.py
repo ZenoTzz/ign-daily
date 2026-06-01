@@ -216,6 +216,24 @@ def fetch_article_text(url: str, max_chars: int = 9000) -> str:
     return extract_article_text(html, max_chars)
 
 
+def cached_source_path(date: str, article: dict[str, Any]) -> Path:
+    return DATA_DIR / date / "sources" / f"{int(article['id']):02d}.json"
+
+
+def cached_article_text(date: str, article: dict[str, Any], max_chars: int = 9000) -> str:
+    path = cached_source_path(date, article)
+    if not path.exists():
+        return ""
+    try:
+        source = load_json(path)
+    except Exception:
+        return ""
+    body = str(source.get("body_en") or "").strip()
+    if not body and isinstance(source.get("paragraphs_en"), list):
+        body = "\n\n".join(str(p).strip() for p in source["paragraphs_en"] if str(p).strip())
+    return body[:max_chars]
+
+
 def read_optional(path: str, max_chars: int = 10000) -> str:
     p = REPO_ROOT / path
     if not p.exists():
@@ -350,7 +368,7 @@ def translate_date(date: str, limit: int = 8) -> int:
             remaining.append(item)
             continue
         try:
-            article_text = fetch_article_text(url)
+            article_text = cached_article_text(date, article) or fetch_article_text(url)
             terms = matched_terms((article.get("en_title") or "") + "\n" + article_text)
             messages = build_messages(article, article_text, terms)
             raw = call_deepseek(api_key, model, base_url, messages)

@@ -26,7 +26,7 @@ from translate_titles_deepseek import apply_title_dictionary, call_deepseek, ext
 
 configure_utf8_stdio()
 CST = timezone(timedelta(hours=8))
-DEFAULT_MODEL = "deepseek-v4-flash"
+DEFAULT_MODEL = "deepseek-v4-pro"
 DEFAULT_BASE_URL = "https://api.deepseek.com"
 
 
@@ -63,6 +63,31 @@ def fetch_article_text(url: str, max_chars: int = 18000) -> str:
     with urllib.request.urlopen(req, timeout=30) as resp:
         html = resp.read().decode("utf-8", errors="replace")
     return extract_article_text(html, max_chars)
+
+
+def cached_source_path(date: str, article: dict[str, Any]) -> Path:
+    return DATA_DIR / date / "sources" / f"{int(article['id']):02d}.json"
+
+
+def load_cached_source(date: str, article: dict[str, Any]) -> dict[str, Any]:
+    path = cached_source_path(date, article)
+    if not path.exists():
+        return {}
+    try:
+        data = load_json(path)
+    except Exception:
+        return {}
+    return data if isinstance(data, dict) else {}
+
+
+def source_text(source: dict[str, Any]) -> str:
+    body = str(source.get("body_en") or "").strip()
+    if body:
+        return body
+    paragraphs = source.get("paragraphs_en")
+    if isinstance(paragraphs, list):
+        return "\n\n".join(str(p).strip() for p in paragraphs if str(p).strip())
+    return ""
 
 
 def split_paragraphs(text: str) -> list[str]:
@@ -302,7 +327,8 @@ def translate_date(date: str, limit: int = 2) -> int:
         return 0
     translated = 0
     for article in requested[:limit]:
-        text = fetch_article_text(article["url"])
+        source = load_cached_source(date, article)
+        text = source_text(source) or fetch_article_text(article["url"])
         paragraphs_en = split_paragraphs(text)
         if not paragraphs_en:
             raise RuntimeError(f"no paragraphs extracted for #{article['id']}")
@@ -315,6 +341,11 @@ def translate_date(date: str, limit: int = 2) -> int:
         except ValueError as exc:
             print(f"[RETRY] fulltext #{article['id']} paragraph format issue: {exc}")
             data = normalize_translation(article, {**result, "paragraphs": translate_paragraph_chunks(api_key, model, base_url, article, paragraphs_en, terms)}, paragraphs_en)
+        if source:
+            if not data.get("cover") and source.get("cover_image"):
+                data["cover"] = source["cover_image"]
+            if not data.get("images") and isinstance(source.get("images"), list):
+                data["images"] = source["images"]
         trans_path = DATA_DIR / date / "translations" / f"{article['id']:02d}.json"
         write_json(trans_path, data)
         subprocess.run([sys.executable, str(REPO_ROOT / "scripts" / "translate_pipeline.py"), date, str(article["id"]), "--post"], cwd=REPO_ROOT, check=True)

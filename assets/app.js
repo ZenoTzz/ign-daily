@@ -145,8 +145,12 @@ function appData() {
     automationConfig: {
       title_translator: 'openclaw',
       fulltext_translator: 'openclaw',
+      nightly_learner: 'openclaw',
       api_provider: 'openai-compatible',
       api_model: 'deepseek-v4-flash',
+      api_title_model: 'deepseek-v4-flash',
+      api_fulltext_model: 'deepseek-v4-pro',
+      api_nightly_model: 'deepseek-v4-flash',
       api_base_url: 'https://api.deepseek.com'
     },
     automationSaving: false,
@@ -412,8 +416,12 @@ function appData() {
         this.automationConfig = {
           title_translator: cfg.title_translator || 'openclaw',
           fulltext_translator: cfg.fulltext_translator || 'openclaw',
+          nightly_learner: cfg.nightly_learner || 'openclaw',
           api_provider: cfg.api_provider || 'openai-compatible',
           api_model: cfg.api_model || 'deepseek-v4-flash',
+          api_title_model: cfg.api_title_model || cfg.api_model || 'deepseek-v4-flash',
+          api_fulltext_model: cfg.api_fulltext_model || 'deepseek-v4-pro',
+          api_nightly_model: cfg.api_nightly_model || cfg.api_model || 'deepseek-v4-flash',
           api_base_url: cfg.api_base_url || 'https://api.deepseek.com',
           updated_at: cfg.updated_at || ''
         };
@@ -426,8 +434,12 @@ function appData() {
         const cfg = {
           title_translator: this.automationConfig.title_translator || 'openclaw',
           fulltext_translator: this.automationConfig.fulltext_translator || 'openclaw',
+          nightly_learner: this.automationConfig.nightly_learner || 'openclaw',
           api_provider: 'openai-compatible',
-          api_model: this.automationConfig.api_model || 'deepseek-v4-flash',
+          api_model: this.automationConfig.api_title_model || this.automationConfig.api_model || 'deepseek-v4-flash',
+          api_title_model: this.automationConfig.api_title_model || this.automationConfig.api_model || 'deepseek-v4-flash',
+          api_fulltext_model: this.automationConfig.api_fulltext_model || 'deepseek-v4-pro',
+          api_nightly_model: this.automationConfig.api_nightly_model || this.automationConfig.api_model || 'deepseek-v4-flash',
           api_base_url: this.automationConfig.api_base_url || 'https://api.deepseek.com',
           updated_at: new Date().toISOString(),
           notes: 'Public switch only. API keys must stay in GitHub Actions Secrets.'

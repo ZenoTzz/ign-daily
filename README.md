@@ -99,6 +99,8 @@ python -m http.server 8000
 - **2026-06-01**: RSS 增量抓取迁移到 GitHub Actions `.github/workflows/hourly-rss.yml`；CI 使用 `IGN_DAILY_SKIP_GIT=1` 让脚本只写数据，再由 workflow 跑 `rss_queue_check.py`/`agent_doctor.py` 后提交。
 - **2026-06-02**: 新增网页可视化自动化开关 `data/automation-config.json`。标题摘要和正文可分别选择 `openclaw` 或 `api`，并可切换 `deepseek-v4-flash`/`deepseek-v4-pro`；API 模式读取 GitHub Secret `TRANSLATOR_API_KEY`，严格跑现有校验脚本，不通过不 push。
 - **2026-06-02**: 设置面板新增“立即运行 API 翻译”按钮，会先保存当前开关，再触发 GitHub Actions `api-translation.yml` 的 `workflow_dispatch`。浏览器里保存的 GitHub PAT 需要具备 Actions 写权限。
+- **2026-06-02**: 每小时 RSS 后新增 `scripts/article_cache.py`，把干净英文正文、封面图、正文图缓存到 `data/{date}/sources/NN.json`。API 标题摘要和正文翻译优先复用缓存，减少重复抓取和 token 浪费。
+- **2026-06-02**: 夜间学习也接入 `data/automation-config.json.nightly_learner`，可在网页里切换 `openclaw` / `api`。API 路径由 `.github/workflows/nightly-style.yml` 调用 `scripts/nightly_style_api.py` 更新 `STYLE_PROFILE.md`。
 
 ## 📝 License
 
