@@ -158,8 +158,8 @@
       "url": "https://www.ign.com/articles/bbc-update-on-doctor-who-future-imminent-showrunner-states-amid-concern-its-return-has-now-been-scrapped-or-postponed",
       "publish_time_cn": "2026-06-01 19:02",
       "pub_date": "2026-06-01 19:02",
-      "cover_image": "https://assets-prd.ignimgs.com/2025/03/24/doctorwhoseason2trailer-ign-blogroll-1742837933082.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2025/03/24/doctorwhoseason2trailer-ign-blogroll-1742837933082.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2025/03/24/doctorwhoseason2trailer-ign-blogroll-1742837933082.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2025/03/24/doctorwhoseason2trailer-ign-blogroll-1742837933082.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -200,7 +200,11 @@
           "cn": "Bleeding Cool",
           "reason": "娱乐新闻网站，无官方中文名，建议保留英文"
         }
-      ]
+      ],
+      "translation_path": "translations/05.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro"
     },
     {
       "id": 6,
@@ -271,8 +275,8 @@
       "url": "https://www.ign.com/articles/factorio-set-for-its-last-major-update-a-decade-after-launch",
       "publish_time_cn": "2026-06-01 17:46",
       "pub_date": "2026-06-01 17:46",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/06/01/ss-2533e54b0bd90a29adbedb60108ed277536ad445-1920x1080-1780306984155.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/01/ss-2533e54b0bd90a29adbedb60108ed277536ad445-1920x1080-1780306984155.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/01/ss-2533e54b0bd90a29adbedb60108ed277536ad445-1920x1080-1780306984155.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/01/ss-2533e54b0bd90a29adbedb60108ed277536ad445-1920x1080-1780306984155.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -281,7 +285,11 @@
         "https://assets-prd.ignimgs.com/2026/06/01/ss-2533e54b0bd90a29adbedb60108ed277536ad445-1920x1080-1780306984155.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-01T23:41:45+08:00"
+      "source_fetched_at": "2026-06-01T23:41:45+08:00",
+      "translation_path": "translations/08.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro"
     },
     {
       "id": 9,
@@ -293,8 +301,8 @@
       "url": "https://www.ign.com/articles/hot-on-the-heels-of-katsuhiro-haradas-exit-from-bandai-namco-the-director-of-tekken-7-and-8-has-left-too",
       "publish_time_cn": "2026-06-01 17:06",
       "pub_date": "2026-06-01 17:06",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/06/01/ss-7c55021d3ba8e4f14c6d9dbea9f19d9b7665d5f0-1920x1080-1780304440098.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/01/ss-7c55021d3ba8e4f14c6d9dbea9f19d9b7665d5f0-1920x1080-1780304440098.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/01/ss-7c55021d3ba8e4f14c6d9dbea9f19d9b7665d5f0-1920x1080-1780304440098.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/01/ss-7c55021d3ba8e4f14c6d9dbea9f19d9b7665d5f0-1920x1080-1780304440098.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -315,7 +323,11 @@
           "cn": "VS Studio",
           "reason": "工作室名，无官方中文译名，保留英文"
         }
-      ]
+      ],
+      "translation_path": "translations/09.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro"
     },
     {
       "id": 10,

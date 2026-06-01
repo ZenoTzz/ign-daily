@@ -252,6 +252,48 @@
       "total_tokens": 7028,
       "prompt_cache_hit_tokens": 5888,
       "prompt_cache_miss_tokens": 856
+    },
+    {
+      "time_cn": "2026-06-02 06:17:22",
+      "task": "fulltext",
+      "model": "deepseek-v4-pro",
+      "article_id": 5,
+      "article_url": "https://www.ign.com/articles/bbc-update-on-doctor-who-future-imminent-showrunner-states-amid-concern-its-return-has-now-been-scrapped-or-postponed",
+      "article_date": "2026-06-02",
+      "detail": "",
+      "prompt_tokens": 7261,
+      "completion_tokens": 1861,
+      "total_tokens": 9122,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 7261
+    },
+    {
+      "time_cn": "2026-06-02 06:17:45",
+      "task": "fulltext",
+      "model": "deepseek-v4-pro",
+      "article_id": 8,
+      "article_url": "https://www.ign.com/articles/factorio-set-for-its-last-major-update-a-decade-after-launch",
+      "article_date": "2026-06-02",
+      "detail": "",
+      "prompt_tokens": 7305,
+      "completion_tokens": 1611,
+      "total_tokens": 8916,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 7305
+    },
+    {
+      "time_cn": "2026-06-02 06:18:13",
+      "task": "fulltext",
+      "model": "deepseek-v4-pro",
+      "article_id": 9,
+      "article_url": "https://www.ign.com/articles/hot-on-the-heels-of-katsuhiro-haradas-exit-from-bandai-namco-the-director-of-tekken-7-and-8-has-left-too",
+      "article_date": "2026-06-02",
+      "detail": "",
+      "prompt_tokens": 7237,
+      "completion_tokens": 1748,
+      "total_tokens": 8985,
+      "prompt_cache_hit_tokens": 5888,
+      "prompt_cache_miss_tokens": 1349
     }
   ]
 }
