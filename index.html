@@ -17,7 +17,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <script defer src="assets/alpine.min.js"></script>
   <link rel="stylesheet" href="assets/style.css?v=20260531b">
-  <script src="assets/app.js?v=20260602a"></script>
+  <script src="assets/app.js?v=20260602b"></script>
 </head>
 <body>
   <!-- SVG Icon Definitions -->
@@ -200,6 +200,32 @@
             </button>
           </div>
         </div>
+
+        <div style="height:1px; background:var(--border); margin:1rem 0;"></div>
+
+        <h4 style="font-size:0.85rem; font-weight:700; margin-bottom:0.5rem;">自动化翻译开关</h4>
+        <p style="font-size:0.7rem; color:var(--text-muted); margin-bottom:0.75rem;">
+          这里只切换流程。API Key 请放在 GitHub Actions Secrets，不会写入网页或仓库。
+        </p>
+
+        <label style="display:block; margin-top:0.75rem;">标题/摘要翻译</label>
+        <select x-model="automationConfig.title_translator" style="width:100%; margin-top:0.35rem;">
+          <option value="openclaw">OpenClaw</option>
+          <option value="api">API</option>
+        </select>
+
+        <label style="display:block; margin-top:0.75rem;">正文翻译</label>
+        <select x-model="automationConfig.fulltext_translator" style="width:100%; margin-top:0.35rem;">
+          <option value="openclaw">OpenClaw</option>
+          <option value="api">API</option>
+        </select>
+
+        <p style="font-size:0.68rem; color:var(--text-muted); margin-top:0.75rem;">
+          当前配置文件：data/automation-config.json。OpenClaw 每次启动也会读取它；API 模式下应静默跳过对应任务。
+        </p>
+        <button @click="saveAutomationConfig()" :disabled="automationSaving" class="btn btn-primary" style="margin-top:0.75rem;">
+          <span x-text="automationSaving ? '保存中...' : '保存自动化开关'"></span>
+        </button>
       </div>
 
       <!-- Filter Tags -->

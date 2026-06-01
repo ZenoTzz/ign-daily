@@ -22,6 +22,12 @@ GitHub Actions owns RSS ingestion through `.github/workflows/hourly-rss.yml`.
 git pull --rebase origin main
 ```
 
+1.5. Read `data/automation-config.json`.
+
+If `title_translator` is `api` or `deepseek`, exit quietly with `HEARTBEAT_OK`.
+GitHub Actions will handle title/summary translation in API mode. Do not also
+edit `need_titles.json`.
+
 2. Find the target date.
 
 Check recent folders under `data/` and process any `need_titles.json` that exists

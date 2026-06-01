@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Translate need_titles.json queues with the DeepSeek chat-completions API.
+"""Translate need_titles.json queues with an OpenAI-compatible chat API.
 
 This script only fills homepage metadata:
   - cn_title
@@ -10,7 +10,7 @@ This script only fills homepage metadata:
 It does not translate full articles and does not write translations/NN.json.
 
 Usage:
-  DEEPSEEK_API_KEY=... python3 scripts/translate_titles_deepseek.py [YYYY-MM-DD]
+  TRANSLATOR_API_KEY=... python3 scripts/translate_titles_deepseek.py [YYYY-MM-DD|--all]
 """
 from __future__ import annotations
 
@@ -107,6 +107,13 @@ def fetch_article_text(url: str, max_chars: int = 9000) -> str:
     return text[:max_chars]
 
 
+def read_optional(path: str, max_chars: int = 10000) -> str:
+    p = REPO_ROOT / path
+    if not p.exists():
+        return ""
+    return p.read_text(encoding="utf-8", errors="replace")[:max_chars]
+
+
 def extract_json(text: str) -> dict[str, Any]:
     text = text.strip()
     if text.startswith("```"):
@@ -160,6 +167,8 @@ def build_messages(article: dict[str, Any], article_text: str, terms: dict[str, 
         "publish_time_cn": article.get("publish_time_cn") or article.get("pub_date") or "",
         "allowed_categories": CATEGORIES,
         "matched_dictionary_terms": terms,
+        "translation_guide": read_optional("TRANSLATION_GUIDE.md", 9000),
+        "style_profile": read_optional("STYLE_PROFILE.md", 7000),
         "article_text_excerpt": article_text,
         "required_json_schema": {
             "cn_title": "中文标题",
@@ -194,28 +203,28 @@ def normalize_result(result: dict[str, Any]) -> dict[str, Any]:
 
 def translate_date(date: str, limit: int = 8) -> int:
     load_env_file()
-    api_key = os.environ.get("DEEPSEEK_API_KEY", "").strip()
+    api_key = (os.environ.get("TRANSLATOR_API_KEY") or os.environ.get("DEEPSEEK_API_KEY") or "").strip()
     if not api_key:
-        print("DEEPSEEK_SKIP: DEEPSEEK_API_KEY is not set")
+        print("API_TITLE_SKIP: TRANSLATOR_API_KEY/DEEPSEEK_API_KEY is not set")
         return 0
 
-    model = os.environ.get("DEEPSEEK_MODEL", "").strip() or DEFAULT_MODEL
-    base_url = os.environ.get("DEEPSEEK_BASE_URL", "").strip() or DEFAULT_BASE_URL
+    model = (os.environ.get("TRANSLATOR_MODEL") or os.environ.get("DEEPSEEK_MODEL") or "").strip() or DEFAULT_MODEL
+    base_url = (os.environ.get("TRANSLATOR_BASE_URL") or os.environ.get("DEEPSEEK_BASE_URL") or "").strip() or DEFAULT_BASE_URL
 
     day_dir = DATA_DIR / date
     index_path = day_dir / "index.json"
     queue_path = day_dir / "need_titles.json"
     if not index_path.exists():
-        print(f"DEEPSEEK_SKIP: no index.json for {date}")
+        print(f"API_TITLE_SKIP: no index.json for {date}")
         return 0
     if not queue_path.exists():
-        print(f"DEEPSEEK_SKIP: no need_titles.json for {date}")
+        print(f"API_TITLE_SKIP: no need_titles.json for {date}")
         return 0
 
     index = load_json(index_path)
     queue = load_json(queue_path)
     if not queue:
-        print(f"DEEPSEEK_SKIP: empty need_titles.json for {date}")
+        print(f"API_TITLE_SKIP: empty need_titles.json for {date}")
         return 0
 
     by_url = {a.get("url"): a for a in index.get("articles", []) if a.get("url")}
@@ -254,14 +263,24 @@ def translate_date(date: str, limit: int = 8) -> int:
 
     write_json(index_path, index)
     write_json(queue_path, remaining)
-    print(f"DEEPSEEK_TITLE_TRANSLATE_DONE: date={date}, translated={translated}, remaining={len(remaining)}")
+    print(f"API_TITLE_TRANSLATE_DONE: date={date}, translated={translated}, remaining={len(remaining)}")
     return translated
 
 
 def main() -> int:
-    date = sys.argv[1] if len(sys.argv) > 1 and sys.argv[1] else default_date()
-    limit = int(os.environ.get("DEEPSEEK_TITLE_LIMIT", "8"))
-    translate_date(date, limit=limit)
+    target = sys.argv[1] if len(sys.argv) > 1 and sys.argv[1] else default_date()
+    limit = int(os.environ.get("TRANSLATOR_TITLE_LIMIT") or os.environ.get("DEEPSEEK_TITLE_LIMIT") or "8")
+    if target == "--all":
+        total = 0
+        for queue_path in sorted(DATA_DIR.glob("20??-??-??/need_titles.json")):
+            try:
+                if load_json(queue_path):
+                    total += translate_date(queue_path.parent.name, limit=limit)
+            except Exception as exc:
+                print(f"[KEEP] failed date {queue_path.parent.name}: {exc}")
+        print(f"API_TITLE_TRANSLATE_ALL_DONE: translated={total}")
+    else:
+        translate_date(target, limit=limit)
     return 0
 
 

@@ -12,6 +12,7 @@
 | `pre_push_check.py` | 包装三连校验，防止忘跑某一步 | 每次 push 前 |
 | `rss_queue_check.py` | 校验 RSS-only 自动化写出的 index/need_titles 队列 | GitHub Actions RSS 提交前 |
 | `translate_titles_deepseek.py` | 可选 DeepSeek API 标题摘要翻译，只处理 need_titles 队列 | `TITLE_TRANSLATOR=deepseek` |
+| `translate_fulltext_api.py` | 可选 OpenAI-compatible API 正文翻译，强制跑后处理和校验 | `fulltext_translator=api` |
 | `nightly_polish_diff.py` | 对比用户润色与原译，提取风格规律 | 每晚 22:30 cron |
 | `check_polish_today.py` | 检查今天是否有润色记录（无则跳过学习） | 夜间学习入口 |
 | `fetch_exchange_rates.py` | 拉取当日汇率写入 exchange_rates.json | 每天 8:20 cron |
@@ -65,16 +66,17 @@ python3 scripts/rss_queue_check.py {date}
 python3 scripts/agent_doctor.py
 ```
 
-标题摘要翻译有两种模式：
+标题摘要/正文翻译由网页设置写入 `data/automation-config.json`：
 
-- `TITLE_TRANSLATOR=openclaw` 或不设置：保留 `need_titles.json`，由 OpenClaw 独立 cron 处理。
-- `TITLE_TRANSLATOR=deepseek`：GitHub Actions 读取 Secret `DEEPSEEK_API_KEY` 并运行：
+- `openclaw`：保留队列，由 OpenClaw 独立 cron 处理。
+- `api`：GitHub Actions 读取 Secret `TRANSLATOR_API_KEY` 并运行：
 
 ```bash
 python3 scripts/translate_titles_deepseek.py {date}
+python3 scripts/translate_fulltext_api.py {date}
 ```
 
-DeepSeek 脚本不会翻译全文，也不会写 `translations/NN.json`。
+标题摘要 API 脚本不会翻译全文，也不会写 `translations/NN.json`。正文 API 脚本会写译文，但必须通过 `translate_pipeline.py --post` 和 `pre_push_check.py`。
 
 它会依次跑三连：
 

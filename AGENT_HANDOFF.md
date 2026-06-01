@@ -504,12 +504,15 @@ workspace/
 
 ## 标题摘要翻译开关
 
-- GitHub Actions 支持仓库变量 `TITLE_TRANSLATOR`：
-  - 空值或 `openclaw`：RSS 只生成 `need_titles.json`，由 OpenClaw `IGN Title Summary Translator` 处理。
-  - `deepseek`：RSS 后直接调用 `scripts/translate_titles_deepseek.py`，用 DeepSeek API 翻译 `cn_title`、`summary`、`category`、`emoji`。
-- DeepSeek 模式需要 GitHub Secret `DEEPSEEK_API_KEY`，可选变量 `DEEPSEEK_MODEL`（默认 `deepseek-v4-flash`）和 `DEEPSEEK_BASE_URL`（默认 `https://api.deepseek.com`）。
-- DeepSeek 脚本只处理 `need_titles.json`，不会翻译全文，也不会写 `translations/NN.json`。
-- 如果 `TITLE_TRANSLATOR=deepseek`，OpenClaw 标题摘要 cron 应暂停或只作为人工备用，避免两边同时改 `need_titles.json`。
+- 网页设置面板会写 `data/automation-config.json`：
+  - `title_translator=openclaw|api`
+  - `fulltext_translator=openclaw|api`
+- `openclaw`：保留队列给 OpenClaw；`api`：GitHub Actions 调用 OpenAI-compatible API。
+- API 模式需要 GitHub Secret `TRANSLATOR_API_KEY`（兼容旧名 `DEEPSEEK_API_KEY`），可选变量 `TRANSLATOR_MODEL`（默认 `deepseek-v4-flash`）和 `TRANSLATOR_BASE_URL`（默认 `https://api.deepseek.com`）。
+- 标题摘要 API 脚本只处理 `need_titles.json`，不会翻译全文，也不会写 `translations/NN.json`。
+- 正文 API 脚本处理 `requests.json`，写 `translations/NN.json` 后必须跑 `translate_pipeline.py --post` 和 `pre_push_check.py`，不通过就不 push。
+- API 标题/正文脚本都会读取 `TRANSLATION_GUIDE.md` 和 `STYLE_PROFILE.md`；夜间学习任务更新 `STYLE_PROFILE.md` 后，下一轮 API 翻译会自动吃到新风格。
+- OpenClaw cron 每次启动必须先读 `data/automation-config.json`；对应任务为 `api` 时应静默退出，避免两边同时改同一队列。
 
 ## 2026-06-02 维护补充：展示序号、请求匹配、日期窗口
 

@@ -123,6 +123,12 @@ function appData() {
     filterCat: 'all',
     showSettings: false,
     token: localStorage.getItem('gh_token') || '',
+    automationConfig: {
+      title_translator: 'openclaw',
+      fulltext_translator: 'openclaw',
+      api_provider: 'openai-compatible'
+    },
+    automationSaving: false,
     toast: '',
 
     // 全局待确认词库
@@ -157,6 +163,7 @@ function appData() {
         }
       });
       try {
+        await this.loadAutomationConfig();
         const date = new URLSearchParams(location.search).get('date') || todayBeijingDate();
         this.currentDate = date;
         // 加载可用日期列表
@@ -374,6 +381,44 @@ function appData() {
     },
 
     // ---- 一键复制今日摘要（中文标点 + 去 markdown）----
+    async loadAutomationConfig() {
+      try {
+        const res = await fetch('data/automation-config.json?t=' + Date.now(), { cache: 'no-store' });
+        if (!res.ok) return;
+        const cfg = await res.json();
+        this.automationConfig = {
+          title_translator: cfg.title_translator || 'openclaw',
+          fulltext_translator: cfg.fulltext_translator || 'openclaw',
+          api_provider: cfg.api_provider || 'openai-compatible',
+          updated_at: cfg.updated_at || ''
+        };
+      } catch (_) {}
+    },
+
+    async saveAutomationConfig() {
+      try {
+        this.automationSaving = true;
+        const cfg = {
+          title_translator: this.automationConfig.title_translator || 'openclaw',
+          fulltext_translator: this.automationConfig.fulltext_translator || 'openclaw',
+          api_provider: 'openai-compatible',
+          updated_at: new Date().toISOString(),
+          notes: 'Public switch only. API keys must stay in GitHub Actions Secrets.'
+        };
+        await GH.putFile(
+          'data/automation-config.json',
+          JSON.stringify(cfg, null, 2) + '\n',
+          'chore: update automation translator switches'
+        );
+        this.automationConfig = cfg;
+        this.flash('自动化开关已保存');
+      } catch (e) {
+        this.flash('保存自动化开关失败：' + e.message, 5000);
+      } finally {
+        this.automationSaving = false;
+      }
+    },
+
     normalizePunctuation(text) {
       if (!text) return '';
       let s = String(text);
