@@ -93,7 +93,7 @@ python3 scripts/nightly_style_api.py {date}
 
 标题摘要 API 脚本不会翻译全文，也不会写 `translations/NN.json`。正文 API 脚本会写译文，但必须通过 `translate_pipeline.py --post` 和 `pre_push_check.py`。正文 API 输出较长，workflow 会设置 `TRANSLATOR_FULLTEXT_MAX_TOKENS=12000`，不要沿用标题摘要的短输出上限。API 抓正文必须使用脚本内的 `extract_article_text()` 或 `article_cache.py`，优先抽取 IGN 的正文段落并过滤导航、页脚、作者简介、推荐链接；不要再用整页 HTML 去标签的方式喂给模型。
 
-DeepSeek 用量看板读取 `data/usage/deepseek/*.json` 和 `data/usage/deepseek-balance.json`。这些文件是旁路观测数据：记录失败不得中断翻译；余额查询失败不得影响 RSS、标题摘要、正文翻译或夜间学习。
+DeepSeek 用量看板读取 `data/usage/deepseek/*.json` 和 `data/usage/deepseek-balance.json`。这些文件是旁路观测数据：记录失败不得中断翻译；余额查询失败不得影响 RSS、标题摘要、正文翻译或夜间学习。用量日志应尽量写入 `article_id`、`article_title`、`article_url`、`article_date` 和 `estimated_cost_usd`；成本按 DeepSeek 官方每 1M tokens 价格估算，真实扣费以 DeepSeek 账户余额为准。
 
 API prompt 的长规则块必须通过 `scripts/prompt_blocks.py` 生成，尽量保持字段顺序、文本和位置稳定，方便 DeepSeek 自动上下文缓存命中。不要在各脚本里复制粘贴不同版本的 `TRANSLATION_GUIDE.md` / `STYLE_PROFILE.md` prompt。
 

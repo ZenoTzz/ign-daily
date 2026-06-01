@@ -367,6 +367,7 @@ def translate_date(date: str, limit: int = 8) -> int:
                 model=model,
                 usage=usage,
                 article_id=article.get("id"),
+                article_title=article.get("cn_title") or article.get("en_title"),
                 article_url=article.get("url"),
                 article_date=date,
             )

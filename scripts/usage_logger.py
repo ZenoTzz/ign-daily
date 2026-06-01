@@ -17,6 +17,18 @@ from common_paths import DATA_DIR
 CST = timezone(timedelta(hours=8))
 USAGE_DIR = DATA_DIR / "usage" / "deepseek"
 INDEX_PATH = USAGE_DIR / "index.json"
+PRICING_USD_PER_MILLION = {
+    "deepseek-v4-flash": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28,
+    },
+    "deepseek-v4-pro": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87,
+    },
+}
 
 
 def load_json(path: Path, default: Any) -> Any:
@@ -56,12 +68,41 @@ def normalize_usage(usage: dict[str, Any]) -> dict[str, int]:
     }
 
 
+def normalize_model_key(model: str) -> str:
+    value = (model or "").lower()
+    if "deepseek-v4-pro" in value:
+        return "deepseek-v4-pro"
+    if "deepseek-v4-flash" in value or "deepseek-chat" in value or "deepseek-reasoner" in value:
+        return "deepseek-v4-flash"
+    return value
+
+
+def estimate_cost_usd(model: str, usage: dict[str, int]) -> tuple[float | None, dict[str, float] | None]:
+    pricing = PRICING_USD_PER_MILLION.get(normalize_model_key(model))
+    if not pricing:
+        return None, None
+
+    hit = usage.get("prompt_cache_hit_tokens", 0)
+    miss = usage.get("prompt_cache_miss_tokens", 0)
+    if hit == 0 and miss == 0 and usage.get("prompt_tokens", 0):
+        # Some OpenAI-compatible providers omit cache split; estimate input as cache miss.
+        miss = usage.get("prompt_tokens", 0)
+
+    cost = (
+        hit * pricing["prompt_cache_hit_tokens"]
+        + miss * pricing["prompt_cache_miss_tokens"]
+        + usage.get("completion_tokens", 0) * pricing["completion_tokens"]
+    ) / 1_000_000
+    return round(cost, 8), pricing
+
+
 def record_deepseek_usage(
     *,
     task: str,
     model: str,
     usage: dict[str, Any] | None,
     article_id: int | None = None,
+    article_title: str | None = None,
     article_url: str | None = None,
     article_date: str | None = None,
     detail: str | None = None,
@@ -77,14 +118,18 @@ def record_deepseek_usage(
         records = []
 
     normalized = normalize_usage(usage)
+    estimated_cost_usd, pricing = estimate_cost_usd(model, normalized)
     records.append({
         "time_cn": now.strftime("%Y-%m-%d %H:%M:%S"),
         "task": task,
         "model": model,
         "article_id": article_id,
+        "article_title": article_title or "",
         "article_url": article_url,
         "article_date": article_date,
         "detail": detail or "",
+        "estimated_cost_usd": estimated_cost_usd,
+        "pricing_usd_per_million": pricing or {},
         **normalized,
     })
     data = {"date": usage_date, "records": records}

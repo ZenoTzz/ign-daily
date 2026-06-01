@@ -211,6 +211,7 @@ def translate_paragraph_chunks(
             model=model,
             usage=usage,
             article_id=article.get("id"),
+            article_title=article.get("cn_title") or article.get("en_title"),
             article_url=article.get("url"),
             article_date=article_date,
             detail=f"paragraphs {chunk[0][0]}-{chunk[-1][0]}",
@@ -318,6 +319,7 @@ def translate_date(date: str, limit: int = 2) -> int:
             model=model,
             usage=usage,
             article_id=article.get("id"),
+            article_title=article.get("cn_title") or article.get("en_title"),
             article_url=article.get("url"),
             article_date=date,
         )
