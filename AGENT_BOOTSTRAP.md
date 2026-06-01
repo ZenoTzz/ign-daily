@@ -19,6 +19,14 @@ cd ign-daily
 
 **一切都在这个仓库里**——文档、脚本、词库、数据、前端页面。
 
+> ⚠️ **翻译完成后必须跑三连校验：**
+> ```bash
+> python3 scripts/post_translate_check.py {date}
+> python3 scripts/check_currency.py {date}
+> python3 scripts/enforce_dict_titles.py {date}
+> ```
+> 三个脚本都在 `scripts/` 目录下，全部通过才能 push。
+
 ## 关键文件（按重要性排序，必读）
 
 1. **`TRANSLATION_GUIDE.md`** — 翻译风格圣经。所有标点、人名、金额、词库规则。翻译前必读。
@@ -77,6 +85,8 @@ ign-daily/
 - **AI 猜的新译名写 pending_dict，不要直接入词库**
 - **永远不要删除历史 data/{date}/ 文件夹**
 - **推送必须用 `python3 scripts/git_push.py`**
+- **每个翻译任务完成后 push 前必须跑三连校验：**
+  `scripts/post_translate_check.py` + `check_currency.py` + `enforce_dict_titles.py`，全部通过才能 push
 
 ## 通知渠道
 

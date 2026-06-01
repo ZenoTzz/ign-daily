@@ -264,6 +264,9 @@ workspace/
 
 ## ⚙️ 关键脚本说明
 
+> 🔴 **这些脚本都在仓库的 `scripts/` 目录下**（同步自 workspace），直接在 ign-daily 项目下运行即可：`python3 scripts/xxx.py`
+> 不在 ign-daily 仓库的旧版本在 `workspace/scripts/`（忽略，已过时）
+
 ### `scripts/ign_rss_incremental.py` - 心跳增量抓取
 
 - **用法:** `python3 scripts/ign_rss_incremental.py`
@@ -338,7 +341,13 @@ workspace/
 8. AI 推测新词写 `pending_dict`，不静默入库
 9. **副标题 `subtitle`：2-15字创意短句，自拟，不是 paragraphs[0]**
 10. **文件名补零：** id=5 → `05.json`，不补零前端 404
-11. **push 前必跑：** `post_translate_check.py` + `check_currency.py` + `enforce_dict_titles.py`
+11. **push 前必跑三连校验（按顺序）**
+    ```bash
+    python3 scripts/post_translate_check.py {date}
+    python3 scripts/check_currency.py {date}
+    python3 scripts/enforce_dict_titles.py {date}
+    ```
+    三个都必须通过才能 push。
 12. **改了代码/流程必同步：** AGENT_HANDOFF.md + IGN_TRANSLATE_INSTRUCTIONS.md + HEARTBEAT.md
 
 ---
