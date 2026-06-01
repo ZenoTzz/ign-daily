@@ -93,6 +93,25 @@ const GH = {
       throw new Error(`DELETE ${path} failed: ${res.status} ${err.message || ''}`);
     }
     return res.json();
+  },
+
+  async dispatchWorkflow(workflowFile) {
+    const token = localStorage.getItem('gh_token');
+    if (!token) throw new Error('未配置 GitHub Token，请在右上角 ⚙️ 设置');
+    const res = await fetch(`${this.apiBase}/repos/${this.owner}/${this.repo}/actions/workflows/${workflowFile}/dispatches`, {
+      method: 'POST',
+      headers: {
+        Authorization: `token ${token}`,
+        Accept: 'application/vnd.github+json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ ref: this.branch })
+    });
+    if (!res.ok) {
+      const err = await res.json().catch(() => ({}));
+      throw new Error(`触发 ${workflowFile} 失败: ${res.status} ${err.message || ''}`);
+    }
+    return true;
   }
 };
 
@@ -131,6 +150,7 @@ function appData() {
       api_base_url: 'https://api.deepseek.com'
     },
     automationSaving: false,
+    automationTriggering: false,
     toast: '',
 
     // 全局待确认词库
@@ -418,10 +438,32 @@ function appData() {
         );
         this.automationConfig = cfg;
         this.flash('自动化开关已保存');
+        return true;
       } catch (e) {
         this.flash('保存自动化开关失败：' + e.message, 5000);
+        return false;
       } finally {
         this.automationSaving = false;
+      }
+    },
+
+    async runApiTranslationNow() {
+      const titleApi = this.automationConfig.title_translator === 'api' || this.automationConfig.title_translator === 'deepseek';
+      const fulltextApi = this.automationConfig.fulltext_translator === 'api' || this.automationConfig.fulltext_translator === 'deepseek';
+      if (!titleApi && !fulltextApi) {
+        this.flash('请先把标题/摘要或正文翻译切到 API', 3500);
+        return;
+      }
+      try {
+        this.automationTriggering = true;
+        const saved = await this.saveAutomationConfig();
+        if (!saved) return;
+        await GH.dispatchWorkflow('api-translation.yml');
+        this.flash('已触发 API 翻译，稍后刷新查看结果', 4500);
+      } catch (e) {
+        this.flash('触发 API 翻译失败：' + e.message, 6000);
+      } finally {
+        this.automationTriggering = false;
       }
     },
 

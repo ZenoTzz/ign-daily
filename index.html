@@ -17,7 +17,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <script defer src="assets/alpine.min.js"></script>
   <link rel="stylesheet" href="assets/style.css?v=20260531b">
-  <script src="assets/app.js?v=20260602c"></script>
+  <script src="assets/app.js?v=20260602d"></script>
 </head>
 <body>
   <!-- SVG Icon Definitions -->
@@ -234,6 +234,9 @@
         </p>
         <button @click="saveAutomationConfig()" :disabled="automationSaving" class="btn btn-primary" style="margin-top:0.75rem;">
           <span x-text="automationSaving ? '保存中...' : '保存自动化开关'"></span>
+        </button>
+        <button @click="runApiTranslationNow()" :disabled="automationSaving || automationTriggering" class="btn btn-green" style="margin-top:0.75rem; margin-left:0.5rem;">
+          <span x-text="automationTriggering ? '触发中...' : '立即运行 API 翻译'"></span>
         </button>
       </div>
 

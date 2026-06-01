@@ -509,6 +509,7 @@ workspace/
   - `fulltext_translator=openclaw|api`
 - `openclaw`：保留队列给 OpenClaw；`api`：GitHub Actions 调用 OpenAI-compatible API。
 - API 模式需要 GitHub Secret `TRANSLATOR_API_KEY`（兼容旧名 `DEEPSEEK_API_KEY`）。网页会把 `api_model` 和 `api_base_url` 写入 `data/automation-config.json`，Actions 优先使用这里的模型；常用值是 `deepseek-v4-flash` 或 `deepseek-v4-pro`。
+- 网页设置面板的“立即运行 API 翻译”按钮会先保存 `data/automation-config.json`，再触发 GitHub Actions `api-translation.yml` 的 `workflow_dispatch`；按钮依赖浏览器本地 PAT 具备 Actions 写权限。
 - 标题摘要 API 脚本只处理 `need_titles.json`，不会翻译全文，也不会写 `translations/NN.json`。
 - 正文 API 脚本处理 `requests.json`，写 `translations/NN.json` 后必须跑 `translate_pipeline.py --post` 和 `pre_push_check.py`，不通过就不 push。
 - API 标题/正文脚本都会读取 `TRANSLATION_GUIDE.md` 和 `STYLE_PROFILE.md`；夜间学习任务更新 `STYLE_PROFILE.md` 后，下一轮 API 翻译会自动吃到新风格。
