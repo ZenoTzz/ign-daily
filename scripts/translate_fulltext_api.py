@@ -137,24 +137,110 @@ def build_messages(article: dict[str, Any], paragraphs: list[str], terms: dict[s
     ]
 
 
-def normalize_translation(article: dict[str, Any], result: dict[str, Any], paragraphs_en: list[str]) -> dict[str, Any]:
-    paragraphs = result.get("paragraphs")
-    if not isinstance(paragraphs, list) or not paragraphs:
+def extract_paragraph_items(result: dict[str, Any]) -> list[Any]:
+    for key in ("paragraphs", "translated_paragraphs", "translations", "body_paragraphs"):
+        value = result.get(key)
+        if isinstance(value, list) and value:
+            return value
+    body = result.get("body") or result.get("content") or result.get("cn_body")
+    if isinstance(body, str) and body.strip():
+        return [p.strip() for p in re.split(r"\n{2,}", body) if p.strip()]
+    return []
+
+
+def normalize_paragraphs(result: dict[str, Any], paragraphs_en: list[str]) -> list[dict[str, str]]:
+    items = extract_paragraph_items(result)
+    if not items:
         raise ValueError("model returned empty paragraphs")
+
     normalized = []
     for i, en in enumerate(paragraphs_en):
-        item = paragraphs[i] if i < len(paragraphs) and isinstance(paragraphs[i], dict) else {}
-        cn = str(item.get("cn") or "").strip()
+        item = items[i] if i < len(items) else None
+        if isinstance(item, dict):
+            cn = str(item.get("cn") or item.get("zh") or item.get("translation") or item.get("text") or "").strip()
+        elif isinstance(item, str):
+            cn = item.strip()
+        else:
+            cn = ""
         if not cn:
             raise ValueError(f"paragraph {i + 1} missing cn")
         normalized.append({"en": en, "cn": cn})
+    return normalized
+
+
+def build_chunk_messages(article: dict[str, Any], chunk: list[tuple[int, str]], terms: dict[str, str]) -> list[dict[str, str]]:
+    system = (
+        "你是 IGN Daily 的中文逐段翻译 agent。只输出严格 JSON，不要 Markdown。"
+        "必须返回与 paragraphs_en 数量完全一致的 paragraphs 数组。"
+        "每个元素必须包含 index 和 cn。中文标点用全角，作品名用《》。"
+    )
+    user = {
+        "article": {
+            "id": article.get("id"),
+            "url": article.get("url"),
+            "en_title": article.get("en_title"),
+            "cn_title": article.get("cn_title"),
+        },
+        "matched_dictionary_terms": terms,
+        "style_profile": read_optional("STYLE_PROFILE.md", 5000),
+        "paragraphs_en": [{"index": idx, "en": en} for idx, en in chunk],
+        "required_json_schema": {
+            "paragraphs": [{"index": 1, "cn": "中文译文"}]
+        },
+    }
+    return [
+        {"role": "system", "content": system},
+        {"role": "user", "content": json.dumps(user, ensure_ascii=False)},
+    ]
+
+
+def translate_paragraph_chunks(
+    api_key: str,
+    model: str,
+    base_url: str,
+    article: dict[str, Any],
+    paragraphs_en: list[str],
+    terms: dict[str, str],
+) -> list[dict[str, str]]:
+    translated: dict[int, str] = {}
+    chunk_size = int(os.environ.get("TRANSLATOR_FULLTEXT_CHUNK_SIZE", "6"))
+    indexed = list(enumerate(paragraphs_en, start=1))
+    for start in range(0, len(indexed), chunk_size):
+        chunk = indexed[start:start + chunk_size]
+        raw = call_deepseek(
+            api_key,
+            model,
+            base_url,
+            build_chunk_messages(article, chunk, terms),
+            max_tokens=int(os.environ.get("TRANSLATOR_FULLTEXT_CHUNK_MAX_TOKENS", "4000")),
+        )
+        result = extract_json(raw)
+        items = extract_paragraph_items(result)
+        if len(items) < len(chunk):
+            raise ValueError(f"chunk returned {len(items)} paragraphs, expected {len(chunk)}")
+        for fallback, item in zip(chunk, items):
+            fallback_idx = fallback[0]
+            if isinstance(item, dict):
+                idx = int(item.get("index") or fallback_idx)
+                cn = str(item.get("cn") or item.get("zh") or item.get("translation") or item.get("text") or "").strip()
+            else:
+                idx = fallback_idx
+                cn = str(item).strip()
+            if not cn:
+                raise ValueError(f"chunk paragraph {idx} missing cn")
+            translated[idx] = cn
+    return [{"en": en, "cn": translated[i]} for i, en in indexed]
+
+
+def normalize_translation(article: dict[str, Any], result: dict[str, Any], paragraphs_en: list[str]) -> dict[str, Any]:
+    normalized = normalize_paragraphs(result, paragraphs_en)
     return {
         "id": article["id"],
         "url": article["url"],
         "en_title": article["en_title"],
         "cn_title": str(result.get("cn_title") or article.get("cn_title") or article["en_title"]).strip(),
-        "subtitle": str(result.get("subtitle") or "").strip(),
-        "opus_summary": str(result.get("opus_summary") or result.get("summary") or article.get("summary") or "").strip(),
+        "subtitle": str(result.get("subtitle") or article.get("subtitle") or "看点来了").strip(),
+        "opus_summary": str(result.get("opus_summary") or result.get("summary") or article.get("summary") or article.get("cn_title") or "").strip(),
         "publish_time_cn": article.get("publish_time_cn") or article.get("pub_date") or "",
         "paragraphs": normalized,
         "pending_dict": result.get("pending_dict") if isinstance(result.get("pending_dict"), list) else [],
@@ -217,7 +303,12 @@ def translate_date(date: str, limit: int = 2) -> int:
         terms = matched_terms(article.get("en_title", "") + "\n" + text)
         max_tokens = int(os.environ.get("TRANSLATOR_FULLTEXT_MAX_TOKENS", "12000"))
         raw = call_deepseek(api_key, model, base_url, build_messages(article, paragraphs_en, terms), max_tokens=max_tokens)
-        data = normalize_translation(article, extract_json(raw), paragraphs_en)
+        result = extract_json(raw)
+        try:
+            data = normalize_translation(article, result, paragraphs_en)
+        except ValueError as exc:
+            print(f"[RETRY] fulltext #{article['id']} paragraph format issue: {exc}")
+            data = normalize_translation(article, {**result, "paragraphs": translate_paragraph_chunks(api_key, model, base_url, article, paragraphs_en, terms)}, paragraphs_en)
         trans_path = DATA_DIR / date / "translations" / f"{article['id']:02d}.json"
         write_json(trans_path, data)
         subprocess.run([sys.executable, str(REPO_ROOT / "scripts" / "translate_pipeline.py"), date, str(article["id"]), "--post"], cwd=REPO_ROOT, check=True)
