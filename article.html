@@ -358,7 +358,7 @@
             <template x-for="(p, idx) in article?.paragraphs || []" :key="idx">
               <div class="para-row" :class="{'mobile-hide-en': viewMode==='cn', 'mobile-hide-cn': viewMode==='en'}">
                 <div class="para-cn-wrap">
-                  <p class="para-cn" x-html="highlightMissEn(p.cn)"></p>
+                  <p class="para-cn" x-html="highlightMissEn(paragraphCn(p))"></p>
                   <button class="para-edit-btn" @click="openEditPara(idx)" title="编辑该段译文">✏️</button>
                 </div>
                 <p class="para-en lg:block" :class="{'lg:hidden': viewMode==='cn' || viewMode==='en'}" x-text="p.en"></p>
@@ -417,7 +417,7 @@
           </div>
           <template x-for="(p, idx) in article?.paragraphs || []" :key="idx">
             <div class="para-cn-wrap">
-              <p class="para-cn mb-4 leading-relaxed" x-html="highlightMissEn(p.cn)"></p>
+              <p class="para-cn mb-4 leading-relaxed" x-html="highlightMissEn(paragraphCn(p))"></p>
               <button class="para-edit-btn" @click="openEditPara(idx)" title="编辑该段译文">✏️</button>
             </div>
           </template>
@@ -433,7 +433,7 @@
             <h2 class="text-xl font-bold mb-1" x-text="article?.cn_title"></h2>
             <p class="text-sm text-slate-500 italic mb-4" x-text="article?.cn_subtitle || article?.summary || ''"></p>
             <template x-for="(p, idx) in article?.paragraphs || []" :key="idx">
-              <p class="mb-3 leading-relaxed text-sm text-slate-700" x-text="p.cn"></p>
+              <p class="mb-3 leading-relaxed text-sm text-slate-700" x-text="paragraphCn(p)"></p>
             </template>
           </div>
         </div>
@@ -1088,6 +1088,31 @@
         },
 
         // ---- 段落编辑 ----
+        paragraphCn(p) {
+          if (!p) return '';
+          if (typeof p === 'string') return p;
+          return p.cn || p.zh || p.text_cn || p.translation || p.text || '';
+        },
+
+        articleBodyText() {
+          if (!this.article) return '';
+          const paragraphs = Array.isArray(this.article.paragraphs) ? this.article.paragraphs : [];
+          const fromParagraphs = paragraphs
+            .map(p => this.paragraphCn(p).trim())
+            .filter(Boolean)
+            .join('\n\n');
+          return fromParagraphs || this.article.cn_body || this.article.body || this.article.content || this.article.text || '';
+        },
+
+        buildPolishDraftFromTranslation() {
+          return {
+            title: this.article?.cn_title || this.article?.title || '',
+            subtitle: this.article?.subtitle || this.article?.cn_subtitle || this.article?.summary || this.article?.opus_summary || '',
+            body: this.articleBodyText(),
+            updated_at: null,
+          };
+        },
+
         openEditPara(idx) {
           this.editParaIdx = idx;
           const p = this.article.paragraphs[idx];
@@ -1469,15 +1494,16 @@
 
           // 如果索引有则使用实际文件名；否则从当前 cn_title 推断（能匹配上则取，否则 fillFromTrans）
           const filename = actualPath || (this.makePolishFilename() + '.json');
-          const url = `data/${date}/polished/${filename}?t=${Date.now()}`;
+          const url = `data/${date}/polished/${encodeURIComponent(filename)}?t=${Date.now()}`;
           try {
             const res = await fetch(url);
             if (res.ok) {
               const d = await res.json();
+              const fallback = this.buildPolishDraftFromTranslation();
               this.polishData = {
-                title: d.title || '',
-                subtitle: d.subtitle || '',
-                body: d.body || '',
+                title: d.title || d.cn_title || fallback.title,
+                subtitle: d.subtitle || d.cn_subtitle || d.summary || fallback.subtitle,
+                body: d.body || d.cn_body || d.content || fallback.body,
                 updated_at: d.updated_at || null,
               };
               this.polishExists = true;
@@ -1498,12 +1524,7 @@
 
         fillPolishFromTranslation() {
           if (!this.article) return;
-          this.polishData = {
-            title: this.article.cn_title || '',
-            subtitle: this.article.subtitle || this.article.cn_subtitle || this.article.summary || '',
-            body: (this.article.paragraphs || []).map(p => p.cn).join('\n\n'),
-            updated_at: null,
-          };
+          this.polishData = this.buildPolishDraftFromTranslation();
           this.polishDirty = false;
         },
 
