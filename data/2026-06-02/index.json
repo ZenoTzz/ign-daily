@@ -277,11 +277,11 @@
     },
     {
       "id": 9,
-      "category": "游戏新闻",
+      "category": "人物新闻",
       "emoji": "🎮",
       "en_title": "Hot on the Heels of Katsuhiro Harada's Exit From Bandai Namco, the Director of Tekken 7 and 8 Has Left Too",
-      "cn_title": "Hot on the Heels of Katsuhiro Harada's Exit From Bandai Namco, the Director of Tekken 7 and 8 Has Left Too",
-      "summary": "",
+      "cn_title": "《铁拳7》《铁拳8》总监离职万代南梦宫",
+      "summary": "继原田胜弘之后，《铁拳7》和《铁拳8》的游戏总监池田幸平（Kohei 'Nakatsu' Ikeda）也离开了万代南梦宫，结束了20年的任职。他在告别声明中感谢了玩家支持，但未透露下一步计划。外界猜测他将加入原田的新工作室VS Studio，该工作室已与SNK合作。铁拳系列的未来引发玩家担忧。",
       "url": "https://www.ign.com/articles/hot-on-the-heels-of-katsuhiro-haradas-exit-from-bandai-namco-the-director-of-tekken-7-and-8-has-left-too",
       "publish_time_cn": "2026-06-01 17:06",
       "pub_date": "2026-06-01 17:06",
@@ -295,15 +295,27 @@
         "https://assets-prd.ignimgs.com/2026/06/01/ss-7c55021d3ba8e4f14c6d9dbea9f19d9b7665d5f0-1920x1080-1780304440098.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-01T23:41:46+08:00"
+      "source_fetched_at": "2026-06-01T23:41:46+08:00",
+      "pending_dict": [
+        {
+          "en": "Kohei 'Nakatsu' Ikeda",
+          "cn": "池田幸平",
+          "reason": "人物名，词库未收录，需人工确认译名"
+        },
+        {
+          "en": "VS Studio",
+          "cn": "VS Studio",
+          "reason": "工作室名，无官方中文译名，保留英文"
+        }
+      ]
     },
     {
       "id": 10,
-      "category": "游戏新闻",
-      "emoji": "🎮",
+      "category": "影视资讯",
+      "emoji": "🎬",
       "en_title": "Toy Story 5 Taylor Swift Teases Appear in Cities Nationwide and Online, as Pixar Offers Coy Response",
-      "cn_title": "Toy Story 5 Taylor Swift Teases Appear in Cities Nationwide and Online, as Pixar Offers Coy Response",
-      "summary": "",
+      "cn_title": "泰勒·斯威夫特加盟《玩具总动员5》？迪士尼疯狂暗示",
+      "summary": "迪士尼近日在全美多地投放《玩具总动员5》广告牌，仅显示字母“TS”，并在社交媒体上引用泰勒·斯威夫特歌词，暗示其参与该片。此前粉丝已发现泰勒官网倒计时、MV彩蛋等线索。导演安德鲁·斯坦顿曾否认，但迪士尼的最新动作让传闻再起。",
       "url": "https://www.ign.com/articles/toy-story-5-taylor-swift-teases-appear-in-cities-nationwide-and-online-as-pixar-offers-coy-response",
       "publish_time_cn": "2026-06-01 17:05",
       "pub_date": "2026-06-01 17:05",
@@ -317,15 +329,27 @@
         "https://assets-prd.ignimgs.com/2026/06/01/gettyimages-2277907896-1780304572373.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-01T23:41:46+08:00"
+      "source_fetched_at": "2026-06-01T23:41:46+08:00",
+      "pending_dict": [
+        {
+          "en": "Andrew Stanton",
+          "cn": "安德鲁·斯坦顿",
+          "reason": "词库未收录，但为知名导演，建议翻译"
+        },
+        {
+          "en": "Shivani Khosla",
+          "cn": "Shivani Khosla",
+          "reason": "不知名人物，保留英文"
+        }
+      ]
     },
     {
       "id": 11,
-      "category": "游戏新闻",
-      "emoji": "🎮",
+      "category": "影视资讯",
+      "emoji": "🎬",
       "en_title": "Euphoria Is Officially Over With Season 3 Finale",
-      "cn_title": "Euphoria Is Officially Over With Season 3 Finale",
-      "summary": "",
+      "cn_title": "《亢奋》第三季大结局，系列正式完结",
+      "summary": "《亢奋》主创萨姆·莱文森确认第三季第八集即为系列大结局。这部由赞达亚、西德妮·斯威尼等主演的HBO热门剧集，在经历四年间隔后正式落幕。赞达亚此前已暗示第三季将是最终季，粉丝们虽有不舍，但普遍认为这是最好的结局。",
       "url": "https://www.ign.com/articles/euphoria-is-officially-over-with-season-3-finale",
       "publish_time_cn": "2026-06-01 16:33",
       "pub_date": "2026-06-01 16:33",
@@ -343,11 +367,11 @@
     },
     {
       "id": 12,
-      "category": "游戏新闻",
-      "emoji": "🎮",
+      "category": "影视资讯",
+      "emoji": "🔬",
       "en_title": "Rick and Morty Season 9, Episode 2 Review: \"Ricks Days, Seven Nights\"",
-      "cn_title": "Rick and Morty Season 9, Episode 2 Review: \"Ricks Days, Seven Nights\"",
-      "summary": "",
+      "cn_title": "《瑞克和莫蒂》S9E2：度假变噩梦",
+      "summary": "《瑞克和莫蒂》第九季第二集「Ricks Days, Seven Nights」中，瑞克化名泰德试图享受平凡假期，却与自己的无人机大军展开激战。胜利后朋友们因接触超科学而堕落，瑞克最终彻底变回原形。本集情感冲击力强，深刻揭示了瑞克存在的痛苦。",
       "url": "https://www.ign.com/articles/rick-and-morty-season-9-episode-2-review-recap",
       "publish_time_cn": "2026-06-01 11:00",
       "pub_date": "2026-06-01 11:00",
