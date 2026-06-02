@@ -155,8 +155,22 @@ function appData() {
       api_fulltext_batch: '5',
       compare_models: ['deepseek-v4-pro', 'deepseek-v4-flash'],
       api_models: [
-        { label: 'DeepSeek V4 Pro', model: 'deepseek-v4-pro', base_url: 'https://api.deepseek.com' },
-        { label: 'DeepSeek V4 Flash', model: 'deepseek-v4-flash', base_url: 'https://api.deepseek.com' }
+        {
+          label: 'DeepSeek V4 Pro',
+          model: 'deepseek-v4-pro',
+          base_url: 'https://api.deepseek.com',
+          input_cache_hit_usd_per_million: 0.003625,
+          input_cache_miss_usd_per_million: 0.435,
+          output_usd_per_million: 0.87
+        },
+        {
+          label: 'DeepSeek V4 Flash',
+          model: 'deepseek-v4-flash',
+          base_url: 'https://api.deepseek.com',
+          input_cache_hit_usd_per_million: 0.0028,
+          input_cache_miss_usd_per_million: 0.14,
+          output_usd_per_million: 0.28
+        }
       ]
     },
     automationSaving: false,
@@ -420,8 +434,22 @@ function appData() {
     // ---- 一键复制今日摘要（中文标点 + 去 markdown）----
     defaultApiModels() {
       return [
-        { label: 'DeepSeek V4 Pro', model: 'deepseek-v4-pro', base_url: 'https://api.deepseek.com' },
-        { label: 'DeepSeek V4 Flash', model: 'deepseek-v4-flash', base_url: 'https://api.deepseek.com' }
+        {
+          label: 'DeepSeek V4 Pro',
+          model: 'deepseek-v4-pro',
+          base_url: 'https://api.deepseek.com',
+          input_cache_hit_usd_per_million: 0.003625,
+          input_cache_miss_usd_per_million: 0.435,
+          output_usd_per_million: 0.87
+        },
+        {
+          label: 'DeepSeek V4 Flash',
+          model: 'deepseek-v4-flash',
+          base_url: 'https://api.deepseek.com',
+          input_cache_hit_usd_per_million: 0.0028,
+          input_cache_miss_usd_per_million: 0.14,
+          output_usd_per_million: 0.28
+        }
       ];
     },
 
@@ -438,7 +466,10 @@ function appData() {
           label: String(item?.label || this.formatTranslatorModel(model) || model).trim(),
           model,
           base_url: String(item?.base_url || item?.baseUrl || this.automationConfig?.api_base_url || 'https://api.deepseek.com').trim(),
-          provider: String(item?.provider || 'openai-compatible').trim()
+          provider: String(item?.provider || 'openai-compatible').trim(),
+          input_cache_hit_usd_per_million: item?.input_cache_hit_usd_per_million ?? item?.pricing_usd_per_million?.prompt_cache_hit_tokens ?? '',
+          input_cache_miss_usd_per_million: item?.input_cache_miss_usd_per_million ?? item?.pricing_usd_per_million?.prompt_cache_miss_tokens ?? '',
+          output_usd_per_million: item?.output_usd_per_million ?? item?.pricing_usd_per_million?.completion_tokens ?? ''
         });
       }
       for (const item of defaults) {
@@ -454,7 +485,15 @@ function appData() {
 
     addApiModel() {
       const models = this.normalizeApiModels(this.automationConfig.api_models);
-      models.push({ label: '新模型', model: '', base_url: this.automationConfig.api_base_url || 'https://api.deepseek.com', provider: 'openai-compatible' });
+      models.push({
+        label: '新模型',
+        model: '',
+        base_url: this.automationConfig.api_base_url || 'https://api.deepseek.com',
+        provider: 'openai-compatible',
+        input_cache_hit_usd_per_million: '',
+        input_cache_miss_usd_per_million: '',
+        output_usd_per_million: ''
+      });
       this.automationConfig.api_models = models;
     },
 

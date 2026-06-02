@@ -105,6 +105,11 @@ python3 scripts/nightly_style_api.py {date}
 `comparison_status=done`；它不得写 `translations/NN.json`，不得移除
 `requests.json`，也不得参与定时任务。
 
+`api_models` 是所有 API 模型的唯一目录。每个条目至少包含 `label`、`model`、
+`base_url`；可选价格字段为 `input_cache_hit_usd_per_million`、
+`input_cache_miss_usd_per_million`、`output_usd_per_million`。用量日志和
+`usage.html` 都优先读取这些价格；没有价格的模型可以正常翻译，但成本显示为未配置。
+
 `article_cache.py` 会写 `data/{date}/sources/NN.json`，里面保存 `body_en`、`paragraphs_en`、`cover_image` 和 `images`。标题摘要和正文 API 都优先读取这个缓存；只有缓存缺失才会临时抓网页。不要让模型负责抓正文或图片。
 
 标题摘要 API 脚本不会翻译全文，也不会写 `translations/NN.json`。正文 API 脚本会写译文，但必须通过 `translate_pipeline.py --post` 和 `pre_push_check.py`。正文 API 输出较长，workflow 会设置 `TRANSLATOR_FULLTEXT_MAX_TOKENS=12000`，不要沿用标题摘要的短输出上限。API 抓正文必须使用脚本内的 `extract_article_text()` 或 `article_cache.py`，优先抽取 IGN 的正文段落并过滤导航、页脚、作者简介、推荐链接；不要再用整页 HTML 去标签的方式喂给模型。

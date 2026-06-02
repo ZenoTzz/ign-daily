@@ -18,13 +18,19 @@
       "label": "DeepSeek V4 Pro",
       "model": "deepseek-v4-pro",
       "base_url": "https://api.deepseek.com",
-      "provider": "openai-compatible"
+      "provider": "openai-compatible",
+      "input_cache_hit_usd_per_million": 0.003625,
+      "input_cache_miss_usd_per_million": 0.435,
+      "output_usd_per_million": 0.87
     },
     {
       "label": "DeepSeek V4 Flash",
       "model": "deepseek-v4-flash",
       "base_url": "https://api.deepseek.com",
-      "provider": "openai-compatible"
+      "provider": "openai-compatible",
+      "input_cache_hit_usd_per_million": 0.0028,
+      "input_cache_miss_usd_per_million": 0.14,
+      "output_usd_per_million": 0.28
     }
   ],
   "updated_at": "2026-06-01T16:42:54.944Z",

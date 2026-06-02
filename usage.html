@@ -230,7 +230,7 @@
       <div class="chart-title">
         <div>
           <div class="label">最近 API 调用</div>
-          <div class="hint">显示最近 30 条记录，成本按 DeepSeek 官方每 1M tokens 价格估算</div>
+          <div class="hint">显示最近 30 条记录，成本按模型目录里的每 1M tokens 价格估算</div>
         </div>
       </div>
       <div class="table-wrap">
@@ -254,7 +254,7 @@
   </main>
 
   <script>
-    const state = { range: 'day', dates: [], records: [], balance: null, articleMap: {} };
+    const state = { range: 'day', dates: [], records: [], balance: null, articleMap: {}, modelMap: {} };
     const PRICING_USD_PER_MILLION = {
       'deepseek-v4-flash': { hit: 0.0028, miss: 0.14, output: 0.28 },
       'deepseek-v4-pro': { hit: 0.003625, miss: 0.435, output: 0.87 }
@@ -283,12 +283,13 @@
       return lower;
     }
     function pricingFor(model) {
-      return PRICING_USD_PER_MILLION[modelKey(model)] || null;
+      const configured = state.modelMap[model]?.pricing;
+      return configured || PRICING_USD_PER_MILLION[modelKey(model)] || null;
     }
     function recordCost(r) {
       const stored = Number(r.estimated_cost_usd);
       if (Number.isFinite(stored) && stored > 0) return stored;
-      const pricing = pricingFor(r.model);
+      const pricing = pricingFor(r.model) || normalizeStoredPricing(r.pricing_usd_per_million);
       if (!pricing) return 0;
       const prompt = Number(r.prompt_tokens || 0);
       const hit = Number(r.prompt_cache_hit_tokens || 0);
@@ -297,8 +298,24 @@
       const output = Number(r.completion_tokens || 0);
       return (hit * pricing.hit + miss * pricing.miss + output * pricing.output) / 1_000_000;
     }
+    function hasPricing(r) {
+      const stored = Number(r.estimated_cost_usd);
+      return (Number.isFinite(stored) && stored > 0) || Boolean(pricingFor(r.model) || normalizeStoredPricing(r.pricing_usd_per_million));
+    }
+    function normalizeStoredPricing(pricing) {
+      if (!pricing) return null;
+      const hit = Number(pricing.prompt_cache_hit_tokens ?? pricing.hit);
+      const miss = Number(pricing.prompt_cache_miss_tokens ?? pricing.miss);
+      const output = Number(pricing.completion_tokens ?? pricing.output);
+      if (![hit, miss, output].every(Number.isFinite)) return null;
+      return { hit, miss, output };
+    }
+    function fmtCost(value, priced = true) {
+      return priced ? fmtUsd(value) : '未配置';
+    }
     function modelName(model) {
       const raw = String(model || 'unknown');
+      if (state.modelMap[raw]?.label) return state.modelMap[raw].label;
       const lower = raw.toLowerCase();
       if (lower.includes('deepseek') && lower.includes('v4') && lower.includes('pro')) return 'DeepSeek V4 Pro';
       if (lower.includes('deepseek') && lower.includes('v4') && lower.includes('flash')) return 'DeepSeek V4 Flash';
@@ -336,10 +353,11 @@
       const hit = records.reduce((s, r) => s + Number(r.prompt_cache_hit_tokens || 0), 0);
       const miss = records.reduce((s, r) => s + Number(r.prompt_cache_miss_tokens || 0), 0);
       const cost = records.reduce((s, r) => s + recordCost(r), 0);
+      const unpriced = records.filter(r => !hasPricing(r)).length;
       const byModel = {};
       for (const r of records) {
         const key = r.model || 'unknown';
-        byModel[key] ||= { total: 0, prompt: 0, completion: 0, hit: 0, miss: 0, count: 0, cost: 0 };
+        byModel[key] ||= { total: 0, prompt: 0, completion: 0, hit: 0, miss: 0, count: 0, cost: 0, unpriced: 0 };
         byModel[key].total += Number(r.total_tokens || 0);
         byModel[key].prompt += Number(r.prompt_tokens || 0);
         byModel[key].completion += Number(r.completion_tokens || 0);
@@ -347,8 +365,9 @@
         byModel[key].miss += Number(r.prompt_cache_miss_tokens || 0);
         byModel[key].count += 1;
         byModel[key].cost += recordCost(r);
+        if (!hasPricing(r)) byModel[key].unpriced += 1;
       }
-      return { total, prompt, completion, hit, miss, cost, byModel, count: records.length };
+      return { total, prompt, completion, hit, miss, cost, unpriced, byModel, count: records.length };
     }
     function articleKey(record) {
       const date = record.article_date || '';
@@ -376,6 +395,7 @@
           hit: 0,
           miss: 0,
           cost: 0,
+          unpriced: 0,
           count: 0,
         };
         const g = groups[key];
@@ -386,6 +406,7 @@
         g.hit += Number(r.prompt_cache_hit_tokens || 0);
         g.miss += Number(r.prompt_cache_miss_tokens || 0);
         g.cost += recordCost(r);
+        if (!hasPricing(r)) g.unpriced += 1;
         g.count += 1;
       }
       return Object.values(groups).sort((a, b) => b.cost - a.cost);
@@ -415,7 +436,7 @@
       document.getElementById('totalTokens').textContent = fmt(sum.total);
       document.getElementById('requestCount').textContent = `${sum.count} 次 API 调用`;
       document.getElementById('totalCost').textContent = fmtUsd(sum.cost);
-      document.getElementById('costHint').textContent = state.range === 'day' ? '今日估算花费' : '当前范围估算花费';
+      document.getElementById('costHint').textContent = `${state.range === 'day' ? '今日' : '当前范围'}估算花费${sum.unpriced ? `，${sum.unpriced} 次未配置价格` : ''}`;
       document.getElementById('completionTokens').textContent = fmt(sum.completion);
       document.getElementById('promptTokens').textContent = `输入 ${fmt(sum.prompt)}`;
       const input = sum.hit + sum.miss;
@@ -436,9 +457,9 @@
         <div class="bar-row">
           <div class="bar-label" title="${modelName(model)}">${modelName(model)}</div>
           <div class="bar-track"><div class="bar-fill ${modelClass(model)}" style="width:${Math.max(2, v.total / max * 100)}%"></div></div>
-          <div class="bar-num">${fmtUsd(v.cost)}</div>
+          <div class="bar-num">${v.unpriced === v.count ? '未配置' : fmtUsd(v.cost)}</div>
         </div>
-        <div class="hint" style="margin: -4px 0 8px 160px;">${v.count} 次，总量 ${fmt(v.total)}，输入 ${fmt(v.prompt)}，输出 ${fmt(v.completion)}，缓存命中 ${fmt(v.hit)}</div>
+        <div class="hint" style="margin: -4px 0 8px 160px;">${v.count} 次，总量 ${fmt(v.total)}，输入 ${fmt(v.prompt)}，输出 ${fmt(v.completion)}，缓存命中 ${fmt(v.hit)}${v.unpriced ? `，${v.unpriced} 次未配置价格` : ''}</div>
       `).join('') : '<div class="empty">当前范围内还没有 API 用量记录</div>';
 
       const articleBody = document.getElementById('articleCostsBody');
@@ -451,7 +472,7 @@
           </td>
           <td>${[...g.tasks].filter(Boolean).map(t => `<span class="pill">${esc(t)}</span>`).join(' ')}</td>
           <td>${[...g.models].filter(Boolean).map(esc).join('<br>')}</td>
-          <td class="money">${fmtUsd(g.cost)}</td>
+          <td class="money">${g.unpriced === g.count ? '未配置' : fmtUsd(g.cost)}</td>
           <td>${fmt(g.total)}</td>
           <td>${fmt(g.hit)} / ${fmt(g.miss)}</td>
         </tr>
@@ -465,7 +486,7 @@
           <td><span class="pill">${esc(r.task || '')}</span></td>
           <td>${esc(articleTitle(r))}</td>
           <td>${esc(modelName(r.model))}</td>
-          <td class="money">${fmtUsd(recordCost(r))}</td>
+          <td class="money">${fmtCost(recordCost(r), hasPricing(r))}</td>
           <td>${fmt(r.total_tokens)}</td>
           <td>${fmt(r.prompt_tokens)} / ${fmt(r.completion_tokens)}</td>
           <td>${fmt(r.prompt_cache_hit_tokens)} / ${fmt(r.prompt_cache_miss_tokens)}</td>
@@ -486,9 +507,26 @@
         }
       }));
     }
+    async function loadModelConfig() {
+      state.modelMap = {};
+      const config = await fetchJson('data/automation-config.json', null);
+      const models = Array.isArray(config?.api_models) ? config.api_models : [];
+      for (const item of models) {
+        const model = String(item?.model || '').trim();
+        if (!model) continue;
+        const hit = Number(item.input_cache_hit_usd_per_million ?? item.pricing_usd_per_million?.prompt_cache_hit_tokens);
+        const miss = Number(item.input_cache_miss_usd_per_million ?? item.pricing_usd_per_million?.prompt_cache_miss_tokens);
+        const output = Number(item.output_usd_per_million ?? item.pricing_usd_per_million?.completion_tokens);
+        state.modelMap[model] = {
+          label: item.label || model,
+          pricing: [hit, miss, output].every(Number.isFinite) ? { hit, miss, output } : null
+        };
+      }
+    }
     async function load() {
       state.dates = await fetchJson('data/usage/deepseek/index.json', []);
       state.balance = await fetchJson('data/usage/deepseek-balance.json', null);
+      await loadModelConfig();
       const loaded = [];
       for (const date of state.dates) {
         const data = await fetchJson(`data/usage/deepseek/${date}.json`, null);

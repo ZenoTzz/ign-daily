@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Append DeepSeek API usage records for the public dashboard.
+"""Append API usage records for the public dashboard.
 
 This module is deliberately best-effort: usage logging must never break the
 translation pipeline. Callers should use ``record_deepseek_usage_safe``.
@@ -17,6 +17,7 @@ from common_paths import DATA_DIR
 CST = timezone(timedelta(hours=8))
 USAGE_DIR = DATA_DIR / "usage" / "deepseek"
 INDEX_PATH = USAGE_DIR / "index.json"
+CONFIG_PATH = DATA_DIR / "automation-config.json"
 PRICING_USD_PER_MILLION = {
     "deepseek-v4-flash": {
         "prompt_cache_hit_tokens": 0.0028,
@@ -77,8 +78,44 @@ def normalize_model_key(model: str) -> str:
     return value
 
 
+def float_or_none(value: Any) -> float | None:
+    try:
+        if value in (None, ""):
+            return None
+        return float(value)
+    except Exception:
+        return None
+
+
+def pricing_from_model_item(item: dict[str, Any]) -> dict[str, float] | None:
+    nested = item.get("pricing_usd_per_million") if isinstance(item.get("pricing_usd_per_million"), dict) else {}
+    hit = float_or_none(item.get("input_cache_hit_usd_per_million")) or float_or_none(nested.get("prompt_cache_hit_tokens"))
+    miss = float_or_none(item.get("input_cache_miss_usd_per_million")) or float_or_none(nested.get("prompt_cache_miss_tokens"))
+    output = float_or_none(item.get("output_usd_per_million")) or float_or_none(nested.get("completion_tokens"))
+    if hit is None or miss is None or output is None:
+        return None
+    return {
+        "prompt_cache_hit_tokens": hit,
+        "prompt_cache_miss_tokens": miss,
+        "completion_tokens": output,
+    }
+
+
+def pricing_for_model(model: str) -> dict[str, float] | None:
+    config = load_json(CONFIG_PATH, {})
+    if isinstance(config, dict):
+        for item in config.get("api_models", []):
+            if not isinstance(item, dict):
+                continue
+            if str(item.get("model") or "") == model:
+                pricing = pricing_from_model_item(item)
+                if pricing:
+                    return pricing
+    return PRICING_USD_PER_MILLION.get(normalize_model_key(model))
+
+
 def estimate_cost_usd(model: str, usage: dict[str, int]) -> tuple[float | None, dict[str, float] | None]:
-    pricing = PRICING_USD_PER_MILLION.get(normalize_model_key(model))
+    pricing = pricing_for_model(model)
     if not pricing:
         return None, None
 
