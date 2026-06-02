@@ -19,20 +19,20 @@
       "model": "deepseek-v4-pro",
       "base_url": "https://api.deepseek.com",
       "provider": "openai-compatible",
-      "input_cache_hit_usd_per_million": 0.003625,
-      "input_cache_miss_usd_per_million": 0.435,
-      "output_usd_per_million": 0.87
+      "input_cache_hit_usd_per_million": "0.025",
+      "input_cache_miss_usd_per_million": "3",
+      "output_usd_per_million": "6"
     },
     {
       "label": "DeepSeek V4 Flash",
       "model": "deepseek-v4-flash",
       "base_url": "https://api.deepseek.com",
       "provider": "openai-compatible",
-      "input_cache_hit_usd_per_million": 0.0028,
-      "input_cache_miss_usd_per_million": 0.14,
-      "output_usd_per_million": 0.28
+      "input_cache_hit_usd_per_million": "0.02",
+      "input_cache_miss_usd_per_million": "1",
+      "output_usd_per_million": "2"
     }
   ],
-  "updated_at": "2026-06-02T06:48:51.428Z",
+  "updated_at": "2026-06-02T06:50:04.969Z",
   "notes": "Public switch only. API keys must stay in GitHub Actions Secrets."
 }
