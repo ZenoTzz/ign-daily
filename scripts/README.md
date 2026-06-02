@@ -23,6 +23,7 @@
 | `deepseek_balance.py` | 调 DeepSeek `/user/balance` 写余额快照 | usage workflow / API workflow |
 | `check_polish_today.py` | 检查今天是否有润色记录（无则跳过学习） | 夜间学习入口 |
 | `fetch_exchange_rates.py` | 拉取当日汇率写入 exchange_rates.json | 每天 8:20 cron |
+| `currency_utils.py` | 统一外币金额后处理与缺失换算检测 | API 标题/正文/对比翻译、`check_currency.py` |
 | `rebuild_index_list.py` | 重建 data/index-list.json（所有日期列表） | 数据修复时 |
 
 ## 辅助脚本
@@ -120,6 +121,8 @@ python3 scripts/nightly_style_api.py {date}
 `usage.html` 都优先读取这些价格；没有价格的模型可以正常翻译，但成本显示为未配置。
 
 `article_cache.py` 会写 `data/{date}/sources/NN.json`，里面保存 `body_en`、`paragraphs_en`、`cover_image` 和 `images`。标题摘要和正文 API 都优先读取这个缓存；只有缓存缺失才会临时抓网页。不要让模型负责抓正文或图片。
+
+API 翻译前 workflow 必须先跑 `python3 scripts/fetch_exchange_rates.py` 刷新汇率。标题摘要、正文和多模型对比都必须通过 `currency_utils.py` 做外币金额后处理；不要只依赖模型按 prompt 自觉换算。`check_currency.py` 会同时检查首页 `index.json` 摘要、`translations/` 正式译文和 `comparisons/` 对比译文。
 
 标题摘要 API 脚本不会翻译全文，也不会写 `translations/NN.json`。正文 API 脚本会写译文，但必须通过 `translate_pipeline.py --post` 和 `pre_push_check.py`。正文 API 输出较长，workflow 会设置 `TRANSLATOR_FULLTEXT_MAX_TOKENS=12000`，不要沿用标题摘要的短输出上限。API 抓正文必须使用脚本内的 `extract_article_text()` 或 `article_cache.py`，优先抽取 IGN 的正文段落并过滤导航、页脚、作者简介、推荐链接；不要再用整页 HTML 去标签的方式喂给模型。
 

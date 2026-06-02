@@ -105,6 +105,12 @@ jobs:
         if: steps.config.outputs.compare_article_id == '' && steps.config.outputs.title_translator != 'api' && steps.config.outputs.title_translator != 'deepseek' && steps.config.outputs.fulltext_translator != 'api' && steps.config.outputs.fulltext_translator != 'deepseek'
         run: echo "API translation disabled by data/automation-config.json."
 
+      - name: Refresh exchange rates
+        if: steps.config.outputs.compare_article_id != '' || steps.config.outputs.title_translator == 'api' || steps.config.outputs.title_translator == 'deepseek' || steps.config.outputs.fulltext_translator == 'api' || steps.config.outputs.fulltext_translator == 'deepseek'
+        run: |
+          set -euo pipefail
+          python3 scripts/fetch_exchange_rates.py || echo "WARN: exchange-rate refresh failed; translation will use fallback/local rates."
+
       - name: Translate one article twice for model comparison
         if: steps.config.outputs.compare_article_id != ''
         env:
@@ -174,6 +180,7 @@ jobs:
             echo "No API translation changes to commit."
             exit 0
           fi
+          git add exchange_rates.json || true
           git commit -m "feat: apply API translation updates"
           git pull --rebase origin main
           git push origin HEAD:main

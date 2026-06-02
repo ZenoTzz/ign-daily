@@ -3,12 +3,16 @@
 备用: https://open.er-api.com/v6/latest/USD
 """
 import json
+import subprocess
 import urllib.request
-from datetime import datetime
+from datetime import datetime, timedelta, timezone
 import os, sys
-from common_paths import exchange_rates_path
+from common_paths import configure_utf8_stdio, exchange_rates_path
+
+configure_utf8_stdio()
 
 OUT = exchange_rates_path()
+CST = timezone(timedelta(hours=8))
 
 URLS = [
     'https://open.er-api.com/v6/latest/USD',
@@ -28,6 +32,20 @@ def fetch():
         except Exception as e:
             last_err = e
             print(f'[warn] {url}: {e}')
+        try:
+            cmd = ['curl', '-L', '--max-time', '20', '-s', '-A', 'Mozilla/5.0', url]
+            if os.name == 'nt':
+                cmd[0] = 'curl.exe'
+            result = subprocess.run(cmd, capture_output=True, text=True, encoding='utf-8', errors='replace')
+            if result.returncode != 0:
+                raise RuntimeError(result.stderr.strip() or f'curl exited {result.returncode}')
+            data = json.loads(result.stdout)
+            rates = data.get('rates') or {}
+            if 'CNY' in rates:
+                return data, url
+        except Exception as e:
+            last_err = e
+            print(f'[warn] curl {url}: {e}')
             continue
     raise RuntimeError(f'All sources failed: {last_err}')
 
@@ -44,7 +62,7 @@ def main():
     krw = round((cny_per_usd / rates['KRW']) * 100, 2) if rates.get('KRW') else None  # 100韩元
 
     out = {
-        'updated_at': datetime.now().strftime('%Y-%m-%d %H:%M:%S +08:00'),
+        'updated_at': datetime.now(CST).strftime('%Y-%m-%d %H:%M:%S +08:00'),
         'source': used_url,
         'base': 'USD',
         'rates_to_cny': {

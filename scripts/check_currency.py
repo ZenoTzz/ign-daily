@@ -1,89 +1,109 @@
-"""
-Post-translation currency check.
-Scans all translation JSONs for a given date, finds monetary amounts
-(美元/欧元/英镑/日元) that are NOT followed by a CNY conversion,
-and reports them. Run after translating to catch missed conversions.
+#!/usr/bin/env python3
+"""Check translated Chinese text for foreign-currency amounts without CNY conversion."""
+from __future__ import annotations
 
-Usage: python3 scripts/check_currency.py [YYYY-MM-DD]
-Default: today's date.
-"""
-import json, re, sys
-from datetime import datetime, timezone, timedelta
-from common_paths import DATA_DIR, exchange_rates_path, configure_utf8_stdio
+import json
+import sys
+from datetime import datetime, timedelta, timezone
+from pathlib import Path
+
+from common_paths import DATA_DIR, configure_utf8_stdio
+from currency_utils import find_missing_currency, load_rates, normalize_currency_text
+
 
 configure_utf8_stdio()
+CST = timezone(timedelta(hours=8))
 
-# Determine date
-if len(sys.argv) > 1:
-    date_str = sys.argv[1]
-else:
-    cst = timezone(timedelta(hours=8))
-    date_str = datetime.now(cst).strftime('%Y-%m-%d')
 
-TRANS_DIR = DATA_DIR / date_str / 'translations'
-if not TRANS_DIR.exists():
-    print(f"No translations dir for {date_str}")
-    sys.exit(0)
+def default_date() -> str:
+    now = datetime.now(CST)
+    today_0800 = now.replace(hour=8, minute=0, second=0, microsecond=0)
+    return now.strftime("%Y-%m-%d") if now < today_0800 else (now + timedelta(days=1)).strftime("%Y-%m-%d")
 
-# Load exchange rates
-rates_path = exchange_rates_path()
-if rates_path.exists():
-    with open(rates_path, 'r') as f:
-        rates_data = json.load(f)
-    rates = rates_data.get('rates_to_cny', {})
-else:
-    rates = {}
 
-# Regex: find currency amounts NOT followed by conversion
-currency_re = re.compile(r'([\d,.]+)\s*(美元|欧元|英镑|日元)')
-issues = []
+def read_json(path: Path):
+    with path.open("r", encoding="utf-8-sig") as f:
+        return json.load(f)
 
-for f in sorted(TRANS_DIR.glob('*.json')):
-    with open(f, 'r', encoding='utf-8') as fh:
-        d = json.load(fh)
-    
-    for i, p in enumerate(d.get('paragraphs', [])):
-        cn = p.get('cn', '')
-        for m in currency_re.finditer(cn):
-            end = m.end()
-            # Check next 40 chars for conversion
-            after = cn[end:end+40]
-            if '约合' not in after and '人民币' not in after:
-                # Exception: if amount is in a quote context or repeated mention
-                # Check if it's the first occurrence in this article
-                amount_str = m.group(1)
-                currency = m.group(2)
-                
-                # Suggest conversion
-                try:
-                    num = float(amount_str.replace(',', ''))
-                    rate_key = {'美元': 'USD', '欧元': 'EUR', '英镑': 'GBP', '日元': 'JPY_100'}.get(currency, '')
-                    rate = rates.get(rate_key, 0)
-                    if '日元' in currency:
-                        cny = int(num / 100 * rate)
-                    else:
-                        cny = int(num * rate)
-                    suggestion = f"{amount_str}{currency}(约合人民币{cny}元)"
-                except:
-                    cny = '?'
-                    suggestion = f"{amount_str}{currency}(约合人民币?元)"
-                
-                issues.append({
-                    'file': f.name,
-                    'para': i,
-                    'found': m.group(),
-                    'suggestion': suggestion,
-                    'context': cn[max(0, m.start()-10):end+30]
-                })
 
-if issues:
-    print(f"⚠️ CURRENCY_CHECK: {len(issues)} amount(s) missing CNY conversion:")
-    for iss in issues:
-        print(f"  {iss['file']} para[{iss['para']}]: {iss['found']} → suggest: {iss['suggestion']}")
-        print(f"    context: ...{iss['context']}...")
-    print()
-    print("Fix these before pushing!")
-    sys.exit(1)
-else:
-    print(f"✅ CURRENCY_CHECK: All amounts in {date_str} have CNY conversions.")
-    sys.exit(0)
+def suggestion(found: str) -> str:
+    normalized = normalize_currency_text(found, rates=load_rates())
+    return normalized if normalized != found else f"{found}(约合人民币?元)"
+
+
+def add_issues(issues: list[dict], source: str, text: str, label: str = "") -> None:
+    for found, context in find_missing_currency(text):
+        issues.append({
+            "source": source,
+            "label": label,
+            "found": found,
+            "suggestion": suggestion(found),
+            "context": context,
+        })
+
+
+def check_index(day_dir: Path, issues: list[dict]) -> None:
+    path = day_dir / "index.json"
+    if not path.exists():
+        return
+    data = read_json(path)
+    for article in data.get("articles", []):
+        aid = article.get("id")
+        add_issues(issues, "index.json", article.get("summary", ""), f"#{aid} summary")
+
+
+def check_translation_file(path: Path, issues: list[dict]) -> None:
+    data = read_json(path)
+    add_issues(issues, path.name, data.get("cn_title", ""), "cn_title")
+    add_issues(issues, path.name, data.get("opus_summary", ""), "opus_summary")
+    for i, para in enumerate(data.get("paragraphs", []), start=1):
+        if isinstance(para, dict):
+            add_issues(issues, path.name, para.get("cn", ""), f"para[{i}]")
+
+
+def check_comparison_file(path: Path, issues: list[dict]) -> None:
+    data = read_json(path)
+    for result in data.get("results", []):
+        model = result.get("translator_model") or result.get("label") or "model"
+        add_issues(issues, path.name, result.get("cn_title", ""), f"{model} cn_title")
+        add_issues(issues, path.name, result.get("opus_summary", ""), f"{model} opus_summary")
+        for i, para in enumerate(result.get("paragraphs", []), start=1):
+            if isinstance(para, dict):
+                add_issues(issues, path.name, para.get("cn", ""), f"{model} para[{i}]")
+
+
+def main() -> int:
+    date_str = sys.argv[1] if len(sys.argv) > 1 else default_date()
+    day_dir = DATA_DIR / date_str
+    if not day_dir.exists():
+        print(f"No data dir for {date_str}")
+        return 0
+
+    issues: list[dict] = []
+    check_index(day_dir, issues)
+
+    trans_dir = day_dir / "translations"
+    if trans_dir.exists():
+        for path in sorted(trans_dir.glob("*.json")):
+            check_translation_file(path, issues)
+
+    compare_dir = day_dir / "comparisons"
+    if compare_dir.exists():
+        for path in sorted(compare_dir.glob("*.json")):
+            check_comparison_file(path, issues)
+
+    if issues:
+        print(f"CURRENCY_CHECK: {len(issues)} amount(s) missing CNY conversion in {date_str}:")
+        for issue in issues:
+            label = f" {issue['label']}" if issue.get("label") else ""
+            print(f"  {issue['source']}{label}: {issue['found']} -> suggest: {issue['suggestion']}")
+            print(f"    context: ...{issue['context']}...")
+        print("\nFix these before pushing.")
+        return 1
+
+    print(f"CURRENCY_CHECK_OK: all amounts in {date_str} include CNY conversions.")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

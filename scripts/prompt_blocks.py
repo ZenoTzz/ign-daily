@@ -30,7 +30,8 @@ def shared_rules_block(guide_chars: int = 14000, style_chars: int = 9000) -> dic
         "project": "IGN Daily",
         "fixed_instruction": (
             "你正在为 IGN Daily 翻译英文游戏/影视新闻。必须遵守词库、翻译指南和风格画像。"
-            "中文标点使用全角；作品名用《》；金额如有美元信息需补人民币换算。"
+            "中文标点使用全角；作品名用《》。所有外币金额必须写成“外币金额(约合人民币金额)”；"
+            "例如 500美元(约合人民币3580元)、2.5亿美元(约合人民币18亿元)。"
             "不要添加原文没有的信息，不要输出 Markdown，除非当前任务明确要求 Markdown。"
         ),
         "translation_guide": read_repo_text("TRANSLATION_GUIDE.md", guide_chars),
@@ -67,6 +68,7 @@ def title_user_payload(
                 "标题要自然、有新闻感。",
                 "摘要 80-160 个中文字符。",
                 "如果词库中有译名，必须使用词库译名。",
+                "摘要里出现美元、欧元、英镑、日元等外币金额时必须补人民币换算。",
             ],
             "allowed_categories": allowed_categories,
             "required_json_schema": {
@@ -98,6 +100,7 @@ def fulltext_user_payload(
                 "输出严格 JSON，不要 Markdown。",
                 "每篇必须有 2-15 字中文创意副标题 subtitle。",
                 "opus_summary 写 150-260 字中文总述。",
+                "cn_title、opus_summary 和每个段落里的外币金额必须补人民币换算。",
             ],
             "paragraphs_en": paragraphs,
             "required_json_schema": {
@@ -134,6 +137,7 @@ def chunk_user_payload(
                 "只翻译本批 paragraphs_en。",
                 "必须返回与 paragraphs_en 数量完全一致的 paragraphs 数组。",
                 "每个元素必须包含 index 和 cn。",
+                "每个 cn 里的外币金额必须补人民币换算。",
             ],
             "paragraphs_en": [{"index": idx, "en": en} for idx, en in chunk],
             "required_json_schema": {"paragraphs": [{"index": 1, "cn": "中文译文"}]},

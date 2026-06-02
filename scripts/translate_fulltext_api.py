@@ -22,6 +22,7 @@ from pathlib import Path
 from typing import Any
 
 from common_paths import DATA_DIR, REPO_ROOT, configure_utf8_stdio, dict_path, env_paths
+from currency_utils import normalize_translation_currency
 from prompt_blocks import chunk_user_payload, fulltext_user_payload
 from translate_titles_deepseek import apply_title_dictionary, call_deepseek_response, extract_article_text, extract_json, flatten_dict_terms
 from usage_logger import record_deepseek_usage_safe
@@ -132,7 +133,7 @@ def build_messages(article: dict[str, Any], paragraphs: list[str], terms: dict[s
     system = (
         "你是 IGN Daily 的中文全文翻译 agent。必须严格输出 JSON，不要 Markdown。"
         "逐段翻译 paragraphs_en，保持段落数量和顺序一致。"
-        "必须遵守翻译指南、风格画像和词库命中。金额必须补人民币换算；中文标点使用全角；作品名用《》。"
+        "必须遵守翻译指南、风格画像和词库命中。所有外币金额必须补人民币换算；中文标点使用全角；作品名用《》。"
     )
     user = fulltext_user_payload(article=article, paragraphs=paragraphs, terms=terms)
     return [
@@ -176,7 +177,7 @@ def build_chunk_messages(article: dict[str, Any], chunk: list[tuple[int, str]], 
     system = (
         "你是 IGN Daily 的中文逐段翻译 agent。只输出严格 JSON，不要 Markdown。"
         "必须返回与 paragraphs_en 数量完全一致的 paragraphs 数组。"
-        "每个元素必须包含 index 和 cn。中文标点用全角，作品名用《》。"
+        "每个元素必须包含 index 和 cn。所有外币金额必须补人民币换算；中文标点用全角，作品名用《》。"
     )
     user = chunk_user_payload(article=article, chunk=chunk, terms=terms)
     return [
@@ -236,7 +237,7 @@ def translate_paragraph_chunks(
 
 def normalize_translation(article: dict[str, Any], result: dict[str, Any], paragraphs_en: list[str]) -> dict[str, Any]:
     normalized = normalize_paragraphs(result, paragraphs_en)
-    return {
+    return normalize_translation_currency({
         "id": article["id"],
         "url": article["url"],
         "en_title": article["en_title"],
@@ -252,7 +253,7 @@ def normalize_translation(article: dict[str, Any], result: dict[str, Any], parag
         "translated_terms": result.get("translated_terms") if isinstance(result.get("translated_terms"), dict) else {},
         "cover": str(result.get("cover") or article.get("cover_image") or "").strip(),
         "images": result.get("images") if isinstance(result.get("images"), list) else [],
-    }
+    })
 
 
 def resolve_requests(date: str) -> tuple[Path, dict[str, Any], dict[str, Any], list[dict[str, Any]]]:

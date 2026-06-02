@@ -29,6 +29,7 @@ from translate_fulltext_api import (
     write_json,
 )
 from translate_titles_deepseek import call_deepseek_response, extract_json
+from currency_utils import normalize_translation_currency
 from usage_logger import record_deepseek_usage_safe
 
 
@@ -154,7 +155,7 @@ def translate_once(
     data["translator"] = "api"
     data["translator_provider"] = "openai-compatible"
     data["translator_model"] = model
-    return data
+    return normalize_translation_currency(data)
 
 
 def run(date: str, article_id: int) -> int:

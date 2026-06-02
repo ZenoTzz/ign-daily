@@ -94,6 +94,12 @@ jobs:
           python3 scripts/article_cache.py "${{ steps.rss.outputs.target_date }}" --missing --limit 20
           python3 scripts/agent_doctor.py
 
+      - name: Refresh exchange rates
+        if: steps.rss.outputs.new_count != '0' && (steps.config.outputs.title_translator == 'api' || steps.config.outputs.title_translator == 'deepseek')
+        run: |
+          set -euo pipefail
+          python3 scripts/fetch_exchange_rates.py || echo "WARN: exchange-rate refresh failed; title translation will use fallback/local rates."
+
       - name: Translate queued titles with DeepSeek
         if: steps.rss.outputs.new_count != '0' && (steps.config.outputs.title_translator == 'api' || steps.config.outputs.title_translator == 'deepseek')
         env:
@@ -120,6 +126,7 @@ jobs:
             echo "No tracked RSS changes to commit."
             exit 0
           fi
+          git add exchange_rates.json || true
           git commit -m "feat: hourly RSS ${{ steps.rss.outputs.new_count }} new, ${{ steps.rss.outputs.filtered_count }} filtered for ${{ steps.rss.outputs.target_date }}"
           git pull --rebase origin main
           git push origin HEAD:main

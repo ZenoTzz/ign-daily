@@ -28,6 +28,7 @@ from pathlib import Path
 from typing import Any
 
 from common_paths import DATA_DIR, REPO_ROOT, configure_utf8_stdio, dict_path, env_paths
+from currency_utils import normalize_currency_text
 from prompt_blocks import title_user_payload
 from usage_logger import record_deepseek_usage_safe
 
@@ -292,7 +293,7 @@ def build_messages(article: dict[str, Any], article_text: str, terms: dict[str, 
     system = (
         "你是 IGN Daily 的中文首页标题摘要编辑。只输出严格 JSON。"
         "不要翻译全文，不要写 Markdown。标题要自然、有新闻感；摘要 80-160 个中文字符。"
-        "如果词库中有译名，必须使用词库译名。"
+        "如果词库中有译名，必须使用词库译名。外币金额必须补人民币换算。"
     )
     user = title_user_payload(article=article, article_text=article_text, terms=terms, allowed_categories=CATEGORIES)
     return [
@@ -310,8 +311,8 @@ def normalize_result(result: dict[str, Any]) -> dict[str, Any]:
     if not isinstance(pending, list):
         pending = []
     return {
-        "cn_title": str(result.get("cn_title") or "").strip(),
-        "summary": str(result.get("summary") or "").strip(),
+        "cn_title": normalize_currency_text(str(result.get("cn_title") or "").strip()),
+        "summary": normalize_currency_text(str(result.get("summary") or "").strip()),
         "category": category,
         "emoji": emoji,
         "pending_dict": pending,

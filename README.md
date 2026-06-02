@@ -109,6 +109,7 @@ python -m http.server 8000
 - **2026-06-02**: RSS 过滤补强为“购物意图”过滤，会跳过促销、导购、预购、亚马逊独占、手办/周边/LEGO set 等商业稿；所有会写仓库数据的 Actions 统一使用 `ign-daily-write-main` 并发组，避免 API 翻译和 RSS/用量快照同时 push 时冲突。
 - **2026-06-02**: RSS 过滤改为“隔离区”机制。疑似促销/导购稿不再静默丢弃，而是写入 `data/{date}/filtered_rss.json`；首页会显示“被过滤”入口，用户可一键恢复入库并进入标题摘要队列。`data/rss-filter-config.json.filtered_retention_days` 控制旧隔离文件保留天数，超期由 RSS workflow 自动删除。
 - **2026-06-02**: 首页默认日期改为和 RSS 一致的“新闻日”：北京时间 08:00 后自动打开下一天的数据目录，例如 2026-06-02 08:00 后默认展示 `data/2026-06-03`。
+- **2026-06-02**: API 翻译金额换算改为“提示词 + 脚本后处理 + 校验”三层保证。API workflow 和 hourly RSS 标题翻译前会刷新 `exchange_rates.json`；`currency_utils.py` 会自动补 `2.5亿美元(约合人民币18亿元)` 这类换算；`check_currency.py` 同时检查首页摘要、正式译文和多模型对比译文。
 - **2026-06-02**: DeepSeek 用量看板新增估算成本和按文章成本。成本按 DeepSeek 官方每 1M tokens 价格估算，分别计算缓存命中输入、缓存未命中输入和输出 tokens；真实扣费仍以 DeepSeek 账户余额为准。
 - **2026-06-02**: 手动触发 API 翻译时，网页会把本次选择的标题模型、正文模型、API Base URL 和 API/OpenClaw 开关作为 `workflow_dispatch` inputs 传给 `api-translation.yml`。手动运行优先使用本次 inputs，定时运行继续读取 `data/automation-config.json`，避免刚切 Pro/Flash 后立刻翻译时读到旧配置。
 - **2026-06-02**: 新增手动“多模型翻译对比”。`data/automation-config.json.api_models` 保存可选模型目录，用户可勾选任意数量模型参与对比；文章卡片触发后会让选中模型各翻一版，结果写入 `data/{date}/comparisons/NN.json` 并通过 `comparison.html` 并排查看。该流程不覆盖正式译文，也不参与定时自动化。

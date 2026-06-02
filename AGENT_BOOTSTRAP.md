@@ -119,6 +119,7 @@ python3 scripts/git_push.py
 - 英文和中文之间不留空格。
 - 引用用「」，作品名用《》。
 - 金额写成 `500美元(约合人民币3580元)`。
+- API 翻译前必须刷新汇率并让 `currency_utils.py` 后处理金额；不要只靠模型遵守 prompt。
 - 新猜译名写 `pending_dict`，不要直接入词库。
 
 ## 如果脚本报警
