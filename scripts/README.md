@@ -89,6 +89,13 @@ python3 scripts/translate_fulltext_api.py {date}
 python3 scripts/nightly_style_api.py {date}
 ```
 
+手动点击“立即运行 API 翻译”或在 API 正文模式下提交翻译请求时，网页还会把当前
+`title_translator`、`fulltext_translator`、`api_title_model`、
+`api_fulltext_model` 和 `api_base_url` 作为 `workflow_dispatch` inputs 传给
+`.github/workflows/api-translation.yml`。该 workflow 手动运行时优先使用 inputs，
+定时运行时才回退读取 `data/automation-config.json`，避免刚切换 Pro/Flash 后立刻
+触发翻译却读到旧模型。
+
 `article_cache.py` 会写 `data/{date}/sources/NN.json`，里面保存 `body_en`、`paragraphs_en`、`cover_image` 和 `images`。标题摘要和正文 API 都优先读取这个缓存；只有缓存缺失才会临时抓网页。不要让模型负责抓正文或图片。
 
 标题摘要 API 脚本不会翻译全文，也不会写 `translations/NN.json`。正文 API 脚本会写译文，但必须通过 `translate_pipeline.py --post` 和 `pre_push_check.py`。正文 API 输出较长，workflow 会设置 `TRANSLATOR_FULLTEXT_MAX_TOKENS=12000`，不要沿用标题摘要的短输出上限。API 抓正文必须使用脚本内的 `extract_article_text()` 或 `article_cache.py`，优先抽取 IGN 的正文段落并过滤导航、页脚、作者简介、推荐链接；不要再用整页 HTML 去标签的方式喂给模型。

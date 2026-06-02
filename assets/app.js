@@ -468,9 +468,30 @@ function appData() {
 
     apiTranslationInputs() {
       const mode = String(this.automationConfig.api_fulltext_batch || '5');
-      if (mode === '10') return { fulltext_limit: '10', time_budget_seconds: '1200' };
-      if (mode === 'all') return { fulltext_limit: '999', time_budget_seconds: '1320' };
-      return { fulltext_limit: '5', time_budget_seconds: '1200' };
+      const inputs = {
+        fulltext_limit: '5',
+        time_budget_seconds: '1200',
+        title_translator: this.automationConfig.title_translator || 'openclaw',
+        fulltext_translator: this.automationConfig.fulltext_translator || 'openclaw',
+        api_title_model: this.automationConfig.api_title_model || this.automationConfig.api_model || 'deepseek-v4-flash',
+        api_fulltext_model: this.automationConfig.api_fulltext_model || 'deepseek-v4-pro',
+        api_base_url: this.automationConfig.api_base_url || 'https://api.deepseek.com'
+      };
+      if (mode === '10') inputs.fulltext_limit = '10';
+      if (mode === 'all') {
+        inputs.fulltext_limit = '999';
+        inputs.time_budget_seconds = '1320';
+      }
+      return inputs;
+    },
+
+    apiTranslationSummary() {
+      const titleApi = this.automationConfig.title_translator === 'api' || this.automationConfig.title_translator === 'deepseek';
+      const fulltextApi = this.automationConfig.fulltext_translator === 'api' || this.automationConfig.fulltext_translator === 'deepseek';
+      const parts = [];
+      if (titleApi) parts.push(`标题/摘要：${this.formatTranslatorModel(this.automationConfig.api_title_model || this.automationConfig.api_model)}`);
+      if (fulltextApi) parts.push(`正文：${this.formatTranslatorModel(this.automationConfig.api_fulltext_model)}`);
+      return parts.join('，');
     },
 
     async runApiTranslationNow() {
@@ -485,7 +506,8 @@ function appData() {
         const saved = await this.saveAutomationConfig();
         if (!saved) return;
         await GH.dispatchWorkflow('api-translation.yml', this.apiTranslationInputs());
-        this.flash('已触发 API 翻译，稍后刷新查看结果', 4500);
+        const summary = this.apiTranslationSummary();
+        this.flash(`已触发 API 翻译${summary ? '，本次使用 ' + summary : ''}，稍后刷新查看结果`, 5200);
       } catch (e) {
         this.flash('触发 API 翻译失败：' + e.message, 6000);
       } finally {
@@ -655,7 +677,8 @@ function appData() {
         if (apiFulltext) {
           await this.saveAutomationConfig();
           await GH.dispatchWorkflow('api-translation.yml', this.apiTranslationInputs());
-          this.flash(`✅ 已请求翻译 ${this.selected.length} 篇，API Actions 已开始处理`);
+          const summary = this.apiTranslationSummary();
+          this.flash(`✅ 已请求翻译 ${this.selected.length} 篇，API Actions 已开始处理${summary ? '，本次使用 ' + summary : ''}`);
         } else {
           this.flash(`✅ 已请求翻译 ${this.selected.length} 篇，OpenClaw 会处理`);
         }

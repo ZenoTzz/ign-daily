@@ -13,6 +13,26 @@ on:
         description: "Fulltext translation time budget before graceful pause"
         required: false
         default: "1200"
+      title_translator:
+        description: "Manual run override for title translator: api/openclaw"
+        required: false
+        default: ""
+      fulltext_translator:
+        description: "Manual run override for fulltext translator: api/openclaw"
+        required: false
+        default: ""
+      api_title_model:
+        description: "Manual run title model override"
+        required: false
+        default: ""
+      api_fulltext_model:
+        description: "Manual run fulltext model override"
+        required: false
+        default: ""
+      api_base_url:
+        description: "Manual run API base URL override"
+        required: false
+        default: ""
 
 permissions:
   contents: write
@@ -44,19 +64,26 @@ jobs:
 
       - name: Load automation config
         id: config
+        env:
+          MANUAL_TITLE_TRANSLATOR: ${{ github.event_name == 'workflow_dispatch' && inputs.title_translator || '' }}
+          MANUAL_FULLTEXT_TRANSLATOR: ${{ github.event_name == 'workflow_dispatch' && inputs.fulltext_translator || '' }}
+          MANUAL_API_TITLE_MODEL: ${{ github.event_name == 'workflow_dispatch' && inputs.api_title_model || '' }}
+          MANUAL_API_FULLTEXT_MODEL: ${{ github.event_name == 'workflow_dispatch' && inputs.api_fulltext_model || '' }}
+          MANUAL_API_BASE_URL: ${{ github.event_name == 'workflow_dispatch' && inputs.api_base_url || '' }}
         run: |
           python3 - <<'PY' >> "$GITHUB_OUTPUT"
           import json
+          import os
           from pathlib import Path
           path = Path("data/automation-config.json")
           data = json.loads(path.read_text(encoding="utf-8")) if path.exists() else {}
-          print(f"title_translator={data.get('title_translator', 'openclaw')}")
-          print(f"fulltext_translator={data.get('fulltext_translator', 'openclaw')}")
+          print(f"title_translator={os.environ.get('MANUAL_TITLE_TRANSLATOR') or data.get('title_translator', 'openclaw')}")
+          print(f"fulltext_translator={os.environ.get('MANUAL_FULLTEXT_TRANSLATOR') or data.get('fulltext_translator', 'openclaw')}")
           print(f"nightly_learner={data.get('nightly_learner', 'openclaw')}")
           print(f"api_model={data.get('api_model', '')}")
-          print(f"api_title_model={data.get('api_title_model', data.get('api_model', ''))}")
-          print(f"api_fulltext_model={data.get('api_fulltext_model', '')}")
-          print(f"api_base_url={data.get('api_base_url', '')}")
+          print(f"api_title_model={os.environ.get('MANUAL_API_TITLE_MODEL') or data.get('api_title_model', data.get('api_model', ''))}")
+          print(f"api_fulltext_model={os.environ.get('MANUAL_API_FULLTEXT_MODEL') or data.get('api_fulltext_model', '')}")
+          print(f"api_base_url={os.environ.get('MANUAL_API_BASE_URL') or data.get('api_base_url', '')}")
           PY
 
       - name: Stop when API mode is disabled
