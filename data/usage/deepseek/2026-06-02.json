@@ -462,6 +462,48 @@
       "total_tokens": 9480,
       "prompt_cache_hit_tokens": 0,
       "prompt_cache_miss_tokens": 7561
+    },
+    {
+      "time_cn": "2026-06-02 13:27:14",
+      "task": "compare_fulltext",
+      "model": "deepseek-v4-pro",
+      "article_id": 3,
+      "article_title": "《威世智》《博德之门2》重制版据报已在开发中",
+      "article_url": "https://www.ign.com/articles/official-baldurs-gate-2-remake-reportedly-in-development-at-wizards-of-the-coast",
+      "article_date": "2026-06-02",
+      "detail": "manual comparison",
+      "estimated_cost_usd": 0.00209325,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 7409,
+      "completion_tokens": 1621,
+      "total_tokens": 9030,
+      "prompt_cache_hit_tokens": 5888,
+      "prompt_cache_miss_tokens": 1521
+    },
+    {
+      "time_cn": "2026-06-02 13:27:24",
+      "task": "compare_fulltext",
+      "model": "deepseek-v4-flash",
+      "article_id": 3,
+      "article_title": "《威世智》《博德之门2》重制版据报已在开发中",
+      "article_url": "https://www.ign.com/articles/official-baldurs-gate-2-remake-reportedly-in-development-at-wizards-of-the-coast",
+      "article_date": "2026-06-02",
+      "detail": "manual comparison",
+      "estimated_cost_usd": 0.00149738,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7409,
+      "completion_tokens": 1706,
+      "total_tokens": 9115,
+      "prompt_cache_hit_tokens": 128,
+      "prompt_cache_miss_tokens": 7281
     }
   ]
 }

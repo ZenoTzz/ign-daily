@@ -1,0 +1,177 @@
+{
+  "date": "2026-06-02",
+  "article_id": 3,
+  "url": "https://www.ign.com/articles/official-baldurs-gate-2-remake-reportedly-in-development-at-wizards-of-the-coast",
+  "en_title": "Official Baldur's Gate 2 Remake Reportedly in Development at Wizards of the Coast",
+  "cn_title": "《威世智》《博德之门2》重制版据报已在开发中",
+  "created_at_cn": "2026-06-02 13:27:24",
+  "models": [
+    {
+      "model": "deepseek-v4-pro",
+      "label": "DeepSeek V4 Pro",
+      "base_url": "https://api.deepseek.com",
+      "provider": "openai-compatible"
+    },
+    {
+      "model": "deepseek-v4-flash",
+      "label": "DeepSeek V4 Flash",
+      "base_url": "https://api.deepseek.com",
+      "provider": "openai-compatible"
+    }
+  ],
+  "source_paragraph_count": 8,
+  "results": [
+    {
+      "id": 3,
+      "url": "https://www.ign.com/articles/official-baldurs-gate-2-remake-reportedly-in-development-at-wizards-of-the-coast",
+      "en_title": "Official Baldur's Gate 2 Remake Reportedly in Development at Wizards of the Coast",
+      "cn_title": "《博德之门2》重制版据报已在威世智开发中",
+      "subtitle": "经典重启",
+      "opus_summary": "据外媒报道，威世智正在开发《博德之门》1和2的重制版，由前BioWare开发者、原《博德之门2》联合主设计师Kevin Martens负责。两款重制版可能同步推出，但具体规模和玩法（是否采用《博德之门3》的回合制）尚未明确。威世智母公司孩之宝拒绝置评。重制版或将成为《博德之门3》与续作之间的过渡产品，而Larian已离开该系列去开发《神界》新作，留下的空缺堪称游戏界最大挑战之一。此外，《博德之门》宇宙仍在扩展，包括HBO剧集、前传小说、官方食谱和涂色书等衍生内容。",
+      "publish_time_cn": "2026-06-01 20:47",
+      "paragraphs": [
+        {
+          "en": "An official Baldur’s Gate 2 remake is reportedly in the works at Wizards of the Coast.",
+          "cn": "据报道，威世智正在制作《博德之门2》的官方重制版。"
+        },
+        {
+          "en": "reported that it is likely that BioWare’s Baldur’s Gate 1 and 2 will both get remakes ahead of the release of Baldur’s Gate 4. The publication said former BioWare developer and Baldur's Gate 2 co-lead designer Kevin Martens is working on the remake. There’s the suggestion both remakes will launch together.",
+          "cn": "据该媒体报道，BioWare的《博德之门》1和2很可能都会在《博德之门4》发售前推出重制版。报道称，前BioWare开发者、《博德之门2》联合主设计师Kevin Martens正在负责重制工作，并且两款重制版可能会同步发售。"
+        },
+        {
+          "en": "Wizards of the Coast parent company Hasbro told IGN: \"We do not comment on speculation or rumor.\"",
+          "cn": "威世智母公司孩之宝对IGN表示：「我们不对猜测或传闻置评。」"
+        },
+        {
+          "en": "The big question here, assuming the report is true, revolves around the scope of the remakes. It seems unlikely we’ll be getting Baldur’s Gate 1 and 2 remade in the Baldur’s Gate 3 style, given how long it would take to convert the thousands of hours of content both games offer combined into something in-keeping with Larian’s role-playing masterpiece.",
+          "cn": "假设报道属实，最大的问题在于重制版的规模。考虑到要将两款游戏合计数千小时的内容，转化为与Larian那部角色扮演杰作相称的形态，所需时间极其漫长，因此《博德之门》1和2似乎不太可能以《博德之门3》的风格进行重制。"
+        },
+        {
+          "en": "Perhaps Hasbro views remakes as a stop-gap between the phenomenally successful Baldur’s Gate 3 and the inevitable sequel, which has astronomical fan expectation to navigate. With Larian leaving Baldur’s Gate and indeed Dungeons & Dragons behind to make the next Divinity game, there are big shoes to fill — perhaps the biggest in video games.",
+          "cn": "或许孩之宝将重制版视为现象级成功的《博德之门3》与必然到来的续作之间的过渡产品，而续作承载着粉丝们天文数字般的期望。随着Larian离开《博德之门》乃至《龙与地下城》去开发下一款《神界》游戏，留下的空缺极难填补——这或许是电子游戏界最大的空缺。"
+        },
+        {
+          "en": "Baldur’s Gate was BioWare’s second game, releasing on PC in 1998 and published by Interplay. It did well enough to spawn a sequel, 2000’s Baldur's Gate II: Shadows of Amn, which like its predecessor took place in the Forgotten Realms. Both original games use an isometric perspective and pausable real-time gameplay, with the player controlling up to six characters. Could the remakes follow Baldur’s Gate 3’s lead and go for fully turn-based combat? Or maybe a hybrid system is in order.",
+          "cn": "《博德之门》是BioWare的第二款游戏，1998年在PC上发售，由Interplay发行。游戏表现足够出色，催生了续作——2000年的《博德之门II：安姆的阴影》，与前作一样设定在被遗忘的国度。两款原版游戏均采用等距视角和可暂停的实时战斗，玩家最多可控制六名角色。重制版会效仿《博德之门3》采用完全回合制战斗吗？或者也许会采用一种混合系统。"
+        },
+        {
+          "en": "There’s plenty going on in the world of Baldur’s Gate, despite the long wait for a sequel. There’s a Baldur’s Gate 3 HBO TV show in the works, one that will continue the story from the game — much to the surprise of fans. There’s even a prequel novel depicting Astarion’s time in servitude to the Vampire Lord Cazador Szarr , an official Baldur’s Gate 3 cookbook, and a coloring book.",
+          "cn": "尽管续作遥遥无期，但《博德之门》的世界依然热闹非凡。一部《博德之门3》HBO剧集正在制作中，将延续游戏的故事——这让粉丝们大感意外。此外还有一部前传小说，描写阿斯代伦侍奉吸血鬼领主卡扎多尔·萨尔的岁月，以及一本官方《博德之门3》食谱和一本涂色书。"
+        },
+        {
+          "en": "Wesley is Director, News at IGN. Find him on Twitter at @wyp100. You can reach Wesley at wesley_yinpoole@ign.com or confidentially at wyp100@proton.me.",
+          "cn": "Wesley是IGN新闻总监。你可以在Twitter上找到他@wyp100，或通过wesley_yinpoole@ign.com联系他，也可通过wyp100@proton.me进行保密联络。"
+        }
+      ],
+      "pending_dict": [],
+      "translated_terms": {
+        "Wizards of the Coast": "威世智",
+        "Baldur's Gate": "《博德之门》",
+        "BioWare": "BioWare",
+        "Kevin Martens": "Kevin Martens",
+        "Hasbro": "孩之宝",
+        "Larian": "Larian",
+        "Dungeons & Dragons": "《龙与地下城》",
+        "Divinity": "《神界》",
+        "Interplay": "Interplay",
+        "Forgotten Realms": "被遗忘的国度",
+        "Astarion": "阿斯代伦",
+        "Cazador Szarr": "卡扎多尔·萨尔"
+      },
+      "cover": "https://assets-prd.ignimgs.com/2026/06/01/bg2-1780317973808.jpg",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/01/bg2-1780317973808.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/01/bg2-1780317973808.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/01/bg2-1780317973808.jpg?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/01/bg2-1780317973808.jpg?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/01/bg2-1780317973808.jpg"
+      ],
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro",
+      "label": "DeepSeek V4 Pro",
+      "comparison_label": "DeepSeek V4 Pro",
+      "comparison_base_url": "https://api.deepseek.com"
+    },
+    {
+      "id": 3,
+      "url": "https://www.ign.com/articles/official-baldurs-gate-2-remake-reportedly-in-development-at-wizards-of-the-coast",
+      "en_title": "Official Baldur's Gate 2 Remake Reportedly in Development at Wizards of the Coast",
+      "cn_title": "《威世智》《博德之门2》重制版据报已在开发中",
+      "subtitle": "经典重启",
+      "opus_summary": "据外媒报道，威世智正在开发《博德之门2》官方重制版，前BioWare开发者、原《博德之门2》联合主设计师Kevin Martens参与其中。报道称《博德之门1》和2的重制版可能同步推出，但具体规模和玩法尚未明确——是采用《博德之门3》的回合制还是保留原版即时制仍存疑问。威世智母公司孩之宝拒绝置评。在《博德之门3》大获成功后，重制版或被视为续作前的过渡产品，而拉瑞安工作室已离开该系列，转投《神界》新作。此外，《博德之门3》HBO剧集、前传小说、官方食谱等衍生作品也在推进中。",
+      "publish_time_cn": "2026-06-01 20:47",
+      "paragraphs": [
+        {
+          "en": "An official Baldur’s Gate 2 remake is reportedly in the works at Wizards of the Coast.",
+          "cn": "据报，威世智正在开发《博德之门2》官方重制版。"
+        },
+        {
+          "en": "reported that it is likely that BioWare’s Baldur’s Gate 1 and 2 will both get remakes ahead of the release of Baldur’s Gate 4. The publication said former BioWare developer and Baldur's Gate 2 co-lead designer Kevin Martens is working on the remake. There’s the suggestion both remakes will launch together.",
+          "cn": "报道称，BioWare的《博德之门1》和2很可能都会在《博德之门4》发售前推出重制版。该媒体表示，前BioWare开发者、原《博德之门2》联合主设计师Kevin Martens正在参与重制工作。报道暗示两款重制版可能会同步推出。"
+        },
+        {
+          "en": "Wizards of the Coast parent company Hasbro told IGN: \"We do not comment on speculation or rumor.\"",
+          "cn": "威世智母公司孩之宝对IGN表示：「我们不对猜测或传闻置评。」"
+        },
+        {
+          "en": "The big question here, assuming the report is true, revolves around the scope of the remakes. It seems unlikely we’ll be getting Baldur’s Gate 1 and 2 remade in the Baldur’s Gate 3 style, given how long it would take to convert the thousands of hours of content both games offer combined into something in-keeping with Larian’s role-playing masterpiece.",
+          "cn": "假设报道属实，这里最大的问题在于重制版的规模。我们似乎不太可能看到《博德之门1》和2以《博德之门3》的风格重制，因为要将两款游戏合计数千小时的内容转化为符合拉瑞安这款角色扮演杰作水准的作品，耗时将极其漫长。"
+        },
+        {
+          "en": "Perhaps Hasbro views remakes as a stop-gap between the phenomenally successful Baldur’s Gate 3 and the inevitable sequel, which has astronomical fan expectation to navigate. With Larian leaving Baldur’s Gate and indeed Dungeons & Dragons behind to make the next Divinity game, there are big shoes to fill — perhaps the biggest in video games.",
+          "cn": "或许孩之宝将重制版视为《博德之门3》巨大成功与不可避免的续作之间的过渡产品，而续作面临着粉丝极高的期待。随着拉瑞安离开《博德之门》乃至《龙与地下城》系列去开发下一款《神界》游戏，留下的空缺巨大——或许是电子游戏史上最大的空缺。"
+        },
+        {
+          "en": "Baldur’s Gate was BioWare’s second game, releasing on PC in 1998 and published by Interplay. It did well enough to spawn a sequel, 2000’s Baldur's Gate II: Shadows of Amn, which like its predecessor took place in the Forgotten Realms. Both original games use an isometric perspective and pausable real-time gameplay, with the player controlling up to six characters. Could the remakes follow Baldur’s Gate 3’s lead and go for fully turn-based combat? Or maybe a hybrid system is in order.",
+          "cn": "《博德之门》是BioWare的第二款游戏，于1998年在PC平台发售，由Interplay发行。其成功催生了2000年的续作《博德之门2：安姆阴影》，与前作一样以被遗忘的国度为背景。两款原版游戏均采用等距视角和可暂停的即时制玩法，玩家最多可控制六名角色。重制版是否会效仿《博德之门3》采用完全回合制战斗？或者采用混合系统？"
+        },
+        {
+          "en": "There’s plenty going on in the world of Baldur’s Gate, despite the long wait for a sequel. There’s a Baldur’s Gate 3 HBO TV show in the works, one that will continue the story from the game — much to the surprise of fans. There’s even a prequel novel depicting Astarion’s time in servitude to the Vampire Lord Cazador Szarr , an official Baldur’s Gate 3 cookbook, and a coloring book.",
+          "cn": "尽管续作遥遥无期，《博德之门》的世界里仍有许多动向。一部《博德之门3》HBO剧集正在制作中，将延续游戏的故事——这让粉丝们颇感意外。此外还有一部前传小说，讲述阿斯代伦侍奉吸血鬼领主卡扎多尔·沙尔时期的经历，以及一本官方《博德之门3》食谱和一本涂色书。"
+        },
+        {
+          "en": "Wesley is Director, News at IGN. Find him on Twitter at @wyp100. You can reach Wesley at wesley_yinpoole@ign.com or confidentially at wyp100@proton.me.",
+          "cn": "Wesley是IGN新闻总监。你可以在Twitter上通过@wyp100找到他，或通过wesley_yinpoole@ign.com联系，也可通过wyp100@proton.me进行保密联系。"
+        }
+      ],
+      "pending_dict": [
+        {
+          "en": "Kevin Martens",
+          "cn": "Kevin Martens",
+          "reason": "不知名人物，保留英文"
+        }
+      ],
+      "translated_terms": {
+        "Baldur's Gate": "《博德之门》",
+        "Baldur's Gate II: Shadows of Amn": "《博德之门2：安姆阴影》",
+        "Baldur's Gate 3": "《博德之门3》",
+        "Baldur's Gate 4": "《博德之门4》",
+        "Wizards of the Coast": "威世智",
+        "Hasbro": "孩之宝",
+        "BioWare": "BioWare",
+        "Interplay": "Interplay",
+        "Larian": "拉瑞安",
+        "Divinity": "《神界》",
+        "Forgotten Realms": "被遗忘的国度",
+        "Astarion": "阿斯代伦",
+        "Cazador Szarr": "卡扎多尔·沙尔",
+        "Kevin Martens": "Kevin Martens"
+      },
+      "cover": "https://assets-prd.ignimgs.com/2026/06/01/bg2-1780317973808.jpg",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/01/bg2-1780317973808.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/01/bg2-1780317973808.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/01/bg2-1780317973808.jpg?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/01/bg2-1780317973808.jpg?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/01/bg2-1780317973808.jpg"
+      ],
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-flash",
+      "label": "DeepSeek V4 Flash",
+      "comparison_label": "DeepSeek V4 Flash",
+      "comparison_base_url": "https://api.deepseek.com"
+    }
+  ]
+}

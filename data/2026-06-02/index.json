@@ -88,7 +88,13 @@
       "translation_path": "translations/03.json",
       "translator": "api",
       "translator_provider": "openai-compatible",
-      "translator_model": "deepseek-v4-pro"
+      "translator_model": "deepseek-v4-pro",
+      "comparison_status": "done",
+      "comparison_models": [
+        "deepseek-v4-pro",
+        "deepseek-v4-flash"
+      ],
+      "comparison_updated_at_cn": "2026-06-02 13:27:24"
     },
     {
       "id": 4,
