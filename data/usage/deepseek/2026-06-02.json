@@ -399,6 +399,27 @@
       "total_tokens": 9806,
       "prompt_cache_hit_tokens": 5888,
       "prompt_cache_miss_tokens": 1725
+    },
+    {
+      "time_cn": "2026-06-02 09:11:11",
+      "task": "fulltext",
+      "model": "deepseek-v4-flash",
+      "article_id": 1,
+      "article_title": "PlayStation打击劣质游戏，发行商Webnetic宣布游戏即将下架",
+      "article_url": "https://www.ign.com/articles/playstation-shovelware-crackdown-continues-as-major-publisher-warns-its-games-will-soon-be-pulled",
+      "article_date": "2026-06-03",
+      "detail": "",
+      "estimated_cost_usd": 0.00151858,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7293,
+      "completion_tokens": 1777,
+      "total_tokens": 9070,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 7293
     }
   ]
 }

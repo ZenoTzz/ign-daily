@@ -11,8 +11,8 @@
       "url": "https://www.ign.com/articles/playstation-shovelware-crackdown-continues-as-major-publisher-warns-its-games-will-soon-be-pulled",
       "publish_time_cn": "2026-06-02 08:05",
       "pub_date": "2026-06-02 08:05",
-      "cover_image": "https://assets-prd.ignimgs.com/2025/02/26/ps5console-1740609475402.jpeg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2025/02/26/ps5console-1740609475402.jpeg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2025/02/26/ps5console-1740609475402.jpeg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2025/02/26/ps5console-1740609475402.jpeg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -79,7 +79,11 @@
           "cn": "Eslop",
           "reason": "游戏行业术语，需确认译法"
         }
-      ]
+      ],
+      "translation_path": "translations/01.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-flash"
     },
     {
       "id": 2,
