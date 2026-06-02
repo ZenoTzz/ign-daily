@@ -735,6 +735,90 @@
       "total_tokens": 10487,
       "prompt_cache_hit_tokens": 5888,
       "prompt_cache_miss_tokens": 2003
+    },
+    {
+      "time_cn": "2026-06-02 20:43:05",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 7,
+      "article_title": "Take-Two Boss Says 2K's WWE Franchise Could Be 'Double or Triple the Size' It Is Now",
+      "article_url": "https://www.ign.com/articles/take-two-boss-says-2ks-wwe-franchise-could-be-double-or-triple-the-size-it-is-now",
+      "article_date": "2026-06-03",
+      "detail": "",
+      "estimated_cost_usd": 0.00022775,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7137,
+      "completion_tokens": 130,
+      "total_tokens": 7267,
+      "prompt_cache_hit_tokens": 5888,
+      "prompt_cache_miss_tokens": 1249
+    },
+    {
+      "time_cn": "2026-06-02 20:43:09",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 8,
+      "article_title": "Subnautica 2 Hotfix Modifies Creature Behavior Further So Some Predators Will Attack Players Less Often",
+      "article_url": "https://www.ign.com/articles/subnautica-2-hotfix-modifies-creature-behavior-further-so-some-predators-will-attack-players-less-often",
+      "article_date": "2026-06-03",
+      "detail": "",
+      "estimated_cost_usd": 0.00026205,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7020,
+      "completion_tokens": 311,
+      "total_tokens": 7331,
+      "prompt_cache_hit_tokens": 5888,
+      "prompt_cache_miss_tokens": 1132
+    },
+    {
+      "time_cn": "2026-06-02 20:43:12",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 9,
+      "article_title": "Forza Horizon and Need for Speed Meet in Maverick Games’ Debut Driving Project",
+      "article_url": "https://www.ign.com/articles/forza-horizon-and-need-for-speed-meet-in-maverick-games-debut-driving-project",
+      "article_date": "2026-06-03",
+      "detail": "",
+      "estimated_cost_usd": 0.00038903,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8051,
+      "completion_tokens": 249,
+      "total_tokens": 8300,
+      "prompt_cache_hit_tokens": 5888,
+      "prompt_cache_miss_tokens": 2163
+    },
+    {
+      "time_cn": "2026-06-02 20:43:15",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 10,
+      "article_title": "Marvel Fans Disappointed as Today's Big Avengers: Doomsday Tease Appears to Be a Pop-Up Coffee Shop",
+      "article_url": "https://www.ign.com/articles/marvel-fans-disappointed-as-todays-big-avengers-doomsday-tease-appears-to-be-a-pop-up-coffee-shop",
+      "article_date": "2026-06-03",
+      "detail": "",
+      "estimated_cost_usd": 0.00020969,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 6992,
+      "completion_tokens": 138,
+      "total_tokens": 7130,
+      "prompt_cache_hit_tokens": 5888,
+      "prompt_cache_miss_tokens": 1104
     }
   ]
 }
