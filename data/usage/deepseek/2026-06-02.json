@@ -588,6 +588,69 @@
       "total_tokens": 8789,
       "prompt_cache_hit_tokens": 5888,
       "prompt_cache_miss_tokens": 1389
+    },
+    {
+      "time_cn": "2026-06-02 19:05:16",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 4,
+      "article_title": "Crimson Desert Dev Says It's Going to Improve the Game's Story to 'Make It More Engaging' as Part of Significant Changes Coming Soon",
+      "article_url": "https://www.ign.com/articles/crimson-desert-dev-says-its-going-to-improve-the-games-story-to-make-it-more-engaging-as-part-of-significant-changes-coming-soon",
+      "article_date": "2026-06-03",
+      "detail": "",
+      "estimated_cost_usd": 0.00110104,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7246,
+      "completion_tokens": 372,
+      "total_tokens": 7618,
+      "prompt_cache_hit_tokens": 128,
+      "prompt_cache_miss_tokens": 7118
+    },
+    {
+      "time_cn": "2026-06-02 19:05:18",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 5,
+      "article_title": "Nintendo Music Launches Web Player, With Over 4 Hours of Mario Kart World Tunes",
+      "article_url": "https://www.ign.com/articles/nintendo-music-launches-web-player-with-over-4-hours-of-mario-kart-world-tunes",
+      "article_date": "2026-06-03",
+      "detail": "",
+      "estimated_cost_usd": 0.00016531,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 6715,
+      "completion_tokens": 118,
+      "total_tokens": 6833,
+      "prompt_cache_hit_tokens": 5888,
+      "prompt_cache_miss_tokens": 827
+    },
+    {
+      "time_cn": "2026-06-02 19:05:21",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 6,
+      "article_title": "Resident Evil Series May Finally Set Future Game in Japan, Producer Says",
+      "article_url": "https://www.ign.com/articles/resident-evil-series-may-finally-set-future-game-in-japan-producer-says",
+      "article_date": "2026-06-03",
+      "detail": "",
+      "estimated_cost_usd": 0.00028249,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7268,
+      "completion_tokens": 260,
+      "total_tokens": 7528,
+      "prompt_cache_hit_tokens": 5888,
+      "prompt_cache_miss_tokens": 1380
     }
   ]
 }
