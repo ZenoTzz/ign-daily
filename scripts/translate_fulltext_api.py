@@ -22,6 +22,7 @@ from pathlib import Path
 from typing import Any
 
 from common_paths import DATA_DIR, REPO_ROOT, configure_utf8_stdio, dict_path, env_paths
+from api_translation_audit import check_translation
 from currency_utils import normalize_translation_currency
 from normalize_currency_files import normalize_date as normalize_currency_date
 from prompt_blocks import chunk_user_payload, fulltext_user_payload
@@ -130,6 +131,30 @@ def read_optional(path: str, max_chars: int = 10000) -> str:
     return p.read_text(encoding="utf-8", errors="replace")[:max_chars]
 
 
+def hard_checklist(paragraphs: list[str], terms: dict[str, str]) -> dict[str, Any]:
+    source = "\n".join(paragraphs)
+    currency_hits = re.findall(
+        r"(?i)(?:US\$|\$|€|£)\s*\d[\d,]*(?:\.\d+)?\s*(?:million|billion|thousand|m|bn|k)?|"
+        r"\d[\d,]*(?:\.\d+)?\s*(?:million|billion|thousand|m|bn|k)?\s*"
+        r"(?:US\s*dollars?|U\.S\.\s*dollars?|dollars?|USD|euros?|EUR|pounds?|GBP|yen|JPY)",
+        source,
+    )
+    return {
+        "must_use_dictionary_terms": terms,
+        "foreign_currency_mentions_in_source": currency_hits[:30],
+        "currency_rule": "Every foreign-currency amount must be rendered as foreign amount plus CNY conversion, e.g. 2.5亿美元(约合人民币18亿元).",
+        "paragraph_count": len(paragraphs),
+        "do_not_translate_or_include_web_noise": [
+            "navigation menus",
+            "privacy policy",
+            "terms of use",
+            "contact us",
+            "IGN YouTube/TikTok/X links",
+            "HowLongToBeat/MapGenie/Eurogamer/VG247 footer links",
+        ],
+    }
+
+
 def build_messages(article: dict[str, Any], paragraphs: list[str], terms: dict[str, str]) -> list[dict[str, str]]:
     system = (
         "你是 IGN Daily 的中文全文翻译 agent。必须严格输出 JSON，不要 Markdown。"
@@ -137,9 +162,56 @@ def build_messages(article: dict[str, Any], paragraphs: list[str], terms: dict[s
         "必须遵守翻译指南、风格画像和词库命中。所有外币金额必须补人民币换算；中文标点使用全角；作品名用《》。"
     )
     user = fulltext_user_payload(article=article, paragraphs=paragraphs, terms=terms)
+    user["hard_checklist"] = hard_checklist(paragraphs, terms)
     return [
         {"role": "system", "content": system},
         {"role": "user", "content": json.dumps(user, ensure_ascii=False)},
+    ]
+
+
+def build_repair_messages(
+    article: dict[str, Any],
+    paragraphs_en: list[str],
+    data: dict[str, Any],
+    terms: dict[str, str],
+    issues: list[dict[str, str]],
+) -> list[dict[str, str]]:
+    system = (
+        "你是 IGN Daily 的 API 翻译审稿修复 agent。只输出严格 JSON，不要 Markdown。"
+        "你不是重新创作，而是在保持原译文整体不变的前提下，修复审计问题。"
+        "必须保留 paragraphs 数量和顺序；必须使用词库译名；所有外币金额必须补人民币换算；必须删除导航/页脚/广告噪音。"
+    )
+    payload = {
+        "cache_prefix": {
+            "project": "IGN Daily",
+            "fixed_instruction": "修复译文，使其通过词库、货币、段落数量和网页噪音审计。",
+        },
+        "article": {
+            "id": article.get("id"),
+            "url": article.get("url"),
+            "en_title": article.get("en_title"),
+        },
+        "hard_checklist": hard_checklist(paragraphs_en, terms),
+        "audit_issues": issues,
+        "current_translation_json": data,
+        "required_json_schema": {
+            "id": article.get("id"),
+            "url": article.get("url"),
+            "en_title": article.get("en_title"),
+            "cn_title": "中文标题",
+            "subtitle": "2-15字中文短副标题",
+            "opus_summary": "150-260字中文总述",
+            "publish_time_cn": article.get("publish_time_cn") or article.get("pub_date") or "",
+            "paragraphs": [{"en": "原文段落", "cn": "修复后的中文译文"}],
+            "pending_dict": [],
+            "translated_terms": {},
+            "cover": "",
+            "images": [],
+        },
+    }
+    return [
+        {"role": "system", "content": system},
+        {"role": "user", "content": json.dumps(payload, ensure_ascii=False)},
     ]
 
 
@@ -257,6 +329,40 @@ def normalize_translation(article: dict[str, Any], result: dict[str, Any], parag
     })
 
 
+def repair_translation_once(
+    api_key: str,
+    model: str,
+    base_url: str,
+    article: dict[str, Any],
+    paragraphs_en: list[str],
+    terms: dict[str, str],
+    data: dict[str, Any],
+    issues: list[dict[str, str]],
+    article_date: str,
+) -> dict[str, Any]:
+    raw, usage = call_deepseek_response(
+        api_key,
+        model,
+        base_url,
+        build_repair_messages(article, paragraphs_en, data, terms, issues),
+        max_tokens=int(os.environ.get("TRANSLATOR_FULLTEXT_REPAIR_MAX_TOKENS", "12000")),
+    )
+    record_deepseek_usage_safe(
+        task="fulltext_repair",
+        model=model,
+        usage=usage,
+        article_id=article.get("id"),
+        article_title=article.get("cn_title") or article.get("en_title"),
+        article_url=article.get("url"),
+        article_date=article_date,
+        detail=f"{len(issues)} audit issue(s)",
+    )
+    repaired = normalize_translation(article, extract_json(raw), paragraphs_en)
+    repaired["repair_source"] = "api_audit"
+    repaired["repair_issue_count"] = len(issues)
+    return repaired
+
+
 def resolve_requests(date: str) -> tuple[Path, dict[str, Any], dict[str, Any], list[dict[str, Any]]]:
     day_dir = DATA_DIR / date
     index = load_json(day_dir / "index.json")
@@ -339,6 +445,22 @@ def translate_date(date: str, limit: int = 2) -> int:
                 data["cover"] = source["cover_image"]
             if not data.get("images") and isinstance(source.get("images"), list):
                 data["images"] = source["images"]
+        audit_issues = check_translation(article=article, paragraphs_en=paragraphs_en, data=data, required_terms=terms)
+        if audit_issues and os.environ.get("TRANSLATOR_FULLTEXT_REPAIR", "1") != "0":
+            print(f"[REPAIR] fulltext #{article['id']} audit found {len(audit_issues)} issue(s); asking model for focused repair")
+            data = repair_translation_once(api_key, model, base_url, article, paragraphs_en, terms, data, audit_issues, date)
+            data["translator"] = "api"
+            data["translator_provider"] = "openai-compatible"
+            data["translator_model"] = model
+            if source:
+                if not data.get("cover") and source.get("cover_image"):
+                    data["cover"] = source["cover_image"]
+                if not data.get("images") and isinstance(source.get("images"), list):
+                    data["images"] = source["images"]
+            audit_issues = check_translation(article=article, paragraphs_en=paragraphs_en, data=data, required_terms=terms)
+        if audit_issues:
+            details = "; ".join(f"[{issue['type']}] {issue['detail']}" for issue in audit_issues[:8])
+            raise RuntimeError(f"API translation audit failed for #{article['id']}: {details}")
         trans_path = DATA_DIR / date / "translations" / f"{article['id']:02d}.json"
         write_json(trans_path, data)
         subprocess.run([sys.executable, str(REPO_ROOT / "scripts" / "translate_pipeline.py"), date, str(article["id"]), "--post"], cwd=REPO_ROOT, check=True)

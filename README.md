@@ -110,6 +110,7 @@ python -m http.server 8000
 - **2026-06-02**: RSS 过滤改为“隔离区”机制。疑似促销/导购稿不再静默丢弃，而是写入 `data/{date}/filtered_rss.json`；首页会显示“被过滤”入口，用户可一键恢复入库并进入标题摘要队列。`data/rss-filter-config.json.filtered_retention_days` 控制旧隔离文件保留天数，超期由 RSS workflow 自动删除。
 - **2026-06-02**: 首页默认日期改为和 RSS 一致的“新闻日”：北京时间 08:00 后自动打开下一天的数据目录，例如 2026-06-02 08:00 后默认展示 `data/2026-06-03`。
 - **2026-06-02**: API 翻译金额换算改为“提示词 + 脚本后处理 + 校验”三层保证。API workflow 和 hourly RSS 标题翻译前会刷新 `exchange_rates.json`；`currency_utils.py` 会自动补 `2.5亿美元(约合人民币18亿元)` 这类换算；`check_currency.py` 同时检查首页摘要、正式译文和多模型对比译文。
+- **2026-06-02**: API 正文翻译新增硬性审计与局部返修。`scripts/api_translation_audit.py` 会检查词库命中、外币人民币换算、段落数量和网页导航/页脚噪音；首次翻译不通过时，`translate_fulltext_api.py` 只把问题清单交给模型返修一次，返修后仍不通过则阻止提交并保留翻译请求。
 - **2026-06-02**: DeepSeek 用量看板新增估算成本和按文章成本。成本按 DeepSeek 官方每 1M tokens 价格估算，分别计算缓存命中输入、缓存未命中输入和输出 tokens；真实扣费仍以 DeepSeek 账户余额为准。
 - **2026-06-02**: DeepSeek 用量看板新增“平台实际扣费”对照。API workflow 会在运行前后各查询一次 DeepSeek 余额，并把余额差写入 `data/usage/deepseek-runs.json`；看板同时显示脚本估算成本和 DeepSeek 平台实际扣费，方便排查价格表、四舍五入或平台计费差异。
 - **2026-06-02**: 手动触发 API 翻译时，网页会把本次选择的标题模型、正文模型、API Base URL 和 API/OpenClaw 开关作为 `workflow_dispatch` inputs 传给 `api-translation.yml`。手动运行优先使用本次 inputs，定时运行继续读取 `data/automation-config.json`，避免刚切 Pro/Flash 后立刻翻译时读到旧配置。
