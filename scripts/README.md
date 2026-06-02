@@ -14,6 +14,7 @@
 | `article_cache.py` | 抓取并缓存干净英文正文、封面图、正文图 | RSS 后、API 翻译前 |
 | `translate_titles_deepseek.py` | OpenAI-compatible API 标题摘要翻译，只处理 need_titles 队列 | `title_translator=api` |
 | `translate_fulltext_api.py` | 可选 OpenAI-compatible API 正文翻译，强制跑后处理和校验 | `fulltext_translator=api` |
+| `translate_compare_api.py` | 手动把同一篇文章交给两个模型各翻一次，写入 comparisons/NN.json，不覆盖正式译文 | 网页“对比翻译”按钮 |
 | `automation_guard.py` | 给 OpenClaw cron 判断当前任务归 API 还是 OpenClaw | 每次 OpenClaw cron 启动后 |
 | `nightly_polish_diff.py` | 对比用户润色与原译，提取风格规律 | 每晚 22:30 cron |
 | `nightly_style_api.py` | 用 API 从已完成译文/润色样本学习并更新 STYLE_PROFILE.md | `nightly_learner=api` |
@@ -95,6 +96,13 @@ python3 scripts/nightly_style_api.py {date}
 `.github/workflows/api-translation.yml`。该 workflow 手动运行时优先使用 inputs，
 定时运行时才回退读取 `data/automation-config.json`，避免刚切换 Pro/Flash 后立刻
 触发翻译却读到旧模型。
+
+网页文章卡片的“对比翻译”是手动-only 流程：它通过 `api-translation.yml`
+传入 `compare_date`、`compare_article_id`、`compare_model_a`、`compare_model_b`，
+调用 `scripts/translate_compare_api.py`。结果写入
+`data/{date}/comparisons/NN.json`，并在 `index.json` 里标记
+`comparison_status=done`；它不得写 `translations/NN.json`，不得移除
+`requests.json`，也不得参与定时任务。
 
 `article_cache.py` 会写 `data/{date}/sources/NN.json`，里面保存 `body_en`、`paragraphs_en`、`cover_image` 和 `images`。标题摘要和正文 API 都优先读取这个缓存；只有缓存缺失才会临时抓网页。不要让模型负责抓正文或图片。
 

@@ -108,6 +108,7 @@ python -m http.server 8000
 - **2026-06-02**: RSS 过滤补强为“购物意图”过滤，会跳过促销、导购、预购、亚马逊独占、手办/周边/LEGO set 等商业稿；所有会写仓库数据的 Actions 统一使用 `ign-daily-write-main` 并发组，避免 API 翻译和 RSS/用量快照同时 push 时冲突。
 - **2026-06-02**: DeepSeek 用量看板新增估算成本和按文章成本。成本按 DeepSeek 官方每 1M tokens 价格估算，分别计算缓存命中输入、缓存未命中输入和输出 tokens；真实扣费仍以 DeepSeek 账户余额为准。
 - **2026-06-02**: 手动触发 API 翻译时，网页会把本次选择的标题模型、正文模型、API Base URL 和 API/OpenClaw 开关作为 `workflow_dispatch` inputs 传给 `api-translation.yml`。手动运行优先使用本次 inputs，定时运行继续读取 `data/automation-config.json`，避免刚切 Pro/Flash 后立刻翻译时读到旧配置。
+- **2026-06-02**: 新增手动“双模型对比翻译”。文章卡片可触发同一篇文章分别用 DeepSeek V4 Pro 和 Flash 翻译，结果写入 `data/{date}/comparisons/NN.json` 并通过 `comparison.html` 并排查看；该流程不覆盖正式译文，也不参与定时自动化。
 - **2026-06-02**: 正文 API 单轮处理上限从 2 篇调到 5 篇，避免一次勾选多篇时只翻译前两篇、剩余请求继续留在 `requests.json`。
 - **2026-06-02**: 正文 API 支持手动批量模式：普通 5 篇、批量 10 篇、尽量全部。`api-translation.yml` 接收 `workflow_dispatch` 输入并由 `translate_fulltext_api.py` 按时间预算自动暂停，避免 Actions 超时。
 - **2026-06-02**: 新增 `scripts/prompt_blocks.py`，标题摘要、正文、夜间学习共享稳定 prompt 前缀，提升 DeepSeek 自动上下文缓存命中率，并可在 `usage.html` 观察命中/未命中 tokens。

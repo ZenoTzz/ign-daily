@@ -357,6 +357,14 @@
                       <svg><use href="#icon-clock"/></svg> 翻译中
                     </span>
                   </template>
+                  <template x-if="art.comparison_status === 'done'">
+                    <span class="card-status status-done">已对比</span>
+                  </template>
+                  <template x-if="art.comparison_status === 'requested'">
+                    <span class="card-status status-requested">
+                      <svg><use href="#icon-clock"/></svg> 对比中
+                    </span>
+                  </template>
                   <template x-if="polishedIds.has(art.id)">
                     <span class="card-status status-polished">
                       <svg><use href="#icon-pencil"/></svg> 已润色
@@ -389,6 +397,20 @@
                       <svg><use href="#icon-book"/></svg> 查看翻译
                     </a>
                   </template>
+                  <template x-if="art.comparison_status === 'done'">
+                    <a :href="`comparison.html?date=${data.date}&id=${art.id}`"
+                      @click="saveState()"
+                      class="card-link" style="color:var(--accent); font-weight:600;">
+                      <svg><use href="#icon-book"/></svg> 查看对比
+                    </a>
+                  </template>
+                  <button @click.stop="runComparison(art)"
+                    :disabled="comparisonTriggeringId === art.id"
+                    class="card-link"
+                    style="background:transparent; border:0; padding:0; cursor:pointer;">
+                    <svg><use href="#icon-send"/></svg>
+                    <span x-text="comparisonTriggeringId === art.id ? '触发中...' : '对比翻译'"></span>
+                  </button>
                 </div>
               </div>
             </div>

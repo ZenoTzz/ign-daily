@@ -156,6 +156,7 @@ function appData() {
     },
     automationSaving: false,
     automationTriggering: false,
+    comparisonTriggeringId: null,
     rssTriggering: false,
     automationExpanded: false,
     toast: '',
@@ -492,6 +493,34 @@ function appData() {
       if (titleApi) parts.push(`标题/摘要：${this.formatTranslatorModel(this.automationConfig.api_title_model || this.automationConfig.api_model)}`);
       if (fulltextApi) parts.push(`正文：${this.formatTranslatorModel(this.automationConfig.api_fulltext_model)}`);
       return parts.join('，');
+    },
+
+    apiComparisonInputs(article) {
+      return {
+        title_translator: 'openclaw',
+        fulltext_translator: 'openclaw',
+        api_base_url: this.automationConfig.api_base_url || 'https://api.deepseek.com',
+        compare_date: this.data?.date || this.currentDate,
+        compare_article_id: String(article.id),
+        compare_model_a: 'deepseek-v4-pro',
+        compare_model_b: 'deepseek-v4-flash',
+        fulltext_limit: '5',
+        time_budget_seconds: '1200'
+      };
+    },
+
+    async runComparison(article) {
+      if (!article || !article.id || !this.data?.date) return;
+      try {
+        this.comparisonTriggeringId = article.id;
+        await GH.dispatchWorkflow('api-translation.yml', this.apiComparisonInputs(article));
+        article.comparison_status = 'requested';
+        this.flash(`已触发 #${article.id} 双模型对比：DeepSeek V4 Pro / Flash`, 5200);
+      } catch (e) {
+        this.flash('触发对比翻译失败：' + e.message, 6000);
+      } finally {
+        this.comparisonTriggeringId = null;
+      }
     },
 
     async runApiTranslationNow() {

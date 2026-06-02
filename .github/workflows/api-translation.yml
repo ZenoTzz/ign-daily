@@ -33,6 +33,22 @@ on:
         description: "Manual run API base URL override"
         required: false
         default: ""
+      compare_date:
+        description: "Manual comparison date YYYY-MM-DD"
+        required: false
+        default: ""
+      compare_article_id:
+        description: "Manual comparison article id"
+        required: false
+        default: ""
+      compare_model_a:
+        description: "Manual comparison model A"
+        required: false
+        default: "deepseek-v4-pro"
+      compare_model_b:
+        description: "Manual comparison model B"
+        required: false
+        default: "deepseek-v4-flash"
 
 permissions:
   contents: write
@@ -70,6 +86,8 @@ jobs:
           MANUAL_API_TITLE_MODEL: ${{ github.event_name == 'workflow_dispatch' && inputs.api_title_model || '' }}
           MANUAL_API_FULLTEXT_MODEL: ${{ github.event_name == 'workflow_dispatch' && inputs.api_fulltext_model || '' }}
           MANUAL_API_BASE_URL: ${{ github.event_name == 'workflow_dispatch' && inputs.api_base_url || '' }}
+          MANUAL_COMPARE_DATE: ${{ github.event_name == 'workflow_dispatch' && inputs.compare_date || '' }}
+          MANUAL_COMPARE_ARTICLE_ID: ${{ github.event_name == 'workflow_dispatch' && inputs.compare_article_id || '' }}
         run: |
           python3 - <<'PY' >> "$GITHUB_OUTPUT"
           import json
@@ -84,14 +102,34 @@ jobs:
           print(f"api_title_model={os.environ.get('MANUAL_API_TITLE_MODEL') or data.get('api_title_model', data.get('api_model', ''))}")
           print(f"api_fulltext_model={os.environ.get('MANUAL_API_FULLTEXT_MODEL') or data.get('api_fulltext_model', '')}")
           print(f"api_base_url={os.environ.get('MANUAL_API_BASE_URL') or data.get('api_base_url', '')}")
+          print(f"compare_date={os.environ.get('MANUAL_COMPARE_DATE', '')}")
+          print(f"compare_article_id={os.environ.get('MANUAL_COMPARE_ARTICLE_ID', '')}")
           PY
 
       - name: Stop when API mode is disabled
-        if: steps.config.outputs.title_translator != 'api' && steps.config.outputs.title_translator != 'deepseek' && steps.config.outputs.fulltext_translator != 'api' && steps.config.outputs.fulltext_translator != 'deepseek'
+        if: steps.config.outputs.compare_article_id == '' && steps.config.outputs.title_translator != 'api' && steps.config.outputs.title_translator != 'deepseek' && steps.config.outputs.fulltext_translator != 'api' && steps.config.outputs.fulltext_translator != 'deepseek'
         run: echo "API translation disabled by data/automation-config.json."
 
+      - name: Translate one article twice for model comparison
+        if: steps.config.outputs.compare_article_id != ''
+        env:
+          TRANSLATOR_API_KEY: ${{ secrets.TRANSLATOR_API_KEY || secrets.DEEPSEEK_API_KEY }}
+          TRANSLATOR_BASE_URL: ${{ steps.config.outputs.api_base_url || vars.TRANSLATOR_BASE_URL || vars.DEEPSEEK_BASE_URL || 'https://api.deepseek.com' }}
+          TRANSLATOR_COMPARE_MODEL_A: ${{ github.event_name == 'workflow_dispatch' && inputs.compare_model_a || 'deepseek-v4-pro' }}
+          TRANSLATOR_COMPARE_MODEL_B: ${{ github.event_name == 'workflow_dispatch' && inputs.compare_model_b || 'deepseek-v4-flash' }}
+          TRANSLATOR_COMPARE_MAX_TOKENS: "12000"
+        run: |
+          set -euo pipefail
+          if [ -z "${TRANSLATOR_API_KEY:-}" ]; then
+            echo "comparison requested but TRANSLATOR_API_KEY/DEEPSEEK_API_KEY is not set."
+            exit 1
+          fi
+          python3 scripts/article_cache.py "${{ steps.config.outputs.compare_date }}" --missing --limit 20
+          python3 scripts/translate_compare_api.py "${{ steps.config.outputs.compare_date }}" "${{ steps.config.outputs.compare_article_id }}"
+          python3 scripts/agent_doctor.py
+
       - name: Translate queued titles
-        if: steps.config.outputs.title_translator == 'api' || steps.config.outputs.title_translator == 'deepseek'
+        if: steps.config.outputs.compare_article_id == '' && (steps.config.outputs.title_translator == 'api' || steps.config.outputs.title_translator == 'deepseek')
         env:
           TRANSLATOR_API_KEY: ${{ secrets.TRANSLATOR_API_KEY || secrets.DEEPSEEK_API_KEY }}
           TRANSLATOR_MODEL: ${{ steps.config.outputs.api_title_model || steps.config.outputs.api_model || vars.TRANSLATOR_TITLE_MODEL || vars.TRANSLATOR_MODEL || vars.DEEPSEEK_MODEL || 'deepseek-v4-flash' }}
@@ -107,7 +145,7 @@ jobs:
           python3 scripts/translate_titles_deepseek.py --all
 
       - name: Translate requested full articles
-        if: steps.config.outputs.fulltext_translator == 'api' || steps.config.outputs.fulltext_translator == 'deepseek'
+        if: steps.config.outputs.compare_article_id == '' && (steps.config.outputs.fulltext_translator == 'api' || steps.config.outputs.fulltext_translator == 'deepseek')
         env:
           TRANSLATOR_API_KEY: ${{ secrets.TRANSLATOR_API_KEY || secrets.DEEPSEEK_API_KEY }}
           TRANSLATOR_MODEL: ${{ steps.config.outputs.api_fulltext_model || vars.TRANSLATOR_FULLTEXT_MODEL || steps.config.outputs.api_model || vars.TRANSLATOR_MODEL || vars.DEEPSEEK_MODEL || 'deepseek-v4-pro' }}
@@ -125,7 +163,7 @@ jobs:
           python3 scripts/translate_fulltext_api.py --all
 
       - name: Validate repository
-        if: steps.config.outputs.title_translator == 'api' || steps.config.outputs.title_translator == 'deepseek' || steps.config.outputs.fulltext_translator == 'api' || steps.config.outputs.fulltext_translator == 'deepseek'
+        if: steps.config.outputs.compare_article_id != '' || steps.config.outputs.title_translator == 'api' || steps.config.outputs.title_translator == 'deepseek' || steps.config.outputs.fulltext_translator == 'api' || steps.config.outputs.fulltext_translator == 'deepseek'
         env:
           TRANSLATOR_API_KEY: ${{ secrets.TRANSLATOR_API_KEY || secrets.DEEPSEEK_API_KEY }}
           TRANSLATOR_BASE_URL: ${{ steps.config.outputs.api_base_url || vars.TRANSLATOR_BASE_URL || vars.DEEPSEEK_BASE_URL || 'https://api.deepseek.com' }}
@@ -134,7 +172,7 @@ jobs:
           python3 scripts/agent_doctor.py
 
       - name: Commit and push API translation update
-        if: steps.config.outputs.title_translator == 'api' || steps.config.outputs.title_translator == 'deepseek' || steps.config.outputs.fulltext_translator == 'api' || steps.config.outputs.fulltext_translator == 'deepseek'
+        if: steps.config.outputs.compare_article_id != '' || steps.config.outputs.title_translator == 'api' || steps.config.outputs.title_translator == 'deepseek' || steps.config.outputs.fulltext_translator == 'api' || steps.config.outputs.fulltext_translator == 'deepseek'
         run: |
           set -euo pipefail
           git add data

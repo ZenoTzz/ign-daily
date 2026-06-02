@@ -10,7 +10,8 @@ IGN Daily 是一个个人化 IGN 英文新闻翻译工作流：
 2. RSS 后先缓存干净英文正文和图片到 `data/{date}/sources/NN.json`。
 3. agent/API 先补中文标题 `cn_title` 和中文摘要 `summary`，首页必须显示中文。
 4. 用户在网页勾选文章后，agent/API 复用缓存翻译全文到 `data/{date}/translations/NN.json`。
-4. push 前必须跑验证脚本，通过才允许推送。
+5. 用户手动点击“对比翻译”时，API 把同一篇文章分别交给两个模型翻译，只写 `data/{date}/comparisons/NN.json`。
+6. push 前必须跑验证脚本，通过才允许推送。
 
 ## 只需要记住 7 条
 
@@ -36,6 +37,7 @@ ign-daily/
 │       ├── requests.json         # 用户勾选请求
 │       ├── need_titles.json      # 待补中文标题/摘要队列
 │       ├── sources/NN.json       # 干净英文正文、封面图、正文图缓存
+│       ├── comparisons/NN.json   # 手动双模型对比译文，不覆盖正式译文
 │       └── translations/NN.json  # 全文译文
 ├── scripts/
 │   ├── common_paths.py           # 所有脚本共用路径
