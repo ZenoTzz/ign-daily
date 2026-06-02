@@ -96,12 +96,12 @@
       "emoji": "🚗",
       "en_title": "Forza Horizon and Need for Speed Meet in Maverick Games’ Debut Driving Project",
       "cn_title": "《极限竞速：地平线》与《极品飞车》合体？Maverick Games首秀《Clutch》",
-      "summary": "由前《极限竞速：地平线5》创意总监Mike Brown领衔的Maverick Games公布了首款作品《Clutch》，一款“电影化开放世界动作驾驶游戏”。游戏融合专业赛道竞速与地下街头追逐，将于2027年春季登陆PS5、Xbox Series和PC。",
+      "summary": "英国工作室Maverick Games公布了首款作品《Clutch》，一款“电影化开放世界动作驾驶游戏”。游戏融合专业赛道竞速与地下街头追逐，将于2027年春季登陆PS5、Xbox Series和PC。由前《极限竞速：地平线5》创意总监Mike Brown领衔，团队汇聚多位《极限竞速：地平线》系列老将。游戏采用定制版Unreal Engine 5，注重车辆真实磨损细节，并提供深度内外饰自定义。故事围绕一对天才兄妹在传奇赛事R1K与地下车群Midnight Collective之间的冒险展开。首支预告将在6月5日的夏日游戏节上公布。",
       "url": "https://www.ign.com/articles/forza-horizon-and-need-for-speed-meet-in-maverick-games-debut-driving-project",
       "publish_time_cn": "2026-06-02 18:20",
       "pub_date": "2026-06-02 18:20",
       "cover_image": "https://assets-prd.ignimgs.com/2026/06/02/clutch-1280-1780395643697.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/02/clutch-1280-1780395643697.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/02/clutch-1280-1780395643697.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -130,7 +130,11 @@
           "cn": "午夜集体",
           "reason": "地下车手组织名，需确认是否官方译名"
         }
-      ]
+      ],
+      "translation_path": "translations/09.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-flash"
     },
     {
       "id": 10,
