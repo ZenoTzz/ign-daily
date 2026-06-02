@@ -11,8 +11,8 @@
       "url": "https://www.ign.com/articles/maverick-games-new-open-world-driving-game-will-be-revealed-in-under-12-hours",
       "publish_time_cn": "2026-06-02 10:14",
       "pub_date": "2026-06-02 10:14",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/06/02/maverick-games-unannounced-1780366327702.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/02/maverick-games-unannounced-1780366327702.png",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/02/maverick-games-unannounced-1780366327702.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/02/maverick-games-unannounced-1780366327702.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -28,7 +28,11 @@
           "cn": "Maverick Games",
           "reason": "无官方中文译名，保留英文"
         }
-      ]
+      ],
+      "translation_path": "translations/03.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-flash"
     },
     {
       "id": 1,
