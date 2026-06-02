@@ -111,6 +111,7 @@ python -m http.server 8000
 - **2026-06-02**: 首页默认日期改为和 RSS 一致的“新闻日”：北京时间 08:00 后自动打开下一天的数据目录，例如 2026-06-02 08:00 后默认展示 `data/2026-06-03`。
 - **2026-06-02**: API 翻译金额换算改为“提示词 + 脚本后处理 + 校验”三层保证。API workflow 和 hourly RSS 标题翻译前会刷新 `exchange_rates.json`；`currency_utils.py` 会自动补 `2.5亿美元(约合人民币18亿元)` 这类换算；`check_currency.py` 同时检查首页摘要、正式译文和多模型对比译文。
 - **2026-06-02**: DeepSeek 用量看板新增估算成本和按文章成本。成本按 DeepSeek 官方每 1M tokens 价格估算，分别计算缓存命中输入、缓存未命中输入和输出 tokens；真实扣费仍以 DeepSeek 账户余额为准。
+- **2026-06-02**: DeepSeek 用量看板新增“平台实际扣费”对照。API workflow 会在运行前后各查询一次 DeepSeek 余额，并把余额差写入 `data/usage/deepseek-runs.json`；看板同时显示脚本估算成本和 DeepSeek 平台实际扣费，方便排查价格表、四舍五入或平台计费差异。
 - **2026-06-02**: 手动触发 API 翻译时，网页会把本次选择的标题模型、正文模型、API Base URL 和 API/OpenClaw 开关作为 `workflow_dispatch` inputs 传给 `api-translation.yml`。手动运行优先使用本次 inputs，定时运行继续读取 `data/automation-config.json`，避免刚切 Pro/Flash 后立刻翻译时读到旧配置。
 - **2026-06-02**: 新增手动“多模型翻译对比”。`data/automation-config.json.api_models` 保存可选模型目录，用户可勾选任意数量模型参与对比；文章卡片触发后会让选中模型各翻一版，结果写入 `data/{date}/comparisons/NN.json` 并通过 `comparison.html` 并排查看。该流程不覆盖正式译文，也不参与定时自动化。
 - **2026-06-02**: API 模型目录补全价格接口。每个模型可配置显示名、Model ID、Base URL、缓存命中输入价、缓存未命中输入价和输出价；正式翻译、夜间学习、多模型对比和用量看板都从同一模型目录读取。未配置价格的模型仍可翻译，但用量看板成本显示“未配置”。

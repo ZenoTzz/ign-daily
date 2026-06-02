@@ -61,7 +61,7 @@
     .seg { display: flex; gap: 6px; flex-wrap: wrap; margin: 12px 0 18px; }
     .seg button.active { background: var(--red); border-color: var(--red); }
     .grid { display: grid; gap: 14px; }
-    .cards { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+    .cards { grid-template-columns: repeat(6, minmax(0, 1fr)); }
     .two { grid-template-columns: 1.1fr 0.9fr; margin-top: 14px; }
     .card {
       background: var(--panel);
@@ -158,6 +158,11 @@
         <div class="hint" id="costHint">当前范围合计</div>
       </div>
       <div class="card">
+        <div class="label">平台实际扣费</div>
+        <div class="value money" id="actualCost">--</div>
+        <div class="hint" id="actualCostHint">按余额快照差额</div>
+      </div>
+      <div class="card">
         <div class="label">缓存命中率</div>
         <div class="value" id="cacheRate">0%</div>
         <div class="hint" id="cacheTokens">命中 0 / 未命中 0</div>
@@ -199,6 +204,31 @@
             <div class="legend-row"><span>输入 tokens</span><strong id="inputLegend">0</strong></div>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section class="card" style="margin-top:14px;">
+      <div class="chart-title">
+        <div>
+          <div class="label">运行账单对照</div>
+          <div class="hint">同一次 Actions 的估算成本 vs DeepSeek 余额变化；余额快照失败时只显示估算</div>
+        </div>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>时间</th>
+              <th>Workflow</th>
+              <th>API 调用</th>
+              <th>估算成本</th>
+              <th>平台扣费</th>
+              <th>差额</th>
+              <th>模型</th>
+            </tr>
+          </thead>
+          <tbody id="runCostsBody"></tbody>
+        </table>
       </div>
     </section>
 
@@ -254,7 +284,7 @@
   </main>
 
   <script>
-    const state = { range: 'day', dates: [], records: [], balance: null, articleMap: {}, modelMap: {} };
+    const state = { range: 'day', dates: [], records: [], balance: null, runs: [], articleMap: {}, modelMap: {} };
     const PRICING_USD_PER_MILLION = {
       'deepseek-v4-flash': { hit: 0.0028, miss: 0.14, output: 0.28 },
       'deepseek-v4-pro': { hit: 0.003625, miss: 0.435, output: 0.87 }
@@ -346,6 +376,16 @@
         return !Number.isNaN(d.getTime()) && d >= new Date(start.getTime() - (days - 1) * 86400000);
       });
     }
+    function filterRuns() {
+      const today = todayCN();
+      const start = new Date(today + 'T00:00:00+08:00');
+      const days = state.range === 'day' ? 1 : state.range === 'week' ? 7 : state.range === 'month' ? 30 : 100000;
+      return (state.runs || []).filter(r => {
+        if (state.range === 'all') return true;
+        const d = new Date(String(r.recorded_at_cn || '').replace(' ', 'T') + '+08:00');
+        return !Number.isNaN(d.getTime()) && d >= new Date(start.getTime() - (days - 1) * 86400000);
+      });
+    }
     function summarize(records) {
       const total = records.reduce((s, r) => s + Number(r.total_tokens || 0), 0);
       const prompt = records.reduce((s, r) => s + Number(r.prompt_tokens || 0), 0);
@@ -431,12 +471,17 @@
     }
     function render() {
       const records = filterRecords();
+      const runs = filterRuns();
       const sum = summarize(records);
+      const actualRuns = runs.filter(r => Number.isFinite(Number(r.actual_platform_cost)));
+      const actualTotal = actualRuns.reduce((s, r) => s + Number(r.actual_platform_cost || 0), 0);
       document.getElementById('subtitle').textContent = `已读取 ${state.dates.length} 个日期的用量日志`;
       document.getElementById('totalTokens').textContent = fmt(sum.total);
       document.getElementById('requestCount').textContent = `${sum.count} 次 API 调用`;
       document.getElementById('totalCost').textContent = fmtUsd(sum.cost);
       document.getElementById('costHint').textContent = `${state.range === 'day' ? '今日' : '当前范围'}估算花费${sum.unpriced ? `，${sum.unpriced} 次未配置价格` : ''}`;
+      document.getElementById('actualCost').textContent = actualRuns.length ? fmtUsd(actualTotal) : '--';
+      document.getElementById('actualCostHint').textContent = actualRuns.length ? `${actualRuns.length} 次运行余额差额合计` : '暂无完整余额快照';
       document.getElementById('completionTokens').textContent = fmt(sum.completion);
       document.getElementById('promptTokens').textContent = `输入 ${fmt(sum.prompt)}`;
       const input = sum.hit + sum.miss;
@@ -477,6 +522,29 @@
           <td>${fmt(g.hit)} / ${fmt(g.miss)}</td>
         </tr>
       `).join('') : '<tr><td colspan="6" class="empty">当前范围内还没有文章级 API 记录</td></tr>';
+
+      const runBody = document.getElementById('runCostsBody');
+      const runRows = runs.slice(0, 40);
+      runBody.innerHTML = runRows.length ? runRows.map(r => {
+        const estimated = Number(r.estimated_cost_usd || 0);
+        const actual = Number(r.actual_platform_cost);
+        const hasActual = Number.isFinite(actual);
+        const diff = hasActual ? actual - estimated : null;
+        const models = Object.entries(r.by_model || {}).map(([model, v]) =>
+          `${esc(modelName(model))}: ${fmtUsd(Number(v.estimated_cost_usd || 0))}`
+        ).join('<br>');
+        return `
+          <tr>
+            <td>${esc(r.recorded_at_cn || '')}<div class="article-meta">${esc(r.run_id || '')}</div></td>
+            <td>${esc(r.workflow || '')}<div class="article-meta">${esc(r.event || '')}</div></td>
+            <td>${fmt(r.api_call_count)}<div class="article-meta">${fmt(r.total_tokens)} tokens</div></td>
+            <td class="money">${fmtUsd(estimated)}</td>
+            <td class="money">${hasActual ? fmtUsd(actual) : '无快照'}</td>
+            <td>${hasActual ? fmtUsd(diff) : '--'}</td>
+            <td>${models || '--'}</td>
+          </tr>
+        `;
+      }).join('') : '<tr><td colspan="7" class="empty">当前范围内还没有运行级账单记录</td></tr>';
 
       const tbody = document.getElementById('recordsBody');
       const latest = [...records].sort((a, b) => String(b.time_cn).localeCompare(String(a.time_cn))).slice(0, 30);
@@ -526,6 +594,7 @@
     async function load() {
       state.dates = await fetchJson('data/usage/deepseek/index.json', []);
       state.balance = await fetchJson('data/usage/deepseek-balance.json', null);
+      state.runs = await fetchJson('data/usage/deepseek-runs.json', []);
       await loadModelConfig();
       const loaded = [];
       for (const date of state.dates) {

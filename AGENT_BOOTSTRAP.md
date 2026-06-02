@@ -139,6 +139,7 @@ python3 scripts/git_push.py
 - 所有会写仓库数据的 Actions 必须使用 `concurrency.group: ign-daily-write-main`，避免 RSS、API 翻译、用量快照、夜间学习同时 push 造成 rebase 冲突。
 - 网页设置会写 `data/automation-config.json`：`title_translator`、`fulltext_translator`、`nightly_learner` 可分别设为 `openclaw` 或 `api`。
 - API 模式读取 GitHub Secret `TRANSLATOR_API_KEY`（兼容 `DEEPSEEK_API_KEY`）。标题/正文/夜间学习可分别用 `api_title_model`、`api_fulltext_model`、`api_nightly_model`，base URL 从 `api_base_url` 读取。密钥不得写入网页或仓库。
+- DeepSeek 用量看板有两层数据：`usage_logger.py` 记录脚本估算 tokens/成本；API workflow 运行前后用 `deepseek_balance.py --snapshot` 记录平台余额，并由 `record_deepseek_run_cost.py` 写入 `data/usage/deepseek-runs.json`。估算成本用于分析模型和文章，真实扣费以 DeepSeek 平台余额差为准。
 - OpenClaw 独立自动化 session 只在对应配置不是 `api` 时处理队列；不要依赖正在聊天的主 session 心跳。
 - OpenClaw cron 启动后先跑 `python3 scripts/automation_guard.py title|fulltext|nightly`。输出 `SKIP` 就静默退出，输出 `RUN` 才继续。
 - 翻译完成后的 push 仍然跑 `python3 scripts/pre_push_check.py {date}`。
