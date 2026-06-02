@@ -1,27 +1,5 @@
 {
   "date": "2026-06-03",
-  "items": {
-    "4": {
-      "id": 4,
-      "url": "https://www.ign.com/articles/crimson-desert-dev-says-its-going-to-improve-the-games-story-to-make-it-more-engaging-as-part-of-significant-changes-coming-soon",
-      "en_title": "Crimson Desert Dev Says It's Going to Improve the Game's Story to 'Make It More Engaging' as Part of Significant Changes Coming Soon",
-      "cn_title": "《红色沙漠》将大幅改进剧情，让主角更有魅力",
-      "model": "deepseek-v4-flash",
-      "status": "needs_manual_review",
-      "failed_at": "2026-06-02T20:32:14.478546+08:00",
-      "reason": "[dictionary] source contains 'Persona', but required dictionary translation '女神异闻录' is missing",
-      "audit_issues": [
-        {
-          "type": "dictionary",
-          "detail": "source contains 'Persona', but required dictionary translation '女神异闻录' is missing",
-          "en": "Persona",
-          "expected_cn": "女神异闻录"
-        }
-      ],
-      "fingerprint": "1509d7f065b998b818d7e15c73e4e88f33a45519",
-      "translation_path": "translations/04.json",
-      "retry_policy": "manual_only"
-    }
-  },
-  "updated_at": "2026-06-02T20:32:14.478546+08:00"
+  "items": {},
+  "updated_at": "2026-06-02T12:44:20.918Z"
 }
