@@ -763,19 +763,36 @@ function appData() {
       if (!article || !article.id || !this.data?.date) return;
       const models = this.selectedCompareModels();
       if (models.length === 0) {
-        this.flash('请至少选择一个模型再翻译对比', 3500);
+        this.flash('??????????????', 3500);
         return;
       }
       try {
         this.comparisonTriggeringId = article.id;
+        await this.markComparisonRequested(article, models);
         await GH.dispatchWorkflow('api-translation.yml', this.apiComparisonInputs(article));
-        article.comparison_status = 'requested';
-        this.flash(`已触发 #${article.id} 多模型翻译：${models.map(m => m.label).join(' / ')}`, 6000);
+        this.flash(`??? #${article.id} ??????${models.map(m => m.label).join(' / ')}?????????????`, 6500);
       } catch (e) {
-        this.flash('触发对比翻译失败：' + e.message, 6000);
+        this.flash('?????????' + e.message, 6000);
       } finally {
         this.comparisonTriggeringId = null;
       }
+    },
+
+    async markComparisonRequested(article, models) {
+      const date = this.data?.date || this.currentDate;
+      const indexPath = `data/${date}/index.json`;
+      const fresh = await GH.getFile(indexPath);
+      if (!fresh) throw new Error(`??? ${indexPath}`);
+      const index = JSON.parse(fresh.content);
+      const target = (index.articles || []).find(a => Number(a.id) === Number(article.id));
+      if (!target) throw new Error(`????? #${article.id}`);
+      const now = new Date().toLocaleString('zh-CN', { hour12: false });
+      target.comparison_status = 'requested';
+      target.comparison_requested_at_cn = now;
+      target.comparison_models = models.map(m => m.model);
+      await GH.putFile(indexPath, JSON.stringify(index, null, 2) + '\n', `comparison: request #${article.id}`);
+      Object.assign(article, target);
+      this.data = index;
     },
 
     async runApiTranslationNow() {
