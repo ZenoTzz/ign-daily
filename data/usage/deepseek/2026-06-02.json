@@ -819,6 +819,69 @@
       "total_tokens": 7130,
       "prompt_cache_hit_tokens": 5888,
       "prompt_cache_miss_tokens": 1104
+    },
+    {
+      "time_cn": "2026-06-02 20:45:40",
+      "task": "fulltext",
+      "model": "deepseek-v4-flash",
+      "article_id": 7,
+      "article_title": "Take-Two老板：WWE系列规模还能翻两倍",
+      "article_url": "https://www.ign.com/articles/take-two-boss-says-2ks-wwe-franchise-could-be-double-or-triple-the-size-it-is-now",
+      "article_date": "2026-06-03",
+      "detail": "",
+      "estimated_cost_usd": 0.00089933,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7800,
+      "completion_tokens": 2197,
+      "total_tokens": 9997,
+      "prompt_cache_hit_tokens": 5888,
+      "prompt_cache_miss_tokens": 1912
+    },
+    {
+      "time_cn": "2026-06-02 20:45:52",
+      "task": "fulltext",
+      "model": "deepseek-v4-flash",
+      "article_id": 8,
+      "article_title": "《深海迷航2》热修复：部分掠食者攻击性降低",
+      "article_url": "https://www.ign.com/articles/subnautica-2-hotfix-modifies-creature-behavior-further-so-some-predators-will-attack-players-less-often",
+      "article_date": "2026-06-03",
+      "detail": "",
+      "estimated_cost_usd": 0.00080259,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7705,
+      "completion_tokens": 1899,
+      "total_tokens": 9604,
+      "prompt_cache_hit_tokens": 5888,
+      "prompt_cache_miss_tokens": 1817
+    },
+    {
+      "time_cn": "2026-06-02 20:46:17",
+      "task": "fulltext",
+      "model": "deepseek-v4-flash",
+      "article_id": 9,
+      "article_title": "《极限竞速：地平线》与《极品飞车》合体？Maverick Games首秀《Clutch》",
+      "article_url": "https://www.ign.com/articles/forza-horizon-and-need-for-speed-meet-in-maverick-games-debut-driving-project",
+      "article_date": "2026-06-03",
+      "detail": "",
+      "estimated_cost_usd": 0.00146143,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8725,
+      "completion_tokens": 3742,
+      "total_tokens": 12467,
+      "prompt_cache_hit_tokens": 5888,
+      "prompt_cache_miss_tokens": 2837
     }
   ]
 }

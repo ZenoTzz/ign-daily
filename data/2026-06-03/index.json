@@ -7,12 +7,12 @@
       "emoji": "🎮",
       "en_title": "Take-Two Boss Says 2K's WWE Franchise Could Be 'Double or Triple the Size' It Is Now",
       "cn_title": "Take-Two老板：WWE系列规模还能翻两倍",
-      "summary": "Take-Two CEO Strauss Zelnick 表示，2K旗下的《WWE》系列游戏潜力巨大，规模可达到现在的两到三倍。他指出游戏质量仍有提升空间，并强调团队不会自满。此前《WWE 2K26》获IGN 7分评价，而《WWE 2K27》已确认将于2027年3月发售。",
+      "summary": "Take-Two CEO Strauss Zelnick 表示，2K旗下的《WWE》系列游戏潜力巨大，规模可达到现在的两到三倍。他指出游戏质量仍有提升空间，并强调团队不会自满。此前《WWE 2K26》获IGN 7分评价，而《WWE 2K27》已确认将于2027年3月发售。Zelnick 认为，只要持续取悦玩家并提供符合品牌调性的创新内容，该系列就能实现大幅增长。然而，近期《WWE 2K》系列因引入战斗通行证系统取代传统DLC包而引发玩家不满，2K不得不调整策略，从第二赛季起让高级通行证的角色立即解锁，并降低升级所需经验值。未来《WWE 2K27》将如何改进以扩大受众，值得关注。",
       "url": "https://www.ign.com/articles/take-two-boss-says-2ks-wwe-franchise-could-be-double-or-triple-the-size-it-is-now",
       "publish_time_cn": "2026-06-02 19:46",
       "pub_date": "2026-06-02 19:46",
       "cover_image": "https://assets-prd.ignimgs.com/2026/06/02/ss-9f01df4c6ab22dcec63781977b0643db390727a8-1920x1080-1780400515407.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/02/ss-9f01df4c6ab22dcec63781977b0643db390727a8-1920x1080-1780400515407.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/02/ss-9f01df4c6ab22dcec63781977b0643db390727a8-1920x1080-1780400515407.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -21,7 +21,13 @@
         "https://assets-prd.ignimgs.com/2026/06/02/ss-9f01df4c6ab22dcec63781977b0643db390727a8-1920x1080-1780400515407.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-02T20:42:59+08:00"
+      "source_fetched_at": "2026-06-02T20:42:59+08:00",
+      "translation_error": "Command '['/opt/hostedtoolcache/Python/3.11.15/x64/bin/python3', '/home/runner/work/ign-daily/ign-daily/scripts/pre_push_check.py', '2026-06-03']' returned non-zero exit status 1.",
+      "translation_failed_at": "2026-06-02T20:45:40.617934+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-flash",
+      "translation_path": "translations/07.json"
     },
     {
       "id": 8,
@@ -34,7 +40,7 @@
       "publish_time_cn": "2026-06-02 19:04",
       "pub_date": "2026-06-02 19:04",
       "cover_image": "https://assets-prd.ignimgs.com/2026/06/02/s2-1780398074054.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/02/s2-1780398074054.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/02/s2-1780398074054.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -65,7 +71,13 @@
           "cn": "锤头鲨",
           "reason": "游戏内生物名称，需确认官方译名"
         }
-      ]
+      ],
+      "translation_error": "Command '['/opt/hostedtoolcache/Python/3.11.15/x64/bin/python3', '/home/runner/work/ign-daily/ign-daily/scripts/pre_push_check.py', '2026-06-03']' returned non-zero exit status 1.",
+      "translation_failed_at": "2026-06-02T20:45:53.210586+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-flash",
+      "translation_path": "translations/08.json"
     },
     {
       "id": 9,
@@ -73,12 +85,12 @@
       "emoji": "🚗",
       "en_title": "Forza Horizon and Need for Speed Meet in Maverick Games’ Debut Driving Project",
       "cn_title": "《极限竞速：地平线》与《极品飞车》合体？Maverick Games首秀《Clutch》",
-      "summary": "由前《极限竞速：地平线5》创意总监Mike Brown领衔的Maverick Games公布了首款作品《Clutch》，一款“电影化开放世界动作驾驶游戏”。游戏融合专业赛道竞速与地下街头追逐，将于2027年春季登陆PS5、Xbox Series和PC。",
+      "summary": "英国工作室Maverick Games公布了首款作品《Clutch》，一款“电影化开放世界动作驾驶游戏”。游戏融合专业赛道竞速与地下街头追逐，将于2027年春季登陆PS5、Xbox Series和PC。由前《极限竞速：地平线5》创意总监Mike Brown领衔，团队汇聚多位《极限竞速：地平线》系列老将。游戏采用定制版Unreal Engine 5，注重车辆真实磨损细节，并提供深度内外饰自定义。故事围绕一对天才兄妹在传奇赛事R1K与地下车群Midnight Collective之间的冒险展开。首支预告将在6月5日的夏日游戏节上公布。",
       "url": "https://www.ign.com/articles/forza-horizon-and-need-for-speed-meet-in-maverick-games-debut-driving-project",
       "publish_time_cn": "2026-06-02 18:20",
       "pub_date": "2026-06-02 18:20",
       "cover_image": "https://assets-prd.ignimgs.com/2026/06/02/clutch-1280-1780395643697.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/02/clutch-1280-1780395643697.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/02/clutch-1280-1780395643697.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -107,7 +119,13 @@
           "cn": "午夜集体",
           "reason": "地下车手组织名，需确认是否官方译名"
         }
-      ]
+      ],
+      "translation_error": "Command '['/opt/hostedtoolcache/Python/3.11.15/x64/bin/python3', '/home/runner/work/ign-daily/ign-daily/scripts/pre_push_check.py', '2026-06-03']' returned non-zero exit status 1.",
+      "translation_failed_at": "2026-06-02T20:46:17.777387+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-flash",
+      "translation_path": "translations/09.json"
     },
     {
       "id": 10,
