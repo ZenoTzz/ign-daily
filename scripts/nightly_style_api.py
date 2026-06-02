@@ -91,6 +91,25 @@ def split_polished_body(value: str) -> list[str]:
     return chunks
 
 
+def polished_paragraphs(polished: dict[str, Any]) -> list[str]:
+    paragraphs = polished.get("paragraphs")
+    if isinstance(paragraphs, list):
+        items: list[str] = []
+        for para in paragraphs:
+            if isinstance(para, str):
+                text = para
+            elif isinstance(para, dict):
+                text = str(para.get("cn") or para.get("text") or "")
+            else:
+                text = ""
+            text = text.strip()
+            if text:
+                items.append(text)
+        if items:
+            return items
+    return split_polished_body(str(polished.get("body") or ""))
+
+
 def compact_diff(before: str, after: str, max_chars: int = 360) -> dict[str, str]:
     return {
         "before": (before or "").strip()[:max_chars],
@@ -126,7 +145,7 @@ def collect_user_edit_signals(date: str, limit: int = 12) -> list[dict[str, Any]
             edits.append({"field": "subtitle", **compact_diff(sub_before, sub_after)})
 
         before_paras = [str(p.get("cn") or "") for p in trans.get("paragraphs", []) if isinstance(p, dict)]
-        after_paras = split_polished_body(str(polished.get("body") or ""))
+        after_paras = polished_paragraphs(polished)
         for idx, (before, after) in enumerate(zip(before_paras, after_paras), start=1):
             if before.strip() != after.strip():
                 edits.append({"field": f"paragraph_{idx}", **compact_diff(before, after)})

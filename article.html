@@ -470,11 +470,11 @@
             <input type="text" x-model="polishData.subtitle" @input="onPolishInput()"
               class="w-full px-3 py-2 border rounded mb-3 text-sm italic">
 
-            <label class="block text-xs font-medium mb-1 text-slate-600">正文（每段一行，空行区隔）</label>
+            <label class="block text-xs font-medium mb-1 text-slate-600">正文（换一行就是新段落）</label>
             <textarea x-model="polishData.body" @input="onPolishInput()"
               class="w-full px-3 py-2 border rounded text-sm leading-relaxed font-mono"
               rows="30"
-              placeholder="每段译文一行，中间用空行隔开..."></textarea>
+              placeholder="按你的写作习惯：换一行就是新段落，不需要额外空一行..."></textarea>
           </div>
         </div>
       </div>
@@ -1521,10 +1521,13 @@
             if (res.ok) {
               const d = await res.json();
               const fallback = this.buildPolishDraftFromTranslation();
+              const paragraphBody = Array.isArray(d.paragraphs)
+                ? d.paragraphs.map(p => typeof p === 'string' ? p : (p?.cn || p?.text || '')).filter(Boolean).join('\n')
+                : '';
               this.polishData = {
                 title: d.title || d.cn_title || fallback.title,
                 subtitle: d.subtitle || d.cn_subtitle || d.summary || fallback.subtitle,
-                body: d.body || d.cn_body || d.content || fallback.body,
+                body: d.body || d.cn_body || d.content || paragraphBody || fallback.body,
                 updated_at: d.updated_at || null,
               };
               this.polishExists = true;
@@ -1629,8 +1632,17 @@
             const D = String(d.getDate()).padStart(2,'0');
             const h = String(d.getHours()).padStart(2,'0');
             const m = String(d.getMinutes()).padStart(2,'0');
-            return `${M}-${D} ${h}:${m}`;
+          return `${M}-${D} ${h}:${m}`;
           } catch { return iso; }
+        },
+
+        polishParagraphsFromBody(body) {
+          const text = String(body || '').replace(/\r\n/g, '\n').trim();
+          if (!text) return [];
+          return text
+            .split('\n')
+            .map(line => line.trim())
+            .filter(line => line);
         },
 
         async savePolish(manual) {
@@ -1642,6 +1654,7 @@
           const path = `data/${date}/polished/${filename}`;
           const now = new Date().toISOString();
           this.polishData.updated_at = now;
+          const polishParagraphs = this.polishParagraphsFromBody(this.polishData.body);
           const payload = {
             id: this.article.id,
             cn_title: this.article.cn_title,
@@ -1649,6 +1662,7 @@
             url: this.article.url,
             category: this.article.category,
             ...this.polishData,
+            paragraphs: polishParagraphs,
           };
           try {
             await GH.putFile(path, JSON.stringify(payload, null, 2), `polish: ${this.article.cn_title}`);

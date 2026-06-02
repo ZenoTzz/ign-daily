@@ -15,6 +15,7 @@
 5. OpenClaw 每次执行标题、正文或夜间学习前，必须先跑 `python3 scripts/automation_guard.py title|fulltext|nightly`。输出 `AUTOMATION_GUARD SKIP` 就立刻返回 `HEARTBEAT_OK`，不要读写队列或 `STYLE_PROFILE.md`；输出 `AUTOMATION_GUARD RUN` 才继续。
 6. `scripts/rss_queue_check.py {date}` 只用于本次 RSS 目标日期，不要拿它全量扫描旧历史日期；旧数据可能没有 `publish_time_cn`。
 7. 首页 Excel 导出是纯前端功能：用户勾选文章后可加入本地 `localStorage` 导出篮并跨日期导出 `.xlsx`，不应触发或修改 `requests.json`、`need_titles.json`、`translations/` 或任何 OpenClaw/API 自动化队列。
+8. 润色正文按用户写作习惯处理：编辑框里“换一行就是新段落”。润色文件会保存 `body` 原文和 `paragraphs` 数组；夜间学习、diff 脚本应优先读取 `paragraphs`，没有该字段时才兼容旧版 `body`。
 
 ## 先跑脚本，不靠记忆
 

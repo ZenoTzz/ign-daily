@@ -48,6 +48,32 @@ def diff_paragraphs(my_paras, your_paras):
         })
     return out
 
+def split_polished_body(value):
+    if not value:
+        return []
+    chunks = [p.strip() for p in re.split(r'\n{2,}', value) if p.strip()]
+    if len(chunks) <= 1:
+        chunks = [p.strip() for p in value.splitlines() if p.strip()]
+    return chunks
+
+def polished_paragraphs(polish):
+    paragraphs = polish.get('paragraphs')
+    if isinstance(paragraphs, list):
+        out = []
+        for para in paragraphs:
+            if isinstance(para, str):
+                text = para
+            elif isinstance(para, dict):
+                text = str(para.get('cn') or para.get('text') or '')
+            else:
+                text = ''
+            text = text.strip()
+            if text:
+                out.append(text)
+        if out:
+            return out
+    return split_polished_body(polish.get('body') or '')
+
 def collect_diffs(date):
     polished_dir = os.path.join(REPO, 'data', date, 'polished')
     trans_dir = os.path.join(REPO, 'data', date, 'translations')
@@ -105,7 +131,7 @@ def collect_diffs(date):
         
         # 正文段落对比
         my_paras = [p.get('cn', '') for p in trans.get('paragraphs', [])]
-        your_paras = [p.strip() for p in (polish.get('body') or '').split('\n\n') if p.strip()]
+        your_paras = polished_paragraphs(polish)
         body_diffs = diff_paragraphs(my_paras, your_paras)
         
         if not (title_diff or subtitle_diff or body_diffs):
