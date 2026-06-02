@@ -153,7 +153,7 @@
       "publish_time_cn": "2026-06-02 19:04",
       "pub_date": "2026-06-02 19:04",
       "cover_image": "https://assets-prd.ignimgs.com/2026/06/02/s2-1780398074054.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/02/s2-1780398074054.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/02/s2-1780398074054.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -184,7 +184,11 @@
           "cn": "锤头鲨",
           "reason": "游戏内生物名称，需确认官方译名"
         }
-      ]
+      ],
+      "translation_path": "translations/08.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-flash"
     },
     {
       "id": 11,
