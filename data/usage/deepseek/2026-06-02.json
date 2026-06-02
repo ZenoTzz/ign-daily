@@ -966,6 +966,27 @@
       "total_tokens": 8457,
       "prompt_cache_hit_tokens": 8320,
       "prompt_cache_miss_tokens": 15
+    },
+    {
+      "time_cn": "2026-06-02 22:46:26",
+      "task": "fulltext",
+      "model": "deepseek-v4-flash",
+      "article_id": 11,
+      "article_title": "PlayStation第一方游戏销量五年下滑，《羊蹄山之魂》逆转颓势",
+      "article_url": "https://www.ign.com/articles/playstation-first-party-game-sales-have-declined-over-the-past-5-years-although-ghost-of-yotei-helped-reverse-the-trend",
+      "article_date": "2026-06-03",
+      "detail": "",
+      "estimated_cost_usd": 0.00123827,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8667,
+      "completion_tokens": 2974,
+      "total_tokens": 11641,
+      "prompt_cache_hit_tokens": 5888,
+      "prompt_cache_miss_tokens": 2779
     }
   ]
 }
