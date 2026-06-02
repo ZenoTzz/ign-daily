@@ -294,6 +294,48 @@
       "total_tokens": 8985,
       "prompt_cache_hit_tokens": 5888,
       "prompt_cache_miss_tokens": 1349
+    },
+    {
+      "time_cn": "2026-06-02 08:38:50",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 1,
+      "article_title": "PlayStation 'Shovelware' Crackdown Continues as Major Publisher Warns Its Games Will Soon Be Pulled",
+      "article_url": "https://www.ign.com/articles/playstation-shovelware-crackdown-continues-as-major-publisher-warns-its-games-will-soon-be-pulled",
+      "article_date": "2026-06-03",
+      "detail": "",
+      "estimated_cost_usd": 0.00029677,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 6830,
+      "completion_tokens": 530,
+      "total_tokens": 7360,
+      "prompt_cache_hit_tokens": 5888,
+      "prompt_cache_miss_tokens": 942
+    },
+    {
+      "time_cn": "2026-06-02 08:38:53",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 2,
+      "article_title": "AMD Radeon RX 9070 GRE Review",
+      "article_url": "https://www.ign.com/articles/amd-radeon-rx-9070-gre-review",
+      "article_date": "2026-06-03",
+      "detail": "",
+      "estimated_cost_usd": 0.00045287,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8711,
+      "completion_tokens": 147,
+      "total_tokens": 8858,
+      "prompt_cache_hit_tokens": 5888,
+      "prompt_cache_miss_tokens": 2823
     }
   ]
 }
