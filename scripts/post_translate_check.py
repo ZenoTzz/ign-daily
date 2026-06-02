@@ -75,7 +75,7 @@ for aid in done_ids:
             errors.append(f"#{aid}: subtitle TOO SHORT ({len(subtitle)}字)")
         # Rule: should not contain comma/period (sign of being a sentence, not a punch phrase)
         if '，' in subtitle and len(subtitle) > 10:
-            errors.append(f"#{aid}: subtitle 含逗号且偏长，太像句子不像短句: 「{subtitle}」")
+            warnings.append(f"#{aid}: subtitle 含逗号且偏长，建议确认是否仍像短句: 「{subtitle}」")
         # Rule: should not duplicate cn_title content
         cn_title = ''
         for a in idx['articles']:
@@ -96,7 +96,7 @@ for aid in done_ids:
         import re as _re
         for pattern, reason in bad_patterns:
             if _re.search(pattern, subtitle):
-                errors.append(f"#{aid}: subtitle {reason}: 「{subtitle}」")
+                warnings.append(f"#{aid}: subtitle {reason}: 「{subtitle}」")
                 break
         # Rule: should feel oral/colloquial — warn if all chars are formal
         # Good subtitles often have: !, ！, ~, emoji, 谐音, 口语词

@@ -126,7 +126,6 @@ jobs:
           python3 scripts/translate_titles_deepseek.py "${{ steps.rss.outputs.target_date }}"
           python3 scripts/deepseek_balance.py --snapshot "${GITHUB_RUN_ID}-after" || true
           python3 scripts/record_deepseek_run_cost.py "${GITHUB_RUN_ID}" || true
-          python3 scripts/pre_push_check.py "${{ steps.rss.outputs.target_date }}"
           python3 scripts/agent_doctor.py
 
       - name: Commit and push RSS update

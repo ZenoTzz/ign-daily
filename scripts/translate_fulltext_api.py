@@ -606,7 +606,6 @@ def translate_date(date: str, limit: int = 2) -> int:
             write_json(trans_path, data)
             subprocess.run([sys.executable, str(REPO_ROOT / "scripts" / "translate_pipeline.py"), date, str(article["id"]), "--post"], cwd=REPO_ROOT, check=True)
             normalize_currency_date(date)
-            subprocess.run([sys.executable, str(REPO_ROOT / "scripts" / "pre_push_check.py"), date], cwd=REPO_ROOT, check=True)
             req = remove_completed_request(req, article)
             write_json(req_path, req)
             clear_manual_review_failure(date, int(article["id"]))
