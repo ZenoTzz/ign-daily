@@ -236,147 +236,6 @@
           </div>
         </div>
 
-        <div style="height:1px; background:var(--border); margin:1rem 0;"></div>
-
-        <div class="automation-panel" style="border:1px solid var(--border); border-radius:8px; padding:0.75rem; background:var(--card-bg);">
-          <button @click="automationExpanded = !automationExpanded"
-                  class="btn btn-ghost"
-                  style="width:100%; justify-content:space-between; padding:0; border:0; background:transparent;">
-            <span style="font-size:0.85rem; font-weight:700;">自动化翻译</span>
-            <span style="font-size:0.7rem; color:var(--text-muted); font-weight:600;"
-                  x-text="automationExpanded ? '收起' : '展开'"></span>
-          </button>
-          <div style="display:flex; flex-wrap:wrap; gap:0.4rem; margin-top:0.5rem;">
-            <span class="filter-tag" style="font-size:0.68rem; padding:0.25rem 0.55rem;"
-                  x-text="'标题 ' + (automationConfig.title_translator === 'api' ? 'API' : 'OpenClaw')"></span>
-            <span class="filter-tag" style="font-size:0.68rem; padding:0.25rem 0.55rem;"
-                  x-text="'正文 ' + (automationConfig.fulltext_translator === 'api' ? 'API' : 'OpenClaw')"></span>
-            <span class="filter-tag" style="font-size:0.68rem; padding:0.25rem 0.55rem;"
-                  x-text="'学习 ' + (automationConfig.nightly_learner === 'api' ? 'API' : 'OpenClaw')"></span>
-            <span class="filter-tag" style="font-size:0.68rem; padding:0.25rem 0.55rem;"
-                  x-show="automationConfig.title_translator === 'api' || automationConfig.fulltext_translator === 'api' || automationConfig.nightly_learner === 'api'"
-                  x-text="automationConfig.api_title_model || automationConfig.api_model"></span>
-          </div>
-
-          <div x-show="automationExpanded" style="margin-top:0.75rem;">
-            <p style="font-size:0.7rem; color:var(--text-muted); margin-bottom:0.75rem;">
-              这里只切换流程。API Key 请放在 GitHub Actions Secrets，不会写入网页或仓库。
-            </p>
-
-            <label style="display:block; margin-top:0.75rem;">标题/摘要翻译</label>
-            <select x-model="automationConfig.title_translator" style="width:100%; margin-top:0.35rem;">
-              <option value="openclaw">OpenClaw</option>
-              <option value="api">API</option>
-            </select>
-
-            <label style="display:block; margin-top:0.75rem;">正文翻译</label>
-            <select x-model="automationConfig.fulltext_translator" style="width:100%; margin-top:0.35rem;">
-              <option value="openclaw">OpenClaw</option>
-              <option value="api">API</option>
-            </select>
-
-            <label style="display:block; margin-top:0.75rem;">夜间学习</label>
-            <select x-model="automationConfig.nightly_learner" style="width:100%; margin-top:0.35rem;">
-              <option value="openclaw">OpenClaw</option>
-              <option value="api">API</option>
-            </select>
-
-            <label style="display:block; margin-top:0.75rem;">标题/摘要 API 模型</label>
-            <select x-model="automationConfig.api_title_model" style="width:100%; margin-top:0.35rem;">
-              <template x-for="m in normalizeApiModels(automationConfig.api_models)" :key="`title-${m.model}`">
-                <option :value="m.model" x-text="m.label"></option>
-              </template>
-            </select>
-
-            <label style="display:block; margin-top:0.75rem;">正文 API 模型</label>
-            <select x-model="automationConfig.api_fulltext_model" style="width:100%; margin-top:0.35rem;">
-              <template x-for="m in normalizeApiModels(automationConfig.api_models)" :key="`full-${m.model}`">
-                <option :value="m.model" x-text="m.label"></option>
-              </template>
-            </select>
-
-            <label style="display:block; margin-top:0.75rem;">手动触发正文批量</label>
-            <select x-model="automationConfig.api_fulltext_batch" style="width:100%; margin-top:0.35rem;">
-              <option value="5">普通：最多 5 篇</option>
-              <option value="10">批量：最多 10 篇</option>
-              <option value="all">尽量全部（到时间预算自动暂停）</option>
-            </select>
-
-            <label style="display:block; margin-top:0.75rem;">夜间学习 API 模型</label>
-            <select x-model="automationConfig.api_nightly_model" style="width:100%; margin-top:0.35rem;">
-              <template x-for="m in normalizeApiModels(automationConfig.api_models)" :key="`nightly-${m.model}`">
-                <option :value="m.model" x-text="m.label"></option>
-              </template>
-            </select>
-
-            <label style="display:block; margin-top:0.75rem;">API Base URL</label>
-            <input type="text" x-model="automationConfig.api_base_url" placeholder="https://api.deepseek.com" style="width:100%; margin-top:0.35rem;">
-
-            <div style="height:1px; background:var(--border); margin:1rem 0;"></div>
-
-            <div style="display:flex; align-items:center; justify-content:space-between; gap:0.75rem;">
-              <label style="display:block; font-weight:700;">模型目录</label>
-              <button @click="addApiModel()" class="btn btn-ghost" style="font-size:0.68rem; padding:0.3rem 0.55rem;">添加模型</button>
-            </div>
-            <p style="font-size:0.68rem; color:var(--text-muted); margin-top:0.35rem;">
-              这里保存可选模型。不同模型可以填不同 Base URL；密钥仍读取 GitHub Actions Secret。
-            </p>
-            <div style="display:grid; gap:0.6rem; margin-top:0.75rem;">
-              <template x-for="(m, i) in automationConfig.api_models" :key="`model-${i}`">
-                <div style="border:1px solid var(--border); border-radius:8px; padding:0.6rem; background:rgba(255,255,255,0.02);">
-                  <div style="display:grid; grid-template-columns:1fr 1fr auto; gap:0.5rem; align-items:end;">
-                    <label style="display:block;">
-                      <span style="font-size:0.68rem; color:var(--text-muted);">显示名</span>
-                      <input type="text" x-model="m.label" placeholder="DeepSeek V4 Pro" style="width:100%; margin-top:0.25rem;">
-                    </label>
-                    <label style="display:block;">
-                      <span style="font-size:0.68rem; color:var(--text-muted);">Model ID</span>
-                      <input type="text" x-model="m.model" placeholder="deepseek-v4-pro" style="width:100%; margin-top:0.25rem;">
-                    </label>
-                    <button @click="removeApiModel(i)" class="btn btn-ghost" style="font-size:0.68rem; padding:0.35rem 0.55rem;">删除</button>
-                  </div>
-                  <label style="display:block; margin-top:0.45rem;">
-                    <span style="font-size:0.68rem; color:var(--text-muted);">Base URL</span>
-                    <input type="text" x-model="m.base_url" placeholder="https://api.deepseek.com" style="width:100%; margin-top:0.25rem;">
-                  </label>
-                  <div style="display:grid; grid-template-columns:repeat(3, minmax(0, 1fr)); gap:0.5rem; margin-top:0.45rem;">
-                    <label style="display:block;">
-                      <span style="font-size:0.68rem; color:var(--text-muted);">命中输入价/1M</span>
-                      <input type="number" step="0.000001" x-model="m.input_cache_hit_usd_per_million" placeholder="0.0028" style="width:100%; margin-top:0.25rem;">
-                    </label>
-                    <label style="display:block;">
-                      <span style="font-size:0.68rem; color:var(--text-muted);">未命中输入价/1M</span>
-                      <input type="number" step="0.000001" x-model="m.input_cache_miss_usd_per_million" placeholder="0.14" style="width:100%; margin-top:0.25rem;">
-                    </label>
-                    <label style="display:block;">
-                      <span style="font-size:0.68rem; color:var(--text-muted);">输出价/1M</span>
-                      <input type="number" step="0.000001" x-model="m.output_usd_per_million" placeholder="0.28" style="width:100%; margin-top:0.25rem;">
-                    </label>
-                  </div>
-                  <label style="display:flex; gap:0.45rem; align-items:center; margin-top:0.45rem; font-size:0.72rem; color:var(--text-muted);">
-                    <input type="checkbox"
-                      :checked="(automationConfig.compare_models || []).includes(m.model)"
-                      :disabled="!m.model"
-                      @change="toggleCompareModel(m.model)">
-                    参与手动多模型翻译
-                  </label>
-                </div>
-              </template>
-            </div>
-
-            <p style="font-size:0.68rem; color:var(--text-muted); margin-top:0.75rem;">
-              当前配置文件：data/automation-config.json。OpenClaw 每次启动也会读取它；API 模式下应静默跳过对应任务。
-            </p>
-            <div style="display:flex; flex-wrap:wrap; gap:0.5rem; margin-top:0.75rem;">
-              <button @click="saveAutomationConfig()" :disabled="automationSaving" class="btn btn-primary">
-                <span x-text="automationSaving ? '保存中...' : '保存自动化开关'"></span>
-              </button>
-              <button @click="runApiTranslationNow()" :disabled="automationSaving || automationTriggering" class="btn btn-green">
-                <span x-text="automationTriggering ? '触发中...' : '立即运行 API 翻译'"></span>
-              </button>
-            </div>
-          </div>
-        </div>
       </div>
 
       <!-- Filter Tags -->
@@ -690,6 +549,137 @@
         <div style="display:flex; gap:0.5rem; margin-top:0.75rem;">
           <button @click="saveToken()" class="btn btn-primary">保存</button>
           <button @click="clearToken()" class="btn btn-ghost">清除</button>
+        </div>
+        <div style="height:1px; background:var(--border); margin:1rem 0;"></div>
+        <button @click="automationExpanded = !automationExpanded"
+                class="btn btn-ghost"
+                style="width:100%; justify-content:space-between;">
+          <span>翻译自动化</span>
+          <span x-text="automationExpanded ? '收起' : '展开'"></span>
+        </button>
+        <div x-show="automationExpanded" style="margin-top:0.75rem;">
+          <p style="font-size:0.7rem; color:var(--text-muted); margin-bottom:0.75rem;">
+            这里只切换流程和模型。API Key 仍放在 GitHub Actions Secrets，不会写入网页或仓库。
+          </p>
+          <div style="display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:0.6rem;">
+            <label>标题/摘要
+              <select x-model="automationConfig.title_translator" style="width:100%; margin-top:0.35rem;">
+                <option value="openclaw">OpenClaw</option>
+                <option value="api">API</option>
+              </select>
+            </label>
+            <label>正文
+              <select x-model="automationConfig.fulltext_translator" style="width:100%; margin-top:0.35rem;">
+                <option value="openclaw">OpenClaw</option>
+                <option value="api">API</option>
+              </select>
+            </label>
+            <label>夜间学习
+              <select x-model="automationConfig.nightly_learner" style="width:100%; margin-top:0.35rem;">
+                <option value="openclaw">OpenClaw</option>
+                <option value="api">API</option>
+              </select>
+            </label>
+          </div>
+
+          <div style="display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:0.6rem; margin-top:0.75rem;">
+            <label>标题/摘要模型
+              <select x-model="automationConfig.api_title_model" style="width:100%; margin-top:0.35rem;">
+                <template x-for="m in normalizeApiModels(automationConfig.api_models)" :key="`title-${m.model}`">
+                  <option :value="m.model" x-text="m.label"></option>
+                </template>
+              </select>
+            </label>
+            <label>正文模型
+              <select x-model="automationConfig.api_fulltext_model" style="width:100%; margin-top:0.35rem;">
+                <template x-for="m in normalizeApiModels(automationConfig.api_models)" :key="`full-${m.model}`">
+                  <option :value="m.model" x-text="m.label"></option>
+                </template>
+              </select>
+            </label>
+            <label>夜间学习模型
+              <select x-model="automationConfig.api_nightly_model" style="width:100%; margin-top:0.35rem;">
+                <template x-for="m in normalizeApiModels(automationConfig.api_models)" :key="`nightly-${m.model}`">
+                  <option :value="m.model" x-text="m.label"></option>
+                </template>
+              </select>
+            </label>
+            <label>手动正文批量
+              <select x-model="automationConfig.api_fulltext_batch" style="width:100%; margin-top:0.35rem;">
+                <option value="5">最多 5 篇</option>
+                <option value="10">最多 10 篇</option>
+                <option value="all">尽量全部</option>
+              </select>
+            </label>
+          </div>
+
+          <div style="height:1px; background:var(--border); margin:1rem 0;"></div>
+          <label style="font-weight:700;">DeepSeek 思考模式</label>
+          <p style="font-size:0.68rem; color:var(--text-muted); margin-top:0.35rem;">
+            关闭最省 token；high/max 更适合正文一致性检查和夜间学习，但会更慢、更贵。DeepSeek 文档中 low/medium 会等同 high，xhigh 会等同 max。
+          </p>
+          <div style="display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:0.5rem; margin-top:0.6rem;">
+            <label>标题
+              <select x-model="automationConfig.api_title_thinking" style="width:100%; margin-top:0.25rem;">
+                <option value="disabled">关闭</option><option value="high">high</option><option value="max">max</option>
+              </select>
+            </label>
+            <label>正文
+              <select x-model="automationConfig.api_fulltext_thinking" style="width:100%; margin-top:0.25rem;">
+                <option value="disabled">关闭</option><option value="high">high</option><option value="max">max</option>
+              </select>
+            </label>
+            <label>学习
+              <select x-model="automationConfig.api_nightly_thinking" style="width:100%; margin-top:0.25rem;">
+                <option value="disabled">关闭</option><option value="high">high</option><option value="max">max</option>
+              </select>
+            </label>
+            <label>对比
+              <select x-model="automationConfig.api_compare_thinking" style="width:100%; margin-top:0.25rem;">
+                <option value="disabled">关闭</option><option value="high">high</option><option value="max">max</option>
+              </select>
+            </label>
+          </div>
+
+          <label style="display:block; margin-top:0.75rem;">API Base URL</label>
+          <input type="text" x-model="automationConfig.api_base_url" placeholder="https://api.deepseek.com">
+
+          <details style="margin-top:0.9rem;">
+            <summary style="cursor:pointer; font-weight:700;">模型目录与价格</summary>
+            <div style="display:flex; justify-content:flex-end; margin-top:0.6rem;">
+              <button @click="addApiModel()" class="btn btn-ghost">添加模型</button>
+            </div>
+            <div style="display:grid; gap:0.6rem; margin-top:0.6rem;">
+              <template x-for="(m, i) in automationConfig.api_models" :key="`model-${i}`">
+                <div style="border:1px solid var(--border); border-radius:8px; padding:0.6rem;">
+                  <div style="display:grid; grid-template-columns:1fr 1fr auto; gap:0.5rem; align-items:end;">
+                    <label>显示名<input type="text" x-model="m.label" style="width:100%; margin-top:0.25rem;"></label>
+                    <label>Model ID<input type="text" x-model="m.model" style="width:100%; margin-top:0.25rem;"></label>
+                    <button @click="removeApiModel(i)" class="btn btn-ghost">删除</button>
+                  </div>
+                  <label style="display:block; margin-top:0.45rem;">Base URL<input type="text" x-model="m.base_url" style="width:100%; margin-top:0.25rem;"></label>
+                  <div style="display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:0.5rem; margin-top:0.45rem;">
+                    <label>命中价/1M<input type="number" step="0.000001" x-model="m.input_cache_hit_usd_per_million" style="width:100%; margin-top:0.25rem;"></label>
+                    <label>未命中价/1M<input type="number" step="0.000001" x-model="m.input_cache_miss_usd_per_million" style="width:100%; margin-top:0.25rem;"></label>
+                    <label>输出价/1M<input type="number" step="0.000001" x-model="m.output_usd_per_million" style="width:100%; margin-top:0.25rem;"></label>
+                  </div>
+                  <label style="display:flex; gap:0.45rem; align-items:center; margin-top:0.45rem; font-size:0.72rem; color:var(--text-muted);">
+                    <input type="checkbox" :checked="(automationConfig.compare_models || []).includes(m.model)" :disabled="!m.model" @change="toggleCompareModel(m.model)">
+                    参与手动多模型翻译
+                  </label>
+                </div>
+              </template>
+            </div>
+          </details>
+
+          <div style="display:flex; flex-wrap:wrap; gap:0.5rem; margin-top:0.9rem;">
+            <button @click="saveAutomationConfig()" :disabled="automationSaving" class="btn btn-primary">
+              <span x-text="automationSaving ? '保存中...' : '保存自动化开关'"></span>
+            </button>
+            <button @click="runApiTranslationNow()" :disabled="automationSaving || automationTriggering" class="btn btn-green">
+              <span x-text="automationTriggering ? '触发中...' : '立即运行 API 翻译'"></span>
+            </button>
+          </div>
         </div>
       </div>
     </div>

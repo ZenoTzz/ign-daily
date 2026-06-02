@@ -33,6 +33,18 @@ on:
         description: "Manual run API base URL override"
         required: false
         default: ""
+      api_title_thinking:
+        description: "Title thinking mode: disabled/high/max"
+        required: false
+        default: ""
+      api_fulltext_thinking:
+        description: "Fulltext thinking mode: disabled/high/max"
+        required: false
+        default: ""
+      api_compare_thinking:
+        description: "Comparison thinking mode: disabled/high/max"
+        required: false
+        default: ""
       manual_payload:
         description: "Advanced manual JSON payload"
         required: false
@@ -74,6 +86,9 @@ jobs:
           MANUAL_API_TITLE_MODEL: ${{ github.event_name == 'workflow_dispatch' && inputs.api_title_model || '' }}
           MANUAL_API_FULLTEXT_MODEL: ${{ github.event_name == 'workflow_dispatch' && inputs.api_fulltext_model || '' }}
           MANUAL_API_BASE_URL: ${{ github.event_name == 'workflow_dispatch' && inputs.api_base_url || '' }}
+          MANUAL_API_TITLE_THINKING: ${{ github.event_name == 'workflow_dispatch' && inputs.api_title_thinking || '' }}
+          MANUAL_API_FULLTEXT_THINKING: ${{ github.event_name == 'workflow_dispatch' && inputs.api_fulltext_thinking || '' }}
+          MANUAL_API_COMPARE_THINKING: ${{ github.event_name == 'workflow_dispatch' && inputs.api_compare_thinking || '' }}
           MANUAL_PAYLOAD: ${{ github.event_name == 'workflow_dispatch' && inputs.manual_payload || '' }}
         run: |
           python3 - <<'PY' >> "$GITHUB_OUTPUT"
@@ -96,6 +111,9 @@ jobs:
           print(f"api_base_url={os.environ.get('MANUAL_API_BASE_URL') or data.get('api_base_url', '')}")
           print(f"api_title_base_url={payload.get('api_title_base_url') or os.environ.get('MANUAL_API_BASE_URL') or data.get('api_base_url', '')}")
           print(f"api_fulltext_base_url={payload.get('api_fulltext_base_url') or os.environ.get('MANUAL_API_BASE_URL') or data.get('api_base_url', '')}")
+          print(f"api_title_thinking={os.environ.get('MANUAL_API_TITLE_THINKING') or data.get('api_title_thinking', 'disabled')}")
+          print(f"api_fulltext_thinking={os.environ.get('MANUAL_API_FULLTEXT_THINKING') or data.get('api_fulltext_thinking', 'disabled')}")
+          print(f"api_compare_thinking={payload.get('api_compare_thinking') or os.environ.get('MANUAL_API_COMPARE_THINKING') or data.get('api_compare_thinking', 'disabled')}")
           print(f"compare_date={payload.get('compare_date', '')}")
           print(f"compare_article_id={payload.get('compare_article_id', '')}")
           print(f"compare_models_json={json.dumps(payload.get('compare_models') or [], ensure_ascii=False)}")
@@ -126,6 +144,7 @@ jobs:
           TRANSLATOR_BASE_URL: ${{ steps.config.outputs.api_base_url || vars.TRANSLATOR_BASE_URL || vars.DEEPSEEK_BASE_URL || 'https://api.deepseek.com' }}
           TRANSLATOR_COMPARE_MODELS: ${{ steps.config.outputs.compare_models_json }}
           TRANSLATOR_COMPARE_MAX_TOKENS: "12000"
+          TRANSLATOR_THINKING_MODE: ${{ steps.config.outputs.api_compare_thinking }}
         run: |
           set -euo pipefail
           if [ -z "${TRANSLATOR_API_KEY:-}" ]; then
@@ -143,6 +162,7 @@ jobs:
           TRANSLATOR_MODEL: ${{ steps.config.outputs.api_title_model || steps.config.outputs.api_model || vars.TRANSLATOR_TITLE_MODEL || vars.TRANSLATOR_MODEL || vars.DEEPSEEK_MODEL || 'deepseek-v4-flash' }}
           TRANSLATOR_BASE_URL: ${{ steps.config.outputs.api_title_base_url || steps.config.outputs.api_base_url || vars.TRANSLATOR_BASE_URL || vars.DEEPSEEK_BASE_URL || 'https://api.deepseek.com' }}
           TRANSLATOR_TITLE_LIMIT: "30"
+          TRANSLATOR_THINKING_MODE: ${{ steps.config.outputs.api_title_thinking }}
         run: |
           set -euo pipefail
           if [ -z "${TRANSLATOR_API_KEY:-}" ]; then
@@ -161,6 +181,7 @@ jobs:
           TRANSLATOR_FULLTEXT_LIMIT: ${{ github.event_name == 'workflow_dispatch' && inputs.fulltext_limit || '5' }}
           TRANSLATOR_FULLTEXT_TIME_BUDGET_SECONDS: ${{ github.event_name == 'workflow_dispatch' && inputs.time_budget_seconds || '1200' }}
           TRANSLATOR_FULLTEXT_MAX_TOKENS: "12000"
+          TRANSLATOR_THINKING_MODE: ${{ steps.config.outputs.api_fulltext_thinking }}
         run: |
           set -euo pipefail
           if [ -z "${TRANSLATOR_API_KEY:-}" ]; then

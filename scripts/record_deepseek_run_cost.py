@@ -106,8 +106,10 @@ def main() -> int:
     before_total, before_currency = total_balance(before)
     after_total, after_currency = total_balance(after)
     actual_delta = None
+    balance_delta_status = "missing_snapshot"
     if before_total is not None and after_total is not None:
         actual_delta = round(before_total - after_total, 8)
+        balance_delta_status = "ok"
 
     by_model: dict[str, dict[str, Any]] = {}
     for record in records:
@@ -119,6 +121,10 @@ def main() -> int:
     for row in by_model.values():
         row["estimated_cost_usd"] = round(row["estimated_cost_usd"], 8)
 
+    estimated_cost = round(sum(cost(r) for r in records), 8)
+    if actual_delta is not None and actual_delta == 0 and estimated_cost > 0:
+        balance_delta_status = "pending_or_delayed"
+
     payload = {
         "run_id": run_id,
         "workflow": os.environ.get("GITHUB_WORKFLOW", ""),
@@ -129,7 +135,8 @@ def main() -> int:
         "end_balance": after_total,
         "currency": after_currency or before_currency,
         "actual_platform_cost": actual_delta,
-        "estimated_cost_usd": round(sum(cost(r) for r in records), 8),
+        "balance_delta_status": balance_delta_status,
+        "estimated_cost_usd": estimated_cost,
         "api_call_count": len(records),
         "total_tokens": sum(int(r.get("total_tokens") or 0) for r in records),
         "by_model": by_model,

@@ -44,6 +44,7 @@ jobs:
           print(f"nightly_learner={data.get('nightly_learner', 'openclaw')}")
           print(f"api_model={data.get('api_model', '')}")
           print(f"api_nightly_model={data.get('api_nightly_model', data.get('api_model', ''))}")
+          print(f"api_nightly_thinking={data.get('api_nightly_thinking', 'disabled')}")
           print(f"api_base_url={data.get('api_base_url', '')}")
           PY
 
@@ -57,21 +58,24 @@ jobs:
           TRANSLATOR_API_KEY: ${{ secrets.TRANSLATOR_API_KEY || secrets.DEEPSEEK_API_KEY }}
           NIGHTLY_STYLE_MODEL: ${{ steps.config.outputs.api_nightly_model || steps.config.outputs.api_model || vars.NIGHTLY_STYLE_MODEL || vars.TRANSLATOR_MODEL || vars.DEEPSEEK_MODEL || 'deepseek-v4-flash' }}
           TRANSLATOR_BASE_URL: ${{ steps.config.outputs.api_base_url || vars.TRANSLATOR_BASE_URL || vars.DEEPSEEK_BASE_URL || 'https://api.deepseek.com' }}
+          TRANSLATOR_THINKING_MODE: ${{ steps.config.outputs.api_nightly_thinking }}
         run: |
           set -euo pipefail
           if [ -z "${TRANSLATOR_API_KEY:-}" ]; then
             echo "nightly_learner=api but TRANSLATOR_API_KEY/DEEPSEEK_API_KEY is not set."
             exit 1
           fi
+          python3 scripts/deepseek_balance.py --snapshot "${GITHUB_RUN_ID}-before" || true
           python3 scripts/nightly_style_api.py
-          python3 scripts/deepseek_balance.py
+          python3 scripts/deepseek_balance.py --snapshot "${GITHUB_RUN_ID}-after" || true
+          python3 scripts/record_deepseek_run_cost.py "${GITHUB_RUN_ID}" || true
           python3 scripts/agent_doctor.py
 
       - name: Commit and push nightly style update
         if: steps.config.outputs.nightly_learner == 'api' || steps.config.outputs.nightly_learner == 'deepseek'
         run: |
           set -euo pipefail
-          git add STYLE_PROFILE.md data/learning data/learning_log
+          git add STYLE_PROFILE.md data/learning data/learning_log data/usage
           if git diff --cached --quiet; then
             echo "No nightly style learning changes to commit."
             exit 0

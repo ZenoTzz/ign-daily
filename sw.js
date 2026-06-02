@@ -1,4 +1,4 @@
-const CACHE_NAME = 'ign-daily-v3';
+const CACHE_NAME = 'ign-daily-v4';
 const STATIC_ASSETS = [
   '/ign-daily/',
   '/ign-daily/index.html',
@@ -26,7 +26,7 @@ self.addEventListener('activate', (e) => {
   self.clients.claim();
 });
 
-// Fetch: network-first for JSON data, cache-first for static assets
+// Fetch: network-first for JSON data and static shell.
 self.addEventListener('fetch', (e) => {
   const url = new URL(e.request.url);
 
@@ -44,17 +44,16 @@ self.addEventListener('fetch', (e) => {
     return;
   }
 
-  // Static assets: cache-first
+  // Static assets: prefer fresh network copy, then fall back to cache.
   if (STATIC_ASSETS.some((a) => url.pathname.endsWith(a.replace('/ign-daily', '')))) {
     e.respondWith(
-      caches.match(e.request).then((cached) => {
-        const networkFetch = fetch(e.request).then((res) => {
+      fetch(e.request)
+        .then((res) => {
           const clone = res.clone();
           caches.open(CACHE_NAME).then((cache) => cache.put(e.request, clone));
           return res;
-        });
-        return cached || networkFetch;
-      })
+        })
+        .catch(() => caches.match(e.request))
     );
     return;
   }

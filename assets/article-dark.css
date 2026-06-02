@@ -172,6 +172,42 @@ button.bg-emerald-50, .bg-emerald-50 {
   }
 }
 
+@media (max-width: 639px) {
+  header .px-4 {
+    padding-left: 0.75rem !important;
+    padding-right: 0.75rem !important;
+  }
+
+  .article-header-actions {
+    gap: 0.35rem !important;
+  }
+
+  .article-desktop-action {
+    display: none !important;
+  }
+
+  .article-mobile-more {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    min-width: 2rem;
+    height: 2rem;
+    color: var(--text-secondary, #a0a0b8) !important;
+    background: var(--bg-elevated, #222238) !important;
+    border-color: var(--border-primary, #2a2a40) !important;
+  }
+
+  header h1 {
+    max-width: 32vw;
+  }
+}
+
+@media (min-width: 640px) {
+  .article-mobile-more {
+    display: none !important;
+  }
+}
+
 /* Paragraph styles */
 .para-cn, .para-en {
   color: var(--text-primary, #f0f0f5) !important;

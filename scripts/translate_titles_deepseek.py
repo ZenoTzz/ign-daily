@@ -259,6 +259,30 @@ def extract_json(text: str) -> dict[str, Any]:
         return json.loads(match.group(0))
 
 
+def normalize_thinking_mode(value: str | None = None) -> str:
+    mode = (value or os.environ.get("TRANSLATOR_THINKING_MODE") or os.environ.get("DEEPSEEK_THINKING_MODE") or "disabled").strip().lower()
+    aliases = {
+        "off": "disabled",
+        "false": "disabled",
+        "none": "disabled",
+        "no": "disabled",
+        "low": "high",
+        "medium": "high",
+        "xhigh": "max",
+    }
+    mode = aliases.get(mode, mode)
+    return mode if mode in {"disabled", "high", "max"} else "disabled"
+
+
+def apply_thinking_mode(payload: dict[str, Any]) -> None:
+    mode = normalize_thinking_mode()
+    if mode == "disabled":
+        payload["thinking"] = {"type": "disabled"}
+        return
+    payload["thinking"] = {"type": "enabled"}
+    payload["reasoning_effort"] = mode
+
+
 def call_deepseek_response(api_key: str, model: str, base_url: str, messages: list[dict[str, str]], max_tokens: int | None = None) -> tuple[str, dict[str, Any]]:
     endpoint = base_url.rstrip("/") + "/chat/completions"
     payload = {
@@ -267,9 +291,9 @@ def call_deepseek_response(api_key: str, model: str, base_url: str, messages: li
         "temperature": 0.2,
         "max_tokens": max_tokens or 1200,
         "stream": False,
-        "thinking": {"type": "disabled"},
         "response_format": {"type": "json_object"},
     }
+    apply_thinking_mode(payload)
     req = urllib.request.Request(
         endpoint,
         data=json.dumps(payload, ensure_ascii=False).encode("utf-8"),

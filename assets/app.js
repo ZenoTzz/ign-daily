@@ -157,6 +157,10 @@ function appData() {
       api_title_model: 'deepseek-v4-flash',
       api_fulltext_model: 'deepseek-v4-pro',
       api_nightly_model: 'deepseek-v4-flash',
+      api_title_thinking: 'disabled',
+      api_fulltext_thinking: 'disabled',
+      api_nightly_thinking: 'disabled',
+      api_compare_thinking: 'disabled',
       api_base_url: 'https://api.deepseek.com',
       api_fulltext_batch: '5',
       compare_models: ['deepseek-v4-pro', 'deepseek-v4-flash'],
@@ -701,6 +705,10 @@ function appData() {
           api_title_model: cfg.api_title_model || cfg.api_model || 'deepseek-v4-flash',
           api_fulltext_model: cfg.api_fulltext_model || 'deepseek-v4-pro',
           api_nightly_model: cfg.api_nightly_model || cfg.api_model || 'deepseek-v4-flash',
+          api_title_thinking: cfg.api_title_thinking || 'disabled',
+          api_fulltext_thinking: cfg.api_fulltext_thinking || 'disabled',
+          api_nightly_thinking: cfg.api_nightly_thinking || 'disabled',
+          api_compare_thinking: cfg.api_compare_thinking || 'disabled',
           api_base_url: cfg.api_base_url || 'https://api.deepseek.com',
           api_fulltext_batch: cfg.api_fulltext_batch || '5',
           compare_models: Array.isArray(cfg.compare_models)
@@ -725,6 +733,10 @@ function appData() {
           api_title_model: this.automationConfig.api_title_model || this.automationConfig.api_model || 'deepseek-v4-flash',
           api_fulltext_model: this.automationConfig.api_fulltext_model || 'deepseek-v4-pro',
           api_nightly_model: this.automationConfig.api_nightly_model || this.automationConfig.api_model || 'deepseek-v4-flash',
+          api_title_thinking: this.automationConfig.api_title_thinking || 'disabled',
+          api_fulltext_thinking: this.automationConfig.api_fulltext_thinking || 'disabled',
+          api_nightly_thinking: this.automationConfig.api_nightly_thinking || 'disabled',
+          api_compare_thinking: this.automationConfig.api_compare_thinking || 'disabled',
           api_base_url: this.automationConfig.api_base_url || 'https://api.deepseek.com',
           api_fulltext_batch: this.automationConfig.api_fulltext_batch || '5',
           compare_models: this.selectedCompareModels().map(m => m.model),
@@ -760,6 +772,9 @@ function appData() {
         api_title_model: titleModel.model,
         api_fulltext_model: fulltextModel.model,
         api_base_url: this.automationConfig.api_base_url || 'https://api.deepseek.com',
+        api_title_thinking: this.automationConfig.api_title_thinking || 'disabled',
+        api_fulltext_thinking: this.automationConfig.api_fulltext_thinking || 'disabled',
+        api_compare_thinking: this.automationConfig.api_compare_thinking || 'disabled',
         manual_payload: JSON.stringify({
           api_title_base_url: titleModel.base_url || this.automationConfig.api_base_url || 'https://api.deepseek.com',
           api_fulltext_base_url: fulltextModel.base_url || this.automationConfig.api_base_url || 'https://api.deepseek.com'
@@ -796,7 +811,8 @@ function appData() {
             model: m.model,
             base_url: m.base_url || this.automationConfig.api_base_url || 'https://api.deepseek.com',
             provider: m.provider || 'openai-compatible'
-          }))
+          })),
+          api_compare_thinking: this.automationConfig.api_compare_thinking || 'disabled'
         }),
         fulltext_limit: '5',
         time_budget_seconds: '1200'
@@ -807,16 +823,16 @@ function appData() {
       if (!article || !article.id || !this.data?.date) return;
       const models = this.selectedCompareModels();
       if (models.length === 0) {
-        this.flash('??????????????', 3500);
+        this.flash('请先在设置里勾选参与对比的模型', 3500);
         return;
       }
       try {
         this.comparisonTriggeringId = article.id;
         await this.markComparisonRequested(article, models);
         await GH.dispatchWorkflow('api-translation.yml', this.apiComparisonInputs(article));
-        this.flash(`??? #${article.id} ??????${models.map(m => m.label).join(' / ')}?????????????`, 6500);
+        this.flash(`#${article.id} 已请求多模型翻译：${models.map(m => m.label).join(' / ')}，稍后刷新查看对比`, 6500);
       } catch (e) {
-        this.flash('?????????' + e.message, 6000);
+        this.flash('对比翻译失败：' + e.message, 6000);
       } finally {
         this.comparisonTriggeringId = null;
       }
@@ -826,10 +842,10 @@ function appData() {
       const date = this.data?.date || this.currentDate;
       const indexPath = `data/${date}/index.json`;
       const fresh = await GH.getFile(indexPath);
-      if (!fresh) throw new Error(`??? ${indexPath}`);
+      if (!fresh) throw new Error(`无法读取 ${indexPath}`);
       const index = JSON.parse(fresh.content);
       const target = (index.articles || []).find(a => Number(a.id) === Number(article.id));
-      if (!target) throw new Error(`????? #${article.id}`);
+      if (!target) throw new Error(`找不到文章 #${article.id}`);
       const now = new Date().toLocaleString('zh-CN', { hour12: false });
       target.comparison_status = 'requested';
       target.comparison_requested_at_cn = now;

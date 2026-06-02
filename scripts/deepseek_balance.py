@@ -47,7 +47,10 @@ def parse_balance_total(payload: dict[str, Any]) -> tuple[float | None, str]:
         if not isinstance(item, dict):
             continue
         try:
-            total += float(item.get("total_balance"))
+            raw_total = item.get("total_balance")
+            if raw_total in (None, ""):
+                raw_total = float(item.get("granted_balance") or 0) + float(item.get("topped_up_balance") or 0)
+            total += float(raw_total)
             currency = currency or str(item.get("currency") or "")
             found = True
         except Exception:

@@ -37,7 +37,7 @@
           <a href="index.html" class="text-slate-500 hover:text-brand-600 shrink-0">← 返回</a>
           <h1 class="font-semibold text-sm sm:text-base truncate" x-text="article?.cn_title || '加载中...'"></h1>
         </div>
-        <div class="flex items-center gap-2 shrink-0">
+        <div class="article-header-actions flex items-center gap-2 shrink-0">
           <!-- 桌面端以下不显示原文视图：手机只保留中文译文 -->
           <select x-model="viewMode" class="hidden text-xs px-2 py-1 rounded border">
             <option value="cn">中文</option>
@@ -47,7 +47,7 @@
           <!-- 桌面端显示所有按钮 -->
           <a x-show="article?.url" :href="article?.url" target="_blank" rel="noopener"
             class="hidden lg:inline text-xs text-slate-500 hover:text-brand-600">🔗 IGN</a>
-          <button @click="toggleTheme()" class="text-xs text-slate-500 hover:text-brand-600" title="主题切换">
+          <button @click="toggleTheme()" class="article-desktop-action text-xs text-slate-500 hover:text-brand-600" title="主题切换">
             <span x-text="themeIcon"></span>
           </button>
           <button @click="mode = mode === 'compare' ? 'cn' : 'compare'"
@@ -55,18 +55,22 @@
             <span x-text="mode === 'compare' ? '🔄 切换' : '↔ 对照'"></span>
           </button>
           <button @click="openPolish()"
-            class="text-xs px-2 py-1 rounded bg-amber-100 text-amber-800 hover:bg-amber-200 border border-amber-300">
+            class="article-desktop-action text-xs px-2 py-1 rounded bg-amber-100 text-amber-800 hover:bg-amber-200 border border-amber-300">
             <span x-text="polishStatus"></span>
           </button>
           <button @click="reapplyDict()"
-            class="text-xs px-2 py-1 rounded bg-blue-50 text-blue-700 hover:bg-blue-100 border border-blue-200"
+            class="article-desktop-action text-xs px-2 py-1 rounded bg-blue-50 text-blue-700 hover:bg-blue-100 border border-blue-200"
             title="按最新词库重新扫描译文、替换中文名">
             🔄 重新应用词库
           </button>
           <button @click="copyArticle()"
-            class="text-xs px-2 py-1 rounded bg-emerald-50 text-emerald-700 hover:bg-emerald-100 border border-emerald-200"
+            class="article-desktop-action text-xs px-2 py-1 rounded bg-emerald-50 text-emerald-700 hover:bg-emerald-100 border border-emerald-200"
             title="复制中文全文（自动全角标点，去 markdown）">
             <span x-text="copyBtnText"></span>
+          </button>
+          <button @click="document.querySelector('.fab-btn')?.click()"
+            class="article-mobile-more text-xs px-2 py-1 rounded border" title="更多操作">
+            ⋯
           </button>
         </div>
       </div>
@@ -543,6 +547,11 @@
           // 主题图标
           const cur = localStorage.getItem('theme') || 'auto';
           this.themeIcon = cur === 'dark' ? '☀️' : (cur === 'light' ? '🌒' : '🌗');
+          this.mode = window.innerWidth < 1024 ? 'cn' : 'compare';
+          this.iframeLoaded = false;
+          this.iframeFailed = false;
+          this.polishDirty = false;
+          this.polishSaving = false;
           const params = new URLSearchParams(location.search);
           const date = params.get('date');
           const id = params.get('id');

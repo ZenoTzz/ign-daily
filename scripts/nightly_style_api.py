@@ -442,6 +442,45 @@ def render_confirmed_profile(current_profile: str, evidence: dict[str, Any]) -> 
     return current_profile.rstrip() + "\n\n---\n\n" + block
 
 
+def source_fingerprint(date: str) -> str:
+    day_dir = DATA_DIR / date
+    chunks: list[bytes] = []
+    for rel in [
+        day_dir / "polished" / "_index.json",
+        day_dir / "feedback.json",
+        DATA_DIR / "learning" / "weekly" / f"{week_id_for(date)}_feedback.json",
+    ]:
+        if rel.exists():
+            chunks.append(str(rel.relative_to(DATA_DIR)).encode("utf-8"))
+            chunks.append(rel.read_bytes())
+    index = load_json(day_dir / "polished" / "_index.json", {}) or {}
+    if isinstance(index, dict):
+        for filename in sorted(str(v) for v in index.values()):
+            path = day_dir / "polished" / filename
+            if path.exists():
+                chunks.append(filename.encode("utf-8"))
+                chunks.append(path.read_bytes())
+    return hashlib.sha1(b"\n".join(chunks)).hexdigest()
+
+
+def dates_needing_observation(scan_days: int) -> list[str]:
+    today = default_date()
+    available = sorted(
+        [p.name for p in DATA_DIR.glob("20??-??-??") if p.is_dir()],
+        reverse=True,
+    )
+    selected: list[str] = []
+    for date in available[:max(scan_days, 1)]:
+        day_dir = DATA_DIR / date
+        if not ((day_dir / "polished" / "_index.json").exists() or (day_dir / "feedback.json").exists()):
+            continue
+        current_hash = source_fingerprint(date)
+        daily = load_json(DAILY_DIR / f"{date}.json", {}) or {}
+        if date == today or daily.get("source_hash") != current_hash:
+            selected.append(date)
+    return list(reversed(selected))
+
+
 def run(date: str) -> int:
     load_env_file()
     api_key = (os.environ.get("TRANSLATOR_API_KEY") or os.environ.get("DEEPSEEK_API_KEY") or "").strip()
@@ -482,6 +521,7 @@ def run(date: str) -> int:
         write_json(DAILY_DIR / f"{date}.json", {
             "date": date,
             "model": model,
+            "source_hash": source_fingerprint(date),
             "signal_count": len(signals),
             "candidate_count": len(candidates),
             "signals": signals,
@@ -492,6 +532,17 @@ def run(date: str) -> int:
         print(f"NIGHTLY_STYLE_OBSERVE_DONE: date={date}, signals={len(signals)}, candidates={len(candidates)}")
     else:
         print(f"NIGHTLY_STYLE_OBSERVE_SKIP: no user edits/feedback for {date}")
+        write_json(DAILY_DIR / f"{date}.json", {
+            "date": date,
+            "model": model,
+            "source_hash": source_fingerprint(date),
+            "signal_count": 0,
+            "candidate_count": 0,
+            "signals": [],
+            "candidates": [],
+            "notes": [],
+            "updated_at": datetime.now(CST).isoformat(timespec="seconds"),
+        })
 
     write_json(EVIDENCE_PATH, evidence)
     report = build_weekly_report(evidence, date)
@@ -500,8 +551,16 @@ def run(date: str) -> int:
 
 
 def main() -> int:
-    target = sys.argv[1] if len(sys.argv) > 1 and sys.argv[1] else default_date()
-    return run(target)
+    if len(sys.argv) > 1 and sys.argv[1]:
+        return run(sys.argv[1])
+    scan_days = int(os.environ.get("NIGHTLY_STYLE_SCAN_DAYS", "45"))
+    dates = dates_needing_observation(scan_days)
+    if not dates:
+        dates = [default_date()]
+    rc = 0
+    for date in dates:
+        rc = max(rc, run(date))
+    return rc
 
 
 if __name__ == "__main__":

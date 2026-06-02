@@ -45,6 +45,7 @@ jobs:
           print(f"fulltext_translator={data.get('fulltext_translator', 'openclaw')}")
           print(f"api_model={data.get('api_model', '')}")
           print(f"api_title_model={data.get('api_title_model', data.get('api_model', ''))}")
+          print(f"api_title_thinking={data.get('api_title_thinking', 'disabled')}")
           print(f"api_base_url={data.get('api_base_url', '')}")
           PY
 
@@ -100,6 +101,14 @@ jobs:
           set -euo pipefail
           python3 scripts/fetch_exchange_rates.py || echo "WARN: exchange-rate refresh failed; title translation will use fallback/local rates."
 
+      - name: Snapshot DeepSeek balance before title translation
+        if: steps.rss.outputs.new_count != '0' && (steps.config.outputs.title_translator == 'api' || steps.config.outputs.title_translator == 'deepseek')
+        env:
+          TRANSLATOR_API_KEY: ${{ secrets.TRANSLATOR_API_KEY || secrets.DEEPSEEK_API_KEY }}
+          TRANSLATOR_BASE_URL: ${{ steps.config.outputs.api_base_url || vars.TRANSLATOR_BASE_URL || vars.DEEPSEEK_BASE_URL || 'https://api.deepseek.com' }}
+        run: |
+          python3 scripts/deepseek_balance.py --snapshot "${GITHUB_RUN_ID}-before" || true
+
       - name: Translate queued titles with DeepSeek
         if: steps.rss.outputs.new_count != '0' && (steps.config.outputs.title_translator == 'api' || steps.config.outputs.title_translator == 'deepseek')
         env:
@@ -107,6 +116,7 @@ jobs:
           TRANSLATOR_MODEL: ${{ steps.config.outputs.api_title_model || steps.config.outputs.api_model || vars.TRANSLATOR_TITLE_MODEL || vars.TRANSLATOR_MODEL || vars.DEEPSEEK_MODEL || 'deepseek-v4-flash' }}
           TRANSLATOR_BASE_URL: ${{ steps.config.outputs.api_base_url || vars.TRANSLATOR_BASE_URL || vars.DEEPSEEK_BASE_URL || 'https://api.deepseek.com' }}
           TRANSLATOR_TITLE_LIMIT: "30"
+          TRANSLATOR_THINKING_MODE: ${{ steps.config.outputs.api_title_thinking }}
         run: |
           set -euo pipefail
           if [ -z "${TRANSLATOR_API_KEY:-}" ]; then
@@ -114,6 +124,8 @@ jobs:
             exit 1
           fi
           python3 scripts/translate_titles_deepseek.py "${{ steps.rss.outputs.target_date }}"
+          python3 scripts/deepseek_balance.py --snapshot "${GITHUB_RUN_ID}-after" || true
+          python3 scripts/record_deepseek_run_cost.py "${GITHUB_RUN_ID}" || true
           python3 scripts/pre_push_check.py "${{ steps.rss.outputs.target_date }}"
           python3 scripts/agent_doctor.py
 

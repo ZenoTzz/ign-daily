@@ -1,6 +1,6 @@
 # Agent Bootstrap - IGN Daily
 
-把这份文件先读完，再读 `AGENT_HANDOFF.md` 和 `TRANSLATION_GUIDE.md`。目标是少靠记忆，多靠脚本检查。
+先读 `docs/AGENT_START.md`，再读本文件。`AGENT_HANDOFF.md` 和 `TRANSLATION_GUIDE.md` 只在需要查细节时打开。目标是少靠记忆，多靠脚本检查。
 
 ## 这个项目做什么
 
