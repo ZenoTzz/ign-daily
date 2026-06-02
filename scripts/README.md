@@ -75,8 +75,17 @@ python3 scripts/agent_doctor.py
 
 RSS 抓取阶段必须先过滤促销/导购/购物文章，包括 deal/sale/discount/coupon、
 preorder、where to buy、exclusively at、action figure、collectible、merch、
-LEGO set 等购物意图词。被拦截的条目会在 Actions 日志里显示 `[skip promo]`，
-不要再把这类文章写入 `index.json` 或 `need_titles.json`。
+LEGO set 等购物意图词。被拦截的条目不要直接写入 `index.json` 或
+`need_titles.json`，而是写入 `data/{date}/filtered_rss.json` 隔离区。首页会显示
+“被过滤”入口，用户可恢复误杀文章；恢复后才写入 `index.json` 和
+`need_titles.json`。旧隔离区按 `data/rss-filter-config.json.filtered_retention_days`
+自动删除。
+
+`data/rss-filter-config.json` 可追加：
+
+- `allow_patterns`：白名单正则，命中后即使像促销词也允许入库。
+- `block_patterns` / `block_url_keywords`：额外黑名单。
+- `filtered_retention_days`：隔离区文件保留天数，默认 7 天。
 
 标题摘要/正文翻译/夜间学习由网页设置写入 `data/automation-config.json`：
 

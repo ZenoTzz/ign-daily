@@ -178,6 +178,9 @@ function appData() {
     comparisonTriggeringId: null,
     rssTriggering: false,
     automationExpanded: false,
+    filteredRss: [],
+    showFilteredPanel: false,
+    filteredRestoringUrl: '',
     toast: '',
 
     // 全局待确认词库
@@ -236,6 +239,7 @@ function appData() {
         if (this.data && this.data.articles) {
           this.data.articles.sort((a, b) => (b.publish_time_cn || b.pub_date || b.pubDate_cst || '').localeCompare(a.publish_time_cn || a.pub_date || a.pubDate_cst || ''));
         }
+        await this.loadFilteredRss(date);
 
         // 同步 requests.json：把已请求但还没翻译的标记为 requested
         try {
@@ -409,6 +413,134 @@ function appData() {
     get requestedArticles() {
       if (!this.data) return [];
       return this.data.articles.filter(a => a.translation_status === 'requested');
+    },
+
+    get visibleFilteredRss() {
+      return (this.filteredRss || []).filter(a => (a.status || 'filtered') !== 'ignored');
+    },
+
+    get filteredRssCount() {
+      return this.visibleFilteredRss.length;
+    },
+
+    async loadFilteredRss(date = this.currentDate) {
+      try {
+        const res = await fetch(`data/${date}/filtered_rss.json?t=${Date.now()}`, { cache: 'no-store' });
+        if (!res.ok) {
+          this.filteredRss = [];
+          return;
+        }
+        const rows = await res.json();
+        this.filteredRss = Array.isArray(rows) ? rows : [];
+      } catch (_) {
+        this.filteredRss = [];
+      }
+    },
+
+    async readGithubJson(path, fallback) {
+      const file = await GH.getFile(path);
+      if (!file) return { value: fallback, sha: null };
+      try {
+        return { value: JSON.parse(file.content), sha: file.sha };
+      } catch (_) {
+        return { value: fallback, sha: file.sha };
+      }
+    },
+
+    buildRestoredArticle(item, nextId) {
+      return {
+        id: nextId,
+        category: '游戏新闻',
+        emoji: '🎮',
+        en_title: item.title || '',
+        cn_title: item.title || '',
+        summary: '',
+        url: item.url,
+        publish_time_cn: item.pubDate_cst || '',
+        pub_date: item.pubDate_cst || '',
+        cover_image: '',
+        translation_status: 'none'
+      };
+    },
+
+    async restoreFilteredArticle(item) {
+      if (!item || !item.url || !this.data?.date) return;
+      try {
+        this.filteredRestoringUrl = item.url;
+        const date = this.data.date;
+        const indexPath = `data/${date}/index.json`;
+        const filteredPath = `data/${date}/filtered_rss.json`;
+        const needPath = `data/${date}/need_titles.json`;
+
+        const indexRead = await this.readGithubJson(indexPath, { date, articles: [], total: 0 });
+        const idx = indexRead.value && Array.isArray(indexRead.value.articles)
+          ? indexRead.value
+          : { date, articles: [], total: 0 };
+        if (idx.articles.some(a => a.url === item.url)) {
+          this.flash('这篇已经在新闻列表里');
+          this.filteredRss = this.filteredRss.filter(a => a.url !== item.url);
+          await GH.putFile(filteredPath, JSON.stringify(this.filteredRss, null, 2) + '\n', `rss filter: remove restored duplicate for ${date}`);
+          return;
+        }
+
+        const maxId = idx.articles.reduce((m, a) => Math.max(m, Number(a.id) || 0), 0);
+        const article = this.buildRestoredArticle(item, maxId + 1);
+        idx.articles.push(article);
+        idx.articles.sort((a, b) => (b.publish_time_cn || b.pub_date || b.pubDate_cst || '').localeCompare(a.publish_time_cn || a.pub_date || a.pubDate_cst || ''));
+        idx.total = idx.articles.length;
+
+        const filteredAll = (this.filteredRss || []).filter(a => a.url !== item.url);
+        const needRead = await this.readGithubJson(needPath, []);
+        const need = Array.isArray(needRead.value) ? needRead.value : [];
+        if (!need.some(q => q.url === item.url)) {
+          need.push({
+            id: article.id,
+            url: article.url,
+            en_title: article.en_title,
+            pub_date: article.pub_date
+          });
+        }
+
+        const histRead = await this.readGithubJson('data/index-list.json', []);
+        const hist = Array.isArray(histRead.value) ? histRead.value : [];
+        const row = hist.find(x => x.date === date);
+        if (row) row.total = idx.total;
+        else hist.push({ date, total: idx.total, translated: 0, translatedTitles: [] });
+        hist.sort((a, b) => String(b.date || '').localeCompare(String(a.date || '')));
+
+        await GH.putFile(indexPath, JSON.stringify(idx, null, 2) + '\n', `rss filter: restore article #${article.id} for ${date}`);
+        await GH.putFile(needPath, JSON.stringify(need, null, 2) + '\n', `rss filter: queue restored title #${article.id}`);
+        await GH.putFile(filteredPath, JSON.stringify(filteredAll, null, 2) + '\n', `rss filter: remove restored article for ${date}`);
+        await GH.putFile('data/index-list.json', JSON.stringify(hist, null, 2) + '\n', `rss filter: update index-list for ${date}`);
+
+        this.filteredRss = filteredAll;
+        this.data = idx;
+        if (this.isApiMode('title_translator')) {
+          await GH.dispatchWorkflow('api-translation.yml', this.apiTranslationInputs());
+          this.flash('已恢复入库，并触发 API 标题/摘要翻译', 4500);
+        } else {
+          this.flash('已恢复入库，OpenClaw 会处理标题/摘要', 4500);
+        }
+      } catch (e) {
+        this.flash('恢复失败：' + e.message, 6000);
+      } finally {
+        this.filteredRestoringUrl = '';
+      }
+    },
+
+    async ignoreFilteredArticle(item) {
+      if (!item || !item.url || !this.data?.date) return;
+      try {
+        const filteredPath = `data/${this.data.date}/filtered_rss.json`;
+        const updated = (this.filteredRss || []).map(a => (
+          a.url === item.url ? { ...a, status: 'ignored', ignored_at_cn: new Date().toLocaleString('zh-CN', { hour12: false }) } : a
+        ));
+        await GH.putFile(filteredPath, JSON.stringify(updated, null, 2) + '\n', `rss filter: ignore article for ${this.data.date}`);
+        this.filteredRss = updated;
+        this.flash('已忽略，保留期后会自动清理');
+      } catch (e) {
+        this.flash('忽略失败：' + e.message, 5000);
+      }
     },
 
     async refreshData() {

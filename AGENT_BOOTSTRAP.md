@@ -13,7 +13,7 @@ IGN Daily 是一个个人化 IGN 英文新闻翻译工作流：
 5. 用户手动点击“对比翻译”时，API 把同一篇文章交给用户勾选的一个或多个模型分别翻译，只写 `data/{date}/comparisons/NN.json`。
 6. push 前必须跑验证脚本，通过才允许推送。
 
-## 只需要记住 7 条
+## 只需要记住 10 条
 
 1. 词库唯一主来源：`data/dict.json`。
 2. 翻译文件名必须补零：`id=3` -> `translations/03.json`。
@@ -24,6 +24,7 @@ IGN Daily 是一个个人化 IGN 英文新闻翻译工作流：
 7. API/OpenClaw 分工只看 `scripts/automation_guard.py title|fulltext|nightly` 输出。
 8. push 前跑：`python3 scripts/pre_push_check.py {date}`。
 9. 日期归属按 8:00 分界：`data/2026-06-02` 只能放 `2026-06-01 08:00 <= publish_time_cn < 2026-06-02 08:00` 的文章。
+10. RSS 过滤命中的文章先放 `filtered_rss.json` 隔离区，不要硬删；网页恢复后才进 `index.json`/`need_titles.json`。
 
 ## 项目层级
 
@@ -36,6 +37,7 @@ ign-daily/
 │       ├── index.json            # 当天新闻索引
 │       ├── requests.json         # 用户勾选请求
 │       ├── need_titles.json      # 待补中文标题/摘要队列
+│       ├── filtered_rss.json     # RSS 过滤隔离区，网页可恢复误杀
 │       ├── sources/NN.json       # 干净英文正文、封面图、正文图缓存
 │       ├── comparisons/NN.json   # 手动双模型对比译文，不覆盖正式译文
 │       └── translations/NN.json  # 全文译文
@@ -69,7 +71,7 @@ python3 scripts/agent_doctor.py
 python3 scripts/ign_rss_incremental.py
 ```
 
-脚本会写 `index.json`、`need_titles.json`，并推送。它只抓取，不负责翻译标题。
+脚本会写 `index.json`、`need_titles.json`，并推送。促销/导购疑似稿写入 `filtered_rss.json` 隔离区，首页可手动恢复。它只抓取，不负责翻译标题。
 
 ### 2. 补标题和摘要
 
@@ -129,7 +131,8 @@ python3 scripts/git_push.py
 ## 自动化分工
 
 - GitHub Actions `.github/workflows/hourly-rss.yml` 每小时第 5 分钟跑 RSS 增量抓取。
-- RSS 抓取阶段必须过滤促销/导购/购物稿：deal/sale/discount/coupon、preorder、where to buy、exclusively at、action figure、collectible、merch、LEGO set 等不要写入 `index.json` 或 `need_titles.json`。
+- RSS 抓取阶段必须过滤促销/导购/购物稿：deal/sale/discount/coupon、preorder、where to buy、exclusively at、action figure、collectible、merch、LEGO set 等不要直接写入 `index.json` 或 `need_titles.json`。
+- 被过滤文章写入 `data/{date}/filtered_rss.json` 隔离区；用户可在首页“被过滤”里恢复误杀文章。`data/rss-filter-config.json.filtered_retention_days` 控制旧隔离文件保留天数，超期可自动删除。
 - Actions 会设置 `IGN_DAILY_SKIP_GIT=1`，所以 `scripts/ign_rss_incremental.py` 只写数据，不自己 commit/push。
 - RSS-only 提交前跑 `python3 scripts/rss_queue_check.py {date}`、`python3 scripts/article_cache.py {date} --missing` 和 `python3 scripts/agent_doctor.py`。
 - 所有会写仓库数据的 Actions 必须使用 `concurrency.group: ign-daily-write-main`，避免 RSS、API 翻译、用量快照、夜间学习同时 push 造成 rebase 冲突。

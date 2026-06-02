@@ -17,7 +17,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <script defer src="assets/alpine.min.js"></script>
   <link rel="stylesheet" href="assets/style.css?v=20260531b">
-  <script src="assets/app.js?v=20260602i"></script>
+  <script src="assets/app.js?v=20260602j"></script>
 </head>
 <body>
   <!-- SVG Icon Definitions -->
@@ -180,6 +180,9 @@
           </div>
           <div class="summary-actions">
             <span class="selected-count">已选 <strong x-text="selected.length"></strong></span>
+            <button x-show="filteredRssCount > 0" @click="showFilteredPanel=true" class="btn btn-ghost">
+              被过滤 <span x-text="`(${filteredRssCount})`"></span>
+            </button>
             <button @click="copyDigest()" class="btn btn-green" x-text="copyBtnText"></button>
             <button @click="submitRequest()" :disabled="selected.length === 0" class="btn btn-primary">
               <svg><use href="#icon-send"/></svg>
@@ -567,6 +570,55 @@
           </template>
           <div x-show="globalPending.length === 0" style="text-align:center; color:var(--text-muted); font-size:0.85rem; padding:2rem 0;">
             所有候选词均已处理
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Filtered RSS quarantine -->
+    <div x-show="showFilteredPanel" x-cloak
+         @keydown.escape.window="showFilteredPanel=false"
+         class="pending-panel" @click.self="showFilteredPanel=false">
+      <div class="pending-panel-inner">
+        <div class="pending-panel-header">
+          <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:0.5rem;">
+            <h2 style="font-size:1rem; font-weight:700; display:flex; align-items:center; gap:0.4rem;">
+              <svg width="18" height="18" style="color:var(--amber)"><use href="#icon-list"/></svg>
+              被过滤文章
+            </h2>
+            <button @click="showFilteredPanel=false" class="modal-close"><svg width="18" height="18"><use href="#icon-x"/></svg></button>
+          </div>
+          <p style="font-size:0.72rem; color:var(--text-muted); line-height:1.6;">
+            这些文章被 RSS 购物/促销过滤器拦下，先放在隔离区。需要的文章可以恢复入库，不需要的文章会在保留期后自动清理。
+          </p>
+        </div>
+        <div style="flex:1; padding:0.75rem; display:flex; flex-direction:column; gap:0.75rem;">
+          <template x-for="item in visibleFilteredRss" :key="item.url">
+            <div class="pending-card">
+              <div style="display:flex; justify-content:space-between; gap:0.75rem; align-items:flex-start;">
+                <div style="min-width:0;">
+                  <div style="font-weight:700; color:var(--text-main); line-height:1.45;" x-text="item.title"></div>
+                  <div style="font-size:0.7rem; color:var(--text-muted); margin-top:0.35rem;">
+                    <span x-text="item.pubDate_cst || ''"></span>
+                    <span x-show="item.reason"> · </span>
+                    <span x-show="item.reason" x-text="item.reason"></span>
+                  </div>
+                  <p x-show="item.description" style="font-size:0.72rem; color:var(--text-muted); margin-top:0.45rem; line-height:1.55;" x-text="item.description"></p>
+                </div>
+                <a :href="item.url" target="_blank" rel="noopener" class="card-link" style="white-space:nowrap;">
+                  <svg><use href="#icon-external"/></svg> IGN
+                </a>
+              </div>
+              <div style="display:flex; gap:0.5rem; flex-wrap:wrap; margin-top:0.75rem;">
+                <button @click="restoreFilteredArticle(item)" :disabled="filteredRestoringUrl === item.url" class="btn btn-primary">
+                  <span x-text="filteredRestoringUrl === item.url ? '恢复中...' : '恢复入库'"></span>
+                </button>
+                <button @click="ignoreFilteredArticle(item)" class="btn btn-ghost">忽略</button>
+              </div>
+            </div>
+          </template>
+          <div x-show="visibleFilteredRss.length === 0" style="text-align:center; color:var(--text-muted); font-size:0.85rem; padding:2rem 0;">
+            暂无被过滤文章
           </div>
         </div>
       </div>

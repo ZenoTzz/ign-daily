@@ -62,19 +62,25 @@ jobs:
           path = Path("ign_rss_new.json")
           if not path.exists():
               print("new_count=0")
+              print("filtered_count=0")
+              print("cleanup_count=0")
+              print("changed_count=0")
               print("target_date=")
               raise SystemExit
 
           data = json.loads(path.read_text(encoding="utf-8-sig"))
           print(f"new_count={data.get('new_count', 0)}")
+          print(f"filtered_count={data.get('filtered_count', 0)}")
+          print(f"cleanup_count={data.get('cleanup_count', 0)}")
+          print(f"changed_count={data.get('changed_count', data.get('new_count', 0))}")
           print(f"target_date={data.get('target_date', '')}")
           PY
 
-      - name: Stop when there are no new articles
-        if: steps.rss.outputs.new_count == '0'
+      - name: Stop when there are no RSS changes
+        if: steps.rss.outputs.changed_count == '0'
         run: |
           rm -f ign_rss_new.json
-          echo "No new RSS articles."
+          echo "No new RSS articles or filtered quarantine changes."
 
       - name: Validate RSS queue
         if: steps.rss.outputs.new_count != '0'
@@ -106,7 +112,7 @@ jobs:
           python3 scripts/agent_doctor.py
 
       - name: Commit and push RSS update
-        if: steps.rss.outputs.new_count != '0'
+        if: steps.rss.outputs.changed_count != '0'
         run: |
           set -euo pipefail
           git add data ign_rss_new.json
@@ -114,6 +120,6 @@ jobs:
             echo "No tracked RSS changes to commit."
             exit 0
           fi
-          git commit -m "feat: hourly RSS ${{ steps.rss.outputs.new_count }} new articles for ${{ steps.rss.outputs.target_date }}"
+          git commit -m "feat: hourly RSS ${{ steps.rss.outputs.new_count }} new, ${{ steps.rss.outputs.filtered_count }} filtered for ${{ steps.rss.outputs.target_date }}"
           git pull --rebase origin main
           git push origin HEAD:main

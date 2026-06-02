@@ -1,0 +1,7 @@
+{
+  "allow_patterns": [],
+  "block_patterns": [],
+  "block_url_keywords": [],
+  "filtered_retention_days": 7,
+  "notes": "RSS filtered articles are quarantined in data/{date}/filtered_rss.json first. allow_patterns override block patterns. Old quarantine files older than filtered_retention_days are deleted by the RSS workflow."
+}
