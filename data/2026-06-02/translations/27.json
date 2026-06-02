@@ -1,0 +1,90 @@
+{
+  "id": 27,
+  "url": "https://www.ign.com/articles/nvidia-announces-the-rtx-spark-its-first-soc-for-regular-people",
+  "en_title": "Nvidia Announces the RTX Spark, Its First SoC for Regular People",
+  "cn_title": "英伟达发布RTX Spark，面向普通用户的AI芯片",
+  "subtitle": "AI PC时代来了？",
+  "opus_summary": "英伟达在Computex 2026上正式发布RTX Spark SoC，这是一款专为Agentic AI打造的芯片，将驱动新一代PC。该芯片配备20核ARM CPU、Blackwell GPU（6144个CUDA核心）以及最高128GB共享显存，AI算力达1 petaflop，可在1440p分辨率下以最高100fps运行游戏。英伟达CEO黄仁勋在台北发布会上表示，RTX Spark与微软Windows将带来全新计算范式：用户只需开口提问，PC即可完成工作。几乎所有主流笔记本厂商都将推出搭载该芯片的产品，预计2026年秋季上市。不过，ARM架构在PC游戏兼容性上历来存在短板，此前Copilot+笔记本就曾因x86兼容问题导致大量游戏无法运行。英伟达能否凭借自身资源解决这一难题，仍有待观察。此外，RTX Spark系统将更侧重于创意和AI工作负载，价格预计不菲，目前尚未公布具体售价，但未来会推出16GB内存的低价版本。",
+  "publish_time_cn": "2026-06-01 23:41",
+  "paragraphs": [
+    {
+      "en": "Nvidia finally announced the RTX Spark at Computex 2026, an SoC powering a 'new generation' of PCs purpose-built for Agentic AI, and basically every mainstream laptop manufacturer will be launching a laptop powered by it.",
+      "cn": "英伟达终于在Computex 2026上发布了RTX Spark，这是一款为Agentic AI量身打造的SoC，将驱动「新一代」PC，而且几乎所有主流笔记本厂商都将推出搭载该芯片的笔记本电脑。"
+    },
+    {
+      "en": "Just like the DGX Spark, which made its debut at CES 2025 , the RTX Spark is an SoC that's built for agentic AI. The chip will sport a 20-core ARM CPU, a Blackwell GPU with 6,144 CUDA cores and up to 128GB of VRAM that's shared between the two. Nvidia claims that this chip will boast up to 1 petaflop of AI compute power, and will be able to play games at 1440p with up to 100 fps.",
+      "cn": "与在CES 2025上首次亮相的DGX Spark一样，RTX Spark也是一款为Agentic AI打造的SoC。该芯片将配备20核ARM CPU、拥有6144个CUDA核心的Blackwell GPU，以及最高128GB的共享显存。英伟达宣称，这款芯片的AI算力最高可达1 petaflop，并能在1440p分辨率下以最高100fps运行游戏。"
+    },
+    {
+      "en": "Nvidia is hoping that the RTX Spark, along with Windows, will bring about a new type of computing. Microsoft has been hinting at this type of thing in a while, but at Nvidia's press conference in Taipei, CEO Jensen Huang spelled it out himself, saying \"For forty years, you launched apps. Click. Type. With RTX Spark and Microsoft Windows, you ask — and the PC does the work.\" I'm not sure I'm ready for an era of shouting at my computer to try and make it do things, but it's not like I don't already do that anyways.",
+      "cn": "英伟达希望RTX Spark与Windows携手，带来一种全新的计算方式。微软对此已暗示多时，但在英伟达台北发布会上，CEO黄仁勋亲自挑明：「四十年来，你启动应用，点击，打字。有了RTX Spark和微软Windows，你只需开口提问——PC就会完成工作。」我不确定自己是否准备好迎接一个对着电脑大喊大叫让它干活的年代，不过话说回来，我现在好像也没少这么干。"
+    },
+    {
+      "en": "It's also important to keep in mind that while the GPU in the DGX Spark looks impressive on paper, it will be stapled to an ARM processor. While it's likely that Nvidia will be able to work out the compatibility quirks with its nearly unlimited resources, ARM processors haven't traditionally been great for PC gaming. Even with the launch of Copilot+ laptops back in 2024 , there were a ton of games that I couldn't even get to run on Qualcomm's chips, because they were built for an x86 platform. Only time will tell if Nvidia is able to work around that problem, but even if it does, I wouldn't exactly go out and get a RTX Spark-powered system as a gaming laptop .",
+      "cn": "同样需要牢记的是，尽管DGX Spark的GPU纸面参数令人印象深刻，但它将绑定ARM处理器。虽然英伟达凭借近乎无限的资源很可能解决兼容性问题，但ARM处理器在PC游戏领域历来表现不佳。早在2024年Copilot+笔记本上市时，就有大量游戏根本无法在高通芯片上运行，因为它们都是为x86平台打造的。英伟达能否绕过这一难题，只有时间能给出答案，但即便可以，我也不会专门去买一台RTX Spark系统当游戏本用。"
+    },
+    {
+      "en": "Instead, these systems are going to lean more into creative and AI workloads, and will likely have price tags to match. Neither Nvidia or any of the manufacturers that will be making laptops and mini PCs with the RTX Spark have announced prices, but its safe to assume that they'll be quite expensive – especially if they come with that full 128GB of memory. According to The Verge, Nvidia claims that there will be less expensive versions coming at some point with just 16GB of RAM, but it's not clear how long that wait will be.",
+      "cn": "相反，这些系统将更侧重于创意和AI工作负载，价格也很可能与之匹配。英伟达和所有将推出RTX Spark笔记本及迷你PC的厂商均未公布价格，但可以想见它们会相当昂贵——尤其是配备完整128GB内存的版本。据The Verge报道，英伟达声称未来某个时候会推出仅16GB内存的低价版本，但尚不清楚要等多久。"
+    },
+    {
+      "en": "Either way, laptops powered by RTX Spark should be making their way to store shelves in Fall 2026, so if you do want to buy into Nvidia's vision of an Agentic future, you won't have to wait too long.",
+      "cn": "无论如何，搭载RTX Spark的笔记本预计将在2026年秋季上架，所以如果你想为英伟达的Agentic未来愿景买单，不用等太久。"
+    },
+    {
+      "en": "Jackie Thomas is the Hardware and Buying Guides Editor at IGN and the PC components queen. You can follow her @Jackiecobra",
+      "cn": "Jackie Thomas是IGN硬件与购买指南编辑，也是PC组件女王。你可以在@Jackiecobra关注她。"
+    }
+  ],
+  "pending_dict": [
+    {
+      "en": "Agentic AI",
+      "cn": "Agentic AI",
+      "reason": "暂无通用中文译名，保留英文"
+    },
+    {
+      "en": "petaflop",
+      "cn": "petaflop",
+      "reason": "专业术语，保留英文"
+    },
+    {
+      "en": "Copilot+",
+      "cn": "Copilot+",
+      "reason": "微软产品名，保留英文"
+    }
+  ],
+  "translated_terms": {
+    "Nvidia": "英伟达",
+    "RTX Spark": "RTX Spark",
+    "Computex 2026": "Computex 2026",
+    "SoC": "SoC",
+    "Agentic AI": "Agentic AI",
+    "DGX Spark": "DGX Spark",
+    "CES 2025": "CES 2025",
+    "ARM": "ARM",
+    "Blackwell": "Blackwell",
+    "CUDA cores": "CUDA核心",
+    "VRAM": "显存",
+    "petaflop": "petaflop",
+    "Microsoft": "微软",
+    "Windows": "Windows",
+    "Jensen Huang": "黄仁勋",
+    "Copilot+": "Copilot+",
+    "Qualcomm": "高通",
+    "x86": "x86",
+    "The Verge": "The Verge",
+    "Jackie Thomas": "Jackie Thomas",
+    "IGN": "IGN"
+  },
+  "cover": "https://assets-prd.ignimgs.com/2026/06/01/assets-2026-06-1780274839-kv-1920x1080-badge-1780322627976.png",
+  "images": [
+    "https://assets-prd.ignimgs.com/2026/06/01/assets-2026-06-1780274839-kv-1920x1080-badge-1780322627976.png?width=1280&format=jpg&auto=webp&quality=80",
+    "https://assets-prd.ignimgs.com/2026/06/01/assets-2026-06-1780274839-kv-1920x1080-badge-1780322627976.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+    "https://assets-prd.ignimgs.com/2026/06/01/assets-2026-06-1780274839-kv-1920x1080-badge-1780322627976.png?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+    "https://assets-prd.ignimgs.com/2026/06/01/assets-2026-06-1780274839-kv-1920x1080-badge-1780322627976.png?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+    "https://assets-prd.ignimgs.com/2026/06/01/assets-2026-06-1780274839-kv-1920x1080-badge-1780322627976.png"
+  ],
+  "translator": "api",
+  "translator_provider": "openai-compatible",
+  "translator_model": "deepseek-v4-pro"
+}

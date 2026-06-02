@@ -420,6 +420,48 @@
       "total_tokens": 9070,
       "prompt_cache_hit_tokens": 0,
       "prompt_cache_miss_tokens": 7293
+    },
+    {
+      "time_cn": "2026-06-02 12:56:01",
+      "task": "fulltext",
+      "model": "deepseek-v4-pro",
+      "article_id": 13,
+      "article_title": "《PlayStation》索尼2026年外设三连发：摇杆、显示器、音箱上手",
+      "article_url": "https://www.ign.com/articles/new-playstation-hardware-hands-on",
+      "article_date": "2026-06-02",
+      "detail": "",
+      "estimated_cost_usd": 0.00361769,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 8716,
+      "completion_tokens": 4116,
+      "total_tokens": 12832,
+      "prompt_cache_hit_tokens": 8704,
+      "prompt_cache_miss_tokens": 12
+    },
+    {
+      "time_cn": "2026-06-02 12:56:34",
+      "task": "fulltext",
+      "model": "deepseek-v4-pro",
+      "article_id": 27,
+      "article_title": "英伟达发布RTX Spark，面向普通用户的AI芯片",
+      "article_url": "https://www.ign.com/articles/nvidia-announces-the-rtx-spark-its-first-soc-for-regular-people",
+      "article_date": "2026-06-02",
+      "detail": "",
+      "estimated_cost_usd": 0.00495856,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 7561,
+      "completion_tokens": 1919,
+      "total_tokens": 9480,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 7561
     }
   ]
 }

@@ -414,12 +414,12 @@
       "emoji": "🎮",
       "en_title": "New PlayStation Hardware Hands-On",
       "cn_title": "《PlayStation》索尼2026年外设三连发：摇杆、显示器、音箱上手",
-      "summary": "IGN 近日受邀前往 PlayStation 总部，提前体验了索尼2026年三款全新外设：FlexStrike 无线格斗摇杆、PlayStation 27寸游戏显示器以及 Pulse Elevate 无线音箱。FlexStrike 售价199.99美元，支持无线/有线双模，设计轻便且兼容 PC；显示器内置 DualSense 充电挂钩，1440p/240Hz，售价349.99美元；Pulse Elevate 音箱采用 PlayStation Link 低延迟无线技术，内置 AI 降噪麦克风，音质出色，售价待定。",
+      "summary": "IGN 近日受邀前往 PlayStation 总部，提前体验了索尼2026年三款全新外设：FlexStrike 无线格斗摇杆、PlayStation 27寸游戏显示器以及 Pulse Elevate 无线音箱。FlexStrike 售价199.99美元(约合人民币1356元)，支持无线/有线双模，设计轻便且兼容 PC；显示器内置 DualSense 充电挂钩，1440p/240Hz，售价349.99美元(约合人民币2373元)；Pulse Elevate 音箱采用 PlayStation Link 低延迟无线技术，内置 AI 降噪麦克风，音质出色，售价待定。",
       "url": "https://www.ign.com/articles/new-playstation-hardware-hands-on",
       "publish_time_cn": "2026-06-01 23:00",
       "pub_date": "2026-06-01 23:00",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/05/30/psfightstick-handson-blogroll-1780106052277.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/05/30/psfightstick-handson-blogroll-1780106052277.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/05/30/psfightstick-handson-blogroll-1780106052277.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/05/30/psfightstick-handson-blogroll-1780106052277.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -455,7 +455,11 @@
           "cn": "《漫威Tokon：战斗之魂》",
           "reason": "游戏名，需确认官方中文译名"
         }
-      ]
+      ],
+      "translation_path": "translations/13.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro"
     },
     {
       "id": 14,
@@ -766,7 +770,7 @@
       "emoji": "🎬",
       "en_title": "Obsession Won’t Be Coming to Digital This Week — And That’s a Good Thing",
       "cn_title": "低成本恐怖片《Obsession》延期上线数字平台，票房持续走高",
-      "summary": "低成本恐怖片《Obsession》原定6月2日上线数字平台，但NBCU决定延长院线放映时间。该片制作成本仅75万美元，北美首周末票房超1720万美元，全球累计超1.48亿美元。影片由26岁油管主Curry Barker执导，社交媒体上的惊悚片段引发热议。同期《后室》也表现亮眼，而《星球大战：曼达洛人与古古》票房相对疲软。",
+      "summary": "低成本恐怖片《Obsession》原定6月2日上线数字平台，但NBCU决定延长院线放映时间。该片制作成本仅75万美元(约合人民币508万元)，北美首周末票房超1720万美元(约合人民币1亿元)，全球累计超1.48亿美元(约合人民币10亿元)。影片由26岁油管主Curry Barker执导，社交媒体上的惊悚片段引发热议。同期《后室》也表现亮眼，而《星球大战：曼达洛人与古古》票房相对疲软。",
       "url": "https://www.ign.com/articles/obsession-digital-release-date-delayed",
       "publish_time_cn": "2026-06-02 00:38",
       "pub_date": "2026-06-02 00:38",
@@ -818,8 +822,8 @@
       "category": "游戏新闻",
       "emoji": "🎬",
       "en_title": "007 First Light Budget Reportedly More Than $200 Million",
-      "cn_title": "《007 初露锋芒》开发成本超2亿美元",
-      "summary": "据丹麦媒体报道，IO Interactive 开发的《007 初露锋芒》开发成本超过2亿美元，耗时七年打造，成为丹麦史上最贵的娱乐产品。游戏于5月27日登陆PC、PS5和Xbox Series，发售后24小时内售出150万份，成为IO史上销售最快的游戏。IGN给出9/10评分，称其为“最好的邦德游戏”。",
+      "cn_title": "《007 初露锋芒》开发成本超2亿美元(约合人民币14亿元)",
+      "summary": "据丹麦媒体报道，IO Interactive 开发的《007 初露锋芒》开发成本超过2亿美元(约合人民币14亿元)，耗时七年打造，成为丹麦史上最贵的娱乐产品。游戏于5月27日登陆PC、PS5和Xbox Series，发售后24小时内售出150万份，成为IO史上销售最快的游戏。IGN给出9/10评分，称其为“最好的邦德游戏”。",
       "url": "https://www.ign.com/articles/007-first-light-budget-reportedly-more-than-200-million",
       "publish_time_cn": "2026-06-02 00:35",
       "pub_date": "2026-06-02 00:35",
@@ -970,7 +974,7 @@
       "emoji": "🎮",
       "en_title": "Asus Goes OLED With the New ROG Xbox Ally X20",
       "cn_title": "华硕推出OLED版ROG Ally X20，捆绑AR眼镜销售",
-      "summary": "华硕发布ROG Ally X20掌机，升级为7.4英寸120Hz OLED屏，亮度1400尼特，支持杜比视界。外观改为半透明，配备可切换十字键和Gulikit TMR摇杆。但该掌机仅与XReal R1 AR眼镜捆绑销售，眼镜售价约850美元，主机售价未公布。",
+      "summary": "华硕发布ROG Ally X20掌机，升级为7.4英寸120Hz OLED屏，亮度1400尼特，支持杜比视界。外观改为半透明，配备可切换十字键和Gulikit TMR摇杆。但该掌机仅与XReal R1 AR眼镜捆绑销售，眼镜售价约850美元(约合人民币5763元)，主机售价未公布。",
       "url": "https://www.ign.com/articles/asus-goes-oled-with-the-new-rog-xbox-ally-x20",
       "publish_time_cn": "2026-06-01 23:50",
       "pub_date": "2026-06-01 23:50",
@@ -998,8 +1002,8 @@
       "url": "https://www.ign.com/articles/nvidia-announces-the-rtx-spark-its-first-soc-for-regular-people",
       "publish_time_cn": "2026-06-01 23:41",
       "pub_date": "2026-06-01 23:41",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/06/01/assets-2026-06-1780274839-kv-1920x1080-badge-1780322627976.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/01/assets-2026-06-1780274839-kv-1920x1080-badge-1780322627976.png",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/01/assets-2026-06-1780274839-kv-1920x1080-badge-1780322627976.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/01/assets-2026-06-1780274839-kv-1920x1080-badge-1780322627976.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -1025,7 +1029,11 @@
           "cn": "Agentic AI",
           "reason": "术语，保留英文"
         }
-      ]
+      ],
+      "translation_path": "translations/27.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro"
     },
     {
       "id": 28,
