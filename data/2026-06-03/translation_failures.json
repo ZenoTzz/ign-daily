@@ -28,21 +28,7 @@
       "fingerprint": "e72435e433890cd8fbb39b3955326f283c7e8313",
       "translation_path": "translations/08.json",
       "retry_policy": "manual_only"
-    },
-    "9": {
-      "id": 9,
-      "url": "https://www.ign.com/articles/forza-horizon-and-need-for-speed-meet-in-maverick-games-debut-driving-project",
-      "en_title": "Forza Horizon and Need for Speed Meet in Maverick Games’ Debut Driving Project",
-      "cn_title": "《极限竞速：地平线》与《极品飞车》合体？Maverick Games首秀《Clutch》",
-      "model": "deepseek-v4-flash",
-      "status": "needs_manual_review",
-      "failed_at": "2026-06-02T20:46:17.777387+08:00",
-      "reason": "Command '['/opt/hostedtoolcache/Python/3.11.15/x64/bin/python3', '/home/runner/work/ign-daily/ign-daily/scripts/pre_push_check.py', '2026-06-03']' returned non-zero exit status 1.",
-      "audit_issues": [],
-      "fingerprint": "f8a47223ecf7800cb9f55499af1d268185676dfb",
-      "translation_path": "translations/09.json",
-      "retry_policy": "manual_only"
     }
   },
-  "updated_at": "2026-06-02T20:46:17.777387+08:00"
+  "updated_at": "2026-06-02T12:58:54.531Z"
 }
