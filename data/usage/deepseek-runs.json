@@ -1,5 +1,27 @@
 [
   {
+    "run_id": "26800657065",
+    "workflow": "API Translation",
+    "event": "workflow_dispatch",
+    "sha": "3ccc750bd66a7342028330435cef2c9ccdcf016f",
+    "recorded_at_cn": "2026-06-02 13:36:16",
+    "start_balance": 49.28,
+    "end_balance": 49.28,
+    "currency": "CNY",
+    "actual_platform_cost": 0.0,
+    "estimated_cost_usd": 0.00097762,
+    "api_call_count": 1,
+    "total_tokens": 6825,
+    "by_model": {
+      "deepseek-v4-flash": {
+        "calls": 1,
+        "estimated_cost_usd": 0.00097762,
+        "total_tokens": 6825
+      }
+    },
+    "snapshot_ok": true
+  },
+  {
     "run_id": "26800415167",
     "workflow": "API Translation",
     "event": "workflow_dispatch",

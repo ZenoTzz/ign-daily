@@ -546,6 +546,27 @@
       "total_tokens": 9189,
       "prompt_cache_hit_tokens": 7296,
       "prompt_cache_miss_tokens": 113
+    },
+    {
+      "time_cn": "2026-06-02 13:36:15",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 3,
+      "article_title": "Maverick Games’ New Open-World Driving Game Will Be Revealed in Under 12 Hours",
+      "article_url": "https://www.ign.com/articles/maverick-games-new-open-world-driving-game-will-be-revealed-in-under-12-hours",
+      "article_date": "2026-06-03",
+      "detail": "",
+      "estimated_cost_usd": 0.00097762,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 6667,
+      "completion_tokens": 158,
+      "total_tokens": 6825,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 6667
     }
   ]
 }
