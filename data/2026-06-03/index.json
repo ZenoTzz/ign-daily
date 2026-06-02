@@ -12,7 +12,7 @@
       "publish_time_cn": "2026-06-02 17:47",
       "pub_date": "2026-06-02 17:47",
       "cover_image": "https://assets-prd.ignimgs.com/2026/06/02/ss-669119c3747653f41a46c59f213168448d094e04-1920x1080-1780393360334.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/02/ss-669119c3747653f41a46c59f213168448d094e04-1920x1080-1780393360334.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/02/ss-669119c3747653f41a46c59f213168448d094e04-1920x1080-1780393360334.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -58,7 +58,13 @@
           "cn": "日灼峰",
           "reason": "地图区域，建议译名，需确认"
         }
-      ]
+      ],
+      "translation_error": "[dictionary] source contains 'Persona', but required dictionary translation '女神异闻录' is missing",
+      "translation_failed_at": "2026-06-02T20:32:14.478546+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-flash",
+      "translation_path": "translations/04.json"
     },
     {
       "id": 5,
@@ -70,8 +76,8 @@
       "url": "https://www.ign.com/articles/nintendo-music-launches-web-player-with-over-4-hours-of-mario-kart-world-tunes",
       "publish_time_cn": "2026-06-02 16:57",
       "pub_date": "2026-06-02 16:57",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/06/02/nintendo-music-new-updates-trailer-00-00-30-1780390323451.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/02/nintendo-music-new-updates-trailer-00-00-30-1780390323451.png",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/02/nintendo-music-new-updates-trailer-00-00-30-1780390323451.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/02/nintendo-music-new-updates-trailer-00-00-30-1780390323451.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -80,7 +86,11 @@
         "https://assets-prd.ignimgs.com/2026/06/02/nintendo-music-new-updates-trailer-00-00-30-1780390323451.png"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-02T19:05:10+08:00"
+      "source_fetched_at": "2026-06-02T19:05:10+08:00",
+      "translation_path": "translations/05.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-flash"
     },
     {
       "id": 6,
@@ -92,8 +102,8 @@
       "url": "https://www.ign.com/articles/resident-evil-series-may-finally-set-future-game-in-japan-producer-says",
       "publish_time_cn": "2026-06-02 16:35",
       "pub_date": "2026-06-02 16:35",
-      "cover_image": "https://assets-prd.ignimgs.com/2025/12/09/g7uethpbiaazzaq-1765283237391.jpeg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2025/12/09/g7uethpbiaazzaq-1765283237391.jpeg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2025/12/09/g7uethpbiaazzaq-1765283237391.jpeg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2025/12/09/g7uethpbiaazzaq-1765283237391.jpeg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -119,7 +129,11 @@
           "cn": "Futaman",
           "reason": "日本媒体名，无常见中文译名"
         }
-      ]
+      ],
+      "translation_path": "translations/06.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-flash"
     },
     {
       "id": 3,
