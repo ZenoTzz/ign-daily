@@ -71,11 +71,11 @@ jobs:
         if: steps.config.outputs.nightly_learner == 'api' || steps.config.outputs.nightly_learner == 'deepseek'
         run: |
           set -euo pipefail
-          git add STYLE_PROFILE.md data/learning_log
+          git add STYLE_PROFILE.md data/learning data/learning_log
           if git diff --cached --quiet; then
-            echo "No nightly style changes to commit."
+            echo "No nightly style learning changes to commit."
             exit 0
           fi
-          git commit -m "chore: update nightly style profile"
+          git commit -m "chore: update nightly style learning"
           git pull --rebase origin main
           git push origin HEAD:main

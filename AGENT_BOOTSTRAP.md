@@ -141,6 +141,7 @@ python3 scripts/git_push.py
 - API 模式读取 GitHub Secret `TRANSLATOR_API_KEY`（兼容 `DEEPSEEK_API_KEY`）。标题/正文/夜间学习可分别用 `api_title_model`、`api_fulltext_model`、`api_nightly_model`，base URL 从 `api_base_url` 读取。密钥不得写入网页或仓库。
 - API 正文翻译不能只靠 prompt 自觉执行规范。`translate_fulltext_api.py` 必须先生成词库/货币硬性清单，写入前调用 `api_translation_audit.py` 的检查逻辑；审计失败时只允许局部返修一次，仍失败就保留 `requests.json` 并让 workflow 失败，不能提交不合格译文。
 - DeepSeek 用量看板有两层数据：`usage_logger.py` 记录脚本估算 tokens/成本；API workflow 运行前后用 `deepseek_balance.py --snapshot` 记录平台余额，并由 `record_deepseek_run_cost.py` 写入 `data/usage/deepseek-runs.json`。估算成本用于分析模型和文章，真实扣费以 DeepSeek 平台余额差为准。
+- API 夜间学习不能每天直接重写风格记忆。`scripts/nightly_style_api.py` 的职责是：从用户润色/批注中提取候选规律，更新 `data/learning/style-evidence.json`，生成 `data/learning/weekly/{week}.json` 周报。只有用户在学习页对周报规则明确采纳/确认后，下一次夜间学习才可把该规则写入 `STYLE_PROFILE.md`。
 - OpenClaw 独立自动化 session 只在对应配置不是 `api` 时处理队列；不要依赖正在聊天的主 session 心跳。
 - OpenClaw cron 启动后先跑 `python3 scripts/automation_guard.py title|fulltext|nightly`。输出 `SKIP` 就静默退出，输出 `RUN` 才继续。
 - 翻译完成后的 push 仍然跑 `python3 scripts/pre_push_check.py {date}`。

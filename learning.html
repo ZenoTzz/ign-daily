@@ -39,6 +39,70 @@
       </p>
 
       <!-- 📝 风格总结卡片 -->
+      <!-- Weekly long-term learning report -->
+      <section class="mb-8 bg-[#14141f]/70 rounded-lg border border-white/5 overflow-hidden">
+        <header class="bg-[#08080f] px-5 py-3 border-b border-white/5 flex items-center gap-3">
+          <h2 class="text-lg font-bold text-white/80">每周学习报告</h2>
+          <span class="text-xs text-white/35" x-text="weeklyReport ? `${weeklyReport.week_id} · ${weeklyReport.summary?.candidate_count || 0} 条候选规律` : '等待夜间学习生成'"></span>
+          <div class="flex-1"></div>
+          <button @click="weeklyExpanded = !weeklyExpanded" class="text-sm text-red-500 hover:underline" x-text="weeklyExpanded ? '收起' : '展开'"></button>
+        </header>
+        <div x-show="weeklyExpanded" class="p-5">
+          <template x-if="weeklyLoading">
+            <div class="text-center text-white/30 py-4">加载每周报告...</div>
+          </template>
+          <template x-if="!weeklyLoading && !weeklyReport">
+            <div class="text-white/40 text-sm">还没有每周学习报告。夜间学习会先积累每日观察，再生成周报。</div>
+          </template>
+          <template x-if="!weeklyLoading && weeklyReport">
+            <div class="space-y-4">
+              <div class="grid grid-cols-2 md:grid-cols-4 gap-3 text-sm">
+                <div class="bg-[#08080f] rounded p-3 border border-white/5"><div class="text-white/35">候选规律</div><div class="text-xl font-bold" x-text="weeklyReport.summary?.candidate_count || 0"></div></div>
+                <div class="bg-[#08080f] rounded p-3 border border-white/5"><div class="text-white/35">待你确认</div><div class="text-xl font-bold" x-text="weeklyReport.summary?.ready_for_review || 0"></div></div>
+                <div class="bg-[#08080f] rounded p-3 border border-white/5"><div class="text-white/35">已确认</div><div class="text-xl font-bold" x-text="weeklyReport.summary?.confirmed_by_feedback || 0"></div></div>
+                <div class="bg-[#08080f] rounded p-3 border border-white/5"><div class="text-white/35">观察中</div><div class="text-xl font-bold" x-text="weeklyReport.summary?.pending || 0"></div></div>
+              </div>
+              <div class="space-y-3">
+                <template x-for="rule in (weeklyReport.candidates || [])" :key="rule.id">
+                  <article class="bg-[#08080f] rounded p-4 border border-white/5">
+                    <header class="flex items-start gap-2 mb-2">
+                      <span class="text-xs px-2 py-0.5 rounded bg-white/10 text-white/60" x-text="rule.status || 'pending'"></span>
+                      <h3 class="font-semibold flex-1 text-white/90" x-text="rule.title"></h3>
+                      <span class="text-xs text-white/35" x-text="`${rule.days_seen || 0}天 / ${rule.articles_seen || 0}篇`"></span>
+                    </header>
+                    <p class="text-sm text-white/65 mb-2" x-text="rule.rule"></p>
+                    <p class="text-xs text-white/40 mb-3" x-text="rule.latest_evidence_summary || ''"></p>
+                    <details class="text-xs text-white/45 mb-3" x-show="rule.examples && rule.examples.length">
+                      <summary class="cursor-pointer hover:text-white/80">查看证据</summary>
+                      <div class="space-y-2 mt-2">
+                        <template x-for="ex in rule.examples || []">
+                          <div class="bg-[#14141f] rounded p-2">
+                            <div class="text-white/35" x-text="`${ex.date || ''} #${ex.article_id || ''}`"></div>
+                            <div x-show="ex.before" class="text-white/45">原：<span x-text="ex.before"></span></div>
+                            <div x-show="ex.after" class="text-emerald-300/80">改：<span x-text="ex.after"></span></div>
+                          </div>
+                        </template>
+                      </div>
+                    </details>
+                    <div class="border-t border-white/5 pt-3">
+                      <template x-if="weeklyFeedback[rule.id]">
+                        <div class="text-sm bg-amber-100 text-slate-900 rounded p-2 mb-2"><span class="font-bold">你的批注：</span><span x-text="weeklyFeedback[rule.id]"></span></div>
+                      </template>
+                      <div class="flex flex-wrap gap-2">
+                        <button @click="saveWeeklyFeedback(rule.id, '采纳，进入长期规则。')" class="text-xs px-3 py-1 rounded bg-emerald-600 hover:bg-emerald-500">采纳</button>
+                        <button @click="saveWeeklyFeedback(rule.id, '否定，这不是我的长期偏好。')" class="text-xs px-3 py-1 rounded bg-rose-600 hover:bg-rose-500">否定</button>
+                        <button @click="editWeeklyFeedback(rule)" class="text-xs px-3 py-1 rounded bg-blue-600 hover:bg-blue-500">限定/改写</button>
+                        <button @click="saveWeeklyFeedback(rule.id, '暂缓，继续观察。')" class="text-xs px-3 py-1 rounded bg-white/10 hover:bg-white/15">暂缓</button>
+                      </div>
+                    </div>
+                  </article>
+                </template>
+              </div>
+            </div>
+          </template>
+        </div>
+      </section>
+
       <section class="mb-8 bg-[#14141f]/70 rounded-lg border border-white/5 overflow-hidden">
         <header class="bg-gradient-to-r from-indigo-50 to-purple-50 px-5 py-3 border-b border-white/5 flex items-center gap-3">
           <h2 class="text-lg font-bold text-white/80">🎨 翻译风格总结</h2>
@@ -239,11 +303,16 @@
         styleExpanded: true,
         styleLoading: true,
         styleSummary: '',
+        weeklyExpanded: true,
+        weeklyLoading: true,
+        weeklyReport: null,
+        weeklyFeedback: {},
 
         async init() {
           this.loading = true;
           // 加载风格总结
           this.loadStyleProfile();
+          this.loadWeeklyReport();
           try {
             // 拉学习日志清单
             const idxRes = await fetch('data/learning_log/_index.json?t=' + Date.now(), { cache: 'no-store' });
@@ -298,6 +367,53 @@
             console.warn('Failed to load STYLE_PROFILE:', e);
           }
           this.styleLoading = false;
+        },
+
+        async loadWeeklyReport() {
+          this.weeklyLoading = true;
+          try {
+            const idxRes = await fetch('data/learning/weekly/_index.json?t=' + Date.now(), { cache: 'no-store' });
+            if (!idxRes.ok) {
+              this.weeklyLoading = false;
+              return;
+            }
+            const idx = await idxRes.json();
+            const weeks = idx.weeks || [];
+            if (!weeks.length) {
+              this.weeklyLoading = false;
+              return;
+            }
+            const weekId = weeks[weeks.length - 1];
+            const reportRes = await fetch(`data/learning/weekly/${weekId}.json?t=${Date.now()}`, { cache: 'no-store' });
+            if (reportRes.ok) this.weeklyReport = await reportRes.json();
+            const feedbackRes = await fetch(`data/learning/weekly/${weekId}_feedback.json?t=${Date.now()}`, { cache: 'no-store' });
+            if (feedbackRes.ok) this.weeklyFeedback = await feedbackRes.json();
+          } catch (e) {
+            console.warn('Failed to load weekly learning report:', e);
+          }
+          this.weeklyLoading = false;
+        },
+
+        async saveWeeklyFeedback(ruleId, text) {
+          if (!this.weeklyReport) return;
+          this.weeklyFeedback[ruleId] = text;
+          const path = `data/learning/weekly/${this.weeklyReport.week_id}_feedback.json`;
+          try {
+            await GH.putFile(path, JSON.stringify(this.weeklyFeedback, null, 2),
+              `weekly learning feedback ${this.weeklyReport.week_id}: ${ruleId}`);
+            this.flash('已保存周报批注。夜间学习下次会读取它。');
+          } catch (e) {
+            this.flash('保存失败：' + e.message);
+            console.error(e);
+          }
+        },
+
+        async editWeeklyFeedback(rule) {
+          const current = this.weeklyFeedback[rule.id] || '';
+          const text = prompt(`给「${rule.title}」写批注：\n例如：采纳 / 否定 / 只适用于影视新闻 / 改成……`, current);
+          if (text === null) return;
+          if (!text.trim()) return;
+          await this.saveWeeklyFeedback(rule.id, text.trim());
         },
 
         renderStyleMd(md) {
