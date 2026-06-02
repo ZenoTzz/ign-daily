@@ -23,6 +23,7 @@ from typing import Any
 
 from common_paths import DATA_DIR, REPO_ROOT, configure_utf8_stdio, dict_path, env_paths
 from currency_utils import normalize_translation_currency
+from normalize_currency_files import normalize_date as normalize_currency_date
 from prompt_blocks import chunk_user_payload, fulltext_user_payload
 from translate_titles_deepseek import apply_title_dictionary, call_deepseek_response, extract_article_text, extract_json, flatten_dict_terms
 from usage_logger import record_deepseek_usage_safe
@@ -341,6 +342,7 @@ def translate_date(date: str, limit: int = 2) -> int:
         trans_path = DATA_DIR / date / "translations" / f"{article['id']:02d}.json"
         write_json(trans_path, data)
         subprocess.run([sys.executable, str(REPO_ROOT / "scripts" / "translate_pipeline.py"), date, str(article["id"]), "--post"], cwd=REPO_ROOT, check=True)
+        normalize_currency_date(date)
         subprocess.run([sys.executable, str(REPO_ROOT / "scripts" / "pre_push_check.py"), date], cwd=REPO_ROOT, check=True)
         req = remove_completed_request(req, article)
         write_json(req_path, req)

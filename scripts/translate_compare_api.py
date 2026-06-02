@@ -30,6 +30,7 @@ from translate_fulltext_api import (
 )
 from translate_titles_deepseek import call_deepseek_response, extract_json
 from currency_utils import normalize_translation_currency
+from normalize_currency_files import normalize_date as normalize_currency_date
 from usage_logger import record_deepseek_usage_safe
 
 
@@ -217,6 +218,7 @@ def run(date: str, article_id: int) -> int:
     }
     compare_path = day_dir / "comparisons" / f"{article_id:02d}.json"
     write_json(compare_path, payload)
+    normalize_currency_date(date)
 
     article["comparison_status"] = "done"
     article["comparison_models"] = [m["model"] for m in compare_models]

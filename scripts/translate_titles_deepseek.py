@@ -29,6 +29,7 @@ from typing import Any
 
 from common_paths import DATA_DIR, REPO_ROOT, configure_utf8_stdio, dict_path, env_paths
 from currency_utils import normalize_currency_text
+from normalize_currency_files import normalize_date as normalize_currency_date
 from prompt_blocks import title_user_payload
 from usage_logger import record_deepseek_usage_safe
 
@@ -390,6 +391,7 @@ def translate_date(date: str, limit: int = 8) -> int:
 
     write_json(index_path, index)
     write_json(queue_path, remaining)
+    normalize_currency_date(date)
     print(f"API_TITLE_TRANSLATE_DONE: date={date}, translated={translated}, remaining={len(remaining)}")
     return translated
 
