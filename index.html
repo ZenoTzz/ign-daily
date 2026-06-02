@@ -118,14 +118,33 @@
               <svg width="14" height="14"><use href="#icon-arrow-right"/></svg>
             </button>
           </div>
-          <!-- Date Dropdown -->
+          <!-- News Date Calendar -->
           <div x-show="showDatePicker" x-cloak @click.away="showDatePicker=false" class="date-dropdown">
-            <template x-for="d in availableDates" :key="d">
-              <button @click="goToDate(d); showDatePicker=false"
-                :class="d === currentDate ? 'active' : ''"
-                class="date-dropdown-item"
-                x-text="d"></button>
-            </template>
+            <div class="news-calendar-head">
+              <button @click="shiftDatePickerMonth(-1)" class="date-nav-btn" title="上个月">
+                <svg width="14" height="14"><use href="#icon-arrow-left"/></svg>
+              </button>
+              <strong x-text="datePickerMonthLabel()"></strong>
+              <button @click="shiftDatePickerMonth(1)" class="date-nav-btn" title="下个月">
+                <svg width="14" height="14"><use href="#icon-arrow-right"/></svg>
+              </button>
+            </div>
+            <div class="news-calendar-week">
+              <span>一</span><span>二</span><span>三</span><span>四</span><span>五</span><span>六</span><span>日</span>
+            </div>
+            <div class="news-calendar-grid">
+              <template x-for="cell in dateCalendarCells()" :key="cell.key">
+                <button
+                  class="news-calendar-day"
+                  :class="{ empty: !cell.date, active: cell.date === currentDate, available: cell.available, today: cell.date === todayBeijingDate() }"
+                  :disabled="!cell.available"
+                  @click="cell.available && goToDate(cell.date)"
+                  :title="cell.date || ''">
+                  <span x-text="cell.day || ''"></span>
+                  <small x-show="cell.total" x-text="cell.total"></small>
+                </button>
+              </template>
+            </div>
           </div>
         </div>
         <nav class="nav-actions">
@@ -138,10 +157,6 @@
           <a href="dict.html" class="nav-btn hidden sm:flex">
             <svg><use href="#icon-book"/></svg>
             <span>词库</span>
-          </a>
-          <a href="history.html" class="nav-btn hidden sm:flex">
-            <svg><use href="#icon-calendar"/></svg>
-            <span>历史</span>
           </a>
           <a href="learning.html" class="nav-btn hidden sm:flex" title="学习记录">
             <svg><use href="#icon-chart"/></svg>
@@ -482,7 +497,6 @@
       <div x-show="fabOpen" x-cloak x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 scale-90" x-transition:enter-end="opacity-100 scale-100" x-transition:leave="transition ease-in duration-100" x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-90"
            class="fab-menu">
         <a href="dict.html" class="fab-item"><svg width="14" height="14"><use href="#icon-book"/></svg> 词库</a>
-        <a href="history.html" class="fab-item"><svg width="14" height="14"><use href="#icon-calendar"/></svg> 历史</a>
         <a href="learning.html" class="fab-item"><svg width="14" height="14"><use href="#icon-chart"/></svg> 学习</a>
         <a href="usage.html" class="fab-item"><svg width="14" height="14"><use href="#icon-chart"/></svg> API 用量</a>
         <a href="calendar.html" class="fab-item"><svg width="14" height="14"><use href="#icon-calendar"/></svg> 游戏日历</a>

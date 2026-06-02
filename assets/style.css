@@ -192,9 +192,110 @@ a:hover { color: var(--accent-hover); }
   border: 1px solid var(--border-primary);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-lg);
-  max-height: 16rem;
-  overflow-y: auto;
-  width: 10rem;
+  width: 19rem;
+  padding: 0.75rem;
+}
+
+.news-calendar-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.6rem;
+}
+
+.news-calendar-head strong {
+  font-size: 0.88rem;
+  color: var(--text-primary);
+  letter-spacing: 0;
+}
+
+.news-calendar-week,
+.news-calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 0.25rem;
+}
+
+.news-calendar-week {
+  margin-bottom: 0.3rem;
+}
+
+.news-calendar-week span {
+  text-align: center;
+  font-size: 0.68rem;
+  color: var(--text-muted);
+}
+
+.news-calendar-day {
+  position: relative;
+  min-height: 2.15rem;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  background: var(--bg-elevated);
+  color: var(--text-muted);
+  cursor: not-allowed;
+  transition: border var(--transition-fast), background var(--transition-fast), color var(--transition-fast);
+}
+
+.news-calendar-day span {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.news-calendar-day small {
+  position: absolute;
+  right: 0.22rem;
+  bottom: 0.12rem;
+  font-size: 0.55rem;
+  color: var(--text-muted);
+}
+
+.news-calendar-day.empty {
+  opacity: 0;
+}
+
+.news-calendar-day.available {
+  cursor: pointer;
+  color: var(--text-secondary);
+  background: var(--bg-card);
+}
+
+.news-calendar-day.available:hover {
+  border-color: var(--accent);
+  color: var(--text-primary);
+  background: var(--accent-soft);
+}
+
+.news-calendar-day.active {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: white;
+}
+
+.news-calendar-day.active small {
+  color: rgba(255,255,255,0.75);
+}
+
+.news-calendar-day.today:not(.active)::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0.22rem;
+  width: 0.28rem;
+  height: 0.28rem;
+  transform: translateX(-50%);
+  border-radius: 999px;
+  background: var(--accent);
+}
+
+@media (max-width: 640px) {
+  .date-dropdown {
+    left: 0.75rem;
+    right: 0.75rem;
+    width: auto;
+    top: 3.75rem;
+  }
 }
 
 .date-dropdown-item {

@@ -138,6 +138,8 @@ function appData() {
     data: null,
     currentDate: '',
     availableDates: [],
+    availableDateMeta: {},
+    datePickerMonth: '',
     showDatePicker: false,
     showMobileMenu: false,
     selected: [],
@@ -227,9 +229,16 @@ function appData() {
           const ilRes = await fetch('data/index-list.json?t=' + Date.now(), { cache: 'no-store' });
           if (ilRes.ok) {
             const il = await ilRes.json();
-            this.availableDates = (Array.isArray(il) ? il.map(x => x.date || x) : (il.dates || [])).sort().reverse();
+            const rows = Array.isArray(il) ? il : (il.dates || []).map(date => ({ date }));
+            this.availableDates = rows.map(x => x.date || x).filter(Boolean).sort().reverse();
+            this.availableDateMeta = {};
+            rows.forEach(x => {
+              const d = x.date || x;
+              if (d) this.availableDateMeta[d] = x;
+            });
           }
         } catch (_) {}
+        this.datePickerMonth = date.slice(0, 7);
         const res = await fetch(`data/${date}/index.json?t=${Date.now()}`, { cache: 'no-store' });
         if (!res.ok) {
           // 找不到今日，回退尝试最近一天
@@ -308,6 +317,39 @@ function appData() {
     },
     goToDate(d) {
       window.location.href = `?date=${d}`;
+    },
+    datePickerMonthLabel() {
+      const [y, m] = String(this.datePickerMonth || this.currentDate.slice(0, 7)).split('-');
+      return `${y}年${Number(m)}月`;
+    },
+    shiftDatePickerMonth(delta) {
+      const base = this.datePickerMonth || this.currentDate.slice(0, 7);
+      const [y, m] = base.split('-').map(Number);
+      const d = new Date(y, m - 1 + delta, 1);
+      this.datePickerMonth = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}`;
+    },
+    dateCalendarCells() {
+      const month = this.datePickerMonth || this.currentDate.slice(0, 7);
+      const [year, mon] = month.split('-').map(Number);
+      const first = new Date(year, mon - 1, 1);
+      const days = new Date(year, mon, 0).getDate();
+      const leading = (first.getDay() + 6) % 7;
+      const cells = [];
+      for (let i = 0; i < leading; i++) cells.push({ key: `e-${month}-${i}` });
+      const available = new Set(this.availableDates || []);
+      for (let day = 1; day <= days; day++) {
+        const date = `${year}-${String(mon).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+        const meta = this.availableDateMeta?.[date] || {};
+        cells.push({
+          key: date,
+          date,
+          day,
+          available: available.has(date),
+          total: meta.total || ''
+        });
+      }
+      while (cells.length % 7) cells.push({ key: `t-${month}-${cells.length}` });
+      return cells;
     },
     isToday() {
       return this.currentDate === todayBeijingDate();
