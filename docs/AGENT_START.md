@@ -29,6 +29,7 @@ workflow data.
 - Article index: `data/{YYYY-MM-DD}/index.json`
 - English cache: `data/{date}/sources/NN.json`
 - Full translation: `data/{date}/translations/NN.json`
+- API review failures: `data/{date}/translation_failures.json`
 - Manual comparison: `data/{date}/comparisons/NN.json`
 - Polish edits: `data/{date}/polished/*.json`
 - Learning reports: `data/learning/weekly/*.json`
@@ -40,6 +41,7 @@ workflow data.
 - Do not delete historical `data/{date}/` folders.
 - Do not write API keys or PATs into tracked files.
 - Do not use whole-page HTML as article body. Use `article_cache.py`.
+- Do not repeatedly retry `translation_status=needs_review`; wait for user re-submit or manual release.
 - Do not update `STYLE_PROFILE.md` directly from a single day of edits.
 
 ## Where To Self-Check

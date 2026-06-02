@@ -18,9 +18,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script defer src="assets/alpine.min.js"></script>
-  <link rel="stylesheet" href="assets/style.css?v=20260531b">
-  <link rel="stylesheet" href="assets/article-dark.css?v=20260602a">
-  <script src="assets/app.js?v=20260602a"></script>
+  <link rel="stylesheet" href="assets/style.css?v=20260602m">
+  <link rel="stylesheet" href="assets/article-dark.css?v=20260602m">
+  <script src="assets/app.js?v=20260602m"></script>
   <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
   <script>
     tailwind.config = {
@@ -63,6 +63,11 @@
             title="按最新词库重新扫描译文、替换中文名">
             🔄 重新应用词库
           </button>
+          <button x-show="needsManualReview()" @click="approveManualReview()"
+            class="article-desktop-action text-xs px-2 py-1 rounded bg-red-50 text-red-700 hover:bg-red-100 border border-red-200"
+            title="确认这篇草稿可作为正式译文发布">
+            ✅ 人工放行
+          </button>
           <button @click="copyArticle()"
             class="article-desktop-action text-xs px-2 py-1 rounded bg-emerald-50 text-emerald-700 hover:bg-emerald-100 border border-emerald-200"
             title="复制中文全文（自动全角标点，去 markdown）">
@@ -89,6 +94,9 @@
         <button @click="reapplyDict(); fabOpen=false" class="fab-item">
           🔄 重新应用词库
         </button>
+        <button x-show="needsManualReview()" @click="approveManualReview(); fabOpen=false" class="fab-item">
+          ✅ 人工放行
+        </button>
         <button @click="copyArticle(); fabOpen=false" class="fab-item">
           <span x-text="copyBtnText"></span>
         </button>
@@ -107,6 +115,14 @@
 
     <!-- Body -->
     <div x-show="error" class="p-6 text-red-600" x-text="error"></div>
+
+    <div x-show="needsManualReview()" x-cloak class="manual-review-banner">
+      <div>
+        <strong>这篇是 API 质检未通过的草稿</strong>
+        <p x-text="manualReviewReason()"></p>
+      </div>
+      <button @click="approveManualReview()">人工放行</button>
+    </div>
 
     <!-- 划词加词库按钮（跟随鼠标） -->
     <div x-show="selectionText && selectionRect"
@@ -541,6 +557,7 @@
         polishStatus: '✏️ 润色',
         polishExists: false,
         polishSaveTimer: null,
+        manualReviewApproving: false,
 
 
         async init() {
@@ -1107,6 +1124,89 @@
           if (!p) return '';
           if (typeof p === 'string') return p;
           return p.cn || p.zh || p.text_cn || p.translation || p.text || '';
+        },
+
+        needsManualReview() {
+          if (!this.article || this.article.quality_status === 'manual_approved') return false;
+          return !!(
+            this.article.quality_status === 'needs_manual_review' ||
+            this.article.manual_release_required ||
+            this.article.audit_failure_reason ||
+            (Array.isArray(this.article.audit_issues) && this.article.audit_issues.length > 0)
+          );
+        },
+
+        manualReviewReason() {
+          if (!this.article) return '';
+          if (this.article.audit_failure_reason) return this.article.audit_failure_reason;
+          const issues = Array.isArray(this.article.audit_issues) ? this.article.audit_issues : [];
+          if (!issues.length) return 'API 质检未通过，请人工复核后再放行。';
+          return issues.slice(0, 4).map(x => `[${x.type || 'issue'}] ${x.detail || ''}`).join('；');
+        },
+
+        async approveManualReview() {
+          if (this.manualReviewApproving) return;
+          if (!localStorage.getItem('gh_token')) {
+            this.flash('❌ 未配置 GitHub Token，请在首页右上角设置', 4000);
+            return;
+          }
+          if (!confirm('确认把这篇待复核草稿发布为正式译文？\n\n建议先修正词库、货币换算等问题。')) return;
+          this.manualReviewApproving = true;
+          try {
+            const params = new URLSearchParams(location.search);
+            const date = params.get('date');
+            const id = parseInt(params.get('id'));
+            const padded = String(id).padStart(2, '0');
+            const transPath = `data/${date}/translations/${padded}.json`;
+            const now = new Date().toISOString();
+
+            const transFresh = await GH.getFile(transPath);
+            const data = JSON.parse(transFresh.content);
+            data.quality_status = 'manual_approved';
+            data.manual_release_required = false;
+            data.manual_approved_at = now;
+            data.manual_approved_reason = 'user approved API audit draft';
+            data.manual_approved_issues = data.audit_issues || [];
+            delete data.audit_issues;
+            delete data.audit_failed_at;
+            delete data.audit_failure_reason;
+            await GH.putFile(transPath, JSON.stringify(data, null, 2), `manual approve translation #${id}`);
+
+            const indexPath = `data/${date}/index.json`;
+            const idxFresh = await GH.getFile(indexPath);
+            const idx = JSON.parse(idxFresh.content);
+            const art = (idx.articles || []).find(a => parseInt(a.id) === id);
+            if (art) {
+              art.translation_status = 'done';
+              art.translation_path = `translations/${padded}.json`;
+              art.cn_title = data.cn_title || art.cn_title;
+              art.summary = data.opus_summary || data.summary || art.summary;
+              art.translator = data.translator || art.translator;
+              art.translator_provider = data.translator_provider || art.translator_provider;
+              art.translator_model = data.translator_model || art.translator_model;
+              delete art.translation_error;
+              delete art.translation_failed_at;
+            }
+            await GH.putFile(indexPath, JSON.stringify(idx, null, 2), `index: manual approve #${id}`);
+
+            const failPath = `data/${date}/translation_failures.json`;
+            try {
+              const failFresh = await GH.getFile(failPath);
+              if (failFresh) {
+                const failures = JSON.parse(failFresh.content);
+                if (failures.items) delete failures.items[String(id)];
+                failures.updated_at = now;
+                await GH.putFile(failPath, JSON.stringify(failures, null, 2), `translation failure: clear #${id}`);
+              }
+            } catch (_) {}
+
+            this.article = data;
+            this.flash('✅ 已人工放行为正式译文');
+          } catch (e) {
+            this.flash('❌ 放行失败：' + e.message, 5000);
+          } finally {
+            this.manualReviewApproving = false;
+          }
         },
 
         articleBodyText() {

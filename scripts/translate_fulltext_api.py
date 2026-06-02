@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
 """Translate requested full articles with an OpenAI-compatible chat API.
 
-This is a guarded automation path. It writes translations/NN.json, then runs
-translate_pipeline.py --post and pre_push_check.py. If validation fails, it
-leaves the request in requests.json and exits non-zero so Actions will not push.
+This is a guarded automation path. Good translations are finalized as normal.
+If the deterministic audit rejects a model output, the draft is saved as a
+manual-review translation, the request is removed from the hourly queue, and the
+failure reason is written to data/YYYY-MM-DD/translation_failures.json. This
+prevents the same article/model/error from burning tokens every hour.
 
 Usage:
   TRANSLATOR_API_KEY=... python3 scripts/translate_fulltext_api.py [YYYY-MM-DD|--all]
@@ -13,6 +15,7 @@ from __future__ import annotations
 import json
 import os
 import re
+import hashlib
 import subprocess
 import sys
 import time
@@ -62,6 +65,128 @@ def load_json(path: Path) -> Any:
 def write_json(path: Path, data: Any) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+
+def now_iso() -> str:
+    return datetime.now(CST).isoformat()
+
+
+def failure_path(date: str) -> Path:
+    return DATA_DIR / date / "translation_failures.json"
+
+
+def failure_fingerprint(article: dict[str, Any], model: str, issues: list[dict[str, str]] | None, text: str) -> str:
+    payload = {
+        "id": article.get("id"),
+        "url": article.get("url"),
+        "model": model,
+        "issue_types": [x.get("type") for x in (issues or [])],
+        "issue_details": [x.get("detail") for x in (issues or [])][:8],
+        "source_sha1": hashlib.sha1(text.encode("utf-8", errors="ignore")).hexdigest(),
+    }
+    raw = json.dumps(payload, ensure_ascii=False, sort_keys=True)
+    return hashlib.sha1(raw.encode("utf-8")).hexdigest()
+
+
+def load_failures(date: str) -> dict[str, Any]:
+    path = failure_path(date)
+    if not path.exists():
+        return {"date": date, "items": {}}
+    try:
+        data = load_json(path)
+    except Exception:
+        return {"date": date, "items": {}}
+    if not isinstance(data, dict):
+        return {"date": date, "items": {}}
+    data.setdefault("date", date)
+    data.setdefault("items", {})
+    return data
+
+
+def save_manual_review_failure(
+    *,
+    date: str,
+    index: dict[str, Any],
+    req_path: Path,
+    req: dict[str, Any],
+    article: dict[str, Any],
+    model: str,
+    text: str,
+    issues: list[dict[str, str]] | None,
+    details: str,
+    draft: dict[str, Any] | None = None,
+) -> dict[str, Any]:
+    aid = int(article["id"])
+    ts = now_iso()
+    fp = failure_fingerprint(article, model, issues, text)
+    trans_rel = f"translations/{aid:02d}.json" if draft else ""
+
+    if draft:
+        draft["quality_status"] = "needs_manual_review"
+        draft["manual_release_required"] = True
+        draft["audit_issues"] = issues or []
+        draft["audit_failed_at"] = ts
+        draft["audit_failure_reason"] = details
+        write_json(DATA_DIR / date / trans_rel, draft)
+
+    failures = load_failures(date)
+    failures["updated_at"] = ts
+    failures.setdefault("items", {})[str(aid)] = {
+        "id": aid,
+        "url": article.get("url"),
+        "en_title": article.get("en_title"),
+        "cn_title": (draft or article).get("cn_title") or article.get("cn_title") or article.get("en_title"),
+        "model": model,
+        "status": "needs_manual_review",
+        "failed_at": ts,
+        "reason": details,
+        "audit_issues": issues or [],
+        "fingerprint": fp,
+        "translation_path": trans_rel,
+        "retry_policy": "manual_only",
+    }
+    write_json(failure_path(date), failures)
+
+    for item in index.get("articles", []):
+        if int(item.get("id", -1)) != aid:
+            continue
+        item["translation_status"] = "needs_review"
+        item["translation_error"] = details
+        item["translation_failed_at"] = ts
+        item["translator"] = "api"
+        item["translator_provider"] = "openai-compatible"
+        item["translator_model"] = model
+        if trans_rel:
+            item["translation_path"] = trans_rel
+        if draft:
+            if draft.get("cn_title"):
+                item["cn_title"] = draft["cn_title"]
+            if draft.get("opus_summary"):
+                item["summary"] = draft["opus_summary"]
+            elif draft.get("summary"):
+                item["summary"] = draft["summary"]
+            if draft.get("cover"):
+                item["cover_image"] = draft["cover"]
+        break
+    write_json(DATA_DIR / date / "index.json", index)
+
+    req = remove_completed_request(req, article)
+    write_json(req_path, req)
+    print(f"[REVIEW] fulltext #{aid} saved for manual review: {details}")
+    return req
+
+
+def clear_manual_review_failure(date: str, article_id: int) -> None:
+    path = failure_path(date)
+    if not path.exists():
+        return
+    failures = load_failures(date)
+    items = failures.get("items", {})
+    if str(article_id) not in items:
+        return
+    del items[str(article_id)]
+    failures["updated_at"] = now_iso()
+    write_json(path, failures)
 
 
 def fetch_article_text(url: str, max_chars: int = 18000) -> str:
@@ -415,40 +540,32 @@ def translate_date(date: str, limit: int = 2) -> int:
             print(f"API_FULLTEXT_PAUSE: time budget reached after {translated} article(s)")
             break
         source = load_cached_source(date, article)
-        text = source_text(source) or fetch_article_text(article["url"])
-        paragraphs_en = split_paragraphs(text)
-        if not paragraphs_en:
-            raise RuntimeError(f"no paragraphs extracted for #{article['id']}")
-        terms = matched_terms(article.get("en_title", "") + "\n" + text)
-        max_tokens = int(os.environ.get("TRANSLATOR_FULLTEXT_MAX_TOKENS", "12000"))
-        raw, usage = call_deepseek_response(api_key, model, base_url, build_messages(article, paragraphs_en, terms), max_tokens=max_tokens)
-        record_deepseek_usage_safe(
-            task="fulltext",
-            model=model,
-            usage=usage,
-            article_id=article.get("id"),
-            article_title=article.get("cn_title") or article.get("en_title"),
-            article_url=article.get("url"),
-            article_date=date,
-        )
-        result = extract_json(raw)
+        text = ""
+        data: dict[str, Any] | None = None
+        audit_issues: list[dict[str, str]] = []
         try:
-            data = normalize_translation(article, result, paragraphs_en)
-        except ValueError as exc:
-            print(f"[RETRY] fulltext #{article['id']} paragraph format issue: {exc}")
-            data = normalize_translation(article, {**result, "paragraphs": translate_paragraph_chunks(api_key, model, base_url, article, paragraphs_en, terms, article_date=date)}, paragraphs_en)
-        data["translator"] = "api"
-        data["translator_provider"] = "openai-compatible"
-        data["translator_model"] = model
-        if source:
-            if not data.get("cover") and source.get("cover_image"):
-                data["cover"] = source["cover_image"]
-            if not data.get("images") and isinstance(source.get("images"), list):
-                data["images"] = source["images"]
-        audit_issues = check_translation(article=article, paragraphs_en=paragraphs_en, data=data, required_terms=terms)
-        if audit_issues and os.environ.get("TRANSLATOR_FULLTEXT_REPAIR", "1") != "0":
-            print(f"[REPAIR] fulltext #{article['id']} audit found {len(audit_issues)} issue(s); asking model for focused repair")
-            data = repair_translation_once(api_key, model, base_url, article, paragraphs_en, terms, data, audit_issues, date)
+            text = source_text(source) or fetch_article_text(article["url"])
+            paragraphs_en = split_paragraphs(text)
+            if not paragraphs_en:
+                raise RuntimeError(f"no paragraphs extracted for #{article['id']}")
+            terms = matched_terms(article.get("en_title", "") + "\n" + text)
+            max_tokens = int(os.environ.get("TRANSLATOR_FULLTEXT_MAX_TOKENS", "12000"))
+            raw, usage = call_deepseek_response(api_key, model, base_url, build_messages(article, paragraphs_en, terms), max_tokens=max_tokens)
+            record_deepseek_usage_safe(
+                task="fulltext",
+                model=model,
+                usage=usage,
+                article_id=article.get("id"),
+                article_title=article.get("cn_title") or article.get("en_title"),
+                article_url=article.get("url"),
+                article_date=date,
+            )
+            result = extract_json(raw)
+            try:
+                data = normalize_translation(article, result, paragraphs_en)
+            except ValueError as exc:
+                print(f"[RETRY] fulltext #{article['id']} paragraph format issue: {exc}")
+                data = normalize_translation(article, {**result, "paragraphs": translate_paragraph_chunks(api_key, model, base_url, article, paragraphs_en, terms, article_date=date)}, paragraphs_en)
             data["translator"] = "api"
             data["translator_provider"] = "openai-compatible"
             data["translator_model"] = model
@@ -458,18 +575,57 @@ def translate_date(date: str, limit: int = 2) -> int:
                 if not data.get("images") and isinstance(source.get("images"), list):
                     data["images"] = source["images"]
             audit_issues = check_translation(article=article, paragraphs_en=paragraphs_en, data=data, required_terms=terms)
-        if audit_issues:
-            details = "; ".join(f"[{issue['type']}] {issue['detail']}" for issue in audit_issues[:8])
-            raise RuntimeError(f"API translation audit failed for #{article['id']}: {details}")
-        trans_path = DATA_DIR / date / "translations" / f"{article['id']:02d}.json"
-        write_json(trans_path, data)
-        subprocess.run([sys.executable, str(REPO_ROOT / "scripts" / "translate_pipeline.py"), date, str(article["id"]), "--post"], cwd=REPO_ROOT, check=True)
-        normalize_currency_date(date)
-        subprocess.run([sys.executable, str(REPO_ROOT / "scripts" / "pre_push_check.py"), date], cwd=REPO_ROOT, check=True)
-        req = remove_completed_request(req, article)
-        write_json(req_path, req)
-        translated += 1
-        print(f"[OK] fulltext #{article['id']} {data['cn_title']}")
+            if audit_issues and os.environ.get("TRANSLATOR_FULLTEXT_REPAIR", "1") != "0":
+                print(f"[REPAIR] fulltext #{article['id']} audit found {len(audit_issues)} issue(s); asking model for focused repair")
+                data = repair_translation_once(api_key, model, base_url, article, paragraphs_en, terms, data, audit_issues, date)
+                data["translator"] = "api"
+                data["translator_provider"] = "openai-compatible"
+                data["translator_model"] = model
+                if source:
+                    if not data.get("cover") and source.get("cover_image"):
+                        data["cover"] = source["cover_image"]
+                    if not data.get("images") and isinstance(source.get("images"), list):
+                        data["images"] = source["images"]
+                audit_issues = check_translation(article=article, paragraphs_en=paragraphs_en, data=data, required_terms=terms)
+            if audit_issues:
+                details = "; ".join(f"[{issue['type']}] {issue['detail']}" for issue in audit_issues[:8])
+                req = save_manual_review_failure(
+                    date=date,
+                    index=index,
+                    req_path=req_path,
+                    req=req,
+                    article=article,
+                    model=model,
+                    text=text,
+                    issues=audit_issues,
+                    details=details,
+                    draft=data,
+                )
+                continue
+            trans_path = DATA_DIR / date / "translations" / f"{article['id']:02d}.json"
+            write_json(trans_path, data)
+            subprocess.run([sys.executable, str(REPO_ROOT / "scripts" / "translate_pipeline.py"), date, str(article["id"]), "--post"], cwd=REPO_ROOT, check=True)
+            normalize_currency_date(date)
+            subprocess.run([sys.executable, str(REPO_ROOT / "scripts" / "pre_push_check.py"), date], cwd=REPO_ROOT, check=True)
+            req = remove_completed_request(req, article)
+            write_json(req_path, req)
+            clear_manual_review_failure(date, int(article["id"]))
+            translated += 1
+            print(f"[OK] fulltext #{article['id']} {data['cn_title']}")
+        except Exception as exc:
+            details = str(exc)
+            req = save_manual_review_failure(
+                date=date,
+                index=index,
+                req_path=req_path,
+                req=req,
+                article=article,
+                model=model,
+                text=text,
+                issues=audit_issues,
+                details=details,
+                draft=data,
+            )
     print(f"API_FULLTEXT_TRANSLATE_DONE: date={date}, translated={translated}")
     return translated
 

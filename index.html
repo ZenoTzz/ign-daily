@@ -16,9 +16,9 @@
   <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <script defer src="assets/alpine.min.js"></script>
-  <link rel="stylesheet" href="assets/style.css?v=20260531b">
+  <link rel="stylesheet" href="assets/style.css?v=20260602m">
   <script src="assets/exceljs.min.js"></script>
-  <script src="assets/app.js?v=20260602l"></script>
+  <script src="assets/app.js?v=20260602m"></script>
 </head>
 <body>
   <!-- SVG Icon Definitions -->
@@ -301,6 +301,11 @@
                       <svg><use href="#icon-clock"/></svg> 翻译中
                     </span>
                   </template>
+                  <template x-if="art.translation_status === 'needs_review'">
+                    <span class="card-status status-review" :title="reviewReason(art)">
+                      <svg><use href="#icon-pencil"/></svg> 需复核
+                    </span>
+                  </template>
                   <template x-if="art.comparison_status === 'done'">
                     <span class="card-status status-done">已对比</span>
                   </template>
@@ -317,13 +322,13 @@
                 </div>
 
                 <!-- Title -->
-                <template x-if="art.translation_status === 'done'">
+                <template x-if="art.translation_status === 'done' || (art.translation_status === 'needs_review' && art.translation_path)">
                   <a :href="`article.html?date=${data.date}&id=${art.id}`"
                     @click="saveState()"
                     class="card-title" style="display:block;"
                     x-text="art.cn_title"></a>
                 </template>
-                <template x-if="art.translation_status !== 'done'">
+                <template x-if="art.translation_status !== 'done' && !(art.translation_status === 'needs_review' && art.translation_path)">
                   <h3 class="card-title" x-text="art.cn_title"></h3>
                 </template>
 
@@ -339,6 +344,14 @@
                       @click="saveState()"
                       class="card-link" style="color:var(--accent); font-weight:600;">
                       <svg><use href="#icon-book"/></svg> 查看翻译
+                    </a>
+                  </template>
+                  <template x-if="art.translation_status === 'needs_review' && art.translation_path">
+                    <a :href="`article.html?date=${data.date}&id=${art.id}`"
+                      @click="saveState()"
+                      class="card-link" style="color:var(--amber); font-weight:600;"
+                      :title="reviewReason(art)">
+                      <svg><use href="#icon-pencil"/></svg> 复核草稿
                     </a>
                   </template>
                   <template x-if="art.comparison_status === 'done'">

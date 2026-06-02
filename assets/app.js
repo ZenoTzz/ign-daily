@@ -191,6 +191,7 @@ function appData() {
     filteredRss: [],
     showFilteredPanel: false,
     filteredRestoringUrl: '',
+    translationFailures: {},
     toast: '',
 
     // 全局待确认词库
@@ -259,7 +260,7 @@ function appData() {
         }
         await this.loadFilteredRss(date);
 
-        // 同步 requests.json：把已请求但还没翻译的标记为 requested
+        // 同步 requests.json：把已请求但还没翻译/复核的标记为 requested
         try {
           const reqRes = await fetch(`data/${date}/requests.json?t=${Date.now()}`, { cache: 'no-store' });
           if (reqRes.ok) {
@@ -267,12 +268,31 @@ function appData() {
             const requested = new Set(reqData.requested_ids || []);
             const requestedUrls = new Set((reqData.requested_articles || []).map(x => x.url).filter(Boolean));
             for (const a of this.data.articles) {
-              if ((requestedUrls.has(a.url) || requested.has(a.id)) && a.translation_status !== 'done') {
+              if ((requestedUrls.has(a.url) || requested.has(a.id)) && !['done', 'needs_review'].includes(a.translation_status)) {
                 a.translation_status = 'requested';
               }
             }
           }
         } catch (_) { /* 没有 requests.json 是正常的 */ }
+
+        // 同步 API 质检失败记录：显示为“需复核”，避免用户只看到“翻译中”
+        this.translationFailures = {};
+        try {
+          const failRes = await fetch(`data/${date}/translation_failures.json?t=${Date.now()}`, { cache: 'no-store' });
+          if (failRes.ok) {
+            const failData = await failRes.json();
+            this.translationFailures = failData.items || {};
+            for (const a of this.data.articles) {
+              const f = this.translationFailures[String(a.id)];
+              if (f && a.translation_status !== 'done') {
+                a.translation_status = 'needs_review';
+                a.translation_error = f.reason || a.translation_error || 'API 质检未通过';
+                a.translation_path = f.translation_path || a.translation_path;
+                if (f.model) a.translator_model = f.model;
+              }
+            }
+          }
+        } catch (_) { /* 没有失败记录是正常的 */ }
 
         // 加载润色索引
         this.polishedIds = new Set();
@@ -464,6 +484,15 @@ function appData() {
     get requestedArticles() {
       if (!this.data) return [];
       return this.data.articles.filter(a => a.translation_status === 'requested');
+    },
+
+    get needsReviewCount() {
+      if (!this.data) return 0;
+      return this.data.articles.filter(a => a.translation_status === 'needs_review').length;
+    },
+
+    reviewReason(art) {
+      return art?.translation_error || this.translationFailures?.[String(art?.id)]?.reason || 'API 质检未通过，请人工复核';
     },
 
     get visibleFilteredRss() {
@@ -1219,6 +1248,7 @@ function appData() {
         const path = `data/${date}/requests.json`;
         await GH.putFile(path, JSON.stringify(payload, null, 2),
           `request translation for ${date}: ${payload.requested_ids.join(',')}`);
+        await this.clearSelectedTranslationFailures(date, selIds);
         const apiFulltext = this.isApiMode('fulltext_translator');
         if (apiFulltext) {
           await this.saveAutomationConfig();
@@ -1231,11 +1261,35 @@ function appData() {
         // 标记 requested
         for (const id of this.selected) {
           const a = this.data.articles.find(x => x.id === id);
-          if (a && a.translation_status === 'none') a.translation_status = 'requested';
+          if (a && a.translation_status !== 'done') a.translation_status = 'requested';
         }
         this.selected = [];
       } catch (e) {
         this.flash('❌ 提交失败：' + e.message, 4000);
+      }
+    },
+
+    async clearSelectedTranslationFailures(date, ids) {
+      if (!ids?.length) return;
+      const failPath = `data/${date}/translation_failures.json`;
+      try {
+        const fresh = await GH.getFile(failPath);
+        if (!fresh) return;
+        const data = JSON.parse(fresh.content);
+        const items = data.items || {};
+        let changed = false;
+        for (const id of ids) {
+          if (items[String(id)]) {
+            delete items[String(id)];
+            changed = true;
+          }
+        }
+        if (!changed) return;
+        data.items = items;
+        data.updated_at = new Date().toISOString();
+        await GH.putFile(failPath, JSON.stringify(data, null, 2), `translation failures: retry ${ids.join(',')}`);
+      } catch (_) {
+        // 失败记录只是显示层，不能阻断提交翻译。
       }
     },
 

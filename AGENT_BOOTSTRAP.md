@@ -39,6 +39,7 @@ ign-daily/
 │       ├── need_titles.json      # 待补中文标题/摘要队列
 │       ├── filtered_rss.json     # RSS 过滤隔离区，网页可恢复误杀
 │       ├── sources/NN.json       # 干净英文正文、封面图、正文图缓存
+│       ├── translation_failures.json # API 质检失败/人工复核记录
 │       ├── comparisons/NN.json   # 手动双模型对比译文，不覆盖正式译文
 │       └── translations/NN.json  # 全文译文
 ├── scripts/
@@ -139,7 +140,7 @@ python3 scripts/git_push.py
 - 所有会写仓库数据的 Actions 必须使用 `concurrency.group: ign-daily-write-main`，避免 RSS、API 翻译、用量快照、夜间学习同时 push 造成 rebase 冲突。
 - 网页设置会写 `data/automation-config.json`：`title_translator`、`fulltext_translator`、`nightly_learner` 可分别设为 `openclaw` 或 `api`。
 - API 模式读取 GitHub Secret `TRANSLATOR_API_KEY`（兼容 `DEEPSEEK_API_KEY`）。标题/正文/夜间学习可分别用 `api_title_model`、`api_fulltext_model`、`api_nightly_model`，base URL 从 `api_base_url` 读取。密钥不得写入网页或仓库。
-- API 正文翻译不能只靠 prompt 自觉执行规范。`translate_fulltext_api.py` 必须先生成词库/货币硬性清单，写入前调用 `api_translation_audit.py` 的检查逻辑；审计失败时只允许局部返修一次，仍失败就保留 `requests.json` 并让 workflow 失败，不能提交不合格译文。
+- API 正文翻译不能只靠 prompt 自觉执行规范。`translate_fulltext_api.py` 必须先生成词库/货币硬性清单，写入前调用 `api_translation_audit.py` 的检查逻辑；审计失败时只允许局部返修一次，仍失败就写 `translation_failures.json`、把文章标为 `needs_review`、移出 `requests.json`，避免每小时重复烧 token。只有用户在文章页人工放行后才改回 `done`。
 - DeepSeek 用量看板有两层数据：`usage_logger.py` 记录脚本估算 tokens/成本；API workflow 运行前后用 `deepseek_balance.py --snapshot` 记录平台余额，并由 `record_deepseek_run_cost.py` 写入 `data/usage/deepseek-runs.json`。估算成本用于分析模型和文章，真实扣费以 DeepSeek 平台余额差为准。
 - API 夜间学习不能每天直接重写风格记忆。`scripts/nightly_style_api.py` 的职责是：从用户润色/批注中提取候选规律，更新 `data/learning/style-evidence.json`，生成 `data/learning/weekly/{week}.json` 周报。只有用户在学习页对周报规则明确采纳/确认后，下一次夜间学习才可把该规则写入 `STYLE_PROFILE.md`。
 - 编码健康检查已经接入 `agent_doctor.py`。如果终端显示中文乱码，不要凭肉眼改乱码文本；先跑 `python3 scripts/check_encoding_health.py`。只有它报 `ENCODING_HEALTH_FAIL` 才说明文件里存在真实 mojibake 或 Unicode replacement character 损坏。

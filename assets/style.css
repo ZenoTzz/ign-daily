@@ -634,6 +634,7 @@ a:hover { color: var(--accent-hover); }
 .card-status.status-done { background: var(--green-soft); color: var(--green); border: 1px solid var(--green-border); }
 .card-status.status-requested { background: var(--amber-soft); color: var(--amber); border: 1px solid var(--amber-border); }
 .card-status.status-polished { background: var(--amber-soft); color: var(--amber); border: 1px solid var(--amber-border); }
+.card-status.status-review { background: rgba(239, 68, 68, 0.12); color: var(--accent); border: 1px solid rgba(239, 68, 68, 0.35); }
 
 .card-title {
   font-size: 0.9rem;

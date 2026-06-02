@@ -208,6 +208,41 @@ button.bg-emerald-50, .bg-emerald-50 {
   }
 }
 
+.manual-review-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid rgba(239, 68, 68, 0.28);
+  background: rgba(127, 29, 29, 0.16);
+  color: #fecaca;
+  font-size: 0.82rem;
+}
+
+.manual-review-banner p {
+  margin: 0.2rem 0 0;
+  color: #fca5a5;
+  line-height: 1.45;
+}
+
+.manual-review-banner button {
+  flex-shrink: 0;
+  border: 1px solid rgba(248, 113, 113, 0.5);
+  background: rgba(239, 68, 68, 0.2);
+  color: #fee2e2;
+  border-radius: 0.45rem;
+  padding: 0.35rem 0.65rem;
+  font-weight: 700;
+}
+
+@media (max-width: 640px) {
+  .manual-review-banner {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
 /* Paragraph styles */
 .para-cn, .para-en {
   color: var(--text-primary, #f0f0f5) !important;
