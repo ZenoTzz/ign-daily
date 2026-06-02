@@ -14,6 +14,7 @@
 4. 夜间学习由 `data/automation-config.json.nightly_learner` 决定：`api` 时由 `.github/workflows/nightly-style.yml` 更新 `STYLE_PROFILE.md`；`openclaw` 时由 OpenClaw 22:30 cron 处理。
 5. OpenClaw 每次执行标题、正文或夜间学习前，必须先跑 `python3 scripts/automation_guard.py title|fulltext|nightly`。输出 `AUTOMATION_GUARD SKIP` 就立刻返回 `HEARTBEAT_OK`，不要读写队列或 `STYLE_PROFILE.md`；输出 `AUTOMATION_GUARD RUN` 才继续。
 6. `scripts/rss_queue_check.py {date}` 只用于本次 RSS 目标日期，不要拿它全量扫描旧历史日期；旧数据可能没有 `publish_time_cn`。
+7. 首页 Excel 导出是纯前端功能：用户勾选文章后可加入本地 `localStorage` 导出篮并跨日期导出 `.xlsx`，不应触发或修改 `requests.json`、`need_titles.json`、`translations/` 或任何 OpenClaw/API 自动化队列。
 
 ## 先跑脚本，不靠记忆
 
@@ -82,6 +83,7 @@ ign-daily/                          # GitHub Pages 仓库
 ├── assets/
 │   ├── app.js                      # 主页 Alpine.js 逻辑 + SW 注册
 │   ├── style.css                   # 样式
+│   ├── exceljs.min.js              # 本地 Excel 导出库(首页导出篮使用)
 │   ├── icon-192.png                # PWA 图标 192x192
 │   └── icon-512.png                # PWA 图标 512x512
 ├── scripts/

@@ -17,7 +17,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <script defer src="assets/alpine.min.js"></script>
   <link rel="stylesheet" href="assets/style.css?v=20260531b">
-  <script src="assets/app.js?v=20260602k"></script>
+  <script src="assets/exceljs.min.js"></script>
+  <script src="assets/app.js?v=20260602l"></script>
 </head>
 <body>
   <!-- SVG Icon Definitions -->
@@ -195,8 +196,20 @@
           </div>
           <div class="summary-actions">
             <span class="selected-count">已选 <strong x-text="selected.length"></strong></span>
+            <span class="selected-count" x-show="exportBasket.length > 0">
+              导出篮 <strong x-text="exportBasket.length"></strong>
+            </span>
             <button x-show="filteredRssCount > 0" @click="showFilteredPanel=true" class="btn btn-ghost">
               被过滤 <span x-text="`(${filteredRssCount})`"></span>
+            </button>
+            <button @click="addSelectedToExportBasket()" :disabled="selected.length === 0" class="btn btn-ghost">
+              加入导出篮
+            </button>
+            <button @click="exportSelectedExcel()" :disabled="selected.length === 0 && exportBasket.length === 0" class="btn btn-green">
+              导出Excel
+            </button>
+            <button x-show="exportBasket.length > 0" @click="clearExportBasket()" class="btn btn-ghost">
+              清空导出篮
             </button>
             <button @click="copyDigest()" class="btn btn-green" x-text="copyBtnText"></button>
             <button @click="submitRequest()" :disabled="selected.length === 0" class="btn btn-primary">
@@ -400,8 +413,7 @@
             <div class="card-inner">
               <!-- Checkbox -->
               <label class="card-checkbox" @click.stop>
-                <input type="checkbox" :value="art.id" x-model="selected"
-                  :disabled="art.translation_status === 'done'">
+                <input type="checkbox" :value="art.id" x-model="selected">
               </label>
 
               <!-- Cover image -->

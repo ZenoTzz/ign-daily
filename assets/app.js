@@ -143,6 +143,7 @@ function appData() {
     showDatePicker: false,
     showMobileMenu: false,
     selected: [],
+    exportBasket: [],
     copyBtnText: '📋 复制摘要',
     filterCat: 'all',
     showSettings: false,
@@ -211,6 +212,7 @@ function appData() {
       // 初始主题图标
       const cur = localStorage.getItem('theme') || 'auto';
       this.themeIcon = cur === 'dark' ? '☀️' : (cur === 'light' ? '🌒' : '🌗');
+      this.loadExportBasket();
       // 马上绑 beforeunload 保护
       window.addEventListener('beforeunload', (e) => {
         if (this.pendingProcessing || this.pendingQueue.length > 0) {
@@ -955,6 +957,179 @@ function appData() {
       s = s.replace(/\s+([\u3000-\u303f\uff00-\uffef\u300c\u300d\u300e\u300f])/g, '$1');
       s = s.replace(/([\u3000-\u303f\uff00-\uffef\u300c\u300d\u300e\u300f])\s+/g, '$1');
       return s.trim();
+    },
+
+    exportBasketStorageKey() {
+      return 'ign_daily_export_basket_v1';
+    },
+
+    loadExportBasket() {
+      try {
+        const raw = localStorage.getItem(this.exportBasketStorageKey());
+        const items = raw ? JSON.parse(raw) : [];
+        this.exportBasket = Array.isArray(items) ? items : [];
+      } catch (_) {
+        this.exportBasket = [];
+      }
+    },
+
+    saveExportBasket() {
+      localStorage.setItem(this.exportBasketStorageKey(), JSON.stringify(this.exportBasket));
+    },
+
+    selectedArticleObjects() {
+      if (!this.data?.articles?.length || !this.selected.length) return [];
+      const ids = new Set(this.selected.map(x => Number(x)));
+      return this.data.articles.filter(a => ids.has(Number(a.id)));
+    },
+
+    normalizeExportArticle(article, date = this.data?.date || this.currentDate) {
+      const enTitle = (article.en_title || article.title || '').trim();
+      const rawCnTitle = (article.cn_title || '').trim();
+      const cnTitle = rawCnTitle && rawCnTitle !== enTitle ? this.normalizePunctuation(rawCnTitle) : '';
+      return {
+        key: `${date}#${article.id}`,
+        date,
+        id: Number(article.id),
+        en_title: enTitle,
+        cn_title: cnTitle,
+        category: (article.category || '未分类').trim(),
+        publish_time_cn: article.publish_time_cn || article.pub_date || article.pubDate_cst || '',
+        summary: this.normalizePunctuation(article.summary || ''),
+        url: article.url || ''
+      };
+    },
+
+    addSelectedToExportBasket() {
+      const articles = this.selectedArticleObjects().map(a => this.normalizeExportArticle(a));
+      if (!articles.length) {
+        this.flash('请先勾选要导出的文章', 2500);
+        return;
+      }
+      const merged = new Map(this.exportBasket.map(a => [a.key, a]));
+      for (const article of articles) merged.set(article.key, article);
+      this.exportBasket = Array.from(merged.values()).sort((a, b) => this.compareExportArticles(a, b));
+      this.saveExportBasket();
+      this.flash(`已加入导出篮：${articles.length} 篇`);
+    },
+
+    clearExportBasket() {
+      this.exportBasket = [];
+      this.saveExportBasket();
+      this.flash('导出篮已清空');
+    },
+
+    compareExportArticles(a, b) {
+      const ad = `${a.date || ''} ${a.publish_time_cn || ''}`;
+      const bd = `${b.date || ''} ${b.publish_time_cn || ''}`;
+      return bd.localeCompare(ad) || Number(a.id || 0) - Number(b.id || 0);
+    },
+
+    exportExcelDateLabel(date) {
+      const m = String(date || '').match(/^(\d{4})-(\d{2})-(\d{2})$/);
+      return m ? `${m[1]}年${m[2]}月${m[3]}日` : String(date || '多日期');
+    },
+
+    exportExcelFilename(articles) {
+      const dates = Array.from(new Set(articles.map(a => a.date).filter(Boolean))).sort();
+      if (dates.length === 1) return `${this.exportExcelDateLabel(dates[0])}IGN翻译精选.xlsx`;
+      const first = dates[0] || this.currentDate;
+      const last = dates[dates.length - 1] || this.currentDate;
+      return `IGN翻译精选_${first}_至_${last}.xlsx`;
+    },
+
+    exportExcelSheetName(articles) {
+      const dates = Array.from(new Set(articles.map(a => a.date).filter(Boolean)));
+      const name = dates.length === 1
+        ? `IGN翻译精选${this.exportExcelDateLabel(dates[0])}`
+        : 'IGN翻译精选多日期';
+      return name.replace(/[*?:\\/[\]]/g, '').slice(0, 31) || 'IGN Daily';
+    },
+
+    async exportSelectedExcel() {
+      const merged = new Map(this.exportBasket.map(a => [a.key, a]));
+      for (const article of this.selectedArticleObjects().map(a => this.normalizeExportArticle(a))) {
+        merged.set(article.key, article);
+      }
+      const articles = Array.from(merged.values()).sort((a, b) => this.compareExportArticles(a, b));
+      if (!articles.length) {
+        this.flash('请先勾选文章，或先加入导出篮', 3000);
+        return;
+      }
+      if (!window.ExcelJS) {
+        this.flash('Excel 导出库未加载，请刷新页面后重试', 4000);
+        return;
+      }
+
+      try {
+        const workbook = new ExcelJS.Workbook();
+        workbook.creator = 'IGN Daily';
+        workbook.created = new Date();
+        const sheet = workbook.addWorksheet(this.exportExcelSheetName(articles));
+        sheet.columns = [
+          { header: '#', key: 'no', width: 6 },
+          { header: '英文标题', key: 'en_title', width: 50 },
+          { header: '中文标题', key: 'cn_title', width: 30 },
+          { header: '分类', key: 'category', width: 12 },
+          { header: '发布时间(北京)', key: 'publish_time_cn', width: 18 },
+          { header: '摘要', key: 'summary', width: 60 },
+          { header: '链接', key: 'url', width: 60 }
+        ];
+        sheet.views = [{ state: 'frozen', ySplit: 1 }];
+        sheet.autoFilter = 'A1:G1';
+
+        const header = sheet.getRow(1);
+        header.height = 24;
+        header.font = { bold: true, color: { argb: 'FFFFFFFF' } };
+        header.fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FF1F2937' } };
+        header.alignment = { vertical: 'middle', horizontal: 'center', wrapText: true };
+
+        articles.forEach((article, index) => {
+          const row = sheet.addRow({
+            no: index + 1,
+            en_title: article.en_title,
+            cn_title: article.cn_title,
+            category: article.category,
+            publish_time_cn: article.publish_time_cn,
+            summary: article.summary,
+            url: article.url
+          });
+          row.height = 35;
+          row.alignment = { vertical: 'top', wrapText: true };
+          row.getCell(1).alignment = { vertical: 'middle', horizontal: 'center' };
+          const linkCell = row.getCell(7);
+          if (article.url) {
+            linkCell.value = { text: article.url, hyperlink: article.url };
+            linkCell.font = { color: { argb: 'FF2563EB' }, underline: true };
+          }
+        });
+
+        sheet.eachRow(row => {
+          row.eachCell(cell => {
+            cell.border = {
+              top: { style: 'thin', color: { argb: 'FFE5E7EB' } },
+              left: { style: 'thin', color: { argb: 'FFE5E7EB' } },
+              bottom: { style: 'thin', color: { argb: 'FFE5E7EB' } },
+              right: { style: 'thin', color: { argb: 'FFE5E7EB' } }
+            };
+          });
+        });
+
+        const buffer = await workbook.xlsx.writeBuffer();
+        const blob = new Blob([buffer], {
+          type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
+        });
+        const link = document.createElement('a');
+        link.href = URL.createObjectURL(blob);
+        link.download = this.exportExcelFilename(articles);
+        document.body.appendChild(link);
+        link.click();
+        URL.revokeObjectURL(link.href);
+        document.body.removeChild(link);
+        this.flash(`已导出 ${articles.length} 篇文章`);
+      } catch (e) {
+        this.flash('Excel 导出失败：' + e.message, 5000);
+      }
     },
 
     async copyDigest() {
