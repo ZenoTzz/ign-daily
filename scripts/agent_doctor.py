@@ -12,6 +12,8 @@ from __future__ import annotations
 
 import ast
 import json
+import subprocess
+import sys
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
@@ -88,6 +90,15 @@ def main() -> int:
             fail(errors, f"json parse error: {p.relative_to(REPO_ROOT)}: {exc}")
     if not any("json parse error" in e for e in errors):
         ok("all JSON files parse")
+
+    encoding_check = subprocess.run(
+        [sys.executable, str(REPO_ROOT / "scripts" / "check_encoding_health.py")],
+        cwd=REPO_ROOT,
+    )
+    if encoding_check.returncode == 0:
+        ok("encoding health check passed")
+    else:
+        fail(errors, "encoding health check failed")
 
     dated_indexes = sorted(DATA_DIR.glob("20??-??-??/index.json"))
     latest_index = dated_indexes[-1] if dated_indexes else None

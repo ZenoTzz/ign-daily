@@ -101,7 +101,7 @@ for aid in done_ids:
         # Rule: should feel oral/colloquial — warn if all chars are formal
         # Good subtitles often have: !, ！, ~, emoji, 谐音, 口语词
         # If it reads like a complete grammatical sentence with subject+verb+object, flag it
-        if len(subtitle) > 8 and not any(c in subtitle for c in '！？!?~�') and '的' in subtitle and '了' in subtitle:
+        if len(subtitle) > 8 and not any(c in subtitle for c in '！？!?~') and '的' in subtitle and '了' in subtitle:
             warnings.append(f"#{aid}: subtitle 读起来像完整句子，建议更口语化: 「{subtitle}」")
     
     # Check 5: opus_summary must exist
