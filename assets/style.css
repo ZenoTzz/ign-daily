@@ -947,6 +947,18 @@ label {
   .reader-pane.cn > * { max-width: 100%; }
 }
 
+@media (min-width: 640px) and (max-width: 1023px) {
+  .polish-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: calc(100vh - 52px);
+  }
+
+  .polish-grid .reader-pane {
+    height: 100%;
+  }
+}
+
 /* Paragraph rows */
 .para-row {
   display: grid;

@@ -152,6 +152,10 @@ button.bg-emerald-50, .bg-emerald-50 {
     display: none !important;
   }
 
+  .polish-grid .reader-pane.en {
+    display: block !important;
+  }
+
   .para-en {
     display: none !important;
   }
