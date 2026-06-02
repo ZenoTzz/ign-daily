@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Translate one article with two API models for manual quality comparison.
+"""Translate one article with one or more API models for manual comparison.
 
 This script is manual-only. It writes data/{date}/comparisons/NN.json and marks
 the article with comparison metadata in index.json. It does not modify
@@ -7,6 +7,7 @@ translations/NN.json or requests.json.
 """
 from __future__ import annotations
 
+import json
 import os
 import sys
 from datetime import datetime, timedelta, timezone
@@ -46,6 +47,60 @@ def find_article(index: dict[str, Any], article_id: int) -> dict[str, Any]:
         if int(article.get("id") or -1) == article_id:
             return article
     raise RuntimeError(f"article #{article_id} not found in index.json")
+
+
+def model_label(model: str) -> str:
+    lower = model.lower()
+    if "deepseek" in lower and "v4" in lower and "pro" in lower:
+        return "DeepSeek V4 Pro"
+    if "deepseek" in lower and "v4" in lower and "flash" in lower:
+        return "DeepSeek V4 Flash"
+    return model.replace("-", " ").title()
+
+
+def load_compare_models(default_base_url: str) -> list[dict[str, str]]:
+    raw = os.environ.get("TRANSLATOR_COMPARE_MODELS", "").strip()
+    models: list[dict[str, str]] = []
+    if raw:
+        try:
+            parsed = json.loads(raw)
+            if isinstance(parsed, list):
+                for item in parsed:
+                    if isinstance(item, str):
+                        model = item.strip()
+                        if model:
+                            models.append({"model": model, "label": model_label(model), "base_url": default_base_url})
+                    elif isinstance(item, dict):
+                        model = str(item.get("model") or "").strip()
+                        if model:
+                            models.append({
+                                "model": model,
+                                "label": str(item.get("label") or model_label(model)).strip(),
+                                "base_url": str(item.get("base_url") or item.get("baseUrl") or default_base_url).strip(),
+                                "provider": str(item.get("provider") or "openai-compatible").strip(),
+                            })
+        except Exception as exc:
+            raise RuntimeError(f"invalid TRANSLATOR_COMPARE_MODELS JSON: {exc}") from exc
+
+    if not models:
+        model_a = (os.environ.get("TRANSLATOR_COMPARE_MODEL_A") or DEFAULT_MODEL_A).strip()
+        model_b = (os.environ.get("TRANSLATOR_COMPARE_MODEL_B") or DEFAULT_MODEL_B).strip()
+        models = [
+            {"model": model_a, "label": model_label(model_a), "base_url": default_base_url},
+            {"model": model_b, "label": model_label(model_b), "base_url": default_base_url},
+        ]
+
+    deduped = []
+    seen = set()
+    for item in models:
+        key = (item["model"], item.get("base_url") or default_base_url)
+        if key in seen:
+            continue
+        seen.add(key)
+        deduped.append(item)
+    if not deduped:
+        raise RuntimeError("comparison requires at least one model")
+    return deduped
 
 
 def translate_once(
@@ -109,10 +164,7 @@ def run(date: str, article_id: int) -> int:
         raise RuntimeError("TRANSLATOR_API_KEY/DEEPSEEK_API_KEY is not set")
 
     base_url = (os.environ.get("TRANSLATOR_BASE_URL") or os.environ.get("DEEPSEEK_BASE_URL") or "").strip() or DEFAULT_BASE_URL
-    model_a = (os.environ.get("TRANSLATOR_COMPARE_MODEL_A") or DEFAULT_MODEL_A).strip()
-    model_b = (os.environ.get("TRANSLATOR_COMPARE_MODEL_B") or DEFAULT_MODEL_B).strip()
-    if model_a == model_b:
-        raise RuntimeError("comparison requires two different models")
+    compare_models = load_compare_models(base_url)
 
     day_dir = DATA_DIR / date
     index_path = day_dir / "index.json"
@@ -127,11 +179,14 @@ def run(date: str, article_id: int) -> int:
     terms = matched_terms(article.get("en_title", "") + "\n" + text)
 
     results = []
-    for label, model in (("A", model_a), ("B", model_b)):
-        print(f"[COMPARE] #{article_id} {label}: {model}")
+    for idx, model_info in enumerate(compare_models, start=1):
+        model = model_info["model"]
+        label = model_info.get("label") or model_label(model)
+        model_base_url = model_info.get("base_url") or base_url
+        print(f"[COMPARE] #{article_id} {idx}: {label} ({model})")
         translated = translate_once(
             api_key=api_key,
-            base_url=base_url,
+            base_url=model_base_url,
             model=model,
             date=date,
             article=article,
@@ -144,6 +199,8 @@ def run(date: str, article_id: int) -> int:
             if not translated.get("images") and isinstance(source.get("images"), list):
                 translated["images"] = source["images"]
         translated["label"] = label
+        translated["comparison_label"] = label
+        translated["comparison_base_url"] = model_base_url
         results.append(translated)
 
     payload = {
@@ -153,7 +210,7 @@ def run(date: str, article_id: int) -> int:
         "en_title": article.get("en_title"),
         "cn_title": article.get("cn_title"),
         "created_at_cn": now_cn(),
-        "models": [model_a, model_b],
+        "models": compare_models,
         "source_paragraph_count": len(paragraphs_en),
         "results": results,
     }
@@ -161,11 +218,11 @@ def run(date: str, article_id: int) -> int:
     write_json(compare_path, payload)
 
     article["comparison_status"] = "done"
-    article["comparison_models"] = [model_a, model_b]
+    article["comparison_models"] = [m["model"] for m in compare_models]
     article["comparison_updated_at_cn"] = payload["created_at_cn"]
     write_json(index_path, index)
 
-    print(f"API_COMPARE_DONE: date={date}, article=#{article_id}, models={model_a},{model_b}")
+    print(f"API_COMPARE_DONE: date={date}, article=#{article_id}, models={','.join(article['comparison_models'])}")
     return 0
 
 

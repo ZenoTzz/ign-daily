@@ -152,7 +152,12 @@ function appData() {
       api_fulltext_model: 'deepseek-v4-pro',
       api_nightly_model: 'deepseek-v4-flash',
       api_base_url: 'https://api.deepseek.com',
-      api_fulltext_batch: '5'
+      api_fulltext_batch: '5',
+      compare_models: ['deepseek-v4-pro', 'deepseek-v4-flash'],
+      api_models: [
+        { label: 'DeepSeek V4 Pro', model: 'deepseek-v4-pro', base_url: 'https://api.deepseek.com' },
+        { label: 'DeepSeek V4 Flash', model: 'deepseek-v4-flash', base_url: 'https://api.deepseek.com' }
+      ]
     },
     automationSaving: false,
     automationTriggering: false,
@@ -413,11 +418,62 @@ function appData() {
     },
 
     // ---- 一键复制今日摘要（中文标点 + 去 markdown）----
+    defaultApiModels() {
+      return [
+        { label: 'DeepSeek V4 Pro', model: 'deepseek-v4-pro', base_url: 'https://api.deepseek.com' },
+        { label: 'DeepSeek V4 Flash', model: 'deepseek-v4-flash', base_url: 'https://api.deepseek.com' }
+      ];
+    },
+
+    normalizeApiModels(models) {
+      const defaults = this.defaultApiModels();
+      const raw = Array.isArray(models) ? models : defaults;
+      const seen = new Set();
+      const normalized = [];
+      for (const item of raw) {
+        const model = String(item?.model || '').trim();
+        if (!model || seen.has(model)) continue;
+        seen.add(model);
+        normalized.push({
+          label: String(item?.label || this.formatTranslatorModel(model) || model).trim(),
+          model,
+          base_url: String(item?.base_url || item?.baseUrl || this.automationConfig?.api_base_url || 'https://api.deepseek.com').trim(),
+          provider: String(item?.provider || 'openai-compatible').trim()
+        });
+      }
+      for (const item of defaults) {
+        if (!seen.has(item.model)) normalized.push({ ...item, provider: 'openai-compatible' });
+      }
+      return normalized;
+    },
+
+    apiModelById(model) {
+      const models = this.normalizeApiModels(this.automationConfig.api_models);
+      return models.find(m => m.model === model) || models[0];
+    },
+
+    addApiModel() {
+      const models = this.normalizeApiModels(this.automationConfig.api_models);
+      models.push({ label: '新模型', model: '', base_url: this.automationConfig.api_base_url || 'https://api.deepseek.com', provider: 'openai-compatible' });
+      this.automationConfig.api_models = models;
+    },
+
+    removeApiModel(index) {
+      const models = Array.isArray(this.automationConfig.api_models) ? [...this.automationConfig.api_models] : this.defaultApiModels();
+      if (models.length <= 1) {
+        this.flash('至少保留一个模型', 2500);
+        return;
+      }
+      models.splice(index, 1);
+      this.automationConfig.api_models = models;
+    },
+
     async loadAutomationConfig() {
       try {
         const res = await fetch('data/automation-config.json?t=' + Date.now(), { cache: 'no-store' });
         if (!res.ok) return;
         const cfg = await res.json();
+        const apiModels = this.normalizeApiModels(cfg.api_models);
         this.automationConfig = {
           title_translator: cfg.title_translator || 'openclaw',
           fulltext_translator: cfg.fulltext_translator || 'openclaw',
@@ -429,6 +485,10 @@ function appData() {
           api_nightly_model: cfg.api_nightly_model || cfg.api_model || 'deepseek-v4-flash',
           api_base_url: cfg.api_base_url || 'https://api.deepseek.com',
           api_fulltext_batch: cfg.api_fulltext_batch || '5',
+          compare_models: Array.isArray(cfg.compare_models)
+            ? cfg.compare_models
+            : [cfg.compare_model_a || 'deepseek-v4-pro', cfg.compare_model_b || 'deepseek-v4-flash'],
+          api_models: apiModels,
           updated_at: cfg.updated_at || ''
         };
       } catch (_) {}
@@ -437,6 +497,7 @@ function appData() {
     async saveAutomationConfig() {
       try {
         this.automationSaving = true;
+        const apiModels = this.normalizeApiModels(this.automationConfig.api_models);
         const cfg = {
           title_translator: this.automationConfig.title_translator || 'openclaw',
           fulltext_translator: this.automationConfig.fulltext_translator || 'openclaw',
@@ -448,6 +509,8 @@ function appData() {
           api_nightly_model: this.automationConfig.api_nightly_model || this.automationConfig.api_model || 'deepseek-v4-flash',
           api_base_url: this.automationConfig.api_base_url || 'https://api.deepseek.com',
           api_fulltext_batch: this.automationConfig.api_fulltext_batch || '5',
+          compare_models: this.selectedCompareModels().map(m => m.model),
+          api_models: apiModels,
           updated_at: new Date().toISOString(),
           notes: 'Public switch only. API keys must stay in GitHub Actions Secrets.'
         };
@@ -469,14 +532,20 @@ function appData() {
 
     apiTranslationInputs() {
       const mode = String(this.automationConfig.api_fulltext_batch || '5');
+      const titleModel = this.apiModelById(this.automationConfig.api_title_model || this.automationConfig.api_model || 'deepseek-v4-flash');
+      const fulltextModel = this.apiModelById(this.automationConfig.api_fulltext_model || 'deepseek-v4-pro');
       const inputs = {
         fulltext_limit: '5',
         time_budget_seconds: '1200',
         title_translator: this.automationConfig.title_translator || 'openclaw',
         fulltext_translator: this.automationConfig.fulltext_translator || 'openclaw',
-        api_title_model: this.automationConfig.api_title_model || this.automationConfig.api_model || 'deepseek-v4-flash',
-        api_fulltext_model: this.automationConfig.api_fulltext_model || 'deepseek-v4-pro',
-        api_base_url: this.automationConfig.api_base_url || 'https://api.deepseek.com'
+        api_title_model: titleModel.model,
+        api_fulltext_model: fulltextModel.model,
+        api_base_url: this.automationConfig.api_base_url || 'https://api.deepseek.com',
+        manual_payload: JSON.stringify({
+          api_title_base_url: titleModel.base_url || this.automationConfig.api_base_url || 'https://api.deepseek.com',
+          api_fulltext_base_url: fulltextModel.base_url || this.automationConfig.api_base_url || 'https://api.deepseek.com'
+        })
       };
       if (mode === '10') inputs.fulltext_limit = '10';
       if (mode === 'all') {
@@ -496,14 +565,21 @@ function appData() {
     },
 
     apiComparisonInputs(article) {
+      const models = this.selectedCompareModels();
       return {
         title_translator: 'openclaw',
         fulltext_translator: 'openclaw',
         api_base_url: this.automationConfig.api_base_url || 'https://api.deepseek.com',
-        compare_date: this.data?.date || this.currentDate,
-        compare_article_id: String(article.id),
-        compare_model_a: 'deepseek-v4-pro',
-        compare_model_b: 'deepseek-v4-flash',
+        manual_payload: JSON.stringify({
+          compare_date: this.data?.date || this.currentDate,
+          compare_article_id: String(article.id),
+          compare_models: models.map(m => ({
+            label: m.label || this.formatTranslatorModel(m.model),
+            model: m.model,
+            base_url: m.base_url || this.automationConfig.api_base_url || 'https://api.deepseek.com',
+            provider: m.provider || 'openai-compatible'
+          }))
+        }),
         fulltext_limit: '5',
         time_budget_seconds: '1200'
       };
@@ -511,11 +587,16 @@ function appData() {
 
     async runComparison(article) {
       if (!article || !article.id || !this.data?.date) return;
+      const models = this.selectedCompareModels();
+      if (models.length === 0) {
+        this.flash('请至少选择一个模型再翻译对比', 3500);
+        return;
+      }
       try {
         this.comparisonTriggeringId = article.id;
         await GH.dispatchWorkflow('api-translation.yml', this.apiComparisonInputs(article));
         article.comparison_status = 'requested';
-        this.flash(`已触发 #${article.id} 双模型对比：DeepSeek V4 Pro / Flash`, 5200);
+        this.flash(`已触发 #${article.id} 多模型翻译：${models.map(m => m.label).join(' / ')}`, 6000);
       } catch (e) {
         this.flash('触发对比翻译失败：' + e.message, 6000);
       } finally {
@@ -557,6 +638,18 @@ function appData() {
       if (lower.includes('deepseek') && lower.includes('v4') && lower.includes('flash')) return 'DeepSeek V4 Flash';
       if (lower.includes('deepseek')) return raw.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
       return raw;
+    },
+
+    selectedCompareModels() {
+      const selected = new Set(Array.isArray(this.automationConfig.compare_models) ? this.automationConfig.compare_models : []);
+      return this.normalizeApiModels(this.automationConfig.api_models).filter(m => selected.has(m.model));
+    },
+
+    toggleCompareModel(model) {
+      const current = new Set(Array.isArray(this.automationConfig.compare_models) ? this.automationConfig.compare_models : []);
+      if (current.has(model)) current.delete(model);
+      else current.add(model);
+      this.automationConfig.compare_models = [...current];
     },
 
     translatorLabel(article) {

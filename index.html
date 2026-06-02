@@ -252,14 +252,16 @@
 
             <label style="display:block; margin-top:0.75rem;">标题/摘要 API 模型</label>
             <select x-model="automationConfig.api_title_model" style="width:100%; margin-top:0.35rem;">
-              <option value="deepseek-v4-flash">DeepSeek V4 Flash</option>
-              <option value="deepseek-v4-pro">DeepSeek V4 Pro</option>
+              <template x-for="m in normalizeApiModels(automationConfig.api_models)" :key="`title-${m.model}`">
+                <option :value="m.model" x-text="m.label"></option>
+              </template>
             </select>
 
             <label style="display:block; margin-top:0.75rem;">正文 API 模型</label>
             <select x-model="automationConfig.api_fulltext_model" style="width:100%; margin-top:0.35rem;">
-              <option value="deepseek-v4-pro">DeepSeek V4 Pro</option>
-              <option value="deepseek-v4-flash">DeepSeek V4 Flash</option>
+              <template x-for="m in normalizeApiModels(automationConfig.api_models)" :key="`full-${m.model}`">
+                <option :value="m.model" x-text="m.label"></option>
+              </template>
             </select>
 
             <label style="display:block; margin-top:0.75rem;">手动触发正文批量</label>
@@ -271,12 +273,51 @@
 
             <label style="display:block; margin-top:0.75rem;">夜间学习 API 模型</label>
             <select x-model="automationConfig.api_nightly_model" style="width:100%; margin-top:0.35rem;">
-              <option value="deepseek-v4-flash">DeepSeek V4 Flash</option>
-              <option value="deepseek-v4-pro">DeepSeek V4 Pro</option>
+              <template x-for="m in normalizeApiModels(automationConfig.api_models)" :key="`nightly-${m.model}`">
+                <option :value="m.model" x-text="m.label"></option>
+              </template>
             </select>
 
             <label style="display:block; margin-top:0.75rem;">API Base URL</label>
             <input type="text" x-model="automationConfig.api_base_url" placeholder="https://api.deepseek.com" style="width:100%; margin-top:0.35rem;">
+
+            <div style="height:1px; background:var(--border); margin:1rem 0;"></div>
+
+            <div style="display:flex; align-items:center; justify-content:space-between; gap:0.75rem;">
+              <label style="display:block; font-weight:700;">模型目录</label>
+              <button @click="addApiModel()" class="btn btn-ghost" style="font-size:0.68rem; padding:0.3rem 0.55rem;">添加模型</button>
+            </div>
+            <p style="font-size:0.68rem; color:var(--text-muted); margin-top:0.35rem;">
+              这里保存可选模型。不同模型可以填不同 Base URL；密钥仍读取 GitHub Actions Secret。
+            </p>
+            <div style="display:grid; gap:0.6rem; margin-top:0.75rem;">
+              <template x-for="(m, i) in automationConfig.api_models" :key="`model-${i}`">
+                <div style="border:1px solid var(--border); border-radius:8px; padding:0.6rem; background:rgba(255,255,255,0.02);">
+                  <div style="display:grid; grid-template-columns:1fr 1fr auto; gap:0.5rem; align-items:end;">
+                    <label style="display:block;">
+                      <span style="font-size:0.68rem; color:var(--text-muted);">显示名</span>
+                      <input type="text" x-model="m.label" placeholder="DeepSeek V4 Pro" style="width:100%; margin-top:0.25rem;">
+                    </label>
+                    <label style="display:block;">
+                      <span style="font-size:0.68rem; color:var(--text-muted);">Model ID</span>
+                      <input type="text" x-model="m.model" placeholder="deepseek-v4-pro" style="width:100%; margin-top:0.25rem;">
+                    </label>
+                    <button @click="removeApiModel(i)" class="btn btn-ghost" style="font-size:0.68rem; padding:0.35rem 0.55rem;">删除</button>
+                  </div>
+                  <label style="display:block; margin-top:0.45rem;">
+                    <span style="font-size:0.68rem; color:var(--text-muted);">Base URL</span>
+                    <input type="text" x-model="m.base_url" placeholder="https://api.deepseek.com" style="width:100%; margin-top:0.25rem;">
+                  </label>
+                  <label style="display:flex; gap:0.45rem; align-items:center; margin-top:0.45rem; font-size:0.72rem; color:var(--text-muted);">
+                    <input type="checkbox"
+                      :checked="(automationConfig.compare_models || []).includes(m.model)"
+                      :disabled="!m.model"
+                      @change="toggleCompareModel(m.model)">
+                    参与手动多模型翻译
+                  </label>
+                </div>
+              </template>
+            </div>
 
             <p style="font-size:0.68rem; color:var(--text-muted); margin-top:0.75rem;">
               当前配置文件：data/automation-config.json。OpenClaw 每次启动也会读取它；API 模式下应静默跳过对应任务。

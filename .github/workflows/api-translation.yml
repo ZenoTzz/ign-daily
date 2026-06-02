@@ -33,22 +33,10 @@ on:
         description: "Manual run API base URL override"
         required: false
         default: ""
-      compare_date:
-        description: "Manual comparison date YYYY-MM-DD"
+      manual_payload:
+        description: "Advanced manual JSON payload"
         required: false
         default: ""
-      compare_article_id:
-        description: "Manual comparison article id"
-        required: false
-        default: ""
-      compare_model_a:
-        description: "Manual comparison model A"
-        required: false
-        default: "deepseek-v4-pro"
-      compare_model_b:
-        description: "Manual comparison model B"
-        required: false
-        default: "deepseek-v4-flash"
 
 permissions:
   contents: write
@@ -86,8 +74,7 @@ jobs:
           MANUAL_API_TITLE_MODEL: ${{ github.event_name == 'workflow_dispatch' && inputs.api_title_model || '' }}
           MANUAL_API_FULLTEXT_MODEL: ${{ github.event_name == 'workflow_dispatch' && inputs.api_fulltext_model || '' }}
           MANUAL_API_BASE_URL: ${{ github.event_name == 'workflow_dispatch' && inputs.api_base_url || '' }}
-          MANUAL_COMPARE_DATE: ${{ github.event_name == 'workflow_dispatch' && inputs.compare_date || '' }}
-          MANUAL_COMPARE_ARTICLE_ID: ${{ github.event_name == 'workflow_dispatch' && inputs.compare_article_id || '' }}
+          MANUAL_PAYLOAD: ${{ github.event_name == 'workflow_dispatch' && inputs.manual_payload || '' }}
         run: |
           python3 - <<'PY' >> "$GITHUB_OUTPUT"
           import json
@@ -95,6 +82,11 @@ jobs:
           from pathlib import Path
           path = Path("data/automation-config.json")
           data = json.loads(path.read_text(encoding="utf-8")) if path.exists() else {}
+          payload_raw = os.environ.get("MANUAL_PAYLOAD", "")
+          try:
+              payload = json.loads(payload_raw) if payload_raw else {}
+          except Exception:
+              payload = {}
           print(f"title_translator={os.environ.get('MANUAL_TITLE_TRANSLATOR') or data.get('title_translator', 'openclaw')}")
           print(f"fulltext_translator={os.environ.get('MANUAL_FULLTEXT_TRANSLATOR') or data.get('fulltext_translator', 'openclaw')}")
           print(f"nightly_learner={data.get('nightly_learner', 'openclaw')}")
@@ -102,8 +94,11 @@ jobs:
           print(f"api_title_model={os.environ.get('MANUAL_API_TITLE_MODEL') or data.get('api_title_model', data.get('api_model', ''))}")
           print(f"api_fulltext_model={os.environ.get('MANUAL_API_FULLTEXT_MODEL') or data.get('api_fulltext_model', '')}")
           print(f"api_base_url={os.environ.get('MANUAL_API_BASE_URL') or data.get('api_base_url', '')}")
-          print(f"compare_date={os.environ.get('MANUAL_COMPARE_DATE', '')}")
-          print(f"compare_article_id={os.environ.get('MANUAL_COMPARE_ARTICLE_ID', '')}")
+          print(f"api_title_base_url={payload.get('api_title_base_url') or os.environ.get('MANUAL_API_BASE_URL') or data.get('api_base_url', '')}")
+          print(f"api_fulltext_base_url={payload.get('api_fulltext_base_url') or os.environ.get('MANUAL_API_BASE_URL') or data.get('api_base_url', '')}")
+          print(f"compare_date={payload.get('compare_date', '')}")
+          print(f"compare_article_id={payload.get('compare_article_id', '')}")
+          print(f"compare_models_json={json.dumps(payload.get('compare_models') or [], ensure_ascii=False)}")
           PY
 
       - name: Stop when API mode is disabled
@@ -115,8 +110,7 @@ jobs:
         env:
           TRANSLATOR_API_KEY: ${{ secrets.TRANSLATOR_API_KEY || secrets.DEEPSEEK_API_KEY }}
           TRANSLATOR_BASE_URL: ${{ steps.config.outputs.api_base_url || vars.TRANSLATOR_BASE_URL || vars.DEEPSEEK_BASE_URL || 'https://api.deepseek.com' }}
-          TRANSLATOR_COMPARE_MODEL_A: ${{ github.event_name == 'workflow_dispatch' && inputs.compare_model_a || 'deepseek-v4-pro' }}
-          TRANSLATOR_COMPARE_MODEL_B: ${{ github.event_name == 'workflow_dispatch' && inputs.compare_model_b || 'deepseek-v4-flash' }}
+          TRANSLATOR_COMPARE_MODELS: ${{ steps.config.outputs.compare_models_json }}
           TRANSLATOR_COMPARE_MAX_TOKENS: "12000"
         run: |
           set -euo pipefail
@@ -133,7 +127,7 @@ jobs:
         env:
           TRANSLATOR_API_KEY: ${{ secrets.TRANSLATOR_API_KEY || secrets.DEEPSEEK_API_KEY }}
           TRANSLATOR_MODEL: ${{ steps.config.outputs.api_title_model || steps.config.outputs.api_model || vars.TRANSLATOR_TITLE_MODEL || vars.TRANSLATOR_MODEL || vars.DEEPSEEK_MODEL || 'deepseek-v4-flash' }}
-          TRANSLATOR_BASE_URL: ${{ steps.config.outputs.api_base_url || vars.TRANSLATOR_BASE_URL || vars.DEEPSEEK_BASE_URL || 'https://api.deepseek.com' }}
+          TRANSLATOR_BASE_URL: ${{ steps.config.outputs.api_title_base_url || steps.config.outputs.api_base_url || vars.TRANSLATOR_BASE_URL || vars.DEEPSEEK_BASE_URL || 'https://api.deepseek.com' }}
           TRANSLATOR_TITLE_LIMIT: "30"
         run: |
           set -euo pipefail
@@ -149,7 +143,7 @@ jobs:
         env:
           TRANSLATOR_API_KEY: ${{ secrets.TRANSLATOR_API_KEY || secrets.DEEPSEEK_API_KEY }}
           TRANSLATOR_MODEL: ${{ steps.config.outputs.api_fulltext_model || vars.TRANSLATOR_FULLTEXT_MODEL || steps.config.outputs.api_model || vars.TRANSLATOR_MODEL || vars.DEEPSEEK_MODEL || 'deepseek-v4-pro' }}
-          TRANSLATOR_BASE_URL: ${{ steps.config.outputs.api_base_url || vars.TRANSLATOR_BASE_URL || vars.DEEPSEEK_BASE_URL || 'https://api.deepseek.com' }}
+          TRANSLATOR_BASE_URL: ${{ steps.config.outputs.api_fulltext_base_url || steps.config.outputs.api_base_url || vars.TRANSLATOR_BASE_URL || vars.DEEPSEEK_BASE_URL || 'https://api.deepseek.com' }}
           TRANSLATOR_FULLTEXT_LIMIT: ${{ github.event_name == 'workflow_dispatch' && inputs.fulltext_limit || '5' }}
           TRANSLATOR_FULLTEXT_TIME_BUDGET_SECONDS: ${{ github.event_name == 'workflow_dispatch' && inputs.time_budget_seconds || '1200' }}
           TRANSLATOR_FULLTEXT_MAX_TOKENS: "12000"

@@ -39,7 +39,7 @@
     .hero { border:1px solid var(--border); background:var(--panel); border-radius:8px; padding:16px; margin-bottom:14px; }
     .hero-title { font-size:1.35rem; font-weight:800; margin-bottom:6px; }
     .hero-en { color:var(--muted); }
-    .grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; align-items:start; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(360px, 1fr)); gap:14px; align-items:start; }
     .column { border:1px solid var(--border); background:var(--panel); border-radius:8px; overflow:hidden; }
     .column-head { padding:14px 16px; background:var(--panel-2); border-bottom:1px solid var(--border); position:sticky; top:0; z-index:1; }
     .model { display:inline-flex; align-items:center; gap:7px; border:1px solid var(--border); border-radius:999px; padding:4px 9px; color:var(--muted); font-size:0.78rem; }
@@ -102,7 +102,7 @@
       return `
         <section class="column">
           <div class="column-head">
-            <span class="model"><i class="dot ${modelClass(result.translator_model)}"></i>${esc(modelName(result.translator_model))}</span>
+            <span class="model"><i class="dot ${modelClass(result.translator_model)}"></i>${esc(result.comparison_label || modelName(result.translator_model))}</span>
           </div>
           <div class="section">
             <div class="label">标题</div>

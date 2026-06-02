@@ -9,6 +9,24 @@
   "api_nightly_model": "deepseek-v4-flash",
   "api_base_url": "https://api.deepseek.com",
   "api_fulltext_batch": "5",
+  "compare_models": [
+    "deepseek-v4-pro",
+    "deepseek-v4-flash"
+  ],
+  "api_models": [
+    {
+      "label": "DeepSeek V4 Pro",
+      "model": "deepseek-v4-pro",
+      "base_url": "https://api.deepseek.com",
+      "provider": "openai-compatible"
+    },
+    {
+      "label": "DeepSeek V4 Flash",
+      "model": "deepseek-v4-flash",
+      "base_url": "https://api.deepseek.com",
+      "provider": "openai-compatible"
+    }
+  ],
   "updated_at": "2026-06-01T16:42:54.944Z",
   "notes": "Public switch only. API keys must stay in GitHub Actions Secrets."
 }
