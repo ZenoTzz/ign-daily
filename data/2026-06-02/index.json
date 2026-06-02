@@ -655,8 +655,8 @@
       "url": "https://www.ign.com/articles/fortnite-fans-are-at-war-over-a-controversial-streamers-inclusion-and-the-toxic-backlash-its-created",
       "publish_time_cn": "2026-06-02 01:00",
       "pub_date": "2026-06-02 01:00",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/06/01/hq720-1-1780332917645.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/01/hq720-1-1780332917645.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/01/hq720-1-1780332917645.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/01/hq720-1-1780332917645.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -683,7 +683,11 @@
           "cn": "Shiina",
           "reason": "知名泄密者，无中文译名"
         }
-      ]
+      ],
+      "translation_path": "translations/18.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-flash"
     },
     {
       "id": 19,
@@ -766,8 +770,8 @@
       "url": "https://www.ign.com/articles/obsession-digital-release-date-delayed",
       "publish_time_cn": "2026-06-02 00:38",
       "pub_date": "2026-06-02 00:38",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/03/11/obsessiontrailer-ign-blogroll-1773250722013.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/03/11/obsessiontrailer-ign-blogroll-1773250722013.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/03/11/obsessiontrailer-ign-blogroll-1773250722013.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/03/11/obsessiontrailer-ign-blogroll-1773250722013.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -803,7 +807,11 @@
           "cn": "Kane Parsons",
           "reason": "不知名人物，保留英文"
         }
-      ]
+      ],
+      "translation_path": "translations/21.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-flash"
     },
     {
       "id": 22,
@@ -815,8 +823,8 @@
       "url": "https://www.ign.com/articles/007-first-light-budget-reportedly-more-than-200-million",
       "publish_time_cn": "2026-06-02 00:35",
       "pub_date": "2026-06-02 00:35",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/04/30/007-first-light-bond-1777563160166.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/04/30/007-first-light-bond-1777563160166.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/04/30/007-first-light-bond-1777563160166.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/04/30/007-first-light-bond-1777563160166.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -832,7 +840,11 @@
           "cn": "007 初露锋芒",
           "reason": "词库中无此译名，根据社区常用译名建议"
         }
-      ]
+      ],
+      "translation_path": "translations/22.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-flash"
     },
     {
       "id": 23,

@@ -336,6 +336,69 @@
       "total_tokens": 8858,
       "prompt_cache_hit_tokens": 5888,
       "prompt_cache_miss_tokens": 2823
+    },
+    {
+      "time_cn": "2026-06-02 08:50:59",
+      "task": "fulltext",
+      "model": "deepseek-v4-flash",
+      "article_id": 18,
+      "article_title": "《堡垒之夜》新赛季合作争议主播引发玩家大战",
+      "article_url": "https://www.ign.com/articles/fortnite-fans-are-at-war-over-a-controversial-streamers-inclusion-and-the-toxic-backlash-its-created",
+      "article_date": "2026-06-02",
+      "detail": "",
+      "estimated_cost_usd": 0.00170898,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7571,
+      "completion_tokens": 2318,
+      "total_tokens": 9889,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 7571
+    },
+    {
+      "time_cn": "2026-06-02 08:51:12",
+      "task": "fulltext",
+      "model": "deepseek-v4-flash",
+      "article_id": 21,
+      "article_title": "低成本恐怖片《Obsession》延期上线数字平台，票房持续走高",
+      "article_url": "https://www.ign.com/articles/obsession-digital-release-date-delayed",
+      "article_date": "2026-06-02",
+      "detail": "",
+      "estimated_cost_usd": 0.001593,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7424,
+      "completion_tokens": 2040,
+      "total_tokens": 9464,
+      "prompt_cache_hit_tokens": 128,
+      "prompt_cache_miss_tokens": 7296
+    },
+    {
+      "time_cn": "2026-06-02 08:51:25",
+      "task": "fulltext",
+      "model": "deepseek-v4-flash",
+      "article_id": 22,
+      "article_title": "《007 初露锋芒》开发成本超2亿美元",
+      "article_url": "https://www.ign.com/articles/007-first-light-budget-reportedly-more-than-200-million",
+      "article_date": "2026-06-02",
+      "detail": "",
+      "estimated_cost_usd": 0.00087203,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7613,
+      "completion_tokens": 2193,
+      "total_tokens": 9806,
+      "prompt_cache_hit_tokens": 5888,
+      "prompt_cache_miss_tokens": 1725
     }
   ]
 }
