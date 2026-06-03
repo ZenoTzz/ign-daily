@@ -1,0 +1,126 @@
+{
+  "date": "2026-06-03",
+  "model": "deepseek-v4-pro",
+  "status": "observed",
+  "source_hash": "0dbac38783ef63c5642cdc1740fdf5d0bcd306b8",
+  "signal_count": 1,
+  "candidate_count": 4,
+  "signals": [
+    {
+      "type": "user_polish",
+      "date": "2026-06-03",
+      "article_id": 1,
+      "url": "https://www.ign.com/articles/playstation-shovelware-crackdown-continues-as-major-publisher-warns-its-games-will-soon-be-pulled",
+      "en_title": "PlayStation 'Shovelware' Crackdown Continues as Major Publisher Warns Its Games Will Soon Be Pulled",
+      "cn_title": "PlayStation打击劣质游戏，发行商Webnetic宣布游戏即将下架",
+      "edits": [
+        {
+          "field": "paragraph_2",
+          "before": "过去几个月里，索尼一直在努力清理其数字商店。大部分精力都用于打击「铲件」——这个术语指的是那些制作廉价、投机取巧的游戏，它们常常以山寨和低质量作品的形式充斥商店页面。",
+          "after": "过去几个月里，索尼一直在努力清理其数字商店。大部分精力都用于打击「铲件（shovelware）」——这个术语指的是那些制作廉价、投机取巧的游戏，它们常常以山寨和低质量作品的形式充斥商店页面。"
+        },
+        {
+          "field": "paragraph_4",
+          "before": "这家发行商——旗下拥有2022年8月《The Golden Age》的多个版本以及2022年9月续作《The Copper Age》的多个版本——今日在其X/Twitter账号上宣布了其庞大游戏目录的新方向。它表示「这是我们在PlayStation上的最后时光」，并呼吁玩家「在它们消失之前」去看看它的游戏。",
+          "after": "这家发行商——旗下拥有2022年8月发售的《The Golden Age》的多个版本以及2022年9月续作《The Copper Age》的多个版本——今日在其X账号上宣布了其庞大游戏目录的新方向。它表示「这是我们在PlayStation上的最后时光」，并呼吁玩家「在它们消失之前」去看看它的游戏。"
+        },
+        {
+          "field": "paragraph_6",
+          "before": "快速浏览PlayStation商店可以发现，Webnetic拥有128款独立命名的游戏，包括同一作品的PS4和PS5版本以及大量续作。奖杯追踪网站TrueTrophies指出，Webnetic还被列为不同地区游戏版本的发行商。",
+          "after": "粗略查看PlayStation Store就能发现，Webnetic名下共有128款不同名称的电子游戏，其中包括部分作品的PS4和PS5双版本，以及数量众多的续作。TrueTrophies等奖杯追踪网站还指出，Webnetic也被列为这些游戏不同地区版本的发行商。"
+        },
+        {
+          "field": "paragraph_9",
+          "before": "目前尚不清楚Webnetic的游戏具体何时会从PlayStation商店移除。与此同时，你可以阅读IGN对「Eslop」世界的深度报道。",
+          "after": "目前尚不清楚Webnetic的游戏具体何时会从PlayStation商店移除。"
+        }
+      ]
+    }
+  ],
+  "candidates": [
+    {
+      "id_hint": "social_media_platform_latest_name",
+      "title": "社交媒体平台使用最新的官方名称",
+      "rule": "将 X（原 Twitter）直接译为“X”，不保留“/Twitter”等旧称。其他平台同理，如 Facebook 不再赘述“/Meta”。",
+      "category": "names",
+      "scope": "all",
+      "status_suggestion": "observe",
+      "confidence": 0.5,
+      "evidence_summary": "用户将“X/Twitter 账号”改为“X 账号”，去掉了旧名称。",
+      "examples": [
+        {
+          "date": "2026-06-03",
+          "article_id": 1,
+          "before": "X/Twitter 账号",
+          "after": "X 账号"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id_hint": "playstation_store_english",
+      "title": "PlayStation 商店写作“PlayStation Store”",
+      "rule": "在提到 PlayStation 数字商店时，直接使用“PlayStation Store”而非“PlayStation商店”或“PlayStation 商店”。",
+      "category": "names",
+      "scope": "all",
+      "status_suggestion": "observe",
+      "confidence": 0.5,
+      "evidence_summary": "用户将“快速浏览PlayStation商店”改为“粗略查看PlayStation Store”，将“商店”替换为英文 Store。",
+      "examples": [
+        {
+          "date": "2026-06-03",
+          "article_id": 1,
+          "before": "PlayStation商店",
+          "after": "PlayStation Store"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id_hint": "remove_promotional_related_links",
+      "title": "删除文末推广/相关阅读链接",
+      "rule": "删除文末类似“与此同时，你可以阅读IGN对...”等内文推广链接或相关阅读引导句。",
+      "category": "structure",
+      "scope": "all",
+      "status_suggestion": "confirm",
+      "confidence": 0.9,
+      "evidence_summary": "用户删除了文末“与此同时，你可以阅读IGN对「Eslop」世界的深度报道。”，与此前pending的规则吻合，现得到确认。",
+      "examples": [
+        {
+          "date": "2026-06-03",
+          "article_id": 1,
+          "before": "目前尚不清楚Webnetic的游戏具体何时会从PlayStation商店移除。与此同时，你可以阅读IGN对「Eslop」世界的深度报道。",
+          "after": "目前尚不清楚Webnetic的游戏具体何时会从PlayStation商店移除。"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id_hint": "add_english_term_for_uncommon_translation",
+      "title": "不常见译名首次出现时附加英文原文",
+      "rule": "当术语的译名在中文社区不常见时，首次出现使用“中文（英文）”格式加注。",
+      "category": "dictionary",
+      "scope": "all",
+      "status_suggestion": "observe",
+      "confidence": 0.6,
+      "evidence_summary": "用户将“铲件”改为“铲件（shovelware）”，这符合现有英文注释规则，再次验证。",
+      "examples": [
+        {
+          "date": "2026-06-03",
+          "article_id": 1,
+          "before": "「铲件」",
+          "after": "「铲件（shovelware）」"
+        }
+      ],
+      "contradiction": ""
+    }
+  ],
+  "notes": [
+    "remove_promotional_related_links 之前为 pending，今日出现强硬删除，建议确认。",
+    "PlayStation Store 和 X 平台命名规则均为首次出现，建议观察后续文章是否延续。",
+    "英文注释规则再次出现，强化现有规则效果。",
+    "其他细小改动（如增加“发售的”“共”“数量众多的”等）属于润色优化，不作候选规律。"
+  ],
+  "repaired_json": false,
+  "updated_at": "2026-06-03T16:04:46+08:00"
+}

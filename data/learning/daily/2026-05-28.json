@@ -1,0 +1,558 @@
+{
+  "date": "2026-05-28",
+  "model": "deepseek-v4-pro",
+  "status": "observed",
+  "source_hash": "7e3d5f32210248a5371f166b9569d5d46a39a3fb",
+  "signal_count": 12,
+  "candidate_count": 4,
+  "signals": [
+    {
+      "type": "user_polish",
+      "date": "2026-05-28",
+      "article_id": 6,
+      "url": "https://www.ign.com/articles/steam-deck-price-increase-announced-by-valve",
+      "en_title": "Steam Deck Price Increase Announced by Valve",
+      "cn_title": "Valve宣布Steam Deck大幅涨价",
+      "edits": [
+        {
+          "field": "title",
+          "before": "Valve宣布Steam Deck大幅涨价",
+          "after": "Valve宣布Steam Deck OLED大幅涨价"
+        },
+        {
+          "field": "subtitle",
+          "before": "",
+          "after": "老问题"
+        },
+        {
+          "field": "paragraph_1",
+          "before": "更新时间：2026年5月27日 18:22 UTC（北京时间5月28日凌晨2:22）",
+          "after": "Valve宣布Steam Deck大幅涨价。该公司今日宣布，在缺货数月之后，全新OLED机型正式恢复库存，但售价将上调。入门款512GB Steam Deck OLED原价549美元（约人民币3,929元），现售789美元（约人民币5,650元）；高配款1TB Steam Deck OLED原价649美元（约人民币4,646元），现售949美元（约人民币6,795元）。Valve表示：「这些新价格反映了元器件成本现状以及整个行业所面临的全球物流挑战。」"
+        },
+        {
+          "field": "paragraph_2",
+          "before": "Valve宣布Steam Deck大幅涨价。该公司今日宣布，在缺货数月之后，全新OLED机型正式恢复库存，但售价将上调。入门款512GB OLED Steam Deck原价$549（约人民币3,929元），现售$789（约人民币5,650元）；高配款1TB OLED Steam Deck原价$649（约人民币4,646元），现售$949（约人民币6,795元）。Valve表示：「这些新价格反映了元器件成本现状以及整个行业所面临的全球物流挑战。」",
+          "after": "通过Steam售卖的翻新版Steam Deck LCD不会涨价，但翻新OLED版价格仍高于原售价。翻新512GB和1TB OLED目前分别售629美元（约人民币4,503元）和759美元（约人民币5,433元）。如果你能接受稍微低端些的掌机，已停产的LCD版翻新机也是不错选择：64GB LCD售279美元（约人民币1,997元）、256GB LCD售319美元（约人民币2,283元）、512GB LCD售359美元（约人民币2,570元）。"
+        },
+        {
+          "field": "paragraph_3",
+          "before": "通过Steam售卖的翻新版LCD Steam Deck不会涨价，但翻新OLED版价格仍高于原售价。翻新512GB和1TB OLED目前分别售$629（约4,503元）和$759（约5,433元）。如果你能接受稍微低端些的掌机，已停产的LCD版翻新机也是不错选择：64GB LCD售$279（约1,997元）、256GB LCD售$319（约2,283元）、512GB LCD售$359（约2,570元）。",
+          "after": "这款PC掌机长久以来都备受欢迎，性价比是重要原因之一。它让玩家能在路上享受高品质游戏体验，而且过去价格相对亲民。如今Steam Deck恐怕会更难推销，特别是它已进入Xbox ROG Ally X等高端掌机的价格区间——后者售价999.99美元（约人民币7,160元）。"
+        },
+        {
+          "field": "paragraph_4",
+          "before": "这款PC掌机长久以来都备受欢迎，性价比是重要原因之一。它让玩家能在路上享受高品质游戏体验，而且过去价格相对亲民。如今Steam Deck恐怕会更难推销，特别是它已进入Xbox ROG Ally X等高端掌机的价格区间——后者售价$999.99（约7,160元）。",
+          "after": "Valve并不是唯一上调硬件价格的厂商。三大主机平台（Xbox、PlayStation、Nintendo）都已上调了主机价格，这也成为历史上为数不多的主机一代生命周期内涨价而非降价的情形。例如，普通版PS5如今的售价比2020年贵了100美元到150美元（约人民币715至1,073元）。"
+        },
+        {
+          "field": "paragraph_5",
+          "before": "Valve并不是唯一上调硬件价格的厂商。三大主机平台（Xbox、PlayStation、Nintendo）都已上调了主机价格，这也成为历史上为数不多的主机一代生命周期内涨价而非降价的情形。例如，普通版PS5如今的售价比2020年贵了$100到$150（约人民币715至1,073元）。",
+          "after": "这一消息也加剧了外界对Valve主机设备Steam Machine价格难以承受的担忧。Valve尚未公布Steam Machine的售价，引发种种猜测。该设备定位为「客厅PC」，部分玩家曾希望即便它比Xbox或PS5更贵，至少还会比组装一台PC便宜。然而，内存等元器件成本攀升意味着Valve可能连这一目标都难以实现。Steam Deck既然大幅涨价，可以想见Steam Machine也将面临同样压力。"
+        },
+        {
+          "field": "paragraph_6",
+          "before": "这一消息也加剧了外界对Valve主机设备Steam Machine价格难以承受的担忧。Valve尚未公布Steam Machine的售价，引发种种猜测。该设备定位为「客厅PC」，部分玩家曾希望即便它比Xbox或PS5更贵，至少还会比组装一台PC便宜。然而，内存等元器件成本攀升意味着Valve可能连这一目标都难以实现。Steam Deck既然大幅涨价，可以想见Steam Machine也将面临同样压力。",
+          "after": "Steam Machine目前预计将于2026年内某个时间发售。Valve何时公布发售日期或定价信息尚未明朗。看起来Valve是想再观察一下市场再做最终的定价决策，但留给他们的时间不多了——除非该公司打算无限期推迟这款新硬件。"
+        }
+      ]
+    },
+    {
+      "type": "user_polish",
+      "date": "2026-05-28",
+      "article_id": 9,
+      "url": "https://www.ign.com/articles/marvel-legend-stan-lee-to-be-resurrected-through-ai-with-his-voice-and-likeness-licensed-for-commercial-use",
+      "en_title": "Marvel Legend Stan Lee to Be 'Resurrected' Through AI, With His Voice and Likeness Licensed for Commercial Use",
+      "cn_title": "漫威传奇斯坦·李将被AI「复活」，声音与形象授权商业使用",
+      "edits": [
+        {
+          "field": "title",
+          "before": "漫威传奇斯坦·李将被AI「复活」，声音与形象授权商业使用",
+          "after": "漫威传奇斯坦·李将被AI「复活」，声音与形象被授权商业使用"
+        },
+        {
+          "field": "subtitle",
+          "before": "",
+          "after": "「斯坦始终相信，要在粉丝所在的地方与他们见面。」"
+        },
+        {
+          "field": "paragraph_1",
+          "before": "「斯坦始终相信，要在粉丝所在的地方与他们见面。」",
+          "after": "据宣布，已故漫威漫画传奇斯坦·李的声音与形象将被一家AI公司复刻，并用于商业用途。"
+        },
+        {
+          "field": "paragraph_2",
+          "before": "更新时间：2026年5月27日 18:05 UTC（北京时间5月28日凌晨2:05）",
+          "after": "AI语音公司ElevenLabs已取得斯坦·李形象与声音的使用权，并计划将其授权给其他公司进一步使用，这意味着以数字方式「复活」的斯坦·李有望出现在电影和广告中。"
+        },
+        {
+          "field": "paragraph_3",
+          "before": "据宣布，已故漫威漫画传奇斯坦·李的声音与形象将被一家AI公司复刻，并用于商业用途。",
+          "after": "ElevenLabs的用户届时还可以听到模拟斯坦·李声音的有声书旁白——包括「斯坦·李每月读书会」——并能从含有他形象的模板中生成由斯坦·李出场的漫画分格。"
+        },
+        {
+          "field": "paragraph_4",
+          "before": "AI语音公司ElevenLabs已取得斯坦·李形象与声音的使用权，并计划将其授权给其他公司进一步使用，这意味着以数字方式「复活」的斯坦·李有望出现在电影和广告中。",
+          "after": "「斯坦始终相信，要在粉丝所在的地方与他们见面：无论是在漫画书页中、在漫展现场，还是在银幕上的短暂客串。」目前持有斯坦·李形象权益的Stan Lee Universe公司董事兼律师Chaz Rainey对《Variety》表示。"
+        },
+        {
+          "field": "paragraph_5",
+          "before": "ElevenLabs的用户届时还可以听到模拟斯坦·李声音的有声书旁白——包括「斯坦·李每月读书会」——并能从含有他形象的模板中生成由斯坦·李出场的漫画分格。",
+          "after": "「这次合作正是这一理念的延续。粉丝一直告诉我们，他们在阅读斯坦的漫画时，脑海里听到的就是斯坦的声音；现在，借助ElevenLabs，我们可以让这一切成真。」"
+        },
+        {
+          "field": "paragraph_6",
+          "before": "「斯坦始终相信，要在粉丝所在的地方与他们见面：无论是在漫画书页中、在漫展现场，还是在银幕上的短暂客串。」目前持有斯坦·李形象权益的Stan Lee Universe公司董事兼律师Chaz Rainey对《Variety》表示。",
+          "after": "这并不是斯坦·李的声音与形象首次被AI复刻。去年在洛杉矶漫展上，科技公司Proto Hologram就曾以15美元到20美元（约人民币107至143元）的价格出售与斯坦·李AI形象3分钟的对话体验，引发粉丝普遍不满。"
+        }
+      ]
+    },
+    {
+      "type": "user_polish",
+      "date": "2026-05-28",
+      "article_id": 12,
+      "url": "https://www.ign.com/articles/007-first-light-composers-music-rule",
+      "en_title": "007 First Light Composers Reveal the One Rule They Were Given for Scoring the New Bond Game",
+      "cn_title": "《007 初露锋芒》作曲师揭秘新邦德游戏配乐的唯一规则",
+      "edits": [
+        {
+          "field": "title",
+          "before": "《007 初露锋芒》作曲师揭秘新邦德游戏配乐的唯一规则",
+          "after": "《007 初露锋芒》配乐团队揭秘创作思路"
+        },
+        {
+          "field": "subtitle",
+          "before": "",
+          "after": "经典旋律"
+        },
+        {
+          "field": "paragraph_1",
+          "before": "更新时间：2026年5月28日 00:01 UTC（北京时间5月28日上午8:01）",
+          "after": "这是流行文化史上最具标志性的音乐主题之一：一段铿锵有力的吉他即兴，骤然爆发为铜管交响。即便你从未看过詹姆斯·邦德电影、也从未玩过007游戏，你也很可能熟悉它。如今这首经典的邦德主题再度回到聚光灯下——而这背后离不开游戏音乐资深组合The Flight。在IO Interactive开发的《007 初露锋芒》发售前，IGN采访了由Alexis Smith和Joe Henson组成的这一双人组合，与他们谈了围绕这样一首经典主题创作新配乐时的挑战，以及他们在配乐过程中所遇到的「出乎意料地没有什么规则」。"
+        },
+        {
+          "field": "paragraph_2",
+          "before": "这是流行文化史上最具标志性的音乐主题之一：一段铿锵有力的吉他即兴，骤然爆发为铜管交响。即便你从未看过詹姆斯·邦德电影、也从未玩过007游戏，你也很可能熟悉它。如今这首经典的邦德主题再度回到聚光灯下——而这背后离不开游戏音乐资深组合The Flight。在IO Interactive开发的《007 初露锋芒》发售前，我采访了由Alexis Smith和Joe Henson组成的这一双人组合，与他们谈了围绕这样一首经典主题创作新配乐时的挑战，以及他们在配乐过程中所遇到的「出乎意料地没有什么规则」。",
+          "after": "「IO Interactive最主要的要求是，要把那些（宏大管弦乐）时刻收着用，等到玩家通过自身努力赢得它的时候再交给玩家。」Henson说。「除此之外，他们没有把我们框死。绝对没有谁拿一份外部的风格指南来告诉我们『你们应该这样用』。在声音层面、在如何运用主题旋律方面，几乎没有任何规则。」"
+        },
+        {
+          "field": "paragraph_3",
+          "before": "「IO Interactive最主要的要求是，要把那些（宏大管弦乐）时刻收着用，等到玩家通过自身努力赢得它的时候再交给玩家。」Henson说。「除此之外，他们没有把我们框死。绝对没有谁拿一份外部的风格指南来告诉我们『你们应该这样用』。在声音层面、在如何运用主题旋律方面，几乎没有任何规则。」",
+          "after": "「游戏被分成了若干不同的地点，我们为每一个地点都定义了一种声音。」Smith说，「邦德是铜管，邦德是弦乐。但我们作为The Flight，总是在试图加入现代元素，因为这是对邦德的现代演绎。所以我们必须以一种有品味的方式使用电子元素和合成器之类的东西。我觉得这正是我们的专长。」"
+        },
+        {
+          "field": "paragraph_4",
+          "before": "「游戏被分成了若干不同的地点，我们为每一个地点都定义了一种声音。」Smith说，「邦德是铜管，邦德是弦乐。但我们作为The Flight，总是在试图加入现代元素，因为这是对邦德的现代演绎。所以我们必须以一种有品味的方式使用电子元素和合成器之类的东西。我觉得这正是我们的专长。」",
+          "after": "The Flight还为《哥谭骑士》《刺客信条：影》和《地平线：零之曙光》等游戏作过曲。他们表示与《007 初露锋芒》主题曲创作者Lana del Ray和David Arnold有过深度合作，确保主题曲的旋律能够延伸到开场字幕之外。"
+        },
+        {
+          "field": "paragraph_5",
+          "before": "The Flight还为《哥谭骑士》《刺客信条：影》和《地平线：零之曙光》等游戏作过曲。他们表示与《007 初露锋芒》主题曲创作者Lana del Ray和David Arnold有过深度合作，确保主题曲的旋律能够延伸到开场字幕之外。",
+          "after": "「我们在非常特定的情绪节点使用了Lana和David的歌曲，」Smith说，「你第一次听到那段旋律是在非常早的时候，那是邦德的某种重生。看起来他似乎死了，（但随后）他又重生了。」"
+        },
+        {
+          "field": "paragraph_6",
+          "before": "「我们在非常特定的情绪节点使用了Lana和David的歌曲，」Smith说，「你第一次听到那段旋律是在非常早的时候，那是邦德的某种重生。看起来他似乎死了，（但随后）他又重生了。」",
+          "after": "「然后在游戏后期还有一些时刻你会再次听到。」Henson说，「当他完成第一次击杀的时候。还有就是在最后，（但）我们不想剧透太多。」"
+        }
+      ]
+    },
+    {
+      "type": "user_polish",
+      "date": "2026-05-28",
+      "article_id": 13,
+      "url": "https://www.ign.com/articles/destiny-2-fans-plan-mass-protest-to-crash-the-servers-and-beat-marathons-all-time-player-record",
+      "en_title": "Destiny 2 Fans Plan Mass Protest to 'Crash the Servers' and Beat Marathon's All-Time Player Record",
+      "cn_title": "《命运2》玩家策划涌入服务器抗议Bungie停服",
+      "edits": [
+        {
+          "field": "title",
+          "before": "《命运2》玩家策划涌入服务器抗议Bungie停服",
+          "after": "《命运2》玩家正策划涌入服务器抗议Bungie停更"
+        },
+        {
+          "field": "subtitle",
+          "before": "",
+          "after": "最后一搏"
+        },
+        {
+          "field": "paragraph_1",
+          "before": "更新时间：2026年5月27日 15:56 UTC（北京时间5月27日23:56）",
+          "after": "因Bungie宣布终止该系列内容更新而深感失望的《命运2》粉丝们，正策划一场「挤爆服务器」的行动，以此向官方表明这款游戏仍有巨大的玩家热情。"
+        },
+        {
+          "field": "paragraph_2",
+          "before": "因Bungie宣布终止该系列内容更新而深感失望的《命运2》粉丝们，正策划一场「挤爆服务器」的行动，以此向官方表明这款游戏仍有巨大的玩家热情。",
+          "after": "在Reddit的一条长帖中，《命运》系列玩家w1nds0r号召所有玩家在6月9日——本作最终内容更新上线之日——一起回归。"
+        },
+        {
+          "field": "paragraph_3",
+          "before": "在Reddit的一条长帖中，《命运》系列玩家w1nds0r号召所有玩家在6月9日——本作最终内容更新上线之日——一起回归。",
+          "after": "Bungie上周震惊玩家圈，宣布将停止《命运2》的内容更新，转而把精力投入到此前发售但据报销量未达预期的撤离类射击游戏《失落星船：马拉松》上。后续报道指出，《命运》系列续作目前并未处于开发中，并且Bungie即将进行「重大规模」裁员。"
+        },
+        {
+          "field": "paragraph_4",
+          "before": "Bungie上周震惊玩家圈，宣布将停止《命运2》的内容更新，转而把精力投入到此前发售但据报销量未达预期的撤离类射击游戏《失落星船：马拉松》上。后续报道指出，《命运》系列续作目前并未处于开发中，并且Bungie即将进行「重大规模」裁员。",
+          "after": "「我们至少要打破《失落星船：马拉松》的历史峰值，让他们看看自己做错了决定。」w1nds0r写道。他认为此举可向索尼证明《命运》仍然是「值得继续投入的IP……这是我们最后一次发出声音、表明这个系列仍有价值的机会」。（《失落星船：马拉松》于3月发售，Steam历史峰值为77,358人。如今每日峰值在1万人左右徘徊。）"
+        },
+        {
+          "field": "paragraph_5",
+          "before": "「我们至少要打破《失落星船：马拉松》的历史峰值，让他们看看自己做错了决定。」w1nds0r写道。他认为此举可向索尼证明《命运》仍然是「值得继续投入的IP……这是我们最后一次发出声音、表明这个系列仍有价值的机会」。（《失落星船：马拉松》于3月发售，Steam历史峰值为77,358人。如今每日峰值在1万人左右徘徊。）",
+          "after": "w1nds0r的帖子下涌现的1,000多条回复几乎异口同声：《命运》玩家依然渴望最后一次回归——再到塔楼里逛逛、再到外星世界表面执行任务，或者只是停在轨道上闲聊几个小时。"
+        },
+        {
+          "field": "paragraph_6",
+          "before": "w1nds0r的帖子下涌现的1,000多条回复几乎异口同声：《命运》玩家依然渴望最后一次回归——再到塔楼里逛逛、再到外星世界表面执行任务，或者只是停在轨道上闲聊几个小时。",
+          "after": "「自《终焉之形》之后我就没玩了，但我会回来的。」一位名叫JulioTheBoi的玩家写道，「我得给这游戏来一次最后的狂欢，免得我们就这样静悄悄地走向终焉。」"
+        }
+      ]
+    },
+    {
+      "type": "user_polish",
+      "date": "2026-05-28",
+      "article_id": 14,
+      "url": "https://www.ign.com/articles/blizzard-boss-wouldnt-rule-out-overwatch-animated-series-knows-fans-have-wanted-it-for-years",
+      "en_title": "Blizzard Boss Wouldn't Rule Out Overwatch Animated Series, Knows Fans Have Wanted It for Years",
+      "cn_title": "暴雪老板：《守望先锋2》动画剧集不排除可能",
+      "edits": [
+        {
+          "field": "title",
+          "before": "暴雪老板：《守望先锋2》动画剧集不排除可能",
+          "after": "暴雪：不排除《守望先锋2》动画剧集的可能性"
+        },
+        {
+          "field": "subtitle",
+          "before": "",
+          "after": "本质动画公司"
+        },
+        {
+          "field": "paragraph_2",
+          "before": "在最近一次采访中，我向暴雪《守望先锋》总经理、运营游戏与移动端开发负责人Walter Kong询问：将这款英雄射击游戏改编为电视剧的可能性是否依然存在。「我不会排除这种可能性。」Kong回答。",
+          "after": "在最近一次采访中，我向暴雪《守望先锋》总经理、运营游戏与移动端开发负责人Walter Kong询问：将这款英雄射击游戏改编为动画剧集的可能性是否依然存在。「我不会排除这种可能性。」Kong回答。"
+        },
+        {
+          "field": "paragraph_4",
+          "before": "暴雪此前确实曾试图推动旗下游戏改编动画剧集，但相关努力以失败告终。2024年，《Play Nice: The Rise, Fall, and Future of Blizzard Entertainment（暂译《好好玩：暴雪娱乐的兴衰与未来》）》作者Jason Schreier爆料称，《星际争霸》《守望先锋》和《暗黑破坏神》原本都将被Netflix改编，但随后暴雪因Netflix挖走自家首席财务官而提起诉讼。2019年初，前暴雪CFO Spencer Neumann因违反合同条款转投Netflix担任CFO而被解雇。看来正是这场纠纷导致了Netflix改编计划的终结。",
+          "after": "暴雪此前确实曾试图推动旗下游戏改编动画剧集，但相关努力以失败告终。2024年，《好好玩：暴雪娱乐的兴衰与未来（Play Nice: The Rise, Fall, and Future of Blizzard Entertainment）》作者Jason Schreier爆料称，《星际争霸》《守望先锋》和《暗黑破坏神》原本都将被Netflix改编，但随后暴雪因Netflix挖走自家CFO而提起诉讼。2019年初，前暴雪CFO Spencer Neumann因违反合同条款转投Netflix担任CFO而被解雇。看来正是这场纠纷导致了Netflix改编计划的终结。"
+        }
+      ]
+    },
+    {
+      "type": "user_polish",
+      "date": "2026-05-28",
+      "article_id": 22,
+      "url": "https://www.ign.com/articles/planet-zoo-2-all-but-confirmed-following-youtube-page-update",
+      "en_title": "Planet Zoo 2 All But Confirmed Following YouTube Page Update",
+      "cn_title": "《Planet Zoo 2》几乎坐实：YouTube频道悄然更新「2」",
+      "edits": [
+        {
+          "field": "title",
+          "before": "《Planet Zoo 2》几乎坐实：YouTube频道悄然更新「2」",
+          "after": "《动物园之星2》几乎坐实：YouTube频道页面悄然更新"
+        },
+        {
+          "field": "subtitle",
+          "before": "",
+          "after": "或许马上就要官宣"
+        },
+        {
+          "field": "paragraph_1",
+          "before": "Frontier Developments或许还没有正式宣布旗下令人愉悦的动物园模拟游戏《Planet Zoo》要出续作，但这并未阻止有人去给这款游戏的YouTube频道动手脚——以并不那么含蓄的方式暗示《Planet Zoo 2》正在路上。",
+          "after": "Frontier Developments或许还没有正式宣布旗下令人愉悦的动物园模拟游戏《动物园之星》要出续作，但这并未阻止有人去给这款游戏的YouTube频道动手脚——以并不那么含蓄的方式暗示《动物园之星2》正在路上。"
+        },
+        {
+          "field": "paragraph_4",
+          "before": "当然，这其实不算太意外——去年年底Frontier在发布纪念《Planet Zoo》六周年的宣传片时就已暗示，续作正在开发中。不过这是迄今为止最接近实锤的信息：游戏不仅在开发中，而且可能不久后就会面世……也许我们能在即将到来的Summer Game Fest上获得更多消息？",
+          "after": "当然，这其实不算太意外——去年年底Frontier在发布纪念《动物园之星》六周年的宣传片时就已暗示，续作正在开发中。不过这是迄今为止最接近实锤的信息：游戏不仅在开发中，而且可能不久后就会面世……也许我们能在即将到来的夏日游戏节上获得更多消息？"
+        },
+        {
+          "field": "paragraph_5",
+          "before": "我们当年曾评价《Planet Zoo》是「一款带着众多可爱动物的、令人极为满足的园区建造游戏」。",
+          "after": "我们当年曾评价《动物园之星》是「一款带着众多可爱动物的、令人极为满足的园区建造游戏」。"
+        }
+      ]
+    },
+    {
+      "type": "user_polish",
+      "date": "2026-05-28",
+      "article_id": 31,
+      "url": "https://www.ign.com/articles/kingdom-come-deliverance-developer-teases-its-lord-of-the-rings-open-world-rpg",
+      "en_title": "Kingdom Come: Deliverance Developer Teases Its Lord of the Rings Open World RPG",
+      "cn_title": "《天国：拯救》开发商预告其《指环王》开放世界RPG",
+      "edits": [
+        {
+          "field": "title",
+          "before": "《天国：拯救》开发商预告其《指环王》开放世界RPG",
+          "after": "《天国：拯救》开发商放出《指环王》开放世界RPG新信息"
+        },
+        {
+          "field": "subtitle",
+          "before": "",
+          "after": "中土世界又有新游戏了"
+        },
+        {
+          "field": "paragraph_1",
+          "before": "更新时间：2026年5月27日 09:00 UTC（北京时间5月27日17:00）",
+          "after": "《天国：拯救》的开发团队战马工作室（Warhorse Studios）为旗下即将到来的《指环王》游戏放出了一些预告，听起来确实非常令人期待。"
+        },
+        {
+          "field": "paragraph_2",
+          "before": "《天国：拯救》的开发团队Warhorse Studios为旗下即将到来的《指环王》游戏放出了一些预告，听起来确实非常令人期待。",
+          "after": "上周，在外界数月猜测之后，战马工作室证实工作室正在开发一款以《指环王》宇宙为背景的新游戏。战马工作室在公布该游戏时称其为「开放世界中土RPG」，因此尚不清楚游戏会落在托尔金奇幻设定中的哪个时代。但本作很可能延续工作室广受好评的《天国：拯救》系列所确立的模板。"
+        },
+        {
+          "field": "paragraph_3",
+          "before": "上周，在外界数月猜测之后，Warhorse证实工作室正在开发一款以《指环王》宇宙为背景的新游戏。Warhorse在公布该游戏时称其为「开放世界中土RPG」，因此尚不清楚游戏会落在托尔金奇幻设定中的哪个时代。但本作很可能延续工作室广受好评的《天国：拯救》系列所确立的模板。",
+          "after": "本项目预计距离发售还有相当长的时间，意味着短期内我们看不到。不过战马工作室在最近一次社区直播中透露了一些细节。"
+        },
+        {
+          "field": "paragraph_4",
+          "before": "本项目预计距离发售还有相当长的时间，意味着短期内我们看不到。不过Warhorse在最近一次社区直播中透露了一些细节。",
+          "after": "直播中，战马工作室传播总监Tobias Stolz-Zwilling表示，下一部《天国：拯救》游戏将于下一财年发售——也就是大约一年左右的时间。而《指环王》游戏目前没有具体的时间表可以分享，这暗示它距离面世可能还有数年之遥。"
+        },
+        {
+          "field": "paragraph_5",
+          "before": "直播中，Warhorse传播总监Tobias Stolz-Zwilling表示，下一部《天国：拯救》游戏将于下一财年发售——也就是大约一年左右的时间。而《指环王》游戏目前没有具体的时间表可以分享，这暗示它距离面世可能还有数年之遥。",
+          "after": "中土项目由Viktor Bocan领衔——他此前担任《天国：拯救2》的设计总监。Stolz-Zwilling指出，这款中土游戏是工作室的「热爱之作（passion project）」，团队成员「阵容惊人」，准备深入这个奇幻世界打造一款杰作。他还形容这款游戏「沉浸感极强」，世界「鲜活生动」，里面有「有趣的角色、令人难忘的地点，当然还有强烈的叙事专注」。他进一步表示，团队的目标是让自己的每一部作品——无论是《天国：拯救》还是中土项目——都成为RPG品类的「新王」，并继续延续工作室让粉丝深爱的那套创作公式。"
+        },
+        {
+          "field": "paragraph_6",
+          "before": "中土项目由Viktor Bocan领衔——他此前担任《天国：拯救2》的设计总监。Stolz-Zwilling指出，这款中土游戏是工作室的「热爱之作（passion project）」，团队成员「阵容惊人」，准备深入这个奇幻世界打造一款杰作。他还形容这款游戏「沉浸感极强」，世界「鲜活生动」，里面有「有趣的角色、令人难忘的地点，当然还有强烈的叙事专注」。他进一步表示，团队的目标是让自己的每一部作品——无论是《天国：拯救》还是中土项目——都成为RPG品类的「新王」，并继续延续工作室让粉丝深爱的那套创作公式。",
+          "after": "「重要的是要让大家明白，我们只做我们想做的游戏，并以我们想要的方式去做。」Stolz-Zwilling继续说，「这是属于我们自己的东西。」"
+        }
+      ]
+    },
+    {
+      "type": "user_polish",
+      "date": "2026-05-28",
+      "article_id": 32,
+      "url": "https://www.ign.com/articles/take-two-forces-gta-5-multiplayer-platform-ragemp-to-shut-down-and-migrate-to-fivem",
+      "en_title": "Take-Two Forces GTA 5 Multiplayer Platform Rage:MP to Shut Down and Migrate to FiveM",
+      "cn_title": "Take-Two强制《GTA5》多人平台Rage:MP关停并迁至FiveM",
+      "edits": [
+        {
+          "field": "title",
+          "before": "Take-Two强制《GTA5》多人平台Rage:MP关停并迁至FiveM",
+          "after": "Take-Two强制《GTA5》Rage:MP平台关停并迁至官方平台FiveM"
+        },
+        {
+          "field": "subtitle",
+          "before": "",
+          "after": "收编"
+        },
+        {
+          "field": "paragraph_1",
+          "before": "更新时间：2026年5月27日 08:28 UTC（北京时间5月27日16:28）",
+          "after": "Rockstar Games的母公司Take-Two Interactive已下令《GTA5》模组平台Rage:MP停止运营。"
+        },
+        {
+          "field": "paragraph_2",
+          "before": "Rockstar Games的母公司Take-Two Interactive已下令《GTA5》模组平台Rage:MP停止运营。",
+          "after": "该平台的开发团队周一晚间通过一则论坛帖子转达了这一消息，并表示Take-Two已正式要求其关停。原因在于Take-Two与Rockstar Games拥有自己的模组平台FiveM，这是《GTA》、尤其是其网络部分进行模组化运营的唯一授权平台。"
+        },
+        {
+          "field": "paragraph_3",
+          "before": "该平台的开发团队周一晚间通过一则论坛帖子转达了这一消息，并表示Take-Two已正式要求其关停。原因在于Take-Two与Rockstar Games拥有自己的模组平台FiveM，这是《GTA》、尤其是其网络部分进行模组化运营的唯一授权平台。",
+          "after": "「我们必须就RAGE:MP的未来分享一项重要更新。Rockstar Games与Take-Two Interactive已明确表态，根据双方的平台授权协议（PLA）所定义，FiveM是《GTA5》多人模组的唯一授权平台。」开发团队表示，「依据该政策、并应Take-Two的要求，RAGE:MP将进入有序的关停流程。我们要求所有服务器所有者结束其运营并迁移至FiveM。」"
+        },
+        {
+          "field": "paragraph_4",
+          "before": "「我们必须就RAGE:MP的未来分享一项重要更新。Rockstar Games与Take-Two Interactive已明确表态，根据双方的平台授权协议（PLA）所定义，FiveM是《GTA5》多人模组的唯一授权平台。」开发团队表示，「依据该政策、并应Take-Two的要求，RAGE:MP将进入有序的关停流程。我们要求所有服务器所有者结束其运营并迁移至FiveM。」",
+          "after": "服务器所有者必须在2026年8月31日之前完成向FiveM的迁移，届时Rage:MP将正式停止运营。"
+        },
+        {
+          "field": "paragraph_5",
+          "before": "服务器所有者必须在2026年8月31日之前完成向FiveM的迁移，届时Rage:MP将正式停止运营。",
+          "after": "Take-Two和Rockstar与《GTA》模组社区的关系由来已久。2015年5月，外界一度怀疑两家公司打算全面禁止《GTA5》模组（包括单人模式中的模组），引发玩家强烈反弹。Rockstar随后澄清模组是被允许甚至鼓励的，但他们会一直监控可能威胁《GTA Online》健康运行的内容。这一事件在玩家中制造了一些紧张氛围，许多人觉得这种「想模组就模组」的自由随时可能被剥夺。这种担忧在同年随后被印证：Rockstar试图关停FiveM，理由是它运行着「一个未经授权的替代多人服务，其中含有用于促进盗版的代码」。"
+        },
+        {
+          "field": "paragraph_6",
+          "before": "Take-Two和Rockstar与《GTA》模组社区的关系由来已久。2015年5月，外界一度怀疑两家公司打算全面禁止《GTA5》模组（包括单人模式中的模组），引发玩家强烈反弹。Rockstar随后澄清模组是被允许甚至鼓励的，但他们会一直监控可能威胁《GTA Online》健康运行的内容。这一事件在玩家中制造了一些紧张氛围，许多人觉得这种「想模组就模组」的自由随时可能被剥夺。这种担忧在同年随后被印证：Rockstar试图关停FiveM，理由是它运行着「一个未经授权的替代多人服务，其中含有用于促进盗版的代码」。",
+          "after": "不过事情最终走向了好的方向。各方建立了紧密合作关系——Rockstar收购了FiveM背后的团队Cfx.re。这宗收购发生在2023年8月，彼时正值GTA RP（角色扮演）社区蓬勃发展，而这个社区本就建立在模组的基础之上。这令一些人猜测，Rockstar之所以收购该团队，是想在《GTA6》中合理整合模组与社区服务器。"
+        }
+      ]
+    },
+    {
+      "type": "user_feedback",
+      "date": "2026-05-28",
+      "rule_id": "rm_update_time",
+      "rule": {
+        "id": "rm_update_time",
+        "category": "句式偏好",
+        "title": "删除「更新时间」段落",
+        "evidence": "6/8 篇（强信号）",
+        "detail": "你润色时基本都删掉了「更新时间：YYYY-MM-DD HH:MM UTC（北京时间...）」这段，未来翻译默认不带这个段落",
+        "examples": [
+          "#6 Steam Deck",
+          "#9 斯坦·李",
+          "#12 007",
+          "#13 命运2",
+          "#31 指环王",
+          "#32 GTA5"
+        ]
+      },
+      "feedback": "这个好",
+      "response": {
+        "kind": "confirm",
+        "text": "✅ 好，后面都这样译。",
+        "feedback_snapshot": "这个好",
+        "generated_at": "2026-05-29T11:58:44.977200+08:00"
+      }
+    },
+    {
+      "type": "user_feedback",
+      "date": "2026-05-28",
+      "rule_id": "product_name_order",
+      "rule": {
+        "id": "product_name_order",
+        "title": "产品+型号顺序",
+        "occurrences": 1,
+        "detail": "\"OLED Steam Deck\" → \"Steam Deck OLED\"（#6 标题）",
+        "needs_more_samples": true
+      },
+      "feedback": "这个以后都一律按这样排序",
+      "response": {
+        "kind": "confirm",
+        "text": "✅ 好，后面都这样译。",
+        "feedback_snapshot": "这个以后都一律按这样排序",
+        "generated_at": "2026-05-29T11:58:44.977200+08:00"
+      }
+    },
+    {
+      "type": "user_feedback",
+      "date": "2026-05-28",
+      "rule_id": "company_as_subject",
+      "rule": {
+        "id": "company_as_subject",
+        "category": "标题偏好",
+        "title": "公司名直接做主语",
+        "evidence": "#14",
+        "detail": "你倾向「暴雪：...」而非「暴雪老板：...」",
+        "examples": [
+          "「暴雪老板：《守望先锋2》动画剧集不排除可能」 → 「暴雪：不排除《守望先锋2》动画剧集的可能性」"
+        ]
+      },
+      "feedback": "这是个例，这个不需要",
+      "response": {
+        "kind": "reject",
+        "text": "❌ 收到，「公司名直接做主语」不当作通用规则。",
+        "feedback_snapshot": "这是个例，这个不需要",
+        "generated_at": "2026-05-29T11:58:44.977200+08:00"
+      }
+    },
+    {
+      "type": "user_feedback",
+      "date": "2026-05-28",
+      "rule_id": "subtitle_required",
+      "rule": {
+        "id": "subtitle_required",
+        "category": "标题/副标题偏好",
+        "title": "每篇必须有副标题",
+        "evidence": "8/8 篇（强信号）",
+        "detail": "你给所有 8 篇都加了 1-6 字的副标题，作为正文情绪/角度的高度浓缩",
+        "examples": [
+          "#6「老问题」",
+          "#9「斯坦始终相信，要在粉丝所在的地方与他们见面」",
+          "#12「经典旋律」",
+          "#13「最后一搏」",
+          "#14「本质动画公司」",
+          "#22「或许马上就要官宣」",
+          "#31「中土世界又有新游戏了」",
+          "#32「收编」"
+        ]
+      },
+      "feedback": "这个好",
+      "response": {
+        "kind": "confirm",
+        "text": "✅ 好，后面都这样译。",
+        "feedback_snapshot": "这个好",
+        "generated_at": "2026-05-29T11:58:44.977200+08:00"
+      }
+    }
+  ],
+  "candidates": [
+    {
+      "id_hint": "product_name_order",
+      "title": "产品名+型号顺序",
+      "rule": "英文产品名与型号组合时，按中文习惯将型号后置，如 'Steam Deck OLED' 而非 'OLED Steam Deck'。",
+      "category": "dictionary",
+      "scope": "all",
+      "status_suggestion": "confirm",
+      "confidence": 0.9,
+      "evidence_summary": "用户明确反馈'这个以后都一律按这样排序'，且所有类似情况均如此处理。",
+      "examples": [
+        {
+          "date": "2026-05-28",
+          "article_id": 6,
+          "before": "OLED Steam Deck",
+          "after": "Steam Deck OLED"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id_hint": "summer_game_fest",
+      "title": "Summer Game Fest 译名",
+      "rule": "Summer Game Fest 译为「夏日游戏节」，不使用「夏季游戏节」等。",
+      "category": "dictionary",
+      "scope": "all",
+      "status_suggestion": "confirm",
+      "confidence": 0.8,
+      "evidence_summary": "用户将原文'Summer Game Fest'改为'夏日游戏节'，符合专有活动惯用译名。",
+      "examples": [
+        {
+          "date": "2026-05-28",
+          "article_id": 22,
+          "before": "Summer Game Fest",
+          "after": "夏日游戏节"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id_hint": "company_name_with_chinese",
+      "title": "知名公司首次出现加中文注释",
+      "rule": "当外国公司有通用中文译名时，第一次出现采用'中文名（英文名）'格式，之后直接用中文名。",
+      "category": "names",
+      "scope": "all",
+      "status_suggestion": "observe",
+      "confidence": 0.5,
+      "evidence_summary": "文章#31中，Warhorse Studios 首次出现写作'战马工作室（Warhorse Studios）'，之后用'战马工作室'。该规则可能与现有'英文注释三档规则'类似，但原规则仅针对游戏名。",
+      "examples": [
+        {
+          "date": "2026-05-28",
+          "article_id": 31,
+          "before": "Warhorse Studios",
+          "after": "战马工作室（Warhorse Studios）"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id_hint": "first_person_to_ign",
+      "title": "正文避免第一人称，改用机构名",
+      "rule": "翻译时，将正文中的第一人称'我'改为'IGN'，以保持客观口吻。",
+      "category": "body",
+      "scope": "all",
+      "status_suggestion": "observe",
+      "confidence": 0.3,
+      "evidence_summary": "#12中将'我'改为'IGN'，但#14中保留了'我'，可能并非所有文章都适用。",
+      "examples": [
+        {
+          "date": "2026-05-28",
+          "article_id": 12,
+          "before": "我",
+          "after": "IGN"
+        }
+      ],
+      "contradiction": "#14 段落2 未改动第一人称"
+    }
+  ],
+  "notes": [
+    "本次新确认的规则：产品型号顺序、夏日游戏节译名。",
+    "待观察规则：公司名中文注释、第一人称处理。",
+    "用户已明确拒绝「公司名直接做主语」规则。",
+    "删除更新时间、副标题、金额格式等已有规则得到进一步确认，无需新增候选。"
+  ],
+  "repaired_json": false,
+  "updated_at": "2026-06-03T15:55:24+08:00"
+}

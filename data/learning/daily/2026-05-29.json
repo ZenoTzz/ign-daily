@@ -1,0 +1,538 @@
+{
+  "date": "2026-05-29",
+  "model": "deepseek-v4-pro",
+  "status": "skipped",
+  "reason": "json_parse_failed",
+  "source_hash": "42f914fab97fe5c1392c5fa440b3f745ccee12f5",
+  "signal_count": 17,
+  "candidate_count": 0,
+  "signals": [
+    {
+      "type": "user_polish",
+      "date": "2026-05-29",
+      "article_id": 2,
+      "url": "https://www.ign.com/articles/rambo-prequel-gets-summer-2027-release-date",
+      "en_title": "Rambo Prequel Gets Summer 2027 Release Date",
+      "cn_title": "《第一滴血》前传电影定档2027年夏季",
+      "edits": [
+        {
+          "field": "subtitle",
+          "before": "",
+          "after": "第N滴血"
+        },
+        {
+          "field": "paragraph_1",
+          "before": "热血再启。",
+          "after": "《第一滴血》前传电影定档2027年夏季热血再启。《约翰·兰博(John Rambo)》，一部聚焦这位经典硬汉角色的前传电影，正式定档。狮门影业确认，这部由Noah Centineo主演的新片将于2027年6月4日上映（中国大陆暂未定档），夹在Shawn Levy的《星球大战：星际战机》和《驯龙高手2》真人版之间。"
+        },
+        {
+          "field": "paragraph_2",
+          "before": "《约翰·兰博》(John Rambo),一部聚焦这位经典硬汉角色的前传电影,正式定档。狮门影业(Lionsgate)确认,这部由诺亚·森提内奥(Noah Centineo)主演的新片将于2027年6月4日上映,夹在肖恩·李维(Shawn Levy)的《星球大战:星际战机》和《驯龙高手2》真人版之间。",
+          "after": "关于《约翰·兰博》目前透露的信息不多，只知道它将向影迷讲述这个角色越战时期的起源故事。西尔维斯特·史泰龙预计不会出演，但会担任执行制片人。他上一次饰演兰博是在《第一滴血5：最后的血》中，那部由他参与编剧的终结篇评价不佳。这次接棒的Noah Centineo同时还在筹拍中的《街头霸王》电影里饰演肯，与他搭档的还有出演特劳特曼少校的David Harbour，以及近十年没演过好莱坞主流大片的James Franco将客串一个未公开的小角色。"
+        },
+        {
+          "field": "paragraph_3",
+          "before": "关于《约翰·兰博》目前透露的信息不多,只知道它将向影迷讲述这个角色越战时期的起源故事。西尔维斯特·史泰龙(Sylvester Stallone)预计不会出演,但会担任执行制片人。他上一次饰演兰博是在《第一滴血5:最后一滴血》中,那部由他参与编剧的终结篇评价不佳。这次接棒的诺亚·森提内奥(Noah Centineo)同时还在筹拍中的《街头霸王》电影里饰演肯,与他搭档的还有出演特劳特曼少校的大卫·哈伯(David Harbour),以及近十年没演过好莱坞主流大片的詹姆斯·弗兰科(James Franco)将客串一个未公开的小角色。",
+          "after": "影片由《诺斯费拉图》导演Jalmari Helander执导，剧本出自《黑亚当》联合编剧Rory Haines和Sohrab Noshirvani之手。漫威传奇罗素兄弟也将通过他们的制片公司AGBO出任执行制片人。"
+        },
+        {
+          "field": "paragraph_4",
+          "before": "影片由《诺斯费拉图》导演贾尔马里·赫兰德(Jalmari Helander)执导,剧本出自《黑亚当》联合编剧罗里·海恩斯(Rory Haines)和索拉布·诺什万尼(Sohrab Noshirvani)之手。漫威传奇罗素兄弟(The Russo Brothers)也将通过他们的制片公司AGBO出任执行制片人。",
+          "after": "前传的拍摄已于今年早些时候杀青。但目前还不清楚是否有让Centineo继续出演续集的计划——毕竟兰博这个角色生命中最关键的几个节点，已经在过去的五部电影里反复呈现过了。后期作品也都聚焦在角色的中老年阶段，这让一个年轻演员很难填补这些电影之间的剧情空白。"
+        }
+      ]
+    },
+    {
+      "type": "user_polish",
+      "date": "2026-05-29",
+      "article_id": 6,
+      "url": "https://www.ign.com/articles/cd-projekt-teases-size-and-story-of-new-the-witcher-3-expansion-songs-of-the-past",
+      "en_title": "CD Projekt Teases Size and Story of New The Witcher 3 Expansion Songs of the Past",
+      "cn_title": "CDPR透露《巫师3》新资料片规模与剧情",
+      "edits": [
+        {
+          "field": "title",
+          "before": "CDPR透露《巫师3》新资料片规模与剧情",
+          "after": "CDPR透露《巫师3》新资料片规模与剧情线索"
+        },
+        {
+          "field": "subtitle",
+          "before": "",
+          "after": "急急急急急"
+        },
+        {
+          "field": "paragraph_1",
+          "before": "「这是一把非常重要的剑……」",
+          "after": "《巫师3》开发商CDPR首次披露即将到来的第三部资料片《旧时曲》的剧情线索。\n昨日正式公布的《旧时曲》将于2027年登陆PC、PS5和Xbox Series平台,玩家将再次扮演传奇猎魔人杰洛特。\n这部资料片将在《巫师3》本体2015年发售的12年后推出,距离2016年发售的第二部资料片《血与酒》整整11年。玩家普遍期待它的剧情能起到承接即将推出的《巫师4》的桥梁作用,后者目前仍未公布发售日。\n「我们现在不会透露太多,因为想让你们在游戏中亲自体验。」CDPR高级社区与社交媒体经理Laura Beitzel在今日《血与酒》十周年纪念直播中如此预告。\n「不过过去24小时里已经有眼尖的玩家发现,我们几周前发布的贝尔泰尼之夜庆祝插画里其实已经埋了线索。这是巫师世界观里非常重要的一个夜晚——所以,继续找线索吧。」\nBeit"
+        },
+        {
+          "field": "paragraph_2",
+          "before": "《巫师3》开发商CDPR首次披露即将到来的第三部资料片《旧时曲》的剧情线索。",
+          "after": "On Belleteyn night, when tall fires rise,\nWhispered wishes go through the quiet skies.\nA lion cub’s fate is penned in the stars,\nAnd lilac and gooseberries are never too far.\nTonight, there are no monsters to kill, no roads to roam,\nJust quiet thoughts and wishes that try to find a home.\nThe White Wolf sits still, mesmerized by the dancing flame,\nWhile Dande"
+        },
+        {
+          "field": "paragraph_3",
+          "before": "昨日正式公布的《往日之歌》将于2027年登陆PC、PlayStation 5和Xbox Series X/S平台,玩家将再次扮演传奇猎魔人杰洛特(Geralt)。",
+          "after": "「没错,杰洛特确实拿着一把剑,」CDPR的Amelia Korzycka继续谈到《旧时曲》的主视觉海报,「这是一把对剧情非常重要的剑,等游戏发售后你们就会了解它。在那之前我们还会有几次直播来揭晓更多细节。」\n拜兹尔也谈到了这部资料片的体量——正如先前所说,《旧时曲》是一部完整资料片,而非小型DLC或附加包。\n「《旧时曲》的体量将和《血与酒》看齐,与玩家对我们资料片的预期一致。它就是资料片,我们要把这一点说清楚。」\n今日直播还确认了《旧时曲》将加入更多昆特牌卡牌,同时CDPR仍在为《巫师3》开发跨平台模组(MOD)支持,未来会择期上线。\n最后,CDPR今日发布的最新财报确认了《巫师3》的全新累计销量数据——已达到6500万份,比上一次统计增加了500万份。等2027年《旧时曲》发售后,这个数字预计还会进一步攀升。"
+        }
+      ]
+    },
+    {
+      "type": "user_polish",
+      "date": "2026-05-29",
+      "article_id": 7,
+      "url": "https://www.ign.com/articles/call-of-duty-warzone-to-shut-down-on-ps4-and-xbox-one-as-modern-warfare-4-leaves-last-gen-consoles-behind",
+      "en_title": "Call of Duty: Warzone to Shut Down on PS4 and Xbox One as Modern Warfare 4 Leaves Last-Gen Consoles Behind",
+      "cn_title": "《使命召唤:战区》将关停PS4和Xbox One版本",
+      "edits": [
+        {
+          "field": "title",
+          "before": "《使命召唤:战区》将关停PS4和Xbox One版本",
+          "after": "《使命召唤：战区》将关停PS4和Xbox One版本"
+        },
+        {
+          "field": "subtitle",
+          "before": "",
+          "after": "再见了，老朋友"
+        },
+        {
+          "field": "paragraph_1",
+          "before": "动视确认《使命召唤:战区》(Call of Duty: Warzone)即将在PlayStation 4和Xbox One平台关停,这是即将发售的《现代战争4》全面放弃上世代主机的连锁举措之一。",
+          "after": "动视确认《使命召唤：战区》即将在PS4和Xbox One平台关停，这是即将发售的《使命召唤：现代战争4》全面放弃上世代主机的连锁举措之一。"
+        },
+        {
+          "field": "paragraph_2",
+          "before": "《现代战争4》将于10月发售,登陆PC、Xbox Series X/S、PlayStation 5和Nintendo Switch 2四个平台,不再推出PS4和Xbox One版本。",
+          "after": "《现代战争4》将于10月发售，登陆PC、Xbox Series、PS5和Switch 2四个平台，不再推出PS4和Xbox One版本。《现代战争4》将于10月23日发售，首个赛季紧随其后启动，届时《战区》将与《现代战争4》的内容和赛季进度全面打通。"
+        },
+        {
+          "field": "paragraph_3",
+          "before": "《现代战争4》将于10月23日发售,首个赛季紧随其后启动,届时《战区》将与《现代战争4》的内容和赛季进度全面打通。",
+          "after": "但真正重磅的消息是：首个赛季开启的同时，《战区》PS4和Xbox One版本将彻底无法再玩。在那之前，从6月4日起，这款大逃杀游戏就将停止对上述平台的新下载——已下载的玩家可以继续玩到第一赛季开启。部分《使命召唤》系列内购也将在这些平台上下架。"
+        },
+        {
+          "field": "paragraph_4",
+          "before": "《使命召唤》系列最佳战役模式",
+          "after": "与此同时，6月25日《战区》PS4和Xbox One版的游戏内商店将被关闭。动视表示，玩家依然可以解锁免费战令等级，包括《黑色行动7》剩余赛季的新武器奖励。"
+        },
+        {
+          "field": "paragraph_5",
+          "before": "但真正重磅的消息是:首个赛季开启的同时,《战区》PS4/Xbox One版本将彻底无法再玩。在那之前,从6月4日起,这款大逃杀游戏就将停止对上述平台的新下载——已下载的玩家可以继续玩到第一赛季开启。部分《使命召唤》系列内购也将在这些平台上下架。",
+          "after": "PS4和Xbox One已经接近13岁，《使命召唤》系列从《现代战争4》开始全面拥抱次世代，《战区》随之跟进对动视来说几乎是必然——毕竟两款游戏共享内容生态。但这依然带着一丝时代终结的味道——《战区》是2020年初横空出世的现象级作品，那时PS5和Xbox Series甚至还没发售。"
+        }
+      ]
+    },
+    {
+      "type": "user_polish",
+      "date": "2026-05-29",
+      "article_id": 10,
+      "url": "https://www.ign.com/articles/planet-zoo-2-coming-this-year-featuring-flying-and-aquatic-animals",
+      "en_title": "Planet Zoo 2 Coming This Year, Featuring Flying and Aquatic Animals",
+      "cn_title": "《动物园之星2》年内推出,新增飞行与水生动物",
+      "edits": [
+        {
+          "field": "title",
+          "before": "《动物园之星2》年内推出,新增飞行与水生动物",
+          "after": "《动物园之星2》年内推出，新增飞行与水生动物"
+        },
+        {
+          "field": "subtitle",
+          "before": "",
+          "after": "新园长上工"
+        },
+        {
+          "field": "paragraph_1",
+          "before": "一款你没想到会有的鳕鱼模拟。",
+          "after": "Frontier Developments正式公布《动物园之星2》，系列首次加入飞行禽类和水生动物，玩家可以建造完整的鸟舍和水族馆。"
+        },
+        {
+          "field": "paragraph_2",
+          "before": "Frontier Developments正式公布《动物园之星2》(Planet Zoo 2),系列首次加入飞行禽类和水生动物,玩家可以建造完整的鸟舍和水族馆。",
+          "after": "这部动物园模拟续作将于10月13日登陆PC、PS5和Xbox Series，距离Frontier首部《动物园之星》开门迎客已过去近七年。"
+        },
+        {
+          "field": "paragraph_3",
+          "before": "这部动物园模拟续作将于10月13日登陆PC、PlayStation 5和Xbox Series X/S,距离Frontier首部《动物园之星》开门迎客已过去近七年。",
+          "after": "Frontier今日在公布《动物园之星2》时，称本作在「动画和动物行为上是跨世代的飞跃」，视觉表现大幅升级，玩法上更加聚焦保育主题——玩家可以修复自然栖息地，把动物放归野生保护区。"
+        },
+        {
+          "field": "paragraph_4",
+          "before": "Frontier今日在公布《动物园之星2》时,称本作在「动画和动物行为上是跨世代的飞跃」,视觉表现大幅升级,玩法上更加聚焦保育主题——玩家可以修复自然栖息地,把动物放归野生保护区。",
+          "after": "本作新增的水生物种包括黑鳍礁鲨、玳瑁海龟、各色鱼群，鸟类则有托哥巨嘴鸟和蛇鹫等。"
+        },
+        {
+          "field": "paragraph_5",
+          "before": "本作新增的水生物种包括黑鳍礁鲨、玳瑁海龟、各色鱼群,鸟类则有托哥巨嘴鸟(Toco Toucan)和蛇鹫(Secretary Bird)等。",
+          "after": "与前作一样，玩家依然需要平衡运营动物园的各种需求——既要让游客、员工和动物三方都满意，也要保证收入足够维持运营。"
+        },
+        {
+          "field": "paragraph_6",
+          "before": "《动物园之星2》游戏截图",
+          "after": "说到价格，《动物园之星2》将以49.99美元（约合人民币358元）的价格发售，国区Steam商店定价200元，预购现已开放。预购奖励包括「巨嘴鸟食坊与招牌」、3 种动物捐款箱和「老虎合影立板」（发售时一并解锁），还有豪华版可选。"
+        }
+      ]
+    },
+    {
+      "type": "user_polish",
+      "date": "2026-05-29",
+      "article_id": 11,
+      "url": "https://www.ign.com/articles/take-two-boss-says-former-rockstar-employees-have-tried-to-match-gtas-success-and-failed-and-we-all-know-which-game-hes-talking-about",
+      "en_title": "Take-Two Boss Says 'Former Rockstar Employees' Have Tried to Match GTA's Success and Failed — and We All Know Which Game He's Talking About",
+      "cn_title": "Take-Two老板暗讽前Rockstar员工挑战GTA失败",
+      "edits": [
+        {
+          "field": "title",
+          "before": "Take-Two老板暗讽前Rockstar员工挑战GTA失败",
+          "after": "Take-Two老板暗讽前Rockstar员工挑战《GTA》失败"
+        },
+        {
+          "field": "subtitle",
+          "before": "",
+          "after": "「做出爆款似乎越来越难了」"
+        },
+        {
+          "field": "paragraph_1",
+          "before": "「做出爆款似乎越来越难了。」",
+          "after": "《GTA6》发行商Take-Two的老板Strauss Zelnick谈到了开发爆款游戏的困难，过程中似乎对《心之眼》做了一次明显的暗讽。"
+        },
+        {
+          "field": "paragraph_2",
+          "before": "《GTA6》发行商Take-Two Interactive的老板施特劳斯·泽尼克(Strauss Zelnick)谈到了开发爆款游戏的困难,过程中似乎对《《心之眼》》做了一次明显的暗讽。",
+          "after": "《心之眼》正是Build a Rocket Boy工作室那部臭名昭著的处女作。这家工作室的创始人Leslie Benzies是Rockstar的老兵。经过多年开发、怀揣宏大的元宇宙野心，《心之眼》最终却作为一款Bug满天飞、口碑崩盘的烂作发售，导致数百人被裁员。"
+        },
+        {
+          "field": "paragraph_3",
+          "before": "《《心之眼》》正是Build a Rocket Boy工作室那部臭名昭著的处女作。这家工作室的创始人莱斯利·本齐斯(Leslie Benzies)是Rockstar的老兵。经过多年开发、怀揣宏大的元宇宙野心,《《心之眼》》最终却作为一款Bug满天飞、口碑崩盘的烂作发售,导致数百人被裁员。",
+          "after": "「随着娱乐产业的成熟，做出爆款似乎变得越来越难了。」Zelnick在TD Cowen第54届年度科技、传媒与电信大会上说道，「Rockstar的人似乎总能做出这种现象级爆款，很多人想复制——非常非常多人，包括前Rockstar员工。但到目前为止，他们都没能做到。」"
+        },
+        {
+          "field": "paragraph_4",
+          "before": "「随着娱乐产业的成熟,做出爆款似乎变得越来越难了。」泽尼克在TD Cowen第54届年度科技、传媒与电信大会上说道,「Rockstar的人似乎总能做出这种现象级爆款,很多人想复制——非常非常多人,包括前Rockstar员工。但到目前为止,他们都没能做到。」",
+          "after": "「当然这不代表他们将来做不到，」Zelnick接着说，「我们始终保持危机感。但改变这一切的不会是技术，而是某个或某些非凡的创意天才出现，做出惊艳的东西。我们的目标就是让这些人愿意在Take-Two的体系内工作。如果做不到，那我们就失败了。」"
+        },
+        {
+          "field": "paragraph_5",
+          "before": "「当然这不代表他们将来做不到,」泽尼克接着说,「我们始终保持危机感。但改变这一切的不会是技术,而是某个或某些非凡的创意天才出现,做出惊艳的东西。我们的目标就是让这些人愿意在Take-Two的体系内工作。如果做不到,那我们就失败了。」",
+          "after": "Zelnick随后谈到《GTA6》漫长的等待——并把系列发售之间的间隔描述为一种优势。他表示，与其他游戏发行商不同，他始终确保Take-Two除体育游戏外从不让旗下系列年货化。换言之，他不会效仿动视每年都要推出一部《使命召唤》大作，也不会像育碧过去那样把《刺客信条》变成年货。"
+        },
+        {
+          "field": "paragraph_6",
+          "before": "《GTA6》预告片99处细节图集",
+          "after": "「我们的策略不是围绕作品设定固定节奏，因为我们从来不是一家被节奏驱动的公司，」Zelnick说，「将近20年前我刚到Take-Two时，我没有像其他人那样说‘我们要把产品像钟表一样年度化’。当时我就是个异类。」"
+        }
+      ]
+    },
+    {
+      "type": "user_polish",
+      "date": "2026-05-29",
+      "article_id": 13,
+      "url": "https://www.ign.com/articles/developer-of-steam-hit-life-sim-paralives-explains-how-it-can-manage-without-selling-paid-dlc",
+      "en_title": "Developer of Steam Hit Life Sim Paralives Explains How It Can Manage Without Selling Paid DLC",
+      "cn_title": "Steam人气模拟游戏Paralives如何不靠付费DLC生存",
+      "edits": [
+        {
+          "field": "title",
+          "before": "Steam人气模拟游戏Paralives如何不靠付费DLC生存",
+          "after": "Steam人气模拟游戏《平行人生》如何不靠付费DLC生存"
+        },
+        {
+          "field": "subtitle",
+          "before": "",
+          "after": "「这是我们作为生活模拟游戏玩家自己也希望看到的」"
+        },
+        {
+          "field": "paragraph_1",
+          "before": "「这是我们作为生活模拟游戏玩家自己也希望看到的。」",
+          "after": "对标《模拟人生》的《平行人生》开发团队近日在Reddit AMA(随便问)中回答了社区的各种问题,详细谈到了优先修复方向、团队扩张计划，以及为何永远不推出付费DLC。"
+        },
+        {
+          "field": "paragraph_2",
+          "before": "对标《模拟人生》的平行人生开发团队近日在Reddit AMA(随便问)中回答了社区的各种问题,详细谈到了优先修复方向、团队扩张计划,以及为何永远不推出付费DLC。",
+          "after": "《平行人生》于5月25日在Steam以抢先体验形式发售,反响相当亮眼:同时在线人数峰值达到78603人,目前已累计超过5200条用户评测,好评率88%。"
+        },
+        {
+          "field": "paragraph_3",
+          "before": "平行人生于5月25日在Steam以抢先体验形式发售,反响相当亮眼:同时在线人数峰值达到78,603人,目前已累计超过5,200条用户评测,好评率88%。",
+          "after": "为庆祝发售,工作室创始人兼主开发者Alex Massé与团队其他成员一起回答了玩家提问。有玩家关心角色「自主行为」问题,提出「既然这是一款生活模拟游戏,但游戏角色在没人和他们互动时只会站着发呆——这件事应该被优先解决」。Massé认同这一观点,回应道:「自主行为绝对是游戏一个非常核心的功能,需要更多打磨、更多平衡,尤其是更多内容。抢先体验阶段我们会增加更多自主行为和互动选项,角色会做的事情会更丰富。」"
+        },
+        {
+          "field": "paragraph_4",
+          "before": "为庆祝发售,工作室创始人兼主开发者亚历克斯·马塞(Alex Massé)与团队其他成员一起回答了玩家提问。有玩家关心角色「自主行为」问题,提出「既然这是一款生活模拟游戏,但Para角色在没人和他们互动时只会站着发呆——这件事应该被优先解决」。马塞认同这一观点,回应道:「自主行为绝对是游戏一个非常核心的功能,需要更多打磨、更多平衡,尤其是更多内容。抢先体验阶段我们会增加更多自主行为和互动选项,角色会做的事情会更丰富。」",
+          "after": "团队也直接回答了关于「成人内容MOD」的问题。当被问及团队立场时,QA Charlotte表示:「只要遵守Steam对用户上传内容的相关规则、并正确标记为成人内容,就没问题!我们仅对Steam创意工坊内的MOD进行管理,工坊外的任何内容都不在我们的管辖范围内。」"
+        },
+        {
+          "field": "paragraph_5",
+          "before": "团队也直接回答了关于「成人内容MOD」的问题。当被问及团队立场时,QA夏洛特(Charlotte)表示:「只要遵守Steam对用户上传内容的相关规则、并正确标记为成人内容,就没问题!我们仅对Steam创意工坊内的MOD进行管理,工坊外的任何内容都不在我们的管辖范围内。」",
+          "after": "但真正让大批玩家兴奋的,是团队承诺永不推出付费DLC。意料之中,玩家也对此提出了很多问题。"
+        },
+        {
+          "field": "paragraph_6",
+          "before": "但真正让大批玩家兴奋的,是团队承诺永不推出付费DLC。意料之中,玩家也对此提出了很多问题。",
+          "after": "「你们说『《平行人生》永远不会有付费DLC』,这真的非常棒——但你们打算怎么持续维持开发?在我看来这是个风险,」一位玩家说,「会推出周边商品、合作内容或任何形式的付费内容吗?」"
+        }
+      ]
+    },
+    {
+      "type": "user_polish",
+      "date": "2026-05-29",
+      "article_id": 18,
+      "url": "https://www.ign.com/articles/subnautica-2-has-sold-so-well-that-krafton-has-to-pay-that-250-million-earnout-to-the-devs",
+      "en_title": "Subnautica 2 Has Sold So Well That Krafton Has to Pay That $250 Million Earnout to the Devs",
+      "cn_title": "《深海迷航2》大卖 Krafton支付2.5亿美元(约合人民币18亿元)激励金",
+      "edits": [
+        {
+          "field": "title",
+          "before": "《深海迷航2》大卖 Krafton支付2.5亿美元(约合人民币18亿元)激励金",
+          "after": "《深海迷航2》大卖，发行商Krafton被迫支付2.5亿美元激励金"
+        },
+        {
+          "field": "subtitle",
+          "before": "",
+          "after": "不差钱"
+        },
+        {
+          "field": "paragraph_1",
+          "before": "不差钱。",
+          "after": "《深海迷航2》销量惊人,发行商Krafton据报道已同意向开发团队支付2.5亿美元(约合人民币18亿元)的业绩对赌奖金。而这笔奖金正是Krafton与被解雇的Unknown Worlds管理层那场轰动业内的法律纠纷的核心争议焦点。"
+        },
+        {
+          "field": "paragraph_2",
+          "before": "《深海迷航2》(Subnautica 2)销量惊人,发行商Krafton据报道已同意向开发团队支付2.5亿美元(约合人民币18亿元)的业绩对赌奖金。而这笔奖金正是Krafton与被解雇的Unknown Worlds管理层那场轰动业内的法律纠纷的核心争议焦点。",
+          "after": "这款水下冒险游戏自5月14日抢先体验上线以来已售出400万份,Steam峰值同时在线人数突破46.7万。但它的开发历程并不平静——Krafton去年夏天解雇了Unknown Worlds的CEO Ted Gill及其他几位核心成员。当时Krafton表示游戏发售也被推迟,并把锅甩给了Gill,即便其团队当时正全力冲刺一个能让他们拿到这笔2.5亿美元奖金的抢先体验发售目标。"
+        },
+        {
+          "field": "paragraph_3",
+          "before": "这款水下冒险游戏自5月14日抢先体验上线以来已售出400万份,Steam峰值同时在线人数突破46.7万。但它的开发历程并不平静——Krafton去年夏天解雇了Unknown Worlds的CEO泰德·吉尔(Ted Gill)及其他几位核心成员。当时Krafton表示游戏发售也被推迟,并把锅甩给了吉尔,即便其团队当时正全力冲刺一个能让他们拿到这笔2.5亿美元奖金的抢先体验发售目标。",
+          "after": "Gill和他的前同事们随即起诉Krafton,指控Krafton是为了逃避支付这笔奖金而把他们扫地出门。Krafton则反诉,称被解雇的员工是「诉诸诉讼来索取他们根本没赚到的数百万美元报酬」。Krafton还指控被解雇者预谋诉讼,提前盗取了公司文件,使得双方分手的过程更加扑朔迷离。"
+        },
+        {
+          "field": "paragraph_4",
+          "before": "吉尔和他的前同事们随即起诉Krafton,指控Krafton是为了逃避支付这笔奖金而把他们扫地出门。Krafton则反诉,称被解雇的员工是「诉诸诉讼来索取他们根本没赚到的数百万美元报酬」。Krafton还指控被解雇者预谋诉讼,提前盗取了公司文件,使得双方分手的过程更加扑朔迷离。",
+          "after": "今年3月,法庭做出了游戏行业历史上最具戏剧性的裁决之一——Krafton被裁定必须恢复Gill的职位,并向员工兑现这笔2.5亿美元奖金。今日,韩国商业媒体的报道显示,Krafton已正式同意支付这笔款项。"
+        },
+        {
+          "field": "paragraph_5",
+          "before": "今年3月,法庭做出了游戏行业历史上最具戏剧性的裁决之一——Krafton被裁定必须恢复吉尔的职位,并向员工兑现这笔2.5亿美元奖金。今日,韩国商业媒体的报道显示,Krafton已正式同意支付这笔款项。",
+          "after": "据Alinea Analytics分析,《深海迷航2》仅一周就创造了1亿美元(约合人民币7.16亿元)的收入,是2026年迄今Steam上销售最快的游戏。《韩国经济日报》报道,Krafton 2021年收购Unknown Worlds时签的协议规定:工作室每月营收超过6,980万美元(约合人民币5亿元)时,Krafton需以「每收1美元、付3.12美元」的比例向原股东支付奖金,上限2.5亿美元——这相当于Krafton去年营业利润的约35%。如今Krafton已不得不面对这笔账单。"
+        },
+        {
+          "field": "paragraph_6",
+          "before": "据Alinea Analytics分析,《深海迷航2》仅一周就创造了1亿美元(约合人民币7.16亿元)的收入,是2026年迄今Steam上销售最快的游戏。《韩国经济日报》报道,Krafton 2021年收购Unknown Worlds时签的协议规定:工作室每月营收超过6,980万美元(约合人民币5亿元)时,Krafton需以「每收1美元、付3.12美元」的比例向原股东支付奖金,上限2.5亿美元——这相当于Krafton去年营业利润的约35%。如今Krafton已不得不面对这笔账单。",
+          "after": "这场Krafton与Unknown Worlds股东之间的法律战揭露了Krafton在《深海迷航2》发售前一系列令人咋舌的内部操作。法庭裁决书显示,Krafton内部预测显示《深海迷航2》销量极有可能触发对赌条款时,Krafton CEO金昌汉(Changhan Kim)认为这是一笔「糟糕的交易」,觉得自己「被占了便宜」。"
+        }
+      ]
+    },
+    {
+      "type": "user_feedback",
+      "date": "2026-05-29",
+      "rule_id": "fullwidth_comma_title",
+      "rule": {
+        "id": "fullwidth_comma_title",
+        "title": "标题用全角逗号",
+        "signal": "中等信号",
+        "examples": [
+          "#7: 战区:→战区：, #10: 推出,→推出，"
+        ],
+        "evidence": "5/7",
+        "detail": "标题中半角逗号,改为全角，",
+        "category": "标题/副标题偏好"
+      },
+      "feedback": "对，之后都用中文标点。",
+      "response": {
+        "kind": "confirm",
+        "text": "✅ 好，标题一律全角标点。",
+        "generated_at": "2026-05-29T17:00:00+08:00"
+      }
+    },
+    {
+      "type": "user_feedback",
+      "date": "2026-05-29",
+      "rule_id": "platform_short",
+      "rule": {
+        "id": "platform_short",
+        "title": "平台名简写",
+        "signal": "强信号",
+        "examples": [
+          "#7: PlayStation 4→PS4",
+          "#10: PlayStation 5→PS5, Xbox Series X/S→Xbox Series"
+        ],
+        "evidence": "5/7",
+        "detail": "PlayStation 5→PS5, Xbox Series X/S→Xbox Series, Nintendo Switch 2→Switch 2",
+        "category": "词汇偏好"
+      },
+      "feedback": "以后的翻译也按照我这样来",
+      "response": {
+        "kind": "confirm",
+        "text": "✅ 好，PS5/Xbox Series/Switch 2 这种简写以后都用。",
+        "generated_at": "2026-05-29T17:00:00+08:00"
+      }
+    },
+    {
+      "type": "user_feedback",
+      "date": "2026-05-29",
+      "rule_id": "rm_embedded_titles",
+      "rule": {
+        "id": "rm_embedded_titles",
+        "title": "删除文内嵌入标题",
+        "signal": "强信号",
+        "examples": [
+          "#6: 「CDPR当前在研全部作品」删除",
+          "#11: 「《GTA6》预告片99处细节图集」删除",
+          "#7: 「《使命召唤》系列最佳战役模式」删除"
+        ],
+        "evidence": "5/7",
+        "detail": "IGN原文中穿插的推荐卡片标题(如「CDPR当前在研全部作品」「《GTA6》预告片99处细节图集」「《使命召唤》系列最佳战役模式」)应在翻译时直接剥离。",
+        "category": "句式偏好"
+      },
+      "feedback": "正确的",
+      "response": {
+        "kind": "confirm",
+        "text": "✅ 好，IGN 内嵌推荐标题一律删。",
+        "generated_at": "2026-05-29T17:00:00+08:00"
+      }
+    },
+    {
+      "type": "user_feedback",
+      "date": "2026-05-29",
+      "rule_id": "rm_hook_sentence",
+      "rule": {
+        "id": "rm_hook_sentence",
+        "title": "IGN副标题保留但可修改",
+        "signal": "强信号",
+        "examples": [
+          "#2: 副标题由用户改为「第N滴血」",
+          "#6: 副标题由用户改为「急急急急急」"
+        ],
+        "evidence": "7/7",
+        "detail": "首段短句是IGN原文的副标题(subheadline),翻译时保留,用户有时会修改内容但不删除。不要误判为AI自创hook。",
+        "category": "标题/副标题偏好"
+      },
+      "feedback": "你添加的这个是IGN官方的副标题，我有时候会做修改",
+      "response": {
+        "kind": "refine",
+        "text": "✏️ 明白了——那个是 IGN 原文副标题，不是我自创的。以后保留，你改内容我跟着学。",
+        "generated_at": "2026-05-29T17:00:00+08:00"
+      }
+    },
+    {
+      "type": "user_feedback",
+      "date": "2026-05-29",
+      "rule_id": "keep_name_en",
+      "rule": {
+        "id": "keep_name_en",
+        "title": "不知名人物保留英文名",
+        "signal": "强信号",
+        "examples": [
+          "#2: 诺亚·森提内奥→Noah Centineo",
+          "#18: 泰德·吉尔→Ted Gill",
+          "#13: 亚历克斯·马塞→Alex Massé"
+        ],
+        "evidence": "7/7",
+        "detail": "如 Ted Gill、Alex Massé、Noah Centineo 等不翻译成中文音译。只有极知名人物(如西尔维斯特·史泰龙)才用中文。",
+        "category": "词汇偏好"
+      },
+      "feedback": "对",
+      "response": {
+        "kind": "confirm",
+        "text": "✅ 好，不知名人物保留英文。",
+        "generated_at": "2026-05-29T17:00:00+08:00"
+      }
+    },
+    {
+      "type": "user_feedback",
+      "date": "2026-05-29",
+      "rule_id": "merge_paragraphs",
+      "rule": {},
+      "feedback": "没有吧，这个应该是你出问题了，我一般都是换行分段的，是不是因为我只换了一行你觉得这样不算分段？",
+      "response": {
+        "kind": "reject",
+        "text": "❌ 收到，这是 diff 脚本误判。你是正常分段的，可能是编辑器保存格式问题。我把这条规则撤了。",
+        "generated_at": "2026-05-29T17:00:00+08:00"
+      }
+    },
+    {
+      "type": "user_feedback",
+      "date": "2026-05-29",
+      "rule_id": "no_en_annotation",
+      "rule": {
+        "id": "no_en_annotation",
+        "title": "英文注释规则细化",
+        "signal": "强信号",
+        "examples": [
+          "《巫师3》(有官方译名,不注英文)",
+          "《平行人生(Paralives)》(无官方,有社区译名)",
+          "Build a Rocket Boy(完全无中文名,保留英文)"
+        ],
+        "evidence": "7/7",
+        "detail": "有官方中文译名→直接用中文不注英文；无官方但有社区流传译名→《中文名（英文名）》；完全无中文译名→保留英文原名。",
+        "category": "句式偏好"
+      },
+      "feedback": "没有官方中文译名的，大部分时候保留原英文，或者有社区流传广泛名字但没有官方中文名称时，一般采用《中文名（英文名）》。有官方中文译名的就采用官方译名，不需要注明原文。",
+      "response": {
+        "kind": "refine",
+        "text": "✏️ 明白了，细化为三档：有官方译名→纯中文；有社区译名→《中文（英文）》；无译名→保留英文。",
+        "generated_at": "2026-05-29T17:00:00+08:00"
+      }
+    },
+    {
+      "type": "user_feedback",
+      "date": "2026-05-29",
+      "rule_id": "dandelion_cn",
+      "rule": {
+        "id": "dandelion_cn",
+        "title": "Dandelion → 丹德里恩(非亚斯克尔)",
+        "occurrences": 1,
+        "detail": "用户在#6正文使用「丹德里恩」而非我的「亚斯克尔」"
+      },
+      "feedback": "以我的为准",
+      "response": {
+        "kind": "confirm",
+        "text": "✅ 好，丹德里恩，以你为准。",
+        "generated_at": "2026-05-29T17:00:00+08:00"
+      }
+    },
+    {
+      "type": "user_feedback",
+      "date": "2026-05-29",
+      "rule_id": "songs_of_past_rename",
+      "rule": {
+        "id": "songs_of_past_rename",
+        "title": "Songs of the Past → 旧时曲(非往日之歌)",
+        "occurrences": 1,
+        "detail": "用户在#6改为《旧时曲》,与之前的「往日之歌」不同,以用户版本为准"
+      },
+      "feedback": "就用旧时曲",
+      "response": {
+        "kind": "confirm",
+        "text": "✅ 好，旧时曲。",
+        "generated_at": "2026-05-29T17:00:00+08:00"
+      }
+    },
+    {
+      "type": "user_feedback",
+      "date": "2026-05-29",
+      "rule_id": "paralives_cn_name",
+      "rule": {
+        "id": "paralives_cn_name",
+        "title": "Paralives → 《平行人生》",
+        "occurrences": 1,
+        "detail": "用户在#13标题中将裸名Paralives改为《平行人生》,入词库"
+      },
+      "feedback": "以我的为准，入词库",
+      "response": {
+        "kind": "confirm",
+        "text": "✅ 好，平行人生，已入词库。",
+        "generated_at": "2026-05-29T17:00:00+08:00"
+      }
+    }
+  ],
+  "candidates": [],
+  "notes": [
+    "API returned malformed JSON; automatic repair did not produce valid JSON."
+  ],
+  "parse_error": "Expecting ',' delimiter: line 78 column 6 (char 2393)",
+  "repair_error": "Expecting ',' delimiter: line 21 column 6 (char 696)",
+  "raw_excerpt": "{ \"candidates\": [ { \"id_hint\": \"preserve_original_poetry\", \"title\": \"保留英文诗歌并单独成段\", \"rule\": \"当原文插入了非中文诗歌或歌词时，保留原文不翻译，并独立为一个段落。\", \"category\": \"body\", \"scope\": \"all\", \"status_suggestion\": \"observe\", \"confidence\": 0.6, \"evidence_summary\": \"用户将莎士比亚体诗歌作为独立段落保留，未进行翻译。仅出现一次但特征明显。\", \"examples\": [ { \"date\": \"2026-05-29\", \"article_id\": 6, \"before\": \"\", \"after\": \"On Belleteyn night, when tall fires rise,\\nWhispered wishes go through the quiet skies.\\nA lion cub’s fate is penned in the stars,\\nAnd lilac and gooseberries are never too far.\\n...\" } ], \"contradiction\": \"\" }, { \"id_hint\": \"supplement_steam_cn_price\", \"title\": \"补充国区Steam定价\", \"rule\": \"在首次提及游戏售价时，若该游戏在Steam上架，应补充国区Steam商店的人民币定价。\", \"category\": \"currency\", \"scope\": \"games\", \"status_suggestion\": \"confirm\", \"confidence\": 0.8, \"evidence_summary\": \"用户主动在#10的价格说明后添加“国区Steam商店定价200元”。结合此前已有的类似观察信号，可确认为用户偏好。\", \"examples\": [ { \"date\": \"2026-05-29\", \"article_id\": 10, \"before\": \"49.99美元（约合人民币358元）\", \"after\": \"49.99美元（约合人民币358元），国区Steam商店定价200元\" } ], \"contradiction\": \"\" }, { \"id_hint\": \"title_omit_cny_conversion\", \"title\": \"标题中省略人民币换算\", \"rule\": \"标题涉及美元金额时，可省略括号内的人民币换算，以保持标题简洁。\", \"category\": \"title\", \"scope\": \"all\", \"status_suggestion\": \"observe\", ",
+  "repair_excerpt": "{ \"candidates\": [ { \"id_hint\": \"preserve_original_poetry\", \"title\": \"保留英文诗歌并单独成段\", \"rule\": \"当原文插入了非中文诗歌或歌词时，保留原文不翻译，并独立为一个段落。\", \"category\": \"body\", \"scope\": \"all\", \"status_suggestion\": \"observe\", \"confidence\": 0.6, \"evidence_summary\": \"用户将莎士比亚体诗歌作为独立段落保留，未进行翻译。仅出现一次但特征明显。\", \"examples\": [ { \"date\": \"2026-05-29\", \"article_id\": 6, \"before\": \"\", \"after\": \"On Belleteyn night, when tall fires rise,\\nWhispered wishes go through the quiet skies.\\nA lion cub’s fate is penned in the stars,\\nAnd lilac and gooseberries are never too far.\\n...\" } ], \"contradiction\": \"\" }, { \"id_hint\": \"supplement_steam_cn_price\", \"title\": \"补充国区Steam定价\", \"rule\": \"在首次提及游戏售价时，若该游戏在Steam上架，应补充国区Steam商店的人民",
+  "updated_at": "2026-06-03T15:57:51+08:00"
+}

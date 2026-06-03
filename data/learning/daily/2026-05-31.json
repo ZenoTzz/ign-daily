@@ -1,0 +1,181 @@
+{
+  "date": "2026-05-31",
+  "model": "deepseek-v4-pro",
+  "status": "observed",
+  "source_hash": "227fcf16208f5b95b1d0eb8dca1bda6f377ef243",
+  "signal_count": 3,
+  "candidate_count": 3,
+  "signals": [
+    {
+      "type": "user_polish",
+      "date": "2026-05-31",
+      "article_id": 3,
+      "url": "https://www.ign.com/articles/stop-killing-games-gains-momentum-after-bill-passes-california-state-assembly-vote",
+      "en_title": "Stop Killing Games Gains Momentum After Bill Passes California State Assembly Vote",
+      "cn_title": "游戏保存运动获新进展 加州议会通过保护法案",
+      "edits": [
+        {
+          "field": "title",
+          "before": "游戏保存运动获新进展 加州议会通过保护法案",
+          "after": "游戏保存运动获新进展，加州议会通过保护法案"
+        },
+        {
+          "field": "subtitle",
+          "before": "",
+          "after": "漫漫长路"
+        },
+        {
+          "field": "paragraph_1",
+          "before": "「停止扼杀游戏」运动再迎重大里程碑——一项保护游戏免遭下线的法案刚刚在加州州议会投票中通过。",
+          "after": "游戏保存运动获新进展加州议会通过保护法案「停止扼杀游戏」运动再迎重大里程碑——一项保护游戏免遭下线的法案刚刚在加州州议会投票中通过。"
+        },
+        {
+          "field": "paragraph_6",
+          "before": "这些想法对「停止扼杀游戏」运动而言并不新鲜。2024年4月，油管主 Ross Scott在得知育碧将下架其开放世界赛车游戏《飙酷车神》（The Crew）并关闭服务器、令拥有者无法继续游玩的消息后，发起了这场消费者运动。该运动的目标是在一个已显露出阻止玩家获取体验趋势的产业中，让游戏——无论好坏——得以延续。最近的例子包括《星鸣特攻》（Concord）、《圣歌》（Anthem）和《巅峰守卫》。",
+          "after": "这些想法对「停止扼杀游戏」运动而言并不新鲜。2024年4月，油管主Ross Scott在得知育碧将下架其开放世界赛车游戏《飙酷车神》并关闭服务器、令拥有者无法继续游玩的消息后，发起了这场消费者运动。该运动的目标是在一个已显露出阻止玩家获取体验趋势的产业中，让游戏——无论好坏——得以延续。最近的例子包括《星鸣特攻》、《圣歌》和《巅峰守卫》。"
+        },
+        {
+          "field": "paragraph_8",
+          "before": "正如Ward所解释的，在「停止扼杀游戏」实现其「在发行商试图拔掉插头后让游戏继续运行」的目标之前，还有大量工作要做。与此同时，索尼最近宣布将下架并关闭PlayStation 5游戏《毁灭全明星》（Destruction AllStars）。发行商2K也在几周前宣布将下架《乐高2K竞速》并关闭其在线功能。",
+          "after": "正如Ward所解释的，在「停止扼杀游戏」实现其「在发行商试图拔掉插头后让游戏继续运行」的目标之前，还有大量工作要做。与此同时，索尼最近宣布将下架并关闭PS5游戏《毁灭全明星》。发行商2K也在几周前宣布将下架《乐高2K竞速》并关闭其在线功能。"
+        }
+      ]
+    },
+    {
+      "type": "user_polish",
+      "date": "2026-05-31",
+      "article_id": 6,
+      "url": "https://www.ign.com/articles/a-minecraft-movie-2-gets-official-title-ahead-of-july-2027-premiere",
+      "en_title": "A Minecraft Movie 2 Gets Official Title Ahead of July 2027 Premiere",
+      "cn_title": "《我的世界大电影2》正式定名，2027年7月上映",
+      "edits": [
+        {
+          "field": "paragraph_1",
+          "before": "《我的世界大电影》续集的演员阵容联手发布了一段视频，确认续集正式定名为「我的世界大电影 Squared」。",
+          "after": "《我的世界大电影》续集的演员阵容联手发布了一段视频，确认续集正式定名为《我的世界大电影 Squared》（或许可以翻译成《我的世界大电影²》）。"
+        },
+        {
+          "field": "paragraph_2",
+          "before": "将Mojang Studios热门沙盒游戏搬上大银幕的演员们——包括Jack Black（饰Steve）、Jason Momoa（饰Garrett）、Danielle Brooks（饰Dawn）——出席了2026年5月的我的世界 Live活动，带领观众探访新电影片场幕后。这是自2025年10月首次公布以来我们看到的最多内容，更重要的是，在等待2027年首映的同时，我们终于知道该怎么称呼它了。",
+          "after": "将Mojang Studios的热门沙盒游戏搬上大银幕的演员们——包括Jack Black（饰Steve）、Jason Momoa（饰Garrett）、Danielle Brooks（饰Dawn）——出席了2026年5月的我的世界 Live活动，带领观众探访新电影片场幕后。这是自2025年10月首次公布以来我们看到的最多内容，更重要的是，在等待2027年首映的同时，我们终于知道该怎么称呼它了。"
+        },
+        {
+          "field": "paragraph_6",
+          "before": "其他片场画面展示了Black走过一个洞穴，以及北极熊生物的概念图，随后Brooks预告续集中还将出现新的生物。除了Dunst饰演Alex的首次亮相外，视频将其他细节留给了观众想象，我们只需等待电影于2027年7月23日首映。",
+          "after": "其他片场画面展示了Black走过一个洞穴，以及北极熊生物的概念图，随后Brooks预告续集中还将出现新的生物。除了Dunst饰演Alex的首次亮相外，视频将其他细节留给了观众想象，我们只需等待电影于2027年7月23日首映，虽然中国大陆地区尚未定档。"
+        },
+        {
+          "field": "paragraph_7",
+          "before": "导演Jared Hess和Mojang首席创意官Jens Bergensten在最后宣布，开发商将通过「我的世界建造挑战赛」为新电影预热。入围者将受邀参加电影提前放映，而一位幸运获胜者的建筑作品将出现在电影片尾字幕中。",
+          "after": "导演Jared Hess和Mojang首席创意官Jens Bergensten在最后宣布，开发商将通过「《我的世界》建造挑战赛」为新电影预热。入围者将受邀参加电影提前放映，而一位幸运获胜者的建筑作品将出现在电影片尾字幕中。"
+        }
+      ]
+    },
+    {
+      "type": "user_polish",
+      "date": "2026-05-31",
+      "article_id": 16,
+      "url": "https://www.ign.com/articles/new-xbox-boss-says-decision-to-continue-to-show-ps5-logos-during-its-xbox-games-showcase-was-a-miss-and-i-own-it",
+      "en_title": "New Xbox Boss Says Decision to Continue to Show PS5 Logos During Its Xbox Games Showcase 'Was a Miss, and I Own It'",
+      "cn_title": "Xbox新主管承认展示会上放PS5标志是失误：「这是我的责任」",
+      "edits": [
+        {
+          "field": "title",
+          "before": "Xbox新主管承认展示会上放PS5标志是失误：「这是我的责任」",
+          "after": "Xbox新掌门承认展示会上放PS5标志是失误：「这是我的责任」"
+        },
+        {
+          "field": "paragraph_1",
+          "before": "Xbox负责人阿莎·夏尔玛就微软决定在即将到来的Xbox游戏展示会上继续展示竞争平台标志一事回应了负面反馈，并暗示未来的展示会将停止这一做法。",
+          "after": "Xbox负责人Asha Sharma就微软决定在即将到来的Xbox游戏展示会上继续展示竞争平台标志一事回应了负面反馈，并暗示未来的展示会将停止这一做法。"
+        },
+        {
+          "field": "paragraph_2",
+          "before": "夏尔玛于今年早些时候从Phil Spencer手中接管Xbox，随后开始对游戏业务进行品牌重塑，以期在多年的失望情绪后重新赢回核心Xbox粉丝。早期决策包括终止争议不断的「This is an Xbox」营销活动、快速推出新的Xbox主机功能，以及将官方品牌从「Xbox」改为「XBOX」。",
+          "after": "Sharma于今年早些时候从菲尔·斯宾塞手中接管Xbox，随后开始对游戏业务进行品牌重塑，以期在多年的失望情绪后重新赢回核心Xbox粉丝。早期决策包括终止争议不断的「This is an Xbox」营销活动、快速推出新的Xbox主机功能，以及将官方品牌从「Xbox」改为「XBOX」。"
+        },
+        {
+          "field": "paragraph_6",
+          "before": "标志确认消息正值外界热议微软是否会重回独占游戏策略之际，尽管夏尔玛目前没有任何这方面的表态。本月早些时候有报道称夏尔玛在独占游戏问题上「慎之又慎」，但微软表示将「重新评估我们的独占策略」——对于那些认为Xbox主机在近年多平台推进中被贬值的核心粉丝而言，这是一个诱人的暗示。",
+          "after": "标志确认消息正值外界热议微软是否会重回独占游戏策略之际，尽管Sharma目前没有任何这方面的表态。本月早些时候有报道称Sharma在独占游戏问题上「慎之又慎」，但微软表示将「重新评估我们的独占策略」——对于那些认为Xbox主机在近年多平台推进中被贬值的核心粉丝而言，这是一个诱人的暗示。"
+        },
+        {
+          "field": "paragraph_8",
+          "before": "夏尔玛专门回应了核心Xbox粉丝X/Twitter账号Klobrille表达的失望，后者曾说：「我觉得很多人最低限度的期望就是Xbox至少在展示会期间真正聚焦于自己的平台。」",
+          "after": "Sharma专门回应了核心Xbox粉丝X/Twitter账号Klobrille表达的失望，后者曾说：「我觉得很多人最低限度的期望就是Xbox至少在展示会期间真正聚焦于自己的平台。」"
+        },
+        {
+          "field": "paragraph_9",
+          "before": "夏尔玛发推写道：「看到了关于标志的反馈。这是一次失误，我承担责任。我们正在讨论如何为未来的XBOX展示会做出调整。」",
+          "after": "Sharma发推写道：「看到了关于标志的反馈。这是一次失误，我承担责任。我们正在讨论如何为未来的XBOX展示会做出调整。」"
+        }
+      ]
+    }
+  ],
+  "candidates": [
+    {
+      "id_hint": "title_use_comma_between_clauses",
+      "title": "标题中使用逗号分隔分句",
+      "rule": "当标题包含两个或多个短语或分句时，使用全角逗号（，）分隔，而不是空格或直接连接。",
+      "category": "punctuation",
+      "scope": "all",
+      "status_suggestion": "observe",
+      "confidence": 0.7,
+      "evidence_summary": "第3篇文章标题添加逗号，使语义更清晰。",
+      "examples": [
+        {
+          "date": "2026-05-31",
+          "article_id": 3,
+          "before": "游戏保存运动获新进展 加州议会通过保护法案",
+          "after": "游戏保存运动获新进展，加州议会通过保护法案"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id_hint": "add_china_market_info_when_relevant",
+      "title": "补充中国大陆地区相关信息",
+      "rule": "对于电影上映、游戏发售等新闻，如果原文未提及中国大陆情况，可酌情补充如「中国大陆地区尚未定档」或「Steam国区售价」等信息。",
+      "category": "body",
+      "scope": "movies_tv|games",
+      "status_suggestion": "observe",
+      "confidence": 0.6,
+      "evidence_summary": "第6篇文章末尾补充「虽然中国大陆地区尚未定档」，延续了之前补充国区 Steam 定价的观察。",
+      "examples": [
+        {
+          "date": "2026-05-31",
+          "article_id": 6,
+          "before": "...我们只需等待电影于2027年7月23日首映。",
+          "after": "...我们只需等待电影于2027年7月23日首映，虽然中国大陆地区尚未定档。"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id_hint": "translator_note_in_parentheses",
+      "title": "插入译者注释提供备选翻译",
+      "rule": "当原文表达难以直译时，可在正文中用括号形式插入译者建议，如「(或许可以翻译成...)」。",
+      "category": "body",
+      "scope": "all",
+      "status_suggestion": "observe",
+      "confidence": 0.5,
+      "evidence_summary": "第6篇文章对电影标题「Minecraft Movie Squared」的翻译，用户添加了注释「或许可以翻译成《我的世界大电影²》」。",
+      "examples": [
+        {
+          "date": "2026-05-31",
+          "article_id": 6,
+          "before": "确认续集正式定名为「我的世界大电影 Squared」。",
+          "after": "确认续集正式定名为《我的世界大电影 Squared》（或许可以翻译成《我的世界大电影²》）。"
+        }
+      ],
+      "contradiction": ""
+    }
+  ],
+  "notes": [
+    "第3篇文章段落1添加了标题文本，可能是格式错误，暂不提取。",
+    "第16篇文章将「新主管」改为「新掌门」，属于个例词汇偏好，不提取。",
+    "其余编辑（删除英文注释、平台简写、人名保留英文等）均进一步确认已有规则，无需重复添加。"
+  ],
+  "repaired_json": false,
+  "updated_at": "2026-06-03T16:01:10+08:00"
+}

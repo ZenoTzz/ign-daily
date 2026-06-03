@@ -1,0 +1,439 @@
+{
+  "date": "2026-06-02",
+  "model": "deepseek-v4-pro",
+  "status": "observed",
+  "source_hash": "1bec4187996b023176e786e55ea05a1b573d2432",
+  "signal_count": 7,
+  "candidate_count": 7,
+  "signals": [
+    {
+      "type": "user_polish",
+      "date": "2026-06-02",
+      "article_id": 3,
+      "url": "https://www.ign.com/articles/official-baldurs-gate-2-remake-reportedly-in-development-at-wizards-of-the-coast",
+      "en_title": "Official Baldur's Gate 2 Remake Reportedly in Development at Wizards of the Coast",
+      "cn_title": "《威世智》《博德之门2》重制版据报已在开发中",
+      "edits": [
+        {
+          "field": "title",
+          "before": "《威世智》《博德之门2》重制版据报已在开发中",
+          "after": "《博德之门2》重制版据报已在开发中"
+        },
+        {
+          "field": "paragraph_2",
+          "before": "报道称，BioWare的《博德之门》1和2很可能都会在《博德之门4》发售前推出重制版。该媒体表示，前BioWare开发者、《博德之门2》联合主设计师Kevin Martens正在负责重制工作。有迹象表明，两款重制版将同步推出。",
+          "after": "报道称，BioWare的《博德之门》1代和2代很可能都会在《博德之门4》发售前推出重制版。该媒体表示，前BioWare开发者、《博德之门2》联合主设计师Kevin Martens正在负责重制工作。有迹象表明，两款重制版将同步推出。"
+        },
+        {
+          "field": "paragraph_6",
+          "before": "《博德之门》是BioWare的第二款游戏，于1998年在PC上发行，由Interplay发行。游戏表现足够出色，催生了续作——2000年的《博德之门II：安姆的阴影》，与前作一样，故事发生在被遗忘的国度。两款原作都采用等距视角和可暂停的实时制玩法，玩家最多可控制六名角色。重制版会效仿《博德之门3》，采用完全回合制战斗吗？或者也许应该采用一种混合系统。",
+          "after": "《博德之门》是BioWare的第二款游戏，于1998年在PC上发行，由Interplay发行。游戏表现足够出色，催生了续作——2000年的《博德之门2：安姆的阴影》，与前作一样，故事发生在被遗忘的国度。两款原作都采用等距视角和可暂停的实时制玩法，玩家最多可控制六名角色。重制版会效仿《博德之门3》，采用完全回合制战斗吗？或者也许应该采用一种混合系统。"
+        },
+        {
+          "field": "paragraph_7",
+          "before": "尽管续作需要漫长等待，但《博德之门》的世界里依然热闹非凡。一部《博德之门3》HBO电视剧正在制作中，该剧将延续游戏的故事——这让粉丝们大为惊讶。甚至还有一部前传小说，描绘了阿斯代伦侍奉吸血鬼领主卡扎多尔·萨尔的岁月，此外还有一本官方《博德之门3》食谱和一本涂色书。",
+          "after": "尽管续作需要漫长等待，但《博德之门》的世界里依然热闹非凡。一部《博德之门3》HBO电视剧正在制作中，该剧将延续游戏的故事——这让粉丝们大为惊讶。甚至还有一部前传小说，描绘了阿斯代伦侍奉吸血鬼领主卡扎多尔的岁月，此外还有一本官方《博德之门3》食谱和一本填色书。"
+        }
+      ]
+    },
+    {
+      "type": "user_polish",
+      "date": "2026-06-02",
+      "article_id": 4,
+      "url": "https://www.ign.com/articles/video-games-could-have-movie-style-product-placement-to-counter-rising-costs-ex-dragon-age-boss-says",
+      "en_title": "Video Games Could Have Movie-Style Product Placement to Counter Rising Costs, Ex-Dragon Age Boss Says",
+      "cn_title": "前《龙腾世纪》制作人：游戏可学电影植入广告降成本",
+      "edits": [
+        {
+          "field": "subtitle",
+          "before": "不差钱",
+          "after": "新经济"
+        },
+        {
+          "field": "paragraph_5",
+          "before": "他接着说，Xbox Game Pass和PlayStation Plus这类订阅服务也并非万能药，并指出「很多游戏从加入订阅中赚到的钱非常少」，还暗示这些服务可能助长「为了刷数据而进行的退化性设计」。",
+          "after": "他接着说，XGP和PS Plus这类订阅服务也并非万能药，并指出「很多游戏从加入订阅中赚到的钱非常少」，还暗示这些服务可能助长「为了刷数据而进行的退化性设计」。"
+        },
+        {
+          "field": "paragraph_9",
+          "before": "Darrah在BioWare近二十年的职业生涯中，担任了每一款主要《龙腾世纪》游戏的执行制作人。此前，他曾讨论过口碑不佳的《龙腾世纪：影障守护者》最初是一款服务型游戏，后来才被重启——尽管该项目的这一版本仍保留了一些元素。讽刺的是，《帷幕守护者》的商业失败最终促使发行商考虑转向服务型游戏——而系列粉丝对此强烈反对。",
+          "after": "Darrah在BioWare近二十年的职业生涯中，担任了每一款主要《龙腾世纪》游戏的执行制作人。此前，他曾讨论过口碑不佳的《龙腾世纪：影障守护者》最初是一款服务型游戏，后来才被重启——尽管该项目的这一版本仍保留了一些元素。讽刺的是，《龙腾世纪：影障守护者》的商业失败最终促使发行商考虑转向服务型游戏——而系列粉丝对此强烈反对。"
+        }
+      ]
+    },
+    {
+      "type": "user_polish",
+      "date": "2026-06-02",
+      "article_id": 5,
+      "url": "https://www.ign.com/articles/bbc-update-on-doctor-who-future-imminent-showrunner-states-amid-concern-its-return-has-now-been-scrapped-or-postponed",
+      "en_title": "BBC Update on Doctor Who Future Imminent, Showrunner States, Amid Concern Its Return Has Now Been Scrapped or Postponed",
+      "cn_title": "《神秘博士》命运即将揭晓，剧集主管称BBC声明在即",
+      "edits": [
+        {
+          "field": "subtitle",
+          "before": "急急急急急",
+          "after": "在不远的将来"
+        },
+        {
+          "field": "paragraph_1",
+          "before": "《神秘博士》剧集主管拉塞尔·T·戴维斯确认，关于该剧未来的官方声明将在本月发布，此前有报道称原定的圣诞特辑将不再制作。",
+          "after": "《神秘博士》剧集主管Russell T Davies确认，关于该剧未来的官方声明将在本月发布，此前有报道称原定的圣诞特辑将不再制作。"
+        },
+        {
+          "field": "paragraph_2",
+          "before": "上周，英国小报《太阳报》报道称，由于BBC仍在寻找新任主演，该剧的回归很可能推迟至2027年，甚至被彻底取消。",
+          "after": "上周，《太阳报》报道称，由于BBC仍在寻找新任主演，该剧的回归很可能推迟至2027年，甚至被彻底取消。"
+        },
+        {
+          "field": "paragraph_4",
+          "before": "今天，戴维斯在BBC广播2台被问及该剧以及新主演何时揭晓。他回答如下：",
+          "after": "今天，Davies在BBC广播2台被问及该剧以及新主演何时揭晓。他回答如下："
+        },
+        {
+          "field": "paragraph_5",
+          "before": "「你们会看到一份声明……有一份新闻稿正在BBC内部缓慢推进，你们也知道，这就像侏罗纪时期一样，每个字都得57个人签字。所以我向你们保证，大概一到两周内，会有一份新闻稿。甚至在我说话这会儿，我都能听见齿轮慢下来的声音。」",
+          "after": "「你们会收到一个公告……现在有一份新闻稿正在BBC内部慢吞吞地推进。你也知道，BBC就像侏罗纪时代一样古老迟缓，而且每一个字都得有57个人签字批准。所以我保证，大概一两周后会有新闻稿。我现在说这话的时候，仿佛都能听见那台机器的齿轮又慢下来了」"
+        },
+        {
+          "field": "paragraph_7",
+          "before": "该剧的现状正被粉丝们细致入微地分析，他们长时间讨论戴维斯最近接受英国广播电台LBC的另一场采访，他在采访中提到自己现在「2027年之前不会拍摄任何东西」。",
+          "after": "该剧的现状正被粉丝们细致入微地分析，他们长时间讨论Davies最近接受英国广播电台LBC的另一场采访，他在采访中提到自己现在「2027年之前不会拍摄任何东西」。"
+        },
+        {
+          "field": "paragraph_9",
+          "before": "与此同时，前《神秘博士》杂志编辑Tom Spilsbury在私密论坛Gallifrey Base上写道（其言论后被其他用户转发至社交媒体），他也对特辑最终能否制作表示怀疑，并指出BBC当前的资金问题是原因所在。",
+          "after": "与此同时，前《神秘博士杂志》编辑Tom Spilsbury在私密论坛Gallifrey Base上写道（其言论后被其他用户转发至社交媒体），他也对特辑最终能否制作表示怀疑，并指出BBC当前的资金问题是原因所在。"
+        }
+      ]
+    },
+    {
+      "type": "user_polish",
+      "date": "2026-06-02",
+      "article_id": 8,
+      "url": "https://www.ign.com/articles/factorio-set-for-its-last-major-update-a-decade-after-launch",
+      "en_title": "Factorio Set for Its Last Major Update, a Decade After Launch",
+      "cn_title": "《异星工厂》十年后迎来最后一次重大更新",
+      "edits": [
+        {
+          "field": "title",
+          "before": "《异星工厂》十年后迎来最后一次重大更新",
+          "after": "《异星工厂》将迎来最后一次重大更新"
+        },
+        {
+          "field": "subtitle",
+          "before": "再见了，老朋友",
+          "after": "再见，老友"
+        },
+        {
+          "field": "paragraph_3",
+          "before": "「我无法想象如果没有《异星工厂》，Steam的游戏格局会有多大的不同，」《幻兽帕鲁》开发商Pocketpair的传播总监兼发行经理John “Bucky” Buckley在社交媒体上发帖说，「感谢你们制作了这款不可思议的游戏！」",
+          "after": "「我无法想象如果没有《异星工厂》，Steam的游戏格局会有多大的不同，」《幻兽帕鲁》开发商Pocketpair的传播总监兼发行经理John Buckley在社交媒体上发帖说，「感谢你们制作了这款不可思议的游戏！」"
+        },
+        {
+          "field": "paragraph_4",
+          "before": "在管理玩家对2.1更新规模的预期时，Wube表示：「总的来说，我们对《异星工厂》和《太空时代》的游戏设计感到满意。游戏进程很好，各方面大多平衡良好（有一两个例外），我们不觉得有什么重大缺失。也就是说，我们并没有带着推出大型新内容或庞大功能的宏伟计划来开发2.1。」",
+          "after": "在管理玩家对2.1更新规模的预期时，Wube表示：「总的来说，我们对《异星工厂》和DLC《太空时代》的游戏设计感到满意。游戏进程很好，各方面大多平衡良好（有一两个例外），我们不觉得有什么重大缺失。也就是说，我们并没有带着推出大型新内容或庞大功能的宏伟计划来开发2.1。」"
+        },
+        {
+          "field": "paragraph_9",
+          "before": "因此，《异星工厂》的一个时代结束了，但Wube已经在着手其他项目。只是别指望短期内能听到相关消息（「老实说，很长一段时间内都不会有任何东西可以分享」）。",
+          "after": "因此，《异星工厂》的一个时代结束了，但Wube已经在着手其他项目。只是别指望短期内能听到相关消息（老实说，很长一段时间内都不会有任何东西可以分享）。"
+        }
+      ]
+    },
+    {
+      "type": "user_polish",
+      "date": "2026-06-02",
+      "article_id": 9,
+      "url": "https://www.ign.com/articles/hot-on-the-heels-of-katsuhiro-haradas-exit-from-bandai-namco-the-director-of-tekken-7-and-8-has-left-too",
+      "en_title": "Hot on the Heels of Katsuhiro Harada's Exit From Bandai Namco, the Director of Tekken 7 and 8 Has Left Too",
+      "cn_title": "《铁拳7》铁拳8总监离职万代南梦宫",
+      "edits": [
+        {
+          "field": "title",
+          "before": "《铁拳7》铁拳8总监离职万代南梦宫",
+          "after": "《铁拳7》《铁拳8》总监离职万代南梦宫"
+        },
+        {
+          "field": "subtitle",
+          "before": "铁拳的未来何去何从",
+          "after": "《铁拳》的未来何去何从"
+        },
+        {
+          "field": "paragraph_1",
+          "before": "《铁拳7》和铁拳8的游戏总监池田幸平（Kohei 'Nakatsu' Ikeda）已离开万代南梦宫，结束了在该公司20年的任职。",
+          "after": "《铁拳7》和《铁拳8》的游戏总监池田幸平已离开万代南梦宫，结束了在该公司20年的任职。"
+        },
+        {
+          "field": "paragraph_4",
+          "before": "铁拳社区现在不禁要问，这个格斗游戏系列的未来会怎样。就在上周，万代南梦宫还让粉丝们兴奋不已，宣布《刃牙》漫画及动画系列中的范马勇次郎将作为铁拳8第三赛季季票的客串角色登场，该赛季将持续到2027年初，以他的到来作为收尾。但随着原田和池田先后离开万代南梦宫，玩家还能等到《铁拳9》吗？如果能，它又会是什么样子？",
+          "after": "《铁拳》社区现在不禁要问，这个格斗游戏系列的未来会怎样。就在上周，万代南梦宫还让粉丝们兴奋不已，宣布《刃牙》漫画及动画系列中的范马勇次郎将作为《铁拳8》第三赛季季票的客串角色登场，该赛季将持续到2027年初，以他的到来作为收尾。但随着原田和池田先后离开万代南梦宫，玩家还能等到《铁拳9》吗？如果能，它又会是什么样子？"
+        },
+        {
+          "field": "paragraph_5",
+          "before": "毫无疑问，铁拳粉丝近年来与万代南梦宫的关系并不融洽，他们对游戏的诸多方面和平衡性调整都提出过批评。原田也曾公开谈及自己与铁拳系列以及万代南梦宫之间的复杂关系，多次在社交媒体上回应粉丝的担忧，包括那次他针对高级场景DLC销售争议做出的解释。",
+          "after": "毫无疑问，《铁拳》粉丝近年来与万代南梦宫的关系并不融洽，他们对游戏的诸多方面和平衡性调整都提出过批评。原田也曾公开谈及自己与铁拳系列以及万代南梦宫之间的复杂关系，多次在社交媒体上回应粉丝的担忧，包括那次他针对高级场景DLC销售争议做出的解释。"
+        },
+        {
+          "field": "paragraph_7",
+          "before": "万代南梦宫方面尚未透露铁拳8第三赛季之后，铁拳系列还会有何安排。",
+          "after": "万代南梦宫方面尚未透露《铁拳8》第三赛季之后，《铁拳》系列还会有何安排。"
+        }
+      ]
+    },
+    {
+      "type": "user_polish",
+      "date": "2026-06-02",
+      "article_id": 22,
+      "url": "https://www.ign.com/articles/007-first-light-budget-reportedly-more-than-200-million",
+      "en_title": "007 First Light Budget Reportedly More Than $200 Million",
+      "cn_title": "《007初露锋芒》开发成本超2亿美元(约合人民币14亿元)",
+      "edits": [
+        {
+          "field": "title",
+          "before": "《007初露锋芒》开发成本超2亿美元(约合人民币14亿元)",
+          "after": "《007 初露锋芒》开发成本超2亿美元"
+        },
+        {
+          "field": "subtitle",
+          "before": "史上最贵丹麦娱乐产品",
+          "after": "史上成本最高丹麦娱乐产品"
+        },
+        {
+          "field": "paragraph_1",
+          "before": "据报导，开发商IO Interactive的《007初露锋芒》开发成本超过2亿美元(约合人民币14亿元)，耗时七年打造。",
+          "after": "据报道，开发商IO Interactive的《007 初露锋芒》开发成本超过2亿美元，耗时七年打造。"
+        },
+        {
+          "field": "paragraph_2",
+          "before": "丹麦广播公司在一篇报导中分享了这家丹麦工作室新作的幕后细节。据该媒体称，这款詹姆斯·邦德游戏的开发成本高达13亿丹麦克朗（约合2.02亿美元(约合人民币14亿元)），制作费用尤为高昂。",
+          "after": "丹麦广播公司在一篇报道中分享了这家丹麦工作室新作的幕后细节。据该媒体称，这款詹姆斯·邦德游戏的开发成本高达13亿丹麦克朗（约合13.7亿元人民币），制作费用尤为高昂。"
+        },
+        {
+          "field": "paragraph_3",
+          "before": "据丹麦TV 2报导，这使得《007初露锋芒》成为该国历史上最贵的娱乐产品。IGN联系IO时，对方未对预算传闻发表评论。",
+          "after": "据丹麦TV 2报道，这使得《007 初露锋芒》成为该国历史上最贵的娱乐产品。IGN联系IO时，对方未对预算传闻发表评论。"
+        },
+        {
+          "field": "paragraph_4",
+          "before": "有必要将2亿美元(约合人民币14亿元)这个数字放在大背景下看待。大多数登上头条的3A游戏预算都在数亿美元级别。例如，据Kotaku报导，《星鸣特攻》的初期开发合约约为2亿美元(约合人民币14亿元)。2023年，Xbox联邦贸易委员会案件中提交的文件意外透露，《最后生还者 第二部》和《地平线：西之绝境》的开发成本均超过2亿美元(约合人民币14亿元)。因此，007的2亿美元(约合人民币14亿元)在这个背景下算是常规水平。",
+          "after": "有必要将2亿美元这个数字放在大背景下看待。大多数登上头条的3A游戏预算都在数亿美元级别。例如，据Kotaku报道，《星鸣特攻》的初期开发合约约为2亿美元（约合13.53亿元人民币）。2023年，Xbox联邦贸易委员会案件中提交的文件意外透露，《最后生还者 第二部》和《地平线：西之绝境》的开发成本均超过2亿美元。因此，007的2亿美元在这个背景下算是常规水平。"
+        },
+        {
+          "field": "paragraph_5",
+          "before": "有些游戏的预算更是天文数字，远超007。例如，去年法庭文件首次披露了《使命召唤》游戏的开发预算，确认Activision仅在《黑色行动 冷战》一款游戏上就投入了7亿美元(约合人民币47亿元)，不过这是该射击游戏整个生命周期内的总投入。站在金字塔顶端的是《GTA6》，它很可能是有史以来最昂贵的电子游戏；其母公司Take-Two据估计已为其开发投入了10亿至15亿美元(约合人民币102亿元)。",
+          "after": "有些游戏的预算更是天文数字，远超《007 初露锋芒》。例如，去年法庭文件首次披露了《使命召唤》游戏的开发预算，确认动视仅在《使命召唤：黑色行动 冷战》一款游戏上就投入了7亿美元（约合47.36亿元人民币），不过这是该射击游戏整个生命周期内的总投入。站在金字塔顶端的是《GTA6》，它很可能是有史以来最昂贵的电子游戏；其母公司Take-Two据估计已为其开发投入了10亿至15亿美元（约合67.65至101.48亿元人民币）。"
+        },
+        {
+          "field": "paragraph_6",
+          "before": "至于IO这款新邦德游戏的开发时间线，我们已知该项目于2020年底正式公布。如果丹麦广播公司的报导准确，这意味着《杀手》工作室在项目公布前大约一年就已进入某种形式的开发阶段。",
+          "after": "至于IO这款新邦德游戏的开发时间线，我们已知该项目于2020年底正式公布。如果丹麦广播公司的报道准确，这意味着工作室在项目公布前大约一年就已进入某种形式的开发阶段。"
+        }
+      ]
+    },
+    {
+      "type": "user_polish",
+      "date": "2026-06-02",
+      "article_id": 27,
+      "url": "https://www.ign.com/articles/nvidia-announces-the-rtx-spark-its-first-soc-for-regular-people",
+      "en_title": "Nvidia Announces the RTX Spark, Its First SoC for Regular People",
+      "cn_title": "英伟达发布RTX Spark，面向普通用户的AI芯片",
+      "edits": [
+        {
+          "field": "title",
+          "before": "英伟达发布RTX Spark，面向普通用户的AI芯片",
+          "after": "英伟达公布RTX Spark，称其将重塑PC"
+        },
+        {
+          "field": "subtitle",
+          "before": "AI PC时代来了？",
+          "after": "新时代？"
+        },
+        {
+          "field": "paragraph_1",
+          "before": "英伟达终于在Computex 2026上发布了RTX Spark，这是一款为Agentic AI量身打造的SoC，将驱动「新一代」PC，而且几乎所有主流笔记本厂商都将推出搭载该芯片的笔记本电脑。",
+          "after": "英伟达终于在Computex 2026上公布了RTX Spark。这是一款SoC芯片，将为「新一代」PC提供动力，专为智能体AI打造。基本上，所有主流笔记本厂商都将推出搭载这款芯片的笔记本电脑。"
+        },
+        {
+          "field": "paragraph_2",
+          "before": "与在CES 2025上首次亮相的DGX Spark一样，RTX Spark也是一款为Agentic AI打造的SoC。该芯片将配备20核ARM CPU、拥有6144个CUDA核心的Blackwell GPU，以及最高128GB的共享显存。英伟达宣称，这款芯片的AI算力最高可达1 petaflop，并能在1440p分辨率下以最高100fps运行游戏。",
+          "after": "就像在CES 2025上首次亮相的DGX Spark一样，RTX Spark也是一款为智能体AI打造的SoC芯片。这款芯片将配备20核ARM CPU、一颗拥有6144个CUDA核心的Blackwell GPU，以及最高128GB的VRAM，并由CPU和GPU共享。英伟达声称，这款芯片最高可提供1petaflop的AI算力，并能以最高100fps的帧率运行1440p游戏。"
+        },
+        {
+          "field": "paragraph_3",
+          "before": "英伟达希望RTX Spark与Windows携手，带来一种全新的计算方式。微软对此已暗示多时，但在英伟达台北发布会上，CEO黄仁勋亲自挑明：「四十年来，你启动应用，点击，打字。有了RTX Spark和微软Windows，你只需开口提问——PC就会完成工作。」我不确定自己是否准备好迎接一个对着电脑大喊大叫让它干活的年代，不过话说回来，我现在好像也没少这么干。",
+          "after": "英伟达希望RTX Spark与Windows一起带来一种全新的计算方式。微软此前已经暗示过一段时间类似的方向，但在英伟达台北发布会上，CEO黄仁勋亲自把话说得很明白：「四十年来，你都是启动应用。点击。打字。有了RTX Spark和Microsoft Windows之后，你只需要提出要求——PC就会完成工作。」"
+        },
+        {
+          "field": "paragraph_4",
+          "before": "同样需要牢记的是，尽管DGX Spark的GPU纸面参数令人印象深刻，但它将绑定ARM处理器。虽然英伟达凭借近乎无限的资源很可能解决兼容性问题，但ARM处理器在PC游戏领域历来表现不佳。早在2024年Copilot+笔记本上市时，就有大量游戏根本无法在高通芯片上运行，因为它们都是为x86平台打造的。英伟达能否绕过这一难题，只有时间能给出答案，但即便可以，我也不会专门去买一台RTX Spark系统当游戏本用。",
+          "after": "同样需要注意的是，尽管DGX Spark中的GPU从纸面规格来看相当亮眼，但它将与一颗ARM处理器绑定在一起。凭借近乎无限的资源，英伟达很可能有能力解决兼容性方面的小问题，但ARM处理器传统上并不擅长PC游戏。即便Copilot+笔记本早在2024年就已经推出，当时仍有大量游戏甚至无法在高通芯片上运行，因为这些游戏是为x86平台打造的。英伟达能否绕过这个问题，还需要时间来证明；但即使它真的做到了，我也不会真的把一台搭载RTX Spark的设备当作游戏笔记本来购买。"
+        },
+        {
+          "field": "paragraph_5",
+          "before": "相反，这些系统将更侧重于创意和AI工作负载，价格也很可能与之匹配。英伟达和所有将推出RTX Spark笔记本及迷你PC的厂商均未公布价格，但可以想见它们会相当昂贵——尤其是配备完整128GB内存的版本。据The Verge报道，英伟达声称未来某个时候会推出仅16GB内存的低价版本，但尚不清楚要等多久。",
+          "after": "相反，这些系统将更偏向创作和AI工作负载，价格很可能也会与之匹配。英伟达以及任何将推出RTX Spark笔记本和迷你PC的厂商目前都还没有公布价格，但可以安全地推测，它们会相当昂贵——尤其是如果搭载完整128GB内存的话。据The Verge报道，英伟达称未来某个时候会推出更便宜的版本，只配备16GB RAM，但目前还不清楚需要等多久。"
+        },
+        {
+          "field": "paragraph_6",
+          "before": "无论如何，搭载RTX Spark的笔记本预计将在2026年秋季上架，所以如果你想为英伟达的Agentic未来愿景买单，不用等太久。",
+          "after": "无论如何，搭载RTX Spark的笔记本应该会在2026年秋季上架销售。因此，如果你确实想买入英伟达所描绘的智能体未来，也不用等待太久。"
+        }
+      ]
+    }
+  ],
+  "candidates": [
+    {
+      "id_hint": "series_number_with_dai",
+      "title": "系列代数用“代”表达",
+      "rule": "提及游戏系列代数时，用“X代”而非“X和X”，如“1代和2代”而非“1和2”。",
+      "category": "body",
+      "scope": "games",
+      "status_suggestion": "observe",
+      "confidence": 0.5,
+      "evidence_summary": "文章3一处将“1和2”改为“1代和2代”，使表达更清晰，但仅出现一次，需观察是否常态。",
+      "examples": [
+        {
+          "date": "2026-06-02",
+          "article_id": 3,
+          "before": "《博德之门》1和2",
+          "after": "《博德之门》1代和2代"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id_hint": "roman_to_arabic_game_title",
+      "title": "游戏标题罗马数字转阿拉伯数字",
+      "rule": "游戏名中的罗马数字（如II）统一转为阿拉伯数字（如2），例如《博德之门II》→《博德之门2》。",
+      "category": "dictionary",
+      "scope": "games",
+      "status_suggestion": "confirm",
+      "confidence": 0.9,
+      "evidence_summary": "文章3将《博德之门II：安姆的阴影》改为《博德之门2：安姆的阴影》，且与已有风格（平台简写、数字偏好）一致，用户倾向阿拉伯数字更直观。",
+      "examples": [
+        {
+          "date": "2026-06-02",
+          "article_id": 3,
+          "before": "《博德之门II：安姆的阴影》",
+          "after": "《博德之门2：安姆的阴影》"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id_hint": "subscription_service_abbreviation",
+      "title": "订阅服务缩写",
+      "rule": "将Xbox Game Pass缩写为“XGP”，PlayStation Plus缩写为“PS Plus”，用于正文中可接受缩写以提高流畅度。",
+      "category": "dictionary",
+      "scope": "games",
+      "status_suggestion": "observe",
+      "confidence": 0.7,
+      "evidence_summary": "文章4将“Xbox Game Pass和PlayStation Plus”改为“XGP和PS Plus”，此为社区常用缩写，但仅出现一次，建议观察后续是否持续使用。",
+      "examples": [
+        {
+          "date": "2026-06-02",
+          "article_id": 4,
+          "before": "Xbox Game Pass和PlayStation Plus",
+          "after": "XGP和PS Plus"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id_hint": "japanese_name_no_romaji",
+      "title": "日文开发者直接使用汉字姓名",
+      "rule": "对于日本开发商或制作人，若官方已提供汉字姓名，直接使用汉字，不附加罗马音或英文注音。",
+      "category": "names",
+      "scope": "games",
+      "status_suggestion": "confirm",
+      "confidence": 0.85,
+      "evidence_summary": "文章9将池田幸平的罗马音注音删除，符合中文环境下对日文人名的直接引用习惯，与之前保留西方人英文名的规则互补。",
+      "examples": [
+        {
+          "date": "2026-06-02",
+          "article_id": 9,
+          "before": "池田幸平（Kohei 'Nakatsu' Ikeda）",
+          "after": "池田幸平"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id_hint": "currency_conversion_refined",
+      "title": "精确汇率换算与格式",
+      "rule": "正文中金额换算使用准确汇率（人民币保留两位小数），仅首次出现给出换算；非美元货币直接换算为人民币，省略中间美元；标题省略换算；大额范围给出范围换算。",
+      "category": "currency",
+      "scope": "all",
+      "status_suggestion": "confirm",
+      "confidence": 0.9,
+      "evidence_summary": "文章22多处修改金额格式：标题去除人民币换算；正文丹麦克朗直接换算为人民币，且数值精确（如13.7亿）；多处更新汇率为更精确数字（如2亿美元→约合13.53亿元）；范围金额给出对应人民币范围。符合此前用户对金额格式的偏好。",
+      "examples": [
+        {
+          "date": "2026-06-02",
+          "article_id": 22,
+          "before": "13亿丹麦克朗（约合2.02亿美元(约合人民币14亿元)）",
+          "after": "13亿丹麦克朗（约合13.7亿元人民币）"
+        },
+        {
+          "date": "2026-06-02",
+          "article_id": 22,
+          "before": "2亿美元(约合人民币14亿元)",
+          "after": "2亿美元（约合13.53亿元人民币）"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id_hint": "remove_personal_commentary",
+      "title": "删除个人化调侃评论",
+      "rule": "删除正文中译者个人的调侃或评论性句子，保持新闻报道的客观语气。",
+      "category": "body",
+      "scope": "all",
+      "status_suggestion": "observe",
+      "confidence": 0.6,
+      "evidence_summary": "文章27删除两处个人评论（“我不确定自己是否准备好……”和“但我也不会专门去买……”），文章3未出现此类情况，可能适用于技术新闻的严肃性，但需观察更多样本。",
+      "examples": [
+        {
+          "date": "2026-06-02",
+          "article_id": 27,
+          "before": "我不确定自己是否准备好迎接一个对着电脑大喊大叫让它干活的年代，不过话说回来，我现在好像也没少这么干。",
+          "after": "（整句删除）"
+        },
+        {
+          "date": "2026-06-02",
+          "article_id": 27,
+          "before": "但即便可以，我也不会专门去买一台RTX Spark系统当游戏本用。",
+          "after": "（整句删除）"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id_hint": "unify_baodao",
+      "title": "统一使用“报道”",
+      "rule": "正文中的“报导”一词统一改为“报道”。",
+      "category": "dictionary",
+      "scope": "all",
+      "status_suggestion": "confirm",
+      "confidence": 0.9,
+      "evidence_summary": "文章22将多处“报导”改为“报道”，符合现代汉语规范，且与用户过往严谨风格一致。",
+      "examples": [
+        {
+          "date": "2026-06-02",
+          "article_id": 22,
+          "before": "据报导",
+          "after": "据报道"
+        }
+      ],
+      "contradiction": ""
+    }
+  ],
+  "notes": [
+    "今日润色进一步强化了书名号包裹游戏名的规则（如文章9的多处修改），但此为已确认偏好，不再新增候选。",
+    "文章27大量的断句和口语化改写属于翻译风格的整体优化，目前不足以提炼为单一规则，暂不学习。",
+    "副标题修改均为单篇创意定制，不构成可复用规律。"
+  ],
+  "repaired_json": false,
+  "updated_at": "2026-06-03T16:03:40+08:00"
+}
