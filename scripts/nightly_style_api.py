@@ -481,6 +481,63 @@ def dates_needing_observation(scan_days: int) -> list[str]:
     return list(reversed(selected))
 
 
+def text_excerpt(value: str, max_chars: int = 1200) -> str:
+    return re.sub(r"\s+", " ", value or "").strip()[:max_chars]
+
+
+def parse_candidate_json_with_repair(
+    api_key: str,
+    model: str,
+    base_url: str,
+    raw: str,
+    original_error: Exception,
+    date: str,
+) -> tuple[dict[str, Any] | None, str, dict[str, Any] | None, str | None]:
+    print(f"NIGHTLY_STYLE_JSON_REPAIR: date={date}, error={type(original_error).__name__}: {original_error}")
+    repair_messages = [
+        {
+            "role": "system",
+            "content": (
+                "You repair malformed JSON from a style-learning observer. "
+                "Return valid JSON only. Do not add markdown. The root object must contain "
+                "a candidates array and a notes array. Preserve useful candidate content; "
+                "drop incomplete trailing objects if they cannot be repaired."
+            ),
+        },
+        {
+            "role": "user",
+            "content": json.dumps(
+                {
+                    "date": date,
+                    "parse_error": str(original_error),
+                    "required_shape": {"candidates": [], "notes": []},
+                    "malformed_output": raw[:12000],
+                },
+                ensure_ascii=False,
+            ),
+        },
+    ]
+    try:
+        repair_raw, repair_usage = call_deepseek_response(
+            api_key,
+            model,
+            base_url,
+            repair_messages,
+            max_tokens=int(os.environ.get("NIGHTLY_STYLE_REPAIR_MAX_TOKENS", "2500")),
+        )
+        record_deepseek_usage_safe(
+            task="nightly_observe_json_repair",
+            model=model,
+            usage=repair_usage,
+            article_date=date,
+            detail=f"raw_chars={len(raw)}",
+        )
+        return extract_json(repair_raw), repair_raw, repair_usage, None
+    except Exception as repair_error:
+        print(f"NIGHTLY_STYLE_JSON_REPAIR_FAILED: date={date}, error={type(repair_error).__name__}: {repair_error}")
+        return None, locals().get("repair_raw", ""), locals().get("repair_usage"), str(repair_error)
+
+
 def run(date: str) -> int:
     load_env_file()
     api_key = (os.environ.get("TRANSLATOR_API_KEY") or os.environ.get("DEEPSEEK_API_KEY") or "").strip()
@@ -515,21 +572,59 @@ def run(date: str) -> int:
             article_date=date,
             detail=f"signals={len(signals)}",
         )
-        result = extract_json(raw)
-        candidates = result.get("candidates") if isinstance(result.get("candidates"), list) else []
-        evidence = merge_candidates(evidence, date, candidates)
-        write_json(DAILY_DIR / f"{date}.json", {
-            "date": date,
-            "model": model,
-            "source_hash": source_fingerprint(date),
-            "signal_count": len(signals),
-            "candidate_count": len(candidates),
-            "signals": signals,
-            "candidates": candidates,
-            "notes": result.get("notes") if isinstance(result.get("notes"), list) else [],
-            "updated_at": datetime.now(CST).isoformat(timespec="seconds"),
-        })
-        print(f"NIGHTLY_STYLE_OBSERVE_DONE: date={date}, signals={len(signals)}, candidates={len(candidates)}")
+        repaired = False
+        try:
+            result = extract_json(raw)
+        except Exception as parse_error:
+            result, repair_raw, _repair_usage, repair_error = parse_candidate_json_with_repair(
+                api_key,
+                model,
+                base_url,
+                raw,
+                parse_error,
+                date,
+            )
+            repaired = result is not None
+            if result is None:
+                write_json(DAILY_DIR / f"{date}.json", {
+                    "date": date,
+                    "model": model,
+                    "status": "skipped",
+                    "reason": "json_parse_failed",
+                    "source_hash": source_fingerprint(date),
+                    "signal_count": len(signals),
+                    "candidate_count": 0,
+                    "signals": signals,
+                    "candidates": [],
+                    "notes": [
+                        "API returned malformed JSON; automatic repair did not produce valid JSON.",
+                    ],
+                    "parse_error": str(parse_error),
+                    "repair_error": repair_error,
+                    "raw_excerpt": text_excerpt(raw),
+                    "repair_excerpt": text_excerpt(repair_raw),
+                    "updated_at": datetime.now(CST).isoformat(timespec="seconds"),
+                })
+                print(f"NIGHTLY_STYLE_OBSERVE_SKIP: date={date}, reason=json_parse_failed")
+            else:
+                print(f"NIGHTLY_STYLE_JSON_REPAIR_DONE: date={date}")
+        if result is not None:
+            candidates = result.get("candidates") if isinstance(result.get("candidates"), list) else []
+            evidence = merge_candidates(evidence, date, candidates)
+            write_json(DAILY_DIR / f"{date}.json", {
+                "date": date,
+                "model": model,
+                "status": "observed",
+                "source_hash": source_fingerprint(date),
+                "signal_count": len(signals),
+                "candidate_count": len(candidates),
+                "signals": signals,
+                "candidates": candidates,
+                "notes": result.get("notes") if isinstance(result.get("notes"), list) else [],
+                "repaired_json": repaired,
+                "updated_at": datetime.now(CST).isoformat(timespec="seconds"),
+            })
+            print(f"NIGHTLY_STYLE_OBSERVE_DONE: date={date}, signals={len(signals)}, candidates={len(candidates)}")
     else:
         print(f"NIGHTLY_STYLE_OBSERVE_SKIP: no user edits/feedback for {date}")
         write_json(DAILY_DIR / f"{date}.json", {
