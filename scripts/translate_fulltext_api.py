@@ -26,6 +26,7 @@ from typing import Any
 
 from common_paths import DATA_DIR, REPO_ROOT, configure_utf8_stdio, dict_path, env_paths
 from api_translation_audit import check_translation
+from audit_doctor import diagnose as diagnose_audit_failure
 from currency_utils import normalize_translation_currency
 from dict_matcher import matched_terms_for_article
 from normalize_currency_files import normalize_date as normalize_currency_date
@@ -542,7 +543,7 @@ def translate_date(date: str, limit: int = 2) -> int:
             paragraphs_en = split_paragraphs(text)
             if not paragraphs_en:
                 raise RuntimeError(f"no paragraphs extracted for #{article['id']}")
-    terms = matched_terms(article.get("en_title", "") + "\n" + text, article=article)
+            terms = matched_terms(article.get("en_title", "") + "\n" + text, article=article)
             max_tokens = int(os.environ.get("TRANSLATOR_FULLTEXT_MAX_TOKENS", "12000"))
             raw, usage = call_deepseek_response(api_key, model, base_url, build_messages(article, paragraphs_en, terms), max_tokens=max_tokens)
             record_deepseek_usage_safe(
@@ -582,20 +583,32 @@ def translate_date(date: str, limit: int = 2) -> int:
                         data["images"] = source["images"]
                 audit_issues = check_translation(article=article, paragraphs_en=paragraphs_en, data=data, required_terms=terms)
             if audit_issues:
-                details = "; ".join(f"[{issue['type']}] {issue['detail']}" for issue in audit_issues[:8])
-                req = save_manual_review_failure(
-                    date=date,
-                    index=index,
-                    req_path=req_path,
-                    req=req,
+                doctor = diagnose_audit_failure(
                     article=article,
-                    model=model,
-                    text=text,
+                    paragraphs_en=paragraphs_en,
                     issues=audit_issues,
-                    details=details,
-                    draft=data,
+                    api_key=api_key,
+                    model=model,
+                    base_url=base_url,
                 )
-                continue
+                if doctor.get("verdict") == "false_positive" and doctor.get("confidence") in {"medium", "high"}:
+                    data["audit_doctor"] = doctor
+                    print(f"[DOCTOR] fulltext #{article['id']} accepted audit false positive: {doctor.get('reason', '')}")
+                else:
+                    details = "; ".join(f"[{issue['type']}] {issue['detail']}" for issue in audit_issues[:8])
+                    req = save_manual_review_failure(
+                        date=date,
+                        index=index,
+                        req_path=req_path,
+                        req=req,
+                        article=article,
+                        model=model,
+                        text=text,
+                        issues=audit_issues,
+                        details=details,
+                        draft=data,
+                    )
+                    continue
             trans_path = DATA_DIR / date / "translations" / f"{article['id']:02d}.json"
             write_json(trans_path, data)
             subprocess.run([sys.executable, str(REPO_ROOT / "scripts" / "translate_pipeline.py"), date, str(article["id"]), "--post"], cwd=REPO_ROOT, check=True)
