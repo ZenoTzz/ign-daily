@@ -360,7 +360,7 @@ def translate_date(date: str, limit: int = 8) -> int:
             continue
         try:
             article_text = cached_article_text(date, article) or fetch_article_text(url)
-        terms = matched_terms((article.get("en_title") or "") + "\n" + article_text, article=article)
+            terms = matched_terms((article.get("en_title") or "") + "\n" + article_text, article=article)
             messages = build_messages(article, article_text, terms)
             raw, usage = call_deepseek_response(api_key, model, base_url, messages)
             record_deepseek_usage_safe(
