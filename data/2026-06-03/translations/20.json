@@ -191,9 +191,11 @@
   "translator": "api",
   "translator_provider": "openai-compatible",
   "translator_model": "deepseek-v4-flash",
-  "quality_status": "needs_manual_review",
-  "manual_release_required": true,
-  "audit_issues": [
+  "quality_status": "manual_approved",
+  "manual_release_required": false,
+  "manual_approved_at": "2026-06-03T03:36:44.037Z",
+  "manual_approved_reason": "user approved API audit draft",
+  "manual_approved_issues": [
     {
       "type": "dictionary",
       "detail": "source contains 'Grounded', but required dictionary translation '禁闭求生' is missing",
@@ -206,7 +208,5 @@
       "en": "Variety",
       "expected_cn": "综艺"
     }
-  ],
-  "audit_failed_at": "2026-06-03T10:26:15.397585+08:00",
-  "audit_failure_reason": "[dictionary] source contains 'Grounded', but required dictionary translation '禁闭求生' is missing; [dictionary] source contains 'Variety', but required dictionary translation '综艺' is missing"
+  ]
 }
