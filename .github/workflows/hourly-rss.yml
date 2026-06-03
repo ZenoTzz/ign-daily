@@ -58,7 +58,7 @@ jobs:
           IGN_DAILY_SKIP_GIT: "1"
         run: |
           set -euo pipefail
-          python3 scripts/ign_rss_incremental.py
+          python3 scripts/ign_rss_incremental.py --lookback-days 2
           python3 - <<'PY' >> "$GITHUB_OUTPUT"
           import json
           from pathlib import Path
@@ -78,6 +78,9 @@ jobs:
           print(f"cleanup_count={data.get('cleanup_count', 0)}")
           print(f"changed_count={data.get('changed_count', data.get('new_count', 0))}")
           print(f"target_date={data.get('target_date', '')}")
+          print(f"target_dates={','.join(data.get('target_dates') or [])}")
+          print(f"changed_dates={','.join(data.get('changed_dates') or [])}")
+          print(f"new_target_dates={','.join(data.get('new_target_dates') or [])}")
           PY
 
       - name: Stop when there are no RSS changes
@@ -89,13 +92,21 @@ jobs:
       - name: Validate RSS queue
         if: steps.rss.outputs.new_count != '0'
         run: |
-          python3 scripts/rss_queue_check.py "${{ steps.rss.outputs.target_date }}"
+          IFS=',' read -ra dates <<< "${{ steps.rss.outputs.new_target_dates }}"
+          for date in "${dates[@]}"; do
+            [ -z "$date" ] && continue
+            python3 scripts/rss_queue_check.py "$date"
+          done
           python3 scripts/agent_doctor.py
 
       - name: Cache clean article sources
         if: steps.rss.outputs.new_count != '0'
         run: |
-          python3 scripts/article_cache.py "${{ steps.rss.outputs.target_date }}" --missing --limit 20
+          IFS=',' read -ra dates <<< "${{ steps.rss.outputs.new_target_dates }}"
+          for date in "${dates[@]}"; do
+            [ -z "$date" ] && continue
+            python3 scripts/article_cache.py "$date" --missing --limit 20
+          done
           python3 scripts/agent_doctor.py
 
       - name: Refresh exchange rates
@@ -126,7 +137,11 @@ jobs:
             echo "title_translator=api but TRANSLATOR_API_KEY/DEEPSEEK_API_KEY is not set."
             exit 1
           fi
-          python3 scripts/translate_titles_deepseek.py "${{ steps.rss.outputs.target_date }}"
+          IFS=',' read -ra dates <<< "${{ steps.rss.outputs.new_target_dates }}"
+          for date in "${dates[@]}"; do
+            [ -z "$date" ] && continue
+            python3 scripts/translate_titles_deepseek.py "$date"
+          done
           python3 scripts/deepseek_balance.py --snapshot "${GITHUB_RUN_ID}-after" || true
           python3 scripts/record_deepseek_run_cost.py "${GITHUB_RUN_ID}" || true
           python3 scripts/agent_doctor.py
@@ -141,6 +156,6 @@ jobs:
             exit 0
           fi
           git add exchange_rates.json || true
-          git commit -m "feat: hourly RSS ${{ steps.rss.outputs.new_count }} new, ${{ steps.rss.outputs.filtered_count }} filtered for ${{ steps.rss.outputs.target_date }}"
+          git commit -m "feat: hourly RSS ${{ steps.rss.outputs.new_count }} new, ${{ steps.rss.outputs.filtered_count }} filtered for ${{ steps.rss.outputs.changed_dates || steps.rss.outputs.target_date }}"
           git pull --rebase -X theirs origin main
           git push origin HEAD:main

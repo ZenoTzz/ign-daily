@@ -7,19 +7,22 @@ Responsibilities:
 - append real news to data/{date}/index.json and data/{date}/need_titles.json;
 - quarantine promo/shopping posts in data/{date}/filtered_rss.json instead of
   silently dropping them, so the website can restore false positives;
-- prune old quarantine files after the configured retention period.
+- optionally scan recent news dates so manual refresh can backfill a failed run.
 """
 from __future__ import annotations
 
 import json
 import os
 import re
+import subprocess
 import sys
 import urllib.request
 import xml.etree.ElementTree as ET
+from argparse import ArgumentParser
 from datetime import datetime, timedelta, timezone
 from email.utils import parsedate_to_datetime
 from pathlib import Path
+from typing import Any
 
 from common_paths import REPO_ROOT, configure_utf8_stdio
 
@@ -35,7 +38,6 @@ RSS_PAGES = [
     "https://www.ign.com/rss/articles/feed?start=40&count=20",
 ]
 
-# Built-in shopping/promo filters. User config can add allow/block patterns.
 FILTER_PATTERNS = [
     r"\bsave \d+%",
     r"\bsave \$\d",
@@ -104,13 +106,13 @@ FILTER_CATEGORY_PATTERNS = [
 ]
 
 
-def read_json(path: Path, default):
+def read_json(path: Path, default: Any) -> Any:
     if not path.exists():
         return default
     return json.loads(path.read_text(encoding="utf-8-sig"))
 
 
-def write_json(path: Path, data) -> None:
+def write_json(path: Path, data: Any) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
@@ -198,200 +200,266 @@ def prune_old_filtered(now: datetime, retention_days: int) -> int:
     return removed
 
 
-now = datetime.now(CST)
-target_date = target_news_date(now)
-window_start, window_end = news_window(target_date)
-filter_config = load_filter_config()
+def fetch_rss_items() -> list[dict]:
+    rows: list[dict] = []
+    seen_feed_urls: set[str] = set()
+    for rss_url in RSS_PAGES:
+        try:
+            req = urllib.request.Request(rss_url, headers={"User-Agent": "Mozilla/5.0"})
+            resp = urllib.request.urlopen(req, timeout=15)
+            data = resp.read().decode("utf-8", errors="replace")
+            root = ET.fromstring(data)
+            for item in root.iter("item"):
+                title = (item.findtext("title") or "").strip()
+                link = (item.findtext("link") or "").strip()
+                pub_str = item.findtext("pubDate") or ""
+                description = strip_html(item.findtext("description") or "")
+                categories = " ".join((c.text or "").strip() for c in item.findall("category"))
 
-print(f"Target date: {target_date} (Beijing now: {now.strftime('%Y-%m-%d %H:%M')})")
-print(f"Window: {window_start.strftime('%Y-%m-%d %H:%M')} -> {window_end.strftime('%Y-%m-%d %H:%M')} Beijing")
+                if not title or not link or link in seen_feed_urls:
+                    continue
 
-date_dir = DATA_DIR / target_date
-index_path = date_dir / "index.json"
-filtered_path = date_dir / "filtered_rss.json"
+                try:
+                    pub_dt = parsedate_to_datetime(pub_str).astimezone(CST)
+                except Exception:
+                    continue
 
-idx = read_json(index_path, {"date": target_date, "articles": [], "total": 0})
-existing_articles = idx.get("articles", []) if isinstance(idx, dict) else []
-existing_urls = {a.get("url") for a in existing_articles if a.get("url")}
-max_id = max((int(a.get("id", 0) or 0) for a in existing_articles), default=0)
+                seen_feed_urls.add(link)
+                rows.append(
+                    {
+                        "title": title,
+                        "url": link,
+                        "pub_dt": pub_dt,
+                        "description": description,
+                        "categories": categories,
+                        "rss_url": rss_url,
+                    }
+                )
+        except Exception as e:
+            print(f"  WARN: {rss_url} failed: {e}")
+    return rows
 
-filtered_existing = read_json(filtered_path, [])
-if not isinstance(filtered_existing, list):
-    filtered_existing = []
-filtered_urls = {a.get("url") for a in filtered_existing if a.get("url")}
-seen_urls = set(existing_urls) | set(filtered_urls)
 
-cleanup_count = prune_old_filtered(now, filter_config["filtered_retention_days"])
-new_articles: list[dict] = []
-new_filtered: list[dict] = []
-
-for rss_url in RSS_PAGES:
-    try:
-        req = urllib.request.Request(rss_url, headers={"User-Agent": "Mozilla/5.0"})
-        resp = urllib.request.urlopen(req, timeout=15)
-        data = resp.read().decode("utf-8", errors="replace")
-        root = ET.fromstring(data)
-        for item in root.iter("item"):
-            title = (item.findtext("title") or "").strip()
-            link = (item.findtext("link") or "").strip()
-            pub_str = item.findtext("pubDate") or ""
-            description = strip_html(item.findtext("description") or "")
-            categories = " ".join((c.text or "").strip() for c in item.findall("category"))
-
-            if not title or not link or link in seen_urls:
-                continue
-
-            try:
-                pub_dt = parsedate_to_datetime(pub_str).astimezone(CST)
-            except Exception:
-                continue
-
-            if pub_dt < window_start or pub_dt >= window_end:
-                continue
-
-            reason = filter_reason(title, link, description, categories, filter_config)
-            if reason:
-                seen_urls.add(link)
-                row = {
-                    "title": title,
-                    "url": link,
-                    "pubDate_cst": pub_dt.strftime("%Y-%m-%d %H:%M"),
-                    "description": description[:500],
-                    "categories": categories,
-                    "reason": reason,
-                    "rss_url": rss_url,
-                    "filtered_at_cn": now.strftime("%Y-%m-%d %H:%M:%S"),
-                    "status": "filtered",
-                }
-                new_filtered.append(row)
-                print(f"  [quarantine] {title[:80]} ({reason})")
-                continue
-
-            seen_urls.add(link)
-            new_articles.append(
-                {
-                    "title": title,
-                    "url": link,
-                    "pubDate_cst": pub_dt.strftime("%Y-%m-%d %H:%M"),
-                }
-            )
-    except Exception as e:
-        print(f"  WARN: {rss_url} failed: {e}")
-
-if new_filtered:
-    filtered_existing.extend(new_filtered)
-    filtered_existing.sort(key=lambda x: x.get("pubDate_cst", ""), reverse=True)
-    write_json(filtered_path, filtered_existing)
-
-if new_articles:
-    date_dir.mkdir(parents=True, exist_ok=True)
-    (date_dir / "translations").mkdir(parents=True, exist_ok=True)
-
-    if not isinstance(idx, dict) or not isinstance(idx.get("articles"), list):
-        idx = {"date": target_date, "articles": [], "total": 0}
-
-    assigned = []
-    for article in new_articles:
-        max_id += 1
-        assigned.append((max_id, article))
-        idx["articles"].append(
-            {
-                "id": max_id,
-                "category": "游戏新闻",
-                "emoji": "🎮",
-                "en_title": article["title"],
-                "cn_title": article["title"],
-                "summary": "",
-                "url": article["url"],
-                "publish_time_cn": article["pubDate_cst"],
-                "pub_date": article["pubDate_cst"],
-                "cover_image": "",
-                "translation_status": "none",
-            }
-        )
-        print(f"  [+] #{max_id} {article['title'][:60]}")
-
-    idx["articles"].sort(
-        key=lambda a: a.get("publish_time_cn") or a.get("pub_date") or a.get("pubDate_cst") or "",
-        reverse=True,
-    )
-    idx["total"] = len(idx["articles"])
-    write_json(index_path, idx)
-
+def ensure_history_row(target_date: str, total: int) -> None:
     hist_path = DATA_DIR / "index-list.json"
     hist = read_json(hist_path, [])
     hist = hist if isinstance(hist, list) else []
     for row in hist:
         if row.get("date") == target_date:
-            row["total"] = idx["total"]
+            row["total"] = total
             break
     else:
-        hist.append({"date": target_date, "total": idx["total"], "translated": 0, "translatedTitles": []})
+        hist.append({"date": target_date, "total": total, "translated": 0, "translatedTitles": []})
     hist.sort(key=lambda x: x.get("date", ""), reverse=True)
     write_json(hist_path, hist)
 
-    need_path = date_dir / "need_titles.json"
-    need_queue = read_json(need_path, [])
-    need_queue = need_queue if isinstance(need_queue, list) else []
-    queued_urls = {q.get("url") for q in need_queue if q.get("url")}
-    for aid, article in assigned:
-        if article["url"] in queued_urls:
+
+def process_target_date(target_date: str, now: datetime, filter_config: dict, rss_items: list[dict]) -> dict:
+    window_start, window_end = news_window(target_date)
+    print(f"Target date: {target_date} (Beijing now: {now.strftime('%Y-%m-%d %H:%M')})")
+    print(f"Window: {window_start.strftime('%Y-%m-%d %H:%M')} -> {window_end.strftime('%Y-%m-%d %H:%M')} Beijing")
+
+    date_dir = DATA_DIR / target_date
+    index_path = date_dir / "index.json"
+    filtered_path = date_dir / "filtered_rss.json"
+
+    idx = read_json(index_path, {"date": target_date, "articles": [], "total": 0})
+    existing_articles = idx.get("articles", []) if isinstance(idx, dict) else []
+    existing_urls = {a.get("url") for a in existing_articles if a.get("url")}
+    max_id = max((int(a.get("id", 0) or 0) for a in existing_articles), default=0)
+
+    filtered_existing = read_json(filtered_path, [])
+    if not isinstance(filtered_existing, list):
+        filtered_existing = []
+    filtered_urls = {a.get("url") for a in filtered_existing if a.get("url")}
+    seen_urls = set(existing_urls) | set(filtered_urls)
+
+    new_articles: list[dict] = []
+    new_filtered: list[dict] = []
+
+    for item in rss_items:
+        title = item["title"]
+        link = item["url"]
+        pub_dt = item["pub_dt"]
+        description = item["description"]
+        categories = item["categories"]
+        rss_url = item["rss_url"]
+
+        if link in seen_urls or pub_dt < window_start or pub_dt >= window_end:
             continue
-        need_queue.append(
+
+        reason = filter_reason(title, link, description, categories, filter_config)
+        if reason:
+            seen_urls.add(link)
+            row = {
+                "title": title,
+                "url": link,
+                "pubDate_cst": pub_dt.strftime("%Y-%m-%d %H:%M"),
+                "description": description[:500],
+                "categories": categories,
+                "reason": reason,
+                "rss_url": rss_url,
+                "filtered_at_cn": now.strftime("%Y-%m-%d %H:%M:%S"),
+                "status": "filtered",
+            }
+            new_filtered.append(row)
+            print(f"  [quarantine] {title[:80]} ({reason})")
+            continue
+
+        seen_urls.add(link)
+        new_articles.append(
             {
-                "id": aid,
-                "url": article["url"],
-                "en_title": article["title"],
-                "pub_date": article["pubDate_cst"],
+                "title": title,
+                "url": link,
+                "pubDate_cst": pub_dt.strftime("%Y-%m-%d %H:%M"),
             }
         )
-        queued_urls.add(article["url"])
-    write_json(need_path, need_queue)
-    print(f"\n[QUEUE] {len(new_articles)} articles queued for title translation")
 
-changed_count = len(new_articles) + len(new_filtered) + cleanup_count
-output_path = IGN_DAILY / "ign_rss_new.json"
-write_json(
-    output_path,
-    {
+    if new_filtered:
+        filtered_existing.extend(new_filtered)
+        filtered_existing.sort(key=lambda x: x.get("pubDate_cst", ""), reverse=True)
+        write_json(filtered_path, filtered_existing)
+
+    if new_articles:
+        date_dir.mkdir(parents=True, exist_ok=True)
+        (date_dir / "translations").mkdir(parents=True, exist_ok=True)
+
+        if not isinstance(idx, dict) or not isinstance(idx.get("articles"), list):
+            idx = {"date": target_date, "articles": [], "total": 0}
+
+        assigned = []
+        for article in new_articles:
+            max_id += 1
+            assigned.append((max_id, article))
+            idx["articles"].append(
+                {
+                    "id": max_id,
+                    "category": "\u6e38\u620f\u65b0\u95fb",
+                    "emoji": "\U0001f3ae",
+                    "en_title": article["title"],
+                    "cn_title": article["title"],
+                    "summary": "",
+                    "url": article["url"],
+                    "publish_time_cn": article["pubDate_cst"],
+                    "pub_date": article["pubDate_cst"],
+                    "cover_image": "",
+                    "translation_status": "none",
+                }
+            )
+            print(f"  [+] #{max_id} {article['title'][:60]}")
+
+        idx["articles"].sort(
+            key=lambda a: a.get("publish_time_cn") or a.get("pub_date") or a.get("pubDate_cst") or "",
+            reverse=True,
+        )
+        idx["total"] = len(idx["articles"])
+        write_json(index_path, idx)
+        ensure_history_row(target_date, idx["total"])
+
+        need_path = date_dir / "need_titles.json"
+        need_queue = read_json(need_path, [])
+        need_queue = need_queue if isinstance(need_queue, list) else []
+        queued_urls = {q.get("url") for q in need_queue if q.get("url")}
+        for aid, article in assigned:
+            if article["url"] in queued_urls:
+                continue
+            need_queue.append(
+                {
+                    "id": aid,
+                    "url": article["url"],
+                    "en_title": article["title"],
+                    "pub_date": article["pubDate_cst"],
+                }
+            )
+            queued_urls.add(article["url"])
+        write_json(need_path, need_queue)
+        print(f"\n[QUEUE] {len(new_articles)} articles queued for title translation for {target_date}")
+
+    return {
         "target_date": target_date,
         "new_count": len(new_articles),
         "filtered_count": len(new_filtered),
-        "cleanup_count": cleanup_count,
-        "changed_count": changed_count,
+        "changed_count": len(new_articles) + len(new_filtered),
         "next_id": max_id + 1,
         "articles": new_articles,
         "filtered_articles": new_filtered,
-    },
-)
+    }
 
-if changed_count == 0:
-    print("No new RSS changes.")
-    sys.exit(0)
 
-if os.environ.get("IGN_DAILY_SKIP_GIT") == "1":
-    print("[SKIP_GIT] RSS files updated; caller will validate and commit.")
-    sys.exit(0)
+def target_dates_for_run(now: datetime, lookback_days: int, explicit_dates: list[str]) -> list[str]:
+    if explicit_dates:
+        return explicit_dates
+    current = target_news_date(now)
+    base = datetime.strptime(current, "%Y-%m-%d").date()
+    return [(base - timedelta(days=offset)).isoformat() for offset in range(max(1, lookback_days))]
 
-import subprocess
 
-os.chdir(IGN_DAILY)
-add = subprocess.run(["git", "add", "-A"], capture_output=True, text=True)
-if add.returncode != 0:
-    print(f"[ERR] git add failed: {add.stderr}")
-    sys.exit(add.returncode)
-commit = subprocess.run(
-    ["git", "commit", "-m", f"feat: incremental RSS {len(new_articles)} new, {len(new_filtered)} filtered for {target_date}"],
-    capture_output=True,
-    text=True,
-)
-if commit.returncode != 0 and "nothing to commit" not in (commit.stdout + commit.stderr).lower():
-    print(f"[ERR] git commit failed: {commit.stderr}")
-    sys.exit(commit.returncode)
-push_script = IGN_DAILY / "scripts" / "git_push.py"
-if push_script.exists():
-    push = subprocess.run([sys.executable, str(push_script)], capture_output=True, text=True)
-    if push.returncode != 0:
-        print(push.stdout)
-        print(push.stderr)
-        sys.exit(push.returncode)
+def main() -> int:
+    parser = ArgumentParser()
+    parser.add_argument("--lookback-days", type=int, default=1, help="Scan current news date plus N-1 previous dates.")
+    parser.add_argument("--target-date", action="append", default=[], help="Explicit YYYY-MM-DD date. Can be repeated.")
+    args = parser.parse_args()
+
+    now = datetime.now(CST)
+    filter_config = load_filter_config()
+    cleanup_count = prune_old_filtered(now, filter_config["filtered_retention_days"])
+    target_dates = target_dates_for_run(now, args.lookback_days, args.target_date)
+    rss_items = fetch_rss_items()
+    summaries = [process_target_date(date_s, now, filter_config, rss_items) for date_s in target_dates]
+
+    new_articles = [a for summary in summaries for a in summary["articles"]]
+    new_filtered = [a for summary in summaries for a in summary["filtered_articles"]]
+    changed_count = sum(summary["changed_count"] for summary in summaries) + cleanup_count
+    changed_dates = [s["target_date"] for s in summaries if s["changed_count"] > 0]
+    new_target_dates = [s["target_date"] for s in summaries if s["new_count"] > 0]
+
+    write_json(
+        IGN_DAILY / "ign_rss_new.json",
+        {
+            "target_date": target_dates[0] if target_dates else "",
+            "target_dates": target_dates,
+            "changed_dates": changed_dates,
+            "new_target_dates": new_target_dates,
+            "new_count": len(new_articles),
+            "filtered_count": len(new_filtered),
+            "cleanup_count": cleanup_count,
+            "changed_count": changed_count,
+            "articles": new_articles,
+            "filtered_articles": new_filtered,
+            "runs": summaries,
+        },
+    )
+
+    if changed_count == 0:
+        print("No new RSS changes.")
+        return 0
+
+    if os.environ.get("IGN_DAILY_SKIP_GIT") == "1":
+        print("[SKIP_GIT] RSS files updated; caller will validate and commit.")
+        return 0
+
+    os.chdir(IGN_DAILY)
+    add = subprocess.run(["git", "add", "-A"], capture_output=True, text=True)
+    if add.returncode != 0:
+        print(f"[ERR] git add failed: {add.stderr}")
+        return add.returncode
+    commit = subprocess.run(
+        ["git", "commit", "-m", f"feat: incremental RSS {len(new_articles)} new, {len(new_filtered)} filtered for {','.join(changed_dates or target_dates)}"],
+        capture_output=True,
+        text=True,
+    )
+    if commit.returncode != 0 and "nothing to commit" not in (commit.stdout + commit.stderr).lower():
+        print(f"[ERR] git commit failed: {commit.stderr}")
+        return commit.returncode
+    push_script = IGN_DAILY / "scripts" / "git_push.py"
+    if push_script.exists():
+        push = subprocess.run([sys.executable, str(push_script)], capture_output=True, text=True)
+        if push.returncode != 0:
+            print(push.stdout)
+            print(push.stderr)
+            return push.returncode
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
