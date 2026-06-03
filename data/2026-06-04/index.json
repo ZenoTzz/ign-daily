@@ -164,13 +164,13 @@
       "category": "游戏新闻",
       "emoji": "🦸",
       "en_title": "How Powerful Is Wolverine's Healing Factor Anyway?",
-      "cn_title": "金刚狼自愈因子有多强？从一滴血复活到无限再生",
-      "summary": "Insomniac《漫威金刚狼》新预告展示了狼叔与蜘蛛侠截然不同的战斗风格：他硬抗子弹与刀剑，依靠自愈因子持续作战。但自愈并非无敌——心脏被刺穿或承受过量伤害仍会死亡。漫画中狼叔曾从一滴血复活、被炸至只剩金属骨架后再生，甚至能延缓衰老。不过不同故事对其寿命设定不一，从自然衰老到千年不老皆有。",
+      "cn_title": "金刚狼自愈因子有多强？",
+      "summary": "Insomniac《漫威金刚狼》新预告展示了狼叔与蜘蛛侠截然不同的战斗风格：他硬抗子弹与刀剑，依靠自愈因子持续作战。但自愈并非无敌——心脏被刺穿或承受过量伤害仍会死亡。漫画中狼叔曾从一滴血复活、被炸至只剩金属骨架后再生，甚至能延缓衰老。不过不同故事对其寿命设定不一，从自然衰老到千年不老皆有。本文详细解析金刚狼自愈因子的运作机制、极限以及漫画中最惊人的复活案例。",
       "url": "https://www.ign.com/articles/wolverine-healing-factor-powers-regeneration-death",
       "publish_time_cn": "2026-06-04 02:07",
       "pub_date": "2026-06-04 02:07",
       "cover_image": "https://assets-prd.ignimgs.com/2026/06/03/mixcollage-03-jun-2026-01-17-pm-4840-1780509895734.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/03/mixcollage-03-jun-2026-01-17-pm-4840-1780509895734.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/03/mixcollage-03-jun-2026-01-17-pm-4840-1780509895734.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -185,7 +185,13 @@
         "https://assets-prd.ignimgs.com/2026/06/03/x-men-vol-1-141-1780509600149.webp"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-04T07:22:53+08:00"
+      "source_fetched_at": "2026-06-04T07:22:53+08:00",
+      "translation_error": "[currency_source] source mentions foreign-currency amount(s), but translation has no CNY conversion: 100 pounds",
+      "translation_failed_at": "2026-06-04T07:53:25.030520+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-flash",
+      "translation_path": "translations/23.json"
     },
     {
       "id": 24,
@@ -246,8 +252,8 @@
       "url": "https://www.ign.com/articles/gta-6-has-turned-september-into-a-video-game-battle-royale",
       "publish_time_cn": "2026-06-04 00:30",
       "pub_date": "2026-06-04 00:30",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/06/03/september-2026-blogroll-1780502349827.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/03/september-2026-blogroll-1780502349827.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/03/september-2026-blogroll-1780502349827.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/03/september-2026-blogroll-1780502349827.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -284,7 +290,11 @@
           "cn": "古墓丽影：亚特兰蒂斯遗迹",
           "reason": "词库已有，确认译名"
         }
-      ]
+      ],
+      "translation_path": "translations/25.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-flash"
     },
     {
       "id": 26,
@@ -494,8 +504,8 @@
       "url": "https://www.ign.com/articles/persona-5-royal-headlines-xbox-game-pass-june-2026-wave-1",
       "publish_time_cn": "2026-06-03 22:01",
       "pub_date": "2026-06-03 22:01",
-      "cover_image": "https://assets-prd.ignimgs.com/2024/02/14/xbox-1-blogroll-1707928931451.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2024/02/14/xbox-1-blogroll-1707928931451.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2024/02/14/xbox-1-blogroll-1707928931451.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2024/02/14/xbox-1-blogroll-1707928931451.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -541,7 +551,11 @@
           "cn": "Total Chaos",
           "reason": "无官方中文译名，保留英文"
         }
-      ]
+      ],
+      "translation_path": "translations/31.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-flash"
     },
     {
       "id": 32,
@@ -1272,5 +1286,5 @@
       "source_fetched_at": "2026-06-03T09:43:34+08:00"
     }
   ],
-  "total": 38
+  "total": 35
 }

@@ -483,6 +483,111 @@
       "total_tokens": 8420,
       "prompt_cache_hit_tokens": 6528,
       "prompt_cache_miss_tokens": 1546
+    },
+    {
+      "time_cn": "2026-06-04 07:52:58",
+      "task": "fulltext",
+      "model": "deepseek-v4-flash",
+      "article_id": 23,
+      "article_title": "金刚狼自愈因子有多强？从一滴血复活到无限再生",
+      "article_url": "https://www.ign.com/articles/wolverine-healing-factor-powers-regeneration-death",
+      "article_date": "2026-06-04",
+      "detail": "",
+      "estimated_cost_usd": 0.00190985,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9660,
+      "completion_tokens": 4876,
+      "total_tokens": 14536,
+      "prompt_cache_hit_tokens": 5888,
+      "prompt_cache_miss_tokens": 3772
+    },
+    {
+      "time_cn": "2026-06-04 07:53:24",
+      "task": "fulltext_repair",
+      "model": "deepseek-v4-flash",
+      "article_id": 23,
+      "article_title": "金刚狼自愈因子有多强？从一滴血复活到无限再生",
+      "article_url": "https://www.ign.com/articles/wolverine-healing-factor-powers-regeneration-death",
+      "article_date": "2026-06-04",
+      "detail": "1 audit issue(s)",
+      "estimated_cost_usd": 0.0023611,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 5847,
+      "completion_tokens": 5509,
+      "total_tokens": 11356,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 5847
+    },
+    {
+      "time_cn": "2026-06-04 07:53:54",
+      "task": "fulltext",
+      "model": "deepseek-v4-flash",
+      "article_id": 25,
+      "article_title": "《GTA6》让9月变成游戏大逃杀",
+      "article_url": "https://www.ign.com/articles/gta-6-has-turned-september-into-a-video-game-battle-royale",
+      "article_date": "2026-06-04",
+      "detail": "",
+      "estimated_cost_usd": 0.00208695,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 10173,
+      "completion_tokens": 5252,
+      "total_tokens": 15425,
+      "prompt_cache_hit_tokens": 5888,
+      "prompt_cache_miss_tokens": 4285
+    },
+    {
+      "time_cn": "2026-06-04 07:54:18",
+      "task": "fulltext_repair",
+      "model": "deepseek-v4-flash",
+      "article_id": 25,
+      "article_title": "《GTA6》让9月变成游戏大逃杀",
+      "article_url": "https://www.ign.com/articles/gta-6-has-turned-september-into-a-video-game-battle-royale",
+      "article_date": "2026-06-04",
+      "detail": "1 audit issue(s)",
+      "estimated_cost_usd": 0.00224154,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 6211,
+      "completion_tokens": 4900,
+      "total_tokens": 11111,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 6211
+    },
+    {
+      "time_cn": "2026-06-04 07:54:26",
+      "task": "fulltext",
+      "model": "deepseek-v4-flash",
+      "article_id": 31,
+      "article_title": "《女神异闻录5 皇家版》领衔XGP六月首批阵容",
+      "article_url": "https://www.ign.com/articles/persona-5-royal-headlines-xbox-game-pass-june-2026-wave-1",
+      "article_date": "2026-06-04",
+      "detail": "",
+      "estimated_cost_usd": 0.00058234,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7859,
+      "completion_tokens": 1349,
+      "total_tokens": 9208,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 1331
     }
   ]
 }
