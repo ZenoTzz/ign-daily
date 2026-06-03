@@ -244,7 +244,7 @@
       "publish_time_cn": "2026-06-03 18:09",
       "pub_date": "2026-06-03 18:09",
       "cover_image": "https://assets-prd.ignimgs.com/2025/01/10/screenshot-120-1736503735002.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "needs_review",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2025/01/10/screenshot-120-1736503735002.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2025/01/10/screenshot-120-1736503735002.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -254,8 +254,6 @@
       ],
       "source_status": "cached",
       "source_fetched_at": "2026-06-03T20:43:35+08:00",
-      "translation_error": "[currency_symbol] translation still contains raw currency symbol/code; convert it to Chinese currency text plus CNY",
-      "translation_failed_at": "2026-06-03T23:19:59.513299+08:00",
       "translator": "api",
       "translator_provider": "openai-compatible",
       "translator_model": "deepseek-v4-flash",
