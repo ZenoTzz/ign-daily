@@ -357,7 +357,7 @@
       "publish_time_cn": "2026-06-03 06:15",
       "pub_date": "2026-06-03 06:15",
       "cover_image": "https://assets-prd.ignimgs.com/2026/06/02/gow-laufey-ste-masterimage-3840x2160-r-1-1780437732852.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "needs_review",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/02/gow-laufey-ste-masterimage-3840x2160-r-1-1780437732852.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/02/gow-laufey-ste-masterimage-3840x2160-r-1-1780437732852.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -398,8 +398,6 @@
           "reason": "蒙古战神名，需确认常用译名"
         }
       ],
-      "translation_error": "[dictionary] source contains 'Persona', but required dictionary translation '女神异闻录' is missing",
-      "translation_failed_at": "2026-06-03T10:28:12.892310+08:00",
       "translator": "api",
       "translator_provider": "openai-compatible",
       "translator_model": "deepseek-v4-flash",
