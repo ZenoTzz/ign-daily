@@ -1659,6 +1659,111 @@
       "total_tokens": 7354,
       "prompt_cache_hit_tokens": 0,
       "prompt_cache_miss_tokens": 3812
+    },
+    {
+      "time_cn": "2026-06-03 19:04:02",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 4,
+      "article_title": "Avengers: Doomsday and Secret Wars Directors Rule Out a Third Movie, Both Are a 'Complete Expression'",
+      "article_url": "https://www.ign.com/articles/avengers-doomsday-and-secret-wars-directors-rule-out-a-third-movie-both-are-a-complete-expression",
+      "article_date": "2026-06-04",
+      "detail": "",
+      "estimated_cost_usd": 0.00019107,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 6879,
+      "completion_tokens": 128,
+      "total_tokens": 7007,
+      "prompt_cache_hit_tokens": 5888,
+      "prompt_cache_miss_tokens": 991
+    },
+    {
+      "time_cn": "2026-06-03 19:04:05",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 5,
+      "article_title": "Final Fantasy VII Rebirth Update Adds 'Streamlined Progression' to Make the Game Easier",
+      "article_url": "https://www.ign.com/articles/final-fantasy-vii-rebirth-update-adds-streamlined-progression-to-make-the-game-easier",
+      "article_date": "2026-06-04",
+      "detail": "",
+      "estimated_cost_usd": 0.00023307,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7155,
+      "completion_tokens": 140,
+      "total_tokens": 7295,
+      "prompt_cache_hit_tokens": 5888,
+      "prompt_cache_miss_tokens": 1267
+    },
+    {
+      "time_cn": "2026-06-03 19:04:09",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 6,
+      "article_title": "The Legend of Vox Machina Season 4 Episodes 1-3 Review",
+      "article_url": "https://www.ign.com/articles/the-legend-of-vox-machina-season-4-episodes-1-3-review",
+      "article_date": "2026-06-04",
+      "detail": "",
+      "estimated_cost_usd": 0.00027577,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7044,
+      "completion_tokens": 348,
+      "total_tokens": 7392,
+      "prompt_cache_hit_tokens": 5888,
+      "prompt_cache_miss_tokens": 1156
+    },
+    {
+      "time_cn": "2026-06-03 19:04:11",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 7,
+      "article_title": "Hell Let Loose: Vietnam Has Been Delayed Until August",
+      "article_url": "https://www.ign.com/articles/hell-let-loose-vietnam-has-been-delayed-until-august",
+      "article_date": "2026-06-04",
+      "detail": "",
+      "estimated_cost_usd": 0.00013773,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 6526,
+      "completion_tokens": 114,
+      "total_tokens": 6640,
+      "prompt_cache_hit_tokens": 5888,
+      "prompt_cache_miss_tokens": 638
+    },
+    {
+      "time_cn": "2026-06-03 19:04:15",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 8,
+      "article_title": "Sir Idris Elba Has Been Awarded a Knighthood",
+      "article_url": "https://www.ign.com/articles/sir-idris-elba-has-been-awarded-a-knighthood",
+      "article_date": "2026-06-04",
+      "detail": "",
+      "estimated_cost_usd": 0.00018995,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 6559,
+      "completion_tokens": 284,
+      "total_tokens": 6843,
+      "prompt_cache_hit_tokens": 5888,
+      "prompt_cache_miss_tokens": 671
     }
   ]
 }
