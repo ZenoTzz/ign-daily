@@ -140,7 +140,28 @@
       "fingerprint": "6520d31b5ab12b9f9f2313c2689d104337af2afb",
       "translation_path": "translations/34.json",
       "retry_policy": "manual_only"
+    },
+    "38": {
+      "id": 38,
+      "url": "https://www.ign.com/articles/valve-reportedly-threatened-to-delist-rainbow-six-siege-on-steam-after-ubisoft-offered-cheaper-alternative",
+      "en_title": "Valve Reportedly Threatened to Delist Rainbow Six Siege on Steam After Ubisoft Offered Cheaper Alternative",
+      "cn_title": "Valve威胁下架《彩虹六号：围攻》？因育碧UPlay低价包引发争端",
+      "model": "deepseek-v4-flash",
+      "status": "needs_manual_review",
+      "failed_at": "2026-06-03T12:56:48.175321+08:00",
+      "reason": "[dictionary] source contains 'Tangled', but required dictionary translation '魔发奇缘' is missing",
+      "audit_issues": [
+        {
+          "type": "dictionary",
+          "detail": "source contains 'Tangled', but required dictionary translation '魔发奇缘' is missing",
+          "en": "Tangled",
+          "expected_cn": "魔发奇缘"
+        }
+      ],
+      "fingerprint": "1b362c01d67e836ac833fb5290fb3c916eeb4261",
+      "translation_path": "translations/38.json",
+      "retry_policy": "manual_only"
     }
   },
-  "updated_at": "2026-06-03T03:36:44.037Z"
+  "updated_at": "2026-06-03T12:56:48.175321+08:00"
 }

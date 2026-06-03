@@ -741,12 +741,12 @@
       "emoji": "⚔️",
       "en_title": "Valve Reportedly Threatened to Delist Rainbow Six Siege on Steam After Ubisoft Offered Cheaper Alternative",
       "cn_title": "Valve威胁下架《彩虹六号：围攻》？因育碧UPlay低价包引发争端",
-      "summary": "据彭博社报道，Valve曾威胁育碧，若不在UPlay上取消更便宜的《彩虹六号：围攻》新手包（15美元，约合人民币107元），就将该作从Steam下架。此举是Valve为维护Steam市场主导地位而采取的激进策略之一。此外，华纳兄弟互动也曾因《中土世界：战争之影》定价问题遭Valve干预。相关邮件已在反垄断诉讼中曝光。",
+      "summary": "据彭博社报道，Valve为维护Steam在PC市场的统治地位，曾采取激进手段，包括威胁育碧将《彩虹六号：围攻》从Steam下架，原因是育碧在自家UPlay商店推出了更便宜的15美元(约合人民币107元)新手包。此外，华纳兄弟互动也因《中土世界：战争之影》的定价问题遭到Valve干预。相关邮件在针对Valve的反垄断诉讼中被曝光，揭示了其要求平台定价一致性的强硬立场。Valve在2026年还面临9亿美元(约合人民币64亿元)的垄断诉讼，纽约州总检察长也已介入调查。",
       "url": "https://www.ign.com/articles/valve-reportedly-threatened-to-delist-rainbow-six-siege-on-steam-after-ubisoft-offered-cheaper-alternative",
       "publish_time_cn": "2026-06-03 03:18",
       "pub_date": "2026-06-03 03:18",
-      "cover_image": "",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/02/rainbow-six-siege-steam-1780424935759.png?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "needs_review",
       "pending_dict": [
         {
           "en": "Rainbow Six Siege",
@@ -763,7 +763,22 @@
           "cn": "David Haddad",
           "reason": "不知名人物，保留英文"
         }
-      ]
+      ],
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/02/rainbow-six-siege-steam-1780424935759.png?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/02/rainbow-six-siege-steam-1780424935759.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/02/rainbow-six-siege-steam-1780424935759.png?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/02/rainbow-six-siege-steam-1780424935759.png?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/02/rainbow-six-siege-steam-1780424935759.png"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-03T12:56:28+08:00",
+      "translation_error": "[dictionary] source contains 'Tangled', but required dictionary translation '魔发奇缘' is missing",
+      "translation_failed_at": "2026-06-03T12:56:48.175321+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-flash",
+      "translation_path": "translations/38.json"
     },
     {
       "id": 39,
@@ -945,8 +960,8 @@
       "url": "https://www.ign.com/articles/tom-holland-reveals-how-the-odyssey-almost-saved-spider-man-brand-new-day",
       "publish_time_cn": "2026-06-02 23:37",
       "pub_date": "2026-06-02 23:37",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/06/02/gettyimages-2227870499-1780414413307.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/02/gettyimages-2227870499-1780414413307.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/02/gettyimages-2227870499-1780414413307.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/02/gettyimages-2227870499-1780414413307.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -955,7 +970,11 @@
         "https://assets-prd.ignimgs.com/2026/06/02/gettyimages-2227870499-1780414413307.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-03T10:12:31+08:00"
+      "source_fetched_at": "2026-06-03T10:12:31+08:00",
+      "translation_path": "translations/46.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-flash"
     },
     {
       "id": 12,

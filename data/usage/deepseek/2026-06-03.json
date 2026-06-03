@@ -1407,6 +1407,69 @@
       "total_tokens": 7129,
       "prompt_cache_hit_tokens": 5888,
       "prompt_cache_miss_tokens": 1073
+    },
+    {
+      "time_cn": "2026-06-03 12:56:38",
+      "task": "fulltext",
+      "model": "deepseek-v4-flash",
+      "article_id": 38,
+      "article_title": "Valve威胁下架《彩虹六号：围攻》？因育碧UPlay低价包引发争端",
+      "article_url": "https://www.ign.com/articles/valve-reportedly-threatened-to-delist-rainbow-six-siege-on-steam-after-ubisoft-offered-cheaper-alternative",
+      "article_date": "2026-06-03",
+      "detail": "",
+      "estimated_cost_usd": 0.00068443,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7493,
+      "completion_tokens": 1583,
+      "total_tokens": 9076,
+      "prompt_cache_hit_tokens": 5888,
+      "prompt_cache_miss_tokens": 1605
+    },
+    {
+      "time_cn": "2026-06-03 12:56:48",
+      "task": "fulltext_repair",
+      "model": "deepseek-v4-flash",
+      "article_id": 38,
+      "article_title": "Valve威胁下架《彩虹六号：围攻》？因育碧UPlay低价包引发争端",
+      "article_url": "https://www.ign.com/articles/valve-reportedly-threatened-to-delist-rainbow-six-siege-on-steam-after-ubisoft-offered-cheaper-alternative",
+      "article_date": "2026-06-03",
+      "detail": "1 audit issue(s)",
+      "estimated_cost_usd": 0.00078988,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 2476,
+      "completion_tokens": 1583,
+      "total_tokens": 4059,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 2476
+    },
+    {
+      "time_cn": "2026-06-03 12:56:58",
+      "task": "fulltext",
+      "model": "deepseek-v4-flash",
+      "article_id": 46,
+      "article_title": "《奥德赛》差点拯救了《蜘蛛侠》新片",
+      "article_url": "https://www.ign.com/articles/tom-holland-reveals-how-the-odyssey-almost-saved-spider-man-brand-new-day",
+      "article_date": "2026-06-03",
+      "detail": "",
+      "estimated_cost_usd": 0.00074253,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7550,
+      "completion_tokens": 1762,
+      "total_tokens": 9312,
+      "prompt_cache_hit_tokens": 5888,
+      "prompt_cache_miss_tokens": 1662
     }
   ]
 }
