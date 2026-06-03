@@ -1365,6 +1365,48 @@
       "total_tokens": 4847,
       "prompt_cache_hit_tokens": 0,
       "prompt_cache_miss_tokens": 2928
+    },
+    {
+      "time_cn": "2026-06-03 11:34:19",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 2,
+      "article_title": "Phantom Blade Zero Delay Moves Launch to Late October 2026",
+      "article_url": "https://www.ign.com/articles/phantom-blade-zero-delay-moves-launch-to-late-october-2026",
+      "article_date": "2026-06-04",
+      "detail": "",
+      "estimated_cost_usd": 0.00022495,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 6951,
+      "completion_tokens": 213,
+      "total_tokens": 7164,
+      "prompt_cache_hit_tokens": 5888,
+      "prompt_cache_miss_tokens": 1063
+    },
+    {
+      "time_cn": "2026-06-03 11:34:23",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 3,
+      "article_title": "Gabe Newell Says Players Have 'Enormous Choice' When Pressed on Steam Monopoly Accusations, Report Says",
+      "article_url": "https://www.ign.com/articles/gabe-newell-says-players-have-enormous-choice-when-pressed-on-steam-monopoly-accusations-report-says",
+      "article_date": "2026-06-04",
+      "detail": "",
+      "estimated_cost_usd": 0.00021375,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 6961,
+      "completion_tokens": 168,
+      "total_tokens": 7129,
+      "prompt_cache_hit_tokens": 5888,
+      "prompt_cache_miss_tokens": 1073
     }
   ]
 }

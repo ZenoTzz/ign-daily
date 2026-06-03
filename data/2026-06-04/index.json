@@ -2,6 +2,63 @@
   "date": "2026-06-04",
   "articles": [
     {
+      "id": 2,
+      "category": "游戏新闻",
+      "emoji": "🎮",
+      "en_title": "Phantom Blade Zero Delay Moves Launch to Late October 2026",
+      "cn_title": "《影之刃零》延期至10月底发售",
+      "summary": "开发商S-Game宣布，《影之刃零》将从原定的9月9日推迟至10月29日发售，延期约50天。制作人Soulframe在声明中致歉，表示将利用这段时间升级角色模型、重制环境并优化视觉效果，力求在首发时提供最佳体验。游戏将在PS5上独占至少12个月，预购将于今夏开启。",
+      "url": "https://www.ign.com/articles/phantom-blade-zero-delay-moves-launch-to-late-october-2026",
+      "publish_time_cn": "2026-06-03 08:34",
+      "pub_date": "2026-06-03 08:34",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/03/phantom-blade-zero-delay-1780446237064.png?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/03/phantom-blade-zero-delay-1780446237064.png?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/03/phantom-blade-zero-delay-1780446237064.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/03/phantom-blade-zero-delay-1780446237064.png?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/03/phantom-blade-zero-delay-1780446237064.png?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/03/phantom-blade-zero-delay-1780446237064.png"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-03T11:34:15+08:00",
+      "pending_dict": [
+        {
+          "en": "S-Game",
+          "cn": "S-Game",
+          "reason": "公司名，无官方中文译名，保留英文"
+        },
+        {
+          "en": "Soulframe",
+          "cn": "Soulframe",
+          "reason": "制作人化名，无官方中文译名，保留英文"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "category": "行业动态",
+      "emoji": "⚖️",
+      "en_title": "Gabe Newell Says Players Have 'Enormous Choice' When Pressed on Steam Monopoly Accusations, Report Says",
+      "cn_title": "Gabe Newell 否认 Steam 垄断指控：玩家选择多",
+      "summary": "据彭博社报道，Valve 创始人 Gabe Newell 在反垄断诉讼中否认 Steam 垄断指控，称玩家在 PC 游戏领域有「巨大选择权」。他指出玩家可在 Xbox、Steam、Epic Games Store 或开发商处购买游戏。尽管 Steam 用户五年增长 60%，同时在线约 4200 万，但 Newell 表示 Valve 不限制其他平台定价。目前 Valve 还面临英国 6.56亿英镑(约合人民币60亿元)集体诉讼等多起法律挑战。",
+      "url": "https://www.ign.com/articles/gabe-newell-says-players-have-enormous-choice-when-pressed-on-steam-monopoly-accusations-report-says",
+      "publish_time_cn": "2026-06-03 08:16",
+      "pub_date": "2026-06-03 08:16",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/02/gabe-newell-1780432318412.png?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/02/gabe-newell-1780432318412.png?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/02/gabe-newell-1780432318412.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/02/gabe-newell-1780432318412.png?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/02/gabe-newell-1780432318412.png?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/02/gabe-newell-1780432318412.png",
+        "https://assets-prd.ignimgs.com/2026/06/02/gabe-newell-1780432132948.png"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-03T11:34:16+08:00"
+    },
+    {
       "id": 1,
       "category": "评测评分",
       "emoji": "🚀",
@@ -31,5 +88,5 @@
       "source_fetched_at": "2026-06-03T09:43:34+08:00"
     }
   ],
-  "total": 1
+  "total": 3
 }
