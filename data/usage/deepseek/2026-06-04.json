@@ -588,6 +588,69 @@
       "total_tokens": 9208,
       "prompt_cache_hit_tokens": 6528,
       "prompt_cache_miss_tokens": 1331
+    },
+    {
+      "time_cn": "2026-06-04 07:54:42",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 36,
+      "article_title": "Rayman Legends Retold Is Now Available To Preorder, Out in October",
+      "article_url": "https://www.ign.com/articles/rayman-legends-retold-where-to-preorder",
+      "article_date": "2026-06-04",
+      "detail": "",
+      "estimated_cost_usd": 0.00022954,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7547,
+      "completion_tokens": 245,
+      "total_tokens": 7792,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 1019
+    },
+    {
+      "time_cn": "2026-06-04 07:54:45",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 37,
+      "article_title": "From 19 Inches of Venom to... Nothing — There's No Marvel's Wolverine Collector's Edition and Insomniac Fans Don't Know Why",
+      "article_url": "https://www.ign.com/articles/from-19-inches-of-venom-to-nothing-theres-no-marvels-wolverine-collectors-edition-and-insomniac-fans-dont-know-why",
+      "article_date": "2026-06-04",
+      "detail": "",
+      "estimated_cost_usd": 0.00022828,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7782,
+      "completion_tokens": 123,
+      "total_tokens": 7905,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 1254
+    },
+    {
+      "time_cn": "2026-06-04 07:54:47",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 38,
+      "article_title": "Control Resonant Preorders Are Live – Here’s What Comes in Each Edition",
+      "article_url": "https://www.ign.com/articles/control-resonant-where-to-preorder",
+      "article_date": "2026-06-04",
+      "detail": "",
+      "estimated_cost_usd": 0.00022632,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7730,
+      "completion_tokens": 142,
+      "total_tokens": 7872,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 1202
     }
   ]
 }
