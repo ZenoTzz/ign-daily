@@ -1827,6 +1827,48 @@
       "total_tokens": 7894,
       "prompt_cache_hit_tokens": 5888,
       "prompt_cache_miss_tokens": 1077
+    },
+    {
+      "time_cn": "2026-06-03 20:43:39",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 9,
+      "article_title": "Naughty Dog No-Show at PlayStation State of Play Leaves Fans Fearing Intergalactic: The Heretic Prophet is Still a Long Way From Launch",
+      "article_url": "https://www.ign.com/articles/naughty-dog-no-show-at-playstation-state-of-play-leaves-fans-fearing-intergalactic-the-heretic-prophet-is-still-a-long-way-from-launch",
+      "article_date": "2026-06-04",
+      "detail": "",
+      "estimated_cost_usd": 0.00023391,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7159,
+      "completion_tokens": 141,
+      "total_tokens": 7300,
+      "prompt_cache_hit_tokens": 5888,
+      "prompt_cache_miss_tokens": 1271
+    },
+    {
+      "time_cn": "2026-06-03 20:43:44",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 10,
+      "article_title": "The Internet Reacts to God of War Laufey",
+      "article_url": "https://www.ign.com/articles/the-internet-reacts-to-god-of-war-laufey",
+      "article_date": "2026-06-04",
+      "detail": "",
+      "estimated_cost_usd": 0.00039631,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7883,
+      "completion_tokens": 359,
+      "total_tokens": 8242,
+      "prompt_cache_hit_tokens": 5888,
+      "prompt_cache_miss_tokens": 1995
     }
   ]
 }
