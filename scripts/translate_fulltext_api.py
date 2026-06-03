@@ -27,6 +27,7 @@ from typing import Any
 from common_paths import DATA_DIR, REPO_ROOT, configure_utf8_stdio, dict_path, env_paths
 from api_translation_audit import check_translation
 from currency_utils import normalize_translation_currency
+from dict_matcher import matched_terms_for_article
 from normalize_currency_files import normalize_date as normalize_currency_date
 from prompt_blocks import chunk_user_payload, fulltext_user_payload
 from translate_titles_deepseek import apply_title_dictionary, call_deepseek_response, extract_article_text, extract_json, flatten_dict_terms
@@ -238,15 +239,8 @@ def split_paragraphs(text: str) -> list[str]:
     return [p for p in chunks if len(p) >= 40 and not any(b in p.lower() for b in bad)][:35]
 
 
-def matched_terms(text: str, limit: int = 60) -> dict[str, str]:
-    lower = text.lower()
-    hits: dict[str, str] = {}
-    for en, cn in sorted(flatten_dict_terms().items(), key=lambda kv: len(kv[0]), reverse=True):
-        if en.lower() in lower:
-            hits[en] = cn
-        if len(hits) >= limit:
-            break
-    return hits
+def matched_terms(text: str, limit: int = 60, article: dict[str, Any] | None = None) -> dict[str, str]:
+    return matched_terms_for_article(text, article=article, limit=limit)
 
 
 def read_optional(path: str, max_chars: int = 10000) -> str:
@@ -548,7 +542,7 @@ def translate_date(date: str, limit: int = 2) -> int:
             paragraphs_en = split_paragraphs(text)
             if not paragraphs_en:
                 raise RuntimeError(f"no paragraphs extracted for #{article['id']}")
-            terms = matched_terms(article.get("en_title", "") + "\n" + text)
+    terms = matched_terms(article.get("en_title", "") + "\n" + text, article=article)
             max_tokens = int(os.environ.get("TRANSLATOR_FULLTEXT_MAX_TOKENS", "12000"))
             raw, usage = call_deepseek_response(api_key, model, base_url, build_messages(article, paragraphs_en, terms), max_tokens=max_tokens)
             record_deepseek_usage_safe(

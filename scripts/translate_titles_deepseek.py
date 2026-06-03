@@ -29,6 +29,7 @@ from typing import Any
 
 from common_paths import DATA_DIR, REPO_ROOT, configure_utf8_stdio, dict_path, env_paths
 from currency_utils import normalize_currency_text
+from dict_matcher import flatten_dict_terms as shared_flatten_dict_terms, matched_terms_for_article, term_in_text
 from normalize_currency_files import normalize_date as normalize_currency_date
 from prompt_blocks import title_user_payload
 from usage_logger import record_deepseek_usage_safe
@@ -69,37 +70,11 @@ def write_json(path: Path, data: Any) -> None:
 
 
 def flatten_dict_terms() -> dict[str, str]:
-    path = dict_path()
-    if not path.exists():
-        return {}
-    data = load_json(path)
-    terms: dict[str, str] = {}
-    for cat, items in data.items():
-        if cat == "_meta" or not isinstance(items, dict):
-            continue
-        for en, value in items.items():
-            if isinstance(value, dict) and value.get("cn"):
-                terms[en] = str(value["cn"])
-            elif isinstance(value, str):
-                terms[en] = value
-    return terms
+    return shared_flatten_dict_terms()
 
 
-def matched_terms(text: str, limit: int = 30) -> dict[str, str]:
-    terms = flatten_dict_terms()
-    lower = text.lower()
-    hits: dict[str, str] = {}
-    for en, cn in sorted(terms.items(), key=lambda kv: len(kv[0]), reverse=True):
-        if en.lower() in lower:
-            hits[en] = cn
-        if len(hits) >= limit:
-            break
-    return hits
-
-
-def term_in_text(en_term: str, text: str) -> bool:
-    pattern = r"(?<![A-Za-z0-9])" + re.escape(en_term) + r"(?![A-Za-z0-9])"
-    return re.search(pattern, text, flags=re.I) is not None
+def matched_terms(text: str, limit: int = 30, article: dict[str, Any] | None = None) -> dict[str, str]:
+    return matched_terms_for_article(text, article=article, limit=limit)
 
 
 def apply_title_dictionary(en_title: str, cn_title: str) -> str:
@@ -385,7 +360,7 @@ def translate_date(date: str, limit: int = 8) -> int:
             continue
         try:
             article_text = cached_article_text(date, article) or fetch_article_text(url)
-            terms = matched_terms((article.get("en_title") or "") + "\n" + article_text)
+        terms = matched_terms((article.get("en_title") or "") + "\n" + article_text, article=article)
             messages = build_messages(article, article_text, terms)
             raw, usage = call_deepseek_response(api_key, model, base_url, messages)
             record_deepseek_usage_safe(

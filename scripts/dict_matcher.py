@@ -1,0 +1,100 @@
+"""Dictionary matching helpers with article-category context."""
+from __future__ import annotations
+
+import json
+import re
+from pathlib import Path
+from typing import Any
+
+from common_paths import dict_path
+
+
+def load_json(path: Path) -> Any:
+    with path.open("r", encoding="utf-8-sig") as f:
+        return json.load(f)
+
+
+def flatten_dict_terms() -> dict[str, str]:
+    path = dict_path()
+    if not path.exists():
+        return {}
+    data = load_json(path)
+    terms: dict[str, str] = {}
+    for cat, items in data.items():
+        if cat == "_meta" or not isinstance(items, dict):
+            continue
+        for en, value in items.items():
+            if isinstance(value, dict) and value.get("cn"):
+                terms[en] = str(value["cn"])
+            elif isinstance(value, str):
+                terms[en] = value
+    return terms
+
+
+def iter_dict_terms() -> list[tuple[str, str, str]]:
+    path = dict_path()
+    if not path.exists():
+        return []
+    data = load_json(path)
+    rows: list[tuple[str, str, str]] = []
+    for cat, items in data.items():
+        if cat == "_meta" or not isinstance(items, dict):
+            continue
+        for en, value in items.items():
+            cn = ""
+            if isinstance(value, dict) and value.get("cn"):
+                cn = str(value["cn"])
+            elif isinstance(value, str):
+                cn = value
+            if en and cn:
+                rows.append((en, cn, cat))
+    return rows
+
+
+def term_in_text(en_term: str, text: str, *, case_sensitive: bool = False) -> bool:
+    pattern = r"(?<![A-Za-z0-9])" + re.escape(en_term) + r"(?![A-Za-z0-9])"
+    flags = 0 if case_sensitive else re.I
+    return re.search(pattern, text or "", flags=flags) is not None
+
+
+def article_category(article: dict[str, Any] | None) -> str:
+    if not article:
+        return ""
+    return str(article.get("category") or article.get("type") or "").strip().lower()
+
+
+def category_allows_term(dict_category: str, article: dict[str, Any] | None) -> bool:
+    category = article_category(article)
+    if not category:
+        return True
+
+    is_movie_article = any(marker in category for marker in ("\u5f71\u89c6", "\u7535\u5f71", "tv", "movie", "film"))
+    is_game_article = any(marker in category for marker in ("\u6e38\u620f", "game"))
+
+    if is_movie_article and dict_category == "games":
+        return False
+    if is_game_article and dict_category == "movies_tv":
+        return False
+    return True
+
+
+def term_matches(en_term: str, text: str, dict_category: str) -> bool:
+    source = text or ""
+    if en_term == "Doom" and re.search(r"(?<![A-Za-z0-9])Dr\.?\s+Doom(?![A-Za-z0-9])", source):
+        return False
+
+    title_like_categories = {"games", "movies_tv", "media"}
+    case_sensitive = dict_category in title_like_categories
+    return term_in_text(en_term, source, case_sensitive=case_sensitive)
+
+
+def matched_terms_for_article(text: str, article: dict[str, Any] | None = None, limit: int = 60) -> dict[str, str]:
+    hits: dict[str, str] = {}
+    for en, cn, cat in sorted(iter_dict_terms(), key=lambda row: len(row[0]), reverse=True):
+        if not category_allows_term(cat, article):
+            continue
+        if term_matches(en, text, cat):
+            hits[en] = cn
+        if len(hits) >= limit:
+            break
+    return hits

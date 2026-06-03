@@ -17,6 +17,7 @@ from typing import Any
 
 from common_paths import DATA_DIR, configure_utf8_stdio, dict_path
 from currency_utils import find_missing_currency, normalize_currency_symbols
+from dict_matcher import matched_terms_for_article, term_in_text
 
 
 configure_utf8_stdio()
@@ -98,19 +99,8 @@ def flatten_dict_terms() -> dict[str, str]:
     return terms
 
 
-def term_in_text(en_term: str, text: str) -> bool:
-    pattern = r"(?<![A-Za-z0-9])" + re.escape(en_term) + r"(?![A-Za-z0-9])"
-    return re.search(pattern, text or "", flags=re.I) is not None
-
-
-def matched_dictionary_terms(text: str, limit: int = 80) -> dict[str, str]:
-    hits: dict[str, str] = {}
-    for en, cn in sorted(flatten_dict_terms().items(), key=lambda kv: len(kv[0]), reverse=True):
-        if en and cn and term_in_text(en, text):
-            hits[en] = cn
-        if len(hits) >= limit:
-            break
-    return hits
+def matched_dictionary_terms(text: str, limit: int = 80, article: dict[str, Any] | None = None) -> dict[str, str]:
+    return matched_terms_for_article(text, article=article, limit=limit)
 
 
 def is_effective_chinese_term(cn: str) -> bool:
@@ -151,7 +141,7 @@ def check_translation(
     issues: list[dict[str, str]] = []
     cn_text = translation_text(data)
     source_text = source_text_from_paragraphs(paragraphs_en, article)
-    terms = required_terms or matched_dictionary_terms(source_text)
+    terms = required_terms or matched_dictionary_terms(source_text, article=article)
 
     para_items = data.get("paragraphs")
     if not isinstance(para_items, list):
