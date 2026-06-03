@@ -63,27 +63,6 @@
       "translation_path": "translations/20.json",
       "retry_policy": "manual_only"
     },
-    "21": {
-      "id": 21,
-      "url": "https://www.ign.com/articles/fayes-story-so-far-and-why-you-wont-be-playing-as-kratos-in-god-of-war-laufey",
-      "en_title": "Faye’s Story So Far and Why You Won’t Be Playing as Kratos in God of War Laufey",
-      "cn_title": "《战神：劳菲》主角确认非奎托斯，菲的故事将展开",
-      "model": "deepseek-v4-flash",
-      "status": "needs_manual_review",
-      "failed_at": "2026-06-03T10:26:48.646983+08:00",
-      "reason": "[dictionary] source contains 'Persona', but required dictionary translation '女神异闻录' is missing",
-      "audit_issues": [
-        {
-          "type": "dictionary",
-          "detail": "source contains 'Persona', but required dictionary translation '女神异闻录' is missing",
-          "en": "Persona",
-          "expected_cn": "女神异闻录"
-        }
-      ],
-      "fingerprint": "9af9947b4285524f0a4354446d75f1d6c51c4820",
-      "translation_path": "translations/21.json",
-      "retry_policy": "manual_only"
-    },
     "23": {
       "id": 23,
       "url": "https://www.ign.com/articles/god-of-war-laufey-revealed-at-state-of-play",
@@ -211,5 +190,5 @@
       "retry_policy": "manual_only"
     }
   },
-  "updated_at": "2026-06-03T10:31:35.083001+08:00"
+  "updated_at": "2026-06-03T02:36:24.078Z"
 }
