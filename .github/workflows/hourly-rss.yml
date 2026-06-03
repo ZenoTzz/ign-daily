@@ -33,6 +33,9 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
+      - name: Update checkout to latest main
+        run: git pull --ff-only origin main
+
       - name: Load automation config
         id: config
         run: |
@@ -139,5 +142,5 @@ jobs:
           fi
           git add exchange_rates.json || true
           git commit -m "feat: hourly RSS ${{ steps.rss.outputs.new_count }} new, ${{ steps.rss.outputs.filtered_count }} filtered for ${{ steps.rss.outputs.target_date }}"
-          git pull --rebase origin main
+          git pull --rebase -X theirs origin main
           git push origin HEAD:main
