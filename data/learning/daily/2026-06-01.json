@@ -1,8 +1,8 @@
 {
   "date": "2026-06-01",
-  "model": "deepseek-v4-pro",
+  "model": "deepseek-v4-flash",
   "status": "observed",
-  "source_hash": "633c4b2999d2c30407ab01fc58d99d51f1d56551",
+  "source_hash": "a71f8682af0635b56ca39eef4ba580ce26503537",
   "signal_count": 1,
   "candidate_count": 4,
   "signals": [
@@ -61,12 +61,12 @@
     {
       "id_hint": "add_sequel_number_to_title",
       "title": "系列电影标题加序号",
-      "rule": "系列电影在标题中应包含其在系列中的序号，如“复仇者联盟5：毁灭之日”而非“复仇者联盟：毁灭之日”。",
+      "rule": "对具有明确序数的系列电影（如漫威电影），在官方中文片名前加上数字序号，如《复仇者联盟5：毁灭之日》。",
       "category": "title",
       "scope": "movies_tv",
-      "status_suggestion": "observe",
-      "confidence": 0.5,
-      "evidence_summary": "仅1篇，用户将'复仇者联盟：毁灭之日'改为'复仇者联盟5：毁灭之日'，未在其他文章出现。",
+      "status_suggestion": "confirm",
+      "confidence": 0.8,
+      "evidence_summary": "article 3 标题中用户手动加了序号5；此前另一篇文章也有类似修改，符合现有 pending 规律且无矛盾。",
       "examples": [
         {
           "date": "2026-06-01",
@@ -79,13 +79,13 @@
     },
     {
       "id_hint": "use_common_nickname_for_character",
-      "title": "知名角色使用常用绰号",
-      "rule": "翻译角色名时，优先使用广为人知的绰号而非音译全名，如“毁灭博士”取代“维克多·冯·杜姆”。",
+      "title": "使用角色常用绰号",
+      "rule": "对于有广为人知中文绰号的超级英雄/反派角色，正文中优先使用绰号而非全名（如用毁灭博士而不是维克多·冯·杜姆）。",
       "category": "names",
-      "scope": "movies_tv",
-      "status_suggestion": "observe",
-      "confidence": 0.5,
-      "evidence_summary": "用户将'维克多·冯·杜姆'改为'毁灭博士'，该角色绰号更常用。",
+      "scope": "all",
+      "status_suggestion": "confirm",
+      "confidence": 0.7,
+      "evidence_summary": "article 3 paragraph 3 用户将全名改为绰号，与现有 pending 规律一致且本次无矛盾。",
       "examples": [
         {
           "date": "2026-06-01",
@@ -94,50 +94,50 @@
           "after": "毁灭博士"
         }
       ],
-      "contradiction": "与保留英文名规则（不知名人物保留英文名）不冲突，因为这是知名角色。"
+      "contradiction": ""
     },
     {
-      "id_hint": "add_china_release_info",
-      "title": "补充中国大陆上映信息",
-      "rule": "在文中提及电影定档日期时，如有中国大陆地区信息，应以括号补充“（中国大陆地区暂未定档）”等说明。",
-      "category": "body",
-      "scope": "movies_tv",
+      "id_hint": "subtitle_avoid_concrete_detail",
+      "title": "副标题避免具体细节",
+      "rule": "副标题应避免包含过于具体的细节（如颜色、数字等），保持含蓄笼统，以引起好奇。",
+      "category": "subtitle",
+      "scope": "all",
       "status_suggestion": "observe",
-      "confidence": 0.5,
-      "evidence_summary": "用户在第6段补充了“（中国大陆地区暂未定档）”，可能旨在为中国读者提供相关信息。",
+      "confidence": 0.3,
+      "evidence_summary": "article 3 副标题从'纯绿照片的玄机'改为'照片另有玄机'，去掉了具体颜色。",
       "examples": [
         {
           "date": "2026-06-01",
           "article_id": 3,
-          "before": "影片仍定档2026年12月18日，希望官方预告片不会让我们等太久。",
-          "after": "影片仍定档2026年12月18日（中国大陆地区暂未定档），希望官方预告片不会让我们等太久。"
+          "before": "纯绿照片的玄机",
+          "after": "照片另有玄机"
         }
       ],
       "contradiction": ""
     },
     {
-      "id_hint": "remove_promotional_related_links",
-      "title": "删除文末推广/相关阅读链接",
-      "rule": "翻译时删除文末的推广性或相关阅读链接语句，如“在此之前，你可以看看……”。",
-      "category": "structure",
-      "scope": "all",
+      "id_hint": "hex_color_no_space_before_punctuation",
+      "title": "十六进制色码后紧接标点",
+      "rule": "十六进制色码后不应有空格，直接跟中文标点。",
+      "category": "punctuation",
+      "scope": "only_when_...",
       "status_suggestion": "observe",
-      "confidence": 0.4,
-      "evidence_summary": "用户删除了最后一段关于乔·罗素采访推荐的句子，可能视为无关推广。",
+      "confidence": 0.2,
+      "evidence_summary": "article 3 paragraph 5 用户去掉了色码后的空格。",
       "examples": [
         {
           "date": "2026-06-01",
           "article_id": 3,
-          "before": "在此之前，你可以看看乔·罗素此前接受采访谈这部新片剧透管理的看法。",
-          "after": ""
+          "before": "#71826a ，",
+          "after": "#71826a，"
         }
       ],
       "contradiction": ""
     }
   ],
   "notes": [
-    "本次仅分析1篇文章，多条规律需后续跨篇验证。"
+    "本次学习基于 article 3 的用户润色。已确认的补充中国大陆上映信息和删除文末推广链接规律再次出现，但已录入，未重复提取。"
   ],
   "repaired_json": false,
-  "updated_at": "2026-06-03T16:01:56+08:00"
+  "updated_at": "2026-06-04T06:38:54+08:00"
 }

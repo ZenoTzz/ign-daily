@@ -7,7 +7,7 @@
       "rule": "英文产品名与型号组合时，按中文习惯将型号后置，如 'Steam Deck OLED' 而非 'OLED Steam Deck'。",
       "category": "dictionary",
       "scope": "all",
-      "status": "confirmed_by_feedback",
+      "status": "confirmed",
       "days": [
         "2026-05-28"
       ],
@@ -22,7 +22,26 @@
           "after": "Steam Deck OLED"
         }
       ],
-      "feedback": [],
+      "feedback": [
+        {
+          "week_id": "2026-W23",
+          "text": "采纳，进入长期规则。",
+          "classified_as": "confirmed",
+          "created_at": "2026-06-04T06:38:24+08:00"
+        },
+        {
+          "week_id": "2026-W23",
+          "text": "采纳，进入长期规则。",
+          "classified_as": "confirmed",
+          "created_at": "2026-06-04T06:38:54+08:00"
+        },
+        {
+          "week_id": "2026-W23",
+          "text": "采纳，进入长期规则。",
+          "classified_as": "confirmed",
+          "created_at": "2026-06-04T06:39:36+08:00"
+        }
+      ],
       "created_at": "2026-06-03T15:55:24+08:00",
       "last_seen": "2026-05-28",
       "confidence": 0.9,
@@ -34,7 +53,7 @@
       "rule": "Summer Game Fest 译为「夏日游戏节」，不使用「夏季游戏节」等。",
       "category": "dictionary",
       "scope": "all",
-      "status": "confirmed_by_feedback",
+      "status": "confirmed",
       "days": [
         "2026-05-28"
       ],
@@ -49,7 +68,26 @@
           "after": "夏日游戏节"
         }
       ],
-      "feedback": [],
+      "feedback": [
+        {
+          "week_id": "2026-W23",
+          "text": "采纳，进入长期规则。",
+          "classified_as": "confirmed",
+          "created_at": "2026-06-04T06:38:24+08:00"
+        },
+        {
+          "week_id": "2026-W23",
+          "text": "采纳，进入长期规则。",
+          "classified_as": "confirmed",
+          "created_at": "2026-06-04T06:38:54+08:00"
+        },
+        {
+          "week_id": "2026-W23",
+          "text": "采纳，进入长期规则。",
+          "classified_as": "confirmed",
+          "created_at": "2026-06-04T06:39:36+08:00"
+        }
+      ],
       "created_at": "2026-06-03T15:55:24+08:00",
       "last_seen": "2026-05-28",
       "confidence": 0.8,
@@ -199,10 +237,10 @@
     "add_sequel_number_to_title": {
       "id": "add_sequel_number_to_title",
       "title": "系列电影标题加序号",
-      "rule": "系列电影在标题中应包含其在系列中的序号，如“复仇者联盟5：毁灭之日”而非“复仇者联盟：毁灭之日”。",
+      "rule": "对具有明确序数的系列电影（如漫威电影），在官方中文片名前加上数字序号，如《复仇者联盟5：毁灭之日》。",
       "category": "title",
       "scope": "movies_tv",
-      "status": "pending",
+      "status": "confirmed_by_feedback",
       "days": [
         "2026-06-01"
       ],
@@ -217,19 +255,38 @@
           "after": "《复仇者联盟5：毁灭之日》"
         }
       ],
-      "feedback": [],
+      "feedback": [
+        {
+          "week_id": "2026-W23",
+          "text": "暂缓，继续观察。",
+          "classified_as": "pending",
+          "created_at": "2026-06-04T06:38:24+08:00"
+        },
+        {
+          "week_id": "2026-W23",
+          "text": "暂缓，继续观察。",
+          "classified_as": "pending",
+          "created_at": "2026-06-04T06:38:54+08:00"
+        },
+        {
+          "week_id": "2026-W23",
+          "text": "暂缓，继续观察。",
+          "classified_as": "pending",
+          "created_at": "2026-06-04T06:39:36+08:00"
+        }
+      ],
       "created_at": "2026-06-03T16:01:56+08:00",
       "last_seen": "2026-06-01",
-      "confidence": 0.5,
-      "latest_evidence_summary": "仅1篇，用户将'复仇者联盟：毁灭之日'改为'复仇者联盟5：毁灭之日'，未在其他文章出现。"
+      "confidence": 0.8,
+      "latest_evidence_summary": "article 3 标题中用户手动加了序号5；此前另一篇文章也有类似修改，符合现有 pending 规律且无矛盾。"
     },
     "use_common_nickname_for_character": {
       "id": "use_common_nickname_for_character",
-      "title": "知名角色使用常用绰号",
-      "rule": "翻译角色名时，优先使用广为人知的绰号而非音译全名，如“毁灭博士”取代“维克多·冯·杜姆”。",
+      "title": "使用角色常用绰号",
+      "rule": "对于有广为人知中文绰号的超级英雄/反派角色，正文中优先使用绰号而非全名（如用毁灭博士而不是维克多·冯·杜姆）。",
       "category": "names",
-      "scope": "movies_tv",
-      "status": "pending",
+      "scope": "all",
+      "status": "confirmed_by_feedback",
       "days": [
         "2026-06-01"
       ],
@@ -244,7 +301,26 @@
           "after": "毁灭博士"
         }
       ],
-      "feedback": [],
+      "feedback": [
+        {
+          "week_id": "2026-W23",
+          "text": "暂缓，继续观察。",
+          "classified_as": "pending",
+          "created_at": "2026-06-04T06:38:24+08:00"
+        },
+        {
+          "week_id": "2026-W23",
+          "text": "暂缓，继续观察。",
+          "classified_as": "pending",
+          "created_at": "2026-06-04T06:38:54+08:00"
+        },
+        {
+          "week_id": "2026-W23",
+          "text": "暂缓，继续观察。",
+          "classified_as": "pending",
+          "created_at": "2026-06-04T06:39:36+08:00"
+        }
+      ],
       "created_at": "2026-06-03T16:01:56+08:00",
       "last_seen": "2026-06-01",
       "contradiction_notes": [
@@ -253,8 +329,8 @@
           "text": "与保留英文名规则（不知名人物保留英文名）不冲突，因为这是知名角色。"
         }
       ],
-      "confidence": 0.5,
-      "latest_evidence_summary": "用户将'维克多·冯·杜姆'改为'毁灭博士'，该角色绰号更常用。"
+      "confidence": 0.7,
+      "latest_evidence_summary": "article 3 paragraph 3 用户将全名改为绰号，与现有 pending 规律一致且本次无矛盾。"
     },
     "add_china_release_info": {
       "id": "add_china_release_info",
@@ -262,7 +338,7 @@
       "rule": "在文中提及电影定档日期时，如有中国大陆地区信息，应以括号补充“（中国大陆地区暂未定档）”等说明。",
       "category": "body",
       "scope": "movies_tv",
-      "status": "pending",
+      "status": "confirmed",
       "days": [
         "2026-06-01"
       ],
@@ -277,7 +353,26 @@
           "after": "影片仍定档2026年12月18日（中国大陆地区暂未定档），希望官方预告片不会让我们等太久。"
         }
       ],
-      "feedback": [],
+      "feedback": [
+        {
+          "week_id": "2026-W23",
+          "text": "采纳，进入长期规则。",
+          "classified_as": "confirmed",
+          "created_at": "2026-06-04T06:38:24+08:00"
+        },
+        {
+          "week_id": "2026-W23",
+          "text": "采纳，进入长期规则。",
+          "classified_as": "confirmed",
+          "created_at": "2026-06-04T06:38:54+08:00"
+        },
+        {
+          "week_id": "2026-W23",
+          "text": "采纳，进入长期规则。",
+          "classified_as": "confirmed",
+          "created_at": "2026-06-04T06:39:36+08:00"
+        }
+      ],
       "created_at": "2026-06-03T16:01:56+08:00",
       "last_seen": "2026-06-01",
       "confidence": 0.5,
@@ -289,7 +384,7 @@
       "rule": "删除文末类似“与此同时，你可以阅读IGN对...”等内文推广链接或相关阅读引导句。",
       "category": "structure",
       "scope": "all",
-      "status": "confirmed_by_feedback",
+      "status": "confirmed",
       "days": [
         "2026-06-01",
         "2026-06-03"
@@ -311,7 +406,26 @@
           "after": "目前尚不清楚Webnetic的游戏具体何时会从PlayStation商店移除。"
         }
       ],
-      "feedback": [],
+      "feedback": [
+        {
+          "week_id": "2026-W23",
+          "text": "采纳，进入长期规则。",
+          "classified_as": "confirmed",
+          "created_at": "2026-06-04T06:38:24+08:00"
+        },
+        {
+          "week_id": "2026-W23",
+          "text": "采纳，进入长期规则。",
+          "classified_as": "confirmed",
+          "created_at": "2026-06-04T06:38:54+08:00"
+        },
+        {
+          "week_id": "2026-W23",
+          "text": "采纳，进入长期规则。",
+          "classified_as": "confirmed",
+          "created_at": "2026-06-04T06:39:36+08:00"
+        }
+      ],
       "created_at": "2026-06-03T16:01:56+08:00",
       "last_seen": "2026-06-03",
       "confidence": 0.9,
@@ -338,7 +452,26 @@
           "after": "《博德之门》1代和2代"
         }
       ],
-      "feedback": [],
+      "feedback": [
+        {
+          "week_id": "2026-W23",
+          "text": "暂缓，继续观察。",
+          "classified_as": "pending",
+          "created_at": "2026-06-04T06:38:24+08:00"
+        },
+        {
+          "week_id": "2026-W23",
+          "text": "暂缓，继续观察。",
+          "classified_as": "pending",
+          "created_at": "2026-06-04T06:38:54+08:00"
+        },
+        {
+          "week_id": "2026-W23",
+          "text": "暂缓，继续观察。",
+          "classified_as": "pending",
+          "created_at": "2026-06-04T06:39:36+08:00"
+        }
+      ],
       "created_at": "2026-06-03T16:03:40+08:00",
       "last_seen": "2026-06-02",
       "confidence": 0.5,
@@ -365,7 +498,26 @@
           "after": "《博德之门2：安姆的阴影》"
         }
       ],
-      "feedback": [],
+      "feedback": [
+        {
+          "week_id": "2026-W23",
+          "text": "暂缓，继续观察。",
+          "classified_as": "pending",
+          "created_at": "2026-06-04T06:38:24+08:00"
+        },
+        {
+          "week_id": "2026-W23",
+          "text": "暂缓，继续观察。",
+          "classified_as": "pending",
+          "created_at": "2026-06-04T06:38:54+08:00"
+        },
+        {
+          "week_id": "2026-W23",
+          "text": "暂缓，继续观察。",
+          "classified_as": "pending",
+          "created_at": "2026-06-04T06:39:36+08:00"
+        }
+      ],
       "created_at": "2026-06-03T16:03:40+08:00",
       "last_seen": "2026-06-02",
       "confidence": 0.9,
@@ -392,7 +544,26 @@
           "after": "XGP和PS Plus"
         }
       ],
-      "feedback": [],
+      "feedback": [
+        {
+          "week_id": "2026-W23",
+          "text": "暂缓，继续观察。",
+          "classified_as": "pending",
+          "created_at": "2026-06-04T06:38:24+08:00"
+        },
+        {
+          "week_id": "2026-W23",
+          "text": "暂缓，继续观察。",
+          "classified_as": "pending",
+          "created_at": "2026-06-04T06:38:54+08:00"
+        },
+        {
+          "week_id": "2026-W23",
+          "text": "暂缓，继续观察。",
+          "classified_as": "pending",
+          "created_at": "2026-06-04T06:39:36+08:00"
+        }
+      ],
       "created_at": "2026-06-03T16:03:40+08:00",
       "last_seen": "2026-06-02",
       "confidence": 0.7,
@@ -404,7 +575,7 @@
       "rule": "对于日本开发商或制作人，若官方已提供汉字姓名，直接使用汉字，不附加罗马音或英文注音。",
       "category": "names",
       "scope": "games",
-      "status": "confirmed_by_feedback",
+      "status": "confirmed",
       "days": [
         "2026-06-02"
       ],
@@ -419,7 +590,26 @@
           "after": "池田幸平"
         }
       ],
-      "feedback": [],
+      "feedback": [
+        {
+          "week_id": "2026-W23",
+          "text": "采纳，进入长期规则。",
+          "classified_as": "confirmed",
+          "created_at": "2026-06-04T06:38:24+08:00"
+        },
+        {
+          "week_id": "2026-W23",
+          "text": "采纳，进入长期规则。",
+          "classified_as": "confirmed",
+          "created_at": "2026-06-04T06:38:54+08:00"
+        },
+        {
+          "week_id": "2026-W23",
+          "text": "采纳，进入长期规则。",
+          "classified_as": "confirmed",
+          "created_at": "2026-06-04T06:39:36+08:00"
+        }
+      ],
       "created_at": "2026-06-03T16:03:40+08:00",
       "last_seen": "2026-06-02",
       "confidence": 0.85,
@@ -431,7 +621,7 @@
       "rule": "正文中金额换算使用准确汇率（人民币保留两位小数），仅首次出现给出换算；非美元货币直接换算为人民币，省略中间美元；标题省略换算；大额范围给出范围换算。",
       "category": "currency",
       "scope": "all",
-      "status": "confirmed_by_feedback",
+      "status": "confirmed",
       "days": [
         "2026-06-02"
       ],
@@ -446,7 +636,26 @@
           "after": "13亿丹麦克朗（约合13.7亿元人民币）"
         }
       ],
-      "feedback": [],
+      "feedback": [
+        {
+          "week_id": "2026-W23",
+          "text": "采纳，进入长期规则。",
+          "classified_as": "confirmed",
+          "created_at": "2026-06-04T06:38:24+08:00"
+        },
+        {
+          "week_id": "2026-W23",
+          "text": "采纳，进入长期规则。",
+          "classified_as": "confirmed",
+          "created_at": "2026-06-04T06:38:54+08:00"
+        },
+        {
+          "week_id": "2026-W23",
+          "text": "采纳，进入长期规则。",
+          "classified_as": "confirmed",
+          "created_at": "2026-06-04T06:39:36+08:00"
+        }
+      ],
       "created_at": "2026-06-03T16:03:40+08:00",
       "last_seen": "2026-06-02",
       "confidence": 0.9,
@@ -473,7 +682,26 @@
           "after": "（整句删除）"
         }
       ],
-      "feedback": [],
+      "feedback": [
+        {
+          "week_id": "2026-W23",
+          "text": "暂缓，继续观察。",
+          "classified_as": "pending",
+          "created_at": "2026-06-04T06:38:24+08:00"
+        },
+        {
+          "week_id": "2026-W23",
+          "text": "暂缓，继续观察。",
+          "classified_as": "pending",
+          "created_at": "2026-06-04T06:38:54+08:00"
+        },
+        {
+          "week_id": "2026-W23",
+          "text": "暂缓，继续观察。",
+          "classified_as": "pending",
+          "created_at": "2026-06-04T06:39:36+08:00"
+        }
+      ],
       "created_at": "2026-06-03T16:03:40+08:00",
       "last_seen": "2026-06-02",
       "confidence": 0.6,
@@ -485,7 +713,7 @@
       "rule": "正文中的“报导”一词统一改为“报道”。",
       "category": "dictionary",
       "scope": "all",
-      "status": "confirmed_by_feedback",
+      "status": "confirmed",
       "days": [
         "2026-06-02"
       ],
@@ -500,7 +728,26 @@
           "after": "据报道"
         }
       ],
-      "feedback": [],
+      "feedback": [
+        {
+          "week_id": "2026-W23",
+          "text": "采纳，进入长期规则。",
+          "classified_as": "confirmed",
+          "created_at": "2026-06-04T06:38:24+08:00"
+        },
+        {
+          "week_id": "2026-W23",
+          "text": "采纳，进入长期规则。",
+          "classified_as": "confirmed",
+          "created_at": "2026-06-04T06:38:54+08:00"
+        },
+        {
+          "week_id": "2026-W23",
+          "text": "采纳，进入长期规则。",
+          "classified_as": "confirmed",
+          "created_at": "2026-06-04T06:39:36+08:00"
+        }
+      ],
       "created_at": "2026-06-03T16:03:40+08:00",
       "last_seen": "2026-06-02",
       "confidence": 0.9,
@@ -512,7 +759,7 @@
       "rule": "将 X（原 Twitter）直接译为“X”，不保留“/Twitter”等旧称。其他平台同理，如 Facebook 不再赘述“/Meta”。",
       "category": "names",
       "scope": "all",
-      "status": "pending",
+      "status": "confirmed",
       "days": [
         "2026-06-03"
       ],
@@ -527,7 +774,26 @@
           "after": "X 账号"
         }
       ],
-      "feedback": [],
+      "feedback": [
+        {
+          "week_id": "2026-W23",
+          "text": "采纳，进入长期规则。",
+          "classified_as": "confirmed",
+          "created_at": "2026-06-04T06:38:24+08:00"
+        },
+        {
+          "week_id": "2026-W23",
+          "text": "采纳，进入长期规则。",
+          "classified_as": "confirmed",
+          "created_at": "2026-06-04T06:38:54+08:00"
+        },
+        {
+          "week_id": "2026-W23",
+          "text": "采纳，进入长期规则。",
+          "classified_as": "confirmed",
+          "created_at": "2026-06-04T06:39:36+08:00"
+        }
+      ],
       "created_at": "2026-06-03T16:04:46+08:00",
       "last_seen": "2026-06-03",
       "confidence": 0.5,
@@ -566,7 +832,7 @@
       "rule": "当术语的译名在中文社区不常见时，首次出现使用“中文（英文）”格式加注。",
       "category": "dictionary",
       "scope": "all",
-      "status": "pending",
+      "status": "confirmed",
       "days": [
         "2026-06-03"
       ],
@@ -581,12 +847,85 @@
           "after": "「铲件（shovelware）」"
         }
       ],
-      "feedback": [],
+      "feedback": [
+        {
+          "week_id": "2026-W23",
+          "text": "采纳，进入长期规则。",
+          "classified_as": "confirmed",
+          "created_at": "2026-06-04T06:38:24+08:00"
+        },
+        {
+          "week_id": "2026-W23",
+          "text": "采纳，进入长期规则。",
+          "classified_as": "confirmed",
+          "created_at": "2026-06-04T06:38:54+08:00"
+        },
+        {
+          "week_id": "2026-W23",
+          "text": "采纳，进入长期规则。",
+          "classified_as": "confirmed",
+          "created_at": "2026-06-04T06:39:36+08:00"
+        }
+      ],
       "created_at": "2026-06-03T16:04:46+08:00",
       "last_seen": "2026-06-03",
       "confidence": 0.6,
       "latest_evidence_summary": "用户将“铲件”改为“铲件（shovelware）”，这符合现有英文注释规则，再次验证。"
+    },
+    "subtitle_avoid_concrete_detail": {
+      "id": "subtitle_avoid_concrete_detail",
+      "title": "副标题避免具体细节",
+      "rule": "副标题应避免包含过于具体的细节（如颜色、数字等），保持含蓄笼统，以引起好奇。",
+      "category": "subtitle",
+      "scope": "all",
+      "status": "pending",
+      "days": [
+        "2026-06-01"
+      ],
+      "days_seen": 1,
+      "articles_seen": 1,
+      "contradictions": 0,
+      "examples": [
+        {
+          "date": "2026-06-01",
+          "article_id": 3,
+          "before": "纯绿照片的玄机",
+          "after": "照片另有玄机"
+        }
+      ],
+      "feedback": [],
+      "created_at": "2026-06-04T06:38:54+08:00",
+      "last_seen": "2026-06-01",
+      "confidence": 0.3,
+      "latest_evidence_summary": "article 3 副标题从'纯绿照片的玄机'改为'照片另有玄机'，去掉了具体颜色。"
+    },
+    "hex_color_no_space_before_punctuation": {
+      "id": "hex_color_no_space_before_punctuation",
+      "title": "十六进制色码后紧接标点",
+      "rule": "十六进制色码后不应有空格，直接跟中文标点。",
+      "category": "punctuation",
+      "scope": "only_when_...",
+      "status": "pending",
+      "days": [
+        "2026-06-01"
+      ],
+      "days_seen": 1,
+      "articles_seen": 1,
+      "contradictions": 0,
+      "examples": [
+        {
+          "date": "2026-06-01",
+          "article_id": 3,
+          "before": "#71826a ，",
+          "after": "#71826a，"
+        }
+      ],
+      "feedback": [],
+      "created_at": "2026-06-04T06:38:54+08:00",
+      "last_seen": "2026-06-01",
+      "confidence": 0.2,
+      "latest_evidence_summary": "article 3 paragraph 5 用户去掉了色码后的空格。"
     }
   },
-  "updated_at": "2026-06-03T16:04:46+08:00"
+  "updated_at": "2026-06-04T06:39:36+08:00"
 }

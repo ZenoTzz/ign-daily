@@ -1,10 +1,10 @@
 {
   "date": "2026-06-02",
-  "model": "deepseek-v4-pro",
+  "model": "deepseek-v4-flash",
   "status": "observed",
-  "source_hash": "1bec4187996b023176e786e55ea05a1b573d2432",
+  "source_hash": "4f397cf3ac6002fbf14783db47cc9730cd8a655f",
   "signal_count": 7,
-  "candidate_count": 7,
+  "candidate_count": 0,
   "signals": [
     {
       "type": "user_polish",
@@ -282,158 +282,8 @@
       ]
     }
   ],
-  "candidates": [
-    {
-      "id_hint": "series_number_with_dai",
-      "title": "系列代数用“代”表达",
-      "rule": "提及游戏系列代数时，用“X代”而非“X和X”，如“1代和2代”而非“1和2”。",
-      "category": "body",
-      "scope": "games",
-      "status_suggestion": "observe",
-      "confidence": 0.5,
-      "evidence_summary": "文章3一处将“1和2”改为“1代和2代”，使表达更清晰，但仅出现一次，需观察是否常态。",
-      "examples": [
-        {
-          "date": "2026-06-02",
-          "article_id": 3,
-          "before": "《博德之门》1和2",
-          "after": "《博德之门》1代和2代"
-        }
-      ],
-      "contradiction": ""
-    },
-    {
-      "id_hint": "roman_to_arabic_game_title",
-      "title": "游戏标题罗马数字转阿拉伯数字",
-      "rule": "游戏名中的罗马数字（如II）统一转为阿拉伯数字（如2），例如《博德之门II》→《博德之门2》。",
-      "category": "dictionary",
-      "scope": "games",
-      "status_suggestion": "confirm",
-      "confidence": 0.9,
-      "evidence_summary": "文章3将《博德之门II：安姆的阴影》改为《博德之门2：安姆的阴影》，且与已有风格（平台简写、数字偏好）一致，用户倾向阿拉伯数字更直观。",
-      "examples": [
-        {
-          "date": "2026-06-02",
-          "article_id": 3,
-          "before": "《博德之门II：安姆的阴影》",
-          "after": "《博德之门2：安姆的阴影》"
-        }
-      ],
-      "contradiction": ""
-    },
-    {
-      "id_hint": "subscription_service_abbreviation",
-      "title": "订阅服务缩写",
-      "rule": "将Xbox Game Pass缩写为“XGP”，PlayStation Plus缩写为“PS Plus”，用于正文中可接受缩写以提高流畅度。",
-      "category": "dictionary",
-      "scope": "games",
-      "status_suggestion": "observe",
-      "confidence": 0.7,
-      "evidence_summary": "文章4将“Xbox Game Pass和PlayStation Plus”改为“XGP和PS Plus”，此为社区常用缩写，但仅出现一次，建议观察后续是否持续使用。",
-      "examples": [
-        {
-          "date": "2026-06-02",
-          "article_id": 4,
-          "before": "Xbox Game Pass和PlayStation Plus",
-          "after": "XGP和PS Plus"
-        }
-      ],
-      "contradiction": ""
-    },
-    {
-      "id_hint": "japanese_name_no_romaji",
-      "title": "日文开发者直接使用汉字姓名",
-      "rule": "对于日本开发商或制作人，若官方已提供汉字姓名，直接使用汉字，不附加罗马音或英文注音。",
-      "category": "names",
-      "scope": "games",
-      "status_suggestion": "confirm",
-      "confidence": 0.85,
-      "evidence_summary": "文章9将池田幸平的罗马音注音删除，符合中文环境下对日文人名的直接引用习惯，与之前保留西方人英文名的规则互补。",
-      "examples": [
-        {
-          "date": "2026-06-02",
-          "article_id": 9,
-          "before": "池田幸平（Kohei 'Nakatsu' Ikeda）",
-          "after": "池田幸平"
-        }
-      ],
-      "contradiction": ""
-    },
-    {
-      "id_hint": "currency_conversion_refined",
-      "title": "精确汇率换算与格式",
-      "rule": "正文中金额换算使用准确汇率（人民币保留两位小数），仅首次出现给出换算；非美元货币直接换算为人民币，省略中间美元；标题省略换算；大额范围给出范围换算。",
-      "category": "currency",
-      "scope": "all",
-      "status_suggestion": "confirm",
-      "confidence": 0.9,
-      "evidence_summary": "文章22多处修改金额格式：标题去除人民币换算；正文丹麦克朗直接换算为人民币，且数值精确（如13.7亿）；多处更新汇率为更精确数字（如2亿美元→约合13.53亿元）；范围金额给出对应人民币范围。符合此前用户对金额格式的偏好。",
-      "examples": [
-        {
-          "date": "2026-06-02",
-          "article_id": 22,
-          "before": "13亿丹麦克朗（约合2.02亿美元(约合人民币14亿元)）",
-          "after": "13亿丹麦克朗（约合13.7亿元人民币）"
-        },
-        {
-          "date": "2026-06-02",
-          "article_id": 22,
-          "before": "2亿美元(约合人民币14亿元)",
-          "after": "2亿美元（约合13.53亿元人民币）"
-        }
-      ],
-      "contradiction": ""
-    },
-    {
-      "id_hint": "remove_personal_commentary",
-      "title": "删除个人化调侃评论",
-      "rule": "删除正文中译者个人的调侃或评论性句子，保持新闻报道的客观语气。",
-      "category": "body",
-      "scope": "all",
-      "status_suggestion": "observe",
-      "confidence": 0.6,
-      "evidence_summary": "文章27删除两处个人评论（“我不确定自己是否准备好……”和“但我也不会专门去买……”），文章3未出现此类情况，可能适用于技术新闻的严肃性，但需观察更多样本。",
-      "examples": [
-        {
-          "date": "2026-06-02",
-          "article_id": 27,
-          "before": "我不确定自己是否准备好迎接一个对着电脑大喊大叫让它干活的年代，不过话说回来，我现在好像也没少这么干。",
-          "after": "（整句删除）"
-        },
-        {
-          "date": "2026-06-02",
-          "article_id": 27,
-          "before": "但即便可以，我也不会专门去买一台RTX Spark系统当游戏本用。",
-          "after": "（整句删除）"
-        }
-      ],
-      "contradiction": ""
-    },
-    {
-      "id_hint": "unify_baodao",
-      "title": "统一使用“报道”",
-      "rule": "正文中的“报导”一词统一改为“报道”。",
-      "category": "dictionary",
-      "scope": "all",
-      "status_suggestion": "confirm",
-      "confidence": 0.9,
-      "evidence_summary": "文章22将多处“报导”改为“报道”，符合现代汉语规范，且与用户过往严谨风格一致。",
-      "examples": [
-        {
-          "date": "2026-06-02",
-          "article_id": 22,
-          "before": "据报导",
-          "after": "据报道"
-        }
-      ],
-      "contradiction": ""
-    }
-  ],
-  "notes": [
-    "今日润色进一步强化了书名号包裹游戏名的规则（如文章9的多处修改），但此为已确认偏好，不再新增候选。",
-    "文章27大量的断句和口语化改写属于翻译风格的整体优化，目前不足以提炼为单一规则，暂不学习。",
-    "副标题修改均为单篇创意定制，不构成可复用规律。"
-  ],
-  "repaired_json": false,
-  "updated_at": "2026-06-03T16:03:40+08:00"
+  "candidates": [],
+  "notes": [],
+  "repaired_json": true,
+  "updated_at": "2026-06-04T06:39:36+08:00"
 }
