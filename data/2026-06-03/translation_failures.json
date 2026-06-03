@@ -84,27 +84,6 @@
       "translation_path": "translations/23.json",
       "retry_policy": "manual_only"
     },
-    "25": {
-      "id": 25,
-      "url": "https://www.ign.com/articles/godofwarlaufeyinterview",
-      "en_title": "Inside God of War Laufey – Santa Monica Studio on Why Faye, a Ribbon, and a Cube Are Our New Heroes",
-      "cn_title": "《战神：劳菲》新情报：圣莫妮卡工作室详解女主角",
-      "model": "deepseek-v4-flash",
-      "status": "needs_manual_review",
-      "failed_at": "2026-06-03T10:28:12.892310+08:00",
-      "reason": "[dictionary] source contains 'Persona', but required dictionary translation '女神异闻录' is missing",
-      "audit_issues": [
-        {
-          "type": "dictionary",
-          "detail": "source contains 'Persona', but required dictionary translation '女神异闻录' is missing",
-          "en": "Persona",
-          "expected_cn": "女神异闻录"
-        }
-      ],
-      "fingerprint": "58684467ea1bac4900fe80f4e81e1df80c36ec2b",
-      "translation_path": "translations/25.json",
-      "retry_policy": "manual_only"
-    },
     "26": {
       "id": 26,
       "url": "https://www.ign.com/articles/rayman-legends-retold-first-preview-a-remake-with-3d-art-and-2d-action",
@@ -190,5 +169,5 @@
       "retry_policy": "manual_only"
     }
   },
-  "updated_at": "2026-06-03T02:36:24.078Z"
+  "updated_at": "2026-06-03T02:59:02.803Z"
 }
