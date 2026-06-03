@@ -35,7 +35,181 @@
       "fingerprint": "2c65d02dd578337d0c42f506b5cf82711969fbcf",
       "translation_path": "translations/17.json",
       "retry_policy": "manual_only"
+    },
+    "20": {
+      "id": 20,
+      "url": "https://www.ign.com/articles/marvels-wolverine-the-big-interview-with-insomniac-on-sonys-unapologetically-violent-ps5-exclusive",
+      "en_title": "Marvel's Wolverine: The Big Interview With Insomniac on Sony's 'Unapologetically Violent' PS5 Exclusive",
+      "cn_title": "《索尼》《漫威金刚狼》暴力无上限：Insomniac详解PS5独占",
+      "model": "deepseek-v4-flash",
+      "status": "needs_manual_review",
+      "failed_at": "2026-06-03T10:26:15.397585+08:00",
+      "reason": "[dictionary] source contains 'Grounded', but required dictionary translation '禁闭求生' is missing; [dictionary] source contains 'Variety', but required dictionary translation '综艺' is missing",
+      "audit_issues": [
+        {
+          "type": "dictionary",
+          "detail": "source contains 'Grounded', but required dictionary translation '禁闭求生' is missing",
+          "en": "Grounded",
+          "expected_cn": "禁闭求生"
+        },
+        {
+          "type": "dictionary",
+          "detail": "source contains 'Variety', but required dictionary translation '综艺' is missing",
+          "en": "Variety",
+          "expected_cn": "综艺"
+        }
+      ],
+      "fingerprint": "217f29c2da85a98faa3f3139ecc7a027575d9f9b",
+      "translation_path": "translations/20.json",
+      "retry_policy": "manual_only"
+    },
+    "21": {
+      "id": 21,
+      "url": "https://www.ign.com/articles/fayes-story-so-far-and-why-you-wont-be-playing-as-kratos-in-god-of-war-laufey",
+      "en_title": "Faye’s Story So Far and Why You Won’t Be Playing as Kratos in God of War Laufey",
+      "cn_title": "《战神：劳菲》主角确认非奎托斯，菲的故事将展开",
+      "model": "deepseek-v4-flash",
+      "status": "needs_manual_review",
+      "failed_at": "2026-06-03T10:26:48.646983+08:00",
+      "reason": "[dictionary] source contains 'Persona', but required dictionary translation '女神异闻录' is missing",
+      "audit_issues": [
+        {
+          "type": "dictionary",
+          "detail": "source contains 'Persona', but required dictionary translation '女神异闻录' is missing",
+          "en": "Persona",
+          "expected_cn": "女神异闻录"
+        }
+      ],
+      "fingerprint": "9af9947b4285524f0a4354446d75f1d6c51c4820",
+      "translation_path": "translations/21.json",
+      "retry_policy": "manual_only"
+    },
+    "23": {
+      "id": 23,
+      "url": "https://www.ign.com/articles/god-of-war-laufey-revealed-at-state-of-play",
+      "en_title": "God of War Laufey Revealed at State of Play",
+      "cn_title": "《战神：劳菲》在State of Play惊艳亮相",
+      "model": "deepseek-v4-flash",
+      "status": "needs_manual_review",
+      "failed_at": "2026-06-03T10:27:09.372631+08:00",
+      "reason": "[dictionary] source contains 'Blur', but required dictionary translation '疾驰残影' is missing",
+      "audit_issues": [
+        {
+          "type": "dictionary",
+          "detail": "source contains 'Blur', but required dictionary translation '疾驰残影' is missing",
+          "en": "Blur",
+          "expected_cn": "疾驰残影"
+        }
+      ],
+      "fingerprint": "5f139494533e8f1422d2e81d3f30ab12fcc1a6ab",
+      "translation_path": "translations/23.json",
+      "retry_policy": "manual_only"
+    },
+    "25": {
+      "id": 25,
+      "url": "https://www.ign.com/articles/godofwarlaufeyinterview",
+      "en_title": "Inside God of War Laufey – Santa Monica Studio on Why Faye, a Ribbon, and a Cube Are Our New Heroes",
+      "cn_title": "《战神：劳菲》新情报：圣莫妮卡工作室详解女主角",
+      "model": "deepseek-v4-flash",
+      "status": "needs_manual_review",
+      "failed_at": "2026-06-03T10:28:12.892310+08:00",
+      "reason": "[dictionary] source contains 'Persona', but required dictionary translation '女神异闻录' is missing",
+      "audit_issues": [
+        {
+          "type": "dictionary",
+          "detail": "source contains 'Persona', but required dictionary translation '女神异闻录' is missing",
+          "en": "Persona",
+          "expected_cn": "女神异闻录"
+        }
+      ],
+      "fingerprint": "58684467ea1bac4900fe80f4e81e1df80c36ec2b",
+      "translation_path": "translations/25.json",
+      "retry_policy": "manual_only"
+    },
+    "26": {
+      "id": 26,
+      "url": "https://www.ign.com/articles/rayman-legends-retold-first-preview-a-remake-with-3d-art-and-2d-action",
+      "en_title": "Rayman Legends Retold First Preview: A Remake With 3D Art and 2D Action",
+      "cn_title": "《雷曼：传奇》重制版前瞻：3D画面2D玩法",
+      "model": "deepseek-v4-flash",
+      "status": "needs_manual_review",
+      "failed_at": "2026-06-03T10:29:07.749435+08:00",
+      "reason": "[dictionary] source contains 'Variety', but required dictionary translation '综艺' is missing",
+      "audit_issues": [
+        {
+          "type": "dictionary",
+          "detail": "source contains 'Variety', but required dictionary translation '综艺' is missing",
+          "en": "Variety",
+          "expected_cn": "综艺"
+        }
+      ],
+      "fingerprint": "5cc8fb39e7e52428b5aea28f9f45b4caba5e4bd5",
+      "translation_path": "translations/26.json",
+      "retry_policy": "manual_only"
+    },
+    "28": {
+      "id": 28,
+      "url": "https://www.ign.com/articles/runescape-dragonwilds-launches-on-consoles-later-in-2026-sony-picks-up-spinoff-for-ps-plus",
+      "en_title": "RuneScape: Dragonwilds Launches on Consoles Later in 2026, Sony Picks Up Spinoff for PS Plus",
+      "cn_title": "《RuneScape：龙荒》年内登陆PS5，索尼纳入PS Plus首发",
+      "model": "deepseek-v4-flash",
+      "status": "needs_manual_review",
+      "failed_at": "2026-06-03T10:29:32.009992+08:00",
+      "reason": "[dictionary] source contains 'Blur', but required dictionary translation '疾驰残影' is missing",
+      "audit_issues": [
+        {
+          "type": "dictionary",
+          "detail": "source contains 'Blur', but required dictionary translation '疾驰残影' is missing",
+          "en": "Blur",
+          "expected_cn": "疾驰残影"
+        }
+      ],
+      "fingerprint": "4f40f07588c88a6af300d58496f50e44d11f3e50",
+      "translation_path": "translations/28.json",
+      "retry_policy": "manual_only"
+    },
+    "31": {
+      "id": 31,
+      "url": "https://www.ign.com/articles/marvel-tokon-fighting-souls-adds-carnage-green-goblin-and-magneto-to-the-roster",
+      "en_title": "Marvel Tokon: Fighting Souls Adds Carnage, Green Goblin, and Magneto to the Roster",
+      "cn_title": "《Marvel Tokon》新角色公布：屠杀、绿魔和万磁王参战",
+      "model": "deepseek-v4-flash",
+      "status": "needs_manual_review",
+      "failed_at": "2026-06-03T10:30:09.746966+08:00",
+      "reason": "[dictionary] source contains 'Doom', but required dictionary translation '毁灭战士' is missing",
+      "audit_issues": [
+        {
+          "type": "dictionary",
+          "detail": "source contains 'Doom', but required dictionary translation '毁灭战士' is missing",
+          "en": "Doom",
+          "expected_cn": "毁灭战士"
+        }
+      ],
+      "fingerprint": "789d5115aaf8ab7a750156bc3c9bbbed4ab8bb1b",
+      "translation_path": "translations/31.json",
+      "retry_policy": "manual_only"
+    },
+    "34": {
+      "id": 34,
+      "url": "https://www.ign.com/articles/tomb-raider-games-in-order",
+      "en_title": "How to Play the Tomb Raider Games in Chronological Order",
+      "cn_title": "《古墓丽影》全系列时间线游玩指南",
+      "model": "deepseek-v4-flash",
+      "status": "needs_manual_review",
+      "failed_at": "2026-06-03T10:31:35.083001+08:00",
+      "reason": "[dictionary] source contains 'The Guardian', but required dictionary translation '卫报' is missing",
+      "audit_issues": [
+        {
+          "type": "dictionary",
+          "detail": "source contains 'The Guardian', but required dictionary translation '卫报' is missing",
+          "en": "The Guardian",
+          "expected_cn": "卫报"
+        }
+      ],
+      "fingerprint": "6520d31b5ab12b9f9f2313c2689d104337af2afb",
+      "translation_path": "translations/34.json",
+      "retry_policy": "manual_only"
     }
   },
-  "updated_at": "2026-06-03T10:13:47.855712+08:00"
+  "updated_at": "2026-06-03T10:31:35.083001+08:00"
 }

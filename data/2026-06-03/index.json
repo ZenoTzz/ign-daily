@@ -155,12 +155,12 @@
       "emoji": "🦞",
       "en_title": "Marvel's Wolverine: The Big Interview With Insomniac on Sony's 'Unapologetically Violent' PS5 Exclusive",
       "cn_title": "《索尼》《漫威金刚狼》暴力无上限：Insomniac详解PS5独占",
-      "summary": "Insomniac Games在State of Play上展示了《漫威金刚狼》实机画面，创意总监Marcus Smith和游戏总监Mike Daly接受IGN专访，详解游戏暴力程度、愤怒机制、治疗因子及断肢系统。游戏为M级，但提供关闭血腥的辅助功能。愤怒值影响连招威力与治疗爆发，心脏停跳即死亡。",
+      "summary": "Insomniac Games在State of Play上展示了《漫威金刚狼》实机画面，创意总监Marcus Smith和游戏总监Mike Daly接受IGN专访，详解游戏暴力程度、愤怒机制、治疗因子及断肢系统。游戏为M级，但提供关闭血腥的辅助功能。愤怒值影响连招威力与治疗爆发，心脏停跳即死亡。战斗非开放世界，而是线性单机冒险，包含与琴·葛蕾的合作终结技以及与剑齿虎的竞争性联手。",
       "url": "https://www.ign.com/articles/marvels-wolverine-the-big-interview-with-insomniac-on-sonys-unapologetically-violent-ps5-exclusive",
       "publish_time_cn": "2026-06-03 06:30",
       "pub_date": "2026-06-03 06:30",
       "cover_image": "https://assets-prd.ignimgs.com/2026/06/02/wolverine-main-1780437427510.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/02/wolverine-main-1780437427510.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/02/wolverine-main-1780437427510.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -171,7 +171,13 @@
         "https://assets-prd.ignimgs.com/2026/06/02/insomniac-games-mike-daly-game-director-1780410658910.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-03T09:58:06+08:00"
+      "source_fetched_at": "2026-06-03T09:58:06+08:00",
+      "translation_error": "[dictionary] source contains 'Grounded', but required dictionary translation '禁闭求生' is missing; [dictionary] source contains 'Variety', but required dictionary translation '综艺' is missing",
+      "translation_failed_at": "2026-06-03T10:26:15.397585+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-flash",
+      "translation_path": "translations/20.json"
     },
     {
       "id": 21,
@@ -184,7 +190,7 @@
       "publish_time_cn": "2026-06-03 06:27",
       "pub_date": "2026-06-03 06:27",
       "cover_image": "https://assets-prd.ignimgs.com/2026/06/02/laufey-blog-1780439070212.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/02/laufey-blog-1780439070212.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/02/laufey-blog-1780439070212.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -210,7 +216,13 @@
           "cn": "Ariel Lawrence",
           "reason": "不知名人物保留英文"
         }
-      ]
+      ],
+      "translation_error": "[dictionary] source contains 'Persona', but required dictionary translation '女神异闻录' is missing",
+      "translation_failed_at": "2026-06-03T10:26:48.646983+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-flash",
+      "translation_path": "translations/21.json"
     },
     {
       "id": 22,
@@ -257,12 +269,12 @@
       "emoji": "⚔️",
       "en_title": "God of War Laufey Revealed at State of Play",
       "cn_title": "《战神：劳菲》在State of Play惊艳亮相",
-      "summary": "索尼State of Play发布会最大亮点是《战神》系列新作《战神：劳菲》，由圣莫尼卡工作室开发，PS5独占。实机演示确认主角为奎托斯已故的妻子菲（Faye），未公布发售窗口。",
+      "summary": "索尼State of Play发布会最大亮点是《战神》系列新作《战神：劳菲》，由圣莫尼卡工作室开发，PS5独占。实机演示确认主角为奎托斯已故的妻子菲（Faye），未公布发售窗口。IGN还带来了更多报道，包括圣莫尼卡解释奎托斯为何缺席、工作室深度访谈以及菲的背景故事解析。",
       "url": "https://www.ign.com/articles/god-of-war-laufey-revealed-at-state-of-play",
       "publish_time_cn": "2026-06-03 06:20",
       "pub_date": "2026-06-03 06:20",
       "cover_image": "https://assets-prd.ignimgs.com/2026/06/02/godofwarlaufey-1-blogroll-1780438770729.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/02/godofwarlaufey-1-blogroll-1780438770729.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/02/godofwarlaufey-1-blogroll-1780438770729.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -288,7 +300,13 @@
           "cn": "菲",
           "reason": "角色名，词库无，需确认官方译名"
         }
-      ]
+      ],
+      "translation_error": "[dictionary] source contains 'Blur', but required dictionary translation '疾驰残影' is missing",
+      "translation_failed_at": "2026-06-03T10:27:09.372631+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-flash",
+      "translation_path": "translations/23.json"
     },
     {
       "id": 24,
@@ -336,12 +354,12 @@
       "emoji": "⚔️",
       "en_title": "Inside God of War Laufey – Santa Monica Studio on Why Faye, a Ribbon, and a Cube Are Our New Heroes",
       "cn_title": "《战神：劳菲》新情报：圣莫妮卡工作室详解女主角",
-      "summary": "圣莫妮卡工作室在State of Play上公布了《战神：劳菲》的实机演示，玩家将操控奎托斯的妻子劳菲，在神祇的来世之地“万古”中战斗。游戏并非前传，而是与2018年《战神》主线并行，劳菲将面对埃及战神塞赫美特等强敌，并与会说话的立方体弗兰克和丝带守护者露组成奇特三人组。",
+      "summary": "圣莫妮卡工作室在State of Play上公布了《战神：劳菲》的实机演示，玩家将操控奎托斯的妻子劳菲，在神祇的来世之地“万古”中战斗。游戏并非前传，而是与2018年《战神》主线并行，劳菲将面对埃及战神塞赫美特等强敌，并与会说话的立方体弗兰克和丝带守护者露组成奇特三人组。本作延续了系列对角色深度的挖掘，同时引入更敏捷的战斗风格和魔法系统，为玩家带来全新的《战神》体验。",
       "url": "https://www.ign.com/articles/godofwarlaufeyinterview",
       "publish_time_cn": "2026-06-03 06:15",
       "pub_date": "2026-06-03 06:15",
       "cover_image": "https://assets-prd.ignimgs.com/2026/06/02/gow-laufey-ste-masterimage-3840x2160-r-1-1780437732852.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/02/gow-laufey-ste-masterimage-3840x2160-r-1-1780437732852.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/02/gow-laufey-ste-masterimage-3840x2160-r-1-1780437732852.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -381,7 +399,13 @@
           "cn": "贝格策",
           "reason": "蒙古战神名，需确认常用译名"
         }
-      ]
+      ],
+      "translation_error": "[dictionary] source contains 'Persona', but required dictionary translation '女神异闻录' is missing",
+      "translation_failed_at": "2026-06-03T10:28:12.892310+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-flash",
+      "translation_path": "translations/25.json"
     },
     {
       "id": 26,
@@ -389,12 +413,12 @@
       "emoji": "🎮",
       "en_title": "Rayman Legends Retold First Preview: A Remake With 3D Art and 2D Action",
       "cn_title": "《雷曼：传奇》重制版前瞻：3D画面2D玩法",
-      "summary": "育碧公布《雷曼：传奇》重制版《雷曼：传奇 复述》，保留原版2D动作玩法，采用Snowdrop引擎重制3D画面，新增音乐关卡、多人模式及全新第六世界。游戏将于10月1日登陆PS5、Xbox Series、Switch 2和PC，Switch 2版稳定60帧。",
+      "summary": "育碧公布了《雷曼：传奇》的重制版《雷曼：传奇 复述》，保留原版2D动作玩法，采用Snowdrop引擎重制3D画面。新增音乐关卡、多人模式及全新第六世界。游戏将于10月1日登陆PS5、Xbox Series、Switch 2和PC，Switch 2版稳定60帧。",
       "url": "https://www.ign.com/articles/rayman-legends-retold-first-preview-a-remake-with-3d-art-and-2d-action",
       "publish_time_cn": "2026-06-03 06:00",
       "pub_date": "2026-06-03 06:00",
       "cover_image": "https://assets-prd.ignimgs.com/2026/06/02/rayman-legends-retold-1780425829717.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/02/rayman-legends-retold-1780425829717.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/02/rayman-legends-retold-1780425829717.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -411,7 +435,13 @@
           "cn": "雷曼：传奇 复述",
           "reason": "官方中文名待确认"
         }
-      ]
+      ],
+      "translation_error": "[dictionary] source contains 'Variety', but required dictionary translation '综艺' is missing",
+      "translation_failed_at": "2026-06-03T10:29:07.749435+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-flash",
+      "translation_path": "translations/26.json"
     },
     {
       "id": 27,
@@ -453,12 +483,12 @@
       "emoji": "🎮",
       "en_title": "RuneScape: Dragonwilds Launches on Consoles Later in 2026, Sony Picks Up Spinoff for PS Plus",
       "cn_title": "《RuneScape：龙荒》年内登陆PS5，索尼纳入PS Plus首发",
-      "summary": "开发商Jagex宣布，《RuneScape：龙荒》将于2026年晚些时候登陆PS5，这是该系列25年来首次登陆主机。索尼State of Play确认，游戏将首发加入PS Plus Extra和Premium。该作是一款开放世界生存建造游戏，PC版已在Steam售出100万份，获「特别好评」。",
+      "summary": "开发商Jagex宣布，《RuneScape：龙荒》将于2026年晚些时候登陆PS5，这是该系列25年来首次从PC扩展到主机平台。索尼State of Play确认，游戏将首发加入PS Plus Extra和Premium。该作是一款开放世界生存建造游戏，PC版已在Steam售出100万份，获「特别好评」。主系列《RuneScape》自2001年推出，目前仅有PC和移动端版本，主机版尚属首次。",
       "url": "https://www.ign.com/articles/runescape-dragonwilds-launches-on-consoles-later-in-2026-sony-picks-up-spinoff-for-ps-plus",
       "publish_time_cn": "2026-06-03 05:48",
       "pub_date": "2026-06-03 05:48",
       "cover_image": "",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "source_status": "cached",
       "source_fetched_at": "2026-06-03T09:58:13+08:00",
       "pending_dict": [
@@ -467,7 +497,13 @@
           "cn": "RuneScape：龙荒",
           "reason": "无官方中文译名，社区译名待确认"
         }
-      ]
+      ],
+      "translation_error": "[dictionary] source contains 'Blur', but required dictionary translation '疾驰残影' is missing",
+      "translation_failed_at": "2026-06-03T10:29:32.009992+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-flash",
+      "translation_path": "translations/28.json"
     },
     {
       "id": 29,
@@ -520,12 +556,12 @@
       "emoji": "🎮",
       "en_title": "Marvel Tokon: Fighting Souls Adds Carnage, Green Goblin, and Magneto to the Roster",
       "cn_title": "《Marvel Tokon》新角色公布：屠杀、绿魔和万磁王参战",
-      "summary": "在索尼State of Play发布会上，Arc System Works公布了《Marvel Tokon: Fighting Souls》三名新可玩角色：屠杀、绿魔和万磁王。他们将于8月6日与毁灭博士一同加入“末日骑士”团队。游戏还将推出新舞台“纽约之夜”，并在Evo 2026提供试玩。本作将于2026年8月6日登陆PC和PS5。",
+      "summary": "在索尼State of Play发布会上，Arc System Works公布了《Marvel Tokon: Fighting Souls》三名新可玩角色：屠杀、绿魔和万磁王。他们将于2026年8月6日与毁灭博士一同加入“末日骑士”团队。游戏还将推出新舞台“纽约之夜”，并在Evo 2026提供试玩。本作将于2026年8月6日登陆PC和PS5。",
       "url": "https://www.ign.com/articles/marvel-tokon-fighting-souls-adds-carnage-green-goblin-and-magneto-to-the-roster",
       "publish_time_cn": "2026-06-03 05:24",
       "pub_date": "2026-06-03 05:24",
       "cover_image": "https://assets-prd.ignimgs.com/2026/06/02/marvel-tokon-1780435216847.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/02/marvel-tokon-1780435216847.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/02/marvel-tokon-1780435216847.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -551,7 +587,13 @@
           "cn": "冠军",
           "reason": "AI推测译名，需人工确认"
         }
-      ]
+      ],
+      "translation_error": "[dictionary] source contains 'Doom', but required dictionary translation '毁灭战士' is missing",
+      "translation_failed_at": "2026-06-03T10:30:09.746966+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-flash",
+      "translation_path": "translations/31.json"
     },
     {
       "id": 32,
@@ -620,12 +662,12 @@
       "emoji": "🗺️",
       "en_title": "How to Play the Tomb Raider Games in Chronological Order",
       "cn_title": "《古墓丽影》全系列时间线游玩指南",
-      "summary": "随着两款新作《古墓丽影：催化剂》和《古墓丽影：亚特兰蒂斯遗产》公布，IGN整理了系列20款游戏的时间线。游戏分为三条独立时间线，建议新玩家从2013年重启作开始。亚马逊真人剧集也已开拍，由索菲·特纳饰演劳拉。",
+      "summary": "《古墓丽影》系列已有20款游戏，分为三条独立时间线。随着两款新作《古墓丽影：催化剂》和《古墓丽影：亚特兰蒂斯遗产》公布，IGN整理了全系列时间线。建议新玩家从2013年重启作开始。亚马逊真人剧集也已开拍，由索菲·特纳饰演劳拉。",
       "url": "https://www.ign.com/articles/tomb-raider-games-in-order",
       "publish_time_cn": "2026-06-03 04:47",
       "pub_date": "2026-06-03 04:47",
       "cover_image": "https://assets-prd.ignimgs.com/2023/04/20/tomb-raider-games-in-order-2-1682033964025.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2023/04/20/tomb-raider-games-in-order-2-1682033964025.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2023/04/20/tomb-raider-games-in-order-2-1682033964025.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -639,7 +681,13 @@
         "https://assets-prd.ignimgs.com/2021/10/21/new-project-13-1634819493826.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-03T09:58:18+08:00"
+      "source_fetched_at": "2026-06-03T09:58:18+08:00",
+      "translation_error": "[dictionary] source contains 'The Guardian', but required dictionary translation '卫报' is missing",
+      "translation_failed_at": "2026-06-03T10:31:35.083001+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-flash",
+      "translation_path": "translations/34.json"
     },
     {
       "id": 35,
@@ -664,8 +712,8 @@
       "url": "https://www.ign.com/articles/it-looks-like-tomb-raider-legacy-of-atlantis-is-delayed-to-2027",
       "publish_time_cn": "2026-06-03 03:41",
       "pub_date": "2026-06-03 03:41",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/06/02/ss-7db01736a50cdb264954f34bb31de572fb1a6ed3-1920x1080-1780429086198.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/02/ss-7db01736a50cdb264954f34bb31de572fb1a6ed3-1920x1080-1780429086198.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/02/ss-7db01736a50cdb264954f34bb31de572fb1a6ed3-1920x1080-1780429086198.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/02/ss-7db01736a50cdb264954f34bb31de572fb1a6ed3-1920x1080-1780429086198.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -674,7 +722,11 @@
         "https://assets-prd.ignimgs.com/2026/06/02/ss-7db01736a50cdb264954f34bb31de572fb1a6ed3-1920x1080-1780429086198.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-03T10:12:30+08:00"
+      "source_fetched_at": "2026-06-03T10:12:30+08:00",
+      "translation_path": "translations/36.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-flash"
     },
     {
       "id": 37,

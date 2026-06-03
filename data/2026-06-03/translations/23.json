@@ -1,0 +1,69 @@
+{
+  "id": 23,
+  "url": "https://www.ign.com/articles/god-of-war-laufey-revealed-at-state-of-play",
+  "en_title": "God of War Laufey Revealed at State of Play",
+  "cn_title": "《战神：劳菲》在State of Play惊艳亮相",
+  "subtitle": "奎托斯妻子成主角",
+  "opus_summary": "索尼State of Play发布会最大亮点是《战神》系列新作《战神：劳菲》，由圣莫尼卡工作室开发，PS5独占。实机演示确认主角为奎托斯已故的妻子菲（Faye），未公布发售窗口。IGN还带来了更多报道，包括圣莫尼卡解释奎托斯为何缺席、工作室深度访谈以及菲的背景故事解析。",
+  "publish_time_cn": "2026-06-03 06:20",
+  "paragraphs": [
+    {
+      "en": "Sony’s big State of Play showstopper was God of War Laufey, the next game in the God of War series from Sony Santa Monica due out exclusively on PS5. No release window was mentioned.",
+      "cn": "索尼State of Play发布会最重磅的节目是《战神：劳菲》，这是圣莫尼卡工作室开发的《战神》系列新作，PS5独占。发售窗口未公布。"
+    },
+    {
+      "en": "God of War Laufey was revealed with an extensive gameplay showcase, confirming Faye, Kratos' \"dead\" wife, as the main character this time around.",
+      "cn": "《战神：劳菲》通过一段详尽的实机演示亮相，确认奎托斯「已故」的妻子菲（Faye）将成为本作主角。"
+    },
+    {
+      "en": "We’ve got plenty more on God of War Laufey, including Sony Santa Monica explaining why Kratos is out , a wider interview with the studio , and an explainer on Faye’s story so far .",
+      "cn": "关于《战神：劳菲》，我们还有更多报道，包括圣莫尼卡解释奎托斯为何缺席、工作室深度访谈，以及菲迄今的背景故事解析。"
+    },
+    {
+      "en": "Here's everything announced at State of Play June 2026 if you need a catch up on what PlayStation has in store.",
+      "cn": "如果你想了解PlayStation的后续计划，这里是2026年6月State of Play的全部发布内容汇总。"
+    },
+    {
+      "en": "Wesley is Director, News at IGN. Find him on Twitter at @wyp100. You can reach Wesley at wesley_yinpoole@ign.com or confidentially at wyp100@proton.me.",
+      "cn": "Wesley是IGN新闻总监。他的Twitter账号是@wyp100，邮箱为wesley_yinpoole@ign.com，保密邮箱为wyp100@proton.me。"
+    }
+  ],
+  "pending_dict": [],
+  "translated_terms": {
+    "God of War": "《战神》",
+    "Laufey": "劳菲",
+    "Faye": "菲",
+    "Sony": "索尼",
+    "PlayStation": "PlayStation",
+    "PS5": "PS5",
+    "Sony Santa Monica": "圣莫尼卡工作室",
+    "State of Play": "State of Play",
+    "Kratos": "奎托斯",
+    "Blur": "疾驰残影"
+  },
+  "cover": "https://assets-prd.ignimgs.com/2026/06/02/godofwarlaufey-1-blogroll-1780438770729.jpg?width=1280&format=jpg&auto=webp&quality=80",
+  "images": [
+    "https://assets-prd.ignimgs.com/2026/06/02/godofwarlaufey-1-blogroll-1780438770729.jpg?width=1280&format=jpg&auto=webp&quality=80",
+    "https://assets-prd.ignimgs.com/2026/06/02/godofwarlaufey-1-blogroll-1780438770729.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+    "https://assets-prd.ignimgs.com/2026/06/02/godofwarlaufey-1-blogroll-1780438770729.jpg?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+    "https://assets-prd.ignimgs.com/2026/06/02/godofwarlaufey-1-blogroll-1780438770729.jpg?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+    "https://assets-prd.ignimgs.com/2026/06/02/godofwarlaufey-1-blogroll-1780438770729.jpg"
+  ],
+  "repair_source": "api_audit",
+  "repair_issue_count": 1,
+  "translator": "api",
+  "translator_provider": "openai-compatible",
+  "translator_model": "deepseek-v4-flash",
+  "quality_status": "needs_manual_review",
+  "manual_release_required": true,
+  "audit_issues": [
+    {
+      "type": "dictionary",
+      "detail": "source contains 'Blur', but required dictionary translation '疾驰残影' is missing",
+      "en": "Blur",
+      "expected_cn": "疾驰残影"
+    }
+  ],
+  "audit_failed_at": "2026-06-03T10:27:09.372631+08:00",
+  "audit_failure_reason": "[dictionary] source contains 'Blur', but required dictionary translation '疾驰残影' is missing"
+}
