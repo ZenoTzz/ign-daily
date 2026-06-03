@@ -12,7 +12,7 @@
   "api_nightly_thinking": "high",
   "api_compare_thinking": "disabled",
   "api_base_url": "https://api.deepseek.com",
-  "api_fulltext_batch": "5",
+  "api_fulltext_batch": "all",
   "compare_models": [
     "deepseek-v4-pro",
     "deepseek-v4-flash"
@@ -37,6 +37,6 @@
       "output_usd_per_million": 0.28
     }
   ],
-  "updated_at": "2026-06-03T02:12:15.772Z",
+  "updated_at": "2026-06-03T02:12:32.606Z",
   "notes": "Public switch only. API keys must stay in GitHub Actions Secrets."
 }
