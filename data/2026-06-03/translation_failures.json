@@ -36,33 +36,6 @@
       "translation_path": "translations/17.json",
       "retry_policy": "manual_only"
     },
-    "20": {
-      "id": 20,
-      "url": "https://www.ign.com/articles/marvels-wolverine-the-big-interview-with-insomniac-on-sonys-unapologetically-violent-ps5-exclusive",
-      "en_title": "Marvel's Wolverine: The Big Interview With Insomniac on Sony's 'Unapologetically Violent' PS5 Exclusive",
-      "cn_title": "《索尼》《漫威金刚狼》暴力无上限：Insomniac详解PS5独占",
-      "model": "deepseek-v4-flash",
-      "status": "needs_manual_review",
-      "failed_at": "2026-06-03T10:26:15.397585+08:00",
-      "reason": "[dictionary] source contains 'Grounded', but required dictionary translation '禁闭求生' is missing; [dictionary] source contains 'Variety', but required dictionary translation '综艺' is missing",
-      "audit_issues": [
-        {
-          "type": "dictionary",
-          "detail": "source contains 'Grounded', but required dictionary translation '禁闭求生' is missing",
-          "en": "Grounded",
-          "expected_cn": "禁闭求生"
-        },
-        {
-          "type": "dictionary",
-          "detail": "source contains 'Variety', but required dictionary translation '综艺' is missing",
-          "en": "Variety",
-          "expected_cn": "综艺"
-        }
-      ],
-      "fingerprint": "217f29c2da85a98faa3f3139ecc7a027575d9f9b",
-      "translation_path": "translations/20.json",
-      "retry_policy": "manual_only"
-    },
     "23": {
       "id": 23,
       "url": "https://www.ign.com/articles/god-of-war-laufey-revealed-at-state-of-play",
@@ -169,5 +142,5 @@
       "retry_policy": "manual_only"
     }
   },
-  "updated_at": "2026-06-03T02:59:02.803Z"
+  "updated_at": "2026-06-03T03:36:44.037Z"
 }
