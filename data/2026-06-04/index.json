@@ -50,8 +50,8 @@
       "url": "https://www.ign.com/articles/john-blanche-the-legendary-illustrator-who-defined-the-look-of-the-warhammer-40000-setting-has-died",
       "publish_time_cn": "2026-06-03 20:46",
       "pub_date": "2026-06-03 20:46",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/06/03/screenshot-2026-06-03-134437-1780490689523.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/03/screenshot-2026-06-03-134437-1780490689523.png",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/03/screenshot-2026-06-03-134437-1780490689523.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/03/screenshot-2026-06-03-134437-1780490689523.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -63,7 +63,11 @@
         "https://assets-prd.ignimgs.com/2026/06/03/xggwqyg9ghszqjhb-1780490483072.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-03T23:18:45+08:00"
+      "source_fetched_at": "2026-06-03T23:18:45+08:00",
+      "translation_path": "translations/12.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-flash"
     },
     {
       "id": 13,
@@ -198,8 +202,8 @@
       "url": "https://www.ign.com/articles/god-of-war-laufey-isnt-a-prequel-heres-why",
       "publish_time_cn": "2026-06-03 19:38",
       "pub_date": "2026-06-03 19:38",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/06/03/jaufey-1780486384090.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/03/jaufey-1780486384090.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/03/jaufey-1780486384090.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/03/jaufey-1780486384090.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -208,7 +212,11 @@
         "https://assets-prd.ignimgs.com/2026/06/03/jaufey-1780486384090.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-03T23:18:49+08:00"
+      "source_fetched_at": "2026-06-03T23:18:49+08:00",
+      "translation_path": "translations/16.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-flash"
     },
     {
       "id": 17,

@@ -2058,6 +2058,48 @@
       "total_tokens": 5161,
       "prompt_cache_hit_tokens": 0,
       "prompt_cache_miss_tokens": 3399
+    },
+    {
+      "time_cn": "2026-06-03 23:25:48",
+      "task": "fulltext",
+      "model": "deepseek-v4-flash",
+      "article_id": 12,
+      "article_title": "战锤40K视觉奠基人John Blanche逝世",
+      "article_url": "https://www.ign.com/articles/john-blanche-the-legendary-illustrator-who-defined-the-look-of-the-warhammer-40000-setting-has-died",
+      "article_date": "2026-06-04",
+      "detail": "",
+      "estimated_cost_usd": 0.00083577,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7578,
+      "completion_tokens": 2081,
+      "total_tokens": 9659,
+      "prompt_cache_hit_tokens": 5888,
+      "prompt_cache_miss_tokens": 1690
+    },
+    {
+      "time_cn": "2026-06-03 23:26:02",
+      "task": "fulltext",
+      "model": "deepseek-v4-flash",
+      "article_id": 16,
+      "article_title": "《战神：劳菲》并非前传，圣莫妮卡工作室详解原因",
+      "article_url": "https://www.ign.com/articles/god-of-war-laufey-isnt-a-prequel-heres-why",
+      "article_date": "2026-06-04",
+      "detail": "",
+      "estimated_cost_usd": 0.00087455,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7943,
+      "completion_tokens": 2037,
+      "total_tokens": 9980,
+      "prompt_cache_hit_tokens": 5888,
+      "prompt_cache_miss_tokens": 2055
     }
   ]
 }
