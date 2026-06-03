@@ -2016,6 +2016,48 @@
       "total_tokens": 6916,
       "prompt_cache_hit_tokens": 5888,
       "prompt_cache_miss_tokens": 883
+    },
+    {
+      "time_cn": "2026-06-03 23:19:48",
+      "task": "fulltext",
+      "model": "deepseek-v4-flash",
+      "article_id": 9,
+      "article_title": "《PlayStation》顽皮狗缺席State of Play，玩家担忧《星际：异端先知》遥遥无期",
+      "article_url": "https://www.ign.com/articles/naughty-dog-no-show-at-playstation-state-of-play-leaves-fans-fearing-intergalactic-the-heretic-prophet-is-still-a-long-way-from-launch",
+      "article_date": "2026-06-04",
+      "detail": "",
+      "estimated_cost_usd": 0.00100377,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7926,
+      "completion_tokens": 2507,
+      "total_tokens": 10433,
+      "prompt_cache_hit_tokens": 5888,
+      "prompt_cache_miss_tokens": 2038
+    },
+    {
+      "time_cn": "2026-06-03 23:19:59",
+      "task": "fulltext_repair",
+      "model": "deepseek-v4-flash",
+      "article_id": 9,
+      "article_title": "《PlayStation》顽皮狗缺席State of Play，玩家担忧《星际：异端先知》遥遥无期",
+      "article_url": "https://www.ign.com/articles/naughty-dog-no-show-at-playstation-state-of-play-leaves-fans-fearing-intergalactic-the-heretic-prophet-is-still-a-long-way-from-launch",
+      "article_date": "2026-06-04",
+      "detail": "1 audit issue(s)",
+      "estimated_cost_usd": 0.00096922,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 3399,
+      "completion_tokens": 1762,
+      "total_tokens": 5161,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 3399
     }
   ]
 }

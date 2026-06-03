@@ -239,12 +239,12 @@
       "emoji": "😟",
       "en_title": "Naughty Dog No-Show at PlayStation State of Play Leaves Fans Fearing Intergalactic: The Heretic Prophet is Still a Long Way From Launch",
       "cn_title": "《PlayStation》顽皮狗缺席State of Play，玩家担忧《星际：异端先知》遥遥无期",
-      "summary": "索尼最新State of Play发布会落幕，顽皮狗等多家第一方工作室未带来任何新消息。顽皮狗自2020年《最后生还者2》后未推出新作，其科幻新作《星际：异端先知》于2024年TGA公布，但至今无发售窗口。玩家担忧该作仍处于早期开发阶段，距离上市尚需时日。",
+      "summary": "索尼最新State of Play发布会落幕，顽皮狗、Bend Studio、Media Molecule等多家第一方工作室未带来任何新消息。顽皮狗自2020年《最后生还者2》后未推出新作，其科幻新作《星际：异端先知》于2024年TGA公布，但至今无发售窗口。玩家担忧该作仍处于早期开发阶段，距离上市尚需时日。此外，Haven Studios的首款游戏《Fairgame$》也未亮相，而Guerrilla的《地平线 猎人集结》正在测试却未在发布会上展示。索尼第一方游戏销量近五年持续下滑，部分原因在于多款服务型游戏失败及项目取消。",
       "url": "https://www.ign.com/articles/naughty-dog-no-show-at-playstation-state-of-play-leaves-fans-fearing-intergalactic-the-heretic-prophet-is-still-a-long-way-from-launch",
       "publish_time_cn": "2026-06-03 18:09",
       "pub_date": "2026-06-03 18:09",
       "cover_image": "https://assets-prd.ignimgs.com/2025/01/10/screenshot-120-1736503735002.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2025/01/10/screenshot-120-1736503735002.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2025/01/10/screenshot-120-1736503735002.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -253,7 +253,13 @@
         "https://assets-prd.ignimgs.com/2025/01/10/screenshot-120-1736503735002.png"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-03T20:43:35+08:00"
+      "source_fetched_at": "2026-06-03T20:43:35+08:00",
+      "translation_error": "[currency_symbol] translation still contains raw currency symbol/code; convert it to Chinese currency text plus CNY",
+      "translation_failed_at": "2026-06-03T23:19:59.513299+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-flash",
+      "translation_path": "translations/09.json"
     },
     {
       "id": 10,
