@@ -1,12 +1,12 @@
 {
-  "updated_at": "2026-06-03 06:12:25 +08:00",
+  "updated_at": "2026-06-03 09:43:35 +08:00",
   "source": "https://open.er-api.com/v6/latest/USD",
   "base": "USD",
   "rates_to_cny": {
     "USD": 6.78,
-    "EUR": 7.89,
-    "JPY_100": 4.25,
-    "GBP": 9.12,
+    "EUR": 7.88,
+    "JPY_100": 4.24,
+    "GBP": 9.13,
     "KRW_100": 0.45
   },
   "note": "人民币兑外币参考汇率，取2位小数。翻译时按金额×对应rate取整数。"

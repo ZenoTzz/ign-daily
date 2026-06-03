@@ -1,0 +1,26 @@
+{
+  "date": "2026-06-03",
+  "records": [
+    {
+      "time_cn": "2026-06-03 09:43:38",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 1,
+      "article_title": "We Build LEGO Star Trek: U.S.S. Enterprise NCC-1701-D, Starfleet's Finest Flagship",
+      "article_url": "https://www.ign.com/articles/we-build-lego-star-trek-uss-enterprise-ncc-1701-d-10356",
+      "article_date": "2026-06-04",
+      "detail": "",
+      "estimated_cost_usd": 0.00028207,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7515,
+      "completion_tokens": 135,
+      "total_tokens": 7650,
+      "prompt_cache_hit_tokens": 5888,
+      "prompt_cache_miss_tokens": 1627
+    }
+  ]
+}
