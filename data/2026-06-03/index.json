@@ -160,7 +160,7 @@
       "publish_time_cn": "2026-06-03 06:30",
       "pub_date": "2026-06-03 06:30",
       "cover_image": "https://assets-prd.ignimgs.com/2026/06/02/wolverine-main-1780437427510.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "needs_review",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/02/wolverine-main-1780437427510.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/02/wolverine-main-1780437427510.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -172,8 +172,6 @@
       ],
       "source_status": "cached",
       "source_fetched_at": "2026-06-03T09:58:06+08:00",
-      "translation_error": "[dictionary] source contains 'Grounded', but required dictionary translation '禁闭求生' is missing; [dictionary] source contains 'Variety', but required dictionary translation '综艺' is missing",
-      "translation_failed_at": "2026-06-03T10:26:15.397585+08:00",
       "translator": "api",
       "translator_provider": "openai-compatible",
       "translator_model": "deepseek-v4-flash",
