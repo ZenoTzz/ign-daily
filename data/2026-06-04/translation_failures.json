@@ -1,25 +1,5 @@
 {
   "date": "2026-06-04",
-  "items": {
-    "9": {
-      "id": 9,
-      "url": "https://www.ign.com/articles/naughty-dog-no-show-at-playstation-state-of-play-leaves-fans-fearing-intergalactic-the-heretic-prophet-is-still-a-long-way-from-launch",
-      "en_title": "Naughty Dog No-Show at PlayStation State of Play Leaves Fans Fearing Intergalactic: The Heretic Prophet is Still a Long Way From Launch",
-      "cn_title": "《PlayStation》顽皮狗缺席State of Play，玩家担忧《星际：异端先知》遥遥无期",
-      "model": "deepseek-v4-flash",
-      "status": "needs_manual_review",
-      "failed_at": "2026-06-03T23:19:59.513299+08:00",
-      "reason": "[currency_symbol] translation still contains raw currency symbol/code; convert it to Chinese currency text plus CNY",
-      "audit_issues": [
-        {
-          "type": "currency_symbol",
-          "detail": "translation still contains raw currency symbol/code; convert it to Chinese currency text plus CNY"
-        }
-      ],
-      "fingerprint": "47351cb9f615822f9c49ec9576fb52b7272bd308",
-      "translation_path": "translations/09.json",
-      "retry_policy": "manual_only"
-    }
-  },
-  "updated_at": "2026-06-03T23:19:59.513299+08:00"
+  "items": {},
+  "updated_at": "2026-06-03T15:24:02.678Z"
 }
