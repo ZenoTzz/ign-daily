@@ -14,7 +14,28 @@
       "fingerprint": "da9189e9ad11b33773c862756782c63f6409a36d",
       "translation_path": "translations/07.json",
       "retry_policy": "manual_only"
+    },
+    "17": {
+      "id": 17,
+      "url": "https://www.ign.com/articles/marvel-cinematic-universe-is-back-to-phase-zero-with-avengers-doomsday-director-says",
+      "en_title": "Marvel Cinematic Universe Is 'Back to Phase Zero' With Avengers: Doomsday, Director Says",
+      "cn_title": "《复仇者联盟：毁灭之日》导演称MCU重回“零阶段”",
+      "model": "deepseek-v4-flash",
+      "status": "needs_manual_review",
+      "failed_at": "2026-06-03T10:13:47.855712+08:00",
+      "reason": "[dictionary] source contains 'Doom', but required dictionary translation '毁灭战士' is missing",
+      "audit_issues": [
+        {
+          "type": "dictionary",
+          "detail": "source contains 'Doom', but required dictionary translation '毁灭战士' is missing",
+          "en": "Doom",
+          "expected_cn": "毁灭战士"
+        }
+      ],
+      "fingerprint": "2c65d02dd578337d0c42f506b5cf82711969fbcf",
+      "translation_path": "translations/17.json",
+      "retry_policy": "manual_only"
     }
   },
-  "updated_at": "2026-06-02T14:47:05.712Z"
+  "updated_at": "2026-06-03T10:13:47.855712+08:00"
 }

@@ -80,7 +80,7 @@
       "publish_time_cn": "2026-06-03 06:48",
       "pub_date": "2026-06-03 06:48",
       "cover_image": "https://assets-prd.ignimgs.com/2024/07/30/downey-1722357862720.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2024/07/30/downey-1722357862720.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2024/07/30/downey-1722357862720.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -89,7 +89,13 @@
         "https://assets-prd.ignimgs.com/2024/07/30/downey-1722357862720.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-03T09:58:04+08:00"
+      "source_fetched_at": "2026-06-03T09:58:04+08:00",
+      "translation_error": "[dictionary] source contains 'Doom', but required dictionary translation '毁灭战士' is missing",
+      "translation_failed_at": "2026-06-03T10:13:47.855712+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-flash",
+      "translation_path": "translations/17.json"
     },
     {
       "id": 18,
@@ -101,8 +107,8 @@
       "url": "https://www.ign.com/articles/is-spider-man-in-marvels-wolverine-and-who-does-wolverine-team-up-with",
       "publish_time_cn": "2026-06-03 06:31",
       "pub_date": "2026-06-03 06:31",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/06/02/wolverine-3-1780437585442.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/02/wolverine-3-1780437585442.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/02/wolverine-3-1780437585442.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/02/wolverine-3-1780437585442.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -111,7 +117,11 @@
         "https://assets-prd.ignimgs.com/2026/06/02/wolverine-3-1780437585442.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-03T09:58:05+08:00"
+      "source_fetched_at": "2026-06-03T09:58:05+08:00",
+      "translation_path": "translations/18.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-flash"
     },
     {
       "id": 19,
@@ -123,8 +133,8 @@
       "url": "https://www.ign.com/articles/marvels-wolverine-lets-you-turn-off-the-gore-censoring-all-the-blood",
       "publish_time_cn": "2026-06-03 06:31",
       "pub_date": "2026-06-03 06:31",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/06/02/wolverine-again-1780437499137.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/02/wolverine-again-1780437499137.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/02/wolverine-again-1780437499137.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/02/wolverine-again-1780437499137.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -133,7 +143,11 @@
         "https://assets-prd.ignimgs.com/2026/06/02/wolverine-again-1780437499137.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-03T09:58:05+08:00"
+      "source_fetched_at": "2026-06-03T09:58:05+08:00",
+      "translation_path": "translations/19.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-flash"
     },
     {
       "id": 20,
@@ -650,8 +664,17 @@
       "url": "https://www.ign.com/articles/it-looks-like-tomb-raider-legacy-of-atlantis-is-delayed-to-2027",
       "publish_time_cn": "2026-06-03 03:41",
       "pub_date": "2026-06-03 03:41",
-      "cover_image": "",
-      "translation_status": "none"
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/02/ss-7db01736a50cdb264954f34bb31de572fb1a6ed3-1920x1080-1780429086198.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/02/ss-7db01736a50cdb264954f34bb31de572fb1a6ed3-1920x1080-1780429086198.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/02/ss-7db01736a50cdb264954f34bb31de572fb1a6ed3-1920x1080-1780429086198.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/02/ss-7db01736a50cdb264954f34bb31de572fb1a6ed3-1920x1080-1780429086198.jpg?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/02/ss-7db01736a50cdb264954f34bb31de572fb1a6ed3-1920x1080-1780429086198.jpg?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/02/ss-7db01736a50cdb264954f34bb31de572fb1a6ed3-1920x1080-1780429086198.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-03T10:12:30+08:00"
     },
     {
       "id": 37,
@@ -848,26 +871,45 @@
       "category": "游戏新闻",
       "emoji": "🎮",
       "en_title": "IGN Live 2026 Playable Games Lineup Features Forza Horizon 6 and 007",
-      "cn_title": "IGN Live 2026 Playable Games Lineup Features Forza Horizon 6 and 007",
-      "summary": "",
+      "cn_title": "IGN Live 2026 试玩阵容公布，《极限竞速：地平线6》与007新作领衔",
+      "summary": "IGN Live 2026 将于洛杉矶举行，现场提供超过170个游戏试玩台，包括《极限竞速：地平线6》、007新作等大作。此外还有《控制：共振》《刺客信条：黑旗 记忆重置》等独家内容，以及《降世神通：最后的气宗》剧组见面会。",
       "url": "https://www.ign.com/articles/ign-live-2026-playable-games-lineup",
       "publish_time_cn": "2026-06-03 00:00",
       "pub_date": "2026-06-03 00:00",
-      "cover_image": "",
-      "translation_status": "none"
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/01/ignlive-playable-blogroll-1780350645514.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/01/ignlive-playable-blogroll-1780350645514.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/01/ignlive-playable-blogroll-1780350645514.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/01/ignlive-playable-blogroll-1780350645514.jpg?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/01/ignlive-playable-blogroll-1780350645514.jpg?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/01/ignlive-playable-blogroll-1780350645514.jpg",
+        "https://assets-prd.ignimgs.com/2026/06/01/ignlive-playable-blogroll-1780350044089.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-03T10:12:30+08:00"
     },
     {
       "id": 46,
-      "category": "游戏新闻",
-      "emoji": "🎮",
+      "category": "影视资讯",
+      "emoji": "🎬",
       "en_title": "Tom Holland Reveals How The Odyssey 'Almost Saved' Spider-Man: Brand New Day",
-      "cn_title": "Tom Holland Reveals How The Odyssey 'Almost Saved' Spider-Man: Brand New Day",
-      "summary": "",
+      "cn_title": "《奥德赛》差点拯救了《蜘蛛侠》新片",
+      "summary": "汤姆·霍兰德透露，为参演克里斯托弗·诺兰的《奥德赛》，他请求索尼推迟《蜘蛛侠：崭新一天》的制作六个月，从而让导演德斯汀·丹尼尔·克雷顿有足够时间打磨剧本。霍兰德认为这次延期成就了最好的蜘蛛侠电影，索尼事后也对此感到庆幸。",
       "url": "https://www.ign.com/articles/tom-holland-reveals-how-the-odyssey-almost-saved-spider-man-brand-new-day",
       "publish_time_cn": "2026-06-02 23:37",
       "pub_date": "2026-06-02 23:37",
-      "cover_image": "",
-      "translation_status": "none"
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/02/gettyimages-2227870499-1780414413307.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/02/gettyimages-2227870499-1780414413307.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/02/gettyimages-2227870499-1780414413307.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/02/gettyimages-2227870499-1780414413307.jpg?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/02/gettyimages-2227870499-1780414413307.jpg?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/02/gettyimages-2227870499-1780414413307.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-03T10:12:31+08:00"
     },
     {
       "id": 12,
