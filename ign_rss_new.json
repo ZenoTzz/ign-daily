@@ -7,89 +7,43 @@
   "changed_dates": [
     "2026-06-04"
   ],
-  "new_target_dates": [
-    "2026-06-04"
-  ],
-  "new_count": 2,
-  "filtered_count": 2,
+  "new_target_dates": [],
+  "new_count": 0,
+  "filtered_count": 1,
   "cleanup_count": 0,
-  "changed_count": 4,
-  "articles": [
-    {
-      "title": "Phantom Blade Zero Delay Moves Launch to Late October 2026",
-      "url": "https://www.ign.com/articles/phantom-blade-zero-delay-moves-launch-to-late-october-2026",
-      "pubDate_cst": "2026-06-03 08:34"
-    },
-    {
-      "title": "Gabe Newell Says Players Have 'Enormous Choice' When Pressed on Steam Monopoly Accusations, Report Says",
-      "url": "https://www.ign.com/articles/gabe-newell-says-players-have-enormous-choice-when-pressed-on-steam-monopoly-accusations-report-says",
-      "pubDate_cst": "2026-06-03 08:16"
-    }
-  ],
+  "changed_count": 1,
+  "articles": [],
   "filtered_articles": [
     {
-      "title": "Save 66% Off a Used, Like New Pair of Beats Studio Pro Headphones on Amazon",
-      "url": "https://www.ign.com/articles/beats-studio-pro-noise-canceling-headphone-deal-amazon-resale-prime-day-sale",
-      "pubDate_cst": "2026-06-03 08:25",
-      "description": "$350 headphones for just under $120 shipped",
-      "categories": "",
-      "reason": "text:\\bsave \\d+%",
-      "rss_url": "https://feeds.feedburner.com/ign/all",
-      "filtered_at_cn": "2026-06-03 11:34:12",
-      "status": "filtered"
-    },
-    {
-      "title": "Save Over 40% Off the Bluetti AC180 1,152Wh LiFePO4 Power Station With 5 Year Warranty at AliExpress",
-      "url": "https://www.ign.com/articles/bluetti-ac180-power-station-deal-june-2026",
-      "pubDate_cst": "2026-06-03 08:10",
-      "description": "It's $200 less than buying the exact same model from Amazon.",
+      "title": "Amazon's June Audible Deal Is Now Live: Get 3 Months for Just $0.99 Per Month",
+      "url": "https://www.ign.com/articles/amazon-audible-deal-june-2026",
+      "pubDate_cst": "2026-06-03 10:25",
+      "description": "Catch up on the latest audiobooks from Rebecca Yarros, Brandon Sanderson, Suzanne Collins, and more.",
       "categories": "",
       "reason": "url:deal",
       "rss_url": "https://feeds.feedburner.com/ign/all",
-      "filtered_at_cn": "2026-06-03 11:34:12",
+      "filtered_at_cn": "2026-06-03 12:54:22",
       "status": "filtered"
     }
   ],
   "runs": [
     {
       "target_date": "2026-06-04",
-      "new_count": 2,
-      "filtered_count": 2,
-      "changed_count": 4,
+      "new_count": 0,
+      "filtered_count": 1,
+      "changed_count": 1,
       "next_id": 4,
-      "articles": [
-        {
-          "title": "Phantom Blade Zero Delay Moves Launch to Late October 2026",
-          "url": "https://www.ign.com/articles/phantom-blade-zero-delay-moves-launch-to-late-october-2026",
-          "pubDate_cst": "2026-06-03 08:34"
-        },
-        {
-          "title": "Gabe Newell Says Players Have 'Enormous Choice' When Pressed on Steam Monopoly Accusations, Report Says",
-          "url": "https://www.ign.com/articles/gabe-newell-says-players-have-enormous-choice-when-pressed-on-steam-monopoly-accusations-report-says",
-          "pubDate_cst": "2026-06-03 08:16"
-        }
-      ],
+      "articles": [],
       "filtered_articles": [
         {
-          "title": "Save 66% Off a Used, Like New Pair of Beats Studio Pro Headphones on Amazon",
-          "url": "https://www.ign.com/articles/beats-studio-pro-noise-canceling-headphone-deal-amazon-resale-prime-day-sale",
-          "pubDate_cst": "2026-06-03 08:25",
-          "description": "$350 headphones for just under $120 shipped",
-          "categories": "",
-          "reason": "text:\\bsave \\d+%",
-          "rss_url": "https://feeds.feedburner.com/ign/all",
-          "filtered_at_cn": "2026-06-03 11:34:12",
-          "status": "filtered"
-        },
-        {
-          "title": "Save Over 40% Off the Bluetti AC180 1,152Wh LiFePO4 Power Station With 5 Year Warranty at AliExpress",
-          "url": "https://www.ign.com/articles/bluetti-ac180-power-station-deal-june-2026",
-          "pubDate_cst": "2026-06-03 08:10",
-          "description": "It's $200 less than buying the exact same model from Amazon.",
+          "title": "Amazon's June Audible Deal Is Now Live: Get 3 Months for Just $0.99 Per Month",
+          "url": "https://www.ign.com/articles/amazon-audible-deal-june-2026",
+          "pubDate_cst": "2026-06-03 10:25",
+          "description": "Catch up on the latest audiobooks from Rebecca Yarros, Brandon Sanderson, Suzanne Collins, and more.",
           "categories": "",
           "reason": "url:deal",
           "rss_url": "https://feeds.feedburner.com/ign/all",
-          "filtered_at_cn": "2026-06-03 11:34:12",
+          "filtered_at_cn": "2026-06-03 12:54:22",
           "status": "filtered"
         }
       ]
