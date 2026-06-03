@@ -71,14 +71,14 @@
   "translator": "api",
   "translator_provider": "openai-compatible",
   "translator_model": "deepseek-v4-flash",
-  "quality_status": "needs_manual_review",
-  "manual_release_required": true,
-  "audit_issues": [
+  "quality_status": "manual_approved",
+  "manual_release_required": false,
+  "manual_approved_at": "2026-06-03T15:24:02.678Z",
+  "manual_approved_reason": "user approved API audit draft",
+  "manual_approved_issues": [
     {
       "type": "currency_symbol",
       "detail": "translation still contains raw currency symbol/code; convert it to Chinese currency text plus CNY"
     }
-  ],
-  "audit_failed_at": "2026-06-03T23:19:59.513299+08:00",
-  "audit_failure_reason": "[currency_symbol] translation still contains raw currency symbol/code; convert it to Chinese currency text plus CNY"
+  ]
 }
