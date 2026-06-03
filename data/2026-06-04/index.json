@@ -2,6 +2,238 @@
   "date": "2026-06-04",
   "articles": [
     {
+      "id": 11,
+      "category": "游戏新闻",
+      "emoji": "🚀",
+      "en_title": "EVE Online Theaters of War Exclusive Preview: 3 Expansions, 1 Universe of Conflict",
+      "cn_title": "《星战前夜》三部资料片计划独家预览：战争剧场",
+      "summary": "《星战前夜》开发商Fenris Creations（原CCP）公布名为“战争剧场”的三部资料片计划。首部《战争摇篮》6月9日上线，新增安全新手区Exordium，完全禁用PvP。第二部将整合第一人称射击游戏《星战前夜：先锋》，实现地面与太空战联动。第三部则聚焦动态星系演化与阵营战争赛季化。",
+      "url": "https://www.ign.com/articles/eve-online-theaters-of-war-exclusive-preview-3-expansions-1-universe-of-conflict",
+      "publish_time_cn": "2026-06-03 21:00",
+      "pub_date": "2026-06-03 21:00",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/02/eveonlinetrilogy-exclusive-blogroll-02-1780426517099.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/02/eveonlinetrilogy-exclusive-blogroll-02-1780426517099.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/02/eveonlinetrilogy-exclusive-blogroll-02-1780426517099.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/02/eveonlinetrilogy-exclusive-blogroll-02-1780426517099.jpg?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/02/eveonlinetrilogy-exclusive-blogroll-02-1780426517099.jpg?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/02/eveonlinetrilogy-exclusive-blogroll-02-1780426517099.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-03T23:18:45+08:00",
+      "pending_dict": [
+        {
+          "en": "Fenris Creations",
+          "cn": "Fenris Creations",
+          "reason": "原CCP更名，暂无官方中文译名"
+        },
+        {
+          "en": "Exordium",
+          "cn": "Exordium",
+          "reason": "新区域名，暂无官方中文译名"
+        },
+        {
+          "en": "EVE: Vanguard",
+          "cn": "星战前夜：先锋",
+          "reason": "游戏名，需确认官方中文译名"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "category": "人物新闻",
+      "emoji": "🎨",
+      "en_title": "John Blanche, the Legendary Illustrator Who Defined the Look of Warhammer 40,000, Has Died",
+      "cn_title": "战锤40K视觉奠基人John Blanche逝世",
+      "summary": "传奇插画师John Blanche去世，其黑暗美学定义了《战锤40K》的视觉风格。他创作的帝皇黄金王座图成为系列标志，第二版盒装封面至今影响深远。Games Workshop在即将发售的第11版中致敬其经典画作。Blanche于2023年退休，享年不详。",
+      "url": "https://www.ign.com/articles/john-blanche-the-legendary-illustrator-who-defined-the-look-of-the-warhammer-40000-setting-has-died",
+      "publish_time_cn": "2026-06-03 20:46",
+      "pub_date": "2026-06-03 20:46",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/03/screenshot-2026-06-03-134437-1780490689523.png?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/03/screenshot-2026-06-03-134437-1780490689523.png?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/03/screenshot-2026-06-03-134437-1780490689523.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/03/screenshot-2026-06-03-134437-1780490689523.png?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/03/screenshot-2026-06-03-134437-1780490689523.png?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/03/screenshot-2026-06-03-134437-1780490689523.png",
+        "https://assets-prd.ignimgs.com/2026/06/03/screenshot-2026-06-03-134437-1780490701036.png",
+        "https://assets-prd.ignimgs.com/2026/06/03/ow852ulpdo731-1751405677082-1780489961141.jpg",
+        "https://assets-prd.ignimgs.com/2026/06/03/xggwqyg9ghszqjhb-1780490483072.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-03T23:18:45+08:00"
+    },
+    {
+      "id": 13,
+      "category": "游戏新闻",
+      "emoji": "🎮",
+      "en_title": "Sony Confirms PS2 Games Coming to the PlayStation Plus Classics Catalog Over the Next Few Months",
+      "cn_title": "《PlayStation》索尼确认PS2经典游戏将陆续加入PS Plus经典目录",
+      "summary": "在State of Play发布会上，索尼宣布未来三个月内将有三款PS2经典游戏登陆PlayStation Plus Premium会员：6月16日《Gitaroo Man》、7月28日《Psi-Ops: The Mindgate Conspiracy》、8月25日《鬼武者：黎明之梦》。此外，Jagex的《Runescape: Dragonwilds》将于秋季作为首发游戏加入Game Catalog。",
+      "url": "https://www.ign.com/articles/sony-confirms-ps2-games-coming-to-the-playstation-plus-classics-catalog-over-the-next-few-months",
+      "publish_time_cn": "2026-06-03 20:17",
+      "pub_date": "2026-06-03 20:17",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/03/gitaroo-1780488850863.png?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/03/gitaroo-1780488850863.png?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/03/gitaroo-1780488850863.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/03/gitaroo-1780488850863.png?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/03/gitaroo-1780488850863.png?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/03/gitaroo-1780488850863.png"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-03T23:18:46+08:00",
+      "pending_dict": [
+        {
+          "en": "Gitaroo Man",
+          "cn": "吉他小子",
+          "reason": "无官方中文译名，社区译名待确认"
+        },
+        {
+          "en": "Psi-Ops: The Mindgate Conspiracy",
+          "cn": "超能特警：心灵门阴谋",
+          "reason": "无官方中文译名，社区译名待确认"
+        },
+        {
+          "en": "Onimusha: Dawn of Dreams",
+          "cn": "鬼武者：黎明之梦",
+          "reason": "词库有《鬼武者》系列，但本作译名待确认"
+        },
+        {
+          "en": "Runescape: Dragonwilds",
+          "cn": "Runescape: Dragonwilds",
+          "reason": "无官方中文译名，保留英文"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "category": "评测评分",
+      "emoji": "🎬",
+      "en_title": "Carolina Caroline Review",
+      "cn_title": "《Carolina Caroline》影评：亡命鸳鸯的别样演绎",
+      "summary": "由萨玛拉·维文与凯尔·加尔纳主演的犯罪爱情片《Carolina Caroline》将于6月5日北美上映。影片讲述小镇女孩卡洛琳被魅力骗子奥利弗吸引，踏上犯罪与浪漫交织的旅程。维文与加尔纳的化学反应极佳，表演细腻动人，将熟悉的“雌雄大盗”题材拍出了新意。IGN评分8分，推荐。",
+      "url": "https://www.ign.com/articles/carolina-caroline-review-samara-weaving-kyle-gallner",
+      "publish_time_cn": "2026-06-03 20:00",
+      "pub_date": "2026-06-03 20:00",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/02/carolina-caroline-thumb-1780442125546.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/02/carolina-caroline-thumb-1780442125546.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/02/carolina-caroline-thumb-1780442125546.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/02/carolina-caroline-thumb-1780442125546.jpg?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/02/carolina-caroline-thumb-1780442125546.jpg?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/02/carolina-caroline-thumb-1780442125546.jpg",
+        "https://assets-prd.ignimgs.com/2026/03/23/carolinecarolineteasertrailer-ign-blogroll-1774286584656.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-03T23:18:47+08:00",
+      "pending_dict": [
+        {
+          "en": "Carolina Caroline",
+          "cn": "Carolina Caroline",
+          "reason": "无官方中文译名，暂保留英文"
+        },
+        {
+          "en": "Samara Weaving",
+          "cn": "萨玛拉·维文",
+          "reason": "词库无此人，但为知名演员，建议翻译"
+        },
+        {
+          "en": "Kyle Gallner",
+          "cn": "凯尔·加尔纳",
+          "reason": "词库无此人，但为知名演员，建议翻译"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "category": "影视资讯",
+      "emoji": "🚪",
+      "en_title": "Stargate Veteran Disputes Reason for Amazon's Shock Cancellation of Series Revival",
+      "cn_title": "《星际之门》老将反驳亚马逊取消续集理由",
+      "summary": "亚马逊突然取消已获绿灯的《星际之门》重启剧集，声称其受众面不够广。资深编剧Joseph Mallozzi反驳称，团队始终致力于打造具有广泛吸引力的作品，并透露新剧本已开发两年，旨在吸引新观众的同时尊重经典。粉丝和演员对此深感失望。",
+      "url": "https://www.ign.com/articles/stargate-veteran-disputes-reason-for-amazons-shock-cancellation-of-series-revival",
+      "publish_time_cn": "2026-06-03 19:50",
+      "pub_date": "2026-06-03 19:50",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/03/hq720-2-1780487161526.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/03/hq720-2-1780487161526.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/03/hq720-2-1780487161526.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/03/hq720-2-1780487161526.jpg?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/03/hq720-2-1780487161526.jpg?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/03/hq720-2-1780487161526.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-03T23:18:48+08:00",
+      "pending_dict": [
+        {
+          "en": "Stargate",
+          "cn": "星际之门",
+          "reason": "词库未收录，但该系列有广泛中文译名，需确认是否使用官方译名"
+        },
+        {
+          "en": "Joseph Mallozzi",
+          "cn": "Joseph Mallozzi",
+          "reason": "不知名人物，保留英文"
+        },
+        {
+          "en": "Martin Gero",
+          "cn": "Martin Gero",
+          "reason": "不知名人物，保留英文"
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "category": "游戏新闻",
+      "emoji": "⚔️",
+      "en_title": "God of War Laufey Isn't a Prequel — Here's Why",
+      "cn_title": "《战神：劳菲》并非前传，圣莫妮卡工作室详解原因",
+      "summary": "在索尼State of Play上公布的《战神：劳菲》并非前传，而是与《战神》（2018）和《诸神黄昏》时间线平行的故事，讲述已故的劳菲在神界死后世界的冒险。游戏总监Ariel Lawrence和创意总监Cory Barlog向IGN解释，他们曾考虑前传，但认为从劳菲死后开始探索宇宙未知领域更有趣。",
+      "url": "https://www.ign.com/articles/god-of-war-laufey-isnt-a-prequel-heres-why",
+      "publish_time_cn": "2026-06-03 19:38",
+      "pub_date": "2026-06-03 19:38",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/03/jaufey-1780486384090.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/03/jaufey-1780486384090.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/03/jaufey-1780486384090.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/03/jaufey-1780486384090.jpg?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/03/jaufey-1780486384090.jpg?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/03/jaufey-1780486384090.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-03T23:18:49+08:00"
+    },
+    {
+      "id": 17,
+      "category": "人物新闻",
+      "emoji": "🎉",
+      "en_title": "GTA 5 Actor Ned Luke Celebrates as Swatting Perpetrator Sentenced to 4 Years",
+      "cn_title": "《GTA5》演员庆祝恶作剧者被判4年",
+      "summary": "《GTA5》中饰演Michael的演员Ned Luke庆祝一名网络恶作剧者被判4年监禁。Luke多次在直播《GTA Online》时遭遇恶意报警（swatting），此次判决后他嘲讽道“别在淋浴时把肥皂掉了”，并称警方正在追查同伙。Luke希望此举能震慑其他模仿者，让他能安心等待11月19日发售的《GTA6》。",
+      "url": "https://www.ign.com/articles/gta-5-actor-ned-luke-celebrates-as-swatting-perpetrator-sentenced-to-4-years",
+      "publish_time_cn": "2026-06-03 19:10",
+      "pub_date": "2026-06-03 19:10",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/03/grand-theft-auto-gta-5-ending-explained-michael-1780484426853.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/03/grand-theft-auto-gta-5-ending-explained-michael-1780484426853.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/03/grand-theft-auto-gta-5-ending-explained-michael-1780484426853.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/03/grand-theft-auto-gta-5-ending-explained-michael-1780484426853.jpg?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/03/grand-theft-auto-gta-5-ending-explained-michael-1780484426853.jpg?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/03/grand-theft-auto-gta-5-ending-explained-michael-1780484426853.jpg",
+        "https://assets-prd.ignimgs.com/2026/06/03/ned-luke-1780484874724.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-03T23:18:49+08:00"
+    },
+    {
       "id": 9,
       "category": "游戏新闻",
       "emoji": "😟",
@@ -334,5 +566,5 @@
       "source_fetched_at": "2026-06-03T09:43:34+08:00"
     }
   ],
-  "total": 10
+  "total": 17
 }

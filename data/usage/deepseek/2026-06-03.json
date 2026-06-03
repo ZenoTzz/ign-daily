@@ -1869,6 +1869,153 @@
       "total_tokens": 8242,
       "prompt_cache_hit_tokens": 5888,
       "prompt_cache_miss_tokens": 1995
+    },
+    {
+      "time_cn": "2026-06-03 23:18:54",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 11,
+      "article_title": "EVE Online Theaters of War Exclusive Preview: 3 Expansions, 1 Universe of Conflict",
+      "article_url": "https://www.ign.com/articles/eve-online-theaters-of-war-exclusive-preview-3-expansions-1-universe-of-conflict",
+      "article_date": "2026-06-04",
+      "detail": "",
+      "estimated_cost_usd": 0.00037937,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7944,
+      "completion_tokens": 268,
+      "total_tokens": 8212,
+      "prompt_cache_hit_tokens": 5888,
+      "prompt_cache_miss_tokens": 2056
+    },
+    {
+      "time_cn": "2026-06-03 23:18:57",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 12,
+      "article_title": "John Blanche, the Legendary Illustrator Who Defined the Look of Warhammer 40,000, Has Died",
+      "article_url": "https://www.ign.com/articles/john-blanche-the-legendary-illustrator-who-defined-the-look-of-the-warhammer-40000-setting-has-died",
+      "article_date": "2026-06-04",
+      "detail": "",
+      "estimated_cost_usd": 0.00021613,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7078,
+      "completion_tokens": 118,
+      "total_tokens": 7196,
+      "prompt_cache_hit_tokens": 5888,
+      "prompt_cache_miss_tokens": 1190
+    },
+    {
+      "time_cn": "2026-06-03 23:19:01",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 13,
+      "article_title": "Sony Confirms PS2 Games Coming to the PlayStation Plus Classics Catalog Over the Next Few Months",
+      "article_url": "https://www.ign.com/articles/sony-confirms-ps2-games-coming-to-the-playstation-plus-classics-catalog-over-the-next-few-months",
+      "article_date": "2026-06-04",
+      "detail": "",
+      "estimated_cost_usd": 0.00024525,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 6872,
+      "completion_tokens": 325,
+      "total_tokens": 7197,
+      "prompt_cache_hit_tokens": 5888,
+      "prompt_cache_miss_tokens": 984
+    },
+    {
+      "time_cn": "2026-06-03 23:19:05",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 14,
+      "article_title": "Carolina Caroline Review",
+      "article_url": "https://www.ign.com/articles/carolina-caroline-review-samara-weaving-kyle-gallner",
+      "article_date": "2026-06-04",
+      "detail": "",
+      "estimated_cost_usd": 0.00026149,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7102,
+      "completion_tokens": 268,
+      "total_tokens": 7370,
+      "prompt_cache_hit_tokens": 5888,
+      "prompt_cache_miss_tokens": 1214
+    },
+    {
+      "time_cn": "2026-06-03 23:19:08",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 15,
+      "article_title": "Stargate Veteran Disputes Reason for Amazon's Shock Cancellation of Series Revival",
+      "article_url": "https://www.ign.com/articles/stargate-veteran-disputes-reason-for-amazons-shock-cancellation-of-series-revival",
+      "article_date": "2026-06-04",
+      "detail": "",
+      "estimated_cost_usd": 0.00023923,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7011,
+      "completion_tokens": 234,
+      "total_tokens": 7245,
+      "prompt_cache_hit_tokens": 5888,
+      "prompt_cache_miss_tokens": 1123
+    },
+    {
+      "time_cn": "2026-06-03 23:19:11",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 16,
+      "article_title": "God of War Laufey Isn't a Prequel — Here's Why",
+      "article_url": "https://www.ign.com/articles/god-of-war-laufey-isnt-a-prequel-heres-why",
+      "article_date": "2026-06-04",
+      "detail": "",
+      "estimated_cost_usd": 0.00023279,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7149,
+      "completion_tokens": 142,
+      "total_tokens": 7291,
+      "prompt_cache_hit_tokens": 5888,
+      "prompt_cache_miss_tokens": 1261
+    },
+    {
+      "time_cn": "2026-06-03 23:19:15",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 17,
+      "article_title": "GTA 5 Actor Ned Luke Celebrates as Swatting Perpetrator Sentenced to 4 Years",
+      "article_url": "https://www.ign.com/articles/gta-5-actor-ned-luke-celebrates-as-swatting-perpetrator-sentenced-to-4-years",
+      "article_date": "2026-06-04",
+      "detail": "",
+      "estimated_cost_usd": 0.00018071,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 6771,
+      "completion_tokens": 145,
+      "total_tokens": 6916,
+      "prompt_cache_hit_tokens": 5888,
+      "prompt_cache_miss_tokens": 883
     }
   ]
 }
