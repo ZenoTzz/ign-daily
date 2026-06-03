@@ -1764,6 +1764,69 @@
       "total_tokens": 6843,
       "prompt_cache_hit_tokens": 5888,
       "prompt_cache_miss_tokens": 671
+    },
+    {
+      "time_cn": "2026-06-03 19:32:13",
+      "task": "fulltext",
+      "model": "deepseek-v4-flash",
+      "article_id": 3,
+      "article_title": "Gabe Newell 否认 Steam 垄断指控：玩家选择多",
+      "article_url": "https://www.ign.com/articles/gabe-newell-says-players-have-enormous-choice-when-pressed-on-steam-monopoly-accusations-report-says",
+      "article_date": "2026-06-04",
+      "detail": "",
+      "estimated_cost_usd": 0.00071313,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7496,
+      "completion_tokens": 1684,
+      "total_tokens": 9180,
+      "prompt_cache_hit_tokens": 5888,
+      "prompt_cache_miss_tokens": 1608
+    },
+    {
+      "time_cn": "2026-06-03 19:32:24",
+      "task": "fulltext",
+      "model": "deepseek-v4-flash",
+      "article_id": 4,
+      "article_title": "《复仇者联盟：毁灭之日》《复联5》《秘密战争》导演确认：没有第三部",
+      "article_url": "https://www.ign.com/articles/avengers-doomsday-and-secret-wars-directors-rule-out-a-third-movie-both-are-a-complete-expression",
+      "article_date": "2026-06-04",
+      "detail": "",
+      "estimated_cost_usd": 0.00068779,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7423,
+      "completion_tokens": 1630,
+      "total_tokens": 9053,
+      "prompt_cache_hit_tokens": 5888,
+      "prompt_cache_miss_tokens": 1535
+    },
+    {
+      "time_cn": "2026-06-03 19:32:30",
+      "task": "fulltext",
+      "model": "deepseek-v4-flash",
+      "article_id": 7,
+      "article_title": "《地狱已满：越南》跳票至8月",
+      "article_url": "https://www.ign.com/articles/hell-let-loose-vietnam-has-been-delayed-until-august",
+      "article_date": "2026-06-04",
+      "detail": "",
+      "estimated_cost_usd": 0.00042739,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 6965,
+      "completion_tokens": 929,
+      "total_tokens": 7894,
+      "prompt_cache_hit_tokens": 5888,
+      "prompt_cache_miss_tokens": 1077
     }
   ]
 }
