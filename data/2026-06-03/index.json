@@ -190,7 +190,7 @@
       "publish_time_cn": "2026-06-03 06:27",
       "pub_date": "2026-06-03 06:27",
       "cover_image": "https://assets-prd.ignimgs.com/2026/06/02/laufey-blog-1780439070212.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "needs_review",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/02/laufey-blog-1780439070212.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/02/laufey-blog-1780439070212.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -217,8 +217,6 @@
           "reason": "不知名人物保留英文"
         }
       ],
-      "translation_error": "[dictionary] source contains 'Persona', but required dictionary translation '女神异闻录' is missing",
-      "translation_failed_at": "2026-06-03T10:26:48.646983+08:00",
       "translator": "api",
       "translator_provider": "openai-compatible",
       "translator_model": "deepseek-v4-flash",
