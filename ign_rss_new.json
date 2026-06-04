@@ -5,159 +5,70 @@
     "2026-06-04"
   ],
   "changed_dates": [
+    "2026-06-05",
     "2026-06-04"
   ],
   "new_target_dates": [
+    "2026-06-05",
     "2026-06-04"
   ],
-  "new_count": 1,
-  "filtered_count": 5,
+  "new_count": 3,
+  "filtered_count": 0,
   "cleanup_count": 0,
-  "changed_count": 6,
+  "changed_count": 3,
   "articles": [
     {
-      "title": "T-Mobile Will Pay Off Up to $800 of Your Remaining Phone Balance When You Switch Carriers",
-      "url": "https://www.ign.com/articles/t-mobile-keep-and-switch-program-explained",
-      "pubDate_cst": "2026-06-04 06:55"
+      "title": "IO Interactive Won't Self-Publish Future James Bond Games; Amazon Will Have More Control",
+      "url": "https://www.ign.com/articles/io-interactive-wont-self-publish-future-james-bond-games-amazon-will-have-more-control",
+      "pubDate_cst": "2026-06-04 09:54"
+    },
+    {
+      "title": "You Can Now Fight Take-Two CEO Strauss Zelnick in WWE 2K26",
+      "url": "https://www.ign.com/articles/you-can-now-fight-take-two-ceo-strauss-zelnick-in-wwe-2k26",
+      "pubDate_cst": "2026-06-04 09:44"
+    },
+    {
+      "title": "Control Resonant Has a 2-Day Early Access Period via the Digital Deluxe Edition — but Only on PS5",
+      "url": "https://www.ign.com/articles/control-resonant-has-a-2-day-early-access-period-via-the-digital-deluxe-edition-but-only-on-ps5",
+      "pubDate_cst": "2026-06-04 04:57"
     }
   ],
-  "filtered_articles": [
-    {
-      "title": "The FlashForge AD5X Is a CoreXY 3D Printer With Multi-Color, Mixed Material Capability for Under $230",
-      "url": "https://www.ign.com/articles/flashforge-ad5x-3d-printer-deal-early-fathers-day-sale",
-      "pubDate_cst": "2026-06-04 07:05",
-      "description": "This is an excellent 3D printer for both beginners and advanced enthusiasts alike.",
-      "categories": "",
-      "reason": "text:\\bunder \\$\\d+",
-      "rss_url": "https://feeds.feedburner.com/ign/all",
-      "filtered_at_cn": "2026-06-04 08:14:15",
-      "status": "filtered"
-    },
-    {
-      "title": "The Pelsee P1 Pro 4K Front and Rear Dashcam Bundle Drops to Just $49.99 on Amazon",
-      "url": "https://www.ign.com/articles/pelsee-p1-pro-4k-front-and-rear-dashcam-deal",
-      "pubDate_cst": "2026-06-04 07:05",
-      "description": "Equipped with the highly-rated Sony STARVIS 2 IMX675 sensor for low-light video recording",
-      "categories": "",
-      "reason": "url:deal",
-      "rss_url": "https://feeds.feedburner.com/ign/all",
-      "filtered_at_cn": "2026-06-04 08:14:15",
-      "status": "filtered"
-    },
-    {
-      "title": "This Flashforge Adventurer 5M Is an Excellent Entry Level 3D Printer for Less Than $150",
-      "url": "https://www.ign.com/articles/flashforge-adventurer-5m-3d-printer-deal-june-2026",
-      "pubDate_cst": "2026-06-04 07:05",
-      "description": "You won't find a more reliable or moddable 3D printer at this price point.",
-      "categories": "",
-      "reason": "url:deal",
-      "rss_url": "https://feeds.feedburner.com/ign/all",
-      "filtered_at_cn": "2026-06-04 08:14:15",
-      "status": "filtered"
-    },
-    {
-      "title": "Save 56% Off the Logitech G29 Racing Wheel and Pedal Set, Perfect for Forza Horizon 6 on PC",
-      "url": "https://www.ign.com/articles/logitech-g29-racing-wheel-and-pedals-deal-for-forza-horizon-6",
-      "pubDate_cst": "2026-06-04 07:00",
-      "description": "Refurbished direct from Logitech with 1 year warranty",
-      "categories": "",
-      "reason": "text:\\bsave \\d+%",
-      "rss_url": "https://feeds.feedburner.com/ign/all",
-      "filtered_at_cn": "2026-06-04 08:14:15",
-      "status": "filtered"
-    },
-    {
-      "title": "Save 25% Off an Asus ROG Xbox Ally Handheld Gaming PC During Amazon's Resale Prime Day Sale",
-      "url": "https://www.ign.com/articles/asus-rog-xbox-ally-handheld-gaming-pc-deal-amazon-resale-prime-day-sale",
-      "pubDate_cst": "2026-06-04 06:55",
-      "description": "Used: Like New units are available in limited quantities",
-      "categories": "",
-      "reason": "text:\\bsave \\d+%",
-      "rss_url": "https://feeds.feedburner.com/ign/all",
-      "filtered_at_cn": "2026-06-04 08:14:15",
-      "status": "filtered"
-    }
-  ],
+  "filtered_articles": [],
   "runs": [
     {
       "target_date": "2026-06-05",
-      "new_count": 0,
+      "new_count": 2,
       "filtered_count": 0,
-      "changed_count": 0,
-      "next_id": 1,
-      "articles": [],
+      "changed_count": 2,
+      "next_id": 3,
+      "articles": [
+        {
+          "title": "IO Interactive Won't Self-Publish Future James Bond Games; Amazon Will Have More Control",
+          "url": "https://www.ign.com/articles/io-interactive-wont-self-publish-future-james-bond-games-amazon-will-have-more-control",
+          "pubDate_cst": "2026-06-04 09:54"
+        },
+        {
+          "title": "You Can Now Fight Take-Two CEO Strauss Zelnick in WWE 2K26",
+          "url": "https://www.ign.com/articles/you-can-now-fight-take-two-ceo-strauss-zelnick-in-wwe-2k26",
+          "pubDate_cst": "2026-06-04 09:44"
+        }
+      ],
       "filtered_articles": []
     },
     {
       "target_date": "2026-06-04",
       "new_count": 1,
-      "filtered_count": 5,
-      "changed_count": 6,
-      "next_id": 40,
+      "filtered_count": 0,
+      "changed_count": 1,
+      "next_id": 41,
       "articles": [
         {
-          "title": "T-Mobile Will Pay Off Up to $800 of Your Remaining Phone Balance When You Switch Carriers",
-          "url": "https://www.ign.com/articles/t-mobile-keep-and-switch-program-explained",
-          "pubDate_cst": "2026-06-04 06:55"
+          "title": "Control Resonant Has a 2-Day Early Access Period via the Digital Deluxe Edition — but Only on PS5",
+          "url": "https://www.ign.com/articles/control-resonant-has-a-2-day-early-access-period-via-the-digital-deluxe-edition-but-only-on-ps5",
+          "pubDate_cst": "2026-06-04 04:57"
         }
       ],
-      "filtered_articles": [
-        {
-          "title": "The FlashForge AD5X Is a CoreXY 3D Printer With Multi-Color, Mixed Material Capability for Under $230",
-          "url": "https://www.ign.com/articles/flashforge-ad5x-3d-printer-deal-early-fathers-day-sale",
-          "pubDate_cst": "2026-06-04 07:05",
-          "description": "This is an excellent 3D printer for both beginners and advanced enthusiasts alike.",
-          "categories": "",
-          "reason": "text:\\bunder \\$\\d+",
-          "rss_url": "https://feeds.feedburner.com/ign/all",
-          "filtered_at_cn": "2026-06-04 08:14:15",
-          "status": "filtered"
-        },
-        {
-          "title": "The Pelsee P1 Pro 4K Front and Rear Dashcam Bundle Drops to Just $49.99 on Amazon",
-          "url": "https://www.ign.com/articles/pelsee-p1-pro-4k-front-and-rear-dashcam-deal",
-          "pubDate_cst": "2026-06-04 07:05",
-          "description": "Equipped with the highly-rated Sony STARVIS 2 IMX675 sensor for low-light video recording",
-          "categories": "",
-          "reason": "url:deal",
-          "rss_url": "https://feeds.feedburner.com/ign/all",
-          "filtered_at_cn": "2026-06-04 08:14:15",
-          "status": "filtered"
-        },
-        {
-          "title": "This Flashforge Adventurer 5M Is an Excellent Entry Level 3D Printer for Less Than $150",
-          "url": "https://www.ign.com/articles/flashforge-adventurer-5m-3d-printer-deal-june-2026",
-          "pubDate_cst": "2026-06-04 07:05",
-          "description": "You won't find a more reliable or moddable 3D printer at this price point.",
-          "categories": "",
-          "reason": "url:deal",
-          "rss_url": "https://feeds.feedburner.com/ign/all",
-          "filtered_at_cn": "2026-06-04 08:14:15",
-          "status": "filtered"
-        },
-        {
-          "title": "Save 56% Off the Logitech G29 Racing Wheel and Pedal Set, Perfect for Forza Horizon 6 on PC",
-          "url": "https://www.ign.com/articles/logitech-g29-racing-wheel-and-pedals-deal-for-forza-horizon-6",
-          "pubDate_cst": "2026-06-04 07:00",
-          "description": "Refurbished direct from Logitech with 1 year warranty",
-          "categories": "",
-          "reason": "text:\\bsave \\d+%",
-          "rss_url": "https://feeds.feedburner.com/ign/all",
-          "filtered_at_cn": "2026-06-04 08:14:15",
-          "status": "filtered"
-        },
-        {
-          "title": "Save 25% Off an Asus ROG Xbox Ally Handheld Gaming PC During Amazon's Resale Prime Day Sale",
-          "url": "https://www.ign.com/articles/asus-rog-xbox-ally-handheld-gaming-pc-deal-amazon-resale-prime-day-sale",
-          "pubDate_cst": "2026-06-04 06:55",
-          "description": "Used: Like New units are available in limited quantities",
-          "categories": "",
-          "reason": "text:\\bsave \\d+%",
-          "rss_url": "https://feeds.feedburner.com/ign/all",
-          "filtered_at_cn": "2026-06-04 08:14:15",
-          "status": "filtered"
-        }
-      ]
+      "filtered_articles": []
     }
   ]
 }
