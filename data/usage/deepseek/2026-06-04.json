@@ -672,6 +672,90 @@
       "total_tokens": 7549,
       "prompt_cache_hit_tokens": 6528,
       "prompt_cache_miss_tokens": 906
+    },
+    {
+      "time_cn": "2026-06-04 08:28:18",
+      "task": "fulltext",
+      "model": "deepseek-v4-flash",
+      "article_id": 19,
+      "article_title": "《控制：共振》PS5独占抢先体验引玩家不满",
+      "article_url": "https://www.ign.com/articles/control-resonant-has-a-2-day-early-access-through-the-digital-deluxe-edition-but-only-on-ps5",
+      "article_date": "2026-06-04",
+      "detail": "",
+      "estimated_cost_usd": 0.0007845,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8239,
+      "completion_tokens": 1881,
+      "total_tokens": 10120,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 1711
+    },
+    {
+      "time_cn": "2026-06-04 08:28:37",
+      "task": "fulltext",
+      "model": "deepseek-v4-flash",
+      "article_id": 26,
+      "article_title": "《任天堂》《Nintendo Switch 2》2026年及以后游戏阵容一览",
+      "article_url": "https://www.ign.com/articles/all-upcoming-nintendo-switch-2-games",
+      "article_date": "2026-06-04",
+      "detail": "",
+      "estimated_cost_usd": 0.00126204,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8922,
+      "completion_tokens": 3245,
+      "total_tokens": 12167,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 2394
+    },
+    {
+      "time_cn": "2026-06-04 08:29:12",
+      "task": "fulltext",
+      "model": "deepseek-v4-flash",
+      "article_id": 28,
+      "article_title": "《战神》系列游玩顺序指南",
+      "article_url": "https://www.ign.com/articles/god-of-war-games-in-order",
+      "article_date": "2026-06-04",
+      "detail": "",
+      "estimated_cost_usd": 0.0022615,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 10163,
+      "completion_tokens": 6194,
+      "total_tokens": 16357,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 3635
+    },
+    {
+      "time_cn": "2026-06-04 08:29:25",
+      "task": "fulltext",
+      "model": "deepseek-v4-flash",
+      "article_id": 38,
+      "article_title": "《控制：共振》预购开启，各版本内容一览",
+      "article_url": "https://www.ign.com/articles/control-resonant-where-to-preorder",
+      "article_date": "2026-06-04",
+      "detail": "",
+      "estimated_cost_usd": 0.00089734,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8305,
+      "completion_tokens": 2251,
+      "total_tokens": 10556,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 1777
     }
   ]
 }

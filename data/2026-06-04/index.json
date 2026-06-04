@@ -448,12 +448,12 @@
       "emoji": "⚔️",
       "en_title": "How to Play the God of War Games in Order",
       "cn_title": "《战神》系列游玩顺序指南",
-      "summary": "随着新作《战神：劳菲》在State of Play上公布，IGN整理了《战神》系列11款游戏的完整游玩顺序。从时间线最早的《战神：升天》到最新的《战神：斯巴达之子》，以及2018年重启作，为玩家提供从剧情连贯性出发的最佳入坑建议。",
+      "summary": "随着新作《战神：劳菲》在State of Play上公布，IGN整理了《战神》系列11款游戏的完整游玩顺序。从时间线最早的《战神：升天》到最新的《战神：斯巴达之子》，以及2018年重启作，为玩家提供从剧情连贯性出发的最佳入坑建议。文章详细介绍了每款游戏的剧情背景、关键角色和故事节点，帮助玩家理解奎托斯从希腊战神到北欧父亲的转变历程。",
       "url": "https://www.ign.com/articles/god-of-war-games-in-order",
       "publish_time_cn": "2026-06-03 22:47",
       "pub_date": "2026-06-03 22:47",
       "cover_image": "https://assets-prd.ignimgs.com/2023/03/01/god-of-war-games-in-order-1677630425176.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2023/03/01/god-of-war-games-in-order-1677630425176.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2023/03/01/god-of-war-games-in-order-1677630425176.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -469,7 +469,13 @@
         "https://assets-prd.ignimgs.com/2023/02/28/gow-2-1677614907374.jpeg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-04T07:22:56+08:00"
+      "source_fetched_at": "2026-06-04T07:22:56+08:00",
+      "translation_error": "Command '['/opt/hostedtoolcache/Python/3.11.15/x64/bin/python3', '/home/runner/work/ign-daily/ign-daily/scripts/translate_pipeline.py', '2026-06-04', '28', '--post']' returned non-zero exit status 1.",
+      "translation_failed_at": "2026-06-04T08:29:12.954107+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-flash",
+      "translation_path": "translations/28.json"
     },
     {
       "id": 38,
@@ -481,8 +487,8 @@
       "url": "https://www.ign.com/articles/control-resonant-where-to-preorder",
       "publish_time_cn": "2026-06-03 22:38",
       "pub_date": "2026-06-03 22:38",
-      "cover_image": "https://assets-prd.ignimgs.com/2025/12/12/controlresonate-thumb-1765506639080.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2025/12/12/controlresonate-thumb-1765506639080.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2025/12/12/controlresonate-thumb-1765506639080.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/03/control-resonant-physical-1780492175286.jpg",
@@ -498,7 +504,11 @@
         "https://assets-prd.ignimgs.com/2026/06/03/control-resonant-preorder-bonus-1780491200583.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-04T07:54:39+08:00"
+      "source_fetched_at": "2026-06-04T07:54:39+08:00",
+      "translation_path": "translations/38.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-flash"
     },
     {
       "id": 29,
