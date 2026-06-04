@@ -1,25 +1,5 @@
 {
   "date": "2026-06-04",
-  "items": {
-    "23": {
-      "id": 23,
-      "url": "https://www.ign.com/articles/wolverine-healing-factor-powers-regeneration-death",
-      "en_title": "How Powerful Is Wolverine's Healing Factor Anyway?",
-      "cn_title": "金刚狼自愈因子有多强？",
-      "model": "deepseek-v4-flash",
-      "status": "needs_manual_review",
-      "failed_at": "2026-06-04T07:53:25.030520+08:00",
-      "reason": "[currency_source] source mentions foreign-currency amount(s), but translation has no CNY conversion: 100 pounds",
-      "audit_issues": [
-        {
-          "type": "currency_source",
-          "detail": "source mentions foreign-currency amount(s), but translation has no CNY conversion: 100 pounds"
-        }
-      ],
-      "fingerprint": "a5c600bc96ac266e2b8e8a879d680be79194a2ba",
-      "translation_path": "translations/23.json",
-      "retry_policy": "manual_only"
-    }
-  },
-  "updated_at": "2026-06-04T07:53:25.030520+08:00"
+  "items": {},
+  "updated_at": "2026-06-04T00:26:22.663Z"
 }
