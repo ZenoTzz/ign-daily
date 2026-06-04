@@ -861,6 +861,69 @@
       "total_tokens": 7771,
       "prompt_cache_hit_tokens": 6528,
       "prompt_cache_miss_tokens": 1069
+    },
+    {
+      "time_cn": "2026-06-04 17:37:43",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 4,
+      "article_title": "XCOM-Like Star Wars Zero Company Release Date Leaks — and It's Coming Sooner Than You Might Think",
+      "article_url": "https://www.ign.com/articles/xcom-like-star-wars-zero-company-release-date-leaks-and-its-coming-sooner-than-you-might-think",
+      "article_date": "2026-06-05",
+      "detail": "",
+      "estimated_cost_usd": 0.00021946,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7517,
+      "completion_tokens": 224,
+      "total_tokens": 7741,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 989
+    },
+    {
+      "time_cn": "2026-06-04 17:37:47",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 5,
+      "article_title": "Avatar Legends: The Fighting Game Delayed by 3 Weeks",
+      "article_url": "https://www.ign.com/articles/avatar-legends-the-fighting-game-delayed-by-3-weeks",
+      "article_date": "2026-06-05",
+      "detail": "",
+      "estimated_cost_usd": 0.00025824,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7706,
+      "completion_tokens": 268,
+      "total_tokens": 7974,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 1178
+    },
+    {
+      "time_cn": "2026-06-04 17:37:51",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 6,
+      "article_title": "The Mound: Omen of Cthulhu Brings Insanity Effects to its Lovecraftian Multiplayer Horror | IGN Preview",
+      "article_url": "https://www.ign.com/articles/the-mound-omen-of-cthulhu-ign-preview",
+      "article_date": "2026-06-05",
+      "detail": "",
+      "estimated_cost_usd": 0.00044332,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8926,
+      "completion_tokens": 319,
+      "total_tokens": 9245,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 2398
     }
   ]
 }
