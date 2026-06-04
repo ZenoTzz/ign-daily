@@ -7,46 +7,36 @@
   "changed_dates": [
     "2026-06-05"
   ],
-  "new_target_dates": [],
-  "new_count": 0,
-  "filtered_count": 1,
+  "new_target_dates": [
+    "2026-06-05"
+  ],
+  "new_count": 1,
+  "filtered_count": 0,
   "cleanup_count": 0,
   "changed_count": 1,
-  "articles": [],
-  "filtered_articles": [
+  "articles": [
     {
-      "title": "This $1,800 Power Lift Recliner and Massage Chair Is Just $385 Shipped at Wayfair After an 80% Off Discount",
-      "url": "https://www.ign.com/articles/wayfair-memorial-day-sale-power-lift-recliner-and-massage-chair-deal",
-      "pubDate_cst": "2026-06-04 10:30",
-      "description": "I'm thinking of getting one for dad for Father's Day.",
-      "categories": "",
-      "reason": "text:\\bdiscount\\b",
-      "rss_url": "https://feeds.feedburner.com/ign/all",
-      "filtered_at_cn": "2026-06-04 11:36:18",
-      "status": "filtered"
+      "title": "LEGO Batman: Legacy of the Dark Knight Gets Nintendo Switch 2 Release Date",
+      "url": "https://www.ign.com/articles/lego-batman-legacy-of-the-dark-knight-gets-nintendo-switch-2-release-date",
+      "pubDate_cst": "2026-06-04 12:43"
     }
   ],
+  "filtered_articles": [],
   "runs": [
     {
       "target_date": "2026-06-05",
-      "new_count": 0,
-      "filtered_count": 1,
+      "new_count": 1,
+      "filtered_count": 0,
       "changed_count": 1,
-      "next_id": 3,
-      "articles": [],
-      "filtered_articles": [
+      "next_id": 4,
+      "articles": [
         {
-          "title": "This $1,800 Power Lift Recliner and Massage Chair Is Just $385 Shipped at Wayfair After an 80% Off Discount",
-          "url": "https://www.ign.com/articles/wayfair-memorial-day-sale-power-lift-recliner-and-massage-chair-deal",
-          "pubDate_cst": "2026-06-04 10:30",
-          "description": "I'm thinking of getting one for dad for Father's Day.",
-          "categories": "",
-          "reason": "text:\\bdiscount\\b",
-          "rss_url": "https://feeds.feedburner.com/ign/all",
-          "filtered_at_cn": "2026-06-04 11:36:18",
-          "status": "filtered"
+          "title": "LEGO Batman: Legacy of the Dark Knight Gets Nintendo Switch 2 Release Date",
+          "url": "https://www.ign.com/articles/lego-batman-legacy-of-the-dark-knight-gets-nintendo-switch-2-release-date",
+          "pubDate_cst": "2026-06-04 12:43"
         }
-      ]
+      ],
+      "filtered_articles": []
     },
     {
       "target_date": "2026-06-04",

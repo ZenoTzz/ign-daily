@@ -840,6 +840,27 @@
       "total_tokens": 7854,
       "prompt_cache_hit_tokens": 6528,
       "prompt_cache_miss_tokens": 1109
+    },
+    {
+      "time_cn": "2026-06-04 15:25:04",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 3,
+      "article_title": "LEGO Batman: Legacy of the Dark Knight Gets Nintendo Switch 2 Release Date",
+      "article_url": "https://www.ign.com/articles/lego-batman-legacy-of-the-dark-knight-gets-nintendo-switch-2-release-date",
+      "article_date": "2026-06-05",
+      "detail": "",
+      "estimated_cost_usd": 0.00021666,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7597,
+      "completion_tokens": 174,
+      "total_tokens": 7771,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 1069
     }
   ]
 }
