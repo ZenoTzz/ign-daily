@@ -365,8 +365,8 @@
       "url": "https://www.ign.com/articles/all-upcoming-nintendo-switch-2-games",
       "publish_time_cn": "2026-06-04 00:02",
       "pub_date": "2026-06-04 00:02",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/01/23/switch2games-1769208267817.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/01/23/switch2games-1769208267817.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/01/23/switch2games-1769208267817.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/05/07/starfox-switch-2-1778154809184.png",
@@ -401,7 +401,11 @@
           "cn": "另一个伊甸：开端",
           "reason": "游戏名，与已有手游《另一个伊甸》可能混淆，需确认"
         }
-      ]
+      ],
+      "translation_path": "translations/26.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-flash"
     },
     {
       "id": 27,
