@@ -5,69 +5,56 @@
     "2026-06-04"
   ],
   "changed_dates": [
-    "2026-06-05",
-    "2026-06-04"
+    "2026-06-05"
   ],
-  "new_target_dates": [
-    "2026-06-05",
-    "2026-06-04"
-  ],
-  "new_count": 3,
-  "filtered_count": 0,
+  "new_target_dates": [],
+  "new_count": 0,
+  "filtered_count": 1,
   "cleanup_count": 0,
-  "changed_count": 3,
-  "articles": [
+  "changed_count": 1,
+  "articles": [],
+  "filtered_articles": [
     {
-      "title": "IO Interactive Won't Self-Publish Future James Bond Games; Amazon Will Have More Control",
-      "url": "https://www.ign.com/articles/io-interactive-wont-self-publish-future-james-bond-games-amazon-will-have-more-control",
-      "pubDate_cst": "2026-06-04 09:54"
-    },
-    {
-      "title": "You Can Now Fight Take-Two CEO Strauss Zelnick in WWE 2K26",
-      "url": "https://www.ign.com/articles/you-can-now-fight-take-two-ceo-strauss-zelnick-in-wwe-2k26",
-      "pubDate_cst": "2026-06-04 09:44"
-    },
-    {
-      "title": "Control Resonant Has a 2-Day Early Access Period via the Digital Deluxe Edition — but Only on PS5",
-      "url": "https://www.ign.com/articles/control-resonant-has-a-2-day-early-access-period-via-the-digital-deluxe-edition-but-only-on-ps5",
-      "pubDate_cst": "2026-06-04 04:57"
+      "title": "This $1,800 Power Lift Recliner and Massage Chair Is Just $385 Shipped at Wayfair After an 80% Off Discount",
+      "url": "https://www.ign.com/articles/wayfair-memorial-day-sale-power-lift-recliner-and-massage-chair-deal",
+      "pubDate_cst": "2026-06-04 10:30",
+      "description": "I'm thinking of getting one for dad for Father's Day.",
+      "categories": "",
+      "reason": "text:\\bdiscount\\b",
+      "rss_url": "https://feeds.feedburner.com/ign/all",
+      "filtered_at_cn": "2026-06-04 11:36:18",
+      "status": "filtered"
     }
   ],
-  "filtered_articles": [],
   "runs": [
     {
       "target_date": "2026-06-05",
-      "new_count": 2,
-      "filtered_count": 0,
-      "changed_count": 2,
+      "new_count": 0,
+      "filtered_count": 1,
+      "changed_count": 1,
       "next_id": 3,
-      "articles": [
+      "articles": [],
+      "filtered_articles": [
         {
-          "title": "IO Interactive Won't Self-Publish Future James Bond Games; Amazon Will Have More Control",
-          "url": "https://www.ign.com/articles/io-interactive-wont-self-publish-future-james-bond-games-amazon-will-have-more-control",
-          "pubDate_cst": "2026-06-04 09:54"
-        },
-        {
-          "title": "You Can Now Fight Take-Two CEO Strauss Zelnick in WWE 2K26",
-          "url": "https://www.ign.com/articles/you-can-now-fight-take-two-ceo-strauss-zelnick-in-wwe-2k26",
-          "pubDate_cst": "2026-06-04 09:44"
+          "title": "This $1,800 Power Lift Recliner and Massage Chair Is Just $385 Shipped at Wayfair After an 80% Off Discount",
+          "url": "https://www.ign.com/articles/wayfair-memorial-day-sale-power-lift-recliner-and-massage-chair-deal",
+          "pubDate_cst": "2026-06-04 10:30",
+          "description": "I'm thinking of getting one for dad for Father's Day.",
+          "categories": "",
+          "reason": "text:\\bdiscount\\b",
+          "rss_url": "https://feeds.feedburner.com/ign/all",
+          "filtered_at_cn": "2026-06-04 11:36:18",
+          "status": "filtered"
         }
-      ],
-      "filtered_articles": []
+      ]
     },
     {
       "target_date": "2026-06-04",
-      "new_count": 1,
+      "new_count": 0,
       "filtered_count": 0,
-      "changed_count": 1,
+      "changed_count": 0,
       "next_id": 41,
-      "articles": [
-        {
-          "title": "Control Resonant Has a 2-Day Early Access Period via the Digital Deluxe Edition — but Only on PS5",
-          "url": "https://www.ign.com/articles/control-resonant-has-a-2-day-early-access-period-via-the-digital-deluxe-edition-but-only-on-ps5",
-          "pubDate_cst": "2026-06-04 04:57"
-        }
-      ],
+      "articles": [],
       "filtered_articles": []
     }
   ]
