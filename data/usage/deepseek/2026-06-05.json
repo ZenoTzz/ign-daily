@@ -504,6 +504,132 @@
       "total_tokens": 7616,
       "prompt_cache_hit_tokens": 6528,
       "prompt_cache_miss_tokens": 859
+    },
+    {
+      "time_cn": "2026-06-05 07:57:49",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 31,
+      "article_title": "The Witness Review",
+      "article_url": "https://www.ign.com/articles/the-witness-review-netflix-miniseries",
+      "article_date": "2026-06-05",
+      "detail": "",
+      "estimated_cost_usd": 0.00024284,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7884,
+      "completion_tokens": 124,
+      "total_tokens": 8008,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 1356
+    },
+    {
+      "time_cn": "2026-06-05 07:57:57",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 32,
+      "article_title": "Upcoming New Video Game Movies and TV Shows: 2026 Release Dates and Beyond",
+      "article_url": "https://www.ign.com/articles/upcoming-new-video-game-movies-2026-tv-shows-release-dates",
+      "article_date": "2026-06-05",
+      "detail": "",
+      "estimated_cost_usd": 0.00074754,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9337,
+      "completion_tokens": 1200,
+      "total_tokens": 10537,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 2809
+    },
+    {
+      "time_cn": "2026-06-05 07:58:00",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 33,
+      "article_title": "Grab Octopath Traveler 2, Citizen Sleeper 2, and Six More Games in June’s Humble Choice",
+      "article_url": "https://www.ign.com/articles/humble-choice-june-2026",
+      "article_date": "2026-06-05",
+      "detail": "",
+      "estimated_cost_usd": 0.0002049,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7323,
+      "completion_tokens": 269,
+      "total_tokens": 7592,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 795
+    },
+    {
+      "time_cn": "2026-06-05 07:58:03",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 34,
+      "article_title": "The Odyssey Rating and Custom IMAX Camera Popcorn Bucket Revealed",
+      "article_url": "https://www.ign.com/articles/the-odyssey-rating-imax-popcorn-bucket",
+      "article_date": "2026-06-05",
+      "detail": "",
+      "estimated_cost_usd": 0.00017438,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7265,
+      "completion_tokens": 189,
+      "total_tokens": 7454,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 737
+    },
+    {
+      "time_cn": "2026-06-05 07:58:06",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 35,
+      "article_title": "The Remarkable Paper Pure Is The Best Way to Take Digital Notes",
+      "article_url": "https://www.ign.com/articles/remarkable-paper-pure-note-taking",
+      "article_date": "2026-06-05",
+      "detail": "",
+      "estimated_cost_usd": 0.00019216,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7538,
+      "completion_tokens": 116,
+      "total_tokens": 7654,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 1010
+    },
+    {
+      "time_cn": "2026-06-05 07:58:10",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 36,
+      "article_title": "Stargate SG-1 Star Michael Shanks Rallies Fans After Amazon Axes Revival, Says 'Now Is the Time to Say Something'",
+      "article_url": "https://www.ign.com/articles/stargate-sg-1-star-michael-shanks-rallies-fans-after-amazon-axes-revival-says-now-is-the-time-to-say-something",
+      "article_date": "2026-06-05",
+      "detail": "",
+      "estimated_cost_usd": 0.00022618,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7551,
+      "completion_tokens": 231,
+      "total_tokens": 7782,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 1023
     }
   ]
 }
