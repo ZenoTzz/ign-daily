@@ -2,6 +2,63 @@
   "date": "2026-06-05",
   "articles": [
     {
+      "id": 38,
+      "category": "影视资讯",
+      "emoji": "🎬",
+      "en_title": "Does Masters of the Universe Have a Post-Credits Scene?",
+      "cn_title": "《宇宙巨人》片尾彩蛋揭秘：四个场景暗示续集",
+      "summary": "《宇宙巨人》片尾有四个彩蛋场景，暗示续集可能探索的方向。影片时长2小时13分钟，IGN评分8/10，称赞其幽默感和打斗场面。亚马逊米高梅、美泰和Escape Artists希望该片能开启大银幕系列。",
+      "url": "https://www.ign.com/articles/masters-of-the-universe-ending-post-credits-explained",
+      "publish_time_cn": "2026-06-05 07:00",
+      "pub_date": "2026-06-05 07:00",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/04/masters-of-the-universe-post-credits-1780615039975.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/04/masters-of-the-universe-post-credits-1780615039975.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/04/masters-of-the-universe-post-credits-1780615039975.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/04/masters-of-the-universe-post-credits-1780615039975.jpg?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/04/masters-of-the-universe-post-credits-1780615039975.jpg?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/04/masters-of-the-universe-post-credits-1780615039975.jpg",
+        "https://assets-prd.ignimgs.com/2026/06/01/mou-blogroll-1780343231908.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-05T09:02:00+08:00"
+    },
+    {
+      "id": 39,
+      "category": "科技新闻",
+      "emoji": "🖥️",
+      "en_title": "Valve Reaffirms Steam Machine Summer Launch",
+      "cn_title": "Valve重申Steam Machine今夏发售",
+      "summary": "Valve在博客中确认，Steam Machine和Steam Frame将于今年夏季推出，并详细介绍了针对这两款硬件的验证计划，确保游戏UI元素清晰且支持Steam Input。此外，Valve还更新了合作伙伴仪表板，帮助开发者更轻松地获得验证状态。不过，由于硬件市场不佳，产品价格可能高于预期，此前Steam Deck已大幅涨价。",
+      "url": "https://www.ign.com/articles/valve-reaffirms-steam-machine-summer-launch",
+      "publish_time_cn": "2026-06-05 06:41",
+      "pub_date": "2026-06-05 06:41",
+      "cover_image": "https://assets-prd.ignimgs.com/2025/11/11/steammachine-valveecosystem-blogroll-1762901959637.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2025/11/11/steammachine-valveecosystem-blogroll-1762901959637.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2025/11/11/steammachine-valveecosystem-blogroll-1762901959637.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2025/11/11/steammachine-valveecosystem-blogroll-1762901959637.jpg?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2025/11/11/steammachine-valveecosystem-blogroll-1762901959637.jpg?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2025/11/11/steammachine-valveecosystem-blogroll-1762901959637.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-05T09:02:01+08:00",
+      "pending_dict": [
+        {
+          "en": "Steam Machine",
+          "cn": "Steam Machine",
+          "reason": "官方中文名未确认，暂保留英文"
+        },
+        {
+          "en": "Steam Frame",
+          "cn": "Steam Frame",
+          "reason": "官方中文名未确认，暂保留英文"
+        }
+      ]
+    },
+    {
       "id": 31,
       "category": "影视资讯",
       "emoji": "🎬",
@@ -1203,5 +1260,5 @@
       "translator_model": "deepseek-v4-flash"
     }
   ],
-  "total": 37
+  "total": 39
 }

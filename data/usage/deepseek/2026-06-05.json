@@ -861,6 +861,69 @@
       "total_tokens": 9860,
       "prompt_cache_hit_tokens": 6528,
       "prompt_cache_miss_tokens": 1616
+    },
+    {
+      "time_cn": "2026-06-05 09:02:06",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 1,
+      "article_title": "Netflix's Devil May Cry Will End With Season 3",
+      "article_url": "https://www.ign.com/articles/netflixs-devil-may-cry-will-end-with-season-3",
+      "article_date": "2026-06-06",
+      "detail": "",
+      "estimated_cost_usd": 0.00022128,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7472,
+      "completion_tokens": 253,
+      "total_tokens": 7725,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 944
+    },
+    {
+      "time_cn": "2026-06-05 09:02:09",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 38,
+      "article_title": "Does Masters of the Universe Have a Post-Credits Scene?",
+      "article_url": "https://www.ign.com/articles/masters-of-the-universe-ending-post-credits-explained",
+      "article_date": "2026-06-05",
+      "detail": "",
+      "estimated_cost_usd": 0.00016164,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7324,
+      "completion_tokens": 114,
+      "total_tokens": 7438,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 796
+    },
+    {
+      "time_cn": "2026-06-05 09:02:13",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 39,
+      "article_title": "Valve Reaffirms Steam Machine Summer Launch",
+      "article_url": "https://www.ign.com/articles/valve-reaffirms-steam-machine-summer-launch",
+      "article_date": "2026-06-05",
+      "detail": "",
+      "estimated_cost_usd": 0.00017592,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7240,
+      "completion_tokens": 207,
+      "total_tokens": 7447,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 712
     }
   ]
 }
