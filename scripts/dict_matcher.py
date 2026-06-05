@@ -31,6 +31,37 @@ def flatten_dict_terms() -> dict[str, str]:
     return terms
 
 
+def spacing_sensitive_cn_terms() -> list[str]:
+    terms = []
+    for cn in flatten_dict_terms().values():
+        text = str(cn or "").strip()
+        if re.search(r"[A-Za-z0-9]\s+[\u4e00-\u9fff]", text):
+            terms.append(text)
+    return sorted(set(terms), key=len, reverse=True)
+
+
+def restore_dictionary_spacing(text: str) -> str:
+    """Restore significant spaces inside dictionary translations."""
+    if not text:
+        return text
+    result = str(text)
+    for term in spacing_sensitive_cn_terms():
+        compact = re.sub(r"\s+", "", term)
+        if compact and compact != term:
+            result = result.replace(compact, term)
+    return result
+
+
+def restore_dictionary_spacing_in_data(data: dict[str, Any]) -> dict[str, Any]:
+    for key in ("cn_title", "subtitle", "opus_summary", "summary"):
+        if isinstance(data.get(key), str):
+            data[key] = restore_dictionary_spacing(data[key])
+    for para in data.get("paragraphs", []):
+        if isinstance(para, dict) and isinstance(para.get("cn"), str):
+            para["cn"] = restore_dictionary_spacing(para["cn"])
+    return data
+
+
 def iter_dict_terms() -> list[tuple[str, str, str]]:
     path = dict_path()
     if not path.exists():

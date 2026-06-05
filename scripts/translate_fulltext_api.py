@@ -28,6 +28,7 @@ from common_paths import DATA_DIR, REPO_ROOT, configure_utf8_stdio, dict_path, e
 from api_translation_audit import check_translation
 from audit_doctor import diagnose as diagnose_audit_failure
 from currency_utils import normalize_translation_currency
+from dict_matcher import restore_dictionary_spacing_in_data
 from dict_matcher import matched_terms_for_article
 from normalize_currency_files import normalize_date as normalize_currency_date
 from prompt_blocks import chunk_user_payload, fulltext_user_payload
@@ -431,7 +432,7 @@ def translate_paragraph_chunks(
 
 def normalize_translation(article: dict[str, Any], result: dict[str, Any], paragraphs_en: list[str]) -> dict[str, Any]:
     normalized = normalize_paragraphs(result, paragraphs_en)
-    return normalize_translation_currency({
+    return restore_dictionary_spacing_in_data(normalize_translation_currency({
         "id": article["id"],
         "url": article["url"],
         "en_title": article["en_title"],
@@ -447,7 +448,7 @@ def normalize_translation(article: dict[str, Any], result: dict[str, Any], parag
         "translated_terms": result.get("translated_terms") if isinstance(result.get("translated_terms"), dict) else {},
         "cover": str(result.get("cover") or article.get("cover_image") or "").strip(),
         "images": result.get("images") if isinstance(result.get("images"), list) else [],
-    })
+    }))
 
 
 def repair_translation_once(

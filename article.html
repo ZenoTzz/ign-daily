@@ -20,7 +20,7 @@
   <script defer src="assets/alpine.min.js"></script>
   <link rel="stylesheet" href="assets/style.css?v=20260602m">
   <link rel="stylesheet" href="assets/article-dark.css?v=20260602m">
-  <script src="assets/app.js?v=20260605authfix"></script>
+  <script src="assets/app.js?v=20260605spacing"></script>
   <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
   <script>
     tailwind.config = {
@@ -1433,6 +1433,14 @@
           // 单引号 ' → ‘’ 不动（英文缩写会误伤，it's etc.）
 
           // 3. 多余空格 / 换行处理
+          const protectedSpacingTerms = ['007 初露锋芒'];
+          const protectedSpacing = [];
+          for (const term of protectedSpacingTerms) {
+            if (!s.includes(term)) continue;
+            const key = `__IGN_SPACE_TERM_${protectedSpacing.length}__`;
+            protectedSpacing.push([key, term]);
+            s = s.split(term).join(key);
+          }
           s = s.replace(/[ \t]+\n/g, '\n');                  // 行尾空格
           s = s.replace(/\n{3,}/g, '\n\n');                  // 连续空行
           // 中文与中文之间不该有空格（仅同行内，不跨换行）
@@ -1445,6 +1453,9 @@
           s = s.replace(/\s+([\u3000-\u303f\uff00-\uffef\u300c\u300d\u300e\u300f])/g, '$1');
           s = s.replace(/([\u3000-\u303f\uff00-\uffef\u300c\u300d\u300e\u300f])\s+/g, '$1');
 
+          for (const [key, term] of protectedSpacing) {
+            s = s.split(key).join(term);
+          }
           return s.trim();
         },
 

@@ -1011,6 +1011,14 @@ function appData() {
         return c;
       });
       // 3. 多余空格
+      const protectedSpacingTerms = ['007 初露锋芒'];
+      const protectedSpacing = [];
+      for (const term of protectedSpacingTerms) {
+        if (!s.includes(term)) continue;
+        const key = `__IGN_SPACE_TERM_${protectedSpacing.length}__`;
+        protectedSpacing.push([key, term]);
+        s = s.split(term).join(key);
+      }
       s = s.replace(/[ \t]+\n/g, '\n');
       s = s.replace(/\n{3,}/g, '\n\n');
       let prev;
@@ -1020,6 +1028,9 @@ function appData() {
       } while (s !== prev);
       s = s.replace(/\s+([\u3000-\u303f\uff00-\uffef\u300c\u300d\u300e\u300f])/g, '$1');
       s = s.replace(/([\u3000-\u303f\uff00-\uffef\u300c\u300d\u300e\u300f])\s+/g, '$1');
+      for (const [key, term] of protectedSpacing) {
+        s = s.split(key).join(term);
+      }
       return s.trim();
     },
 

@@ -42,6 +42,7 @@ CST = timezone(timedelta(hours=8))
 IGN_DAILY = REPO_ROOT
 DICT_PATH = dict_path()
 EXCHANGE_PATH = exchange_rates_path()
+_SPACING_PROTECTED_TERMS = None
 
 
 def load_dict():
@@ -56,6 +57,37 @@ def load_dict():
             else:
                 terms[k] = v
     return terms
+
+
+def spacing_protected_terms():
+    """Dictionary translations whose internal spaces are part of the official name."""
+    global _SPACING_PROTECTED_TERMS
+    if _SPACING_PROTECTED_TERMS is not None:
+        return _SPACING_PROTECTED_TERMS
+    try:
+        values = load_dict().values()
+    except Exception:
+        values = []
+    terms = []
+    for cn in values:
+        text = str(cn or "").strip()
+        if re.search(r"[A-Za-z0-9]\s+[\u4e00-\u9fff]", text):
+            terms.append(text)
+    _SPACING_PROTECTED_TERMS = sorted(set(terms), key=len, reverse=True)
+    return _SPACING_PROTECTED_TERMS
+
+
+def clean_spacing_preserving_terms(text):
+    protected = {}
+    for i, term in enumerate(spacing_protected_terms()):
+        if term in text:
+            key = f"__IGN_SPACE_TERM_{i}__"
+            protected[key] = term
+            text = text.replace(term, key)
+    text = clean_spacing(text)
+    for key, term in protected.items():
+        text = text.replace(key, term)
+    return text
 
 
 def fetch_og_image_and_images(url):
@@ -357,17 +389,17 @@ def post_mode(date_str, article_ref):
     space_fixes = 0
     for p in data.get('paragraphs', []):
         if isinstance(p, dict) and 'cn' in p:
-            cleaned = clean_spacing(p['cn'])
+            cleaned = clean_spacing_preserving_terms(p['cn'])
             if cleaned != p['cn']:
                 p['cn'] = cleaned
                 space_fixes += 1
     if data.get('cn_title'):
-        cleaned = clean_spacing(data['cn_title'])
+        cleaned = clean_spacing_preserving_terms(data['cn_title'])
         if cleaned != data['cn_title']:
             data['cn_title'] = cleaned
             space_fixes += 1
     if data.get('opus_summary'):
-        cleaned = clean_spacing(data['opus_summary'])
+        cleaned = clean_spacing_preserving_terms(data['opus_summary'])
         if cleaned != data['opus_summary']:
             data['opus_summary'] = cleaned
             space_fixes += 1

@@ -29,7 +29,7 @@ from typing import Any
 
 from common_paths import DATA_DIR, REPO_ROOT, configure_utf8_stdio, dict_path, env_paths
 from currency_utils import normalize_currency_text
-from dict_matcher import flatten_dict_terms as shared_flatten_dict_terms, matched_terms_for_article, term_in_text
+from dict_matcher import flatten_dict_terms as shared_flatten_dict_terms, matched_terms_for_article, restore_dictionary_spacing, term_in_text
 from normalize_currency_files import normalize_date as normalize_currency_date
 from prompt_blocks import title_user_payload
 from usage_logger import record_deepseek_usage_safe
@@ -311,8 +311,8 @@ def normalize_result(result: dict[str, Any]) -> dict[str, Any]:
     if not isinstance(pending, list):
         pending = []
     return {
-        "cn_title": normalize_currency_text(str(result.get("cn_title") or "").strip()),
-        "summary": normalize_currency_text(str(result.get("summary") or "").strip()),
+        "cn_title": restore_dictionary_spacing(normalize_currency_text(str(result.get("cn_title") or "").strip())),
+        "summary": restore_dictionary_spacing(normalize_currency_text(str(result.get("summary") or "").strip())),
         "category": category,
         "emoji": emoji,
         "pending_dict": pending,
