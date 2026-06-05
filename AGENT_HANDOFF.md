@@ -210,7 +210,7 @@ workspace/
   "translated_at": "2026-05-29T09:30:00+08:00",
   "cover": "https://assets-prd.ignimgs.com/...(去掉压缩参数)",
   "images": [{"url": "url1", "caption": ""}],
-  "opus_summary": "50-80字的精炼总结",
+  "opus_summary": "70-80字左右的精炼总结",
   "paragraphs": [
     { "type": "text", "en": "English paragraph", "cn": "中文翻译" },
     { "type": "heading", "en": "Section Title", "cn": "小标题" },

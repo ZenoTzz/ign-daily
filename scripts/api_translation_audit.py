@@ -124,6 +124,10 @@ def translation_text(data: dict[str, Any]) -> str:
     return "\n".join(parts)
 
 
+def compact_char_len(text: str) -> int:
+    return len(re.sub(r"\s+", "", text or ""))
+
+
 def source_text_from_paragraphs(paragraphs_en: list[str], article: dict[str, Any] | None = None) -> str:
     title = ""
     if article:
@@ -151,6 +155,17 @@ def check_translation(
             "type": "paragraph_shape",
             "detail": f"paragraph count mismatch: expected {len(paragraphs_en)}, got {len(para_items)}",
         })
+
+    opus_summary = str(data.get("opus_summary") or "").strip()
+    if not opus_summary:
+        issues.append({"type": "summary_length", "detail": "opus_summary is missing"})
+    else:
+        summary_len = compact_char_len(opus_summary)
+        if summary_len < 70 or summary_len > 80:
+            issues.append({
+                "type": "summary_length",
+                "detail": f"opus_summary must be 70-80 non-space characters, got {summary_len}",
+            })
 
     for en, cn in terms.items():
         if not is_effective_chinese_term(cn):

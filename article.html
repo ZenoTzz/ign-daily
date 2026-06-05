@@ -262,7 +262,7 @@
                     <div class="text-xs text-amber-700 font-medium">极简总结（AI 生成）</div>
                     <button @click="copyOpusSummary()"
                             class="text-xs px-2 py-0.5 rounded bg-amber-100 text-amber-800 hover:bg-amber-200 border border-amber-300"
-                            title="复制 70 字总结">
+                            title="复制 70-80 字总结">
                       <span x-text="summaryBtnText"></span>
                     </button>
                   </div>
@@ -433,7 +433,7 @@
                   <div class="text-xs text-amber-700 font-medium">极简总结（AI 生成）</div>
                   <button @click="copyOpusSummary()"
                           class="text-xs px-2 py-0.5 rounded bg-amber-100 text-amber-800 hover:bg-amber-200 border border-amber-300"
-                          title="复制 70 字总结">
+                          title="复制 70-80 字总结">
                     <span x-text="summaryBtnText"></span>
                   </button>
                 </div>
@@ -1530,7 +1530,7 @@
           }
           const summary = (this.article.opus_summary || '').trim();
           if (!summary) {
-            this.flash('⚠️ 该文章暂无 70 字总结', 2500);
+            this.flash('⚠️ 该文章暂无 70-80 字总结', 2500);
             return;
           }
           const text = this.normalizePunctuation(summary);

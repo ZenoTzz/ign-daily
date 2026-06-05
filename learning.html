@@ -330,6 +330,17 @@
         async loadWeeklyReport() {
           this.weeklyLoading = true;
           try {
+            const latestRes = await fetch('data/learning/weekly/latest.json?t=' + Date.now(), { cache: 'no-store' });
+            if (latestRes.ok) {
+              this.weeklyReport = await latestRes.json();
+              const latestWeekId = this.weeklyReport?.week_id;
+              if (latestWeekId) {
+                const feedbackRes = await fetch(`data/learning/weekly/${latestWeekId}_feedback.json?t=${Date.now()}`, { cache: 'no-store' });
+                if (feedbackRes.ok) this.weeklyFeedback = await feedbackRes.json();
+              }
+              this.weeklyLoading = false;
+              return;
+            }
             const idxRes = await fetch('data/learning/weekly/_index.json?t=' + Date.now(), { cache: 'no-store' });
             if (!idxRes.ok) {
               this.weeklyLoading = false;
@@ -341,7 +352,7 @@
               this.weeklyLoading = false;
               return;
             }
-            const weekId = weeks[weeks.length - 1];
+            const weekId = idx.latest || weeks[weeks.length - 1];
             const reportRes = await fetch(`data/learning/weekly/${weekId}.json?t=${Date.now()}`, { cache: 'no-store' });
             if (reportRes.ok) this.weeklyReport = await reportRes.json();
             const feedbackRes = await fetch(`data/learning/weekly/${weekId}_feedback.json?t=${Date.now()}`, { cache: 'no-store' });

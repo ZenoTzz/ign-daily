@@ -1,0 +1,63 @@
+name: Weekly Learning Report
+
+on:
+  schedule:
+    - cron: "15 0 * * 1" # 08:15 Asia/Hong_Kong every Monday
+  workflow_dispatch:
+    inputs:
+      report_date:
+        description: "Any date in the week to publish, YYYY-MM-DD. Empty = previous full week."
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ign-daily-write-main
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Configure Git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Update checkout to latest main
+        run: git pull --ff-only origin main
+
+      - name: Publish previous weekly learning report
+        run: |
+          set -euo pipefail
+          if [ -n "${{ github.event.inputs.report_date || '' }}" ]; then
+            python3 scripts/publish_weekly_learning_report.py --date "${{ github.event.inputs.report_date }}"
+          else
+            python3 scripts/publish_weekly_learning_report.py
+          fi
+
+      - name: Commit and push weekly report
+        run: |
+          set -euo pipefail
+          git add data/learning/weekly
+          if git diff --cached --quiet; then
+            echo "No weekly learning report changes to commit."
+            exit 0
+          fi
+          git commit -m "chore: publish weekly learning report"
+          git pull --rebase -X theirs origin main
+          git push origin HEAD:main

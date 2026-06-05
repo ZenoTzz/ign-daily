@@ -263,6 +263,7 @@ def hard_checklist(paragraphs: list[str], terms: dict[str, str]) -> dict[str, An
         "must_use_dictionary_terms": terms,
         "foreign_currency_mentions_in_source": currency_hits[:30],
         "currency_rule": "Every foreign-currency amount must be rendered as foreign amount plus CNY conversion, e.g. 2.5亿美元(约合人民币18亿元).",
+        "opus_summary_length_rule": "opus_summary must be a concise Chinese summary of 70-80 non-space characters.",
         "paragraph_count": len(paragraphs),
         "do_not_translate_or_include_web_noise": [
             "navigation menus",
@@ -320,7 +321,7 @@ def build_repair_messages(
             "en_title": article.get("en_title"),
             "cn_title": "中文标题",
             "subtitle": "2-15字中文短副标题",
-            "opus_summary": "150-260字中文总述",
+            "opus_summary": "70-80个中文字符左右的极简总结",
             "publish_time_cn": article.get("publish_time_cn") or article.get("pub_date") or "",
             "paragraphs": [{"en": "原文段落", "cn": "修复后的中文译文"}],
             "pending_dict": [],
