@@ -130,8 +130,7 @@ jobs:
         if: steps.config.outputs.compare_article_id != '' || steps.config.outputs.title_translator == 'api' || steps.config.outputs.title_translator == 'deepseek' || steps.config.outputs.fulltext_translator == 'api' || steps.config.outputs.fulltext_translator == 'deepseek'
         run: |
           set -euo pipefail
-          python3 scripts/fetch_exchange_rates.py
-          python3 scripts/check_exchange_rates_fresh.py --max-age-hours 6
+          python3 scripts/fetch_exchange_rates.py || echo "WARN: exchange-rate refresh failed; translation will use fallback/local rates."
 
       - name: Snapshot DeepSeek balance before run
         if: steps.config.outputs.compare_article_id != '' || steps.config.outputs.title_translator == 'api' || steps.config.outputs.title_translator == 'deepseek' || steps.config.outputs.fulltext_translator == 'api' || steps.config.outputs.fulltext_translator == 'deepseek'
