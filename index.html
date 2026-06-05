@@ -18,7 +18,7 @@
   <script defer src="assets/alpine.min.js"></script>
   <link rel="stylesheet" href="assets/style.css?v=20260602m">
   <script src="assets/exceljs.min.js"></script>
-  <script src="assets/app.js?v=20260605oauth"></script>
+  <script src="assets/app.js?v=20260605authfix"></script>
 </head>
 <body>
   <!-- SVG Icon Definitions -->
@@ -566,12 +566,12 @@
         <div style="height:1px; background:var(--border); margin:1rem 0;"></div>
         <label>GitHub OAuth Client ID</label>
         <p style="font-size:0.7rem; color:var(--text-muted); margin-bottom:0.5rem;">
-          Create a GitHub OAuth App, enable Device Flow, then paste its Client ID here. This avoids manually copying a PAT into every browser.
+          GitHub OAuth cannot complete directly from this static page. It needs a small proxy/Worker to exchange the token safely.
         </p>
         <input type="text" x-model="oauthClientId" placeholder="Ov23li...">
         <div style="display:flex; gap:0.5rem; align-items:center; margin-top:0.75rem; flex-wrap:wrap;">
           <button @click="loginWithGithubOAuth()" class="btn btn-primary" :disabled="oauthLoggingIn">
-            <span x-text="oauthLoggingIn ? 'Waiting for GitHub...' : 'GitHub OAuth Login'"></span>
+            <span>OAuth needs proxy</span>
           </button>
           <span x-show="oauthStatus" style="font-size:0.7rem; color:var(--text-muted);" x-text="oauthStatus"></span>
         </div>
