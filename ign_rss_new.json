@@ -5,69 +5,134 @@
     "2026-06-05"
   ],
   "changed_dates": [
-    "2026-06-06",
-    "2026-06-05"
+    "2026-06-06"
   ],
   "new_target_dates": [
-    "2026-06-06",
-    "2026-06-05"
+    "2026-06-06"
   ],
   "new_count": 3,
-  "filtered_count": 0,
+  "filtered_count": 3,
   "cleanup_count": 0,
-  "changed_count": 3,
+  "changed_count": 6,
   "articles": [
     {
-      "title": "Netflix's Devil May Cry Will End With Season 3",
-      "url": "https://www.ign.com/articles/netflixs-devil-may-cry-will-end-with-season-3",
-      "pubDate_cst": "2026-06-05 08:07"
+      "title": "Xbox CEO Acknowledges Exclusives Are Needed to Build a Platform; Decisions Are Still Being Made",
+      "url": "https://www.ign.com/articles/xbox-ceo-acknowledges-exclusives-are-needed-to-build-a-platform-decisions-are-still-being-made",
+      "pubDate_cst": "2026-06-05 09:07"
     },
     {
-      "title": "Does Masters of the Universe Have a Post-Credits Scene?",
-      "url": "https://www.ign.com/articles/masters-of-the-universe-ending-post-credits-explained",
-      "pubDate_cst": "2026-06-05 07:00"
+      "title": "Black Ops 7's New Classic Mode Seems to Fix a Lot of Issues Players Have With the Game",
+      "url": "https://www.ign.com/articles/black-ops-7s-new-classic-mode-seems-to-fix-a-lot-of-issues-players-have-with-the-game",
+      "pubDate_cst": "2026-06-05 08:49"
     },
     {
-      "title": "Valve Reaffirms Steam Machine Summer Launch",
-      "url": "https://www.ign.com/articles/valve-reaffirms-steam-machine-summer-launch",
-      "pubDate_cst": "2026-06-05 06:41"
+      "title": "No Rest for the Wicked Developer Blames Series S for Xbox Release Delay",
+      "url": "https://www.ign.com/articles/no-rest-for-the-wicked-developer-blames-series-s-for-xbox-release-delay",
+      "pubDate_cst": "2026-06-05 08:21"
     }
   ],
-  "filtered_articles": [],
+  "filtered_articles": [
+    {
+      "title": "The Apple Watch Series 11 Drops to $238 During the Early Amazon Resale Prime Day Sale",
+      "url": "https://www.ign.com/articles/apple-watch-series-11-deal-amazon-resale-prime-day-sale",
+      "pubDate_cst": "2026-06-05 09:35",
+      "description": "Used: Like New units are available in limited quantities",
+      "categories": "",
+      "reason": "text:\\bdrops? to \\$",
+      "rss_url": "https://feeds.feedburner.com/ign/all",
+      "filtered_at_cn": "2026-06-05 11:12:00",
+      "status": "filtered"
+    },
+    {
+      "title": "Walmart Has the Least Expensive GeForce RTX 5070 Ti Prebuilt Gaming PC",
+      "url": "https://www.ign.com/articles/walmart-has-the-least-expensive-geforce-rtx-5070-ti-prebuilt-gaming-pc",
+      "pubDate_cst": "2026-06-05 09:35",
+      "description": "The MSI Codez Z2 prebuilt with is priced under $1,750.",
+      "categories": "",
+      "reason": "text:\\bunder \\$\\d+",
+      "rss_url": "https://feeds.feedburner.com/ign/all",
+      "filtered_at_cn": "2026-06-05 11:12:00",
+      "status": "filtered"
+    },
+    {
+      "title": "Get the First Three Dungeon Crawler Carl Audiobooks for $1 With Audible's New Deal",
+      "url": "https://www.ign.com/articles/get-the-first-three-dungeon-crawler-carl-audiobooks-for-1-with-audibles-new-deal",
+      "pubDate_cst": "2026-06-05 08:15",
+      "description": "",
+      "categories": "",
+      "reason": "url:deal",
+      "rss_url": "https://feeds.feedburner.com/ign/all",
+      "filtered_at_cn": "2026-06-05 11:12:00",
+      "status": "filtered"
+    }
+  ],
   "runs": [
     {
       "target_date": "2026-06-06",
-      "new_count": 1,
-      "filtered_count": 0,
-      "changed_count": 1,
-      "next_id": 2,
+      "new_count": 3,
+      "filtered_count": 3,
+      "changed_count": 6,
+      "next_id": 5,
       "articles": [
         {
-          "title": "Netflix's Devil May Cry Will End With Season 3",
-          "url": "https://www.ign.com/articles/netflixs-devil-may-cry-will-end-with-season-3",
-          "pubDate_cst": "2026-06-05 08:07"
+          "title": "Xbox CEO Acknowledges Exclusives Are Needed to Build a Platform; Decisions Are Still Being Made",
+          "url": "https://www.ign.com/articles/xbox-ceo-acknowledges-exclusives-are-needed-to-build-a-platform-decisions-are-still-being-made",
+          "pubDate_cst": "2026-06-05 09:07"
+        },
+        {
+          "title": "Black Ops 7's New Classic Mode Seems to Fix a Lot of Issues Players Have With the Game",
+          "url": "https://www.ign.com/articles/black-ops-7s-new-classic-mode-seems-to-fix-a-lot-of-issues-players-have-with-the-game",
+          "pubDate_cst": "2026-06-05 08:49"
+        },
+        {
+          "title": "No Rest for the Wicked Developer Blames Series S for Xbox Release Delay",
+          "url": "https://www.ign.com/articles/no-rest-for-the-wicked-developer-blames-series-s-for-xbox-release-delay",
+          "pubDate_cst": "2026-06-05 08:21"
         }
       ],
-      "filtered_articles": []
+      "filtered_articles": [
+        {
+          "title": "The Apple Watch Series 11 Drops to $238 During the Early Amazon Resale Prime Day Sale",
+          "url": "https://www.ign.com/articles/apple-watch-series-11-deal-amazon-resale-prime-day-sale",
+          "pubDate_cst": "2026-06-05 09:35",
+          "description": "Used: Like New units are available in limited quantities",
+          "categories": "",
+          "reason": "text:\\bdrops? to \\$",
+          "rss_url": "https://feeds.feedburner.com/ign/all",
+          "filtered_at_cn": "2026-06-05 11:12:00",
+          "status": "filtered"
+        },
+        {
+          "title": "Walmart Has the Least Expensive GeForce RTX 5070 Ti Prebuilt Gaming PC",
+          "url": "https://www.ign.com/articles/walmart-has-the-least-expensive-geforce-rtx-5070-ti-prebuilt-gaming-pc",
+          "pubDate_cst": "2026-06-05 09:35",
+          "description": "The MSI Codez Z2 prebuilt with is priced under $1,750.",
+          "categories": "",
+          "reason": "text:\\bunder \\$\\d+",
+          "rss_url": "https://feeds.feedburner.com/ign/all",
+          "filtered_at_cn": "2026-06-05 11:12:00",
+          "status": "filtered"
+        },
+        {
+          "title": "Get the First Three Dungeon Crawler Carl Audiobooks for $1 With Audible's New Deal",
+          "url": "https://www.ign.com/articles/get-the-first-three-dungeon-crawler-carl-audiobooks-for-1-with-audibles-new-deal",
+          "pubDate_cst": "2026-06-05 08:15",
+          "description": "",
+          "categories": "",
+          "reason": "url:deal",
+          "rss_url": "https://feeds.feedburner.com/ign/all",
+          "filtered_at_cn": "2026-06-05 11:12:00",
+          "status": "filtered"
+        }
+      ]
     },
     {
       "target_date": "2026-06-05",
-      "new_count": 2,
+      "new_count": 0,
       "filtered_count": 0,
-      "changed_count": 2,
+      "changed_count": 0,
       "next_id": 40,
-      "articles": [
-        {
-          "title": "Does Masters of the Universe Have a Post-Credits Scene?",
-          "url": "https://www.ign.com/articles/masters-of-the-universe-ending-post-credits-explained",
-          "pubDate_cst": "2026-06-05 07:00"
-        },
-        {
-          "title": "Valve Reaffirms Steam Machine Summer Launch",
-          "url": "https://www.ign.com/articles/valve-reaffirms-steam-machine-summer-launch",
-          "pubDate_cst": "2026-06-05 06:41"
-        }
-      ],
+      "articles": [],
       "filtered_articles": []
     }
   ]

@@ -924,6 +924,69 @@
       "total_tokens": 7447,
       "prompt_cache_hit_tokens": 6528,
       "prompt_cache_miss_tokens": 712
+    },
+    {
+      "time_cn": "2026-06-05 11:12:08",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 2,
+      "article_title": "Xbox CEO Acknowledges Exclusives Are Needed to Build a Platform; Decisions Are Still Being Made",
+      "article_url": "https://www.ign.com/articles/xbox-ceo-acknowledges-exclusives-are-needed-to-build-a-platform-decisions-are-still-being-made",
+      "article_date": "2026-06-06",
+      "detail": "",
+      "estimated_cost_usd": 0.00019258,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7497,
+      "completion_tokens": 138,
+      "total_tokens": 7635,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 969
+    },
+    {
+      "time_cn": "2026-06-05 11:12:11",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 3,
+      "article_title": "Black Ops 7's New Classic Mode Seems to Fix a Lot of Issues Players Have With the Game",
+      "article_url": "https://www.ign.com/articles/black-ops-7s-new-classic-mode-seems-to-fix-a-lot-of-issues-players-have-with-the-game",
+      "article_date": "2026-06-06",
+      "detail": "",
+      "estimated_cost_usd": 0.00019958,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7591,
+      "completion_tokens": 116,
+      "total_tokens": 7707,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 1063
+    },
+    {
+      "time_cn": "2026-06-05 11:12:16",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 4,
+      "article_title": "No Rest for the Wicked Developer Blames Series S for Xbox Release Delay",
+      "article_url": "https://www.ign.com/articles/no-rest-for-the-wicked-developer-blames-series-s-for-xbox-release-delay",
+      "article_date": "2026-06-06",
+      "detail": "",
+      "estimated_cost_usd": 0.00024788,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7646,
+      "completion_tokens": 261,
+      "total_tokens": 7907,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 1118
     }
   ]
 }
