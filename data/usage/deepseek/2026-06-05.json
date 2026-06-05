@@ -819,6 +819,48 @@
       "total_tokens": 9095,
       "prompt_cache_hit_tokens": 6528,
       "prompt_cache_miss_tokens": 1332
+    },
+    {
+      "time_cn": "2026-06-05 08:32:37",
+      "task": "fulltext",
+      "model": "deepseek-v4-flash",
+      "article_id": 9,
+      "article_title": "《劳菲》《战神》PlayStation 承诺奎托斯还有更多故事可讲",
+      "article_url": "https://www.ign.com/articles/playstation-promises-many-more-stories-to-tell-with-kratos-in-future-after-god-of-war-laufey",
+      "article_date": "2026-06-05",
+      "detail": "",
+      "estimated_cost_usd": 0.00087256,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8400,
+      "completion_tokens": 2115,
+      "total_tokens": 10515,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 1872
+    },
+    {
+      "time_cn": "2026-06-05 08:32:50",
+      "task": "fulltext",
+      "model": "deepseek-v4-flash",
+      "article_id": 29,
+      "article_title": "CD Projekt新IP《哈达尔》招聘信息透露模糊线索",
+      "article_url": "https://www.ign.com/articles/cd-projekts-new-ip-project-hadar-gets-extremely-vague-tease-via-job-ad",
+      "article_date": "2026-06-05",
+      "detail": "",
+      "estimated_cost_usd": 0.000725,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8144,
+      "completion_tokens": 1716,
+      "total_tokens": 9860,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 1616
     }
   ]
 }
