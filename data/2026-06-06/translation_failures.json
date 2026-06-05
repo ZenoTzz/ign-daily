@@ -1,0 +1,25 @@
+{
+  "date": "2026-06-06",
+  "items": {
+    "4": {
+      "id": 4,
+      "url": "https://www.ign.com/articles/no-rest-for-the-wicked-developer-blames-series-s-for-xbox-release-delay",
+      "en_title": "No Rest for the Wicked Developer Blames Series S for Xbox Release Delay",
+      "cn_title": "《No Rest for the Wicked》开发者指责Xbox Series S导致延期",
+      "model": "deepseek-v4-flash",
+      "status": "needs_manual_review",
+      "failed_at": "2026-06-05T14:04:43.729182+08:00",
+      "reason": "[summary_length] opus_summary must be 70-80 non-space characters, got 111",
+      "audit_issues": [
+        {
+          "type": "summary_length",
+          "detail": "opus_summary must be 70-80 non-space characters, got 111"
+        }
+      ],
+      "fingerprint": "3c52a5a5e5df45d5d5e2e79e8a63f6cf3b9c004c",
+      "translation_path": "translations/04.json",
+      "retry_policy": "manual_only"
+    }
+  },
+  "updated_at": "2026-06-05T14:04:43.729182+08:00"
+}

@@ -51,12 +51,12 @@
       "emoji": "🎮",
       "en_title": "No Rest for the Wicked Developer Blames Series S for Xbox Release Delay",
       "cn_title": "《No Rest for the Wicked》开发者指责Xbox Series S导致延期",
-      "summary": "《No Rest for the Wicked》开发商Moon Studio创始人Thomas Mahler在Discord上表示，Xbox Series S的性能限制导致游戏Xbox版延期，而PS5版将于今年10月随1.0版本发售。此前《黑神话：悟空》和《博德之门3》也因Series S优化问题遭遇类似延迟。微软要求所有Xbox Series X游戏必须同步支持Series S，但这一政策已多次引发争议。",
+      "summary": "《No Rest for the Wicked》开发商Moon Studio创始人Thomas Mahler称Xbox Series S性能限制导致Xbox版延期，PS5版10月发售。此前《黑神话：悟空》和《博德之门3》也因类似问题延迟。",
       "url": "https://www.ign.com/articles/no-rest-for-the-wicked-developer-blames-series-s-for-xbox-release-delay",
       "publish_time_cn": "2026-06-05 08:21",
       "pub_date": "2026-06-05 08:21",
       "cover_image": "https://assets-prd.ignimgs.com/2026/03/17/norestthumb-1773773043681.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2026/03/17/norestthumb-1773773043681.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/03/17/norestthumb-1773773043681.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -82,7 +82,13 @@
           "cn": "Thomas Mahler",
           "reason": "不知名人物，保留英文"
         }
-      ]
+      ],
+      "translation_error": "[summary_length] opus_summary must be 70-80 non-space characters, got 111",
+      "translation_failed_at": "2026-06-05T14:04:43.729182+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-flash",
+      "translation_path": "translations/04.json"
     },
     {
       "id": 1,

@@ -987,6 +987,48 @@
       "total_tokens": 7907,
       "prompt_cache_hit_tokens": 6528,
       "prompt_cache_miss_tokens": 1118
+    },
+    {
+      "time_cn": "2026-06-05 14:04:28",
+      "task": "fulltext",
+      "model": "deepseek-v4-flash",
+      "article_id": 4,
+      "article_title": "《No Rest for the Wicked》开发者指责Xbox Series S导致延期",
+      "article_url": "https://www.ign.com/articles/no-rest-for-the-wicked-developer-blames-series-s-for-xbox-release-delay",
+      "article_date": "2026-06-06",
+      "detail": "",
+      "estimated_cost_usd": 0.00083322,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8287,
+      "completion_tokens": 2031,
+      "total_tokens": 10318,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 1759
+    },
+    {
+      "time_cn": "2026-06-05 14:04:43",
+      "task": "fulltext_repair",
+      "model": "deepseek-v4-flash",
+      "article_id": 4,
+      "article_title": "《No Rest for the Wicked》开发者指责Xbox Series S导致延期",
+      "article_url": "https://www.ign.com/articles/no-rest-for-the-wicked-developer-blames-series-s-for-xbox-release-delay",
+      "article_date": "2026-06-06",
+      "detail": "1 audit issue(s)",
+      "estimated_cost_usd": 0.0010304,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 2842,
+      "completion_tokens": 2259,
+      "total_tokens": 5101,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 2842
     }
   ]
 }
