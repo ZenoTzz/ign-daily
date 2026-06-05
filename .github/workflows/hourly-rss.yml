@@ -150,12 +150,11 @@ jobs:
         if: steps.rss.outputs.changed_count != '0'
         run: |
           set -euo pipefail
-          git add data ign_rss_new.json
+          git add data ign_rss_new.json exchange_rates.json
           if git diff --cached --quiet; then
             echo "No tracked RSS changes to commit."
             exit 0
           fi
-          git add exchange_rates.json || true
           git commit -m "feat: hourly RSS ${{ steps.rss.outputs.new_count }} new, ${{ steps.rss.outputs.filtered_count }} filtered for ${{ steps.rss.outputs.changed_dates || steps.rss.outputs.target_date }}"
           git pull --rebase -X theirs origin main
           git push origin HEAD:main

@@ -1,13 +1,13 @@
-{
-  "updated_at": "2026-06-05 11:12:04 +08:00",
-  "source": "https://open.er-api.com/v6/latest/USD",
-  "base": "USD",
-  "rates_to_cny": {
-    "USD": 6.79,
-    "EUR": 7.89,
-    "JPY_100": 4.24,
-    "GBP": 9.12,
-    "KRW_100": 0.44
-  },
-  "note": "人民币兑外币参考汇率，取2位小数。翻译时按金额×对应rate取整数。"
+﻿{
+    "updated_at":  "2026-06-05 11:44:51 +08:00",
+    "source":  "https://open.er-api.com/v6/latest/USD",
+    "base":  "USD",
+    "rates_to_cny":  {
+                         "USD":  6.79,
+                         "EUR":  7.89,
+                         "JPY_100":  4.24,
+                         "GBP":  9.12,
+                         "KRW_100":  0.44
+                     },
+    "note":  "人民币兑外币参考汇率，取2位小数。翻译时按金额×对应rate取整数。"
 }

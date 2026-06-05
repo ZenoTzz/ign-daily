@@ -208,12 +208,11 @@ jobs:
         if: steps.config.outputs.compare_article_id != '' || steps.config.outputs.title_translator == 'api' || steps.config.outputs.title_translator == 'deepseek' || steps.config.outputs.fulltext_translator == 'api' || steps.config.outputs.fulltext_translator == 'deepseek'
         run: |
           set -euo pipefail
-          git add data
+          git add data exchange_rates.json
           if git diff --cached --quiet; then
             echo "No API translation changes to commit."
             exit 0
           fi
-          git add exchange_rates.json || true
           git commit -m "feat: apply API translation updates"
           git pull --rebase -X theirs origin main
           git push origin HEAD:main
