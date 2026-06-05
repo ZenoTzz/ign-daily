@@ -37,7 +37,9 @@ jobs:
         run: git pull --ff-only origin main
 
       - name: Refresh exchange rates
-        run: python3 scripts/fetch_exchange_rates.py
+        run: |
+          python3 scripts/fetch_exchange_rates.py
+          python3 scripts/check_exchange_rates_fresh.py --max-age-hours 6
 
       - name: Commit and push exchange rates
         run: |
