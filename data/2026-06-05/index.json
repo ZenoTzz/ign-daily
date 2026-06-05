@@ -153,6 +153,62 @@
       ]
     },
     {
+      "id": 40,
+      "category": "观点推荐",
+      "emoji": "📚",
+      "en_title": "How to Read the Dungeon Crawler Carl Books in Order",
+      "cn_title": "《地下城爬行者卡尔》系列阅读顺序指南",
+      "summary": "《地下城爬行者卡尔》系列已出版八部，最新作《A Parade of Horribles》于5月12日发售。作者Matt Dinniman计划共写10部，衍生漫画《Crocodile》预计2027年3月推出。该系列已被环球国际影业和Seth MacFarlane的Fuzzy Door选中改编为真人剧集，目前正在Peacock制作中。",
+      "url": "https://www.ign.com/articles/dungeon-crawler-carl-books-in-order",
+      "publish_time_cn": "2026-06-05 03:00",
+      "pub_date": "2026-06-05 03:00",
+      "cover_image": "https://assets-prd.ignimgs.com/2025/06/11/dungeon-crawler-carl-books-1749683467011.png?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2025/06/11/dungeon-crawler-carl-books-1749683467011.png?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/03/02/81lscmmtvql-sl1500-1-1772468893407.jpg",
+        "https://assets-prd.ignimgs.com/2025/06/11/dungeon-crawler-carl-books-1749683467011.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2025/06/11/dungeon-crawler-carl-books-1749683467011.png?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2025/06/11/dungeon-crawler-carl-books-1749683467011.png?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2025/06/11/dungeon-crawler-carl-books-1749683467011.png",
+        "https://assets-prd.ignimgs.com/2025/06/11/81eenarwhml-sl1500-2-1749681035977.jpg",
+        "https://assets-prd.ignimgs.com/2025/06/11/81nt7i8jfel-sl1500-1749681245152.jpg",
+        "https://assets-prd.ignimgs.com/2025/06/11/81wb4p9n-ol-sl1500-1749681335284.jpg",
+        "https://assets-prd.ignimgs.com/2025/06/11/81mn5kzjvwl-sl1500-1749681409431.jpg",
+        "https://assets-prd.ignimgs.com/2025/06/11/711glm8xabl-sl1500-1749681627900.jpg",
+        "https://assets-prd.ignimgs.com/2025/06/11/81rf-o5csjl-sl1500-1749681710914.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-06T02:31:54+08:00",
+      "pending_dict": [
+        {
+          "en": "A Parade of Horribles",
+          "cn": "恐怖游行",
+          "reason": "书名暂无官方中文译名，建议人工确认"
+        },
+        {
+          "en": "Crocodile",
+          "cn": "鳄鱼",
+          "reason": "衍生漫画名暂无官方中文译名，建议人工确认"
+        },
+        {
+          "en": "Matt Dinniman",
+          "cn": "Matt Dinniman",
+          "reason": "作者名暂无通用中文译名，建议保留英文或人工确认"
+        },
+        {
+          "en": "Jeff Hays",
+          "cn": "Jeff Hays",
+          "reason": "配音演员名暂无通用中文译名，建议保留英文"
+        },
+        {
+          "en": "Quasar",
+          "cn": "Quasar",
+          "reason": "角色名暂无通用中文译名，建议保留英文"
+        }
+      ]
+    },
+    {
       "id": 34,
       "category": "影视资讯",
       "emoji": "🎬",
@@ -1260,5 +1316,5 @@
       "translator_model": "deepseek-v4-flash"
     }
   ],
-  "total": 39
+  "total": 40
 }
