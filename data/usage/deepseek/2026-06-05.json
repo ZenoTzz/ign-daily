@@ -630,6 +630,48 @@
       "total_tokens": 7782,
       "prompt_cache_hit_tokens": 6528,
       "prompt_cache_miss_tokens": 1023
+    },
+    {
+      "time_cn": "2026-06-05 08:18:12",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 32,
+      "article_title": "Upcoming New Video Game Movies and TV Shows: 2026 Release Dates and Beyond",
+      "article_url": "https://www.ign.com/articles/upcoming-new-video-game-movies-2026-tv-shows-release-dates",
+      "article_date": "2026-06-05",
+      "detail": "",
+      "estimated_cost_usd": 7.83e-05,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9337,
+      "completion_tokens": 127,
+      "total_tokens": 9464,
+      "prompt_cache_hit_tokens": 9216,
+      "prompt_cache_miss_tokens": 121
+    },
+    {
+      "time_cn": "2026-06-05 08:18:15",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 37,
+      "article_title": "Elden Ring: Tarnished Edition Preorders Are Now Available, Release Date Confirmed",
+      "article_url": "https://www.ign.com/articles/elden-ring-tarnished-edition-preorders-reveal-80-price-still-no-release-date",
+      "article_date": "2026-06-05",
+      "detail": "",
+      "estimated_cost_usd": 0.00017592,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7362,
+      "completion_tokens": 146,
+      "total_tokens": 7508,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 834
     }
   ]
 }
