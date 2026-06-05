@@ -105,8 +105,8 @@
       "url": "https://www.ign.com/articles/the-odyssey-rating-imax-popcorn-bucket",
       "publish_time_cn": "2026-06-05 02:53",
       "pub_date": "2026-06-05 02:53",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/06/04/odyssey-poster4-thumb-1780598883908.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/04/odyssey-poster4-thumb-1780598883908.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/04/odyssey-poster4-thumb-1780598883908.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/04/odyssey-poster4-thumb-1780598883908.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -117,7 +117,11 @@
         "https://assets-prd.ignimgs.com/2026/06/04/odyssey-popcorn-photoshoot-marketingassets-ecomm-productdetail-1080x1080-v4-1780603142947.jpeg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-05T07:57:41+08:00"
+      "source_fetched_at": "2026-06-05T07:57:41+08:00",
+      "translation_path": "translations/34.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-flash"
     },
     {
       "id": 35,
@@ -343,8 +347,8 @@
       "url": "https://www.ign.com/articles/what-to-expect-from-summer-game-fest-2026",
       "publish_time_cn": "2026-06-04 23:58",
       "pub_date": "2026-06-04 23:58",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/06/04/sgf-expect-blog-1780588448248.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/04/sgf-expect-blog-1780588448248.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/04/sgf-expect-blog-1780588448248.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/04/sgf-expect-blog-1780588448248.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -400,7 +404,11 @@
           "cn": "旧时曲",
           "reason": "词库已有，但需确认是否使用"
         }
-      ]
+      ],
+      "translation_path": "translations/12.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-flash"
     },
     {
       "id": 13,
@@ -528,8 +536,8 @@
       "url": "https://www.ign.com/articles/elden-ring-tarnished-edition-has-a-nintendo-switch-2-release-date-additional-content-also-available-to-buy-on-other-platforms",
       "publish_time_cn": "2026-06-04 22:32",
       "pub_date": "2026-06-04 22:32",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/06/04/eldenringtarnishededition-06-1780583397848.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/04/eldenringtarnishededition-06-1780583397848.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/04/eldenringtarnishededition-06-1780583397848.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/04/09/eldenringtarnished-1775744945423.jpg",
@@ -540,7 +548,11 @@
         "https://assets-prd.ignimgs.com/2026/06/04/er-tarnished-edition-ns2-uk-1780583811226.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-05T03:50:00+08:00"
+      "source_fetched_at": "2026-06-05T03:50:00+08:00",
+      "translation_path": "translations/17.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-flash"
     },
     {
       "id": 18,
@@ -787,8 +799,8 @@
       "url": "https://www.ign.com/articles/helldivers-2-dev-confirms-roguelite-systems-called-planet-warfronts-as-part-of-big-changes-coming-to-the-game",
       "publish_time_cn": "2026-06-04 20:28",
       "pub_date": "2026-06-04 20:28",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/06/04/6e49348dc57bd1dc676984de8dddaf3c3ffa3de0-1780575945186.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/04/6e49348dc57bd1dc676984de8dddaf3c3ffa3de0-1780575945186.png",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/04/6e49348dc57bd1dc676984de8dddaf3c3ffa3de0-1780575945186.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/04/6e49348dc57bd1dc676984de8dddaf3c3ffa3de0-1780575945186.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -798,7 +810,11 @@
         "https://assets-prd.ignimgs.com/2026/06/04/a1aeb341f09a0de4354c470ef171bd9024f55d09-1780575976929.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-05T03:50:06+08:00"
+      "source_fetched_at": "2026-06-05T03:50:06+08:00",
+      "translation_path": "translations/26.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-flash"
     },
     {
       "id": 27,
@@ -832,8 +848,8 @@
       "url": "https://www.ign.com/articles/007-first-light-estimated-to-have-sold-22-million-copies-generating-150-million-in-revenue",
       "publish_time_cn": "2026-06-04 18:45",
       "pub_date": "2026-06-04 18:45",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/06/04/ss-7683959b09f7863c5eb23bfdbcf039269765b5d6-1920x1080-1780569821445.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/04/ss-7683959b09f7863c5eb23bfdbcf039269765b5d6-1920x1080-1780569821445.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/04/ss-7683959b09f7863c5eb23bfdbcf039269765b5d6-1920x1080-1780569821445.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/04/ss-7683959b09f7863c5eb23bfdbcf039269765b5d6-1920x1080-1780569821445.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -842,7 +858,11 @@
         "https://assets-prd.ignimgs.com/2026/06/04/ss-7683959b09f7863c5eb23bfdbcf039269765b5d6-1920x1080-1780569821445.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-05T07:57:43+08:00"
+      "source_fetched_at": "2026-06-05T07:57:43+08:00",
+      "translation_path": "translations/28.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-flash"
     },
     {
       "id": 29,

@@ -672,6 +672,153 @@
       "total_tokens": 7508,
       "prompt_cache_hit_tokens": 6528,
       "prompt_cache_miss_tokens": 834
+    },
+    {
+      "time_cn": "2026-06-05 08:20:16",
+      "task": "fulltext",
+      "model": "deepseek-v4-flash",
+      "article_id": 12,
+      "article_title": "夏日游戏节2026前瞻：哪些惊喜值得期待",
+      "article_url": "https://www.ign.com/articles/what-to-expect-from-summer-game-fest-2026",
+      "article_date": "2026-06-05",
+      "detail": "",
+      "estimated_cost_usd": 0.0018128,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9716,
+      "completion_tokens": 4815,
+      "total_tokens": 14531,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 3188
+    },
+    {
+      "time_cn": "2026-06-05 08:20:35",
+      "task": "fulltext_repair",
+      "model": "deepseek-v4-flash",
+      "article_id": 12,
+      "article_title": "夏日游戏节2026前瞻：哪些惊喜值得期待",
+      "article_url": "https://www.ign.com/articles/what-to-expect-from-summer-game-fest-2026",
+      "article_date": "2026-06-05",
+      "detail": "1 audit issue(s)",
+      "estimated_cost_usd": 0.00166698,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 5675,
+      "completion_tokens": 3116,
+      "total_tokens": 8791,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 5675
+    },
+    {
+      "time_cn": "2026-06-05 08:20:50",
+      "task": "fulltext",
+      "model": "deepseek-v4-flash",
+      "article_id": 17,
+      "article_title": "《任天堂》《Nintendo Switch 2》《艾尔登法环》褪色者版8月28日登陆Switch 2",
+      "article_url": "https://www.ign.com/articles/elden-ring-tarnished-edition-has-a-nintendo-switch-2-release-date-additional-content-also-available-to-buy-on-other-platforms",
+      "article_date": "2026-06-05",
+      "detail": "",
+      "estimated_cost_usd": 0.00084302,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8359,
+      "completion_tokens": 2030,
+      "total_tokens": 10389,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 1831
+    },
+    {
+      "time_cn": "2026-06-05 08:21:09",
+      "task": "fulltext",
+      "model": "deepseek-v4-flash",
+      "article_id": 26,
+      "article_title": "《绝地潜兵2》确认将加入Roguelite星球前线系统",
+      "article_url": "https://www.ign.com/articles/helldivers-2-dev-confirms-roguelite-systems-called-planet-warfronts-as-part-of-big-changes-coming-to-the-game",
+      "article_date": "2026-06-05",
+      "detail": "",
+      "estimated_cost_usd": 0.00102656,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8526,
+      "completion_tokens": 2602,
+      "total_tokens": 11128,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 1998
+    },
+    {
+      "time_cn": "2026-06-05 08:21:23",
+      "task": "fulltext",
+      "model": "deepseek-v4-flash",
+      "article_id": 28,
+      "article_title": "《007 初露锋芒》销量220万份，收入1.5亿美元(约合人民币10亿元)",
+      "article_url": "https://www.ign.com/articles/007-first-light-estimated-to-have-sold-22-million-copies-generating-150-million-in-revenue",
+      "article_date": "2026-06-05",
+      "detail": "",
+      "estimated_cost_usd": 0.00085506,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8389,
+      "completion_tokens": 2058,
+      "total_tokens": 10447,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 1861
+    },
+    {
+      "time_cn": "2026-06-05 08:21:35",
+      "task": "fulltext_repair",
+      "model": "deepseek-v4-flash",
+      "article_id": 28,
+      "article_title": "《007 初露锋芒》销量220万份，收入1.5亿美元(约合人民币10亿元)",
+      "article_url": "https://www.ign.com/articles/007-first-light-estimated-to-have-sold-22-million-copies-generating-150-million-in-revenue",
+      "article_date": "2026-06-05",
+      "detail": "1 audit issue(s)",
+      "estimated_cost_usd": 0.00098504,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 3074,
+      "completion_tokens": 1981,
+      "total_tokens": 5055,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 3074
+    },
+    {
+      "time_cn": "2026-06-05 08:21:43",
+      "task": "fulltext",
+      "model": "deepseek-v4-flash",
+      "article_id": 34,
+      "article_title": "《奥德赛》R级评级，IMAX爆米花桶曝光",
+      "article_url": "https://www.ign.com/articles/the-odyssey-rating-imax-popcorn-bucket",
+      "article_date": "2026-06-05",
+      "detail": "",
+      "estimated_cost_usd": 0.00055056,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7860,
+      "completion_tokens": 1235,
+      "total_tokens": 9095,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 1332
     }
   ]
 }
