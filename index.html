@@ -18,7 +18,7 @@
   <script defer src="assets/alpine.min.js"></script>
   <link rel="stylesheet" href="assets/style.css?v=20260602m">
   <script src="assets/exceljs.min.js"></script>
-  <script src="assets/app.js?v=20260602m"></script>
+  <script src="assets/app.js?v=20260605oauth"></script>
 </head>
 <body>
   <!-- SVG Icon Definitions -->
@@ -110,7 +110,7 @@
             <text x="16" y="22.5" text-anchor="middle" font-family="Satoshi, Arial Black, sans-serif" font-weight="900" font-size="14" fill="white" letter-spacing="-0.5">IGN</text>
           </svg>
           <span class="brand-title">IGN Daily</span>
-          <div class="date-nav">
+          <div x-show="data" class="date-nav">
             <button @click="navigateDate('prev')" :disabled="!canGoPrev()" class="date-nav-btn" title="上一天">
               <svg width="14" height="14"><use href="#icon-arrow-left"/></svg>
             </button>
@@ -562,6 +562,18 @@
         <div style="display:flex; gap:0.5rem; margin-top:0.75rem;">
           <button @click="saveToken()" class="btn btn-primary">保存</button>
           <button @click="clearToken()" class="btn btn-ghost">清除</button>
+        </div>
+        <div style="height:1px; background:var(--border); margin:1rem 0;"></div>
+        <label>GitHub OAuth Client ID</label>
+        <p style="font-size:0.7rem; color:var(--text-muted); margin-bottom:0.5rem;">
+          Create a GitHub OAuth App, enable Device Flow, then paste its Client ID here. This avoids manually copying a PAT into every browser.
+        </p>
+        <input type="text" x-model="oauthClientId" placeholder="Ov23li...">
+        <div style="display:flex; gap:0.5rem; align-items:center; margin-top:0.75rem; flex-wrap:wrap;">
+          <button @click="loginWithGithubOAuth()" class="btn btn-primary" :disabled="oauthLoggingIn">
+            <span x-text="oauthLoggingIn ? 'Waiting for GitHub...' : 'GitHub OAuth Login'"></span>
+          </button>
+          <span x-show="oauthStatus" style="font-size:0.7rem; color:var(--text-muted);" x-text="oauthStatus"></span>
         </div>
         <div style="height:1px; background:var(--border); margin:1rem 0;"></div>
         <button @click="automationExpanded = !automationExpanded"

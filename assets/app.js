@@ -29,12 +29,19 @@ const GH = {
   repo: 'ign-daily',
   branch: 'main',
   apiBase: 'https://api.github.com',
+  authHeader() {
+    const token = localStorage.getItem('gh_token') || '';
+    if (!token) return '';
+    const type = localStorage.getItem('gh_token_type') || '';
+    if (type === 'oauth' || /^(gho_|ghu_|ghs_|ghr_)/.test(token)) return `Bearer ${token}`;
+    return `token ${token}`;
+  },
 
   async getFile(path) {
     const url = `${this.apiBase}/repos/${this.owner}/${this.repo}/contents/${path}?ref=${this.branch}&t=${Date.now()}`;
-    const token = localStorage.getItem('gh_token') || '';
     const headers = {};
-    if (token) headers.Authorization = `token ${token}`;
+    const auth = this.authHeader();
+    if (auth) headers.Authorization = auth;
     const res = await fetch(url, { headers, cache: 'no-store' });
     if (res.status === 404) return null;
     if (!res.ok) throw new Error(`GET ${path} failed: ${res.status}`);
@@ -60,7 +67,7 @@ const GH = {
     const res = await fetch(`${this.apiBase}/repos/${this.owner}/${this.repo}/contents/${path}`, {
       method: 'PUT',
       headers: {
-        Authorization: `token ${token}`,
+        Authorization: this.authHeader(),
         'Content-Type': 'application/json'
       },
       body: JSON.stringify(body)
@@ -83,7 +90,7 @@ const GH = {
     const res = await fetch(`${this.apiBase}/repos/${this.owner}/${this.repo}/contents/${path}`, {
       method: 'DELETE',
       headers: {
-        Authorization: `token ${token}`,
+        Authorization: this.authHeader(),
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({ message, sha, branch: this.branch })
@@ -101,7 +108,7 @@ const GH = {
     const res = await fetch(`${this.apiBase}/repos/${this.owner}/${this.repo}/actions/workflows/${workflowFile}/dispatches`, {
       method: 'POST',
       headers: {
-        Authorization: `token ${token}`,
+        Authorization: this.authHeader(),
         Accept: 'application/vnd.github+json',
         'Content-Type': 'application/json'
       },
@@ -114,6 +121,64 @@ const GH = {
     return true;
   }
 };
+
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+async function githubDeviceLogin(clientId, onStatus) {
+  const id = String(clientId || '').trim();
+  if (!id) throw new Error('GitHub OAuth Client ID is required.');
+  const requestBody = new URLSearchParams({
+    client_id: id,
+    scope: 'repo workflow'
+  });
+  const codeRes = await fetch('https://github.com/login/device/code', {
+    method: 'POST',
+    headers: {
+      Accept: 'application/json',
+      'Content-Type': 'application/x-www-form-urlencoded'
+    },
+    body: requestBody
+  });
+  if (!codeRes.ok) throw new Error(`GitHub device code failed: ${codeRes.status}`);
+  const codeData = await codeRes.json();
+  if (codeData.error) throw new Error(codeData.error_description || codeData.error);
+  onStatus?.(`Open ${codeData.verification_uri} and enter code ${codeData.user_code}`);
+  try { window.open(codeData.verification_uri, '_blank', 'noopener,noreferrer'); } catch (_) {}
+
+  let interval = Number(codeData.interval || 5);
+  const deadline = Date.now() + Number(codeData.expires_in || 900) * 1000;
+  while (Date.now() < deadline) {
+    await sleep(interval * 1000);
+    const tokenBody = new URLSearchParams({
+      client_id: id,
+      device_code: codeData.device_code,
+      grant_type: 'urn:ietf:params:oauth:grant-type:device_code'
+    });
+    const tokenRes = await fetch('https://github.com/login/oauth/access_token', {
+      method: 'POST',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/x-www-form-urlencoded'
+      },
+      body: tokenBody
+    });
+    if (!tokenRes.ok) throw new Error(`GitHub token exchange failed: ${tokenRes.status}`);
+    const tokenData = await tokenRes.json();
+    if (tokenData.access_token) return tokenData;
+    if (tokenData.error === 'authorization_pending') {
+      onStatus?.(`Waiting for GitHub authorization: ${codeData.user_code}`);
+      continue;
+    }
+    if (tokenData.error === 'slow_down') {
+      interval += 5;
+      continue;
+    }
+    throw new Error(tokenData.error_description || tokenData.error || 'GitHub authorization failed.');
+  }
+  throw new Error('GitHub authorization expired. Start login again.');
+}
 
 // ---- News-day helpers ----
 function todayBeijingDate() {
@@ -148,6 +213,9 @@ function appData() {
     filterCat: 'all',
     showSettings: false,
     token: localStorage.getItem('gh_token') || '',
+    oauthClientId: localStorage.getItem('github_oauth_client_id') || '',
+    oauthLoggingIn: false,
+    oauthStatus: '',
     automationConfig: {
       title_translator: 'openclaw',
       fulltext_translator: 'openclaw',
@@ -633,17 +701,44 @@ function appData() {
 
     saveToken() {
       localStorage.setItem('gh_token', this.token.trim());
+      localStorage.removeItem('gh_token_type');
       this.flash('Token 已保存到本地');
       this.showSettings = false;
     },
 
     clearToken() {
       localStorage.removeItem('gh_token');
+      localStorage.removeItem('gh_token_type');
       this.token = '';
       this.flash('Token 已清除');
     },
 
     // ---- 一键复制今日摘要（中文标点 + 去 markdown）----
+    async loginWithGithubOAuth() {
+      const clientId = String(this.oauthClientId || '').trim();
+      if (!clientId) {
+        this.flash('Please enter GitHub OAuth Client ID first.', 4000);
+        return;
+      }
+      localStorage.setItem('github_oauth_client_id', clientId);
+      this.oauthLoggingIn = true;
+      this.oauthStatus = 'Requesting GitHub device code...';
+      try {
+        const tokenData = await githubDeviceLogin(clientId, (status) => { this.oauthStatus = status; });
+        localStorage.setItem('gh_token', tokenData.access_token);
+        localStorage.setItem('gh_token_type', 'oauth');
+        localStorage.setItem('github_oauth_scope', tokenData.scope || '');
+        this.token = tokenData.access_token;
+        this.oauthStatus = `GitHub OAuth connected. Scope: ${tokenData.scope || 'unknown'}`;
+        this.flash('GitHub OAuth login saved.', 3500);
+      } catch (e) {
+        this.oauthStatus = e.message || String(e);
+        this.flash('GitHub OAuth login failed: ' + this.oauthStatus, 6000);
+      } finally {
+        this.oauthLoggingIn = false;
+      }
+    },
+
     defaultApiModels() {
       return [
         {
