@@ -1029,6 +1029,48 @@
       "total_tokens": 5101,
       "prompt_cache_hit_tokens": 0,
       "prompt_cache_miss_tokens": 2842
+    },
+    {
+      "time_cn": "2026-06-05 19:33:25",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 5,
+      "article_title": "LEGO Reseller Bricks and Minifigs Will Return 'Stolen' Star Wars Sets to Collector; Parting Ways With Controversial Management",
+      "article_url": "https://www.ign.com/articles/lego-reseller-bricks-and-minifigs-will-return-stolen-star-wars-sets-to-collector-parting-ways-with-controversial-management",
+      "article_date": "2026-06-06",
+      "detail": "",
+      "estimated_cost_usd": 0.00038214,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8117,
+      "completion_tokens": 505,
+      "total_tokens": 8622,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 1589
+    },
+    {
+      "time_cn": "2026-06-05 19:33:28",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 6,
+      "article_title": "Cape Fear Episodes 1 & 2 Review",
+      "article_url": "https://www.ign.com/articles/apple-tv-cape-fear-episode-1-2-review",
+      "article_date": "2026-06-06",
+      "detail": "",
+      "estimated_cost_usd": 0.0003113,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8331,
+      "completion_tokens": 145,
+      "total_tokens": 8476,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 1803
     }
   ]
 }
