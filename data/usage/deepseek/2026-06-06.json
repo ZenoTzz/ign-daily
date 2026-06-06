@@ -1743,6 +1743,48 @@
       "total_tokens": 8101,
       "prompt_cache_hit_tokens": 6528,
       "prompt_cache_miss_tokens": 1409
+    },
+    {
+      "time_cn": "2026-06-06 09:50:53",
+      "task": "fulltext",
+      "model": "deepseek-v4-flash",
+      "article_id": 44,
+      "article_title": "《控制：共振》上手前瞻：无枪械的近战动作续作",
+      "article_url": "https://www.ign.com/articles/control-resonant-hands-on-preview",
+      "article_date": "2026-06-06",
+      "detail": "",
+      "estimated_cost_usd": 0.00118678,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9683,
+      "completion_tokens": 4101,
+      "total_tokens": 13784,
+      "prompt_cache_hit_tokens": 9600,
+      "prompt_cache_miss_tokens": 83
+    },
+    {
+      "time_cn": "2026-06-06 09:51:18",
+      "task": "fulltext_repair",
+      "model": "deepseek-v4-flash",
+      "article_id": 44,
+      "article_title": "《控制：共振》上手前瞻：无枪械的近战动作续作",
+      "article_url": "https://www.ign.com/articles/control-resonant-hands-on-preview",
+      "article_date": "2026-06-06",
+      "detail": "1 audit issue(s)",
+      "estimated_cost_usd": 0.00180404,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 4898,
+      "completion_tokens": 3994,
+      "total_tokens": 8892,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 4898
     }
   ]
 }

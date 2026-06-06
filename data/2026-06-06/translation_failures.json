@@ -237,7 +237,26 @@
       "fingerprint": "a7a41dfdd40a9a8cfa45cfc172d79ff4827c3347",
       "translation_path": "translations/53.json",
       "retry_policy": "manual_only"
+    },
+    "44": {
+      "id": 44,
+      "url": "https://www.ign.com/articles/control-resonant-hands-on-preview",
+      "en_title": "Control Resonant Hands-On Preview: No Guns, No Problem for This Melee-Action Sequel",
+      "cn_title": "《控制：共振》上手前瞻：无枪械的近战动作续作",
+      "model": "deepseek-v4-flash",
+      "status": "needs_manual_review",
+      "failed_at": "2026-06-06T09:51:18.912986+08:00",
+      "reason": "[summary_length] opus_summary must be 70-80 non-space characters, got 81",
+      "audit_issues": [
+        {
+          "type": "summary_length",
+          "detail": "opus_summary must be 70-80 non-space characters, got 81"
+        }
+      ],
+      "fingerprint": "ac1fe3b7ecb953049a05c1c37a3e8e2ee4d1cad9",
+      "translation_path": "translations/44.json",
+      "retry_policy": "manual_only"
     }
   },
-  "updated_at": "2026-06-06T01:50:47.844Z"
+  "updated_at": "2026-06-06T09:51:18.912986+08:00"
 }

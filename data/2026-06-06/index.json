@@ -101,12 +101,12 @@
       "emoji": "🎮",
       "en_title": "Control Resonant Hands-On Preview: No Guns, No Problem for This Melee-Action Sequel",
       "cn_title": "《控制：共振》上手前瞻：无枪械的近战动作续作",
-      "summary": "《控制：共振》将系列从第三人称射击改为近战动作玩法，主角换为苏醒后的迪伦。IGN试玩两小时，体验了开场、开放探索区和线性任务。战斗强调高速连击与空中取消，武器和技能系统灵活，敌人设计更具创意。目前来看，这款续作有望解决前作枪战薄弱、敌人单一的问题。",
+      "summary": "《控制：共振》将系列改为近战动作玩法，主角换为迪伦。试玩两小时体验了开场、开放探索区和线性任务。战斗强调高速连击与空中取消，武器和技能系统灵活，敌人设计更具创意。",
       "url": "https://www.ign.com/articles/control-resonant-hands-on-preview",
       "publish_time_cn": "2026-06-06 07:00",
       "pub_date": "2026-06-06 07:00",
       "cover_image": "https://assets-prd.ignimgs.com/2026/06/04/controlresonant-preview-blogroll-1780596741747.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/04/controlresonant-preview-blogroll-1780596741747.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/04/controlresonant-preview-blogroll-1780596741747.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -115,7 +115,13 @@
         "https://assets-prd.ignimgs.com/2026/06/04/controlresonant-preview-blogroll-1780596741747.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-06T08:08:52+08:00"
+      "source_fetched_at": "2026-06-06T08:08:52+08:00",
+      "translation_error": "[summary_length] opus_summary must be 70-80 non-space characters, got 81",
+      "translation_failed_at": "2026-06-06T09:51:18.912986+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-flash",
+      "translation_path": "translations/44.json"
     },
     {
       "id": 45,
