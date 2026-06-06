@@ -2142,6 +2142,27 @@
       "total_tokens": 7885,
       "prompt_cache_hit_tokens": 6528,
       "prompt_cache_miss_tokens": 1044
+    },
+    {
+      "time_cn": "2026-06-06 22:55:23",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 8,
+      "article_title": "Masters of the Universe Proves Skeletor Will Always Be the Franchise’s MVP",
+      "article_url": "https://www.ign.com/articles/masters-of-the-universe-proves-skeletor-will-always-be-the-franchises-mvp",
+      "article_date": "2026-06-07",
+      "detail": "",
+      "estimated_cost_usd": 0.00040202,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8405,
+      "completion_tokens": 432,
+      "total_tokens": 8837,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 1877
     }
   ]
 }
