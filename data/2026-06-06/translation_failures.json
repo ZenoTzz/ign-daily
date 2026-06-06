@@ -34,25 +34,6 @@
       "translation_path": "translations/31.json",
       "retry_policy": "manual_only"
     },
-    "37": {
-      "id": 37,
-      "url": "https://www.ign.com/articles/teenage-mutant-ninja-turtles-the-last-ronin-is-in-development-at-platinumgames",
-      "en_title": "Teenage Mutant Ninja Turtles: The Last Ronin Is in Development at PlatinumGames",
-      "cn_title": "白金工作室操刀《忍者神龟：最后的浪人》",
-      "model": "deepseek-v4-flash",
-      "status": "needs_manual_review",
-      "failed_at": "2026-06-06T09:00:07.480308+08:00",
-      "reason": "[summary_length] opus_summary must be 70-80 non-space characters, got 97",
-      "audit_issues": [
-        {
-          "type": "summary_length",
-          "detail": "opus_summary must be 70-80 non-space characters, got 97"
-        }
-      ],
-      "fingerprint": "5fb9da646a9c4e704c47fdeff994f976de8ce7e2",
-      "translation_path": "translations/37.json",
-      "retry_policy": "manual_only"
-    },
     "39": {
       "id": 39,
       "url": "https://www.ign.com/articles/studio-mdhr-announces-2-new-cuphead-games-are-in-development",
@@ -108,6 +89,25 @@
       ],
       "fingerprint": "965c3a56633199d9cb5ab2c91fde65862006cc56",
       "translation_path": "translations/41.json",
+      "retry_policy": "manual_only"
+    },
+    "44": {
+      "id": 44,
+      "url": "https://www.ign.com/articles/control-resonant-hands-on-preview",
+      "en_title": "Control Resonant Hands-On Preview: No Guns, No Problem for This Melee-Action Sequel",
+      "cn_title": "《控制：共振》上手前瞻：无枪械的近战动作续作",
+      "model": "deepseek-v4-flash",
+      "status": "needs_manual_review",
+      "failed_at": "2026-06-06T09:51:18.912986+08:00",
+      "reason": "[summary_length] opus_summary must be 70-80 non-space characters, got 81",
+      "audit_issues": [
+        {
+          "type": "summary_length",
+          "detail": "opus_summary must be 70-80 non-space characters, got 81"
+        }
+      ],
+      "fingerprint": "ac1fe3b7ecb953049a05c1c37a3e8e2ee4d1cad9",
+      "translation_path": "translations/44.json",
       "retry_policy": "manual_only"
     },
     "45": {
@@ -237,26 +237,7 @@
       "fingerprint": "a7a41dfdd40a9a8cfa45cfc172d79ff4827c3347",
       "translation_path": "translations/53.json",
       "retry_policy": "manual_only"
-    },
-    "44": {
-      "id": 44,
-      "url": "https://www.ign.com/articles/control-resonant-hands-on-preview",
-      "en_title": "Control Resonant Hands-On Preview: No Guns, No Problem for This Melee-Action Sequel",
-      "cn_title": "《控制：共振》上手前瞻：无枪械的近战动作续作",
-      "model": "deepseek-v4-flash",
-      "status": "needs_manual_review",
-      "failed_at": "2026-06-06T09:51:18.912986+08:00",
-      "reason": "[summary_length] opus_summary must be 70-80 non-space characters, got 81",
-      "audit_issues": [
-        {
-          "type": "summary_length",
-          "detail": "opus_summary must be 70-80 non-space characters, got 81"
-        }
-      ],
-      "fingerprint": "ac1fe3b7ecb953049a05c1c37a3e8e2ee4d1cad9",
-      "translation_path": "translations/44.json",
-      "retry_policy": "manual_only"
     }
   },
-  "updated_at": "2026-06-06T09:51:18.912986+08:00"
+  "updated_at": "2026-06-06T01:51:50.965Z"
 }
