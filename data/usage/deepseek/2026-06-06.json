@@ -2079,6 +2079,48 @@
       "total_tokens": 3642,
       "prompt_cache_hit_tokens": 0,
       "prompt_cache_miss_tokens": 2277
+    },
+    {
+      "time_cn": "2026-06-06 10:47:00",
+      "task": "fulltext",
+      "model": "deepseek-v4-flash",
+      "article_id": 2,
+      "article_title": "《战神：劳菲》总监回应玩家质疑",
+      "article_url": "https://www.ign.com/articles/god-of-war-laufey-director-understands-skepticism-following-reveal-but-hopes-fans-give-it-a-chance",
+      "article_date": "2026-06-07",
+      "detail": "",
+      "estimated_cost_usd": 0.00061298,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8402,
+      "completion_tokens": 2065,
+      "total_tokens": 10467,
+      "prompt_cache_hit_tokens": 8320,
+      "prompt_cache_miss_tokens": 82
+    },
+    {
+      "time_cn": "2026-06-06 10:47:13",
+      "task": "fulltext_repair",
+      "model": "deepseek-v4-flash",
+      "article_id": 2,
+      "article_title": "《战神：劳菲》总监回应玩家质疑",
+      "article_url": "https://www.ign.com/articles/god-of-war-laufey-director-understands-skepticism-following-reveal-but-hopes-fans-give-it-a-chance",
+      "article_date": "2026-06-07",
+      "detail": "1 audit issue(s)",
+      "estimated_cost_usd": 0.00100646,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 2929,
+      "completion_tokens": 2130,
+      "total_tokens": 5059,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 2929
     }
   ]
 }

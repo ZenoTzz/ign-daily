@@ -76,8 +76,8 @@
       "url": "https://www.ign.com/articles/god-of-war-laufey-director-understands-skepticism-following-reveal-but-hopes-fans-give-it-a-chance",
       "publish_time_cn": "2026-06-06 08:37",
       "pub_date": "2026-06-06 08:37",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/06/02/gowmeetthecastthumb-1780442012331.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/02/gowmeetthecastthumb-1780442012331.png",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/02/gowmeetthecastthumb-1780442012331.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/02/gowmeetthecastthumb-1780442012331.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -98,7 +98,11 @@
           "cn": "Cade Onder",
           "reason": "不知名人物，保留英文名"
         }
-      ]
+      ],
+      "translation_path": "translations/02.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-flash"
     },
     {
       "id": 3,
