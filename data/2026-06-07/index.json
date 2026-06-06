@@ -2,6 +2,50 @@
   "date": "2026-06-07",
   "articles": [
     {
+      "id": 7,
+      "category": "游戏新闻",
+      "emoji": "🎭",
+      "en_title": "Final Fantasy 7 Revelation Director Confirms New Voice Actor for Sephiroth",
+      "cn_title": "《最终幻想7 启示录》萨菲罗斯换声优",
+      "summary": "史克威尔艾尼克斯确认《最终幻想7 启示录》中萨菲罗斯的英文配音演员更换。导演滨口直树在夏日游戏节采访中透露，因原配音演员Tyler Hoechlin档期冲突，新角色将由Tarvis Willingham接替，他曾为《索尼克》纳克鲁斯、《钢之炼金术师》罗伊·马斯坦等角色配音。游戏将于2027年春季登陆PC、Switch 2、PS5和Xbox Series。",
+      "url": "https://www.ign.com/articles/final-fantasy-7-revelation-director-confirms-new-voice-actor-for-sephiroth",
+      "publish_time_cn": "2026-06-06 15:11",
+      "pub_date": "2026-06-06 15:11",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/06/final-fantasy-7-revelation-sephiroth-1780729489098.png?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/06/final-fantasy-7-revelation-sephiroth-1780729489098.png?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/06/final-fantasy-7-revelation-sephiroth-1780729489098.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/06/final-fantasy-7-revelation-sephiroth-1780729489098.png?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/06/final-fantasy-7-revelation-sephiroth-1780729489098.png?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/06/final-fantasy-7-revelation-sephiroth-1780729489098.png"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-06T16:47:07+08:00",
+      "pending_dict": [
+        {
+          "en": "Final Fantasy 7 Revelation",
+          "cn": "最终幻想7 启示录",
+          "reason": "官方中文译名待确认"
+        },
+        {
+          "en": "Tarvis Willingham",
+          "cn": "Tarvis Willingham",
+          "reason": "不知名人物，保留英文"
+        },
+        {
+          "en": "Tyler Hoechlin",
+          "cn": "Tyler Hoechlin",
+          "reason": "不知名人物，保留英文"
+        },
+        {
+          "en": "Maximilian Dood",
+          "cn": "Maximilian Dood",
+          "reason": "油管主，保留英文"
+        }
+      ]
+    },
+    {
       "id": 1,
       "category": "游戏新闻",
       "emoji": "🎮",
@@ -247,5 +291,5 @@
       ]
     }
   ],
-  "total": 6
+  "total": 7
 }
