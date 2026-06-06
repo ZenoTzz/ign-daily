@@ -1722,6 +1722,27 @@
       "total_tokens": 3646,
       "prompt_cache_hit_tokens": 0,
       "prompt_cache_miss_tokens": 2344
+    },
+    {
+      "time_cn": "2026-06-06 09:06:56",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 54,
+      "article_title": "Onimusha: Way of the Sword Is Up for Preorder – Here’s Where To Secure a Copy Ahead of September",
+      "article_url": "https://www.ign.com/articles/onimusha-way-of-the-sword-where-to-preorder",
+      "article_date": "2026-06-06",
+      "detail": "",
+      "estimated_cost_usd": 0.00026146,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7937,
+      "completion_tokens": 164,
+      "total_tokens": 8101,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 1409
     }
   ]
 }
