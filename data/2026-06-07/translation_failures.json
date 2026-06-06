@@ -1,25 +1,6 @@
 {
   "date": "2026-06-07",
   "items": {
-    "4": {
-      "id": 4,
-      "url": "https://www.ign.com/articles/telltale-ceo-explains-why-the-wolf-among-us-2-has-taken-so-long-and-what-happened-with-that-split-with-dispatch-maker-ad-hoc",
-      "en_title": "Telltale CEO Explains Why The Wolf Among Us 2 Has Taken So Long, And What Happened With That Split With Dispatch Maker Ad Hoc",
-      "cn_title": "《我们身边的狼2》为何难产？Telltale CEO详解",
-      "model": "deepseek-v4-flash",
-      "status": "needs_manual_review",
-      "failed_at": "2026-06-06T10:10:16.546137+08:00",
-      "reason": "[summary_length] opus_summary must be 70-80 non-space characters, got 92",
-      "audit_issues": [
-        {
-          "type": "summary_length",
-          "detail": "opus_summary must be 70-80 non-space characters, got 92"
-        }
-      ],
-      "fingerprint": "22adb171300e6f6046c00d65740fd85000ad9924",
-      "translation_path": "translations/04.json",
-      "retry_policy": "manual_only"
-    },
     "5": {
       "id": 5,
       "url": "https://www.ign.com/articles/the-wolf-among-us-2-now-due-in-2027-following-remaster-of-telltales-original-game",
@@ -40,5 +21,5 @@
       "retry_policy": "manual_only"
     }
   },
-  "updated_at": "2026-06-06T10:10:41.115113+08:00"
+  "updated_at": "2026-06-06T02:46:47.415Z"
 }
