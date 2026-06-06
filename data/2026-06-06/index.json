@@ -132,7 +132,7 @@
       "publish_time_cn": "2026-06-06 07:00",
       "pub_date": "2026-06-06 07:00",
       "cover_image": "",
-      "translation_status": "needs_review",
+      "translation_status": "done",
       "source_status": "cached",
       "source_fetched_at": "2026-06-06T08:08:52+08:00",
       "pending_dict": [
@@ -147,8 +147,6 @@
           "reason": "暂译，待确认官方中文名"
         }
       ],
-      "translation_error": "[summary_length] opus_summary must be 70-80 non-space characters, got 117",
-      "translation_failed_at": "2026-06-06T09:02:57.321551+08:00",
       "translator": "api",
       "translator_provider": "openai-compatible",
       "translator_model": "deepseek-v4-flash",
