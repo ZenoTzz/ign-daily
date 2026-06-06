@@ -1,5 +1,281 @@
 {
   "date": "2026-06-06",
-  "items": {},
-  "updated_at": "2026-06-05T06:08:55.333Z"
+  "items": {
+    "13": {
+      "id": 13,
+      "url": "https://www.ign.com/articles/resident-evil-veronica-announced-coming-2027",
+      "en_title": "Resident Evil Veronica Announced, Coming 2027",
+      "cn_title": "《生化危机：代号维罗妮卡》重制版正式公布，2027年发售",
+      "model": "deepseek-v4-flash",
+      "status": "needs_manual_review",
+      "failed_at": "2026-06-06T08:58:42.667593+08:00",
+      "reason": "Command '['/opt/hostedtoolcache/Python/3.11.15/x64/bin/python3', '/home/runner/work/ign-daily/ign-daily/scripts/translate_pipeline.py', '2026-06-06', '13', '--post']' returned non-zero exit status 1.",
+      "audit_issues": [],
+      "fingerprint": "037a247321c7cfb160a746704d728df248af17f1",
+      "translation_path": "translations/13.json",
+      "retry_policy": "manual_only"
+    },
+    "31": {
+      "id": 31,
+      "url": "https://www.ign.com/articles/guild-wars-3-officially-revealed-beta-starts-fall-2027-for-arenanets-next-mmorpg",
+      "en_title": "Guild Wars 3 Officially Revealed, Beta Starts Fall 2027 For ArenaNet's Next MMORPG",
+      "cn_title": "《激战3》正式公布，2027年秋季开启Beta测试",
+      "model": "deepseek-v4-flash",
+      "status": "needs_manual_review",
+      "failed_at": "2026-06-06T08:58:58.854925+08:00",
+      "reason": "[summary_length] opus_summary must be 70-80 non-space characters, got 81",
+      "audit_issues": [
+        {
+          "type": "summary_length",
+          "detail": "opus_summary must be 70-80 non-space characters, got 81"
+        }
+      ],
+      "fingerprint": "dbd3d97832a99ecab88efbc2a4effafed91b6661",
+      "translation_path": "translations/31.json",
+      "retry_policy": "manual_only"
+    },
+    "37": {
+      "id": 37,
+      "url": "https://www.ign.com/articles/teenage-mutant-ninja-turtles-the-last-ronin-is-in-development-at-platinumgames",
+      "en_title": "Teenage Mutant Ninja Turtles: The Last Ronin Is in Development at PlatinumGames",
+      "cn_title": "白金工作室操刀《忍者神龟：最后的浪人》",
+      "model": "deepseek-v4-flash",
+      "status": "needs_manual_review",
+      "failed_at": "2026-06-06T09:00:07.480308+08:00",
+      "reason": "[summary_length] opus_summary must be 70-80 non-space characters, got 97",
+      "audit_issues": [
+        {
+          "type": "summary_length",
+          "detail": "opus_summary must be 70-80 non-space characters, got 97"
+        }
+      ],
+      "fingerprint": "5fb9da646a9c4e704c47fdeff994f976de8ce7e2",
+      "translation_path": "translations/37.json",
+      "retry_policy": "manual_only"
+    },
+    "39": {
+      "id": 39,
+      "url": "https://www.ign.com/articles/studio-mdhr-announces-2-new-cuphead-games-are-in-development",
+      "en_title": "Studio MDHR Announces 2 New Cuphead Games Are in Development",
+      "cn_title": "《茶杯头》开发商公布两款新作",
+      "model": "deepseek-v4-flash",
+      "status": "needs_manual_review",
+      "failed_at": "2026-06-06T09:00:23.841601+08:00",
+      "reason": "[summary_length] opus_summary must be 70-80 non-space characters, got 86",
+      "audit_issues": [
+        {
+          "type": "summary_length",
+          "detail": "opus_summary must be 70-80 non-space characters, got 86"
+        }
+      ],
+      "fingerprint": "d85a99464ebc48d722cc49dfc6bc3dd5062c6e7c",
+      "translation_path": "translations/39.json",
+      "retry_policy": "manual_only"
+    },
+    "40": {
+      "id": 40,
+      "url": "https://www.ign.com/articles/new-fumito-ueda-game-gets-official-title-gen-atlas-no-release-date-or-window-given",
+      "en_title": "New Fumito Ueda Game Gets Official Title, gen Atlas — No Release Date or Window Given",
+      "cn_title": "上田文人新作正式定名《gen ATLAS》",
+      "model": "deepseek-v4-flash",
+      "status": "needs_manual_review",
+      "failed_at": "2026-06-06T09:00:44.996739+08:00",
+      "reason": "[summary_length] opus_summary must be 70-80 non-space characters, got 68",
+      "audit_issues": [
+        {
+          "type": "summary_length",
+          "detail": "opus_summary must be 70-80 non-space characters, got 68"
+        }
+      ],
+      "fingerprint": "5e12573e1e751e131d26eca9e6e11902d81e158b",
+      "translation_path": "translations/40.json",
+      "retry_policy": "manual_only"
+    },
+    "41": {
+      "id": 41,
+      "url": "https://www.ign.com/articles/first-alien-isolation-2-footage-revealed-at-summer-game-fest-2026",
+      "en_title": "First Alien: Isolation 2 Footage Revealed at Summer Game Fest 2026",
+      "cn_title": "《异形：隔离2》首支预告片在夏日游戏节公开",
+      "model": "deepseek-v4-flash",
+      "status": "needs_manual_review",
+      "failed_at": "2026-06-06T09:01:03.998499+08:00",
+      "reason": "[summary_length] opus_summary must be 70-80 non-space characters, got 98",
+      "audit_issues": [
+        {
+          "type": "summary_length",
+          "detail": "opus_summary must be 70-80 non-space characters, got 98"
+        }
+      ],
+      "fingerprint": "965c3a56633199d9cb5ab2c91fde65862006cc56",
+      "translation_path": "translations/41.json",
+      "retry_policy": "manual_only"
+    },
+    "43": {
+      "id": 43,
+      "url": "https://www.ign.com/articles/final-fantasy-vii-remake-part-3-called-revelation-out-simultaneously-across-all-platforms",
+      "en_title": "Final Fantasy VII Remake Part 3 Called Revelation, Out Simultaneously Across All Platforms",
+      "cn_title": "《最终幻想7 重制版》第三部定名《启示录》，全平台同步发售",
+      "model": "deepseek-v4-flash",
+      "status": "needs_manual_review",
+      "failed_at": "2026-06-06T09:01:28.795109+08:00",
+      "reason": "[summary_length] opus_summary must be 70-80 non-space characters, got 105",
+      "audit_issues": [
+        {
+          "type": "summary_length",
+          "detail": "opus_summary must be 70-80 non-space characters, got 105"
+        }
+      ],
+      "fingerprint": "49fe9b61d1989771ead10a4c09400c755b3c6d09",
+      "translation_path": "translations/43.json",
+      "retry_policy": "manual_only"
+    },
+    "45": {
+      "id": 45,
+      "url": "https://www.ign.com/articles/medieval-chronicles-ign-preview",
+      "en_title": "Medieval: Chronicles Looks to Offer Deep Strategic Gameplay Along With Gruesome Up-Close Action Combat | IGN Preview",
+      "cn_title": "《中世纪编年史》前瞻：战略与血腥近战结合",
+      "model": "deepseek-v4-flash",
+      "status": "needs_manual_review",
+      "failed_at": "2026-06-06T09:02:57.321551+08:00",
+      "reason": "[summary_length] opus_summary must be 70-80 non-space characters, got 117",
+      "audit_issues": [
+        {
+          "type": "summary_length",
+          "detail": "opus_summary must be 70-80 non-space characters, got 117"
+        }
+      ],
+      "fingerprint": "67b3445023fd7c89c375299a9a7d0a6a022ff87c",
+      "translation_path": "translations/45.json",
+      "retry_policy": "manual_only"
+    },
+    "46": {
+      "id": 46,
+      "url": "https://www.ign.com/articles/mmorpg-aion-2-announces-september-global-release-date",
+      "en_title": "MMORPG AION 2 Announces September Global Release Date",
+      "cn_title": "《永恒之塔2》宣布9月全球上线",
+      "model": "deepseek-v4-flash",
+      "status": "needs_manual_review",
+      "failed_at": "2026-06-06T09:03:28.537066+08:00",
+      "reason": "Command '['/opt/hostedtoolcache/Python/3.11.15/x64/bin/python3', '/home/runner/work/ign-daily/ign-daily/scripts/translate_pipeline.py', '2026-06-06', '46', '--post']' returned non-zero exit status 1.",
+      "audit_issues": [],
+      "fingerprint": "c122f7be24c1c4ff8adc7d12dac1ce64bb416030",
+      "translation_path": "translations/46.json",
+      "retry_policy": "manual_only"
+    },
+    "47": {
+      "id": 47,
+      "url": "https://www.ign.com/articles/palworld-is-finally-getting-its-full-10-release-coming-in-july",
+      "en_title": "Palworld is Finally Getting Its Full 1.0 Release, Coming in July",
+      "cn_title": "《幻兽帕鲁》正式版7月10日发售",
+      "model": "deepseek-v4-flash",
+      "status": "needs_manual_review",
+      "failed_at": "2026-06-06T09:03:42.031616+08:00",
+      "reason": "[summary_length] opus_summary must be 70-80 non-space characters, got 84",
+      "audit_issues": [
+        {
+          "type": "summary_length",
+          "detail": "opus_summary must be 70-80 non-space characters, got 84"
+        }
+      ],
+      "fingerprint": "7a2c5ae4aff0d0c87c5c84d62f5cef3aa747d699",
+      "translation_path": "translations/47.json",
+      "retry_policy": "manual_only"
+    },
+    "48": {
+      "id": 48,
+      "url": "https://www.ign.com/articles/stellar-blade-bloodrain-revealed-with-debut-trailer",
+      "en_title": "Stellar Blade Bloodrain Revealed With Debut Trailer",
+      "cn_title": "《剑星》续作《剑星：血雨》正式公布",
+      "model": "deepseek-v4-flash",
+      "status": "needs_manual_review",
+      "failed_at": "2026-06-06T09:03:58.112458+08:00",
+      "reason": "[summary_length] opus_summary must be 70-80 non-space characters, got 96",
+      "audit_issues": [
+        {
+          "type": "summary_length",
+          "detail": "opus_summary must be 70-80 non-space characters, got 96"
+        }
+      ],
+      "fingerprint": "f82797c25683aac51c9378b14a76e1ba291661f0",
+      "translation_path": "translations/48.json",
+      "retry_policy": "manual_only"
+    },
+    "49": {
+      "id": 49,
+      "url": "https://www.ign.com/articles/maverick-games-open-world-racer-clutch-is-set-on-the-french-riviera-features-monaco",
+      "en_title": "Maverick Game’s Open-World Racer Clutch Is Set on the French Riviera, Features Monaco",
+      "cn_title": "《离合器》亮相夏日游戏节，开放世界竞速登陆法国里维埃拉",
+      "model": "deepseek-v4-flash",
+      "status": "needs_manual_review",
+      "failed_at": "2026-06-06T09:04:39.822323+08:00",
+      "reason": "[summary_length] opus_summary must be 70-80 non-space characters, got 97",
+      "audit_issues": [
+        {
+          "type": "summary_length",
+          "detail": "opus_summary must be 70-80 non-space characters, got 97"
+        }
+      ],
+      "fingerprint": "cd3e4254ec689bb9b52d273d36ee2e9f9d86fc52",
+      "translation_path": "translations/49.json",
+      "retry_policy": "manual_only"
+    },
+    "50": {
+      "id": 50,
+      "url": "https://www.ign.com/articles/hot-wheels-infinite-rush-takes-the-racing-game-series-open-world",
+      "en_title": "Hot Wheels Infinite Rush Takes the Racing Game Series Open World",
+      "cn_title": "《风火轮无限冲刺》系列首度开放世界",
+      "model": "deepseek-v4-flash",
+      "status": "needs_manual_review",
+      "failed_at": "2026-06-06T09:04:56.517613+08:00",
+      "reason": "[summary_length] opus_summary must be 70-80 non-space characters, got 106",
+      "audit_issues": [
+        {
+          "type": "summary_length",
+          "detail": "opus_summary must be 70-80 non-space characters, got 106"
+        }
+      ],
+      "fingerprint": "9c5be236b0804760ca7d283157a39b2713698e2c",
+      "translation_path": "translations/50.json",
+      "retry_policy": "manual_only"
+    },
+    "51": {
+      "id": 51,
+      "url": "https://www.ign.com/articles/gothic-1-remake-review",
+      "en_title": "Gothic 1 Remake Review So Far",
+      "cn_title": "《哥特王朝1：重制版》评测：经典重现，优劣并存",
+      "model": "deepseek-v4-flash",
+      "status": "needs_manual_review",
+      "failed_at": "2026-06-06T09:06:07.375305+08:00",
+      "reason": "[summary_length] opus_summary must be 70-80 non-space characters, got 81",
+      "audit_issues": [
+        {
+          "type": "summary_length",
+          "detail": "opus_summary must be 70-80 non-space characters, got 81"
+        }
+      ],
+      "fingerprint": "2cd9a4658cddf516b84b09dc9f1c6909ac6717bf",
+      "translation_path": "translations/51.json",
+      "retry_policy": "manual_only"
+    },
+    "53": {
+      "id": 53,
+      "url": "https://www.ign.com/articles/assassins-creed-co-creator-re-reveals-1666-amsterdam-30-minute-demo-playable-now",
+      "en_title": "Assassin's Creed Co-Creator Re-Reveals 1666 Amsterdam, 30-Minute Demo Playable Now",
+      "cn_title": "《刺客信条》联合创始人重推《1666阿姆斯特丹》，试玩版现已上线",
+      "model": "deepseek-v4-flash",
+      "status": "needs_manual_review",
+      "failed_at": "2026-06-06T09:06:44.002445+08:00",
+      "reason": "[summary_length] opus_summary must be 70-80 non-space characters, got 95",
+      "audit_issues": [
+        {
+          "type": "summary_length",
+          "detail": "opus_summary must be 70-80 non-space characters, got 95"
+        }
+      ],
+      "fingerprint": "a7a41dfdd40a9a8cfa45cfc172d79ff4827c3347",
+      "translation_path": "translations/53.json",
+      "retry_policy": "manual_only"
+    }
+  },
+  "updated_at": "2026-06-06T09:06:44.002445+08:00"
 }

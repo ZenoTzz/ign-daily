@@ -7,12 +7,12 @@
       "emoji": "👽",
       "en_title": "First Alien: Isolation 2 Footage Revealed at Summer Game Fest 2026",
       "cn_title": "《异形：隔离2》首支预告片在夏日游戏节公开",
-      "summary": "世嘉与Creative Assembly在2026年夏日游戏节上正式公布了《异形：隔离2》的首支预告片。游戏确认登陆PS5、Xbox Series、PC（Steam）及Nintendo Switch 2平台，现已可加入愿望单。本作将引入新主角，故事发生在Weyland-Yutani的Kurosaki Station前哨站，玩家将再次与致命异形展开猫鼠游戏。创意总监Al Hope表示，续作将让异形更聪明、环境更严酷、生存几率更低。游戏将首次包含室外场景，突破前作的封闭走廊设计。",
+      "summary": "世嘉与Creative Assembly在夏日游戏节公布《异形：隔离2》预告片，登陆PS5、Xbox Series、PC及任天堂Switch 2，新主角在Kurosaki Station对抗更聪明的异形。",
       "url": "https://www.ign.com/articles/first-alien-isolation-2-footage-revealed-at-summer-game-fest-2026",
       "publish_time_cn": "2026-06-06 07:02",
       "pub_date": "2026-06-06 07:02",
       "cover_image": "https://assets-prd.ignimgs.com/2026/06/05/hkfvvpub0aakl-1780700567931.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/05/hkfvvpub0aakl-1780700567931.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/05/hkfvvpub0aakl-1780700567931.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -38,7 +38,13 @@
           "cn": "维兰德-汤谷公司",
           "reason": "确认系列一贯译名"
         }
-      ]
+      ],
+      "translation_error": "[summary_length] opus_summary must be 70-80 non-space characters, got 98",
+      "translation_failed_at": "2026-06-06T09:01:03.998499+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-flash",
+      "translation_path": "translations/41.json"
     },
     {
       "id": 42,
@@ -69,12 +75,12 @@
       "emoji": "🎮",
       "en_title": "Final Fantasy VII Remake Part 3 Called Revelation, Out Simultaneously Across All Platforms",
       "cn_title": "《最终幻想7 重制版》第三部定名《启示录》，全平台同步发售",
-      "summary": "史克威尔艾尼克斯在夏日游戏节上正式公布《最终幻想7 重制版》第三部《最终幻想7 启示录》，将于2027年春季登陆Nintendo Switch 2、PS5、Xbox Series及PC平台。本作将拥有系列最广阔的开放世界，文森特·瓦伦丁和希德·海温德成为可玩角色，并引入全新战斗系统FITS，通过更换服装改变战斗风格。",
+      "summary": "史克威尔艾尼克斯公布《最终幻想7 重制版》第三部《启示录》，2027年春季登陆任天堂Switch 2、PS5、Xbox Series及PC。本作拥有系列最广阔开放世界，文森特和希德成为可玩角色，引入FITS战斗系统。",
       "url": "https://www.ign.com/articles/final-fantasy-vii-remake-part-3-called-revelation-out-simultaneously-across-all-platforms",
       "publish_time_cn": "2026-06-06 07:00",
       "pub_date": "2026-06-06 07:00",
       "cover_image": "https://assets-prd.ignimgs.com/2026/06/05/hkfch3haiaax91h-1780700227262.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/05/hkfch3haiaax91h-1780700227262.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/05/hkfch3haiaax91h-1780700227262.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -83,7 +89,13 @@
         "https://assets-prd.ignimgs.com/2026/06/05/hkfch3haiaax91h-1780700227262.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-06T08:08:51+08:00"
+      "source_fetched_at": "2026-06-06T08:08:51+08:00",
+      "translation_error": "[summary_length] opus_summary must be 70-80 non-space characters, got 105",
+      "translation_failed_at": "2026-06-06T09:01:28.795109+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-flash",
+      "translation_path": "translations/43.json"
     },
     {
       "id": 44,
@@ -113,12 +125,12 @@
       "emoji": "⚔️",
       "en_title": "Medieval: Chronicles Looks to Offer Deep Strategic Gameplay Along With Gruesome Up-Close Action Combat | IGN Preview",
       "cn_title": "《中世纪编年史》前瞻：战略与血腥近战结合",
-      "summary": "新工作室Raw Power Games的沙盒RPG《中世纪编年史》在夏日游戏节上放出新预告。游戏融合第三人称动作战斗与大规模战略指挥，支持最多2000人同屏战斗。玩家可通过连击系统破防处决敌人，士气系统影响战局。演员汤姆·哈迪与拉尔斯·米科尔森加盟配音。游戏计划今年晚些时候开启抢先体验。",
+      "summary": "新工作室Raw Power Games的沙盒RPG《中世纪编年史》融合第三人称动作战斗与大规模战略指挥，支持最多2000人同屏战斗。连击系统可破防处决，士气系统影响战局。汤姆·哈迪与拉尔斯·米科尔森加盟配音，计划今年晚些时候开启抢先体验。",
       "url": "https://www.ign.com/articles/medieval-chronicles-ign-preview",
       "publish_time_cn": "2026-06-06 07:00",
       "pub_date": "2026-06-06 07:00",
       "cover_image": "",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "source_status": "cached",
       "source_fetched_at": "2026-06-06T08:08:52+08:00",
       "pending_dict": [
@@ -132,7 +144,13 @@
           "cn": "《中世纪编年史》",
           "reason": "暂译，待确认官方中文名"
         }
-      ]
+      ],
+      "translation_error": "[summary_length] opus_summary must be 70-80 non-space characters, got 117",
+      "translation_failed_at": "2026-06-06T09:02:57.321551+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-flash",
+      "translation_path": "translations/45.json"
     },
     {
       "id": 46,
@@ -140,12 +158,12 @@
       "emoji": "🎮",
       "en_title": "MMORPG AION 2 Announces September Global Release Date",
       "cn_title": "《永恒之塔2》宣布9月全球上线",
-      "summary": "NCsoft宣布《永恒之塔2》将于今年9月全球同步上线。本作采用Unreal Engine 5开发，世界规模是前作的36倍，拥有近200个地下城和丰富的PvP内容，支持PC平台。",
+      "summary": "NCsoft宣布《永恒之塔2》9月全球上线。本作采用Unreal Engine 5开发，世界规模是前作的36倍，拥有近200个地下城和丰富PvP内容，支持PC平台。",
       "url": "https://www.ign.com/articles/mmorpg-aion-2-announces-september-global-release-date",
       "publish_time_cn": "2026-06-06 07:00",
       "pub_date": "2026-06-06 07:00",
       "cover_image": "https://assets-prd.ignimgs.com/2026/06/03/wallpaper-h-07-aion2-1780511363546.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/03/wallpaper-h-07-aion2-1780511363546.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/03/wallpaper-h-07-aion2-1780511363546.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -159,7 +177,13 @@
         "https://assets-prd.ignimgs.com/2026/06/03/abyss-combat-2-1780511322708.png"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-06T08:08:52+08:00"
+      "source_fetched_at": "2026-06-06T08:08:52+08:00",
+      "translation_error": "Command '['/opt/hostedtoolcache/Python/3.11.15/x64/bin/python3', '/home/runner/work/ign-daily/ign-daily/scripts/translate_pipeline.py', '2026-06-06', '46', '--post']' returned non-zero exit status 1.",
+      "translation_failed_at": "2026-06-06T09:03:28.537066+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-flash",
+      "translation_path": "translations/46.json"
     },
     {
       "id": 47,
@@ -167,12 +191,12 @@
       "emoji": "🎮",
       "en_title": "Palworld is Finally Getting Its Full 1.0 Release, Coming in July",
       "cn_title": "《幻兽帕鲁》正式版7月10日发售",
-      "summary": "在夏日游戏节上，开发商Pocket Pair宣布《幻兽帕鲁》1.0正式版将于7月10日登陆PC、Xbox Series和PS5。该作自2024年1月开启抢先体验以来，已售出数百万份，并因与任天堂和宝可梦公司的专利纠纷而备受关注。IGN抢先体验评测给出8/10评分。",
+      "summary": "《幻兽帕鲁》1.0正式版7月10日登陆PC、Xbox和PS5。该作自2024年1月抢先体验以来销量数百万，因与任天堂和宝可梦公司的专利纠纷备受关注。IGN评测8/10。",
       "url": "https://www.ign.com/articles/palworld-is-finally-getting-its-full-10-release-coming-in-july",
       "publish_time_cn": "2026-06-06 06:59",
       "pub_date": "2026-06-06 06:59",
       "cover_image": "https://assets-prd.ignimgs.com/2026/06/05/palworld10-1780700486756.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/05/palworld10-1780700486756.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/05/palworld10-1780700486756.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -181,7 +205,13 @@
         "https://assets-prd.ignimgs.com/2026/06/05/palworld10-1780700486756.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-06T08:08:53+08:00"
+      "source_fetched_at": "2026-06-06T08:08:53+08:00",
+      "translation_error": "[summary_length] opus_summary must be 70-80 non-space characters, got 84",
+      "translation_failed_at": "2026-06-06T09:03:42.031616+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-flash",
+      "translation_path": "translations/47.json"
     },
     {
       "id": 48,
@@ -189,12 +219,12 @@
       "emoji": "🎮",
       "en_title": "Stellar Blade Bloodrain Revealed With Debut Trailer",
       "cn_title": "《剑星》续作《剑星：血雨》正式公布",
-      "summary": "Shift Up 在夏日游戏节上公布了《剑星》续作《剑星：血雨》，并放出首支预告。该作将由 Shift Up 新发行部门独立发行，不再由索尼互动娱乐负责，因此将登陆 Xbox Series、PC 及 PS5 平台。游戏仍处于早期开发阶段，预计还需较长时间才能发售。",
+      "summary": "Shift Up在夏日游戏节公布《剑星》续作《剑星：血雨》及首支预告。该作由Shift Up新发行部门独立发行，不再由索尼互动娱乐负责，将登陆Xbox Series、PC及PS5。游戏仍处早期开发。",
       "url": "https://www.ign.com/articles/stellar-blade-bloodrain-revealed-with-debut-trailer",
       "publish_time_cn": "2026-06-06 06:46",
       "pub_date": "2026-06-06 06:46",
       "cover_image": "https://assets-prd.ignimgs.com/2026/06/05/hkfaoorwgaar2-r-1780699607211.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/05/hkfaoorwgaar2-r-1780699607211.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/05/hkfaoorwgaar2-r-1780699607211.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -215,7 +245,13 @@
           "cn": "伊薇",
           "reason": "新主角名，官方中文译名待确认"
         }
-      ]
+      ],
+      "translation_error": "[summary_length] opus_summary must be 70-80 non-space characters, got 96",
+      "translation_failed_at": "2026-06-06T09:03:58.112458+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-flash",
+      "translation_path": "translations/48.json"
     },
     {
       "id": 49,
@@ -223,12 +259,12 @@
       "emoji": "🏎️",
       "en_title": "Maverick Game’s Open-World Racer Clutch Is Set on the French Riviera, Features Monaco",
       "cn_title": "《离合器》亮相夏日游戏节，开放世界竞速登陆法国里维埃拉",
-      "summary": "Maverick Games 在夏日游戏节上公布了开放世界竞速游戏《离合器》(Clutch)的首批细节。游戏设定在法国里维埃拉，包含摩纳哥、戛纳和圣特罗佩等城市，地图比真实摩纳哥更大。故事围绕职业赛道、地下街头赛车和高速追逐展开，由《皮囊》编剧 Jamie Brittain 执笔剧本，Tosin Cole 和 Little Simz 配音。游戏将于2027年春季登陆 PS5、Xbox Series 和 PC。",
+      "summary": "Maverick Games在夏日游戏节公布开放世界竞速游戏《离合器》，设定于法国里维埃拉，包含摩纳哥等城市，故事围绕职业赛道与地下赛车展开，2027年春季登陆PS5、Xbox Series和PC。",
       "url": "https://www.ign.com/articles/maverick-games-open-world-racer-clutch-is-set-on-the-french-riviera-features-monaco",
       "publish_time_cn": "2026-06-06 06:33",
       "pub_date": "2026-06-06 06:33",
       "cover_image": "https://assets-prd.ignimgs.com/2026/06/02/clutch-1280-1780395643697.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/02/clutch-1280-1780395643697.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/02/clutch-1280-1780395643697.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -254,7 +290,13 @@
           "cn": "午夜集体",
           "reason": "地下赛车组织名，建议人工确认"
         }
-      ]
+      ],
+      "translation_error": "[summary_length] opus_summary must be 70-80 non-space characters, got 97",
+      "translation_failed_at": "2026-06-06T09:04:39.822323+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-flash",
+      "translation_path": "translations/49.json"
     },
     {
       "id": 50,
@@ -262,12 +304,12 @@
       "emoji": "🚗",
       "en_title": "Hot Wheels Infinite Rush Takes the Racing Game Series Open World",
       "cn_title": "《风火轮无限冲刺》系列首度开放世界",
-      "summary": "《风火轮无限冲刺》在夏日游戏节上公布，将于2026年9月24日登陆PS5、Xbox Series、PC及Switch 2，售价49.99美元(约合人民币358元)。本作由《风火轮释放》开发商Milestone打造，首次采用开放世界设计，面向年轻玩家，包含海滩、城市、丛林等赛道场景。",
+      "summary": "《风火轮无限冲刺》在夏日游戏节公布，2026年9月24日登陆PS5、Xbox Series、PC及任天堂Switch 2，售价49.99美元(约合人民币358元)。本作由Milestone开发，首次采用开放世界设计。",
       "url": "https://www.ign.com/articles/hot-wheels-infinite-rush-takes-the-racing-game-series-open-world",
       "publish_time_cn": "2026-06-06 06:30",
       "pub_date": "2026-06-06 06:30",
       "cover_image": "https://assets-prd.ignimgs.com/2026/06/05/hkfv3jtbeaa1djl-1780698550353.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/05/hkfv3jtbeaa1djl-1780698550353.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/05/hkfv3jtbeaa1djl-1780698550353.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -293,7 +335,13 @@
           "cn": "Clutch",
           "reason": "竞速游戏名，无官方译名，保留英文"
         }
-      ]
+      ],
+      "translation_error": "[summary_length] opus_summary must be 70-80 non-space characters, got 106",
+      "translation_failed_at": "2026-06-06T09:04:56.517613+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-flash",
+      "translation_path": "translations/50.json"
     },
     {
       "id": 51,
@@ -301,12 +349,12 @@
       "emoji": "🎮",
       "en_title": "Gothic 1 Remake Review So Far",
       "cn_title": "《哥特王朝1：重制版》评测：经典重现，优劣并存",
-      "summary": "《哥特王朝1：重制版》在画面和音效上进行了现代化升级，完全重新配音，并优化了操作和手柄支持。然而，故事节奏、任务设计和浅薄的战斗系统等原版缺陷并未改善。游戏依然保持高难度和不妥协的沉浸感，但整体体验好坏参半。",
+      "summary": "《哥特王朝1：重制版》在画面、音效和操作上现代化升级，完全重新配音并支持手柄。但故事节奏、任务设计和浅薄战斗等原版缺陷未改善，高难度沉浸感依旧，整体体验好坏参半。",
       "url": "https://www.ign.com/articles/gothic-1-remake-review",
       "publish_time_cn": "2026-06-06 06:29",
       "pub_date": "2026-06-06 06:29",
       "cover_image": "https://assets-prd.ignimgs.com/2026/06/05/gothic-1-remake-blogroll-1780698566745.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/05/gothic-1-remake-blogroll-1780698566745.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/05/gothic-1-remake-blogroll-1780698566745.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -316,7 +364,13 @@
         "https://assets-prd.ignimgs.com/2026/06/05/gothic-1-remake-yt-1780698557692.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-06T08:08:55+08:00"
+      "source_fetched_at": "2026-06-06T08:08:55+08:00",
+      "translation_error": "[summary_length] opus_summary must be 70-80 non-space characters, got 81",
+      "translation_failed_at": "2026-06-06T09:06:07.375305+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-flash",
+      "translation_path": "translations/51.json"
     },
     {
       "id": 52,
@@ -378,12 +432,12 @@
       "emoji": "🎮",
       "en_title": "Assassin's Creed Co-Creator Re-Reveals 1666 Amsterdam, 30-Minute Demo Playable Now",
       "cn_title": "《刺客信条》联合创始人重推《1666阿姆斯特丹》，试玩版现已上线",
-      "summary": "《刺客信条》联合创始人Patrice Désilets在夏日游戏节上重新公布了曾被放弃的历史动作冒险游戏《1666阿姆斯特丹》。该作是一款黑暗第三人称剧情驱动动作冒险游戏，Désilets在THQ Montreal时期便开始构思，后经育碧辗转，最终由他的工作室Panache Digital赢回版权。目前免费试玩序章已在Steam和Epic Games Store上线，正式版将于2026年在PC平台开启抢先体验，主机版稍后推出。",
+      "summary": "《刺客信条》联合创始人Patrice Désilets在夏日游戏节上重新公布《1666阿姆斯特丹》，免费试玩序章已在Steam和Epic Games Store上线，正式版2026年PC抢先体验。",
       "url": "https://www.ign.com/articles/assassins-creed-co-creator-re-reveals-1666-amsterdam-30-minute-demo-playable-now",
       "publish_time_cn": "2026-06-06 06:16",
       "pub_date": "2026-06-06 06:16",
       "cover_image": "https://assets-prd.ignimgs.com/2026/06/05/hkfqknlwaaafark-1780697087378.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/05/hkfqknlwaaafark-1780697087378.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/05/hkfqknlwaaafark-1780697087378.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -414,7 +468,13 @@
           "cn": "《祖先：人类史诗》",
           "reason": "游戏名，词库中无记录，建议确认译名"
         }
-      ]
+      ],
+      "translation_error": "[summary_length] opus_summary must be 70-80 non-space characters, got 95",
+      "translation_failed_at": "2026-06-06T09:06:44.002445+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-flash",
+      "translation_path": "translations/53.json"
     },
     {
       "id": 31,
@@ -422,12 +482,12 @@
       "emoji": "🎮",
       "en_title": "Guild Wars 3 Officially Revealed, Beta Starts Fall 2027 For ArenaNet's Next MMORPG",
       "cn_title": "《激战3》正式公布，2027年秋季开启Beta测试",
-      "summary": "在夏日游戏节上，ArenaNet正式公布了《激战3》。本作是一款动作MMORPG，强调跑酷、动量战斗与分支技能树，支持键鼠和手柄操作。故事设定在泰瑞亚的欧尔地区，时间线比初代早一千年，玩家将扮演Vaelwarden保护自然与灵魂。Beta测试将于2027年秋季启动。",
+      "summary": "ArenaNet在夏日游戏节公布《激战3》，动作MMORPG，强调跑酷与动量战斗，故事设定在泰瑞亚欧尔地区，时间线早于初代一千年，Beta测试2027年秋季启动。",
       "url": "https://www.ign.com/articles/guild-wars-3-officially-revealed-beta-starts-fall-2027-for-arenanets-next-mmorpg",
       "publish_time_cn": "2026-06-06 06:03",
       "pub_date": "2026-06-06 06:03",
       "cover_image": "https://assets-prd.ignimgs.com/2026/06/05/trailer-still-3-1780696427970.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/05/trailer-still-3-1780696427970.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/05/trailer-still-3-1780696427970.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -453,7 +513,13 @@
           "cn": "寻者",
           "reason": "专有名词，需确认官方或社区译名"
         }
-      ]
+      ],
+      "translation_error": "[summary_length] opus_summary must be 70-80 non-space characters, got 81",
+      "translation_failed_at": "2026-06-06T08:58:58.854925+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-flash",
+      "translation_path": "translations/31.json"
     },
     {
       "id": 32,
@@ -629,12 +695,12 @@
       "emoji": "🐢",
       "en_title": "Teenage Mutant Ninja Turtles: The Last Ronin Is in Development at PlatinumGames",
       "cn_title": "白金工作室操刀《忍者神龟：最后的浪人》",
-      "summary": "派拉蒙成立游戏工作室，首款大作即与《猎天使魔女》开发商白金工作室合作，推出《忍者神龟：最后的浪人》AAA动作冒险游戏。该作基于热门漫画改编，讲述最后一只神龟的复仇之旅。白金工作室将融合日式动作与西方叙事，对标《尼尔：机械纪元》。",
+      "summary": "派拉蒙成立游戏工作室，首款大作与白金工作室合作推出《忍者神龟：最后的浪人》AAA动作冒险游戏。基于热门漫画，讲述最后一只神龟的复仇之旅，白金工作室融合日式动作与西方叙事，对标《尼尔：机械纪元》。",
       "url": "https://www.ign.com/articles/teenage-mutant-ninja-turtles-the-last-ronin-is-in-development-at-platinumgames",
       "publish_time_cn": "2026-06-06 05:40",
       "pub_date": "2026-06-06 05:40",
       "cover_image": "https://assets-prd.ignimgs.com/2026/06/04/turtles-main-1780606823996.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/04/turtles-main-1780606823996.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/04/turtles-main-1780606823996.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -667,7 +733,13 @@
           "cn": "新堀洋平",
           "reason": "日本制作人，需确认汉字姓名。"
         }
-      ]
+      ],
+      "translation_error": "[summary_length] opus_summary must be 70-80 non-space characters, got 97",
+      "translation_failed_at": "2026-06-06T09:00:07.480308+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-flash",
+      "translation_path": "translations/37.json"
     },
     {
       "id": 38,
@@ -697,12 +769,12 @@
       "emoji": "🎮",
       "en_title": "Studio MDHR Announces 2 New Cuphead Games Are in Development",
       "cn_title": "《茶杯头》开发商公布两款新作",
-      "summary": "在2026年夏日游戏节上，Studio MDHR宣布正在开发两款《茶杯头》新作：一款像素风横版游戏《Mighty Cuphead Adventure》已放出实机演示，另一款手绘动画续作尚处早期开发阶段。两款游戏均未公布发售日期和平台。",
+      "summary": "Studio MDHR在夏日游戏节公布两款《茶杯头》新作：像素风《Mighty Cuphead Adventure》已放实机演示，手绘动画续作尚处早期开发。均未公布发售日和平台。",
       "url": "https://www.ign.com/articles/studio-mdhr-announces-2-new-cuphead-games-are-in-development",
       "publish_time_cn": "2026-06-06 05:21",
       "pub_date": "2026-06-06 05:21",
       "cover_image": "https://assets-prd.ignimgs.com/2026/06/05/studio-mdhr-reveals-2-new-cuphead-games-summer-game-fest-1780694740409.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/05/studio-mdhr-reveals-2-new-cuphead-games-summer-game-fest-1780694740409.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/05/studio-mdhr-reveals-2-new-cuphead-games-summer-game-fest-1780694740409.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -718,20 +790,26 @@
           "cn": "Mighty Cuphead Adventure",
           "reason": "暂无官方中文译名，建议保留英文"
         }
-      ]
+      ],
+      "translation_error": "[summary_length] opus_summary must be 70-80 non-space characters, got 86",
+      "translation_failed_at": "2026-06-06T09:00:23.841601+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-flash",
+      "translation_path": "translations/39.json"
     },
     {
       "id": 40,
       "category": "游戏新闻",
       "emoji": "🎮",
       "en_title": "New Fumito Ueda Game Gets Official Title, gen Atlas — No Release Date or Window Given",
-      "cn_title": "《gen ATLAS》正式公布，上田文人新作定名",
-      "summary": "传奇制作人上田文人在夏日游戏节上公布了新作正式名称《gen ATLAS》，并放出全新预告。这款原代号“Project Robot”的游戏是《ICO》《旺达与巨像》《最后的守护者》创作者新工作室 genDESIGN 的首部作品，为单人开放世界动作冒险，登陆 PS5、Xbox Series 和 PC（Epic 商店）。这也是上田文人离开索尼后首次不再由 PlayStation 独占的作品。目前尚未公布发售日期或窗口。",
+      "cn_title": "上田文人新作正式定名《gen ATLAS》",
+      "summary": "上田文人新作正式定名《gen ATLAS》，为单人开放世界动作冒险，登陆PS5、Xbox Series和PC，非PlayStation独占。",
       "url": "https://www.ign.com/articles/new-fumito-ueda-game-gets-official-title-gen-atlas-no-release-date-or-window-given",
       "publish_time_cn": "2026-06-06 05:18",
       "pub_date": "2026-06-06 05:18",
       "cover_image": "https://assets-prd.ignimgs.com/2026/06/05/hkfggnowcaazzui-1780694261897.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/05/hkfggnowcaazzui-1780694261897.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/05/hkfggnowcaazzui-1780694261897.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -752,7 +830,13 @@
           "cn": "genDESIGN",
           "reason": "工作室名，暂无官方中文译名，待确认"
         }
-      ]
+      ],
+      "translation_error": "[summary_length] opus_summary must be 70-80 non-space characters, got 68",
+      "translation_failed_at": "2026-06-06T09:00:44.996739+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-flash",
+      "translation_path": "translations/40.json"
     },
     {
       "id": 13,
@@ -760,12 +844,12 @@
       "emoji": "🎮",
       "en_title": "Resident Evil Veronica Announced, Coming 2027",
       "cn_title": "《生化危机：代号维罗妮卡》重制版正式公布，2027年发售",
-      "summary": "卡普空在夏日游戏节上正式公布了《生化危机：代号维罗妮卡》的重制版，定名为《生化危机：维罗妮卡》，预计2027年发售。预告片展示了克莱尔·雷德菲尔德在巴黎公寓中的全新开场，故事将重新演绎经典剧情。此前已有传闻称该重制版正在开发中，此次官宣并不意外。本作最初于2000年登陆世嘉Dreamcast，虽非主线编号作品，但深受粉丝喜爱。",
+      "summary": "卡普空在夏日游戏节公布《生化危机：代号维罗妮卡》重制版，定名《生化危机：维罗妮卡》，2027年发售。预告片展示克莱尔在巴黎公寓的新开场，故事重新演绎经典。",
       "url": "https://www.ign.com/articles/resident-evil-veronica-announced-coming-2027",
       "publish_time_cn": "2026-06-06 05:08",
       "pub_date": "2026-06-06 05:08",
       "cover_image": "https://assets-prd.ignimgs.com/2026/06/05/code-veronica-04-1780666726342.webp?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/05/code-veronica-04-1780666726342.webp?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/05/code-veronica-04-1780666726342.webp?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -774,7 +858,13 @@
         "https://assets-prd.ignimgs.com/2026/06/05/code-veronica-04-1780666726342.webp"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-06T06:10:52+08:00"
+      "source_fetched_at": "2026-06-06T06:10:52+08:00",
+      "translation_error": "Command '['/opt/hostedtoolcache/Python/3.11.15/x64/bin/python3', '/home/runner/work/ign-daily/ign-daily/scripts/translate_pipeline.py', '2026-06-06', '13', '--post']' returned non-zero exit status 1.",
+      "translation_failed_at": "2026-06-06T08:58:42.667593+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-flash",
+      "translation_path": "translations/13.json"
     },
     {
       "id": 14,

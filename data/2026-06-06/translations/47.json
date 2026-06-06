@@ -1,0 +1,60 @@
+{
+  "id": 47,
+  "url": "https://www.ign.com/articles/palworld-is-finally-getting-its-full-10-release-coming-in-july",
+  "en_title": "Palworld is Finally Getting Its Full 1.0 Release, Coming in July",
+  "cn_title": "《幻兽帕鲁》正式版7月10日发售",
+  "subtitle": "终于等到了",
+  "opus_summary": "《幻兽帕鲁》1.0正式版7月10日登陆PC、Xbox和PS5。该作自2024年1月抢先体验以来销量数百万，因与任天堂和宝可梦公司的专利纠纷备受关注。IGN评测8/10。",
+  "publish_time_cn": "2026-06-06 06:59",
+  "paragraphs": [
+    {
+      "en": "Along with the slew of new game announcments during the Summer Game Fest showcase, developer Pocket Pair revealed that Palworld 1.0 is coming July 10 this year. You may be thinking, hasn't Palworld been around for a couple years already? Well, yeah, but it's been an early access game this entire time released on PC and Xbox Series X|S back in January 2024 and PS5 in September 2024.",
+      "cn": "在夏日游戏节上，开发商Pocket Pair宣布《幻兽帕鲁》1.0正式版将于今年7月10日推出。你可能会想，《幻兽帕鲁》不是已经出了好几年了吗？没错，但它一直处于抢先体验阶段，2024年1月登陆PC和Xbox Series，2024年9月登陆PS5。"
+    },
+    {
+      "en": "There isn't too much information about the specific new content coming along with the full release, but you can check out the Palworld 1.0 cinematic trailer in the meantime. Earlier this year, Pocket Pair said it wouldn't rule out a Palworld 2.0 in due time, but wouldn't want to commit to 10 years-worth of updates as a long-term vision.",
+      "cn": "关于正式版的具体新内容，目前信息不多，但你可以先看看《幻兽帕鲁》1.0版电影预告片。今年早些时候，Pocket Pair表示不排除未来推出《幻兽帕鲁》2.0的可能性，但不愿承诺长达10年的更新计划。"
+    },
+    {
+      "en": "Even if you don't play Palworld, you probably caught wind of it when it garnered the attention of Nintendo and The Pokemon Company, which led to a legal battle over the patent of similar gameplay mechanics . Either way, it turned out wildly popular and is a solid game having earned an 8/10 in our early access Palworld review .",
+      "cn": "即使你没玩过《幻兽帕鲁》，也可能听说过它——这款游戏曾引起任天堂和宝可梦公司的注意，并因类似玩法机制的专利问题引发了一场法律纠纷。无论如何，它大获成功，是一款扎实的游戏，IGN在抢先体验评测中给出了8/10的评分。"
+    },
+    {
+      "en": "Michael Higham is an editor at IGN who regularly contributes with reviews, previews, features, and news in written and video form. He's usually entrusted with covering long RPGs and tech products, but he's got range when it comes to games. You'll also catch him at events and hosting video content, including IGN's weekly podcast Unlocked .",
+      "cn": "Michael Higham是IGN的编辑，经常以文字和视频形式撰写评测、预览、专题和新闻。他通常负责长篇RPG和科技产品，但游戏涉猎广泛。你还会在活动现场看到他主持视频内容，包括IGN每周播客《Unlocked》。"
+    }
+  ],
+  "pending_dict": [],
+  "translated_terms": {
+    "Palworld": "《幻兽帕鲁》",
+    "Pocket Pair": "Pocket Pair",
+    "Summer Game Fest": "夏日游戏节",
+    "Nintendo": "任天堂",
+    "The Pokemon Company": "宝可梦公司",
+    "IGN": "IGN",
+    "Unlocked": "《Unlocked》"
+  },
+  "cover": "https://assets-prd.ignimgs.com/2026/06/05/palworld10-1780700486756.jpg?width=1280&format=jpg&auto=webp&quality=80",
+  "images": [
+    "https://assets-prd.ignimgs.com/2026/06/05/palworld10-1780700486756.jpg?width=1280&format=jpg&auto=webp&quality=80",
+    "https://assets-prd.ignimgs.com/2026/06/05/palworld10-1780700486756.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+    "https://assets-prd.ignimgs.com/2026/06/05/palworld10-1780700486756.jpg?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+    "https://assets-prd.ignimgs.com/2026/06/05/palworld10-1780700486756.jpg?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+    "https://assets-prd.ignimgs.com/2026/06/05/palworld10-1780700486756.jpg"
+  ],
+  "repair_source": "api_audit",
+  "repair_issue_count": 1,
+  "translator": "api",
+  "translator_provider": "openai-compatible",
+  "translator_model": "deepseek-v4-flash",
+  "quality_status": "needs_manual_review",
+  "manual_release_required": true,
+  "audit_issues": [
+    {
+      "type": "summary_length",
+      "detail": "opus_summary must be 70-80 non-space characters, got 84"
+    }
+  ],
+  "audit_failed_at": "2026-06-06T09:03:42.031616+08:00",
+  "audit_failure_reason": "[summary_length] opus_summary must be 70-80 non-space characters, got 84"
+}
