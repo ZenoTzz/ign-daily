@@ -218,26 +218,7 @@
       "fingerprint": "2cd9a4658cddf516b84b09dc9f1c6909ac6717bf",
       "translation_path": "translations/51.json",
       "retry_policy": "manual_only"
-    },
-    "53": {
-      "id": 53,
-      "url": "https://www.ign.com/articles/assassins-creed-co-creator-re-reveals-1666-amsterdam-30-minute-demo-playable-now",
-      "en_title": "Assassin's Creed Co-Creator Re-Reveals 1666 Amsterdam, 30-Minute Demo Playable Now",
-      "cn_title": "《刺客信条》联合创始人重推《1666阿姆斯特丹》，试玩版现已上线",
-      "model": "deepseek-v4-flash",
-      "status": "needs_manual_review",
-      "failed_at": "2026-06-06T09:06:44.002445+08:00",
-      "reason": "[summary_length] opus_summary must be 70-80 non-space characters, got 95",
-      "audit_issues": [
-        {
-          "type": "summary_length",
-          "detail": "opus_summary must be 70-80 non-space characters, got 95"
-        }
-      ],
-      "fingerprint": "a7a41dfdd40a9a8cfa45cfc172d79ff4827c3347",
-      "translation_path": "translations/53.json",
-      "retry_policy": "manual_only"
     }
   },
-  "updated_at": "2026-06-06T01:51:50.965Z"
+  "updated_at": "2026-06-06T02:04:40.376Z"
 }
