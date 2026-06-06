@@ -231,6 +231,132 @@
       "total_tokens": 9092,
       "prompt_cache_hit_tokens": 6528,
       "prompt_cache_miss_tokens": 2444
+    },
+    {
+      "time_cn": "2026-06-07 07:44:53",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 20,
+      "article_title": "Avatar: The Last Airbender Iroh Actor Blasts 'Straight Up Evil' Paramount Executives After RPG Is Canceled",
+      "article_url": "https://www.ign.com/articles/avatar-the-last-airbender-iroh-actor-blasts-straight-up-evil-paramount-executives-after-rpg-is-canceled",
+      "article_date": "2026-06-07",
+      "detail": "",
+      "estimated_cost_usd": 0.00022884,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7482,
+      "completion_tokens": 275,
+      "total_tokens": 7757,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 954
+    },
+    {
+      "time_cn": "2026-06-07 07:44:56",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 21,
+      "article_title": "Avatar: The Last Airbender Cast and Creators Preview Toph's Arrival | IGN Live 2026",
+      "article_url": "https://www.ign.com/articles/avatar-the-last-airbender-toph-season-2",
+      "article_date": "2026-06-07",
+      "detail": "",
+      "estimated_cost_usd": 0.0002322,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7662,
+      "completion_tokens": 197,
+      "total_tokens": 7859,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 1134
+    },
+    {
+      "time_cn": "2026-06-07 07:44:59",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 22,
+      "article_title": "Control Resonant Developer Remedy Admits Packed September Release Window 'Is Challenging,' but It Has a Plan",
+      "article_url": "https://www.ign.com/articles/control-resonant-developer-remedy-admits-packed-september-release-window-is-challenging-but-it-has-a-plan",
+      "article_date": "2026-06-07",
+      "detail": "",
+      "estimated_cost_usd": 0.0002399,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7843,
+      "completion_tokens": 134,
+      "total_tokens": 7977,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 1315
+    },
+    {
+      "time_cn": "2026-06-07 07:45:03",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 23,
+      "article_title": "Control: Resonant Creative Director on the Sequel Shifting to an Action RPG | IGN Live 2026",
+      "article_url": "https://www.ign.com/articles/control-resonant-creative-director-on-the-sequel-shifting-to-an-action-rpg-ign-live-2026",
+      "article_date": "2026-06-07",
+      "detail": "",
+      "estimated_cost_usd": 0.00023584,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7456,
+      "completion_tokens": 313,
+      "total_tokens": 7769,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 928
+    },
+    {
+      "time_cn": "2026-06-07 07:45:07",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 24,
+      "article_title": "Final Fantasy 7 Revelation Tweaks Mini-Games But Square Enix Says It Would Never Reduce Them",
+      "article_url": "https://www.ign.com/articles/final-fantasy-7-revelation-tweaks-mini-games-but-square-enix-says-it-would-never-reduce-them",
+      "article_date": "2026-06-07",
+      "detail": "",
+      "estimated_cost_usd": 0.0002308,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7656,
+      "completion_tokens": 195,
+      "total_tokens": 7851,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 1128
+    },
+    {
+      "time_cn": "2026-06-07 07:45:12",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 25,
+      "article_title": "Evil Dead Burn Exclusive Clip Showcases Gross Deadite Horror | IGN Live 2026",
+      "article_url": "https://www.ign.com/articles/evil-dead-burn-exclusive-clip-showcases-gross-deadite-horror-ign-live-2026",
+      "article_date": "2026-06-07",
+      "detail": "",
+      "estimated_cost_usd": 0.00029464,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7266,
+      "completion_tokens": 618,
+      "total_tokens": 7884,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 738
     }
   ]
 }
