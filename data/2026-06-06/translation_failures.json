@@ -181,25 +181,6 @@
       "translation_path": "translations/48.json",
       "retry_policy": "manual_only"
     },
-    "49": {
-      "id": 49,
-      "url": "https://www.ign.com/articles/maverick-games-open-world-racer-clutch-is-set-on-the-french-riviera-features-monaco",
-      "en_title": "Maverick Game’s Open-World Racer Clutch Is Set on the French Riviera, Features Monaco",
-      "cn_title": "《离合器》亮相夏日游戏节，开放世界竞速登陆法国里维埃拉",
-      "model": "deepseek-v4-flash",
-      "status": "needs_manual_review",
-      "failed_at": "2026-06-06T09:04:39.822323+08:00",
-      "reason": "[summary_length] opus_summary must be 70-80 non-space characters, got 97",
-      "audit_issues": [
-        {
-          "type": "summary_length",
-          "detail": "opus_summary must be 70-80 non-space characters, got 97"
-        }
-      ],
-      "fingerprint": "cd3e4254ec689bb9b52d273d36ee2e9f9d86fc52",
-      "translation_path": "translations/49.json",
-      "retry_policy": "manual_only"
-    },
     "50": {
       "id": 50,
       "url": "https://www.ign.com/articles/hot-wheels-infinite-rush-takes-the-racing-game-series-open-world",
@@ -258,5 +239,5 @@
       "retry_policy": "manual_only"
     }
   },
-  "updated_at": "2026-06-06T01:36:59.553Z"
+  "updated_at": "2026-06-06T01:50:47.844Z"
 }
