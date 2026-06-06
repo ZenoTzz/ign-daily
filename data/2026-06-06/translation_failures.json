@@ -110,25 +110,6 @@
       "translation_path": "translations/41.json",
       "retry_policy": "manual_only"
     },
-    "43": {
-      "id": 43,
-      "url": "https://www.ign.com/articles/final-fantasy-vii-remake-part-3-called-revelation-out-simultaneously-across-all-platforms",
-      "en_title": "Final Fantasy VII Remake Part 3 Called Revelation, Out Simultaneously Across All Platforms",
-      "cn_title": "《最终幻想7 重制版》第三部定名《启示录》，全平台同步发售",
-      "model": "deepseek-v4-flash",
-      "status": "needs_manual_review",
-      "failed_at": "2026-06-06T09:01:28.795109+08:00",
-      "reason": "[summary_length] opus_summary must be 70-80 non-space characters, got 105",
-      "audit_issues": [
-        {
-          "type": "summary_length",
-          "detail": "opus_summary must be 70-80 non-space characters, got 105"
-        }
-      ],
-      "fingerprint": "49fe9b61d1989771ead10a4c09400c755b3c6d09",
-      "translation_path": "translations/43.json",
-      "retry_policy": "manual_only"
-    },
     "45": {
       "id": 45,
       "url": "https://www.ign.com/articles/medieval-chronicles-ign-preview",
@@ -277,5 +258,5 @@
       "retry_policy": "manual_only"
     }
   },
-  "updated_at": "2026-06-06T09:06:44.002445+08:00"
+  "updated_at": "2026-06-06T01:36:59.553Z"
 }
