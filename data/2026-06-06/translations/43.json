@@ -84,14 +84,14 @@
   "translator": "api",
   "translator_provider": "openai-compatible",
   "translator_model": "deepseek-v4-flash",
-  "quality_status": "needs_manual_review",
-  "manual_release_required": true,
-  "audit_issues": [
+  "quality_status": "manual_approved",
+  "manual_release_required": false,
+  "manual_approved_at": "2026-06-06T01:36:59.553Z",
+  "manual_approved_reason": "user approved API audit draft",
+  "manual_approved_issues": [
     {
       "type": "summary_length",
       "detail": "opus_summary must be 70-80 non-space characters, got 105"
     }
-  ],
-  "audit_failed_at": "2026-06-06T09:01:28.795109+08:00",
-  "audit_failure_reason": "[summary_length] opus_summary must be 70-80 non-space characters, got 105"
+  ]
 }
