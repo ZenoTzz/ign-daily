@@ -2037,6 +2037,48 @@
       "total_tokens": 4645,
       "prompt_cache_hit_tokens": 0,
       "prompt_cache_miss_tokens": 2693
+    },
+    {
+      "time_cn": "2026-06-06 10:11:44",
+      "task": "fulltext",
+      "model": "deepseek-v4-flash",
+      "article_id": 38,
+      "article_title": "《命运3》呼声淹没夏日游戏节",
+      "article_url": "https://www.ign.com/articles/summer-game-fest-stream-overrun-with-demands-for-destiny-3",
+      "article_date": "2026-06-06",
+      "detail": "",
+      "estimated_cost_usd": 0.00064296,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8188,
+      "completion_tokens": 1401,
+      "total_tokens": 9589,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 1660
+    },
+    {
+      "time_cn": "2026-06-06 10:11:52",
+      "task": "fulltext_repair",
+      "model": "deepseek-v4-flash",
+      "article_id": 38,
+      "article_title": "《命运3》呼声淹没夏日游戏节",
+      "article_url": "https://www.ign.com/articles/summer-game-fest-stream-overrun-with-demands-for-destiny-3",
+      "article_date": "2026-06-06",
+      "detail": "1 audit issue(s)",
+      "estimated_cost_usd": 0.00070098,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 2277,
+      "completion_tokens": 1365,
+      "total_tokens": 3642,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 2277
     }
   ]
 }

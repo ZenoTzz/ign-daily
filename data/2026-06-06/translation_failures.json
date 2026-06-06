@@ -199,7 +199,26 @@
       "fingerprint": "2cd9a4658cddf516b84b09dc9f1c6909ac6717bf",
       "translation_path": "translations/51.json",
       "retry_policy": "manual_only"
+    },
+    "38": {
+      "id": 38,
+      "url": "https://www.ign.com/articles/summer-game-fest-stream-overrun-with-demands-for-destiny-3",
+      "en_title": "Summer Game Fest Stream Overrun with Demands for Destiny 3",
+      "cn_title": "《命运3》呼声淹没夏日游戏节",
+      "model": "deepseek-v4-flash",
+      "status": "needs_manual_review",
+      "failed_at": "2026-06-06T10:11:52.711159+08:00",
+      "reason": "[summary_length] opus_summary must be 70-80 non-space characters, got 98",
+      "audit_issues": [
+        {
+          "type": "summary_length",
+          "detail": "opus_summary must be 70-80 non-space characters, got 98"
+        }
+      ],
+      "fingerprint": "844e59366f6a085a26e9b5e9fba4f2232b77ffaa",
+      "translation_path": "translations/38.json",
+      "retry_policy": "manual_only"
     }
   },
-  "updated_at": "2026-06-06T02:05:27.060Z"
+  "updated_at": "2026-06-06T10:11:52.711159+08:00"
 }
