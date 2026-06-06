@@ -239,8 +239,8 @@ function appData() {
       try {
         await this.loadAutomationConfig();
         this.triggerRssOnRefresh();
-        const date = new URLSearchParams(location.search).get('date') || todayBeijingDate();
-        this.currentDate = date;
+        const requestedDate = new URLSearchParams(location.search).get('date');
+        let date = requestedDate || todayBeijingDate();
         // 加载可用日期列表
         try {
           const ilRes = await fetch('data/index-list.json?t=' + Date.now(), { cache: 'no-store' });
@@ -253,8 +253,12 @@ function appData() {
               const d = x.date || x;
               if (d) this.availableDateMeta[d] = x;
             });
+            if (!requestedDate && this.availableDates.length && !this.availableDates.includes(date)) {
+              date = this.availableDates[0];
+            }
           }
         } catch (_) {}
+        this.currentDate = date;
         this.datePickerMonth = date.slice(0, 7);
         const res = await fetch(`data/${date}/index.json?t=${Date.now()}`, { cache: 'no-store' });
         if (!res.ok) {
