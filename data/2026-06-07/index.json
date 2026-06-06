@@ -140,12 +140,12 @@
       "emoji": "🐺",
       "en_title": "Telltale CEO Explains Why The Wolf Among Us 2 Has Taken So Long, And What Happened With That Split With Dispatch Maker Ad Hoc",
       "cn_title": "《我们身边的狼2》为何难产？Telltale CEO详解",
-      "summary": "Telltale Games CEO Jamie Ottilie 接受 IGN 专访，解释了《我们身边的狼2》开发长达近十年的原因：项目经历了2018年工作室关闭、品牌重生、多次重启和延期，以及2022年的技术重置（从旧工具和Unreal Engine 4转向新管线）。此外，与《Dispatch》开发商 AdHoc Studio 的合作也已终止，但 Trick Studios 作为联合开发伙伴接手。Ottilie 确认游戏将于2027年发售，同时今年晚些时候将推出初代重制版。",
+      "summary": "Telltale CEO详解《我们身边的狼2》开发长达近十年的原因，包括2018年工作室关闭、技术重置及与AdHoc Studio合作终止。游戏将于2027年发售，初代重制版今年晚些推出。",
       "url": "https://www.ign.com/articles/telltale-ceo-explains-why-the-wolf-among-us-2-has-taken-so-long-and-what-happened-with-that-split-with-dispatch-maker-ad-hoc",
       "publish_time_cn": "2026-06-06 08:01",
       "pub_date": "2026-06-06 08:01",
       "cover_image": "https://assets-prd.ignimgs.com/2026/06/05/waur-screenshot-8-1780651084233.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/05/waur-screenshot-8-1780651084233.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/05/waur-screenshot-8-1780651084233.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -176,7 +176,13 @@
           "cn": "Jamie Ottilie",
           "reason": "不知名人物，保留英文"
         }
-      ]
+      ],
+      "translation_error": "[summary_length] opus_summary must be 70-80 non-space characters, got 92",
+      "translation_failed_at": "2026-06-06T10:10:16.546137+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-flash",
+      "translation_path": "translations/04.json"
     },
     {
       "id": 5,
@@ -184,12 +190,12 @@
       "emoji": "🐺",
       "en_title": "The Wolf Among Us 2 Now Due in 2027, Following Remaster of Telltale's Original Game",
       "cn_title": "《我们身边的狼2》延期至2027年",
-      "summary": "Telltale Games 在夏日游戏节上宣布，《我们身边的狼2》将于2027年登陆 PC、PS5、Xbox Series 及 Switch 2 等平台。在此之前，原版游戏的重制版《我们身边的狼 重制版》将于今年假期发售，包含改进的画面、UI 及一小时额外内容。该作历经工作室关闭、重启、多次延期及合作方解散等波折，终于有了明确发售窗口。",
+      "summary": "Telltale Games在夏日游戏节上宣布，《我们身边的狼2》将于2027年登陆多平台。原版重制版《我们身边的狼 重制版》今年假期发售，包含改进画面、UI及一小时额外内容。",
       "url": "https://www.ign.com/articles/the-wolf-among-us-2-now-due-in-2027-following-remaster-of-telltales-original-game",
       "publish_time_cn": "2026-06-06 08:01",
       "pub_date": "2026-06-06 08:01",
       "cover_image": "https://assets-prd.ignimgs.com/2026/06/05/the-wolf-among-us-2-1780655341221.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/05/the-wolf-among-us-2-1780655341221.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/05/the-wolf-among-us-2-1780655341221.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -198,7 +204,13 @@
         "https://assets-prd.ignimgs.com/2026/06/05/the-wolf-among-us-2-1780655341221.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-06T10:05:09+08:00"
+      "source_fetched_at": "2026-06-06T10:05:09+08:00",
+      "translation_error": "[summary_length] opus_summary must be 70-80 non-space characters, got 86",
+      "translation_failed_at": "2026-06-06T10:10:41.115113+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-flash",
+      "translation_path": "translations/05.json"
     },
     {
       "id": 6,

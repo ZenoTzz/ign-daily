@@ -1911,6 +1911,132 @@
       "total_tokens": 7662,
       "prompt_cache_hit_tokens": 6528,
       "prompt_cache_miss_tokens": 841
+    },
+    {
+      "time_cn": "2026-06-06 10:08:38",
+      "task": "fulltext",
+      "model": "deepseek-v4-flash",
+      "article_id": 2,
+      "article_title": "《战神：劳菲》总监回应玩家质疑",
+      "article_url": "https://www.ign.com/articles/god-of-war-laufey-director-understands-skepticism-following-reveal-but-hopes-fans-give-it-a-chance",
+      "article_date": "2026-06-07",
+      "detail": "",
+      "estimated_cost_usd": 0.00080088,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8402,
+      "completion_tokens": 1858,
+      "total_tokens": 10260,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 1874
+    },
+    {
+      "time_cn": "2026-06-06 10:08:48",
+      "task": "fulltext_repair",
+      "model": "deepseek-v4-flash",
+      "article_id": 2,
+      "article_title": "《战神：劳菲》总监回应玩家质疑",
+      "article_url": "https://www.ign.com/articles/god-of-war-laufey-director-understands-skepticism-following-reveal-but-hopes-fans-give-it-a-chance",
+      "article_date": "2026-06-07",
+      "detail": "1 audit issue(s)",
+      "estimated_cost_usd": 0.0008694,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 2750,
+      "completion_tokens": 1730,
+      "total_tokens": 4480,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 2750
+    },
+    {
+      "time_cn": "2026-06-06 10:09:37",
+      "task": "fulltext",
+      "model": "deepseek-v4-flash",
+      "article_id": 4,
+      "article_title": "《我们身边的狼2》为何难产？Telltale CEO详解",
+      "article_url": "https://www.ign.com/articles/telltale-ceo-explains-why-the-wolf-among-us-2-has-taken-so-long-and-what-happened-with-that-split-with-dispatch-maker-ad-hoc",
+      "article_date": "2026-06-07",
+      "detail": "",
+      "estimated_cost_usd": 0.0025177,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 10983,
+      "completion_tokens": 6699,
+      "total_tokens": 17682,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 4455
+    },
+    {
+      "time_cn": "2026-06-06 10:10:16",
+      "task": "fulltext_repair",
+      "model": "deepseek-v4-flash",
+      "article_id": 4,
+      "article_title": "《我们身边的狼2》为何难产？Telltale CEO详解",
+      "article_url": "https://www.ign.com/articles/telltale-ceo-explains-why-the-wolf-among-us-2-has-taken-so-long-and-what-happened-with-that-split-with-dispatch-maker-ad-hoc",
+      "article_date": "2026-06-07",
+      "detail": "1 audit issue(s)",
+      "estimated_cost_usd": 0.0029953,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7445,
+      "completion_tokens": 6975,
+      "total_tokens": 14420,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 7445
+    },
+    {
+      "time_cn": "2026-06-06 10:10:29",
+      "task": "fulltext",
+      "model": "deepseek-v4-flash",
+      "article_id": 5,
+      "article_title": "《我们身边的狼2》延期至2027年",
+      "article_url": "https://www.ign.com/articles/the-wolf-among-us-2-now-due-in-2027-following-remaster-of-telltales-original-game",
+      "article_date": "2026-06-07",
+      "detail": "",
+      "estimated_cost_usd": 0.00077064,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8172,
+      "completion_tokens": 1865,
+      "total_tokens": 10037,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 1644
+    },
+    {
+      "time_cn": "2026-06-06 10:10:41",
+      "task": "fulltext_repair",
+      "model": "deepseek-v4-flash",
+      "article_id": 5,
+      "article_title": "《我们身边的狼2》延期至2027年",
+      "article_url": "https://www.ign.com/articles/the-wolf-among-us-2-now-due-in-2027-following-remaster-of-telltales-original-game",
+      "article_date": "2026-06-07",
+      "detail": "1 audit issue(s)",
+      "estimated_cost_usd": 0.00092358,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 2693,
+      "completion_tokens": 1952,
+      "total_tokens": 4645,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 2693
     }
   ]
 }
