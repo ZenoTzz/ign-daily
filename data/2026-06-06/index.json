@@ -439,7 +439,7 @@
       "publish_time_cn": "2026-06-06 06:16",
       "pub_date": "2026-06-06 06:16",
       "cover_image": "https://assets-prd.ignimgs.com/2026/06/05/hkfqknlwaaafark-1780697087378.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "needs_review",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/05/hkfqknlwaaafark-1780697087378.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/05/hkfqknlwaaafark-1780697087378.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -471,8 +471,6 @@
           "reason": "游戏名，词库中无记录，建议确认译名"
         }
       ],
-      "translation_error": "[summary_length] opus_summary must be 70-80 non-space characters, got 95",
-      "translation_failed_at": "2026-06-06T09:06:44.002445+08:00",
       "translator": "api",
       "translator_provider": "openai-compatible",
       "translator_model": "deepseek-v4-flash",
