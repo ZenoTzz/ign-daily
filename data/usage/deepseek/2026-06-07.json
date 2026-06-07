@@ -651,6 +651,69 @@
       "total_tokens": 5668,
       "prompt_cache_hit_tokens": 0,
       "prompt_cache_miss_tokens": 3141
+    },
+    {
+      "time_cn": "2026-06-07 23:56:05",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 8,
+      "article_title": "Xbox Games Showcase 2026 Live Updates: Every Game Announcement",
+      "article_url": "https://www.ign.com/articles/xbox-games-showcase-2026-live-updates-every-game-announcement",
+      "article_date": "2026-06-08",
+      "detail": "",
+      "estimated_cost_usd": 0.000228,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7746,
+      "completion_tokens": 140,
+      "total_tokens": 7886,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 1218
+    },
+    {
+      "time_cn": "2026-06-07 23:56:09",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 9,
+      "article_title": "The Death of Robin Hood Director on Hugh Jackman’s Gritty New Role | IGN Live 2026",
+      "article_url": "https://www.ign.com/articles/the-death-of-robin-hood-director-hugh-jackman",
+      "article_date": "2026-06-08",
+      "detail": "",
+      "estimated_cost_usd": 0.00024382,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7659,
+      "completion_tokens": 240,
+      "total_tokens": 7899,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 1131
+    },
+    {
+      "time_cn": "2026-06-07 23:56:12",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 10,
+      "article_title": "Meet The Vampire Lestat's Rock Band in an Exclusive New Clip | IGN Live 2026",
+      "article_url": "https://www.ign.com/articles/the-vampire-lestat-exclusive-new-clip-ign-live-2026",
+      "article_date": "2026-06-08",
+      "detail": "",
+      "estimated_cost_usd": 0.00015828,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7272,
+      "completion_tokens": 128,
+      "total_tokens": 7400,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 744
     }
   ]
 }
