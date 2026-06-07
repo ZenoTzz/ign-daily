@@ -357,6 +357,153 @@
       "total_tokens": 7884,
       "prompt_cache_hit_tokens": 6528,
       "prompt_cache_miss_tokens": 738
+    },
+    {
+      "time_cn": "2026-06-07 15:18:21",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 1,
+      "article_title": "Kara Arm Wrestles Some Aliens in an Exclusive New Supergirl Clip | IGN Live 2026",
+      "article_url": "https://www.ign.com/articles/exclusive-new-supergirl-clip-ign-live-2026",
+      "article_date": "2026-06-08",
+      "detail": "",
+      "estimated_cost_usd": 0.00024732,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7212,
+      "completion_tokens": 476,
+      "total_tokens": 7688,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 684
+    },
+    {
+      "time_cn": "2026-06-07 15:18:24",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 2,
+      "article_title": "Monster Hunter Wilds Confirmed for Nintendo Switch 2",
+      "article_url": "https://www.ign.com/articles/monster-hunter-wilds-confirmed-for-nintendo-switch-2",
+      "article_date": "2026-06-08",
+      "detail": "",
+      "estimated_cost_usd": 0.00018348,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7350,
+      "completion_tokens": 179,
+      "total_tokens": 7529,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 822
+    },
+    {
+      "time_cn": "2026-06-07 15:18:28",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 3,
+      "article_title": "Tatiana Maslany Explains Coen Brothers Influence on Maximum Pleasure Guaranteed | IGN Live 2026",
+      "article_url": "https://www.ign.com/articles/tatiana-maslany-maximum-pleasure-guaranteed-influences",
+      "article_date": "2026-06-08",
+      "detail": "",
+      "estimated_cost_usd": 0.00020434,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7473,
+      "completion_tokens": 192,
+      "total_tokens": 7665,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 945
+    },
+    {
+      "time_cn": "2026-06-07 15:18:31",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 4,
+      "article_title": "Death Stranding Director Gives Update on Movie and New Character Plans | IGN Live 2026",
+      "article_url": "https://www.ign.com/articles/death-stranding-director-gives-update-on-movie-and-new-character-plans-ign-live-2026",
+      "article_date": "2026-06-08",
+      "detail": "",
+      "estimated_cost_usd": 0.00020938,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7515,
+      "completion_tokens": 189,
+      "total_tokens": 7704,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 987
+    },
+    {
+      "time_cn": "2026-06-07 15:18:35",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 26,
+      "article_title": "Fast & Furious' Sung Kang Debuts Trailer for Drifter, His Directorial Debut | IGN Live 2026",
+      "article_url": "https://www.ign.com/articles/sung-kang-drifter-movie-trailer",
+      "article_date": "2026-06-07",
+      "detail": "",
+      "estimated_cost_usd": 0.00019692,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7386,
+      "completion_tokens": 209,
+      "total_tokens": 7595,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 858
+    },
+    {
+      "time_cn": "2026-06-07 15:18:39",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 27,
+      "article_title": "Star Trek: Shadow Frontier Game Reveal Trailer Explores Trek's Darker Side | IGN Live 2026",
+      "article_url": "https://www.ign.com/articles/star-trek-shadow-frontier-game-reveal-trailer-explores-treks-darker-side-ign-live-2026",
+      "article_date": "2026-06-07",
+      "detail": "",
+      "estimated_cost_usd": 0.0002637,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7715,
+      "completion_tokens": 283,
+      "total_tokens": 7998,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 1187
+    },
+    {
+      "time_cn": "2026-06-07 15:18:42",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 28,
+      "article_title": "The Jackass: Best and Last Crew Relive the Painful Good Times | IGN Live 2026",
+      "article_url": "https://www.ign.com/articles/jackass-best-and-last-steve-o-wee-man-preview-ign-live-2026",
+      "article_date": "2026-06-07",
+      "detail": "",
+      "estimated_cost_usd": 0.00025082,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7877,
+      "completion_tokens": 156,
+      "total_tokens": 8033,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 1349
     }
   ]
 }
