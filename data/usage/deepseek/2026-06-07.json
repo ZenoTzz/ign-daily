@@ -504,6 +504,69 @@
       "total_tokens": 8033,
       "prompt_cache_hit_tokens": 6528,
       "prompt_cache_miss_tokens": 1349
+    },
+    {
+      "time_cn": "2026-06-07 16:48:59",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 5,
+      "article_title": "New PowerWash Simulator 2: Star Wars Pack Trailer Spotlights Classic Locations | IGN Live 2026",
+      "article_url": "https://www.ign.com/articles/powerwash-simulator-2-star-wars-dlc-trailer-new",
+      "article_date": "2026-06-08",
+      "detail": "",
+      "estimated_cost_usd": 0.00019258,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7309,
+      "completion_tokens": 232,
+      "total_tokens": 7541,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 781
+    },
+    {
+      "time_cn": "2026-06-07 16:49:02",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 6,
+      "article_title": "Masters of the Universe Movie Cast Reacts to Masters of the Universe: Legends Unite | IGN Live 2026",
+      "article_url": "https://www.ign.com/articles/masters-of-the-universe-legends-unite-movie-cast",
+      "article_date": "2026-06-08",
+      "detail": "",
+      "estimated_cost_usd": 0.0001454,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7186,
+      "completion_tokens": 125,
+      "total_tokens": 7311,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 658
+    },
+    {
+      "time_cn": "2026-06-07 16:49:05",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 7,
+      "article_title": "Gears of War: E-Day PS5 Placeholder Listing Appears Online as Xbox Games Showcase Looms",
+      "article_url": "https://www.ign.com/articles/gears-of-war-e-day-ps5-placeholder-listing-appears-online-as-xbox-games-showcase-looms",
+      "article_date": "2026-06-08",
+      "detail": "",
+      "estimated_cost_usd": 0.00023262,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7795,
+      "completion_tokens": 132,
+      "total_tokens": 7927,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 1267
     }
   ]
 }
