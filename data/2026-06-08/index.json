@@ -95,12 +95,12 @@
       "emoji": "🎮",
       "en_title": "Warhammer 40,000 Dark Heresy Gameplay Trailer Puts You In the Shoes of a Grim Sci-Fi Detective | IGN Live",
       "cn_title": "《战锤40K：黑暗异端》实机预告发布，扮演科幻侦探",
-      "summary": "Owlcat Games 在 IGN Live 2026 上发布了《战锤40K：黑暗异端》的实机预告。玩家将扮演审判官，调查人口失踪阴谋，可自由选择正直或腐败的破案方式。战斗系统继承自《行商浪人》，并新增部位破坏机制。游戏登陆 Steam、PS5 和 Xbox Series，发售日未定。",
+      "summary": "Owlcat Games在IGN Live 2026上发布《战锤40K：黑暗异端》实机预告。玩家扮演审判官调查人口失踪阴谋，可自由选择正直或腐败的破案方式。战斗系统继承自《行商浪人》，并新增部位破坏机制。",
       "url": "https://www.ign.com/articles/warhammer-40000-dark-heresy-gameplay-trailer-puts-you-in-the-shoes-of-a-grim-sci-fi-detective-ign-live",
       "publish_time_cn": "2026-06-08 03:29",
       "pub_date": "2026-06-08 03:29",
       "cover_image": "https://assets-prd.ignimgs.com/2026/06/05/dark-heresy-1780691362412.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/05/dark-heresy-1780691362412.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/05/dark-heresy-1780691362412.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -126,7 +126,13 @@
           "cn": "《行商浪人》",
           "reason": "词库无，但中文社区常用译名，需确认"
         }
-      ]
+      ],
+      "translation_error": "[summary_length] opus_summary must be 70-80 non-space characters, got 99",
+      "translation_failed_at": "2026-06-08T06:51:03.549141+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-flash",
+      "translation_path": "translations/13.json"
     },
     {
       "id": 14,
@@ -194,13 +200,13 @@
       "category": "游戏新闻",
       "emoji": "🎮",
       "en_title": "Gears of War: E-Day and Clockwork Revolution Are 'Not Timed Exclusives,' Xbox Says — So They'll Never Launch on PlayStation",
-      "cn_title": "《PlayStation》Xbox确认《战争机器：事变日》等作永久独占，永不上架PS",
-      "summary": "Xbox在展示会上确认，《战争机器：事变日》和《Clockwork Revolution》为完全独占游戏，不会登陆PlayStation。Xbox负责人阿莎·夏尔玛表示，此举旨在让玩家因优质游戏选择Xbox。但并非所有游戏都独占，如《地狱之刃3》和《腐烂国度3》仍将登陆PS5。",
+      "cn_title": "Xbox确认《战争机器：事变日》等作永久独占，永不上架PlayStation",
+      "summary": "Xbox确认《战争机器：事变日》和《Clockwork Revolution》为完全独占游戏，不会登陆PlayStation。负责人阿莎·夏尔玛表示此举旨在让玩家因优质游戏选择Xbox。但并非所有游戏都独占，如《腐烂国度3》仍将登陆PS5。",
       "url": "https://www.ign.com/articles/gears-of-war-e-day-and-clockwork-revolution-are-not-timed-exclusives-xbox-says-so-theyll-never-launch-on-playstation",
       "publish_time_cn": "2026-06-08 03:10",
       "pub_date": "2026-06-08 03:10",
       "cover_image": "https://assets-prd.ignimgs.com/2026/06/07/hkos8crbsaa5eoa-1780859077502.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/07/hkos8crbsaa5eoa-1780859077502.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/07/hkos8crbsaa5eoa-1780859077502.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -216,7 +222,13 @@
           "cn": "Clockwork Revolution",
           "reason": "无官方中文译名，保留英文"
         }
-      ]
+      ],
+      "translation_error": "[summary_length] opus_summary must be 70-80 non-space characters, got 119",
+      "translation_failed_at": "2026-06-08T06:51:24.586391+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-flash",
+      "translation_path": "translations/16.json"
     },
     {
       "id": 17,
@@ -358,12 +370,12 @@
       "emoji": "🎮",
       "en_title": "Xbox Series X Translucent Green 25th Anniversary Edition Console and Controller Announced, Inspired by the Original Xbox",
       "cn_title": "微软公布Xbox Series X 25周年半透明绿限定版",
-      "summary": "微软公布了一款致敬初代Xbox的限定版Xbox Series X主机，采用半透明绿色外壳，可看到内部构造，并配有同款手柄。主机和手柄将于11月发售，定价及预购详情待公布。该主机与《光环：战役进化》重制版（7月28日发售）相得益彰。",
+      "summary": "微软公布致敬初代Xbox的限定版Xbox Series X，半透明绿外壳可窥内部，同款手柄同步推出。主机与手柄11月发售，定价待公布。与《光环：战役进化》重制版相得益彰。",
       "url": "https://www.ign.com/articles/xbox-series-x-translucent-green-25th-anniversary-edition-console-and-controller-announced-inspired-by-the-original-xbox",
       "publish_time_cn": "2026-06-08 01:55",
       "pub_date": "2026-06-08 01:55",
       "cover_image": "https://assets-prd.ignimgs.com/2026/06/07/xbox-wireless-controller-x25-special-edition-1-d75d6cc00415223ed301-1780854794250.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/07/xbox-wireless-controller-x25-special-edition-1-d75d6cc00415223ed301-1780854794250.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/07/xbox-wireless-controller-x25-special-edition-1-d75d6cc00415223ed301-1780854794250.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -372,7 +384,13 @@
         "https://assets-prd.ignimgs.com/2026/06/07/xbox-wireless-controller-x25-special-edition-1-d75d6cc00415223ed301-1780854794250.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-08T06:46:35+08:00"
+      "source_fetched_at": "2026-06-08T06:46:35+08:00",
+      "translation_error": "[summary_length] opus_summary must be 70-80 non-space characters, got 83",
+      "translation_failed_at": "2026-06-08T06:53:19.584905+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-flash",
+      "translation_path": "translations/32.json"
     },
     {
       "id": 22,
@@ -453,12 +471,12 @@
       "emoji": "🎮",
       "en_title": "Persona 4 Revival Reveals February 2027 Release Date",
       "cn_title": "《女神异闻录4：复兴版》定档2027年2月",
-      "summary": "在Xbox游戏展示会上，《女神异闻录4：复兴版》宣布将于2027年2月18日发售。这款Atlus经典RPG的重制版将带来全面升级的视觉、UI、战斗和事件，标准版售价69.99美元(约合人民币500元)，豪华版84.99美元(约合人民币610元)，高级版99.99美元(约合人民币720元)。预购现已开启，Steam和PS5版将于6月8日开放。",
+      "summary": "《女神异闻录4：复兴版》在Xbox游戏展示会上宣布将于2027年2月18日发售。重制版全面升级视觉、UI、战斗和事件，标准版售价69.99美元(约合人民币500元)，预购已开启。",
       "url": "https://www.ign.com/articles/persona-4-revival-reveals-february-2027-release-date",
       "publish_time_cn": "2026-06-08 01:28",
       "pub_date": "2026-06-08 01:28",
       "cover_image": "https://assets-prd.ignimgs.com/2026/06/07/4k-xbox-games-showcase-2026-gears-of-war-e-day-direct-1-7-28-screenshot-1780853331345.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/07/4k-xbox-games-showcase-2026-gears-of-war-e-day-direct-1-7-28-screenshot-1780853331345.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/07/4k-xbox-games-showcase-2026-gears-of-war-e-day-direct-1-7-28-screenshot-1780853331345.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -467,7 +485,13 @@
         "https://assets-prd.ignimgs.com/2026/06/07/4k-xbox-games-showcase-2026-gears-of-war-e-day-direct-1-7-28-screenshot-1780853331345.png"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-08T04:47:18+08:00"
+      "source_fetched_at": "2026-06-08T04:47:18+08:00",
+      "translation_error": "[summary_length] opus_summary must be 70-80 non-space characters, got 89",
+      "translation_failed_at": "2026-06-08T06:52:02.855177+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-flash",
+      "translation_path": "translations/25.json"
     },
     {
       "id": 26,
@@ -475,12 +499,12 @@
       "emoji": "🚀",
       "en_title": "Halo: Campaign Evolved Reveals New Space Combat Missions, Imminent Release Date",
       "cn_title": "《光环：战役进化》公布太空战斗新任务与发售日",
-      "summary": "《光环：战役进化》新预告确认将于2026年7月28日登陆Xbox Series、PS5和PC。豪华版（69.99美元，约合人民币500元）和收藏版（199.99美元，约合人民币1430元）可提前5天游玩。新任务“Operation: METEORITE”包含太空战斗，由光环小说作者Troy Denning参与创作。",
+      "summary": "《光环：战役进化》2026年7月28日登陆Xbox Series、PS5和PC。豪华版69.99美元（约合人民币500元）和收藏版199.99美元（约合人民币1430元）可提前5天游玩。新任务含太空战斗。",
       "url": "https://www.ign.com/articles/halo-campaign-evolved-reveals-new-space-combat-missions-imminent-release-date",
       "publish_time_cn": "2026-06-08 01:24",
       "pub_date": "2026-06-08 01:24",
       "cover_image": "https://assets-prd.ignimgs.com/2025/12/09/ps5thumb-1765302086853.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2025/12/09/ps5thumb-1765302086853.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2025/12/09/ps5thumb-1765302086853.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -507,7 +531,13 @@
           "cn": "Troy Denning",
           "reason": "不知名人物，保留英文"
         }
-      ]
+      ],
+      "translation_error": "[summary_length] opus_summary must be 70-80 non-space characters, got 101",
+      "translation_failed_at": "2026-06-08T06:52:20.637100+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-flash",
+      "translation_path": "translations/26.json"
     },
     {
       "id": 27,
@@ -559,12 +589,12 @@
       "emoji": "🎮",
       "en_title": "Gears of War: E-Day Is Xbox Console Exclusive, Release Date Revealed",
       "cn_title": "《战争机器：事变日》10月6日发售，Xbox独占确认",
-      "summary": "在Xbox游戏展示会上，《战争机器：事变日》公布实机演示，确认将于2026年10月6日发售，并明确为Xbox主机独占，不会登陆PS5。游戏采用Unreal Engine 5，讲述事变日当天马库斯与多姆在卡洛纳城对抗兽族的故事，支持单人、双人分屏及四人联机。多人模式包括4v4对抗和12人PVE“部落围攻”。公开测试将于8月6日开启。",
+      "summary": "《战争机器：事变日》确认2026年10月6日发售，Xbox主机独占，不登陆PS5。游戏采用Unreal Engine 5，讲述事变日马库斯与多姆在卡洛纳城对抗兽族的故事。",
       "url": "https://www.ign.com/articles/gears-of-war-e-day-is-an-xbox-console-exclusive-release-date-revealed",
       "publish_time_cn": "2026-06-08 01:15",
       "pub_date": "2026-06-08 01:15",
       "cover_image": "https://assets-prd.ignimgs.com/2026/06/07/4k-xbox-games-showcase-2026-gears-of-war-e-day-direct-57-25-screenshot-1780852467904.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/07/4k-xbox-games-showcase-2026-gears-of-war-e-day-direct-57-25-screenshot-1780852467904.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/07/4k-xbox-games-showcase-2026-gears-of-war-e-day-direct-57-25-screenshot-1780852467904.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -573,20 +603,26 @@
         "https://assets-prd.ignimgs.com/2026/06/07/4k-xbox-games-showcase-2026-gears-of-war-e-day-direct-57-25-screenshot-1780852467904.png"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-08T04:47:20+08:00"
+      "source_fetched_at": "2026-06-08T04:47:20+08:00",
+      "translation_error": "[summary_length] opus_summary must be 70-80 non-space characters, got 83",
+      "translation_failed_at": "2026-06-08T06:52:45.593742+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-flash",
+      "translation_path": "translations/28.json"
     },
     {
       "id": 29,
       "category": "影视资讯",
       "emoji": "🎬",
       "en_title": "The Super Mario Galaxy Movie Crosses $1 Billion at the Box Office",
-      "cn_title": "《超级马力欧银河大电影》《超级马力欧银河》电影全球票房突破10亿美元(约合人民币68亿元)",
-      "summary": "任天堂与照明娱乐合作的《超级马力欧银河》电影在上映10周后全球票房突破10亿美元(约合人民币71.6亿元)，成为2026年首部达成此成就的影片。尽管票房增速不及前作《超级马力欧兄弟大电影》，但两部马力欧电影累计票房已超23亿美元(约合人民币164.7亿元)，位列全球动画系列第九。IGN给予该片6/10评分。",
+      "cn_title": "《超级马力欧银河大电影》全球票房突破10亿美元(约合人民币68亿元)",
+      "summary": "《超级马力欧银河大电影》上映10周全球票房破10亿美元(约合人民币68亿元)，成2026年首部。两部马力欧电影累计超23亿美元(约合人民币156亿元)，列动画系列第九。IGN评分6/10。",
       "url": "https://www.ign.com/articles/the-super-mario-galaxy-movie-crosses-1-billion-at-the-box-office",
       "publish_time_cn": "2026-06-08 00:34",
       "pub_date": "2026-06-08 00:34",
       "cover_image": "https://assets-prd.ignimgs.com/2026/03/31/thesupermariogalaxymovie-review-blogroll-1774980297612.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2026/03/31/thesupermariogalaxymovie-review-blogroll-1774980297612.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/03/31/thesupermariogalaxymovie-review-blogroll-1774980297612.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -595,7 +631,13 @@
         "https://assets-prd.ignimgs.com/2026/03/31/thesupermariogalaxymovie-review-blogroll-1774980297612.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-08T04:47:20+08:00"
+      "source_fetched_at": "2026-06-08T04:47:20+08:00",
+      "translation_error": "[summary_length] opus_summary must be 70-80 non-space characters, got 94",
+      "translation_failed_at": "2026-06-08T06:53:07.100871+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-flash",
+      "translation_path": "translations/29.json"
     },
     {
       "id": 31,

@@ -1,0 +1,69 @@
+{
+  "id": 13,
+  "url": "https://www.ign.com/articles/warhammer-40000-dark-heresy-gameplay-trailer-puts-you-in-the-shoes-of-a-grim-sci-fi-detective-ign-live",
+  "en_title": "Warhammer 40,000 Dark Heresy Gameplay Trailer Puts You In the Shoes of a Grim Sci-Fi Detective | IGN Live",
+  "cn_title": "《战锤40K：黑暗异端》实机预告发布，扮演科幻侦探",
+  "subtitle": "审判官办案指南",
+  "opus_summary": "Owlcat Games在IGN Live 2026上发布《战锤40K：黑暗异端》实机预告。玩家扮演审判官调查人口失踪阴谋，可自由选择正直或腐败的破案方式。战斗系统继承自《行商浪人》，并新增部位破坏机制。",
+  "publish_time_cn": "2026-06-08 03:29",
+  "paragraphs": [
+    {
+      "en": "Owlcat Games finally released a gameplay trailer for Warhammer 40,000: Dark Heresy at IGN Live 2026, its latest foray into the grim sci-fi universe after 2023's Rogue Trader.",
+      "cn": "Owlcat Games 终于在 IGN Live 2026 上发布了《战锤40K：黑暗异端》的实机预告，这是继2023年的《行商浪人》之后，该工作室再次踏入这个黑暗科幻宇宙的最新作品。"
+    },
+    {
+      "en": "Rather than being a Rogue Trader, who has an incredible amount of power, in Dark Heresy, you'll be taking on the role of an Inquisitor, a sort of detective that's trying to uncover some kind of conspiracy that's leading to people disappearing.",
+      "cn": "与拥有巨大权力的行商浪人不同，在《黑暗异端》中，你将扮演一名审判官，类似于侦探，试图揭开导致人口失踪的某种阴谋。"
+    },
+    {
+      "en": "In Dark Heresy, you'll \"search crime scenes, investigate leads, collect evidence\" and put all of that in an investigation journal to help you connect the strings. There are a lot of games out there that will let you take on the role of investigator, but it seems like Dark Heresy will let you be as clean, or as corrupt as you want to be. You can take the easy way out, and pin a crime on the most obvious subject, \"closing the file and letting fear do the rest.\"",
+      "cn": "在《黑暗异端》中，你将「搜查犯罪现场、调查线索、收集证据」，并将所有信息记录在调查日志中，以帮助你串联线索。市面上有很多游戏让你扮演调查者，但《黑暗异端》似乎允许你选择正直或腐败的办案方式。你可以走捷径，将罪行栽赃给最明显的嫌疑人，「结案了事，让恐惧来收拾残局」。"
+    },
+    {
+      "en": "Of course, because this is a 40K game, things will eventually turn violent, and it looks like Owlcat has migrated a lot of the combat mechanics over from Rogue Trader. However, there does seem to be some new mechanics, like being able to target specific body parts on your enemies to cripple them in myriad ways.",
+      "cn": "当然，因为这是《战锤40K》游戏，事情最终会走向暴力，看起来 Owlcat 将《行商浪人》中的大量战斗机制移植了过来。不过，似乎也有一些新机制，比如能够瞄准敌人的特定身体部位，以多种方式使其残废。"
+    },
+    {
+      "en": "Owlcat Games didn't reveal a release date for Warhammer 40,000 Dark Heresy, but you can wishlist the game on Steam, PS5, and Xbox Series X|S.",
+      "cn": "Owlcat Games 尚未公布《战锤40K：黑暗异端》的发售日期，但你可以在 Steam、PS5 和 Xbox Series X|S 上将游戏加入愿望单。"
+    },
+    {
+      "en": "Jackie Thomas is the Hardware and Buying Guides Editor at IGN and the PC components queen. You can follow her @Jackiecobra",
+      "cn": "Jackie Thomas 是 IGN 的硬件与购买指南编辑，也是 PC 组件女王。你可以在 X 上关注她 @Jackiecobra"
+    }
+  ],
+  "pending_dict": [],
+  "translated_terms": {
+    "Warhammer 40,000: Dark Heresy": "《战锤40K：黑暗异端》",
+    "Rogue Trader": "《行商浪人》",
+    "Owlcat Games": "Owlcat Games",
+    "Inquisitor": "审判官",
+    "IGN Live": "IGN Live",
+    "Steam": "Steam",
+    "PS5": "PS5",
+    "Xbox Series X|S": "Xbox Series X|S"
+  },
+  "cover": "https://assets-prd.ignimgs.com/2026/06/05/dark-heresy-1780691362412.jpg?width=1280&format=jpg&auto=webp&quality=80",
+  "images": [
+    "https://assets-prd.ignimgs.com/2026/06/05/dark-heresy-1780691362412.jpg?width=1280&format=jpg&auto=webp&quality=80",
+    "https://assets-prd.ignimgs.com/2026/06/05/dark-heresy-1780691362412.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+    "https://assets-prd.ignimgs.com/2026/06/05/dark-heresy-1780691362412.jpg?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+    "https://assets-prd.ignimgs.com/2026/06/05/dark-heresy-1780691362412.jpg?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+    "https://assets-prd.ignimgs.com/2026/06/05/dark-heresy-1780691362412.jpg"
+  ],
+  "repair_source": "api_audit",
+  "repair_issue_count": 1,
+  "translator": "api",
+  "translator_provider": "openai-compatible",
+  "translator_model": "deepseek-v4-flash",
+  "quality_status": "needs_manual_review",
+  "manual_release_required": true,
+  "audit_issues": [
+    {
+      "type": "summary_length",
+      "detail": "opus_summary must be 70-80 non-space characters, got 99"
+    }
+  ],
+  "audit_failed_at": "2026-06-08T06:51:03.549141+08:00",
+  "audit_failure_reason": "[summary_length] opus_summary must be 70-80 non-space characters, got 99"
+}

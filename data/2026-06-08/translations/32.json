@@ -1,0 +1,65 @@
+{
+  "id": 32,
+  "url": "https://www.ign.com/articles/xbox-series-x-translucent-green-25th-anniversary-edition-console-and-controller-announced-inspired-by-the-original-xbox",
+  "en_title": "Xbox Series X Translucent Green 25th Anniversary Edition Console and Controller Announced, Inspired by the Original Xbox",
+  "cn_title": "微软公布Xbox Series X 25周年半透明绿限定版",
+  "subtitle": "致敬初代Xbox",
+  "opus_summary": "微软公布致敬初代Xbox的限定版Xbox Series X，半透明绿外壳可窥内部，同款手柄同步推出。主机与手柄11月发售，定价待公布。与《光环：战役进化》重制版相得益彰。",
+  "publish_time_cn": "2026-06-08 01:55",
+  "paragraphs": [
+    {
+      "en": "Microsoft has announced a new limited edition Xbox Series X console variant inspired by the original Xbox.",
+      "cn": "微软公布了一款致敬初代Xbox的全新限定版Xbox Series X主机。"
+    },
+    {
+      "en": "The console will sport a translucent Xbox green shell, allowing you to see all of the inner-workings of the console. It will also have a matching translucent controller, which will be bundled with the console and sold separately. Microsoft noted that the console and controller will have small details and surprises that pay tribute to the brand's 25 years of history.",
+      "cn": "主机将采用半透明Xbox绿色外壳，让你能看清内部构造。同时还会有一款同色半透明手柄，与主机捆绑销售，也可单独购买。微软表示，主机和手柄上还有一些致敬品牌25年历史的小细节和惊喜。"
+    },
+    {
+      "en": "Pricing details and pre-orders will be detailed later, but you can expect both the console and the controller to arrive in November. The console will likely pair well with Halo: Campaign Evolved, a remake of one of the greatest launch games of all-time. A new trailer for the remake was shown today and confirmed the game will release next month on July 28th .",
+      "cn": "定价详情和预购信息将在后续公布，但主机和手柄预计都将于11月发售。这款主机与《光环：战役进化》堪称绝配——该作是对史上最伟大首发游戏之一的重制版。今天还放出了重制版的新预告片，确认游戏将于下月7月28日发售。"
+    },
+    {
+      "en": "Microsoft noted that this hardware launch is just one of the ways its celebrating its 25th anniversary. It's unclear if there are any other big surprisises coming for the anniversary, but we likely won't see anythign else until around November when the anniversary happen.",
+      "cn": "微软表示，这款硬件只是其庆祝25周年的方式之一。目前尚不清楚周年庆是否还有其他重大惊喜，但很可能要到11月周年纪念日前后才会有新消息。"
+    },
+    {
+      "en": "For more, be sure to check out IGN's roundup of everything announced at Xbox Showcase 2027 .",
+      "cn": "更多详情，请查看IGN整理的Xbox 2027展示会全部公告汇总。"
+    },
+    {
+      "en": "Cade Onder is a freelancer for IGN's news team. He covers all things entertainment, including gaming, film, and more. You can find him on Twitter @Cade_Onder.",
+      "cn": "Cade Onder是IGN新闻团队的自由撰稿人，报道游戏、电影等一切娱乐内容。你可以在X上关注他 @Cade_Onder。"
+    }
+  ],
+  "pending_dict": [],
+  "translated_terms": {
+    "Microsoft": "微软",
+    "Xbox Series X": "Xbox Series X",
+    "Halo: Campaign Evolved": "《光环：战役进化》",
+    "Cade Onder": "Cade Onder"
+  },
+  "cover": "https://assets-prd.ignimgs.com/2026/06/07/xbox-wireless-controller-x25-special-edition-1-d75d6cc00415223ed301-1780854794250.jpg?width=1280&format=jpg&auto=webp&quality=80",
+  "images": [
+    "https://assets-prd.ignimgs.com/2026/06/07/xbox-wireless-controller-x25-special-edition-1-d75d6cc00415223ed301-1780854794250.jpg?width=1280&format=jpg&auto=webp&quality=80",
+    "https://assets-prd.ignimgs.com/2026/06/07/xbox-wireless-controller-x25-special-edition-1-d75d6cc00415223ed301-1780854794250.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+    "https://assets-prd.ignimgs.com/2026/06/07/xbox-wireless-controller-x25-special-edition-1-d75d6cc00415223ed301-1780854794250.jpg?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+    "https://assets-prd.ignimgs.com/2026/06/07/xbox-wireless-controller-x25-special-edition-1-d75d6cc00415223ed301-1780854794250.jpg?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+    "https://assets-prd.ignimgs.com/2026/06/07/xbox-wireless-controller-x25-special-edition-1-d75d6cc00415223ed301-1780854794250.jpg"
+  ],
+  "repair_source": "api_audit",
+  "repair_issue_count": 1,
+  "translator": "api",
+  "translator_provider": "openai-compatible",
+  "translator_model": "deepseek-v4-flash",
+  "quality_status": "needs_manual_review",
+  "manual_release_required": true,
+  "audit_issues": [
+    {
+      "type": "summary_length",
+      "detail": "opus_summary must be 70-80 non-space characters, got 83"
+    }
+  ],
+  "audit_failed_at": "2026-06-08T06:53:19.584905+08:00",
+  "audit_failure_reason": "[summary_length] opus_summary must be 70-80 non-space characters, got 83"
+}

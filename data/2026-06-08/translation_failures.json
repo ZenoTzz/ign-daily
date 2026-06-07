@@ -38,7 +38,140 @@
       "fingerprint": "fe704f2fb72456fbe39b9ef5366428b7dd39a62e",
       "translation_path": "translations/07.json",
       "retry_policy": "manual_only"
+    },
+    "13": {
+      "id": 13,
+      "url": "https://www.ign.com/articles/warhammer-40000-dark-heresy-gameplay-trailer-puts-you-in-the-shoes-of-a-grim-sci-fi-detective-ign-live",
+      "en_title": "Warhammer 40,000 Dark Heresy Gameplay Trailer Puts You In the Shoes of a Grim Sci-Fi Detective | IGN Live",
+      "cn_title": "《战锤40K：黑暗异端》实机预告发布，扮演科幻侦探",
+      "model": "deepseek-v4-flash",
+      "status": "needs_manual_review",
+      "failed_at": "2026-06-08T06:51:03.549141+08:00",
+      "reason": "[summary_length] opus_summary must be 70-80 non-space characters, got 99",
+      "audit_issues": [
+        {
+          "type": "summary_length",
+          "detail": "opus_summary must be 70-80 non-space characters, got 99"
+        }
+      ],
+      "fingerprint": "53a2dd736c55215895f38224f7a3e29bcfbb6a5c",
+      "translation_path": "translations/13.json",
+      "retry_policy": "manual_only"
+    },
+    "16": {
+      "id": 16,
+      "url": "https://www.ign.com/articles/gears-of-war-e-day-and-clockwork-revolution-are-not-timed-exclusives-xbox-says-so-theyll-never-launch-on-playstation",
+      "en_title": "Gears of War: E-Day and Clockwork Revolution Are 'Not Timed Exclusives,' Xbox Says — So They'll Never Launch on PlayStation",
+      "cn_title": "Xbox确认《战争机器：事变日》等作永久独占，永不上架PlayStation",
+      "model": "deepseek-v4-flash",
+      "status": "needs_manual_review",
+      "failed_at": "2026-06-08T06:51:24.586391+08:00",
+      "reason": "[summary_length] opus_summary must be 70-80 non-space characters, got 119",
+      "audit_issues": [
+        {
+          "type": "summary_length",
+          "detail": "opus_summary must be 70-80 non-space characters, got 119"
+        }
+      ],
+      "fingerprint": "36de282cd955bb30e6cd9f87e67b22a350aa4da3",
+      "translation_path": "translations/16.json",
+      "retry_policy": "manual_only"
+    },
+    "25": {
+      "id": 25,
+      "url": "https://www.ign.com/articles/persona-4-revival-reveals-february-2027-release-date",
+      "en_title": "Persona 4 Revival Reveals February 2027 Release Date",
+      "cn_title": "《女神异闻录4：复兴版》定档2027年2月",
+      "model": "deepseek-v4-flash",
+      "status": "needs_manual_review",
+      "failed_at": "2026-06-08T06:52:02.855177+08:00",
+      "reason": "[summary_length] opus_summary must be 70-80 non-space characters, got 89",
+      "audit_issues": [
+        {
+          "type": "summary_length",
+          "detail": "opus_summary must be 70-80 non-space characters, got 89"
+        }
+      ],
+      "fingerprint": "4847b852dcb0978b922ab81517e7317252b5f4cb",
+      "translation_path": "translations/25.json",
+      "retry_policy": "manual_only"
+    },
+    "26": {
+      "id": 26,
+      "url": "https://www.ign.com/articles/halo-campaign-evolved-reveals-new-space-combat-missions-imminent-release-date",
+      "en_title": "Halo: Campaign Evolved Reveals New Space Combat Missions, Imminent Release Date",
+      "cn_title": "《光环：战役进化》公布太空战斗新任务与发售日",
+      "model": "deepseek-v4-flash",
+      "status": "needs_manual_review",
+      "failed_at": "2026-06-08T06:52:20.637100+08:00",
+      "reason": "[summary_length] opus_summary must be 70-80 non-space characters, got 101",
+      "audit_issues": [
+        {
+          "type": "summary_length",
+          "detail": "opus_summary must be 70-80 non-space characters, got 101"
+        }
+      ],
+      "fingerprint": "0083a287c438ad0cc6d14f610adbb1181ac72a0d",
+      "translation_path": "translations/26.json",
+      "retry_policy": "manual_only"
+    },
+    "28": {
+      "id": 28,
+      "url": "https://www.ign.com/articles/gears-of-war-e-day-is-an-xbox-console-exclusive-release-date-revealed",
+      "en_title": "Gears of War: E-Day Is Xbox Console Exclusive, Release Date Revealed",
+      "cn_title": "《战争机器：事变日》10月6日发售，Xbox独占确认",
+      "model": "deepseek-v4-flash",
+      "status": "needs_manual_review",
+      "failed_at": "2026-06-08T06:52:45.593742+08:00",
+      "reason": "[summary_length] opus_summary must be 70-80 non-space characters, got 83",
+      "audit_issues": [
+        {
+          "type": "summary_length",
+          "detail": "opus_summary must be 70-80 non-space characters, got 83"
+        }
+      ],
+      "fingerprint": "05b83723ef7b1b05c642cd279b821b70a5598ee6",
+      "translation_path": "translations/28.json",
+      "retry_policy": "manual_only"
+    },
+    "29": {
+      "id": 29,
+      "url": "https://www.ign.com/articles/the-super-mario-galaxy-movie-crosses-1-billion-at-the-box-office",
+      "en_title": "The Super Mario Galaxy Movie Crosses $1 Billion at the Box Office",
+      "cn_title": "《超级马力欧银河大电影》全球票房突破10亿美元(约合人民币68亿元)",
+      "model": "deepseek-v4-flash",
+      "status": "needs_manual_review",
+      "failed_at": "2026-06-08T06:53:07.100871+08:00",
+      "reason": "[summary_length] opus_summary must be 70-80 non-space characters, got 94",
+      "audit_issues": [
+        {
+          "type": "summary_length",
+          "detail": "opus_summary must be 70-80 non-space characters, got 94"
+        }
+      ],
+      "fingerprint": "8b1955c924c9729d5a69de3770fc6c417829fcbf",
+      "translation_path": "translations/29.json",
+      "retry_policy": "manual_only"
+    },
+    "32": {
+      "id": 32,
+      "url": "https://www.ign.com/articles/xbox-series-x-translucent-green-25th-anniversary-edition-console-and-controller-announced-inspired-by-the-original-xbox",
+      "en_title": "Xbox Series X Translucent Green 25th Anniversary Edition Console and Controller Announced, Inspired by the Original Xbox",
+      "cn_title": "微软公布Xbox Series X 25周年半透明绿限定版",
+      "model": "deepseek-v4-flash",
+      "status": "needs_manual_review",
+      "failed_at": "2026-06-08T06:53:19.584905+08:00",
+      "reason": "[summary_length] opus_summary must be 70-80 non-space characters, got 83",
+      "audit_issues": [
+        {
+          "type": "summary_length",
+          "detail": "opus_summary must be 70-80 non-space characters, got 83"
+        }
+      ],
+      "fingerprint": "bf57b3ed528982cc60c69c6f98df54a8c0b8b51d",
+      "translation_path": "translations/32.json",
+      "retry_policy": "manual_only"
     }
   },
-  "updated_at": "2026-06-07T16:51:03.163026+08:00"
+  "updated_at": "2026-06-08T06:53:19.584905+08:00"
 }
