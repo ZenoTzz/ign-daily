@@ -38,32 +38,7 @@
       "fingerprint": "48a7f0168f316d8e179ec50bbe95ede9d5675125",
       "translation_path": "translations/15.json",
       "retry_policy": "manual_only"
-    },
-    "7": {
-      "id": 7,
-      "url": "https://www.ign.com/articles/final-fantasy-7-revelation-director-confirms-new-voice-actor-for-sephiroth",
-      "en_title": "Final Fantasy 7 Revelation Director Confirms New Voice Actor for Sephiroth",
-      "cn_title": "《最终幻想7 启示录》萨菲罗斯换声优",
-      "model": "deepseek-v4-flash",
-      "status": "needs_manual_review",
-      "failed_at": "2026-06-08T07:21:00.023874+08:00",
-      "reason": "[summary_length] opus_summary must be 70-80 non-space characters, got 86; [dictionary] source contains 'Nintendo', but required dictionary translation '任天堂' is missing",
-      "audit_issues": [
-        {
-          "type": "summary_length",
-          "detail": "opus_summary must be 70-80 non-space characters, got 86"
-        },
-        {
-          "type": "dictionary",
-          "detail": "source contains 'Nintendo', but required dictionary translation '任天堂' is missing",
-          "en": "Nintendo",
-          "expected_cn": "任天堂"
-        }
-      ],
-      "fingerprint": "5b71872d9766e0a71e7791a34e1ba54bdf602863",
-      "translation_path": "translations/07.json",
-      "retry_policy": "manual_only"
     }
   },
-  "updated_at": "2026-06-08T07:21:00.023874+08:00"
+  "updated_at": "2026-06-07T23:26:45.164Z"
 }
