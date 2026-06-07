@@ -19,7 +19,26 @@
       "fingerprint": "4871ab27aa3e24eaa7e690422be21454dedbe5b7",
       "translation_path": "translations/05.json",
       "retry_policy": "manual_only"
+    },
+    "15": {
+      "id": 15,
+      "url": "https://www.ign.com/articles/stellar-blade-blood-rain-dev-comments-on-launch-platform-plans",
+      "en_title": "Stellar Blade: Blood Rain Dev Comments on Launch Platform Plans",
+      "cn_title": "《剑星：血雨》或跨平台首发，开发商称尚未决定",
+      "model": "deepseek-v4-flash",
+      "status": "needs_manual_review",
+      "failed_at": "2026-06-08T06:57:57.075773+08:00",
+      "reason": "[summary_length] opus_summary must be 70-80 non-space characters, got 108",
+      "audit_issues": [
+        {
+          "type": "summary_length",
+          "detail": "opus_summary must be 70-80 non-space characters, got 108"
+        }
+      ],
+      "fingerprint": "48a7f0168f316d8e179ec50bbe95ede9d5675125",
+      "translation_path": "translations/15.json",
+      "retry_policy": "manual_only"
     }
   },
-  "updated_at": "2026-06-06T02:46:47.415Z"
+  "updated_at": "2026-06-08T06:57:57.075773+08:00"
 }
