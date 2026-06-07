@@ -72,12 +72,12 @@
       "emoji": "🐱",
       "en_title": "1666: Amsterdam Creator on the Game's Timelines... and Playing as a Cat! | IGN Live 2026",
       "cn_title": "《1666：阿姆斯特丹》可扮演猫咪，制作人揭秘时间线",
-      "summary": "在IGN Live 2026上，《1666：阿姆斯特丹》制作人Patrice Désilets透露，玩家可在游戏中扮演一只猫，这只猫实际上是来自1999年的一个人。游戏经历15年开发，现已推出免费试玩序章，登陆PC、Steam和Epic Games商店。",
+      "summary": "在IGN Live 2026上，《1666：阿姆斯特丹》制作人Patrice Désilets透露，玩家可扮演一只猫，它实际是来自1999年的人。游戏开发15年，现已推出免费试玩序章，登陆PC、Steam和Epic Games商店。",
       "url": "https://www.ign.com/articles/1666-amsterdam-timelines-cat",
       "publish_time_cn": "2026-06-08 04:11",
       "pub_date": "2026-06-08 04:11",
       "cover_image": "https://assets-prd.ignimgs.com/2026/06/06/1666a-int-blogroll-1780706975511.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/06/1666a-int-blogroll-1780706975511.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/06/1666a-int-blogroll-1780706975511.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -103,7 +103,13 @@
           "cn": "Panache Digital Games",
           "reason": "工作室名，词库中无记录，保留英文"
         }
-      ]
+      ],
+      "translation_error": "[summary_length] opus_summary must be 70-80 non-space characters, got 112",
+      "translation_failed_at": "2026-06-08T06:55:51.051579+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-flash",
+      "translation_path": "translations/11.json"
     },
     {
       "id": 12,
@@ -111,12 +117,12 @@
       "emoji": "🎮",
       "en_title": "Star Wars: Zero Company Creators Talk Canon, Character Customization and More | IGN Live 2026",
       "cn_title": "《星球大战 零号连队》开发者谈剧情与自定义角色",
-      "summary": "在IGN Live 2026上，《星球大战 零号连队》总监Greg Foertsch和首席设计师James Brawley透露了这款回合制战术游戏的更多细节。游戏设定在克隆人战争末期，玩家将扮演前共和国军官Hawks，可自定义其种族和性别。角色拥有永久死亡机制，但最终结局将融入星战正史。游戏将于8月27日登陆PC、PS5和Xbox Series X/S。",
+      "summary": "《星球大战 零号连队》总监Greg Foertsch和首席设计师James Brawley在IGN Live 2026上透露了这款回合制战术游戏的更多细节。游戏设定在克隆人战争末期，玩家扮演前共和国军官Hawks，可自定义种族和性别。角色有永久死亡机制，但结局融入正史。8月27日登陆PC、PS5和Xbox Series X/S。",
       "url": "https://www.ign.com/articles/star-wars-zero-company-canon-customization",
       "publish_time_cn": "2026-06-08 03:45",
       "pub_date": "2026-06-08 03:45",
       "cover_image": "https://assets-prd.ignimgs.com/2026/06/06/swzero-blogroll-1780721551181.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/06/swzero-blogroll-1780721551181.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/06/swzero-blogroll-1780721551181.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -152,7 +158,13 @@
           "cn": "羁绊系统",
           "reason": "游戏机制名，建议译名，需确认"
         }
-      ]
+      ],
+      "translation_error": "[summary_length] opus_summary must be 70-80 non-space characters, got 158",
+      "translation_failed_at": "2026-06-08T06:56:17.955907+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-flash",
+      "translation_path": "translations/12.json"
     },
     {
       "id": 13,

@@ -840,6 +840,90 @@
       "total_tokens": 7789,
       "prompt_cache_hit_tokens": 6528,
       "prompt_cache_miss_tokens": 1110
+    },
+    {
+      "time_cn": "2026-06-08 06:55:42",
+      "task": "fulltext",
+      "model": "deepseek-v4-flash",
+      "article_id": 11,
+      "article_title": "《1666：阿姆斯特丹》可扮演猫咪，制作人揭秘时间线",
+      "article_url": "https://www.ign.com/articles/1666-amsterdam-timelines-cat",
+      "article_date": "2026-06-08",
+      "detail": "",
+      "estimated_cost_usd": 0.00071184,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8120,
+      "completion_tokens": 1681,
+      "total_tokens": 9801,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 1592
+    },
+    {
+      "time_cn": "2026-06-08 06:55:50",
+      "task": "fulltext_repair",
+      "model": "deepseek-v4-flash",
+      "article_id": 11,
+      "article_title": "《1666：阿姆斯特丹》可扮演猫咪，制作人揭秘时间线",
+      "article_url": "https://www.ign.com/articles/1666-amsterdam-timelines-cat",
+      "article_date": "2026-06-08",
+      "detail": "1 audit issue(s)",
+      "estimated_cost_usd": 0.00076958,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 2481,
+      "completion_tokens": 1508,
+      "total_tokens": 3989,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 2481
+    },
+    {
+      "time_cn": "2026-06-08 06:56:04",
+      "task": "fulltext",
+      "model": "deepseek-v4-flash",
+      "article_id": 12,
+      "article_title": "《星球大战 零号连队》开发者谈剧情与自定义角色",
+      "article_url": "https://www.ign.com/articles/star-wars-zero-company-canon-customization",
+      "article_date": "2026-06-08",
+      "detail": "",
+      "estimated_cost_usd": 0.00090252,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8516,
+      "completion_tokens": 2164,
+      "total_tokens": 10680,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 1988
+    },
+    {
+      "time_cn": "2026-06-08 06:56:17",
+      "task": "fulltext_repair",
+      "model": "deepseek-v4-flash",
+      "article_id": 12,
+      "article_title": "《星球大战 零号连队》开发者谈剧情与自定义角色",
+      "article_url": "https://www.ign.com/articles/star-wars-zero-company-canon-customization",
+      "article_date": "2026-06-08",
+      "detail": "1 audit issue(s)",
+      "estimated_cost_usd": 0.00109424,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 2944,
+      "completion_tokens": 2436,
+      "total_tokens": 5380,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 2944
     }
   ]
 }
