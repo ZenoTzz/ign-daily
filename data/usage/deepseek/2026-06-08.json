@@ -966,6 +966,48 @@
       "total_tokens": 5535,
       "prompt_cache_hit_tokens": 0,
       "prompt_cache_miss_tokens": 3254
+    },
+    {
+      "time_cn": "2026-06-08 07:20:48",
+      "task": "fulltext",
+      "model": "deepseek-v4-flash",
+      "article_id": 7,
+      "article_title": "《最终幻想7 启示录》萨菲罗斯换声优",
+      "article_url": "https://www.ign.com/articles/final-fantasy-7-revelation-director-confirms-new-voice-actor-for-sephiroth",
+      "article_date": "2026-06-07",
+      "detail": "",
+      "estimated_cost_usd": 0.00082846,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8277,
+      "completion_tokens": 2019,
+      "total_tokens": 10296,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 1749
+    },
+    {
+      "time_cn": "2026-06-08 07:20:59",
+      "task": "fulltext_repair",
+      "model": "deepseek-v4-flash",
+      "article_id": 7,
+      "article_title": "《最终幻想7 启示录》萨菲罗斯换声优",
+      "article_url": "https://www.ign.com/articles/final-fantasy-7-revelation-director-confirms-new-voice-actor-for-sephiroth",
+      "article_date": "2026-06-07",
+      "detail": "2 audit issue(s)",
+      "estimated_cost_usd": 0.00101794,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 2977,
+      "completion_tokens": 2147,
+      "total_tokens": 5124,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 2977
     }
   ]
 }

@@ -803,12 +803,12 @@
       "emoji": "🎭",
       "en_title": "Final Fantasy 7 Revelation Director Confirms New Voice Actor for Sephiroth",
       "cn_title": "《最终幻想7 启示录》萨菲罗斯换声优",
-      "summary": "史克威尔艾尼克斯确认《最终幻想7 启示录》中萨菲罗斯的英文配音演员更换。导演滨口直树在夏日游戏节采访中透露，因原配音演员Tyler Hoechlin档期冲突，新角色将由Tarvis Willingham接替，他曾为《索尼克》纳克鲁斯、《钢之炼金术师》罗伊·马斯坦等角色配音。游戏将于2027年春季登陆PC、Switch 2、PS5和Xbox Series。",
+      "summary": "史克威尔艾尼克斯确认《最终幻想7 启示录》萨菲罗斯英文配音换为Tarvis Willingham，原配音Tyler Hoechlin因档期冲突退出。游戏2027年春季登陆多平台。",
       "url": "https://www.ign.com/articles/final-fantasy-7-revelation-director-confirms-new-voice-actor-for-sephiroth",
       "publish_time_cn": "2026-06-06 15:11",
       "pub_date": "2026-06-06 15:11",
       "cover_image": "https://assets-prd.ignimgs.com/2026/06/06/final-fantasy-7-revelation-sephiroth-1780729489098.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/06/final-fantasy-7-revelation-sephiroth-1780729489098.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/06/final-fantasy-7-revelation-sephiroth-1780729489098.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -839,7 +839,13 @@
           "cn": "Maximilian Dood",
           "reason": "油管主，保留英文"
         }
-      ]
+      ],
+      "translation_error": "[summary_length] opus_summary must be 70-80 non-space characters, got 86; [dictionary] source contains 'Nintendo', but required dictionary translation '任天堂' is missing",
+      "translation_failed_at": "2026-06-08T07:21:00.023874+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-flash",
+      "translation_path": "translations/07.json"
     },
     {
       "id": 1,
