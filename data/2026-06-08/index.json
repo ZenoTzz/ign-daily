@@ -283,7 +283,7 @@
       "publish_time_cn": "2026-06-08 03:10",
       "pub_date": "2026-06-08 03:10",
       "cover_image": "https://assets-prd.ignimgs.com/2026/06/07/hkos8crbsaa5eoa-1780859077502.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "needs_review",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/07/hkos8crbsaa5eoa-1780859077502.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/07/hkos8crbsaa5eoa-1780859077502.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -300,8 +300,6 @@
           "reason": "无官方中文译名，保留英文"
         }
       ],
-      "translation_error": "[summary_length] opus_summary must be 70-80 non-space characters, got 119",
-      "translation_failed_at": "2026-06-08T06:51:24.586391+08:00",
       "translator": "api",
       "translator_provider": "openai-compatible",
       "translator_model": "deepseek-v4-flash",
