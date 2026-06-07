@@ -798,6 +798,48 @@
       "total_tokens": 2805,
       "prompt_cache_hit_tokens": 0,
       "prompt_cache_miss_tokens": 1921
+    },
+    {
+      "time_cn": "2026-06-08 06:54:48",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 33,
+      "article_title": "Esports Manager 2026 Announces Release Date — IGN Live 2026",
+      "article_url": "https://www.ign.com/articles/esports-manager-2026-announces-release-date-ign-live-2026",
+      "article_date": "2026-06-08",
+      "detail": "",
+      "estimated_cost_usd": 0.0002483,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7623,
+      "completion_tokens": 274,
+      "total_tokens": 7897,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 1095
+    },
+    {
+      "time_cn": "2026-06-08 06:54:51",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 34,
+      "article_title": "How Gothic Remake Works to Give You an Especially Immersive Open World | IGN Live 2026",
+      "article_url": "https://www.ign.com/articles/how-gothic-remake-works-to-give-you-an-especially-immersive-open-world-ign-live-2026",
+      "article_date": "2026-06-08",
+      "detail": "",
+      "estimated_cost_usd": 0.00021596,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7638,
+      "completion_tokens": 151,
+      "total_tokens": 7789,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 1110
     }
   ]
 }

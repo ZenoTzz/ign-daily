@@ -2,6 +2,71 @@
   "date": "2026-06-08",
   "articles": [
     {
+      "id": 33,
+      "category": "游戏新闻",
+      "emoji": "🎮",
+      "en_title": "Esports Manager 2026 Announces Release Date — IGN Live 2026",
+      "cn_title": "《电竞经理2026》7月6日发售，与电竞世界杯同步",
+      "summary": "在IGN Live的Indie Loop活动中，《电竞经理2026》宣布将于7月6日发售，与巴黎电竞世界杯开幕日同步。本作由Neurona Games开发、indie.io发行，玩家将管理电竞组织，包括签约选手、招募教练和分析师、处理赞助与财务等。游戏已推出免费试玩版，并根据反馈进行了大幅改进，包括战术系统重做、比赛解说和数百种新互动。",
+      "url": "https://www.ign.com/articles/esports-manager-2026-announces-release-date-ign-live-2026",
+      "publish_time_cn": "2026-06-08 06:00",
+      "pub_date": "2026-06-08 06:00",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/03/esp26-steam-main-capsule-1780509207620.png?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/03/esp26-steam-main-capsule-1780509207620.png?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/03/esp26-steam-main-capsule-1780509207620.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/03/esp26-steam-main-capsule-1780509207620.png?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/03/esp26-steam-main-capsule-1780509207620.png?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/03/esp26-steam-main-capsule-1780509207620.png",
+        "https://assets-prd.ignimgs.com/2026/06/03/image-1-1780509027003.jpg",
+        "https://assets-prd.ignimgs.com/2026/06/03/strategies-and-tactics-1780509049728.jpg",
+        "https://assets-prd.ignimgs.com/2026/06/03/chat-image-1780509074899.jpg",
+        "https://assets-prd.ignimgs.com/2026/06/03/team-staff-1780509135631.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-08T06:54:42+08:00",
+      "pending_dict": [
+        {
+          "en": "Esports Manager 2026",
+          "cn": "电竞经理2026",
+          "reason": "游戏名，词库未收录，建议确认译名"
+        },
+        {
+          "en": "Neurona Games",
+          "cn": "Neurona Games",
+          "reason": "开发商名，无常见中文译名，保留英文"
+        },
+        {
+          "en": "indie.io",
+          "cn": "indie.io",
+          "reason": "发行商名，无常见中文译名，保留英文"
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "category": "游戏新闻",
+      "emoji": "🎮",
+      "en_title": "How Gothic Remake Works to Give You an Especially Immersive Open World | IGN Live 2026",
+      "cn_title": "《哥特王朝》重制版：打造最沉浸的开放世界",
+      "summary": "在IGN Live上，THQ Nordic的Reinhard Pollice分享了《哥特王朝》重制版的开发理念。原版游戏迎来25周年，其独特的机制和沉浸式世界至今仍受玩家喜爱。重制版大幅扩展了NPC的日常行为，甚至包括动物生态，并取消了传统任务标记，鼓励玩家通过对话和探索自然发现线索。为降低门槛，游戏加入了难度自定义和沉浸式教程书，但依然保持挑战性。",
+      "url": "https://www.ign.com/articles/how-gothic-remake-works-to-give-you-an-especially-immersive-open-world-ign-live-2026",
+      "publish_time_cn": "2026-06-08 05:47",
+      "pub_date": "2026-06-08 05:47",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/06/gothic-int-blogroll-1780723095543.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/06/gothic-int-blogroll-1780723095543.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/06/gothic-int-blogroll-1780723095543.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/06/gothic-int-blogroll-1780723095543.jpg?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/06/gothic-int-blogroll-1780723095543.jpg?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/06/gothic-int-blogroll-1780723095543.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-08T06:54:43+08:00"
+    },
+    {
       "id": 11,
       "category": "游戏新闻",
       "emoji": "🐱",
@@ -1049,5 +1114,5 @@
       ]
     }
   ],
-  "total": 32
+  "total": 34
 }
