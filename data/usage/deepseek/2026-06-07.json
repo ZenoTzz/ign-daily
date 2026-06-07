@@ -567,6 +567,90 @@
       "total_tokens": 7927,
       "prompt_cache_hit_tokens": 6528,
       "prompt_cache_miss_tokens": 1267
+    },
+    {
+      "time_cn": "2026-06-07 16:50:24",
+      "task": "fulltext",
+      "model": "deepseek-v4-flash",
+      "article_id": 2,
+      "article_title": "《任天堂》《Nintendo Switch 2》《怪物猎人：荒野》确认登陆Switch 2",
+      "article_url": "https://www.ign.com/articles/monster-hunter-wilds-confirmed-for-nintendo-switch-2",
+      "article_date": "2026-06-08",
+      "detail": "",
+      "estimated_cost_usd": 0.0005521,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7983,
+      "completion_tokens": 1179,
+      "total_tokens": 9162,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 1455
+    },
+    {
+      "time_cn": "2026-06-07 16:50:33",
+      "task": "fulltext_repair",
+      "model": "deepseek-v4-flash",
+      "article_id": 2,
+      "article_title": "《任天堂》《Nintendo Switch 2》《怪物猎人：荒野》确认登陆Switch 2",
+      "article_url": "https://www.ign.com/articles/monster-hunter-wilds-confirmed-for-nintendo-switch-2",
+      "article_date": "2026-06-08",
+      "detail": "1 audit issue(s)",
+      "estimated_cost_usd": 0.00073822,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 2145,
+      "completion_tokens": 1564,
+      "total_tokens": 3709,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 2145
+    },
+    {
+      "time_cn": "2026-06-07 16:50:48",
+      "task": "fulltext",
+      "model": "deepseek-v4-flash",
+      "article_id": 7,
+      "article_title": "《战争机器：事变日》PS5占位符上架沃尔玛",
+      "article_url": "https://www.ign.com/articles/gears-of-war-e-day-ps5-placeholder-listing-appears-online-as-xbox-games-showcase-looms",
+      "article_date": "2026-06-08",
+      "detail": "",
+      "estimated_cost_usd": 0.00089062,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8565,
+      "completion_tokens": 2097,
+      "total_tokens": 10662,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 2037
+    },
+    {
+      "time_cn": "2026-06-07 16:51:03",
+      "task": "fulltext_repair",
+      "model": "deepseek-v4-flash",
+      "article_id": 7,
+      "article_title": "《战争机器：事变日》PS5占位符上架沃尔玛",
+      "article_url": "https://www.ign.com/articles/gears-of-war-e-day-ps5-placeholder-listing-appears-online-as-xbox-games-showcase-looms",
+      "article_date": "2026-06-08",
+      "detail": "1 audit issue(s)",
+      "estimated_cost_usd": 0.0011473,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 3141,
+      "completion_tokens": 2527,
+      "total_tokens": 5668,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 3141
     }
   ]
 }

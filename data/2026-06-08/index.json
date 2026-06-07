@@ -63,12 +63,12 @@
       "emoji": "🎮",
       "en_title": "Gears of War: E-Day PS5 Placeholder Listing Appears Online as Xbox Games Showcase Looms",
       "cn_title": "《战争机器：事变日》PS5占位符上架沃尔玛",
-      "summary": "微软Xbox游戏展示会前夕，沃尔玛网站出现《战争机器：事变日》PS5版占位符页面，标价99.99美元(约合人民币716元)。该页面已被删除，但引发玩家对微软独占策略的猜测。此前有消息称PS5版已取消，但占位符的出现让局面更加扑朔迷离。",
+      "summary": "微软Xbox游戏展示会前夕，沃尔玛网站出现《战争机器：事变日》PS5版占位符页面，标价99.99美元(约合人民币716元)。该页面已被删除，引发玩家对微软独占策略的猜测。",
       "url": "https://www.ign.com/articles/gears-of-war-e-day-ps5-placeholder-listing-appears-online-as-xbox-games-showcase-looms",
       "publish_time_cn": "2026-06-07 14:14",
       "pub_date": "2026-06-07 14:14",
       "cover_image": "https://assets-prd.ignimgs.com/2024/06/10/gears-of-war-e-day-announce-screenshot-5-ea8249fa3e6f9787d3d3-1717988954468.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2024/06/10/gears-of-war-e-day-announce-screenshot-5-ea8249fa3e6f9787d3d3-1717988954468.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2024/06/10/gears-of-war-e-day-announce-screenshot-5-ea8249fa3e6f9787d3d3-1717988954468.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -77,7 +77,13 @@
         "https://assets-prd.ignimgs.com/2024/06/10/gears-of-war-e-day-announce-screenshot-5-ea8249fa3e6f9787d3d3-1717988954468.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-07T16:48:55+08:00"
+      "source_fetched_at": "2026-06-07T16:48:55+08:00",
+      "translation_error": "[summary_length] opus_summary must be 70-80 non-space characters, got 85",
+      "translation_failed_at": "2026-06-07T16:51:03.163026+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-flash",
+      "translation_path": "translations/07.json"
     },
     {
       "id": 1,
@@ -153,13 +159,13 @@
       "category": "游戏新闻",
       "emoji": "🎮",
       "en_title": "Monster Hunter Wilds Confirmed for Nintendo Switch 2",
-      "cn_title": "《任天堂》《Nintendo Switch 2》《怪物猎人：荒野》确认登陆Switch 2",
-      "summary": "卡普空在夏日游戏节结束后，通过X平台宣布《怪物猎人：荒野》正在为Nintendo Switch 2开发中，但未公布发售日期。该作此前于2025年2月登陆PC、PS5和Xbox Series，此次登陆Switch 2满足了系列粉丝的期待。同时，卡普空还公布了新资料片《Ascendance》，计划2027年推出。",
+      "cn_title": "《任天堂》《怪物猎人：荒野》确认登陆Nintendo Switch 2",
+      "summary": "卡普空宣布《怪物猎人：荒野》正在为Nintendo Switch 2开发，未公布发售日期。该作此前登陆PC、PS5和Xbox Series，此次移植满足粉丝期待。同时公布新资料片《Ascendance》，计划2027年推出。",
       "url": "https://www.ign.com/articles/monster-hunter-wilds-confirmed-for-nintendo-switch-2",
       "publish_time_cn": "2026-06-07 11:46",
       "pub_date": "2026-06-07 11:46",
       "cover_image": "https://assets-prd.ignimgs.com/2026/06/07/monster-hunter-wilds-nintendo-switch-2-1780803660336.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/07/monster-hunter-wilds-nintendo-switch-2-1780803660336.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/07/monster-hunter-wilds-nintendo-switch-2-1780803660336.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -176,7 +182,13 @@
           "cn": "Ascendance",
           "reason": "资料片名称，暂无官方中文译名，建议保留英文或等待官方公布"
         }
-      ]
+      ],
+      "translation_error": "[summary_length] opus_summary must be 70-80 non-space characters, got 109",
+      "translation_failed_at": "2026-06-07T16:50:33.420530+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-flash",
+      "translation_path": "translations/02.json"
     },
     {
       "id": 3,

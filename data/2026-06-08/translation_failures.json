@@ -1,0 +1,44 @@
+{
+  "date": "2026-06-08",
+  "items": {
+    "2": {
+      "id": 2,
+      "url": "https://www.ign.com/articles/monster-hunter-wilds-confirmed-for-nintendo-switch-2",
+      "en_title": "Monster Hunter Wilds Confirmed for Nintendo Switch 2",
+      "cn_title": "《任天堂》《怪物猎人：荒野》确认登陆Nintendo Switch 2",
+      "model": "deepseek-v4-flash",
+      "status": "needs_manual_review",
+      "failed_at": "2026-06-07T16:50:33.420530+08:00",
+      "reason": "[summary_length] opus_summary must be 70-80 non-space characters, got 109",
+      "audit_issues": [
+        {
+          "type": "summary_length",
+          "detail": "opus_summary must be 70-80 non-space characters, got 109"
+        }
+      ],
+      "fingerprint": "b253775501cf8ff572e09ee997aff8567227afcf",
+      "translation_path": "translations/02.json",
+      "retry_policy": "manual_only"
+    },
+    "7": {
+      "id": 7,
+      "url": "https://www.ign.com/articles/gears-of-war-e-day-ps5-placeholder-listing-appears-online-as-xbox-games-showcase-looms",
+      "en_title": "Gears of War: E-Day PS5 Placeholder Listing Appears Online as Xbox Games Showcase Looms",
+      "cn_title": "《战争机器：事变日》PS5占位符上架沃尔玛",
+      "model": "deepseek-v4-flash",
+      "status": "needs_manual_review",
+      "failed_at": "2026-06-07T16:51:03.163026+08:00",
+      "reason": "[summary_length] opus_summary must be 70-80 non-space characters, got 85",
+      "audit_issues": [
+        {
+          "type": "summary_length",
+          "detail": "opus_summary must be 70-80 non-space characters, got 85"
+        }
+      ],
+      "fingerprint": "fe704f2fb72456fbe39b9ef5366428b7dd39a62e",
+      "translation_path": "translations/07.json",
+      "retry_policy": "manual_only"
+    }
+  },
+  "updated_at": "2026-06-07T16:51:03.163026+08:00"
+}
