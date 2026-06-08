@@ -39,25 +39,6 @@
       "translation_path": "translations/07.json",
       "retry_policy": "manual_only"
     },
-    "11": {
-      "id": 11,
-      "url": "https://www.ign.com/articles/1666-amsterdam-timelines-cat",
-      "en_title": "1666: Amsterdam Creator on the Game's Timelines... and Playing as a Cat! | IGN Live 2026",
-      "cn_title": "《1666：阿姆斯特丹》可扮演猫咪，制作人揭秘时间线",
-      "model": "deepseek-v4-flash",
-      "status": "needs_manual_review",
-      "failed_at": "2026-06-08T06:55:51.051579+08:00",
-      "reason": "[summary_length] opus_summary must be 70-80 non-space characters, got 112",
-      "audit_issues": [
-        {
-          "type": "summary_length",
-          "detail": "opus_summary must be 70-80 non-space characters, got 112"
-        }
-      ],
-      "fingerprint": "58d9baa91167a6a4d96179cf2ee23cf612660e3c",
-      "translation_path": "translations/11.json",
-      "retry_policy": "manual_only"
-    },
     "12": {
       "id": 12,
       "url": "https://www.ign.com/articles/star-wars-zero-company-canon-customization",
@@ -173,5 +154,5 @@
       "retry_policy": "manual_only"
     }
   },
-  "updated_at": "2026-06-08T01:05:44.962Z"
+  "updated_at": "2026-06-08T01:10:09.897Z"
 }
