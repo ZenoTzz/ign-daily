@@ -29,12 +29,12 @@
       "emoji": "🎮",
       "en_title": "Alix Wilton Regan on Becoming Lara Croft in Tomb Raider: Legacy of Atlantis | IGN Live 2026",
       "cn_title": "《古墓丽影：亚特兰蒂斯遗迹》新劳拉配音演员亮相",
-      "summary": "在IGN Live 2026上，Alix Wilton Regan（《刺客信条：起源》《Dota：龙之血》）分享了为《古墓丽影：亚特兰蒂斯遗迹》配音劳拉·克劳馥的感受。她表示劳拉是英国文化偶像，自己非常激动。该作是1996年初代《古墓丽影》的重制版，将于2027年2月12日登陆Nintendo Switch 2、PS5、PC和Xbox Series X/S。",
+      "summary": "Alix Wilton Regan在IGN Live上分享为《古墓丽影：亚特兰蒂斯遗迹》配音劳拉的感受，称其为英国文化偶像。该作是1996年初代重制版，2027年2月12日登陆任天堂Switch 2、PS5、PC和Xbox Series X/S。",
       "url": "https://www.ign.com/articles/alix-wilton-regan-on-becoming-lara-croft-in-tomb-raider-legacy-of-atlantis-ign-live-2026",
       "publish_time_cn": "2026-06-08 07:37",
       "pub_date": "2026-06-08 07:37",
       "cover_image": "https://assets-prd.ignimgs.com/2026/06/06/tr-blogroll-1780725939501.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/06/tr-blogroll-1780725939501.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/06/tr-blogroll-1780725939501.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -50,7 +50,13 @@
           "cn": "Alix Wilton Regan",
           "reason": "不知名人物，保留英文名"
         }
-      ]
+      ],
+      "translation_error": "[summary_length] opus_summary must be 70-80 non-space characters, got 117",
+      "translation_failed_at": "2026-06-08T09:11:21.474769+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-flash",
+      "translation_path": "translations/37.json"
     },
     {
       "id": 38,
