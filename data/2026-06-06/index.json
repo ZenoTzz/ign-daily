@@ -307,7 +307,7 @@
       "publish_time_cn": "2026-06-06 06:30",
       "pub_date": "2026-06-06 06:30",
       "cover_image": "https://assets-prd.ignimgs.com/2026/06/05/hkfv3jtbeaa1djl-1780698550353.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "needs_review",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/05/hkfv3jtbeaa1djl-1780698550353.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/05/hkfv3jtbeaa1djl-1780698550353.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -334,8 +334,6 @@
           "reason": "竞速游戏名，无官方译名，保留英文"
         }
       ],
-      "translation_error": "[summary_length] opus_summary must be 70-80 non-space characters, got 106",
-      "translation_failed_at": "2026-06-06T09:04:56.517613+08:00",
       "translator": "api",
       "translator_provider": "openai-compatible",
       "translator_model": "deepseek-v4-flash",
