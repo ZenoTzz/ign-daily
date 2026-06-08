@@ -555,7 +555,7 @@
       "publish_time_cn": "2026-06-07 00:13",
       "pub_date": "2026-06-07 00:13",
       "cover_image": "https://assets-prd.ignimgs.com/2026/06/06/sbbr-sgf-screenshots-01-1780762320495.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "needs_review",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/06/sbbr-sgf-screenshots-01-1780762320495.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/06/sbbr-sgf-screenshots-01-1780762320495.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -582,8 +582,6 @@
           "reason": "微软新Xbox CEO，词库已收录，但需确认译名一致性。"
         }
       ],
-      "translation_error": "[summary_length] opus_summary must be 70-80 non-space characters, got 108",
-      "translation_failed_at": "2026-06-08T06:57:57.075773+08:00",
       "translator": "api",
       "translator_provider": "openai-compatible",
       "translator_model": "deepseek-v4-flash",
