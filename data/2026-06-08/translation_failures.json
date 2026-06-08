@@ -39,25 +39,6 @@
       "translation_path": "translations/07.json",
       "retry_policy": "manual_only"
     },
-    "12": {
-      "id": 12,
-      "url": "https://www.ign.com/articles/star-wars-zero-company-canon-customization",
-      "en_title": "Star Wars: Zero Company Creators Talk Canon, Character Customization and More | IGN Live 2026",
-      "cn_title": "《星球大战 零号连队》开发者谈剧情与自定义角色",
-      "model": "deepseek-v4-flash",
-      "status": "needs_manual_review",
-      "failed_at": "2026-06-08T06:56:17.955907+08:00",
-      "reason": "[summary_length] opus_summary must be 70-80 non-space characters, got 158",
-      "audit_issues": [
-        {
-          "type": "summary_length",
-          "detail": "opus_summary must be 70-80 non-space characters, got 158"
-        }
-      ],
-      "fingerprint": "71ce45e4ba14b9bbf75cc94c56a9c13ebaf7f842",
-      "translation_path": "translations/12.json",
-      "retry_policy": "manual_only"
-    },
     "13": {
       "id": 13,
       "url": "https://www.ign.com/articles/warhammer-40000-dark-heresy-gameplay-trailer-puts-you-in-the-shoes-of-a-grim-sci-fi-detective-ign-live",
@@ -154,5 +135,5 @@
       "retry_policy": "manual_only"
     }
   },
-  "updated_at": "2026-06-08T02:04:17.685Z"
+  "updated_at": "2026-06-08T02:31:27.851Z"
 }
