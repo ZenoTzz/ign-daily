@@ -152,26 +152,7 @@
       "fingerprint": "bf57b3ed528982cc60c69c6f98df54a8c0b8b51d",
       "translation_path": "translations/32.json",
       "retry_policy": "manual_only"
-    },
-    "37": {
-      "id": 37,
-      "url": "https://www.ign.com/articles/alix-wilton-regan-on-becoming-lara-croft-in-tomb-raider-legacy-of-atlantis-ign-live-2026",
-      "en_title": "Alix Wilton Regan on Becoming Lara Croft in Tomb Raider: Legacy of Atlantis | IGN Live 2026",
-      "cn_title": "《古墓丽影：亚特兰蒂斯遗迹》新劳拉配音演员亮相",
-      "model": "deepseek-v4-flash",
-      "status": "needs_manual_review",
-      "failed_at": "2026-06-08T09:11:21.474769+08:00",
-      "reason": "[summary_length] opus_summary must be 70-80 non-space characters, got 117",
-      "audit_issues": [
-        {
-          "type": "summary_length",
-          "detail": "opus_summary must be 70-80 non-space characters, got 117"
-        }
-      ],
-      "fingerprint": "9ee93c3db9e60a583432a63a0efbd0b771c6415c",
-      "translation_path": "translations/37.json",
-      "retry_policy": "manual_only"
     }
   },
-  "updated_at": "2026-06-08T09:11:21.474769+08:00"
+  "updated_at": "2026-06-08T02:04:17.685Z"
 }
