@@ -1134,6 +1134,195 @@
       "total_tokens": 4384,
       "prompt_cache_hit_tokens": 0,
       "prompt_cache_miss_tokens": 2709
+    },
+    {
+      "time_cn": "2026-06-08 20:53:57",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 1,
+      "article_title": "Spider-Man: Brand New Day's Second Trailer Leaks Online, With Sony Now Issuing Copyright Takedowns",
+      "article_url": "https://www.ign.com/articles/spider-man-brand-new-days-second-trailer-leaks-online-with-sony-now-issuing-copyright-takedowns",
+      "article_date": "2026-06-09",
+      "detail": "",
+      "estimated_cost_usd": 0.00020602,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7509,
+      "completion_tokens": 180,
+      "total_tokens": 7689,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 981
+    },
+    {
+      "time_cn": "2026-06-08 20:54:01",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 2,
+      "article_title": "Hellblade Developer Ninja Theory Has Cancelled Project Mara",
+      "article_url": "https://www.ign.com/articles/hellblade-developer-ninja-theory-has-cancelled-project-mara",
+      "article_date": "2026-06-09",
+      "detail": "",
+      "estimated_cost_usd": 0.0002056,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7472,
+      "completion_tokens": 197,
+      "total_tokens": 7669,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 944
+    },
+    {
+      "time_cn": "2026-06-08 20:54:05",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 3,
+      "article_title": "Xbox Game Exclusivity Will Be Decided on a 'Case-by-Case' Basis, Microsoft Says",
+      "article_url": "https://www.ign.com/articles/xbox-game-exclusivity-will-be-decided-on-a-case-by-case-basis-microsoft-says",
+      "article_date": "2026-06-09",
+      "detail": "",
+      "estimated_cost_usd": 0.00025656,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7842,
+      "completion_tokens": 194,
+      "total_tokens": 8036,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 1314
+    },
+    {
+      "time_cn": "2026-06-08 20:54:09",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 4,
+      "article_title": "Will 007 First Light Get a Sequel? The Boss of Amazon Games Responds",
+      "article_url": "https://www.ign.com/articles/will-007-first-light-get-a-sequel-the-boss-of-amazon-games-responds",
+      "article_date": "2026-06-09",
+      "detail": "",
+      "estimated_cost_usd": 0.00024508,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7692,
+      "completion_tokens": 228,
+      "total_tokens": 7920,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 1164
+    },
+    {
+      "time_cn": "2026-06-08 20:54:15",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 5,
+      "article_title": "Todd McFarlane Shows Off New Fallout and Helldivers Figures | IGN Live 2026",
+      "article_url": "https://www.ign.com/articles/todd-mcfarlane-shows-off-new-fallout-and-helldivers-figures-ign-live-2026",
+      "article_date": "2026-06-09",
+      "detail": "",
+      "estimated_cost_usd": 0.00027784,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7574,
+      "completion_tokens": 404,
+      "total_tokens": 7978,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 1046
+    },
+    {
+      "time_cn": "2026-06-08 20:54:19",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 6,
+      "article_title": "Rick and Morty Season 9, Episode 3 Review: \"Rick Fu Hustle\"",
+      "article_url": "https://www.ign.com/articles/rick-and-morty-season-9-episode-3-review-recap-rick-fu-hustle",
+      "article_date": "2026-06-09",
+      "detail": "",
+      "estimated_cost_usd": 0.00025586,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7639,
+      "completion_tokens": 293,
+      "total_tokens": 7932,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 1111
+    },
+    {
+      "time_cn": "2026-06-08 20:54:23",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 7,
+      "article_title": "The Vampire Lestat’s Rolin Jones Reveals What to Pay Special Attention to in the Season Premiere, ‘Detroit’",
+      "article_url": "https://www.ign.com/articles/the-vampire-lestat-rolin-jones-season-premiere-detroit-interview",
+      "article_date": "2026-06-09",
+      "detail": "",
+      "estimated_cost_usd": 0.00031662,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8255,
+      "completion_tokens": 202,
+      "total_tokens": 8457,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 1727
+    },
+    {
+      "time_cn": "2026-06-08 20:54:28",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 8,
+      "article_title": "See 5 New Magic: The Gathering | Marvel Super Heroes Card Reveals | IGN Live 2026",
+      "article_url": "https://www.ign.com/articles/new-magic-the-gathering-marvel-super-heroes-card-reveals",
+      "article_date": "2026-06-09",
+      "detail": "",
+      "estimated_cost_usd": 0.0002175,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7353,
+      "completion_tokens": 299,
+      "total_tokens": 7652,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 825
+    },
+    {
+      "time_cn": "2026-06-08 20:54:34",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 9,
+      "article_title": "The Legend of Vox Machina Team Preview What's to Come in Season 4 | IGN Live 2026",
+      "article_url": "https://www.ign.com/articles/legend-of-vox-machina-season-4-taryon",
+      "article_date": "2026-06-09",
+      "detail": "",
+      "estimated_cost_usd": 0.00032446,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7881,
+      "completion_tokens": 417,
+      "total_tokens": 8298,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 1353
     }
   ]
 }
