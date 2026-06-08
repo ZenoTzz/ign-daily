@@ -1323,6 +1323,237 @@
       "total_tokens": 8298,
       "prompt_cache_hit_tokens": 6528,
       "prompt_cache_miss_tokens": 1353
+    },
+    {
+      "time_cn": "2026-06-08 23:21:22",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 10,
+      "article_title": "France Slaps Nintendo With $46 Million Fine Over Switch Joy-Con Drift",
+      "article_url": "https://www.ign.com/articles/france-slaps-nintendo-with-46-million-fine-over-switch-joy-con-drift",
+      "article_date": "2026-06-09",
+      "detail": "",
+      "estimated_cost_usd": 0.00017144,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7366,
+      "completion_tokens": 128,
+      "total_tokens": 7494,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 838
+    },
+    {
+      "time_cn": "2026-06-08 23:21:26",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 11,
+      "article_title": "Netflix Reveals the Real Dog Playing Scooby-Doo in Upcoming Origins Series",
+      "article_url": "https://www.ign.com/articles/netflix-scooby-doo-origins-series-real-dog",
+      "article_date": "2026-06-09",
+      "detail": "",
+      "estimated_cost_usd": 0.00025964,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7566,
+      "completion_tokens": 343,
+      "total_tokens": 7909,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 1038
+    },
+    {
+      "time_cn": "2026-06-08 23:21:30",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 12,
+      "article_title": "Japan Gets Dating Sim Where Hot Anime Guys Turn Into Swole Cockroaches",
+      "article_url": "https://www.ign.com/articles/japan-gets-dating-sim-where-hot-anime-guys-turn-into-swole-cockroaches",
+      "article_date": "2026-06-09",
+      "detail": "",
+      "estimated_cost_usd": 0.00028456,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8044,
+      "completion_tokens": 193,
+      "total_tokens": 8237,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 1516
+    },
+    {
+      "time_cn": "2026-06-08 23:21:36",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 13,
+      "article_title": "Nintendo Direct Announced for This Week, as Fans Expect Huge Switch 2 Reveals",
+      "article_url": "https://www.ign.com/articles/nintendo-direct-announced-for-this-week-as-fans-expect-huge-switch-2-reveals",
+      "article_date": "2026-06-09",
+      "detail": "",
+      "estimated_cost_usd": 0.00035428,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7780,
+      "completion_tokens": 574,
+      "total_tokens": 8354,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 1252
+    },
+    {
+      "time_cn": "2026-06-08 23:21:39",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 14,
+      "article_title": "Mortal Kombat II: Watch the Exclusive First 10 Minutes Right Now",
+      "article_url": "https://www.ign.com/articles/mortal-kombat-2-exclusive-first-10-minutes",
+      "article_date": "2026-06-09",
+      "detail": "",
+      "estimated_cost_usd": 0.00018418,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7479,
+      "completion_tokens": 117,
+      "total_tokens": 7596,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 951
+    },
+    {
+      "time_cn": "2026-06-08 23:21:43",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 15,
+      "article_title": "My Adventures with Superman Season 3 Review",
+      "article_url": "https://www.ign.com/articles/my-adventures-with-superman-season-3-review",
+      "article_date": "2026-06-09",
+      "detail": "",
+      "estimated_cost_usd": 0.00029464,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8234,
+      "completion_tokens": 134,
+      "total_tokens": 8368,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 1706
+    },
+    {
+      "time_cn": "2026-06-08 23:21:46",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 16,
+      "article_title": "After Starring in an AI-Generated Video for Prada, Hideo Kojima Says 'Maybe AI Could Create Art, but While I Live, I Don't Think I'll See It'",
+      "article_url": "https://www.ign.com/articles/after-starring-in-an-ai-generated-video-for-prada-hideo-kojima-says-maybe-ai-could-create-art-but-while-i-live-i-dont-think-ill-see-it",
+      "article_date": "2026-06-09",
+      "detail": "",
+      "estimated_cost_usd": 0.00022632,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7802,
+      "completion_tokens": 106,
+      "total_tokens": 7908,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 1274
+    },
+    {
+      "time_cn": "2026-06-08 23:21:49",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 17,
+      "article_title": "Idris Elba Says It Was Never 'Realistic' For Him to Be Cast as James Bond",
+      "article_url": "https://www.ign.com/articles/idris-elba-says-it-was-never-realistic-for-him-to-be-cast-as-james-bond",
+      "article_date": "2026-06-09",
+      "detail": "",
+      "estimated_cost_usd": 0.00021568,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7680,
+      "completion_tokens": 129,
+      "total_tokens": 7809,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 1152
+    },
+    {
+      "time_cn": "2026-06-08 23:21:53",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 18,
+      "article_title": "After Another Xbox No-Show the Wait for The Elder Scrolls VI Goes On, and Fans Aren't Getting Any Younger",
+      "article_url": "https://www.ign.com/articles/after-another-xbox-no-show-the-wait-for-the-elder-scrolls-vi-goes-on-and-fans-arent-getting-any-younger",
+      "article_date": "2026-06-09",
+      "detail": "",
+      "estimated_cost_usd": 0.00025054,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7909,
+      "completion_tokens": 139,
+      "total_tokens": 8048,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 1381
+    },
+    {
+      "time_cn": "2026-06-08 23:21:56",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 19,
+      "article_title": "Amazon Still Wants to Make a Lord of the Rings Game Despite Canceling the MMO It Was Working On",
+      "article_url": "https://www.ign.com/articles/amazon-still-wants-to-make-a-lord-of-the-rings-game-despite-canceling-the-mmo-it-was-working-on",
+      "article_date": "2026-06-09",
+      "detail": "",
+      "estimated_cost_usd": 0.00028078,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8133,
+      "completion_tokens": 135,
+      "total_tokens": 8268,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 1605
+    },
+    {
+      "time_cn": "2026-06-08 23:22:00",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 20,
+      "article_title": "Hugh Laurie Roasts Critic Who Said All House Episodes Were Basically The Same",
+      "article_url": "https://www.ign.com/articles/hugh-laurie-roasts-critic-who-said-all-house-episodes-were-basically-the-same",
+      "article_date": "2026-06-09",
+      "detail": "",
+      "estimated_cost_usd": 0.00020238,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7567,
+      "completion_tokens": 138,
+      "total_tokens": 7705,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 1039
     }
   ]
 }
