@@ -1008,6 +1008,27 @@
       "total_tokens": 5124,
       "prompt_cache_hit_tokens": 0,
       "prompt_cache_miss_tokens": 2977
+    },
+    {
+      "time_cn": "2026-06-08 08:02:44",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 35,
+      "article_title": "Every New Card and Theme in Magic: The Gathering's Marvel Super Heroes Jumpstart Set",
+      "article_url": "https://www.ign.com/articles/magic-the-gathering-marvel-super-heroes-jumpstart-new-cards-spoilers",
+      "article_date": "2026-06-08",
+      "detail": "",
+      "estimated_cost_usd": 0.000228,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7728,
+      "completion_tokens": 149,
+      "total_tokens": 7877,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 1200
     }
   ]
 }

@@ -1,8 +1,8 @@
 {
-  "target_date": "2026-06-08",
+  "target_date": "2026-06-09",
   "target_dates": [
-    "2026-06-08",
-    "2026-06-07"
+    "2026-06-09",
+    "2026-06-08"
   ],
   "changed_dates": [
     "2026-06-08"
@@ -10,51 +10,41 @@
   "new_target_dates": [
     "2026-06-08"
   ],
-  "new_count": 2,
+  "new_count": 1,
   "filtered_count": 0,
   "cleanup_count": 0,
-  "changed_count": 2,
+  "changed_count": 1,
   "articles": [
     {
-      "title": "Esports Manager 2026 Announces Release Date — IGN Live 2026",
-      "url": "https://www.ign.com/articles/esports-manager-2026-announces-release-date-ign-live-2026",
-      "pubDate_cst": "2026-06-08 06:00"
-    },
-    {
-      "title": "How Gothic Remake Works to Give You an Especially Immersive Open World | IGN Live 2026",
-      "url": "https://www.ign.com/articles/how-gothic-remake-works-to-give-you-an-especially-immersive-open-world-ign-live-2026",
-      "pubDate_cst": "2026-06-08 05:47"
+      "title": "Every New Card and Theme in Magic: The Gathering's Marvel Super Heroes Jumpstart Set",
+      "url": "https://www.ign.com/articles/magic-the-gathering-marvel-super-heroes-jumpstart-new-cards-spoilers",
+      "pubDate_cst": "2026-06-08 07:00"
     }
   ],
   "filtered_articles": [],
   "runs": [
     {
-      "target_date": "2026-06-08",
-      "new_count": 2,
-      "filtered_count": 0,
-      "changed_count": 2,
-      "next_id": 35,
-      "articles": [
-        {
-          "title": "Esports Manager 2026 Announces Release Date — IGN Live 2026",
-          "url": "https://www.ign.com/articles/esports-manager-2026-announces-release-date-ign-live-2026",
-          "pubDate_cst": "2026-06-08 06:00"
-        },
-        {
-          "title": "How Gothic Remake Works to Give You an Especially Immersive Open World | IGN Live 2026",
-          "url": "https://www.ign.com/articles/how-gothic-remake-works-to-give-you-an-especially-immersive-open-world-ign-live-2026",
-          "pubDate_cst": "2026-06-08 05:47"
-        }
-      ],
-      "filtered_articles": []
-    },
-    {
-      "target_date": "2026-06-07",
+      "target_date": "2026-06-09",
       "new_count": 0,
       "filtered_count": 0,
       "changed_count": 0,
-      "next_id": 29,
+      "next_id": 1,
       "articles": [],
+      "filtered_articles": []
+    },
+    {
+      "target_date": "2026-06-08",
+      "new_count": 1,
+      "filtered_count": 0,
+      "changed_count": 1,
+      "next_id": 36,
+      "articles": [
+        {
+          "title": "Every New Card and Theme in Magic: The Gathering's Marvel Super Heroes Jumpstart Set",
+          "url": "https://www.ign.com/articles/magic-the-gathering-marvel-super-heroes-jumpstart-new-cards-spoilers",
+          "pubDate_cst": "2026-06-08 07:00"
+        }
+      ],
       "filtered_articles": []
     }
   ]
