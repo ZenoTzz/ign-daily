@@ -162,25 +162,6 @@
       "translation_path": "translations/48.json",
       "retry_policy": "manual_only"
     },
-    "50": {
-      "id": 50,
-      "url": "https://www.ign.com/articles/hot-wheels-infinite-rush-takes-the-racing-game-series-open-world",
-      "en_title": "Hot Wheels Infinite Rush Takes the Racing Game Series Open World",
-      "cn_title": "《风火轮无限冲刺》系列首度开放世界",
-      "model": "deepseek-v4-flash",
-      "status": "needs_manual_review",
-      "failed_at": "2026-06-06T09:04:56.517613+08:00",
-      "reason": "[summary_length] opus_summary must be 70-80 non-space characters, got 106",
-      "audit_issues": [
-        {
-          "type": "summary_length",
-          "detail": "opus_summary must be 70-80 non-space characters, got 106"
-        }
-      ],
-      "fingerprint": "9c5be236b0804760ca7d283157a39b2713698e2c",
-      "translation_path": "translations/50.json",
-      "retry_policy": "manual_only"
-    },
     "51": {
       "id": 51,
       "url": "https://www.ign.com/articles/gothic-1-remake-review",
@@ -201,5 +182,5 @@
       "retry_policy": "manual_only"
     }
   },
-  "updated_at": "2026-06-06T02:11:58.827Z"
+  "updated_at": "2026-06-08T00:11:46.172Z"
 }
