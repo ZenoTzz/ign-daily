@@ -374,12 +374,12 @@
       "emoji": "🎮",
       "en_title": "Hellblade Developer Ninja Theory Has Cancelled Project Mara",
       "cn_title": "《地狱之刃》开发商取消恐怖新作《玛拉计划》",
-      "summary": "Ninja Theory 宣布取消实验性恐怖游戏《玛拉计划》(Project Mara)，以便全工作室85人集中开发《地狱之刃》系列新作《塞娜》。该作在2026年Xbox游戏展上公布，将延续系列对精神健康的探索，并首次实现全团队协作。",
+      "summary": "Ninja Theory 取消实验性恐怖游戏《玛拉计划》，以便全工作室85人集中开发《地狱之刃》系列新作《塞娜》。该作在2026年Xbox游戏展上公布，将延续系列对精神健康的探索。",
       "url": "https://www.ign.com/articles/hellblade-developer-ninja-theory-has-cancelled-project-mara",
       "publish_time_cn": "2026-06-08 17:41",
       "pub_date": "2026-06-08 17:41",
       "cover_image": "https://assets-prd.ignimgs.com/2026/06/08/screenshot-2026-06-08-104131-1780911699259.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/08/screenshot-2026-06-08-104131-1780911699259.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/08/screenshot-2026-06-08-104131-1780911699259.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -400,7 +400,13 @@
           "cn": "塞娜",
           "reason": "词库有Senua's Saga，但Senua作为游戏名需确认"
         }
-      ]
+      ],
+      "translation_error": "[summary_length] opus_summary must be 70-80 non-space characters, got 88",
+      "translation_failed_at": "2026-06-08T23:22:37.723091+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-flash",
+      "translation_path": "translations/02.json"
     },
     {
       "id": 3,
@@ -447,12 +453,12 @@
       "emoji": "🎮",
       "en_title": "Will 007 First Light Get a Sequel? The Boss of Amazon Games Responds",
       "cn_title": "《007 初露锋芒》续作有望？亚马逊游戏老大回应",
-      "summary": "IO Interactive 的《007 初露锋芒》发售后大获好评，两周销量已达300万份。但亚马逊游戏负责人 Jeff Gattis 此前暗示续作可能由 MGM 或亚马逊游戏工作室开发，引发玩家担忧。Gattis 在夏日游戏节上澄清，并未确认亚马逊游戏工作室将接手，并强调只要市场有需求，续作“似乎应该制作”。IO 也表示游戏已远超盈利预期，续作开发成本有望降低。",
+      "summary": "IO Interactive的《007 初露锋芒》发售两周销量达300万份，但续作开发权引发担忧。亚马逊游戏负责人澄清未确认由亚马逊工作室接手，并称只要市场有需求，续作“似乎应该制作”。",
       "url": "https://www.ign.com/articles/will-007-first-light-get-a-sequel-the-boss-of-amazon-games-responds",
       "publish_time_cn": "2026-06-08 16:34",
       "pub_date": "2026-06-08 16:34",
       "cover_image": "https://assets-prd.ignimgs.com/2026/06/08/ss-5cef2b25b774b09bc30780457370f734021d207a-1920x1080-1780907609194.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/08/ss-5cef2b25b774b09bc30780457370f734021d207a-1920x1080-1780907609194.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/08/ss-5cef2b25b774b09bc30780457370f734021d207a-1920x1080-1780907609194.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -473,7 +479,13 @@
           "cn": "Hakan Abrak",
           "reason": "不知名人物，保留英文"
         }
-      ]
+      ],
+      "translation_error": "[summary_length] opus_summary must be 70-80 non-space characters, got 91",
+      "translation_failed_at": "2026-06-08T23:23:39.654769+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-flash",
+      "translation_path": "translations/04.json"
     },
     {
       "id": 5,

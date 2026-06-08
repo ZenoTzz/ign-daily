@@ -1,0 +1,44 @@
+{
+  "date": "2026-06-09",
+  "items": {
+    "2": {
+      "id": 2,
+      "url": "https://www.ign.com/articles/hellblade-developer-ninja-theory-has-cancelled-project-mara",
+      "en_title": "Hellblade Developer Ninja Theory Has Cancelled Project Mara",
+      "cn_title": "《地狱之刃》开发商取消恐怖新作《玛拉计划》",
+      "model": "deepseek-v4-flash",
+      "status": "needs_manual_review",
+      "failed_at": "2026-06-08T23:22:37.723091+08:00",
+      "reason": "[summary_length] opus_summary must be 70-80 non-space characters, got 88",
+      "audit_issues": [
+        {
+          "type": "summary_length",
+          "detail": "opus_summary must be 70-80 non-space characters, got 88"
+        }
+      ],
+      "fingerprint": "d3dddcd3b6dc09a0d3cc7069985e9026b81d5988",
+      "translation_path": "translations/02.json",
+      "retry_policy": "manual_only"
+    },
+    "4": {
+      "id": 4,
+      "url": "https://www.ign.com/articles/will-007-first-light-get-a-sequel-the-boss-of-amazon-games-responds",
+      "en_title": "Will 007 First Light Get a Sequel? The Boss of Amazon Games Responds",
+      "cn_title": "《007 初露锋芒》续作有望？亚马逊游戏老大回应",
+      "model": "deepseek-v4-flash",
+      "status": "needs_manual_review",
+      "failed_at": "2026-06-08T23:23:39.654769+08:00",
+      "reason": "[summary_length] opus_summary must be 70-80 non-space characters, got 91",
+      "audit_issues": [
+        {
+          "type": "summary_length",
+          "detail": "opus_summary must be 70-80 non-space characters, got 91"
+        }
+      ],
+      "fingerprint": "cf8d8d2dbdea7452a9b47cf8f1b71ba4caa71188",
+      "translation_path": "translations/04.json",
+      "retry_policy": "manual_only"
+    }
+  },
+  "updated_at": "2026-06-08T23:23:39.654769+08:00"
+}

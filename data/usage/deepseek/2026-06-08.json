@@ -1554,6 +1554,132 @@
       "total_tokens": 7705,
       "prompt_cache_hit_tokens": 6528,
       "prompt_cache_miss_tokens": 1039
+    },
+    {
+      "time_cn": "2026-06-08 23:22:24",
+      "task": "fulltext",
+      "model": "deepseek-v4-flash",
+      "article_id": 2,
+      "article_title": "《地狱之刃》开发商取消恐怖新作《玛拉计划》",
+      "article_url": "https://www.ign.com/articles/hellblade-developer-ninja-theory-has-cancelled-project-mara",
+      "article_date": "2026-06-09",
+      "detail": "",
+      "estimated_cost_usd": 0.00069168,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8006,
+      "completion_tokens": 1666,
+      "total_tokens": 9672,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 1478
+    },
+    {
+      "time_cn": "2026-06-08 23:22:37",
+      "task": "fulltext_repair",
+      "model": "deepseek-v4-flash",
+      "article_id": 2,
+      "article_title": "《地狱之刃》开发商取消恐怖新作《玛拉计划》",
+      "article_url": "https://www.ign.com/articles/hellblade-developer-ninja-theory-has-cancelled-project-mara",
+      "article_date": "2026-06-09",
+      "detail": "1 audit issue(s)",
+      "estimated_cost_usd": 0.00088032,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 2508,
+      "completion_tokens": 1890,
+      "total_tokens": 4398,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 2508
+    },
+    {
+      "time_cn": "2026-06-08 23:22:53",
+      "task": "fulltext",
+      "model": "deepseek-v4-flash",
+      "article_id": 3,
+      "article_title": "微软：Xbox独占将逐案决定",
+      "article_url": "https://www.ign.com/articles/xbox-game-exclusivity-will-be-decided-on-a-case-by-case-basis-microsoft-says",
+      "article_date": "2026-06-09",
+      "detail": "",
+      "estimated_cost_usd": 0.00090154,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8609,
+      "completion_tokens": 2114,
+      "total_tokens": 10723,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 2081
+    },
+    {
+      "time_cn": "2026-06-08 23:23:09",
+      "task": "fulltext_repair",
+      "model": "deepseek-v4-flash",
+      "article_id": 3,
+      "article_title": "微软：Xbox独占将逐案决定",
+      "article_url": "https://www.ign.com/articles/xbox-game-exclusivity-will-be-decided-on-a-case-by-case-basis-microsoft-says",
+      "article_date": "2026-06-09",
+      "detail": "2 audit issue(s)",
+      "estimated_cost_usd": 0.00119798,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 3323,
+      "completion_tokens": 2617,
+      "total_tokens": 5940,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 3323
+    },
+    {
+      "time_cn": "2026-06-08 23:23:25",
+      "task": "fulltext",
+      "model": "deepseek-v4-flash",
+      "article_id": 4,
+      "article_title": "《007 初露锋芒》续作有望？亚马逊游戏老大回应",
+      "article_url": "https://www.ign.com/articles/will-007-first-light-get-a-sequel-the-boss-of-amazon-games-responds",
+      "article_date": "2026-06-09",
+      "detail": "",
+      "estimated_cost_usd": 0.00080228,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8356,
+      "completion_tokens": 1886,
+      "total_tokens": 10242,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 1828
+    },
+    {
+      "time_cn": "2026-06-08 23:23:39",
+      "task": "fulltext_repair",
+      "model": "deepseek-v4-flash",
+      "article_id": 4,
+      "article_title": "《007 初露锋芒》续作有望？亚马逊游戏老大回应",
+      "article_url": "https://www.ign.com/articles/will-007-first-light-get-a-sequel-the-boss-of-amazon-games-responds",
+      "article_date": "2026-06-09",
+      "detail": "1 audit issue(s)",
+      "estimated_cost_usd": 0.00104342,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 2863,
+      "completion_tokens": 2295,
+      "total_tokens": 5158,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 2863
     }
   ]
 }
