@@ -1,5 +1,22 @@
 [
   {
+    "run_id": "27167334826",
+    "workflow": "API Translation",
+    "event": "schedule",
+    "sha": "3a91cd0c4d2576ce198dae4ee39cf25a2a4bc505",
+    "recorded_at_cn": "2026-06-09 05:13:44",
+    "start_balance": 47.18,
+    "end_balance": 47.18,
+    "currency": "CNY",
+    "actual_platform_cost": 0.0,
+    "balance_delta_status": "ok",
+    "estimated_cost_usd": 0,
+    "api_call_count": 0,
+    "total_tokens": 0,
+    "by_model": {},
+    "snapshot_ok": true
+  },
+  {
     "run_id": "27147944364",
     "workflow": "API Translation",
     "event": "workflow_dispatch",
