@@ -1029,6 +1029,69 @@
       "total_tokens": 7877,
       "prompt_cache_hit_tokens": 6528,
       "prompt_cache_miss_tokens": 1200
+    },
+    {
+      "time_cn": "2026-06-08 09:05:37",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 36,
+      "article_title": "Get an Early Look at Universal's Fast & Furious: Hollywood Drift Coaster | IGN Live 2026",
+      "article_url": "https://www.ign.com/articles/universal-fast-furious-hollywood-drift-coaster-preview",
+      "article_date": "2026-06-08",
+      "detail": "",
+      "estimated_cost_usd": 0.00019776,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7516,
+      "completion_tokens": 147,
+      "total_tokens": 7663,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 988
+    },
+    {
+      "time_cn": "2026-06-08 09:05:41",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 37,
+      "article_title": "Alix Wilton Regan on Becoming Lara Croft in Tomb Raider: Legacy of Atlantis | IGN Live 2026",
+      "article_url": "https://www.ign.com/articles/alix-wilton-regan-on-becoming-lara-croft-in-tomb-raider-legacy-of-atlantis-ign-live-2026",
+      "article_date": "2026-06-08",
+      "detail": "",
+      "estimated_cost_usd": 0.00022646,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7601,
+      "completion_tokens": 207,
+      "total_tokens": 7808,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 1073
+    },
+    {
+      "time_cn": "2026-06-08 09:05:44",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 38,
+      "article_title": "The Warlock is Coming to Diablo Immortal Now, Too | IGN Live 2026",
+      "article_url": "https://www.ign.com/articles/the-warlock-is-coming-to-diablo-immortal-now-too-ign-live-2026",
+      "article_date": "2026-06-08",
+      "detail": "",
+      "estimated_cost_usd": 0.00016066,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7271,
+      "completion_tokens": 137,
+      "total_tokens": 7408,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 743
     }
   ]
 }
