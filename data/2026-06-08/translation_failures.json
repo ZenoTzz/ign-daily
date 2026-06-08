@@ -153,25 +153,6 @@
       "translation_path": "translations/28.json",
       "retry_policy": "manual_only"
     },
-    "29": {
-      "id": 29,
-      "url": "https://www.ign.com/articles/the-super-mario-galaxy-movie-crosses-1-billion-at-the-box-office",
-      "en_title": "The Super Mario Galaxy Movie Crosses $1 Billion at the Box Office",
-      "cn_title": "《超级马力欧银河大电影》全球票房突破10亿美元(约合人民币68亿元)",
-      "model": "deepseek-v4-flash",
-      "status": "needs_manual_review",
-      "failed_at": "2026-06-08T06:53:07.100871+08:00",
-      "reason": "[summary_length] opus_summary must be 70-80 non-space characters, got 94",
-      "audit_issues": [
-        {
-          "type": "summary_length",
-          "detail": "opus_summary must be 70-80 non-space characters, got 94"
-        }
-      ],
-      "fingerprint": "8b1955c924c9729d5a69de3770fc6c417829fcbf",
-      "translation_path": "translations/29.json",
-      "retry_policy": "manual_only"
-    },
     "32": {
       "id": 32,
       "url": "https://www.ign.com/articles/xbox-series-x-translucent-green-25th-anniversary-edition-console-and-controller-announced-inspired-by-the-original-xbox",
@@ -192,5 +173,5 @@
       "retry_policy": "manual_only"
     }
   },
-  "updated_at": "2026-06-07T23:00:48.066Z"
+  "updated_at": "2026-06-08T01:05:44.962Z"
 }
