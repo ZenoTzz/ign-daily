@@ -82,26 +82,7 @@
       "fingerprint": "866c1b40be42fa1d81c744234c685c765716cdf3",
       "translation_path": "translations/21.json",
       "retry_policy": "manual_only"
-    },
-    "26": {
-      "id": 26,
-      "url": "https://www.ign.com/articles/wwdc-2026-everything-announced-at-apples-annual-developers-conference",
-      "en_title": "WWDC 2026: Everything Announced at Apple's Annual Developers Conference",
-      "cn_title": "WWDC 2026：苹果年度开发者大会全汇总",
-      "model": "deepseek-v4-flash",
-      "status": "needs_manual_review",
-      "failed_at": "2026-06-09T09:07:44.081553+08:00",
-      "reason": "[summary_length] opus_summary must be 70-80 non-space characters, got 107",
-      "audit_issues": [
-        {
-          "type": "summary_length",
-          "detail": "opus_summary must be 70-80 non-space characters, got 107"
-        }
-      ],
-      "fingerprint": "374ad00f59d103759973f91645b683c7fd4cfcf5",
-      "translation_path": "translations/26.json",
-      "retry_policy": "manual_only"
     }
   },
-  "updated_at": "2026-06-09T01:16:22.563Z"
+  "updated_at": "2026-06-09T01:33:11.318Z"
 }
