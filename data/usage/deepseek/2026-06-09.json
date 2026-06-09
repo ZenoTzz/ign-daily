@@ -672,6 +672,90 @@
       "total_tokens": 7930,
       "prompt_cache_hit_tokens": 6528,
       "prompt_cache_miss_tokens": 1263
+    },
+    {
+      "time_cn": "2026-06-09 18:50:46",
+      "task": "fulltext",
+      "model": "deepseek-v4-flash",
+      "article_id": 1,
+      "article_title": "《Project Helix》Xbox因组件短缺无法满足主机需求，重新审视下一代主机策略",
+      "article_url": "https://www.ign.com/articles/xbox-is-unable-to-meet-demand-for-new-consoles-rethinking-approach-to-project-helix",
+      "article_date": "2026-06-10",
+      "detail": "",
+      "estimated_cost_usd": 0.00077498,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8371,
+      "completion_tokens": 1781,
+      "total_tokens": 10152,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 1843
+    },
+    {
+      "time_cn": "2026-06-09 18:50:59",
+      "task": "fulltext_repair",
+      "model": "deepseek-v4-flash",
+      "article_id": 1,
+      "article_title": "《Project Helix》Xbox因组件短缺无法满足主机需求，重新审视下一代主机策略",
+      "article_url": "https://www.ign.com/articles/xbox-is-unable-to-meet-demand-for-new-consoles-rethinking-approach-to-project-helix",
+      "article_date": "2026-06-10",
+      "detail": "1 audit issue(s)",
+      "estimated_cost_usd": 0.00097132,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 2724,
+      "completion_tokens": 2107,
+      "total_tokens": 4831,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 2724
+    },
+    {
+      "time_cn": "2026-06-09 18:51:16",
+      "task": "fulltext",
+      "model": "deepseek-v4-flash",
+      "article_id": 6,
+      "article_title": "Xbox否认《战争机器：事变日》PS5版临时取消",
+      "article_url": "https://www.ign.com/articles/xbox-says-gears-of-war-e-day-ps5-port-was-not-pulled-last-minute-after-art-with-ps5-logo-leaks",
+      "article_date": "2026-06-10",
+      "detail": "",
+      "estimated_cost_usd": 0.00093108,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8482,
+      "completion_tokens": 2283,
+      "total_tokens": 10765,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 1954
+    },
+    {
+      "time_cn": "2026-06-09 18:51:32",
+      "task": "fulltext_repair",
+      "model": "deepseek-v4-flash",
+      "article_id": 6,
+      "article_title": "Xbox否认《战争机器：事变日》PS5版临时取消",
+      "article_url": "https://www.ign.com/articles/xbox-says-gears-of-war-e-day-ps5-port-was-not-pulled-last-minute-after-art-with-ps5-logo-leaks",
+      "article_date": "2026-06-10",
+      "detail": "1 audit issue(s)",
+      "estimated_cost_usd": 0.00117558,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 3193,
+      "completion_tokens": 2602,
+      "total_tokens": 5795,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 3193
     }
   ]
 }

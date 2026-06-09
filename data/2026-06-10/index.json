@@ -113,8 +113,8 @@
       "url": "https://www.ign.com/articles/xbox-says-gears-of-war-e-day-ps5-port-was-not-pulled-last-minute-after-art-with-ps5-logo-leaks",
       "publish_time_cn": "2026-06-09 09:34",
       "pub_date": "2026-06-09 09:34",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/06/08/gears-of-war-e-day-ps5-microsoft-leak-1780961650956.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/08/gears-of-war-e-day-ps5-microsoft-leak-1780961650956.png",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/08/gears-of-war-e-day-ps5-microsoft-leak-1780961650956.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/08/gears-of-war-e-day-ps5-microsoft-leak-1780961650956.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -123,7 +123,11 @@
         "https://assets-prd.ignimgs.com/2026/06/08/gears-of-war-e-day-ps5-microsoft-leak-1780961650956.png"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-09T18:47:37+08:00"
+      "source_fetched_at": "2026-06-09T18:47:37+08:00",
+      "translation_path": "translations/06.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-flash"
     },
     {
       "id": 1,
@@ -135,8 +139,8 @@
       "url": "https://www.ign.com/articles/xbox-is-unable-to-meet-demand-for-new-consoles-rethinking-approach-to-project-helix",
       "publish_time_cn": "2026-06-09 09:07",
       "pub_date": "2026-06-09 09:07",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/05/06/screenshot-2026-05-06-162907-1778081413883.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/05/06/screenshot-2026-05-06-162907-1778081413883.png",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/05/06/screenshot-2026-05-06-162907-1778081413883.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/05/06/screenshot-2026-05-06-162907-1778081413883.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -157,8 +161,12 @@
           "cn": "Project Helix",
           "reason": "无官方中文译名，保留英文"
         }
-      ]
+      ],
+      "translation_path": "translations/01.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-flash"
     }
   ],
-  "total": 7
+  "total": 6
 }
