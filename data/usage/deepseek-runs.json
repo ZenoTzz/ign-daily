@@ -1,5 +1,22 @@
 [
   {
+    "run_id": "27236578263",
+    "workflow": "Nightly Style Learning",
+    "event": "schedule",
+    "sha": "97a293e82873174c97a9de8bab97a6801dea520c",
+    "recorded_at_cn": "2026-06-10 05:20:42",
+    "start_balance": 46.95,
+    "end_balance": 46.95,
+    "currency": "CNY",
+    "actual_platform_cost": 0.0,
+    "balance_delta_status": "ok",
+    "estimated_cost_usd": 0,
+    "api_call_count": 0,
+    "total_tokens": 0,
+    "by_model": {},
+    "snapshot_ok": true
+  },
+  {
     "run_id": "27227628386",
     "workflow": "Hourly RSS",
     "event": "schedule",
