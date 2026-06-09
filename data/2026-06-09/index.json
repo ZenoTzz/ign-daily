@@ -143,7 +143,7 @@
       "publish_time_cn": "2026-06-09 00:58",
       "pub_date": "2026-06-09 00:58",
       "cover_image": "https://assets-prd.ignimgs.com/2026/06/08/wwdc-2026-live-1780934944699.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "needs_review",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/08/wwdc-2026-live-1780934944699.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/08/wwdc-2026-live-1780934944699.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -177,8 +177,6 @@
           "reason": "苹果新Siri名称，是否保留英文或翻译需确认。"
         }
       ],
-      "translation_error": "[summary_length] opus_summary must be 70-80 non-space characters, got 107",
-      "translation_failed_at": "2026-06-09T09:07:44.081553+08:00",
       "translator": "api",
       "translator_provider": "openai-compatible",
       "translator_model": "deepseek-v4-flash",
