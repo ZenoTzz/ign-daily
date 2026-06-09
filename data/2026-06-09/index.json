@@ -586,12 +586,12 @@
       "emoji": "🤖",
       "en_title": "After Starring in an AI-Generated Video for Prada, Hideo Kojima Says 'Maybe AI Could Create Art, but While I Live, I Don't Think I'll See It'",
       "cn_title": "小岛秀夫谈AI：有生之年看不到AI创造艺术",
-      "summary": "小岛秀夫因出演Prada AI生成视频引发争议，他在《华盛顿邮报》采访中表示对AI“不感兴趣”，认为有生之年看不到AI创造艺术。但他此前曾称AI是“朋友”，可用于提升效率和控制游戏系统。",
+      "summary": "小岛秀夫因出演Prada AI生成视频遭批评，称有生之年看不到AI创造艺术，但此前曾称AI是“朋友”，可用于提升效率。",
       "url": "https://www.ign.com/articles/after-starring-in-an-ai-generated-video-for-prada-hideo-kojima-says-maybe-ai-could-create-art-but-while-i-live-i-dont-think-ill-see-it",
       "publish_time_cn": "2026-06-08 20:39",
       "pub_date": "2026-06-08 20:39",
       "cover_image": "https://assets-prd.ignimgs.com/2026/06/08/kojima-1780922096075.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/08/kojima-1780922096075.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/08/kojima-1780922096075.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -600,7 +600,13 @@
         "https://assets-prd.ignimgs.com/2026/06/08/kojima-1780922096075.png"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-08T23:21:16+08:00"
+      "source_fetched_at": "2026-06-08T23:21:16+08:00",
+      "translation_error": "[summary_length] opus_summary must be 70-80 non-space characters, got 58",
+      "translation_failed_at": "2026-06-09T09:55:11.393724+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-flash",
+      "translation_path": "translations/16.json"
     },
     {
       "id": 17,

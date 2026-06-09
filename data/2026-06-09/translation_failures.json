@@ -57,7 +57,26 @@
       "fingerprint": "866c1b40be42fa1d81c744234c685c765716cdf3",
       "translation_path": "translations/21.json",
       "retry_policy": "manual_only"
+    },
+    "16": {
+      "id": 16,
+      "url": "https://www.ign.com/articles/after-starring-in-an-ai-generated-video-for-prada-hideo-kojima-says-maybe-ai-could-create-art-but-while-i-live-i-dont-think-ill-see-it",
+      "en_title": "After Starring in an AI-Generated Video for Prada, Hideo Kojima Says 'Maybe AI Could Create Art, but While I Live, I Don't Think I'll See It'",
+      "cn_title": "小岛秀夫谈AI：有生之年看不到AI创造艺术",
+      "model": "deepseek-v4-flash",
+      "status": "needs_manual_review",
+      "failed_at": "2026-06-09T09:55:11.393724+08:00",
+      "reason": "[summary_length] opus_summary must be 70-80 non-space characters, got 58",
+      "audit_issues": [
+        {
+          "type": "summary_length",
+          "detail": "opus_summary must be 70-80 non-space characters, got 58"
+        }
+      ],
+      "fingerprint": "8df7881739293ba913965742de500c38a17f3cf2",
+      "translation_path": "translations/16.json",
+      "retry_policy": "manual_only"
     }
   },
-  "updated_at": "2026-06-09T01:54:50.412Z"
+  "updated_at": "2026-06-09T09:55:11.393724+08:00"
 }
