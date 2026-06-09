@@ -609,6 +609,111 @@
       "total_tokens": 7892,
       "prompt_cache_hit_tokens": 6528,
       "prompt_cache_miss_tokens": 891
+    },
+    {
+      "time_cn": "2026-06-10 07:59:10",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 37,
+      "article_title": "Deltarune Chapter 5 Release Date Revealed as Toby Fox Offers Promising Update for the Future",
+      "article_url": "https://www.ign.com/articles/deltarune-chapter-5-release-date-revealed-as-toby-fox-offers-promising-update-for-the-future",
+      "article_date": "2026-06-10",
+      "detail": "",
+      "estimated_cost_usd": 0.00023724,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7526,
+      "completion_tokens": 283,
+      "total_tokens": 7809,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 998
+    },
+    {
+      "time_cn": "2026-06-10 07:59:14",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 38,
+      "article_title": "YouTuber Reckless Ben Says He Will Go to Jail If He Continues to Talk About LEGO Reseller Bricks & Minifigs",
+      "article_url": "https://www.ign.com/articles/youtuber-reckless-ben-says-he-will-go-to-jail-if-he-continues-to-talk-about-lego-reseller-bricks-minifigs",
+      "article_date": "2026-06-10",
+      "detail": "",
+      "estimated_cost_usd": 0.00030878,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7779,
+      "completion_tokens": 412,
+      "total_tokens": 8191,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 1251
+    },
+    {
+      "time_cn": "2026-06-10 07:59:18",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 39,
+      "article_title": "Jujutsu Kaisen Rumble: Survivaton Revealed as Unexpected Collab From the Vampire Survivors Team",
+      "article_url": "https://www.ign.com/articles/jujutsu-kaisen-rumble-survivaton-revealed-as-unexpected-collab-from-the-vampire-survivors-team",
+      "article_date": "2026-06-10",
+      "detail": "",
+      "estimated_cost_usd": 0.00022884,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7596,
+      "completion_tokens": 218,
+      "total_tokens": 7814,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 1068
+    },
+    {
+      "time_cn": "2026-06-10 07:59:21",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 40,
+      "article_title": "Destiny 2 Hits Highest Player Count in Two Years Following Final Update's Release, Shatters Marathon's All-Time Peak",
+      "article_url": "https://www.ign.com/articles/destiny-2-hits-highest-player-count-in-two-years-following-final-updates-release-shatters-marathons-all-time-peak",
+      "article_date": "2026-06-10",
+      "detail": "",
+      "estimated_cost_usd": 0.00020392,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7538,
+      "completion_tokens": 158,
+      "total_tokens": 7696,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 1010
+    },
+    {
+      "time_cn": "2026-06-10 07:59:24",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 41,
+      "article_title": "The Internet Reacts to The Legend of Zelda: Ocarina of Time Remake",
+      "article_url": "https://www.ign.com/articles/the-internet-reacts-to-the-legend-of-zelda-ocarina-of-time-remake",
+      "article_date": "2026-06-10",
+      "detail": "",
+      "estimated_cost_usd": 0.00022646,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7749,
+      "completion_tokens": 133,
+      "total_tokens": 7882,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 1221
     }
   ]
 }
