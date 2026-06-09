@@ -525,6 +525,90 @@
       "total_tokens": 7561,
       "prompt_cache_hit_tokens": 6528,
       "prompt_cache_miss_tokens": 907
+    },
+    {
+      "time_cn": "2026-06-10 02:36:53",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 33,
+      "article_title": "IGN Live May Be Over, But the Rewards Keep Going",
+      "article_url": "https://www.ign.com/articles/ign-live-may-be-over-but-the-rewards-keep-going",
+      "article_date": "2026-06-10",
+      "detail": "",
+      "estimated_cost_usd": 0.00011992,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7036,
+      "completion_tokens": 109,
+      "total_tokens": 7145,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 508
+    },
+    {
+      "time_cn": "2026-06-10 02:36:57",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 34,
+      "article_title": "NBA The Run Review",
+      "article_url": "https://www.ign.com/articles/nba-the-run-review",
+      "article_date": "2026-06-10",
+      "detail": "",
+      "estimated_cost_usd": 0.0003582,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8686,
+      "completion_tokens": 135,
+      "total_tokens": 8821,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 2158
+    },
+    {
+      "time_cn": "2026-06-10 02:37:01",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 35,
+      "article_title": "Mortal Kombat II Lands on Digital Just 1 Month After Releasing in Theaters",
+      "article_url": "https://www.ign.com/articles/mortal-kombat-2-movie-streaming",
+      "article_date": "2026-06-10",
+      "detail": "",
+      "estimated_cost_usd": 0.00021806,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7587,
+      "completion_tokens": 184,
+      "total_tokens": 7771,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 1059
+    },
+    {
+      "time_cn": "2026-06-10 02:37:07",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 36,
+      "article_title": "Final Fantasy Resonance Revealed, A New HD-2D Turn-Based RPG Coming This Year",
+      "article_url": "https://www.ign.com/articles/final-fantasy-resonance-revealed-a-new-hd-2d-turn-based-rpg-coming-this-year",
+      "article_date": "2026-06-10",
+      "detail": "",
+      "estimated_cost_usd": 0.00027546,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7419,
+      "completion_tokens": 473,
+      "total_tokens": 7892,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 891
     }
   ]
 }
