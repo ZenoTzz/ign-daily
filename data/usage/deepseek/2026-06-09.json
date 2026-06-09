@@ -567,6 +567,111 @@
       "total_tokens": 7902,
       "prompt_cache_hit_tokens": 6528,
       "prompt_cache_miss_tokens": 1175
+    },
+    {
+      "time_cn": "2026-06-09 18:47:41",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 2,
+      "article_title": "Hugh Laurie Apologizes and Says He's a 'Thin-Skinned T**t' After Roasting Critic Who Said Every House Episode Was the Same",
+      "article_url": "https://www.ign.com/articles/hugh-laurie-apologizes-and-says-hes-a-thin-skinned-tt-after-roasting-critic-who-said-every-house-episode-was-the-same",
+      "article_date": "2026-06-10",
+      "detail": "",
+      "estimated_cost_usd": 0.00019538,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7559,
+      "completion_tokens": 117,
+      "total_tokens": 7676,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 1031
+    },
+    {
+      "time_cn": "2026-06-09 18:47:44",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 3,
+      "article_title": "Final Fantasy 7 Revelation Players Can Shape Its Story But the Trilogy Will Have a 'Singular Ending' for Everyone",
+      "article_url": "https://www.ign.com/articles/final-fantasy-7-revelation-players-can-shape-its-story-but-the-trilogy-will-have-a-singular-ending-for-everyone",
+      "article_date": "2026-06-10",
+      "detail": "",
+      "estimated_cost_usd": 0.00022646,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7783,
+      "completion_tokens": 116,
+      "total_tokens": 7899,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 1255
+    },
+    {
+      "time_cn": "2026-06-09 18:47:47",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 4,
+      "article_title": "Call of Duty: Black Ops 1 and 2 Ports Have Apparently Leaked",
+      "article_url": "https://www.ign.com/articles/call-of-duty-black-ops-1-and-2-ports-have-apparently-leaked",
+      "article_date": "2026-06-10",
+      "detail": "",
+      "estimated_cost_usd": 0.00018306,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7445,
+      "completion_tokens": 130,
+      "total_tokens": 7575,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 917
+    },
+    {
+      "time_cn": "2026-06-09 18:47:51",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 5,
+      "article_title": "Helldivers Movie Loses Jason Momoa as Its Star",
+      "article_url": "https://www.ign.com/articles/helldivers-movie-loses-jason-momoa-as-its-star",
+      "article_date": "2026-06-10",
+      "detail": "",
+      "estimated_cost_usd": 0.0001734,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7378,
+      "completion_tokens": 129,
+      "total_tokens": 7507,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 850
+    },
+    {
+      "time_cn": "2026-06-09 18:47:54",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 6,
+      "article_title": "Xbox Says Gears of War: E-Day PS5 Port Was Not Pulled 'Last-Minute' After Art With PS5 Logo Leaks",
+      "article_url": "https://www.ign.com/articles/xbox-says-gears-of-war-e-day-ps5-port-was-not-pulled-last-minute-after-art-with-ps5-logo-leaks",
+      "article_date": "2026-06-10",
+      "detail": "",
+      "estimated_cost_usd": 0.00023402,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7791,
+      "completion_tokens": 139,
+      "total_tokens": 7930,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 1263
     }
   ]
 }
