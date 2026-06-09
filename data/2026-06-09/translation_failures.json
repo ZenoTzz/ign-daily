@@ -39,25 +39,6 @@
       "translation_path": "translations/04.json",
       "retry_policy": "manual_only"
     },
-    "13": {
-      "id": 13,
-      "url": "https://www.ign.com/articles/nintendo-direct-announced-for-this-week-as-fans-expect-huge-switch-2-reveals",
-      "en_title": "Nintendo Direct Announced for This Week, as Fans Expect Huge Switch 2 Reveals",
-      "cn_title": "任天堂本周举办直面会，Switch 2 新作阵容引期待",
-      "model": "deepseek-v4-flash",
-      "status": "needs_manual_review",
-      "failed_at": "2026-06-09T09:05:41.927039+08:00",
-      "reason": "[summary_length] opus_summary must be 70-80 non-space characters, got 96",
-      "audit_issues": [
-        {
-          "type": "summary_length",
-          "detail": "opus_summary must be 70-80 non-space characters, got 96"
-        }
-      ],
-      "fingerprint": "127c79908d69e4f35ba905cfe0ae45389fa8295d",
-      "translation_path": "translations/13.json",
-      "retry_policy": "manual_only"
-    },
     "18": {
       "id": 18,
       "url": "https://www.ign.com/articles/after-another-xbox-no-show-the-wait-for-the-elder-scrolls-vi-goes-on-and-fans-arent-getting-any-younger",
@@ -122,5 +103,5 @@
       "retry_policy": "manual_only"
     }
   },
-  "updated_at": "2026-06-09T09:07:44.081553+08:00"
+  "updated_at": "2026-06-09T01:16:22.563Z"
 }
