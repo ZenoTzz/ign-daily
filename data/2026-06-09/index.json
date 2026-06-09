@@ -12,7 +12,7 @@
       "publish_time_cn": "2026-06-09 03:23",
       "pub_date": "2026-06-09 03:23",
       "cover_image": "",
-      "translation_status": "needs_review",
+      "translation_status": "done",
       "source_status": "cached",
       "source_fetched_at": "2026-06-09T06:09:07+08:00",
       "pending_dict": [
@@ -22,8 +22,6 @@
           "reason": "不知名人物，保留英文"
         }
       ],
-      "translation_error": "[summary_length] opus_summary must be 70-80 non-space characters, got 160",
-      "translation_failed_at": "2026-06-09T09:06:39.648440+08:00",
       "translator": "api",
       "translator_provider": "openai-compatible",
       "translator_model": "deepseek-v4-flash",
