@@ -7,12 +7,12 @@
       "emoji": "📉",
       "en_title": "Xbox Game Pass Shed 'Millions of Subscribers' Following October 2025 Price Hike",
       "cn_title": "Xbox Game Pass涨价后流失数百万订阅用户",
-      "summary": "微软首席战略官Matthew Ball透露，2025年10月Game Pass涨价50%后，数月内流失了数百万订阅用户。Ultimate月费从19.99美元涨至29.99美元(约合人民币215元)，后降至22.99美元(约合人民币165元)。作为补偿，微软取消了《使命召唤》首发入库计划。目前订阅服务已恢复增长。",
+      "summary": "微软首席战略官Matthew Ball透露，2025年10月Game Pass涨价50%后，数月内流失数百万订阅用户。Ultimate月费从19.99美元(约合人民币136元)涨至29.99美元(约合人民币204元)后降至22.99美元(约合人民币156元)。作为补偿，微软取消《使命召唤》首发入库。目前订阅服务已恢复增长。",
       "url": "https://www.ign.com/articles/xbox-game-pass-shed-millions-of-subscribers-following-october-2025-price-hike",
       "publish_time_cn": "2026-06-09 03:23",
       "pub_date": "2026-06-09 03:23",
       "cover_image": "",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "source_status": "cached",
       "source_fetched_at": "2026-06-09T06:09:07+08:00",
       "pending_dict": [
@@ -21,7 +21,13 @@
           "cn": "Matthew Ball",
           "reason": "不知名人物，保留英文"
         }
-      ]
+      ],
+      "translation_error": "[summary_length] opus_summary must be 70-80 non-space characters, got 160",
+      "translation_failed_at": "2026-06-09T09:06:39.648440+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-flash",
+      "translation_path": "translations/21.json"
     },
     {
       "id": 22,
@@ -132,12 +138,12 @@
       "emoji": "🍎",
       "en_title": "WWDC 2026: Everything Announced at Apple's Annual Developers Conference",
       "cn_title": "WWDC 2026：苹果年度开发者大会全汇总",
-      "summary": "苹果WWDC 2026主题演讲落幕，重点聚焦iOS 27、macOS Golden Gate等系统更新。Siri升级为Siri AI，集成AI功能；Apple Intelligence增强跨设备协作；儿童安全功能扩展；Safari引入AI标签分组与网页监控。iOS 27兼容性与iOS 26相同，应用启动速度提升30%。",
+      "summary": "苹果WWDC 2026聚焦iOS 27、macOS Golden Gate等系统更新。Siri升级为Siri AI，Apple Intelligence增强跨设备协作，儿童安全功能扩展，Safari引入AI标签分组与网页监控。",
       "url": "https://www.ign.com/articles/wwdc-2026-everything-announced-at-apples-annual-developers-conference",
       "publish_time_cn": "2026-06-09 00:58",
       "pub_date": "2026-06-09 00:58",
       "cover_image": "https://assets-prd.ignimgs.com/2026/06/08/wwdc-2026-live-1780934944699.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/08/wwdc-2026-live-1780934944699.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/08/wwdc-2026-live-1780934944699.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -170,7 +176,13 @@
           "cn": "Siri AI",
           "reason": "苹果新Siri名称，是否保留英文或翻译需确认。"
         }
-      ]
+      ],
+      "translation_error": "[summary_length] opus_summary must be 70-80 non-space characters, got 107",
+      "translation_failed_at": "2026-06-09T09:07:44.081553+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-flash",
+      "translation_path": "translations/26.json"
     },
     {
       "id": 27,
@@ -255,8 +267,8 @@
       "url": "https://www.ign.com/articles/spider-man-brand-new-day-runtime-revealed-and-its-one-of-the-longest-marvel-films-ever",
       "publish_time_cn": "2026-06-08 23:48",
       "pub_date": "2026-06-08 23:48",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/03/18/mixcollage-18-mar-2026-08-32-am-8206-1773837381231.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/03/18/mixcollage-18-mar-2026-08-32-am-8206-1773837381231.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/03/18/mixcollage-18-mar-2026-08-32-am-8206-1773837381231.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/03/18/mixcollage-18-mar-2026-08-32-am-8206-1773837381231.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -265,7 +277,11 @@
         "https://assets-prd.ignimgs.com/2026/03/18/mixcollage-18-mar-2026-08-32-am-8206-1773837381231.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-09T06:09:16+08:00"
+      "source_fetched_at": "2026-06-09T06:09:16+08:00",
+      "translation_path": "translations/30.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-flash"
     },
     {
       "id": 31,
@@ -441,12 +457,12 @@
       "emoji": "🎮",
       "en_title": "Nintendo Direct Announced for This Week, as Fans Expect Huge Switch 2 Reveals",
       "cn_title": "任天堂本周举办直面会，Switch 2 新作阵容引期待",
-      "summary": "任天堂宣布将于本周二（6月9日）举办新一期 Nintendo Direct，时长50分钟，随后还有95分钟的 Treehouse 实机演示。本次直面会将聚焦2026年下半年发售的 Switch 2 游戏，传闻包括《塞尔达传说：时之笛》重制版、2D《密特罗德》新作等。",
+      "summary": "任天堂宣布本周二举办Nintendo Direct，时长50分钟，随后有95分钟Treehouse实机演示。直面会聚焦2026年下半年Switch 2游戏，传闻包括《塞尔达传说：时之笛》重制版等。",
       "url": "https://www.ign.com/articles/nintendo-direct-announced-for-this-week-as-fans-expect-huge-switch-2-reveals",
       "publish_time_cn": "2026-06-08 21:47",
       "pub_date": "2026-06-08 21:47",
       "cover_image": "https://assets-prd.ignimgs.com/2026/06/08/mario-switch-nx-announcement-photo-1780916209614.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/08/mario-switch-nx-announcement-photo-1780916209614.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/05/19/3-1779196156359.jpg",
@@ -513,7 +529,13 @@
           "cn": "最终幻想 7：启示录",
           "reason": "暂译，需确认官方中文名"
         }
-      ]
+      ],
+      "translation_error": "[summary_length] opus_summary must be 70-80 non-space characters, got 96",
+      "translation_failed_at": "2026-06-09T09:05:41.927039+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-flash",
+      "translation_path": "translations/13.json"
     },
     {
       "id": 14,
@@ -612,12 +634,12 @@
       "emoji": "⏳",
       "en_title": "After Another Xbox No-Show the Wait for The Elder Scrolls VI Goes On, and Fans Aren't Getting Any Younger",
       "cn_title": "《上古卷轴6》再缺席Xbox发布会，粉丝苦等8年",
-      "summary": "在刚刚过去的Xbox游戏展示会上，《上古卷轴6》再次缺席。这款游戏自2018年公布以来已过去8年，期间B社仅偶尔放出开发进展。粉丝们从期待转为焦虑，有人调侃“等游戏发售时孩子都该高中毕业了”。陶德·霍华德表示游戏仍需时间打磨，但玩家们显然已经等得不耐烦了。",
+      "summary": "《上古卷轴6》在2026年Xbox游戏展示会上再次缺席，自2018年公布已8年。粉丝从期待转为焦虑，调侃等游戏发售时孩子都该高中毕业了。陶德·霍华德表示仍需时间打磨，但玩家已等得不耐烦。",
       "url": "https://www.ign.com/articles/after-another-xbox-no-show-the-wait-for-the-elder-scrolls-vi-goes-on-and-fans-arent-getting-any-younger",
       "publish_time_cn": "2026-06-08 19:41",
       "pub_date": "2026-06-08 19:41",
       "cover_image": "https://assets1.ignimgs.com/2019/06/17/5-es6-1560804827894.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets1.ignimgs.com/2019/06/17/5-es6-1560804827894.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets1.ignimgs.com/2019/06/17/5-es6-1560804827894.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -626,7 +648,13 @@
         "https://assets1.ignimgs.com/2019/06/17/5-es6-1560804827894.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-08T23:21:17+08:00"
+      "source_fetched_at": "2026-06-08T23:21:17+08:00",
+      "translation_error": "[summary_length] opus_summary must be 70-80 non-space characters, got 93; [dictionary] source contains 'Bethesda', but required dictionary translation 'B社/贝塞斯达' is missing",
+      "translation_failed_at": "2026-06-09T09:06:12.852432+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-flash",
+      "translation_path": "translations/18.json"
     },
     {
       "id": 19,

@@ -252,6 +252,258 @@
       "total_tokens": 7782,
       "prompt_cache_hit_tokens": 6528,
       "prompt_cache_miss_tokens": 981
+    },
+    {
+      "time_cn": "2026-06-09 09:04:54",
+      "task": "fulltext",
+      "model": "deepseek-v4-flash",
+      "article_id": 3,
+      "article_title": "微软：Xbox独占将逐案决定",
+      "article_url": "https://www.ign.com/articles/xbox-game-exclusivity-will-be-decided-on-a-case-by-case-basis-microsoft-says",
+      "article_date": "2026-06-09",
+      "detail": "",
+      "estimated_cost_usd": 0.00055643,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8609,
+      "completion_tokens": 1885,
+      "total_tokens": 10494,
+      "prompt_cache_hit_tokens": 8576,
+      "prompt_cache_miss_tokens": 33
+    },
+    {
+      "time_cn": "2026-06-09 09:05:08",
+      "task": "fulltext_repair",
+      "model": "deepseek-v4-flash",
+      "article_id": 3,
+      "article_title": "微软：Xbox独占将逐案决定",
+      "article_url": "https://www.ign.com/articles/xbox-game-exclusivity-will-be-decided-on-a-case-by-case-basis-microsoft-says",
+      "article_date": "2026-06-09",
+      "detail": "2 audit issue(s)",
+      "estimated_cost_usd": 0.00110628,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 3126,
+      "completion_tokens": 2388,
+      "total_tokens": 5514,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 3126
+    },
+    {
+      "time_cn": "2026-06-09 09:05:25",
+      "task": "fulltext",
+      "model": "deepseek-v4-flash",
+      "article_id": 13,
+      "article_title": "任天堂本周举办直面会，Switch 2 新作阵容引期待",
+      "article_url": "https://www.ign.com/articles/nintendo-direct-announced-for-this-week-as-fans-expect-huge-switch-2-reveals",
+      "article_date": "2026-06-09",
+      "detail": "",
+      "estimated_cost_usd": 0.000942,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8590,
+      "completion_tokens": 2268,
+      "total_tokens": 10858,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 2062
+    },
+    {
+      "time_cn": "2026-06-09 09:05:41",
+      "task": "fulltext_repair",
+      "model": "deepseek-v4-flash",
+      "article_id": 13,
+      "article_title": "任天堂本周举办直面会，Switch 2 新作阵容引期待",
+      "article_url": "https://www.ign.com/articles/nintendo-direct-announced-for-this-week-as-fans-expect-huge-switch-2-reveals",
+      "article_date": "2026-06-09",
+      "detail": "2 audit issue(s)",
+      "estimated_cost_usd": 0.00118706,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 3361,
+      "completion_tokens": 2559,
+      "total_tokens": 5920,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 3361
+    },
+    {
+      "time_cn": "2026-06-09 09:05:58",
+      "task": "fulltext",
+      "model": "deepseek-v4-flash",
+      "article_id": 18,
+      "article_title": "《上古卷轴6》再缺席Xbox发布会，粉丝苦等8年",
+      "article_url": "https://www.ign.com/articles/after-another-xbox-no-show-the-wait-for-the-elder-scrolls-vi-goes-on-and-fans-arent-getting-any-younger",
+      "article_date": "2026-06-09",
+      "detail": "",
+      "estimated_cost_usd": 0.00093948,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8812,
+      "completion_tokens": 2148,
+      "total_tokens": 10960,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 2284
+    },
+    {
+      "time_cn": "2026-06-09 09:06:12",
+      "task": "fulltext_repair",
+      "model": "deepseek-v4-flash",
+      "article_id": 18,
+      "article_title": "《上古卷轴6》再缺席Xbox发布会，粉丝苦等8年",
+      "article_url": "https://www.ign.com/articles/after-another-xbox-no-show-the-wait-for-the-elder-scrolls-vi-goes-on-and-fans-arent-getting-any-younger",
+      "article_date": "2026-06-09",
+      "detail": "2 audit issue(s)",
+      "estimated_cost_usd": 0.001036,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 3118,
+      "completion_tokens": 2141,
+      "total_tokens": 5259,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 3118
+    },
+    {
+      "time_cn": "2026-06-09 09:06:27",
+      "task": "fulltext",
+      "model": "deepseek-v4-flash",
+      "article_id": 21,
+      "article_title": "Xbox Game Pass涨价后流失数百万订阅用户",
+      "article_url": "https://www.ign.com/articles/xbox-game-pass-shed-millions-of-subscribers-following-october-2025-price-hike",
+      "article_date": "2026-06-09",
+      "detail": "",
+      "estimated_cost_usd": 0.00081558,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8321,
+      "completion_tokens": 1951,
+      "total_tokens": 10272,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 1793
+    },
+    {
+      "time_cn": "2026-06-09 09:06:39",
+      "task": "fulltext_repair",
+      "model": "deepseek-v4-flash",
+      "article_id": 21,
+      "article_title": "Xbox Game Pass涨价后流失数百万订阅用户",
+      "article_url": "https://www.ign.com/articles/xbox-game-pass-shed-millions-of-subscribers-following-october-2025-price-hike",
+      "article_date": "2026-06-09",
+      "detail": "1 audit issue(s)",
+      "estimated_cost_usd": 0.00088592,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 2550,
+      "completion_tokens": 1889,
+      "total_tokens": 4439,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 2550
+    },
+    {
+      "time_cn": "2026-06-09 09:07:12",
+      "task": "fulltext",
+      "model": "deepseek-v4-flash",
+      "article_id": 26,
+      "article_title": "WWDC 2026：苹果年度开发者大会全汇总",
+      "article_url": "https://www.ign.com/articles/wwdc-2026-everything-announced-at-apples-annual-developers-conference",
+      "article_date": "2026-06-09",
+      "detail": "",
+      "estimated_cost_usd": 0.0017939,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9477,
+      "completion_tokens": 4867,
+      "total_tokens": 14344,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 2949
+    },
+    {
+      "time_cn": "2026-06-09 09:07:43",
+      "task": "fulltext_repair",
+      "model": "deepseek-v4-flash",
+      "article_id": 26,
+      "article_title": "WWDC 2026：苹果年度开发者大会全汇总",
+      "article_url": "https://www.ign.com/articles/wwdc-2026-everything-announced-at-apples-annual-developers-conference",
+      "article_date": "2026-06-09",
+      "detail": "1 audit issue(s)",
+      "estimated_cost_usd": 0.00232148,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 5754,
+      "completion_tokens": 5414,
+      "total_tokens": 11168,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 5754
+    },
+    {
+      "time_cn": "2026-06-09 09:07:58",
+      "task": "fulltext",
+      "model": "deepseek-v4-flash",
+      "article_id": 30,
+      "article_title": "《蜘蛛侠：崭新一日》片长曝光，成最长蜘蛛侠电影",
+      "article_url": "https://www.ign.com/articles/spider-man-brand-new-day-runtime-revealed-and-its-one-of-the-longest-marvel-films-ever",
+      "article_date": "2026-06-09",
+      "detail": "",
+      "estimated_cost_usd": 0.00075622,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8043,
+      "completion_tokens": 1878,
+      "total_tokens": 9921,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 1515
+    },
+    {
+      "time_cn": "2026-06-09 09:08:11",
+      "task": "fulltext_repair",
+      "model": "deepseek-v4-flash",
+      "article_id": 30,
+      "article_title": "《蜘蛛侠：崭新一日》片长曝光，成最长蜘蛛侠电影",
+      "article_url": "https://www.ign.com/articles/spider-man-brand-new-day-runtime-revealed-and-its-one-of-the-longest-marvel-films-ever",
+      "article_date": "2026-06-09",
+      "detail": "1 audit issue(s)",
+      "estimated_cost_usd": 0.00096782,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 2751,
+      "completion_tokens": 2081,
+      "total_tokens": 4832,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 2751
     }
   ]
 }
