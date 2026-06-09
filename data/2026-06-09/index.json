@@ -462,7 +462,7 @@
       "publish_time_cn": "2026-06-08 21:47",
       "pub_date": "2026-06-08 21:47",
       "cover_image": "https://assets-prd.ignimgs.com/2026/06/08/mario-switch-nx-announcement-photo-1780916209614.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "needs_review",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/08/mario-switch-nx-announcement-photo-1780916209614.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/05/19/3-1779196156359.jpg",
@@ -530,8 +530,6 @@
           "reason": "暂译，需确认官方中文名"
         }
       ],
-      "translation_error": "[summary_length] opus_summary must be 70-80 non-space characters, got 96",
-      "translation_failed_at": "2026-06-09T09:05:41.927039+08:00",
       "translator": "api",
       "translator_provider": "openai-compatible",
       "translator_model": "deepseek-v4-flash",
