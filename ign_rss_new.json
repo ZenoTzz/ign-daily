@@ -5,57 +5,47 @@
     "2026-06-09"
   ],
   "changed_dates": [
-    "2026-06-09"
+    "2026-06-10"
   ],
-  "new_target_dates": [],
-  "new_count": 0,
-  "filtered_count": 1,
+  "new_target_dates": [
+    "2026-06-10"
+  ],
+  "new_count": 1,
+  "filtered_count": 0,
   "cleanup_count": 0,
   "changed_count": 1,
-  "articles": [],
-  "filtered_articles": [
+  "articles": [
     {
-      "title": "Treat Dad to a Brand New Pair of Apple AirPods Pro 3 Earbuds for Father's Day, Now 20% Off at Amazon",
-      "url": "https://www.ign.com/articles/apple-airpods-pro-3-earbuds-deal-amazon-fathers-day-sale-updated",
-      "pubDate_cst": "2026-06-09 05:20",
-      "description": "The best noise canceling earbuds for iPhone.",
-      "categories": "",
-      "reason": "url:deal",
-      "rss_url": "https://feeds.feedburner.com/ign/all",
-      "filtered_at_cn": "2026-06-09 09:02:48",
-      "status": "filtered"
+      "title": "Xbox Is Unable to Meet Demand for New Consoles, Rethinking Approach to Project Helix",
+      "url": "https://www.ign.com/articles/xbox-is-unable-to-meet-demand-for-new-consoles-rethinking-approach-to-project-helix",
+      "pubDate_cst": "2026-06-09 09:07"
     }
   ],
+  "filtered_articles": [],
   "runs": [
     {
       "target_date": "2026-06-10",
-      "new_count": 0,
+      "new_count": 1,
       "filtered_count": 0,
-      "changed_count": 0,
-      "next_id": 1,
-      "articles": [],
+      "changed_count": 1,
+      "next_id": 2,
+      "articles": [
+        {
+          "title": "Xbox Is Unable to Meet Demand for New Consoles, Rethinking Approach to Project Helix",
+          "url": "https://www.ign.com/articles/xbox-is-unable-to-meet-demand-for-new-consoles-rethinking-approach-to-project-helix",
+          "pubDate_cst": "2026-06-09 09:07"
+        }
+      ],
       "filtered_articles": []
     },
     {
       "target_date": "2026-06-09",
       "new_count": 0,
-      "filtered_count": 1,
-      "changed_count": 1,
+      "filtered_count": 0,
+      "changed_count": 0,
       "next_id": 33,
       "articles": [],
-      "filtered_articles": [
-        {
-          "title": "Treat Dad to a Brand New Pair of Apple AirPods Pro 3 Earbuds for Father's Day, Now 20% Off at Amazon",
-          "url": "https://www.ign.com/articles/apple-airpods-pro-3-earbuds-deal-amazon-fathers-day-sale-updated",
-          "pubDate_cst": "2026-06-09 05:20",
-          "description": "The best noise canceling earbuds for iPhone.",
-          "categories": "",
-          "reason": "url:deal",
-          "rss_url": "https://feeds.feedburner.com/ign/all",
-          "filtered_at_cn": "2026-06-09 09:02:48",
-          "status": "filtered"
-        }
-      ]
+      "filtered_articles": []
     }
   ]
 }
