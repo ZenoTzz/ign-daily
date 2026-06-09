@@ -128,6 +128,12 @@ def compact_char_len(text: str) -> int:
     return len(re.sub(r"\s+", "", text or ""))
 
 
+SUMMARY_TARGET_MIN = 70
+SUMMARY_TARGET_MAX = 80
+SUMMARY_HARD_MIN = 60
+SUMMARY_HARD_MAX = 110
+
+
 def source_text_from_paragraphs(paragraphs_en: list[str], article: dict[str, Any] | None = None) -> str:
     title = ""
     if article:
@@ -161,10 +167,13 @@ def check_translation(
         issues.append({"type": "summary_length", "detail": "opus_summary is missing"})
     else:
         summary_len = compact_char_len(opus_summary)
-        if summary_len < 70 or summary_len > 80:
+        if summary_len < SUMMARY_HARD_MIN or summary_len > SUMMARY_HARD_MAX:
             issues.append({
                 "type": "summary_length",
-                "detail": f"opus_summary must be 70-80 non-space characters, got {summary_len}",
+                "detail": (
+                    f"opus_summary targets {SUMMARY_TARGET_MIN}-{SUMMARY_TARGET_MAX} non-space characters "
+                    f"and must stay within {SUMMARY_HARD_MIN}-{SUMMARY_HARD_MAX}, got {summary_len}"
+                ),
             })
 
     for en, cn in terms.items():

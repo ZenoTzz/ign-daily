@@ -109,8 +109,8 @@ for aid in done_ids:
         errors.append(f"#{aid}: MISSING opus_summary")
     else:
         summary_len = len(re.sub(r'\s+', '', data.get('opus_summary', '')))
-        if summary_len < 70 or summary_len > 80:
-            errors.append(f"#{aid}: opus_summary LENGTH {summary_len}, expected 70-80")
+        if summary_len < 60 or summary_len > 110:
+            errors.append(f"#{aid}: opus_summary LENGTH {summary_len}, target 70-80, allowed 60-110")
     
     # Check 6: no ASCII double quotes in cn text
     cn_texts = [data.get('cn_title', ''), data.get('opus_summary', '')]

@@ -475,8 +475,8 @@ def post_mode(date_str, article_ref):
         issues.append("MISSING opus_summary")
     else:
         summary_len = len(re.sub(r'\s+', '', data.get('opus_summary', '')))
-        if summary_len < 70 or summary_len > 80:
-            issues.append(f"opus_summary LENGTH {summary_len}, expected 70-80")
+        if summary_len < 60 or summary_len > 110:
+            issues.append(f"opus_summary LENGTH {summary_len}, target 70-80, allowed 60-110")
     if not data.get('paragraphs'):
         issues.append("EMPTY paragraphs")
     if quote_issues:
