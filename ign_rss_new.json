@@ -5,123 +5,57 @@
     "2026-06-10"
   ],
   "changed_dates": [
-    "2026-06-10"
+    "2026-06-11"
   ],
-  "new_target_dates": [],
-  "new_count": 0,
-  "filtered_count": 4,
+  "new_target_dates": [
+    "2026-06-11"
+  ],
+  "new_count": 2,
+  "filtered_count": 0,
   "cleanup_count": 0,
-  "changed_count": 4,
-  "articles": [],
-  "filtered_articles": [
+  "changed_count": 2,
+  "articles": [
     {
-      "title": "Fire Emblem: Fortune's Weave — Here's What Comes With Each Edition",
-      "url": "https://www.ign.com/articles/fire-emblem-fortunes-weave-where-to-buy",
-      "pubDate_cst": "2026-06-10 07:23",
-      "description": "",
-      "categories": "",
-      "reason": "url:where-to-buy",
-      "rss_url": "https://feeds.feedburner.com/ign/all",
-      "filtered_at_cn": "2026-06-10 09:15:42",
-      "status": "filtered"
+      "title": "Fire Emblem: Fortune's Weave Sets Standard Physical Price at $80",
+      "url": "https://www.ign.com/articles/fire-emblem-fortunes-weave-sets-standard-physical-price-at-80",
+      "pubDate_cst": "2026-06-10 10:10"
     },
     {
-      "title": "Treat Dad to a Brand New Pair of Apple AirPods Pro 3 Earbuds for Father's Day, Now 20% Off at Amazon",
-      "url": "https://www.ign.com/articles/apple-airpods-pro-3-earbuds-deal-amazon-fathers-day-sale-updated",
-      "pubDate_cst": "2026-06-10 07:10",
-      "description": "The best noise canceling earbuds for iPhone.",
-      "categories": "",
-      "reason": "url:deal",
-      "rss_url": "https://feeds.feedburner.com/ign/all",
-      "filtered_at_cn": "2026-06-10 09:15:42",
-      "status": "filtered"
-    },
-    {
-      "title": "Save 20% Off Refurbished VITURE XR Glasses on eBay Ahead of Father's Day",
-      "url": "https://www.ign.com/articles/save-20-off-refurbished-viture-xr-glasses-on-ebay-ahead-of-fathers-day",
-      "pubDate_cst": "2026-06-10 07:05",
-      "description": "An easily transportable, 175\" simulated display for your Legion Go, Steam Deck, or Asus ROG Ally",
-      "categories": "",
-      "reason": "text:\\bsave \\d+%",
-      "rss_url": "https://feeds.feedburner.com/ign/all",
-      "filtered_at_cn": "2026-06-10 09:15:42",
-      "status": "filtered"
-    },
-    {
-      "title": "The LEGO Sagrada Família Set Should Have Followed the Hogwarts Castle Release Strategy",
-      "url": "https://www.ign.com/articles/sagrada-familia-lego-set-should-have-released-over-years",
-      "pubDate_cst": "2026-06-10 06:30",
-      "description": "If ever there was an opportunity to release a build with multiple sets throughout the years, this seems like it would be it.",
-      "categories": "",
-      "reason": "url:lego-set",
-      "rss_url": "https://feeds.feedburner.com/ign/all",
-      "filtered_at_cn": "2026-06-10 09:15:42",
-      "status": "filtered"
+      "title": "Xbox Will 'Try and Do More' Exclusives Once the 'Business is Healthy', Says Asha Sharma",
+      "url": "https://www.ign.com/articles/xbox-will-try-and-do-more-exclusives-once-the-business-is-healthy-says-asha-sharma",
+      "pubDate_cst": "2026-06-10 08:48"
     }
   ],
+  "filtered_articles": [],
   "runs": [
     {
       "target_date": "2026-06-11",
-      "new_count": 0,
+      "new_count": 2,
       "filtered_count": 0,
-      "changed_count": 0,
-      "next_id": 1,
-      "articles": [],
+      "changed_count": 2,
+      "next_id": 3,
+      "articles": [
+        {
+          "title": "Fire Emblem: Fortune's Weave Sets Standard Physical Price at $80",
+          "url": "https://www.ign.com/articles/fire-emblem-fortunes-weave-sets-standard-physical-price-at-80",
+          "pubDate_cst": "2026-06-10 10:10"
+        },
+        {
+          "title": "Xbox Will 'Try and Do More' Exclusives Once the 'Business is Healthy', Says Asha Sharma",
+          "url": "https://www.ign.com/articles/xbox-will-try-and-do-more-exclusives-once-the-business-is-healthy-says-asha-sharma",
+          "pubDate_cst": "2026-06-10 08:48"
+        }
+      ],
       "filtered_articles": []
     },
     {
       "target_date": "2026-06-10",
       "new_count": 0,
-      "filtered_count": 4,
-      "changed_count": 4,
+      "filtered_count": 0,
+      "changed_count": 0,
       "next_id": 44,
       "articles": [],
-      "filtered_articles": [
-        {
-          "title": "Fire Emblem: Fortune's Weave — Here's What Comes With Each Edition",
-          "url": "https://www.ign.com/articles/fire-emblem-fortunes-weave-where-to-buy",
-          "pubDate_cst": "2026-06-10 07:23",
-          "description": "",
-          "categories": "",
-          "reason": "url:where-to-buy",
-          "rss_url": "https://feeds.feedburner.com/ign/all",
-          "filtered_at_cn": "2026-06-10 09:15:42",
-          "status": "filtered"
-        },
-        {
-          "title": "Treat Dad to a Brand New Pair of Apple AirPods Pro 3 Earbuds for Father's Day, Now 20% Off at Amazon",
-          "url": "https://www.ign.com/articles/apple-airpods-pro-3-earbuds-deal-amazon-fathers-day-sale-updated",
-          "pubDate_cst": "2026-06-10 07:10",
-          "description": "The best noise canceling earbuds for iPhone.",
-          "categories": "",
-          "reason": "url:deal",
-          "rss_url": "https://feeds.feedburner.com/ign/all",
-          "filtered_at_cn": "2026-06-10 09:15:42",
-          "status": "filtered"
-        },
-        {
-          "title": "Save 20% Off Refurbished VITURE XR Glasses on eBay Ahead of Father's Day",
-          "url": "https://www.ign.com/articles/save-20-off-refurbished-viture-xr-glasses-on-ebay-ahead-of-fathers-day",
-          "pubDate_cst": "2026-06-10 07:05",
-          "description": "An easily transportable, 175\" simulated display for your Legion Go, Steam Deck, or Asus ROG Ally",
-          "categories": "",
-          "reason": "text:\\bsave \\d+%",
-          "rss_url": "https://feeds.feedburner.com/ign/all",
-          "filtered_at_cn": "2026-06-10 09:15:42",
-          "status": "filtered"
-        },
-        {
-          "title": "The LEGO Sagrada Família Set Should Have Followed the Hogwarts Castle Release Strategy",
-          "url": "https://www.ign.com/articles/sagrada-familia-lego-set-should-have-released-over-years",
-          "pubDate_cst": "2026-06-10 06:30",
-          "description": "If ever there was an opportunity to release a build with multiple sets throughout the years, this seems like it would be it.",
-          "categories": "",
-          "reason": "url:lego-set",
-          "rss_url": "https://feeds.feedburner.com/ign/all",
-          "filtered_at_cn": "2026-06-10 09:15:42",
-          "status": "filtered"
-        }
-      ]
+      "filtered_articles": []
     }
   ]
 }

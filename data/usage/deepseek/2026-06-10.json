@@ -1008,6 +1008,48 @@
       "total_tokens": 9863,
       "prompt_cache_hit_tokens": 6528,
       "prompt_cache_miss_tokens": 1637
+    },
+    {
+      "time_cn": "2026-06-10 11:17:13",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 1,
+      "article_title": "Fire Emblem: Fortune's Weave Sets Standard Physical Price at $80",
+      "article_url": "https://www.ign.com/articles/fire-emblem-fortunes-weave-sets-standard-physical-price-at-80",
+      "article_date": "2026-06-11",
+      "detail": "",
+      "estimated_cost_usd": 0.00022394,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7705,
+      "completion_tokens": 146,
+      "total_tokens": 7851,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 1177
+    },
+    {
+      "time_cn": "2026-06-10 11:17:16",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 2,
+      "article_title": "Xbox Will 'Try and Do More' Exclusives Once the 'Business is Healthy', Says Asha Sharma",
+      "article_url": "https://www.ign.com/articles/xbox-will-try-and-do-more-exclusives-once-the-business-is-healthy-says-asha-sharma",
+      "article_date": "2026-06-11",
+      "detail": "",
+      "estimated_cost_usd": 0.00021876,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7714,
+      "completion_tokens": 123,
+      "total_tokens": 7837,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 1186
     }
   ]
 }
