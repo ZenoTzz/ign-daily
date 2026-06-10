@@ -950,8 +950,8 @@
       "url": "https://www.ign.com/articles/the-wolf-among-us-2-the-first-preview",
       "publish_time_cn": "2026-06-09 21:00",
       "pub_date": "2026-06-09 21:00",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/06/09/goodsleep-01-1780990260245.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/09/goodsleep-01-1780990260245.png",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/09/goodsleep-01-1780990260245.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/09/goodsleep-01-1780990260245.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -987,7 +987,11 @@
           "cn": "PM工作室",
           "reason": "词库未收录，保留英文名。"
         }
-      ]
+      ],
+      "translation_path": "translations/24.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-flash"
     },
     {
       "id": 25,
@@ -1121,8 +1125,8 @@
       "url": "https://www.ign.com/articles/naughty-dog-no-new-uncharted",
       "publish_time_cn": "2026-06-09 19:00",
       "pub_date": "2026-06-09 19:00",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/06/08/naughty-dog-site-thumb-1780936805124.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/08/naughty-dog-site-thumb-1780936805124.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/08/naughty-dog-site-thumb-1780936805124.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/08/naughty-dog-site-thumb-1780936805124.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -1136,7 +1140,11 @@
         "https://assets-prd.ignimgs.com/2026/06/09/gettyimages-2208060751-1747724906242-1780998525093.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-10T02:36:46+08:00"
+      "source_fetched_at": "2026-06-10T02:36:46+08:00",
+      "translation_path": "translations/28.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-flash"
     },
     {
       "id": 29,
@@ -1148,8 +1156,8 @@
       "url": "https://www.ign.com/articles/shift-up-ceo-explains-design-of-stellar-blade-blood-rains-new-main-character",
       "publish_time_cn": "2026-06-09 18:22",
       "pub_date": "2026-06-09 18:22",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/06/09/sbbr-sgf-screenshots-01-1781000102629.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/09/sbbr-sgf-screenshots-01-1781000102629.png",
+      "translation_status": "done",
       "pending_dict": [
         {
           "en": "Evie",
@@ -1176,7 +1184,11 @@
         "https://assets-prd.ignimgs.com/2026/06/09/sbbr-sgf-ka-1781000162926.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-10T02:36:47+08:00"
+      "source_fetched_at": "2026-06-10T02:36:47+08:00",
+      "translation_path": "translations/29.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-flash"
     },
     {
       "id": 30,
@@ -1371,8 +1383,8 @@
       "url": "https://www.ign.com/articles/halo-campaign-evolved-collectors-edition-includes-a-relic-of-a-bygone-gaming-era",
       "publish_time_cn": "2026-06-09 10:02",
       "pub_date": "2026-06-09 10:02",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/06/08/halocampaignevolvedcinematicstorytrailer-ign-blogroll-1780934113790.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/08/halocampaignevolvedcinematicstorytrailer-ign-blogroll-1780934113790.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/08/halocampaignevolvedcinematicstorytrailer-ign-blogroll-1780934113790.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/08/halocampaignevolvedcinematicstorytrailer-ign-blogroll-1780934113790.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -1382,7 +1394,11 @@
         "https://assets-prd.ignimgs.com/2026/06/08/halo-ce-collectors-edition-a163ae6a5a9d863f955d-1900x1080-1780932111055.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-09T18:51:47+08:00"
+      "source_fetched_at": "2026-06-09T18:51:47+08:00",
+      "translation_path": "translations/07.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-flash"
     },
     {
       "id": 6,
