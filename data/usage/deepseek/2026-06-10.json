@@ -735,6 +735,27 @@
       "total_tokens": 7511,
       "prompt_cache_hit_tokens": 6528,
       "prompt_cache_miss_tokens": 821
+    },
+    {
+      "time_cn": "2026-06-10 08:12:56",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 43,
+      "article_title": "Star Wars Zero Company Is Up for Preorder – Here’s What Comes in Each Edition",
+      "article_url": "https://www.ign.com/articles/star-wars-zero-company-where-to-preorder",
+      "article_date": "2026-06-10",
+      "detail": "",
+      "estimated_cost_usd": 0.00024536,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7580,
+      "completion_tokens": 285,
+      "total_tokens": 7865,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 1052
     }
   ]
 }
