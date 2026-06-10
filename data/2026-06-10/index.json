@@ -12,7 +12,7 @@
       "publish_time_cn": "2026-06-10 05:42",
       "pub_date": "2026-06-10 05:42",
       "cover_image": "https://assets-prd.ignimgs.com/2026/06/09/deltarune-chapter-5-key-art-by-temmie-1781039360555.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "needs_review",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/09/deltarune-chapter-5-key-art-by-temmie-1781039360555.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/09/deltarune-chapter-5-key-art-by-temmie-1781039360555.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -44,8 +44,6 @@
           "reason": "不知名人物，保留英文"
         }
       ],
-      "translation_error": "Command '['/opt/hostedtoolcache/Python/3.11.15/x64/bin/python3', '/home/runner/work/ign-daily/ign-daily/scripts/translate_pipeline.py', '2026-06-10', '37', '--post']' returned non-zero exit status 1.",
-      "translation_failed_at": "2026-06-10T09:24:17.470738+08:00",
       "translator": "api",
       "translator_provider": "openai-compatible",
       "translator_model": "deepseek-v4-flash",
