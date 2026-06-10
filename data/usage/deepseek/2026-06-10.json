@@ -1050,6 +1050,132 @@
       "total_tokens": 7837,
       "prompt_cache_hit_tokens": 6528,
       "prompt_cache_miss_tokens": 1186
+    },
+    {
+      "time_cn": "2026-06-10 20:45:09",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 3,
+      "article_title": "Fable Romance Mechanics Revealed — Including How the RPG Handles Lovemaking",
+      "article_url": "https://www.ign.com/articles/fable-romance-mechanics-revealed-including-how-the-rpg-handles-lovemaking",
+      "article_date": "2026-06-11",
+      "detail": "",
+      "estimated_cost_usd": 0.00021414,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7389,
+      "completion_tokens": 269,
+      "total_tokens": 7658,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 861
+    },
+    {
+      "time_cn": "2026-06-10 20:45:13",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 4,
+      "article_title": "Assassin's Creed Shadows Final Update Arrives Next Week, Just Over a Year After Launch",
+      "article_url": "https://www.ign.com/articles/assassins-creed-shadows-final-update-arrives-next-week-just-over-a-year-after-launch",
+      "article_date": "2026-06-11",
+      "detail": "",
+      "estimated_cost_usd": 0.00019524,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7494,
+      "completion_tokens": 149,
+      "total_tokens": 7643,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 966
+    },
+    {
+      "time_cn": "2026-06-10 20:45:17",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 5,
+      "article_title": "Xbox Boss Says a Mass Audience Can't Afford 'Thousands of Dollars' to Spend on a Next-Gen Console, So Microsoft Must 'Look at New Business Models'",
+      "article_url": "https://www.ign.com/articles/xbox-boss-says-a-mass-audience-cant-afford-thousands-of-dollars-to-spend-on-a-next-gen-console-so-microsoft-must-look-at-new-business-models",
+      "article_date": "2026-06-11",
+      "detail": "",
+      "estimated_cost_usd": 0.00024312,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7892,
+      "completion_tokens": 121,
+      "total_tokens": 8013,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 1364
+    },
+    {
+      "time_cn": "2026-06-10 20:45:21",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 6,
+      "article_title": "'There Was No Script, No Actor Was Ever Approached': BBC Scraps Planned Doctor Who Special, Showrunner and Production Company Gone",
+      "article_url": "https://www.ign.com/articles/there-was-no-script-no-actor-was-ever-approached-bbc-scraps-planned-doctor-who-special-showrunner-and-production-company-gone",
+      "article_date": "2026-06-11",
+      "detail": "",
+      "estimated_cost_usd": 0.00022744,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7614,
+      "completion_tokens": 204,
+      "total_tokens": 7818,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 1086
+    },
+    {
+      "time_cn": "2026-06-10 20:45:25",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 7,
+      "article_title": "Does That Space Marine Have an Extra Finger? Yes, but Games Workshop Insists It's Not AI",
+      "article_url": "https://www.ign.com/articles/does-that-space-marine-have-an-extra-finger-yes-but-games-workshop-insists-its-not-ai",
+      "article_date": "2026-06-11",
+      "detail": "",
+      "estimated_cost_usd": 0.0002721,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8117,
+      "completion_tokens": 112,
+      "total_tokens": 8229,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 1589
+    },
+    {
+      "time_cn": "2026-06-10 20:45:30",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 8,
+      "article_title": "Capcom Responds to Concern the Onimusha: Way of the Sword Demo Feels \"Too Easy\"",
+      "article_url": "https://www.ign.com/articles/capcom-responds-to-concern-the-onimusha-way-of-the-sword-demo-feels-too-easy",
+      "article_date": "2026-06-11",
+      "detail": "",
+      "estimated_cost_usd": 0.00020798,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7413,
+      "completion_tokens": 235,
+      "total_tokens": 7648,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 885
     }
   ]
 }
