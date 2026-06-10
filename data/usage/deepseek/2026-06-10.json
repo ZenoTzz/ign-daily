@@ -903,6 +903,90 @@
       "total_tokens": 10431,
       "prompt_cache_hit_tokens": 6528,
       "prompt_cache_miss_tokens": 1766
+    },
+    {
+      "time_cn": "2026-06-10 09:20:30",
+      "task": "fulltext",
+      "model": "deepseek-v4-flash",
+      "article_id": 21,
+      "article_title": "《宝可梦Pokopia》免费更新与三弹DLC公布",
+      "article_url": "https://www.ign.com/articles/pokemon-pokopia-free-update-and-3-part-expansion-pass-dlc-revealed",
+      "article_date": "2026-06-10",
+      "detail": "",
+      "estimated_cost_usd": 0.00067082,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8113,
+      "completion_tokens": 1538,
+      "total_tokens": 9651,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 1585
+    },
+    {
+      "time_cn": "2026-06-10 09:20:42",
+      "task": "fulltext_repair",
+      "model": "deepseek-v4-flash",
+      "article_id": 21,
+      "article_title": "《宝可梦Pokopia》免费更新与三弹DLC公布",
+      "article_url": "https://www.ign.com/articles/pokemon-pokopia-free-update-and-3-part-expansion-pass-dlc-revealed",
+      "article_date": "2026-06-10",
+      "detail": "1 audit issue(s)",
+      "estimated_cost_usd": 0.00084826,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 2425,
+      "completion_tokens": 1817,
+      "total_tokens": 4242,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 2425
+    },
+    {
+      "time_cn": "2026-06-10 09:20:53",
+      "task": "fulltext",
+      "model": "deepseek-v4-flash",
+      "article_id": 40,
+      "article_title": "《失落星船：马拉松》《命运2》最终更新后玩家数创两年新高",
+      "article_url": "https://www.ign.com/articles/destiny-2-hits-highest-player-count-in-two-years-following-final-updates-release-shatters-marathons-all-time-peak",
+      "article_date": "2026-06-10",
+      "detail": "",
+      "estimated_cost_usd": 0.00068552,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8330,
+      "completion_tokens": 1482,
+      "total_tokens": 9812,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 1802
+    },
+    {
+      "time_cn": "2026-06-10 09:21:02",
+      "task": "fulltext_repair",
+      "model": "deepseek-v4-flash",
+      "article_id": 40,
+      "article_title": "《失落星船：马拉松》《命运2》最终更新后玩家数创两年新高",
+      "article_url": "https://www.ign.com/articles/destiny-2-hits-highest-player-count-in-two-years-following-final-updates-release-shatters-marathons-all-time-peak",
+      "article_date": "2026-06-10",
+      "detail": "1 audit issue(s)",
+      "estimated_cost_usd": 0.0007406,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 2422,
+      "completion_tokens": 1434,
+      "total_tokens": 3856,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 2422
     }
   ]
 }

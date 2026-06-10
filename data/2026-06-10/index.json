@@ -174,8 +174,8 @@
       "url": "https://www.ign.com/articles/destiny-2-hits-highest-player-count-in-two-years-following-final-updates-release-shatters-marathons-all-time-peak",
       "publish_time_cn": "2026-06-10 04:41",
       "pub_date": "2026-06-10 04:41",
-      "cover_image": "https://assets-prd.ignimgs.com/2025/11/13/destiynthumb-1763051460453.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2025/11/13/destiynthumb-1763051460453.png",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2025/11/13/destiynthumb-1763051460453.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2025/11/13/destiynthumb-1763051460453.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -184,7 +184,11 @@
         "https://assets-prd.ignimgs.com/2025/11/13/destiynthumb-1763051460453.png"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-10T07:59:05+08:00"
+      "source_fetched_at": "2026-06-10T07:59:05+08:00",
+      "translation_path": "translations/40.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-flash"
     },
     {
       "id": 41,
@@ -819,7 +823,7 @@
       "publish_time_cn": "2026-06-09 22:26",
       "pub_date": "2026-06-09 22:26",
       "cover_image": "https://assets-prd.ignimgs.com/2026/06/09/pokemon-pokopia-update-and-dlc-1781015116894.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/09/pokemon-pokopia-update-and-dlc-1781015116894.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/09/pokemon-pokopia-update-and-dlc-1781015116894.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -840,7 +844,13 @@
           "cn": "泡泡盆地",
           "reason": "暂译，需确认官方或社区常用译名。"
         }
-      ]
+      ],
+      "translation_error": "[summary_length] opus_summary targets 70-80 non-space characters and must stay within 60-110, got 128",
+      "translation_failed_at": "2026-06-10T09:20:42.243564+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-flash",
+      "translation_path": "translations/21.json"
     },
     {
       "id": 22,
