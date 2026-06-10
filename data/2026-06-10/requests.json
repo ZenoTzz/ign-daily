@@ -1,6 +1,24 @@
 {
   "date": "2026-06-10",
-  "requested_ids": [],
-  "requested_articles": [],
-  "requested_at": "2026-06-10T00:14:59.378Z"
+  "requested_ids": [
+    21,
+    40
+  ],
+  "requested_articles": [
+    {
+      "id": 21,
+      "url": "https://www.ign.com/articles/pokemon-pokopia-free-update-and-3-part-expansion-pass-dlc-revealed",
+      "en_title": "Pokémon Pokopia Free Update and 3-Part Expansion Pass DLC Revealed",
+      "cn_title": "《宝可梦Pokopia》免费更新与三弹DLC公布",
+      "publish_time_cn": "2026-06-09 22:26"
+    },
+    {
+      "id": 40,
+      "url": "https://www.ign.com/articles/destiny-2-hits-highest-player-count-in-two-years-following-final-updates-release-shatters-marathons-all-time-peak",
+      "en_title": "Destiny 2 Hits Highest Player Count in Two Years Following Final Update's Release, Shatters Marathon's All-Time Peak",
+      "cn_title": "《失落星船：马拉松》《命运2》最终更新后玩家数创两年新高",
+      "publish_time_cn": "2026-06-10 04:41"
+    }
+  ],
+  "requested_at": "2026-06-10T01:20:05.201Z"
 }
