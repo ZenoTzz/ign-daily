@@ -87,9 +87,9 @@
   "translator": "api",
   "translator_provider": "openai-compatible",
   "translator_model": "deepseek-v4-flash",
-  "quality_status": "needs_manual_review",
-  "manual_release_required": true,
-  "audit_issues": [],
-  "audit_failed_at": "2026-06-10T09:24:17.470738+08:00",
-  "audit_failure_reason": "Command '['/opt/hostedtoolcache/Python/3.11.15/x64/bin/python3', '/home/runner/work/ign-daily/ign-daily/scripts/translate_pipeline.py', '2026-06-10', '37', '--post']' returned non-zero exit status 1."
+  "quality_status": "manual_approved",
+  "manual_release_required": false,
+  "manual_approved_at": "2026-06-10T03:30:44.931Z",
+  "manual_approved_reason": "user approved API audit draft",
+  "manual_approved_issues": []
 }
