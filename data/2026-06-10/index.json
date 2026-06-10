@@ -7,12 +7,12 @@
       "emoji": "🎮",
       "en_title": "Deltarune Chapter 5 Release Date Revealed as Toby Fox Offers Promising Update for the Future",
       "cn_title": "《Deltarune》第5章6月24日发售，Toby Fox透露第6章进展",
-      "summary": "在任天堂直面会上，《Deltarune》第5章正式公布，将于2026年6月24日登陆PC、Switch、Switch 2、PS4和PS5。制作人Toby Fox透露第6章开发顺利，甚至有望年底前启动最终章第7章的制作。",
+      "summary": "《Deltarune》第5章在任天堂直面会上公布，将于2026年6月24日登陆PC、Switch、Switch 2、PS4和PS5。Toby Fox透露第6章开发顺利，甚至有望年底前启动最终章第7章的制作。",
       "url": "https://www.ign.com/articles/deltarune-chapter-5-release-date-revealed-as-toby-fox-offers-promising-update-for-the-future",
       "publish_time_cn": "2026-06-10 05:42",
       "pub_date": "2026-06-10 05:42",
       "cover_image": "https://assets-prd.ignimgs.com/2026/06/09/deltarune-chapter-5-key-art-by-temmie-1781039360555.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/09/deltarune-chapter-5-key-art-by-temmie-1781039360555.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/09/deltarune-chapter-5-key-art-by-temmie-1781039360555.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -43,7 +43,13 @@
           "cn": "Temmie Chang",
           "reason": "不知名人物，保留英文"
         }
-      ]
+      ],
+      "translation_error": "Command '['/opt/hostedtoolcache/Python/3.11.15/x64/bin/python3', '/home/runner/work/ign-daily/ign-daily/scripts/translate_pipeline.py', '2026-06-10', '37', '--post']' returned non-zero exit status 1.",
+      "translation_failed_at": "2026-06-10T09:24:17.470738+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-flash",
+      "translation_path": "translations/37.json"
     },
     {
       "id": 38,

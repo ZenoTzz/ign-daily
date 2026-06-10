@@ -19,7 +19,21 @@
       "fingerprint": "24c1a3fa848907824af41644b50958a7c7c47433",
       "translation_path": "translations/21.json",
       "retry_policy": "manual_only"
+    },
+    "37": {
+      "id": 37,
+      "url": "https://www.ign.com/articles/deltarune-chapter-5-release-date-revealed-as-toby-fox-offers-promising-update-for-the-future",
+      "en_title": "Deltarune Chapter 5 Release Date Revealed as Toby Fox Offers Promising Update for the Future",
+      "cn_title": "《Deltarune》第5章6月24日发售，Toby Fox透露第6章进展",
+      "model": "deepseek-v4-flash",
+      "status": "needs_manual_review",
+      "failed_at": "2026-06-10T09:24:17.470738+08:00",
+      "reason": "Command '['/opt/hostedtoolcache/Python/3.11.15/x64/bin/python3', '/home/runner/work/ign-daily/ign-daily/scripts/translate_pipeline.py', '2026-06-10', '37', '--post']' returned non-zero exit status 1.",
+      "audit_issues": [],
+      "fingerprint": "5c8cc5560ad028784de4a4e4a3a59de3028e7f68",
+      "translation_path": "translations/37.json",
+      "retry_policy": "manual_only"
     }
   },
-  "updated_at": "2026-06-10T09:20:42.243564+08:00"
+  "updated_at": "2026-06-10T09:24:17.470738+08:00"
 }
