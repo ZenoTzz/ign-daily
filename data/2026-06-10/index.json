@@ -829,7 +829,7 @@
       "publish_time_cn": "2026-06-09 22:26",
       "pub_date": "2026-06-09 22:26",
       "cover_image": "https://assets-prd.ignimgs.com/2026/06/09/pokemon-pokopia-update-and-dlc-1781015116894.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "needs_review",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/09/pokemon-pokopia-update-and-dlc-1781015116894.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/09/pokemon-pokopia-update-and-dlc-1781015116894.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -851,8 +851,6 @@
           "reason": "暂译，需确认官方或社区常用译名。"
         }
       ],
-      "translation_error": "[summary_length] opus_summary targets 70-80 non-space characters and must stay within 60-110, got 128",
-      "translation_failed_at": "2026-06-10T09:20:42.243564+08:00",
       "translator": "api",
       "translator_provider": "openai-compatible",
       "translator_model": "deepseek-v4-flash",
