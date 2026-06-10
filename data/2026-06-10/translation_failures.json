@@ -1,25 +1,6 @@
 {
   "date": "2026-06-10",
   "items": {
-    "21": {
-      "id": 21,
-      "url": "https://www.ign.com/articles/pokemon-pokopia-free-update-and-3-part-expansion-pass-dlc-revealed",
-      "en_title": "Pokémon Pokopia Free Update and 3-Part Expansion Pass DLC Revealed",
-      "cn_title": "《宝可梦Pokopia》免费更新与三弹DLC公布",
-      "model": "deepseek-v4-flash",
-      "status": "needs_manual_review",
-      "failed_at": "2026-06-10T09:20:42.243564+08:00",
-      "reason": "[summary_length] opus_summary targets 70-80 non-space characters and must stay within 60-110, got 128",
-      "audit_issues": [
-        {
-          "type": "summary_length",
-          "detail": "opus_summary targets 70-80 non-space characters and must stay within 60-110, got 128"
-        }
-      ],
-      "fingerprint": "24c1a3fa848907824af41644b50958a7c7c47433",
-      "translation_path": "translations/21.json",
-      "retry_policy": "manual_only"
-    },
     "37": {
       "id": 37,
       "url": "https://www.ign.com/articles/deltarune-chapter-5-release-date-revealed-as-toby-fox-offers-promising-update-for-the-future",
@@ -35,5 +16,5 @@
       "retry_policy": "manual_only"
     }
   },
-  "updated_at": "2026-06-10T09:24:17.470738+08:00"
+  "updated_at": "2026-06-10T01:24:20.565Z"
 }
