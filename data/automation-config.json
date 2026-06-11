@@ -3,12 +3,12 @@
   "fulltext_translator": "api",
   "nightly_learner": "api",
   "api_provider": "openai-compatible",
-  "api_model": "deepseek-v4-flash",
-  "api_title_model": "deepseek-v4-flash",
-  "api_fulltext_model": "deepseek-v4-flash",
+  "api_model": "deepseek-v4-pro",
+  "api_title_model": "deepseek-v4-pro",
+  "api_fulltext_model": "deepseek-v4-pro",
   "api_nightly_model": "deepseek-v4-flash",
-  "api_title_thinking": "disabled",
-  "api_fulltext_thinking": "disabled",
+  "api_title_thinking": "high",
+  "api_fulltext_thinking": "high",
   "api_nightly_thinking": "max",
   "api_compare_thinking": "disabled",
   "api_base_url": "https://api.deepseek.com",
@@ -37,6 +37,6 @@
       "output_usd_per_million": 0.28
     }
   ],
-  "updated_at": "2026-06-11T09:36:20.246Z",
+  "updated_at": "2026-06-11T17:57:45+08:00",
   "notes": "Public switch only. API keys must stay in GitHub Actions Secrets."
 }

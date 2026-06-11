@@ -16,7 +16,7 @@
 
 **产出字段：**
 - `cn_title` — 精炼中文标题（≤20字），作品名用《》，词库译名强制使用
-- `summary` — 2-3 句核心信息摘要，包含关键数字/人名/评分，50-70字
+- `summary` — 2-3 句核心信息摘要，包含关键数字/人名/评分，80-160字
 - `category` — 正确分类（游戏新闻/影视资讯/行业动态/科技新闻/评测评分/人物新闻/盘点推荐）
 - `publish_time_cn` — 发布时间（北京时间，主字段；旧 `pub_date` 仅兼容读取）
 
@@ -57,7 +57,7 @@
 | `cn_title` | 精炼中文标题，≤20字，词库译名强制使用，作品名用《》 |
 | **副标题** (`subtitle`) | **每篇必须有**，2-15 字，风格多样（情绪词/短引用/短语） |
 | `paragraphs` | 逐段翻译，每段独立（`{en, cn}` 对），不合并段落 |
-| `opus_summary` | 50-70 字极简总结（谁/做了什么/关键细节，2-3句） |
+| `opus_summary` | 70-80 字极简总结（谁/做了什么/关键细节，2-3句） |
 | `translated_terms` | 本篇用到的专有名词译法快照 |
 
 ### 副标题风格示例
@@ -240,7 +240,7 @@ Rockstar、Valve、Bungie、Bethesda、Naughty Dog、Insomniac、Activision、CD
 
 ## 📝 opus_summary 极简总结
 
-- **字数**：50-70 字（80 字上限）
+- **字数**：70-80 字
 - **句数**：2-3 句
 - **只保留核心事实**：谁/做了什么/关键细节
 - **不列举**：背景、相关产品、次要信息全去掉
@@ -263,7 +263,7 @@ Rockstar、Valve、Bungie、Bethesda、Naughty Dog、Insomniac、Activision、CD
   "paragraphs": [
     {"en": "English paragraph...", "cn": "中文段落..."}
   ],
-  "opus_summary": "50-70字总结...",
+  "opus_summary": "70-80字总结...",
   "translated_terms": {
     "Call of Duty": "《使命召唤》",
     "Activision": "Activision",
@@ -303,7 +303,7 @@ Rockstar、Valve、Bungie、Bethesda、Naughty Dog、Insomniac、Activision、CD
 - [ ] 人名处理正确（词库有翻、没有保留英文）
 - [ ] 金额格式正确：`X美元(约合人民币Y元)`
 - [ ] 有副标题（2-15字）
-- [ ] 有 opus_summary（50-70字）
+- [ ] 有 opus_summary（70-80字）
 - [ ] 有 translated_terms 快照
 - [ ] 有 cover 图片 URL（去掉压缩参数）
 - [ ] 标题用全角标点

@@ -337,6 +337,38 @@ def build_repair_messages(
     ]
 
 
+def build_summary_repair_messages(
+    article: dict[str, Any],
+    paragraphs_en: list[str],
+    data: dict[str, Any],
+) -> list[dict[str, str]]:
+    system = (
+        "你是 IGN Daily 的中文摘要编辑。只输出严格 JSON，不要 Markdown。"
+        "只改写 opus_summary，不得改动标题、正文或其他字段。"
+        "摘要必须忠实概括文章核心事实，长度为70-80个非空白中文字符。"
+    )
+    payload = {
+        "article": {
+            "en_title": article.get("en_title"),
+            "cn_title": data.get("cn_title") or article.get("cn_title"),
+        },
+        "current_opus_summary": data.get("opus_summary", ""),
+        "source_paragraphs_en": paragraphs_en,
+        "translated_paragraphs_cn": [
+            str(item.get("cn") or "")
+            for item in data.get("paragraphs", [])
+            if isinstance(item, dict)
+        ],
+        "required_json_schema": {
+            "opus_summary": "忠实、自然的70-80个非空白中文字符摘要",
+        },
+    }
+    return [
+        {"role": "system", "content": system},
+        {"role": "user", "content": json.dumps(payload, ensure_ascii=False)},
+    ]
+
+
 def extract_paragraph_items(result: dict[str, Any]) -> list[Any]:
     for key in ("paragraphs", "translated_paragraphs", "translations", "body_paragraphs"):
         value = result.get(key)
@@ -485,6 +517,43 @@ def repair_translation_once(
     return repaired
 
 
+def repair_summary_once(
+    api_key: str,
+    model: str,
+    base_url: str,
+    article: dict[str, Any],
+    paragraphs_en: list[str],
+    data: dict[str, Any],
+    article_date: str,
+) -> dict[str, Any]:
+    raw, usage = call_deepseek_response(
+        api_key,
+        model,
+        base_url,
+        build_summary_repair_messages(article, paragraphs_en, data),
+        max_tokens=int(os.environ.get("TRANSLATOR_SUMMARY_REPAIR_MAX_TOKENS", "600")),
+    )
+    record_deepseek_usage_safe(
+        task="fulltext_summary_repair",
+        model=model,
+        usage=usage,
+        article_id=article.get("id"),
+        article_title=article.get("cn_title") or article.get("en_title"),
+        article_url=article.get("url"),
+        article_date=article_date,
+        detail="summary length only",
+    )
+    result = extract_json(raw)
+    summary = str(result.get("opus_summary") or "").strip()
+    if not summary:
+        raise ValueError("summary repair returned empty opus_summary")
+    repaired = dict(data)
+    repaired["opus_summary"] = summary
+    repaired["repair_source"] = "api_summary_audit"
+    repaired["repair_issue_count"] = 1
+    return restore_dictionary_spacing_in_data(normalize_translation_currency(repaired))
+
+
 def resolve_requests(date: str) -> tuple[Path, dict[str, Any], dict[str, Any], list[dict[str, Any]]]:
     day_dir = DATA_DIR / date
     index = load_json(day_dir / "index.json")
@@ -524,6 +593,9 @@ def translate_date(date: str, limit: int = 2) -> int:
         print("API_FULLTEXT_SKIP: TRANSLATOR_API_KEY/DEEPSEEK_API_KEY is not set")
         return 0
     model = (os.environ.get("TRANSLATOR_MODEL") or os.environ.get("DEEPSEEK_MODEL") or "").strip() or DEFAULT_MODEL
+    repair_model = (os.environ.get("TRANSLATOR_REPAIR_MODEL") or "").strip()
+    if not repair_model:
+        repair_model = "deepseek-v4-pro" if model == "deepseek-v4-flash" else model
     base_url = (os.environ.get("TRANSLATOR_BASE_URL") or os.environ.get("DEEPSEEK_BASE_URL") or "").strip() or DEFAULT_BASE_URL
     req_path, index, req, requested = resolve_requests(date)
     if not requested:
@@ -573,8 +645,13 @@ def translate_date(date: str, limit: int = 2) -> int:
                     data["images"] = source["images"]
             audit_issues = check_translation(article=article, paragraphs_en=paragraphs_en, data=data, required_terms=terms)
             if audit_issues and os.environ.get("TRANSLATOR_FULLTEXT_REPAIR", "1") != "0":
-                print(f"[REPAIR] fulltext #{article['id']} audit found {len(audit_issues)} issue(s); asking model for focused repair")
-                data = repair_translation_once(api_key, model, base_url, article, paragraphs_en, terms, data, audit_issues, date)
+                summary_only = all(issue.get("type") == "summary_length" for issue in audit_issues)
+                if summary_only:
+                    print(f"[REPAIR] fulltext #{article['id']} only needs a summary repair; preserving all paragraphs")
+                    data = repair_summary_once(api_key, repair_model, base_url, article, paragraphs_en, data, date)
+                else:
+                    print(f"[REPAIR] fulltext #{article['id']} audit found {len(audit_issues)} issue(s); asking {repair_model} for focused repair")
+                    data = repair_translation_once(api_key, repair_model, base_url, article, paragraphs_en, terms, data, audit_issues, date)
                 data["translator"] = "api"
                 data["translator_provider"] = "openai-compatible"
                 data["translator_model"] = model
