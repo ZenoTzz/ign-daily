@@ -141,7 +141,7 @@ DeepSeek 用量看板读取 `data/usage/deepseek/*.json` 和 `data/usage/deepsee
 API 夜间学习不只看当天。默认会扫描最近 45 天里 `polished/` 或反馈有变化、
 且尚未学习过当前变更指纹的日期；手动传入日期时才只处理指定日期。
 
-API prompt 的长规则块必须通过 `scripts/prompt_blocks.py` 生成，尽量保持字段顺序、文本和位置稳定，方便 DeepSeek 自动上下文缓存命中。不要在各脚本里复制粘贴不同版本的 `TRANSLATION_GUIDE.md` / `STYLE_PROFILE.md` prompt。
+API prompt 的长规则块必须通过 `scripts/prompt_blocks.py` 生成。标题、全文、分段重试、全文修复和摘要修复统一使用 `translation_system_prompt()`；用户消息必须按“风格画像、固定任务规则、词库/文章动态数据”的顺序构造，并用 `stable_json()` 序列化。不要在各脚本里复制粘贴不同版本的 `TRANSLATION_GUIDE.md` / `STYLE_PROFILE.md` prompt，也不要随意调整稳定字段顺序，否则会让 DeepSeek 前缀缓存整体失效。
 
 所有会写仓库数据的 Actions（RSS、API 翻译、DeepSeek 用量快照、夜间学习）
 必须使用同一个 `concurrency.group: ign-daily-write-main`，避免多个任务同时写

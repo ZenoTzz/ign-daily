@@ -37,7 +37,7 @@ from dict_matcher import (
     term_in_text,
 )
 from normalize_currency_files import normalize_date as normalize_currency_date
-from prompt_blocks import title_user_payload
+from prompt_blocks import stable_json, title_user_payload, translation_system_prompt
 from usage_logger import record_deepseek_usage_safe
 
 
@@ -296,15 +296,10 @@ def call_deepseek(api_key: str, model: str, base_url: str, messages: list[dict[s
 
 
 def build_messages(article: dict[str, Any], article_text: str, terms: dict[str, str]) -> list[dict[str, str]]:
-    system = (
-        "你是 IGN Daily 的中文首页标题摘要编辑。只输出严格 JSON。"
-        "不要翻译全文，不要写 Markdown。标题要自然、有新闻感；摘要 80-160 个中文字符。"
-        "如果词库中有译名，必须使用词库译名。外币金额必须补人民币换算。"
-    )
     user = title_user_payload(article=article, article_text=article_text, terms=terms, allowed_categories=CATEGORIES)
     return [
-        {"role": "system", "content": system},
-        {"role": "user", "content": json.dumps(user, ensure_ascii=False)},
+        {"role": "system", "content": translation_system_prompt()},
+        {"role": "user", "content": stable_json(user)},
     ]
 
 

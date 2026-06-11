@@ -32,7 +32,13 @@ from dict_matcher import restore_dictionary_spacing_in_data
 from dict_matcher import matched_terms_for_article
 from dict_matcher import normalize_pending_dict
 from normalize_currency_files import normalize_date as normalize_currency_date
-from prompt_blocks import chunk_user_payload, fulltext_user_payload
+from prompt_blocks import (
+    chunk_user_payload,
+    fulltext_user_payload,
+    stable_json,
+    translation_system_prompt,
+    with_translation_style,
+)
 from translate_titles_deepseek import apply_title_dictionary, call_deepseek_response, extract_article_text, extract_json, flatten_dict_terms
 from usage_logger import record_deepseek_usage_safe
 
@@ -279,16 +285,11 @@ def hard_checklist(paragraphs: list[str], terms: dict[str, str]) -> dict[str, An
 
 
 def build_messages(article: dict[str, Any], paragraphs: list[str], terms: dict[str, str]) -> list[dict[str, str]]:
-    system = (
-        "你是 IGN Daily 的中文全文翻译 agent。必须严格输出 JSON，不要 Markdown。"
-        "逐段翻译 paragraphs_en，保持段落数量和顺序一致。"
-        "必须遵守翻译指南、风格画像和词库命中。所有外币金额必须补人民币换算；中文标点使用全角；作品名用《》。"
-    )
     user = fulltext_user_payload(article=article, paragraphs=paragraphs, terms=terms)
     user["hard_checklist"] = hard_checklist(paragraphs, terms)
     return [
-        {"role": "system", "content": system},
-        {"role": "user", "content": json.dumps(user, ensure_ascii=False)},
+        {"role": "system", "content": translation_system_prompt()},
+        {"role": "user", "content": stable_json(user)},
     ]
 
 
@@ -299,15 +300,16 @@ def build_repair_messages(
     terms: dict[str, str],
     issues: list[dict[str, str]],
 ) -> list[dict[str, str]]:
-    system = (
-        "你是 IGN Daily 的 API 翻译审稿修复 agent。只输出严格 JSON，不要 Markdown。"
-        "你不是重新创作，而是在保持原译文整体不变的前提下，修复审计问题。"
-        "必须保留 paragraphs 数量和顺序；必须使用词库译名；所有外币金额必须补人民币换算；必须删除导航/页脚/广告噪音。"
-    )
-    payload = {
-        "cache_prefix": {
-            "project": "IGN Daily",
-            "fixed_instruction": "修复译文，使其通过词库、货币、段落数量和网页噪音审计。",
+    payload = with_translation_style({
+        "task": {
+            "name": "repair_translation",
+            "instructions": [
+                "保持原译文整体不变，只修复审计列出的问题。",
+                "必须保留 paragraphs 数量和顺序。",
+                "必须使用词库译名，所有外币金额必须补人民币换算。",
+                "必须删除导航、页脚和广告噪音。",
+                "只输出严格 JSON，不要 Markdown。",
+            ],
         },
         "article": {
             "id": article.get("id"),
@@ -331,10 +333,10 @@ def build_repair_messages(
             "cover": "",
             "images": [],
         },
-    }
+    })
     return [
-        {"role": "system", "content": system},
-        {"role": "user", "content": json.dumps(payload, ensure_ascii=False)},
+        {"role": "system", "content": translation_system_prompt()},
+        {"role": "user", "content": stable_json(payload)},
     ]
 
 
@@ -343,12 +345,16 @@ def build_summary_repair_messages(
     paragraphs_en: list[str],
     data: dict[str, Any],
 ) -> list[dict[str, str]]:
-    system = (
-        "你是 IGN Daily 的中文摘要编辑。只输出严格 JSON，不要 Markdown。"
-        "只改写 opus_summary，不得改动标题、正文或其他字段。"
-        "摘要必须忠实概括文章核心事实，长度为70-80个非空白中文字符。"
-    )
-    payload = {
+    payload = with_translation_style({
+        "task": {
+            "name": "repair_summary_only",
+            "instructions": [
+                "只改写 opus_summary，不得改动标题、正文或其他字段。",
+                "摘要必须忠实概括文章核心事实。",
+                "长度为70-80个非空白中文字符。",
+                "只输出严格 JSON，不要 Markdown。",
+            ],
+        },
         "article": {
             "en_title": article.get("en_title"),
             "cn_title": data.get("cn_title") or article.get("cn_title"),
@@ -363,10 +369,10 @@ def build_summary_repair_messages(
         "required_json_schema": {
             "opus_summary": "忠实、自然的70-80个非空白中文字符摘要",
         },
-    }
+    })
     return [
-        {"role": "system", "content": system},
-        {"role": "user", "content": json.dumps(payload, ensure_ascii=False)},
+        {"role": "system", "content": translation_system_prompt()},
+        {"role": "user", "content": stable_json(payload)},
     ]
 
 
@@ -402,15 +408,10 @@ def normalize_paragraphs(result: dict[str, Any], paragraphs_en: list[str]) -> li
 
 
 def build_chunk_messages(article: dict[str, Any], chunk: list[tuple[int, str]], terms: dict[str, str]) -> list[dict[str, str]]:
-    system = (
-        "你是 IGN Daily 的中文逐段翻译 agent。只输出严格 JSON，不要 Markdown。"
-        "必须返回与 paragraphs_en 数量完全一致的 paragraphs 数组。"
-        "每个元素必须包含 index 和 cn。所有外币金额必须补人民币换算；中文标点用全角，作品名用《》。"
-    )
     user = chunk_user_payload(article=article, chunk=chunk, terms=terms)
     return [
-        {"role": "system", "content": system},
-        {"role": "user", "content": json.dumps(user, ensure_ascii=False)},
+        {"role": "system", "content": translation_system_prompt()},
+        {"role": "user", "content": stable_json(user)},
     ]
 
 
