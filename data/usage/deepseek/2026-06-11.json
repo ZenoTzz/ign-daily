@@ -1218,6 +1218,69 @@
       "total_tokens": 5245,
       "prompt_cache_hit_tokens": 0,
       "prompt_cache_miss_tokens": 3363
+    },
+    {
+      "time_cn": "2026-06-11 20:32:56",
+      "task": "title",
+      "model": "deepseek-v4-pro",
+      "article_id": 3,
+      "article_title": "Star Trek: Shadow Frontier — Paramount Says 'The Goal Is for Bloober to Make the Best Star Trek Game of All Time'",
+      "article_url": "https://www.ign.com/articles/star-trek-shadow-frontier-paramount-says-the-goal-is-for-bloober-to-make-the-best-star-trek-game-of-all-time",
+      "article_date": "2026-06-12",
+      "detail": "",
+      "estimated_cost_usd": 0.00449485,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 7933,
+      "completion_tokens": 1200,
+      "total_tokens": 9133,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 7933
+    },
+    {
+      "time_cn": "2026-06-11 20:33:17",
+      "task": "title",
+      "model": "deepseek-v4-pro",
+      "article_id": 4,
+      "article_title": "1666: Amsterdam Developer Admits Using AI Assets and Apologizes, Says They'll Now Be Replaced",
+      "article_url": "https://www.ign.com/articles/1666-amsterdam-developer-admits-using-ai-assets-and-apologizes-says-theyll-now-be-replaced",
+      "article_date": "2026-06-12",
+      "detail": "",
+      "estimated_cost_usd": 0.00410249,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 7031,
+      "completion_tokens": 1200,
+      "total_tokens": 8231,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 7031
+    },
+    {
+      "time_cn": "2026-06-11 20:33:33",
+      "task": "title",
+      "model": "deepseek-v4-pro",
+      "article_id": 5,
+      "article_title": "Pokémon Go Adds Virtual Item That Helps Play the Game For You",
+      "article_url": "https://www.ign.com/articles/pokemon-go-adds-virtual-item-that-helps-play-the-game-for-you",
+      "article_date": "2026-06-12",
+      "detail": "",
+      "estimated_cost_usd": 0.00123247,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 6845,
+      "completion_tokens": 1104,
+      "total_tokens": 7949,
+      "prompt_cache_hit_tokens": 6272,
+      "prompt_cache_miss_tokens": 573
     }
   ]
 }
