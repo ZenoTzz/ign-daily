@@ -9,6 +9,10 @@ from typing import Any
 from common_paths import dict_path
 
 
+DICT_CATEGORIES = ("games", "movies_tv", "companies", "people", "media", "terms")
+DICT_SOURCES = ("user", "ign_cn", "bilibili", "consensus", "ai_guess")
+
+
 def load_json(path: Path) -> Any:
     with path.open("r", encoding="utf-8-sig") as f:
         return json.load(f)
@@ -29,6 +33,37 @@ def flatten_dict_terms() -> dict[str, str]:
             elif isinstance(value, str):
                 terms[en] = value
     return terms
+
+
+def normalize_pending_dict(
+    items: Any,
+    *,
+    default_category: str = "terms",
+    default_source: str = "ai_guess",
+) -> list[dict[str, str]]:
+    if not isinstance(items, list):
+        return []
+    normalized: list[dict[str, str]] = []
+    for item in items:
+        if not isinstance(item, dict):
+            continue
+        en = str(item.get("en") or "").strip()
+        cn = str(item.get("cn") or "").strip()
+        if not en or not cn:
+            continue
+        category = str(item.get("cat") or item.get("category") or default_category).strip()
+        if category not in DICT_CATEGORIES:
+            category = default_category
+        source = str(item.get("source") or default_source).strip()
+        if source not in DICT_SOURCES:
+            source = default_source
+        row = dict(item)
+        row["en"] = en
+        row["cn"] = cn
+        row["cat"] = category
+        row["source"] = source
+        normalized.append(row)
+    return normalized
 
 
 def spacing_sensitive_cn_terms() -> list[str]:

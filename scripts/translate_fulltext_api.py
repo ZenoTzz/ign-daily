@@ -30,6 +30,7 @@ from audit_doctor import diagnose as diagnose_audit_failure
 from currency_utils import normalize_translation_currency
 from dict_matcher import restore_dictionary_spacing_in_data
 from dict_matcher import matched_terms_for_article
+from dict_matcher import normalize_pending_dict
 from normalize_currency_files import normalize_date as normalize_currency_date
 from prompt_blocks import chunk_user_payload, fulltext_user_payload
 from translate_titles_deepseek import apply_title_dictionary, call_deepseek_response, extract_article_text, extract_json, flatten_dict_terms
@@ -476,7 +477,7 @@ def normalize_translation(article: dict[str, Any], result: dict[str, Any], parag
         "opus_summary": str(result.get("opus_summary") or result.get("summary") or article.get("summary") or article.get("cn_title") or "").strip(),
         "publish_time_cn": article.get("publish_time_cn") or article.get("pub_date") or "",
         "paragraphs": normalized,
-        "pending_dict": result.get("pending_dict") if isinstance(result.get("pending_dict"), list) else [],
+        "pending_dict": normalize_pending_dict(result.get("pending_dict")),
         "translated_terms": result.get("translated_terms") if isinstance(result.get("translated_terms"), dict) else {},
         "cover": str(result.get("cover") or article.get("cover_image") or "").strip(),
         "images": result.get("images") if isinstance(result.get("images"), list) else [],

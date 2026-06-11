@@ -20,7 +20,7 @@
   <script defer src="assets/alpine.min.js"></script>
   <link rel="stylesheet" href="assets/style.css?v=20260602m">
   <link rel="stylesheet" href="assets/article-dark.css?v=20260602m">
-  <script src="assets/app.js?v=20260606datefix"></script>
+  <script src="assets/app.js?v=20260611dictfix2"></script>
   <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
   <script>
     tailwind.config = {
@@ -581,6 +581,9 @@
             const res = await fetch(`data/${date}/translations/${padded}.json?t=${Date.now()}`);
             if (!res.ok) throw new Error(`HTTP ${res.status}`);
             this.article = await res.json();
+            this.article.pending_dict = (this.article.pending_dict || [])
+              .map(c => normalizeDictCandidate(c))
+              .filter(c => c.en && c.cn);
             // 如果没有原文 URL（旧数据缺少 url 字段），直接降级
             if (!this.article?.url) {
               this.iframeFailed = true;
@@ -776,7 +779,7 @@
             return;
           }
           // 1. 本地立即移除，用户马上可以点下一条
-          const candidate = { ...c };
+          const candidate = normalizeApprovedDictCandidate(c);
           this.article.pending_dict.splice(idx, 1);
           this.flash(`入库中: ${candidate.en} → ${candidate.cn}`);
           // 2. 后台任务入队串行执行（避免409冲突）
@@ -860,7 +863,8 @@
         async batchApproveToDict(approves) {
           const fresh = await GH.getFile('data/dict.json');
           const dict = JSON.parse(fresh.content);
-          for (const c of approves) {
+          for (const rawCandidate of approves) {
+            const c = normalizeApprovedDictCandidate(rawCandidate);
             for (const cat of ['games','movies_tv','companies','people','media','terms']) {
               if (cat !== c.cat && dict[cat]?.[c.en]) delete dict[cat][c.en];
             }
@@ -886,7 +890,9 @@
             this.flash('❌ 未配置 GitHub Token', 4000);
             return;
           }
-          const candidates = [...this.article.pending_dict].filter(c => c.en && c.cn);
+          const candidates = this.article.pending_dict
+            .map(c => normalizeApprovedDictCandidate(c))
+            .filter(c => c.en && c.cn);
           this.article.pending_dict = [];
           this.flash(`入库中: ${candidates.length} 条...`);
           for (const c of candidates) this.pendingQueue.push({ type: 'approve', candidate: c });

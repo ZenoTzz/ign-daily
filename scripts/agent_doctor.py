@@ -18,6 +18,7 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 from common_paths import DATA_DIR, REPO_ROOT, configure_utf8_stdio, dict_path
+from dict_matcher import DICT_CATEGORIES
 
 
 configure_utf8_stdio()
@@ -72,6 +73,14 @@ def main() -> int:
         ok("active dictionary is data/dict.json")
     else:
         fail(errors, f"active dictionary is not data/dict.json: {active_dict}")
+
+    if active_dict.exists():
+        dictionary = json.loads(active_dict.read_text(encoding="utf-8-sig"))
+        unknown_categories = sorted(set(dictionary) - {"_meta", *DICT_CATEGORIES})
+        if unknown_categories:
+            fail(errors, f"dictionary has unknown categories: {', '.join(unknown_categories)}")
+        else:
+            ok("dictionary categories are canonical")
 
     for p in REPO_ROOT.rglob("*.py"):
         if "__pycache__" in p.parts:

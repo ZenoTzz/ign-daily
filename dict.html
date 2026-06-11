@@ -7,7 +7,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
   <link rel="stylesheet" href="assets/style.css">
-  <script src="assets/app.js"></script>
+  <script src="assets/app.js?v=20260611dictfix2"></script>
   <script>
     tailwind.config = { theme: { extend: { colors: { brand: { 600:'#a01620',700:'#7e1219' }}}}}
   </script>
@@ -97,7 +97,14 @@
                     <option value="ai_guess">ai_guess</option>
                   </select>
                 </td>
-                <td class="text-xs text-slate-500" x-text="entry.cat"></td>
+                <td>
+                  <select class="dict-input text-xs" :value="entry.cat"
+                    @change="moveEntry(entry, $event.target.value)">
+                    <template x-for="cat in ['games','movies_tv','companies','people','media','terms']" :key="cat">
+                      <option :value="cat" :selected="cat === entry.cat" x-text="cat"></option>
+                    </template>
+                  </select>
+                </td>
                 <td>
                   <button @click="removeEntry(entry)" class="text-red-500 hover:text-red-700 text-sm" title="删除">🗑️</button>
                 </td>
@@ -182,7 +189,6 @@
     </div>
   </div>
 
-  <script src="assets/app.js"></script>
   <script>
     function dictData() {
       return {
@@ -273,6 +279,17 @@
         updateSource(entry, val) {
           this.data[entry.cat][entry.en].source = val;
           this.markChanged(entry.key);
+        },
+
+        moveEntry(entry, newCat) {
+          if (!newCat || newCat === entry.cat) return;
+          if (!this.data[newCat]) this.data[newCat] = {};
+          const value = this.data[entry.cat][entry.en];
+          delete this.data[entry.cat][entry.en];
+          this.data[newCat][entry.en] = value;
+          this.markChanged(entry.key);
+          this.markChanged(`${newCat}::${entry.en}`);
+          this.page = 0;
         },
 
         removeEntry(entry) {

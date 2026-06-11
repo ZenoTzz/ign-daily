@@ -23,6 +23,31 @@ function toggleTheme() {
 (function(){ try { initDarkMode(); } catch(_){} })();
 window.appTheme = { initDarkMode, applyTheme, toggleTheme };
 
+const DICT_CATEGORIES = ['games','movies_tv','companies','people','media','terms'];
+const DICT_SOURCES = ['user','ign_cn','bilibili','consensus','ai_guess'];
+
+function normalizeDictCandidate(candidate, defaults = {}) {
+  const item = candidate && typeof candidate === 'object' ? candidate : {};
+  const requestedCat = item.cat || item.category || defaults.cat || 'terms';
+  const requestedSource = item.source || defaults.source || 'ai_guess';
+  return {
+    ...item,
+    en: String(item.en || '').trim(),
+    cn: String(item.cn || '').trim(),
+    cat: DICT_CATEGORIES.includes(requestedCat) ? requestedCat : 'terms',
+    source: DICT_SOURCES.includes(requestedSource) ? requestedSource : 'ai_guess',
+  };
+}
+
+function normalizeApprovedDictCandidate(candidate) {
+  const item = normalizeDictCandidate(candidate);
+  if (item.source === 'ai_guess') item.source = 'user';
+  return item;
+}
+
+window.normalizeDictCandidate = normalizeDictCandidate;
+window.normalizeApprovedDictCandidate = normalizeApprovedDictCandidate;
+
 // ---- GitHub API helper (用于写回) ----
 const GH = {
   owner: 'ZenoTzz',
@@ -1408,7 +1433,8 @@ function appData() {
           if (!res.ok) return;
           const tr = await res.json();
           if (Array.isArray(tr.pending_dict) && tr.pending_dict.length > 0) {
-            for (const c of tr.pending_dict) {
+            for (const rawCandidate of tr.pending_dict) {
+              const c = normalizeDictCandidate(rawCandidate);
               pending.push({
                 ...c,
                 _articleId: a.id,
@@ -1431,7 +1457,7 @@ function appData() {
         this.flash('❌ 未配置 GitHub Token，请右上角⚙️设置', 4000);
         return;
       }
-      const candidate = { ...c };
+      const candidate = normalizeApprovedDictCandidate(c);
       this.globalPending.splice(idx, 1);
       this.flash(`入库中: ${candidate.en} → ${candidate.cn}`);
       this.pendingQueue.push({ type: 'approve', candidate });
@@ -1451,7 +1477,9 @@ function appData() {
         this.flash('❌ 未配置 GitHub Token', 4000);
         return;
       }
-      const candidates = this.globalPending.filter(c => c.en && c.cn).map(c => ({ ...c }));
+      const candidates = this.globalPending
+        .map(c => normalizeApprovedDictCandidate(c))
+        .filter(c => c.en && c.cn);
       this.globalPending = [];
       this.flash(`入库中: ${candidates.length} 条...`);
       for (const c of candidates) this.pendingQueue.push({ type: 'approve', candidate: c });
@@ -1502,8 +1530,9 @@ function appData() {
     async batchApproveDict(approves) {
       const fresh = await GH.getFile('data/dict.json');
       const dict = JSON.parse(fresh.content);
-      for (const c of approves) {
-        for (const cat of ['games','movies_tv','companies','people','media','terms']) {
+      for (const rawCandidate of approves) {
+        const c = normalizeApprovedDictCandidate(rawCandidate);
+        for (const cat of DICT_CATEGORIES) {
           if (cat !== c.cat && dict[cat]?.[c.en]) delete dict[cat][c.en];
         }
         if (!dict[c.cat]) dict[c.cat] = {};
@@ -1523,9 +1552,15 @@ function appData() {
       const fresh = await GH.getFile(path);
       const data = JSON.parse(fresh.content);
       // 从 pending_dict 里移除这些候选（按 en+cat 匹配）
-      const removeSet = new Set(removedCandidates.map(c => `${c.en}|${c.cat}`));
+      const removeSet = new Set(removedCandidates.map(c => {
+        const item = normalizeDictCandidate(c);
+        return `${item.en}|${item.cat}`;
+      }));
       data.pending_dict = (data.pending_dict || []).filter(
-        c => !removeSet.has(`${c.en}|${c.cat}`)
+        c => {
+          const item = normalizeDictCandidate(c);
+          return !removeSet.has(`${item.en}|${item.cat}`);
+        }
       );
 
       // ✨ 新：即时替换段落里的译文
