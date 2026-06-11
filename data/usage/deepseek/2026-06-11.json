@@ -882,6 +882,216 @@
       "total_tokens": 5152,
       "prompt_cache_hit_tokens": 0,
       "prompt_cache_miss_tokens": 2927
+    },
+    {
+      "time_cn": "2026-06-11 09:06:30",
+      "task": "fulltext",
+      "model": "deepseek-v4-flash",
+      "article_id": 4,
+      "article_title": "《刺客信条：影》最终更新下周上线，发售仅一年多",
+      "article_url": "https://www.ign.com/articles/assassins-creed-shadows-final-update-arrives-next-week-just-over-a-year-after-launch",
+      "article_date": "2026-06-11",
+      "detail": "",
+      "estimated_cost_usd": 0.00048794,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8146,
+      "completion_tokens": 1621,
+      "total_tokens": 9767,
+      "prompt_cache_hit_tokens": 8064,
+      "prompt_cache_miss_tokens": 82
+    },
+    {
+      "time_cn": "2026-06-11 09:06:40",
+      "task": "fulltext_repair",
+      "model": "deepseek-v4-flash",
+      "article_id": 4,
+      "article_title": "《刺客信条：影》最终更新下周上线，发售仅一年多",
+      "article_url": "https://www.ign.com/articles/assassins-creed-shadows-final-update-arrives-next-week-just-over-a-year-after-launch",
+      "article_date": "2026-06-11",
+      "detail": "1 audit issue(s)",
+      "estimated_cost_usd": 0.00075474,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 2517,
+      "completion_tokens": 1437,
+      "total_tokens": 3954,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 2517
+    },
+    {
+      "time_cn": "2026-06-11 09:06:58",
+      "task": "fulltext",
+      "model": "deepseek-v4-flash",
+      "article_id": 5,
+      "article_title": "Xbox负责人：下一代主机不能太贵，微软需探索新商业模式",
+      "article_url": "https://www.ign.com/articles/xbox-boss-says-a-mass-audience-cant-afford-thousands-of-dollars-to-spend-on-a-next-gen-console-so-microsoft-must-look-at-new-business-models",
+      "article_date": "2026-06-11",
+      "detail": "",
+      "estimated_cost_usd": 0.00091484,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8522,
+      "completion_tokens": 2205,
+      "total_tokens": 10727,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 1994
+    },
+    {
+      "time_cn": "2026-06-11 09:07:12",
+      "task": "fulltext_repair",
+      "model": "deepseek-v4-flash",
+      "article_id": 5,
+      "article_title": "Xbox负责人：下一代主机不能太贵，微软需探索新商业模式",
+      "article_url": "https://www.ign.com/articles/xbox-boss-says-a-mass-audience-cant-afford-thousands-of-dollars-to-spend-on-a-next-gen-console-so-microsoft-must-look-at-new-business-models",
+      "article_date": "2026-06-11",
+      "detail": "1 audit issue(s)",
+      "estimated_cost_usd": 0.00102032,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 3100,
+      "completion_tokens": 2094,
+      "total_tokens": 5194,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 3100
+    },
+    {
+      "time_cn": "2026-06-11 09:07:23",
+      "task": "fulltext",
+      "model": "deepseek-v4-flash",
+      "article_id": 11,
+      "article_title": "育碧再关两间工作室，裁员波及380人",
+      "article_url": "https://www.ign.com/articles/ubisoft-closing-2-more-studios-amid-further-cuts-and-job-losses",
+      "article_date": "2026-06-11",
+      "detail": "",
+      "estimated_cost_usd": 0.00045908,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7881,
+      "completion_tokens": 1525,
+      "total_tokens": 9406,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 73
+    },
+    {
+      "time_cn": "2026-06-11 09:07:36",
+      "task": "fulltext_repair",
+      "model": "deepseek-v4-flash",
+      "article_id": 11,
+      "article_title": "育碧再关两间工作室，裁员波及380人",
+      "article_url": "https://www.ign.com/articles/ubisoft-closing-2-more-studios-amid-further-cuts-and-job-losses",
+      "article_date": "2026-06-11",
+      "detail": "1 audit issue(s)",
+      "estimated_cost_usd": 0.00083608,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 2330,
+      "completion_tokens": 1821,
+      "total_tokens": 4151,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 2330
+    },
+    {
+      "time_cn": "2026-06-11 09:07:48",
+      "task": "fulltext",
+      "model": "deepseek-v4-flash",
+      "article_id": 13,
+      "article_title": "《PlayStation》《天国：拯救》《最终幻想16》领衔6月PS Plus游戏阵容",
+      "article_url": "https://www.ign.com/articles/playstation-plus-game-catalog-for-june-2026-headlined-by-final-fantasy-16-and-kingdom-come-deliverance",
+      "article_date": "2026-06-11",
+      "detail": "",
+      "estimated_cost_usd": 0.00046882,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8064,
+      "completion_tokens": 1531,
+      "total_tokens": 9595,
+      "prompt_cache_hit_tokens": 7936,
+      "prompt_cache_miss_tokens": 128
+    },
+    {
+      "time_cn": "2026-06-11 09:07:57",
+      "task": "fulltext_repair",
+      "model": "deepseek-v4-flash",
+      "article_id": 13,
+      "article_title": "《PlayStation》《天国：拯救》《最终幻想16》领衔6月PS Plus游戏阵容",
+      "article_url": "https://www.ign.com/articles/playstation-plus-game-catalog-for-june-2026-headlined-by-final-fantasy-16-and-kingdom-come-deliverance",
+      "article_date": "2026-06-11",
+      "detail": "1 audit issue(s)",
+      "estimated_cost_usd": 0.00072478,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 2425,
+      "completion_tokens": 1376,
+      "total_tokens": 3801,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 2425
+    },
+    {
+      "time_cn": "2026-06-11 09:08:38",
+      "task": "fulltext",
+      "model": "deepseek-v4-flash",
+      "article_id": 14,
+      "article_title": "《塞尔达传说：时之笛》重制版为何选在此时推出",
+      "article_url": "https://www.ign.com/articles/why-now-is-the-perfect-time-for-a-zelda-ocarina-of-time-remake",
+      "article_date": "2026-06-11",
+      "detail": "",
+      "estimated_cost_usd": 0.00145323,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 10202,
+      "completion_tokens": 5044,
+      "total_tokens": 15246,
+      "prompt_cache_hit_tokens": 10112,
+      "prompt_cache_miss_tokens": 90
+    },
+    {
+      "time_cn": "2026-06-11 09:09:12",
+      "task": "fulltext_repair",
+      "model": "deepseek-v4-flash",
+      "article_id": 14,
+      "article_title": "《塞尔达传说：时之笛》重制版为何选在此时推出",
+      "article_url": "https://www.ign.com/articles/why-now-is-the-perfect-time-for-a-zelda-ocarina-of-time-remake",
+      "article_date": "2026-06-11",
+      "detail": "1 audit issue(s)",
+      "estimated_cost_usd": 0.0023359,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 5963,
+      "completion_tokens": 5361,
+      "total_tokens": 11324,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 5963
     }
   ]
 }

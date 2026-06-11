@@ -142,8 +142,8 @@
       "url": "https://www.ign.com/articles/ubisoft-closing-2-more-studios-amid-further-cuts-and-job-losses",
       "publish_time_cn": "2026-06-11 01:00",
       "pub_date": "2026-06-11 01:00",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/06/10/ubisoft-emblem-1781109542916.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/10/ubisoft-emblem-1781109542916.png",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/10/ubisoft-emblem-1781109542916.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/10/ubisoft-emblem-1781109542916.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -152,7 +152,11 @@
         "https://assets-prd.ignimgs.com/2026/06/10/ubisoft-emblem-1781109542916.png"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-11T05:28:06+08:00"
+      "source_fetched_at": "2026-06-11T05:28:06+08:00",
+      "translation_path": "translations/11.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-flash"
     },
     {
       "id": 12,
@@ -208,8 +212,8 @@
       "url": "https://www.ign.com/articles/playstation-plus-game-catalog-for-june-2026-headlined-by-final-fantasy-16-and-kingdom-come-deliverance",
       "publish_time_cn": "2026-06-11 00:32",
       "pub_date": "2026-06-11 00:32",
-      "cover_image": "https://assets-prd.ignimgs.com/2023/10/11/pspremiumthumb-1697040053191.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2023/10/11/pspremiumthumb-1697040053191.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2023/10/11/pspremiumthumb-1697040053191.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2023/10/11/pspremiumthumb-1697040053191.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -218,7 +222,11 @@
         "https://assets-prd.ignimgs.com/2023/10/11/pspremiumthumb-1697040053191.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-11T05:28:08+08:00"
+      "source_fetched_at": "2026-06-11T05:28:08+08:00",
+      "translation_path": "translations/13.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-flash"
     },
     {
       "id": 14,
@@ -230,8 +238,8 @@
       "url": "https://www.ign.com/articles/why-now-is-the-perfect-time-for-a-zelda-ocarina-of-time-remake",
       "publish_time_cn": "2026-06-11 00:15",
       "pub_date": "2026-06-11 00:15",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/06/10/zelda-oot-remake-blogroll-1781102895395.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/10/zelda-oot-remake-blogroll-1781102895395.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/10/zelda-oot-remake-blogroll-1781102895395.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/10/zelda-oot-remake-blogroll-1781102895395.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -240,7 +248,11 @@
         "https://assets-prd.ignimgs.com/2026/06/10/zelda-oot-remake-blogroll-1781102895395.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-11T05:28:08+08:00"
+      "source_fetched_at": "2026-06-11T05:28:08+08:00",
+      "translation_path": "translations/14.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-flash"
     },
     {
       "id": 15,
@@ -755,7 +767,7 @@
       "publish_time_cn": "2026-06-10 19:34",
       "pub_date": "2026-06-10 19:34",
       "cover_image": "https://assets-prd.ignimgs.com/2025/01/24/ac-shadows-stealth-feature-blogroll-1737729547310.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2025/01/24/ac-shadows-stealth-feature-blogroll-1737729547310.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2025/01/24/ac-shadows-stealth-feature-blogroll-1737729547310.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -764,7 +776,13 @@
         "https://assets-prd.ignimgs.com/2025/01/24/ac-shadows-stealth-feature-blogroll-1737729547310.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-10T20:45:00+08:00"
+      "source_fetched_at": "2026-06-10T20:45:00+08:00",
+      "translation_error": "[summary_length] opus_summary targets 70-80 non-space characters and must stay within 60-110, got 141",
+      "translation_failed_at": "2026-06-11T09:06:41.156923+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-flash",
+      "translation_path": "translations/04.json"
     },
     {
       "id": 5,
@@ -772,12 +790,12 @@
       "emoji": "🎮",
       "en_title": "Xbox Boss Says a Mass Audience Can't Afford 'Thousands of Dollars' to Spend on a Next-Gen Console, So Microsoft Must 'Look at New Business Models'",
       "cn_title": "Xbox负责人：下一代主机不能太贵，微软需探索新商业模式",
-      "summary": "Xbox负责人阿莎·夏尔玛表示，当前主机及配件成本持续上涨，未来世代主机价格可能高达数千美元(约合人民币71600元)，普通大众难以承受。微软必须探索“截然不同的商业模式”，包括低价机型、掌机、租赁或订阅制等，以确保更多人能参与主机游戏。",
+      "summary": "Xbox负责人阿莎·夏尔玛表示，未来主机价格可能高达数千美元，普通大众难以承受，微软需探索新商业模式。",
       "url": "https://www.ign.com/articles/xbox-boss-says-a-mass-audience-cant-afford-thousands-of-dollars-to-spend-on-a-next-gen-console-so-microsoft-must-look-at-new-business-models",
       "publish_time_cn": "2026-06-10 18:37",
       "pub_date": "2026-06-10 18:37",
       "cover_image": "https://assets-prd.ignimgs.com/2026/05/07/xbox-1778178511851.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2026/05/07/xbox-1778178511851.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/05/07/xbox-1778178511851.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -786,7 +804,13 @@
         "https://assets-prd.ignimgs.com/2026/05/07/xbox-1778178511851.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-10T20:45:01+08:00"
+      "source_fetched_at": "2026-06-10T20:45:01+08:00",
+      "translation_error": "[summary_length] opus_summary targets 70-80 non-space characters and must stay within 60-110, got 51",
+      "translation_failed_at": "2026-06-11T09:07:12.602771+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-flash",
+      "translation_path": "translations/05.json"
     },
     {
       "id": 6,
