@@ -1134,6 +1134,48 @@
       "total_tokens": 7506,
       "prompt_cache_hit_tokens": 0,
       "prompt_cache_miss_tokens": 4015
+    },
+    {
+      "time_cn": "2026-06-11 17:17:00",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 1,
+      "article_title": "Mario Kart World 'Forgotten,' as Nintendo Switch 2 Launch Title Goes a Year Without Major DLC",
+      "article_url": "https://www.ign.com/articles/mario-kart-world-forgotten-as-nintendo-switch-2-launch-title-goes-a-year-without-major-dlc",
+      "article_date": "2026-06-12",
+      "detail": "",
+      "estimated_cost_usd": 0.00024648,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7792,
+      "completion_tokens": 183,
+      "total_tokens": 7975,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 1264
+    },
+    {
+      "time_cn": "2026-06-11 17:17:05",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 2,
+      "article_title": "24 Jump Street in the Works with Channing Tatum and Jonah Hill",
+      "article_url": "https://www.ign.com/articles/24-jump-street-in-the-works-with-channing-tatum-and-jonah-hill",
+      "article_date": "2026-06-12",
+      "detail": "",
+      "estimated_cost_usd": 0.0002098,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7344,
+      "completion_tokens": 276,
+      "total_tokens": 7620,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 816
     }
   ]
 }

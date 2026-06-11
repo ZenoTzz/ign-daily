@@ -7,46 +7,46 @@
   "changed_dates": [
     "2026-06-12"
   ],
-  "new_target_dates": [],
-  "new_count": 0,
-  "filtered_count": 1,
+  "new_target_dates": [
+    "2026-06-12"
+  ],
+  "new_count": 2,
+  "filtered_count": 0,
   "cleanup_count": 0,
-  "changed_count": 1,
-  "articles": [],
-  "filtered_articles": [
+  "changed_count": 2,
+  "articles": [
     {
-      "title": "Save $77 Off a Brand New Xbox Series X Console",
-      "url": "https://www.ign.com/articles/xbox-series-x-gaming-console-deal-at-walmart",
-      "pubDate_cst": "2026-06-11 09:17",
-      "description": "Down but not out.",
-      "categories": "",
-      "reason": "text:\\bsave \\$\\d",
-      "rss_url": "https://feeds.feedburner.com/ign/all",
-      "filtered_at_cn": "2026-06-11 11:21:30",
-      "status": "filtered"
+      "title": "Mario Kart World 'Forgotten,' as Nintendo Switch 2 Launch Title Goes a Year Without Major DLC",
+      "url": "https://www.ign.com/articles/mario-kart-world-forgotten-as-nintendo-switch-2-launch-title-goes-a-year-without-major-dlc",
+      "pubDate_cst": "2026-06-11 16:13"
+    },
+    {
+      "title": "24 Jump Street in the Works with Channing Tatum and Jonah Hill",
+      "url": "https://www.ign.com/articles/24-jump-street-in-the-works-with-channing-tatum-and-jonah-hill",
+      "pubDate_cst": "2026-06-11 14:40"
     }
   ],
+  "filtered_articles": [],
   "runs": [
     {
       "target_date": "2026-06-12",
-      "new_count": 0,
-      "filtered_count": 1,
-      "changed_count": 1,
-      "next_id": 1,
-      "articles": [],
-      "filtered_articles": [
+      "new_count": 2,
+      "filtered_count": 0,
+      "changed_count": 2,
+      "next_id": 3,
+      "articles": [
         {
-          "title": "Save $77 Off a Brand New Xbox Series X Console",
-          "url": "https://www.ign.com/articles/xbox-series-x-gaming-console-deal-at-walmart",
-          "pubDate_cst": "2026-06-11 09:17",
-          "description": "Down but not out.",
-          "categories": "",
-          "reason": "text:\\bsave \\$\\d",
-          "rss_url": "https://feeds.feedburner.com/ign/all",
-          "filtered_at_cn": "2026-06-11 11:21:30",
-          "status": "filtered"
+          "title": "Mario Kart World 'Forgotten,' as Nintendo Switch 2 Launch Title Goes a Year Without Major DLC",
+          "url": "https://www.ign.com/articles/mario-kart-world-forgotten-as-nintendo-switch-2-launch-title-goes-a-year-without-major-dlc",
+          "pubDate_cst": "2026-06-11 16:13"
+        },
+        {
+          "title": "24 Jump Street in the Works with Channing Tatum and Jonah Hill",
+          "url": "https://www.ign.com/articles/24-jump-street-in-the-works-with-channing-tatum-and-jonah-hill",
+          "pubDate_cst": "2026-06-11 14:40"
         }
-      ]
+      ],
+      "filtered_articles": []
     },
     {
       "target_date": "2026-06-11",
