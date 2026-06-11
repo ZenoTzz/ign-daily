@@ -40,8 +40,8 @@
       "url": "https://www.ign.com/articles/xbox-reportedly-planning-significant-layoffs-budget-cuts-for-marketing-and-more",
       "publish_time_cn": "2026-06-11 07:02",
       "pub_date": "2026-06-11 07:02",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/05/06/screenshot-2026-05-06-162907-1778081413883.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/05/06/screenshot-2026-05-06-162907-1778081413883.png",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/05/06/screenshot-2026-05-06-162907-1778081413883.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/05/06/screenshot-2026-05-06-162907-1778081413883.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -50,7 +50,11 @@
         "https://assets-prd.ignimgs.com/2026/05/06/screenshot-2026-05-06-162907-1778081413883.png"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-11T08:15:40+08:00"
+      "source_fetched_at": "2026-06-11T08:15:40+08:00",
+      "translation_path": "translations/31.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-flash"
     },
     {
       "id": 32,
