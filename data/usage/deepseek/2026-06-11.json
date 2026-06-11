@@ -441,6 +441,69 @@
       "total_tokens": 9211,
       "prompt_cache_hit_tokens": 6528,
       "prompt_cache_miss_tokens": 2556
+    },
+    {
+      "time_cn": "2026-06-11 08:15:47",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 30,
+      "article_title": "Xbox's Project Helix Seems to Be Targeting a Holiday 2027 Release, According to New Memo from CEO Asha Sharma",
+      "article_url": "https://www.ign.com/articles/new-xbox-memo-holiday-2027-project-helix-rumors",
+      "article_date": "2026-06-11",
+      "detail": "",
+      "estimated_cost_usd": 0.00019762,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7495,
+      "completion_tokens": 157,
+      "total_tokens": 7652,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 967
+    },
+    {
+      "time_cn": "2026-06-11 08:15:50",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 31,
+      "article_title": "Xbox Reportedly Planning 'Significant' Layoffs, Budget Cuts for Marketing, and More",
+      "article_url": "https://www.ign.com/articles/xbox-reportedly-planning-significant-layoffs-budget-cuts-for-marketing-and-more",
+      "article_date": "2026-06-11",
+      "detail": "",
+      "estimated_cost_usd": 0.00023668,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7776,
+      "completion_tokens": 156,
+      "total_tokens": 7932,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 1248
+    },
+    {
+      "time_cn": "2026-06-11 08:15:54",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 32,
+      "article_title": "The LEGO Great Deku Tree Set Is Going Out of Stock Everywhere Ahead of Its Retirement",
+      "article_url": "https://www.ign.com/articles/the-lego-great-deku-tree-set-stock-updates-before-retirement",
+      "article_date": "2026-06-11",
+      "detail": "",
+      "estimated_cost_usd": 0.00018362,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7411,
+      "completion_tokens": 149,
+      "total_tokens": 7560,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 883
     }
   ]
 }
