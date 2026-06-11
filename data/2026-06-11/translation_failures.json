@@ -1,0 +1,50 @@
+{
+  "date": "2026-06-11",
+  "items": {
+    "16": {
+      "id": 16,
+      "url": "https://www.ign.com/articles/microsoft-comments-on-yet-another-the-elder-scrolls-6-no-show",
+      "en_title": "Microsoft Comments on Yet Another The Elder Scrolls 6 No-Show",
+      "cn_title": "微软回应《上古卷轴6》再度缺席：时机成熟自会亮相",
+      "model": "deepseek-v4-flash",
+      "status": "needs_manual_review",
+      "failed_at": "2026-06-11T08:22:29.161901+08:00",
+      "reason": "[summary_length] opus_summary targets 70-80 non-space characters and must stay within 60-110, got 114; [dictionary] source contains 'Bethesda', but required dictionary translation 'B社/贝塞斯达' is missing",
+      "audit_issues": [
+        {
+          "type": "summary_length",
+          "detail": "opus_summary targets 70-80 non-space characters and must stay within 60-110, got 114"
+        },
+        {
+          "type": "dictionary",
+          "detail": "source contains 'Bethesda', but required dictionary translation 'B社/贝塞斯达' is missing",
+          "en": "Bethesda",
+          "expected_cn": "B社/贝塞斯达"
+        }
+      ],
+      "fingerprint": "7c839b3c69cc007d7176758d6bda64a0eb8674b9",
+      "translation_path": "translations/16.json",
+      "retry_policy": "manual_only"
+    },
+    "23": {
+      "id": 23,
+      "url": "https://www.ign.com/articles/resident-evil-veronica-is-a-third-person-game-capcom-confirms",
+      "en_title": "Resident Evil Veronica Is a Third-Person Game, Capcom Confirms",
+      "cn_title": "卡普空确认《生化危机 维罗妮卡 重制版》为第三人称",
+      "model": "deepseek-v4-flash",
+      "status": "needs_manual_review",
+      "failed_at": "2026-06-11T08:23:42.910368+08:00",
+      "reason": "[summary_length] opus_summary targets 70-80 non-space characters and must stay within 60-110, got 114",
+      "audit_issues": [
+        {
+          "type": "summary_length",
+          "detail": "opus_summary targets 70-80 non-space characters and must stay within 60-110, got 114"
+        }
+      ],
+      "fingerprint": "459489c5fa5ab0f20f9b41a708b6bf2bd583ac9e",
+      "translation_path": "translations/23.json",
+      "retry_policy": "manual_only"
+    }
+  },
+  "updated_at": "2026-06-11T08:23:42.910368+08:00"
+}

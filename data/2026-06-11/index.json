@@ -283,12 +283,12 @@
       "emoji": "🎮",
       "en_title": "Microsoft Comments on Yet Another The Elder Scrolls 6 No-Show",
       "cn_title": "微软回应《上古卷轴6》再度缺席：时机成熟自会亮相",
-      "summary": "《上古卷轴6》自2018年公布至今已满八年，却在上周Xbox游戏展示会上再度缺席。微软内容主管Matt Booty在采访中透露，已亲赴B社观看游戏实机演示，表示“进展顺利”，并承诺正式展示时意味着游戏即将发售。陶德·霍华德此前多次表示游戏仍需时日，但强调等待是为了品质。",
+      "summary": "《上古卷轴6》自2018年公布至今已满八年，上周Xbox游戏展示会上再度缺席。微软内容主管Matt Booty透露已看过实机演示，表示进展顺利，正式展示时意味着游戏即将发售。陶德·霍华德此前多次强调游戏仍需时日，但等待是为了品质。",
       "url": "https://www.ign.com/articles/microsoft-comments-on-yet-another-the-elder-scrolls-6-no-show",
       "publish_time_cn": "2026-06-10 23:55",
       "pub_date": "2026-06-10 23:55",
       "cover_image": "https://assets1.ignimgs.com/2019/06/17/5-es6-1560804827894.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets1.ignimgs.com/2019/06/17/5-es6-1560804827894.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets1.ignimgs.com/2019/06/17/5-es6-1560804827894.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -304,7 +304,13 @@
           "cn": "Matt Booty",
           "reason": "不知名人物，保留英文"
         }
-      ]
+      ],
+      "translation_error": "[summary_length] opus_summary targets 70-80 non-space characters and must stay within 60-110, got 114; [dictionary] source contains 'Bethesda', but required dictionary translation 'B社/贝塞斯达' is missing",
+      "translation_failed_at": "2026-06-11T08:22:29.161901+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-flash",
+      "translation_path": "translations/16.json"
     },
     {
       "id": 17,
@@ -485,12 +491,12 @@
       "emoji": "🎮",
       "en_title": "Resident Evil Veronica Is a Third-Person Game, Capcom Confirms",
       "cn_title": "卡普空确认《生化危机 维罗妮卡 重制版》为第三人称",
-      "summary": "在夏日游戏节上，卡普空确认《生化危机 维罗妮卡 重制版》将采用第三人称视角。制作人平林良章在问答环节中表示，游戏由《生化危机2》《生化危机4》重制版团队打造，将保留原版标志性元素。故事发生在《生化危机2》三个月后，克莱尔将继续寻找哥哥克里斯，战斗能力将合理进化。游戏预计2027年发售。",
+      "summary": "卡普空确认《生化危机 维罗妮卡 重制版》采用第三人称视角。制作人平林良章表示，游戏由《生化危机2》《生化危机4》重制版团队打造，将保留原版标志性元素。故事发生在《生化危机2》三个月后，克莱尔战斗能力合理进化。游戏预计2027年发售。",
       "url": "https://www.ign.com/articles/resident-evil-veronica-is-a-third-person-game-capcom-confirms",
       "publish_time_cn": "2026-06-10 23:00",
       "pub_date": "2026-06-10 23:00",
       "cover_image": "https://assets-prd.ignimgs.com/2026/06/10/ss-5f574a15cb682397b7a03ff06a09969e65201c9d-1920x1080-1781101673669.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/10/ss-5f574a15cb682397b7a03ff06a09969e65201c9d-1920x1080-1781101673669.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/10/ss-5f574a15cb682397b7a03ff06a09969e65201c9d-1920x1080-1781101673669.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -499,7 +505,13 @@
         "https://assets-prd.ignimgs.com/2026/06/10/ss-5f574a15cb682397b7a03ff06a09969e65201c9d-1920x1080-1781101673669.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-11T05:28:16+08:00"
+      "source_fetched_at": "2026-06-11T05:28:16+08:00",
+      "translation_error": "[summary_length] opus_summary targets 70-80 non-space characters and must stay within 60-110, got 114",
+      "translation_failed_at": "2026-06-11T08:23:42.910368+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-flash",
+      "translation_path": "translations/23.json"
     },
     {
       "id": 24,

@@ -504,6 +504,342 @@
       "total_tokens": 7560,
       "prompt_cache_hit_tokens": 6528,
       "prompt_cache_miss_tokens": 883
+    },
+    {
+      "time_cn": "2026-06-11 08:19:07",
+      "task": "fulltext",
+      "model": "deepseek-v4-flash",
+      "article_id": 4,
+      "article_title": "《刺客信条：影》最终更新下周上线，发售仅一年多",
+      "article_url": "https://www.ign.com/articles/assassins-creed-shadows-final-update-arrives-next-week-just-over-a-year-after-launch",
+      "article_date": "2026-06-11",
+      "detail": "",
+      "estimated_cost_usd": 0.00070344,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8146,
+      "completion_tokens": 1638,
+      "total_tokens": 9784,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 1618
+    },
+    {
+      "time_cn": "2026-06-11 08:19:18",
+      "task": "fulltext_repair",
+      "model": "deepseek-v4-flash",
+      "article_id": 4,
+      "article_title": "《刺客信条：影》最终更新下周上线，发售仅一年多",
+      "article_url": "https://www.ign.com/articles/assassins-creed-shadows-final-update-arrives-next-week-just-over-a-year-after-launch",
+      "article_date": "2026-06-11",
+      "detail": "1 audit issue(s)",
+      "estimated_cost_usd": 0.00075152,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 2534,
+      "completion_tokens": 1417,
+      "total_tokens": 3951,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 2534
+    },
+    {
+      "time_cn": "2026-06-11 08:19:35",
+      "task": "fulltext",
+      "model": "deepseek-v4-flash",
+      "article_id": 11,
+      "article_title": "育碧再关两间工作室，裁员波及380人",
+      "article_url": "https://www.ign.com/articles/ubisoft-closing-2-more-studios-amid-further-cuts-and-job-losses",
+      "article_date": "2026-06-11",
+      "detail": "",
+      "estimated_cost_usd": 0.00065626,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7881,
+      "completion_tokens": 1602,
+      "total_tokens": 9483,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 1353
+    },
+    {
+      "time_cn": "2026-06-11 08:19:49",
+      "task": "fulltext_repair",
+      "model": "deepseek-v4-flash",
+      "article_id": 11,
+      "article_title": "育碧再关两间工作室，裁员波及380人",
+      "article_url": "https://www.ign.com/articles/ubisoft-closing-2-more-studios-amid-further-cuts-and-job-losses",
+      "article_date": "2026-06-11",
+      "detail": "1 audit issue(s)",
+      "estimated_cost_usd": 0.0008666,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 2394,
+      "completion_tokens": 1898,
+      "total_tokens": 4292,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 2394
+    },
+    {
+      "time_cn": "2026-06-11 08:20:07",
+      "task": "fulltext",
+      "model": "deepseek-v4-flash",
+      "article_id": 12,
+      "article_title": "《Inde Navarrette》《Obsession》女主旧日《最后生还者》直播视频爆火，PlayStation官方回应",
+      "article_url": "https://www.ign.com/articles/obsession-breakout-star-inde-navarrette-goes-viral-for-old-streams-of-the-last-of-us-playstation-responds",
+      "article_date": "2026-06-11",
+      "detail": "",
+      "estimated_cost_usd": 0.00086304,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8436,
+      "completion_tokens": 2063,
+      "total_tokens": 10499,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 1908
+    },
+    {
+      "time_cn": "2026-06-11 08:20:20",
+      "task": "fulltext_repair",
+      "model": "deepseek-v4-flash",
+      "article_id": 12,
+      "article_title": "《Inde Navarrette》《Obsession》女主旧日《最后生还者》直播视频爆火，PlayStation官方回应",
+      "article_url": "https://www.ign.com/articles/obsession-breakout-star-inde-navarrette-goes-viral-for-old-streams-of-the-last-of-us-playstation-responds",
+      "article_date": "2026-06-11",
+      "detail": "1 audit issue(s)",
+      "estimated_cost_usd": 0.00101136,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 2872,
+      "completion_tokens": 2176,
+      "total_tokens": 5048,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 2872
+    },
+    {
+      "time_cn": "2026-06-11 08:20:33",
+      "task": "fulltext",
+      "model": "deepseek-v4-flash",
+      "article_id": 13,
+      "article_title": "《PlayStation》《天国：拯救》《最终幻想16》领衔6月PS Plus游戏阵容",
+      "article_url": "https://www.ign.com/articles/playstation-plus-game-catalog-for-june-2026-headlined-by-final-fantasy-16-and-kingdom-come-deliverance",
+      "article_date": "2026-06-11",
+      "detail": "",
+      "estimated_cost_usd": 0.00066256,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8064,
+      "completion_tokens": 1533,
+      "total_tokens": 9597,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 1536
+    },
+    {
+      "time_cn": "2026-06-11 08:20:44",
+      "task": "fulltext_repair",
+      "model": "deepseek-v4-flash",
+      "article_id": 13,
+      "article_title": "《PlayStation》《天国：拯救》《最终幻想16》领衔6月PS Plus游戏阵容",
+      "article_url": "https://www.ign.com/articles/playstation-plus-game-catalog-for-june-2026-headlined-by-final-fantasy-16-and-kingdom-come-deliverance",
+      "article_date": "2026-06-11",
+      "detail": "1 audit issue(s)",
+      "estimated_cost_usd": 0.00084588,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 2422,
+      "completion_tokens": 1810,
+      "total_tokens": 4232,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 2422
+    },
+    {
+      "time_cn": "2026-06-11 08:21:26",
+      "task": "fulltext",
+      "model": "deepseek-v4-flash",
+      "article_id": 14,
+      "article_title": "《塞尔达传说：时之笛》重制版为何选在此时推出",
+      "article_url": "https://www.ign.com/articles/why-now-is-the-perfect-time-for-a-zelda-ocarina-of-time-remake",
+      "article_date": "2026-06-11",
+      "detail": "",
+      "estimated_cost_usd": 0.001922,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 10202,
+      "completion_tokens": 4962,
+      "total_tokens": 15164,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 3674
+    },
+    {
+      "time_cn": "2026-06-11 08:21:58",
+      "task": "fulltext_repair",
+      "model": "deepseek-v4-flash",
+      "article_id": 14,
+      "article_title": "《塞尔达传说：时之笛》重制版为何选在此时推出",
+      "article_url": "https://www.ign.com/articles/why-now-is-the-perfect-time-for-a-zelda-ocarina-of-time-remake",
+      "article_date": "2026-06-11",
+      "detail": "1 audit issue(s)",
+      "estimated_cost_usd": 0.0022981,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 5885,
+      "completion_tokens": 5265,
+      "total_tokens": 11150,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 5885
+    },
+    {
+      "time_cn": "2026-06-11 08:22:14",
+      "task": "fulltext",
+      "model": "deepseek-v4-flash",
+      "article_id": 16,
+      "article_title": "微软回应《上古卷轴6》再度缺席：时机成熟自会亮相",
+      "article_url": "https://www.ign.com/articles/microsoft-comments-on-yet-another-the-elder-scrolls-6-no-show",
+      "article_date": "2026-06-11",
+      "detail": "",
+      "estimated_cost_usd": 0.00082328,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8480,
+      "completion_tokens": 1899,
+      "total_tokens": 10379,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 1952
+    },
+    {
+      "time_cn": "2026-06-11 08:22:28",
+      "task": "fulltext_repair",
+      "model": "deepseek-v4-flash",
+      "article_id": 16,
+      "article_title": "微软回应《上古卷轴6》再度缺席：时机成熟自会亮相",
+      "article_url": "https://www.ign.com/articles/microsoft-comments-on-yet-another-the-elder-scrolls-6-no-show",
+      "article_date": "2026-06-11",
+      "detail": "2 audit issue(s)",
+      "estimated_cost_usd": 0.00100646,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 2795,
+      "completion_tokens": 2197,
+      "total_tokens": 4992,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 2795
+    },
+    {
+      "time_cn": "2026-06-11 08:22:51",
+      "task": "fulltext",
+      "model": "deepseek-v4-flash",
+      "article_id": 18,
+      "article_title": "卡普空揭秘《最终幻想7》蒂法如何加入《街头霸王6》",
+      "article_url": "https://www.ign.com/articles/capcom-explains-how-tifa-from-final-fantasy-7-came-to-be-a-street-fighter-6-dlc-character",
+      "article_date": "2026-06-11",
+      "detail": "",
+      "estimated_cost_usd": 0.00124314,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8867,
+      "completion_tokens": 3205,
+      "total_tokens": 12072,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 2339
+    },
+    {
+      "time_cn": "2026-06-11 08:23:16",
+      "task": "fulltext_repair",
+      "model": "deepseek-v4-flash",
+      "article_id": 18,
+      "article_title": "卡普空揭秘《最终幻想7》蒂法如何加入《街头霸王6》",
+      "article_url": "https://www.ign.com/articles/capcom-explains-how-tifa-from-final-fantasy-7-came-to-be-a-street-fighter-6-dlc-character",
+      "article_date": "2026-06-11",
+      "detail": "1 audit issue(s)",
+      "estimated_cost_usd": 0.00153874,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 4025,
+      "completion_tokens": 3483,
+      "total_tokens": 7508,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 4025
+    },
+    {
+      "time_cn": "2026-06-11 08:23:30",
+      "task": "fulltext",
+      "model": "deepseek-v4-flash",
+      "article_id": 23,
+      "article_title": "卡普空确认《生化危机 维罗妮卡 重制版》为第三人称",
+      "article_url": "https://www.ign.com/articles/resident-evil-veronica-is-a-third-person-game-capcom-confirms",
+      "article_date": "2026-06-11",
+      "detail": "",
+      "estimated_cost_usd": 0.00071758,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8189,
+      "completion_tokens": 1667,
+      "total_tokens": 9856,
+      "prompt_cache_hit_tokens": 6528,
+      "prompt_cache_miss_tokens": 1661
+    },
+    {
+      "time_cn": "2026-06-11 08:23:42",
+      "task": "fulltext_repair",
+      "model": "deepseek-v4-flash",
+      "article_id": 23,
+      "article_title": "卡普空确认《生化危机 维罗妮卡 重制版》为第三人称",
+      "article_url": "https://www.ign.com/articles/resident-evil-veronica-is-a-third-person-game-capcom-confirms",
+      "article_date": "2026-06-11",
+      "detail": "1 audit issue(s)",
+      "estimated_cost_usd": 0.0009639,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 2689,
+      "completion_tokens": 2098,
+      "total_tokens": 4787,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 2689
     }
   ]
 }
