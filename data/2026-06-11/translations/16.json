@@ -82,9 +82,11 @@
   "translator": "api",
   "translator_provider": "openai-compatible",
   "translator_model": "deepseek-v4-flash",
-  "quality_status": "needs_manual_review",
-  "manual_release_required": true,
-  "audit_issues": [
+  "quality_status": "manual_approved",
+  "manual_release_required": false,
+  "manual_approved_at": "2026-06-11T03:09:01.456Z",
+  "manual_approved_reason": "user approved API audit draft",
+  "manual_approved_issues": [
     {
       "type": "summary_length",
       "detail": "opus_summary targets 70-80 non-space characters and must stay within 60-110, got 114"
@@ -95,7 +97,5 @@
       "en": "Bethesda",
       "expected_cn": "B社/贝塞斯达"
     }
-  ],
-  "audit_failed_at": "2026-06-11T08:22:29.161901+08:00",
-  "audit_failure_reason": "[summary_length] opus_summary targets 70-80 non-space characters and must stay within 60-110, got 114; [dictionary] source contains 'Bethesda', but required dictionary translation 'B社/贝塞斯达' is missing"
+  ]
 }
