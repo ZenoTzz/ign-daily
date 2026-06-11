@@ -1,25 +1,6 @@
 {
   "date": "2026-06-11",
   "items": {
-    "4": {
-      "id": 4,
-      "url": "https://www.ign.com/articles/assassins-creed-shadows-final-update-arrives-next-week-just-over-a-year-after-launch",
-      "en_title": "Assassin's Creed Shadows Final Update Arrives Next Week, Just Over a Year After Launch",
-      "cn_title": "《刺客信条：影》最终更新下周上线，发售仅一年多",
-      "model": "deepseek-v4-flash",
-      "status": "needs_manual_review",
-      "failed_at": "2026-06-11T09:06:41.156923+08:00",
-      "reason": "[summary_length] opus_summary targets 70-80 non-space characters and must stay within 60-110, got 141",
-      "audit_issues": [
-        {
-          "type": "summary_length",
-          "detail": "opus_summary targets 70-80 non-space characters and must stay within 60-110, got 141"
-        }
-      ],
-      "fingerprint": "a6c80fd92c34614d84ec2eac244419d034e550d6",
-      "translation_path": "translations/04.json",
-      "retry_policy": "manual_only"
-    },
     "5": {
       "id": 5,
       "url": "https://www.ign.com/articles/xbox-boss-says-a-mass-audience-cant-afford-thousands-of-dollars-to-spend-on-a-next-gen-console-so-microsoft-must-look-at-new-business-models",
@@ -65,5 +46,5 @@
       "retry_policy": "manual_only"
     }
   },
-  "updated_at": "2026-06-11T01:16:21.095Z"
+  "updated_at": "2026-06-11T01:57:40.743Z"
 }
