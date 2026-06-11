@@ -765,7 +765,7 @@
       "publish_time_cn": "2026-06-10 19:34",
       "pub_date": "2026-06-10 19:34",
       "cover_image": "https://assets-prd.ignimgs.com/2025/01/24/ac-shadows-stealth-feature-blogroll-1737729547310.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "needs_review",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2025/01/24/ac-shadows-stealth-feature-blogroll-1737729547310.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2025/01/24/ac-shadows-stealth-feature-blogroll-1737729547310.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -775,8 +775,6 @@
       ],
       "source_status": "cached",
       "source_fetched_at": "2026-06-10T20:45:00+08:00",
-      "translation_error": "[summary_length] opus_summary targets 70-80 non-space characters and must stay within 60-110, got 141",
-      "translation_failed_at": "2026-06-11T09:06:41.156923+08:00",
       "translator": "api",
       "translator_provider": "openai-compatible",
       "translator_model": "deepseek-v4-flash",
