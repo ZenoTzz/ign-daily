@@ -987,6 +987,69 @@
       "total_tokens": 8207,
       "prompt_cache_hit_tokens": 6144,
       "prompt_cache_miss_tokens": 1463
+    },
+    {
+      "time_cn": "2026-06-12 09:15:55",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 24,
+      "article_title": "Jason Momoa Won't Make a Lobo Movie Unless It's R-Rated",
+      "article_url": "https://www.ign.com/articles/jason-momoa-wont-make-a-lobo-movie-unless-its-r-rated",
+      "article_date": "2026-06-12",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00017926,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 6933,
+      "completion_tokens": 247,
+      "total_tokens": 7180,
+      "prompt_cache_hit_tokens": 6272,
+      "prompt_cache_miss_tokens": 661
+    },
+    {
+      "time_cn": "2026-06-12 09:16:01",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 25,
+      "article_title": "X-Men Star Tyler Mane Diagnosed With Rare Form of Breast Cancer",
+      "article_url": "https://www.ign.com/articles/x-men-star-tyler-mane-diagnosed-with-rare-form-of-breast-cancer",
+      "article_date": "2026-06-12",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00017954,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 6883,
+      "completion_tokens": 273,
+      "total_tokens": 7156,
+      "prompt_cache_hit_tokens": 6272,
+      "prompt_cache_miss_tokens": 611
+    },
+    {
+      "time_cn": "2026-06-12 09:16:17",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 26,
+      "article_title": "The Last of Us Season 3 Casts Peter Sarsgaard as an Original Character, Unseen in the Games",
+      "article_url": "https://www.ign.com/articles/the-last-of-us-season-3-casts-peter-sarsgaard-as-an-original-character-unseen-in-the-games",
+      "article_date": "2026-06-12",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00040746,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 6965,
+      "completion_tokens": 1046,
+      "total_tokens": 8011,
+      "prompt_cache_hit_tokens": 6272,
+      "prompt_cache_miss_tokens": 693
     }
   ]
 }
