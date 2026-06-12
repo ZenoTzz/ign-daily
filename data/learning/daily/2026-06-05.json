@@ -1,11 +1,546 @@
 {
   "date": "2026-06-05",
-  "model": "deepseek-v4-flash",
-  "source_hash": "edd5b3cb9b930cd2cb90f0e5f31a78e67205f32b",
-  "signal_count": 0,
-  "candidate_count": 0,
-  "signals": [],
-  "candidates": [],
-  "notes": [],
-  "updated_at": "2026-06-05T05:07:48+08:00"
+  "model": "codex",
+  "source_hash": "6b841e29fba800e52364e9c6c66bafc88b5d23a0",
+  "signal_count": 9,
+  "candidate_count": 5,
+  "signals": [
+    {
+      "type": "user_polish",
+      "date": "2026-06-05",
+      "article_id": 1,
+      "url": "https://www.ign.com/articles/io-interactive-wont-self-publish-future-james-bond-games-amazon-will-have-more-control",
+      "en_title": "IO Interactive Won't Self-Publish Future James Bond Games; Amazon Will Have More Control",
+      "cn_title": "《詹姆斯·邦德》《IO Interactive》《007初露锋芒》续作发行权易主，亚马逊将掌控更多话语权",
+      "edits": [
+        {
+          "field": "title",
+          "before": "《詹姆斯·邦德》《IO Interactive》《007初露锋芒》续作发行权易主，亚马逊将掌控更多话语权",
+          "after": "《007 初露锋芒》续作发行权易主，亚马逊将掌控更多话语权"
+        },
+        {
+          "field": "paragraph_1",
+          "before": "《007初露锋芒》的续作将由亚马逊和米高梅发行，而非IO Interactive。在接受Polygon采访时，亚马逊游戏工作室总经理Jeff Gattis确认，未来《詹姆斯·邦德》游戏将由亚马逊游戏工作室负责发行。",
+          "after": "《007 初露锋芒》的续作将由亚马逊和米高梅发行，而非IO Interactive。在接受Polygon采访时，亚马逊游戏工作室总经理Jeff Gattis确认，未来的詹姆斯·邦德游戏将由亚马逊游戏工作室负责发行。"
+        },
+        {
+          "field": "paragraph_2",
+          "before": "「我们并没有制作《初露锋芒》，」Gattis解释道，「但我们确实拥有其部分权益，因为我们现在拥有该IP，不过这笔IP收购是在IO的《初露锋芒》交易完成后才发生的。」",
+          "after": "「我们并没有制作《007 初露锋芒》，」Gattis解释道，「但我们确实拥有其部分权益，因为我们现在拥有该IP，不过这笔IP收购是在和IO的《007 初露锋芒》交易完成后才发生的。」"
+        },
+        {
+          "field": "paragraph_3",
+          "before": "Gattis所指的交易，正是允许IO Interactive自行发行《007初露锋芒》的那份协议，类似于《杀手3》的模式。IO Interactive签约制作邦德游戏时，该系列还由米高梅和EON Productions（数十年来管理詹姆斯·邦德品牌的制片公司）掌控。然而，亚马逊于2021年（游戏公布一年后）收购了米高梅，并最终在2025年完全掌握了邦德的创意控制权。",
+          "after": "Gattis所指的交易，正是允许IO Interactive自行发行《007 初露锋芒》的那份协议，类似于《杀手3》的模式。IO Interactive签约制作邦德游戏时，该系列还由米高梅和EON Productions（数十年来管理詹姆斯·邦德品牌的制片公司）掌控。然而，亚马逊于2021年（游戏公布一年后）收购了米高梅，并最终在2025年完全掌握了邦德的创意控制权。"
+        },
+        {
+          "field": "paragraph_4",
+          "before": "亚马逊和米高梅在《007初露锋芒》上仍有合作，以确保游戏符合品牌预期，但听起来亚马逊未来可能会拥有更多控制权。据Gattis称，续作将「由米高梅完成，理论上，也由亚马逊游戏工作室完成。」",
+          "after": "亚马逊和米高梅在《007 初露锋芒》上仍有合作，以确保游戏符合品牌预期，但听起来亚马逊未来可能会拥有更多控制权。据Gattis称，续作将「由米高梅完成，理论上，也由亚马逊游戏工作室完成。」"
+        },
+        {
+          "field": "paragraph_5",
+          "before": "值得注意的是，亚马逊游戏工作室是亚马逊的发行部门。例如，AGS正在发行接下来的两款《古墓丽影》作品。因此，IO Interactive很可能会继续开发未来的邦德游戏。",
+          "after": "值得注意的是，亚马逊游戏工作室是亚马逊的发行部门。但亚马逊游戏工作室正在开发发行接下来的两款《古墓丽影》作品。因此，IO Interactive很可能会继续开发未来的邦德游戏。"
+        },
+        {
+          "field": "paragraph_8",
+          "before": "续作似乎几乎板上钉钉，因为《007初露锋芒》在首24小时内售出了150万份，且IO Interactive在游戏结尾通过一张醒目的标题卡明确表达了推出续作的意图，上面写着「詹姆斯·邦德将归来」。IO Interactive此前也曾表示希望制作一个007游戏三部曲。",
+          "after": "续作似乎几乎板上钉钉，因为《007 初露锋芒》在首日内售出了150万份，且IO Interactive在游戏结尾通过一张醒目的标题卡明确表达了推出续作的意图，上面写着「詹姆斯·邦德将归来」。IO Interactive此前也曾表示希望制作一个007游戏三部曲。"
+        },
+        {
+          "field": "paragraph_9",
+          "before": "IGN的Luke Reilly也在评测中给《007初露锋芒》打出了9/10的高分，称其「痴迷于以前所未有的方式将邦德幻想变为现实」，并认为「《007初露锋芒》是我玩过的最好的邦德游戏」。",
+          "after": "IGN的Luke Reilly也在评测中给《007 初露锋芒》打出了9/10的高分，称其「痴迷于以前所未有的方式将邦德幻想变为现实」，并认为「《007 初露锋芒》是我玩过的最好的邦德游戏」。"
+        }
+      ]
+    },
+    {
+      "type": "user_polish",
+      "date": "2026-06-05",
+      "article_id": 2,
+      "url": "https://www.ign.com/articles/you-can-now-fight-take-two-ceo-strauss-zelnick-in-wwe-2k26",
+      "en_title": "You Can Now Fight Take-Two CEO Strauss Zelnick in WWE 2K26",
+      "cn_title": "《WWE 2K26》可操控Take-Two CEO",
+      "edits": [
+        {
+          "field": "subtitle",
+          "before": "CEO亲自下场",
+          "after": "CEO正在热身"
+        },
+        {
+          "field": "paragraph_1",
+          "before": "如果你曾想和游戏行业CEO打一架，现在机会来了。Take-Two Interactive CEO Strauss Zelnick现已作为可玩角色加入《WWE 2K26》，你可以操控他，也可以亲自与他战斗。官方并未正式宣布他的加入，他只是被悄悄添加到了今天的新更新中。这位68岁的游戏高管游戏内评分为77，这意味着他可能不会自己夺冠，但据报道，Zelnick在现实生活中非常健壮。",
+          "after": "如果你曾想和游戏行业CEO打一架，现在机会来了。Take-Two Interactive CEO Strauss Zelnick现已作为可玩角色加入《WWE 2K26》，你可以操控他，也可以亲自与他战斗。官方并未正式宣布他的加入，他只是被悄悄添加到了新更新中。这位68岁的游戏高管游戏内评分为77，这意味着他可能不会自己夺冠，但据报道，Zelnick在现实生活中非常健壮。"
+        },
+        {
+          "field": "paragraph_2",
+          "before": "这位CEO声称他每周锻炼10到12次（对不擅长数学的人来说，平均几乎每天两次），并经营着自己的私人健身俱乐部「The Program」。他甚至写了一本健康书籍《Becoming Ageless: The Four Secrets To Looking and Feeling Younger Than Ever》。总而言之，尽管他快70岁了，但身材相当健硕，在WWE擂台上可能比普通人表现更好。",
+          "after": "这位CEO声称他每周锻炼10到12次（对不擅长数学的人来说，平均几乎每天两次），并经营着自己的私人健身俱乐部「The Program」。他甚至写了一本健康书籍《永葆青春：让你看起来与感觉都比以往更年轻的四大秘诀（Becoming Ageless: The Four Secrets To Looking and Feeling Younger Than Ever）》。总而言之，尽管他快70岁了，但身材相当健硕，在WWE擂台上可能比普通人表现更好。"
+        }
+      ]
+    },
+    {
+      "type": "user_polish",
+      "date": "2026-06-05",
+      "article_id": 9,
+      "url": "https://www.ign.com/articles/playstation-promises-many-more-stories-to-tell-with-kratos-in-future-after-god-of-war-laufey",
+      "en_title": "PlayStation Promises 'Many More Stories to Tell' With Kratos in Future, After God of War Laufey",
+      "cn_title": "《战神》《劳菲》之后，PlayStation承诺奎托斯还有更多故事",
+      "edits": [
+        {
+          "field": "title",
+          "before": "《战神》《劳菲》之后，PlayStation承诺奎托斯还有更多故事",
+          "after": "《战神：劳菲》之后，PlayStation承诺奎托斯还有更多故事"
+        },
+        {
+          "field": "paragraph_1",
+          "before": "《战神》开发商圣莫妮卡工作室在公布了以劳菲为主角的新作《战神：劳菲》后，讨论了奎托斯作为系列旗舰角色未来的发展。",
+          "after": "《战神》开发商圣莫尼卡工作室在公布了以劳菲为主角的新作《战神：劳菲》后，讨论了奎托斯作为系列旗舰角色未来的发展。"
+        },
+        {
+          "field": "paragraph_2",
+          "before": "在PlayStation YouTube频道发布的一段采访中，圣莫妮卡工作室创意总监Cory Barlog表示「永远会有奎托斯游戏」——这一立场随后得到了工作室官方社交媒体账号的呼应，称他们「还有更多关于他的故事要讲」。",
+          "after": "在PlayStation YouTube频道发布的一段采访中，圣莫尼卡工作室创意总监Cory Barlog表示「永远会有奎托斯游戏」——这一立场随后得到了工作室官方社交媒体账号的呼应，称他们「还有更多关于他的故事要讲」。"
+        },
+        {
+          "field": "paragraph_3",
+          "before": "《战神：劳菲》的早期反响褒贬不一，部分玩家称赞游戏的战斗和画面，而另一些则批评劳菲开场部分的玩法过于简单——当然，还有玩家不满人气角色奎托斯未能占据中心舞台。（如需全面了解，我们有一篇关于劳菲本人的介绍文章，可了解更多她的故事。）",
+          "after": "《战神：劳菲》的早期反响褒贬不一，部分玩家称赞游戏的战斗和画面，而另一些则批评劳菲开场部分的玩法过于简单——当然，还有玩家不满人气角色奎托斯未能占据中心舞台。"
+        },
+        {
+          "field": "paragraph_6",
+          "before": "我们对《战神：劳菲》的首次一瞥，来自本周PlayStation State of Play展示会末尾播出的20分钟实机片段，开场是奎托斯和阿特柔斯焚烧劳菲的尸体——正如2018年《战神》中所见。随后奎托斯很快再次出现，在劳菲短暂被囚禁时帮助了她。目前尚不清楚奎托斯是否会在《劳菲》的演职员表滚动前再次登场，或者这些短暂的露面就是全部，因为他随后要忙于《战神：诸神黄昏》的事件。",
+          "after": "我们对《战神：劳菲》的首次一瞥，来自本周PlayStation State of Play展示会末尾播出的20分钟实机片段，开场是奎托斯和阿特柔斯焚烧劳菲的尸体——正如2018年《战神》中所见。随后奎托斯很快再次出现，在劳菲短暂被囚禁时帮助了她。目前尚不清楚奎托斯是否会在《战神：劳菲》中再次登场，或者这些短暂的露面就是全部，因为他随后要忙于《战神：诸神黄昏》的事件。"
+        },
+        {
+          "field": "paragraph_7",
+          "before": "「奎托斯就是战神——我们还有更多关于他的故事要讲，」圣莫妮卡工作室官方X/Twitter账号昨晚发文写道。「目前，我们很高兴能带领玩家与劳菲一起踏上众神来世之旅，希望你们能一同前往！」",
+          "after": "「奎托斯就是战神——我们还有更多关于他的故事要讲，」圣莫尼卡工作室官方X账号昨晚发文写道。「目前，我们很高兴能带领玩家与劳菲一起踏上众神来世之旅，希望你们能一同前往！」"
+        },
+        {
+          "field": "paragraph_8",
+          "before": "当然，圣莫妮卡工作室还公布了《战神》希腊三部曲重制版——这无疑会让奎托斯重回聚光灯下。初代《战神》于2005年在PS2上发售，续作两年后推出，而PS3平台的《战神3》则于2010年问世。《战神三部曲重制版》尚未公布发售日期，目前仍处于「早期开发阶段」。",
+          "after": "当然，圣莫尼卡工作室还公布了《战神》希腊三部曲重制版——这无疑会让奎托斯重回聚光灯下。初代《战神》于2005年在PS2上发售，续作两年后推出，而PS3平台的《战神3》则于2010年问世。《战神三部曲 重制版》尚未公布发售日期，目前仍处于「早期开发阶段」"
+        }
+      ]
+    },
+    {
+      "type": "user_polish",
+      "date": "2026-06-05",
+      "article_id": 12,
+      "url": "https://www.ign.com/articles/what-to-expect-from-summer-game-fest-2026",
+      "en_title": "What to Expect from Summer Game Fest 2026",
+      "cn_title": "夏日游戏节2026前瞻：哪些惊喜值得期待",
+      "edits": [
+        {
+          "field": "subtitle",
+          "before": "猜猜猜，猜个痛快",
+          "after": "猜个痛快"
+        },
+        {
+          "field": "paragraph_1",
+          "before": "又到了一年中最适合天马行空猜测Geoff Keighley的夏日游戏节（Summer Game Fest）会带来什么的时候了。除了少数已预告的游戏和工作室，我们几乎一无所知，这给了我充足的想象空间去憧憬展会可能准备的惊喜。活动将于6月5日下午2点（太平洋时间）/下午5点（东部时间）/晚上10点（英国夏令时）举行，观看直播方式在此。话不多说，直接进入正题，看看我们期待些什么。",
+          "after": "又到了一年中最适合天马行空猜测Geoff Keighley的夏日游戏节会带来什么的时候了。除了少数已预告的游戏和工作室，我们几乎一无所知，这给了我充足的想象空间去憧憬展会可能准备的惊喜。活动将于北京时间6月6日凌晨5点举行。话不多说，直接进入正题，看看我们期待些什么。"
+        },
+        {
+          "field": "paragraph_2",
+          "before": "官方承诺将首次公开展示《星球大战：零公司》(星球大战 零号连队)，这是一款受《XCOM》启发的遥远星系题材游戏。由Bit Reactor和Respawn Entertainment联合开发的回合制战术游戏，玩家将指挥一支雇佣兵小队，在克隆人战争的阴影中作战。算我一个。",
+          "after": "我们已知的内容"
+        },
+        {
+          "field": "paragraph_3",
+          "before": "《激战》开发商ArenaNet已确认出席。这是否意味着《激战3》终于要揭晓了？《激战2》本体早在2012年发售，此后这款免费MMORPG系列一直通过扩展包和更新维持运营。夏日游戏节很可能成为系列下一部正统续作亮相的时机。或者，也许只是个新扩展包。谁知道呢。",
+          "after": "官方承诺将首次公开展示《星球大战 零号连队》，这是一款受《XCOM》启发的星系题材游戏。由Bit Reactor和Respawn Entertainment联合开发的回合制战术游戏，玩家将指挥一支雇佣兵小队，在克隆人战争的阴影中作战。"
+        },
+        {
+          "field": "paragraph_4",
+          "before": "《血之信使》(归唐)是那种如果再次惊艳亮相就可能爆红的游戏。故事设定在唐朝，融合了潜行与近战格斗，玩家扮演一名信使和他的儿子，踏上穿越亚洲的危险线性旅程。这款电影化动作冒险游戏出自中国工作室24 Entertainment临安之手，去年夏天放出的首个预告片令人惊艳，我很期待在展会上看到更多实机内容。",
+          "after": "《激战》开发商ArenaNet已确认出席。这是否意味着《激战3》终于要揭晓了？《激战2》本体早在2012年发售，此后这款免费MMORPG系列一直通过扩展包和更新维持运营。夏日游戏节很可能成为系列下一部正统续作亮相的时机。或者，也许只是个新扩展包。谁知道呢。"
+        },
+        {
+          "field": "paragraph_5",
+          "before": "本周早些时候预告的新驾驶游戏《离合器》(Clutch)也将亮相。由前Playground Games开发者组成的新工作室Maverick Games打造，希望这款开放世界叙事赛车游戏能继承《极限竞速：地平线》的冲击力。",
+          "after": "《归唐》是那种如果再次惊艳亮相就可能爆红的游戏。故事设定在唐朝，融合了潜行与近战格斗，玩家扮演一名信使和他的儿子，踏上穿越亚洲的危险旅程。去年夏天放出的首个预告片令人惊艳，很期待在展会上看到更多实机内容。"
+        },
+        {
+          "field": "paragraph_6",
+          "before": "最后，Epic Games将展示《堡垒之夜》新赛季「奔跑者」(Runners)的全新预告片，由明星Ben Starr揭晓。",
+          "after": "本周早些时候预告的新驾驶游戏《Clutch》也将亮相。由前Playground Games开发者组成的新工作室Maverick Games打造，希望这款开放世界叙事赛车游戏能继承《极限竞速：地平线》的冲击力。"
+        },
+        {
+          "field": "paragraph_7",
+          "before": "现在进入有趣的部分。首先，我们来回答每次Geoff Keighley展会时大家最关心的问题：小岛秀夫会亮相吗？我不知道，但这次我倾向于「会」。他更可能带来Xbox独占恐怖游戏《OD: Knock》的新画面，而不是即将推出的PlayStation潜行动作游戏《Physint》，但老实说，两者我都接受。",
+          "after": "最后，Epic Games将展示《堡垒之夜》新赛季「奔跑者(Runners)」的全新预告片，由明星Ben Starr揭晓。"
+        }
+      ]
+    },
+    {
+      "type": "user_polish",
+      "date": "2026-06-05",
+      "article_id": 17,
+      "url": "https://www.ign.com/articles/elden-ring-tarnished-edition-has-a-nintendo-switch-2-release-date-additional-content-also-available-to-buy-on-other-platforms",
+      "en_title": "Elden Ring Tarnished Edition Has a Nintendo Switch 2 Release Date, Additional Content Also Available to Buy on Other Platforms",
+      "cn_title": "《任天堂》《Nintendo Switch 2》《艾尔登法环》褪色者版8月28日登陆Switch 2",
+      "edits": [
+        {
+          "field": "title",
+          "before": "《任天堂》《Nintendo Switch 2》《艾尔登法环》褪色者版8月28日登陆Switch 2",
+          "after": "Switch 2版《艾尔登法环 褪色版》将于8月28日发售"
+        },
+        {
+          "field": "subtitle",
+          "before": "褪色者归来",
+          "after": "其它平台将以DLC形式登陆"
+        },
+        {
+          "field": "paragraph_1",
+          "before": "From Software宣布，《艾尔登法环》褪色者版将于2026年8月28日登陆Nintendo Switch 2。褪色者版中包含的额外内容也将在同日通过褪色者包DLC在其他平台发售。",
+          "after": "From Software宣布，《艾尔登法环 褪色版》将于2026年8月28日登陆Nintendo Switch 2。褪色版中包含的额外内容也将在同日通过褪色者包DLC在其他平台发售。"
+        },
+        {
+          "field": "paragraph_2",
+          "before": "79.99美元(约合人民币572元)的褪色者版包含游戏本体、《黄金树之影》DLC、新武器、以及为玩家忠实的灵马托雷特更换护甲皮肤的功能。此外还包含两个新初始职业。",
+          "after": "Switch 2版《艾尔登法环 褪色版》定价79.99美元（约合541.84元人民币），日区Nintendo Store定价9020日元（约合382.04元人民币）。包含游戏本体、《黄金树之影》DLC、新武器、以及为玩家忠实的灵马托雷特更换皮肤的功能。此外还包含两个新初始职业。"
+        },
+        {
+          "field": "paragraph_3",
+          "before": "发行商万代南梦宫表示，新内容也将登陆PS4、PS5、Xbox One、Xbox Series X|S以及PC（Steam）平台。官方尚未公布褪色者包DLC的售价，但多数人预计为5美元(约合人民币36元)。",
+          "after": "发行商万代南梦宫表示，新内容也将登陆PS4、PS5、Xbox One、Xbox Series以及PC（Steam）平台，玩家可以单独购买褪色者包的DLC，售价为550日元（约合23.30元人民币）"
+        },
+        {
+          "field": "paragraph_4",
+          "before": "From Software这款2022年年度最佳幻想RPG的Switch 2版原计划2025年发售，后被推迟至今年，以「留出时间进行性能调整」。多数人认为这意味着重点解决那些在预发布状态下体验过Switch 2版褪色者版的玩家所提出的技术问题。",
+          "after": "From Software这款2022年年度最佳游戏的Switch 2版原计划2025年发售，后被推迟至今年，以「留出时间进行性能调整」。多数人认为这意味着重点解决那些在预发布状态下体验过Switch 2版《艾尔登法环 褪色版》的玩家所提出的技术问题。"
+        },
+        {
+          "field": "paragraph_7",
+          "before": "《艾尔登法环》登陆Switch 2标志着该游戏已覆盖所有可能平台，本作全球销量已高达3000万份。随着多人衍生作《艾尔登法环：黑夜君临》发售已超过一年，粉丝们好奇From Software在今年Switch 2独占作品《The Duskbloods》之后还有什么计划。《艾尔登法环2》是否在开发中？2024年12月，《艾尔登法环》总监兼From Software社长宫崎英高表示，开发商暂未考虑制作《艾尔登法环2》，但不会排除未来可能性。如果不出续作，还有一部《艾尔登法环》电影正在制作中。",
+          "after": "《艾尔登法环》登陆Switch 2标志着该游戏已覆盖所有可能平台，本作全球销量已高达3000万份。随着多人衍生作《艾尔登法环：黑夜君临》发售已超过一年，粉丝们好奇From Software在今年Switch 2独占作品《The Duskbloods》之后还有什么计划。《艾尔登法环2》是否在开发中？2024年12月，《艾尔登法环》总监兼From Software社长宫崎英高表示，暂未考虑制作《艾尔登法环2》，但不会排除未来可能性。如果不出续作，还有一部《艾尔登法环》电影正在制作中。"
+        }
+      ]
+    },
+    {
+      "type": "user_polish",
+      "date": "2026-06-05",
+      "article_id": 26,
+      "url": "https://www.ign.com/articles/helldivers-2-dev-confirms-roguelite-systems-called-planet-warfronts-as-part-of-big-changes-coming-to-the-game",
+      "en_title": "Helldivers 2 Dev Confirms Roguelite Systems, Called Planet Warfronts, as Part of Big Changes Coming to the Game",
+      "cn_title": "《绝地潜兵2》确认将加入Roguelite星球前线系统",
+      "edits": [
+        {
+          "field": "title",
+          "before": "《绝地潜兵2》确认将加入Roguelite星球前线系统",
+          "after": "《绝地潜兵2》公布Roguelite系统新信息"
+        },
+        {
+          "field": "subtitle",
+          "before": "星球大战新玩法",
+          "after": "还有一些工作要做"
+        },
+        {
+          "field": "paragraph_1",
+          "before": "《绝地潜兵2》开发商Arrowhead公布了游戏即将迎来的一些重大改动，包括名为「星球前线」的Roguelite系统。",
+          "after": "《绝地潜兵2》开发商Arrowhead公布了游戏即将迎来的一些重大改动，包括名为「星球战线」的Roguelite系统。"
+        },
+        {
+          "field": "paragraph_2",
+          "before": "在Steam上发布的一篇关于《绝地潜兵2》社区和玩家进度未来的帖子中，游戏总监Mikael Eriksson确认，「星球前线」正是Arrowhead首席创意官兼《绝地潜兵2》创意总监Johan Pilestedt此前提到的Roguelite系统。",
+          "after": "在Steam上发布的一篇关于《绝地潜兵2》社区和玩家进度未来的帖子中，游戏总监Mikael Eriksson确认，「星球战线」正是Arrowhead首席创意官兼《绝地潜兵2》创意总监Johan Pilestedt此前提到的Roguelite系统。"
+        },
+        {
+          "field": "paragraph_3",
+          "before": "「在游戏发售前，我们曾尝试过星球上的动态前线系统，玩家需要在星球层面做出战略性社区决策才能解放该星球，」Eriksson解释道。「虽然这个想法很有前景，但我们意识到当时没有足够的内容来充分实现它。现在我们觉得已经添加了足够的内容，可以实现在『星球前线』上的愿景，这将是我们在银河战争中努力的下一个重大目标。当你看到Johan谈论尝试Roguelite系统时，他指的就是这个。」",
+          "after": "「在游戏发售前，我们曾尝试过星球上的动态战线系统，玩家需要在星球层面做出战略性社区决策才能解放该星球，」Eriksson解释道。「虽然这个想法很有前景，但我们意识到当时没有足够的内容来充分实现它。现在我们觉得已经添加了足够的内容，可以实现在‘星球战线’上的愿景，这将是我们在银河战争中努力的下一个重大目标。当你看到Johan谈论尝试Roguelite系统时，他指的就是这个。」"
+        },
+        {
+          "field": "paragraph_4",
+          "before": "当「星球前线」上线后，任务将按不同类别分组：",
+          "after": "当「星球战线」上线后，任务将按不同类别分组："
+        },
+        {
+          "field": "paragraph_8",
+          "before": "但这还不是全部。《绝地潜兵2》本月将迎来银河战争战役。战役是主要命令的「下一次进化」，将持续1-3周。「我们的目标是让玩家始终清楚当前进行的是哪个战役、进展如何、结果如何以及利害关系是什么，」Eriksson说道，他承认此前玩家与银河战争的互动并非总是如此清晰。",
+          "after": "但这还不是全部。《绝地潜兵2》本月将迎来星系战争战役。战役是「主要指令」的「下一次进化」，将持续1-3周。「我们的目标是让玩家始终清楚当前进行的是哪个战役、进展如何、结果如何以及利害关系是什么，」Eriksson说道，他承认此前玩家与银河战争的互动并非总是如此清晰。"
+        },
+        {
+          "field": "paragraph_9",
+          "before": "战役的引入意味着只要满足条件，至少会有一个战役奖励。「我们希望让这些奖励变得特别，因为我们也认为玩家应该获得不仅仅是奖章，」Eriksson解释道。有些奖励会改变游戏玩法，有些则是酷炫的物品。「这也意味着玩家在战争债券之外还有更多目标可以追求，」Eriksson透露。「祈祷J.O.E.L慷慨解囊吧，你们要解锁的第一个奖励是一辆新的FRV！」",
+          "after": "战役的引入意味着只要满足条件，至少会有一个战役奖励。「我们希望让这些奖励变得特别，因为我们也认为玩家应该获得不仅仅是奖章，」Eriksson解释道。有些奖励会改变游戏玩法，有些则是酷炫的物品。「这也意味着玩家在战争债券之外还有更多目标可以追求，」Eriksson透露。「祈祷J.O.E.L慷慨解囊吧，你们要解锁的第一个奖励是一辆新的新型快速侦查载具（FRV）！」"
+        }
+      ]
+    },
+    {
+      "type": "user_polish",
+      "date": "2026-06-05",
+      "article_id": 28,
+      "url": "https://www.ign.com/articles/007-first-light-estimated-to-have-sold-22-million-copies-generating-150-million-in-revenue",
+      "en_title": "007 First Light Estimated to Have Sold 2.2 Million Copies, Generating $150 Million in Revenue",
+      "cn_title": "《007初露锋芒》销量220万份，收入1.5亿美元(约合人民币10.7亿元)",
+      "edits": [
+        {
+          "field": "title",
+          "before": "《007初露锋芒》销量220万份，收入1.5亿美元(约合人民币10.7亿元)",
+          "after": "《007 初露锋芒》估计销量220万份，收入超1.5亿美元"
+        },
+        {
+          "field": "subtitle",
+          "before": "邦德首战告捷",
+          "after": "赚钱了出下一部"
+        },
+        {
+          "field": "paragraph_1",
+          "before": "据估计，《007初露锋芒》已售出220万份，创收1.5亿美元(约合人民币10.7亿元)。",
+          "after": "据估计，《007 初露锋芒》已售出220万份，创收1.5亿美元（约合人民币10.7亿元）。"
+        },
+        {
+          "field": "paragraph_3",
+          "before": "我们掌握的唯一官方销售数据来自开发商IO Interactive，该公司表示《007初露锋芒》已成为其史上销售最快的游戏，首24小时售出150万份。这意味着它的销售速度超过了任何一款《杀手》游戏。这一亮眼销售里程碑是在没有任天堂Switch 2版本助力的情况下达成的，该版本将于今年夏季推出。",
+          "after": "我们掌握的唯一官方销售数据来自开发商IO Interactive，该公司表示《007 初露锋芒》已成为其史上销售最快的游戏，首24小时售出150万份。这意味着它的销售速度超过了任何一款《杀手》游戏。这一亮眼销售里程碑是在没有任天堂Switch 2版本助力的情况下达成的，该版本将于今年夏季推出。"
+        },
+        {
+          "field": "paragraph_4",
+          "before": "这款詹姆斯·邦德冒险游戏也是IOI有史以来评分最高的作品，Metacritic评分87。IGN的《007初露锋芒》评测给出了9/10的高分。我们评价道：「这款游戏显然痴迷于以前所未有的方式将邦德幻想变为现实，《007初露锋芒》是我玩过的最好的邦德游戏。」",
+          "after": "这款詹姆斯·邦德冒险游戏也是IOI有史以来评分最高的作品，Metacritic评分87。IGN的《007 初露锋芒》评测给出了9/10的高分。我们评价道：「这款游戏显然痴迷于以前所未有的方式将邦德幻想变为现实，《007 初露锋芒》是我玩过的最好的邦德游戏。」"
+        },
+        {
+          "field": "paragraph_5",
+          "before": "因此，詹姆斯·邦德开局强劲，但游戏距离IOI回本似乎还有一段路要走。据丹麦广播公司报道，《007初露锋芒》的预算高达13亿丹麦克朗（略高于2.02亿美元(约合人民币14亿元)）。丹麦TV 2称，这使得《007初露锋芒》成为该国历史上最昂贵的娱乐产品。IGN联系IOI时，对方未就报道中的预算发表评论。",
+          "after": "因此，詹姆斯·邦德开局强劲，但游戏距离IOI回本似乎还有一段路要走。据丹麦广播公司报道，《007 初露锋芒》的预算高达13亿丹麦克朗（约合人民币14亿元）。丹麦TV 2称，这使得《007 初露锋芒》成为该国历史上最昂贵的娱乐产品。IGN联系IOI时，对方未就报道中的预算发表评论。"
+        },
+        {
+          "field": "paragraph_6",
+          "before": "令《007初露锋芒》能否取得商业成功这一问题更加复杂的是，亚马逊游戏工作室在该游戏中拥有权益，尽管亚马逊是在IOI达成《初露锋芒》交易之后才收购了詹姆斯·邦德IP。事实上，亚马逊游戏工作室已表示将发行所有未来的詹姆斯·邦德游戏，而IOI自行发行了《007初露锋芒》。显然，IOI希望取得足够成功，以便通过续作延续《007初露锋芒》的故事。事实上，该开发商已表示希望制作一个詹姆斯·邦德游戏三部曲。",
+          "after": "令《007 初露锋芒》能否取得商业成功这一问题更加复杂的是，亚马逊游戏工作室在该游戏中拥有权益，尽管亚马逊是在IOI达成《初露锋芒》交易之后才收购了詹姆斯·邦德IP。事实上，亚马逊游戏工作室已表示将发行所有未来的詹姆斯·邦德游戏，而IOI自行发行了《007 初露锋芒》。显然，IOI希望取得足够成功，以便通过续作延续《007 初露锋芒》的故事。事实上，该开发商已表示希望制作一个詹姆斯·邦德游戏三部曲。"
+        },
+        {
+          "field": "paragraph_7",
+          "before": "IGN的《007初露锋芒》评测给出了9/10的高分。我们评价道：「这款游戏显然痴迷于以前所未有的方式将邦德幻想变为现实，《007初露锋芒》是我玩过的最好的邦德游戏。」",
+          "after": "IGN的《007 初露锋芒》评测给出了9/10的高分。我们评价道：「这款游戏显然痴迷于以前所未有的方式将邦德幻想变为现实，《007 初露锋芒》是我玩过的最好的邦德游戏。」"
+        }
+      ]
+    },
+    {
+      "type": "user_polish",
+      "date": "2026-06-05",
+      "article_id": 29,
+      "url": "https://www.ign.com/articles/cd-projekts-new-ip-project-hadar-gets-extremely-vague-tease-via-job-ad",
+      "en_title": "CD Projekt's New IP, Project Hadar, Gets Extremely Vague Tease via Job Ad",
+      "cn_title": "CD Projekt新IP《哈达尔》招聘信息透露模糊线索",
+      "edits": [
+        {
+          "field": "title",
+          "before": "CD Projekt新IP《哈达尔》招聘信息透露模糊线索",
+          "after": "招聘信息透露CD Projekt新IP《Hadar》模糊线索"
+        },
+        {
+          "field": "paragraph_1",
+          "before": "CD Projekt目前正全力开发《巫师4》和《赛博朋克2》，但同时也在筹备一个全新IP，代号《哈达尔》。虽然《哈达尔》仍笼罩在神秘之中，但一则新的招聘广告透露了一些线索——不过考虑到这是CD Projekt的游戏，这些线索或许并不令人意外。",
+          "after": "CD Projekt目前正全力开发《巫师4》和《赛博朋克2》，但同时也在筹备一个全新IP，代号《Hadar》。虽然《Hadar》仍笼罩在神秘之中，但一则新的招聘广告透露了一些线索——不过考虑到这是CD Projekt的游戏，这些线索或许并不令人意外。"
+        },
+        {
+          "field": "paragraph_2",
+          "before": "据GamesRadar发现，《哈达尔》项目的一则招聘广告正在招募工程总监，其职责是「推动《哈达尔》世界下一款沉浸式游戏的发展，打造一款情感丰富、令玩家难忘的开放世界体验」。",
+          "after": "据GamesRadar发现，《Hadar》项目的一则招聘广告正在招募工程总监，其职责是「推动《Hadar》世界下一款沉浸式游戏的发展，打造一款情感丰富、令玩家难忘的开放世界体验」。"
+        },
+        {
+          "field": "paragraph_3",
+          "before": "从这段简短的描述来看，CD Projekt似乎希望《哈达尔》能成为其第三大支柱游戏系列，与《巫师》和《赛博朋克》并驾齐驱，并遵循类似的路线。鉴于这两个系列都取得了巨大成功，这无疑是一个雄心勃勃的目标。但考虑到这是CD Projekt在近20年基于现有IP开发游戏后，推出的首个完全原创IP，你很难不看好它。",
+          "after": "从这段简短的描述来看，CD Projekt似乎希望《Hadar》能成为其第三大支柱游戏系列，与《巫师》和《赛博朋克》并驾齐驱，并遵循类似的路线。鉴于这两个系列都取得了巨大成功，这无疑是一个雄心勃勃的目标。但考虑到这是CD Projekt在近20年基于现有IP开发游戏后，推出的首个完全原创IP，你很难不看好它。"
+        },
+        {
+          "field": "paragraph_4",
+          "before": "不过，《哈达尔》可能仍需数年才能问世，尽管官方早在2021年底就开始了早期概念工作。几年前，新世界观的构建仍处于创意探索阶段，而如今才被描述为「早期预开发」阶段。《哈达尔》是奇幻题材？科幻游戏？还是现代背景？它是纯单人游戏还是包含多人模式？我们不得而知。",
+          "after": "不过，《Hadar》可能仍需数年才能问世，尽管官方早在2021年底就开始了早期概念工作。几年前，新世界观的构建仍处于创意探索阶段，而如今才被描述为「早期预开发」阶段。《Hadar》是奇幻题材？科幻游戏？还是现代背景？它是纯单人游戏还是包含多人模式？我们不得而知。"
+        },
+        {
+          "field": "paragraph_5",
+          "before": "不过我们确实知道，《哈达尔》在CD Projekt内部仍是一个相对较小的项目，根据公司最新财报，仅有24人参与。作为对比，有513人正在开发《巫师4》，163人开发《赛博朋克2》，83人开发《天狼星》（一款以《巫师》宇宙为背景的多人游戏）。此外，我们现在知道巫师3将迎来一个全新的扩展包，尽管主要开发工作由Fool's Theory负责。",
+          "after": "不过我们确实知道，《Hadar》在CD Projekt内部仍是一个相对较小的项目，根据公司最新财报，仅有24人参与。作为对比，有513人正在开发《巫师4》，163人开发《赛博朋克2》，83人开发《Sirius》（一款以《巫师》宇宙为背景的多人游戏）。此外，我们现在知道《巫师3》将迎来一个全新的扩展包，尽管主要开发工作由Fool's Theory负责。"
+        },
+        {
+          "field": "paragraph_6",
+          "before": "除此之外，CD Projekt还有一个极其雄心勃勃的计划：在六年内连续推出《巫师4》《巫师5》和《巫师6》。正是这一计划基本排除了《巫师4》推出扩展包的可能性。此外还有《赛博朋克2》需要考虑。《哈达尔》将如何融入CD Projekt密集的发售计划，仍有待观察。",
+          "after": "除此之外，CD Projekt还有一个极其雄心勃勃的计划：在六年内连续推出《巫师4》《巫师5》和《巫师6》。正是这一计划基本排除了《巫师4》推出扩展包的可能性。此外还有《赛博朋克2》需要考虑。《Hadar》将如何融入CD Projekt密集的发售计划，仍有待观察。"
+        }
+      ]
+    },
+    {
+      "type": "user_polish",
+      "date": "2026-06-05",
+      "article_id": 34,
+      "url": "https://www.ign.com/articles/the-odyssey-rating-imax-popcorn-bucket",
+      "en_title": "The Odyssey Rating and Custom IMAX Camera Popcorn Bucket Revealed",
+      "cn_title": "《奥德赛》R级评级，IMAX爆米花桶曝光",
+      "edits": [
+        {
+          "field": "title",
+          "before": "《奥德赛》R级评级，IMAX爆米花桶曝光",
+          "after": "《奥德赛》获R级评级，纪念款IMAX爆米花桶曝光"
+        },
+        {
+          "field": "subtitle",
+          "before": "史诗级爆米花桶",
+          "after": "史诗巨作"
+        },
+        {
+          "field": "paragraph_2",
+          "before": "据《综艺》指出，诺兰的其他暑期档电影（如《黑暗骑士》三部曲）多为PG-13级，但R级并未阻碍《奥本海默》本土票房突破3.3亿美元(约合人民币23.6亿元)。",
+          "after": "据《综艺》指出，诺兰的其他暑期档电影（如《黑暗骑士》三部曲）多为PG-13级，但R级并未阻碍《奥本海默》本土票房突破3.3亿美元（约合人民币22.35亿元）。"
+        },
+        {
+          "field": "paragraph_6",
+          "before": "欲了解更多诺兰的荷马史诗，可了解《奥德赛》如何「几乎拯救」了《蜘蛛侠：崭新的一天》，阅读露皮塔·尼永奥对饰演海伦批评的回应，以及诺兰在网友质疑后对影片历史准确性的辩护。",
+          "after": "《奥德赛》将于7月17日在北美上映，中国大陆院线暂未定档。"
+        }
+      ]
+    }
+  ],
+  "candidates": [
+    {
+      "id_hint": "remove_redundant_title_prefixes",
+      "title": "标题删除重复品牌堆叠",
+      "rule": "中文标题只保留识别新闻所需的作品、公司或平台名，删除重复的品牌书名号和无意义前缀，但不能删掉主体或关键限定。",
+      "category": "title",
+      "scope": "all",
+      "status_suggestion": "observe",
+      "confidence": 0.9,
+      "evidence_summary": "多日标题样本删除了重复品牌前缀，同时保留核心事实。",
+      "examples": [
+        {
+          "date": "2026-06-05",
+          "article_id": 1,
+          "before": "《詹姆斯·邦德》《IO Interactive》《007初露锋芒》续作发行权易主，亚马逊将掌控更多话语权",
+          "after": "《007 初露锋芒》续作发行权易主，亚马逊将掌控更多话语权"
+        },
+        {
+          "date": "2026-06-05",
+          "article_id": 9,
+          "before": "《战神》《劳菲》之后，PlayStation承诺奎托斯还有更多故事",
+          "after": "《战神：劳菲》之后，PlayStation承诺奎托斯还有更多故事"
+        },
+        {
+          "date": "2026-06-05",
+          "article_id": 17,
+          "before": "《任天堂》《Nintendo Switch 2》《艾尔登法环》褪色者版8月28日登陆Switch 2",
+          "after": "Switch 2版《艾尔登法环 褪色版》将于8月28日发售"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id_hint": "subtitle_avoid_concrete_detail",
+      "title": "副标题简短、有记忆点但不增添事实",
+      "rule": "副标题保持2至15字，优先用简短短语、双关或原文引语，不机械复述标题；不得补充原文没有的事实或改变立场。",
+      "category": "subtitle",
+      "scope": "all",
+      "status_suggestion": "observe",
+      "confidence": 0.88,
+      "evidence_summary": "多日样本显示，副标题倾向短句、引语或轻微双关。",
+      "examples": [
+        {
+          "date": "2026-06-05",
+          "article_id": 2,
+          "before": "CEO亲自下场",
+          "after": "CEO正在热身"
+        },
+        {
+          "date": "2026-06-05",
+          "article_id": 12,
+          "before": "猜猜猜，猜个痛快",
+          "after": "猜个痛快"
+        },
+        {
+          "date": "2026-06-05",
+          "article_id": 26,
+          "before": "星球大战新玩法",
+          "after": "还有一些工作要做"
+        },
+        {
+          "date": "2026-06-05",
+          "article_id": 34,
+          "before": "史诗级爆米花桶",
+          "after": "史诗巨作"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id_hint": "social_media_platform_latest_name",
+      "title": "社交媒体平台使用当前官方名称",
+      "rule": "正文直接写“X”，不再并列旧称“Twitter”；仅在原文需要解释历史名称时例外。",
+      "category": "names",
+      "scope": "all",
+      "status_suggestion": "observe",
+      "confidence": 0.86,
+      "evidence_summary": "账号名称多次由X/Twitter统一为X。",
+      "examples": [
+        {
+          "date": "2026-06-05",
+          "article_id": 9,
+          "before": "「奎托斯就是战神——我们还有更多关于他的故事要讲，」圣莫妮卡工作室官方X/Twitter账号昨晚发文写道。「目前，我们很高兴能带领玩家与劳菲一起踏上众神来世之旅，希望你们能一同前往！」",
+          "after": "「奎托斯就是战神——我们还有更多关于他的故事要讲，」圣莫尼卡工作室官方X账号昨晚发文写道。「目前，我们很高兴能带领玩家与劳菲一起踏上众神来世之旅，希望你们能一同前往！」"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id_hint": "retain_original_for_unconfirmed_names",
+      "title": "无稳定中文名的专名保留原文",
+      "rule": "项目代号、未正式定名作品和没有稳定官方中文名的作品或角色，应保留拉丁字母原名，避免自行音译或意译。",
+      "category": "dictionary",
+      "scope": "all",
+      "status_suggestion": "observe",
+      "confidence": 0.82,
+      "evidence_summary": "Hadar、Evie等未确认中文名的专名被恢复为原文。",
+      "examples": [
+        {
+          "date": "2026-06-05",
+          "article_id": 29,
+          "before": "CD Projekt新IP《哈达尔》招聘信息透露模糊线索",
+          "after": "招聘信息透露CD Projekt新IP《Hadar》模糊线索"
+        },
+        {
+          "date": "2026-06-05",
+          "article_id": 29,
+          "before": "CD Projekt目前正全力开发《巫师4》和《赛博朋克2》，但同时也在筹备一个全新IP，代号《哈达尔》。虽然《哈达尔》仍笼罩在神秘之中，但一则新的招聘广告透露了一些线索——不过考虑到这是CD Projekt的游戏，这些线索或许并不令人意外。",
+          "after": "CD Projekt目前正全力开发《巫师4》和《赛博朋克2》，但同时也在筹备一个全新IP，代号《Hadar》。虽然《Hadar》仍笼罩在神秘之中，但一则新的招聘广告透露了一些线索——不过考虑到这是CD Projekt的游戏，这些线索或许并不令人意外。"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id_hint": "currency_conversion_refined",
+      "title": "金额换算采用统一中文格式",
+      "rule": "正文金额首次出现时可给出人民币换算，使用中文全角括号并保持同文一致；标题通常不放人民币换算。汇率数值属于时效数据，不作为固定翻译规则。",
+      "category": "currency",
+      "scope": "all",
+      "status_suggestion": "observe",
+      "confidence": 0.91,
+      "evidence_summary": "金额样本统一了全角括号、人民币表达和标题位置。",
+      "examples": [
+        {
+          "date": "2026-06-05",
+          "article_id": 17,
+          "before": "79.99美元(约合人民币572元)的褪色者版包含游戏本体、《黄金树之影》DLC、新武器、以及为玩家忠实的灵马托雷特更换护甲皮肤的功能。此外还包含两个新初始职业。",
+          "after": "Switch 2版《艾尔登法环 褪色版》定价79.99美元（约合541.84元人民币），日区Nintendo Store定价9020日元（约合382.04元人民币）。包含游戏本体、《黄金树之影》DLC、新武器、以及为玩家忠实的灵马托雷特更换皮肤的功能。此外还包含两个新初始职业。"
+        },
+        {
+          "date": "2026-06-05",
+          "article_id": 34,
+          "before": "据《综艺》指出，诺兰的其他暑期档电影（如《黑暗骑士》三部曲）多为PG-13级，但R级并未阻碍《奥本海默》本土票房突破3.3亿美元(约合人民币23.6亿元)。",
+          "after": "据《综艺》指出，诺兰的其他暑期档电影（如《黑暗骑士》三部曲）多为PG-13级，但R级并未阻碍《奥本海默》本土票房突破3.3亿美元（约合人民币22.35亿元）。"
+        }
+      ],
+      "contradiction": ""
+    }
+  ],
+  "notes": [
+    "Codex补跑腾讯文档润色，只提取跨篇可复用规律；单篇特例不直接升级为长期规则。",
+    "未学习汇率数值、国区售价、额外上映信息及“今日/昨晚”等时效性补充，避免脱离原文或随时间失效。",
+    "所有候选仍需在学习页确认后才能进入STYLE_PROFILE.md。"
+  ],
+  "updated_at": "2026-06-12T21:51:19+08:00",
+  "observer": "codex",
+  "status": "observed"
 }

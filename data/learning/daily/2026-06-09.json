@@ -1,11 +1,471 @@
 {
   "date": "2026-06-09",
-  "model": "deepseek-v4-flash",
-  "source_hash": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
-  "signal_count": 0,
-  "candidate_count": 0,
-  "signals": [],
-  "candidates": [],
-  "notes": [],
-  "updated_at": "2026-06-09T05:25:00+08:00"
+  "model": "codex",
+  "source_hash": "6ecc0a3a4bda58bb6f7c027c424084d8f51d8315",
+  "signal_count": 8,
+  "candidate_count": 4,
+  "signals": [
+    {
+      "type": "user_polish",
+      "date": "2026-06-09",
+      "article_id": 3,
+      "url": "https://www.ign.com/articles/xbox-game-exclusivity-will-be-decided-on-a-case-by-case-basis-microsoft-says",
+      "en_title": "Xbox Game Exclusivity Will Be Decided on a 'Case-by-Case' Basis, Microsoft Says",
+      "cn_title": "微软：Xbox独占将逐案决定",
+      "edits": [
+        {
+          "field": "title",
+          "before": "微软：Xbox独占将逐案决定",
+          "after": "微软表示，Xbox游戏独占将「视具体情况而定」"
+        },
+        {
+          "field": "subtitle",
+          "before": "逐案定独占",
+          "after": "还是赚钱要紧"
+        },
+        {
+          "field": "paragraph_1",
+          "before": "在《战争机器：事变日》和《发条革命》确认永远不会登陆PlayStation后，Xbox高管Matt Booty试图澄清微软在游戏独占问题上的新立场。",
+          "after": "Xbox高管Matt Booty在《战争机器：事变日》和《发条革命》确认不会登陆PlayStation后，试图进一步解释微软最新的独占策略。"
+        },
+        {
+          "field": "paragraph_2",
+          "before": "昨晚的Xbox展示会上，一些游戏被明确标注为Xbox主机独占（当然，它们仍会登陆PC）。但为什么只有《战争机器》和《发条革命》？未来这项政策将如何执行？微软的公告留下了诸多疑问。",
+          "after": "在昨晚的Xbox游戏展示会上，微软重新带回了明确标注为Xbox主机独占的游戏（当然，它们仍会登陆PC）。但为什么只有《战争机器：事变日》和《发条革命》被列为独占？未来这一政策又将如何执行？微软此前的公告留下了许多疑问。"
+        },
+        {
+          "field": "paragraph_3",
+          "before": "如今，首席内容官Booty出面进一步说明了未来哪些游戏会成为Xbox独占、哪些不会。他在接受Gamertag Radio采访时表示，未来的决策将「逐案决定」，但所有「大型多人在线游戏和持续运营游戏」仍将保持跨平台——此前已确认登陆PlayStation的游戏也同样如此。",
+          "after": "如今，身为Xbox内容负责人的Matt Booty出面进行了进一步说明。在接受Gamertag Radio采访时，Booty表示，未来是否独占将根据具体情况逐案决定。不过，所有「大型多人游戏和服务型游戏」都将继续保持多平台发行，而此前已经确认登陆PlayStation的平台计划也不会改变。"
+        },
+        {
+          "field": "paragraph_4",
+          "before": "「我们希望让人们有理由选择Xbox，有理由购买Xbox，有理由成为Xbox粉丝，」Booty说道，「同时，我们也想回馈那些长期支持我们的玩家——我们知道独占很重要，所以《战争机器》将在2026年推出，《发条革命》将在2027年推出。」",
+          "after": "「我们希望玩家有理由加入Xbox阵营，希望他们有理由购买Xbox，也希望他们有理由成为Xbox粉丝，」Booty说道。「与此同时，我们也希望回馈那些长期支持我们的玩家。我们知道独占游戏很重要，这也是为什么《战争机器：事变日》会在2026年推出，而《发条革命》将在2027年推出。」"
+        },
+        {
+          "field": "paragraph_5",
+          "before": "「我们还想明确一点，我们的大型多人在线游戏和持续运营游戏将继续保持跨平台，」他继续说道，「如果我们已经向玩家做出了承诺，我们就会兑现。然后——我想Asha说过——我们要做出正确的决定，而不是仓促的决定。」",
+          "after": "他继续表示：「我们也想明确说明，我们的大型多人游戏和服务型游戏将继续保持多平台发行。如果我们已经向玩家做出了承诺，我们就会兑现这个承诺。正如Asha（Sharma）所说，我们会做出正确的决定，而不是仓促的决定。」"
+        },
+        {
+          "field": "paragraph_6",
+          "before": "「我们会继续思考这个问题，」Booty继续说道，「而且，我想你们已经知道，我们的原则是：公布发售日期的同时，也会公布登陆平台。所以，这将逐案决定，但我们会明确说明——一旦有了日期，就有了平台，你们就会知道选择是什么。」",
+          "after": "Booty补充道：「未来我们会继续思考这个问题。而且我认为大家已经知道我们的原则——当我们公布发售日期时，也会同时公布登陆平台。所以未来会根据具体情况逐案决定，但我们会保持透明：当游戏确定发售日期时，玩家也会知道它会登陆哪些平台。」"
+        }
+      ]
+    },
+    {
+      "type": "user_polish",
+      "date": "2026-06-09",
+      "article_id": 4,
+      "url": "https://www.ign.com/articles/will-007-first-light-get-a-sequel-the-boss-of-amazon-games-responds",
+      "en_title": "Will 007 First Light Get a Sequel? The Boss of Amazon Games Responds",
+      "cn_title": "《007 初露锋芒》续作有望？亚马逊游戏老大回应",
+      "edits": [
+        {
+          "field": "subtitle",
+          "before": "续作悬念",
+          "after": "三部曲！"
+        },
+        {
+          "field": "paragraph_1",
+          "before": "IO Interactive 的《007 初露锋芒》大获好评，发售两周销量已达300万份。但这一成功也伴随着系列未来的不确定性，原因是亚马逊游戏负责人 Jeff Gattis 上周表示，续作将「由 MGM 开发，理论上也可能由亚马逊游戏工作室接手」。",
+          "after": "IO Interactive的《007 初露锋芒》大获好评，发售两周销量已达300万份。但这一成功也伴随着系列未来的不确定性，原因是亚马逊游戏负责人Jeff Gattis上周表示，续作将「由米高梅开发，理论上也可能由亚马逊游戏工作室接手」。"
+        },
+        {
+          "field": "paragraph_2",
+          "before": "为澄清情况，IGN 在夏日游戏节上与 Gattis 进行了对话，探讨后续詹姆斯·邦德游戏的开发与发行可能走向。",
+          "after": "为澄清情况，IGN在夏日游戏节上与Gattis进行了对话，探讨后续詹姆斯·邦德游戏的开发与发行可能走向。"
+        },
+        {
+          "field": "paragraph_3",
+          "before": "「首先，让我澄清一下，」Gattis 说道，「我并没有确认亚马逊游戏工作室会发行下一部作品。我没说过。不幸的是，这话被传开了，一传就停不下来。不，IO 一直很棒，他们是出色的合作伙伴。事实上，几个月前我还去哥本哈根拜访了他们。游戏表现很好，让它先喘口气，享受它的高光时刻吧。」",
+          "after": "「首先，让我澄清一下，」Gattis说道，「我并没有确认亚马逊游戏工作室会发行下一部作品。我没说过。不幸的是，这话被传开了，一传就停不下来。不，IOI一直很棒，他们是出色的合作伙伴。事实上，几个月前我还去哥本哈根拜访了他们。游戏表现很好，让它先喘口气，享受它的高光时刻吧。」"
+        },
+        {
+          "field": "paragraph_4",
+          "before": "可以理解的是，IO 能否继续打造他们开创的新系列，这种不确定性让粉丝们颇为担忧——他们最希望看到的，莫过于《杀手》工作室能继续讲述邦德的起源故事。",
+          "after": "可以理解的是，IOI能否继续打造他们开创的新系列，这种不确定性让粉丝们颇为担忧——他们最希望看到的，莫过于《杀手》工作室能继续讲述邦德的起源故事。"
+        },
+        {
+          "field": "paragraph_5",
+          "before": "「相信我们会明智地处理这件事，」Gattis 安抚玩家道，「我的意思是，这取决于市场需求。只要我们觉得玩家有渴望，那么可以肯定地说，游戏就会做出来。」",
+          "after": "「相信我们会明智地处理这件事，」Gattis安抚玩家道，「我的意思是，这取决于市场需求。只要我们觉得玩家有渴望，那么可以肯定地说，游戏就会做出来。」"
+        },
+        {
+          "field": "paragraph_6",
+          "before": "为了在这次采访中尽可能获得确认，我再次追问，《007 初露锋芒》有望实现可观盈利，这是否足以给下一部作品开绿灯。Gattis 的回答是：「似乎应该制作续作。」",
+          "after": "为了在这次采访中尽可能获得确认，我再次追问，《007 初露锋芒》有望实现可观盈利，这是否足以给下一部作品开绿灯。Gattis的回答是：「似乎应该制作续作。」"
+        },
+        {
+          "field": "paragraph_7",
+          "before": "这绝非保证，但对于像我这样深深喜爱 IO 这款单人动作冒险版英国最著名间谍游戏的玩家来说，这无疑是个好消息。",
+          "after": "这绝非保证，但对于深深喜爱IOI这款单人动作冒险版英国最著名间谍游戏的玩家来说，这无疑是个好消息。"
+        }
+      ]
+    },
+    {
+      "type": "user_polish",
+      "date": "2026-06-09",
+      "article_id": 13,
+      "url": "https://www.ign.com/articles/nintendo-direct-announced-for-this-week-as-fans-expect-huge-switch-2-reveals",
+      "en_title": "Nintendo Direct Announced for This Week, as Fans Expect Huge Switch 2 Reveals",
+      "cn_title": "任天堂本周举办直面会，Switch 2 新作阵容引期待",
+      "edits": [
+        {
+          "field": "title",
+          "before": "任天堂本周举办直面会，Switch 2 新作阵容引期待",
+          "after": "任天堂今日将举办直面会，Switch 2新作阵容引期待"
+        },
+        {
+          "field": "subtitle",
+          "before": "急急急急急",
+          "after": "会有什么呢"
+        },
+        {
+          "field": "paragraph_1",
+          "before": "任天堂宣布将于本周晚些时候举办新一期 Nintendo Direct，公布即将登陆 Switch 2 的游戏详情。",
+          "after": "任天堂宣布将于北京时间今日（6月9日）晚上十点举办新一期任天堂直面会，公布即将登陆Switch 2的游戏详情。主节目时长50分钟，随后还有95分钟的树屋直播实机演示环节。"
+        },
+        {
+          "field": "paragraph_2",
+          "before": "粉丝们可在明天（6月9日周二）太平洋时间早7点/东部时间早10点/英国时间下午3点（北京时间6月9日晚10点）收看。主节目时长50分钟，随后还有95分钟的 树屋直播 实机演示环节。你可以在 IGN 观看直播，我们也将实时报道所有重大发布。",
+          "after": "玩家对本次直面会的期待值极高，因为自上次完整版任天堂直面会（2025年9月）以来已过去许久，而关于任天堂2026年下半年的计划传闻四起。"
+        },
+        {
+          "field": "paragraph_3",
+          "before": "玩家对本次直面会的期待值极高，因为自上次完整版 Nintendo Direct（2025年9月）以来已过去许久，而关于任天堂2026年下半年的计划传闻四起。",
+          "after": "有趣的是，任天堂表示本次直面会将聚焦2026年下半年发售的游戏——这意味着该公司在今年秋冬仍有多款惊喜作品。这或许也是在降低预期：我们不会看到下一款3D《马力欧》，该作据信将于2027年推出。"
+        },
+        {
+          "field": "paragraph_4",
+          "before": "有趣的是，任天堂表示本次直面会将聚焦2026年下半年发售的游戏——这意味着该公司在今年秋冬仍有多款惊喜作品。这或许也是在降低预期：我们不会看到下一款3D《马力欧》，该作据信将于2027年推出。",
+          "after": "此后的几个月里，任天堂举办了多场专注于独立游戏和第三方作品的小型发布会，并通过社交媒体及Nintendo Today应用发布了一系列公告。而现在，终于到了正式登场的时候。"
+        },
+        {
+          "field": "paragraph_5",
+          "before": "此后的几个月里，任天堂举办了多场专注于独立游戏和第三方作品的小型发布会，并通过社交媒体及 Nintendo Today 应用发布了一系列公告。而现在，终于到了正式登场的时候。",
+          "after": "那么，我们期待什么？可靠的爆料人NatetheHate（此前对任天堂的爆料记录良好）曾透露，《塞尔达传说：时之笛》重制版计划于今年圣诞节发售。该项目也与2026年《塞尔达传说》系列40周年相契合——是否还有其他塞尔达项目在筹备中？或者我们能否看到明年真人版《塞尔达》电影的首支预告？"
+        },
+        {
+          "field": "paragraph_6",
+          "before": "那么，我们期待什么？可靠的爆料人 NatetheHate（此前对任天堂的爆料记录良好）曾透露，《塞尔达传说 时之笛》重制版计划于今年圣诞节发售。该项目也与2026年《塞尔达传说》系列40周年相契合——是否还有其他塞尔达项目在筹备中？或者我们能否看到明年真人版《塞尔达》电影的首支预告？",
+          "after": "其他泄露和传闻还提到一款新《瓦力欧》游戏、2D《密特罗德》、《皮克敏4》Switch 2 版以及一款全新的《Switch运动》作品。我们可能还会看到更多已公布的Switch 2夏季阵容详情，包括《星际火狐》（6月25日）、《节奏天国 奇迹之星》（7月2日）和《斯普拉遁 涂击队》（7月23日）。"
+        }
+      ]
+    },
+    {
+      "type": "user_polish",
+      "date": "2026-06-09",
+      "article_id": 16,
+      "url": "https://www.ign.com/articles/after-starring-in-an-ai-generated-video-for-prada-hideo-kojima-says-maybe-ai-could-create-art-but-while-i-live-i-dont-think-ill-see-it",
+      "en_title": "After Starring in an AI-Generated Video for Prada, Hideo Kojima Says 'Maybe AI Could Create Art, but While I Live, I Don't Think I'll See It'",
+      "cn_title": "小岛秀夫谈AI：有生之年看不到AI创造艺术",
+      "edits": [
+        {
+          "field": "subtitle",
+          "before": "AI艺术？不感兴趣",
+          "after": "「我对AI不感兴趣」"
+        },
+        {
+          "field": "paragraph_1",
+          "before": "小岛秀夫近日就AI的使用发表了评论，此前他因出演Prada的AI生成视频而受到批评。",
+          "after": "小岛秀夫近日就AI的使用发表了评论，此前他因出演普拉达的AI生成视频而受到批评。"
+        },
+        {
+          "field": "paragraph_2",
+          "before": "上月底，这位《潜龙谍影》和《死亡搁浅》系列的传奇制作人与丹麦电影人Nicholas Winding Refn一同出现在Prada Mode的90秒预告片中，该活动上周在纽约切尔西酒店举行。视频中，小岛和Refn乘坐飞船抵达切尔西酒店，他们迫降在一颗星球上，并逃脱了外星人的魔爪。",
+          "after": "上月底，这位《潜龙谍影》和《死亡搁浅》系列的传奇制作人与丹麦电影人Nicholas Winding Refn一同出现在普拉达Mode的90秒预告片中，该活动上周在纽约切尔西酒店举行。视频中，小岛和Refn乘坐飞船抵达切尔西酒店，他们迫降在一颗星球上，并逃脱了外星人的魔爪。"
+        },
+        {
+          "field": "paragraph_3",
+          "before": "该预告片在社交媒体上遭到了小岛粉丝的大量抵制，一些人对他出现在他们所谓的「AI垃圾」中表示困惑。「看到如此伟大的艺术家沦落到使用生成式AI垃圾，令人心碎，」一人说道。「看到@HIDEO_KOJIMA_EN参与这种狗屁东西，真的很失望，」另一人说。「嘿@HIDEO_KOJIMA_EN，我是你的超级粉丝，喜欢你做的一切，除了这个。请永远别再参与AI垃圾了，你不该这样，」另一位评论道。",
+          "after": "该预告片在社交媒体上遭到了小岛粉丝的大量抵制，一些人对他出现在他们所谓的「AI垃圾」中表示困惑。「看到如此伟大的艺术家沦落到使用生成式AI垃圾，令人心碎，」一人说道。「看到@HIDEOKOJIMAEN参与这种狗屁东西，真的很失望，」另一人说。「嘿@HIDEOKOJIMAEN，我是你的超级粉丝，喜欢你做的一切，除了这个。请永远别再参与AI垃圾了，你不该这样，」另一位评论道。"
+        },
+        {
+          "field": "paragraph_4",
+          "before": "虽然小岛尚未直接回应这些批评，但他在《华盛顿邮报》一篇关于Prada接管切尔西酒店的文章中泛泛地谈到了AI。这位62岁的制作人表示他对AI「不感兴趣」，坚称他认为自己有生之年看不到AI创造艺术。",
+          "after": "虽然小岛尚未直接回应这些批评，但他在《华盛顿邮报》一篇关于普拉达接管切尔西酒店的文章中泛泛地谈到了AI。这位62岁的制作人表示他对AI「不感兴趣」，坚称他认为自己有生之年看不到AI创造艺术。"
+        }
+      ]
+    },
+    {
+      "type": "user_polish",
+      "date": "2026-06-09",
+      "article_id": 18,
+      "url": "https://www.ign.com/articles/after-another-xbox-no-show-the-wait-for-the-elder-scrolls-vi-goes-on-and-fans-arent-getting-any-younger",
+      "en_title": "After Another Xbox No-Show the Wait for The Elder Scrolls VI Goes On, and Fans Aren't Getting Any Younger",
+      "cn_title": "《上古卷轴6》再缺席Xbox发布会，粉丝苦等8年",
+      "edits": [
+        {
+          "field": "subtitle",
+          "before": "再见了，老朋友",
+          "after": "先把《辐射》重制版端上来也可以"
+        },
+        {
+          "field": "paragraph_1",
+          "before": "又一场Xbox游戏展示会，又一次《上古卷轴6》缺席。是的，我们知道它正在开发中——B社老大陶德·霍华德时不时会冒出来安抚粉丝。但无法回避的事实是，这款游戏早在八年前（2018年6月10日）就通过一段预告片公布了，此后我们再也没有看到任何实质内容。这也意味着，从《上古卷轴6》公布至今的等待时间，已经超过了从《上古卷轴5：天际》发售到《上古卷轴6》公布之间的间隔。我们甚至连游戏的名字都不知道，也不知道它设定在奇幻世界的哪个角落。那些信息匮乏的《GTA6》粉丝根本不知道自己有多幸福！",
+          "after": "又一场Xbox游戏展示会，又一次《上古卷轴6》缺席。是的，我们知道它正在开发中——贝塞斯达老大陶德·霍华德时不时会冒出来安抚粉丝。但无法回避的事实是，这款游戏早在八年前（2018年6月10日）就通过一段预告片公布了，此后我们再也没有看到任何实质内容。这也意味着，从《上古卷轴6》公布至今的等待时间，已经超过了从《上古卷轴5：天际》发售到《上古卷轴6》公布之间的间隔。我们甚至连游戏的名字都不知道，也不知道它设定在奇幻世界的哪个角落——《GTA6》粉丝根本不知道自己有多幸福！"
+        },
+        {
+          "field": "paragraph_4",
+          "before": "有些人甚至将等待《上古卷轴6》比作41千年的黑暗遥远未来中，腐尸帝王端坐黄金王座的情景。「这么多年过去了，我现在年纪这么大了，这让人很不舒服。我经历了十几岁，现在二十多岁，眼看就要三十了，它还没来。B社，还要等多久？照这样下去，我都要穿尿布了，」Branman1234说道。",
+          "after": "有玩家调侃，自己从青少年等到即将步入三十岁，《上古卷轴6》依然毫无消息，等待时间甚至堪比《战锤40K》中永坐黄金王座的人类帝皇。「这么多年过去了，我现在年纪这么大了，这让人很不舒服。我经历了十几岁，现在二十多岁，眼看就要三十了，它还没来。B社，还要等多久？照这样下去，我都要穿尿布了，」Branman1234说道。"
+        }
+      ]
+    },
+    {
+      "type": "user_polish",
+      "date": "2026-06-09",
+      "article_id": 21,
+      "url": "https://www.ign.com/articles/xbox-game-pass-shed-millions-of-subscribers-following-october-2025-price-hike",
+      "en_title": "Xbox Game Pass Shed 'Millions of Subscribers' Following October 2025 Price Hike",
+      "cn_title": "Xbox Game Pass涨价后流失数百万订阅用户",
+      "edits": [
+        {
+          "field": "subtitle",
+          "before": "涨价50%的代价",
+          "after": "代价惨重"
+        },
+        {
+          "field": "paragraph_5",
+          "before": "Game Pass曾是Xbox One、Xbox Series X|S和PC端Xbox玩家的首选，但去年年底宣布涨价后，这一地位受到了冲击。微软在2025年10月初确认，Xbox Game Pass Ultimate月费将从19.99美元（约合人民币143元）大幅上涨至29.99美元（约合人民币215元）。涨幅高达50%，年费达到120美元（约合人民币859元）。",
+          "after": "Game Pass曾是Xbox One、Xbox Series和PC端Xbox玩家的首选，但去年年底宣布涨价后，这一地位受到了冲击。微软在2025年10月初确认，Xbox Game Pass Ultimate月费将从19.99美元（约合人民币136元）大幅上涨至29.99美元（约合人民币203元）。涨幅高达50%，年费达到120美元（约合人民币814元）。"
+        },
+        {
+          "field": "paragraph_7",
+          "before": "Ball表示，微软在宣布将Xbox Game Pass Ultimate月费从29.99美元（约合人民币215元）降至22.99美元（约合人民币165元）时，「纠正了该方案」。这是一次出乎意料的价格下调，在Game Pass和主机多年来的渐进式涨价后带来了节奏变化。尽管Game Pass当前的新价格仍比涨价前高出3美元（约合人民币21元），但Ball指出该服务的「价值已经改变」。",
+          "after": "Ball表示，微软在宣布将Xbox Game Pass Ultimate月费从29.99美元（约合人民币203元）降至22.99美元（约合人民币156元）时，「纠正了该方案」。这是一次出乎意料的价格下调，在Game Pass和主机多年来的渐进式涨价后带来了节奏变化。尽管Game Pass当前的新价格仍比涨价前高出3美元，但Ball指出该服务的「价值已经改变」。"
+        },
+        {
+          "field": "paragraph_9",
+          "before": "与此同时，Sharma最近在接受彭博社采访时评论了微软的Xbox Game Pass策略。在对话中，她表示公司「已经",
+          "after": "与此同时，Xbox首席执行官Asha Sharma近日在接受彭博社采访时谈到了微软的Xbox Game Pass战略。她表示，公司已经「成功扭转了Game Pass连续八个月下滑的趋势」。「它现在已经恢复增长，留存率也在扩大，」她补充道，「最重要的是，我们开始重新拉近与玩家和社区的距离。」"
+        }
+      ]
+    },
+    {
+      "type": "user_polish",
+      "date": "2026-06-09",
+      "article_id": 26,
+      "url": "https://www.ign.com/articles/wwdc-2026-everything-announced-at-apples-annual-developers-conference",
+      "en_title": "WWDC 2026: Everything Announced at Apple's Annual Developers Conference",
+      "cn_title": "WWDC 2026：苹果年度开发者大会全汇总",
+      "edits": [
+        {
+          "field": "title",
+          "before": "WWDC 2026：苹果年度开发者大会全汇总",
+          "after": "WWDC 2026：苹果开发者大会全汇总"
+        },
+        {
+          "field": "subtitle",
+          "before": "稳中求进",
+          "after": "Operation Health"
+        },
+        {
+          "field": "paragraph_2",
+          "before": "WWDC（全球开发者大会）通常是苹果展示未来一年iOS、macOS、tvOS等所有操作系统更新的舞台。与往年一样，本次大会的重头戏是iOS 27，但在去年iOS 26的液态玻璃（Liquid Glass）等争议性改动之后，苹果将重点放在了系统优化上。虽然宣布的新功能不多，但也没必要堆砌。",
+          "after": "WWDC（全球开发者大会）通常是苹果展示未来一年iOS、macOS、tvOS等所有操作系统更新的舞台。与往年一样，本次大会的重头戏是iOS 27，但在去年iOS 26的液态玻璃（Liquid Glass）等争议性改动之后，苹果将重点放在了系统优化上，同时Siri AI与Apple Intelligence也迎来了全面升级"
+        },
+        {
+          "field": "paragraph_3",
+          "before": "如果你想亲自观看WWDC主题演讲，可以在苹果活动页面、YouTube或Apple TV应用上观看直播。直播于美国东部时间下午1:00/太平洋时间上午10:00（北京时间6月9日凌晨1:00）开始。",
+          "after": "本次发布会的核心是iOS 27。苹果确认，iOS 27将支持所有能够运行iOS 26的机型，意味着更多用户无需更换设备即可获得新功能。性能方面，苹果表示新版系统将提升应用响应速度，应用启动速度最高可提升30%，同时更新CPU调度器，以改善多任务处理表现。"
+        },
+        {
+          "field": "paragraph_4",
+          "before": "所有时间均为美国东部标准时间（EST）。",
+          "after": "设计层面，苹果继续调整「液态玻璃」视觉效果，并新增透明度调节滑块，让用户能够根据阅读体验自行调整界面透明程度。应用图标也加入了更明显的液态玻璃效果，呈现更接近3D的视觉风格。"
+        },
+        {
+          "field": "paragraph_5",
+          "before": "下午2:12：演讲到此结束。与WWDC 2025的巨大设计变革不同，今年更注重精雕细琢。蒂姆·库克似乎也借此机会告别，称「改变人们的生活是一生的荣幸」。最后，以一段关于应用的MV收尾，当然是用iPhone拍摄、Mac剪辑的。",
+          "after": "macOS方面，新版本被命名为Golden Gate。新版Siri将整合进「聚焦搜索」，用户可以直接在搜索栏中输入问题，并让Siri调用大语言模型回答；用户还可以右键点击文件，让AI在生成内容时引用相关文件。与此同时，苹果宣布新版Siri AI正式亮相，语音助手将获得更强的AI能力，并支持在iPhone、Mac、Apple Vision Pro等不同设备之间延续对话。"
+        },
+        {
+          "field": "paragraph_6",
+          "before": "下午2:07：由于数据带宽限制，部分AI功能将有每日使用上限。当然，你可以购买更高等级的iCloud订阅来提升上限。",
+          "after": "Apple Intelligence依然是本次WWDC的重要部分。苹果强调，其AI功能更侧重增强生态体验，而非单纯生成文字或图片。公司同时承诺，AI请求使用的数据不会被存储，请求完成后会立即删除。由于数据带宽限制，部分AI功能将存在每日使用上限，用户可通过更高等级的iCloud订阅提升限制。苹果还将视觉智能扩展到更多设备，用户可以向Siri展示图片并提问。Safari也将加入AI能力，包括按主题自动整理标签页，以及让Siri监控网页变化并在内容更新时提醒用户。此外，「快捷指令」迎来更新，用户可以用自然语言描述想要自动化的流程，再由AI生成对应操作。不过，中国大陆地区的Apple Intelligence依旧不可用，本次更新也不覆盖欧盟地区。"
+        },
+        {
+          "field": "paragraph_7",
+          "before": "下午2:05：借助空间重构图功能，你可以用AI来重新构图。该功能利用Apple Vision Pro生成的空间模型，改变拍摄角度，无需实际重拍。它只会在缺失的地方生成新的图像数据。",
+          "after": "系统应用体验也得到改进。苹果重建了搜索索引，以优化应用、信息、文件和邮件中的设备端搜索。通知方面，同一应用的通知将不再简单堆叠，例如快递或导航类通知会直接在单条通知中动态更新。照片功能继续升级，苹果地图的「鸟瞰」功能也获得增强。"
+        }
+      ]
+    },
+    {
+      "type": "user_polish",
+      "date": "2026-06-09",
+      "article_id": 30,
+      "url": "https://www.ign.com/articles/spider-man-brand-new-day-runtime-revealed-and-its-one-of-the-longest-marvel-films-ever",
+      "en_title": "Spider-Man: Brand New Day Runtime Revealed, And It's One of The Longest Marvel Films Ever",
+      "cn_title": "《蜘蛛侠：崭新一日》片长曝光，成最长蜘蛛侠电影",
+      "edits": [
+        {
+          "field": "title",
+          "before": "《蜘蛛侠：崭新一日》片长曝光，成最长蜘蛛侠电影",
+          "after": "《蜘蛛侠：崭新之日》片长曝光，成最长蜘蛛侠电影"
+        },
+        {
+          "field": "subtitle",
+          "before": "蜘蛛侠史上最长",
+          "after": "量大管饱"
+        },
+        {
+          "field": "paragraph_1",
+          "before": "AMC院线透露了《蜘蛛侠：崭新一日》的片长——它将成为史上最长的蜘蛛侠电影。",
+          "after": "AMC院线透露了《蜘蛛侠：崭新之日》的片长——它将成为史上最长的蜘蛛侠电影。"
+        },
+        {
+          "field": "paragraph_2",
+          "before": "150分钟（即2小时30分钟）的片长，也让该片比漫威电影宇宙中几乎所有其他电影都要长。不过，考虑到片中角色和故事线的数量，这或许并不令人意外。",
+          "after": "150分钟的片长，也让该片比漫威电影宇宙中几乎所有其他电影都要长。不过，考虑到片中角色和故事线的数量，这或许并不令人意外。"
+        },
+        {
+          "field": "paragraph_4",
+          "before": "目前比《崭新一日》更长的漫威电影只有《永恒族》（156分钟，确实感觉很长）、《黑豹》（161分钟）和终局之作《复仇者联盟4：终局之战》（181分钟，刚好超过3小时）。",
+          "after": "目前比《崭新之日》更长的漫威电影只有《永恒族》（156分钟，确实感觉很长）、《黑豹》（161分钟）和终局之作《复仇者联盟4：终局之战》（181分钟，刚好超过3小时）。"
+        },
+        {
+          "field": "paragraph_5",
+          "before": "《蜘蛛侠：崭新一日》要讲的内容很多——这或许解释了其冗长的片长。影片主要剧情发生在我们上次见到彼得·帕克多年之后，他现在独自生活，在纽约与一众反派恶棍战斗。",
+          "after": "《蜘蛛侠：崭新之日》要讲的内容很多——这或许解释了其冗长的片长。影片主要剧情发生在我们上次见到彼得·帕克多年之后，他现在独自生活，在纽约与一众反派恶棍战斗。"
+        },
+        {
+          "field": "paragraph_6",
+          "before": "片中的敌人包括迈克尔·曼多的蝎人（来自《蜘蛛侠：英雄归来》）、马文·琼斯三世的墓碑、回旋镖（粉丝认为由Eman Esfandi饰演，是MJ新男友的秘密身份）、狼蛛、忍者组织手合会、马克·鲁弗洛的浩克狂暴版、萨迪·辛克饰演的神秘角色（至少最初被设定为敌人），以及损害控制部（最初似乎被设定为友好方）。",
+          "after": "片中的敌人包括迈克尔·曼多的蝎人（来自《蜘蛛侠：英雄归来》）、马文·琼斯三世的墓碑、回旋镖（粉丝认为由Eman Esfandi饰演，是MJ新男友的秘密身份）、狼蛛、忍者组织手合会、马克·鲁法洛的浩克狂暴版、萨迪·辛克饰演的神秘角色（至少最初被设定为敌人），以及损害控制部（Damage Control）。"
+        },
+        {
+          "field": "paragraph_7",
+          "before": "蜘蛛侠要应付的事情已经够多了，但还有彼得自己似乎正在经历某种身体变异，他还要处理与乔·博恩瑟的惩罚者不情愿的合作关系，以及他仍在暗中关注赞达亚的MJ和雅各布·巴塔隆的内德——尽管他们已不再记得他是谁。唉。",
+          "after": "蜘蛛侠要应付的事情已经够多了，但彼得自己似乎还在经历某种身体变异，他还要处理与惩罚者不情愿的合作关系，以及他仍在暗中关注MJ和内德——尽管他们已不再记得他是谁。"
+        }
+      ]
+    }
+  ],
+  "candidates": [
+    {
+      "id_hint": "preserve_claim_attribution_and_modality",
+      "title": "标题保留消息来源与不确定性",
+      "rule": "标题必须保留原文中的“据称、可能、预计、表示、逐案决定”等归因和情态信息，不得把推测改成确定事实，也不得夸大结论。",
+      "category": "title",
+      "scope": "all",
+      "status_suggestion": "observe",
+      "confidence": 0.9,
+      "evidence_summary": "标题样本反复补回消息来源、可能性和条件限制。",
+      "examples": [
+        {
+          "date": "2026-06-09",
+          "article_id": 3,
+          "before": "微软：Xbox独占将逐案决定",
+          "after": "微软表示，Xbox游戏独占将「视具体情况而定」"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id_hint": "subtitle_avoid_concrete_detail",
+      "title": "副标题简短、有记忆点但不增添事实",
+      "rule": "副标题保持2至15字，优先用简短短语、双关或原文引语，不机械复述标题；不得补充原文没有的事实或改变立场。",
+      "category": "subtitle",
+      "scope": "all",
+      "status_suggestion": "observe",
+      "confidence": 0.9,
+      "evidence_summary": "多日样本显示，副标题倾向短句、引语或轻微双关。",
+      "examples": [
+        {
+          "date": "2026-06-09",
+          "article_id": 3,
+          "before": "逐案定独占",
+          "after": "还是赚钱要紧"
+        },
+        {
+          "date": "2026-06-09",
+          "article_id": 4,
+          "before": "续作悬念",
+          "after": "三部曲！"
+        },
+        {
+          "date": "2026-06-09",
+          "article_id": 13,
+          "before": "急急急急急",
+          "after": "会有什么呢"
+        },
+        {
+          "date": "2026-06-09",
+          "article_id": 16,
+          "before": "AI艺术？不感兴趣",
+          "after": "「我对AI不感兴趣」"
+        },
+        {
+          "date": "2026-06-09",
+          "article_id": 21,
+          "before": "涨价50%的代价",
+          "after": "代价惨重"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id_hint": "preserve_source_information_and_order",
+      "title": "完整保留原文信息与论述顺序",
+      "rule": "正文翻译必须逐段覆盖原文事实、引语和列表，并保持论述顺序；润色可以改善中文，但不能擅自删减、合并错位或扩写成原文没有的内容。",
+      "category": "body",
+      "scope": "all",
+      "status_suggestion": "observe",
+      "confidence": 0.95,
+      "evidence_summary": "长文、访谈和清单稿反复显示：忠实、完整和顺序准确优先。",
+      "examples": [
+        {
+          "date": "2026-06-09",
+          "article_id": 13,
+          "before": "任天堂宣布将于本周晚些时候举办新一期 Nintendo Direct，公布即将登陆 Switch 2 的游戏详情。",
+          "after": "任天堂宣布将于北京时间今日（6月9日）晚上十点举办新一期任天堂直面会，公布即将登陆Switch 2的游戏详情。主节目时长50分钟，随后还有95分钟的树屋直播实机演示环节。"
+        },
+        {
+          "date": "2026-06-09",
+          "article_id": 13,
+          "before": "此后的几个月里，任天堂举办了多场专注于独立游戏和第三方作品的小型发布会，并通过社交媒体及 Nintendo Today 应用发布了一系列公告。而现在，终于到了正式登场的时候。",
+          "after": "那么，我们期待什么？可靠的爆料人NatetheHate（此前对任天堂的爆料记录良好）曾透露，《塞尔达传说：时之笛》重制版计划于今年圣诞节发售。该项目也与2026年《塞尔达传说》系列40周年相契合——是否还有其他塞尔达项目在筹备中？或者我们能否看到明年真人版《塞尔达》电影的首支预告？"
+        },
+        {
+          "date": "2026-06-09",
+          "article_id": 26,
+          "before": "WWDC（全球开发者大会）通常是苹果展示未来一年iOS、macOS、tvOS等所有操作系统更新的舞台。与往年一样，本次大会的重头戏是iOS 27，但在去年iOS 26的液态玻璃（Liquid Glass）等争议性改动之后，苹果将重点放在了系统优化上。虽然宣布的新功能不多，但也没必要堆砌。",
+          "after": "WWDC（全球开发者大会）通常是苹果展示未来一年iOS、macOS、tvOS等所有操作系统更新的舞台。与往年一样，本次大会的重头戏是iOS 27，但在去年iOS 26的液态玻璃（Liquid Glass）等争议性改动之后，苹果将重点放在了系统优化上，同时Siri AI与Apple Intelligence也迎来了全面升级"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id_hint": "platform_name_compact",
+      "title": "平台名称使用简洁统一写法",
+      "rule": "平台枚举中可将“Xbox Series X|S”统一简写为“Xbox Series”，Nintendo Switch 2在语境明确时可写“Switch 2”；不要改变实际登陆平台范围。",
+      "category": "dictionary",
+      "scope": "games",
+      "status_suggestion": "observe",
+      "confidence": 0.74,
+      "evidence_summary": "跨日稿件反复采用更简洁的平台型号写法。",
+      "examples": [
+        {
+          "date": "2026-06-09",
+          "article_id": 21,
+          "before": "Game Pass曾是Xbox One、Xbox Series X|S和PC端Xbox玩家的首选，但去年年底宣布涨价后，这一地位受到了冲击。微软在2025年10月初确认，Xbox Game Pass Ultimate月费将从19.99美元（约合人民币143元）大幅上涨至29.99美元（约合人民币215元）。涨幅高达50%，年费达到120美元（约合人民币859元）。",
+          "after": "Game Pass曾是Xbox One、Xbox Series和PC端Xbox玩家的首选，但去年年底宣布涨价后，这一地位受到了冲击。微软在2025年10月初确认，Xbox Game Pass Ultimate月费将从19.99美元（约合人民币136元）大幅上涨至29.99美元（约合人民币203元）。涨幅高达50%，年费达到120美元（约合人民币814元）。"
+        }
+      ],
+      "contradiction": ""
+    }
+  ],
+  "notes": [
+    "Codex补跑腾讯文档润色，只提取跨篇可复用规律；单篇特例不直接升级为长期规则。",
+    "未学习汇率数值、国区售价、额外上映信息及“今日/昨晚”等时效性补充，避免脱离原文或随时间失效。",
+    "所有候选仍需在学习页确认后才能进入STYLE_PROFILE.md。"
+  ],
+  "updated_at": "2026-06-12T21:51:19+08:00",
+  "observer": "codex",
+  "status": "observed"
 }

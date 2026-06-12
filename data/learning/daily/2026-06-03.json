@@ -1,50 +1,517 @@
 {
   "date": "2026-06-03",
-  "model": "deepseek-v4-flash",
-  "status": "skipped",
-  "reason": "json_parse_failed",
-  "source_hash": "503968d67444b3b8d6c9d96eb53d58261e66d5a6",
-  "signal_count": 1,
-  "candidate_count": 0,
+  "model": "codex",
+  "status": "observed",
+  "source_hash": "d507cc07032920fc5eac0ed2f626796198f991a4",
+  "signal_count": 10,
+  "candidate_count": 6,
   "signals": [
     {
       "type": "user_polish",
       "date": "2026-06-03",
-      "article_id": 1,
-      "url": "https://www.ign.com/articles/playstation-shovelware-crackdown-continues-as-major-publisher-warns-its-games-will-soon-be-pulled",
-      "en_title": "PlayStation 'Shovelware' Crackdown Continues as Major Publisher Warns Its Games Will Soon Be Pulled",
-      "cn_title": "PlayStation打击劣质游戏，发行商Webnetic宣布游戏即将下架",
+      "article_id": 5,
+      "url": "https://www.ign.com/articles/nintendo-music-launches-web-player-with-over-4-hours-of-mario-kart-world-tunes",
+      "en_title": "Nintendo Music Launches Web Player, With Over 4 Hours of Mario Kart World Tunes",
+      "cn_title": "任天堂音乐推出网页版，收录超4小时《马力欧卡丁车世界》曲目",
       "edits": [
         {
           "field": "paragraph_2",
-          "before": "过去几个月里，索尼一直在努力清理其数字商店。大部分精力都用于打击「铲件」——这个术语指的是那些制作廉价、投机取巧的游戏，它们常常以山寨和低质量作品的形式充斥商店页面。",
-          "after": "过去几个月里，索尼一直在努力清理其数字商店。大部分精力都用于打击「铲件（shovelware）」——这个术语指的是那些制作廉价、投机取巧的游戏，它们常常以山寨和低质量作品的形式充斥商店页面。"
+          "before": "现在，除了原有的智能手机专用应用外，你还可以通过PC、平板或车载屏幕上的浏览器播放该流媒体服务。（没错，我打字这会儿正听着呢。）只需访问music.nintendo.com即可开始。",
+          "after": "现在，除了原有的智能手机专用应用外，你还可以通过PC、平板或车载屏幕上的浏览器播放该流媒体服务。只需访问music.nintendo.com即可开始。"
+        },
+        {
+          "field": "paragraph_3",
+          "before": "一如既往，任天堂音乐是Nintendo Switch Online订阅用户的专属福利。目前已有超过130款游戏的原声带可供你随时聆听，从《皮克敏》到《瓦力欧制造》，从《路易吉洋楼》到《超级马力欧银河》。",
+          "after": "一如既往，任天堂音乐是Nintendo Switch Online订阅用户的专属福利。目前已有超过130款游戏的原声带可供你随时聆听，从《皮克敏》到《瓦力欧制造》，从《路易吉洋馆》到《超级马力欧银河》。"
+        }
+      ]
+    },
+    {
+      "type": "user_polish",
+      "date": "2026-06-03",
+      "article_id": 8,
+      "url": "https://www.ign.com/articles/subnautica-2-hotfix-modifies-creature-behavior-further-so-some-predators-will-attack-players-less-often",
+      "en_title": "Subnautica 2 Hotfix Modifies Creature Behavior Further So Some Predators Will Attack Players Less Often",
+      "cn_title": "《深海迷航2》热修复：部分掠食者攻击性降低",
+      "edits": [
+        {
+          "field": "subtitle",
+          "before": "打不过就改AI",
+          "after": "终于改了"
         },
         {
           "field": "paragraph_4",
-          "before": "这家发行商——旗下拥有2022年8月《The Golden Age》的多个版本以及2022年9月续作《The Copper Age》的多个版本——今日在其X/Twitter账号上宣布了其庞大游戏目录的新方向。它表示「这是我们在PlayStation上的最后时光」，并呼吁玩家「在它们消失之前」去看看它的游戏。",
-          "after": "这家发行商——旗下拥有2022年8月发售的《The Golden Age》的多个版本以及2022年9月续作《The Copper Age》的多个版本——今日在其X账号上宣布了其庞大游戏目录的新方向。它表示「这是我们在PlayStation上的最后时光」，并呼吁玩家「在它们消失之前」去看看它的游戏。"
+          "before": "这次热修复来得正是时候。就在昨天，我们报道了《深海迷航2》设计主管Anthony Gallegos的评论，他解释了开发团队在续作中放弃战斗的真正意图。外界有一种说法认为Unknown Worlds实际上想做一款「和平主义游戏」。但Gallegos在接受MinnMax关于《深海迷航2》设计的新采访时表示，这并非事实。",
+          "after": "这次热修复来得正是时候。就在昨天，设计主管Anthony Gallegos解释了开发团队在续作中放弃战斗的真正意图。外界有一种说法认为Unknown Worlds实际上想做一款「和平主义游戏」。但Gallegos在接受MinnMax关于《深海迷航2》设计的新采访时表示，这并非事实。"
         },
         {
           "field": "paragraph_6",
-          "before": "快速浏览PlayStation商店可以发现，Webnetic拥有128款独立命名的游戏，包括同一作品的PS4和PS5版本以及大量续作。奖杯追踪网站TrueTrophies指出，Webnetic还被列为不同地区游戏版本的发行商。",
-          "after": "粗略查看PlayStation Store就能发现，Webnetic名下共有128款不同名称的电子游戏，其中包括部分作品的PS4和PS5双版本，以及数量众多的续作。TrueTrophies等奖杯追踪网站还指出，Webnetic也被列为这些游戏不同地区版本的发行商。"
+          "before": "在杀鱼争论愈演愈烈的同时，《深海迷航2》显然取得了成功。自5月14日抢先体验上线以来，该作已售出400万份，Steam最高同时在线玩家数超过46.7万——Gallegos表示这一成功让团队始料未及。《深海迷航2》销量如此之好，以至于发行商Krafton据称同意向开发商支付2.5亿美元(约合人民币18亿元)的激励金——这笔奖金正是其与被解雇的Unknown Worlds领导层之间备受瞩目的法律纠纷的核心。",
+          "after": "在杀鱼争论愈演愈烈的同时，《深海迷航2》显然取得了成功。自5月14日抢先体验上线以来，该作已售出400万份，Steam最高同时在线玩家数超过46.7万——Gallegos表示这一成功让团队始料未及。《深海迷航2》销量如此之好，以至于发行商Krafton据称同意向开发商支付2.5亿美元（约合人民币18亿元）的激励金——这笔奖金正是其与被解雇的Unknown Worlds领导层之间备受瞩目的法律纠纷的核心。"
+        }
+      ]
+    },
+    {
+      "type": "user_polish",
+      "date": "2026-06-03",
+      "article_id": 9,
+      "url": "https://www.ign.com/articles/forza-horizon-and-need-for-speed-meet-in-maverick-games-debut-driving-project",
+      "en_title": "Forza Horizon and Need for Speed Meet in Maverick Games’ Debut Driving Project",
+      "cn_title": "《极限竞速：地平线》与《极品飞车》合体？Maverick Games首秀《Clutch》",
+      "edits": [
+        {
+          "field": "title",
+          "before": "《极限竞速：地平线》与《极品飞车》合体？Maverick Games首秀《Clutch》",
+          "after": "前《极限竞速：地平线》团队新作《Clutch》公布"
+        },
+        {
+          "field": "subtitle",
+          "before": "竞速新王登场",
+          "after": "该踩离合了"
+        },
+        {
+          "field": "paragraph_2",
+          "before": "由前《极限竞速：地平线5》创意总监Mike Brown领衔，《Clutch》将于2027年春季登陆PS5、Xbox Series X|S和PC。",
+          "after": "由前《极限竞速：地平线5》创意总监Mike Brown领衔，《Clutch》将于2027年春季登陆PS5、Xbox Series和PC。"
+        },
+        {
+          "field": "paragraph_4",
+          "before": "关于《Clutch》的故事、演员阵容和世界的首次预览将于6月5日周五的夏日游戏节展示会上揭晓。",
+          "after": "关于《Clutch》的故事、演员阵容和世界的首次预览将于6月5日周五（北京时间6月6日凌晨5点）的夏日游戏节展示会上揭晓。"
+        },
+        {
+          "field": "paragraph_6",
+          "before": "在《Clutch》的首次亮相中，Brown谈到该项目拥有他参与过的游戏中最长的开发周期。游戏采用定制版Unreal Engine 5，不仅车辆「每一道外部曲线、每一片漆面、每一处内饰缝线」都完美再现，而且车辆还会带有真实的磨损痕迹，表明它们确实被驾驶过。",
+          "after": "在《Clutch》的首次亮相中，Brown谈到该项目拥有他参与过的游戏中最长的开发周期。游戏采用定制版虚幻引擎5，不仅车辆「每一道外部曲线、每一片漆面、每一处内饰缝线」都完美再现，而且车辆还会带有真实的磨损痕迹，表明它们确实被驾驶过。"
+        },
+        {
+          "field": "paragraph_17",
+          "before": "《Clutch》志在竞速品类中掀起巨浪。",
+          "after": "《Clutch》志在竞速品类中掀起巨浪。「为了让大家了解我们的雄心——我显然对汽车文化和汽车娱乐投入颇深，并且深知历史上总有那些巨大的支柱系列支撑并推动着汽车文化向前发展，」Brown说。「曾经有一段时间，《极品飞车》——从《极品飞车：地下狂飙》、《地下狂飙2》到《最高通缉》——连续三年成为全球最畅销游戏。还有一段时期，《Top Gear》是收视率最高的电视节目。在电影领域，尽管《速度与激情》系列不是全球最大的电影系列，但它也是其中之一。它赚的钱比《哈利·波特》还多，比《蝙蝠侠》还多。这就是《Clutch》的野心：为未来十年的汽车文化定下基调，成为推动文化前进的支柱IP。」"
+        }
+      ]
+    },
+    {
+      "type": "user_polish",
+      "date": "2026-06-03",
+      "article_id": 11,
+      "url": "https://www.ign.com/articles/playstation-first-party-game-sales-have-declined-over-the-past-5-years-although-ghost-of-yotei-helped-reverse-the-trend",
+      "en_title": "PlayStation First-Party Game Sales Have Declined Over the Past 5 Years, Although Ghost of Yotei Helped Reverse the Trend",
+      "cn_title": "PlayStation第一方游戏销量五年下滑，《羊蹄山之魂》逆转颓势",
+      "edits": [
+        {
+          "field": "title",
+          "before": "PlayStation第一方游戏销量五年下滑，《羊蹄山之魂》逆转颓势",
+          "after": "PlayStation第一方游戏销量连续五年下滑，《羊蹄山之魂》稍止颓势"
+        },
+        {
+          "field": "paragraph_2",
+          "before": "在PS5涨价和PS Plus订阅费上涨之后，索尼面临压力，今晚的State of Play必须拿出干货。我们知道届时将展示Insomniac的《金刚狼》游戏新画面。但粉丝们希望在State of Play上听到索尼旗下众多第一方工作室的更多消息（点击此处查看我们的预测），其中许多工作室已经多年未推出全新游戏。",
+          "after": "Game File的Stephen Totilo报道的数据显示，索尼需要更多热门PlayStation游戏。Totilo表示，自2020年4月以来，索尼每财年为其PlayStation主机发行或开发的游戏销量减少了数百万份。2020年因疫情封锁以及《最后生还者 第二部》和《对马岛之魂》等重磅作品发售，游戏行业迎来繁荣。上一财年（2025年4月至2026年3月）因《羊蹄山之魂》的发售，销量出现小幅回升，逆转了趋势。"
+        },
+        {
+          "field": "paragraph_3",
+          "before": "但给索尼施压的不只是粉丝。Game File的Stephen Totilo报道的数据显示，索尼需要更多热门PlayStation游戏。Totilo表示，自2020年4月以来，索尼每财年为其PlayStation主机发行或开发的游戏销量减少了数百万份。2020年因疫情封锁以及《最后生还者Part II》和《对马岛之魂》等重磅作品发售，游戏行业迎来繁荣。上一财年（2025年4月至2026年3月）因《羊蹄山之魂》的发售，销量出现小幅回升，逆转了趋势。",
+          "after": "那么，索尼在过去五年里到底发布了哪些游戏？确实有一些高调翻车的作品，比如灾难性的服务型游戏《星鸣特攻》。但值得记住的是，尽管整体销量下滑，索尼仍然推出了不少爆款。例如Arrowhead的《绝地潜兵2》至今仍是PlayStation Studios史上销售最快的游戏。《宇宙机器人》销量可能没那么高，但获得了评论界一致好评。Insomniac推出了《漫威蜘蛛侠：迈尔斯·莫拉莱斯》和《漫威蜘蛛侠2》，两款游戏销量均达数百万份；索尼圣莫尼卡工作室推出了大获成功的《战神：诸神黄昏》。Polyphony Digital推出了《跑车浪漫旅7》。Guerrilla推出了《地平线：西之绝境》。这些都是重磅作品。"
+        },
+        {
+          "field": "paragraph_4",
+          "before": "那么，索尼在过去五年里到底发布了哪些游戏？确实有一些高调翻车的作品，比如灾难性的服务型游戏《星鸣特攻》。但值得记住的是，尽管整体销量下滑，索尼仍然推出了不少爆款。例如Arrowhead的《绝地潜兵2》至今仍是PlayStation Studios史上销售最快的游戏。《宇宙机器人》销量可能没那么高，但获得了评论界一致好评。Insomniac推出了《漫威蜘蛛侠：迈尔斯·莫拉莱斯》和《蜘蛛侠2》，两款游戏销量均达数百万份；索尼圣莫尼卡工作室推出了大获成功的《战神：诸神黄昏》。Polyphony Digital推出了《跑车浪漫旅7》。Guerrilla推出了《地平线：西之绝境》。这些都是重磅作品。",
+          "after": "但数据不会说谎。正如Totilo指出的，索尼近年来推出的几款重制版和复刻版并未缩小差距。索尼在PlayStation主机上售出的PlayStation Studios游戏越来越少，这可能是其决定退出PC平台、让单人叙事游戏重回PlayStation独占的原因之一。"
+        },
+        {
+          "field": "paragraph_5",
+          "before": "但数据不会说谎。正如Totilo指出的，索尼近年来推出的几款重制版和复刻版并未缩小差距。索尼在PlayStation主机上售出的PlayStation Studios游戏越来越少，这可能是其决定退出PC平台、让单人叙事游戏重回PlayStation独占的原因之一。",
+          "after": "不过，索尼应该感到欣慰的是，包括第三方开发商和发行商游戏在内的PlayStation游戏总销量近年来有所上升。所以整体来看，形势是积极的。只是索尼自家发行的游戏需要一剂强心针。"
+        },
+        {
+          "field": "paragraph_6",
+          "before": "不过，索尼应该感到欣慰的是，包括第三方开发商和发行商游戏在内的PlayStation游戏总销量近年来有所上升。所以整体来看，形势是积极的。只是索尼自家发行的游戏需要一剂强心针。",
+          "after": "这些数据强化了一个观点：索尼在本世代推出新PS5游戏方面举步维艰。正如我们所述，确实有大作问世，但一些开发商已经多年未推出全新游戏。最典型的是顽皮狗，他们正在开发《星际：异端先知》，但自六年前的《最后生还者 第二部》之后就没有再推出过全新游戏。《跑车浪漫旅7》作为跨世代游戏推出已有四年，仍在持续更新，但Polyphony Digital应该推出该赛车系列的新作了。Bend Studio的上一款游戏是2019年的《往日不再》。Media Molecule的上一款游戏是2020年的《梦想大创造》。"
+        },
+        {
+          "field": "paragraph_7",
+          "before": "这些数据强化了一个观点：索尼在本世代推出新PS5游戏方面举步维艰。正如我们所述，确实有大作问世，但一些开发商已经多年未推出全新游戏。最典型的是顽皮狗，他们正在开发《星际：异端先知》，但自六年前的《最后生还者Part II》之后就没有再推出过全新游戏。《跑车浪漫旅7》作为跨世代游戏推出已有四年，仍在持续更新，但Polyphony Digital应该推出该赛车系列的新作了。Bend Studio的上一款游戏是2019年的《往日不再》。Media Molecule的上一款游戏是2020年的《梦想大创造》。",
+          "after": "在指出索尼第一方游戏销量放缓的同时，不能不提近年来它取消的众多游戏。索尼大张旗鼓的服务型游戏推进计划催生了爆款《绝地潜兵2》，但《最后生还者 Online》被取消，《星鸣特攻》及其开发商Firewalk被关闭，Bluepoint的一款《战神》服务型游戏甚至还没公布就夭折了。此外还有被取消的《烈火战车》服务型游戏，以及索尼Bend工作室被取消的项目。Haven Studios的《Fairgame$》官方仍在开发中，但可能已经改名。所有这些被取消的游戏无疑在索尼的发售日程上留下了一个大窟窿。"
+        },
+        {
+          "field": "paragraph_8",
+          "before": "在指出索尼第一方游戏销量放缓的同时，不能不提近年来它取消的众多游戏。索尼大张旗鼓的服务型游戏推进计划催生了爆款《绝地潜兵2》，但《最后生还者》在线版被取消，《星鸣特攻》及其开发商Firewalk被关闭，Bluepoint的一款《战神》服务型游戏甚至还没公布就夭折了。此外还有被取消的《烈火战车》服务型游戏，以及索尼Bend工作室被取消的项目。Haven Studios的《Fairgames》官方仍在开发中，但可能已经改名。所有这些被取消的游戏无疑在索尼的发售日程上留下了一个大窟窿。",
+          "after": "这些数据不包括近期发布的PlayStation Studios游戏，例如Housemarque的《沙罗周期》——该作在销量上似乎表现不佳，以及Bungie的《失落星船：马拉松》——该作似乎也未达到销售目标。"
+        }
+      ]
+    },
+    {
+      "type": "user_polish",
+      "date": "2026-06-03",
+      "article_id": 18,
+      "url": "https://www.ign.com/articles/is-spider-man-in-marvels-wolverine-and-who-does-wolverine-team-up-with",
+      "en_title": "Is Spider-Man in Marvel's Wolverine? And Who Does Wolverine Team Up With?",
+      "cn_title": "《漫威金刚狼》确认无蜘蛛侠，但将与宿敌组队",
+      "edits": [
+        {
+          "field": "paragraph_1",
+          "before": "在索尼State of Play直播前夕，我有机会采访了Insomniac，聊了聊《漫威金刚狼》的方方面面。完整采访会告诉你游戏的具体玩法和值得期待的内容，但有几个要点值得单独拿出来说：第一，蜘蛛侠不会出现在游戏中；第二，金刚狼实际上会与一个令人意外的角色组队。",
+          "after": "在索尼State of Play直播前夕，IGN有机会采访了Insomniac，聊了聊《漫威金刚狼》的方方面面。完整采访会告诉你游戏的具体玩法和值得期待的内容，但有几个要点值得单独拿出来说：第一，蜘蛛侠不会出现在游戏中；第二，金刚狼实际上会与一个令人意外的角色组队。"
+        },
+        {
+          "field": "paragraph_4",
+          "before": "所以，金刚狼和蜘蛛侠不会联手。但金刚狼确实会与X战警漫画中更熟悉的角色组队。在实机预告中，我们看到金刚狼和琴·葛蕾并肩作战，互相为对方创造合作击杀的机会。但Insomniac告诉IGN，金刚狼还会与他的宿敌之一——剑齿虎组队。",
+          "after": "所以，金刚狼和蜘蛛侠不会联手。但金刚狼确实会与X战警漫画中更熟悉的角色组队。在实机预告中，我们看到金刚狼和琴·格蕾并肩作战，互相为对方创造合作击杀的机会。但Insomniac告诉IGN，金刚狼还会与他的宿敌之一——剑齿虎组队。"
+        },
+        {
+          "field": "paragraph_6",
+          "before": "「在本作中，罗根和剑齿虎确实同属一个团队，但他们结盟的方式与你和琴·葛蕾结盟的方式完全不同，」Daly说道。「罗根和剑齿虎之间有一种非常竞争的关系。琴·葛蕾可能会给你创造击杀机会，而剑齿虎在你身边战斗时，更像是你以为自己能拿到击杀，他却冲进来抢走，他们之间的战斗调侃会凸显这种动态，让整个战斗更有趣。」",
+          "after": "「在本作中，罗根和剑齿虎确实同属一个团队，但他们结盟的方式与你和琴·格蕾结盟的方式完全不同，」Daly说道。「罗根和剑齿虎之间有一种非常竞争的关系。琴·格蕾可能会给你创造击杀机会，而剑齿虎在你身边战斗时，更像是你以为自己能拿到击杀，他却冲进来抢走，他们之间的战斗调侃会凸显这种动态，让整个战斗更有趣。」"
         },
         {
           "field": "paragraph_9",
-          "before": "目前尚不清楚Webnetic的游戏具体何时会从PlayStation商店移除。与此同时，你可以阅读IGN对「Eslop」世界的深度报道。",
-          "after": "目前尚不清楚Webnetic的游戏具体何时会从PlayStation商店移除。"
+          "before": "完整采访中还有更多关于《漫威金刚狼》的内容。本作将于2026年9月15日独占登陆PS5。如果你想了解PlayStation准备了什么，这里是2026年6月State of Play公布的所有内容。",
+          "after": "本作将于2026年9月15日独占登陆PS5。"
+        }
+      ]
+    },
+    {
+      "type": "user_polish",
+      "date": "2026-06-03",
+      "article_id": 19,
+      "url": "https://www.ign.com/articles/marvels-wolverine-lets-you-turn-off-the-gore-censoring-all-the-blood",
+      "en_title": "Marvel's Wolverine Lets You Turn Off the Gore, Censoring All the Blood",
+      "cn_title": "《漫威金刚狼》可关闭血腥特效",
+      "edits": [
+        {
+          "field": "paragraph_4",
+          "before": "所以，如果你想降低《漫威金刚狼》的暴力程度，你可以做到。请务必查看我们对Insomniac的完整采访，了解《漫威金刚狼》的实际玩法。",
+          "after": "所以，如果你想降低《漫威金刚狼》的暴力程度，你可以做到。"
+        }
+      ]
+    },
+    {
+      "type": "user_polish",
+      "date": "2026-06-03",
+      "article_id": 20,
+      "url": "https://www.ign.com/articles/marvels-wolverine-the-big-interview-with-insomniac-on-sonys-unapologetically-violent-ps5-exclusive",
+      "en_title": "Marvel's Wolverine: The Big Interview With Insomniac on Sony's 'Unapologetically Violent' PS5 Exclusive",
+      "cn_title": "《索尼》《漫威金刚狼》暴力无上限：Insomniac详解PS5独占",
+      "edits": [
+        {
+          "field": "title",
+          "before": "《索尼》《漫威金刚狼》暴力无上限：Insomniac详解PS5独占",
+          "after": "Insomniac《漫威金刚狼》专访"
+        },
+        {
+          "field": "subtitle",
+          "before": "金刚狼的愤怒",
+          "after": "「我们并不是想做一个开放世界游戏或沙盒游戏」"
+        },
+        {
+          "field": "paragraph_1",
+          "before": "你肯定已经看过索尼State of Play发布会上《漫威金刚狼》的实机演示了，心里肯定有不少疑问。我也是！作为金刚狼的铁杆粉丝，我想知道更多关于这款游戏的实际玩法——从暴力程度到与琴·葛蕾的合作终结技。愤怒值系统怎么运作？那真的是实时治疗吗？游戏本身的规模和范围又如何？",
+          "after": "你肯定已经看过索尼State of Play发布会上《漫威金刚狼》的实机演示了，心里肯定有不少疑问。作为金刚狼的铁杆粉丝，我想知道更多关于这款游戏的实际玩法——从暴力程度到与琴·格蕾的合作终结技。愤怒值系统怎么运作？那真的是实时治疗吗？游戏本身的规模和范围又如何？"
+        },
+        {
+          "field": "paragraph_2",
+          "before": "在State of Play之前，我提前观看了预告片，并有机会与创意总监Marcus Smith和游戏总监Mike Daly聊了30分钟，尽可能多地了解《漫威金刚狼》的信息。没错，我问了能不能竖中指。",
+          "after": "在State of Play之前，IGN有机会与创意总监Marcus Smith和游戏总监Mike Daly聊了30分钟，尽可能多地了解《漫威金刚狼》的信息。"
+        },
+        {
+          "field": "paragraph_3",
+          "before": "如果你想了解PlayStation在2026年6月State of Play上公布的所有内容，可以查看这里。",
+          "after": "IGN：血腥程度非常高，作为金刚狼粉丝这很棒。但之前也有面向不同受众的家庭友好版金刚狼，你们在决定「我们就要这么做，这是M级成人游戏」时，有没有过任何犹豫？"
+        },
+        {
+          "field": "paragraph_4",
+          "before": "IGN：血腥程度非常高，作为金刚狼粉丝这很棒。但之前也有面向不同受众的家庭友好版金刚狼，你们在决定「我们就要这么做，这是M级成人游戏」时，有没有过任何犹豫？",
+          "after": "Mike Daly：从项目一开始，我们就知道最重要的目标是把金刚狼的幻想变为现实。不仅仅是实现，而是要打造终极的金刚狼幻想。当你审视这个角色的方方面面以及他经历过的所有故事时，很明显暴力是其核心部分。所以这一点从未有过疑问，从一开始就融入了我们的决策方式。我们知道必须在游戏中展现这一点，把它交到玩家手中，让它成为故事的一部分。"
+        },
+        {
+          "field": "paragraph_5",
+          "before": "Mike Daly：从项目一开始，我们就知道最重要的目标是把金刚狼的幻想变为现实。不仅仅是实现，而是要打造终极的金刚狼幻想。当你审视这个角色的方方面面以及他经历过的所有故事时，很明显暴力是其核心部分。所以这一点从未有过疑问，从一开始就融入了我们的决策方式。我们知道必须在游戏中展现这一点，把它交到玩家手中，让它成为故事的一部分。",
+          "after": "但与此同时，Insomniac Games希望打造一个真实可信的世界。所以我们不想做得太过火。我们真正想要的是精准命中金刚狼的最佳呈现，满足粉丝的期待，并让爪击战斗在整个游戏过程中始终保持爽快感。"
+        },
+        {
+          "field": "paragraph_6",
+          "before": "但与此同时，Insomniac Games希望打造一个真实可信的世界。所以我们不想做得太过火。我们真正想要的是精准命中金刚狼的最佳呈现，满足粉丝的期待，并让爪击战斗在整个游戏过程中始终保持爽快感。",
+          "after": "这就是我们校准的标准。你可以从预告片中看到结果。我会形容它是「毫无歉意地暴力」。我们知道必须做到这一点才能完成终极使命。正因如此，游戏玩法保持了爽快感。"
+        }
+      ]
+    },
+    {
+      "type": "user_polish",
+      "date": "2026-06-03",
+      "article_id": 21,
+      "url": "https://www.ign.com/articles/fayes-story-so-far-and-why-you-wont-be-playing-as-kratos-in-god-of-war-laufey",
+      "en_title": "Faye’s Story So Far and Why You Won’t Be Playing as Kratos in God of War Laufey",
+      "cn_title": "《战神：劳菲》主角确认非奎托斯，菲的故事将展开",
+      "edits": [
+        {
+          "field": "title",
+          "before": "《战神：劳菲》主角确认非奎托斯，菲的故事将展开",
+          "after": "为什么新《战神》的主角不是奎托斯，劳菲迄今为止的故事"
+        },
+        {
+          "field": "paragraph_3",
+          "before": "「我一直想对这个角色进行更多拓展，」圣莫妮卡工作室创意总监、2018年《战神》导演Cory Barlog说道，「随着我们不断扩展《战神》宇宙，展现其更多面貌，这些关键角色不仅在已发生的故事中发挥作用，也将影响未来的走向。」",
+          "after": "「我一直想对这个角色进行更多拓展，」圣莫尼卡工作室创意总监、2018年《战神》导演Cory Barlog说道，「随着我们不断扩展《战神》宇宙，展现其更多面貌，这些关键角色不仅在已发生的故事中发挥作用，也将影响未来的走向。」"
+        },
+        {
+          "field": "paragraph_11",
+          "before": "看起来圣莫妮卡工作室在坚持让粉丝爱上最新《战神》系列的那些元素的同时，转向了一个新的视角，将解锁这个世界的全新层次。看到一家PlayStation工作室不满足于现状、不给我们一个简单的续作，而是提出新的问题、让我们渴望答案，这令人兴奋且耳目一新。",
+          "after": "看起来圣莫尼卡工作室在坚持让粉丝爱上最新《战神》系列的那些元素的同时，转向了一个新的视角，将解锁这个世界的全新层次。看到一家PlayStation工作室不满足于现状、不给我们一个简单的续作，而是提出新的问题、让我们渴望答案，这令人兴奋且耳目一新。"
+        }
+      ]
+    },
+    {
+      "type": "user_polish",
+      "date": "2026-06-03",
+      "article_id": 25,
+      "url": "https://www.ign.com/articles/godofwarlaufeyinterview",
+      "en_title": "Inside God of War Laufey – Santa Monica Studio on Why Faye, a Ribbon, and a Cube Are Our New Heroes",
+      "cn_title": "《战神：劳菲》新情报：圣莫妮卡工作室详解女主角",
+      "edits": [
+        {
+          "field": "title",
+          "before": "《战神：劳菲》新情报：圣莫妮卡工作室详解女主角",
+          "after": "圣莫尼卡工作室详解《战神：劳菲》女主角"
+        },
+        {
+          "field": "paragraph_1",
+          "before": "《战神：劳菲》正在焚烧系列的规则手册，并将其送入来世——字面意义上的。奎托斯的妻子、阿特柔斯的母亲劳菲，是圣莫妮卡工作室最新游戏的主角。刚刚在State of Play上公布的20分钟实机演示，是对这位新杀戮女王的绝佳介绍：她与两位战神对决，与一个宇宙立方体结盟，并发现自己被困在一个如梦似幻的新世界中。",
+          "after": "《战神：劳菲》正在焚烧系列的规则手册，并将其送入来世——字面意义上的。奎托斯的妻子、阿特柔斯的母亲劳菲，是圣莫尼卡工作室最新游戏的主角。刚刚在State of Play上公布的20分钟实机演示，是对这位新杀戮女王的绝佳介绍：她与两位战神对决，与一个宇宙立方体结盟，并发现自己被困在一个如梦似幻的新世界中。"
+        },
+        {
+          "field": "paragraph_5",
+          "before": "圣莫妮卡工作室的新作并非传闻中的前传，而是从2018年《战神》开头劳菲的遗体在火葬柴堆上焚烧的那一刻开始。这将她传送到了一个名为「万古」的地方——众神的来世。这绝不是瓦尔哈拉的极乐世界，而是一个噩梦般的异界，有致命的鲜花和戴着面具的骷髅，生物被关在笼子里。到处是尸体的篝火，天空中悬挂着一扇不祥的大门。这里远非友善之地，圣莫妮卡工作室创意总监Cory Barlog非常乐意透露这一点。",
+          "after": "故事发生在哪"
+        },
+        {
+          "field": "paragraph_6",
+          "before": "「他们都是混蛋，」他说，「几乎所有神话中的每一个神，与权力的关系都非常糟糕，他们滥用权力。当你把所有这些家伙——就像一群亿万富翁放在一个岛上——他们以为自己会过上幸福的生活。不，他们会互相争斗，陷入一种奇怪的冲突感，因为他们被困在监狱里。」",
+          "after": "圣莫尼卡工作室的新作并非传闻中的前传，而是从2018年《战神》开头劳菲的遗体在火葬柴堆上焚烧的那一刻开始。这将她传送到了一个名为「万古（Everywhen）」的地方——众神的来世。这绝不是英灵殿的极乐世界，而是一个噩梦般的异界，有致命的鲜花和戴着面具的骷髅，生物被关在笼子里。到处是尸体的篝火，天空中悬挂着一扇不祥的大门。这里远非友善之地，圣莫尼卡工作室创意总监Cory Barlog非常乐意透露这一点。"
+        },
+        {
+          "field": "paragraph_7",
+          "before": "这一理念通过两个著名的敌人——塞赫美特和贝格策——得到了暴力体现。后者是一个巨大的红色家伙，是蒙古战神。他如此金属，名字来自蒙古语中「盔甲」一词，他的角色似乎是塞赫美特在来世的保镖。至于塞赫美特，她在埃及神话中举足轻重，不仅仅是另一个战神，还与瘟疫、复仇、医学和太阳有关。她是由埃及的天地冥界统治者拉创造出来惩罚人类的，但她过于投入，差点把人类全部消灭。《战神：劳菲》似乎非常强调这种疯狂刻薄女孩的元素，我很喜欢。",
+          "after": "「他们都是混蛋，」他说，「几乎所有神话中的每一个神，与权力的关系都非常糟糕，他们滥用权力。当你把所有这些家伙——就像一群亿万富翁放在一个岛上——他们以为自己会过上幸福的生活。不，他们会互相争斗，陷入一种奇怪的冲突感，因为他们被困在监狱里。」"
+        },
+        {
+          "field": "paragraph_8",
+          "before": "「塞赫美特仍然具有那种庄严、可怕和威严，」Lawrence说，「我们希望能够真正展示那种势均力敌的对决，并让塞赫美特和贝格策相遇。」",
+          "after": "这一理念通过两个著名的敌人——塞赫美特（Sekhmet)与贝格策(Begtse)——得到了暴力体现。后者是一个巨大的红色家伙，是蒙古战神。他如此金属，名字来自蒙古语中「盔甲」一词，他的角色似乎是塞赫美特在来世的保镖。至于塞赫美特，她在埃及神话中举足轻重，不仅仅是另一个战神，还与瘟疫、复仇、医学和太阳有关。她是由埃及的天地冥界统治者拉（Ra）创造出来惩罚人类的，但她过于投入，差点把人类全部消灭。《战神：劳菲》似乎非常强调这种疯狂刻薄女孩的元素，我很喜欢。"
+        },
+        {
+          "field": "paragraph_9",
+          "before": "幸运的是，劳菲在砸烂东西方面也不含糊。她轻松地像奎托斯一样强悍，尽管身材不像坦克。她更运动型，以敏捷和速度而非蛮力对付敌人，而她的巨人血统意味着她可以使用魔法。她还很快拿到了一把非常不寻常的剑。",
+          "after": "「塞赫美特仍然具有那种庄严、可怕和威严，」Lawrence说，「我们希望能够真正展示那种势均力敌的对决，并让塞赫美特和贝格策相遇。」"
+        },
+        {
+          "field": "paragraph_10",
+          "before": "「她的体型与奎托斯不同，」Lawrence解释道，「奎托斯像一堵砖墙，有点坚忍，但他的残暴方式不同。我们如何展示一个与他同样强大的人呢？」",
+          "after": "战神劳菲"
+        }
+      ]
+    },
+    {
+      "type": "user_polish",
+      "date": "2026-06-03",
+      "article_id": 46,
+      "url": "https://www.ign.com/articles/tom-holland-reveals-how-the-odyssey-almost-saved-spider-man-brand-new-day",
+      "en_title": "Tom Holland Reveals How The Odyssey 'Almost Saved' Spider-Man: Brand New Day",
+      "cn_title": "《奥德赛》差点拯救了《蜘蛛侠》新片",
+      "edits": [
+        {
+          "field": "title",
+          "before": "《奥德赛》差点拯救了《蜘蛛侠》新片",
+          "after": "汤姆·霍兰德：拍摄《奥德赛》让《蜘蛛侠》新片「逃过一劫」"
+        },
+        {
+          "field": "subtitle",
+          "before": "诺兰间接救场",
+          "after": "间接救场"
+        },
+        {
+          "field": "paragraph_1",
+          "before": "蜘蛛侠主演汤姆·霍兰德表示，当他请求推迟《崭新一天》的制作——以便先去拍摄克里斯托弗·诺兰的《奥德赛》时，这部影片「差点被拯救了」。",
+          "after": "蜘蛛侠主演汤姆·霍兰德表示，当他请求推迟《蜘蛛侠：崭新之日》的制作——以便先去拍摄克里斯托弗·诺兰的《奥德赛》时，这让这部影片「逃过一劫」。"
+        },
+        {
+          "field": "paragraph_2",
+          "before": "霍兰德在接受《GQ》采访时回忆，诺兰曾邀请他出演这部即将上映的历史史诗片，但他不得不承认自己当时已经承诺要同时拍摄《蜘蛛侠：崭新一天》。",
+          "after": "霍兰德在接受《GQ》采访时回忆，诺兰曾邀请他出演这部即将上映的历史史诗片，但他不得不承认自己当时已经承诺要同时拍摄《蜘蛛侠：崭新之日》。"
+        },
+        {
+          "field": "paragraph_4",
+          "before": "索尼同意将《蜘蛛侠》的制作计划推迟六个月，以便霍兰德拍摄《奥德赛》，与此同时，片方在寻找导演的过程中找到了《尚气》和《奇迹人》的导演德斯汀·丹尼尔·克雷顿。这次延期似乎也让霍兰德、克雷顿和索尼能够更好地把握影片的故事——而不是在片场边拍边想。",
+          "after": "索尼同意将《蜘蛛侠：崭新之日》的制作计划推迟六个月，以便霍兰德拍摄《奥德赛》，与此同时，片方在寻找导演的过程中找到了《尚气》和《奇迹人》的导演德斯汀·丹尼尔·克雷顿。这次延期似乎也让霍兰德、克雷顿和索尼能够更好地把握影片的故事——而不是在片场边拍边想。"
+        },
+        {
+          "field": "paragraph_5",
+          "before": "「《奥德赛》差点拯救了《蜘蛛侠》，因为我们本来不会有德斯汀，」霍兰德说。「当我们准备好开拍时，他还没准备好执导这部电影。我们也不会有那六个月的时间与德斯汀一起打磨剧本，让它达到现在的水平。我真心相信，我们拍出了有史以来最好的蜘蛛侠电影。所以，虽然这对索尼来说很难接受，但我想事后他们对此非常感激。」",
+          "after": "「《奥德赛》让《蜘蛛侠：崭新之日》‘逃过一劫’，因为我们本来不会有德斯汀，」霍兰德说。「当我们准备好开拍时，他还没准备好执导这部电影。我们也不会有那六个月的时间与德斯汀一起打磨剧本，让它达到现在的水平。我真心相信，我们拍出了有史以来最好的蜘蛛侠电影。所以，虽然这对索尼来说很难接受，但我想事后他们对此非常感激。」"
+        },
+        {
+          "field": "paragraph_7",
+          "before": "「德斯汀在这方面起了很大作用，」霍兰德继续说道，「但能不断给制片厂和我深爱的制片人艾米·帕斯卡和瑞秋·奥康纳打电话，说'克里斯是这么做的，我觉得我们也应该这么做'，这种感觉真的很好。」",
+          "after": "「德斯汀在这方面起了很大作用，」霍兰德继续说道，「但能不断给制片厂和我深爱的制片人艾米·帕斯卡和瑞秋·奥康纳打电话，说'克里斯（指诺兰）是这么做的，我觉得我们也应该这么做'，这种感觉真的很好。」"
+        },
+        {
+          "field": "paragraph_8",
+          "before": "《蜘蛛侠：崭新一天》将于7月31日上映，此前已有巨大声势、破纪录的预告片，以及围绕《怪奇物语》主演萨迪·辛克角色的无数猜测。该片将在诺兰备受期待的《奥德赛》于7月17日上映后紧接着登场，后者拥有豪华阵容，包括马特·达蒙、罗伯特·帕丁森，以及霍兰德现实中的伴侣兼蜘蛛侠搭档赞达亚。",
+          "after": "《蜘蛛侠：崭新之日》将于7月31日于北美上映，中国大陆已确定引进，具体上映时间暂未定档。此前已有巨大声势、破纪录的预告片，以及围绕《怪奇物语》主演萨迪·辛克角色的无数猜测。该片将在诺兰备受期待的《奥德赛》于7月17日上映后紧接着登场，后者拥有豪华阵容，包括马特·达蒙、罗伯特·帕丁森，以及霍兰德现实中的伴侣兼蜘蛛侠搭档赞达亚。"
         }
       ]
     }
   ],
-  "candidates": [],
-  "notes": [
-    "API returned malformed JSON; automatic repair did not produce valid JSON."
+  "candidates": [
+    {
+      "id_hint": "remove_promotional_related_links",
+      "title": "删除站内推广和相关阅读引导",
+      "rule": "正文末尾的“查看更多”“阅读我们的采访或汇总”等站内引流句应删除，但不得删除承载新闻事实的正文。",
+      "category": "structure",
+      "scope": "all",
+      "status_suggestion": "observe",
+      "confidence": 0.88,
+      "evidence_summary": "多篇稿件删去了站内引流，只保留新闻事实。",
+      "examples": [
+        {
+          "date": "2026-06-03",
+          "article_id": 18,
+          "before": "完整采访中还有更多关于《漫威金刚狼》的内容。本作将于2026年9月15日独占登陆PS5。如果你想了解PlayStation准备了什么，这里是2026年6月State of Play公布的所有内容。",
+          "after": "本作将于2026年9月15日独占登陆PS5。"
+        },
+        {
+          "date": "2026-06-03",
+          "article_id": 19,
+          "before": "所以，如果你想降低《漫威金刚狼》的暴力程度，你可以做到。请务必查看我们对Insomniac的完整采访，了解《漫威金刚狼》的实际玩法。",
+          "after": "所以，如果你想降低《漫威金刚狼》的暴力程度，你可以做到。"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id_hint": "remove_personal_commentary",
+      "title": "删除不影响事实的作者调侃",
+      "rule": "可删除括号内的随口调侃、编辑自我评论等非事实性旁白；涉及作者判断、体验或原文论证时必须保留。",
+      "category": "body",
+      "scope": "news",
+      "status_suggestion": "observe",
+      "confidence": 0.72,
+      "evidence_summary": "多篇新闻稿删除了不影响信息的作者随口评论。",
+      "examples": [
+        {
+          "date": "2026-06-03",
+          "article_id": 5,
+          "before": "现在，除了原有的智能手机专用应用外，你还可以通过PC、平板或车载屏幕上的浏览器播放该流媒体服务。（没错，我打字这会儿正听着呢。）只需访问music.nintendo.com即可开始。",
+          "after": "现在，除了原有的智能手机专用应用外，你还可以通过PC、平板或车载屏幕上的浏览器播放该流媒体服务。只需访问music.nintendo.com即可开始。"
+        },
+        {
+          "date": "2026-06-03",
+          "article_id": 20,
+          "before": "在State of Play之前，我提前观看了预告片，并有机会与创意总监Marcus Smith和游戏总监Mike Daly聊了30分钟，尽可能多地了解《漫威金刚狼》的信息。没错，我问了能不能竖中指。",
+          "after": "在State of Play之前，IGN有机会与创意总监Marcus Smith和游戏总监Mike Daly聊了30分钟，尽可能多地了解《漫威金刚狼》的信息。"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id_hint": "subtitle_avoid_concrete_detail",
+      "title": "副标题简短、有记忆点但不增添事实",
+      "rule": "副标题保持2至15字，优先用简短短语、双关或原文引语，不机械复述标题；不得补充原文没有的事实或改变立场。",
+      "category": "subtitle",
+      "scope": "all",
+      "status_suggestion": "observe",
+      "confidence": 0.84,
+      "evidence_summary": "多日样本显示，副标题倾向短句、引语或轻微双关。",
+      "examples": [
+        {
+          "date": "2026-06-03",
+          "article_id": 8,
+          "before": "打不过就改AI",
+          "after": "终于改了"
+        },
+        {
+          "date": "2026-06-03",
+          "article_id": 9,
+          "before": "竞速新王登场",
+          "after": "该踩离合了"
+        },
+        {
+          "date": "2026-06-03",
+          "article_id": 20,
+          "before": "金刚狼的愤怒",
+          "after": "「我们并不是想做一个开放世界游戏或沙盒游戏」"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id_hint": "preserve_source_information_and_order",
+      "title": "完整保留原文信息与论述顺序",
+      "rule": "正文翻译必须逐段覆盖原文事实、引语和列表，并保持论述顺序；润色可以改善中文，但不能擅自删减、合并错位或扩写成原文没有的内容。",
+      "category": "body",
+      "scope": "all",
+      "status_suggestion": "observe",
+      "confidence": 0.94,
+      "evidence_summary": "长文、访谈和清单稿反复显示：忠实、完整和顺序准确优先。",
+      "examples": [
+        {
+          "date": "2026-06-03",
+          "article_id": 9,
+          "before": "《Clutch》志在竞速品类中掀起巨浪。",
+          "after": "《Clutch》志在竞速品类中掀起巨浪。「为了让大家了解我们的雄心——我显然对汽车文化和汽车娱乐投入颇深，并且深知历史上总有那些巨大的支柱系列支撑并推动着汽车文化向前发展，」Brown说。「曾经有一段时间，《极品飞车》——从《极品飞车：地下狂飙》、《地下狂飙2》到《最高通缉》——连续三年成为全球最畅销游戏。还有一段时期，《Top Gear》是收视率最高的电视节目。在电影领域，尽管《速度与激情》系列不是全球最大的电影系列，但它也是其中之一。它赚的钱比《哈利·波特》还多，比《蝙蝠侠》还多。这就是《Clutch》的野心：为未来十年的汽车文化定下基调，成为推动文化前进的支柱IP。」"
+        },
+        {
+          "date": "2026-06-03",
+          "article_id": 11,
+          "before": "在PS5涨价和PS Plus订阅费上涨之后，索尼面临压力，今晚的State of Play必须拿出干货。我们知道届时将展示Insomniac的《金刚狼》游戏新画面。但粉丝们希望在State of Play上听到索尼旗下众多第一方工作室的更多消息（点击此处查看我们的预测），其中许多工作室已经多年未推出全新游戏。",
+          "after": "Game File的Stephen Totilo报道的数据显示，索尼需要更多热门PlayStation游戏。Totilo表示，自2020年4月以来，索尼每财年为其PlayStation主机发行或开发的游戏销量减少了数百万份。2020年因疫情封锁以及《最后生还者 第二部》和《对马岛之魂》等重磅作品发售，游戏行业迎来繁荣。上一财年（2025年4月至2026年3月）因《羊蹄山之魂》的发售，销量出现小幅回升，逆转了趋势。"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id_hint": "prefer_confirmed_chinese_game_titles",
+      "title": "优先使用已确认的官方或通行中文名",
+      "rule": "游戏、影视、角色和系统名有稳定官方或通行中文译名时应统一使用；没有稳定译名时保留原文，不自行创造译名。",
+      "category": "dictionary",
+      "scope": "games|movies_tv",
+      "status_suggestion": "observe",
+      "confidence": 0.74,
+      "evidence_summary": "多个样本纠正了作品名和角色名，并避免使用不稳定译名。",
+      "examples": [
+        {
+          "date": "2026-06-03",
+          "article_id": 5,
+          "before": "一如既往，任天堂音乐是Nintendo Switch Online订阅用户的专属福利。目前已有超过130款游戏的原声带可供你随时聆听，从《皮克敏》到《瓦力欧制造》，从《路易吉洋楼》到《超级马力欧银河》。",
+          "after": "一如既往，任天堂音乐是Nintendo Switch Online订阅用户的专属福利。目前已有超过130款游戏的原声带可供你随时聆听，从《皮克敏》到《瓦力欧制造》，从《路易吉洋馆》到《超级马力欧银河》。"
+        },
+        {
+          "date": "2026-06-03",
+          "article_id": 18,
+          "before": "所以，金刚狼和蜘蛛侠不会联手。但金刚狼确实会与X战警漫画中更熟悉的角色组队。在实机预告中，我们看到金刚狼和琴·葛蕾并肩作战，互相为对方创造合作击杀的机会。但Insomniac告诉IGN，金刚狼还会与他的宿敌之一——剑齿虎组队。",
+          "after": "所以，金刚狼和蜘蛛侠不会联手。但金刚狼确实会与X战警漫画中更熟悉的角色组队。在实机预告中，我们看到金刚狼和琴·格蕾并肩作战，互相为对方创造合作击杀的机会。但Insomniac告诉IGN，金刚狼还会与他的宿敌之一——剑齿虎组队。"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id_hint": "remove_author_bio_and_image_credit",
+      "title": "删除作者简介和非正文署名",
+      "rule": "成稿不保留IGN作者简介、联系方式、社交账号、图片来源等非正文尾注。",
+      "category": "structure",
+      "scope": "all",
+      "status_suggestion": "observe",
+      "confidence": 0.82,
+      "evidence_summary": "多篇稿件一致删除作者简介和社交账号尾注。",
+      "examples": [],
+      "contradiction": ""
+    }
   ],
-  "parse_error": "Invalid control character at: line 96 column 69 (char 2941)",
-  "repair_error": "Expecting value: line 1 column 1 (char 0)",
-  "raw_excerpt": "{ \"candidates\": [ { \"id_hint\": \"playstation_store_english\", \"title\": \"PlayStation Store 使用英文名\", \"rule\": \"在正文中提及PlayStation数字商店时，应使用英文“PlayStation Store”，而非“PlayStation商店”。\", \"category\": \"names\", \"scope\": \"all\", \"status_suggestion\": \"confirm\", \"confidence\": 0.9, \"evidence_summary\": \"用户将原文“PlayStation商店”改为“PlayStation Store”，且之前已有pending规则，本次修改支持该规则。\", \"examples\": [ { \"date\": \"2026-06-03\", \"article_id\": 1, \"before\": \"快速浏览PlayStation商店可以发现\", \"after\": \"粗略查看PlayStation Store就能发现\" } ], \"contradiction\": \"\" }, { \"id_hint\": \"social_media_platform_latest_name\", \"title\": \"社交媒体平台使用最新官方名称\", \"rule\": \"将“X/Twitter”简写为“X”，不保留“/Twitter”旧称。\", \"category\": \"names\", \"scope\": \"all\", \"status_suggestion\": \"confirm\", \"confidence\": 0.95, \"evidence_summary\": \"用户将“X/Twitter”改为“X”，与已有规则一致，再次确认。\", \"examples\": [ { \"date\": \"2026-06-03\", \"article_id\": 1, \"before\": \"今日在其X/Twitter账号上宣布\", \"after\": \"今日在其X账号上宣布\" } ], \"contradiction\": \"\" }, { \"id_hint\": \"add_english_term_for_uncommon_translation\", \"title\": \"不常见译名首次出现时附加英文原文\", \"rule\": \"当术语的中文译名在社区不常见时，首次出现采用“中文（英文）”格式加注。\", \"category\": \"dictionary\", \"scope\": \"all\", \"status_suggestion\": \"confirm\", \"confidence\": 0.95, \"evidence_summary\": \"用户将“铲件”改为“铲件（shovelware）”，与已有规则一致，再次",
-  "repair_excerpt": "",
-  "updated_at": "2026-06-04T06:40:21+08:00"
+  "notes": [
+    "Codex补跑腾讯文档润色，只提取跨篇可复用规律；单篇特例不直接升级为长期规则。",
+    "未学习汇率数值、国区售价、额外上映信息及“今日/昨晚”等时效性补充，避免脱离原文或随时间失效。",
+    "所有候选仍需在学习页确认后才能进入STYLE_PROFILE.md。"
+  ],
+  "updated_at": "2026-06-12T21:51:19+08:00",
+  "observer": "codex"
 }

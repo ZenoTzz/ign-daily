@@ -470,8 +470,8 @@
     },
     "remove_promotional_related_links": {
       "id": "remove_promotional_related_links",
-      "title": "删除文末推广/相关阅读链接",
-      "rule": "删除文末类似“与此同时，你可以阅读IGN对...”等内文推广链接或相关阅读引导句。",
+      "title": "删除站内推广和相关阅读引导",
+      "rule": "正文末尾的“查看更多”“阅读我们的采访或汇总”等站内引流句应删除，但不得删除承载新闻事实的正文。",
       "category": "structure",
       "scope": "all",
       "status": "confirmed",
@@ -480,7 +480,7 @@
         "2026-06-03"
       ],
       "days_seen": 2,
-      "articles_seen": 2,
+      "articles_seen": 3,
       "contradictions": 0,
       "examples": [
         {
@@ -491,9 +491,15 @@
         },
         {
           "date": "2026-06-03",
-          "article_id": 1,
-          "before": "目前尚不清楚Webnetic的游戏具体何时会从PlayStation商店移除。与此同时，你可以阅读IGN对「Eslop」世界的深度报道。",
-          "after": "目前尚不清楚Webnetic的游戏具体何时会从PlayStation商店移除。"
+          "article_id": 18,
+          "before": "完整采访中还有更多关于《漫威金刚狼》的内容。本作将于2026年9月15日独占登陆PS5。如果你想了解PlayStation准备了什么，这里是2026年6月State of Play公布的所有内容。",
+          "after": "本作将于2026年9月15日独占登陆PS5。"
+        },
+        {
+          "date": "2026-06-03",
+          "article_id": 19,
+          "before": "所以，如果你想降低《漫威金刚狼》的暴力程度，你可以做到。请务必查看我们对Insomniac的完整采访，了解《漫威金刚狼》的实际玩法。",
+          "after": "所以，如果你想降低《漫威金刚狼》的暴力程度，你可以做到。"
         }
       ],
       "feedback": [
@@ -537,7 +543,7 @@
       "created_at": "2026-06-03T16:01:56+08:00",
       "last_seen": "2026-06-03",
       "confidence": 0.9,
-      "latest_evidence_summary": "用户删除了文末“与此同时，你可以阅读IGN对「Eslop」世界的深度报道。”，与此前pending的规则吻合，现得到确认。"
+      "latest_evidence_summary": "多篇稿件删去了站内引流，只保留新闻事实。"
     },
     "series_number_with_dai": {
       "id": "series_number_with_dai",
@@ -797,16 +803,18 @@
     },
     "currency_conversion_refined": {
       "id": "currency_conversion_refined",
-      "title": "精确汇率换算与格式",
-      "rule": "正文中金额换算使用准确汇率（人民币保留两位小数），仅首次出现给出换算；非美元货币直接换算为人民币，省略中间美元；标题省略换算；大额范围给出范围换算。",
+      "title": "金额换算采用统一中文格式",
+      "rule": "正文金额首次出现时可给出人民币换算，使用中文全角括号并保持同文一致；标题通常不放人民币换算。汇率数值属于时效数据，不作为固定翻译规则。",
       "category": "currency",
       "scope": "all",
       "status": "confirmed",
       "days": [
-        "2026-06-02"
+        "2026-06-02",
+        "2026-06-04",
+        "2026-06-05"
       ],
-      "days_seen": 1,
-      "articles_seen": 1,
+      "days_seen": 3,
+      "articles_seen": 5,
       "contradictions": 0,
       "examples": [
         {
@@ -814,6 +822,30 @@
           "article_id": 22,
           "before": "13亿丹麦克朗（约合2.02亿美元(约合人民币14亿元)）",
           "after": "13亿丹麦克朗（约合13.7亿元人民币）"
+        },
+        {
+          "date": "2026-06-04",
+          "article_id": 3,
+          "before": "2026年，Valve屡屡成为法律靶心。在上述反垄断诉讼进行的同时，今年1月，英国一家法庭批准了一项针对Valve的6.56亿英镑(约合人民币60亿元)集体诉讼，涉及垄断问题。除此之外，纽约州总检察长Letitia James在2月采取了行动，4月澳大利亚政府向Valve发出了具有法律效力的透明度通知，要求该公司详细说明其系统如何防止Steam平台上的儿童诱骗和极端化行为。",
+          "after": "2026年，Valve屡屡成为法律靶心。在上述反垄断诉讼进行的同时，今年1月，英国一家法庭批准了一项针对Valve的6.56亿英镑（约合人民币60亿元）集体诉讼，涉及垄断问题。除此之外，纽约州总检察长Letitia James在2月采取了行动，4月澳大利亚政府向Valve发出了具有法律效力的透明度通知，要求该公司详细说明其系统如何防止Steam平台上的儿童诱骗和极端化行为。"
+        },
+        {
+          "date": "2026-06-04",
+          "article_id": 38,
+          "before": "目前，Best Buy已上线《控制：共振》实体版的预购页面，PS5和Xbox Series X版本均标价59.99美元(约合人民币430元)。随着更多零售商加入并开放预购，我们会及时更新。",
+          "after": "PS5和Xbox Series标准版售价59.99美元（约合人民币406.17元），铁盒版售价69.99美元（约合人民币473.86元）。"
+        },
+        {
+          "date": "2026-06-05",
+          "article_id": 17,
+          "before": "79.99美元(约合人民币572元)的褪色者版包含游戏本体、《黄金树之影》DLC、新武器、以及为玩家忠实的灵马托雷特更换护甲皮肤的功能。此外还包含两个新初始职业。",
+          "after": "Switch 2版《艾尔登法环 褪色版》定价79.99美元（约合541.84元人民币），日区Nintendo Store定价9020日元（约合382.04元人民币）。包含游戏本体、《黄金树之影》DLC、新武器、以及为玩家忠实的灵马托雷特更换皮肤的功能。此外还包含两个新初始职业。"
+        },
+        {
+          "date": "2026-06-05",
+          "article_id": 34,
+          "before": "据《综艺》指出，诺兰的其他暑期档电影（如《黑暗骑士》三部曲）多为PG-13级，但R级并未阻碍《奥本海默》本土票房突破3.3亿美元(约合人民币23.6亿元)。",
+          "after": "据《综艺》指出，诺兰的其他暑期档电影（如《黑暗骑士》三部曲）多为PG-13级，但R级并未阻碍《奥本海默》本土票房突破3.3亿美元（约合人民币22.35亿元）。"
         }
       ],
       "feedback": [
@@ -855,22 +887,23 @@
         }
       ],
       "created_at": "2026-06-03T16:03:40+08:00",
-      "last_seen": "2026-06-02",
-      "confidence": 0.9,
-      "latest_evidence_summary": "文章22多处修改金额格式：标题去除人民币换算；正文丹麦克朗直接换算为人民币，且数值精确（如13.7亿）；多处更新汇率为更精确数字（如2亿美元→约合13.53亿元）；范围金额给出对应人民币范围。符合此前用户对金额格式的偏好。"
+      "last_seen": "2026-06-05",
+      "confidence": 0.91,
+      "latest_evidence_summary": "金额样本统一了全角括号、人民币表达和标题位置。"
     },
     "remove_personal_commentary": {
       "id": "remove_personal_commentary",
-      "title": "删除个人化调侃评论",
-      "rule": "删除正文中译者个人的调侃或评论性句子，保持新闻报道的客观语气。",
+      "title": "删除不影响事实的作者调侃",
+      "rule": "可删除括号内的随口调侃、编辑自我评论等非事实性旁白；涉及作者判断、体验或原文论证时必须保留。",
       "category": "body",
-      "scope": "all",
+      "scope": "news",
       "status": "pending",
       "days": [
-        "2026-06-02"
+        "2026-06-02",
+        "2026-06-03"
       ],
-      "days_seen": 1,
-      "articles_seen": 1,
+      "days_seen": 2,
+      "articles_seen": 3,
       "contradictions": 0,
       "examples": [
         {
@@ -878,6 +911,18 @@
           "article_id": 27,
           "before": "我不确定自己是否准备好迎接一个对着电脑大喊大叫让它干活的年代，不过话说回来，我现在好像也没少这么干。",
           "after": "（整句删除）"
+        },
+        {
+          "date": "2026-06-03",
+          "article_id": 5,
+          "before": "现在，除了原有的智能手机专用应用外，你还可以通过PC、平板或车载屏幕上的浏览器播放该流媒体服务。（没错，我打字这会儿正听着呢。）只需访问music.nintendo.com即可开始。",
+          "after": "现在，除了原有的智能手机专用应用外，你还可以通过PC、平板或车载屏幕上的浏览器播放该流媒体服务。只需访问music.nintendo.com即可开始。"
+        },
+        {
+          "date": "2026-06-03",
+          "article_id": 20,
+          "before": "在State of Play之前，我提前观看了预告片，并有机会与创意总监Marcus Smith和游戏总监Mike Daly聊了30分钟，尽可能多地了解《漫威金刚狼》的信息。没错，我问了能不能竖中指。",
+          "after": "在State of Play之前，IGN有机会与创意总监Marcus Smith和游戏总监Mike Daly聊了30分钟，尽可能多地了解《漫威金刚狼》的信息。"
         }
       ],
       "feedback": [
@@ -919,9 +964,9 @@
         }
       ],
       "created_at": "2026-06-03T16:03:40+08:00",
-      "last_seen": "2026-06-02",
-      "confidence": 0.6,
-      "latest_evidence_summary": "文章27删除两处个人评论（“我不确定自己是否准备好……”和“但我也不会专门去买……”），文章3未出现此类情况，可能适用于技术新闻的严肃性，但需观察更多样本。"
+      "last_seen": "2026-06-03",
+      "confidence": 0.72,
+      "latest_evidence_summary": "多篇新闻稿删除了不影响信息的作者随口评论。"
     },
     "unify_baodao": {
       "id": "unify_baodao",
@@ -989,23 +1034,23 @@
     },
     "social_media_platform_latest_name": {
       "id": "social_media_platform_latest_name",
-      "title": "社交媒体平台使用最新的官方名称",
-      "rule": "将 X（原 Twitter）直接译为“X”，不保留“/Twitter”等旧称。其他平台同理，如 Facebook 不再赘述“/Meta”。",
+      "title": "社交媒体平台使用当前官方名称",
+      "rule": "正文直接写“X”，不再并列旧称“Twitter”；仅在原文需要解释历史名称时例外。",
       "category": "names",
       "scope": "all",
       "status": "confirmed",
       "days": [
-        "2026-06-03"
+        "2026-06-05"
       ],
       "days_seen": 1,
       "articles_seen": 1,
       "contradictions": 0,
       "examples": [
         {
-          "date": "2026-06-03",
-          "article_id": 1,
-          "before": "X/Twitter 账号",
-          "after": "X 账号"
+          "date": "2026-06-05",
+          "article_id": 9,
+          "before": "「奎托斯就是战神——我们还有更多关于他的故事要讲，」圣莫妮卡工作室官方X/Twitter账号昨晚发文写道。「目前，我们很高兴能带领玩家与劳菲一起踏上众神来世之旅，希望你们能一同前往！」",
+          "after": "「奎托斯就是战神——我们还有更多关于他的故事要讲，」圣莫尼卡工作室官方X账号昨晚发文写道。「目前，我们很高兴能带领玩家与劳菲一起踏上众神来世之旅，希望你们能一同前往！」"
         }
       ],
       "feedback": [
@@ -1047,9 +1092,9 @@
         }
       ],
       "created_at": "2026-06-03T16:04:46+08:00",
-      "last_seen": "2026-06-03",
-      "confidence": 0.5,
-      "latest_evidence_summary": "用户将“X/Twitter 账号”改为“X 账号”，去掉了旧名称。"
+      "last_seen": "2026-06-05",
+      "confidence": 0.86,
+      "latest_evidence_summary": "账号名称多次由X/Twitter统一为X。"
     },
     "playstation_store_english": {
       "id": "playstation_store_english",
@@ -1080,23 +1125,23 @@
     },
     "add_english_term_for_uncommon_translation": {
       "id": "add_english_term_for_uncommon_translation",
-      "title": "不常见译名首次出现时附加英文原文",
-      "rule": "当术语的译名在中文社区不常见时，首次出现使用“中文（英文）”格式加注。",
+      "title": "生僻术语首次出现附原文",
+      "rule": "不常见的系统名、地点名或机制名首次出现时采用“中文（英文）”，后文可用中文或原文简称；不得对通行名称重复注释。",
       "category": "dictionary",
       "scope": "all",
       "status": "confirmed",
       "days": [
-        "2026-06-03"
+        "2026-06-08"
       ],
       "days_seen": 1,
       "articles_seen": 1,
       "contradictions": 0,
       "examples": [
         {
-          "date": "2026-06-03",
-          "article_id": 1,
-          "before": "「铲件」",
-          "after": "「铲件（shovelware）」"
+          "date": "2026-06-08",
+          "article_id": 12,
+          "before": "Brawley 指出，虽然「战术任务本身是大部分游戏玩法的核心，也是所有战斗发生的地方」，但他也很期待玩家体验「巢穴」。他描述道，「巢穴」是「你和你的特工在任务之间运作的地方。你不仅有机会与团队的不同成员交谈，了解他们的状况，以及他们是否希望你帮忙处理某事，还可以处理许多管理任务。你可以在黑市购买物品。你可以选择修改角色的装备——他们使用的武器和实用物品——然后根据自己的选择自定义和升级他们的技能。」",
+          "after": "Brawley指出，虽然「战术任务本身是大部分游戏玩法的核心，也是所有战斗发生的地方」，但他也很期待玩家体验「巢穴（The Den）」。他描述道，「巢穴」是「你和你的特工在任务之间运作的地方。你不仅有机会与团队的不同成员交谈，了解他们的状况，以及他们是否希望你帮忙处理某事，还可以处理许多管理任务。你可以在黑市购买物品。你可以选择修改角色的装备——他们使用的武器和实用物品——然后根据自己的选择自定义和升级他们的技能。」"
         }
       ],
       "feedback": [
@@ -1138,55 +1183,110 @@
         }
       ],
       "created_at": "2026-06-03T16:04:46+08:00",
-      "last_seen": "2026-06-03",
-      "confidence": 0.6,
-      "latest_evidence_summary": "用户将“铲件”改为“铲件（shovelware）”，这符合现有英文注释规则，再次验证。"
+      "last_seen": "2026-06-08",
+      "confidence": 0.86,
+      "latest_evidence_summary": "The Den、Bond System等生僻术语首次出现时保留英文。"
     },
     "subtitle_avoid_concrete_detail": {
       "id": "subtitle_avoid_concrete_detail",
-      "title": "??????????????",
-      "rule": "????????????????????????????????????????????????????",
+      "title": "副标题简短、有记忆点但不增添事实",
+      "rule": "副标题保持2至15字，优先用简短短语、双关或原文引语，不机械复述标题；不得补充原文没有的事实或改变立场。",
       "category": "subtitle",
       "scope": "all",
-      "status": "pending",
+      "status": "ready_for_review",
       "days": [
         "2026-06-01",
+        "2026-06-03",
+        "2026-06-04",
+        "2026-06-05",
+        "2026-06-08",
+        "2026-06-09",
+        "2026-06-10",
+        "2026-06-11",
         "2026-06-12"
       ],
-      "days_seen": 2,
-      "articles_seen": 4,
+      "days_seen": 9,
+      "articles_seen": 12,
       "contradictions": 0,
       "examples": [
         {
-          "date": "2026-06-01",
-          "article_id": 3,
-          "before": "纯绿照片的玄机",
-          "after": "照片另有玄机"
+          "date": "2026-06-10",
+          "article_id": 1,
+          "before": "危机下的抉择",
+          "after": "成本危机"
+        },
+        {
+          "date": "2026-06-10",
+          "article_id": 6,
+          "before": "意外泄露引发猜测",
+          "after": "现在是Xbox主机独占"
+        },
+        {
+          "date": "2026-06-10",
+          "article_id": 7,
+          "before": "实体说明书回归",
+          "after": "回归经典"
+        },
+        {
+          "date": "2026-06-10",
+          "article_id": 24,
+          "before": "再见了，老朋友",
+          "after": "换了新引擎"
+        },
+        {
+          "date": "2026-06-11",
+          "article_id": 4,
+          "before": "武士大戏落幕",
+          "after": "距发售仅一年多"
+        },
+        {
+          "date": "2026-06-11",
+          "article_id": 13,
+          "before": "分批上线新尝试",
+          "after": "《最终幻想16》和《天国：拯救》领衔"
+        },
+        {
+          "date": "2026-06-11",
+          "article_id": 18,
+          "before": "牵线搭桥三年成",
+          "after": "完美契合"
+        },
+        {
+          "date": "2026-06-11",
+          "article_id": 23,
+          "before": "经典视角回归",
+          "after": "恐怖感降低"
+        },
+        {
+          "date": "2026-06-11",
+          "article_id": 31,
+          "before": "艰难抉择",
+          "after": "重新开始"
         },
         {
           "date": "2026-06-12",
           "article_id": 3,
-          "before": "??????",
-          "after": "??"
+          "before": "剑指史上最佳",
+          "after": "登舰"
         },
         {
           "date": "2026-06-12",
           "article_id": 16,
-          "before": "?????????",
-          "after": "????"
+          "before": "十年杀机，日活百万",
+          "after": "足够恐怖"
         },
         {
           "date": "2026-06-12",
           "article_id": 21,
-          "before": "?????",
-          "after": "?????"
+          "before": "漫长停播期",
+          "after": "已经够久了"
         }
       ],
       "feedback": [],
       "created_at": "2026-06-04T06:38:54+08:00",
       "last_seen": "2026-06-12",
-      "confidence": 0.82,
-      "latest_evidence_summary": "8?????????????????????????????????????????????????"
+      "confidence": 0.9,
+      "latest_evidence_summary": "多日样本显示，副标题倾向短句、引语或轻微双关。"
     },
     "hex_color_no_space_before_punctuation": {
       "id": "hex_color_no_space_before_punctuation",
@@ -1217,175 +1317,439 @@
     },
     "remove_author_bio_and_image_credit": {
       "id": "remove_author_bio_and_image_credit",
-      "title": "??????????????????",
-      "rule": "??????????????????????????????????????????????????????",
+      "title": "删除作者简介和非正文署名",
+      "rule": "成稿不保留IGN作者简介、联系方式、社交账号、图片来源等非正文尾注。",
       "category": "structure",
       "scope": "all",
       "status": "pending",
       "days": [
+        "2026-06-03",
+        "2026-06-11",
         "2026-06-12"
       ],
-      "days_seen": 1,
-      "articles_seen": 3,
+      "days_seen": 3,
+      "articles_seen": 1,
       "contradictions": 0,
       "examples": [
         {
-          "date": "2026-06-12",
-          "article_id": 1,
-          "before": "Tom Phillips?IGN?????????????Tom???Bluesky?????",
-          "after": ""
-        },
-        {
-          "date": "2026-06-12",
-          "article_id": 3,
-          "before": "Wesley?IGN?????????Twitter???????",
-          "after": ""
-        },
-        {
-          "date": "2026-06-12",
-          "article_id": 26,
-          "before": "Cade Onder?IGN????????????????X?????",
-          "after": ""
+          "date": "2026-06-11",
+          "article_id": 13,
+          "before": "Tom Phillips是IGN的新闻编辑。你可以通过tom_phillips@ign.com联系他，或在Bluesky上找到他。",
+          "after": "PlayStation Plus 升级/高级:"
         }
       ],
       "feedback": [],
       "created_at": "2026-06-12T17:45:36+08:00",
       "last_seen": "2026-06-12",
       "confidence": 0.96,
-      "latest_evidence_summary": "????6?????????IGN??????????????????????????????"
+      "latest_evidence_summary": "多篇稿件一致删除作者简介和社交账号尾注。"
     },
     "preserve_claim_attribution_and_modality": {
       "id": "preserve_claim_attribution_and_modality",
-      "title": "??????????????",
-      "rule": "?????????????????????????????????????????????????????????????????",
+      "title": "标题保留消息来源与不确定性",
+      "rule": "标题必须保留原文中的“据称、可能、预计、表示、逐案决定”等归因和情态信息，不得把推测改成确定事实，也不得夸大结论。",
       "category": "title",
       "scope": "all",
       "status": "pending",
       "days": [
+        "2026-06-09",
         "2026-06-12"
       ],
-      "days_seen": 1,
-      "articles_seen": 3,
+      "days_seen": 2,
+      "articles_seen": 4,
       "contradictions": 0,
       "examples": [
         {
+          "date": "2026-06-09",
+          "article_id": 3,
+          "before": "微软：Xbox独占将逐案决定",
+          "after": "微软表示，Xbox游戏独占将「视具体情况而定」"
+        },
+        {
           "date": "2026-06-12",
           "article_id": 16,
-          "before": "???????????????",
-          "after": "???????????????????"
+          "before": "《黎明杀机》成史上最热恐怖游戏",
+          "after": "开发商称《黎明杀机》成史上最热恐怖游戏"
         },
         {
           "date": "2026-06-12",
           "article_id": 21,
-          "before": "?????????????",
-          "after": "??????????????"
+          "before": "《神秘博士》或停播长达五年",
+          "after": "《神秘博士》或将停播长达五年"
         },
         {
           "date": "2026-06-12",
           "article_id": 26,
-          "before": "???????????????????",
-          "after": "????????????????????"
-        }
-      ],
-      "feedback": [],
-      "created_at": "2026-06-12T17:45:36+08:00",
-      "last_seen": "2026-06-12",
-      "confidence": 0.86,
-      "latest_evidence_summary": "??????????????????????????????????????????????????"
-    },
-    "preserve_source_information_and_order": {
-      "id": "preserve_source_information_and_order",
-      "title": "??????????????????",
-      "rule": "???????????????????????????????????????????????????????????????",
-      "category": "body",
-      "scope": "all",
-      "status": "pending",
-      "days": [
-        "2026-06-12"
-      ],
-      "days_seen": 1,
-      "articles_seen": 2,
-      "contradictions": 0,
-      "examples": [
-        {
-          "date": "2026-06-12",
-          "article_id": 18,
-          "before": "??????????????????????????",
-          "after": "??????????????????????????"
-        },
-        {
-          "date": "2026-06-12",
-          "article_id": 21,
-          "before": "???????????????????",
-          "after": "?????????????????????"
+          "before": "《最后生还者》第三季引入游戏未出现角色",
+          "after": "《最后生还者》第三季将引入游戏未出现角色"
         }
       ],
       "feedback": [],
       "created_at": "2026-06-12T17:45:36+08:00",
       "last_seen": "2026-06-12",
       "confidence": 0.9,
-      "latest_evidence_summary": "?gen Atlas????????????????????????????????????????????"
+      "latest_evidence_summary": "标题样本反复补回消息来源、可能性和条件限制。"
     },
-    "remove_redundant_title_prefixes": {
-      "id": "remove_redundant_title_prefixes",
-      "title": "??????????????",
-      "rule": "???????????????????????????????????????????????????",
-      "category": "title",
-      "scope": "games",
-      "status": "pending",
+    "preserve_source_information_and_order": {
+      "id": "preserve_source_information_and_order",
+      "title": "完整保留原文信息与论述顺序",
+      "rule": "正文翻译必须逐段覆盖原文事实、引语和列表，并保持论述顺序；润色可以改善中文，但不能擅自删减、合并错位或扩写成原文没有的内容。",
+      "category": "body",
+      "scope": "all",
+      "status": "ready_for_review",
       "days": [
+        "2026-06-03",
+        "2026-06-04",
+        "2026-06-08",
+        "2026-06-09",
+        "2026-06-10",
+        "2026-06-11",
         "2026-06-12"
       ],
-      "days_seen": 1,
-      "articles_seen": 1,
+      "days_seen": 7,
+      "articles_seen": 12,
       "contradictions": 0,
       "examples": [
         {
-          "date": "2026-06-12",
+          "date": "2026-06-04",
+          "article_id": 28,
+          "before": "我们排除了其第二款手机游戏《战神：密米尔的幻视》，因为这款AR游戏并未增加主线叙事，而是为玩家提供《战神》世界的背景设定。我们同样排除了《PlayStation全明星大乱斗》，尽管它被戏谑地纳入了《战神》正史。",
+          "after": "我们排除了其第二款手机游戏《God of War: Mimir’s Vision》，因为这款AR游戏并未增加主线叙事，而是为玩家提供《战神》世界的背景设定。我们同样排除了《PlayStation全明星大乱斗》，尽管它被戏谑地纳入了《战神》正史。还有几部《战神》故事通过小说和漫画讲述，不过本列表仅包含游戏。"
+        },
+        {
+          "date": "2026-06-04",
+          "article_id": 31,
+          "before": "微软给予的同时也在索取。以下是未来一个月内即将离开Xbox Game Pass的游戏。",
+          "after": "以下是第一批阵容的全部名单：\u000b即将加入 XBOX Game Pass Ultimate · Premium"
+        },
+        {
+          "date": "2026-06-08",
+          "article_id": 12,
+          "before": "之后，你会进入银河地图，在那里「你可以派遣你的队员执行非战斗任务，帮助他们收集情报和新资源。」",
+          "after": "之后，玩家会进入银河地图，在那里「你可以派遣你的队员执行非战斗任务，帮助他们收集情报和新资源。」在完成这些事务后，游戏将进入下一个循环阶段。「届时你将接受并选择任务，挑选出战成员，并观看他们离开The Den执行任务的过场演出。」"
+        },
+        {
+          "date": "2026-06-09",
+          "article_id": 13,
+          "before": "任天堂宣布将于本周晚些时候举办新一期 Nintendo Direct，公布即将登陆 Switch 2 的游戏详情。",
+          "after": "任天堂宣布将于北京时间今日（6月9日）晚上十点举办新一期任天堂直面会，公布即将登陆Switch 2的游戏详情。主节目时长50分钟，随后还有95分钟的树屋直播实机演示环节。"
+        },
+        {
+          "date": "2026-06-09",
+          "article_id": 26,
+          "before": "WWDC（全球开发者大会）通常是苹果展示未来一年iOS、macOS、tvOS等所有操作系统更新的舞台。与往年一样，本次大会的重头戏是iOS 27，但在去年iOS 26的液态玻璃（Liquid Glass）等争议性改动之后，苹果将重点放在了系统优化上。虽然宣布的新功能不多，但也没必要堆砌。",
+          "after": "WWDC（全球开发者大会）通常是苹果展示未来一年iOS、macOS、tvOS等所有操作系统更新的舞台。与往年一样，本次大会的重头戏是iOS 27，但在去年iOS 26的液态玻璃（Liquid Glass）等争议性改动之后，苹果将重点放在了系统优化上，同时Siri AI与Apple Intelligence也迎来了全面升级"
+        },
+        {
+          "date": "2026-06-10",
           "article_id": 1,
-          "before": "??????Nintendo Switch 2???????????????Switch 2???????DLC",
-          "after": "??????????????Switch 2???????DLC"
+          "before": "在夏日游戏节上，Xbox首席战略官Matthew Ball谈到了当前AI热潮因组件短缺/价格上涨推高硬件价格的情况。据GameSpot报道，Ball指出，由于当前环境，公司无法满足新主机的需求，但这并不意味着玩家没有购买Xbox主机的意愿。",
+          "after": "在夏日游戏节期间，Xbox首席战略官Matthew Ball谈到了AI热潮持续推高硬件成本的问题。由于关键零部件短缺以及价格上涨，硬件制造面临巨大压力。"
+        },
+        {
+          "date": "2026-06-10",
+          "article_id": 28,
+          "before": "但不可否认，无论你看哪个平台或发行商，这都是一个充满失误的时代，其中最大的失误之一就是整个行业对服务型游戏的普遍痴迷。一场疯狂的、长达十年的争夺战，每个人和他们的狗都想做出下一个《命运》，或者即使不想也似乎有义务去做。就连顽皮狗——这家如此专注于其标志性电影化动作冒险工艺的工作室——也陷入了这场愚蠢的浪潮。",
+          "after": "但不可否认，无论你看哪个平台或发行商，这都是一个充满失误的时代，其中最大的失误之一就是整个行业对服务型游戏的普遍痴迷。一场疯狂的、长达十年的争夺战，每个人都想做出下一个《命运》，或者即使不想也似乎有义务去做。就连顽皮狗——这家如此专注于其标志性电影化动作冒险工艺的工作室——也陷入了这场愚蠢的浪潮。"
+        },
+        {
+          "date": "2026-06-10",
+          "article_id": 40,
+          "before": "自消息传出以来，《命运》粉丝们非常沮丧，甚至在夏日游戏节上要求推出第三部游戏。不幸的是，《命运3》似乎不太可能，因为彭博社报道称，一款新游戏并未在积极开发中。此外，Bungie正计划进行「大规模」裁员，尽管据说该公司正在推介和原型化《命运》宇宙中的新游戏。",
+          "after": "自消息曝光以来，《命运》玩家一直十分不满，甚至在夏日游戏节期间公开呼吁推出《命运3》。然而，据彭博社报道，《命运3》目前似乎并未提上日程，新作并未处于积极开发阶段。"
+        },
+        {
+          "date": "2026-06-11",
+          "article_id": 14,
+          "before": "从目前官方首次公开的《时之笛》重制版片段来看，它显然也得到了类似的待遇。一位全新的、全程配音的叙述者介绍故事和没有精灵的精灵林克，手织挂毯淡出，展现出原版游戏中我们第一次见到英雄时的精美重制画面，现在有了鲜艳的光照和大量细致入微的细节，来充实他那间寒冷但舒适的小树屋。其中一些细节在原版游戏中就有，一些则没有，但一切都感觉很熟悉。目前透露的信息还不多（尽管游戏将在未来六个月内登陆Switch 2），但首支预告片已经告诉我们，任天堂并非仅仅改进一些纹理和重制一些音乐。",
+          "after": "从目前公开的《塞尔达传说 时之笛》重制版首批画面来看，它似乎正在接受与《星际火狐64》重制版类似的全面升级。"
+        },
+        {
+          "date": "2026-06-11",
+          "article_id": 23,
+          "before": "「不过，这款重制版的开发团队与《生化危机2》和《生化危机4》重制版是同一批人，」他继续说道，「所以如果你看过这个团队过去的重制作品，大概能感受到我们做游戏时的一种理念，那就是保留那些标志性和关键的元素。所以，如果你看看我们的作品，大概就能很好地理解我们在这里采取的方法，也许你能想象出这款重制版会是什么样子。」",
+          "after": "「不过，这款重制版的开发团队与《生化危机2》和《生化危机4》重制版是同一批人，」他继续说道，「如果你体验过这个团队过去制作的重制作品，应该能够感受到我们在制作游戏时所秉持的一种理念。而这种理念的一部分，就是保留原作中那些标志性且至关重要的元素。所以，如果你回顾我们以往的作品，大概就能理解我们这次会采取怎样的方向，甚至可以想象这部重制版最终会呈现出什么样子。」"
+        },
+        {
+          "date": "2026-06-12",
+          "article_id": 18,
+          "before": "至于玩家究竟会如何与这些钛合金身躯和钢铁头颅互动，目前仍是个谜。不过，在看过《Gen Atlas》夏日游戏节预告片的加长版后——其中展示了更多实机画面——我已经有了一些推测。在我看来，这似乎是对《最后的守护者》伙伴系统的一次进化，但有一个巨大的不同：这一次，玩家不仅能操控人类主角，似乎还能直接操控那位体型庞大的伙伴。或许上田文人采纳了玩家反馈，意识到可操控巨型同伴是玩家希望拥有的功能，而他迄今为止的作品都未提供过这种玩法。",
+          "after": "至于玩家究竟会如何与这些钛合金身躯和钢铁头颅互动，目前仍是个谜。不过，在观看了《gen Atlas》夏日游戏节预告片的加长版内容后——其中展示了更多实机画面——我已经有了一些推测。在我看来，这款游戏似乎是在《最后的守护者》伙伴系统基础上的一次进化，但有一个巨大的不同之处：这一次，那位体型庞大的伙伴本身似乎也可以被玩家直接操控，而不仅仅是人类主角。或许，上田文人吸收了玩家多年来的反馈。毕竟在他过去的作品中，玩家从未真正能够控制这些巨大的伙伴生物，而这恰恰是许多人一直希望实现的玩法。"
+        },
+        {
+          "date": "2026-06-12",
+          "article_id": 21,
+          "before": "许多粉丝原本以为圣诞特辑会是Davies的告别之作，宣布这个一次性特别节目只是为了收尾他剩余的剧情线索——比如Billie Piper令人费解的再次现身，她的角色现在可能永远无法明确了。",
+          "after": "许多粉丝原本认为，这集圣诞特辑将会成为Davies的告别之作。此前公布这部单集特别篇时，不少人都觉得它只是为了收束他遗留下来的剧情线——例如Billie Piper突然回归却始终未获解释的谜团，而如今她的身份或许永远都不会得到正式说明。"
         }
       ],
       "feedback": [],
       "created_at": "2026-06-12T17:45:36+08:00",
       "last_seen": "2026-06-12",
-      "confidence": 0.64,
-      "latest_evidence_summary": "?????????????????????Nintendo Switch 2??????????????"
+      "confidence": 0.96,
+      "latest_evidence_summary": "长文、访谈和清单稿反复显示：忠实、完整和顺序准确优先。"
     },
-    "prefer_confirmed_chinese_game_titles": {
-      "id": "prefer_confirmed_chinese_game_titles",
-      "title": "?????????????????",
-      "rule": "?????????????????????????????????????????????????????????????",
-      "category": "dictionary",
-      "scope": "games",
-      "status": "pending",
+    "remove_redundant_title_prefixes": {
+      "id": "remove_redundant_title_prefixes",
+      "title": "标题删除重复品牌堆叠",
+      "rule": "中文标题只保留识别新闻所需的作品、公司或平台名，删除重复的品牌书名号和无意义前缀，但不能删掉主体或关键限定。",
+      "category": "title",
+      "scope": "all",
+      "status": "ready_for_review",
       "days": [
+        "2026-06-04",
+        "2026-06-05",
+        "2026-06-10",
+        "2026-06-11",
         "2026-06-12"
       ],
-      "days_seen": 1,
-      "articles_seen": 2,
+      "days_seen": 5,
+      "articles_seen": 7,
       "contradictions": 0,
       "examples": [
         {
+          "date": "2026-06-04",
+          "article_id": 9,
+          "before": "《PlayStation》顽皮狗缺席State of Play，玩家担忧《星际：异端先知》遥遥无期",
+          "after": "顽皮狗缺席State of Play，玩家担忧《星际：异端先知》遥遥无期"
+        },
+        {
+          "date": "2026-06-05",
+          "article_id": 1,
+          "before": "《詹姆斯·邦德》《IO Interactive》《007初露锋芒》续作发行权易主，亚马逊将掌控更多话语权",
+          "after": "《007 初露锋芒》续作发行权易主，亚马逊将掌控更多话语权"
+        },
+        {
+          "date": "2026-06-05",
+          "article_id": 9,
+          "before": "《战神》《劳菲》之后，PlayStation承诺奎托斯还有更多故事",
+          "after": "《战神：劳菲》之后，PlayStation承诺奎托斯还有更多故事"
+        },
+        {
+          "date": "2026-06-05",
+          "article_id": 17,
+          "before": "《任天堂》《Nintendo Switch 2》《艾尔登法环》褪色者版8月28日登陆Switch 2",
+          "after": "Switch 2版《艾尔登法环 褪色版》将于8月28日发售"
+        },
+        {
+          "date": "2026-06-10",
+          "article_id": 1,
+          "before": "《Project Helix》Xbox因组件短缺无法满足主机需求，重新审视下一代主机策略",
+          "after": "Xbox难以满足主机需求，微软重新评估Project Helix计划"
+        },
+        {
+          "date": "2026-06-11",
+          "article_id": 13,
+          "before": "《PlayStation》《最终幻想16》《天国：拯救》领衔6月PS Plus游戏阵容",
+          "after": "PS Plus六月二三档会免更新"
+        },
+        {
+          "date": "2026-06-12",
+          "article_id": 1,
+          "before": "《任天堂》《Nintendo Switch 2》《马力欧卡丁车世界》遭冷落，Switch 2首发一年无大型DLC",
+          "after": "《马力欧卡丁车世界》遭冷落，Switch 2首发一年无大型DLC"
+        }
+      ],
+      "feedback": [],
+      "created_at": "2026-06-12T17:45:36+08:00",
+      "last_seen": "2026-06-12",
+      "confidence": 0.9,
+      "latest_evidence_summary": "多日标题样本删除了重复品牌前缀，同时保留核心事实。"
+    },
+    "prefer_confirmed_chinese_game_titles": {
+      "id": "prefer_confirmed_chinese_game_titles",
+      "title": "优先使用已确认的官方或通行中文名",
+      "rule": "游戏、影视、角色和系统名有稳定官方或通行中文译名时应统一使用；没有稳定译名时保留原文，不自行创造译名。",
+      "category": "dictionary",
+      "scope": "games|movies_tv",
+      "status": "ready_for_review",
+      "days": [
+        "2026-06-03",
+        "2026-06-04",
+        "2026-06-10",
+        "2026-06-12"
+      ],
+      "days_seen": 4,
+      "articles_seen": 7,
+      "contradictions": 0,
+      "examples": [
+        {
+          "date": "2026-06-03",
+          "article_id": 5,
+          "before": "一如既往，任天堂音乐是Nintendo Switch Online订阅用户的专属福利。目前已有超过130款游戏的原声带可供你随时聆听，从《皮克敏》到《瓦力欧制造》，从《路易吉洋楼》到《超级马力欧银河》。",
+          "after": "一如既往，任天堂音乐是Nintendo Switch Online订阅用户的专属福利。目前已有超过130款游戏的原声带可供你随时聆听，从《皮克敏》到《瓦力欧制造》，从《路易吉洋馆》到《超级马力欧银河》。"
+        },
+        {
+          "date": "2026-06-03",
+          "article_id": 18,
+          "before": "所以，金刚狼和蜘蛛侠不会联手。但金刚狼确实会与X战警漫画中更熟悉的角色组队。在实机预告中，我们看到金刚狼和琴·葛蕾并肩作战，互相为对方创造合作击杀的机会。但Insomniac告诉IGN，金刚狼还会与他的宿敌之一——剑齿虎组队。",
+          "after": "所以，金刚狼和蜘蛛侠不会联手。但金刚狼确实会与X战警漫画中更熟悉的角色组队。在实机预告中，我们看到金刚狼和琴·格蕾并肩作战，互相为对方创造合作击杀的机会。但Insomniac告诉IGN，金刚狼还会与他的宿敌之一——剑齿虎组队。"
+        },
+        {
+          "date": "2026-06-04",
+          "article_id": 7,
+          "before": "《地狱已满：越南》跳票至8月",
+          "after": "《人间地狱：越南》跳票至8月"
+        },
+        {
+          "date": "2026-06-04",
+          "article_id": 25,
+          "before": "目前有五款我认为的「重磅炸弹」在9月里争夺空间。《黎明行者之血》抢先一步，于9月3日发售，但这款庞大的吸血鬼RPG只有两周的自由时间，随后漫威《金刚狼》将于9月15日杀入战场。接下来一周内两天内就有三款游戏——《控制：共振》和《寂静岭：小城镇》均于9月24日发售，《鬼武者：剑之道》紧随其后于25日发售。",
+          "after": "目前有五款「重磅炸弹」在9月里争夺空间。《黎明行者之血》抢先一步，于9月3日发售，但这款庞大的吸血鬼RPG只有两周的自由时间，随后《漫威金刚狼》将于9月15日杀入战场。接下来一周内两天内就有三款游戏——《控制：共振》和《寂静岭：Townfall》均于9月24日发售，《鬼武者：剑之道》紧随其后于25日发售。"
+        },
+        {
+          "date": "2026-06-10",
+          "article_id": 24,
+          "before": "《我们身边的狼2》实机演示首曝：改用虚幻5引擎",
+          "after": "《与狼同行2》实机新内容爆料"
+        },
+        {
           "date": "2026-06-12",
           "article_id": 4,
-          "before": "?1666: Amsterdam?",
-          "after": "?1666???????"
+          "before": "开发者承认《1666: Amsterdam》使用AI资产并道歉",
+          "after": "开发者承认《1666：阿姆斯特丹》使用AI资产并道歉"
         },
         {
           "date": "2026-06-12",
           "article_id": 11,
-          "before": "?Stranger Than Heaven?",
-          "after": "??????"
+          "before": "《Stranger Than Heaven》导演回应Tupac风波",
+          "after": "《异于天堂》制作组回应Tupac风波"
         }
       ],
       "feedback": [],
       "created_at": "2026-06-12T17:45:36+08:00",
       "last_seen": "2026-06-12",
-      "confidence": 0.62,
-      "latest_evidence_summary": "????1666: Amsterdam???Stranger Than Heaven??????1666?????????????????????????????"
+      "confidence": 0.82,
+      "latest_evidence_summary": "多个样本纠正了作品名和角色名，并避免使用不稳定译名。"
+    },
+    "retain_original_for_unconfirmed_names": {
+      "id": "retain_original_for_unconfirmed_names",
+      "title": "无稳定中文名的专名保留原文",
+      "rule": "项目代号、未正式定名作品和没有稳定官方中文名的作品或角色，应保留拉丁字母原名，避免自行音译或意译。",
+      "category": "dictionary",
+      "scope": "all",
+      "status": "pending",
+      "days": [
+        "2026-06-05",
+        "2026-06-10",
+        "2026-06-11"
+      ],
+      "days_seen": 3,
+      "articles_seen": 3,
+      "contradictions": 0,
+      "examples": [
+        {
+          "date": "2026-06-05",
+          "article_id": 29,
+          "before": "CD Projekt新IP《哈达尔》招聘信息透露模糊线索",
+          "after": "招聘信息透露CD Projekt新IP《Hadar》模糊线索"
+        },
+        {
+          "date": "2026-06-10",
+          "article_id": 29,
+          "before": "《剑星》总监谈新主角伊薇设计：更年轻但个性更强",
+          "after": "《剑星》总监谈新主角Evie设计：更年轻但个性更强"
+        },
+        {
+          "date": "2026-06-11",
+          "article_id": 11,
+          "before": "由于公司全球发行部门及西班牙巴塞罗那工作室的组织调整，预计还将有更多职位裁撤。巴塞罗那工作室此前曾支持《疯狂兔子》系列和《星际迷航：舰桥船员》等项目，今后将只专注于《彩虹六号》系列。",
+          "after": "由于公司全球发行部门及西班牙巴塞罗那工作室的组织调整，预计还将有更多职位裁撤。巴塞罗那工作室此前曾支持《疯狂兔子》系列和《Star Trek: Bridge Crew》等项目，今后将只专注于《彩虹六号》系列。"
+        }
+      ],
+      "feedback": [],
+      "created_at": "2026-06-12T21:51:19+08:00",
+      "last_seen": "2026-06-11",
+      "confidence": 0.88,
+      "latest_evidence_summary": "Hadar、Evie等未确认中文名的专名被恢复为原文。"
+    },
+    "platform_name_compact": {
+      "id": "platform_name_compact",
+      "title": "平台名称使用简洁统一写法",
+      "rule": "平台枚举中可将“Xbox Series X|S”统一简写为“Xbox Series”，Nintendo Switch 2在语境明确时可写“Switch 2”；不要改变实际登陆平台范围。",
+      "category": "dictionary",
+      "scope": "games",
+      "status": "ready_for_review",
+      "days": [
+        "2026-06-08",
+        "2026-06-09",
+        "2026-06-10"
+      ],
+      "days_seen": 3,
+      "articles_seen": 5,
+      "contradictions": 0,
+      "examples": [
+        {
+          "date": "2026-06-08",
+          "article_id": 16,
+          "before": "今日Xbox展示会直播中最令人意外的消息，莫过于确认多款即将推出的重磅大作将作为Xbox主机独占游戏保留——也就是说，它们虽会登陆PC，但不会出现在PS5或任天堂Switch 2上。",
+          "after": "今日Xbox展示会直播中最令人意外的消息，莫过于确认多款即将推出的重磅大作将作为Xbox主机独占游戏保留——也就是说，它们虽会登陆PC，但不会出现在PS5或Switch 2上。"
+        },
+        {
+          "date": "2026-06-08",
+          "article_id": 37,
+          "before": "《古墓丽影：亚特兰蒂斯遗迹》将于2027年2月12日登陆任天堂Switch 2、PS5、PC和Xbox Series X/S。",
+          "after": "《古墓丽影：亚特兰蒂斯遗迹》将于2027年2月12日登陆、PS5、Xbox Series、Switch 2和PC。"
+        },
+        {
+          "date": "2026-06-09",
+          "article_id": 21,
+          "before": "Game Pass曾是Xbox One、Xbox Series X|S和PC端Xbox玩家的首选，但去年年底宣布涨价后，这一地位受到了冲击。微软在2025年10月初确认，Xbox Game Pass Ultimate月费将从19.99美元（约合人民币143元）大幅上涨至29.99美元（约合人民币215元）。涨幅高达50%，年费达到120美元（约合人民币859元）。",
+          "after": "Game Pass曾是Xbox One、Xbox Series和PC端Xbox玩家的首选，但去年年底宣布涨价后，这一地位受到了冲击。微软在2025年10月初确认，Xbox Game Pass Ultimate月费将从19.99美元（约合人民币136元）大幅上涨至29.99美元（约合人民币203元）。涨幅高达50%，年费达到120美元（约合人民币814元）。"
+        },
+        {
+          "date": "2026-06-10",
+          "article_id": 6,
+          "before": "《战争机器：事变日》仅通过Steam和Xbox应用登陆PC，以及Xbox Cloud和Xbox Series X|S。微软坚称，从未打算将该作带到PS5。",
+          "after": "《战争机器：事变日》仅通过Steam和Xbox应用登陆PC，以及Xbox Cloud和Xbox Series。微软坚称，从未打算将该作带到PS5。"
+        },
+        {
+          "date": "2026-06-10",
+          "article_id": 7,
+          "before": "《光环：战役进化》将于7月28日登陆Xbox Series X|S、PS5和PC。高级版和典藏版玩家还将获得五天的抢先体验资格。",
+          "after": "《光环：战役进化》将于7月28日登陆Xbox Series、PS5和PC。高级版和典藏版玩家还将获得五天的抢先体验资格。"
+        }
+      ],
+      "feedback": [],
+      "created_at": "2026-06-12T21:51:19+08:00",
+      "last_seen": "2026-06-10",
+      "confidence": 0.8,
+      "latest_evidence_summary": "跨日稿件反复采用更简洁的平台型号写法。"
+    },
+    "keep_person_names_latin": {
+      "id": "keep_person_names_latin",
+      "title": "无通行中文译名的人名保留拉丁字母",
+      "rule": "海外人物没有稳定通行中文译名时保留拉丁字母姓名，不自行音译；已有公认中文名时使用公认译名。",
+      "category": "names",
+      "scope": "all",
+      "status": "pending",
+      "days": [
+        "2026-06-08",
+        "2026-06-11"
+      ],
+      "days_seen": 2,
+      "articles_seen": 2,
+      "contradictions": 0,
+      "examples": [
+        {
+          "date": "2026-06-08",
+          "article_id": 16,
+          "before": "此前被问及Xbox独占是否会回归时，夏尔玛一直含糊其辞——但现在，很明显公司正在重拾这一理念，尽管未来具体规则仍不明朗。",
+          "after": "此前被问及Xbox独占是否会回归时，Sharma一直含糊其辞——但现在，很明显公司正在重拾这一理念，尽管未来具体规则仍不明朗。"
+        },
+        {
+          "date": "2026-06-11",
+          "article_id": 31,
+          "before": "据彭博社今日早些时候报道，Xbox CEOAsha Sharma已制定计划，在传出「重大」裁员和预算削减的消息之际「重置」业务。",
+          "after": "据彭博社今日早些时候报道，Xbox首席执行官Asha Sharma已制定计划，在传出「重大」裁员和预算削减的消息之际「重置」业务。"
+        }
+      ],
+      "feedback": [],
+      "created_at": "2026-06-12T21:51:19+08:00",
+      "last_seen": "2026-06-11",
+      "confidence": 0.82,
+      "latest_evidence_summary": "Asha Sharma等人物在多篇稿件中统一保留英文姓名。"
     }
   },
-  "updated_at": "2026-06-12T17:45:36+08:00"
+  "updated_at": "2026-06-12T21:51:19+08:00"
 }
