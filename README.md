@@ -105,6 +105,7 @@ python -m http.server 8000
 - **2026-06-02**: 每小时 RSS 后新增 `scripts/article_cache.py`，把干净英文正文、封面图、正文图缓存到 `data/{date}/sources/NN.json`。API 标题摘要和正文翻译优先复用缓存，减少重复抓取和 token 浪费。
 - **2026-06-02**: 夜间学习也接入 `data/automation-config.json.nightly_learner`，可在网页里切换 `openclaw` / `api`。API 路径由 `.github/workflows/nightly-style.yml` 调用 `scripts/nightly_style_api.py` 更新 `STYLE_PROFILE.md`。
 - **2026-06-02**: API 夜间学习改为长期证据池机制。每天 22:30 只观察用户润色、学习批注和反馈，写入 `data/learning/daily/` 与 `data/learning/style-evidence.json`；每周生成 `data/learning/weekly/{week}.json` 供学习页批注。`STYLE_PROFILE.md` 只会在用户对周报规则明确“采纳/确认”后更新，避免 API 被当天样本带偏。
+- **2026-06-12**: 夜间学习新增 `codex` 模式。腾讯文档润色稿同步后由 Codex 分析原译差异，不再调用 DeepSeek 夜间学习 API；候选规律仍进入证据池和周报，需用户确认后才写入长期风格规则。
 - **2026-06-02**: API 正文模式下，用户勾选文章并提交翻译后，网页会立即触发 `api-translation.yml`。网页加载/刷新时会通过 `workflow_dispatch` 触发 `hourly-rss.yml` 抓最新 RSS 和缓存图片/正文；浏览器本地 10 分钟节流，避免连续刷新堆积 Actions。
 - **2026-06-12**: 全文翻译提交改为合并现有请求池，避免新提交覆盖旧请求；请求文件写入后页面立即显示“翻译中”。若 Actions 立即触发失败，请求仍保留在池中并由定时任务继续处理。
 - **2026-06-02**: 标题摘要 API 单轮处理上限从 8 篇调到 30 篇，避免一次 RSS 抓到多篇时只翻译前 8 篇、后续文章留在 `need_titles.json`。

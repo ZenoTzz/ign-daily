@@ -50,6 +50,9 @@ def main() -> int:
         if nightly_mode in {"api", "deepseek"}:
             print(f"AUTOMATION_GUARD SKIP task=nightly owner=api model={cfg.get('api_nightly_model') or model}")
             return 0
+        if nightly_mode == "codex":
+            print("AUTOMATION_GUARD SKIP task=nightly owner=codex")
+            return 0
         print(f"AUTOMATION_GUARD RUN task=nightly owner=openclaw model={model}")
         return 0
 

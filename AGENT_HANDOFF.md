@@ -11,7 +11,7 @@
 1. RSS 抓取只由 GitHub Actions `.github/workflows/hourly-rss.yml` 负责，每小时第 5 分钟运行，产出 `index.json`、`need_titles.json`，并用 `scripts/article_cache.py` 缓存 `sources/NN.json`。
 2. 标题/摘要翻译由 `data/automation-config.json.title_translator` 决定：`api` 时由 GitHub Actions/API 脚本处理；`openclaw` 时由 OpenClaw 独立 cron 处理。
 3. 正文翻译由 `data/automation-config.json.fulltext_translator` 决定：`api` 时由 GitHub Actions/API 脚本复用 `sources/NN.json`；`openclaw` 时由 OpenClaw/主 session 处理。
-4. 夜间学习由 `data/automation-config.json.nightly_learner` 决定：`api` 时由 `.github/workflows/nightly-style.yml` 更新 `STYLE_PROFILE.md`；`openclaw` 时由 OpenClaw 22:30 cron 处理。
+4. 夜间学习由 `data/automation-config.json.nightly_learner` 决定：`api` 时由 `.github/workflows/nightly-style.yml` 处理；`openclaw` 时由 OpenClaw 22:30 cron 处理；`codex` 时由 Codex 定时任务在腾讯润色稿导入后处理。
 5. OpenClaw 每次执行标题、正文或夜间学习前，必须先跑 `python3 scripts/automation_guard.py title|fulltext|nightly`。输出 `AUTOMATION_GUARD SKIP` 就立刻返回 `HEARTBEAT_OK`，不要读写队列或 `STYLE_PROFILE.md`；输出 `AUTOMATION_GUARD RUN` 才继续。
 6. `scripts/rss_queue_check.py {date}` 只用于本次 RSS 目标日期，不要拿它全量扫描旧历史日期；旧数据可能没有 `publish_time_cn`。
 7. 首页 Excel 导出是纯前端功能：用户勾选文章后可加入本地 `localStorage` 导出篮并跨日期导出 `.xlsx`，不应触发或修改 `requests.json`、`need_titles.json`、`translations/` 或任何 OpenClaw/API 自动化队列。
@@ -521,8 +521,8 @@ workspace/
 - 网页设置面板会写 `data/automation-config.json`：
   - `title_translator=openclaw|api`
   - `fulltext_translator=openclaw|api`
-- `nightly_learner=openclaw|api`
-- `openclaw`：保留队列给 OpenClaw；`api`：GitHub Actions 调用 OpenAI-compatible API。
+- `nightly_learner=openclaw|api|codex`
+- `openclaw`：保留队列给 OpenClaw；`api`：GitHub Actions 调用 OpenAI-compatible API；`codex`：由 Codex 对比润色稿并更新证据池和周报。
 - API 模式需要 GitHub Secret `TRANSLATOR_API_KEY`（兼容旧名 `DEEPSEEK_API_KEY`）。网页会把 `api_title_model`、`api_fulltext_model`、`api_nightly_model` 和 `api_base_url` 写入 `data/automation-config.json`；建议标题摘要用 Flash，正文用 Pro，夜间学习用 Flash。
 - 网页设置面板的“立即运行 API 翻译”按钮会先保存 `data/automation-config.json`，再触发 GitHub Actions `api-translation.yml` 的 `workflow_dispatch`；按钮依赖浏览器本地 PAT 具备 Actions 写权限。
 - 当 `fulltext_translator=api` 时，首页勾选文章并提交翻译会写 `requests.json`，随后立刻触发 `api-translation.yml`；无需等待下一次半小时定时。

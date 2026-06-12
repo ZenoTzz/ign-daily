@@ -17,7 +17,7 @@
 | `translate_compare_api.py` | 手动把同一篇文章交给一个或多个模型各翻一次，写入 comparisons/NN.json，不覆盖正式译文 | 网页“对比翻译”按钮 |
 | `automation_guard.py` | 给 OpenClaw cron 判断当前任务归 API 还是 OpenClaw | 每次 OpenClaw cron 启动后 |
 | `nightly_polish_diff.py` | 对比用户润色与原译，提取风格规律 | 每晚 22:30 cron |
-| `nightly_style_api.py` | 用 API 从已完成译文/润色样本学习并更新 STYLE_PROFILE.md | `nightly_learner=api` |
+| `nightly_style_api.py` | 用 API 从已完成译文/润色样本提取候选规律 | `nightly_learner=api` |
 | `import_tencent_polish.py` | 从每月腾讯文档导入润色稿并匹配已翻译文章 | 每晚夜间学习前 |
 | `prompt_blocks.py` | 统一稳定 prompt 前缀，提高 DeepSeek cache 命中 | 所有 API prompt 构造 |
 | `usage_logger.py` | 记录 DeepSeek usage tokens/cache 命中数据 | API 脚本调用后 |
@@ -143,6 +143,10 @@ DeepSeek 用量看板读取 `data/usage/deepseek/*.json` 和 `data/usage/deepsee
 
 API 夜间学习不只看当天。默认会扫描最近 45 天里 `polished/` 或反馈有变化、
 且尚未学习过当前变更指纹的日期；手动传入日期时才只处理指定日期。
+
+当 `nightly_learner=codex` 时，不调用夜间学习 API。Codex 在腾讯文档同步后读取
+`translations/` 与 `polished/` 的差异，更新相同的 `data/learning/style-evidence.json`
+和周报文件。候选规则仍需用户在学习页确认后才可进入 `STYLE_PROFILE.md`。
 
 ## 腾讯文档润色稿导入
 

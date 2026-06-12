@@ -1,7 +1,7 @@
 {
   "title_translator": "api",
   "fulltext_translator": "api",
-  "nightly_learner": "api",
+  "nightly_learner": "codex",
   "api_provider": "openai-compatible",
   "api_model": "deepseek-v4-flash",
   "api_title_model": "deepseek-v4-flash",
@@ -37,6 +37,6 @@
       "output_usd_per_million": 0.28
     }
   ],
-  "updated_at": "2026-06-12T01:36:18.140Z",
+  "updated_at": "2026-06-12T15:30:00+08:00",
   "notes": "Public switch only. API keys must stay in GitHub Actions Secrets."
 }
