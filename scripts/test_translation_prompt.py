@@ -31,13 +31,16 @@ class TranslationPromptTests(unittest.TestCase):
         prompt = translation_system_prompt()
         self.assertIn(FULLTEXT_QUALITY_EXAMPLE["source"], prompt)
         self.assertIn("玩家不仅能操控人类主角", prompt)
-        self.assertIn("此前的作品从未提供过这种玩法", prompt)
+        self.assertIn("迄今为止的作品都未提供过这种玩法", prompt)
+        self.assertNotIn("多年来", FULLTEXT_QUALITY_EXAMPLE["preferred_translation"])
 
     def test_quality_contract_rejects_literal_translation_strategy(self) -> None:
         joined = "\n".join(FULLTEXT_SEMANTIC_INSTRUCTIONS)
         self.assertIn("禁止逐词映射", joined)
         self.assertIn("明确谁同时执行什么动作", joined)
         self.assertIn("不得增删事实", joined)
+        self.assertIn("禁止意译、扩写", joined)
+        self.assertIn("采用最小推断", joined)
         self.assertNotIn("直译优先", translation_system_prompt())
 
     def test_audit_catches_known_gen_atlas_calques(self) -> None:

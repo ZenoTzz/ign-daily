@@ -535,6 +535,7 @@ workspace/
 - 正文摘要仅因长度超限时使用本地分句压缩，不再调用短输出的 API 返修；模型保留英文词库名时先做安全的字面替换再复审。批量处理中每篇成功后必须同步内存中的 index 状态，避免后续失败把前一篇 `done` 覆盖回 `none`。
 - API 正文写入和网页人工放行前必须把中文字段中的 `"`、`“”`、`＂` 统一转换为 `「」`；`api_translation_audit.py` 和 `post_translate_check.py` 必须把残留的非直角双引号视为错误。
 - API 正文 Prompt 必须要求先识别动作主体、对象、指代和并列/比较范围，再按中文语序重组；忠实指事实与逻辑，不是保留英文句法。`prompt_blocks.py` 中的 Gen Atlas 样例是机翻腔回归基准，不得移除。
+- 自然中文重组不等于意译：只允许调整语序、拆句和补出中文必需主语；不得增加原文未明确表达的时间、动机、因果、评价、程度或背景。不确定语气必须保留，歧义采用最小推断。
 - DeepSeek API 用量看板在 `usage.html`。API 脚本通过 `scripts/usage_logger.py` 写 `data/usage/deepseek/{date}.json`；`scripts/deepseek_balance.py` 调官方 `/user/balance` 写 `data/usage/deepseek-balance.json`。这些是旁路观测数据，失败不得阻断翻译、RSS 或夜间学习。
 - API prompt 长规则块统一由 `scripts/prompt_blocks.py` 生成，以提高 DeepSeek 自动缓存命中；标题、全文、分段重试和修复请求必须共用 `translation_system_prompt()`，任务规则与文章动态内容放在其后。不要在各脚本里复制不同版本的规则 prompt，也不要把文章标题、正文、词库命中放到稳定前缀之前。
 - 正文 API 手动触发支持批量：`fulltext_limit=5|10|999`。定时任务默认 5；`999` 表示尽量全部，但脚本会按 `TRANSLATOR_FULLTEXT_TIME_BUDGET_SECONDS` 到点暂停并保留剩余请求，避免 Actions 超时。
