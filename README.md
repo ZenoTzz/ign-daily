@@ -106,6 +106,7 @@ python -m http.server 8000
 - **2026-06-02**: 夜间学习也接入 `data/automation-config.json.nightly_learner`，可在网页里切换 `openclaw` / `api`。API 路径由 `.github/workflows/nightly-style.yml` 调用 `scripts/nightly_style_api.py` 更新 `STYLE_PROFILE.md`。
 - **2026-06-02**: API 夜间学习改为长期证据池机制。每天 22:30 只观察用户润色、学习批注和反馈，写入 `data/learning/daily/` 与 `data/learning/style-evidence.json`；每周生成 `data/learning/weekly/{week}.json` 供学习页批注。`STYLE_PROFILE.md` 只会在用户对周报规则明确“采纳/确认”后更新，避免 API 被当天样本带偏。
 - **2026-06-02**: API 正文模式下，用户勾选文章并提交翻译后，网页会立即触发 `api-translation.yml`。网页加载/刷新时会通过 `workflow_dispatch` 触发 `hourly-rss.yml` 抓最新 RSS 和缓存图片/正文；浏览器本地 10 分钟节流，避免连续刷新堆积 Actions。
+- **2026-06-12**: 全文翻译提交改为合并现有请求池，避免新提交覆盖旧请求；请求文件写入后页面立即显示“翻译中”。若 Actions 立即触发失败，请求仍保留在池中并由定时任务继续处理。
 - **2026-06-02**: 标题摘要 API 单轮处理上限从 8 篇调到 30 篇，避免一次 RSS 抓到多篇时只翻译前 8 篇、后续文章留在 `need_titles.json`。
 - **2026-06-02**: API 正文翻译会在 `translations/NN.json` 写入 `translator_model`，并同步到首页 `index.json`；首页卡片和文章页会显示“由 DeepSeek V4 Pro/Flash 翻译”。
 - **2026-06-02**: 新增 `usage.html` DeepSeek API 用量看板。API 脚本会记录 `usage` 中的总 tokens、输入/输出 tokens、`prompt_cache_hit_tokens`、`prompt_cache_miss_tokens`；`.github/workflows/deepseek-usage.yml` 定期查询 DeepSeek `/user/balance` 写入余额快照。用量记录是旁路数据，不影响正常翻译工作流。

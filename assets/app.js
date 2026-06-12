@@ -1298,31 +1298,59 @@ function appData() {
             publish_time_cn: art.publish_time_cn || art.pub_date || art.pubDate_cst || ''
           } : { id };
         });
+        const path = `data/${date}/requests.json`;
+        let existing = { requested_ids: [], requested_articles: [] };
+        try {
+          const fresh = await GH.getFile(path);
+          if (fresh?.content) existing = JSON.parse(fresh.content);
+        } catch (_) {
+          // First request for a date may not have a file yet.
+        }
+
+        const mergedArticles = new Map();
+        for (const item of existing.requested_articles || []) {
+          const key = item.url || `id:${Number(item.id)}`;
+          if (key) mergedArticles.set(key, item);
+        }
+        for (const item of requested_articles) {
+          const key = item.url || `id:${Number(item.id)}`;
+          if (key) mergedArticles.set(key, item);
+        }
+        const mergedIds = [...new Set([
+          ...(existing.requested_ids || []).map(Number),
+          ...selIds
+        ])].filter(Number.isFinite).sort((a, b) => a - b);
         const payload = {
           date,
-          requested_ids: selIds,
-          requested_articles,
+          requested_ids: mergedIds,
+          requested_articles: [...mergedArticles.values()],
           requested_at: new Date().toISOString()
         };
-        const path = `data/${date}/requests.json`;
         await GH.putFile(path, JSON.stringify(payload, null, 2),
-          `request translation for ${date}: ${payload.requested_ids.join(',')}`);
-        await this.clearSelectedTranslationFailures(date, selIds);
-        const apiFulltext = this.isApiMode('fulltext_translator');
-        if (apiFulltext) {
-          await this.saveAutomationConfig();
-          await GH.dispatchWorkflow('api-translation.yml', this.apiTranslationInputs());
-          const summary = this.apiTranslationSummary();
-          this.flash(`✅ 已请求翻译 ${this.selected.length} 篇，API Actions 已开始处理${summary ? '，本次使用 ' + summary : ''}`);
-        } else {
-          this.flash(`✅ 已请求翻译 ${this.selected.length} 篇，OpenClaw 会处理`);
-        }
-        // 标记 requested
-        for (const id of this.selected) {
-          const a = this.data.articles.find(x => x.id === id);
+          `request translation for ${date}: ${selIds.join(',')}`);
+
+        // The request is already durable at this point. Reflect that locally
+        // before triggering optional automation so the pool appears at once.
+        for (const id of selIds) {
+          const a = this.data.articles.find(x => Number(x.id) === id);
           if (a && a.translation_status !== 'done') a.translation_status = 'requested';
         }
         this.selected = [];
+        await this.clearSelectedTranslationFailures(date, selIds);
+        const apiFulltext = this.isApiMode('fulltext_translator');
+        if (apiFulltext) {
+          const saved = await this.saveAutomationConfig();
+          try {
+            if (!saved) throw new Error('自动化配置保存失败');
+            await GH.dispatchWorkflow('api-translation.yml', this.apiTranslationInputs());
+            const summary = this.apiTranslationSummary();
+            this.flash(`✅ 已进入翻译池 ${selIds.length} 篇，API Actions 已开始处理${summary ? '，本次使用 ' + summary : ''}`);
+          } catch (dispatchError) {
+            this.flash(`⚠️ 已进入翻译池 ${selIds.length} 篇，但立即触发失败，将由定时任务继续处理：${dispatchError.message}`, 6500);
+          }
+        } else {
+          this.flash(`✅ 已进入翻译池 ${selIds.length} 篇，OpenClaw 会处理`);
+        }
       } catch (e) {
         this.flash('❌ 提交失败：' + e.message, 4000);
       }
