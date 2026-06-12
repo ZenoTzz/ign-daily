@@ -651,6 +651,153 @@
       "total_tokens": 8560,
       "prompt_cache_hit_tokens": 6272,
       "prompt_cache_miss_tokens": 1088
+    },
+    {
+      "time_cn": "2026-06-12 08:31:31",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 3,
+      "article_title": "Star Trek: Shadow Frontier — Paramount Says 'The Goal Is for Bloober to Make the Best Star Trek Game of All Time'",
+      "article_url": "https://www.ign.com/articles/star-trek-shadow-frontier-paramount-says-the-goal-is-for-bloober-to-make-the-best-star-trek-game-of-all-time",
+      "article_date": "2026-06-12",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.0012537,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7933,
+      "completion_tokens": 511,
+      "total_tokens": 8444,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 7933
+    },
+    {
+      "time_cn": "2026-06-12 08:31:43",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 9,
+      "article_title": "The Marvel Zombies Rise From the Grave Again in Marvel Zombies: War Zone",
+      "article_url": "https://www.ign.com/articles/the-marvel-zombies-rise-from-the-grave-again-in-marvel-zombies-war-zone",
+      "article_date": "2026-06-12",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00114033,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7045,
+      "completion_tokens": 801,
+      "total_tokens": 7846,
+      "prompt_cache_hit_tokens": 512,
+      "prompt_cache_miss_tokens": 6533
+    },
+    {
+      "time_cn": "2026-06-12 08:31:57",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 10,
+      "article_title": "Whatever Happens This World Cup, It Won’t Be As Fun as Playing FIFA: Road to World Cup 98",
+      "article_url": "https://www.ign.com/articles/whatever-happens-this-world-cup-it-wont-be-as-fun-as-playing-fifa-road-to-world-cup-98",
+      "article_date": "2026-06-12",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00058582,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8137,
+      "completion_tokens": 1097,
+      "total_tokens": 9234,
+      "prompt_cache_hit_tokens": 6272,
+      "prompt_cache_miss_tokens": 1865
+    },
+    {
+      "time_cn": "2026-06-12 08:32:07",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 11,
+      "article_title": "Stranger Than Heaven Director Addresses Concerns Over Tupac's Inclusion",
+      "article_url": "https://www.ign.com/articles/stranger-than-heaven-director-addresses-concerns-over-tupacs-inclusion",
+      "article_date": "2026-06-12",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00034838,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7519,
+      "completion_tokens": 558,
+      "total_tokens": 8077,
+      "prompt_cache_hit_tokens": 6272,
+      "prompt_cache_miss_tokens": 1247
+    },
+    {
+      "time_cn": "2026-06-12 08:32:19",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 17,
+      "article_title": "Stranger Than Heaven Interview: Director Says Tupac is a Good Idea and Confirms Yakuza Story Connections",
+      "article_url": "https://www.ign.com/articles/stranger-than-heaven-interview-director-says-tupac-is-a-good-idea-and-confirms-yakuza-story-connections",
+      "article_date": "2026-06-12",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00053794,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8467,
+      "completion_tokens": 761,
+      "total_tokens": 9228,
+      "prompt_cache_hit_tokens": 6272,
+      "prompt_cache_miss_tokens": 2195
+    },
+    {
+      "time_cn": "2026-06-12 08:32:34",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 18,
+      "article_title": "Gen Atlas Creator Fumito Ueda on Creating Emotional Masterpieces: ‘I Do Think About Leaving a Mark in People’s Hearts’",
+      "article_url": "https://www.ign.com/articles/gen-atlas-creator-fumito-ueda-on-creating-emotional-masterpieces-i-do-think-about-leaving-a-mark-in-peoples-hearts",
+      "article_date": "2026-06-12",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00058666,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8343,
+      "completion_tokens": 997,
+      "total_tokens": 9340,
+      "prompt_cache_hit_tokens": 6272,
+      "prompt_cache_miss_tokens": 2071
+    },
+    {
+      "time_cn": "2026-06-12 08:32:44",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 23,
+      "article_title": "The Death of Robin Hood Review",
+      "article_url": "https://www.ign.com/articles/the-death-of-robin-hood-review",
+      "article_date": "2026-06-12",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00037568,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7360,
+      "completion_tokens": 735,
+      "total_tokens": 8095,
+      "prompt_cache_hit_tokens": 6272,
+      "prompt_cache_miss_tokens": 1088
     }
   ]
 }

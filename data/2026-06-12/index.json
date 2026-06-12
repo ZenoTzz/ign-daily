@@ -3,11 +3,11 @@
   "articles": [
     {
       "id": 23,
-      "category": "游戏新闻",
-      "emoji": "🎮",
+      "category": "评测评分",
+      "emoji": "🎬",
       "en_title": "The Death of Robin Hood Review",
-      "cn_title": "The Death of Robin Hood Review",
-      "summary": "",
+      "cn_title": "《侠盗罗宾汉之死》影评",
+      "summary": "《侠盗罗宾汉之死》以黑暗写实的笔触重塑民间传说，休·杰克曼饰演一名残暴、疲惫的老盗贼，否定自己过往的英雄神话。影片融合《不可饶恕》的反思、《北欧人》的中世纪暴力与《绿衣骑士》的凯尔特美学，情感核心在于他与修道院修女及一名创伤女孩的羁绊。表演精湛，但风格压抑文艺，适合追求深度的观众。影片将于6月19日登陆院线。",
       "url": "https://www.ign.com/articles/the-death-of-robin-hood-review",
       "publish_time_cn": "2026-06-12 05:00",
       "pub_date": "2026-06-12 05:00",
@@ -22,7 +22,16 @@
         "https://assets-prd.ignimgs.com/2026/06/04/thedeathofrobinhood-blogroll-02-1780593746336.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-12T08:24:26+08:00"
+      "source_fetched_at": "2026-06-12T08:24:26+08:00",
+      "pending_dict": [
+        {
+          "en": "The Death of Robin Hood",
+          "cn": "《侠盗罗宾汉之死》",
+          "cat": "movies_tv",
+          "source": "ai_guess",
+          "reason": "电影译名待确认是否为社区通用译名"
+        }
+      ]
     },
     {
       "id": 6,
@@ -110,11 +119,11 @@
     },
     {
       "id": 9,
-      "category": "游戏新闻",
-      "emoji": "🎮",
+      "category": "行业动态",
+      "emoji": "🧟",
       "en_title": "The Marvel Zombies Rise From the Grave Again in Marvel Zombies: War Zone",
-      "cn_title": "The Marvel Zombies Rise From the Grave Again in Marvel Zombies: War Zone",
-      "summary": "",
+      "cn_title": "《漫威丧尸》新作《战区》今秋降临",
+      "summary": "漫威宣布将于今年秋季推出全新漫画系列《漫威丧尸：战区》，故事聚焦惩罚者、卢克·凯奇、铁拳、艾丽卡和月光骑士等街头英雄，对抗被丧尸化的钢铁侠、奇异博士等强大敌人。该系列由《忍者神龟：最后的浪人》编剧Tom Waltz执笔，画师Jaime Infante绘制，首期将于9月2日发售。",
       "url": "https://www.ign.com/articles/the-marvel-zombies-rise-from-the-grave-again-in-marvel-zombies-war-zone",
       "publish_time_cn": "2026-06-12 01:01",
       "pub_date": "2026-06-12 01:01",
@@ -128,15 +137,24 @@
         "https://assets-prd.ignimgs.com/2026/06/11/mixcollage-11-jun-2026-12-19-pm-7164-1781194758484.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-12T05:31:11+08:00"
+      "source_fetched_at": "2026-06-12T05:31:11+08:00",
+      "pending_dict": [
+        {
+          "en": "Marvel Zombies: War Zone",
+          "cn": "《漫威丧尸：战区》",
+          "cat": "movies_tv",
+          "source": "ai_guess",
+          "reason": "系列中文译名待确认"
+        }
+      ]
     },
     {
       "id": 10,
-      "category": "游戏新闻",
-      "emoji": "🎮",
+      "category": "观点推荐",
+      "emoji": "⚽️",
       "en_title": "Whatever Happens This World Cup, It Won’t Be As Fun as Playing FIFA: Road to World Cup 98",
-      "cn_title": "Whatever Happens This World Cup, It Won’t Be As Fun as Playing FIFA: Road to World Cup 98",
-      "summary": "",
+      "cn_title": "世界杯再精彩，也不如《FIFA：98世界杯之路》",
+      "summary": "作者认为2026年世界杯再精彩，也比不上1997年发售的《FIFA：通往98世界杯之路》。这款游戏拥有172支国家队、简单的操作和独特的室内模式，让玩家沉浸其中。如今收藏家们愿意花500美元(约合人民币3580元)购买旧球衣，但游戏的纯粹乐趣无法替代。",
       "url": "https://www.ign.com/articles/whatever-happens-this-world-cup-it-wont-be-as-fun-as-playing-fifa-road-to-world-cup-98",
       "publish_time_cn": "2026-06-12 01:00",
       "pub_date": "2026-06-12 01:00",
@@ -152,15 +170,24 @@
         "https://assets-prd.ignimgs.com/2026/06/08/fifa-rtwc-98-5-1780928995349.png"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-12T05:31:11+08:00"
+      "source_fetched_at": "2026-06-12T05:31:11+08:00",
+      "pending_dict": [
+        {
+          "en": "FIFA: Road to World Cup 98",
+          "cn": "《FIFA：通往98世界杯之路》",
+          "cat": "games",
+          "source": "ai_guess",
+          "reason": "社区通用译名待确认"
+        }
+      ]
     },
     {
       "id": 11,
       "category": "游戏新闻",
       "emoji": "🎮",
       "en_title": "Stranger Than Heaven Director Addresses Concerns Over Tupac's Inclusion",
-      "cn_title": "Stranger Than Heaven Director Addresses Concerns Over Tupac's Inclusion",
-      "summary": "",
+      "cn_title": "《Stranger Than Heaven》回应Tupac角色争议",
+      "summary": "上周夏日游戏节上，已故说唱歌手Tupac Shakur将作为配角登场《Stranger Than Heaven》的消息引发争议。导演横山昌义回应称，Tupac的遗产管理方和家族均批准了这一安排，角色将由真人演员配音而非AI，并类比此前使用已故演员菅原文太形象的先例。他表示理解批评声音，但团队认为这一创意能为游戏增色。",
       "url": "https://www.ign.com/articles/stranger-than-heaven-director-addresses-concerns-over-tupacs-inclusion",
       "publish_time_cn": "2026-06-12 00:09",
       "pub_date": "2026-06-12 00:09",
@@ -310,8 +337,8 @@
       "category": "游戏新闻",
       "emoji": "🎮",
       "en_title": "Stranger Than Heaven Interview: Director Says Tupac is a Good Idea and Confirms Yakuza Story Connections",
-      "cn_title": "Stranger Than Heaven Interview: Director Says Tupac is a Good Idea and Confirms Yakuza Story Connections",
-      "summary": "",
+      "cn_title": "《天堂陌客》导演谈Tupac加盟与如龙世界关联",
+      "summary": "RGG Studio总监横山昌义在夏日游戏节接受IGN专访，详解新作《天堂陌客》的战斗系统变革、五个时代五座城市的世界设计，以及为何选用已故说唱歌手Tupac Shakur的形象。本作剧情聚焦20世纪初日本混血主角的寻根之旅，与《如龙》系列共享世界观但独立成篇，基调更加严肃深沉。",
       "url": "https://www.ign.com/articles/stranger-than-heaven-interview-director-says-tupac-is-a-good-idea-and-confirms-yakuza-story-connections",
       "publish_time_cn": "2026-06-11 22:00",
       "pub_date": "2026-06-11 22:00",
@@ -326,15 +353,24 @@
         "https://assets-prd.ignimgs.com/2026/06/11/yokoyama-1781186720867.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-12T05:31:15+08:00"
+      "source_fetched_at": "2026-06-12T05:31:15+08:00",
+      "pending_dict": [
+        {
+          "en": "Stranger Than Heaven",
+          "cn": "天堂陌客",
+          "cat": "games",
+          "source": "ai_guess",
+          "reason": "无官方中文译名，建议译名待确认"
+        }
+      ]
     },
     {
       "id": 18,
       "category": "游戏新闻",
-      "emoji": "🎮",
+      "emoji": "🤖",
       "en_title": "Gen Atlas Creator Fumito Ueda on Creating Emotional Masterpieces: ‘I Do Think About Leaving a Mark in People’s Hearts’",
-      "cn_title": "Gen Atlas Creator Fumito Ueda on Creating Emotional Masterpieces: ‘I Do Think About Leaving a Mark in People’s Hearts’",
-      "summary": "",
+      "cn_title": "上田文人谈《Gen Atlas》：想在玩家心中留下印记",
+      "summary": "《ICO》《旺达与巨像》《最后的守护者》制作人上田文人在夏日游戏节接受IGN采访，介绍新作《Gen Atlas》从奇幻转向科幻，巨型机器人将成为核心。他表示游戏旨在玩家心中留下情感印记，不预设单一情绪，而让玩家自行解读。本作将更注重战斗和可操控机器人同伴，但仍延续其标志性的孤独世界与宏大叙事。",
       "url": "https://www.ign.com/articles/gen-atlas-creator-fumito-ueda-on-creating-emotional-masterpieces-i-do-think-about-leaving-a-mark-in-peoples-hearts",
       "publish_time_cn": "2026-06-11 21:30",
       "pub_date": "2026-06-11 21:30",
@@ -350,7 +386,16 @@
         "https://assets-prd.ignimgs.com/2026/06/11/gen-atlus-02-1781180123579.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-12T05:31:15+08:00"
+      "source_fetched_at": "2026-06-12T05:31:15+08:00",
+      "pending_dict": [
+        {
+          "en": "Gen Atlas",
+          "cn": "《Gen Atlas》（暂译）",
+          "cat": "games",
+          "source": "ai_guess",
+          "reason": "尚无官方译名，需IGN中国确认"
+        }
+      ]
     },
     {
       "id": 19,
@@ -460,10 +505,10 @@
     {
       "id": 3,
       "category": "游戏新闻",
-      "emoji": "🎮",
+      "emoji": "🚀",
       "en_title": "Star Trek: Shadow Frontier — Paramount Says 'The Goal Is for Bloober to Make the Best Star Trek Game of All Time'",
-      "cn_title": "Star Trek: Shadow Frontier — Paramount Says 'The Goal Is for Bloober to Make the Best Star Trek Game of All Time'",
-      "summary": "",
+      "cn_title": "《星际迷航：暗影边界》2027年发售，Paramount称要让Bloober做出史上最佳星战游戏",
+      "summary": "Paramount Games Studio与Bloober Team合作推出《星际迷航：暗影边界》，由《下一代》演员Michelle Forbes回归饰演Ro Laren。游戏定位为心理惊悚而非恐怖，风格类似《地狱之刃》，计划于2027年登陆PS5、Xbox Series和PC。Paramount高层表示目标是让Bloober打造史上最佳《星际迷航》游戏。",
       "url": "https://www.ign.com/articles/star-trek-shadow-frontier-paramount-says-the-goal-is-for-bloober-to-make-the-best-star-trek-game-of-all-time",
       "publish_time_cn": "2026-06-11 18:55",
       "pub_date": "2026-06-11 18:55",
@@ -481,7 +526,23 @@
         "https://assets-prd.ignimgs.com/2022/03/25/arex-1648219929657.png"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-11T20:32:26+08:00"
+      "source_fetched_at": "2026-06-11T20:32:26+08:00",
+      "pending_dict": [
+        {
+          "en": "Star Trek: Shadow Frontier",
+          "cn": "《星际迷航：暗影边界》",
+          "cat": "games",
+          "source": "ai_guess",
+          "reason": "词库未收录，需确认官方译名"
+        },
+        {
+          "en": "Ro Laren",
+          "cn": "Ro Laren",
+          "cat": "people",
+          "source": "ai_guess",
+          "reason": "不知名角色，保留英文"
+        }
+      ]
     },
     {
       "id": 4,
