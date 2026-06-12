@@ -307,12 +307,12 @@
       "emoji": "🎃",
       "en_title": "Dead by Daylight the 'Most-Played Horror Game in History,' Its Developer Has Said",
       "cn_title": "《黎明杀机》成史上最热恐怖游戏",
-      "summary": "在即将迎来10周年之际，Behaviour Interactive宣布《黎明杀机》为“史上玩家最多的恐怖游戏”，累计玩家超7000万，日均在线逾100万，Steam连续9年跻身畅销榜前15。过去12个月收入增长超50%，6月14日将通过直播揭晓游戏未来。",
+      "summary": "在即将迎来10周年之际，Behaviour Interactive宣布《黎明杀机》为“史上玩家最多的恐怖游戏”，十年累计玩家超过7000万，全平台日均在线突破100万，Steam连续9年稳居畅销榜前15。过去12个月收入增长超50%，6月14日将通过直播揭晓游戏未来。",
       "url": "https://www.ign.com/articles/dead-by-daylight-the-most-played-horror-game-in-history-its-developer-has-said",
       "publish_time_cn": "2026-06-11 22:04",
       "pub_date": "2026-06-11 22:04",
       "cover_image": "https://assets-prd.ignimgs.com/2026/06/11/ss-141a099b39afb31b864e8eda9570c344ad0c70f5-1920x1080-1781186378569.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/11/ss-141a099b39afb31b864e8eda9570c344ad0c70f5-1920x1080-1781186378569.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/11/ss-141a099b39afb31b864e8eda9570c344ad0c70f5-1920x1080-1781186378569.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -330,7 +330,13 @@
           "source": "ai_guess",
           "reason": "社区公认译名，需用户确认"
         }
-      ]
+      ],
+      "translation_error": "Expecting value: line 1 column 1 (char 0)",
+      "translation_failed_at": "2026-06-12T08:39:59.690050+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro",
+      "translation_path": "translations/16.json"
     },
     {
       "id": 17,
@@ -426,12 +432,12 @@
       "emoji": "🎮",
       "en_title": "Tomb Raider: Legacy of Atlantis Makes a 30-Year-Old Adventure Feel Brand New",
       "cn_title": "《古墓丽影：亚特兰蒂斯遗迹》让经典焕然一新",
-      "summary": "由水晶动力与 Flying Wild Hog 合作开发的《古墓丽影：亚特兰蒂斯遗迹》是对初代《古墓丽影》的全面重制。试玩版展示了新增的抓钩、专注系统等现代改良，保留了经典解谜与恐龙战斗。游戏将于2027年2月12日登陆 PS5、Xbox Series X/S、PC 和 Nintendo Switch 2。",
+      "summary": "《古墓丽影：亚特兰蒂斯遗迹》初代全面重制，试玩包含水谜题和恐龙枪战。新增抓钩和专注系统，保留经典手感，霸王龙场面电影化。2027年2月12日登陆主机及PC。",
       "url": "https://www.ign.com/articles/tomb-raider-legacy-of-atlantis-the-first-preview",
       "publish_time_cn": "2026-06-11 21:00",
       "pub_date": "2026-06-11 21:00",
       "cover_image": "https://assets-prd.ignimgs.com/2026/06/08/tomb-raider-blog-1780943753098.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/08/tomb-raider-blog-1780943753098.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/08/tomb-raider-blog-1780943753098.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -456,7 +462,13 @@
           "source": "ai_guess",
           "reason": "波兰工作室，中文译名不统一，建议保留英文或使用音译"
         }
-      ]
+      ],
+      "translation_error": "[dictionary] source contains 'Nintendo', but required dictionary translation '任天堂' is missing",
+      "translation_failed_at": "2026-06-12T08:43:33.715745+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro",
+      "translation_path": "translations/20.json"
     },
     {
       "id": 21,
@@ -464,12 +476,12 @@
       "emoji": "📺",
       "en_title": "Doctor Who Likely Now Off Air For Years, as Report Suggests Production Companies Cautious About Continuing Series",
       "cn_title": "《神秘博士》或停播长达五年",
-      "summary": "BBC宣布取消《神秘博士》圣诞特辑，剧集制作人Russell T Davies和制作公司Bad Wolf退出，剧集无限期暂停。Deadline报道，最早2028年才可能有新集播出，停播可能长达五年。多家制作公司因剧情争议和预算缩减（每集约300万美元，约合人民币2150万元）而犹豫接手，但《神秘博士》最终仍会重启。",
+      "summary": "昨日BBC突然宣布取消《神秘博士》圣诞特辑，确认Russell T Davies与Bad Wolf退出，剧集进入无限期停摆。报道称分手因剧集需要彻底手术，多家制作公司因剧情争议和预算腰斩（每集约300万美元(约合人民币2037万元)）而犹豫接手。回归最早2028年，停播或长达五年，但该剧终将重启。",
       "url": "https://www.ign.com/articles/doctor-who-likely-now-off-air-for-years-as-report-suggests-production-companies-cautious-about-continuing-series",
       "publish_time_cn": "2026-06-11 20:00",
       "pub_date": "2026-06-11 20:00",
       "cover_image": "https://assets-prd.ignimgs.com/2026/06/11/gettyimages-2163851200-1781178818241.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/11/gettyimages-2163851200-1781178818241.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/11/gettyimages-2163851200-1781178818241.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -478,7 +490,13 @@
         "https://assets-prd.ignimgs.com/2026/06/11/gettyimages-2163851200-1781178818241.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-12T05:31:17+08:00"
+      "source_fetched_at": "2026-06-12T05:31:17+08:00",
+      "translation_error": "Expecting value: line 1 column 1 (char 0)",
+      "translation_failed_at": "2026-06-12T08:44:31.948712+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro",
+      "translation_path": "translations/21.json"
     },
     {
       "id": 22,

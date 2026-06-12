@@ -798,6 +798,195 @@
       "total_tokens": 8095,
       "prompt_cache_hit_tokens": 6272,
       "prompt_cache_miss_tokens": 1088
+    },
+    {
+      "time_cn": "2026-06-12 08:38:57",
+      "task": "fulltext",
+      "model": "deepseek-v4-pro",
+      "article_id": 11,
+      "article_title": "《Stranger Than Heaven》回应Tupac角色争议",
+      "article_url": "https://www.ign.com/articles/stranger-than-heaven-director-addresses-concerns-over-tupacs-inclusion",
+      "article_date": "2026-06-12",
+      "detail": "",
+      "estimated_cost_usd": 0.00886182,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 8296,
+      "completion_tokens": 6038,
+      "total_tokens": 14334,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 8296
+    },
+    {
+      "time_cn": "2026-06-12 08:39:52",
+      "task": "fulltext",
+      "model": "deepseek-v4-pro",
+      "article_id": 16,
+      "article_title": "《黎明杀机》成史上最热恐怖游戏",
+      "article_url": "https://www.ign.com/articles/dead-by-daylight-the-most-played-horror-game-in-history-its-developer-has-said",
+      "article_date": "2026-06-12",
+      "detail": "",
+      "estimated_cost_usd": 0.00579034,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 7789,
+      "completion_tokens": 5744,
+      "total_tokens": 13533,
+      "prompt_cache_hit_tokens": 6016,
+      "prompt_cache_miss_tokens": 1773
+    },
+    {
+      "time_cn": "2026-06-12 08:39:59",
+      "task": "fulltext_summary_repair",
+      "model": "deepseek-v4-pro",
+      "article_id": 16,
+      "article_title": "《黎明杀机》成史上最热恐怖游戏",
+      "article_url": "https://www.ign.com/articles/dead-by-daylight-the-most-played-horror-game-in-history-its-developer-has-said",
+      "article_date": "2026-06-12",
+      "detail": "summary length only",
+      "estimated_cost_usd": 0.00122763,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 7588,
+      "completion_tokens": 600,
+      "total_tokens": 8188,
+      "prompt_cache_hit_tokens": 6016,
+      "prompt_cache_miss_tokens": 1572
+    },
+    {
+      "time_cn": "2026-06-12 08:40:48",
+      "task": "fulltext",
+      "model": "deepseek-v4-pro",
+      "article_id": 18,
+      "article_title": "上田文人谈《Gen Atlas》：想在玩家心中留下印记",
+      "article_url": "https://www.ign.com/articles/gen-atlas-creator-fumito-ueda-on-creating-emotional-masterpieces-i-do-think-about-leaving-a-mark-in-peoples-hearts",
+      "article_date": "2026-06-12",
+      "detail": "",
+      "estimated_cost_usd": 0.00552502,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 9070,
+      "completion_tokens": 4862,
+      "total_tokens": 13932,
+      "prompt_cache_hit_tokens": 6144,
+      "prompt_cache_miss_tokens": 2926
+    },
+    {
+      "time_cn": "2026-06-12 08:42:20",
+      "task": "fulltext",
+      "model": "deepseek-v4-pro",
+      "article_id": 20,
+      "article_title": "《古墓丽影：亚特兰蒂斯遗迹》让经典焕然一新",
+      "article_url": "https://www.ign.com/articles/tomb-raider-legacy-of-atlantis-the-first-preview",
+      "article_date": "2026-06-12",
+      "detail": "",
+      "estimated_cost_usd": 0.00982674,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 9247,
+      "completion_tokens": 9718,
+      "total_tokens": 18965,
+      "prompt_cache_hit_tokens": 6144,
+      "prompt_cache_miss_tokens": 3103
+    },
+    {
+      "time_cn": "2026-06-12 08:43:29",
+      "task": "fulltext_repair",
+      "model": "deepseek-v4-pro",
+      "article_id": 20,
+      "article_title": "《古墓丽影：亚特兰蒂斯遗迹》让经典焕然一新",
+      "article_url": "https://www.ign.com/articles/tomb-raider-legacy-of-atlantis-the-first-preview",
+      "article_date": "2026-06-12",
+      "detail": "2 audit issue(s)",
+      "estimated_cost_usd": 0.00860001,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 10564,
+      "completion_tokens": 7586,
+      "total_tokens": 18150,
+      "prompt_cache_hit_tokens": 6016,
+      "prompt_cache_miss_tokens": 4548
+    },
+    {
+      "time_cn": "2026-06-12 08:43:33",
+      "task": "audit_doctor",
+      "model": "deepseek-v4-pro",
+      "article_id": 20,
+      "article_title": "《古墓丽影：亚特兰蒂斯遗迹》让经典焕然一新",
+      "article_url": "https://www.ign.com/articles/tomb-raider-legacy-of-atlantis-the-first-preview",
+      "article_date": "2026-06-11",
+      "detail": "",
+      "estimated_cost_usd": 0.00048111,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 368,
+      "completion_tokens": 369,
+      "total_tokens": 737,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 368
+    },
+    {
+      "time_cn": "2026-06-12 08:44:24",
+      "task": "fulltext",
+      "model": "deepseek-v4-pro",
+      "article_id": 21,
+      "article_title": "《神秘博士》或停播长达五年",
+      "article_url": "https://www.ign.com/articles/doctor-who-likely-now-off-air-for-years-as-report-suggests-production-companies-cautious-about-continuing-series",
+      "article_date": "2026-06-12",
+      "detail": "",
+      "estimated_cost_usd": 0.0051718,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 7654,
+      "completion_tokens": 5164,
+      "total_tokens": 12818,
+      "prompt_cache_hit_tokens": 6144,
+      "prompt_cache_miss_tokens": 1510
+    },
+    {
+      "time_cn": "2026-06-12 08:44:31",
+      "task": "fulltext_summary_repair",
+      "model": "deepseek-v4-pro",
+      "article_id": 21,
+      "article_title": "《神秘博士》或停播长达五年",
+      "article_url": "https://www.ign.com/articles/doctor-who-likely-now-off-air-for-years-as-report-suggests-production-companies-cautious-about-continuing-series",
+      "article_date": "2026-06-12",
+      "detail": "summary length only",
+      "estimated_cost_usd": 0.00118068,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 7607,
+      "completion_tokens": 600,
+      "total_tokens": 8207,
+      "prompt_cache_hit_tokens": 6144,
+      "prompt_cache_miss_tokens": 1463
     }
   ]
 }
