@@ -18,6 +18,7 @@
 | `automation_guard.py` | 给 OpenClaw cron 判断当前任务归 API 还是 OpenClaw | 每次 OpenClaw cron 启动后 |
 | `nightly_polish_diff.py` | 对比用户润色与原译，提取风格规律 | 每晚 22:30 cron |
 | `nightly_style_api.py` | 用 API 从已完成译文/润色样本学习并更新 STYLE_PROFILE.md | `nightly_learner=api` |
+| `import_tencent_polish.py` | 从每月腾讯文档导入润色稿并匹配已翻译文章 | 每晚夜间学习前 |
 | `prompt_blocks.py` | 统一稳定 prompt 前缀，提高 DeepSeek cache 命中 | 所有 API prompt 构造 |
 | `usage_logger.py` | 记录 DeepSeek usage tokens/cache 命中数据 | API 脚本调用后 |
 | `deepseek_balance.py` | 调 DeepSeek `/user/balance` 写余额快照 | usage workflow / API workflow |
@@ -142,6 +143,32 @@ DeepSeek 用量看板读取 `data/usage/deepseek/*.json` 和 `data/usage/deepsee
 
 API 夜间学习不只看当天。默认会扫描最近 45 天里 `polished/` 或反馈有变化、
 且尚未学习过当前变更指纹的日期；手动传入日期时才只处理指定日期。
+
+## 腾讯文档润色稿导入
+
+每月腾讯文档链接保存在 `data/tencent-polish-config.json`。文档中的每篇文章按以下格式排列：
+
+```text
+YY/MM/DD 标题
+副标题
+正文第一段
+正文第二段
+```
+
+每天导入当天内容：
+
+```bash
+python3 scripts/import_tencent_polish.py
+```
+
+首次接入或补录整月内容时先演练，再正式导入：
+
+```bash
+python3 scripts/import_tencent_polish.py --all --dry-run
+python3 scripts/import_tencent_polish.py --all
+```
+
+脚本会结合标题和正文匹配 `translations/NN.json`，只写入高置信度结果。已有网页手工润色默认不会被覆盖；先前由腾讯文档导入的记录只在文档内容发生变化时更新。
 
 API prompt 的长规则块必须通过 `scripts/prompt_blocks.py` 生成。标题、全文、分段重试、全文修复和摘要修复统一使用 `translation_system_prompt()`；用户消息必须按“风格画像、固定任务规则、词库/文章动态数据”的顺序构造，并用 `stable_json()` 序列化。不要在各脚本里复制粘贴不同版本的 `TRANSLATION_GUIDE.md` / `STYLE_PROFILE.md` prompt，也不要随意调整稳定字段顺序，否则会让 DeepSeek 前缀缓存整体失效。
 
