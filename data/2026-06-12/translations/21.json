@@ -3,8 +3,8 @@
   "url": "https://www.ign.com/articles/doctor-who-likely-now-off-air-for-years-as-report-suggests-production-companies-cautious-about-continuing-series",
   "en_title": "Doctor Who Likely Now Off Air For Years, as Report Suggests Production Companies Cautious About Continuing Series",
   "cn_title": "《神秘博士》或停播长达五年",
-  "subtitle": "2028年再见？",
-  "opus_summary": "昨日BBC突然宣布取消《神秘博士》圣诞特辑，确认Russell T Davies与Bad Wolf退出，剧集进入无限期停摆。报道称分手因剧集需要彻底手术，多家制作公司因剧情争议和预算腰斩（每集约300万美元(约合人民币2037万元)）而犹豫接手。回归最早2028年，停播或长达五年，但该剧终将重启。",
+  "subtitle": "漫长停播期",
+  "opus_summary": "昨日BBC突然宣布取消《神秘博士》圣诞特辑，确认Russell T Davies与Bad Wolf退出，剧集进入无限期停摆。报道称分手因剧集需要彻底手术。",
   "publish_time_cn": "2026-06-11 20:00",
   "paragraphs": [
     {
@@ -71,7 +71,7 @@
     "Tom Phillips": "Tom Phillips",
     "Bluesky": "Bluesky"
   },
-  "cover": "https://assets-prd.ignimgs.com/2026/06/11/gettyimages-2163851200-1781178818241.jpg?width=1280&format=jpg&auto=webp&quality=80",
+  "cover": "https://assets-prd.ignimgs.com/2026/06/11/gettyimages-2163851200-1781178818241.jpg",
   "images": [
     "https://assets-prd.ignimgs.com/2026/06/11/gettyimages-2163851200-1781178818241.jpg?width=1280&format=jpg&auto=webp&quality=80",
     "https://assets-prd.ignimgs.com/2026/06/11/gettyimages-2163851200-1781178818241.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -81,15 +81,5 @@
   ],
   "translator": "api",
   "translator_provider": "openai-compatible",
-  "translator_model": "deepseek-v4-pro",
-  "quality_status": "needs_manual_review",
-  "manual_release_required": true,
-  "audit_issues": [
-    {
-      "type": "summary_length",
-      "detail": "opus_summary targets 70-80 non-space characters and must stay within 60-110, got 146"
-    }
-  ],
-  "audit_failed_at": "2026-06-12T08:44:31.948712+08:00",
-  "audit_failure_reason": "Expecting value: line 1 column 1 (char 0)"
+  "translator_model": "deepseek-v4-pro"
 }

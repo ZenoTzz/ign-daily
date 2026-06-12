@@ -257,8 +257,8 @@
       "url": "https://www.ign.com/articles/stranger-than-heaven-director-addresses-concerns-over-tupacs-inclusion",
       "publish_time_cn": "2026-06-12 00:09",
       "pub_date": "2026-06-12 00:09",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/06/05/tupac-stranger-than-heaven-1780695704331.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/05/tupac-stranger-than-heaven-1780695704331.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/05/tupac-stranger-than-heaven-1780695704331.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/05/tupac-stranger-than-heaven-1780695704331.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -267,7 +267,11 @@
         "https://assets-prd.ignimgs.com/2026/06/05/tupac-stranger-than-heaven-1780695704331.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-12T05:31:12+08:00"
+      "source_fetched_at": "2026-06-12T05:31:12+08:00",
+      "translation_path": "translations/11.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro"
     },
     {
       "id": 12,
@@ -377,8 +381,8 @@
       "url": "https://www.ign.com/articles/dead-by-daylight-the-most-played-horror-game-in-history-its-developer-has-said",
       "publish_time_cn": "2026-06-11 22:04",
       "pub_date": "2026-06-11 22:04",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/06/11/ss-141a099b39afb31b864e8eda9570c344ad0c70f5-1920x1080-1781186378569.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "needs_review",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/11/ss-141a099b39afb31b864e8eda9570c344ad0c70f5-1920x1080-1781186378569.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/11/ss-141a099b39afb31b864e8eda9570c344ad0c70f5-1920x1080-1781186378569.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/11/ss-141a099b39afb31b864e8eda9570c344ad0c70f5-1920x1080-1781186378569.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -397,8 +401,6 @@
           "reason": "社区公认译名，需用户确认"
         }
       ],
-      "translation_error": "Expecting value: line 1 column 1 (char 0)",
-      "translation_failed_at": "2026-06-12T08:39:59.690050+08:00",
       "translator": "api",
       "translator_provider": "openai-compatible",
       "translator_model": "deepseek-v4-pro",
@@ -446,8 +448,8 @@
       "url": "https://www.ign.com/articles/gen-atlas-creator-fumito-ueda-on-creating-emotional-masterpieces-i-do-think-about-leaving-a-mark-in-peoples-hearts",
       "publish_time_cn": "2026-06-11 21:30",
       "pub_date": "2026-06-11 21:30",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/06/11/gen-atlas-ueda-interview-blogroll-1781180303101.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/11/gen-atlas-ueda-interview-blogroll-1781180303101.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/11/gen-atlas-ueda-interview-blogroll-1781180303101.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/11/gen-atlas-ueda-interview-blogroll-1781180303101.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -467,7 +469,11 @@
           "source": "ai_guess",
           "reason": "尚无官方译名，需IGN中国确认"
         }
-      ]
+      ],
+      "translation_path": "translations/18.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro"
     },
     {
       "id": 19,
@@ -502,8 +508,8 @@
       "url": "https://www.ign.com/articles/tomb-raider-legacy-of-atlantis-the-first-preview",
       "publish_time_cn": "2026-06-11 21:00",
       "pub_date": "2026-06-11 21:00",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/06/08/tomb-raider-blog-1780943753098.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "needs_review",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/08/tomb-raider-blog-1780943753098.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/08/tomb-raider-blog-1780943753098.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/08/tomb-raider-blog-1780943753098.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -529,8 +535,6 @@
           "reason": "波兰工作室，中文译名不统一，建议保留英文或使用音译"
         }
       ],
-      "translation_error": "[dictionary] source contains 'Nintendo', but required dictionary translation '任天堂' is missing",
-      "translation_failed_at": "2026-06-12T08:43:33.715745+08:00",
       "translator": "api",
       "translator_provider": "openai-compatible",
       "translator_model": "deepseek-v4-pro",
@@ -546,8 +550,8 @@
       "url": "https://www.ign.com/articles/doctor-who-likely-now-off-air-for-years-as-report-suggests-production-companies-cautious-about-continuing-series",
       "publish_time_cn": "2026-06-11 20:00",
       "pub_date": "2026-06-11 20:00",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/06/11/gettyimages-2163851200-1781178818241.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "needs_review",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/11/gettyimages-2163851200-1781178818241.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/11/gettyimages-2163851200-1781178818241.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/11/gettyimages-2163851200-1781178818241.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -557,8 +561,6 @@
       ],
       "source_status": "cached",
       "source_fetched_at": "2026-06-12T05:31:17+08:00",
-      "translation_error": "Expecting value: line 1 column 1 (char 0)",
-      "translation_failed_at": "2026-06-12T08:44:31.948712+08:00",
       "translator": "api",
       "translator_provider": "openai-compatible",
       "translator_model": "deepseek-v4-pro",

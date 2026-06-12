@@ -340,6 +340,19 @@ def post_mode(date_str, article_ref):
     print(f"POST: #{article_id} - {data.get('cn_title', '')[:40]}")
     print(f"{'='*60}")
 
+    review_keys = (
+        "quality_status",
+        "manual_release_required",
+        "audit_issues",
+        "audit_failed_at",
+        "audit_failure_reason",
+    )
+    if any(key in data for key in review_keys):
+        for key in review_keys:
+            data.pop(key, None)
+        changed = True
+        print("\n🔧 Cleared resolved manual-review metadata")
+
     # 1. 补 cover
     if not data.get('cover'):
         print("\n📷 Cover missing, fetching...")
@@ -439,6 +452,10 @@ def post_mode(date_str, article_ref):
             for meta_key in ('translator', 'translator_provider', 'translator_model'):
                 if data.get(meta_key) and a.get(meta_key) != data[meta_key]:
                     a[meta_key] = data[meta_key]
+                    idx_changed = True
+            for stale_key in ('translation_error', 'translation_failed_at'):
+                if stale_key in a:
+                    a.pop(stale_key, None)
                     idx_changed = True
             break
 

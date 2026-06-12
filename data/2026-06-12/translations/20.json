@@ -41,7 +41,7 @@
     },
     {
       "en": "And partway through this attempted escape is where my time with Legacy of Atlantis ended, as Lara plunged into a river, her rope bridge escape route destroyed by the T. rex. This cliffhanger concluded a short but varied look at what this latest reboot of Tomb Raider has to offer, and so far, it feels like all of the necessary ingredients are there. At its core, the design attempts to blend the classic feel of Lara Croft’s movement with a more modern approach to combat and exploration. I’m looking forward to seeing how that all comes together when Tomb Raider: Legacy of Atlantis arrives on February 12, 2027, for PlayStation 5, Xbox Series X/S, PC, and Nintendo Switch 2.",
-      "cn": "在这次尝试逃脱的中途，我与《亚特兰蒂斯遗迹》的相处结束了，劳拉坠入一条河流，她赖以逃生的绳桥被霸王龙摧毁。这个悬念为这部最新《古墓丽影》重启版的简短但多样的一瞥画上了句号，到目前为止，感觉所有必要的元素都已具备。其核心设计试图融合劳拉·克劳馥移动的经典感觉与更现代的战斗和探索方式。我很期待看到当《古墓丽影：亚特兰蒂斯遗迹》于2027年2月12日登陆PS5、Xbox Series X/S、PC和Nintendo Switch 2时，这一切将如何整合在一起。"
+      "cn": "在这次尝试逃脱的中途，我与《亚特兰蒂斯遗迹》的相处结束了，劳拉坠入一条河流，她赖以逃生的绳桥被霸王龙摧毁。这个悬念为这部最新《古墓丽影》重启版的简短但多样的一瞥画上了句号，到目前为止，感觉所有必要的元素都已具备。其核心设计试图融合劳拉·克劳馥移动的经典感觉与更现代的战斗和探索方式。我很期待看到当《古墓丽影：亚特兰蒂斯遗迹》于2027年2月12日登陆PS5、Xbox Series X/S、PC和任天堂Switch 2时，这一切将如何整合在一起。"
     }
   ],
   "pending_dict": [],
@@ -65,9 +65,9 @@
     "Velociraptor": "迅猛龙",
     "T. rex": "霸王龙",
     "Alix Wilton Regan": "Alix Wilton Regan",
-    "Nintendo Switch 2": "Nintendo Switch 2"
+    "Nintendo Switch 2": "任天堂 Switch 2"
   },
-  "cover": "https://assets-prd.ignimgs.com/2026/06/08/tomb-raider-blog-1780943753098.jpg?width=1280&format=jpg&auto=webp&quality=80",
+  "cover": "https://assets-prd.ignimgs.com/2026/06/08/tomb-raider-blog-1780943753098.jpg",
   "images": [
     "https://assets-prd.ignimgs.com/2026/06/08/tomb-raider-blog-1780943753098.jpg?width=1280&format=jpg&auto=webp&quality=80",
     "https://assets-prd.ignimgs.com/2026/06/08/tomb-raider-blog-1780943753098.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -79,17 +79,5 @@
   "repair_issue_count": 2,
   "translator": "api",
   "translator_provider": "openai-compatible",
-  "translator_model": "deepseek-v4-pro",
-  "quality_status": "needs_manual_review",
-  "manual_release_required": true,
-  "audit_issues": [
-    {
-      "type": "dictionary",
-      "detail": "source contains 'Nintendo', but required dictionary translation '任天堂' is missing",
-      "en": "Nintendo",
-      "expected_cn": "任天堂"
-    }
-  ],
-  "audit_failed_at": "2026-06-12T08:43:33.715745+08:00",
-  "audit_failure_reason": "[dictionary] source contains 'Nintendo', but required dictionary translation '任天堂' is missing"
+  "translator_model": "deepseek-v4-pro"
 }

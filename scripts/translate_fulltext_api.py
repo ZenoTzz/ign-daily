@@ -25,10 +25,10 @@ from pathlib import Path
 from typing import Any
 
 from common_paths import DATA_DIR, REPO_ROOT, configure_utf8_stdio, dict_path, env_paths
-from api_translation_audit import check_translation
+from api_translation_audit import SUMMARY_HARD_MAX, SUMMARY_TARGET_MAX, check_translation, compact_char_len
 from audit_doctor import diagnose as diagnose_audit_failure
 from currency_utils import normalize_translation_currency
-from dict_matcher import restore_dictionary_spacing_in_data
+from dict_matcher import restore_dictionary_spacing_in_data, term_in_text
 from dict_matcher import matched_terms_for_article
 from dict_matcher import normalize_pending_dict
 from normalize_currency_files import normalize_date as normalize_currency_date
@@ -485,6 +485,68 @@ def normalize_translation(article: dict[str, Any], result: dict[str, Any], parag
     }))
 
 
+def trim_summary_to_limit(summary: str, target_max: int = SUMMARY_TARGET_MAX) -> str:
+    """Shorten an overlong summary without spending another API call."""
+    text = re.sub(r"\s+", " ", str(summary or "")).strip()
+    if compact_char_len(text) <= SUMMARY_HARD_MAX:
+        return text
+
+    clauses = re.findall(r".+?(?:[\u3002\uff01\uff1f\uff1b\uff0c]|$)", text)
+    kept: list[str] = []
+    for clause in clauses:
+        candidate = "".join(kept) + clause
+        if compact_char_len(candidate) > target_max:
+            break
+        kept.append(clause)
+
+    shortened = "".join(kept).rstrip("\uff0c\u3001\uff1b\uff1a:,. ")
+    if compact_char_len(shortened) < 60:
+        # A single long clause is unusual; retain a readable prefix and avoid
+        # ending in the middle of an ASCII word or number.
+        shortened = text[: target_max - 1].rstrip()
+        shortened = re.sub(r"[A-Za-z0-9]+$", "", shortened).rstrip("\uff0c\u3001\uff1b\uff1a:,. ")
+    if shortened and shortened[-1] not in "。！？":
+        shortened += "。"
+    return shortened
+
+
+def enforce_literal_dictionary_terms(
+    data: dict[str, Any],
+    paragraphs_en: list[str],
+    required_terms: dict[str, str],
+) -> dict[str, Any]:
+    """Replace an English term when the matching translated field kept it verbatim."""
+    repaired = dict(data)
+    repaired["paragraphs"] = [
+        dict(item) if isinstance(item, dict) else item
+        for item in data.get("paragraphs", [])
+    ]
+    fields = ("cn_title", "subtitle", "opus_summary")
+    for en, cn in required_terms.items():
+        visible_text = "\n".join(
+            [str(repaired.get(key) or "") for key in fields]
+            + [
+                str(item.get("cn") or "")
+                for item in repaired["paragraphs"]
+                if isinstance(item, dict)
+            ]
+        )
+        if not en or not cn or cn in visible_text:
+            continue
+        pattern = re.compile(r"(?<![A-Za-z0-9])" + re.escape(en) + r"(?![A-Za-z0-9])", re.I)
+        for key in fields:
+            value = repaired.get(key)
+            if isinstance(value, str) and pattern.search(value):
+                repaired[key] = pattern.sub(cn, value)
+        for source, item in zip(paragraphs_en, repaired["paragraphs"]):
+            if not isinstance(item, dict) or not term_in_text(en, source):
+                continue
+            value = item.get("cn")
+            if isinstance(value, str) and pattern.search(value):
+                item["cn"] = pattern.sub(cn, value)
+    return restore_dictionary_spacing_in_data(repaired)
+
+
 def repair_translation_once(
     api_key: str,
     model: str,
@@ -528,30 +590,12 @@ def repair_summary_once(
     data: dict[str, Any],
     article_date: str,
 ) -> dict[str, Any]:
-    raw, usage = call_deepseek_response(
-        api_key,
-        model,
-        base_url,
-        build_summary_repair_messages(article, paragraphs_en, data),
-        max_tokens=int(os.environ.get("TRANSLATOR_SUMMARY_REPAIR_MAX_TOKENS", "600")),
-    )
-    record_deepseek_usage_safe(
-        task="fulltext_summary_repair",
-        model=model,
-        usage=usage,
-        article_id=article.get("id"),
-        article_title=article.get("cn_title") or article.get("en_title"),
-        article_url=article.get("url"),
-        article_date=article_date,
-        detail="summary length only",
-    )
-    result = extract_json(raw)
-    summary = str(result.get("opus_summary") or "").strip()
+    summary = trim_summary_to_limit(str(data.get("opus_summary") or ""))
     if not summary:
         raise ValueError("summary repair returned empty opus_summary")
     repaired = dict(data)
     repaired["opus_summary"] = summary
-    repaired["repair_source"] = "api_summary_audit"
+    repaired["repair_source"] = "deterministic_summary_audit"
     repaired["repair_issue_count"] = 1
     return restore_dictionary_spacing_in_data(normalize_translation_currency(repaired))
 
@@ -637,6 +681,8 @@ def translate_date(date: str, limit: int = 2) -> int:
             except ValueError as exc:
                 print(f"[RETRY] fulltext #{article['id']} paragraph format issue: {exc}")
                 data = normalize_translation(article, {**result, "paragraphs": translate_paragraph_chunks(api_key, model, base_url, article, paragraphs_en, terms, article_date=date)}, paragraphs_en)
+            data = enforce_literal_dictionary_terms(data, paragraphs_en, terms)
+            data["opus_summary"] = trim_summary_to_limit(data.get("opus_summary", ""))
             data["translator"] = "api"
             data["translator_provider"] = "openai-compatible"
             data["translator_model"] = model
@@ -654,6 +700,8 @@ def translate_date(date: str, limit: int = 2) -> int:
                 else:
                     print(f"[REPAIR] fulltext #{article['id']} audit found {len(audit_issues)} issue(s); asking {repair_model} for focused repair")
                     data = repair_translation_once(api_key, repair_model, base_url, article, paragraphs_en, terms, data, audit_issues, date)
+                data = enforce_literal_dictionary_terms(data, paragraphs_en, terms)
+                data["opus_summary"] = trim_summary_to_limit(data.get("opus_summary", ""))
                 data["translator"] = "api"
                 data["translator_provider"] = "openai-compatible"
                 data["translator_model"] = model
@@ -693,6 +741,13 @@ def translate_date(date: str, limit: int = 2) -> int:
             trans_path = DATA_DIR / date / "translations" / f"{article['id']:02d}.json"
             write_json(trans_path, data)
             subprocess.run([sys.executable, str(REPO_ROOT / "scripts" / "translate_pipeline.py"), date, str(article["id"]), "--post"], cwd=REPO_ROOT, check=True)
+            article["translation_status"] = "done"
+            article["translation_path"] = f"translations/{article['id']:02d}.json"
+            article["translator"] = "api"
+            article["translator_provider"] = "openai-compatible"
+            article["translator_model"] = model
+            article.pop("translation_error", None)
+            article.pop("translation_failed_at", None)
             normalize_currency_date(date)
             req = remove_completed_request(req, article)
             write_json(req_path, req)
