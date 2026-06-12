@@ -603,7 +603,7 @@
       "publish_time_cn": "2026-06-11 18:55",
       "pub_date": "2026-06-11 18:55",
       "cover_image": "https://assets-prd.ignimgs.com/2026/06/11/ss-7ef7d3bf6f9577927ac6ca7445c29f045640aee2-1920x1080-1781175040180.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "needs_review",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/11/ss-7ef7d3bf6f9577927ac6ca7445c29f045640aee2-1920x1080-1781175040180.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/11/ss-7ef7d3bf6f9577927ac6ca7445c29f045640aee2-1920x1080-1781175040180.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -633,8 +633,6 @@
           "reason": "不知名角色，保留英文"
         }
       ],
-      "translation_error": "[dictionary] source contains 'Marvel 1943', but required dictionary translation '《漫威1943》' is missing",
-      "translation_failed_at": "2026-06-12T09:37:27.922344+08:00",
       "translator": "api",
       "translator_provider": "openai-compatible",
       "translator_model": "deepseek-v4-pro",
