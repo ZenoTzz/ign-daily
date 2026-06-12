@@ -132,7 +132,7 @@ workflow 会把它们传给 `TRANSLATOR_THINKING_MODE`；脚本统一在
 
 API 翻译前 workflow 必须先跑 `python3 scripts/fetch_exchange_rates.py` 刷新汇率。标题摘要、正文和多模型对比都必须通过 `currency_utils.py` 做外币金额后处理；不要只依赖模型按 prompt 自觉换算。翻译后、`pre_push_check.py` 前必须跑 `normalize_currency_files.py {date}`，用于修正同一天历史摘要/译文里的旧漏项。`check_currency.py` 会同时检查首页 `index.json` 摘要、`translations/` 正式译文和 `comparisons/` 对比译文。
 
-标题摘要 API 脚本不会翻译全文，也不会写 `translations/NN.json`。正文 API 脚本会写译文，但必须通过 `translate_pipeline.py --post` 和 `pre_push_check.py`。正文 API 输出较长，workflow 会设置 `TRANSLATOR_FULLTEXT_MAX_TOKENS=12000`，不要沿用标题摘要的短输出上限。API 抓正文必须使用脚本内的 `extract_article_text()` 或 `article_cache.py`，优先抽取 IGN 的正文段落并过滤导航、页脚、作者简介、推荐链接；不要再用整页 HTML 去标签的方式喂给模型。
+标题摘要 API 脚本不会翻译全文，也不会写 `translations/NN.json`。标题开启 thinking 时必须预留推理 token，workflow 设置 `TRANSLATOR_TITLE_MAX_TOKENS=4000`；若 API 返回 `finish_reason=length`，脚本会自动提高上限重试一次，避免把英文标题和空摘要长期留在队列。正文 API 脚本会写译文，但必须通过 `translate_pipeline.py --post` 和 `pre_push_check.py`。正文 API 输出较长，workflow 会设置 `TRANSLATOR_FULLTEXT_MAX_TOKENS=12000`。API 抓正文必须使用脚本内的 `extract_article_text()` 或 `article_cache.py`，优先抽取 IGN 的正文段落并过滤导航、页脚、作者简介、推荐链接；不要再用整页 HTML 去标签的方式喂给模型。
 
 正文 API 质检失败时不要无限重试。`translate_fulltext_api.py` 会把草稿保存在 `translations/NN.json`，把首页状态设为 `translation_status=needs_review`，并写 `data/{date}/translation_failures.json`。失败文章会从 `requests.json` 移除，避免每小时重复烧 token。用户可在文章页人工修改并点击“人工放行”；放行后状态改回 `done`，失败记录清除。agent 不要把 `needs_review` 当成待自动重试，除非用户重新勾选提交。
 

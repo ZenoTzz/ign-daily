@@ -287,7 +287,10 @@ def call_deepseek_response(api_key: str, model: str, base_url: str, messages: li
     )
     with urllib.request.urlopen(req, timeout=60) as resp:
         data = json.loads(resp.read().decode("utf-8"))
-    return data["choices"][0]["message"]["content"], data.get("usage") or {}
+    choice = data["choices"][0]
+    usage = data.get("usage") or {}
+    usage["_finish_reason"] = choice.get("finish_reason") or ""
+    return choice["message"]["content"], usage
 
 
 def call_deepseek(api_key: str, model: str, base_url: str, messages: list[dict[str, str]], max_tokens: int | None = None) -> str:
@@ -327,6 +330,7 @@ def translate_date(date: str, limit: int = 8) -> int:
 
     model = (os.environ.get("TRANSLATOR_MODEL") or os.environ.get("DEEPSEEK_MODEL") or "").strip() or DEFAULT_MODEL
     base_url = (os.environ.get("TRANSLATOR_BASE_URL") or os.environ.get("DEEPSEEK_BASE_URL") or "").strip() or DEFAULT_BASE_URL
+    title_max_tokens = int(os.environ.get("TRANSLATOR_TITLE_MAX_TOKENS") or "4000")
 
     day_dir = DATA_DIR / date
     index_path = day_dir / "index.json"
@@ -361,17 +365,40 @@ def translate_date(date: str, limit: int = 8) -> int:
             article_text = cached_article_text(date, article) or fetch_article_text(url)
             terms = matched_terms((article.get("en_title") or "") + "\n" + article_text, article=article)
             messages = build_messages(article, article_text, terms)
-            raw, usage = call_deepseek_response(api_key, model, base_url, messages)
-            record_deepseek_usage_safe(
-                task="title",
-                model=model,
-                usage=usage,
-                article_id=article.get("id"),
-                article_title=article.get("cn_title") or article.get("en_title"),
-                article_url=article.get("url"),
-                article_date=date,
-            )
-            result = normalize_result(extract_json(raw))
+            result = None
+            for attempt, max_tokens in enumerate(
+                (title_max_tokens, min(max(title_max_tokens * 2, 6000), 12000)),
+                start=1,
+            ):
+                raw, usage = call_deepseek_response(
+                    api_key,
+                    model,
+                    base_url,
+                    messages,
+                    max_tokens=max_tokens,
+                )
+                finish_reason = str(usage.get("_finish_reason") or "")
+                record_deepseek_usage_safe(
+                    task="title",
+                    model=model,
+                    usage=usage,
+                    article_id=article.get("id"),
+                    article_title=article.get("cn_title") or article.get("en_title"),
+                    article_url=article.get("url"),
+                    article_date=date,
+                    detail=f"attempt={attempt}; max_tokens={max_tokens}; finish_reason={finish_reason or 'unknown'}",
+                )
+                completion_tokens = int(usage.get("completion_tokens") or 0)
+                truncated = finish_reason == "length" or completion_tokens >= max_tokens
+                if truncated:
+                    if attempt == 1:
+                        print(f"[RETRY] #{article.get('id')} output truncated at {max_tokens} tokens")
+                        continue
+                    raise ValueError(f"model output remained truncated at {max_tokens} tokens")
+                result = normalize_result(extract_json(raw))
+                break
+            if result is None:
+                raise ValueError("model output remained truncated after retry")
             if not result["cn_title"] or not result["summary"]:
                 raise ValueError("model returned empty cn_title or summary")
             article["cn_title"] = apply_title_dictionary(article.get("en_title", ""), result["cn_title"])

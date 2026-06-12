@@ -529,6 +529,7 @@ workspace/
 - 首页加载/刷新会尝试触发 `hourly-rss.yml` 抓最新 RSS 和缓存 `sources/NN.json`，浏览器本地 10 分钟节流；没有 PAT 或 PAT 缺少 Actions 写权限时只会等待 GitHub Actions 自己的每小时定时。
 - 每小时 RSS 后会运行 `scripts/article_cache.py {date} --missing`，把干净英文正文和图片写入 `data/{date}/sources/NN.json`；API 标题和正文都优先读这个缓存。
 - 标题摘要 API 脚本只处理 `need_titles.json`，不会翻译全文，也不会写 `translations/NN.json`。
+- 标题摘要开启 thinking 时，输出预算不得沿用旧的 1200 token；workflow 固定设置 `TRANSLATOR_TITLE_MAX_TOKENS=4000`，API 因长度截断时脚本自动加大预算重试一次。
 - 正文 API 脚本处理 `requests.json`，写 `translations/NN.json` 后必须跑 `translate_pipeline.py --post` 和 `pre_push_check.py`，不通过就不 push。
 - DeepSeek API 用量看板在 `usage.html`。API 脚本通过 `scripts/usage_logger.py` 写 `data/usage/deepseek/{date}.json`；`scripts/deepseek_balance.py` 调官方 `/user/balance` 写 `data/usage/deepseek-balance.json`。这些是旁路观测数据，失败不得阻断翻译、RSS 或夜间学习。
 - API prompt 长规则块统一由 `scripts/prompt_blocks.py` 生成，以提高 DeepSeek 自动缓存命中；标题、全文、分段重试和修复请求必须共用 `translation_system_prompt()`，任务规则与文章动态内容放在其后。不要在各脚本里复制不同版本的规则 prompt，也不要把文章标题、正文、词库命中放到稳定前缀之前。
