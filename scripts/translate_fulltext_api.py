@@ -27,6 +27,7 @@ from typing import Any
 from common_paths import DATA_DIR, REPO_ROOT, configure_utf8_stdio, dict_path, env_paths
 from api_translation_audit import SUMMARY_HARD_MAX, SUMMARY_TARGET_MAX, check_translation, compact_char_len
 from audit_doctor import diagnose as diagnose_audit_failure
+from chinese_punctuation import normalize_translation_quotes
 from currency_utils import normalize_translation_currency
 from dict_matcher import restore_dictionary_spacing_in_data, term_in_text
 from dict_matcher import matched_terms_for_article
@@ -466,7 +467,7 @@ def translate_paragraph_chunks(
 
 def normalize_translation(article: dict[str, Any], result: dict[str, Any], paragraphs_en: list[str]) -> dict[str, Any]:
     normalized = normalize_paragraphs(result, paragraphs_en)
-    return restore_dictionary_spacing_in_data(normalize_translation_currency({
+    return normalize_translation_quotes(restore_dictionary_spacing_in_data(normalize_translation_currency({
         "id": article["id"],
         "url": article["url"],
         "en_title": article["en_title"],
@@ -482,7 +483,7 @@ def normalize_translation(article: dict[str, Any], result: dict[str, Any], parag
         "translated_terms": result.get("translated_terms") if isinstance(result.get("translated_terms"), dict) else {},
         "cover": str(result.get("cover") or article.get("cover_image") or "").strip(),
         "images": result.get("images") if isinstance(result.get("images"), list) else [],
-    }))
+    })))
 
 
 def trim_summary_to_limit(summary: str, target_max: int = SUMMARY_TARGET_MAX) -> str:

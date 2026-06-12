@@ -533,6 +533,7 @@ workspace/
 - 标题摘要开启 thinking 时，输出预算不得沿用旧的 1200 token；workflow 固定设置 `TRANSLATOR_TITLE_MAX_TOKENS=4000`，API 因长度截断时脚本自动加大预算重试一次。
 - 正文 API 脚本处理 `requests.json`，写 `translations/NN.json` 后必须跑 `translate_pipeline.py --post` 和 `pre_push_check.py`，不通过就不 push。
 - 正文摘要仅因长度超限时使用本地分句压缩，不再调用短输出的 API 返修；模型保留英文词库名时先做安全的字面替换再复审。批量处理中每篇成功后必须同步内存中的 index 状态，避免后续失败把前一篇 `done` 覆盖回 `none`。
+- API 正文写入和网页人工放行前必须把中文字段中的 `"`、`“”`、`＂` 统一转换为 `「」`；`api_translation_audit.py` 和 `post_translate_check.py` 必须把残留的非直角双引号视为错误。
 - DeepSeek API 用量看板在 `usage.html`。API 脚本通过 `scripts/usage_logger.py` 写 `data/usage/deepseek/{date}.json`；`scripts/deepseek_balance.py` 调官方 `/user/balance` 写 `data/usage/deepseek-balance.json`。这些是旁路观测数据，失败不得阻断翻译、RSS 或夜间学习。
 - API prompt 长规则块统一由 `scripts/prompt_blocks.py` 生成，以提高 DeepSeek 自动缓存命中；标题、全文、分段重试和修复请求必须共用 `translation_system_prompt()`，任务规则与文章动态内容放在其后。不要在各脚本里复制不同版本的规则 prompt，也不要把文章标题、正文、词库命中放到稳定前缀之前。
 - 正文 API 手动触发支持批量：`fulltext_limit=5|10|999`。定时任务默认 5；`999` 表示尽量全部，但脚本会按 `TRANSLATOR_FULLTEXT_TIME_BUDGET_SECONDS` 到点暂停并保留剩余请求，避免 Actions 超时。

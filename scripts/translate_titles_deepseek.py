@@ -28,6 +28,7 @@ from pathlib import Path
 from typing import Any
 
 from common_paths import DATA_DIR, REPO_ROOT, configure_utf8_stdio, dict_path, env_paths
+from chinese_punctuation import normalize_chinese_quotes
 from currency_utils import normalize_currency_text
 from dict_matcher import (
     flatten_dict_terms as shared_flatten_dict_terms,
@@ -313,8 +314,12 @@ def normalize_result(result: dict[str, Any]) -> dict[str, Any]:
     emoji = str(result.get("emoji") or "📰").strip()[:4]
     pending = normalize_pending_dict(result.get("pending_dict"))
     return {
-        "cn_title": restore_dictionary_spacing(normalize_currency_text(str(result.get("cn_title") or "").strip())),
-        "summary": restore_dictionary_spacing(normalize_currency_text(str(result.get("summary") or "").strip())),
+        "cn_title": normalize_chinese_quotes(
+            restore_dictionary_spacing(normalize_currency_text(str(result.get("cn_title") or "").strip()))
+        ),
+        "summary": normalize_chinese_quotes(
+            restore_dictionary_spacing(normalize_currency_text(str(result.get("summary") or "").strip()))
+        ),
         "category": category,
         "emoji": emoji,
         "pending_dict": pending,

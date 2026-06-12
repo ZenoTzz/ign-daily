@@ -1168,6 +1168,7 @@
 
             const transFresh = await GH.getFile(transPath);
             const data = JSON.parse(transFresh.content);
+            this.normalizeTranslationQuotes(data);
             data.quality_status = 'manual_approved';
             data.manual_release_required = false;
             data.manual_approved_at = now;
@@ -1247,7 +1248,7 @@
           if (idx < 0) return;
           this.editParaSaving = true;
           try {
-            this.article.paragraphs[idx].cn = this.editParaCn;
+            this.article.paragraphs[idx].cn = this.normalizeChineseQuotes(this.editParaCn);
             const params = new URLSearchParams(location.search);
             const date = params.get('date');
             const id = params.get('id');
@@ -1371,7 +1372,7 @@
         // ---- 一键复制译文（全角标点 + 去 markdown）----
         normalizePunctuation(text) {
           if (!text) return '';
-          let s = String(text);
+          let s = this.normalizeChineseQuotes(String(text));
 
           // 1. 去 markdown / HTML 标记
           s = s.replace(/<[^>]+>/g, '');                    // HTML 标签
@@ -1463,6 +1464,31 @@
             s = s.split(key).join(term);
           }
           return s.trim();
+        },
+
+        normalizeChineseQuotes(text) {
+          if (!text) return '';
+          let open = true;
+          return String(text)
+            .replace(/\u201c/g, '\u300c')
+            .replace(/\u201d/g, '\u300d')
+            .replace(/["\uff02]/g, () => {
+              const quote = open ? '\u300c' : '\u300d';
+              open = !open;
+              return quote;
+            });
+        },
+
+        normalizeTranslationQuotes(data) {
+          for (const key of ['cn_title', 'subtitle', 'summary', 'opus_summary']) {
+            if (typeof data[key] === 'string') data[key] = this.normalizeChineseQuotes(data[key]);
+          }
+          for (const paragraph of data.paragraphs || []) {
+            if (paragraph && typeof paragraph.cn === 'string') {
+              paragraph.cn = this.normalizeChineseQuotes(paragraph.cn);
+            }
+          }
+          return data;
         },
 
         async copyArticle() {

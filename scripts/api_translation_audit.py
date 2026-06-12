@@ -16,6 +16,7 @@ from pathlib import Path
 from typing import Any
 
 from common_paths import DATA_DIR, configure_utf8_stdio, dict_path
+from chinese_punctuation import disallowed_double_quotes
 from currency_utils import find_missing_currency, normalize_currency_symbols
 from dict_matcher import matched_terms_for_article, term_in_text
 
@@ -175,6 +176,14 @@ def check_translation(
                     f"and must stay within {SUMMARY_HARD_MIN}-{SUMMARY_HARD_MAX}, got {summary_len}"
                 ),
             })
+
+    bad_quotes = disallowed_double_quotes(cn_text)
+    if bad_quotes:
+        rendered = " ".join(f"U+{ord(char):04X}" for char in bad_quotes)
+        issues.append({
+            "type": "punctuation_quotes",
+            "detail": f"Chinese translation contains non-corner double quotes ({rendered}); use \u300c\u300d",
+        })
 
     for en, cn in terms.items():
         if not is_effective_chinese_term(cn):

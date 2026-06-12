@@ -7,6 +7,7 @@ Default: today's date (Asia/Shanghai)
 """
 import json, os, sys, re
 from datetime import datetime, timezone, timedelta
+from chinese_punctuation import disallowed_double_quotes
 from common_paths import DATA_DIR, REPO_ROOT, configure_utf8_stdio
 
 configure_utf8_stdio()
@@ -37,6 +38,13 @@ with open(idx_path, 'r', encoding='utf-8') as f:
     idx = json.load(f)
 
 done_ids = [a['id'] for a in idx['articles'] if a.get('translation_status') == 'done']
+
+for article in idx['articles']:
+    index_text = '\n'.join(str(article.get(key) or '') for key in ('cn_title', 'subtitle', 'summary'))
+    bad_quotes = disallowed_double_quotes(index_text)
+    if bad_quotes:
+        rendered = ' '.join(f'U+{ord(char):04X}' for char in bad_quotes)
+        errors.append(f"#{article.get('id')}: non-corner double quote in index Chinese text ({rendered}); use「」")
 
 for aid in done_ids:
     fname = f"{aid:02d}.json"
@@ -112,18 +120,17 @@ for aid in done_ids:
         if summary_len < 60 or summary_len > 110:
             errors.append(f"#{aid}: opus_summary LENGTH {summary_len}, target 70-80, allowed 60-110")
     
-    # Check 6: no ASCII double quotes in cn text
+    # Check 6: Chinese text must use corner quotes, not straight/curly double quotes
     cn_texts = [data.get('cn_title', ''), data.get('opus_summary', '')]
     for p in data.get('paragraphs', []):
         if isinstance(p, dict):
             cn_texts.append(p.get('cn', ''))
     for txt in cn_texts:
-        if '"' in txt:
-            # Check if it's inside an English word context (allow in mixed)
-            cn_only = re.sub(r'[a-zA-Z0-9\s.,;:!?\'()\[\]{}/@#$%^&*+=<>~`|\\-]', '', txt)
-            if '"' in cn_only:
-                warnings.append(f"#{aid}: ASCII double quote in Chinese text (use「」)")
-                break
+        bad_quotes = disallowed_double_quotes(txt)
+        if bad_quotes:
+            rendered = ' '.join(f'U+{ord(char):04X}' for char in bad_quotes)
+            errors.append(f"#{aid}: non-corner double quote in Chinese text ({rendered}); use「」")
+            break
     
     # Check 7: currency amounts have CNY conversion
     for p in data.get('paragraphs', []):
