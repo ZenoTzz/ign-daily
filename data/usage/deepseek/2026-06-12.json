@@ -1071,6 +1071,90 @@
       "total_tokens": 10311,
       "prompt_cache_hit_tokens": 6144,
       "prompt_cache_miss_tokens": 1467
+    },
+    {
+      "time_cn": "2026-06-12 09:36:12",
+      "task": "fulltext",
+      "model": "deepseek-v4-pro",
+      "article_id": 3,
+      "article_title": "《星际迷航：暗影边界》瞄准系列最佳",
+      "article_url": "https://www.ign.com/articles/star-trek-shadow-frontier-paramount-says-the-goal-is-for-bloober-to-make-the-best-star-trek-game-of-all-time",
+      "article_date": "2026-06-12",
+      "detail": "",
+      "estimated_cost_usd": 0.00847737,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 8789,
+      "completion_tokens": 8396,
+      "total_tokens": 17185,
+      "prompt_cache_hit_tokens": 6144,
+      "prompt_cache_miss_tokens": 2645
+    },
+    {
+      "time_cn": "2026-06-12 09:37:14",
+      "task": "fulltext_repair",
+      "model": "deepseek-v4-pro",
+      "article_id": 3,
+      "article_title": "《星际迷航：暗影边界》瞄准系列最佳",
+      "article_url": "https://www.ign.com/articles/star-trek-shadow-frontier-paramount-says-the-goal-is-for-bloober-to-make-the-best-star-trek-game-of-all-time",
+      "article_date": "2026-06-12",
+      "detail": "2 audit issue(s)",
+      "estimated_cost_usd": 0.00743989,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 10764,
+      "completion_tokens": 6216,
+      "total_tokens": 16980,
+      "prompt_cache_hit_tokens": 6144,
+      "prompt_cache_miss_tokens": 4620
+    },
+    {
+      "time_cn": "2026-06-12 09:37:27",
+      "task": "audit_doctor",
+      "model": "deepseek-v4-pro",
+      "article_id": 3,
+      "article_title": "《星际迷航：暗影边界》瞄准系列最佳",
+      "article_url": "https://www.ign.com/articles/star-trek-shadow-frontier-paramount-says-the-goal-is-for-bloober-to-make-the-best-star-trek-game-of-all-time",
+      "article_date": "2026-06-11",
+      "detail": "",
+      "estimated_cost_usd": 0.00097832,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 449,
+      "completion_tokens": 900,
+      "total_tokens": 1349,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 449
+    },
+    {
+      "time_cn": "2026-06-12 09:39:09",
+      "task": "fulltext",
+      "model": "deepseek-v4-pro",
+      "article_id": 4,
+      "article_title": "开发者承认《1666: Amsterdam》使用AI资产并道歉",
+      "article_url": "https://www.ign.com/articles/1666-amsterdam-developer-admits-using-ai-assets-and-apologizes-says-theyll-now-be-replaced",
+      "article_date": "2026-06-12",
+      "detail": "",
+      "estimated_cost_usd": 0.00747295,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 7574,
+      "completion_tokens": 7849,
+      "total_tokens": 15423,
+      "prompt_cache_hit_tokens": 6144,
+      "prompt_cache_miss_tokens": 1430
     }
   ]
 }
