@@ -378,6 +378,111 @@
       "total_tokens": 9291,
       "prompt_cache_hit_tokens": 7040,
       "prompt_cache_miss_tokens": 1384
+    },
+    {
+      "time_cn": "2026-06-13 04:39:56",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 25,
+      "article_title": "The Magic: The Gathering Marvel Super Heroes Jumpstart Booster Box Drops to a New Low Price",
+      "article_url": "https://www.ign.com/articles/the-magic-the-gathering-marvel-super-heroes-jumpstart-booster-box-drops-to-a-new-low-price",
+      "article_date": "2026-06-13",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00031693,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7657,
+      "completion_tokens": 753,
+      "total_tokens": 8410,
+      "prompt_cache_hit_tokens": 7040,
+      "prompt_cache_miss_tokens": 617
+    },
+    {
+      "time_cn": "2026-06-13 04:40:16",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 26,
+      "article_title": "Batman/Superman/Weird Al: World’s Weirdest Is the Superhero Crossover We Didn't Know We Needed",
+      "article_url": "https://www.ign.com/articles/batmansupermanweird-al-worlds-weirdest-is-the-superhero-crossover-we-didnt-know-we-needed",
+      "article_date": "2026-06-13",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00052323,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7674,
+      "completion_tokens": 1544,
+      "total_tokens": 9218,
+      "prompt_cache_hit_tokens": 7168,
+      "prompt_cache_miss_tokens": 506
+    },
+    {
+      "time_cn": "2026-06-13 04:40:29",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 27,
+      "article_title": "Everything We Know About Persona 6",
+      "article_url": "https://www.ign.com/articles/everything-we-know-about-persona-6",
+      "article_date": "2026-06-13",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00047667,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8432,
+      "completion_tokens": 936,
+      "total_tokens": 9368,
+      "prompt_cache_hit_tokens": 7040,
+      "prompt_cache_miss_tokens": 1392
+    },
+    {
+      "time_cn": "2026-06-13 04:40:56",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 29,
+      "article_title": "Every Persona Game and Spin-Off in Order",
+      "article_url": "https://www.ign.com/articles/persona-games-in-order",
+      "article_date": "2026-06-13",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00052917,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9291,
+      "completion_tokens": 694,
+      "total_tokens": 9985,
+      "prompt_cache_hit_tokens": 7040,
+      "prompt_cache_miss_tokens": 2251
+    },
+    {
+      "time_cn": "2026-06-13 04:41:10",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 30,
+      "article_title": "Elden Ring Director Insists FromSoftware Is Free to Make the Games It Wants To, Teases 'Unannounced Titles'",
+      "article_url": "https://www.ign.com/articles/elden-ring-director-insists-fromsoftware-is-free-to-make-the-games-it-wants-to-teases-unannounced-titles",
+      "article_date": "2026-06-13",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00043803,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8234,
+      "completion_tokens": 897,
+      "total_tokens": 9131,
+      "prompt_cache_hit_tokens": 7040,
+      "prompt_cache_miss_tokens": 1194
     }
   ]
 }
