@@ -1197,6 +1197,27 @@
       "total_tokens": 7767,
       "prompt_cache_hit_tokens": 512,
       "prompt_cache_miss_tokens": 6639
+    },
+    {
+      "time_cn": "2026-06-12 14:04:43",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 3,
+      "article_title": "Forza Support Team Recommends Xbox Players Disable Quick Resume for Forza Horizon 6",
+      "article_url": "https://www.ign.com/articles/forza-support-team-recommends-xbox-players-disable-quick-resume-for-forza-horizon-6",
+      "article_date": "2026-06-13",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00125748,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7670,
+      "completion_tokens": 656,
+      "total_tokens": 8326,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 7670
     }
   ]
 }
