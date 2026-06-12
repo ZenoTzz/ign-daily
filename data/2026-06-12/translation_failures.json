@@ -1,27 +1,5 @@
 {
   "date": "2026-06-12",
-  "items": {
-    "3": {
-      "id": 3,
-      "url": "https://www.ign.com/articles/star-trek-shadow-frontier-paramount-says-the-goal-is-for-bloober-to-make-the-best-star-trek-game-of-all-time",
-      "en_title": "Star Trek: Shadow Frontier — Paramount Says 'The Goal Is for Bloober to Make the Best Star Trek Game of All Time'",
-      "cn_title": "《星际迷航：暗影边界》瞄准系列最佳",
-      "model": "deepseek-v4-pro",
-      "status": "needs_manual_review",
-      "failed_at": "2026-06-12T09:37:27.922344+08:00",
-      "reason": "[dictionary] source contains 'Marvel 1943', but required dictionary translation '《漫威1943》' is missing",
-      "audit_issues": [
-        {
-          "type": "dictionary",
-          "detail": "source contains 'Marvel 1943', but required dictionary translation '《漫威1943》' is missing",
-          "en": "Marvel 1943",
-          "expected_cn": "《漫威1943》"
-        }
-      ],
-      "fingerprint": "b19d79ec0fbaa88374330e55977f5b3319fe27a7",
-      "translation_path": "translations/03.json",
-      "retry_policy": "manual_only"
-    }
-  },
-  "updated_at": "2026-06-12T09:37:27.922344+08:00"
+  "items": {},
+  "updated_at": "2026-06-12T01:58:04.361Z"
 }
