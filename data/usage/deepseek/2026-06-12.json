@@ -1050,6 +1050,27 @@
       "total_tokens": 8011,
       "prompt_cache_hit_tokens": 6272,
       "prompt_cache_miss_tokens": 693
+    },
+    {
+      "time_cn": "2026-06-12 09:24:53",
+      "task": "fulltext",
+      "model": "deepseek-v4-pro",
+      "article_id": 26,
+      "article_title": "《最后生还者》第三季引入游戏未出现角色",
+      "article_url": "https://www.ign.com/articles/the-last-of-us-season-3-casts-peter-sarsgaard-as-an-original-character-unseen-in-the-games",
+      "article_date": "2026-06-12",
+      "detail": "",
+      "estimated_cost_usd": 0.00300942,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 7611,
+      "completion_tokens": 2700,
+      "total_tokens": 10311,
+      "prompt_cache_hit_tokens": 6144,
+      "prompt_cache_miss_tokens": 1467
     }
   ]
 }
