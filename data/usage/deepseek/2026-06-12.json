@@ -1218,6 +1218,69 @@
       "total_tokens": 8326,
       "prompt_cache_hit_tokens": 0,
       "prompt_cache_miss_tokens": 7670
+    },
+    {
+      "time_cn": "2026-06-12 19:53:48",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 4,
+      "article_title": "No, Pokémon Go Data Isn't Being Used to Train Military Drones, Niantic Spatial Insists",
+      "article_url": "https://www.ign.com/articles/no-pokmon-go-data-isnt-being-used-to-train-military-drones-niantic-spatial-insists",
+      "article_date": "2026-06-13",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.0012481,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7961,
+      "completion_tokens": 477,
+      "total_tokens": 8438,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 7961
+    },
+    {
+      "time_cn": "2026-06-12 19:54:02",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 5,
+      "article_title": "Crimson Desert's Journey to Becoming an Actual Pet Simulator Is Pretty Much Complete With Latest Patch",
+      "article_url": "https://www.ign.com/articles/crimson-deserts-journey-to-becoming-an-actual-pet-simulator-is-pretty-much-complete-with-latest-patch",
+      "article_date": "2026-06-13",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00113282,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7796,
+      "completion_tokens": 775,
+      "total_tokens": 8571,
+      "prompt_cache_hit_tokens": 1280,
+      "prompt_cache_miss_tokens": 6516
+    },
+    {
+      "time_cn": "2026-06-12 19:54:19",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 6,
+      "article_title": "Cape Fear Episode 3 Review – “Phantom Sensations”",
+      "article_url": "https://www.ign.com/articles/apple-tv-cape-fear-episode-3-review",
+      "article_date": "2026-06-13",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00049347,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8308,
+      "completion_tokens": 1058,
+      "total_tokens": 9366,
+      "prompt_cache_hit_tokens": 7040,
+      "prompt_cache_miss_tokens": 1268
     }
   ]
 }
