@@ -117,16 +117,16 @@
   "translator": "api",
   "translator_provider": "openai-compatible",
   "translator_model": "deepseek-v4-pro",
-  "quality_status": "needs_manual_review",
-  "manual_release_required": true,
-  "audit_issues": [
+  "quality_status": "manual_approved",
+  "manual_release_required": false,
+  "manual_approved_at": "2026-06-12T01:58:04.361Z",
+  "manual_approved_reason": "user approved API audit draft",
+  "manual_approved_issues": [
     {
       "type": "dictionary",
       "detail": "source contains 'Marvel 1943', but required dictionary translation '《漫威1943》' is missing",
       "en": "Marvel 1943",
       "expected_cn": "《漫威1943》"
     }
-  ],
-  "audit_failed_at": "2026-06-12T09:37:27.922344+08:00",
-  "audit_failure_reason": "[dictionary] source contains 'Marvel 1943', but required dictionary translation '《漫威1943》' is missing"
+  ]
 }
