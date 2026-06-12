@@ -71,6 +71,21 @@ EN_NOISE_PATTERNS = (
     "vg247",
 )
 
+CN_CALQUE_PATTERNS = (
+    (
+        re.compile(r"我们究竟(?:要|会)?与[^。！？]{1,40}(?:做什么|干什么)"),
+        "literal 'what we do with' structure; translate the contextual interaction or action",
+    ),
+    (
+        re.compile(r"一项[^，。！？]{0,24}(?:期待|想要)[^，。！？]{0,12}(?:选项|选择)"),
+        "abstract English noun structure; rewrite as a natural Chinese verb phrase",
+    ),
+    (
+        re.compile(r"(?:自身|本身)和[^，。！？]{1,24}都可以操控"),
+        "controllable has no explicit actor; state clearly who controls which subjects",
+    ),
+)
+
 
 def default_date() -> str:
     now = datetime.now(CST)
@@ -184,6 +199,14 @@ def check_translation(
             "type": "punctuation_quotes",
             "detail": f"Chinese translation contains non-corner double quotes ({rendered}); use \u300c\u300d",
         })
+
+    for pattern, detail in CN_CALQUE_PATTERNS:
+        match = pattern.search(cn_text)
+        if match:
+            issues.append({
+                "type": "translation_style_calque",
+                "detail": f"{detail}: {match.group(0)}",
+            })
 
     for en, cn in terms.items():
         if not is_effective_chinese_term(cn):
