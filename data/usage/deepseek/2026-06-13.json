@@ -483,6 +483,27 @@
       "total_tokens": 9131,
       "prompt_cache_hit_tokens": 7040,
       "prompt_cache_miss_tokens": 1194
+    },
+    {
+      "time_cn": "2026-06-13 16:32:42",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 28,
+      "article_title": "There Are No Ghosts at the Grand Announces Tony-Nominated Actor as Lead, Wins Top Award at the Tribeca Games Festival",
+      "article_url": "https://www.ign.com/articles/there-are-no-ghosts-at-the-grand-announces-tony-nominated-actor-as-lead-wins-top-award-at-the-tribeca-games-festival",
+      "article_date": "2026-06-13",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00031539,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8092,
+      "completion_tokens": 530,
+      "total_tokens": 8622,
+      "prompt_cache_hit_tokens": 7040,
+      "prompt_cache_miss_tokens": 1052
     }
   ]
 }
