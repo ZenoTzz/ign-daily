@@ -2,6 +2,59 @@
   "date": "2026-06-14",
   "articles": [
     {
+      "id": 3,
+      "category": "行业动态",
+      "emoji": "🎮",
+      "en_title": "Xbox Reportedly Speeding Up New Elder Scrolls, Fallout, and Halo Games as Microsoft Leaves Spinning Off the Business on the Table",
+      "cn_title": "《光环》《辐射》微软加速三大IP开发 或考虑剥离Xbox",
+      "summary": "据外媒报道，Xbox负责人Asha Sharma正加速推动《上古卷轴》《辐射》《光环》等核心系列新作开发。与此同时，微软内部未排除将Xbox剥离为全资子公司或寻求合资运营的可能，但短期内尚无重组计划。这一潜在变动或将彻底改变主机市场格局。",
+      "url": "https://www.ign.com/articles/xbox-reportedly-speeding-up-new-elder-scrolls-fallout-and-halo-games-as-microsoft-leaves-spinning-off-the-business-on-the-table",
+      "publish_time_cn": "2026-06-13 22:47",
+      "pub_date": "2026-06-13 22:47",
+      "cover_image": "https://assets-prd.ignimgs.com/2024/04/29/fo3-1280-1714420134314.png?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2024/04/29/fo3-1280-1714420134314.png?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2024/04/29/fo3-1280-1714420134314.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2024/04/29/fo3-1280-1714420134314.png?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2024/04/29/fo3-1280-1714420134314.png?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2024/04/29/fo3-1280-1714420134314.png"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-14T00:49:22+08:00",
+      "pending_dict": [
+        {
+          "en": "The Elder Scrolls",
+          "cn": "上古卷轴",
+          "cat": "games",
+          "source": "ai_guess",
+          "reason": "词库无此条目，但属常见译名"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "category": "游戏新闻",
+      "emoji": "🏴‍☠️",
+      "en_title": "Assassin's Creed: Black Flag Resynced New Content Detailed in Developer Deep Dive",
+      "cn_title": "《刺客信条：黑旗》重制版详情公开",
+      "summary": "育碧发布《刺客信条：黑旗》重制版开发者深度解析，详述新增内容。新终章「无金世界」带来8个黑胡子任务，重制尾行任务避免即死失败，新增跳过时间功能、三种难度选项等。重制版将于2026年7月9日登陆PC、PS5和Xbox Series X|S。",
+      "url": "https://www.ign.com/articles/assassins-creed-black-flag-resynced-new-content-detailed-in-developer-deep-dive",
+      "publish_time_cn": "2026-06-13 22:31",
+      "pub_date": "2026-06-13 22:31",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/12/assassins-creed-black-flag-resynced-new-content-1781287603015.png?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/12/assassins-creed-black-flag-resynced-new-content-1781287603015.png?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/12/assassins-creed-black-flag-resynced-new-content-1781287603015.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/12/assassins-creed-black-flag-resynced-new-content-1781287603015.png?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/12/assassins-creed-black-flag-resynced-new-content-1781287603015.png?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/12/assassins-creed-black-flag-resynced-new-content-1781287603015.png"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-14T00:49:22+08:00"
+    },
+    {
       "id": 1,
       "category": "游戏新闻",
       "emoji": "🎮",
@@ -67,5 +120,5 @@
       ]
     }
   ],
-  "total": 2
+  "total": 4
 }

@@ -1,0 +1,47 @@
+{
+  "date": "2026-06-14",
+  "records": [
+    {
+      "time_cn": "2026-06-14 00:49:51",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 3,
+      "article_title": "Xbox Reportedly Speeding Up New Elder Scrolls, Fallout, and Halo Games as Microsoft Leaves Spinning Off the Business on the Table",
+      "article_url": "https://www.ign.com/articles/xbox-reportedly-speeding-up-new-elder-scrolls-fallout-and-halo-games-as-microsoft-leaves-spinning-off-the-business-on-the-table",
+      "article_date": "2026-06-14",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00083787,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7984,
+      "completion_tokens": 2450,
+      "total_tokens": 10434,
+      "prompt_cache_hit_tokens": 7040,
+      "prompt_cache_miss_tokens": 944
+    },
+    {
+      "time_cn": "2026-06-14 00:50:06",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 4,
+      "article_title": "Assassin's Creed: Black Flag Resynced New Content Detailed in Developer Deep Dive",
+      "article_url": "https://www.ign.com/articles/assassins-creed-black-flag-resynced-new-content-detailed-in-developer-deep-dive",
+      "article_date": "2026-06-14",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00051503,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8126,
+      "completion_tokens": 1226,
+      "total_tokens": 9352,
+      "prompt_cache_hit_tokens": 7040,
+      "prompt_cache_miss_tokens": 1086
+    }
+  ]
+}
