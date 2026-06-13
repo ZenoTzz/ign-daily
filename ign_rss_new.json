@@ -5,103 +5,57 @@
     "2026-06-13"
   ],
   "changed_dates": [
-    "2026-06-13"
+    "2026-06-14"
   ],
   "new_target_dates": [
-    "2026-06-13"
+    "2026-06-14"
   ],
   "new_count": 2,
-  "filtered_count": 2,
+  "filtered_count": 0,
   "cleanup_count": 0,
-  "changed_count": 4,
+  "changed_count": 2,
   "articles": [
     {
-      "title": "Gothic 1 Remake Review",
-      "url": "https://www.ign.com/articles/gothic-1-remake-review",
-      "pubDate_cst": "2026-06-13 07:50"
+      "title": "Every Pokémon Switch 2 Controller You Can Buy",
+      "url": "https://www.ign.com/articles/all-pokemon-nintendo-switch-2-controllers",
+      "pubDate_cst": "2026-06-13 21:30"
     },
     {
-      "title": "The Batman Part 2 Officially Begins Filming as Matt Reeves Shares First Set Image",
-      "url": "https://www.ign.com/articles/the-batman-part-2-filming-begins-set-image",
-      "pubDate_cst": "2026-06-13 06:49"
+      "title": "How Close Does Steven Spielberg’s New Movie Come to the Real Disclosure Day Protocols?",
+      "url": "https://www.ign.com/articles/steven-spielberg-new-movie-real-disclosure-day-protocols-seti-aliens",
+      "pubDate_cst": "2026-06-13 21:00"
     }
   ],
-  "filtered_articles": [
-    {
-      "title": "Project Hail Mary 4K and Blu-ray Preorders Are Finally Available on Amazon",
-      "url": "https://www.ign.com/articles/project-hail-mary-4k-blu-ray-where-to-buy",
-      "pubDate_cst": "2026-06-13 06:26",
-      "description": "",
-      "categories": "",
-      "reason": "text:\\bpre[- ]?orders?\\b",
-      "rss_url": "https://feeds.feedburner.com/ign/all",
-      "filtered_at_cn": "2026-06-13 16:35:12",
-      "status": "filtered"
-    },
-    {
-      "title": "Save 40% Off a Popular Magnetic Rower Exercise Machine, Now Under $150 Ahead of Father's Day",
-      "url": "https://www.ign.com/articles/magnetic-rower-exercise-machine-deal-amazon-fathers-day-sale",
-      "pubDate_cst": "2026-06-13 05:00",
-      "description": "Cardiovascular and full-body resistance training in a compact, affordable package.",
-      "categories": "",
-      "reason": "text:\\bsave \\d+%",
-      "rss_url": "https://feeds.feedburner.com/ign/all",
-      "filtered_at_cn": "2026-06-13 16:35:12",
-      "status": "filtered"
-    }
-  ],
+  "filtered_articles": [],
   "runs": [
     {
       "target_date": "2026-06-14",
-      "new_count": 0,
+      "new_count": 2,
       "filtered_count": 0,
-      "changed_count": 0,
-      "next_id": 1,
-      "articles": [],
+      "changed_count": 2,
+      "next_id": 3,
+      "articles": [
+        {
+          "title": "Every Pokémon Switch 2 Controller You Can Buy",
+          "url": "https://www.ign.com/articles/all-pokemon-nintendo-switch-2-controllers",
+          "pubDate_cst": "2026-06-13 21:30"
+        },
+        {
+          "title": "How Close Does Steven Spielberg’s New Movie Come to the Real Disclosure Day Protocols?",
+          "url": "https://www.ign.com/articles/steven-spielberg-new-movie-real-disclosure-day-protocols-seti-aliens",
+          "pubDate_cst": "2026-06-13 21:00"
+        }
+      ],
       "filtered_articles": []
     },
     {
       "target_date": "2026-06-13",
-      "new_count": 2,
-      "filtered_count": 2,
-      "changed_count": 4,
+      "new_count": 0,
+      "filtered_count": 0,
+      "changed_count": 0,
       "next_id": 33,
-      "articles": [
-        {
-          "title": "Gothic 1 Remake Review",
-          "url": "https://www.ign.com/articles/gothic-1-remake-review",
-          "pubDate_cst": "2026-06-13 07:50"
-        },
-        {
-          "title": "The Batman Part 2 Officially Begins Filming as Matt Reeves Shares First Set Image",
-          "url": "https://www.ign.com/articles/the-batman-part-2-filming-begins-set-image",
-          "pubDate_cst": "2026-06-13 06:49"
-        }
-      ],
-      "filtered_articles": [
-        {
-          "title": "Project Hail Mary 4K and Blu-ray Preorders Are Finally Available on Amazon",
-          "url": "https://www.ign.com/articles/project-hail-mary-4k-blu-ray-where-to-buy",
-          "pubDate_cst": "2026-06-13 06:26",
-          "description": "",
-          "categories": "",
-          "reason": "text:\\bpre[- ]?orders?\\b",
-          "rss_url": "https://feeds.feedburner.com/ign/all",
-          "filtered_at_cn": "2026-06-13 16:35:12",
-          "status": "filtered"
-        },
-        {
-          "title": "Save 40% Off a Popular Magnetic Rower Exercise Machine, Now Under $150 Ahead of Father's Day",
-          "url": "https://www.ign.com/articles/magnetic-rower-exercise-machine-deal-amazon-fathers-day-sale",
-          "pubDate_cst": "2026-06-13 05:00",
-          "description": "Cardiovascular and full-body resistance training in a compact, affordable package.",
-          "categories": "",
-          "reason": "text:\\bsave \\d+%",
-          "rss_url": "https://feeds.feedburner.com/ign/all",
-          "filtered_at_cn": "2026-06-13 16:35:12",
-          "status": "filtered"
-        }
-      ]
+      "articles": [],
+      "filtered_articles": []
     }
   ]
 }

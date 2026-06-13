@@ -546,6 +546,48 @@
       "total_tokens": 8249,
       "prompt_cache_hit_tokens": 7040,
       "prompt_cache_miss_tokens": 728
+    },
+    {
+      "time_cn": "2026-06-13 22:29:34",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 1,
+      "article_title": "Every Pokémon Switch 2 Controller You Can Buy",
+      "article_url": "https://www.ign.com/articles/all-pokemon-nintendo-switch-2-controllers",
+      "article_date": "2026-06-14",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00032771,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7824,
+      "completion_tokens": 708,
+      "total_tokens": 8532,
+      "prompt_cache_hit_tokens": 7040,
+      "prompt_cache_miss_tokens": 784
+    },
+    {
+      "time_cn": "2026-06-13 22:29:52",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 2,
+      "article_title": "How Close Does Steven Spielberg’s New Movie Come to the Real Disclosure Day Protocols?",
+      "article_url": "https://www.ign.com/articles/steven-spielberg-new-movie-real-disclosure-day-protocols-seti-aliens",
+      "article_date": "2026-06-14",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00072245,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9213,
+      "completion_tokens": 1486,
+      "total_tokens": 10699,
+      "prompt_cache_hit_tokens": 7168,
+      "prompt_cache_miss_tokens": 2045
     }
   ]
 }
