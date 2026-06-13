@@ -84,6 +84,27 @@
       "total_tokens": 8696,
       "prompt_cache_hit_tokens": 7168,
       "prompt_cache_miss_tokens": 704
+    },
+    {
+      "time_cn": "2026-06-14 06:31:43",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 7,
+      "article_title": "X-Men '97 Season 2, Episodes 1-4 Review (Spoiler-Free)",
+      "article_url": "https://www.ign.com/articles/x-men-97-season-2-episodes-1-4-review",
+      "article_date": "2026-06-14",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00065615,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9042,
+      "completion_tokens": 1272,
+      "total_tokens": 10314,
+      "prompt_cache_hit_tokens": 7040,
+      "prompt_cache_miss_tokens": 2002
     }
   ]
 }

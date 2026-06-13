@@ -2,6 +2,51 @@
   "date": "2026-06-14",
   "articles": [
     {
+      "id": 7,
+      "category": "评测评分",
+      "emoji": "📺",
+      "en_title": "X-Men '97 Season 2, Episodes 1-4 Review (Spoiler-Free)",
+      "cn_title": "《X战警97》第二季前四集无剧透评测：时间穿越与情感深度",
+      "summary": "《X战警97》第二季前四集延续第一季结尾，分三条时间线展开：部分X战警被拖入天启统治的未来，部分回到古埃及，其余在当下填补空缺。剧情兼顾宏大格局与角色内心挣扎，X教授与万磁王的意识形态冲突尤为突出。动画与配音依旧出色，但节奏稍快，部分角色戏份不足。整体质量不输第一季，情感冲击力媲美「记得它」。",
+      "url": "https://www.ign.com/articles/x-men-97-season-2-episodes-1-4-review",
+      "publish_time_cn": "2026-06-14 04:00",
+      "pub_date": "2026-06-14 04:00",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/11/xmen97-season2-episodes1-4-review-blogroll-1781201790784.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/11/xmen97-season2-episodes1-4-review-blogroll-1781201790784.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/11/xmen97-season2-episodes1-4-review-blogroll-1781201790784.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/11/xmen97-season2-episodes1-4-review-blogroll-1781201790784.jpg?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/11/xmen97-season2-episodes1-4-review-blogroll-1781201790784.jpg?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/11/xmen97-season2-episodes1-4-review-blogroll-1781201790784.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-14T06:31:27+08:00",
+      "pending_dict": [
+        {
+          "en": "Apocalypse",
+          "cn": "天启",
+          "cat": "people",
+          "source": "ai_guess",
+          "reason": "X战警经典反派，中文社区常用译名，但词库尚未收录"
+        },
+        {
+          "en": "Cable",
+          "cn": "电索",
+          "cat": "people",
+          "source": "ai_guess",
+          "reason": "X战警角色，中文常见译名“电索”，词库未收录"
+        },
+        {
+          "en": "Rama-Tut",
+          "cn": "拉玛-图特",
+          "cat": "people",
+          "source": "ai_guess",
+          "reason": "反派角色，音译，词库未收录"
+        }
+      ]
+    },
+    {
       "id": 6,
       "category": "影视资讯",
       "emoji": "🦸",
@@ -165,5 +210,5 @@
       ]
     }
   ],
-  "total": 6
+  "total": 7
 }
