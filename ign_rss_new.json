@@ -1,8 +1,8 @@
 {
-  "target_date": "2026-06-14",
+  "target_date": "2026-06-15",
   "target_dates": [
-    "2026-06-14",
-    "2026-06-13"
+    "2026-06-15",
+    "2026-06-14"
   ],
   "changed_dates": [
     "2026-06-14"
@@ -16,35 +16,35 @@
   "changed_count": 1,
   "articles": [
     {
-      "title": "George Miller Reportedly Wants to Make One More Mad Max Movie and a TV Show Before Selling the Franchise",
-      "url": "https://www.ign.com/articles/george-miller-reportedly-wants-to-make-one-more-mad-max-movie-and-a-tv-show-before-selling-the-franchise",
-      "pubDate_cst": "2026-06-14 05:12"
+      "title": "Microsoft CEO Says 'There's More Monetization of Xbox Games Happening on YouTube Than at Microsoft'",
+      "url": "https://www.ign.com/articles/microsoft-ceo-says-theres-more-monetization-of-xbox-games-happening-on-youtube-than-at-microsoft",
+      "pubDate_cst": "2026-06-14 06:41"
     }
   ],
   "filtered_articles": [],
   "runs": [
     {
+      "target_date": "2026-06-15",
+      "new_count": 0,
+      "filtered_count": 0,
+      "changed_count": 0,
+      "next_id": 1,
+      "articles": [],
+      "filtered_articles": []
+    },
+    {
       "target_date": "2026-06-14",
       "new_count": 1,
       "filtered_count": 0,
       "changed_count": 1,
-      "next_id": 9,
+      "next_id": 10,
       "articles": [
         {
-          "title": "George Miller Reportedly Wants to Make One More Mad Max Movie and a TV Show Before Selling the Franchise",
-          "url": "https://www.ign.com/articles/george-miller-reportedly-wants-to-make-one-more-mad-max-movie-and-a-tv-show-before-selling-the-franchise",
-          "pubDate_cst": "2026-06-14 05:12"
+          "title": "Microsoft CEO Says 'There's More Monetization of Xbox Games Happening on YouTube Than at Microsoft'",
+          "url": "https://www.ign.com/articles/microsoft-ceo-says-theres-more-monetization-of-xbox-games-happening-on-youtube-than-at-microsoft",
+          "pubDate_cst": "2026-06-14 06:41"
         }
       ],
-      "filtered_articles": []
-    },
-    {
-      "target_date": "2026-06-13",
-      "new_count": 0,
-      "filtered_count": 0,
-      "changed_count": 0,
-      "next_id": 33,
-      "articles": [],
       "filtered_articles": []
     }
   ]
