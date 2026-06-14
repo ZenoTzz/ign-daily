@@ -1,0 +1,26 @@
+{
+  "date": "2026-06-15",
+  "records": [
+    {
+      "time_cn": "2026-06-15 01:03:10",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 1,
+      "article_title": "Super Mario Bros. Copy Sells for Record-Breaking $3 Million at Auction",
+      "article_url": "https://www.ign.com/articles/super-mario-bros-copy-sells-for-record-breaking-3-million-at-auction",
+      "article_date": "2026-06-15",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00026331,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7790,
+      "completion_tokens": 495,
+      "total_tokens": 8285,
+      "prompt_cache_hit_tokens": 7040,
+      "prompt_cache_miss_tokens": 750
+    }
+  ]
+}
