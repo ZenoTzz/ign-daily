@@ -5,46 +5,56 @@
     "2026-06-14"
   ],
   "changed_dates": [
-    "2026-06-14"
+    "2026-06-15"
   ],
-  "new_target_dates": [
-    "2026-06-14"
-  ],
-  "new_count": 1,
-  "filtered_count": 0,
+  "new_target_dates": [],
+  "new_count": 0,
+  "filtered_count": 1,
   "cleanup_count": 0,
   "changed_count": 1,
-  "articles": [
+  "articles": [],
+  "filtered_articles": [
     {
-      "title": "Microsoft CEO Says 'There's More Monetization of Xbox Games Happening on YouTube Than at Microsoft'",
-      "url": "https://www.ign.com/articles/microsoft-ceo-says-theres-more-monetization-of-xbox-games-happening-on-youtube-than-at-microsoft",
-      "pubDate_cst": "2026-06-14 06:41"
+      "title": "Rockstar Co-Founder Dan Houser Says There’s No Right Way to Play an Open-World Game",
+      "url": "https://www.ign.com/articles/rockstar-co-founder-dan-houser-says-theres-no-right-way-to-play-an-open-world-game-tribeca-festival-2026",
+      "pubDate_cst": "2026-06-14 09:00",
+      "description": "Absurd Ventures co-founders Dan Houser and Lazlow spoke on a panel at the 2026 Tribeca Festival about making open-world video games and interconnected multimedia universes.",
+      "categories": "",
+      "reason": "url:under-",
+      "rss_url": "https://feeds.feedburner.com/ign/all",
+      "filtered_at_cn": "2026-06-14 10:14:49",
+      "status": "filtered"
     }
   ],
-  "filtered_articles": [],
   "runs": [
     {
       "target_date": "2026-06-15",
       "new_count": 0,
-      "filtered_count": 0,
-      "changed_count": 0,
+      "filtered_count": 1,
+      "changed_count": 1,
       "next_id": 1,
       "articles": [],
-      "filtered_articles": []
+      "filtered_articles": [
+        {
+          "title": "Rockstar Co-Founder Dan Houser Says There’s No Right Way to Play an Open-World Game",
+          "url": "https://www.ign.com/articles/rockstar-co-founder-dan-houser-says-theres-no-right-way-to-play-an-open-world-game-tribeca-festival-2026",
+          "pubDate_cst": "2026-06-14 09:00",
+          "description": "Absurd Ventures co-founders Dan Houser and Lazlow spoke on a panel at the 2026 Tribeca Festival about making open-world video games and interconnected multimedia universes.",
+          "categories": "",
+          "reason": "url:under-",
+          "rss_url": "https://feeds.feedburner.com/ign/all",
+          "filtered_at_cn": "2026-06-14 10:14:49",
+          "status": "filtered"
+        }
+      ]
     },
     {
       "target_date": "2026-06-14",
-      "new_count": 1,
+      "new_count": 0,
       "filtered_count": 0,
-      "changed_count": 1,
+      "changed_count": 0,
       "next_id": 10,
-      "articles": [
-        {
-          "title": "Microsoft CEO Says 'There's More Monetization of Xbox Games Happening on YouTube Than at Microsoft'",
-          "url": "https://www.ign.com/articles/microsoft-ceo-says-theres-more-monetization-of-xbox-games-happening-on-youtube-than-at-microsoft",
-          "pubDate_cst": "2026-06-14 06:41"
-        }
-      ],
+      "articles": [],
       "filtered_articles": []
     }
   ]
