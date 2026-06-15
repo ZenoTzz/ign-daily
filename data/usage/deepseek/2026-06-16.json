@@ -567,6 +567,48 @@
       "total_tokens": 8898,
       "prompt_cache_hit_tokens": 7808,
       "prompt_cache_miss_tokens": 647
+    },
+    {
+      "time_cn": "2026-06-16 03:34:02",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 30,
+      "article_title": "Fox Is Buying Roku for $22 Billion",
+      "article_url": "https://www.ign.com/articles/fox-is-buying-roku-for-22-billion",
+      "article_date": "2026-06-16",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00025972,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8407,
+      "completion_tokens": 550,
+      "total_tokens": 8957,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 599
+    },
+    {
+      "time_cn": "2026-06-16 03:34:11",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 31,
+      "article_title": "Obsession Director Curry Barker Says He's in No Rush to Make Obsession 2",
+      "article_url": "https://www.ign.com/articles/obsession-director-curry-barker-says-hes-in-no-rush-to-make-obsession-2",
+      "article_date": "2026-06-16",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00031292,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8819,
+      "completion_tokens": 534,
+      "total_tokens": 9353,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 1011
     }
   ]
 }
