@@ -1,8 +1,8 @@
 {
-  "target_date": "2026-06-15",
+  "target_date": "2026-06-16",
   "target_dates": [
-    "2026-06-15",
-    "2026-06-14"
+    "2026-06-16",
+    "2026-06-15"
   ],
   "changed_dates": [
     "2026-06-15"
@@ -10,42 +10,86 @@
   "new_target_dates": [
     "2026-06-15"
   ],
-  "new_count": 1,
-  "filtered_count": 0,
+  "new_count": 3,
+  "filtered_count": 1,
   "cleanup_count": 0,
-  "changed_count": 1,
+  "changed_count": 4,
   "articles": [
     {
-      "title": "Timothée Chalamet Takes Shot at the Oscars After Knicks Win NBA Championship",
-      "url": "https://www.ign.com/articles/timothee-chalamet-takes-shot-at-the-oscars-after-knicks-win-nba-championship",
-      "pubDate_cst": "2026-06-15 01:23"
-    }
-  ],
-  "filtered_articles": [],
-  "runs": [
-    {
-      "target_date": "2026-06-15",
-      "new_count": 1,
-      "filtered_count": 0,
-      "changed_count": 1,
-      "next_id": 3,
-      "articles": [
-        {
-          "title": "Timothée Chalamet Takes Shot at the Oscars After Knicks Win NBA Championship",
-          "url": "https://www.ign.com/articles/timothee-chalamet-takes-shot-at-the-oscars-after-knicks-win-nba-championship",
-          "pubDate_cst": "2026-06-15 01:23"
-        }
-      ],
-      "filtered_articles": []
+      "title": "Dead by Daylight 10th Anniversary Broadcast: Everything Announced (Updating Live)",
+      "url": "https://www.ign.com/articles/dead-by-daylight-10th-anniversary-broadcast-everything-announced",
+      "pubDate_cst": "2026-06-15 07:01"
     },
     {
-      "target_date": "2026-06-14",
+      "title": "Pokémon North America International Championships Moving to Chicago in 2027",
+      "url": "https://www.ign.com/articles/pokemon-north-america-international-championships-moving-to-chicago-in-2027",
+      "pubDate_cst": "2026-06-15 06:05"
+    },
+    {
+      "title": "Musician Oliver Tree Dead at 32 After Helicopter Crash in Brazil",
+      "url": "https://www.ign.com/articles/musician-oliver-tree-dead-at-32-after-helicopter-crash-in-brazil",
+      "pubDate_cst": "2026-06-15 05:50"
+    }
+  ],
+  "filtered_articles": [
+    {
+      "title": "2026 Pokémon World Championships TCG Promo Cards, More, Revealed",
+      "url": "https://www.ign.com/articles/pokemon-world-championships-2026-promo-cards-competitors-merch-revealed",
+      "pubDate_cst": "2026-06-15 06:16",
+      "description": "",
+      "categories": "",
+      "reason": "text:\\bpromo(?:tion)?\\b",
+      "rss_url": "https://feeds.feedburner.com/ign/all",
+      "filtered_at_cn": "2026-06-15 10:06:44",
+      "status": "filtered"
+    }
+  ],
+  "runs": [
+    {
+      "target_date": "2026-06-16",
       "new_count": 0,
       "filtered_count": 0,
       "changed_count": 0,
-      "next_id": 10,
+      "next_id": 1,
       "articles": [],
       "filtered_articles": []
+    },
+    {
+      "target_date": "2026-06-15",
+      "new_count": 3,
+      "filtered_count": 1,
+      "changed_count": 4,
+      "next_id": 6,
+      "articles": [
+        {
+          "title": "Dead by Daylight 10th Anniversary Broadcast: Everything Announced (Updating Live)",
+          "url": "https://www.ign.com/articles/dead-by-daylight-10th-anniversary-broadcast-everything-announced",
+          "pubDate_cst": "2026-06-15 07:01"
+        },
+        {
+          "title": "Pokémon North America International Championships Moving to Chicago in 2027",
+          "url": "https://www.ign.com/articles/pokemon-north-america-international-championships-moving-to-chicago-in-2027",
+          "pubDate_cst": "2026-06-15 06:05"
+        },
+        {
+          "title": "Musician Oliver Tree Dead at 32 After Helicopter Crash in Brazil",
+          "url": "https://www.ign.com/articles/musician-oliver-tree-dead-at-32-after-helicopter-crash-in-brazil",
+          "pubDate_cst": "2026-06-15 05:50"
+        }
+      ],
+      "filtered_articles": [
+        {
+          "title": "2026 Pokémon World Championships TCG Promo Cards, More, Revealed",
+          "url": "https://www.ign.com/articles/pokemon-world-championships-2026-promo-cards-competitors-merch-revealed",
+          "pubDate_cst": "2026-06-15 06:16",
+          "description": "",
+          "categories": "",
+          "reason": "text:\\bpromo(?:tion)?\\b",
+          "rss_url": "https://feeds.feedburner.com/ign/all",
+          "filtered_at_cn": "2026-06-15 10:06:44",
+          "status": "filtered"
+        }
+      ]
     }
   ]
 }
