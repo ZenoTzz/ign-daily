@@ -1,5 +1,28 @@
 [
   {
+    "run_id": "27577377690",
+    "workflow": "Hourly RSS",
+    "event": "schedule",
+    "sha": "dd547a66813c1029e56ae4e287aa6414afbb0fc1",
+    "recorded_at_cn": "2026-06-16 05:24:39",
+    "start_balance": 45.38,
+    "end_balance": 45.38,
+    "currency": "CNY",
+    "actual_platform_cost": 0.0,
+    "balance_delta_status": "pending_or_delayed",
+    "estimated_cost_usd": 0.00042114,
+    "api_call_count": 1,
+    "total_tokens": 9483,
+    "by_model": {
+      "deepseek-v4-flash": {
+        "calls": 1,
+        "estimated_cost_usd": 0.00042114,
+        "total_tokens": 9483
+      }
+    },
+    "snapshot_ok": true
+  },
+  {
     "run_id": "27571241267",
     "workflow": "Hourly RSS",
     "event": "schedule",

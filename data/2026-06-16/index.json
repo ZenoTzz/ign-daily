@@ -2,6 +2,37 @@
   "date": "2026-06-16",
   "articles": [
     {
+      "id": 32,
+      "category": "影视资讯",
+      "emoji": "🎭",
+      "en_title": "The Muppets Take the Marvel Universe: Marvel Reveals Kooky Crossover Special",
+      "cn_title": "《布偶占领漫威宇宙》：漫威公布搞笑联动特辑",
+      "summary": "2026年堪称跨界之年。继《蜘蛛侠/超人#1》和《蝙蝠侠/超人/「怪人奥尔」》后，漫威也加入战局，推出《布偶占领漫威宇宙》。这部单刊特辑讲述科密蛙与伙伴们闯入漫威宇宙，主创团队由Chip Zdarsky（《美国队长》）和Pete Woods（《泰坦》）领衔，并包含多个短篇，旨在庆祝《布偶秀》开播50周年。该刊将于2026年9月23日发售。",
+      "url": "https://www.ign.com/articles/the-muppets-take-the-marvel-universe-marvel-reveals-kooky-crossover-special",
+      "publish_time_cn": "2026-06-16 02:41",
+      "pub_date": "2026-06-16 02:41",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/15/mixcollage-15-jun-2026-02-32-pm-741-1781548399147.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/15/mixcollage-15-jun-2026-02-32-pm-741-1781548399147.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/15/mixcollage-15-jun-2026-02-32-pm-741-1781548399147.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/15/mixcollage-15-jun-2026-02-32-pm-741-1781548399147.jpg?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/15/mixcollage-15-jun-2026-02-32-pm-741-1781548399147.jpg?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/15/mixcollage-15-jun-2026-02-32-pm-741-1781548399147.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-16T05:24:20+08:00",
+      "pending_dict": [
+        {
+          "en": "The Muppets",
+          "cn": "布偶",
+          "cat": "movies_tv",
+          "source": "ai_guess",
+          "reason": "词库中无此译名，但‘布偶’为通用译名，待用户确认"
+        }
+      ]
+    },
+    {
       "id": 30,
       "category": "行业动态",
       "emoji": "📺",
@@ -879,5 +910,5 @@
       "source_fetched_at": "2026-06-15T13:30:01+08:00"
     }
   ],
-  "total": 31
+  "total": 32
 }
