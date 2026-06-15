@@ -105,6 +105,90 @@
       "total_tokens": 8558,
       "prompt_cache_hit_tokens": 7168,
       "prompt_cache_miss_tokens": 761
+    },
+    {
+      "time_cn": "2026-06-15 13:30:16",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 1,
+      "article_title": "Dead by Daylight Terrifier Chapter Reveal Promises Art the Clown for November 2026",
+      "article_url": "https://www.ign.com/articles/dead-by-daylight-terrifier-chapter-reveal-promises-art-the-clown-for-november-2026",
+      "article_date": "2026-06-16",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00044811,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7792,
+      "completion_tokens": 1154,
+      "total_tokens": 8946,
+      "prompt_cache_hit_tokens": 7040,
+      "prompt_cache_miss_tokens": 752
+    },
+    {
+      "time_cn": "2026-06-15 13:30:40",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 2,
+      "article_title": "Rick and Morty Season 9, Episode 4 Review: \"A Ricker Runs Through It\"",
+      "article_url": "https://www.ign.com/articles/rick-and-morty-season-9-episode-4-review-recap",
+      "article_date": "2026-06-16",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00065923,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7942,
+      "completion_tokens": 1833,
+      "total_tokens": 9775,
+      "prompt_cache_hit_tokens": 7040,
+      "prompt_cache_miss_tokens": 902
+    },
+    {
+      "time_cn": "2026-06-15 13:30:57",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 3,
+      "article_title": "Director Confirmed for Upcoming Dead by Daylight Movie",
+      "article_url": "https://www.ign.com/articles/director-confirmed-for-upcoming-dead-by-daylight-movie",
+      "article_date": "2026-06-16",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00047583,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 7658,
+      "completion_tokens": 1320,
+      "total_tokens": 8978,
+      "prompt_cache_hit_tokens": 7040,
+      "prompt_cache_miss_tokens": 618
+    },
+    {
+      "time_cn": "2026-06-15 13:31:07",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 4,
+      "article_title": "The Vampire Lestat’s Best Song Isn’t Even in Season 3",
+      "article_url": "https://www.ign.com/articles/the-vampire-lestat-episode-2-toledo-best-song-isnt-even-in-season-3",
+      "article_date": "2026-06-16",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00033591,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8132,
+      "completion_tokens": 646,
+      "total_tokens": 8778,
+      "prompt_cache_hit_tokens": 7168,
+      "prompt_cache_miss_tokens": 964
     }
   ]
 }
