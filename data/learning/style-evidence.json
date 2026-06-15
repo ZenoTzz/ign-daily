@@ -340,7 +340,7 @@
       "rule": "对于有广为人知中文绰号的超级英雄/反派角色，正文中优先使用绰号而非全名（如用毁灭博士而不是维克多·冯·杜姆）。",
       "category": "names",
       "scope": "all",
-      "status": "confirmed_by_feedback",
+      "status": "pending",
       "days": [
         "2026-06-01"
       ],
@@ -391,6 +391,12 @@
           "text": "暂缓，继续观察。",
           "classified_as": "pending",
           "created_at": "2026-06-07T02:52:19+08:00"
+        },
+        {
+          "week_id": "2026-W24",
+          "text": "暂缓，继续观察。",
+          "classified_as": "pending",
+          "created_at": "2026-06-15T21:48:32+08:00"
         }
       ],
       "created_at": "2026-06-03T16:01:56+08:00",
@@ -1180,6 +1186,12 @@
           "text": "采纳，进入长期规则。",
           "classified_as": "confirmed",
           "created_at": "2026-06-07T02:52:19+08:00"
+        },
+        {
+          "week_id": "2026-W24",
+          "text": "采纳，进入长期规则。",
+          "classified_as": "confirmed",
+          "created_at": "2026-06-15T21:48:32+08:00"
         }
       ],
       "created_at": "2026-06-03T16:04:46+08:00",
@@ -1193,7 +1205,7 @@
       "rule": "副标题保持2至15字，优先用简短短语、双关或原文引语，不机械复述标题；不得补充原文没有的事实或改变立场。",
       "category": "subtitle",
       "scope": "all",
-      "status": "ready_for_review",
+      "status": "confirmed",
       "days": [
         "2026-06-01",
         "2026-06-03",
@@ -1282,7 +1294,14 @@
           "after": "已经够久了"
         }
       ],
-      "feedback": [],
+      "feedback": [
+        {
+          "week_id": "2026-W24",
+          "text": "采纳，进入长期规则。",
+          "classified_as": "confirmed",
+          "created_at": "2026-06-15T21:48:32+08:00"
+        }
+      ],
       "created_at": "2026-06-04T06:38:54+08:00",
       "last_seen": "2026-06-12",
       "confidence": 0.9,
@@ -1321,7 +1340,7 @@
       "rule": "成稿不保留IGN作者简介、联系方式、社交账号、图片来源等非正文尾注。",
       "category": "structure",
       "scope": "all",
-      "status": "pending",
+      "status": "confirmed",
       "days": [
         "2026-06-03",
         "2026-06-11",
@@ -1338,7 +1357,14 @@
           "after": "PlayStation Plus 升级/高级:"
         }
       ],
-      "feedback": [],
+      "feedback": [
+        {
+          "week_id": "2026-W24",
+          "text": "采纳，进入长期规则。",
+          "classified_as": "confirmed",
+          "created_at": "2026-06-15T21:48:32+08:00"
+        }
+      ],
       "created_at": "2026-06-12T17:45:36+08:00",
       "last_seen": "2026-06-12",
       "confidence": 0.96,
@@ -1350,7 +1376,7 @@
       "rule": "标题必须保留原文中的“据称、可能、预计、表示、逐案决定”等归因和情态信息，不得把推测改成确定事实，也不得夸大结论。",
       "category": "title",
       "scope": "all",
-      "status": "pending",
+      "status": "confirmed",
       "days": [
         "2026-06-09",
         "2026-06-12"
@@ -1384,7 +1410,14 @@
           "after": "《最后生还者》第三季将引入游戏未出现角色"
         }
       ],
-      "feedback": [],
+      "feedback": [
+        {
+          "week_id": "2026-W24",
+          "text": "采纳，进入长期规则。",
+          "classified_as": "confirmed",
+          "created_at": "2026-06-15T21:48:32+08:00"
+        }
+      ],
       "created_at": "2026-06-12T17:45:36+08:00",
       "last_seen": "2026-06-12",
       "confidence": 0.9,
@@ -1396,7 +1429,7 @@
       "rule": "正文翻译必须逐段覆盖原文事实、引语和列表，并保持论述顺序；润色可以改善中文，但不能擅自删减、合并错位或扩写成原文没有的内容。",
       "category": "body",
       "scope": "all",
-      "status": "ready_for_review",
+      "status": "confirmed",
       "days": [
         "2026-06-03",
         "2026-06-04",
@@ -1483,7 +1516,14 @@
           "after": "许多粉丝原本认为，这集圣诞特辑将会成为Davies的告别之作。此前公布这部单集特别篇时，不少人都觉得它只是为了收束他遗留下来的剧情线——例如Billie Piper突然回归却始终未获解释的谜团，而如今她的身份或许永远都不会得到正式说明。"
         }
       ],
-      "feedback": [],
+      "feedback": [
+        {
+          "week_id": "2026-W24",
+          "text": "采纳，进入长期规则。",
+          "classified_as": "confirmed",
+          "created_at": "2026-06-15T21:48:32+08:00"
+        }
+      ],
       "created_at": "2026-06-12T17:45:36+08:00",
       "last_seen": "2026-06-12",
       "confidence": 0.96,
@@ -1495,7 +1535,7 @@
       "rule": "中文标题只保留识别新闻所需的作品、公司或平台名，删除重复的品牌书名号和无意义前缀，但不能删掉主体或关键限定。",
       "category": "title",
       "scope": "all",
-      "status": "ready_for_review",
+      "status": "confirmed",
       "days": [
         "2026-06-04",
         "2026-06-05",
@@ -1550,7 +1590,14 @@
           "after": "《马力欧卡丁车世界》遭冷落，Switch 2首发一年无大型DLC"
         }
       ],
-      "feedback": [],
+      "feedback": [
+        {
+          "week_id": "2026-W24",
+          "text": "采纳，进入长期规则。",
+          "classified_as": "confirmed",
+          "created_at": "2026-06-15T21:48:32+08:00"
+        }
+      ],
       "created_at": "2026-06-12T17:45:36+08:00",
       "last_seen": "2026-06-12",
       "confidence": 0.9,
@@ -1562,7 +1609,7 @@
       "rule": "游戏、影视、角色和系统名有稳定官方或通行中文译名时应统一使用；没有稳定译名时保留原文，不自行创造译名。",
       "category": "dictionary",
       "scope": "games|movies_tv",
-      "status": "ready_for_review",
+      "status": "confirmed",
       "days": [
         "2026-06-03",
         "2026-06-04",
@@ -1616,7 +1663,14 @@
           "after": "《异于天堂》制作组回应Tupac风波"
         }
       ],
-      "feedback": [],
+      "feedback": [
+        {
+          "week_id": "2026-W24",
+          "text": "采纳，进入长期规则。",
+          "classified_as": "confirmed",
+          "created_at": "2026-06-15T21:48:32+08:00"
+        }
+      ],
       "created_at": "2026-06-12T17:45:36+08:00",
       "last_seen": "2026-06-12",
       "confidence": 0.82,
@@ -1628,7 +1682,7 @@
       "rule": "项目代号、未正式定名作品和没有稳定官方中文名的作品或角色，应保留拉丁字母原名，避免自行音译或意译。",
       "category": "dictionary",
       "scope": "all",
-      "status": "pending",
+      "status": "confirmed",
       "days": [
         "2026-06-05",
         "2026-06-10",
@@ -1657,7 +1711,14 @@
           "after": "由于公司全球发行部门及西班牙巴塞罗那工作室的组织调整，预计还将有更多职位裁撤。巴塞罗那工作室此前曾支持《疯狂兔子》系列和《Star Trek: Bridge Crew》等项目，今后将只专注于《彩虹六号》系列。"
         }
       ],
-      "feedback": [],
+      "feedback": [
+        {
+          "week_id": "2026-W24",
+          "text": "采纳，进入长期规则。",
+          "classified_as": "confirmed",
+          "created_at": "2026-06-15T21:48:32+08:00"
+        }
+      ],
       "created_at": "2026-06-12T21:51:19+08:00",
       "last_seen": "2026-06-11",
       "confidence": 0.88,
@@ -1669,7 +1730,7 @@
       "rule": "平台枚举中可将“Xbox Series X|S”统一简写为“Xbox Series”，Nintendo Switch 2在语境明确时可写“Switch 2”；不要改变实际登陆平台范围。",
       "category": "dictionary",
       "scope": "games",
-      "status": "ready_for_review",
+      "status": "confirmed",
       "days": [
         "2026-06-08",
         "2026-06-09",
@@ -1710,7 +1771,14 @@
           "after": "《光环：战役进化》将于7月28日登陆Xbox Series、PS5和PC。高级版和典藏版玩家还将获得五天的抢先体验资格。"
         }
       ],
-      "feedback": [],
+      "feedback": [
+        {
+          "week_id": "2026-W24",
+          "text": "采纳，进入长期规则。",
+          "classified_as": "confirmed",
+          "created_at": "2026-06-15T21:48:32+08:00"
+        }
+      ],
       "created_at": "2026-06-12T21:51:19+08:00",
       "last_seen": "2026-06-10",
       "confidence": 0.8,
@@ -1722,7 +1790,7 @@
       "rule": "海外人物没有稳定通行中文译名时保留拉丁字母姓名，不自行音译；已有公认中文名时使用公认译名。",
       "category": "names",
       "scope": "all",
-      "status": "pending",
+      "status": "confirmed",
       "days": [
         "2026-06-08",
         "2026-06-11"
@@ -1744,12 +1812,19 @@
           "after": "据彭博社今日早些时候报道，Xbox首席执行官Asha Sharma已制定计划，在传出「重大」裁员和预算削减的消息之际「重置」业务。"
         }
       ],
-      "feedback": [],
+      "feedback": [
+        {
+          "week_id": "2026-W24",
+          "text": "采纳，进入长期规则。",
+          "classified_as": "confirmed",
+          "created_at": "2026-06-15T21:48:32+08:00"
+        }
+      ],
       "created_at": "2026-06-12T21:51:19+08:00",
       "last_seen": "2026-06-11",
       "confidence": 0.82,
       "latest_evidence_summary": "Asha Sharma等人物在多篇稿件中统一保留英文姓名。"
     }
   },
-  "updated_at": "2026-06-12T21:51:19+08:00"
+  "updated_at": "2026-06-15T21:48:32+08:00"
 }

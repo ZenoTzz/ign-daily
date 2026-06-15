@@ -1,7 +1,7 @@
 {
   "date": "2026-06-11",
   "model": "codex",
-  "source_hash": "4da3da4c3be8fb576e83347c9b01fb79f07ed757",
+  "source_hash": "77e60b5c014564c2e70026c4ca1c97cb2d17bb99",
   "signal_count": 8,
   "candidate_count": 6,
   "signals": [
@@ -493,9 +493,10 @@
   "notes": [
     "Codex补跑腾讯文档润色，只提取跨篇可复用规律；单篇特例不直接升级为长期规则。",
     "未学习汇率数值、国区售价、额外上映信息及“今日/昨晚”等时效性补充，避免脱离原文或随时间失效。",
-    "所有候选仍需在学习页确认后才能进入STYLE_PROFILE.md。"
+    "所有候选仍需在学习页确认后才能进入STYLE_PROFILE.md。",
+    "已处理2026-W24学习页反馈：明确采纳的规则进入长期配置，暂缓项继续观察；未重复提取候选。"
   ],
-  "updated_at": "2026-06-12T21:51:19+08:00",
+  "updated_at": "2026-06-15T21:48:32+08:00",
   "observer": "codex",
   "status": "observed"
 }
