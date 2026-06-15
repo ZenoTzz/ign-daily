@@ -210,6 +210,153 @@
       "total_tokens": 8498,
       "prompt_cache_hit_tokens": 7040,
       "prompt_cache_miss_tokens": 965
+    },
+    {
+      "time_cn": "2026-06-15 22:50:07",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 6,
+      "article_title": "DC Studios Co-CEO Says Gorilla Grodd / Jimmy Olsen HBO TV Show Starts Shooting This Year",
+      "article_url": "https://www.ign.com/articles/dc-studios-co-ceo-says-gorilla-grodd-jimmy-olsen-hbo-tv-show-starts-shooting-this-year",
+      "article_date": "2026-06-16",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00143861,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8677,
+      "completion_tokens": 1113,
+      "total_tokens": 9790,
+      "prompt_cache_hit_tokens": 640,
+      "prompt_cache_miss_tokens": 8037
+    },
+    {
+      "time_cn": "2026-06-15 22:50:18",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 7,
+      "article_title": "EA Sports FC, Madden NFL Publisher Announces EA Advertising",
+      "article_url": "https://www.ign.com/articles/ea-sports-fc-madden-nfl-publisher-announces-ea-advertising",
+      "article_date": "2026-06-16",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00050876,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8458,
+      "completion_tokens": 724,
+      "total_tokens": 9182,
+      "prompt_cache_hit_tokens": 6400,
+      "prompt_cache_miss_tokens": 2058
+    },
+    {
+      "time_cn": "2026-06-15 22:50:22",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 8,
+      "article_title": "Capcom Pulls Dragon's Dogma 2 Microtransactions Ahead of Dark Arisen Expansion Release",
+      "article_url": "https://www.ign.com/articles/capcom-pulls-dragons-dogma-2-microtransactions-ahead-of-dark-arisen-expansion-release",
+      "article_date": "2026-06-16",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00016704,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8337,
+      "completion_tokens": 254,
+      "total_tokens": 8591,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 529
+    },
+    {
+      "time_cn": "2026-06-15 22:50:32",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 9,
+      "article_title": "Fortnite Fans Are Obsessing Over Its New Pokémon-Like Sprite Creature Collecting",
+      "article_url": "https://www.ign.com/articles/fortnite-fans-are-obsessing-over-its-new-pokemon-like-sprite-creature-collecting-with-rare-species-being-sold-for-real-money-on-ebay",
+      "article_date": "2026-06-16",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.0003237,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8496,
+      "completion_tokens": 734,
+      "total_tokens": 9230,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 688
+    },
+    {
+      "time_cn": "2026-06-15 22:50:40",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 10,
+      "article_title": "How to clear your gaming backlog before GTA 6 with GeForce NOW",
+      "article_url": "https://www.ign.com/articles/how-to-clear-your-gaming-backlog-before-gta-6-with-geforce-now",
+      "article_date": "2026-06-16",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00030858,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8896,
+      "completion_tokens": 480,
+      "total_tokens": 9376,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 1088
+    },
+    {
+      "time_cn": "2026-06-15 22:50:46",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 11,
+      "article_title": "The Office Star Rainn Wilson Says The Series is Too 'Politically Incorrect' to Be Made Today and He Does 'Kind of Miss That'",
+      "article_url": "https://www.ign.com/articles/the-office-star-rainn-wilson-says-the-series-is-too-politically-incorrect-to-be-made-today-and-he-does-kind-of-miss-that",
+      "article_date": "2026-06-16",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00021674,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8520,
+      "completion_tokens": 340,
+      "total_tokens": 8860,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 712
+    },
+    {
+      "time_cn": "2026-06-15 22:50:56",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 6,
+      "article_title": "Adopt Me! Codes (June 2026)",
+      "article_url": "https://www.ign.com/articles/adopt-me-codes",
+      "article_date": "2026-06-15",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00027988,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8421,
+      "completion_tokens": 615,
+      "total_tokens": 9036,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 613
     }
   ]
 }
