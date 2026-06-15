@@ -2,6 +2,529 @@
   "date": "2026-06-16",
   "articles": [
     {
+      "id": 12,
+      "category": "影视资讯",
+      "emoji": "🕷️",
+      "en_title": "Spider-Man: Brand New Day Official Synopsis Teases Mysterious New Villain That 'No One Can See'",
+      "cn_title": "《蜘蛛侠：崭新之日》官方剧情简介暗示神秘新反派「无人能见」",
+      "summary": "《蜘蛛侠：崭新的一天》官方发布新剧情简介，提及一名「无人能见的强大反派」将成为威胁。已确认的反派包括蝎子、狼蛛、回旋镖、手合会、墓碑等人，而塞迪·辛克饰演琴·葛蕾的传闻引发猜测：她是否就是那位隐形反派？预告片暗示反派拥有精神控制能力，与琴·葛蕾的能力吻合。电影将于7月31日上映，亚马逊Prime会员可提前两天观看。",
+      "url": "https://www.ign.com/articles/spider-man-brand-new-day-official-synopsis-teases-mysterious-new-villain-that-no-one-can-see",
+      "publish_time_cn": "2026-06-16 01:13",
+      "pub_date": "2026-06-16 01:13",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/03/19/spider-man-brand-new-day-1773955154050.png?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/03/19/spider-man-brand-new-day-1773955154050.png?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/03/19/spider-man-brand-new-day-1773955154050.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/03/19/spider-man-brand-new-day-1773955154050.png?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/03/19/spider-man-brand-new-day-1773955154050.png?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/03/19/spider-man-brand-new-day-1773955154050.png"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-16T02:03:10+08:00",
+      "pending_dict": [
+        {
+          "en": "Brand New Day",
+          "cn": "崭新的一天",
+          "cat": "movies_tv",
+          "source": "ai_guess",
+          "reason": "暂译，需确认官方中文片名"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "category": "游戏新闻",
+      "emoji": "👋",
+      "en_title": "Ubisoft Bids Farewell to Assassin's Creed Shadows With Final Story Update",
+      "cn_title": "《刺客信条：影》迎来最终更新，育碧正式告别",
+      "summary": "育碧为《刺客信条：影》推送最终剧情更新，加入直江与弥助故事的最后一章、高难度终局挑战模式「领域」，以及解锁《刺客信条：黑旗 记忆重置》主角爱德华·肯威服装的联动内容。育碧此前已确认该作在更新后将停止后续支持，游戏经历争议与延期后就此落幕。",
+      "url": "https://www.ign.com/articles/ubisoft-bids-farewell-to-assassins-creed-shadows-with-final-story-update",
+      "publish_time_cn": "2026-06-16 01:07",
+      "pub_date": "2026-06-16 01:07",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/15/screenshot-2026-06-15-170727-1781541428125.png?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/15/screenshot-2026-06-15-170727-1781541428125.png?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/15/screenshot-2026-06-15-170727-1781541428125.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/15/screenshot-2026-06-15-170727-1781541428125.png?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/15/screenshot-2026-06-15-170727-1781541428125.png?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/15/screenshot-2026-06-15-170727-1781541428125.png"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-16T02:03:11+08:00",
+      "pending_dict": [
+        {
+          "en": "Naoe",
+          "cn": "直江",
+          "cat": "people",
+          "source": "ai_guess",
+          "reason": "主角之一，官方中文译名未确认，暂按常见音译推测"
+        },
+        {
+          "en": "Yasuke",
+          "cn": "弥助",
+          "cat": "people",
+          "source": "ai_guess",
+          "reason": "主角之一，历史人物译名，待官方确认"
+        },
+        {
+          "en": "Simon Lemay-Comtois",
+          "cn": "西蒙·勒梅-康托瓦",
+          "cat": "people",
+          "source": "ai_guess",
+          "reason": "副游戏总监，法语姓名音译，待确认"
+        },
+        {
+          "en": "Domains",
+          "cn": "领域模式",
+          "cat": "terms",
+          "source": "ai_guess",
+          "reason": "终局挑战模式名称，直译推测，待官方中文定名"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "category": "游戏新闻",
+      "emoji": "🎮",
+      "en_title": "Final Fantasy Resonance Interview: The First HD-2D FF Was Conceptualized 6-7 Years Ago and Inspired by Final Fantasy V",
+      "cn_title": "《Final Fantasy Resonance》制作人：HD-2D新作致敬FF5",
+      "summary": "《Final Fantasy Resonance》作为首款HD-2D《最终幻想》作品，自公布以来备受关注。制作人中岛圭介与古谷弘幸在接受IGN采访时透露，游戏概念约在六七年前萌芽，灵感源自《最终幻想V》，改编自手游《最终幻想：勇气启示录》的故事并加以重构。两人分享了回归回合制与经典元素的初衷，并展望了传统JRPG的复兴。",
+      "url": "https://www.ign.com/articles/final-fantasy-resonance-interview-the-first-hd-2d-ff-was-conceptualized-6-7-years-ago-and-inspired-by-final-fantasy-v",
+      "publish_time_cn": "2026-06-16 01:00",
+      "pub_date": "2026-06-16 01:00",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/10/ffthumb-1781113181781.png?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/10/ffthumb-1781113181781.png?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/10/ffthumb-1781113181781.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/10/ffthumb-1781113181781.png?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/10/ffthumb-1781113181781.png?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/10/ffthumb-1781113181781.png"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-16T02:03:12+08:00",
+      "pending_dict": [
+        {
+          "en": "Final Fantasy Resonance",
+          "cn": "最终幻想：Resonance",
+          "cat": "games",
+          "source": "ai_guess",
+          "reason": "暂无官方中文译名，建议保留英文或使用暂译名"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "category": "影视资讯",
+      "emoji": "🐉",
+      "en_title": "IGN Is Hosting a Free Early Screening of House of the Dragon’s Season 3 Premiere",
+      "cn_title": "IGN 将举办《龙之家族》第三季首集免费提前放映活动",
+      "summary": "IGN 将于6月18日在纽约时代广场举办《龙之家族》第三季首集免费提前放映，比 HBO 首播早三天。RSVP 注册二维码先到先得，现场座位有限。第三季紧接第二季，坦格利安家族内战的全面爆发，龙与龙的对决即将上演。",
+      "url": "https://www.ign.com/articles/ign-is-hosting-a-free-early-screening-of-house-of-the-dragons-season-3-premiere",
+      "publish_time_cn": "2026-06-16 01:00",
+      "pub_date": "2026-06-16 01:00",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/12/thumbnail-1781224133628.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/12/thumbnail-1781224133628.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/12/thumbnail-1781224133628.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/12/thumbnail-1781224133628.jpg?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/12/thumbnail-1781224133628.jpg?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/12/thumbnail-1781224133628.jpg",
+        "https://assets-prd.ignimgs.com/2026/06/12/thumbnail-1781224117154.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-16T02:03:12+08:00"
+    },
+    {
+      "id": 16,
+      "category": "行业动态",
+      "emoji": "🛒",
+      "en_title": "Sam’s Club Memberships Drop As Low as $15 for the First Year, but Not for Long",
+      "cn_title": "山姆会员店首年会员费低至15美元(约合人民币102元) 限时优惠",
+      "summary": "山姆会员店推出限时会员优惠，Club会员首年仅需15美元(约合人民币108元)，Plus会员首年仅需50美元(约合人民币360元)，折扣高达75%。优惠截至7月5日，仅限新会员。此外，会员还可享受Switch 2等商品专属折扣。",
+      "url": "https://www.ign.com/articles/sams-club-memberships-drop-as-low-as-15-for-the-first-year-but-not-for-long",
+      "publish_time_cn": "2026-06-16 01:00",
+      "pub_date": "2026-06-16 01:00",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/15/sams-club-deal-1781531754315.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/15/sams-club-deal-1781531754315.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/15/sams-club-deal-1781531754315.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/15/sams-club-deal-1781531754315.jpg?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/15/sams-club-deal-1781531754315.jpg?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/15/sams-club-deal-1781531754315.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-16T02:03:13+08:00"
+    },
+    {
+      "id": 17,
+      "category": "影视资讯",
+      "emoji": "🏬",
+      "en_title": "The First-Ever Official Studio Ghibli Store in the U.S. Is Opening Later This Month in Los Angeles",
+      "cn_title": "美国首家吉卜力官方商店本月洛杉矶开业",
+      "summary": "IGN独家消息：吉卜力工作室官方商店「橡子共和国」将于6月23日在洛杉矶Del Amo Fashion Center首次登陆美国。店内将贩售逾400款正版周边，涵盖《龙猫》《千与千寻》《哈尔的移动城堡》等经典作品。消费满100美元(约合人民币716元)可获限量托特包。该店营业至2026年底。",
+      "url": "https://www.ign.com/articles/exclusive-the-first-ever-official-studio-ghibli-store-in-the-us-is-opening-later-this-month-in-los-angeles",
+      "publish_time_cn": "2026-06-16 01:00",
+      "pub_date": "2026-06-16 01:00",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/15/best-studio-ghibli-movies-thumbnail-1658448488868-1781535087884.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/15/best-studio-ghibli-movies-thumbnail-1658448488868-1781535087884.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/15/best-studio-ghibli-movies-thumbnail-1658448488868-1781535087884.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/15/best-studio-ghibli-movies-thumbnail-1658448488868-1781535087884.jpg?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/15/best-studio-ghibli-movies-thumbnail-1658448488868-1781535087884.jpg?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/15/best-studio-ghibli-movies-thumbnail-1658448488868-1781535087884.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-16T02:03:13+08:00"
+    },
+    {
+      "id": 18,
+      "category": "行业动态",
+      "emoji": "💼",
+      "en_title": "Microsoft Has Reportedly Shut Down South of Midnight Developer Compulsion Games",
+      "cn_title": "微软据报关闭《午夜之南》开发商Compulsion Games",
+      "summary": "据Kotaku报道，微软计划关闭《午夜之南》及《少数幸运儿》开发商Compulsion Games，裁员可能超过90人。就在数月前，这家加拿大工作室还在为新IP招聘。消息传出数小时前，Xbox游戏工作室负责人Craig Duncan和幕僚长Louise O'Connor已离职。新Xbox负责人Asha Sharma此前警告公司将进行「重置」，被视作大规模裁员和工作室关闭的信号。微软游戏业务目前利润率仅3%，Sharma称过去五年投入超200亿美元(约合人民币1430亿元)但营收下降，「这种情况不能再继续」。微软CEO纳德拉表示需「以经济可行方式创新」。",
+      "url": "https://www.ign.com/articles/microsoft-has-reportedly-shut-down-south-of-midnight-developer-compulsion-games",
+      "publish_time_cn": "2026-06-16 00:42",
+      "pub_date": "2026-06-16 00:42",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/15/ss-2124db7c5ee5495f8902b250af1f76c210cd51a2-1920x1080-1781541755294.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/15/ss-2124db7c5ee5495f8902b250af1f76c210cd51a2-1920x1080-1781541755294.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/15/ss-2124db7c5ee5495f8902b250af1f76c210cd51a2-1920x1080-1781541755294.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/15/ss-2124db7c5ee5495f8902b250af1f76c210cd51a2-1920x1080-1781541755294.jpg?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/15/ss-2124db7c5ee5495f8902b250af1f76c210cd51a2-1920x1080-1781541755294.jpg?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/15/ss-2124db7c5ee5495f8902b250af1f76c210cd51a2-1920x1080-1781541755294.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-16T02:03:14+08:00",
+      "pending_dict": [
+        {
+          "en": "We Happy Few",
+          "cn": "《少数幸运儿》",
+          "cat": "games",
+          "source": "ai_guess",
+          "reason": "该游戏有社区常用译名《少数幸运儿》，但词库中未收录，需确认后入库。"
+        },
+        {
+          "en": "Contrast",
+          "cn": "《对比》",
+          "cat": "games",
+          "source": "ai_guess",
+          "reason": "该游戏无官方中文名，社区有直译《对比》，需人工确认。"
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "category": "人物新闻",
+      "emoji": "🎨",
+      "en_title": "The DC Art of Michael Turner Celebrates the Late Comic Book Legend",
+      "cn_title": "迈克尔·特纳DC艺术集致敬已故传奇",
+      "summary": "Clover Press 推出已故漫画家迈克尔·特纳的DC艺术集《The DC Art of Michael Turner》，收录其在《超人与蝙蝠侠》《闪电侠》《正义联盟》等作品中的封面与插画。该书包含 Geoff Johns、Jeph Loeb 等人撰写的引言，Kickstarter 众筹现已启动。IGN 独家预览了超人与蝙蝠侠主题的插画集。",
+      "url": "https://www.ign.com/articles/the-dc-art-of-michael-turner-clover-press-preview",
+      "publish_time_cn": "2026-06-16 00:00",
+      "pub_date": "2026-06-16 00:00",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/15/mixcollage-15-jun-2026-11-27-am-8592-1781537285258.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/15/mixcollage-15-jun-2026-11-27-am-8592-1781537285258.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/15/mixcollage-15-jun-2026-11-27-am-8592-1781537285258.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/15/mixcollage-15-jun-2026-11-27-am-8592-1781537285258.jpg?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/15/mixcollage-15-jun-2026-11-27-am-8592-1781537285258.jpg?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/15/mixcollage-15-jun-2026-11-27-am-8592-1781537285258.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-16T02:03:15+08:00",
+      "pending_dict": [
+        {
+          "en": "Michael Turner",
+          "cn": "迈克尔·特纳",
+          "cat": "people",
+          "source": "ai_guess",
+          "reason": "知名美漫画师，常见译名确认"
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "category": "行业动态",
+      "emoji": "💰",
+      "en_title": "The LEGO Speed Champions Time Machine From Back to the Future Has Hit a New Low Price at Amazon",
+      "cn_title": "乐高《回到未来》时光机降至新低价",
+      "summary": "乐高Speed Champions系列《回到未来》DeLorean时光机套装在亚马逊降至历史新低22.39美元(约合人民币161元)。该套装面向9岁以上儿童，含357块颗粒，可拼装成飞行模式并附带Dr. Brown和Marty McFly人仔。亚马逊Prime Day将于6月23日开启，这是提前放出的优惠。",
+      "url": "https://www.ign.com/articles/the-lego-speed-champions-time-machine-from-back-to-the-future-has-hit-a-new-low-price-at-amazon",
+      "publish_time_cn": "2026-06-15 23:55",
+      "pub_date": "2026-06-15 23:55",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/15/lego-speed-champions-delorean1-1781534723031.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/15/lego-speed-champions-delorean1-1781534723031.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/15/lego-speed-champions-time-machine-from-back-to-the-future-1781534963625.jpg",
+        "https://assets-prd.ignimgs.com/2026/06/15/lego-speed-champions-delorean1-1781534723031.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/15/lego-speed-champions-delorean1-1781534723031.jpg?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/15/lego-speed-champions-delorean1-1781534723031.jpg?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/15/lego-speed-champions-delorean1-1781534723031.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-16T02:03:15+08:00"
+    },
+    {
+      "id": 21,
+      "category": "影视资讯",
+      "emoji": "🧱",
+      "en_title": "LEGO Reveals First Look at KPop Demon Hunters Set",
+      "cn_title": "乐高公布《KPop Demon Hunters》首款套装",
+      "summary": "乐高正式公开《KPop Demon Hunters》主题套装「Derpy Tiger and Sussie Bird」，包含825块零件，高约21厘米，售价69.99美元(约合人民币504元)，将于8月1日发售，即日起开启预购。此外，该系列续集已进入早期开发阶段，Netflix签下导演Maggie Kang与Chris Appelhans。",
+      "url": "https://www.ign.com/articles/lego-reveals-first-look-at-kpop-demon-hunters-set",
+      "publish_time_cn": "2026-06-15 23:45",
+      "pub_date": "2026-06-15 23:45",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/15/72537-lifestyle-cons-crop-e1781300100100-1781537711427.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/15/72537-lifestyle-cons-crop-e1781300100100-1781537711427.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/15/blt69dcc92d7cf6a33f-72537-boxprod-v39-en-us-1781534069211.png",
+        "https://assets-prd.ignimgs.com/2026/06/15/72537-lifestyle-cons-crop-e1781300100100-1781537711427.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/15/72537-lifestyle-cons-crop-e1781300100100-1781537711427.jpg?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/15/72537-lifestyle-cons-crop-e1781300100100-1781537711427.jpg?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/15/72537-lifestyle-cons-crop-e1781300100100-1781537711427.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-16T02:03:16+08:00"
+    },
+    {
+      "id": 22,
+      "category": "游戏新闻",
+      "emoji": "✈️",
+      "en_title": "Final Fantasy 7 Revelation Is Bringing Back the Airship Dream",
+      "cn_title": "《Final Fantasy 7 Revelation》重圆飞空艇梦",
+      "summary": "《最终幻想7 重制版》三部曲的最终章《Final Fantasy 7 Revelation》将带回系列经典的自由飞空艇。玩家可驾驶Highwind在无缝开放世界中翱翔，并直接从飞艇跳伞降落至地面。制作人滨口直树团队解决了技术挑战，让这一体验成为现实。这是自2001年《最终幻想10》取消大地图以来，系列首次实现完全可控的飞空艇自由探索。",
+      "url": "https://www.ign.com/articles/final-fantasy-7-revelation-is-bringing-back-the-airship-dream",
+      "publish_time_cn": "2026-06-15 23:30",
+      "pub_date": "2026-06-15 23:30",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/15/ff7-airship-blogroll-1781517922269.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/15/ff7-airship-blogroll-1781517922269.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/15/ff7-airship-blogroll-1781517922269.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/15/ff7-airship-blogroll-1781517922269.jpg?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/15/ff7-airship-blogroll-1781517922269.jpg?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/15/ff7-airship-blogroll-1781517922269.jpg",
+        "https://assets-prd.ignimgs.com/2026/06/15/ff7-airship-banner-1781517901414.jpg",
+        "https://assets-prd.ignimgs.com/2026/06/15/ff7-overworld-1781525931854.jpg",
+        "https://assets-prd.ignimgs.com/2026/06/15/ff10-world-map-1781518154494.jpg",
+        "https://assets-prd.ignimgs.com/2026/06/15/ff-type-0-airship-1781525768981.jpg",
+        "https://assets-prd.ignimgs.com/2026/06/15/ff7-airdrop-1781525601607.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-16T02:03:17+08:00",
+      "pending_dict": [
+        {
+          "en": "Revelation",
+          "cn": "启示录",
+          "cat": "games",
+          "source": "ai_guess",
+          "reason": "官方中文名未公布，词库暂保留英文，建议确认后更新"
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "category": "游戏新闻",
+      "emoji": "⚡",
+      "en_title": "EXCLUSIVE: Dr. Stone Comes to Fortnite With Crunchyroll Anime Island",
+      "cn_title": "独家：《石纪元》登陆《堡垒之夜》Crunchyroll动漫岛",
+      "summary": "Crunchyroll在《堡垒之夜》中推出限时《石纪元》主题动漫岛，玩家可于6月19日至21日体验主题玩法和科学挑战。该岛设有放映区，可观看第四季最终集第25话，并提供排行榜及主题武器。活动持续至6月21日，岛代码6044-5327-4490。",
+      "url": "https://www.ign.com/articles/exclusive-dr-stone-comes-to-fortnite-with-crunchyroll-anime-island",
+      "publish_time_cn": "2026-06-15 23:00",
+      "pub_date": "2026-06-15 23:00",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/15/dr-stone-x-crunchyroll-anime-island-fortnite-1781503599328.png?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/15/dr-stone-x-crunchyroll-anime-island-fortnite-1781503599328.png?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/15/dr-stone-x-crunchyroll-anime-island-fortnite-1781503599328.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/15/dr-stone-x-crunchyroll-anime-island-fortnite-1781503599328.png?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/15/dr-stone-x-crunchyroll-anime-island-fortnite-1781503599328.png?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/15/dr-stone-x-crunchyroll-anime-island-fortnite-1781503599328.png",
+        "https://assets-prd.ignimgs.com/2026/06/15/crg-fortnitedrstonexcranimeisland-img-keyvisual-kv-gen-en-nocta-nob-1920x1080-static-2026-06-2-1-1781503637700.png"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-16T02:03:18+08:00",
+      "pending_dict": [
+        {
+          "en": "Dr. Stone",
+          "cn": "《石纪元》",
+          "cat": "games",
+          "source": "ai_guess",
+          "reason": "词库未收录，采用常见译名，需人工确认"
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "category": "游戏新闻",
+      "emoji": "🚗",
+      "en_title": "Hot Wheels: Infinite Rush Is All About Exploring an Open-World Toy Box | IGN Preview",
+      "cn_title": "《风火轮：无限冲刺》预览：开放世界玩具箱中的赛车狂欢",
+      "summary": "开发商Milestone在《风火轮：无限冲刺》中将系列带入开放世界，玩家可自由探索、接受各种挑战。游戏包含超过150辆载具、多种任务类型（竞速、计时赛、破坏赛等），并保留了赛道编辑器。预览中体验了城市和工业沙漠两个区域，其场景设计充满玩具广告般的魅力。开放世界玩法让人想起《横冲直撞：天堂》，为系列注入全新活力。",
+      "url": "https://www.ign.com/articles/hot-wheels-infinite-rush-is-all-about-exploring-an-open-world-toy-box-ign-preview",
+      "publish_time_cn": "2026-06-15 23:00",
+      "pub_date": "2026-06-15 23:00",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/11/highresscreenshot00979-1781213714483.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/11/highresscreenshot00979-1781213714483.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/11/highresscreenshot00979-1781213714483.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/11/highresscreenshot00979-1781213714483.jpg?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/11/highresscreenshot00979-1781213714483.jpg?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/11/highresscreenshot00979-1781213714483.jpg",
+        "https://assets-prd.ignimgs.com/2026/06/11/highresscreenshot01026-1781213714484.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-16T02:03:19+08:00",
+      "pending_dict": [
+        {
+          "en": "Hot Wheels: Infinite Rush",
+          "cn": "《风火轮：无限冲刺》",
+          "cat": "games",
+          "source": "ai_guess",
+          "reason": "游戏名无官方中文译名，根据品牌名和字面含义推测，需人工确认"
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "category": "行业动态",
+      "emoji": "😟",
+      "en_title": "Xbox Game Studios Boss Departs Amid Growing Concern Over Layoffs and Possible Studio Shutdowns",
+      "cn_title": "Xbox Game Studios 主管离职，裁员与关闭工作室担忧加剧",
+      "summary": "据报道，Xbox Game Studios 负责人 Craig Duncan 和幕僚长 Louise O'Connor 在供职数十年后双双离职。新主管 Asha Sharma 此前警告部门利润率过低，彭博社称裁员可能在下月进行。粉丝尤其担忧 Compulsion Games、Double Fine 等多年未出爆款的小团队命运。",
+      "url": "https://www.ign.com/articles/xbox-game-studios-boss-departs-amid-growing-concern-over-layoffs-and-possible-studio-shutdowns",
+      "publish_time_cn": "2026-06-15 22:58",
+      "pub_date": "2026-06-15 22:58",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/15/gettyimages-477251454-1781535570756.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/15/gettyimages-477251454-1781535570756.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/15/gettyimages-477251454-1781535570756.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/15/gettyimages-477251454-1781535570756.jpg?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/15/gettyimages-477251454-1781535570756.jpg?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/15/gettyimages-477251454-1781535570756.jpg",
+        "https://assets-prd.ignimgs.com/2026/06/15/gettyimages-477251454-1781535584480.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-16T02:03:19+08:00"
+    },
+    {
+      "id": 26,
+      "category": "游戏新闻",
+      "emoji": "🎮",
+      "en_title": "Video Game Release Dates: The Biggest Games of June 2026 and Beyond",
+      "cn_title": "《星际火狐》重制版领衔：2026年6月游戏发售前瞻",
+      "summary": "2026年6月虽相对平静，但仍有多款新作值得期待，包括《星际火狐：重制版》以及《The Adventures of Elliot: The Millennium Tales》。任天堂Switch 2、PS5、Xbox Series、PC平台均有新作亮相。本文汇总了本月及未来数月最受关注的游戏发售日期。",
+      "url": "https://www.ign.com/articles/video-game-release-dates-ps4-ps5-xbox-one-series-x-nintendo-switch",
+      "publish_time_cn": "2026-06-15 22:21",
+      "pub_date": "2026-06-15 22:21",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/09/sfbr-1781027996439.png?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/09/sfbr-1781027996439.png?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/09/sfbr-1781027996439.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/09/sfbr-1781027996439.png?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/09/sfbr-1781027996439.png?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/09/sfbr-1781027996439.png"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-16T02:03:20+08:00",
+      "pending_dict": [
+        {
+          "en": "The Adventures of Elliot: The Millennium Tales",
+          "cn": "《艾略特冒险：千禧传说》",
+          "cat": "games",
+          "source": "ai_guess",
+          "reason": "无官方中文译名，暂译供参考"
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "category": "评测评分",
+      "emoji": "🕹️",
+      "en_title": "Epilogue SN Operator Review",
+      "cn_title": "Epilogue SN Operator 评测：SNES 备份利器",
+      "summary": "Epilogue 推出 SN Operator，支持通过 USB-C 连接电脑，备份或游玩 Super Nintendo 卡带游戏与存档。即插即用，兼容北日版游戏，售价 60 美元（约合人民币 430 元）。评测称其为 SNES 收藏者的必备工具，尤其拯救即将因电池耗尽的珍贵存档。",
+      "url": "https://www.ign.com/articles/epilogue-sn-operator-review",
+      "publish_time_cn": "2026-06-15 22:00",
+      "pub_date": "2026-06-15 22:00",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/12/snoperator-1-1781306560953.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/12/snoperator-1-1781306560953.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/12/snoperator-1-1781306560953.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/12/snoperator-1-1781306560953.jpg?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/12/snoperator-1-1781306560953.jpg?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/12/snoperator-1-1781306560953.jpg",
+        "https://assets-prd.ignimgs.com/2026/06/12/20260519-201722-1781306566619.jpg",
+        "https://assets-prd.ignimgs.com/2026/06/12/screenshot-2026-05-19-201954-1781306602952.jpg",
+        "https://assets-prd.ignimgs.com/2026/06/12/screenshot-2026-05-19-202142-1781306602952.jpg",
+        "https://assets-prd.ignimgs.com/2026/06/12/screenshot-2026-05-19-203014-1781306602952.jpg",
+        "https://assets-prd.ignimgs.com/2026/06/12/screenshot-2026-05-19-202950-1781306602952.jpg",
+        "https://assets-prd.ignimgs.com/2026/06/12/screenshot-2026-05-19-202110-1781306602952.jpg",
+        "https://assets-prd.ignimgs.com/2026/06/12/screenshot-2026-05-19-202601-1781306602952.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-16T02:03:21+08:00"
+    },
+    {
+      "id": 28,
+      "category": "游戏新闻",
+      "emoji": "🎮",
+      "en_title": "Vampire Survivors Comic Book Adaptation Launches This Fall",
+      "cn_title": "《吸血鬼幸存者》改编漫画今秋发售",
+      "summary": "IGN独家揭晓《吸血鬼幸存者》改编漫画首张艺术图。该系列由David Hazan编剧、Jimmy Kucaj绘制，共四期，首期于2026年9月9日发售，合订本2027年3月推出。",
+      "url": "https://www.ign.com/articles/vampire-survivors-comic-book-adaptation-launches-this-fall",
+      "publish_time_cn": "2026-06-15 22:00",
+      "pub_date": "2026-06-15 22:00",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/12/mixcollage-12-jun-2026-03-48-pm-5076-1781293698201.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/12/mixcollage-12-jun-2026-03-48-pm-5076-1781293698201.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/12/mixcollage-12-jun-2026-03-48-pm-5076-1781293698201.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/12/mixcollage-12-jun-2026-03-48-pm-5076-1781293698201.jpg?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/12/mixcollage-12-jun-2026-03-48-pm-5076-1781293698201.jpg?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/12/mixcollage-12-jun-2026-03-48-pm-5076-1781293698201.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-16T02:03:21+08:00"
+    },
+    {
+      "id": 29,
+      "category": "影视资讯",
+      "emoji": "🎬",
+      "en_title": "Why The Kingdom of the Crystal Skull Is Steven Spielberg's 'Weakest' Indiana Jones Movie",
+      "cn_title": "《水晶骷髅王国》为何成最差？前卢卡斯影业老板揭秘",
+      "summary": "《夺宝奇兵4：水晶骷髅王国》被多数粉丝视为系列最差。前卢卡斯影业老板凯瑟琳·肯尼迪透露，斯皮尔伯格和福特因不想拍外星人题材与卢卡斯产生分歧，妥协后仍未全心投入，导致影片质量不佳。福特也因此决心拍《命运转盘》来弥补遗憾。",
+      "url": "https://www.ign.com/articles/why-the-kingdom-of-the-crystal-skull-is-steven-spielbergs-weakest-indiana-jones-movie",
+      "publish_time_cn": "2026-06-15 21:27",
+      "pub_date": "2026-06-15 21:27",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/15/indy-1781530025283.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/15/indy-1781530025283.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/15/indy-1781530025283.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/15/indy-1781530025283.jpg?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/15/indy-1781530025283.jpg?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/15/indy-1781530025283.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-16T02:03:22+08:00"
+    },
+    {
       "id": 6,
       "category": "影视资讯",
       "emoji": "📺",
@@ -311,5 +834,5 @@
       "source_fetched_at": "2026-06-15T13:30:01+08:00"
     }
   ],
-  "total": 11
+  "total": 29
 }
