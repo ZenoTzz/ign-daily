@@ -8,24 +8,10 @@
       "cn_title": "《龙之信条2》资料片发布前夕，卡普空移除微交易",
       "model": "deepseek-v4-pro",
       "status": "needs_manual_review",
-      "failed_at": "2026-06-16T09:34:20.070045+08:00",
+      "failed_at": "2026-06-16T10:01:17.085143+08:00",
       "reason": "chunk paragraph 7 missing cn",
       "audit_issues": [],
       "fingerprint": "99ea1b1086c18cc55dd0f45ef8eae6733bb53a3a",
-      "translation_path": "",
-      "retry_policy": "manual_only"
-    },
-    "13": {
-      "id": 13,
-      "url": "https://www.ign.com/articles/ubisoft-bids-farewell-to-assassins-creed-shadows-with-final-story-update",
-      "en_title": "Ubisoft Bids Farewell to Assassin's Creed Shadows With Final Story Update",
-      "cn_title": "《刺客信条：影》迎来最终更新，育碧正式告别",
-      "model": "deepseek-v4-pro",
-      "status": "needs_manual_review",
-      "failed_at": "2026-06-16T09:37:43.317478+08:00",
-      "reason": "chunk paragraph 8 missing cn",
-      "audit_issues": [],
-      "fingerprint": "66ea901e76fb0aab31ed05bec7e9d2e0ada76fe3",
       "translation_path": "",
       "retry_policy": "manual_only"
     },
@@ -86,5 +72,5 @@
       "retry_policy": "manual_only"
     }
   },
-  "updated_at": "2026-06-16T09:51:44.854010+08:00"
+  "updated_at": "2026-06-16T10:02:14.856070+08:00"
 }

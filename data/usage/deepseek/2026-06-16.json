@@ -1323,6 +1323,90 @@
       "total_tokens": 18981,
       "prompt_cache_hit_tokens": 7936,
       "prompt_cache_miss_tokens": 1356
+    },
+    {
+      "time_cn": "2026-06-16 10:00:13",
+      "task": "fulltext",
+      "model": "deepseek-v4-pro",
+      "article_id": 8,
+      "article_title": "《龙之信条2》资料片发布前夕，卡普空移除微交易",
+      "article_url": "https://www.ign.com/articles/capcom-pulls-dragons-dogma-2-microtransactions-ahead-of-dark-arisen-expansion-release",
+      "article_date": "2026-06-16",
+      "detail": "",
+      "estimated_cost_usd": 0.00506285,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 9185,
+      "completion_tokens": 5733,
+      "total_tokens": 14918,
+      "prompt_cache_hit_tokens": 9088,
+      "prompt_cache_miss_tokens": 97
+    },
+    {
+      "time_cn": "2026-06-16 10:00:58",
+      "task": "fulltext_chunk",
+      "model": "deepseek-v4-pro",
+      "article_id": 8,
+      "article_title": "《龙之信条2》资料片发布前夕，卡普空移除微交易",
+      "article_url": "https://www.ign.com/articles/capcom-pulls-dragons-dogma-2-microtransactions-ahead-of-dark-arisen-expansion-release",
+      "article_date": "2026-06-16",
+      "detail": "paragraphs 1-6",
+      "estimated_cost_usd": 0.00228653,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 8572,
+      "completion_tokens": 2531,
+      "total_tokens": 11103,
+      "prompt_cache_hit_tokens": 8448,
+      "prompt_cache_miss_tokens": 124
+    },
+    {
+      "time_cn": "2026-06-16 10:01:17",
+      "task": "fulltext_chunk",
+      "model": "deepseek-v4-pro",
+      "article_id": 8,
+      "article_title": "《龙之信条2》资料片发布前夕，卡普空移除微交易",
+      "article_url": "https://www.ign.com/articles/capcom-pulls-dragons-dogma-2-microtransactions-ahead-of-dark-arisen-expansion-release",
+      "article_date": "2026-06-16",
+      "detail": "paragraphs 7-7",
+      "estimated_cost_usd": 0.00083923,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 8227,
+      "completion_tokens": 913,
+      "total_tokens": 9140,
+      "prompt_cache_hit_tokens": 8192,
+      "prompt_cache_miss_tokens": 35
+    },
+    {
+      "time_cn": "2026-06-16 10:02:14",
+      "task": "fulltext",
+      "model": "deepseek-v4-pro",
+      "article_id": 13,
+      "article_title": "《刺客信条：影》迎来最终更新，育碧正式告别",
+      "article_url": "https://www.ign.com/articles/ubisoft-bids-farewell-to-assassins-creed-shadows-with-final-story-update",
+      "article_date": "2026-06-16",
+      "detail": "",
+      "estimated_cost_usd": 0.00367656,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 9426,
+      "completion_tokens": 4146,
+      "total_tokens": 13572,
+      "prompt_cache_hit_tokens": 9344,
+      "prompt_cache_miss_tokens": 82
     }
   ]
 }
