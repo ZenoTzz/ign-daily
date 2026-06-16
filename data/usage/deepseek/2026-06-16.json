@@ -714,6 +714,48 @@
       "total_tokens": 9938,
       "prompt_cache_hit_tokens": 7808,
       "prompt_cache_miss_tokens": 1906
+    },
+    {
+      "time_cn": "2026-06-16 08:45:50",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 1,
+      "article_title": "EA Sports UFC 6 Review So Far",
+      "article_url": "https://www.ign.com/articles/ea-sports-ufc-6-review",
+      "article_date": "2026-06-17",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00034036,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9053,
+      "completion_tokens": 515,
+      "total_tokens": 9568,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 1245
+    },
+    {
+      "time_cn": "2026-06-16 08:46:05",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 37,
+      "article_title": "Why Turn-Based RPGs Are Resurging, According to Final Fantasy Resonance Devs",
+      "article_url": "https://www.ign.com/articles/why-turn-based-rpgs-are-resurging-according-to-final-fantasy-resonance-devs",
+      "article_date": "2026-06-16",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00046454,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8950,
+      "completion_tokens": 1010,
+      "total_tokens": 9960,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 1142
     }
   ]
 }

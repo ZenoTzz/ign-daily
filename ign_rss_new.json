@@ -5,137 +5,106 @@
     "2026-06-16"
   ],
   "changed_dates": [
+    "2026-06-17",
     "2026-06-16"
   ],
   "new_target_dates": [
+    "2026-06-17",
     "2026-06-16"
   ],
-  "new_count": 1,
-  "filtered_count": 4,
+  "new_count": 2,
+  "filtered_count": 2,
   "cleanup_count": 0,
-  "changed_count": 5,
+  "changed_count": 4,
   "articles": [
     {
-      "title": "The 10 Best Steven Spielberg Movies of All Time",
-      "url": "https://www.ign.com/articles/steven-spielbergs-best-movies",
-      "pubDate_cst": "2026-06-16 06:35"
+      "title": "EA Sports UFC 6 Review So Far",
+      "url": "https://www.ign.com/articles/ea-sports-ufc-6-review",
+      "pubDate_cst": "2026-06-16 08:00"
+    },
+    {
+      "title": "Why Turn-Based RPGs Are Resurging, According to Final Fantasy Resonance Devs",
+      "url": "https://www.ign.com/articles/why-turn-based-rpgs-are-resurging-according-to-final-fantasy-resonance-devs",
+      "pubDate_cst": "2026-06-16 07:26"
     }
   ],
   "filtered_articles": [
     {
-      "title": "Expand Your Home Gym With This Adjustable Weight Bench for Just $38 Shipped on Amazon",
-      "url": "https://www.ign.com/articles/expand-your-home-gym-with-this-adjustable-weight-bench-deal-amazon-fathers-day-sale",
-      "pubDate_cst": "2026-06-16 06:50",
-      "description": "The perfect complement to your dumbbells.",
-      "categories": "",
-      "reason": "url:deal",
-      "rss_url": "https://feeds.feedburner.com/ign/all",
-      "filtered_at_cn": "2026-06-16 08:18:06",
-      "status": "filtered"
-    },
-    {
-      "title": "Target Is Having a LEGO Sale a Week Before Amazon Prime Day",
-      "url": "https://www.ign.com/articles/target-is-having-a-lego-sale-a-week-before-amazon-prime-day-2026",
-      "pubDate_cst": "2026-06-16 06:45",
+      "title": "All of the Dungeon Crawler Carl Books Are on Sale at Amazon Before Prime Day",
+      "url": "https://www.ign.com/articles/the-dungeon-crawler-carl-books-sale-amazon-prime-day-2026",
+      "pubDate_cst": "2026-06-16 08:15",
       "description": "",
       "categories": "",
-      "reason": "text:\\bprime.day\\b",
+      "reason": "text:\\bon sale\\b",
       "rss_url": "https://feeds.feedburner.com/ign/all",
-      "filtered_at_cn": "2026-06-16 08:18:06",
+      "filtered_at_cn": "2026-06-16 08:45:39",
       "status": "filtered"
     },
     {
-      "title": "The Tiny Aoostar Ryzen 7 Pro 6850H Mini PC with 24GB of DDR5 RAM and USB 4 Ports Drops Below $300",
-      "url": "https://www.ign.com/articles/aoostar-ryzen-7-pro-6850h-mini-pc-deal-june-2026-updated",
-      "pubDate_cst": "2026-06-16 06:40",
-      "description": "A Mac Mini-sized PC that's more powerful than the Raspberry Pi for nearly the same cost.",
+      "title": "The Gigabyte RTX 5070 Ti Gaming PC with 32GB of RAM and 2TB SSD Drops to $1,999 Ahead of Prime Day",
+      "url": "https://www.ign.com/articles/gigabyte-rtx-5070-ti-gaming-pc-with-32gb-of-ram-and-2tb-ssd-drops-to-1999-ahead-of-prime-day",
+      "pubDate_cst": "2026-06-16 08:00",
+      "description": "4K-ready",
       "categories": "",
-      "reason": "url:deal",
+      "reason": "text:\\bdrops? to \\$",
       "rss_url": "https://feeds.feedburner.com/ign/all",
-      "filtered_at_cn": "2026-06-16 08:18:06",
-      "status": "filtered"
-    },
-    {
-      "title": "This $11 Hoto 24-in-1 Mini Screwdriver Kit Would Make a Great Father's Day Gift Idea for Your Tinkering Dad",
-      "url": "https://www.ign.com/articles/hoto-compact-screwdriver-tool-kit-deal-amazon-fathers-day-sale",
-      "pubDate_cst": "2026-06-16 06:30",
-      "description": "Delivers by Sunday, June 21",
-      "categories": "",
-      "reason": "url:deal",
-      "rss_url": "https://feeds.feedburner.com/ign/all",
-      "filtered_at_cn": "2026-06-16 08:18:06",
+      "filtered_at_cn": "2026-06-16 08:45:39",
       "status": "filtered"
     }
   ],
   "runs": [
     {
       "target_date": "2026-06-17",
-      "new_count": 0,
-      "filtered_count": 0,
-      "changed_count": 0,
-      "next_id": 1,
-      "articles": [],
-      "filtered_articles": []
-    },
-    {
-      "target_date": "2026-06-16",
       "new_count": 1,
-      "filtered_count": 4,
-      "changed_count": 5,
-      "next_id": 37,
+      "filtered_count": 2,
+      "changed_count": 3,
+      "next_id": 2,
       "articles": [
         {
-          "title": "The 10 Best Steven Spielberg Movies of All Time",
-          "url": "https://www.ign.com/articles/steven-spielbergs-best-movies",
-          "pubDate_cst": "2026-06-16 06:35"
+          "title": "EA Sports UFC 6 Review So Far",
+          "url": "https://www.ign.com/articles/ea-sports-ufc-6-review",
+          "pubDate_cst": "2026-06-16 08:00"
         }
       ],
       "filtered_articles": [
         {
-          "title": "Expand Your Home Gym With This Adjustable Weight Bench for Just $38 Shipped on Amazon",
-          "url": "https://www.ign.com/articles/expand-your-home-gym-with-this-adjustable-weight-bench-deal-amazon-fathers-day-sale",
-          "pubDate_cst": "2026-06-16 06:50",
-          "description": "The perfect complement to your dumbbells.",
-          "categories": "",
-          "reason": "url:deal",
-          "rss_url": "https://feeds.feedburner.com/ign/all",
-          "filtered_at_cn": "2026-06-16 08:18:06",
-          "status": "filtered"
-        },
-        {
-          "title": "Target Is Having a LEGO Sale a Week Before Amazon Prime Day",
-          "url": "https://www.ign.com/articles/target-is-having-a-lego-sale-a-week-before-amazon-prime-day-2026",
-          "pubDate_cst": "2026-06-16 06:45",
+          "title": "All of the Dungeon Crawler Carl Books Are on Sale at Amazon Before Prime Day",
+          "url": "https://www.ign.com/articles/the-dungeon-crawler-carl-books-sale-amazon-prime-day-2026",
+          "pubDate_cst": "2026-06-16 08:15",
           "description": "",
           "categories": "",
-          "reason": "text:\\bprime.day\\b",
+          "reason": "text:\\bon sale\\b",
           "rss_url": "https://feeds.feedburner.com/ign/all",
-          "filtered_at_cn": "2026-06-16 08:18:06",
+          "filtered_at_cn": "2026-06-16 08:45:39",
           "status": "filtered"
         },
         {
-          "title": "The Tiny Aoostar Ryzen 7 Pro 6850H Mini PC with 24GB of DDR5 RAM and USB 4 Ports Drops Below $300",
-          "url": "https://www.ign.com/articles/aoostar-ryzen-7-pro-6850h-mini-pc-deal-june-2026-updated",
-          "pubDate_cst": "2026-06-16 06:40",
-          "description": "A Mac Mini-sized PC that's more powerful than the Raspberry Pi for nearly the same cost.",
+          "title": "The Gigabyte RTX 5070 Ti Gaming PC with 32GB of RAM and 2TB SSD Drops to $1,999 Ahead of Prime Day",
+          "url": "https://www.ign.com/articles/gigabyte-rtx-5070-ti-gaming-pc-with-32gb-of-ram-and-2tb-ssd-drops-to-1999-ahead-of-prime-day",
+          "pubDate_cst": "2026-06-16 08:00",
+          "description": "4K-ready",
           "categories": "",
-          "reason": "url:deal",
+          "reason": "text:\\bdrops? to \\$",
           "rss_url": "https://feeds.feedburner.com/ign/all",
-          "filtered_at_cn": "2026-06-16 08:18:06",
-          "status": "filtered"
-        },
-        {
-          "title": "This $11 Hoto 24-in-1 Mini Screwdriver Kit Would Make a Great Father's Day Gift Idea for Your Tinkering Dad",
-          "url": "https://www.ign.com/articles/hoto-compact-screwdriver-tool-kit-deal-amazon-fathers-day-sale",
-          "pubDate_cst": "2026-06-16 06:30",
-          "description": "Delivers by Sunday, June 21",
-          "categories": "",
-          "reason": "url:deal",
-          "rss_url": "https://feeds.feedburner.com/ign/all",
-          "filtered_at_cn": "2026-06-16 08:18:06",
+          "filtered_at_cn": "2026-06-16 08:45:39",
           "status": "filtered"
         }
       ]
+    },
+    {
+      "target_date": "2026-06-16",
+      "new_count": 1,
+      "filtered_count": 0,
+      "changed_count": 1,
+      "next_id": 38,
+      "articles": [
+        {
+          "title": "Why Turn-Based RPGs Are Resurging, According to Final Fantasy Resonance Devs",
+          "url": "https://www.ign.com/articles/why-turn-based-rpgs-are-resurging-according-to-final-fantasy-resonance-devs",
+          "pubDate_cst": "2026-06-16 07:26"
+        }
+      ],
+      "filtered_articles": []
     }
   ]
 }
