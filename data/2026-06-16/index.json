@@ -12,7 +12,7 @@
       "publish_time_cn": "2026-06-16 07:26",
       "pub_date": "2026-06-16 07:26",
       "cover_image": "https://assets-prd.ignimgs.com/2026/06/15/vlcsnap-2026-06-09-06h45m41s038-1781013029073-1781546869665.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/15/vlcsnap-2026-06-09-06h45m41s038-1781013029073-1781546869665.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/15/vlcsnap-2026-06-09-06h45m41s038-1781013029073-1781546869665.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -30,7 +30,11 @@
           "source": "ai_guess",
           "reason": "暂无官方中文译名，需确认"
         }
-      ]
+      ],
+      "translation_path": "translations/37.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro"
     },
     {
       "id": 36,
@@ -104,7 +108,7 @@
       "publish_time_cn": "2026-06-16 04:49",
       "pub_date": "2026-06-16 04:49",
       "cover_image": "https://assets-prd.ignimgs.com/2026/01/23/bo7-1769167660474.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/01/23/bo7-1769167660474.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/01/23/bo7-1769167660474.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -113,7 +117,11 @@
         "https://assets-prd.ignimgs.com/2026/01/23/bo7-1769167660474.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-16T08:03:19+08:00"
+      "source_fetched_at": "2026-06-16T08:03:19+08:00",
+      "translation_path": "translations/34.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro"
     },
     {
       "id": 37,
@@ -255,7 +263,7 @@
       "publish_time_cn": "2026-06-16 01:13",
       "pub_date": "2026-06-16 01:13",
       "cover_image": "https://assets-prd.ignimgs.com/2026/03/19/spider-man-brand-new-day-1773955154050.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/03/19/spider-man-brand-new-day-1773955154050.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/03/19/spider-man-brand-new-day-1773955154050.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -273,7 +281,11 @@
           "source": "ai_guess",
           "reason": "暂译，需确认官方中文片名"
         }
-      ]
+      ],
+      "translation_path": "translations/12.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro"
     },
     {
       "id": 13,
@@ -286,7 +298,7 @@
       "publish_time_cn": "2026-06-16 01:07",
       "pub_date": "2026-06-16 01:07",
       "cover_image": "https://assets-prd.ignimgs.com/2026/06/15/screenshot-2026-06-15-170727-1781541428125.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/15/screenshot-2026-06-15-170727-1781541428125.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/15/screenshot-2026-06-15-170727-1781541428125.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -325,7 +337,12 @@
           "source": "ai_guess",
           "reason": "终局挑战模式名称，直译推测，待官方中文定名"
         }
-      ]
+      ],
+      "translation_error": "chunk paragraph 8 missing cn",
+      "translation_failed_at": "2026-06-16T09:37:43.317478+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro"
     },
     {
       "id": 14,
@@ -338,7 +355,7 @@
       "publish_time_cn": "2026-06-16 01:00",
       "pub_date": "2026-06-16 01:00",
       "cover_image": "https://assets-prd.ignimgs.com/2026/06/10/ffthumb-1781113181781.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/10/ffthumb-1781113181781.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/10/ffthumb-1781113181781.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -356,7 +373,12 @@
           "source": "ai_guess",
           "reason": "暂无官方中文译名，建议保留英文或使用暂译名"
         }
-      ]
+      ],
+      "translation_error": "Expecting value: line 1 column 1 (char 0)",
+      "translation_failed_at": "2026-06-16T09:40:06.848732+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro"
     },
     {
       "id": 15,
@@ -551,7 +573,7 @@
       "publish_time_cn": "2026-06-15 23:30",
       "pub_date": "2026-06-15 23:30",
       "cover_image": "https://assets-prd.ignimgs.com/2026/06/15/ff7-airship-blogroll-1781517922269.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/15/ff7-airship-blogroll-1781517922269.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/15/ff7-airship-blogroll-1781517922269.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -574,7 +596,12 @@
           "source": "ai_guess",
           "reason": "官方中文名未公布，词库暂保留英文，建议确认后更新"
         }
-      ]
+      ],
+      "translation_error": "Expecting ',' delimiter: line 65 column 6 (char 11817)",
+      "translation_failed_at": "2026-06-16T09:42:37.000585+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro"
     },
     {
       "id": 23,
@@ -651,7 +678,7 @@
       "publish_time_cn": "2026-06-15 22:58",
       "pub_date": "2026-06-15 22:58",
       "cover_image": "https://assets-prd.ignimgs.com/2026/06/15/gettyimages-477251454-1781535570756.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/15/gettyimages-477251454-1781535570756.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/15/gettyimages-477251454-1781535570756.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -661,7 +688,12 @@
         "https://assets-prd.ignimgs.com/2026/06/15/gettyimages-477251454-1781535584480.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-16T02:03:19+08:00"
+      "source_fetched_at": "2026-06-16T02:03:19+08:00",
+      "translation_error": "chunk paragraph 12 missing cn",
+      "translation_failed_at": "2026-06-16T09:44:50.493908+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro"
     },
     {
       "id": 26,
@@ -816,7 +848,7 @@
       "publish_time_cn": "2026-06-15 20:17",
       "pub_date": "2026-06-15 20:17",
       "cover_image": "https://assets-prd.ignimgs.com/2026/06/15/screenshot-2026-06-15-125753-1781525021678.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/15/screenshot-2026-06-15-125753-1781525021678.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/15/screenshot-2026-06-15-125753-1781525021678.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -825,7 +857,11 @@
         "https://assets-prd.ignimgs.com/2026/06/15/screenshot-2026-06-15-125753-1781525021678.png"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-15T22:49:49+08:00"
+      "source_fetched_at": "2026-06-15T22:49:49+08:00",
+      "translation_path": "translations/07.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro"
     },
     {
       "id": 8,
@@ -838,7 +874,7 @@
       "publish_time_cn": "2026-06-15 19:25",
       "pub_date": "2026-06-15 19:25",
       "cover_image": "https://assets-prd.ignimgs.com/2026/06/15/ss-ef263c112e274dc73a4bb00596aee1ebfc2b0ed8-1920x1080-1781522543975.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/15/ss-ef263c112e274dc73a4bb00596aee1ebfc2b0ed8-1920x1080-1781522543975.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/15/ss-ef263c112e274dc73a4bb00596aee1ebfc2b0ed8-1920x1080-1781522543975.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -847,7 +883,12 @@
         "https://assets-prd.ignimgs.com/2026/06/15/ss-ef263c112e274dc73a4bb00596aee1ebfc2b0ed8-1920x1080-1781522543975.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-15T22:49:49+08:00"
+      "source_fetched_at": "2026-06-15T22:49:49+08:00",
+      "translation_error": "chunk paragraph 7 missing cn",
+      "translation_failed_at": "2026-06-16T09:34:20.070045+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro"
     },
     {
       "id": 9,
@@ -944,7 +985,7 @@
       "publish_time_cn": "2026-06-15 17:28",
       "pub_date": "2026-06-15 17:28",
       "cover_image": "https://assets-prd.ignimgs.com/2026/06/15/gettyimages-2281068530-1781515265740.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/15/gettyimages-2281068530-1781515265740.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/15/gettyimages-2281068530-1781515265740.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -954,7 +995,12 @@
         "https://assets-prd.ignimgs.com/2026/06/15/gettyimages-2281068530-1781515302921.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-16T08:46:17+08:00"
+      "source_fetched_at": "2026-06-16T08:46:17+08:00",
+      "translation_error": "Expecting value: line 1 column 1 (char 0)",
+      "translation_failed_at": "2026-06-16T09:51:44.854010+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro"
     },
     {
       "id": 5,
@@ -967,7 +1013,7 @@
       "publish_time_cn": "2026-06-15 17:00",
       "pub_date": "2026-06-15 17:00",
       "cover_image": "https://assets-prd.ignimgs.com/2026/06/09/nintendo-everything-blog-1781022109598.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/09/nintendo-everything-blog-1781022109598.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/09/nintendo-everything-blog-1781022109598.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -976,7 +1022,11 @@
         "https://assets-prd.ignimgs.com/2026/06/09/nintendo-everything-blog-1781022109598.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-15T20:44:38+08:00"
+      "source_fetched_at": "2026-06-15T20:44:38+08:00",
+      "translation_path": "translations/05.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro"
     },
     {
       "id": 1,
