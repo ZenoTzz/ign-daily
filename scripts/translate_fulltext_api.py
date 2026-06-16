@@ -428,8 +428,8 @@ def translate_paragraph_chunks(
     translated: dict[int, str] = {}
     chunk_size = int(os.environ.get("TRANSLATOR_FULLTEXT_CHUNK_SIZE", "6"))
     indexed = list(enumerate(paragraphs_en, start=1))
-    for start in range(0, len(indexed), chunk_size):
-        chunk = indexed[start:start + chunk_size]
+
+    def translate_chunk(chunk: list[tuple[int, str]]) -> None:
         raw, usage = call_deepseek_response(
             api_key,
             model,
@@ -462,6 +462,17 @@ def translate_paragraph_chunks(
             if not cn:
                 raise ValueError(f"chunk paragraph {idx} missing cn")
             translated[idx] = cn
+
+    for start in range(0, len(indexed), chunk_size):
+        chunk = indexed[start:start + chunk_size]
+        try:
+            translate_chunk(chunk)
+        except Exception as exc:
+            if len(chunk) == 1:
+                raise
+            print(f"[RETRY] fulltext #{article.get('id')} chunk {chunk[0][0]}-{chunk[-1][0]} failed: {exc}; retrying one paragraph at a time")
+            for single in chunk:
+                translate_chunk([single])
     return [{"en": en, "cn": translated[i]} for i, en in indexed]
 
 
@@ -676,7 +687,20 @@ def translate_date(date: str, limit: int = 2) -> int:
                 article_url=article.get("url"),
                 article_date=date,
             )
-            result = extract_json(raw)
+            try:
+                result = extract_json(raw)
+            except Exception as exc:
+                print(f"[RETRY] fulltext #{article['id']} returned invalid JSON: {exc}; falling back to paragraph chunks")
+                result = {
+                    "cn_title": article.get("cn_title") or article.get("en_title") or "",
+                    "subtitle": article.get("subtitle") or "",
+                    "opus_summary": article.get("summary") or article.get("cn_title") or "",
+                    "paragraphs": translate_paragraph_chunks(api_key, model, base_url, article, paragraphs_en, terms, article_date=date),
+                    "pending_dict": [],
+                    "translated_terms": {},
+                    "cover": article.get("cover_image") or "",
+                    "images": [],
+                }
             try:
                 data = normalize_translation(article, result, paragraphs_en)
             except ValueError as exc:
