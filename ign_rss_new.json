@@ -7,46 +7,46 @@
   "changed_dates": [
     "2026-06-17"
   ],
-  "new_target_dates": [],
-  "new_count": 0,
-  "filtered_count": 1,
+  "new_target_dates": [
+    "2026-06-17"
+  ],
+  "new_count": 2,
+  "filtered_count": 0,
   "cleanup_count": 0,
-  "changed_count": 1,
-  "articles": [],
-  "filtered_articles": [
+  "changed_count": 2,
+  "articles": [
     {
-      "title": "Grab an Alienware RTX 5080 Gaming PC With 32GB of RAM and 2TB SSD for $2,579 Before It Sells Out",
-      "url": "https://www.ign.com/articles/alienware-aurora-rtx-5080-gaming-pc-deal-at-dell-outlet-june-2026-updated",
-      "pubDate_cst": "2026-06-16 08:50",
-      "description": "Dell Outlet include the same 1 year warranty as buying brand new from Dell.com.",
-      "categories": "",
-      "reason": "url:deal",
-      "rss_url": "https://feeds.feedburner.com/ign/all",
-      "filtered_at_cn": "2026-06-16 10:06:30",
-      "status": "filtered"
+      "title": "Obsession Director Curry Barker Says Gen Z Is 'Tired of Slop' and 'Will Show Up' for Good Movies",
+      "url": "https://www.ign.com/articles/obsession-director-curry-barker-says-gen-z-is-tired-of-slop-and-will-show-up-for-good-movies",
+      "pubDate_cst": "2026-06-16 09:39"
+    },
+    {
+      "title": "Harry Potter TV Series Casts Peter Serafinowicz in Role Not Featured in the Films",
+      "url": "https://www.ign.com/articles/harry-potter-tv-series-casts-peter-serafinowicz-in-role-not-featured-in-the-films",
+      "pubDate_cst": "2026-06-16 09:34"
     }
   ],
+  "filtered_articles": [],
   "runs": [
     {
       "target_date": "2026-06-17",
-      "new_count": 0,
-      "filtered_count": 1,
-      "changed_count": 1,
-      "next_id": 2,
-      "articles": [],
-      "filtered_articles": [
+      "new_count": 2,
+      "filtered_count": 0,
+      "changed_count": 2,
+      "next_id": 4,
+      "articles": [
         {
-          "title": "Grab an Alienware RTX 5080 Gaming PC With 32GB of RAM and 2TB SSD for $2,579 Before It Sells Out",
-          "url": "https://www.ign.com/articles/alienware-aurora-rtx-5080-gaming-pc-deal-at-dell-outlet-june-2026-updated",
-          "pubDate_cst": "2026-06-16 08:50",
-          "description": "Dell Outlet include the same 1 year warranty as buying brand new from Dell.com.",
-          "categories": "",
-          "reason": "url:deal",
-          "rss_url": "https://feeds.feedburner.com/ign/all",
-          "filtered_at_cn": "2026-06-16 10:06:30",
-          "status": "filtered"
+          "title": "Obsession Director Curry Barker Says Gen Z Is 'Tired of Slop' and 'Will Show Up' for Good Movies",
+          "url": "https://www.ign.com/articles/obsession-director-curry-barker-says-gen-z-is-tired-of-slop-and-will-show-up-for-good-movies",
+          "pubDate_cst": "2026-06-16 09:39"
+        },
+        {
+          "title": "Harry Potter TV Series Casts Peter Serafinowicz in Role Not Featured in the Films",
+          "url": "https://www.ign.com/articles/harry-potter-tv-series-casts-peter-serafinowicz-in-role-not-featured-in-the-films",
+          "pubDate_cst": "2026-06-16 09:34"
         }
-      ]
+      ],
+      "filtered_articles": []
     },
     {
       "target_date": "2026-06-16",

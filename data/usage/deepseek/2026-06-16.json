@@ -1911,6 +1911,48 @@
       "total_tokens": 14676,
       "prompt_cache_hit_tokens": 7552,
       "prompt_cache_miss_tokens": 2308
+    },
+    {
+      "time_cn": "2026-06-16 11:31:16",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 2,
+      "article_title": "Obsession Director Curry Barker Says Gen Z Is 'Tired of Slop' and 'Will Show Up' for Good Movies",
+      "article_url": "https://www.ign.com/articles/obsession-director-curry-barker-says-gen-z-is-tired-of-slop-and-will-show-up-for-good-movies",
+      "article_date": "2026-06-17",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00131712,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8480,
+      "completion_tokens": 464,
+      "total_tokens": 8944,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 8480
+    },
+    {
+      "time_cn": "2026-06-16 11:31:34",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 3,
+      "article_title": "Harry Potter TV Series Casts Peter Serafinowicz in Role Not Featured in the Films",
+      "article_url": "https://www.ign.com/articles/harry-potter-tv-series-casts-peter-serafinowicz-in-role-not-featured-in-the-films",
+      "article_date": "2026-06-17",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00130598,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8370,
+      "completion_tokens": 1420,
+      "total_tokens": 9790,
+      "prompt_cache_hit_tokens": 1920,
+      "prompt_cache_miss_tokens": 6450
     }
   ]
 }

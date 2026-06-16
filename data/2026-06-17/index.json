@@ -2,6 +2,60 @@
   "date": "2026-06-17",
   "articles": [
     {
+      "id": 2,
+      "category": "人物新闻",
+      "emoji": "🎬",
+      "en_title": "Obsession Director Curry Barker Says Gen Z Is 'Tired of Slop' and 'Will Show Up' for Good Movies",
+      "cn_title": "《Curry Barker》《Obsession》导演称Z世代厌倦「快餐电影」",
+      "summary": "低成本恐怖片《Obsession》导演Curry Barker近日受访表示，Z世代观众愿意为优质原创电影走进影院，他们已厌倦粗制滥造的「快餐作品」。Barker透露下一部原创电影《Anything But Ghosts》已集结Bryce Dallas Howard、Aaron Paul等演员，同时也在为A24筹备新《德州电锯杀人狂》项目。",
+      "url": "https://www.ign.com/articles/obsession-director-curry-barker-says-gen-z-is-tired-of-slop-and-will-show-up-for-good-movies",
+      "publish_time_cn": "2026-06-16 09:39",
+      "pub_date": "2026-06-16 09:39",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/15/curry-barker-2-1781561163549.png?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/15/curry-barker-2-1781561163549.png?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/15/curry-barker-2-1781561163549.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/15/curry-barker-2-1781561163549.png?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/15/curry-barker-2-1781561163549.png?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/15/curry-barker-2-1781561163549.png",
+        "https://assets-prd.ignimgs.com/2026/06/15/curry-barker-2-1781561116062.png"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-16T11:31:06+08:00"
+    },
+    {
+      "id": 3,
+      "category": "影视资讯",
+      "emoji": "🧙",
+      "en_title": "Harry Potter TV Series Casts Peter Serafinowicz in Role Not Featured in the Films",
+      "cn_title": "《哈利波特》剧集皮皮鬼演员敲定",
+      "summary": "据《综艺》报道，HBO《哈利波特》剧集已选定Peter Serafinowicz饰演皮皮鬼(Peeves)，这个在原著中十分活跃的幽灵角色并未出现在电影中。剧集计划共八季，首季改编自《哈利波特与魔法石》，预计圣诞档期播出。",
+      "url": "https://www.ign.com/articles/harry-potter-tv-series-casts-peter-serafinowicz-in-role-not-featured-in-the-films",
+      "publish_time_cn": "2026-06-16 09:34",
+      "pub_date": "2026-06-16 09:34",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/15/peter-serafinowicz-1781563341219.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/15/peter-serafinowicz-1781563341219.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/15/peter-serafinowicz-1781563341219.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/15/peter-serafinowicz-1781563341219.jpg?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/15/peter-serafinowicz-1781563341219.jpg?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/15/peter-serafinowicz-1781563341219.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-16T11:31:07+08:00",
+      "pending_dict": [
+        {
+          "en": "Peeves",
+          "cn": "皮皮鬼",
+          "cat": "movies_tv",
+          "source": "ai_guess",
+          "reason": "哈利波特系列中幽灵角色，常见社区译名，词库未收录"
+        }
+      ]
+    },
+    {
       "id": 1,
       "category": "评测评分",
       "emoji": "🥊",
@@ -25,5 +79,5 @@
       "source_fetched_at": "2026-06-16T08:45:41+08:00"
     }
   ],
-  "total": 1
+  "total": 3
 }
