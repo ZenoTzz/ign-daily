@@ -1,8 +1,8 @@
 {
-  "target_date": "2026-06-16",
+  "target_date": "2026-06-17",
   "target_dates": [
-    "2026-06-16",
-    "2026-06-15"
+    "2026-06-17",
+    "2026-06-16"
   ],
   "changed_dates": [
     "2026-06-16"
@@ -10,110 +10,130 @@
   "new_target_dates": [
     "2026-06-16"
   ],
-  "new_count": 1,
+  "new_count": 3,
   "filtered_count": 3,
   "cleanup_count": 0,
-  "changed_count": 4,
+  "changed_count": 6,
   "articles": [
     {
-      "title": "The Muppets Take the Marvel Universe: Marvel Reveals Kooky Crossover Special",
-      "url": "https://www.ign.com/articles/the-muppets-take-the-marvel-universe-marvel-reveals-kooky-crossover-special",
-      "pubDate_cst": "2026-06-16 02:41"
+      "title": "The Lord of the Rings: The Hunt for Gollum Adds Anya Taylor-Joy to Its Cast",
+      "url": "https://www.ign.com/articles/the-lord-of-the-rings-the-hunt-for-gollum-adds-anya-taylor-joy-to-cast",
+      "pubDate_cst": "2026-06-16 04:59"
+    },
+    {
+      "title": "Treyarch Head Mark Gordon Steps Down from Call of Duty Studio",
+      "url": "https://www.ign.com/articles/treyarch-head-mark-gordon-steps-down-from-call-of-duty-studio",
+      "pubDate_cst": "2026-06-16 04:49"
+    },
+    {
+      "title": "Meccha Chameleon, the New Hide-and-Seek Paint Game, Reaches 2 Million Copies Sold",
+      "url": "https://www.ign.com/articles/meccha-chameleon-the-new-hide-and-seek-paint-game-reaches-2-million-copies-sold",
+      "pubDate_cst": "2026-06-16 04:44"
     }
   ],
   "filtered_articles": [
     {
-      "title": "The LEGO Leonardo da Vinci Flying Machine Set Drops to Its Lowest Price Ever",
-      "url": "https://www.ign.com/articles/the-lego-leonardo-da-vinci-flying-machine-set-deal-june-2026",
-      "pubDate_cst": "2026-06-16 04:02",
-      "description": "Both Amazon and Target are currently offering the LEGO version of da Vinci's Flying Machine for $39.99, its lowest price ever.",
+      "title": "The Tiny Firebat A6 Ryzen 7 7735HS Mini PC Is a Complete Windows 11 System for Under $300",
+      "url": "https://www.ign.com/articles/firebat-a6-mini-pc-deal-june-2026",
+      "pubDate_cst": "2026-06-16 05:50",
+      "description": "A complete kit preinstalled with the Radeon 680M iGPU, 16GB of DDR5 RAM, 512GB SSD, and Windows 11",
       "categories": "",
-      "reason": "text:\\blowest price\\b",
+      "reason": "text:\\bunder \\$\\d+",
       "rss_url": "https://feeds.feedburner.com/ign/all",
-      "filtered_at_cn": "2026-06-16 05:24:19",
+      "filtered_at_cn": "2026-06-16 08:03:17",
       "status": "filtered"
     },
     {
-      "title": "Save $950 Off the Powerful Lenovo Legion Pro 7 RTX 5090 Gaming Laptop and Get 007: First Light for Free",
-      "url": "https://www.ign.com/articles/lenovo-legion-pro-7-rtx-5090-gaming-laptop-deal-june-2026",
-      "pubDate_cst": "2026-06-16 03:10",
-      "description": "Equipped with a gorgeous 16\" 2500x1600 240Hz OLED display",
-      "categories": "",
-      "reason": "text:\\bsave \\$\\d",
-      "rss_url": "https://feeds.feedburner.com/ign/all",
-      "filtered_at_cn": "2026-06-16 05:24:19",
-      "status": "filtered"
-    },
-    {
-      "title": "The Wolfbox MF60 Cordless Electric Air Duster Features Great Build Quality and Tons of Airflow for $28",
-      "url": "https://www.ign.com/articles/wolfbox-mega-flow-mf60-cordless-electric-air-duster-deal-amazon-fathers-day-sale",
-      "pubDate_cst": "2026-06-16 03:05",
-      "description": "Order it today and get it delivered to you by Father's Day.",
+      "title": "The Baseus 20,000mAh 100W Power Bank With Dual USB-C Cables Drops to Just $38.99",
+      "url": "https://www.ign.com/articles/baseus-20000mah-100w-power-bank-deal-june-2026",
+      "pubDate_cst": "2026-06-16 05:20",
+      "description": "High capacity and high output at an affordable price.",
       "categories": "",
       "reason": "url:deal",
       "rss_url": "https://feeds.feedburner.com/ign/all",
-      "filtered_at_cn": "2026-06-16 05:24:19",
+      "filtered_at_cn": "2026-06-16 08:03:17",
+      "status": "filtered"
+    },
+    {
+      "title": "Ninja Theory and Double Fine Also Reportedly Under Threat of Closure as Xbox Studios Fight for Survival",
+      "url": "https://www.ign.com/articles/ninja-theory-and-double-fine-also-reportedly-under-threat-of-closure-as-xbox-studios-fight-for-survival",
+      "pubDate_cst": "2026-06-16 04:45",
+      "description": "Hellblade developer Ninja Theory and Psychonauts developer Double Fine are reportedly among the studios fighting to avoid closure as Microsoft makes significant cuts to its Xbox business.",
+      "categories": "",
+      "reason": "url:under-",
+      "rss_url": "https://feeds.feedburner.com/ign/all",
+      "filtered_at_cn": "2026-06-16 08:03:17",
       "status": "filtered"
     }
   ],
   "runs": [
     {
+      "target_date": "2026-06-17",
+      "new_count": 0,
+      "filtered_count": 0,
+      "changed_count": 0,
+      "next_id": 1,
+      "articles": [],
+      "filtered_articles": []
+    },
+    {
       "target_date": "2026-06-16",
-      "new_count": 1,
+      "new_count": 3,
       "filtered_count": 3,
-      "changed_count": 4,
-      "next_id": 33,
+      "changed_count": 6,
+      "next_id": 36,
       "articles": [
         {
-          "title": "The Muppets Take the Marvel Universe: Marvel Reveals Kooky Crossover Special",
-          "url": "https://www.ign.com/articles/the-muppets-take-the-marvel-universe-marvel-reveals-kooky-crossover-special",
-          "pubDate_cst": "2026-06-16 02:41"
+          "title": "The Lord of the Rings: The Hunt for Gollum Adds Anya Taylor-Joy to Its Cast",
+          "url": "https://www.ign.com/articles/the-lord-of-the-rings-the-hunt-for-gollum-adds-anya-taylor-joy-to-cast",
+          "pubDate_cst": "2026-06-16 04:59"
+        },
+        {
+          "title": "Treyarch Head Mark Gordon Steps Down from Call of Duty Studio",
+          "url": "https://www.ign.com/articles/treyarch-head-mark-gordon-steps-down-from-call-of-duty-studio",
+          "pubDate_cst": "2026-06-16 04:49"
+        },
+        {
+          "title": "Meccha Chameleon, the New Hide-and-Seek Paint Game, Reaches 2 Million Copies Sold",
+          "url": "https://www.ign.com/articles/meccha-chameleon-the-new-hide-and-seek-paint-game-reaches-2-million-copies-sold",
+          "pubDate_cst": "2026-06-16 04:44"
         }
       ],
       "filtered_articles": [
         {
-          "title": "The LEGO Leonardo da Vinci Flying Machine Set Drops to Its Lowest Price Ever",
-          "url": "https://www.ign.com/articles/the-lego-leonardo-da-vinci-flying-machine-set-deal-june-2026",
-          "pubDate_cst": "2026-06-16 04:02",
-          "description": "Both Amazon and Target are currently offering the LEGO version of da Vinci's Flying Machine for $39.99, its lowest price ever.",
+          "title": "The Tiny Firebat A6 Ryzen 7 7735HS Mini PC Is a Complete Windows 11 System for Under $300",
+          "url": "https://www.ign.com/articles/firebat-a6-mini-pc-deal-june-2026",
+          "pubDate_cst": "2026-06-16 05:50",
+          "description": "A complete kit preinstalled with the Radeon 680M iGPU, 16GB of DDR5 RAM, 512GB SSD, and Windows 11",
           "categories": "",
-          "reason": "text:\\blowest price\\b",
+          "reason": "text:\\bunder \\$\\d+",
           "rss_url": "https://feeds.feedburner.com/ign/all",
-          "filtered_at_cn": "2026-06-16 05:24:19",
+          "filtered_at_cn": "2026-06-16 08:03:17",
           "status": "filtered"
         },
         {
-          "title": "Save $950 Off the Powerful Lenovo Legion Pro 7 RTX 5090 Gaming Laptop and Get 007: First Light for Free",
-          "url": "https://www.ign.com/articles/lenovo-legion-pro-7-rtx-5090-gaming-laptop-deal-june-2026",
-          "pubDate_cst": "2026-06-16 03:10",
-          "description": "Equipped with a gorgeous 16\" 2500x1600 240Hz OLED display",
-          "categories": "",
-          "reason": "text:\\bsave \\$\\d",
-          "rss_url": "https://feeds.feedburner.com/ign/all",
-          "filtered_at_cn": "2026-06-16 05:24:19",
-          "status": "filtered"
-        },
-        {
-          "title": "The Wolfbox MF60 Cordless Electric Air Duster Features Great Build Quality and Tons of Airflow for $28",
-          "url": "https://www.ign.com/articles/wolfbox-mega-flow-mf60-cordless-electric-air-duster-deal-amazon-fathers-day-sale",
-          "pubDate_cst": "2026-06-16 03:05",
-          "description": "Order it today and get it delivered to you by Father's Day.",
+          "title": "The Baseus 20,000mAh 100W Power Bank With Dual USB-C Cables Drops to Just $38.99",
+          "url": "https://www.ign.com/articles/baseus-20000mah-100w-power-bank-deal-june-2026",
+          "pubDate_cst": "2026-06-16 05:20",
+          "description": "High capacity and high output at an affordable price.",
           "categories": "",
           "reason": "url:deal",
           "rss_url": "https://feeds.feedburner.com/ign/all",
-          "filtered_at_cn": "2026-06-16 05:24:19",
+          "filtered_at_cn": "2026-06-16 08:03:17",
+          "status": "filtered"
+        },
+        {
+          "title": "Ninja Theory and Double Fine Also Reportedly Under Threat of Closure as Xbox Studios Fight for Survival",
+          "url": "https://www.ign.com/articles/ninja-theory-and-double-fine-also-reportedly-under-threat-of-closure-as-xbox-studios-fight-for-survival",
+          "pubDate_cst": "2026-06-16 04:45",
+          "description": "Hellblade developer Ninja Theory and Psychonauts developer Double Fine are reportedly among the studios fighting to avoid closure as Microsoft makes significant cuts to its Xbox business.",
+          "categories": "",
+          "reason": "url:under-",
+          "rss_url": "https://feeds.feedburner.com/ign/all",
+          "filtered_at_cn": "2026-06-16 08:03:17",
           "status": "filtered"
         }
       ]
-    },
-    {
-      "target_date": "2026-06-15",
-      "new_count": 0,
-      "filtered_count": 0,
-      "changed_count": 0,
-      "next_id": 16,
-      "articles": [],
-      "filtered_articles": []
     }
   ]
 }
