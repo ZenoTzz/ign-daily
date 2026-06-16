@@ -231,6 +231,90 @@
       "total_tokens": 8720,
       "prompt_cache_hit_tokens": 7680,
       "prompt_cache_miss_tokens": 803
+    },
+    {
+      "time_cn": "2026-06-17 03:15:43",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 23,
+      "article_title": "Resident Evil Lore Master Reveals The 5 Burning Questions Veronica Needs to Answer",
+      "article_url": "https://www.ign.com/articles/resident-evil-lore-master-reveals-the-5-burning-questions-veronica-needs-to-answer",
+      "article_date": "2026-06-17",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00052312,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9879,
+      "completion_tokens": 692,
+      "total_tokens": 10571,
+      "prompt_cache_hit_tokens": 7680,
+      "prompt_cache_miss_tokens": 2199
+    },
+    {
+      "time_cn": "2026-06-17 03:15:51",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 24,
+      "article_title": "Toy Story 5 Review",
+      "article_url": "https://www.ign.com/articles/toy-story-5-review",
+      "article_date": "2026-06-17",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00043108,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9943,
+      "completion_tokens": 394,
+      "total_tokens": 10337,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 2135
+    },
+    {
+      "time_cn": "2026-06-17 03:16:02",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 25,
+      "article_title": "Shrek 5 Trailer Reveals Shrek, His Family, and Donkey Travel to a New Kingdom",
+      "article_url": "https://www.ign.com/articles/shrek-5-trailer-reveals-shrek-his-family-and-donkey-travel-to-a-new-kingdom",
+      "article_date": "2026-06-17",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00037024,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8439,
+      "completion_tokens": 866,
+      "total_tokens": 9305,
+      "prompt_cache_hit_tokens": 7680,
+      "prompt_cache_miss_tokens": 759
+    },
+    {
+      "time_cn": "2026-06-17 03:16:14",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 26,
+      "article_title": "Lord of the Rings Fans React to Anya Taylor-Joy's Casting in The Hunt for Gollum",
+      "article_url": "https://www.ign.com/articles/lord-of-the-rings-fans-react-to-anya-taylor-joys-casting-in-the-hunt-for-gollum",
+      "article_date": "2026-06-17",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.0004632,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8799,
+      "completion_tokens": 1018,
+      "total_tokens": 9817,
+      "prompt_cache_hit_tokens": 7680,
+      "prompt_cache_miss_tokens": 1119
     }
   ]
 }
