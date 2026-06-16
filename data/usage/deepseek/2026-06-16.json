@@ -693,6 +693,27 @@
       "total_tokens": 9251,
       "prompt_cache_hit_tokens": 7808,
       "prompt_cache_miss_tokens": 648
+    },
+    {
+      "time_cn": "2026-06-16 08:18:13",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 36,
+      "article_title": "The 10 Best Steven Spielberg Movies of All Time",
+      "article_url": "https://www.ign.com/articles/steven-spielbergs-best-movies",
+      "article_date": "2026-06-16",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00035142,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9714,
+      "completion_tokens": 224,
+      "total_tokens": 9938,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 1906
     }
   ]
 }
