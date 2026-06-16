@@ -20,7 +20,7 @@
   <script defer src="assets/alpine.min.js"></script>
   <link rel="stylesheet" href="assets/style.css?v=20260616theme2">
   <link rel="stylesheet" href="assets/article-dark.css?v=20260616theme2">
-  <script src="assets/app.js?v=20260616theme2"></script>
+  <script src="assets/app.js?v=20260616theme3"></script>
   <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
   <script>
     tailwind.config = {
@@ -562,7 +562,7 @@
 
         async init() {
           // 主题图标
-          const cur = localStorage.getItem('theme') || 'auto';
+          const cur = window.appTheme.getThemePreference();
           this.themeIcon = cur === 'dark' ? '☀️' : (cur === 'light' ? '🌒' : '🌗');
           this.mode = window.innerWidth < 1024 ? 'cn' : 'compare';
           this.iframeLoaded = false;

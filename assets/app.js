@@ -2,8 +2,13 @@
 
 // ====== 暗黑模式（全局，所有页面必须在加载时调用） ======
 function initDarkMode() {
-  const saved = localStorage.getItem('theme') || 'auto';
+  const saved = getThemePreference();
+  localStorage.setItem('theme', saved);
   applyTheme(saved);
+}
+function getThemePreference() {
+  const saved = localStorage.getItem('theme');
+  return saved === 'light' || saved === 'dark' ? saved : 'dark';
 }
 function applyTheme(theme) {
   const html = document.documentElement;
@@ -14,7 +19,7 @@ function applyTheme(theme) {
   html.classList.toggle('dark', isDark);
 }
 function toggleTheme() {
-  const cur = localStorage.getItem('theme') || 'auto';
+  const cur = getThemePreference();
   const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
   const isDark = cur === 'dark' || (cur === 'auto' && systemDark);
   const next = isDark ? 'light' : 'dark';
@@ -23,7 +28,7 @@ function toggleTheme() {
   return next;
 }
 (function(){ try { initDarkMode(); } catch(_){} })();
-window.appTheme = { initDarkMode, applyTheme, toggleTheme };
+window.appTheme = { initDarkMode, getThemePreference, applyTheme, toggleTheme };
 
 const DICT_CATEGORIES = ['games','movies_tv','companies','people','media','terms'];
 const DICT_SOURCES = ['user','ign_cn','bilibili','consensus','ai_guess'];
@@ -252,7 +257,7 @@ function appData() {
 
     async init() {
       // 初始主题图标
-      const cur = localStorage.getItem('theme') || 'auto';
+      const cur = window.appTheme.getThemePreference();
       this.themeIcon = cur === 'dark' ? '☀️' : (cur === 'light' ? '🌒' : '🌗');
       this.loadExportBasket();
       // 马上绑 beforeunload 保护
