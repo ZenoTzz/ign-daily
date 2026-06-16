@@ -315,6 +315,27 @@
       "total_tokens": 9817,
       "prompt_cache_hit_tokens": 7680,
       "prompt_cache_miss_tokens": 1119
+    },
+    {
+      "time_cn": "2026-06-17 05:36:48",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 27,
+      "article_title": "Leviticus Review",
+      "article_url": "https://www.ign.com/articles/leviticus-review",
+      "article_date": "2026-06-17",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.0004154,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8967,
+      "completion_tokens": 826,
+      "total_tokens": 9793,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 1159
     }
   ]
 }
