@@ -29,34 +29,27 @@
       "translation_path": "",
       "retry_policy": "manual_only"
     },
-    "25": {
-      "id": 25,
-      "url": "https://www.ign.com/articles/xbox-game-studios-boss-departs-amid-growing-concern-over-layoffs-and-possible-studio-shutdowns",
-      "en_title": "Xbox Game Studios Boss Departs Amid Growing Concern Over Layoffs and Possible Studio Shutdowns",
-      "cn_title": "Xbox Game Studios 主管离职，裁员与关闭工作室担忧加剧",
-      "model": "deepseek-v4-pro",
-      "status": "needs_manual_review",
-      "failed_at": "2026-06-16T09:44:50.493908+08:00",
-      "reason": "chunk paragraph 12 missing cn",
-      "audit_issues": [],
-      "fingerprint": "94398ca6f11243a4a813336e277caafcb374f4ce",
-      "translation_path": "",
-      "retry_policy": "manual_only"
-    },
     "38": {
       "id": 38,
       "url": "https://www.ign.com/articles/under-16s-to-be-banned-from-social-media-uk-prime-minister-keir-starmer-says",
       "en_title": "Under-16s to Be Banned From Social Media, UK Prime Minister Keir Starmer Says",
-      "cn_title": "英国首相Starmer宣布禁止16岁以下使用社交媒体",
+      "cn_title": "英首相Starmer宣布将禁止16岁以下使用社交媒体",
       "model": "deepseek-v4-pro",
       "status": "needs_manual_review",
-      "failed_at": "2026-06-16T09:51:44.854010+08:00",
-      "reason": "Expecting value: line 1 column 1 (char 0)",
-      "audit_issues": [],
-      "fingerprint": "90b4f9b3851c79b327c943b9e5d6d3c81e78f422",
-      "translation_path": "",
+      "failed_at": "2026-06-16T10:21:14.792712+08:00",
+      "reason": "paragraph 10 missing cn",
+      "audit_issues": [
+        {
+          "type": "dictionary",
+          "detail": "source contains 'Bloomberg', but required dictionary translation '彭博社' is missing",
+          "en": "Bloomberg",
+          "expected_cn": "彭博社"
+        }
+      ],
+      "fingerprint": "c13cbf2ca0edd02feb639f38515ec13dd2ea7bf1",
+      "translation_path": "translations/38.json",
       "retry_policy": "manual_only"
     }
   },
-  "updated_at": "2026-06-16T10:15:50.281492+08:00"
+  "updated_at": "2026-06-16T10:21:14.792712+08:00"
 }

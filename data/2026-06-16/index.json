@@ -676,7 +676,7 @@
       "publish_time_cn": "2026-06-15 22:58",
       "pub_date": "2026-06-15 22:58",
       "cover_image": "https://assets-prd.ignimgs.com/2026/06/15/gettyimages-477251454-1781535570756.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "needs_review",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/15/gettyimages-477251454-1781535570756.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/15/gettyimages-477251454-1781535570756.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -687,11 +687,10 @@
       ],
       "source_status": "cached",
       "source_fetched_at": "2026-06-16T02:03:19+08:00",
-      "translation_error": "chunk paragraph 12 missing cn",
-      "translation_failed_at": "2026-06-16T09:44:50.493908+08:00",
       "translator": "api",
       "translator_provider": "openai-compatible",
-      "translator_model": "deepseek-v4-pro"
+      "translator_model": "deepseek-v4-pro",
+      "translation_path": "translations/25.json"
     },
     {
       "id": 26,
@@ -977,8 +976,8 @@
       "category": "科技新闻",
       "emoji": "🔞",
       "en_title": "Under-16s to Be Banned From Social Media, UK Prime Minister Keir Starmer Says",
-      "cn_title": "英国首相Starmer宣布禁止16岁以下使用社交媒体",
-      "summary": "英国首相Keir Starmer宣布计划禁止16岁以下青少年使用社交媒体，涉及TikTok、Facebook、YouTube、X、Snapchat和Instagram，但WhatsApp和Signal等消息服务不受影响。政府希望在圣诞节前通过法规，2027年春季生效。该禁令效仿澳大利亚去年12月生效的类似政策，并可能在葡萄牙、西班牙等国推广。",
+      "cn_title": "英首相Starmer宣布将禁止16岁以下使用社交媒体",
+      "summary": "英国首相Keir Starmer宣布禁止16岁以下青少年使用社交媒体，涵盖TikTok等平台，2027年春季生效。游戏直播亦受限，主机厂商或需调整。",
       "url": "https://www.ign.com/articles/under-16s-to-be-banned-from-social-media-uk-prime-minister-keir-starmer-says",
       "publish_time_cn": "2026-06-15 17:28",
       "pub_date": "2026-06-15 17:28",
@@ -994,11 +993,12 @@
       ],
       "source_status": "cached",
       "source_fetched_at": "2026-06-16T08:46:17+08:00",
-      "translation_error": "Expecting value: line 1 column 1 (char 0)",
-      "translation_failed_at": "2026-06-16T09:51:44.854010+08:00",
+      "translation_error": "paragraph 10 missing cn",
+      "translation_failed_at": "2026-06-16T10:21:14.792712+08:00",
       "translator": "api",
       "translator_provider": "openai-compatible",
-      "translator_model": "deepseek-v4-pro"
+      "translator_model": "deepseek-v4-pro",
+      "translation_path": "translations/38.json"
     },
     {
       "id": 5,

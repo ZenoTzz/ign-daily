@@ -1512,6 +1512,174 @@
       "total_tokens": 9902,
       "prompt_cache_hit_tokens": 7808,
       "prompt_cache_miss_tokens": 662
+    },
+    {
+      "time_cn": "2026-06-16 10:17:54",
+      "task": "fulltext",
+      "model": "deepseek-v4-pro",
+      "article_id": 25,
+      "article_title": "Xbox Game Studios 主管离职，裁员与关闭工作室担忧加剧",
+      "article_url": "https://www.ign.com/articles/xbox-game-studios-boss-departs-amid-growing-concern-over-layoffs-and-possible-studio-shutdowns",
+      "article_date": "2026-06-16",
+      "detail": "",
+      "estimated_cost_usd": 0.00607425,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 9297,
+      "completion_tokens": 6903,
+      "total_tokens": 16200,
+      "prompt_cache_hit_tokens": 9216,
+      "prompt_cache_miss_tokens": 81
+    },
+    {
+      "time_cn": "2026-06-16 10:18:09",
+      "task": "fulltext_chunk",
+      "model": "deepseek-v4-pro",
+      "article_id": 25,
+      "article_title": "Xbox Game Studios 主管离职，裁员与关闭工作室担忧加剧",
+      "article_url": "https://www.ign.com/articles/xbox-game-studios-boss-departs-amid-growing-concern-over-layoffs-and-possible-studio-shutdowns",
+      "article_date": "2026-06-16",
+      "detail": "paragraphs 1-6",
+      "estimated_cost_usd": 0.00099241,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 8465,
+      "completion_tokens": 1097,
+      "total_tokens": 9562,
+      "prompt_cache_hit_tokens": 8448,
+      "prompt_cache_miss_tokens": 17
+    },
+    {
+      "time_cn": "2026-06-16 10:18:54",
+      "task": "fulltext_chunk",
+      "model": "deepseek-v4-pro",
+      "article_id": 25,
+      "article_title": "Xbox Game Studios 主管离职，裁员与关闭工作室担忧加剧",
+      "article_url": "https://www.ign.com/articles/xbox-game-studios-boss-departs-amid-growing-concern-over-layoffs-and-possible-studio-shutdowns",
+      "article_date": "2026-06-16",
+      "detail": "paragraphs 7-12",
+      "estimated_cost_usd": 0.00254536,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 8485,
+      "completion_tokens": 2872,
+      "total_tokens": 11357,
+      "prompt_cache_hit_tokens": 8448,
+      "prompt_cache_miss_tokens": 37
+    },
+    {
+      "time_cn": "2026-06-16 10:18:59",
+      "task": "fulltext_chunk",
+      "model": "deepseek-v4-pro",
+      "article_id": 25,
+      "article_title": "Xbox Game Studios 主管离职，裁员与关闭工作室担忧加剧",
+      "article_url": "https://www.ign.com/articles/xbox-game-studios-boss-departs-amid-growing-concern-over-layoffs-and-possible-studio-shutdowns",
+      "article_date": "2026-06-16",
+      "detail": "paragraphs 13-13",
+      "estimated_cost_usd": 0.00039849,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 8201,
+      "completion_tokens": 229,
+      "total_tokens": 8430,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 393
+    },
+    {
+      "time_cn": "2026-06-16 10:19:59",
+      "task": "fulltext",
+      "model": "deepseek-v4-pro",
+      "article_id": 38,
+      "article_title": "英国首相Starmer宣布禁止16岁以下使用社交媒体",
+      "article_url": "https://www.ign.com/articles/under-16s-to-be-banned-from-social-media-uk-prime-minister-keir-starmer-says",
+      "article_date": "2026-06-16",
+      "detail": "",
+      "estimated_cost_usd": 0.00364043,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 9292,
+      "completion_tokens": 4108,
+      "total_tokens": 13400,
+      "prompt_cache_hit_tokens": 9216,
+      "prompt_cache_miss_tokens": 76
+    },
+    {
+      "time_cn": "2026-06-16 10:20:09",
+      "task": "fulltext_chunk",
+      "model": "deepseek-v4-pro",
+      "article_id": 38,
+      "article_title": "英国首相Starmer宣布禁止16岁以下使用社交媒体",
+      "article_url": "https://www.ign.com/articles/under-16s-to-be-banned-from-social-media-uk-prime-minister-keir-starmer-says",
+      "article_date": "2026-06-16",
+      "detail": "paragraphs 1-6",
+      "estimated_cost_usd": 0.00079608,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 8533,
+      "completion_tokens": 520,
+      "total_tokens": 9053,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 725
+    },
+    {
+      "time_cn": "2026-06-16 10:20:23",
+      "task": "fulltext_chunk",
+      "model": "deepseek-v4-pro",
+      "article_id": 38,
+      "article_title": "英国首相Starmer宣布禁止16岁以下使用社交媒体",
+      "article_url": "https://www.ign.com/articles/under-16s-to-be-banned-from-social-media-uk-prime-minister-keir-starmer-says",
+      "article_date": "2026-06-16",
+      "detail": "paragraphs 7-10",
+      "estimated_cost_usd": 0.00100183,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 8396,
+      "completion_tokens": 825,
+      "total_tokens": 9221,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 588
+    },
+    {
+      "time_cn": "2026-06-16 10:21:14",
+      "task": "fulltext_repair",
+      "model": "deepseek-v4-pro",
+      "article_id": 38,
+      "article_title": "英国首相Starmer宣布禁止16岁以下使用社交媒体",
+      "article_url": "https://www.ign.com/articles/under-16s-to-be-banned-from-social-media-uk-prime-minister-keir-starmer-says",
+      "article_date": "2026-06-16",
+      "detail": "1 audit issue(s)",
+      "estimated_cost_usd": 0.00395543,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 9852,
+      "completion_tokens": 3365,
+      "total_tokens": 13217,
+      "prompt_cache_hit_tokens": 7552,
+      "prompt_cache_miss_tokens": 2300
     }
   ]
 }
