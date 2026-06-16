@@ -17,12 +17,20 @@ import sys
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
-from common_paths import DATA_DIR, REPO_ROOT, configure_utf8_stdio, dict_path
+from common_paths import DATA_DIR, REPO_ROOT, configure_utf8_stdio, dict_path, exchange_rates_path
 from dict_matcher import DICT_CATEGORIES
 
 
 configure_utf8_stdio()
 CST = timezone(timedelta(hours=8))
+RATE_RANGES = {
+    "USD": (5.0, 9.0),
+    "EUR": (5.0, 12.0),
+    "GBP": (6.0, 14.0),
+    "JPY_100": (3.0, 8.0),
+    "KRW_100": (0.3, 0.8),
+}
+MAX_RATE_AGE_HOURS = 36
 
 
 def ok(msg: str) -> None:
@@ -81,6 +89,36 @@ def main() -> int:
             fail(errors, f"dictionary has unknown categories: {', '.join(unknown_categories)}")
         else:
             ok("dictionary categories are canonical")
+
+    exchange_path = exchange_rates_path()
+    if not exchange_path.exists():
+        fail(errors, f"missing exchange rates: {exchange_path}")
+    else:
+        try:
+            exchange_data = json.loads(exchange_path.read_text(encoding="utf-8-sig"))
+            validation = exchange_data.get("validation") or {}
+            rates = exchange_data.get("rates_to_cny") or {}
+            if validation.get("verified") is True and int(validation.get("source_count") or 0) >= 2:
+                ok("exchange rates are multi-source verified")
+            else:
+                fail(errors, "exchange rates are not multi-source verified")
+            updated_at = str(exchange_data.get("updated_at") or "")
+            try:
+                updated_dt = datetime.strptime(updated_at, "%Y-%m-%d %H:%M:%S +08:00").replace(tzinfo=CST)
+                age = datetime.now(CST) - updated_dt
+                if age <= timedelta(hours=MAX_RATE_AGE_HOURS):
+                    ok("exchange rates are fresh")
+                else:
+                    fail(errors, f"exchange rates are stale: {age}")
+            except ValueError:
+                fail(errors, f"exchange rates have invalid updated_at: {updated_at}")
+            for key, (low, high) in RATE_RANGES.items():
+                value = float(rates.get(key))
+                if low <= value <= high:
+                    continue
+                fail(errors, f"exchange rate {key} outside sane range: {value}")
+        except Exception as exc:
+            fail(errors, f"exchange-rate validation failed: {exc}")
 
     for p in REPO_ROOT.rglob("*.py"):
         if "__pycache__" in p.parts:

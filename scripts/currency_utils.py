@@ -3,13 +3,17 @@
 from __future__ import annotations
 
 import json
+import os
 import re
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any
 
 from common_paths import exchange_rates_path
 
 
+MAX_RATE_AGE_HOURS = 36
+CST = timezone(timedelta(hours=8))
 DEFAULT_RATES_TO_CNY = {
     "USD": 6.77,
     "EUR": 7.85,
@@ -31,6 +35,18 @@ def load_rates() -> dict[str, float]:
     if path.exists():
         try:
             data = json.loads(path.read_text(encoding="utf-8-sig"))
+            validation = data.get("validation") or {}
+            if validation.get("verified") is not True or int(validation.get("source_count") or 0) < 2:
+                if not os.environ.get("ALLOW_UNVERIFIED_EXCHANGE_RATES"):
+                    raise RuntimeError(f"{path} is not multi-source verified; run scripts/fetch_exchange_rates.py")
+            updated_at = str(data.get("updated_at") or "")
+            try:
+                updated_dt = datetime.strptime(updated_at, "%Y-%m-%d %H:%M:%S +08:00").replace(tzinfo=CST)
+            except ValueError as exc:
+                raise RuntimeError(f"{path} has invalid updated_at: {updated_at}") from exc
+            age = datetime.now(CST) - updated_dt
+            if age > timedelta(hours=MAX_RATE_AGE_HOURS) and not os.environ.get("ALLOW_STALE_EXCHANGE_RATES"):
+                raise RuntimeError(f"{path} is stale ({age}); run scripts/fetch_exchange_rates.py")
             rates = data.get("rates_to_cny", {})
             if isinstance(rates, dict):
                 merged = DEFAULT_RATES_TO_CNY.copy()
@@ -41,7 +57,8 @@ def load_rates() -> dict[str, float]:
                         pass
                 return merged
         except Exception:
-            pass
+            if not os.environ.get("ALLOW_UNVERIFIED_EXCHANGE_RATES"):
+                raise
     return DEFAULT_RATES_TO_CNY.copy()
 
 

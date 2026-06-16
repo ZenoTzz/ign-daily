@@ -1,13 +1,97 @@
 {
-  "updated_at": "2026-06-16 10:23:40 +08:00",
-  "source": "https://open.er-api.com/v6/latest/USD",
+  "updated_at": "2026-06-16 11:00:57 +08:00",
+  "source": "multi-source median",
   "base": "USD",
   "rates_to_cny": {
-    "USD": 6.77,
+    "USD": 6.76,
     "EUR": 7.85,
-    "JPY_100": 4.23,
+    "JPY_100": 4.22,
     "GBP": 9.09,
     "KRW_100": 0.45
   },
-  "note": "人民币兑外币参考汇率，取2位小数。翻译时按金额×对应rate取整数。"
+  "validation": {
+    "verified": true,
+    "required_sources_min": 2,
+    "source_count": 4,
+    "max_cross_source_deviation_allowed": 0.02,
+    "checks": {
+      "USD": {
+        "source_count": 4,
+        "median_raw": 6.764579,
+        "max_cross_source_deviation": 0.00112,
+        "previous_deviation": 0.000801
+      },
+      "EUR": {
+        "source_count": 4,
+        "median_raw": 7.851811,
+        "max_cross_source_deviation": 0.001142,
+        "previous_deviation": 0.000231
+      },
+      "JPY_100": {
+        "source_count": 4,
+        "median_raw": 4.224995,
+        "max_cross_source_deviation": 0.001628,
+        "previous_deviation": 0.001183
+      },
+      "GBP": {
+        "source_count": 4,
+        "median_raw": 9.087554,
+        "max_cross_source_deviation": 0.002074,
+        "previous_deviation": 0.000269
+      },
+      "KRW_100": {
+        "source_count": 4,
+        "median_raw": 0.447211,
+        "max_cross_source_deviation": 0.002233,
+        "previous_deviation": 0.006197
+      }
+    },
+    "sources": [
+      {
+        "name": "open-er-api",
+        "url": "https://open.er-api.com/v6/latest/USD",
+        "rates_to_cny": {
+          "USD": 6.771909,
+          "EUR": 7.853492,
+          "JPY_100": 4.228078,
+          "GBP": 9.087859,
+          "KRW_100": 0.447471
+        }
+      },
+      {
+        "name": "exchangerate-api-v4",
+        "url": "https://api.exchangerate-api.com/v4/latest/USD",
+        "rates_to_cny": {
+          "USD": 6.77,
+          "EUR": 7.853828,
+          "JPY_100": 4.226759,
+          "GBP": 9.087248,
+          "KRW_100": 0.447346
+        }
+      },
+      {
+        "name": "frankfurter",
+        "url": "https://api.frankfurter.app/latest?from=USD&to=CNY,EUR,JPY,GBP,KRW",
+        "rates_to_cny": {
+          "USD": 6.757,
+          "EUR": 7.842841,
+          "JPY_100": 4.218116,
+          "GBP": 9.068703,
+          "KRW_100": 0.446213
+        }
+      },
+      {
+        "name": "currency-api-jsdelivr",
+        "url": "https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/usd.json",
+        "rates_to_cny": {
+          "USD": 6.759158,
+          "EUR": 7.850131,
+          "JPY_100": 4.223231,
+          "GBP": 9.092548,
+          "KRW_100": 0.447077
+        }
+      }
+    ]
+  },
+  "note": "CNY reference rates verified by multiple sources. Translation code must recalculate CNY amounts from this file."
 }
