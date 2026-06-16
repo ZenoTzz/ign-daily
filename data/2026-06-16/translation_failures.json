@@ -22,8 +22,8 @@
       "cn_title": "《Final Fantasy Resonance》制作人：HD-2D新作致敬FF5",
       "model": "deepseek-v4-pro",
       "status": "needs_manual_review",
-      "failed_at": "2026-06-16T09:40:06.848732+08:00",
-      "reason": "Expecting value: line 1 column 1 (char 0)",
+      "failed_at": "2026-06-16T10:09:51.532405+08:00",
+      "reason": "Expecting ',' delimiter: line 21 column 6 (char 2449)",
       "audit_issues": [],
       "fingerprint": "7c6942c3ffb801d6f0bfc9866854002daac6c96c",
       "translation_path": "",
@@ -72,5 +72,5 @@
       "retry_policy": "manual_only"
     }
   },
-  "updated_at": "2026-06-16T10:02:14.856070+08:00"
+  "updated_at": "2026-06-16T10:09:51.532405+08:00"
 }

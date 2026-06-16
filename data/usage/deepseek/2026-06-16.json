@@ -1407,6 +1407,27 @@
       "total_tokens": 13572,
       "prompt_cache_hit_tokens": 9344,
       "prompt_cache_miss_tokens": 82
+    },
+    {
+      "time_cn": "2026-06-16 10:09:51",
+      "task": "fulltext",
+      "model": "deepseek-v4-pro",
+      "article_id": 14,
+      "article_title": "《Final Fantasy Resonance》制作人：HD-2D新作致敬FF5",
+      "article_url": "https://www.ign.com/articles/final-fantasy-resonance-interview-the-first-hd-2d-ff-was-conceptualized-6-7-years-ago-and-inspired-by-final-fantasy-v",
+      "article_date": "2026-06-16",
+      "detail": "",
+      "estimated_cost_usd": 0.01054069,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 12544,
+      "completion_tokens": 12000,
+      "total_tokens": 24544,
+      "prompt_cache_hit_tokens": 12416,
+      "prompt_cache_miss_tokens": 128
     }
   ]
 }
