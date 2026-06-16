@@ -1974,6 +1974,27 @@
       "total_tokens": 12719,
       "prompt_cache_hit_tokens": 0,
       "prompt_cache_miss_tokens": 9360
+    },
+    {
+      "time_cn": "2026-06-16 16:45:48",
+      "task": "fulltext",
+      "model": "deepseek-v4-pro",
+      "article_id": 39,
+      "article_title": "新作公布一周后，《地狱之刃》工作室 Ninja Theory 据称面临微软关闭威胁",
+      "article_url": "https://www.ign.com/articles/ninja-theory-and-double-fine-also-reportedly-under-threat-of-closure-as-xbox-studios-fight-for-survival",
+      "article_date": "2026-06-16",
+      "detail": "",
+      "estimated_cost_usd": 0.00690389,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 9539,
+      "completion_tokens": 3166,
+      "total_tokens": 12705,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 9539
     }
   ]
 }

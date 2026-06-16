@@ -133,10 +133,10 @@
       "url": "https://www.ign.com/articles/ninja-theory-and-double-fine-also-reportedly-under-threat-of-closure-as-xbox-studios-fight-for-survival",
       "publish_time_cn": "2026-06-16 04:45",
       "pub_date": "2026-06-16 04:45",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/06/07/4k-xbox-games-showcase-2026-gears-of-war-e-day-direct-01-22-59-1780853538221.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/07/4k-xbox-games-showcase-2026-gears-of-war-e-day-direct-01-22-59-1780853538221.png",
+      "translation_status": "done",
       "pending_dict": [],
-      "translation_path": null,
+      "translation_path": "translations/39.json",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/07/4k-xbox-games-showcase-2026-gears-of-war-e-day-direct-01-22-59-1780853538221.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/07/4k-xbox-games-showcase-2026-gears-of-war-e-day-direct-01-22-59-1780853538221.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -145,7 +145,10 @@
         "https://assets-prd.ignimgs.com/2026/06/07/4k-xbox-games-showcase-2026-gears-of-war-e-day-direct-01-22-59-1780853538221.png"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-16T16:35:29+08:00"
+      "source_fetched_at": "2026-06-16T16:35:29+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro"
     },
     {
       "id": 35,
