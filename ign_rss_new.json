@@ -5,105 +5,56 @@
     "2026-06-16"
   ],
   "changed_dates": [
-    "2026-06-17",
-    "2026-06-16"
+    "2026-06-17"
   ],
-  "new_target_dates": [
-    "2026-06-17",
-    "2026-06-16"
-  ],
-  "new_count": 2,
-  "filtered_count": 2,
+  "new_target_dates": [],
+  "new_count": 0,
+  "filtered_count": 1,
   "cleanup_count": 0,
-  "changed_count": 4,
-  "articles": [
-    {
-      "title": "EA Sports UFC 6 Review So Far",
-      "url": "https://www.ign.com/articles/ea-sports-ufc-6-review",
-      "pubDate_cst": "2026-06-16 08:00"
-    },
-    {
-      "title": "Why Turn-Based RPGs Are Resurging, According to Final Fantasy Resonance Devs",
-      "url": "https://www.ign.com/articles/why-turn-based-rpgs-are-resurging-according-to-final-fantasy-resonance-devs",
-      "pubDate_cst": "2026-06-16 07:26"
-    }
-  ],
+  "changed_count": 1,
+  "articles": [],
   "filtered_articles": [
     {
-      "title": "All of the Dungeon Crawler Carl Books Are on Sale at Amazon Before Prime Day",
-      "url": "https://www.ign.com/articles/the-dungeon-crawler-carl-books-sale-amazon-prime-day-2026",
-      "pubDate_cst": "2026-06-16 08:15",
-      "description": "",
+      "title": "Grab an Alienware RTX 5080 Gaming PC With 32GB of RAM and 2TB SSD for $2,579 Before It Sells Out",
+      "url": "https://www.ign.com/articles/alienware-aurora-rtx-5080-gaming-pc-deal-at-dell-outlet-june-2026-updated",
+      "pubDate_cst": "2026-06-16 08:50",
+      "description": "Dell Outlet include the same 1 year warranty as buying brand new from Dell.com.",
       "categories": "",
-      "reason": "text:\\bon sale\\b",
+      "reason": "url:deal",
       "rss_url": "https://feeds.feedburner.com/ign/all",
-      "filtered_at_cn": "2026-06-16 08:45:39",
-      "status": "filtered"
-    },
-    {
-      "title": "The Gigabyte RTX 5070 Ti Gaming PC with 32GB of RAM and 2TB SSD Drops to $1,999 Ahead of Prime Day",
-      "url": "https://www.ign.com/articles/gigabyte-rtx-5070-ti-gaming-pc-with-32gb-of-ram-and-2tb-ssd-drops-to-1999-ahead-of-prime-day",
-      "pubDate_cst": "2026-06-16 08:00",
-      "description": "4K-ready",
-      "categories": "",
-      "reason": "text:\\bdrops? to \\$",
-      "rss_url": "https://feeds.feedburner.com/ign/all",
-      "filtered_at_cn": "2026-06-16 08:45:39",
+      "filtered_at_cn": "2026-06-16 10:06:30",
       "status": "filtered"
     }
   ],
   "runs": [
     {
       "target_date": "2026-06-17",
-      "new_count": 1,
-      "filtered_count": 2,
-      "changed_count": 3,
+      "new_count": 0,
+      "filtered_count": 1,
+      "changed_count": 1,
       "next_id": 2,
-      "articles": [
-        {
-          "title": "EA Sports UFC 6 Review So Far",
-          "url": "https://www.ign.com/articles/ea-sports-ufc-6-review",
-          "pubDate_cst": "2026-06-16 08:00"
-        }
-      ],
+      "articles": [],
       "filtered_articles": [
         {
-          "title": "All of the Dungeon Crawler Carl Books Are on Sale at Amazon Before Prime Day",
-          "url": "https://www.ign.com/articles/the-dungeon-crawler-carl-books-sale-amazon-prime-day-2026",
-          "pubDate_cst": "2026-06-16 08:15",
-          "description": "",
+          "title": "Grab an Alienware RTX 5080 Gaming PC With 32GB of RAM and 2TB SSD for $2,579 Before It Sells Out",
+          "url": "https://www.ign.com/articles/alienware-aurora-rtx-5080-gaming-pc-deal-at-dell-outlet-june-2026-updated",
+          "pubDate_cst": "2026-06-16 08:50",
+          "description": "Dell Outlet include the same 1 year warranty as buying brand new from Dell.com.",
           "categories": "",
-          "reason": "text:\\bon sale\\b",
+          "reason": "url:deal",
           "rss_url": "https://feeds.feedburner.com/ign/all",
-          "filtered_at_cn": "2026-06-16 08:45:39",
-          "status": "filtered"
-        },
-        {
-          "title": "The Gigabyte RTX 5070 Ti Gaming PC with 32GB of RAM and 2TB SSD Drops to $1,999 Ahead of Prime Day",
-          "url": "https://www.ign.com/articles/gigabyte-rtx-5070-ti-gaming-pc-with-32gb-of-ram-and-2tb-ssd-drops-to-1999-ahead-of-prime-day",
-          "pubDate_cst": "2026-06-16 08:00",
-          "description": "4K-ready",
-          "categories": "",
-          "reason": "text:\\bdrops? to \\$",
-          "rss_url": "https://feeds.feedburner.com/ign/all",
-          "filtered_at_cn": "2026-06-16 08:45:39",
+          "filtered_at_cn": "2026-06-16 10:06:30",
           "status": "filtered"
         }
       ]
     },
     {
       "target_date": "2026-06-16",
-      "new_count": 1,
+      "new_count": 0,
       "filtered_count": 0,
-      "changed_count": 1,
-      "next_id": 38,
-      "articles": [
-        {
-          "title": "Why Turn-Based RPGs Are Resurging, According to Final Fantasy Resonance Devs",
-          "url": "https://www.ign.com/articles/why-turn-based-rpgs-are-resurging-according-to-final-fantasy-resonance-devs",
-          "pubDate_cst": "2026-06-16 07:26"
-        }
-      ],
+      "changed_count": 0,
+      "next_id": 39,
+      "articles": [],
       "filtered_articles": []
     }
   ]
