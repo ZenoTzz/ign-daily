@@ -19,6 +19,8 @@ DEFAULT_RATES_TO_CNY = {
 
 AMOUNT_RE = r"\d+(?:,\d{3})*(?:\.\d+)?"
 CURRENCY_RE = re.compile(rf"({AMOUNT_RE})\s*(万|亿)?\s*(美元|欧元|英镑|日元)")
+RANGE_CURRENCY_RE = re.compile(rf"(?<![\d.,])({AMOUNT_RE})\s*至\s*({AMOUNT_RE})\s*(万|亿)?\s*(美元|欧元|英镑|日元)(?:[（(]\s*约合人民币[^）)]*[）)])?")
+SINGLE_CURRENCY_WITH_CONVERSION_RE = re.compile(rf"(?<![\d.,])({AMOUNT_RE})\s*(万|亿)?\s*(美元|欧元|英镑|日元)(?:[（(]\s*约合人民币[^）)]*[）)])?")
 SYMBOL_PREFIX_RE = re.compile(rf"(?i)(US\$|\$|€|£)\s*({AMOUNT_RE})\s*(万|亿)?")
 CODE_SUFFIX_RE = re.compile(rf"(?i)({AMOUNT_RE})\s*(万|亿)?\s*(USD|EUR|GBP|JPY)\b")
 
@@ -74,6 +76,16 @@ def format_cny(value: float | None) -> str:
     return f"{round(value):.0f}元"
 
 
+def format_cny_range(low: float | None, high: float | None) -> str:
+    first = format_cny(low)
+    second = format_cny(high)
+    match_first = re.fullmatch(r"([0-9?]+)(亿元|万元|元)", first)
+    match_second = re.fullmatch(r"([0-9?]+)(亿元|万元|元)", second)
+    if match_first and match_second and match_first.group(2) == match_second.group(2):
+        return f"{match_first.group(1)}至{match_second.group(1)}{match_first.group(2)}"
+    return f"{first}至{second}"
+
+
 def normalize_currency_symbols(text: str) -> str:
     def repl_prefix(match: re.Match[str]) -> str:
         symbol = match.group(1)
@@ -99,6 +111,23 @@ def normalize_currency_text(text: str, *, rates: dict[str, float] | None = None)
         return text
     rates = rates or load_rates()
     text = normalize_currency_symbols(str(text))
+
+    def repl_range(match: re.Match[str]) -> str:
+        amount_low, amount_high = match.group(1), match.group(2)
+        unit, currency = match.group(3) or "", match.group(4)
+        low = cny_value(amount_low, unit, currency, rates)
+        high = cny_value(amount_high, unit, currency, rates)
+        return f"{amount_low}至{amount_high}{unit}{currency}(约合人民币{format_cny_range(low, high)})"
+
+    def repl_single_with_conversion(match: re.Match[str]) -> str:
+        if match.start() >= 2 and text[match.start() - 1] == "至" and re.match(r"[\d.]", text[match.start() - 2]):
+            return match.group(0)
+        amount, unit, currency = match.group(1), match.group(2) or "", match.group(3)
+        cny = cny_value(amount, unit, currency, rates)
+        return f"{amount}{unit}{currency}(约合人民币{format_cny(cny)})"
+
+    text = RANGE_CURRENCY_RE.sub(repl_range, text)
+    text = SINGLE_CURRENCY_WITH_CONVERSION_RE.sub(repl_single_with_conversion, text)
 
     def repl(match: re.Match[str]) -> str:
         amount, unit, currency = match.group(1), match.group(2) or "", match.group(3)
