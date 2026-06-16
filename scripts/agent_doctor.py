@@ -148,6 +148,35 @@ def main() -> int:
         fail(errors, "encoding health check failed")
 
     dated_indexes = sorted(DATA_DIR.glob("20??-??-??/index.json"))
+    for index_path in dated_indexes:
+        data = json.loads(index_path.read_text(encoding="utf-8-sig"))
+        date = index_path.parent.name
+        seen_ids: set[int] = set()
+        seen_urls: set[str] = set()
+        for article in data.get("articles", []):
+            aid = article.get("id")
+            url = article.get("url")
+            if isinstance(aid, int):
+                if aid in seen_ids:
+                    fail(errors, f"duplicate article id in {date}/index.json: #{aid}")
+                seen_ids.add(aid)
+            if url:
+                if url in seen_urls:
+                    fail(errors, f"duplicate article url in {date}/index.json: {url}")
+                seen_urls.add(url)
+            if isinstance(aid, int):
+                source_path = index_path.parent / "sources" / f"{aid:02d}.json"
+                if source_path.exists():
+                    source = json.loads(source_path.read_text(encoding="utf-8-sig"))
+                    if source.get("url") and url and source.get("url") != url:
+                        fail(errors, f"source URL mismatch in {date}: #{aid}")
+                trans_rel = article.get("translation_path")
+                if trans_rel:
+                    trans_path = index_path.parent / trans_rel
+                    if trans_path.exists():
+                        trans = json.loads(trans_path.read_text(encoding="utf-8-sig"))
+                        if trans.get("url") and url and trans.get("url") != url:
+                            fail(errors, f"translation URL mismatch in {date}: #{aid}")
     latest_index = dated_indexes[-1] if dated_indexes else None
     for index_path in [latest_index] if latest_index else []:
         data = json.loads(index_path.read_text(encoding="utf-8-sig"))
