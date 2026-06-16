@@ -571,8 +571,8 @@
       "url": "https://www.ign.com/articles/final-fantasy-7-revelation-is-bringing-back-the-airship-dream",
       "publish_time_cn": "2026-06-15 23:30",
       "pub_date": "2026-06-15 23:30",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/06/15/ff7-airship-blogroll-1781517922269.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "needs_review",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/15/ff7-airship-blogroll-1781517922269.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/15/ff7-airship-blogroll-1781517922269.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/15/ff7-airship-blogroll-1781517922269.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -596,11 +596,10 @@
           "reason": "官方中文名未公布，词库暂保留英文，建议确认后更新"
         }
       ],
-      "translation_error": "Expecting ',' delimiter: line 65 column 6 (char 11817)",
-      "translation_failed_at": "2026-06-16T09:42:37.000585+08:00",
       "translator": "api",
       "translator_provider": "openai-compatible",
-      "translator_model": "deepseek-v4-pro"
+      "translator_model": "deepseek-v4-pro",
+      "translation_path": "translations/22.json"
     },
     {
       "id": 23,

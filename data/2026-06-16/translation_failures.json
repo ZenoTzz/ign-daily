@@ -29,20 +29,6 @@
       "translation_path": "",
       "retry_policy": "manual_only"
     },
-    "22": {
-      "id": 22,
-      "url": "https://www.ign.com/articles/final-fantasy-7-revelation-is-bringing-back-the-airship-dream",
-      "en_title": "Final Fantasy 7 Revelation Is Bringing Back the Airship Dream",
-      "cn_title": "《Final Fantasy 7 Revelation》重圆飞空艇梦",
-      "model": "deepseek-v4-pro",
-      "status": "needs_manual_review",
-      "failed_at": "2026-06-16T09:42:37.000585+08:00",
-      "reason": "Expecting ',' delimiter: line 65 column 6 (char 11817)",
-      "audit_issues": [],
-      "fingerprint": "c52b62ea517daaf21b9eb09af3798e5a606eed67",
-      "translation_path": "",
-      "retry_policy": "manual_only"
-    },
     "25": {
       "id": 25,
       "url": "https://www.ign.com/articles/xbox-game-studios-boss-departs-amid-growing-concern-over-layoffs-and-possible-studio-shutdowns",
@@ -72,5 +58,5 @@
       "retry_policy": "manual_only"
     }
   },
-  "updated_at": "2026-06-16T10:09:51.532405+08:00"
+  "updated_at": "2026-06-16T10:15:50.281492+08:00"
 }

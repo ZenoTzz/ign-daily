@@ -1428,6 +1428,90 @@
       "total_tokens": 24544,
       "prompt_cache_hit_tokens": 12416,
       "prompt_cache_miss_tokens": 128
+    },
+    {
+      "time_cn": "2026-06-16 10:13:53",
+      "task": "fulltext",
+      "model": "deepseek-v4-pro",
+      "article_id": 22,
+      "article_title": "《Final Fantasy 7 Revelation》重圆飞空艇梦",
+      "article_url": "https://www.ign.com/articles/final-fantasy-7-revelation-is-bringing-back-the-airship-dream",
+      "article_date": "2026-06-16",
+      "detail": "",
+      "estimated_cost_usd": 0.00887252,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 10865,
+      "completion_tokens": 10097,
+      "total_tokens": 20962,
+      "prompt_cache_hit_tokens": 10752,
+      "prompt_cache_miss_tokens": 113
+    },
+    {
+      "time_cn": "2026-06-16 10:14:21",
+      "task": "fulltext_chunk",
+      "model": "deepseek-v4-pro",
+      "article_id": 22,
+      "article_title": "《Final Fantasy 7 Revelation》重圆飞空艇梦",
+      "article_url": "https://www.ign.com/articles/final-fantasy-7-revelation-is-bringing-back-the-airship-dream",
+      "article_date": "2026-06-16",
+      "detail": "paragraphs 1-6",
+      "estimated_cost_usd": 0.00182137,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 8986,
+      "completion_tokens": 1472,
+      "total_tokens": 10458,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 1178
+    },
+    {
+      "time_cn": "2026-06-16 10:15:18",
+      "task": "fulltext_chunk",
+      "model": "deepseek-v4-pro",
+      "article_id": 22,
+      "article_title": "《Final Fantasy 7 Revelation》重圆飞空艇梦",
+      "article_url": "https://www.ign.com/articles/final-fantasy-7-revelation-is-bringing-back-the-airship-dream",
+      "article_date": "2026-06-16",
+      "detail": "paragraphs 7-12",
+      "estimated_cost_usd": 0.00315639,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 9029,
+      "completion_tokens": 2985,
+      "total_tokens": 12014,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 1221
+    },
+    {
+      "time_cn": "2026-06-16 10:15:50",
+      "task": "fulltext_chunk",
+      "model": "deepseek-v4-pro",
+      "article_id": 22,
+      "article_title": "《Final Fantasy 7 Revelation》重圆飞空艇梦",
+      "article_url": "https://www.ign.com/articles/final-fantasy-7-revelation-is-bringing-back-the-airship-dream",
+      "article_date": "2026-06-16",
+      "detail": "paragraphs 13-15",
+      "estimated_cost_usd": 0.00156211,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 8470,
+      "completion_tokens": 1432,
+      "total_tokens": 9902,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 662
     }
   ]
 }
