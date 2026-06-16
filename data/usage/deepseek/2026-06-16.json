@@ -1953,6 +1953,27 @@
       "total_tokens": 9790,
       "prompt_cache_hit_tokens": 1920,
       "prompt_cache_miss_tokens": 6450
+    },
+    {
+      "time_cn": "2026-06-16 16:31:19",
+      "task": "fulltext",
+      "model": "deepseek-v4-pro",
+      "article_id": 18,
+      "article_title": "微软据报关闭《午夜之南》开发商Compulsion Games",
+      "article_url": "https://www.ign.com/articles/microsoft-has-reportedly-shut-down-south-of-midnight-developer-compulsion-games",
+      "article_date": "2026-06-16",
+      "detail": "",
+      "estimated_cost_usd": 0.00699393,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 9360,
+      "completion_tokens": 3359,
+      "total_tokens": 12719,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 9360
     }
   ]
 }
