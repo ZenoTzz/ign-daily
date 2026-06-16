@@ -15,7 +15,9 @@ function applyTheme(theme) {
 }
 function toggleTheme() {
   const cur = localStorage.getItem('theme') || 'auto';
-  const next = cur === 'dark' ? 'light' : (cur === 'light' ? 'auto' : 'dark');
+  const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const isDark = cur === 'dark' || (cur === 'auto' && systemDark);
+  const next = isDark ? 'light' : 'dark';
   localStorage.setItem('theme', next);
   applyTheme(next);
   return next;
