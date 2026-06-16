@@ -1,55 +1,5 @@
 {
   "date": "2026-06-16",
-  "items": {
-    "8": {
-      "id": 8,
-      "url": "https://www.ign.com/articles/capcom-pulls-dragons-dogma-2-microtransactions-ahead-of-dark-arisen-expansion-release",
-      "en_title": "Capcom Pulls Dragon's Dogma 2 Microtransactions Ahead of Dark Arisen Expansion Release",
-      "cn_title": "《龙之信条2》资料片发布前夕，卡普空移除微交易",
-      "model": "deepseek-v4-pro",
-      "status": "needs_manual_review",
-      "failed_at": "2026-06-16T10:01:17.085143+08:00",
-      "reason": "chunk paragraph 7 missing cn",
-      "audit_issues": [],
-      "fingerprint": "99ea1b1086c18cc55dd0f45ef8eae6733bb53a3a",
-      "translation_path": "",
-      "retry_policy": "manual_only"
-    },
-    "14": {
-      "id": 14,
-      "url": "https://www.ign.com/articles/final-fantasy-resonance-interview-the-first-hd-2d-ff-was-conceptualized-6-7-years-ago-and-inspired-by-final-fantasy-v",
-      "en_title": "Final Fantasy Resonance Interview: The First HD-2D FF Was Conceptualized 6-7 Years Ago and Inspired by Final Fantasy V",
-      "cn_title": "《Final Fantasy Resonance》制作人：HD-2D新作致敬FF5",
-      "model": "deepseek-v4-pro",
-      "status": "needs_manual_review",
-      "failed_at": "2026-06-16T10:09:51.532405+08:00",
-      "reason": "Expecting ',' delimiter: line 21 column 6 (char 2449)",
-      "audit_issues": [],
-      "fingerprint": "7c6942c3ffb801d6f0bfc9866854002daac6c96c",
-      "translation_path": "",
-      "retry_policy": "manual_only"
-    },
-    "38": {
-      "id": 38,
-      "url": "https://www.ign.com/articles/under-16s-to-be-banned-from-social-media-uk-prime-minister-keir-starmer-says",
-      "en_title": "Under-16s to Be Banned From Social Media, UK Prime Minister Keir Starmer Says",
-      "cn_title": "英首相Starmer宣布将禁止16岁以下使用社交媒体",
-      "model": "deepseek-v4-pro",
-      "status": "needs_manual_review",
-      "failed_at": "2026-06-16T10:21:14.792712+08:00",
-      "reason": "paragraph 10 missing cn",
-      "audit_issues": [
-        {
-          "type": "dictionary",
-          "detail": "source contains 'Bloomberg', but required dictionary translation '彭博社' is missing",
-          "en": "Bloomberg",
-          "expected_cn": "彭博社"
-        }
-      ],
-      "fingerprint": "c13cbf2ca0edd02feb639f38515ec13dd2ea7bf1",
-      "translation_path": "translations/38.json",
-      "retry_policy": "manual_only"
-    }
-  },
-  "updated_at": "2026-06-16T10:21:14.792712+08:00"
+  "items": {},
+  "updated_at": "2026-06-16T10:34:18.305143+08:00"
 }

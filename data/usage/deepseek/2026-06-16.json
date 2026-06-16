@@ -1680,6 +1680,237 @@
       "total_tokens": 13217,
       "prompt_cache_hit_tokens": 7552,
       "prompt_cache_miss_tokens": 2300
+    },
+    {
+      "time_cn": "2026-06-16 10:25:20",
+      "task": "fulltext",
+      "model": "deepseek-v4-pro",
+      "article_id": 8,
+      "article_title": "《龙之信条2》资料片发布前夕，卡普空移除微交易",
+      "article_url": "https://www.ign.com/articles/capcom-pulls-dragons-dogma-2-microtransactions-ahead-of-dark-arisen-expansion-release",
+      "article_date": "2026-06-16",
+      "detail": "",
+      "estimated_cost_usd": 0.0056936,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 9185,
+      "completion_tokens": 6458,
+      "total_tokens": 15643,
+      "prompt_cache_hit_tokens": 9088,
+      "prompt_cache_miss_tokens": 97
+    },
+    {
+      "time_cn": "2026-06-16 10:28:08",
+      "task": "fulltext",
+      "model": "deepseek-v4-pro",
+      "article_id": 14,
+      "article_title": "《Final Fantasy Resonance》制作人：HD-2D新作致敬FF5",
+      "article_url": "https://www.ign.com/articles/final-fantasy-resonance-interview-the-first-hd-2d-ff-was-conceptualized-6-7-years-ago-and-inspired-by-final-fantasy-v",
+      "article_date": "2026-06-16",
+      "detail": "",
+      "estimated_cost_usd": 0.01054243,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 12544,
+      "completion_tokens": 12002,
+      "total_tokens": 24546,
+      "prompt_cache_hit_tokens": 12416,
+      "prompt_cache_miss_tokens": 128
+    },
+    {
+      "time_cn": "2026-06-16 10:28:50",
+      "task": "fulltext_chunk",
+      "model": "deepseek-v4-pro",
+      "article_id": 14,
+      "article_title": "《Final Fantasy Resonance》制作人：HD-2D新作致敬FF5",
+      "article_url": "https://www.ign.com/articles/final-fantasy-resonance-interview-the-first-hd-2d-ff-was-conceptualized-6-7-years-ago-and-inspired-by-final-fantasy-v",
+      "article_date": "2026-06-16",
+      "detail": "paragraphs 1-6",
+      "estimated_cost_usd": 0.00254782,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 8790,
+      "completion_tokens": 2405,
+      "total_tokens": 11195,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 982
+    },
+    {
+      "time_cn": "2026-06-16 10:29:13",
+      "task": "fulltext_chunk",
+      "model": "deepseek-v4-pro",
+      "article_id": 14,
+      "article_title": "《Final Fantasy Resonance》制作人：HD-2D新作致敬FF5",
+      "article_url": "https://www.ign.com/articles/final-fantasy-resonance-interview-the-first-hd-2d-ff-was-conceptualized-6-7-years-ago-and-inspired-by-final-fantasy-v",
+      "article_date": "2026-06-16",
+      "detail": "paragraphs 7-12",
+      "estimated_cost_usd": 0.00137376,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 8775,
+      "completion_tokens": 1063,
+      "total_tokens": 9838,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 967
+    },
+    {
+      "time_cn": "2026-06-16 10:29:40",
+      "task": "fulltext_chunk",
+      "model": "deepseek-v4-pro",
+      "article_id": 14,
+      "article_title": "《Final Fantasy Resonance》制作人：HD-2D新作致敬FF5",
+      "article_url": "https://www.ign.com/articles/final-fantasy-resonance-interview-the-first-hd-2d-ff-was-conceptualized-6-7-years-ago-and-inspired-by-final-fantasy-v",
+      "article_date": "2026-06-16",
+      "detail": "paragraphs 13-18",
+      "estimated_cost_usd": 0.00158299,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 9018,
+      "completion_tokens": 1182,
+      "total_tokens": 10200,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 1210
+    },
+    {
+      "time_cn": "2026-06-16 10:30:38",
+      "task": "fulltext_chunk",
+      "model": "deepseek-v4-pro",
+      "article_id": 14,
+      "article_title": "《Final Fantasy Resonance》制作人：HD-2D新作致敬FF5",
+      "article_url": "https://www.ign.com/articles/final-fantasy-resonance-interview-the-first-hd-2d-ff-was-conceptualized-6-7-years-ago-and-inspired-by-final-fantasy-v",
+      "article_date": "2026-06-16",
+      "detail": "paragraphs 19-24",
+      "estimated_cost_usd": 0.00356355,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 9239,
+      "completion_tokens": 3348,
+      "total_tokens": 12587,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 1431
+    },
+    {
+      "time_cn": "2026-06-16 10:30:58",
+      "task": "fulltext_chunk",
+      "model": "deepseek-v4-pro",
+      "article_id": 14,
+      "article_title": "《Final Fantasy Resonance》制作人：HD-2D新作致敬FF5",
+      "article_url": "https://www.ign.com/articles/final-fantasy-resonance-interview-the-first-hd-2d-ff-was-conceptualized-6-7-years-ago-and-inspired-by-final-fantasy-v",
+      "article_date": "2026-06-16",
+      "detail": "paragraphs 25-29",
+      "estimated_cost_usd": 0.00128458,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 8956,
+      "completion_tokens": 870,
+      "total_tokens": 9826,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 1148
+    },
+    {
+      "time_cn": "2026-06-16 10:32:09",
+      "task": "fulltext",
+      "model": "deepseek-v4-pro",
+      "article_id": 38,
+      "article_title": "英首相Starmer宣布将禁止16岁以下使用社交媒体",
+      "article_url": "https://www.ign.com/articles/under-16s-to-be-banned-from-social-media-uk-prime-minister-keir-starmer-says",
+      "article_date": "2026-06-16",
+      "detail": "",
+      "estimated_cost_usd": 0.00484248,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 9254,
+      "completion_tokens": 4874,
+      "total_tokens": 14128,
+      "prompt_cache_hit_tokens": 7936,
+      "prompt_cache_miss_tokens": 1318
+    },
+    {
+      "time_cn": "2026-06-16 10:32:34",
+      "task": "fulltext_chunk",
+      "model": "deepseek-v4-pro",
+      "article_id": 38,
+      "article_title": "英首相Starmer宣布将禁止16岁以下使用社交媒体",
+      "article_url": "https://www.ign.com/articles/under-16s-to-be-banned-from-social-media-uk-prime-minister-keir-starmer-says",
+      "article_date": "2026-06-16",
+      "detail": "paragraphs 1-6",
+      "estimated_cost_usd": 0.00135636,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 8495,
+      "completion_tokens": 1183,
+      "total_tokens": 9678,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 687
+    },
+    {
+      "time_cn": "2026-06-16 10:32:58",
+      "task": "fulltext_chunk",
+      "model": "deepseek-v4-pro",
+      "article_id": 38,
+      "article_title": "英首相Starmer宣布将禁止16岁以下使用社交媒体",
+      "article_url": "https://www.ign.com/articles/under-16s-to-be-banned-from-social-media-uk-prime-minister-keir-starmer-says",
+      "article_date": "2026-06-16",
+      "detail": "paragraphs 7-10",
+      "estimated_cost_usd": 0.00136201,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 8358,
+      "completion_tokens": 1258,
+      "total_tokens": 9616,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 550
+    },
+    {
+      "time_cn": "2026-06-16 10:34:18",
+      "task": "fulltext_repair",
+      "model": "deepseek-v4-pro",
+      "article_id": 38,
+      "article_title": "英首相Starmer宣布将禁止16岁以下使用社交媒体",
+      "article_url": "https://www.ign.com/articles/under-16s-to-be-banned-from-social-media-uk-prime-minister-keir-starmer-says",
+      "article_date": "2026-06-16",
+      "detail": "1 audit issue(s)",
+      "estimated_cost_usd": 0.00522128,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 9860,
+      "completion_tokens": 4816,
+      "total_tokens": 14676,
+      "prompt_cache_hit_tokens": 7552,
+      "prompt_cache_miss_tokens": 2308
     }
   ]
 }

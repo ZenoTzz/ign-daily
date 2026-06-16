@@ -353,8 +353,8 @@
       "url": "https://www.ign.com/articles/final-fantasy-resonance-interview-the-first-hd-2d-ff-was-conceptualized-6-7-years-ago-and-inspired-by-final-fantasy-v",
       "publish_time_cn": "2026-06-16 01:00",
       "pub_date": "2026-06-16 01:00",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/06/10/ffthumb-1781113181781.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "needs_review",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/10/ffthumb-1781113181781.png",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/10/ffthumb-1781113181781.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/10/ffthumb-1781113181781.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -373,11 +373,10 @@
           "reason": "暂无官方中文译名，建议保留英文或使用暂译名"
         }
       ],
-      "translation_error": "Expecting ',' delimiter: line 21 column 6 (char 2449)",
-      "translation_failed_at": "2026-06-16T10:09:51.532405+08:00",
       "translator": "api",
       "translator_provider": "openai-compatible",
-      "translator_model": "deepseek-v4-pro"
+      "translator_model": "deepseek-v4-pro",
+      "translation_path": "translations/14.json"
     },
     {
       "id": 15,
@@ -870,8 +869,8 @@
       "url": "https://www.ign.com/articles/capcom-pulls-dragons-dogma-2-microtransactions-ahead-of-dark-arisen-expansion-release",
       "publish_time_cn": "2026-06-15 19:25",
       "pub_date": "2026-06-15 19:25",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/06/15/ss-ef263c112e274dc73a4bb00596aee1ebfc2b0ed8-1920x1080-1781522543975.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "needs_review",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/15/ss-ef263c112e274dc73a4bb00596aee1ebfc2b0ed8-1920x1080-1781522543975.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/15/ss-ef263c112e274dc73a4bb00596aee1ebfc2b0ed8-1920x1080-1781522543975.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/15/ss-ef263c112e274dc73a4bb00596aee1ebfc2b0ed8-1920x1080-1781522543975.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -881,11 +880,10 @@
       ],
       "source_status": "cached",
       "source_fetched_at": "2026-06-15T22:49:49+08:00",
-      "translation_error": "chunk paragraph 7 missing cn",
-      "translation_failed_at": "2026-06-16T10:01:17.085143+08:00",
       "translator": "api",
       "translator_provider": "openai-compatible",
-      "translator_model": "deepseek-v4-pro"
+      "translator_model": "deepseek-v4-pro",
+      "translation_path": "translations/08.json"
     },
     {
       "id": 9,
@@ -981,8 +979,8 @@
       "url": "https://www.ign.com/articles/under-16s-to-be-banned-from-social-media-uk-prime-minister-keir-starmer-says",
       "publish_time_cn": "2026-06-15 17:28",
       "pub_date": "2026-06-15 17:28",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/06/15/gettyimages-2281068530-1781515265740.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "needs_review",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/15/gettyimages-2281068530-1781515265740.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/15/gettyimages-2281068530-1781515265740.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/15/gettyimages-2281068530-1781515265740.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -993,8 +991,6 @@
       ],
       "source_status": "cached",
       "source_fetched_at": "2026-06-16T08:46:17+08:00",
-      "translation_error": "paragraph 10 missing cn",
-      "translation_failed_at": "2026-06-16T10:21:14.792712+08:00",
       "translator": "api",
       "translator_provider": "openai-compatible",
       "translator_model": "deepseek-v4-pro",
