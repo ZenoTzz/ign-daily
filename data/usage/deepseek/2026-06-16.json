@@ -1995,6 +1995,132 @@
       "total_tokens": 12705,
       "prompt_cache_hit_tokens": 0,
       "prompt_cache_miss_tokens": 9539
+    },
+    {
+      "time_cn": "2026-06-16 19:36:54",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 4,
+      "article_title": "James Gunn Describes Jimmy Olsen HBO Series as 'Both a Jimmy Olsen and a Gorilla Grodd Show'",
+      "article_url": "https://www.ign.com/articles/james-gunn-describes-jimmy-olsen-hbo-series-as-both-a-jimmy-olsen-and-a-gorilla-grodd-show",
+      "article_date": "2026-06-17",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.0002826,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8739,
+      "completion_tokens": 403,
+      "total_tokens": 9142,
+      "prompt_cache_hit_tokens": 7680,
+      "prompt_cache_miss_tokens": 1059
+    },
+    {
+      "time_cn": "2026-06-16 19:37:01",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 5,
+      "article_title": "Life is Strange Creator Don't Nod Warned It Will Run Out of Funds This Year",
+      "article_url": "https://www.ign.com/articles/life-is-strange-creator-dont-nod-warned-it-will-run-out-of-funds-this-year",
+      "article_date": "2026-06-17",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00029898,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8504,
+      "completion_tokens": 579,
+      "total_tokens": 9083,
+      "prompt_cache_hit_tokens": 7680,
+      "prompt_cache_miss_tokens": 824
+    },
+    {
+      "time_cn": "2026-06-16 19:37:11",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 6,
+      "article_title": "Bank Balances Rolled Back for Forza Horizon 6 Players Who Used Exploit to Amass a Billion Credits",
+      "article_url": "https://www.ign.com/articles/bank-balances-rolled-back-for-forza-horizon-6-players-who-used-exploit-to-amass-a-billion-credits",
+      "article_date": "2026-06-17",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00033608,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8539,
+      "completion_tokens": 694,
+      "total_tokens": 9233,
+      "prompt_cache_hit_tokens": 7680,
+      "prompt_cache_miss_tokens": 859
+    },
+    {
+      "time_cn": "2026-06-16 19:37:15",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 7,
+      "article_title": "Major Helldivers 2 Patch Adds New Galactic Campaigns, New Control Center Terminal, and a Lot More",
+      "article_url": "https://www.ign.com/articles/major-helldivers-2-patch-adds-new-galactic-campaigns-new-control-center-terminal-and-a-lot-more",
+      "article_date": "2026-06-17",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00027882,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9010,
+      "completion_tokens": 254,
+      "total_tokens": 9264,
+      "prompt_cache_hit_tokens": 7680,
+      "prompt_cache_miss_tokens": 1330
+    },
+    {
+      "time_cn": "2026-06-16 19:37:27",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 8,
+      "article_title": "Nintendo Switch 2 System Update 22.5.0 Available — Here Are the Patch Notes",
+      "article_url": "https://www.ign.com/articles/nintendo-switch-2-system-update-2250-available-here-are-the-patch-notes",
+      "article_date": "2026-06-17",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00039068,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8349,
+      "completion_tokens": 984,
+      "total_tokens": 9333,
+      "prompt_cache_hit_tokens": 7680,
+      "prompt_cache_miss_tokens": 669
+    },
+    {
+      "time_cn": "2026-06-16 19:37:41",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 9,
+      "article_title": "Blox Fruits Codes (June 2026)",
+      "article_url": "https://www.ign.com/articles/blox-fruits-codes",
+      "article_date": "2026-06-17",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00045214,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8222,
+      "completion_tokens": 1267,
+      "total_tokens": 9489,
+      "prompt_cache_hit_tokens": 7680,
+      "prompt_cache_miss_tokens": 542
     }
   ]
 }
