@@ -11,10 +11,11 @@ from common_paths import exchange_rates_path
 
 
 DEFAULT_RATES_TO_CNY = {
-    "USD": 7.16,
-    "EUR": 7.8,
-    "GBP": 9.1,
-    "JPY_100": 4.8,
+    "USD": 6.77,
+    "EUR": 7.85,
+    "GBP": 9.09,
+    "JPY_100": 4.23,
+    "KRW_100": 0.45,
 }
 
 AMOUNT_RE = r"\d+(?:,\d{3})*(?:\.\d+)?"
