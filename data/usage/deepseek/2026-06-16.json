@@ -2121,6 +2121,48 @@
       "total_tokens": 9489,
       "prompt_cache_hit_tokens": 7680,
       "prompt_cache_miss_tokens": 542
+    },
+    {
+      "time_cn": "2026-06-16 19:58:17",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 10,
+      "article_title": "Psychonauts Developer Double Fine Responds to Closure Reports With a Single Emoji",
+      "article_url": "https://www.ign.com/articles/psychonauts-developer-double-fine-responds-to-closure-reports-with-a-single-emoji",
+      "article_date": "2026-06-17",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00067152,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8737,
+      "completion_tokens": 1793,
+      "total_tokens": 10530,
+      "prompt_cache_hit_tokens": 7680,
+      "prompt_cache_miss_tokens": 1057
+    },
+    {
+      "time_cn": "2026-06-16 19:58:28",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 11,
+      "article_title": "Fortnite Maker Confirms How It Uses Generative AI to Help Create Concept Art and Designs for New Skins",
+      "article_url": "https://www.ign.com/articles/fortnite-maker-confirms-how-it-uses-generative-ai-to-help-create-concept-art-and-designs-for-new-skins",
+      "article_date": "2026-06-17",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00035176,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8675,
+      "completion_tokens": 682,
+      "total_tokens": 9357,
+      "prompt_cache_hit_tokens": 7680,
+      "prompt_cache_miss_tokens": 995
     }
   ]
 }

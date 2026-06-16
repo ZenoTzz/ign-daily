@@ -2,6 +2,52 @@
   "date": "2026-06-17",
   "articles": [
     {
+      "id": 10,
+      "category": "行业动态",
+      "emoji": "😅",
+      "en_title": "Psychonauts Developer Double Fine Responds to Closure Reports With a Single Emoji",
+      "cn_title": "《意航员》开发商用emoji回应关闭传闻",
+      "summary": "Double Fine 工作室近日对可能被关闭的报道做出回应，仅发布了一个😅表情。该工作室是微软旗下多家与 Xbox 谈判寻求避免关闭的工作室之一，包括 Ninja Theory 和《午夜之南》开发商 Compulsion Games。此前 Xbox 新负责人 Asha Sharma 警告公司面临「重置」，可能导致大规模裁员和工作室关闭。",
+      "url": "https://www.ign.com/articles/psychonauts-developer-double-fine-responds-to-closure-reports-with-a-single-emoji",
+      "publish_time_cn": "2026-06-16 19:13",
+      "pub_date": "2026-06-16 19:13",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/16/ss-d78da4dbc35620193f7c14e0e5e68f7020adfd43-1920x1080-1781608104816.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/16/ss-d78da4dbc35620193f7c14e0e5e68f7020adfd43-1920x1080-1781608104816.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/16/ss-d78da4dbc35620193f7c14e0e5e68f7020adfd43-1920x1080-1781608104816.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/16/ss-d78da4dbc35620193f7c14e0e5e68f7020adfd43-1920x1080-1781608104816.jpg?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/16/ss-d78da4dbc35620193f7c14e0e5e68f7020adfd43-1920x1080-1781608104816.jpg?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/16/ss-d78da4dbc35620193f7c14e0e5e68f7020adfd43-1920x1080-1781608104816.jpg",
+        "https://assets-prd.ignimgs.com/2026/06/16/psychonauts-1781608046002.jpg",
+        "https://assets-prd.ignimgs.com/2026/06/16/screenshot-2026-06-16-120045-1781607659552.png"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-16T19:57:47+08:00"
+    },
+    {
+      "id": 11,
+      "category": "行业动态",
+      "emoji": "🤖",
+      "en_title": "Fortnite Maker Confirms How It Uses Generative AI to Help Create Concept Art and Designs for New Skins",
+      "cn_title": "Epic Games证实AI参与《堡垒之夜》皮肤概念设计",
+      "summary": "Epic Games发布视频，首次公开透露《堡垒之夜》角色皮肤和场景概念设计中如何运用生成式AI工具：人类艺术家手绘草图后，通过AI提示快速生成3D效果备选方案，再经人工修正细节。公司强调AI不用于从头设计，而是加速迭代流程，但AI生成内容可能引入错误，需后续人工把关。此举回应了玩家对部分资产疑似AI生成的质疑。",
+      "url": "https://www.ign.com/articles/fortnite-maker-confirms-how-it-uses-generative-ai-to-help-create-concept-art-and-designs-for-new-skins",
+      "publish_time_cn": "2026-06-16 18:47",
+      "pub_date": "2026-06-16 18:47",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/16/a-look-at-epics-art-concepting-process-00-01-28-1781606169729.png?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/16/a-look-at-epics-art-concepting-process-00-01-28-1781606169729.png?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/16/a-look-at-epics-art-concepting-process-00-01-28-1781606169729.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/16/a-look-at-epics-art-concepting-process-00-01-28-1781606169729.png?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/16/a-look-at-epics-art-concepting-process-00-01-28-1781606169729.png?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/16/a-look-at-epics-art-concepting-process-00-01-28-1781606169729.png"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-16T19:57:48+08:00"
+    },
+    {
       "id": 4,
       "category": "影视资讯",
       "emoji": "🦧",
@@ -248,5 +294,5 @@
       "source_fetched_at": "2026-06-16T08:45:41+08:00"
     }
   ],
-  "total": 9
+  "total": 11
 }
