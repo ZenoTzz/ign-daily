@@ -1407,6 +1407,111 @@
       "total_tokens": 9291,
       "prompt_cache_hit_tokens": 7680,
       "prompt_cache_miss_tokens": 872
+    },
+    {
+      "time_cn": "2026-06-17 12:15:08",
+      "task": "fulltext",
+      "model": "deepseek-v4-pro",
+      "article_id": 2,
+      "article_title": "《沙罗周期》开发商望效仿 From Software 成功路",
+      "article_url": "https://www.ign.com/articles/saros-developer-housemarque-wants-to-have-the-same-growth-as-fromsoftware",
+      "article_date": "2026-06-18",
+      "detail": "",
+      "estimated_cost_usd": 0.00665425,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 9585,
+      "completion_tokens": 6791,
+      "total_tokens": 16376,
+      "prompt_cache_hit_tokens": 7936,
+      "prompt_cache_miss_tokens": 1649
+    },
+    {
+      "time_cn": "2026-06-17 12:15:37",
+      "task": "fulltext_chunk",
+      "model": "deepseek-v4-pro",
+      "article_id": 2,
+      "article_title": "《沙罗周期》开发商望效仿 From Software 成功路",
+      "article_url": "https://www.ign.com/articles/saros-developer-housemarque-wants-to-have-the-same-growth-as-fromsoftware",
+      "article_date": "2026-06-18",
+      "detail": "paragraphs 1-6",
+      "estimated_cost_usd": 0.0024121,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 8694,
+      "completion_tokens": 2297,
+      "total_tokens": 10991,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 886
+    },
+    {
+      "time_cn": "2026-06-17 12:15:49",
+      "task": "fulltext_chunk",
+      "model": "deepseek-v4-pro",
+      "article_id": 2,
+      "article_title": "《沙罗周期》开发商望效仿 From Software 成功路",
+      "article_url": "https://www.ign.com/articles/saros-developer-housemarque-wants-to-have-the-same-growth-as-fromsoftware",
+      "article_date": "2026-06-18",
+      "detail": "paragraphs 7-9",
+      "estimated_cost_usd": 0.00093484,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 8378,
+      "completion_tokens": 757,
+      "total_tokens": 9135,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 570
+    },
+    {
+      "time_cn": "2026-06-17 12:16:46",
+      "task": "fulltext",
+      "model": "deepseek-v4-pro",
+      "article_id": 3,
+      "article_title": "《死亡搁浅》电影计划2027年开拍，游戏角色登场",
+      "article_url": "https://www.ign.com/articles/death-stranding-movie-targeting-2027-shoot-date-characters-from-the-games-will-appear",
+      "article_date": "2026-06-18",
+      "detail": "",
+      "estimated_cost_usd": 0.00504084,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 9522,
+      "completion_tokens": 4968,
+      "total_tokens": 14490,
+      "prompt_cache_hit_tokens": 7936,
+      "prompt_cache_miss_tokens": 1586
+    },
+    {
+      "time_cn": "2026-06-17 12:17:44",
+      "task": "fulltext",
+      "model": "deepseek-v4-pro",
+      "article_id": 4,
+      "article_title": "《Luna Abyss》发售一个月后，整个开发团队被裁",
+      "article_url": "https://www.ign.com/articles/entire-luna-abyss-development-team-laid-off-one-month-after-launch",
+      "article_date": "2026-06-18",
+      "detail": "",
+      "estimated_cost_usd": 0.00453015,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 9250,
+      "completion_tokens": 4517,
+      "total_tokens": 13767,
+      "prompt_cache_hit_tokens": 7936,
+      "prompt_cache_miss_tokens": 1314
     }
   ]
 }
