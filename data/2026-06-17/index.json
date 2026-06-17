@@ -64,8 +64,8 @@
       "url": "https://www.ign.com/articles/resident-evil-lore-master-reveals-the-5-burning-questions-veronica-needs-to-answer",
       "publish_time_cn": "2026-06-17 00:55",
       "pub_date": "2026-06-17 00:55",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/06/16/resident-evil-veronica-announcement-trailer-00-03-30-1781626203092.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/16/resident-evil-veronica-announcement-trailer-00-03-30-1781626203092.png",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/16/resident-evil-veronica-announcement-trailer-00-03-30-1781626203092.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/16/resident-evil-veronica-announcement-trailer-00-03-30-1781626203092.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -74,7 +74,11 @@
         "https://assets-prd.ignimgs.com/2026/06/16/resident-evil-veronica-announcement-trailer-00-03-30-1781626203092.png"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-17T03:15:30+08:00"
+      "source_fetched_at": "2026-06-17T03:15:30+08:00",
+      "translation_path": "translations/23.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro"
     },
     {
       "id": 24,
@@ -320,8 +324,8 @@
       "url": "https://www.ign.com/articles/xbox-game-pass-soldiers-on-with-june-2026-wave-2-lineup-announcement",
       "publish_time_cn": "2026-06-16 21:24",
       "pub_date": "2026-06-16 21:24",
-      "cover_image": "",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2022/03/06/xboxsymbols-blogroll-logos-1646529461207.jpg",
+      "translation_status": "done",
       "source_status": "cached",
       "source_fetched_at": "2026-06-17T01:23:03+08:00",
       "pending_dict": [
@@ -346,7 +350,11 @@
           "source": "ai_guess",
           "reason": "游戏名，无稳定译名，保留原文"
         }
-      ]
+      ],
+      "translation_path": "translations/17.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro"
     },
     {
       "id": 18,
@@ -382,8 +390,8 @@
       "url": "https://www.ign.com/articles/blood-message-preview-hands-on",
       "publish_time_cn": "2026-06-16 21:00",
       "pub_date": "2026-06-16 21:00",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/06/15/bloodmessage-preview-blogroll-1781562209688.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/16/blood-message-1280a-1749676372496.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/15/bloodmessage-preview-blogroll-1781562209688.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/15/bloodmessage-preview-blogroll-1781562209688.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -408,7 +416,11 @@
           "source": "ai_guess",
           "reason": "历史人物，建议确认官方是否用此名"
         }
-      ]
+      ],
+      "translation_path": "translations/19.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro"
     },
     {
       "id": 20,
@@ -513,7 +525,7 @@
       "publish_time_cn": "2026-06-16 19:13",
       "pub_date": "2026-06-16 19:13",
       "cover_image": "https://assets-prd.ignimgs.com/2026/06/16/ss-d78da4dbc35620193f7c14e0e5e68f7020adfd43-1920x1080-1781608104816.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/16/ss-d78da4dbc35620193f7c14e0e5e68f7020adfd43-1920x1080-1781608104816.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/16/ss-d78da4dbc35620193f7c14e0e5e68f7020adfd43-1920x1080-1781608104816.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -524,7 +536,12 @@
         "https://assets-prd.ignimgs.com/2026/06/16/screenshot-2026-06-16-120045-1781607659552.png"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-16T19:57:47+08:00"
+      "source_fetched_at": "2026-06-16T19:57:47+08:00",
+      "translation_error": "chunk paragraph 13 missing cn",
+      "translation_failed_at": "2026-06-17T08:09:35.570350+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro"
     },
     {
       "id": 11,
@@ -537,7 +554,7 @@
       "publish_time_cn": "2026-06-16 18:47",
       "pub_date": "2026-06-16 18:47",
       "cover_image": "https://assets-prd.ignimgs.com/2026/06/16/a-look-at-epics-art-concepting-process-00-01-28-1781606169729.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/16/a-look-at-epics-art-concepting-process-00-01-28-1781606169729.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/16/a-look-at-epics-art-concepting-process-00-01-28-1781606169729.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -546,7 +563,12 @@
         "https://assets-prd.ignimgs.com/2026/06/16/a-look-at-epics-art-concepting-process-00-01-28-1781606169729.png"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-16T19:57:48+08:00"
+      "source_fetched_at": "2026-06-16T19:57:48+08:00",
+      "translation_error": "chunk paragraph 13 missing cn",
+      "translation_failed_at": "2026-06-17T08:11:13.133022+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro"
     },
     {
       "id": 4,
@@ -590,7 +612,7 @@
       "publish_time_cn": "2026-06-16 17:46",
       "pub_date": "2026-06-16 17:46",
       "cover_image": "https://assets-prd.ignimgs.com/2025/02/19/lrbr-oo-1740004470051.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2025/02/19/lrbr-oo-1740004470051.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2025/02/19/lrbr-oo-1740004470051.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -599,7 +621,11 @@
         "https://assets-prd.ignimgs.com/2025/02/19/lrbr-oo-1740004470051.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-16T19:36:42+08:00"
+      "source_fetched_at": "2026-06-16T19:36:42+08:00",
+      "translation_path": "translations/05.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro"
     },
     {
       "id": 6,
@@ -612,7 +638,7 @@
       "publish_time_cn": "2026-06-16 17:42",
       "pub_date": "2026-06-16 17:42",
       "cover_image": "https://assets-prd.ignimgs.com/2026/05/12/horizon-firstmins-br-1778618912883.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/05/12/horizon-firstmins-br-1778618912883.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/05/12/horizon-firstmins-br-1778618912883.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -621,7 +647,11 @@
         "https://assets-prd.ignimgs.com/2026/05/12/horizon-firstmins-br-1778618912883.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-16T19:36:43+08:00"
+      "source_fetched_at": "2026-06-16T19:36:43+08:00",
+      "translation_path": "translations/06.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro"
     },
     {
       "id": 7,
