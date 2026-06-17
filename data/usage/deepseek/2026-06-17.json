@@ -1596,6 +1596,174 @@
       "total_tokens": 10012,
       "prompt_cache_hit_tokens": 7808,
       "prompt_cache_miss_tokens": 390
+    },
+    {
+      "time_cn": "2026-06-17 20:41:12",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 9,
+      "article_title": "Microsoft Insists It Won’t Flip Flop on Exclusives as Fans Say They're Finding It Hard to Trust Xbox",
+      "article_url": "https://www.ign.com/articles/microsoft-insists-it-wont-flip-flop-on-exclusives-as-fans-say-theyre-finding-it-hard-to-trust-xbox",
+      "article_date": "2026-06-18",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00041322,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8804,
+      "completion_tokens": 837,
+      "total_tokens": 9641,
+      "prompt_cache_hit_tokens": 7680,
+      "prompt_cache_miss_tokens": 1124
+    },
+    {
+      "time_cn": "2026-06-17 20:41:30",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 10,
+      "article_title": "The Adventures of Elliot: The Millennium Tales Review",
+      "article_url": "https://www.ign.com/articles/the-adventures-of-elliot-the-millennium-tales-review",
+      "article_date": "2026-06-18",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.0006949,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9860,
+      "completion_tokens": 1315,
+      "total_tokens": 11175,
+      "prompt_cache_hit_tokens": 7680,
+      "prompt_cache_miss_tokens": 2180
+    },
+    {
+      "time_cn": "2026-06-17 20:41:40",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 11,
+      "article_title": "Doctor Who Cancellation Avoided Episode Becoming 'Christmas-Shaped Bomb' For Show's Future, Insider Says",
+      "article_url": "https://www.ign.com/articles/doctor-who-cancellation-avoided-episode-becoming-christmas-shaped-bomb-for-shows-future-insider-says",
+      "article_date": "2026-06-18",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00032012,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8851,
+      "completion_tokens": 481,
+      "total_tokens": 9332,
+      "prompt_cache_hit_tokens": 7680,
+      "prompt_cache_miss_tokens": 1171
+    },
+    {
+      "time_cn": "2026-06-17 20:41:51",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 12,
+      "article_title": "Billionaire Valve Boss Gabe Newell Buys Florida Super Mansion With Its Own Underground Tunnel for $70.8 Million",
+      "article_url": "https://www.ign.com/articles/billionaire-valve-boss-gabe-newell-buys-florida-super-mansion-with-its-own-underground-tunnel-for-708-million",
+      "article_date": "2026-06-18",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00039712,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8901,
+      "completion_tokens": 731,
+      "total_tokens": 9632,
+      "prompt_cache_hit_tokens": 7680,
+      "prompt_cache_miss_tokens": 1221
+    },
+    {
+      "time_cn": "2026-06-17 20:42:11",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 13,
+      "article_title": "Former Top Gear Star Jeremy Clarkson Reveals 'Aggressive' Cancer Diagnosis",
+      "article_url": "https://www.ign.com/articles/former-top-gear-star-jeremy-clarkson-reveals-aggressive-cancer-diagnosis",
+      "article_date": "2026-06-18",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.0004931,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8346,
+      "completion_tokens": 1414,
+      "total_tokens": 9760,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 538
+    },
+    {
+      "time_cn": "2026-06-17 20:42:21",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 14,
+      "article_title": "Evomon Codes (June 2026)",
+      "article_url": "https://www.ign.com/articles/evomon-codes",
+      "article_date": "2026-06-18",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00025432,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8155,
+      "completion_tokens": 594,
+      "total_tokens": 8749,
+      "prompt_cache_hit_tokens": 7680,
+      "prompt_cache_miss_tokens": 475
+    },
+    {
+      "time_cn": "2026-06-17 20:42:31",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 15,
+      "article_title": "Nintendo Acknowledges Employee Data at Risk After Third-Party Service Breach",
+      "article_url": "https://www.ign.com/articles/nintendo-acknowledges-employee-data-at-risk-after-third-party-service-breach",
+      "article_date": "2026-06-18",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00031396,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8301,
+      "completion_tokens": 734,
+      "total_tokens": 9035,
+      "prompt_cache_hit_tokens": 7680,
+      "prompt_cache_miss_tokens": 621
+    },
+    {
+      "time_cn": "2026-06-17 20:42:40",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 16,
+      "article_title": "Ubisoft Acknowledges 'Community Didn't Resonate' With Assassin's Creed Shadows Story as Much as Hoped, While Fans Praise Final Update",
+      "article_url": "https://www.ign.com/articles/ubisoft-acknowledges-community-didnt-resonate-with-assassins-creed-shadows-story-as-much-as-hoped-while-fans-praise-final-update",
+      "article_date": "2026-06-18",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00034224,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8781,
+      "completion_tokens": 595,
+      "total_tokens": 9376,
+      "prompt_cache_hit_tokens": 7680,
+      "prompt_cache_miss_tokens": 1101
     }
   ]
 }
