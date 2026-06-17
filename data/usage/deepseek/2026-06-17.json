@@ -1533,6 +1533,69 @@
       "total_tokens": 10045,
       "prompt_cache_hit_tokens": 7808,
       "prompt_cache_miss_tokens": 1602
+    },
+    {
+      "time_cn": "2026-06-17 19:19:20",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 7,
+      "article_title": "Why Microsoft Announced Ninja Theory's New Game Despite Plans to Shut the Studio Down",
+      "article_url": "https://www.ign.com/articles/why-microsoft-announced-ninja-theorys-new-game-despite-plans-to-shut-the-studio-down",
+      "article_date": "2026-06-18",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00071548,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8809,
+      "completion_tokens": 1914,
+      "total_tokens": 10723,
+      "prompt_cache_hit_tokens": 7680,
+      "prompt_cache_miss_tokens": 1129
+    },
+    {
+      "time_cn": "2026-06-17 19:19:27",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 8,
+      "article_title": "Next Batch of Free Cars Confirmed for Forza Horizon 6",
+      "article_url": "https://www.ign.com/articles/next-batch-of-free-cars-confirmed-for-forza-horizon-6",
+      "article_date": "2026-06-18",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00019608,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8303,
+      "completion_tokens": 312,
+      "total_tokens": 8615,
+      "prompt_cache_hit_tokens": 7680,
+      "prompt_cache_miss_tokens": 623
+    },
+    {
+      "time_cn": "2026-06-17 19:19:54",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 30,
+      "article_title": "Universal Tower Defense Codes X (June 2026)",
+      "article_url": "https://www.ign.com/articles/universal-tower-defense-codes",
+      "article_date": "2026-06-17",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00058438,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8198,
+      "completion_tokens": 1814,
+      "total_tokens": 10012,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 390
     }
   ]
 }

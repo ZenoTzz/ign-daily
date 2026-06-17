@@ -5,46 +5,69 @@
     "2026-06-17"
   ],
   "changed_dates": [
-    "2026-06-18"
+    "2026-06-18",
+    "2026-06-17"
   ],
   "new_target_dates": [
-    "2026-06-18"
+    "2026-06-18",
+    "2026-06-17"
   ],
-  "new_count": 1,
+  "new_count": 3,
   "filtered_count": 0,
   "cleanup_count": 0,
-  "changed_count": 1,
+  "changed_count": 3,
   "articles": [
     {
-      "title": "Widow's Bay Season 1 Review",
-      "url": "https://www.ign.com/articles/widows-bay-season-1-review",
-      "pubDate_cst": "2026-06-17 15:00"
+      "title": "Why Microsoft Announced Ninja Theory's New Game Despite Plans to Shut the Studio Down",
+      "url": "https://www.ign.com/articles/why-microsoft-announced-ninja-theorys-new-game-despite-plans-to-shut-the-studio-down",
+      "pubDate_cst": "2026-06-17 16:54"
+    },
+    {
+      "title": "Next Batch of Free Cars Confirmed for Forza Horizon 6",
+      "url": "https://www.ign.com/articles/next-batch-of-free-cars-confirmed-for-forza-horizon-6",
+      "pubDate_cst": "2026-06-17 16:07"
+    },
+    {
+      "title": "Universal Tower Defense Codes X (June 2026)",
+      "url": "https://www.ign.com/articles/universal-tower-defense-codes",
+      "pubDate_cst": "2026-06-17 00:00"
     }
   ],
   "filtered_articles": [],
   "runs": [
     {
       "target_date": "2026-06-18",
-      "new_count": 1,
+      "new_count": 2,
       "filtered_count": 0,
-      "changed_count": 1,
-      "next_id": 7,
+      "changed_count": 2,
+      "next_id": 9,
       "articles": [
         {
-          "title": "Widow's Bay Season 1 Review",
-          "url": "https://www.ign.com/articles/widows-bay-season-1-review",
-          "pubDate_cst": "2026-06-17 15:00"
+          "title": "Why Microsoft Announced Ninja Theory's New Game Despite Plans to Shut the Studio Down",
+          "url": "https://www.ign.com/articles/why-microsoft-announced-ninja-theorys-new-game-despite-plans-to-shut-the-studio-down",
+          "pubDate_cst": "2026-06-17 16:54"
+        },
+        {
+          "title": "Next Batch of Free Cars Confirmed for Forza Horizon 6",
+          "url": "https://www.ign.com/articles/next-batch-of-free-cars-confirmed-for-forza-horizon-6",
+          "pubDate_cst": "2026-06-17 16:07"
         }
       ],
       "filtered_articles": []
     },
     {
       "target_date": "2026-06-17",
-      "new_count": 0,
+      "new_count": 1,
       "filtered_count": 0,
-      "changed_count": 0,
-      "next_id": 30,
-      "articles": [],
+      "changed_count": 1,
+      "next_id": 31,
+      "articles": [
+        {
+          "title": "Universal Tower Defense Codes X (June 2026)",
+          "url": "https://www.ign.com/articles/universal-tower-defense-codes",
+          "pubDate_cst": "2026-06-17 00:00"
+        }
+      ],
       "filtered_articles": []
     }
   ]
