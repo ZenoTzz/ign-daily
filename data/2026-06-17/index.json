@@ -783,8 +783,8 @@
       "url": "https://www.ign.com/articles/harry-potter-tv-series-casts-peter-serafinowicz-in-role-not-featured-in-the-films",
       "publish_time_cn": "2026-06-16 09:34",
       "pub_date": "2026-06-16 09:34",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/06/15/peter-serafinowicz-1781563341219.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/15/peter-serafinowicz-1781563341219.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/15/peter-serafinowicz-1781563341219.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/15/peter-serafinowicz-1781563341219.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -802,7 +802,11 @@
           "source": "ai_guess",
           "reason": "哈利波特系列中幽灵角色，常见社区译名，词库未收录"
         }
-      ]
+      ],
+      "translation_path": "translations/03.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro"
     },
     {
       "id": 9,
