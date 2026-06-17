@@ -1,34 +1,5 @@
 {
   "date": "2026-06-17",
-  "items": {
-    "10": {
-      "id": 10,
-      "url": "https://www.ign.com/articles/psychonauts-developer-double-fine-responds-to-closure-reports-with-a-single-emoji",
-      "en_title": "Psychonauts Developer Double Fine Responds to Closure Reports With a Single Emoji",
-      "cn_title": "《意航员》开发商用emoji回应关闭传闻",
-      "model": "deepseek-v4-pro",
-      "status": "needs_manual_review",
-      "failed_at": "2026-06-17T08:09:35.570350+08:00",
-      "reason": "chunk paragraph 13 missing cn",
-      "audit_issues": [],
-      "fingerprint": "43261be1796a411d8920308aae4f6a9b4a0edb37",
-      "translation_path": "",
-      "retry_policy": "manual_only"
-    },
-    "11": {
-      "id": 11,
-      "url": "https://www.ign.com/articles/fortnite-maker-confirms-how-it-uses-generative-ai-to-help-create-concept-art-and-designs-for-new-skins",
-      "en_title": "Fortnite Maker Confirms How It Uses Generative AI to Help Create Concept Art and Designs for New Skins",
-      "cn_title": "Epic Games证实AI参与《堡垒之夜》皮肤概念设计",
-      "model": "deepseek-v4-pro",
-      "status": "needs_manual_review",
-      "failed_at": "2026-06-17T08:11:13.133022+08:00",
-      "reason": "chunk paragraph 13 missing cn",
-      "audit_issues": [],
-      "fingerprint": "2b1e50909ff6532d27b6dc7d2fdfead6b0d802af",
-      "translation_path": "",
-      "retry_policy": "manual_only"
-    }
-  },
-  "updated_at": "2026-06-17T08:11:13.133022+08:00"
+  "items": {},
+  "updated_at": "2026-06-17T01:52:39.191255Z"
 }

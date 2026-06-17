@@ -334,6 +334,7 @@ function appData() {
                 a.translation_status = 'needs_review';
                 a.translation_error = f.reason || a.translation_error || 'API 质检未通过';
                 a.translation_path = f.translation_path || a.translation_path;
+                a.review_missing_draft = !a.translation_path;
                 if (f.model) a.translator_model = f.model;
               }
             }
@@ -341,12 +342,6 @@ function appData() {
         } catch (_) { /* 没有失败记录是正常的 */ }
 
         // 加载润色索引
-        for (const a of this.data.articles) {
-          if (a.translation_status === 'needs_review' && !a.translation_path && a.id) {
-            a.translation_path = `translations/${String(a.id).padStart(2, '0')}.json`;
-          }
-        }
-
         this.polishedIds = new Set();
         try {
           const polRes = await fetch(`data/${date}/polished/_index.json?t=${Date.now()}`, { cache: 'no-store' });
@@ -545,6 +540,17 @@ function appData() {
 
     reviewReason(art) {
       return art?.translation_error || this.translationFailures?.[String(art?.id)]?.reason || 'API 质检未通过，请人工复核';
+    },
+
+    hasReviewDraft(art) {
+      const failurePath = this.translationFailures?.[String(art?.id)]?.translation_path;
+      return Boolean(art?.translation_path || failurePath);
+    },
+
+    async retryTranslation(art) {
+      if (!art?.id) return;
+      this.selected = [Number(art.id)];
+      await this.submitRequest();
     },
 
     get visibleFilteredRss() {

@@ -20,7 +20,7 @@
   <script defer src="assets/alpine.min.js"></script>
   <link rel="stylesheet" href="assets/style.css?v=20260616theme2">
   <link rel="stylesheet" href="assets/article-dark.css?v=20260616theme2">
-  <script src="assets/app.js?v=20260617review1"></script>
+  <script src="assets/app.js?v=20260617review2"></script>
   <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
   <script>
     tailwind.config = {
@@ -594,7 +594,11 @@
               }, 5000);
             }
           } catch (e) {
-            this.error = '加载译文失败：' + e.message;
+            if (String(e.message || '').includes('HTTP 404')) {
+              this.error = '没有可复核草稿：这篇翻译失败时未生成 translations 草稿，请返回首页重新提交翻译。';
+            } else {
+              this.error = '加载译文失败：' + e.message;
+            }
             return;
           }
           // 加载反馈

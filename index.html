@@ -18,7 +18,7 @@
   <script defer src="assets/alpine.min.js"></script>
   <link rel="stylesheet" href="assets/style.css?v=20260616theme2">
   <script src="assets/exceljs.min.js"></script>
-  <script src="assets/app.js?v=20260617review1"></script>
+  <script src="assets/app.js?v=20260617review2"></script>
 </head>
 <body>
   <!-- SVG Icon Definitions -->
@@ -325,13 +325,13 @@
                 </div>
 
                 <!-- Title -->
-                <template x-if="art.translation_status === 'done' || art.translation_status === 'needs_review'">
+                <template x-if="art.translation_status === 'done' || (art.translation_status === 'needs_review' && hasReviewDraft(art))">
                   <a :href="`article.html?date=${data.date}&id=${art.id}`"
                     @click="saveState()"
                     class="card-title" style="display:block;"
                     x-text="art.cn_title"></a>
                 </template>
-                <template x-if="art.translation_status !== 'done' && art.translation_status !== 'needs_review'">
+                <template x-if="art.translation_status !== 'done' && !(art.translation_status === 'needs_review' && hasReviewDraft(art))">
                   <h3 class="card-title" x-text="art.cn_title"></h3>
                 </template>
 
@@ -349,13 +349,21 @@
                       <svg><use href="#icon-book"/></svg> 查看翻译
                     </a>
                   </template>
-                  <template x-if="art.translation_status === 'needs_review'">
+                  <template x-if="art.translation_status === 'needs_review' && hasReviewDraft(art)">
                     <a :href="`article.html?date=${data.date}&id=${art.id}`"
                       @click="saveState()"
                       class="card-link" style="color:var(--amber); font-weight:600;"
                       :title="reviewReason(art)">
                       <svg><use href="#icon-pencil"/></svg> 复核草稿
                     </a>
+                  </template>
+                  <template x-if="art.translation_status === 'needs_review' && !hasReviewDraft(art)">
+                    <button @click.stop="retryTranslation(art)"
+                      class="card-link"
+                      style="background:transparent; border:0; padding:0; cursor:pointer; color:var(--amber); font-weight:600;"
+                      :title="reviewReason(art)">
+                      <svg><use href="#icon-send"/></svg> &#37325;&#26032;&#25552;&#20132;&#32763;&#35793;
+                    </button>
                   </template>
                   <template x-if="art.comparison_status === 'done'">
                     <a :href="`comparison.html?date=${data.date}&id=${art.id}`"
