@@ -336,6 +336,27 @@
       "total_tokens": 9793,
       "prompt_cache_hit_tokens": 7808,
       "prompt_cache_miss_tokens": 1159
+    },
+    {
+      "time_cn": "2026-06-17 08:02:52",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 28,
+      "article_title": "The Blood of Dawnwalker Preorders Are Live, Here’s What Comes in Each Edition",
+      "article_url": "https://www.ign.com/articles/the-blood-of-dawnwalker-where-to-preorder",
+      "article_date": "2026-06-17",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00032222,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8722,
+      "completion_tokens": 553,
+      "total_tokens": 9275,
+      "prompt_cache_hit_tokens": 7680,
+      "prompt_cache_miss_tokens": 1042
     }
   ]
 }
