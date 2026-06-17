@@ -169,6 +169,12 @@ def check_translation(
     source_text = source_text_from_paragraphs(paragraphs_en, article)
     terms = required_terms or matched_dictionary_terms(source_text, article=article)
 
+    if "MANUAL_TRANSLATION_REQUIRED" in cn_text:
+        issues.append({
+            "type": "manual_translation_required",
+            "detail": "one or more paragraph chunks failed after retry; draft kept for manual review",
+        })
+
     para_items = data.get("paragraphs")
     if not isinstance(para_items, list):
         issues.append({"type": "paragraph_shape", "detail": "paragraphs must be a list"})

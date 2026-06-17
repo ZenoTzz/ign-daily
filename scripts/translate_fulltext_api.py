@@ -469,10 +469,18 @@ def translate_paragraph_chunks(
             translate_chunk(chunk)
         except Exception as exc:
             if len(chunk) == 1:
-                raise
+                idx, en = chunk[0]
+                translated[idx] = f"[MANUAL_TRANSLATION_REQUIRED] {en}"
+                print(f"[REVIEW] fulltext #{article.get('id')} paragraph {idx} still failed after single retry: {exc}; keeping a review draft")
+                return
             print(f"[RETRY] fulltext #{article.get('id')} chunk {chunk[0][0]}-{chunk[-1][0]} failed: {exc}; retrying one paragraph at a time")
             for single in chunk:
-                translate_chunk([single])
+                try:
+                    translate_chunk([single])
+                except Exception as single_exc:
+                    idx, en = single
+                    translated[idx] = f"[MANUAL_TRANSLATION_REQUIRED] {en}"
+                    print(f"[REVIEW] fulltext #{article.get('id')} paragraph {idx} failed after single retry: {single_exc}; keeping a review draft")
     return [{"en": en, "cn": translated[i]} for i, en in indexed]
 
 
