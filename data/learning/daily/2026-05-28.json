@@ -1,8 +1,9 @@
 {
   "date": "2026-05-28",
-  "model": "deepseek-v4-pro",
+  "observer": "codex",
+  "model": "codex",
   "status": "observed",
-  "source_hash": "7e3d5f32210248a5371f166b9569d5d46a39a3fb",
+  "source_hash": "8423b2b909c7ee519867f604feeb8dabd64f3dd3",
   "signal_count": 12,
   "candidate_count": 4,
   "signals": [
@@ -548,11 +549,12 @@
     }
   ],
   "notes": [
+    "??? Codex ??? source_hash ?????????",
+    "source_hash ???? polished/feedback/weekly feedback ?????????????",
     "本次新确认的规则：产品型号顺序、夏日游戏节译名。",
     "待观察规则：公司名中文注释、第一人称处理。",
     "用户已明确拒绝「公司名直接做主语」规则。",
     "删除更新时间、副标题、金额格式等已有规则得到进一步确认，无需新增候选。"
   ],
-  "repaired_json": false,
-  "updated_at": "2026-06-03T15:55:24+08:00"
+  "updated_at": "2026-06-17T21:49:47+08:00"
 }

@@ -1,21 +1,21 @@
 {
   "week_id": "2026-W25",
-  "generated_at": "2026-06-17T10:11:25+08:00",
+  "generated_at": "2026-06-17T21:49:47+08:00",
   "range": {
     "start": "2026-06-15",
     "end": "2026-06-21"
   },
   "summary": {
-    "candidate_count": 9,
+    "candidate_count": 12,
     "ready_for_review": 0,
-    "confirmed_by_feedback": 2,
+    "confirmed_by_feedback": 5,
     "pending": 2
   },
   "candidates": [
     {
       "id": "subtitle_avoid_concrete_detail",
       "title": "????????????????",
-      "rule": "?????????????????????????????????????????????????????????",
+      "rule": "????????????????????????????????????????????",
       "category": "subtitle",
       "scope": "all",
       "status": "confirmed",
@@ -33,27 +33,9 @@
         "2026-06-17"
       ],
       "days_seen": 11,
-      "articles_seen": 13,
+      "articles_seen": 14,
       "contradictions": 0,
       "examples": [
-        {
-          "date": "2026-06-11",
-          "article_id": 4,
-          "before": "武士大戏落幕",
-          "after": "距发售仅一年多"
-        },
-        {
-          "date": "2026-06-11",
-          "article_id": 13,
-          "before": "分批上线新尝试",
-          "after": "《最终幻想16》和《天国：拯救》领衔"
-        },
-        {
-          "date": "2026-06-11",
-          "article_id": 18,
-          "before": "牵线搭桥三年成",
-          "after": "完美契合"
-        },
         {
           "date": "2026-06-11",
           "article_id": 23,
@@ -107,6 +89,24 @@
           "article_id": 6,
           "before": "10亿信用币清零",
           "after": "不会有进一步的处罚"
+        },
+        {
+          "date": "2026-06-01",
+          "article_id": 3,
+          "before": "纯绿照片的玄机",
+          "after": "照片另有玄机"
+        },
+        {
+          "date": "2026-06-17",
+          "article_id": 10,
+          "before": "????",
+          "after": "????"
+        },
+        {
+          "date": "2026-06-17",
+          "article_id": 28,
+          "before": "????????",
+          "after": "???????"
         }
       ],
       "feedback": [
@@ -120,12 +120,12 @@
       "created_at": "2026-06-04T06:38:54+08:00",
       "last_seen": "2026-06-17",
       "confidence": 0.9,
-      "latest_evidence_summary": "6?17???????????????????????"
+      "latest_evidence_summary": "?????????????????????????????????????"
     },
     {
       "id": "preserve_source_information_and_order",
-      "title": "???????????????",
-      "rule": "?????????????????????????????????????????????????????????????????????",
+      "title": "?????????????",
+      "rule": "???????????????????????????????????????????????????????",
       "category": "body",
       "scope": "all",
       "status": "confirmed",
@@ -141,21 +141,9 @@
         "2026-06-17"
       ],
       "days_seen": 9,
-      "articles_seen": 13,
+      "articles_seen": 14,
       "contradictions": 0,
       "examples": [
-        {
-          "date": "2026-06-09",
-          "article_id": 26,
-          "before": "WWDC（全球开发者大会）通常是苹果展示未来一年iOS、macOS、tvOS等所有操作系统更新的舞台。与往年一样，本次大会的重头戏是iOS 27，但在去年iOS 26的液态玻璃（Liquid Glass）等争议性改动之后，苹果将重点放在了系统优化上。虽然宣布的新功能不多，但也没必要堆砌。",
-          "after": "WWDC（全球开发者大会）通常是苹果展示未来一年iOS、macOS、tvOS等所有操作系统更新的舞台。与往年一样，本次大会的重头戏是iOS 27，但在去年iOS 26的液态玻璃（Liquid Glass）等争议性改动之后，苹果将重点放在了系统优化上，同时Siri AI与Apple Intelligence也迎来了全面升级"
-        },
-        {
-          "date": "2026-06-10",
-          "article_id": 1,
-          "before": "在夏日游戏节上，Xbox首席战略官Matthew Ball谈到了当前AI热潮因组件短缺/价格上涨推高硬件价格的情况。据GameSpot报道，Ball指出，由于当前环境，公司无法满足新主机的需求，但这并不意味着玩家没有购买Xbox主机的意愿。",
-          "after": "在夏日游戏节期间，Xbox首席战略官Matthew Ball谈到了AI热潮持续推高硬件成本的问题。由于关键零部件短缺以及价格上涨，硬件制造面临巨大压力。"
-        },
         {
           "date": "2026-06-10",
           "article_id": 28,
@@ -215,6 +203,18 @@
           "article_id": 6,
           "before": "与此同时，最新更新还带来了多项有用的修复，包括对道路探索和在线模式Horizon Play升级所需经验的调整。",
           "after": "与此同时，最新更新还带来了多项有用的修复，包括对道路探索和在线模式Horizon Play升级所需经验的调整。区域概览中现已添加「已驾驶路段」百分比，这将让你更容易地在屏幕地图上追踪那些难以发现的剩余道路。"
+        },
+        {
+          "date": "2026-06-17",
+          "article_id": 17,
+          "before": "?Xbox Wire???6?????7????Xbox Game Pass???????",
+          "after": "Xbox Game Pass ?????????????????????"
+        },
+        {
+          "date": "2026-06-17",
+          "article_id": 23,
+          "before": "TheBatman????????",
+          "after": "1. ????????????????? H.C.F. ??????????"
         }
       ],
       "feedback": [
@@ -227,13 +227,13 @@
       ],
       "created_at": "2026-06-12T17:45:36+08:00",
       "last_seen": "2026-06-17",
-      "confidence": 0.96,
-      "latest_evidence_summary": "6?17????????????/???????????????"
+      "confidence": 0.97,
+      "latest_evidence_summary": "6?17????????Forza?XGP ?????????????????????????????????????"
     },
     {
       "id": "prefer_confirmed_chinese_game_titles",
-      "title": "????????????????",
-      "rule": "????????????????????/??????????????????????????????????",
+      "title": "???????????????",
+      "rule": "?????????????????/??????????????????????????????????",
       "category": "dictionary",
       "scope": "games|movies_tv",
       "status": "confirmed",
@@ -242,18 +242,13 @@
         "2026-06-04",
         "2026-06-10",
         "2026-06-12",
-        "2026-06-16"
+        "2026-06-16",
+        "2026-06-17"
       ],
-      "days_seen": 5,
-      "articles_seen": 11,
-      "contradictions": 0,
+      "days_seen": 6,
+      "articles_seen": 13,
+      "contradictions": 1,
       "examples": [
-        {
-          "date": "2026-06-03",
-          "article_id": 5,
-          "before": "一如既往，任天堂音乐是Nintendo Switch Online订阅用户的专属福利。目前已有超过130款游戏的原声带可供你随时聆听，从《皮克敏》到《瓦力欧制造》，从《路易吉洋楼》到《超级马力欧银河》。",
-          "after": "一如既往，任天堂音乐是Nintendo Switch Online订阅用户的专属福利。目前已有超过130款游戏的原声带可供你随时聆听，从《皮克敏》到《瓦力欧制造》，从《路易吉洋馆》到《超级马力欧银河》。"
-        },
         {
           "date": "2026-06-03",
           "article_id": 18,
@@ -313,6 +308,18 @@
           "article_id": 37,
           "before": "「我仍然相信，即便是在当下，即使对于像素美术的回合制游戏，也依然有成长、进化和发展的空间。」Nakashima告诉我，「当然，这类体验深深植根于经典，倾向于让人感到熟悉。然而，通过融入一些新技术，我仍然相信这类体验是有前途的。即使你在今天这样一个现代环境下玩它，这类RPG也未必会让人觉得过时。这些游戏仍然大有未来，或许这就是这一切的源头。」",
           "after": "「我仍然相信，即便是在当下，即使对于像素美术的回合制游戏，也依然有成长、进化和发展的空间。」中岛启辅告诉我，「当然，这类体验深深植根于经典，倾向于让人感到熟悉。然而，通过融入一些新技术，我仍然相信这类体验是有前途的。即使你在今天这样一个现代环境下玩它，这类RPG也未必会让人觉得过时。这些游戏仍然大有未来，或许这就是这一切的源头。」"
+        },
+        {
+          "date": "2026-06-17",
+          "article_id": 3,
+          "before": "???????????????",
+          "after": "HBO????????????????"
+        },
+        {
+          "date": "2026-06-17",
+          "article_id": 23,
+          "before": "????????",
+          "after": "????? ???????"
         }
       ],
       "feedback": [
@@ -324,9 +331,101 @@
         }
       ],
       "created_at": "2026-06-12T17:45:36+08:00",
-      "last_seen": "2026-06-16",
+      "last_seen": "2026-06-17",
       "confidence": 0.86,
-      "latest_evidence_summary": "?????????????????????????????????????????"
+      "latest_evidence_summary": "?????????????????? ???????????????????????????????????",
+      "contradiction_notes": [
+        {
+          "date": "2026-06-17",
+          "text": "?XGP??????????????????????????????????????"
+        }
+      ]
+    },
+    {
+      "id": "retain_original_for_unconfirmed_names",
+      "title": "??????????????",
+      "rule": "????????????????????????????????????????????????",
+      "category": "dictionary",
+      "scope": "all",
+      "status": "confirmed",
+      "days": [
+        "2026-06-05",
+        "2026-06-10",
+        "2026-06-11",
+        "2026-06-16",
+        "2026-06-17"
+      ],
+      "days_seen": 5,
+      "articles_seen": 9,
+      "contradictions": 0,
+      "examples": [
+        {
+          "date": "2026-06-05",
+          "article_id": 29,
+          "before": "CD Projekt新IP《哈达尔》招聘信息透露模糊线索",
+          "after": "招聘信息透露CD Projekt新IP《Hadar》模糊线索"
+        },
+        {
+          "date": "2026-06-10",
+          "article_id": 29,
+          "before": "《剑星》总监谈新主角伊薇设计：更年轻但个性更强",
+          "after": "《剑星》总监谈新主角Evie设计：更年轻但个性更强"
+        },
+        {
+          "date": "2026-06-11",
+          "article_id": 11,
+          "before": "由于公司全球发行部门及西班牙巴塞罗那工作室的组织调整，预计还将有更多职位裁撤。巴塞罗那工作室此前曾支持《疯狂兔子》系列和《星际迷航：舰桥船员》等项目，今后将只专注于《彩虹六号》系列。",
+          "after": "由于公司全球发行部门及西班牙巴塞罗那工作室的组织调整，预计还将有更多职位裁撤。巴塞罗那工作室此前曾支持《疯狂兔子》系列和《Star Trek: Bridge Crew》等项目，今后将只专注于《彩虹六号》系列。"
+        },
+        {
+          "date": "2026-06-16",
+          "article_id": 8,
+          "before": "卡普空宣布，计划在《龙之信条2》的《黑暗觉者》资料片发售前，下架游戏内的微交易项目。",
+          "after": "卡普空宣布，计划在《龙之信条2》的《Dark Arisen》DLC发售前，下架游戏内的微交易项目。"
+        },
+        {
+          "date": "2026-06-16",
+          "article_id": 37,
+          "before": "《最终幻想：共鸣》制作人谈回合制RPG复兴",
+          "after": "《最终幻想 RESONANCE》制作人谈回合制RPG复兴"
+        },
+        {
+          "date": "2026-06-16",
+          "article_id": 22,
+          "before": "在《Final Fantasy 7 Revelation》公开预告片的前几分钟里，开发商史克威尔艾尼克斯让我们重新见到了飞空艇Highwind。原作PlayStation游戏的粉丝会满怀深情地回忆起它那多螺旋桨的壮丽身姿；正是这艘载具，为《最终幻想7》的世界地图解锁了想去哪里就去哪里的完全自由。不受河流、海洋或山脉的限制，你可以高速翱翔全球。而且，只要有能安全降落的地方，你就能探索任何吸引你的地点。",
+          "after": "在《最终幻想7 Revelation》公开预告片的前几分钟里，开发商史克威尔艾尼克斯让我们重新见到了高风号（Highwind）飞空艇。原作游戏的粉丝会满怀深情地回忆起它那多螺旋桨的壮丽身姿；正是这艘载具，为《最终幻想7》的世界地图解锁了想去哪里就去哪里的完全自由。不受河流、海洋或山脉的限制，你可以高速翱翔全球。而且，只要有能安全降落的地方，你就能探索任何吸引你的地点。"
+        },
+        {
+          "date": "2026-06-16",
+          "article_id": 34,
+          "before": "Treyarch最近还为《黑色行动7》更新了一个名为「Black Ops Classic」的新播放列表。该列表包含了经典的《黑色行动》地图，并对游戏玩法进行了重大调整，使其更贴近原版《黑色行动》游戏。有人猜测这可能是在为重制版铺路。",
+          "after": "Treyarch最近还为《黑色行动7》更新了一个名为「黑色行动经典（Black Ops Classic）」的新列表。该列表包含了经典的《黑色行动》地图，并对游戏玩法进行了重大调整，使其更贴近原版《黑色行动》游戏。有人猜测这可能是在为重制版铺路。"
+        },
+        {
+          "date": "2026-06-17",
+          "article_id": 5,
+          "before": "?????????(Harmony: The Fall of Reverie)",
+          "after": "?Harmony: The Fall of Reverie?"
+        },
+        {
+          "date": "2026-06-17",
+          "article_id": 23,
+          "before": "??????",
+          "after": "?????? H.C.F."
+        }
+      ],
+      "feedback": [
+        {
+          "week_id": "2026-W24",
+          "text": "采纳，进入长期规则。",
+          "classified_as": "confirmed",
+          "created_at": "2026-06-15T21:48:32+08:00"
+        }
+      ],
+      "created_at": "2026-06-12T21:51:19+08:00",
+      "last_seen": "2026-06-17",
+      "confidence": 0.9,
+      "latest_evidence_summary": "6?17???????? Harmony: The Fall of Reverie?Jusant?H.C.F. ??????????"
     },
     {
       "id": "remove_author_bio_and_image_credit",
@@ -397,77 +496,38 @@
       "latest_evidence_summary": "6?17??????????????"
     },
     {
-      "id": "retain_original_for_unconfirmed_names",
-      "title": "?????????????",
-      "rule": "DLC ????????????????????????????????????????????????????????????",
-      "category": "dictionary",
+      "id": "use_live_exchange_rate_for_cny",
+      "title": "?????????????????",
+      "rule": "???????????????????????????????????????????????????????",
+      "category": "currency",
       "scope": "all",
-      "status": "confirmed",
+      "status": "pending",
       "days": [
-        "2026-06-05",
-        "2026-06-10",
-        "2026-06-11",
-        "2026-06-16"
+        "2026-06-16",
+        "2026-06-17"
       ],
-      "days_seen": 4,
-      "articles_seen": 7,
+      "days_seen": 2,
+      "articles_seen": 2,
       "contradictions": 0,
       "examples": [
         {
-          "date": "2026-06-05",
-          "article_id": 29,
-          "before": "CD Projekt新IP《哈达尔》招聘信息透露模糊线索",
-          "after": "招聘信息透露CD Projekt新IP《Hadar》模糊线索"
-        },
-        {
-          "date": "2026-06-10",
-          "article_id": 29,
-          "before": "《剑星》总监谈新主角伊薇设计：更年轻但个性更强",
-          "after": "《剑星》总监谈新主角Evie设计：更年轻但个性更强"
-        },
-        {
-          "date": "2026-06-11",
-          "article_id": 11,
-          "before": "由于公司全球发行部门及西班牙巴塞罗那工作室的组织调整，预计还将有更多职位裁撤。巴塞罗那工作室此前曾支持《疯狂兔子》系列和《星际迷航：舰桥船员》等项目，今后将只专注于《彩虹六号》系列。",
-          "after": "由于公司全球发行部门及西班牙巴塞罗那工作室的组织调整，预计还将有更多职位裁撤。巴塞罗那工作室此前曾支持《疯狂兔子》系列和《Star Trek: Bridge Crew》等项目，今后将只专注于《彩虹六号》系列。"
-        },
-        {
           "date": "2026-06-16",
           "article_id": 8,
-          "before": "卡普空宣布，计划在《龙之信条2》的《黑暗觉者》资料片发售前，下架游戏内的微交易项目。",
-          "after": "卡普空宣布，计划在《龙之信条2》的《Dark Arisen》DLC发售前，下架游戏内的微交易项目。"
+          "before": "《龙之信条2》在2024年首发时因其微交易而受到批评，发售当天就提供了超过21种微交易项目。这些项目的价格从0.99美元(约合人民币7元)到4.99美元(约合人民币34元)不等，包括售价2.99美元(约合人民币20元)的探险家露营套装、0.99美元(约合人民币7元)的牢狱钥匙（可让玩家越狱，但用一次就坏）、2.99美元(约合人民币20元)的传送基石（传送点标记），以及0.99美元(约合人民币7元)的复活石，能复活死者。",
+          "after": "《龙之信条2》在2024年首发时因其微交易而受到批评，发售当天就提供了超过21种微交易项目。这些项目的价格从0.99美元（约合人民币6.76元）到4.99美元（约合人民币33.8元）不等，包括售价2.99美元（约合人民币20.28元）的「露营套装」、0.99美元（约合人民币6.76元）的「监狱简易钥匙」（可让玩家越狱，但用一次就坏）、2.99美元的「返回的基石」（传送点标记），以及0.99美元的复活石，能复活死者。"
         },
         {
-          "date": "2026-06-16",
-          "article_id": 37,
-          "before": "《最终幻想：共鸣》制作人谈回合制RPG复兴",
-          "after": "《最终幻想 RESONANCE》制作人谈回合制RPG复兴"
-        },
-        {
-          "date": "2026-06-16",
-          "article_id": 22,
-          "before": "在《Final Fantasy 7 Revelation》公开预告片的前几分钟里，开发商史克威尔艾尼克斯让我们重新见到了飞空艇Highwind。原作PlayStation游戏的粉丝会满怀深情地回忆起它那多螺旋桨的壮丽身姿；正是这艘载具，为《最终幻想7》的世界地图解锁了想去哪里就去哪里的完全自由。不受河流、海洋或山脉的限制，你可以高速翱翔全球。而且，只要有能安全降落的地方，你就能探索任何吸引你的地点。",
-          "after": "在《最终幻想7 Revelation》公开预告片的前几分钟里，开发商史克威尔艾尼克斯让我们重新见到了高风号（Highwind）飞空艇。原作游戏的粉丝会满怀深情地回忆起它那多螺旋桨的壮丽身姿；正是这艘载具，为《最终幻想7》的世界地图解锁了想去哪里就去哪里的完全自由。不受河流、海洋或山脉的限制，你可以高速翱翔全球。而且，只要有能安全降落的地方，你就能探索任何吸引你的地点。"
-        },
-        {
-          "date": "2026-06-16",
-          "article_id": 34,
-          "before": "Treyarch最近还为《黑色行动7》更新了一个名为「Black Ops Classic」的新播放列表。该列表包含了经典的《黑色行动》地图，并对游戏玩法进行了重大调整，使其更贴近原版《黑色行动》游戏。有人猜测这可能是在为重制版铺路。",
-          "after": "Treyarch最近还为《黑色行动7》更新了一个名为「黑色行动经典（Black Ops Classic）」的新列表。该列表包含了经典的《黑色行动》地图，并对游戏玩法进行了重大调整，使其更贴近原版《黑色行动》游戏。有人猜测这可能是在为重制版铺路。"
+          "date": "2026-06-17",
+          "article_id": 28,
+          "before": "69.99??(?????473?)",
+          "after": "69.99????????474??"
         }
       ],
-      "feedback": [
-        {
-          "week_id": "2026-W24",
-          "text": "采纳，进入长期规则。",
-          "classified_as": "confirmed",
-          "created_at": "2026-06-15T21:48:32+08:00"
-        }
-      ],
-      "created_at": "2026-06-12T21:51:19+08:00",
-      "last_seen": "2026-06-16",
+      "feedback": [],
+      "created_at": "2026-06-17T10:11:25+08:00",
+      "last_seen": "2026-06-17",
       "confidence": 0.9,
-      "latest_evidence_summary": "Dark Arisen?RESONANCE?Highwind ???????????????????????????"
+      "latest_evidence_summary": "???????????????????? 69.99/79.99/199.99 ?????? Steam ?????"
     },
     {
       "id": "wrap_media_source_names",
@@ -503,31 +563,208 @@
       "latest_evidence_summary": "????? The Game Business ??????????????????"
     },
     {
-      "id": "use_live_exchange_rate_for_cny",
-      "title": "??????????????????",
-      "rule": "??????????????????? 7 ?????????????????????????????????????????????????",
-      "category": "currency",
+      "id": "summer_game_fest",
+      "title": "Summer Game Fest 译名",
+      "rule": "Summer Game Fest 译为「夏日游戏节」，不使用「夏季游戏节」等。",
+      "category": "dictionary",
       "scope": "all",
-      "status": "pending",
+      "status": "confirmed_by_feedback",
       "days": [
-        "2026-06-16"
+        "2026-05-28"
       ],
       "days_seen": 1,
       "articles_seen": 1,
       "contradictions": 0,
       "examples": [
         {
-          "date": "2026-06-16",
-          "article_id": 8,
-          "before": "《龙之信条2》在2024年首发时因其微交易而受到批评，发售当天就提供了超过21种微交易项目。这些项目的价格从0.99美元(约合人民币7元)到4.99美元(约合人民币34元)不等，包括售价2.99美元(约合人民币20元)的探险家露营套装、0.99美元(约合人民币7元)的牢狱钥匙（可让玩家越狱，但用一次就坏）、2.99美元(约合人民币20元)的传送基石（传送点标记），以及0.99美元(约合人民币7元)的复活石，能复活死者。",
-          "after": "《龙之信条2》在2024年首发时因其微交易而受到批评，发售当天就提供了超过21种微交易项目。这些项目的价格从0.99美元（约合人民币6.76元）到4.99美元（约合人民币33.8元）不等，包括售价2.99美元（约合人民币20.28元）的「露营套装」、0.99美元（约合人民币6.76元）的「监狱简易钥匙」（可让玩家越狱，但用一次就坏）、2.99美元的「返回的基石」（传送点标记），以及0.99美元的复活石，能复活死者。"
+          "date": "2026-05-28",
+          "article_id": 22,
+          "before": "Summer Game Fest",
+          "after": "夏日游戏节"
         }
       ],
-      "feedback": [],
-      "created_at": "2026-06-17T10:11:25+08:00",
-      "last_seen": "2026-06-16",
+      "feedback": [
+        {
+          "week_id": "2026-W23",
+          "text": "采纳，进入长期规则。",
+          "classified_as": "confirmed",
+          "created_at": "2026-06-04T06:38:24+08:00"
+        },
+        {
+          "week_id": "2026-W23",
+          "text": "采纳，进入长期规则。",
+          "classified_as": "confirmed",
+          "created_at": "2026-06-04T06:38:54+08:00"
+        },
+        {
+          "week_id": "2026-W23",
+          "text": "采纳，进入长期规则。",
+          "classified_as": "confirmed",
+          "created_at": "2026-06-04T06:39:36+08:00"
+        },
+        {
+          "week_id": "2026-W23",
+          "text": "采纳，进入长期规则。",
+          "classified_as": "confirmed",
+          "created_at": "2026-06-05T05:07:48+08:00"
+        },
+        {
+          "week_id": "2026-W23",
+          "text": "采纳，进入长期规则。",
+          "classified_as": "confirmed",
+          "created_at": "2026-06-06T04:56:39+08:00"
+        },
+        {
+          "week_id": "2026-W23",
+          "text": "采纳，进入长期规则。",
+          "classified_as": "confirmed",
+          "created_at": "2026-06-07T02:52:19+08:00"
+        }
+      ],
+      "created_at": "2026-06-03T15:55:24+08:00",
+      "last_seen": "2026-05-28",
+      "confidence": 0.8,
+      "latest_evidence_summary": "用户将原文'Summer Game Fest'改为'夏日游戏节'，符合专有活动惯用译名。"
+    },
+    {
+      "id": "product_name_order",
+      "title": "产品名+型号顺序",
+      "rule": "英文产品名与型号组合时，按中文习惯将型号后置，如 'Steam Deck OLED' 而非 'OLED Steam Deck'。",
+      "category": "dictionary",
+      "scope": "all",
+      "status": "confirmed_by_feedback",
+      "days": [
+        "2026-05-28"
+      ],
+      "days_seen": 1,
+      "articles_seen": 1,
+      "contradictions": 0,
+      "examples": [
+        {
+          "date": "2026-05-28",
+          "article_id": 6,
+          "before": "OLED Steam Deck",
+          "after": "Steam Deck OLED"
+        }
+      ],
+      "feedback": [
+        {
+          "week_id": "2026-W23",
+          "text": "采纳，进入长期规则。",
+          "classified_as": "confirmed",
+          "created_at": "2026-06-04T06:38:24+08:00"
+        },
+        {
+          "week_id": "2026-W23",
+          "text": "采纳，进入长期规则。",
+          "classified_as": "confirmed",
+          "created_at": "2026-06-04T06:38:54+08:00"
+        },
+        {
+          "week_id": "2026-W23",
+          "text": "采纳，进入长期规则。",
+          "classified_as": "confirmed",
+          "created_at": "2026-06-04T06:39:36+08:00"
+        },
+        {
+          "week_id": "2026-W23",
+          "text": "采纳，进入长期规则。",
+          "classified_as": "confirmed",
+          "created_at": "2026-06-05T05:07:48+08:00"
+        },
+        {
+          "week_id": "2026-W23",
+          "text": "采纳，进入长期规则。",
+          "classified_as": "confirmed",
+          "created_at": "2026-06-06T04:56:39+08:00"
+        },
+        {
+          "week_id": "2026-W23",
+          "text": "采纳，进入长期规则。",
+          "classified_as": "confirmed",
+          "created_at": "2026-06-07T02:52:19+08:00"
+        }
+      ],
+      "created_at": "2026-06-03T15:55:24+08:00",
+      "last_seen": "2026-05-28",
       "confidence": 0.9,
-      "latest_evidence_summary": "??? 0.99/4.99/2.99 ??????????????????? 6.76/33.8/20.28 ?????????????????? 7?"
+      "latest_evidence_summary": "用户明确反馈'这个以后都一律按这样排序'，且所有类似情况均如此处理。"
+    },
+    {
+      "id": "use_common_nickname_for_character",
+      "title": "使用角色常用绰号",
+      "rule": "对于有广为人知中文绰号的超级英雄/反派角色，正文中优先使用绰号而非全名（如用毁灭博士而不是维克多·冯·杜姆）。",
+      "category": "names",
+      "scope": "all",
+      "status": "confirmed_by_feedback",
+      "days": [
+        "2026-06-01"
+      ],
+      "days_seen": 1,
+      "articles_seen": 1,
+      "contradictions": 1,
+      "examples": [
+        {
+          "date": "2026-06-01",
+          "article_id": 3,
+          "before": "维克多·冯·杜姆",
+          "after": "毁灭博士"
+        }
+      ],
+      "feedback": [
+        {
+          "week_id": "2026-W23",
+          "text": "暂缓，继续观察。",
+          "classified_as": "pending",
+          "created_at": "2026-06-04T06:38:24+08:00"
+        },
+        {
+          "week_id": "2026-W23",
+          "text": "暂缓，继续观察。",
+          "classified_as": "pending",
+          "created_at": "2026-06-04T06:38:54+08:00"
+        },
+        {
+          "week_id": "2026-W23",
+          "text": "暂缓，继续观察。",
+          "classified_as": "pending",
+          "created_at": "2026-06-04T06:39:36+08:00"
+        },
+        {
+          "week_id": "2026-W23",
+          "text": "暂缓，继续观察。",
+          "classified_as": "pending",
+          "created_at": "2026-06-05T05:07:48+08:00"
+        },
+        {
+          "week_id": "2026-W23",
+          "text": "暂缓，继续观察。",
+          "classified_as": "pending",
+          "created_at": "2026-06-06T04:56:39+08:00"
+        },
+        {
+          "week_id": "2026-W23",
+          "text": "暂缓，继续观察。",
+          "classified_as": "pending",
+          "created_at": "2026-06-07T02:52:19+08:00"
+        },
+        {
+          "week_id": "2026-W24",
+          "text": "暂缓，继续观察。",
+          "classified_as": "pending",
+          "created_at": "2026-06-15T21:48:32+08:00"
+        }
+      ],
+      "created_at": "2026-06-03T16:01:56+08:00",
+      "last_seen": "2026-06-01",
+      "contradiction_notes": [
+        {
+          "date": "2026-06-01",
+          "text": "与保留英文名规则（不知名人物保留英文名）不冲突，因为这是知名角色。"
+        }
+      ],
+      "confidence": 0.7,
+      "latest_evidence_summary": "article 3 paragraph 3 用户将全名改为绰号，与现有 pending 规律一致且本次无矛盾。"
     },
     {
       "id": "roman_to_arabic_game_title",

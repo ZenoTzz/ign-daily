@@ -1,8 +1,9 @@
 {
   "date": "2026-06-02",
-  "model": "deepseek-v4-flash",
+  "observer": "codex",
+  "model": "codex",
   "status": "observed",
-  "source_hash": "4f397cf3ac6002fbf14783db47cc9730cd8a655f",
+  "source_hash": "4e2b5acfb7f03defefab8f7344d2701c57393b05",
   "signal_count": 7,
   "candidate_count": 0,
   "signals": [
@@ -283,7 +284,9 @@
     }
   ],
   "candidates": [],
-  "notes": [],
-  "repaired_json": true,
-  "updated_at": "2026-06-04T06:39:36+08:00"
+  "notes": [
+    "??? Codex ??? source_hash ?????????",
+    "source_hash ???? polished/feedback/weekly feedback ?????????????"
+  ],
+  "updated_at": "2026-06-17T21:49:47+08:00"
 }

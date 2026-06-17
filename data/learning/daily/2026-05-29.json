@@ -1,9 +1,9 @@
 {
   "date": "2026-05-29",
-  "model": "deepseek-v4-pro",
-  "status": "skipped",
-  "reason": "json_parse_failed",
-  "source_hash": "42f914fab97fe5c1392c5fa440b3f745ccee12f5",
+  "observer": "codex",
+  "model": "codex",
+  "status": "observed",
+  "source_hash": "f7d6bb38644b39bd642d6799df5a90cacb641641",
   "signal_count": 17,
   "candidate_count": 0,
   "signals": [
@@ -528,11 +528,9 @@
   ],
   "candidates": [],
   "notes": [
+    "??? Codex ??? source_hash ?????????",
+    "source_hash ???? polished/feedback/weekly feedback ?????????????",
     "API returned malformed JSON; automatic repair did not produce valid JSON."
   ],
-  "parse_error": "Expecting ',' delimiter: line 78 column 6 (char 2393)",
-  "repair_error": "Expecting ',' delimiter: line 21 column 6 (char 696)",
-  "raw_excerpt": "{ \"candidates\": [ { \"id_hint\": \"preserve_original_poetry\", \"title\": \"保留英文诗歌并单独成段\", \"rule\": \"当原文插入了非中文诗歌或歌词时，保留原文不翻译，并独立为一个段落。\", \"category\": \"body\", \"scope\": \"all\", \"status_suggestion\": \"observe\", \"confidence\": 0.6, \"evidence_summary\": \"用户将莎士比亚体诗歌作为独立段落保留，未进行翻译。仅出现一次但特征明显。\", \"examples\": [ { \"date\": \"2026-05-29\", \"article_id\": 6, \"before\": \"\", \"after\": \"On Belleteyn night, when tall fires rise,\\nWhispered wishes go through the quiet skies.\\nA lion cub’s fate is penned in the stars,\\nAnd lilac and gooseberries are never too far.\\n...\" } ], \"contradiction\": \"\" }, { \"id_hint\": \"supplement_steam_cn_price\", \"title\": \"补充国区Steam定价\", \"rule\": \"在首次提及游戏售价时，若该游戏在Steam上架，应补充国区Steam商店的人民币定价。\", \"category\": \"currency\", \"scope\": \"games\", \"status_suggestion\": \"confirm\", \"confidence\": 0.8, \"evidence_summary\": \"用户主动在#10的价格说明后添加“国区Steam商店定价200元”。结合此前已有的类似观察信号，可确认为用户偏好。\", \"examples\": [ { \"date\": \"2026-05-29\", \"article_id\": 10, \"before\": \"49.99美元（约合人民币358元）\", \"after\": \"49.99美元（约合人民币358元），国区Steam商店定价200元\" } ], \"contradiction\": \"\" }, { \"id_hint\": \"title_omit_cny_conversion\", \"title\": \"标题中省略人民币换算\", \"rule\": \"标题涉及美元金额时，可省略括号内的人民币换算，以保持标题简洁。\", \"category\": \"title\", \"scope\": \"all\", \"status_suggestion\": \"observe\", ",
-  "repair_excerpt": "{ \"candidates\": [ { \"id_hint\": \"preserve_original_poetry\", \"title\": \"保留英文诗歌并单独成段\", \"rule\": \"当原文插入了非中文诗歌或歌词时，保留原文不翻译，并独立为一个段落。\", \"category\": \"body\", \"scope\": \"all\", \"status_suggestion\": \"observe\", \"confidence\": 0.6, \"evidence_summary\": \"用户将莎士比亚体诗歌作为独立段落保留，未进行翻译。仅出现一次但特征明显。\", \"examples\": [ { \"date\": \"2026-05-29\", \"article_id\": 6, \"before\": \"\", \"after\": \"On Belleteyn night, when tall fires rise,\\nWhispered wishes go through the quiet skies.\\nA lion cub’s fate is penned in the stars,\\nAnd lilac and gooseberries are never too far.\\n...\" } ], \"contradiction\": \"\" }, { \"id_hint\": \"supplement_steam_cn_price\", \"title\": \"补充国区Steam定价\", \"rule\": \"在首次提及游戏售价时，若该游戏在Steam上架，应补充国区Steam商店的人民",
-  "updated_at": "2026-06-03T15:57:51+08:00"
+  "updated_at": "2026-06-17T21:49:47+08:00"
 }

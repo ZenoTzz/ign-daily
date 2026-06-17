@@ -1,8 +1,9 @@
 {
   "date": "2026-06-01",
-  "model": "deepseek-v4-flash",
+  "observer": "codex",
+  "model": "codex",
   "status": "observed",
-  "source_hash": "a71f8682af0635b56ca39eef4ba580ce26503537",
+  "source_hash": "32fb8e68f19b6de129fc1d0493fbee2462e73fbb",
   "signal_count": 1,
   "candidate_count": 4,
   "signals": [
@@ -136,8 +137,9 @@
     }
   ],
   "notes": [
+    "??? Codex ??? source_hash ?????????",
+    "source_hash ???? polished/feedback/weekly feedback ?????????????",
     "本次学习基于 article 3 的用户润色。已确认的补充中国大陆上映信息和删除文末推广链接规律再次出现，但已录入，未重复提取。"
   ],
-  "repaired_json": false,
-  "updated_at": "2026-06-04T06:38:54+08:00"
+  "updated_at": "2026-06-17T21:49:47+08:00"
 }

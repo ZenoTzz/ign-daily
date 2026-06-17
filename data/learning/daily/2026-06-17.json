@@ -1,11 +1,77 @@
 {
   "date": "2026-06-17",
   "observer": "codex",
+  "model": "codex",
   "status": "observed",
-  "source_hash": "accaa37850b130b3cf7abcbaa030b20738a5272d",
-  "signal_count": 1,
-  "candidate_count": 3,
+  "source_hash": "244e2e0311ce61e3cb20570fcd6dd6b6d3a9cdd1",
+  "signal_count": 8,
+  "candidate_count": 5,
   "signals": [
+    {
+      "type": "user_polish",
+      "date": "2026-06-17",
+      "article_id": 3,
+      "url": "https://www.ign.com/articles/harry-potter-tv-series-casts-peter-serafinowicz-in-role-not-featured-in-the-films",
+      "en_title": "Harry Potter TV Series Casts Peter Serafinowicz in Role Not Featured in the Films",
+      "cn_title": "《哈利波特》剧集皮皮鬼演员敲定",
+      "edits": [
+        {
+          "field": "title",
+          "before": "《哈利波特》剧集皮皮鬼演员敲定",
+          "after": "HBO《哈利·波特》剧集皮皮鬼演员敲定"
+        },
+        {
+          "field": "paragraph_2",
+          "before": "皮皮鬼是一个调皮捣蛋的恶作剧幽灵，在霍格沃茨的走廊里四处游荡。Serafinowicz出演这个角色很合适，因为他有很强的喜剧功底。目前尚不清楚皮皮鬼是会出现在第一季，还是要等到第二季才登场。该剧目前正处于前期制作阶段，预计今年秋季开拍。",
+          "after": "皮皮鬼是一个调皮捣蛋的恶作剧幽灵，在霍格沃茨的走廊里四处游荡。Serafinowicz出演这个角色很合适，因为他有很强的喜剧功底。目前尚不清楚皮皮鬼是会出现在第一季，还是要等到第二季才登场，第二季目前正处于前期制作阶段，预计今年秋季开拍。"
+        },
+        {
+          "field": "paragraph_5",
+          "before": "Serafinowicz是一位多产的电视剧演员，但如果你不熟悉他在无数小荧幕角色中的演出，也可能会从他在《僵尸肖恩》中饰演Simon Pegg和Nick Frost的室友Pete，或者在《疾速追杀2》中饰演侍酒师的角色认出他来。Serafinowicz还经常为动画和游戏配音，并将在即将推出的动作驾驶游戏Clutch中亮相。",
+          "after": "Serafinowicz是一位多产的电视剧演员，但如果你不熟悉他在无数小荧幕角色中的演出，也可能会从他在《僵尸肖恩》中饰演西蒙·佩吉和尼克·弗罗斯特的室友Pete，或者在《疾速追杀2》中饰演侍酒师的角色认出他来。Serafinowicz还经常为动画和游戏配音，并将在即将推出的动作驾驶游戏Clutch中亮相。"
+        },
+        {
+          "field": "paragraph_6",
+          "before": "《哈利·波特》第一季将改编自1997年的《哈利·波特与魔法石》（美国版书名为《Harry Potter and the Sorcerer's Stone》），并计划于今年圣诞节在HBO首播。",
+          "after": "《哈利·波特》第一季将改编自1997年的《哈利·波特与魔法石》，并计划于今年圣诞节在HBO首播。"
+        }
+      ]
+    },
+    {
+      "type": "user_polish",
+      "date": "2026-06-17",
+      "article_id": 5,
+      "url": "https://www.ign.com/articles/life-is-strange-creator-dont-nod-warned-it-will-run-out-of-funds-this-year",
+      "en_title": "Life is Strange Creator Don't Nod Warned It Will Run Out of Funds This Year",
+      "cn_title": "《奇异人生》开发商Don't Nod资金年内耗尽",
+      "edits": [
+        {
+          "field": "paragraph_3",
+          "before": "Don't Nod总部位于巴黎，并在蒙特利尔设有一间卫星工作室。该工作室以打造叙事冒险游戏系列《奇异人生》而闻名，不过该系列的较新作已交由其他工作室开发。其精神续作《失落的记录：绽放与愤怒》(Lost Records: Bloom & Rage)终于在2025年2月问世，但市场表现不佳。",
+          "after": "Don't Nod总部位于巴黎，并在蒙特利尔设有一间卫星工作室。该工作室以打造叙事冒险游戏系列《奇异人生》而闻名，不过该系列的较新作已交由其他工作室开发。其精神续作《Lost Records: Bloom & Rage》在2025年2月问世，但市场表现不佳。"
+        },
+        {
+          "field": "paragraph_4",
+          "before": "该公司近年一直在寻求一款爆款作品，但其连续推出的一系列游戏都未能掀起市场波澜，包括《和鸣：遐想陨落》(Harmony: The Fall of Reverie)、《Jusant》、《驱灵者：新伊甸幽灵》(驱灵者：新伊甸的幽灵)，以及今年推出的科幻动作冒险游戏《Aphelion》。",
+          "after": "该公司近年一直在寻求一款爆款作品，但其连续推出的一系列游戏都未能掀起市场波澜，包括《Harmony: The Fall of Reverie》、《Jusant》、《驱灵者：新伊甸的幽灵》，以及今年推出的科幻动作冒险游戏《Aphelion》。"
+        },
+        {
+          "field": "paragraph_8",
+          "before": "「董事长还告知我们，应他要求，公司主要股东腾讯不愿在短期内参与增资，也不愿通过联合制作协议为当前在研游戏提供资金。」",
+          "after": "「董事长还告知我们，公司主要股东腾讯不愿在短期内参与增资，也不愿通过联合制作协议为当前在研游戏提供资金。最后，董事长表示，已与视频游戏行业的一些主要参与者进行了数月的讨论，但这些讨论并未带来任何结构化的融资方案。鉴于目前的情况，我们认定上述事实可能危及贵公司的持续经营。」"
+        },
+        {
+          "field": "paragraph_9",
+          "before": "「最后，董事长表示，已与视频游戏行业的一些主要参与者进行了数月的讨论，但这些讨论并未带来任何结构化的融资方案。鉴于目前的情况，我们认定上述事实可能危及贵公司的持续经营。」",
+          "after": "目前正在探索的解决方案包括从另一家主要合作伙伴处获取资金、提前发布工作室尚未公布的下一款游戏（比原计划提前至2027年初），或安排员工承接外部项目的雇佣制外包工作。然而，至今尚未找到任何解决方案。"
+        },
+        {
+          "field": "paragraph_10",
+          "before": "目前正在探索的解决方案包括从另一家主要合作伙伴处获取资金、提前发布工作室尚未公布的下一款游戏（比原计划提前至2027年初），或安排员工承接外部项目的雇佣制外包工作。然而，至今尚未找到任何解决方案。",
+          "after": "眼下对于视频游戏行业来说是一个黯淡的时期，微软旗下众多工作室也正在讨论大规模裁员和可能关闭工作室的议题。"
+        }
+      ]
+    },
     {
       "type": "user_polish",
       "date": "2026-06-17",
@@ -55,55 +121,266 @@
           "after": "完整的更新说明可在《极限竞速》支持页面上查看。"
         }
       ]
+    },
+    {
+      "type": "user_polish",
+      "date": "2026-06-17",
+      "article_id": 10,
+      "url": "https://www.ign.com/articles/psychonauts-developer-double-fine-responds-to-closure-reports-with-a-single-emoji",
+      "en_title": "Psychonauts Developer Double Fine Responds to Closure Reports With a Single Emoji",
+      "cn_title": "《意航员》开发商用emoji回应关闭传闻",
+      "edits": [
+        {
+          "field": "subtitle",
+          "before": "看点来了",
+          "after": "流汗黄豆"
+        },
+        {
+          "field": "paragraph_2",
+          "before": "这家旧金山工作室是微软旗下多家被传正在为生存而战的工作室之一。Xbox正经历重大重组，预计本月晚些时候将导致游戏业务大范围裁员。《地狱之刃》开发商Ninja Theory（一周多前刚在Xbox游戏展示会上公布了新作《塞娜》）和《午夜之南》开发商Compulsion据报道也在与微软谈判，希望通过买断来避免关闭。",
+          "after": "这家旧金山工作室是微软旗下多家被传正在为生存而战的工作室之一。Xbox正经历重大重组，预计本月晚些时候将导致游戏业务大范围裁员。《地狱之刃》开发商Ninja Theory（一周多前刚在Xbox游戏展示会上公布了新作《地狱之刃：塞娜》）和《午夜之南》开发商Compulsion据报道也在与微软谈判，希望通过买断来避免关闭。"
+        },
+        {
+          "field": "paragraph_5",
+          "before": "Double Fine确实在社交媒体上发布了一个表情符号帖子，总结了它此刻的感受：一张微笑着张着嘴、冷汗直流的脸。",
+          "after": "Double Fine确实在社交媒体上发布了一个表情符号帖子，总结了它此刻的感受：一张微笑着张着嘴、冷汗直流的脸（流汗黄豆）。"
+        },
+        {
+          "field": "paragraph_8",
+          "before": "Sharma那封撼动公司的备忘录透露，微软游戏业务目前的问责利润率（据推测为利润率）为3%，同比下降。Sharma说道：「剔除动视暴雪和King，过去五年我们在内容、平台和硬件补贴上持续投入超过200亿美元(约合人民币1352亿元)，但我们的年收入同期却下降了近5亿美元(约合人民币34亿元)。往后，这不能再继续下去了。」",
+          "after": "Sharma那封撼动公司的备忘录透露，微软游戏业务目前的问责利润率（据推测为利润率）为3%，同比下降。Sharma说道：「剔除动视暴雪和King，过去五年我们在内容、平台和硬件补贴上持续投入超过200亿美元（约合人民币1354亿元），但我们的年收入同期却下降了近5亿美元（约合人民币34亿元）。往后，这不能再继续下去了。」"
+        },
+        {
+          "field": "paragraph_10",
+          "before": "Nadella补充道：「没有人能指责微软过去25年来没有投入。现在，我们必须将其转变为一个可持续的业务，它从根本上仍然是最好娱乐来源之一。」",
+          "after": "本周的消息标志着Xbox品牌情绪的显著逆转，此前Sharma通过了一系列讨好玩家的举措，如决定将The Coalition的《战争机器：事变日》和inXile的《发条革命》设为Xbox主机独占，已开始扭转核心粉丝的看法。Xbox的裁员预计将在微软财年结束的6月30日生效。"
+        }
+      ]
+    },
+    {
+      "type": "user_polish",
+      "date": "2026-06-17",
+      "article_id": 11,
+      "url": "https://www.ign.com/articles/fortnite-maker-confirms-how-it-uses-generative-ai-to-help-create-concept-art-and-designs-for-new-skins",
+      "en_title": "Fortnite Maker Confirms How It Uses Generative AI to Help Create Concept Art and Designs for New Skins",
+      "cn_title": "Epic Games证实AI参与《堡垒之夜》皮肤概念设计",
+      "edits": [
+        {
+          "field": "subtitle",
+          "before": "设计为王",
+          "after": "「未来几乎所有制作都会涉及AI」"
+        },
+        {
+          "field": "paragraph_4",
+          "before": "Epic Games的一位员工表示：「设计为王，AI可以全天候生成通用的东西，但这并非我们在这里做的事情。它只是将时间线提前，这样[艺术家]就能专注于打磨设计，将其精准塑造成他想要的模样。」",
+          "after": "Epic Games的一位员工表示：「设计为王，AI可以全天候生成通用的东西，但这并非我们在这里做的事情。它只是将时间线提前，这样‘艺术家’就能专注于打磨设计，将其精准塑造成他想要的模样。」"
+        },
+        {
+          "field": "paragraph_6",
+          "before": "尽管视频明确表示AI并未用于从头设计角色，但它同样表明生成式AI的使用已是公司工作流程的一部分——并开启了后续人工检查仍可能遗漏错误的可能性。",
+          "after": "尽管视频明确表示AI并未用于从头设计角色，但它同样表明生成式AI的使用已是公司工作流程的一部分——并揭露了后续人工检查仍可能遗漏错误的事实。"
+        },
+        {
+          "field": "paragraph_8",
+          "before": "Epic表示：「在设计过程的每个阶段，艺术家都在持续润色和完善，但现在团队能够更快地修改，因此艺术家有了更多探索的机会。」",
+          "after": "Epic表示：「在设计过程的每个阶段，艺术家都在持续润色和完善，但现在团队能够更快地修改，因此艺术家有了更多探索的机会。在最终进入游戏之前，整个过程都伴随着持续的审核，艺术家们会谨慎地尊重原创性，追踪作品的来源，并确保成品符合Epic的高品质标准。」"
+        },
+        {
+          "field": "paragraph_9",
+          "before": "「在最终进入游戏之前，整个过程都伴随着持续的审核，艺术家们会谨慎地尊重原创性，追踪作品的来源，并确保成品符合Epic的高品质标准。」",
+          "after": "当然，Epic Games对AI技术并不陌生，此前已经使用过生成式语音技术重现James Earl Jones饰演的达斯·维达。但即便拥有迪士尼的授权和许可，此角色的加入仍引发了争议，特别是当玩家很快开始让达斯·维达说出更贴合原力黑暗面的话语时。"
+        },
+        {
+          "field": "paragraph_10",
+          "before": "当然，Epic Games对AI技术并不陌生，此前已经使用过生成式语音技术重现James Earl Jones饰演的达斯·维达。但即便拥有迪士尼的授权和许可，此角色的加入仍引发了争议，特别是当玩家很快开始让维达说出更贴合原力黑暗面的话语时。",
+          "after": "去年，Epic Games的老板Tim Sweeney建议Valve应取消Steam上针对游戏的「AI生成内容披露」标签，因为他认为AI的使用将变得非常普及，任何警示都将变得多余。Sweeney在社交媒体上写道：「为什么止步于AI使用？我们完全可以强制披露开发者使用的洗发水品牌。消费者有权知道嘛，哈哈。」"
+        },
+        {
+          "field": "paragraph_11",
+          "before": "去年，Epic Games的老板Tim Sweeney建议Valve应取消Steam上针对游戏的「AI生成内容披露」标签，因为他认为AI的使用将变得非常普及，任何警示都将变得多余。Sweeney在社交媒体上写道：「为什么止步于AI使用？我们完全可以强制披露开发者使用的洗发水品牌。消费者有权知道嘛，哈哈。」",
+          "after": "他继续说道：「这已经无关紧要了。AI标签对需要披露创作人的艺术展览有意义，对买家需要了解版权状况的数字内容授权市场有意义。但在游戏商店里就毫无道理了，因为未来几乎所有制作都会涉及AI。」"
+        }
+      ]
+    },
+    {
+      "type": "user_polish",
+      "date": "2026-06-17",
+      "article_id": 17,
+      "url": "https://www.ign.com/articles/xbox-game-pass-soldiers-on-with-june-2026-wave-2-lineup-announcement",
+      "en_title": "Xbox Game Pass Soldiers on With June 2026 Wave 2 Lineup Announcement",
+      "cn_title": "Xbox Game Pass 6月第二波阵容公布，裁员阴云不散",
+      "edits": [
+        {
+          "field": "title",
+          "before": "Xbox Game Pass 6月第二波阵容公布，裁员阴云不散",
+          "after": "XGP六月第二批阵容公布"
+        },
+        {
+          "field": "paragraph_2",
+          "before": "据Xbox Wire公布，6月下半月至7月初加入Xbox Game Pass的游戏包括《EA Sports FC 26》（当然是为了配合正在进行的世界杯）、《RV There Yet?》和《Winds of Arcana: Ruination》。同时，2021年的《使命召唤：先锋》将于本月入库。6月剩余时间没有其他首日首发作品，而《Junkster》在今天（6月16日）发布。",
+          "after": "据Xbox Wire公布，6月下半月至7月初加入Xbox Game Pass的游戏包括《EA Sports FC 26》（当然是为了配合正在进行的世界杯）、《深渊之潮》、《托尼·霍克：职业滑板手3+4》、《我们到了吗？》和《亡魂战纪》。同时，2021年的《使命召唤：先锋》将于本月入库。"
+        },
+        {
+          "field": "paragraph_3",
+          "before": "在新任Xbox负责人Asha Sharma对游戏业务进行「重置」的背景下，Game Pass仍在勉力前行，而这场重置似乎将导致一批知名工作室成为牺牲品。昨天，媒体《The Game Business》报道称Xbox Game Studios主管Craig Duncan已离职，随后多家微软工作室可能关闭的消息也很快传出。IGN已联系微软置评，但尚未收到回复。不过，Double Fine在社交媒体上发了一个只有表情符号的帖子，算是总结了当下的感受。",
+          "after": "本周的这些严峻消息标志着Xbox品牌情绪的显著逆转，此前Sharma刚刚通过一系列讨好核心粉丝的举措开始赢回他们的好感，例如决定让The Coalition的《战争机器：事变日》和inXile的《发条革命》成为主机独占作品。Xbox的裁员预计将在微软2026财年结束的6月30日生效。"
+        },
+        {
+          "field": "paragraph_4",
+          "before": "据彭博社报道，Compulsion、Ninja Theory和Double Fine并非唯一正在与Xbox进行谈判、试图避免关闭的微软工作室。部分或全部工作室有可能自掏腰包买回独立，不过这往往也会伴随着裁员。",
+          "after": "Xbox Game Pass 六月第二波阵容："
+        },
+        {
+          "field": "paragraph_5",
+          "before": "在Sharma发出「重置」警告后，「最岌岌可危的工作室是那些口碑辉煌、但在报表上表现糟糕的」。随后有消息称，微软正在加速开发新的《上古卷轴》《辐射》和《光环》游戏，同时考虑重组甚至拆分其游戏业务。",
+          "after": "·《使命召唤：先锋》(云端、Xbox旗下主机、PC) – 6月17日, Game Pass Ultimate, Game Pass Premium, PC Game Pass"
+        },
+        {
+          "field": "paragraph_6",
+          "before": "Sharma那份震动业界的备忘录透露，微软游戏业务目前的问责利润率（据信指净利润率）为3%，同比下降。「如果不计入动视暴雪，过去五年里，我们在内容、平台和硬件补贴上持续投入了超过200亿美元(约合人民币1352亿元)，但同期我们的年收入却下降了近5亿美元(约合人民币34亿元)。今后，这种情况不能再继续下去了。」Sharma说道。",
+          "after": "·《EA Sports FC 26》 (云端、Xbox旗下主机、PC) – 6月18日, Game Pass Ultimate, PC Game Pass"
+        },
+        {
+          "field": "paragraph_7",
+          "before": "在这份内部备忘录曝光后，微软CEO Satya Nadella表示，「目前在YouTube上发生的Xbox游戏变现规模甚至超过了Xbox自身」，并补充说Xbox团队需要想办法「在硬件和游戏两方面同时进行创新，以经济上可持续的方式继续前进。」",
+          "after": "·《深渊之潮》 (云端、Xbox Series、PC) – 6月25日, Game Pass Ultimate, Game Pass Premium, PC Game Pass"
+        },
+        {
+          "field": "paragraph_8",
+          "before": "Nadella还说道：「没人能指责微软在过去25年里没有投入。现在，我们必须把它变成一个可持续的业务，持续提供这本质上仍是最好娱乐来源之一的东西。」",
+          "after": "·《我们到了吗？》 (云端、Xbox Series、PC) – 6月30日, Game Pass Ultimate, Game Pass Premium, PC Game Pass"
+        }
+      ]
+    },
+    {
+      "type": "user_polish",
+      "date": "2026-06-17",
+      "article_id": 23,
+      "url": "https://www.ign.com/articles/resident-evil-lore-master-reveals-the-5-burning-questions-veronica-needs-to-answer",
+      "en_title": "Resident Evil Lore Master Reveals The 5 Burning Questions Veronica Needs to Answer",
+      "cn_title": "《生化危机》剧情大师揭示《维罗妮卡》重制版需解答的5大疑问",
+      "edits": [
+        {
+          "field": "paragraph_2",
+          "before": "该作计划于2027年发售，是原版《生化危机：代号维罗妮卡》的彻底重构。我们对游戏的初印象是卡普空的一纸意图声明——他们似乎正将这段曾经的支线剧情提升到正传地位。",
+          "after": "该作计划于2027年发售，是原版《生化危机 代号维罗妮卡》的彻底重构。我们对游戏的初印象是卡普空的一纸意图声明——他们似乎正将这段曾经的支线剧情提升到正传地位。"
+        },
+        {
+          "field": "paragraph_3",
+          "before": "当然，《代号维罗妮卡》原本就集结了系列最耀眼的几位主角（克莱尔·雷德菲尔德！克里斯·雷德菲尔德！阿尔伯特·威斯克！），讲述了一段发生在《生化危机3》之后的正史故事。但这一作总让人觉得与系列核心的序号正传若即若离。如今，这种疏离或许将不复存在。",
+          "after": "当然，《代号维罗妮卡》原本就集结了系列最耀眼的几位主角，讲述了一段发生在《生化危机3》之后的正史故事。但这一作总让人觉得与系列核心的序号正传若即若离。如今，这种疏离或许将不复存在。"
+        },
+        {
+          "field": "paragraph_6",
+          "before": "友情提示：本文将讨论原版《生化危机：代号维罗妮卡》的剧情要点。虽然重制版中的设定可能会有所更改，但若想保持绝对新鲜感的读者，请现在就止步。",
+          "after": "友情提示：本文将讨论原版《生化危机 代号维罗妮卡》的剧情要点。虽然重制版中的设定可能会有所更改，但若想保持绝对新鲜感的读者，请现在就止步。"
+        },
+        {
+          "field": "paragraph_7",
+          "before": "TheBatman首先解释道：「这个组织最初在《代号：维罗妮卡》原版中登场，并在包括《生化危机4》在内的多部作品中暗中活动，随后神秘消失。后来在《生化危机7》里有一个出人意料的提及，在《Requiem》中也有数次暗示，但卡普空始终避免详细展开。概念图显示H.C.F. 指的是Hive/Host Capture Force，即蜂巢/宿主捕获部队，暗示他们是一支隶属于某个更大组织的特种部队。考虑到威斯克的任务就是捕获亚历克西娅·阿什福德和t-veronica病毒，所以有推测认为H.C.F. 是一支特别行动队。《生化危机 维罗妮卡》重制版正是澄清这个组织真面目以及确定它和新作中The Connections之间联系的理想机会，毕竟我们已经知道他们合作进行过Mutamycete项目。」",
+          "after": "1.雇佣阿尔伯特·威斯克的神秘敌对公司H.C.F.究竟是什么来头？"
+        },
+        {
+          "field": "paragraph_8",
+          "before": "The Connections是一个国际犯罪集团，《Requiem》中的反派Zeno就隶属于它。该组织在《生化危机7》中首次登场，但后来揭示它影响了安布雷拉的垮台，并与Tricell以及美国政府存在联系。目前，它被视为安布雷拉之后系列作品中的头号反派。",
+          "after": "TheBatman首先解释道：「这个组织最初在《代号维罗妮卡》原版中登场，并在包括《生化危机4》在内的多部作品中暗中活动，随后神秘消失。后来在《生化危机7》里有一个出人意料的提及，在《生化危机 安魂曲》中也有数次暗示，但卡普空始终避免详细展开。概念图显示H.C.F. 指的是Hive/Host Capture Force，即蜂巢/宿主捕获部队，暗示他们是一支隶属于某个更大组织的特种部队。考虑到威斯克的任务就是捕获亚历克西娅·阿什福德和T-维罗妮卡病毒，所以有推测认为H.C.F. 是一支特别行动队。《生化危机 维罗妮卡 重制版》正是澄清这个组织真面目以及确定它和新作中The Connections之间联系的理想机会，毕竟我们已经知道他们合作进行过Mutamycete项目。」"
+        },
+        {
+          "field": "paragraph_9",
+          "before": "TheBatman接着说：「如果卡普空把那个敌对的公司直接设定为一直就是The Connections，我一点也不会惊讶。表面上看这很合理，但深入挖掘设定后，这种想法也会带来不少问题。我只希望这次重制版能更清楚地交代他们到底是谁，为什么安布雷拉会视其为巨大威胁，以及威斯克为什么觉得投靠他们有好处。」",
+          "after": "The Connections是一个国际犯罪集团，《生化危机 安魂曲》中的反派Zeno就隶属于它。该组织在《生化危机7》中首次登场，但后来揭示它影响了安布雷拉的垮台，并与Tricell以及美国政府存在联系。目前，它被视为安布雷拉之后系列作品中的头号反派。"
+        },
+        {
+          "field": "paragraph_10",
+          "before": "TheBatman表示：「我不希望他们弱化阿尔弗雷德。我知道原版本地化脚本里某些台词今天可能不太合适，但他渴望模仿亚历克西娅是他性格的关键部分。他真的相信妹妹还在自己身边，而穿上她的衣服、模仿她的声音是他应对孤独和精神错乱的一种方式。这在原版游戏中是一个重要的剧情转折，所以对于一部很多玩家都已经知道这个真相的重制版来说，卡普空会怎么处理这一点将非常有趣。有些元素可能会被削弱，但我个人希望他们能全力保留，因为这可能制造出一些非常吓人且令人难忘的场面。」",
+          "after": "TheBatman接着说：「如果卡普空把那个敌对的公司直接设定为一直就是The Connections，我一点也不会惊讶。表面上看这很合理，但深入挖掘设定后，这种想法也会带来不少问题。我只希望这次重制版能更清楚地交代他们到底是谁，为什么安布雷拉会视其为巨大威胁，以及威斯克为什么觉得投靠他们有好处。」"
+        },
+        {
+          "field": "paragraph_11",
+          "before": "在本月早些时候接受IGN采访时，卡普空告诉我们，他们会对阿尔弗雷德进行调整，将「尝试更进一步深入刻画」他，并从「更深入的层面」分析这个角色，但没有给出更多细节。",
+          "after": "2. 卡普空将如何重塑阿尔弗雷德·阿什福德？"
+        }
+      ]
+    },
+    {
+      "type": "user_polish",
+      "date": "2026-06-17",
+      "article_id": 28,
+      "url": "https://www.ign.com/articles/the-blood-of-dawnwalker-where-to-preorder",
+      "en_title": "The Blood of Dawnwalker Preorders Are Live, Here’s What Comes in Each Edition",
+      "cn_title": "《黎明行者之血》预购开启，各版本内容一览",
+      "edits": [
+        {
+          "field": "subtitle",
+          "before": "预购实体版有惊喜",
+          "after": "收藏版奖励丰厚"
+        },
+        {
+          "field": "paragraph_1",
+          "before": "今年的夏季游戏发布会内容相当丰富，尤其是夏日游戏节。如果你在Geoff Keighley的大型展示会上看了《黎明行者之血》的新预告片，并且立刻想要投身其世界，我们有好消息：该作的预购现已正式在PS5、Xbox Series X和PC平台开启。",
+          "after": "今年的夏季游戏发布会内容相当丰富，尤其是夏日游戏节。如果你在Geoff Keighley的大型展示会上看了《黎明行者之血》的新预告片，并且立刻想要投身其世界，我们有好消息：该作的预购现已正式在PS5、Xbox Series和PC平台开启。"
+        },
+        {
+          "field": "paragraph_2",
+          "before": "下面我们整理了当前可预购的各版本、它们的价格，以及可能附带的预购奖励或额外内容。本作距离发售只有几个月，将于9月初这个拥挤档期的3号推出，所以现在是时候锁定一份，好在发售日当天就玩上。",
+          "after": "下面我们整理了当前可预购的各版本、它们的价格，以及可能附带的预购奖励或额外内容。本作距离发售只有几个月，将于9月3号推出，所以现在是时候锁定一份，好在发售日当天就玩上。"
+        },
+        {
+          "field": "paragraph_3",
+          "before": "《黎明行者之血》标准版在PS5、Xbox Series X和PC上售价69.99美元(约合人民币473元)。至于PC版，你实际上现在可以在Fanatical上以稍低的价格入手，这算是个小惊喜。提早预购标准版也会获得预购奖励，我们会在下文详细介绍；不过对那些想要实体版的人来说，还会有额外的好处。",
+          "after": "《黎明行者之血》标准版在PS5、Xbox Series和PC上售价69.99美元（约合人民币474元）。至于PC版，Steam国区售价298元。提早预购标准版也会获得预购奖励，我们会在下文详细介绍；不过对那些想要实体版的人来说，还会有额外的好处。"
+        },
+        {
+          "field": "paragraph_5",
+          "before": "其他零售商，如百思买和GameStop，也为实体预购提供了各自的奖励。如果你通过百思买预购，购买后会免费获得一张10美元(约合人民币68元)的百思买礼品卡。而GameStop则为实体预购提供独家贴纸套装奖励，你可以在下图中看到。",
+          "after": "《黎明行者之血》日食版（Eclipse Edition）仅提供数字版，售价79.99美元（约合人民币542元），Steam国区368元。除游戏本体和预购奖励外，该版本还包含："
+        },
+        {
+          "field": "paragraph_6",
+          "before": "《黎明行者之血》日食版仅提供数字版，售价79.99美元(约合人民币541元)（如果通过Fanatical购买PC版，价格稍低）。除游戏本体和预购奖励外，该版本还包含：",
+          "after": "《黎明行者之血》收藏版则为那些愿意为此掏钱的玩家准备了一大堆诱人的周边。售价199.99美元（约合人民币1354元），除游戏本体和预购奖励外，还包含以下内容："
+        },
+        {
+          "field": "paragraph_7",
+          "before": "《黎明行者之血》收藏版则为那些愿意为此掏钱的玩家准备了一大堆诱人的周边。售价199.99美元(约合人民币1352元)，除游戏本体和预购奖励外，还包含以下内容：",
+          "after": "铁盒（SteelBook）"
+        },
+        {
+          "field": "paragraph_8",
+          "before": "提前预购任意版本的《黎明行者之血》，你都将获得Sangoran Wayfarer装甲套装作为预购奖励，如上图所示。",
+          "after": "世界地图"
+        }
+      ]
     }
   ],
   "candidates": [
     {
-      "id_hint": "remove_author_bio_and_image_credit",
-      "title": "????????????",
-      "rule": "?????? IGN ???????????????????????????????????????",
-      "category": "structure",
-      "scope": "all",
-      "status_suggestion": "observe",
-      "confidence": 0.97,
-      "evidence_summary": "6?17??????????????",
-      "examples": [
-        {
-          "date": "2026-06-17",
-          "article_id": 6,
-          "before": "Luke是IGN评测团队的高级编辑，你可以在Bluesky上通过 @mrlukereilly向他提问。",
-          "after": ""
-        }
-      ],
-      "contradiction": ""
-    },
-    {
       "id_hint": "preserve_source_information_and_order",
-      "title": "???????????????",
-      "rule": "?????????????????????????????????????????????????????????????????????",
+      "title": "?????????????",
+      "rule": "???????????????????????????????????????????????????????",
       "category": "body",
       "scope": "all",
       "status_suggestion": "observe",
-      "confidence": 0.92,
-      "evidence_summary": "6?17????????????/???????????????",
+      "confidence": 0.97,
+      "evidence_summary": "6?17????????Forza?XGP ?????????????????????????????????????",
       "examples": [
         {
           "date": "2026-06-17",
           "article_id": 6,
-          "before": "与此同时，最新更新还带来了多项有用的修复，包括对道路探索和在线模式Horizon Play升级所需经验的调整。",
-          "after": "与此同时，最新更新还带来了多项有用的修复，包括对道路探索和在线模式Horizon Play升级所需经验的调整。区域概览中现已添加「已驾驶路段」百分比，这将让你更容易地在屏幕地图上追踪那些难以发现的剩余道路。"
+          "before": "?????????????????????????????????Horizon Play??????????",
+          "after": "?????????????????????????????????Horizon Play??????????????????????????????????????????????????????????"
         },
         {
           "date": "2026-06-17",
-          "article_id": 6,
-          "before": "区域概览中现已添加「已驾驶路段」百分比，这将让你更容易地在屏幕地图上追踪那些难以发现的剩余道路。",
-          "after": "Playground还调整了Horizon Play中从26级升至100级所需的经验值量。达到100级与成就「Maxed Out」挂钩，但此前有计算显示，升到100级可能需要约1000小时的线上游戏时间，这并非工作室的本意。在新更新之后，已达到32级的玩家将直接跳至100级并解锁该成就。"
+          "article_id": 17,
+          "before": "?Xbox Wire???6?????7????Xbox Game Pass???????",
+          "after": "Xbox Game Pass ?????????????????????"
         },
         {
           "date": "2026-06-17",
-          "article_id": 6,
-          "before": "Playground还调整了Horizon Play中从26级升至100级所需的经验值量。达到100级与成就「Maxed Out」挂钩，但此前有计算显示，升到100级可能需要约1000小时的线上游戏时间，这并非工作室的本意。在新更新之后，已达到32级的玩家将直接跳至100级并解锁该成就。",
-          "after": "Playground还解决了直线加速轮胎的调校在非直线加速赛事中异常有利的问题。"
+          "article_id": 23,
+          "before": "TheBatman????????",
+          "after": "1. ????????????????? H.C.F. ??????????"
         }
       ],
       "contradiction": ""
@@ -111,28 +388,126 @@
     {
       "id_hint": "subtitle_avoid_concrete_detail",
       "title": "????????????????",
-      "rule": "?????????????????????????????????????????????????????????",
+      "rule": "????????????????????????????????????????????",
       "category": "subtitle",
       "scope": "all",
       "status_suggestion": "observe",
-      "confidence": 0.8,
-      "evidence_summary": "6?17???????????????????????",
+      "confidence": 0.9,
+      "evidence_summary": "?????????????????????????????????????",
       "examples": [
         {
           "date": "2026-06-17",
           "article_id": 6,
-          "before": "10亿信用币清零",
-          "after": "不会有进一步的处罚"
+          "before": "10??????",
+          "after": "?????????"
+        },
+        {
+          "date": "2026-06-17",
+          "article_id": 10,
+          "before": "????",
+          "after": "????"
+        },
+        {
+          "date": "2026-06-17",
+          "article_id": 28,
+          "before": "????????",
+          "after": "???????"
         }
       ],
       "contradiction": ""
+    },
+    {
+      "id_hint": "retain_original_for_unconfirmed_names",
+      "title": "??????????????",
+      "rule": "????????????????????????????????????????????????",
+      "category": "dictionary",
+      "scope": "all",
+      "status_suggestion": "observe",
+      "confidence": 0.9,
+      "evidence_summary": "6?17???????? Harmony: The Fall of Reverie?Jusant?H.C.F. ??????????",
+      "examples": [
+        {
+          "date": "2026-06-17",
+          "article_id": 5,
+          "before": "?????????(Harmony: The Fall of Reverie)",
+          "after": "?Harmony: The Fall of Reverie?"
+        },
+        {
+          "date": "2026-06-17",
+          "article_id": 5,
+          "before": "??????(Jusant)",
+          "after": "?Jusant?"
+        },
+        {
+          "date": "2026-06-17",
+          "article_id": 23,
+          "before": "??????",
+          "after": "?????? H.C.F."
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id_hint": "use_live_exchange_rate_for_cny",
+      "title": "?????????????????",
+      "rule": "???????????????????????????????????????????????????????",
+      "category": "currency",
+      "scope": "all",
+      "status_suggestion": "observe",
+      "confidence": 0.9,
+      "evidence_summary": "???????????????????? 69.99/79.99/199.99 ?????? Steam ?????",
+      "examples": [
+        {
+          "date": "2026-06-17",
+          "article_id": 28,
+          "before": "69.99??(?????473?)",
+          "after": "69.99????????474??"
+        },
+        {
+          "date": "2026-06-17",
+          "article_id": 28,
+          "before": "79.99??(?????541?)",
+          "after": "79.99????????542??"
+        },
+        {
+          "date": "2026-06-17",
+          "article_id": 28,
+          "before": "199.99??",
+          "after": "199.99????????1354??"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id_hint": "prefer_confirmed_chinese_game_titles",
+      "title": "???????????????",
+      "rule": "?????????????????/??????????????????????????????????",
+      "category": "dictionary",
+      "scope": "games|movies_tv",
+      "status_suggestion": "observe",
+      "confidence": 0.82,
+      "evidence_summary": "?????????????????? ???????????????????????????????????",
+      "examples": [
+        {
+          "date": "2026-06-17",
+          "article_id": 3,
+          "before": "???????????????",
+          "after": "HBO????????????????"
+        },
+        {
+          "date": "2026-06-17",
+          "article_id": 23,
+          "before": "????????",
+          "after": "????? ???????"
+        }
+      ],
+      "contradiction": "?XGP??????????????????????????????????????"
     }
   ],
   "notes": [
-    "Codex???????????????????????????????????",
-    "????????????????? STYLE_PROFILE.md?",
-    "??????????????????? 7 ?????????????"
+    "???? 6 ? 17 ??????????????????????????",
+    "?????????????????????????????????????????????",
+    "????????????????? STYLE_PROFILE.md?"
   ],
-  "updated_at": "2026-06-17T10:11:25+08:00",
-  "model": "codex"
+  "updated_at": "2026-06-17T21:49:47+08:00"
 }

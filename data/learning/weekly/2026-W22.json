@@ -1,14 +1,14 @@
 {
   "week_id": "2026-W22",
-  "generated_at": "2026-06-03T16:01:10+08:00",
+  "generated_at": "2026-06-17T21:49:47+08:00",
   "range": {
     "start": "2026-05-25",
     "end": "2026-05-31"
   },
   "summary": {
-    "candidate_count": 7,
+    "candidate_count": 10,
     "ready_for_review": 0,
-    "confirmed_by_feedback": 2,
+    "confirmed_by_feedback": 5,
     "pending": 5
   },
   "candidates": [
@@ -33,7 +33,44 @@
           "after": "夏日游戏节"
         }
       ],
-      "feedback": [],
+      "feedback": [
+        {
+          "week_id": "2026-W23",
+          "text": "采纳，进入长期规则。",
+          "classified_as": "confirmed",
+          "created_at": "2026-06-04T06:38:24+08:00"
+        },
+        {
+          "week_id": "2026-W23",
+          "text": "采纳，进入长期规则。",
+          "classified_as": "confirmed",
+          "created_at": "2026-06-04T06:38:54+08:00"
+        },
+        {
+          "week_id": "2026-W23",
+          "text": "采纳，进入长期规则。",
+          "classified_as": "confirmed",
+          "created_at": "2026-06-04T06:39:36+08:00"
+        },
+        {
+          "week_id": "2026-W23",
+          "text": "采纳，进入长期规则。",
+          "classified_as": "confirmed",
+          "created_at": "2026-06-05T05:07:48+08:00"
+        },
+        {
+          "week_id": "2026-W23",
+          "text": "采纳，进入长期规则。",
+          "classified_as": "confirmed",
+          "created_at": "2026-06-06T04:56:39+08:00"
+        },
+        {
+          "week_id": "2026-W23",
+          "text": "采纳，进入长期规则。",
+          "classified_as": "confirmed",
+          "created_at": "2026-06-07T02:52:19+08:00"
+        }
+      ],
       "created_at": "2026-06-03T15:55:24+08:00",
       "last_seen": "2026-05-28",
       "confidence": 0.8,
@@ -60,11 +97,124 @@
           "after": "Steam Deck OLED"
         }
       ],
-      "feedback": [],
+      "feedback": [
+        {
+          "week_id": "2026-W23",
+          "text": "采纳，进入长期规则。",
+          "classified_as": "confirmed",
+          "created_at": "2026-06-04T06:38:24+08:00"
+        },
+        {
+          "week_id": "2026-W23",
+          "text": "采纳，进入长期规则。",
+          "classified_as": "confirmed",
+          "created_at": "2026-06-04T06:38:54+08:00"
+        },
+        {
+          "week_id": "2026-W23",
+          "text": "采纳，进入长期规则。",
+          "classified_as": "confirmed",
+          "created_at": "2026-06-04T06:39:36+08:00"
+        },
+        {
+          "week_id": "2026-W23",
+          "text": "采纳，进入长期规则。",
+          "classified_as": "confirmed",
+          "created_at": "2026-06-05T05:07:48+08:00"
+        },
+        {
+          "week_id": "2026-W23",
+          "text": "采纳，进入长期规则。",
+          "classified_as": "confirmed",
+          "created_at": "2026-06-06T04:56:39+08:00"
+        },
+        {
+          "week_id": "2026-W23",
+          "text": "采纳，进入长期规则。",
+          "classified_as": "confirmed",
+          "created_at": "2026-06-07T02:52:19+08:00"
+        }
+      ],
       "created_at": "2026-06-03T15:55:24+08:00",
       "last_seen": "2026-05-28",
       "confidence": 0.9,
       "latest_evidence_summary": "用户明确反馈'这个以后都一律按这样排序'，且所有类似情况均如此处理。"
+    },
+    {
+      "id": "use_common_nickname_for_character",
+      "title": "使用角色常用绰号",
+      "rule": "对于有广为人知中文绰号的超级英雄/反派角色，正文中优先使用绰号而非全名（如用毁灭博士而不是维克多·冯·杜姆）。",
+      "category": "names",
+      "scope": "all",
+      "status": "confirmed_by_feedback",
+      "days": [
+        "2026-06-01"
+      ],
+      "days_seen": 1,
+      "articles_seen": 1,
+      "contradictions": 1,
+      "examples": [
+        {
+          "date": "2026-06-01",
+          "article_id": 3,
+          "before": "维克多·冯·杜姆",
+          "after": "毁灭博士"
+        }
+      ],
+      "feedback": [
+        {
+          "week_id": "2026-W23",
+          "text": "暂缓，继续观察。",
+          "classified_as": "pending",
+          "created_at": "2026-06-04T06:38:24+08:00"
+        },
+        {
+          "week_id": "2026-W23",
+          "text": "暂缓，继续观察。",
+          "classified_as": "pending",
+          "created_at": "2026-06-04T06:38:54+08:00"
+        },
+        {
+          "week_id": "2026-W23",
+          "text": "暂缓，继续观察。",
+          "classified_as": "pending",
+          "created_at": "2026-06-04T06:39:36+08:00"
+        },
+        {
+          "week_id": "2026-W23",
+          "text": "暂缓，继续观察。",
+          "classified_as": "pending",
+          "created_at": "2026-06-05T05:07:48+08:00"
+        },
+        {
+          "week_id": "2026-W23",
+          "text": "暂缓，继续观察。",
+          "classified_as": "pending",
+          "created_at": "2026-06-06T04:56:39+08:00"
+        },
+        {
+          "week_id": "2026-W23",
+          "text": "暂缓，继续观察。",
+          "classified_as": "pending",
+          "created_at": "2026-06-07T02:52:19+08:00"
+        },
+        {
+          "week_id": "2026-W24",
+          "text": "暂缓，继续观察。",
+          "classified_as": "pending",
+          "created_at": "2026-06-15T21:48:32+08:00"
+        }
+      ],
+      "created_at": "2026-06-03T16:01:56+08:00",
+      "last_seen": "2026-06-01",
+      "contradiction_notes": [
+        {
+          "date": "2026-06-01",
+          "text": "与保留英文名规则（不知名人物保留英文名）不冲突，因为这是知名角色。"
+        }
+      ],
+      "confidence": 0.7,
+      "latest_evidence_summary": "article 3 paragraph 3 用户将全名改为绰号，与现有 pending 规律一致且本次无矛盾。"
     },
     {
       "id": "translator_note_in_parentheses",
@@ -132,7 +282,7 @@
       ],
       "days_seen": 1,
       "articles_seen": 1,
-      "contradictions": 1,
+      "contradictions": 2,
       "examples": [
         {
           "date": "2026-05-28",
@@ -148,10 +298,78 @@
         {
           "date": "2026-05-28",
           "text": "#14 段落2 未改动第一人称"
+        },
+        {
+          "date": "2026-05-28",
+          "text": "#14 段落2 未改动第一人称"
         }
       ],
       "confidence": 0.3,
       "latest_evidence_summary": "#12中将'我'改为'IGN'，但#14中保留了'我'，可能并非所有文章都适用。"
+    },
+    {
+      "id": "roman_to_arabic_game_title",
+      "title": "游戏标题罗马数字转阿拉伯数字",
+      "rule": "游戏名中的罗马数字（如II）统一转为阿拉伯数字（如2），例如《博德之门II》→《博德之门2》。",
+      "category": "dictionary",
+      "scope": "games",
+      "status": "confirmed_by_feedback",
+      "days": [
+        "2026-06-02"
+      ],
+      "days_seen": 1,
+      "articles_seen": 1,
+      "contradictions": 0,
+      "examples": [
+        {
+          "date": "2026-06-02",
+          "article_id": 3,
+          "before": "《博德之门II：安姆的阴影》",
+          "after": "《博德之门2：安姆的阴影》"
+        }
+      ],
+      "feedback": [
+        {
+          "week_id": "2026-W23",
+          "text": "暂缓，继续观察。",
+          "classified_as": "pending",
+          "created_at": "2026-06-04T06:38:24+08:00"
+        },
+        {
+          "week_id": "2026-W23",
+          "text": "暂缓，继续观察。",
+          "classified_as": "pending",
+          "created_at": "2026-06-04T06:38:54+08:00"
+        },
+        {
+          "week_id": "2026-W23",
+          "text": "暂缓，继续观察。",
+          "classified_as": "pending",
+          "created_at": "2026-06-04T06:39:36+08:00"
+        },
+        {
+          "week_id": "2026-W23",
+          "text": "暂缓，继续观察。",
+          "classified_as": "pending",
+          "created_at": "2026-06-05T05:07:48+08:00"
+        },
+        {
+          "week_id": "2026-W23",
+          "text": "暂缓，继续观察。",
+          "classified_as": "pending",
+          "created_at": "2026-06-06T04:56:39+08:00"
+        },
+        {
+          "week_id": "2026-W23",
+          "text": "暂缓，继续观察。",
+          "classified_as": "pending",
+          "created_at": "2026-06-07T02:52:19+08:00"
+        }
+      ],
+      "created_at": "2026-06-03T16:03:40+08:00",
+      "last_seen": "2026-06-02",
+      "confidence": 0.9,
+      "latest_evidence_summary": "文章3将《博德之门II：安姆的阴影》改为《博德之门2：安姆的阴影》，且与已有风格（平台简写、数字偏好）一致，用户倾向阿拉伯数字更直观。"
     },
     {
       "id": "company_name_with_chinese",
@@ -179,6 +397,70 @@
       "last_seen": "2026-05-28",
       "confidence": 0.5,
       "latest_evidence_summary": "文章#31中，Warhorse Studios 首次出现写作'战马工作室（Warhorse Studios）'，之后用'战马工作室'。该规则可能与现有'英文注释三档规则'类似，但原规则仅针对游戏名。"
+    },
+    {
+      "id": "add_sequel_number_to_title",
+      "title": "系列电影标题加序号",
+      "rule": "对具有明确序数的系列电影（如漫威电影），在官方中文片名前加上数字序号，如《复仇者联盟5：毁灭之日》。",
+      "category": "title",
+      "scope": "movies_tv",
+      "status": "confirmed_by_feedback",
+      "days": [
+        "2026-06-01"
+      ],
+      "days_seen": 1,
+      "articles_seen": 1,
+      "contradictions": 0,
+      "examples": [
+        {
+          "date": "2026-06-01",
+          "article_id": 3,
+          "before": "《复仇者联盟：毁灭之日》",
+          "after": "《复仇者联盟5：毁灭之日》"
+        }
+      ],
+      "feedback": [
+        {
+          "week_id": "2026-W23",
+          "text": "暂缓，继续观察。",
+          "classified_as": "pending",
+          "created_at": "2026-06-04T06:38:24+08:00"
+        },
+        {
+          "week_id": "2026-W23",
+          "text": "暂缓，继续观察。",
+          "classified_as": "pending",
+          "created_at": "2026-06-04T06:38:54+08:00"
+        },
+        {
+          "week_id": "2026-W23",
+          "text": "暂缓，继续观察。",
+          "classified_as": "pending",
+          "created_at": "2026-06-04T06:39:36+08:00"
+        },
+        {
+          "week_id": "2026-W23",
+          "text": "暂缓，继续观察。",
+          "classified_as": "pending",
+          "created_at": "2026-06-05T05:07:48+08:00"
+        },
+        {
+          "week_id": "2026-W23",
+          "text": "暂缓，继续观察。",
+          "classified_as": "pending",
+          "created_at": "2026-06-06T04:56:39+08:00"
+        },
+        {
+          "week_id": "2026-W23",
+          "text": "暂缓，继续观察。",
+          "classified_as": "pending",
+          "created_at": "2026-06-07T02:52:19+08:00"
+        }
+      ],
+      "created_at": "2026-06-03T16:01:56+08:00",
+      "last_seen": "2026-06-01",
+      "confidence": 0.8,
+      "latest_evidence_summary": "article 3 标题中用户手动加了序号5；此前另一篇文章也有类似修改，符合现有 pending 规律且无矛盾。"
     },
     {
       "id": "add_china_market_info_when_relevant",
