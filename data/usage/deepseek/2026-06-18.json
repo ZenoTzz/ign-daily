@@ -1,0 +1,89 @@
+{
+  "date": "2026-06-18",
+  "records": [
+    {
+      "time_cn": "2026-06-18 00:07:25",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 11,
+      "article_title": "Doctor Who Cancellation Avoided Episode Becoming 'Christmas-Shaped Bomb' For Show's Future, Insider Says",
+      "article_url": "https://www.ign.com/articles/doctor-who-cancellation-avoided-episode-becoming-christmas-shaped-bomb-for-shows-future-insider-says",
+      "article_date": "2026-06-18",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00013939,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8851,
+      "completion_tokens": 400,
+      "total_tokens": 9251,
+      "prompt_cache_hit_tokens": 8832,
+      "prompt_cache_miss_tokens": 19
+    },
+    {
+      "time_cn": "2026-06-18 00:07:38",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 17,
+      "article_title": "The Forever Home Is the Perfect High-Concept Sci-Fi Comic for 2026",
+      "article_url": "https://www.ign.com/articles/the-forever-home-is-the-perfect-high-concept-sci-fi-comic-for-2026",
+      "article_date": "2026-06-18",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00032734,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8330,
+      "completion_tokens": 830,
+      "total_tokens": 9160,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 522
+    },
+    {
+      "time_cn": "2026-06-18 00:07:55",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 18,
+      "article_title": "Clutch Preview: If You Liked Brad Pitt’s F1, This Might Be the Game for You",
+      "article_url": "https://www.ign.com/articles/clutch-preview-if-you-liked-brad-pitts-f1-this-might-be-the-game-for-you",
+      "article_date": "2026-06-18",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00056806,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9048,
+      "completion_tokens": 1268,
+      "total_tokens": 10316,
+      "prompt_cache_hit_tokens": 7680,
+      "prompt_cache_miss_tokens": 1368
+    },
+    {
+      "time_cn": "2026-06-18 00:08:13",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 19,
+      "article_title": "The Midnight Sons Return in Marvel's Critically Acclaimed Marc Spector: Moon Knight Series",
+      "article_url": "https://www.ign.com/articles/midnight-sons-return-marc-spector-moon-knight-interview",
+      "article_date": "2026-06-18",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00058508,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8999,
+      "completion_tokens": 1416,
+      "total_tokens": 10415,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 1191
+    }
+  ]
+}
