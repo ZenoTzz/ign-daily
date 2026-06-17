@@ -315,6 +315,48 @@
       "total_tokens": 10255,
       "prompt_cache_hit_tokens": 7680,
       "prompt_cache_miss_tokens": 1617
+    },
+    {
+      "time_cn": "2026-06-18 05:23:46",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 31,
+      "article_title": "New Spider-Man: Brand New Day Trailer Reveals a Very Angry Hulk",
+      "article_url": "https://www.ign.com/articles/new-spider-man-brand-new-day-trailer-reveals-a-very-angry-hulk",
+      "article_date": "2026-06-18",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00083994,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8824,
+      "completion_tokens": 2351,
+      "total_tokens": 11175,
+      "prompt_cache_hit_tokens": 7680,
+      "prompt_cache_miss_tokens": 1144
+    },
+    {
+      "time_cn": "2026-06-18 05:24:06",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 32,
+      "article_title": "Is Sadie Sink's Jean Grey the Main Villain of Spider-Man: Brand New Day?",
+      "article_url": "https://www.ign.com/articles/is-sadie-sinks-jean-grey-the-main-villain-of-spider-man-brand-new-day",
+      "article_date": "2026-06-18",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00087928,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9945,
+      "completion_tokens": 1931,
+      "total_tokens": 11876,
+      "prompt_cache_hit_tokens": 7680,
+      "prompt_cache_miss_tokens": 2265
     }
   ]
 }
