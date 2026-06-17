@@ -882,6 +882,48 @@
       "total_tokens": 15912,
       "prompt_cache_hit_tokens": 7936,
       "prompt_cache_miss_tokens": 1729
+    },
+    {
+      "time_cn": "2026-06-17 09:19:47",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 1,
+      "article_title": "We Build the LEGO Marvel S.H.I.E.L.D Helicarrier, An Airborne Fortress for Earth's Mightiest Heroes",
+      "article_url": "https://www.ign.com/articles/we-build-the-lego-marvel-shield-helicarrier-set-76354",
+      "article_date": "2026-06-18",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00054714,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8936,
+      "completion_tokens": 1312,
+      "total_tokens": 10248,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 1128
+    },
+    {
+      "time_cn": "2026-06-17 09:20:22",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 29,
+      "article_title": "War of the Dragon: The Wheel of Time Interview With Dire Wolf",
+      "article_url": "https://www.ign.com/articles/war-of-the-dragon-the-wheel-of-time-board-game-interview-with-dire-wolf",
+      "article_date": "2026-06-17",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00106324,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9679,
+      "completion_tokens": 2721,
+      "total_tokens": 12400,
+      "prompt_cache_hit_tokens": 7680,
+      "prompt_cache_miss_tokens": 1999
     }
   ]
 }

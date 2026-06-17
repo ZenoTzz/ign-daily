@@ -2,6 +2,39 @@
   "date": "2026-06-17",
   "articles": [
     {
+      "id": 29,
+      "category": "游戏新闻",
+      "emoji": "🐉",
+      "en_title": "War of the Dragon: The Wheel of Time Interview With Dire Wolf",
+      "cn_title": "《War of the Dragon》时光之轮桌游专访",
+      "summary": "《时光之轮》桌游新作《War of the Dragon》在Kickstarter开启众筹，支持2-4人，包含英雄与史诗两种模式。IGN专访Dire Wolf总裁与设计总监，探讨游戏在系列时间线中的位置、模式设计及众筹原因。",
+      "url": "https://www.ign.com/articles/war-of-the-dragon-the-wheel-of-time-board-game-interview-with-dire-wolf",
+      "publish_time_cn": "2026-06-17 06:30",
+      "pub_date": "2026-06-17 06:30",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/16/war-of-dragon-button-1776959839774-1781631154176.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/16/war-of-dragon-button-1776959839774-1781631154176.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/16/war-of-dragon-button-1776959839774-1781631154176.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/16/war-of-dragon-button-1776959839774-1781631154176.jpg?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/16/war-of-dragon-button-1776959839774-1781631154176.jpg?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/16/war-of-dragon-button-1776959839774-1781631154176.jpg",
+        "https://assets-prd.ignimgs.com/2026/06/16/war-of-the-dragon-1781630819122.png",
+        "https://assets-prd.ignimgs.com/2025/02/04/dune-imperium-box-1634675346852-1738705245404.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-17T09:19:28+08:00",
+      "pending_dict": [
+        {
+          "en": "War of the Dragon",
+          "cn": "龙之战",
+          "cat": "games",
+          "source": "ai_guess",
+          "reason": "无官方中文译名，根据英文直译，需确认"
+        }
+      ]
+    },
+    {
       "id": 27,
       "category": "评测评分",
       "emoji": "🎬",
@@ -835,5 +868,5 @@
       "source_fetched_at": "2026-06-16T08:45:41+08:00"
     }
   ],
-  "total": 28
+  "total": 29
 }

@@ -1,149 +1,132 @@
 {
-  "target_date": "2026-06-17",
+  "target_date": "2026-06-18",
   "target_dates": [
-    "2026-06-17",
-    "2026-06-16"
-  ],
-  "changed_dates": [
+    "2026-06-18",
     "2026-06-17"
   ],
-  "new_target_dates": [],
-  "new_count": 0,
-  "filtered_count": 5,
+  "changed_dates": [
+    "2026-06-18",
+    "2026-06-17"
+  ],
+  "new_target_dates": [
+    "2026-06-18",
+    "2026-06-17"
+  ],
+  "new_count": 2,
+  "filtered_count": 3,
   "cleanup_count": 0,
   "changed_count": 5,
-  "articles": [],
+  "articles": [
+    {
+      "title": "We Build the LEGO Marvel S.H.I.E.L.D Helicarrier, An Airborne Fortress for Earth's Mightiest Heroes",
+      "url": "https://www.ign.com/articles/we-build-the-lego-marvel-shield-helicarrier-set-76354",
+      "pubDate_cst": "2026-06-17 08:15"
+    },
+    {
+      "title": "War of the Dragon: The Wheel of Time Interview With Dire Wolf",
+      "url": "https://www.ign.com/articles/war-of-the-dragon-the-wheel-of-time-board-game-interview-with-dire-wolf",
+      "pubDate_cst": "2026-06-17 06:30"
+    }
+  ],
   "filtered_articles": [
     {
-      "title": "Get an Ecoflow River 2 256Wh LiFePO4 Portable Power Station for Less Than a Hundred Bucks",
-      "url": "https://www.ign.com/articles/ecoflow-river-lifepo4-power-station-deal-refurbished-from-ebay",
-      "pubDate_cst": "2026-06-17 06:20",
-      "description": "Cheap insurance",
+      "title": "Beat the Summer Heat With This $8 Portable Turbo Fan",
+      "url": "https://www.ign.com/articles/portable-fan-deals-amazon-fathers-day-sale",
+      "pubDate_cst": "2026-06-17 07:00",
+      "description": "Stay frosty.",
       "categories": "",
       "reason": "url:deal",
       "rss_url": "https://feeds.feedburner.com/ign/all",
-      "filtered_at_cn": "2026-06-17 07:11:23",
+      "filtered_at_cn": "2026-06-17 09:19:25",
       "status": "filtered"
     },
     {
-      "title": "Save Nearly 60% Off the Logitech G29 Racing Wheel and Pedal Set, Perfect for Forza Horizon 6 on PC",
-      "url": "https://www.ign.com/articles/logitech-g29-racing-wheel-and-pedals-deal-for-forza-horizon-6-updated",
-      "pubDate_cst": "2026-06-17 06:15",
-      "description": "Refurbished direct from Logitech with 1 year warranty",
+      "title": "Expand Your Home Gym With This Adjustable Weight Bench for Just $38 Shipped on Amazon",
+      "url": "https://www.ign.com/articles/expand-your-home-gym-with-this-adjustable-weight-bench-deal-amazon-fathers-day-sale",
+      "pubDate_cst": "2026-06-17 06:35",
+      "description": "The perfect complement to your dumbbells.",
       "categories": "",
       "reason": "url:deal",
       "rss_url": "https://feeds.feedburner.com/ign/all",
-      "filtered_at_cn": "2026-06-17 07:11:23",
+      "filtered_at_cn": "2026-06-17 09:19:25",
       "status": "filtered"
     },
     {
-      "title": "The Hottest Home Tech Shown at IGN Live 2026 From Best Buy, Including Big Discounts You Can Shop Today",
-      "url": "https://www.ign.com/articles/ign-live-2026-recap-best-buy-home-tech-products-and-discounts",
-      "pubDate_cst": "2026-06-17 06:10",
-      "description": "",
-      "categories": "",
-      "reason": "url:discount",
-      "rss_url": "https://feeds.feedburner.com/ign/all",
-      "filtered_at_cn": "2026-06-17 07:11:23",
-      "status": "filtered"
-    },
-    {
-      "title": "The $300 Apple Watch Ultra Can Still Arrive by Father's Day, Even With Free Shipping",
-      "url": "https://www.ign.com/articles/apple-watch-ultra-deal-arrives-by-fathers-day",
-      "pubDate_cst": "2026-06-17 06:05",
-      "description": "Save $450 off by getting a renewed \"excellent condition\" unit",
-      "categories": "",
-      "reason": "text:\\bsave \\$\\d",
-      "rss_url": "https://feeds.feedburner.com/ign/all",
-      "filtered_at_cn": "2026-06-17 07:11:23",
-      "status": "filtered"
-    },
-    {
-      "title": "The 4K-Capable Andromeda Insights Radeon RX 9070 XT Gaming PC Drops to Just $1,499 Shipped",
-      "url": "https://www.ign.com/articles/andromeda-insights-radeon-rx-9070-xt-gaming-pc-deal",
-      "pubDate_cst": "2026-06-17 05:25",
-      "description": "The Radeon RX 9070 XT nearly matches the peformance of the now-$1,000 GeForce RTX 5070 Ti.",
+      "title": "This $11 Hoto 24-in-1 Mini Screwdriver Kit Would Make a Great Father's Day Gift Idea for Your Tinkering Dad",
+      "url": "https://www.ign.com/articles/hoto-compact-screwdriver-tool-kit-deal-amazon-fathers-day-sale",
+      "pubDate_cst": "2026-06-17 06:35",
+      "description": "Delivers by Sunday, June 21",
       "categories": "",
       "reason": "url:deal",
       "rss_url": "https://feeds.feedburner.com/ign/all",
-      "filtered_at_cn": "2026-06-17 07:11:23",
+      "filtered_at_cn": "2026-06-17 09:19:25",
       "status": "filtered"
     }
   ],
   "runs": [
     {
+      "target_date": "2026-06-18",
+      "new_count": 1,
+      "filtered_count": 0,
+      "changed_count": 1,
+      "next_id": 2,
+      "articles": [
+        {
+          "title": "We Build the LEGO Marvel S.H.I.E.L.D Helicarrier, An Airborne Fortress for Earth's Mightiest Heroes",
+          "url": "https://www.ign.com/articles/we-build-the-lego-marvel-shield-helicarrier-set-76354",
+          "pubDate_cst": "2026-06-17 08:15"
+        }
+      ],
+      "filtered_articles": []
+    },
+    {
       "target_date": "2026-06-17",
-      "new_count": 0,
-      "filtered_count": 5,
-      "changed_count": 5,
-      "next_id": 28,
-      "articles": [],
+      "new_count": 1,
+      "filtered_count": 3,
+      "changed_count": 4,
+      "next_id": 30,
+      "articles": [
+        {
+          "title": "War of the Dragon: The Wheel of Time Interview With Dire Wolf",
+          "url": "https://www.ign.com/articles/war-of-the-dragon-the-wheel-of-time-board-game-interview-with-dire-wolf",
+          "pubDate_cst": "2026-06-17 06:30"
+        }
+      ],
       "filtered_articles": [
         {
-          "title": "Get an Ecoflow River 2 256Wh LiFePO4 Portable Power Station for Less Than a Hundred Bucks",
-          "url": "https://www.ign.com/articles/ecoflow-river-lifepo4-power-station-deal-refurbished-from-ebay",
-          "pubDate_cst": "2026-06-17 06:20",
-          "description": "Cheap insurance",
+          "title": "Beat the Summer Heat With This $8 Portable Turbo Fan",
+          "url": "https://www.ign.com/articles/portable-fan-deals-amazon-fathers-day-sale",
+          "pubDate_cst": "2026-06-17 07:00",
+          "description": "Stay frosty.",
           "categories": "",
           "reason": "url:deal",
           "rss_url": "https://feeds.feedburner.com/ign/all",
-          "filtered_at_cn": "2026-06-17 07:11:23",
+          "filtered_at_cn": "2026-06-17 09:19:25",
           "status": "filtered"
         },
         {
-          "title": "Save Nearly 60% Off the Logitech G29 Racing Wheel and Pedal Set, Perfect for Forza Horizon 6 on PC",
-          "url": "https://www.ign.com/articles/logitech-g29-racing-wheel-and-pedals-deal-for-forza-horizon-6-updated",
-          "pubDate_cst": "2026-06-17 06:15",
-          "description": "Refurbished direct from Logitech with 1 year warranty",
+          "title": "Expand Your Home Gym With This Adjustable Weight Bench for Just $38 Shipped on Amazon",
+          "url": "https://www.ign.com/articles/expand-your-home-gym-with-this-adjustable-weight-bench-deal-amazon-fathers-day-sale",
+          "pubDate_cst": "2026-06-17 06:35",
+          "description": "The perfect complement to your dumbbells.",
           "categories": "",
           "reason": "url:deal",
           "rss_url": "https://feeds.feedburner.com/ign/all",
-          "filtered_at_cn": "2026-06-17 07:11:23",
+          "filtered_at_cn": "2026-06-17 09:19:25",
           "status": "filtered"
         },
         {
-          "title": "The Hottest Home Tech Shown at IGN Live 2026 From Best Buy, Including Big Discounts You Can Shop Today",
-          "url": "https://www.ign.com/articles/ign-live-2026-recap-best-buy-home-tech-products-and-discounts",
-          "pubDate_cst": "2026-06-17 06:10",
-          "description": "",
-          "categories": "",
-          "reason": "url:discount",
-          "rss_url": "https://feeds.feedburner.com/ign/all",
-          "filtered_at_cn": "2026-06-17 07:11:23",
-          "status": "filtered"
-        },
-        {
-          "title": "The $300 Apple Watch Ultra Can Still Arrive by Father's Day, Even With Free Shipping",
-          "url": "https://www.ign.com/articles/apple-watch-ultra-deal-arrives-by-fathers-day",
-          "pubDate_cst": "2026-06-17 06:05",
-          "description": "Save $450 off by getting a renewed \"excellent condition\" unit",
-          "categories": "",
-          "reason": "text:\\bsave \\$\\d",
-          "rss_url": "https://feeds.feedburner.com/ign/all",
-          "filtered_at_cn": "2026-06-17 07:11:23",
-          "status": "filtered"
-        },
-        {
-          "title": "The 4K-Capable Andromeda Insights Radeon RX 9070 XT Gaming PC Drops to Just $1,499 Shipped",
-          "url": "https://www.ign.com/articles/andromeda-insights-radeon-rx-9070-xt-gaming-pc-deal",
-          "pubDate_cst": "2026-06-17 05:25",
-          "description": "The Radeon RX 9070 XT nearly matches the peformance of the now-$1,000 GeForce RTX 5070 Ti.",
+          "title": "This $11 Hoto 24-in-1 Mini Screwdriver Kit Would Make a Great Father's Day Gift Idea for Your Tinkering Dad",
+          "url": "https://www.ign.com/articles/hoto-compact-screwdriver-tool-kit-deal-amazon-fathers-day-sale",
+          "pubDate_cst": "2026-06-17 06:35",
+          "description": "Delivers by Sunday, June 21",
           "categories": "",
           "reason": "url:deal",
           "rss_url": "https://feeds.feedburner.com/ign/all",
-          "filtered_at_cn": "2026-06-17 07:11:23",
+          "filtered_at_cn": "2026-06-17 09:19:25",
           "status": "filtered"
         }
       ]
-    },
-    {
-      "target_date": "2026-06-16",
-      "new_count": 0,
-      "filtered_count": 0,
-      "changed_count": 0,
-      "next_id": 40,
-      "articles": [],
-      "filtered_articles": []
     }
   ]
 }
