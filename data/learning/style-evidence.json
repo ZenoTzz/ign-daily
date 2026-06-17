@@ -1201,8 +1201,8 @@
     },
     "subtitle_avoid_concrete_detail": {
       "id": "subtitle_avoid_concrete_detail",
-      "title": "副标题简短、有记忆点但不增添事实",
-      "rule": "副标题保持2至15字，优先用简短短语、双关或原文引语，不机械复述标题；不得补充原文没有的事实或改变立场。",
+      "title": "????????????????",
+      "rule": "?????????????????????????????????????????????????????????",
       "category": "subtitle",
       "scope": "all",
       "status": "confirmed",
@@ -1215,36 +1215,14 @@
         "2026-06-09",
         "2026-06-10",
         "2026-06-11",
-        "2026-06-12"
+        "2026-06-12",
+        "2026-06-16",
+        "2026-06-17"
       ],
-      "days_seen": 9,
-      "articles_seen": 12,
+      "days_seen": 11,
+      "articles_seen": 13,
       "contradictions": 0,
       "examples": [
-        {
-          "date": "2026-06-10",
-          "article_id": 1,
-          "before": "危机下的抉择",
-          "after": "成本危机"
-        },
-        {
-          "date": "2026-06-10",
-          "article_id": 6,
-          "before": "意外泄露引发猜测",
-          "after": "现在是Xbox主机独占"
-        },
-        {
-          "date": "2026-06-10",
-          "article_id": 7,
-          "before": "实体说明书回归",
-          "after": "回归经典"
-        },
-        {
-          "date": "2026-06-10",
-          "article_id": 24,
-          "before": "再见了，老朋友",
-          "after": "换了新引擎"
-        },
         {
           "date": "2026-06-11",
           "article_id": 4,
@@ -1292,6 +1270,30 @@
           "article_id": 21,
           "before": "漫长停播期",
           "after": "已经够久了"
+        },
+        {
+          "date": "2026-06-16",
+          "article_id": 7,
+          "before": "赛场即广告牌",
+          "after": "游戏即广告平台"
+        },
+        {
+          "date": "2026-06-16",
+          "article_id": 8,
+          "before": "微交易退场",
+          "after": "一份礼物"
+        },
+        {
+          "date": "2026-06-16",
+          "article_id": 39,
+          "before": "Xbox大洗牌",
+          "after": "下一个是谁？"
+        },
+        {
+          "date": "2026-06-17",
+          "article_id": 6,
+          "before": "10亿信用币清零",
+          "after": "不会有进一步的处罚"
         }
       ],
       "feedback": [
@@ -1303,9 +1305,9 @@
         }
       ],
       "created_at": "2026-06-04T06:38:54+08:00",
-      "last_seen": "2026-06-12",
+      "last_seen": "2026-06-17",
       "confidence": 0.9,
-      "latest_evidence_summary": "多日样本显示，副标题倾向短句、引语或轻微双关。"
+      "latest_evidence_summary": "6?17???????????????????????"
     },
     "hex_color_no_space_before_punctuation": {
       "id": "hex_color_no_space_before_punctuation",
@@ -1336,18 +1338,20 @@
     },
     "remove_author_bio_and_image_credit": {
       "id": "remove_author_bio_and_image_credit",
-      "title": "删除作者简介和非正文署名",
-      "rule": "成稿不保留IGN作者简介、联系方式、社交账号、图片来源等非正文尾注。",
+      "title": "????????????",
+      "rule": "?????? IGN ???????????????????????????????????????",
       "category": "structure",
       "scope": "all",
       "status": "confirmed",
       "days": [
         "2026-06-03",
         "2026-06-11",
-        "2026-06-12"
+        "2026-06-12",
+        "2026-06-16",
+        "2026-06-17"
       ],
-      "days_seen": 3,
-      "articles_seen": 1,
+      "days_seen": 5,
+      "articles_seen": 6,
       "contradictions": 0,
       "examples": [
         {
@@ -1355,6 +1359,36 @@
           "article_id": 13,
           "before": "Tom Phillips是IGN的新闻编辑。你可以通过tom_phillips@ign.com联系他，或在Bluesky上找到他。",
           "after": "PlayStation Plus 升级/高级:"
+        },
+        {
+          "date": "2026-06-16",
+          "article_id": 7,
+          "before": "Tom Phillips是IGN的新闻编辑。可以通过tom_phillips@ign.com联系Tom，或在Bluesky上找到他。",
+          "after": ""
+        },
+        {
+          "date": "2026-06-16",
+          "article_id": 8,
+          "before": "Wesley是IGN新闻总监。可在Twitter @wyp100找到他。可通过wesley_yinpoole@ign.com或wyp100@proton.me联系Wesley。",
+          "after": ""
+        },
+        {
+          "date": "2026-06-16",
+          "article_id": 25,
+          "before": "图片由Christian Petersen/Getty Images提供。",
+          "after": ""
+        },
+        {
+          "date": "2026-06-16",
+          "article_id": 34,
+          "before": "Cade Onder是IGN新闻团队的自由撰稿人，负责报道游戏、影视等各类娱乐资讯。你可以在X上找到他 @Cade_Onder。",
+          "after": ""
+        },
+        {
+          "date": "2026-06-17",
+          "article_id": 6,
+          "before": "Luke是IGN评测团队的高级编辑，你可以在Bluesky上通过 @mrlukereilly向他提问。",
+          "after": ""
         }
       ],
       "feedback": [
@@ -1366,9 +1400,9 @@
         }
       ],
       "created_at": "2026-06-12T17:45:36+08:00",
-      "last_seen": "2026-06-12",
-      "confidence": 0.96,
-      "latest_evidence_summary": "多篇稿件一致删除作者简介和社交账号尾注。"
+      "last_seen": "2026-06-17",
+      "confidence": 0.97,
+      "latest_evidence_summary": "6?17??????????????"
     },
     "preserve_claim_attribution_and_modality": {
       "id": "preserve_claim_attribution_and_modality",
@@ -1425,8 +1459,8 @@
     },
     "preserve_source_information_and_order": {
       "id": "preserve_source_information_and_order",
-      "title": "完整保留原文信息与论述顺序",
-      "rule": "正文翻译必须逐段覆盖原文事实、引语和列表，并保持论述顺序；润色可以改善中文，但不能擅自删减、合并错位或扩写成原文没有的内容。",
+      "title": "???????????????",
+      "rule": "?????????????????????????????????????????????????????????????????????",
       "category": "body",
       "scope": "all",
       "status": "confirmed",
@@ -1437,36 +1471,14 @@
         "2026-06-09",
         "2026-06-10",
         "2026-06-11",
-        "2026-06-12"
+        "2026-06-12",
+        "2026-06-16",
+        "2026-06-17"
       ],
-      "days_seen": 7,
-      "articles_seen": 12,
+      "days_seen": 9,
+      "articles_seen": 13,
       "contradictions": 0,
       "examples": [
-        {
-          "date": "2026-06-04",
-          "article_id": 28,
-          "before": "我们排除了其第二款手机游戏《战神：密米尔的幻视》，因为这款AR游戏并未增加主线叙事，而是为玩家提供《战神》世界的背景设定。我们同样排除了《PlayStation全明星大乱斗》，尽管它被戏谑地纳入了《战神》正史。",
-          "after": "我们排除了其第二款手机游戏《God of War: Mimir’s Vision》，因为这款AR游戏并未增加主线叙事，而是为玩家提供《战神》世界的背景设定。我们同样排除了《PlayStation全明星大乱斗》，尽管它被戏谑地纳入了《战神》正史。还有几部《战神》故事通过小说和漫画讲述，不过本列表仅包含游戏。"
-        },
-        {
-          "date": "2026-06-04",
-          "article_id": 31,
-          "before": "微软给予的同时也在索取。以下是未来一个月内即将离开Xbox Game Pass的游戏。",
-          "after": "以下是第一批阵容的全部名单：\u000b即将加入 XBOX Game Pass Ultimate · Premium"
-        },
-        {
-          "date": "2026-06-08",
-          "article_id": 12,
-          "before": "之后，你会进入银河地图，在那里「你可以派遣你的队员执行非战斗任务，帮助他们收集情报和新资源。」",
-          "after": "之后，玩家会进入银河地图，在那里「你可以派遣你的队员执行非战斗任务，帮助他们收集情报和新资源。」在完成这些事务后，游戏将进入下一个循环阶段。「届时你将接受并选择任务，挑选出战成员，并观看他们离开The Den执行任务的过场演出。」"
-        },
-        {
-          "date": "2026-06-09",
-          "article_id": 13,
-          "before": "任天堂宣布将于本周晚些时候举办新一期 Nintendo Direct，公布即将登陆 Switch 2 的游戏详情。",
-          "after": "任天堂宣布将于北京时间今日（6月9日）晚上十点举办新一期任天堂直面会，公布即将登陆Switch 2的游戏详情。主节目时长50分钟，随后还有95分钟的树屋直播实机演示环节。"
-        },
         {
           "date": "2026-06-09",
           "article_id": 26,
@@ -1514,6 +1526,30 @@
           "article_id": 21,
           "before": "许多粉丝原本以为圣诞特辑会是Davies的告别之作，宣布这个一次性特别节目只是为了收尾他剩余的剧情线索——比如Billie Piper令人费解的再次现身，她的角色现在可能永远无法明确了。",
           "after": "许多粉丝原本认为，这集圣诞特辑将会成为Davies的告别之作。此前公布这部单集特别篇时，不少人都觉得它只是为了收束他遗留下来的剧情线——例如Billie Piper突然回归却始终未获解释的谜团，而如今她的身份或许永远都不会得到正式说明。"
+        },
+        {
+          "date": "2026-06-16",
+          "article_id": 39,
+          "before": "据报道，随着微软对Xbox业务进行重大削减，《地狱之刃》开发商Ninja Theory与《意航员》开发商Double Fine等工作室正在为避免关闭而奋战。",
+          "after": "据The Verge的消息，在微软大幅削减Xbox业务之际，Xbox正准备关闭Ninja Theory。员工已在本周一的一次电话会议中被告知这一决定，不过微软仍希望工作室能够找到买家接手。Ninja Theory在6月8号公布了他们的新游《地狱之刃：塞娜》，距今相隔仅一周多，而Ninja Theory正与微软展开谈判，希望通过独立运营来避免被关闭。"
+        },
+        {
+          "date": "2026-06-16",
+          "article_id": 25,
+          "before": "Duncan于2011年加入Rare，带领公司度过了以《Kinect Sports》最为人熟知的阶段，随后推出了大获成功的《盗贼之海》。",
+          "after": "Duncan于2011年加入Rare，带领公司走过以《Kinect Sports》闻名的时期，随后推出了大获成功的《盗贼之海》。O'Connor曾在Rare负责现已取消的奇幻RPG项目《Everwild》。在此之前，她已在Rare效力数十年，最早可追溯到1999年，当时她担任N64平台冒险游戏《Conker's Bad Fur Day》的动画师。"
+        },
+        {
+          "date": "2026-06-16",
+          "article_id": 22,
+          "before": "这无疑是个设计上的难题，尤其是因为这意味着开发团队必须彻底重新思考我们获得圆桌骑士的方式（毕竟不能只是直接降落到圆桌岛上——这可是游戏里最强大的召唤兽！）。但我很高兴导演滨口直树和他的团队成功做到了这一点，因为一艘能够自由操控、在细节丰富、等比例开放世界中穿梭的飞空艇，正是我从2001年起就一直等待《最终幻想》实现的事情。",
+          "after": "这无疑是个设计上的难题，尤其是因为这意味着开发团队必须彻底重新思考我们获得「圆桌骑士」的方式——毕竟，这可是游戏中最强的召唤兽，总不能像原版一样直接飞到圆桌岛捡走。但我很高兴总监滨口直树和他的团队成功做到了这一点，因为一艘能够自由操控、在细节丰富、等比例开放世界中穿梭的飞空艇，正是我从2001年起就一直等待《最终幻想》实现的事情。"
+        },
+        {
+          "date": "2026-06-17",
+          "article_id": 6,
+          "before": "与此同时，最新更新还带来了多项有用的修复，包括对道路探索和在线模式Horizon Play升级所需经验的调整。",
+          "after": "与此同时，最新更新还带来了多项有用的修复，包括对道路探索和在线模式Horizon Play升级所需经验的调整。区域概览中现已添加「已驾驶路段」百分比，这将让你更容易地在屏幕地图上追踪那些难以发现的剩余道路。"
         }
       ],
       "feedback": [
@@ -1525,9 +1561,9 @@
         }
       ],
       "created_at": "2026-06-12T17:45:36+08:00",
-      "last_seen": "2026-06-12",
+      "last_seen": "2026-06-17",
       "confidence": 0.96,
-      "latest_evidence_summary": "长文、访谈和清单稿反复显示：忠实、完整和顺序准确优先。"
+      "latest_evidence_summary": "6?17????????????/???????????????"
     },
     "remove_redundant_title_prefixes": {
       "id": "remove_redundant_title_prefixes",
@@ -1605,8 +1641,8 @@
     },
     "prefer_confirmed_chinese_game_titles": {
       "id": "prefer_confirmed_chinese_game_titles",
-      "title": "优先使用已确认的官方或通行中文名",
-      "rule": "游戏、影视、角色和系统名有稳定官方或通行中文译名时应统一使用；没有稳定译名时保留原文，不自行创造译名。",
+      "title": "????????????????",
+      "rule": "????????????????????/??????????????????????????????????",
       "category": "dictionary",
       "scope": "games|movies_tv",
       "status": "confirmed",
@@ -1614,10 +1650,11 @@
         "2026-06-03",
         "2026-06-04",
         "2026-06-10",
-        "2026-06-12"
+        "2026-06-12",
+        "2026-06-16"
       ],
-      "days_seen": 4,
-      "articles_seen": 7,
+      "days_seen": 5,
+      "articles_seen": 11,
       "contradictions": 0,
       "examples": [
         {
@@ -1661,6 +1698,30 @@
           "article_id": 11,
           "before": "《Stranger Than Heaven》导演回应Tupac风波",
           "after": "《异于天堂》制作组回应Tupac风波"
+        },
+        {
+          "date": "2026-06-16",
+          "article_id": 13,
+          "before": "《刺客信条：影》的最终内容更新将为直江与弥助的故事添加最后一章、一个高难度新挑战模式，并允许玩家装扮为《刺客信条：黑旗 记忆重置》中的爱德华·肯威。",
+          "after": "《刺客信条：影》的最终内容更新将为奈绪江与弥助的故事添加最后一章、一个高难度新挑战模式，并允许玩家装扮为《刺客信条：黑旗 记忆重置》中的爱德华·肯威。"
+        },
+        {
+          "date": "2026-06-16",
+          "article_id": 22,
+          "before": "在《Final Fantasy 7 Revelation》公开预告片的前几分钟里，开发商史克威尔艾尼克斯让我们重新见到了飞空艇Highwind。原作PlayStation游戏的粉丝会满怀深情地回忆起它那多螺旋桨的壮丽身姿；正是这艘载具，为《最终幻想7》的世界地图解锁了想去哪里就去哪里的完全自由。不受河流、海洋或山脉的限制，你可以高速翱翔全球。而且，只要有能安全降落的地方，你就能探索任何吸引你的地点。",
+          "after": "在《最终幻想7 Revelation》公开预告片的前几分钟里，开发商史克威尔艾尼克斯让我们重新见到了高风号（Highwind）飞空艇。原作游戏的粉丝会满怀深情地回忆起它那多螺旋桨的壮丽身姿；正是这艘载具，为《最终幻想7》的世界地图解锁了想去哪里就去哪里的完全自由。不受河流、海洋或山脉的限制，你可以高速翱翔全球。而且，只要有能安全降落的地方，你就能探索任何吸引你的地点。"
+        },
+        {
+          "date": "2026-06-16",
+          "article_id": 34,
+          "before": "目前尚不清楚Treyarch是否在制作另一款《黑色行动》游戏。尽管《黑色行动6》取得了成功，但《黑色行动7》被认为商业表现令人失望，标志着该系列声誉下滑。与此同时，有各种传闻称Activision和Treyarch计划在现代平台重制《黑色行动1》和《黑色行动2》。Activision尚未确认任何消息，但粉丝们在PlayStation后台发现了这些游戏的列表。",
+          "after": "目前尚不清楚Treyarch是否在制作另一款《黑色行动》游戏。尽管《黑色行动6》取得了成功，但《黑色行动7》被认为商业表现令人失望，标志着该系列声誉下滑。与此同时，有各种传闻称动视和Treyarch计划在现代平台重制《黑色行动1》和《黑色行动2》。动视尚未确认任何消息，但粉丝们在PlayStation后台发现了这些游戏的列表。"
+        },
+        {
+          "date": "2026-06-16",
+          "article_id": 37,
+          "before": "「我仍然相信，即便是在当下，即使对于像素美术的回合制游戏，也依然有成长、进化和发展的空间。」Nakashima告诉我，「当然，这类体验深深植根于经典，倾向于让人感到熟悉。然而，通过融入一些新技术，我仍然相信这类体验是有前途的。即使你在今天这样一个现代环境下玩它，这类RPG也未必会让人觉得过时。这些游戏仍然大有未来，或许这就是这一切的源头。」",
+          "after": "「我仍然相信，即便是在当下，即使对于像素美术的回合制游戏，也依然有成长、进化和发展的空间。」中岛启辅告诉我，「当然，这类体验深深植根于经典，倾向于让人感到熟悉。然而，通过融入一些新技术，我仍然相信这类体验是有前途的。即使你在今天这样一个现代环境下玩它，这类RPG也未必会让人觉得过时。这些游戏仍然大有未来，或许这就是这一切的源头。」"
         }
       ],
       "feedback": [
@@ -1672,24 +1733,25 @@
         }
       ],
       "created_at": "2026-06-12T17:45:36+08:00",
-      "last_seen": "2026-06-12",
-      "confidence": 0.82,
-      "latest_evidence_summary": "多个样本纠正了作品名和角色名，并避免使用不稳定译名。"
+      "last_seen": "2026-06-16",
+      "confidence": 0.86,
+      "latest_evidence_summary": "?????????????????????????????????????????"
     },
     "retain_original_for_unconfirmed_names": {
       "id": "retain_original_for_unconfirmed_names",
-      "title": "无稳定中文名的专名保留原文",
-      "rule": "项目代号、未正式定名作品和没有稳定官方中文名的作品或角色，应保留拉丁字母原名，避免自行音译或意译。",
+      "title": "?????????????",
+      "rule": "DLC ????????????????????????????????????????????????????????????",
       "category": "dictionary",
       "scope": "all",
       "status": "confirmed",
       "days": [
         "2026-06-05",
         "2026-06-10",
-        "2026-06-11"
+        "2026-06-11",
+        "2026-06-16"
       ],
-      "days_seen": 3,
-      "articles_seen": 3,
+      "days_seen": 4,
+      "articles_seen": 7,
       "contradictions": 0,
       "examples": [
         {
@@ -1709,6 +1771,30 @@
           "article_id": 11,
           "before": "由于公司全球发行部门及西班牙巴塞罗那工作室的组织调整，预计还将有更多职位裁撤。巴塞罗那工作室此前曾支持《疯狂兔子》系列和《星际迷航：舰桥船员》等项目，今后将只专注于《彩虹六号》系列。",
           "after": "由于公司全球发行部门及西班牙巴塞罗那工作室的组织调整，预计还将有更多职位裁撤。巴塞罗那工作室此前曾支持《疯狂兔子》系列和《Star Trek: Bridge Crew》等项目，今后将只专注于《彩虹六号》系列。"
+        },
+        {
+          "date": "2026-06-16",
+          "article_id": 8,
+          "before": "卡普空宣布，计划在《龙之信条2》的《黑暗觉者》资料片发售前，下架游戏内的微交易项目。",
+          "after": "卡普空宣布，计划在《龙之信条2》的《Dark Arisen》DLC发售前，下架游戏内的微交易项目。"
+        },
+        {
+          "date": "2026-06-16",
+          "article_id": 37,
+          "before": "《最终幻想：共鸣》制作人谈回合制RPG复兴",
+          "after": "《最终幻想 RESONANCE》制作人谈回合制RPG复兴"
+        },
+        {
+          "date": "2026-06-16",
+          "article_id": 22,
+          "before": "在《Final Fantasy 7 Revelation》公开预告片的前几分钟里，开发商史克威尔艾尼克斯让我们重新见到了飞空艇Highwind。原作PlayStation游戏的粉丝会满怀深情地回忆起它那多螺旋桨的壮丽身姿；正是这艘载具，为《最终幻想7》的世界地图解锁了想去哪里就去哪里的完全自由。不受河流、海洋或山脉的限制，你可以高速翱翔全球。而且，只要有能安全降落的地方，你就能探索任何吸引你的地点。",
+          "after": "在《最终幻想7 Revelation》公开预告片的前几分钟里，开发商史克威尔艾尼克斯让我们重新见到了高风号（Highwind）飞空艇。原作游戏的粉丝会满怀深情地回忆起它那多螺旋桨的壮丽身姿；正是这艘载具，为《最终幻想7》的世界地图解锁了想去哪里就去哪里的完全自由。不受河流、海洋或山脉的限制，你可以高速翱翔全球。而且，只要有能安全降落的地方，你就能探索任何吸引你的地点。"
+        },
+        {
+          "date": "2026-06-16",
+          "article_id": 34,
+          "before": "Treyarch最近还为《黑色行动7》更新了一个名为「Black Ops Classic」的新播放列表。该列表包含了经典的《黑色行动》地图，并对游戏玩法进行了重大调整，使其更贴近原版《黑色行动》游戏。有人猜测这可能是在为重制版铺路。",
+          "after": "Treyarch最近还为《黑色行动7》更新了一个名为「黑色行动经典（Black Ops Classic）」的新列表。该列表包含了经典的《黑色行动》地图，并对游戏玩法进行了重大调整，使其更贴近原版《黑色行动》游戏。有人猜测这可能是在为重制版铺路。"
         }
       ],
       "feedback": [
@@ -1720,9 +1806,9 @@
         }
       ],
       "created_at": "2026-06-12T21:51:19+08:00",
-      "last_seen": "2026-06-11",
-      "confidence": 0.88,
-      "latest_evidence_summary": "Hadar、Evie等未确认中文名的专名被恢复为原文。"
+      "last_seen": "2026-06-16",
+      "confidence": 0.9,
+      "latest_evidence_summary": "Dark Arisen?RESONANCE?Highwind ???????????????????????????"
     },
     "platform_name_compact": {
       "id": "platform_name_compact",
@@ -1824,7 +1910,67 @@
       "last_seen": "2026-06-11",
       "confidence": 0.82,
       "latest_evidence_summary": "Asha Sharma等人物在多篇稿件中统一保留英文姓名。"
+    },
+    "use_live_exchange_rate_for_cny": {
+      "id": "use_live_exchange_rate_for_cny",
+      "title": "??????????????????",
+      "rule": "??????????????????? 7 ?????????????????????????????????????????????????",
+      "category": "currency",
+      "scope": "all",
+      "status": "pending",
+      "days": [
+        "2026-06-16"
+      ],
+      "days_seen": 1,
+      "articles_seen": 1,
+      "contradictions": 0,
+      "examples": [
+        {
+          "date": "2026-06-16",
+          "article_id": 8,
+          "before": "《龙之信条2》在2024年首发时因其微交易而受到批评，发售当天就提供了超过21种微交易项目。这些项目的价格从0.99美元(约合人民币7元)到4.99美元(约合人民币34元)不等，包括售价2.99美元(约合人民币20元)的探险家露营套装、0.99美元(约合人民币7元)的牢狱钥匙（可让玩家越狱，但用一次就坏）、2.99美元(约合人民币20元)的传送基石（传送点标记），以及0.99美元(约合人民币7元)的复活石，能复活死者。",
+          "after": "《龙之信条2》在2024年首发时因其微交易而受到批评，发售当天就提供了超过21种微交易项目。这些项目的价格从0.99美元（约合人民币6.76元）到4.99美元（约合人民币33.8元）不等，包括售价2.99美元（约合人民币20.28元）的「露营套装」、0.99美元（约合人民币6.76元）的「监狱简易钥匙」（可让玩家越狱，但用一次就坏）、2.99美元的「返回的基石」（传送点标记），以及0.99美元的复活石，能复活死者。"
+        }
+      ],
+      "feedback": [],
+      "created_at": "2026-06-17T10:11:25+08:00",
+      "last_seen": "2026-06-16",
+      "confidence": 0.9,
+      "latest_evidence_summary": "??? 0.99/4.99/2.99 ??????????????????? 6.76/33.8/20.28 ?????????????????? 7?"
+    },
+    "wrap_media_source_names": {
+      "id": "wrap_media_source_names",
+      "title": "???????????????",
+      "rule": "???????????????????????????????????The Game Business???????????????????",
+      "category": "punctuation",
+      "scope": "all",
+      "status": "pending",
+      "days": [
+        "2026-06-16"
+      ],
+      "days_seen": 1,
+      "articles_seen": 2,
+      "contradictions": 0,
+      "examples": [
+        {
+          "date": "2026-06-16",
+          "article_id": 25,
+          "before": "The Game Business今天率先报道了离职消息。两人共同离职的原因并未给出，不过这一事件发生之际，正值外界对Xbox Game Studios及其众多员工未来深感担忧——此前新上任的Xbox负责人Asha Sharma对该部门微薄的利润率发出了严厉警告。",
+          "after": "《The Game Business》今天率先报道了离职消息。两人共同离职的原因并未给出，不过这一事件发生之际，正值外界对Xbox Game Studios及其众多员工未来深感担忧——此前新上任的Xbox负责人Asha Sharma对该部门微薄的利润率发出了严厉警告。"
+        },
+        {
+          "date": "2026-06-16",
+          "article_id": 39,
+          "before": "今天早些时候，The Game Business报道Xbox Game Studios负责人Craig Duncan已离职，随后Kotaku报道《午夜之南》开发商Compulsion面临关闭威胁。现在彭博社又称，几乎所有微软旗下工作室都忧心于下一步走向，其中Ninja Theory和Double Fine被点名正与母公司协商。",
+          "after": "今天稍早，《The Game Business》报道称Xbox Game Studios负责人Craig Duncan已经离职，随后Kotaku又报道《午夜之南》开发商Compulsion面临关闭风险。如今，彭博社进一步指出，几乎所有微软旗下游戏工作室都在担忧自己的未来，而Ninja Theory和Double Fine则已被点名正在与母公司进行谈判。"
+        }
+      ],
+      "feedback": [],
+      "created_at": "2026-06-17T10:11:25+08:00",
+      "last_seen": "2026-06-16",
+      "confidence": 0.78,
+      "latest_evidence_summary": "????? The Game Business ??????????????????"
     }
   },
-  "updated_at": "2026-06-15T21:48:32+08:00"
+  "updated_at": "2026-06-17T10:11:25+08:00"
 }

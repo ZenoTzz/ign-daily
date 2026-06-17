@@ -1,0 +1,138 @@
+{
+  "date": "2026-06-17",
+  "observer": "codex",
+  "status": "observed",
+  "source_hash": "accaa37850b130b3cf7abcbaa030b20738a5272d",
+  "signal_count": 1,
+  "candidate_count": 3,
+  "signals": [
+    {
+      "type": "user_polish",
+      "date": "2026-06-17",
+      "article_id": 6,
+      "url": "https://www.ign.com/articles/bank-balances-rolled-back-for-forza-horizon-6-players-who-used-exploit-to-amass-a-billion-credits",
+      "en_title": "Bank Balances Rolled Back for Forza Horizon 6 Players Who Used Exploit to Amass a Billion Credits",
+      "cn_title": "《极限竞速：地平线6》封堵刷钱漏洞，余额回滚",
+      "edits": [
+        {
+          "field": "title",
+          "before": "《极限竞速：地平线6》封堵刷钱漏洞，余额回滚",
+          "after": "《极限竞速：地平线6》封堵刷钱漏洞"
+        },
+        {
+          "field": "subtitle",
+          "before": "10亿信用币清零",
+          "after": "不会有进一步的处罚"
+        },
+        {
+          "field": "paragraph_5",
+          "before": "与此同时，最新更新还带来了多项有用的修复，包括对道路探索和在线模式Horizon Play升级所需经验的调整。",
+          "after": "与此同时，最新更新还带来了多项有用的修复，包括对道路探索和在线模式Horizon Play升级所需经验的调整。区域概览中现已添加「已驾驶路段」百分比，这将让你更容易地在屏幕地图上追踪那些难以发现的剩余道路。"
+        },
+        {
+          "field": "paragraph_6",
+          "before": "区域概览中现已添加「已驾驶路段」百分比，这将让你更容易地在屏幕地图上追踪那些难以发现的剩余道路。",
+          "after": "Playground还调整了Horizon Play中从26级升至100级所需的经验值量。达到100级与成就「Maxed Out」挂钩，但此前有计算显示，升到100级可能需要约1000小时的线上游戏时间，这并非工作室的本意。在新更新之后，已达到32级的玩家将直接跳至100级并解锁该成就。"
+        },
+        {
+          "field": "paragraph_7",
+          "before": "Playground还调整了Horizon Play中从26级升至100级所需的经验值量。达到100级与成就「Maxed Out」挂钩，但此前有计算显示，升到100级可能需要约1000小时的线上游戏时间，这并非工作室的本意。在新更新之后，已达到32级的玩家将直接跳至100级并解锁该成就。",
+          "after": "Playground还解决了直线加速轮胎的调校在非直线加速赛事中异常有利的问题。"
+        },
+        {
+          "field": "paragraph_8",
+          "before": "Playground还解决了直线加速轮胎（drag tyres）的调校在非直线加速赛事中异常有利的问题。",
+          "after": "团队解释道：「这并不是直线加速轮胎应有的表现或用例。为缓解这一问题，我们做出了一些调整，确保直线加速轮胎不再是非直线加速赛事的最佳轮胎选择。」「此外，我们保留了直线加速轮胎的PI消耗，这意味着任何现有的调校，例如A 700级别的调校，其PI等级不会改变，但过弯性能会显著降低。」"
+        },
+        {
+          "field": "paragraph_9",
+          "before": "团队解释道：「这并不是直线加速轮胎应有的表现或用例。为缓解这一问题，我们做出了一些调整，确保直线加速轮胎不再是非直线加速赛事的最佳轮胎选择。」",
+          "after": "「团队意识到这意味着有大量排行榜记录需要移除。这将会是一个持续的过程，我们将识别并移除本次补丁前使用直线加速轮胎做出的任何单圈时间。」"
+        },
+        {
+          "field": "paragraph_10",
+          "before": "「此外，我们保留了直线加速轮胎的PI消耗，这意味着任何现有的调校，例如A 700级别的调校，其PI等级不会改变，但过弯性能会显著降低。」",
+          "after": "完整的更新说明可在《极限竞速》支持页面上查看。"
+        }
+      ]
+    }
+  ],
+  "candidates": [
+    {
+      "id_hint": "remove_author_bio_and_image_credit",
+      "title": "????????????",
+      "rule": "?????? IGN ???????????????????????????????????????",
+      "category": "structure",
+      "scope": "all",
+      "status_suggestion": "observe",
+      "confidence": 0.97,
+      "evidence_summary": "6?17??????????????",
+      "examples": [
+        {
+          "date": "2026-06-17",
+          "article_id": 6,
+          "before": "Luke是IGN评测团队的高级编辑，你可以在Bluesky上通过 @mrlukereilly向他提问。",
+          "after": ""
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id_hint": "preserve_source_information_and_order",
+      "title": "???????????????",
+      "rule": "?????????????????????????????????????????????????????????????????????",
+      "category": "body",
+      "scope": "all",
+      "status_suggestion": "observe",
+      "confidence": 0.92,
+      "evidence_summary": "6?17????????????/???????????????",
+      "examples": [
+        {
+          "date": "2026-06-17",
+          "article_id": 6,
+          "before": "与此同时，最新更新还带来了多项有用的修复，包括对道路探索和在线模式Horizon Play升级所需经验的调整。",
+          "after": "与此同时，最新更新还带来了多项有用的修复，包括对道路探索和在线模式Horizon Play升级所需经验的调整。区域概览中现已添加「已驾驶路段」百分比，这将让你更容易地在屏幕地图上追踪那些难以发现的剩余道路。"
+        },
+        {
+          "date": "2026-06-17",
+          "article_id": 6,
+          "before": "区域概览中现已添加「已驾驶路段」百分比，这将让你更容易地在屏幕地图上追踪那些难以发现的剩余道路。",
+          "after": "Playground还调整了Horizon Play中从26级升至100级所需的经验值量。达到100级与成就「Maxed Out」挂钩，但此前有计算显示，升到100级可能需要约1000小时的线上游戏时间，这并非工作室的本意。在新更新之后，已达到32级的玩家将直接跳至100级并解锁该成就。"
+        },
+        {
+          "date": "2026-06-17",
+          "article_id": 6,
+          "before": "Playground还调整了Horizon Play中从26级升至100级所需的经验值量。达到100级与成就「Maxed Out」挂钩，但此前有计算显示，升到100级可能需要约1000小时的线上游戏时间，这并非工作室的本意。在新更新之后，已达到32级的玩家将直接跳至100级并解锁该成就。",
+          "after": "Playground还解决了直线加速轮胎的调校在非直线加速赛事中异常有利的问题。"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id_hint": "subtitle_avoid_concrete_detail",
+      "title": "????????????????",
+      "rule": "?????????????????????????????????????????????????????????",
+      "category": "subtitle",
+      "scope": "all",
+      "status_suggestion": "observe",
+      "confidence": 0.8,
+      "evidence_summary": "6?17???????????????????????",
+      "examples": [
+        {
+          "date": "2026-06-17",
+          "article_id": 6,
+          "before": "10亿信用币清零",
+          "after": "不会有进一步的处罚"
+        }
+      ],
+      "contradiction": ""
+    }
+  ],
+  "notes": [
+    "Codex???????????????????????????????????",
+    "????????????????? STYLE_PROFILE.md?",
+    "??????????????????? 7 ?????????????"
+  ],
+  "updated_at": "2026-06-17T10:11:25+08:00",
+  "model": "codex"
+}
