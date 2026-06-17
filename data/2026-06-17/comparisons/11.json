@@ -1,0 +1,206 @@
+{
+  "date": "2026-06-17",
+  "article_id": 11,
+  "url": "https://www.ign.com/articles/fortnite-maker-confirms-how-it-uses-generative-ai-to-help-create-concept-art-and-designs-for-new-skins",
+  "en_title": "Fortnite Maker Confirms How It Uses Generative AI to Help Create Concept Art and Designs for New Skins",
+  "cn_title": "Epic Games证实AI参与《堡垒之夜》皮肤概念设计",
+  "created_at_cn": "2026-06-17 09:21:39",
+  "models": [
+    {
+      "model": "deepseek-v4-pro",
+      "label": "DeepSeek V4 Pro",
+      "base_url": "https://api.deepseek.com",
+      "provider": "openai-compatible"
+    },
+    {
+      "model": "deepseek-v4-flash",
+      "label": "DeepSeek V4 Flash",
+      "base_url": "https://api.deepseek.com",
+      "provider": "openai-compatible"
+    }
+  ],
+  "source_paragraph_count": 13,
+  "results": [
+    {
+      "id": 11,
+      "url": "https://www.ign.com/articles/fortnite-maker-confirms-how-it-uses-generative-ai-to-help-create-concept-art-and-designs-for-new-skins",
+      "en_title": "Fortnite Maker Confirms How It Uses Generative AI to Help Create Concept Art and Designs for New Skins",
+      "cn_title": "Epic Games证实AI参与《堡垒之夜》皮肤概念设计",
+      "subtitle": "但设计仍是核心",
+      "opus_summary": "Epic Games首次公开《堡垒之夜》概念设计流程，展示人类艺术家手绘后，用生成式AI快速生成3D效果备选方案，再经人工修正。公司强调AI不用于从头设计，而是加速迭代，但AI生成内容可能引入错误，需后续人工把关。此举回应了玩家对部分资产疑似AI生成的质疑。",
+      "publish_time_cn": "2026-06-16 18:47",
+      "paragraphs": [
+        {
+          "en": "Fortnite maker Epic Games has offered a rare glimpse behind the scenes at how it designs new character skins and in-game locations — and shown how certain stages involve the use of generative AI tools.",
+          "cn": "《堡垒之夜》开发商Epic Games罕见地公开了其设计新角色皮肤和游戏内场景的幕后过程，并展示了其中某些环节如何运用生成式AI工具。"
+        },
+        {
+          "en": "In a video published to the Unreal Engine YouTube channel, Epic Games shows how a new Fortnite character is designed and iterated on by hand before being modified using an AI prompt to look more like a 3D model.",
+          "cn": "在Unreal Engine YouTube频道发布的一段视频中，Epic Games展示了一个《堡垒之夜》新角色如何先由人工手绘设计并反复修改，再通过AI提示词进行调整，使其看起来更像3D模型。"
+        },
+        {
+          "en": "The video makes a clear distinction between the ideation stage and later changes made by AI generation — and all of this still in the concept art stage, before any asset is recreated in-game. But the footage also shows how AI generation will create unwanted additions or errors, which then must be identified and corrected in a further design pass by the (human) artist.",
+          "cn": "视频明确区分了创意构思阶段和后续由AI生成所做的修改——而且这一切都还停留在概念美术阶段，远在任何资产被实际做进游戏之前。但画面也显示，AI生成会产生多余的添加或错误，这些必须由（人类）艺术家在下一轮设计中进行识别和修正。"
+        },
+        {
+          "en": "\"The design is king, AI can generate generic stuff all day, but that's not what we're doing here,\" an Epic Games staff member says. \"It just skips ahead in the timeline so [the artist] can focus on honing in on the design and crafting it exactly how he wants it to be.\"",
+          "cn": "「设计才是王道，AI可以整天生成些泛泛的东西，但那不是我们在这里做的事，」一位Epic Games员工说道。「它只是把时间线往前跳，这样（艺术家）就可以专注于打磨设计，把它精确地做成自己想要的样子。」"
+        },
+        {
+          "en": "The video's publication follows repeated questions from Fortnite fans over potential AI use for certain in-game assets — such as a poster showing a nine-toed character in a hammock — that the company has previously kept quiet over answering.",
+          "cn": "这段视频的发布，是在《堡垒之夜》玩家反复质疑某些游戏内资产可能使用了AI之后——比如一张海报上画着一个躺在吊床里、长了九根脚趾的角色——而公司此前对此一直保持沉默。"
+        },
+        {
+          "en": "While the video makes clear that AI isn't used for designing characters from the ground up, it also makes clear that generative AI use is now a part of the company's workflow — and opens up the possibility that mistakes could still get missed within subsequent human checks.",
+          "cn": "虽然视频明确表示AI并未用于从头设计角色，但它也清楚地表明，生成式AI的使用现在已是公司工作流程的一部分——并且这也带来了后续人工检查仍可能遗漏错误的风险。"
+        },
+        {
+          "en": "When designing concept art for in-game locations, it's a similar process. Sketches are drawn by hand in Photoshop, then recreated in 3D via the commonly-used 3D modelling tool Blender. Images from here are then adapted within Photoshop using AI prompts to explore alternative takes, such as day or night versions of the same scene, or to add destruction from a meteor strike.",
+          "cn": "在设计游戏内场景的概念美术时，流程也类似。先在Photoshop中手绘草图，然后通过常用的3D建模工具Blender重建为3D模型。接着，在Photoshop中使用AI提示词对这些图像进行调整，以探索不同的方案，比如同一场景的白天或夜晚版本，或者添加陨石撞击造成的破坏效果。"
+        },
+        {
+          "en": "\"At every stage of the design, artists continue to polish and refine, but now teams can revise faster, so artists have more oppurtunities to explore,\" Epic says.",
+          "cn": "「在设计的每个阶段，艺术家们都会持续打磨和完善，但现在团队可以更快地进行修改，因此艺术家们有了更多探索的机会，」Epic表示。"
+        },
+        {
+          "en": "\"All along the way there are continual reviews, before anything makes it into our games, and artists are careful to respect originality, track providence of their work, and ensure the finished product meets Epic's high quality standards.\"",
+          "cn": "「在任何东西进入我们的游戏之前，全程都有持续的审核，艺术家们会谨慎地尊重原创性，追踪其作品的出处，并确保最终成品符合Epic的高质量标准。」"
+        },
+        {
+          "en": "Epic Games is no stranger to AI technology, of course, having previously used generative speech technology to reproduce James Earl Jones' Darth Vader portrayal. But despite having the rights and approval of Disney, the character's inclusion proved controversial, especially as players quickly began making Vader say things more aligned with the dark side of the Force .",
+          "cn": "当然，Epic Games对AI技术并不陌生，此前就曾使用生成式语音技术重现James Earl Jones饰演的达斯·维达。但尽管拥有迪士尼的授权和许可，该角色的加入仍引发了争议，尤其是玩家们很快就开始让维达说出一些更符合原力黑暗面的话。"
+        },
+        {
+          "en": "Last year, Epic Games boss Tim Sweeney suggested that Valve should ditch Steam's AI Generated Content Disclosure label for games , as he believes AI use will become so ubiquitous it will make any warning redundant. \"Why stop at AI use?\" Sweeney wrote on social media. \"We could have mandatory disclosures for what shampoo brand the developer uses. Customers deserve to know lol.",
+          "cn": "去年，Epic Games老板Tim Sweeney曾建议Valve取消Steam上针对游戏的「AI生成内容披露」标签，因为他认为AI的使用将变得如此普遍，以至于任何警告都将变得多余。「为什么只停留在AI使用上？」Sweeney在社交媒体上写道。「我们完全可以强制披露开发者用什么牌子的洗发水。消费者有权知道，哈哈。」"
+        },
+        {
+          "en": "\"It doesn’t matter any more,” he continued. \"The AI tag is relevant to art exhibits for authorship disclosure, and to digital content licensing marketplaces where buyers need to understand the rights situation. It makes no sense for game stores, where AI will be involved in nearly all future production.”",
+          "cn": "「这已经不重要了，」他继续说道。「AI标签对艺术展览的作者身份披露有意义，对数字内容授权市场也有意义，因为买家需要了解版权状况。但对游戏商店来说毫无意义，因为未来几乎所有制作都会涉及AI。」"
+        },
+        {
+          "en": "Tom Phillips is IGN's News Editor. You can reach Tom at tom_phillips@ign.com or find him on Bluesky",
+          "cn": "Tom Phillips是IGN的新闻编辑。你可以通过tom_phillips@ign.com联系他，或在Bluesky上找到他。"
+        }
+      ],
+      "pending_dict": [],
+      "translated_terms": {
+        "Fortnite": "《堡垒之夜》",
+        "Epic Games": "Epic Games",
+        "Unreal Engine": "Unreal Engine",
+        "Valve": "Valve",
+        "Tim Sweeney": "Tim Sweeney",
+        "James Earl Jones": "James Earl Jones",
+        "Darth Vader": "达斯·维达",
+        "Blender": "Blender",
+        "Photoshop": "Photoshop",
+        "Steam": "Steam",
+        "Bluesky": "Bluesky"
+      },
+      "cover": "https://assets-prd.ignimgs.com/2026/06/16/a-look-at-epics-art-concepting-process-00-01-28-1781606169729.png?width=1280&format=jpg&auto=webp&quality=80",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/16/a-look-at-epics-art-concepting-process-00-01-28-1781606169729.png?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/16/a-look-at-epics-art-concepting-process-00-01-28-1781606169729.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/16/a-look-at-epics-art-concepting-process-00-01-28-1781606169729.png?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/16/a-look-at-epics-art-concepting-process-00-01-28-1781606169729.png?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/16/a-look-at-epics-art-concepting-process-00-01-28-1781606169729.png"
+      ],
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro",
+      "label": "DeepSeek V4 Pro",
+      "comparison_label": "DeepSeek V4 Pro",
+      "comparison_base_url": "https://api.deepseek.com"
+    },
+    {
+      "id": 11,
+      "url": "https://www.ign.com/articles/fortnite-maker-confirms-how-it-uses-generative-ai-to-help-create-concept-art-and-designs-for-new-skins",
+      "en_title": "Fortnite Maker Confirms How It Uses Generative AI to Help Create Concept Art and Designs for New Skins",
+      "cn_title": "Epic Games证实AI参与《堡垒之夜》皮肤概念设计",
+      "subtitle": "AI加速，人工把关",
+      "opus_summary": "Epic Games发布视频，首次公开透露《堡垒之夜》角色皮肤和场景概念设计中如何运用生成式AI工具：人类艺术家手绘草图后，通过AI提示快速生成3D效果备选方案，再经人工修正细节。公司强调AI不用于从头设计，而是加速迭代流程，但AI生成内容可能引入错误，需后续人工把关。此举回应了玩家对部分资产疑似AI生成的质疑。",
+      "publish_time_cn": "2026-06-16 18:47",
+      "paragraphs": [
+        {
+          "en": "Fortnite maker Epic Games has offered a rare glimpse behind the scenes at how it designs new character skins and in-game locations — and shown how certain stages involve the use of generative AI tools.",
+          "cn": "《堡垒之夜》开发商 Epic Games 罕见地公开了其设计新角色皮肤和游戏内场景的幕后流程，并展示了其中某些阶段如何运用生成式 AI 工具。"
+        },
+        {
+          "en": "In a video published to the Unreal Engine YouTube channel, Epic Games shows how a new Fortnite character is designed and iterated on by hand before being modified using an AI prompt to look more like a 3D model.",
+          "cn": "在 Unreal Engine YouTube 频道发布的一段视频中，Epic Games 展示了一款新《堡垒之夜》角色如何先由人工手绘设计并迭代，再通过 AI 提示词进行修改，使其更接近 3D 模型的效果。"
+        },
+        {
+          "en": "The video makes a clear distinction between the ideation stage and later changes made by AI generation — and all of this still in the concept art stage, before any asset is recreated in-game. But the footage also shows how AI generation will create unwanted additions or errors, which then must be identified and corrected in a further design pass by the (human) artist.",
+          "cn": "该视频明确区分了构思阶段与后续由 AI 生成所做的修改——而且所有这些仍处于概念艺术阶段，尚未在游戏中重建任何资源。但视频也展示了 AI 生成会带来多余的添加或错误，这些必须由（人类）艺术家在后续的设计环节中识别并修正。"
+        },
+        {
+          "en": "\"The design is king, AI can generate generic stuff all day, but that's not what we're doing here,\" an Epic Games staff member says. \"It just skips ahead in the timeline so [the artist] can focus on honing in on the design and crafting it exactly how he wants it to be.\"",
+          "cn": "「设计才是核心，AI 可以整天生成千篇一律的东西，但那不是我们在做的事，」一位 Epic Games 员工说道。「它只是把时间线往前跳，这样（艺术家）就能专注于打磨设计，把它塑造成他想要的样子。」"
+        },
+        {
+          "en": "The video's publication follows repeated questions from Fortnite fans over potential AI use for certain in-game assets — such as a poster showing a nine-toed character in a hammock — that the company has previously kept quiet over answering.",
+          "cn": "这段视频的发布正值《堡垒之夜》玩家反复质疑某些游戏内资产（例如一张海报上显示一个躺在吊床里的九趾角色）是否使用了 AI 之后，而该公司此前一直对此保持沉默。"
+        },
+        {
+          "en": "While the video makes clear that AI isn't used for designing characters from the ground up, it also makes clear that generative AI use is now a part of the company's workflow — and opens up the possibility that mistakes could still get missed within subsequent human checks.",
+          "cn": "虽然视频明确表示 AI 并非用于从头设计角色，但也表明生成式 AI 的使用已成为公司工作流程的一部分——并且打开了这样一种可能性：在后续的人工检查中，错误仍有可能被遗漏。"
+        },
+        {
+          "en": "When designing concept art for in-game locations, it's a similar process. Sketches are drawn by hand in Photoshop, then recreated in 3D via the commonly-used 3D modelling tool Blender. Images from here are then adapted within Photoshop using AI prompts to explore alternative takes, such as day or night versions of the same scene, or to add destruction from a meteor strike.",
+          "cn": "设计游戏场景概念图时，流程也类似。先在 Photoshop 中手绘草图，然后通过常用的 3D 建模工具 Blender 将其重建为 3D 模型。接着，在 Photoshop 中利用 AI 提示词对这些 3D 图像进行调整，以探索不同的方案，例如同一场景的白天或夜晚版本，或是添加陨石撞击造成的破坏效果。"
+        },
+        {
+          "en": "\"At every stage of the design, artists continue to polish and refine, but now teams can revise faster, so artists have more oppurtunities to explore,\" Epic says.",
+          "cn": "Epic 表示：「在设计流程的每个阶段，艺术家们都会持续打磨和优化，但现在团队可以更快地进行修改，因此艺术家有了更多探索的机会。」"
+        },
+        {
+          "en": "\"All along the way there are continual reviews, before anything makes it into our games, and artists are careful to respect originality, track providence of their work, and ensure the finished product meets Epic's high quality standards.\"",
+          "cn": "「在整个过程中，任何内容进入我们的游戏之前都要经过持续审查，艺术家们会谨慎尊重原创性、追溯作品的来源，并确保最终成品符合 Epic 的高质量标准。」"
+        },
+        {
+          "en": "Epic Games is no stranger to AI technology, of course, having previously used generative speech technology to reproduce James Earl Jones' Darth Vader portrayal. But despite having the rights and approval of Disney, the character's inclusion proved controversial, especially as players quickly began making Vader say things more aligned with the dark side of the Force .",
+          "cn": "当然，Epic Games 对 AI 技术并不陌生，此前就曾使用生成式语音技术重现了詹姆斯·厄尔·琼斯饰演的达斯·维达。但尽管获得了迪士尼的授权与许可，该角色的加入仍引发了争议，尤其是玩家们很快就开始让维达说出一些更符合黑暗面的话。"
+        },
+        {
+          "en": "Last year, Epic Games boss Tim Sweeney suggested that Valve should ditch Steam's AI Generated Content Disclosure label for games , as he believes AI use will become so ubiquitous it will make any warning redundant. \"Why stop at AI use?\" Sweeney wrote on social media. \"We could have mandatory disclosures for what shampoo brand the developer uses. Customers deserve to know lol.",
+          "cn": "去年，Epic Games 老板 Tim Sweeney 曾建议 Valve 取消 Steam 上游戏的人工智能生成内容披露标签，因为他认为 AI 的使用将变得无处不在，任何警告都将失去意义。Sweeney 在社交媒体上写道：「何必只针对 AI 使用？我们还可以强制披露开发者用的是哪个牌子的洗发水。顾客有权知道，笑死。」"
+        },
+        {
+          "en": "\"It doesn’t matter any more,” he continued. \"The AI tag is relevant to art exhibits for authorship disclosure, and to digital content licensing marketplaces where buyers need to understand the rights situation. It makes no sense for game stores, where AI will be involved in nearly all future production.”",
+          "cn": "「这已经无关紧要了，」他继续说道。「AI标签对于艺术展品的作者署名披露，以及需要买家了解权利状况的数字内容授权市场来说，是有意义的。但对于游戏商店而言，这毫无意义——因为几乎所有未来的游戏制作都会涉及AI。」"
+        },
+        {
+          "en": "Tom Phillips is IGN's News Editor. You can reach Tom at tom_phillips@ign.com or find him on Bluesky",
+          "cn": "Tom Phillips 是 IGN 的新闻编辑。你可以通过 tom_phillips@ign.com 联系他，或在 Bluesky 上找到他。"
+        }
+      ],
+      "pending_dict": [],
+      "translated_terms": {
+        "Epic Games": "Epic Games",
+        "Fortnite": "《堡垒之夜》",
+        "Unreal Engine": "Unreal Engine",
+        "Valve": "Valve",
+        "Blender": "Blender",
+        "Tim Sweeney": "Tim Sweeney",
+        "Tom Phillips": "Tom Phillips",
+        "James Earl Jones": "詹姆斯·厄尔·琼斯",
+        "Darth Vader": "达斯·维达",
+        "Disney": "迪士尼"
+      },
+      "cover": "https://assets-prd.ignimgs.com/2026/06/16/a-look-at-epics-art-concepting-process-00-01-28-1781606169729.png?width=1280&format=jpg&auto=webp&quality=80",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/16/a-look-at-epics-art-concepting-process-00-01-28-1781606169729.png?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/16/a-look-at-epics-art-concepting-process-00-01-28-1781606169729.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/16/a-look-at-epics-art-concepting-process-00-01-28-1781606169729.png?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/16/a-look-at-epics-art-concepting-process-00-01-28-1781606169729.png?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/16/a-look-at-epics-art-concepting-process-00-01-28-1781606169729.png"
+      ],
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-flash",
+      "label": "DeepSeek V4 Flash",
+      "comparison_label": "DeepSeek V4 Flash",
+      "comparison_base_url": "https://api.deepseek.com"
+    }
+  ]
+}

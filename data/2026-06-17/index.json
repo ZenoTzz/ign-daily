@@ -606,12 +606,13 @@
       "translator": "api",
       "translator_provider": "openai-compatible",
       "translator_model": "deepseek-v4-pro",
-      "comparison_status": "requested",
+      "comparison_status": "done",
       "comparison_requested_at_cn": "2026/6/17 09:19:41",
       "comparison_models": [
         "deepseek-v4-pro",
         "deepseek-v4-flash"
-      ]
+      ],
+      "comparison_updated_at_cn": "2026-06-17 09:21:39"
     },
     {
       "id": 4,

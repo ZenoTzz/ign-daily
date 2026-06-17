@@ -924,6 +924,237 @@
       "total_tokens": 12400,
       "prompt_cache_hit_tokens": 7680,
       "prompt_cache_miss_tokens": 1999
+    },
+    {
+      "time_cn": "2026-06-17 09:20:59",
+      "task": "compare_fulltext",
+      "model": "deepseek-v4-pro",
+      "article_id": 11,
+      "article_title": "Epic Games证实AI参与《堡垒之夜》皮肤概念设计",
+      "article_url": "https://www.ign.com/articles/fortnite-maker-confirms-how-it-uses-generative-ai-to-help-create-concept-art-and-designs-for-new-skins",
+      "article_date": "2026-06-17",
+      "detail": "manual comparison",
+      "estimated_cost_usd": 0.0017204,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 9504,
+      "completion_tokens": 1922,
+      "total_tokens": 11426,
+      "prompt_cache_hit_tokens": 9472,
+      "prompt_cache_miss_tokens": 32
+    },
+    {
+      "time_cn": "2026-06-17 09:21:15",
+      "task": "compare_fulltext",
+      "model": "deepseek-v4-flash",
+      "article_id": 11,
+      "article_title": "Epic Games证实AI参与《堡垒之夜》皮肤概念设计",
+      "article_url": "https://www.ign.com/articles/fortnite-maker-confirms-how-it-uses-generative-ai-to-help-create-concept-art-and-designs-for-new-skins",
+      "article_date": "2026-06-17",
+      "detail": "manual comparison",
+      "estimated_cost_usd": 0.00158394,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9504,
+      "completion_tokens": 1783,
+      "total_tokens": 11287,
+      "prompt_cache_hit_tokens": 1792,
+      "prompt_cache_miss_tokens": 7712
+    },
+    {
+      "time_cn": "2026-06-17 09:21:21",
+      "task": "fulltext_chunk",
+      "model": "deepseek-v4-flash",
+      "article_id": 11,
+      "article_title": "Epic Games证实AI参与《堡垒之夜》皮肤概念设计",
+      "article_url": "https://www.ign.com/articles/fortnite-maker-confirms-how-it-uses-generative-ai-to-help-create-concept-art-and-designs-for-new-skins",
+      "article_date": "2026-06-17",
+      "detail": "paragraphs 1-6",
+      "estimated_cost_usd": 0.00027133,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8531,
+      "completion_tokens": 404,
+      "total_tokens": 8935,
+      "prompt_cache_hit_tokens": 7552,
+      "prompt_cache_miss_tokens": 979
+    },
+    {
+      "time_cn": "2026-06-17 09:21:26",
+      "task": "fulltext_chunk",
+      "model": "deepseek-v4-flash",
+      "article_id": 11,
+      "article_title": "Epic Games证实AI参与《堡垒之夜》皮肤概念设计",
+      "article_url": "https://www.ign.com/articles/fortnite-maker-confirms-how-it-uses-generative-ai-to-help-create-concept-art-and-designs-for-new-skins",
+      "article_date": "2026-06-17",
+      "detail": "paragraphs 7-12",
+      "estimated_cost_usd": 0.00028757,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8575,
+      "completion_tokens": 440,
+      "total_tokens": 9015,
+      "prompt_cache_hit_tokens": 7552,
+      "prompt_cache_miss_tokens": 1023
+    },
+    {
+      "time_cn": "2026-06-17 09:21:29",
+      "task": "fulltext_chunk",
+      "model": "deepseek-v4-flash",
+      "article_id": 11,
+      "article_title": "Epic Games证实AI参与《堡垒之夜》皮肤概念设计",
+      "article_url": "https://www.ign.com/articles/fortnite-maker-confirms-how-it-uses-generative-ai-to-help-create-concept-art-and-designs-for-new-skins",
+      "article_date": "2026-06-17",
+      "detail": "paragraphs 7-7",
+      "estimated_cost_usd": 0.00011468,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8253,
+      "completion_tokens": 109,
+      "total_tokens": 8362,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 445
+    },
+    {
+      "time_cn": "2026-06-17 09:21:30",
+      "task": "fulltext_chunk",
+      "model": "deepseek-v4-flash",
+      "article_id": 11,
+      "article_title": "Epic Games证实AI参与《堡垒之夜》皮肤概念设计",
+      "article_url": "https://www.ign.com/articles/fortnite-maker-confirms-how-it-uses-generative-ai-to-help-create-concept-art-and-designs-for-new-skins",
+      "article_date": "2026-06-17",
+      "detail": "paragraphs 8-8",
+      "estimated_cost_usd": 9.494e-05,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8210,
+      "completion_tokens": 60,
+      "total_tokens": 8270,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 402
+    },
+    {
+      "time_cn": "2026-06-17 09:21:32",
+      "task": "fulltext_chunk",
+      "model": "deepseek-v4-flash",
+      "article_id": 11,
+      "article_title": "Epic Games证实AI参与《堡垒之夜》皮肤概念设计",
+      "article_url": "https://www.ign.com/articles/fortnite-maker-confirms-how-it-uses-generative-ai-to-help-create-concept-art-and-designs-for-new-skins",
+      "article_date": "2026-06-17",
+      "detail": "paragraphs 9-9",
+      "estimated_cost_usd": 9.732e-05,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8219,
+      "completion_tokens": 64,
+      "total_tokens": 8283,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 411
+    },
+    {
+      "time_cn": "2026-06-17 09:21:34",
+      "task": "fulltext_chunk",
+      "model": "deepseek-v4-flash",
+      "article_id": 11,
+      "article_title": "Epic Games证实AI参与《堡垒之夜》皮肤概念设计",
+      "article_url": "https://www.ign.com/articles/fortnite-maker-confirms-how-it-uses-generative-ai-to-help-create-concept-art-and-designs-for-new-skins",
+      "article_date": "2026-06-17",
+      "detail": "paragraphs 10-10",
+      "estimated_cost_usd": 0.00010964,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8241,
+      "completion_tokens": 97,
+      "total_tokens": 8338,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 433
+    },
+    {
+      "time_cn": "2026-06-17 09:21:36",
+      "task": "fulltext_chunk",
+      "model": "deepseek-v4-flash",
+      "article_id": 11,
+      "article_title": "Epic Games证实AI参与《堡垒之夜》皮肤概念设计",
+      "article_url": "https://www.ign.com/articles/fortnite-maker-confirms-how-it-uses-generative-ai-to-help-create-concept-art-and-designs-for-new-skins",
+      "article_date": "2026-06-17",
+      "detail": "paragraphs 11-11",
+      "estimated_cost_usd": 0.0001123,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8248,
+      "completion_tokens": 103,
+      "total_tokens": 8351,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 440
+    },
+    {
+      "time_cn": "2026-06-17 09:21:37",
+      "task": "fulltext_chunk",
+      "model": "deepseek-v4-flash",
+      "article_id": 11,
+      "article_title": "Epic Games证实AI参与《堡垒之夜》皮肤概念设计",
+      "article_url": "https://www.ign.com/articles/fortnite-maker-confirms-how-it-uses-generative-ai-to-help-create-concept-art-and-designs-for-new-skins",
+      "article_date": "2026-06-17",
+      "detail": "paragraphs 12-12",
+      "estimated_cost_usd": 0.00010404,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8233,
+      "completion_tokens": 81,
+      "total_tokens": 8314,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 425
+    },
+    {
+      "time_cn": "2026-06-17 09:21:39",
+      "task": "fulltext_chunk",
+      "model": "deepseek-v4-flash",
+      "article_id": 11,
+      "article_title": "Epic Games证实AI参与《堡垒之夜》皮肤概念设计",
+      "article_url": "https://www.ign.com/articles/fortnite-maker-confirms-how-it-uses-generative-ai-to-help-create-concept-art-and-designs-for-new-skins",
+      "article_date": "2026-06-17",
+      "detail": "paragraphs 13-13",
+      "estimated_cost_usd": 9.368e-05,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8201,
+      "completion_tokens": 60,
+      "total_tokens": 8261,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 393
     }
   ]
 }
