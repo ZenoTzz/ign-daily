@@ -1323,6 +1323,90 @@
       "total_tokens": 8508,
       "prompt_cache_hit_tokens": 8192,
       "prompt_cache_miss_tokens": 61
+    },
+    {
+      "time_cn": "2026-06-17 11:12:02",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 2,
+      "article_title": "Saros Developer Housemarque Wants to Have the Same Growth as FromSoftware",
+      "article_url": "https://www.ign.com/articles/saros-developer-housemarque-wants-to-have-the-same-growth-as-fromsoftware",
+      "article_date": "2026-06-18",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00051346,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8596,
+      "completion_tokens": 1299,
+      "total_tokens": 9895,
+      "prompt_cache_hit_tokens": 7680,
+      "prompt_cache_miss_tokens": 916
+    },
+    {
+      "time_cn": "2026-06-17 11:12:13",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 3,
+      "article_title": "Death Stranding Movie Targeting 2027 Shoot Date, Characters From the Games Will Appear",
+      "article_url": "https://www.ign.com/articles/death-stranding-movie-targeting-2027-shoot-date-characters-from-the-games-will-appear",
+      "article_date": "2026-06-18",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.0003918,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8581,
+      "completion_tokens": 872,
+      "total_tokens": 9453,
+      "prompt_cache_hit_tokens": 7680,
+      "prompt_cache_miss_tokens": 901
+    },
+    {
+      "time_cn": "2026-06-17 11:12:24",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 4,
+      "article_title": "Entire Luna Abyss Development Team Laid Off One Month After Launch",
+      "article_url": "https://www.ign.com/articles/entire-luna-abyss-development-team-laid-off-one-month-after-launch",
+      "article_date": "2026-06-18",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00033258,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8340,
+      "completion_tokens": 781,
+      "total_tokens": 9121,
+      "prompt_cache_hit_tokens": 7680,
+      "prompt_cache_miss_tokens": 660
+    },
+    {
+      "time_cn": "2026-06-17 11:12:35",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 5,
+      "article_title": "Tom Holland Scoured the Internet to Find Out What Fans Wanted to See in Spider-Man: Brand New Day",
+      "article_url": "https://www.ign.com/articles/tom-holland-scoured-the-internet-to-find-out-what-fans-wanted-to-see-in-spider-man-brand-new-day",
+      "article_date": "2026-06-18",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.0003505,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8552,
+      "completion_tokens": 739,
+      "total_tokens": 9291,
+      "prompt_cache_hit_tokens": 7680,
+      "prompt_cache_miss_tokens": 872
     }
   ]
 }

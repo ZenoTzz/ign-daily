@@ -5,128 +5,123 @@
     "2026-06-17"
   ],
   "changed_dates": [
-    "2026-06-18",
-    "2026-06-17"
+    "2026-06-18"
   ],
   "new_target_dates": [
-    "2026-06-18",
-    "2026-06-17"
+    "2026-06-18"
   ],
-  "new_count": 2,
-  "filtered_count": 3,
+  "new_count": 4,
+  "filtered_count": 2,
   "cleanup_count": 0,
-  "changed_count": 5,
+  "changed_count": 6,
   "articles": [
     {
-      "title": "We Build the LEGO Marvel S.H.I.E.L.D Helicarrier, An Airborne Fortress for Earth's Mightiest Heroes",
-      "url": "https://www.ign.com/articles/we-build-the-lego-marvel-shield-helicarrier-set-76354",
-      "pubDate_cst": "2026-06-17 08:15"
+      "title": "Saros Developer Housemarque Wants to Have the Same Growth as FromSoftware",
+      "url": "https://www.ign.com/articles/saros-developer-housemarque-wants-to-have-the-same-growth-as-fromsoftware",
+      "pubDate_cst": "2026-06-17 10:06"
     },
     {
-      "title": "War of the Dragon: The Wheel of Time Interview With Dire Wolf",
-      "url": "https://www.ign.com/articles/war-of-the-dragon-the-wheel-of-time-board-game-interview-with-dire-wolf",
-      "pubDate_cst": "2026-06-17 06:30"
+      "title": "Death Stranding Movie Targeting 2027 Shoot Date, Characters From the Games Will Appear",
+      "url": "https://www.ign.com/articles/death-stranding-movie-targeting-2027-shoot-date-characters-from-the-games-will-appear",
+      "pubDate_cst": "2026-06-17 09:42"
+    },
+    {
+      "title": "Entire Luna Abyss Development Team Laid Off One Month After Launch",
+      "url": "https://www.ign.com/articles/entire-luna-abyss-development-team-laid-off-one-month-after-launch",
+      "pubDate_cst": "2026-06-17 09:22"
+    },
+    {
+      "title": "Tom Holland Scoured the Internet to Find Out What Fans Wanted to See in Spider-Man: Brand New Day",
+      "url": "https://www.ign.com/articles/tom-holland-scoured-the-internet-to-find-out-what-fans-wanted-to-see-in-spider-man-brand-new-day",
+      "pubDate_cst": "2026-06-17 09:02"
     }
   ],
   "filtered_articles": [
     {
-      "title": "Beat the Summer Heat With This $8 Portable Turbo Fan",
-      "url": "https://www.ign.com/articles/portable-fan-deals-amazon-fathers-day-sale",
-      "pubDate_cst": "2026-06-17 07:00",
-      "description": "Stay frosty.",
+      "title": "Brandon Sanderson's Mistborn Books Are Buy 2, Get 1 Free at Amazon",
+      "url": "https://www.ign.com/articles/brandon-sanderson-mistborn-books-deal-amazon-prime-day-2026",
+      "pubDate_cst": "2026-06-17 08:45",
+      "description": "",
       "categories": "",
-      "reason": "url:deal",
+      "reason": "text:\\bbuy .+ (?:at|from)\\b",
       "rss_url": "https://feeds.feedburner.com/ign/all",
-      "filtered_at_cn": "2026-06-17 09:19:25",
+      "filtered_at_cn": "2026-06-17 11:11:40",
       "status": "filtered"
     },
     {
-      "title": "Expand Your Home Gym With This Adjustable Weight Bench for Just $38 Shipped on Amazon",
-      "url": "https://www.ign.com/articles/expand-your-home-gym-with-this-adjustable-weight-bench-deal-amazon-fathers-day-sale",
-      "pubDate_cst": "2026-06-17 06:35",
-      "description": "The perfect complement to your dumbbells.",
+      "title": "Fallout Hoodies Are on Sale at the IGN Store for Father's Day 2026",
+      "url": "https://www.ign.com/articles/fallout-hoodies-are-on-sale-at-the-ign-store-for-fathers-day-2026",
+      "pubDate_cst": "2026-06-17 08:30",
+      "description": "",
       "categories": "",
-      "reason": "url:deal",
+      "reason": "text:\\bon sale\\b",
       "rss_url": "https://feeds.feedburner.com/ign/all",
-      "filtered_at_cn": "2026-06-17 09:19:25",
-      "status": "filtered"
-    },
-    {
-      "title": "This $11 Hoto 24-in-1 Mini Screwdriver Kit Would Make a Great Father's Day Gift Idea for Your Tinkering Dad",
-      "url": "https://www.ign.com/articles/hoto-compact-screwdriver-tool-kit-deal-amazon-fathers-day-sale",
-      "pubDate_cst": "2026-06-17 06:35",
-      "description": "Delivers by Sunday, June 21",
-      "categories": "",
-      "reason": "url:deal",
-      "rss_url": "https://feeds.feedburner.com/ign/all",
-      "filtered_at_cn": "2026-06-17 09:19:25",
+      "filtered_at_cn": "2026-06-17 11:11:40",
       "status": "filtered"
     }
   ],
   "runs": [
     {
       "target_date": "2026-06-18",
-      "new_count": 1,
-      "filtered_count": 0,
-      "changed_count": 1,
-      "next_id": 2,
+      "new_count": 4,
+      "filtered_count": 2,
+      "changed_count": 6,
+      "next_id": 6,
       "articles": [
         {
-          "title": "We Build the LEGO Marvel S.H.I.E.L.D Helicarrier, An Airborne Fortress for Earth's Mightiest Heroes",
-          "url": "https://www.ign.com/articles/we-build-the-lego-marvel-shield-helicarrier-set-76354",
-          "pubDate_cst": "2026-06-17 08:15"
-        }
-      ],
-      "filtered_articles": []
-    },
-    {
-      "target_date": "2026-06-17",
-      "new_count": 1,
-      "filtered_count": 3,
-      "changed_count": 4,
-      "next_id": 30,
-      "articles": [
+          "title": "Saros Developer Housemarque Wants to Have the Same Growth as FromSoftware",
+          "url": "https://www.ign.com/articles/saros-developer-housemarque-wants-to-have-the-same-growth-as-fromsoftware",
+          "pubDate_cst": "2026-06-17 10:06"
+        },
         {
-          "title": "War of the Dragon: The Wheel of Time Interview With Dire Wolf",
-          "url": "https://www.ign.com/articles/war-of-the-dragon-the-wheel-of-time-board-game-interview-with-dire-wolf",
-          "pubDate_cst": "2026-06-17 06:30"
+          "title": "Death Stranding Movie Targeting 2027 Shoot Date, Characters From the Games Will Appear",
+          "url": "https://www.ign.com/articles/death-stranding-movie-targeting-2027-shoot-date-characters-from-the-games-will-appear",
+          "pubDate_cst": "2026-06-17 09:42"
+        },
+        {
+          "title": "Entire Luna Abyss Development Team Laid Off One Month After Launch",
+          "url": "https://www.ign.com/articles/entire-luna-abyss-development-team-laid-off-one-month-after-launch",
+          "pubDate_cst": "2026-06-17 09:22"
+        },
+        {
+          "title": "Tom Holland Scoured the Internet to Find Out What Fans Wanted to See in Spider-Man: Brand New Day",
+          "url": "https://www.ign.com/articles/tom-holland-scoured-the-internet-to-find-out-what-fans-wanted-to-see-in-spider-man-brand-new-day",
+          "pubDate_cst": "2026-06-17 09:02"
         }
       ],
       "filtered_articles": [
         {
-          "title": "Beat the Summer Heat With This $8 Portable Turbo Fan",
-          "url": "https://www.ign.com/articles/portable-fan-deals-amazon-fathers-day-sale",
-          "pubDate_cst": "2026-06-17 07:00",
-          "description": "Stay frosty.",
+          "title": "Brandon Sanderson's Mistborn Books Are Buy 2, Get 1 Free at Amazon",
+          "url": "https://www.ign.com/articles/brandon-sanderson-mistborn-books-deal-amazon-prime-day-2026",
+          "pubDate_cst": "2026-06-17 08:45",
+          "description": "",
           "categories": "",
-          "reason": "url:deal",
+          "reason": "text:\\bbuy .+ (?:at|from)\\b",
           "rss_url": "https://feeds.feedburner.com/ign/all",
-          "filtered_at_cn": "2026-06-17 09:19:25",
+          "filtered_at_cn": "2026-06-17 11:11:40",
           "status": "filtered"
         },
         {
-          "title": "Expand Your Home Gym With This Adjustable Weight Bench for Just $38 Shipped on Amazon",
-          "url": "https://www.ign.com/articles/expand-your-home-gym-with-this-adjustable-weight-bench-deal-amazon-fathers-day-sale",
-          "pubDate_cst": "2026-06-17 06:35",
-          "description": "The perfect complement to your dumbbells.",
+          "title": "Fallout Hoodies Are on Sale at the IGN Store for Father's Day 2026",
+          "url": "https://www.ign.com/articles/fallout-hoodies-are-on-sale-at-the-ign-store-for-fathers-day-2026",
+          "pubDate_cst": "2026-06-17 08:30",
+          "description": "",
           "categories": "",
-          "reason": "url:deal",
+          "reason": "text:\\bon sale\\b",
           "rss_url": "https://feeds.feedburner.com/ign/all",
-          "filtered_at_cn": "2026-06-17 09:19:25",
-          "status": "filtered"
-        },
-        {
-          "title": "This $11 Hoto 24-in-1 Mini Screwdriver Kit Would Make a Great Father's Day Gift Idea for Your Tinkering Dad",
-          "url": "https://www.ign.com/articles/hoto-compact-screwdriver-tool-kit-deal-amazon-fathers-day-sale",
-          "pubDate_cst": "2026-06-17 06:35",
-          "description": "Delivers by Sunday, June 21",
-          "categories": "",
-          "reason": "url:deal",
-          "rss_url": "https://feeds.feedburner.com/ign/all",
-          "filtered_at_cn": "2026-06-17 09:19:25",
+          "filtered_at_cn": "2026-06-17 11:11:40",
           "status": "filtered"
         }
       ]
+    },
+    {
+      "target_date": "2026-06-17",
+      "new_count": 0,
+      "filtered_count": 0,
+      "changed_count": 0,
+      "next_id": 30,
+      "articles": [],
+      "filtered_articles": []
     }
   ]
 }
