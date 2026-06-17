@@ -35,8 +35,8 @@
       "url": "https://www.ign.com/articles/the-blood-of-dawnwalker-where-to-preorder",
       "publish_time_cn": "2026-06-17 02:00",
       "pub_date": "2026-06-17 02:00",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/06/16/blood-of-dawnwalker-preorder-1781612933658.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/16/blood-of-dawnwalker-preorder-1781612933658.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/16/blood-of-dawnwalker-preorder-1781612933658.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/16/the-blood-of-dawnwalker-day-1-edition-playstation-5-1781613003623.jpg",
@@ -52,7 +52,11 @@
         "https://assets-prd.ignimgs.com/2026/06/16/blood-of-dawnwalker-preorder-bonus-1781612118943.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-17T08:02:43+08:00"
+      "source_fetched_at": "2026-06-17T08:02:43+08:00",
+      "translation_path": "translations/28.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro"
     },
     {
       "id": 23,

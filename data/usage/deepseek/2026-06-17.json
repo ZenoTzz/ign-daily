@@ -861,6 +861,27 @@
       "total_tokens": 10770,
       "prompt_cache_hit_tokens": 7808,
       "prompt_cache_miss_tokens": 864
+    },
+    {
+      "time_cn": "2026-06-17 08:52:24",
+      "task": "fulltext",
+      "model": "deepseek-v4-pro",
+      "article_id": 28,
+      "article_title": "《黎明行者之血》预购现已开启，各版本内容一览",
+      "article_url": "https://www.ign.com/articles/the-blood-of-dawnwalker-where-to-preorder",
+      "article_date": "2026-06-17",
+      "detail": "",
+      "estimated_cost_usd": 0.00621577,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 9665,
+      "completion_tokens": 6247,
+      "total_tokens": 15912,
+      "prompt_cache_hit_tokens": 7936,
+      "prompt_cache_miss_tokens": 1729
     }
   ]
 }
