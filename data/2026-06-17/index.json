@@ -561,8 +561,8 @@
       "url": "https://www.ign.com/articles/psychonauts-developer-double-fine-responds-to-closure-reports-with-a-single-emoji",
       "publish_time_cn": "2026-06-16 19:13",
       "pub_date": "2026-06-16 19:13",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/06/16/ss-d78da4dbc35620193f7c14e0e5e68f7020adfd43-1920x1080-1781608104816.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "requested",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/16/ss-d78da4dbc35620193f7c14e0e5e68f7020adfd43-1920x1080-1781608104816.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/16/ss-d78da4dbc35620193f7c14e0e5e68f7020adfd43-1920x1080-1781608104816.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/16/ss-d78da4dbc35620193f7c14e0e5e68f7020adfd43-1920x1080-1781608104816.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -576,7 +576,8 @@
       "source_fetched_at": "2026-06-16T19:57:47+08:00",
       "translator": "api",
       "translator_provider": "openai-compatible",
-      "translator_model": "deepseek-v4-pro"
+      "translator_model": "deepseek-v4-pro",
+      "translation_path": "translations/10.json"
     },
     {
       "id": 11,
@@ -588,8 +589,8 @@
       "url": "https://www.ign.com/articles/fortnite-maker-confirms-how-it-uses-generative-ai-to-help-create-concept-art-and-designs-for-new-skins",
       "publish_time_cn": "2026-06-16 18:47",
       "pub_date": "2026-06-16 18:47",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/06/16/a-look-at-epics-art-concepting-process-00-01-28-1781606169729.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "requested",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/16/a-look-at-epics-art-concepting-process-00-01-28-1781606169729.png",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/16/a-look-at-epics-art-concepting-process-00-01-28-1781606169729.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/16/a-look-at-epics-art-concepting-process-00-01-28-1781606169729.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -608,7 +609,8 @@
         "deepseek-v4-pro",
         "deepseek-v4-flash"
       ],
-      "comparison_updated_at_cn": "2026-06-17 09:21:39"
+      "comparison_updated_at_cn": "2026-06-17 09:21:39",
+      "translation_path": "translations/11.json"
     },
     {
       "id": 4,

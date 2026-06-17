@@ -1218,6 +1218,111 @@
       "total_tokens": 8829,
       "prompt_cache_hit_tokens": 7808,
       "prompt_cache_miss_tokens": 376
+    },
+    {
+      "time_cn": "2026-06-17 09:55:37",
+      "task": "fulltext",
+      "model": "deepseek-v4-pro",
+      "article_id": 11,
+      "article_title": "Epic Games证实AI参与《堡垒之夜》皮肤概念设计",
+      "article_url": "https://www.ign.com/articles/fortnite-maker-confirms-how-it-uses-generative-ai-to-help-create-concept-art-and-designs-for-new-skins",
+      "article_date": "2026-06-17",
+      "detail": "",
+      "estimated_cost_usd": 0.00364049,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 9504,
+      "completion_tokens": 4129,
+      "total_tokens": 13633,
+      "prompt_cache_hit_tokens": 9472,
+      "prompt_cache_miss_tokens": 32
+    },
+    {
+      "time_cn": "2026-06-17 09:58:27",
+      "task": "fulltext",
+      "model": "deepseek-v4-pro",
+      "article_id": 10,
+      "article_title": "《意航员》开发商用emoji回应关闭传闻",
+      "article_url": "https://www.ign.com/articles/psychonauts-developer-double-fine-responds-to-closure-reports-with-a-single-emoji",
+      "article_date": "2026-06-17",
+      "detail": "",
+      "estimated_cost_usd": 0.01047871,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 9609,
+      "completion_tokens": 12000,
+      "total_tokens": 21609,
+      "prompt_cache_hit_tokens": 9600,
+      "prompt_cache_miss_tokens": 9
+    },
+    {
+      "time_cn": "2026-06-17 09:59:13",
+      "task": "fulltext_chunk",
+      "model": "deepseek-v4-pro",
+      "article_id": 10,
+      "article_title": "《意航员》开发商用emoji回应关闭传闻",
+      "article_url": "https://www.ign.com/articles/psychonauts-developer-double-fine-responds-to-closure-reports-with-a-single-emoji",
+      "article_date": "2026-06-17",
+      "detail": "paragraphs 1-6",
+      "estimated_cost_usd": 0.00218692,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 8551,
+      "completion_tokens": 2427,
+      "total_tokens": 10978,
+      "prompt_cache_hit_tokens": 8448,
+      "prompt_cache_miss_tokens": 103
+    },
+    {
+      "time_cn": "2026-06-17 10:00:09",
+      "task": "fulltext_chunk",
+      "model": "deepseek-v4-pro",
+      "article_id": 10,
+      "article_title": "《意航员》开发商用emoji回应关闭传闻",
+      "article_url": "https://www.ign.com/articles/psychonauts-developer-double-fine-responds-to-closure-reports-with-a-single-emoji",
+      "article_date": "2026-06-17",
+      "detail": "paragraphs 7-12",
+      "estimated_cost_usd": 0.00331795,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 8628,
+      "completion_tokens": 3752,
+      "total_tokens": 12380,
+      "prompt_cache_hit_tokens": 8576,
+      "prompt_cache_miss_tokens": 52
+    },
+    {
+      "time_cn": "2026-06-17 10:00:15",
+      "task": "fulltext_chunk",
+      "model": "deepseek-v4-pro",
+      "article_id": 10,
+      "article_title": "《意航员》开发商用emoji回应关闭传闻",
+      "article_url": "https://www.ign.com/articles/psychonauts-developer-double-fine-responds-to-closure-reports-with-a-single-emoji",
+      "article_date": "2026-06-17",
+      "detail": "paragraphs 13-13",
+      "estimated_cost_usd": 0.00027808,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 8253,
+      "completion_tokens": 255,
+      "total_tokens": 8508,
+      "prompt_cache_hit_tokens": 8192,
+      "prompt_cache_miss_tokens": 61
     }
   ]
 }
