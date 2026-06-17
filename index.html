@@ -18,7 +18,7 @@
   <script defer src="assets/alpine.min.js"></script>
   <link rel="stylesheet" href="assets/style.css?v=20260616theme2">
   <script src="assets/exceljs.min.js"></script>
-  <script src="assets/app.js?v=20260616theme3"></script>
+  <script src="assets/app.js?v=20260617review1"></script>
 </head>
 <body>
   <!-- SVG Icon Definitions -->
@@ -325,13 +325,13 @@
                 </div>
 
                 <!-- Title -->
-                <template x-if="art.translation_status === 'done' || (art.translation_status === 'needs_review' && art.translation_path)">
+                <template x-if="art.translation_status === 'done' || art.translation_status === 'needs_review'">
                   <a :href="`article.html?date=${data.date}&id=${art.id}`"
                     @click="saveState()"
                     class="card-title" style="display:block;"
                     x-text="art.cn_title"></a>
                 </template>
-                <template x-if="art.translation_status !== 'done' && !(art.translation_status === 'needs_review' && art.translation_path)">
+                <template x-if="art.translation_status !== 'done' && art.translation_status !== 'needs_review'">
                   <h3 class="card-title" x-text="art.cn_title"></h3>
                 </template>
 
@@ -349,7 +349,7 @@
                       <svg><use href="#icon-book"/></svg> 查看翻译
                     </a>
                   </template>
-                  <template x-if="art.translation_status === 'needs_review' && art.translation_path">
+                  <template x-if="art.translation_status === 'needs_review'">
                     <a :href="`article.html?date=${data.date}&id=${art.id}`"
                       @click="saveState()"
                       class="card-link" style="color:var(--amber); font-weight:600;"

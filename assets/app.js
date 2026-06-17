@@ -341,6 +341,12 @@ function appData() {
         } catch (_) { /* 没有失败记录是正常的 */ }
 
         // 加载润色索引
+        for (const a of this.data.articles) {
+          if (a.translation_status === 'needs_review' && !a.translation_path && a.id) {
+            a.translation_path = `translations/${String(a.id).padStart(2, '0')}.json`;
+          }
+        }
+
         this.polishedIds = new Set();
         try {
           const polRes = await fetch(`data/${date}/polished/_index.json?t=${Date.now()}`, { cache: 'no-store' });
