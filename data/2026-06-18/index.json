@@ -2,6 +2,38 @@
   "date": "2026-06-18",
   "articles": [
     {
+      "id": 33,
+      "category": "科技新闻",
+      "emoji": "🕹️",
+      "en_title": "LEGO Reveals a Working Pinball Machine You Can Build Yourself",
+      "cn_title": "乐高推出可玩的弹球机套装",
+      "summary": "乐高推出编号11374的「街机弹球机」套装，共2274块颗粒，包含双弹射器和弹簧发射器，拼好后可真实游玩。套装采用太空主题，售价229.99美元(约合人民币1555元)，7月1日面向乐高Insiders开售，7月4日全面发售。该套装延续了乐高面向成年玩家的复古风格路线。",
+      "url": "https://www.ign.com/articles/lego-reveals-a-working-pinball-machine-you-can-build-yourself",
+      "publish_time_cn": "2026-06-18 04:58",
+      "pub_date": "2026-06-18 04:58",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/17/blte7ecfac1aa09d7c5-11374-lifestyle-build-03-1781729385709.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/17/blte7ecfac1aa09d7c5-11374-lifestyle-build-03-1781729385709.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/17/blte7ecfac1aa09d7c5-11374-prod-1781726273737.png",
+        "https://assets-prd.ignimgs.com/2026/06/17/blte7ecfac1aa09d7c5-11374-lifestyle-build-03-1781729385709.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/17/blte7ecfac1aa09d7c5-11374-lifestyle-build-03-1781729385709.jpg?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/17/blte7ecfac1aa09d7c5-11374-lifestyle-build-03-1781729385709.jpg?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/17/blte7ecfac1aa09d7c5-11374-lifestyle-build-03-1781729385709.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-18T07:11:10+08:00",
+      "pending_dict": [
+        {
+          "en": "LEGO Arcade Pinball Machine",
+          "cn": "乐高街机弹球机",
+          "cat": "terms",
+          "source": "ai_guess",
+          "reason": "无官方中文译名，建议译名需确认"
+        }
+      ]
+    },
+    {
       "id": 31,
       "category": "影视资讯",
       "emoji": "🕷️",
@@ -890,5 +922,5 @@
       ]
     }
   ],
-  "total": 32
+  "total": 33
 }

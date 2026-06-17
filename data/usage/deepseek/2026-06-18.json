@@ -357,6 +357,27 @@
       "total_tokens": 11876,
       "prompt_cache_hit_tokens": 7680,
       "prompt_cache_miss_tokens": 2265
+    },
+    {
+      "time_cn": "2026-06-18 07:11:22",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 33,
+      "article_title": "LEGO Reveals a Working Pinball Machine You Can Build Yourself",
+      "article_url": "https://www.ign.com/articles/lego-reveals-a-working-pinball-machine-you-can-build-yourself",
+      "article_date": "2026-06-18",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00030514,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8486,
+      "completion_tokens": 610,
+      "total_tokens": 9096,
+      "prompt_cache_hit_tokens": 7680,
+      "prompt_cache_miss_tokens": 806
     }
   ]
 }
