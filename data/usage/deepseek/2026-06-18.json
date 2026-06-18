@@ -399,6 +399,27 @@
       "total_tokens": 9062,
       "prompt_cache_hit_tokens": 7680,
       "prompt_cache_miss_tokens": 693
+    },
+    {
+      "time_cn": "2026-06-18 08:36:09",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 34,
+      "article_title": "Call of Duty: Modern Warfare 4 Is Up for Preorder, Here’s What Comes in Each Edition",
+      "article_url": "https://www.ign.com/articles/call-of-duty-modern-warfare-4-where-to-preorder",
+      "article_date": "2026-06-18",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00031088,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8967,
+      "completion_tokens": 390,
+      "total_tokens": 9357,
+      "prompt_cache_hit_tokens": 7680,
+      "prompt_cache_miss_tokens": 1287
     }
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-18 08:35:22 +08:00",
+  "updated_at": "2026-06-18 08:36:02 +08:00",
   "source": "multi-source median",
   "base": "USD",
   "rates_to_cny": {
@@ -25,7 +25,7 @@
         "source_count": 4,
         "median_raw": 7.840067,
         "max_cross_source_deviation": 0.002872,
-        "previous_deviation": 0.001265
+        "previous_deviation": 9e-06
       },
       "JPY_100": {
         "source_count": 4,
@@ -37,7 +37,7 @@
         "source_count": 4,
         "median_raw": 9.067636,
         "max_cross_source_deviation": 0.002282,
-        "previous_deviation": 0.001362
+        "previous_deviation": 0.000261
       },
       "KRW_100": {
         "source_count": 4,
