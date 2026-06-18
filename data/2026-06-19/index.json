@@ -11,8 +11,8 @@
       "url": "https://www.ign.com/articles/apple-price-rises-unavoidable-warns-ceo-tim-cook",
       "publish_time_cn": "2026-06-18 16:03",
       "pub_date": "2026-06-18 16:03",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/04/20/tim-cook-1776718655604.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/04/20/tim-cook-1776718655604.png",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/04/20/tim-cook-1776718655604.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/04/20/tim-cook-1776718655604.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -21,7 +21,11 @@
         "https://assets-prd.ignimgs.com/2026/04/20/tim-cook-1776718655604.png"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-18T17:27:10+08:00"
+      "source_fetched_at": "2026-06-18T17:27:10+08:00",
+      "translation_path": "translations/04.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro"
     },
     {
       "id": 5,
@@ -86,8 +90,8 @@
       "url": "https://www.ign.com/articles/marvels-spider-man-2-is-adding-new-suit-from-brand-new-day-for-free",
       "publish_time_cn": "2026-06-18 08:39",
       "pub_date": "2026-06-18 08:39",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/06/17/spider-man-2-bnd-suit-1781734034105.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2025/06/18/spider-man-brand-new-day-suit-1750107680294.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/17/spider-man-2-bnd-suit-1781734034105.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/17/spider-man-2-bnd-suit-1781734034105.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -97,7 +101,11 @@
         "https://assets-prd.ignimgs.com/2026/06/17/hlcglyxbkaaltkp-1781733756326.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-18T10:18:25+08:00"
+      "source_fetched_at": "2026-06-18T10:18:25+08:00",
+      "translation_path": "translations/02.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro"
     },
     {
       "id": 1,

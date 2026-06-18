@@ -987,6 +987,48 @@
       "total_tokens": 9918,
       "prompt_cache_hit_tokens": 7680,
       "prompt_cache_miss_tokens": 1410
+    },
+    {
+      "time_cn": "2026-06-18 17:29:25",
+      "task": "fulltext",
+      "model": "deepseek-v4-pro",
+      "article_id": 2,
+      "article_title": "《漫威蜘蛛侠2》免费更新新战衣",
+      "article_url": "https://www.ign.com/articles/marvels-spider-man-2-is-adding-new-suit-from-brand-new-day-for-free",
+      "article_date": "2026-06-19",
+      "detail": "",
+      "estimated_cost_usd": 0.00228076,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 9425,
+      "completion_tokens": 1844,
+      "total_tokens": 11269,
+      "prompt_cache_hit_tokens": 7936,
+      "prompt_cache_miss_tokens": 1489
+    },
+    {
+      "time_cn": "2026-06-18 17:30:44",
+      "task": "fulltext",
+      "model": "deepseek-v4-pro",
+      "article_id": 4,
+      "article_title": "苹果CEO库克：产品涨价「不可避免」",
+      "article_url": "https://www.ign.com/articles/apple-price-rises-unavoidable-warns-ceo-tim-cook",
+      "article_date": "2026-06-19",
+      "detail": "",
+      "estimated_cost_usd": 0.00473938,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 9019,
+      "completion_tokens": 4873,
+      "total_tokens": 13892,
+      "prompt_cache_hit_tokens": 7936,
+      "prompt_cache_miss_tokens": 1083
     }
   ]
 }
