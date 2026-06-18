@@ -2,6 +2,29 @@
   "date": "2026-06-19",
   "articles": [
     {
+      "id": 2,
+      "category": "游戏新闻",
+      "emoji": "🕷️",
+      "en_title": "Marvel's Spider-Man 2 Is Adding New Suit from Brand New Day for Free",
+      "cn_title": "《漫威蜘蛛侠2》免费更新新战衣",
+      "summary": "Insomniac Games 宣布，《漫威蜘蛛侠2》将于7月28日免费更新一款来自新电影《Brand New Day》的整合战衣。该战衣是托比·马奎尔、安德鲁·加菲尔德和汤姆·霍兰德三代蜘蛛侠战衣的融合修订版。官方同时确认游戏不会推出付费 DLC。",
+      "url": "https://www.ign.com/articles/marvels-spider-man-2-is-adding-new-suit-from-brand-new-day-for-free",
+      "publish_time_cn": "2026-06-18 08:39",
+      "pub_date": "2026-06-18 08:39",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/17/spider-man-2-bnd-suit-1781734034105.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/17/spider-man-2-bnd-suit-1781734034105.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/17/spider-man-2-bnd-suit-1781734034105.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/17/spider-man-2-bnd-suit-1781734034105.jpg?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/17/spider-man-2-bnd-suit-1781734034105.jpg?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/17/spider-man-2-bnd-suit-1781734034105.jpg",
+        "https://assets-prd.ignimgs.com/2026/06/17/hlcglyxbkaaltkp-1781733756326.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-18T10:18:25+08:00"
+    },
+    {
       "id": 1,
       "category": "游戏新闻",
       "emoji": "🎮",
@@ -51,5 +74,5 @@
       "translator_model": "deepseek-v4-pro"
     }
   ],
-  "total": 1
+  "total": 2
 }

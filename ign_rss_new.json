@@ -5,57 +5,47 @@
     "2026-06-18"
   ],
   "changed_dates": [
-    "2026-06-18"
+    "2026-06-19"
   ],
-  "new_target_dates": [],
-  "new_count": 0,
-  "filtered_count": 1,
+  "new_target_dates": [
+    "2026-06-19"
+  ],
+  "new_count": 1,
+  "filtered_count": 0,
   "cleanup_count": 0,
   "changed_count": 1,
-  "articles": [],
-  "filtered_articles": [
+  "articles": [
     {
-      "title": "Save Over 60% Off the ThermoMaven X2 Wireless Meat Thermometer for Father's Day, Now Just $39.99",
-      "url": "https://www.ign.com/articles/thermomaven-x2-wireless-meat-thermometer-deal-amazon-fathers-day-sale",
-      "pubDate_cst": "2026-06-18 06:45",
-      "description": "One of the best gifts you can get for your dad chef",
-      "categories": "",
-      "reason": "url:deal",
-      "rss_url": "https://feeds.feedburner.com/ign/all",
-      "filtered_at_cn": "2026-06-18 09:31:28",
-      "status": "filtered"
+      "title": "Marvel's Spider-Man 2 Is Adding New Suit from Brand New Day for Free",
+      "url": "https://www.ign.com/articles/marvels-spider-man-2-is-adding-new-suit-from-brand-new-day-for-free",
+      "pubDate_cst": "2026-06-18 08:39"
     }
   ],
+  "filtered_articles": [],
   "runs": [
     {
       "target_date": "2026-06-19",
-      "new_count": 0,
+      "new_count": 1,
       "filtered_count": 0,
-      "changed_count": 0,
-      "next_id": 2,
-      "articles": [],
+      "changed_count": 1,
+      "next_id": 3,
+      "articles": [
+        {
+          "title": "Marvel's Spider-Man 2 Is Adding New Suit from Brand New Day for Free",
+          "url": "https://www.ign.com/articles/marvels-spider-man-2-is-adding-new-suit-from-brand-new-day-for-free",
+          "pubDate_cst": "2026-06-18 08:39"
+        }
+      ],
       "filtered_articles": []
     },
     {
       "target_date": "2026-06-18",
       "new_count": 0,
-      "filtered_count": 1,
-      "changed_count": 1,
+      "filtered_count": 0,
+      "changed_count": 0,
       "next_id": 35,
       "articles": [],
-      "filtered_articles": [
-        {
-          "title": "Save Over 60% Off the ThermoMaven X2 Wireless Meat Thermometer for Father's Day, Now Just $39.99",
-          "url": "https://www.ign.com/articles/thermomaven-x2-wireless-meat-thermometer-deal-amazon-fathers-day-sale",
-          "pubDate_cst": "2026-06-18 06:45",
-          "description": "One of the best gifts you can get for your dad chef",
-          "categories": "",
-          "reason": "url:deal",
-          "rss_url": "https://feeds.feedburner.com/ign/all",
-          "filtered_at_cn": "2026-06-18 09:31:28",
-          "status": "filtered"
-        }
-      ]
+      "filtered_articles": []
     }
   ]
 }
