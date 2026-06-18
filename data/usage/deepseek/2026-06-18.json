@@ -1029,6 +1029,300 @@
       "total_tokens": 13892,
       "prompt_cache_hit_tokens": 7936,
       "prompt_cache_miss_tokens": 1083
+    },
+    {
+      "time_cn": "2026-06-18 19:40:15",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 6,
+      "article_title": "Scrapped Star Wars TV Series Would Have Shown the Rise of Emperor Palpatine 'Like Hitler's'",
+      "article_url": "https://www.ign.com/articles/scrapped-star-wars-tv-series-would-have-shown-the-rise-of-emperor-palpatine-like-hitlers",
+      "article_date": "2026-06-19",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00035226,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8552,
+      "completion_tokens": 808,
+      "total_tokens": 9360,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 744
+    },
+    {
+      "time_cn": "2026-06-18 19:40:21",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 7,
+      "article_title": "Vampire Survivors Developer 'Reviewing' Fortnite Crossover Plans, After Epic Details Unreal Engine 6 AI Usage",
+      "article_url": "https://www.ign.com/articles/vampire-survivors-developer-reviewing-fortnite-crossover-plans-after-epic-details-unreal-engine-6-ai-usage",
+      "article_date": "2026-06-19",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00026944,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8531,
+      "completion_tokens": 460,
+      "total_tokens": 8991,
+      "prompt_cache_hit_tokens": 7680,
+      "prompt_cache_miss_tokens": 851
+    },
+    {
+      "time_cn": "2026-06-18 19:40:34",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 8,
+      "article_title": "Final Fantasy Tactics Remaster Adds New Game+, but War of the Lions Content Still Missing",
+      "article_url": "https://www.ign.com/articles/final-fantasy-tactics-remaster-adds-new-game-but-war-of-the-lions-content-still-missing",
+      "article_date": "2026-06-19",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00045116,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8675,
+      "completion_tokens": 1037,
+      "total_tokens": 9712,
+      "prompt_cache_hit_tokens": 7680,
+      "prompt_cache_miss_tokens": 995
+    },
+    {
+      "time_cn": "2026-06-18 19:40:51",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 9,
+      "article_title": "Final Fantasy 14 Rewards Japanese Players for Paying Their Real-Life Taxes With a Giant Dog",
+      "article_url": "https://www.ign.com/articles/final-fantasy-14-rewards-japanese-players-for-paying-their-real-life-taxes-with-a-giant-dog",
+      "article_date": "2026-06-19",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00052704,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8609,
+      "completion_tokens": 1341,
+      "total_tokens": 9950,
+      "prompt_cache_hit_tokens": 7680,
+      "prompt_cache_miss_tokens": 929
+    },
+    {
+      "time_cn": "2026-06-18 19:41:02",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 10,
+      "article_title": "Azure Latch Codes (June 2026)",
+      "article_url": "https://www.ign.com/articles/azure-latch-codes",
+      "article_date": "2026-06-19",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00031558,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8198,
+      "completion_tokens": 854,
+      "total_tokens": 9052,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 390
+    },
+    {
+      "time_cn": "2026-06-18 19:41:07",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 11,
+      "article_title": "RIVALS Codes (June 2026)",
+      "article_url": "https://www.ign.com/articles/rivals-codes",
+      "article_date": "2026-06-19",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00020246,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8396,
+      "completion_tokens": 351,
+      "total_tokens": 8747,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 588
+    },
+    {
+      "time_cn": "2026-06-18 19:41:15",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 12,
+      "article_title": "Blox Fruits Codes (June 2026)",
+      "article_url": "https://www.ign.com/articles/blox-fruits-codes",
+      "article_date": "2026-06-19",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00023158,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8222,
+      "completion_tokens": 542,
+      "total_tokens": 8764,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 414
+    },
+    {
+      "time_cn": "2026-06-18 19:41:23",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 13,
+      "article_title": "Dandy's World Codes (June 2026)",
+      "article_url": "https://www.ign.com/articles/dandys-world-codes",
+      "article_date": "2026-06-19",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00027476,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8443,
+      "completion_tokens": 523,
+      "total_tokens": 8966,
+      "prompt_cache_hit_tokens": 7680,
+      "prompt_cache_miss_tokens": 763
+    },
+    {
+      "time_cn": "2026-06-18 19:41:34",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 35,
+      "article_title": "Blue Lock: Rivals Codes (June 2026)",
+      "article_url": "https://www.ign.com/articles/blue-lock-rivals-codes",
+      "article_date": "2026-06-18",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00034218,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8328,
+      "completion_tokens": 884,
+      "total_tokens": 9212,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 520
+    },
+    {
+      "time_cn": "2026-06-18 19:41:38",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 36,
+      "article_title": "Attack on Titan Revolution Codes (June 2026)",
+      "article_url": "https://www.ign.com/articles/attack-on-titan-revolution-codes",
+      "article_date": "2026-06-18",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00020616,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8495,
+      "completion_tokens": 252,
+      "total_tokens": 8747,
+      "prompt_cache_hit_tokens": 7680,
+      "prompt_cache_miss_tokens": 815
+    },
+    {
+      "time_cn": "2026-06-18 19:41:50",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 37,
+      "article_title": "Jujutsu Shenanigans Codes (June 2026)",
+      "article_url": "https://www.ign.com/articles/jujutsu-shenanigans-codes",
+      "article_date": "2026-06-18",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00038558,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8344,
+      "completion_tokens": 1031,
+      "total_tokens": 9375,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 536
+    },
+    {
+      "time_cn": "2026-06-18 19:41:57",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 38,
+      "article_title": "99 Nights in the Forest Codes (June 2026)",
+      "article_url": "https://www.ign.com/articles/99-nights-in-the-forest-codes",
+      "article_date": "2026-06-18",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00027764,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8511,
+      "completion_tokens": 562,
+      "total_tokens": 9073,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 703
+    },
+    {
+      "time_cn": "2026-06-18 19:42:07",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 39,
+      "article_title": "Anime Astral Simulator Codes (June 2026)",
+      "article_url": "https://www.ign.com/articles/anime-astral-simulator-codes",
+      "article_date": "2026-06-18",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00028338,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8110,
+      "completion_tokens": 783,
+      "total_tokens": 8893,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 302
+    },
+    {
+      "time_cn": "2026-06-18 19:42:13",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 40,
+      "article_title": "Hunty Zombie Codes (June 2026)",
+      "article_url": "https://www.ign.com/articles/hunty-zombie-codes",
+      "article_date": "2026-06-18",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.0001977,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8206,
+      "completion_tokens": 429,
+      "total_tokens": 8635,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 398
     }
   ]
 }
