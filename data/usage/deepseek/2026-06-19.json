@@ -336,6 +336,69 @@
       "total_tokens": 9046,
       "prompt_cache_hit_tokens": 7808,
       "prompt_cache_miss_tokens": 542
+    },
+    {
+      "time_cn": "2026-06-19 04:40:03",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 31,
+      "article_title": "Marvel Comics Unveils First-Look Preview of Amazing Spider-Man #1000",
+      "article_url": "https://www.ign.com/articles/marvel-amazing-spider-man-1000-preview",
+      "article_date": "2026-06-19",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00031004,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8257,
+      "completion_tokens": 742,
+      "total_tokens": 8999,
+      "prompt_cache_hit_tokens": 7680,
+      "prompt_cache_miss_tokens": 577
+    },
+    {
+      "time_cn": "2026-06-19 04:40:08",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 32,
+      "article_title": "Assassin’s Creed Black Flag Resynced: Here’s What the Remake Looks (and Plays) Like Compared to the Original – IGN First",
+      "article_url": "https://www.ign.com/articles/assassins-creed-black-flag-resynced-heres-what-the-remake-looks-and-plays-like-compared-to-the-original-ign-first",
+      "article_date": "2026-06-19",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00030822,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9276,
+      "completion_tokens": 226,
+      "total_tokens": 9502,
+      "prompt_cache_hit_tokens": 7680,
+      "prompt_cache_miss_tokens": 1596
+    },
+    {
+      "time_cn": "2026-06-19 04:40:24",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 33,
+      "article_title": "EA Sports UFC 6 Review",
+      "article_url": "https://www.ign.com/articles/ea-sports-ufc-6-review",
+      "article_date": "2026-06-19",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00057458,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9908,
+      "completion_tokens": 924,
+      "total_tokens": 10832,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 2100
     }
   ]
 }
