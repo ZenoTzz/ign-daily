@@ -420,6 +420,363 @@
       "total_tokens": 9357,
       "prompt_cache_hit_tokens": 7680,
       "prompt_cache_miss_tokens": 1287
+    },
+    {
+      "time_cn": "2026-06-18 08:39:17",
+      "task": "fulltext",
+      "model": "deepseek-v4-pro",
+      "article_id": 7,
+      "article_title": "微软为何一边宣布Ninja Theory新作《塞娜》一边计划关闭工作室？",
+      "article_url": "https://www.ign.com/articles/why-microsoft-announced-ninja-theorys-new-game-despite-plans-to-shut-the-studio-down",
+      "article_date": "2026-06-18",
+      "detail": "",
+      "estimated_cost_usd": 0.0089641,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 9749,
+      "completion_tokens": 9364,
+      "total_tokens": 19113,
+      "prompt_cache_hit_tokens": 7936,
+      "prompt_cache_miss_tokens": 1813
+    },
+    {
+      "time_cn": "2026-06-18 08:39:35",
+      "task": "fulltext_chunk",
+      "model": "deepseek-v4-pro",
+      "article_id": 7,
+      "article_title": "微软为何一边宣布Ninja Theory新作《塞娜》一边计划关闭工作室？",
+      "article_url": "https://www.ign.com/articles/why-microsoft-announced-ninja-theorys-new-game-despite-plans-to-shut-the-studio-down",
+      "article_date": "2026-06-18",
+      "detail": "paragraphs 1-6",
+      "estimated_cost_usd": 0.00201321,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 8697,
+      "completion_tokens": 1837,
+      "total_tokens": 10534,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 889
+    },
+    {
+      "time_cn": "2026-06-18 08:39:52",
+      "task": "fulltext_chunk",
+      "model": "deepseek-v4-pro",
+      "article_id": 7,
+      "article_title": "微软为何一边宣布Ninja Theory新作《塞娜》一边计划关闭工作室？",
+      "article_url": "https://www.ign.com/articles/why-microsoft-announced-ninja-theorys-new-game-despite-plans-to-shut-the-studio-down",
+      "article_date": "2026-06-18",
+      "detail": "paragraphs 7-11",
+      "estimated_cost_usd": 0.00160344,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 8615,
+      "completion_tokens": 1407,
+      "total_tokens": 10022,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 807
+    },
+    {
+      "time_cn": "2026-06-18 08:40:37",
+      "task": "fulltext",
+      "model": "deepseek-v4-pro",
+      "article_id": 15,
+      "article_title": "任天堂承认第三方服务泄露员工数据",
+      "article_url": "https://www.ign.com/articles/nintendo-acknowledges-employee-data-at-risk-after-third-party-service-breach",
+      "article_date": "2026-06-18",
+      "detail": "",
+      "estimated_cost_usd": 0.00498777,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 9064,
+      "completion_tokens": 5136,
+      "total_tokens": 14200,
+      "prompt_cache_hit_tokens": 7936,
+      "prompt_cache_miss_tokens": 1128
+    },
+    {
+      "time_cn": "2026-06-18 08:41:03",
+      "task": "fulltext_repair",
+      "model": "deepseek-v4-pro",
+      "article_id": 15,
+      "article_title": "任天堂承认第三方服务泄露员工数据",
+      "article_url": "https://www.ign.com/articles/nintendo-acknowledges-employee-data-at-risk-after-third-party-service-breach",
+      "article_date": "2026-06-18",
+      "detail": "1 audit issue(s)",
+      "estimated_cost_usd": 0.00369617,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 9474,
+      "completion_tokens": 3256,
+      "total_tokens": 12730,
+      "prompt_cache_hit_tokens": 7552,
+      "prompt_cache_miss_tokens": 1922
+    },
+    {
+      "time_cn": "2026-06-18 08:41:35",
+      "task": "fulltext",
+      "model": "deepseek-v4-pro",
+      "article_id": 21,
+      "article_title": "《GTA Online》7月大型劫案助力《GTA6》预热",
+      "article_url": "https://www.ign.com/articles/gta-online-is-adding-a-massive-new-heist-in-july-to-keep-you-busy-until-gta-6-arrives",
+      "article_date": "2026-06-18",
+      "detail": "",
+      "estimated_cost_usd": 0.00341568,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 9332,
+      "completion_tokens": 3195,
+      "total_tokens": 12527,
+      "prompt_cache_hit_tokens": 7936,
+      "prompt_cache_miss_tokens": 1396
+    },
+    {
+      "time_cn": "2026-06-18 08:42:00",
+      "task": "fulltext_chunk",
+      "model": "deepseek-v4-pro",
+      "article_id": 21,
+      "article_title": "《GTA Online》7月大型劫案助力《GTA6》预热",
+      "article_url": "https://www.ign.com/articles/gta-online-is-adding-a-massive-new-heist-in-july-to-keep-you-busy-until-gta-6-arrives",
+      "article_date": "2026-06-18",
+      "detail": "paragraphs 1-6",
+      "estimated_cost_usd": 0.00250737,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 8649,
+      "completion_tokens": 2429,
+      "total_tokens": 11078,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 841
+    },
+    {
+      "time_cn": "2026-06-18 08:42:35",
+      "task": "fulltext",
+      "model": "deepseek-v4-pro",
+      "article_id": 22,
+      "article_title": "《刺客信条：黑旗 记忆重置》全成就离线可解锁",
+      "article_url": "https://www.ign.com/articles/assassins-creed-black-flag-resynced-achievements-all-available-offline-at-any-difficulty-setting",
+      "article_date": "2026-06-18",
+      "detail": "",
+      "estimated_cost_usd": 0.00388113,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 9026,
+      "completion_tokens": 3883,
+      "total_tokens": 12909,
+      "prompt_cache_hit_tokens": 7936,
+      "prompt_cache_miss_tokens": 1090
+    },
+    {
+      "time_cn": "2026-06-18 08:42:48",
+      "task": "fulltext_chunk",
+      "model": "deepseek-v4-pro",
+      "article_id": 22,
+      "article_title": "《刺客信条：黑旗 记忆重置》全成就离线可解锁",
+      "article_url": "https://www.ign.com/articles/assassins-creed-black-flag-resynced-achievements-all-available-offline-at-any-difficulty-setting",
+      "article_date": "2026-06-18",
+      "detail": "paragraphs 1-6",
+      "estimated_cost_usd": 0.00119932,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 8466,
+      "completion_tokens": 1017,
+      "total_tokens": 9483,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 658
+    },
+    {
+      "time_cn": "2026-06-18 08:42:56",
+      "task": "fulltext_chunk",
+      "model": "deepseek-v4-pro",
+      "article_id": 22,
+      "article_title": "《刺客信条：黑旗 记忆重置》全成就离线可解锁",
+      "article_url": "https://www.ign.com/articles/assassins-creed-black-flag-resynced-achievements-all-available-offline-at-any-difficulty-setting",
+      "article_date": "2026-06-18",
+      "detail": "paragraphs 7-7",
+      "estimated_cost_usd": 0.00061816,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 8186,
+      "completion_tokens": 489,
+      "total_tokens": 8675,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 378
+    },
+    {
+      "time_cn": "2026-06-18 08:43:41",
+      "task": "fulltext",
+      "model": "deepseek-v4-pro",
+      "article_id": 23,
+      "article_title": "《超英派遣中心》开发商发补丁解除Switch审查，但任天堂要求仍在",
+      "article_url": "https://www.ign.com/articles/dispatch-developer-addresses-controversial-switch-censorship-with-new-patch-though-some-hard-requirements-from-nintendo-remain",
+      "article_date": "2026-06-18",
+      "detail": "",
+      "estimated_cost_usd": 0.00470937,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 9328,
+      "completion_tokens": 4684,
+      "total_tokens": 14012,
+      "prompt_cache_hit_tokens": 7936,
+      "prompt_cache_miss_tokens": 1392
+    },
+    {
+      "time_cn": "2026-06-18 08:44:47",
+      "task": "fulltext",
+      "model": "deepseek-v4-pro",
+      "article_id": 29,
+      "article_title": "Rockstar 为 GTA5 提供免费次时代升级",
+      "article_url": "https://www.ign.com/articles/rockstar-dishes-out-free-gta-5-current-gen-upgrades-to-ps4-and-xbox-one-owners",
+      "article_date": "2026-06-18",
+      "detail": "",
+      "estimated_cost_usd": 0.00658726,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 9509,
+      "completion_tokens": 6752,
+      "total_tokens": 16261,
+      "prompt_cache_hit_tokens": 7936,
+      "prompt_cache_miss_tokens": 1573
+    },
+    {
+      "time_cn": "2026-06-18 08:45:39",
+      "task": "fulltext_repair",
+      "model": "deepseek-v4-pro",
+      "article_id": 29,
+      "article_title": "Rockstar 为 GTA5 提供免费次时代升级",
+      "article_url": "https://www.ign.com/articles/rockstar-dishes-out-free-gta-5-current-gen-upgrades-to-ps4-and-xbox-one-owners",
+      "article_date": "2026-06-18",
+      "detail": "1 audit issue(s)",
+      "estimated_cost_usd": 0.00674813,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 9806,
+      "completion_tokens": 6598,
+      "total_tokens": 16404,
+      "prompt_cache_hit_tokens": 7552,
+      "prompt_cache_miss_tokens": 2254
+    },
+    {
+      "time_cn": "2026-06-18 08:46:39",
+      "task": "fulltext",
+      "model": "deepseek-v4-pro",
+      "article_id": 30,
+      "article_title": "Epic称Unreal Engine 6将实现《堡垒之夜》皮肤跨游戏通用",
+      "article_url": "https://www.ign.com/articles/with-unreal-6-epic-hopes-sharing-skins-between-games-will-save-gaming",
+      "article_date": "2026-06-18",
+      "detail": "",
+      "estimated_cost_usd": 0.00688741,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 10315,
+      "completion_tokens": 6694,
+      "total_tokens": 17009,
+      "prompt_cache_hit_tokens": 7936,
+      "prompt_cache_miss_tokens": 2379
+    },
+    {
+      "time_cn": "2026-06-18 08:46:57",
+      "task": "fulltext_chunk",
+      "model": "deepseek-v4-pro",
+      "article_id": 30,
+      "article_title": "Epic称Unreal Engine 6将实现《堡垒之夜》皮肤跨游戏通用",
+      "article_url": "https://www.ign.com/articles/with-unreal-6-epic-hopes-sharing-skins-between-games-will-save-gaming",
+      "article_date": "2026-06-18",
+      "detail": "paragraphs 1-6",
+      "estimated_cost_usd": 0.0017235,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 8783,
+      "completion_tokens": 1461,
+      "total_tokens": 10244,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 975
+    },
+    {
+      "time_cn": "2026-06-18 08:47:10",
+      "task": "fulltext_chunk",
+      "model": "deepseek-v4-pro",
+      "article_id": 30,
+      "article_title": "Epic称Unreal Engine 6将实现《堡垒之夜》皮肤跨游戏通用",
+      "article_url": "https://www.ign.com/articles/with-unreal-6-epic-hopes-sharing-skins-between-games-will-save-gaming",
+      "article_date": "2026-06-18",
+      "detail": "paragraphs 7-12",
+      "estimated_cost_usd": 0.00159822,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 8781,
+      "completion_tokens": 1318,
+      "total_tokens": 10099,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 973
+    },
+    {
+      "time_cn": "2026-06-18 08:47:22",
+      "task": "fulltext_chunk",
+      "model": "deepseek-v4-pro",
+      "article_id": 30,
+      "article_title": "Epic称Unreal Engine 6将实现《堡垒之夜》皮肤跨游戏通用",
+      "article_url": "https://www.ign.com/articles/with-unreal-6-epic-hopes-sharing-skins-between-games-will-save-gaming",
+      "article_date": "2026-06-18",
+      "detail": "paragraphs 13-15",
+      "estimated_cost_usd": 0.00100227,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 8481,
+      "completion_tokens": 783,
+      "total_tokens": 9264,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 673
     }
   ]
 }

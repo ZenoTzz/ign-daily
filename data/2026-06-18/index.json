@@ -99,8 +99,8 @@
       "url": "https://www.ign.com/articles/with-unreal-6-epic-hopes-sharing-skins-between-games-will-save-gaming",
       "publish_time_cn": "2026-06-18 02:17",
       "pub_date": "2026-06-18 02:17",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/05/08/loisthumb-1778256641879.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/05/08/loisthumb-1778256641879.png",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/05/08/loisthumb-1778256641879.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/05/08/loisthumb-1778256641879.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -109,7 +109,11 @@
         "https://assets-prd.ignimgs.com/2026/05/08/loisthumb-1778256641879.png"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-18T03:13:42+08:00"
+      "source_fetched_at": "2026-06-18T03:13:42+08:00",
+      "translation_path": "translations/30.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro"
     },
     {
       "id": 20,
@@ -173,7 +177,7 @@
       "publish_time_cn": "2026-06-18 00:08",
       "pub_date": "2026-06-18 00:08",
       "cover_image": "https://assets-prd.ignimgs.com/2026/06/17/562584d66bad6b386beced00f471290c6d9f62be-1781712131552.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/17/562584d66bad6b386beced00f471290c6d9f62be-1781712131552.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/17/562584d66bad6b386beced00f471290c6d9f62be-1781712131552.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -191,7 +195,11 @@
           "source": "ai_guess",
           "reason": "外媒术语，无官方中文译名"
         }
-      ]
+      ],
+      "translation_path": "translations/21.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro"
     },
     {
       "id": 22,
@@ -204,7 +212,7 @@
       "publish_time_cn": "2026-06-18 00:05",
       "pub_date": "2026-06-18 00:05",
       "cover_image": "https://assets-prd.ignimgs.com/2026/06/12/assassins-creed-black-flag-resynced-new-content-1781287603015.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/12/assassins-creed-black-flag-resynced-new-content-1781287603015.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/12/assassins-creed-black-flag-resynced-new-content-1781287603015.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -213,7 +221,12 @@
         "https://assets-prd.ignimgs.com/2026/06/12/assassins-creed-black-flag-resynced-new-content-1781287603015.png"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-18T02:35:59+08:00"
+      "source_fetched_at": "2026-06-18T02:35:59+08:00",
+      "translation_error": "model returned empty paragraphs",
+      "translation_failed_at": "2026-06-18T08:42:56.049214+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro"
     },
     {
       "id": 23,
@@ -226,7 +239,7 @@
       "publish_time_cn": "2026-06-18 00:00",
       "pub_date": "2026-06-18 00:00",
       "cover_image": "https://assets-prd.ignimgs.com/2026/06/15/hr-violations-pack-toxic-chaotic-1781529596174.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/15/hr-violations-pack-toxic-chaotic-1781529596174.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/15/hr-violations-pack-toxic-chaotic-1781529596174.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -244,7 +257,11 @@
           "source": "ai_guess",
           "reason": "无官方中文译名，建议保留英文或使用此音译"
         }
-      ]
+      ],
+      "translation_path": "translations/23.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro"
     },
     {
       "id": 24,
@@ -431,13 +448,13 @@
       "category": "游戏新闻",
       "emoji": "🆓",
       "en_title": "Rockstar Dishes Out Free GTA 5 Current-Gen Upgrades to PS4 and Xbox One Owners",
-      "cn_title": "Rockstar 为 GTA5 提供免费次时代升级",
-      "summary": "Rockstar 宣布从 6 月 18 日起，拥有 Xbox One 数字版或任何 PS4 版《GTA5》的玩家可免费升级至当前世代版本。此举意在为 7 月到来的《GTA Online》新更新造势，同时也为 11 月发售的《GTA6》预热。当前世代版《GTA5》售价 39.99美元(约合人民币270元)，这次免费升级非常划算。",
+      "cn_title": "Rockstar 为《GTA5》推出免费次世代升级",
+      "summary": "Rockstar 宣布，自6月18日起，拥有Xbox One数字版或PS4任意版本《GTA5》的玩家，均可免费升级至当前世代版本，并能转移全部游戏进度。",
       "url": "https://www.ign.com/articles/rockstar-dishes-out-free-gta-5-current-gen-upgrades-to-ps4-and-xbox-one-owners",
       "publish_time_cn": "2026-06-17 22:23",
       "pub_date": "2026-06-17 22:23",
       "cover_image": "https://assets1.ignimgs.com/2014/12/03/gta-vjpg-c4a3a2.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets1.ignimgs.com/2014/12/03/gta-vjpg-c4a3a2.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets1.ignimgs.com/2014/12/03/gta-vjpg-c4a3a2.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -447,7 +464,13 @@
         "http://assets1.ignimgs.com/2014/12/03/gta-vjpg-c4a3a2.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-18T02:36:04+08:00"
+      "source_fetched_at": "2026-06-18T02:36:04+08:00",
+      "translation_error": "paragraph 7 missing cn",
+      "translation_failed_at": "2026-06-18T08:45:39.640635+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro",
+      "translation_path": "translations/29.json"
     },
     {
       "id": 17,
@@ -680,12 +703,12 @@
       "emoji": "⚠️",
       "en_title": "Nintendo Acknowledges Employee Data at Risk After Third-Party Service Breach",
       "cn_title": "任天堂承认第三方服务泄露员工数据",
-      "summary": "任天堂承认其使用的第三方员工调查服务TinyPulse发生数据泄露，涉及员工姓名、邮箱及银行记录等内部调查内容。自称为「勒索即服务」的黑客组织ShadowByt3$索要200万美元(约合人民币1352万元)赎金。任天堂表示自身服务器未受影响，不涉及客户数据，并预计调查数据将被公开。",
+      "summary": "任天堂承认第三方调查服务泄露员工数据，遭勒索200万美元(约合人民币1352万元)赎金。公司称系统未受影响，泄露为旧调查，不涉开发机密且未回应。",
       "url": "https://www.ign.com/articles/nintendo-acknowledges-employee-data-at-risk-after-third-party-service-breach",
       "publish_time_cn": "2026-06-17 18:13",
       "pub_date": "2026-06-17 18:13",
       "cover_image": "https://assets-prd.ignimgs.com/2026/06/09/screenshot-2026-06-09-121530-1781003953928.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/09/screenshot-2026-06-09-121530-1781003953928.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/09/screenshot-2026-06-09-121530-1781003953928.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -694,7 +717,13 @@
         "https://assets-prd.ignimgs.com/2026/06/09/screenshot-2026-06-09-121530-1781003953928.png"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-17T20:40:58+08:00"
+      "source_fetched_at": "2026-06-17T20:40:58+08:00",
+      "translation_error": "paragraph 9 missing cn",
+      "translation_failed_at": "2026-06-18T08:41:03.495359+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro",
+      "translation_path": "translations/15.json"
     },
     {
       "id": 16,
@@ -745,7 +774,7 @@
       "publish_time_cn": "2026-06-17 16:54",
       "pub_date": "2026-06-17 16:54",
       "cover_image": "https://assets-prd.ignimgs.com/2026/06/17/ss-067bf57d04ccc1322184d6a33fd5284e2252a6b9-1920x1080-1781686078571.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/17/ss-067bf57d04ccc1322184d6a33fd5284e2252a6b9-1920x1080-1781686078571.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/17/ss-067bf57d04ccc1322184d6a33fd5284e2252a6b9-1920x1080-1781686078571.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -755,7 +784,11 @@
         "https://assets-prd.ignimgs.com/2026/06/17/ss-067bf57d04ccc1322184d6a33fd5284e2252a6b9-1920x1080-1781686191081.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-17T19:18:51+08:00"
+      "source_fetched_at": "2026-06-17T19:18:51+08:00",
+      "translation_path": "translations/07.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro"
     },
     {
       "id": 8,
