@@ -210,6 +210,132 @@
       "total_tokens": 9788,
       "prompt_cache_hit_tokens": 7680,
       "prompt_cache_miss_tokens": 1278
+    },
+    {
+      "time_cn": "2026-06-19 01:49:56",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 25,
+      "article_title": "DC Revives Three Fan-Favorite Superhero Teams for DC Next Level Initiative",
+      "article_url": "https://www.ign.com/articles/dc-next-level-legion-of-super-heroes-teen-titans-doom-patrol",
+      "article_date": "2026-06-19",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.0007159,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8372,
+      "completion_tokens": 2134,
+      "total_tokens": 10506,
+      "prompt_cache_hit_tokens": 7680,
+      "prompt_cache_miss_tokens": 692
+    },
+    {
+      "time_cn": "2026-06-19 01:50:04",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 26,
+      "article_title": "Grow a Garden 2 Codes (June 2026)",
+      "article_url": "https://www.ign.com/articles/grow-a-garden-2-codes",
+      "article_date": "2026-06-19",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00024264,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8225,
+      "completion_tokens": 580,
+      "total_tokens": 8805,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 417
+    },
+    {
+      "time_cn": "2026-06-19 01:50:13",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 27,
+      "article_title": "The Evolution of Grand Theft Auto's Iconic Cover Art, Now Including GTA 6",
+      "article_url": "https://www.ign.com/articles/the-evolution-of-grand-theft-autos-iconic-cover-art-now-including-gta-6",
+      "article_date": "2026-06-19",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.0003687,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8950,
+      "completion_tokens": 605,
+      "total_tokens": 9555,
+      "prompt_cache_hit_tokens": 7680,
+      "prompt_cache_miss_tokens": 1270
+    },
+    {
+      "time_cn": "2026-06-19 01:50:22",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 28,
+      "article_title": "God of War Laufey Feels Too Similar to Kratos’ Norse Saga",
+      "article_url": "https://www.ign.com/articles/god-of-war-laufey-feels-too-similar-to-kratos-norse-saga",
+      "article_date": "2026-06-19",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.0004555,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9852,
+      "completion_tokens": 464,
+      "total_tokens": 10316,
+      "prompt_cache_hit_tokens": 7680,
+      "prompt_cache_miss_tokens": 2172
+    },
+    {
+      "time_cn": "2026-06-19 01:50:29",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 29,
+      "article_title": "Don’t Fret’s Music-Infused Horror Is Off the Scale | IGN Preview",
+      "article_url": "https://www.ign.com/articles/dont-frets-music-infused-horror-is-off-the-scale-ign-preview",
+      "article_date": "2026-06-19",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00047706,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 10002,
+      "completion_tokens": 466,
+      "total_tokens": 10468,
+      "prompt_cache_hit_tokens": 7680,
+      "prompt_cache_miss_tokens": 2322
+    },
+    {
+      "time_cn": "2026-06-19 01:50:39",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 30,
+      "article_title": "Covenant: The Final Chapter Finally Wraps Up the Beloved Supernatural Romance Comic",
+      "article_url": "https://www.ign.com/articles/covenant-the-final-chapter-finally-wraps-up-the-beloved-supernatural-romance-comic",
+      "article_date": "2026-06-19",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00029262,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8350,
+      "completion_tokens": 696,
+      "total_tokens": 9046,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 542
     }
   ]
 }
