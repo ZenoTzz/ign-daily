@@ -1323,6 +1323,27 @@
       "total_tokens": 8635,
       "prompt_cache_hit_tokens": 7808,
       "prompt_cache_miss_tokens": 398
+    },
+    {
+      "time_cn": "2026-06-18 21:44:24",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 14,
+      "article_title": "Amid Concern Over Xbox Studio 'Bloodbath,' New Report Says Developers Are Being 'Punished Today for Following Orders'",
+      "article_url": "https://www.ign.com/articles/amid-concern-over-xbox-studio-bloodbath-new-report-says-developers-are-being-punished-today-for-following-orders",
+      "article_date": "2026-06-19",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00069672,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9087,
+      "completion_tokens": 1708,
+      "total_tokens": 10795,
+      "prompt_cache_hit_tokens": 7680,
+      "prompt_cache_miss_tokens": 1407
     }
   ]
 }
