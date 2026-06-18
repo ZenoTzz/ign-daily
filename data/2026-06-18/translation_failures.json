@@ -1,25 +1,5 @@
 {
   "date": "2026-06-18",
-  "items": {
-    "15": {
-      "id": 15,
-      "url": "https://www.ign.com/articles/nintendo-acknowledges-employee-data-at-risk-after-third-party-service-breach",
-      "en_title": "Nintendo Acknowledges Employee Data at Risk After Third-Party Service Breach",
-      "cn_title": "任天堂承认第三方服务泄露员工数据",
-      "model": "deepseek-v4-pro",
-      "status": "needs_manual_review",
-      "failed_at": "2026-06-18T08:41:03.495359+08:00",
-      "reason": "paragraph 9 missing cn",
-      "audit_issues": [
-        {
-          "type": "currency_symbol",
-          "detail": "translation still contains raw currency symbol/code; convert it to Chinese currency text plus CNY"
-        }
-      ],
-      "fingerprint": "c3480ae434a5e2f07943e781263dcd507a64cc37",
-      "translation_path": "translations/15.json",
-      "retry_policy": "manual_only"
-    }
-  },
-  "updated_at": "2026-06-18T01:41:42.218Z"
+  "items": {},
+  "updated_at": "2026-06-18T03:36:41.371Z"
 }
