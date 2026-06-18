@@ -10,33 +10,191 @@
   "new_target_dates": [
     "2026-06-19"
   ],
-  "new_count": 1,
-  "filtered_count": 0,
-  "cleanup_count": 0,
-  "changed_count": 1,
+  "new_count": 10,
+  "filtered_count": 3,
+  "cleanup_count": 1,
+  "changed_count": 14,
   "articles": [
     {
-      "title": "Amid Concern Over Xbox Studio 'Bloodbath,' New Report Says Developers Are Being 'Punished Today for Following Orders'",
-      "url": "https://www.ign.com/articles/amid-concern-over-xbox-studio-bloodbath-new-report-says-developers-are-being-punished-today-for-following-orders",
-      "pubDate_cst": "2026-06-18 19:44"
+      "title": "GTA 6: Every Detail in the Cover Art Explained",
+      "url": "https://www.ign.com/articles/gta-6-cover-art-every-detail-explained",
+      "pubDate_cst": "2026-06-18 23:11"
+    },
+    {
+      "title": "Exclusive: No Gods, No Masters Is A New Kaiju Action 5-Issue Mini-Series From BOOM! Studios and an Eisner-Nominated Creative Team",
+      "url": "https://www.ign.com/articles/exclusive-no-gods-no-masters-is-a-new-kaiju-action-5-issue-mini-series-from-boom-studios-and-an-eisner-nominated-creative-team",
+      "pubDate_cst": "2026-06-18 23:00"
+    },
+    {
+      "title": "Garfield - Escape From Monday Gameplay Trailer Teases the Terror of 'The Curse of the Spinach Lasagna'",
+      "url": "https://www.ign.com/articles/garfield-escape-from-monday-gameplay-trailer-teases-the-terror-of-the-curse-of-the-spinach-lasagna",
+      "pubDate_cst": "2026-06-18 23:00"
+    },
+    {
+      "title": "Marvel Super Heroes TCG Designer Details Upcoming Universes Beyond Set",
+      "url": "https://www.ign.com/articles/marvel-super-heroes-tcg-designer-details-upcoming-universes-beyond-set",
+      "pubDate_cst": "2026-06-18 23:00"
+    },
+    {
+      "title": "Pokémon Pokopia Adds Mythical Pokémon Event, as Fans Believe Shiny and Costume Creatures May Follow",
+      "url": "https://www.ign.com/articles/pokemon-pokopia-adds-mythical-pokmon-event-as-fans-believe-shiny-and-costume-creatures-may-follow",
+      "pubDate_cst": "2026-06-18 22:32"
+    },
+    {
+      "title": "World Cup: Who’s the Best FC 26 World’s Game Player?",
+      "url": "https://www.ign.com/articles/world-cup-whos-the-best-fc-26-worlds-game-player",
+      "pubDate_cst": "2026-06-18 22:30"
+    },
+    {
+      "title": "Crimson Moon Marries Diablo and Dark Souls for a Bloody, Breezy Good Time | IGN Preview",
+      "url": "https://www.ign.com/articles/crimson-moon-marries-diablo-and-dark-souls-for-a-bloody-breezy-good-time-ign-preview",
+      "pubDate_cst": "2026-06-18 22:00"
+    },
+    {
+      "title": "No Law's Dense Cybergrunge City Might Just Be the Most Alive Open World Ever Created",
+      "url": "https://www.ign.com/articles/no-laws-dense-cybergrunge-city-might-just-be-the-most-alive-open-world-ever-created",
+      "pubDate_cst": "2026-06-18 22:00"
+    },
+    {
+      "title": "Robin Hood's Tree — the 1,000-Year-Old Legend of Sherwood Forest — Declared Dead",
+      "url": "https://www.ign.com/articles/robin-hoods-tree-the-1000-year-old-legend-of-sherwood-forest-declared-dead",
+      "pubDate_cst": "2026-06-18 21:06"
+    },
+    {
+      "title": "Mods Enable Bloodborne to Run on PS5 at 120 FPS and Super High Resolution",
+      "url": "https://www.ign.com/articles/mods-enable-bloodborne-to-run-on-ps5-at-120-fps-and-super-high-resolution",
+      "pubDate_cst": "2026-06-18 20:37"
     }
   ],
-  "filtered_articles": [],
+  "filtered_articles": [
+    {
+      "title": "Project Hail Mary Is Now Streaming on MGM+, Which Is Basically Free Through Prime Video",
+      "url": "https://www.ign.com/articles/project-hail-mary-streaming-mgm-plus-deal",
+      "pubDate_cst": "2026-06-18 23:00",
+      "description": "Project Hail Mary is now streaming on MGM+, which is less than $1 if you try out the service through Prime Video.",
+      "categories": "",
+      "reason": "url:deal",
+      "rss_url": "https://feeds.feedburner.com/ign/all",
+      "filtered_at_cn": "2026-06-19 01:31:24",
+      "status": "filtered"
+    },
+    {
+      "title": "GTA 6 Cover Art and Pre-Order Reveal Comes With a Fresh Look at Vice City",
+      "url": "https://www.ign.com/articles/gta-6-cover-art-and-pre-order-reveal-comes-with-a-fresh-look-at-vice-city",
+      "pubDate_cst": "2026-06-18 21:33",
+      "description": "Rockstar didn’t just reveal the GTA 6 cover art and the date pre-orders go live, it also added a new image to its official website offering a fresh look at Vice City.",
+      "categories": "",
+      "reason": "text:\\bpre[- ]?orders?\\b",
+      "rss_url": "https://feeds.feedburner.com/ign/all",
+      "filtered_at_cn": "2026-06-19 01:31:24",
+      "status": "filtered"
+    },
+    {
+      "title": "GTA 6 Cover Artwork Revealed, Pre-Orders Begin June 25",
+      "url": "https://www.ign.com/articles/gta-6-cover-artwork-revealed-pre-orders-begin-june-25",
+      "pubDate_cst": "2026-06-18 21:07",
+      "description": "Rockstar has just revealed the cover artwork for GTA 6, and announced that pre-orders will begin on June 25.",
+      "categories": "",
+      "reason": "text:\\bpre[- ]?orders?\\b",
+      "rss_url": "https://feeds.feedburner.com/ign/all",
+      "filtered_at_cn": "2026-06-19 01:31:24",
+      "status": "filtered"
+    }
+  ],
   "runs": [
     {
       "target_date": "2026-06-19",
-      "new_count": 1,
-      "filtered_count": 0,
-      "changed_count": 1,
-      "next_id": 15,
+      "new_count": 10,
+      "filtered_count": 3,
+      "changed_count": 13,
+      "next_id": 25,
       "articles": [
         {
-          "title": "Amid Concern Over Xbox Studio 'Bloodbath,' New Report Says Developers Are Being 'Punished Today for Following Orders'",
-          "url": "https://www.ign.com/articles/amid-concern-over-xbox-studio-bloodbath-new-report-says-developers-are-being-punished-today-for-following-orders",
-          "pubDate_cst": "2026-06-18 19:44"
+          "title": "GTA 6: Every Detail in the Cover Art Explained",
+          "url": "https://www.ign.com/articles/gta-6-cover-art-every-detail-explained",
+          "pubDate_cst": "2026-06-18 23:11"
+        },
+        {
+          "title": "Exclusive: No Gods, No Masters Is A New Kaiju Action 5-Issue Mini-Series From BOOM! Studios and an Eisner-Nominated Creative Team",
+          "url": "https://www.ign.com/articles/exclusive-no-gods-no-masters-is-a-new-kaiju-action-5-issue-mini-series-from-boom-studios-and-an-eisner-nominated-creative-team",
+          "pubDate_cst": "2026-06-18 23:00"
+        },
+        {
+          "title": "Garfield - Escape From Monday Gameplay Trailer Teases the Terror of 'The Curse of the Spinach Lasagna'",
+          "url": "https://www.ign.com/articles/garfield-escape-from-monday-gameplay-trailer-teases-the-terror-of-the-curse-of-the-spinach-lasagna",
+          "pubDate_cst": "2026-06-18 23:00"
+        },
+        {
+          "title": "Marvel Super Heroes TCG Designer Details Upcoming Universes Beyond Set",
+          "url": "https://www.ign.com/articles/marvel-super-heroes-tcg-designer-details-upcoming-universes-beyond-set",
+          "pubDate_cst": "2026-06-18 23:00"
+        },
+        {
+          "title": "Pokémon Pokopia Adds Mythical Pokémon Event, as Fans Believe Shiny and Costume Creatures May Follow",
+          "url": "https://www.ign.com/articles/pokemon-pokopia-adds-mythical-pokmon-event-as-fans-believe-shiny-and-costume-creatures-may-follow",
+          "pubDate_cst": "2026-06-18 22:32"
+        },
+        {
+          "title": "World Cup: Who’s the Best FC 26 World’s Game Player?",
+          "url": "https://www.ign.com/articles/world-cup-whos-the-best-fc-26-worlds-game-player",
+          "pubDate_cst": "2026-06-18 22:30"
+        },
+        {
+          "title": "Crimson Moon Marries Diablo and Dark Souls for a Bloody, Breezy Good Time | IGN Preview",
+          "url": "https://www.ign.com/articles/crimson-moon-marries-diablo-and-dark-souls-for-a-bloody-breezy-good-time-ign-preview",
+          "pubDate_cst": "2026-06-18 22:00"
+        },
+        {
+          "title": "No Law's Dense Cybergrunge City Might Just Be the Most Alive Open World Ever Created",
+          "url": "https://www.ign.com/articles/no-laws-dense-cybergrunge-city-might-just-be-the-most-alive-open-world-ever-created",
+          "pubDate_cst": "2026-06-18 22:00"
+        },
+        {
+          "title": "Robin Hood's Tree — the 1,000-Year-Old Legend of Sherwood Forest — Declared Dead",
+          "url": "https://www.ign.com/articles/robin-hoods-tree-the-1000-year-old-legend-of-sherwood-forest-declared-dead",
+          "pubDate_cst": "2026-06-18 21:06"
+        },
+        {
+          "title": "Mods Enable Bloodborne to Run on PS5 at 120 FPS and Super High Resolution",
+          "url": "https://www.ign.com/articles/mods-enable-bloodborne-to-run-on-ps5-at-120-fps-and-super-high-resolution",
+          "pubDate_cst": "2026-06-18 20:37"
         }
       ],
-      "filtered_articles": []
+      "filtered_articles": [
+        {
+          "title": "Project Hail Mary Is Now Streaming on MGM+, Which Is Basically Free Through Prime Video",
+          "url": "https://www.ign.com/articles/project-hail-mary-streaming-mgm-plus-deal",
+          "pubDate_cst": "2026-06-18 23:00",
+          "description": "Project Hail Mary is now streaming on MGM+, which is less than $1 if you try out the service through Prime Video.",
+          "categories": "",
+          "reason": "url:deal",
+          "rss_url": "https://feeds.feedburner.com/ign/all",
+          "filtered_at_cn": "2026-06-19 01:31:24",
+          "status": "filtered"
+        },
+        {
+          "title": "GTA 6 Cover Art and Pre-Order Reveal Comes With a Fresh Look at Vice City",
+          "url": "https://www.ign.com/articles/gta-6-cover-art-and-pre-order-reveal-comes-with-a-fresh-look-at-vice-city",
+          "pubDate_cst": "2026-06-18 21:33",
+          "description": "Rockstar didn’t just reveal the GTA 6 cover art and the date pre-orders go live, it also added a new image to its official website offering a fresh look at Vice City.",
+          "categories": "",
+          "reason": "text:\\bpre[- ]?orders?\\b",
+          "rss_url": "https://feeds.feedburner.com/ign/all",
+          "filtered_at_cn": "2026-06-19 01:31:24",
+          "status": "filtered"
+        },
+        {
+          "title": "GTA 6 Cover Artwork Revealed, Pre-Orders Begin June 25",
+          "url": "https://www.ign.com/articles/gta-6-cover-artwork-revealed-pre-orders-begin-june-25",
+          "pubDate_cst": "2026-06-18 21:07",
+          "description": "Rockstar has just revealed the cover artwork for GTA 6, and announced that pre-orders will begin on June 25.",
+          "categories": "",
+          "reason": "text:\\bpre[- ]?orders?\\b",
+          "rss_url": "https://feeds.feedburner.com/ign/all",
+          "filtered_at_cn": "2026-06-19 01:31:24",
+          "status": "filtered"
+        }
+      ]
     },
     {
       "target_date": "2026-06-18",
