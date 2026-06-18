@@ -19,28 +19,7 @@
       "fingerprint": "c3480ae434a5e2f07943e781263dcd507a64cc37",
       "translation_path": "translations/15.json",
       "retry_policy": "manual_only"
-    },
-    "29": {
-      "id": 29,
-      "url": "https://www.ign.com/articles/rockstar-dishes-out-free-gta-5-current-gen-upgrades-to-ps4-and-xbox-one-owners",
-      "en_title": "Rockstar Dishes Out Free GTA 5 Current-Gen Upgrades to PS4 and Xbox One Owners",
-      "cn_title": "Rockstar 为《GTA5》推出免费次世代升级",
-      "model": "deepseek-v4-pro",
-      "status": "needs_manual_review",
-      "failed_at": "2026-06-18T08:45:39.640635+08:00",
-      "reason": "paragraph 7 missing cn",
-      "audit_issues": [
-        {
-          "type": "dictionary",
-          "detail": "source contains 'Grand Theft Auto', but required dictionary translation '侠盗猎车手' is missing",
-          "en": "Grand Theft Auto",
-          "expected_cn": "侠盗猎车手"
-        }
-      ],
-      "fingerprint": "1eb4a227574581a56bade8f5497aa77c3866ad15",
-      "translation_path": "translations/29.json",
-      "retry_policy": "manual_only"
     }
   },
-  "updated_at": "2026-06-18T01:41:22.038Z"
+  "updated_at": "2026-06-18T01:41:42.218Z"
 }
