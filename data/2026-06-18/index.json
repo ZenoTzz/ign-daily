@@ -226,7 +226,13 @@
       "translation_failed_at": "2026-06-18T08:42:56.049214+08:00",
       "translator": "api",
       "translator_provider": "openai-compatible",
-      "translator_model": "deepseek-v4-pro"
+      "translator_model": "deepseek-v4-pro",
+      "comparison_status": "requested",
+      "comparison_requested_at_cn": "2026/6/18 09:41:22",
+      "comparison_models": [
+        "deepseek-v4-pro",
+        "deepseek-v4-flash"
+      ]
     },
     {
       "id": 23,
