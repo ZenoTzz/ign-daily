@@ -2,6 +2,37 @@
   "date": "2026-06-19",
   "articles": [
     {
+      "id": 3,
+      "category": "影视资讯",
+      "emoji": "🎬",
+      "en_title": "Reality Series Survivor Is Spawning an Animated Movie Featuring Animal Contestants",
+      "cn_title": "真人秀《幸存者》将拍动画电影，参赛者全是动物",
+      "summary": "据《综艺》报道，长寿真人秀《幸存者》将改编为动画电影，由派拉蒙动画与CBS联合开发。故事设定在神秘荒岛上，来自全球的动物们争夺「最终幸存者」称号。节目主持人Jeff Probst担任执行制片人，他表示动物版保留了原版所有核心元素，但玩家不再是人类。《幸存者》自2000年在美国首播，目前已续订至第51季。电影版尚未公布导演、编剧及配音阵容。",
+      "url": "https://www.ign.com/articles/reality-series-survivor-is-spawning-an-animated-movie-featuring-animal-contestants",
+      "publish_time_cn": "2026-06-18 10:44",
+      "pub_date": "2026-06-18 10:44",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/18/surivivor-tv-1280-1781750477340.png?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/18/surivivor-tv-1280-1781750477340.png?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/18/surivivor-tv-1280-1781750477340.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/18/surivivor-tv-1280-1781750477340.png?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/18/surivivor-tv-1280-1781750477340.png?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/18/surivivor-tv-1280-1781750477340.png"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-18T13:04:31+08:00",
+      "pending_dict": [
+        {
+          "en": "Survivor",
+          "cn": "幸存者",
+          "cat": "movies_tv",
+          "source": "ai_guess",
+          "reason": "知名真人秀，中文社区通用译名为《幸存者》，但词库尚未收录"
+        }
+      ]
+    },
+    {
       "id": 2,
       "category": "游戏新闻",
       "emoji": "🕷️",
@@ -74,5 +105,5 @@
       "translator_model": "deepseek-v4-pro"
     }
   ],
-  "total": 2
+  "total": 3
 }
