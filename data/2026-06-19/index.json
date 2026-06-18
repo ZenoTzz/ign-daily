@@ -2,6 +2,59 @@
   "date": "2026-06-19",
   "articles": [
     {
+      "id": 36,
+      "category": "游戏新闻",
+      "emoji": "🎮",
+      "en_title": "A New Free Steam Game Is Topping the Most-Played Charts, But It's Also Leading to False Bans",
+      "cn_title": "Steam免费新游《TBH: Task Bar Hero》登顶热玩榜，误封争议不断",
+      "summary": "一款名为《TBH: Task Bar Hero》的免费Steam游戏意外登顶热玩榜，同时在线玩家超50万，位列第三。该游戏嵌入任务栏自动运行，玩家可出售战利品换取真实货币。但其反作弊系统疑似误报，导致账号遭永久封禁并标记为「作弊者」，引发大量玩家不满。",
+      "url": "https://www.ign.com/articles/a-new-free-steam-game-is-topping-the-most-played-charts-but-its-also-leading-to-false-bans",
+      "publish_time_cn": "2026-06-19 05:19",
+      "pub_date": "2026-06-19 05:19",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/18/0-7mhddtgodlvmzjzu-1781811630644.png?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/18/0-7mhddtgodlvmzjzu-1781811630644.png?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/18/0-7mhddtgodlvmzjzu-1781811630644.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/18/0-7mhddtgodlvmzjzu-1781811630644.png?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/18/0-7mhddtgodlvmzjzu-1781811630644.png?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/18/0-7mhddtgodlvmzjzu-1781811630644.png"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-19T07:11:24+08:00",
+      "pending_dict": [
+        {
+          "en": "TBH: Task Bar Hero",
+          "cn": "任务栏英雄",
+          "cat": "games",
+          "source": "ai_guess",
+          "reason": "暂无官方中文译名，建议社区译名供确认"
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "category": "影视资讯",
+      "emoji": "🎄",
+      "en_title": "How the Grinch Stole Christmas Sequel in the Works with Jim Carrey and Ron Howard",
+      "cn_title": "金·凯瑞与朗·霍华德回归《圣诞怪杰》续集",
+      "summary": "据《好莱坞报道者》消息，金·凯瑞正商谈回归主演《圣诞怪杰》续集，朗·霍华德也将回归执导。影片正在开发中，剧本由《消消气》编剧团队撰写。凯瑞曾表示很想再次出演格林奇，但原版每天两半小时的化妆过程极为痛苦，如今他对动作捕捉技术很感兴趣。剧情细节尚未公布。",
+      "url": "https://www.ign.com/articles/how-the-grinch-stole-christmas-sequel-in-the-works-with-jim-carrey-and-ron-howard",
+      "publish_time_cn": "2026-06-19 05:07",
+      "pub_date": "2026-06-19 05:07",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/18/v2ke4h5qkq2sb9zsumykma-1781806150351.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/18/v2ke4h5qkq2sb9zsumykma-1781806150351.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/18/v2ke4h5qkq2sb9zsumykma-1781806150351.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/18/v2ke4h5qkq2sb9zsumykma-1781806150351.jpg?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/18/v2ke4h5qkq2sb9zsumykma-1781806150351.jpg?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/18/v2ke4h5qkq2sb9zsumykma-1781806150351.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-19T07:11:25+08:00"
+    },
+    {
       "id": 34,
       "category": "游戏新闻",
       "emoji": "🌱",
@@ -1039,5 +1092,5 @@
       "translator_model": "deepseek-v4-pro"
     }
   ],
-  "total": 35
+  "total": 37
 }
