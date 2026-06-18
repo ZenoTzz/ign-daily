@@ -2,6 +2,50 @@
   "date": "2026-06-19",
   "articles": [
     {
+      "id": 4,
+      "category": "行业动态",
+      "emoji": "💰",
+      "en_title": "Apple Price Rises ‘Unavoidable’, Warns CEO Tim Cook",
+      "cn_title": "苹果CEO库克：产品涨价「不可避免」",
+      "summary": "苹果CEO蒂姆·库克在接受《华尔街日报》采访时警告，由于内存和存储芯片成本持续飙升，部分产品涨价「不可避免」。据TechInsights估计，iPhone 18 Pro的组件成本已从iPhone 17 Pro的约50美元(约合人民币338元)(约合360元)涨至约200美元(约合人民币1352元)(约合1440元)。AI行业对内存的激增需求也波及主机市场，索尼和Xbox均对在新环境下推出新主机的挑战表示担忧。",
+      "url": "https://www.ign.com/articles/apple-price-rises-unavoidable-warns-ceo-tim-cook",
+      "publish_time_cn": "2026-06-18 16:03",
+      "pub_date": "2026-06-18 16:03",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/04/20/tim-cook-1776718655604.png?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/04/20/tim-cook-1776718655604.png?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/04/20/tim-cook-1776718655604.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/04/20/tim-cook-1776718655604.png?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/04/20/tim-cook-1776718655604.png?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/04/20/tim-cook-1776718655604.png"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-18T17:27:10+08:00"
+    },
+    {
+      "id": 5,
+      "category": "游戏新闻",
+      "emoji": "🐉",
+      "en_title": "Granblue Fantasy: Relink - Endless Ragnarok Preview: A Deeper Look at the New Summon System",
+      "cn_title": "《碧蓝幻想：Relink》新资料片召唤系统详解",
+      "summary": "《碧蓝幻想：Relink》大型资料片「Endless Ragnarok」将于7月9日登陆PS4/5、Steam及Switch 2，售价29.99美元(约合人民币203元)，完整版59.99美元(约合人民币406元)。新召唤系统允许玩家召唤超过100种生物，包括搞笑召唤如螃蟹雨和猫群，多人模式下可连携召唤。资料片还新增混沌难度、天赋系统及Roguelike模式，支持跨平台联机。",
+      "url": "https://www.ign.com/articles/granblue-fantasy-relink-endless-ragnarok-preview-a-deeper-look-at-the-new-summon-system",
+      "publish_time_cn": "2026-06-18 15:00",
+      "pub_date": "2026-06-18 15:00",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/17/backup-characters-screenshot-2-1781740293744.png?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/17/backup-characters-screenshot-2-1781740293744.png?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/17/backup-characters-screenshot-2-1781740293744.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/17/backup-characters-screenshot-2-1781740293744.png?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/17/backup-characters-screenshot-2-1781740293744.png?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/17/backup-characters-screenshot-2-1781740293744.png"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-18T17:27:11+08:00"
+    },
+    {
       "id": 3,
       "category": "影视资讯",
       "emoji": "🎬",
@@ -105,5 +149,5 @@
       "translator_model": "deepseek-v4-pro"
     }
   ],
-  "total": 3
+  "total": 5
 }

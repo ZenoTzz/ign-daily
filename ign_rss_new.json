@@ -7,46 +7,46 @@
   "changed_dates": [
     "2026-06-19"
   ],
-  "new_target_dates": [],
-  "new_count": 0,
-  "filtered_count": 1,
+  "new_target_dates": [
+    "2026-06-19"
+  ],
+  "new_count": 2,
+  "filtered_count": 0,
   "cleanup_count": 0,
-  "changed_count": 1,
-  "articles": [],
-  "filtered_articles": [
+  "changed_count": 2,
+  "articles": [
     {
-      "title": "Spider-Man: Brand New Day Popcorn Buckets Revealed as Tickets Go on Sale",
-      "url": "https://www.ign.com/articles/spider-man-brand-new-day-popcorn-buckets-revealed-as-tickets-go-on-sale",
-      "pubDate_cst": "2026-06-18 11:33",
-      "description": "Spider-Man: Brand New Day fans will have a plethora of popcorn buckets to choose from.",
-      "categories": "",
-      "reason": "text:\\bon sale\\b",
-      "rss_url": "https://feeds.feedburner.com/ign/all",
-      "filtered_at_cn": "2026-06-18 14:08:34",
-      "status": "filtered"
+      "title": "Apple Price Rises ‘Unavoidable’, Warns CEO Tim Cook",
+      "url": "https://www.ign.com/articles/apple-price-rises-unavoidable-warns-ceo-tim-cook",
+      "pubDate_cst": "2026-06-18 16:03"
+    },
+    {
+      "title": "Granblue Fantasy: Relink - Endless Ragnarok Preview: A Deeper Look at the New Summon System",
+      "url": "https://www.ign.com/articles/granblue-fantasy-relink-endless-ragnarok-preview-a-deeper-look-at-the-new-summon-system",
+      "pubDate_cst": "2026-06-18 15:00"
     }
   ],
+  "filtered_articles": [],
   "runs": [
     {
       "target_date": "2026-06-19",
-      "new_count": 0,
-      "filtered_count": 1,
-      "changed_count": 1,
-      "next_id": 4,
-      "articles": [],
-      "filtered_articles": [
+      "new_count": 2,
+      "filtered_count": 0,
+      "changed_count": 2,
+      "next_id": 6,
+      "articles": [
         {
-          "title": "Spider-Man: Brand New Day Popcorn Buckets Revealed as Tickets Go on Sale",
-          "url": "https://www.ign.com/articles/spider-man-brand-new-day-popcorn-buckets-revealed-as-tickets-go-on-sale",
-          "pubDate_cst": "2026-06-18 11:33",
-          "description": "Spider-Man: Brand New Day fans will have a plethora of popcorn buckets to choose from.",
-          "categories": "",
-          "reason": "text:\\bon sale\\b",
-          "rss_url": "https://feeds.feedburner.com/ign/all",
-          "filtered_at_cn": "2026-06-18 14:08:34",
-          "status": "filtered"
+          "title": "Apple Price Rises ‘Unavoidable’, Warns CEO Tim Cook",
+          "url": "https://www.ign.com/articles/apple-price-rises-unavoidable-warns-ceo-tim-cook",
+          "pubDate_cst": "2026-06-18 16:03"
+        },
+        {
+          "title": "Granblue Fantasy: Relink - Endless Ragnarok Preview: A Deeper Look at the New Summon System",
+          "url": "https://www.ign.com/articles/granblue-fantasy-relink-endless-ragnarok-preview-a-deeper-look-at-the-new-summon-system",
+          "pubDate_cst": "2026-06-18 15:00"
         }
-      ]
+      ],
+      "filtered_articles": []
     },
     {
       "target_date": "2026-06-18",
