@@ -882,6 +882,27 @@
       "total_tokens": 10100,
       "prompt_cache_hit_tokens": 7552,
       "prompt_cache_miss_tokens": 1474
+    },
+    {
+      "time_cn": "2026-06-18 09:45:43",
+      "task": "fulltext",
+      "model": "deepseek-v4-pro",
+      "article_id": 22,
+      "article_title": "《刺客信条：黑旗 记忆重置》全成就离线可解锁",
+      "article_url": "https://www.ign.com/articles/assassins-creed-black-flag-resynced-achievements-all-available-offline-at-any-difficulty-setting",
+      "article_date": "2026-06-18",
+      "detail": "",
+      "estimated_cost_usd": 0.00367952,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 9026,
+      "completion_tokens": 4159,
+      "total_tokens": 13185,
+      "prompt_cache_hit_tokens": 8960,
+      "prompt_cache_miss_tokens": 66
     }
   ]
 }

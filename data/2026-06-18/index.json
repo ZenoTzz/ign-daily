@@ -211,8 +211,8 @@
       "url": "https://www.ign.com/articles/assassins-creed-black-flag-resynced-achievements-all-available-offline-at-any-difficulty-setting",
       "publish_time_cn": "2026-06-18 00:05",
       "pub_date": "2026-06-18 00:05",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/06/12/assassins-creed-black-flag-resynced-new-content-1781287603015.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "needs_review",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/12/assassins-creed-black-flag-resynced-new-content-1781287603015.png",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/12/assassins-creed-black-flag-resynced-new-content-1781287603015.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/12/assassins-creed-black-flag-resynced-new-content-1781287603015.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -222,8 +222,6 @@
       ],
       "source_status": "cached",
       "source_fetched_at": "2026-06-18T02:35:59+08:00",
-      "translation_error": "model returned empty paragraphs",
-      "translation_failed_at": "2026-06-18T08:42:56.049214+08:00",
       "translator": "api",
       "translator_provider": "openai-compatible",
       "translator_model": "deepseek-v4-pro",
@@ -233,7 +231,8 @@
         "deepseek-v4-pro",
         "deepseek-v4-flash"
       ],
-      "comparison_updated_at_cn": "2026-06-18 09:42:20"
+      "comparison_updated_at_cn": "2026-06-18 09:42:20",
+      "translation_path": "translations/22.json"
     },
     {
       "id": 23,
