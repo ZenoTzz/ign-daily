@@ -399,6 +399,48 @@
       "total_tokens": 10832,
       "prompt_cache_hit_tokens": 7808,
       "prompt_cache_miss_tokens": 2100
+    },
+    {
+      "time_cn": "2026-06-19 05:14:34",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 34,
+      "article_title": "Grow a Garden 2 Hits 300 Million Roblox Visits in First Week",
+      "article_url": "https://www.ign.com/articles/grow-a-garden-2-hits-300-million-roblox-visits-in-first-week",
+      "article_date": "2026-06-19",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00037472,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8447,
+      "completion_tokens": 878,
+      "total_tokens": 9325,
+      "prompt_cache_hit_tokens": 7680,
+      "prompt_cache_miss_tokens": 767
+    },
+    {
+      "time_cn": "2026-06-19 05:14:39",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 35,
+      "article_title": "Score Select DualSense Controllers for As Low as $55 Right Now at Target",
+      "article_url": "https://www.ign.com/articles/score-select-dualsense-controllers-for-as-low-as-55-right-now-at-target",
+      "article_date": "2026-06-19",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00019496,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8313,
+      "completion_tokens": 303,
+      "total_tokens": 8616,
+      "prompt_cache_hit_tokens": 7680,
+      "prompt_cache_miss_tokens": 633
     }
   ]
 }

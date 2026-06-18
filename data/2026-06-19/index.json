@@ -2,6 +2,64 @@
   "date": "2026-06-19",
   "articles": [
     {
+      "id": 34,
+      "category": "游戏新闻",
+      "emoji": "🌱",
+      "en_title": "Grow a Garden 2 Hits 300 Million Roblox Visits in First Week",
+      "cn_title": "《Grow a Garden 2》一周访问量突破3亿",
+      "summary": "Roblox游戏《Grow a Garden 2》上线仅一周，访问量已突破3亿次。新作加入夜间偷菜机制，玩家可在2分30秒的黑暗时段潜入他人农场偷取作物，同时引入公会系统与道具商店，守卫花园的精灵雕像等新内容。前作《Grow a Garden》仍可游玩。",
+      "url": "https://www.ign.com/articles/grow-a-garden-2-hits-300-million-roblox-visits-in-first-week",
+      "publish_time_cn": "2026-06-19 04:01",
+      "pub_date": "2026-06-19 04:01",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/18/untitled-june-18-2026-at-14-48-32-1781812190660.png?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/18/untitled-june-18-2026-at-14-48-32-1781812190660.png?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/18/untitled-june-18-2026-at-14-48-32-1781812190660.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/18/untitled-june-18-2026-at-14-48-32-1781812190660.png?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/18/untitled-june-18-2026-at-14-48-32-1781812190660.png?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/18/untitled-june-18-2026-at-14-48-32-1781812190660.png"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-19T05:14:22+08:00",
+      "pending_dict": [
+        {
+          "en": "Grow a Garden 2",
+          "cn": "《种花园2》",
+          "cat": "games",
+          "source": "ai_guess",
+          "reason": "无官方中文译名，社区中常以英文名出现，建议确认常用译法"
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "category": "行业动态",
+      "emoji": "🎮",
+      "en_title": "Score Select DualSense Controllers for As Low as $55 Right Now at Target",
+      "cn_title": "Target DualSense手柄低至55美元(约合人民币372元)",
+      "summary": "Target 正在对多款 DualSense 手柄进行打折促销，灰色迷彩版低至 55美元(约合人民币372元)，其余四款配色售价均为 59.99美元(约合人民币406元)。折扣力度相当于之前 Days of Play 活动水平，PS5 用户可趁此入手。",
+      "url": "https://www.ign.com/articles/score-select-dualsense-controllers-for-as-low-as-55-right-now-at-target",
+      "publish_time_cn": "2026-06-19 04:00",
+      "pub_date": "2026-06-19 04:00",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/18/dualsense-controller-deals-target-1781790829368.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/18/dualsense-controller-deals-target-1781790829368.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/18/dualsense-controller-deals-target-1781790829368.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/18/dualsense-controller-deals-target-1781790829368.jpg?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/18/dualsense-controller-deals-target-1781790829368.jpg?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/18/dualsense-controller-deals-target-1781790829368.jpg",
+        "https://assets-prd.ignimgs.com/2026/06/18/dualsense-wireless-controller-for-playstation-5-gray-camo1-1781788445709.jpg",
+        "https://assets-prd.ignimgs.com/2026/06/18/dualsense-wireless-controller-for-playstation-5-sterling-silver-1781788691057.jpg",
+        "https://assets-prd.ignimgs.com/2026/06/18/dualsense-wireless-controller-for-playstation-5-cobalt-blue-1781789156488.jpg",
+        "https://assets-prd.ignimgs.com/2026/06/18/dualsense-wireless-controller-for-playstation-5-chroma-indigo1-1781789274589.jpg",
+        "https://assets-prd.ignimgs.com/2026/06/18/dualsense-wireless-controller-for-playstation-5-chroma-pearl-1781789388889.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-19T05:14:22+08:00"
+    },
+    {
       "id": 31,
       "category": "影视资讯",
       "emoji": "🕷️",
@@ -981,5 +1039,5 @@
       "translator_model": "deepseek-v4-pro"
     }
   ],
-  "total": 33
+  "total": 35
 }
