@@ -20,20 +20,6 @@
       "translation_path": "translations/15.json",
       "retry_policy": "manual_only"
     },
-    "22": {
-      "id": 22,
-      "url": "https://www.ign.com/articles/assassins-creed-black-flag-resynced-achievements-all-available-offline-at-any-difficulty-setting",
-      "en_title": "Assassin's Creed Black Flag Resynced Achievements All Available Offline, At Any Difficulty Setting",
-      "cn_title": "《刺客信条：黑旗 记忆重置》全成就离线可解锁",
-      "model": "deepseek-v4-pro",
-      "status": "needs_manual_review",
-      "failed_at": "2026-06-18T08:42:56.049214+08:00",
-      "reason": "model returned empty paragraphs",
-      "audit_issues": [],
-      "fingerprint": "1832eaa0b425529c82e394146c95db6da417920f",
-      "translation_path": "",
-      "retry_policy": "manual_only"
-    },
     "29": {
       "id": 29,
       "url": "https://www.ign.com/articles/rockstar-dishes-out-free-gta-5-current-gen-upgrades-to-ps4-and-xbox-one-owners",
@@ -56,5 +42,5 @@
       "retry_policy": "manual_only"
     }
   },
-  "updated_at": "2026-06-18T08:45:39.640635+08:00"
+  "updated_at": "2026-06-18T01:41:22.038Z"
 }
