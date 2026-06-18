@@ -11,8 +11,8 @@
       "url": "https://www.ign.com/articles/call-of-duty-black-ops-1-and-2-are-officially-being-ported-to-new-platforms-next-month",
       "publish_time_cn": "2026-06-18 08:03",
       "pub_date": "2026-06-18 08:03",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/06/08/black-ops-2-key-art-1780955021839.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/08/black-ops-2-key-art-1780955021839.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/08/black-ops-2-key-art-1780955021839.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/08/black-ops-2-key-art-1780955021839.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -44,7 +44,11 @@
           "source": "ai_guess",
           "reason": "无通用中文译名，保留英文"
         }
-      ]
+      ],
+      "translation_path": "translations/01.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro"
     }
   ],
   "total": 1

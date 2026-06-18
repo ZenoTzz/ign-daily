@@ -777,6 +777,69 @@
       "total_tokens": 9264,
       "prompt_cache_hit_tokens": 7808,
       "prompt_cache_miss_tokens": 673
+    },
+    {
+      "time_cn": "2026-06-18 09:41:18",
+      "task": "fulltext",
+      "model": "deepseek-v4-pro",
+      "article_id": 1,
+      "article_title": "《使命召唤：黑色行动1&2》将于下月移植新平台",
+      "article_url": "https://www.ign.com/articles/call-of-duty-black-ops-1-and-2-are-officially-being-ported-to-new-platforms-next-month",
+      "article_date": "2026-06-19",
+      "detail": "",
+      "estimated_cost_usd": 0.00688872,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 9268,
+      "completion_tokens": 7219,
+      "total_tokens": 16487,
+      "prompt_cache_hit_tokens": 7936,
+      "prompt_cache_miss_tokens": 1332
+    },
+    {
+      "time_cn": "2026-06-18 09:41:41",
+      "task": "fulltext_chunk",
+      "model": "deepseek-v4-pro",
+      "article_id": 1,
+      "article_title": "《使命召唤：黑色行动1&2》将于下月移植新平台",
+      "article_url": "https://www.ign.com/articles/call-of-duty-black-ops-1-and-2-are-officially-being-ported-to-new-platforms-next-month",
+      "article_date": "2026-06-19",
+      "detail": "paragraphs 1-6",
+      "estimated_cost_usd": 0.00237861,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 8595,
+      "completion_tokens": 2308,
+      "total_tokens": 10903,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 787
+    },
+    {
+      "time_cn": "2026-06-18 09:41:44",
+      "task": "fulltext_chunk",
+      "model": "deepseek-v4-pro",
+      "article_id": 1,
+      "article_title": "《使命召唤：黑色行动1&2》将于下月移植新平台",
+      "article_url": "https://www.ign.com/articles/call-of-duty-black-ops-1-and-2-are-officially-being-ported-to-new-platforms-next-month",
+      "article_date": "2026-06-19",
+      "detail": "paragraphs 7-7",
+      "estimated_cost_usd": 0.00029235,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 8213,
+      "completion_tokens": 101,
+      "total_tokens": 8314,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 405
     }
   ]
 }
