@@ -1,14 +1,15 @@
 {
-  "target_date": "2026-06-18",
+  "target_date": "2026-06-19",
   "target_dates": [
-    "2026-06-18",
-    "2026-06-17"
+    "2026-06-19",
+    "2026-06-18"
   ],
   "changed_dates": [
+    "2026-06-19",
     "2026-06-18"
   ],
   "new_target_dates": [
-    "2026-06-18"
+    "2026-06-19"
   ],
   "new_count": 1,
   "filtered_count": 1,
@@ -16,60 +17,60 @@
   "changed_count": 2,
   "articles": [
     {
-      "title": "LEGO Reveals a Working Pinball Machine You Can Build Yourself",
-      "url": "https://www.ign.com/articles/lego-reveals-a-working-pinball-machine-you-can-build-yourself",
-      "pubDate_cst": "2026-06-18 04:58"
+      "title": "Call of Duty: Black Ops 1 and 2 Are Officially Being Ported to New Platforms Next Month",
+      "url": "https://www.ign.com/articles/call-of-duty-black-ops-1-and-2-are-officially-being-ported-to-new-platforms-next-month",
+      "pubDate_cst": "2026-06-18 08:03"
     }
   ],
   "filtered_articles": [
     {
-      "title": "Get an Apple Watch Ultra for Just $300 and It Can Still Arrive by Father's Day for Amazon Prime Members",
-      "url": "https://www.ign.com/articles/apple-watch-ultra-deal-arrives-by-fathers-day",
-      "pubDate_cst": "2026-06-18 05:15",
-      "description": "Save $450 off by getting a renewed \"excellent condition\" unit",
+      "title": "Save Over 60% Off the ThermoMaven X2 Wireless Meat Thermometer for Father's Day, Now Just $39.99",
+      "url": "https://www.ign.com/articles/thermomaven-x2-wireless-meat-thermometer-deal-amazon-fathers-day-sale",
+      "pubDate_cst": "2026-06-18 06:45",
+      "description": "One of the best gifts you can get for your dad chef",
       "categories": "",
-      "reason": "text:\\bsave \\$\\d",
+      "reason": "url:deal",
       "rss_url": "https://feeds.feedburner.com/ign/all",
-      "filtered_at_cn": "2026-06-18 07:11:07",
+      "filtered_at_cn": "2026-06-18 08:35:18",
       "status": "filtered"
     }
   ],
   "runs": [
     {
-      "target_date": "2026-06-18",
+      "target_date": "2026-06-19",
       "new_count": 1,
-      "filtered_count": 1,
-      "changed_count": 2,
-      "next_id": 34,
+      "filtered_count": 0,
+      "changed_count": 1,
+      "next_id": 2,
       "articles": [
         {
-          "title": "LEGO Reveals a Working Pinball Machine You Can Build Yourself",
-          "url": "https://www.ign.com/articles/lego-reveals-a-working-pinball-machine-you-can-build-yourself",
-          "pubDate_cst": "2026-06-18 04:58"
+          "title": "Call of Duty: Black Ops 1 and 2 Are Officially Being Ported to New Platforms Next Month",
+          "url": "https://www.ign.com/articles/call-of-duty-black-ops-1-and-2-are-officially-being-ported-to-new-platforms-next-month",
+          "pubDate_cst": "2026-06-18 08:03"
         }
       ],
+      "filtered_articles": []
+    },
+    {
+      "target_date": "2026-06-18",
+      "new_count": 0,
+      "filtered_count": 1,
+      "changed_count": 1,
+      "next_id": 34,
+      "articles": [],
       "filtered_articles": [
         {
-          "title": "Get an Apple Watch Ultra for Just $300 and It Can Still Arrive by Father's Day for Amazon Prime Members",
-          "url": "https://www.ign.com/articles/apple-watch-ultra-deal-arrives-by-fathers-day",
-          "pubDate_cst": "2026-06-18 05:15",
-          "description": "Save $450 off by getting a renewed \"excellent condition\" unit",
+          "title": "Save Over 60% Off the ThermoMaven X2 Wireless Meat Thermometer for Father's Day, Now Just $39.99",
+          "url": "https://www.ign.com/articles/thermomaven-x2-wireless-meat-thermometer-deal-amazon-fathers-day-sale",
+          "pubDate_cst": "2026-06-18 06:45",
+          "description": "One of the best gifts you can get for your dad chef",
           "categories": "",
-          "reason": "text:\\bsave \\$\\d",
+          "reason": "url:deal",
           "rss_url": "https://feeds.feedburner.com/ign/all",
-          "filtered_at_cn": "2026-06-18 07:11:07",
+          "filtered_at_cn": "2026-06-18 08:35:18",
           "status": "filtered"
         }
       ]
-    },
-    {
-      "target_date": "2026-06-17",
-      "new_count": 0,
-      "filtered_count": 0,
-      "changed_count": 0,
-      "next_id": 31,
-      "articles": [],
-      "filtered_articles": []
     }
   ]
 }
