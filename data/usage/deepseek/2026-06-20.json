@@ -84,6 +84,27 @@
       "total_tokens": 8482,
       "prompt_cache_hit_tokens": 7680,
       "prompt_cache_miss_tokens": 433
+    },
+    {
+      "time_cn": "2026-06-20 07:16:57",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 14,
+      "article_title": "CD Projekt Red Co-CEO Hopes Witcher 4 Wins Back Players After 'Heartbreaking' Cyberpunk 2077 Launch",
+      "article_url": "https://www.ign.com/articles/cd-projekt-red-co-ceo-hopes-witcher-4-wins-back-players-after-heartbreaking-cyberpunk-2077-launch",
+      "article_date": "2026-06-20",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00039936,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8621,
+      "completion_tokens": 879,
+      "total_tokens": 9500,
+      "prompt_cache_hit_tokens": 7680,
+      "prompt_cache_miss_tokens": 941
     }
   ]
 }
