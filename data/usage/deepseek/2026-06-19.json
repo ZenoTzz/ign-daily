@@ -525,6 +525,132 @@
       "total_tokens": 9134,
       "prompt_cache_hit_tokens": 7680,
       "prompt_cache_miss_tokens": 741
+    },
+    {
+      "time_cn": "2026-06-19 20:18:44",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 1,
+      "article_title": "Sony Ditches Mention of PC Releases From Business Strategy Document, as PlayStation's Single-Player Games Now Expected to Be Fully Exclusive",
+      "article_url": "https://www.ign.com/articles/sony-ditches-mention-of-pc-releases-from-business-strategy-document-as-playstations-single-player-games-now-expected-to-be-fully-exclusive",
+      "article_date": "2026-06-20",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00026216,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8617,
+      "completion_tokens": 391,
+      "total_tokens": 9008,
+      "prompt_cache_hit_tokens": 7680,
+      "prompt_cache_miss_tokens": 937
+    },
+    {
+      "time_cn": "2026-06-19 20:18:55",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 2,
+      "article_title": "Tom Holland Tries to Avoid Spoiling if Spider-Man is in Avengers: Doomsday or Secret Wars — and Essentially Confirms He Is",
+      "article_url": "https://www.ign.com/articles/tom-holland-tries-to-avoid-spoiling-if-spider-man-is-in-avengers-doomsday-or-secret-wars-and-essentially-confirms-he-is",
+      "article_date": "2026-06-20",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.0003316,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8519,
+      "completion_tokens": 688,
+      "total_tokens": 9207,
+      "prompt_cache_hit_tokens": 7680,
+      "prompt_cache_miss_tokens": 839
+    },
+    {
+      "time_cn": "2026-06-19 20:19:03",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 3,
+      "article_title": "Darth Maul Voice Actor Slams Star Wars: The Phantom Menace as 'The Biggest Disappointment of My Life' and Says His Pay Was 'S***'",
+      "article_url": "https://www.ign.com/articles/darth-maul-voice-actor-slams-star-wars-the-phantom-menace-as-the-biggest-disappointment-of-my-life-and-says-his-pay-was-s",
+      "article_date": "2026-06-20",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00025118,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8590,
+      "completion_tokens": 428,
+      "total_tokens": 9018,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 782
+    },
+    {
+      "time_cn": "2026-06-19 20:19:09",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 4,
+      "article_title": "Fallout Season 3 Adds Star Wars and The Good Place Star Manny Jacinto",
+      "article_url": "https://www.ign.com/articles/fallout-season-3-adds-star-wars-and-the-good-place-star-manny-jacinto",
+      "article_date": "2026-06-20",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00021078,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8314,
+      "completion_tokens": 359,
+      "total_tokens": 8673,
+      "prompt_cache_hit_tokens": 7680,
+      "prompt_cache_miss_tokens": 634
+    },
+    {
+      "time_cn": "2026-06-19 20:19:22",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 5,
+      "article_title": "Cape Fear Episode 4 Review – 'Pierced'",
+      "article_url": "https://www.ign.com/articles/cape-fear-episode-4-review-pierced",
+      "article_date": "2026-06-20",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00044724,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9119,
+      "completion_tokens": 801,
+      "total_tokens": 9920,
+      "prompt_cache_hit_tokens": 7680,
+      "prompt_cache_miss_tokens": 1439
+    },
+    {
+      "time_cn": "2026-06-19 20:19:33",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 6,
+      "article_title": "Sugar Season 2 Review",
+      "article_url": "https://www.ign.com/articles/sugar-season-2-review-apple-tv",
+      "article_date": "2026-06-20",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00034532,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9005,
+      "completion_tokens": 494,
+      "total_tokens": 9499,
+      "prompt_cache_hit_tokens": 7680,
+      "prompt_cache_miss_tokens": 1325
     }
   ]
 }

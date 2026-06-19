@@ -7,46 +7,86 @@
   "changed_dates": [
     "2026-06-20"
   ],
-  "new_target_dates": [],
-  "new_count": 0,
-  "filtered_count": 1,
+  "new_target_dates": [
+    "2026-06-20"
+  ],
+  "new_count": 6,
+  "filtered_count": 0,
   "cleanup_count": 0,
-  "changed_count": 1,
-  "articles": [],
-  "filtered_articles": [
+  "changed_count": 6,
+  "articles": [
     {
-      "title": "The Hunger Games Deluxe Edition Books Are All on Sale Before Amazon Prime Day",
-      "url": "https://www.ign.com/articles/the-hunger-games-deluxe-edition-books-sale-amazon-prime-day-2026",
-      "pubDate_cst": "2026-06-19 10:15",
-      "description": "",
-      "categories": "",
-      "reason": "text:\\bon sale\\b",
-      "rss_url": "https://feeds.feedburner.com/ign/all",
-      "filtered_at_cn": "2026-06-19 15:31:12",
-      "status": "filtered"
+      "title": "Sony Ditches Mention of PC Releases From Business Strategy Document, as PlayStation's Single-Player Games Now Expected to Be Fully Exclusive",
+      "url": "https://www.ign.com/articles/sony-ditches-mention-of-pc-releases-from-business-strategy-document-as-playstations-single-player-games-now-expected-to-be-fully-exclusive",
+      "pubDate_cst": "2026-06-19 19:24"
+    },
+    {
+      "title": "Tom Holland Tries to Avoid Spoiling if Spider-Man is in Avengers: Doomsday or Secret Wars — and Essentially Confirms He Is",
+      "url": "https://www.ign.com/articles/tom-holland-tries-to-avoid-spoiling-if-spider-man-is-in-avengers-doomsday-or-secret-wars-and-essentially-confirms-he-is",
+      "pubDate_cst": "2026-06-19 18:42"
+    },
+    {
+      "title": "Darth Maul Voice Actor Slams Star Wars: The Phantom Menace as 'The Biggest Disappointment of My Life' and Says His Pay Was 'S***'",
+      "url": "https://www.ign.com/articles/darth-maul-voice-actor-slams-star-wars-the-phantom-menace-as-the-biggest-disappointment-of-my-life-and-says-his-pay-was-s",
+      "pubDate_cst": "2026-06-19 17:58"
+    },
+    {
+      "title": "Fallout Season 3 Adds Star Wars and The Good Place Star Manny Jacinto",
+      "url": "https://www.ign.com/articles/fallout-season-3-adds-star-wars-and-the-good-place-star-manny-jacinto",
+      "pubDate_cst": "2026-06-19 17:00"
+    },
+    {
+      "title": "Cape Fear Episode 4 Review – 'Pierced'",
+      "url": "https://www.ign.com/articles/cape-fear-episode-4-review-pierced",
+      "pubDate_cst": "2026-06-19 15:00"
+    },
+    {
+      "title": "Sugar Season 2 Review",
+      "url": "https://www.ign.com/articles/sugar-season-2-review-apple-tv",
+      "pubDate_cst": "2026-06-19 15:00"
     }
   ],
+  "filtered_articles": [],
   "runs": [
     {
       "target_date": "2026-06-20",
-      "new_count": 0,
-      "filtered_count": 1,
-      "changed_count": 1,
-      "next_id": 1,
-      "articles": [],
-      "filtered_articles": [
+      "new_count": 6,
+      "filtered_count": 0,
+      "changed_count": 6,
+      "next_id": 7,
+      "articles": [
         {
-          "title": "The Hunger Games Deluxe Edition Books Are All on Sale Before Amazon Prime Day",
-          "url": "https://www.ign.com/articles/the-hunger-games-deluxe-edition-books-sale-amazon-prime-day-2026",
-          "pubDate_cst": "2026-06-19 10:15",
-          "description": "",
-          "categories": "",
-          "reason": "text:\\bon sale\\b",
-          "rss_url": "https://feeds.feedburner.com/ign/all",
-          "filtered_at_cn": "2026-06-19 15:31:12",
-          "status": "filtered"
+          "title": "Sony Ditches Mention of PC Releases From Business Strategy Document, as PlayStation's Single-Player Games Now Expected to Be Fully Exclusive",
+          "url": "https://www.ign.com/articles/sony-ditches-mention-of-pc-releases-from-business-strategy-document-as-playstations-single-player-games-now-expected-to-be-fully-exclusive",
+          "pubDate_cst": "2026-06-19 19:24"
+        },
+        {
+          "title": "Tom Holland Tries to Avoid Spoiling if Spider-Man is in Avengers: Doomsday or Secret Wars — and Essentially Confirms He Is",
+          "url": "https://www.ign.com/articles/tom-holland-tries-to-avoid-spoiling-if-spider-man-is-in-avengers-doomsday-or-secret-wars-and-essentially-confirms-he-is",
+          "pubDate_cst": "2026-06-19 18:42"
+        },
+        {
+          "title": "Darth Maul Voice Actor Slams Star Wars: The Phantom Menace as 'The Biggest Disappointment of My Life' and Says His Pay Was 'S***'",
+          "url": "https://www.ign.com/articles/darth-maul-voice-actor-slams-star-wars-the-phantom-menace-as-the-biggest-disappointment-of-my-life-and-says-his-pay-was-s",
+          "pubDate_cst": "2026-06-19 17:58"
+        },
+        {
+          "title": "Fallout Season 3 Adds Star Wars and The Good Place Star Manny Jacinto",
+          "url": "https://www.ign.com/articles/fallout-season-3-adds-star-wars-and-the-good-place-star-manny-jacinto",
+          "pubDate_cst": "2026-06-19 17:00"
+        },
+        {
+          "title": "Cape Fear Episode 4 Review – 'Pierced'",
+          "url": "https://www.ign.com/articles/cape-fear-episode-4-review-pierced",
+          "pubDate_cst": "2026-06-19 15:00"
+        },
+        {
+          "title": "Sugar Season 2 Review",
+          "url": "https://www.ign.com/articles/sugar-season-2-review-apple-tv",
+          "pubDate_cst": "2026-06-19 15:00"
         }
-      ]
+      ],
+      "filtered_articles": []
     },
     {
       "target_date": "2026-06-19",
