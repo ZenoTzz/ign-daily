@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-20 04:21:34 +08:00",
+  "updated_at": "2026-06-20 05:53:26 +08:00",
   "source": "multi-source median",
   "base": "USD",
   "rates_to_cny": {
@@ -25,19 +25,19 @@
         "source_count": 4,
         "median_raw": 7.778207,
         "max_cross_source_deviation": 0.002041,
-        "previous_deviation": 0.001056
+        "previous_deviation": 0.00023
       },
       "JPY_100": {
         "source_count": 4,
         "median_raw": 4.209144,
         "max_cross_source_deviation": 0.00252,
-        "previous_deviation": 0.002177
+        "previous_deviation": 0.000203
       },
       "GBP": {
         "source_count": 4,
         "median_raw": 8.969183,
         "max_cross_source_deviation": 0.003718,
-        "previous_deviation": 0.001025
+        "previous_deviation": 9.1e-05
       },
       "KRW_100": {
         "source_count": 4,
