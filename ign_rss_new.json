@@ -5,48 +5,24 @@
     "2026-06-19"
   ],
   "changed_dates": [
-    "2026-06-19"
+    "2026-06-20"
   ],
-  "new_target_dates": [
-    "2026-06-19"
-  ],
-  "new_count": 2,
-  "filtered_count": 2,
+  "new_target_dates": [],
+  "new_count": 0,
+  "filtered_count": 1,
   "cleanup_count": 0,
-  "changed_count": 4,
-  "articles": [
-    {
-      "title": "New Queer Movies I'm Watching In Theaters This Weekend",
-      "url": "https://www.ign.com/articles/new-queer-movies-to-watch-in-theaters-this-weekend",
-      "pubDate_cst": "2026-06-19 07:44"
-    },
-    {
-      "title": "PlayStation Reportedly Pulled Out of PC Ports Due to 'Inconsistent' Releases and Lack of Revenue",
-      "url": "https://www.ign.com/articles/playstation-reportedly-pulled-out-of-pc-ports-due-to-inconsistent-releases-and-lack-of-revenue",
-      "pubDate_cst": "2026-06-19 06:36"
-    }
-  ],
+  "changed_count": 1,
+  "articles": [],
   "filtered_articles": [
     {
-      "title": "The Rugged, Waterproof DJI Osmo Action 4 4K 120fps Action Camera Drops to $169",
-      "url": "https://www.ign.com/articles/best-action-camera-deal-in-june-2026",
-      "pubDate_cst": "2026-06-19 07:30",
-      "description": "Comparable to the GoPro Hero 13 Black at a fraction of the cost",
+      "title": "The Hunger Games Deluxe Edition Books Are All on Sale Before Amazon Prime Day",
+      "url": "https://www.ign.com/articles/the-hunger-games-deluxe-edition-books-sale-amazon-prime-day-2026",
+      "pubDate_cst": "2026-06-19 10:15",
+      "description": "",
       "categories": "",
-      "reason": "text:\\bdrops? to \\$",
+      "reason": "text:\\bon sale\\b",
       "rss_url": "https://feeds.feedburner.com/ign/all",
-      "filtered_at_cn": "2026-06-19 10:07:08",
-      "status": "filtered"
-    },
-    {
-      "title": "Score Up to 29% Off Dreame Robot Vacuums for Amazon Prime Day",
-      "url": "https://www.ign.com/articles/dreame-robot-vacuums-prime-day-2026",
-      "pubDate_cst": "2026-06-19 07:20",
-      "description": "Clean smarter, not harder, this summer",
-      "categories": "",
-      "reason": "text:\\bprime.day\\b",
-      "rss_url": "https://feeds.feedburner.com/ign/all",
-      "filtered_at_cn": "2026-06-19 10:07:08",
+      "filtered_at_cn": "2026-06-19 15:31:12",
       "status": "filtered"
     }
   ],
@@ -54,54 +30,32 @@
     {
       "target_date": "2026-06-20",
       "new_count": 0,
-      "filtered_count": 0,
-      "changed_count": 0,
+      "filtered_count": 1,
+      "changed_count": 1,
       "next_id": 1,
       "articles": [],
-      "filtered_articles": []
-    },
-    {
-      "target_date": "2026-06-19",
-      "new_count": 2,
-      "filtered_count": 2,
-      "changed_count": 4,
-      "next_id": 40,
-      "articles": [
-        {
-          "title": "New Queer Movies I'm Watching In Theaters This Weekend",
-          "url": "https://www.ign.com/articles/new-queer-movies-to-watch-in-theaters-this-weekend",
-          "pubDate_cst": "2026-06-19 07:44"
-        },
-        {
-          "title": "PlayStation Reportedly Pulled Out of PC Ports Due to 'Inconsistent' Releases and Lack of Revenue",
-          "url": "https://www.ign.com/articles/playstation-reportedly-pulled-out-of-pc-ports-due-to-inconsistent-releases-and-lack-of-revenue",
-          "pubDate_cst": "2026-06-19 06:36"
-        }
-      ],
       "filtered_articles": [
         {
-          "title": "The Rugged, Waterproof DJI Osmo Action 4 4K 120fps Action Camera Drops to $169",
-          "url": "https://www.ign.com/articles/best-action-camera-deal-in-june-2026",
-          "pubDate_cst": "2026-06-19 07:30",
-          "description": "Comparable to the GoPro Hero 13 Black at a fraction of the cost",
+          "title": "The Hunger Games Deluxe Edition Books Are All on Sale Before Amazon Prime Day",
+          "url": "https://www.ign.com/articles/the-hunger-games-deluxe-edition-books-sale-amazon-prime-day-2026",
+          "pubDate_cst": "2026-06-19 10:15",
+          "description": "",
           "categories": "",
-          "reason": "text:\\bdrops? to \\$",
+          "reason": "text:\\bon sale\\b",
           "rss_url": "https://feeds.feedburner.com/ign/all",
-          "filtered_at_cn": "2026-06-19 10:07:08",
-          "status": "filtered"
-        },
-        {
-          "title": "Score Up to 29% Off Dreame Robot Vacuums for Amazon Prime Day",
-          "url": "https://www.ign.com/articles/dreame-robot-vacuums-prime-day-2026",
-          "pubDate_cst": "2026-06-19 07:20",
-          "description": "Clean smarter, not harder, this summer",
-          "categories": "",
-          "reason": "text:\\bprime.day\\b",
-          "rss_url": "https://feeds.feedburner.com/ign/all",
-          "filtered_at_cn": "2026-06-19 10:07:08",
+          "filtered_at_cn": "2026-06-19 15:31:12",
           "status": "filtered"
         }
       ]
+    },
+    {
+      "target_date": "2026-06-19",
+      "new_count": 0,
+      "filtered_count": 0,
+      "changed_count": 0,
+      "next_id": 40,
+      "articles": [],
+      "filtered_articles": []
     }
   ]
 }
