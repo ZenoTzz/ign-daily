@@ -651,6 +651,69 @@
       "total_tokens": 9499,
       "prompt_cache_hit_tokens": 7680,
       "prompt_cache_miss_tokens": 1325
+    },
+    {
+      "time_cn": "2026-06-19 23:54:25",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 7,
+      "article_title": "Gungrave G.O.R.E. Blood Heat Looks to Refine a Solid Action-Game Foundation | IGN Preview",
+      "article_url": "https://www.ign.com/articles/gungrave-gore-blood-heat-looks-to-refine-a-solid-action-game-foundation-ign-preview",
+      "article_date": "2026-06-20",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00058116,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9063,
+      "completion_tokens": 1370,
+      "total_tokens": 10433,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 1255
+    },
+    {
+      "time_cn": "2026-06-19 23:54:38",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 8,
+      "article_title": "Xbox's Confusing Exclusivity Criteria Now Aided by 'EXCLUSIVE' Label on Console Dashboard",
+      "article_url": "https://www.ign.com/articles/xboxs-confusing-exclusivity-criteria-now-aided-by-exclusive-label-on-console-dashboard",
+      "article_date": "2026-06-20",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00048252,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8809,
+      "completion_tokens": 1082,
+      "total_tokens": 9891,
+      "prompt_cache_hit_tokens": 7680,
+      "prompt_cache_miss_tokens": 1129
+    },
+    {
+      "time_cn": "2026-06-19 23:54:51",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 9,
+      "article_title": "Woody Shouldn’t Even Be in Toy Story 5",
+      "article_url": "https://www.ign.com/articles/woody-shouldnt-even-be-in-toy-story-5",
+      "article_date": "2026-06-20",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.0005792,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9789,
+      "completion_tokens": 1000,
+      "total_tokens": 10789,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 1981
     }
   ]
 }
