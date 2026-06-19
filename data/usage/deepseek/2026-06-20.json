@@ -42,6 +42,48 @@
       "total_tokens": 8834,
       "prompt_cache_hit_tokens": 7680,
       "prompt_cache_miss_tokens": 550
+    },
+    {
+      "time_cn": "2026-06-20 04:04:49",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 12,
+      "article_title": "Doom Composer Bobby Prince Dies at 81",
+      "article_url": "https://www.ign.com/articles/doom-composer-bobby-prince-dies-at-81",
+      "article_date": "2026-06-20",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00022366,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8572,
+      "completion_tokens": 276,
+      "total_tokens": 8848,
+      "prompt_cache_hit_tokens": 7680,
+      "prompt_cache_miss_tokens": 892
+    },
+    {
+      "time_cn": "2026-06-20 04:04:55",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 13,
+      "article_title": "Fans Vote Charizard As Their Favorite Pokémon in the Pokémon x Target Collection",
+      "article_url": "https://www.ign.com/articles/fans-vote-charizard-as-their-favorite-pokmon-in-the-pokmon-x-target-collection",
+      "article_date": "2026-06-20",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00018544,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8113,
+      "completion_tokens": 369,
+      "total_tokens": 8482,
+      "prompt_cache_hit_tokens": 7680,
+      "prompt_cache_miss_tokens": 433
     }
   ]
 }
