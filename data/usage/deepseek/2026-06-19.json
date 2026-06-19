@@ -483,6 +483,48 @@
       "total_tokens": 9598,
       "prompt_cache_hit_tokens": 7680,
       "prompt_cache_miss_tokens": 818
+    },
+    {
+      "time_cn": "2026-06-19 10:07:20",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 38,
+      "article_title": "New Queer Movies I'm Watching In Theaters This Weekend",
+      "article_url": "https://www.ign.com/articles/new-queer-movies-to-watch-in-theaters-this-weekend",
+      "article_date": "2026-06-19",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00022444,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8437,
+      "completion_tokens": 409,
+      "total_tokens": 8846,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 629
+    },
+    {
+      "time_cn": "2026-06-19 10:07:32",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 39,
+      "article_title": "PlayStation Reportedly Pulled Out of PC Ports Due to 'Inconsistent' Releases and Lack of Revenue",
+      "article_url": "https://www.ign.com/articles/playstation-reportedly-pulled-out-of-pc-ports-due-to-inconsistent-releases-and-lack-of-revenue",
+      "article_date": "2026-06-19",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00032488,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8421,
+      "completion_tokens": 713,
+      "total_tokens": 9134,
+      "prompt_cache_hit_tokens": 7680,
+      "prompt_cache_miss_tokens": 741
     }
   ]
 }

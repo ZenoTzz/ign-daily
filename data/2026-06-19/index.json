@@ -2,6 +2,59 @@
   "date": "2026-06-19",
   "articles": [
     {
+      "id": 38,
+      "category": "影视资讯",
+      "emoji": "🎬",
+      "en_title": "New Queer Movies I'm Watching In Theaters This Weekend",
+      "cn_title": "本周末两部酷儿新片上映，一部恐怖一部浪漫",
+      "summary": "为庆祝骄傲月，本周有两部新酷儿电影在北美上映：恐怖片《Leviticus》以全新方式探讨恐同议题，而《Girls Like Girls》则改编自Hayley Kiyoko的同名小说，是一部轻松的青春爱情片。两部电影均聚焦年轻爱情，风格迥异，值得关注。",
+      "url": "https://www.ign.com/articles/new-queer-movies-to-watch-in-theaters-this-weekend",
+      "publish_time_cn": "2026-06-19 07:44",
+      "pub_date": "2026-06-19 07:44",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/18/pride-month-in-theaters-1-1781826277390.png?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/18/pride-month-in-theaters-1-1781826277390.png?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/18/pride-month-in-theaters-1-1781826277390.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/18/pride-month-in-theaters-1-1781826277390.png?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/18/pride-month-in-theaters-1-1781826277390.png?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/18/pride-month-in-theaters-1-1781826277390.png"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-19T10:07:10+08:00",
+      "pending_dict": [
+        {
+          "en": "Leviticus",
+          "cn": "Leviticus",
+          "cat": "movies_tv",
+          "source": "ai_guess",
+          "reason": "无稳定中文译名，保留英文待确认"
+        },
+        {
+          "en": "Girls Like Girls",
+          "cn": "《女孩喜欢女孩》",
+          "cat": "movies_tv",
+          "source": "ai_guess",
+          "reason": "暂译，需确认是否已有官方中文名"
+        }
+      ]
+    },
+    {
+      "id": 39,
+      "category": "行业动态",
+      "emoji": "🎮",
+      "en_title": "PlayStation Reportedly Pulled Out of PC Ports Due to 'Inconsistent' Releases and Lack of Revenue",
+      "cn_title": "PlayStation 据称因发布「不一致」且收入不足已放弃PC游戏移植",
+      "summary": "据彭博社记者 Jason Schreier 爆料，PlayStation 已放弃将单机叙事游戏移植至PC的计划。CEO 赫尔曼·胡尔斯特在内部会议中表示，PC 移植发布「不一致」，收入不足，未来仅服务型游戏会登陆PC，单机作品则保持 PlayStation 独占。此前《最后生还者 第一部分》等作品的PC版因优化问题及缺乏宣传而表现不佳。",
+      "url": "https://www.ign.com/articles/playstation-reportedly-pulled-out-of-pc-ports-due-to-inconsistent-releases-and-lack-of-revenue",
+      "publish_time_cn": "2026-06-19 06:36",
+      "pub_date": "2026-06-19 06:36",
+      "cover_image": "",
+      "translation_status": "none",
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-19T10:07:11+08:00"
+    },
+    {
       "id": 36,
       "category": "游戏新闻",
       "emoji": "🎮",
@@ -90,8 +143,8 @@
       "category": "行业动态",
       "emoji": "🎮",
       "en_title": "Score Select DualSense Controllers for As Low as $55 Right Now at Target",
-      "cn_title": "Target DualSense手柄低至55美元(约合人民币372元)",
-      "summary": "Target 正在对多款 DualSense 手柄进行打折促销，灰色迷彩版低至 55美元(约合人民币372元)，其余四款配色售价均为 59.99美元(约合人民币406元)。折扣力度相当于之前 Days of Play 活动水平，PS5 用户可趁此入手。",
+      "cn_title": "Target DualSense手柄低至55美元(约合人民币373元)",
+      "summary": "Target 正在对多款 DualSense 手柄进行打折促销，灰色迷彩版低至 55美元(约合人民币373元)，其余四款配色售价均为 59.99美元(约合人民币407元)。折扣力度相当于之前 Days of Play 活动水平，PS5 用户可趁此入手。",
       "url": "https://www.ign.com/articles/score-select-dualsense-controllers-for-as-low-as-55-right-now-at-target",
       "publish_time_cn": "2026-06-19 04:00",
       "pub_date": "2026-06-19 04:00",
@@ -669,7 +722,7 @@
       "emoji": "🎮",
       "en_title": "Amid Concern Over Xbox Studio 'Bloodbath,' New Report Says Developers Are Being 'Punished Today for Following Orders'",
       "cn_title": "Xbox工作室「血洗」在即，开发者遵命反遭罚",
-      "summary": "彭博社记者Jason Schreier的新报告称，Xbox即将大规模裁撤工作室，开发者因遵循微软数年前的指令如今反遭惩罚。涉及工作室包括《午夜之南》开发商Compulsion Games、《完美黑暗》团队等，部分可能被出售或关闭。Schreier指出，Xbox Game Pass增长停滞、687亿美元(约合人民币4651亿元)收购动视暴雪后财务压力加剧是主因。IGN已向微软置评但未获回应。",
+      "summary": "彭博社记者Jason Schreier的新报告称，Xbox即将大规模裁撤工作室，开发者因遵循微软数年前的指令如今反遭惩罚。涉及工作室包括《午夜之南》开发商Compulsion Games、《完美黑暗》团队等，部分可能被出售或关闭。Schreier指出，Xbox Game Pass增长停滞、687亿美元(约合人民币4658亿元)收购动视暴雪后财务压力加剧是主因。IGN已向微软置评但未获回应。",
       "url": "https://www.ign.com/articles/amid-concern-over-xbox-studio-bloodbath-new-report-says-developers-are-being-punished-today-for-following-orders",
       "publish_time_cn": "2026-06-18 19:44",
       "pub_date": "2026-06-18 19:44",
@@ -803,7 +856,7 @@
       "emoji": "🐕",
       "en_title": "Final Fantasy 14 Rewards Japanese Players for Paying Their Real-Life Taxes With a Giant Dog",
       "cn_title": "《最终幻想14》玩家纳税获巨型狗狗坐骑",
-      "summary": "《最终幻想14》日本玩家现可通过缴纳故乡税获得游戏内物品，包括售价约43美元(约合人民币291元)(约合310人民币)的服装、68美元(约合人民币460元)(约合490人民币)的舞蹈表情、105美元(约合人民币711元)(约合756人民币)的幻想药瓶，以及56美元(约合人民币379元)(约合403人民币)的巨型柴犬坐骑。这些物品也可在线上商店购买。",
+      "summary": "《最终幻想14》日本玩家现可通过缴纳故乡税获得游戏内物品，包括售价约43美元(约合人民币292元)(约合310人民币)的服装、68美元(约合人民币461元)(约合490人民币)的舞蹈表情、105美元(约合人民币712元)(约合756人民币)的幻想药瓶，以及56美元(约合人民币380元)(约合403人民币)的巨型柴犬坐骑。这些物品也可在线上商店购买。",
       "url": "https://www.ign.com/articles/final-fantasy-14-rewards-japanese-players-for-paying-their-real-life-taxes-with-a-giant-dog",
       "publish_time_cn": "2026-06-18 16:31",
       "pub_date": "2026-06-18 16:31",
@@ -836,7 +889,7 @@
       "emoji": "💰",
       "en_title": "Apple Price Rises ‘Unavoidable’, Warns CEO Tim Cook",
       "cn_title": "苹果CEO库克：产品涨价「不可避免」",
-      "summary": "苹果CEO蒂姆·库克在接受《华尔街日报》采访时警告，由于内存和存储芯片成本持续飙升，部分产品涨价「不可避免」。据TechInsights估计，iPhone 18 Pro的组件成本已从iPhone 17 Pro的约50美元(约合人民币338元)(约合360元)涨至约200美元(约合人民币1354元)(约合1440元)。AI行业对内存的激增需求也波及主机市场，索尼和Xbox均对在新环境下推出新主机的挑战表示担忧。",
+      "summary": "苹果CEO蒂姆·库克在接受《华尔街日报》采访时警告，由于内存和存储芯片成本持续飙升，部分产品涨价「不可避免」。据TechInsights估计，iPhone 18 Pro的组件成本已从iPhone 17 Pro的约50美元(约合人民币339元)(约合360元)涨至约200美元(约合人民币1356元)(约合1440元)。AI行业对内存的激增需求也波及主机市场，索尼和Xbox均对在新环境下推出新主机的挑战表示担忧。",
       "url": "https://www.ign.com/articles/apple-price-rises-unavoidable-warns-ceo-tim-cook",
       "publish_time_cn": "2026-06-18 16:03",
       "pub_date": "2026-06-18 16:03",
@@ -862,7 +915,7 @@
       "emoji": "🐉",
       "en_title": "Granblue Fantasy: Relink - Endless Ragnarok Preview: A Deeper Look at the New Summon System",
       "cn_title": "《碧蓝幻想：Relink》新资料片召唤系统详解",
-      "summary": "《碧蓝幻想：Relink》大型资料片「Endless Ragnarok」将于7月9日登陆PS4/5、Steam及Switch 2，售价29.99美元(约合人民币203元)，完整版59.99美元(约合人民币406元)。新召唤系统允许玩家召唤超过100种生物，包括搞笑召唤如螃蟹雨和猫群，多人模式下可连携召唤。资料片还新增混沌难度、天赋系统及Roguelike模式，支持跨平台联机。",
+      "summary": "《碧蓝幻想：Relink》大型资料片「Endless Ragnarok」将于7月9日登陆PS4/5、Steam及Switch 2，售价29.99美元(约合人民币203元)，完整版59.99美元(约合人民币407元)。新召唤系统允许玩家召唤超过100种生物，包括搞笑召唤如螃蟹雨和猫群，多人模式下可连携召唤。资料片还新增混沌难度、天赋系统及Roguelike模式，支持跨平台联机。",
       "url": "https://www.ign.com/articles/granblue-fantasy-relink-endless-ragnarok-preview-a-deeper-look-at-the-new-summon-system",
       "publish_time_cn": "2026-06-18 15:00",
       "pub_date": "2026-06-18 15:00",
@@ -1092,5 +1145,5 @@
       "translator_model": "deepseek-v4-pro"
     }
   ],
-  "total": 37
+  "total": 39
 }
