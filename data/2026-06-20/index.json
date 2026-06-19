@@ -2,6 +2,59 @@
   "date": "2026-06-20",
   "articles": [
     {
+      "id": 10,
+      "category": "影视资讯",
+      "emoji": "🎬",
+      "en_title": "Toy Story 5 Powers Up With Strongest Preview Opening of 2026 So Far",
+      "cn_title": "《玩具总动员5》预览票房创今年新高",
+      "summary": "据Variety报道，《玩具总动员5》在美国的预览票房达1750万美元(约合人民币1亿元)，超越迈克尔传记片成为2026年迄今最佳预览成绩。业界预计该片本周末至少再收1.5亿美元(约合人民币10亿元)，海外票房预期1.35亿美元(约合人民币9亿元)。IGN为本片打出7/10的评分。",
+      "url": "https://www.ign.com/articles/toy-story-5-powers-up-with-strongest-preview-opening-of-2026-so-far",
+      "publish_time_cn": "2026-06-20 00:20",
+      "pub_date": "2026-06-20 00:20",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/15/toy-story-5-review-thumb-1781560785302.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/15/toy-story-5-review-thumb-1781560785302.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/15/toy-story-5-review-thumb-1781560785302.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/15/toy-story-5-review-thumb-1781560785302.jpg?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/15/toy-story-5-review-thumb-1781560785302.jpg?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/15/toy-story-5-review-thumb-1781560785302.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-20T02:10:59+08:00",
+      "pending_dict": [
+        {
+          "en": "Michael",
+          "cn": "迈克尔",
+          "cat": "movies_tv",
+          "source": "ai_guess",
+          "reason": "原文指未命名的迈克尔·杰克逊传记片，官方正式片名未确认，建议人工确认。"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "category": "游戏新闻",
+      "emoji": "🎮",
+      "en_title": "Here's What's Leaving the PS Plus Library in July 2026",
+      "cn_title": "PS Plus 7月游戏库移除名单公布",
+      "summary": "PS Plus Extra/Premium 将于7月21日移除12款游戏，包括《雨中冒险2》《海岛大亨6》《Roki》等。订阅者仍可在剩余时间内游玩这些作品。与此同时，Sony 也新增了《最终幻想16》《索尼克×夏特 世代》《天国：拯救》等游戏。",
+      "url": "https://www.ign.com/articles/heres-whats-leaving-the-ps-plus-library-in-july-2026",
+      "publish_time_cn": "2026-06-19 23:46",
+      "pub_date": "2026-06-19 23:46",
+      "cover_image": "https://assets-prd.ignimgs.com/2023/10/11/pspremiumthumb-1697040053191.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2023/10/11/pspremiumthumb-1697040053191.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2023/10/11/pspremiumthumb-1697040053191.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2023/10/11/pspremiumthumb-1697040053191.jpg?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2023/10/11/pspremiumthumb-1697040053191.jpg?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2023/10/11/pspremiumthumb-1697040053191.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-20T02:11:00+08:00"
+    },
+    {
       "id": 7,
       "category": "游戏新闻",
       "emoji": "🔥",
@@ -231,5 +284,5 @@
       "source_fetched_at": "2026-06-19T20:18:36+08:00"
     }
   ],
-  "total": 9
+  "total": 11
 }
