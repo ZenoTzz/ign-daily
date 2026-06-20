@@ -189,6 +189,27 @@
       "total_tokens": 11877,
       "prompt_cache_hit_tokens": 7680,
       "prompt_cache_miss_tokens": 2339
+    },
+    {
+      "time_cn": "2026-06-20 23:25:30",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 4,
+      "article_title": "Sea of Remnants Is Like a Puppet-Punk Persona at Sea | IGN Preview",
+      "article_url": "https://www.ign.com/articles/sea-of-remnants-is-like-a-puppet-punk-persona-at-sea-ign-preview",
+      "article_date": "2026-06-21",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00064086,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9706,
+      "completion_tokens": 1199,
+      "total_tokens": 10905,
+      "prompt_cache_hit_tokens": 7680,
+      "prompt_cache_miss_tokens": 2026
     }
   ]
 }

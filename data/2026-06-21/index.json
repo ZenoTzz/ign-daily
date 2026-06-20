@@ -2,6 +2,37 @@
   "date": "2026-06-21",
   "articles": [
     {
+      "id": 4,
+      "category": "游戏新闻",
+      "emoji": "🚢",
+      "en_title": "Sea of Remnants Is Like a Puppet-Punk Persona at Sea | IGN Preview",
+      "cn_title": "《女神异闻录》《Sea of Remnants》预览：木偶朋克风海洋RPG",
+      "summary": "在2026夏日游戏节上，《Sea of Remnants》展示了全新试玩。这款开放世界奇幻RPG设定在海盗与海洋探险世界，融合回合制战斗与实时海战，木偶朋克画风兼具《女神异闻录》和《塞尔达传说：风之杖》的影子。玩家将组建船员、探索群岛、揭开失忆之谜。游戏将于今年晚些时候登陆PS5、PC和移动端。",
+      "url": "https://www.ign.com/articles/sea-of-remnants-is-like-a-puppet-punk-persona-at-sea-ign-preview",
+      "publish_time_cn": "2026-06-20 22:03",
+      "pub_date": "2026-06-20 22:03",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/18/ss-8e20e7f084585d955f24c62c10531f7a5e0b1b6e-1920x1080-1781825840860.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/18/ss-8e20e7f084585d955f24c62c10531f7a5e0b1b6e-1920x1080-1781825840860.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/18/ss-8e20e7f084585d955f24c62c10531f7a5e0b1b6e-1920x1080-1781825840860.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/18/ss-8e20e7f084585d955f24c62c10531f7a5e0b1b6e-1920x1080-1781825840860.jpg?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/18/ss-8e20e7f084585d955f24c62c10531f7a5e0b1b6e-1920x1080-1781825840860.jpg?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/18/ss-8e20e7f084585d955f24c62c10531f7a5e0b1b6e-1920x1080-1781825840860.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-20T23:25:14+08:00",
+      "pending_dict": [
+        {
+          "en": "Sea of Remnants",
+          "cn": "遗骸之海",
+          "cat": "games",
+          "source": "ai_guess",
+          "reason": "尚无稳定官方中文译名，暂用译名供确认"
+        }
+      ]
+    },
+    {
       "id": 1,
       "category": "科技新闻",
       "emoji": "🎮",
@@ -109,5 +140,5 @@
       ]
     }
   ],
-  "total": 3
+  "total": 4
 }
