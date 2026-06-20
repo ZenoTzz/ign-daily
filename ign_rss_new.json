@@ -4,23 +4,63 @@
     "2026-06-21",
     "2026-06-20"
   ],
-  "changed_dates": [],
-  "new_target_dates": [],
-  "new_count": 0,
-  "filtered_count": 0,
-  "cleanup_count": 1,
-  "changed_count": 1,
-  "articles": [],
-  "filtered_articles": [],
+  "changed_dates": [
+    "2026-06-21"
+  ],
+  "new_target_dates": [
+    "2026-06-21"
+  ],
+  "new_count": 1,
+  "filtered_count": 1,
+  "cleanup_count": 0,
+  "changed_count": 2,
+  "articles": [
+    {
+      "title": "Out of Words Is an Artistic, Handmade Breath of Fresh Air | IGN Preview",
+      "url": "https://www.ign.com/articles/out-of-words-is-an-artistic-handmade-breath-of-fresh-air-ign-preview",
+      "pubDate_cst": "2026-06-20 22:30"
+    }
+  ],
+  "filtered_articles": [
+    {
+      "title": "Ubisoft Co-Founder Claude Guillemot Dead at 69 After Plane Crash in France",
+      "url": "https://www.ign.com/articles/ubisoft-co-founder-claude-guillemot-dead-at-69-after-plane-crash-in-france",
+      "pubDate_cst": "2026-06-20 23:56",
+      "description": "Claude Guillemot, one of five co-founders behind Assassin's Creed publisher Ubisoft, has died in a plane crash.",
+      "categories": "",
+      "reason": "url:under-",
+      "rss_url": "https://feeds.feedburner.com/ign/all",
+      "filtered_at_cn": "2026-06-21 01:08:41",
+      "status": "filtered"
+    }
+  ],
   "runs": [
     {
       "target_date": "2026-06-21",
-      "new_count": 0,
-      "filtered_count": 0,
-      "changed_count": 0,
-      "next_id": 5,
-      "articles": [],
-      "filtered_articles": []
+      "new_count": 1,
+      "filtered_count": 1,
+      "changed_count": 2,
+      "next_id": 6,
+      "articles": [
+        {
+          "title": "Out of Words Is an Artistic, Handmade Breath of Fresh Air | IGN Preview",
+          "url": "https://www.ign.com/articles/out-of-words-is-an-artistic-handmade-breath-of-fresh-air-ign-preview",
+          "pubDate_cst": "2026-06-20 22:30"
+        }
+      ],
+      "filtered_articles": [
+        {
+          "title": "Ubisoft Co-Founder Claude Guillemot Dead at 69 After Plane Crash in France",
+          "url": "https://www.ign.com/articles/ubisoft-co-founder-claude-guillemot-dead-at-69-after-plane-crash-in-france",
+          "pubDate_cst": "2026-06-20 23:56",
+          "description": "Claude Guillemot, one of five co-founders behind Assassin's Creed publisher Ubisoft, has died in a plane crash.",
+          "categories": "",
+          "reason": "url:under-",
+          "rss_url": "https://feeds.feedburner.com/ign/all",
+          "filtered_at_cn": "2026-06-21 01:08:41",
+          "status": "filtered"
+        }
+      ]
     },
     {
       "target_date": "2026-06-20",

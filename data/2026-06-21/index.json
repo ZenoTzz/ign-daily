@@ -2,6 +2,37 @@
   "date": "2026-06-21",
   "articles": [
     {
+      "id": 5,
+      "category": "游戏新闻",
+      "emoji": "🎮",
+      "en_title": "Out of Words Is an Artistic, Handmade Breath of Fresh Air | IGN Preview",
+      "cn_title": "《Out of Words》试玩：手工定格动画合作佳作",
+      "summary": "在AI泛滥的时代，纯手工制作的游戏《Out of Words》让人眼前一亮。这是一款唯美的定格动画双人合作2D平台游戏，所有角色和场景均由真实材料手工打造。游戏灵感源自丹麦诗歌，讲述两名青少年因不敢表白而失去语言能力，在神秘世界中冒险的故事。试玩版展示了丰富的环境和巧妙的合作机制，流程约10小时，支持跨平台联机。预计2027年初登陆Xbox Series、Switch 2、PS5和Epic Games Store。",
+      "url": "https://www.ign.com/articles/out-of-words-is-an-artistic-handmade-breath-of-fresh-air-ign-preview",
+      "publish_time_cn": "2026-06-20 22:30",
+      "pub_date": "2026-06-20 22:30",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/20/outofwords-cutscenes-00-1781962864139.png?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/20/outofwords-cutscenes-00-1781962864139.png?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/20/outofwords-cutscenes-00-1781962864139.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/20/outofwords-cutscenes-00-1781962864139.png?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/20/outofwords-cutscenes-00-1781962864139.png?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/20/outofwords-cutscenes-00-1781962864139.png"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-21T01:08:42+08:00",
+      "pending_dict": [
+        {
+          "en": "Out of Words",
+          "cn": "无言世界",
+          "cat": "games",
+          "source": "ai_guess",
+          "reason": "无官方中文名，建议人工确认。"
+        }
+      ]
+    },
+    {
       "id": 4,
       "category": "游戏新闻",
       "emoji": "🚢",
@@ -140,5 +171,5 @@
       ]
     }
   ],
-  "total": 4
+  "total": 5
 }
