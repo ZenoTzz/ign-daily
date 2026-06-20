@@ -1,8 +1,8 @@
 {
-  "target_date": "2026-06-20",
+  "target_date": "2026-06-21",
   "target_dates": [
-    "2026-06-20",
-    "2026-06-19"
+    "2026-06-21",
+    "2026-06-20"
   ],
   "changed_dates": [
     "2026-06-20"
@@ -11,64 +11,40 @@
     "2026-06-20"
   ],
   "new_count": 1,
-  "filtered_count": 1,
+  "filtered_count": 0,
   "cleanup_count": 0,
-  "changed_count": 2,
+  "changed_count": 1,
   "articles": [
     {
-      "title": "CD Projekt Red Co-CEO Hopes Witcher 4 Wins Back Players After 'Heartbreaking' Cyberpunk 2077 Launch",
-      "url": "https://www.ign.com/articles/cd-projekt-red-co-ceo-hopes-witcher-4-wins-back-players-after-heartbreaking-cyberpunk-2077-launch",
-      "pubDate_cst": "2026-06-20 05:44"
+      "title": "George Lucas Cast in Minions & Monsters After Revealing Massive Fandom",
+      "url": "https://www.ign.com/articles/george-lucas-cast-minions-monsters-movie",
+      "pubDate_cst": "2026-06-20 06:30"
     }
   ],
-  "filtered_articles": [
-    {
-      "title": "Amazon Walks Away from Nearly Complete Sam Altman Movie Just Months After OpenAI Deal",
-      "url": "https://www.ign.com/articles/amazon-walks-away-from-nearly-complete-sam-altman-movie-just-months-after-openai-deal",
-      "pubDate_cst": "2026-06-20 05:16",
-      "description": "Amazon is walking away from Artificial, a nearly complete movie about Sam Altman, just months after striking a deal with ChatGPT company OpenAI.",
-      "categories": "",
-      "reason": "url:deal",
-      "rss_url": "https://feeds.feedburner.com/ign/all",
-      "filtered_at_cn": "2026-06-20 07:16:41",
-      "status": "filtered"
-    }
-  ],
+  "filtered_articles": [],
   "runs": [
     {
-      "target_date": "2026-06-20",
-      "new_count": 1,
-      "filtered_count": 1,
-      "changed_count": 2,
-      "next_id": 15,
-      "articles": [
-        {
-          "title": "CD Projekt Red Co-CEO Hopes Witcher 4 Wins Back Players After 'Heartbreaking' Cyberpunk 2077 Launch",
-          "url": "https://www.ign.com/articles/cd-projekt-red-co-ceo-hopes-witcher-4-wins-back-players-after-heartbreaking-cyberpunk-2077-launch",
-          "pubDate_cst": "2026-06-20 05:44"
-        }
-      ],
-      "filtered_articles": [
-        {
-          "title": "Amazon Walks Away from Nearly Complete Sam Altman Movie Just Months After OpenAI Deal",
-          "url": "https://www.ign.com/articles/amazon-walks-away-from-nearly-complete-sam-altman-movie-just-months-after-openai-deal",
-          "pubDate_cst": "2026-06-20 05:16",
-          "description": "Amazon is walking away from Artificial, a nearly complete movie about Sam Altman, just months after striking a deal with ChatGPT company OpenAI.",
-          "categories": "",
-          "reason": "url:deal",
-          "rss_url": "https://feeds.feedburner.com/ign/all",
-          "filtered_at_cn": "2026-06-20 07:16:41",
-          "status": "filtered"
-        }
-      ]
-    },
-    {
-      "target_date": "2026-06-19",
+      "target_date": "2026-06-21",
       "new_count": 0,
       "filtered_count": 0,
       "changed_count": 0,
-      "next_id": 40,
+      "next_id": 1,
       "articles": [],
+      "filtered_articles": []
+    },
+    {
+      "target_date": "2026-06-20",
+      "new_count": 1,
+      "filtered_count": 0,
+      "changed_count": 1,
+      "next_id": 16,
+      "articles": [
+        {
+          "title": "George Lucas Cast in Minions & Monsters After Revealing Massive Fandom",
+          "url": "https://www.ign.com/articles/george-lucas-cast-minions-monsters-movie",
+          "pubDate_cst": "2026-06-20 06:30"
+        }
+      ],
       "filtered_articles": []
     }
   ]
