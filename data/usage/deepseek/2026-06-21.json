@@ -21,6 +21,27 @@
       "total_tokens": 10181,
       "prompt_cache_hit_tokens": 7680,
       "prompt_cache_miss_tokens": 1903
+    },
+    {
+      "time_cn": "2026-06-21 04:42:28",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 6,
+      "article_title": "Halo: Campaign Evolved Split-Screen Co-Op on PS5 Requires PlayStation Plus for Both Players",
+      "article_url": "https://www.ign.com/articles/halo-campaign-evolved-split-screen-co-op-on-ps5-requires-playstation-plus-for-both-players",
+      "article_date": "2026-06-21",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00034784,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8785,
+      "completion_tokens": 613,
+      "total_tokens": 9398,
+      "prompt_cache_hit_tokens": 7680,
+      "prompt_cache_miss_tokens": 1105
     }
   ]
 }
