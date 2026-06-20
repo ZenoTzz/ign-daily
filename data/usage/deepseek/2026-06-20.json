@@ -126,6 +126,69 @@
       "total_tokens": 8931,
       "prompt_cache_hit_tokens": 7680,
       "prompt_cache_miss_tokens": 866
+    },
+    {
+      "time_cn": "2026-06-20 22:33:42",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 1,
+      "article_title": "The 5 Coolest Handheld Gaming PC Accessories You Can Get This Month",
+      "article_url": "https://www.ign.com/articles/the-5-coolest-handheld-gaming-pc-accessories-you-can-get-this-month",
+      "article_date": "2026-06-21",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00042316,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8791,
+      "completion_tokens": 879,
+      "total_tokens": 9670,
+      "prompt_cache_hit_tokens": 7680,
+      "prompt_cache_miss_tokens": 1111
+    },
+    {
+      "time_cn": "2026-06-20 22:33:57",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 2,
+      "article_title": "Lost Art: How CG Killed Hand-Drawn Animation at Disney",
+      "article_url": "https://www.ign.com/articles/lost-art-how-cg-killed-hand-drawn-animation-at-disney",
+      "article_date": "2026-06-21",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00065466,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 10030,
+      "completion_tokens": 1149,
+      "total_tokens": 11179,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 2222
+    },
+    {
+      "time_cn": "2026-06-20 22:34:20",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 3,
+      "article_title": "What Xbox Games Are Being Cancelled?",
+      "article_url": "https://www.ign.com/articles/what-xbox-games-are-being-cancelled",
+      "article_date": "2026-06-21",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.0008692,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 10019,
+      "completion_tokens": 1858,
+      "total_tokens": 11877,
+      "prompt_cache_hit_tokens": 7680,
+      "prompt_cache_miss_tokens": 2339
     }
   ]
 }

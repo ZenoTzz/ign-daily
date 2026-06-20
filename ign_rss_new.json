@@ -5,46 +5,66 @@
     "2026-06-20"
   ],
   "changed_dates": [
-    "2026-06-20"
+    "2026-06-21"
   ],
   "new_target_dates": [
-    "2026-06-20"
+    "2026-06-21"
   ],
-  "new_count": 1,
+  "new_count": 3,
   "filtered_count": 0,
   "cleanup_count": 0,
-  "changed_count": 1,
+  "changed_count": 3,
   "articles": [
     {
-      "title": "George Lucas Cast in Minions & Monsters After Revealing Massive Fandom",
-      "url": "https://www.ign.com/articles/george-lucas-cast-minions-monsters-movie",
-      "pubDate_cst": "2026-06-20 06:30"
+      "title": "The 5 Coolest Handheld Gaming PC Accessories You Can Get This Month",
+      "url": "https://www.ign.com/articles/the-5-coolest-handheld-gaming-pc-accessories-you-can-get-this-month",
+      "pubDate_cst": "2026-06-20 21:00"
+    },
+    {
+      "title": "Lost Art: How CG Killed Hand-Drawn Animation at Disney",
+      "url": "https://www.ign.com/articles/lost-art-how-cg-killed-hand-drawn-animation-at-disney",
+      "pubDate_cst": "2026-06-20 20:00"
+    },
+    {
+      "title": "What Xbox Games Are Being Cancelled?",
+      "url": "https://www.ign.com/articles/what-xbox-games-are-being-cancelled",
+      "pubDate_cst": "2026-06-20 20:00"
     }
   ],
   "filtered_articles": [],
   "runs": [
     {
       "target_date": "2026-06-21",
-      "new_count": 0,
+      "new_count": 3,
       "filtered_count": 0,
-      "changed_count": 0,
-      "next_id": 1,
-      "articles": [],
+      "changed_count": 3,
+      "next_id": 4,
+      "articles": [
+        {
+          "title": "The 5 Coolest Handheld Gaming PC Accessories You Can Get This Month",
+          "url": "https://www.ign.com/articles/the-5-coolest-handheld-gaming-pc-accessories-you-can-get-this-month",
+          "pubDate_cst": "2026-06-20 21:00"
+        },
+        {
+          "title": "Lost Art: How CG Killed Hand-Drawn Animation at Disney",
+          "url": "https://www.ign.com/articles/lost-art-how-cg-killed-hand-drawn-animation-at-disney",
+          "pubDate_cst": "2026-06-20 20:00"
+        },
+        {
+          "title": "What Xbox Games Are Being Cancelled?",
+          "url": "https://www.ign.com/articles/what-xbox-games-are-being-cancelled",
+          "pubDate_cst": "2026-06-20 20:00"
+        }
+      ],
       "filtered_articles": []
     },
     {
       "target_date": "2026-06-20",
-      "new_count": 1,
+      "new_count": 0,
       "filtered_count": 0,
-      "changed_count": 1,
+      "changed_count": 0,
       "next_id": 16,
-      "articles": [
-        {
-          "title": "George Lucas Cast in Minions & Monsters After Revealing Massive Fandom",
-          "url": "https://www.ign.com/articles/george-lucas-cast-minions-monsters-movie",
-          "pubDate_cst": "2026-06-20 06:30"
-        }
-      ],
+      "articles": [],
       "filtered_articles": []
     }
   ]
