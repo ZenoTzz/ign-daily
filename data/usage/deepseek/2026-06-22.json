@@ -42,6 +42,27 @@
       "total_tokens": 10538,
       "prompt_cache_hit_tokens": 7680,
       "prompt_cache_miss_tokens": 2309
+    },
+    {
+      "time_cn": "2026-06-22 04:05:28",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 4,
+      "article_title": "Super Yooka-Laylee Kart Preview: Ex-Rare Devs Take Aim at Reviving the Spirit of Diddy Kong Racing",
+      "article_url": "https://www.ign.com/articles/super-yooka-laylee-kart-preview-ex-rare-devs-take-aim-at-reviving-the-spirit-of-diddy-kong-racing",
+      "article_date": "2026-06-22",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00103566,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 10000,
+      "completion_tokens": 2462,
+      "total_tokens": 12462,
+      "prompt_cache_hit_tokens": 7680,
+      "prompt_cache_miss_tokens": 2320
     }
   ]
 }

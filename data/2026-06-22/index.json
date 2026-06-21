@@ -2,6 +2,49 @@
   "date": "2026-06-22",
   "articles": [
     {
+      "id": 4,
+      "category": "游戏新闻",
+      "emoji": "🏎️",
+      "en_title": "Super Yooka-Laylee Kart Preview: Ex-Rare Devs Take Aim at Reviving the Spirit of Diddy Kong Racing",
+      "cn_title": "《Yooka-Laylee》卡丁车新作前瞻：前Rare团队续写《迪迪刚赛车》",
+      "summary": "由前Rare工作室成员（曾参与《迪迪刚赛车》《班卓熊》等经典）开发的《Super Yooka-Laylee Kart》在夏日游戏节亮相。IGN试玩了早期版本，游戏赛道色彩鲜艳，支持8人对战，最大特色是可自定义比赛规则，如隐形赛或角色统一赛。目前操控略微滑腻，但开发者承诺将在后续完善。制作人表示致力打造最具重玩性的卡丁车作品。",
+      "url": "https://www.ign.com/articles/super-yooka-laylee-kart-preview-ex-rare-devs-take-aim-at-reviving-the-spirit-of-diddy-kong-racing",
+      "publish_time_cn": "2026-06-22 03:00",
+      "pub_date": "2026-06-22 03:00",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/19/sylk-screenshot-002-1781831168852.png?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/19/sylk-screenshot-002-1781831168852.png?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/19/sylk-screenshot-002-1781831168852.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/19/sylk-screenshot-002-1781831168852.png?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/19/sylk-screenshot-002-1781831168852.png?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/19/sylk-screenshot-002-1781831168852.png",
+        "https://assets-prd.ignimgs.com/2026/06/19/sylk-screenshot-005-1781831332132.png",
+        "https://assets-prd.ignimgs.com/2026/06/19/sylk-screenshot-004-1-1781831351019.png",
+        "https://assets-prd.ignimgs.com/2026/06/19/sylk-screenshot-003-1781831373607.png",
+        "https://assets-prd.ignimgs.com/2026/06/19/sylk-screenshot-002-1781831397707.png",
+        "https://assets-prd.ignimgs.com/2026/06/19/sylk-screenshot-001-1781831421202.png"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-22T04:04:54+08:00",
+      "pending_dict": [
+        {
+          "en": "Yooka-Laylee",
+          "cn": "尤卡莱莉",
+          "cat": "games",
+          "source": "ai_guess",
+          "reason": "常见社区译名，待确认"
+        },
+        {
+          "en": "Diddy Kong Racing",
+          "cn": "迪迪刚赛车",
+          "cat": "games",
+          "source": "ai_guess",
+          "reason": "常见社区译名，待确认"
+        }
+      ]
+    },
+    {
       "id": 2,
       "category": "影视资讯",
       "emoji": "🎬",
@@ -97,5 +140,5 @@
       "source_fetched_at": "2026-06-21T15:11:13+08:00"
     }
   ],
-  "total": 3
+  "total": 4
 }
