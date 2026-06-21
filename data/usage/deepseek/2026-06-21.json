@@ -105,6 +105,27 @@
       "total_tokens": 9210,
       "prompt_cache_hit_tokens": 7680,
       "prompt_cache_miss_tokens": 844
+    },
+    {
+      "time_cn": "2026-06-21 15:11:31",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 1,
+      "article_title": "Stranger Than Heaven Second-Take Preview: Stranger Than Heaven’s Combat Seems Harder Than Hell, and that’s a Good Thing",
+      "article_url": "https://www.ign.com/articles/stranger-than-heaven-second-take-preview-stranger-than-heavens-combat-seems-harder-than-hell-and-thats-a-good-thing",
+      "article_date": "2026-06-22",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00065472,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9833,
+      "completion_tokens": 1185,
+      "total_tokens": 11018,
+      "prompt_cache_hit_tokens": 7680,
+      "prompt_cache_miss_tokens": 2153
     }
   ]
 }
