@@ -2,6 +2,79 @@
   "date": "2026-06-22",
   "articles": [
     {
+      "id": 2,
+      "category": "影视资讯",
+      "emoji": "🎬",
+      "en_title": "Avengers: Doomsday 'Leak' Pulled Offline Just as it Spreads Across Social Media",
+      "cn_title": "《复仇者联盟：毁灭之日》泄漏片段被下架，但已传遍社交网络",
+      "summary": "一段疑似《复仇者联盟：毁灭之日》的X战警与复仇者联盟对抗毁灭博士的模糊片段在短暂流传后被版权方要求下架。IGN曾观看该视频，但内容为未完成的特效镜头，真实性存疑。影片仍定于2026年12月18日上映，官方至今未发布正式预告。",
+      "url": "https://www.ign.com/articles/avengers-doomsday-leak-pulled-offline-just-as-it-spreads-across-social-media",
+      "publish_time_cn": "2026-06-22 00:16",
+      "pub_date": "2026-06-22 00:16",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/04/17/doom-thumb-1776455418882.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/04/17/doom-thumb-1776455418882.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/04/17/doom-thumb-1776455418882.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/04/17/doom-thumb-1776455418882.jpg?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/04/17/doom-thumb-1776455418882.jpg?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/04/17/doom-thumb-1776455418882.jpg",
+        "https://assets-prd.ignimgs.com/2026/06/21/screenshot-2026-06-21-110248-1782057920425.png"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-22T01:11:40+08:00",
+      "pending_dict": [
+        {
+          "en": "Avengers: Doomsday",
+          "cn": "复仇者联盟：毁灭之日",
+          "cat": "movies_tv",
+          "source": "ai_guess",
+          "reason": "无官方中文译名，根据漫威命名惯例及词库中Doom=毁灭战士推测，需确认"
+        },
+        {
+          "en": "Doctor Doom",
+          "cn": "毁灭博士",
+          "cat": "people",
+          "source": "ai_guess",
+          "reason": "词库仅有Doom（毁灭战士），但Doctor Doom为漫威角色，通行译名为毁灭博士，需确认"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "category": "游戏新闻",
+      "emoji": "🤖",
+      "en_title": "Gundam: Rogue Orbit Interview: A Gundam Game with a Focus on How it Feels to be the Pilot",
+      "cn_title": "《高达：侠盗轨道》制作人：专注驾驶体验",
+      "summary": "万代南梦宫在夏日游戏节公布了《高达：侠盗轨道》，这是一款以驾驶员第一视角为核心的高达动作游戏。制作人富山勇也（Yuya Tomiyama）与佐竹晋也（Shinya Satake）在接受IGN专访时表示，本作首次通过游戏引入全新高达世界观，强调真实系画面与操控每台机动战士的沉浸感，并将包含深刻的人物戏剧与人类对抗未知敌人的故事。",
+      "url": "https://www.ign.com/articles/gundam-rogue-orbit-interview-a-gundam-game-with-a-focus-on-how-it-feels-to-be-the-pilot",
+      "publish_time_cn": "2026-06-22 00:00",
+      "pub_date": "2026-06-22 00:00",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/18/gundam-1781826814969.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/18/gundam-1781826814969.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/18/gundam-1781826814969.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/18/gundam-1781826814969.jpg?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/18/gundam-1781826814969.jpg?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/18/gundam-1781826814969.jpg",
+        "https://assets-prd.ignimgs.com/2026/06/19/ss-f47f33b8a094476c78e769b3d28b597f71803633-1920x1080-1781827307217.jpg",
+        "https://assets-prd.ignimgs.com/2026/06/19/ss-dca8e1c600cc4f1105ff76e993a24c86983d568a-1920x1080-1-1781827328095.jpg",
+        "https://assets-prd.ignimgs.com/2026/06/19/ss-bef2cf4ca5a58c634e65d1791c3d18eebb238e8d-1920x1080-1-1781827341025.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-22T01:11:41+08:00",
+      "pending_dict": [
+        {
+          "en": "Gundam: Rogue Orbit",
+          "cn": "《高达：侠盗轨道》",
+          "cat": "games",
+          "source": "ai_guess",
+          "reason": "尚无官方中文译名，此为推测译名"
+        }
+      ]
+    },
+    {
       "id": 1,
       "category": "游戏新闻",
       "emoji": "💥",
@@ -24,5 +97,5 @@
       "source_fetched_at": "2026-06-21T15:11:13+08:00"
     }
   ],
-  "total": 1
+  "total": 3
 }

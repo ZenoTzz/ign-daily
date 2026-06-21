@@ -1,0 +1,47 @@
+{
+  "date": "2026-06-22",
+  "records": [
+    {
+      "time_cn": "2026-06-22 01:11:56",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 2,
+      "article_title": "Avengers: Doomsday 'Leak' Pulled Offline Just as it Spreads Across Social Media",
+      "article_url": "https://www.ign.com/articles/avengers-doomsday-leak-pulled-offline-just-as-it-spreads-across-social-media",
+      "article_date": "2026-06-22",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00044934,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8552,
+      "completion_tokens": 1092,
+      "total_tokens": 9644,
+      "prompt_cache_hit_tokens": 7680,
+      "prompt_cache_miss_tokens": 872
+    },
+    {
+      "time_cn": "2026-06-22 01:12:04",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 3,
+      "article_title": "Gundam: Rogue Orbit Interview: A Gundam Game with a Focus on How it Feels to be the Pilot",
+      "article_url": "https://www.ign.com/articles/gundam-rogue-orbit-interview-a-gundam-game-with-a-focus-on-how-it-feels-to-be-the-pilot",
+      "article_date": "2026-06-22",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00049848,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9989,
+      "completion_tokens": 549,
+      "total_tokens": 10538,
+      "prompt_cache_hit_tokens": 7680,
+      "prompt_cache_miss_tokens": 2309
+    }
+  ]
+}
