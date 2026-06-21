@@ -63,6 +63,48 @@
       "total_tokens": 12462,
       "prompt_cache_hit_tokens": 7680,
       "prompt_cache_miss_tokens": 2320
+    },
+    {
+      "time_cn": "2026-06-22 06:50:13",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 5,
+      "article_title": "Sesame Street Movie in the Works at Netflix Following Bidding War",
+      "article_url": "https://www.ign.com/articles/sesame-street-movie-in-the-works-at-netflix-following-bidding-war",
+      "article_date": "2026-06-22",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.0003232,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8301,
+      "completion_tokens": 767,
+      "total_tokens": 9068,
+      "prompt_cache_hit_tokens": 7680,
+      "prompt_cache_miss_tokens": 621
+    },
+    {
+      "time_cn": "2026-06-22 06:50:24",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 6,
+      "article_title": "Call of Duty: Black Ops 1 and 2 Listings Have Fans Fearing Pricey PlayStation Ports",
+      "article_url": "https://www.ign.com/articles/call-of-duty-black-ops-1-and-2-listings-have-fans-fearing-pricey-playstation-ports",
+      "article_date": "2026-06-22",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00034994,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8606,
+      "completion_tokens": 710,
+      "total_tokens": 9316,
+      "prompt_cache_hit_tokens": 7680,
+      "prompt_cache_miss_tokens": 926
     }
   ]
 }
