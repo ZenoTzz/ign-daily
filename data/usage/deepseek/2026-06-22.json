@@ -798,6 +798,321 @@
       "total_tokens": 9543,
       "prompt_cache_hit_tokens": 7808,
       "prompt_cache_miss_tokens": 1181
+    },
+    {
+      "time_cn": "2026-06-22 20:28:12",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 8,
+      "article_title": "Toy Story 5 Expodes at the Box Office, but Disclosure Day Is Struggling",
+      "article_url": "https://www.ign.com/articles/toy-story-5-expodes-at-the-box-office-but-disclosure-day-is-struggling",
+      "article_date": "2026-06-23",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00069148,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8635,
+      "completion_tokens": 1978,
+      "total_tokens": 10613,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 827
+    },
+    {
+      "time_cn": "2026-06-22 20:28:27",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 9,
+      "article_title": "Toy Story 5 Almost Featured a Drastically Different Ending, With Huge Emotional Stakes for Jessie",
+      "article_url": "https://www.ign.com/articles/toy-story-5-almost-featured-a-drastically-different-ending-with-huge-emotional-stakes-for-jessie",
+      "article_date": "2026-06-23",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00039566,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8694,
+      "completion_tokens": 892,
+      "total_tokens": 9586,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 886
+    },
+    {
+      "time_cn": "2026-06-22 20:28:35",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 10,
+      "article_title": "Evade Codes (June 2026)",
+      "article_url": "https://www.ign.com/articles/evade-codes",
+      "article_date": "2026-06-23",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00024628,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8451,
+      "completion_tokens": 480,
+      "total_tokens": 8931,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 643
+    },
+    {
+      "time_cn": "2026-06-22 20:28:44",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 11,
+      "article_title": "RIVALS Codes (June 2026)",
+      "article_url": "https://www.ign.com/articles/rivals-codes",
+      "article_date": "2026-06-23",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00026322,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8446,
+      "completion_tokens": 543,
+      "total_tokens": 8989,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 638
+    },
+    {
+      "time_cn": "2026-06-22 20:28:59",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 12,
+      "article_title": "Anime Final Quest Codes (June 2026)",
+      "article_url": "https://www.ign.com/articles/anime-final-quest-codes",
+      "article_date": "2026-06-23",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00042114,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8332,
+      "completion_tokens": 1164,
+      "total_tokens": 9496,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 524
+    },
+    {
+      "time_cn": "2026-06-22 20:29:07",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 13,
+      "article_title": "Blox Fruits Codes (June 2026)",
+      "article_url": "https://www.ign.com/articles/blox-fruits-codes",
+      "article_date": "2026-06-23",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00021674,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8272,
+      "completion_tokens": 464,
+      "total_tokens": 8736,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 464
+    },
+    {
+      "time_cn": "2026-06-22 20:29:14",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 14,
+      "article_title": "Basketball: Zero Codes (June 2026)",
+      "article_url": "https://www.ign.com/articles/basketball-zero-codes",
+      "article_date": "2026-06-23",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00024698,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8410,
+      "completion_tokens": 503,
+      "total_tokens": 8913,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 602
+    },
+    {
+      "time_cn": "2026-06-22 20:29:43",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 15,
+      "article_title": "Dandy's World Codes (June 2026)",
+      "article_url": "https://www.ign.com/articles/dandys-world-codes",
+      "article_date": "2026-06-23",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.0006898,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8493,
+      "completion_tokens": 2043,
+      "total_tokens": 10536,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 685
+    },
+    {
+      "time_cn": "2026-06-22 20:30:01",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 16,
+      "article_title": "Anime Card Clash Codes (June 2026)",
+      "article_url": "https://www.ign.com/articles/anime-card-clash-codes",
+      "article_date": "2026-06-23",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00044284,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8379,
+      "completion_tokens": 1218,
+      "total_tokens": 9597,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 571
+    },
+    {
+      "time_cn": "2026-06-22 20:30:08",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 8,
+      "article_title": "Blue Lock: Rivals Codes (June 2026)",
+      "article_url": "https://www.ign.com/articles/blue-lock-rivals-codes",
+      "article_date": "2026-06-22",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00021058,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8378,
+      "completion_tokens": 389,
+      "total_tokens": 8767,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 570
+    },
+    {
+      "time_cn": "2026-06-22 20:30:18",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 9,
+      "article_title": "Attack on Titan Revolution Codes (June 2026)",
+      "article_url": "https://www.ign.com/articles/attack-on-titan-revolution-codes",
+      "article_date": "2026-06-22",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00028352,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8545,
+      "completion_tokens": 566,
+      "total_tokens": 9111,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 737
+    },
+    {
+      "time_cn": "2026-06-22 20:30:29",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 10,
+      "article_title": "Basketball Legends Codes (June 2026)",
+      "article_url": "https://www.ign.com/articles/basketball-legends-codes",
+      "article_date": "2026-06-22",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00033084,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8457,
+      "completion_tokens": 779,
+      "total_tokens": 9236,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 649
+    },
+    {
+      "time_cn": "2026-06-22 20:30:39",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 11,
+      "article_title": "Driving Empire Codes (June 2026)",
+      "article_url": "https://www.ign.com/articles/driving-empire-codes",
+      "article_date": "2026-06-22",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00030494,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8446,
+      "completion_tokens": 692,
+      "total_tokens": 9138,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 638
+    },
+    {
+      "time_cn": "2026-06-22 20:30:45",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 12,
+      "article_title": "Jailbreak Codes (June 2026)",
+      "article_url": "https://www.ign.com/articles/jailbreak-codes",
+      "article_date": "2026-06-22",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.0002068,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8391,
+      "completion_tokens": 369,
+      "total_tokens": 8760,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 583
+    },
+    {
+      "time_cn": "2026-06-22 20:30:59",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 13,
+      "article_title": "Jujutsu Shenanigans Codes (June 2026)",
+      "article_url": "https://www.ign.com/articles/jujutsu-shenanigans-codes",
+      "article_date": "2026-06-22",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00037802,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8394,
+      "completion_tokens": 979,
+      "total_tokens": 9373,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 586
     }
   ]
 }
