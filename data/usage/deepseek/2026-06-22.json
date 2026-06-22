@@ -105,6 +105,27 @@
       "total_tokens": 9316,
       "prompt_cache_hit_tokens": 7680,
       "prompt_cache_miss_tokens": 926
+    },
+    {
+      "time_cn": "2026-06-22 08:11:38",
+      "task": "fulltext",
+      "model": "deepseek-v4-pro",
+      "article_id": 6,
+      "article_title": "《PlayStation》《使命召唤》《黑色行动》PS版标价40美元(约合人民币271元)引玩家不满",
+      "article_url": "https://www.ign.com/articles/call-of-duty-black-ops-1-and-2-listings-have-fans-fearing-pricey-playstation-ports",
+      "article_date": "2026-06-22",
+      "detail": "",
+      "estimated_cost_usd": 0.00692564,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 9491,
+      "completion_tokens": 3215,
+      "total_tokens": 12706,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 9491
     }
   ]
 }
