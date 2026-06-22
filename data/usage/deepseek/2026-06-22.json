@@ -672,6 +672,48 @@
       "total_tokens": 13135,
       "prompt_cache_hit_tokens": 7552,
       "prompt_cache_miss_tokens": 2351
+    },
+    {
+      "time_cn": "2026-06-22 13:33:16",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 3,
+      "article_title": "Rick and Morty Season 9, Episode 5 Review: \"Jer Bud\"",
+      "article_url": "https://www.ign.com/articles/rick-and-morty-season-9-episode-5-review-recap",
+      "article_date": "2026-06-23",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00137032,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8676,
+      "completion_tokens": 556,
+      "total_tokens": 9232,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 8676
+    },
+    {
+      "time_cn": "2026-06-22 13:33:23",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 4,
+      "article_title": "House of the Dragon Made Major Changes to the Battle of the Gullet Compared to the Book",
+      "article_url": "https://www.ign.com/articles/house-of-the-dragon-season-3-battle-of-gullet-book-differences",
+      "article_date": "2026-06-23",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00125411,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 10089,
+      "completion_tokens": 438,
+      "total_tokens": 10527,
+      "prompt_cache_hit_tokens": 2048,
+      "prompt_cache_miss_tokens": 8041
     }
   ]
 }
