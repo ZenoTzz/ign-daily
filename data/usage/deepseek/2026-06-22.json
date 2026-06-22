@@ -126,6 +126,216 @@
       "total_tokens": 12706,
       "prompt_cache_hit_tokens": 0,
       "prompt_cache_miss_tokens": 9491
+    },
+    {
+      "time_cn": "2026-06-22 08:14:11",
+      "task": "fulltext",
+      "model": "deepseek-v4-pro",
+      "article_id": 3,
+      "article_title": "多款Xbox游戏面临取消危机",
+      "article_url": "https://www.ign.com/articles/what-xbox-games-are-being-cancelled",
+      "article_date": "2026-06-21",
+      "detail": "",
+      "estimated_cost_usd": 0.01611719,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 13051,
+      "completion_tokens": 12000,
+      "total_tokens": 25051,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 13051
+    },
+    {
+      "time_cn": "2026-06-22 08:14:27",
+      "task": "fulltext_chunk",
+      "model": "deepseek-v4-pro",
+      "article_id": 3,
+      "article_title": "多款Xbox游戏面临取消危机",
+      "article_url": "https://www.ign.com/articles/what-xbox-games-are-being-cancelled",
+      "article_date": "2026-06-21",
+      "detail": "paragraphs 1-6",
+      "estimated_cost_usd": 0.00531701,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 9137,
+      "completion_tokens": 1543,
+      "total_tokens": 10680,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 9137
+    },
+    {
+      "time_cn": "2026-06-22 08:14:50",
+      "task": "fulltext_chunk",
+      "model": "deepseek-v4-pro",
+      "article_id": 3,
+      "article_title": "多款Xbox游戏面临取消危机",
+      "article_url": "https://www.ign.com/articles/what-xbox-games-are-being-cancelled",
+      "article_date": "2026-06-21",
+      "detail": "paragraphs 7-12",
+      "estimated_cost_usd": 0.00349215,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 9327,
+      "completion_tokens": 3095,
+      "total_tokens": 12422,
+      "prompt_cache_hit_tokens": 7552,
+      "prompt_cache_miss_tokens": 1775
+    },
+    {
+      "time_cn": "2026-06-22 08:15:19",
+      "task": "fulltext_chunk",
+      "model": "deepseek-v4-pro",
+      "article_id": 3,
+      "article_title": "多款Xbox游戏面临取消危机",
+      "article_url": "https://www.ign.com/articles/what-xbox-games-are-being-cancelled",
+      "article_date": "2026-06-21",
+      "detail": "paragraphs 13-18",
+      "estimated_cost_usd": 0.00325992,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 9279,
+      "completion_tokens": 2979,
+      "total_tokens": 12258,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 1471
+    },
+    {
+      "time_cn": "2026-06-22 08:15:45",
+      "task": "fulltext_chunk",
+      "model": "deepseek-v4-pro",
+      "article_id": 3,
+      "article_title": "多款Xbox游戏面临取消危机",
+      "article_url": "https://www.ign.com/articles/what-xbox-games-are-being-cancelled",
+      "article_date": "2026-06-21",
+      "detail": "paragraphs 19-24",
+      "estimated_cost_usd": 0.00308331,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 9219,
+      "completion_tokens": 2806,
+      "total_tokens": 12025,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 1411
+    },
+    {
+      "time_cn": "2026-06-22 08:16:02",
+      "task": "fulltext_chunk",
+      "model": "deepseek-v4-pro",
+      "article_id": 3,
+      "article_title": "多款Xbox游戏面临取消危机",
+      "article_url": "https://www.ign.com/articles/what-xbox-games-are-being-cancelled",
+      "article_date": "2026-06-21",
+      "detail": "paragraphs 25-27",
+      "estimated_cost_usd": 0.00195405,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 8805,
+      "completion_tokens": 1715,
+      "total_tokens": 10520,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 997
+    },
+    {
+      "time_cn": "2026-06-22 08:16:42",
+      "task": "fulltext",
+      "model": "deepseek-v4-pro",
+      "article_id": 6,
+      "article_title": "《PlayStation》PS5《光环：战役进化》分屏合作需双份PS Plus",
+      "article_url": "https://www.ign.com/articles/halo-campaign-evolved-split-screen-co-op-on-ps5-requires-playstation-plus-for-both-players",
+      "article_date": "2026-06-21",
+      "detail": "",
+      "estimated_cost_usd": 0.0048316,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 9635,
+      "completion_tokens": 4671,
+      "total_tokens": 14306,
+      "prompt_cache_hit_tokens": 7936,
+      "prompt_cache_miss_tokens": 1699
+    },
+    {
+      "time_cn": "2026-06-22 08:17:17",
+      "task": "fulltext",
+      "model": "deepseek-v4-pro",
+      "article_id": 9,
+      "article_title": "《Epic Games》Epic游戏商城路线图：启动快5倍、用户评测",
+      "article_url": "https://www.ign.com/articles/epic-games-store-roadmap-promises-5x-faster-boot-times-user-reviews-and-more",
+      "article_date": "2026-06-21",
+      "detail": "",
+      "estimated_cost_usd": 0.004491,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 9350,
+      "completion_tokens": 4422,
+      "total_tokens": 13772,
+      "prompt_cache_hit_tokens": 7936,
+      "prompt_cache_miss_tokens": 1414
+    },
+    {
+      "time_cn": "2026-06-22 08:17:32",
+      "task": "fulltext_chunk",
+      "model": "deepseek-v4-pro",
+      "article_id": 9,
+      "article_title": "《Epic Games》Epic游戏商城路线图：启动快5倍、用户评测",
+      "article_url": "https://www.ign.com/articles/epic-games-store-roadmap-promises-5x-faster-boot-times-user-reviews-and-more",
+      "article_date": "2026-06-21",
+      "detail": "paragraphs 1-6",
+      "estimated_cost_usd": 0.00177048,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 8539,
+      "completion_tokens": 1637,
+      "total_tokens": 10176,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 731
+    },
+    {
+      "time_cn": "2026-06-22 08:17:53",
+      "task": "fulltext_chunk",
+      "model": "deepseek-v4-pro",
+      "article_id": 9,
+      "article_title": "《Epic Games》Epic游戏商城路线图：启动快5倍、用户评测",
+      "article_url": "https://www.ign.com/articles/epic-games-store-roadmap-promises-5x-faster-boot-times-user-reviews-and-more",
+      "article_date": "2026-06-21",
+      "detail": "paragraphs 7-10",
+      "estimated_cost_usd": 0.00222027,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 8361,
+      "completion_tokens": 2243,
+      "total_tokens": 10604,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 553
     }
   ]
 }

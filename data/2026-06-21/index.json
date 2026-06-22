@@ -33,8 +33,8 @@
       "url": "https://www.ign.com/articles/epic-games-store-roadmap-promises-5x-faster-boot-times-user-reviews-and-more",
       "publish_time_cn": "2026-06-21 05:38",
       "pub_date": "2026-06-21 05:38",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/06/20/epic-games-store-1781990551635.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/20/epic-games-store-1781990551635.png",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/20/epic-games-store-1781990551635.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/20/epic-games-store-1781990551635.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -43,7 +43,11 @@
         "https://assets-prd.ignimgs.com/2026/06/20/epic-games-store-1781990551635.png"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-21T09:41:02+08:00"
+      "source_fetched_at": "2026-06-21T09:41:02+08:00",
+      "translation_path": "translations/09.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro"
     },
     {
       "id": 7,
@@ -78,8 +82,8 @@
       "url": "https://www.ign.com/articles/halo-campaign-evolved-split-screen-co-op-on-ps5-requires-playstation-plus-for-both-players",
       "publish_time_cn": "2026-06-21 02:07",
       "pub_date": "2026-06-21 02:07",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/06/10/halothumb-1781104289843.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/10/halothumb-1781104289843.png",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/10/halothumb-1781104289843.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/10/halothumb-1781104289843.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -88,7 +92,11 @@
         "https://assets-prd.ignimgs.com/2026/06/10/halothumb-1781104289843.png"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-21T04:42:17+08:00"
+      "source_fetched_at": "2026-06-21T04:42:17+08:00",
+      "translation_path": "translations/06.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro"
     },
     {
       "id": 5,
@@ -223,8 +231,8 @@
       "url": "https://www.ign.com/articles/what-xbox-games-are-being-cancelled",
       "publish_time_cn": "2026-06-20 20:00",
       "pub_date": "2026-06-20 20:00",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/06/19/xbox-risk-blog-1781861448913.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/19/xbox-risk-blog-1781861448913.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/19/xbox-risk-blog-1781861448913.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/19/xbox-risk-blog-1781861448913.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -257,7 +265,11 @@
           "source": "ai_guess",
           "reason": "暂无稳定官方中文译名，保留英文"
         }
-      ]
+      ],
+      "translation_path": "translations/03.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro"
     }
   ],
   "total": 9
