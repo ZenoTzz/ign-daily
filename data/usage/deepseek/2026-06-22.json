@@ -588,6 +588,48 @@
       "total_tokens": 14090,
       "prompt_cache_hit_tokens": 7936,
       "prompt_cache_miss_tokens": 1172
+    },
+    {
+      "time_cn": "2026-06-22 11:10:24",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 1,
+      "article_title": "House of the Dragon Season 3, Episode 1 Review",
+      "article_url": "https://www.ign.com/articles/house-of-the-dragon-season-3-episode-1-review",
+      "article_date": "2026-06-23",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00036892,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9331,
+      "completion_tokens": 478,
+      "total_tokens": 9809,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 1523
+    },
+    {
+      "time_cn": "2026-06-22 11:10:36",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 2,
+      "article_title": "The Vampire Lestat Showrunner Admits Changing Anne Rice’s Source Material in This Week’s Episode Will Probably Be a ‘Little Disappointing’ to Fans",
+      "article_url": "https://www.ign.com/articles/the-vampire-lestat-anne-rice-changes-disappointing-fans-episode-3-toronto",
+      "article_date": "2026-06-23",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00047762,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9474,
+      "completion_tokens": 732,
+      "total_tokens": 10206,
+      "prompt_cache_hit_tokens": 7680,
+      "prompt_cache_miss_tokens": 1794
     }
   ]
 }

@@ -1,83 +1,59 @@
 {
-  "target_date": "2026-06-22",
+  "target_date": "2026-06-23",
   "target_dates": [
-    "2026-06-22",
-    "2026-06-21"
+    "2026-06-23",
+    "2026-06-22"
   ],
   "changed_dates": [
-    "2026-06-22"
+    "2026-06-23"
   ],
   "new_target_dates": [
-    "2026-06-22"
+    "2026-06-23"
   ],
   "new_count": 2,
-  "filtered_count": 1,
+  "filtered_count": 0,
   "cleanup_count": 0,
-  "changed_count": 3,
+  "changed_count": 2,
   "articles": [
     {
-      "title": "Sesame Street Movie in the Works at Netflix Following Bidding War",
-      "url": "https://www.ign.com/articles/sesame-street-movie-in-the-works-at-netflix-following-bidding-war",
-      "pubDate_cst": "2026-06-22 05:49"
+      "title": "House of the Dragon Season 3, Episode 1 Review",
+      "url": "https://www.ign.com/articles/house-of-the-dragon-season-3-episode-1-review",
+      "pubDate_cst": "2026-06-22 10:00"
     },
     {
-      "title": "Call of Duty: Black Ops 1 and 2 Listings Have Fans Fearing Pricey PlayStation Ports",
-      "url": "https://www.ign.com/articles/call-of-duty-black-ops-1-and-2-listings-have-fans-fearing-pricey-playstation-ports",
-      "pubDate_cst": "2026-06-22 04:01"
+      "title": "The Vampire Lestat Showrunner Admits Changing Anne Rice’s Source Material in This Week’s Episode Will Probably Be a ‘Little Disappointing’ to Fans",
+      "url": "https://www.ign.com/articles/the-vampire-lestat-anne-rice-changes-disappointing-fans-episode-3-toronto",
+      "pubDate_cst": "2026-06-22 10:00"
     }
   ],
-  "filtered_articles": [
-    {
-      "title": "The Best Deals Today: AirPods Pro 3, Tears of the Kingdom Switch 2 Edition, Nioh 3, and More",
-      "url": "https://www.ign.com/articles/best-deals-for-june-21-2026",
-      "pubDate_cst": "2026-06-22 04:24",
-      "description": "",
-      "categories": "",
-      "reason": "url:deal",
-      "rss_url": "https://feeds.feedburner.com/ign/all",
-      "filtered_at_cn": "2026-06-22 06:49:57",
-      "status": "filtered"
-    }
-  ],
+  "filtered_articles": [],
   "runs": [
     {
-      "target_date": "2026-06-22",
+      "target_date": "2026-06-23",
       "new_count": 2,
-      "filtered_count": 1,
-      "changed_count": 3,
-      "next_id": 7,
+      "filtered_count": 0,
+      "changed_count": 2,
+      "next_id": 3,
       "articles": [
         {
-          "title": "Sesame Street Movie in the Works at Netflix Following Bidding War",
-          "url": "https://www.ign.com/articles/sesame-street-movie-in-the-works-at-netflix-following-bidding-war",
-          "pubDate_cst": "2026-06-22 05:49"
+          "title": "House of the Dragon Season 3, Episode 1 Review",
+          "url": "https://www.ign.com/articles/house-of-the-dragon-season-3-episode-1-review",
+          "pubDate_cst": "2026-06-22 10:00"
         },
         {
-          "title": "Call of Duty: Black Ops 1 and 2 Listings Have Fans Fearing Pricey PlayStation Ports",
-          "url": "https://www.ign.com/articles/call-of-duty-black-ops-1-and-2-listings-have-fans-fearing-pricey-playstation-ports",
-          "pubDate_cst": "2026-06-22 04:01"
+          "title": "The Vampire Lestat Showrunner Admits Changing Anne Rice’s Source Material in This Week’s Episode Will Probably Be a ‘Little Disappointing’ to Fans",
+          "url": "https://www.ign.com/articles/the-vampire-lestat-anne-rice-changes-disappointing-fans-episode-3-toronto",
+          "pubDate_cst": "2026-06-22 10:00"
         }
       ],
-      "filtered_articles": [
-        {
-          "title": "The Best Deals Today: AirPods Pro 3, Tears of the Kingdom Switch 2 Edition, Nioh 3, and More",
-          "url": "https://www.ign.com/articles/best-deals-for-june-21-2026",
-          "pubDate_cst": "2026-06-22 04:24",
-          "description": "",
-          "categories": "",
-          "reason": "url:deal",
-          "rss_url": "https://feeds.feedburner.com/ign/all",
-          "filtered_at_cn": "2026-06-22 06:49:57",
-          "status": "filtered"
-        }
-      ]
+      "filtered_articles": []
     },
     {
-      "target_date": "2026-06-21",
+      "target_date": "2026-06-22",
       "new_count": 0,
       "filtered_count": 0,
       "changed_count": 0,
-      "next_id": 10,
+      "next_id": 7,
       "articles": [],
       "filtered_articles": []
     }
