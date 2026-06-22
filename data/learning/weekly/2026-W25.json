@@ -1,6 +1,7 @@
 {
   "week_id": "2026-W25",
-  "generated_at": "2026-06-22T09:48:30+08:00",
+  "generated_at": "2026-06-22T13:27:48+08:00",
+  "published_by": "weekly_learning_report",
   "range": {
     "start": "2026-06-15",
     "end": "2026-06-21"
@@ -1073,9 +1074,9 @@
     }
   ],
   "instructions_for_user": [
-    "采纳：表示这条可以进入长期 STYLE_PROFILE.md。",
-    "否定：表示这条不是你的偏好，后续不要再提。",
-    "限定：说明只适用于某类文章，例如影视新闻/评测/标题。",
-    "暂缓：继续观察，不写入正式规则。"
+    "Adopt: this rule can enter STYLE_PROFILE.md.",
+    "Reject: this is not your preference and should not be proposed again.",
+    "Limit: this rule only applies to a specific article type or context.",
+    "Hold: keep observing; do not promote it into the formal style profile yet."
   ]
 }
