@@ -714,6 +714,48 @@
       "total_tokens": 10527,
       "prompt_cache_hit_tokens": 2048,
       "prompt_cache_miss_tokens": 8041
+    },
+    {
+      "time_cn": "2026-06-22 14:28:13",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 5,
+      "article_title": "Pokémon Stop-Motion Series Gets New Artwork and Details from Aardman",
+      "article_url": "https://www.ign.com/articles/pokemon-stop-motion-series-gets-new-artwork-and-details-from-aardman",
+      "article_date": "2026-06-23",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00032104,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8515,
+      "completion_tokens": 715,
+      "total_tokens": 9230,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 707
+    },
+    {
+      "time_cn": "2026-06-22 14:28:21",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 6,
+      "article_title": "The Best TV Hack for Competitive PC Gamers: Why TCL’s 288Hz Mode is a Game Changer",
+      "article_url": "https://www.ign.com/articles/the-best-tv-hack-for-competitive-pc-gamers-why-tcls-288hz-mode-is-a-game-changer",
+      "article_date": "2026-06-23",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00036514,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9194,
+      "completion_tokens": 533,
+      "total_tokens": 9727,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 1386
     }
   ]
 }
