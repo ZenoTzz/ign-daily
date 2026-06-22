@@ -33,6 +33,7 @@ from dict_matcher import restore_dictionary_spacing_in_data, term_in_text
 from dict_matcher import matched_terms_for_article
 from dict_matcher import normalize_pending_dict
 from normalize_currency_files import normalize_date as normalize_currency_date
+from platform_names import normalize_platform_names_in_translation
 from prompt_blocks import (
     chunk_user_payload,
     fulltext_user_payload,
@@ -486,7 +487,7 @@ def translate_paragraph_chunks(
 
 def normalize_translation(article: dict[str, Any], result: dict[str, Any], paragraphs_en: list[str]) -> dict[str, Any]:
     normalized = normalize_paragraphs(result, paragraphs_en)
-    return normalize_translation_quotes(restore_dictionary_spacing_in_data(normalize_translation_currency({
+    return normalize_platform_names_in_translation(normalize_translation_quotes(restore_dictionary_spacing_in_data(normalize_translation_currency({
         "id": article["id"],
         "url": article["url"],
         "en_title": article["en_title"],
@@ -502,7 +503,7 @@ def normalize_translation(article: dict[str, Any], result: dict[str, Any], parag
         "translated_terms": result.get("translated_terms") if isinstance(result.get("translated_terms"), dict) else {},
         "cover": str(result.get("cover") or article.get("cover_image") or "").strip(),
         "images": result.get("images") if isinstance(result.get("images"), list) else [],
-    })))
+    }))))
 
 
 def trim_summary_to_limit(summary: str, target_max: int = SUMMARY_TARGET_MAX) -> str:
@@ -564,7 +565,7 @@ def enforce_literal_dictionary_terms(
             value = item.get("cn")
             if isinstance(value, str) and pattern.search(value):
                 item["cn"] = pattern.sub(cn, value)
-    return restore_dictionary_spacing_in_data(repaired)
+    return normalize_platform_names_in_translation(restore_dictionary_spacing_in_data(repaired))
 
 
 def repair_translation_once(
@@ -617,7 +618,7 @@ def repair_summary_once(
     repaired["opus_summary"] = summary
     repaired["repair_source"] = "deterministic_summary_audit"
     repaired["repair_issue_count"] = 1
-    return restore_dictionary_spacing_in_data(normalize_translation_currency(repaired))
+    return normalize_platform_names_in_translation(restore_dictionary_spacing_in_data(normalize_translation_currency(repaired)))
 
 
 def resolve_requests(date: str) -> tuple[Path, dict[str, Any], dict[str, Any], list[dict[str, Any]]]:

@@ -38,6 +38,7 @@ from dict_matcher import (
     term_in_text,
 )
 from normalize_currency_files import normalize_date as normalize_currency_date
+from platform_names import normalize_platform_names_in_translation
 from prompt_blocks import stable_json, title_user_payload, translation_system_prompt
 from usage_logger import record_deepseek_usage_safe
 
@@ -313,7 +314,7 @@ def normalize_result(result: dict[str, Any]) -> dict[str, Any]:
         category = "游戏新闻"
     emoji = str(result.get("emoji") or "📰").strip()[:4]
     pending = normalize_pending_dict(result.get("pending_dict"))
-    return {
+    return normalize_platform_names_in_translation({
         "cn_title": normalize_chinese_quotes(
             restore_dictionary_spacing(normalize_currency_text(str(result.get("cn_title") or "").strip()))
         ),
@@ -323,7 +324,7 @@ def normalize_result(result: dict[str, Any]) -> dict[str, Any]:
         "category": category,
         "emoji": emoji,
         "pending_dict": pending,
-    }
+    })
 
 
 def translate_date(date: str, limit: int = 8) -> int:

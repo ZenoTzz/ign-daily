@@ -35,6 +35,7 @@ import json, os, sys, re, urllib.request, urllib.parse
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 from common_paths import REPO_ROOT, dict_path, exchange_rates_path, configure_utf8_stdio
+from platform_names import normalize_platform_names_in_translation
 
 configure_utf8_stdio()
 
@@ -419,6 +420,12 @@ def post_mode(date_str, article_ref):
     if space_fixes > 0:
         changed = True
         print(f"\n🔧 Cleaned {space_fixes} spacing issues")
+
+    before_platform = json.dumps(data, ensure_ascii=False, sort_keys=True)
+    data = normalize_platform_names_in_translation(data)
+    if json.dumps(data, ensure_ascii=False, sort_keys=True) != before_platform:
+        changed = True
+        print("\n🔧 Normalized platform spelling: Xbox -> XBOX")
 
     # 5. ASCII 双引号检查
     quote_issues = []

@@ -68,7 +68,7 @@
 
 10. **平台名简写**
     - PlayStation 5 → PS5
-    - Xbox Series X/S → Xbox Series
+    - Xbox Series X/S → XBOX Series
     - Nintendo Switch 2 → Switch 2
     - 依据：跨两天一致
 
@@ -156,7 +156,7 @@
   - 规则：英文产品名与型号组合时，按中文习惯将型号后置，如 'Steam Deck OLED' 而非 'OLED Steam Deck'。
   - 适用范围：all
 - **平台名称使用简洁统一写法**（跨 3 天，5 篇样本）
-  - 规则：平台枚举中可将“Xbox Series X|S”统一简写为“Xbox Series”，Nintendo Switch 2在语境明确时可写“Switch 2”；不要改变实际登陆平台范围。
+  - 规则：平台枚举中可将“Xbox Series X|S”统一简写为“XBOX Series”，Nintendo Switch 2在语境明确时可写“Switch 2”；不要改变实际登陆平台范围。所有面向读者的译文中，Xbox 统一写作 XBOX。
   - 适用范围：games
 - **生僻术语首次出现附原文**（跨 1 天，1 篇样本）
   - 规则：不常见的系统名、地点名或机制名首次出现时采用“中文（英文）”，后文可用中文或原文简称；不得对通行名称重复注释。
