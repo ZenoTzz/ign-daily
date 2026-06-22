@@ -63,8 +63,8 @@
       "url": "https://www.ign.com/articles/super-yooka-laylee-kart-preview-ex-rare-devs-take-aim-at-reviving-the-spirit-of-diddy-kong-racing",
       "publish_time_cn": "2026-06-22 03:00",
       "pub_date": "2026-06-22 03:00",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/06/19/sylk-screenshot-002-1781831168852.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "needs_review",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/19/sylk-screenshot-002-1781831168852.png",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/19/sylk-screenshot-002-1781831168852.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/19/sylk-screenshot-002-1781831168852.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -95,8 +95,6 @@
           "reason": "常见社区译名，待确认"
         }
       ],
-      "translation_error": "Command '['/opt/hostedtoolcache/Python/3.11.15/x64/bin/python3', '/home/runner/work/ign-daily/ign-daily/scripts/translate_pipeline.py', '2026-06-22', '4', '--post']' returned non-zero exit status 1.",
-      "translation_failed_at": "2026-06-22T08:24:09.188265+08:00",
       "translator": "api",
       "translator_provider": "openai-compatible",
       "translator_model": "deepseek-v4-pro",
