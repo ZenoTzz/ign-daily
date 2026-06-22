@@ -84,10 +84,21 @@ jobs:
           print(f"target_dates={','.join(data.get('target_dates') or [])}")
           print(f"changed_dates={','.join(data.get('changed_dates') or [])}")
           print(f"new_target_dates={','.join(data.get('new_target_dates') or [])}")
+          pending_title_dates = []
+          for date in data.get("target_dates") or []:
+              queue_path = Path("data") / date / "need_titles.json"
+              if queue_path.exists():
+                  try:
+                      queue = json.loads(queue_path.read_text(encoding="utf-8-sig"))
+                  except Exception:
+                      queue = []
+                  if queue:
+                      pending_title_dates.append(date)
+          print(f"pending_title_dates={','.join(pending_title_dates)}")
           PY
 
       - name: Stop when there are no RSS changes
-        if: steps.rss.outputs.changed_count == '0'
+        if: steps.rss.outputs.changed_count == '0' && steps.rss.outputs.pending_title_dates == ''
         run: |
           rm -f ign_rss_new.json
           echo "No new RSS articles or filtered quarantine changes."
@@ -113,13 +124,13 @@ jobs:
           python3 scripts/agent_doctor.py
 
       - name: Refresh exchange rates
-        if: steps.rss.outputs.new_count != '0' && (steps.config.outputs.title_translator == 'api' || steps.config.outputs.title_translator == 'deepseek')
+        if: (steps.rss.outputs.new_count != '0' || steps.rss.outputs.pending_title_dates != '') && (steps.config.outputs.title_translator == 'api' || steps.config.outputs.title_translator == 'deepseek')
         run: |
           set -euo pipefail
           python3 scripts/fetch_exchange_rates.py
 
       - name: Snapshot DeepSeek balance before title translation
-        if: steps.rss.outputs.new_count != '0' && (steps.config.outputs.title_translator == 'api' || steps.config.outputs.title_translator == 'deepseek')
+        if: (steps.rss.outputs.new_count != '0' || steps.rss.outputs.pending_title_dates != '') && (steps.config.outputs.title_translator == 'api' || steps.config.outputs.title_translator == 'deepseek')
         env:
           TRANSLATOR_API_KEY: ${{ secrets.TRANSLATOR_API_KEY || secrets.DEEPSEEK_API_KEY }}
           TRANSLATOR_BASE_URL: ${{ steps.config.outputs.api_base_url || vars.TRANSLATOR_BASE_URL || vars.DEEPSEEK_BASE_URL || 'https://api.deepseek.com' }}
@@ -127,7 +138,7 @@ jobs:
           python3 scripts/deepseek_balance.py --snapshot "${GITHUB_RUN_ID}-before" || true
 
       - name: Translate queued titles with DeepSeek
-        if: steps.rss.outputs.new_count != '0' && (steps.config.outputs.title_translator == 'api' || steps.config.outputs.title_translator == 'deepseek')
+        if: (steps.rss.outputs.new_count != '0' || steps.rss.outputs.pending_title_dates != '') && (steps.config.outputs.title_translator == 'api' || steps.config.outputs.title_translator == 'deepseek')
         env:
           TRANSLATOR_API_KEY: ${{ secrets.TRANSLATOR_API_KEY || secrets.DEEPSEEK_API_KEY }}
           TRANSLATOR_MODEL: ${{ steps.config.outputs.api_title_model || steps.config.outputs.api_model || vars.TRANSLATOR_TITLE_MODEL || vars.TRANSLATOR_MODEL || vars.DEEPSEEK_MODEL || 'deepseek-v4-flash' }}
@@ -140,7 +151,7 @@ jobs:
             echo "title_translator=api but TRANSLATOR_API_KEY/DEEPSEEK_API_KEY is not set."
             exit 1
           fi
-          IFS=',' read -ra dates <<< "${{ steps.rss.outputs.new_target_dates }}"
+          IFS=',' read -ra dates <<< "${{ steps.rss.outputs.pending_title_dates }}"
           for date in "${dates[@]}"; do
             [ -z "$date" ] && continue
             python3 scripts/translate_titles_deepseek.py "$date"
@@ -150,7 +161,7 @@ jobs:
           python3 scripts/agent_doctor.py
 
       - name: Commit and push RSS update
-        if: steps.rss.outputs.changed_count != '0'
+        if: steps.rss.outputs.changed_count != '0' || steps.rss.outputs.pending_title_dates != ''
         run: |
           set -euo pipefail
           git add data ign_rss_new.json exchange_rates.json
