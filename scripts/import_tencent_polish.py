@@ -22,7 +22,7 @@ import re
 import sys
 import unicodedata
 from dataclasses import dataclass
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from difflib import SequenceMatcher
 from http.cookiejar import CookieJar
 from pathlib import Path
@@ -54,6 +54,7 @@ class DocumentArticle:
 
 @dataclass(frozen=True)
 class TranslationCandidate:
+    date: str
     article: dict[str, Any]
     translation: dict[str, Any]
 
@@ -335,8 +336,22 @@ def load_candidates(date: str) -> list[TranslationCandidate]:
             translation_path = day_dir / "translations" / f"{article_id:02d}.json"
         translation = load_json(translation_path, {})
         if isinstance(translation, dict) and translation:
-            candidates.append(TranslationCandidate(article=article, translation=translation))
+            candidates.append(
+                TranslationCandidate(
+                    date=date,
+                    article=article,
+                    translation=translation,
+                )
+            )
     return candidates
+
+
+def adjacent_dates(date: str) -> list[str]:
+    current = datetime.strptime(date, "%Y-%m-%d").date()
+    return [
+        (current + timedelta(days=offset)).isoformat()
+        for offset in (-1, 1)
+    ]
 
 
 def score_pair(source: DocumentArticle, candidate: TranslationCandidate) -> tuple[float, float, float]:
@@ -411,12 +426,15 @@ def match_articles(
             )
         )
 
-    by_candidate: dict[int, list[Match]] = {}
+    by_candidate: dict[tuple[str, int], list[Match]] = {}
     for proposal in proposals:
-        by_candidate.setdefault(proposal.candidate.article_id, []).append(proposal)
+        by_candidate.setdefault(
+            (proposal.candidate.date, proposal.candidate.article_id),
+            [],
+        ).append(proposal)
 
     accepted: list[Match] = []
-    for article_id, conflicts in by_candidate.items():
+    for (_candidate_date, article_id), conflicts in by_candidate.items():
         conflicts.sort(key=lambda item: item.score, reverse=True)
         accepted.append(conflicts[0])
         for conflict in conflicts[1:]:
@@ -427,7 +445,7 @@ def match_articles(
                     f"to {conflicts[0].source.title}",
                 )
             )
-    accepted.sort(key=lambda item: item.candidate.article_id)
+    accepted.sort(key=lambda item: (item.candidate.date, item.candidate.article_id))
     return accepted, skipped
 
 
@@ -505,6 +523,8 @@ def import_matches(
                 "type": "tencent_docs",
                 "document_url": document_url,
                 "document_title": document_title,
+                "document_date": match.source.date,
+                "target_date": date,
                 "fingerprint": fingerprint,
                 "imported_at": now,
                 "match_score": round(match.score, 4),
@@ -588,23 +608,59 @@ def main() -> int:
             continue
         candidates = load_candidates(date)
         matches, skipped = match_articles(sources, candidates)
-        imported, unchanged, messages = import_matches(
-            date,
-            matches,
-            document_url,
-            document_title or expected_title,
-            dry_run=args.dry_run,
-            replace_existing=args.replace_existing,
-        )
+        cross_date_matches: list[Match] = []
+        cross_date_skipped: list[tuple[DocumentArticle, str]] = []
+        if skipped:
+            unmatched_sources = [source for source, _reason in skipped]
+            cross_date_candidates: list[TranslationCandidate] = []
+            for adjacent_date in adjacent_dates(date):
+                cross_date_candidates.extend(load_candidates(adjacent_date))
+            if cross_date_candidates:
+                cross_date_matches, cross_date_skipped = match_articles(
+                    unmatched_sources,
+                    cross_date_candidates,
+                )
+                matched_source_ids = {id(match.source) for match in cross_date_matches}
+                skipped = [
+                    (source, reason)
+                    for source, reason in cross_date_skipped
+                    if id(source) not in matched_source_ids
+                ]
+
+        import_messages: list[str] = []
+        imported = 0
+        unchanged = 0
+        matches_by_target_date: dict[str, list[Match]] = {}
+        for match in [*matches, *cross_date_matches]:
+            matches_by_target_date.setdefault(match.candidate.date, []).append(match)
+
+        for target_date, target_matches in sorted(matches_by_target_date.items()):
+            target_imported, target_unchanged, messages = import_matches(
+                target_date,
+                target_matches,
+                document_url,
+                document_title or expected_title,
+                dry_run=args.dry_run,
+                replace_existing=args.replace_existing,
+            )
+            imported += target_imported
+            unchanged += target_unchanged
+            import_messages.extend(messages)
+
         total_imported += imported
         total_unchanged += unchanged
-        total_matched += len(matches)
+        total_matched += len(matches) + len(cross_date_matches)
         total_skipped += len(skipped)
         print(
             f"\n[{date}] source={len(sources)} translated={len(candidates)} "
-            f"matched={len(matches)} skipped={len(skipped)}"
+            f"matched={len(matches) + len(cross_date_matches)} skipped={len(skipped)}"
         )
-        for message in messages:
+        for match in cross_date_matches:
+            print(
+                f"CROSS_DATE {match.source.date} -> {match.candidate.date} "
+                f"#{match.candidate.article_id:02d}: {match.source.title}"
+            )
+        for message in import_messages:
             print(message)
         for source, reason in skipped:
             print(f"SKIP {date}: {source.title} ({reason})")
