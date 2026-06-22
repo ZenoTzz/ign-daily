@@ -1,11 +1,292 @@
 {
   "date": "2026-06-06",
-  "model": "deepseek-v4-flash",
-  "source_hash": "edd5b3cb9b930cd2cb90f0e5f31a78e67205f32b",
-  "signal_count": 0,
-  "candidate_count": 0,
-  "signals": [],
-  "candidates": [],
-  "notes": [],
-  "updated_at": "2026-06-06T04:56:39+08:00"
+  "observer": "codex",
+  "model": "codex",
+  "status": "observed",
+  "source_hash": "a26b8fcf37fbbc1956861ae68cf1582e2c39cc15",
+  "signal_count": 5,
+  "candidate_count": 2,
+  "signals": [
+    {
+      "type": "user_polish",
+      "date": "2026-06-06",
+      "article_id": 4,
+      "url": "https://www.ign.com/articles/no-rest-for-the-wicked-developer-blames-series-s-for-xbox-release-delay",
+      "en_title": "No Rest for the Wicked Developer Blames Series S for Xbox Release Delay",
+      "cn_title": "《No Rest for the Wicked》开发者指责Xbox Series S导致延期",
+      "edits": [
+        {
+          "field": "title",
+          "before": "《No Rest for the Wicked》开发者指责Xbox Series S导致延期",
+          "after": "《恶意不息》开发者指责Xbox Series S导致延期"
+        },
+        {
+          "field": "subtitle",
+          "before": "又是Series S的锅",
+          "after": "开发地狱"
+        },
+        {
+          "field": "paragraph_1",
+          "before": "Xbox Series S再次成为众矢之的，起因是动作RPG《恶意不息》开发商Moon Studio创始人的一番言论。该作自2024年起已在Steam抢先体验平台上线。",
+          "after": "Xbox Series S（XSS）再次成为众矢之的，起因是动作RPG《恶意不息》开发商Moon Studio创始人的一番言论。该作自2024年起已在Steam抢先体验平台上线。"
+        },
+        {
+          "field": "paragraph_2",
+          "before": "在PlayStation State of Play发布会上，官方确认该作将于今年10月登陆PS5，以庆祝1.0正式版的发布，但Xbox玩家则需继续等待。这并非因为与PlayStation达成了任何营销协议，而是由于Xbox Series S的性能限制。当有粉丝询问为何没有Xbox发售日期时，工作室创始人兼游戏总监Thomas Mahler将矛头指向了Series S。",
+          "after": "在PlayStation State of Play发布会上，官方确认该作将于今年10月登陆PS5，以庆祝1.0正式版的发布，但Xbox玩家则需继续等待。这并非因为与PlayStation达成了任何营销协议，而是由于XSS的性能限制。当有粉丝询问为何没有Xbox发售日期时，工作室创始人兼游戏总监Thomas Mahler将矛头指向了XSS。"
+        },
+        {
+          "field": "paragraph_3",
+          "before": "「Series S让这件事变得棘手，」Mahler在Discord上评论道，「我们会先全力为Switch 2和Xbox进行优化，之后再以良好的状态推出。」",
+          "after": "「XSS让这件事变得棘手，」Mahler在Discord上评论道，「我们会先全力为Switch 2和Xbox进行优化，之后再以良好的状态推出。」"
+        },
+        {
+          "field": "paragraph_4",
+          "before": "另一位用户开玩笑说，在Xbox和Switch 2版本之后还会推出手机版，Mahler回应道：「Series S和手机配置目前差距已经不大了。」",
+          "after": "另一位用户开玩笑说，在Xbox和Switch 2版本之后还会推出手机版，Mahler回应道：「XSS和手机配置目前差距已经不大了。」"
+        },
+        {
+          "field": "paragraph_5",
+          "before": "这已经不是第一次出现类似情况了。《黑神话：悟空》的Xbox版本延期了一年，当时有大量传闻称原因在于主机开发困难。微软回应称并未收到此类问题的报告，但开发商游戏科学后来暗示这些传闻可能并非空穴来风。游戏科学CEO冯骥在2025年1月指出，Xbox Series S的10GB共享内存给优化带来了问题。当游戏最终登陆Xbox时，工作室确认延期是因为花费了额外时间专门针对Xbox进行优化。",
+          "after": "这已经不是第一次出现类似情况了。《黑神话：悟空》的Xbox版本延期了一年，当时有大量传闻称原因在于主机开发困难。微软回应称并未收到此类问题的报告，但开发商游戏科学后来暗示这些传闻可能并非空穴来风。游戏科学CEO冯骥在2025年1月指出，XSS的10GB共享内存给优化带来了问题。当游戏最终登陆Xbox时，工作室确认延期是因为花费了额外时间专门针对Xbox进行优化。"
+        },
+        {
+          "field": "paragraph_6",
+          "before": "《博德之门3》在针对Xbox Series S开发时也遇到了问题。该作在不同平台分阶段发售：2023年8月登陆PC，9月登陆PS5，12月才登陆Xbox。这并非出于自愿。Larian在让分屏合作模式在Xbox Series S上流畅运行方面遇到了困难，工作室甚至请来了微软自家的工程师协助解决。",
+          "after": "《博德之门3》在针对XSS开发时也遇到了问题。该作在不同平台分阶段发售：2023年8月登陆PC，9月登陆PS5，12月才登陆Xbox。这并非出于自愿。Larian在让分屏合作模式在XSS上流畅运行方面遇到了困难，工作室甚至请来了微软自家的工程师协助解决。"
+        }
+      ]
+    },
+    {
+      "type": "user_polish",
+      "date": "2026-06-06",
+      "article_id": 37,
+      "url": "https://www.ign.com/articles/teenage-mutant-ninja-turtles-the-last-ronin-is-in-development-at-platinumgames",
+      "en_title": "Teenage Mutant Ninja Turtles: The Last Ronin Is in Development at PlatinumGames",
+      "cn_title": "白金工作室操刀《忍者神龟：最后的浪人》",
+      "edits": [
+        {
+          "field": "subtitle",
+          "before": "忍者神龟的黑暗终章",
+          "after": "派拉蒙正认真进军游戏行业，而这只是个开始"
+        },
+        {
+          "field": "paragraph_2",
+          "before": "新成立的派拉蒙游戏工作室整合了派拉蒙和Skydance旗下所有游戏工作室，包括Skydance Interactive和Skydance New Media，大举进军AAA领域。除了白金工作室的忍者神龟游戏外，派拉蒙游戏工作室还将发行近期跳票的《降世神通：传奇之战》。",
+          "after": "新成立的派拉蒙游戏工作室整合了派拉蒙和Skydance旗下所有游戏工作室，包括Skydance Interactive和Skydance New Media，大举进军AAA领域。除了白金工作室的忍者神龟游戏外，派拉蒙游戏工作室还将发行近期跳票的《降世神通：The Fighting Game》。"
+        },
+        {
+          "field": "paragraph_5",
+          "before": "在今天的公告之前，IGN采访了派拉蒙游戏工作室高级副总裁兼创意与制作主管Shawn Kittelsen，不仅了解了这款忍者神龟游戏，还了解了派拉蒙的雄心。他将这款忍者神龟游戏的野心比作白金工作室也参与过的《尼尔：机械纪元》，并表示派拉蒙旗下众多IP的粉丝可以开始期待更多基于这些IP的大型游戏了。",
+          "after": "在今天的公告之前，IGN采访了派拉蒙游戏工作室高级副总裁兼创意与制作主管Shawn Kittelsen，不仅了解了这款忍者神龟游戏，还了解了派拉蒙的雄心。他将这款忍者神龟游戏的野心比作白金工作室也参与过的《尼尔：自动人形》，并表示派拉蒙旗下众多IP的粉丝可以开始期待更多基于这些IP的大型游戏了。"
+        },
+        {
+          "field": "paragraph_9",
+          "before": "Shawn Kittelsen：是的。我们有Skydance游戏工作室：Skydance New Media由Amy Hennig联合创立，正在开发《漫威1943》；Skydance Interactive则是在VR领域制作过《行尸走肉：圣徒与罪人》和《Behemoth》的团队。这两个团队未来都将在派拉蒙旗下发行游戏。我们将为我们拥有的IP制作游戏，也将为原创IP制作游戏。我们相信游戏是IP和新系列诞生的地方。所以我们想在那里进行一些经过计算的冒险。",
+          "after": "Shawn Kittelsen：是的。我们有Skydance游戏工作室：Skydance New Media由Amy Hennig联合创立，正在开发《漫威1943：九头蛇崛起》；Skydance Interactive则是在VR领域制作过《行尸走肉：圣徒与罪人》和《巨兽》的团队。这两个团队未来都将在派拉蒙旗下发行游戏。我们将为我们拥有的IP制作游戏，也将为原创IP制作游戏。我们相信游戏是IP和新系列诞生的地方。所以我们想在那里进行一些经过计算的冒险。"
+        },
+        {
+          "field": "paragraph_17",
+          "before": "而负责《最后的浪人》的白金工作室总监新堀洋平，他也来自格斗游戏领域。他曾是《铁拳8》的制作人，并在《死或生》系列工作了多年。我们见面时，很合得来，就像花生酱和巧克力一样。当我们谈到他对游戏故事的抱负时，他提到的一点是，他非常想将日式动作与西方叙事结合起来，制作一部真正挑战白金工作室以往故事水平的改编作品，并努力达到《尼尔：机械纪元》等作品设定的标准——当你想到白金工作室最好的故事时。",
+          "after": "而负责《最后的浪人》的白金工作室总监新堀洋平，他也来自格斗游戏领域。他曾是《铁拳8》的制作人，并在《死或生》系列工作了多年。我们见面时，很合得来，就像花生酱和巧克力一样。当我们谈到他对游戏故事的抱负时，他提到的一点是，他非常想将日式动作与西方叙事结合起来，制作一部真正挑战白金工作室以往故事水平的改编作品，并努力达到《尼尔：自动人形》等作品设定的标准——当你想到白金工作室最好的故事时。"
+        },
+        {
+          "field": "paragraph_18",
+          "before": "我们讨论过：「嘿，我们会找一些西方编剧。」他说：「嗯，我真的很喜欢《不义联盟2》和《真人快打11》以及你的作品。我们可以一起合作。」如果你对我抛出这个，我会想：「哦，你的意思是我不用……哦，我可以做吗？」那是一个无法抗拒的机会。所以我们团队里有一位叙事总监Mike Rogers，他也和我们一起参与故事创作。Mike刚刚与罗伯特·柯克曼合作了《无敌少侠：对决》格斗游戏。我想我们是一群老格斗游戏玩家，现在聚在一起制作终极忍者神龟动作冒险游戏。",
+          "after": "我们讨论过：「嘿，我们会找一些西方编剧。」他说：「嗯，我真的很喜欢《不义联盟2》和《真人快打11》以及你的作品。我们可以一起合作。」如果你对我抛出这个，我会想：「哦，你的意思是我不用……哦，我可以做吗？」那是一个无法抗拒的机会。所以我们团队里有一位叙事总监Mike Rogers，他也和我们一起参与故事创作。Mike刚刚与Robert Kirkman合作了《无敌少侠VS》格斗游戏。我想我们是一群老格斗游戏玩家，现在聚在一起制作终极忍者神龟动作冒险游戏。"
+        },
+        {
+          "field": "paragraph_19",
+          "before": "Shawn Kittelsen：目前还处于早期阶段，但协议条款已完全执行。我们已经完成了多个里程碑，正在进入原型制作阶段，并逐步构建全面生产所需的所有要素。所以还处于早期阶段。",
+          "after": "IGN：听起来这件事还处于早期阶段。"
+        },
+        {
+          "field": "paragraph_20",
+          "before": "IGN：你提到了《尼尔：机械纪元》作为比较对象。在很多人眼中那是一部杰作。你们的目标很高啊！",
+          "after": "Shawn Kittelsen：目前还处于早期阶段，但协议条款已完全执行。我们已经完成了多个里程碑，正在进入原型制作阶段，并逐步构建全面生产所需的所有要素。所以还处于早期阶段。"
+        }
+      ]
+    },
+    {
+      "type": "user_polish",
+      "date": "2026-06-06",
+      "article_id": 43,
+      "url": "https://www.ign.com/articles/final-fantasy-vii-remake-part-3-called-revelation-out-simultaneously-across-all-platforms",
+      "en_title": "Final Fantasy VII Remake Part 3 Called Revelation, Out Simultaneously Across All Platforms",
+      "cn_title": "《最终幻想7 重制版》第三部定名《启示录》，全平台同步发售",
+      "edits": [
+        {
+          "field": "subtitle",
+          "before": "终章降临",
+          "after": "明年春天"
+        },
+        {
+          "field": "paragraph_1",
+          "before": "史克威尔艾尼克斯终于公布了《最终幻想7 重制版》第三部，定名《启示录》。该作将于2027年春季同步登陆任天堂Switch 2、PlayStation 5、Xbox Series X|S以及PC（Steam和Epic Games Store）。",
+          "after": "史克威尔艾尼克斯终于公布了《最终幻想7 重制版》第三部，定名《启示录（Revelation）》。该作将于2027年春季同步登陆Switch 2、PS5、Xbox Series以及PC（Steam和Epic Games Store）。"
+        },
+        {
+          "field": "paragraph_2",
+          "before": "《启示录》将为《最终幻想7 重制版》三部曲画上句号，前两部分别于2020年发售的《最终幻想7 重制版》和2024年发售的《重生》。以下是史克威尔艾尼克斯的官方介绍：",
+          "after": "《启示录》将为《最终幻想7 重制版》三部曲画上句号，前两部分别于2020年发售的和2024年发售。以下是史克威尔艾尼克斯的官方介绍："
+        },
+        {
+          "field": "paragraph_3",
+          "before": "史克威尔艾尼克斯在夏日游戏节上公布了《启示录》，首支预告片展示了游戏角色在五台国的场景。我们还了解到，文森特·瓦伦丁和希德·海温德将成为可玩角色，与克劳德、蒂法、巴雷特、赤红十三、尤菲、凯特·西一同登场。",
+          "after": "在这场史诗终章中，克劳德·斯特莱夫与伙伴们将面对一个濒临毁灭的世界。失去重要同伴的悲痛仍未散去，而宿敌萨菲罗斯正逐渐迈向神明之境。为了阻止究极毁灭魔法「陨石」降临、避免星球彻底灭亡，一行人将搭乘飞空艇「海温德号」展开与时间赛跑的冒险。"
+        },
+        {
+          "field": "paragraph_4",
+          "before": "史克威尔艾尼克斯表示，《最终幻想7 启示录》将拥有系列最广阔的开放世界，玩家可乘坐飞空艇「海温德」探索，并从飞空艇无缝跳伞至下方世界。整个星球都将成为冒险的舞台。除了前作已有的区域，玩家还能探索新地区，如米迪尔和五台国。",
+          "after": "随着神枪手文森特·瓦伦丁和脾气火爆的飞行员希德·海温德加入队伍，众人将能够自由探索整个星球，前往广阔的新区域展开冒险。玩家还可在战斗中运用全新的职业系统，并通过建立更加深厚的羁绊，共同对抗有史以来最强大的威胁。"
+        },
+        {
+          "field": "paragraph_5",
+          "before": "正如预告片所示，武器终于登场。《最终幻想7》粉丝都知道，武器是星球自身唤醒的巨型守护者，用以抵御陨石。史克威尔艾尼克斯表示：「武器不分敌我地毁灭一切，即便是它们，克劳德一行人也必须挺身对抗。」",
+          "after": "史克威尔艾尼克斯在夏日游戏节上公布了《启示录》，首支预告片展示了游戏角色在五台国的场景。我们还了解到，文森特·瓦伦丁和希德·海温德将成为可玩角色，与克劳德、蒂法、巴雷特、赤红十三、尤菲、凯特·西一同登场。"
+        },
+        {
+          "field": "paragraph_6",
+          "before": "全新战斗系统FITS允许玩家通过装备不同服装来改变角色的战斗风格，每套服装解锁独特能力，拓展战略选择。配合FITS，你还可以通过武器和魔晶石自定义配置，为队伍做好准备。",
+          "after": "史克威尔艾尼克斯表示，《最终幻想7 启示录》将拥有系列最广阔的开放世界，玩家可乘坐飞空艇「海温德」探索，并从飞空艇无缝跳伞至下方世界。整个星球都将成为冒险的舞台。除了前作已有的区域，玩家还能探索新地区，如米迪尔和五台国。"
+        },
+        {
+          "field": "paragraph_7",
+          "before": "例如，「战士」增强攻击能力，支持多种激进打法；而「黑魔法师」则专精攻击魔法，侧重法术战斗。史克威尔艾尼克斯表示：「通过装备赋予新动作集的独特服装，唤起经典《最终幻想》职业如战士和黑魔法师，借助该系统达到新的力量高度。在调整配置以适应自己玩法并制定策略时，享受每一种独特造型。」",
+          "after": "正如预告片所示，武器终于登场。《最终幻想7》粉丝都知道，WEAPON是星球自身唤醒的巨型守护者，用以抵御陨石。史克威尔艾尼克斯表示：「WEAPON不分敌我地毁灭一切，即便是它们，克劳德一行人也必须挺身对抗。」"
+        }
+      ]
+    },
+    {
+      "type": "user_polish",
+      "date": "2026-06-06",
+      "article_id": 45,
+      "url": "https://www.ign.com/articles/medieval-chronicles-ign-preview",
+      "en_title": "Medieval: Chronicles Looks to Offer Deep Strategic Gameplay Along With Gruesome Up-Close Action Combat | IGN Preview",
+      "cn_title": "《中世纪编年史》前瞻：战略与血腥近战结合",
+      "edits": [
+        {
+          "field": "title",
+          "before": "《中世纪编年史》前瞻：战略与血腥近战结合",
+          "after": "《编年史：中世纪》前瞻：战略与血腥近战结合"
+        },
+        {
+          "field": "paragraph_1",
+          "before": "我向来更偏爱弓箭而非枪炮，骑兵而非坦克，《上古卷轴》而非《辐射》。因此，当新工作室 Raw Power Games 在去年的夏日游戏节上公布其首款作品《中世纪编年史》(Chronicles: Medieval)时，我立刻来了兴趣。一年后的今天，Raw Power 再次归来，让我们得以一窥《中世纪编年史》那血染沙场的真容。",
+          "after": "当新工作室Raw Power Games在去年的夏日游戏节上公布其首款作品《编年史：中世纪》时，也引起了一些讨论。一年后的今天，Raw Power 再次归来，让我们得以一窥《编年史：中世纪》那血染沙场的真容。"
+        },
+        {
+          "field": "paragraph_2",
+          "before": "简单来说，《中世纪编年史》是一款沙盒RPG，融合了第三人称动作战斗与大规模战略指挥，你将扮演军队指挥官。游戏背景设定在欧洲百年战争时期，你将通过赢得声望、招募士兵、发动战斗来壮大自己的传奇。作为游戏的核心支柱之一，战斗规模从仅20人的小规模冲突，到指挥2000人的大型战役不等。",
+          "after": "简单来说，《编年史：中世纪》是一款沙盒RPG，融合了第三人称动作战斗与大规模战略指挥，你将扮演军队指挥官。游戏背景设定在欧洲百年战争时期，你将通过赢得声望、招募士兵、发动战斗来壮大自己的传奇。作为游戏的核心支柱之一，战斗规模从仅20人的小规模冲突，到指挥2000人的大型战役不等。"
+        },
+        {
+          "field": "paragraph_3",
+          "before": "战斗似乎分为两种主要模式：一种是战场视角，用于向部队下达指令；另一种是越肩视角，直接控制你的角色。向军队下达指令的方式，对其他中世纪策略游戏玩家来说会有些熟悉——你需要将部队排列成各种阵型。战斗计划在箭矢射出之前就已开始。在准备阶段，你需要将部队组织成「战线」，从高空俯瞰视角布置初始位置，并下达初始行动指令。Raw Power 解释称，这些相当于一种底层「规则」，你的AI单位将在战斗中遵循。",
+          "after": "战斗似乎分为两种主要模式：一种是战场视角，用于向部队下达指令；另一种是越肩视角，直接控制你的角色。向军队下达指令的方式，对其他中世纪策略游戏玩家来说会有些熟悉——你需要将部队排列成各种阵型。战斗计划在箭矢射出之前就已开始。在准备阶段，你需要将部队组织成「战线」，从高空俯瞰视角布置初始位置，并下达初始行动指令。Raw Power解释称，这些相当于一种底层「规则」，你的AI单位将在战斗中遵循。"
+        },
+        {
+          "field": "paragraph_4",
+          "before": "当战场指挥官固然不错，但我更兴奋的是直接控制角色冲上前线。我和其他骑士一样喜欢策略游戏，但有时我只想挥剑砍杀。据开发团队成员透露，《中世纪编年史》的动作战斗将采用连击系统，鼓励你打破敌人的架势（听起来有点像 From Software 游戏中的精力条），从而发动血腥的处决攻击。",
+          "after": "当战场指挥官固然不错，但我更兴奋的是直接控制角色冲上前线。我和其他骑士一样喜欢策略游戏，但有时我只想挥剑砍杀。据开发团队成员透露，《编年史：中世纪》的动作战斗将采用连击系统，鼓励你打破敌人的架势，从而发动血腥的处决攻击。"
+        },
+        {
+          "field": "paragraph_6",
+          "before": "关于这一点，Raw Power 的团队简要介绍了其运作方式，至少是其中一部分。在战役进程中，当你处于「探索地图」（似乎包含更多RPG元素）时，其中一个选项是招募雇佣兵。具体机制目前仍是个谜，但大致思路是：通过支付报酬，这些质量与实力各异的潜在盟友便会加入你的阵营。我很期待有朝一日在《中世纪编年史》中打造属于自己的中世纪版「世外天堂」。",
+          "after": "关于这一点，Raw Power的团队简要介绍了其运作方式，至少是其中一部分。在战役进程中，当你处于「探索地图」（似乎包含更多RPG元素）时，其中一个选项是招募雇佣兵。具体机制目前仍是个谜，但大致思路是：通过支付报酬，这些质量与实力各异的潜在盟友便会加入你的阵营。我很期待有朝一日在《编年史：中世纪》中打造属于自己的中世纪版「Outer Heaven」。"
+        },
+        {
+          "field": "paragraph_7",
+          "before": "Raw Power 还简要提及了其他一些令人兴奋的功能，这些功能将在临近发售时加入，进一步丰富战斗体验。其中最重要的当属攻城战。围攻一座巨大城堡的想法让我这个宅男心潮澎湃，再加上会影响战斗的天气系统，更是让我热血沸腾。可惜的是，Raw Power 并未透露具体时间。好消息是，粉丝们很快就能看到漂亮的天气效果，尽管目前只是纯装饰，没有实际游戏影响。",
+          "after": "Raw Power 还简要提及了其他一些令人兴奋的功能，这些功能将在临近发售时加入，进一步丰富战斗体验。其中最重要的当属攻城战。围攻一座巨大城堡的想法让人心潮澎湃，再加上会影响战斗的天气系统，更是让我热血沸腾。可惜的是，Raw Power 并未透露具体时间。好消息是，粉丝们很快就能看到漂亮的天气效果，尽管目前只是纯装饰，没有实际游戏影响。"
+        },
+        {
+          "field": "paragraph_8",
+          "before": "在介绍完《中世纪编年史》的战斗后，Raw Power 团队还给了我们最后一个惊喜。最初的预告片由演员汤姆·哈迪配音，但这还不是 Raw Power 带来的全部明星阵容。「索龙元帅」本人拉尔斯·米科尔森也将以某种方式加盟配音。这位多产的丹麦演员具体饰演什么角色尚不清楚，但毫无疑问，无论你的角色与他以何种方式相遇，他都将带来标志性的庄重与分量。",
+          "after": "在介绍完《编年史：中世纪》的战斗后，Raw Power团队还给了我们最后一个惊喜。最初的预告片由演员汤姆·哈迪配音，但这还不是Raw Power带来的全部明星阵容。拉尔斯·米科尔森也将以某种方式加盟配音。这位多产的丹麦演员具体饰演什么角色尚不清楚，但毫无疑问，无论你的角色与他以何种方式相遇，他都将带来标志性的庄重与分量。"
+        }
+      ]
+    },
+    {
+      "type": "user_polish",
+      "date": "2026-06-06",
+      "article_id": 53,
+      "url": "https://www.ign.com/articles/assassins-creed-co-creator-re-reveals-1666-amsterdam-30-minute-demo-playable-now",
+      "en_title": "Assassin's Creed Co-Creator Re-Reveals 1666 Amsterdam, 30-Minute Demo Playable Now",
+      "cn_title": "《刺客信条》联合创始人重推《1666阿姆斯特丹》，试玩版现已上线",
+      "edits": [
+        {
+          "field": "title",
+          "before": "《刺客信条》联合创始人重推《1666阿姆斯特丹》，试玩版现已上线",
+          "after": "《刺客信条》联合创始人重推《1666：阿姆斯特丹》，试玩版现已上线"
+        },
+        {
+          "field": "paragraph_1",
+          "before": "曾被放弃的历史动作冒险游戏《1666阿姆斯特丹》在夏日游戏节上由《刺客信条》联合创始人Patrice Désilets重新公布。",
+          "after": "曾被放弃的历史动作冒险游戏《1666：阿姆斯特丹》在夏日游戏节上由《刺客信条》联合创始人Patrice Désilets重新公布。"
+        },
+        {
+          "field": "paragraph_2",
+          "before": "《1666阿姆斯特丹》被描述为一款黑暗风格的第三人称剧情驱动动作冒险游戏，在Désilets最初于早已解散的THQ Montreal开始构思这一概念15年后，它重新浮出水面。该工作室随后被育碧收购，Désilets为育碧工作了数年，之后不欢而散。",
+          "after": "《1666：阿姆斯特丹》被描述为一款黑暗风格的第三人称剧情驱动动作冒险游戏，在Désilets最初于早已解散的THQ Montreal开始构思这一概念15年后，它重新浮出水面。该工作室随后被育碧收购，Désilets为育碧工作了数年，之后不欢而散。"
+        },
+        {
+          "field": "paragraph_3",
+          "before": "如今，Désilets在他自己的工作室Panache Digital（曾制作猿类生存游戏《先祖：人类奥德赛》）赢回了《1666阿姆斯特丹》的版权——尽管他选择先制作了《先祖》。",
+          "after": "如今，Désilets在他自己的工作室Panache Digital赢回了《1666：阿姆斯特丹》的版权——尽管他选择先制作了《先祖》。"
+        }
+      ]
+    }
+  ],
+  "candidates": [
+    {
+      "id_hint": "official_localized_game_titles",
+      "title": "????????????",
+      "rule": "?????????????????????????/????????????????????????????",
+      "category": "names",
+      "scope": "game titles",
+      "status_suggestion": "observe",
+      "confidence": 0.74,
+      "evidence_summary": "????? No Rest for the Wicked ??????????? Medieval: Chronicles ?????????????????/??????",
+      "examples": [
+        {
+          "date": "2026-06-06",
+          "article_id": 4,
+          "before": "?No Rest for the Wicked??????Xbox Series S????",
+          "after": "???????????Xbox Series S????"
+        },
+        {
+          "date": "2026-06-06",
+          "article_id": 45,
+          "before": "????????????????????",
+          "after": "?????????????????????"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id_hint": "colon_inside_work_titles",
+      "title": "????????????",
+      "rule": "???????????????????????????????????????",
+      "category": "punctuation",
+      "scope": "work titles with subtitles",
+      "status_suggestion": "observe",
+      "confidence": 0.66,
+      "evidence_summary": "?1666???????????1666?????????????????????",
+      "examples": [
+        {
+          "date": "2026-06-06",
+          "article_id": 53,
+          "before": "??????????????1666??????????????",
+          "after": "??????????????1666???????????????"
+        }
+      ],
+      "contradiction": ""
+    }
+  ],
+  "notes": [
+    "Only Tencent Docs imported polished drafts were used.",
+    "Single-article specifics were kept as observe-level evidence and not written to STYLE_PROFILE.md."
+  ],
+  "updated_at": "2026-06-22T21:49:02+08:00"
 }

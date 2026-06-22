@@ -1,11 +1,156 @@
 {
   "date": "2026-06-07",
-  "model": "deepseek-v4-flash",
-  "source_hash": "edd5b3cb9b930cd2cb90f0e5f31a78e67205f32b",
-  "signal_count": 0,
-  "candidate_count": 0,
-  "signals": [],
-  "candidates": [],
-  "notes": [],
-  "updated_at": "2026-06-07T02:52:19+08:00"
+  "observer": "codex",
+  "model": "codex",
+  "status": "observed",
+  "source_hash": "4e867bfc7365c6223f3d9a7d69e265ada85a218b",
+  "signal_count": 2,
+  "candidate_count": 2,
+  "signals": [
+    {
+      "type": "user_polish",
+      "date": "2026-06-07",
+      "article_id": 7,
+      "url": "https://www.ign.com/articles/final-fantasy-7-revelation-director-confirms-new-voice-actor-for-sephiroth",
+      "en_title": "Final Fantasy 7 Revelation Director Confirms New Voice Actor for Sephiroth",
+      "cn_title": "《最终幻想7 启示录》萨菲罗斯换声优",
+      "edits": [
+        {
+          "field": "title",
+          "before": "《最终幻想7 启示录》萨菲罗斯换声优",
+          "after": "《最终幻想7 重制版 启示录》萨菲罗斯英文声优换人"
+        },
+        {
+          "field": "subtitle",
+          "before": "新声优接棒",
+          "after": "褒贬不一"
+        },
+        {
+          "field": "paragraph_1",
+          "before": "史克威尔艾尼克斯已确认，《最终幻想7 启示录》中萨菲罗斯的英文配音演员将换人。",
+          "after": "史克威尔艾尼克斯已确认，《最终幻想7 重制版 启示录》中萨菲罗斯的英文配音演员将换人。"
+        },
+        {
+          "field": "paragraph_2",
+          "before": "导演滨口直树在接受油管主兼《最终幻想7》爱好者Maximilian Dood采访时确认，这位「片翼天使」在即将到来的重制续作中声音会有所不同。就在2026年夏日游戏节预告片首次展示游戏玩法，并呈现了一个声音更低沉沙哑的萨菲罗斯几小时后，滨口直树现身分享了更多关于史克威尔艾尼克斯这款新作的信息。",
+          "after": "总监滨口直树在接受油管主兼《最终幻想7》爱好者Maximilian Dood采访时确认，这位「片翼天使」在即将到来的重制续作中声音会有所不同。就在2026年夏日游戏节预告片首次展示游戏玩法，并呈现了一个声音更低沉沙哑的萨菲罗斯几小时后，滨口直树现身分享了更多关于史克威尔艾尼克斯这款新作的信息。"
+        },
+        {
+          "field": "paragraph_3",
+          "before": "粉丝们立刻注意到，这个角色的声音与演员Tyler Hoechlin在《最终幻想7 重制版》和《重生》中的演绎不同。滨口直树表示，这实际上是因为角色被重新选角，Hoechlin在开发期间无法参与。",
+          "after": "粉丝们立刻注意到，这个角色的声音与演员Tyler Hoechlin在《最终幻想7 重制版》和《重生》中的演绎不同。滨口直树表示，这实际上是因为配音演员被重新选角，Hoechlin在开发期间无法参与配音。"
+        },
+        {
+          "field": "paragraph_5",
+          "before": "《刺猬索尼克》的粉丝可能会认出Willingham是《索尼克爆破》中纳克鲁斯的配音，而《钢之炼金术师FA》的观众会知道他是罗伊·马斯坦的配音。除了是《龙与地下城》节目《Critical Role》的众多面孔之一，以及在许多漫威项目中为雷神配音外，Willingham过去还曾为《最终幻想》和《王国之心》系列贡献过他的才华。",
+          "after": "索尼克的粉丝可能会认出Willingham是《索尼克：爆破》中纳克鲁斯的配音，而《钢之炼金术师FA》的观众会知道他是罗伊·马斯坦的配音。除了是《龙与地下城》节目《Critical Role》的众多面孔之一，以及在许多漫威项目中为雷神配音外，Willingham过去还曾为《最终幻想》和《王国之心》系列贡献过他的才华。"
+        },
+        {
+          "field": "paragraph_6",
+          "before": "尽管Willingham将为《最终幻想7 启示录》中的萨菲罗斯带来丰富的经验，但一些粉丝无疑会感到至少有些失望，因为Hoechlin就在三部曲迎来高潮之际退出了这个角色。此外，Hoechlin不仅在《重制版》和《重生》中为萨菲罗斯配音，还在《核心危机：最终幻想7 重聚》和《最终幻想7：第一战士》中扮演过这一角色。",
+          "after": "尽管Willingham将为《最终幻想7 启示录》中的萨菲罗斯带来新的声音，但一些粉丝无疑会感到至少有些失望，因为Hoechlin就在三部曲迎来高潮之际退出了这个角色。此外，Hoechlin不仅在《重制版》和《重生》中为萨菲罗斯配音，还在《最终幻想7：核心危机重聚》和《最终幻想7：第一战士》中扮演过这一角色。"
+        },
+        {
+          "field": "paragraph_7",
+          "before": "现在判断追随史克威尔艾尼克斯《最终幻想7 重制版》旅程的玩家们会对配音演员更换作何反应还为时过早。尽管粉丝们得以长时间欣赏《最终幻想7 启示录》如何将克劳德一行人送入未来，但发行商不愿透露具体发售日期，只承诺将于2027年春季同步登陆PC（Steam和Epic Games Store）、Nintendo Switch 2、PlayStation 5和Xbox Series X|S。",
+          "after": "现在判断追随史克威尔艾尼克斯《最终幻想7 重制版》旅程的玩家们会对配音演员更换作何反应还为时过早。尽管粉丝们得以长时间欣赏《最终幻想7 重制版 启示录》如何将克劳德一行人送入未来，但发行商不愿透露具体发售日期，只承诺将于2027年春季同步登陆PC、Nintendo Switch 2、PS5和Xbox Series。"
+        }
+      ]
+    },
+    {
+      "type": "user_polish",
+      "date": "2026-06-07",
+      "article_id": 15,
+      "url": "https://www.ign.com/articles/stellar-blade-blood-rain-dev-comments-on-launch-platform-plans",
+      "en_title": "Stellar Blade: Blood Rain Dev Comments on Launch Platform Plans",
+      "cn_title": "《剑星：血雨》或跨平台首发，开发商称尚未决定",
+      "edits": [
+        {
+          "field": "subtitle",
+          "before": "平台未定，但野心不小",
+          "after": "「我们没什么可透露的」"
+        },
+        {
+          "field": "paragraph_2",
+          "before": "人们对《血雨》的首发平台格外关注，因为《剑星》在2024年由索尼互动娱乐发行，是PS5独占游戏。一年后推出了PC版，但至今没有Xbox Series X|S版本。",
+          "after": "人们对《血雨》的首发平台格外关注，因为《剑星》在2024年由索尼互动娱乐发行，是PS5独占游戏。一年后推出了PC版，但至今没有Xbox Series版本。"
+        },
+        {
+          "field": "paragraph_3",
+          "before": "Shift Up已确认将自行发行《血雨》，不再与索尼合作。这一决定引发了疑问：续作是否会与PS5版同步首发PC和Xbox Series X|S版？在洛杉矶夏日游戏节《血雨》公布后不久，Shift Up CEO兼《剑星》总监金亨泰接受IGN的Simon Cardy采访时表示，现在决定首发平台还为时过早，但确实暗示了这次会采取多平台策略。",
+          "after": "Shift Up已确认将自行发行《血雨》，不再与索尼合作。这一决定引发了疑问：续作是否会与PS5版同步首发PC和Xbox Series版？在洛杉矶夏日游戏节《血雨》公布后不久，Shift Up CEO兼《剑星》总监金亨泰接受IGN的Simon Cardy采访时表示，现在决定首发平台还为时过早，但确实暗示了这次会采取多平台策略。"
+        },
+        {
+          "field": "paragraph_7",
+          "before": "本周，微软新任Xbox CEOAsha Sharma表示，AI热潮导致的严重内存短缺是微软游戏业务面临的最大障碍之一。持续的RAM危机给游戏主机生产留下的空间很小，夏尔玛告诉彭博社，RAM和存储成本上涨是当前游戏行业最「令人不安和惊讶」的事情。",
+          "after": "本周，微软新任Xbox CEO Asha Sharma表示，AI热潮导致的严重内存短缺是微软游戏业务面临的最大障碍之一。持续的RAM危机给游戏主机生产留下的空间很小，Sharma告诉彭博社，RAM和存储成本上涨是当前游戏行业最「令人不安和惊讶」的事情。"
+        },
+        {
+          "field": "paragraph_8",
+          "before": "「通常在这个世代节点上，成本会下降，对吧？内存、存储等等。但有了AI，内存和存储成本却在上涨。上涨了2.75倍，而不是下降50%，」夏尔玛说，「就在我上任的头100天里，成本就上涨了50%，而且我认为还会继续上涨。」",
+          "after": "「通常在这个世代节点上，成本会下降，对吧？内存、存储等等。但有了AI，内存和存储成本却在上涨。上涨了2.75倍，而不是下降50%，」Sharma说，「就在我上任的头100天里，成本就上涨了50%，而且我认为还会继续上涨。」"
+        },
+        {
+          "field": "paragraph_10",
+          "before": "当被问及玩家是否还愿意为昂贵的主机买单时，夏尔玛回答：「我认为如果我们不创新，那才是真的贵。我来就是为了解决这个问题。你看，价格上涨是自然的。我们周围的每一代产品都在涨价。但我认为你不能在当前的硬件危机中涨价。因此，这需要在创新方式、商业模式思考以及如何推向市场方面进行根本性变革，我们正在为此努力。」",
+          "after": "当被问及玩家是否还愿意为昂贵的主机买单时，Sharma回答：「我认为如果我们不创新，那才是真的贵。我来就是为了解决这个问题。你看，价格上涨是自然的。我们周围的每一代产品都在涨价。但我认为你不能在当前的硬件危机中涨价。因此，这需要在创新方式、商业模式思考以及如何推向市场方面进行根本性变革，我们正在为此努力。」"
+        },
+        {
+          "field": "paragraph_11",
+          "before": "考虑到这一点，大多数人都在为非常昂贵的次世代主机做准备，无论是微软的Project Helix，还是索尼预计的PlayStation 6。今年5月，索尼表示尚未决定PS6的发布时间和售价，因为内存短缺问题持续严重。值得注意的是，近期有报道称，由于AI驱动的芯片危机，索尼可能不得不将PS6的发布推迟到2028年甚至2029年。",
+          "after": "考虑到这一点，大多数人都在为非常昂贵的次世代主机做准备，无论是微软的Project Helix，还是索尼预计的PS6。今年5月，索尼表示尚未决定PS6的发布时间和售价，因为内存短缺问题持续严重。值得注意的是，近期有报道称，由于AI驱动的芯片危机，索尼可能不得不将PS6的发布推迟到2028年甚至2029年。"
+        },
+        {
+          "field": "paragraph_12",
+          "before": "最终，听起来《剑星：血雨》确实会登陆PC、PS5和Xbox Series X|S，只是我们不知道具体时间。",
+          "after": "最终，听起来《剑星：血雨》确实会登陆PC、PS5和Xbox Series，只是我们不知道具体时间。"
+        }
+      ]
+    }
+  ],
+  "candidates": [
+    {
+      "id_hint": "include_series_context_in_titles",
+      "title": "???????????",
+      "rule": "?????????????????????????????????????????????????",
+      "category": "title",
+      "scope": "franchise and sequel news",
+      "status_suggestion": "observe",
+      "confidence": 0.72,
+      "evidence_summary": "????????7 ???????????7 ??? ????????????????????????",
+      "examples": [
+        {
+          "date": "2026-06-07",
+          "article_id": 7,
+          "before": "?????7 ???????????",
+          "after": "?????7 ??? ??????????????"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id_hint": "subtitle_can_use_quote_hook",
+      "title": "???????????",
+      "rule": "??????????????????????????????????????????",
+      "category": "subtitle",
+      "scope": "developer comment news",
+      "status_suggestion": "observe",
+      "confidence": 0.58,
+      "evidence_summary": "??????????????????????????????????????????????",
+      "examples": [
+        {
+          "date": "2026-06-07",
+          "article_id": 15,
+          "before": "??????????",
+          "after": "???????????"
+        }
+      ],
+      "contradiction": ""
+    }
+  ],
+  "notes": [
+    "Only Tencent Docs imported polished drafts were used.",
+    "Single-article specifics were kept as observe-level evidence and not written to STYLE_PROFILE.md."
+  ],
+  "updated_at": "2026-06-22T21:49:02+08:00"
 }
