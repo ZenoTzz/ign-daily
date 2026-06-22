@@ -630,6 +630,48 @@
       "total_tokens": 10206,
       "prompt_cache_hit_tokens": 7680,
       "prompt_cache_miss_tokens": 1794
+    },
+    {
+      "time_cn": "2026-06-22 11:11:58",
+      "task": "fulltext",
+      "model": "deepseek-v4-pro",
+      "article_id": 2,
+      "article_title": "《复仇者联盟：毁灭之日》泄漏片段被下架，但已传遍社交网络",
+      "article_url": "https://www.ign.com/articles/avengers-doomsday-leak-pulled-offline-just-as-it-spreads-across-social-media",
+      "article_date": "2026-06-22",
+      "detail": "",
+      "estimated_cost_usd": 0.006241,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 9433,
+      "completion_tokens": 6392,
+      "total_tokens": 15825,
+      "prompt_cache_hit_tokens": 7936,
+      "prompt_cache_miss_tokens": 1497
+    },
+    {
+      "time_cn": "2026-06-22 11:12:37",
+      "task": "fulltext_repair",
+      "model": "deepseek-v4-pro",
+      "article_id": 2,
+      "article_title": "《复仇者联盟：毁灭之日》泄漏片段被下架，但已传遍社交网络",
+      "article_url": "https://www.ign.com/articles/avengers-doomsday-leak-pulled-offline-just-as-it-spreads-across-social-media",
+      "article_date": "2026-06-22",
+      "detail": "1 audit issue(s)",
+      "estimated_cost_usd": 0.0038619,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 9903,
+      "completion_tokens": 3232,
+      "total_tokens": 13135,
+      "prompt_cache_hit_tokens": 7552,
+      "prompt_cache_miss_tokens": 2351
     }
   ]
 }
