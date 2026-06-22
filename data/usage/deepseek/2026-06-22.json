@@ -336,6 +336,258 @@
       "total_tokens": 10604,
       "prompt_cache_hit_tokens": 7808,
       "prompt_cache_miss_tokens": 553
+    },
+    {
+      "time_cn": "2026-06-22 08:19:18",
+      "task": "fulltext",
+      "model": "deepseek-v4-pro",
+      "article_id": 1,
+      "article_title": "《异于天堂》战斗更难却更出彩",
+      "article_url": "https://www.ign.com/articles/stranger-than-heaven-second-take-preview-stranger-than-heavens-combat-seems-harder-than-hell-and-thats-a-good-thing",
+      "article_date": "2026-06-22",
+      "detail": "",
+      "estimated_cost_usd": 0.0099981,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 11202,
+      "completion_tokens": 9826,
+      "total_tokens": 21028,
+      "prompt_cache_hit_tokens": 7936,
+      "prompt_cache_miss_tokens": 3266
+    },
+    {
+      "time_cn": "2026-06-22 08:19:55",
+      "task": "fulltext_chunk",
+      "model": "deepseek-v4-pro",
+      "article_id": 1,
+      "article_title": "《异于天堂》战斗更难却更出彩",
+      "article_url": "https://www.ign.com/articles/stranger-than-heaven-second-take-preview-stranger-than-heavens-combat-seems-harder-than-hell-and-thats-a-good-thing",
+      "article_date": "2026-06-22",
+      "detail": "paragraphs 1-6",
+      "estimated_cost_usd": 0.00416298,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 9313,
+      "completion_tokens": 4000,
+      "total_tokens": 13313,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 1505
+    },
+    {
+      "time_cn": "2026-06-22 08:20:15",
+      "task": "fulltext_chunk",
+      "model": "deepseek-v4-pro",
+      "article_id": 1,
+      "article_title": "《异于天堂》战斗更难却更出彩",
+      "article_url": "https://www.ign.com/articles/stranger-than-heaven-second-take-preview-stranger-than-heavens-combat-seems-harder-than-hell-and-thats-a-good-thing",
+      "article_date": "2026-06-22",
+      "detail": "paragraphs 1-1",
+      "estimated_cost_usd": 0.00184225,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 8382,
+      "completion_tokens": 1798,
+      "total_tokens": 10180,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 574
+    },
+    {
+      "time_cn": "2026-06-22 08:20:20",
+      "task": "fulltext_chunk",
+      "model": "deepseek-v4-pro",
+      "article_id": 1,
+      "article_title": "《异于天堂》战斗更难却更出彩",
+      "article_url": "https://www.ign.com/articles/stranger-than-heaven-second-take-preview-stranger-than-heavens-combat-seems-harder-than-hell-and-thats-a-good-thing",
+      "article_date": "2026-06-22",
+      "detail": "paragraphs 2-2",
+      "estimated_cost_usd": 0.00054334,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 8314,
+      "completion_tokens": 339,
+      "total_tokens": 8653,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 506
+    },
+    {
+      "time_cn": "2026-06-22 08:20:33",
+      "task": "fulltext_chunk",
+      "model": "deepseek-v4-pro",
+      "article_id": 1,
+      "article_title": "《异于天堂》战斗更难却更出彩",
+      "article_url": "https://www.ign.com/articles/stranger-than-heaven-second-take-preview-stranger-than-heavens-combat-seems-harder-than-hell-and-thats-a-good-thing",
+      "article_date": "2026-06-22",
+      "detail": "paragraphs 3-3",
+      "estimated_cost_usd": 0.00138637,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 8380,
+      "completion_tokens": 1275,
+      "total_tokens": 9655,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 572
+    },
+    {
+      "time_cn": "2026-06-22 08:20:55",
+      "task": "fulltext_chunk",
+      "model": "deepseek-v4-pro",
+      "article_id": 1,
+      "article_title": "《异于天堂》战斗更难却更出彩",
+      "article_url": "https://www.ign.com/articles/stranger-than-heaven-second-take-preview-stranger-than-heavens-combat-seems-harder-than-hell-and-thats-a-good-thing",
+      "article_date": "2026-06-22",
+      "detail": "paragraphs 4-4",
+      "estimated_cost_usd": 0.00245256,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 8433,
+      "completion_tokens": 2474,
+      "total_tokens": 10907,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 625
+    },
+    {
+      "time_cn": "2026-06-22 08:21:04",
+      "task": "fulltext_chunk",
+      "model": "deepseek-v4-pro",
+      "article_id": 1,
+      "article_title": "《异于天堂》战斗更难却更出彩",
+      "article_url": "https://www.ign.com/articles/stranger-than-heaven-second-take-preview-stranger-than-heavens-combat-seems-harder-than-hell-and-thats-a-good-thing",
+      "article_date": "2026-06-22",
+      "detail": "paragraphs 5-5",
+      "estimated_cost_usd": 0.00097486,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 8398,
+      "completion_tokens": 793,
+      "total_tokens": 9191,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 590
+    },
+    {
+      "time_cn": "2026-06-22 08:21:09",
+      "task": "fulltext_chunk",
+      "model": "deepseek-v4-pro",
+      "article_id": 1,
+      "article_title": "《异于天堂》战斗更难却更出彩",
+      "article_url": "https://www.ign.com/articles/stranger-than-heaven-second-take-preview-stranger-than-heavens-combat-seems-harder-than-hell-and-thats-a-good-thing",
+      "article_date": "2026-06-22",
+      "detail": "paragraphs 6-6",
+      "estimated_cost_usd": 0.00057379,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 8316,
+      "completion_tokens": 373,
+      "total_tokens": 8689,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 508
+    },
+    {
+      "time_cn": "2026-06-22 08:21:29",
+      "task": "fulltext_chunk",
+      "model": "deepseek-v4-pro",
+      "article_id": 1,
+      "article_title": "《异于天堂》战斗更难却更出彩",
+      "article_url": "https://www.ign.com/articles/stranger-than-heaven-second-take-preview-stranger-than-heavens-combat-seems-harder-than-hell-and-thats-a-good-thing",
+      "article_date": "2026-06-22",
+      "detail": "paragraphs 7-11",
+      "estimated_cost_usd": 0.00215154,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 8975,
+      "completion_tokens": 1857,
+      "total_tokens": 10832,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 1167
+    },
+    {
+      "time_cn": "2026-06-22 08:22:52",
+      "task": "fulltext",
+      "model": "deepseek-v4-pro",
+      "article_id": 3,
+      "article_title": "《高达：侠盗轨道》制作人：专注驾驶体验",
+      "article_url": "https://www.ign.com/articles/gundam-rogue-orbit-interview-a-gundam-game-with-a-focus-on-how-it-feels-to-be-the-pilot",
+      "article_date": "2026-06-22",
+      "detail": "",
+      "estimated_cost_usd": 0.01132354,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 11587,
+      "completion_tokens": 11157,
+      "total_tokens": 22744,
+      "prompt_cache_hit_tokens": 7936,
+      "prompt_cache_miss_tokens": 3651
+    },
+    {
+      "time_cn": "2026-06-22 08:24:08",
+      "task": "fulltext",
+      "model": "deepseek-v4-pro",
+      "article_id": 4,
+      "article_title": "《Yooka-Laylee》卡丁车新作前瞻：前Rare团队续写《迪迪刚赛车》",
+      "article_url": "https://www.ign.com/articles/super-yooka-laylee-kart-preview-ex-rare-devs-take-aim-at-reviving-the-spirit-of-diddy-kong-racing",
+      "article_date": "2026-06-22",
+      "detail": "",
+      "estimated_cost_usd": 0.01001419,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 11509,
+      "completion_tokens": 9691,
+      "total_tokens": 21200,
+      "prompt_cache_hit_tokens": 7936,
+      "prompt_cache_miss_tokens": 3573
+    },
+    {
+      "time_cn": "2026-06-22 08:24:49",
+      "task": "fulltext",
+      "model": "deepseek-v4-pro",
+      "article_id": 5,
+      "article_title": "Netflix竞得《芝麻街》电影改编权",
+      "article_url": "https://www.ign.com/articles/sesame-street-movie-in-the-works-at-netflix-following-bidding-war",
+      "article_date": "2026-06-22",
+      "detail": "",
+      "estimated_cost_usd": 0.00487293,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 9108,
+      "completion_tokens": 4982,
+      "total_tokens": 14090,
+      "prompt_cache_hit_tokens": 7936,
+      "prompt_cache_miss_tokens": 1172
     }
   ]
 }

@@ -11,8 +11,8 @@
       "url": "https://www.ign.com/articles/sesame-street-movie-in-the-works-at-netflix-following-bidding-war",
       "publish_time_cn": "2026-06-22 05:49",
       "pub_date": "2026-06-22 05:49",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/06/21/sesame-street-movie-1782078272267.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/21/sesame-street-movie-1782078272267.png",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/21/sesame-street-movie-1782078272267.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/21/sesame-street-movie-1782078272267.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -21,7 +21,11 @@
         "https://assets-prd.ignimgs.com/2026/06/21/sesame-street-movie-1782078272267.png"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-22T06:50:00+08:00"
+      "source_fetched_at": "2026-06-22T06:50:00+08:00",
+      "translation_path": "translations/05.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro"
     },
     {
       "id": 6,
@@ -54,13 +58,13 @@
       "category": "游戏新闻",
       "emoji": "🏎️",
       "en_title": "Super Yooka-Laylee Kart Preview: Ex-Rare Devs Take Aim at Reviving the Spirit of Diddy Kong Racing",
-      "cn_title": "《Yooka-Laylee》卡丁车新作前瞻：前Rare团队续写《迪迪刚赛车》",
-      "summary": "由前Rare工作室成员（曾参与《迪迪刚赛车》《班卓熊》等经典）开发的《Super Yooka-Laylee Kart》在夏日游戏节亮相。IGN试玩了早期版本，游戏赛道色彩鲜艳，支持8人对战，最大特色是可自定义比赛规则，如隐形赛或角色统一赛。目前操控略微滑腻，但开发者承诺将在后续完善。制作人表示致力打造最具重玩性的卡丁车作品。",
+      "cn_title": "《Super Yooka-Laylee Kart》前瞻：前Rare成员续写《迪迪刚赛车》传奇",
+      "summary": "由前Rare成员开发的《Super Yooka-Laylee Kart》在夏日游戏节亮相，支持8人对战，最大亮点是完全可自定义的比赛规则。试玩版操控稍滑但画面多彩，团队承诺优化，目标打造史上最具重玩性的卡丁车游戏。",
       "url": "https://www.ign.com/articles/super-yooka-laylee-kart-preview-ex-rare-devs-take-aim-at-reviving-the-spirit-of-diddy-kong-racing",
       "publish_time_cn": "2026-06-22 03:00",
       "pub_date": "2026-06-22 03:00",
       "cover_image": "https://assets-prd.ignimgs.com/2026/06/19/sylk-screenshot-002-1781831168852.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/19/sylk-screenshot-002-1781831168852.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/19/sylk-screenshot-002-1781831168852.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -90,7 +94,13 @@
           "source": "ai_guess",
           "reason": "常见社区译名，待确认"
         }
-      ]
+      ],
+      "translation_error": "Command '['/opt/hostedtoolcache/Python/3.11.15/x64/bin/python3', '/home/runner/work/ign-daily/ign-daily/scripts/translate_pipeline.py', '2026-06-22', '4', '--post']' returned non-zero exit status 1.",
+      "translation_failed_at": "2026-06-22T08:24:09.188265+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro",
+      "translation_path": "translations/04.json"
     },
     {
       "id": 2,
@@ -142,7 +152,7 @@
       "publish_time_cn": "2026-06-22 00:00",
       "pub_date": "2026-06-22 00:00",
       "cover_image": "https://assets-prd.ignimgs.com/2026/06/18/gundam-1781826814969.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/18/gundam-1781826814969.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/18/gundam-1781826814969.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -163,7 +173,11 @@
           "source": "ai_guess",
           "reason": "尚无官方中文译名，此为推测译名"
         }
-      ]
+      ],
+      "translation_path": "translations/03.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro"
     },
     {
       "id": 1,
@@ -176,7 +190,7 @@
       "publish_time_cn": "2026-06-21 11:00",
       "pub_date": "2026-06-21 11:00",
       "cover_image": "https://assets-prd.ignimgs.com/2026/06/19/strangerthanheaven-blogroll-1781848855496.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/19/strangerthanheaven-blogroll-1781848855496.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/19/strangerthanheaven-blogroll-1781848855496.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -185,7 +199,11 @@
         "https://assets-prd.ignimgs.com/2026/06/19/strangerthanheaven-blogroll-1781848855496.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-21T15:11:13+08:00"
+      "source_fetched_at": "2026-06-21T15:11:13+08:00",
+      "translation_path": "translations/01.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro"
     }
   ],
   "total": 6
