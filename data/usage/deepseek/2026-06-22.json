@@ -777,6 +777,27 @@
       "total_tokens": 8891,
       "prompt_cache_hit_tokens": 7808,
       "prompt_cache_miss_tokens": 397
+    },
+    {
+      "time_cn": "2026-06-22 18:52:48",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 7,
+      "article_title": "Nintendo Slashes Price on Tears of the Kingdom's Switch 2 Edition for the First Time",
+      "article_url": "https://www.ign.com/articles/zelda-tears-of-the-kingdom-amazon-prime-day-2026",
+      "article_date": "2026-06-23",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00034232,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8989,
+      "completion_tokens": 554,
+      "total_tokens": 9543,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 1181
     }
   ]
 }
