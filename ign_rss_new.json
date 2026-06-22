@@ -5,56 +5,71 @@
     "2026-06-22"
   ],
   "changed_dates": [
-    "2026-06-23"
+    "2026-06-23",
+    "2026-06-22"
   ],
   "new_target_dates": [
-    "2026-06-23"
+    "2026-06-22"
   ],
-  "new_count": 2,
-  "filtered_count": 0,
+  "new_count": 1,
+  "filtered_count": 1,
   "cleanup_count": 0,
   "changed_count": 2,
   "articles": [
     {
-      "title": "Pokémon Stop-Motion Series Gets New Artwork and Details from Aardman",
-      "url": "https://www.ign.com/articles/pokemon-stop-motion-series-gets-new-artwork-and-details-from-aardman",
-      "pubDate_cst": "2026-06-22 12:56"
-    },
-    {
-      "title": "The Best TV Hack for Competitive PC Gamers: Why TCL’s 288Hz Mode is a Game Changer",
-      "url": "https://www.ign.com/articles/the-best-tv-hack-for-competitive-pc-gamers-why-tcls-288hz-mode-is-a-game-changer",
-      "pubDate_cst": "2026-06-22 11:54"
+      "title": "Evomon Codes (June 2026)",
+      "url": "https://www.ign.com/articles/evomon-codes",
+      "pubDate_cst": "2026-06-21 18:23"
     }
   ],
-  "filtered_articles": [],
+  "filtered_articles": [
+    {
+      "title": "Nintendo Slashes Price on Tears of the Kingdom's Switch 2 Edition for the First Time",
+      "url": "https://www.ign.com/articles/zelda-tears-of-the-kingdom-amazon-prime-day-2026",
+      "pubDate_cst": "2026-06-22 17:19",
+      "description": "A rare first-party Nintendo discount just went live: The Legend of Zelda: Tears of the Kingdom is heavily marked down for Amazon Prime Day for players on both the original Switch and the new Switch 2.",
+      "categories": "",
+      "reason": "text:\\bdiscount\\b",
+      "rss_url": "https://feeds.feedburner.com/ign/all",
+      "filtered_at_cn": "2026-06-22 18:26:21",
+      "status": "filtered"
+    }
+  ],
   "runs": [
     {
       "target_date": "2026-06-23",
-      "new_count": 2,
-      "filtered_count": 0,
-      "changed_count": 2,
+      "new_count": 0,
+      "filtered_count": 1,
+      "changed_count": 1,
       "next_id": 7,
-      "articles": [
+      "articles": [],
+      "filtered_articles": [
         {
-          "title": "Pokémon Stop-Motion Series Gets New Artwork and Details from Aardman",
-          "url": "https://www.ign.com/articles/pokemon-stop-motion-series-gets-new-artwork-and-details-from-aardman",
-          "pubDate_cst": "2026-06-22 12:56"
-        },
-        {
-          "title": "The Best TV Hack for Competitive PC Gamers: Why TCL’s 288Hz Mode is a Game Changer",
-          "url": "https://www.ign.com/articles/the-best-tv-hack-for-competitive-pc-gamers-why-tcls-288hz-mode-is-a-game-changer",
-          "pubDate_cst": "2026-06-22 11:54"
+          "title": "Nintendo Slashes Price on Tears of the Kingdom's Switch 2 Edition for the First Time",
+          "url": "https://www.ign.com/articles/zelda-tears-of-the-kingdom-amazon-prime-day-2026",
+          "pubDate_cst": "2026-06-22 17:19",
+          "description": "A rare first-party Nintendo discount just went live: The Legend of Zelda: Tears of the Kingdom is heavily marked down for Amazon Prime Day for players on both the original Switch and the new Switch 2.",
+          "categories": "",
+          "reason": "text:\\bdiscount\\b",
+          "rss_url": "https://feeds.feedburner.com/ign/all",
+          "filtered_at_cn": "2026-06-22 18:26:21",
+          "status": "filtered"
         }
-      ],
-      "filtered_articles": []
+      ]
     },
     {
       "target_date": "2026-06-22",
-      "new_count": 0,
+      "new_count": 1,
       "filtered_count": 0,
-      "changed_count": 0,
-      "next_id": 7,
-      "articles": [],
+      "changed_count": 1,
+      "next_id": 8,
+      "articles": [
+        {
+          "title": "Evomon Codes (June 2026)",
+          "url": "https://www.ign.com/articles/evomon-codes",
+          "pubDate_cst": "2026-06-21 18:23"
+        }
+      ],
       "filtered_articles": []
     }
   ]

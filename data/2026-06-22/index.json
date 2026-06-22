@@ -182,6 +182,40 @@
       "translator_model": "deepseek-v4-pro"
     },
     {
+      "id": 7,
+      "category": "游戏新闻",
+      "emoji": "🎮",
+      "en_title": "Evomon Codes (June 2026)",
+      "cn_title": "《Evomon》兑换码（2026年6月）",
+      "summary": "《Evomon》是一款受《宝可梦》启发的生物收集冒险游戏，现已发布。玩家可使用兑换码获取EXP果实和金币等免费奖励，帮助你在奇幻世界中战斗、收集Evomon并组建队伍。本文汇总了当前所有有效兑换码及兑换步骤。",
+      "url": "https://www.ign.com/articles/evomon-codes",
+      "publish_time_cn": "2026-06-21 18:23",
+      "pub_date": "2026-06-21 18:23",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/17/evomon-object-1781688117250.png?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/17/evomon-object-1781688117250.png?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/17/evomon-object-1781688117250.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/17/evomon-object-1781688117250.png?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/17/evomon-object-1781688117250.png?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/17/evomon-object-1781688117250.png",
+        "https://assets-prd.ignimgs.com/2026/06/17/evomon-codes-3-1781691731946.png",
+        "https://assets-prd.ignimgs.com/2026/06/17/evomon-codes-2-1781691731946.png",
+        "https://assets-prd.ignimgs.com/2026/06/17/evomon-codes-1-1781691731946.png"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-22T18:26:23+08:00",
+      "pending_dict": [
+        {
+          "en": "Evomon",
+          "cn": "Evomon",
+          "cat": "games",
+          "source": "ai_guess",
+          "reason": "暂无官方中文译名，保留英文原名"
+        }
+      ]
+    },
+    {
       "id": 1,
       "category": "游戏新闻",
       "emoji": "💥",
@@ -208,5 +242,5 @@
       "translator_model": "deepseek-v4-pro"
     }
   ],
-  "total": 6
+  "total": 7
 }
