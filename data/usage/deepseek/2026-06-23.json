@@ -1,0 +1,110 @@
+{
+  "date": "2026-06-23",
+  "records": [
+    {
+      "time_cn": "2026-06-23 00:04:50",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 27,
+      "article_title": "Exclusive: How Cataclysm Arcade Turns a Single Booster Pack into a Full TCG Experience",
+      "article_url": "https://www.ign.com/articles/exclusive-cataclysm-arcade-tcg-interview",
+      "article_date": "2026-06-23",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00051312,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9985,
+      "completion_tokens": 666,
+      "total_tokens": 10651,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 2177
+    },
+    {
+      "time_cn": "2026-06-23 00:05:11",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 28,
+      "article_title": "Nick Frost Says Some People Won't Like HBO's New Harry Potter Series, But That's Alright",
+      "article_url": "https://www.ign.com/articles/nick-frost-says-some-people-wont-like-hbos-new-harry-potter-series-but-thats-alright",
+      "article_date": "2026-06-23",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00062092,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8491,
+      "completion_tokens": 1798,
+      "total_tokens": 10289,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 683
+    },
+    {
+      "time_cn": "2026-06-23 00:05:28",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 29,
+      "article_title": "Resident Evil Creator Shinji Mikami Says It's on Developers to Make Games People Want to Play, Not Just Stream",
+      "article_url": "https://www.ign.com/articles/resident-evil-creator-shinji-mikami-says-its-on-developers-to-make-games-people-want-to-play-not-just-stream",
+      "article_date": "2026-06-23",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00056548,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8679,
+      "completion_tokens": 1506,
+      "total_tokens": 10185,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 871
+    },
+    {
+      "time_cn": "2026-06-23 00:05:34",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 30,
+      "article_title": "The Most Expensive Game on Steam Costs $1,000 and Lasts Just 10 Minutes",
+      "article_url": "https://www.ign.com/articles/the-most-expensive-game-on-steam-costs-1000-and-lasts-just-10-minutes",
+      "article_date": "2026-06-23",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00030004,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8945,
+      "completion_tokens": 425,
+      "total_tokens": 9370,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 1137
+    },
+    {
+      "time_cn": "2026-06-23 00:05:47",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 31,
+      "article_title": "Halo: Campaign Evolved Main Menu Video Sparks Fan Debate Over Ring Detail",
+      "article_url": "https://www.ign.com/articles/halo-campaign-evolved-main-menu-video-sparks-fan-debate-over-ring-detail",
+      "article_date": "2026-06-23",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00043808,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8885,
+      "completion_tokens": 948,
+      "total_tokens": 9833,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 1077
+    }
+  ]
+}
