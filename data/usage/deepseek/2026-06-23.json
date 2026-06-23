@@ -1365,6 +1365,69 @@
       "total_tokens": 9063,
       "prompt_cache_hit_tokens": 7680,
       "prompt_cache_miss_tokens": 805
+    },
+    {
+      "time_cn": "2026-06-23 18:24:20",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 8,
+      "article_title": "Pokémon Winds and Waves Starter Creatures May Debut First in Pokémon Go, Fans Believe",
+      "article_url": "https://www.ign.com/articles/pokemon-winds-and-waves-starter-creatures-may-debut-first-in-pokemon-go-fans-believe",
+      "article_date": "2026-06-24",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00060322,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8686,
+      "completion_tokens": 1700,
+      "total_tokens": 10386,
+      "prompt_cache_hit_tokens": 7936,
+      "prompt_cache_miss_tokens": 750
+    },
+    {
+      "time_cn": "2026-06-23 18:24:34",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 9,
+      "article_title": "Fallout Season 3: Todd Howard Teases 'New Things' Never Seen Before in the Games",
+      "article_url": "https://www.ign.com/articles/fallout-season-3-todd-howard-teases-new-things-never-seen-before-in-the-games",
+      "article_date": "2026-06-24",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.0005181,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9158,
+      "completion_tokens": 1160,
+      "total_tokens": 10318,
+      "prompt_cache_hit_tokens": 7936,
+      "prompt_cache_miss_tokens": 1222
+    },
+    {
+      "time_cn": "2026-06-23 18:24:40",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 10,
+      "article_title": "Which Samsung Handset Is Right For You & Your Gaming Style?",
+      "article_url": "https://www.ign.com/articles/which-samsung-handset-is-right-for-you-your-gaming-style",
+      "article_date": "2026-06-24",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00023698,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8906,
+      "completion_tokens": 282,
+      "total_tokens": 9188,
+      "prompt_cache_hit_tokens": 7936,
+      "prompt_cache_miss_tokens": 970
     }
   ]
 }
