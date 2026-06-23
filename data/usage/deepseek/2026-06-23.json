@@ -1050,6 +1050,90 @@
       "total_tokens": 15045,
       "prompt_cache_hit_tokens": 7680,
       "prompt_cache_miss_tokens": 3204
+    },
+    {
+      "time_cn": "2026-06-23 10:30:06",
+      "task": "fulltext",
+      "model": "deepseek-v4-pro",
+      "article_id": 44,
+      "article_title": "微软确认《盗贼之海》真人电影正在开发中",
+      "article_url": "https://www.ign.com/articles/sea-of-thieves-live-action-movie-in-development-microsoft-confirms",
+      "article_date": "2026-06-23",
+      "detail": "",
+      "estimated_cost_usd": 0.00362752,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 9259,
+      "completion_tokens": 3475,
+      "total_tokens": 12734,
+      "prompt_cache_hit_tokens": 7936,
+      "prompt_cache_miss_tokens": 1323
+    },
+    {
+      "time_cn": "2026-06-23 10:30:26",
+      "task": "fulltext_chunk",
+      "model": "deepseek-v4-pro",
+      "article_id": 44,
+      "article_title": "微软确认《盗贼之海》真人电影正在开发中",
+      "article_url": "https://www.ign.com/articles/sea-of-thieves-live-action-movie-in-development-microsoft-confirms",
+      "article_date": "2026-06-23",
+      "detail": "paragraphs 1-6",
+      "estimated_cost_usd": 0.00162478,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 8583,
+      "completion_tokens": 1511,
+      "total_tokens": 10094,
+      "prompt_cache_hit_tokens": 7936,
+      "prompt_cache_miss_tokens": 647
+    },
+    {
+      "time_cn": "2026-06-23 10:30:41",
+      "task": "fulltext_chunk",
+      "model": "deepseek-v4-pro",
+      "article_id": 44,
+      "article_title": "微软确认《盗贼之海》真人电影正在开发中",
+      "article_url": "https://www.ign.com/articles/sea-of-thieves-live-action-movie-in-development-microsoft-confirms",
+      "article_date": "2026-06-23",
+      "detail": "paragraphs 7-8",
+      "estimated_cost_usd": 0.00098098,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 8297,
+      "completion_tokens": 914,
+      "total_tokens": 9211,
+      "prompt_cache_hit_tokens": 7936,
+      "prompt_cache_miss_tokens": 361
+    },
+    {
+      "time_cn": "2026-06-23 10:32:42",
+      "task": "fulltext",
+      "model": "deepseek-v4-pro",
+      "article_id": 48,
+      "article_title": "《战神：劳菲》2018年即已计划 演员Woll透露",
+      "article_url": "https://www.ign.com/articles/god-of-war-laufey-planned-since-2018-reveals-star-deborah-ann-woll",
+      "article_date": "2026-06-23",
+      "detail": "",
+      "estimated_cost_usd": 0.01081329,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 9772,
+      "completion_tokens": 11478,
+      "total_tokens": 21250,
+      "prompt_cache_hit_tokens": 7936,
+      "prompt_cache_miss_tokens": 1836
     }
   ]
 }
