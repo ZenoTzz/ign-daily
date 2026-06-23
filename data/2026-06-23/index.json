@@ -299,8 +299,8 @@
       "url": "https://www.ign.com/articles/hideo-kojima-says-upcoming-xbox-horror-game-od-has-a-special-system-for-people-who-are-too-scared-to-keep-playing",
       "publish_time_cn": "2026-06-23 00:49",
       "pub_date": "2026-06-23 00:49",
-      "cover_image": "https://assets-prd.ignimgs.com/2025/09/23/kojima-productions-10th-anniversary-livestream-beyond-the-strand-01-46-04-1758603097435.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2025/09/23/kojima-productions-10th-anniversary-livestream-beyond-the-strand-01-46-04-1758603097435.png",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2025/09/23/kojima-productions-10th-anniversary-livestream-beyond-the-strand-01-46-04-1758603097435.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2025/09/23/kojima-productions-10th-anniversary-livestream-beyond-the-strand-01-46-04-1758603097435.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -325,7 +325,11 @@
           "source": "ai_guess",
           "reason": "尚未有官方中文译名，暂时保留英文"
         }
-      ]
+      ],
+      "translation_path": "translations/43.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro"
     },
     {
       "id": 44,

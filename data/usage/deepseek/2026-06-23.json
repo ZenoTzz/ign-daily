@@ -903,6 +903,153 @@
       "total_tokens": 17851,
       "prompt_cache_hit_tokens": 7936,
       "prompt_cache_miss_tokens": 3368
+    },
+    {
+      "time_cn": "2026-06-23 09:38:30",
+      "task": "fulltext",
+      "model": "deepseek-v4-pro",
+      "article_id": 43,
+      "article_title": "小岛秀夫透露XBOX恐怖游戏《OD》为胆怯玩家提供特殊系统",
+      "article_url": "https://www.ign.com/articles/hideo-kojima-says-upcoming-xbox-horror-game-od-has-a-special-system-for-people-who-are-too-scared-to-keep-playing",
+      "article_date": "2026-06-23",
+      "detail": "",
+      "estimated_cost_usd": 0.00920422,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 9903,
+      "completion_tokens": 9563,
+      "total_tokens": 19466,
+      "prompt_cache_hit_tokens": 7936,
+      "prompt_cache_miss_tokens": 1967
+    },
+    {
+      "time_cn": "2026-06-23 09:38:49",
+      "task": "fulltext_chunk",
+      "model": "deepseek-v4-pro",
+      "article_id": 43,
+      "article_title": "小岛秀夫透露XBOX恐怖游戏《OD》为胆怯玩家提供特殊系统",
+      "article_url": "https://www.ign.com/articles/hideo-kojima-says-upcoming-xbox-horror-game-od-has-a-special-system-for-people-who-are-too-scared-to-keep-playing",
+      "article_date": "2026-06-23",
+      "detail": "paragraphs 1-6",
+      "estimated_cost_usd": 0.0019258,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 8721,
+      "completion_tokens": 1788,
+      "total_tokens": 10509,
+      "prompt_cache_hit_tokens": 7936,
+      "prompt_cache_miss_tokens": 785
+    },
+    {
+      "time_cn": "2026-06-23 09:39:12",
+      "task": "fulltext_chunk",
+      "model": "deepseek-v4-pro",
+      "article_id": 43,
+      "article_title": "小岛秀夫透露XBOX恐怖游戏《OD》为胆怯玩家提供特殊系统",
+      "article_url": "https://www.ign.com/articles/hideo-kojima-says-upcoming-xbox-horror-game-od-has-a-special-system-for-people-who-are-too-scared-to-keep-playing",
+      "article_date": "2026-06-23",
+      "detail": "paragraphs 7-12",
+      "estimated_cost_usd": 0.00205152,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 8722,
+      "completion_tokens": 1932,
+      "total_tokens": 10654,
+      "prompt_cache_hit_tokens": 7936,
+      "prompt_cache_miss_tokens": 786
+    },
+    {
+      "time_cn": "2026-06-23 09:39:33",
+      "task": "fulltext_chunk",
+      "model": "deepseek-v4-pro",
+      "article_id": 43,
+      "article_title": "小岛秀夫透露XBOX恐怖游戏《OD》为胆怯玩家提供特殊系统",
+      "article_url": "https://www.ign.com/articles/hideo-kojima-says-upcoming-xbox-horror-game-od-has-a-special-system-for-people-who-are-too-scared-to-keep-playing",
+      "article_date": "2026-06-23",
+      "detail": "paragraphs 13-14",
+      "estimated_cost_usd": 0.00162,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 8464,
+      "completion_tokens": 1565,
+      "total_tokens": 10029,
+      "prompt_cache_hit_tokens": 7936,
+      "prompt_cache_miss_tokens": 528
+    },
+    {
+      "time_cn": "2026-06-23 09:39:50",
+      "task": "fulltext_chunk",
+      "model": "deepseek-v4-pro",
+      "article_id": 43,
+      "article_title": "小岛秀夫透露XBOX恐怖游戏《OD》为胆怯玩家提供特殊系统",
+      "article_url": "https://www.ign.com/articles/hideo-kojima-says-upcoming-xbox-horror-game-od-has-a-special-system-for-people-who-are-too-scared-to-keep-playing",
+      "article_date": "2026-06-23",
+      "detail": "paragraphs 13-13",
+      "estimated_cost_usd": 0.00132637,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 8411,
+      "completion_tokens": 1254,
+      "total_tokens": 9665,
+      "prompt_cache_hit_tokens": 7936,
+      "prompt_cache_miss_tokens": 475
+    },
+    {
+      "time_cn": "2026-06-23 09:40:02",
+      "task": "fulltext_chunk",
+      "model": "deepseek-v4-pro",
+      "article_id": 43,
+      "article_title": "小岛秀夫透露XBOX恐怖游戏《OD》为胆怯玩家提供特殊系统",
+      "article_url": "https://www.ign.com/articles/hideo-kojima-says-upcoming-xbox-horror-game-od-has-a-special-system-for-people-who-are-too-scared-to-keep-playing",
+      "article_date": "2026-06-23",
+      "detail": "paragraphs 14-14",
+      "estimated_cost_usd": 0.00080698,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 8355,
+      "completion_tokens": 685,
+      "total_tokens": 9040,
+      "prompt_cache_hit_tokens": 7936,
+      "prompt_cache_miss_tokens": 419
+    },
+    {
+      "time_cn": "2026-06-23 09:40:39",
+      "task": "fulltext_repair",
+      "model": "deepseek-v4-pro",
+      "article_id": 43,
+      "article_title": "小岛秀夫透露XBOX恐怖游戏《OD》为胆怯玩家提供特殊系统",
+      "article_url": "https://www.ign.com/articles/hideo-kojima-says-upcoming-xbox-horror-game-od-has-a-special-system-for-people-who-are-too-scared-to-keep-playing",
+      "article_date": "2026-06-23",
+      "detail": "1 audit issue(s)",
+      "estimated_cost_usd": 0.00504165,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 10884,
+      "completion_tokens": 4161,
+      "total_tokens": 15045,
+      "prompt_cache_hit_tokens": 7680,
+      "prompt_cache_miss_tokens": 3204
     }
   ]
 }
