@@ -651,6 +651,132 @@
       "total_tokens": 8915,
       "prompt_cache_hit_tokens": 7936,
       "prompt_cache_miss_tokens": 569
+    },
+    {
+      "time_cn": "2026-06-24 04:57:20",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 31,
+      "article_title": "Batman: Knightfall Part 1 - Knightfall Review",
+      "article_url": "https://www.ign.com/articles/batman-knightfall-part-1-knightfall-review-animated-movie",
+      "article_date": "2026-06-24",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00074252,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9219,
+      "completion_tokens": 1931,
+      "total_tokens": 11150,
+      "prompt_cache_hit_tokens": 7936,
+      "prompt_cache_miss_tokens": 1283
+    },
+    {
+      "time_cn": "2026-06-24 04:57:35",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 32,
+      "article_title": "The Invite Review",
+      "article_url": "https://www.ign.com/articles/the-invite-review-olivia-wilde",
+      "article_date": "2026-06-24",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00055226,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9272,
+      "completion_tokens": 1225,
+      "total_tokens": 10497,
+      "prompt_cache_hit_tokens": 7936,
+      "prompt_cache_miss_tokens": 1336
+    },
+    {
+      "time_cn": "2026-06-24 04:57:47",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 33,
+      "article_title": "Robo Rally Dice Game Review",
+      "article_url": "https://www.ign.com/articles/robo-rally-dice-game-review",
+      "article_date": "2026-06-24",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00053574,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9682,
+      "completion_tokens": 961,
+      "total_tokens": 10643,
+      "prompt_cache_hit_tokens": 7936,
+      "prompt_cache_miss_tokens": 1746
+    },
+    {
+      "time_cn": "2026-06-24 04:57:56",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 34,
+      "article_title": "Lords of the Fallen 2 Delayed to 2027",
+      "article_url": "https://www.ign.com/articles/lords-of-the-fallen-2-delayed-to-2027",
+      "article_date": "2026-06-24",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.0003137,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8570,
+      "completion_tokens": 724,
+      "total_tokens": 9294,
+      "prompt_cache_hit_tokens": 7936,
+      "prompt_cache_miss_tokens": 634
+    },
+    {
+      "time_cn": "2026-06-24 04:58:07",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 35,
+      "article_title": "Batman: Knightfall Part 1: Knightfall Exclusive Trailer and Voice Cast Revealed",
+      "article_url": "https://www.ign.com/articles/batman-knightfall-part-1-trailer-voice-cast",
+      "article_date": "2026-06-24",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00034156,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8499,
+      "completion_tokens": 859,
+      "total_tokens": 9358,
+      "prompt_cache_hit_tokens": 7936,
+      "prompt_cache_miss_tokens": 563
+    },
+    {
+      "time_cn": "2026-06-24 04:58:16",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 36,
+      "article_title": "Disney Wanted to Buy Twitter and James Bond, Considered Merger With Apple",
+      "article_url": "https://www.ign.com/articles/disney-wanted-to-buy-twitter-and-james-bond-considered-merger-with-apple",
+      "article_date": "2026-06-24",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.0002836,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8547,
+      "completion_tokens": 628,
+      "total_tokens": 9175,
+      "prompt_cache_hit_tokens": 7936,
+      "prompt_cache_miss_tokens": 611
     }
   ]
 }
