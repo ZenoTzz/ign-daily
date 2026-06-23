@@ -16,9 +16,9 @@
   <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <script defer src="assets/alpine.min.js"></script>
-  <link rel="stylesheet" href="assets/style.css?v=20260623workbench1">
+  <link rel="stylesheet" href="assets/style.css?v=20260624mobile1">
   <script src="assets/exceljs.min.js"></script>
-  <script src="assets/app.js?v=20260623workbench1"></script>
+  <script src="assets/app.js?v=20260624mobile1"></script>
 </head>
 <body>
   <!-- SVG Icon Definitions -->
@@ -287,7 +287,7 @@
                   <span x-text="art.category || 'IGN'"></span>
                   <small x-text="art.publish_time_cn || art.pub_date || art.pubDate_cst || ''"></small>
                 </div>
-                <div>
+                <div class="queue-status-cell">
                   <span class="queue-status" :class="statusClass(art)" x-text="statusLabel(art)"></span>
                 </div>
                 <div class="queue-model">
