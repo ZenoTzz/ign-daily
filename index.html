@@ -16,9 +16,9 @@
   <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <script defer src="assets/alpine.min.js"></script>
-  <link rel="stylesheet" href="assets/style.css?v=20260616theme2">
+  <link rel="stylesheet" href="assets/style.css?v=20260623workbench1">
   <script src="assets/exceljs.min.js"></script>
-  <script src="assets/app.js?v=20260617review2"></script>
+  <script src="assets/app.js?v=20260623workbench1"></script>
 </head>
 <body>
   <!-- SVG Icon Definitions -->
@@ -181,214 +181,242 @@
       </div>
     </header>
 
-    <main class="container" style="padding-top:1.25rem; padding-bottom:2rem;">
+    <main class="container workbench-container" style="padding-top:1.25rem; padding-bottom:2rem;">
       <!-- Loading -->
       <div x-show="loading" class="loading-text">加载中...</div>
       <!-- Error -->
       <div x-show="error" class="error-box" x-text="error"></div>
 
-      <!-- Summary Bar -->
-      <div x-show="data && !loading" class="summary-bar">
-        <div class="summary-header">
-          <div>
-            <h2 class="summary-title">
-              <span x-text="isToday() ? '今日新闻' : currentDate + ' 新闻'"></span>
-              <span class="count" x-text="`(${data?.total ?? data?.articles?.length ?? 0} 条)`"></span>
-            </h2>
-            <p style="font-size:0.7rem; color:var(--text-muted); margin-top:0.25rem;" x-text="data?.window"></p>
+      <!-- Workbench -->
+      <section x-show="data && !loading" class="workbench-hero">
+        <div>
+          <p class="workbench-kicker" x-text="currentDate + ' 新闻日'"></p>
+          <h1 class="workbench-title">今日翻译工作台</h1>
+          <p class="workbench-subtitle">
+            <span x-text="`${data?.total ?? data?.articles?.length ?? 0} 条 RSS`"></span>
+            <span> · </span>
+            <span x-text="`${pendingSelectionCount} 条待选择`"></span>
+            <span> · </span>
+            <span x-text="`${requestedCount} 篇翻译中`"></span>
+            <span> · </span>
+            <span x-text="`${polishedIds.size} 篇已润色`"></span>
+          </p>
+        </div>
+        <div class="workbench-metrics">
+          <div class="metric-card metric-amber">
+            <strong x-text="pendingSelectionCount"></strong>
+            <span>待选择</span>
           </div>
-          <div class="summary-actions">
-            <span class="selected-count">已选 <strong x-text="selected.length"></strong></span>
-            <span class="selected-count" x-show="exportBasket.length > 0">
-              导出篮 <strong x-text="exportBasket.length"></strong>
-            </span>
-            <button x-show="filteredRssCount > 0" @click="showFilteredPanel=true" class="btn btn-ghost">
-              被过滤 <span x-text="`(${filteredRssCount})`"></span>
-            </button>
-            <button @click="addSelectedToExportBasket()" :disabled="selected.length === 0" class="btn btn-ghost">
-              加入导出篮
-            </button>
-            <button @click="exportSelectedExcel()" :disabled="selected.length === 0 && exportBasket.length === 0" class="btn btn-green">
-              导出Excel
-            </button>
-            <button x-show="exportBasket.length > 0" @click="clearExportBasket()" class="btn btn-ghost">
-              清空导出篮
-            </button>
-            <button @click="copyDigest()" class="btn btn-green" x-text="copyBtnText"></button>
-            <button @click="submitRequest()" :disabled="selected.length === 0" class="btn btn-primary">
-              <svg><use href="#icon-send"/></svg>
-              提交翻译
-            </button>
+          <div class="metric-card metric-blue">
+            <strong x-text="requestedCount"></strong>
+            <span>翻译中</span>
+          </div>
+          <div class="metric-card metric-green">
+            <strong x-text="polishedIds.size"></strong>
+            <span>已润色</span>
+          </div>
+          <div class="metric-card metric-red">
+            <strong x-text="todayCostEstimate"></strong>
+            <span>预估成本</span>
           </div>
         </div>
+      </section>
 
-        <!-- Pending translation banner -->
-        <div x-show="requestedCount > 0" class="pending-banner">
-          <svg class="pending-icon" width="16" height="16"><use href="#icon-clock"/></svg>
-          <div style="flex:1;">
-            <div class="pending-title">正在翻译 <span x-text="requestedCount"></span> 篇</div>
-            <p style="font-size:0.7rem; color:var(--text-muted); margin-top:0.2rem;">API 模式会自动触发 Actions；OpenClaw 模式由 OpenClaw 处理。完成后状态会变为「已翻译」。</p>
-            <div class="pending-pills">
-              <template x-for="a in requestedArticles" :key="a.id">
-                <span class="pending-pill">#<span x-text="a.id"></span> <span x-text="a.cn_title.length > 18 ? a.cn_title.slice(0,18)+'…' : a.cn_title"></span></span>
-              </template>
+      <section x-show="data && !loading" class="workbench-layout">
+        <div class="workbench-main">
+          <div class="panel-heading">
+            <div>
+              <h2>文章队列</h2>
+              <p>勾选需要翻译的文章，确认模型与费用后提交。</p>
             </div>
-            <button @click="refreshData()" class="btn btn-ghost" style="margin-top:0.5rem; font-size:0.7rem;">
-              <svg width="12" height="12"><use href="#icon-refresh"/></svg> 手动刷新
+            <div class="queue-actions">
+              <span class="selected-count">已选 <strong x-text="selected.length"></strong></span>
+              <button @click="addSelectedToExportBasket()" :disabled="selected.length === 0" class="btn btn-ghost">加入导出篮</button>
+              <button @click="exportSelectedExcel()" :disabled="selected.length === 0 && exportBasket.length === 0" class="btn btn-green">导出Excel</button>
+              <button @click="copyDigest()" class="btn btn-ghost" x-text="copyBtnText"></button>
+              <button @click="submitRequest()" :disabled="selected.length === 0" class="btn btn-primary">
+                <svg><use href="#icon-send"/></svg>
+                提交翻译
+              </button>
+            </div>
+          </div>
+
+          <div class="queue-toolbar">
+            <div class="status-tabs">
+              <button @click="filterCat = 'all'" :class="filterCat === 'all' ? 'active' : ''">全部 <span x-text="allArticleCount"></span></button>
+              <button @click="filterCat = '__pending__'" :class="filterCat === '__pending__' ? 'active' : ''">待选 <span x-text="pendingSelectionCount"></span></button>
+              <button @click="filterCat = '__requested__'" :class="filterCat === '__requested__' ? 'active' : ''">翻译中 <span x-text="requestedCount"></span></button>
+              <button @click="filterCat = '__translated__'" :class="filterCat === '__translated__' ? 'active' : ''">已完成 <span x-text="translatedCount"></span></button>
+              <button @click="filterCat = '__polished__'" :class="filterCat === '__polished__' ? 'active' : ''">已润色 <span x-text="polishedIds.size"></span></button>
+            </div>
+            <button x-show="filteredRssCount > 0" @click="showFilteredPanel=true" class="filtered-entry">
+              被过滤 <span x-text="filteredRssCount"></span>
             </button>
           </div>
-        </div>
 
-      </div>
-
-      <!-- Filter Tags -->
-      <div x-show="data && !loading" class="filter-bar">
-        <button @click="filterCat = '__translated__'"
-          :class="filterCat === '__translated__' ? 'active-green' : ''"
-          class="filter-tag">
-          <svg width="12" height="12"><use href="#icon-check-circle"/></svg>
-          已翻译
-          <span class="tag-count" x-text="`(${translatedCount})`"></span>
-        </button>
-        <button @click="filterCat = '__polished__'" x-show="polishedIds.size > 0"
-          :class="filterCat === '__polished__' ? 'active-amber' : ''"
-          class="filter-tag">
-          <svg width="12" height="12"><use href="#icon-pencil"/></svg>
-          已润色
-          <span class="tag-count" x-text="`(${polishedIds.size})`"></span>
-        </button>
-        <template x-for="cat in categories" :key="cat.key">
-          <button @click="filterCat = cat.key"
-            :class="filterCat === cat.key ? 'active' : ''"
-            class="filter-tag">
-            <span class="cat-dot" :style="`background:${getCatColor(cat.key)}`"></span>
-            <span x-text="cat.label"></span>
-            <span class="tag-count" x-text="`(${cat.count})`"></span>
-          </button>
-        </template>
-      </div>
-
-      <!-- Article List -->
-      <div x-show="data && !loading" class="article-list">
-        <template x-for="(art, idx) in filteredArticles" :key="art.id">
-          <article class="article-card" :style="`animation-delay: ${idx * 40}ms`">
-            <div class="card-inner">
-              <!-- Checkbox -->
-              <label class="card-checkbox" @click.stop>
-                <input type="checkbox" :value="art.id" x-model.number="selected">
-              </label>
-
-              <!-- Cover image -->
-              <div class="card-cover" x-show="art.cover_image">
-                <img :src="art.cover_image" :alt="art.cn_title" loading="lazy" referrerpolicy="no-referrer"
-                     onerror="this.parentElement.style.display='none'">
-              </div>
-
-              <!-- Content -->
-              <div class="card-body">
-                <div class="card-meta">
-                  <span class="card-id" :title="`stable id #${art.id}`" x-text="`#${idx + 1}`"></span>
-                  <svg class="card-cat-icon"><use :href="`#icon-${getCatIcon(art.category)}`"/></svg>
-                  <span class="card-cat-badge" x-text="art.category"></span>
-                  <span class="card-time" x-text="art.publish_time_cn || art.pub_date || art.pubDate_cst || ''"></span>
-                  <template x-if="art.translation_status === 'done'">
-                    <span class="card-status status-done">
-                      <svg><use href="#icon-check-circle"/></svg> 已翻译
-                    </span>
-                  </template>
-                  <template x-if="art.translation_status === 'done' && translatorLabel(art)">
-                    <span class="card-status status-done" x-text="translatorLabel(art)"></span>
-                  </template>
-                  <template x-if="art.translation_status === 'requested'">
-                    <span class="card-status status-requested">
-                      <svg><use href="#icon-clock"/></svg> 翻译中
-                    </span>
-                  </template>
-                  <template x-if="art.translation_status === 'needs_review'">
-                    <span class="card-status status-review" :title="reviewReason(art)">
-                      <svg><use href="#icon-pencil"/></svg> 需复核
-                    </span>
-                  </template>
-                  <template x-if="art.comparison_status === 'done'">
-                    <span class="card-status status-done">已对比</span>
-                  </template>
-                  <template x-if="art.comparison_status === 'requested'">
-                    <span class="card-status status-requested">
-                      <svg><use href="#icon-clock"/></svg> 对比中
-                    </span>
-                  </template>
-                  <template x-if="polishedIds.has(art.id)">
-                    <span class="card-status status-polished">
-                      <svg><use href="#icon-pencil"/></svg> 已润色
-                    </span>
-                  </template>
+          <div class="queue-table">
+            <div class="queue-head">
+              <span>标题</span>
+              <span>来源 / 时间</span>
+              <span>状态</span>
+              <span>模型</span>
+              <span></span>
+            </div>
+            <template x-for="(art, idx) in filteredArticles" :key="art.id">
+              <article class="queue-row" :class="{ selected: selected.includes(Number(art.id)) }">
+                <label class="queue-check" @click.stop>
+                  <input type="checkbox" :value="art.id" x-model.number="selected">
+                </label>
+                <div class="queue-title-cell">
+                  <div class="queue-thumb" :class="{ empty: !art.cover_image }">
+                    <img x-show="art.cover_image" :src="art.cover_image" :alt="art.cn_title" loading="lazy" referrerpolicy="no-referrer"
+                         onerror="this.parentElement.classList.add('empty'); this.style.display='none'">
+                    <span x-show="!art.cover_image">IGN</span>
+                  </div>
+                  <div class="queue-copy">
+                    <template x-if="art.translation_status === 'done' || (art.translation_status === 'needs_review' && hasReviewDraft(art))">
+                      <a :href="`article.html?date=${data.date}&id=${art.id}`" @click="saveState()" class="queue-title" x-text="art.cn_title"></a>
+                    </template>
+                    <template x-if="art.translation_status !== 'done' && !(art.translation_status === 'needs_review' && hasReviewDraft(art))">
+                      <h3 class="queue-title" x-text="art.cn_title"></h3>
+                    </template>
+                    <p x-text="art.summary || art.en_title"></p>
+                  </div>
                 </div>
-
-                <!-- Title -->
-                <template x-if="art.translation_status === 'done' || (art.translation_status === 'needs_review' && hasReviewDraft(art))">
-                  <a :href="`article.html?date=${data.date}&id=${art.id}`"
-                    @click="saveState()"
-                    class="card-title" style="display:block;"
-                    x-text="art.cn_title"></a>
-                </template>
-                <template x-if="art.translation_status !== 'done' && !(art.translation_status === 'needs_review' && hasReviewDraft(art))">
-                  <h3 class="card-title" x-text="art.cn_title"></h3>
-                </template>
-
-                <p class="card-en-title" x-text="art.en_title"></p>
-                <p class="card-summary" x-text="art.summary"></p>
-
-                <div class="card-actions">
-                  <a :href="art.url" target="_blank" rel="noopener" @click.stop class="card-link">
-                    <svg><use href="#icon-external"/></svg> IGN原文
+                <div class="queue-meta">
+                  <span x-text="art.category || 'IGN'"></span>
+                  <small x-text="art.publish_time_cn || art.pub_date || art.pubDate_cst || ''"></small>
+                </div>
+                <div>
+                  <span class="queue-status" :class="statusClass(art)" x-text="statusLabel(art)"></span>
+                </div>
+                <div class="queue-model">
+                  <span x-text="translatorLabel(art) || preferredModelLabel(art)"></span>
+                </div>
+                <div class="queue-more">
+                  <a :href="art.url" target="_blank" rel="noopener" @click.stop title="IGN原文">
+                    <svg><use href="#icon-external"/></svg>
                   </a>
                   <template x-if="art.translation_status === 'done'">
-                    <a :href="`article.html?date=${data.date}&id=${art.id}`"
-                      @click="saveState()"
-                      class="card-link" style="color:var(--accent); font-weight:600;">
-                      <svg><use href="#icon-book"/></svg> 查看翻译
+                    <a :href="`article.html?date=${data.date}&id=${art.id}`" @click="saveState()" title="查看翻译">
+                      <svg><use href="#icon-book"/></svg>
                     </a>
                   </template>
                   <template x-if="art.translation_status === 'needs_review' && hasReviewDraft(art)">
-                    <a :href="`article.html?date=${data.date}&id=${art.id}`"
-                      @click="saveState()"
-                      class="card-link" style="color:var(--amber); font-weight:600;"
-                      :title="reviewReason(art)">
-                      <svg><use href="#icon-pencil"/></svg> 复核草稿
+                    <a :href="`article.html?date=${data.date}&id=${art.id}`" @click="saveState()" :title="reviewReason(art)">
+                      <svg><use href="#icon-pencil"/></svg>
                     </a>
                   </template>
                   <template x-if="art.translation_status === 'needs_review' && !hasReviewDraft(art)">
-                    <button @click.stop="retryTranslation(art)"
-                      class="card-link"
-                      style="background:transparent; border:0; padding:0; cursor:pointer; color:var(--amber); font-weight:600;"
-                      :title="reviewReason(art)">
-                      <svg><use href="#icon-send"/></svg> &#37325;&#26032;&#25552;&#20132;&#32763;&#35793;
+                    <button @click.stop="retryTranslation(art)" :title="reviewReason(art)">
+                      <svg><use href="#icon-send"/></svg>
                     </button>
                   </template>
-                  <template x-if="art.comparison_status === 'done'">
-                    <a :href="`comparison.html?date=${data.date}&id=${art.id}`"
-                      @click="saveState()"
-                      class="card-link" style="color:var(--accent); font-weight:600;">
-                      <svg><use href="#icon-book"/></svg> 查看对比
-                    </a>
-                  </template>
-                  <button @click.stop="runComparison(art)"
-                    :disabled="comparisonTriggeringId === art.id"
-                    class="card-link"
-                    style="background:transparent; border:0; padding:0; cursor:pointer;">
+                  <button @click.stop="runComparison(art)" :disabled="comparisonTriggeringId === art.id" title="对比翻译">
                     <svg><use href="#icon-send"/></svg>
-                    <span x-text="comparisonTriggeringId === art.id ? '触发中...' : '对比翻译'"></span>
                   </button>
                 </div>
-              </div>
+              </article>
+            </template>
+            <div x-show="filteredArticles.length === 0" class="empty-queue">
+              当前筛选下没有文章。
             </div>
-          </article>
-        </template>
-      </div>
+          </div>
+
+          <div class="queue-footnotes">
+            <div class="footnote-green">
+              今日完成：<strong x-text="polishedIds.size"></strong> 篇已润色，可进入文章页复查中英对照。
+            </div>
+            <button x-show="filteredRssCount > 0" @click="showFilteredPanel=true" class="footnote-muted">
+              被过滤文章：<strong x-text="filteredRssCount"></strong> 条，点击查看隔离区。
+            </button>
+          </div>
+        </div>
+
+        <aside class="workbench-rail">
+          <section class="rail-panel">
+            <div class="rail-heading">
+              <h3>翻译队列</h3>
+              <p>当前运行与待处理任务一眼可见。</p>
+            </div>
+            <div class="progress-item">
+              <div><span>标题摘要</span><strong x-text="`${Math.max(0, allArticleCount - pendingSelectionCount)} / ${allArticleCount}`"></strong></div>
+              <i><b :style="`width:${queuePercent(Math.max(0, allArticleCount - pendingSelectionCount), allArticleCount)}%`"></b></i>
+            </div>
+            <div class="progress-item">
+              <div><span>全文翻译</span><strong x-text="`${requestedCount} 篇进行中`"></strong></div>
+              <i><b :style="`width:${queuePercent(requestedCount, Math.max(allArticleCount, 1))}%`"></b></i>
+            </div>
+            <div class="progress-item">
+              <div><span>润色复查</span><strong x-text="`${polishedIds.size} 篇确认`"></strong></div>
+              <i><b :style="`width:${queuePercent(polishedIds.size, Math.max(translatedCount, 1))}%`"></b></i>
+            </div>
+            <div class="rail-actions">
+              <button @click="refreshData()" class="btn btn-ghost">
+                <svg><use href="#icon-refresh"/></svg>
+                刷新
+              </button>
+              <button @click="showSettings=true" class="btn btn-ghost">
+                <svg><use href="#icon-settings"/></svg>
+                自动化
+              </button>
+            </div>
+          </section>
+
+          <section class="rail-panel usage-panel">
+            <div class="rail-heading">
+              <h3>今日用量</h3>
+              <p>按当前队列给出轻量估算，真实扣费仍以用量页为准。</p>
+            </div>
+            <strong class="usage-number" x-text="todayCostEstimate"></strong>
+            <p class="usage-copy" x-text="`${todayTokensEstimate} tokens · 缓存命中估算 ${todayCacheHitEstimate}`"></p>
+            <div class="usage-bars">
+              <template x-for="(h, i) in [24,42,30,52,38,64,46,34,58]" :key="i">
+                <span :class="i === 5 ? 'hot' : ''" :style="`height:${h}px`"></span>
+              </template>
+            </div>
+          </section>
+
+          <section class="rail-panel">
+            <div class="rail-heading">
+              <h3>词库建议</h3>
+              <p>翻译过程中自动发现的新词。</p>
+            </div>
+            <template x-for="(c, i) in globalPending.slice(0, 3)" :key="`${c._articleId}-${i}-${c.en}`">
+              <div class="glossary-mini">
+                <div>
+                  <span x-text="c.en"></span>
+                  <strong x-text="c.cn || '待定译名'"></strong>
+                </div>
+                <button @click="approveGlobalPending(i)" title="入库">✓</button>
+                <button @click="ignoreGlobalPending(i)" title="忽略">×</button>
+              </div>
+            </template>
+            <button x-show="globalPending.length > 3" @click="showPendingPanel = true" class="rail-link">
+              查看全部 <span x-text="globalPending.length"></span> 个候选词
+            </button>
+            <div x-show="globalPending.length === 0" class="rail-empty">暂无待确认词库。</div>
+          </section>
+
+          <section class="rail-panel">
+            <div class="rail-heading">
+              <h3>学习笔记</h3>
+              <p>来自最近润色差异的风格信号。</p>
+            </div>
+            <ul class="learning-notes">
+              <li>每篇文章主动补一个 2-15 字副标题。</li>
+              <li>IGN subheadline 不直接当正文首段。</li>
+              <li>标题中游戏名统一使用书名号。</li>
+              <li>不知名人物优先保留英文名。</li>
+            </ul>
+            <a href="learning.html" class="btn btn-ghost rail-note-action">打开周报</a>
+          </section>
+        </aside>
+      </section>
     </main>
 
     <!-- Mobile FAB Menu -->
-    <div class="fab-container sm:hidden" x-data="{ fabOpen: false }">
+    <div class="fab-container sm:hidden">
       <div x-show="fabOpen" x-cloak x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 scale-90" x-transition:enter-end="opacity-100 scale-100" x-transition:leave="transition ease-in duration-100" x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-90"
            class="fab-menu">
         <a href="dict.html" class="fab-item"><svg width="14" height="14"><use href="#icon-book"/></svg> 词库</a>
@@ -507,7 +535,7 @@
             <div class="pending-card">
               <div style="display:flex; justify-content:space-between; gap:0.75rem; align-items:flex-start;">
                 <div style="min-width:0;">
-                  <div style="font-weight:700; color:var(--text-main); line-height:1.45;" x-text="item.title"></div>
+                  <div style="font-weight:700; color:var(--text-primary); line-height:1.45;" x-text="item.title"></div>
                   <div style="font-size:0.7rem; color:var(--text-muted); margin-top:0.35rem;">
                     <span x-text="item.pubDate_cst || ''"></span>
                     <span x-show="item.reason"> · </span>

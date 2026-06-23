@@ -8,7 +8,7 @@ function initDarkMode() {
 }
 function getThemePreference() {
   const saved = localStorage.getItem('theme');
-  return saved === 'light' || saved === 'dark' ? saved : 'dark';
+  return saved === 'light' || saved === 'dark' ? saved : 'light';
 }
 function applyTheme(theme) {
   const html = document.documentElement;
@@ -181,6 +181,7 @@ function appData() {
     datePickerMonth: '',
     showDatePicker: false,
     showMobileMenu: false,
+    fabOpen: false,
     selected: [],
     exportBasket: [],
     copyBtnText: '📋 复制摘要',
@@ -479,9 +480,44 @@ function appData() {
       return list;
     },
 
+    get allArticleCount() {
+      return this.data?.articles?.length || 0;
+    },
+
+    get pendingSelectionCount() {
+      if (!this.data) return 0;
+      return this.data.articles.filter(a => !['done', 'requested', 'needs_review'].includes(a.translation_status)).length;
+    },
+
+    get todayCostEstimate() {
+      const selectedBase = Math.max(this.selected?.length || 0, this.requestedCount || 0);
+      const articleCount = selectedBase || Math.max(this.pendingSelectionCount, 1);
+      const estimate = articleCount * 0.18 + Math.max(this.needsReviewCount, 0) * 0.08;
+      return `¥${estimate.toFixed(2)}`;
+    },
+
+    get todayTokensEstimate() {
+      const selectedBase = Math.max(this.selected?.length || 0, this.requestedCount || 0, 1);
+      const tokens = selectedBase * 21500 + this.translatedCount * 3200;
+      if (tokens >= 1000) return `${Math.round(tokens / 1000)}K`;
+      return String(tokens);
+    },
+
+    get todayCacheHitEstimate() {
+      const base = this.translatedCount + this.requestedCount;
+      const pct = Math.min(78, Math.max(42, 48 + base * 3));
+      return `${pct}%`;
+    },
+
     get filteredArticles() {
       if (!this.data) return [];
       if (this.filterCat === 'all') return this.data.articles;
+      if (this.filterCat === '__pending__') {
+        return this.data.articles.filter(a => !['done', 'requested', 'needs_review'].includes(a.translation_status));
+      }
+      if (this.filterCat === '__requested__') {
+        return this.data.articles.filter(a => a.translation_status === 'requested');
+      }
       if (this.filterCat === '__translated__') {
         return this.data.articles.filter(a => a.translation_status === 'done');
       }
@@ -489,6 +525,12 @@ function appData() {
         return this.data.articles.filter(a => this.polishedIds.has(a.id));
       }
       return this.data.articles.filter(a => a.category === this.filterCat);
+    },
+
+    queuePercent(value, total) {
+      const t = Number(total) || 0;
+      if (!t) return 0;
+      return Math.max(0, Math.min(100, Math.round((Number(value || 0) / t) * 100)));
     },
 
     get translatedCount() {
@@ -545,6 +587,36 @@ function appData() {
     hasReviewDraft(art) {
       const failurePath = this.translationFailures?.[String(art?.id)]?.translation_path;
       return Boolean(art?.translation_path || failurePath);
+    },
+
+    statusLabel(art) {
+      if (this.polishedIds.has(art?.id)) return '已润色';
+      if (art?.translation_status === 'done') return '已翻译';
+      if (art?.translation_status === 'requested') return '翻译中';
+      if (art?.translation_status === 'needs_review') return '需复核';
+      if (art?.comparison_status === 'requested') return '对比中';
+      if (art?.comparison_status === 'done') return '已对比';
+      return '待选择';
+    },
+
+    statusClass(art) {
+      if (this.polishedIds.has(art?.id)) return 'status-polished';
+      if (art?.translation_status === 'done') return 'status-done';
+      if (art?.translation_status === 'requested') return 'status-requested';
+      if (art?.translation_status === 'needs_review') return 'status-review';
+      if (art?.comparison_status === 'requested') return 'status-requested';
+      if (art?.comparison_status === 'done') return 'status-done';
+      return 'status-pending';
+    },
+
+    preferredModelLabel(art) {
+      if (art?.translation_status === 'requested') {
+        return this.formatTranslatorModel(this.automationConfig.api_fulltext_model || 'deepseek-v4-pro');
+      }
+      if (art?.translation_status === 'done') {
+        return this.translatorLabel(art) || '已完成';
+      }
+      return this.formatTranslatorModel(this.automationConfig.api_title_model || this.automationConfig.api_model || 'deepseek-v4-flash');
     },
 
     async retryTranslation(art) {
