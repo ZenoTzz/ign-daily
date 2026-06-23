@@ -2,6 +2,73 @@
   "date": "2026-06-24",
   "articles": [
     {
+      "id": 11,
+      "category": "影视资讯",
+      "emoji": "🕷️",
+      "en_title": "Spider-Man: Brand New Day's Villain 'Still Very Much a Secret,' Tom Holland Teases",
+      "cn_title": "汤姆·赫兰德透露《蜘蛛侠：崭新之日》反派仍是秘密",
+      "summary": "汤姆·赫兰德在宣传采访时透露，《蜘蛛侠：Brand New Day》的真正反派仍严格保密，尽管预告片中已出现多名敌人。他称该反派是系列中「前所未有的」。影片已确认蝎子、墓碑等多个反派角色，但主要反派尚未曝光。传闻萨迪·辛克饰演的可能是琴·葛蕾而非反派。影片将于7月31日上映。",
+      "url": "https://www.ign.com/articles/spider-man-brand-new-days-villain-still-very-much-a-secret-tom-holland-teases",
+      "publish_time_cn": "2026-06-23 18:41",
+      "pub_date": "2026-06-23 18:41",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/17/spiderthumb-1781723266727.png?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/17/spiderthumb-1781723266727.png?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/17/spiderthumb-1781723266727.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/17/spiderthumb-1781723266727.png?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/17/spiderthumb-1781723266727.png?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/17/spiderthumb-1781723266727.png"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-23T21:31:36+08:00",
+      "pending_dict": [
+        {
+          "en": "Brand New Day",
+          "cn": "暂保留英文，或待官方中文名",
+          "cat": "movies_tv",
+          "source": "ai_guess",
+          "reason": "无稳定官方中文译名，建议等待IGN中国或官方定名"
+        },
+        {
+          "en": "Tombstone",
+          "cn": "墓碑",
+          "cat": "movies_tv",
+          "source": "ai_guess",
+          "reason": "漫威反派，曾有译名“墓碑”，但MCU版本不确定是否沿用"
+        },
+        {
+          "en": "Boomerang",
+          "cn": "回旋镖",
+          "cat": "movies_tv",
+          "source": "ai_guess",
+          "reason": "漫威反派，译名常见，但中文社区未统一"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "category": "影视资讯",
+      "emoji": "🎬",
+      "en_title": "James Gunn Teases Supergirl's 'Big' Role in Superman Sequel Man of Tomorrow",
+      "cn_title": "James Gunn 透露超级少女在《超人》续集《Man of Tomorrow》中角色重大",
+      "summary": "James Gunn 透露，米莉·阿尔考克饰演的超级少女将在明年上映的DC宇宙续集《Man of Tomorrow》中扮演重大角色。她与超人的关系将进一步发展，两人因性格差异产生矛盾，这不仅是《超级少女》电影的核心，也是《Man of Tomorrow》的重要部分。Gunn提到超级少女并非只是客串，而是重要组成部分。",
+      "url": "https://www.ign.com/articles/james-gunn-teases-supergirls-big-role-in-superman-sequel-man-of-tomorrow",
+      "publish_time_cn": "2026-06-23 18:24",
+      "pub_date": "2026-06-23 18:24",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/03/31/sprgrl-vert-main-2764x4096-dom-2-thumb-1774988214106.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/03/31/sprgrl-vert-main-2764x4096-dom-2-thumb-1774988214106.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/03/31/sprgrl-vert-main-2764x4096-dom-2-thumb-1774988214106.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/03/31/sprgrl-vert-main-2764x4096-dom-2-thumb-1774988214106.jpg?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/03/31/sprgrl-vert-main-2764x4096-dom-2-thumb-1774988214106.jpg?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/03/31/sprgrl-vert-main-2764x4096-dom-2-thumb-1774988214106.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-23T21:31:37+08:00"
+    },
+    {
       "id": 8,
       "category": "游戏新闻",
       "emoji": "🎮",
@@ -319,5 +386,5 @@
       "translator_model": "deepseek-v4-pro"
     }
   ],
-  "total": 10
+  "total": 12
 }

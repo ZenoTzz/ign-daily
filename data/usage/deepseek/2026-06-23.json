@@ -1428,6 +1428,48 @@
       "total_tokens": 9188,
       "prompt_cache_hit_tokens": 7936,
       "prompt_cache_miss_tokens": 970
+    },
+    {
+      "time_cn": "2026-06-23 21:31:51",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 11,
+      "article_title": "Spider-Man: Brand New Day's Villain 'Still Very Much a Secret,' Tom Holland Teases",
+      "article_url": "https://www.ign.com/articles/spider-man-brand-new-days-villain-still-very-much-a-secret-tom-holland-teases",
+      "article_date": "2026-06-24",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00041814,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8828,
+      "completion_tokens": 968,
+      "total_tokens": 9796,
+      "prompt_cache_hit_tokens": 7936,
+      "prompt_cache_miss_tokens": 892
+    },
+    {
+      "time_cn": "2026-06-23 21:32:01",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 12,
+      "article_title": "James Gunn Teases Supergirl's 'Big' Role in Superman Sequel Man of Tomorrow",
+      "article_url": "https://www.ign.com/articles/james-gunn-teases-supergirls-big-role-in-superman-sequel-man-of-tomorrow",
+      "article_date": "2026-06-24",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00032868,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8699,
+      "completion_tokens": 713,
+      "total_tokens": 9412,
+      "prompt_cache_hit_tokens": 7936,
+      "prompt_cache_miss_tokens": 763
     }
   ]
 }
