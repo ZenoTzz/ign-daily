@@ -105,6 +105,363 @@
       "total_tokens": 9833,
       "prompt_cache_hit_tokens": 7808,
       "prompt_cache_miss_tokens": 1077
+    },
+    {
+      "time_cn": "2026-06-23 07:57:33",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 32,
+      "article_title": "GTA 6 'Vampire' Ferris Wheel Sparks Tech Expert Investigation",
+      "article_url": "https://www.ign.com/articles/gta-6-vampire-ferris-wheel-sparks-tech-expert-investigation",
+      "article_date": "2026-06-23",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00033784,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8715,
+      "completion_tokens": 675,
+      "total_tokens": 9390,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 907
+    },
+    {
+      "time_cn": "2026-06-23 07:57:39",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 33,
+      "article_title": "It’s Finally Happened — You Can Play As Nicolas Cage in Call of Duty",
+      "article_url": "https://www.ign.com/articles/its-finally-happened-you-can-play-as-nicolas-cage-in-call-of-duty",
+      "article_date": "2026-06-23",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00023592,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8541,
+      "completion_tokens": 398,
+      "total_tokens": 8939,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 733
+    },
+    {
+      "time_cn": "2026-06-23 07:57:46",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 34,
+      "article_title": "Love and Deepspace Drops New Wolfy Love Interest And I'm Not Well",
+      "article_url": "https://www.ign.com/articles/love-and-deepspace-drops-new-wolfy-love-interest",
+      "article_date": "2026-06-23",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00024054,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8392,
+      "completion_tokens": 489,
+      "total_tokens": 8881,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 584
+    },
+    {
+      "time_cn": "2026-06-23 07:57:51",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 35,
+      "article_title": "Bethesda Boss Todd Howard Saw Marvel's Blade in May, Says Arkane 'Doing a Really, Really Great Job'",
+      "article_url": "https://www.ign.com/articles/bethesda-boss-todd-howard-saw-marvels-blade-in-may-says-arkane-doing-a-really-really-great-job",
+      "article_date": "2026-06-23",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00018958,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8506,
+      "completion_tokens": 250,
+      "total_tokens": 8756,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 698
+    },
+    {
+      "time_cn": "2026-06-23 07:58:04",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 36,
+      "article_title": "Fortnite's Popular Pokémon-Like Sprites Are Fueling a Player Surge — and 5 More Species Get Added This Week",
+      "article_url": "https://www.ign.com/articles/fortnites-popular-pokemon-like-sprites-are-fueling-a-player-surge-and-5-more-species-get-added-this-week",
+      "article_date": "2026-06-23",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00033504,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8367,
+      "completion_tokens": 839,
+      "total_tokens": 9206,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 559
+    },
+    {
+      "time_cn": "2026-06-23 07:58:20",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 37,
+      "article_title": "Netflix's Gears of War Movie Is an 'Origin Story' for Delta Squad",
+      "article_url": "https://www.ign.com/articles/netflixs-gears-of-war-movie-is-an-origin-story-for-delta-squad",
+      "article_date": "2026-06-23",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.0004511,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8518,
+      "completion_tokens": 1178,
+      "total_tokens": 9696,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 710
+    },
+    {
+      "time_cn": "2026-06-23 07:58:36",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 38,
+      "article_title": "Steam Machine Review",
+      "article_url": "https://www.ign.com/articles/steam-machine-review",
+      "article_date": "2026-06-23",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00062274,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9968,
+      "completion_tokens": 1066,
+      "total_tokens": 11034,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 2160
+    },
+    {
+      "time_cn": "2026-06-23 07:58:45",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 39,
+      "article_title": "The Steam Machine Costs $1049, Is That Too Much?",
+      "article_url": "https://www.ign.com/articles/steam-machine-price",
+      "article_date": "2026-06-23",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00031866,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8558,
+      "completion_tokens": 685,
+      "total_tokens": 9243,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 750
+    },
+    {
+      "time_cn": "2026-06-23 07:58:59",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 40,
+      "article_title": "The Steam Machine Was Originally Meant to Cost About $750",
+      "article_url": "https://www.ign.com/articles/the-steam-machine-was-originally-meant-to-cost-about-750",
+      "article_date": "2026-06-23",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00041442,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8376,
+      "completion_tokens": 1118,
+      "total_tokens": 9494,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 568
+    },
+    {
+      "time_cn": "2026-06-23 07:59:04",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 41,
+      "article_title": "Valve on the Steam Machine's Price, Performance, and Whether or Not You'll Actually Be Able to Buy it",
+      "article_url": "https://www.ign.com/articles/steam-machine-interview",
+      "article_date": "2026-06-23",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00040574,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9920,
+      "completion_tokens": 315,
+      "total_tokens": 10235,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 2112
+    },
+    {
+      "time_cn": "2026-06-23 07:59:12",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 42,
+      "article_title": "Valve Says Steam Deck 2 Is Getting Closer, but Still Not Ready Yet",
+      "article_url": "https://www.ign.com/articles/valve-says-steam-deck-2-is-getting-closer-but-still-not-ready-yet",
+      "article_date": "2026-06-23",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.0002971,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8560,
+      "completion_tokens": 607,
+      "total_tokens": 9167,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 752
+    },
+    {
+      "time_cn": "2026-06-23 07:59:25",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 43,
+      "article_title": "Hideo Kojima Says Upcoming Xbox Horror Game OD Has a Special System for People Who Are Too Scared to Keep Playing",
+      "article_url": "https://www.ign.com/articles/hideo-kojima-says-upcoming-xbox-horror-game-od-has-a-special-system-for-people-who-are-too-scared-to-keep-playing",
+      "article_date": "2026-06-23",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00045866,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8954,
+      "completion_tokens": 987,
+      "total_tokens": 9941,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 1146
+    },
+    {
+      "time_cn": "2026-06-23 07:59:36",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 44,
+      "article_title": "Sea of Thieves Live-Action Movie in Development, Microsoft Confirms",
+      "article_url": "https://www.ign.com/articles/sea-of-thieves-live-action-movie-in-development-microsoft-confirms",
+      "article_date": "2026-06-23",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00031782,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8414,
+      "completion_tokens": 754,
+      "total_tokens": 9168,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 606
+    },
+    {
+      "time_cn": "2026-06-23 07:59:43",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 45,
+      "article_title": "Creepshow: 13 Tales of Terror Brings the Iconic Horror Franchise to Print",
+      "article_url": "https://www.ign.com/articles/creepshow-13-tales-of-terror-horror-anthology-preview",
+      "article_date": "2026-06-23",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00021688,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8263,
+      "completion_tokens": 469,
+      "total_tokens": 8732,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 455
+    },
+    {
+      "time_cn": "2026-06-23 07:59:48",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 46,
+      "article_title": "Tom Holland Teases Potentially Huge Part of the Spider-Man: Brand New Day Story",
+      "article_url": "https://www.ign.com/articles/tom-holland-teases-potentially-huge-part-of-the-spider-man-brand-new-day-story",
+      "article_date": "2026-06-23",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00021576,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8595,
+      "completion_tokens": 299,
+      "total_tokens": 8894,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 787
+    },
+    {
+      "time_cn": "2026-06-23 07:59:55",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 47,
+      "article_title": "Battlefield 6 Dev on the State of the Game, Addressing Fan Feedback, and Much More",
+      "article_url": "https://www.ign.com/articles/battlefield-6-dev-on-the-state-of-the-game-addressing-fan-feedback-and-much-more",
+      "article_date": "2026-06-23",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00044214,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9968,
+      "completion_tokens": 421,
+      "total_tokens": 10389,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 2160
+    },
+    {
+      "time_cn": "2026-06-23 08:00:10",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 48,
+      "article_title": "God of War Laufey Planned Since 2018, Reveals Star Deborah Ann Woll",
+      "article_url": "https://www.ign.com/articles/god-of-war-laufey-planned-since-2018-reveals-star-deborah-ann-woll",
+      "article_date": "2026-06-23",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00058326,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8904,
+      "completion_tokens": 1457,
+      "total_tokens": 10361,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 1096
     }
   ]
 }
