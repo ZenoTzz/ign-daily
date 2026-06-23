@@ -1,35 +1,85 @@
 {
-  "target_date": "2026-06-23",
+  "target_date": "2026-06-24",
   "target_dates": [
-    "2026-06-23",
-    "2026-06-22"
+    "2026-06-24",
+    "2026-06-23"
   ],
-  "changed_dates": [],
+  "changed_dates": [
+    "2026-06-24",
+    "2026-06-23"
+  ],
   "new_target_dates": [],
   "new_count": 0,
-  "filtered_count": 0,
+  "filtered_count": 2,
   "cleanup_count": 0,
-  "changed_count": 0,
+  "changed_count": 2,
   "articles": [],
-  "filtered_articles": [],
+  "filtered_articles": [
+    {
+      "title": "Walmart’s Summer Sale Is Packed With Deals On Video Games, LEGO, Apple, TVs, and More",
+      "url": "https://www.ign.com/articles/walmarts-summer-sale-is-packed-with-deals-on-video-games-lego-apple-tvs-and-more-for-prime-day-2026",
+      "pubDate_cst": "2026-06-23 08:20",
+      "description": "Discounts that give Amazon’s Prime Day a run for its money.",
+      "categories": "",
+      "reason": "text:\\bprime.day\\b",
+      "rss_url": "https://feeds.feedburner.com/ign/all",
+      "filtered_at_cn": "2026-06-23 09:48:24",
+      "status": "filtered"
+    },
+    {
+      "title": "Save $100 Off a Pair of BowFlex Results Series SelectTech Dumbbells for Amazon Prime Day",
+      "url": "https://www.ign.com/articles/best-bowflex-selecttech-adjustable-dumbbell-deal-amazon-fathers-day-sale",
+      "pubDate_cst": "2026-06-23 07:00",
+      "description": "Get swole",
+      "categories": "",
+      "reason": "text:\\bsave \\$\\d",
+      "rss_url": "https://feeds.feedburner.com/ign/all",
+      "filtered_at_cn": "2026-06-23 09:48:24",
+      "status": "filtered"
+    }
+  ],
   "runs": [
+    {
+      "target_date": "2026-06-24",
+      "new_count": 0,
+      "filtered_count": 1,
+      "changed_count": 1,
+      "next_id": 1,
+      "articles": [],
+      "filtered_articles": [
+        {
+          "title": "Walmart’s Summer Sale Is Packed With Deals On Video Games, LEGO, Apple, TVs, and More",
+          "url": "https://www.ign.com/articles/walmarts-summer-sale-is-packed-with-deals-on-video-games-lego-apple-tvs-and-more-for-prime-day-2026",
+          "pubDate_cst": "2026-06-23 08:20",
+          "description": "Discounts that give Amazon’s Prime Day a run for its money.",
+          "categories": "",
+          "reason": "text:\\bprime.day\\b",
+          "rss_url": "https://feeds.feedburner.com/ign/all",
+          "filtered_at_cn": "2026-06-23 09:48:24",
+          "status": "filtered"
+        }
+      ]
+    },
     {
       "target_date": "2026-06-23",
       "new_count": 0,
-      "filtered_count": 0,
-      "changed_count": 0,
+      "filtered_count": 1,
+      "changed_count": 1,
       "next_id": 49,
       "articles": [],
-      "filtered_articles": []
-    },
-    {
-      "target_date": "2026-06-22",
-      "new_count": 0,
-      "filtered_count": 0,
-      "changed_count": 0,
-      "next_id": 7,
-      "articles": [],
-      "filtered_articles": []
+      "filtered_articles": [
+        {
+          "title": "Save $100 Off a Pair of BowFlex Results Series SelectTech Dumbbells for Amazon Prime Day",
+          "url": "https://www.ign.com/articles/best-bowflex-selecttech-adjustable-dumbbell-deal-amazon-fathers-day-sale",
+          "pubDate_cst": "2026-06-23 07:00",
+          "description": "Get swole",
+          "categories": "",
+          "reason": "text:\\bsave \\$\\d",
+          "rss_url": "https://feeds.feedburner.com/ign/all",
+          "filtered_at_cn": "2026-06-23 09:48:24",
+          "status": "filtered"
+        }
+      ]
     }
   ]
 }
