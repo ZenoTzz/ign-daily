@@ -1134,6 +1134,111 @@
       "total_tokens": 21250,
       "prompt_cache_hit_tokens": 7936,
       "prompt_cache_miss_tokens": 1836
+    },
+    {
+      "time_cn": "2026-06-23 12:22:26",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 1,
+      "article_title": "GTA 6 Fans Spot Tommy Vercetti Easter Egg Over a Year After Trailer 2's Release",
+      "article_url": "https://www.ign.com/articles/gta-6-fans-spot-tommy-vercetti-easter-egg-over-a-year-after-trailer-2s-release",
+      "article_date": "2026-06-24",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00147952,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8724,
+      "completion_tokens": 922,
+      "total_tokens": 9646,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 8724
+    },
+    {
+      "time_cn": "2026-06-23 12:22:46",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 2,
+      "article_title": "Tom Holland and Zendaya Are Huge Fans of PlayStation's Spider-Man Games, Insomniac Invites Them for Studio Tour",
+      "article_url": "https://www.ign.com/articles/tom-holland-and-zendaya-are-huge-fans-of-playstations-spider-man-games-insomniac-invites-them-for-studio-tour",
+      "article_date": "2026-06-24",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00132895,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8607,
+      "completion_tokens": 1509,
+      "total_tokens": 10116,
+      "prompt_cache_hit_tokens": 2176,
+      "prompt_cache_miss_tokens": 6431
+    },
+    {
+      "time_cn": "2026-06-23 12:22:58",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 3,
+      "article_title": "The Last of Us Part 2 Multiplayer Lives On as PvP Mod Due Out Later This Year",
+      "article_url": "https://www.ign.com/articles/the-last-of-us-part-2-multiplayer-lives-on-as-pvp-mod-due-out-later-this-year",
+      "article_date": "2026-06-24",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00035906,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8830,
+      "completion_tokens": 756,
+      "total_tokens": 9586,
+      "prompt_cache_hit_tokens": 7936,
+      "prompt_cache_miss_tokens": 894
+    },
+    {
+      "time_cn": "2026-06-23 12:23:15",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 4,
+      "article_title": "Warframe Dev Says 'No One Is Celebrating' as Destiny 2 Support Comes to a 'Heartbreaking' End",
+      "article_url": "https://www.ign.com/articles/warframe-dev-says-no-one-is-celebrating-as-destiny-2-support-comes-to-a-heartbreaking-end",
+      "article_date": "2026-06-24",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00047708,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8965,
+      "completion_tokens": 1110,
+      "total_tokens": 10075,
+      "prompt_cache_hit_tokens": 7936,
+      "prompt_cache_miss_tokens": 1029
+    },
+    {
+      "time_cn": "2026-06-23 12:23:27",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 5,
+      "article_title": "Marvel's Wolverine Actor Confirms Role in GTA 6",
+      "article_url": "https://www.ign.com/articles/marvels-wolverine-actor-confirms-role-in-gta-6",
+      "article_date": "2026-06-24",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00034548,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8599,
+      "completion_tokens": 823,
+      "total_tokens": 9422,
+      "prompt_cache_hit_tokens": 7936,
+      "prompt_cache_miss_tokens": 663
     }
   ]
 }
