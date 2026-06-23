@@ -1,14 +1,14 @@
 {
   "week_id": "2026-W26",
-  "generated_at": "2026-06-23T10:34:51+08:00",
+  "generated_at": "2026-06-23T21:48:37+08:00",
   "published_by": "weekly_learning_report",
   "range": {
     "start": "2026-06-22",
     "end": "2026-06-28"
   },
   "summary": {
-    "candidate_count": 10,
-    "ready_for_review": 1,
+    "candidate_count": 12,
+    "ready_for_review": 2,
     "confirmed_by_feedback": 5,
     "pending": 4
   },
@@ -23,9 +23,10 @@
       "days": [
         "2026-06-16",
         "2026-06-17",
-        "2026-06-18"
+        "2026-06-18",
+        "2026-06-23"
       ],
-      "days_seen": 3,
+      "days_seen": 4,
       "articles_seen": 5,
       "contradictions": 0,
       "examples": [
@@ -34,13 +35,25 @@
           "article_id": 8,
           "before": "《龙之信条2》在2024年首发时因其微交易而受到批评，发售当天就提供了超过21种微交易项目。这些项目的价格从0.99美元(约合人民币7元)到4.99美元(约合人民币34元)不等，包括售价2.99美元(约合人民币20元)的探险家露营套装、0.99美元(约合人民币7元)的牢狱钥匙（可让玩家越狱，但用一次就坏）、2.99美元(约合人民币20元)的传送基石（传送点标记），以及0.99美元(约合人民币7元)的复活石，能复活死者。",
           "after": "《龙之信条2》在2024年首发时因其微交易而受到批评，发售当天就提供了超过21种微交易项目。这些项目的价格从0.99美元（约合人民币6.76元）到4.99美元（约合人民币33.8元）不等，包括售价2.99美元（约合人民币20.28元）的「露营套装」、0.99美元（约合人民币6.76元）的「监狱简易钥匙」（可让玩家越狱，但用一次就坏）、2.99美元的「返回的基石」（传送点标记），以及0.99美元的复活石，能复活死者。"
+        },
+        {
+          "date": "2026-06-23",
+          "article_id": 39,
+          "before": "1049美元(约合人民币7112元)",
+          "after": "1049美元（约合人民币7112元）"
+        },
+        {
+          "date": "2026-06-23",
+          "article_id": 42,
+          "before": "1799美元(约合人民币1万元)",
+          "after": "1799美元（约合12187元人民币）"
         }
       ],
       "feedback": [],
       "created_at": "2026-06-17T10:11:25+08:00",
-      "last_seen": "2026-06-18",
+      "last_seen": "2026-06-23",
       "confidence": 0.9,
-      "latest_evidence_summary": "6/16-6/18 多篇润色把约合人民币金额改为按实时汇率计算，并纠正固定汇率导致的偏差。"
+      "latest_evidence_summary": "6/23 Steam Machine 与 MSI Claw 金额统一为中文括号，并继续按实时汇率换算。"
     },
     {
       "id": "remove_redundant_brand_wrappers",
@@ -48,20 +61,157 @@
       "rule": "标题中已有品牌、平台或作品名时，避免再用重复的《品牌/平台》套壳写法；保留核心事件，让标题更自然。",
       "category": "title",
       "scope": "titles",
-      "status": "pending",
+      "status": "ready_for_review",
       "days": [
         "2026-06-21",
-        "2026-06-22"
+        "2026-06-22",
+        "2026-06-23"
       ],
-      "days_seen": 2,
+      "days_seen": 3,
       "articles_seen": 2,
       "contradictions": 0,
-      "examples": [],
+      "examples": [
+        {
+          "date": "2026-06-23",
+          "article_id": 35,
+          "before": "《B社/贝塞斯达》陶德·霍华德：最近看过《漫威刀锋》，做得非常出色",
+          "after": "陶德·霍华德：最近看过《漫威刀锋战士》，做得非常出色"
+        }
+      ],
       "feedback": [],
       "created_at": "2026-06-22T21:49:02+08:00",
-      "last_seen": "2026-06-22",
-      "confidence": 0.84,
-      "latest_evidence_summary": "6/21-6/22 的标题润色删除了重复品牌前缀，保留事件核心。"
+      "last_seen": "2026-06-23",
+      "confidence": 0.86,
+      "latest_evidence_summary": "6/23 陶德·霍华德标题删除《B社/贝塞斯达》外壳，保留人物与《漫威刀锋战士》核心信息。"
+    },
+    {
+      "id": "remove_promotional_related_links",
+      "title": "删除站内推广和相关阅读引导",
+      "rule": "正文末尾的“查看更多”“阅读我们的采访或汇总”等站内引流句应删除，但不得删除承载新闻事实的正文。",
+      "category": "structure",
+      "scope": "all",
+      "status": "confirmed",
+      "days": [
+        "2026-06-01",
+        "2026-06-03",
+        "2026-06-23"
+      ],
+      "days_seen": 3,
+      "articles_seen": 6,
+      "contradictions": 0,
+      "examples": [
+        {
+          "date": "2026-06-01",
+          "article_id": 3,
+          "before": "在此之前，你可以看看乔·罗素此前接受采访谈这部新片剧透管理的看法。",
+          "after": ""
+        },
+        {
+          "date": "2026-06-03",
+          "article_id": 18,
+          "before": "完整采访中还有更多关于《漫威金刚狼》的内容。本作将于2026年9月15日独占登陆PS5。如果你想了解PlayStation准备了什么，这里是2026年6月State of Play公布的所有内容。",
+          "after": "本作将于2026年9月15日独占登陆PS5。"
+        },
+        {
+          "date": "2026-06-03",
+          "article_id": 19,
+          "before": "所以，如果你想降低《漫威金刚狼》的暴力程度，你可以做到。请务必查看我们对Insomniac的完整采访，了解《漫威金刚狼》的实际玩法。",
+          "after": "所以，如果你想降低《漫威金刚狼》的暴力程度，你可以做到。"
+        },
+        {
+          "date": "2026-06-23",
+          "article_id": 20,
+          "before": "在等待这些问题的答案之余，不妨看看IGN对《GTA6》封面艺术的分析...",
+          "after": ""
+        },
+        {
+          "date": "2026-06-23",
+          "article_id": 42,
+          "before": "欲了解更多关于Steam Machine的信息，请查阅我们的完整评测。",
+          "after": ""
+        },
+        {
+          "date": "2026-06-23",
+          "article_id": 44,
+          "before": "Tom Phillips是IGN的新闻编辑。可通过tom_phillips@ign.com联系Tom...",
+          "after": ""
+        }
+      ],
+      "feedback": [
+        {
+          "week_id": "2026-W23",
+          "text": "采纳，进入长期规则。",
+          "classified_as": "confirmed",
+          "created_at": "2026-06-04T06:38:24+08:00"
+        },
+        {
+          "week_id": "2026-W23",
+          "text": "采纳，进入长期规则。",
+          "classified_as": "confirmed",
+          "created_at": "2026-06-04T06:38:54+08:00"
+        },
+        {
+          "week_id": "2026-W23",
+          "text": "采纳，进入长期规则。",
+          "classified_as": "confirmed",
+          "created_at": "2026-06-04T06:39:36+08:00"
+        },
+        {
+          "week_id": "2026-W23",
+          "text": "采纳，进入长期规则。",
+          "classified_as": "confirmed",
+          "created_at": "2026-06-05T05:07:48+08:00"
+        },
+        {
+          "week_id": "2026-W23",
+          "text": "采纳，进入长期规则。",
+          "classified_as": "confirmed",
+          "created_at": "2026-06-06T04:56:39+08:00"
+        },
+        {
+          "week_id": "2026-W23",
+          "text": "采纳，进入长期规则。",
+          "classified_as": "confirmed",
+          "created_at": "2026-06-07T02:52:19+08:00"
+        }
+      ],
+      "created_at": "2026-06-03T16:01:56+08:00",
+      "last_seen": "2026-06-23",
+      "confidence": 0.92,
+      "latest_evidence_summary": "6/23 多篇润色删除 IGN 延伸阅读、完整评测导流和作者联系方式。"
+    },
+    {
+      "id": "inner_quote_single_marks",
+      "title": "中文引号内再引用用单引号",
+      "rule": "中文直引号内部再次出现短语、问题或强调词时，内层引用使用‘ ’，避免连续使用「」造成层级不清。",
+      "category": "punctuation",
+      "scope": "quoted_speech",
+      "status": "pending",
+      "days": [
+        "2026-06-23"
+      ],
+      "days_seen": 1,
+      "articles_seen": 2,
+      "contradictions": 0,
+      "examples": [
+        {
+          "date": "2026-06-23",
+          "article_id": 43,
+          "before": "我想超越其他游戏达到的「恐怖」极限。",
+          "after": "我想超越其他游戏达到的‘恐怖’极限。"
+        },
+        {
+          "date": "2026-06-23",
+          "article_id": 44,
+          "before": "不会是「主角是谁？剧情是什么？」。",
+          "after": "不会是‘主角是谁？剧情是什么？’。"
+        }
+      ],
+      "feedback": [],
+      "created_at": "2026-06-23T21:48:32.060+08:00",
+      "last_seen": "2026-06-23",
+      "confidence": 0.74,
+      "latest_evidence_summary": "6/23 《OD》和《盗贼之海》稿件把直引语内的「恐怖」「主角是谁？」等改为内层单引号。"
     },
     {
       "id": "subtitle_trim_generic_hook",
