@@ -882,6 +882,27 @@
       "total_tokens": 10405,
       "prompt_cache_hit_tokens": 7936,
       "prompt_cache_miss_tokens": 542
+    },
+    {
+      "time_cn": "2026-06-23 08:36:33",
+      "task": "fulltext",
+      "model": "deepseek-v4-pro",
+      "article_id": 41,
+      "article_title": "Valve谈Steam Machine价格与性能：购买难度仍未知",
+      "article_url": "https://www.ign.com/articles/steam-machine-interview",
+      "article_date": "2026-06-23",
+      "detail": "",
+      "estimated_cost_usd": 0.00718974,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 11304,
+      "completion_tokens": 6547,
+      "total_tokens": 17851,
+      "prompt_cache_hit_tokens": 7936,
+      "prompt_cache_miss_tokens": 3368
     }
   ]
 }

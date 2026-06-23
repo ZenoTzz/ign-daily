@@ -1,0 +1,173 @@
+{
+  "id": 41,
+  "url": "https://www.ign.com/articles/steam-machine-interview",
+  "en_title": "Valve on the Steam Machine's Price, Performance, and Whether or Not You'll Actually Be Able to Buy it",
+  "cn_title": "Valve谈Steam Machine：价格与性能背后的取舍",
+  "subtitle": "好钢用在刀刃上",
+  "opus_summary": "两位Valve工程师接受IGN采访，详解Steam Machine定价、性能与供货策略。通过定制主板与散热模块，Valve成功控制成本；1440p被视为最佳分辨率，4K也能胜任；预约制降低抢购压力，但仍难保证首发库存。",
+  "publish_time_cn": "2026-06-23 01:00",
+  "paragraphs": [
+    {
+      "en": "Just a couple months after Valve launched the Steam Controller , the Steam Machine has finally arrived. And while the fledgling mini-pc/console hybrid is a bit more expensive than we once thought it would be, Valve was able to still able to get it in at a somewhat reasonable price – at least for a mini PC. And, now that we've had a chance to test it, we were impressed by just how easy it was to use, and how well it performs in games, despite its limited hardware.",
+      "cn": "Valve推出Steam Controller仅几个月后，Steam Machine终于上市。尽管这款初出茅庐的迷你PC/主机混合设备比我们当初预想的稍贵，但Valve还是将其控制在了相对合理的价位——至少对一台迷你PC而言。现在，我们有了测试它的机会，对它的易用性和在有限硬件配置下的游戏表现印象颇深。"
+    },
+    {
+      "en": "Ever since the Steam Machine was revealed in November 2025, Valve was telling us that it was just another option for folks hoping to get into PC gaming. Recently, we got a chance to sit down with Valve Engineers Pierre-Loup Griffais and Yazan Aldehayyat to discuss the Steam Machine, and how it was made. And, well, it sounds like Valve was able to achieve everything it wanted to with the Machine, except for the price. Even there, though, it sounds like Valve was able to at least mitigate the impact the RAM crisis had on the Steam Machine.",
+      "cn": "自2025年11月Steam Machine公布以来，Valve一直强调它是为那些想涉足PC游戏的玩家提供的又一个选项。最近，我们有机会与Valve工程师Pierre-Loup Griffais和Yazan Aldehayyat坐下来聊聊Steam Machine及其研发过程。嗯，听起来Valve在这台机器上实现了所有预期目标，唯独价格方面稍显遗憾。不过，Valve似乎至少缓解了RAM危机对Steam Machine价格造成的冲击。"
+    },
+    {
+      "en": "IGN: The Steam Machine came in at a higher price than originally intended, but it's still about the same price as a comparable tower PC, whereas normally mini gaming PCs have a pretty huge price jump. How did Valve keep the price from getting even higher?",
+      "cn": "IGN：Steam Machine的最终售价高于最初设想，但依然与同等配置的塔式PC相当，而通常迷你游戏PC会有很大的价格跃升。Valve是怎么做到不让价格进一步膨胀的？"
+    },
+    {
+      "en": "Yazan Aldehayyat: I mean, I guess obviously our primary advantage is that we're able to make a custom motherboard, custom power supply, and a custom thermal module. So that's a huge advantage, but really it just took a lot of engineering.",
+      "cn": "Yazan Aldehayyat：我想，很明显我们最主要的优势在于能定制主板、定制电源和定制散热模块。这确实是个巨大的优势，但说到底还是投入了大量工程设计。"
+    },
+    {
+      "en": "We spent a lot of time optimizing thermals, working with acoustics to make sure the device is still quiet at this size and form factor. But yeah, I think this is one of the things that we're proudest of is the form factor. It's actually probably exceeded our expectations in terms of compactness, quietness and how cool it is while you're using it.",
+      "cn": "我们花了很多时间来优化散热，并结合声学设计确保在这个尺寸和形态下设备依旧安静。但没错，我想外形设计是我们最引以为傲的一点。它在紧凑性、安静程度和运行时的温度表现上，其实很可能超出了我们自己的预期。"
+    },
+    {
+      "en": "But yeah, I mean, obviously, but to put it in simple terms, being able to make a custom motherboard, custom thermal module, custom power supply is the primary reason why we're able to do this, but it's difficult to do with off the shelf components.",
+      "cn": "不过，简单来说，能定制主板、散热模块和电源是让我们做到这一点的首要原因，而使用市售零部件就很难达成。"
+    },
+    {
+      "en": "IGN: Right. I guess I'm just surprised that all that engineering didn't get baked into the cost of the Steam Machine itself. Whereas usually you'd expect having a bespoke solution like that would cause prices to skyrocket even further. I think a lot of people were braced for higher prices as well.",
+      "cn": "IGN：没错。我惊讶的是，所有这些工程投入似乎并没有被计入Steam Machine本身的成本。通常大家会认为像这样的定制方案会让价格进一步飙升。我觉得很多人也做好了价格更高的心理准备。"
+    },
+    {
+      "en": "Aldehayyat: I mean, value engineering is a real discipline. We knew that hitting a good price point is important and we kept that in mind the whole time we were designing the Steam Machine. I mean, we could have probably made it smaller, but it would've been more expensive. But we just kind of picked the sweet spot for what we thought made the most sense.",
+      "cn": "Aldehayyat：说到价值工程，那是一门实打实的学问。我们知道达到一个好价位很重要，在设计Steam Machine的整个过程中都一直把这一点放在心上。我们本可以把它做得更小，但那样会更贵。我们只是找到了我们认为最合理的那个甜点区。"
+    },
+    {
+      "en": "So yeah, I guess I would say that good engineering doesn't necessarily mean more expensive. And if anything, a big part of engineering is to make sure that the value still makes sense and represents the value and the cost of the product.",
+      "cn": "所以，我觉得可以说，好的工程并不意味着更贵。甚至可以说，工程工作的一大部分就是确保价值仍然合理，并且体现产品的价值与成本。"
+    },
+    {
+      "en": "Pierre-Loup Griffais: When we were working on all that, of course, we were working with some parts that were a little bit cheaper to work with. But now that things like the memory and storage are more expensive comparatively than the build materials, they're that much more expensive for the total product price.",
+      "cn": "Pierre-Loup Griffais：在着手这一切时，我们当然会选用一些成本稍低的部件。但现在内存和存储的价格相对于制造材料已上涨不少，这导致产品的总体价格高出了很多。"
+    },
+    {
+      "en": "All the choices we've made to aggressively limit the price and all those other dimensions shine even more because now, it's even more competitive for the same parts that you can get off the shelf. So we're really excited about that.",
+      "cn": "我们为了积极限制价格而做的所有选择，以及在其他维度的努力，如今显得更加闪亮。因为现在用它去搭配市售的同款部件，反而更具竞争力了。所以我们对此非常兴奋。"
+    },
+    {
+      "en": "But for sure it was designed in since the beginning. There's always a strong component of trying to make sure that we would be able to hit the most aggressive price possible.",
+      "cn": "但无疑这个目标从一开始就内建在产品里了。我们始终在努力确保能实现最有竞争力的价格。"
+    },
+    {
+      "en": "IGN: You’ve mentioned that the hardware shortages affected availability more than price. Meanwhile, the Steam Controller sold out basically immediately, and I kind of expect the same's going to happen with the Steam Machine. How hard would you say it's going to be for people to actually get their hands on this thing?",
+      "cn": "IGN：你们之前提到硬件短缺对供货的影响大于对价格的影响。与此同时，Steam Controller几乎瞬间售罄，我猜Steam Machine也会重演这种情况。你觉得人们实际买到这台机器的难度会有多大？"
+    },
+    {
+      "en": "Griffais: Yeah, it's unclear. I think if you ask everyone here, you're going to get a different answer because it would essentially be predicting what users are doing and it's a hard problem. But I would expect, and we've done a little bit more work here to streamline the purchase experience. I think that we've shared some of the approach here with you as well and we expect that's going to make it a little bit less stressful to try and at least get into the initial line and then later be able to purchase a unit. But it's hard to predict to what extent people are going to have to just wait or we'll be able to get through our launch quantities because we don't really know what to expect out there, especially in these conditions where prices for a PC are a little bit different than when we announced.",
+      "cn": "Griffais：这个说不准。我想如果你问这里的每一个人，都会得到不同的答案，因为这本质上是在预测用户行为，是个难题。不过我们预期，并且我们也为此多做了些工作来优化购买体验。我想我们和你分享过一些做法，期望能让试图排队、之后再购买设备的过程少一些压力。但很难预测人们究竟要等多久，或者我们能否消耗掉首发库存，因为我们真的不太清楚外界会如何反应，尤其是在目前PC部件价格与当初公布时有所差异的情况下。"
+    },
+    {
+      "en": "And so folks that might have made their plans based on their original idea of what a PCU was going to be priced at might be making different decisions now. So we don't really know what to expect, I guess is the straightforward answer.",
+      "cn": "因此，那些原本基于自己对PCU价格预想而做计划的人，现在可能会做出不同决定。所以，说实话，我们真的不知道会怎样，我想这就是最直接的回答。"
+    },
+    {
+      "en": "Aldehayyat: But I also want to emphasize that even in the best of circumstances, having enough units for day one demand is always hard or basically impossible, especially for a product like this.",
+      "cn": "Aldehayyat：但我也想强调，即便在最理想的情况下，为首发日备足货一直都很难，或者说基本不可能，尤其是对于像这样的产品。"
+    },
+    {
+      "en": "So, I guess I just want to point out that the biggest thing is that day one quantities, they are what they are, but we are working really hard to replenish those as fast as possible. I know that several members of the team are working around the clock to secure more supply and get more units built.",
+      "cn": "所以，我只想指出，最关键的是首发库存就摆在那里，但我们在拼命努力以最快速度补货。我知道团队里有好几位成员正日以继夜地争取更多供应，建造更多设备。"
+    },
+    {
+      "en": "I think our FAQ definitely emphasizes the day one experience in terms of reservations and making it less stressful, because as I said before, having enough units for day one is always really hard, but things will improve over time, especially by the end of the year. And if the demand is higher than we expected, we'll obviously do even more to build more units.",
+      "cn": "我想我们的FAQ确实强调了首发日的预约体验，以及如何让压力减轻，因为如我之前所说，首发备足货一直很难，但情况会随时间改善，尤其是到年末。如果需求高于预期，我们显然还会做更多努力来增产。"
+    },
+    {
+      "en": "IGN: What lessons did you take from past hardware launches – the Steam Deck, the OLED version, and the Steam Controller – that you're baking into your approach with the Steam Machine?",
+      "cn": "IGN：你们从过去的硬件发布中——Steam Deck、OLED版本和Steam Controller——汲取了哪些经验，如今正融入Steam Machine的上市策略中？"
+    },
+    {
+      "en": "Griffais: Definitely the reservation system that we introduced with Steam Deck, I think, has proven to be very useful for those kinds of launches. I think users really appreciate the peace of mind of knowing that they have a place in line, and they don't have to periodically go refresh some website or try and get in line with the anxiety that someone else might've gotten there before them, even though they've been waiting for several months.",
+      "cn": "Griffais：绝对是在Steam Deck上推出的预约系统，我认为已证明对这类发布非常有用。我觉得用户真的很感激知道自己在队列中有个位置，不用时不时去刷新某个网站，或在焦虑中试图排队——担心即便自己等了好几个月，也可能被别人抢先。"
+    },
+    {
+      "en": "So I think just working on the reservation system and making sure it's good for both the waiting experience, but also the launch experience, with the addition of the randomized period and all that. Yeah, we think that's a really important part of not making the launch experience too stressful.",
+      "cn": "所以我觉得，继续打磨预约系统，确保它在等待期和首发体验上都足够好用，包括加入随机时段之类的机制。是的，我们认为这是避免首发体验压力过大的重要一环。"
+    },
+    {
+      "en": "IGN: I know leading up to the release of the Steam Machine, y'all were talking about 4K60 a lot, 4K60 with FSR specifically, but in my testing, I found that it's an even better 1080p or 1440p machine. Is 4K the recommended way to go about things or is that more of a marketing point?",
+      "cn": "IGN：我知道在Steam Machine发布前夕，你们一直在谈论4K60，特别是搭配FSR的4K60，但在我的测试中，我发现它作为1080p或1440p机器甚至更出色。4K是推荐的游玩方式，还是更多是一个宣传点？"
+    },
+    {
+      "en": "Pierre-Loup Griffais: Well, I think it's broadly true that there's a bunch of games on Steam that work really well at 4K on the machine. And even games that are still coming out, every game's not necessarily trying to push the envelope there.",
+      "cn": "Pierre-Loup Griffais：嗯，我觉得总体上来说，Steam上确实有一大堆游戏能在本机4K下游刃有余。甚至一些还在发行的游戏，也并非都在刻意追求极致性能。"
+    },
+    {
+      "en": "There's games that look gorgeous that I think are still very viable at 4K Native, even without any sort of upscaling. But when you throw upscaling into the picture, especially with the upcoming FSR 4 that AMD has confirmed will be available, and that we can say confidently will be available on Steam Machine. I think it makes sense for a bunch of titles, but we also are cognizant that there's a bunch of games where different trade-offs might make more sense. 1440P is definitely a little bit of a sweet spot. I think we anticipate that a bunch of games will end up falling probably around that envelope when you're trying to target your best recommended settings.",
+      "cn": "有些画面绝美的游戏，即便不用任何画面提升技术，在原生4K下也完全可行。而一旦加入画面提升技术，尤其是即将到来、AMD已确认、我们可以自信说会在Steam Machine上提供的FSR 4，我觉得对许多游戏来说是合情合理的选择。但我们也清楚，有些游戏可能更适合不同的取舍。1440p无疑是一个小小的甜点区。我们预计，当你试图瞄准最佳推荐设置时，很多游戏最终会落在这个区间附近。"
+    },
+    {
+      "en": "But for sure 4K is not something that's going to be possible in all titles necessarily, but I think it is a reasonable target for a lot of them.",
+      "cn": "当然，4K不可能在所有游戏中都实现，但我认为对很多游戏来说是一个合理的目标。"
+    },
+    {
+      "en": "Aldehayyat: And another thing I want to mention is that part of the 4K messaging is to some of the people who are not as familiar with tuning game settings, and might just want to get comfortable that it's compatible with their TV, and most people have 4K TVs.",
+      "cn": "Aldehayyat：还有一点我想提的是，部分4K宣传针对的是那些不太熟悉调整游戏设置的玩家，他们可能只想确信它能兼容自己的电视，而多数人都有4K电视。"
+    },
+    {
+      "en": "So a big part of that is just to tell people, yes, it will work with your 4K TV, you're able to play a game at 4K and that's kind of an important message for people who are less familiar with changing their game settings, basically.",
+      "cn": "所以，很大程度上就是想告诉人们：没错，它能搭配你的4K电视，你可以用4K玩游戏。这对于不太会调整游戏设置的人来说，是个挺重要的信息。"
+    },
+    {
+      "en": "Griffais: In general, I would also say that performance over time is a little bit of a malleable thing. We're always working on rolling out performance improvements, and games are always rolling out post-launch updates and things to optimize performance.",
+      "cn": "Griffais：总的来说，我也想说性能会随时间变化，并非一成不变。我们一直在推出性能改进，而游戏也会不断发布上市后更新来优化表现。"
+    },
+    {
+      "en": "But notably as part of Steam Machine development, we've done a ton of work on optimizing performance for low VRAM situations, optimizing performance for things like ray tracing, which we'll be rolling out in the next few days.",
+      "cn": "但尤其值得一提的是，作为Steam Machine开发的一部分，我们为低显存情况做了大量性能优化，以及针对光线追踪等内容的优化，这些将在未来几天内推出。"
+    },
+    {
+      "en": "We have a new driver that really improves and moves the needle on that aspect, but we’re also rolling out new technologies like FSR and different capabilities of that, like Frame Gen. All this stuff will contribute to making the performance a little bit different than it was at launch, as we roll that out. So we're constantly working on driver optimizations and such.",
+      "cn": "我们有一版新驱动，确实能在这方面带来明显改观，而且我们还在部署像FSR及其不同功能（比如帧生成）等新技术。随着这些陆续推出，性能将与首发时有所不同。所以我们一直在进行驱动优化之类的工作。"
+    },
+    {
+      "en": "IGN: I know that FSR, DLSS, XeSS, all of the upscaling solutions are a bit of a hot topic issue, especially with everybody's different opinions on AI. How important do you think these upscaling solutions are to modern gaming?",
+      "cn": "IGN：我知道FSR、DLSS、XeSS，所有这些画面提升方案都是热门话题，尤其各家对AI的看法不一。你认为这些画面提升技术对现代游戏有多重要？"
+    },
+    {
+      "en": "Griffais: I think it depends on who you ask. I mean, personally, I like playing games with native AA or TAA and just cranking down resolution if I need to. But I think a bunch of people are clearly okay with upscaling, and that technology has evolved a bunch over the years, where some of the artifacts that you would use to see are not really represented that much.",
+      "cn": "Griffais：这得看问谁。就我个人而言，我喜欢用原生抗锯齿或TAA来玩游戏，必要时就降低分辨率。但我觉得很多人都明显接受画面提升，而且这项技术这些年进步很大，过去常见的那些伪影如今已不太明显。"
+    },
+    {
+      "en": "So I would say it seems like a technology that's pretty popular right now. So it was important to us that we could work with AMD and make sure that the latest version of FSR upscaling is going to be supported on Steam Machine. And so we're pretty excited that they're bringing that over ,because there's a bunch of games out there that support FSR 4 that will benefit from it.",
+      "cn": "所以我认为，这似乎是一项目前相当流行的技术。因此对我们来说，能与AMD合作，确保最新版FSR画面提升技术在Steam Machine上得到支持，这点很重要。他们能把它带过来，我们很兴奋，因为外面有大量支持FSR 4的游戏将从中受益。"
+    },
+    {
+      "en": "IGN: FSR 4 was built for RDNA 4 rather than the RDNA 3 GPU that's built into the Steam Machine. How much of a performance impact is that going to have, with having fewer of the AI processors on your GPU?",
+      "cn": "IGN：FSR 4是为RDNA 4架构打造的，而Steam Machine内置的是RDNA 3 GPU。在AI处理器数量较少的情况下，这会对性能产生多大影响？"
+    },
+    {
+      "en": "Griffais: I mean, given that it's not released yet, I don't really know for sure. I guess maybe that's a question for AMD to some extent. But I think we'll be able to see as soon as the FSR 4 support is released, of course there's going to be a lot of comparisons as to what the performance hit is and so on.",
+      "cn": "Griffais：鉴于它尚未发布，我真不确定。我想这在某种程度上或许该问AMD。但我认为，一旦FSR 4支持发布，我们就能看到情况，当然届时会有大量关于性能损耗之类的对比。"
+    }
+  ],
+  "pending_dict": [],
+  "translated_terms": {
+    "Steam Machine": "Steam Machine",
+    "Steam Controller": "Steam Controller",
+    "Valve": "Valve",
+    "FSR": "FSR",
+    "RDNA 4": "RDNA 4",
+    "AMD": "AMD",
+    "Pierre-Loup Griffais": "Pierre-Loup Griffais",
+    "Yazan Aldehayyat": "Yazan Aldehayyat"
+  },
+  "cover": "https://assets-prd.ignimgs.com/2026/06/18/steam-machine-4-1781800160251.jpg",
+  "images": [
+    "https://assets-prd.ignimgs.com/2026/06/18/steam-machine-4-1781800160251.jpg?width=1280&format=jpg&auto=webp&quality=80",
+    "https://assets-prd.ignimgs.com/2026/06/18/steam-machine-4-1781800160251.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+    "https://assets-prd.ignimgs.com/2026/06/18/steam-machine-4-1781800160251.jpg?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+    "https://assets-prd.ignimgs.com/2026/06/18/steam-machine-4-1781800160251.jpg?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+    "https://assets-prd.ignimgs.com/2026/06/18/steam-machine-4-1781800160251.jpg"
+  ],
+  "translator": "api",
+  "translator_provider": "openai-compatible",
+  "translator_model": "deepseek-v4-pro"
+}

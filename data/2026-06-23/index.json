@@ -247,8 +247,8 @@
       "url": "https://www.ign.com/articles/steam-machine-interview",
       "publish_time_cn": "2026-06-23 01:00",
       "pub_date": "2026-06-23 01:00",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/06/18/steam-machine-4-1781800160251.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/18/steam-machine-4-1781800160251.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/18/steam-machine-4-1781800160251.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/18/steam-machine-4-1781800160251.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -257,7 +257,11 @@
         "https://assets-prd.ignimgs.com/2026/06/18/steam-machine-4-1781800160251.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-23T07:55:00+08:00"
+      "source_fetched_at": "2026-06-23T07:55:00+08:00",
+      "translation_path": "translations/41.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro"
     },
     {
       "id": 42,
