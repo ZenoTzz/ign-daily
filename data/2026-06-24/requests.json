@@ -1,6 +1,40 @@
 {
   "date": "2026-06-24",
-  "requested_ids": [],
-  "requested_articles": [],
-  "requested_at": "2026-06-23T06:09:50.725Z"
+  "requested_ids": [
+    4,
+    8,
+    9,
+    14
+  ],
+  "requested_articles": [
+    {
+      "id": 4,
+      "url": "https://www.ign.com/articles/warframe-dev-says-no-one-is-celebrating-as-destiny-2-support-comes-to-a-heartbreaking-end",
+      "en_title": "Warframe Dev Says 'No One Is Celebrating' as Destiny 2 Support Comes to a 'Heartbreaking' End",
+      "cn_title": "《星际战甲》开发者谈《命运2》终止：无人庆祝",
+      "publish_time_cn": "2026-06-23 09:50"
+    },
+    {
+      "id": 8,
+      "url": "https://www.ign.com/articles/pokemon-winds-and-waves-starter-creatures-may-debut-first-in-pokemon-go-fans-believe",
+      "en_title": "Pokémon Winds and Waves Starter Creatures May Debut First in Pokémon Go, Fans Believe",
+      "cn_title": "《宝可梦 风与波》初始宝可梦或在《宝可梦Go》中抢先登场",
+      "publish_time_cn": "2026-06-23 17:29"
+    },
+    {
+      "id": 9,
+      "url": "https://www.ign.com/articles/fallout-season-3-todd-howard-teases-new-things-never-seen-before-in-the-games",
+      "en_title": "Fallout Season 3: Todd Howard Teases 'New Things' Never Seen Before in the Games",
+      "cn_title": "陶德·霍华德：《辐射》第三季包含游戏未见过元素",
+      "publish_time_cn": "2026-06-23 17:29"
+    },
+    {
+      "id": 14,
+      "url": "https://www.ign.com/articles/why-valve-refuses-to-subsidize-its-1049-steam-machine",
+      "en_title": "Why Valve Refuses to Subsidize Its $1,049 Steam Machine",
+      "cn_title": "Valve拒绝补贴1049美元(约合人民币7112元)Steam Machine",
+      "publish_time_cn": "2026-06-23 19:30"
+    }
+  ],
+  "requested_at": "2026-06-23T16:14:28.021Z"
 }
