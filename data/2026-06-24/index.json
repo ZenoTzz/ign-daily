@@ -337,8 +337,8 @@
       "url": "https://www.ign.com/articles/why-valve-refuses-to-subsidize-its-1049-steam-machine",
       "publish_time_cn": "2026-06-23 19:30",
       "pub_date": "2026-06-23 19:30",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/06/23/sm-1782214002720.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/22/steam-machine-ign-2026-06-22-17-30-00.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/23/sm-1782214002720.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/23/sm-1782214002720.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -347,7 +347,11 @@
         "https://assets-prd.ignimgs.com/2026/06/23/sm-1782214002720.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-23T21:47:49+08:00"
+      "source_fetched_at": "2026-06-23T21:47:49+08:00",
+      "translation_path": "translations/14.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro"
     },
     {
       "id": 11,
@@ -427,7 +431,7 @@
       "publish_time_cn": "2026-06-23 17:29",
       "pub_date": "2026-06-23 17:29",
       "cover_image": "https://assets-prd.ignimgs.com/2026/06/23/images-1782206114554.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/23/images-1782206114554.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/23/images-1782206114554.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -436,20 +440,25 @@
         "https://assets-prd.ignimgs.com/2026/06/23/images-1782206114554.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-23T18:23:57+08:00"
+      "source_fetched_at": "2026-06-23T18:23:57+08:00",
+      "translation_error": "The read operation timed out",
+      "translation_failed_at": "2026-06-24T01:33:54.193280+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro"
     },
     {
       "id": 9,
       "category": "影视资讯",
       "emoji": "🎬",
       "en_title": "Fallout Season 3: Todd Howard Teases 'New Things' Never Seen Before in the Games",
-      "cn_title": "陶德·霍华德：《辐射》第三季包含游戏未见过元素",
-      "summary": "B社开发主管陶德·霍华德透露，《辐射》真人剧第三季将呈现游戏中从未出现过的新地点与元素。第三季本月在洛杉矶开拍，延续第二季结尾设定在科罗拉多州的废土场景。联合主创表示，旅程可能不会直线推进，但会有许多惊喜。",
+      "cn_title": "陶德·霍华德称《辐射》第三季将现游戏未见之景",
+      "summary": "陶德·霍华德透露《辐射》第三季将前往游戏未出现的新地点，本月在洛杉矶开拍。剧集延续第二季结局，尸鬼前往科罗拉多，但旅程不会一帆风顺。联合主创表示游戏的地域特色启发了新一季，粉丝可以期待大量惊喜和正史扩展。",
       "url": "https://www.ign.com/articles/fallout-season-3-todd-howard-teases-new-things-never-seen-before-in-the-games",
       "publish_time_cn": "2026-06-23 17:29",
       "pub_date": "2026-06-23 17:29",
       "cover_image": "https://assets-prd.ignimgs.com/2026/01/16/falloutnewvegasadaptationbehindthescenesvideo-ign-blogroll-1768592806685.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2026/01/16/falloutnewvegasadaptationbehindthescenesvideo-ign-blogroll-1768592806685.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/01/16/falloutnewvegasadaptationbehindthescenesvideo-ign-blogroll-1768592806685.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -458,7 +467,13 @@
         "https://assets-prd.ignimgs.com/2026/01/16/falloutnewvegasadaptationbehindthescenesvideo-ign-blogroll-1768592806685.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-23T18:23:58+08:00"
+      "source_fetched_at": "2026-06-23T18:23:58+08:00",
+      "translation_error": "paragraph 15 missing cn",
+      "translation_failed_at": "2026-06-24T01:36:59.896413+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro",
+      "translation_path": "translations/09.json"
     },
     {
       "id": 10,
@@ -687,7 +702,7 @@
       "publish_time_cn": "2026-06-23 09:50",
       "pub_date": "2026-06-23 09:50",
       "cover_image": "https://assets-prd.ignimgs.com/2026/06/12/destinythumb-1781277556543.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/12/destinythumb-1781277556543.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/12/destinythumb-1781277556543.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -705,7 +720,11 @@
           "source": "ai_guess",
           "reason": "游戏有稳定中文译名，但词库暂未收录"
         }
-      ]
+      ],
+      "translation_path": "translations/04.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro"
     },
     {
       "id": 5,
