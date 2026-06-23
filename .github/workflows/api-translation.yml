@@ -3,6 +3,11 @@ name: API Translation
 on:
   schedule:
     - cron: "20,50 * * * *"
+  push:
+    branches:
+      - main
+    paths:
+      - "data/**/requests.json"
   workflow_dispatch:
     inputs:
       fulltext_limit:
@@ -111,6 +116,10 @@ jobs:
           print(f"api_model={data.get('api_model', '')}")
           print(f"api_title_model={os.environ.get('MANUAL_API_TITLE_MODEL') or data.get('api_title_model', data.get('api_model', ''))}")
           print(f"api_fulltext_model={os.environ.get('MANUAL_API_FULLTEXT_MODEL') or data.get('api_fulltext_model', '')}")
+          batch = str(data.get("api_fulltext_batch", "5") or "5").strip().lower()
+          if batch == "all":
+              batch = "999"
+          print(f"api_fulltext_batch={batch}")
           print(f"api_base_url={os.environ.get('MANUAL_API_BASE_URL') or data.get('api_base_url', '')}")
           print(f"api_title_base_url={payload.get('api_title_base_url') or os.environ.get('MANUAL_API_BASE_URL') or data.get('api_base_url', '')}")
           print(f"api_fulltext_base_url={payload.get('api_fulltext_base_url') or os.environ.get('MANUAL_API_BASE_URL') or data.get('api_base_url', '')}")
@@ -122,18 +131,63 @@ jobs:
           print(f"compare_models_json={json.dumps(payload.get('compare_models') or [], ensure_ascii=False)}")
           PY
 
+      - name: Detect pending API work
+        id: pending
+        run: |
+          python3 - <<'PY' >> "$GITHUB_OUTPUT"
+          import json
+          from pathlib import Path
+
+          title_count = 0
+          fulltext_count = 0
+          for day_dir in sorted(Path("data").glob("20??-??-??")):
+              need_titles = day_dir / "need_titles.json"
+              if need_titles.exists():
+                  try:
+                      queued = json.loads(need_titles.read_text(encoding="utf-8"))
+                  except Exception:
+                      queued = []
+                  if isinstance(queued, list):
+                      title_count += len(queued)
+
+              req_path = day_dir / "requests.json"
+              idx_path = day_dir / "index.json"
+              if not req_path.exists() or not idx_path.exists():
+                  continue
+              try:
+                  req = json.loads(req_path.read_text(encoding="utf-8"))
+                  index = json.loads(idx_path.read_text(encoding="utf-8"))
+              except Exception:
+                  continue
+              requested = {int(x) for x in req.get("requested_ids", []) if str(x).isdigit()}
+              by_id = {int(a.get("id")): a for a in index.get("articles", []) if str(a.get("id", "")).isdigit()}
+              for aid in requested:
+                  article = by_id.get(aid)
+                  if article and article.get("translation_status") != "done":
+                      fulltext_count += 1
+
+          print(f"title_count={title_count}")
+          print(f"fulltext_count={fulltext_count}")
+          print(f"has_titles={'true' if title_count else 'false'}")
+          print(f"has_fulltext={'true' if fulltext_count else 'false'}")
+          PY
+
       - name: Stop when API mode is disabled
         if: steps.config.outputs.compare_article_id == '' && steps.config.outputs.title_translator != 'api' && steps.config.outputs.title_translator != 'deepseek' && steps.config.outputs.fulltext_translator != 'api' && steps.config.outputs.fulltext_translator != 'deepseek'
         run: echo "API translation disabled by data/automation-config.json."
 
+      - name: Stop when no API work is pending
+        if: steps.config.outputs.compare_article_id == '' && steps.pending.outputs.title_count == '0' && steps.pending.outputs.fulltext_count == '0'
+        run: echo "No queued title or fulltext API translation work."
+
       - name: Refresh exchange rates
-        if: steps.config.outputs.compare_article_id != '' || steps.config.outputs.title_translator == 'api' || steps.config.outputs.title_translator == 'deepseek' || steps.config.outputs.fulltext_translator == 'api' || steps.config.outputs.fulltext_translator == 'deepseek'
+        if: steps.config.outputs.compare_article_id != '' || ((steps.config.outputs.title_translator == 'api' || steps.config.outputs.title_translator == 'deepseek') && steps.pending.outputs.title_count != '0') || ((steps.config.outputs.fulltext_translator == 'api' || steps.config.outputs.fulltext_translator == 'deepseek') && steps.pending.outputs.fulltext_count != '0')
         run: |
           set -euo pipefail
           python3 scripts/fetch_exchange_rates.py
 
       - name: Snapshot DeepSeek balance before run
-        if: steps.config.outputs.compare_article_id != '' || steps.config.outputs.title_translator == 'api' || steps.config.outputs.title_translator == 'deepseek' || steps.config.outputs.fulltext_translator == 'api' || steps.config.outputs.fulltext_translator == 'deepseek'
+        if: steps.config.outputs.compare_article_id != '' || ((steps.config.outputs.title_translator == 'api' || steps.config.outputs.title_translator == 'deepseek') && steps.pending.outputs.title_count != '0') || ((steps.config.outputs.fulltext_translator == 'api' || steps.config.outputs.fulltext_translator == 'deepseek') && steps.pending.outputs.fulltext_count != '0')
         env:
           TRANSLATOR_API_KEY: ${{ secrets.TRANSLATOR_API_KEY || secrets.DEEPSEEK_API_KEY }}
           TRANSLATOR_BASE_URL: ${{ steps.config.outputs.api_base_url || vars.TRANSLATOR_BASE_URL || vars.DEEPSEEK_BASE_URL || 'https://api.deepseek.com' }}
@@ -159,7 +213,7 @@ jobs:
           python3 scripts/agent_doctor.py
 
       - name: Translate queued titles
-        if: steps.config.outputs.compare_article_id == '' && (steps.config.outputs.title_translator == 'api' || steps.config.outputs.title_translator == 'deepseek')
+        if: steps.config.outputs.compare_article_id == '' && (steps.config.outputs.title_translator == 'api' || steps.config.outputs.title_translator == 'deepseek') && steps.pending.outputs.title_count != '0'
         env:
           TRANSLATOR_API_KEY: ${{ secrets.TRANSLATOR_API_KEY || secrets.DEEPSEEK_API_KEY }}
           TRANSLATOR_MODEL: ${{ steps.config.outputs.api_title_model || steps.config.outputs.api_model || vars.TRANSLATOR_TITLE_MODEL || vars.TRANSLATOR_MODEL || vars.DEEPSEEK_MODEL || 'deepseek-v4-flash' }}
@@ -176,12 +230,12 @@ jobs:
           python3 scripts/translate_titles_deepseek.py --all
 
       - name: Translate requested full articles
-        if: steps.config.outputs.compare_article_id == '' && (steps.config.outputs.fulltext_translator == 'api' || steps.config.outputs.fulltext_translator == 'deepseek')
+        if: steps.config.outputs.compare_article_id == '' && (steps.config.outputs.fulltext_translator == 'api' || steps.config.outputs.fulltext_translator == 'deepseek') && steps.pending.outputs.fulltext_count != '0'
         env:
           TRANSLATOR_API_KEY: ${{ secrets.TRANSLATOR_API_KEY || secrets.DEEPSEEK_API_KEY }}
           TRANSLATOR_MODEL: ${{ steps.config.outputs.api_fulltext_model || vars.TRANSLATOR_FULLTEXT_MODEL || steps.config.outputs.api_model || vars.TRANSLATOR_MODEL || vars.DEEPSEEK_MODEL || 'deepseek-v4-pro' }}
           TRANSLATOR_BASE_URL: ${{ steps.config.outputs.api_fulltext_base_url || steps.config.outputs.api_base_url || vars.TRANSLATOR_BASE_URL || vars.DEEPSEEK_BASE_URL || 'https://api.deepseek.com' }}
-          TRANSLATOR_FULLTEXT_LIMIT: ${{ github.event_name == 'workflow_dispatch' && inputs.fulltext_limit || '5' }}
+          TRANSLATOR_FULLTEXT_LIMIT: ${{ github.event_name == 'workflow_dispatch' && inputs.fulltext_limit || steps.config.outputs.api_fulltext_batch || '5' }}
           TRANSLATOR_FULLTEXT_TIME_BUDGET_SECONDS: ${{ github.event_name == 'workflow_dispatch' && inputs.time_budget_seconds || '1200' }}
           TRANSLATOR_FULLTEXT_MAX_TOKENS: "12000"
           TRANSLATOR_THINKING_MODE: ${{ steps.config.outputs.api_fulltext_thinking }}
@@ -195,7 +249,7 @@ jobs:
           python3 scripts/translate_fulltext_api.py --all
 
       - name: Validate repository
-        if: steps.config.outputs.compare_article_id != '' || steps.config.outputs.title_translator == 'api' || steps.config.outputs.title_translator == 'deepseek' || steps.config.outputs.fulltext_translator == 'api' || steps.config.outputs.fulltext_translator == 'deepseek'
+        if: steps.config.outputs.compare_article_id != '' || ((steps.config.outputs.title_translator == 'api' || steps.config.outputs.title_translator == 'deepseek') && steps.pending.outputs.title_count != '0') || ((steps.config.outputs.fulltext_translator == 'api' || steps.config.outputs.fulltext_translator == 'deepseek') && steps.pending.outputs.fulltext_count != '0')
         env:
           TRANSLATOR_API_KEY: ${{ secrets.TRANSLATOR_API_KEY || secrets.DEEPSEEK_API_KEY }}
           TRANSLATOR_BASE_URL: ${{ steps.config.outputs.api_base_url || vars.TRANSLATOR_BASE_URL || vars.DEEPSEEK_BASE_URL || 'https://api.deepseek.com' }}
@@ -205,7 +259,7 @@ jobs:
           python3 scripts/agent_doctor.py
 
       - name: Commit and push API translation update
-        if: steps.config.outputs.compare_article_id != '' || steps.config.outputs.title_translator == 'api' || steps.config.outputs.title_translator == 'deepseek' || steps.config.outputs.fulltext_translator == 'api' || steps.config.outputs.fulltext_translator == 'deepseek'
+        if: steps.config.outputs.compare_article_id != '' || ((steps.config.outputs.title_translator == 'api' || steps.config.outputs.title_translator == 'deepseek') && steps.pending.outputs.title_count != '0') || ((steps.config.outputs.fulltext_translator == 'api' || steps.config.outputs.fulltext_translator == 'deepseek') && steps.pending.outputs.fulltext_count != '0')
         run: |
           set -euo pipefail
           git add data exchange_rates.json
