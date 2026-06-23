@@ -13,7 +13,7 @@ from typing import Any
 
 from common_paths import REPO_ROOT
 
-CACHE_PREFIX_VERSION = "ign-daily-translation-v6"
+CACHE_PREFIX_VERSION = "ign-daily-translation-v7"
 TRANSLATION_STYLE_CHARS = 9000
 FIXED_TRANSLATION_INSTRUCTION = (
     "你正在为 IGN Daily 翻译英文游戏/影视新闻。必须遵守词库、翻译指南和风格画像。"
@@ -28,6 +28,9 @@ FIXED_TRANSLATION_INSTRUCTION = (
 FULLTEXT_SEMANTIC_INSTRUCTIONS = [
     "忠实的是事实、逻辑和语气，不是英文语序；禁止逐词映射或照搬英文名词结构。",
     "自然化只允许调整语序、拆分长句和补出中文表达必需的主语；禁止意译、扩写或自行润色原文观点。",
+    "译文必须先准确理解整句关系，再按中文新闻稿重组表达；不要把英文从句、插入语和被动结构原样压进中文。",
+    "每个中文句子都要能独立读顺：主语明确、谓语落地、修饰语位置自然。若读起来像机翻腔，必须在不增删事实的前提下改顺。",
+    "避免生硬套话：不要滥用「进行」「一项」「某种」「自身」「被认为」「这意味着」等占位词，除非原文确实需要。",
     "不得增加原文未明确表达的时间、动机、因果、评价、程度或背景；有歧义时采用最小推断并保留原文的不确定性。",
     "翻译每段前先在内部识别动作主体、动作对象、并列/转折关系、比较范围和代词指向，再写中文。",
     "结合游戏或影视语境消歧。例如 what players do with a companion 通常是如何互动、使用或操控，不要机械译成与它做什么。",

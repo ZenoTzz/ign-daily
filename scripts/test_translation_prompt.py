@@ -41,6 +41,8 @@ class TranslationPromptTests(unittest.TestCase):
         self.assertIn("不得增删事实", joined)
         self.assertIn("禁止意译、扩写", joined)
         self.assertIn("采用最小推断", joined)
+        self.assertIn("按中文新闻稿重组表达", joined)
+        self.assertIn("若读起来像机翻腔", joined)
         self.assertNotIn("直译优先", translation_system_prompt())
 
     def test_audit_catches_known_gen_atlas_calques(self) -> None:

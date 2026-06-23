@@ -35,14 +35,14 @@
     <!-- Main -->
     <main class="flex-1 max-w-4xl w-full mx-auto px-4 py-6">
       <p class="text-sm text-white/40 mb-6">
-        每天 22:30 自动学习你润色过的文章，沉淀风格偏好。你可以为每条规则添加批注，反馈给我下次改进。
+        每天 22:30 自动整理你润色过的文章；每周汇总成学习报告，只列出候选规律，等你决定采纳、否定、限定或暂缓后，才会进入长期风格规则。
       </p>
 
       <!-- Weekly long-term learning report -->
       <section class="mb-8 bg-[#14141f]/70 rounded-lg border border-white/5 overflow-hidden">
         <header class="bg-[#08080f] px-5 py-3 border-b border-white/5 flex items-center gap-3">
           <h2 class="text-lg font-bold text-white/80">每周学习报告</h2>
-          <span class="text-xs text-white/35" x-text="weeklyReport ? `${weeklyReport.week_id} · ${weeklyReport.summary?.candidate_count || 0} 条候选规律` : '等待夜间学习生成'"></span>
+          <span class="text-xs text-white/35" x-text="weeklyReport ? `${weeklyReport.week_id} · ${weeklyRangeText(weeklyReport)} · ${weeklyReport.summary?.candidate_count || 0} 条候选规律` : '等待夜间学习生成'"></span>
           <div class="flex-1"></div>
           <button @click="weeklyExpanded = !weeklyExpanded" class="text-sm text-red-500 hover:underline" x-text="weeklyExpanded ? '收起' : '展开'"></button>
         </header>
@@ -55,6 +55,9 @@
           </template>
           <template x-if="!weeklyLoading && weeklyReport">
             <div class="space-y-4">
+              <div class="text-sm text-white/45 bg-[#08080f] rounded p-3 border border-white/5">
+                本周范围：<span class="text-white/70" x-text="weeklyRangeText(weeklyReport)"></span>。下面是我从润色稿里提取的候选学习成果，不会自动写入正式规则；你点「采纳 / 否定 / 限定 / 暂缓」后，夜间学习才会按你的决定处理。
+              </div>
               <div class="grid grid-cols-2 md:grid-cols-4 gap-3 text-sm">
                 <div class="bg-[#08080f] rounded p-3 border border-white/5"><div class="text-white/35">候选规律</div><div class="text-xl font-bold" x-text="weeklyReport.summary?.candidate_count || 0"></div></div>
                 <div class="bg-[#08080f] rounded p-3 border border-white/5"><div class="text-white/35">待你确认</div><div class="text-xl font-bold" x-text="weeklyReport.summary?.ready_for_review || 0"></div></div>
@@ -325,6 +328,12 @@
 
         getResponse(date, ruleId) {
           return (this.responses[date] || {})[ruleId];
+        },
+
+        weeklyRangeText(report) {
+          const range = report?.range || {};
+          if (range.start && range.end) return `${range.start} 到 ${range.end}`;
+          return '日期范围待生成';
         },
 
         async loadWeeklyReport() {
