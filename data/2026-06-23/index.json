@@ -11,8 +11,8 @@
       "url": "https://www.ign.com/articles/its-finally-happened-you-can-play-as-nicolas-cage-in-call-of-duty",
       "publish_time_cn": "2026-06-23 01:44",
       "pub_date": "2026-06-23 01:44",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/06/22/codthumb-1782145493170.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/22/codthumb-1782145493170.png",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/22/codthumb-1782145493170.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/22/codthumb-1782145493170.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -30,7 +30,11 @@
           "source": "ai_guess",
           "reason": "知名演员，但词库未收录，需确认译名"
         }
-      ]
+      ],
+      "translation_path": "translations/33.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro"
     },
     {
       "id": 34,
@@ -81,8 +85,8 @@
       "url": "https://www.ign.com/articles/bethesda-boss-todd-howard-saw-marvels-blade-in-may-says-arkane-doing-a-really-really-great-job",
       "publish_time_cn": "2026-06-23 01:21",
       "pub_date": "2026-06-23 01:21",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/06/22/marvels-blade-game-1782147140341.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/22/marvels-blade-game-1782147140341.png",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/22/marvels-blade-game-1782147140341.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/22/marvels-blade-game-1782147140341.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -91,7 +95,11 @@
         "https://assets-prd.ignimgs.com/2026/06/22/marvels-blade-game-1782147140341.png"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-23T07:54:54+08:00"
+      "source_fetched_at": "2026-06-23T07:54:54+08:00",
+      "translation_path": "translations/35.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro"
     },
     {
       "id": 36,
@@ -182,8 +190,8 @@
       "url": "https://www.ign.com/articles/steam-machine-price",
       "publish_time_cn": "2026-06-23 01:00",
       "pub_date": "2026-06-23 01:00",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/06/18/steam-machine-9-1781800160250.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/18/steam-machine-9-1781800160250.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/18/steam-machine-9-1781800160250.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/18/steam-machine-9-1781800160250.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -197,7 +205,11 @@
         "https://assets-prd.ignimgs.com/2025/11/11/mac-mini-202410-gallery-3-1762890300446.jpeg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-23T07:54:58+08:00"
+      "source_fetched_at": "2026-06-23T07:54:58+08:00",
+      "translation_path": "translations/39.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro"
     },
     {
       "id": 40,
@@ -209,8 +221,8 @@
       "url": "https://www.ign.com/articles/the-steam-machine-was-originally-meant-to-cost-about-750",
       "publish_time_cn": "2026-06-23 01:00",
       "pub_date": "2026-06-23 01:00",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/06/19/steammachine-blogroll-1781829370399.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/19/steammachine-blogroll-1781829370399.png",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/19/steammachine-blogroll-1781829370399.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/19/steammachine-blogroll-1781829370399.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -219,7 +231,11 @@
         "https://assets-prd.ignimgs.com/2026/06/19/steammachine-blogroll-1781829370399.png"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-23T07:54:59+08:00"
+      "source_fetched_at": "2026-06-23T07:54:59+08:00",
+      "translation_path": "translations/40.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro"
     },
     {
       "id": 41,
@@ -253,8 +269,8 @@
       "url": "https://www.ign.com/articles/valve-says-steam-deck-2-is-getting-closer-but-still-not-ready-yet",
       "publish_time_cn": "2026-06-23 01:00",
       "pub_date": "2026-06-23 01:00",
-      "cover_image": "https://assets-prd.ignimgs.com/2025/06/16/legion-go-s-1-1750108335347.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2025/06/16/legion-go-s-1-1750108335347.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2025/06/16/legion-go-s-1-1750108335347.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2025/06/16/legion-go-s-1-1750108335347.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -263,7 +279,11 @@
         "https://assets-prd.ignimgs.com/2025/06/16/legion-go-s-1-1750108335347.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-23T07:55:02+08:00"
+      "source_fetched_at": "2026-06-23T07:55:02+08:00",
+      "translation_path": "translations/42.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro"
     },
     {
       "id": 43,
@@ -619,8 +639,8 @@
       "url": "https://www.ign.com/articles/zelda-fan-ditches-ocarina-of-time-unreal-engine-remake-after-a-decade-of-work",
       "publish_time_cn": "2026-06-22 20:25",
       "pub_date": "2026-06-22 20:25",
-      "cover_image": "https://assets-prd.ignimgs.com/2025/11/04/zelda-ocarinaoftime-stillfun-blogroll-1762282899827.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2025/11/04/zelda-ocarinaoftime-stillfun-blogroll-1762282899827.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2025/11/04/zelda-ocarinaoftime-stillfun-blogroll-1762282899827.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2025/11/04/zelda-ocarinaoftime-stillfun-blogroll-1762282899827.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -629,7 +649,11 @@
         "https://assets-prd.ignimgs.com/2025/11/04/zelda-ocarinaoftime-stillfun-blogroll-1762282899827.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-22T22:18:14+08:00"
+      "source_fetched_at": "2026-06-22T22:18:14+08:00",
+      "translation_path": "translations/17.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro"
     },
     {
       "id": 32,
@@ -664,8 +688,8 @@
       "url": "https://www.ign.com/articles/tom-hanks-uncertain-about-toy-story-6-return",
       "publish_time_cn": "2026-06-22 19:27",
       "pub_date": "2026-06-22 19:27",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/06/22/gettyimages-2280793605-1782127479458.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/22/gettyimages-2280793605-1782127479458.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/22/gettyimages-2280793605-1782127479458.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/22/gettyimages-2280793605-1782127479458.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -674,7 +698,11 @@
         "https://assets-prd.ignimgs.com/2026/06/22/gettyimages-2280793605-1782127479458.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-22T22:18:15+08:00"
+      "source_fetched_at": "2026-06-22T22:18:15+08:00",
+      "translation_path": "translations/18.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro"
     },
     {
       "id": 19,
@@ -724,8 +752,8 @@
       "url": "https://www.ign.com/articles/scammers-are-dangling-the-one-thing-pc-gamers-wont-get-anytime-soon-gta-6",
       "publish_time_cn": "2026-06-22 18:49",
       "pub_date": "2026-06-22 18:49",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/06/18/gta-6-preorder-guide-ign-new-1781789083753.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/18/gta-6-preorder-guide-ign-new-1781789083753.png",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/18/gta-6-preorder-guide-ign-new-1781789083753.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/18/gta-6-preorder-guide-ign-new-1781789083753.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -734,7 +762,11 @@
         "https://assets-prd.ignimgs.com/2026/06/18/gta-6-preorder-guide-ign-new-1781789083753.png"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-22T22:18:16+08:00"
+      "source_fetched_at": "2026-06-22T22:18:16+08:00",
+      "translation_path": "translations/20.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro"
     },
     {
       "id": 8,
@@ -814,8 +846,8 @@
       "url": "https://www.ign.com/articles/zelda-tears-of-the-kingdom-amazon-prime-day-2026",
       "publish_time_cn": "2026-06-22 17:19",
       "pub_date": "2026-06-22 17:19",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/06/15/tears-of-the-kingdom-prime-day-deal-ign-1781532152124.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/15/tears-of-the-kingdom-prime-day-deal-ign-1781532152124.png",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/15/tears-of-the-kingdom-prime-day-deal-ign-1781532152124.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/15/zelda-totk-1781528483198.png",
@@ -831,7 +863,11 @@
         "https://assets-prd.ignimgs.com/2026/06/10/816ip-1hyjl-sl1500-1781104972310.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-22T18:52:41+08:00"
+      "source_fetched_at": "2026-06-22T18:52:41+08:00",
+      "translation_path": "translations/07.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro"
     },
     {
       "id": 5,
