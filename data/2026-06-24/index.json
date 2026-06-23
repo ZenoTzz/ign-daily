@@ -2,6 +2,60 @@
   "date": "2026-06-24",
   "articles": [
     {
+      "id": 37,
+      "category": "游戏新闻",
+      "emoji": "💔",
+      "en_title": "Bungie Developers Repeatedly Pitched a Destiny Dating Sim, but Leadership Rejected It",
+      "cn_title": "Bungie开发者多次提议做《命运》恋爱模拟，但领导层拒绝",
+      "summary": "据前Bungie社区成员透露，开发团队曾制作过一款《命运》恋爱模拟游戏原型，灵感来自《Dream Daddy》。尽管开发者每年都尝试将其推进为正式项目，但领导层始终以「没人想要浪漫或搞怪」为由拒绝。考虑到Bungie近期停止支持《命运2》并面临大规模裁员，这款恋爱模拟很可能永远无法面世。",
+      "url": "https://www.ign.com/articles/bungie-developers-repeatedly-pitched-a-destiny-dating-sim-but-leadership-rejected-it",
+      "publish_time_cn": "2026-06-24 05:00",
+      "pub_date": "2026-06-24 05:00",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/05/25/warframe-and-destiny-1779742030545.png?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/05/25/warframe-and-destiny-1779742030545.png?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/05/25/warframe-and-destiny-1779742030545.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/05/25/warframe-and-destiny-1779742030545.png?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/05/25/warframe-and-destiny-1779742030545.png?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/05/25/warframe-and-destiny-1779742030545.png"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-24T06:53:28+08:00"
+    },
+    {
+      "id": 38,
+      "category": "游戏新闻",
+      "emoji": "🃏",
+      "en_title": "Lorcana Attack of the Vine! TCG Showcases Iconic Disney Team Ups – Exclusive",
+      "cn_title": "《Lorcana》新扩展「Attack of the Vine!」揭晓迪士尼组队卡牌",
+      "summary": "迪士尼Lorcana最新扩展包《Attack of the Vine!》将于7月17日先行登陆实体店，24日全面发售。IGN独家揭晓六张组队卡牌，包括伍迪与巴斯光年、米奇与米妮等经典搭档。这些双色高费卡牌拥有强力机制，如Combo Shift和Duo Shift，有望改变环境格局。",
+      "url": "https://www.ign.com/articles/lorcana-attack-of-the-vine-tcg-showcases-iconic-disney-team-ups-exclusive",
+      "publish_time_cn": "2026-06-24 05:00",
+      "pub_date": "2026-06-24 05:00",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/20/dlaotv-oo-1781925668622.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/20/dlaotv-oo-1781925668622.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/20/dlaotv-oo-1781925668622.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/20/dlaotv-oo-1781925668622.jpg?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/20/dlaotv-oo-1781925668622.jpg?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/20/dlaotv-oo-1781925668622.jpg",
+        "https://assets-prd.ignimgs.com/2026/06/23/daotv-1-1782233086034.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-24T06:53:29+08:00",
+      "pending_dict": [
+        {
+          "en": "Lorcana",
+          "cn": "迪士尼Lorcana",
+          "cat": "games",
+          "source": "ai_guess",
+          "reason": "无稳定官方中文名，保留原文或参考社区译名"
+        }
+      ]
+    },
+    {
       "id": 31,
       "category": "评测评分",
       "emoji": "🦇",
@@ -1255,5 +1309,5 @@
       "translator_model": "deepseek-v4-pro"
     }
   ],
-  "total": 36
+  "total": 38
 }

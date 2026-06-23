@@ -777,6 +777,48 @@
       "total_tokens": 9175,
       "prompt_cache_hit_tokens": 7936,
       "prompt_cache_miss_tokens": 611
+    },
+    {
+      "time_cn": "2026-06-24 06:53:38",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 37,
+      "article_title": "Bungie Developers Repeatedly Pitched a Destiny Dating Sim, but Leadership Rejected It",
+      "article_url": "https://www.ign.com/articles/bungie-developers-repeatedly-pitched-a-destiny-dating-sim-but-leadership-rejected-it",
+      "article_date": "2026-06-24",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00021892,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8627,
+      "completion_tokens": 357,
+      "total_tokens": 8984,
+      "prompt_cache_hit_tokens": 7936,
+      "prompt_cache_miss_tokens": 691
+    },
+    {
+      "time_cn": "2026-06-24 06:53:50",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 38,
+      "article_title": "Lorcana Attack of the Vine! TCG Showcases Iconic Disney Team Ups – Exclusive",
+      "article_url": "https://www.ign.com/articles/lorcana-attack-of-the-vine-tcg-showcases-iconic-disney-team-ups-exclusive",
+      "article_date": "2026-06-24",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00032224,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8635,
+      "completion_tokens": 722,
+      "total_tokens": 9357,
+      "prompt_cache_hit_tokens": 7936,
+      "prompt_cache_miss_tokens": 699
     }
   ]
 }
