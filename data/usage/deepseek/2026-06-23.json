@@ -1239,6 +1239,48 @@
       "total_tokens": 9422,
       "prompt_cache_hit_tokens": 7936,
       "prompt_cache_miss_tokens": 663
+    },
+    {
+      "time_cn": "2026-06-23 14:09:45",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 6,
+      "article_title": "Keanu Reeves Reportedly in Talks to Star in New LEGO Movie Project from Toy Story 4 Director",
+      "article_url": "https://www.ign.com/articles/keanu-reeves-reportedly-in-talks-to-star-in-new-lego-movie-project-from-toy-story-4-director",
+      "article_date": "2026-06-24",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00033064,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8399,
+      "completion_tokens": 870,
+      "total_tokens": 9269,
+      "prompt_cache_hit_tokens": 7936,
+      "prompt_cache_miss_tokens": 463
+    },
+    {
+      "time_cn": "2026-06-23 14:10:00",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 7,
+      "article_title": "Powerpuff Girls Movie in the Works at Warner Bros. Animation",
+      "article_url": "https://www.ign.com/articles/powerpuff-girls-movie-in-the-works-at-warner-bros-animation",
+      "article_date": "2026-06-24",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.0004551,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8602,
+      "completion_tokens": 1213,
+      "total_tokens": 9815,
+      "prompt_cache_hit_tokens": 7936,
+      "prompt_cache_miss_tokens": 666
     }
   ]
 }
