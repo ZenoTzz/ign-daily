@@ -84,6 +84,90 @@
       "total_tokens": 9294,
       "prompt_cache_hit_tokens": 7936,
       "prompt_cache_miss_tokens": 721
+    },
+    {
+      "time_cn": "2026-06-24 00:24:50",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 19,
+      "article_title": "Dragon Ball Xenoverse 3 Invites You to Experience Age 1000 for Yourself | IGN Preview",
+      "article_url": "https://www.ign.com/articles/dragon-ball-xenoverse-3-preview-age-1000",
+      "article_date": "2026-06-24",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00079292,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 10255,
+      "completion_tokens": 1593,
+      "total_tokens": 11848,
+      "prompt_cache_hit_tokens": 7936,
+      "prompt_cache_miss_tokens": 2319
+    },
+    {
+      "time_cn": "2026-06-24 00:25:06",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 20,
+      "article_title": "Star Wars: Galactic Racer – The First Preview",
+      "article_url": "https://www.ign.com/articles/star-wars-galactic-racer-the-first-preview",
+      "article_date": "2026-06-24",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00062786,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 10116,
+      "completion_tokens": 1073,
+      "total_tokens": 11189,
+      "prompt_cache_hit_tokens": 7936,
+      "prompt_cache_miss_tokens": 2180
+    },
+    {
+      "time_cn": "2026-06-24 00:25:19",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 21,
+      "article_title": "Warhammer 40,000: Darktide Gets Free Update Alongside Skitarii Class, Adds a New Enemy",
+      "article_url": "https://www.ign.com/articles/warhammer-40000-darktide-gets-free-update-alongside-skitarii-class-adds-a-new-enemy",
+      "article_date": "2026-06-24",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00039602,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8724,
+      "completion_tokens": 941,
+      "total_tokens": 9665,
+      "prompt_cache_hit_tokens": 7936,
+      "prompt_cache_miss_tokens": 788
+    },
+    {
+      "time_cn": "2026-06-24 00:25:31",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 22,
+      "article_title": "Michael Caine Announces He's Narrating The Odyssey — But Not the Christopher Nolan Movie, And Also His Voice is Actually AI",
+      "article_url": "https://www.ign.com/articles/michael-caine-announces-hes-narrating-the-odyssey-but-not-the-christopher-nolan-movie-and-also-his-voice-is-actually-ai",
+      "article_date": "2026-06-24",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00031776,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8547,
+      "completion_tokens": 750,
+      "total_tokens": 9297,
+      "prompt_cache_hit_tokens": 7936,
+      "prompt_cache_miss_tokens": 611
     }
   ]
 }
