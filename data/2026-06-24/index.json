@@ -168,8 +168,8 @@
       "url": "https://www.ign.com/articles/the-last-of-us-part-2-multiplayer-lives-on-as-pvp-mod-due-out-later-this-year",
       "publish_time_cn": "2026-06-23 10:06",
       "pub_date": "2026-06-23 10:06",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/06/22/the-last-of-us-part-2-multiplayer-1782160463542.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/22/the-last-of-us-part-2-multiplayer-1782160463542.png",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/22/the-last-of-us-part-2-multiplayer-1782160463542.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/22/the-last-of-us-part-2-multiplayer-1782160463542.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -187,7 +187,11 @@
           "source": "ai_guess",
           "reason": "模组制作者用户名，无官方中文译名，建议保留原文"
         }
-      ]
+      ],
+      "translation_path": "translations/03.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro"
     },
     {
       "id": 4,
@@ -230,8 +234,8 @@
       "url": "https://www.ign.com/articles/marvels-wolverine-actor-confirms-role-in-gta-6",
       "publish_time_cn": "2026-06-23 09:39",
       "pub_date": "2026-06-23 09:39",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/06/18/official-cover-art-landscape-12-uu2irr-2-a-1781799433001.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/18/official-cover-art-landscape-12-uu2irr-2-a-1781799433001.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/18/official-cover-art-landscape-12-uu2irr-2-a-1781799433001.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/18/official-cover-art-landscape-12-uu2irr-2-a-1781799433001.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -240,7 +244,11 @@
         "https://assets-prd.ignimgs.com/2026/06/18/official-cover-art-landscape-12-uu2irr-2-a-1781799433001.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-23T12:22:12+08:00"
+      "source_fetched_at": "2026-06-23T12:22:12+08:00",
+      "translation_path": "translations/05.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro"
     }
   ],
   "total": 7

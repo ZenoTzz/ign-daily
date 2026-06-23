@@ -1281,6 +1281,90 @@
       "total_tokens": 9815,
       "prompt_cache_hit_tokens": 7936,
       "prompt_cache_miss_tokens": 666
+    },
+    {
+      "time_cn": "2026-06-23 15:00:18",
+      "task": "fulltext",
+      "model": "deepseek-v4-pro",
+      "article_id": 3,
+      "article_title": "《最后生还者2》多人模式以PvP Mod形式回归，年内推出",
+      "article_url": "https://www.ign.com/articles/the-last-of-us-part-2-multiplayer-lives-on-as-pvp-mod-due-out-later-this-year",
+      "article_date": "2026-06-24",
+      "detail": "",
+      "estimated_cost_usd": 0.00945429,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 9842,
+      "completion_tokens": 5946,
+      "total_tokens": 15788,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 9842
+    },
+    {
+      "time_cn": "2026-06-23 15:01:14",
+      "task": "fulltext",
+      "model": "deepseek-v4-pro",
+      "article_id": 5,
+      "article_title": "金刚狼演员确认加盟《GTA6》",
+      "article_url": "https://www.ign.com/articles/marvels-wolverine-actor-confirms-role-in-gta-6",
+      "article_date": "2026-06-24",
+      "detail": "",
+      "estimated_cost_usd": 0.00709357,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 9676,
+      "completion_tokens": 3379,
+      "total_tokens": 13055,
+      "prompt_cache_hit_tokens": 128,
+      "prompt_cache_miss_tokens": 9548
+    },
+    {
+      "time_cn": "2026-06-23 15:01:51",
+      "task": "fulltext_chunk",
+      "model": "deepseek-v4-pro",
+      "article_id": 5,
+      "article_title": "金刚狼演员确认加盟《GTA6》",
+      "article_url": "https://www.ign.com/articles/marvels-wolverine-actor-confirms-role-in-gta-6",
+      "article_date": "2026-06-24",
+      "detail": "paragraphs 1-6",
+      "estimated_cost_usd": 0.00609305,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 8927,
+      "completion_tokens": 2540,
+      "total_tokens": 11467,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 8927
+    },
+    {
+      "time_cn": "2026-06-23 15:02:04",
+      "task": "fulltext_chunk",
+      "model": "deepseek-v4-pro",
+      "article_id": 5,
+      "article_title": "金刚狼演员确认加盟《GTA6》",
+      "article_url": "https://www.ign.com/articles/marvels-wolverine-actor-confirms-role-in-gta-6",
+      "article_date": "2026-06-24",
+      "detail": "paragraphs 7-7",
+      "estimated_cost_usd": 0.00088088,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 8485,
+      "completion_tokens": 578,
+      "total_tokens": 9063,
+      "prompt_cache_hit_tokens": 7680,
+      "prompt_cache_miss_tokens": 805
     }
   ]
 }
