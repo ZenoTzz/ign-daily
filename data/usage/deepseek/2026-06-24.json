@@ -483,6 +483,174 @@
       "total_tokens": 11005,
       "prompt_cache_hit_tokens": 8064,
       "prompt_cache_miss_tokens": 782
+    },
+    {
+      "time_cn": "2026-06-24 02:33:21",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 23,
+      "article_title": "Netflix Horror Game Starring Sadie Sink and Zoë Kravitz from Oxenfree Developer Night School Studio",
+      "article_url": "https://www.ign.com/articles/netflix-horror-game-starring-sadie-sink-and-zo-kravitz-from-oxenfree-developer-night-school-studio",
+      "article_date": "2026-06-24",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00025714,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8476,
+      "completion_tokens": 569,
+      "total_tokens": 9045,
+      "prompt_cache_hit_tokens": 7936,
+      "prompt_cache_miss_tokens": 540
+    },
+    {
+      "time_cn": "2026-06-24 02:33:34",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 24,
+      "article_title": "Arnold Schwarzenegger AI Game is an Amazon Luna Exclusive",
+      "article_url": "https://www.ign.com/articles/arnold-schwarzenegger-ai-game-is-an-amazon-luna-exclusive",
+      "article_date": "2026-06-24",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00045622,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8872,
+      "completion_tokens": 1082,
+      "total_tokens": 9954,
+      "prompt_cache_hit_tokens": 7936,
+      "prompt_cache_miss_tokens": 936
+    },
+    {
+      "time_cn": "2026-06-24 02:33:44",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 25,
+      "article_title": "Preview: Cataclysm Arcade Is a Weird, Clever TCG That's Already Won Us Over Fast",
+      "article_url": "https://www.ign.com/articles/cataclysm-arcade-tcg-preview-card-reveal",
+      "article_date": "2026-06-24",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00051292,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9913,
+      "completion_tokens": 764,
+      "total_tokens": 10677,
+      "prompt_cache_hit_tokens": 7936,
+      "prompt_cache_miss_tokens": 1977
+    },
+    {
+      "time_cn": "2026-06-24 02:33:53",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 26,
+      "article_title": "RF Online Next's Mining War Pits Hundreds of Players on One Battlefield",
+      "article_url": "https://www.ign.com/articles/rf-online-nexts-mining-war-pits-hundreds-of-players-on-one-battlefield",
+      "article_date": "2026-06-24",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00033148,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8743,
+      "completion_tokens": 701,
+      "total_tokens": 9444,
+      "prompt_cache_hit_tokens": 7936,
+      "prompt_cache_miss_tokens": 807
+    },
+    {
+      "time_cn": "2026-06-24 02:33:59",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 27,
+      "article_title": "Toy Story 5 Producer Rules Out Live-Action Toy Story Movie: 'Please God No'",
+      "article_url": "https://www.ign.com/articles/toy-story-5-producer-rules-out-live-action-toy-story-movie-please-god-no",
+      "article_date": "2026-06-24",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00023194,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8634,
+      "completion_tokens": 400,
+      "total_tokens": 9034,
+      "prompt_cache_hit_tokens": 7936,
+      "prompt_cache_miss_tokens": 698
+    },
+    {
+      "time_cn": "2026-06-24 02:34:11",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 28,
+      "article_title": "Resonance: A Plague Tale Legacy Finally Lets You Swing Back | IGN Preview",
+      "article_url": "https://www.ign.com/articles/resonance-a-plague-tale-legacy-finally-lets-you-swing-back-ign-preview",
+      "article_date": "2026-06-24",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.0005895,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 10032,
+      "completion_tokens": 978,
+      "total_tokens": 11010,
+      "prompt_cache_hit_tokens": 7936,
+      "prompt_cache_miss_tokens": 2096
+    },
+    {
+      "time_cn": "2026-06-24 02:34:26",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 29,
+      "article_title": "Steve Niles and Damien Worm Reunite With New Horror Graphic Novel Heartbreak Manor",
+      "article_url": "https://www.ign.com/articles/heartbreak-manor-horror-graphic-novel-preview",
+      "article_date": "2026-06-24",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00047498,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8610,
+      "completion_tokens": 1280,
+      "total_tokens": 9890,
+      "prompt_cache_hit_tokens": 7936,
+      "prompt_cache_miss_tokens": 674
+    },
+    {
+      "time_cn": "2026-06-24 02:34:33",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 30,
+      "article_title": "New Blair Witch Project Movie Conjures Up 2027 Release Date",
+      "article_url": "https://www.ign.com/articles/new-blair-witch-project-movie-conjures-up-2027-release-date",
+      "article_date": "2026-06-24",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00021668,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8505,
+      "completion_tokens": 410,
+      "total_tokens": 8915,
+      "prompt_cache_hit_tokens": 7936,
+      "prompt_cache_miss_tokens": 569
     }
   ]
 }
