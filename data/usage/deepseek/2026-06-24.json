@@ -1,0 +1,89 @@
+{
+  "date": "2026-06-24",
+  "records": [
+    {
+      "time_cn": "2026-06-24 00:14:24",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 15,
+      "article_title": "The 10 Best Soccer Game Covers",
+      "article_url": "https://www.ign.com/articles/the-10-best-soccer-game-covers",
+      "article_date": "2026-06-24",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00064144,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9529,
+      "completion_tokens": 1415,
+      "total_tokens": 10944,
+      "prompt_cache_hit_tokens": 7936,
+      "prompt_cache_miss_tokens": 1593
+    },
+    {
+      "time_cn": "2026-06-24 00:14:37",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 16,
+      "article_title": "Shaolin Soccer Spinoff Kung Fu Soccer From Stephen Chow Heads for North American Theaters",
+      "article_url": "https://www.ign.com/articles/shaolin-soccer-spinoff-kung-fu-soccer-from-stephen-chow-heads-for-north-american-theaters",
+      "article_date": "2026-06-24",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00042752,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8457,
+      "completion_tokens": 1187,
+      "total_tokens": 9644,
+      "prompt_cache_hit_tokens": 7936,
+      "prompt_cache_miss_tokens": 521
+    },
+    {
+      "time_cn": "2026-06-24 00:14:47",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 17,
+      "article_title": "Mars Attacks! 30th Anniversary 4K Blu-ray and Digital Release Announced",
+      "article_url": "https://www.ign.com/articles/mars-attacks-30th-anniversary-4k-bluray-release",
+      "article_date": "2026-06-24",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00029004,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8379,
+      "completion_tokens": 735,
+      "total_tokens": 9114,
+      "prompt_cache_hit_tokens": 7936,
+      "prompt_cache_miss_tokens": 443
+    },
+    {
+      "time_cn": "2026-06-24 00:14:55",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 18,
+      "article_title": "See Why X-Men: Elsewhen Is Marvel's Most Fascinating X-Men Comic in Years",
+      "article_url": "https://www.ign.com/articles/x-men-elsewhen-marvel-abrams-comicarts-preview",
+      "article_date": "2026-06-24",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00030152,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8657,
+      "completion_tokens": 637,
+      "total_tokens": 9294,
+      "prompt_cache_hit_tokens": 7936,
+      "prompt_cache_miss_tokens": 721
+    }
+  ]
+}

@@ -10,64 +10,106 @@
   "new_target_dates": [
     "2026-06-24"
   ],
-  "new_count": 2,
-  "filtered_count": 1,
-  "cleanup_count": 0,
-  "changed_count": 3,
+  "new_count": 4,
+  "filtered_count": 2,
+  "cleanup_count": 1,
+  "changed_count": 7,
   "articles": [
     {
-      "title": "The Top 10 Best Valve Games",
-      "url": "https://www.ign.com/articles/the-top-10-best-valve-games",
-      "pubDate_cst": "2026-06-23 20:00"
+      "title": "The 10 Best Soccer Game Covers",
+      "url": "https://www.ign.com/articles/the-10-best-soccer-game-covers",
+      "pubDate_cst": "2026-06-23 22:30"
     },
     {
-      "title": "Why Valve Refuses to Subsidize Its $1,049 Steam Machine",
-      "url": "https://www.ign.com/articles/why-valve-refuses-to-subsidize-its-1049-steam-machine",
-      "pubDate_cst": "2026-06-23 19:30"
+      "title": "Shaolin Soccer Spinoff Kung Fu Soccer From Stephen Chow Heads for North American Theaters",
+      "url": "https://www.ign.com/articles/shaolin-soccer-spinoff-kung-fu-soccer-from-stephen-chow-heads-for-north-american-theaters",
+      "pubDate_cst": "2026-06-23 22:14"
+    },
+    {
+      "title": "Mars Attacks! 30th Anniversary 4K Blu-ray and Digital Release Announced",
+      "url": "https://www.ign.com/articles/mars-attacks-30th-anniversary-4k-bluray-release",
+      "pubDate_cst": "2026-06-23 22:00"
+    },
+    {
+      "title": "See Why X-Men: Elsewhen Is Marvel's Most Fascinating X-Men Comic in Years",
+      "url": "https://www.ign.com/articles/x-men-elsewhen-marvel-abrams-comicarts-preview",
+      "pubDate_cst": "2026-06-23 22:00"
     }
   ],
   "filtered_articles": [
     {
-      "title": "Resident Evil Requiem Drops to $56 on Amazon, Including First-Ever Nintendo Switch 2 Discount",
-      "url": "https://www.ign.com/articles/resident-evil-requiem-deal-amazon-prime-day-2026",
-      "pubDate_cst": "2026-06-23 21:20",
-      "description": "Resident Evil Requiem is down to $55.99 on Amazon for Prime Day, marking the first-ever discount on the Nintendo Switch 2.",
+      "title": "Loads of PS5 Games Are Heavily Discounted for Prime Day 2026 — Here's Our Top Picks in the Sale",
+      "url": "https://www.ign.com/articles/playstation-5-game-deals-prime-day-2026",
+      "pubDate_cst": "2026-06-23 22:02",
+      "description": "We've gathered up some of the best PS5 game deals available so far at Amazon for Prime Day 2026, including Resident Evil Requiem, Clair Obscur: Expedition 33, and more.",
       "categories": "",
-      "reason": "text:\\bdrops? to \\$",
+      "reason": "text:\\bbest .+ deals?\\b",
       "rss_url": "https://feeds.feedburner.com/ign/all",
-      "filtered_at_cn": "2026-06-23 21:47:46",
+      "filtered_at_cn": "2026-06-24 00:14:00",
+      "status": "filtered"
+    },
+    {
+      "title": "Pokémon Go Dataminers Discount Early Launch for Pokémon Winds and Waves Creatures, Despite Earlier Hopes",
+      "url": "https://www.ign.com/articles/pokmon-go-dataminers-discount-early-launch-for-pokmon-winds-and-waves-creatures-despite-earlier-hopes",
+      "pubDate_cst": "2026-06-23 17:29",
+      "description": "Pokémon Go fans keen to get their paws on Gen 10 Pokémon may have to wait a little longer.",
+      "categories": "",
+      "reason": "text:\\bdiscount\\b",
+      "rss_url": "https://www.ign.com/rss/articles/feed?start=20&count=20",
+      "filtered_at_cn": "2026-06-24 00:14:00",
       "status": "filtered"
     }
   ],
   "runs": [
     {
       "target_date": "2026-06-24",
-      "new_count": 2,
-      "filtered_count": 1,
-      "changed_count": 3,
-      "next_id": 15,
+      "new_count": 4,
+      "filtered_count": 2,
+      "changed_count": 6,
+      "next_id": 19,
       "articles": [
         {
-          "title": "The Top 10 Best Valve Games",
-          "url": "https://www.ign.com/articles/the-top-10-best-valve-games",
-          "pubDate_cst": "2026-06-23 20:00"
+          "title": "The 10 Best Soccer Game Covers",
+          "url": "https://www.ign.com/articles/the-10-best-soccer-game-covers",
+          "pubDate_cst": "2026-06-23 22:30"
         },
         {
-          "title": "Why Valve Refuses to Subsidize Its $1,049 Steam Machine",
-          "url": "https://www.ign.com/articles/why-valve-refuses-to-subsidize-its-1049-steam-machine",
-          "pubDate_cst": "2026-06-23 19:30"
+          "title": "Shaolin Soccer Spinoff Kung Fu Soccer From Stephen Chow Heads for North American Theaters",
+          "url": "https://www.ign.com/articles/shaolin-soccer-spinoff-kung-fu-soccer-from-stephen-chow-heads-for-north-american-theaters",
+          "pubDate_cst": "2026-06-23 22:14"
+        },
+        {
+          "title": "Mars Attacks! 30th Anniversary 4K Blu-ray and Digital Release Announced",
+          "url": "https://www.ign.com/articles/mars-attacks-30th-anniversary-4k-bluray-release",
+          "pubDate_cst": "2026-06-23 22:00"
+        },
+        {
+          "title": "See Why X-Men: Elsewhen Is Marvel's Most Fascinating X-Men Comic in Years",
+          "url": "https://www.ign.com/articles/x-men-elsewhen-marvel-abrams-comicarts-preview",
+          "pubDate_cst": "2026-06-23 22:00"
         }
       ],
       "filtered_articles": [
         {
-          "title": "Resident Evil Requiem Drops to $56 on Amazon, Including First-Ever Nintendo Switch 2 Discount",
-          "url": "https://www.ign.com/articles/resident-evil-requiem-deal-amazon-prime-day-2026",
-          "pubDate_cst": "2026-06-23 21:20",
-          "description": "Resident Evil Requiem is down to $55.99 on Amazon for Prime Day, marking the first-ever discount on the Nintendo Switch 2.",
+          "title": "Loads of PS5 Games Are Heavily Discounted for Prime Day 2026 — Here's Our Top Picks in the Sale",
+          "url": "https://www.ign.com/articles/playstation-5-game-deals-prime-day-2026",
+          "pubDate_cst": "2026-06-23 22:02",
+          "description": "We've gathered up some of the best PS5 game deals available so far at Amazon for Prime Day 2026, including Resident Evil Requiem, Clair Obscur: Expedition 33, and more.",
           "categories": "",
-          "reason": "text:\\bdrops? to \\$",
+          "reason": "text:\\bbest .+ deals?\\b",
           "rss_url": "https://feeds.feedburner.com/ign/all",
-          "filtered_at_cn": "2026-06-23 21:47:46",
+          "filtered_at_cn": "2026-06-24 00:14:00",
+          "status": "filtered"
+        },
+        {
+          "title": "Pokémon Go Dataminers Discount Early Launch for Pokémon Winds and Waves Creatures, Despite Earlier Hopes",
+          "url": "https://www.ign.com/articles/pokmon-go-dataminers-discount-early-launch-for-pokmon-winds-and-waves-creatures-despite-earlier-hopes",
+          "pubDate_cst": "2026-06-23 17:29",
+          "description": "Pokémon Go fans keen to get their paws on Gen 10 Pokémon may have to wait a little longer.",
+          "categories": "",
+          "reason": "text:\\bdiscount\\b",
+          "rss_url": "https://www.ign.com/rss/articles/feed?start=20&count=20",
+          "filtered_at_cn": "2026-06-24 00:14:00",
           "status": "filtered"
         }
       ]
