@@ -240,12 +240,44 @@ def build_candidate_messages(date: str, signals: list[dict[str, Any]], current_p
     ]
 
 
+def looks_corrupted_text(value: Any) -> bool:
+    if not isinstance(value, str):
+        return False
+    stripped = value.strip()
+    if not stripped:
+        return False
+    question_count = stripped.count("?")
+    if question_count >= 8:
+        return True
+    if question_count >= 4 and question_count / max(len(stripped), 1) > 0.18:
+        return True
+    return False
+
+
+def candidate_has_corruption(candidate: dict[str, Any]) -> bool:
+    fields: list[Any] = [
+        candidate.get("title"),
+        candidate.get("rule"),
+        candidate.get("evidence_summary"),
+        candidate.get("contradiction"),
+    ]
+    examples = candidate.get("examples")
+    if isinstance(examples, list):
+        for ex in examples:
+            if isinstance(ex, dict):
+                fields.extend([ex.get("before"), ex.get("after")])
+    return any(looks_corrupted_text(value) for value in fields)
+
+
 def merge_candidates(evidence: dict[str, Any], date: str, candidates: list[dict[str, Any]]) -> dict[str, Any]:
     evidence.setdefault("version", 1)
     evidence.setdefault("rules", {})
     evidence["updated_at"] = datetime.now(CST).isoformat(timespec="seconds")
     rules: dict[str, Any] = evidence["rules"]
     for cand in candidates:
+        if candidate_has_corruption(cand):
+            print(f"NIGHTLY_STYLE_CANDIDATE_SKIP: date={date}, reason=corrupted_text, id={cand.get('id_hint') or ''}")
+            continue
         title = str(cand.get("title") or cand.get("rule") or "").strip()
         rule_text = str(cand.get("rule") or title).strip()
         if not title or not rule_text:
