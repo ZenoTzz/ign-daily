@@ -8,6 +8,13 @@ function statusLabel(status) {
   return '待选择';
 }
 
+function statusClass(status) {
+  if (status === 'done') return 'status-done';
+  if (status === 'requested') return 'status-requested';
+  if (status === 'needs_review') return 'status-review';
+  return '';
+}
+
 Page({
   data: {
     date: todayNewsDate(),
@@ -53,9 +60,15 @@ Page({
       const selected = new Set(this.data.selectedIds.map(Number));
       const articles = (data.articles || []).map((item) => {
         const status = item.translation_status || 'none';
+        const isDone = status === 'done';
+        const isSelected = selected.has(Number(item.id));
         return Object.assign({}, item, {
-          checked: selected.has(Number(item.id)),
-          status_label: statusLabel(status)
+          selected: isSelected,
+          cover_image: item.cover_image || (item.images && item.images[0]) || '',
+          status_label: statusLabel(status),
+          status_class: statusClass(status),
+          select_disabled: isDone,
+          select_label: isDone ? '完成' : (isSelected ? '已选' : '选择')
         });
       });
       this.setData({
@@ -76,13 +89,25 @@ Page({
     }
   },
 
-  onSelectChange(e) {
-    const selectedIds = (e.detail.value || []).map(Number);
+  toggleSelect(e) {
+    const id = Number(e.currentTarget.dataset.id);
+    const article = this.data.articles.find((item) => Number(item.id) === id);
+    if (!article || article.translation_status === 'done') return;
+    const current = new Set(this.data.selectedIds.map(Number));
+    if (current.has(id)) current.delete(id);
+    else current.add(id);
+    const selectedIds = Array.from(current).sort((a, b) => a - b);
     const selected = new Set(selectedIds);
     this.setData({
       selectedIds,
       submitText: selectedIds.length ? `提交翻译 (${selectedIds.length})` : '提交翻译',
-      articles: this.data.articles.map((item) => Object.assign({}, item, { checked: selected.has(Number(item.id)) }))
+      articles: this.data.articles.map((item) => {
+        const isSelected = selected.has(Number(item.id));
+        return Object.assign({}, item, {
+          selected: isSelected,
+          select_label: item.select_disabled ? '完成' : (isSelected ? '已选' : '选择')
+        });
+      })
     });
   },
 
