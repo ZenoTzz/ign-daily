@@ -1,27 +1,6 @@
 {
   "date": "2026-06-24",
   "items": {
-    "9": {
-      "id": 9,
-      "url": "https://www.ign.com/articles/fallout-season-3-todd-howard-teases-new-things-never-seen-before-in-the-games",
-      "en_title": "Fallout Season 3: Todd Howard Teases 'New Things' Never Seen Before in the Games",
-      "cn_title": "陶德·霍华德称《辐射》第三季将现游戏未见之景",
-      "model": "deepseek-v4-pro",
-      "status": "needs_manual_review",
-      "failed_at": "2026-06-24T01:36:59.896413+08:00",
-      "reason": "paragraph 15 missing cn",
-      "audit_issues": [
-        {
-          "type": "dictionary",
-          "detail": "source contains 'Bethesda', but required dictionary translation 'B社/贝塞斯达' is missing",
-          "en": "Bethesda",
-          "expected_cn": "B社/贝塞斯达"
-        }
-      ],
-      "fingerprint": "77e0f129528a7ad90f92976215cf7d6471ad93ca",
-      "translation_path": "translations/09.json",
-      "retry_policy": "manual_only"
-    },
     "34": {
       "id": 34,
       "url": "https://www.ign.com/articles/lords-of-the-fallen-2-delayed-to-2027",
@@ -37,5 +16,5 @@
       "retry_policy": "manual_only"
     }
   },
-  "updated_at": "2026-06-24T01:35:49.359Z"
+  "updated_at": "2026-06-24T01:36:15.860Z"
 }
