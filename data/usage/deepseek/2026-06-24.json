@@ -840,6 +840,132 @@
       "total_tokens": 9188,
       "prompt_cache_hit_tokens": 7936,
       "prompt_cache_miss_tokens": 688
+    },
+    {
+      "time_cn": "2026-06-24 08:07:54",
+      "task": "fulltext",
+      "model": "deepseek-v4-pro",
+      "article_id": 34,
+      "article_title": "《堕落之王2》延期至2027年",
+      "article_url": "https://www.ign.com/articles/lords-of-the-fallen-2-delayed-to-2027",
+      "article_date": "2026-06-24",
+      "detail": "",
+      "estimated_cost_usd": 0.00572211,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 9572,
+      "completion_tokens": 5853,
+      "total_tokens": 15425,
+      "prompt_cache_hit_tokens": 8192,
+      "prompt_cache_miss_tokens": 1380
+    },
+    {
+      "time_cn": "2026-06-24 08:08:03",
+      "task": "fulltext_chunk",
+      "model": "deepseek-v4-pro",
+      "article_id": 34,
+      "article_title": "《堕落之王2》延期至2027年",
+      "article_url": "https://www.ign.com/articles/lords-of-the-fallen-2-delayed-to-2027",
+      "article_date": "2026-06-24",
+      "detail": "paragraphs 1-6",
+      "estimated_cost_usd": 0.00120243,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 8915,
+      "completion_tokens": 923,
+      "total_tokens": 9838,
+      "prompt_cache_hit_tokens": 8064,
+      "prompt_cache_miss_tokens": 851
+    },
+    {
+      "time_cn": "2026-06-24 08:08:10",
+      "task": "fulltext_chunk",
+      "model": "deepseek-v4-pro",
+      "article_id": 34,
+      "article_title": "《堕落之王2》延期至2027年",
+      "article_url": "https://www.ign.com/articles/lords-of-the-fallen-2-delayed-to-2027",
+      "article_date": "2026-06-24",
+      "detail": "paragraphs 7-7",
+      "estimated_cost_usd": 0.00066216,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 8489,
+      "completion_tokens": 515,
+      "total_tokens": 9004,
+      "prompt_cache_hit_tokens": 8064,
+      "prompt_cache_miss_tokens": 425
+    },
+    {
+      "time_cn": "2026-06-24 08:08:54",
+      "task": "fulltext",
+      "model": "deepseek-v4-pro",
+      "article_id": 37,
+      "article_title": "Bungie开发者多次提议做《命运》恋爱模拟，但领导层拒绝",
+      "article_url": "https://www.ign.com/articles/bungie-developers-repeatedly-pitched-a-destiny-dating-sim-but-leadership-rejected-it",
+      "article_date": "2026-06-24",
+      "detail": "",
+      "estimated_cost_usd": 0.00578997,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 9506,
+      "completion_tokens": 5964,
+      "total_tokens": 15470,
+      "prompt_cache_hit_tokens": 8192,
+      "prompt_cache_miss_tokens": 1314
+    },
+    {
+      "time_cn": "2026-06-24 08:09:02",
+      "task": "fulltext_chunk",
+      "model": "deepseek-v4-pro",
+      "article_id": 37,
+      "article_title": "Bungie开发者多次提议做《命运》恋爱模拟，但领导层拒绝",
+      "article_url": "https://www.ign.com/articles/bungie-developers-repeatedly-pitched-a-destiny-dating-sim-but-leadership-rejected-it",
+      "article_date": "2026-06-24",
+      "detail": "paragraphs 1-6",
+      "estimated_cost_usd": 0.00097971,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 8797,
+      "completion_tokens": 726,
+      "total_tokens": 9523,
+      "prompt_cache_hit_tokens": 8064,
+      "prompt_cache_miss_tokens": 733
+    },
+    {
+      "time_cn": "2026-06-24 08:09:16",
+      "task": "fulltext_chunk",
+      "model": "deepseek-v4-pro",
+      "article_id": 37,
+      "article_title": "Bungie开发者多次提议做《命运》恋爱模拟，但领导层拒绝",
+      "article_url": "https://www.ign.com/articles/bungie-developers-repeatedly-pitched-a-destiny-dating-sim-but-leadership-rejected-it",
+      "article_date": "2026-06-24",
+      "detail": "paragraphs 7-9",
+      "estimated_cost_usd": 0.00136599,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 8639,
+      "completion_tokens": 1249,
+      "total_tokens": 9888,
+      "prompt_cache_hit_tokens": 8064,
+      "prompt_cache_miss_tokens": 575
     }
   ]
 }

@@ -35,7 +35,21 @@
       "fingerprint": "77e0f129528a7ad90f92976215cf7d6471ad93ca",
       "translation_path": "translations/09.json",
       "retry_policy": "manual_only"
+    },
+    "34": {
+      "id": 34,
+      "url": "https://www.ign.com/articles/lords-of-the-fallen-2-delayed-to-2027",
+      "en_title": "Lords of the Fallen 2 Delayed to 2027",
+      "cn_title": "《堕落之王2》延期至2027年",
+      "model": "deepseek-v4-pro",
+      "status": "needs_manual_review",
+      "failed_at": "2026-06-24T08:08:10.067902+08:00",
+      "reason": "model returned empty paragraphs",
+      "audit_issues": [],
+      "fingerprint": "04a10b7b0d2799dd454eab3693b19367085775d7",
+      "translation_path": "",
+      "retry_policy": "manual_only"
     }
   },
-  "updated_at": "2026-06-24T01:36:59.896413+08:00"
+  "updated_at": "2026-06-24T08:08:10.067902+08:00"
 }
