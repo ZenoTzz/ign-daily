@@ -878,6 +878,27 @@ a.queue-title:hover { color: var(--accent); }
   flex-wrap: wrap;
 }
 
+.queue-review-reason {
+  grid-column: 1 / -1;
+  margin-top: -0.25rem;
+  padding: 0.55rem 0.7rem;
+  border-radius: 8px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 0.76rem;
+  line-height: 1.45;
+}
+
+.queue-review-reason strong {
+  font-weight: 800;
+}
+
+.queue-review-reason ul {
+  margin: 0.25rem 0 0 1rem;
+  padding: 0;
+  color: var(--text-secondary);
+}
+
 .queue-more a,
 .queue-more button {
   min-width: 28px;
@@ -1280,6 +1301,13 @@ a.queue-title:hover { color: var(--accent); }
     gap: 0.35rem;
     padding-left: 58px;
     margin-top: -0.05rem;
+  }
+  .queue-review-reason {
+    grid-column: 1 / -1;
+    margin-top: 0.2rem;
+    margin-left: 58px;
+    padding: 0.5rem 0.6rem;
+    font-size: 0.72rem;
   }
   .queue-more a,
   .queue-more button {

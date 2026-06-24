@@ -581,7 +581,38 @@ function appData() {
     },
 
     reviewReason(art) {
-      return art?.translation_error || this.translationFailures?.[String(art?.id)]?.reason || 'API 质检未通过，请人工复核';
+      const issueList = this.reviewIssueList(art);
+      const raw = art?.translation_error || this.translationFailures?.[String(art?.id)]?.reason || '';
+      const cleaned = this.cleanReviewReason(raw);
+      if (cleaned) return cleaned;
+      if (issueList.length) return issueList[0];
+      return 'API 质检未通过，请人工复核';
+    },
+
+    reviewIssueList(art) {
+      const failure = this.translationFailures?.[String(art?.id)] || {};
+      const issues = failure.audit_issues || art?.audit_issues || [];
+      if (!Array.isArray(issues)) return [];
+      return issues
+        .map(issue => {
+          if (!issue) return '';
+          if (typeof issue === 'string') return issue;
+          return issue.detail || issue.message || issue.reason || issue.type || '';
+        })
+        .map(text => this.cleanReviewReason(text))
+        .filter(Boolean)
+        .slice(0, 5);
+    },
+
+    cleanReviewReason(reason) {
+      const text = String(reason || '').trim();
+      if (!text) return '';
+      const remaining = text.match(/Remaining issues:\s*(.+)$/i);
+      if (remaining?.[1]) return remaining[1].trim();
+      if (/returned non-zero exit status/i.test(text)) {
+        return '后处理校验未通过，需打开复核页查看草稿并修正。';
+      }
+      return text;
     },
 
     hasReviewDraft(art) {

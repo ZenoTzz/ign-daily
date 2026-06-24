@@ -293,6 +293,16 @@
                 <div class="queue-model">
                   <span x-text="translatorLabel(art) || preferredModelLabel(art)"></span>
                 </div>
+                <div x-show="art.translation_status === 'needs_review'" class="queue-review-reason">
+                  <strong>失败原因：</strong><span x-text="reviewReason(art)"></span>
+                  <template x-if="reviewIssueList(art).length">
+                    <ul>
+                      <template x-for="issue in reviewIssueList(art)" :key="issue">
+                        <li x-text="issue"></li>
+                      </template>
+                    </ul>
+                  </template>
+                </div>
                 <div class="queue-more">
                   <a :href="art.url" target="_blank" rel="noopener" @click.stop title="IGN原文">
                     <svg><use href="#icon-external"/></svg>

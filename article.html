@@ -1148,10 +1148,24 @@
 
         manualReviewReason() {
           if (!this.article) return '';
-          if (this.article.audit_failure_reason) return this.article.audit_failure_reason;
+          if (this.article.audit_failure_reason) return this.cleanReviewReason(this.article.audit_failure_reason);
           const issues = Array.isArray(this.article.audit_issues) ? this.article.audit_issues : [];
           if (!issues.length) return 'API 质检未通过，请人工复核后再放行。';
-          return issues.slice(0, 4).map(x => `[${x.type || 'issue'}] ${x.detail || ''}`).join('；');
+          return issues.slice(0, 4)
+            .map(x => this.cleanReviewReason(`[${x.type || 'issue'}] ${x.detail || ''}`))
+            .filter(Boolean)
+            .join('；');
+        },
+
+        cleanReviewReason(reason) {
+          const text = String(reason || '').trim();
+          if (!text) return '';
+          const remaining = text.match(/Remaining issues:\s*(.+)$/i);
+          if (remaining?.[1]) return remaining[1].trim();
+          if (/returned non-zero exit status/i.test(text)) {
+            return '后处理校验未通过，请修正草稿中的标题、副标题、摘要、段落或词库问题后再放行。';
+          }
+          return text;
         },
 
         async approveManualReview() {

@@ -100,6 +100,23 @@ def failure_fingerprint(article: dict[str, Any], model: str, issues: list[dict[s
     return hashlib.sha1(raw.encode("utf-8")).hexdigest()
 
 
+def readable_subprocess_failure(exc: subprocess.CalledProcessError) -> str:
+    output = "\n".join(
+        part for part in [
+            str(getattr(exc, "stdout", "") or ""),
+            str(getattr(exc, "stderr", "") or ""),
+        ] if part
+    )
+    match = re.search(r"Remaining issues:\s*(.+)", output)
+    if match:
+        return match.group(1).strip()
+    output = output.strip()
+    if output:
+        lines = [line.strip() for line in output.splitlines() if line.strip()]
+        return lines[-1][:500] if lines else output[:500]
+    return str(exc)
+
+
 def load_failures(date: str) -> dict[str, Any]:
     path = failure_path(date)
     if not path.exists():
@@ -774,7 +791,15 @@ def translate_date(date: str, limit: int = 2) -> int:
                     continue
             trans_path = DATA_DIR / date / "translations" / f"{article['id']:02d}.json"
             write_json(trans_path, data)
-            subprocess.run([sys.executable, str(REPO_ROOT / "scripts" / "translate_pipeline.py"), date, str(article["id"]), "--post"], cwd=REPO_ROOT, check=True)
+            subprocess.run(
+                [sys.executable, str(REPO_ROOT / "scripts" / "translate_pipeline.py"), date, str(article["id"]), "--post"],
+                cwd=REPO_ROOT,
+                check=True,
+                capture_output=True,
+                text=True,
+                encoding="utf-8",
+                errors="replace",
+            )
             article["translation_status"] = "done"
             article["translation_path"] = f"translations/{article['id']:02d}.json"
             article["translator"] = "api"
@@ -788,6 +813,20 @@ def translate_date(date: str, limit: int = 2) -> int:
             clear_manual_review_failure(date, int(article["id"]))
             translated += 1
             print(f"[OK] fulltext #{article['id']} {data['cn_title']}")
+        except subprocess.CalledProcessError as exc:
+            details = readable_subprocess_failure(exc)
+            req = save_manual_review_failure(
+                date=date,
+                index=index,
+                req_path=req_path,
+                req=req,
+                article=article,
+                model=model,
+                text=text,
+                issues=audit_issues,
+                details=details,
+                draft=data,
+            )
         except Exception as exc:
             details = str(exc)
             req = save_manual_review_failure(
