@@ -1116,6 +1116,54 @@
       "total_tokens_including_reasoning": 9750,
       "prompt_cache_hit_tokens": 7936,
       "prompt_cache_miss_tokens": 572
+    },
+    {
+      "time_cn": "2026-06-24 12:20:59",
+      "task": "fulltext",
+      "model": "deepseek-v4-pro",
+      "article_id": 1,
+      "article_title": "Valve承认RAM采购无议价权：不买就再也不联系",
+      "article_url": "https://www.ign.com/articles/valve-ram-companies-state-prices-monthly-if-we-say-no-then-they-never-talk-to-us-again",
+      "article_date": "2026-06-25",
+      "detail": "",
+      "estimated_cost_usd": 0.00998641,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 9417,
+      "completion_tokens": 6026,
+      "reasoning_tokens": 4806,
+      "output_tokens_including_reasoning": 10832,
+      "total_tokens": 15443,
+      "total_tokens_including_reasoning": 20249,
+      "prompt_cache_hit_tokens": 8192,
+      "prompt_cache_miss_tokens": 1225
+    },
+    {
+      "time_cn": "2026-06-24 12:21:37",
+      "task": "fulltext_repair",
+      "model": "deepseek-v4-pro",
+      "article_id": 1,
+      "article_title": "Valve承认RAM采购无议价权：不买就再也不联系",
+      "article_url": "https://www.ign.com/articles/valve-ram-companies-state-prices-monthly-if-we-say-no-then-they-never-talk-to-us-again",
+      "article_date": "2026-06-25",
+      "detail": "1 audit issue(s)",
+      "estimated_cost_usd": 0.00577248,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 9681,
+      "completion_tokens": 3605,
+      "reasoning_tokens": 2061,
+      "output_tokens_including_reasoning": 5666,
+      "total_tokens": 13286,
+      "total_tokens_including_reasoning": 15347,
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 1873
     }
   ]
 }
