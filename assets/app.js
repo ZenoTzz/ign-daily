@@ -154,6 +154,57 @@ const GH = {
   }
 };
 
+// ---- Private server API helper ----
+const ServerAPI = {
+  base() {
+    return localStorage.getItem('ign_api_base') || '/api';
+  },
+  token() {
+    return localStorage.getItem('ign_api_token') || '';
+  },
+  enabledByHost() {
+    return !['zenotzz.github.io', 'localhost', '127.0.0.1'].includes(location.hostname);
+  },
+  async request(path, options = {}) {
+    const headers = {
+      ...(options.headers || {})
+    };
+    const token = this.token();
+    if (token) headers.Authorization = `Bearer ${token}`;
+    if (options.body && !headers['Content-Type']) headers['Content-Type'] = 'application/json';
+    const res = await fetch(`${this.base()}${path}`, {
+      ...options,
+      headers,
+      credentials: 'include',
+      cache: 'no-store'
+    });
+    const text = await res.text();
+    let data = null;
+    try { data = text ? JSON.parse(text) : null; } catch (_) { data = { detail: text }; }
+    if (!res.ok) {
+      const detail = data?.detail || data?.message || `${res.status} ${res.statusText}`;
+      const err = new Error(detail);
+      err.status = res.status;
+      err.data = data;
+      throw err;
+    }
+    return data;
+  },
+  async login(username, password) {
+    return this.request('/auth/login', {
+      method: 'POST',
+      body: JSON.stringify({ username, password })
+    });
+  },
+  async me() {
+    return this.request('/auth/me');
+  },
+  async logout() {
+    return this.request('/auth/logout', { method: 'POST' });
+  }
+};
+window.ServerAPI = ServerAPI;
+
 // ---- News-day helpers ----
 function todayBeijingDate() {
   // 新闻日按北京时间 08:00 分界：08:00 后归入下一天的数据目录。
@@ -187,6 +238,11 @@ function appData() {
     copyBtnText: '📋 复制摘要',
     filterCat: 'all',
     showSettings: false,
+    apiUsername: localStorage.getItem('ign_api_username') || 'admin',
+    apiPassword: '',
+    apiUser: '',
+    apiStatus: '',
+    apiLoggingIn: false,
     token: localStorage.getItem('gh_token') || '',
     oauthClientId: localStorage.getItem('github_oauth_client_id') || '',
     oauthLoggingIn: false,
@@ -286,6 +342,7 @@ function appData() {
         }
       });
       try {
+        this.checkServerSession();
         await this.loadAutomationConfig();
         this.triggerRssOnRefresh();
         const requestedDate = new URLSearchParams(location.search).get('date');
@@ -831,6 +888,57 @@ function appData() {
     },
 
     // ---- 一键复制今日摘要（中文标点 + 去 markdown）----
+    shouldUseServerApi() {
+      return Boolean(localStorage.getItem('ign_api_token')) || ServerAPI.enabledByHost();
+    },
+
+    async checkServerSession() {
+      if (!this.shouldUseServerApi()) return;
+      try {
+        const data = await ServerAPI.me();
+        this.apiUser = data?.user?.username || '';
+        this.apiStatus = this.apiUser ? `已登录：${this.apiUser}` : '';
+      } catch (e) {
+        this.apiUser = '';
+        this.apiStatus = e.status === 401 ? '未登录服务器账号' : `服务器 API 不可用：${e.message}`;
+      }
+    },
+
+    async loginServerApi() {
+      if (!this.apiUsername || !this.apiPassword) {
+        this.flash('请输入服务器账号和密码', 3000);
+        return;
+      }
+      this.apiLoggingIn = true;
+      this.apiStatus = '登录中...';
+      try {
+        const data = await ServerAPI.login(this.apiUsername.trim(), this.apiPassword);
+        if (data?.token) localStorage.setItem('ign_api_token', data.token);
+        localStorage.setItem('ign_api_username', this.apiUsername.trim());
+        localStorage.setItem('ign_api_enabled', '1');
+        this.apiUser = data?.user?.username || this.apiUsername.trim();
+        this.apiPassword = '';
+        this.apiStatus = `已登录：${this.apiUser}`;
+        this.flash('服务器账号已登录');
+      } catch (e) {
+        this.apiStatus = `登录失败：${e.message}`;
+        this.flash(this.apiStatus, 5000);
+      } finally {
+        this.apiLoggingIn = false;
+      }
+    },
+
+    async logoutServerApi() {
+      try {
+        await ServerAPI.logout();
+      } catch (_) {}
+      localStorage.removeItem('ign_api_token');
+      localStorage.removeItem('ign_api_enabled');
+      this.apiUser = '';
+      this.apiStatus = '已退出服务器账号';
+      this.flash('已退出服务器账号');
+    },
+
     async loginWithGithubOAuth() {
       const clientId = String(this.oauthClientId || '').trim();
       if (clientId) localStorage.setItem('github_oauth_client_id', clientId);
@@ -1446,11 +1554,45 @@ function appData() {
       }
     },
 
+    async submitRequestWithServerApi(date, selIds) {
+      const data = await ServerAPI.request('/translations/request', {
+        method: 'POST',
+        body: JSON.stringify({
+          date,
+          ids: selIds,
+          trigger_workflow: this.isApiMode('fulltext_translator')
+        })
+      });
+      for (const id of selIds) {
+        const a = this.data.articles.find(x => Number(x.id) === id);
+        if (a && a.translation_status !== 'done') a.translation_status = 'requested';
+      }
+      this.selected = [];
+      await this.clearSelectedTranslationFailures(date, selIds);
+      const suffix = data?.triggered ? '，API Actions 已触发' : '';
+      this.flash(`已进入翻译池 ${selIds.length} 篇${suffix}`);
+      return data;
+    },
+
     async submitRequest() {
       if (this.selected.length === 0) return;
       try {
         const date = this.data.date;
         const selIds = [...this.selected].map(x => Number(x)).sort((a,b) => a-b);
+        if (this.shouldUseServerApi()) {
+          try {
+            await this.submitRequestWithServerApi(date, selIds);
+            return;
+          } catch (apiError) {
+            if (apiError.status === 401) {
+              this.showSettings = true;
+              this.flash('请先登录服务器账号，再提交翻译', 5000);
+              return;
+            }
+            if (ServerAPI.enabledByHost()) throw apiError;
+            console.warn('Server API unavailable, falling back to GitHub PAT', apiError);
+          }
+        }
         // Build URL map so heartbeat can match by URL even if IDs shift
         const requested_articles = selIds.map(id => {
           const art = this.data.articles.find(a => a.id === id);

@@ -611,6 +611,19 @@
           <h3 class="modal-title"><svg><use href="#icon-settings"/></svg> 设置</h3>
           <button @click="showSettings=false" class="modal-close"><svg width="18" height="18"><use href="#icon-x"/></svg></button>
         </div>
+        <label>服务器账号</label>
+        <p style="font-size:0.7rem; color:var(--text-muted); margin-bottom:0.5rem;">用于网页、iOS App、微信小程序统一登录；浏览器不再需要保存 GitHub PAT。</p>
+        <input type="text" x-model="apiUsername" placeholder="admin" autocomplete="username">
+        <input type="password" x-model="apiPassword" placeholder="服务器密码" autocomplete="current-password" style="margin-top:0.5rem;"
+          @keydown.enter.prevent="loginServerApi()">
+        <div style="display:flex; gap:0.5rem; align-items:center; margin-top:0.75rem; flex-wrap:wrap;">
+          <button @click="loginServerApi()" class="btn btn-primary" :disabled="apiLoggingIn">
+            <span x-text="apiLoggingIn ? '登录中...' : '登录服务器'"></span>
+          </button>
+          <button @click="logoutServerApi()" class="btn btn-ghost">退出</button>
+          <span x-show="apiStatus" style="font-size:0.7rem; color:var(--text-muted);" x-text="apiStatus"></span>
+        </div>
+        <div style="height:1px; background:var(--border); margin:1rem 0;"></div>
         <label>GitHub Personal Access Token</label>
         <p style="font-size:0.7rem; color:var(--text-muted); margin-bottom:0.5rem;">用于把翻译请求和词库改动提交回仓库。仅保存在本地浏览器。</p>
         <input type="password" x-model="token" placeholder="ghp_xxx 或 github_pat_xxx">
