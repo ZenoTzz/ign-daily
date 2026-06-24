@@ -16,6 +16,7 @@ import os
 import re
 import subprocess
 import sys
+import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
 from argparse import ArgumentParser
@@ -24,7 +25,7 @@ from email.utils import parsedate_to_datetime
 from pathlib import Path
 from typing import Any
 
-from common_paths import REPO_ROOT, configure_utf8_stdio
+from common_paths import REPO_ROOT, configure_utf8_stdio, env_paths
 
 configure_utf8_stdio()
 
@@ -123,10 +124,72 @@ def write_json(path: Path, data: Any) -> None:
     path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
+def load_env_file() -> None:
+    for path in env_paths():
+        if not path.exists():
+            continue
+        for line in path.read_text(encoding="utf-8-sig").splitlines():
+            line = line.strip()
+            if not line or line.startswith("#") or "=" not in line:
+                continue
+            key, value = line.split("=", 1)
+            os.environ.setdefault(key.strip(), value.strip().strip('"').strip("'"))
+
+
 def strip_html(text: str) -> str:
     text = re.sub(r"<[^>]+>", " ", text or "")
     text = re.sub(r"\s+", " ", text)
     return text.strip()
+
+
+def split_env_list(value: str) -> list[str]:
+    return [part.strip() for part in re.split(r"[,\n;]+", value or "") if part.strip()]
+
+
+def rss_pages() -> list[str]:
+    extra = split_env_list(os.environ.get("IGN_DAILY_RSS_EXTRA_URLS", ""))
+    return [*RSS_PAGES, *extra]
+
+
+def rss_proxy_urls() -> list[str]:
+    return split_env_list(
+        "\n".join(
+            [
+                os.environ.get("IGN_DAILY_RSS_PROXY_URL", ""),
+                os.environ.get("IGN_DAILY_RSS_PROXY_URLS", ""),
+            ]
+        )
+    )
+
+
+def build_proxy_url(proxy_url: str, rss_url: str) -> str:
+    encoded = urllib.parse.quote(rss_url, safe="")
+    if "{url}" in proxy_url:
+        return proxy_url.replace("{url}", encoded)
+    separator = "&" if "?" in proxy_url else "?"
+    return f"{proxy_url}{separator}url={encoded}"
+
+
+def fetch_text(url: str) -> str:
+    req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+    with urllib.request.urlopen(req, timeout=RSS_TIMEOUT_SECONDS) as resp:
+        return resp.read().decode("utf-8", errors="replace")
+
+
+def fetch_rss_text(rss_url: str) -> tuple[str, str]:
+    errors: list[str] = []
+    urls: list[tuple[str, str]] = []
+    if os.environ.get("IGN_DAILY_RSS_FORCE_PROXY") != "1":
+        urls.append((rss_url, rss_url))
+    for proxy_url in rss_proxy_urls():
+        urls.append((build_proxy_url(proxy_url, rss_url), f"{rss_url} via {proxy_url}"))
+
+    for url, label in urls:
+        try:
+            return fetch_text(url), label
+        except Exception as exc:
+            errors.append(f"{label}: {exc}")
+    raise RuntimeError("; ".join(errors) or "no RSS source configured")
 
 
 def load_filter_config() -> dict:
@@ -209,11 +272,9 @@ def prune_old_filtered(now: datetime, retention_days: int) -> int:
 def fetch_rss_items() -> list[dict]:
     rows: list[dict] = []
     seen_feed_urls: set[str] = set()
-    for rss_url in RSS_PAGES:
+    for rss_url in rss_pages():
         try:
-            req = urllib.request.Request(rss_url, headers={"User-Agent": "Mozilla/5.0"})
-            resp = urllib.request.urlopen(req, timeout=RSS_TIMEOUT_SECONDS)
-            data = resp.read().decode("utf-8", errors="replace")
+            data, source_label = fetch_rss_text(rss_url)
             root = ET.fromstring(data)
             for item in root.iter("item"):
                 title = (item.findtext("title") or "").strip()
@@ -238,7 +299,7 @@ def fetch_rss_items() -> list[dict]:
                         "pub_dt": pub_dt,
                         "description": description,
                         "categories": categories,
-                        "rss_url": rss_url,
+                        "rss_url": source_label,
                     }
                 )
         except Exception as e:
@@ -401,6 +462,8 @@ def target_dates_for_run(now: datetime, lookback_days: int, explicit_dates: list
 
 
 def main() -> int:
+    load_env_file()
+
     parser = ArgumentParser()
     parser.add_argument("--lookback-days", type=int, default=1, help="Scan current news date plus N-1 previous dates.")
     parser.add_argument("--target-date", action="append", default=[], help="Explicit YYYY-MM-DD date. Can be repeated.")
