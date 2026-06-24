@@ -67,14 +67,14 @@
   "translator": "api",
   "translator_provider": "openai-compatible",
   "translator_model": "deepseek-v4-pro",
-  "quality_status": "needs_manual_review",
-  "manual_release_required": true,
-  "audit_issues": [
+  "quality_status": "manual_approved",
+  "manual_release_required": false,
+  "manual_approved_at": "2026-06-24T04:25:06.386Z",
+  "manual_approved_reason": "user approved API audit draft",
+  "manual_approved_issues": [
     {
       "type": "translation_noise",
       "detail": "translation contains likely navigation/footer text: 联系我们"
     }
-  ],
-  "audit_failed_at": "2026-06-24T12:21:38.002203+08:00",
-  "audit_failure_reason": "[translation_noise] translation contains likely navigation/footer text: 联系我们"
+  ]
 }
