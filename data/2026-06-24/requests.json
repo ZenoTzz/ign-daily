@@ -1,6 +1,24 @@
 {
   "date": "2026-06-24",
-  "requested_ids": [],
-  "requested_articles": [],
-  "requested_at": "2026-06-23T16:14:28.021Z"
+  "requested_ids": [
+    34,
+    37
+  ],
+  "requested_articles": [
+    {
+      "id": 34,
+      "url": "https://www.ign.com/articles/lords-of-the-fallen-2-delayed-to-2027",
+      "en_title": "Lords of the Fallen 2 Delayed to 2027",
+      "cn_title": "《堕落之王2》延期至2027年",
+      "publish_time_cn": "2026-06-24 02:40"
+    },
+    {
+      "id": 37,
+      "url": "https://www.ign.com/articles/bungie-developers-repeatedly-pitched-a-destiny-dating-sim-but-leadership-rejected-it",
+      "en_title": "Bungie Developers Repeatedly Pitched a Destiny Dating Sim, but Leadership Rejected It",
+      "cn_title": "Bungie开发者多次提议做《命运》恋爱模拟，但领导层拒绝",
+      "publish_time_cn": "2026-06-24 05:00"
+    }
+  ],
+  "requested_at": "2026-06-24T00:06:57.213Z"
 }
