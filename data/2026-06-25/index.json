@@ -2,6 +2,51 @@
   "date": "2026-06-25",
   "articles": [
     {
+      "id": 3,
+      "category": "游戏新闻",
+      "emoji": "🎮",
+      "en_title": "Gameplay Livestream of Action-Driving Game Clutch Will Be Showcased This Week",
+      "cn_title": "《Clutch》本周四将直播实机演示",
+      "summary": "Maverick Games 宣布将于本周四举办开放世界动作驾驶游戏《Clutch》的实机直播。直播由《极限竞速：地平线5》创意总监 Mike Brown 主持，将展示游戏剧情、明星阵容及多种竞速玩法。本作设定在法国里维埃拉海岸，融合开放世界驾驶、赛道竞速、街头飙车和劫案追逐，预计2027年春季登陆 PS5、XBOX Series 和 PC。",
+      "url": "https://www.ign.com/articles/gameplay-livestream-of-action-driving-game-clutch-will-be-showcased-this-week",
+      "publish_time_cn": "2026-06-24 15:12",
+      "pub_date": "2026-06-24 15:12",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/02/clutch-1280-1780395643697.png?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/02/clutch-1280-1780395643697.png?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/02/clutch-1280-1780395643697.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/02/clutch-1280-1780395643697.png?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/02/clutch-1280-1780395643697.png?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/02/clutch-1280-1780395643697.png"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-24T16:34:43+08:00",
+      "pending_dict": [
+        {
+          "en": "Clutch",
+          "cn": "Clutch",
+          "cat": "games",
+          "source": "ai_guess",
+          "reason": "游戏暂无官方中文译名，建议保留英文"
+        },
+        {
+          "en": "Midnight Collective",
+          "cn": "午夜集体",
+          "cat": "terms",
+          "source": "ai_guess",
+          "reason": "游戏中的地下街头赛车组织，中文翻译不确定，需人工确认"
+        },
+        {
+          "en": "R1K",
+          "cn": "R1K",
+          "cat": "terms",
+          "source": "ai_guess",
+          "reason": "专业赛道名称，保留英文更合适"
+        }
+      ]
+    },
+    {
       "id": 2,
       "category": "游戏新闻",
       "emoji": "🎮",
@@ -73,5 +118,5 @@
       "translation_path": "translations/01.json"
     }
   ],
-  "total": 2
+  "total": 3
 }

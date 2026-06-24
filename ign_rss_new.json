@@ -5,117 +5,47 @@
     "2026-06-24"
   ],
   "changed_dates": [
-    "2026-06-25",
-    "2026-06-24"
+    "2026-06-25"
   ],
   "new_target_dates": [
     "2026-06-25"
   ],
   "new_count": 1,
-  "filtered_count": 3,
+  "filtered_count": 0,
   "cleanup_count": 0,
-  "changed_count": 4,
+  "changed_count": 1,
   "articles": [
     {
-      "title": "Monster Fantasy Combines the Thrill of Monster Hunter with the Cosy Chill of Animal Crossing | IGN Preview",
-      "url": "https://www.ign.com/articles/monster-fantasy-combines-the-thrill-of-monster-hunter-with-the-cosy-chill-of-animal-crossing-ign-preview",
-      "pubDate_cst": "2026-06-24 13:00"
+      "title": "Gameplay Livestream of Action-Driving Game Clutch Will Be Showcased This Week",
+      "url": "https://www.ign.com/articles/gameplay-livestream-of-action-driving-game-clutch-will-be-showcased-this-week",
+      "pubDate_cst": "2026-06-24 15:12"
     }
   ],
-  "filtered_articles": [
-    {
-      "title": "Read All of the Dungeon Crawler Carl Books for Free With Amazon's Prime Day Kindle Unlimited Deal",
-      "url": "https://www.ign.com/articles/read-all-of-the-dungeon-crawler-carl-books-for-free-with-kindle-unlimited-prime-day-2026",
-      "pubDate_cst": "2026-06-24 12:52",
-      "description": "",
-      "categories": "",
-      "reason": "text:\\bprime.day\\b",
-      "rss_url": "https://feeds.feedburner.com/ign/all",
-      "filtered_at_cn": "2026-06-24 13:51:14",
-      "status": "filtered"
-    },
-    {
-      "title": "Prime Day LEGO Deals on Sets for Adults Are Selling Out Fast",
-      "url": "https://www.ign.com/articles/lego-prime-day-deals-for-adults-2026",
-      "pubDate_cst": "2026-06-24 11:50",
-      "description": "",
-      "categories": "",
-      "reason": "text:\\bprime.day\\b",
-      "rss_url": "https://feeds.feedburner.com/ign/all",
-      "filtered_at_cn": "2026-06-24 13:51:14",
-      "status": "filtered"
-    },
-    {
-      "title": "For Today Only, B&H Photo Is Offering the Least Expensive OLED TV I've Ever Seen",
-      "url": "https://www.ign.com/articles/sansui-oled-tv-deal-prime-day-sale",
-      "pubDate_cst": "2026-06-24 00:50",
-      "description": "Get a 55\" model for just $399.99 shipped.",
-      "categories": "",
-      "reason": "url:deal",
-      "rss_url": "https://www.ign.com/rss/articles/feed?start=40&count=20",
-      "filtered_at_cn": "2026-06-24 13:51:14",
-      "status": "filtered"
-    }
-  ],
+  "filtered_articles": [],
   "runs": [
     {
       "target_date": "2026-06-25",
       "new_count": 1,
-      "filtered_count": 2,
-      "changed_count": 3,
-      "next_id": 3,
+      "filtered_count": 0,
+      "changed_count": 1,
+      "next_id": 4,
       "articles": [
         {
-          "title": "Monster Fantasy Combines the Thrill of Monster Hunter with the Cosy Chill of Animal Crossing | IGN Preview",
-          "url": "https://www.ign.com/articles/monster-fantasy-combines-the-thrill-of-monster-hunter-with-the-cosy-chill-of-animal-crossing-ign-preview",
-          "pubDate_cst": "2026-06-24 13:00"
+          "title": "Gameplay Livestream of Action-Driving Game Clutch Will Be Showcased This Week",
+          "url": "https://www.ign.com/articles/gameplay-livestream-of-action-driving-game-clutch-will-be-showcased-this-week",
+          "pubDate_cst": "2026-06-24 15:12"
         }
       ],
-      "filtered_articles": [
-        {
-          "title": "Read All of the Dungeon Crawler Carl Books for Free With Amazon's Prime Day Kindle Unlimited Deal",
-          "url": "https://www.ign.com/articles/read-all-of-the-dungeon-crawler-carl-books-for-free-with-kindle-unlimited-prime-day-2026",
-          "pubDate_cst": "2026-06-24 12:52",
-          "description": "",
-          "categories": "",
-          "reason": "text:\\bprime.day\\b",
-          "rss_url": "https://feeds.feedburner.com/ign/all",
-          "filtered_at_cn": "2026-06-24 13:51:14",
-          "status": "filtered"
-        },
-        {
-          "title": "Prime Day LEGO Deals on Sets for Adults Are Selling Out Fast",
-          "url": "https://www.ign.com/articles/lego-prime-day-deals-for-adults-2026",
-          "pubDate_cst": "2026-06-24 11:50",
-          "description": "",
-          "categories": "",
-          "reason": "text:\\bprime.day\\b",
-          "rss_url": "https://feeds.feedburner.com/ign/all",
-          "filtered_at_cn": "2026-06-24 13:51:14",
-          "status": "filtered"
-        }
-      ]
+      "filtered_articles": []
     },
     {
       "target_date": "2026-06-24",
       "new_count": 0,
-      "filtered_count": 1,
-      "changed_count": 1,
+      "filtered_count": 0,
+      "changed_count": 0,
       "next_id": 41,
       "articles": [],
-      "filtered_articles": [
-        {
-          "title": "For Today Only, B&H Photo Is Offering the Least Expensive OLED TV I've Ever Seen",
-          "url": "https://www.ign.com/articles/sansui-oled-tv-deal-prime-day-sale",
-          "pubDate_cst": "2026-06-24 00:50",
-          "description": "Get a 55\" model for just $399.99 shipped.",
-          "categories": "",
-          "reason": "url:deal",
-          "rss_url": "https://www.ign.com/rss/articles/feed?start=40&count=20",
-          "filtered_at_cn": "2026-06-24 13:51:14",
-          "status": "filtered"
-        }
-      ]
+      "filtered_articles": []
     }
   ]
 }

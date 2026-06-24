@@ -1188,6 +1188,30 @@
       "total_tokens_including_reasoning": 11340,
       "prompt_cache_hit_tokens": 7936,
       "prompt_cache_miss_tokens": 1990
+    },
+    {
+      "time_cn": "2026-06-24 16:34:51",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 3,
+      "article_title": "Gameplay Livestream of Action-Driving Game Clutch Will Be Showcased This Week",
+      "article_url": "https://www.ign.com/articles/gameplay-livestream-of-action-driving-game-clutch-will-be-showcased-this-week",
+      "article_date": "2026-06-25",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00025952,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8493,
+      "completion_tokens": 440,
+      "reasoning_tokens": 129,
+      "output_tokens_including_reasoning": 569,
+      "total_tokens": 8933,
+      "total_tokens_including_reasoning": 9062,
+      "prompt_cache_hit_tokens": 7936,
+      "prompt_cache_miss_tokens": 557
     }
   ]
 }
