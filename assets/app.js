@@ -202,29 +202,43 @@ const ServerAPI = {
     return !['zenotzz.github.io', 'localhost', '127.0.0.1'].includes(location.hostname);
   },
   async request(path, options = {}) {
-    const headers = {
-      ...(options.headers || {})
-    };
-    const token = this.token();
-    if (token) headers.Authorization = `Bearer ${token}`;
-    if (options.body && !headers['Content-Type']) headers['Content-Type'] = 'application/json';
-    const res = await fetch(`${this.base()}${path}`, {
-      ...options,
-      headers,
-      credentials: 'include',
-      cache: 'no-store'
-    });
-    const text = await res.text();
-    let data = null;
-    try { data = text ? JSON.parse(text) : null; } catch (_) { data = { detail: text }; }
-    if (!res.ok) {
-      const detail = data?.detail || data?.message || `${res.status} ${res.statusText}`;
-      const err = new Error(detail);
-      err.status = res.status;
-      err.data = data;
-      throw err;
+    const attempts = Number(options.retryAttempts || 3);
+    let lastError = null;
+    for (let attempt = 0; attempt < attempts; attempt++) {
+      const headers = {
+        ...(options.headers || {})
+      };
+      const token = this.token();
+      if (token) headers.Authorization = `Bearer ${token}`;
+      if (options.body && !headers['Content-Type']) headers['Content-Type'] = 'application/json';
+      try {
+        const res = await fetch(`${this.base()}${path}`, {
+          ...options,
+          headers,
+          credentials: 'include',
+          cache: 'no-store'
+        });
+        const text = await res.text();
+        let data = null;
+        try { data = text ? JSON.parse(text) : null; } catch (_) { data = { detail: text }; }
+        if (!res.ok) {
+          const detail = data?.detail || data?.message || `${res.status} ${res.statusText}`;
+          const err = new Error(detail);
+          err.status = res.status;
+          err.data = data;
+          throw err;
+        }
+        return data;
+      } catch (e) {
+        lastError = e;
+        if (e?.status || attempt >= attempts - 1) break;
+        await new Promise(r => setTimeout(r, 450 + attempt * 650));
+      }
     }
-    return data;
+    if (lastError && !lastError.status) {
+      throw new Error('服务器连接失败，请检查 VPN/网络后重试；这次请求没有提交成功。');
+    }
+    throw lastError;
   },
   async login(username, password) {
     return this.request('/auth/login', {
@@ -1841,7 +1855,7 @@ function appData() {
           this.flash(`✅ 已进入翻译池 ${selIds.length} 篇，OpenClaw 会处理`);
         }
       } catch (e) {
-        this.flash('❌ 提交失败：' + e.message, 4000);
+        this.flash('提交失败：' + (e?.message || '服务器连接失败，请重试'), 6500);
       }
     },
 
