@@ -1092,6 +1092,30 @@
       "total_tokens": 14208,
       "prompt_cache_hit_tokens": 9600,
       "prompt_cache_miss_tokens": 40
+    },
+    {
+      "time_cn": "2026-06-24 12:16:04",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 1,
+      "article_title": "Valve: RAM Companies State Prices Monthly, ‘If We Say No, Then They Never Talk to Us Again’",
+      "article_url": "https://www.ign.com/articles/valve-ram-companies-state-prices-monthly-if-we-say-no-then-they-never-talk-to-us-again",
+      "article_date": "2026-06-25",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00045006,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8508,
+      "completion_tokens": 694,
+      "reasoning_tokens": 548,
+      "output_tokens_including_reasoning": 1242,
+      "total_tokens": 9202,
+      "total_tokens_including_reasoning": 9750,
+      "prompt_cache_hit_tokens": 7936,
+      "prompt_cache_miss_tokens": 572
     }
   ]
 }
