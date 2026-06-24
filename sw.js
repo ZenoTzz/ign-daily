@@ -1,4 +1,4 @@
-const CACHE_NAME = 'ign-daily-v6';
+const CACHE_NAME = 'ign-daily-v7';
 const BASE_PATH = self.location.pathname.replace(/sw\.js$/, '');
 const STATIC_ASSETS = [
   '',
@@ -8,6 +8,31 @@ const STATIC_ASSETS = [
   'assets/style.css',
   'assets/app.js',
 ].map((path) => `${BASE_PATH}${path}`);
+
+const JSON_HEADERS = { 'Content-Type': 'application/json; charset=utf-8' };
+const HTML_HEADERS = { 'Content-Type': 'text/html; charset=utf-8' };
+
+function jsonFallback(message) {
+  return new Response(JSON.stringify({ ok: false, error: message }), {
+    status: 503,
+    headers: JSON_HEADERS,
+  });
+}
+
+function htmlFallback(message) {
+  return new Response(`<!doctype html><meta charset="utf-8"><title>IGN Daily</title><body>${message}</body>`, {
+    status: 503,
+    headers: HTML_HEADERS,
+  });
+}
+
+async function cacheFresh(request, response) {
+  if (response && response.ok) {
+    const cache = await caches.open(CACHE_NAME);
+    await cache.put(request, response.clone());
+  }
+  return response;
+}
 
 // Install: cache static shell
 self.addEventListener('install', (e) => {
@@ -27,20 +52,32 @@ self.addEventListener('activate', (e) => {
   self.clients.claim();
 });
 
-// Fetch: network-first for JSON data and static shell.
+// Fetch: network-first for JSON data and static shell, but never return null.
 self.addEventListener('fetch', (e) => {
+  if (e.request.method !== 'GET') return;
+
   const url = new URL(e.request.url);
+
+  if (e.request.mode === 'navigate') {
+    e.respondWith(
+      fetch(e.request)
+        .then((res) => cacheFresh(e.request, res))
+        .catch(async () =>
+          (await caches.match(e.request)) ||
+          (await caches.match(`${BASE_PATH}index.html`)) ||
+          (await caches.match(`${BASE_PATH}`)) ||
+          htmlFallback('IGN Daily 暂时无法连接，请稍后刷新。')
+        )
+    );
+    return;
+  }
 
   // JSON data files: always try network first (fresh data)
   if (url.pathname.endsWith('.json') && url.pathname.includes('/data/')) {
     e.respondWith(
       fetch(e.request)
-        .then((res) => {
-          const clone = res.clone();
-          caches.open(CACHE_NAME).then((cache) => cache.put(e.request, clone));
-          return res;
-        })
-        .catch(() => caches.match(e.request))
+        .then((res) => cacheFresh(e.request, res))
+        .catch(async () => (await caches.match(e.request)) || jsonFallback('数据暂时无法连接，请稍后刷新。'))
     );
     return;
   }
@@ -49,18 +86,17 @@ self.addEventListener('fetch', (e) => {
   if (STATIC_ASSETS.some((asset) => url.pathname === new URL(asset, self.location.origin).pathname)) {
     e.respondWith(
       fetch(e.request)
-        .then((res) => {
-          const clone = res.clone();
-          caches.open(CACHE_NAME).then((cache) => cache.put(e.request, clone));
-          return res;
-        })
-        .catch(() => caches.match(e.request))
+        .then((res) => cacheFresh(e.request, res))
+        .catch(async () =>
+          (await caches.match(e.request)) ||
+          (url.pathname.endsWith('.html') ? htmlFallback('页面暂时无法连接，请稍后刷新。') : new Response('', { status: 503 }))
+        )
     );
     return;
   }
 
   // Everything else: network with fallback
   e.respondWith(
-    fetch(e.request).catch(() => caches.match(e.request))
+    fetch(e.request).catch(async () => (await caches.match(e.request)) || new Response('', { status: 503 }))
   );
 });

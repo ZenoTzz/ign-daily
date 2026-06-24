@@ -33,10 +33,12 @@ IGN_DAILY = Path(REPO_ROOT)
 DATA_DIR = IGN_DAILY / "data"
 
 RSS_PAGES = [
+    "https://www.ign.com/rss/articles/feed?start=0&count=20",
     "https://feeds.feedburner.com/ign/all",
     "https://www.ign.com/rss/articles/feed?start=20&count=20",
     "https://www.ign.com/rss/articles/feed?start=40&count=20",
 ]
+RSS_TIMEOUT_SECONDS = int(os.environ.get("IGN_DAILY_RSS_TIMEOUT", "10"))
 
 FILTER_PATTERNS = [
     r"\bsave \d+%",
@@ -210,7 +212,7 @@ def fetch_rss_items() -> list[dict]:
     for rss_url in RSS_PAGES:
         try:
             req = urllib.request.Request(rss_url, headers={"User-Agent": "Mozilla/5.0"})
-            resp = urllib.request.urlopen(req, timeout=15)
+            resp = urllib.request.urlopen(req, timeout=RSS_TIMEOUT_SECONDS)
             data = resp.read().decode("utf-8", errors="replace")
             root = ET.fromstring(data)
             for item in root.iter("item"):
