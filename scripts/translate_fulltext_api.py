@@ -25,6 +25,7 @@ from pathlib import Path
 from typing import Any
 
 from common_paths import DATA_DIR, REPO_ROOT, configure_utf8_stdio, dict_path, env_paths
+from api_provider import api_key_help, resolve_api_key
 from api_translation_audit import SUMMARY_HARD_MAX, SUMMARY_TARGET_MAX, check_translation, compact_char_len
 from audit_doctor import diagnose as diagnose_audit_failure
 from chinese_punctuation import normalize_translation_quotes
@@ -672,15 +673,15 @@ def remove_completed_request(req: dict[str, Any], article: dict[str, Any]) -> di
 
 def translate_date(date: str, limit: int = 2) -> int:
     load_env_file()
-    api_key = (os.environ.get("TRANSLATOR_API_KEY") or os.environ.get("DEEPSEEK_API_KEY") or "").strip()
+    base_url = (os.environ.get("TRANSLATOR_BASE_URL") or os.environ.get("DEEPSEEK_BASE_URL") or "").strip() or DEFAULT_BASE_URL
+    api_key = resolve_api_key(base_url)
     if not api_key:
-        print("API_FULLTEXT_SKIP: TRANSLATOR_API_KEY/DEEPSEEK_API_KEY is not set")
+        print(f"API_FULLTEXT_SKIP: {api_key_help(base_url)}")
         return 0
     model = (os.environ.get("TRANSLATOR_MODEL") or os.environ.get("DEEPSEEK_MODEL") or "").strip() or DEFAULT_MODEL
     repair_model = (os.environ.get("TRANSLATOR_REPAIR_MODEL") or "").strip()
     if not repair_model:
         repair_model = "deepseek-v4-pro" if model == "deepseek-v4-flash" else model
-    base_url = (os.environ.get("TRANSLATOR_BASE_URL") or os.environ.get("DEEPSEEK_BASE_URL") or "").strip() or DEFAULT_BASE_URL
     req_path, index, req, requested = resolve_requests(date)
     if not requested:
         print(f"API_FULLTEXT_SKIP: no requested articles for {date}")

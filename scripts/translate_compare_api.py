@@ -14,6 +14,7 @@ from datetime import datetime, timedelta, timezone
 from typing import Any
 
 from common_paths import DATA_DIR, configure_utf8_stdio
+from api_provider import api_key_help, resolve_api_key
 from translate_fulltext_api import (
     DEFAULT_BASE_URL,
     build_messages,
@@ -161,10 +162,6 @@ def translate_once(
 
 def run(date: str, article_id: int) -> int:
     load_env_file()
-    api_key = (os.environ.get("TRANSLATOR_API_KEY") or os.environ.get("DEEPSEEK_API_KEY") or "").strip()
-    if not api_key:
-        raise RuntimeError("TRANSLATOR_API_KEY/DEEPSEEK_API_KEY is not set")
-
     base_url = (os.environ.get("TRANSLATOR_BASE_URL") or os.environ.get("DEEPSEEK_BASE_URL") or "").strip() or DEFAULT_BASE_URL
     compare_models = load_compare_models(base_url)
 
@@ -185,6 +182,9 @@ def run(date: str, article_id: int) -> int:
         model = model_info["model"]
         label = model_info.get("label") or model_label(model)
         model_base_url = model_info.get("base_url") or base_url
+        api_key = resolve_api_key(model_base_url)
+        if not api_key:
+            raise RuntimeError(api_key_help(model_base_url))
         print(f"[COMPARE] #{article_id} {idx}: {label} ({model})")
         translated = translate_once(
             api_key=api_key,

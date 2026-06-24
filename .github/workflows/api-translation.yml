@@ -190,6 +190,8 @@ jobs:
         if: steps.config.outputs.compare_article_id != '' || ((steps.config.outputs.title_translator == 'api' || steps.config.outputs.title_translator == 'deepseek') && steps.pending.outputs.title_count != '0') || ((steps.config.outputs.fulltext_translator == 'api' || steps.config.outputs.fulltext_translator == 'deepseek') && steps.pending.outputs.fulltext_count != '0')
         env:
           TRANSLATOR_API_KEY: ${{ secrets.TRANSLATOR_API_KEY || secrets.DEEPSEEK_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY || secrets.GOOGLE_API_KEY }}
+          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY || secrets.GEMINI_API_KEY }}
           TRANSLATOR_BASE_URL: ${{ steps.config.outputs.api_base_url || vars.TRANSLATOR_BASE_URL || vars.DEEPSEEK_BASE_URL || 'https://api.deepseek.com' }}
         run: |
           python3 scripts/deepseek_balance.py --snapshot "${GITHUB_RUN_ID}-before" || true
@@ -198,14 +200,16 @@ jobs:
         if: steps.config.outputs.compare_article_id != ''
         env:
           TRANSLATOR_API_KEY: ${{ secrets.TRANSLATOR_API_KEY || secrets.DEEPSEEK_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY || secrets.GOOGLE_API_KEY }}
+          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY || secrets.GEMINI_API_KEY }}
           TRANSLATOR_BASE_URL: ${{ steps.config.outputs.api_base_url || vars.TRANSLATOR_BASE_URL || vars.DEEPSEEK_BASE_URL || 'https://api.deepseek.com' }}
           TRANSLATOR_COMPARE_MODELS: ${{ steps.config.outputs.compare_models_json }}
           TRANSLATOR_COMPARE_MAX_TOKENS: "12000"
           TRANSLATOR_THINKING_MODE: ${{ steps.config.outputs.api_compare_thinking }}
         run: |
           set -euo pipefail
-          if [ -z "${TRANSLATOR_API_KEY:-}" ]; then
-            echo "comparison requested but TRANSLATOR_API_KEY/DEEPSEEK_API_KEY is not set."
+          if [ -z "${TRANSLATOR_API_KEY:-}${GEMINI_API_KEY:-}${GOOGLE_API_KEY:-}" ]; then
+            echo "comparison requested but TRANSLATOR_API_KEY/DEEPSEEK_API_KEY/GEMINI_API_KEY is not set."
             exit 1
           fi
           python3 scripts/article_cache.py "${{ steps.config.outputs.compare_date }}" --missing --limit 20
@@ -216,14 +220,16 @@ jobs:
         if: steps.config.outputs.compare_article_id == '' && (steps.config.outputs.title_translator == 'api' || steps.config.outputs.title_translator == 'deepseek') && steps.pending.outputs.title_count != '0'
         env:
           TRANSLATOR_API_KEY: ${{ secrets.TRANSLATOR_API_KEY || secrets.DEEPSEEK_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY || secrets.GOOGLE_API_KEY }}
+          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY || secrets.GEMINI_API_KEY }}
           TRANSLATOR_MODEL: ${{ steps.config.outputs.api_title_model || steps.config.outputs.api_model || vars.TRANSLATOR_TITLE_MODEL || vars.TRANSLATOR_MODEL || vars.DEEPSEEK_MODEL || 'deepseek-v4-flash' }}
           TRANSLATOR_BASE_URL: ${{ steps.config.outputs.api_title_base_url || steps.config.outputs.api_base_url || vars.TRANSLATOR_BASE_URL || vars.DEEPSEEK_BASE_URL || 'https://api.deepseek.com' }}
           TRANSLATOR_TITLE_LIMIT: "30"
           TRANSLATOR_THINKING_MODE: ${{ steps.config.outputs.api_title_thinking }}
         run: |
           set -euo pipefail
-          if [ -z "${TRANSLATOR_API_KEY:-}" ]; then
-            echo "title_translator=api but TRANSLATOR_API_KEY/DEEPSEEK_API_KEY is not set."
+          if [ -z "${TRANSLATOR_API_KEY:-}${GEMINI_API_KEY:-}${GOOGLE_API_KEY:-}" ]; then
+            echo "title_translator=api but TRANSLATOR_API_KEY/DEEPSEEK_API_KEY/GEMINI_API_KEY is not set."
             exit 1
           fi
           python3 scripts/article_cache.py --all --queued --missing --limit 30
@@ -233,6 +239,8 @@ jobs:
         if: steps.config.outputs.compare_article_id == '' && (steps.config.outputs.fulltext_translator == 'api' || steps.config.outputs.fulltext_translator == 'deepseek') && steps.pending.outputs.fulltext_count != '0'
         env:
           TRANSLATOR_API_KEY: ${{ secrets.TRANSLATOR_API_KEY || secrets.DEEPSEEK_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY || secrets.GOOGLE_API_KEY }}
+          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY || secrets.GEMINI_API_KEY }}
           TRANSLATOR_MODEL: ${{ steps.config.outputs.api_fulltext_model || vars.TRANSLATOR_FULLTEXT_MODEL || steps.config.outputs.api_model || vars.TRANSLATOR_MODEL || vars.DEEPSEEK_MODEL || 'deepseek-v4-pro' }}
           TRANSLATOR_BASE_URL: ${{ steps.config.outputs.api_fulltext_base_url || steps.config.outputs.api_base_url || vars.TRANSLATOR_BASE_URL || vars.DEEPSEEK_BASE_URL || 'https://api.deepseek.com' }}
           TRANSLATOR_FULLTEXT_LIMIT: ${{ github.event_name == 'workflow_dispatch' && inputs.fulltext_limit || steps.config.outputs.api_fulltext_batch || '5' }}
@@ -241,8 +249,8 @@ jobs:
           TRANSLATOR_THINKING_MODE: ${{ steps.config.outputs.api_fulltext_thinking }}
         run: |
           set -euo pipefail
-          if [ -z "${TRANSLATOR_API_KEY:-}" ]; then
-            echo "fulltext_translator=api but TRANSLATOR_API_KEY/DEEPSEEK_API_KEY is not set."
+          if [ -z "${TRANSLATOR_API_KEY:-}${GEMINI_API_KEY:-}${GOOGLE_API_KEY:-}" ]; then
+            echo "fulltext_translator=api but TRANSLATOR_API_KEY/DEEPSEEK_API_KEY/GEMINI_API_KEY is not set."
             exit 1
           fi
           python3 scripts/article_cache.py --all --queued --missing --limit "${TRANSLATOR_FULLTEXT_LIMIT}"
@@ -252,6 +260,8 @@ jobs:
         if: steps.config.outputs.compare_article_id != '' || ((steps.config.outputs.title_translator == 'api' || steps.config.outputs.title_translator == 'deepseek') && steps.pending.outputs.title_count != '0') || ((steps.config.outputs.fulltext_translator == 'api' || steps.config.outputs.fulltext_translator == 'deepseek') && steps.pending.outputs.fulltext_count != '0')
         env:
           TRANSLATOR_API_KEY: ${{ secrets.TRANSLATOR_API_KEY || secrets.DEEPSEEK_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY || secrets.GOOGLE_API_KEY }}
+          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY || secrets.GEMINI_API_KEY }}
           TRANSLATOR_BASE_URL: ${{ steps.config.outputs.api_base_url || vars.TRANSLATOR_BASE_URL || vars.DEEPSEEK_BASE_URL || 'https://api.deepseek.com' }}
         run: |
           python3 scripts/deepseek_balance.py --snapshot "${GITHUB_RUN_ID}-after" || true

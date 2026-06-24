@@ -28,6 +28,7 @@ from pathlib import Path
 from typing import Any
 
 from common_paths import DATA_DIR, REPO_ROOT, configure_utf8_stdio, dict_path, env_paths
+from api_provider import api_key_help, provider_from_base_url, resolve_api_key
 from chinese_punctuation import normalize_chinese_quotes
 from currency_utils import normalize_currency_text
 from dict_matcher import (
@@ -276,7 +277,8 @@ def call_deepseek_response(api_key: str, model: str, base_url: str, messages: li
         "stream": False,
         "response_format": {"type": "json_object"},
     }
-    apply_thinking_mode(payload)
+    if provider_from_base_url(base_url) != "gemini":
+        apply_thinking_mode(payload)
     req = urllib.request.Request(
         endpoint,
         data=json.dumps(payload, ensure_ascii=False).encode("utf-8"),
@@ -329,13 +331,13 @@ def normalize_result(result: dict[str, Any]) -> dict[str, Any]:
 
 def translate_date(date: str, limit: int = 8) -> int:
     load_env_file()
-    api_key = (os.environ.get("TRANSLATOR_API_KEY") or os.environ.get("DEEPSEEK_API_KEY") or "").strip()
+    base_url = (os.environ.get("TRANSLATOR_BASE_URL") or os.environ.get("DEEPSEEK_BASE_URL") or "").strip() or DEFAULT_BASE_URL
+    api_key = resolve_api_key(base_url)
     if not api_key:
-        print("API_TITLE_SKIP: TRANSLATOR_API_KEY/DEEPSEEK_API_KEY is not set")
+        print(f"API_TITLE_SKIP: {api_key_help(base_url)}")
         return 0
 
     model = (os.environ.get("TRANSLATOR_MODEL") or os.environ.get("DEEPSEEK_MODEL") or "").strip() or DEFAULT_MODEL
-    base_url = (os.environ.get("TRANSLATOR_BASE_URL") or os.environ.get("DEEPSEEK_BASE_URL") or "").strip() or DEFAULT_BASE_URL
     title_max_tokens = int(os.environ.get("TRANSLATOR_TITLE_MAX_TOKENS") or "4000")
 
     day_dir = DATA_DIR / date

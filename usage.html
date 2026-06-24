@@ -259,6 +259,30 @@
     <section class="card" style="margin-top:14px;">
       <div class="chart-title">
         <div>
+          <div class="label">高请求 / 分段补翻</div>
+          <div class="hint">专门解释某篇文章为什么请求数变高：整篇输出 JSON 错误、段落缺失、质检修复都会在这里聚合。</div>
+        </div>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>文章</th>
+              <th>请求拆分</th>
+              <th>触发原因</th>
+              <th>模型</th>
+              <th>Tokens</th>
+              <th>估算成本</th>
+            </tr>
+          </thead>
+          <tbody id="retryCostsBody"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="card" style="margin-top:14px;">
+      <div class="chart-title">
+        <div>
           <div class="label">最近 API 调用</div>
           <div class="hint">显示最近 30 条记录，成本按模型目录里的每 1M tokens 价格估算</div>
         </div>
@@ -316,6 +340,12 @@
       const configured = state.modelMap[model]?.pricing;
       return configured || PRICING_USD_PER_MILLION[modelKey(model)] || null;
     }
+    function outputTokens(r) {
+      return Number(r.output_tokens_including_reasoning ?? 0) || (Number(r.completion_tokens || 0) + Number(r.reasoning_tokens || 0));
+    }
+    function totalTokens(r) {
+      return Number(r.total_tokens_including_reasoning ?? 0) || (Number(r.total_tokens || 0) + Number(r.reasoning_tokens || 0));
+    }
     function recordCost(r) {
       const stored = Number(r.estimated_cost_usd);
       if (Number.isFinite(stored) && stored > 0) return stored;
@@ -325,7 +355,7 @@
       const hit = Number(r.prompt_cache_hit_tokens || 0);
       let miss = Number(r.prompt_cache_miss_tokens || 0);
       if (hit === 0 && miss === 0 && prompt > 0) miss = prompt;
-      const output = Number(r.completion_tokens || 0);
+      const output = outputTokens(r);
       return (hit * pricing.hit + miss * pricing.miss + output * pricing.output) / 1_000_000;
     }
     function hasPricing(r) {
@@ -349,6 +379,8 @@
       const lower = raw.toLowerCase();
       if (lower.includes('deepseek') && lower.includes('v4') && lower.includes('pro')) return 'DeepSeek V4 Pro';
       if (lower.includes('deepseek') && lower.includes('v4') && lower.includes('flash')) return 'DeepSeek V4 Flash';
+      if (lower.includes('gemini') && lower.includes('pro')) return 'Gemini Pro';
+      if (lower.includes('gemini') && lower.includes('flash')) return 'Gemini Flash';
       return raw.replace(/-/g, ' ');
     }
     function modelClass(model) {
@@ -387,9 +419,9 @@
       });
     }
     function summarize(records) {
-      const total = records.reduce((s, r) => s + Number(r.total_tokens || 0), 0);
+      const total = records.reduce((s, r) => s + totalTokens(r), 0);
       const prompt = records.reduce((s, r) => s + Number(r.prompt_tokens || 0), 0);
-      const completion = records.reduce((s, r) => s + Number(r.completion_tokens || 0), 0);
+      const completion = records.reduce((s, r) => s + outputTokens(r), 0);
       const hit = records.reduce((s, r) => s + Number(r.prompt_cache_hit_tokens || 0), 0);
       const miss = records.reduce((s, r) => s + Number(r.prompt_cache_miss_tokens || 0), 0);
       const cost = records.reduce((s, r) => s + recordCost(r), 0);
@@ -398,9 +430,9 @@
       for (const r of records) {
         const key = r.model || 'unknown';
         byModel[key] ||= { total: 0, prompt: 0, completion: 0, hit: 0, miss: 0, count: 0, cost: 0, unpriced: 0 };
-        byModel[key].total += Number(r.total_tokens || 0);
+        byModel[key].total += totalTokens(r);
         byModel[key].prompt += Number(r.prompt_tokens || 0);
-        byModel[key].completion += Number(r.completion_tokens || 0);
+        byModel[key].completion += outputTokens(r);
         byModel[key].hit += Number(r.prompt_cache_hit_tokens || 0);
         byModel[key].miss += Number(r.prompt_cache_miss_tokens || 0);
         byModel[key].count += 1;
@@ -442,7 +474,7 @@
         g.title = g.title || articleTitle(r);
         g.tasks.add(r.task || '');
         g.models.add(modelName(r.model));
-        g.total += Number(r.total_tokens || 0);
+        g.total += totalTokens(r);
         g.hit += Number(r.prompt_cache_hit_tokens || 0);
         g.miss += Number(r.prompt_cache_miss_tokens || 0);
         g.cost += recordCost(r);
@@ -450,6 +482,52 @@
         g.count += 1;
       }
       return Object.values(groups).sort((a, b) => b.cost - a.cost);
+    }
+    function retryReason(group) {
+      const tasks = group.tasks;
+      const reasons = [];
+      if ((tasks.fulltext_chunk || 0) > 0) {
+        reasons.push('整篇输出无法直接通过：常见原因是 JSON 不完整、段落数量不一致，系统改为分段补翻');
+      }
+      if ((tasks.fulltext_repair || 0) > 0) {
+        reasons.push('质检发现词库、摘要、标点或金额问题，触发集中修复');
+      }
+      if ((tasks.audit_doctor || 0) > 0) {
+        reasons.push('质检结果需要二次判断，调用诊断模型确认是否误报');
+      }
+      if (!reasons.length && group.count >= 3) {
+        reasons.push('同一篇文章发生多次 API 调用，通常是标题、正文和后处理叠加');
+      }
+      return reasons.join('；');
+    }
+    function groupRetryCosts(records) {
+      const groups = {};
+      for (const r of records) {
+        if (!r.article_id && !r.article_url) continue;
+        const task = String(r.task || '');
+        const key = articleKey(r);
+        groups[key] ||= {
+          title: articleTitle(r),
+          article_id: r.article_id,
+          article_date: r.article_date,
+          models: new Set(),
+          tasks: {},
+          count: 0,
+          total: 0,
+          cost: 0,
+          unpriced: 0,
+        };
+        const g = groups[key];
+        g.models.add(modelName(r.model));
+        g.tasks[task] = (g.tasks[task] || 0) + 1;
+        g.count += 1;
+        g.total += totalTokens(r);
+        g.cost += recordCost(r);
+        if (!hasPricing(r)) g.unpriced += 1;
+      }
+      return Object.values(groups)
+        .filter(g => (g.tasks.fulltext_chunk || 0) || (g.tasks.fulltext_repair || 0) || (g.tasks.audit_doctor || 0) || g.count >= 4)
+        .sort((a, b) => b.count - a.count || b.total - a.total);
     }
     function renderBalance() {
       const el = document.getElementById('balanceValue');
@@ -526,6 +604,28 @@
         </tr>
       `).join('') : '<tr><td colspan="6" class="empty">当前范围内还没有文章级 API 记录</td></tr>';
 
+      const retryBody = document.getElementById('retryCostsBody');
+      const retryRows = groupRetryCosts(records).slice(0, 30);
+      retryBody.innerHTML = retryRows.length ? retryRows.map(g => {
+        const taskText = Object.entries(g.tasks)
+          .filter(([, count]) => count)
+          .map(([task, count]) => `<span class="pill">${esc(task)} × ${fmt(count)}</span>`)
+          .join(' ');
+        return `
+          <tr>
+            <td>
+              <div class="article-title">${esc(g.title)}</div>
+              <div class="article-meta">${esc(g.article_date || '')}${g.article_id ? ` · #${esc(g.article_id)}` : ''} · 合计 ${fmt(g.count)} 次请求</div>
+            </td>
+            <td>${taskText}</td>
+            <td>${esc(retryReason(g))}</td>
+            <td>${[...g.models].filter(Boolean).map(esc).join('<br>')}</td>
+            <td>${fmt(g.total)}</td>
+            <td class="money">${g.unpriced === g.count ? '未配置' : fmtUsd(g.cost)}</td>
+          </tr>
+        `;
+      }).join('') : '<tr><td colspan="6" class="empty">当前范围内没有触发分段补翻或高请求的文章</td></tr>';
+
       const runBody = document.getElementById('runCostsBody');
       const runRows = runs.slice(0, 40);
       runBody.innerHTML = runRows.length ? runRows.map(r => {
@@ -541,7 +641,7 @@
           <tr>
             <td>${esc(r.recorded_at_cn || '')}<div class="article-meta">${esc(r.run_id || '')}</div></td>
             <td>${esc(r.workflow || '')}<div class="article-meta">${esc(r.event || '')}</div></td>
-            <td>${fmt(r.api_call_count)}<div class="article-meta">${fmt(r.total_tokens)} tokens</div></td>
+            <td>${fmt(r.api_call_count)}<div class="article-meta">${fmt(r.total_tokens_including_reasoning || r.total_tokens)} tokens</div></td>
             <td class="money">${fmtUsd(estimated)}</td>
             <td class="money">${hasActual ? fmtUsd(actual) : (delayed ? '待平台更新' : '无快照')}</td>
             <td>${hasActual ? fmtUsd(diff) : '--'}</td>
@@ -559,8 +659,8 @@
           <td>${esc(articleTitle(r))}</td>
           <td>${esc(modelName(r.model))}</td>
           <td class="money">${fmtCost(recordCost(r), hasPricing(r))}</td>
-          <td>${fmt(r.total_tokens)}</td>
-          <td>${fmt(r.prompt_tokens)} / ${fmt(r.completion_tokens)}</td>
+          <td>${fmt(totalTokens(r))}</td>
+          <td>${fmt(r.prompt_tokens)} / ${fmt(outputTokens(r))}${Number(r.reasoning_tokens || 0) ? `（含 reasoning ${fmt(r.reasoning_tokens)}）` : ''}</td>
           <td>${fmt(r.prompt_cache_hit_tokens)} / ${fmt(r.prompt_cache_miss_tokens)}</td>
         </tr>
       `).join('') : '<tr><td colspan="8" class="empty">暂无记录</td></tr>';

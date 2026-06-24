@@ -66,6 +66,26 @@ def cost(record: dict[str, Any]) -> float:
     return 0.0
 
 
+def total_tokens(record: dict[str, Any]) -> int:
+    value = record.get("total_tokens_including_reasoning")
+    if value is not None:
+        try:
+            return int(value)
+        except Exception:
+            pass
+    return int(record.get("total_tokens") or 0) + int(record.get("reasoning_tokens") or 0)
+
+
+def output_tokens(record: dict[str, Any]) -> int:
+    value = record.get("output_tokens_including_reasoning")
+    if value is not None:
+        try:
+            return int(value)
+        except Exception:
+            pass
+    return int(record.get("completion_tokens") or 0) + int(record.get("reasoning_tokens") or 0)
+
+
 def total_balance(snapshot: dict[str, Any]) -> tuple[float | None, str]:
     try:
         value = snapshot.get("total_balance")
@@ -112,14 +132,54 @@ def main() -> int:
         balance_delta_status = "ok"
 
     by_model: dict[str, dict[str, Any]] = {}
+    by_task: dict[str, dict[str, Any]] = {}
+    by_article: dict[str, dict[str, Any]] = {}
     for record in records:
         model = str(record.get("model") or "unknown")
-        by_model.setdefault(model, {"calls": 0, "estimated_cost_usd": 0.0, "total_tokens": 0})
+        task = str(record.get("task") or "unknown")
+        by_model.setdefault(model, {"calls": 0, "estimated_cost_usd": 0.0, "total_tokens": 0, "output_tokens": 0})
         by_model[model]["calls"] += 1
         by_model[model]["estimated_cost_usd"] += cost(record)
-        by_model[model]["total_tokens"] += int(record.get("total_tokens") or 0)
+        by_model[model]["total_tokens"] += total_tokens(record)
+        by_model[model]["output_tokens"] += output_tokens(record)
+
+        by_task.setdefault(task, {"calls": 0, "estimated_cost_usd": 0.0, "total_tokens": 0})
+        by_task[task]["calls"] += 1
+        by_task[task]["estimated_cost_usd"] += cost(record)
+        by_task[task]["total_tokens"] += total_tokens(record)
+
+        article_id = record.get("article_id")
+        article_url = record.get("article_url")
+        if article_id or article_url:
+            key = f"{record.get('article_date') or ''}|{article_id or ''}|{article_url or ''}"
+            by_article.setdefault(key, {
+                "article_id": article_id,
+                "article_date": record.get("article_date"),
+                "article_title": record.get("article_title") or "",
+                "article_url": article_url,
+                "calls": 0,
+                "estimated_cost_usd": 0.0,
+                "total_tokens": 0,
+                "tasks": {},
+                "models": {},
+            })
+            row = by_article[key]
+            row["calls"] += 1
+            row["estimated_cost_usd"] += cost(record)
+            row["total_tokens"] += total_tokens(record)
+            row["tasks"][task] = int(row["tasks"].get(task, 0)) + 1
+            row["models"][model] = int(row["models"].get(model, 0)) + 1
     for row in by_model.values():
         row["estimated_cost_usd"] = round(row["estimated_cost_usd"], 8)
+    for row in by_task.values():
+        row["estimated_cost_usd"] = round(row["estimated_cost_usd"], 8)
+    retry_articles = []
+    for row in by_article.values():
+        row["estimated_cost_usd"] = round(row["estimated_cost_usd"], 8)
+        tasks = row.get("tasks", {})
+        if tasks.get("fulltext_chunk") or tasks.get("fulltext_repair") or tasks.get("audit_doctor") or row.get("calls", 0) >= 4:
+            retry_articles.append(row)
+    retry_articles.sort(key=lambda r: (-int(r.get("calls", 0)), -int(r.get("total_tokens", 0))))
 
     estimated_cost = round(sum(cost(r) for r in records), 8)
     if actual_delta is not None and actual_delta == 0 and estimated_cost > 0:
@@ -138,8 +198,11 @@ def main() -> int:
         "balance_delta_status": balance_delta_status,
         "estimated_cost_usd": estimated_cost,
         "api_call_count": len(records),
-        "total_tokens": sum(int(r.get("total_tokens") or 0) for r in records),
+        "total_tokens": sum(total_tokens(r) for r in records),
+        "output_tokens": sum(output_tokens(r) for r in records),
         "by_model": by_model,
+        "by_task": by_task,
+        "retry_articles": retry_articles[:20],
         "snapshot_ok": bool(before.get("ok")) and bool(after.get("ok")),
     }
 

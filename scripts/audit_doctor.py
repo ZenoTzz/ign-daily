@@ -15,6 +15,7 @@ from pathlib import Path
 from typing import Any
 
 from common_paths import DATA_DIR, configure_utf8_stdio, env_paths
+from api_provider import resolve_api_key
 from translate_titles_deepseek import call_deepseek_response, extract_json
 from usage_logger import record_deepseek_usage_safe
 
@@ -210,7 +211,7 @@ def main() -> int:
         article=article,
         paragraphs_en=paragraphs,
         issues=failure.get("audit_issues") or [],
-        api_key=os.environ.get("TRANSLATOR_API_KEY") or os.environ.get("DEEPSEEK_API_KEY") or "",
+        api_key=resolve_api_key(os.environ.get("TRANSLATOR_BASE_URL") or os.environ.get("DEEPSEEK_BASE_URL") or "https://api.deepseek.com"),
         model=os.environ.get("TRANSLATOR_MODEL") or os.environ.get("DEEPSEEK_MODEL") or "deepseek-v4-flash",
         base_url=os.environ.get("TRANSLATOR_BASE_URL") or os.environ.get("DEEPSEEK_BASE_URL") or "https://api.deepseek.com",
     )

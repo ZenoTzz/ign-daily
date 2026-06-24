@@ -23,6 +23,7 @@ from pathlib import Path
 from typing import Any
 
 from common_paths import DATA_DIR, REPO_ROOT, configure_utf8_stdio, env_paths
+from api_provider import api_key_help, resolve_api_key
 from prompt_blocks import nightly_user_payload
 from translate_titles_deepseek import call_deepseek_response, extract_json
 from usage_logger import record_deepseek_usage_safe
@@ -572,12 +573,12 @@ def parse_candidate_json_with_repair(
 
 def run(date: str) -> int:
     load_env_file()
-    api_key = (os.environ.get("TRANSLATOR_API_KEY") or os.environ.get("DEEPSEEK_API_KEY") or "").strip()
+    base_url = (os.environ.get("TRANSLATOR_BASE_URL") or os.environ.get("DEEPSEEK_BASE_URL") or "").strip() or DEFAULT_BASE_URL
+    api_key = resolve_api_key(base_url)
     if not api_key:
-        print("NIGHTLY_STYLE_API_SKIP: TRANSLATOR_API_KEY/DEEPSEEK_API_KEY is not set")
+        print(f"NIGHTLY_STYLE_API_SKIP: {api_key_help(base_url)}")
         return 0
     model = (os.environ.get("NIGHTLY_STYLE_MODEL") or os.environ.get("TRANSLATOR_MODEL") or "").strip() or DEFAULT_MODEL
-    base_url = (os.environ.get("TRANSLATOR_BASE_URL") or os.environ.get("DEEPSEEK_BASE_URL") or "").strip() or DEFAULT_BASE_URL
 
     profile_path = REPO_ROOT / "STYLE_PROFILE.md"
     current_profile = read_text(profile_path, 30000)

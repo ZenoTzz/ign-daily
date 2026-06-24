@@ -223,6 +223,22 @@ function appData() {
           input_cache_hit_usd_per_million: 0.0028,
           input_cache_miss_usd_per_million: 0.14,
           output_usd_per_million: 0.28
+        },
+        {
+          label: 'Gemini 3.1 Pro',
+          model: 'gemini-3.1-pro',
+          base_url: 'https://generativelanguage.googleapis.com/v1beta/openai',
+          input_cache_hit_usd_per_million: '',
+          input_cache_miss_usd_per_million: '',
+          output_usd_per_million: ''
+        },
+        {
+          label: 'Gemini 3.5 Flash',
+          model: 'gemini-3.5-flash',
+          base_url: 'https://generativelanguage.googleapis.com/v1beta/openai',
+          input_cache_hit_usd_per_million: '',
+          input_cache_miss_usd_per_million: '',
+          output_usd_per_million: ''
         }
       ]
     },
@@ -839,6 +855,22 @@ function appData() {
           input_cache_hit_usd_per_million: 0.0028,
           input_cache_miss_usd_per_million: 0.14,
           output_usd_per_million: 0.28
+        },
+        {
+          label: 'Gemini 3.1 Pro',
+          model: 'gemini-3.1-pro',
+          base_url: 'https://generativelanguage.googleapis.com/v1beta/openai',
+          input_cache_hit_usd_per_million: '',
+          input_cache_miss_usd_per_million: '',
+          output_usd_per_million: ''
+        },
+        {
+          label: 'Gemini 3.5 Flash',
+          model: 'gemini-3.5-flash',
+          base_url: 'https://generativelanguage.googleapis.com/v1beta/openai',
+          input_cache_hit_usd_per_million: '',
+          input_cache_miss_usd_per_million: '',
+          output_usd_per_million: ''
         }
       ];
     },
@@ -1095,6 +1127,8 @@ function appData() {
       if (lower.includes('deepseek') && lower.includes('v4') && lower.includes('pro')) return 'DeepSeek V4 Pro';
       if (lower.includes('deepseek') && lower.includes('v4') && lower.includes('flash')) return 'DeepSeek V4 Flash';
       if (lower.includes('deepseek')) return raw.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+      if (lower.includes('gemini') && lower.includes('pro')) return 'Gemini Pro';
+      if (lower.includes('gemini') && lower.includes('flash')) return 'Gemini Flash';
       return raw;
     },
 

@@ -57,13 +57,19 @@ def int_usage(usage: dict[str, Any], key: str) -> int:
 def normalize_usage(usage: dict[str, Any]) -> dict[str, int]:
     prompt = int_usage(usage, "prompt_tokens")
     completion = int_usage(usage, "completion_tokens")
+    completion_details = usage.get("completion_tokens_details") if isinstance(usage.get("completion_tokens_details"), dict) else {}
+    reasoning = int_usage(usage, "reasoning_tokens") or int_usage(completion_details, "reasoning_tokens")
+    output_total = completion + reasoning
     total = int_usage(usage, "total_tokens") or prompt + completion
     hit = int_usage(usage, "prompt_cache_hit_tokens")
     miss = int_usage(usage, "prompt_cache_miss_tokens")
     return {
         "prompt_tokens": prompt,
         "completion_tokens": completion,
+        "reasoning_tokens": reasoning,
+        "output_tokens_including_reasoning": output_total,
         "total_tokens": total,
+        "total_tokens_including_reasoning": max(total, prompt + output_total),
         "prompt_cache_hit_tokens": hit,
         "prompt_cache_miss_tokens": miss,
     }
@@ -128,7 +134,7 @@ def estimate_cost_usd(model: str, usage: dict[str, int]) -> tuple[float | None, 
     cost = (
         hit * pricing["prompt_cache_hit_tokens"]
         + miss * pricing["prompt_cache_miss_tokens"]
-        + usage.get("completion_tokens", 0) * pricing["completion_tokens"]
+        + usage.get("output_tokens_including_reasoning", usage.get("completion_tokens", 0)) * pricing["completion_tokens"]
     ) / 1_000_000
     return round(cost, 8), pricing
 
