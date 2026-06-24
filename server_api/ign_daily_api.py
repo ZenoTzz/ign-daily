@@ -65,6 +65,12 @@ class ChangePasswordRequest(BaseModel):
     new_password: str = Field(min_length=12, max_length=200)
 
 
+class UpdateAccountRequest(BaseModel):
+    current_password: str = Field(min_length=1, max_length=200)
+    new_username: str | None = Field(default=None, min_length=3, max_length=64, pattern=r"^[A-Za-z0-9_.-]+$")
+    new_password: str | None = Field(default=None, min_length=12, max_length=200)
+
+
 class TranslationRequest(BaseModel):
     date: str = Field(pattern=r"^\d{4}-\d{2}-\d{2}$")
     ids: list[int] = Field(min_length=1)
@@ -396,6 +402,29 @@ def change_password(payload: ChangePasswordRequest, user: sqlite3.Row = Depends(
         conn.execute("DELETE FROM sessions WHERE user_id = ? AND token NOT IN (SELECT token FROM sessions WHERE user_id = ? ORDER BY created_at DESC LIMIT 1)", (user["id"], user["id"]))
         conn.commit()
     return {"ok": True}
+
+
+@app.post("/auth/account")
+def update_account(payload: UpdateAccountRequest, user: sqlite3.Row = Depends(current_user)) -> dict[str, Any]:
+    new_username = (payload.new_username or user["username"]).strip()
+    with db() as conn:
+        row = conn.execute("SELECT * FROM users WHERE id = ?", (user["id"],)).fetchone()
+        if not row or not verify_password(payload.current_password, row["password_hash"]):
+            raise HTTPException(status_code=401, detail="Current password is incorrect")
+        existing = conn.execute(
+            "SELECT id FROM users WHERE username = ? AND id != ?",
+            (new_username, user["id"]),
+        ).fetchone()
+        if existing:
+            raise HTTPException(status_code=409, detail="Username already exists")
+        password_hash = hash_password(payload.new_password) if payload.new_password else row["password_hash"]
+        conn.execute(
+            "UPDATE users SET username = ?, password_hash = ? WHERE id = ?",
+            (new_username, password_hash, user["id"]),
+        )
+        conn.execute("DELETE FROM sessions WHERE user_id = ?", (user["id"],))
+        conn.commit()
+    return {"ok": True, "user": {"username": new_username}}
 
 
 @app.get("/articles")

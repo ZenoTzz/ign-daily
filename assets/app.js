@@ -201,6 +201,12 @@ const ServerAPI = {
   },
   async logout() {
     return this.request('/auth/logout', { method: 'POST' });
+  },
+  async updateAccount(payload) {
+    return this.request('/auth/account', {
+      method: 'POST',
+      body: JSON.stringify(payload)
+    });
   }
 };
 window.ServerAPI = ServerAPI;
@@ -243,6 +249,12 @@ function appData() {
     apiUser: '',
     apiStatus: '',
     apiLoggingIn: false,
+    accountNewUsername: localStorage.getItem('ign_api_username') || 'admin',
+    accountCurrentPassword: '',
+    accountNewPassword: '',
+    accountConfirmPassword: '',
+    accountSaving: false,
+    accountStatus: '',
     token: localStorage.getItem('gh_token') || '',
     oauthClientId: localStorage.getItem('github_oauth_client_id') || '',
     oauthLoggingIn: false,
@@ -897,6 +909,7 @@ function appData() {
       try {
         const data = await ServerAPI.me();
         this.apiUser = data?.user?.username || '';
+        if (this.apiUser) this.accountNewUsername = this.apiUser;
         this.apiStatus = this.apiUser ? `已登录：${this.apiUser}` : '';
       } catch (e) {
         this.apiUser = '';
@@ -917,6 +930,7 @@ function appData() {
         localStorage.setItem('ign_api_username', this.apiUsername.trim());
         localStorage.setItem('ign_api_enabled', '1');
         this.apiUser = data?.user?.username || this.apiUsername.trim();
+        this.accountNewUsername = this.apiUser;
         this.apiPassword = '';
         this.apiStatus = `已登录：${this.apiUser}`;
         this.flash('服务器账号已登录');
@@ -935,8 +949,72 @@ function appData() {
       localStorage.removeItem('ign_api_token');
       localStorage.removeItem('ign_api_enabled');
       this.apiUser = '';
+      this.accountCurrentPassword = '';
+      this.accountNewPassword = '';
+      this.accountConfirmPassword = '';
+      this.accountStatus = '';
       this.apiStatus = '已退出服务器账号';
       this.flash('已退出服务器账号');
+    },
+
+    async updateServerAccount() {
+      const newUsername = String(this.accountNewUsername || '').trim();
+      const currentPassword = String(this.accountCurrentPassword || '');
+      const newPassword = String(this.accountNewPassword || '');
+      const confirmPassword = String(this.accountConfirmPassword || '');
+      if (!this.apiUser) {
+        this.accountStatus = '请先登录服务器账号';
+        this.flash(this.accountStatus, 3000);
+        return;
+      }
+      if (!currentPassword) {
+        this.accountStatus = '请输入当前密码';
+        this.flash(this.accountStatus, 3000);
+        return;
+      }
+      if (!newUsername) {
+        this.accountStatus = '请输入用户名';
+        this.flash(this.accountStatus, 3000);
+        return;
+      }
+      if (newPassword && newPassword.length < 12) {
+        this.accountStatus = '新密码至少 12 位';
+        this.flash(this.accountStatus, 3000);
+        return;
+      }
+      if (newPassword !== confirmPassword) {
+        this.accountStatus = '两次输入的新密码不一致';
+        this.flash(this.accountStatus, 3000);
+        return;
+      }
+      this.accountSaving = true;
+      this.accountStatus = '保存中...';
+      try {
+        const payload = {
+          current_password: currentPassword,
+          new_username: newUsername
+        };
+        if (newPassword) payload.new_password = newPassword;
+        const data = await ServerAPI.updateAccount(payload);
+        const username = data?.user?.username || newUsername;
+        localStorage.removeItem('ign_api_token');
+        localStorage.removeItem('ign_api_enabled');
+        localStorage.setItem('ign_api_username', username);
+        this.apiUsername = username;
+        this.apiUser = '';
+        this.apiPassword = '';
+        this.accountCurrentPassword = '';
+        this.accountNewPassword = '';
+        this.accountConfirmPassword = '';
+        this.accountStatus = '账号已保存，请重新登录';
+        this.apiStatus = '账号已更新，请重新登录';
+        this.flash('账号已保存，请重新登录', 5000);
+      } catch (e) {
+        this.accountStatus = `保存失败：${e.message}`;
+        this.flash(this.accountStatus, 5000);
+      } finally {
+        this.accountSaving = false;
+      }
     },
 
     async loginWithGithubOAuth() {

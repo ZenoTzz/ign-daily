@@ -623,6 +623,24 @@
           <button @click="logoutServerApi()" class="btn btn-ghost">退出</button>
           <span x-show="apiStatus" style="font-size:0.7rem; color:var(--text-muted);" x-text="apiStatus"></span>
         </div>
+        <div x-show="apiUser"
+             style="margin-top:1rem; padding:0.85rem; border:1px solid var(--border); border-radius:8px; background:rgba(255,255,255,0.03);">
+          <label>账号管理</label>
+          <p style="font-size:0.7rem; color:var(--text-muted); margin-bottom:0.5rem;">
+            修改用户名或密码后会自动退出登录，请用新账号重新登录。
+          </p>
+          <input type="text" x-model="accountNewUsername" placeholder="新用户名" autocomplete="username">
+          <input type="password" x-model="accountCurrentPassword" placeholder="当前密码" autocomplete="current-password" style="margin-top:0.5rem;">
+          <input type="password" x-model="accountNewPassword" placeholder="新密码，留空则不修改" autocomplete="new-password" style="margin-top:0.5rem;">
+          <input type="password" x-model="accountConfirmPassword" placeholder="确认新密码" autocomplete="new-password" style="margin-top:0.5rem;"
+            @keydown.enter.prevent="updateServerAccount()">
+          <div style="display:flex; gap:0.5rem; align-items:center; margin-top:0.75rem; flex-wrap:wrap;">
+            <button @click="updateServerAccount()" class="btn btn-primary" :disabled="accountSaving">
+              <span x-text="accountSaving ? '保存中...' : '保存账号'"></span>
+            </button>
+            <span x-show="accountStatus" style="font-size:0.7rem; color:var(--text-muted);" x-text="accountStatus"></span>
+          </div>
+        </div>
         <div style="height:1px; background:var(--border); margin:1rem 0;"></div>
         <label>GitHub Personal Access Token</label>
         <p style="font-size:0.7rem; color:var(--text-muted); margin-bottom:0.5rem;">用于把翻译请求和词库改动提交回仓库。仅保存在本地浏览器。</p>
