@@ -1071,6 +1071,27 @@
       "total_tokens": 9304,
       "prompt_cache_hit_tokens": 8576,
       "prompt_cache_miss_tokens": 91
+    },
+    {
+      "time_cn": "2026-06-24 09:36:45",
+      "task": "fulltext",
+      "model": "deepseek-v4-pro",
+      "article_id": 8,
+      "article_title": "《宝可梦 风与波》初始宝可梦或在《宝可梦Go》中抢先登场",
+      "article_url": "https://www.ign.com/articles/pokemon-winds-and-waves-starter-creatures-may-debut-first-in-pokemon-go-fans-believe",
+      "article_date": "2026-06-24",
+      "detail": "",
+      "estimated_cost_usd": 0.00402636,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 9640,
+      "completion_tokens": 4568,
+      "total_tokens": 14208,
+      "prompt_cache_hit_tokens": 9600,
+      "prompt_cache_miss_tokens": 40
     }
   ]
 }

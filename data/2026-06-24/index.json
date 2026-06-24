@@ -1038,8 +1038,8 @@
       "url": "https://www.ign.com/articles/pokemon-winds-and-waves-starter-creatures-may-debut-first-in-pokemon-go-fans-believe",
       "publish_time_cn": "2026-06-23 17:29",
       "pub_date": "2026-06-23 17:29",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/06/23/images-1782206114554.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "needs_review",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/23/images-1782206114554.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/23/images-1782206114554.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/23/images-1782206114554.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -1049,11 +1049,10 @@
       ],
       "source_status": "cached",
       "source_fetched_at": "2026-06-23T18:23:57+08:00",
-      "translation_error": "The read operation timed out",
-      "translation_failed_at": "2026-06-24T01:33:54.193280+08:00",
       "translator": "api",
       "translator_provider": "openai-compatible",
-      "translator_model": "deepseek-v4-pro"
+      "translator_model": "deepseek-v4-pro",
+      "translation_path": "translations/08.json"
     },
     {
       "id": 9,
