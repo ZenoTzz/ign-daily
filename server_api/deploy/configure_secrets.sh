@@ -64,6 +64,52 @@ update_env "$API_DIR/.env" IGN_DAILY_ADMIN_PASSWORD "$admin_password"
 update_env "$API_DIR/.env" IGN_DAILY_STORAGE_MODE "local"
 update_env "$API_DIR/.env" IGN_DAILY_COOKIE_SECURE "$cookie_secure"
 
+python_bin="$API_DIR/venv/bin/python"
+if [ ! -x "$python_bin" ]; then
+  python_bin="python3"
+fi
+
+sudo "$python_bin" - "$API_DIR" <<'PY'
+import os
+import sys
+import time
+from pathlib import Path
+
+api_dir = Path(sys.argv[1])
+env_path = api_dir / ".env"
+if env_path.exists():
+    for line in env_path.read_text(encoding="utf-8-sig").splitlines():
+        if "=" in line and not line.lstrip().startswith("#"):
+            key, value = line.split("=", 1)
+            os.environ[key] = value
+
+sys.path.insert(0, str(api_dir))
+import ign_daily_api as api
+
+username = os.environ.get("IGN_DAILY_ADMIN_USER", "admin")
+password = os.environ.get("IGN_DAILY_ADMIN_PASSWORD", "")
+if password:
+    api.init_db()
+    with api.db() as conn:
+        rows = conn.execute("SELECT id FROM users ORDER BY id").fetchall()
+        password_hash = api.hash_password(password)
+        if rows:
+            primary_id = rows[0]["id"]
+            conn.execute(
+                "UPDATE users SET username = ?, password_hash = ? WHERE id = ?",
+                (username, password_hash, primary_id),
+            )
+            for row in rows[1:]:
+                conn.execute("DELETE FROM users WHERE id = ?", (row["id"],))
+        else:
+            conn.execute(
+                "INSERT INTO users (username, password_hash, created_at) VALUES (?, ?, ?)",
+                (username, password_hash, int(time.time())),
+            )
+        conn.execute("DELETE FROM sessions")
+        conn.commit()
+PY
+
 if [ -n "$api_key" ]; then
   update_env "$APP_DIR/.env" TRANSLATOR_API_KEY "$api_key"
   update_env "$APP_DIR/.env" DEEPSEEK_API_KEY "$api_key"
@@ -72,4 +118,3 @@ fi
 
 sudo systemctl restart ign-daily-api
 echo "Secrets configured. API service restarted."
-
