@@ -1,25 +1,5 @@
 {
   "date": "2026-06-25",
-  "items": {
-    "1": {
-      "id": 1,
-      "url": "https://www.ign.com/articles/valve-ram-companies-state-prices-monthly-if-we-say-no-then-they-never-talk-to-us-again",
-      "en_title": "Valve: RAM Companies State Prices Monthly, ‘If We Say No, Then They Never Talk to Us Again’",
-      "cn_title": "Valve自曝内存采购无议价权：不买就断交",
-      "model": "deepseek-v4-pro",
-      "status": "needs_manual_review",
-      "failed_at": "2026-06-24T12:21:38.002203+08:00",
-      "reason": "[translation_noise] translation contains likely navigation/footer text: 联系我们",
-      "audit_issues": [
-        {
-          "type": "translation_noise",
-          "detail": "translation contains likely navigation/footer text: 联系我们"
-        }
-      ],
-      "fingerprint": "9c0d19095a262e250b4ce99620ba350adeabadcf",
-      "translation_path": "translations/01.json",
-      "retry_policy": "manual_only"
-    }
-  },
-  "updated_at": "2026-06-24T12:21:38.002203+08:00"
+  "items": {},
+  "updated_at": "2026-06-24T04:25:06.386Z"
 }
