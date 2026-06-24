@@ -16,9 +16,9 @@
   <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <script defer src="assets/alpine.min.js"></script>
-  <link rel="stylesheet" href="assets/style.css?v=20260624account2">
+  <link rel="stylesheet" href="assets/style.css?v=20260624jobs2">
   <script src="assets/exceljs.min.js"></script>
-  <script src="assets/app.js?v=20260624account2"></script>
+  <script src="assets/app.js?v=20260624jobs2"></script>
 </head>
 <body>
   <!-- SVG Icon Definitions -->
@@ -219,6 +219,21 @@
             <strong x-text="todayCostEstimate"></strong>
             <span>预估成本</span>
           </div>
+        </div>
+        <div x-show="activeJob"
+             style="margin-top:0.9rem; padding:0.75rem 0.85rem; border:1px solid var(--border-primary); border-radius:8px; background:var(--bg-card);">
+          <div style="display:flex; justify-content:space-between; gap:0.75rem; align-items:center; font-size:0.8rem;">
+            <strong x-text="jobStatusLabel(activeJob)"></strong>
+            <span style="color:var(--text-muted);" x-text="`${activeJob?.progress || 0}%`"></span>
+          </div>
+          <div style="height:6px; background:var(--bg-card-hover); border-radius:999px; overflow:hidden; margin-top:0.5rem;">
+            <i :style="`display:block; height:100%; width:${activeJob?.progress || 0}%; background:var(--accent); transition:width .25s ease;`"></i>
+          </div>
+          <p style="font-size:0.68rem; color:var(--text-muted); margin-top:0.45rem;">
+            <span x-text="activeJob?.date"></span>
+            <span> · </span>
+            <span x-text="`#${(activeJob?.ids || []).join(', #')}`"></span>
+          </p>
         </div>
       </section>
 

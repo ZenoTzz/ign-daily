@@ -17,6 +17,7 @@ import subprocess
 import time
 import urllib.error
 import urllib.request
+import uuid
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any
@@ -95,6 +96,13 @@ class WorkflowRequest(BaseModel):
     inputs: dict[str, Any] = Field(default_factory=dict)
 
 
+class JobCreate(BaseModel):
+    kind: str
+    date: str | None = None
+    ids: list[int] = Field(default_factory=list)
+    message: str = ""
+
+
 def db() -> sqlite3.Connection:
     API_DIR.mkdir(parents=True, exist_ok=True)
     conn = sqlite3.connect(DB_PATH)
@@ -147,6 +155,24 @@ def init_db() -> None:
             )
             """
         )
+        conn.execute(
+            """
+            CREATE TABLE IF NOT EXISTS jobs (
+              id TEXT PRIMARY KEY,
+              kind TEXT NOT NULL,
+              status TEXT NOT NULL,
+              date TEXT,
+              ids_json TEXT NOT NULL,
+              message TEXT NOT NULL DEFAULT '',
+              progress INTEGER NOT NULL DEFAULT 0,
+              created_by TEXT,
+              created_at INTEGER NOT NULL,
+              updated_at INTEGER NOT NULL,
+              finished_at INTEGER,
+              log_path TEXT
+            )
+            """
+        )
         user_count = conn.execute("SELECT COUNT(*) AS n FROM users").fetchone()["n"]
         admin_password = os.environ.get("IGN_DAILY_ADMIN_PASSWORD", "")
         admin_user = os.environ.get("IGN_DAILY_ADMIN_USER", "admin")
@@ -177,6 +203,114 @@ def json_text(data: Any) -> str:
     return json.dumps(data, ensure_ascii=False, indent=2) + "\n"
 
 
+def create_job(kind: str, date: str | None, ids: list[int], user: str, message: str = "") -> str:
+    job_id = f"{kind}-{uuid.uuid4().hex[:12]}"
+    now = int(time.time())
+    with db() as conn:
+        conn.execute(
+            """
+            INSERT INTO jobs (id, kind, status, date, ids_json, message, progress, created_by, created_at, updated_at)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+            """,
+            (job_id, kind, "queued", date, json.dumps(ids), message, 5, user, now, now),
+        )
+        conn.commit()
+    return job_id
+
+
+def update_job(job_id: str, status: str, message: str | None = None, progress: int | None = None) -> None:
+    fields = ["status = ?", "updated_at = ?"]
+    values: list[Any] = [status, int(time.time())]
+    if message is not None:
+        fields.append("message = ?")
+        values.append(message)
+    if progress is not None:
+        fields.append("progress = ?")
+        values.append(max(0, min(100, int(progress))))
+    if status in {"done", "failed"}:
+        fields.append("finished_at = ?")
+        values.append(int(time.time()))
+    values.append(job_id)
+    with db() as conn:
+        conn.execute(f"UPDATE jobs SET {', '.join(fields)} WHERE id = ?", values)
+        conn.commit()
+
+
+def infer_translation_job(row: sqlite3.Row) -> dict[str, Any]:
+    ids = json.loads(row["ids_json"] or "[]")
+    date = row["date"]
+    status = row["status"]
+    message = row["message"]
+    progress = int(row["progress"] or 0)
+    results: list[dict[str, Any]] = []
+    errors: list[dict[str, Any]] = []
+    done = 0
+    failed = 0
+    if date and ids:
+        failures = read_json(APP_DIR / "data" / date / "translation_failures.json", {"items": {}})
+        failure_items = failures.get("items", {}) if isinstance(failures, dict) else {}
+        for article_id in ids:
+            padded = f"{int(article_id):02d}"
+            translation_path = APP_DIR / "data" / date / "translations" / f"{padded}.json"
+            if translation_path.exists():
+                done += 1
+                results.append({"id": int(article_id), "status": "done"})
+                continue
+            failure = failure_items.get(str(article_id))
+            if failure:
+                failed += 1
+                errors.append({"id": int(article_id), "status": "failed", "reason": failure.get("reason", "Translation failed")})
+                continue
+            results.append({"id": int(article_id), "status": "running"})
+    total = len(ids)
+    if total:
+        progress = max(progress, min(95, 10 + int((done + failed) / total * 85)))
+        if done + failed == total:
+            status = "failed" if failed and not done else "done"
+            progress = 100
+            message = "翻译失败" if status == "failed" else "翻译完成"
+            if row["status"] != status:
+                update_job(row["id"], status, message, progress)
+        elif row["status"] in {"queued", "running"}:
+            status = "running"
+            message = message or "正在翻译"
+            if row["status"] != "running" or progress != int(row["progress"] or 0):
+                update_job(row["id"], status, message, progress)
+    return {
+        "id": row["id"],
+        "kind": row["kind"],
+        "status": status,
+        "date": date,
+        "ids": ids,
+        "message": message,
+        "progress": progress,
+        "created_by": row["created_by"],
+        "created_at": row["created_at"],
+        "updated_at": row["updated_at"],
+        "finished_at": row["finished_at"],
+        "results": results,
+        "errors": errors,
+    }
+
+
+def serialize_job(row: sqlite3.Row) -> dict[str, Any]:
+    if row["kind"] == "translation":
+        return infer_translation_job(row)
+    return {
+        "id": row["id"],
+        "kind": row["kind"],
+        "status": row["status"],
+        "date": row["date"],
+        "ids": json.loads(row["ids_json"] or "[]"),
+        "message": row["message"],
+        "progress": int(row["progress"] or 0),
+        "created_by": row["created_by"],
+        "created_at": row["created_at"],
+        "updated_at": row["updated_at"],
+        "finished_at": row["finished_at"],
+    }
+
+
 def safe_repo_path(path: str) -> Path:
     target = (APP_DIR / path).resolve()
     if APP_DIR not in target.parents and target != APP_DIR:
@@ -193,10 +327,14 @@ def write_project_file(path: str, content: str, message: str = "") -> Any:
     return {"ok": True, "path": path, "mode": "local", "message": message}
 
 
-def run_local_job(command: list[str]) -> None:
+def run_local_job(command: list[str], job_id: str | None = None) -> None:
+    env = os.environ.copy()
+    if job_id:
+        env["IGN_DAILY_JOB_ID"] = job_id
     subprocess.Popen(
         command,
         cwd=APP_DIR,
+        env=env,
         stdout=subprocess.DEVNULL,
         stderr=subprocess.DEVNULL,
         start_new_session=True,
@@ -513,13 +651,47 @@ def request_translation(payload: TranslationRequest, user: sqlite3.Row = Depends
         "requested_by": user["username"],
     }
     write_project_file(path, json_text(updated), f"request translation for {payload.date}: {','.join(map(str, payload.ids))}")
+    job_id = create_job(
+        "translation",
+        payload.date,
+        [int(a["id"]) for a in selected],
+        user["username"],
+        "翻译请求已提交",
+    )
     if payload.trigger_workflow:
         if STORAGE_MODE == "github":
             gh_dispatch_workflow("api-translation.yml", {})
+            update_job(job_id, "running", "已触发 GitHub 翻译流程", 10)
         else:
-            run_local_job(["/srv/ign-daily-ops/run-api-translation.sh"])
+            update_job(job_id, "running", "服务器正在翻译", 10)
+            run_local_job(["/srv/ign-daily-ops/run-api-translation.sh"], job_id)
+    else:
+        update_job(job_id, "queued", "已加入翻译队列", 5)
     sync_from_github()
-    return {"ok": True, "date": payload.date, "requested_ids": merged_ids, "triggered": payload.trigger_workflow}
+    return {"ok": True, "date": payload.date, "requested_ids": merged_ids, "job_id": job_id, "triggered": payload.trigger_workflow}
+
+
+@app.get("/jobs")
+def list_jobs(kind: str | None = None, limit: int = 10, user: sqlite3.Row = Depends(current_user)) -> dict[str, Any]:
+    limit = max(1, min(50, int(limit)))
+    with db() as conn:
+        if kind:
+            rows = conn.execute(
+                "SELECT * FROM jobs WHERE kind = ? ORDER BY created_at DESC LIMIT ?",
+                (kind, limit),
+            ).fetchall()
+        else:
+            rows = conn.execute("SELECT * FROM jobs ORDER BY created_at DESC LIMIT ?", (limit,)).fetchall()
+    return {"ok": True, "jobs": [serialize_job(row) for row in rows]}
+
+
+@app.get("/jobs/{job_id}")
+def get_job(job_id: str, user: sqlite3.Row = Depends(current_user)) -> dict[str, Any]:
+    with db() as conn:
+        row = conn.execute("SELECT * FROM jobs WHERE id = ?", (job_id,)).fetchone()
+    if not row:
+        raise HTTPException(status_code=404, detail="Job not found")
+    return {"ok": True, "job": serialize_job(row)}
 
 
 @app.post("/workflows/dispatch")

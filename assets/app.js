@@ -207,6 +207,12 @@ const ServerAPI = {
       method: 'POST',
       body: JSON.stringify(payload)
     });
+  },
+  async getJob(jobId) {
+    return this.request(`/jobs/${encodeURIComponent(jobId)}`);
+  },
+  async listJobs(kind = 'translation') {
+    return this.request(`/jobs?kind=${encodeURIComponent(kind)}&limit=5`);
   }
 };
 window.ServerAPI = ServerAPI;
@@ -319,6 +325,9 @@ function appData() {
     showFilteredPanel: false,
     filteredRestoringUrl: '',
     translationFailures: {},
+    activeJobId: localStorage.getItem('ign_active_job_id') || '',
+    activeJob: null,
+    jobPollingTimer: null,
     toast: '',
 
     // 全局待确认词库
@@ -354,7 +363,8 @@ function appData() {
         }
       });
       try {
-        this.checkServerSession();
+        await this.checkServerSession();
+        await this.restoreActiveJob();
         await this.loadAutomationConfig();
         this.triggerRssOnRefresh();
         const requestedDate = new URLSearchParams(location.search).get('date');
@@ -1647,9 +1657,65 @@ function appData() {
       }
       this.selected = [];
       await this.clearSelectedTranslationFailures(date, selIds);
+      if (data?.job_id) {
+        this.activeJobId = data.job_id;
+        localStorage.setItem('ign_active_job_id', data.job_id);
+        await this.pollActiveJob(true);
+      }
       const suffix = data?.triggered ? '，API Actions 已触发' : '';
       this.flash(`已进入翻译池 ${selIds.length} 篇${suffix}`);
       return data;
+    },
+
+    jobStatusLabel(job = this.activeJob) {
+      if (!job) return '';
+      if (job.status === 'done') return '翻译完成';
+      if (job.status === 'failed') return '翻译失败';
+      if (job.status === 'queued') return '等待处理';
+      return job.message || '正在翻译';
+    },
+
+    async pollActiveJob(startTimer = false) {
+      if (!this.activeJobId) return;
+      try {
+        const data = await ServerAPI.getJob(this.activeJobId);
+        this.activeJob = data?.job || null;
+        if (this.activeJob?.status === 'done' || this.activeJob?.status === 'failed') {
+          clearInterval(this.jobPollingTimer);
+          this.jobPollingTimer = null;
+          localStorage.removeItem('ign_active_job_id');
+          this.activeJobId = '';
+          if (this.activeJob.status === 'done') await this.refreshData();
+          return;
+        }
+      } catch (e) {
+        if (e.status === 404 || e.status === 401) {
+          clearInterval(this.jobPollingTimer);
+          this.jobPollingTimer = null;
+        }
+      }
+      if (startTimer && !this.jobPollingTimer) {
+        this.jobPollingTimer = setInterval(() => this.pollActiveJob(false), 5000);
+      }
+    },
+
+    async restoreActiveJob() {
+      if (this.activeJobId) {
+        await this.pollActiveJob(true);
+        return;
+      }
+      if (!this.shouldUseServerApi()) return;
+      try {
+        const data = await ServerAPI.listJobs('translation');
+        const latest = (data?.jobs || []).find(job => ['queued', 'running'].includes(job.status)) || data?.jobs?.[0];
+        if (!latest) return;
+        this.activeJob = latest;
+        if (['queued', 'running'].includes(latest.status)) {
+          this.activeJobId = latest.id;
+          localStorage.setItem('ign_active_job_id', latest.id);
+          await this.pollActiveJob(true);
+        }
+      } catch (_) {}
     },
 
     async submitRequest() {
