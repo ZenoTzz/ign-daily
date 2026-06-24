@@ -1,8 +1,8 @@
 {
-  "target_date": "2026-06-24",
+  "target_date": "2026-06-25",
   "target_dates": [
-    "2026-06-24",
-    "2026-06-23"
+    "2026-06-25",
+    "2026-06-24"
   ],
   "changed_dates": [
     "2026-06-24"
@@ -10,76 +10,88 @@
   "new_target_dates": [
     "2026-06-24"
   ],
-  "new_count": 2,
-  "filtered_count": 1,
+  "new_count": 1,
+  "filtered_count": 2,
   "cleanup_count": 0,
   "changed_count": 3,
   "articles": [
     {
-      "title": "Bungie Developers Repeatedly Pitched a Destiny Dating Sim, but Leadership Rejected It",
-      "url": "https://www.ign.com/articles/bungie-developers-repeatedly-pitched-a-destiny-dating-sim-but-leadership-rejected-it",
-      "pubDate_cst": "2026-06-24 05:00"
-    },
-    {
-      "title": "Lorcana Attack of the Vine! TCG Showcases Iconic Disney Team Ups – Exclusive",
-      "url": "https://www.ign.com/articles/lorcana-attack-of-the-vine-tcg-showcases-iconic-disney-team-ups-exclusive",
-      "pubDate_cst": "2026-06-24 05:00"
+      "title": "Marathon Confirms New PvE Mode Release Date, Season 3 Begins September 2026",
+      "url": "https://www.ign.com/articles/marathon-confirms-new-pve-mode-release-date-season-3-begins-september-2026",
+      "pubDate_cst": "2026-06-24 06:01"
     }
   ],
   "filtered_articles": [
     {
-      "title": "Get the First Four Harry Potter Full-Cast Audiobooks for Less Than $11 With Amazon's Prime Day Audible Deal",
-      "url": "https://www.ign.com/articles/harry-potter-full-cast-audiobooks-audible-prime-day-deal-2026",
-      "pubDate_cst": "2026-06-24 04:59",
-      "description": "",
+      "title": "Save $85 Off a Pair of BowFlex Results Series SelectTech Dumbbells for Amazon Prime Day",
+      "url": "https://www.ign.com/articles/best-bowflex-selecttech-adjustable-dumbbell-deal-amazon-fathers-day-sale",
+      "pubDate_cst": "2026-06-24 06:25",
+      "description": "Get swole",
       "categories": "",
-      "reason": "text:\\bprime.day\\b",
+      "reason": "text:\\bsave \\$\\d",
       "rss_url": "https://feeds.feedburner.com/ign/all",
-      "filtered_at_cn": "2026-06-24 06:53:27",
+      "filtered_at_cn": "2026-06-24 08:06:24",
+      "status": "filtered"
+    },
+    {
+      "title": "The 65\" LG Evo C5 4K OLED Smart TV Drops to the Lowest Price of the Year for Amazon Prime Day",
+      "url": "https://www.ign.com/articles/lg-evo-c5-4k-oled-smart-tv-deal-amazon-prime-day-sale",
+      "pubDate_cst": "2026-06-24 05:50",
+      "description": "The best TV for both gaming and movie watching in glorious 4K with HDR.",
+      "categories": "",
+      "reason": "text:\\bdrops? to the lowest",
+      "rss_url": "https://feeds.feedburner.com/ign/all",
+      "filtered_at_cn": "2026-06-24 08:06:24",
       "status": "filtered"
     }
   ],
   "runs": [
     {
+      "target_date": "2026-06-25",
+      "new_count": 0,
+      "filtered_count": 0,
+      "changed_count": 0,
+      "next_id": 1,
+      "articles": [],
+      "filtered_articles": []
+    },
+    {
       "target_date": "2026-06-24",
-      "new_count": 2,
-      "filtered_count": 1,
+      "new_count": 1,
+      "filtered_count": 2,
       "changed_count": 3,
-      "next_id": 39,
+      "next_id": 40,
       "articles": [
         {
-          "title": "Bungie Developers Repeatedly Pitched a Destiny Dating Sim, but Leadership Rejected It",
-          "url": "https://www.ign.com/articles/bungie-developers-repeatedly-pitched-a-destiny-dating-sim-but-leadership-rejected-it",
-          "pubDate_cst": "2026-06-24 05:00"
-        },
-        {
-          "title": "Lorcana Attack of the Vine! TCG Showcases Iconic Disney Team Ups – Exclusive",
-          "url": "https://www.ign.com/articles/lorcana-attack-of-the-vine-tcg-showcases-iconic-disney-team-ups-exclusive",
-          "pubDate_cst": "2026-06-24 05:00"
+          "title": "Marathon Confirms New PvE Mode Release Date, Season 3 Begins September 2026",
+          "url": "https://www.ign.com/articles/marathon-confirms-new-pve-mode-release-date-season-3-begins-september-2026",
+          "pubDate_cst": "2026-06-24 06:01"
         }
       ],
       "filtered_articles": [
         {
-          "title": "Get the First Four Harry Potter Full-Cast Audiobooks for Less Than $11 With Amazon's Prime Day Audible Deal",
-          "url": "https://www.ign.com/articles/harry-potter-full-cast-audiobooks-audible-prime-day-deal-2026",
-          "pubDate_cst": "2026-06-24 04:59",
-          "description": "",
+          "title": "Save $85 Off a Pair of BowFlex Results Series SelectTech Dumbbells for Amazon Prime Day",
+          "url": "https://www.ign.com/articles/best-bowflex-selecttech-adjustable-dumbbell-deal-amazon-fathers-day-sale",
+          "pubDate_cst": "2026-06-24 06:25",
+          "description": "Get swole",
           "categories": "",
-          "reason": "text:\\bprime.day\\b",
+          "reason": "text:\\bsave \\$\\d",
           "rss_url": "https://feeds.feedburner.com/ign/all",
-          "filtered_at_cn": "2026-06-24 06:53:27",
+          "filtered_at_cn": "2026-06-24 08:06:24",
+          "status": "filtered"
+        },
+        {
+          "title": "The 65\" LG Evo C5 4K OLED Smart TV Drops to the Lowest Price of the Year for Amazon Prime Day",
+          "url": "https://www.ign.com/articles/lg-evo-c5-4k-oled-smart-tv-deal-amazon-prime-day-sale",
+          "pubDate_cst": "2026-06-24 05:50",
+          "description": "The best TV for both gaming and movie watching in glorious 4K with HDR.",
+          "categories": "",
+          "reason": "text:\\bdrops? to the lowest",
+          "rss_url": "https://feeds.feedburner.com/ign/all",
+          "filtered_at_cn": "2026-06-24 08:06:24",
           "status": "filtered"
         }
       ]
-    },
-    {
-      "target_date": "2026-06-23",
-      "new_count": 0,
-      "filtered_count": 0,
-      "changed_count": 0,
-      "next_id": 49,
-      "articles": [],
-      "filtered_articles": []
     }
   ]
 }

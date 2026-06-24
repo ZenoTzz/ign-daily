@@ -819,6 +819,27 @@
       "total_tokens": 9357,
       "prompt_cache_hit_tokens": 7936,
       "prompt_cache_miss_tokens": 699
+    },
+    {
+      "time_cn": "2026-06-24 08:06:35",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 39,
+      "article_title": "Marathon Confirms New PvE Mode Release Date, Season 3 Begins September 2026",
+      "article_url": "https://www.ign.com/articles/marathon-confirms-new-pve-mode-release-date-season-3-begins-september-2026",
+      "article_date": "2026-06-24",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00027646,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8624,
+      "completion_tokens": 564,
+      "total_tokens": 9188,
+      "prompt_cache_hit_tokens": 7936,
+      "prompt_cache_miss_tokens": 688
     }
   ]
 }

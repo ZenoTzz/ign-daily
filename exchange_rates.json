@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-24 06:53:31 +08:00",
+  "updated_at": "2026-06-24 08:06:29 +08:00",
   "source": "multi-source median",
   "base": "USD",
   "rates_to_cny": {
@@ -18,32 +18,32 @@
       "USD": {
         "source_count": 4,
         "median_raw": 6.786309,
-        "max_cross_source_deviation": 0.001262,
+        "max_cross_source_deviation": 0.002017,
         "previous_deviation": 0.000544
       },
       "EUR": {
         "source_count": 4,
-        "median_raw": 7.754194,
-        "max_cross_source_deviation": 0.003086,
-        "previous_deviation": 0.000748
+        "median_raw": 7.745806,
+        "max_cross_source_deviation": 0.002046,
+        "previous_deviation": 0.000541
       },
       "JPY_100": {
         "source_count": 4,
         "median_raw": 4.200258,
-        "max_cross_source_deviation": 0.001198,
+        "max_cross_source_deviation": 0.002196,
         "previous_deviation": 6.1e-05
       },
       "GBP": {
         "source_count": 4,
-        "median_raw": 8.984107,
-        "max_cross_source_deviation": 0.00181,
-        "previous_deviation": 0.000457
+        "median_raw": 8.981319,
+        "max_cross_source_deviation": 0.0015,
+        "previous_deviation": 0.000147
       },
       "KRW_100": {
         "source_count": 4,
-        "median_raw": 0.44163,
-        "max_cross_source_deviation": 0.000523,
-        "previous_deviation": 0.003704
+        "median_raw": 0.441697,
+        "max_cross_source_deviation": 0.00325,
+        "previous_deviation": 0.003857
       }
     },
     "sources": [
@@ -62,11 +62,11 @@
         "name": "exchangerate-api-v4",
         "url": "https://api.exchangerate-api.com/v4/latest/USD",
         "rates_to_cny": {
-          "USD": 6.79,
-          "EUR": 7.768879,
-          "JPY_100": 4.201473,
-          "GBP": 8.993377,
-          "KRW_100": 0.4416
+          "USD": 6.8,
+          "EUR": 7.744875,
+          "JPY_100": 4.209484,
+          "GBP": 8.982827,
+          "KRW_100": 0.443132
         }
       },
       {
