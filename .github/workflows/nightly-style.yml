@@ -1,8 +1,6 @@
 name: Nightly Style Learning
 
 on:
-  schedule:
-    - cron: "30 14 * * *" # 22:30 Asia/Shanghai
   workflow_dispatch:
 
 permissions:

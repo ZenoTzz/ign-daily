@@ -1,11 +1,6 @@
 name: Hourly RSS
 
 on:
-  schedule:
-    # GitHub may delay or drop schedules near the top of the hour.
-    # Two staggered attempts keep the incremental feed current without duplicates.
-    - cron: "17 * * * *"
-    - cron: "47 * * * *"
   workflow_dispatch:
 
 permissions:

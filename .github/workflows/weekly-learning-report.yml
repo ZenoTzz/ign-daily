@@ -1,8 +1,6 @@
 name: Weekly Learning Report
 
 on:
-  schedule:
-    - cron: "15 0 * * 1" # 08:15 Asia/Hong_Kong every Monday
   workflow_dispatch:
     inputs:
       report_date:

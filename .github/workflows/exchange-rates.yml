@@ -1,8 +1,6 @@
 name: Exchange Rates
 
 on:
-  schedule:
-    - cron: "20 0 * * *" # 08:20 Asia/Hong_Kong
   workflow_dispatch:
 
 permissions:

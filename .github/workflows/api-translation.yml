@@ -1,13 +1,6 @@
 name: API Translation
 
 on:
-  schedule:
-    - cron: "20,50 * * * *"
-  push:
-    branches:
-      - main
-    paths:
-      - "data/**/requests.json"
   workflow_dispatch:
     inputs:
       fulltext_limit:
