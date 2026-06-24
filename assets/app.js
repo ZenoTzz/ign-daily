@@ -501,6 +501,10 @@ function appData() {
     // ==== 日期导航 ====
     navigateDate(direction) {
       const idx = this.availableDates.indexOf(this.currentDate);
+      if (idx < 0) {
+        if (this.availableDates.length) window.location.href = `?date=${this.availableDates[0]}`;
+        return;
+      }
       let newIdx;
       if (direction === 'prev') {
         // 上一天 = 日期列表中当前位置的下一个（因为是倒序）
@@ -514,7 +518,7 @@ function appData() {
     },
     canGoPrev() {
       const idx = this.availableDates.indexOf(this.currentDate);
-      return idx < this.availableDates.length - 1;
+      return idx >= 0 && idx < this.availableDates.length - 1;
     },
     canGoNext() {
       const idx = this.availableDates.indexOf(this.currentDate);
