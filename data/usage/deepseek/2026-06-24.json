@@ -966,6 +966,90 @@
       "total_tokens": 9888,
       "prompt_cache_hit_tokens": 8064,
       "prompt_cache_miss_tokens": 575
+    },
+    {
+      "time_cn": "2026-06-24 09:11:03",
+      "task": "fulltext",
+      "model": "deepseek-v4-pro",
+      "article_id": 34,
+      "article_title": "《堕落之王2》延期至2027年",
+      "article_url": "https://www.ign.com/articles/lords-of-the-fallen-2-delayed-to-2027",
+      "article_date": "2026-06-24",
+      "detail": "",
+      "estimated_cost_usd": 0.00243293,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 9572,
+      "completion_tokens": 2707,
+      "total_tokens": 12279,
+      "prompt_cache_hit_tokens": 9472,
+      "prompt_cache_miss_tokens": 100
+    },
+    {
+      "time_cn": "2026-06-24 09:11:14",
+      "task": "fulltext_chunk",
+      "model": "deepseek-v4-pro",
+      "article_id": 34,
+      "article_title": "《堕落之王2》延期至2027年",
+      "article_url": "https://www.ign.com/articles/lords-of-the-fallen-2-delayed-to-2027",
+      "article_date": "2026-06-24",
+      "detail": "paragraphs 1-6",
+      "estimated_cost_usd": 0.0010112,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 8915,
+      "completion_tokens": 1084,
+      "total_tokens": 9999,
+      "prompt_cache_hit_tokens": 8832,
+      "prompt_cache_miss_tokens": 83
+    },
+    {
+      "time_cn": "2026-06-24 09:11:17",
+      "task": "fulltext_chunk",
+      "model": "deepseek-v4-pro",
+      "article_id": 34,
+      "article_title": "《堕落之王2》延期至2027年",
+      "article_url": "https://www.ign.com/articles/lords-of-the-fallen-2-delayed-to-2027",
+      "article_date": "2026-06-24",
+      "detail": "paragraphs 7-7",
+      "estimated_cost_usd": 0.00018418,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 8489,
+      "completion_tokens": 156,
+      "total_tokens": 8645,
+      "prompt_cache_hit_tokens": 8448,
+      "prompt_cache_miss_tokens": 41
+    },
+    {
+      "time_cn": "2026-06-24 09:11:42",
+      "task": "fulltext_repair",
+      "model": "deepseek-v4-pro",
+      "article_id": 34,
+      "article_title": "《堕落之王2》延期至2027年",
+      "article_url": "https://www.ign.com/articles/lords-of-the-fallen-2-delayed-to-2027",
+      "article_date": "2026-06-24",
+      "detail": "1 audit issue(s)",
+      "estimated_cost_usd": 0.00332514,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 9828,
+      "completion_tokens": 2716,
+      "total_tokens": 12544,
+      "prompt_cache_hit_tokens": 7680,
+      "prompt_cache_miss_tokens": 2148
     }
   ]
 }

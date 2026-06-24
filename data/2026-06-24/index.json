@@ -209,7 +209,7 @@
       "emoji": "🎮",
       "en_title": "Lords of the Fallen 2 Delayed to 2027",
       "cn_title": "《堕落之王2》延期至2027年",
-      "summary": "CI Games宣布《堕落之王2》将错过原定的2026年秋季发售窗口，推迟至2027年初。CEO Marek Tyminski表示，此举是为了打磨游戏品质，并避开竞争激烈的秋季档期——2026年9月已有《寂静岭：汤恩福尔》《控制：共振》《鬼武者：剑之道》等大作扎堆，而10月还有《现代战争4》等强劲对手，更不用说11月的《GTA6》。提前避开混战，不失为明智之举。",
+      "summary": "CI Games宣布《堕落之王2》由原计划2026年秋季推迟至2027年初发售，以进一步打磨品质、避开《侠盗猎车手6》《现代战争4》等拉满的竞争档期。游戏尚无确切日期，2027年初已成延期待售大作汇聚地。",
       "url": "https://www.ign.com/articles/lords-of-the-fallen-2-delayed-to-2027",
       "publish_time_cn": "2026-06-24 02:40",
       "pub_date": "2026-06-24 02:40",
@@ -254,11 +254,12 @@
           "reason": "暂按系列惯例翻译，但需确认官方中文名。"
         }
       ],
-      "translation_error": "model returned empty paragraphs",
-      "translation_failed_at": "2026-06-24T08:08:10.067902+08:00",
+      "translation_error": "Command '['/opt/hostedtoolcache/Python/3.11.15/x64/bin/python3', '/home/runner/work/ign-daily/ign-daily/scripts/translate_pipeline.py', '2026-06-24', '34', '--post']' returned non-zero exit status 1.",
+      "translation_failed_at": "2026-06-24T09:11:42.538042+08:00",
       "translator": "api",
       "translator_provider": "openai-compatible",
-      "translator_model": "deepseek-v4-pro"
+      "translator_model": "deepseek-v4-pro",
+      "translation_path": "translations/34.json"
     },
     {
       "id": 35,
