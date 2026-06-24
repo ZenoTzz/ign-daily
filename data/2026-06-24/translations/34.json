@@ -3,7 +3,7 @@
   "url": "https://www.ign.com/articles/lords-of-the-fallen-2-delayed-to-2027",
   "en_title": "Lords of the Fallen 2 Delayed to 2027",
   "cn_title": "《堕落之王2》延期至2027年",
-  "subtitle": "延期打磨，避开神仙打架",
+  "subtitle": "避开神仙打架",
   "opus_summary": "CI Games宣布《堕落之王2》由原计划2026年秋季推迟至2027年初发售，以进一步打磨品质、避开《侠盗猎车手6》《现代战争4》等拉满的竞争档期。游戏尚无确切日期，2027年初已成延期待售大作汇聚地。",
   "publish_time_cn": "2026-06-24 02:40",
   "paragraphs": [
@@ -33,7 +33,7 @@
     },
     {
       "en": "Cade Onder is a freelancer for IGN's news team. He covers all things entertainment, including gaming, film, and more. You can find him on Twitter @Cade_Onder.",
-      "cn": "Cade Onder 是 IGN 新闻团队的自由撰稿人，报道游戏、影视等各类娱乐内容。你可以在 X 上找到他 @Cade_Onder。"
+      "cn": "Cade Onder是IGN新闻团队的自由撰稿人，报道游戏、影视等各类娱乐内容。你可以在X上找到他 @Cade_Onder。"
     }
   ],
   "pending_dict": [],
@@ -51,7 +51,7 @@
     "Valor Mortis": "《Valor Mortis》",
     "Cade Onder": "Cade Onder"
   },
-  "cover": "https://assets-prd.ignimgs.com/2026/06/23/lords-of-the-fallen-2-1782239004983.jpg?width=1280&format=jpg&auto=webp&quality=80",
+  "cover": "https://assets-prd.ignimgs.com/2026/06/23/lords-of-the-fallen-2-1782239004983.jpg",
   "images": [
     "https://assets-prd.ignimgs.com/2026/06/23/lords-of-the-fallen-2-1782239004983.jpg?width=1280&format=jpg&auto=webp&quality=80",
     "https://assets-prd.ignimgs.com/2026/06/23/lords-of-the-fallen-2-1782239004983.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -63,10 +63,5 @@
   "repair_issue_count": 1,
   "translator": "api",
   "translator_provider": "openai-compatible",
-  "translator_model": "deepseek-v4-pro",
-  "quality_status": "needs_manual_review",
-  "manual_release_required": true,
-  "audit_issues": [],
-  "audit_failed_at": "2026-06-24T09:11:42.538042+08:00",
-  "audit_failure_reason": "Command '['/opt/hostedtoolcache/Python/3.11.15/x64/bin/python3', '/home/runner/work/ign-daily/ign-daily/scripts/translate_pipeline.py', '2026-06-24', '34', '--post']' returned non-zero exit status 1."
+  "translator_model": "deepseek-v4-pro"
 }

@@ -235,8 +235,8 @@
       "url": "https://www.ign.com/articles/lords-of-the-fallen-2-delayed-to-2027",
       "publish_time_cn": "2026-06-24 02:40",
       "pub_date": "2026-06-24 02:40",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/06/23/lords-of-the-fallen-2-1782239004983.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "needs_review",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/23/lords-of-the-fallen-2-1782239004983.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/23/lords-of-the-fallen-2-1782239004983.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/23/lords-of-the-fallen-2-1782239004983.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -276,8 +276,6 @@
           "reason": "暂按系列惯例翻译，但需确认官方中文名。"
         }
       ],
-      "translation_error": "Command '['/opt/hostedtoolcache/Python/3.11.15/x64/bin/python3', '/home/runner/work/ign-daily/ign-daily/scripts/translate_pipeline.py', '2026-06-24', '34', '--post']' returned non-zero exit status 1.",
-      "translation_failed_at": "2026-06-24T09:11:42.538042+08:00",
       "translator": "api",
       "translator_provider": "openai-compatible",
       "translator_model": "deepseek-v4-pro",
