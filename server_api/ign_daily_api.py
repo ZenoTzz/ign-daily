@@ -103,6 +103,17 @@ class JobCreate(BaseModel):
     message: str = ""
 
 
+class FileWriteRequest(BaseModel):
+    content: str
+    message: str = "update via private API"
+    sha: str | None = None
+
+
+class FileDeleteRequest(BaseModel):
+    message: str = "delete via private API"
+    sha: str | None = None
+
+
 def db() -> sqlite3.Connection:
     API_DIR.mkdir(parents=True, exist_ok=True)
     conn = sqlite3.connect(DB_PATH)
@@ -402,6 +413,18 @@ def gh_put_file(path: str, content: str, message: str) -> Any:
     return gh_request("PUT", gh_contents_url(path), payload)
 
 
+def gh_delete_file(path: str, message: str) -> Any:
+    existing = gh_get_file(path)
+    if not existing or not existing.get("sha"):
+        raise HTTPException(status_code=404, detail="File not found")
+    payload = {
+        "message": message,
+        "sha": existing["sha"],
+        "branch": GITHUB_BRANCH,
+    }
+    return gh_request("DELETE", gh_contents_url(path), payload)
+
+
 def gh_dispatch_workflow(workflow: str, inputs: dict[str, Any] | None = None) -> Any:
     url = f"https://api.github.com/repos/{GITHUB_OWNER}/{GITHUB_REPO}/actions/workflows/{workflow}/dispatches"
     return gh_request("POST", url, {"ref": GITHUB_BRANCH, "inputs": inputs or {}})
@@ -601,6 +624,36 @@ def get_dict(user: sqlite3.Row = Depends(current_user)) -> Any:
     return read_json(APP_DIR / "data" / "dict.json")
 
 
+@app.get("/files/{path:path}")
+def get_project_file(path: str, user: sqlite3.Row = Depends(current_user)) -> dict[str, Any]:
+    target = safe_repo_path(path)
+    if not target.exists() or not target.is_file():
+        raise HTTPException(status_code=404, detail="File not found")
+    content = target.read_text(encoding="utf-8-sig")
+    sha = hashlib.sha1(content.encode("utf-8")).hexdigest()
+    return {"ok": True, "path": path, "content": content, "sha": sha}
+
+
+@app.put("/files/{path:path}")
+def put_project_file(path: str, payload: FileWriteRequest, user: sqlite3.Row = Depends(current_user)) -> dict[str, Any]:
+    result = write_project_file(path, payload.content, payload.message)
+    sync_from_github()
+    return {"ok": True, "path": path, "result": result}
+
+
+@app.delete("/files/{path:path}")
+def delete_project_file(path: str, payload: FileDeleteRequest, user: sqlite3.Row = Depends(current_user)) -> dict[str, Any]:
+    if STORAGE_MODE == "github":
+        result = gh_delete_file(path, payload.message)
+        sync_from_github()
+        return {"ok": True, "path": path, "result": result}
+    target = safe_repo_path(path)
+    if not target.exists() or not target.is_file():
+        raise HTTPException(status_code=404, detail="File not found")
+    target.unlink()
+    return {"ok": True, "path": path, "message": payload.message}
+
+
 @app.put("/dict")
 def replace_dict(payload: DictReplaceRequest, user: sqlite3.Row = Depends(current_user)) -> dict[str, Any]:
     write_project_file("data/dict.json", json_text(payload.dictionary), payload.message)
@@ -696,12 +749,19 @@ def get_job(job_id: str, user: sqlite3.Row = Depends(current_user)) -> dict[str,
 
 @app.post("/workflows/dispatch")
 def dispatch_workflow(payload: WorkflowRequest, user: sqlite3.Row = Depends(current_user)) -> dict[str, Any]:
-    allowed = {"api-translation.yml", "hourly-rss.yml", "exchange-rates.yml", "deepseek-usage.yml"}
+    allowed = {"api-translation.yml", "hourly-rss.yml", "exchange-rates.yml", "deepseek-usage.yml", "nightly-style.yml"}
     if payload.workflow not in allowed:
         raise HTTPException(status_code=400, detail="Workflow is not allowed")
     if STORAGE_MODE == "github":
         gh_dispatch_workflow(payload.workflow, payload.inputs)
     else:
+        if payload.workflow == "nightly-style.yml":
+            return {
+                "ok": True,
+                "workflow": payload.workflow,
+                "mode": "codex",
+                "message": "Nightly learning is owned by Codex automation for this server.",
+            }
         local = {
             "api-translation.yml": "/srv/ign-daily-ops/run-api-translation.sh",
             "hourly-rss.yml": "/srv/ign-daily-ops/run-rss.sh",

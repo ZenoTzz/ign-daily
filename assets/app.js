@@ -61,6 +61,12 @@ const GH = {
   repo: 'ign-daily',
   branch: 'main',
   apiBase: 'https://api.github.com',
+  canUseServer() {
+    return typeof ServerAPI !== 'undefined' && ServerAPI.enabledByHost() && Boolean(ServerAPI.token());
+  },
+  serverPath(path) {
+    return String(path || '').split('/').map(encodeURIComponent).join('/');
+  },
   authHeader() {
     const token = localStorage.getItem('gh_token') || '';
     if (!token) return '';
@@ -70,6 +76,18 @@ const GH = {
   },
 
   async getFile(path) {
+    if (this.canUseServer()) {
+      try {
+        const data = await ServerAPI.request(`/files/${this.serverPath(path)}`);
+        return {
+          sha: data.sha || '',
+          content: data.content || ''
+        };
+      } catch (e) {
+        if (e.status === 404) return null;
+        throw e;
+      }
+    }
     const url = `${this.apiBase}/repos/${this.owner}/${this.repo}/contents/${path}?ref=${this.branch}&t=${Date.now()}`;
     const headers = {};
     const auth = this.authHeader();
@@ -85,6 +103,12 @@ const GH = {
   },
 
   async putFile(path, content, message, retry = 2) {
+    if (this.canUseServer()) {
+      return ServerAPI.request(`/files/${this.serverPath(path)}`, {
+        method: 'PUT',
+        body: JSON.stringify({ content, message })
+      });
+    }
     const token = localStorage.getItem('gh_token');
     if (!token) throw new Error('未配置 GitHub Token，请在右上角 ⚙️ 设置');
 
@@ -117,6 +141,12 @@ const GH = {
   },
 
   async deleteFile(path, sha, message) {
+    if (this.canUseServer()) {
+      return ServerAPI.request(`/files/${this.serverPath(path)}`, {
+        method: 'DELETE',
+        body: JSON.stringify({ sha, message })
+      });
+    }
     const token = localStorage.getItem('gh_token');
     if (!token) throw new Error('未配置 GitHub Token，请在右上角 ⚙️ 设置');
     const res = await fetch(`${this.apiBase}/repos/${this.owner}/${this.repo}/contents/${path}`, {
@@ -135,6 +165,12 @@ const GH = {
   },
 
   async dispatchWorkflow(workflowFile, inputs = {}) {
+    if (this.canUseServer()) {
+      return ServerAPI.request('/workflows/dispatch', {
+        method: 'POST',
+        body: JSON.stringify({ workflow: workflowFile, inputs })
+      });
+    }
     const token = localStorage.getItem('gh_token');
     if (!token) throw new Error('未配置 GitHub Token，请在右上角 ⚙️ 设置');
     const res = await fetch(`${this.apiBase}/repos/${this.owner}/${this.repo}/actions/workflows/${workflowFile}/dispatches`, {
@@ -1346,8 +1382,7 @@ function appData() {
     },
 
     async triggerRssOnRefresh(force = false) {
-      const token = localStorage.getItem('gh_token');
-      if (!token || this.rssTriggering) return false;
+      if (!(GH.canUseServer() || localStorage.getItem('gh_token')) || this.rssTriggering) return false;
       const key = 'ign_daily_last_rss_dispatch_at';
       const now = Date.now();
       const last = Number(localStorage.getItem(key) || 0);
@@ -1931,8 +1966,8 @@ function appData() {
         this.flash('❌ 译名不能为空', 3000);
         return;
       }
-      if (!localStorage.getItem('gh_token')) {
-        this.flash('❌ 未配置 GitHub Token，请右上角⚙️设置', 4000);
+      if (!(GH.canUseServer() || localStorage.getItem('gh_token'))) {
+        this.flash('请先登录服务器账号', 4000);
         return;
       }
       const candidate = normalizeApprovedDictCandidate(c);
@@ -1945,14 +1980,14 @@ function appData() {
     ignoreGlobalPending(idx) {
       const c = this.globalPending[idx];
       this.globalPending.splice(idx, 1);
-      if (!localStorage.getItem('gh_token')) return;
+      if (!(GH.canUseServer() || localStorage.getItem('gh_token'))) return;
       this.pendingQueue.push({ type: 'ignore', candidate: c });
       this.processGlobalQueue();
     },
 
     approveAllGlobal() {
-      if (!localStorage.getItem('gh_token')) {
-        this.flash('❌ 未配置 GitHub Token', 4000);
+      if (!(GH.canUseServer() || localStorage.getItem('gh_token'))) {
+        this.flash('请先登录服务器账号', 4000);
         return;
       }
       const candidates = this.globalPending
@@ -1967,7 +2002,7 @@ function appData() {
     ignoreAllGlobal() {
       const all = [...this.globalPending];
       this.globalPending = [];
-      if (!localStorage.getItem('gh_token')) return;
+      if (!(GH.canUseServer() || localStorage.getItem('gh_token'))) return;
       for (const c of all) this.pendingQueue.push({ type: 'ignore', candidate: c });
       this.processGlobalQueue();
     },
