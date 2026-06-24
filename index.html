@@ -16,9 +16,9 @@
   <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <script defer src="assets/alpine.min.js"></script>
-  <link rel="stylesheet" href="assets/style.css?v=20260624fix1">
+  <link rel="stylesheet" href="assets/style.css?v=20260624account2">
   <script src="assets/exceljs.min.js"></script>
-  <script src="assets/app.js?v=20260624fix1"></script>
+  <script src="assets/app.js?v=20260624account2"></script>
 </head>
 <body>
   <!-- SVG Icon Definitions -->
@@ -635,8 +635,10 @@
           <input type="password" x-model="accountConfirmPassword" placeholder="确认新密码" autocomplete="new-password" style="margin-top:0.5rem;"
             @keydown.enter.prevent="updateServerAccount()">
           <div style="display:flex; gap:0.5rem; align-items:center; margin-top:0.75rem; flex-wrap:wrap;">
-            <button @click="updateServerAccount()" class="btn btn-primary" :disabled="accountSaving">
-              <span x-text="accountSaving ? '保存中...' : '保存账号'"></span>
+            <button @click="updateServerAccount()" class="btn btn-primary" :disabled="accountSaving"
+                    style="min-width:7.5rem; justify-content:center;">
+              <span x-show="!accountSaving">保存账号</span>
+              <span x-show="accountSaving">保存中...</span>
             </button>
             <span x-show="accountStatus" style="font-size:0.7rem; color:var(--text-muted);" x-text="accountStatus"></span>
           </div>

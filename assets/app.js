@@ -2017,7 +2017,8 @@ function appData() {
 // ---- PWA Service Worker Registration ----
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/ign-daily/sw.js')
+    const swPath = location.pathname.startsWith('/ign-daily/') ? '/ign-daily/sw.js' : '/sw.js';
+    navigator.serviceWorker.register(swPath)
       .then((reg) => console.log('SW registered:', reg.scope))
       .catch((err) => console.warn('SW registration failed:', err));
   });

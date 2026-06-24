@@ -1,12 +1,13 @@
-const CACHE_NAME = 'ign-daily-v4';
+const CACHE_NAME = 'ign-daily-v5';
+const BASE_PATH = self.location.pathname.replace(/sw\.js$/, '');
 const STATIC_ASSETS = [
-  '/ign-daily/',
-  '/ign-daily/index.html',
-  '/ign-daily/article.html',
-  '/ign-daily/calendar.html',
-  '/ign-daily/assets/style.css',
-  '/ign-daily/assets/app.js',
-];
+  '',
+  'index.html',
+  'article.html',
+  'calendar.html',
+  'assets/style.css',
+  'assets/app.js',
+].map((path) => `${BASE_PATH}${path}`);
 
 // Install: cache static shell
 self.addEventListener('install', (e) => {
@@ -45,7 +46,7 @@ self.addEventListener('fetch', (e) => {
   }
 
   // Static assets: prefer fresh network copy, then fall back to cache.
-  if (STATIC_ASSETS.some((a) => url.pathname.endsWith(a.replace('/ign-daily', '')))) {
+  if (STATIC_ASSETS.some((asset) => url.pathname === new URL(asset, self.location.origin).pathname)) {
     e.respondWith(
       fetch(e.request)
         .then((res) => {
