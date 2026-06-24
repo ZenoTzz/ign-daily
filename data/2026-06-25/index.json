@@ -2,6 +2,51 @@
   "date": "2026-06-25",
   "articles": [
     {
+      "id": 2,
+      "category": "游戏新闻",
+      "emoji": "🎮",
+      "en_title": "Monster Fantasy Combines the Thrill of Monster Hunter with the Cosy Chill of Animal Crossing | IGN Preview",
+      "cn_title": "《集合啦 动物森友会》《Monster Fantasy》融合怪物猎人与动森魅力",
+      "summary": "上海B站游戏首发活动上，IGN试玩了《Monster Fantasy》的早期版本。这款动作RPG将《怪物猎人》式巨兽狩猎与《集合啦！动物森友会》式悠闲社区建设相结合，提供多种职业和自由玩法，可捕捉怪物为坐骑，也能钓鱼、装修村落。游戏尚未公布发售日，PC公测预计数周后开启。",
+      "url": "https://www.ign.com/articles/monster-fantasy-combines-the-thrill-of-monster-hunter-with-the-cosy-chill-of-animal-crossing-ign-preview",
+      "publish_time_cn": "2026-06-24 13:00",
+      "pub_date": "2026-06-24 13:00",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/23/monsterfantasy-preview-blogroll-1782188694287.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/23/monsterfantasy-preview-blogroll-1782188694287.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/23/monsterfantasy-preview-blogroll-1782188694287.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/23/monsterfantasy-preview-blogroll-1782188694287.jpg?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/23/monsterfantasy-preview-blogroll-1782188694287.jpg?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/23/monsterfantasy-preview-blogroll-1782188694287.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-24T13:51:15+08:00",
+      "pending_dict": [
+        {
+          "en": "Monster Fantasy",
+          "cn": "Monster Fantasy",
+          "cat": "games",
+          "source": "ai_guess",
+          "reason": "尚无官方中文译名，保留英文等待确认"
+        },
+        {
+          "en": "Jotoyo",
+          "cn": "Jotoyo",
+          "cat": "companies",
+          "source": "ai_guess",
+          "reason": "中国开发商名称无官方中文译名，保留英文"
+        },
+        {
+          "en": "Eldoras",
+          "cn": "Eldoras",
+          "cat": "terms",
+          "source": "ai_guess",
+          "reason": "游戏内王国名，无中文译名，保留英文"
+        }
+      ]
+    },
+    {
       "id": 1,
       "category": "行业动态",
       "emoji": "💰",
@@ -28,5 +73,5 @@
       "translation_path": "translations/01.json"
     }
   ],
-  "total": 1
+  "total": 2
 }

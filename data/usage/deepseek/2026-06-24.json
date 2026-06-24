@@ -1164,6 +1164,30 @@
       "total_tokens_including_reasoning": 15347,
       "prompt_cache_hit_tokens": 7808,
       "prompt_cache_miss_tokens": 1873
+    },
+    {
+      "time_cn": "2026-06-24 13:51:27",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 2,
+      "article_title": "Monster Fantasy Combines the Thrill of Monster Hunter with the Cosy Chill of Animal Crossing | IGN Preview",
+      "article_url": "https://www.ign.com/articles/monster-fantasy-combines-the-thrill-of-monster-hunter-with-the-cosy-chill-of-animal-crossing-ign-preview",
+      "article_date": "2026-06-25",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00069674,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9926,
+      "completion_tokens": 858,
+      "reasoning_tokens": 556,
+      "output_tokens_including_reasoning": 1414,
+      "total_tokens": 10784,
+      "total_tokens_including_reasoning": 11340,
+      "prompt_cache_hit_tokens": 7936,
+      "prompt_cache_miss_tokens": 1990
     }
   ]
 }
