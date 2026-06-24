@@ -1,0 +1,40 @@
+.article-head {
+  margin-bottom: 24rpx;
+}
+
+.title {
+  margin-top: 18rpx;
+  color: #fff;
+  font-size: 42rpx;
+  font-weight: 900;
+  line-height: 1.25;
+}
+
+.subtitle {
+  margin-top: 16rpx;
+  color: #9295a8;
+  font-size: 26rpx;
+  line-height: 1.4;
+}
+
+.section {
+  margin-bottom: 22rpx;
+}
+
+.section-title {
+  margin-bottom: 16rpx;
+  color: #ef2330;
+  font-size: 26rpx;
+  font-weight: 900;
+}
+
+.body-text {
+  color: #e8eaf4;
+  font-size: 29rpx;
+  line-height: 1.72;
+  white-space: pre-wrap;
+}
+
+.error {
+  color: #ffadb3;
+}

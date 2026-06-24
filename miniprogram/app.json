@@ -1,0 +1,15 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/login/login",
+    "pages/article/article"
+  ],
+  "window": {
+    "navigationBarTitleText": "IGN Daily",
+    "navigationBarBackgroundColor": "#0b0b14",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#0b0b14"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,23 @@
+<view class="page">
+  <view wx:if="{{loading}}" class="panel muted">加载中...</view>
+  <view wx:elif="{{error}}" class="panel error">{{error}}</view>
+  <view wx:else>
+    <view class="article-head">
+      <view class="tag">#{{article.id}}</view>
+      <view class="title">{{article.cn_title || article.title_cn || article.en_title}}</view>
+      <view class="subtitle">{{article.en_title || article.title_en}}</view>
+    </view>
+
+    <view class="panel section">
+      <view class="section-title">摘要</view>
+      <view class="body-text">{{article.summary || article.cn_summary || article.description || '暂无摘要'}}</view>
+    </view>
+
+    <view class="panel section" wx:if="{{bodyText}}">
+      <view class="section-title">正文</view>
+      <view class="body-text">{{bodyText}}</view>
+    </view>
+
+    <button class="btn btn-ghost" bindtap="copyUrl">复制原文链接</button>
+  </view>
+</view>

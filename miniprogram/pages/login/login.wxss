@@ -1,0 +1,51 @@
+.login-page {
+  padding-top: 120rpx;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 24rpx;
+  margin-bottom: 48rpx;
+}
+
+.mark {
+  width: 96rpx;
+  height: 96rpx;
+  border-radius: 24rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ef2330;
+  font-weight: 900;
+}
+
+.title {
+  font-size: 48rpx;
+  font-weight: 900;
+}
+
+.subtitle {
+  margin-top: 8rpx;
+  color: #9295a8;
+  font-size: 26rpx;
+}
+
+.login-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 22rpx;
+}
+
+.placeholder {
+  color: #686c7f;
+}
+
+.login-btn {
+  margin-top: 8rpx;
+}
+
+.hint {
+  font-size: 24rpx;
+  line-height: 1.6;
+}

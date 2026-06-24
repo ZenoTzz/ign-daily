@@ -1,0 +1,64 @@
+<view class="page">
+  <view class="topbar">
+    <view>
+      <view class="kicker">{{date}} 新闻日</view>
+      <view class="headline">翻译工作台</view>
+    </view>
+    <button class="logout" bindtap="logout">退出</button>
+  </view>
+
+  <view class="date-row">
+    <button class="date-btn" bindtap="prevDate">前一天</button>
+    <button class="date-btn" bindtap="today">今天</button>
+    <button class="date-btn" bindtap="nextDate">后一天</button>
+  </view>
+
+  <view wx:if="{{job}}" class="panel job-panel">
+    <view class="job-head">
+      <text>{{jobLabel}}</text>
+      <text class="muted">{{job.progress || 0}}%</text>
+    </view>
+    <view class="progress"><view class="progress-inner" style="width: {{job.progress || 0}}%;"></view></view>
+    <view class="job-meta muted">{{job.date}} · #{{jobIdsText}}</view>
+  </view>
+
+  <view class="summary">
+    <view class="summary-card">
+      <text class="num">{{pendingCount}}</text>
+      <text>待选择</text>
+    </view>
+    <view class="summary-card">
+      <text class="num">{{requestedCount}}</text>
+      <text>翻译中</text>
+    </view>
+    <view class="summary-card">
+      <text class="num">{{doneCount}}</text>
+      <text>已完成</text>
+    </view>
+  </view>
+
+  <view class="actions">
+    <button class="btn btn-primary" disabled="{{selectedIds.length === 0 || submitting}}" loading="{{submitting}}" bindtap="submitSelected">
+      {{submitText}}
+    </button>
+    <button class="btn btn-ghost" disabled="{{loading}}" loading="{{loading}}" bindtap="loadData">刷新</button>
+  </view>
+
+  <view wx:if="{{error}}" class="panel error">{{error}}</view>
+
+  <checkbox-group bindchange="onSelectChange">
+    <view wx:for="{{articles}}" wx:key="id" class="article-card" bindtap="openArticle" data-id="{{item.id}}">
+      <view class="article-main">
+        <checkbox value="{{item.id}}" checked="{{item.checked}}" disabled="{{item.translation_status === 'done'}}" catchtap="noop" />
+        <view class="article-copy">
+          <view class="article-title">{{item.cn_title || item.en_title}}</view>
+          <view class="article-subtitle">{{item.en_title}}</view>
+          <view class="article-meta">
+            <text class="tag">#{{item.id}}</text>
+            <text class="tag">{{item.status_label}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </checkbox-group>
+</view>
