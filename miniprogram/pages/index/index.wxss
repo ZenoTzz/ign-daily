@@ -2,7 +2,6 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 24rpx;
 }
 
 .kicker {
@@ -29,19 +28,23 @@
 }
 
 .date-row {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16rpx;
+  display: flex;
   margin: 32rpx 0 24rpx;
 }
 
 .date-btn {
+  flex: 1;
+  margin-left: 16rpx;
   height: 64rpx;
   line-height: 64rpx;
   border-radius: 12rpx;
   font-size: 24rpx;
   color: #f6f7fb;
   background: rgba(255, 255, 255, 0.08);
+}
+
+.date-btn:first-child {
+  margin-left: 0;
 }
 
 .job-panel {
@@ -73,13 +76,13 @@
 }
 
 .summary {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16rpx;
+  display: flex;
   margin-bottom: 24rpx;
 }
 
 .summary-card {
+  flex: 1;
+  margin-left: 16rpx;
   min-height: 116rpx;
   border-radius: 16rpx;
   background: rgba(255, 255, 255, 0.055);
@@ -91,6 +94,10 @@
   font-size: 22rpx;
 }
 
+.summary-card:first-child {
+  margin-left: 0;
+}
+
 .num {
   display: block;
   margin-bottom: 6rpx;
@@ -100,10 +107,17 @@
 }
 
 .actions {
-  display: grid;
-  grid-template-columns: 1fr 160rpx;
-  gap: 16rpx;
+  display: flex;
   margin-bottom: 24rpx;
+}
+
+.actions .btn-primary {
+  flex: 1;
+  margin-right: 16rpx;
+}
+
+.actions .btn-ghost {
+  width: 160rpx;
 }
 
 .error {
@@ -122,12 +136,12 @@
 
 .article-main {
   display: flex;
-  gap: 18rpx;
 }
 
 .article-copy {
   flex: 1;
   min-width: 0;
+  margin-left: 18rpx;
 }
 
 .article-title {
@@ -146,6 +160,9 @@
 
 .article-meta {
   display: flex;
-  gap: 12rpx;
   margin-top: 16rpx;
+}
+
+.article-meta .tag {
+  margin-right: 12rpx;
 }

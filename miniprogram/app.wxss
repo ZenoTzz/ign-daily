@@ -9,8 +9,7 @@ page {
   min-height: 100vh;
   box-sizing: border-box;
   padding: 32rpx;
-  background: radial-gradient(circle at 20% 0%, rgba(239, 35, 45, 0.18), transparent 38%),
-    linear-gradient(180deg, #10111d 0%, #0b0b14 100%);
+  background: #0b0b14;
 }
 
 .panel {
@@ -53,9 +52,9 @@ page {
 }
 
 .tag {
-  display: inline-flex;
-  align-items: center;
+  display: inline-block;
   min-height: 40rpx;
+  line-height: 40rpx;
   padding: 0 16rpx;
   border-radius: 999rpx;
   font-size: 22rpx;
