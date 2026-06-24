@@ -15,7 +15,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <script defer src="assets/alpine.min.js"></script>
   <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:#08080f;color:#f2f2f7;line-height:1.55}
@@ -36,8 +35,9 @@
     @media (max-width:640px){.header-inner{align-items:flex-start}.brand{flex-wrap:wrap;min-width:0}.brand-title{font-size:16px}.nav-actions{margin-left:auto}.nav-actions .hidden{display:none!important}}
   </style>
   <link rel="stylesheet" href="assets/style.css?v=20260624wapfix1">
-  <script src="assets/exceljs.min.js"></script>
-  <script src="assets/app.js?v=20260624wapfix1"></script>
+  <script defer src="assets/exceljs.min.js"></script>
+  <script defer src="assets/app.js?v=20260624wapfix2"></script>
+  <script defer src="assets/alpine.min.js"></script>
 </head>
 <body>
   <!-- SVG Icon Definitions -->
@@ -207,7 +207,7 @@
       <div x-show="error" class="error-box" x-text="error"></div>
 
       <!-- Workbench -->
-      <section x-show="data && !loading" class="workbench-hero">
+      <section x-show="data && !loading" x-cloak class="workbench-hero">
         <div>
           <p class="workbench-kicker" x-text="currentDate + ' 新闻日'"></p>
           <h1 class="workbench-title">今日翻译工作台</h1>
@@ -256,7 +256,7 @@
         </div>
       </section>
 
-      <section x-show="data && !loading" class="workbench-layout">
+      <section x-show="data && !loading" x-cloak class="workbench-layout">
         <div class="workbench-main">
           <div class="panel-heading">
             <div>
