@@ -16,9 +16,9 @@
   <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <script defer src="assets/alpine.min.js"></script>
-  <link rel="stylesheet" href="assets/style.css?v=20260624mobile1">
+  <link rel="stylesheet" href="assets/style.css?v=20260624fix1">
   <script src="assets/exceljs.min.js"></script>
-  <script src="assets/app.js?v=20260624mobile1"></script>
+  <script src="assets/app.js?v=20260624fix1"></script>
 </head>
 <body>
   <!-- SVG Icon Definitions -->
@@ -274,10 +274,10 @@
                     <span x-show="!art.cover_image">IGN</span>
                   </div>
                   <div class="queue-copy">
-                    <template x-if="art.translation_status === 'done' || (art.translation_status === 'needs_review' && hasReviewDraft(art))">
+                    <template x-if="isArticleReadable(art)">
                       <a :href="`article.html?date=${data.date}&id=${art.id}`" @click="saveState()" class="queue-title" x-text="art.cn_title"></a>
                     </template>
-                    <template x-if="art.translation_status !== 'done' && !(art.translation_status === 'needs_review' && hasReviewDraft(art))">
+                    <template x-if="!isArticleReadable(art)">
                       <h3 class="queue-title" x-text="art.cn_title"></h3>
                     </template>
                     <p x-text="art.summary || art.en_title"></p>
@@ -296,24 +296,29 @@
                 <div class="queue-more">
                   <a :href="art.url" target="_blank" rel="noopener" @click.stop title="IGN原文">
                     <svg><use href="#icon-external"/></svg>
+                    <span>原文</span>
                   </a>
-                  <template x-if="art.translation_status === 'done'">
+                  <template x-if="isArticleReadable(art) && !(art.translation_status === 'needs_review' && hasReviewDraft(art))">
                     <a :href="`article.html?date=${data.date}&id=${art.id}`" @click="saveState()" title="查看翻译">
                       <svg><use href="#icon-book"/></svg>
+                      <span>查看</span>
                     </a>
                   </template>
                   <template x-if="art.translation_status === 'needs_review' && hasReviewDraft(art)">
                     <a :href="`article.html?date=${data.date}&id=${art.id}`" @click="saveState()" :title="reviewReason(art)">
                       <svg><use href="#icon-pencil"/></svg>
+                      <span>复核</span>
                     </a>
                   </template>
                   <template x-if="art.translation_status === 'needs_review' && !hasReviewDraft(art)">
                     <button @click.stop="retryTranslation(art)" :title="reviewReason(art)">
                       <svg><use href="#icon-send"/></svg>
+                      <span>重试</span>
                     </button>
                   </template>
                   <button @click.stop="runComparison(art)" :disabled="comparisonTriggeringId === art.id" title="对比翻译">
                     <svg><use href="#icon-send"/></svg>
+                    <span>对比</span>
                   </button>
                 </div>
               </article>

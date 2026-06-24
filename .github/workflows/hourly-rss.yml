@@ -170,5 +170,13 @@ jobs:
             exit 0
           fi
           git commit -m "feat: hourly RSS ${{ steps.rss.outputs.new_count }} new, ${{ steps.rss.outputs.filtered_count }} filtered for ${{ steps.rss.outputs.changed_dates || steps.rss.outputs.target_date }}"
-          git pull --rebase -X theirs origin main
-          git push origin HEAD:main
+          for attempt in 1 2 3 4 5; do
+            git pull --rebase -X theirs origin main
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            echo "Push race detected; retrying in $((attempt * 3)) seconds..."
+            sleep $((attempt * 3))
+          done
+          echo "Failed to push RSS update after retries."
+          exit 1

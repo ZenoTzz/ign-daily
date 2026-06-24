@@ -875,14 +875,18 @@ a.queue-title:hover { color: var(--accent); }
   display: flex;
   justify-content: flex-end;
   gap: 0.25rem;
+  flex-wrap: wrap;
 }
 
 .queue-more a,
 .queue-more button {
-  width: 28px;
+  min-width: 28px;
   height: 28px;
-  display: inline-grid;
-  place-items: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  padding: 0 0.45rem;
   border-radius: 6px;
   border: 1px solid var(--border-primary);
   background: var(--bg-secondary);
@@ -904,6 +908,12 @@ a.queue-title:hover { color: var(--accent); }
 }
 
 .queue-more svg { width: 14px; height: 14px; }
+.queue-more span {
+  font-size: 0.68rem;
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
+}
 
 .empty-queue {
   text-align: center;
@@ -1264,7 +1274,23 @@ a.queue-title:hover { color: var(--accent); }
     display: none;
   }
   .queue-more {
-    display: none;
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.35rem;
+    padding-left: 58px;
+    margin-top: -0.05rem;
+  }
+  .queue-more a,
+  .queue-more button {
+    min-width: 28px;
+    height: 28px;
+    padding: 0 0.38rem;
+    border-radius: 8px;
+  }
+  .queue-more svg {
+    width: 13px;
+    height: 13px;
   }
   .usage-bars {
     position: static;

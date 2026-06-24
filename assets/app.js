@@ -589,6 +589,14 @@ function appData() {
       return Boolean(art?.translation_path || failurePath);
     },
 
+    isArticleReadable(art) {
+      return Boolean(
+        this.polishedIds.has(art?.id) ||
+        art?.translation_status === 'done' ||
+        (art?.translation_status === 'needs_review' && this.hasReviewDraft(art))
+      );
+    },
+
     statusLabel(art) {
       if (this.polishedIds.has(art?.id)) return '已润色';
       if (art?.translation_status === 'done') return '已翻译';
