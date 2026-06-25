@@ -1,0 +1,106 @@
+{
+  "date": "2026-06-25",
+  "observer": "codex",
+  "model": "codex",
+  "status": "observed",
+  "source_hash": "9c0a732812ae1742bc2cbc29e52ed0febccff2e8",
+  "signal_count": 1,
+  "candidate_count": 2,
+  "signals": [
+    {
+      "type": "tencent_polish",
+      "date": "2026-06-25",
+      "article_id": 1,
+      "url": "https://www.ign.com/articles/valve-ram-companies-state-prices-monthly-if-we-say-no-then-they-never-talk-to-us-again",
+      "en_title": "Valve: RAM Companies State Prices Monthly, ‘If We Say No, Then They Never Talk to Us Again’",
+      "cn_title": "Valve自曝在内存采购上毫无议价权",
+      "import_fingerprint": "7ffdee97d23cdf92dc6999c79971f28464eec15dab5fa888b1f1e02f8d9f5a6c",
+      "match_score": 0.9116,
+      "edits": [
+        {
+          "field": "title",
+          "before": null,
+          "after": "Valve自曝在内存采购上毫无议价权"
+        },
+        {
+          "field": "paragraph_4",
+          "before": "「瞧，没有合同，什么也没有，」Valve工程师Pierre-Loup Griffais告诉Gamers Nexus，「那些家伙……他们每月给我们报价一次，大概这样，然后说『你们可以买这么多，行还是不行』。如果我们拒绝，他们就再也不会联系我们了。」",
+          "after": "「瞧，没有合同，什么也没有，」Valve工程师Pierre-Loup Griffais告诉Gamers Nexus，「那些家伙……他们每月给我们报价一次，大概这样，然后说‘你们可以买这么多，行还是不行’。如果我们拒绝，他们就再也不会联系我们了。」"
+        },
+        {
+          "field": "paragraph_5",
+          "before": "虽然Valve没有透露确切数字，但据估计，Steam Machine最初定价可能约为750美元(约合人民币5092元)，但由于内存成本飙升而取消，最终定价为1049美元(约合人民币7123元)。",
+          "after": "虽然Valve没有透露确切数字，但据估计，Steam Machine最初定价可能约为750美元（约合人民币5092元），但由于内存成本飙升而取消，最终定价为1049美元（约合人民币7123元）。"
+        },
+        {
+          "field": "paragraph_8",
+          "before": "你可以在IGN近期对Valve的采访中了解有关Steam Machine价格和性能的更多信息。",
+          "after": ""
+        },
+        {
+          "field": "paragraph_9",
+          "before": "Luke是IGN评测团队的资深编辑。你可以在Bluesky上找到他@mrlukereilly，向他询问各种事情。",
+          "after": ""
+        }
+      ]
+    }
+  ],
+  "candidates": [
+    {
+      "id_hint": "remove_promotional_related_links",
+      "title": "?????????????",
+      "rule": "?????????????????????????????????????????????????",
+      "category": "structure",
+      "scope": "all",
+      "status_suggestion": "observe",
+      "confidence": 0.94,
+      "evidence_summary": "6/25 ????????? IGN ????????????",
+      "examples": [
+        {
+          "date": "2026-06-25",
+          "article_id": 1,
+          "before": "????IGN???Valve????????Steam Machine???????????",
+          "after": ""
+        },
+        {
+          "date": "2026-06-25",
+          "article_id": 1,
+          "before": "Luke?IGN??????????????Bluesky????@mrlukereilly??????????",
+          "after": ""
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id_hint": "use_live_exchange_rate_for_cny",
+      "title": "??????????",
+      "rule": "???????????????????????????????? 7:1?????????????",
+      "category": "currency",
+      "scope": "all",
+      "status_suggestion": "observe",
+      "confidence": 0.91,
+      "evidence_summary": "6/25 Steam Machine ???????????????????",
+      "examples": [
+        {
+          "date": "2026-06-25",
+          "article_id": 1,
+          "before": "750??",
+          "after": "750????????5092??"
+        },
+        {
+          "date": "2026-06-25",
+          "article_id": 1,
+          "before": "1049??(?????7123?)",
+          "after": "1049????????7123??"
+        }
+      ],
+      "contradiction": ""
+    }
+  ],
+  "notes": [
+    "Only Tencent Docs imported polished drafts were used.",
+    "Single-article factual fixes and individual title choices were kept as evidence only unless they repeated an existing preference.",
+    "STYLE_PROFILE.md was not modified; candidates await user confirmation on the learning page."
+  ],
+  "updated_at": "2026-06-25T21:53:01+08:00"
+}

@@ -124,7 +124,7 @@ def main() -> int:
         if "__pycache__" in p.parts:
             continue
         try:
-            ast.parse(p.read_text(encoding="utf-8"))
+            ast.parse(p.read_text(encoding="utf-8-sig"))
         except Exception as exc:
             fail(errors, f"python parse error: {p.relative_to(REPO_ROOT)}: {exc}")
     if not any("python parse error" in e for e in errors):

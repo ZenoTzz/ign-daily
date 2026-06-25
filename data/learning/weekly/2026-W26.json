@@ -1,22 +1,22 @@
 {
   "week_id": "2026-W26",
-  "generated_at": "2026-06-23T21:48:37+08:00",
-  "published_by": "weekly_learning_report",
+  "generated_at": "2026-06-25T21:53:01+08:00",
+  "published_by": "codex_learning_sync",
   "range": {
     "start": "2026-06-22",
     "end": "2026-06-28"
   },
   "summary": {
-    "candidate_count": 12,
+    "candidate_count": 15,
     "ready_for_review": 2,
     "confirmed_by_feedback": 5,
-    "pending": 4
+    "pending": 5
   },
   "candidates": [
     {
       "id": "use_live_exchange_rate_for_cny",
-      "title": "金额换算使用实时汇率",
-      "rule": "涉及美元等外币金额时，按脚本抓取的实时汇率换算人民币，不使用固定 7:1；同一金额只保留一次换算。",
+      "title": "??????????",
+      "rule": "???????????????????????????????? 7:1?????????????",
       "category": "currency",
       "scope": "all",
       "status": "ready_for_review",
@@ -24,9 +24,11 @@
         "2026-06-16",
         "2026-06-17",
         "2026-06-18",
-        "2026-06-23"
+        "2026-06-23",
+        "2026-06-24",
+        "2026-06-25"
       ],
-      "days_seen": 4,
+      "days_seen": 6,
       "articles_seen": 5,
       "contradictions": 0,
       "examples": [
@@ -47,13 +49,25 @@
           "article_id": 42,
           "before": "1799美元(约合人民币1万元)",
           "after": "1799美元（约合12187元人民币）"
+        },
+        {
+          "date": "2026-06-24",
+          "article_id": 14,
+          "before": "1049??",
+          "after": "1049????????7123??"
+        },
+        {
+          "date": "2026-06-25",
+          "article_id": 1,
+          "before": "750??",
+          "after": "750????????5092??"
         }
       ],
       "feedback": [],
       "created_at": "2026-06-17T10:11:25+08:00",
-      "last_seen": "2026-06-23",
-      "confidence": 0.9,
-      "latest_evidence_summary": "6/23 Steam Machine 与 MSI Claw 金额统一为中文括号，并继续按实时汇率换算。"
+      "last_seen": "2026-06-25",
+      "confidence": 0.91,
+      "latest_evidence_summary": "6/25 Steam Machine ???????????????????"
     },
     {
       "id": "remove_redundant_brand_wrappers",
@@ -86,32 +100,22 @@
     },
     {
       "id": "remove_promotional_related_links",
-      "title": "删除站内推广和相关阅读引导",
-      "rule": "正文末尾的“查看更多”“阅读我们的采访或汇总”等站内引流句应删除，但不得删除承载新闻事实的正文。",
+      "title": "?????????????",
+      "rule": "?????????????????????????????????????????????????",
       "category": "structure",
       "scope": "all",
       "status": "confirmed",
       "days": [
         "2026-06-01",
         "2026-06-03",
-        "2026-06-23"
+        "2026-06-23",
+        "2026-06-24",
+        "2026-06-25"
       ],
-      "days_seen": 3,
-      "articles_seen": 6,
+      "days_seen": 5,
+      "articles_seen": 9,
       "contradictions": 0,
       "examples": [
-        {
-          "date": "2026-06-01",
-          "article_id": 3,
-          "before": "在此之前，你可以看看乔·罗素此前接受采访谈这部新片剧透管理的看法。",
-          "after": ""
-        },
-        {
-          "date": "2026-06-03",
-          "article_id": 18,
-          "before": "完整采访中还有更多关于《漫威金刚狼》的内容。本作将于2026年9月15日独占登陆PS5。如果你想了解PlayStation准备了什么，这里是2026年6月State of Play公布的所有内容。",
-          "after": "本作将于2026年9月15日独占登陆PS5。"
-        },
         {
           "date": "2026-06-03",
           "article_id": 19,
@@ -134,6 +138,30 @@
           "date": "2026-06-23",
           "article_id": 44,
           "before": "Tom Phillips是IGN的新闻编辑。可通过tom_phillips@ign.com联系Tom...",
+          "after": ""
+        },
+        {
+          "date": "2026-06-24",
+          "article_id": 4,
+          "before": "??????????IGN???????????????????????????????2??????????????????????????",
+          "after": ""
+        },
+        {
+          "date": "2026-06-24",
+          "article_id": 5,
+          "before": "Cade Onder?IGN???????????????????????????????????X???? @Cade_Onder?",
+          "after": ""
+        },
+        {
+          "date": "2026-06-24",
+          "article_id": 34,
+          "before": "Cade Onder?IGN??????????????????????????????X???? @Cade_Onder?",
+          "after": ""
+        },
+        {
+          "date": "2026-06-25",
+          "article_id": 1,
+          "before": "????IGN???Valve????????Steam Machine???????????",
           "after": ""
         }
       ],
@@ -176,9 +204,176 @@
         }
       ],
       "created_at": "2026-06-03T16:01:56+08:00",
-      "last_seen": "2026-06-23",
-      "confidence": 0.92,
-      "latest_evidence_summary": "6/23 多篇润色删除 IGN 延伸阅读、完整评测导流和作者联系方式。"
+      "last_seen": "2026-06-25",
+      "confidence": 0.94,
+      "latest_evidence_summary": "6/25 ????????? IGN ????????????"
+    },
+    {
+      "id": "platform_name_compact",
+      "title": "????????????",
+      "rule": "????????Xbox Series X|S / X/S???????Xbox Series??Nintendo Switch 2 ?????????Switch 2???????????????",
+      "category": "dictionary",
+      "scope": "games",
+      "status": "confirmed",
+      "days": [
+        "2026-06-08",
+        "2026-06-09",
+        "2026-06-10",
+        "2026-06-18",
+        "2026-06-24"
+      ],
+      "days_seen": 5,
+      "articles_seen": 7,
+      "contradictions": 0,
+      "examples": [
+        {
+          "date": "2026-06-08",
+          "article_id": 16,
+          "before": "今日Xbox展示会直播中最令人意外的消息，莫过于确认多款即将推出的重磅大作将作为Xbox主机独占游戏保留——也就是说，它们虽会登陆PC，但不会出现在PS5或任天堂Switch 2上。",
+          "after": "今日Xbox展示会直播中最令人意外的消息，莫过于确认多款即将推出的重磅大作将作为Xbox主机独占游戏保留——也就是说，它们虽会登陆PC，但不会出现在PS5或Switch 2上。"
+        },
+        {
+          "date": "2026-06-08",
+          "article_id": 37,
+          "before": "《古墓丽影：亚特兰蒂斯遗迹》将于2027年2月12日登陆任天堂Switch 2、PS5、PC和Xbox Series X/S。",
+          "after": "《古墓丽影：亚特兰蒂斯遗迹》将于2027年2月12日登陆、PS5、Xbox Series、Switch 2和PC。"
+        },
+        {
+          "date": "2026-06-09",
+          "article_id": 21,
+          "before": "Game Pass曾是Xbox One、Xbox Series X|S和PC端Xbox玩家的首选，但去年年底宣布涨价后，这一地位受到了冲击。微软在2025年10月初确认，Xbox Game Pass Ultimate月费将从19.99美元（约合人民币143元）大幅上涨至29.99美元（约合人民币215元）。涨幅高达50%，年费达到120美元（约合人民币859元）。",
+          "after": "Game Pass曾是Xbox One、Xbox Series和PC端Xbox玩家的首选，但去年年底宣布涨价后，这一地位受到了冲击。微软在2025年10月初确认，Xbox Game Pass Ultimate月费将从19.99美元（约合人民币136元）大幅上涨至29.99美元（约合人民币203元）。涨幅高达50%，年费达到120美元（约合人民币814元）。"
+        },
+        {
+          "date": "2026-06-10",
+          "article_id": 6,
+          "before": "《战争机器：事变日》仅通过Steam和Xbox应用登陆PC，以及Xbox Cloud和Xbox Series X|S。微软坚称，从未打算将该作带到PS5。",
+          "after": "《战争机器：事变日》仅通过Steam和Xbox应用登陆PC，以及Xbox Cloud和Xbox Series。微软坚称，从未打算将该作带到PS5。"
+        },
+        {
+          "date": "2026-06-10",
+          "article_id": 7,
+          "before": "《光环：战役进化》将于7月28日登陆Xbox Series X|S、PS5和PC。高级版和典藏版玩家还将获得五天的抢先体验资格。",
+          "after": "《光环：战役进化》将于7月28日登陆Xbox Series、PS5和PC。高级版和典藏版玩家还将获得五天的抢先体验资格。"
+        },
+        {
+          "date": "2026-06-24",
+          "article_id": 5,
+          "before": "??XBOX Series?PS5",
+          "after": "??XBOX Series?PS5"
+        },
+        {
+          "date": "2026-06-24",
+          "article_id": 14,
+          "before": "Xbox Series X/S",
+          "after": "XBOX Series"
+        }
+      ],
+      "feedback": [
+        {
+          "week_id": "2026-W24",
+          "text": "采纳，进入长期规则。",
+          "classified_as": "confirmed",
+          "created_at": "2026-06-15T21:48:32+08:00"
+        }
+      ],
+      "created_at": "2026-06-12T21:51:19+08:00",
+      "last_seen": "2026-06-24",
+      "confidence": 0.82,
+      "latest_evidence_summary": "6/24 ?????? Xbox Series ????????"
+    },
+    {
+      "id": "keep_person_names_latin",
+      "title": "????????????????",
+      "rule": "?????????????????????????????????????????????",
+      "category": "names",
+      "scope": "all",
+      "status": "confirmed",
+      "days": [
+        "2026-06-08",
+        "2026-06-11",
+        "2026-06-24"
+      ],
+      "days_seen": 3,
+      "articles_seen": 5,
+      "contradictions": 0,
+      "examples": [
+        {
+          "date": "2026-06-08",
+          "article_id": 16,
+          "before": "此前被问及Xbox独占是否会回归时，夏尔玛一直含糊其辞——但现在，很明显公司正在重拾这一理念，尽管未来具体规则仍不明朗。",
+          "after": "此前被问及Xbox独占是否会回归时，Sharma一直含糊其辞——但现在，很明显公司正在重拾这一理念，尽管未来具体规则仍不明朗。"
+        },
+        {
+          "date": "2026-06-11",
+          "article_id": 31,
+          "before": "据彭博社今日早些时候报道，Xbox CEOAsha Sharma已制定计划，在传出「重大」裁员和预算削减的消息之际「重置」业务。",
+          "after": "据彭博社今日早些时候报道，Xbox首席执行官Asha Sharma已制定计划，在传出「重大」裁员和预算削减的消息之际「重置」业务。"
+        },
+        {
+          "date": "2026-06-24",
+          "article_id": 3,
+          "before": "Mod??Speclizer",
+          "after": "Mod???Speclizer"
+        },
+        {
+          "date": "2026-06-24",
+          "article_id": 4,
+          "before": "Megan Everett?",
+          "after": "Megan Everett??"
+        },
+        {
+          "date": "2026-06-24",
+          "article_id": 37,
+          "before": "?Bungie????Liana Ruppert",
+          "after": "?Bungie????Liana Ruppert"
+        }
+      ],
+      "feedback": [
+        {
+          "week_id": "2026-W24",
+          "text": "采纳，进入长期规则。",
+          "classified_as": "confirmed",
+          "created_at": "2026-06-15T21:48:32+08:00"
+        }
+      ],
+      "created_at": "2026-06-12T21:51:19+08:00",
+      "last_seen": "2026-06-24",
+      "confidence": 0.86,
+      "latest_evidence_summary": "6/24 Speclizer?Megan Everett?Brett Gipson?Robert Brookes ????????"
+    },
+    {
+      "id": "prefer_established_official_game_titles",
+      "title": "??????????????",
+      "rule": "??????????????????????????????????????????????????????????",
+      "category": "dictionary",
+      "scope": "games|movies_tv",
+      "status": "pending",
+      "days": [
+        "2026-06-24"
+      ],
+      "days_seen": 1,
+      "articles_seen": 2,
+      "contradictions": 0,
+      "examples": [
+        {
+          "date": "2026-06-24",
+          "article_id": 3,
+          "before": "??????2?",
+          "after": "?????? ????"
+        },
+        {
+          "date": "2026-06-24",
+          "article_id": 34,
+          "before": "?????2?",
+          "after": "?????2?"
+        }
+      ],
+      "feedback": [],
+      "created_at": "2026-06-25T21:53:01+08:00",
+      "last_seen": "2026-06-24",
+      "confidence": 0.76,
+      "latest_evidence_summary": "6/24 ?????????2?????????? ???????????2????????2??"
     },
     {
       "id": "inner_quote_single_marks",
@@ -607,9 +802,9 @@
     }
   ],
   "instructions_for_user": [
-    "Adopt: this rule can enter STYLE_PROFILE.md.",
-    "Reject: this is not your preference and should not be proposed again.",
-    "Limit: this rule only applies to a specific article type or context.",
-    "Hold: keep observing; do not promote it into the formal style profile yet."
+    "????????????? STYLE_PROFILE.md?",
+    "?????????????????????",
+    "?????????????????????",
+    "???????????????????"
   ]
 }
