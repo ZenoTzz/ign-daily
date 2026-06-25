@@ -33,6 +33,7 @@ from currency_utils import normalize_translation_currency
 from dict_matcher import restore_dictionary_spacing_in_data, term_in_text
 from dict_matcher import matched_terms_for_article
 from dict_matcher import normalize_pending_dict
+from job_progress import set_article_step
 from normalize_currency_files import normalize_date as normalize_currency_date
 from platform_names import normalize_platform_names_in_translation
 from prompt_blocks import (
@@ -690,6 +691,7 @@ def translate_date(date: str, limit: int = 2) -> int:
     started = time.monotonic()
     budget_seconds = int(os.environ.get("TRANSLATOR_FULLTEXT_TIME_BUDGET_SECONDS", "1200"))
     for article in requested[:limit]:
+        article_id = int(article["id"])
         if time.monotonic() - started > budget_seconds:
             print(f"API_FULLTEXT_PAUSE: time budget reached after {translated} article(s)")
             break
@@ -698,12 +700,15 @@ def translate_date(date: str, limit: int = 2) -> int:
         data: dict[str, Any] | None = None
         audit_issues: list[dict[str, str]] = []
         try:
+            set_article_step(article_id, date=date, step="source", progress=12, message="抓取正文与缓存")
             text = source_text(source) or fetch_article_text(article["url"])
+            set_article_step(article_id, date=date, step="extract", progress=24, message="解析正文段落")
             paragraphs_en = split_paragraphs(text)
             if not paragraphs_en:
                 raise RuntimeError(f"no paragraphs extracted for #{article['id']}")
             terms = matched_terms(article.get("en_title", "") + "\n" + text, article=article)
             max_tokens = int(os.environ.get("TRANSLATOR_FULLTEXT_MAX_TOKENS", "12000"))
+            set_article_step(article_id, date=date, step="model", progress=38, message=f"调用模型 {model}")
             raw, usage = call_deepseek_response(api_key, model, base_url, build_messages(article, paragraphs_en, terms), max_tokens=max_tokens)
             record_deepseek_usage_safe(
                 task="fulltext",
@@ -714,10 +719,12 @@ def translate_date(date: str, limit: int = 2) -> int:
                 article_url=article.get("url"),
                 article_date=date,
             )
+            set_article_step(article_id, date=date, step="parse", progress=62, message="解析模型输出")
             try:
                 result = extract_json(raw)
             except Exception as exc:
                 print(f"[RETRY] fulltext #{article['id']} returned invalid JSON: {exc}; falling back to paragraph chunks")
+                set_article_step(article_id, date=date, step="model", progress=50, message="分段重试翻译")
                 result = {
                     "cn_title": article.get("cn_title") or article.get("en_title") or "",
                     "subtitle": article.get("subtitle") or "",
@@ -732,6 +739,7 @@ def translate_date(date: str, limit: int = 2) -> int:
                 data = normalize_translation(article, result, paragraphs_en)
             except ValueError as exc:
                 print(f"[RETRY] fulltext #{article['id']} paragraph format issue: {exc}")
+                set_article_step(article_id, date=date, step="model", progress=58, message="段落格式修复")
                 data = normalize_translation(article, {**result, "paragraphs": translate_paragraph_chunks(api_key, model, base_url, article, paragraphs_en, terms, article_date=date)}, paragraphs_en)
             data = enforce_literal_dictionary_terms(data, paragraphs_en, terms)
             data["opus_summary"] = trim_summary_to_limit(data.get("opus_summary", ""))
@@ -743,8 +751,10 @@ def translate_date(date: str, limit: int = 2) -> int:
                     data["cover"] = source["cover_image"]
                 if not data.get("images") and isinstance(source.get("images"), list):
                     data["images"] = source["images"]
+            set_article_step(article_id, date=date, step="audit", progress=76, message="质量检查")
             audit_issues = check_translation(article=article, paragraphs_en=paragraphs_en, data=data, required_terms=terms)
             if audit_issues and os.environ.get("TRANSLATOR_FULLTEXT_REPAIR", "1") != "0":
+                set_article_step(article_id, date=date, step="repair", progress=84, message="修复质检问题")
                 summary_only = all(issue.get("type") == "summary_length" for issue in audit_issues)
                 if summary_only:
                     print(f"[REPAIR] fulltext #{article['id']} only needs a summary repair; preserving all paragraphs")
@@ -777,6 +787,7 @@ def translate_date(date: str, limit: int = 2) -> int:
                     print(f"[DOCTOR] fulltext #{article['id']} accepted audit false positive: {doctor.get('reason', '')}")
                 else:
                     details = "; ".join(f"[{issue['type']}] {issue['detail']}" for issue in audit_issues[:8])
+                    set_article_step(article_id, date=date, step="failed", progress=100, status="failed", message=details)
                     req = save_manual_review_failure(
                         date=date,
                         index=index,
@@ -790,6 +801,7 @@ def translate_date(date: str, limit: int = 2) -> int:
                         draft=data,
                     )
                     continue
+            set_article_step(article_id, date=date, step="write", progress=92, message="写入译文文件")
             trans_path = DATA_DIR / date / "translations" / f"{article['id']:02d}.json"
             write_json(trans_path, data)
             subprocess.run(
@@ -813,9 +825,11 @@ def translate_date(date: str, limit: int = 2) -> int:
             write_json(req_path, req)
             clear_manual_review_failure(date, int(article["id"]))
             translated += 1
+            set_article_step(article_id, date=date, step="done", progress=100, status="done", message="翻译完成")
             print(f"[OK] fulltext #{article['id']} {data['cn_title']}")
         except subprocess.CalledProcessError as exc:
             details = readable_subprocess_failure(exc)
+            set_article_step(article_id, date=date, step="failed", progress=100, status="failed", message=details)
             req = save_manual_review_failure(
                 date=date,
                 index=index,
@@ -830,6 +844,7 @@ def translate_date(date: str, limit: int = 2) -> int:
             )
         except Exception as exc:
             details = str(exc)
+            set_article_step(article_id, date=date, step="failed", progress=100, status="failed", message=details)
             req = save_manual_review_failure(
                 date=date,
                 index=index,

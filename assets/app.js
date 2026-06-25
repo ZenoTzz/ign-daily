@@ -1748,6 +1748,7 @@ function appData() {
       const job = this.articleJob(art);
       if (!job) return 0;
       const result = this.articleJobResult(art);
+      if (Number.isFinite(Number(result?.progress))) return Math.max(0, Math.min(100, Number(result.progress)));
       if (result?.status === 'done') return 100;
       if (result?.status === 'failed') return 100;
       if (job.status === 'queued') return 5;
@@ -1759,6 +1760,8 @@ function appData() {
       const job = this.articleJob(art);
       if (!job) return '';
       const result = this.articleJobResult(art);
+      if (result?.message) return result.message;
+      if (result?.step_label) return result.step_label;
       if (result?.status === 'done') return '已写入译文';
       if (result?.status === 'failed') return result.reason || '翻译失败';
       if (job.status === 'queued') return '排队等待';

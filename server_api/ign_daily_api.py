@@ -247,6 +247,17 @@ def update_job(job_id: str, status: str, message: str | None = None, progress: i
         conn.commit()
 
 
+def read_job_progress(job_id: str) -> dict[str, Any]:
+    path = APP_DIR / "data" / "job-progress" / f"{job_id}.json"
+    if not path.exists():
+        return {}
+    try:
+        data = json.loads(path.read_text(encoding="utf-8-sig"))
+        return data.get("articles", {}) if isinstance(data, dict) else {}
+    except Exception:
+        return {}
+
+
 def infer_translation_job(row: sqlite3.Row) -> dict[str, Any]:
     ids = json.loads(row["ids_json"] or "[]")
     date = row["date"]
@@ -260,19 +271,43 @@ def infer_translation_job(row: sqlite3.Row) -> dict[str, Any]:
     if date and ids:
         failures = read_json(APP_DIR / "data" / date / "translation_failures.json", {"items": {}})
         failure_items = failures.get("items", {}) if isinstance(failures, dict) else {}
+        progress_items = read_job_progress(row["id"])
         for article_id in ids:
+            progress_item = progress_items.get(str(int(article_id))) or {}
             padded = f"{int(article_id):02d}"
             translation_path = APP_DIR / "data" / date / "translations" / f"{padded}.json"
             if translation_path.exists():
                 done += 1
-                results.append({"id": int(article_id), "status": "done"})
+                results.append({
+                    "id": int(article_id),
+                    "status": "done",
+                    "step": progress_item.get("step", "done"),
+                    "step_label": progress_item.get("step_label", "已写入译文"),
+                    "progress": 100,
+                    "message": progress_item.get("message", "翻译完成"),
+                })
                 continue
             failure = failure_items.get(str(article_id))
             if failure:
                 failed += 1
-                errors.append({"id": int(article_id), "status": "failed", "reason": failure.get("reason", "Translation failed")})
+                errors.append({
+                    "id": int(article_id),
+                    "status": "failed",
+                    "step": progress_item.get("step", "failed"),
+                    "step_label": progress_item.get("step_label", "翻译失败"),
+                    "progress": 100,
+                    "reason": failure.get("reason", progress_item.get("message", "Translation failed")),
+                    "message": progress_item.get("message", failure.get("reason", "Translation failed")),
+                })
                 continue
-            results.append({"id": int(article_id), "status": "running"})
+            results.append({
+                "id": int(article_id),
+                "status": progress_item.get("status", "running"),
+                "step": progress_item.get("step", "queued" if status == "queued" else "model"),
+                "step_label": progress_item.get("step_label", "排队等待" if status == "queued" else "模型翻译/质检中"),
+                "progress": int(progress_item.get("progress", 5 if status == "queued" else progress or 10)),
+                "message": progress_item.get("message", message or "正在翻译"),
+            })
     total = len(ids)
     if total:
         progress = max(progress, min(95, 10 + int((done + failed) / total * 85)))
