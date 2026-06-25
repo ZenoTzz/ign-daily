@@ -5,7 +5,7 @@
   "status": "observed",
   "source_hash": "9c0a732812ae1742bc2cbc29e52ed0febccff2e8",
   "signal_count": 1,
-  "candidate_count": 2,
+  "candidate_count": 3,
   "signals": [
     {
       "type": "tencent_polish",
@@ -47,60 +47,73 @@
   ],
   "candidates": [
     {
-      "id_hint": "remove_promotional_related_links",
-      "title": "?????????????",
-      "rule": "?????????????????????????????????????????????????",
-      "category": "structure",
-      "scope": "all",
-      "status_suggestion": "observe",
-      "confidence": 0.94,
-      "evidence_summary": "6/25 ????????? IGN ????????????",
+      "id_hint": "inner_quote_single_marks",
+      "title": "中文引号内再引用用单引号",
+      "rule": "中文直引号内部再次出现短语、问题或强调词时，内层引用使用‘ ’，避免连续使用「」造成层级不清。",
+      "category": "punctuation",
+      "scope": "quoted_speech",
+      "status_suggestion": "confirmed_by_weekly_feedback",
+      "confidence": 0.82,
+      "evidence_summary": "6/25 Valve 引语继续把直引语内部的二级引用改为中文单引号。",
       "examples": [
         {
           "date": "2026-06-25",
           "article_id": 1,
-          "before": "????IGN???Valve????????Steam Machine???????????",
-          "after": ""
-        },
-        {
-          "date": "2026-06-25",
-          "article_id": 1,
-          "before": "Luke?IGN??????????????Bluesky????@mrlukereilly??????????",
-          "after": ""
+          "before": "然后说『你们可以买这么多，行还是不行』。",
+          "after": "然后说‘你们可以买这么多，行还是不行’。"
         }
       ],
       "contradiction": ""
     },
     {
-      "id_hint": "use_live_exchange_rate_for_cny",
-      "title": "??????????",
-      "rule": "???????????????????????????????? 7:1?????????????",
+      "id_hint": "currency_conversion_refined",
+      "title": "金额换算采用统一中文格式",
+      "rule": "正文金额首次出现时可给出人民币换算，使用中文全角括号并保持同文一致；标题通常不放人民币换算。汇率数值属于时效数据，不作为固定翻译规则。",
       "category": "currency",
       "scope": "all",
-      "status_suggestion": "observe",
-      "confidence": 0.91,
-      "evidence_summary": "6/25 Steam Machine ???????????????????",
+      "status_suggestion": "confirmed_existing_rule",
+      "confidence": 0.92,
+      "evidence_summary": "6/25 Steam Machine 稿件继续把金额换算统一为中文全角括号格式。",
       "examples": [
         {
           "date": "2026-06-25",
           "article_id": 1,
-          "before": "750??",
-          "after": "750????????5092??"
+          "before": "750美元(约合人民币5092元)",
+          "after": "750美元（约合人民币5092元）"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id_hint": "remove_promotional_related_links",
+      "title": "删除站内推广和相关阅读引导",
+      "rule": "正文末尾的“查看更多”“阅读我们的采访或汇总”等站内引流句应删除，但不得删除承载新闻事实的正文。",
+      "category": "structure",
+      "scope": "all",
+      "status_suggestion": "confirmed_existing_rule",
+      "confidence": 0.95,
+      "evidence_summary": "6/25 删除了 IGN 采访引流句和作者简介/社交账号尾注。",
+      "examples": [
+        {
+          "date": "2026-06-25",
+          "article_id": 1,
+          "before": "你可以在IGN近期对Valve的采访中了解有关Steam Machine价格和性能的更多信息。",
+          "after": ""
         },
         {
           "date": "2026-06-25",
           "article_id": 1,
-          "before": "1049??(?????7123?)",
-          "after": "1049????????7123??"
+          "before": "Luke是IGN评测团队的资深编辑。你可以在Bluesky上找到他@mrlukereilly，向他询问各种事情。",
+          "after": ""
         }
       ],
       "contradiction": ""
     }
   ],
   "notes": [
-    "Only Tencent Docs imported polished drafts were used.",
-    "Single-article factual fixes and individual title choices were kept as evidence only unless they repeated an existing preference.",
-    "STYLE_PROFILE.md was not modified; candidates await user confirmation on the learning page."
+    "Only Tencent Docs imported polished drafts and weekly feedback were used.",
+    "The 6/25 currency edit was classified as fullwidth Chinese formatting, not live exchange-rate evidence.",
+    "STYLE_PROFILE.md was updated only for rules explicitly adopted in weekly feedback."
   ],
-  "updated_at": "2026-06-25T21:53:01+08:00"
+  "updated_at": "2026-06-25T22:47:05+08:00"
 }

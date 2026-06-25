@@ -1,0 +1,63 @@
+{
+  "date": "2026-06-25",
+  "generated_at": "2026-06-25T22:48:56.359744",
+  "total_articles": 1,
+  "articles": [
+    {
+      "id": 1,
+      "cn_title": "Valve自曝在内存采购上毫无议价权",
+      "en_title": "Valve: RAM Companies State Prices Monthly, ‘If We Say No, Then They Never Talk to Us Again’",
+      "url": "https://www.ign.com/articles/valve-ram-companies-state-prices-monthly-if-we-say-no-then-they-never-talk-to-us-again",
+      "category": null,
+      "title_diff": null,
+      "subtitle_diff": null,
+      "body_diffs": [
+        {
+          "index": 3,
+          "mine": "「瞧，没有合同，什么也没有，」Valve工程师Pierre-Loup Griffais告诉Gamers Nexus，「那些家伙……他们每月给我们报价一次，大概这样，然后说『你们可以买这么多，行还是不行』。如果我们拒绝，他们就再也不会联系我们了。」",
+          "yours": "「瞧，没有合同，什么也没有，」Valve工程师Pierre-Loup Griffais告诉Gamers Nexus，「那些家伙……他们每月给我们报价一次，大概这样，然后说‘你们可以买这么多，行还是不行’。如果我们拒绝，他们就再也不会联系我们了。」",
+          "my_sentences": [
+            "「瞧，没有合同，什么也没有，」Valve工程师Pierre-Loup Griffais告诉Gamers Nexus，「那些家伙……他们每月给我们报价一次，大概这样，然后说『你们可以买这么多，行还是不行』。",
+            "如果我们拒绝，他们就再也不会联系我们了。",
+            "」"
+          ],
+          "your_sentences": [
+            "「瞧，没有合同，什么也没有，」Valve工程师Pierre-Loup Griffais告诉Gamers Nexus，「那些家伙……他们每月给我们报价一次，大概这样，然后说‘你们可以买这么多，行还是不行’。",
+            "如果我们拒绝，他们就再也不会联系我们了。",
+            "」"
+          ]
+        },
+        {
+          "index": 4,
+          "mine": "虽然Valve没有透露确切数字，但据估计，Steam Machine最初定价可能约为750美元(约合人民币5092元)，但由于内存成本飙升而取消，最终定价为1049美元(约合人民币7123元)。",
+          "yours": "虽然Valve没有透露确切数字，但据估计，Steam Machine最初定价可能约为750美元（约合人民币5092元），但由于内存成本飙升而取消，最终定价为1049美元（约合人民币7123元）。",
+          "my_sentences": [
+            "虽然Valve没有透露确切数字，但据估计，Steam Machine最初定价可能约为750美元(约合人民币5092元)，但由于内存成本飙升而取消，最终定价为1049美元(约合人民币7123元)。"
+          ],
+          "your_sentences": [
+            "虽然Valve没有透露确切数字，但据估计，Steam Machine最初定价可能约为750美元（约合人民币5092元），但由于内存成本飙升而取消，最终定价为1049美元（约合人民币7123元）。"
+          ]
+        },
+        {
+          "index": 7,
+          "mine": "你可以在IGN近期对Valve的采访中了解有关Steam Machine价格和性能的更多信息。",
+          "yours": "",
+          "my_sentences": [
+            "你可以在IGN近期对Valve的采访中了解有关Steam Machine价格和性能的更多信息。"
+          ],
+          "your_sentences": []
+        },
+        {
+          "index": 8,
+          "mine": "Luke是IGN评测团队的资深编辑。你可以在Bluesky上找到他@mrlukereilly，向他询问各种事情。",
+          "yours": "",
+          "my_sentences": [
+            "Luke是IGN评测团队的资深编辑。",
+            "你可以在Bluesky上找到他@mrlukereilly，向他询问各种事情。"
+          ],
+          "your_sentences": []
+        }
+      ]
+    }
+  ]
+}
