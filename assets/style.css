@@ -1016,6 +1016,42 @@ a.queue-title:hover { color: var(--accent); }
 .progress-item:nth-of-type(3) b { background: var(--blue); }
 .progress-item:nth-of-type(4) b { background: var(--green); }
 
+.article-job-progress {
+  min-width: 9rem;
+  margin-top: 0.45rem;
+  color: var(--text-muted);
+  font-size: 0.68rem;
+}
+
+.article-job-progress div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.article-job-progress b {
+  color: var(--text-secondary);
+  font-weight: 700;
+}
+
+.article-job-progress i {
+  display: block;
+  height: 4px;
+  margin-top: 0.25rem;
+  overflow: hidden;
+  border-radius: 999px;
+  background: var(--bg-card-hover);
+}
+
+.article-job-progress em {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--accent);
+  transition: width 0.25s ease;
+}
+
 .rail-actions {
   display: flex;
   gap: 0.65rem;

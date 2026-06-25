@@ -1729,6 +1729,44 @@ function appData() {
       return job.message || '正在翻译';
     },
 
+    articleJob(art) {
+      const id = Number(art?.id);
+      if (!id) return null;
+      return (this.activeJobs || []).find(job => (job.ids || []).map(Number).includes(id)) || null;
+    },
+
+    articleJobResult(art) {
+      const id = Number(art?.id);
+      const job = this.articleJob(art);
+      if (!job) return null;
+      return (job.results || []).find(item => Number(item.id) === id)
+        || (job.errors || []).find(item => Number(item.id) === id)
+        || null;
+    },
+
+    articleJobProgress(art) {
+      const job = this.articleJob(art);
+      if (!job) return 0;
+      const result = this.articleJobResult(art);
+      if (result?.status === 'done') return 100;
+      if (result?.status === 'failed') return 100;
+      if (job.status === 'queued') return 5;
+      if ((job.ids || []).length === 1) return Math.max(10, Math.min(95, Number(job.progress || 10)));
+      return Math.max(10, Math.min(95, Number(job.progress || 10)));
+    },
+
+    articleJobStatus(art) {
+      const job = this.articleJob(art);
+      if (!job) return '';
+      const result = this.articleJobResult(art);
+      if (result?.status === 'done') return '已写入译文';
+      if (result?.status === 'failed') return result.reason || '翻译失败';
+      if (job.status === 'queued') return '排队等待';
+      if (job.progress <= 10) return '准备翻译';
+      if (job.progress >= 90) return '写入与刷新';
+      return '模型翻译/质检中';
+    },
+
     async pollActiveJob(startTimer = false) {
       if (!this.activeJobId) return;
       try {

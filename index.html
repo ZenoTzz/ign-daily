@@ -34,9 +34,9 @@
     button{cursor:pointer}
     @media (max-width:640px){.header-inner{align-items:flex-start}.brand{flex-wrap:wrap;min-width:0}.brand-title{font-size:16px}.nav-actions{margin-left:auto}.nav-actions .hidden{display:none!important}}
   </style>
-  <link rel="stylesheet" href="assets/style.css?v=20260624wapfix1">
+  <link rel="stylesheet" href="assets/style.css?v=20260625articlejob1">
   <script defer src="assets/exceljs.min.js"></script>
-  <script defer src="assets/app.js?v=20260625nosw1"></script>
+  <script defer src="assets/app.js?v=20260625articlejob1"></script>
   <script defer src="assets/alpine.min.js"></script>
 </head>
 <body>
@@ -323,6 +323,13 @@
                 </div>
                 <div class="queue-status-cell">
                   <span class="queue-status" :class="statusClass(art)" x-text="statusLabel(art)"></span>
+                  <div x-show="articleJobStatus(art)" class="article-job-progress">
+                    <div>
+                      <span x-text="articleJobStatus(art)"></span>
+                      <b x-text="`${articleJobProgress(art)}%`"></b>
+                    </div>
+                    <i><em :style="`width:${articleJobProgress(art)}%`"></em></i>
+                  </div>
                 </div>
                 <div class="queue-model">
                   <span x-text="translatorLabel(art) || preferredModelLabel(art)"></span>
