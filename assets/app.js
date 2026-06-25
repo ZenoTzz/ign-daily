@@ -950,12 +950,13 @@ function appData() {
       }
     },
 
-    async refreshData() {
+    async refreshData(options = {}) {
+      const silent = Boolean(options?.silent);
       this.loading = true;
       this.data = null;
       await this.triggerRssOnRefresh(true);
       await this.init();
-      this.flash('🔄 已刷新');
+      if (!silent) this.flash('🔄 已刷新');
     },
 
     saveToken() {
@@ -1788,7 +1789,10 @@ function appData() {
           this.jobPollingTimer = null;
           localStorage.removeItem('ign_active_job_id');
           this.activeJobId = '';
-          if (this.activeJob.status === 'done') await this.refreshData();
+          if (this.activeJob.status === 'done') {
+            localStorage.setItem('ign_last_refreshed_done_job_id', this.activeJob.id || '');
+            await this.refreshData({ silent: true });
+          }
           return;
         }
       } catch (e) {
@@ -1818,7 +1822,14 @@ function appData() {
           localStorage.removeItem('ign_active_job_id');
           clearInterval(this.jobPollingTimer);
           this.jobPollingTimer = null;
-          if (jobs[0]?.status === 'done') await this.refreshData();
+          const latestJob = jobs[0];
+          if (latestJob?.status === 'done') {
+            const doneJobId = latestJob.id || '';
+            if (doneJobId && localStorage.getItem('ign_last_refreshed_done_job_id') !== doneJobId) {
+              localStorage.setItem('ign_last_refreshed_done_job_id', doneJobId);
+              await this.refreshData({ silent: true });
+            }
+          }
         }
       } catch (e) {
         if (e.status === 401) {
