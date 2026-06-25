@@ -679,8 +679,8 @@
 
         async saveDict() {
           if (!this.dictForm.en || !this.dictForm.cn) return;
-          if (!localStorage.getItem('gh_token')) {
-            this.flash('❌ 未配置 GitHub Token，请在首页右上角⚙️设置', 4000);
+          if (!this.canWriteProject()) {
+            this.flash(`❌ ${this.writePermissionMessage()}`, 4000);
             return;
           }
           // 记录入库前的旧译名（同步译文要用）
@@ -771,6 +771,20 @@
           setTimeout(() => { this.toast = ''; }, ms);
         },
 
+        canWriteProject() {
+          return Boolean(
+            (typeof GH !== 'undefined' && GH.canUseServer && GH.canUseServer()) ||
+            localStorage.getItem('gh_token')
+          );
+        },
+
+        writePermissionMessage() {
+          if (typeof ServerAPI !== 'undefined' && ServerAPI.enabledByHost && ServerAPI.enabledByHost()) {
+            return '请先在首页登录服务器账号';
+          }
+          return '未配置 GitHub Token，请在首页右上角设置';
+        },
+
         // 待入库候选词——本地立即移除 + 后台异步保存
         approvePending(idx) {
           const c = this.article.pending_dict[idx];
@@ -778,8 +792,8 @@
             this.flash('❌ 译名不能为空', 3000);
             return;
           }
-          if (!localStorage.getItem('gh_token')) {
-            this.flash('❌ 未配置 GitHub Token，请在首页右上角⚙️设置', 4000);
+          if (!this.canWriteProject()) {
+            this.flash(`❌ ${this.writePermissionMessage()}`, 4000);
             return;
           }
           // 1. 本地立即移除，用户马上可以点下一条
@@ -795,7 +809,7 @@
           // 本地立即移除
           const c = this.article.pending_dict[idx];
           this.article.pending_dict.splice(idx, 1);
-          if (!localStorage.getItem('gh_token')) return;  // 未配 token 也可以本地隐藏
+          if (!this.canWriteProject()) return;  // 未登录也可以本地隐藏
           this.pendingQueue.push({ type: 'ignore', candidate: c });
           this.processPendingQueue();
         },
@@ -890,8 +904,8 @@
         },
 
         async approveAllPending() {
-          if (!localStorage.getItem('gh_token')) {
-            this.flash('❌ 未配置 GitHub Token', 4000);
+          if (!this.canWriteProject()) {
+            this.flash(`❌ ${this.writePermissionMessage()}`, 4000);
             return;
           }
           const candidates = this.article.pending_dict
@@ -905,7 +919,7 @@
 
         ignoreAllPending() {
           this.article.pending_dict = [];
-          if (!localStorage.getItem('gh_token')) return;
+          if (!this.canWriteProject()) return;
           this.pendingQueue.push({ type: 'sync_only' });
           this.processPendingQueue();
         },
@@ -1190,8 +1204,8 @@
               this.flash('✅ 已人工放行为正式译文');
               return;
             }
-            if (!localStorage.getItem('gh_token')) {
-              this.flash('❌ 未配置 GitHub Token，请在首页右上角设置', 4000);
+            if (!this.canWriteProject()) {
+              this.flash(`❌ ${this.writePermissionMessage()}`, 4000);
               return;
             }
             const transPath = `data/${date}/translations/${padded}.json`;
@@ -1323,8 +1337,8 @@
           const params = new URLSearchParams(location.search);
           const date = params.get('date');
           const id = params.get('id');
-          if (!localStorage.getItem('gh_token')) {
-            this.flash('未配置 GitHub Token，反馈仅保存到本地', 3000);
+          if (!this.canWriteProject()) {
+            this.flash(`${this.writePermissionMessage()}，反馈仅保存到本地`, 3000);
             localStorage.setItem(`feedback_${date}_${id}`, JSON.stringify({type:this.feedback, comment:this.feedbackComment}));
             return;
           }
