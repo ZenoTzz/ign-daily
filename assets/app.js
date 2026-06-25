@@ -1769,14 +1769,37 @@ function appData() {
       const job = this.articleJob(art);
       if (!job) return '';
       const result = this.articleJobResult(art);
-      if (result?.message) return result.message;
       if (result?.step_label) return result.step_label;
+      if (result?.message) return result.message;
       if (result?.status === 'done') return '已写入译文';
       if (result?.status === 'failed') return result.reason || '翻译失败';
       if (job.status === 'queued') return '排队等待';
       if (job.progress <= 10) return '准备翻译';
       if (job.progress >= 90) return '写入与刷新';
       return '模型翻译/质检中';
+    },
+
+    articleJobDetail(art) {
+      const result = this.articleJobResult(art);
+      if (!result) return '';
+      const step = String(result.step || '');
+      const message = String(result.message || '').trim();
+      const label = String(result.step_label || '').trim();
+      const generic = new Set(['正在翻译', '服务器正在翻译', '翻译完成', '已写入译文']);
+      if (message && message !== label && !generic.has(message)) return message;
+      const detailByStep = {
+        queued: '等待服务器领取任务',
+        source: '正在抓取原文和正文缓存',
+        extract: '正在解析正文段落',
+        model: '正在调用翻译模型',
+        parse: '正在整理模型输出',
+        audit: '正在检查译名、格式和质量',
+        repair: '正在按质检结果修复',
+        write: '正在保存译文文件',
+        done: '已保存，可进入文章页复查',
+        failed: result.reason || '需要人工复核'
+      };
+      return detailByStep[step] || '';
     },
 
     async pollActiveJob(startTimer = false) {

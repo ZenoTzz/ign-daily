@@ -34,9 +34,9 @@
     button{cursor:pointer}
     @media (max-width:640px){.header-inner{align-items:flex-start}.brand{flex-wrap:wrap;min-width:0}.brand-title{font-size:16px}.nav-actions{margin-left:auto}.nav-actions .hidden{display:none!important}}
   </style>
-  <link rel="stylesheet" href="assets/style.css?v=20260625articlejob1">
+  <link rel="stylesheet" href="assets/style.css?v=20260625articlejob2">
   <script defer src="assets/exceljs.min.js"></script>
-  <script defer src="assets/app.js?v=20260625hotfix2"></script>
+  <script defer src="assets/app.js?v=20260625steps2"></script>
   <script defer src="assets/alpine.min.js"></script>
 </head>
 <body>
@@ -328,6 +328,7 @@
                       <span x-text="articleJobStatus(art)"></span>
                       <b x-text="`${articleJobProgress(art)}%`"></b>
                     </div>
+                    <small x-show="articleJobDetail(art)" x-text="articleJobDetail(art)"></small>
                     <i><em :style="`width:${articleJobProgress(art)}%`"></em></i>
                   </div>
                 </div>

@@ -1035,6 +1035,13 @@ a.queue-title:hover { color: var(--accent); }
   font-weight: 700;
 }
 
+.article-job-progress small {
+  display: block;
+  margin-top: 0.12rem;
+  color: var(--text-muted);
+  line-height: 1.25;
+}
+
 .article-job-progress i {
   display: block;
   height: 4px;
