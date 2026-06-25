@@ -10,28 +10,57 @@ function request(path, options = {}) {
   if (savedToken) headers.Authorization = `Bearer ${savedToken}`;
   if (options.data && !headers['content-type']) headers['content-type'] = 'application/json';
 
-  return new Promise((resolve, reject) => {
-    wx.request({
-      url: `${app.globalData.apiBase}${path}`,
-      method: options.method || 'GET',
-      data: options.data,
-      header: headers,
-      timeout: 20000,
-      success(res) {
-        if (res.statusCode >= 200 && res.statusCode < 300) {
-          resolve(res.data);
-          return;
+  const url = `${app.globalData.apiBase}${path}`;
+  const attempts = options.retryAttempts || 3;
+
+  function once() {
+    return new Promise((resolve, reject) => {
+      wx.request({
+        url,
+        method: options.method || 'GET',
+        data: options.data,
+        header: headers,
+        timeout: options.timeout || 20000,
+        enableHttp2: false,
+        enableQuic: false,
+        success(res) {
+          if (res.statusCode >= 200 && res.statusCode < 300) {
+            resolve(res.data);
+            return;
+          }
+          const detail = res.data && (res.data.detail || res.data.message);
+          const err = new Error(detail || `请求失败 ${res.statusCode}`);
+          err.statusCode = res.statusCode;
+          err.data = res.data;
+          reject(err);
+        },
+        fail(err) {
+          const raw = err && err.errMsg ? err.errMsg : '网络请求失败';
+          const friendly = raw.includes('-101') || raw.includes('timeout') || raw.includes('fail')
+            ? '服务器连接失败，请稍后重试；如果开着代理/VPN，请先关闭。'
+            : raw;
+          const wrapped = new Error(friendly);
+          wrapped.raw = raw;
+          reject(wrapped);
         }
-        const detail = res.data && (res.data.detail || res.data.message);
-        const err = new Error(detail || `请求失败 ${res.statusCode}`);
-        err.statusCode = res.statusCode;
-        err.data = res.data;
-        reject(err);
-      },
-      fail(err) {
-        reject(new Error(err.errMsg || '网络请求失败'));
-      }
+      });
     });
+  }
+
+  return new Promise(async (resolve, reject) => {
+    let lastErr = null;
+    for (let i = 0; i < attempts; i += 1) {
+      try {
+        const data = await once();
+        resolve(data);
+        return;
+      } catch (err) {
+        lastErr = err;
+        if (err.statusCode || i === attempts - 1) break;
+        await new Promise(r => setTimeout(r, 500 + i * 700));
+      }
+    }
+    reject(lastErr || new Error('网络请求失败'));
   });
 }
 
