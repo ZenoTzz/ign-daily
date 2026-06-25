@@ -1170,10 +1170,6 @@
 
         async approveManualReview() {
           if (this.manualReviewApproving) return;
-          if (!localStorage.getItem('gh_token')) {
-            this.flash('❌ 未配置 GitHub Token，请在首页右上角设置', 4000);
-            return;
-          }
           if (!confirm('确认把这篇待复核草稿发布为正式译文？\n\n建议先修正词库、货币换算等问题。')) return;
           this.manualReviewApproving = true;
           try {
@@ -1181,6 +1177,23 @@
             const date = params.get('date');
             const id = parseInt(params.get('id'));
             const padded = String(id).padStart(2, '0');
+            if (typeof ServerAPI !== 'undefined' && ServerAPI.enabledByHost()) {
+              if (!ServerAPI.token()) {
+                this.flash('❌ 请先在首页登录服务器账号，再人工放行', 5000);
+                return;
+              }
+              const approved = await ServerAPI.request('/translations/approve', {
+                method: 'POST',
+                body: JSON.stringify({ date, article_id: id })
+              });
+              this.article = approved.article || this.article;
+              this.flash('✅ 已人工放行为正式译文');
+              return;
+            }
+            if (!localStorage.getItem('gh_token')) {
+              this.flash('❌ 未配置 GitHub Token，请在首页右上角设置', 4000);
+              return;
+            }
             const transPath = `data/${date}/translations/${padded}.json`;
             const now = new Date().toISOString();
 

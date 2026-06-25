@@ -78,6 +78,11 @@ class TranslationRequest(BaseModel):
     trigger_workflow: bool = True
 
 
+class ManualApproveRequest(BaseModel):
+    date: str = Field(pattern=r"^\d{4}-\d{2}-\d{2}$")
+    article_id: int = Field(ge=1)
+
+
 class DictTermRequest(BaseModel):
     category: str = "terms"
     en: str = Field(min_length=1, max_length=240)
@@ -758,6 +763,56 @@ def request_translation(payload: TranslationRequest, user: sqlite3.Row = Depends
         update_job(job_id, "queued", "已加入翻译队列", 5)
     sync_from_github()
     return {"ok": True, "date": payload.date, "requested_ids": merged_ids, "job_id": job_id, "triggered": payload.trigger_workflow}
+
+
+@app.post("/translations/approve")
+def approve_translation(payload: ManualApproveRequest, user: sqlite3.Row = Depends(current_user)) -> dict[str, Any]:
+    date = payload.date
+    article_id = int(payload.article_id)
+    padded = f"{article_id:02d}"
+    trans_rel = f"data/{date}/translations/{padded}.json"
+    index_rel = f"data/{date}/index.json"
+    fail_rel = f"data/{date}/translation_failures.json"
+    trans_path = APP_DIR / trans_rel
+    if not trans_path.exists():
+        raise HTTPException(status_code=404, detail="Translation draft not found")
+
+    now = datetime.now(timezone.utc).isoformat()
+    data = read_json(trans_path)
+    data["quality_status"] = "manual_approved"
+    data["manual_release_required"] = False
+    data["manual_approved_at"] = now
+    data["manual_approved_by"] = user["username"]
+    data["manual_approved_reason"] = "user approved API audit draft"
+    data["manual_approved_issues"] = data.get("audit_issues", [])
+    data.pop("audit_issues", None)
+    data.pop("audit_failed_at", None)
+    data.pop("audit_failure_reason", None)
+    write_project_file(trans_rel, json_text(data), f"manual approve translation #{article_id}")
+
+    idx = read_json(APP_DIR / index_rel)
+    for art in idx.get("articles", []):
+        if int(art.get("id", -1)) == article_id:
+            art["translation_status"] = "done"
+            art["translation_path"] = f"translations/{padded}.json"
+            art["cn_title"] = data.get("cn_title") or art.get("cn_title")
+            art["summary"] = data.get("opus_summary") or data.get("summary") or art.get("summary")
+            art["translator"] = data.get("translator") or art.get("translator")
+            art["translator_provider"] = data.get("translator_provider") or art.get("translator_provider")
+            art["translator_model"] = data.get("translator_model") or art.get("translator_model")
+            art.pop("translation_error", None)
+            art.pop("translation_failed_at", None)
+            break
+    write_project_file(index_rel, json_text(idx), f"index: manual approve #{article_id}")
+
+    failures = read_json(APP_DIR / fail_rel, {"date": date, "items": {}})
+    if isinstance(failures, dict):
+        failures.setdefault("items", {}).pop(str(article_id), None)
+        failures["updated_at"] = now
+        write_project_file(fail_rel, json_text(failures), f"translation failure: clear #{article_id}")
+
+    sync_from_github()
+    return {"ok": True, "date": date, "article_id": article_id, "article": data}
 
 
 @app.get("/jobs")
