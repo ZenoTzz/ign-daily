@@ -36,7 +36,7 @@
   </style>
   <link rel="stylesheet" href="assets/style.css?v=20260624wapfix1">
   <script defer src="assets/exceljs.min.js"></script>
-  <script defer src="assets/app.js?v=20260625submitretry1"></script>
+  <script defer src="assets/app.js?v=20260625nosw1"></script>
   <script defer src="assets/alpine.min.js"></script>
 </head>
 <body>
@@ -204,7 +204,7 @@
       <!-- Loading -->
       <div x-show="loading" class="loading-text">加载中...</div>
       <!-- Error -->
-      <div x-show="error" class="error-box" x-text="error"></div>
+      <div x-show="error || (!loading && !data)" class="error-box" x-text="error || 'Load failed. Please refresh and try again.'"></div>
 
       <!-- Workbench -->
       <section x-show="data && !loading" x-cloak class="workbench-hero">

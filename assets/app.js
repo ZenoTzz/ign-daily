@@ -2135,12 +2135,21 @@ function appData() {
 
 window.appData = appData;
 
-// ---- PWA Service Worker Registration ----
+// ---- Disable stale PWA cache on the private server build ----
+// The app is data-heavy and server-backed now. A stale Service Worker can make
+// iOS home-screen/Safari sessions show old shells or null fetch responses.
 if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    const swPath = location.pathname.startsWith('/ign-daily/') ? '/ign-daily/sw.js' : '/sw.js';
-    navigator.serviceWorker.register(swPath)
-      .then((reg) => console.log('SW registered:', reg.scope))
-      .catch((err) => console.warn('SW registration failed:', err));
+  window.addEventListener('load', async () => {
+    try {
+      const registrations = await navigator.serviceWorker.getRegistrations();
+      await Promise.all(registrations.map((registration) => registration.unregister()));
+      if (window.caches) {
+        const keys = await caches.keys();
+        await Promise.all(keys.filter((key) => key.startsWith('ign-daily-')).map((key) => caches.delete(key)));
+      }
+      console.log('SW disabled and old IGN Daily caches cleared');
+    } catch (err) {
+      console.warn('SW cleanup failed:', err);
+    }
   });
 }
