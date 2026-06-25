@@ -405,6 +405,12 @@ function appData() {
       const cur = window.appTheme.getThemePreference();
       this.themeIcon = cur === 'dark' ? '☀️' : (cur === 'light' ? '🌒' : '🌗');
       this.loadExportBasket();
+      const loadingGuard = setTimeout(() => {
+        if (this.loading) {
+          this.error = this.error || '加载超时，请点刷新重试；如果刚切换过网络/VPN，请再刷新一次。';
+          this.loading = false;
+        }
+      }, 15000);
       // 马上绑 beforeunload 保护
       window.addEventListener('beforeunload', (e) => {
         if (this.pendingProcessing || this.pendingQueue.length > 0) {
@@ -509,6 +515,8 @@ function appData() {
         console.error(e);
         this.error = '加载失败：' + e.message;
         this.loading = false;
+      } finally {
+        clearTimeout(loadingGuard);
       }
     },
 
@@ -1771,7 +1779,7 @@ function appData() {
     },
 
     async pollActiveJob(startTimer = false) {
-      if (!this.activeJobId) return;
+      if (!this.activeJobId || !this.shouldUseServerApi()) return;
       try {
         const data = await ServerAPI.getJob(this.activeJobId);
         this.activeJob = data?.job || null;
@@ -1787,6 +1795,7 @@ function appData() {
         if (e.status === 404 || e.status === 401) {
           clearInterval(this.jobPollingTimer);
           this.jobPollingTimer = null;
+          if (e.status === 401) return;
         }
       }
       if (startTimer && !this.jobPollingTimer) {
@@ -1815,6 +1824,11 @@ function appData() {
         if (e.status === 401) {
           clearInterval(this.jobPollingTimer);
           this.jobPollingTimer = null;
+          this.activeJob = null;
+          this.activeJobs = [];
+          this.activeJobId = '';
+          localStorage.removeItem('ign_active_job_id');
+          return;
         }
       }
       if (startTimer && !this.jobPollingTimer) {
