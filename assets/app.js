@@ -377,6 +377,7 @@ function appData() {
     translationFailures: {},
     activeJobId: localStorage.getItem('ign_active_job_id') || '',
     activeJob: null,
+    activeJobs: [],
     jobPollingTimer: null,
     toast: '',
 
@@ -1713,7 +1714,7 @@ function appData() {
       if (data?.job_id) {
         this.activeJobId = data.job_id;
         localStorage.setItem('ign_active_job_id', data.job_id);
-        await this.pollActiveJob(true);
+        await this.pollTranslationJobs(true);
       }
       const suffix = data?.triggered ? '，API Actions 已触发' : '';
       this.flash(`已进入翻译池 ${selIds.length} 篇${suffix}`);
@@ -1752,23 +1753,37 @@ function appData() {
       }
     },
 
-    async restoreActiveJob() {
-      if (this.activeJobId) {
-        await this.pollActiveJob(true);
-        return;
-      }
+    async pollTranslationJobs(startTimer = false) {
       if (!this.shouldUseServerApi()) return;
       try {
-        const data = await ServerAPI.listJobs('translation');
-        const latest = (data?.jobs || []).find(job => ['queued', 'running'].includes(job.status)) || data?.jobs?.[0];
-        if (!latest) return;
-        this.activeJob = latest;
-        if (['queued', 'running'].includes(latest.status)) {
-          this.activeJobId = latest.id;
-          localStorage.setItem('ign_active_job_id', latest.id);
-          await this.pollActiveJob(true);
+        const data = await ServerAPI.listJobs('translation', 10);
+        const jobs = data?.jobs || [];
+        this.activeJobs = jobs.filter(job => ['queued', 'running'].includes(job.status));
+        this.activeJob = this.activeJobs[0] || jobs[0] || null;
+        if (this.activeJobs[0]?.id) {
+          this.activeJobId = this.activeJobs[0].id;
+          localStorage.setItem('ign_active_job_id', this.activeJobId);
+        } else {
+          this.activeJobId = '';
+          localStorage.removeItem('ign_active_job_id');
+          clearInterval(this.jobPollingTimer);
+          this.jobPollingTimer = null;
+          if (jobs[0]?.status === 'done') await this.refreshData();
         }
-      } catch (_) {}
+      } catch (e) {
+        if (e.status === 401) {
+          clearInterval(this.jobPollingTimer);
+          this.jobPollingTimer = null;
+        }
+      }
+      if (startTimer && !this.jobPollingTimer) {
+        this.jobPollingTimer = setInterval(() => this.pollTranslationJobs(false), 5000);
+      }
+    },
+
+    async restoreActiveJob() {
+      if (!this.shouldUseServerApi()) return;
+      await this.pollTranslationJobs(true);
     },
 
     async submitRequest() {

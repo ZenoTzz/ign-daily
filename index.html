@@ -239,10 +239,10 @@
             <span>预估成本</span>
           </div>
         </div>
-        <div x-show="activeJob"
+        <div x-show="activeJobs.length || activeJob"
              style="margin-top:0.9rem; padding:0.75rem 0.85rem; border:1px solid var(--border-primary); border-radius:8px; background:var(--bg-card);">
           <div style="display:flex; justify-content:space-between; gap:0.75rem; align-items:center; font-size:0.8rem;">
-            <strong x-text="jobStatusLabel(activeJob)"></strong>
+            <strong x-text="activeJobs.length > 1 ? `${activeJobs.length} 个翻译任务运行中` : jobStatusLabel(activeJob)"></strong>
             <span style="color:var(--text-muted);" x-text="`${activeJob?.progress || 0}%`"></span>
           </div>
           <div style="height:6px; background:var(--bg-card-hover); border-radius:999px; overflow:hidden; margin-top:0.5rem;">
