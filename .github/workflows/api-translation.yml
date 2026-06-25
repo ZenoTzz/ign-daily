@@ -1,6 +1,8 @@
 name: API Translation
 
 on:
+  schedule:
+    - cron: "20,50 * * * *"
   workflow_dispatch:
     inputs:
       fulltext_limit:

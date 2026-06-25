@@ -11,8 +11,8 @@
       "url": "https://www.ign.com/articles/supergirl-producer-says-david-ellison-is-a-big-fan-of-dc-studios-as-paramount-and-warner-bros-merger-looms",
       "publish_time_cn": "2026-06-24 06:55",
       "pub_date": "2026-06-24 06:55",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/03/31/sprgrl-vert-main-2764x4096-dom-2-thumb-1774988214106.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/03/31/sprgrl-vert-main-2764x4096-dom-2-thumb-1774988214106.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/03/31/sprgrl-vert-main-2764x4096-dom-2-thumb-1774988214106.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/03/31/sprgrl-vert-main-2764x4096-dom-2-thumb-1774988214106.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -21,7 +21,11 @@
         "https://assets-prd.ignimgs.com/2026/03/31/sprgrl-vert-main-2764x4096-dom-2-thumb-1774988214106.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-24T09:25:51+08:00"
+      "source_fetched_at": "2026-06-24T09:25:51+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro",
+      "translation_path": "translations/40.json"
     },
     {
       "id": 39,
@@ -359,8 +363,8 @@
       "url": "https://www.ign.com/articles/netflix-horror-game-starring-sadie-sink-and-zo-kravitz-from-oxenfree-developer-night-school-studio",
       "publish_time_cn": "2026-06-24 01:13",
       "pub_date": "2026-06-24 01:13",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/06/23/unhinged-official-game-trailer-netflix-00-01-16-1782234645181.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/23/unhinged-official-game-trailer-netflix-00-01-16-1782234645181.png",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/23/unhinged-official-game-trailer-netflix-00-01-16-1782234645181.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/23/unhinged-official-game-trailer-netflix-00-01-16-1782234645181.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -369,7 +373,11 @@
         "https://assets-prd.ignimgs.com/2026/06/23/unhinged-official-game-trailer-netflix-00-01-16-1782234645181.png"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-24T02:33:08+08:00"
+      "source_fetched_at": "2026-06-24T02:33:08+08:00",
+      "translation_path": "translations/23.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro"
     },
     {
       "id": 24,

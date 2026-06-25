@@ -1013,7 +1013,7 @@ function appData() {
 
     // ---- 一键复制今日摘要（中文标点 + 去 markdown）----
     shouldUseServerApi() {
-      return Boolean(localStorage.getItem('ign_api_token')) || ServerAPI.enabledByHost();
+      return ServerAPI.enabledByHost() && Boolean(localStorage.getItem('ign_api_token'));
     },
 
     async checkServerSession() {

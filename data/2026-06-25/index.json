@@ -2,12 +2,763 @@
   "date": "2026-06-25",
   "articles": [
     {
-      "id": 3,
+      "id": 30,
+      "category": "行业动态",
+      "emoji": "📈",
+      "en_title": "Micron CEO Expects RAM Shortage to Last Through 2027, Start to Ease in 2028",
+      "cn_title": "美光CEO：内存短缺至2027年，2028年起缓解",
+      "summary": "美光CEO Sanjay Mehrotra在公司2026财年第三季度财报中表示，受AI驱动需求及供应限制影响，内存短缺将至少持续到2027年底，2028年才能逐步缓解。这导致游戏硬件价格居高不下，例如Steam Machine从原定约750美元(约合人民币5108元)涨至1050美元(约合人民币7150元)。",
+      "url": "https://www.ign.com/articles/micron-ceo-expects-ram-shortage-to-last-through-2027-start-to-ease-in-2028",
+      "publish_time_cn": "2026-06-25 07:40",
+      "pub_date": "2026-06-25 07:40",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/01/12/ramshortages-blogroll-1768260020535.jpg",
+      "translation_status": "done",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/01/12/ramshortages-blogroll-1768260020535.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/01/12/ramshortages-blogroll-1768260020535.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/01/12/ramshortages-blogroll-1768260020535.jpg?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/01/12/ramshortages-blogroll-1768260020535.jpg?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/01/12/ramshortages-blogroll-1768260020535.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-25T08:32:54+08:00",
+      "translation_path": "translations/30.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro"
+    },
+    {
+      "id": 29,
       "category": "游戏新闻",
       "emoji": "🎮",
+      "en_title": "GTA 6 May Be Borrowing a Major Mechanic from Red Dead Redemption 2",
+      "cn_title": "GTA6或借鉴《荒野大镖客：救赎2》机制",
+      "summary": "GTA6可能借鉴《荒野大镖客：救赎2》的武器携带机制，玩家需更谨慎选择装备。Rockstar公布的终极版显示，玩家将获得免费车库及武器储物柜，可自定义配置。此前泄露的实机画面也暗示了类似的武器携带系统。本作将于11月19日登陆XBOX Series和PS5，标准版售价79.99美元(约合人民币545元)。",
+      "url": "https://www.ign.com/articles/gta-6-may-be-borrowing-a-major-mechanic-from-red-dead-redemption-2",
+      "publish_time_cn": "2026-06-25 06:05",
+      "pub_date": "2026-06-25 06:05",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/24/gta-6-jason-duvall-1782336015774.jpg",
+      "translation_status": "done",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/24/gta-6-jason-duvall-1782336015774.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/24/gta-6-jason-duvall-1782336015774.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/24/gta-6-jason-duvall-1782336015774.jpg?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/24/gta-6-jason-duvall-1782336015774.jpg?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/24/gta-6-jason-duvall-1782336015774.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-25T06:47:19+08:00",
+      "translation_path": "translations/29.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro"
+    },
+    {
+      "id": 28,
+      "category": "游戏新闻",
+      "emoji": "😔",
+      "en_title": "Bungie Communications Manager Says Destiny 2 fans Shouldn't Blame Themselves for Game Coming to an End",
+      "cn_title": "Bungie 经理劝《命运2》玩家莫自责：无需为游戏终结内疚",
+      "summary": "Bungie 突然宣布将停止为《命运2》添加新内容后，社区陷入哀悼。一名玩家反思是否本可做得更多，Bungie 通讯经理 Dylan Gafner 回应称玩家已付出一切，无需自责。与此同时，Bungie 全力投入《失落星船：马拉松》，但《命运3》未在开发，公司可能面临大规模裁员，前景堪忧。",
+      "url": "https://www.ign.com/articles/bungie-communications-manager-says-destiny-2-fans-shouldnt-blame-themselves-for-game-coming-to-an-end",
+      "publish_time_cn": "2026-06-25 05:21",
+      "pub_date": "2026-06-25 05:21",
+      "cover_image": "https://assets-prd.ignimgs.com/2024/05/23/destiny2thumb-1716471330076.png",
+      "translation_status": "done",
+      "images": [
+        "https://assets-prd.ignimgs.com/2024/05/23/destiny2thumb-1716471330076.png?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2024/05/23/destiny2thumb-1716471330076.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2024/05/23/destiny2thumb-1716471330076.png?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2024/05/23/destiny2thumb-1716471330076.png?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2024/05/23/destiny2thumb-1716471330076.png"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-25T05:47:20+08:00",
+      "translation_path": "translations/28.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro"
+    },
+    {
+      "id": 26,
+      "category": "游戏新闻",
+      "emoji": "💿",
+      "en_title": "Some Retailers Are Refusing to Sell GTA 6 Due to the Lack of a Disc",
+      "cn_title": "部分零售商拒绝销售《GTA6》实体版：因不含光盘",
+      "summary": "两家游戏零售商Video Games Plus和Loot Box Gaming宣布将不销售《GTA6》，原因是该作实体版仅提供数字兑换码而不含光盘。VGP表示此举符合其支持实体媒体的政策，并非针对Rockstar。Rockstar此举或为防止泄密。《GTA6》标准版售价79.99美元(约合人民币545元)，终极版99.99美元(约合人民币681元)，将于11月19日登陆PS5和XBOX Series。",
+      "url": "https://www.ign.com/articles/some-retailers-are-refusing-to-sell-gta-6-due-to-the-lack-of-a-disc",
+      "publish_time_cn": "2026-06-25 03:09",
+      "pub_date": "2026-06-25 03:09",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/24/gta-6-vice-city-pre-order-bonus-1782327421189.jpg",
+      "translation_status": "done",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/24/gta-6-vice-city-pre-order-bonus-1782327421189.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/24/gta-6-vice-city-pre-order-bonus-1782327421189.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/24/gta-6-vice-city-pre-order-bonus-1782327421189.jpg?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/24/gta-6-vice-city-pre-order-bonus-1782327421189.jpg?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/24/gta-6-vice-city-pre-order-bonus-1782327421189.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-25T03:47:35+08:00",
+      "translation_path": "translations/26.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro"
+    },
+    {
+      "id": 27,
+      "category": "游戏新闻",
+      "emoji": "🎮",
+      "en_title": "GTA 6 Fans Think They Spotted a Lore Mistake, but It's Likely on Purpose",
+      "cn_title": "《GTA6》粉丝发现剧情BUG？或为有意为之",
+      "summary": "《GTA6》粉丝发现终极版赠送的左轮手枪描述提及《罪恶都市》汤米·维赛迪庄园，但按Rockstar设定，汤米属于3D宇宙，不应出现在高清宇宙。然而这可能是刻意为之的彩蛋，类似《GTA5》中的格罗夫街。《GTA6》终极版售价100美元(约合人民币681元)，将于11月19日登陆XBOX Series和PS5。",
+      "url": "https://www.ign.com/articles/gta-6-fans-think-they-spotted-a-lore-mistake-but-its-likely-on-purpose",
+      "publish_time_cn": "2026-06-25 02:33",
+      "pub_date": "2026-06-25 02:33",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/24/vintage-vice-city-pack-exclusive-looks-01-1782321712483.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/24/vintage-vice-city-pack-exclusive-looks-01-1782321712483.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/24/vintage-vice-city-pack-exclusive-looks-01-1782321712483.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/24/vintage-vice-city-pack-exclusive-looks-01-1782321712483.jpg?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/24/vintage-vice-city-pack-exclusive-looks-01-1782321712483.jpg?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/24/vintage-vice-city-pack-exclusive-looks-01-1782321712483.jpg",
+        "https://assets-prd.ignimgs.com/2026/06/24/ultimate-edition-hawk-and-little-morgan-revolvers-02-1782321536194.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-25T03:47:47+08:00"
+    },
+    {
+      "id": 24,
+      "category": "行业动态",
+      "emoji": "💰",
+      "en_title": "Has $80 GTA 6 Opened the Door to More Expensive Games? Analysts Respond",
+      "cn_title": "《GTA6》80美元(约合人民币545元)定价会带涨游戏价格吗？",
+      "summary": "Rockstar确认《GTA6》标准版售价80美元(约合人民币545元)，引发行业对游戏涨价的讨论。多位分析师向IGN表示，只有少数顶级IP如《GTA》和《马力欧卡丁车世界》能支撑这一价格，其他厂商盲目跟进可能面临市场反噬。Take-Two此前在PS5/XBOX Series时代推高至70美元(约合人民币477元)的先例，让部分分析师认为80美元(约合人民币545元)或成为新标杆，但多数强调需要作品自身实力。",
+      "url": "https://www.ign.com/articles/has-80-gta-6-opened-the-door-to-more-expensive-games-analysts-respond",
+      "publish_time_cn": "2026-06-25 02:13",
+      "pub_date": "2026-06-25 02:13",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/24/ultimate-edition-electric-fang-02-1782295792417.jpg",
+      "translation_status": "done",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/24/ultimate-edition-electric-fang-02-1782295792417.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/24/ultimate-edition-electric-fang-02-1782295792417.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/24/ultimate-edition-electric-fang-02-1782295792417.jpg?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/24/ultimate-edition-electric-fang-02-1782295792417.jpg?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/24/ultimate-edition-electric-fang-02-1782295792417.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-25T02:47:20+08:00",
+      "translation_path": "translations/24.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro"
+    },
+    {
+      "id": 25,
+      "category": "影视资讯",
+      "emoji": "🎬",
+      "en_title": "Actors Like Callum Turner and Jacob Elordi Reportedly 'Fit the Prototype' for Amazon's New James Bond",
+      "cn_title": "《詹姆斯·邦德》Callum Turner与Jacob Elordi据称符合亚马逊新邦德原型",
+      "summary": "Deadline报道称，《沙丘》导演丹尼斯·维伦纽瓦已开始亲自通知007试镜演员，第二轮试镜将于8月进行。目前候选者已缩减至5到20人，Harris Dickinson、Callum Turner和Jacob Elordi符合制片人对下一任邦德的期望。亚马逊有望年底前宣布人选，计划2027年开拍，首部亚马逊主导的007电影将由维伦纽瓦执导、史蒂文·奈特编剧，预计2028年上映。",
+      "url": "https://www.ign.com/articles/actors-like-callum-turner-and-jacob-elordi-reportedly-fit-the-prototype-for-amazons-new-james-bond",
+      "publish_time_cn": "2026-06-25 01:41",
+      "pub_date": "2026-06-25 01:41",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/24/gettyimages-2266289217-1782322773785.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/24/gettyimages-2266289217-1782322773785.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/24/gettyimages-2266289217-1782322773785.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/24/gettyimages-2266289217-1782322773785.jpg?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/24/gettyimages-2266289217-1782322773785.jpg?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/24/gettyimages-2266289217-1782322773785.jpg",
+        "https://assets-prd.ignimgs.com/2026/06/24/gettyimages-2266289217-1782322815349.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-25T02:47:22+08:00"
+    },
+    {
+      "id": 21,
+      "category": "评测评分",
+      "emoji": "🎬",
+      "en_title": "Supergirl Review",
+      "cn_title": "《超级少女》评测：一半惊喜一半平庸",
+      "summary": "《超级少女》将于6月26日上映。Milly Alcock 饰演的 Kara 角色出色，撑起了影片的亮点，但角色弧光不足、故事铺垫拖沓，整体表现喜忧参半。作为DCU第二部作品，影片在视觉和幽默上有亮点，但剧情和反派塑造未能达到预期。",
+      "url": "https://www.ign.com/articles/supergirl-movie-review-2026-milly-alcock",
+      "publish_time_cn": "2026-06-25 00:00",
+      "pub_date": "2026-06-25 00:00",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/23/supergirl-thumb-1782242447045.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/23/supergirl-thumb-1782242447045.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/23/supergirl-thumb-1782242447045.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/23/supergirl-thumb-1782242447045.jpg?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/23/supergirl-thumb-1782242447045.jpg?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/23/supergirl-thumb-1782242447045.jpg",
+        "https://assets-prd.ignimgs.com/2026/06/23/supergirl-thumb-1782242567570.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-25T00:47:59+08:00",
+      "pending_dict": [
+        {
+          "en": "Supergirl",
+          "cn": "《超级少女》",
+          "cat": "movies_tv",
+          "source": "ai_guess",
+          "reason": "《超级少女》是大陆常用译名，但词库中无此条目，需确认是否采用官方译名。"
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "category": "游戏新闻",
+      "emoji": "📖",
+      "en_title": "Thief: Pulse of Promise Brings the Hit Stealth Gaming Franchise to Comics",
+      "cn_title": "《神偷》系列将推漫画《Pulse of Promise》，填补剧情空白",
+      "summary": "《神偷》系列今年迎来全面复兴，除重制版游戏外，官方还推出全新漫画《Thief: Pulse of Promise》。该漫画由Bit Bot与Eidos-Montréal合作打造，共147页，故事设定在1998年《神偷：黑暗计划》与2000年《神偷2：金属时代》之间。目前正在BackerKit平台众筹，提供不同版本及雕像、毛绒玩偶等收藏品。",
+      "url": "https://www.ign.com/articles/thief-pulse-of-promise-graphic-novel-bit-bot",
+      "publish_time_cn": "2026-06-25 00:00",
+      "pub_date": "2026-06-25 00:00",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/23/mixcollage-23-jun-2026-02-30-pm-7115-1782239456150.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/23/mixcollage-23-jun-2026-02-30-pm-7115-1782239456150.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/23/mixcollage-23-jun-2026-02-30-pm-7115-1782239456150.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/23/mixcollage-23-jun-2026-02-30-pm-7115-1782239456150.jpg?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/23/mixcollage-23-jun-2026-02-30-pm-7115-1782239456150.jpg?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/23/mixcollage-23-jun-2026-02-30-pm-7115-1782239456150.jpg",
+        "https://assets-prd.ignimgs.com/2026/06/23/thief-cover-emanuele-1782238649583.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-25T00:48:03+08:00",
+      "pending_dict": [
+        {
+          "en": "Thief",
+          "cn": "神偷",
+          "cat": "games",
+          "source": "ai_guess",
+          "reason": "系列有常见中文译名但词库未收录，建议确认"
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "category": "游戏新闻",
+      "emoji": "🎮",
+      "en_title": "Unhinged Is a New Horror Game for Netflix That Makes Perfect Sense for the Platform | IGN Preview",
+      "cn_title": "《Unhinged》Netflix恐怖新游试玩：手机变身游戏道具",
+      "summary": "Netflix恐怖游戏《Unhinged》由《Oxenfree》开发商Night School Studio制作，Zoë Kravitz、Sadie Sink与Troy Baker配音。游戏利用手机作为游戏内手机和手电筒，玩家通过触摸屏幕与角色互动，操作直观。流程约20-40分钟，6月30日上线Netflix。",
+      "url": "https://www.ign.com/articles/unhinged-is-a-new-horror-game-netflix-zoe-kravitz-sadie-sink",
+      "publish_time_cn": "2026-06-25 00:00",
+      "pub_date": "2026-06-25 00:00",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/18/unhinged-netflix-blogroll-02-1781812820282.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/18/unhinged-netflix-blogroll-02-1781812820282.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/18/unhinged-netflix-blogroll-02-1781812820282.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/18/unhinged-netflix-blogroll-02-1781812820282.jpg?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/18/unhinged-netflix-blogroll-02-1781812820282.jpg?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/18/unhinged-netflix-blogroll-02-1781812820282.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-25T00:48:06+08:00",
+      "pending_dict": [
+        {
+          "en": "Unhinged",
+          "cn": "《Unhinged》",
+          "cat": "games",
+          "source": "ai_guess",
+          "reason": "无官方中文译名，建议保留英文"
+        },
+        {
+          "en": "Oxenfree",
+          "cn": "《狼奔豕突》",
+          "cat": "games",
+          "source": "ai_guess",
+          "reason": "社区常用译名，需确认是否官方"
+        },
+        {
+          "en": "Night School Studio",
+          "cn": "Night School Studio",
+          "cat": "companies",
+          "source": "ai_guess",
+          "reason": "无稳定官方中文名，保留英文"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "category": "游戏新闻",
+      "emoji": "🎮",
+      "en_title": "Fortnite Begins Reselling Old Battle Pass Skins in Next Update",
+      "cn_title": "《堡垒之夜》下个更新开始复售旧战斗通行证皮肤",
+      "summary": "《堡垒之夜》下个更新将复售旧战斗通行证皮肤，首批回归的是绝对毁灭赛季的漫威角色。此前限时独占政策终结，新玩家也能入手旧皮肤。战斗通行证售价10美元(约合人民币68元)，远低于单买皮肤，对Epic和玩家是双赢。",
+      "url": "https://www.ign.com/articles/fortnite-begins-reselling-old-battle-pass-skins-in-next-update",
+      "publish_time_cn": "2026-06-24 23:24",
+      "pub_date": "2026-06-24 23:24",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/24/yoz2t8svdexg1-1782311956102.webp?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "done",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/24/yoz2t8svdexg1-1782311956102.webp?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/24/yoz2t8svdexg1-1782311956102.webp?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/24/yoz2t8svdexg1-1782311956102.webp?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/24/yoz2t8svdexg1-1782311956102.webp?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/24/yoz2t8svdexg1-1782311956102.webp"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-24T23:47:53+08:00",
+      "pending_dict": [
+        {
+          "en": "Absolute Doom",
+          "cn": "绝对毁灭赛季",
+          "cat": "terms",
+          "source": "ai_guess",
+          "reason": "赛季名，无官方中文译名"
+        },
+        {
+          "en": "Gwenpool",
+          "cn": "格温侍",
+          "cat": "terms",
+          "source": "ai_guess",
+          "reason": "漫威角色，常用译名待确认"
+        },
+        {
+          "en": "Neopets",
+          "cn": "尼奥宠物",
+          "cat": "terms",
+          "source": "ai_guess",
+          "reason": "老牌虚拟宠物网站，译名待确认"
+        }
+      ],
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro",
+      "translation_path": "translations/18.json"
+    },
+    {
+      "id": 19,
+      "category": "影视资讯",
+      "emoji": "🎬",
+      "en_title": "Invincible Renewed for Season 6",
+      "cn_title": "《Invincible》续订第六季",
+      "summary": "Prime Video 宣布续订《Invincible》第六季，使该剧成为平台最长寿的动画剧集。第五季定于2027年播出，创作人 Robert Kirkman 表示故事远未结束。提前续订将确保保持每年一季的稳定更新节奏，第六季预计2028年推出。",
+      "url": "https://www.ign.com/articles/invincible-renewed-for-season-6",
+      "publish_time_cn": "2026-06-24 23:07",
+      "pub_date": "2026-06-24 23:07",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/03/16/invincible-primer-s4-thumb-1773701983819.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/03/16/invincible-primer-s4-thumb-1773701983819.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/03/16/invincible-primer-s4-thumb-1773701983819.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/03/16/invincible-primer-s4-thumb-1773701983819.jpg?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/03/16/invincible-primer-s4-thumb-1773701983819.jpg?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/03/16/invincible-primer-s4-thumb-1773701983819.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-24T23:48:07+08:00"
+    },
+    {
+      "id": 20,
+      "category": "游戏新闻",
+      "emoji": "🎮",
+      "en_title": "GTA 6’s Physical Edition Not Including a Disc Is About Control and Secrecy",
+      "cn_title": "《GTA6》《GTA 6》实体版不含光盘：只为控制与保密",
+      "summary": "《GTA 6》预购已开启，但实体版盒内仅有一张兑换码纸片，不含光盘。标准版售价80美元(约合人民币545元)，终极版100美元(约合人民币681元)。Rockstar此举意在控制二手交易和防止剧情泄露，但也引发玩家对全数字未来的担忧。",
+      "url": "https://www.ign.com/articles/gta-6s-physical-edition-not-including-a-disc-is-about-control-and-secrecy",
+      "publish_time_cn": "2026-06-24 23:04",
+      "pub_date": "2026-06-24 23:04",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/24/gta-6-no-disc-blog-1782312996654.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/24/gta-6-no-disc-blog-1782312996654.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/24/gta-6-no-disc-blog-1782312996654.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/24/gta-6-no-disc-blog-1782312996654.jpg?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/24/gta-6-no-disc-blog-1782312996654.jpg?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/24/gta-6-no-disc-blog-1782312996654.jpg",
+        "https://assets-prd.ignimgs.com/2026/06/24/gta-6-no-disc-hero-1782313188174.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-24T23:48:10+08:00"
+    },
+    {
+      "id": 17,
+      "category": "游戏新闻",
+      "emoji": "🎮",
+      "en_title": "GTA 6 Story Features Distinct 'Chapters' — Could Red Dead Redemption 2 Hold the Clue to How It Works?",
+      "cn_title": "《GTA6》故事确认分章节，《荒野大镖客：救赎2》模式引猜想",
+      "summary": "Rockstar官网确认《GTA6》故事将分章节，售价100美元(约合人民币681元)的终极版物品随章节解锁。粉丝猜测结构类似《荒野大镖客：救赎2》，可能有时间跳跃与地图变化，但玩家有望保留安全屋。细节尚待公布。",
+      "url": "https://www.ign.com/articles/gta-6-story-features-distinct-chapters-could-red-dead-redemption-2-hold-the-clue-to-how-it-works",
+      "publish_time_cn": "2026-06-24 21:58",
+      "pub_date": "2026-06-24 21:58",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/24/ultimate-edition-safehouse-vehicles-03-1782295792412.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "done",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/24/ultimate-edition-safehouse-vehicles-03-1782295792412.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/24/official-cover-art-square-1782298388126.jpg",
+        "https://assets-prd.ignimgs.com/2026/06/24/ultimate-edition-safehouse-vehicles-03-1782295792412.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/24/ultimate-edition-safehouse-vehicles-03-1782295792412.jpg?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/24/ultimate-edition-safehouse-vehicles-03-1782295792412.jpg?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/24/ultimate-edition-safehouse-vehicles-03-1782295792412.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-24T22:48:12+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro",
+      "translation_path": "translations/17.json"
+    },
+    {
+      "id": 3,
+      "category": "评测评分",
+      "emoji": "🎬",
+      "en_title": "The Get Out Review",
+      "cn_title": "《The Get Out》评测：罗素·克劳也救不了的平庸之作",
+      "summary": "由罗素·克劳主演的黑帮犯罪喜剧《The Get Out》将于6月26日上映。尽管克劳的表演充满魅力，但影片故事松散、缺乏亮点，暴力与幽默的平衡不佳，第三幕平淡无奇，整体令人失望。",
+      "url": "https://www.ign.com/articles/the-get-out-review-russell-crowe",
+      "publish_time_cn": "2026-06-24 21:00",
+      "pub_date": "2026-06-24 21:00",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/23/amajv8xmk8cg-1782227104825.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/23/amajv8xmk8cg-1782227104825.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/23/amajv8xmk8cg-1782227104825.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/23/amajv8xmk8cg-1782227104825.jpg?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/23/amajv8xmk8cg-1782227104825.jpg?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/23/amajv8xmk8cg-1782227104825.jpg",
+        "https://assets-prd.ignimgs.com/2026/06/23/salh26gwkbrc-1782227370111.jpg",
+        "https://assets-prd.ignimgs.com/2026/06/23/itborbebtydw-1782232482929.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-24T22:25:17+08:00",
+      "pending_dict": [
+        {
+          "en": "The Get Out",
+          "cn": "逃离",
+          "cat": "movies_tv",
+          "source": "ai_guess",
+          "reason": "无官方中文译名，根据剧情猜测，需确认"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "category": "行业动态",
+      "emoji": "🎮",
+      "en_title": "Tim Sweeney Interview: Epic Games CEO on AI in UE6 and Why Games Struggle to Find Success",
+      "cn_title": "《Epic Games》Epic CEO谈UE6 AI集成与游戏成功困境",
+      "summary": "Epic Games CEO Tim Sweeney与EVP Marcus Wassmer在接受IGN采访时，透露Unreal Engine 6将于2027年底进入抢先体验。",
+      "url": "https://www.ign.com/articles/tim-sweeney-interview-epic-games-ceo-on-ai-in-ue6-and-why-games-struggle-to-find-success",
+      "publish_time_cn": "2026-06-24 21:00",
+      "pub_date": "2026-06-24 21:00",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/23/unrealfest-timsweeney-interview-blogroll-1782239335417.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "done",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/23/unrealfest-timsweeney-interview-blogroll-1782239335417.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/23/unrealfest-timsweeney-interview-blogroll-1782239335417.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/23/unrealfest-timsweeney-interview-blogroll-1782239335417.jpg?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/23/unrealfest-timsweeney-interview-blogroll-1782239335417.jpg?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/23/unrealfest-timsweeney-interview-blogroll-1782239335417.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-24T22:25:38+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro",
+      "translation_path": "translations/04.json"
+    },
+    {
+      "id": 5,
+      "category": "游戏新闻",
+      "emoji": "💿",
+      "en_title": "Some Fear GTA 6 Physical Version Marks the End of the Video Game Disc",
+      "cn_title": "《GTA6》实体版不含光盘 引光盘消亡担忧",
+      "summary": "Rockstar宣布《GTA6》实体版仅包含下载码，不含光盘，售价80美元(约合人民币545元)。此举被部分玩家视为游戏光盘的终结信号，担忧影响游戏保存与二手交易。但Rockstar或为防泄露而采取此策略，目前尚未回应IGN置评请求。",
+      "url": "https://www.ign.com/articles/some-fear-gta-6-physical-version-marks-the-end-of-the-video-game-disc",
+      "publish_time_cn": "2026-06-24 20:06",
+      "pub_date": "2026-06-24 20:06",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/18/clean-gta6-art-1781800475612.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/18/clean-gta6-art-1781800475612.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/18/clean-gta6-art-1781800475612.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/18/clean-gta6-art-1781800475612.jpg?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/18/clean-gta6-art-1781800475612.jpg?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/18/clean-gta6-art-1781800475612.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-24T22:25:43+08:00"
+    },
+    {
+      "id": 6,
+      "category": "评测评分",
+      "emoji": "🥊",
+      "en_title": "Dead or Alive 6 Last Round Review So Far",
+      "cn_title": "《死或生6：Last Round》评测进行中：手感依旧扎实",
+      "summary": "《死或生6：Last Round》目前评测印象积极。本作以三角系统（打击克投技、投技克返技、返技克打击）为核心，上手简单但深度十足，返技系统尤其令人满足。剧情模式轻松有趣，女性角色戏份突出。不过本次重制版缺少回滚式网络代码，且DLC角色解锁码存在问题，需要更多时间测试后再给出评分。",
+      "url": "https://www.ign.com/articles/dead-or-alive-6-last-round-review",
+      "publish_time_cn": "2026-06-24 20:00",
+      "pub_date": "2026-06-24 20:00",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/23/deadoralive6-lastround-review-blogroll-1782252930652.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/23/deadoralive6-lastround-review-blogroll-1782252930652.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/23/deadoralive6-lastround-review-blogroll-1782252930652.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/23/deadoralive6-lastround-review-blogroll-1782252930652.jpg?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/23/deadoralive6-lastround-review-blogroll-1782252930652.jpg?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/23/deadoralive6-lastround-review-blogroll-1782252930652.jpg",
+        "https://assets-prd.ignimgs.com/2026/06/23/deadoralive6-lastround-review-yt-1782252921745.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-24T22:25:52+08:00",
+      "pending_dict": [
+        {
+          "en": "Dead or Alive 6: Last Round",
+          "cn": "死或生6：最后一回合",
+          "cat": "games",
+          "source": "ai_guess",
+          "reason": "词库无记录，中文译名需确认"
+        },
+        {
+          "en": "Mai Shiranui",
+          "cn": "不知火舞",
+          "cat": "people",
+          "source": "ai_guess",
+          "reason": "词库无记录，但为格斗游戏常见角色，需确认是否使用标准译名"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "category": "评测评分",
+      "emoji": "🦊",
+      "en_title": "Star Fox Review",
+      "cn_title": "《星际火狐》评测",
+      "summary": "基于对《星际火狐64》的精良重制，最新版《星际火狐》在Switch 2上焕然一新。它保留了分支路径的经典结构，新增挑战模式与全新过场动画，角色塑造更加丰满。主战役配合练级挑战能提供约20小时的优质内容，但多人对战模式仅有三张地图，内容略显单薄。",
+      "url": "https://www.ign.com/articles/star-fox-review",
+      "publish_time_cn": "2026-06-24 20:00",
+      "pub_date": "2026-06-24 20:00",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/23/starfox-review-blogroll-1782256362189.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/23/starfox-review-blogroll-1782256362189.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/23/starfox-review-blogroll-1782256362189.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/23/starfox-review-blogroll-1782256362189.jpg?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/23/starfox-review-blogroll-1782256362189.jpg?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/23/starfox-review-blogroll-1782256362189.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-24T22:26:02+08:00"
+    },
+    {
+      "id": 8,
+      "category": "游戏新闻",
+      "emoji": "🔒",
+      "en_title": "GTA 6's Ultimate Edition Locks Off Exclusive Mission and Shops, But How Will It Work?",
+      "cn_title": "《GTA6》终极版锁定独家任务与商店",
+      "summary": "《GTA6》终极版售价100美元(约合人民币681元)(约合720元人民币)，将独占开放部分开放世界商店（理发店、服装店、纹身店）及一个帮派据点任务，标准版玩家无法进入或游玩。Rockstar尚未明确锁定机制，推测可能涉及门锁、商店关闭或需购买会员升级。此举引发对单机内容付费门槛的讨论，但并未减弱对11月19日发售的期待。",
+      "url": "https://www.ign.com/articles/gta-6s-ultimate-edition-locks-off-exclusive-mission-and-shops-but-how-will-it-work",
+      "publish_time_cn": "2026-06-24 19:46",
+      "pub_date": "2026-06-24 19:46",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/24/gta-6-ultiamte-blog-1782301227089.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/24/gta-6-ultiamte-blog-1782301227089.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/24/gta-6-ultiamte-blog-1782301227089.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/24/gta-6-ultiamte-blog-1782301227089.jpg?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/24/gta-6-ultiamte-blog-1782301227089.jpg?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/24/gta-6-ultiamte-blog-1782301227089.jpg",
+        "https://assets-prd.ignimgs.com/2026/06/24/gta-6-ultiamte-hero-1782301471756.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-24T22:26:12+08:00"
+    },
+    {
+      "id": 9,
+      "category": "游戏新闻",
+      "emoji": "🎮",
+      "en_title": "Grand Theft Auto 6 'Plays Best on PS5,' Sony Boasts — Here's Why",
+      "cn_title": "《侠盗猎车手》索尼称《GTA6》在PS5上表现最佳并解释原因",
+      "summary": "索尼在PlayStation博客发文称，《GTA6》将在PS5上通过DualSense手柄的触觉反馈和内置扬声器、Tempest 3D音频以及高速SSD实现最佳体验，提供近乎瞬时的加载和高精准音频定位。索尼强调与Rockstar的紧密合作，并提醒玩家该作无PS4版，是时候升级硬件了。",
+      "url": "https://www.ign.com/articles/grand-theft-auto-6-plays-best-on-ps5-sony-boasts-heres-why",
+      "publish_time_cn": "2026-06-24 19:44",
+      "pub_date": "2026-06-24 19:44",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/24/vintage-vice-city-pack-exclusive-looks-04-1782295882342.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "done",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/24/vintage-vice-city-pack-exclusive-looks-04-1782295882342.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/24/vintage-vice-city-pack-exclusive-looks-04-1782295882342.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/24/vintage-vice-city-pack-exclusive-looks-04-1782295882342.jpg?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/24/vintage-vice-city-pack-exclusive-looks-04-1782295882342.jpg?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/24/vintage-vice-city-pack-exclusive-looks-04-1782295882342.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-24T22:26:14+08:00",
+      "translation_path": "translations/09.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro"
+    },
+    {
+      "id": 10,
+      "category": "游戏新闻",
+      "emoji": "🖼️",
+      "en_title": "Grand Theft Auto 6: Rockstar Releases 63 New Screenshots",
+      "cn_title": "《Rockstar》《侠盗猎车手》《GTA6》63张新截图曝光，定价80美元(约合人民币545元)起",
+      "summary": "Rockstar发布了63张《GTA6》新截图，展示了角色、世界及复古的罪恶都市风情。同时官方公布了游戏定价：标准版80美元(约合人民币545元)，终极版100美元(约合人民币681元)，今晚开放预购。游戏将于2026年11月19日登陆PS5和XBOX Series。",
+      "url": "https://www.ign.com/articles/grand-theft-auto-6-rockstar-releases-63-new-screenshots",
+      "publish_time_cn": "2026-06-24 19:11",
+      "pub_date": "2026-06-24 19:11",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/24/vintage-vice-city-pack-exclusive-looks-03-1782295882342.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/24/vintage-vice-city-pack-exclusive-looks-03-1782295882342.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/24/vintage-vice-city-pack-exclusive-looks-03-1782295882342.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/24/vintage-vice-city-pack-exclusive-looks-03-1782295882342.jpg?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/24/vintage-vice-city-pack-exclusive-looks-03-1782295882342.jpg?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/24/vintage-vice-city-pack-exclusive-looks-03-1782295882342.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-24T22:26:25+08:00"
+    },
+    {
+      "id": 11,
+      "category": "游戏新闻",
+      "emoji": "💰",
+      "en_title": "GTA 6 Price Finally Confirmed, Features a 'Single-Player Experience' at Launch",
+      "cn_title": "《GTA6》售价正式公布，首发包含单人模式",
+      "summary": "Rockstar正式确认《GTA6》售价为79.99美元(约合人民币545元)(约合576元人民币)，豪华版99.99美元(约合人民币681元)(约合720元人民币)，相较本世代标准70美元(约合人民币477元)上涨10美元(约合人民币68元)。游戏首发将提供单人体验，没有新的《GTA Online》版本，现有模式将继续运营。预购将于6月25日零点开启，实体版仅包含兑换码。Take-Two已投入约10至15亿美元(约合人民币68至102亿元)开发成本，远超3A游戏平均水平。",
+      "url": "https://www.ign.com/articles/gta-6-price-finally-confirmed-features-a-single-player-experience-at-launch",
+      "publish_time_cn": "2026-06-24 18:36",
+      "pub_date": "2026-06-24 18:36",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/24/ultimate-edition-stock-305-04-1782295792400.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/24/ultimate-edition-stock-305-04-1782295792400.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/24/ultimate-edition-stock-305-04-1782295792400.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/24/ultimate-edition-stock-305-04-1782295792400.jpg?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/24/ultimate-edition-stock-305-04-1782295792400.jpg?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/24/ultimate-edition-stock-305-04-1782295792400.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-24T22:26:47+08:00"
+    },
+    {
+      "id": 12,
+      "category": "游戏新闻",
+      "emoji": "🎮",
+      "en_title": "Grand Theft Auto 6 Physical Copies Won't Include a Disc, Will Just Be a Code in a Box",
+      "cn_title": "《侠盗猎车手》《GTA6》实体版不含光盘，仅提供下载码",
+      "summary": "Rockstar 确认《GTA6》实体版将不含光盘，盒内仅提供数字下载码。实体版可于11月12日提前获取并预载游戏，比正式发售日11月19日早一周。终极版售价100美元(约合人民币681元)，包含独占载具、武器等内容。值得注意的是，实体版不含光盘在近年虽已常见，但如此大规模的游戏放弃实体介质仍属罕见。",
+      "url": "https://www.ign.com/articles/grand-theft-auto-6-physical-copies-wont-include-a-disc-will-just-be-a-code-in-a-box",
+      "publish_time_cn": "2026-06-24 18:24",
+      "pub_date": "2026-06-24 18:24",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/24/ultimate-edition-01-1782295792416.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/24/ultimate-edition-01-1782295792416.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/24/ultimate-edition-01-1782295792416.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/24/ultimate-edition-01-1782295792416.jpg?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/24/ultimate-edition-01-1782295792416.jpg?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/24/ultimate-edition-01-1782295792416.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-24T22:26:51+08:00"
+    },
+    {
+      "id": 13,
+      "category": "影视资讯",
+      "emoji": "🎬",
+      "en_title": "Daredevil: Born Again Fans React to Return of Controversial Character From Original Netflix Series",
+      "cn_title": "《夜魔侠：重生》粉丝热议争议角色艾丽卡回归",
+      "summary": "《夜魔侠：重生》第三季片场照片泄露，Elodie Yung 饰演的 Elektra（艾丽卡）确认回归，这是该角色自2016年《捍卫者联盟》后首次亮相。粉丝反应两极：有人期待其剧情线，也有人认为角色令人厌烦。此外，片场还曝光了卢克·凯奇（Mike Colter）和铁拳（Finn Jones）等角色回归。第三季预计明年春季播出。",
+      "url": "https://www.ign.com/articles/daredevil-born-again-fans-react-to-return-of-controversial-character-from-original-netflix-series",
+      "publish_time_cn": "2026-06-24 17:44",
+      "pub_date": "2026-06-24 17:44",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/03/31/daredevil-born-again-s2-ep-2-3-thumb-1774998579617.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/03/31/daredevil-born-again-s2-ep-2-3-thumb-1774998579617.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/03/31/daredevil-born-again-s2-ep-2-3-thumb-1774998579617.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/03/31/daredevil-born-again-s2-ep-2-3-thumb-1774998579617.jpg?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/03/31/daredevil-born-again-s2-ep-2-3-thumb-1774998579617.jpg?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/03/31/daredevil-born-again-s2-ep-2-3-thumb-1774998579617.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-24T22:26:54+08:00",
+      "pending_dict": [
+        {
+          "en": "Elektra",
+          "cn": "艾丽卡",
+          "cat": "people",
+          "source": "ai_guess",
+          "reason": "常见译名但未在词库中确认"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "category": "行业动态",
+      "emoji": "💰",
+      "en_title": "Kadokawa Should Be Making More Money From Elden Ring, Activist Investor Says as CEO Survives Shareholder Vote",
+      "cn_title": "投资者称角川应从《艾尔登法环》赚更多，CEO涉险过关",
+      "summary": "角川CEO夏野刚在股东投票中惊险保住职位，但激进投资者Oasis Management仍在施压，批评角川未能从《艾尔登法环》赚取足够利润，要求将全球发行权从万代南梦宫收回自营。From Software总监宫崎英高安抚粉丝称工作室仍可自由创作。后续作品包括《艾尔登法环：褪色者版》及新作《The Duskbloods》。",
+      "url": "https://www.ign.com/articles/kadokawa-should-be-making-more-money-from-elden-ring-activist-investor-says-as-ceo-survives-shareholder-vote",
+      "publish_time_cn": "2026-06-24 17:11",
+      "pub_date": "2026-06-24 17:11",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/24/er-1782292156569.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "done",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/24/er-1782292156569.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/24/er-1782292156569.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/24/er-1782292156569.jpg?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/24/er-1782292156569.jpg?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/24/er-1782292156569.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-24T22:27:20+08:00",
+      "pending_dict": [
+        {
+          "en": "Takeshi Natsuno",
+          "cn": "夏野刚",
+          "cat": "people",
+          "source": "ai_guess",
+          "reason": "词库未收录，但中文媒体常译为此名"
+        }
+      ],
+      "translation_path": "translations/14.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro"
+    },
+    {
+      "id": 15,
+      "category": "游戏新闻",
+      "emoji": "🏎️",
+      "en_title": "New Project Motor Racing DLC Adds 9 Historic Cars, New Track",
+      "cn_title": "《Project Motor Racing》DLC新增9辆经典赛车与赛道",
+      "summary": "新DLC「GT Icons Pack」为《Project Motor Racing》带来9辆经典GT赛车及一条新赛道。该作自2025年11月发售后表现不佳，此DLC是继3月重大更新后的最新内容。新加入的赛道「Rocky Knoll Raceway」仿照真实赛道Road America。赛车涵盖三个时代。此外，《神力科莎》资深物理师Aristotelis Vasilakos加入团队担任首席创意官。",
+      "url": "https://www.ign.com/articles/new-project-motor-racing-dlc-adds-9-historic-cars-new-track",
+      "publish_time_cn": "2026-06-24 15:50",
+      "pub_date": "2026-06-24 15:50",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/23/gtthumb-1782226256185.png?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/23/gtthumb-1782226256185.png?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/23/gtthumb-1782226256185.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/23/gtthumb-1782226256185.png?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/23/gtthumb-1782226256185.png?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/23/gtthumb-1782226256185.png"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-24T22:27:27+08:00"
+    },
+    {
+      "id": 16,
+      "category": "游戏新闻",
+      "emoji": "🏎️",
       "en_title": "Gameplay Livestream of Action-Driving Game Clutch Will Be Showcased This Week",
-      "cn_title": "《Clutch》本周四将直播实机演示",
-      "summary": "Maverick Games 宣布将于本周四举办开放世界动作驾驶游戏《Clutch》的实机直播。直播由《极限竞速：地平线5》创意总监 Mike Brown 主持，将展示游戏剧情、明星阵容及多种竞速玩法。本作设定在法国里维埃拉海岸，融合开放世界驾驶、赛道竞速、街头飙车和劫案追逐，预计2027年春季登陆 PS5、XBOX Series 和 PC。",
+      "cn_title": "《Clutch》本周实机直播展示",
+      "summary": "Maverick Games 宣布将于本周四举行《Clutch》实机直播，展示这款开放世界动作驾驶游戏的电影叙事、街头竞速和劫案玩法。游戏灵感源自法国里维埃拉，2027年春季登陆 PS5、XBOX Series 和 PC。",
       "url": "https://www.ign.com/articles/gameplay-livestream-of-action-driving-game-clutch-will-be-showcased-this-week",
       "publish_time_cn": "2026-06-24 15:12",
       "pub_date": "2026-06-24 15:12",
@@ -21,30 +772,7 @@
         "https://assets-prd.ignimgs.com/2026/06/02/clutch-1280-1780395643697.png"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-24T16:34:43+08:00",
-      "pending_dict": [
-        {
-          "en": "Clutch",
-          "cn": "Clutch",
-          "cat": "games",
-          "source": "ai_guess",
-          "reason": "游戏暂无官方中文译名，建议保留英文"
-        },
-        {
-          "en": "Midnight Collective",
-          "cn": "午夜集体",
-          "cat": "terms",
-          "source": "ai_guess",
-          "reason": "游戏中的地下街头赛车组织，中文翻译不确定，需人工确认"
-        },
-        {
-          "en": "R1K",
-          "cn": "R1K",
-          "cat": "terms",
-          "source": "ai_guess",
-          "reason": "专业赛道名称，保留英文更合适"
-        }
-      ]
+      "source_fetched_at": "2026-06-24T22:27:47+08:00"
     },
     {
       "id": 2,
@@ -56,8 +784,8 @@
       "url": "https://www.ign.com/articles/monster-fantasy-combines-the-thrill-of-monster-hunter-with-the-cosy-chill-of-animal-crossing-ign-preview",
       "publish_time_cn": "2026-06-24 13:00",
       "pub_date": "2026-06-24 13:00",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/06/23/monsterfantasy-preview-blogroll-1782188694287.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/23/monsterfantasy-preview-blogroll-1782188694287.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/23/monsterfantasy-preview-blogroll-1782188694287.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/23/monsterfantasy-preview-blogroll-1782188694287.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -89,15 +817,19 @@
           "source": "ai_guess",
           "reason": "游戏内王国名，无中文译名，保留英文"
         }
-      ]
+      ],
+      "translation_path": "translations/02.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro"
     },
     {
       "id": 1,
       "category": "行业动态",
       "emoji": "💰",
       "en_title": "Valve: RAM Companies State Prices Monthly, ‘If We Say No, Then They Never Talk to Us Again’",
-      "cn_title": "Valve自曝在内存采购上毫无议价权",
-      "summary": "在AI囤货潮下，Valve坦承内存采购毫无议价权，厂商按月定价且拒绝即断交。最终Steam Machine定价1049美元(约合人民币7123元)，虽贵但仍被IGN视为最易入门的PC游戏设备。",
+      "cn_title": "Valve自曝内存采购无议价权：不买就断交",
+      "summary": "在AI囤货潮下，Valve坦承内存采购毫无议价权，厂商按月定价且拒绝即断交。最终Steam Machine定价1049美元(约合人民币7144元)，虽贵但仍被IGN视为最易入门的PC游戏设备。",
       "url": "https://www.ign.com/articles/valve-ram-companies-state-prices-monthly-if-we-say-no-then-they-never-talk-to-us-again",
       "publish_time_cn": "2026-06-24 11:20",
       "pub_date": "2026-06-24 11:20",
@@ -118,5 +850,5 @@
       "translation_path": "translations/01.json"
     }
   ],
-  "total": 3
+  "total": 30
 }
