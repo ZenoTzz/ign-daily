@@ -1,5 +1,25 @@
 [
   {
+    "run_id": "28199614076",
+    "workflow": "Hourly RSS",
+    "event": "schedule",
+    "sha": "b07f2e2069cf23831dc41b4f4d7765050801f987",
+    "recorded_at_cn": "2026-06-26 04:50:05",
+    "start_balance": null,
+    "end_balance": null,
+    "currency": "",
+    "actual_platform_cost": null,
+    "balance_delta_status": "missing_snapshot",
+    "estimated_cost_usd": 0,
+    "api_call_count": 0,
+    "total_tokens": 0,
+    "output_tokens": 0,
+    "by_model": {},
+    "by_task": {},
+    "retry_articles": [],
+    "snapshot_ok": false
+  },
+  {
     "run_id": "28191777023",
     "workflow": "API Translation",
     "event": "schedule",
@@ -4184,23 +4204,6 @@
         "total_tokens": 8449
       }
     },
-    "snapshot_ok": true
-  },
-  {
-    "run_id": "27475772744",
-    "workflow": "API Translation",
-    "event": "schedule",
-    "sha": "163901617702bb5165f8e3092ab151184708cd02",
-    "recorded_at_cn": "2026-06-14 02:47:28",
-    "start_balance": 45.52,
-    "end_balance": 45.52,
-    "currency": "CNY",
-    "actual_platform_cost": 0.0,
-    "balance_delta_status": "ok",
-    "estimated_cost_usd": 0,
-    "api_call_count": 0,
-    "total_tokens": 0,
-    "by_model": {},
     "snapshot_ok": true
   }
 ]

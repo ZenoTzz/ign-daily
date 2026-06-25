@@ -10,234 +10,274 @@
   "new_target_dates": [
     "2026-06-26"
   ],
-  "new_count": 8,
-  "filtered_count": 6,
-  "cleanup_count": 2,
-  "changed_count": 16,
+  "new_count": 1,
+  "filtered_count": 11,
+  "cleanup_count": 0,
+  "changed_count": 12,
   "articles": [
     {
-      "title": "MSI Claw 8 EX AI+ Review",
-      "url": "https://www.ign.com/articles/msi-claw-8-ex-ai-review",
-      "pubDate_cst": "2026-06-26 01:07"
-    },
-    {
-      "title": "Microsoft Announces Significant Price Rises for Xbox Series X and S, 2TB Model Discontinued",
-      "url": "https://www.ign.com/articles/microsoft-announces-significant-price-rises-for-xbox-series-x-and-s-2tb-model-discontinued",
-      "pubDate_cst": "2026-06-26 00:47"
-    },
-    {
-      "title": "Jackass: Best and Last Review",
-      "url": "https://www.ign.com/articles/jackass-best-and-last-review",
-      "pubDate_cst": "2026-06-26 00:34"
-    },
-    {
-      "title": "LEGO Succulents Have Dropped to $25 at Walmart — That’s Way Better Than Amazon",
-      "url": "https://www.ign.com/articles/the-lego-icons-succulents-have-dropped-to-25-at-walmart-thats-better-than-amazon",
-      "pubDate_cst": "2026-06-26 00:30"
-    },
-    {
-      "title": "The Sopranos Is Finally Getting a 4K Remaster With a New Limited-Edition Set Releasing This Year",
-      "url": "https://www.ign.com/articles/the-sopranos-is-finally-getting-a-4k-remaster-with-a-new-limited-edition-set-releasing-this-year",
-      "pubDate_cst": "2026-06-26 00:00"
-    },
-    {
-      "title": "Funko Unveils Exclusive Invincible Pop! Figures for SDCC 2026",
-      "url": "https://www.ign.com/articles/funko-unveils-exclusive-invincible-pop-figures-for-sdcc-2026",
-      "pubDate_cst": "2026-06-26 00:00"
-    },
-    {
-      "title": "Deltarune Chapter 6 Will Release in 2027, Chapter 5 Shatters Concurrent Player Records on Steam",
-      "url": "https://www.ign.com/articles/deltarune-chapter-6-will-release-in-2027-chapter-5-shatters-concurrent-player-records-on-steam",
-      "pubDate_cst": "2026-06-25 23:54"
-    },
-    {
-      "title": "Drop Dead Singer Olivia Rodrigo Joins Fortnite Today",
-      "url": "https://www.ign.com/articles/drop-dead-singer-olivia-rodrigo-joins-fortnite-today",
-      "pubDate_cst": "2026-06-25 23:42"
+      "title": "Valve Now Claims Steam Machine Is Capable of 'Up To' 4K",
+      "url": "https://www.ign.com/articles/valve-now-claims-steam-machine-is-capable-of-up-to-4k",
+      "pubDate_cst": "2026-06-26 02:12"
     }
   ],
   "filtered_articles": [
     {
-      "title": "Save $100 Off the BowFlex SelectTech Adjustable Dumbbells for Amazon Prime Day",
-      "url": "https://www.ign.com/articles/bowflex-selecttech-adjustable-dumbbell-deal-amazon-prime-day-sale",
-      "pubDate_cst": "2026-06-26 01:25",
-      "description": "Still the gold standard that all other adjustable dumbbells are compared to.",
+      "title": "Beat the Summer Heat With This $8.49 Portable Turbo Fan Deal for Amazon Prime Day",
+      "url": "https://www.ign.com/articles/beat-the-summer-heat-with-this-portable-turbo-fan-deal-for-amazon-prime-day",
+      "pubDate_cst": "2026-06-26 04:20",
+      "description": "Stay frosty.",
       "categories": "",
-      "reason": "text:\\bsave \\$\\d",
+      "reason": "text:\\bprime.day\\b",
       "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
-      "filtered_at_cn": "2026-06-26 02:27:42",
+      "filtered_at_cn": "2026-06-26 04:49:51",
       "status": "filtered"
     },
     {
-      "title": "Save 30% Off the Retired LEGO Technic Yamaha MT-10 SP Hyper-Naked Motorcycle for Prime Day",
-      "url": "https://www.ign.com/articles/lego-technic-yamaha-mt-10-sp-motorcycle-deal-for-amazon-prime-day",
-      "pubDate_cst": "2026-06-26 01:20",
-      "description": "Technic motorbike discounts are few and far between, especially already discontinued sets.",
+      "title": "The Only Pokémon Pokopia Deal During Prime Day Is a Nintendo Switch 2 Bundle",
+      "url": "https://www.ign.com/articles/pokemon-pokopia-switch-2-bundle-deal-prime-day-2026",
+      "pubDate_cst": "2026-06-26 04:15",
+      "description": "Score $20 off when you bundle the game with the Switch 2",
+      "categories": "",
+      "reason": "text:\\bprime.day\\b",
+      "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
+      "filtered_at_cn": "2026-06-26 04:49:51",
+      "status": "filtered"
+    },
+    {
+      "title": "The Best Pokémon TCG Prime Day Deals - Hand-Picked by Our Deals Experts",
+      "url": "https://www.ign.com/articles/pokemon-tcg-prime-day-deals-2026",
+      "pubDate_cst": "2026-06-26 04:00",
+      "description": "",
+      "categories": "",
+      "reason": "text:\\bbest .+ deals?\\b",
+      "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
+      "filtered_at_cn": "2026-06-26 04:49:51",
+      "status": "filtered"
+    },
+    {
+      "title": "Pick Up a Powerful and Infinitely Reusable Cordless Electric Air Duster for $20 During Amazon Prime Day",
+      "url": "https://www.ign.com/articles/jufinx-cordless-electric-air-duster-deal-amazon-prime-day-sale",
+      "pubDate_cst": "2026-06-26 03:35",
+      "description": "Your dusty PC thanks you for your purchase.",
+      "categories": "",
+      "reason": "text:\\bprime.day\\b",
+      "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
+      "filtered_at_cn": "2026-06-26 04:49:51",
+      "status": "filtered"
+    },
+    {
+      "title": "Save 45% Off the Fanttik A10 Pro, a 2-in-1 Tape and Laser Measure That Digitally Displays Your Distance",
+      "url": "https://www.ign.com/articles/fanttik-a10-pro-digital-laser-tape-measure-deal-amazon-prime-day",
+      "pubDate_cst": "2026-06-26 03:30",
+      "description": "Another tool you never knew existed but now you want thanks to this Prime Day deal.",
       "categories": "",
       "reason": "text:\\bsave \\d+%",
       "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
-      "filtered_at_cn": "2026-06-26 02:27:42",
+      "filtered_at_cn": "2026-06-26 04:49:51",
       "status": "filtered"
     },
     {
-      "title": "The Legend of Zelda: The Complete Series DVD Is Under $10 For Prime Day",
-      "url": "https://www.ign.com/articles/the-legend-of-zelda-the-complete-series-dvd-deal-prime-day-2026",
-      "pubDate_cst": "2026-06-26 01:06",
+      "title": "These LEGO Transformers Sets Are Discounted for Prime Day Before They Retire Forever",
+      "url": "https://www.ign.com/articles/lego-transformers-sets-are-discounted-for-prime-day-2026",
+      "pubDate_cst": "2026-06-26 03:15",
       "description": "",
       "categories": "",
       "reason": "text:\\bprime.day\\b",
       "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
-      "filtered_at_cn": "2026-06-26 02:27:42",
+      "filtered_at_cn": "2026-06-26 04:49:51",
       "status": "filtered"
     },
     {
-      "title": "Don't Miss Amazon's Audible Prime Day Deal: Pay Just $1 Per Month and Get $20 Audible Credit",
-      "url": "https://www.ign.com/articles/amazon-prime-day-audible-deal-for-june-2026",
-      "pubDate_cst": "2026-06-26 00:45",
-      "description": "Catch up on the latest audiobooks from Rebecca Yarros, Brandon Sanderson, Suzanne Collins, and more.",
+      "title": "Save 30% Off Kirby Air Riders for Switch 2 During the Amazon Prime Day Sale",
+      "url": "https://www.ign.com/articles/save-30-off-kirby-air-riders-for-switch-2-during-the-amazon-prime-day-sale",
+      "pubDate_cst": "2026-06-26 02:40",
+      "description": "Battle-hungry kart racer starring Kirby and friends.",
+      "categories": "",
+      "reason": "text:\\bsave \\d+%",
+      "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
+      "filtered_at_cn": "2026-06-26 04:49:51",
+      "status": "filtered"
+    },
+    {
+      "title": "Amazon Just Dropped Even More 4K and Blu-ray Deals for Prime Day",
+      "url": "https://www.ign.com/articles/best-4k-blu-ray-tv-and-movie-deals-amazon-prime-day-2026",
+      "pubDate_cst": "2026-06-26 02:27",
+      "description": "It's Amazon Prime Day, which means you could stock up on everyday essentials, or you could add to your DVD collection.",
       "categories": "",
       "reason": "text:\\bprime.day\\b",
       "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
-      "filtered_at_cn": "2026-06-26 02:27:42",
+      "filtered_at_cn": "2026-06-26 04:49:51",
       "status": "filtered"
     },
     {
-      "title": "Alienware's Area-51 16\" Gaming Laptop With RTX 5080 GPU Drops to Its Lowest Price of the Year",
-      "url": "https://www.ign.com/articles/alienware-area-51-16-gaming-laptop-deal-dell-prime-day-sale",
-      "pubDate_cst": "2026-06-26 00:40",
-      "description": "Save $2,500 off Alienware's highest end 16\" laptop model.",
+      "title": "Hopes for GTA 6 Trailer 3 Evaporate as Preorders Go Live Without a New Video From Rockstar",
+      "url": "https://www.ign.com/articles/hopes-for-gta-6-trailer-3-evaporate-as-preorders-go-live-without-a-new-video-from-rockstar",
+      "pubDate_cst": "2026-06-26 02:12",
+      "description": "Fan hopes for GTA 6 Trailer 3 have been dashed after preorders went live without a new official video from Rockstar.",
       "categories": "",
-      "reason": "text:\\bsave \\$\\d",
+      "reason": "url:preorder",
       "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
-      "filtered_at_cn": "2026-06-26 02:27:42",
+      "filtered_at_cn": "2026-06-26 04:49:51",
       "status": "filtered"
     },
     {
-      "title": "The New Apple AirPods Max 2 Noise Canceling Headphones Drops to a New Price Low for Prime Day",
-      "url": "https://www.ign.com/articles/best-apple-airpods-max-2-headphone-deal-amazon-prime-day-sale",
-      "pubDate_cst": "2026-06-25 23:35",
-      "description": "Save $150 off compared to buying it from the Apple Store",
+      "title": "Save 20% Off the Sihoo's Flagship C300 Pro V2 Full-Body Adaptive Ergonomic Chair for Prime Day",
+      "url": "https://www.ign.com/articles/sihoo-doro-c300-pro-v2-chair-deal-prime-day-sale",
+      "pubDate_cst": "2026-06-26 02:00",
+      "description": "Gaming marathons made comfortable.",
       "categories": "",
-      "reason": "text:\\bsave \\$\\d",
+      "reason": "text:\\bsave \\d+%",
       "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
-      "filtered_at_cn": "2026-06-26 02:27:42",
+      "filtered_at_cn": "2026-06-26 04:49:51",
+      "status": "filtered"
+    },
+    {
+      "title": "Target’s Circle Deal Days Sale Joins the Prime Day Fun – Here Are the Best Deals We’ve Found",
+      "url": "https://www.ign.com/articles/targets-circle-deal-days-sale-2026-best-deals",
+      "pubDate_cst": "2026-06-26 01:45",
+      "description": "Target Circle Deal Days is live, until June 26, offering a variety of discounts on everything from Apple devices to LEGO sets and more.",
+      "categories": "",
+      "reason": "text:\\bbest .+ deals?\\b",
+      "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
+      "filtered_at_cn": "2026-06-26 04:49:51",
       "status": "filtered"
     }
   ],
   "runs": [
     {
       "target_date": "2026-06-26",
-      "new_count": 8,
-      "filtered_count": 6,
-      "changed_count": 14,
-      "next_id": 31,
+      "new_count": 1,
+      "filtered_count": 11,
+      "changed_count": 12,
+      "next_id": 32,
       "articles": [
         {
-          "title": "MSI Claw 8 EX AI+ Review",
-          "url": "https://www.ign.com/articles/msi-claw-8-ex-ai-review",
-          "pubDate_cst": "2026-06-26 01:07"
-        },
-        {
-          "title": "Microsoft Announces Significant Price Rises for Xbox Series X and S, 2TB Model Discontinued",
-          "url": "https://www.ign.com/articles/microsoft-announces-significant-price-rises-for-xbox-series-x-and-s-2tb-model-discontinued",
-          "pubDate_cst": "2026-06-26 00:47"
-        },
-        {
-          "title": "Jackass: Best and Last Review",
-          "url": "https://www.ign.com/articles/jackass-best-and-last-review",
-          "pubDate_cst": "2026-06-26 00:34"
-        },
-        {
-          "title": "LEGO Succulents Have Dropped to $25 at Walmart — That’s Way Better Than Amazon",
-          "url": "https://www.ign.com/articles/the-lego-icons-succulents-have-dropped-to-25-at-walmart-thats-better-than-amazon",
-          "pubDate_cst": "2026-06-26 00:30"
-        },
-        {
-          "title": "The Sopranos Is Finally Getting a 4K Remaster With a New Limited-Edition Set Releasing This Year",
-          "url": "https://www.ign.com/articles/the-sopranos-is-finally-getting-a-4k-remaster-with-a-new-limited-edition-set-releasing-this-year",
-          "pubDate_cst": "2026-06-26 00:00"
-        },
-        {
-          "title": "Funko Unveils Exclusive Invincible Pop! Figures for SDCC 2026",
-          "url": "https://www.ign.com/articles/funko-unveils-exclusive-invincible-pop-figures-for-sdcc-2026",
-          "pubDate_cst": "2026-06-26 00:00"
-        },
-        {
-          "title": "Deltarune Chapter 6 Will Release in 2027, Chapter 5 Shatters Concurrent Player Records on Steam",
-          "url": "https://www.ign.com/articles/deltarune-chapter-6-will-release-in-2027-chapter-5-shatters-concurrent-player-records-on-steam",
-          "pubDate_cst": "2026-06-25 23:54"
-        },
-        {
-          "title": "Drop Dead Singer Olivia Rodrigo Joins Fortnite Today",
-          "url": "https://www.ign.com/articles/drop-dead-singer-olivia-rodrigo-joins-fortnite-today",
-          "pubDate_cst": "2026-06-25 23:42"
+          "title": "Valve Now Claims Steam Machine Is Capable of 'Up To' 4K",
+          "url": "https://www.ign.com/articles/valve-now-claims-steam-machine-is-capable-of-up-to-4k",
+          "pubDate_cst": "2026-06-26 02:12"
         }
       ],
       "filtered_articles": [
         {
-          "title": "Save $100 Off the BowFlex SelectTech Adjustable Dumbbells for Amazon Prime Day",
-          "url": "https://www.ign.com/articles/bowflex-selecttech-adjustable-dumbbell-deal-amazon-prime-day-sale",
-          "pubDate_cst": "2026-06-26 01:25",
-          "description": "Still the gold standard that all other adjustable dumbbells are compared to.",
+          "title": "Beat the Summer Heat With This $8.49 Portable Turbo Fan Deal for Amazon Prime Day",
+          "url": "https://www.ign.com/articles/beat-the-summer-heat-with-this-portable-turbo-fan-deal-for-amazon-prime-day",
+          "pubDate_cst": "2026-06-26 04:20",
+          "description": "Stay frosty.",
           "categories": "",
-          "reason": "text:\\bsave \\$\\d",
+          "reason": "text:\\bprime.day\\b",
           "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
-          "filtered_at_cn": "2026-06-26 02:27:42",
+          "filtered_at_cn": "2026-06-26 04:49:51",
           "status": "filtered"
         },
         {
-          "title": "Save 30% Off the Retired LEGO Technic Yamaha MT-10 SP Hyper-Naked Motorcycle for Prime Day",
-          "url": "https://www.ign.com/articles/lego-technic-yamaha-mt-10-sp-motorcycle-deal-for-amazon-prime-day",
-          "pubDate_cst": "2026-06-26 01:20",
-          "description": "Technic motorbike discounts are few and far between, especially already discontinued sets.",
+          "title": "The Only Pokémon Pokopia Deal During Prime Day Is a Nintendo Switch 2 Bundle",
+          "url": "https://www.ign.com/articles/pokemon-pokopia-switch-2-bundle-deal-prime-day-2026",
+          "pubDate_cst": "2026-06-26 04:15",
+          "description": "Score $20 off when you bundle the game with the Switch 2",
+          "categories": "",
+          "reason": "text:\\bprime.day\\b",
+          "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
+          "filtered_at_cn": "2026-06-26 04:49:51",
+          "status": "filtered"
+        },
+        {
+          "title": "The Best Pokémon TCG Prime Day Deals - Hand-Picked by Our Deals Experts",
+          "url": "https://www.ign.com/articles/pokemon-tcg-prime-day-deals-2026",
+          "pubDate_cst": "2026-06-26 04:00",
+          "description": "",
+          "categories": "",
+          "reason": "text:\\bbest .+ deals?\\b",
+          "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
+          "filtered_at_cn": "2026-06-26 04:49:51",
+          "status": "filtered"
+        },
+        {
+          "title": "Pick Up a Powerful and Infinitely Reusable Cordless Electric Air Duster for $20 During Amazon Prime Day",
+          "url": "https://www.ign.com/articles/jufinx-cordless-electric-air-duster-deal-amazon-prime-day-sale",
+          "pubDate_cst": "2026-06-26 03:35",
+          "description": "Your dusty PC thanks you for your purchase.",
+          "categories": "",
+          "reason": "text:\\bprime.day\\b",
+          "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
+          "filtered_at_cn": "2026-06-26 04:49:51",
+          "status": "filtered"
+        },
+        {
+          "title": "Save 45% Off the Fanttik A10 Pro, a 2-in-1 Tape and Laser Measure That Digitally Displays Your Distance",
+          "url": "https://www.ign.com/articles/fanttik-a10-pro-digital-laser-tape-measure-deal-amazon-prime-day",
+          "pubDate_cst": "2026-06-26 03:30",
+          "description": "Another tool you never knew existed but now you want thanks to this Prime Day deal.",
           "categories": "",
           "reason": "text:\\bsave \\d+%",
           "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
-          "filtered_at_cn": "2026-06-26 02:27:42",
+          "filtered_at_cn": "2026-06-26 04:49:51",
           "status": "filtered"
         },
         {
-          "title": "The Legend of Zelda: The Complete Series DVD Is Under $10 For Prime Day",
-          "url": "https://www.ign.com/articles/the-legend-of-zelda-the-complete-series-dvd-deal-prime-day-2026",
-          "pubDate_cst": "2026-06-26 01:06",
+          "title": "These LEGO Transformers Sets Are Discounted for Prime Day Before They Retire Forever",
+          "url": "https://www.ign.com/articles/lego-transformers-sets-are-discounted-for-prime-day-2026",
+          "pubDate_cst": "2026-06-26 03:15",
           "description": "",
           "categories": "",
           "reason": "text:\\bprime.day\\b",
           "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
-          "filtered_at_cn": "2026-06-26 02:27:42",
+          "filtered_at_cn": "2026-06-26 04:49:51",
           "status": "filtered"
         },
         {
-          "title": "Don't Miss Amazon's Audible Prime Day Deal: Pay Just $1 Per Month and Get $20 Audible Credit",
-          "url": "https://www.ign.com/articles/amazon-prime-day-audible-deal-for-june-2026",
-          "pubDate_cst": "2026-06-26 00:45",
-          "description": "Catch up on the latest audiobooks from Rebecca Yarros, Brandon Sanderson, Suzanne Collins, and more.",
+          "title": "Save 30% Off Kirby Air Riders for Switch 2 During the Amazon Prime Day Sale",
+          "url": "https://www.ign.com/articles/save-30-off-kirby-air-riders-for-switch-2-during-the-amazon-prime-day-sale",
+          "pubDate_cst": "2026-06-26 02:40",
+          "description": "Battle-hungry kart racer starring Kirby and friends.",
+          "categories": "",
+          "reason": "text:\\bsave \\d+%",
+          "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
+          "filtered_at_cn": "2026-06-26 04:49:51",
+          "status": "filtered"
+        },
+        {
+          "title": "Amazon Just Dropped Even More 4K and Blu-ray Deals for Prime Day",
+          "url": "https://www.ign.com/articles/best-4k-blu-ray-tv-and-movie-deals-amazon-prime-day-2026",
+          "pubDate_cst": "2026-06-26 02:27",
+          "description": "It's Amazon Prime Day, which means you could stock up on everyday essentials, or you could add to your DVD collection.",
           "categories": "",
           "reason": "text:\\bprime.day\\b",
           "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
-          "filtered_at_cn": "2026-06-26 02:27:42",
+          "filtered_at_cn": "2026-06-26 04:49:51",
           "status": "filtered"
         },
         {
-          "title": "Alienware's Area-51 16\" Gaming Laptop With RTX 5080 GPU Drops to Its Lowest Price of the Year",
-          "url": "https://www.ign.com/articles/alienware-area-51-16-gaming-laptop-deal-dell-prime-day-sale",
-          "pubDate_cst": "2026-06-26 00:40",
-          "description": "Save $2,500 off Alienware's highest end 16\" laptop model.",
+          "title": "Hopes for GTA 6 Trailer 3 Evaporate as Preorders Go Live Without a New Video From Rockstar",
+          "url": "https://www.ign.com/articles/hopes-for-gta-6-trailer-3-evaporate-as-preorders-go-live-without-a-new-video-from-rockstar",
+          "pubDate_cst": "2026-06-26 02:12",
+          "description": "Fan hopes for GTA 6 Trailer 3 have been dashed after preorders went live without a new official video from Rockstar.",
           "categories": "",
-          "reason": "text:\\bsave \\$\\d",
+          "reason": "url:preorder",
           "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
-          "filtered_at_cn": "2026-06-26 02:27:42",
+          "filtered_at_cn": "2026-06-26 04:49:51",
           "status": "filtered"
         },
         {
-          "title": "The New Apple AirPods Max 2 Noise Canceling Headphones Drops to a New Price Low for Prime Day",
-          "url": "https://www.ign.com/articles/best-apple-airpods-max-2-headphone-deal-amazon-prime-day-sale",
-          "pubDate_cst": "2026-06-25 23:35",
-          "description": "Save $150 off compared to buying it from the Apple Store",
+          "title": "Save 20% Off the Sihoo's Flagship C300 Pro V2 Full-Body Adaptive Ergonomic Chair for Prime Day",
+          "url": "https://www.ign.com/articles/sihoo-doro-c300-pro-v2-chair-deal-prime-day-sale",
+          "pubDate_cst": "2026-06-26 02:00",
+          "description": "Gaming marathons made comfortable.",
           "categories": "",
-          "reason": "text:\\bsave \\$\\d",
+          "reason": "text:\\bsave \\d+%",
           "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
-          "filtered_at_cn": "2026-06-26 02:27:42",
+          "filtered_at_cn": "2026-06-26 04:49:51",
+          "status": "filtered"
+        },
+        {
+          "title": "Target’s Circle Deal Days Sale Joins the Prime Day Fun – Here Are the Best Deals We’ve Found",
+          "url": "https://www.ign.com/articles/targets-circle-deal-days-sale-2026-best-deals",
+          "pubDate_cst": "2026-06-26 01:45",
+          "description": "Target Circle Deal Days is live, until June 26, offering a variety of discounts on everything from Apple devices to LEGO sets and more.",
+          "categories": "",
+          "reason": "text:\\bbest .+ deals?\\b",
+          "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
+          "filtered_at_cn": "2026-06-26 04:49:51",
           "status": "filtered"
         }
       ]

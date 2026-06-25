@@ -2,6 +2,29 @@
   "date": "2026-06-26",
   "articles": [
     {
+      "id": 31,
+      "category": "游戏新闻",
+      "emoji": "🎮",
+      "en_title": "Valve Now Claims Steam Machine Is Capable of 'Up To' 4K",
+      "cn_title": "Valve Now Claims Steam Machine Is Capable of 'Up To' 4K",
+      "summary": "",
+      "url": "https://www.ign.com/articles/valve-now-claims-steam-machine-is-capable-of-up-to-4k",
+      "publish_time_cn": "2026-06-26 02:12",
+      "pub_date": "2026-06-26 02:12",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/19/steammachine-blogroll-1781829370399.png?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/19/steammachine-blogroll-1781829370399.png?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/19/steammachine-blogroll-1781829370399.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/19/steammachine-blogroll-1781829370399.png?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/19/steammachine-blogroll-1781829370399.png?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/19/steammachine-blogroll-1781829370399.png",
+        "https://assets-prd.ignimgs.com/2026/06/25/screenshot-2026-06-25-at-1-55-40-pm-1782410163227.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-26T04:49:57+08:00"
+    },
+    {
       "id": 23,
       "category": "游戏新闻",
       "emoji": "🎮",
@@ -771,5 +794,5 @@
       "translator_model": "deepseek-v4-pro"
     }
   ],
-  "total": 30
+  "total": 31
 }
