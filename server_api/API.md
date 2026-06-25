@@ -85,3 +85,29 @@ Response:
 Status values are `queued`, `running`, `done`, and `failed`.
 
 `GET /jobs?kind=translation&limit=5` returns recent jobs, useful when a client needs to recover state after reopening.
+
+## Filtered RSS
+
+`POST /filtered/restore` restores one article from `data/{date}/filtered_rss.json` into that day's `index.json`, queues it in `need_titles.json`, updates `data/index-list.json`, and removes it from the filtered list.
+
+```json
+{
+  "date": "2026-06-26",
+  "url": "https://www.ign.com/articles/example",
+  "trigger_workflow": true
+}
+```
+
+Response:
+
+```json
+{
+  "ok": true,
+  "date": "2026-06-26",
+  "article": { "id": 12 },
+  "filtered_count": 3,
+  "duplicate": false,
+  "queued": true,
+  "triggered": true
+}
+```

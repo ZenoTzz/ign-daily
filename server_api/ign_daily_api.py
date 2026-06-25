@@ -83,6 +83,12 @@ class ManualApproveRequest(BaseModel):
     article_id: int = Field(ge=1)
 
 
+class FilteredRestoreRequest(BaseModel):
+    date: str = Field(pattern=r"^\d{4}-\d{2}-\d{2}$")
+    url: str = Field(min_length=1, max_length=2000)
+    trigger_workflow: bool = False
+
+
 class DictTermRequest(BaseModel):
     category: str = "terms"
     en: str = Field(min_length=1, max_length=240)
@@ -217,6 +223,24 @@ def read_json(path: Path, default: Any = None) -> Any:
 
 def json_text(data: Any) -> str:
     return json.dumps(data, ensure_ascii=False, indent=2) + "\n"
+
+
+def restored_article_from_filtered(item: dict[str, Any], article_id: int) -> dict[str, Any]:
+    title = str(item.get("title") or "").strip()
+    pub_date = str(item.get("pubDate_cst") or item.get("pub_date") or "").strip()
+    return {
+        "id": article_id,
+        "category": "游戏新闻",
+        "emoji": "🎮",
+        "en_title": title,
+        "cn_title": title,
+        "summary": "",
+        "url": item.get("url"),
+        "publish_time_cn": pub_date,
+        "pub_date": pub_date,
+        "cover_image": "",
+        "translation_status": "none",
+    }
 
 
 def create_job(kind: str, date: str | None, ids: list[int], user: str, message: str = "") -> str:
@@ -729,6 +753,96 @@ def article(date: str, article_id: int, user: sqlite3.Row = Depends(current_user
         if int(item.get("id", -1)) == article_id:
             return item
     raise HTTPException(status_code=404, detail="Article not found")
+
+
+@app.post("/filtered/restore")
+def restore_filtered_article(payload: FilteredRestoreRequest, user: sqlite3.Row = Depends(current_user)) -> dict[str, Any]:
+    date = payload.date
+    url = payload.url.strip()
+    index_rel = f"data/{date}/index.json"
+    filtered_rel = f"data/{date}/filtered_rss.json"
+    need_rel = f"data/{date}/need_titles.json"
+    history_rel = "data/index-list.json"
+
+    idx = read_json(APP_DIR / index_rel, {"date": date, "articles": [], "total": 0})
+    if not isinstance(idx, dict):
+        idx = {"date": date, "articles": [], "total": 0}
+    idx["date"] = idx.get("date") or date
+    articles = idx.setdefault("articles", [])
+    if not isinstance(articles, list):
+        articles = []
+        idx["articles"] = articles
+
+    filtered = read_json(APP_DIR / filtered_rel, [])
+    if not isinstance(filtered, list):
+        raise HTTPException(status_code=500, detail="filtered_rss.json must be a list")
+
+    existing = next((a for a in articles if isinstance(a, dict) and a.get("url") == url), None)
+    filtered_item = next((a for a in filtered if isinstance(a, dict) and a.get("url") == url), None)
+    if not existing and not filtered_item:
+        raise HTTPException(status_code=404, detail="Filtered article not found")
+
+    filtered_updated = [a for a in filtered if not (isinstance(a, dict) and a.get("url") == url)]
+    queued = False
+    duplicate = existing is not None
+    article_item = existing
+
+    if not article_item:
+        max_id = max((int(a.get("id") or 0) for a in articles if isinstance(a, dict) and str(a.get("id", "")).isdigit()), default=0)
+        article_item = restored_article_from_filtered(filtered_item or {}, max_id + 1)
+        articles.append(article_item)
+        articles.sort(
+            key=lambda a: str((a if isinstance(a, dict) else {}).get("publish_time_cn") or (a if isinstance(a, dict) else {}).get("pub_date") or ""),
+            reverse=True,
+        )
+
+        need = read_json(APP_DIR / need_rel, [])
+        if not isinstance(need, list):
+            need = []
+        if not any(isinstance(q, dict) and q.get("url") == url for q in need):
+            need.append({
+                "id": article_item["id"],
+                "url": article_item["url"],
+                "en_title": article_item.get("en_title") or "",
+                "pub_date": article_item.get("publish_time_cn") or article_item.get("pub_date") or "",
+            })
+            queued = True
+        write_project_file(need_rel, json_text(need), f"rss filter: queue restored title #{article_item['id']}")
+
+    idx["total"] = len(articles)
+    history = read_json(APP_DIR / history_rel, [])
+    if not isinstance(history, list):
+        history = []
+    row = next((x for x in history if isinstance(x, dict) and x.get("date") == date), None)
+    if row:
+        row["total"] = idx["total"]
+    else:
+        history.append({"date": date, "total": idx["total"], "translated": 0, "translatedTitles": []})
+    history.sort(key=lambda x: str((x if isinstance(x, dict) else {}).get("date") or ""), reverse=True)
+
+    write_project_file(index_rel, json_text(idx), f"rss filter: restore article for {date}")
+    write_project_file(filtered_rel, json_text(filtered_updated), f"rss filter: remove restored article for {date}")
+    write_project_file(history_rel, json_text(history), f"rss filter: update index-list for {date}")
+
+    triggered = False
+    if payload.trigger_workflow and queued:
+        if STORAGE_MODE == "github":
+            gh_dispatch_workflow("api-translation.yml", {})
+        else:
+            run_local_job(["/srv/ign-daily-ops/run-api-translation.sh"])
+        triggered = True
+    sync_from_github()
+    return {
+        "ok": True,
+        "date": date,
+        "article": article_item,
+        "index": idx,
+        "filtered": filtered_updated,
+        "filtered_count": len(filtered_updated),
+        "duplicate": duplicate,
+        "queued": queued,
+        "triggered": triggered,
+    }
 
 
 @app.get("/dict")

@@ -870,6 +870,15 @@ function appData() {
       };
     },
 
+    userErrorMessage(error) {
+      const raw = String(error?.message || error || '').trim();
+      if (!raw) return '操作失败，请稍后重试';
+      if (/<!doctype|<html|nginx/i.test(raw)) {
+        return error?.status ? `服务器接口返回 ${error.status}，请稍后重试` : '服务器接口返回异常页面，请稍后重试';
+      }
+      return raw.replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim().slice(0, 240) || '操作失败，请稍后重试';
+    },
+
     async restoreFilteredArticle(item) {
       if (!item || !item.url || !this.data?.date) return;
       try {
@@ -878,6 +887,35 @@ function appData() {
         const indexPath = `data/${date}/index.json`;
         const filteredPath = `data/${date}/filtered_rss.json`;
         const needPath = `data/${date}/need_titles.json`;
+
+        if (GH.canUseServer()) {
+          const restored = await ServerAPI.request('/filtered/restore', {
+            method: 'POST',
+            body: JSON.stringify({
+              date,
+              url: item.url,
+              trigger_workflow: this.isApiMode('title_translator')
+            })
+          });
+          this.filteredRss = Array.isArray(restored.filtered)
+            ? restored.filtered
+            : (this.filteredRss || []).filter(a => a.url !== item.url);
+          if (restored.index && Array.isArray(restored.index.articles)) {
+            this.data = restored.index;
+          } else if (restored.article && !this.data.articles.some(a => a.url === restored.article.url)) {
+            this.data.articles.push(restored.article);
+            this.data.articles.sort((a, b) => (b.publish_time_cn || b.pub_date || '').localeCompare(a.publish_time_cn || a.pub_date || ''));
+            this.data.total = this.data.articles.length;
+          }
+          if (restored.duplicate) {
+            this.flash('这篇已经在新闻列表里，已从过滤区移除', 4200);
+          } else if (restored.triggered) {
+            this.flash('已恢复入库，并已触发 API 标题/摘要翻译', 4500);
+          } else {
+            this.flash('已恢复入库，OpenClaw 会处理标题/摘要', 4500);
+          }
+          return;
+        }
 
         const indexRead = await this.readGithubJson(indexPath, { date, articles: [], total: 0 });
         const idx = indexRead.value && Array.isArray(indexRead.value.articles)
@@ -929,7 +967,7 @@ function appData() {
           this.flash('已恢复入库，OpenClaw 会处理标题/摘要', 4500);
         }
       } catch (e) {
-        this.flash('恢复失败：' + e.message, 6000);
+        this.flash('恢复失败：' + this.userErrorMessage(e), 6000);
       } finally {
         this.filteredRestoringUrl = '';
       }
