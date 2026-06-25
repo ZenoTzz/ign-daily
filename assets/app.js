@@ -1735,7 +1735,81 @@ function appData() {
       if (job.status === 'done') return '翻译完成';
       if (job.status === 'failed') return '翻译失败';
       if (job.status === 'queued') return '等待处理';
+      if (job.current_step_label) {
+        return job.current_article_id ? `#${job.current_article_id} ${job.current_step_label}` : job.current_step_label;
+      }
       return job.message || '正在翻译';
+    },
+
+    jobProgress(job = this.activeJob) {
+      return Math.max(0, Math.min(100, Number(job?.progress || 0)));
+    },
+
+    formatEta(seconds) {
+      const value = Number(seconds);
+      if (!Number.isFinite(value) || value < 0) return '';
+      if (value <= 0) return '即将完成';
+      if (value < 60) return '不到 1 分钟';
+      const minutes = Math.ceil(value / 60);
+      if (minutes < 60) return `约 ${minutes} 分钟`;
+      const hours = Math.floor(minutes / 60);
+      const rest = minutes % 60;
+      return rest ? `约 ${hours} 小时 ${rest} 分钟` : `约 ${hours} 小时`;
+    },
+
+    jobEtaLabel(job = this.activeJob) {
+      if (!job || ['done', 'failed'].includes(job.status)) return '';
+      const eta = this.formatEta(job.eta_seconds);
+      return eta ? `预计还需 ${eta}` : '正在估算时间';
+    },
+
+    jobProgressSummary(job = this.activeJob) {
+      if (!job) return '';
+      const total = Number(job.total_count || (job.ids || []).length || 0);
+      const done = Number(job.done_count || 0);
+      const failed = Number(job.failed_count || 0);
+      const parts = [];
+      if (total) parts.push(`完成 ${done + failed}/${total} 篇`);
+      if (job.current_article_id && job.current_step_label) parts.push(`当前 #${job.current_article_id} ${job.current_step_label}`);
+      const eta = this.jobEtaLabel(job);
+      if (eta) parts.push(eta);
+      return parts.join(' · ');
+    },
+
+    jobSteps(job = this.activeJob) {
+      const items = [...(job?.results || []), ...(job?.errors || [])];
+      const order = ['queued', 'source', 'extract', 'model', 'parse', 'audit', 'repair', 'write', 'done', 'failed'];
+      const map = new Map();
+      for (const item of items) {
+        const key = item.step || item.status || 'running';
+        const label = item.step_label || item.message || key;
+        const prev = map.get(key) || { key, label, count: 0, status: item.status || 'running', progress: 0 };
+        prev.count += 1;
+        prev.progress += Number(item.progress || 0);
+        if (item.status === 'failed') prev.status = 'failed';
+        else if (item.status === 'done' && prev.status !== 'failed') prev.status = 'done';
+        map.set(key, prev);
+      }
+      return [...map.values()]
+        .map(item => ({ ...item, progress: item.count ? Math.round(item.progress / item.count) : 0 }))
+        .sort((a, b) => {
+          const ai = order.includes(a.key) ? order.indexOf(a.key) : order.length;
+          const bi = order.includes(b.key) ? order.indexOf(b.key) : order.length;
+          return ai - bi;
+        });
+    },
+
+    jobStepClass(step) {
+      if (step?.status === 'failed' || step?.key === 'failed') return 'failed';
+      if (step?.status === 'done' || step?.key === 'done') return 'done';
+      if (step?.key === this.activeJob?.current_step) return 'active';
+      return '';
+    },
+
+    jobArticleTitle(item) {
+      const id = Number(item?.id);
+      const art = (this.data?.articles || []).find(a => Number(a.id) === id);
+      return art?.cn_title || art?.en_title || `#${id}`;
     },
 
     articleJob(art) {
@@ -1799,7 +1873,12 @@ function appData() {
         done: '已保存，可进入文章页复查',
         failed: result.reason || '需要人工复核'
       };
-      return detailByStep[step] || '';
+      const detail = detailByStep[step] || '';
+      const eta = this.formatEta(result.eta_seconds);
+      if (eta && !['done', 'failed'].includes(result.status)) {
+        return detail ? `${detail} · 预计还需 ${eta}` : `预计还需 ${eta}`;
+      }
+      return detail;
     },
 
     async pollActiveJob(startTimer = false) {

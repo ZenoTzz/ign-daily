@@ -1016,6 +1016,142 @@ a.queue-title:hover { color: var(--accent); }
 .progress-item:nth-of-type(3) b { background: var(--blue); }
 .progress-item:nth-of-type(4) b { background: var(--green); }
 
+.live-job-card {
+  margin-top: 0.9rem;
+  padding: 0.8rem 0.9rem;
+  border: 1px solid var(--border-primary);
+  border-radius: 8px;
+  background: var(--bg-card);
+}
+
+.live-job-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
+  font-size: 0.8rem;
+}
+
+.live-job-head strong {
+  display: block;
+  color: var(--text-primary);
+  line-height: 1.35;
+}
+
+.live-job-head p,
+.live-job-meta {
+  margin-top: 0.22rem;
+  color: var(--text-muted);
+  font-size: 0.68rem;
+  line-height: 1.35;
+}
+
+.live-job-head > span {
+  flex: 0 0 auto;
+  color: var(--text-muted);
+  font-weight: 700;
+}
+
+.live-job-bar {
+  height: 7px;
+  margin-top: 0.55rem;
+  overflow: hidden;
+  border-radius: 999px;
+  background: var(--bg-card-hover);
+}
+
+.live-job-bar i {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--accent);
+  transition: width 0.25s ease;
+}
+
+.live-job-steps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.7rem;
+}
+
+.live-job-step {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  max-width: 100%;
+  padding: 0.22rem 0.48rem;
+  border: 1px solid var(--border-subtle);
+  border-radius: 999px;
+  background: var(--bg-card-hover);
+  color: var(--text-secondary);
+  font-size: 0.68rem;
+  line-height: 1.2;
+}
+
+.live-job-step b,
+.live-job-step small {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.live-job-step b {
+  font-weight: 700;
+}
+
+.live-job-step small {
+  color: var(--text-muted);
+}
+
+.live-job-step.active {
+  border-color: var(--blue-border);
+  background: var(--blue-soft);
+  color: var(--blue);
+}
+
+.live-job-step.done {
+  border-color: var(--green-border);
+  background: var(--green-soft);
+  color: var(--green);
+}
+
+.live-job-step.failed {
+  border-color: var(--amber-border);
+  background: var(--amber-soft);
+  color: var(--amber);
+}
+
+.live-job-current {
+  display: grid;
+  gap: 0.35rem;
+  margin-top: 0.65rem;
+}
+
+.live-job-current p {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 0.25rem 0.45rem;
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 0.7rem;
+  line-height: 1.35;
+}
+
+.live-job-current span,
+.live-job-current em {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.live-job-current em {
+  grid-column: 2;
+  color: var(--text-muted);
+  font-style: normal;
+}
+
 .article-job-progress {
   min-width: 9rem;
   margin-top: 0.45rem;

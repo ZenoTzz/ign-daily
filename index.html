@@ -239,20 +239,39 @@
             <span>预估成本</span>
           </div>
         </div>
-        <div x-show="activeJobs.length || activeJob"
-             style="margin-top:0.9rem; padding:0.75rem 0.85rem; border:1px solid var(--border-primary); border-radius:8px; background:var(--bg-card);">
-          <div style="display:flex; justify-content:space-between; gap:0.75rem; align-items:center; font-size:0.8rem;">
-            <strong x-text="activeJobs.length > 1 ? `${activeJobs.length} 个翻译任务运行中` : jobStatusLabel(activeJob)"></strong>
-            <span style="color:var(--text-muted);" x-text="`${activeJob?.progress || 0}%`"></span>
+        <div x-show="activeJobs.length || activeJob" class="live-job-card">
+          <div class="live-job-head">
+            <div>
+              <strong x-text="activeJobs.length > 1 ? `${activeJobs.length} 个翻译任务运行中` : jobStatusLabel(activeJob)"></strong>
+              <p x-show="jobProgressSummary(activeJob)" x-text="jobProgressSummary(activeJob)"></p>
+            </div>
+            <span x-text="`${jobProgress(activeJob)}%`"></span>
           </div>
-          <div style="height:6px; background:var(--bg-card-hover); border-radius:999px; overflow:hidden; margin-top:0.5rem;">
-            <i :style="`display:block; height:100%; width:${activeJob?.progress || 0}%; background:var(--accent); transition:width .25s ease;`"></i>
+          <div class="live-job-bar">
+            <i :style="`width:${jobProgress(activeJob)}%`"></i>
           </div>
-          <p style="font-size:0.68rem; color:var(--text-muted); margin-top:0.45rem;">
+          <div class="live-job-meta">
             <span x-text="activeJob?.date"></span>
             <span> · </span>
             <span x-text="`#${(activeJob?.ids || []).join(', #')}`"></span>
-          </p>
+          </div>
+          <div x-show="jobSteps(activeJob).length" class="live-job-steps">
+            <template x-for="step in jobSteps(activeJob)" :key="step.key">
+              <span class="live-job-step" :class="jobStepClass(step)">
+                <b x-text="step.label"></b>
+                <small x-text="`${step.count} 篇 · ${step.progress}%`"></small>
+              </span>
+            </template>
+          </div>
+          <div x-show="activeJob?.results?.length || activeJob?.errors?.length" class="live-job-current">
+            <template x-for="item in [...(activeJob?.results || []), ...(activeJob?.errors || [])].filter(x => !['done','failed'].includes(x.status)).slice(0, 2)" :key="item.id">
+              <p>
+                <strong x-text="`#${item.id}`"></strong>
+                <span x-text="jobArticleTitle(item)"></span>
+                <em x-text="`${item.step_label || item.message || '处理中'} · ${item.progress || 0}%`"></em>
+              </p>
+            </template>
+          </div>
         </div>
       </section>
 

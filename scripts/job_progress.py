@@ -63,9 +63,23 @@ def set_article_step(
     jid = job_id or current_job_id()
     if not jid:
         return
+    now = int(time.time())
     aid = str(int(article_id))
     data = load_progress(jid)
     item = data.setdefault("articles", {}).setdefault(aid, {})
+    item.setdefault("started_at", now)
+    clamped_progress = max(0, min(100, int(progress)))
+    if status in {"done", "failed"} or clamped_progress >= 100:
+        item["finished_at"] = now
+        item["eta_seconds"] = 0
+    else:
+        started_at = int(item.get("started_at") or now)
+        elapsed = max(0, now - started_at)
+        item["eta_seconds"] = (
+            int(elapsed * (100 - clamped_progress) / clamped_progress)
+            if clamped_progress > 0 and elapsed >= 3
+            else None
+        )
     item.update(
         {
             "id": int(article_id),
@@ -73,10 +87,10 @@ def set_article_step(
             "status": status,
             "step": step,
             "step_label": STEP_LABELS.get(step, step),
-            "progress": max(0, min(100, int(progress))),
+            "progress": clamped_progress,
             "message": message or STEP_LABELS.get(step, step),
-            "updated_at": int(time.time()),
+            "updated_at": now,
         }
     )
-    data["updated_at"] = int(time.time())
+    data["updated_at"] = now
     save_progress(jid, data)

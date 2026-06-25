@@ -252,15 +252,40 @@ def update_job(job_id: str, status: str, message: str | None = None, progress: i
         conn.commit()
 
 
-def read_job_progress(job_id: str) -> dict[str, Any]:
+def read_job_progress_data(job_id: str) -> dict[str, Any]:
     path = APP_DIR / "data" / "job-progress" / f"{job_id}.json"
     if not path.exists():
         return {}
     try:
         data = json.loads(path.read_text(encoding="utf-8-sig"))
-        return data.get("articles", {}) if isinstance(data, dict) else {}
+        return data if isinstance(data, dict) else {}
     except Exception:
         return {}
+
+
+def read_job_progress(job_id: str) -> dict[str, Any]:
+    data = read_job_progress_data(job_id)
+    return data.get("articles", {}) if isinstance(data, dict) else {}
+
+
+def clamp_progress(value: Any, default: int = 0) -> int:
+    try:
+        return max(0, min(100, int(value)))
+    except Exception:
+        return default
+
+
+def eta_from_progress(started_at: Any, progress: int, *, now: int) -> int | None:
+    if progress <= 0 or progress >= 100:
+        return 0 if progress >= 100 else None
+    try:
+        started = int(started_at)
+    except Exception:
+        return None
+    elapsed = max(0, now - started)
+    if elapsed < 3:
+        return None
+    return int(elapsed * (100 - progress) / progress)
 
 
 def infer_translation_job(row: sqlite3.Row) -> dict[str, Any]:
@@ -269,14 +294,19 @@ def infer_translation_job(row: sqlite3.Row) -> dict[str, Any]:
     status = row["status"]
     message = row["message"]
     progress = int(row["progress"] or 0)
+    now = int(time.time())
     results: list[dict[str, Any]] = []
     errors: list[dict[str, Any]] = []
     done = 0
     failed = 0
+    progress_sum = 0
+    current_item: dict[str, Any] | None = None
+    eta_seconds: int | None = None
     if date and ids:
         failures = read_json(APP_DIR / "data" / date / "translation_failures.json", {"items": {}})
         failure_items = failures.get("items", {}) if isinstance(failures, dict) else {}
-        progress_items = read_job_progress(row["id"])
+        progress_data = read_job_progress_data(row["id"])
+        progress_items = progress_data.get("articles", {}) if isinstance(progress_data, dict) else {}
         for article_id in ids:
             progress_item = progress_items.get(str(int(article_id))) or {}
             padded = f"{int(article_id):02d}"
@@ -284,6 +314,7 @@ def infer_translation_job(row: sqlite3.Row) -> dict[str, Any]:
             failure = failure_items.get(str(article_id))
             if failure:
                 failed += 1
+                progress_sum += 100
                 errors.append({
                     "id": int(article_id),
                     "status": "failed",
@@ -293,10 +324,14 @@ def infer_translation_job(row: sqlite3.Row) -> dict[str, Any]:
                     "reason": failure.get("reason", progress_item.get("message", "Translation needs review")),
                     "message": progress_item.get("message", "质检未通过，需复核"),
                     "draft": translation_path.exists(),
+                    "updated_at": progress_item.get("updated_at"),
+                    "started_at": progress_item.get("started_at"),
+                    "eta_seconds": 0,
                 })
                 continue
             if translation_path.exists():
                 done += 1
+                progress_sum += 100
                 results.append({
                     "id": int(article_id),
                     "status": "done",
@@ -304,28 +339,57 @@ def infer_translation_job(row: sqlite3.Row) -> dict[str, Any]:
                     "step_label": progress_item.get("step_label", "已写入译文"),
                     "progress": 100,
                     "message": progress_item.get("message", "翻译完成"),
+                    "updated_at": progress_item.get("updated_at"),
+                    "started_at": progress_item.get("started_at"),
+                    "eta_seconds": 0,
                 })
                 continue
-            results.append({
+            item_progress = clamp_progress(progress_item.get("progress"), 5 if status == "queued" else progress or 10)
+            item_eta = progress_item.get("eta_seconds")
+            if item_eta is None:
+                item_eta = eta_from_progress(progress_item.get("started_at") or row["created_at"], item_progress, now=now)
+            result_item = {
                 "id": int(article_id),
                 "status": progress_item.get("status", "running"),
                 "step": progress_item.get("step", "queued" if status == "queued" else "model"),
                 "step_label": progress_item.get("step_label", "排队等待" if status == "queued" else "模型翻译/质检中"),
-                "progress": int(progress_item.get("progress", 5 if status == "queued" else progress or 10)),
+                "progress": item_progress,
                 "message": progress_item.get("message", message or "正在翻译"),
+                "updated_at": progress_item.get("updated_at"),
+                "started_at": progress_item.get("started_at"),
+                "eta_seconds": item_eta,
+            }
+            progress_sum += item_progress
+            if result_item["status"] not in {"done", "failed"}:
+                if current_item is None or int(result_item.get("updated_at") or 0) >= int(current_item.get("updated_at") or 0):
+                    current_item = result_item
+            results.append({
+                **result_item,
             })
     total = len(ids)
     if total:
-        progress = max(progress, min(95, 10 + int((done + failed) / total * 85)))
+        article_progress = int(progress_sum / total) if progress_sum else 0
+        progress = max(progress, min(95, article_progress))
+        completed_units = max(0.0, min(float(total), progress_sum / 100.0))
+        if status in {"queued", "running"} and completed_units > 0:
+            elapsed = max(0, now - int(row["created_at"] or now))
+            remaining_units = max(0.0, float(total) - completed_units)
+            if elapsed >= 3 and remaining_units > 0:
+                eta_seconds = int((elapsed / completed_units) * remaining_units)
         if done + failed == total:
             status = "failed" if failed and not done else "done"
             progress = 100
+            eta_seconds = 0
             message = "翻译失败" if status == "failed" else "翻译完成"
             if row["status"] != status:
                 update_job(row["id"], status, message, progress)
         elif row["status"] in {"queued", "running"}:
             status = "running"
-            message = message or "正在翻译"
+            if current_item:
+                current_label = current_item.get("step_label") or current_item.get("message") or "正在翻译"
+                message = f"#{current_item.get('id')} {current_label}"
+            else:
+                message = message or "正在翻译"
             if row["status"] != "running" or progress != int(row["progress"] or 0):
                 update_job(row["id"], status, message, progress)
     return {
@@ -340,6 +404,13 @@ def infer_translation_job(row: sqlite3.Row) -> dict[str, Any]:
         "created_at": row["created_at"],
         "updated_at": row["updated_at"],
         "finished_at": row["finished_at"],
+        "total_count": total,
+        "done_count": done,
+        "failed_count": failed,
+        "current_article_id": current_item.get("id") if current_item else None,
+        "current_step": current_item.get("step") if current_item else None,
+        "current_step_label": current_item.get("step_label") if current_item else None,
+        "eta_seconds": eta_seconds,
         "results": results,
         "errors": errors,
     }
