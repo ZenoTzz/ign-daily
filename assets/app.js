@@ -1739,8 +1739,8 @@ function appData() {
       const id = Number(art?.id);
       const job = this.articleJob(art);
       if (!job) return null;
-      return (job.results || []).find(item => Number(item.id) === id)
-        || (job.errors || []).find(item => Number(item.id) === id)
+      return (job.errors || []).find(item => Number(item.id) === id)
+        || (job.results || []).find(item => Number(item.id) === id)
         || null;
     },
 

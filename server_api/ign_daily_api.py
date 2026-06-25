@@ -276,6 +276,20 @@ def infer_translation_job(row: sqlite3.Row) -> dict[str, Any]:
             progress_item = progress_items.get(str(int(article_id))) or {}
             padded = f"{int(article_id):02d}"
             translation_path = APP_DIR / "data" / date / "translations" / f"{padded}.json"
+            failure = failure_items.get(str(article_id))
+            if failure:
+                failed += 1
+                errors.append({
+                    "id": int(article_id),
+                    "status": "failed",
+                    "step": progress_item.get("step", "failed"),
+                    "step_label": progress_item.get("step_label", "质检未通过"),
+                    "progress": 100,
+                    "reason": failure.get("reason", progress_item.get("message", "Translation needs review")),
+                    "message": progress_item.get("message", "质检未通过，需复核"),
+                    "draft": translation_path.exists(),
+                })
+                continue
             if translation_path.exists():
                 done += 1
                 results.append({
@@ -285,19 +299,6 @@ def infer_translation_job(row: sqlite3.Row) -> dict[str, Any]:
                     "step_label": progress_item.get("step_label", "已写入译文"),
                     "progress": 100,
                     "message": progress_item.get("message", "翻译完成"),
-                })
-                continue
-            failure = failure_items.get(str(article_id))
-            if failure:
-                failed += 1
-                errors.append({
-                    "id": int(article_id),
-                    "status": "failed",
-                    "step": progress_item.get("step", "failed"),
-                    "step_label": progress_item.get("step_label", "翻译失败"),
-                    "progress": 100,
-                    "reason": failure.get("reason", progress_item.get("message", "Translation failed")),
-                    "message": progress_item.get("message", failure.get("reason", "Translation failed")),
                 })
                 continue
             results.append({
