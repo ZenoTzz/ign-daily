@@ -1779,7 +1779,7 @@ function appData() {
     },
 
     async pollActiveJob(startTimer = false) {
-      if (!this.activeJobId || !this.shouldUseServerApi()) return;
+      if (!this.activeJobId || !this.shouldUseServerApi() || !ServerAPI.token()) return;
       try {
         const data = await ServerAPI.getJob(this.activeJobId);
         this.activeJob = data?.job || null;
@@ -1804,7 +1804,7 @@ function appData() {
     },
 
     async pollTranslationJobs(startTimer = false) {
-      if (!this.shouldUseServerApi()) return;
+      if (!this.shouldUseServerApi() || !ServerAPI.token()) return;
       try {
         const data = await ServerAPI.listJobs('translation', 10);
         const jobs = data?.jobs || [];
@@ -1837,7 +1837,7 @@ function appData() {
     },
 
     async restoreActiveJob() {
-      if (!this.shouldUseServerApi()) return;
+      if (!this.shouldUseServerApi() || !ServerAPI.token()) return;
       await this.pollTranslationJobs(true);
     },
 
