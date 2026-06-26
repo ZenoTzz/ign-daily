@@ -168,6 +168,30 @@
       "total_tokens_including_reasoning": 11186,
       "prompt_cache_hit_tokens": 8320,
       "prompt_cache_miss_tokens": 1110
+    },
+    {
+      "time_cn": "2026-06-27 05:10:30",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 26,
+      "article_title": "Marvel Gives Miles Morales a New Spider-Man Series and a Classic Costume for 2026",
+      "article_url": "https://www.ign.com/articles/marvel-gives-miles-morales-a-new-spider-man-series-and-a-classic-costume-for-2026",
+      "article_date": "2026-06-27",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00054284,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9155,
+      "completion_tokens": 802,
+      "reasoning_tokens": 636,
+      "output_tokens_including_reasoning": 1438,
+      "total_tokens": 9957,
+      "total_tokens_including_reasoning": 10593,
+      "prompt_cache_hit_tokens": 8320,
+      "prompt_cache_miss_tokens": 835
     }
   ]
 }
