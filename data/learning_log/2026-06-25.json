@@ -1,50 +1,40 @@
 {
   "date": "2026-06-25",
   "source": "codex_nightly_learner",
-  "articles_analyzed": 1,
+  "articles_analyzed": 9,
   "article_ids": [
-    1
+    1,
+    4,
+    9,
+    14,
+    18,
+    24,
+    26,
+    29,
+    30
   ],
   "observations": [
     {
-      "id": "inner_quote_single_marks",
-      "title": "中文引号内再引用用单引号",
-      "occurrences": 1,
-      "detail": "Valve 引语中内层引用从『』改为‘’。"
+      "rule_id": "remove_redundant_title_prefixes",
+      "status_suggestion": "confirmed_existing",
+      "evidence": "Articles #4 and #9 remove redundant title wrappers while preserving the subject."
     },
     {
-      "id": "currency_conversion_refined",
-      "title": "金额换算采用统一中文格式",
-      "occurrences": 1,
-      "detail": "美元金额换算括号从半角改为中文全角。"
+      "rule_id": "currency_conversion_refined",
+      "status_suggestion": "confirmed_existing",
+      "evidence": "Article #24 removes CNY conversion clutter from the title."
     },
     {
-      "id": "remove_promotional_related_links",
-      "title": "删除站内推广和相关阅读引导",
-      "occurrences": 2,
-      "detail": "删除 Steam Machine 采访引流句与作者简介/社交账号尾注。"
+      "rule_id": "subtitle_avoid_concrete_detail",
+      "status_suggestion": "confirmed_existing",
+      "evidence": "Articles #18 and #24 keep subtitles short or quote-like."
     }
   ],
-  "rules_confirmed_from_weekly": [
-    "use_live_exchange_rate_for_cny",
-    "subtitle_trim_generic_hook",
-    "summer_game_fest",
-    "product_name_order",
-    "use_common_nickname_for_character",
-    "roman_to_arabic_game_title",
-    "dedupe_currency_conversion",
-    "remove_promotional_related_links",
-    "inner_quote_single_marks"
-  ],
-  "rules_held_from_weekly": [
-    "numbered_franchise_titles",
-    "remove_redundant_brand_wrappers",
-    "add_sequel_number_to_title"
-  ],
+  "rules_confirmed_from_weekly": [],
+  "rules_held_from_weekly": [],
   "notes": [
-    "Did not call DeepSeek or any translation API.",
-    "Did not translate new articles.",
-    "Corrected prior 6/25 live-exchange-rate misclassification conservatively."
+    "Re-ran diff_analysis after Tencent import expanded the date from 1 to 9 polished articles.",
+    "No STYLE_PROFILE.md change: no new explicit weekly adoption feedback."
   ],
-  "updated_at": "2026-06-25T22:47:05+08:00"
+  "updated_at": "2026-06-26T22:47:00+08:00"
 }

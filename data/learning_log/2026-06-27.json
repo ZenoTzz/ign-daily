@@ -1,0 +1,27 @@
+{
+  "date": "2026-06-27",
+  "source": "codex_nightly_learner",
+  "articles_analyzed": 1,
+  "article_ids": [
+    4
+  ],
+  "observations": [
+    {
+      "rule_id": "prefer_confirmed_chinese_game_titles",
+      "status_suggestion": "confirmed_existing",
+      "evidence": "Article #4 normalizes the film title to the established Chinese name."
+    },
+    {
+      "rule_id": "remove_author_bio_and_image_credit",
+      "status_suggestion": "confirmed_existing",
+      "evidence": "Article #4 removes the author bio and Twitter handle."
+    }
+  ],
+  "rules_confirmed_from_weekly": [],
+  "rules_held_from_weekly": [],
+  "notes": [
+    "Cross-date Tencent polish import created this single polished article and diff_analysis.",
+    "No STYLE_PROFILE.md change: one article is evidence only."
+  ],
+  "updated_at": "2026-06-26T22:47:00+08:00"
+}

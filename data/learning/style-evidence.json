@@ -514,9 +514,10 @@
         "2026-06-03",
         "2026-06-23",
         "2026-06-24",
-        "2026-06-25"
+        "2026-06-25",
+        "2026-06-26"
       ],
-      "days_seen": 5,
+      "days_seen": 6,
       "articles_seen": 10,
       "contradictions": 0,
       "examples": [
@@ -579,6 +580,18 @@
           "article_id": 1,
           "before": "Luke是IGN评测团队的资深编辑。你可以在Bluesky上找到他@mrlukereilly，向他询问各种事情。",
           "after": ""
+        },
+        {
+          "date": "2026-06-26",
+          "article_id": 7,
+          "before": "需要了解所有《GTA6》消息吗？Rockstar现已公布了《GTA6》的售价，还推出了更昂贵的100美元(约合人民币681元)终极版，发布了63张全新的《GTA6》截图，并确认游戏的实体版包装盒内将不再附带光盘。",
+          "after": ""
+        },
+        {
+          "date": "2026-06-26",
+          "article_id": 10,
+          "before": "关于GTA6的预订，我们还有海量内容，包括分析师对GTA6 80美元(约合人民币545元)（约合576元人民币）定价对其他游戏影响的看法，以及科技专家对63张GTA6新截图的评测。",
+          "after": ""
         }
       ],
       "feedback": [
@@ -626,9 +639,9 @@
         }
       ],
       "created_at": "2026-06-03T16:01:56+08:00",
-      "last_seen": "2026-06-25",
+      "last_seen": "2026-06-26",
       "confidence": 0.95,
-      "latest_evidence_summary": "6/25 删除了 IGN 采访引流句和作者简介/社交账号尾注。"
+      "latest_evidence_summary": "6/26 edits delete site-recirc paragraphs such as more-GTA6 coverage links."
     },
     "series_number_with_dai": {
       "id": "series_number_with_dai",
@@ -903,10 +916,11 @@
         "2026-06-02",
         "2026-06-04",
         "2026-06-05",
-        "2026-06-25"
+        "2026-06-25",
+        "2026-06-26"
       ],
-      "days_seen": 4,
-      "articles_seen": 6,
+      "days_seen": 5,
+      "articles_seen": 9,
       "contradictions": 0,
       "examples": [
         {
@@ -944,6 +958,24 @@
           "article_id": 1,
           "before": "750美元(约合人民币5092元)；1049美元(约合人民币7123元)",
           "after": "750美元（约合人民币5092元）；1049美元（约合人民币7123元）"
+        },
+        {
+          "date": "2026-06-25",
+          "article_id": 24,
+          "before": "《GTA6》80美元(约合人民币545元)定价会带涨游戏价格吗？",
+          "after": "《GTA6》的80美元定价会带涨游戏价格吗？"
+        },
+        {
+          "date": "2026-06-26",
+          "article_id": 15,
+          "before": "从MacBook Neo到Apple Vision Pro，苹果官网上的产品价格全面上涨，后者的涨幅高达200美元(约合人民币1362元)。今年早些时候以599美元(约合人民币4079元)发售的MacBook Neo，旨在帮助苹果从低端Windows笔记本和Chromebook手中抢占部分预算市场，如今涨价100美元(约合人民币681元)。不过，涨幅最大的还是搭载M3 Ultra的顶级Mac Studio，从3,999美元(约合人民币3万元)涨到了5,299美元(约合人民币4万元)，整整涨了1,300美元(约合人民币8853元)。",
+          "after": "从MacBook Neo到Apple Vision Pro，苹果官网上的产品价格全面上涨，后者的涨幅高达200美元（约合人民币1362元）。今年早些时候以599美元（约合人民币4079元）发售的MacBook Neo，旨在帮助苹果从低端Windows笔记本和Chromebook手中抢占部分预算市场，如今涨价100美元（约合人民币681元）。不过，涨幅最大的还是搭载M3 Ultra的顶级Mac Studio，从3,999美元（约合人民币3万元）涨到了5,299美元（约合人民币4万元），整整涨了1,300美元（约合人民币8853元）。"
+        },
+        {
+          "date": "2026-06-26",
+          "article_id": 24,
+          "before": "「去年10月，我们在美国已经将XBOX主机的价格上调了20至70美元(约合人民币136至477元)(约合136至477元)，」微软表示，「我们原本希望不必再次涨价，过去几个月也一直在与供应商商讨应对方案。不幸的是，主机存储与内存芯片价格已上涨超过2.5倍，而且我们预计到2027年秋季还会再翻一番。」",
+          "after": "「去年10月，我们在美国已经将XBOX主机的价格上调了20至70美元（约合人民币136至477元），」微软表示，「我们原本希望不必再次涨价，过去几个月也一直在与供应商商讨应对方案。不幸的是，主机存储与内存芯片价格已上涨超过2.5倍，而且我们预计到2027年秋季还会再翻一番。」"
         }
       ],
       "feedback": [
@@ -985,9 +1017,9 @@
         }
       ],
       "created_at": "2026-06-03T16:03:40+08:00",
-      "last_seen": "2026-06-25",
-      "confidence": 0.92,
-      "latest_evidence_summary": "6/25 Steam Machine 稿件继续把金额换算统一为中文全角括号格式。"
+      "last_seen": "2026-06-26",
+      "confidence": 0.93,
+      "latest_evidence_summary": "6/25-6/26 evidence: avoid CNY conversion clutter in titles; use fullwidth parentheses and dedupe conversions in body."
     },
     "remove_personal_commentary": {
       "id": "remove_personal_commentary",
@@ -1310,9 +1342,11 @@
         "2026-06-12",
         "2026-06-16",
         "2026-06-17",
-        "2026-06-19"
+        "2026-06-19",
+        "2026-06-25",
+        "2026-06-26"
       ],
-      "days_seen": 12,
+      "days_seen": 14,
       "articles_seen": 13,
       "contradictions": 0,
       "examples": [
@@ -1369,6 +1403,30 @@
           "article_id": 3,
           "before": "纯绿照片的玄机",
           "after": "照片另有玄机"
+        },
+        {
+          "date": "2026-06-25",
+          "article_id": 18,
+          "before": "老兵回归，双赢策略",
+          "after": "钱包危险了"
+        },
+        {
+          "date": "2026-06-25",
+          "article_id": 24,
+          "before": "看点来了",
+          "after": "「我觉得很多发行商很快就会吃这个亏」"
+        },
+        {
+          "date": "2026-06-26",
+          "article_id": 10,
+          "before": "光盘还在",
+          "after": "「实体版盒内会有一张光盘。」"
+        },
+        {
+          "date": "2026-06-26",
+          "article_id": 31,
+          "before": "预期管理",
+          "after": "牛皮吹破"
         }
       ],
       "feedback": [
@@ -1380,9 +1438,9 @@
         }
       ],
       "created_at": "2026-06-04T06:38:54+08:00",
-      "last_seen": "2026-06-19",
-      "confidence": 0.9,
-      "latest_evidence_summary": "多日样本显示，副标题倾向短句、引语或轻微双关。"
+      "last_seen": "2026-06-26",
+      "confidence": 0.91,
+      "latest_evidence_summary": "6/25-6/26 subtitles continue to favor short hooks or direct quotes instead of title repetition."
     },
     "hex_color_no_space_before_punctuation": {
       "id": "hex_color_no_space_before_punctuation",
@@ -1424,10 +1482,13 @@
         "2026-06-12",
         "2026-06-16",
         "2026-06-17",
-        "2026-06-18"
+        "2026-06-18",
+        "2026-06-25",
+        "2026-06-26",
+        "2026-06-27"
       ],
-      "days_seen": 6,
-      "articles_seen": 7,
+      "days_seen": 9,
+      "articles_seen": 10,
       "contradictions": 0,
       "examples": [
         {
@@ -1465,6 +1526,30 @@
           "article_id": 6,
           "before": "Luke是IGN评测团队的高级编辑，你可以在Bluesky上通过 @mrlukereilly向他提问。",
           "after": ""
+        },
+        {
+          "date": "2026-06-25",
+          "article_id": 29,
+          "before": "Cade Onder是IGN新闻团队的自由撰稿人，报道游戏、电影等娱乐内容。你可以在X上找到他，账号为@Cade_Onder。",
+          "after": ""
+        },
+        {
+          "date": "2026-06-26",
+          "article_id": 7,
+          "before": "Tom Phillips是IGN的新闻编辑。你可以通过tom_phillips@ign.com联系Tom，或在Bluesky上找到他。",
+          "after": ""
+        },
+        {
+          "date": "2026-06-26",
+          "article_id": 24,
+          "before": "Wesley是IGN的新闻总监，可在Twitter上关注他 @wyp100，也可通过wesley_yinpoole@ign.com或保密邮箱wyp100@proton.me联系他。",
+          "after": ""
+        },
+        {
+          "date": "2026-06-27",
+          "article_id": 4,
+          "before": "Cade Onder是IGN新闻团队的自由撰稿人，报道游戏、电影等各类娱乐内容。你可以在Twitter @Cade_Onder上找到他。",
+          "after": ""
         }
       ],
       "feedback": [
@@ -1476,9 +1561,9 @@
         }
       ],
       "created_at": "2026-06-12T17:45:36+08:00",
-      "last_seen": "2026-06-18",
+      "last_seen": "2026-06-27",
       "confidence": 0.97,
-      "latest_evidence_summary": "多篇稿件一致删除作者简介和社交账号尾注。"
+      "latest_evidence_summary": "6/25-6/27 edits continue to remove author bios, emails, and social handles."
     },
     "preserve_claim_attribution_and_modality": {
       "id": "preserve_claim_attribution_and_modality",
@@ -1624,10 +1709,12 @@
         "2026-06-05",
         "2026-06-10",
         "2026-06-11",
-        "2026-06-12"
+        "2026-06-12",
+        "2026-06-25",
+        "2026-06-26"
       ],
-      "days_seen": 5,
-      "articles_seen": 7,
+      "days_seen": 7,
+      "articles_seen": 11,
       "contradictions": 0,
       "examples": [
         {
@@ -1671,6 +1758,30 @@
           "article_id": 1,
           "before": "《任天堂》《Nintendo Switch 2》《马力欧卡丁车世界》遭冷落，Switch 2首发一年无大型DLC",
           "after": "《马力欧卡丁车世界》遭冷落，Switch 2首发一年无大型DLC"
+        },
+        {
+          "date": "2026-06-25",
+          "article_id": 4,
+          "before": "《Epic Games》Epic CEO谈UE6 AI集成与游戏成功困境",
+          "after": "Epic CEO谈虚幻引擎6 AI集成与游戏成功困境"
+        },
+        {
+          "date": "2026-06-25",
+          "article_id": 9,
+          "before": "《侠盗猎车手》索尼称《GTA6》在PS5上表现最佳，并解释原因",
+          "after": "索尼称《GTA6》在PS5上表现最佳，并解释原因"
+        },
+        {
+          "date": "2026-06-26",
+          "article_id": 7,
+          "before": "《PlayStation》PS5推出《GTA6》定制界面，索尼全面押注Rockstar合作",
+          "after": "PS5推出《GTA6》定制界面，索尼全面押注Rockstar合作"
+        },
+        {
+          "date": "2026-06-26",
+          "article_id": 10,
+          "before": "《GTA6》Insomniac确认《金刚狼》实体版含光盘",
+          "after": "Insomniac确认《漫威金刚狼》实体版含光盘"
         }
       ],
       "feedback": [
@@ -1682,9 +1793,9 @@
         }
       ],
       "created_at": "2026-06-12T17:45:36+08:00",
-      "last_seen": "2026-06-12",
-      "confidence": 0.9,
-      "latest_evidence_summary": "多日标题样本删除了重复品牌前缀，同时保留核心事实。"
+      "last_seen": "2026-06-26",
+      "confidence": 0.92,
+      "latest_evidence_summary": "6/25-6/26 title edits keep the news subject and remove redundant brand/work wrappers."
     },
     "prefer_confirmed_chinese_game_titles": {
       "id": "prefer_confirmed_chinese_game_titles",
@@ -1700,9 +1811,12 @@
         "2026-06-12",
         "2026-06-16",
         "2026-06-17",
-        "2026-06-18"
+        "2026-06-18",
+        "2026-06-25",
+        "2026-06-26",
+        "2026-06-27"
       ],
-      "days_seen": 7,
+      "days_seen": 10,
       "articles_seen": 16,
       "contradictions": 1,
       "examples": [
@@ -1741,6 +1855,30 @@
           "article_id": 37,
           "before": "「我仍然相信，即便是在当下，即使对于像素美术的回合制游戏，也依然有成长、进化和发展的空间。」Nakashima告诉我，「当然，这类体验深深植根于经典，倾向于让人感到熟悉。然而，通过融入一些新技术，我仍然相信这类体验是有前途的。即使你在今天这样一个现代环境下玩它，这类RPG也未必会让人觉得过时。这些游戏仍然大有未来，或许这就是这一切的源头。」",
           "after": "「我仍然相信，即便是在当下，即使对于像素美术的回合制游戏，也依然有成长、进化和发展的空间。」中岛启辅告诉我，「当然，这类体验深深植根于经典，倾向于让人感到熟悉。然而，通过融入一些新技术，我仍然相信这类体验是有前途的。即使你在今天这样一个现代环境下玩它，这类RPG也未必会让人觉得过时。这些游戏仍然大有未来，或许这就是这一切的源头。」"
+        },
+        {
+          "date": "2026-06-25",
+          "article_id": 4,
+          "before": "《Epic Games》Epic CEO谈UE6 AI集成与游戏成功困境",
+          "after": "Epic CEO谈虚幻引擎6 AI集成与游戏成功困境"
+        },
+        {
+          "date": "2026-06-26",
+          "article_id": 1,
+          "before": "《苍翼默示录》发售近十年后突曝新DLC角色",
+          "after": "《苍翼默示录：神观之梦》发售近十年后突曝新DLC角色"
+        },
+        {
+          "date": "2026-06-26",
+          "article_id": 29,
+          "before": "《Deltarune》第6章2027年发售，第5章打破Steam在线纪录",
+          "after": "《三角符文》第6章2027年发售，第5章打破Steam在线纪录"
+        },
+        {
+          "date": "2026-06-27",
+          "article_id": 4,
+          "before": "《料理鼠王2》永远不会拍，导演布拉德·伯德确认",
+          "after": "导演布拉德·伯德确认《美食总动员2》永远不会拍"
         }
       ],
       "feedback": [
@@ -1752,9 +1890,9 @@
         }
       ],
       "created_at": "2026-06-12T17:45:36+08:00",
-      "last_seen": "2026-06-18",
-      "confidence": 0.92,
-      "latest_evidence_summary": "多个样本纠正了作品名和角色名，并避免使用不稳定译名。",
+      "last_seen": "2026-06-27",
+      "confidence": 0.93,
+      "latest_evidence_summary": "6/25-6/27 edits continue to prefer established Chinese names for engines, games, and films.",
       "contradiction_notes": []
     },
     "retain_original_for_unconfirmed_names": {
@@ -1843,10 +1981,11 @@
         "2026-06-09",
         "2026-06-10",
         "2026-06-18",
-        "2026-06-24"
+        "2026-06-24",
+        "2026-06-26"
       ],
-      "days_seen": 5,
-      "articles_seen": 7,
+      "days_seen": 6,
+      "articles_seen": 9,
       "contradictions": 0,
       "examples": [
         {
@@ -1890,6 +2029,12 @@
           "article_id": 14,
           "before": "Xbox Series X/S",
           "after": "XBOX Series"
+        },
+        {
+          "date": "2026-06-26",
+          "article_id": 24,
+          "before": "XBOX主机涨价的消息公布于11月《GTA6》发售前夕，该作预计将大幅拉高PS5和XBOX Series X|S的需求。然而，外界担忧索尼和微软可能都无法满足《GTA6》所带来的需求，因为人工智能热潮正让硬件厂商不仅难以采购组件，更难以用亲民的价格推出产品。",
+          "after": "XBOX主机涨价的消息公布于11月《GTA6》发售前夕，该作预计将大幅拉高PS5和XBOX Series的需求。然而，外界担忧索尼和微软可能都无法满足《GTA6》所带来的需求，因为人工智能热潮正让硬件厂商不仅难以采购组件，更难以用亲民的价格推出产品。"
         }
       ],
       "feedback": [
@@ -1901,9 +2046,9 @@
         }
       ],
       "created_at": "2026-06-12T21:51:19+08:00",
-      "last_seen": "2026-06-24",
-      "confidence": 0.82,
-      "latest_evidence_summary": "6/24 ?????? Xbox Series ????????"
+      "last_seen": "2026-06-26",
+      "confidence": 0.86,
+      "latest_evidence_summary": "6/26 evidence continues compact platform naming, especially Xbox Series X|S -> XBOX Series."
     },
     "keep_person_names_latin": {
       "id": "keep_person_names_latin",
@@ -2064,9 +2209,11 @@
       "days": [
         "2026-06-21",
         "2026-06-22",
-        "2026-06-23"
+        "2026-06-23",
+        "2026-06-25",
+        "2026-06-26"
       ],
-      "days_seen": 3,
+      "days_seen": 5,
       "articles_seen": 2,
       "contradictions": 0,
       "examples": [
@@ -2086,9 +2233,9 @@
         }
       ],
       "created_at": "2026-06-22T21:49:02+08:00",
-      "last_seen": "2026-06-23",
+      "last_seen": "2026-06-26",
       "confidence": 0.86,
-      "latest_evidence_summary": "6/23 陶德·霍华德标题删除《B社/贝塞斯达》外壳，保留人物与《漫威刀锋战士》核心信息。"
+      "latest_evidence_summary": "Additional 6/25-6/26 wrapper evidence exists, but W26 feedback held this broader rule for observation."
     },
     "dedupe_currency_conversion": {
       "id": "dedupe_currency_conversion",
@@ -2252,5 +2399,5 @@
       "latest_evidence_summary": "6/24 ?????????2?????????? ???????????2????????2??"
     }
   },
-  "updated_at": "2026-06-25T22:47:05+08:00"
+  "updated_at": "2026-06-26T22:47:00+08:00"
 }

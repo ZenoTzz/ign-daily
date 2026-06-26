@@ -1,15 +1,15 @@
 {
   "week_id": "2026-W26",
-  "generated_at": "2026-06-25T22:47:05+08:00",
+  "generated_at": "2026-06-26T22:47:11+08:00",
   "published_by": "codex_nightly_learner",
   "range": {
     "start": "2026-06-22",
     "end": "2026-06-28"
   },
   "summary": {
-    "candidate_count": 27,
+    "candidate_count": 15,
     "ready_for_review": 0,
-    "confirmed_by_feedback": 24,
+    "confirmed_by_feedback": 12,
     "pending": 3
   },
   "candidates": [
@@ -32,9 +32,11 @@
         "2026-06-12",
         "2026-06-16",
         "2026-06-17",
-        "2026-06-19"
+        "2026-06-19",
+        "2026-06-25",
+        "2026-06-26"
       ],
-      "days_seen": 12,
+      "days_seen": 14,
       "articles_seen": 13,
       "contradictions": 0,
       "examples": [
@@ -91,6 +93,30 @@
           "article_id": 3,
           "before": "纯绿照片的玄机",
           "after": "照片另有玄机"
+        },
+        {
+          "date": "2026-06-25",
+          "article_id": 18,
+          "before": "老兵回归，双赢策略",
+          "after": "钱包危险了"
+        },
+        {
+          "date": "2026-06-25",
+          "article_id": 24,
+          "before": "看点来了",
+          "after": "「我觉得很多发行商很快就会吃这个亏」"
+        },
+        {
+          "date": "2026-06-26",
+          "article_id": 10,
+          "before": "光盘还在",
+          "after": "「实体版盒内会有一张光盘。」"
+        },
+        {
+          "date": "2026-06-26",
+          "article_id": 31,
+          "before": "预期管理",
+          "after": "牛皮吹破"
         }
       ],
       "feedback": [
@@ -102,88 +128,9 @@
         }
       ],
       "created_at": "2026-06-04T06:38:54+08:00",
-      "last_seen": "2026-06-19",
-      "confidence": 0.9,
-      "latest_evidence_summary": "多日样本显示，副标题倾向短句、引语或轻微双关。"
-    },
-    {
-      "id": "preserve_source_information_and_order",
-      "title": "完整保留原文信息与论述顺序",
-      "rule": "正文翻译必须逐段覆盖原文事实、引语和列表，并保持论述顺序；润色可以改善中文，但不能擅自删减、合并错位或扩写成原文没有的内容。",
-      "category": "body",
-      "scope": "all",
-      "status": "confirmed",
-      "days": [
-        "2026-06-03",
-        "2026-06-04",
-        "2026-06-08",
-        "2026-06-09",
-        "2026-06-10",
-        "2026-06-11",
-        "2026-06-12",
-        "2026-06-16",
-        "2026-06-17",
-        "2026-06-18"
-      ],
-      "days_seen": 10,
-      "articles_seen": 15,
-      "contradictions": 0,
-      "examples": [
-        {
-          "date": "2026-06-11",
-          "article_id": 23,
-          "before": "「不过，这款重制版的开发团队与《生化危机2》和《生化危机4》重制版是同一批人，」他继续说道，「所以如果你看过这个团队过去的重制作品，大概能感受到我们做游戏时的一种理念，那就是保留那些标志性和关键的元素。所以，如果你看看我们的作品，大概就能很好地理解我们在这里采取的方法，也许你能想象出这款重制版会是什么样子。」",
-          "after": "「不过，这款重制版的开发团队与《生化危机2》和《生化危机4》重制版是同一批人，」他继续说道，「如果你体验过这个团队过去制作的重制作品，应该能够感受到我们在制作游戏时所秉持的一种理念。而这种理念的一部分，就是保留原作中那些标志性且至关重要的元素。所以，如果你回顾我们以往的作品，大概就能理解我们这次会采取怎样的方向，甚至可以想象这部重制版最终会呈现出什么样子。」"
-        },
-        {
-          "date": "2026-06-12",
-          "article_id": 18,
-          "before": "至于玩家究竟会如何与这些钛合金身躯和钢铁头颅互动，目前仍是个谜。不过，在看过《Gen Atlas》夏日游戏节预告片的加长版后——其中展示了更多实机画面——我已经有了一些推测。在我看来，这似乎是对《最后的守护者》伙伴系统的一次进化，但有一个巨大的不同：这一次，玩家不仅能操控人类主角，似乎还能直接操控那位体型庞大的伙伴。或许上田文人采纳了玩家反馈，意识到可操控巨型同伴是玩家希望拥有的功能，而他迄今为止的作品都未提供过这种玩法。",
-          "after": "至于玩家究竟会如何与这些钛合金身躯和钢铁头颅互动，目前仍是个谜。不过，在观看了《gen Atlas》夏日游戏节预告片的加长版内容后——其中展示了更多实机画面——我已经有了一些推测。在我看来，这款游戏似乎是在《最后的守护者》伙伴系统基础上的一次进化，但有一个巨大的不同之处：这一次，那位体型庞大的伙伴本身似乎也可以被玩家直接操控，而不仅仅是人类主角。或许，上田文人吸收了玩家多年来的反馈。毕竟在他过去的作品中，玩家从未真正能够控制这些巨大的伙伴生物，而这恰恰是许多人一直希望实现的玩法。"
-        },
-        {
-          "date": "2026-06-12",
-          "article_id": 21,
-          "before": "许多粉丝原本以为圣诞特辑会是Davies的告别之作，宣布这个一次性特别节目只是为了收尾他剩余的剧情线索——比如Billie Piper令人费解的再次现身，她的角色现在可能永远无法明确了。",
-          "after": "许多粉丝原本认为，这集圣诞特辑将会成为Davies的告别之作。此前公布这部单集特别篇时，不少人都觉得它只是为了收束他遗留下来的剧情线——例如Billie Piper突然回归却始终未获解释的谜团，而如今她的身份或许永远都不会得到正式说明。"
-        },
-        {
-          "date": "2026-06-16",
-          "article_id": 39,
-          "before": "据报道，随着微软对Xbox业务进行重大削减，《地狱之刃》开发商Ninja Theory与《意航员》开发商Double Fine等工作室正在为避免关闭而奋战。",
-          "after": "据The Verge的消息，在微软大幅削减Xbox业务之际，Xbox正准备关闭Ninja Theory。员工已在本周一的一次电话会议中被告知这一决定，不过微软仍希望工作室能够找到买家接手。Ninja Theory在6月8号公布了他们的新游《地狱之刃：塞娜》，距今相隔仅一周多，而Ninja Theory正与微软展开谈判，希望通过独立运营来避免被关闭。"
-        },
-        {
-          "date": "2026-06-16",
-          "article_id": 25,
-          "before": "Duncan于2011年加入Rare，带领公司度过了以《Kinect Sports》最为人熟知的阶段，随后推出了大获成功的《盗贼之海》。",
-          "after": "Duncan于2011年加入Rare，带领公司走过以《Kinect Sports》闻名的时期，随后推出了大获成功的《盗贼之海》。O'Connor曾在Rare负责现已取消的奇幻RPG项目《Everwild》。在此之前，她已在Rare效力数十年，最早可追溯到1999年，当时她担任N64平台冒险游戏《Conker's Bad Fur Day》的动画师。"
-        },
-        {
-          "date": "2026-06-16",
-          "article_id": 22,
-          "before": "这无疑是个设计上的难题，尤其是因为这意味着开发团队必须彻底重新思考我们获得圆桌骑士的方式（毕竟不能只是直接降落到圆桌岛上——这可是游戏里最强大的召唤兽！）。但我很高兴导演滨口直树和他的团队成功做到了这一点，因为一艘能够自由操控、在细节丰富、等比例开放世界中穿梭的飞空艇，正是我从2001年起就一直等待《最终幻想》实现的事情。",
-          "after": "这无疑是个设计上的难题，尤其是因为这意味着开发团队必须彻底重新思考我们获得「圆桌骑士」的方式——毕竟，这可是游戏中最强的召唤兽，总不能像原版一样直接飞到圆桌岛捡走。但我很高兴总监滨口直树和他的团队成功做到了这一点，因为一艘能够自由操控、在细节丰富、等比例开放世界中穿梭的飞空艇，正是我从2001年起就一直等待《最终幻想》实现的事情。"
-        },
-        {
-          "date": "2026-06-17",
-          "article_id": 6,
-          "before": "与此同时，最新更新还带来了多项有用的修复，包括对道路探索和在线模式Horizon Play升级所需经验的调整。",
-          "after": "与此同时，最新更新还带来了多项有用的修复，包括对道路探索和在线模式Horizon Play升级所需经验的调整。区域概览中现已添加「已驾驶路段」百分比，这将让你更容易地在屏幕地图上追踪那些难以发现的剩余道路。"
-        }
-      ],
-      "feedback": [
-        {
-          "week_id": "2026-W24",
-          "text": "采纳，进入长期规则。",
-          "classified_as": "confirmed",
-          "created_at": "2026-06-15T21:48:32+08:00"
-        }
-      ],
-      "created_at": "2026-06-12T17:45:36+08:00",
-      "last_seen": "2026-06-18",
-      "confidence": 0.97,
-      "latest_evidence_summary": "长文、访谈和清单稿反复显示：忠实、完整和顺序准确优先。"
+      "last_seen": "2026-06-26",
+      "confidence": 0.91,
+      "latest_evidence_summary": "6/25-6/26 subtitles continue to favor short hooks or direct quotes instead of title repetition."
     },
     {
       "id": "prefer_confirmed_chinese_game_titles",
@@ -199,9 +146,12 @@
         "2026-06-12",
         "2026-06-16",
         "2026-06-17",
-        "2026-06-18"
+        "2026-06-18",
+        "2026-06-25",
+        "2026-06-26",
+        "2026-06-27"
       ],
-      "days_seen": 7,
+      "days_seen": 10,
       "articles_seen": 16,
       "contradictions": 1,
       "examples": [
@@ -240,6 +190,30 @@
           "article_id": 37,
           "before": "「我仍然相信，即便是在当下，即使对于像素美术的回合制游戏，也依然有成长、进化和发展的空间。」Nakashima告诉我，「当然，这类体验深深植根于经典，倾向于让人感到熟悉。然而，通过融入一些新技术，我仍然相信这类体验是有前途的。即使你在今天这样一个现代环境下玩它，这类RPG也未必会让人觉得过时。这些游戏仍然大有未来，或许这就是这一切的源头。」",
           "after": "「我仍然相信，即便是在当下，即使对于像素美术的回合制游戏，也依然有成长、进化和发展的空间。」中岛启辅告诉我，「当然，这类体验深深植根于经典，倾向于让人感到熟悉。然而，通过融入一些新技术，我仍然相信这类体验是有前途的。即使你在今天这样一个现代环境下玩它，这类RPG也未必会让人觉得过时。这些游戏仍然大有未来，或许这就是这一切的源头。」"
+        },
+        {
+          "date": "2026-06-25",
+          "article_id": 4,
+          "before": "《Epic Games》Epic CEO谈UE6 AI集成与游戏成功困境",
+          "after": "Epic CEO谈虚幻引擎6 AI集成与游戏成功困境"
+        },
+        {
+          "date": "2026-06-26",
+          "article_id": 1,
+          "before": "《苍翼默示录》发售近十年后突曝新DLC角色",
+          "after": "《苍翼默示录：神观之梦》发售近十年后突曝新DLC角色"
+        },
+        {
+          "date": "2026-06-26",
+          "article_id": 29,
+          "before": "《Deltarune》第6章2027年发售，第5章打破Steam在线纪录",
+          "after": "《三角符文》第6章2027年发售，第5章打破Steam在线纪录"
+        },
+        {
+          "date": "2026-06-27",
+          "article_id": 4,
+          "before": "《料理鼠王2》永远不会拍，导演布拉德·伯德确认",
+          "after": "导演布拉德·伯德确认《美食总动员2》永远不会拍"
         }
       ],
       "feedback": [
@@ -251,9 +225,9 @@
         }
       ],
       "created_at": "2026-06-12T17:45:36+08:00",
-      "last_seen": "2026-06-18",
-      "confidence": 0.92,
-      "latest_evidence_summary": "多个样本纠正了作品名和角色名，并避免使用不稳定译名。",
+      "last_seen": "2026-06-27",
+      "confidence": 0.93,
+      "latest_evidence_summary": "6/25-6/27 edits continue to prefer established Chinese names for engines, games, and films.",
       "contradiction_notes": []
     },
     {
@@ -269,10 +243,13 @@
         "2026-06-12",
         "2026-06-16",
         "2026-06-17",
-        "2026-06-18"
+        "2026-06-18",
+        "2026-06-25",
+        "2026-06-26",
+        "2026-06-27"
       ],
-      "days_seen": 6,
-      "articles_seen": 7,
+      "days_seen": 9,
+      "articles_seen": 10,
       "contradictions": 0,
       "examples": [
         {
@@ -310,6 +287,30 @@
           "article_id": 6,
           "before": "Luke是IGN评测团队的高级编辑，你可以在Bluesky上通过 @mrlukereilly向他提问。",
           "after": ""
+        },
+        {
+          "date": "2026-06-25",
+          "article_id": 29,
+          "before": "Cade Onder是IGN新闻团队的自由撰稿人，报道游戏、电影等娱乐内容。你可以在X上找到他，账号为@Cade_Onder。",
+          "after": ""
+        },
+        {
+          "date": "2026-06-26",
+          "article_id": 7,
+          "before": "Tom Phillips是IGN的新闻编辑。你可以通过tom_phillips@ign.com联系Tom，或在Bluesky上找到他。",
+          "after": ""
+        },
+        {
+          "date": "2026-06-26",
+          "article_id": 24,
+          "before": "Wesley是IGN的新闻总监，可在Twitter上关注他 @wyp100，也可通过wesley_yinpoole@ign.com或保密邮箱wyp100@proton.me联系他。",
+          "after": ""
+        },
+        {
+          "date": "2026-06-27",
+          "article_id": 4,
+          "before": "Cade Onder是IGN新闻团队的自由撰稿人，报道游戏、电影等各类娱乐内容。你可以在Twitter @Cade_Onder上找到他。",
+          "after": ""
         }
       ],
       "feedback": [
@@ -321,9 +322,109 @@
         }
       ],
       "created_at": "2026-06-12T17:45:36+08:00",
-      "last_seen": "2026-06-18",
+      "last_seen": "2026-06-27",
       "confidence": 0.97,
-      "latest_evidence_summary": "多篇稿件一致删除作者简介和社交账号尾注。"
+      "latest_evidence_summary": "6/25-6/27 edits continue to remove author bios, emails, and social handles."
+    },
+    {
+      "id": "remove_redundant_title_prefixes",
+      "title": "标题删除重复品牌堆叠",
+      "rule": "中文标题只保留识别新闻所需的作品、公司或平台名，删除重复的品牌书名号和无意义前缀，但不能删掉主体或关键限定。",
+      "category": "title",
+      "scope": "all",
+      "status": "confirmed",
+      "days": [
+        "2026-06-04",
+        "2026-06-05",
+        "2026-06-10",
+        "2026-06-11",
+        "2026-06-12",
+        "2026-06-25",
+        "2026-06-26"
+      ],
+      "days_seen": 7,
+      "articles_seen": 11,
+      "contradictions": 0,
+      "examples": [
+        {
+          "date": "2026-06-04",
+          "article_id": 9,
+          "before": "《PlayStation》顽皮狗缺席State of Play，玩家担忧《星际：异端先知》遥遥无期",
+          "after": "顽皮狗缺席State of Play，玩家担忧《星际：异端先知》遥遥无期"
+        },
+        {
+          "date": "2026-06-05",
+          "article_id": 1,
+          "before": "《詹姆斯·邦德》《IO Interactive》《007初露锋芒》续作发行权易主，亚马逊将掌控更多话语权",
+          "after": "《007 初露锋芒》续作发行权易主，亚马逊将掌控更多话语权"
+        },
+        {
+          "date": "2026-06-05",
+          "article_id": 9,
+          "before": "《战神》《劳菲》之后，PlayStation承诺奎托斯还有更多故事",
+          "after": "《战神：劳菲》之后，PlayStation承诺奎托斯还有更多故事"
+        },
+        {
+          "date": "2026-06-05",
+          "article_id": 17,
+          "before": "《任天堂》《Nintendo Switch 2》《艾尔登法环》褪色者版8月28日登陆Switch 2",
+          "after": "Switch 2版《艾尔登法环 褪色版》将于8月28日发售"
+        },
+        {
+          "date": "2026-06-10",
+          "article_id": 1,
+          "before": "《Project Helix》Xbox因组件短缺无法满足主机需求，重新审视下一代主机策略",
+          "after": "Xbox难以满足主机需求，微软重新评估Project Helix计划"
+        },
+        {
+          "date": "2026-06-11",
+          "article_id": 13,
+          "before": "《PlayStation》《最终幻想16》《天国：拯救》领衔6月PS Plus游戏阵容",
+          "after": "PS Plus六月二三档会免更新"
+        },
+        {
+          "date": "2026-06-12",
+          "article_id": 1,
+          "before": "《任天堂》《Nintendo Switch 2》《马力欧卡丁车世界》遭冷落，Switch 2首发一年无大型DLC",
+          "after": "《马力欧卡丁车世界》遭冷落，Switch 2首发一年无大型DLC"
+        },
+        {
+          "date": "2026-06-25",
+          "article_id": 4,
+          "before": "《Epic Games》Epic CEO谈UE6 AI集成与游戏成功困境",
+          "after": "Epic CEO谈虚幻引擎6 AI集成与游戏成功困境"
+        },
+        {
+          "date": "2026-06-25",
+          "article_id": 9,
+          "before": "《侠盗猎车手》索尼称《GTA6》在PS5上表现最佳，并解释原因",
+          "after": "索尼称《GTA6》在PS5上表现最佳，并解释原因"
+        },
+        {
+          "date": "2026-06-26",
+          "article_id": 7,
+          "before": "《PlayStation》PS5推出《GTA6》定制界面，索尼全面押注Rockstar合作",
+          "after": "PS5推出《GTA6》定制界面，索尼全面押注Rockstar合作"
+        },
+        {
+          "date": "2026-06-26",
+          "article_id": 10,
+          "before": "《GTA6》Insomniac确认《金刚狼》实体版含光盘",
+          "after": "Insomniac确认《漫威金刚狼》实体版含光盘"
+        }
+      ],
+      "feedback": [
+        {
+          "week_id": "2026-W24",
+          "text": "采纳，进入长期规则。",
+          "classified_as": "confirmed",
+          "created_at": "2026-06-15T21:48:32+08:00"
+        }
+      ],
+      "created_at": "2026-06-12T17:45:36+08:00",
+      "last_seen": "2026-06-26",
+      "confidence": 0.92,
+      "latest_evidence_summary": "6/25-6/26 title edits keep the news subject and remove redundant brand/work wrappers."
     },
     {
       "id": "remove_promotional_related_links",
@@ -337,9 +438,10 @@
         "2026-06-03",
         "2026-06-23",
         "2026-06-24",
-        "2026-06-25"
+        "2026-06-25",
+        "2026-06-26"
       ],
-      "days_seen": 5,
+      "days_seen": 6,
       "articles_seen": 10,
       "contradictions": 0,
       "examples": [
@@ -402,6 +504,18 @@
           "article_id": 1,
           "before": "Luke是IGN评测团队的资深编辑。你可以在Bluesky上找到他@mrlukereilly，向他询问各种事情。",
           "after": ""
+        },
+        {
+          "date": "2026-06-26",
+          "article_id": 7,
+          "before": "需要了解所有《GTA6》消息吗？Rockstar现已公布了《GTA6》的售价，还推出了更昂贵的100美元(约合人民币681元)终极版，发布了63张全新的《GTA6》截图，并确认游戏的实体版包装盒内将不再附带光盘。",
+          "after": ""
+        },
+        {
+          "date": "2026-06-26",
+          "article_id": 10,
+          "before": "关于GTA6的预订，我们还有海量内容，包括分析师对GTA6 80美元(约合人民币545元)（约合576元人民币）定价对其他游戏影响的看法，以及科技专家对63张GTA6新截图的评测。",
+          "after": ""
         }
       ],
       "feedback": [
@@ -449,83 +563,9 @@
         }
       ],
       "created_at": "2026-06-03T16:01:56+08:00",
-      "last_seen": "2026-06-25",
+      "last_seen": "2026-06-26",
       "confidence": 0.95,
-      "latest_evidence_summary": "6/25 删除了 IGN 采访引流句和作者简介/社交账号尾注。"
-    },
-    {
-      "id": "retain_original_for_unconfirmed_names",
-      "title": "无稳定中文名的专名保留原文",
-      "rule": "项目代号、未正式定名作品和没有稳定官方中文名的作品或角色，应保留拉丁字母原名，避免自行音译或意译。",
-      "category": "dictionary",
-      "scope": "all",
-      "status": "confirmed",
-      "days": [
-        "2026-06-05",
-        "2026-06-10",
-        "2026-06-11",
-        "2026-06-16",
-        "2026-06-17"
-      ],
-      "days_seen": 5,
-      "articles_seen": 9,
-      "contradictions": 0,
-      "examples": [
-        {
-          "date": "2026-06-05",
-          "article_id": 29,
-          "before": "CD Projekt新IP《哈达尔》招聘信息透露模糊线索",
-          "after": "招聘信息透露CD Projekt新IP《Hadar》模糊线索"
-        },
-        {
-          "date": "2026-06-10",
-          "article_id": 29,
-          "before": "《剑星》总监谈新主角伊薇设计：更年轻但个性更强",
-          "after": "《剑星》总监谈新主角Evie设计：更年轻但个性更强"
-        },
-        {
-          "date": "2026-06-11",
-          "article_id": 11,
-          "before": "由于公司全球发行部门及西班牙巴塞罗那工作室的组织调整，预计还将有更多职位裁撤。巴塞罗那工作室此前曾支持《疯狂兔子》系列和《星际迷航：舰桥船员》等项目，今后将只专注于《彩虹六号》系列。",
-          "after": "由于公司全球发行部门及西班牙巴塞罗那工作室的组织调整，预计还将有更多职位裁撤。巴塞罗那工作室此前曾支持《疯狂兔子》系列和《Star Trek: Bridge Crew》等项目，今后将只专注于《彩虹六号》系列。"
-        },
-        {
-          "date": "2026-06-16",
-          "article_id": 8,
-          "before": "卡普空宣布，计划在《龙之信条2》的《黑暗觉者》资料片发售前，下架游戏内的微交易项目。",
-          "after": "卡普空宣布，计划在《龙之信条2》的《Dark Arisen》DLC发售前，下架游戏内的微交易项目。"
-        },
-        {
-          "date": "2026-06-16",
-          "article_id": 37,
-          "before": "《最终幻想：共鸣》制作人谈回合制RPG复兴",
-          "after": "《最终幻想 RESONANCE》制作人谈回合制RPG复兴"
-        },
-        {
-          "date": "2026-06-16",
-          "article_id": 22,
-          "before": "在《Final Fantasy 7 Revelation》公开预告片的前几分钟里，开发商史克威尔艾尼克斯让我们重新见到了飞空艇Highwind。原作PlayStation游戏的粉丝会满怀深情地回忆起它那多螺旋桨的壮丽身姿；正是这艘载具，为《最终幻想7》的世界地图解锁了想去哪里就去哪里的完全自由。不受河流、海洋或山脉的限制，你可以高速翱翔全球。而且，只要有能安全降落的地方，你就能探索任何吸引你的地点。",
-          "after": "在《最终幻想7 Revelation》公开预告片的前几分钟里，开发商史克威尔艾尼克斯让我们重新见到了高风号（Highwind）飞空艇。原作游戏的粉丝会满怀深情地回忆起它那多螺旋桨的壮丽身姿；正是这艘载具，为《最终幻想7》的世界地图解锁了想去哪里就去哪里的完全自由。不受河流、海洋或山脉的限制，你可以高速翱翔全球。而且，只要有能安全降落的地方，你就能探索任何吸引你的地点。"
-        },
-        {
-          "date": "2026-06-16",
-          "article_id": 34,
-          "before": "Treyarch最近还为《黑色行动7》更新了一个名为「Black Ops Classic」的新播放列表。该列表包含了经典的《黑色行动》地图，并对游戏玩法进行了重大调整，使其更贴近原版《黑色行动》游戏。有人猜测这可能是在为重制版铺路。",
-          "after": "Treyarch最近还为《黑色行动7》更新了一个名为「黑色行动经典（Black Ops Classic）」的新列表。该列表包含了经典的《黑色行动》地图，并对游戏玩法进行了重大调整，使其更贴近原版《黑色行动》游戏。有人猜测这可能是在为重制版铺路。"
-        }
-      ],
-      "feedback": [
-        {
-          "week_id": "2026-W24",
-          "text": "采纳，进入长期规则。",
-          "classified_as": "confirmed",
-          "created_at": "2026-06-15T21:48:32+08:00"
-        }
-      ],
-      "created_at": "2026-06-12T21:51:19+08:00",
-      "last_seen": "2026-06-17",
-      "confidence": 0.9,
-      "latest_evidence_summary": "Hadar、Evie等未确认中文名的专名被恢复为原文。"
+      "latest_evidence_summary": "6/26 edits delete site-recirc paragraphs such as more-GTA6 coverage links."
     },
     {
       "id": "platform_name_compact",
@@ -539,10 +579,11 @@
         "2026-06-09",
         "2026-06-10",
         "2026-06-18",
-        "2026-06-24"
+        "2026-06-24",
+        "2026-06-26"
       ],
-      "days_seen": 5,
-      "articles_seen": 7,
+      "days_seen": 6,
+      "articles_seen": 9,
       "contradictions": 0,
       "examples": [
         {
@@ -586,6 +627,12 @@
           "article_id": 14,
           "before": "Xbox Series X/S",
           "after": "XBOX Series"
+        },
+        {
+          "date": "2026-06-26",
+          "article_id": 24,
+          "before": "XBOX主机涨价的消息公布于11月《GTA6》发售前夕，该作预计将大幅拉高PS5和XBOX Series X|S的需求。然而，外界担忧索尼和微软可能都无法满足《GTA6》所带来的需求，因为人工智能热潮正让硬件厂商不仅难以采购组件，更难以用亲民的价格推出产品。",
+          "after": "XBOX主机涨价的消息公布于11月《GTA6》发售前夕，该作预计将大幅拉高PS5和XBOX Series的需求。然而，外界担忧索尼和微软可能都无法满足《GTA6》所带来的需求，因为人工智能热潮正让硬件厂商不仅难以采购组件，更难以用亲民的价格推出产品。"
         }
       ],
       "feedback": [
@@ -597,83 +644,125 @@
         }
       ],
       "created_at": "2026-06-12T21:51:19+08:00",
-      "last_seen": "2026-06-24",
-      "confidence": 0.82,
-      "latest_evidence_summary": "6/24 ?????? Xbox Series ????????"
+      "last_seen": "2026-06-26",
+      "confidence": 0.86,
+      "latest_evidence_summary": "6/26 evidence continues compact platform naming, especially Xbox Series X|S -> XBOX Series."
     },
     {
-      "id": "remove_redundant_title_prefixes",
-      "title": "标题删除重复品牌堆叠",
-      "rule": "中文标题只保留识别新闻所需的作品、公司或平台名，删除重复的品牌书名号和无意义前缀，但不能删掉主体或关键限定。",
-      "category": "title",
+      "id": "currency_conversion_refined",
+      "title": "金额换算采用统一中文格式",
+      "rule": "正文金额首次出现时可给出人民币换算，使用中文全角括号并保持同文一致；标题通常不放人民币换算。汇率数值属于时效数据，不作为固定翻译规则。",
+      "category": "currency",
       "scope": "all",
       "status": "confirmed",
       "days": [
+        "2026-06-02",
         "2026-06-04",
         "2026-06-05",
-        "2026-06-10",
-        "2026-06-11",
-        "2026-06-12"
+        "2026-06-25",
+        "2026-06-26"
       ],
       "days_seen": 5,
-      "articles_seen": 7,
+      "articles_seen": 9,
       "contradictions": 0,
       "examples": [
         {
+          "date": "2026-06-02",
+          "article_id": 22,
+          "before": "13亿丹麦克朗（约合2.02亿美元(约合人民币14亿元)）",
+          "after": "13亿丹麦克朗（约合13.7亿元人民币）"
+        },
+        {
           "date": "2026-06-04",
-          "article_id": 9,
-          "before": "《PlayStation》顽皮狗缺席State of Play，玩家担忧《星际：异端先知》遥遥无期",
-          "after": "顽皮狗缺席State of Play，玩家担忧《星际：异端先知》遥遥无期"
+          "article_id": 3,
+          "before": "2026年，Valve屡屡成为法律靶心。在上述反垄断诉讼进行的同时，今年1月，英国一家法庭批准了一项针对Valve的6.56亿英镑(约合人民币60亿元)集体诉讼，涉及垄断问题。除此之外，纽约州总检察长Letitia James在2月采取了行动，4月澳大利亚政府向Valve发出了具有法律效力的透明度通知，要求该公司详细说明其系统如何防止Steam平台上的儿童诱骗和极端化行为。",
+          "after": "2026年，Valve屡屡成为法律靶心。在上述反垄断诉讼进行的同时，今年1月，英国一家法庭批准了一项针对Valve的6.56亿英镑（约合人民币60亿元）集体诉讼，涉及垄断问题。除此之外，纽约州总检察长Letitia James在2月采取了行动，4月澳大利亚政府向Valve发出了具有法律效力的透明度通知，要求该公司详细说明其系统如何防止Steam平台上的儿童诱骗和极端化行为。"
         },
         {
-          "date": "2026-06-05",
-          "article_id": 1,
-          "before": "《詹姆斯·邦德》《IO Interactive》《007初露锋芒》续作发行权易主，亚马逊将掌控更多话语权",
-          "after": "《007 初露锋芒》续作发行权易主，亚马逊将掌控更多话语权"
-        },
-        {
-          "date": "2026-06-05",
-          "article_id": 9,
-          "before": "《战神》《劳菲》之后，PlayStation承诺奎托斯还有更多故事",
-          "after": "《战神：劳菲》之后，PlayStation承诺奎托斯还有更多故事"
+          "date": "2026-06-04",
+          "article_id": 38,
+          "before": "目前，Best Buy已上线《控制：共振》实体版的预购页面，PS5和Xbox Series X版本均标价59.99美元(约合人民币430元)。随着更多零售商加入并开放预购，我们会及时更新。",
+          "after": "PS5和Xbox Series标准版售价59.99美元（约合人民币406.17元），铁盒版售价69.99美元（约合人民币473.86元）。"
         },
         {
           "date": "2026-06-05",
           "article_id": 17,
-          "before": "《任天堂》《Nintendo Switch 2》《艾尔登法环》褪色者版8月28日登陆Switch 2",
-          "after": "Switch 2版《艾尔登法环 褪色版》将于8月28日发售"
+          "before": "79.99美元(约合人民币572元)的褪色者版包含游戏本体、《黄金树之影》DLC、新武器、以及为玩家忠实的灵马托雷特更换护甲皮肤的功能。此外还包含两个新初始职业。",
+          "after": "Switch 2版《艾尔登法环 褪色版》定价79.99美元（约合541.84元人民币），日区Nintendo Store定价9020日元（约合382.04元人民币）。包含游戏本体、《黄金树之影》DLC、新武器、以及为玩家忠实的灵马托雷特更换皮肤的功能。此外还包含两个新初始职业。"
         },
         {
-          "date": "2026-06-10",
+          "date": "2026-06-05",
+          "article_id": 34,
+          "before": "据《综艺》指出，诺兰的其他暑期档电影（如《黑暗骑士》三部曲）多为PG-13级，但R级并未阻碍《奥本海默》本土票房突破3.3亿美元(约合人民币23.6亿元)。",
+          "after": "据《综艺》指出，诺兰的其他暑期档电影（如《黑暗骑士》三部曲）多为PG-13级，但R级并未阻碍《奥本海默》本土票房突破3.3亿美元（约合人民币22.35亿元）。"
+        },
+        {
+          "date": "2026-06-25",
           "article_id": 1,
-          "before": "《Project Helix》Xbox因组件短缺无法满足主机需求，重新审视下一代主机策略",
-          "after": "Xbox难以满足主机需求，微软重新评估Project Helix计划"
+          "before": "750美元(约合人民币5092元)；1049美元(约合人民币7123元)",
+          "after": "750美元（约合人民币5092元）；1049美元（约合人民币7123元）"
         },
         {
-          "date": "2026-06-11",
-          "article_id": 13,
-          "before": "《PlayStation》《最终幻想16》《天国：拯救》领衔6月PS Plus游戏阵容",
-          "after": "PS Plus六月二三档会免更新"
+          "date": "2026-06-25",
+          "article_id": 24,
+          "before": "《GTA6》80美元(约合人民币545元)定价会带涨游戏价格吗？",
+          "after": "《GTA6》的80美元定价会带涨游戏价格吗？"
         },
         {
-          "date": "2026-06-12",
-          "article_id": 1,
-          "before": "《任天堂》《Nintendo Switch 2》《马力欧卡丁车世界》遭冷落，Switch 2首发一年无大型DLC",
-          "after": "《马力欧卡丁车世界》遭冷落，Switch 2首发一年无大型DLC"
+          "date": "2026-06-26",
+          "article_id": 15,
+          "before": "从MacBook Neo到Apple Vision Pro，苹果官网上的产品价格全面上涨，后者的涨幅高达200美元(约合人民币1362元)。今年早些时候以599美元(约合人民币4079元)发售的MacBook Neo，旨在帮助苹果从低端Windows笔记本和Chromebook手中抢占部分预算市场，如今涨价100美元(约合人民币681元)。不过，涨幅最大的还是搭载M3 Ultra的顶级Mac Studio，从3,999美元(约合人民币3万元)涨到了5,299美元(约合人民币4万元)，整整涨了1,300美元(约合人民币8853元)。",
+          "after": "从MacBook Neo到Apple Vision Pro，苹果官网上的产品价格全面上涨，后者的涨幅高达200美元（约合人民币1362元）。今年早些时候以599美元（约合人民币4079元）发售的MacBook Neo，旨在帮助苹果从低端Windows笔记本和Chromebook手中抢占部分预算市场，如今涨价100美元（约合人民币681元）。不过，涨幅最大的还是搭载M3 Ultra的顶级Mac Studio，从3,999美元（约合人民币3万元）涨到了5,299美元（约合人民币4万元），整整涨了1,300美元（约合人民币8853元）。"
+        },
+        {
+          "date": "2026-06-26",
+          "article_id": 24,
+          "before": "「去年10月，我们在美国已经将XBOX主机的价格上调了20至70美元(约合人民币136至477元)(约合136至477元)，」微软表示，「我们原本希望不必再次涨价，过去几个月也一直在与供应商商讨应对方案。不幸的是，主机存储与内存芯片价格已上涨超过2.5倍，而且我们预计到2027年秋季还会再翻一番。」",
+          "after": "「去年10月，我们在美国已经将XBOX主机的价格上调了20至70美元（约合人民币136至477元），」微软表示，「我们原本希望不必再次涨价，过去几个月也一直在与供应商商讨应对方案。不幸的是，主机存储与内存芯片价格已上涨超过2.5倍，而且我们预计到2027年秋季还会再翻一番。」"
         }
       ],
       "feedback": [
         {
-          "week_id": "2026-W24",
+          "week_id": "2026-W23",
           "text": "采纳，进入长期规则。",
           "classified_as": "confirmed",
-          "created_at": "2026-06-15T21:48:32+08:00"
+          "created_at": "2026-06-04T06:38:24+08:00"
+        },
+        {
+          "week_id": "2026-W23",
+          "text": "采纳，进入长期规则。",
+          "classified_as": "confirmed",
+          "created_at": "2026-06-04T06:38:54+08:00"
+        },
+        {
+          "week_id": "2026-W23",
+          "text": "采纳，进入长期规则。",
+          "classified_as": "confirmed",
+          "created_at": "2026-06-04T06:39:36+08:00"
+        },
+        {
+          "week_id": "2026-W23",
+          "text": "采纳，进入长期规则。",
+          "classified_as": "confirmed",
+          "created_at": "2026-06-05T05:07:48+08:00"
+        },
+        {
+          "week_id": "2026-W23",
+          "text": "采纳，进入长期规则。",
+          "classified_as": "confirmed",
+          "created_at": "2026-06-06T04:56:39+08:00"
+        },
+        {
+          "week_id": "2026-W23",
+          "text": "采纳，进入长期规则。",
+          "classified_as": "confirmed",
+          "created_at": "2026-06-07T02:52:19+08:00"
         }
       ],
-      "created_at": "2026-06-12T17:45:36+08:00",
-      "last_seen": "2026-06-12",
-      "confidence": 0.9,
-      "latest_evidence_summary": "多日标题样本删除了重复品牌前缀，同时保留核心事实。"
+      "created_at": "2026-06-03T16:03:40+08:00",
+      "last_seen": "2026-06-26",
+      "confidence": 0.93,
+      "latest_evidence_summary": "6/25-6/26 evidence: avoid CNY conversion clutter in titles; use fullwidth parentheses and dedupe conversions in body."
     },
     {
       "id": "use_live_exchange_rate_for_cny",
@@ -732,101 +821,42 @@
       "latest_evidence_summary": "W26 反馈采纳该规则；6/25 的金额改动只作为格式证据，不计入实时汇率证据。"
     },
     {
-      "id": "currency_conversion_refined",
-      "title": "金额换算采用统一中文格式",
-      "rule": "正文金额首次出现时可给出人民币换算，使用中文全角括号并保持同文一致；标题通常不放人民币换算。汇率数值属于时效数据，不作为固定翻译规则。",
-      "category": "currency",
-      "scope": "all",
-      "status": "confirmed",
+      "id": "remove_redundant_brand_wrappers",
+      "title": "标题避免重复品牌套壳",
+      "rule": "标题中已有品牌、平台或作品名时，避免再用重复的《品牌/平台》套壳写法；保留核心事件，让标题更自然。",
+      "category": "title",
+      "scope": "titles",
+      "status": "pending",
       "days": [
-        "2026-06-02",
-        "2026-06-04",
-        "2026-06-05",
-        "2026-06-25"
+        "2026-06-21",
+        "2026-06-22",
+        "2026-06-23",
+        "2026-06-25",
+        "2026-06-26"
       ],
-      "days_seen": 4,
-      "articles_seen": 6,
+      "days_seen": 5,
+      "articles_seen": 2,
       "contradictions": 0,
       "examples": [
         {
-          "date": "2026-06-02",
-          "article_id": 22,
-          "before": "13亿丹麦克朗（约合2.02亿美元(约合人民币14亿元)）",
-          "after": "13亿丹麦克朗（约合13.7亿元人民币）"
-        },
-        {
-          "date": "2026-06-04",
-          "article_id": 3,
-          "before": "2026年，Valve屡屡成为法律靶心。在上述反垄断诉讼进行的同时，今年1月，英国一家法庭批准了一项针对Valve的6.56亿英镑(约合人民币60亿元)集体诉讼，涉及垄断问题。除此之外，纽约州总检察长Letitia James在2月采取了行动，4月澳大利亚政府向Valve发出了具有法律效力的透明度通知，要求该公司详细说明其系统如何防止Steam平台上的儿童诱骗和极端化行为。",
-          "after": "2026年，Valve屡屡成为法律靶心。在上述反垄断诉讼进行的同时，今年1月，英国一家法庭批准了一项针对Valve的6.56亿英镑（约合人民币60亿元）集体诉讼，涉及垄断问题。除此之外，纽约州总检察长Letitia James在2月采取了行动，4月澳大利亚政府向Valve发出了具有法律效力的透明度通知，要求该公司详细说明其系统如何防止Steam平台上的儿童诱骗和极端化行为。"
-        },
-        {
-          "date": "2026-06-04",
-          "article_id": 38,
-          "before": "目前，Best Buy已上线《控制：共振》实体版的预购页面，PS5和Xbox Series X版本均标价59.99美元(约合人民币430元)。随着更多零售商加入并开放预购，我们会及时更新。",
-          "after": "PS5和Xbox Series标准版售价59.99美元（约合人民币406.17元），铁盒版售价69.99美元（约合人民币473.86元）。"
-        },
-        {
-          "date": "2026-06-05",
-          "article_id": 17,
-          "before": "79.99美元(约合人民币572元)的褪色者版包含游戏本体、《黄金树之影》DLC、新武器、以及为玩家忠实的灵马托雷特更换护甲皮肤的功能。此外还包含两个新初始职业。",
-          "after": "Switch 2版《艾尔登法环 褪色版》定价79.99美元（约合541.84元人民币），日区Nintendo Store定价9020日元（约合382.04元人民币）。包含游戏本体、《黄金树之影》DLC、新武器、以及为玩家忠实的灵马托雷特更换皮肤的功能。此外还包含两个新初始职业。"
-        },
-        {
-          "date": "2026-06-05",
-          "article_id": 34,
-          "before": "据《综艺》指出，诺兰的其他暑期档电影（如《黑暗骑士》三部曲）多为PG-13级，但R级并未阻碍《奥本海默》本土票房突破3.3亿美元(约合人民币23.6亿元)。",
-          "after": "据《综艺》指出，诺兰的其他暑期档电影（如《黑暗骑士》三部曲）多为PG-13级，但R级并未阻碍《奥本海默》本土票房突破3.3亿美元（约合人民币22.35亿元）。"
-        },
-        {
-          "date": "2026-06-25",
-          "article_id": 1,
-          "before": "750美元(约合人民币5092元)；1049美元(约合人民币7123元)",
-          "after": "750美元（约合人民币5092元）；1049美元（约合人民币7123元）"
+          "date": "2026-06-23",
+          "article_id": 35,
+          "before": "《B社/贝塞斯达》陶德·霍华德：最近看过《漫威刀锋》，做得非常出色",
+          "after": "陶德·霍华德：最近看过《漫威刀锋战士》，做得非常出色"
         }
       ],
       "feedback": [
         {
-          "week_id": "2026-W23",
-          "text": "采纳，进入长期规则。",
-          "classified_as": "confirmed",
-          "created_at": "2026-06-04T06:38:24+08:00"
-        },
-        {
-          "week_id": "2026-W23",
-          "text": "采纳，进入长期规则。",
-          "classified_as": "confirmed",
-          "created_at": "2026-06-04T06:38:54+08:00"
-        },
-        {
-          "week_id": "2026-W23",
-          "text": "采纳，进入长期规则。",
-          "classified_as": "confirmed",
-          "created_at": "2026-06-04T06:39:36+08:00"
-        },
-        {
-          "week_id": "2026-W23",
-          "text": "采纳，进入长期规则。",
-          "classified_as": "confirmed",
-          "created_at": "2026-06-05T05:07:48+08:00"
-        },
-        {
-          "week_id": "2026-W23",
-          "text": "采纳，进入长期规则。",
-          "classified_as": "confirmed",
-          "created_at": "2026-06-06T04:56:39+08:00"
-        },
-        {
-          "week_id": "2026-W23",
-          "text": "采纳，进入长期规则。",
-          "classified_as": "confirmed",
-          "created_at": "2026-06-07T02:52:19+08:00"
+          "week_id": "2026-W26",
+          "text": "暂缓，继续观察。",
+          "classified_as": "pending",
+          "created_at": "2026-06-25T22:47:05+08:00"
         }
       ],
-      "created_at": "2026-06-03T16:03:40+08:00",
-      "last_seen": "2026-06-25",
-      "confidence": 0.92,
-      "latest_evidence_summary": "6/25 Steam Machine 稿件继续把金额换算统一为中文全角括号格式。"
+      "created_at": "2026-06-22T21:49:02+08:00",
+      "last_seen": "2026-06-26",
+      "confidence": 0.86,
+      "latest_evidence_summary": "Additional 6/25-6/26 wrapper evidence exists, but W26 feedback held this broader rule for observation."
     },
     {
       "id": "keep_person_names_latin",
@@ -889,59 +919,6 @@
       "latest_evidence_summary": "6/24 Speclizer?Megan Everett?Brett Gipson?Robert Brookes ????????"
     },
     {
-      "id": "preserve_claim_attribution_and_modality",
-      "title": "标题保留消息来源与不确定性",
-      "rule": "标题必须保留原文中的“据称、可能、预计、表示、逐案决定”等归因和情态信息，不得把推测改成确定事实，也不得夸大结论。",
-      "category": "title",
-      "scope": "all",
-      "status": "confirmed",
-      "days": [
-        "2026-06-09",
-        "2026-06-12"
-      ],
-      "days_seen": 2,
-      "articles_seen": 4,
-      "contradictions": 0,
-      "examples": [
-        {
-          "date": "2026-06-09",
-          "article_id": 3,
-          "before": "微软：Xbox独占将逐案决定",
-          "after": "微软表示，Xbox游戏独占将「视具体情况而定」"
-        },
-        {
-          "date": "2026-06-12",
-          "article_id": 16,
-          "before": "《黎明杀机》成史上最热恐怖游戏",
-          "after": "开发商称《黎明杀机》成史上最热恐怖游戏"
-        },
-        {
-          "date": "2026-06-12",
-          "article_id": 21,
-          "before": "《神秘博士》或停播长达五年",
-          "after": "《神秘博士》或将停播长达五年"
-        },
-        {
-          "date": "2026-06-12",
-          "article_id": 26,
-          "before": "《最后生还者》第三季引入游戏未出现角色",
-          "after": "《最后生还者》第三季将引入游戏未出现角色"
-        }
-      ],
-      "feedback": [
-        {
-          "week_id": "2026-W24",
-          "text": "采纳，进入长期规则。",
-          "classified_as": "confirmed",
-          "created_at": "2026-06-15T21:48:32+08:00"
-        }
-      ],
-      "created_at": "2026-06-12T17:45:36+08:00",
-      "last_seen": "2026-06-12",
-      "confidence": 0.9,
-      "latest_evidence_summary": "标题样本反复补回消息来源、可能性和条件限制。"
-    },
-    {
       "id": "inner_quote_single_marks",
       "title": "中文引号内再引用用单引号",
       "rule": "中文直引号内部再次出现短语、问题或强调词时，内层引用使用‘ ’，避免连续使用「」造成层级不清。",
@@ -989,714 +966,6 @@
       "latest_evidence_summary": "6/25 Valve 引语继续把直引语内部的二级引用改为中文单引号。"
     },
     {
-      "id": "subtitle_trim_generic_hook",
-      "title": "副标题保持短钩子，避免复述标题",
-      "rule": "副标题优先写成简短、有信息密度的钩子；不要机械复述标题，也不要堆泛泛而谈的背景。",
-      "category": "subtitle",
-      "scope": "subtitles",
-      "status": "confirmed",
-      "days": [
-        "2026-06-22"
-      ],
-      "days_seen": 1,
-      "articles_seen": 2,
-      "contradictions": 0,
-      "examples": [],
-      "feedback": [
-        {
-          "week_id": "2026-W26",
-          "text": "采纳，进入长期规则。",
-          "classified_as": "confirmed",
-          "created_at": "2026-06-25T22:47:05+08:00"
-        }
-      ],
-      "created_at": "2026-06-22T21:49:02+08:00",
-      "last_seen": "2026-06-22",
-      "confidence": 0.58,
-      "latest_evidence_summary": "6/22 多篇润色把重复或泛泛的副标题改短。"
-    },
-    {
-      "id": "summer_game_fest",
-      "title": "Summer Game Fest 译名",
-      "rule": "Summer Game Fest 译为「夏日游戏节」，不使用「夏季游戏节」等。",
-      "category": "dictionary",
-      "scope": "all",
-      "status": "confirmed",
-      "days": [
-        "2026-05-28"
-      ],
-      "days_seen": 1,
-      "articles_seen": 1,
-      "contradictions": 0,
-      "examples": [
-        {
-          "date": "2026-05-28",
-          "article_id": 22,
-          "before": "Summer Game Fest",
-          "after": "夏日游戏节"
-        }
-      ],
-      "feedback": [
-        {
-          "week_id": "2026-W23",
-          "text": "采纳，进入长期规则。",
-          "classified_as": "confirmed",
-          "created_at": "2026-06-04T06:38:24+08:00"
-        },
-        {
-          "week_id": "2026-W23",
-          "text": "采纳，进入长期规则。",
-          "classified_as": "confirmed",
-          "created_at": "2026-06-04T06:38:54+08:00"
-        },
-        {
-          "week_id": "2026-W23",
-          "text": "采纳，进入长期规则。",
-          "classified_as": "confirmed",
-          "created_at": "2026-06-04T06:39:36+08:00"
-        },
-        {
-          "week_id": "2026-W23",
-          "text": "采纳，进入长期规则。",
-          "classified_as": "confirmed",
-          "created_at": "2026-06-05T05:07:48+08:00"
-        },
-        {
-          "week_id": "2026-W23",
-          "text": "采纳，进入长期规则。",
-          "classified_as": "confirmed",
-          "created_at": "2026-06-06T04:56:39+08:00"
-        },
-        {
-          "week_id": "2026-W23",
-          "text": "采纳，进入长期规则。",
-          "classified_as": "confirmed",
-          "created_at": "2026-06-07T02:52:19+08:00"
-        },
-        {
-          "week_id": "2026-W26",
-          "text": "采纳，进入长期规则。同时加入词库",
-          "classified_as": "confirmed",
-          "created_at": "2026-06-25T22:47:05+08:00"
-        }
-      ],
-      "created_at": "2026-06-03T15:55:24+08:00",
-      "last_seen": "2026-05-28",
-      "confidence": 0.8,
-      "latest_evidence_summary": "用户将原文'Summer Game Fest'改为'夏日游戏节'，符合专有活动惯用译名。"
-    },
-    {
-      "id": "product_name_order",
-      "title": "产品名+型号顺序",
-      "rule": "英文产品名与型号组合时，按中文习惯将型号后置，如 'Steam Deck OLED' 而非 'OLED Steam Deck'。",
-      "category": "dictionary",
-      "scope": "all",
-      "status": "confirmed",
-      "days": [
-        "2026-05-28"
-      ],
-      "days_seen": 1,
-      "articles_seen": 1,
-      "contradictions": 0,
-      "examples": [
-        {
-          "date": "2026-05-28",
-          "article_id": 6,
-          "before": "OLED Steam Deck",
-          "after": "Steam Deck OLED"
-        }
-      ],
-      "feedback": [
-        {
-          "week_id": "2026-W23",
-          "text": "采纳，进入长期规则。",
-          "classified_as": "confirmed",
-          "created_at": "2026-06-04T06:38:24+08:00"
-        },
-        {
-          "week_id": "2026-W23",
-          "text": "采纳，进入长期规则。",
-          "classified_as": "confirmed",
-          "created_at": "2026-06-04T06:38:54+08:00"
-        },
-        {
-          "week_id": "2026-W23",
-          "text": "采纳，进入长期规则。",
-          "classified_as": "confirmed",
-          "created_at": "2026-06-04T06:39:36+08:00"
-        },
-        {
-          "week_id": "2026-W23",
-          "text": "采纳，进入长期规则。",
-          "classified_as": "confirmed",
-          "created_at": "2026-06-05T05:07:48+08:00"
-        },
-        {
-          "week_id": "2026-W23",
-          "text": "采纳，进入长期规则。",
-          "classified_as": "confirmed",
-          "created_at": "2026-06-06T04:56:39+08:00"
-        },
-        {
-          "week_id": "2026-W23",
-          "text": "采纳，进入长期规则。",
-          "classified_as": "confirmed",
-          "created_at": "2026-06-07T02:52:19+08:00"
-        },
-        {
-          "week_id": "2026-W26",
-          "text": "采纳，进入长期规则。",
-          "classified_as": "confirmed",
-          "created_at": "2026-06-25T22:47:05+08:00"
-        }
-      ],
-      "created_at": "2026-06-03T15:55:24+08:00",
-      "last_seen": "2026-05-28",
-      "confidence": 0.9,
-      "latest_evidence_summary": "用户明确反馈'这个以后都一律按这样排序'，且所有类似情况均如此处理。"
-    },
-    {
-      "id": "use_common_nickname_for_character",
-      "title": "使用角色常用绰号",
-      "rule": "对于有广为人知中文绰号的超级英雄/反派角色，正文中优先使用绰号而非全名（如用毁灭博士而不是维克多·冯·杜姆）。",
-      "category": "names",
-      "scope": "all",
-      "status": "confirmed",
-      "days": [
-        "2026-06-01"
-      ],
-      "days_seen": 1,
-      "articles_seen": 1,
-      "contradictions": 1,
-      "examples": [
-        {
-          "date": "2026-06-01",
-          "article_id": 3,
-          "before": "维克多·冯·杜姆",
-          "after": "毁灭博士"
-        }
-      ],
-      "feedback": [
-        {
-          "week_id": "2026-W23",
-          "text": "暂缓，继续观察。",
-          "classified_as": "pending",
-          "created_at": "2026-06-04T06:38:24+08:00"
-        },
-        {
-          "week_id": "2026-W23",
-          "text": "暂缓，继续观察。",
-          "classified_as": "pending",
-          "created_at": "2026-06-04T06:38:54+08:00"
-        },
-        {
-          "week_id": "2026-W23",
-          "text": "暂缓，继续观察。",
-          "classified_as": "pending",
-          "created_at": "2026-06-04T06:39:36+08:00"
-        },
-        {
-          "week_id": "2026-W23",
-          "text": "暂缓，继续观察。",
-          "classified_as": "pending",
-          "created_at": "2026-06-05T05:07:48+08:00"
-        },
-        {
-          "week_id": "2026-W23",
-          "text": "暂缓，继续观察。",
-          "classified_as": "pending",
-          "created_at": "2026-06-06T04:56:39+08:00"
-        },
-        {
-          "week_id": "2026-W23",
-          "text": "暂缓，继续观察。",
-          "classified_as": "pending",
-          "created_at": "2026-06-07T02:52:19+08:00"
-        },
-        {
-          "week_id": "2026-W24",
-          "text": "暂缓，继续观察。",
-          "classified_as": "pending",
-          "created_at": "2026-06-15T21:48:32+08:00"
-        },
-        {
-          "week_id": "2026-W26",
-          "text": "采纳，进入长期规则。",
-          "classified_as": "confirmed",
-          "created_at": "2026-06-25T22:47:05+08:00"
-        }
-      ],
-      "created_at": "2026-06-03T16:01:56+08:00",
-      "last_seen": "2026-06-01",
-      "contradiction_notes": [
-        {
-          "date": "2026-06-01",
-          "text": "与保留英文名规则（不知名人物保留英文名）不冲突，因为这是知名角色。"
-        }
-      ],
-      "confidence": 0.7,
-      "latest_evidence_summary": "article 3 paragraph 3 用户将全名改为绰号，与现有 pending 规律一致且本次无矛盾。"
-    },
-    {
-      "id": "japanese_name_no_romaji",
-      "title": "日文开发者直接使用汉字姓名",
-      "rule": "对于日本开发商或制作人，若官方已提供汉字姓名，直接使用汉字，不附加罗马音或英文注音。",
-      "category": "names",
-      "scope": "games",
-      "status": "confirmed",
-      "days": [
-        "2026-06-02"
-      ],
-      "days_seen": 1,
-      "articles_seen": 1,
-      "contradictions": 0,
-      "examples": [
-        {
-          "date": "2026-06-02",
-          "article_id": 9,
-          "before": "池田幸平（Kohei 'Nakatsu' Ikeda）",
-          "after": "池田幸平"
-        }
-      ],
-      "feedback": [
-        {
-          "week_id": "2026-W23",
-          "text": "采纳，进入长期规则。",
-          "classified_as": "confirmed",
-          "created_at": "2026-06-04T06:38:24+08:00"
-        },
-        {
-          "week_id": "2026-W23",
-          "text": "采纳，进入长期规则。",
-          "classified_as": "confirmed",
-          "created_at": "2026-06-04T06:38:54+08:00"
-        },
-        {
-          "week_id": "2026-W23",
-          "text": "采纳，进入长期规则。",
-          "classified_as": "confirmed",
-          "created_at": "2026-06-04T06:39:36+08:00"
-        },
-        {
-          "week_id": "2026-W23",
-          "text": "采纳，进入长期规则。",
-          "classified_as": "confirmed",
-          "created_at": "2026-06-05T05:07:48+08:00"
-        },
-        {
-          "week_id": "2026-W23",
-          "text": "采纳，进入长期规则。",
-          "classified_as": "confirmed",
-          "created_at": "2026-06-06T04:56:39+08:00"
-        },
-        {
-          "week_id": "2026-W23",
-          "text": "采纳，进入长期规则。",
-          "classified_as": "confirmed",
-          "created_at": "2026-06-07T02:52:19+08:00"
-        }
-      ],
-      "created_at": "2026-06-03T16:03:40+08:00",
-      "last_seen": "2026-06-02",
-      "confidence": 0.85,
-      "latest_evidence_summary": "文章9将池田幸平的罗马音注音删除，符合中文环境下对日文人名的直接引用习惯，与之前保留西方人英文名的规则互补。"
-    },
-    {
-      "id": "roman_to_arabic_game_title",
-      "title": "游戏标题罗马数字转阿拉伯数字",
-      "rule": "游戏名中的罗马数字（如II）统一转为阿拉伯数字（如2），例如《博德之门II》→《博德之门2》。",
-      "category": "dictionary",
-      "scope": "games",
-      "status": "confirmed",
-      "days": [
-        "2026-06-02"
-      ],
-      "days_seen": 1,
-      "articles_seen": 1,
-      "contradictions": 0,
-      "examples": [
-        {
-          "date": "2026-06-02",
-          "article_id": 3,
-          "before": "《博德之门II：安姆的阴影》",
-          "after": "《博德之门2：安姆的阴影》"
-        }
-      ],
-      "feedback": [
-        {
-          "week_id": "2026-W23",
-          "text": "暂缓，继续观察。",
-          "classified_as": "pending",
-          "created_at": "2026-06-04T06:38:24+08:00"
-        },
-        {
-          "week_id": "2026-W23",
-          "text": "暂缓，继续观察。",
-          "classified_as": "pending",
-          "created_at": "2026-06-04T06:38:54+08:00"
-        },
-        {
-          "week_id": "2026-W23",
-          "text": "暂缓，继续观察。",
-          "classified_as": "pending",
-          "created_at": "2026-06-04T06:39:36+08:00"
-        },
-        {
-          "week_id": "2026-W23",
-          "text": "暂缓，继续观察。",
-          "classified_as": "pending",
-          "created_at": "2026-06-05T05:07:48+08:00"
-        },
-        {
-          "week_id": "2026-W23",
-          "text": "暂缓，继续观察。",
-          "classified_as": "pending",
-          "created_at": "2026-06-06T04:56:39+08:00"
-        },
-        {
-          "week_id": "2026-W23",
-          "text": "暂缓，继续观察。",
-          "classified_as": "pending",
-          "created_at": "2026-06-07T02:52:19+08:00"
-        },
-        {
-          "week_id": "2026-W26",
-          "text": "采纳，进入长期规则。",
-          "classified_as": "confirmed",
-          "created_at": "2026-06-25T22:47:05+08:00"
-        }
-      ],
-      "created_at": "2026-06-03T16:03:40+08:00",
-      "last_seen": "2026-06-02",
-      "confidence": 0.9,
-      "latest_evidence_summary": "文章3将《博德之门II：安姆的阴影》改为《博德之门2：安姆的阴影》，且与已有风格（平台简写、数字偏好）一致，用户倾向阿拉伯数字更直观。"
-    },
-    {
-      "id": "add_english_term_for_uncommon_translation",
-      "title": "生僻术语首次出现附原文",
-      "rule": "不常见的系统名、地点名或机制名首次出现时采用“中文（英文）”，后文可用中文或原文简称；不得对通行名称重复注释。",
-      "category": "dictionary",
-      "scope": "all",
-      "status": "confirmed",
-      "days": [
-        "2026-06-08"
-      ],
-      "days_seen": 1,
-      "articles_seen": 1,
-      "contradictions": 0,
-      "examples": [
-        {
-          "date": "2026-06-08",
-          "article_id": 12,
-          "before": "Brawley 指出，虽然「战术任务本身是大部分游戏玩法的核心，也是所有战斗发生的地方」，但他也很期待玩家体验「巢穴」。他描述道，「巢穴」是「你和你的特工在任务之间运作的地方。你不仅有机会与团队的不同成员交谈，了解他们的状况，以及他们是否希望你帮忙处理某事，还可以处理许多管理任务。你可以在黑市购买物品。你可以选择修改角色的装备——他们使用的武器和实用物品——然后根据自己的选择自定义和升级他们的技能。」",
-          "after": "Brawley指出，虽然「战术任务本身是大部分游戏玩法的核心，也是所有战斗发生的地方」，但他也很期待玩家体验「巢穴（The Den）」。他描述道，「巢穴」是「你和你的特工在任务之间运作的地方。你不仅有机会与团队的不同成员交谈，了解他们的状况，以及他们是否希望你帮忙处理某事，还可以处理许多管理任务。你可以在黑市购买物品。你可以选择修改角色的装备——他们使用的武器和实用物品——然后根据自己的选择自定义和升级他们的技能。」"
-        }
-      ],
-      "feedback": [
-        {
-          "week_id": "2026-W23",
-          "text": "采纳，进入长期规则。",
-          "classified_as": "confirmed",
-          "created_at": "2026-06-04T06:38:24+08:00"
-        },
-        {
-          "week_id": "2026-W23",
-          "text": "采纳，进入长期规则。",
-          "classified_as": "confirmed",
-          "created_at": "2026-06-04T06:38:54+08:00"
-        },
-        {
-          "week_id": "2026-W23",
-          "text": "采纳，进入长期规则。",
-          "classified_as": "confirmed",
-          "created_at": "2026-06-04T06:39:36+08:00"
-        },
-        {
-          "week_id": "2026-W23",
-          "text": "采纳，进入长期规则。",
-          "classified_as": "confirmed",
-          "created_at": "2026-06-05T05:07:48+08:00"
-        },
-        {
-          "week_id": "2026-W23",
-          "text": "采纳，进入长期规则。",
-          "classified_as": "confirmed",
-          "created_at": "2026-06-06T04:56:39+08:00"
-        },
-        {
-          "week_id": "2026-W23",
-          "text": "采纳，进入长期规则。",
-          "classified_as": "confirmed",
-          "created_at": "2026-06-07T02:52:19+08:00"
-        },
-        {
-          "week_id": "2026-W24",
-          "text": "采纳，进入长期规则。",
-          "classified_as": "confirmed",
-          "created_at": "2026-06-15T21:48:32+08:00"
-        }
-      ],
-      "created_at": "2026-06-03T16:04:46+08:00",
-      "last_seen": "2026-06-08",
-      "confidence": 0.86,
-      "latest_evidence_summary": "The Den、Bond System等生僻术语首次出现时保留英文。"
-    },
-    {
-      "id": "social_media_platform_latest_name",
-      "title": "社交媒体平台使用当前官方名称",
-      "rule": "正文直接写“X”，不再并列旧称“Twitter”；仅在原文需要解释历史名称时例外。",
-      "category": "names",
-      "scope": "all",
-      "status": "confirmed",
-      "days": [
-        "2026-06-05"
-      ],
-      "days_seen": 1,
-      "articles_seen": 1,
-      "contradictions": 0,
-      "examples": [
-        {
-          "date": "2026-06-05",
-          "article_id": 9,
-          "before": "「奎托斯就是战神——我们还有更多关于他的故事要讲，」圣莫妮卡工作室官方X/Twitter账号昨晚发文写道。「目前，我们很高兴能带领玩家与劳菲一起踏上众神来世之旅，希望你们能一同前往！」",
-          "after": "「奎托斯就是战神——我们还有更多关于他的故事要讲，」圣莫尼卡工作室官方X账号昨晚发文写道。「目前，我们很高兴能带领玩家与劳菲一起踏上众神来世之旅，希望你们能一同前往！」"
-        }
-      ],
-      "feedback": [
-        {
-          "week_id": "2026-W23",
-          "text": "采纳，进入长期规则。",
-          "classified_as": "confirmed",
-          "created_at": "2026-06-04T06:38:24+08:00"
-        },
-        {
-          "week_id": "2026-W23",
-          "text": "采纳，进入长期规则。",
-          "classified_as": "confirmed",
-          "created_at": "2026-06-04T06:38:54+08:00"
-        },
-        {
-          "week_id": "2026-W23",
-          "text": "采纳，进入长期规则。",
-          "classified_as": "confirmed",
-          "created_at": "2026-06-04T06:39:36+08:00"
-        },
-        {
-          "week_id": "2026-W23",
-          "text": "采纳，进入长期规则。",
-          "classified_as": "confirmed",
-          "created_at": "2026-06-05T05:07:48+08:00"
-        },
-        {
-          "week_id": "2026-W23",
-          "text": "采纳，进入长期规则。",
-          "classified_as": "confirmed",
-          "created_at": "2026-06-06T04:56:39+08:00"
-        },
-        {
-          "week_id": "2026-W23",
-          "text": "采纳，进入长期规则。",
-          "classified_as": "confirmed",
-          "created_at": "2026-06-07T02:52:19+08:00"
-        }
-      ],
-      "created_at": "2026-06-03T16:04:46+08:00",
-      "last_seen": "2026-06-05",
-      "confidence": 0.86,
-      "latest_evidence_summary": "账号名称多次由X/Twitter统一为X。"
-    },
-    {
-      "id": "unify_baodao",
-      "title": "统一使用“报道”",
-      "rule": "正文中的“报导”一词统一改为“报道”。",
-      "category": "dictionary",
-      "scope": "all",
-      "status": "confirmed",
-      "days": [
-        "2026-06-02"
-      ],
-      "days_seen": 1,
-      "articles_seen": 1,
-      "contradictions": 0,
-      "examples": [
-        {
-          "date": "2026-06-02",
-          "article_id": 22,
-          "before": "据报导",
-          "after": "据报道"
-        }
-      ],
-      "feedback": [
-        {
-          "week_id": "2026-W23",
-          "text": "采纳，进入长期规则。",
-          "classified_as": "confirmed",
-          "created_at": "2026-06-04T06:38:24+08:00"
-        },
-        {
-          "week_id": "2026-W23",
-          "text": "采纳，进入长期规则。",
-          "classified_as": "confirmed",
-          "created_at": "2026-06-04T06:38:54+08:00"
-        },
-        {
-          "week_id": "2026-W23",
-          "text": "采纳，进入长期规则。",
-          "classified_as": "confirmed",
-          "created_at": "2026-06-04T06:39:36+08:00"
-        },
-        {
-          "week_id": "2026-W23",
-          "text": "采纳，进入长期规则。",
-          "classified_as": "confirmed",
-          "created_at": "2026-06-05T05:07:48+08:00"
-        },
-        {
-          "week_id": "2026-W23",
-          "text": "采纳，进入长期规则。",
-          "classified_as": "confirmed",
-          "created_at": "2026-06-06T04:56:39+08:00"
-        },
-        {
-          "week_id": "2026-W23",
-          "text": "采纳，进入长期规则。",
-          "classified_as": "confirmed",
-          "created_at": "2026-06-07T02:52:19+08:00"
-        }
-      ],
-      "created_at": "2026-06-03T16:03:40+08:00",
-      "last_seen": "2026-06-02",
-      "confidence": 0.9,
-      "latest_evidence_summary": "文章22将多处“报导”改为“报道”，符合现代汉语规范，且与用户过往严谨风格一致。"
-    },
-    {
-      "id": "add_china_release_info",
-      "title": "补充中国大陆上映信息",
-      "rule": "在文中提及电影定档日期时，如有中国大陆地区信息，应以括号补充“（中国大陆地区暂未定档）”等说明。",
-      "category": "body",
-      "scope": "movies_tv",
-      "status": "confirmed",
-      "days": [
-        "2026-06-01"
-      ],
-      "days_seen": 1,
-      "articles_seen": 1,
-      "contradictions": 0,
-      "examples": [
-        {
-          "date": "2026-06-01",
-          "article_id": 3,
-          "before": "影片仍定档2026年12月18日，希望官方预告片不会让我们等太久。",
-          "after": "影片仍定档2026年12月18日（中国大陆地区暂未定档），希望官方预告片不会让我们等太久。"
-        }
-      ],
-      "feedback": [
-        {
-          "week_id": "2026-W23",
-          "text": "采纳，进入长期规则。",
-          "classified_as": "confirmed",
-          "created_at": "2026-06-04T06:38:24+08:00"
-        },
-        {
-          "week_id": "2026-W23",
-          "text": "采纳，进入长期规则。",
-          "classified_as": "confirmed",
-          "created_at": "2026-06-04T06:38:54+08:00"
-        },
-        {
-          "week_id": "2026-W23",
-          "text": "采纳，进入长期规则。",
-          "classified_as": "confirmed",
-          "created_at": "2026-06-04T06:39:36+08:00"
-        },
-        {
-          "week_id": "2026-W23",
-          "text": "采纳，进入长期规则。",
-          "classified_as": "confirmed",
-          "created_at": "2026-06-05T05:07:48+08:00"
-        },
-        {
-          "week_id": "2026-W23",
-          "text": "采纳，进入长期规则。",
-          "classified_as": "confirmed",
-          "created_at": "2026-06-06T04:56:39+08:00"
-        },
-        {
-          "week_id": "2026-W23",
-          "text": "采纳，进入长期规则。",
-          "classified_as": "confirmed",
-          "created_at": "2026-06-07T02:52:19+08:00"
-        }
-      ],
-      "created_at": "2026-06-03T16:01:56+08:00",
-      "last_seen": "2026-06-01",
-      "confidence": 0.5,
-      "latest_evidence_summary": "用户在第6段补充了“（中国大陆地区暂未定档）”，可能旨在为中国读者提供相关信息。"
-    },
-    {
-      "id": "dedupe_currency_conversion",
-      "title": "金额换算去重",
-      "rule": "同一金额不要同时出现两套人民币换算或重复括号；保留一个准确、格式统一的中文换算。",
-      "category": "currency",
-      "scope": "all",
-      "status": "confirmed",
-      "days": [
-        "2026-06-22"
-      ],
-      "days_seen": 1,
-      "articles_seen": 1,
-      "contradictions": 0,
-      "examples": [],
-      "feedback": [
-        {
-          "week_id": "2026-W26",
-          "text": "采纳，进入长期规则。",
-          "classified_as": "confirmed",
-          "created_at": "2026-06-25T22:47:05+08:00"
-        }
-      ],
-      "created_at": "2026-06-22T21:49:02+08:00",
-      "last_seen": "2026-06-22",
-      "confidence": 0.9,
-      "latest_evidence_summary": "6/22 润色删除了重复人民币换算括号。"
-    },
-    {
-      "id": "remove_redundant_brand_wrappers",
-      "title": "标题避免重复品牌套壳",
-      "rule": "标题中已有品牌、平台或作品名时，避免再用重复的《品牌/平台》套壳写法；保留核心事件，让标题更自然。",
-      "category": "title",
-      "scope": "titles",
-      "status": "pending",
-      "days": [
-        "2026-06-21",
-        "2026-06-22",
-        "2026-06-23"
-      ],
-      "days_seen": 3,
-      "articles_seen": 2,
-      "contradictions": 0,
-      "examples": [
-        {
-          "date": "2026-06-23",
-          "article_id": 35,
-          "before": "《B社/贝塞斯达》陶德·霍华德：最近看过《漫威刀锋》，做得非常出色",
-          "after": "陶德·霍华德：最近看过《漫威刀锋战士》，做得非常出色"
-        }
-      ],
-      "feedback": [
-        {
-          "week_id": "2026-W26",
-          "text": "暂缓，继续观察。",
-          "classified_as": "pending",
-          "created_at": "2026-06-25T22:47:05+08:00"
-        }
-      ],
-      "created_at": "2026-06-22T21:49:02+08:00",
-      "last_seen": "2026-06-23",
-      "confidence": 0.86,
-      "latest_evidence_summary": "6/23 陶德·霍华德标题删除《B社/贝塞斯达》外壳，保留人物与《漫威刀锋战士》核心信息。"
-    },
-    {
       "id": "prefer_established_official_game_titles",
       "title": "优先使用稳定官方或通行译名",
       "rule": "游戏、影视、角色和系统名有稳定官方或通行中文译名时应统一使用；没有稳定译名时保留原文，不自行创造译名。",
@@ -1730,6 +999,33 @@
       "latest_evidence_summary": "6/24 ?????????2?????????? ???????????2????????2??"
     },
     {
+      "id": "subtitle_trim_generic_hook",
+      "title": "副标题保持短钩子，避免复述标题",
+      "rule": "副标题优先写成简短、有信息密度的钩子；不要机械复述标题，也不要堆泛泛而谈的背景。",
+      "category": "subtitle",
+      "scope": "subtitles",
+      "status": "confirmed",
+      "days": [
+        "2026-06-22"
+      ],
+      "days_seen": 1,
+      "articles_seen": 2,
+      "contradictions": 0,
+      "examples": [],
+      "feedback": [
+        {
+          "week_id": "2026-W26",
+          "text": "采纳，进入长期规则。",
+          "classified_as": "confirmed",
+          "created_at": "2026-06-25T22:47:05+08:00"
+        }
+      ],
+      "created_at": "2026-06-22T21:49:02+08:00",
+      "last_seen": "2026-06-22",
+      "confidence": 0.58,
+      "latest_evidence_summary": "6/22 多篇润色把重复或泛泛的副标题改短。"
+    },
+    {
       "id": "numbered_franchise_titles",
       "title": "系列作品标题补充直观编号",
       "rule": "涉及系列作品、合集或续作时，可使用读者容易识别的编号写法，如 1&2、5、3+4；但不得新增原文没有的事实。",
@@ -1755,12 +1051,39 @@
       "last_seen": "2026-06-22",
       "confidence": 0.7,
       "latest_evidence_summary": "6/22 的标题润色倾向用更直观的系列编号表达。"
+    },
+    {
+      "id": "dedupe_currency_conversion",
+      "title": "金额换算去重",
+      "rule": "同一金额不要同时出现两套人民币换算或重复括号；保留一个准确、格式统一的中文换算。",
+      "category": "currency",
+      "scope": "all",
+      "status": "confirmed",
+      "days": [
+        "2026-06-22"
+      ],
+      "days_seen": 1,
+      "articles_seen": 1,
+      "contradictions": 0,
+      "examples": [],
+      "feedback": [
+        {
+          "week_id": "2026-W26",
+          "text": "采纳，进入长期规则。",
+          "classified_as": "confirmed",
+          "created_at": "2026-06-25T22:47:05+08:00"
+        }
+      ],
+      "created_at": "2026-06-22T21:49:02+08:00",
+      "last_seen": "2026-06-22",
+      "confidence": 0.9,
+      "latest_evidence_summary": "6/22 润色删除了重复人民币换算括号。"
     }
   ],
   "instructions_for_user": [
-    "采纳：这条可以进入 STYLE_PROFILE.md。",
-    "否定：这不是你的偏好，后续不要再提出。",
-    "限定：仅在特定题材或上下文适用。",
-    "暂缓：继续观察，暂不进入正式风格档案。"
+    "Adopt: this rule can enter STYLE_PROFILE.md.",
+    "Reject: this is not your preference and should not be proposed again.",
+    "Limit: this rule only applies to a specific article type or context.",
+    "Hold: keep observing; do not promote it into the formal style profile yet."
   ]
 }

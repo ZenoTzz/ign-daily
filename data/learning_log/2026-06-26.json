@@ -1,0 +1,41 @@
+{
+  "date": "2026-06-26",
+  "source": "codex_nightly_learner",
+  "articles_analyzed": 8,
+  "article_ids": [
+    1,
+    7,
+    10,
+    15,
+    16,
+    24,
+    29,
+    31
+  ],
+  "observations": [
+    {
+      "rule_id": "prefer_confirmed_chinese_game_titles",
+      "status_suggestion": "confirmed_existing",
+      "evidence": "Articles #1 and #29 normalize game titles to established names."
+    },
+    {
+      "rule_id": "remove_author_bio_and_image_credit",
+      "status_suggestion": "confirmed_existing",
+      "evidence": "Articles #7 and #24 remove author contact/social tail notes."
+    },
+    {
+      "rule_id": "platform_name_compact",
+      "status_suggestion": "confirmed_existing",
+      "evidence": "Article #24 continues compact XBOX Series platform naming."
+    }
+  ],
+  "rules_confirmed_from_weekly": [],
+  "rules_held_from_weekly": [
+    "remove_redundant_brand_wrappers"
+  ],
+  "notes": [
+    "Imported 8 high-confidence Tencent polish files and generated diff_analysis.",
+    "No STYLE_PROFILE.md change: W26 held the broader brand-wrapper rule."
+  ],
+  "updated_at": "2026-06-26T22:47:00+08:00"
+}

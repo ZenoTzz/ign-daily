@@ -3,117 +3,61 @@
   "observer": "codex",
   "model": "codex",
   "status": "observed",
-  "source_hash": "9c0a732812ae1742bc2cbc29e52ed0febccff2e8",
-  "signal_count": 1,
-  "candidate_count": 3,
+  "source_hash": "codex-nightly-2026-06-25-9-articles",
+  "signal_count": 3,
+  "candidate_count": 0,
   "signals": [
     {
-      "type": "tencent_polish",
-      "date": "2026-06-25",
-      "article_id": 1,
-      "url": "https://www.ign.com/articles/valve-ram-companies-state-prices-monthly-if-we-say-no-then-they-never-talk-to-us-again",
-      "en_title": "Valve: RAM Companies State Prices Monthly, ‘If We Say No, Then They Never Talk to Us Again’",
-      "cn_title": "Valve自曝在内存采购上毫无议价权",
-      "import_fingerprint": "7ffdee97d23cdf92dc6999c79971f28464eec15dab5fa888b1f1e02f8d9f5a6c",
-      "match_score": 0.9116,
-      "edits": [
-        {
-          "field": "title",
-          "before": null,
-          "after": "Valve自曝在内存采购上毫无议价权"
-        },
-        {
-          "field": "paragraph_4",
-          "before": "「瞧，没有合同，什么也没有，」Valve工程师Pierre-Loup Griffais告诉Gamers Nexus，「那些家伙……他们每月给我们报价一次，大概这样，然后说『你们可以买这么多，行还是不行』。如果我们拒绝，他们就再也不会联系我们了。」",
-          "after": "「瞧，没有合同，什么也没有，」Valve工程师Pierre-Loup Griffais告诉Gamers Nexus，「那些家伙……他们每月给我们报价一次，大概这样，然后说‘你们可以买这么多，行还是不行’。如果我们拒绝，他们就再也不会联系我们了。」"
-        },
-        {
-          "field": "paragraph_5",
-          "before": "虽然Valve没有透露确切数字，但据估计，Steam Machine最初定价可能约为750美元(约合人民币5092元)，但由于内存成本飙升而取消，最终定价为1049美元(约合人民币7123元)。",
-          "after": "虽然Valve没有透露确切数字，但据估计，Steam Machine最初定价可能约为750美元（约合人民币5092元），但由于内存成本飙升而取消，最终定价为1049美元（约合人民币7123元）。"
-        },
-        {
-          "field": "paragraph_8",
-          "before": "你可以在IGN近期对Valve的采访中了解有关Steam Machine价格和性能的更多信息。",
-          "after": ""
-        },
-        {
-          "field": "paragraph_9",
-          "before": "Luke是IGN评测团队的资深编辑。你可以在Bluesky上找到他@mrlukereilly，向他询问各种事情。",
-          "after": ""
-        }
-      ]
-    }
-  ],
-  "candidates": [
-    {
-      "id_hint": "inner_quote_single_marks",
-      "title": "中文引号内再引用用单引号",
-      "rule": "中文直引号内部再次出现短语、问题或强调词时，内层引用使用‘ ’，避免连续使用「」造成层级不清。",
-      "category": "punctuation",
-      "scope": "quoted_speech",
-      "status_suggestion": "confirmed_by_weekly_feedback",
-      "confidence": 0.82,
-      "evidence_summary": "6/25 Valve 引语继续把直引语内部的二级引用改为中文单引号。",
-      "examples": [
-        {
-          "date": "2026-06-25",
-          "article_id": 1,
-          "before": "然后说『你们可以买这么多，行还是不行』。",
-          "after": "然后说‘你们可以买这么多，行还是不行’。"
-        }
+      "article_ids": [
+        1,
+        4,
+        9,
+        14,
+        18,
+        24,
+        26,
+        29,
+        30
       ],
-      "contradiction": ""
+      "rule_id": "remove_redundant_title_prefixes",
+      "summary": "Articles #4 and #9 remove redundant title wrappers while preserving the subject."
     },
     {
-      "id_hint": "currency_conversion_refined",
-      "title": "金额换算采用统一中文格式",
-      "rule": "正文金额首次出现时可给出人民币换算，使用中文全角括号并保持同文一致；标题通常不放人民币换算。汇率数值属于时效数据，不作为固定翻译规则。",
-      "category": "currency",
-      "scope": "all",
-      "status_suggestion": "confirmed_existing_rule",
-      "confidence": 0.92,
-      "evidence_summary": "6/25 Steam Machine 稿件继续把金额换算统一为中文全角括号格式。",
-      "examples": [
-        {
-          "date": "2026-06-25",
-          "article_id": 1,
-          "before": "750美元(约合人民币5092元)",
-          "after": "750美元（约合人民币5092元）"
-        }
+      "article_ids": [
+        1,
+        4,
+        9,
+        14,
+        18,
+        24,
+        26,
+        29,
+        30
       ],
-      "contradiction": ""
+      "rule_id": "currency_conversion_refined",
+      "summary": "Article #24 removes CNY conversion clutter from the title."
     },
     {
-      "id_hint": "remove_promotional_related_links",
-      "title": "删除站内推广和相关阅读引导",
-      "rule": "正文末尾的“查看更多”“阅读我们的采访或汇总”等站内引流句应删除，但不得删除承载新闻事实的正文。",
-      "category": "structure",
-      "scope": "all",
-      "status_suggestion": "confirmed_existing_rule",
-      "confidence": 0.95,
-      "evidence_summary": "6/25 删除了 IGN 采访引流句和作者简介/社交账号尾注。",
-      "examples": [
-        {
-          "date": "2026-06-25",
-          "article_id": 1,
-          "before": "你可以在IGN近期对Valve的采访中了解有关Steam Machine价格和性能的更多信息。",
-          "after": ""
-        },
-        {
-          "date": "2026-06-25",
-          "article_id": 1,
-          "before": "Luke是IGN评测团队的资深编辑。你可以在Bluesky上找到他@mrlukereilly，向他询问各种事情。",
-          "after": ""
-        }
+      "article_ids": [
+        1,
+        4,
+        9,
+        14,
+        18,
+        24,
+        26,
+        29,
+        30
       ],
-      "contradiction": ""
+      "rule_id": "subtitle_avoid_concrete_detail",
+      "summary": "Articles #18 and #24 keep subtitles short or quote-like."
     }
   ],
+  "candidates": [],
   "notes": [
-    "Only Tencent Docs imported polished drafts and weekly feedback were used.",
-    "The 6/25 currency edit was classified as fullwidth Chinese formatting, not live exchange-rate evidence.",
-    "STYLE_PROFILE.md was updated only for rules explicitly adopted in weekly feedback."
+    "Re-ran diff_analysis after Tencent import expanded the date from 1 to 9 polished articles.",
+    "No STYLE_PROFILE.md change: no new explicit weekly adoption feedback.",
+    "Only existing confirmed/pending evidence was updated; no new formal rule was promoted."
   ],
-  "updated_at": "2026-06-25T22:47:05+08:00"
+  "updated_at": "2026-06-26T22:47:00+08:00"
 }
