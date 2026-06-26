@@ -2,6 +2,109 @@
   "date": "2026-06-27",
   "articles": [
     {
+      "id": 10,
+      "category": "人物新闻",
+      "emoji": "📚",
+      "en_title": "'A Historic Moment in the History of Manga' — Struggling Japanese Artist's Debut Manga Gets Official English Release After 'Can Barely Afford Cheap Coffee' Post Goes Viral",
+      "cn_title": "日本漫画家Shiten Akiyama的出道作《Horizon》获官方英文版",
+      "summary": "日本漫画家Shiten Akiyama的出道漫画《Horizon》在海外积累了大量粉丝后，确认将于2027年1月推出官方英文版。此前，他因发文称自己「连廉价咖啡都买不起」而走红，海外粉丝24小时内捐赠超过90万日元(约合人民币4万元)。Akiyama表示，这对于一部在日本仍相对不知名的作品而言是「漫画史上的历史性时刻」。",
+      "url": "https://www.ign.com/articles/a-historic-moment-in-the-history-of-manga-struggling-japanese-artists-debut-manga-gets-official-english-release-after-can-barely-afford-cheap-coffee-post-goes-viral",
+      "publish_time_cn": "2026-06-26 19:41",
+      "pub_date": "2026-06-26 19:41",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/26/coffee-1782474107838.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/26/coffee-1782474107838.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/26/coffee-1782474107838.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/26/coffee-1782474107838.jpg?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/26/coffee-1782474107838.jpg?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/26/coffee-1782474107838.jpg",
+        "https://assets-prd.ignimgs.com/2026/06/26/coffee-1782474087652.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-26T20:27:43+08:00",
+      "pending_dict": [
+        {
+          "en": "Horizon",
+          "cn": "《Horizon》",
+          "cat": "movies_tv",
+          "source": "ai_guess",
+          "reason": "漫画名，无官方中文译名，暂保留英文"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "category": "游戏新闻",
+      "emoji": "⚔️",
+      "en_title": "'Regrettably, This Is Going to Be Our Version of the Dark Age of Technology' — Games Workshop Is Going After Tabletop Simulator Steam Mods That Recreate Warhammer 40,000 11th Edition",
+      "cn_title": "Games Workshop要求下架《战锤40K》TTS模组",
+      "summary": "Games Workshop近日要求删除《桌游模拟器》Steam创意工坊中复刻《战锤40K》第11版的模组。受影响的模组创作者已经应要求下架，社区猜测此举与第11版正式发售有关，旨在避免数字版替代实体桌面游戏。这并非GW首次打击同人模组，但长期来看模组社区可能仍会恢复。",
+      "url": "https://www.ign.com/articles/regrettably-this-is-going-to-be-our-version-of-the-dark-age-of-technology-games-workshop-is-going-after-tabletop-simulator-steam-mods-that-recreate-warhammer-40000-11th-edition",
+      "publish_time_cn": "2026-06-26 19:16",
+      "pub_date": "2026-06-26 19:16",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/26/40k-1782472561243.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/26/40k-1782472561243.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/26/40k-1782472561243.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/26/40k-1782472561243.jpg?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/26/40k-1782472561243.jpg?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/26/40k-1782472561243.jpg",
+        "https://assets-prd.ignimgs.com/2026/06/26/40k-1782472182558.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-26T20:27:43+08:00",
+      "pending_dict": [
+        {
+          "en": "ForceOrg",
+          "cn": "ForceOrg",
+          "cat": "games",
+          "source": "ai_guess",
+          "reason": "模组名称，无常见中文译名，建议保留英文"
+        },
+        {
+          "en": "hutber",
+          "cn": "hutber",
+          "cat": "people",
+          "source": "ai_guess",
+          "reason": "模组作者名，无常见译名，建议保留英文"
+        },
+        {
+          "en": "Seaborne",
+          "cn": "Seaborne",
+          "cat": "people",
+          "source": "ai_guess",
+          "reason": "模组作者名，无常见译名，建议保留英文"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "category": "游戏新闻",
+      "emoji": "🎮",
+      "en_title": "PlayStation Boss Says New Console Experiences Will Involve 'Leveraging Technologies That Can Be Used in Various Forms and Locations' — and I'm Convinced He's Teasing a PS6 Handheld",
+      "cn_title": "《PlayStation》索尼CEO暗示PS6掌机：将利用可在多种形式下使用的技术",
+      "summary": "索尼互动娱乐CEO西野秀明在接受《Fami通》采访时暗示，未来PlayStation新主机体验将涉及「利用可在多种形式和地点使用的技术」，外界普遍认为这是在暗示PS6掌机。西野强调「即拿即玩」是当前主机最重要的特性，并提到PlayStation Portal云串流服务用户数增长迅速。此外，随着Valve的Steam Machine起售价高达1050美元(约合人民币7150元)(约合7560元人民币)，内存厂商预计PS6等下一代主机可能超过1000美元(约合人民币6810元)(约合7200元人民币)，索尼或推迟发售以规避过高定价。",
+      "url": "https://www.ign.com/articles/playstation-boss-says-new-console-experiences-will-involve-leveraging-technologies-that-can-be-used-in-various-forms-and-locations-and-im-convinced-hes-teasing-a-ps6-handheld",
+      "publish_time_cn": "2026-06-26 18:16",
+      "pub_date": "2026-06-26 18:16",
+      "cover_image": "https://assets-prd.ignimgs.com/2023/08/23/playstationportalhandson-36190303-playstationq-thumbnail-1692760353361.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2023/08/23/playstationportalhandson-36190303-playstationq-thumbnail-1692760353361.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2023/08/23/playstationportalhandson-36190303-playstationq-thumbnail-1692760353361.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2023/08/23/playstationportalhandson-36190303-playstationq-thumbnail-1692760353361.jpg?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2023/08/23/playstationportalhandson-36190303-playstationq-thumbnail-1692760353361.jpg?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2023/08/23/playstationportalhandson-36190303-playstationq-thumbnail-1692760353361.jpg",
+        "https://assets-prd.ignimgs.com/2022/11/23/abby-1669223112955.png",
+        "https://assets-prd.ignimgs.com/2022/11/23/abe-1669223117741.png",
+        "https://assets-prd.ignimgs.com/2022/11/23/aerith-1669223120737.png"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-26T20:27:44+08:00"
+    },
+    {
       "id": 7,
       "category": "行业动态",
       "emoji": "📉",
@@ -192,5 +295,5 @@
       "source_fetched_at": "2026-06-26T09:51:00+08:00"
     }
   ],
-  "total": 7
+  "total": 10
 }

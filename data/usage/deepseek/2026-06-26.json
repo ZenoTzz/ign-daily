@@ -1608,6 +1608,78 @@
       "total_tokens_including_reasoning": 10637,
       "prompt_cache_hit_tokens": 8320,
       "prompt_cache_miss_tokens": 760
+    },
+    {
+      "time_cn": "2026-06-26 20:27:52",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 8,
+      "article_title": "'Regrettably, This Is Going to Be Our Version of the Dark Age of Technology' — Games Workshop Is Going After Tabletop Simulator Steam Mods That Recreate Warhammer 40,000 11th Edition",
+      "article_url": "https://www.ign.com/articles/regrettably-this-is-going-to-be-our-version-of-the-dark-age-of-technology-games-workshop-is-going-after-tabletop-simulator-steam-mods-that-recreate-warhammer-40000-11th-edition",
+      "article_date": "2026-06-27",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00043854,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9580,
+      "completion_tokens": 581,
+      "reasoning_tokens": 272,
+      "output_tokens_including_reasoning": 853,
+      "total_tokens": 10161,
+      "total_tokens_including_reasoning": 10433,
+      "prompt_cache_hit_tokens": 8320,
+      "prompt_cache_miss_tokens": 1260
+    },
+    {
+      "time_cn": "2026-06-26 20:27:59",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 9,
+      "article_title": "PlayStation Boss Says New Console Experiences Will Involve 'Leveraging Technologies That Can Be Used in Various Forms and Locations' — and I'm Convinced He's Teasing a PS6 Handheld",
+      "article_url": "https://www.ign.com/articles/playstation-boss-says-new-console-experiences-will-involve-leveraging-technologies-that-can-be-used-in-various-forms-and-locations-and-im-convinced-hes-teasing-a-ps6-handheld",
+      "article_date": "2026-06-27",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00041194,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9530,
+      "completion_tokens": 482,
+      "reasoning_tokens": 301,
+      "output_tokens_including_reasoning": 783,
+      "total_tokens": 10012,
+      "total_tokens_including_reasoning": 10313,
+      "prompt_cache_hit_tokens": 8320,
+      "prompt_cache_miss_tokens": 1210
+    },
+    {
+      "time_cn": "2026-06-26 20:28:08",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 10,
+      "article_title": "'A Historic Moment in the History of Manga' — Struggling Japanese Artist's Debut Manga Gets Official English Release After 'Can Barely Afford Cheap Coffee' Post Goes Viral",
+      "article_url": "https://www.ign.com/articles/a-historic-moment-in-the-history-of-manga-struggling-japanese-artists-debut-manga-gets-official-english-release-after-can-barely-afford-cheap-coffee-post-goes-viral",
+      "article_date": "2026-06-27",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00049594,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9178,
+      "completion_tokens": 735,
+      "reasoning_tokens": 524,
+      "output_tokens_including_reasoning": 1259,
+      "total_tokens": 9913,
+      "total_tokens_including_reasoning": 10437,
+      "prompt_cache_hit_tokens": 8320,
+      "prompt_cache_miss_tokens": 858
     }
   ]
 }
