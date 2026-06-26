@@ -14,7 +14,21 @@
       "fingerprint": "1b3cc8bc60b13e9d9e75d2591b02525767a08932",
       "translation_path": "translations/08.json",
       "retry_policy": "manual_only"
+    },
+    "16": {
+      "id": 16,
+      "url": "https://www.ign.com/articles/bungie-announces-layoffs-as-it-admits-destiny-2-fell-short-of-expectations",
+      "en_title": "Bungie Announces Layoffs as It Admits 'Destiny 2 Fell Short of Expectations'",
+      "cn_title": "Bungie宣布裁员，承认《命运2》未达预期",
+      "model": "deepseek-v4-pro",
+      "status": "needs_manual_review",
+      "failed_at": "2026-06-26T09:23:37.773465+08:00",
+      "reason": "model returned empty paragraphs",
+      "audit_issues": [],
+      "fingerprint": "28ee0e79f8843ee6a27d6833cd8e2eee93da29ed",
+      "translation_path": "",
+      "retry_policy": "manual_only"
     }
   },
-  "updated_at": "2026-06-26T01:21:46.689Z"
+  "updated_at": "2026-06-26T09:23:37.773465+08:00"
 }
