@@ -1,10 +1,17 @@
 {
   "provider": "deepseek",
   "base_url": "https://api.deepseek.com",
-  "updated_at_cn": "2026-06-26 06:51:46",
-  "ok": false,
-  "error": "HTTP Error 401: Unauthorized",
-  "balance_infos": [],
-  "total_balance": null,
-  "currency": ""
+  "updated_at_cn": "2026-06-26 08:18:14",
+  "ok": true,
+  "is_available": true,
+  "balance_infos": [
+    {
+      "currency": "CNY",
+      "total_balance": "33.48",
+      "granted_balance": "0.00",
+      "topped_up_balance": "33.48"
+    }
+  ],
+  "total_balance": 33.48,
+  "currency": "CNY"
 }
