@@ -5,161 +5,125 @@
     "2026-06-26"
   ],
   "changed_dates": [
-    "2026-06-27",
-    "2026-06-26"
+    "2026-06-27"
   ],
   "new_target_dates": [
-    "2026-06-26"
+    "2026-06-27"
   ],
-  "new_count": 1,
-  "filtered_count": 5,
+  "new_count": 2,
+  "filtered_count": 3,
   "cleanup_count": 0,
-  "changed_count": 6,
+  "changed_count": 5,
   "articles": [
     {
-      "title": "Little Brother Review",
-      "url": "https://www.ign.com/articles/little-brother-review-john-cena-eric-andre-netflix",
-      "pubDate_cst": "2026-06-26 07:00"
+      "title": "Talladega Nights Director Reveals the Plot of the Film's Cancelled Sequel",
+      "url": "https://www.ign.com/articles/talladega-nights-director-reveals-the-plot-of-the-films-cancelled-sequel",
+      "pubDate_cst": "2026-06-26 08:52"
+    },
+    {
+      "title": "Robert Eggers’ Werwulf: First Look and Story Details Revealed for Historical Horror Movie",
+      "url": "https://www.ign.com/articles/robert-eggers-werwulf-first-look-story-details",
+      "pubDate_cst": "2026-06-26 08:37"
     }
   ],
   "filtered_articles": [
     {
-      "title": "I Tracked Down 25 Worthwhile Gaming Deals Under $20 for Both Console and PC Players",
-      "url": "https://www.ign.com/articles/25-gaming-deals-under-20-switch-xbox-ps5-pc-prime-day-2026",
-      "pubDate_cst": "2026-06-26 08:30",
-      "description": "There's a million sales happening right now, so I sifted through them all to find 25 genuinely solid gaming deals that are each under $20.",
-      "categories": "",
-      "reason": "text:\\bunder \\$\\d+",
-      "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
-      "filtered_at_cn": "2026-06-26 09:18:36",
-      "status": "filtered"
-    },
-    {
-      "title": "The 65\" LG Evo C5 4K OLED Smart TV Drops to Its Lowest Price of the Year for Amazon Prime Day",
-      "url": "https://www.ign.com/articles/lg-evo-c5-4k-oled-smart-tv-deal-amazon-prime-day-sale",
-      "pubDate_cst": "2026-06-26 08:20",
-      "description": "The best TV for both gaming and movie watching in glorious 4K with HDR.",
+      "title": "Save Over 50% Off the Renewable Jackery Solar Generator 1000 V2 Power Station Bundle for Prime Day",
+      "url": "https://www.ign.com/articles/jackery-solar-generator-1000-v2-power-station-deal-amazon-prime-day-sale",
+      "pubDate_cst": "2026-06-26 09:25",
+      "description": "Save an extra $150 on top of Prime Day pricing by purchasing as a bundle.",
       "categories": "",
       "reason": "text:\\bprime.day\\b",
       "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
-      "filtered_at_cn": "2026-06-26 09:18:36",
+      "filtered_at_cn": "2026-06-26 09:50:57",
       "status": "filtered"
     },
     {
-      "title": "Check Out These LEGO Star Wars Deals Before Amazon Prime Day Ends",
-      "url": "https://www.ign.com/articles/check-out-these-lego-star-wars-deals-before-amazon-prime-day-ends",
-      "pubDate_cst": "2026-06-26 07:45",
-      "description": "",
+      "title": "Save Up to 55% Off Amazon Fire TV Sticks for Prime Day",
+      "url": "https://www.ign.com/articles/save-up-to-55-off-amazon-fire-tv-sticks-for-prime-day",
+      "pubDate_cst": "2026-06-26 09:20",
+      "description": "From cloud gaming to budget-friendly streaming, there's a deal for everyone",
       "categories": "",
       "reason": "text:\\bprime.day\\b",
       "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
-      "filtered_at_cn": "2026-06-26 09:18:36",
+      "filtered_at_cn": "2026-06-26 09:50:57",
       "status": "filtered"
     },
     {
-      "title": "The Dune 6-Book Box Set Is Cheaper Now Than When Amazon Prime Day Started",
-      "url": "https://www.ign.com/articles/the-dune-6-book-box-set-is-cheaper-now-than-when-amazon-prime-day-started",
-      "pubDate_cst": "2026-06-26 07:15",
-      "description": "",
+      "title": "The GTPLAYER Big and Tall Gaming Chair Drops to Less Than $160 for Amazon Prime Day",
+      "url": "https://www.ign.com/articles/gtplayer-big-and-tall-gaming-chair-deal-amazon-prime-day-sale",
+      "pubDate_cst": "2026-06-26 08:40",
+      "description": "An inviting gaming chair without the high dollar price tag",
       "categories": "",
       "reason": "text:\\bprime.day\\b",
       "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
-      "filtered_at_cn": "2026-06-26 09:18:36",
-      "status": "filtered"
-    },
-    {
-      "title": "The 5 Best Robot Vacuum Deals for Prime Day",
-      "url": "https://www.ign.com/articles/robot-vacuum-deals-prime-day-2026",
-      "pubDate_cst": "2026-06-26 07:00",
-      "description": "",
-      "categories": "",
-      "reason": "text:\\bbest .+ deals?\\b",
-      "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
-      "filtered_at_cn": "2026-06-26 09:18:36",
+      "filtered_at_cn": "2026-06-26 09:50:57",
       "status": "filtered"
     }
   ],
   "runs": [
     {
       "target_date": "2026-06-27",
-      "new_count": 0,
-      "filtered_count": 2,
-      "changed_count": 2,
-      "next_id": 1,
-      "articles": [],
-      "filtered_articles": [
+      "new_count": 2,
+      "filtered_count": 3,
+      "changed_count": 5,
+      "next_id": 3,
+      "articles": [
         {
-          "title": "I Tracked Down 25 Worthwhile Gaming Deals Under $20 for Both Console and PC Players",
-          "url": "https://www.ign.com/articles/25-gaming-deals-under-20-switch-xbox-ps5-pc-prime-day-2026",
-          "pubDate_cst": "2026-06-26 08:30",
-          "description": "There's a million sales happening right now, so I sifted through them all to find 25 genuinely solid gaming deals that are each under $20.",
-          "categories": "",
-          "reason": "text:\\bunder \\$\\d+",
-          "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
-          "filtered_at_cn": "2026-06-26 09:18:36",
-          "status": "filtered"
+          "title": "Talladega Nights Director Reveals the Plot of the Film's Cancelled Sequel",
+          "url": "https://www.ign.com/articles/talladega-nights-director-reveals-the-plot-of-the-films-cancelled-sequel",
+          "pubDate_cst": "2026-06-26 08:52"
         },
         {
-          "title": "The 65\" LG Evo C5 4K OLED Smart TV Drops to Its Lowest Price of the Year for Amazon Prime Day",
-          "url": "https://www.ign.com/articles/lg-evo-c5-4k-oled-smart-tv-deal-amazon-prime-day-sale",
-          "pubDate_cst": "2026-06-26 08:20",
-          "description": "The best TV for both gaming and movie watching in glorious 4K with HDR.",
+          "title": "Robert Eggers’ Werwulf: First Look and Story Details Revealed for Historical Horror Movie",
+          "url": "https://www.ign.com/articles/robert-eggers-werwulf-first-look-story-details",
+          "pubDate_cst": "2026-06-26 08:37"
+        }
+      ],
+      "filtered_articles": [
+        {
+          "title": "Save Over 50% Off the Renewable Jackery Solar Generator 1000 V2 Power Station Bundle for Prime Day",
+          "url": "https://www.ign.com/articles/jackery-solar-generator-1000-v2-power-station-deal-amazon-prime-day-sale",
+          "pubDate_cst": "2026-06-26 09:25",
+          "description": "Save an extra $150 on top of Prime Day pricing by purchasing as a bundle.",
           "categories": "",
           "reason": "text:\\bprime.day\\b",
           "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
-          "filtered_at_cn": "2026-06-26 09:18:36",
+          "filtered_at_cn": "2026-06-26 09:50:57",
+          "status": "filtered"
+        },
+        {
+          "title": "Save Up to 55% Off Amazon Fire TV Sticks for Prime Day",
+          "url": "https://www.ign.com/articles/save-up-to-55-off-amazon-fire-tv-sticks-for-prime-day",
+          "pubDate_cst": "2026-06-26 09:20",
+          "description": "From cloud gaming to budget-friendly streaming, there's a deal for everyone",
+          "categories": "",
+          "reason": "text:\\bprime.day\\b",
+          "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
+          "filtered_at_cn": "2026-06-26 09:50:57",
+          "status": "filtered"
+        },
+        {
+          "title": "The GTPLAYER Big and Tall Gaming Chair Drops to Less Than $160 for Amazon Prime Day",
+          "url": "https://www.ign.com/articles/gtplayer-big-and-tall-gaming-chair-deal-amazon-prime-day-sale",
+          "pubDate_cst": "2026-06-26 08:40",
+          "description": "An inviting gaming chair without the high dollar price tag",
+          "categories": "",
+          "reason": "text:\\bprime.day\\b",
+          "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
+          "filtered_at_cn": "2026-06-26 09:50:57",
           "status": "filtered"
         }
       ]
     },
     {
       "target_date": "2026-06-26",
-      "new_count": 1,
-      "filtered_count": 3,
-      "changed_count": 4,
+      "new_count": 0,
+      "filtered_count": 0,
+      "changed_count": 0,
       "next_id": 34,
-      "articles": [
-        {
-          "title": "Little Brother Review",
-          "url": "https://www.ign.com/articles/little-brother-review-john-cena-eric-andre-netflix",
-          "pubDate_cst": "2026-06-26 07:00"
-        }
-      ],
-      "filtered_articles": [
-        {
-          "title": "Check Out These LEGO Star Wars Deals Before Amazon Prime Day Ends",
-          "url": "https://www.ign.com/articles/check-out-these-lego-star-wars-deals-before-amazon-prime-day-ends",
-          "pubDate_cst": "2026-06-26 07:45",
-          "description": "",
-          "categories": "",
-          "reason": "text:\\bprime.day\\b",
-          "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
-          "filtered_at_cn": "2026-06-26 09:18:36",
-          "status": "filtered"
-        },
-        {
-          "title": "The Dune 6-Book Box Set Is Cheaper Now Than When Amazon Prime Day Started",
-          "url": "https://www.ign.com/articles/the-dune-6-book-box-set-is-cheaper-now-than-when-amazon-prime-day-started",
-          "pubDate_cst": "2026-06-26 07:15",
-          "description": "",
-          "categories": "",
-          "reason": "text:\\bprime.day\\b",
-          "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
-          "filtered_at_cn": "2026-06-26 09:18:36",
-          "status": "filtered"
-        },
-        {
-          "title": "The 5 Best Robot Vacuum Deals for Prime Day",
-          "url": "https://www.ign.com/articles/robot-vacuum-deals-prime-day-2026",
-          "pubDate_cst": "2026-06-26 07:00",
-          "description": "",
-          "categories": "",
-          "reason": "text:\\bbest .+ deals?\\b",
-          "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
-          "filtered_at_cn": "2026-06-26 09:18:36",
-          "status": "filtered"
-        }
-      ]
+      "articles": [],
+      "filtered_articles": []
     }
   ]
 }

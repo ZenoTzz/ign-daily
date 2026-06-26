@@ -1056,6 +1056,54 @@
       "total_tokens_including_reasoning": 9487,
       "prompt_cache_hit_tokens": 8832,
       "prompt_cache_miss_tokens": 63
+    },
+    {
+      "time_cn": "2026-06-26 09:51:10",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 1,
+      "article_title": "Talladega Nights Director Reveals the Plot of the Film's Cancelled Sequel",
+      "article_url": "https://www.ign.com/articles/talladega-nights-director-reveals-the-plot-of-the-films-cancelled-sequel",
+      "article_date": "2026-06-27",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00041068,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9037,
+      "completion_tokens": 584,
+      "reasoning_tokens": 441,
+      "output_tokens_including_reasoning": 1025,
+      "total_tokens": 9621,
+      "total_tokens_including_reasoning": 10062,
+      "prompt_cache_hit_tokens": 8320,
+      "prompt_cache_miss_tokens": 717
+    },
+    {
+      "time_cn": "2026-06-26 09:51:18",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 2,
+      "article_title": "Robert Eggers’ Werwulf: First Look and Story Details Revealed for Historical Horror Movie",
+      "article_url": "https://www.ign.com/articles/robert-eggers-werwulf-first-look-story-details",
+      "article_date": "2026-06-27",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00036966,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9112,
+      "completion_tokens": 506,
+      "reasoning_tokens": 335,
+      "output_tokens_including_reasoning": 841,
+      "total_tokens": 9618,
+      "total_tokens_including_reasoning": 9953,
+      "prompt_cache_hit_tokens": 8320,
+      "prompt_cache_miss_tokens": 792
     }
   ]
 }
