@@ -1,5 +1,60 @@
 [
   {
+    "run_id": "28214266994",
+    "workflow": "API Translation",
+    "event": "workflow_dispatch",
+    "sha": "74706311955d6288f1d482fdc44a018da542b881",
+    "recorded_at_cn": "2026-06-26 11:02:01",
+    "start_balance": 32.77,
+    "end_balance": 32.77,
+    "currency": "CNY",
+    "actual_platform_cost": 0.0,
+    "balance_delta_status": "pending_or_delayed",
+    "estimated_cost_usd": 0.01571033,
+    "api_call_count": 8,
+    "total_tokens": 88474,
+    "output_tokens": 15678,
+    "by_model": {
+      "deepseek-v4-pro": {
+        "calls": 8,
+        "estimated_cost_usd": 0.01571033,
+        "total_tokens": 88474,
+        "output_tokens": 15678
+      }
+    },
+    "by_task": {
+      "fulltext": {
+        "calls": 1,
+        "estimated_cost_usd": 0.00638948,
+        "total_tokens": 16609
+      },
+      "fulltext_chunk": {
+        "calls": 7,
+        "estimated_cost_usd": 0.00932085,
+        "total_tokens": 71865
+      }
+    },
+    "retry_articles": [
+      {
+        "article_id": 4,
+        "article_date": "2026-06-27",
+        "article_title": "导演确认《料理鼠王2》永不会拍",
+        "article_url": "https://www.ign.com/articles/ratatouille-2-will-never-happen-says-director-brad-bird",
+        "calls": 8,
+        "estimated_cost_usd": 0.01571033,
+        "total_tokens": 88474,
+        "tasks": {
+          "fulltext": 1,
+          "fulltext_chunk": 7
+        },
+        "models": {
+          "deepseek-v4-pro": 8
+        }
+      }
+    ],
+    "snapshot_ok": true
+  },
+  {
     "run_id": "28213625809",
     "workflow": "Hourly RSS",
     "event": "workflow_dispatch",
@@ -4415,23 +4470,6 @@
     "event": "schedule",
     "sha": "4844708efe4829cd9911a0dd10be6fd3d8229daa",
     "recorded_at_cn": "2026-06-14 19:37:46",
-    "start_balance": 45.5,
-    "end_balance": 45.5,
-    "currency": "CNY",
-    "actual_platform_cost": 0.0,
-    "balance_delta_status": "ok",
-    "estimated_cost_usd": 0,
-    "api_call_count": 0,
-    "total_tokens": 0,
-    "by_model": {},
-    "snapshot_ok": true
-  },
-  {
-    "run_id": "27493766400",
-    "workflow": "API Translation",
-    "event": "schedule",
-    "sha": "be08b706e58ffe58652a2a223afd6aa56ea3e93e",
-    "recorded_at_cn": "2026-06-14 16:51:27",
     "start_balance": 45.5,
     "end_balance": 45.5,
     "currency": "CNY",
