@@ -1,127 +1,165 @@
 {
-  "target_date": "2026-06-26",
+  "target_date": "2026-06-27",
   "target_dates": [
-    "2026-06-26",
-    "2026-06-25"
-  ],
-  "changed_dates": [
+    "2026-06-27",
     "2026-06-26"
   ],
-  "new_target_dates": [],
-  "new_count": 0,
-  "filtered_count": 4,
+  "changed_dates": [
+    "2026-06-27",
+    "2026-06-26"
+  ],
+  "new_target_dates": [
+    "2026-06-26"
+  ],
+  "new_count": 1,
+  "filtered_count": 5,
   "cleanup_count": 0,
-  "changed_count": 4,
-  "articles": [],
+  "changed_count": 6,
+  "articles": [
+    {
+      "title": "Little Brother Review",
+      "url": "https://www.ign.com/articles/little-brother-review-john-cena-eric-andre-netflix",
+      "pubDate_cst": "2026-06-26 07:00"
+    }
+  ],
   "filtered_articles": [
     {
-      "title": "Amazon's Box Set Deals Are a Fantasy Book Collection Just Waiting to Happen",
-      "url": "https://www.ign.com/articles/best-prime-day-book-deals-on-box-sets-2026",
-      "pubDate_cst": "2026-06-26 06:00",
-      "description": "",
+      "title": "I Tracked Down 25 Worthwhile Gaming Deals Under $20 for Both Console and PC Players",
+      "url": "https://www.ign.com/articles/25-gaming-deals-under-20-switch-xbox-ps5-pc-prime-day-2026",
+      "pubDate_cst": "2026-06-26 08:30",
+      "description": "There's a million sales happening right now, so I sifted through them all to find 25 genuinely solid gaming deals that are each under $20.",
       "categories": "",
-      "reason": "url:deal",
+      "reason": "text:\\bunder \\$\\d+",
       "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
-      "filtered_at_cn": "2026-06-26 06:48:36",
+      "filtered_at_cn": "2026-06-26 09:18:36",
       "status": "filtered"
     },
     {
-      "title": "Amazon Has a Kingdom Hearts Keyblade at Its Lowest Price in 2026",
-      "url": "https://www.ign.com/articles/amazon-has-a-kingdom-hearts-keyblade-at-its-lowest-price-for-prime-day-2026",
-      "pubDate_cst": "2026-06-26 05:30",
-      "description": "",
-      "categories": "",
-      "reason": "text:\\blowest price\\b",
-      "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
-      "filtered_at_cn": "2026-06-26 06:48:36",
-      "status": "filtered"
-    },
-    {
-      "title": "The Nintendo Switch 2 Gaming Console Is Going for as Low as $399 for Prime Day",
-      "url": "https://www.ign.com/articles/nintendo-switch-2-gaming-console-deal-at-woot-amazon-prime-day",
-      "pubDate_cst": "2026-06-26 05:10",
-      "description": "Brand new.",
+      "title": "The 65\" LG Evo C5 4K OLED Smart TV Drops to Its Lowest Price of the Year for Amazon Prime Day",
+      "url": "https://www.ign.com/articles/lg-evo-c5-4k-oled-smart-tv-deal-amazon-prime-day-sale",
+      "pubDate_cst": "2026-06-26 08:20",
+      "description": "The best TV for both gaming and movie watching in glorious 4K with HDR.",
       "categories": "",
       "reason": "text:\\bprime.day\\b",
       "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
-      "filtered_at_cn": "2026-06-26 06:48:36",
+      "filtered_at_cn": "2026-06-26 09:18:36",
       "status": "filtered"
     },
     {
-      "title": "Save $2,500 Off an Alienware Area-51 Gaming PC With GeForce RTX 5090 GPU, 64GB of RAM, and a 4TB SSD",
-      "url": "https://www.ign.com/articles/save-2500-off-an-alienware-area-51-gaming-pc-with-geforce-rtx-5090-gpu-64gb-of-ram-and-a-4tb-ssd",
-      "pubDate_cst": "2026-06-26 04:35",
-      "description": "Warning: it's still expensive",
+      "title": "Check Out These LEGO Star Wars Deals Before Amazon Prime Day Ends",
+      "url": "https://www.ign.com/articles/check-out-these-lego-star-wars-deals-before-amazon-prime-day-ends",
+      "pubDate_cst": "2026-06-26 07:45",
+      "description": "",
       "categories": "",
-      "reason": "text:\\bsave \\$\\d",
+      "reason": "text:\\bprime.day\\b",
       "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
-      "filtered_at_cn": "2026-06-26 06:48:36",
+      "filtered_at_cn": "2026-06-26 09:18:36",
+      "status": "filtered"
+    },
+    {
+      "title": "The Dune 6-Book Box Set Is Cheaper Now Than When Amazon Prime Day Started",
+      "url": "https://www.ign.com/articles/the-dune-6-book-box-set-is-cheaper-now-than-when-amazon-prime-day-started",
+      "pubDate_cst": "2026-06-26 07:15",
+      "description": "",
+      "categories": "",
+      "reason": "text:\\bprime.day\\b",
+      "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
+      "filtered_at_cn": "2026-06-26 09:18:36",
+      "status": "filtered"
+    },
+    {
+      "title": "The 5 Best Robot Vacuum Deals for Prime Day",
+      "url": "https://www.ign.com/articles/robot-vacuum-deals-prime-day-2026",
+      "pubDate_cst": "2026-06-26 07:00",
+      "description": "",
+      "categories": "",
+      "reason": "text:\\bbest .+ deals?\\b",
+      "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
+      "filtered_at_cn": "2026-06-26 09:18:36",
       "status": "filtered"
     }
   ],
   "runs": [
     {
-      "target_date": "2026-06-26",
+      "target_date": "2026-06-27",
       "new_count": 0,
-      "filtered_count": 4,
-      "changed_count": 4,
-      "next_id": 32,
+      "filtered_count": 2,
+      "changed_count": 2,
+      "next_id": 1,
       "articles": [],
       "filtered_articles": [
         {
-          "title": "Amazon's Box Set Deals Are a Fantasy Book Collection Just Waiting to Happen",
-          "url": "https://www.ign.com/articles/best-prime-day-book-deals-on-box-sets-2026",
-          "pubDate_cst": "2026-06-26 06:00",
-          "description": "",
+          "title": "I Tracked Down 25 Worthwhile Gaming Deals Under $20 for Both Console and PC Players",
+          "url": "https://www.ign.com/articles/25-gaming-deals-under-20-switch-xbox-ps5-pc-prime-day-2026",
+          "pubDate_cst": "2026-06-26 08:30",
+          "description": "There's a million sales happening right now, so I sifted through them all to find 25 genuinely solid gaming deals that are each under $20.",
           "categories": "",
-          "reason": "url:deal",
+          "reason": "text:\\bunder \\$\\d+",
           "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
-          "filtered_at_cn": "2026-06-26 06:48:36",
+          "filtered_at_cn": "2026-06-26 09:18:36",
           "status": "filtered"
         },
         {
-          "title": "Amazon Has a Kingdom Hearts Keyblade at Its Lowest Price in 2026",
-          "url": "https://www.ign.com/articles/amazon-has-a-kingdom-hearts-keyblade-at-its-lowest-price-for-prime-day-2026",
-          "pubDate_cst": "2026-06-26 05:30",
-          "description": "",
-          "categories": "",
-          "reason": "text:\\blowest price\\b",
-          "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
-          "filtered_at_cn": "2026-06-26 06:48:36",
-          "status": "filtered"
-        },
-        {
-          "title": "The Nintendo Switch 2 Gaming Console Is Going for as Low as $399 for Prime Day",
-          "url": "https://www.ign.com/articles/nintendo-switch-2-gaming-console-deal-at-woot-amazon-prime-day",
-          "pubDate_cst": "2026-06-26 05:10",
-          "description": "Brand new.",
+          "title": "The 65\" LG Evo C5 4K OLED Smart TV Drops to Its Lowest Price of the Year for Amazon Prime Day",
+          "url": "https://www.ign.com/articles/lg-evo-c5-4k-oled-smart-tv-deal-amazon-prime-day-sale",
+          "pubDate_cst": "2026-06-26 08:20",
+          "description": "The best TV for both gaming and movie watching in glorious 4K with HDR.",
           "categories": "",
           "reason": "text:\\bprime.day\\b",
           "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
-          "filtered_at_cn": "2026-06-26 06:48:36",
-          "status": "filtered"
-        },
-        {
-          "title": "Save $2,500 Off an Alienware Area-51 Gaming PC With GeForce RTX 5090 GPU, 64GB of RAM, and a 4TB SSD",
-          "url": "https://www.ign.com/articles/save-2500-off-an-alienware-area-51-gaming-pc-with-geforce-rtx-5090-gpu-64gb-of-ram-and-a-4tb-ssd",
-          "pubDate_cst": "2026-06-26 04:35",
-          "description": "Warning: it's still expensive",
-          "categories": "",
-          "reason": "text:\\bsave \\$\\d",
-          "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
-          "filtered_at_cn": "2026-06-26 06:48:36",
+          "filtered_at_cn": "2026-06-26 09:18:36",
           "status": "filtered"
         }
       ]
     },
     {
-      "target_date": "2026-06-25",
-      "new_count": 0,
-      "filtered_count": 0,
-      "changed_count": 0,
-      "next_id": 31,
-      "articles": [],
-      "filtered_articles": []
+      "target_date": "2026-06-26",
+      "new_count": 1,
+      "filtered_count": 3,
+      "changed_count": 4,
+      "next_id": 34,
+      "articles": [
+        {
+          "title": "Little Brother Review",
+          "url": "https://www.ign.com/articles/little-brother-review-john-cena-eric-andre-netflix",
+          "pubDate_cst": "2026-06-26 07:00"
+        }
+      ],
+      "filtered_articles": [
+        {
+          "title": "Check Out These LEGO Star Wars Deals Before Amazon Prime Day Ends",
+          "url": "https://www.ign.com/articles/check-out-these-lego-star-wars-deals-before-amazon-prime-day-ends",
+          "pubDate_cst": "2026-06-26 07:45",
+          "description": "",
+          "categories": "",
+          "reason": "text:\\bprime.day\\b",
+          "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
+          "filtered_at_cn": "2026-06-26 09:18:36",
+          "status": "filtered"
+        },
+        {
+          "title": "The Dune 6-Book Box Set Is Cheaper Now Than When Amazon Prime Day Started",
+          "url": "https://www.ign.com/articles/the-dune-6-book-box-set-is-cheaper-now-than-when-amazon-prime-day-started",
+          "pubDate_cst": "2026-06-26 07:15",
+          "description": "",
+          "categories": "",
+          "reason": "text:\\bprime.day\\b",
+          "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
+          "filtered_at_cn": "2026-06-26 09:18:36",
+          "status": "filtered"
+        },
+        {
+          "title": "The 5 Best Robot Vacuum Deals for Prime Day",
+          "url": "https://www.ign.com/articles/robot-vacuum-deals-prime-day-2026",
+          "pubDate_cst": "2026-06-26 07:00",
+          "description": "",
+          "categories": "",
+          "reason": "text:\\bbest .+ deals?\\b",
+          "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
+          "filtered_at_cn": "2026-06-26 09:18:36",
+          "status": "filtered"
+        }
+      ]
     }
   ]
 }
