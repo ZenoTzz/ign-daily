@@ -4,10 +4,10 @@
     {
       "id": 31,
       "category": "游戏新闻",
-      "emoji": "🎮",
+      "emoji": "🖥️",
       "en_title": "Valve Now Claims Steam Machine Is Capable of 'Up To' 4K",
-      "cn_title": "Valve Now Claims Steam Machine Is Capable of 'Up To' 4K",
-      "summary": "",
+      "cn_title": "Valve改口：Steam Machine仅「最高4K」",
+      "summary": "Valve近日更新了Steam Machine的商店页面，将其性能描述从原先的「4K 60帧」下调为「最高4K游戏」。该设备售价1049美元(约合人民币7144元)，实际性能不及PS5和XBOX Series，且由于内存危机价格居高不下。对于没有大量Steam库的玩家，选择主机更划算。",
       "url": "https://www.ign.com/articles/valve-now-claims-steam-machine-is-capable-of-up-to-4k",
       "publish_time_cn": "2026-06-26 02:12",
       "pub_date": "2026-06-26 02:12",
@@ -26,11 +26,11 @@
     },
     {
       "id": 23,
-      "category": "游戏新闻",
+      "category": "评测评分",
       "emoji": "🎮",
       "en_title": "MSI Claw 8 EX AI+ Review",
-      "cn_title": "MSI Claw 8 EX AI+ Review",
-      "summary": "",
+      "cn_title": "MSI Claw 8 EX AI+ 评测：性能怪兽，但价格劝退",
+      "summary": "IGN评测了微星新款掌机MSI Claw 8 EX AI+。它搭载Intel Arc G3 Extreme芯片，性能远超对手——比联想Legion Go 2快55%，在《赛博朋克2077》中可达54fps。但1799美元(约合人民币1万元)的起售价使其成为当前最贵的主流掌机，相比999美元(约合人民币6803元)的ROG Ally X贵了近一倍。对于追求极致性能的玩家，它是强力选择，但性价比不佳。",
       "url": "https://www.ign.com/articles/msi-claw-8-ex-ai-review",
       "publish_time_cn": "2026-06-26 01:07",
       "pub_date": "2026-06-26 01:07",
@@ -52,11 +52,11 @@
     },
     {
       "id": 24,
-      "category": "游戏新闻",
-      "emoji": "🎮",
+      "category": "行业动态",
+      "emoji": "💰",
       "en_title": "Microsoft Announces Significant Price Rises for Xbox Series X and S, 2TB Model Discontinued",
-      "cn_title": "Microsoft Announces Significant Price Rises for Xbox Series X and S, 2TB Model Discontinued",
-      "summary": "",
+      "cn_title": "《微软》XBOX Series X|S大幅涨价，2TB型号停产",
+      "summary": "微软宣布XBOX Series X|S将自8月1日起大幅涨价，512GB型号涨价100美元(约合人民币681元)，1TB型号涨价150美元(约合人民币1021元)，2TB型号停产。微软将此归因于组件危机，存储和内存价格已上涨超2.5倍。同时推出先买后付和翻新机折扣等措施。涨价正值《GTA6》发售前夕，预计主机需求将激增，但供应和价格压力持续。",
       "url": "https://www.ign.com/articles/microsoft-announces-significant-price-rises-for-xbox-series-x-and-s-2tb-model-discontinued",
       "publish_time_cn": "2026-06-26 00:47",
       "pub_date": "2026-06-26 00:47",
@@ -74,11 +74,11 @@
     },
     {
       "id": 25,
-      "category": "游戏新闻",
-      "emoji": "🎮",
+      "category": "评测评分",
+      "emoji": "🎬",
       "en_title": "Jackass: Best and Last Review",
-      "cn_title": "Jackass: Best and Last Review",
-      "summary": "",
+      "cn_title": "《Jackass：终章》评测：笑泪交织的荒诞告别",
+      "summary": "《Jackass》系列第五部也是最后一部电影《Jackass: Best and Last》上映。影片混合全新素材与过往经典片段，规模虽不及前作，但通过未公开镜头和幕后故事带来满满情怀。主创们已年过半百，这场真诚又搞怪的告别令人动容。",
       "url": "https://www.ign.com/articles/jackass-best-and-last-review",
       "publish_time_cn": "2026-06-26 00:34",
       "pub_date": "2026-06-26 00:34",
@@ -93,15 +93,24 @@
         "https://assets-prd.ignimgs.com/2026/06/25/jabl-01166r2c-1782405125635.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-26T02:27:46+08:00"
+      "source_fetched_at": "2026-06-26T02:27:46+08:00",
+      "pending_dict": [
+        {
+          "en": "Jackass: Best and Last",
+          "cn": "《蠢蛋搞怪秀：终章》",
+          "cat": "movies_tv",
+          "source": "ai_guess",
+          "reason": "该系列电影在中国有常用译名《蠢蛋搞怪秀》，但本片具体译名未确认，需人工核实。"
+        }
+      ]
     },
     {
       "id": 26,
-      "category": "游戏新闻",
-      "emoji": "🎮",
+      "category": "行业动态",
+      "emoji": "🌵",
       "en_title": "LEGO Succulents Have Dropped to $25 at Walmart — That’s Way Better Than Amazon",
-      "cn_title": "LEGO Succulents Have Dropped to 25美元(约合人民币170元)at Walmart — That’s Way Better Than Amazon",
-      "summary": "",
+      "cn_title": "乐高多肉植物沃尔玛降至25美元(约合人民币170元)，比亚马逊划算",
+      "summary": "沃尔玛夏季促销中，乐高Icons多肉植物套装降至25美元(约合人民币170元)，仅为原价49.99美元(约合人民币340元)的一半，创下该零售商历史最低价，比亚马逊Prime Day同期价格更优。该套装含771块积木，可拼搭九种多肉植物并自由组合摆放，感兴趣建议尽快入手。",
       "url": "https://www.ign.com/articles/the-lego-icons-succulents-have-dropped-to-25-at-walmart-thats-better-than-amazon",
       "publish_time_cn": "2026-06-26 00:30",
       "pub_date": "2026-06-26 00:30",
@@ -120,11 +129,11 @@
     },
     {
       "id": 27,
-      "category": "游戏新闻",
-      "emoji": "🎮",
+      "category": "影视资讯",
+      "emoji": "📺",
       "en_title": "The Sopranos Is Finally Getting a 4K Remaster With a New Limited-Edition Set Releasing This Year",
-      "cn_title": "The Sopranos Is Finally Getting a 4K Remaster With a New Limited-Edition Set Releasing This Year",
-      "summary": "",
+      "cn_title": "《黑道家族》终迎4K重制限定套装",
+      "summary": "经典剧集《黑道家族》将于2026年12月8日推出4K Ultra HD限定版套装，包含全部86集及丰富花絮，共28张碟片。目前已在Gruv开启预购，售价149.99美元(约合人民币1021元)。据悉，该4K重制版是否会登陆HBO Max尚未确定。",
       "url": "https://www.ign.com/articles/the-sopranos-is-finally-getting-a-4k-remaster-with-a-new-limited-edition-set-releasing-this-year",
       "publish_time_cn": "2026-06-26 00:00",
       "pub_date": "2026-06-26 00:00",
@@ -143,11 +152,11 @@
     },
     {
       "id": 28,
-      "category": "游戏新闻",
-      "emoji": "🎮",
+      "category": "影视资讯",
+      "emoji": "🦸",
       "en_title": "Funko Unveils Exclusive Invincible Pop! Figures for SDCC 2026",
-      "cn_title": "Funko Unveils Exclusive Invincible Pop! Figures for SDCC 2026",
-      "summary": "",
+      "cn_title": "Funko推出《无敌少侠》SDCC 2026独占Pop!手办",
+      "summary": "Funko为2026年圣地亚哥国际动漫展（SDCC）推出《无敌少侠》系列独占Pop!手办，包含多个不同版本的马克·格雷森。标准版每日发售，其余款式各限定一天。手办将于7月22日至26日在展会和官网销售，均配备UV防护盒和「夏季大会2026」贴纸。",
       "url": "https://www.ign.com/articles/funko-unveils-exclusive-invincible-pop-figures-for-sdcc-2026",
       "publish_time_cn": "2026-06-26 00:00",
       "pub_date": "2026-06-26 00:00",
@@ -168,8 +177,8 @@
       "category": "游戏新闻",
       "emoji": "🎮",
       "en_title": "Deltarune Chapter 6 Will Release in 2027, Chapter 5 Shatters Concurrent Player Records on Steam",
-      "cn_title": "Deltarune Chapter 6 Will Release in 2027, Chapter 5 Shatters Concurrent Player Records on Steam",
-      "summary": "",
+      "cn_title": "《Deltarune》第6章2027年发售，第5章打破Steam在线纪录",
+      "summary": "《Deltarune》第5章终于发售，Steam同时在线玩家峰值从13.3万暴涨至29万，翻了一倍多。制作人Toby Fox确认第6章计划2027年发布，并透露部分成员可能在年内开始第7章开发。IGN为本作打出9/10高分，称赞其故事精彩。",
       "url": "https://www.ign.com/articles/deltarune-chapter-6-will-release-in-2027-chapter-5-shatters-concurrent-player-records-on-steam",
       "publish_time_cn": "2026-06-25 23:54",
       "pub_date": "2026-06-25 23:54",
@@ -188,10 +197,10 @@
     {
       "id": 30,
       "category": "游戏新闻",
-      "emoji": "🎮",
+      "emoji": "🎤",
       "en_title": "Drop Dead Singer Olivia Rodrigo Joins Fortnite Today",
-      "cn_title": "Drop Dead Singer Olivia Rodrigo Joins Fortnite Today",
-      "summary": "",
+      "cn_title": "《堡垒之夜》今日迎来流行歌手奥利维亚·罗德里戈",
+      "summary": "流行歌手奥利维亚·罗德里戈今日正式加入《堡垒之夜》。她的第三张专辑《you seem pretty sad for a girl so in love》空降Billboard 200榜首，成为今年个人歌手最大规模首周。玩家可在游戏内领取免费外观道具，商城也将上架两款皮肤、表情和Jam Track。此前已有多位音乐巨星入驻，如Eminem、Lady Gaga等。",
       "url": "https://www.ign.com/articles/drop-dead-singer-olivia-rodrigo-joins-fortnite-today",
       "publish_time_cn": "2026-06-25 23:42",
       "pub_date": "2026-06-25 23:42",
@@ -205,7 +214,16 @@
         "https://assets-prd.ignimgs.com/2026/06/25/fortnite-x-olivia-rodrigo-key-art-1920x1080-1782401852980-1782402136624.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-26T02:27:49+08:00"
+      "source_fetched_at": "2026-06-26T02:27:49+08:00",
+      "pending_dict": [
+        {
+          "en": "Olivia Rodrigo",
+          "cn": "奥利维亚·罗德里戈",
+          "cat": "people",
+          "source": "ai_guess",
+          "reason": "词库未收录，需人工确认通行译名"
+        }
+      ]
     },
     {
       "id": 21,
