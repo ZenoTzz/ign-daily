@@ -2,6 +2,53 @@
   "date": "2026-06-27",
   "articles": [
     {
+      "id": 25,
+      "category": "游戏新闻",
+      "emoji": "🎮",
+      "en_title": "Arc System Works Evo Collection Humble Bundle Includes Guilty Gear -Strive- and More, Helps the Raiden Science Foundation",
+      "cn_title": "Arc System Works慈善包上线：含《罪恶装备：斗争》等游戏，助力罕见病研究",
+      "summary": "Humble Bundle推出Arc System Works游戏慈善包，包含《罪恶装备：斗争》《苍翼默示录：中心虚构》等16款游戏及DLC优惠券。最低捐赠5美元(约合人民币34元)（约合36元人民币）可获10件物品，捐赠20美元(约合人民币136元)（约合144元人民币）可解锁全部内容。收益将捐赠给Raiden Science Foundation，用于支持罕见病UBA5 Disorder的研究。活动持续至7月17日。",
+      "url": "https://www.ign.com/articles/arc-system-works-evo-collection-humble-bundle-includes-guilty-gear-strive-and-more-helps-the-raiden-science-foundation",
+      "publish_time_cn": "2026-06-27 02:19",
+      "pub_date": "2026-06-27 02:19",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/26/evobr-1782490508194.png?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/26/evobr-1782490508194.png?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/26/evobr-1782490508194.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/26/evobr-1782490508194.png?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/26/evobr-1782490508194.png?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/26/evobr-1782490508194.png",
+        "https://assets-prd.ignimgs.com/2026/06/26/arcsystemworkscelebratingevocollection-banner-16x20-1782490144808.png",
+        "https://assets-prd.ignimgs.com/2026/06/26/evobr-1782490468522.png"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-27T03:23:32+08:00",
+      "pending_dict": [
+        {
+          "en": "Guilty Gear -Strive-",
+          "cn": "《罪恶装备：斗争》",
+          "cat": "games",
+          "source": "ai_guess",
+          "reason": "官方中文译名，词库未收录，需确认"
+        },
+        {
+          "en": "BlazBlue: Central Fiction",
+          "cn": "《苍翼默示录：中心虚构》",
+          "cat": "games",
+          "source": "ai_guess",
+          "reason": "常见译名，词库未收录，需确认"
+        },
+        {
+          "en": "Raiden Science Foundation",
+          "cn": "Raiden Science Foundation",
+          "cat": "companies",
+          "source": "ai_guess",
+          "reason": "无官方中文译名，保留英文"
+        }
+      ]
+    },
+    {
       "id": 24,
       "category": "影视资讯",
       "emoji": "😭",
@@ -673,5 +720,5 @@
       "source_fetched_at": "2026-06-26T09:51:00+08:00"
     }
   ],
-  "total": 24
+  "total": 25
 }
