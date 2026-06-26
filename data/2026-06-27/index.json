@@ -2,6 +2,59 @@
   "date": "2026-06-27",
   "articles": [
     {
+      "id": 3,
+      "category": "影视资讯",
+      "emoji": "🎬",
+      "en_title": "Lizzy Caplan Joins FX's Far Cry TV Series",
+      "cn_title": "Lizzy Caplan加盟FX《孤岛惊魂》剧集",
+      "summary": "FX与育碧合作的《孤岛惊魂》改编剧集迎来新卡司：以《怪胎与书呆》《贱女孩》《科洛弗档案》闻名的Lizzy Caplan加盟，饰演角色暂未公布。她将与《费城永远阳光灿烂》的Rob Mac共同主演，Mac同时担任执行制片人。该剧由《冰血暴》《异形：地球》主创Noah Hawley掌舵，采用每季独立故事的选集形式。Hawley此前因「游戏不适合最佳剧情」言论引发争议，《孤岛惊魂4》总监Alex Hutchinson回应称玩家希望自己的热爱得到尊重。剧集尚未定档，制作也未启动，但选角透露项目推进中。",
+      "url": "https://www.ign.com/articles/lizzy-caplan-joins-fxs-far-cry-tv-series",
+      "publish_time_cn": "2026-06-26 10:24",
+      "pub_date": "2026-06-26 10:24",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/25/lizzy-caplan-1782419537112.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/25/lizzy-caplan-1782419537112.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/25/lizzy-caplan-1782419537112.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/25/lizzy-caplan-1782419537112.jpg?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/25/lizzy-caplan-1782419537112.jpg?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/25/lizzy-caplan-1782419537112.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-26T10:39:04+08:00",
+      "pending_dict": [
+        {
+          "en": "Rob Mac (Rob McElhenney)",
+          "cn": "Rob Mac",
+          "cat": "people",
+          "source": "ai_guess",
+          "reason": "演员原名Rob McElhenney，剧中用名Rob Mac，建议保留英文"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "category": "影视资讯",
+      "emoji": "🐭",
+      "en_title": "Ratatouille 2 Will Never Happen, Says Director Brad Bird",
+      "cn_title": "导演确认《料理鼠王2》永不会拍",
+      "summary": "皮克斯《料理鼠王》导演布拉德·伯德明确表示，他绝不会制作续集，认为雷米的故事已经完整。尽管皮克斯曾试探他制作续集的意向，但他坚决拒绝。同时，伯德透露他将担任《超人总动员3》的编剧，该片由《疯狂元素城》导演彼得·孙执导，伯德也可能回归配音角色。",
+      "url": "https://www.ign.com/articles/ratatouille-2-will-never-happen-says-director-brad-bird",
+      "publish_time_cn": "2026-06-26 10:16",
+      "pub_date": "2026-06-26 10:16",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/25/ratatouille-1782420770384.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/25/ratatouille-1782420770384.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/25/ratatouille-1782420770384.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/25/ratatouille-1782420770384.jpg?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/25/ratatouille-1782420770384.jpg?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/25/ratatouille-1782420770384.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-26T10:39:05+08:00"
+    },
+    {
       "id": 1,
       "category": "影视资讯",
       "emoji": "🏎️",
@@ -47,5 +100,5 @@
       "source_fetched_at": "2026-06-26T09:51:00+08:00"
     }
   ],
-  "total": 2
+  "total": 4
 }

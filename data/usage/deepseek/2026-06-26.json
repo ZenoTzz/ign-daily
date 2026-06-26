@@ -1104,6 +1104,54 @@
       "total_tokens_including_reasoning": 9953,
       "prompt_cache_hit_tokens": 8320,
       "prompt_cache_miss_tokens": 792
+    },
+    {
+      "time_cn": "2026-06-26 10:39:19",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 3,
+      "article_title": "Lizzy Caplan Joins FX's Far Cry TV Series",
+      "article_url": "https://www.ign.com/articles/lizzy-caplan-joins-fxs-far-cry-tv-series",
+      "article_date": "2026-06-27",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.0006162,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9069,
+      "completion_tokens": 1008,
+      "reasoning_tokens": 735,
+      "output_tokens_including_reasoning": 1743,
+      "total_tokens": 10077,
+      "total_tokens_including_reasoning": 10812,
+      "prompt_cache_hit_tokens": 8320,
+      "prompt_cache_miss_tokens": 749
+    },
+    {
+      "time_cn": "2026-06-26 10:39:26",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 4,
+      "article_title": "Ratatouille 2 Will Never Happen, Says Director Brad Bird",
+      "article_url": "https://www.ign.com/articles/ratatouille-2-will-never-happen-says-director-brad-bird",
+      "article_date": "2026-06-27",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00037694,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8996,
+      "completion_tokens": 528,
+      "reasoning_tokens": 397,
+      "output_tokens_including_reasoning": 925,
+      "total_tokens": 9524,
+      "total_tokens_including_reasoning": 9921,
+      "prompt_cache_hit_tokens": 8320,
+      "prompt_cache_miss_tokens": 676
     }
   ]
 }

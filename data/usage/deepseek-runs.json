@@ -1,5 +1,38 @@
 [
   {
+    "run_id": "28213625809",
+    "workflow": "Hourly RSS",
+    "event": "workflow_dispatch",
+    "sha": "4bc1cfb952bb6b1e8c7ac27efa2481439b0beb8b",
+    "recorded_at_cn": "2026-06-26 10:39:27",
+    "start_balance": 32.77,
+    "end_balance": 32.77,
+    "currency": "CNY",
+    "actual_platform_cost": 0.0,
+    "balance_delta_status": "pending_or_delayed",
+    "estimated_cost_usd": 0.00099314,
+    "api_call_count": 2,
+    "total_tokens": 20733,
+    "output_tokens": 2668,
+    "by_model": {
+      "deepseek-v4-flash": {
+        "calls": 2,
+        "estimated_cost_usd": 0.00099314,
+        "total_tokens": 20733,
+        "output_tokens": 2668
+      }
+    },
+    "by_task": {
+      "title": {
+        "calls": 2,
+        "estimated_cost_usd": 0.00099314,
+        "total_tokens": 20733
+      }
+    },
+    "retry_articles": [],
+    "snapshot_ok": true
+  },
+  {
     "run_id": "28212034387",
     "workflow": "Hourly RSS",
     "event": "workflow_dispatch",
@@ -4399,23 +4432,6 @@
     "event": "schedule",
     "sha": "be08b706e58ffe58652a2a223afd6aa56ea3e93e",
     "recorded_at_cn": "2026-06-14 16:51:27",
-    "start_balance": 45.5,
-    "end_balance": 45.5,
-    "currency": "CNY",
-    "actual_platform_cost": 0.0,
-    "balance_delta_status": "ok",
-    "estimated_cost_usd": 0,
-    "api_call_count": 0,
-    "total_tokens": 0,
-    "by_model": {},
-    "snapshot_ok": true
-  },
-  {
-    "run_id": "27489125365",
-    "workflow": "API Translation",
-    "event": "schedule",
-    "sha": "49c6ba468cc9e65ca01f3202991dbe17003de831",
-    "recorded_at_cn": "2026-06-14 13:11:18",
     "start_balance": 45.5,
     "end_balance": 45.5,
     "currency": "CNY",
