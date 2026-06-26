@@ -1464,6 +1464,30 @@
       "total_tokens_including_reasoning": 11485,
       "prompt_cache_hit_tokens": 8320,
       "prompt_cache_miss_tokens": 2094
+    },
+    {
+      "time_cn": "2026-06-26 15:42:16",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 6,
+      "article_title": "Cape Fear Episode 5 Recap and Review – 'Faith'",
+      "article_url": "https://www.ign.com/articles/cape-fear-episode-5-recap-and-review-faith",
+      "article_date": "2026-06-27",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00058484,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9845,
+      "completion_tokens": 690,
+      "reasoning_tokens": 553,
+      "output_tokens_including_reasoning": 1243,
+      "total_tokens": 10535,
+      "total_tokens_including_reasoning": 11088,
+      "prompt_cache_hit_tokens": 8320,
+      "prompt_cache_miss_tokens": 1525
     }
   ]
 }
