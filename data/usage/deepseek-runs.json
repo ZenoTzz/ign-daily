@@ -1,5 +1,60 @@
 [
   {
+    "run_id": "28214285274",
+    "workflow": "API Translation",
+    "event": "workflow_dispatch",
+    "sha": "1a041986abd4e0e9abf876bd69db11e1bb5ca111",
+    "recorded_at_cn": "2026-06-26 11:04:13",
+    "start_balance": 32.77,
+    "end_balance": 32.72,
+    "currency": "CNY",
+    "actual_platform_cost": 0.05,
+    "balance_delta_status": "ok",
+    "estimated_cost_usd": 0.01136577,
+    "api_call_count": 4,
+    "total_tokens": 49879,
+    "output_tokens": 12806,
+    "by_model": {
+      "deepseek-v4-pro": {
+        "calls": 4,
+        "estimated_cost_usd": 0.01136577,
+        "total_tokens": 49879,
+        "output_tokens": 12806
+      }
+    },
+    "by_task": {
+      "fulltext": {
+        "calls": 1,
+        "estimated_cost_usd": 0.00549498,
+        "total_tokens": 16171
+      },
+      "fulltext_chunk": {
+        "calls": 3,
+        "estimated_cost_usd": 0.00587079,
+        "total_tokens": 33708
+      }
+    },
+    "retry_articles": [
+      {
+        "article_id": 16,
+        "article_date": "2026-06-26",
+        "article_title": "Bungie宣布裁员，承认《命运2》未达预期",
+        "article_url": "https://www.ign.com/articles/bungie-announces-layoffs-as-it-admits-destiny-2-fell-short-of-expectations",
+        "calls": 4,
+        "estimated_cost_usd": 0.01136577,
+        "total_tokens": 49879,
+        "tasks": {
+          "fulltext": 1,
+          "fulltext_chunk": 3
+        },
+        "models": {
+          "deepseek-v4-pro": 4
+        }
+      }
+    ],
+    "snapshot_ok": true
+  },
+  {
     "run_id": "28214266994",
     "workflow": "API Translation",
     "event": "workflow_dispatch",
@@ -4453,23 +4508,6 @@
     "event": "schedule",
     "sha": "afdd2c327d3aa0e7c922519cd941f56ba3161740",
     "recorded_at_cn": "2026-06-14 21:19:55",
-    "start_balance": 45.5,
-    "end_balance": 45.5,
-    "currency": "CNY",
-    "actual_platform_cost": 0.0,
-    "balance_delta_status": "ok",
-    "estimated_cost_usd": 0,
-    "api_call_count": 0,
-    "total_tokens": 0,
-    "by_model": {},
-    "snapshot_ok": true
-  },
-  {
-    "run_id": "27497616867",
-    "workflow": "API Translation",
-    "event": "schedule",
-    "sha": "4844708efe4829cd9911a0dd10be6fd3d8229daa",
-    "recorded_at_cn": "2026-06-14 19:37:46",
     "start_balance": 45.5,
     "end_balance": 45.5,
     "currency": "CNY",
