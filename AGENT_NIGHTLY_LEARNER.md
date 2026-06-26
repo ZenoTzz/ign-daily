@@ -38,6 +38,24 @@ Use these sources, in this order:
 Prefer recent dates with polished files or new feedback. If there is no new
 polish or feedback, do not invent learning notes.
 
+## Backfill Check
+
+Every run must first check for missed historical work before handling only the
+newest date. Treat this as a small backfill pass, not a broad rewrite:
+
+1. Import all configured Tencent polish documents with the normal importer so
+   previously missed dates can be filled in.
+2. Use `data/index-list.json` and existing `data/{date}/` directories to find
+   historical dates, then look across `data/{date}/polished/`,
+   `data/learning_log/`, and `data/learning/weekly/*_feedback.json` inputs for
+   dates or feedback that do not appear to be reflected in
+   `data/learning/style-evidence.json`, the matching `diff_analysis.json`, or
+   the current weekly report.
+3. Process missed items oldest-first, then handle the newest available polish or
+   feedback.
+4. Commit and push any recovered learning outputs so GitHub Pages and GitHub
+   Actions see the same state as the local learner.
+
 ## Method
 
 1. Run `python scripts/import_tencent_polish.py --all` first. Only accept
