@@ -192,6 +192,78 @@
       "total_tokens_including_reasoning": 10593,
       "prompt_cache_hit_tokens": 8320,
       "prompt_cache_miss_tokens": 835
+    },
+    {
+      "time_cn": "2026-06-27 06:38:24",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 27,
+      "article_title": "New Warhammer 40,000 Animation Is Almost Entirely From the Perspective of a Single World Eaters Berzerker — and Now I Want a First-Person Chaos Space Marine Game",
+      "article_url": "https://www.ign.com/articles/new-warhammer-40000-animation-is-almost-entirely-from-the-perspective-of-a-single-world-eaters-berzerker-and-now-i-want-a-first-person-chaos-space-marine-game",
+      "article_date": "2026-06-27",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00073632,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9457,
+      "completion_tokens": 1074,
+      "reasoning_tokens": 904,
+      "output_tokens_including_reasoning": 1978,
+      "total_tokens": 10531,
+      "total_tokens_including_reasoning": 11435,
+      "prompt_cache_hit_tokens": 8320,
+      "prompt_cache_miss_tokens": 1137
+    },
+    {
+      "time_cn": "2026-06-27 06:38:35",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 28,
+      "article_title": "Millie Bobby Brown and David Harbour to Play Father-Daughter Duo for New Netflix Spy Drama Series",
+      "article_url": "https://www.ign.com/articles/millie-bobby-brown-and-david-harbour-to-play-father-daughter-duo-for-new-netflix-spy-drama-series",
+      "article_date": "2026-06-27",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00058414,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9286,
+      "completion_tokens": 841,
+      "reasoning_tokens": 679,
+      "output_tokens_including_reasoning": 1520,
+      "total_tokens": 10127,
+      "total_tokens_including_reasoning": 10806,
+      "prompt_cache_hit_tokens": 8320,
+      "prompt_cache_miss_tokens": 966
+    },
+    {
+      "time_cn": "2026-06-27 06:38:42",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 29,
+      "article_title": "Valve 'Would Love' a 'More Affordable' Steam Machine But Warns Changes Aren't Coming 'Any time Soon'",
+      "article_url": "https://www.ign.com/articles/valve-would-love-a-more-affordable-steam-machine-but-warns-changes-arent-coming-any-time-soon",
+      "article_date": "2026-06-27",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00032682,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9156,
+      "completion_tokens": 394,
+      "reasoning_tokens": 272,
+      "output_tokens_including_reasoning": 666,
+      "total_tokens": 9550,
+      "total_tokens_including_reasoning": 9822,
+      "prompt_cache_hit_tokens": 8320,
+      "prompt_cache_miss_tokens": 836
     }
   ]
 }
