@@ -26,28 +26,32 @@ If `nightly_learner` is not `codex`, stop with a short note.
 
 Use these sources, in this order:
 
-1. `data/{date}/polished/_index.json` and `data/{date}/polished/*.json`
-2. `data/{date}/translations/NN.json`
-3. `data/learning_log/{date}_feedback.json`
-4. `data/learning/weekly/*_feedback.json`
-5. Existing `data/learning/style-evidence.json`
-6. Existing weekly reports in `data/learning/weekly/`
-7. Current `STYLE_PROFILE.md`
+1. Tencent polish documents listed in `data/tencent-polish-config.json`
+2. `data/{date}/polished/_index.json` and `data/{date}/polished/*.json`
+3. `data/{date}/translations/NN.json`
+4. `data/learning_log/{date}_feedback.json`
+5. `data/learning/weekly/*_feedback.json`
+6. Existing `data/learning/style-evidence.json`
+7. Existing weekly reports in `data/learning/weekly/`
+8. Current `STYLE_PROFILE.md`
 
 Prefer recent dates with polished files or new feedback. If there is no new
 polish or feedback, do not invent learning notes.
 
 ## Method
 
-1. Run `python scripts/nightly_polish_diff.py {date}` for dates with polished
+1. Run `python scripts/import_tencent_polish.py --all` first. Only accept
+   high-confidence date/article matches, preserve manual polish files, and use
+   the configured Tencent documents to backfill missed dates incrementally.
+2. Run `python scripts/nightly_polish_diff.py {date}` for dates with polished
    files when a fresh `diff_analysis.json` is useful.
-2. Compare original translation against the user's polished version.
-3. Separate durable style preference from one-off article fixes.
-4. Treat feedback on the learning page as higher priority than your own guess.
-5. Add or update candidate rules in `data/learning/style-evidence.json`.
-6. Update `data/learning/weekly/{week}.json` and `latest.json` when the evidence
+3. Compare original translation against the user's polished version.
+4. Separate durable style preference from one-off article fixes.
+5. Treat feedback on the learning page as higher priority than your own guess.
+6. Add or update candidate rules in `data/learning/style-evidence.json`.
+7. Update `data/learning/weekly/{week}.json` and `latest.json` when the evidence
    pool changes enough to show the user.
-7. Only update `STYLE_PROFILE.md` when weekly feedback explicitly confirms or
+8. Only update `STYLE_PROFILE.md` when weekly feedback explicitly confirms or
    adopts a rule.
 
 ## Output Rules
