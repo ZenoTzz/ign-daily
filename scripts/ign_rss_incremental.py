@@ -16,6 +16,7 @@ import os
 import re
 import subprocess
 import sys
+import html
 import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
@@ -38,6 +39,14 @@ RSS_PAGES = [
     "https://feeds.feedburner.com/ign/all",
     "https://www.ign.com/rss/articles/feed?start=20&count=20",
     "https://www.ign.com/rss/articles/feed?start=40&count=20",
+    "https://www.ign.com/rss/v2/articles/feed?vertical=games&start=0&count=20",
+    "https://www.ign.com/rss/v2/articles/feed?vertical=movies&start=0&count=20",
+    "https://www.ign.com/rss/v2/articles/feed?vertical=tv&start=0&count=20",
+]
+REVIEW_PAGES = [
+    ("评测", "https://www.ign.com/reviews/games"),
+    ("电影评测", "https://www.ign.com/reviews/movies"),
+    ("剧集评测", "https://www.ign.com/reviews/tv"),
 ]
 RSS_TIMEOUT_SECONDS = int(os.environ.get("IGN_DAILY_RSS_TIMEOUT", "10"))
 
@@ -141,7 +150,36 @@ def load_env_file() -> None:
 def strip_html(text: str) -> str:
     text = re.sub(r"<[^>]+>", " ", text or "")
     text = re.sub(r"\s+", " ", text)
-    return text.strip()
+    return html.unescape(text).strip()
+
+
+def normalize_ign_url(url: str) -> str:
+    if url.startswith("/articles/"):
+        return "https://www.ign.com" + url
+    return url
+
+
+def is_review_article(title: str, url: str, categories: str = "") -> bool:
+    haystack = f"{title} {url} {categories}".lower()
+    return bool(
+        re.search(r"\breview(?:s|ed|ing)?\b", haystack)
+        or "recap-and-review" in haystack
+        or "-review" in haystack
+        or "/reviews/" in haystack
+    )
+
+
+def category_for_item(item: dict) -> tuple[str, str]:
+    if item.get("source_type") == "review" or is_review_article(
+        item.get("title", ""),
+        item.get("url", ""),
+        item.get("categories", ""),
+    ):
+        page_category = item.get("review_category") or "评测"
+        if page_category in {"电影评测", "剧集评测"}:
+            return page_category, "⭐"
+        return "游戏评测", "⭐"
+    return "游戏新闻", "🎮"
 
 
 def split_env_list(value: str) -> list[str]:
@@ -309,6 +347,85 @@ def fetch_rss_items() -> list[dict]:
     return rows
 
 
+def parse_review_time(label: str, now: datetime) -> datetime | None:
+    raw = strip_html(label).strip()
+    if not raw:
+        return None
+    lower = raw.lower()
+    if lower in {"today", "now"}:
+        return now
+    if lower == "yesterday":
+        return now - timedelta(days=1)
+
+    m = re.match(r"^(\d+)\s*([mhdw])$", lower)
+    if m:
+        value = int(m.group(1))
+        unit = m.group(2)
+        if unit == "m":
+            return now - timedelta(minutes=value)
+        if unit == "h":
+            return now - timedelta(hours=value)
+        if unit == "d":
+            return now - timedelta(days=value)
+        if unit == "w":
+            return now - timedelta(weeks=value)
+
+    for fmt in ("%b %d, %Y", "%B %d, %Y"):
+        try:
+            parsed = datetime.strptime(raw, fmt)
+            return parsed.replace(tzinfo=CST, hour=12, minute=0, second=0)
+        except ValueError:
+            pass
+    return None
+
+
+def extract_review_page_items(now: datetime) -> list[dict]:
+    rows: list[dict] = []
+    seen: set[str] = set()
+    anchor_re = re.compile(r"<a\s+[^>]*href=\"(/articles/[^\"]+)\"[^>]*>(.*?)</a>", re.IGNORECASE | re.DOTALL)
+    date_re = re.compile(r"item-data[^>]*>.*?<span[^>]*>(.*?)</span>", re.IGNORECASE | re.DOTALL)
+    blurb_re = re.compile(r"item-blurb[^>]*>(.*?)</div>", re.IGNORECASE | re.DOTALL)
+    img_alt_re = re.compile(r"<img[^>]*alt=\"([^\"]+)\"", re.IGNORECASE | re.DOTALL)
+
+    for category, page_url in REVIEW_PAGES:
+        try:
+            page_html = fetch_text(page_url)
+        except Exception as exc:
+            print(f"  WARN: {page_url} failed: {exc}")
+            continue
+
+        for match in anchor_re.finditer(page_html):
+            url = normalize_ign_url(html.unescape(match.group(1)))
+            block = match.group(2)
+            if url in seen:
+                continue
+
+            title_match = blurb_re.search(block) or img_alt_re.search(block)
+            title = strip_html(title_match.group(1)) if title_match else ""
+            if not title or not is_review_article(title, url):
+                continue
+
+            date_match = date_re.search(block)
+            pub_dt = parse_review_time(date_match.group(1), now) if date_match else None
+            if not pub_dt:
+                continue
+
+            seen.add(url)
+            rows.append(
+                {
+                    "title": title,
+                    "url": url,
+                    "pub_dt": pub_dt.astimezone(CST),
+                    "description": "IGN review article",
+                    "categories": category,
+                    "rss_url": page_url,
+                    "source_type": "review",
+                    "review_category": category,
+                }
+            )
+    return rows
+
+
 def ensure_history_row(target_date: str, total: int) -> None:
     hist_path = DATA_DIR / "index-list.json"
     hist = read_json(hist_path, [])
@@ -376,11 +493,15 @@ def process_target_date(target_date: str, now: datetime, filter_config: dict, rs
             continue
 
         seen_urls.add(link)
+        category, emoji = category_for_item(item)
         new_articles.append(
             {
                 "title": title,
                 "url": link,
                 "pubDate_cst": pub_dt.strftime("%Y-%m-%d %H:%M"),
+                "category": category,
+                "emoji": emoji,
+                "source_type": item.get("source_type", "rss"),
             }
         )
 
@@ -403,8 +524,8 @@ def process_target_date(target_date: str, now: datetime, filter_config: dict, rs
             idx["articles"].append(
                 {
                     "id": max_id,
-                    "category": "\u6e38\u620f\u65b0\u95fb",
-                    "emoji": "\U0001f3ae",
+                    "category": article.get("category") or "游戏新闻",
+                    "emoji": article.get("emoji") or "🎮",
                     "en_title": article["title"],
                     "cn_title": article["title"],
                     "summary": "",
@@ -438,6 +559,7 @@ def process_target_date(target_date: str, now: datetime, filter_config: dict, rs
                     "url": article["url"],
                     "en_title": article["title"],
                     "pub_date": article["pubDate_cst"],
+                    "category": article.get("category") or "游戏新闻",
                 }
             )
             queued_urls.add(article["url"])
@@ -476,6 +598,13 @@ def main() -> int:
     cleanup_count = prune_old_filtered(now, filter_config["filtered_retention_days"])
     target_dates = target_dates_for_run(now, args.lookback_days, args.target_date)
     rss_items = fetch_rss_items()
+    review_items = extract_review_page_items(now)
+    if review_items:
+        print(f"[reviews] collected {len(review_items)} review candidates")
+        by_url = {item["url"]: item for item in rss_items}
+        for item in review_items:
+            by_url.setdefault(item["url"], item)
+        rss_items = list(by_url.values())
     summaries = [process_target_date(date_s, now, filter_config, rss_items) for date_s in target_dates]
 
     new_articles = [a for summary in summaries for a in summary["articles"]]
