@@ -1,5 +1,162 @@
 [
   {
+    "run_id": "28209653498",
+    "workflow": "API Translation",
+    "event": "workflow_dispatch",
+    "sha": "6d601326a41ab3f7eab408aecf861c25d1b51b85",
+    "recorded_at_cn": "2026-06-26 08:54:26",
+    "start_balance": 33.45,
+    "end_balance": 33.02,
+    "currency": "CNY",
+    "actual_platform_cost": 0.43,
+    "balance_delta_status": "ok",
+    "estimated_cost_usd": 0.13050612,
+    "api_call_count": 29,
+    "total_tokens": 404315,
+    "output_tokens": 130145,
+    "by_model": {
+      "deepseek-v4-pro": {
+        "calls": 29,
+        "estimated_cost_usd": 0.13050612,
+        "total_tokens": 404315,
+        "output_tokens": 130145
+      }
+    },
+    "by_task": {
+      "fulltext": {
+        "calls": 8,
+        "estimated_cost_usd": 0.07814426,
+        "total_tokens": 159867
+      },
+      "fulltext_chunk": {
+        "calls": 20,
+        "estimated_cost_usd": 0.04620913,
+        "total_tokens": 228075
+      },
+      "fulltext_repair": {
+        "calls": 1,
+        "estimated_cost_usd": 0.00615273,
+        "total_tokens": 16373
+      }
+    },
+    "retry_articles": [
+      {
+        "article_id": 8,
+        "article_date": "2026-06-26",
+        "article_title": "《GTA6》标准版80美元(约合人民币545元)对终极版100美元(约合人民币681元)",
+        "article_url": "https://www.ign.com/articles/will-you-buy-the-80-gta-6-standard-edition-or-100-ultimate-edition",
+        "calls": 9,
+        "estimated_cost_usd": 0.0281649,
+        "total_tokens": 111902,
+        "tasks": {
+          "fulltext": 1,
+          "fulltext_chunk": 8
+        },
+        "models": {
+          "deepseek-v4-pro": 9
+        }
+      },
+      {
+        "article_id": 7,
+        "article_date": "2026-06-26",
+        "article_title": "《PlayStation》PS5推出GTA6定制界面，索尼全面押注Rockstar合作",
+        "article_url": "https://www.ign.com/articles/playstation-5-now-features-custom-gta-6-ui-as-sony-goes-all-in-on-rockstar-partnership",
+        "calls": 4,
+        "estimated_cost_usd": 0.02685244,
+        "total_tokens": 61560,
+        "tasks": {
+          "fulltext": 1,
+          "fulltext_chunk": 2,
+          "fulltext_repair": 1
+        },
+        "models": {
+          "deepseek-v4-pro": 4
+        }
+      },
+      {
+        "article_id": 16,
+        "article_date": "2026-06-26",
+        "article_title": "Bungie宣布裁员，承认《命运2》未达预期",
+        "article_url": "https://www.ign.com/articles/bungie-announces-layoffs-as-it-admits-destiny-2-fell-short-of-expectations",
+        "calls": 4,
+        "estimated_cost_usd": 0.01550812,
+        "total_tokens": 53371,
+        "tasks": {
+          "fulltext": 1,
+          "fulltext_chunk": 3
+        },
+        "models": {
+          "deepseek-v4-pro": 4
+        }
+      },
+      {
+        "article_id": 10,
+        "article_date": "2026-06-26",
+        "article_title": "《GTA6》Insomniac确认《金刚狼》实体版含光盘",
+        "article_url": "https://www.ign.com/articles/insomniac-responds-to-wolverine-fan-to-confirm-physical-edition-includes-a-disc-in-the-box-and-i-suspect-more-devs-will-have-to-answer-this-question-in-a-post-gta-6-world",
+        "calls": 3,
+        "estimated_cost_usd": 0.01545746,
+        "total_tokens": 44949,
+        "tasks": {
+          "fulltext": 1,
+          "fulltext_chunk": 2
+        },
+        "models": {
+          "deepseek-v4-pro": 3
+        }
+      },
+      {
+        "article_id": 31,
+        "article_date": "2026-06-26",
+        "article_title": "Valve改口：Steam Machine仅「最高4K」",
+        "article_url": "https://www.ign.com/articles/valve-now-claims-steam-machine-is-capable-of-up-to-4k",
+        "calls": 3,
+        "estimated_cost_usd": 0.01203532,
+        "total_tokens": 40797,
+        "tasks": {
+          "fulltext": 1,
+          "fulltext_chunk": 2
+        },
+        "models": {
+          "deepseek-v4-pro": 3
+        }
+      },
+      {
+        "article_id": 29,
+        "article_date": "2026-06-26",
+        "article_title": "《Deltarune》第6章2027年发售，第5章打破Steam在线纪录",
+        "article_url": "https://www.ign.com/articles/deltarune-chapter-6-will-release-in-2027-chapter-5-shatters-concurrent-player-records-on-steam",
+        "calls": 3,
+        "estimated_cost_usd": 0.00920303,
+        "total_tokens": 37386,
+        "tasks": {
+          "fulltext": 1,
+          "fulltext_chunk": 2
+        },
+        "models": {
+          "deepseek-v4-pro": 3
+        }
+      },
+      {
+        "article_id": 15,
+        "article_date": "2026-06-26",
+        "article_title": "苹果全线涨价，AI内存成本作祟",
+        "article_url": "https://www.ign.com/articles/apple-is-the-latest-company-to-raise-prices-because-of-ai",
+        "calls": 2,
+        "estimated_cost_usd": 0.01278549,
+        "total_tokens": 32773,
+        "tasks": {
+          "fulltext": 1,
+          "fulltext_chunk": 1
+        },
+        "models": {
+          "deepseek-v4-pro": 2
+        }
+      }
+    ],
+    "snapshot_ok": true
+  },
+  {
     "run_id": "28208922956",
     "workflow": "API Translation",
     "event": "workflow_dispatch",
@@ -4194,29 +4351,6 @@
     "api_call_count": 0,
     "total_tokens": 0,
     "by_model": {},
-    "snapshot_ok": true
-  },
-  {
-    "run_id": "27481065511",
-    "workflow": "Hourly RSS",
-    "event": "schedule",
-    "sha": "52e45fd9cd711f87089bfca31362d9dd5741f1ec",
-    "recorded_at_cn": "2026-06-14 06:31:44",
-    "start_balance": 45.51,
-    "end_balance": 45.51,
-    "currency": "CNY",
-    "actual_platform_cost": 0.0,
-    "balance_delta_status": "pending_or_delayed",
-    "estimated_cost_usd": 0.00065615,
-    "api_call_count": 1,
-    "total_tokens": 10314,
-    "by_model": {
-      "deepseek-v4-flash": {
-        "calls": 1,
-        "estimated_cost_usd": 0.00065615,
-        "total_tokens": 10314
-      }
-    },
     "snapshot_ok": true
   }
 ]

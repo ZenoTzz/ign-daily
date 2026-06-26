@@ -1,0 +1,34 @@
+{
+  "date": "2026-06-26",
+  "items": {
+    "8": {
+      "id": 8,
+      "url": "https://www.ign.com/articles/will-you-buy-the-80-gta-6-standard-edition-or-100-ultimate-edition",
+      "en_title": "Will You Buy the $80 GTA 6 Standard Edition or $100 Ultimate Edition?",
+      "cn_title": "《GTA6》标准版80美元(约合人民币545元) vs 终极版100美元(约合人民币681元)",
+      "model": "deepseek-v4-pro",
+      "status": "needs_manual_review",
+      "failed_at": "2026-06-26T08:46:15.108394+08:00",
+      "reason": "🚨 subtitle TOO LONG (22字>​15): 「多花20美元(约合人民币136元)，值不值？」, 🚨 subtitle 含逗号且偏长，太像句子: 「多花20美元(约合人民币136元)，值不值？」, 🚨 subtitle 含大数字，像摘要不像创意短句: 「多花20美元(约合人民币136元)，值不值？」",
+      "audit_issues": [],
+      "fingerprint": "1b3cc8bc60b13e9d9e75d2591b02525767a08932",
+      "translation_path": "translations/08.json",
+      "retry_policy": "manual_only"
+    },
+    "16": {
+      "id": 16,
+      "url": "https://www.ign.com/articles/bungie-announces-layoffs-as-it-admits-destiny-2-fell-short-of-expectations",
+      "en_title": "Bungie Announces Layoffs as It Admits 'Destiny 2 Fell Short of Expectations'",
+      "cn_title": "Bungie宣布裁员，承认《命运2》未达预期",
+      "model": "deepseek-v4-pro",
+      "status": "needs_manual_review",
+      "failed_at": "2026-06-26T08:50:45.785039+08:00",
+      "reason": "model returned empty paragraphs",
+      "audit_issues": [],
+      "fingerprint": "28ee0e79f8843ee6a27d6833cd8e2eee93da29ed",
+      "translation_path": "",
+      "retry_policy": "manual_only"
+    }
+  },
+  "updated_at": "2026-06-26T08:50:45.785039+08:00"
+}
