@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-26 20:27:46 +08:00",
+  "updated_at": "2026-06-26 23:17:44 +08:00",
   "source": "multi-source median",
   "base": "USD",
   "rates_to_cny": {
@@ -23,27 +23,27 @@
       },
       "EUR": {
         "source_count": 4,
-        "median_raw": 7.735817,
-        "max_cross_source_deviation": 0.003272,
-        "previous_deviation": 0.000753
+        "median_raw": 7.737232,
+        "max_cross_source_deviation": 0.001727,
+        "previous_deviation": 0.000358
       },
       "JPY_100": {
         "source_count": 4,
         "median_raw": 4.208773,
-        "max_cross_source_deviation": 0.002011,
+        "max_cross_source_deviation": 0.000776,
         "previous_deviation": 0.000291
       },
       "GBP": {
         "source_count": 4,
-        "median_raw": 8.978328,
-        "max_cross_source_deviation": 0.003528,
-        "previous_deviation": 0.000928
+        "median_raw": 8.981356,
+        "max_cross_source_deviation": 0.000507,
+        "previous_deviation": 0.000151
       },
       "KRW_100": {
         "source_count": 4,
-        "median_raw": 0.440849,
-        "max_cross_source_deviation": 0.001723,
-        "previous_deviation": 0.00193
+        "median_raw": 0.441137,
+        "max_cross_source_deviation": 0.002989,
+        "previous_deviation": 0.002585
       }
     },
     "sources": [
@@ -74,10 +74,10 @@
         "url": "https://api.frankfurter.app/latest?from=USD&to=CNY,EUR,JPY,GBP,KRW",
         "rates_to_cny": {
           "USD": 6.7982,
-          "EUR": 7.710507,
-          "JPY_100": 4.200309,
-          "GBP": 8.946648,
-          "KRW_100": 0.440606
+          "EUR": 7.750593,
+          "JPY_100": 4.205506,
+          "GBP": 8.98591,
+          "KRW_100": 0.442456
         }
       },
       {
