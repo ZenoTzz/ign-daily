@@ -264,6 +264,30 @@
       "total_tokens_including_reasoning": 9822,
       "prompt_cache_hit_tokens": 8320,
       "prompt_cache_miss_tokens": 836
+    },
+    {
+      "time_cn": "2026-06-27 07:48:14",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 30,
+      "article_title": "Dead or Alive 6 Last Round Review",
+      "article_url": "https://www.ign.com/articles/dead-or-alive-6-last-round-review",
+      "article_date": "2026-06-27",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00060612,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 10551,
+      "completion_tokens": 558,
+      "reasoning_tokens": 408,
+      "output_tokens_including_reasoning": 966,
+      "total_tokens": 11109,
+      "total_tokens_including_reasoning": 11517,
+      "prompt_cache_hit_tokens": 8320,
+      "prompt_cache_miss_tokens": 2231
     }
   ]
 }
