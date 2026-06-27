@@ -4,22 +4,76 @@
     "2026-06-28",
     "2026-06-27"
   ],
-  "changed_dates": [],
-  "new_target_dates": [],
-  "new_count": 0,
+  "changed_dates": [
+    "2026-06-28"
+  ],
+  "new_target_dates": [
+    "2026-06-28"
+  ],
+  "new_count": 3,
   "filtered_count": 0,
-  "cleanup_count": 1,
-  "changed_count": 1,
-  "articles": [],
+  "cleanup_count": 0,
+  "changed_count": 3,
+  "articles": [
+    {
+      "title": "Steam Machine Scalpers on eBay Are Selling Reservations at Double the Price Valve Is Asking for",
+      "url": "https://www.ign.com/articles/steam-machine-scalpers-on-ebay-are-selling-reservations-at-double-the-price-valve-is-asking-for",
+      "pubDate_cst": "2026-06-28 02:33",
+      "category": "游戏新闻",
+      "emoji": "🎮",
+      "source_type": "rss"
+    },
+    {
+      "title": "Warhammer: Age of Sigmar Spearhead City of Ash Review",
+      "url": "https://www.ign.com/articles/warhammer-age-of-sigmar-spearhead-city-of-ash-review",
+      "pubDate_cst": "2026-06-28 02:03",
+      "category": "游戏评测",
+      "emoji": "⭐",
+      "source_type": "rss"
+    },
+    {
+      "title": "Sony to Delete Movies Owned by PlayStation Users, List Includes More Than 550 Digital Titles",
+      "url": "https://www.ign.com/articles/sony-to-delete-movies-owned-by-playstation-users-list-includes-more-than-550-digital-titles",
+      "pubDate_cst": "2026-06-28 00:41",
+      "category": "游戏新闻",
+      "emoji": "🎮",
+      "source_type": "rss"
+    }
+  ],
   "filtered_articles": [],
   "runs": [
     {
       "target_date": "2026-06-28",
-      "new_count": 0,
+      "new_count": 3,
       "filtered_count": 0,
-      "changed_count": 0,
-      "next_id": 5,
-      "articles": [],
+      "changed_count": 3,
+      "next_id": 8,
+      "articles": [
+        {
+          "title": "Steam Machine Scalpers on eBay Are Selling Reservations at Double the Price Valve Is Asking for",
+          "url": "https://www.ign.com/articles/steam-machine-scalpers-on-ebay-are-selling-reservations-at-double-the-price-valve-is-asking-for",
+          "pubDate_cst": "2026-06-28 02:33",
+          "category": "游戏新闻",
+          "emoji": "🎮",
+          "source_type": "rss"
+        },
+        {
+          "title": "Warhammer: Age of Sigmar Spearhead City of Ash Review",
+          "url": "https://www.ign.com/articles/warhammer-age-of-sigmar-spearhead-city-of-ash-review",
+          "pubDate_cst": "2026-06-28 02:03",
+          "category": "游戏评测",
+          "emoji": "⭐",
+          "source_type": "rss"
+        },
+        {
+          "title": "Sony to Delete Movies Owned by PlayStation Users, List Includes More Than 550 Digital Titles",
+          "url": "https://www.ign.com/articles/sony-to-delete-movies-owned-by-playstation-users-list-includes-more-than-550-digital-titles",
+          "pubDate_cst": "2026-06-28 00:41",
+          "category": "游戏新闻",
+          "emoji": "🎮",
+          "source_type": "rss"
+        }
+      ],
       "filtered_articles": []
     },
     {

@@ -1,0 +1,77 @@
+{
+  "date": "2026-06-28",
+  "records": [
+    {
+      "time_cn": "2026-06-28 02:37:08",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 5,
+      "article_title": "Steam Machine Scalpers on eBay Are Selling Reservations at Double the Price Valve Is Asking for",
+      "article_url": "https://www.ign.com/articles/steam-machine-scalpers-on-ebay-are-selling-reservations-at-double-the-price-valve-is-asking-for",
+      "article_date": "2026-06-28",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00036378,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8918,
+      "completion_tokens": 574,
+      "reasoning_tokens": 343,
+      "output_tokens_including_reasoning": 917,
+      "total_tokens": 9492,
+      "total_tokens_including_reasoning": 9835,
+      "prompt_cache_hit_tokens": 8320,
+      "prompt_cache_miss_tokens": 598
+    },
+    {
+      "time_cn": "2026-06-28 02:37:23",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 6,
+      "article_title": "Warhammer: Age of Sigmar Spearhead City of Ash Review",
+      "article_url": "https://www.ign.com/articles/warhammer-age-of-sigmar-spearhead-city-of-ash-review",
+      "article_date": "2026-06-28",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.0008045,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 10240,
+      "completion_tokens": 1098,
+      "reasoning_tokens": 732,
+      "output_tokens_including_reasoning": 1830,
+      "total_tokens": 11338,
+      "total_tokens_including_reasoning": 12070,
+      "prompt_cache_hit_tokens": 8320,
+      "prompt_cache_miss_tokens": 1920
+    },
+    {
+      "time_cn": "2026-06-28 02:37:33",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 7,
+      "article_title": "Sony to Delete Movies Owned by PlayStation Users, List Includes More Than 550 Digital Titles",
+      "article_url": "https://www.ign.com/articles/sony-to-delete-movies-owned-by-playstation-users-list-includes-more-than-550-digital-titles",
+      "article_date": "2026-06-28",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00044232,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9253,
+      "completion_tokens": 609,
+      "reasoning_tokens": 421,
+      "output_tokens_including_reasoning": 1030,
+      "total_tokens": 9862,
+      "total_tokens_including_reasoning": 10283,
+      "prompt_cache_hit_tokens": 8320,
+      "prompt_cache_miss_tokens": 933
+    }
+  ]
+}
