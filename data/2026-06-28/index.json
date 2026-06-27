@@ -2,6 +2,60 @@
   "date": "2026-06-28",
   "articles": [
     {
+      "id": 3,
+      "category": "影视资讯",
+      "emoji": "🎬",
+      "en_title": "Supergirl and the Debate at the Heart of the New Movie",
+      "cn_title": "《超级少女》引爆英雄杀人之辩",
+      "summary": "电影《超级少女》深入探讨了超级英雄是否应该杀人的伦理议题。女主角与少女Ruthye联手追捕杀害其全家的凶手Krem，全程劝诫复仇无益，却在结尾亲手将其杀死。这一结局与漫画中囚禁而非杀人的处理截然不同，引发了关于英雄本质的新一轮辩论。",
+      "url": "https://www.ign.com/articles/supergirl-and-the-debate-at-the-heart-of-the-new-movie",
+      "publish_time_cn": "2026-06-27 22:30",
+      "pub_date": "2026-06-27 22:30",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/03/supergirlthumb-1780509491632.png?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/03/supergirlthumb-1780509491632.png?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/03/supergirlthumb-1780509491632.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/03/supergirlthumb-1780509491632.png?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/03/supergirlthumb-1780509491632.png?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/03/supergirlthumb-1780509491632.png",
+        "https://assets-prd.ignimgs.com/2026/06/23/rev-1-sgrl-trl-042-high-res-jpeg-1782239477300.jpeg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-27T23:40:47+08:00"
+    },
+    {
+      "id": 4,
+      "category": "影视资讯",
+      "emoji": "🎬",
+      "en_title": "Five Nights at Freddy's 3 Enlists It and Annabelle Writer for Its Script",
+      "cn_title": "《玩具熊的五夜后宫3》聘请《小丑回魂》编剧执笔剧本",
+      "summary": "据《好莱坞报道者》消息，《玩具熊的五夜后宫》系列第三部电影已选定《小丑回魂》和《安娜贝尔》编剧加里·多伯曼撰写剧本。前两部导演艾玛·坦米有望回归，系列创作者斯科特·考森也将担任制片人。尽管前两部电影全球票房合计超过5.3亿美元(约合人民币36亿元)，但口碑极差，烂番茄新鲜度分别仅有33%和17%。新编剧的加入或为这部恐怖游戏改编电影注入新鲜血液。",
+      "url": "https://www.ign.com/articles/five-nights-at-freddys-3-enlists-it-and-annabelle-writer-for-its-script",
+      "publish_time_cn": "2026-06-27 22:24",
+      "pub_date": "2026-06-27 22:24",
+      "cover_image": "https://assets-prd.ignimgs.com/2023/11/05/fivenightsatfreddys-review-blogroll-1698309593553-1699222245327.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2023/11/05/fivenightsatfreddys-review-blogroll-1698309593553-1699222245327.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2023/11/05/fivenightsatfreddys-review-blogroll-1698309593553-1699222245327.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2023/11/05/fivenightsatfreddys-review-blogroll-1698309593553-1699222245327.jpg?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2023/11/05/fivenightsatfreddys-review-blogroll-1698309593553-1699222245327.jpg?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2023/11/05/fivenightsatfreddys-review-blogroll-1698309593553-1699222245327.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-27T23:40:47+08:00",
+      "pending_dict": [
+        {
+          "en": "Gary Dauberman",
+          "cn": "加里·多伯曼",
+          "cat": "people",
+          "source": "ai_guess",
+          "reason": "该人物在中国知名度不高，建议确认是否为公认译名"
+        }
+      ]
+    },
+    {
       "id": 2,
       "category": "影视资讯",
       "emoji": "🗺️",
@@ -50,5 +104,5 @@
       "source_fetched_at": "2026-06-27T22:08:47+08:00"
     }
   ],
-  "total": 2
+  "total": 4
 }
