@@ -1,15 +1,15 @@
 {
   "week_id": "2026-W22",
-  "generated_at": "2026-06-17T21:49:47+08:00",
+  "generated_at": "2026-06-27T22:45:40+08:00",
   "range": {
     "start": "2026-05-25",
     "end": "2026-05-31"
   },
   "summary": {
-    "candidate_count": 10,
+    "candidate_count": 13,
     "ready_for_review": 0,
-    "confirmed_by_feedback": 5,
-    "pending": 5
+    "confirmed_by_feedback": 7,
+    "pending": 6
   },
   "candidates": [
     {
@@ -488,6 +488,284 @@
       "last_seen": "2026-05-31",
       "confidence": 0.6,
       "latest_evidence_summary": "第6篇文章末尾补充「虽然中国大陆地区尚未定档」，延续了之前补充国区 Steam 定价的观察。"
+    },
+    {
+      "id": "subtitle_avoid_concrete_detail",
+      "title": "副标题简短、有记忆点但不增添事实",
+      "rule": "副标题保持2至15字，优先用简短短语、双关或原文引语，不机械复述标题；不得补充原文没有的事实或改变立场。",
+      "category": "subtitle",
+      "scope": "all",
+      "status": "confirmed",
+      "days": [
+        "2026-05-30",
+        "2026-06-01",
+        "2026-06-03",
+        "2026-06-04",
+        "2026-06-05",
+        "2026-06-08",
+        "2026-06-09",
+        "2026-06-10",
+        "2026-06-11",
+        "2026-06-12",
+        "2026-06-16",
+        "2026-06-17",
+        "2026-06-19",
+        "2026-06-25",
+        "2026-06-26"
+      ],
+      "days_seen": 15,
+      "articles_seen": 17,
+      "contradictions": 0,
+      "examples": [
+        {
+          "date": "2026-06-11",
+          "article_id": 31,
+          "before": "艰难抉择",
+          "after": "重新开始"
+        },
+        {
+          "date": "2026-06-12",
+          "article_id": 3,
+          "before": "剑指史上最佳",
+          "after": "登舰"
+        },
+        {
+          "date": "2026-06-12",
+          "article_id": 16,
+          "before": "十年杀机，日活百万",
+          "after": "足够恐怖"
+        },
+        {
+          "date": "2026-06-12",
+          "article_id": 21,
+          "before": "漫长停播期",
+          "after": "已经够久了"
+        },
+        {
+          "date": "2026-06-16",
+          "article_id": 7,
+          "before": "赛场即广告牌",
+          "after": "游戏即广告平台"
+        },
+        {
+          "date": "2026-06-16",
+          "article_id": 8,
+          "before": "微交易退场",
+          "after": "一份礼物"
+        },
+        {
+          "date": "2026-06-16",
+          "article_id": 39,
+          "before": "Xbox大洗牌",
+          "after": "下一个是谁？"
+        },
+        {
+          "date": "2026-06-17",
+          "article_id": 6,
+          "before": "10亿信用币清零",
+          "after": "不会有进一步的处罚"
+        },
+        {
+          "date": "2026-06-01",
+          "article_id": 3,
+          "before": "纯绿照片的玄机",
+          "after": "照片另有玄机"
+        },
+        {
+          "date": "2026-06-25",
+          "article_id": 18,
+          "before": "老兵回归，双赢策略",
+          "after": "钱包危险了"
+        },
+        {
+          "date": "2026-06-25",
+          "article_id": 24,
+          "before": "看点来了",
+          "after": "「我觉得很多发行商很快就会吃这个亏」"
+        },
+        {
+          "date": "2026-06-26",
+          "article_id": 10,
+          "before": "光盘还在",
+          "after": "「实体版盒内会有一张光盘。」"
+        },
+        {
+          "date": "2026-06-26",
+          "article_id": 31,
+          "before": "预期管理",
+          "after": "牛皮吹破"
+        },
+        {
+          "date": "2026-05-30",
+          "article_id": 18,
+          "before": "再见了，老朋友",
+          "after": "彻底再见"
+        },
+        {
+          "date": "2026-05-30",
+          "article_id": 21,
+          "before": "邦德出道即巅峰",
+          "after": "出道即巅峰"
+        },
+        {
+          "date": "2026-05-30",
+          "article_id": 24,
+          "before": "新官上任三把火",
+          "after": "艰难转型"
+        },
+        {
+          "date": "2026-05-30",
+          "article_id": 26,
+          "before": "说好的免费呢？",
+          "after": "「附加费」"
+        }
+      ],
+      "feedback": [
+        {
+          "week_id": "2026-W24",
+          "text": "采纳，进入长期规则。",
+          "classified_as": "confirmed",
+          "created_at": "2026-06-15T21:48:32+08:00"
+        }
+      ],
+      "created_at": "2026-06-04T06:38:54+08:00",
+      "last_seen": "2026-06-26",
+      "confidence": 0.91,
+      "latest_evidence_summary": "Backfilled 5/30 subtitles add compact hooks: title context was trimmed to shorter reader-facing phrases."
+    },
+    {
+      "id": "prefer_established_official_game_titles",
+      "title": "优先使用稳定官方或通行译名",
+      "rule": "游戏、影视、角色和系统名有稳定官方或通行中文译名时应统一使用；没有稳定译名时保留原文，不自行创造译名。",
+      "category": "dictionary",
+      "scope": "games|movies_tv",
+      "status": "pending",
+      "days": [
+        "2026-05-30",
+        "2026-06-24"
+      ],
+      "days_seen": 2,
+      "articles_seen": 3,
+      "contradictions": 0,
+      "examples": [
+        {
+          "date": "2026-06-24",
+          "article_id": 3,
+          "before": "??????2?",
+          "after": "?????? ????"
+        },
+        {
+          "date": "2026-06-24",
+          "article_id": 34,
+          "before": "?????2?",
+          "after": "?????2?"
+        },
+        {
+          "date": "2026-05-30",
+          "article_id": 18,
+          "before": "Bungie与旗下知名科幻射击游戏《命运2》的问题始于去年夏天的「命运之刃」资料片——据报道该资料片表现不佳。关停的决定据称是在「今年早些时候」做出的，因为他们最终决定不以「Destiny Infinity」的名义重新启动该系列。",
+          "after": "Bungie与旗下知名科幻射击游戏《命运2》的问题始于去年夏天的《宿命边缘》资料片——据报道该资料片表现不佳。关停的决定据称是在「今年早些时候」做出的，因为他们最终决定不以《命运 Infinity》的名义重新启动该系列。"
+        }
+      ],
+      "feedback": [],
+      "created_at": "2026-06-25T21:53:01+08:00",
+      "last_seen": "2026-06-24",
+      "confidence": 0.78,
+      "latest_evidence_summary": "Backfilled 5/30 Destiny edits favor established Chinese names for expansions and franchise titles."
+    },
+    {
+      "id": "platform_name_compact",
+      "title": "平台名称使用简洁统一写法",
+      "rule": "平台枚举中可将“Xbox Series X|S”统一简写为“XBOX Series”，Nintendo Switch 2在语境明确时可写“Switch 2”；不要改变实际登陆平台范围。所有面向读者的译文中，Xbox 统一写作 XBOX。",
+      "category": "dictionary",
+      "scope": "games",
+      "status": "confirmed",
+      "days": [
+        "2026-05-30",
+        "2026-06-08",
+        "2026-06-09",
+        "2026-06-10",
+        "2026-06-18",
+        "2026-06-24",
+        "2026-06-26"
+      ],
+      "days_seen": 7,
+      "articles_seen": 11,
+      "contradictions": 0,
+      "examples": [
+        {
+          "date": "2026-06-08",
+          "article_id": 16,
+          "before": "今日Xbox展示会直播中最令人意外的消息，莫过于确认多款即将推出的重磅大作将作为Xbox主机独占游戏保留——也就是说，它们虽会登陆PC，但不会出现在PS5或任天堂Switch 2上。",
+          "after": "今日Xbox展示会直播中最令人意外的消息，莫过于确认多款即将推出的重磅大作将作为Xbox主机独占游戏保留——也就是说，它们虽会登陆PC，但不会出现在PS5或Switch 2上。"
+        },
+        {
+          "date": "2026-06-08",
+          "article_id": 37,
+          "before": "《古墓丽影：亚特兰蒂斯遗迹》将于2027年2月12日登陆任天堂Switch 2、PS5、PC和Xbox Series X/S。",
+          "after": "《古墓丽影：亚特兰蒂斯遗迹》将于2027年2月12日登陆、PS5、Xbox Series、Switch 2和PC。"
+        },
+        {
+          "date": "2026-06-09",
+          "article_id": 21,
+          "before": "Game Pass曾是Xbox One、Xbox Series X|S和PC端Xbox玩家的首选，但去年年底宣布涨价后，这一地位受到了冲击。微软在2025年10月初确认，Xbox Game Pass Ultimate月费将从19.99美元（约合人民币143元）大幅上涨至29.99美元（约合人民币215元）。涨幅高达50%，年费达到120美元（约合人民币859元）。",
+          "after": "Game Pass曾是Xbox One、Xbox Series和PC端Xbox玩家的首选，但去年年底宣布涨价后，这一地位受到了冲击。微软在2025年10月初确认，Xbox Game Pass Ultimate月费将从19.99美元（约合人民币136元）大幅上涨至29.99美元（约合人民币203元）。涨幅高达50%，年费达到120美元（约合人民币814元）。"
+        },
+        {
+          "date": "2026-06-10",
+          "article_id": 6,
+          "before": "《战争机器：事变日》仅通过Steam和Xbox应用登陆PC，以及Xbox Cloud和Xbox Series X|S。微软坚称，从未打算将该作带到PS5。",
+          "after": "《战争机器：事变日》仅通过Steam和Xbox应用登陆PC，以及Xbox Cloud和Xbox Series。微软坚称，从未打算将该作带到PS5。"
+        },
+        {
+          "date": "2026-06-10",
+          "article_id": 7,
+          "before": "《光环：战役进化》将于7月28日登陆Xbox Series X|S、PS5和PC。高级版和典藏版玩家还将获得五天的抢先体验资格。",
+          "after": "《光环：战役进化》将于7月28日登陆Xbox Series、PS5和PC。高级版和典藏版玩家还将获得五天的抢先体验资格。"
+        },
+        {
+          "date": "2026-06-24",
+          "article_id": 5,
+          "before": "??XBOX Series?PS5",
+          "after": "??XBOX Series?PS5"
+        },
+        {
+          "date": "2026-06-24",
+          "article_id": 14,
+          "before": "Xbox Series X/S",
+          "after": "XBOX Series"
+        },
+        {
+          "date": "2026-06-26",
+          "article_id": 24,
+          "before": "XBOX主机涨价的消息公布于11月《GTA6》发售前夕，该作预计将大幅拉高PS5和XBOX Series X|S的需求。然而，外界担忧索尼和微软可能都无法满足《GTA6》所带来的需求，因为人工智能热潮正让硬件厂商不仅难以采购组件，更难以用亲民的价格推出产品。",
+          "after": "XBOX主机涨价的消息公布于11月《GTA6》发售前夕，该作预计将大幅拉高PS5和XBOX Series的需求。然而，外界担忧索尼和微软可能都无法满足《GTA6》所带来的需求，因为人工智能热潮正让硬件厂商不仅难以采购组件，更难以用亲民的价格推出产品。"
+        },
+        {
+          "date": "2026-05-30",
+          "article_id": 21,
+          "before": "Alinea Analytics市场分析主管Rhys Elliott表示，《007 初露锋芒》仅在Steam平台就售出约50万份，在Valve平台创造了约2500万美元(约合人民币2亿元)收入。",
+          "after": "Alinea Analytics市场分析主管Rhys Elliott表示，《007 初露锋芒》仅在Steam平台就售出约50万份，在Valve平台创造了约2500万美元（约合1.7亿元人民币）的收入。"
+        },
+        {
+          "date": "2026-05-30",
+          "article_id": 26,
+          "before": "「如果你在4月30日至5月27日期间在Xbox One或PlayStation 4上购买了基础版，或在升级中遇到任何问题，请联系我们的客服团队，我们会妥善解决。再次为此事带来的困扰致歉。」",
+          "after": "「如果你在4月30日至5月27日期间在Xbox One或PS4上购买了基础版，或在升级中遇到任何问题，请联系我们的客服团队，我们会妥善解决。再次为此事带来的困扰致歉。」"
+        }
+      ],
+      "feedback": [
+        {
+          "week_id": "2026-W24",
+          "text": "采纳，进入长期规则。",
+          "classified_as": "confirmed",
+          "created_at": "2026-06-15T21:48:32+08:00"
+        }
+      ],
+      "created_at": "2026-06-12T21:51:19+08:00",
+      "last_seen": "2026-06-26",
+      "confidence": 0.86,
+      "latest_evidence_summary": "Backfilled 5/30 edits also compact platform names, including Nintendo Switch 2 -> Switch 2 and Xbox Series X/S -> Xbox Series."
     }
   ],
   "instructions_for_user": [

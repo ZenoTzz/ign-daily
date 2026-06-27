@@ -1331,6 +1331,7 @@
       "scope": "all",
       "status": "confirmed",
       "days": [
+        "2026-05-30",
         "2026-06-01",
         "2026-06-03",
         "2026-06-04",
@@ -1346,8 +1347,8 @@
         "2026-06-25",
         "2026-06-26"
       ],
-      "days_seen": 14,
-      "articles_seen": 13,
+      "days_seen": 15,
+      "articles_seen": 17,
       "contradictions": 0,
       "examples": [
         {
@@ -1427,6 +1428,30 @@
           "article_id": 31,
           "before": "预期管理",
           "after": "牛皮吹破"
+        },
+        {
+          "date": "2026-05-30",
+          "article_id": 18,
+          "before": "再见了，老朋友",
+          "after": "彻底再见"
+        },
+        {
+          "date": "2026-05-30",
+          "article_id": 21,
+          "before": "邦德出道即巅峰",
+          "after": "出道即巅峰"
+        },
+        {
+          "date": "2026-05-30",
+          "article_id": 24,
+          "before": "新官上任三把火",
+          "after": "艰难转型"
+        },
+        {
+          "date": "2026-05-30",
+          "article_id": 26,
+          "before": "说好的免费呢？",
+          "after": "「附加费」"
         }
       ],
       "feedback": [
@@ -1440,7 +1465,7 @@
       "created_at": "2026-06-04T06:38:54+08:00",
       "last_seen": "2026-06-26",
       "confidence": 0.91,
-      "latest_evidence_summary": "6/25-6/26 subtitles continue to favor short hooks or direct quotes instead of title repetition."
+      "latest_evidence_summary": "Backfilled 5/30 subtitles add compact hooks: title context was trimmed to shorter reader-facing phrases."
     },
     "hex_color_no_space_before_punctuation": {
       "id": "hex_color_no_space_before_punctuation",
@@ -1977,6 +2002,7 @@
       "scope": "games",
       "status": "confirmed",
       "days": [
+        "2026-05-30",
         "2026-06-08",
         "2026-06-09",
         "2026-06-10",
@@ -1984,8 +2010,8 @@
         "2026-06-24",
         "2026-06-26"
       ],
-      "days_seen": 6,
-      "articles_seen": 9,
+      "days_seen": 7,
+      "articles_seen": 11,
       "contradictions": 0,
       "examples": [
         {
@@ -2035,6 +2061,18 @@
           "article_id": 24,
           "before": "XBOX主机涨价的消息公布于11月《GTA6》发售前夕，该作预计将大幅拉高PS5和XBOX Series X|S的需求。然而，外界担忧索尼和微软可能都无法满足《GTA6》所带来的需求，因为人工智能热潮正让硬件厂商不仅难以采购组件，更难以用亲民的价格推出产品。",
           "after": "XBOX主机涨价的消息公布于11月《GTA6》发售前夕，该作预计将大幅拉高PS5和XBOX Series的需求。然而，外界担忧索尼和微软可能都无法满足《GTA6》所带来的需求，因为人工智能热潮正让硬件厂商不仅难以采购组件，更难以用亲民的价格推出产品。"
+        },
+        {
+          "date": "2026-05-30",
+          "article_id": 21,
+          "before": "Alinea Analytics市场分析主管Rhys Elliott表示，《007 初露锋芒》仅在Steam平台就售出约50万份，在Valve平台创造了约2500万美元(约合人民币2亿元)收入。",
+          "after": "Alinea Analytics市场分析主管Rhys Elliott表示，《007 初露锋芒》仅在Steam平台就售出约50万份，在Valve平台创造了约2500万美元（约合1.7亿元人民币）的收入。"
+        },
+        {
+          "date": "2026-05-30",
+          "article_id": 26,
+          "before": "「如果你在4月30日至5月27日期间在Xbox One或PlayStation 4上购买了基础版，或在升级中遇到任何问题，请联系我们的客服团队，我们会妥善解决。再次为此事带来的困扰致歉。」",
+          "after": "「如果你在4月30日至5月27日期间在Xbox One或PS4上购买了基础版，或在升级中遇到任何问题，请联系我们的客服团队，我们会妥善解决。再次为此事带来的困扰致歉。」"
         }
       ],
       "feedback": [
@@ -2048,7 +2086,7 @@
       "created_at": "2026-06-12T21:51:19+08:00",
       "last_seen": "2026-06-26",
       "confidence": 0.86,
-      "latest_evidence_summary": "6/26 evidence continues compact platform naming, especially Xbox Series X|S -> XBOX Series."
+      "latest_evidence_summary": "Backfilled 5/30 edits also compact platform names, including Nintendo Switch 2 -> Switch 2 and Xbox Series X/S -> Xbox Series."
     },
     "keep_person_names_latin": {
       "id": "keep_person_names_latin",
@@ -2373,10 +2411,11 @@
       "scope": "games|movies_tv",
       "status": "pending",
       "days": [
+        "2026-05-30",
         "2026-06-24"
       ],
-      "days_seen": 1,
-      "articles_seen": 2,
+      "days_seen": 2,
+      "articles_seen": 3,
       "contradictions": 0,
       "examples": [
         {
@@ -2390,14 +2429,20 @@
           "article_id": 34,
           "before": "?????2?",
           "after": "?????2?"
+        },
+        {
+          "date": "2026-05-30",
+          "article_id": 18,
+          "before": "Bungie与旗下知名科幻射击游戏《命运2》的问题始于去年夏天的「命运之刃」资料片——据报道该资料片表现不佳。关停的决定据称是在「今年早些时候」做出的，因为他们最终决定不以「Destiny Infinity」的名义重新启动该系列。",
+          "after": "Bungie与旗下知名科幻射击游戏《命运2》的问题始于去年夏天的《宿命边缘》资料片——据报道该资料片表现不佳。关停的决定据称是在「今年早些时候」做出的，因为他们最终决定不以《命运 Infinity》的名义重新启动该系列。"
         }
       ],
       "feedback": [],
       "created_at": "2026-06-25T21:53:01+08:00",
       "last_seen": "2026-06-24",
-      "confidence": 0.76,
-      "latest_evidence_summary": "6/24 ?????????2?????????? ???????????2????????2??"
+      "confidence": 0.78,
+      "latest_evidence_summary": "Backfilled 5/30 Destiny edits favor established Chinese names for expansions and franchise titles."
     }
   },
-  "updated_at": "2026-06-26T22:47:00+08:00"
+  "updated_at": "2026-06-27T22:45:13+08:00"
 }

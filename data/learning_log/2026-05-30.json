@@ -1,0 +1,31 @@
+{
+  "date": "2026-05-30",
+  "source": "codex_nightly_learner",
+  "generated_at": "2026-06-27T22:45:13+08:00",
+  "backfill": true,
+  "polished_articles_processed": [
+    15,
+    18,
+    21,
+    24,
+    26
+  ],
+  "diff_analysis": "data/2026-05-30/diff_analysis.json",
+  "evidence_updates": [
+    "subtitle_avoid_concrete_detail",
+    "prefer_established_official_game_titles",
+    "platform_name_compact"
+  ],
+  "weekly_reports_updated": [
+    "2026-W22"
+  ],
+  "style_profile_changed": false,
+  "rules_confirmed_from_weekly": [],
+  "rules_held_from_weekly": [],
+  "notes": [
+    "Backfilled the oldest previously blocked missing diff_analysis date.",
+    "Applied only existing-rule evidence from user polish; no new long-term rule was created.",
+    "STYLE_PROFILE.md was not changed because there was no new explicit adoption feedback.",
+    "Next historical missing diff is 2026-05-31, but its date pre-push currently fails on pre-existing translation QA issues."
+  ]
+}
