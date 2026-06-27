@@ -288,6 +288,54 @@
       "total_tokens_including_reasoning": 11517,
       "prompt_cache_hit_tokens": 8320,
       "prompt_cache_miss_tokens": 2231
+    },
+    {
+      "time_cn": "2026-06-27 12:18:45",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 31,
+      "article_title": "In the Hand of Dante Review",
+      "article_url": "https://www.ign.com/articles/in-the-hand-of-dante-review-oscar-isaac-netflix",
+      "article_date": "2026-06-27",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.0005182,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9569,
+      "completion_tokens": 649,
+      "reasoning_tokens": 494,
+      "output_tokens_including_reasoning": 1143,
+      "total_tokens": 10218,
+      "total_tokens_including_reasoning": 10712,
+      "prompt_cache_hit_tokens": 8320,
+      "prompt_cache_miss_tokens": 1249
+    },
+    {
+      "time_cn": "2026-06-27 12:19:04",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 32,
+      "article_title": "Avatar: The Last Airbender Season 2 Review",
+      "article_url": "https://www.ign.com/articles/avatar-the-last-airbender-season-2-review-netflix",
+      "article_date": "2026-06-27",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00109542,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9518,
+      "completion_tokens": 1790,
+      "reasoning_tokens": 1440,
+      "output_tokens_including_reasoning": 3230,
+      "total_tokens": 11308,
+      "total_tokens_including_reasoning": 12748,
+      "prompt_cache_hit_tokens": 8320,
+      "prompt_cache_miss_tokens": 1198
     }
   ]
 }

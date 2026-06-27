@@ -1,57 +1,143 @@
 {
-  "target_date": "2026-06-27",
+  "target_date": "2026-06-28",
   "target_dates": [
-    "2026-06-27",
-    "2026-06-26"
+    "2026-06-28",
+    "2026-06-27"
   ],
   "changed_dates": [
+    "2026-06-28",
     "2026-06-27"
   ],
   "new_target_dates": [
     "2026-06-27"
   ],
-  "new_count": 1,
-  "filtered_count": 0,
+  "new_count": 2,
+  "filtered_count": 3,
   "cleanup_count": 0,
-  "changed_count": 1,
+  "changed_count": 5,
   "articles": [
     {
-      "title": "Dead or Alive 6 Last Round Review",
-      "url": "https://www.ign.com/articles/dead-or-alive-6-last-round-review",
-      "pubDate_cst": "2026-06-27 07:00",
-      "category": "游戏评测",
+      "title": "In the Hand of Dante Review",
+      "url": "https://www.ign.com/articles/in-the-hand-of-dante-review-oscar-isaac-netflix",
+      "pubDate_cst": "2026-06-26 12:18",
+      "category": "电影评测",
       "emoji": "⭐",
-      "source_type": "rss"
-    }
-  ],
-  "filtered_articles": [],
-  "runs": [
-    {
-      "target_date": "2026-06-27",
-      "new_count": 1,
-      "filtered_count": 0,
-      "changed_count": 1,
-      "next_id": 31,
-      "articles": [
-        {
-          "title": "Dead or Alive 6 Last Round Review",
-          "url": "https://www.ign.com/articles/dead-or-alive-6-last-round-review",
-          "pubDate_cst": "2026-06-27 07:00",
-          "category": "游戏评测",
-          "emoji": "⭐",
-          "source_type": "rss"
-        }
-      ],
-      "filtered_articles": []
+      "source_type": "review"
     },
     {
-      "target_date": "2026-06-26",
+      "title": "Avatar: The Last Airbender Season 2 Review",
+      "url": "https://www.ign.com/articles/avatar-the-last-airbender-season-2-review-netflix",
+      "pubDate_cst": "2026-06-26 12:18",
+      "category": "剧集评测",
+      "emoji": "⭐",
+      "source_type": "review"
+    }
+  ],
+  "filtered_articles": [
+    {
+      "title": "Top Prime Day Deals I'm Shopping Today to Help Beat the Summer Heat",
+      "url": "https://www.ign.com/articles/summer-deals-to-shop-before-amazon-prime-day-ends",
+      "pubDate_cst": "2026-06-27 09:42",
+      "description": "",
+      "categories": "",
+      "reason": "text:\\bprime.day\\b",
+      "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
+      "filtered_at_cn": "2026-06-27 12:18:30",
+      "status": "filtered"
+    },
+    {
+      "title": "7 Best Prime Day TV Deals Under $1,000",
+      "url": "https://www.ign.com/articles/tv-deals-under-1000-prime-day-2026",
+      "pubDate_cst": "2026-06-27 09:05",
+      "description": "From gaming-ready to budget-friendly, these TV discounts are worth grabbing before Prime Day ends.",
+      "categories": "",
+      "reason": "text:\\bbest .+ deals?\\b",
+      "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
+      "filtered_at_cn": "2026-06-27 12:18:30",
+      "status": "filtered"
+    },
+    {
+      "title": "These Fantasy Book Nooks Are a Magical Addition to Your Mixed Media Library",
+      "url": "https://www.ign.com/articles/fantasy-book-nook-deals-for-amazon-prime-day-2026",
+      "pubDate_cst": "2026-06-27 07:56",
+      "description": "",
+      "categories": "",
+      "reason": "url:deal",
+      "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
+      "filtered_at_cn": "2026-06-27 12:18:30",
+      "status": "filtered"
+    }
+  ],
+  "runs": [
+    {
+      "target_date": "2026-06-28",
       "new_count": 0,
-      "filtered_count": 0,
-      "changed_count": 0,
-      "next_id": 38,
+      "filtered_count": 2,
+      "changed_count": 2,
+      "next_id": 1,
       "articles": [],
-      "filtered_articles": []
+      "filtered_articles": [
+        {
+          "title": "Top Prime Day Deals I'm Shopping Today to Help Beat the Summer Heat",
+          "url": "https://www.ign.com/articles/summer-deals-to-shop-before-amazon-prime-day-ends",
+          "pubDate_cst": "2026-06-27 09:42",
+          "description": "",
+          "categories": "",
+          "reason": "text:\\bprime.day\\b",
+          "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
+          "filtered_at_cn": "2026-06-27 12:18:30",
+          "status": "filtered"
+        },
+        {
+          "title": "7 Best Prime Day TV Deals Under $1,000",
+          "url": "https://www.ign.com/articles/tv-deals-under-1000-prime-day-2026",
+          "pubDate_cst": "2026-06-27 09:05",
+          "description": "From gaming-ready to budget-friendly, these TV discounts are worth grabbing before Prime Day ends.",
+          "categories": "",
+          "reason": "text:\\bbest .+ deals?\\b",
+          "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
+          "filtered_at_cn": "2026-06-27 12:18:30",
+          "status": "filtered"
+        }
+      ]
+    },
+    {
+      "target_date": "2026-06-27",
+      "new_count": 2,
+      "filtered_count": 1,
+      "changed_count": 3,
+      "next_id": 33,
+      "articles": [
+        {
+          "title": "In the Hand of Dante Review",
+          "url": "https://www.ign.com/articles/in-the-hand-of-dante-review-oscar-isaac-netflix",
+          "pubDate_cst": "2026-06-26 12:18",
+          "category": "电影评测",
+          "emoji": "⭐",
+          "source_type": "review"
+        },
+        {
+          "title": "Avatar: The Last Airbender Season 2 Review",
+          "url": "https://www.ign.com/articles/avatar-the-last-airbender-season-2-review-netflix",
+          "pubDate_cst": "2026-06-26 12:18",
+          "category": "剧集评测",
+          "emoji": "⭐",
+          "source_type": "review"
+        }
+      ],
+      "filtered_articles": [
+        {
+          "title": "These Fantasy Book Nooks Are a Magical Addition to Your Mixed Media Library",
+          "url": "https://www.ign.com/articles/fantasy-book-nook-deals-for-amazon-prime-day-2026",
+          "pubDate_cst": "2026-06-27 07:56",
+          "description": "",
+          "categories": "",
+          "reason": "url:deal",
+          "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
+          "filtered_at_cn": "2026-06-27 12:18:30",
+          "status": "filtered"
+        }
+      ]
     }
   ]
 }

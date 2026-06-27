@@ -731,6 +731,74 @@
       ]
     },
     {
+      "id": 31,
+      "category": "评测评分",
+      "emoji": "🎬",
+      "en_title": "In the Hand of Dante Review",
+      "cn_title": "《但丁之手》(In the Hand of Dante)评测：群星云集却沉闷乏味",
+      "summary": "朱利安·施纳贝尔执导的Netflix电影《但丁之手》(In the Hand of Dante)融合现代黑帮故事与中世纪但丁创作《神曲》的历程，由奥斯卡·艾萨克、盖尔·加朵、杰森·莫玛等主演。影片在威尼斯电影节首映，宏大的概念设定却因缓慢的叙事节奏和形式化的影像风格而浪费艺术潜力，153分钟的片长令人倍感压抑。",
+      "url": "https://www.ign.com/articles/in-the-hand-of-dante-review-oscar-isaac-netflix",
+      "publish_time_cn": "2026-06-26 12:18",
+      "pub_date": "2026-06-26 12:18",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/24/1-29-1-1-29-1782325000798.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/24/1-29-1-1-29-1782325000798.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/24/1-29-1-1-29-1782325000798.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/24/1-29-1-1-29-1782325000798.jpg?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/24/1-29-1-1-29-1782325000798.jpg?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/24/1-29-1-1-29-1782325000798.jpg",
+        "https://assets-prd.ignimgs.com/2026/06/24/in-the-hand-of-dante-n-00-10-00-21-r2-1782325000798.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-27T12:18:34+08:00"
+    },
+    {
+      "id": 32,
+      "category": "评测评分",
+      "emoji": "🔥",
+      "en_title": "Avatar: The Last Airbender Season 2 Review",
+      "cn_title": "《降世神通：最后的气宗》第二季评测",
+      "summary": "Netflix真人版《降世神通：最后的气宗》第二季于6月25日上线。本季在节奏和角色塑造上显著优于第一季，拓芙、祖寇、艾洛、阿祖拉等角色的故事线令人满意，并对原作进行了巧妙改编；但昏暗的视觉效果和过多的CG虚拟场景令人失望，且阿帕失踪情节被挪至结尾，情感冲击力大打折扣。",
+      "url": "https://www.ign.com/articles/avatar-the-last-airbender-season-2-review-netflix",
+      "publish_time_cn": "2026-06-26 12:18",
+      "pub_date": "2026-06-26 12:18",
+      "cover_image": "",
+      "translation_status": "none",
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-27T12:18:35+08:00",
+      "pending_dict": [
+        {
+          "en": "Toph",
+          "cn": "拓芙",
+          "cat": "people",
+          "source": "ai_guess",
+          "reason": "经典角色，中文社区常用译名待确认"
+        },
+        {
+          "en": "Zuko",
+          "cn": "祖寇",
+          "cat": "people",
+          "source": "ai_guess",
+          "reason": "经典角色，中文社区常用译名待确认"
+        },
+        {
+          "en": "Iroh",
+          "cn": "艾洛",
+          "cat": "people",
+          "source": "ai_guess",
+          "reason": "经典角色，中文社区常用译名待确认"
+        },
+        {
+          "en": "Azula",
+          "cn": "阿祖拉",
+          "cat": "people",
+          "source": "ai_guess",
+          "reason": "经典角色，中文社区常用译名待确认"
+        }
+      ]
+    },
+    {
       "id": 3,
       "category": "影视资讯",
       "emoji": "🎬",
@@ -833,5 +901,5 @@
       "source_fetched_at": "2026-06-26T09:51:00+08:00"
     }
   ],
-  "total": 30
+  "total": 32
 }
