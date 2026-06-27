@@ -643,6 +643,68 @@
       "source_fetched_at": "2026-06-26T20:27:44+08:00"
     },
     {
+      "id": 33,
+      "category": "评测评分",
+      "emoji": "🎬",
+      "en_title": "Jackass: Best and Last Review",
+      "cn_title": "《蠢蛋搞怪秀：最好与最后》评测",
+      "summary": "《蠢蛋搞怪秀：最好与最后》是该系列的最终章，混合全新特技与回顾经典片段。虽然新素材规模较小且主演们不再像从前一样拼命，但影片以感人的告别和丰富的幕后花絮，为这一长达25年的系列画上圆满句号。",
+      "url": "https://www.ign.com/articles/jackass-best-and-last-review",
+      "publish_time_cn": "2026-06-26 17:52",
+      "pub_date": "2026-06-26 17:52",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/25/jackas-best-and-last-thumb-1782405003905.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/25/jackas-best-and-last-thumb-1782405003905.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/25/jackas-best-and-last-thumb-1782405003905.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/25/jackas-best-and-last-thumb-1782405003905.jpg?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/25/jackas-best-and-last-thumb-1782405003905.jpg?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/25/jackas-best-and-last-thumb-1782405003905.jpg",
+        "https://assets-prd.ignimgs.com/2026/06/25/jabl-01166r2c-1782405125635.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-27T17:52:44+08:00",
+      "pending_dict": [
+        {
+          "en": "Jackass",
+          "cn": "蠢蛋搞怪秀",
+          "cat": "movies_tv",
+          "source": "ai_guess",
+          "reason": "常见译名，但未在词库确认"
+        },
+        {
+          "en": "Best and Last",
+          "cn": "最好与最后",
+          "cat": "movies_tv",
+          "source": "ai_guess",
+          "reason": "副标题直译，建议人工确认"
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "category": "评测评分",
+      "emoji": "🍿",
+      "en_title": "Little Brother Review",
+      "cn_title": "《Little Brother》评测：塞纳搭档安德烈的闹剧",
+      "summary": "约翰·塞纳与埃里克·安德烈主演的喜剧《Little Brother》今日上线Netflix。塞纳饰演一名压力山大的房产经纪人，被迫与安德烈饰演的灾星重逢，引发一系列荒诞闹剧。影片虽未突破套路，但笑料十足，尤其是安德烈遭遇的种种离奇事故。不过整体水准仅算及格，一刷足矣。",
+      "url": "https://www.ign.com/articles/little-brother-review-john-cena-eric-andre-netflix",
+      "publish_time_cn": "2026-06-26 17:52",
+      "pub_date": "2026-06-26 17:52",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/24/24185350thvm9dpu-1782320677470.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/24/24185350thvm9dpu-1782320677470.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/24/24185350thvm9dpu-1782320677470.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/24/24185350thvm9dpu-1782320677470.jpg?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/24/24185350thvm9dpu-1782320677470.jpg?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/24/24185350thvm9dpu-1782320677470.jpg",
+        "https://assets-prd.ignimgs.com/2026/06/24/ntwgmrhjizfv-1782320659843.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-27T17:52:44+08:00"
+    },
+    {
       "id": 7,
       "category": "行业动态",
       "emoji": "📉",
@@ -901,5 +963,5 @@
       "source_fetched_at": "2026-06-26T09:51:00+08:00"
     }
   ],
-  "total": 32
+  "total": 34
 }

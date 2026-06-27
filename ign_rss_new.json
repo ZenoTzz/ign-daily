@@ -5,56 +5,68 @@
     "2026-06-27"
   ],
   "changed_dates": [
-    "2026-06-28"
+    "2026-06-27"
   ],
-  "new_target_dates": [],
-  "new_count": 0,
-  "filtered_count": 1,
+  "new_target_dates": [
+    "2026-06-27"
+  ],
+  "new_count": 2,
+  "filtered_count": 0,
   "cleanup_count": 0,
-  "changed_count": 1,
-  "articles": [],
-  "filtered_articles": [
+  "changed_count": 2,
+  "articles": [
     {
-      "title": "The 65\" LG Evo C5 4K OLED TV Drops to the Lowest Price of the Year on the Last Day of Prime Day",
-      "url": "https://www.ign.com/articles/lg-evo-c5-4k-oled-smart-tv-deal-amazon-prime-day-sale-new-low-price",
-      "pubDate_cst": "2026-06-27 12:35",
-      "description": "Amazon saved the best for last.",
-      "categories": "",
-      "reason": "text:\\bdrops? to the lowest",
-      "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
-      "filtered_at_cn": "2026-06-27 15:41:02",
-      "status": "filtered"
+      "title": "Jackass: Best and Last Review",
+      "url": "https://www.ign.com/articles/jackass-best-and-last-review",
+      "pubDate_cst": "2026-06-26 17:52",
+      "category": "电影评测",
+      "emoji": "⭐",
+      "source_type": "review"
+    },
+    {
+      "title": "Little Brother Review",
+      "url": "https://www.ign.com/articles/little-brother-review-john-cena-eric-andre-netflix",
+      "pubDate_cst": "2026-06-26 17:52",
+      "category": "电影评测",
+      "emoji": "⭐",
+      "source_type": "review"
     }
   ],
+  "filtered_articles": [],
   "runs": [
     {
       "target_date": "2026-06-28",
       "new_count": 0,
-      "filtered_count": 1,
-      "changed_count": 1,
+      "filtered_count": 0,
+      "changed_count": 0,
       "next_id": 1,
       "articles": [],
-      "filtered_articles": [
-        {
-          "title": "The 65\" LG Evo C5 4K OLED TV Drops to the Lowest Price of the Year on the Last Day of Prime Day",
-          "url": "https://www.ign.com/articles/lg-evo-c5-4k-oled-smart-tv-deal-amazon-prime-day-sale-new-low-price",
-          "pubDate_cst": "2026-06-27 12:35",
-          "description": "Amazon saved the best for last.",
-          "categories": "",
-          "reason": "text:\\bdrops? to the lowest",
-          "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
-          "filtered_at_cn": "2026-06-27 15:41:02",
-          "status": "filtered"
-        }
-      ]
+      "filtered_articles": []
     },
     {
       "target_date": "2026-06-27",
-      "new_count": 0,
+      "new_count": 2,
       "filtered_count": 0,
-      "changed_count": 0,
-      "next_id": 33,
-      "articles": [],
+      "changed_count": 2,
+      "next_id": 35,
+      "articles": [
+        {
+          "title": "Jackass: Best and Last Review",
+          "url": "https://www.ign.com/articles/jackass-best-and-last-review",
+          "pubDate_cst": "2026-06-26 17:52",
+          "category": "电影评测",
+          "emoji": "⭐",
+          "source_type": "review"
+        },
+        {
+          "title": "Little Brother Review",
+          "url": "https://www.ign.com/articles/little-brother-review-john-cena-eric-andre-netflix",
+          "pubDate_cst": "2026-06-26 17:52",
+          "category": "电影评测",
+          "emoji": "⭐",
+          "source_type": "review"
+        }
+      ],
       "filtered_articles": []
     }
   ]
