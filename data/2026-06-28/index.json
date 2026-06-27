@@ -2,6 +2,60 @@
   "date": "2026-06-28",
   "articles": [
     {
+      "id": 9,
+      "category": "游戏新闻",
+      "emoji": "🥊",
+      "en_title": "Street Fighter 6 Devs Have No Current Plans to Make Any Major Adjustments to System Mechanics | Evo 2026",
+      "cn_title": "《街头霸王6》开发者：暂无调整核心系统计划 | Evo 2026",
+      "summary": "在Evo 2026上，《街头霸王6》制作人中山贵之与松本修平接受IGN采访，明确游戏定位为「可支持10年」而非预设的10年计划，目前暂无对Drive系统进行重大调整的计划。游戏已运营三年，Evo参赛者超2000人，第四波角色通行证即将带来《最终幻想7》蒂法等新角色。首位菲律宾角色亚思洺的设计深度融入了本土文化。",
+      "url": "https://www.ign.com/articles/street-fighter-6-devs-have-no-current-plans-to-make-any-major-adjustments-to-system-mechanics-evo-2026",
+      "publish_time_cn": "2026-06-28 05:01",
+      "pub_date": "2026-06-28 05:01",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/27/yasmine-1782593842678.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/27/yasmine-1782593842678.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/27/yasmine-1782593842678.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/27/yasmine-1782593842678.jpg?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/27/yasmine-1782593842678.jpg?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/27/yasmine-1782593842678.jpg",
+        "https://assets-prd.ignimgs.com/2026/06/27/yasmine-1782593789716.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-28T05:31:43+08:00"
+    },
+    {
+      "id": 8,
+      "category": "影视资讯",
+      "emoji": "🎬",
+      "en_title": "Supergirl Director Credits James Gunn for Helping Choose Song for Much-Discussed Slow-Motion Fight Scene",
+      "cn_title": "《女超人》导演：慢动作打斗配乐全靠古恩拍板",
+      "summary": "DC新作《女超人》上映引发讨论，其中慢动作打斗场景的配乐选择成为焦点。导演克雷格·吉莱斯皮透露，翻唱版《The Middle》（原唱Jimmy Eat World）是在DC联合CEO詹姆斯·古恩协助下才最终敲定。但观众对这首配乐评价两极，不少人认为与画面氛围不搭，成为影片热议话题之一。",
+      "url": "https://www.ign.com/articles/supergirl-director-credits-james-gunn-for-helping-choose-song-for-much-discussed-slow-motion-fight-scene",
+      "publish_time_cn": "2026-06-28 04:26",
+      "pub_date": "2026-06-28 04:26",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/27/supergirl-song-1782590551138.png?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/27/supergirl-song-1782590551138.png?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/27/supergirl-song-1782590551138.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/27/supergirl-song-1782590551138.png?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/27/supergirl-song-1782590551138.png?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/27/supergirl-song-1782590551138.png"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-28T05:31:43+08:00",
+      "pending_dict": [
+        {
+          "en": "Supergirl",
+          "cn": "《女超人》",
+          "cat": "movies_tv",
+          "source": "ai_guess",
+          "reason": "DC电影《Supergirl》暂无稳定官方中文译名，常见有《女超人》和《超级少女》，建议确认"
+        }
+      ]
+    },
+    {
       "id": 5,
       "category": "游戏新闻",
       "emoji": "💸",
@@ -198,5 +252,5 @@
       "source_fetched_at": "2026-06-27T22:08:47+08:00"
     }
   ],
-  "total": 7
+  "total": 9
 }

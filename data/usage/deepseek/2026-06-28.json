@@ -72,6 +72,54 @@
       "total_tokens_including_reasoning": 10283,
       "prompt_cache_hit_tokens": 8320,
       "prompt_cache_miss_tokens": 933
+    },
+    {
+      "time_cn": "2026-06-28 05:32:03",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 8,
+      "article_title": "Supergirl Director Credits James Gunn for Helping Choose Song for Much-Discussed Slow-Motion Fight Scene",
+      "article_url": "https://www.ign.com/articles/supergirl-director-credits-james-gunn-for-helping-choose-song-for-much-discussed-slow-motion-fight-scene",
+      "article_date": "2026-06-28",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00078616,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9199,
+      "completion_tokens": 1251,
+      "reasoning_tokens": 1034,
+      "output_tokens_including_reasoning": 2285,
+      "total_tokens": 10450,
+      "total_tokens_including_reasoning": 11484,
+      "prompt_cache_hit_tokens": 8320,
+      "prompt_cache_miss_tokens": 879
+    },
+    {
+      "time_cn": "2026-06-28 05:32:17",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 9,
+      "article_title": "Street Fighter 6 Devs Have No Current Plans to Make Any Major Adjustments to System Mechanics | Evo 2026",
+      "article_url": "https://www.ign.com/articles/street-fighter-6-devs-have-no-current-plans-to-make-any-major-adjustments-to-system-mechanics-evo-2026",
+      "article_date": "2026-06-28",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00084916,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 10489,
+      "completion_tokens": 1010,
+      "reasoning_tokens": 855,
+      "output_tokens_including_reasoning": 1865,
+      "total_tokens": 11499,
+      "total_tokens_including_reasoning": 12354,
+      "prompt_cache_hit_tokens": 8320,
+      "prompt_cache_miss_tokens": 2169
     }
   ]
 }
