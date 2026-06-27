@@ -384,6 +384,54 @@
       "total_tokens_including_reasoning": 10358,
       "prompt_cache_hit_tokens": 8320,
       "prompt_cache_miss_tokens": 862
+    },
+    {
+      "time_cn": "2026-06-27 22:09:11",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 1,
+      "article_title": "No, There Is No GTA 6 Physical Disc Coming Out at Launch or the Months After — Those Reports and Social Media Posts Are Incorrect",
+      "article_url": "https://www.ign.com/articles/no-there-is-no-gta-6-physical-disc-coming-out-at-launch-or-the-months-after-those-reports-and-social-media-posts-are-incorrect",
+      "article_date": "2026-06-28",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00104936,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9117,
+      "completion_tokens": 1703,
+      "reasoning_tokens": 1563,
+      "output_tokens_including_reasoning": 3266,
+      "total_tokens": 10820,
+      "total_tokens_including_reasoning": 12383,
+      "prompt_cache_hit_tokens": 8320,
+      "prompt_cache_miss_tokens": 797
+    },
+    {
+      "time_cn": "2026-06-27 22:09:22",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 2,
+      "article_title": "25 Years Later, Atlantis: The Lost Empire Has Become One of Disney’s Most Important Movies",
+      "article_url": "https://www.ign.com/articles/atlantis-the-lost-empire-has-become-one-of-disneys-most-important-movies",
+      "article_date": "2026-06-28",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00063692,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 10477,
+      "completion_tokens": 629,
+      "reasoning_tokens": 484,
+      "output_tokens_including_reasoning": 1113,
+      "total_tokens": 11106,
+      "total_tokens_including_reasoning": 11590,
+      "prompt_cache_hit_tokens": 8320,
+      "prompt_cache_miss_tokens": 2157
     }
   ]
 }

@@ -5,68 +5,92 @@
     "2026-06-27"
   ],
   "changed_dates": [
-    "2026-06-27"
+    "2026-06-28"
   ],
   "new_target_dates": [
-    "2026-06-27"
+    "2026-06-28"
   ],
   "new_count": 2,
-  "filtered_count": 0,
+  "filtered_count": 1,
   "cleanup_count": 0,
-  "changed_count": 2,
+  "changed_count": 3,
   "articles": [
     {
-      "title": "Jackass: Best and Last Review",
-      "url": "https://www.ign.com/articles/jackass-best-and-last-review",
-      "pubDate_cst": "2026-06-26 17:52",
-      "category": "电影评测",
-      "emoji": "⭐",
-      "source_type": "review"
+      "title": "No, There Is No GTA 6 Physical Disc Coming Out at Launch or the Months After — Those Reports and Social Media Posts Are Incorrect",
+      "url": "https://www.ign.com/articles/no-there-is-no-gta-6-physical-disc-coming-out-at-launch-or-the-months-after-those-reports-and-social-media-posts-are-incorrect",
+      "pubDate_cst": "2026-06-27 20:12",
+      "category": "游戏新闻",
+      "emoji": "🎮",
+      "source_type": "rss"
     },
     {
-      "title": "Little Brother Review",
-      "url": "https://www.ign.com/articles/little-brother-review-john-cena-eric-andre-netflix",
-      "pubDate_cst": "2026-06-26 17:52",
-      "category": "电影评测",
-      "emoji": "⭐",
-      "source_type": "review"
+      "title": "25 Years Later, Atlantis: The Lost Empire Has Become One of Disney’s Most Important Movies",
+      "url": "https://www.ign.com/articles/atlantis-the-lost-empire-has-become-one-of-disneys-most-important-movies",
+      "pubDate_cst": "2026-06-27 22:00",
+      "category": "游戏新闻",
+      "emoji": "🎮",
+      "source_type": "rss"
     }
   ],
-  "filtered_articles": [],
+  "filtered_articles": [
+    {
+      "title": "The Huge $650 Pokémon LEGO Set Is Up for Preorder at Amazon",
+      "url": "https://www.ign.com/articles/the-huge-650-pokmon-lego-set-is-available-at-amazon",
+      "pubDate_cst": "2026-06-27 22:00",
+      "description": "LEGO Pokémon Venusaur, Charizard and Blastoise is now available at Amazon (for, ahem, $650).",
+      "categories": "",
+      "reason": "text:\\bup for pre[- ]?order\\b",
+      "rss_url": "https://www.ign.com/rss/v2/articles/feed?vertical=movies&start=0&count=20",
+      "filtered_at_cn": "2026-06-27 22:08:40",
+      "status": "filtered"
+    }
+  ],
   "runs": [
     {
       "target_date": "2026-06-28",
-      "new_count": 0,
-      "filtered_count": 0,
-      "changed_count": 0,
-      "next_id": 1,
-      "articles": [],
-      "filtered_articles": []
+      "new_count": 2,
+      "filtered_count": 1,
+      "changed_count": 3,
+      "next_id": 3,
+      "articles": [
+        {
+          "title": "No, There Is No GTA 6 Physical Disc Coming Out at Launch or the Months After — Those Reports and Social Media Posts Are Incorrect",
+          "url": "https://www.ign.com/articles/no-there-is-no-gta-6-physical-disc-coming-out-at-launch-or-the-months-after-those-reports-and-social-media-posts-are-incorrect",
+          "pubDate_cst": "2026-06-27 20:12",
+          "category": "游戏新闻",
+          "emoji": "🎮",
+          "source_type": "rss"
+        },
+        {
+          "title": "25 Years Later, Atlantis: The Lost Empire Has Become One of Disney’s Most Important Movies",
+          "url": "https://www.ign.com/articles/atlantis-the-lost-empire-has-become-one-of-disneys-most-important-movies",
+          "pubDate_cst": "2026-06-27 22:00",
+          "category": "游戏新闻",
+          "emoji": "🎮",
+          "source_type": "rss"
+        }
+      ],
+      "filtered_articles": [
+        {
+          "title": "The Huge $650 Pokémon LEGO Set Is Up for Preorder at Amazon",
+          "url": "https://www.ign.com/articles/the-huge-650-pokmon-lego-set-is-available-at-amazon",
+          "pubDate_cst": "2026-06-27 22:00",
+          "description": "LEGO Pokémon Venusaur, Charizard and Blastoise is now available at Amazon (for, ahem, $650).",
+          "categories": "",
+          "reason": "text:\\bup for pre[- ]?order\\b",
+          "rss_url": "https://www.ign.com/rss/v2/articles/feed?vertical=movies&start=0&count=20",
+          "filtered_at_cn": "2026-06-27 22:08:40",
+          "status": "filtered"
+        }
+      ]
     },
     {
       "target_date": "2026-06-27",
-      "new_count": 2,
+      "new_count": 0,
       "filtered_count": 0,
-      "changed_count": 2,
+      "changed_count": 0,
       "next_id": 35,
-      "articles": [
-        {
-          "title": "Jackass: Best and Last Review",
-          "url": "https://www.ign.com/articles/jackass-best-and-last-review",
-          "pubDate_cst": "2026-06-26 17:52",
-          "category": "电影评测",
-          "emoji": "⭐",
-          "source_type": "review"
-        },
-        {
-          "title": "Little Brother Review",
-          "url": "https://www.ign.com/articles/little-brother-review-john-cena-eric-andre-netflix",
-          "pubDate_cst": "2026-06-26 17:52",
-          "category": "电影评测",
-          "emoji": "⭐",
-          "source_type": "review"
-        }
-      ],
+      "articles": [],
       "filtered_articles": []
     }
   ]
