@@ -336,8 +336,8 @@
       "url": "https://www.ign.com/articles/retailers-are-issuing-console-shortage-warnings-ahead-of-gta-6-and-now-im-worried-scalpers-are-going-to-have-a-field-day-this-christmas",
       "publish_time_cn": "2026-06-26 23:01",
       "pub_date": "2026-06-26 23:01",
-      "cover_image": "https://assets-prd.ignimgs.com/2024/09/25/ps5-pro-handsonpreview-blogroll-1727223976585.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2024/09/25/ps5-pro-handsonpreview-blogroll-1727223976585.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2024/09/25/ps5-pro-handsonpreview-blogroll-1727223976585.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2024/09/25/ps5-pro-handsonpreview-blogroll-1727223976585.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -346,7 +346,11 @@
         "https://assets-prd.ignimgs.com/2024/09/25/ps5-pro-handsonpreview-blogroll-1727223976585.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-26T23:17:38+08:00"
+      "source_fetched_at": "2026-06-26T23:17:38+08:00",
+      "translation_path": "translations/16.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro"
     },
     {
       "id": 17,
@@ -418,8 +422,8 @@
       "url": "https://www.ign.com/articles/what-can-we-expect-from-gta-6-online-and-when-will-we-play-it",
       "publish_time_cn": "2026-06-26 22:30",
       "pub_date": "2026-06-26 22:30",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/06/26/gta-online-blog-1782481737007.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/26/gta-online-blog-1782481737007.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/26/gta-online-blog-1782481737007.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/26/gta-online-blog-1782481737007.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -429,7 +433,11 @@
         "https://assets-prd.ignimgs.com/2026/06/26/gta-online-hero-1782481815987.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-26T23:17:40+08:00"
+      "source_fetched_at": "2026-06-26T23:17:40+08:00",
+      "translation_path": "translations/11.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro"
     },
     {
       "id": 12,
@@ -714,8 +722,8 @@
       "url": "https://www.ign.com/articles/true-scale-of-bungie-layoffs-revealed-with-nearly-300-cut-from-its-bellevue-washington-headquarters-alone",
       "publish_time_cn": "2026-06-26 17:19",
       "pub_date": "2026-06-26 17:19",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/06/26/destiny-1782464799069.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/26/destiny-1782464799069.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/26/destiny-1782464799069.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/26/destiny-1782464799069.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -726,7 +734,11 @@
         "https://assets-prd.ignimgs.com/2026/06/26/screenshot-2026-06-26-095714-1782464243997.png"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-26T17:53:30+08:00"
+      "source_fetched_at": "2026-06-26T17:53:30+08:00",
+      "translation_path": "translations/07.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro"
     },
     {
       "id": 6,

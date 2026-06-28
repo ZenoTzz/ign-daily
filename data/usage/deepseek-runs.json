@@ -1,5 +1,76 @@
 [
   {
+    "run_id": "28326411664",
+    "workflow": "API Translation",
+    "event": "workflow_dispatch",
+    "sha": "9da9b12e412dc51e12f32f142010106939ebcf73",
+    "recorded_at_cn": "2026-06-28 23:24:14",
+    "start_balance": 31.83,
+    "end_balance": 31.59,
+    "currency": "CNY",
+    "actual_platform_cost": 0.24,
+    "balance_delta_status": "ok",
+    "estimated_cost_usd": 0.04320234,
+    "api_call_count": 8,
+    "total_tokens": 123252,
+    "output_tokens": 44100,
+    "by_model": {
+      "deepseek-v4-pro": {
+        "calls": 8,
+        "estimated_cost_usd": 0.04320234,
+        "total_tokens": 123252,
+        "output_tokens": 44100
+      }
+    },
+    "by_task": {
+      "fulltext": {
+        "calls": 3,
+        "estimated_cost_usd": 0.02720377,
+        "total_tokens": 60206
+      },
+      "fulltext_chunk": {
+        "calls": 5,
+        "estimated_cost_usd": 0.01599857,
+        "total_tokens": 63046
+      }
+    },
+    "retry_articles": [
+      {
+        "article_id": 7,
+        "article_date": "2026-06-27",
+        "article_title": "Bungie再裁近300人 华盛顿总部受重创",
+        "article_url": "https://www.ign.com/articles/true-scale-of-bungie-layoffs-revealed-with-nearly-300-cut-from-its-bellevue-washington-headquarters-alone",
+        "calls": 4,
+        "estimated_cost_usd": 0.01826863,
+        "total_tokens": 57429,
+        "tasks": {
+          "fulltext": 1,
+          "fulltext_chunk": 3
+        },
+        "models": {
+          "deepseek-v4-pro": 4
+        }
+      },
+      {
+        "article_id": 16,
+        "article_date": "2026-06-27",
+        "article_title": "《GTA6》将至，零售商警告主机短缺，黄牛或趁机大赚",
+        "article_url": "https://www.ign.com/articles/retailers-are-issuing-console-shortage-warnings-ahead-of-gta-6-and-now-im-worried-scalpers-are-going-to-have-a-field-day-this-christmas",
+        "calls": 3,
+        "estimated_cost_usd": 0.01478539,
+        "total_tokens": 44329,
+        "tasks": {
+          "fulltext": 1,
+          "fulltext_chunk": 2
+        },
+        "models": {
+          "deepseek-v4-pro": 3
+        }
+      }
+    ],
+    "snapshot_ok": true
+  },
+  {
     "run_id": "28326376675",
     "workflow": "API Translation",
     "event": "workflow_dispatch",
@@ -4817,23 +4888,6 @@
     "event": "schedule",
     "sha": "9d1136ac53b6e9dc31be5b3a902175b02362bb7b",
     "recorded_at_cn": "2026-06-16 07:26:15",
-    "start_balance": 45.38,
-    "end_balance": 45.38,
-    "currency": "CNY",
-    "actual_platform_cost": 0.0,
-    "balance_delta_status": "ok",
-    "estimated_cost_usd": 0,
-    "api_call_count": 0,
-    "total_tokens": 0,
-    "by_model": {},
-    "snapshot_ok": true
-  },
-  {
-    "run_id": "27577551209",
-    "workflow": "API Translation",
-    "event": "schedule",
-    "sha": "dfd60516236257936596d81ba94680a62fd2b4a7",
-    "recorded_at_cn": "2026-06-16 05:27:51",
     "start_balance": 45.38,
     "end_balance": 45.38,
     "currency": "CNY",
