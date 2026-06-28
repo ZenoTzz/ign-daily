@@ -72,6 +72,54 @@
       "total_tokens_including_reasoning": 9969,
       "prompt_cache_hit_tokens": 8320,
       "prompt_cache_miss_tokens": 739
+    },
+    {
+      "time_cn": "2026-06-29 05:46:46",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 4,
+      "article_title": "Spider-Man: Brand New Day Star Tom Holland Says He's Working to Bring Miles Morales Into the MCU",
+      "article_url": "https://www.ign.com/articles/spider-man-brand-new-day-star-tom-holland-says-hes-working-to-bring-miles-morales-into-the-mcu",
+      "article_date": "2026-06-29",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00081444,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9093,
+      "completion_tokens": 1282,
+      "reasoning_tokens": 1157,
+      "output_tokens_including_reasoning": 2439,
+      "total_tokens": 10375,
+      "total_tokens_including_reasoning": 11532,
+      "prompt_cache_hit_tokens": 8320,
+      "prompt_cache_miss_tokens": 773
+    },
+    {
+      "time_cn": "2026-06-29 05:47:02",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 5,
+      "article_title": "Marvel Tokon Developers Explain How They Made the Coolest Version of Magneto They Could | Evo 2026",
+      "article_url": "https://www.ign.com/articles/marvel-tokon-developers-explain-how-they-made-the-coolest-version-of-magneto-they-could-evo-2026",
+      "article_date": "2026-06-29",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00096396,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 10433,
+      "completion_tokens": 1261,
+      "reasoning_tokens": 1042,
+      "output_tokens_including_reasoning": 2303,
+      "total_tokens": 11694,
+      "total_tokens_including_reasoning": 12736,
+      "prompt_cache_hit_tokens": 8320,
+      "prompt_cache_miss_tokens": 2113
     }
   ]
 }

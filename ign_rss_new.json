@@ -10,39 +10,79 @@
   "new_target_dates": [
     "2026-06-29"
   ],
-  "new_count": 1,
-  "filtered_count": 0,
+  "new_count": 2,
+  "filtered_count": 1,
   "cleanup_count": 0,
-  "changed_count": 1,
+  "changed_count": 3,
   "articles": [
     {
-      "title": "Christopher Nolan Says Mainstream Movies That 'Play It Safe' Should Take More Risks if They Want to Succeed",
-      "url": "https://www.ign.com/articles/christopher-nolan-says-mainstream-movies-that-play-it-safe-should-take-more-risks-if-they-want-to-succeed",
-      "pubDate_cst": "2026-06-29 03:31",
+      "title": "Spider-Man: Brand New Day Star Tom Holland Says He's Working to Bring Miles Morales Into the MCU",
+      "url": "https://www.ign.com/articles/spider-man-brand-new-day-star-tom-holland-says-hes-working-to-bring-miles-morales-into-the-mcu",
+      "pubDate_cst": "2026-06-29 05:12",
+      "category": "游戏新闻",
+      "emoji": "🎮",
+      "source_type": "rss"
+    },
+    {
+      "title": "Marvel Tokon Developers Explain How They Made the Coolest Version of Magneto They Could | Evo 2026",
+      "url": "https://www.ign.com/articles/marvel-tokon-developers-explain-how-they-made-the-coolest-version-of-magneto-they-could-evo-2026",
+      "pubDate_cst": "2026-06-29 04:49",
       "category": "游戏新闻",
       "emoji": "🎮",
       "source_type": "rss"
     }
   ],
-  "filtered_articles": [],
+  "filtered_articles": [
+    {
+      "title": "The Best Deals Today: Final Fantasy VII Remake Intergrade, Criterion Collection Sale, and More",
+      "url": "https://www.ign.com/articles/best-deals-for-june-28-2026",
+      "pubDate_cst": "2026-06-29 04:39",
+      "description": "",
+      "categories": "",
+      "reason": "url:deal",
+      "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
+      "filtered_at_cn": "2026-06-29 05:46:22",
+      "status": "filtered"
+    }
+  ],
   "runs": [
     {
       "target_date": "2026-06-29",
-      "new_count": 1,
-      "filtered_count": 0,
-      "changed_count": 1,
-      "next_id": 4,
+      "new_count": 2,
+      "filtered_count": 1,
+      "changed_count": 3,
+      "next_id": 6,
       "articles": [
         {
-          "title": "Christopher Nolan Says Mainstream Movies That 'Play It Safe' Should Take More Risks if They Want to Succeed",
-          "url": "https://www.ign.com/articles/christopher-nolan-says-mainstream-movies-that-play-it-safe-should-take-more-risks-if-they-want-to-succeed",
-          "pubDate_cst": "2026-06-29 03:31",
+          "title": "Spider-Man: Brand New Day Star Tom Holland Says He's Working to Bring Miles Morales Into the MCU",
+          "url": "https://www.ign.com/articles/spider-man-brand-new-day-star-tom-holland-says-hes-working-to-bring-miles-morales-into-the-mcu",
+          "pubDate_cst": "2026-06-29 05:12",
+          "category": "游戏新闻",
+          "emoji": "🎮",
+          "source_type": "rss"
+        },
+        {
+          "title": "Marvel Tokon Developers Explain How They Made the Coolest Version of Magneto They Could | Evo 2026",
+          "url": "https://www.ign.com/articles/marvel-tokon-developers-explain-how-they-made-the-coolest-version-of-magneto-they-could-evo-2026",
+          "pubDate_cst": "2026-06-29 04:49",
           "category": "游戏新闻",
           "emoji": "🎮",
           "source_type": "rss"
         }
       ],
-      "filtered_articles": []
+      "filtered_articles": [
+        {
+          "title": "The Best Deals Today: Final Fantasy VII Remake Intergrade, Criterion Collection Sale, and More",
+          "url": "https://www.ign.com/articles/best-deals-for-june-28-2026",
+          "pubDate_cst": "2026-06-29 04:39",
+          "description": "",
+          "categories": "",
+          "reason": "url:deal",
+          "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
+          "filtered_at_cn": "2026-06-29 05:46:22",
+          "status": "filtered"
+        }
+      ]
     },
     {
       "target_date": "2026-06-28",

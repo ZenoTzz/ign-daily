@@ -2,6 +2,60 @@
   "date": "2026-06-29",
   "articles": [
     {
+      "id": 4,
+      "category": "影视资讯",
+      "emoji": "🕷️",
+      "en_title": "Spider-Man: Brand New Day Star Tom Holland Says He's Working to Bring Miles Morales Into the MCU",
+      "cn_title": "《蜘蛛侠：崭新之日》荷兰弟：正努力让迈尔斯·莫拉莱斯加入MCU",
+      "summary": "汤姆·霍兰德（荷兰弟）表示，在《蜘蛛侠：Brand New Day》之后，他正积极推动迈尔斯·莫拉莱斯加入漫威电影宇宙。尽管尚未确认，但他希望像当年钢铁侠提携自己一样，回馈下一代。电影将于2026年7月31日上映。",
+      "url": "https://www.ign.com/articles/spider-man-brand-new-day-star-tom-holland-says-hes-working-to-bring-miles-morales-into-the-mcu",
+      "publish_time_cn": "2026-06-29 05:12",
+      "pub_date": "2026-06-29 05:12",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/28/spider-man-brand-new-day-miles-morales-1782680519271.png?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/28/spider-man-brand-new-day-miles-morales-1782680519271.png?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/28/spider-man-brand-new-day-miles-morales-1782680519271.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/28/spider-man-brand-new-day-miles-morales-1782680519271.png?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/28/spider-man-brand-new-day-miles-morales-1782680519271.png?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/28/spider-man-brand-new-day-miles-morales-1782680519271.png"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-29T05:46:25+08:00"
+    },
+    {
+      "id": 5,
+      "category": "游戏新闻",
+      "emoji": "🎮",
+      "en_title": "Marvel Tokon Developers Explain How They Made the Coolest Version of Magneto They Could | Evo 2026",
+      "cn_title": "《漫威Tokon》开发者：我们如何做出最酷的万磁王",
+      "summary": "格斗游戏《漫威Tokon：战斗之魂》由ArcSystem Works开发，去年在索尼State of Play上公布。首次beta测试中，游戏的标签与辅助机制引发争议，但后续测试调整后口碑回升。在Evo 2026上，战斗总监Kazuto Sekine、制作人Takeshi Yamanaka及Marvel Games的Michael Francisco接受了IGN采访，分享了beta反馈如何塑造游戏，以及他们如何打造格斗游戏史上最酷的万磁王。",
+      "url": "https://www.ign.com/articles/marvel-tokon-developers-explain-how-they-made-the-coolest-version-of-magneto-they-could-evo-2026",
+      "publish_time_cn": "2026-06-29 04:49",
+      "pub_date": "2026-06-29 04:49",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/28/tokon-magneto-1782679466266.png?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/28/tokon-magneto-1782679466266.png?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/28/tokon-magneto-1782679466266.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/28/tokon-magneto-1782679466266.png?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/28/tokon-magneto-1782679466266.png?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/28/tokon-magneto-1782679466266.png",
+        "https://assets-prd.ignimgs.com/2026/06/28/tokon-magneto-1782679457640.png"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-29T05:46:26+08:00",
+      "pending_dict": [
+        {
+          "en": "Tokon",
+          "cn": "Tokon",
+          "cat": "games",
+          "source": "ai_guess",
+          "reason": "游戏名无官方中文译名，暂保留英文等待确认"
+        }
+      ]
+    },
+    {
       "id": 3,
       "category": "影视资讯",
       "emoji": "🎬",
@@ -92,5 +146,5 @@
       "source_fetched_at": "2026-06-29T01:36:56+08:00"
     }
   ],
-  "total": 3
+  "total": 5
 }
