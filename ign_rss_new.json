@@ -1,8 +1,8 @@
 {
-  "target_date": "2026-06-28",
+  "target_date": "2026-06-29",
   "target_dates": [
-    "2026-06-28",
-    "2026-06-27"
+    "2026-06-29",
+    "2026-06-28"
   ],
   "changed_dates": [
     "2026-06-28"
@@ -16,41 +16,41 @@
   "changed_count": 1,
   "articles": [
     {
-      "title": "The Invincible VS Devs Would Love a Mortal Kombat Crossover",
-      "url": "https://www.ign.com/articles/invincible-vs-devs-are-really-interested-in-a-mortal-kombat-crossover",
-      "pubDate_cst": "2026-06-28 06:39",
-      "category": "游戏新闻",
-      "emoji": "🎮",
-      "source_type": "rss"
+      "title": "Cape Fear Episode 5 Recap and Review – 'Faith'",
+      "url": "https://www.ign.com/articles/cape-fear-episode-5-recap-and-review-faith",
+      "pubDate_cst": "2026-06-27 09:56",
+      "category": "剧集评测",
+      "emoji": "⭐",
+      "source_type": "review"
     }
   ],
   "filtered_articles": [],
   "runs": [
     {
+      "target_date": "2026-06-29",
+      "new_count": 0,
+      "filtered_count": 0,
+      "changed_count": 0,
+      "next_id": 1,
+      "articles": [],
+      "filtered_articles": []
+    },
+    {
       "target_date": "2026-06-28",
       "new_count": 1,
       "filtered_count": 0,
       "changed_count": 1,
-      "next_id": 12,
+      "next_id": 13,
       "articles": [
         {
-          "title": "The Invincible VS Devs Would Love a Mortal Kombat Crossover",
-          "url": "https://www.ign.com/articles/invincible-vs-devs-are-really-interested-in-a-mortal-kombat-crossover",
-          "pubDate_cst": "2026-06-28 06:39",
-          "category": "游戏新闻",
-          "emoji": "🎮",
-          "source_type": "rss"
+          "title": "Cape Fear Episode 5 Recap and Review – 'Faith'",
+          "url": "https://www.ign.com/articles/cape-fear-episode-5-recap-and-review-faith",
+          "pubDate_cst": "2026-06-27 09:56",
+          "category": "剧集评测",
+          "emoji": "⭐",
+          "source_type": "review"
         }
       ],
-      "filtered_articles": []
-    },
-    {
-      "target_date": "2026-06-27",
-      "new_count": 0,
-      "filtered_count": 0,
-      "changed_count": 0,
-      "next_id": 35,
-      "articles": [],
       "filtered_articles": []
     }
   ]
