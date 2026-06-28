@@ -1,0 +1,29 @@
+{
+  "date": "2026-06-29",
+  "records": [
+    {
+      "time_cn": "2026-06-29 01:37:05",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 1,
+      "article_title": "Cyberpunk: Edgerunners 2 Sets Fall 2026 Release With First Look at 4 New Characters",
+      "article_url": "https://www.ign.com/articles/cyberpunk-edgerunners-2-sets-fall-2026-release-with-first-look-at-4-new-characters",
+      "article_date": "2026-06-29",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00036182,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9146,
+      "completion_tokens": 461,
+      "reasoning_tokens": 335,
+      "output_tokens_including_reasoning": 796,
+      "total_tokens": 9607,
+      "total_tokens_including_reasoning": 9942,
+      "prompt_cache_hit_tokens": 8320,
+      "prompt_cache_miss_tokens": 826
+    }
+  ]
+}
