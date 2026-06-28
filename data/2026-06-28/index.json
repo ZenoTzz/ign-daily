@@ -33,8 +33,8 @@
       "url": "https://www.ign.com/articles/gta-6-scalpers-are-finding-buyers-on-ebay-despite-rockstars-commitment-to-a-digital-release",
       "publish_time_cn": "2026-06-28 06:28",
       "pub_date": "2026-06-28 06:28",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/06/27/gta-6-1782598708477.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/27/gta-6-1782598708477.png",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/27/gta-6-1782598708477.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/27/gta-6-1782598708477.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -43,7 +43,11 @@
         "https://assets-prd.ignimgs.com/2026/06/27/gta-6-1782598708477.png"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-28T06:45:08+08:00"
+      "source_fetched_at": "2026-06-28T06:45:08+08:00",
+      "translation_path": "translations/10.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro"
     },
     {
       "id": 9,
@@ -179,8 +183,8 @@
       "url": "https://www.ign.com/articles/sony-to-delete-movies-owned-by-playstation-users-list-includes-more-than-550-digital-titles",
       "publish_time_cn": "2026-06-28 00:41",
       "pub_date": "2026-06-28 00:41",
-      "cover_image": "",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2021/05/26/playstation-logo-1622026665954.jpg",
+      "translation_status": "done",
       "source_status": "cached",
       "source_fetched_at": "2026-06-28T02:36:57+08:00",
       "pending_dict": [
@@ -191,7 +195,11 @@
           "source": "ai_guess",
           "reason": "法国电影发行公司，中文译名暂不统一"
         }
-      ]
+      ],
+      "translation_path": "translations/07.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro"
     },
     {
       "id": 3,
@@ -226,8 +234,8 @@
       "url": "https://www.ign.com/articles/five-nights-at-freddys-3-enlists-it-and-annabelle-writer-for-its-script",
       "publish_time_cn": "2026-06-27 22:24",
       "pub_date": "2026-06-27 22:24",
-      "cover_image": "https://assets-prd.ignimgs.com/2023/11/05/fivenightsatfreddys-review-blogroll-1698309593553-1699222245327.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/.../image.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2023/11/05/fivenightsatfreddys-review-blogroll-1698309593553-1699222245327.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2023/11/05/fivenightsatfreddys-review-blogroll-1698309593553-1699222245327.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -245,7 +253,11 @@
           "source": "ai_guess",
           "reason": "该人物在中国知名度不高，建议确认是否为公认译名"
         }
-      ]
+      ],
+      "translation_path": "translations/04.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro"
     },
     {
       "id": 2,
@@ -257,8 +269,8 @@
       "url": "https://www.ign.com/articles/atlantis-the-lost-empire-has-become-one-of-disneys-most-important-movies",
       "publish_time_cn": "2026-06-27 22:00",
       "pub_date": "2026-06-27 22:00",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/06/25/atlantis-the-lost-empire-thumb-1782415251966.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/25/atlantis-the-lost-empire-thumb-1782415251966.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/25/atlantis-the-lost-empire-thumb-1782415251966.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/25/atlantis-the-lost-empire-thumb-1782415251966.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -271,7 +283,11 @@
         "https://assets-prd.ignimgs.com/2026/06/22/atlantisscreencap4-1782158433670.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-27T22:08:46+08:00"
+      "source_fetched_at": "2026-06-27T22:08:46+08:00",
+      "translation_path": "translations/02.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro"
     },
     {
       "id": 1,
@@ -283,8 +299,8 @@
       "url": "https://www.ign.com/articles/no-there-is-no-gta-6-physical-disc-coming-out-at-launch-or-the-months-after-those-reports-and-social-media-posts-are-incorrect",
       "publish_time_cn": "2026-06-27 20:12",
       "pub_date": "2026-06-27 20:12",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/06/24/ultimate-edition-vice-city-style-03-1782307899889.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/24/ultimate-edition-vice-city-style-03-1782307899889.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/24/ultimate-edition-vice-city-style-03-1782307899889.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/24/ultimate-edition-vice-city-style-03-1782307899889.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -293,7 +309,11 @@
         "https://assets-prd.ignimgs.com/2026/06/24/ultimate-edition-vice-city-style-03-1782307899889.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-27T22:08:47+08:00"
+      "source_fetched_at": "2026-06-27T22:08:47+08:00",
+      "translation_path": "translations/01.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro"
     },
     {
       "id": 12,
