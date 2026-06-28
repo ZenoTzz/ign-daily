@@ -48,6 +48,30 @@
       "total_tokens_including_reasoning": 10240,
       "prompt_cache_hit_tokens": 8320,
       "prompt_cache_miss_tokens": 758
+    },
+    {
+      "time_cn": "2026-06-29 04:38:03",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 3,
+      "article_title": "Christopher Nolan Says Mainstream Movies That 'Play It Safe' Should Take More Risks if They Want to Succeed",
+      "article_url": "https://www.ign.com/articles/christopher-nolan-says-mainstream-movies-that-play-it-safe-should-take-more-risks-if-they-want-to-succeed",
+      "article_date": "2026-06-29",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00038156,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9059,
+      "completion_tokens": 526,
+      "reasoning_tokens": 384,
+      "output_tokens_including_reasoning": 910,
+      "total_tokens": 9585,
+      "total_tokens_including_reasoning": 9969,
+      "prompt_cache_hit_tokens": 8320,
+      "prompt_cache_miss_tokens": 739
     }
   ]
 }

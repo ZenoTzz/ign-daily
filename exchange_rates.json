@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-06-29 02:53:15 +08:00",
+  "updated_at": "2026-06-29 04:37:55 +08:00",
   "source": "multi-source median",
   "base": "USD",
   "rates_to_cny": {
-    "USD": 6.8,
+    "USD": 6.81,
     "EUR": 7.75,
     "JPY_100": 4.21,
     "GBP": 8.99,
@@ -17,33 +17,33 @@
     "checks": {
       "USD": {
         "source_count": 4,
-        "median_raw": 6.804479,
-        "max_cross_source_deviation": 0.000982,
-        "previous_deviation": 0.000659
+        "median_raw": 6.8054,
+        "max_cross_source_deviation": 0.001058,
+        "previous_deviation": 0.000794
       },
       "EUR": {
         "source_count": 4,
         "median_raw": 7.753429,
-        "max_cross_source_deviation": 0.001299,
+        "max_cross_source_deviation": 0.001265,
         "previous_deviation": 0.000442
       },
       "JPY_100": {
         "source_count": 4,
         "median_raw": 4.208374,
-        "max_cross_source_deviation": 0.001194,
+        "max_cross_source_deviation": 0.000928,
         "previous_deviation": 0.000386
       },
       "GBP": {
         "source_count": 4,
         "median_raw": 8.989251,
-        "max_cross_source_deviation": 0.001812,
+        "max_cross_source_deviation": 0.001747,
         "previous_deviation": 8.3e-05
       },
       "KRW_100": {
         "source_count": 4,
-        "median_raw": 0.442973,
-        "max_cross_source_deviation": 0.001168,
-        "previous_deviation": 0.006757
+        "median_raw": 0.443034,
+        "max_cross_source_deviation": 0.001304,
+        "previous_deviation": 0.006895
       }
     },
     "sources": [
@@ -84,11 +84,11 @@
         "name": "currency-api-jsdelivr",
         "url": "https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/usd.json",
         "rates_to_cny": {
-          "USD": 6.798959,
-          "EUR": 7.743355,
-          "JPY_100": 4.203349,
-          "GBP": 8.972965,
-          "KRW_100": 0.442725
+          "USD": 6.800799,
+          "EUR": 7.743623,
+          "JPY_100": 4.20447,
+          "GBP": 8.97355,
+          "KRW_100": 0.442846
         }
       }
     ]
