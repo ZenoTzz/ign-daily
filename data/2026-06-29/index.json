@@ -2,6 +2,51 @@
   "date": "2026-06-29",
   "articles": [
     {
+      "id": 2,
+      "category": "影视资讯",
+      "emoji": "🎬",
+      "en_title": "Supergirl Fails to Take Flight With $68 Million Box Office Debut",
+      "cn_title": "《超级少女》首周票房6800万美元(约合人民币5亿元)遇冷",
+      "summary": "DC新片《超级少女》全球首周票房仅6800万美元(约合人民币5亿元)，北美报收3800万美元(约合人民币3亿元)，远低于预期。影片制作成本高达1.7-1.86亿美元(约合人民币13亿元)，回本压力巨大。口碑方面，烂番茄影评人评分77%，观众评分仅56%，IGN给出6/10评价。该片不敌《玩具总动员5》位居票房榜第二。",
+      "url": "https://www.ign.com/articles/supergirl-fails-to-take-flight-with-68-million-box-office-debut",
+      "publish_time_cn": "2026-06-29 02:02",
+      "pub_date": "2026-06-29 02:02",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/03/31/sprgrl-vert-main-2764x4096-dom-2-thumb-1774988214106.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/03/31/sprgrl-vert-main-2764x4096-dom-2-thumb-1774988214106.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/03/31/sprgrl-vert-main-2764x4096-dom-2-thumb-1774988214106.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/03/31/sprgrl-vert-main-2764x4096-dom-2-thumb-1774988214106.jpg?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/03/31/sprgrl-vert-main-2764x4096-dom-2-thumb-1774988214106.jpg?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/03/31/sprgrl-vert-main-2764x4096-dom-2-thumb-1774988214106.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-29T02:53:14+08:00",
+      "pending_dict": [
+        {
+          "en": "Supergirl",
+          "cn": "《超级少女》",
+          "cat": "movies_tv",
+          "source": "ai_guess",
+          "reason": "词库未收录，但DC电影有官方中文名"
+        },
+        {
+          "en": "Obsession",
+          "cn": "Obsession",
+          "cat": "movies_tv",
+          "source": "ai_guess",
+          "reason": "无稳定中文译名，保留英文"
+        },
+        {
+          "en": "Jackass: Best and Last",
+          "cn": "Jackass: Best and Last",
+          "cat": "movies_tv",
+          "source": "ai_guess",
+          "reason": "无官方中文译名，保留英文"
+        }
+      ]
+    },
+    {
       "id": 1,
       "category": "影视资讯",
       "emoji": "📺",
@@ -25,5 +70,5 @@
       "source_fetched_at": "2026-06-29T01:36:56+08:00"
     }
   ],
-  "total": 1
+  "total": 2
 }
