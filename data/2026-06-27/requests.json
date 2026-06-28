@@ -1,6 +1,32 @@
 {
   "date": "2026-06-27",
-  "requested_ids": [],
-  "requested_articles": [],
-  "requested_at": "2026-06-26T02:58:59.080Z"
+  "requested_ids": [
+    7,
+    11,
+    16
+  ],
+  "requested_articles": [
+    {
+      "id": 7,
+      "url": "https://www.ign.com/articles/true-scale-of-bungie-layoffs-revealed-with-nearly-300-cut-from-its-bellevue-washington-headquarters-alone",
+      "en_title": "True Scale of Bungie Layoffs Revealed, With Nearly 300 Cut From Its Bellevue, Washington Headquarters Alone",
+      "cn_title": "Bungie再裁近300人 华盛顿总部受重创",
+      "publish_time_cn": "2026-06-26 17:19"
+    },
+    {
+      "id": 11,
+      "url": "https://www.ign.com/articles/what-can-we-expect-from-gta-6-online-and-when-will-we-play-it",
+      "en_title": "What Can We Expect from GTA 6 Online, and When Will We Play It?",
+      "cn_title": "《GTA6》Online：何时能玩，有何期待？",
+      "publish_time_cn": "2026-06-26 22:30"
+    },
+    {
+      "id": 16,
+      "url": "https://www.ign.com/articles/retailers-are-issuing-console-shortage-warnings-ahead-of-gta-6-and-now-im-worried-scalpers-are-going-to-have-a-field-day-this-christmas",
+      "en_title": "Retailers Are Issuing Console Shortage Warnings Ahead of GTA 6, and Now I'm Worried Scalpers Are Going to Have a Field Day This Christmas",
+      "cn_title": "《GTA6》将至，零售商警告主机短缺，黄牛或趁机大赚",
+      "publish_time_cn": "2026-06-26 23:01"
+    }
+  ],
+  "requested_at": "2026-06-28T15:06:09.279Z"
 }
