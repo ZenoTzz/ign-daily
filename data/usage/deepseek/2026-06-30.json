@@ -1032,6 +1032,102 @@
       "total_tokens_including_reasoning": 16644,
       "prompt_cache_hit_tokens": 8192,
       "prompt_cache_miss_tokens": 3702
+    },
+    {
+      "time_cn": "2026-06-30 02:25:46",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 24,
+      "article_title": "Steam Machine Companion Cube Canceled Because Dbrand Didn't Ask Valve for Permission",
+      "article_url": "https://www.ign.com/articles/steam-machine-companion-cube-canceled-because-dbrand-didnt-ask-valve-for-permission",
+      "article_date": "2026-06-30",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00058568,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9297,
+      "completion_tokens": 829,
+      "reasoning_tokens": 691,
+      "output_tokens_including_reasoning": 1520,
+      "total_tokens": 10126,
+      "total_tokens_including_reasoning": 10817,
+      "prompt_cache_hit_tokens": 8320,
+      "prompt_cache_miss_tokens": 977
+    },
+    {
+      "time_cn": "2026-06-30 02:26:01",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 25,
+      "article_title": "'60fps Feels Like a Bridge Too far' — Tech Experts Cast Doubt on Those GTA 6 Quality and Performance Mode 'Leaks'",
+      "article_url": "https://www.ign.com/articles/60fps-feels-like-a-bridge-too-far-tech-experts-cast-doubt-on-those-gta-6-quality-and-performance-mode-leaks",
+      "article_date": "2026-06-30",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.0007072,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9299,
+      "completion_tokens": 1051,
+      "reasoning_tokens": 902,
+      "output_tokens_including_reasoning": 1953,
+      "total_tokens": 10350,
+      "total_tokens_including_reasoning": 11252,
+      "prompt_cache_hit_tokens": 8320,
+      "prompt_cache_miss_tokens": 979
+    },
+    {
+      "time_cn": "2026-06-30 02:26:22",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 26,
+      "article_title": "Unionized Xbox Workers Demand Layoff Protections Ahead of Expected Cuts to Microsoft's Gaming Business",
+      "article_url": "https://www.ign.com/articles/unionized-xbox-workers-demand-layoff-protections-ahead-of-expected-cuts-to-microsofts-gaming-business",
+      "article_date": "2026-06-30",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00098244,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9277,
+      "completion_tokens": 1541,
+      "reasoning_tokens": 1406,
+      "output_tokens_including_reasoning": 2947,
+      "total_tokens": 10818,
+      "total_tokens_including_reasoning": 12224,
+      "prompt_cache_hit_tokens": 8320,
+      "prompt_cache_miss_tokens": 957
+    },
+    {
+      "time_cn": "2026-06-30 02:26:32",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 27,
+      "article_title": "Tribeca Fest-Winning Filmmaker Says He Wants to Make a 3D Shooter with Murderous Bunnies and Carrots as Loot",
+      "article_url": "https://www.ign.com/articles/wesley-wang-bunny-shooter-video-game",
+      "article_date": "2026-06-30",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00046906,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9548,
+      "completion_tokens": 557,
+      "reasoning_tokens": 421,
+      "output_tokens_including_reasoning": 978,
+      "total_tokens": 10105,
+      "total_tokens_including_reasoning": 10526,
+      "prompt_cache_hit_tokens": 8320,
+      "prompt_cache_miss_tokens": 1228
     }
   ]
 }

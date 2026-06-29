@@ -10,15 +10,39 @@
   "new_target_dates": [
     "2026-06-30"
   ],
-  "new_count": 1,
-  "filtered_count": 1,
+  "new_count": 4,
+  "filtered_count": 3,
   "cleanup_count": 0,
-  "changed_count": 2,
+  "changed_count": 7,
   "articles": [
     {
-      "title": "Deltarune Chapter 5 Was Not What I Was Expecting and That’s Fantastic",
-      "url": "https://www.ign.com/articles/deltarune-chapter-5-was-not-what-i-was-expecting-and-thats-fantastic",
-      "pubDate_cst": "2026-06-30 00:30",
+      "title": "Steam Machine Companion Cube Canceled Because Dbrand Didn't Ask Valve for Permission",
+      "url": "https://www.ign.com/articles/steam-machine-companion-cube-canceled-because-dbrand-didnt-ask-valve-for-permission",
+      "pubDate_cst": "2026-06-30 01:12",
+      "category": "游戏新闻",
+      "emoji": "🎮",
+      "source_type": "rss"
+    },
+    {
+      "title": "'60fps Feels Like a Bridge Too far' — Tech Experts Cast Doubt on Those GTA 6 Quality and Performance Mode 'Leaks'",
+      "url": "https://www.ign.com/articles/60fps-feels-like-a-bridge-too-far-tech-experts-cast-doubt-on-those-gta-6-quality-and-performance-mode-leaks",
+      "pubDate_cst": "2026-06-30 01:06",
+      "category": "游戏新闻",
+      "emoji": "🎮",
+      "source_type": "rss"
+    },
+    {
+      "title": "Unionized Xbox Workers Demand Layoff Protections Ahead of Expected Cuts to Microsoft's Gaming Business",
+      "url": "https://www.ign.com/articles/unionized-xbox-workers-demand-layoff-protections-ahead-of-expected-cuts-to-microsofts-gaming-business",
+      "pubDate_cst": "2026-06-30 00:37",
+      "category": "游戏新闻",
+      "emoji": "🎮",
+      "source_type": "rss"
+    },
+    {
+      "title": "Tribeca Fest-Winning Filmmaker Says He Wants to Make a 3D Shooter with Murderous Bunnies and Carrots as Loot",
+      "url": "https://www.ign.com/articles/wesley-wang-bunny-shooter-video-game",
+      "pubDate_cst": "2026-06-30 02:00",
       "category": "游戏新闻",
       "emoji": "🎮",
       "source_type": "rss"
@@ -26,29 +50,75 @@
   ],
   "filtered_articles": [
     {
-      "title": "Roblox Reveals 6 New Exclusive 18+ Games, Including an Extraction Shooter From the Co-Founder of Bungie",
-      "url": "https://www.ign.com/articles/roblox-reveals-6-new-exclusive-18-games-including-an-extraction-shooter-from-the-co-founder-of-bungie",
-      "pubDate_cst": "2026-06-30 00:01",
-      "description": "Roblox has pulled back the curtain on a selection of six new 18+ games, including Drifters, an extraction shooter developed by Bungie co-founder Alexander Seropian.",
+      "title": "The Legend of Zelda: Breath of the Wild Drops to an All-Time Low Price",
+      "url": "https://www.ign.com/articles/the-legend-of-zelda-breath-of-the-wild-drops-to-an-all-time-low-price",
+      "pubDate_cst": "2026-06-30 01:00",
+      "description": "A rare first-party Nintendo discount just went live: The Legend of Zelda: Breath of the Wild is heavily marked down for players on both the original Switch and the new Switch 2. Here's how to secure the best price possible.",
       "categories": "",
-      "reason": "url:under-",
+      "reason": "text:\\bdiscount\\b",
       "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
-      "filtered_at_cn": "2026-06-30 00:46:18",
+      "filtered_at_cn": "2026-06-30 02:25:29",
+      "status": "filtered"
+    },
+    {
+      "title": "Save Big on Hisense TVs for 4th of July, All Under $1,000",
+      "url": "https://www.ign.com/articles/save-big-on-hisense-tvs-just-in-time-for-americas-250th",
+      "pubDate_cst": "2026-06-30 01:54",
+      "description": "Hisense is celebrating the 4th of July with some of its best TV deals of the year.",
+      "categories": "",
+      "reason": "text:\\bbest .+ deals?\\b",
+      "rss_url": "https://www.ign.com/rss/v2/articles/feed?vertical=movies&start=0&count=20",
+      "filtered_at_cn": "2026-06-30 02:25:29",
+      "status": "filtered"
+    },
+    {
+      "title": "Jackass: Best & Last Is Now Available To Preorder on Blu-Ray - Here’s Where You Can Grab a Copy",
+      "url": "https://www.ign.com/articles/jackass-best-last-blu-ray-where-to-buy",
+      "pubDate_cst": "2026-06-30 01:49",
+      "description": "Jackass: Best & Last is now available to preorder on Blu-ray. While its release date is still to be determined, we've broken down where you can grab a copy ahead of time.",
+      "categories": "",
+      "reason": "url:where-to-buy",
+      "rss_url": "https://www.ign.com/rss/v2/articles/feed?vertical=movies&start=0&count=20",
+      "filtered_at_cn": "2026-06-30 02:25:29",
       "status": "filtered"
     }
   ],
   "runs": [
     {
       "target_date": "2026-06-30",
-      "new_count": 1,
-      "filtered_count": 1,
-      "changed_count": 2,
-      "next_id": 24,
+      "new_count": 4,
+      "filtered_count": 3,
+      "changed_count": 7,
+      "next_id": 28,
       "articles": [
         {
-          "title": "Deltarune Chapter 5 Was Not What I Was Expecting and That’s Fantastic",
-          "url": "https://www.ign.com/articles/deltarune-chapter-5-was-not-what-i-was-expecting-and-thats-fantastic",
-          "pubDate_cst": "2026-06-30 00:30",
+          "title": "Steam Machine Companion Cube Canceled Because Dbrand Didn't Ask Valve for Permission",
+          "url": "https://www.ign.com/articles/steam-machine-companion-cube-canceled-because-dbrand-didnt-ask-valve-for-permission",
+          "pubDate_cst": "2026-06-30 01:12",
+          "category": "游戏新闻",
+          "emoji": "🎮",
+          "source_type": "rss"
+        },
+        {
+          "title": "'60fps Feels Like a Bridge Too far' — Tech Experts Cast Doubt on Those GTA 6 Quality and Performance Mode 'Leaks'",
+          "url": "https://www.ign.com/articles/60fps-feels-like-a-bridge-too-far-tech-experts-cast-doubt-on-those-gta-6-quality-and-performance-mode-leaks",
+          "pubDate_cst": "2026-06-30 01:06",
+          "category": "游戏新闻",
+          "emoji": "🎮",
+          "source_type": "rss"
+        },
+        {
+          "title": "Unionized Xbox Workers Demand Layoff Protections Ahead of Expected Cuts to Microsoft's Gaming Business",
+          "url": "https://www.ign.com/articles/unionized-xbox-workers-demand-layoff-protections-ahead-of-expected-cuts-to-microsofts-gaming-business",
+          "pubDate_cst": "2026-06-30 00:37",
+          "category": "游戏新闻",
+          "emoji": "🎮",
+          "source_type": "rss"
+        },
+        {
+          "title": "Tribeca Fest-Winning Filmmaker Says He Wants to Make a 3D Shooter with Murderous Bunnies and Carrots as Loot",
+          "url": "https://www.ign.com/articles/wesley-wang-bunny-shooter-video-game",
+          "pubDate_cst": "2026-06-30 02:00",
           "category": "游戏新闻",
           "emoji": "🎮",
           "source_type": "rss"
@@ -56,14 +126,36 @@
       ],
       "filtered_articles": [
         {
-          "title": "Roblox Reveals 6 New Exclusive 18+ Games, Including an Extraction Shooter From the Co-Founder of Bungie",
-          "url": "https://www.ign.com/articles/roblox-reveals-6-new-exclusive-18-games-including-an-extraction-shooter-from-the-co-founder-of-bungie",
-          "pubDate_cst": "2026-06-30 00:01",
-          "description": "Roblox has pulled back the curtain on a selection of six new 18+ games, including Drifters, an extraction shooter developed by Bungie co-founder Alexander Seropian.",
+          "title": "The Legend of Zelda: Breath of the Wild Drops to an All-Time Low Price",
+          "url": "https://www.ign.com/articles/the-legend-of-zelda-breath-of-the-wild-drops-to-an-all-time-low-price",
+          "pubDate_cst": "2026-06-30 01:00",
+          "description": "A rare first-party Nintendo discount just went live: The Legend of Zelda: Breath of the Wild is heavily marked down for players on both the original Switch and the new Switch 2. Here's how to secure the best price possible.",
           "categories": "",
-          "reason": "url:under-",
+          "reason": "text:\\bdiscount\\b",
           "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
-          "filtered_at_cn": "2026-06-30 00:46:18",
+          "filtered_at_cn": "2026-06-30 02:25:29",
+          "status": "filtered"
+        },
+        {
+          "title": "Save Big on Hisense TVs for 4th of July, All Under $1,000",
+          "url": "https://www.ign.com/articles/save-big-on-hisense-tvs-just-in-time-for-americas-250th",
+          "pubDate_cst": "2026-06-30 01:54",
+          "description": "Hisense is celebrating the 4th of July with some of its best TV deals of the year.",
+          "categories": "",
+          "reason": "text:\\bbest .+ deals?\\b",
+          "rss_url": "https://www.ign.com/rss/v2/articles/feed?vertical=movies&start=0&count=20",
+          "filtered_at_cn": "2026-06-30 02:25:29",
+          "status": "filtered"
+        },
+        {
+          "title": "Jackass: Best & Last Is Now Available To Preorder on Blu-Ray - Here’s Where You Can Grab a Copy",
+          "url": "https://www.ign.com/articles/jackass-best-last-blu-ray-where-to-buy",
+          "pubDate_cst": "2026-06-30 01:49",
+          "description": "Jackass: Best & Last is now available to preorder on Blu-ray. While its release date is still to be determined, we've broken down where you can grab a copy ahead of time.",
+          "categories": "",
+          "reason": "url:where-to-buy",
+          "rss_url": "https://www.ign.com/rss/v2/articles/feed?vertical=movies&start=0&count=20",
+          "filtered_at_cn": "2026-06-30 02:25:29",
           "status": "filtered"
         }
       ]
