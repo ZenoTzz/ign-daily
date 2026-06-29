@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-29 19:49:35 +08:00",
+  "updated_at": "2026-06-30 00:13:30 +08:00",
   "source": "multi-source median",
   "base": "USD",
   "rates_to_cny": {
@@ -18,31 +18,31 @@
       "USD": {
         "source_count": 4,
         "median_raw": 6.79948,
-        "max_cross_source_deviation": 0.000625,
+        "max_cross_source_deviation": 0.000806,
         "previous_deviation": 7.7e-05
       },
       "EUR": {
         "source_count": 4,
         "median_raw": 7.74591,
-        "max_cross_source_deviation": 0.000605,
+        "max_cross_source_deviation": 0.000431,
         "previous_deviation": 0.000528
       },
       "JPY_100": {
         "source_count": 4,
-        "median_raw": 4.204502,
-        "max_cross_source_deviation": 0.000329,
-        "previous_deviation": 0.001072
+        "median_raw": 4.203424,
+        "max_cross_source_deviation": 0.00142,
+        "previous_deviation": 0.000815
       },
       "GBP": {
         "source_count": 4,
         "median_raw": 8.97625,
-        "max_cross_source_deviation": 0.001076,
+        "max_cross_source_deviation": 0.001344,
         "previous_deviation": 0.000418
       },
       "KRW_100": {
         "source_count": 4,
         "median_raw": 0.442602,
-        "max_cross_source_deviation": 0.00033,
+        "max_cross_source_deviation": 0.005659,
         "previous_deviation": 0.005914
       }
     },
@@ -73,11 +73,11 @@
         "name": "frankfurter",
         "url": "https://api.frankfurter.app/latest?from=USD&to=CNY,EUR,JPY,GBP,KRW",
         "rates_to_cny": {
-          "USD": 6.7982,
-          "EUR": 7.750593,
-          "JPY_100": 4.205506,
-          "GBP": 8.98591,
-          "KRW_100": 0.442456
+          "USD": 6.794,
+          "EUR": 7.74925,
+          "JPY_100": 4.197455,
+          "GBP": 8.988318,
+          "KRW_100": 0.440097
         }
       },
       {
