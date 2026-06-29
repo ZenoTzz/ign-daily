@@ -2,6 +2,61 @@
   "date": "2026-06-30",
   "articles": [
     {
+      "id": 4,
+      "category": "游戏新闻",
+      "emoji": "👊",
+      "en_title": "SNK Explains Why They Couldn’t Make Terry Bogard Explode While Fighting Kenshiro in City of the Wolves",
+      "cn_title": "SNK解释为何健次郎的「爆炸」技能在《饿狼传说：群狼之城》中得以保留",
+      "summary": "SNK在Evo 2026上透露，为了在《饿狼传说：群狼之城》中忠实还原《北斗神拳》健次郎的经典爆炸技法，同时维持ESRB青少年评级，他们采用暗影覆盖与红色背景暗示的方式，避免直接展示血腥画面。制作人玉置真也表示，健次郎作为客串角色既能吸引格斗游戏圈外玩家，也是SNK扩大受众的重要营销手段。",
+      "url": "https://www.ign.com/articles/snk-explains-why-they-couldnt-make-terry-bogard-explode-while-fighting-kenshiro-in-city-of-the-wolves",
+      "publish_time_cn": "2026-06-29 10:34",
+      "pub_date": "2026-06-29 10:34",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/28/snk-developer-interview-fatal-fury-kenshiro-1782686950489.png?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/28/snk-developer-interview-fatal-fury-kenshiro-1782686950489.png?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/28/snk-developer-interview-fatal-fury-kenshiro-1782686950489.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/28/snk-developer-interview-fatal-fury-kenshiro-1782686950489.png?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/28/snk-developer-interview-fatal-fury-kenshiro-1782686950489.png?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/28/snk-developer-interview-fatal-fury-kenshiro-1782686950489.png"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-29T11:01:53+08:00"
+    },
+    {
+      "id": 5,
+      "category": "影视资讯",
+      "emoji": "🐉",
+      "en_title": "House of the Dragon Season 3: Helaena’s “Strange” Comment Hints at a Major Fan Theory",
+      "cn_title": "《龙之家族》第三季：海伦娜一句「奇怪」暗示重大粉丝理论",
+      "summary": "《龙之家族》第三季第二集中，海伦娜注视一条反季出现的毛毛虫，感叹「奇怪，不是季节」。这一幕可能暗示她怀孕，并与乔治·R·R·马丁此前批评剧组删除其子Maelor所引发的「蝴蝶效应」争议相呼应。",
+      "url": "https://www.ign.com/articles/house-of-the-dragon-season-3-helaena-fan-theory-caterpillar",
+      "publish_time_cn": "2026-06-29 10:15",
+      "pub_date": "2026-06-29 10:15",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/24/helaena-caterpillar-1280-1782334450335.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/24/helaena-caterpillar-1280-1782334450335.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/24/helaena-caterpillar-1280-1782334450335.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/24/helaena-caterpillar-1280-1782334450335.jpg?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/24/helaena-caterpillar-1280-1782334450335.jpg?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/24/helaena-caterpillar-1280-1782334450335.jpg",
+        "https://assets-prd.ignimgs.com/2026/06/24/helaena-caterpillar-1280-1782334465216.jpg",
+        "https://assets-prd.ignimgs.com/2026/06/24/phia-saban-olivia-cooke-1782333680009.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-29T11:01:54+08:00",
+      "pending_dict": [
+        {
+          "en": "Helaena Targaryen",
+          "cn": "海伦娜·坦格利安",
+          "cat": "people",
+          "source": "ai_guess",
+          "reason": "常用译名，但未在词库中确认"
+        }
+      ]
+    },
+    {
       "id": 2,
       "category": "影视资讯",
       "emoji": "🐉",
@@ -85,5 +140,5 @@
       ]
     }
   ],
-  "total": 3
+  "total": 5
 }
