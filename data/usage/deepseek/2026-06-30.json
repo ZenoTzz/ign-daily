@@ -1128,6 +1128,30 @@
       "total_tokens_including_reasoning": 10526,
       "prompt_cache_hit_tokens": 8320,
       "prompt_cache_miss_tokens": 1228
+    },
+    {
+      "time_cn": "2026-06-30 04:32:37",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 28,
+      "article_title": "Box Office Disaster Supergirl Could Reportedly Lose Warner Bros. $100 Million During Its Theatrical Run",
+      "article_url": "https://www.ign.com/articles/box-office-disaster-supergirl-could-reportedly-lose-warner-bros-100-million-during-its-theatrical-run",
+      "article_date": "2026-06-30",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.0007541,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9362,
+      "completion_tokens": 1118,
+      "reasoning_tokens": 971,
+      "output_tokens_including_reasoning": 2089,
+      "total_tokens": 10480,
+      "total_tokens_including_reasoning": 11451,
+      "prompt_cache_hit_tokens": 8320,
+      "prompt_cache_miss_tokens": 1042
     }
   ]
 }
