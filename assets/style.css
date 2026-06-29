@@ -682,6 +682,30 @@ html.dark .site-header {
 
 .queue-actions .selected-count strong { color: var(--accent); }
 
+.queue-actions .export-basket-count {
+  color: var(--text-muted);
+  font-size: 0.78rem;
+  white-space: nowrap;
+  border: 1px solid var(--border-primary);
+  border-radius: 999px;
+  padding: 0.28rem 0.55rem;
+  background: rgba(255,255,255,0.03);
+}
+
+.queue-actions .export-basket-count strong {
+  color: var(--text-primary);
+}
+
+.queue-actions .export-basket-count.has-items {
+  color: var(--text-primary);
+  border-color: rgba(34,197,94,0.35);
+  background: rgba(34,197,94,0.12);
+}
+
+.queue-actions .export-basket-count.has-items strong {
+  color: #22c55e;
+}
+
 .queue-toolbar {
   display: flex;
   align-items: center;

@@ -284,7 +284,11 @@
             </div>
             <div class="queue-actions">
               <span class="selected-count">已选 <strong x-text="selected.length"></strong></span>
+              <span class="export-basket-count" :class="exportBasket.length ? 'has-items' : ''">
+                导出篮 <strong x-text="exportBasket.length"></strong>
+              </span>
               <button @click="addSelectedToExportBasket()" :disabled="selected.length === 0" class="btn btn-ghost">加入导出篮</button>
+              <button x-show="exportBasket.length > 0" @click="clearExportBasket()" class="btn btn-ghost">清空导出篮</button>
               <button @click="exportSelectedExcel()" :disabled="selected.length === 0 && exportBasket.length === 0" class="btn btn-green">导出Excel</button>
               <button @click="copyDigest()" class="btn btn-ghost" x-text="copyBtnText"></button>
               <button @click="submitRequest()" :disabled="selected.length === 0" class="btn btn-primary">
