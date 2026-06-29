@@ -1,5 +1,60 @@
 [
   {
+    "run_id": "28342877717",
+    "workflow": "API Translation",
+    "event": "workflow_dispatch",
+    "sha": "0b50cdd8a59e546c1ba2114fd35f16f213eb29fe",
+    "recorded_at_cn": "2026-06-29 09:27:29",
+    "start_balance": 31.34,
+    "end_balance": 31.32,
+    "currency": "CNY",
+    "actual_platform_cost": 0.02,
+    "balance_delta_status": "ok",
+    "estimated_cost_usd": 0.02636807,
+    "api_call_count": 7,
+    "total_tokens": 93250,
+    "output_tokens": 26898,
+    "by_model": {
+      "deepseek-v4-pro": {
+        "calls": 7,
+        "estimated_cost_usd": 0.02636807,
+        "total_tokens": 93250,
+        "output_tokens": 26898
+      }
+    },
+    "by_task": {
+      "fulltext": {
+        "calls": 1,
+        "estimated_cost_usd": 0.01174999,
+        "total_tokens": 23258
+      },
+      "fulltext_chunk": {
+        "calls": 6,
+        "estimated_cost_usd": 0.01461808,
+        "total_tokens": 69992
+      }
+    },
+    "retry_articles": [
+      {
+        "article_id": 11,
+        "article_date": "2026-06-28",
+        "article_title": "《无敌少侠：对决》开发者渴望与《真人快打》联动",
+        "article_url": "https://www.ign.com/articles/invincible-vs-devs-are-really-interested-in-a-mortal-kombat-crossover",
+        "calls": 7,
+        "estimated_cost_usd": 0.02636807,
+        "total_tokens": 93250,
+        "tasks": {
+          "fulltext": 1,
+          "fulltext_chunk": 6
+        },
+        "models": {
+          "deepseek-v4-pro": 7
+        }
+      }
+    ],
+    "snapshot_ok": true
+  },
+  {
     "run_id": "28342818053",
     "workflow": "API Translation",
     "event": "workflow_dispatch",
@@ -4946,29 +5001,6 @@
     "api_call_count": 0,
     "total_tokens": 0,
     "by_model": {},
-    "snapshot_ok": true
-  },
-  {
-    "run_id": "27587874215",
-    "workflow": "API Translation",
-    "event": "workflow_dispatch",
-    "sha": "65b923dc9b2b5fc53e36fc7b6211f2a386be3ab7",
-    "recorded_at_cn": "2026-06-16 09:51:45",
-    "start_balance": 45.36,
-    "end_balance": 44.71,
-    "currency": "CNY",
-    "actual_platform_cost": 0.65,
-    "balance_delta_status": "ok",
-    "estimated_cost_usd": 0.11470944,
-    "api_call_count": 25,
-    "total_tokens": 335022,
-    "by_model": {
-      "deepseek-v4-pro": {
-        "calls": 25,
-        "estimated_cost_usd": 0.11470944,
-        "total_tokens": 335022
-      }
-    },
     "snapshot_ok": true
   }
 ]

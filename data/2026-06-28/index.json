@@ -11,8 +11,8 @@
       "url": "https://www.ign.com/articles/invincible-vs-devs-are-really-interested-in-a-mortal-kombat-crossover",
       "publish_time_cn": "2026-06-28 06:39",
       "pub_date": "2026-06-28 06:39",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/06/27/invincible-vs-developer-interview-evo-2026-ign-1782596013539.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/27/invincible-vs-developer-interview-evo-2026-ign-1782596013539.png",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/27/invincible-vs-developer-interview-evo-2026-ign-1782596013539.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/27/invincible-vs-developer-interview-evo-2026-ign-1782596013539.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -21,7 +21,11 @@
         "https://assets-prd.ignimgs.com/2026/06/27/invincible-vs-developer-interview-evo-2026-ign-1782596013539.png"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-28T07:45:36+08:00"
+      "source_fetched_at": "2026-06-28T07:45:36+08:00",
+      "translation_path": "translations/11.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro"
     },
     {
       "id": 10,
@@ -29,7 +33,7 @@
       "emoji": "🎮",
       "en_title": "GTA 6 Scalpers Are Finding Buyers on eBay Despite Rockstar's Commitment to a Digital Release",
       "cn_title": "GTA6黄牛eBay叫卖，无视Rockstar数字版承诺",
-      "summary": "尽管Rockstar确认GTA6仅以数字版形式发行（实体版仅含下载码），eBay上仍有黄牛高价转售预购。标准版定价80美元(约合人民币545元)，部分黄牛要价90美元(约合人民币613元)以上。游戏将于2026年11月19日登陆PS5和XBOX Series。",
+      "summary": "尽管Rockstar确认GTA6仅以数字版形式发行（实体版仅含下载码），eBay上仍有黄牛高价转售预购。标准版定价80美元(约合人民币544元)，部分黄牛要价90美元(约合人民币612元)以上。游戏将于2026年11月19日登陆PS5和XBOX Series。",
       "url": "https://www.ign.com/articles/gta-6-scalpers-are-finding-buyers-on-ebay-despite-rockstars-commitment-to-a-digital-release",
       "publish_time_cn": "2026-06-28 06:28",
       "pub_date": "2026-06-28 06:28",
@@ -109,7 +113,7 @@
       "emoji": "💸",
       "en_title": "Steam Machine Scalpers on eBay Are Selling Reservations at Double the Price Valve Is Asking for",
       "cn_title": "《Valve》Steam Machine 遭黄牛倒卖，eBay 上售价翻倍",
-      "summary": "Valve 于近日开放 Steam Machine 预订系统，但黄牛迅速在 eBay 上以超两倍原价转售。512GB 无手柄版原价 1049美元(约合人民币7144元)（约合 7553 元人民币），带手柄版售价 1128美元(约合人民币7682元)（约合 8122 元人民币），已卖至 1500美元(约合人民币1万元)（约合 10800 元人民币）。2TB 带手柄版原价 1428美元(约合人民币9725元)（约合 10282 元人民币），成交价高达 2100美元(约合人民币1万元)（约合 15120 元人民币）；无手柄版更以 2899美元(约合人民币2万元)（约合 20873 元人民币）售出，较原价 1349美元(约合人民币9187元)（约合 9713 元人民币）翻倍有余。",
+      "summary": "Valve 于近日开放 Steam Machine 预订系统，但黄牛迅速在 eBay 上以超两倍原价转售。512GB 无手柄版原价 1049美元(约合人民币7133元)（约合 7553 元人民币），带手柄版售价 1128美元(约合人民币7670元)（约合 8122 元人民币），已卖至 1500美元(约合人民币1万元)（约合 10800 元人民币）。2TB 带手柄版原价 1428美元(约合人民币9710元)（约合 10282 元人民币），成交价高达 2100美元(约合人民币1万元)（约合 15120 元人民币）；无手柄版更以 2899美元(约合人民币2万元)（约合 20873 元人民币）售出，较原价 1349美元(约合人民币9173元)（约合 9713 元人民币）翻倍有余。",
       "url": "https://www.ign.com/articles/steam-machine-scalpers-on-ebay-are-selling-reservations-at-double-the-price-valve-is-asking-for",
       "publish_time_cn": "2026-06-28 02:33",
       "pub_date": "2026-06-28 02:33",
@@ -295,7 +299,7 @@
       "emoji": "🚫",
       "en_title": "No, There Is No GTA 6 Physical Disc Coming Out at Launch or the Months After — Those Reports and Social Media Posts Are Incorrect",
       "cn_title": "《GTA6》无实体光盘，官方澄清传闻",
-      "summary": "近期有报道称《GTA6》将推出实体光盘，但实际系误解。R星支持邮件提及的「几个月后可获得实体版」仅指已公布的带兑换码的实体版，而非光盘。好莱坞报道者向知情人士确认，R星并无发行光盘计划，玩家需下载游戏。IGN投票显示，超70%玩家倾向购买100美元(约合人民币681元)(约合720元人民币)的终极版。",
+      "summary": "近期有报道称《GTA6》将推出实体光盘，但实际系误解。R星支持邮件提及的「几个月后可获得实体版」仅指已公布的带兑换码的实体版，而非光盘。好莱坞报道者向知情人士确认，R星并无发行光盘计划，玩家需下载游戏。IGN投票显示，超70%玩家倾向购买100美元(约合人民币680元)(约合720元人民币)的终极版。",
       "url": "https://www.ign.com/articles/no-there-is-no-gta-6-physical-disc-coming-out-at-launch-or-the-months-after-those-reports-and-social-media-posts-are-incorrect",
       "publish_time_cn": "2026-06-27 20:12",
       "pub_date": "2026-06-27 20:12",
