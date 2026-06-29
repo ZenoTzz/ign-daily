@@ -384,6 +384,78 @@
       "total_tokens_including_reasoning": 10852,
       "prompt_cache_hit_tokens": 8576,
       "prompt_cache_miss_tokens": 427
+    },
+    {
+      "time_cn": "2026-06-29 10:09:30",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 1,
+      "article_title": "IGN AU’s Top 5 Games from Summer of Gaming 2026",
+      "article_url": "https://www.ign.com/articles/ign-aus-top-5-games-from-summer-of-gaming-2026",
+      "article_date": "2026-06-30",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.001235,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9819,
+      "completion_tokens": 1926,
+      "reasoning_tokens": 1652,
+      "output_tokens_including_reasoning": 3578,
+      "total_tokens": 11745,
+      "total_tokens_including_reasoning": 13397,
+      "prompt_cache_hit_tokens": 8320,
+      "prompt_cache_miss_tokens": 1499
+    },
+    {
+      "time_cn": "2026-06-29 10:09:45",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 2,
+      "article_title": "House of the Dragon Season 3, Episode 2 Recap and Review",
+      "article_url": "https://www.ign.com/articles/house-of-the-dragon-season-3-episode-2-recap-and-review",
+      "article_date": "2026-06-30",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.0008038,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 10043,
+      "completion_tokens": 1049,
+      "reasoning_tokens": 877,
+      "output_tokens_including_reasoning": 1926,
+      "total_tokens": 11092,
+      "total_tokens_including_reasoning": 11969,
+      "prompt_cache_hit_tokens": 8320,
+      "prompt_cache_miss_tokens": 1723
+    },
+    {
+      "time_cn": "2026-06-29 10:09:55",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 3,
+      "article_title": "The Vampire Lestat Creator Says Dipping Into Queen of the Damned and the Devil’s Minion Duo Needed the ‘Same Sort of a Weirdness to Their Manifestation’ as in the Book",
+      "article_url": "https://www.ign.com/articles/the-vampire-lestat-episode-3-queen-of-the-damned-devils-minion-rolin-jones",
+      "article_date": "2026-06-30",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00061872,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9899,
+      "completion_tokens": 735,
+      "reasoning_tokens": 602,
+      "output_tokens_including_reasoning": 1337,
+      "total_tokens": 10634,
+      "total_tokens_including_reasoning": 11236,
+      "prompt_cache_hit_tokens": 8320,
+      "prompt_cache_miss_tokens": 1579
     }
   ]
 }
