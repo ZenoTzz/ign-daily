@@ -1,0 +1,32 @@
+{
+  "date": "2026-06-29",
+  "observer": "codex",
+  "model": "codex",
+  "status": "observed",
+  "source_hash": "codex-nightly-2026-06-29-2-articles",
+  "signal_count": 2,
+  "candidate_count": 0,
+  "signals": [
+    {
+      "article_ids": [
+        3
+      ],
+      "rule_id": "subtitle_avoid_concrete_detail",
+      "summary": "Article #3 changes the subtitle into a concise direct quote."
+    },
+    {
+      "article_ids": [
+        3
+      ],
+      "rule_id": "currency_conversion_refined",
+      "summary": "Article #3 keeps the CNY conversion in full-width Chinese parentheses."
+    }
+  ],
+  "candidates": [],
+  "notes": [
+    "Imported 2 high-confidence Tencent polish files and generated diff_analysis.",
+    "Article #1 mostly reorganizes paragraph flow and removes non-body media embed residue, so it was kept as observe-only context.",
+    "No STYLE_PROFILE.md change: there was no new explicit weekly adoption feedback."
+  ],
+  "updated_at": "2026-06-29T22:40:20+08:00"
+}

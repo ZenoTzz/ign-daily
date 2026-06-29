@@ -1,7 +1,7 @@
 {
   "week_id": "2026-W26",
-  "generated_at": "2026-06-26T22:47:11+08:00",
-  "published_by": "codex_nightly_learner",
+  "generated_at": "2026-06-29T22:41:42+08:00",
+  "published_by": "weekly_learning_report",
   "range": {
     "start": "2026-06-22",
     "end": "2026-06-28"
@@ -9,7 +9,7 @@
   "summary": {
     "candidate_count": 15,
     "ready_for_review": 0,
-    "confirmed_by_feedback": 12,
+    "confirmed_by_feedback": 0,
     "pending": 3
   },
   "candidates": [
@@ -21,6 +21,7 @@
       "scope": "all",
       "status": "confirmed",
       "days": [
+        "2026-05-30",
         "2026-06-01",
         "2026-06-03",
         "2026-06-04",
@@ -34,10 +35,12 @@
         "2026-06-17",
         "2026-06-19",
         "2026-06-25",
-        "2026-06-26"
+        "2026-06-26",
+        "2026-06-28",
+        "2026-06-29"
       ],
-      "days_seen": 14,
-      "articles_seen": 13,
+      "days_seen": 17,
+      "articles_seen": 21,
       "contradictions": 0,
       "examples": [
         {
@@ -117,6 +120,54 @@
           "article_id": 31,
           "before": "预期管理",
           "after": "牛皮吹破"
+        },
+        {
+          "date": "2026-05-30",
+          "article_id": 18,
+          "before": "再见了，老朋友",
+          "after": "彻底再见"
+        },
+        {
+          "date": "2026-05-30",
+          "article_id": 21,
+          "before": "邦德出道即巅峰",
+          "after": "出道即巅峰"
+        },
+        {
+          "date": "2026-05-30",
+          "article_id": 24,
+          "before": "新官上任三把火",
+          "after": "艰难转型"
+        },
+        {
+          "date": "2026-05-30",
+          "article_id": 26,
+          "before": "说好的免费呢？",
+          "after": "「附加费」"
+        },
+        {
+          "date": "2026-06-28",
+          "article_id": 1,
+          "before": "只有兑换码，没有盘",
+          "after": "「发售时不印，数月后也不会印」"
+        },
+        {
+          "date": "2026-06-28",
+          "article_id": 4,
+          "before": "新鲜血液",
+          "after": "添些新花样"
+        },
+        {
+          "date": "2026-06-28",
+          "article_id": 10,
+          "before": "黄牛狂喜",
+          "after": "乐当冤大头"
+        },
+        {
+          "date": "2026-06-29",
+          "article_id": 3,
+          "before": "求稳才是最大的风险",
+          "after": "「最大的风险就是求稳。」"
         }
       ],
       "feedback": [
@@ -128,9 +179,9 @@
         }
       ],
       "created_at": "2026-06-04T06:38:54+08:00",
-      "last_seen": "2026-06-26",
-      "confidence": 0.91,
-      "latest_evidence_summary": "6/25-6/26 subtitles continue to favor short hooks or direct quotes instead of title repetition."
+      "last_seen": "2026-06-29",
+      "confidence": 0.92,
+      "latest_evidence_summary": "6/29 Nolan subtitle uses a concise direct quote, reinforcing quote-like subtitle hooks."
     },
     {
       "id": "prefer_confirmed_chinese_game_titles",
@@ -149,10 +200,11 @@
         "2026-06-18",
         "2026-06-25",
         "2026-06-26",
-        "2026-06-27"
+        "2026-06-27",
+        "2026-06-28"
       ],
-      "days_seen": 10,
-      "articles_seen": 16,
+      "days_seen": 11,
+      "articles_seen": 17,
       "contradictions": 1,
       "examples": [
         {
@@ -214,6 +266,12 @@
           "article_id": 4,
           "before": "《料理鼠王2》永远不会拍，导演布拉德·伯德确认",
           "after": "导演布拉德·伯德确认《美食总动员2》永远不会拍"
+        },
+        {
+          "date": "2026-06-28",
+          "article_id": 4,
+          "before": "Dauberman的作品履历包括2017年《小丑回魂》重启版及其续集，以及2014年的《安娜贝尔》。他还参与了《修女》和去年上映的《直到黎明》电影的编剧工作，并且已确认加盟即将推出的《街头霸王》和《地狱潜者》电影。",
+          "after": "Dauberman的作品履历包括2017年《小丑回魂》重启版及其续集，以及2014年的《安娜贝尔》。他还参与了《修女》和去年上映的《直到黎明》电影的编剧工作，并且已确认加盟即将推出的《街头霸王》和《绝地潜兵》电影。"
         }
       ],
       "feedback": [
@@ -225,9 +283,9 @@
         }
       ],
       "created_at": "2026-06-12T17:45:36+08:00",
-      "last_seen": "2026-06-27",
+      "last_seen": "2026-06-28",
       "confidence": 0.93,
-      "latest_evidence_summary": "6/25-6/27 edits continue to prefer established Chinese names for engines, games, and films.",
+      "latest_evidence_summary": "6/28 edit normalizes Helldivers to the established Chinese title ?????? in a movie-context mention.",
       "contradiction_notes": []
     },
     {
@@ -246,10 +304,11 @@
         "2026-06-18",
         "2026-06-25",
         "2026-06-26",
-        "2026-06-27"
+        "2026-06-27",
+        "2026-06-28"
       ],
-      "days_seen": 9,
-      "articles_seen": 10,
+      "days_seen": 10,
+      "articles_seen": 11,
       "contradictions": 0,
       "examples": [
         {
@@ -311,6 +370,12 @@
           "article_id": 4,
           "before": "Cade Onder是IGN新闻团队的自由撰稿人，报道游戏、电影等各类娱乐内容。你可以在Twitter @Cade_Onder上找到他。",
           "after": ""
+        },
+        {
+          "date": "2026-06-28",
+          "article_id": 1,
+          "before": "Wesley是IGN新闻总监。你可以在X上找到他：@wyp100。也可通过wesley_yinpoole@ign.com或保密邮箱wyp100@proton.me联系。",
+          "after": ""
         }
       ],
       "feedback": [
@@ -322,9 +387,9 @@
         }
       ],
       "created_at": "2026-06-12T17:45:36+08:00",
-      "last_seen": "2026-06-27",
+      "last_seen": "2026-06-28",
       "confidence": 0.97,
-      "latest_evidence_summary": "6/25-6/27 edits continue to remove author bios, emails, and social handles."
+      "latest_evidence_summary": "6/28 GTA6 polish again removes the author bio, social handle, and contact emails from the article tail."
     },
     {
       "id": "remove_redundant_title_prefixes",
@@ -340,10 +405,11 @@
         "2026-06-11",
         "2026-06-12",
         "2026-06-25",
-        "2026-06-26"
+        "2026-06-26",
+        "2026-06-28"
       ],
-      "days_seen": 7,
-      "articles_seen": 11,
+      "days_seen": 8,
+      "articles_seen": 12,
       "contradictions": 0,
       "examples": [
         {
@@ -411,6 +477,12 @@
           "article_id": 10,
           "before": "《GTA6》Insomniac确认《金刚狼》实体版含光盘",
           "after": "Insomniac确认《漫威金刚狼》实体版含光盘"
+        },
+        {
+          "date": "2026-06-28",
+          "article_id": 7,
+          "before": "《PlayStation》索尼将删除PSN用户超550部数字电影",
+          "after": "索尼将删除PSN用户超550部数字电影"
         }
       ],
       "feedback": [
@@ -422,9 +494,239 @@
         }
       ],
       "created_at": "2026-06-12T17:45:36+08:00",
+      "last_seen": "2026-06-28",
+      "confidence": 0.93,
+      "latest_evidence_summary": "6/28 PlayStation title removes the redundant platform wrapper while keeping the Sony/PSN subject clear."
+    },
+    {
+      "id": "currency_conversion_refined",
+      "title": "金额换算采用统一中文格式",
+      "rule": "正文金额首次出现时可给出人民币换算，使用中文全角括号并保持同文一致；标题通常不放人民币换算。汇率数值属于时效数据，不作为固定翻译规则。",
+      "category": "currency",
+      "scope": "all",
+      "status": "confirmed",
+      "days": [
+        "2026-06-02",
+        "2026-06-04",
+        "2026-06-05",
+        "2026-06-25",
+        "2026-06-26",
+        "2026-06-28",
+        "2026-06-29"
+      ],
+      "days_seen": 7,
+      "articles_seen": 12,
+      "contradictions": 0,
+      "examples": [
+        {
+          "date": "2026-06-02",
+          "article_id": 22,
+          "before": "13亿丹麦克朗（约合2.02亿美元(约合人民币14亿元)）",
+          "after": "13亿丹麦克朗（约合13.7亿元人民币）"
+        },
+        {
+          "date": "2026-06-04",
+          "article_id": 3,
+          "before": "2026年，Valve屡屡成为法律靶心。在上述反垄断诉讼进行的同时，今年1月，英国一家法庭批准了一项针对Valve的6.56亿英镑(约合人民币60亿元)集体诉讼，涉及垄断问题。除此之外，纽约州总检察长Letitia James在2月采取了行动，4月澳大利亚政府向Valve发出了具有法律效力的透明度通知，要求该公司详细说明其系统如何防止Steam平台上的儿童诱骗和极端化行为。",
+          "after": "2026年，Valve屡屡成为法律靶心。在上述反垄断诉讼进行的同时，今年1月，英国一家法庭批准了一项针对Valve的6.56亿英镑（约合人民币60亿元）集体诉讼，涉及垄断问题。除此之外，纽约州总检察长Letitia James在2月采取了行动，4月澳大利亚政府向Valve发出了具有法律效力的透明度通知，要求该公司详细说明其系统如何防止Steam平台上的儿童诱骗和极端化行为。"
+        },
+        {
+          "date": "2026-06-04",
+          "article_id": 38,
+          "before": "目前，Best Buy已上线《控制：共振》实体版的预购页面，PS5和Xbox Series X版本均标价59.99美元(约合人民币430元)。随着更多零售商加入并开放预购，我们会及时更新。",
+          "after": "PS5和Xbox Series标准版售价59.99美元（约合人民币406.17元），铁盒版售价69.99美元（约合人民币473.86元）。"
+        },
+        {
+          "date": "2026-06-05",
+          "article_id": 17,
+          "before": "79.99美元(约合人民币572元)的褪色者版包含游戏本体、《黄金树之影》DLC、新武器、以及为玩家忠实的灵马托雷特更换护甲皮肤的功能。此外还包含两个新初始职业。",
+          "after": "Switch 2版《艾尔登法环 褪色版》定价79.99美元（约合541.84元人民币），日区Nintendo Store定价9020日元（约合382.04元人民币）。包含游戏本体、《黄金树之影》DLC、新武器、以及为玩家忠实的灵马托雷特更换皮肤的功能。此外还包含两个新初始职业。"
+        },
+        {
+          "date": "2026-06-05",
+          "article_id": 34,
+          "before": "据《综艺》指出，诺兰的其他暑期档电影（如《黑暗骑士》三部曲）多为PG-13级，但R级并未阻碍《奥本海默》本土票房突破3.3亿美元(约合人民币23.6亿元)。",
+          "after": "据《综艺》指出，诺兰的其他暑期档电影（如《黑暗骑士》三部曲）多为PG-13级，但R级并未阻碍《奥本海默》本土票房突破3.3亿美元（约合人民币22.35亿元）。"
+        },
+        {
+          "date": "2026-06-25",
+          "article_id": 1,
+          "before": "750美元(约合人民币5092元)；1049美元(约合人民币7123元)",
+          "after": "750美元（约合人民币5092元）；1049美元（约合人民币7123元）"
+        },
+        {
+          "date": "2026-06-25",
+          "article_id": 24,
+          "before": "《GTA6》80美元(约合人民币545元)定价会带涨游戏价格吗？",
+          "after": "《GTA6》的80美元定价会带涨游戏价格吗？"
+        },
+        {
+          "date": "2026-06-26",
+          "article_id": 15,
+          "before": "从MacBook Neo到Apple Vision Pro，苹果官网上的产品价格全面上涨，后者的涨幅高达200美元(约合人民币1362元)。今年早些时候以599美元(约合人民币4079元)发售的MacBook Neo，旨在帮助苹果从低端Windows笔记本和Chromebook手中抢占部分预算市场，如今涨价100美元(约合人民币681元)。不过，涨幅最大的还是搭载M3 Ultra的顶级Mac Studio，从3,999美元(约合人民币3万元)涨到了5,299美元(约合人民币4万元)，整整涨了1,300美元(约合人民币8853元)。",
+          "after": "从MacBook Neo到Apple Vision Pro，苹果官网上的产品价格全面上涨，后者的涨幅高达200美元（约合人民币1362元）。今年早些时候以599美元（约合人民币4079元）发售的MacBook Neo，旨在帮助苹果从低端Windows笔记本和Chromebook手中抢占部分预算市场，如今涨价100美元（约合人民币681元）。不过，涨幅最大的还是搭载M3 Ultra的顶级Mac Studio，从3,999美元（约合人民币3万元）涨到了5,299美元（约合人民币4万元），整整涨了1,300美元（约合人民币8853元）。"
+        },
+        {
+          "date": "2026-06-26",
+          "article_id": 24,
+          "before": "「去年10月，我们在美国已经将XBOX主机的价格上调了20至70美元(约合人民币136至477元)(约合136至477元)，」微软表示，「我们原本希望不必再次涨价，过去几个月也一直在与供应商商讨应对方案。不幸的是，主机存储与内存芯片价格已上涨超过2.5倍，而且我们预计到2027年秋季还会再翻一番。」",
+          "after": "「去年10月，我们在美国已经将XBOX主机的价格上调了20至70美元（约合人民币136至477元），」微软表示，「我们原本希望不必再次涨价，过去几个月也一直在与供应商商讨应对方案。不幸的是，主机存储与内存芯片价格已上涨超过2.5倍，而且我们预计到2027年秋季还会再翻一番。」"
+        },
+        {
+          "date": "2026-06-28",
+          "article_id": 4,
+          "before": "《玩具熊的五夜后宫3》尚未正式公布，但倘若获得绿灯也并不令人意外。前两部电影都取得了巨大成功，第一部迅速成为Blumhouse当时票房最高的影片，续集同样收获了相当可观的开画成绩。据Box Office Mojo数据，第一部全球票房达2.915亿美元(约合人民币20亿元)，第二部达到2.385亿美元(约合人民币16亿元)。",
+          "after": "《玩具熊的五夜后宫3》尚未正式公布，但倘若获得绿灯也并不令人意外。前两部电影都取得了巨大成功，第一部迅速成为Blumhouse当时票房最高的影片，续集同样收获了相当可观的开画成绩。据Box Office Mojo数据，第一部全球票房达2.915亿美元（约合人民币20亿元），第二部达到2.385亿美元（约合人民币16亿元）。"
+        },
+        {
+          "date": "2026-06-28",
+          "article_id": 10,
+          "before": "6月25日全面开启预购后，这款《侠盗猎车手》新作的加价转卖便已出现在eBay上。标准版零售价目前锁定在80美元(约合人民币545元)，一些黄牛成功以约90美元(约合人民币613元)转手，有的甚至更高。",
+          "after": "6月25日全面开启预购后，这款《GTA》新作的加价转卖便已出现在eBay上。标准版零售价目前锁定在80美元（约合人民币544元），一些黄牛成功以约90美元（约合人民币612元）转手，有的甚至更高。"
+        },
+        {
+          "date": "2026-06-29",
+          "article_id": 3,
+          "before": "诺兰没有点明他指的是哪些主流电影，但不可否认，他拥有一批铁杆粉丝，即便他拍出最离经叛道的作品也会捧场。2023年上映的《奥本海默》就是最近的例子，这部传记片讲述了原子弹之父J·罗伯特·奥本海默的真实故事，尽管采用非线性叙事且片长三小时，仍然斩获近10亿美元(约合人民币68亿元)的全球票房（数据来自Box Office Mojo）。",
+          "after": "诺兰没有点明他指的是哪些主流电影，但不可否认，他拥有一批铁杆粉丝，即便他拍出最离经叛道的作品也会捧场。2023年上映的《奥本海默》就是最近的例子，这部传记片讲述了原子弹之父J·罗伯特·奥本海默的真实故事，尽管采用非线性叙事且片长三小时，仍然斩获近10亿美元（约合人民币68亿元）的全球票房。"
+        }
+      ],
+      "feedback": [
+        {
+          "week_id": "2026-W23",
+          "text": "采纳，进入长期规则。",
+          "classified_as": "confirmed",
+          "created_at": "2026-06-04T06:38:24+08:00"
+        },
+        {
+          "week_id": "2026-W23",
+          "text": "采纳，进入长期规则。",
+          "classified_as": "confirmed",
+          "created_at": "2026-06-04T06:38:54+08:00"
+        },
+        {
+          "week_id": "2026-W23",
+          "text": "采纳，进入长期规则。",
+          "classified_as": "confirmed",
+          "created_at": "2026-06-04T06:39:36+08:00"
+        },
+        {
+          "week_id": "2026-W23",
+          "text": "采纳，进入长期规则。",
+          "classified_as": "confirmed",
+          "created_at": "2026-06-05T05:07:48+08:00"
+        },
+        {
+          "week_id": "2026-W23",
+          "text": "采纳，进入长期规则。",
+          "classified_as": "confirmed",
+          "created_at": "2026-06-06T04:56:39+08:00"
+        },
+        {
+          "week_id": "2026-W23",
+          "text": "采纳，进入长期规则。",
+          "classified_as": "confirmed",
+          "created_at": "2026-06-07T02:52:19+08:00"
+        }
+      ],
+      "created_at": "2026-06-03T16:03:40+08:00",
+      "last_seen": "2026-06-29",
+      "confidence": 0.93,
+      "latest_evidence_summary": "6/29 money edit keeps Chinese full-width parentheses for CNY conversion."
+    },
+    {
+      "id": "platform_name_compact",
+      "title": "平台名称使用简洁统一写法",
+      "rule": "平台枚举中可将“Xbox Series X|S”统一简写为“XBOX Series”，Nintendo Switch 2在语境明确时可写“Switch 2”；不要改变实际登陆平台范围。所有面向读者的译文中，Xbox 统一写作 XBOX。",
+      "category": "dictionary",
+      "scope": "games",
+      "status": "confirmed",
+      "days": [
+        "2026-05-30",
+        "2026-06-08",
+        "2026-06-09",
+        "2026-06-10",
+        "2026-06-18",
+        "2026-06-24",
+        "2026-06-26"
+      ],
+      "days_seen": 7,
+      "articles_seen": 11,
+      "contradictions": 0,
+      "examples": [
+        {
+          "date": "2026-06-08",
+          "article_id": 16,
+          "before": "今日Xbox展示会直播中最令人意外的消息，莫过于确认多款即将推出的重磅大作将作为Xbox主机独占游戏保留——也就是说，它们虽会登陆PC，但不会出现在PS5或任天堂Switch 2上。",
+          "after": "今日Xbox展示会直播中最令人意外的消息，莫过于确认多款即将推出的重磅大作将作为Xbox主机独占游戏保留——也就是说，它们虽会登陆PC，但不会出现在PS5或Switch 2上。"
+        },
+        {
+          "date": "2026-06-08",
+          "article_id": 37,
+          "before": "《古墓丽影：亚特兰蒂斯遗迹》将于2027年2月12日登陆任天堂Switch 2、PS5、PC和Xbox Series X/S。",
+          "after": "《古墓丽影：亚特兰蒂斯遗迹》将于2027年2月12日登陆、PS5、Xbox Series、Switch 2和PC。"
+        },
+        {
+          "date": "2026-06-09",
+          "article_id": 21,
+          "before": "Game Pass曾是Xbox One、Xbox Series X|S和PC端Xbox玩家的首选，但去年年底宣布涨价后，这一地位受到了冲击。微软在2025年10月初确认，Xbox Game Pass Ultimate月费将从19.99美元（约合人民币143元）大幅上涨至29.99美元（约合人民币215元）。涨幅高达50%，年费达到120美元（约合人民币859元）。",
+          "after": "Game Pass曾是Xbox One、Xbox Series和PC端Xbox玩家的首选，但去年年底宣布涨价后，这一地位受到了冲击。微软在2025年10月初确认，Xbox Game Pass Ultimate月费将从19.99美元（约合人民币136元）大幅上涨至29.99美元（约合人民币203元）。涨幅高达50%，年费达到120美元（约合人民币814元）。"
+        },
+        {
+          "date": "2026-06-10",
+          "article_id": 6,
+          "before": "《战争机器：事变日》仅通过Steam和Xbox应用登陆PC，以及Xbox Cloud和Xbox Series X|S。微软坚称，从未打算将该作带到PS5。",
+          "after": "《战争机器：事变日》仅通过Steam和Xbox应用登陆PC，以及Xbox Cloud和Xbox Series。微软坚称，从未打算将该作带到PS5。"
+        },
+        {
+          "date": "2026-06-10",
+          "article_id": 7,
+          "before": "《光环：战役进化》将于7月28日登陆Xbox Series X|S、PS5和PC。高级版和典藏版玩家还将获得五天的抢先体验资格。",
+          "after": "《光环：战役进化》将于7月28日登陆Xbox Series、PS5和PC。高级版和典藏版玩家还将获得五天的抢先体验资格。"
+        },
+        {
+          "date": "2026-06-24",
+          "article_id": 5,
+          "before": "??XBOX Series?PS5",
+          "after": "??XBOX Series?PS5"
+        },
+        {
+          "date": "2026-06-24",
+          "article_id": 14,
+          "before": "Xbox Series X/S",
+          "after": "XBOX Series"
+        },
+        {
+          "date": "2026-06-26",
+          "article_id": 24,
+          "before": "XBOX主机涨价的消息公布于11月《GTA6》发售前夕，该作预计将大幅拉高PS5和XBOX Series X|S的需求。然而，外界担忧索尼和微软可能都无法满足《GTA6》所带来的需求，因为人工智能热潮正让硬件厂商不仅难以采购组件，更难以用亲民的价格推出产品。",
+          "after": "XBOX主机涨价的消息公布于11月《GTA6》发售前夕，该作预计将大幅拉高PS5和XBOX Series的需求。然而，外界担忧索尼和微软可能都无法满足《GTA6》所带来的需求，因为人工智能热潮正让硬件厂商不仅难以采购组件，更难以用亲民的价格推出产品。"
+        },
+        {
+          "date": "2026-05-30",
+          "article_id": 21,
+          "before": "Alinea Analytics市场分析主管Rhys Elliott表示，《007 初露锋芒》仅在Steam平台就售出约50万份，在Valve平台创造了约2500万美元(约合人民币2亿元)收入。",
+          "after": "Alinea Analytics市场分析主管Rhys Elliott表示，《007 初露锋芒》仅在Steam平台就售出约50万份，在Valve平台创造了约2500万美元（约合1.7亿元人民币）的收入。"
+        },
+        {
+          "date": "2026-05-30",
+          "article_id": 26,
+          "before": "「如果你在4月30日至5月27日期间在Xbox One或PlayStation 4上购买了基础版，或在升级中遇到任何问题，请联系我们的客服团队，我们会妥善解决。再次为此事带来的困扰致歉。」",
+          "after": "「如果你在4月30日至5月27日期间在Xbox One或PS4上购买了基础版，或在升级中遇到任何问题，请联系我们的客服团队，我们会妥善解决。再次为此事带来的困扰致歉。」"
+        }
+      ],
+      "feedback": [
+        {
+          "week_id": "2026-W24",
+          "text": "采纳，进入长期规则。",
+          "classified_as": "confirmed",
+          "created_at": "2026-06-15T21:48:32+08:00"
+        }
+      ],
+      "created_at": "2026-06-12T21:51:19+08:00",
       "last_seen": "2026-06-26",
-      "confidence": 0.92,
-      "latest_evidence_summary": "6/25-6/26 title edits keep the news subject and remove redundant brand/work wrappers."
+      "confidence": 0.86,
+      "latest_evidence_summary": "Backfilled 5/30 edits also compact platform names, including Nintendo Switch 2 -> Switch 2 and Xbox Series X/S -> Xbox Series."
     },
     {
       "id": "remove_promotional_related_links",
@@ -566,203 +868,6 @@
       "last_seen": "2026-06-26",
       "confidence": 0.95,
       "latest_evidence_summary": "6/26 edits delete site-recirc paragraphs such as more-GTA6 coverage links."
-    },
-    {
-      "id": "platform_name_compact",
-      "title": "平台名称使用简洁统一写法",
-      "rule": "平台枚举中可将“Xbox Series X|S”统一简写为“XBOX Series”，Nintendo Switch 2在语境明确时可写“Switch 2”；不要改变实际登陆平台范围。所有面向读者的译文中，Xbox 统一写作 XBOX。",
-      "category": "dictionary",
-      "scope": "games",
-      "status": "confirmed",
-      "days": [
-        "2026-06-08",
-        "2026-06-09",
-        "2026-06-10",
-        "2026-06-18",
-        "2026-06-24",
-        "2026-06-26"
-      ],
-      "days_seen": 6,
-      "articles_seen": 9,
-      "contradictions": 0,
-      "examples": [
-        {
-          "date": "2026-06-08",
-          "article_id": 16,
-          "before": "今日Xbox展示会直播中最令人意外的消息，莫过于确认多款即将推出的重磅大作将作为Xbox主机独占游戏保留——也就是说，它们虽会登陆PC，但不会出现在PS5或任天堂Switch 2上。",
-          "after": "今日Xbox展示会直播中最令人意外的消息，莫过于确认多款即将推出的重磅大作将作为Xbox主机独占游戏保留——也就是说，它们虽会登陆PC，但不会出现在PS5或Switch 2上。"
-        },
-        {
-          "date": "2026-06-08",
-          "article_id": 37,
-          "before": "《古墓丽影：亚特兰蒂斯遗迹》将于2027年2月12日登陆任天堂Switch 2、PS5、PC和Xbox Series X/S。",
-          "after": "《古墓丽影：亚特兰蒂斯遗迹》将于2027年2月12日登陆、PS5、Xbox Series、Switch 2和PC。"
-        },
-        {
-          "date": "2026-06-09",
-          "article_id": 21,
-          "before": "Game Pass曾是Xbox One、Xbox Series X|S和PC端Xbox玩家的首选，但去年年底宣布涨价后，这一地位受到了冲击。微软在2025年10月初确认，Xbox Game Pass Ultimate月费将从19.99美元（约合人民币143元）大幅上涨至29.99美元（约合人民币215元）。涨幅高达50%，年费达到120美元（约合人民币859元）。",
-          "after": "Game Pass曾是Xbox One、Xbox Series和PC端Xbox玩家的首选，但去年年底宣布涨价后，这一地位受到了冲击。微软在2025年10月初确认，Xbox Game Pass Ultimate月费将从19.99美元（约合人民币136元）大幅上涨至29.99美元（约合人民币203元）。涨幅高达50%，年费达到120美元（约合人民币814元）。"
-        },
-        {
-          "date": "2026-06-10",
-          "article_id": 6,
-          "before": "《战争机器：事变日》仅通过Steam和Xbox应用登陆PC，以及Xbox Cloud和Xbox Series X|S。微软坚称，从未打算将该作带到PS5。",
-          "after": "《战争机器：事变日》仅通过Steam和Xbox应用登陆PC，以及Xbox Cloud和Xbox Series。微软坚称，从未打算将该作带到PS5。"
-        },
-        {
-          "date": "2026-06-10",
-          "article_id": 7,
-          "before": "《光环：战役进化》将于7月28日登陆Xbox Series X|S、PS5和PC。高级版和典藏版玩家还将获得五天的抢先体验资格。",
-          "after": "《光环：战役进化》将于7月28日登陆Xbox Series、PS5和PC。高级版和典藏版玩家还将获得五天的抢先体验资格。"
-        },
-        {
-          "date": "2026-06-24",
-          "article_id": 5,
-          "before": "??XBOX Series?PS5",
-          "after": "??XBOX Series?PS5"
-        },
-        {
-          "date": "2026-06-24",
-          "article_id": 14,
-          "before": "Xbox Series X/S",
-          "after": "XBOX Series"
-        },
-        {
-          "date": "2026-06-26",
-          "article_id": 24,
-          "before": "XBOX主机涨价的消息公布于11月《GTA6》发售前夕，该作预计将大幅拉高PS5和XBOX Series X|S的需求。然而，外界担忧索尼和微软可能都无法满足《GTA6》所带来的需求，因为人工智能热潮正让硬件厂商不仅难以采购组件，更难以用亲民的价格推出产品。",
-          "after": "XBOX主机涨价的消息公布于11月《GTA6》发售前夕，该作预计将大幅拉高PS5和XBOX Series的需求。然而，外界担忧索尼和微软可能都无法满足《GTA6》所带来的需求，因为人工智能热潮正让硬件厂商不仅难以采购组件，更难以用亲民的价格推出产品。"
-        }
-      ],
-      "feedback": [
-        {
-          "week_id": "2026-W24",
-          "text": "采纳，进入长期规则。",
-          "classified_as": "confirmed",
-          "created_at": "2026-06-15T21:48:32+08:00"
-        }
-      ],
-      "created_at": "2026-06-12T21:51:19+08:00",
-      "last_seen": "2026-06-26",
-      "confidence": 0.86,
-      "latest_evidence_summary": "6/26 evidence continues compact platform naming, especially Xbox Series X|S -> XBOX Series."
-    },
-    {
-      "id": "currency_conversion_refined",
-      "title": "金额换算采用统一中文格式",
-      "rule": "正文金额首次出现时可给出人民币换算，使用中文全角括号并保持同文一致；标题通常不放人民币换算。汇率数值属于时效数据，不作为固定翻译规则。",
-      "category": "currency",
-      "scope": "all",
-      "status": "confirmed",
-      "days": [
-        "2026-06-02",
-        "2026-06-04",
-        "2026-06-05",
-        "2026-06-25",
-        "2026-06-26"
-      ],
-      "days_seen": 5,
-      "articles_seen": 9,
-      "contradictions": 0,
-      "examples": [
-        {
-          "date": "2026-06-02",
-          "article_id": 22,
-          "before": "13亿丹麦克朗（约合2.02亿美元(约合人民币14亿元)）",
-          "after": "13亿丹麦克朗（约合13.7亿元人民币）"
-        },
-        {
-          "date": "2026-06-04",
-          "article_id": 3,
-          "before": "2026年，Valve屡屡成为法律靶心。在上述反垄断诉讼进行的同时，今年1月，英国一家法庭批准了一项针对Valve的6.56亿英镑(约合人民币60亿元)集体诉讼，涉及垄断问题。除此之外，纽约州总检察长Letitia James在2月采取了行动，4月澳大利亚政府向Valve发出了具有法律效力的透明度通知，要求该公司详细说明其系统如何防止Steam平台上的儿童诱骗和极端化行为。",
-          "after": "2026年，Valve屡屡成为法律靶心。在上述反垄断诉讼进行的同时，今年1月，英国一家法庭批准了一项针对Valve的6.56亿英镑（约合人民币60亿元）集体诉讼，涉及垄断问题。除此之外，纽约州总检察长Letitia James在2月采取了行动，4月澳大利亚政府向Valve发出了具有法律效力的透明度通知，要求该公司详细说明其系统如何防止Steam平台上的儿童诱骗和极端化行为。"
-        },
-        {
-          "date": "2026-06-04",
-          "article_id": 38,
-          "before": "目前，Best Buy已上线《控制：共振》实体版的预购页面，PS5和Xbox Series X版本均标价59.99美元(约合人民币430元)。随着更多零售商加入并开放预购，我们会及时更新。",
-          "after": "PS5和Xbox Series标准版售价59.99美元（约合人民币406.17元），铁盒版售价69.99美元（约合人民币473.86元）。"
-        },
-        {
-          "date": "2026-06-05",
-          "article_id": 17,
-          "before": "79.99美元(约合人民币572元)的褪色者版包含游戏本体、《黄金树之影》DLC、新武器、以及为玩家忠实的灵马托雷特更换护甲皮肤的功能。此外还包含两个新初始职业。",
-          "after": "Switch 2版《艾尔登法环 褪色版》定价79.99美元（约合541.84元人民币），日区Nintendo Store定价9020日元（约合382.04元人民币）。包含游戏本体、《黄金树之影》DLC、新武器、以及为玩家忠实的灵马托雷特更换皮肤的功能。此外还包含两个新初始职业。"
-        },
-        {
-          "date": "2026-06-05",
-          "article_id": 34,
-          "before": "据《综艺》指出，诺兰的其他暑期档电影（如《黑暗骑士》三部曲）多为PG-13级，但R级并未阻碍《奥本海默》本土票房突破3.3亿美元(约合人民币23.6亿元)。",
-          "after": "据《综艺》指出，诺兰的其他暑期档电影（如《黑暗骑士》三部曲）多为PG-13级，但R级并未阻碍《奥本海默》本土票房突破3.3亿美元（约合人民币22.35亿元）。"
-        },
-        {
-          "date": "2026-06-25",
-          "article_id": 1,
-          "before": "750美元(约合人民币5092元)；1049美元(约合人民币7123元)",
-          "after": "750美元（约合人民币5092元）；1049美元（约合人民币7123元）"
-        },
-        {
-          "date": "2026-06-25",
-          "article_id": 24,
-          "before": "《GTA6》80美元(约合人民币545元)定价会带涨游戏价格吗？",
-          "after": "《GTA6》的80美元定价会带涨游戏价格吗？"
-        },
-        {
-          "date": "2026-06-26",
-          "article_id": 15,
-          "before": "从MacBook Neo到Apple Vision Pro，苹果官网上的产品价格全面上涨，后者的涨幅高达200美元(约合人民币1362元)。今年早些时候以599美元(约合人民币4079元)发售的MacBook Neo，旨在帮助苹果从低端Windows笔记本和Chromebook手中抢占部分预算市场，如今涨价100美元(约合人民币681元)。不过，涨幅最大的还是搭载M3 Ultra的顶级Mac Studio，从3,999美元(约合人民币3万元)涨到了5,299美元(约合人民币4万元)，整整涨了1,300美元(约合人民币8853元)。",
-          "after": "从MacBook Neo到Apple Vision Pro，苹果官网上的产品价格全面上涨，后者的涨幅高达200美元（约合人民币1362元）。今年早些时候以599美元（约合人民币4079元）发售的MacBook Neo，旨在帮助苹果从低端Windows笔记本和Chromebook手中抢占部分预算市场，如今涨价100美元（约合人民币681元）。不过，涨幅最大的还是搭载M3 Ultra的顶级Mac Studio，从3,999美元（约合人民币3万元）涨到了5,299美元（约合人民币4万元），整整涨了1,300美元（约合人民币8853元）。"
-        },
-        {
-          "date": "2026-06-26",
-          "article_id": 24,
-          "before": "「去年10月，我们在美国已经将XBOX主机的价格上调了20至70美元(约合人民币136至477元)(约合136至477元)，」微软表示，「我们原本希望不必再次涨价，过去几个月也一直在与供应商商讨应对方案。不幸的是，主机存储与内存芯片价格已上涨超过2.5倍，而且我们预计到2027年秋季还会再翻一番。」",
-          "after": "「去年10月，我们在美国已经将XBOX主机的价格上调了20至70美元（约合人民币136至477元），」微软表示，「我们原本希望不必再次涨价，过去几个月也一直在与供应商商讨应对方案。不幸的是，主机存储与内存芯片价格已上涨超过2.5倍，而且我们预计到2027年秋季还会再翻一番。」"
-        }
-      ],
-      "feedback": [
-        {
-          "week_id": "2026-W23",
-          "text": "采纳，进入长期规则。",
-          "classified_as": "confirmed",
-          "created_at": "2026-06-04T06:38:24+08:00"
-        },
-        {
-          "week_id": "2026-W23",
-          "text": "采纳，进入长期规则。",
-          "classified_as": "confirmed",
-          "created_at": "2026-06-04T06:38:54+08:00"
-        },
-        {
-          "week_id": "2026-W23",
-          "text": "采纳，进入长期规则。",
-          "classified_as": "confirmed",
-          "created_at": "2026-06-04T06:39:36+08:00"
-        },
-        {
-          "week_id": "2026-W23",
-          "text": "采纳，进入长期规则。",
-          "classified_as": "confirmed",
-          "created_at": "2026-06-05T05:07:48+08:00"
-        },
-        {
-          "week_id": "2026-W23",
-          "text": "采纳，进入长期规则。",
-          "classified_as": "confirmed",
-          "created_at": "2026-06-06T04:56:39+08:00"
-        },
-        {
-          "week_id": "2026-W23",
-          "text": "采纳，进入长期规则。",
-          "classified_as": "confirmed",
-          "created_at": "2026-06-07T02:52:19+08:00"
-        }
-      ],
-      "created_at": "2026-06-03T16:03:40+08:00",
-      "last_seen": "2026-06-26",
-      "confidence": 0.93,
-      "latest_evidence_summary": "6/25-6/26 evidence: avoid CNY conversion clutter in titles; use fullwidth parentheses and dedupe conversions in body."
     },
     {
       "id": "use_live_exchange_rate_for_cny",
@@ -973,10 +1078,11 @@
       "scope": "games|movies_tv",
       "status": "pending",
       "days": [
+        "2026-05-30",
         "2026-06-24"
       ],
-      "days_seen": 1,
-      "articles_seen": 2,
+      "days_seen": 2,
+      "articles_seen": 3,
       "contradictions": 0,
       "examples": [
         {
@@ -990,13 +1096,19 @@
           "article_id": 34,
           "before": "?????2?",
           "after": "?????2?"
+        },
+        {
+          "date": "2026-05-30",
+          "article_id": 18,
+          "before": "Bungie与旗下知名科幻射击游戏《命运2》的问题始于去年夏天的「命运之刃」资料片——据报道该资料片表现不佳。关停的决定据称是在「今年早些时候」做出的，因为他们最终决定不以「Destiny Infinity」的名义重新启动该系列。",
+          "after": "Bungie与旗下知名科幻射击游戏《命运2》的问题始于去年夏天的《宿命边缘》资料片——据报道该资料片表现不佳。关停的决定据称是在「今年早些时候」做出的，因为他们最终决定不以《命运 Infinity》的名义重新启动该系列。"
         }
       ],
       "feedback": [],
       "created_at": "2026-06-25T21:53:01+08:00",
       "last_seen": "2026-06-24",
-      "confidence": 0.76,
-      "latest_evidence_summary": "6/24 ?????????2?????????? ???????????2????????2??"
+      "confidence": 0.78,
+      "latest_evidence_summary": "Backfilled 5/30 Destiny edits favor established Chinese names for expansions and franchise titles."
     },
     {
       "id": "subtitle_trim_generic_hook",

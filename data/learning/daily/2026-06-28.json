@@ -1,0 +1,56 @@
+{
+  "date": "2026-06-28",
+  "observer": "codex",
+  "model": "codex",
+  "status": "observed",
+  "source_hash": "codex-nightly-2026-06-28-4-articles",
+  "signal_count": 5,
+  "candidate_count": 0,
+  "signals": [
+    {
+      "article_ids": [
+        7
+      ],
+      "rule_id": "remove_redundant_title_prefixes",
+      "summary": "Article #7 removes the redundant PlayStation wrapper from the title."
+    },
+    {
+      "article_ids": [
+        1,
+        4,
+        10
+      ],
+      "rule_id": "subtitle_avoid_concrete_detail",
+      "summary": "Articles #1, #4, and #10 use short hook or quote-like subtitles."
+    },
+    {
+      "article_ids": [
+        4
+      ],
+      "rule_id": "prefer_confirmed_chinese_game_titles",
+      "summary": "Article #4 normalizes a game-related film mention to the established Chinese title."
+    },
+    {
+      "article_ids": [
+        1
+      ],
+      "rule_id": "remove_author_bio_and_image_credit",
+      "summary": "Article #1 removes the author bio and contact tail note."
+    },
+    {
+      "article_ids": [
+        4,
+        10
+      ],
+      "rule_id": "currency_conversion_refined",
+      "summary": "Articles #4 and #10 keep CNY conversions in full-width Chinese parentheses."
+    }
+  ],
+  "candidates": [],
+  "notes": [
+    "Imported 4 high-confidence Tencent polish files and generated diff_analysis.",
+    "Only existing confirmed/pending evidence was updated; no new formal rule was promoted.",
+    "No STYLE_PROFILE.md change: there was no new explicit weekly adoption feedback."
+  ],
+  "updated_at": "2026-06-29T22:41:39+08:00"
+}

@@ -917,10 +917,12 @@
         "2026-06-04",
         "2026-06-05",
         "2026-06-25",
-        "2026-06-26"
+        "2026-06-26",
+        "2026-06-28",
+        "2026-06-29"
       ],
-      "days_seen": 5,
-      "articles_seen": 9,
+      "days_seen": 7,
+      "articles_seen": 12,
       "contradictions": 0,
       "examples": [
         {
@@ -976,6 +978,24 @@
           "article_id": 24,
           "before": "「去年10月，我们在美国已经将XBOX主机的价格上调了20至70美元(约合人民币136至477元)(约合136至477元)，」微软表示，「我们原本希望不必再次涨价，过去几个月也一直在与供应商商讨应对方案。不幸的是，主机存储与内存芯片价格已上涨超过2.5倍，而且我们预计到2027年秋季还会再翻一番。」",
           "after": "「去年10月，我们在美国已经将XBOX主机的价格上调了20至70美元（约合人民币136至477元），」微软表示，「我们原本希望不必再次涨价，过去几个月也一直在与供应商商讨应对方案。不幸的是，主机存储与内存芯片价格已上涨超过2.5倍，而且我们预计到2027年秋季还会再翻一番。」"
+        },
+        {
+          "date": "2026-06-28",
+          "article_id": 4,
+          "before": "《玩具熊的五夜后宫3》尚未正式公布，但倘若获得绿灯也并不令人意外。前两部电影都取得了巨大成功，第一部迅速成为Blumhouse当时票房最高的影片，续集同样收获了相当可观的开画成绩。据Box Office Mojo数据，第一部全球票房达2.915亿美元(约合人民币20亿元)，第二部达到2.385亿美元(约合人民币16亿元)。",
+          "after": "《玩具熊的五夜后宫3》尚未正式公布，但倘若获得绿灯也并不令人意外。前两部电影都取得了巨大成功，第一部迅速成为Blumhouse当时票房最高的影片，续集同样收获了相当可观的开画成绩。据Box Office Mojo数据，第一部全球票房达2.915亿美元（约合人民币20亿元），第二部达到2.385亿美元（约合人民币16亿元）。"
+        },
+        {
+          "date": "2026-06-28",
+          "article_id": 10,
+          "before": "6月25日全面开启预购后，这款《侠盗猎车手》新作的加价转卖便已出现在eBay上。标准版零售价目前锁定在80美元(约合人民币545元)，一些黄牛成功以约90美元(约合人民币613元)转手，有的甚至更高。",
+          "after": "6月25日全面开启预购后，这款《GTA》新作的加价转卖便已出现在eBay上。标准版零售价目前锁定在80美元（约合人民币544元），一些黄牛成功以约90美元（约合人民币612元）转手，有的甚至更高。"
+        },
+        {
+          "date": "2026-06-29",
+          "article_id": 3,
+          "before": "诺兰没有点明他指的是哪些主流电影，但不可否认，他拥有一批铁杆粉丝，即便他拍出最离经叛道的作品也会捧场。2023年上映的《奥本海默》就是最近的例子，这部传记片讲述了原子弹之父J·罗伯特·奥本海默的真实故事，尽管采用非线性叙事且片长三小时，仍然斩获近10亿美元(约合人民币68亿元)的全球票房（数据来自Box Office Mojo）。",
+          "after": "诺兰没有点明他指的是哪些主流电影，但不可否认，他拥有一批铁杆粉丝，即便他拍出最离经叛道的作品也会捧场。2023年上映的《奥本海默》就是最近的例子，这部传记片讲述了原子弹之父J·罗伯特·奥本海默的真实故事，尽管采用非线性叙事且片长三小时，仍然斩获近10亿美元（约合人民币68亿元）的全球票房。"
         }
       ],
       "feedback": [
@@ -1017,9 +1037,9 @@
         }
       ],
       "created_at": "2026-06-03T16:03:40+08:00",
-      "last_seen": "2026-06-26",
+      "last_seen": "2026-06-29",
       "confidence": 0.93,
-      "latest_evidence_summary": "6/25-6/26 evidence: avoid CNY conversion clutter in titles; use fullwidth parentheses and dedupe conversions in body."
+      "latest_evidence_summary": "6/29 money edit keeps Chinese full-width parentheses for CNY conversion."
     },
     "remove_personal_commentary": {
       "id": "remove_personal_commentary",
@@ -1345,10 +1365,12 @@
         "2026-06-17",
         "2026-06-19",
         "2026-06-25",
-        "2026-06-26"
+        "2026-06-26",
+        "2026-06-28",
+        "2026-06-29"
       ],
-      "days_seen": 15,
-      "articles_seen": 17,
+      "days_seen": 17,
+      "articles_seen": 21,
       "contradictions": 0,
       "examples": [
         {
@@ -1452,6 +1474,30 @@
           "article_id": 26,
           "before": "说好的免费呢？",
           "after": "「附加费」"
+        },
+        {
+          "date": "2026-06-28",
+          "article_id": 1,
+          "before": "只有兑换码，没有盘",
+          "after": "「发售时不印，数月后也不会印」"
+        },
+        {
+          "date": "2026-06-28",
+          "article_id": 4,
+          "before": "新鲜血液",
+          "after": "添些新花样"
+        },
+        {
+          "date": "2026-06-28",
+          "article_id": 10,
+          "before": "黄牛狂喜",
+          "after": "乐当冤大头"
+        },
+        {
+          "date": "2026-06-29",
+          "article_id": 3,
+          "before": "求稳才是最大的风险",
+          "after": "「最大的风险就是求稳。」"
         }
       ],
       "feedback": [
@@ -1463,9 +1509,9 @@
         }
       ],
       "created_at": "2026-06-04T06:38:54+08:00",
-      "last_seen": "2026-06-26",
-      "confidence": 0.91,
-      "latest_evidence_summary": "Backfilled 5/30 subtitles add compact hooks: title context was trimmed to shorter reader-facing phrases."
+      "last_seen": "2026-06-29",
+      "confidence": 0.92,
+      "latest_evidence_summary": "6/29 Nolan subtitle uses a concise direct quote, reinforcing quote-like subtitle hooks."
     },
     "hex_color_no_space_before_punctuation": {
       "id": "hex_color_no_space_before_punctuation",
@@ -1510,10 +1556,11 @@
         "2026-06-18",
         "2026-06-25",
         "2026-06-26",
-        "2026-06-27"
+        "2026-06-27",
+        "2026-06-28"
       ],
-      "days_seen": 9,
-      "articles_seen": 10,
+      "days_seen": 10,
+      "articles_seen": 11,
       "contradictions": 0,
       "examples": [
         {
@@ -1575,6 +1622,12 @@
           "article_id": 4,
           "before": "Cade Onder是IGN新闻团队的自由撰稿人，报道游戏、电影等各类娱乐内容。你可以在Twitter @Cade_Onder上找到他。",
           "after": ""
+        },
+        {
+          "date": "2026-06-28",
+          "article_id": 1,
+          "before": "Wesley是IGN新闻总监。你可以在X上找到他：@wyp100。也可通过wesley_yinpoole@ign.com或保密邮箱wyp100@proton.me联系。",
+          "after": ""
         }
       ],
       "feedback": [
@@ -1586,9 +1639,9 @@
         }
       ],
       "created_at": "2026-06-12T17:45:36+08:00",
-      "last_seen": "2026-06-27",
+      "last_seen": "2026-06-28",
       "confidence": 0.97,
-      "latest_evidence_summary": "6/25-6/27 edits continue to remove author bios, emails, and social handles."
+      "latest_evidence_summary": "6/28 GTA6 polish again removes the author bio, social handle, and contact emails from the article tail."
     },
     "preserve_claim_attribution_and_modality": {
       "id": "preserve_claim_attribution_and_modality",
@@ -1736,10 +1789,11 @@
         "2026-06-11",
         "2026-06-12",
         "2026-06-25",
-        "2026-06-26"
+        "2026-06-26",
+        "2026-06-28"
       ],
-      "days_seen": 7,
-      "articles_seen": 11,
+      "days_seen": 8,
+      "articles_seen": 12,
       "contradictions": 0,
       "examples": [
         {
@@ -1807,6 +1861,12 @@
           "article_id": 10,
           "before": "《GTA6》Insomniac确认《金刚狼》实体版含光盘",
           "after": "Insomniac确认《漫威金刚狼》实体版含光盘"
+        },
+        {
+          "date": "2026-06-28",
+          "article_id": 7,
+          "before": "《PlayStation》索尼将删除PSN用户超550部数字电影",
+          "after": "索尼将删除PSN用户超550部数字电影"
         }
       ],
       "feedback": [
@@ -1818,9 +1878,9 @@
         }
       ],
       "created_at": "2026-06-12T17:45:36+08:00",
-      "last_seen": "2026-06-26",
-      "confidence": 0.92,
-      "latest_evidence_summary": "6/25-6/26 title edits keep the news subject and remove redundant brand/work wrappers."
+      "last_seen": "2026-06-28",
+      "confidence": 0.93,
+      "latest_evidence_summary": "6/28 PlayStation title removes the redundant platform wrapper while keeping the Sony/PSN subject clear."
     },
     "prefer_confirmed_chinese_game_titles": {
       "id": "prefer_confirmed_chinese_game_titles",
@@ -1839,10 +1899,11 @@
         "2026-06-18",
         "2026-06-25",
         "2026-06-26",
-        "2026-06-27"
+        "2026-06-27",
+        "2026-06-28"
       ],
-      "days_seen": 10,
-      "articles_seen": 16,
+      "days_seen": 11,
+      "articles_seen": 17,
       "contradictions": 1,
       "examples": [
         {
@@ -1904,6 +1965,12 @@
           "article_id": 4,
           "before": "《料理鼠王2》永远不会拍，导演布拉德·伯德确认",
           "after": "导演布拉德·伯德确认《美食总动员2》永远不会拍"
+        },
+        {
+          "date": "2026-06-28",
+          "article_id": 4,
+          "before": "Dauberman的作品履历包括2017年《小丑回魂》重启版及其续集，以及2014年的《安娜贝尔》。他还参与了《修女》和去年上映的《直到黎明》电影的编剧工作，并且已确认加盟即将推出的《街头霸王》和《地狱潜者》电影。",
+          "after": "Dauberman的作品履历包括2017年《小丑回魂》重启版及其续集，以及2014年的《安娜贝尔》。他还参与了《修女》和去年上映的《直到黎明》电影的编剧工作，并且已确认加盟即将推出的《街头霸王》和《绝地潜兵》电影。"
         }
       ],
       "feedback": [
@@ -1915,9 +1982,9 @@
         }
       ],
       "created_at": "2026-06-12T17:45:36+08:00",
-      "last_seen": "2026-06-27",
+      "last_seen": "2026-06-28",
       "confidence": 0.93,
-      "latest_evidence_summary": "6/25-6/27 edits continue to prefer established Chinese names for engines, games, and films.",
+      "latest_evidence_summary": "6/28 edit normalizes Helldivers to the established Chinese title ?????? in a movie-context mention.",
       "contradiction_notes": []
     },
     "retain_original_for_unconfirmed_names": {
@@ -2444,5 +2511,5 @@
       "latest_evidence_summary": "Backfilled 5/30 Destiny edits favor established Chinese names for expansions and franchise titles."
     }
   },
-  "updated_at": "2026-06-27T22:45:13+08:00"
+  "updated_at": "2026-06-29T22:41:39+08:00"
 }
