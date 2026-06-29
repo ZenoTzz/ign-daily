@@ -75,7 +75,7 @@
       "emoji": "🎮",
       "en_title": "Valve 'Would Love' a 'More Affordable' Steam Machine But Warns Changes Aren't Coming 'Any time Soon'",
       "cn_title": "Valve希望Steam Machine更亲民，但警告短期不会降价",
-      "summary": "Valve在接受Digital Foundry采访时表示，很乐意让Steam Machine更便宜，但由于AI驱动的RAM短缺预计至少持续到2027年，短期内降价无望。Steam Machine起售价1049美元(约合人民币7144元)(约合7553元人民币)，Valve工程师强调「越便宜越好」，但也坦言无法承诺近期实现。",
+      "summary": "Valve在接受Digital Foundry采访时表示，很乐意让Steam Machine更便宜，但由于AI驱动的RAM短缺预计至少持续到2027年，短期内降价无望。Steam Machine起售价1049美元(约合人民币7133元)(约合7553元人民币)，Valve工程师强调「越便宜越好」，但也坦言无法承诺近期实现。",
       "url": "https://www.ign.com/articles/valve-would-love-a-more-affordable-steam-machine-but-warns-changes-arent-coming-any-time-soon",
       "publish_time_cn": "2026-06-27 05:05",
       "pub_date": "2026-06-27 05:05",
@@ -171,8 +171,8 @@
       "url": "https://www.ign.com/articles/cyberpunk-edgerunners-was-a-tearjerker-but-one-writer-says-it-almost-had-even-worse-endings",
       "publish_time_cn": "2026-06-27 00:53",
       "pub_date": "2026-06-27 00:53",
-      "cover_image": "https://assets-prd.ignimgs.com/2022/08/30/cyberpunk-edgerunners-season1-episode2-00-21-37-03-1661882631727.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2022/08/30/cyberpunk-edgerunners-season1-episode2-00-21-37-03-1661882631727.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2022/08/30/cyberpunk-edgerunners-season1-episode2-00-21-37-03-1661882631727.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2022/08/30/cyberpunk-edgerunners-season1-episode2-00-21-37-03-1661882631727.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -197,7 +197,11 @@
           "source": "ai_guess",
           "reason": "无统一中文译名，保留英文"
         }
-      ]
+      ],
+      "translation_path": "translations/24.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro"
     },
     {
       "id": 19,
@@ -332,7 +336,7 @@
       "emoji": "😱",
       "en_title": "Retailers Are Issuing Console Shortage Warnings Ahead of GTA 6, and Now I'm Worried Scalpers Are Going to Have a Field Day This Christmas",
       "cn_title": "《GTA6》将至，零售商警告主机短缺，黄牛或趁机大赚",
-      "summary": "一家大型零售商警告称，随着11月《GTA6》发售，PS5和XBOX Series主机可能面临供应短缺，引发对黄牛趁圣诞节抬价的担忧。当前内存危机导致主机成本飙升，索尼和微软均已上调售价：PS5目前售价649.99美元(约合人民币4426元)(约合4680元人民币)，PS5数字版599.99美元(约合人民币4086元)(约合4320元人民币)，PS5 Pro更是高达899.99美元(约合人民币6129元)(约合6480元人民币)。微软宣布XBOX Series将于8月1日再次涨价，而索尼也可能在年内进一步调价。",
+      "summary": "一家大型零售商警告称，随着11月《GTA6》发售，PS5和XBOX Series主机可能面临供应短缺，引发对黄牛趁圣诞节抬价的担忧。当前内存危机导致主机成本飙升，索尼和微软均已上调售价：PS5目前售价649.99美元(约合人民币4420元)(约合4680元人民币)，PS5数字版599.99美元(约合人民币4080元)(约合4320元人民币)，PS5 Pro更是高达899.99美元(约合人民币6120元)(约合6480元人民币)。微软宣布XBOX Series将于8月1日再次涨价，而索尼也可能在年内进一步调价。",
       "url": "https://www.ign.com/articles/retailers-are-issuing-console-shortage-warnings-ahead-of-gta-6-and-now-im-worried-scalpers-are-going-to-have-a-field-day-this-christmas",
       "publish_time_cn": "2026-06-26 23:01",
       "pub_date": "2026-06-26 23:01",
@@ -500,7 +504,7 @@
       "emoji": "💰",
       "en_title": "IGN Poll Reveals 70% Plan to Buy the GTA 6 Ultimate Edition Over the Standard Edition",
       "cn_title": "IGN民调：七成玩家计划购买《GTA6》终极版",
-      "summary": "IGN最新民调显示，70.7%的玩家计划购买售价100美元(约合人民币681元)(约合720元)的《GTA6》终极版，仅29.3%选择80美元(约合人民币545元)(约合576元)的标准版。终极版包含专属商店和独占任务，引发了游戏是否实质成为首个100美元(约合人民币681元)游戏的讨论。",
+      "summary": "IGN最新民调显示，70.7%的玩家计划购买售价100美元(约合人民币680元)(约合720元)的《GTA6》终极版，仅29.3%选择80美元(约合人民币544元)(约合576元)的标准版。终极版包含专属商店和独占任务，引发了游戏是否实质成为首个100美元(约合人民币680元)游戏的讨论。",
       "url": "https://www.ign.com/articles/ign-poll-reveals-70-plan-to-buy-the-gta-6-ultimate-edition-over-the-standard-edition-which-begs-the-question-is-gta-6-effectively-the-first-100-video-game",
       "publish_time_cn": "2026-06-26 21:03",
       "pub_date": "2026-06-26 21:03",
@@ -631,7 +635,7 @@
       "emoji": "🎮",
       "en_title": "PlayStation Boss Says New Console Experiences Will Involve 'Leveraging Technologies That Can Be Used in Various Forms and Locations' — and I'm Convinced He's Teasing a PS6 Handheld",
       "cn_title": "《PlayStation》索尼CEO暗示PS6掌机：将利用可在多种形式下使用的技术",
-      "summary": "索尼互动娱乐CEO西野秀明在接受《Fami通》采访时暗示，未来PlayStation新主机体验将涉及「利用可在多种形式和地点使用的技术」，外界普遍认为这是在暗示PS6掌机。西野强调「即拿即玩」是当前主机最重要的特性，并提到PlayStation Portal云串流服务用户数增长迅速。此外，随着Valve的Steam Machine起售价高达1050美元(约合人民币7150元)(约合7560元人民币)，内存厂商预计PS6等下一代主机可能超过1000美元(约合人民币6810元)(约合7200元人民币)，索尼或推迟发售以规避过高定价。",
+      "summary": "索尼互动娱乐CEO西野秀明在接受《Fami通》采访时暗示，未来PlayStation新主机体验将涉及「利用可在多种形式和地点使用的技术」，外界普遍认为这是在暗示PS6掌机。西野强调「即拿即玩」是当前主机最重要的特性，并提到PlayStation Portal云串流服务用户数增长迅速。此外，随着Valve的Steam Machine起售价高达1050美元(约合人民币7140元)(约合7560元人民币)，内存厂商预计PS6等下一代主机可能超过1000美元(约合人民币6800元)(约合7200元人民币)，索尼或推迟发售以规避过高定价。",
       "url": "https://www.ign.com/articles/playstation-boss-says-new-console-experiences-will-involve-leveraging-technologies-that-can-be-used-in-various-forms-and-locations-and-im-convinced-hes-teasing-a-ps6-handheld",
       "publish_time_cn": "2026-06-26 18:16",
       "pub_date": "2026-06-26 18:16",

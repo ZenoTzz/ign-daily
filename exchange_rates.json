@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-29 08:31:57 +08:00",
+  "updated_at": "2026-06-29 09:22:26 +08:00",
   "source": "multi-source median",
   "base": "USD",
   "rates_to_cny": {
@@ -18,32 +18,32 @@
       "USD": {
         "source_count": 4,
         "median_raw": 6.79948,
-        "max_cross_source_deviation": 0.001718,
+        "max_cross_source_deviation": 0.000625,
         "previous_deviation": 7.7e-05
       },
       "EUR": {
         "source_count": 4,
-        "median_raw": 7.747734,
-        "max_cross_source_deviation": 0.00125,
-        "previous_deviation": 0.000292
+        "median_raw": 7.74591,
+        "max_cross_source_deviation": 0.000605,
+        "previous_deviation": 0.000528
       },
       "JPY_100": {
         "source_count": 4,
         "median_raw": 4.204502,
-        "max_cross_source_deviation": 0.001783,
-        "previous_deviation": 0.001306
+        "max_cross_source_deviation": 0.000329,
+        "previous_deviation": 0.001072
       },
       "GBP": {
         "source_count": 4,
-        "median_raw": 8.979437,
-        "max_cross_source_deviation": 0.001465,
-        "previous_deviation": 0.001175
+        "median_raw": 8.97625,
+        "max_cross_source_deviation": 0.001076,
+        "previous_deviation": 0.000418
       },
       "KRW_100": {
         "source_count": 4,
-        "median_raw": 0.442603,
-        "max_cross_source_deviation": 0.001566,
-        "previous_deviation": 0.005916
+        "median_raw": 0.442602,
+        "max_cross_source_deviation": 0.00033,
+        "previous_deviation": 0.005914
       }
     },
     "sources": [
@@ -51,11 +51,11 @@
         "name": "open-er-api",
         "url": "https://open.er-api.com/v6/latest/USD",
         "rates_to_cny": {
-          "USD": 6.81116,
-          "EUR": 7.757418,
-          "JPY_100": 4.211998,
-          "GBP": 8.992592,
-          "KRW_100": 0.443296
+          "USD": 6.803731,
+          "EUR": 7.746945,
+          "JPY_100": 4.205885,
+          "GBP": 8.979535,
+          "KRW_100": 0.442723
         }
       },
       {
