@@ -240,6 +240,30 @@
       "total_tokens_including_reasoning": 10154,
       "prompt_cache_hit_tokens": 8320,
       "prompt_cache_miss_tokens": 634
+    },
+    {
+      "time_cn": "2026-06-30 00:46:33",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 23,
+      "article_title": "Deltarune Chapter 5 Was Not What I Was Expecting and That’s Fantastic",
+      "article_url": "https://www.ign.com/articles/deltarune-chapter-5-was-not-what-i-was-expecting-and-thats-fantastic",
+      "article_date": "2026-06-30",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00045562,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 10434,
+      "completion_tokens": 296,
+      "reasoning_tokens": 191,
+      "output_tokens_including_reasoning": 487,
+      "total_tokens": 10730,
+      "total_tokens_including_reasoning": 10921,
+      "prompt_cache_hit_tokens": 8320,
+      "prompt_cache_miss_tokens": 2114
     }
   ]
 }
