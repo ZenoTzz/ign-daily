@@ -138,7 +138,39 @@
           "reason": "无官方中文名，根据双关语境译"
         }
       ]
+    },
+    {
+      "id": 6,
+      "category": "游戏新闻",
+      "emoji": "🎮",
+      "en_title": "Five of the Hottest Games From Summer of Gaming 2026",
+      "cn_title": "2026夏季游戏节最热五款新游盘点",
+      "summary": "2026年夏季游戏节带来多款重磅新游。五款最受期待的作品包括：《最终幻想7：启示录》（2027年春发售），《战争机器：事变日》（2026年10月6日登陆XBOX Game Pass），回归纯粹乐趣的《Stuntman Hollywood》，以劳菲为主角的《战神：劳菲》，以及任天堂完全重制的《塞尔达传说 时之笛》（2026年内发售）。",
+      "url": "https://www.ign.com/articles/five-of-the-hottest-games-from-summer-of-gaming-2026",
+      "publish_time_cn": "2026-06-29 09:55",
+      "pub_date": "2026-06-29 09:55",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/10/zelda-oot-remake-blogroll-1781102895395.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/10/zelda-oot-remake-blogroll-1781102895395.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/10/zelda-oot-remake-blogroll-1781102895395.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/10/zelda-oot-remake-blogroll-1781102895395.jpg?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/10/zelda-oot-remake-blogroll-1781102895395.jpg?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/10/zelda-oot-remake-blogroll-1781102895395.jpg",
+        "https://assets-prd.ignimgs.com/2026/06/29/screenshot-2026-06-29-at-10-44-51-am-1782693978314.png"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-06-29T14:24:21+08:00",
+      "pending_dict": [
+        {
+          "en": "Stuntman Hollywood",
+          "cn": "特技演员好莱坞",
+          "cat": "games",
+          "source": "ai_guess",
+          "reason": "无官方中文译名，社区通常用《特技演员：好莱坞》或保留英文，需确认。"
+        }
+      ]
     }
   ],
-  "total": 5
+  "total": 6
 }
