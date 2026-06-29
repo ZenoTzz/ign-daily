@@ -552,6 +552,126 @@
       "total_tokens_including_reasoning": 10846,
       "prompt_cache_hit_tokens": 8320,
       "prompt_cache_miss_tokens": 1328
+    },
+    {
+      "time_cn": "2026-06-29 19:49:45",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 8,
+      "article_title": "Fallout: New Vegas Director Says Amazon's Fallout Show Is 'One of the Best Adaptations of a Video Game Franchise' — and No, He Isn't Bothered by Dinky Facing the Wrong Way",
+      "article_url": "https://www.ign.com/articles/fallout-new-vegas-director-says-amazons-fallout-show-is-one-of-the-best-adaptations-of-a-video-game-franchise-and-no-he-isnt-bothered-by-dinky-facing-the-wrong-way",
+      "article_date": "2026-06-30",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00038674,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9794,
+      "completion_tokens": 356,
+      "reasoning_tokens": 205,
+      "output_tokens_including_reasoning": 561,
+      "total_tokens": 10150,
+      "total_tokens_including_reasoning": 10355,
+      "prompt_cache_hit_tokens": 8320,
+      "prompt_cache_miss_tokens": 1474
+    },
+    {
+      "time_cn": "2026-06-29 19:49:55",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 9,
+      "article_title": "With the Threat of Layoffs Looming, Quantic Dream Staff Say They're Going on Strike to Save Star Wars Eclipse From Cancelation",
+      "article_url": "https://www.ign.com/articles/with-the-threat-of-layoffs-looming-quantic-dream-staff-say-theyre-going-on-strike-to-save-star-wars-eclipse-from-cancelation",
+      "article_date": "2026-06-30",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00050434,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9576,
+      "completion_tokens": 620,
+      "reasoning_tokens": 470,
+      "output_tokens_including_reasoning": 1090,
+      "total_tokens": 10196,
+      "total_tokens_including_reasoning": 10666,
+      "prompt_cache_hit_tokens": 8320,
+      "prompt_cache_miss_tokens": 1256
+    },
+    {
+      "time_cn": "2026-06-29 19:50:11",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 10,
+      "article_title": "The Social Network Star Jesse Eisenberg Says Turning Down Aaron Sorkin's Offer to Reprise Role as Mark Zuckerberg 'Feels Almost Like You're Letting Down America'",
+      "article_url": "https://www.ign.com/articles/the-social-network-star-jesse-eisenberg-says-turning-down-aaron-sorkins-offer-to-reprise-role-as-mark-zuckerberg-feels-almost-like-youre-letting-down-america",
+      "article_date": "2026-06-30",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00077678,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9188,
+      "completion_tokens": 1258,
+      "reasoning_tokens": 999,
+      "output_tokens_including_reasoning": 2257,
+      "total_tokens": 10446,
+      "total_tokens_including_reasoning": 11445,
+      "prompt_cache_hit_tokens": 8320,
+      "prompt_cache_miss_tokens": 868
+    },
+    {
+      "time_cn": "2026-06-29 19:50:22",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 11,
+      "article_title": "Hideo Kojima and More Pay Tribute to Akihiro Miwa, the Iconic Japanese Singer and Actor Behind Wolf Goddess Moro in Princess Mononoke, Who Has Died Aged 91",
+      "article_url": "https://www.ign.com/articles/hideo-kojima-and-more-pay-tribute-to-akihiro-miwa-the-iconic-japanese-singer-and-actor-behind-wolf-goddess-moro-in-princess-mononoke-who-has-died-aged-91",
+      "article_date": "2026-06-30",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00062376,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9671,
+      "completion_tokens": 805,
+      "reasoning_tokens": 664,
+      "output_tokens_including_reasoning": 1469,
+      "total_tokens": 10476,
+      "total_tokens_including_reasoning": 11140,
+      "prompt_cache_hit_tokens": 8320,
+      "prompt_cache_miss_tokens": 1351
+    },
+    {
+      "time_cn": "2026-06-29 19:50:36",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 12,
+      "article_title": "Marvel Tōkon: Fighting Souls Reveals Last 3 Playable Characters — and a Blink-and-You’ll-Miss-It Look at a PlayStation Icon",
+      "article_url": "https://www.ign.com/articles/marvel-tokon-fighting-souls-reveals-last-3-playable-characters-and-a-blink-and-youll-miss-it-look-at-a-playstation-icon",
+      "article_date": "2026-06-30",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00067584,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9155,
+      "completion_tokens": 1073,
+      "reasoning_tokens": 840,
+      "output_tokens_including_reasoning": 1913,
+      "total_tokens": 10228,
+      "total_tokens_including_reasoning": 11068,
+      "prompt_cache_hit_tokens": 8320,
+      "prompt_cache_miss_tokens": 835
     }
   ]
 }

@@ -10,39 +10,127 @@
   "new_target_dates": [
     "2026-06-30"
   ],
-  "new_count": 1,
-  "filtered_count": 0,
+  "new_count": 5,
+  "filtered_count": 1,
   "cleanup_count": 0,
-  "changed_count": 1,
+  "changed_count": 6,
   "articles": [
     {
-      "title": "Dead or Alive 6 Last Round Pummeled by Negative Reviews as Koei Tecmo Asks Players to Rebuy DLC",
-      "url": "https://www.ign.com/articles/dead-or-alive-6-last-round-pummeled-by-negative-reviews-as-koei-tecmo-asks-players-to-rebuy-dlc",
-      "pubDate_cst": "2026-06-29 14:50",
-      "category": "游戏评测",
-      "emoji": "⭐",
+      "title": "Fallout: New Vegas Director Says Amazon's Fallout Show Is 'One of the Best Adaptations of a Video Game Franchise' — and No, He Isn't Bothered by Dinky Facing the Wrong Way",
+      "url": "https://www.ign.com/articles/fallout-new-vegas-director-says-amazons-fallout-show-is-one-of-the-best-adaptations-of-a-video-game-franchise-and-no-he-isnt-bothered-by-dinky-facing-the-wrong-way",
+      "pubDate_cst": "2026-06-29 19:33",
+      "category": "游戏新闻",
+      "emoji": "🎮",
+      "source_type": "rss"
+    },
+    {
+      "title": "With the Threat of Layoffs Looming, Quantic Dream Staff Say They're Going on Strike to Save Star Wars Eclipse From Cancelation",
+      "url": "https://www.ign.com/articles/with-the-threat-of-layoffs-looming-quantic-dream-staff-say-theyre-going-on-strike-to-save-star-wars-eclipse-from-cancelation",
+      "pubDate_cst": "2026-06-29 18:35",
+      "category": "游戏新闻",
+      "emoji": "🎮",
+      "source_type": "rss"
+    },
+    {
+      "title": "The Social Network Star Jesse Eisenberg Says Turning Down Aaron Sorkin's Offer to Reprise Role as Mark Zuckerberg 'Feels Almost Like You're Letting Down America'",
+      "url": "https://www.ign.com/articles/the-social-network-star-jesse-eisenberg-says-turning-down-aaron-sorkins-offer-to-reprise-role-as-mark-zuckerberg-feels-almost-like-youre-letting-down-america",
+      "pubDate_cst": "2026-06-29 17:47",
+      "category": "游戏新闻",
+      "emoji": "🎮",
+      "source_type": "rss"
+    },
+    {
+      "title": "Hideo Kojima and More Pay Tribute to Akihiro Miwa, the Iconic Japanese Singer and Actor Behind Wolf Goddess Moro in Princess Mononoke, Who Has Died Aged 91",
+      "url": "https://www.ign.com/articles/hideo-kojima-and-more-pay-tribute-to-akihiro-miwa-the-iconic-japanese-singer-and-actor-behind-wolf-goddess-moro-in-princess-mononoke-who-has-died-aged-91",
+      "pubDate_cst": "2026-06-29 16:49",
+      "category": "游戏新闻",
+      "emoji": "🎮",
+      "source_type": "rss"
+    },
+    {
+      "title": "Marvel Tōkon: Fighting Souls Reveals Last 3 Playable Characters — and a Blink-and-You’ll-Miss-It Look at a PlayStation Icon",
+      "url": "https://www.ign.com/articles/marvel-tokon-fighting-souls-reveals-last-3-playable-characters-and-a-blink-and-youll-miss-it-look-at-a-playstation-icon",
+      "pubDate_cst": "2026-06-29 16:39",
+      "category": "游戏新闻",
+      "emoji": "🎮",
       "source_type": "rss"
     }
   ],
-  "filtered_articles": [],
+  "filtered_articles": [
+    {
+      "title": "Nintendo Has Added Even More Deals to Its 2026 Summer Sale — We've Picked Out the Best",
+      "url": "https://www.ign.com/articles/nintendo-switch-summer-sale-best-deals-2026",
+      "pubDate_cst": "2026-06-29 19:33",
+      "description": "Our resident shopping experts have curated the 10 best Switch 2 console, games, and accessory deals for Nintendo's 2026 summer sale.",
+      "categories": "",
+      "reason": "text:\\bbest .+ deals?\\b",
+      "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
+      "filtered_at_cn": "2026-06-29 19:49:27",
+      "status": "filtered"
+    }
+  ],
   "runs": [
     {
       "target_date": "2026-06-30",
-      "new_count": 1,
-      "filtered_count": 0,
-      "changed_count": 1,
-      "next_id": 8,
+      "new_count": 5,
+      "filtered_count": 1,
+      "changed_count": 6,
+      "next_id": 13,
       "articles": [
         {
-          "title": "Dead or Alive 6 Last Round Pummeled by Negative Reviews as Koei Tecmo Asks Players to Rebuy DLC",
-          "url": "https://www.ign.com/articles/dead-or-alive-6-last-round-pummeled-by-negative-reviews-as-koei-tecmo-asks-players-to-rebuy-dlc",
-          "pubDate_cst": "2026-06-29 14:50",
-          "category": "游戏评测",
-          "emoji": "⭐",
+          "title": "Fallout: New Vegas Director Says Amazon's Fallout Show Is 'One of the Best Adaptations of a Video Game Franchise' — and No, He Isn't Bothered by Dinky Facing the Wrong Way",
+          "url": "https://www.ign.com/articles/fallout-new-vegas-director-says-amazons-fallout-show-is-one-of-the-best-adaptations-of-a-video-game-franchise-and-no-he-isnt-bothered-by-dinky-facing-the-wrong-way",
+          "pubDate_cst": "2026-06-29 19:33",
+          "category": "游戏新闻",
+          "emoji": "🎮",
+          "source_type": "rss"
+        },
+        {
+          "title": "With the Threat of Layoffs Looming, Quantic Dream Staff Say They're Going on Strike to Save Star Wars Eclipse From Cancelation",
+          "url": "https://www.ign.com/articles/with-the-threat-of-layoffs-looming-quantic-dream-staff-say-theyre-going-on-strike-to-save-star-wars-eclipse-from-cancelation",
+          "pubDate_cst": "2026-06-29 18:35",
+          "category": "游戏新闻",
+          "emoji": "🎮",
+          "source_type": "rss"
+        },
+        {
+          "title": "The Social Network Star Jesse Eisenberg Says Turning Down Aaron Sorkin's Offer to Reprise Role as Mark Zuckerberg 'Feels Almost Like You're Letting Down America'",
+          "url": "https://www.ign.com/articles/the-social-network-star-jesse-eisenberg-says-turning-down-aaron-sorkins-offer-to-reprise-role-as-mark-zuckerberg-feels-almost-like-youre-letting-down-america",
+          "pubDate_cst": "2026-06-29 17:47",
+          "category": "游戏新闻",
+          "emoji": "🎮",
+          "source_type": "rss"
+        },
+        {
+          "title": "Hideo Kojima and More Pay Tribute to Akihiro Miwa, the Iconic Japanese Singer and Actor Behind Wolf Goddess Moro in Princess Mononoke, Who Has Died Aged 91",
+          "url": "https://www.ign.com/articles/hideo-kojima-and-more-pay-tribute-to-akihiro-miwa-the-iconic-japanese-singer-and-actor-behind-wolf-goddess-moro-in-princess-mononoke-who-has-died-aged-91",
+          "pubDate_cst": "2026-06-29 16:49",
+          "category": "游戏新闻",
+          "emoji": "🎮",
+          "source_type": "rss"
+        },
+        {
+          "title": "Marvel Tōkon: Fighting Souls Reveals Last 3 Playable Characters — and a Blink-and-You’ll-Miss-It Look at a PlayStation Icon",
+          "url": "https://www.ign.com/articles/marvel-tokon-fighting-souls-reveals-last-3-playable-characters-and-a-blink-and-youll-miss-it-look-at-a-playstation-icon",
+          "pubDate_cst": "2026-06-29 16:39",
+          "category": "游戏新闻",
+          "emoji": "🎮",
           "source_type": "rss"
         }
       ],
-      "filtered_articles": []
+      "filtered_articles": [
+        {
+          "title": "Nintendo Has Added Even More Deals to Its 2026 Summer Sale — We've Picked Out the Best",
+          "url": "https://www.ign.com/articles/nintendo-switch-summer-sale-best-deals-2026",
+          "pubDate_cst": "2026-06-29 19:33",
+          "description": "Our resident shopping experts have curated the 10 best Switch 2 console, games, and accessory deals for Nintendo's 2026 summer sale.",
+          "categories": "",
+          "reason": "text:\\bbest .+ deals?\\b",
+          "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
+          "filtered_at_cn": "2026-06-29 19:49:27",
+          "status": "filtered"
+        }
+      ]
     },
     {
       "target_date": "2026-06-29",
