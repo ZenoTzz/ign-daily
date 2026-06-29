@@ -1152,6 +1152,78 @@
       "total_tokens_including_reasoning": 11451,
       "prompt_cache_hit_tokens": 8320,
       "prompt_cache_miss_tokens": 1042
+    },
+    {
+      "time_cn": "2026-06-30 06:00:36",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 29,
+      "article_title": "The 10 Most Anticipated TV Shows to Stream in July",
+      "article_url": "https://www.ign.com/articles/most-anticipated-tv-shows-to-stream-in-july-2026",
+      "article_date": "2026-06-30",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00079848,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 10543,
+      "completion_tokens": 895,
+      "reasoning_tokens": 762,
+      "output_tokens_including_reasoning": 1657,
+      "total_tokens": 11438,
+      "total_tokens_including_reasoning": 12200,
+      "prompt_cache_hit_tokens": 8320,
+      "prompt_cache_miss_tokens": 2223
+    },
+    {
+      "time_cn": "2026-06-30 06:00:45",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 30,
+      "article_title": "Why The Back-to-Back Street Fighter 6 Evo Champion, MenaRD, Switched Off His Main in the Finals",
+      "article_url": "https://www.ign.com/articles/why-the-back-to-back-street-fighter-6-evo-champion-menard-switched-off-his-main-in-the-finals",
+      "article_date": "2026-06-30",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00045716,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9157,
+      "completion_tokens": 648,
+      "reasoning_tokens": 483,
+      "output_tokens_including_reasoning": 1131,
+      "total_tokens": 9805,
+      "total_tokens_including_reasoning": 10288,
+      "prompt_cache_hit_tokens": 8320,
+      "prompt_cache_miss_tokens": 837
+    },
+    {
+      "time_cn": "2026-06-30 06:00:51",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 31,
+      "article_title": "'We're Done Paying for Executives' Failures' — Unionized Xbox Developers Hold Press Conference to Make Their Point as Microsoft Reportedly Readies Massive Layoffs",
+      "article_url": "https://www.ign.com/articles/were-done-paying-for-executives-failures-unionized-xbox-developers-hold-press-conference-to-make-their-point-as-microsoft-reportedly-readies-massive-layoffs",
+      "article_date": "2026-06-30",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00039738,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9852,
+      "completion_tokens": 351,
+      "reasoning_tokens": 219,
+      "output_tokens_including_reasoning": 570,
+      "total_tokens": 10203,
+      "total_tokens_including_reasoning": 10422,
+      "prompt_cache_hit_tokens": 8320,
+      "prompt_cache_miss_tokens": 1532
     }
   ]
 }

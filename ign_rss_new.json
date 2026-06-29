@@ -10,63 +10,71 @@
   "new_target_dates": [
     "2026-06-30"
   ],
-  "new_count": 1,
-  "filtered_count": 1,
+  "new_count": 3,
+  "filtered_count": 0,
   "cleanup_count": 0,
-  "changed_count": 2,
+  "changed_count": 3,
   "articles": [
     {
-      "title": "Box Office Disaster Supergirl Could Reportedly Lose Warner Bros. $100 Million During Its Theatrical Run",
-      "url": "https://www.ign.com/articles/box-office-disaster-supergirl-could-reportedly-lose-warner-bros-100-million-during-its-theatrical-run",
-      "pubDate_cst": "2026-06-30 03:49",
+      "title": "The 10 Most Anticipated TV Shows to Stream in July",
+      "url": "https://www.ign.com/articles/most-anticipated-tv-shows-to-stream-in-july-2026",
+      "pubDate_cst": "2026-06-30 05:34",
+      "category": "游戏新闻",
+      "emoji": "🎮",
+      "source_type": "rss"
+    },
+    {
+      "title": "Why The Back-to-Back Street Fighter 6 Evo Champion, MenaRD, Switched Off His Main in the Finals",
+      "url": "https://www.ign.com/articles/why-the-back-to-back-street-fighter-6-evo-champion-menard-switched-off-his-main-in-the-finals",
+      "pubDate_cst": "2026-06-30 05:04",
+      "category": "游戏新闻",
+      "emoji": "🎮",
+      "source_type": "rss"
+    },
+    {
+      "title": "'We're Done Paying for Executives' Failures' — Unionized Xbox Developers Hold Press Conference to Make Their Point as Microsoft Reportedly Readies Massive Layoffs",
+      "url": "https://www.ign.com/articles/were-done-paying-for-executives-failures-unionized-xbox-developers-hold-press-conference-to-make-their-point-as-microsoft-reportedly-readies-massive-layoffs",
+      "pubDate_cst": "2026-06-30 04:49",
       "category": "游戏新闻",
       "emoji": "🎮",
       "source_type": "rss"
     }
   ],
-  "filtered_articles": [
-    {
-      "title": "Today’s Best Deals: Switch 2 Memory Card, Resident Evil Requiem, MTG x Marvel, and More",
-      "url": "https://www.ign.com/articles/best-deals-for-june-29-2026",
-      "pubDate_cst": "2026-06-30 02:11",
-      "description": "Plus, don’t miss Nintendo’s Summer Sale, Square Enix game deals, and 50% Criterion Collection films.",
-      "categories": "",
-      "reason": "text:\\bbest .+ deals?\\b",
-      "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
-      "filtered_at_cn": "2026-06-30 04:32:15",
-      "status": "filtered"
-    }
-  ],
+  "filtered_articles": [],
   "runs": [
     {
       "target_date": "2026-06-30",
-      "new_count": 1,
-      "filtered_count": 1,
-      "changed_count": 2,
-      "next_id": 29,
+      "new_count": 3,
+      "filtered_count": 0,
+      "changed_count": 3,
+      "next_id": 32,
       "articles": [
         {
-          "title": "Box Office Disaster Supergirl Could Reportedly Lose Warner Bros. $100 Million During Its Theatrical Run",
-          "url": "https://www.ign.com/articles/box-office-disaster-supergirl-could-reportedly-lose-warner-bros-100-million-during-its-theatrical-run",
-          "pubDate_cst": "2026-06-30 03:49",
+          "title": "The 10 Most Anticipated TV Shows to Stream in July",
+          "url": "https://www.ign.com/articles/most-anticipated-tv-shows-to-stream-in-july-2026",
+          "pubDate_cst": "2026-06-30 05:34",
+          "category": "游戏新闻",
+          "emoji": "🎮",
+          "source_type": "rss"
+        },
+        {
+          "title": "Why The Back-to-Back Street Fighter 6 Evo Champion, MenaRD, Switched Off His Main in the Finals",
+          "url": "https://www.ign.com/articles/why-the-back-to-back-street-fighter-6-evo-champion-menard-switched-off-his-main-in-the-finals",
+          "pubDate_cst": "2026-06-30 05:04",
+          "category": "游戏新闻",
+          "emoji": "🎮",
+          "source_type": "rss"
+        },
+        {
+          "title": "'We're Done Paying for Executives' Failures' — Unionized Xbox Developers Hold Press Conference to Make Their Point as Microsoft Reportedly Readies Massive Layoffs",
+          "url": "https://www.ign.com/articles/were-done-paying-for-executives-failures-unionized-xbox-developers-hold-press-conference-to-make-their-point-as-microsoft-reportedly-readies-massive-layoffs",
+          "pubDate_cst": "2026-06-30 04:49",
           "category": "游戏新闻",
           "emoji": "🎮",
           "source_type": "rss"
         }
       ],
-      "filtered_articles": [
-        {
-          "title": "Today’s Best Deals: Switch 2 Memory Card, Resident Evil Requiem, MTG x Marvel, and More",
-          "url": "https://www.ign.com/articles/best-deals-for-june-29-2026",
-          "pubDate_cst": "2026-06-30 02:11",
-          "description": "Plus, don’t miss Nintendo’s Summer Sale, Square Enix game deals, and 50% Criterion Collection films.",
-          "categories": "",
-          "reason": "text:\\bbest .+ deals?\\b",
-          "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
-          "filtered_at_cn": "2026-06-30 04:32:15",
-          "status": "filtered"
-        }
-      ]
+      "filtered_articles": []
     },
     {
       "target_date": "2026-06-29",
