@@ -67,13 +67,13 @@
       "category": "行业动态",
       "emoji": "🎮",
       "en_title": "Will PS6 Be Like a Nintendo Switch? Sony Says Its Next-Gen Console Will Enable 'A Seamless Experience That Can Be Enjoyed Naturally Beyond the Living Room'",
-      "cn_title": "《任天堂》索尼暗示PS6或效仿Switch实现无缝体验",
-      "summary": "索尼互动娱乐总裁西野秀明在问答中表示，下一代平台将打破「PlayStation等于客厅」的固有认知，通过技术升级和使用方式扩展，实现「客厅之外的自然无缝体验」。外界猜测这可能意味着PS6将效仿Switch成为混合主机。此外，PS Portal的云流媒体功能也可能成为低价选项。微软则已承诺推出超强主机Project Helix。",
+      "cn_title": "《任天堂》索尼：PS6将实现客厅之外的无缝体验",
+      "summary": "索尼互动娱乐总裁西野秀明在问答中透露，下一代PlayStation将提供「客厅之外的无缝体验」，外界猜测PS6或推出类似Switch的混合便携形态。",
       "url": "https://www.ign.com/articles/will-ps6-be-like-a-nintendo-switch-sony-says-its-next-gen-console-will-enable-a-seamless-experience-that-can-be-enjoyed-naturally-beyond-the-living-room",
       "publish_time_cn": "2026-06-29 22:56",
       "pub_date": "2026-06-29 22:56",
       "cover_image": "https://assets-prd.ignimgs.com/2023/08/23/playstationportalhandson-36190303-playstationq-thumbnail-1692760353361.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2023/08/23/playstationportalhandson-36190303-playstationq-thumbnail-1692760353361.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/04/17/ps5-slim-refurb-1776424110936.png",
@@ -83,7 +83,13 @@
         "https://assets-prd.ignimgs.com/2023/08/23/playstationportalhandson-36190303-playstationq-thumbnail-1692760353361.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-30T00:13:24+08:00"
+      "source_fetched_at": "2026-06-30T00:13:24+08:00",
+      "translation_error": "paragraph 15 missing cn",
+      "translation_failed_at": "2026-06-30T00:59:28.406260+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro",
+      "translation_path": "translations/13.json"
     },
     {
       "id": 14,
@@ -165,7 +171,7 @@
       "publish_time_cn": "2026-06-29 22:00",
       "pub_date": "2026-06-29 22:00",
       "cover_image": "https://assets-prd.ignimgs.com/2026/06/23/resident-evil-veronica-claire-1782228579671.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/23/resident-evil-veronica-claire-1782228579671.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/23/resident-evil-veronica-claire-1782228579671.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -176,7 +182,11 @@
         "https://assets-prd.ignimgs.com/2026/06/23/resident-evil-veronica-zombies-1782229284038.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-30T00:13:26+08:00"
+      "source_fetched_at": "2026-06-30T00:13:26+08:00",
+      "translation_path": "translations/16.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro"
     },
     {
       "id": 17,
@@ -235,12 +245,12 @@
       "emoji": "💰",
       "en_title": "'It Is Not Realistic for Us to Absorb All Component Cost Increases' — Sony Says It Won't Sell Hardware at a 'Significant' Loss as Concern Grows Over PS6 Price",
       "cn_title": "索尼称不会以重大亏损卖硬件，PS6定价引担忧",
-      "summary": "索尼互动娱乐CEO西野秀明近日表态，公司不打算以「重大亏损」销售硬件，暗示PS6定价可能不会低于成本。受AI芯片导致的内存涨价影响，索尼已于4月上调PS5售价至649.99美元(约合人民币4420元)，微软也宣布XBOX售价将在8月上涨。Circana数据显示，5月美国PS5销量同比暴跌58%，XBOX销量创历史新低。分析师预计，PS6售价可能超1000美元(约合人民币6800元)，且或推迟至2028年后。",
+      "summary": "索尼CEO西野秀明表示不会亏本卖硬件，PS6定价或超成本。受芯片危机影响，PS5已最高涨至899美元(约合人民币6113元)，XBOX也将再涨。",
       "url": "https://www.ign.com/articles/it-is-not-realistic-for-us-to-absorb-all-component-cost-increases-sony-says-it-wont-sell-hardware-at-a-significant-loss-as-concern-grows-over-ps6-price",
       "publish_time_cn": "2026-06-29 20:52",
       "pub_date": "2026-06-29 20:52",
       "cover_image": "https://assets-prd.ignimgs.com/2023/10/09/ps5console-1696871037273.jpeg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2023/10/09/ps5console-1696871037273.jpeg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/04/17/ps5-slim-refurb-1776424110936.png",
@@ -250,7 +260,13 @@
         "https://assets-prd.ignimgs.com/2023/10/09/ps5console-1696871037273.jpeg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-30T00:13:27+08:00"
+      "source_fetched_at": "2026-06-30T00:13:27+08:00",
+      "translation_error": "paragraph 14 missing cn",
+      "translation_failed_at": "2026-06-30T01:07:35.662157+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro",
+      "translation_path": "translations/19.json"
     },
     {
       "id": 20,
@@ -332,13 +348,13 @@
       "category": "影视资讯",
       "emoji": "🎬",
       "en_title": "Fallout: New Vegas Director Says Amazon's Fallout Show Is 'One of the Best Adaptations of a Video Game Franchise' — and No, He Isn't Bothered by Dinky Facing the Wrong Way",
-      "cn_title": "《辐射：新维加斯》导演盛赞剧集：最佳改编之一，不纠结细节争议",
-      "summary": "《辐射：新维加斯》导演兼设计师Josh Sawyer称赞亚马逊《辐射》剧集是「有史以来最好的电子游戏改编作品之一」。他对第二季中恐龙雕像Dinky朝向不对的争议表示理解，称「这完全不妨碍场景表达」。Sawyer还透露了第二季的布景细节，并提及第三季可能将故事带往科罗拉多，该地区在游戏中曾有废弃规划。",
+      "cn_title": "《辐射：新维加斯》导演盛赞剧集：最佳改编之一，不纠结恐龙朝向",
+      "summary": "《辐射：新维加斯》导演Josh Sawyer大赞亚马逊《辐射》剧集，称为最佳游戏改编之一，并坦言对恐龙雕像Dinky朝向错误不介意。他透露第二季布景极近游戏，第三季或赴科罗拉多，拓展《辐射》正典。",
       "url": "https://www.ign.com/articles/fallout-new-vegas-director-says-amazons-fallout-show-is-one-of-the-best-adaptations-of-a-video-game-franchise-and-no-he-isnt-bothered-by-dinky-facing-the-wrong-way",
       "publish_time_cn": "2026-06-29 19:33",
       "pub_date": "2026-06-29 19:33",
       "cover_image": "https://assets-prd.ignimgs.com/2026/06/29/screenshot-2026-06-29-123045-1782732797636.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/29/screenshot-2026-06-29-123045-1782732797636.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/29/screenshot-2026-06-29-123045-1782732797636.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -349,20 +365,26 @@
         "https://assets-prd.ignimgs.com/2026/06/29/dinky-1782732764174.png"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-29T19:49:31+08:00"
+      "source_fetched_at": "2026-06-29T19:49:31+08:00",
+      "translation_error": "paragraph 18 missing cn",
+      "translation_failed_at": "2026-06-30T00:52:15.527506+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro",
+      "translation_path": "translations/08.json"
     },
     {
       "id": 9,
       "category": "行业动态",
       "emoji": "🚨",
       "en_title": "With the Threat of Layoffs Looming, Quantic Dream Staff Say They're Going on Strike to Save Star Wars Eclipse From Cancelation",
-      "cn_title": "裁员阴影下，Quantic Dream员工罢工挽救《星球大战：日食》",
-      "summary": "在取消旗下服务型游戏《咒术编年史》后，法国工作室Quantic Dream计划裁员115人（约占员工总数的四分之一），引发员工罢工。据法国媒体Gamekult报道，罢工员工试图阻止裁员，以拯救尚在开发中的《星球大战：日食》。他们担心裁员将导致项目无法完成，而卢卡斯影业代表团原定于罢工当日到访检查项目进度。目前工会谈判仍在进行。",
+      "cn_title": "QD员工罢工，力保《星球大战：日食》",
+      "summary": "在取消《咒术编年史》并拟裁员115人后，Quantic Dream员工展开罢工，力求挽救因资源匮乏而前景未卜的《星球大战：日食》。卢卡斯影业代表团原定罢工当日访查，目前工会正推动签署协议以减少失业。",
       "url": "https://www.ign.com/articles/with-the-threat-of-layoffs-looming-quantic-dream-staff-say-theyre-going-on-strike-to-save-star-wars-eclipse-from-cancelation",
       "publish_time_cn": "2026-06-29 18:35",
       "pub_date": "2026-06-29 18:35",
       "cover_image": "https://assets-prd.ignimgs.com/2026/06/29/filters-quality80-1782729314809.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/29/filters-quality80-1782729314809.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/29/filters-quality80-1782729314809.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -374,7 +396,13 @@
         "https://assets-prd.ignimgs.com/2022/05/27/kinect-star-wars-1653631585000.png"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-29T19:49:32+08:00"
+      "source_fetched_at": "2026-06-29T19:49:32+08:00",
+      "translation_error": "paragraph 16 missing cn",
+      "translation_failed_at": "2026-06-30T00:55:23.858980+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro",
+      "translation_path": "translations/09.json"
     },
     {
       "id": 10,
@@ -464,7 +492,7 @@
       "publish_time_cn": "2026-06-29 14:50",
       "pub_date": "2026-06-29 14:50",
       "cover_image": "https://assets-prd.ignimgs.com/2026/06/29/dead-or-alive-6-last-round-1782714490148.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/29/dead-or-alive-6-last-round-1782714490148.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/29/dead-or-alive-6-last-round-1782714490148.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -473,7 +501,11 @@
         "https://assets-prd.ignimgs.com/2026/06/29/dead-or-alive-6-last-round-1782714490148.png"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-29T15:28:25+08:00"
+      "source_fetched_at": "2026-06-29T15:28:25+08:00",
+      "translation_path": "translations/07.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro"
     },
     {
       "id": 4,
