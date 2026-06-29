@@ -1224,6 +1224,54 @@
       "total_tokens_including_reasoning": 10422,
       "prompt_cache_hit_tokens": 8320,
       "prompt_cache_miss_tokens": 1532
+    },
+    {
+      "time_cn": "2026-06-30 07:18:02",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 32,
+      "article_title": "Persona Live-Action TV Show in the Works at Netflix",
+      "article_url": "https://www.ign.com/articles/persona-live-action-tv-show-in-the-works-at-netflix",
+      "article_date": "2026-06-30",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00033718,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9074,
+      "completion_tokens": 449,
+      "reasoning_tokens": 295,
+      "output_tokens_including_reasoning": 744,
+      "total_tokens": 9523,
+      "total_tokens_including_reasoning": 9818,
+      "prompt_cache_hit_tokens": 8320,
+      "prompt_cache_miss_tokens": 754
+    },
+    {
+      "time_cn": "2026-06-30 07:18:10",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 33,
+      "article_title": "Cyberpunk: Edgerunners 2 Teaser Features Cyberpunk 2077 Locations Set to Show Up in New Season",
+      "article_url": "https://www.ign.com/articles/cyberpunk-edgerunners-2-teaser-features-cyberpunk-2077-locations-set-to-show-up-in-new-season",
+      "article_date": "2026-06-30",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.0004174,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9323,
+      "completion_tokens": 520,
+      "reasoning_tokens": 386,
+      "output_tokens_including_reasoning": 906,
+      "total_tokens": 9843,
+      "total_tokens_including_reasoning": 10229,
+      "prompt_cache_hit_tokens": 8320,
+      "prompt_cache_miss_tokens": 1003
     }
   ]
 }
