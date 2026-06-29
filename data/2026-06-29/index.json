@@ -11,8 +11,8 @@
       "url": "https://www.ign.com/articles/spider-man-brand-new-day-star-tom-holland-says-hes-working-to-bring-miles-morales-into-the-mcu",
       "publish_time_cn": "2026-06-29 05:12",
       "pub_date": "2026-06-29 05:12",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/06/28/spider-man-brand-new-day-miles-morales-1782680519271.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/28/spider-man-brand-new-day-miles-morales-1782680519271.png",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/28/spider-man-brand-new-day-miles-morales-1782680519271.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/28/spider-man-brand-new-day-miles-morales-1782680519271.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -21,7 +21,11 @@
         "https://assets-prd.ignimgs.com/2026/06/28/spider-man-brand-new-day-miles-morales-1782680519271.png"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-29T05:46:25+08:00"
+      "source_fetched_at": "2026-06-29T05:46:25+08:00",
+      "translation_path": "translations/04.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro"
     },
     {
       "id": 5,
@@ -65,8 +69,8 @@
       "url": "https://www.ign.com/articles/christopher-nolan-says-mainstream-movies-that-play-it-safe-should-take-more-risks-if-they-want-to-succeed",
       "publish_time_cn": "2026-06-29 03:31",
       "pub_date": "2026-06-29 03:31",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/06/28/christopher-nolan-1782674416499.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/28/christopher-nolan-1782674416499.png",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/28/christopher-nolan-1782674416499.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/28/christopher-nolan-1782674416499.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -75,7 +79,11 @@
         "https://assets-prd.ignimgs.com/2026/06/28/christopher-nolan-1782674416499.png"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-29T04:37:54+08:00"
+      "source_fetched_at": "2026-06-29T04:37:54+08:00",
+      "translation_path": "translations/03.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro"
     },
     {
       "id": 2,
@@ -132,8 +140,8 @@
       "url": "https://www.ign.com/articles/cyberpunk-edgerunners-2-sets-fall-2026-release-with-first-look-at-4-new-characters",
       "publish_time_cn": "2026-06-28 23:52",
       "pub_date": "2026-06-28 23:52",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/06/28/cyberpunk-edgerunners-2-1782661383212.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/28/cyberpunk-edgerunners-2-1782661383212.png",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/28/cyberpunk-edgerunners-2-1782661383212.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/28/cyberpunk-edgerunners-2-1782661383212.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -143,7 +151,11 @@
         "https://assets-prd.ignimgs.com/2026/06/28/cyberpunk-edgerunners-2-characters-1782661452497.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-29T01:36:56+08:00"
+      "source_fetched_at": "2026-06-29T01:36:56+08:00",
+      "translation_path": "translations/01.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro"
     }
   ],
   "total": 5
