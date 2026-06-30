@@ -21,26 +21,7 @@
       "fingerprint": "382f911364ec6ef5c2fe03a35f4d6139f433fe9a",
       "translation_path": "translations/08.json",
       "retry_policy": "manual_only"
-    },
-    "13": {
-      "id": 13,
-      "url": "https://www.ign.com/articles/will-ps6-be-like-a-nintendo-switch-sony-says-its-next-gen-console-will-enable-a-seamless-experience-that-can-be-enjoyed-naturally-beyond-the-living-room",
-      "en_title": "Will PS6 Be Like a Nintendo Switch? Sony Says Its Next-Gen Console Will Enable 'A Seamless Experience That Can Be Enjoyed Naturally Beyond the Living Room'",
-      "cn_title": "《任天堂》索尼：PS6将实现客厅之外的无缝体验",
-      "model": "deepseek-v4-pro",
-      "status": "needs_manual_review",
-      "failed_at": "2026-06-30T00:59:28.406260+08:00",
-      "reason": "paragraph 15 missing cn",
-      "audit_issues": [
-        {
-          "type": "manual_translation_required",
-          "detail": "one or more paragraph chunks failed after retry; draft kept for manual review"
-        }
-      ],
-      "fingerprint": "3a4043efe9581e5cd9f1e3bb46889c5c624c1561",
-      "translation_path": "translations/13.json",
-      "retry_policy": "manual_only"
     }
   },
-  "updated_at": "2026-06-30T02:16:35.995Z"
+  "updated_at": "2026-06-30T02:34:40.181Z"
 }
