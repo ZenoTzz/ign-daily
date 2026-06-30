@@ -1,5 +1,60 @@
 [
   {
+    "run_id": "28411637053",
+    "workflow": "API Translation",
+    "event": "workflow_dispatch",
+    "sha": "f82075ab57dc9e1ad8a5474497d2ed4e1c5a0748",
+    "recorded_at_cn": "2026-06-30 08:26:39",
+    "start_balance": 30.33,
+    "end_balance": 30.33,
+    "currency": "CNY",
+    "actual_platform_cost": 0.0,
+    "balance_delta_status": "pending_or_delayed",
+    "estimated_cost_usd": 0.04260201,
+    "api_call_count": 4,
+    "total_tokens": 86649,
+    "output_tokens": 44924,
+    "by_model": {
+      "deepseek-v4-pro": {
+        "calls": 4,
+        "estimated_cost_usd": 0.04260201,
+        "total_tokens": 86649,
+        "output_tokens": 44924
+      }
+    },
+    "by_task": {
+      "fulltext": {
+        "calls": 3,
+        "estimated_cost_usd": 0.034731,
+        "total_tokens": 68142
+      },
+      "fulltext_repair": {
+        "calls": 1,
+        "estimated_cost_usd": 0.00787101,
+        "total_tokens": 18507
+      }
+    },
+    "retry_articles": [
+      {
+        "article_id": 24,
+        "article_date": "2026-06-30",
+        "article_title": "dbrand 因未获 Valve 许可，被迫取消 Steam Machine Companion Cube",
+        "article_url": "https://www.ign.com/articles/steam-machine-companion-cube-canceled-because-dbrand-didnt-ask-valve-for-permission",
+        "calls": 2,
+        "estimated_cost_usd": 0.02150237,
+        "total_tokens": 43488,
+        "tasks": {
+          "fulltext": 1,
+          "fulltext_repair": 1
+        },
+        "models": {
+          "deepseek-v4-pro": 2
+        }
+      }
+    ],
+    "snapshot_ok": true
+  },
+  {
     "run_id": "28409038583",
     "workflow": "Hourly RSS",
     "event": "schedule",
@@ -5211,23 +5266,6 @@
         "total_tokens": 104616
       }
     },
-    "snapshot_ok": true
-  },
-  {
-    "run_id": "27617789262",
-    "workflow": "API Translation",
-    "event": "schedule",
-    "sha": "268eb3830589b1c36cb4c1ce4bfc8976622b0fa2",
-    "recorded_at_cn": "2026-06-16 20:33:32",
-    "start_balance": 43.76,
-    "end_balance": 43.76,
-    "currency": "CNY",
-    "actual_platform_cost": 0.0,
-    "balance_delta_status": "ok",
-    "estimated_cost_usd": 0,
-    "api_call_count": 0,
-    "total_tokens": 0,
-    "by_model": {},
     "snapshot_ok": true
   }
 ]
