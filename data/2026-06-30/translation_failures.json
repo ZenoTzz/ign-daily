@@ -40,26 +40,7 @@
       "fingerprint": "3a4043efe9581e5cd9f1e3bb46889c5c624c1561",
       "translation_path": "translations/13.json",
       "retry_policy": "manual_only"
-    },
-    "19": {
-      "id": 19,
-      "url": "https://www.ign.com/articles/it-is-not-realistic-for-us-to-absorb-all-component-cost-increases-sony-says-it-wont-sell-hardware-at-a-significant-loss-as-concern-grows-over-ps6-price",
-      "en_title": "'It Is Not Realistic for Us to Absorb All Component Cost Increases' — Sony Says It Won't Sell Hardware at a 'Significant' Loss as Concern Grows Over PS6 Price",
-      "cn_title": "索尼称不会以重大亏损卖硬件，PS6定价引担忧",
-      "model": "deepseek-v4-pro",
-      "status": "needs_manual_review",
-      "failed_at": "2026-06-30T01:07:35.662157+08:00",
-      "reason": "paragraph 14 missing cn",
-      "audit_issues": [
-        {
-          "type": "manual_translation_required",
-          "detail": "one or more paragraph chunks failed after retry; draft kept for manual review"
-        }
-      ],
-      "fingerprint": "f78e3ae310091d0604f1c4979ad31e7d7cdde994",
-      "translation_path": "translations/19.json",
-      "retry_policy": "manual_only"
     }
   },
-  "updated_at": "2026-06-30T01:52:47.797Z"
+  "updated_at": "2026-06-30T02:16:35.995Z"
 }
