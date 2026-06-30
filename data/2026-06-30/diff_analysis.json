@@ -1,0 +1,1036 @@
+{
+  "date": "2026-06-30",
+  "generated_at": "2026-06-30T22:38:20.057764",
+  "total_articles": 5,
+  "dictionary_candidate_count": 4,
+  "dictionary_candidates": [
+    {
+      "id": "dict_candidate_spellcasters_chronicles_4b1e9e989b50",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "terms",
+      "en": "Spellcasters Chronicles",
+      "cn": "咒术编年史",
+      "title": "词库候选：Spellcasters Chronicles → 咒术编年史",
+      "rule": "建议将「Spellcasters Chronicles」加入词库，译为「咒术编年史」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "date": "2026-06-30",
+      "article_id": 9,
+      "article_title": "Quantic Dream员工罢工，力保《星球大战：日蚀》",
+      "url": "https://www.ign.com/articles/with-the-threat-of-layoffs-looming-quantic-dream-staff-say-theyre-going-on-strike-to-save-star-wars-eclipse-from-cancelation",
+      "evidence": "来自文章页未确认新词候选。"
+    },
+    {
+      "id": "dict_candidate_dead_or_alive_6_last_round_f65c2c58f0ee",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "games",
+      "en": "Dead or Alive 6: Last Round",
+      "cn": "死或生6：Last Round",
+      "title": "词库候选：Dead or Alive 6: Last Round → 死或生6：Last Round",
+      "rule": "建议将「Dead or Alive 6: Last Round」加入词库，译为「死或生6：Last Round」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "date": "2026-06-30",
+      "article_id": 7,
+      "article_title": "",
+      "url": "",
+      "evidence": "用户将标题和正文中的副标题从直译改为保留官方英文副标题 Last Round。",
+      "latest_evidence_summary": "用户将标题和正文中的副标题从直译改为保留官方英文副标题 Last Round。"
+    },
+    {
+      "id": "dict_candidate_fallout_new_vegas_361180538b91",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "games",
+      "en": "Fallout: New Vegas",
+      "cn": "辐射：新维加斯",
+      "title": "词库候选：Fallout: New Vegas → 辐射：新维加斯",
+      "rule": "建议将「Fallout: New Vegas」加入词库，译为「辐射：新维加斯」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "date": "2026-06-30",
+      "article_id": 8,
+      "article_title": "",
+      "url": "",
+      "evidence": "英文标题专名 Fallout: New Vegas 与用户润色标题《辐射：新维加斯》稳定对应。",
+      "latest_evidence_summary": "英文标题专名 Fallout: New Vegas 与用户润色标题《辐射：新维加斯》稳定对应。"
+    },
+    {
+      "id": "dict_candidate_star_wars_eclipse_710171cd8cd4",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "games",
+      "en": "Star Wars: Eclipse",
+      "cn": "星球大战：日蚀",
+      "title": "词库候选：Star Wars: Eclipse → 星球大战：日蚀",
+      "rule": "建议将「Star Wars: Eclipse」加入词库，译为「星球大战：日蚀」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "date": "2026-06-30",
+      "article_id": 9,
+      "article_title": "",
+      "url": "",
+      "evidence": "用户将标题中的《星球大战：日食》修正为《星球大战：日蚀》。",
+      "latest_evidence_summary": "用户将标题中的《星球大战：日食》修正为《星球大战：日蚀》。"
+    }
+  ],
+  "learning_evidence_updated": true,
+  "daily_learning_updated": true,
+  "articles": [
+    {
+      "id": 7,
+      "cn_title": "《死或生6：Last Round》遭差评轰炸，光荣特库摩要求玩家重购DLC",
+      "en_title": "Dead or Alive 6 Last Round Pummeled by Negative Reviews as Koei Tecmo Asks Players to Rebuy DLC",
+      "url": "https://www.ign.com/articles/dead-or-alive-6-last-round-pummeled-by-negative-reviews-as-koei-tecmo-asks-players-to-rebuy-dlc",
+      "category": "游戏新闻",
+      "has_translation": true,
+      "title_diff": {
+        "mine": "《死或生6：最终回合》遭差评轰炸，光荣特库摩要求玩家重购DLC",
+        "yours": "《死或生6：Last Round》遭差评轰炸，光荣特库摩要求玩家重购DLC"
+      },
+      "subtitle_diff": {
+        "mine": "多半差评轰炸",
+        "yours": "买过的DLC还要再买"
+      },
+      "body_diffs": [
+        {
+          "index": 0,
+          "mine": "《死或生6：最终回合》在Steam上的评价已跌至「多半差评」，玩家纷纷警告游戏存在长期未修的Bug、缺失大量功能，并且需要重复购买一部分此前已经拥有的DLC。",
+          "yours": "《死或生6：Last Round》在Steam上的评价已跌至「多半差评」，玩家纷纷警告游戏存在长期未修的Bug、缺失大量功能，并且需要重复购买一部分此前已经拥有的DLC。",
+          "my_sentences": [
+            "《死或生6：最终回合》在Steam上的评价已跌至「多半差评」，玩家纷纷警告游戏存在长期未修的Bug、缺失大量功能，并且需要重复购买一部分此前已经拥有的DLC。"
+          ],
+          "your_sentences": [
+            "《死或生6：Last Round》在Steam上的评价已跌至「多半差评」，玩家纷纷警告游戏存在长期未修的Bug、缺失大量功能，并且需要重复购买一部分此前已经拥有的DLC。"
+          ]
+        },
+        {
+          "index": 2,
+          "mine": "《死或生6：最终回合》上周上线后，取代了现已下架的《死或生6》。光荣特库摩和Team Ninja将这一新版定位为一次小幅升级，打包加入了一些新功能，并承诺还有新DLC正在开发中。",
+          "yours": "《死或生6：Last Round》上周上线后，取代了现已下架的《死或生6》。光荣特库摩和Team Ninja将这一新版定位为一次小幅升级，打包加入了一些新功能，并承诺还有新DLC正在开发中。",
+          "my_sentences": [
+            "《死或生6：最终回合》上周上线后，取代了现已下架的《死或生6》。",
+            "光荣特库摩和Team Ninja将这一新版定位为一次小幅升级，打包加入了一些新功能，并承诺还有新DLC正在开发中。"
+          ],
+          "your_sentences": [
+            "《死或生6：Last Round》上周上线后，取代了现已下架的《死或生6》。",
+            "光荣特库摩和Team Ninja将这一新版定位为一次小幅升级，打包加入了一些新功能，并承诺还有新DLC正在开发中。"
+          ]
+        },
+        {
+          "index": 3,
+          "mine": "游戏售价40美元(约合人民币272元)，包含五名此前已推出的追加角色和五套新服装。另有一个副标题为「Core Fighters」的免费版，但不包含故事模式，且可操作角色仅限于霞、玛丽·萝丝、穗香和NiCO。",
+          "yours": "游戏售价40美元（Steam国区定价198元），包含五名此前已推出的追加角色和五套新服装。另有一个副标题为「Core Fighters」的免费版，但不包含故事模式，且可操作角色仅限于霞、玛丽·萝丝、穗香和NiCO。",
+          "my_sentences": [
+            "游戏售价40美元(约合人民币272元)，包含五名此前已推出的追加角色和五套新服装。",
+            "另有一个副标题为「Core Fighters」的免费版，但不包含故事模式，且可操作角色仅限于霞、玛丽·萝丝、穗香和NiCO。"
+          ],
+          "your_sentences": [
+            "游戏售价40美元（Steam国区定价198元），包含五名此前已推出的追加角色和五套新服装。",
+            "另有一个副标题为「Core Fighters」的免费版，但不包含故事模式，且可操作角色仅限于霞、玛丽·萝丝、穗香和NiCO。"
+          ]
+        },
+        {
+          "index": 4,
+          "mine": "自初版发售以来的七年里，该作累积了440款DLC。尽管其中一部分是捆绑包优惠，但简单算一下就能痛感有大量内容并未收录在《死或生6：最终回合》里。这个矛盾对粉丝来说只是冰山一角，许多人还指出，以前拥有那些附加内容的玩家可以将大部分——但不是全部——继承到新版游戏中。",
+          "yours": "自首发至今的七年间，这款游戏已累计推出440款DLC。尽管其中一部分属于捆绑包内容，但简单计算便能发现，《死或生6：Last Round》并未收录大量此前推出的追加内容。这只是玩家不满情绪的冰山一角。还有不少玩家指出，曾购买过相关DLC的用户虽然可以将其中大部分内容继承至新作，但仍有部分追加内容无法转移。",
+          "my_sentences": [
+            "自初版发售以来的七年里，该作累积了440款DLC。",
+            "尽管其中一部分是捆绑包优惠，但简单算一下就能痛感有大量内容并未收录在《死或生6：最终回合》里。",
+            "这个矛盾对粉丝来说只是冰山一角，许多人还指出，以前拥有那些附加内容的玩家可以将大部分——但不是全部——继承到新版游戏中。"
+          ],
+          "your_sentences": [
+            "自首发至今的七年间，这款游戏已累计推出440款DLC。",
+            "尽管其中一部分属于捆绑包内容，但简单计算便能发现，《死或生6：Last Round》并未收录大量此前推出的追加内容。",
+            "这只是玩家不满情绪的冰山一角。",
+            "还有不少玩家指出，曾购买过相关DLC的用户虽然可以将其中大部分内容继承至新作，但仍有部分追加内容无法转移。"
+          ]
+        },
+        {
+          "index": 6,
+          "mine": "即便有玩家在6月24日发售前把所有角色和服装包都买遍了，《死或生6：最终回合》仍会锁住两名可下载的格斗角色：不知火舞和库拉·戴尔蒙德。Team Ninja官网的说明表示，不知火舞和库拉以及她们的服装无法继承。",
+          "yours": "即便有玩家在6月24日发售前把所有角色和服装包都买遍了，《死或生6：Last Round》仍会锁住两名可下载的格斗角色：不知火舞和库拉·戴尔蒙多。Team Ninja官网的说明表示，不知火舞和库拉以及她们的服装无法继承。",
+          "my_sentences": [
+            "即便有玩家在6月24日发售前把所有角色和服装包都买遍了，《死或生6：最终回合》仍会锁住两名可下载的格斗角色：不知火舞和库拉·戴尔蒙德。",
+            "Team Ninja官网的说明表示，不知火舞和库拉以及她们的服装无法继承。"
+          ],
+          "your_sentences": [
+            "即便有玩家在6月24日发售前把所有角色和服装包都买遍了，《死或生6：Last Round》仍会锁住两名可下载的格斗角色：不知火舞和库拉·戴尔蒙多。",
+            "Team Ninja官网的说明表示，不知火舞和库拉以及她们的服装无法继承。"
+          ]
+        },
+        {
+          "index": 7,
+          "mine": "这两个《拳皇》联动角色是光荣特库摩转移计划的例外，意味着玩家哪怕在2019年版游戏里已经付费解锁过，现在仍需另外掏钱。更糟糕的是，正如有人指出的那样，不知火舞和库拉此前各自售价8美元(约合人民币54元)——现在却要11美元(约合人民币75元)。",
+          "yours": "这两个《拳皇》联动角色是光荣特库摩转移计划的例外，意味着玩家哪怕在2019年版游戏里已经付费解锁过，现在仍需另外掏钱。更糟糕的是，正如有人指出的那样，不知火舞和库拉此前各自售价8美元（约合人民币54元）——现在却要11美元（约合人民币75元）。",
+          "my_sentences": [
+            "这两个《拳皇》联动角色是光荣特库摩转移计划的例外，意味着玩家哪怕在2019年版游戏里已经付费解锁过，现在仍需另外掏钱。",
+            "更糟糕的是，正如有人指出的那样，不知火舞和库拉此前各自售价8美元(约合人民币54元)——现在却要11美元(约合人民币75元)。"
+          ],
+          "your_sentences": [
+            "这两个《拳皇》联动角色是光荣特库摩转移计划的例外，意味着玩家哪怕在2019年版游戏里已经付费解锁过，现在仍需另外掏钱。",
+            "更糟糕的是，正如有人指出的那样，不知火舞和库拉此前各自售价8美元（约合人民币54元）——现在却要11美元（约合人民币75元）。"
+          ]
+        },
+        {
+          "index": 8,
+          "mine": "光荣特库摩对基础体验的更新几乎没能缓冲这一冲击。正如《死或生6：最终回合》官网所写，这次最大的卖点是承诺游戏「已为当代硬件进行了改进与升级」，但大多数玩家实在找不到任何明显变化。一些更恶毒的「诈骗」指控还指出，暂停菜单上依然显示着2015款Steam手柄的图示。",
+          "yours": "光荣特库摩对基础体验的更新几乎没能缓冲这一冲击。正如《死或生6：Last Round》官网所写，这次最大的卖点是承诺游戏「已为当代硬件进行了改进与升级」，但大多数玩家实在找不到任何明显变化。一些玩家还指出，暂停菜单上依然显示着2015款Steam手柄的图示。",
+          "my_sentences": [
+            "光荣特库摩对基础体验的更新几乎没能缓冲这一冲击。",
+            "正如《死或生6：最终回合》官网所写，这次最大的卖点是承诺游戏「已为当代硬件进行了改进与升级」，但大多数玩家实在找不到任何明显变化。",
+            "一些更恶毒的「诈骗」指控还指出，暂停菜单上依然显示着2015款Steam手柄的图示。"
+          ],
+          "your_sentences": [
+            "光荣特库摩对基础体验的更新几乎没能缓冲这一冲击。",
+            "正如《死或生6：Last Round》官网所写，这次最大的卖点是承诺游戏「已为当代硬件进行了改进与升级」，但大多数玩家实在找不到任何明显变化。",
+            "一些玩家还指出，暂停菜单上依然显示着2015款Steam手柄的图示。"
+          ]
+        },
+        {
+          "index": 10,
+          "mine": "又有玩家写道：「我本来以为它比起原版DOA6会有点不同，比如明显的画面提升，或者细节更丰富的角色模型，结果******完全一样。难怪发售前几乎没任何情报。就算真有区别，也微小到我根本看不出来。如果你已经有原版DOA6，现在完全没理由买这款。」",
+          "yours": "又有玩家写道：「我本来以为它比起原版《死或生6》会有点不同，比如明显的画面提升，或者细节更丰富的角色模型，结果******完全一样。难怪发售前几乎没任何情报。就算真有区别，也微小到我根本看不出来。如果你已经有原版《死或生6》，现在完全没理由买这款。」",
+          "my_sentences": [
+            "又有玩家写道：「我本来以为它比起原版DOA6会有点不同，比如明显的画面提升，或者细节更丰富的角色模型，结果******完全一样。",
+            "难怪发售前几乎没任何情报。",
+            "就算真有区别，也微小到我根本看不出来。",
+            "如果你已经有原版DOA6，现在完全没理由买这款。",
+            "」"
+          ],
+          "your_sentences": [
+            "又有玩家写道：「我本来以为它比起原版《死或生6》会有点不同，比如明显的画面提升，或者细节更丰富的角色模型，结果******完全一样。",
+            "难怪发售前几乎没任何情报。",
+            "就算真有区别，也微小到我根本看不出来。",
+            "如果你已经有原版《死或生6》，现在完全没理由买这款。",
+            "」"
+          ]
+        },
+        {
+          "index": 11,
+          "mine": "《死或生6：最终回合》的另一大卖点是新增的拍照模式，但相较玩家预期不过是杯水车薪。大多数玩家并没有在分享作品，而是在吐槽那些延续至各版本都不修的Bug，以及缺失的功能，比如跨平台联机或回滚式网络代码。",
+          "yours": "《死或生6：Last Round》的另一大卖点是新增的拍照模式，但相较玩家预期不过是杯水车薪。大多数玩家并没有在分享作品，而是在吐槽那些延续至各版本都不修的Bug，以及缺失的功能，比如跨平台联机或回滚式网络代码。",
+          "my_sentences": [
+            "《死或生6：最终回合》的另一大卖点是新增的拍照模式，但相较玩家预期不过是杯水车薪。",
+            "大多数玩家并没有在分享作品，而是在吐槽那些延续至各版本都不修的Bug，以及缺失的功能，比如跨平台联机或回滚式网络代码。"
+          ],
+          "your_sentences": [
+            "《死或生6：Last Round》的另一大卖点是新增的拍照模式，但相较玩家预期不过是杯水车薪。",
+            "大多数玩家并没有在分享作品，而是在吐槽那些延续至各版本都不修的Bug，以及缺失的功能，比如跨平台联机或回滚式网络代码。"
+          ]
+        },
+        {
+          "index": 13,
+          "mine": "这位玩家继续说道：「这太伤人了。感觉Team Ninja/光荣特库摩已经不在乎《死或生》了。说真的，除了能量槽系统，我并不讨厌DOA6的机制，但《最终回合》就是让人觉得有点坑钱。」",
+          "yours": "这位玩家继续说道：「这太伤人了。感觉Team Ninja/光荣特库摩已经不在乎《死或生》了。说真的，除了能量槽系统，我并不讨厌DOA6的机制，但《Last Round》就是让人觉得有点坑钱。」",
+          "my_sentences": [
+            "这位玩家继续说道：「这太伤人了。",
+            "感觉Team Ninja/光荣特库摩已经不在乎《死或生》了。",
+            "说真的，除了能量槽系统，我并不讨厌DOA6的机制，但《最终回合》就是让人觉得有点坑钱。",
+            "」"
+          ],
+          "your_sentences": [
+            "这位玩家继续说道：「这太伤人了。",
+            "感觉Team Ninja/光荣特库摩已经不在乎《死或生》了。",
+            "说真的，除了能量槽系统，我并不讨厌DOA6的机制，但《Last Round》就是让人觉得有点坑钱。",
+            "」"
+          ]
+        },
+        {
+          "index": 14,
+          "mine": "《死或生6：最终回合》的Steam评测充斥着诸如「欺诈」「笑话」「可耻」以及更多更狠的字眼。光荣特库摩和Team Ninja尚未就这场风波正式发声。不过，他们倒是提到了发售后首个DLC：一名叫作Minato的新角色。这个角色定价尚不清楚。",
+          "yours": "《死或生6：Last Round》的Steam评测充斥着诸如「欺诈」「笑话」「可耻」以及更多更狠的字眼。光荣特库摩和Team Ninja尚未就这场风波正式发声。不过，他们倒是提到了发售后首个DLC：一名叫作Minato的新角色。这个角色定价尚不清楚。",
+          "my_sentences": [
+            "《死或生6：最终回合》的Steam评测充斥着诸如「欺诈」「笑话」「可耻」以及更多更狠的字眼。",
+            "光荣特库摩和Team Ninja尚未就这场风波正式发声。",
+            "不过，他们倒是提到了发售后首个DLC：一名叫作Minato的新角色。",
+            "这个角色定价尚不清楚。"
+          ],
+          "your_sentences": [
+            "《死或生6：Last Round》的Steam评测充斥着诸如「欺诈」「笑话」「可耻」以及更多更狠的字眼。",
+            "光荣特库摩和Team Ninja尚未就这场风波正式发声。",
+            "不过，他们倒是提到了发售后首个DLC：一名叫作Minato的新角色。",
+            "这个角色定价尚不清楚。"
+          ]
+        },
+        {
+          "index": 15,
+          "mine": "IGN在评测中称，《死或生6：最终回合》是一个「包裹在非常糟糕的包装中的优秀格斗游戏」，并于上周登陆了PC、PS5和XBOX Series。我们补充道，它「几乎没有给出任何足以说明为什么这次再版不只是一个DLC包的理由」。IGN给原版游戏打出了……。",
+          "yours": "IGN近日为《死或生6：Last Round》打出6分，评价其是「一款优秀格斗游戏，但被糟糕的包装拖累」。该作上周登陆PC、PS5和Xbox Series。IGN在评测中表示，《死或生6：Last Round》本身仍具备扎实的格斗基础，但作为一次重新发行，它并没有充分证明自己为何不能只以DLC更新包的形式推出。相比之下，IGN此前曾为原版《死或生6》打出7.7分。本次《Last Round》评分下滑，主要原因并非核心玩法明显退步，而是重新发行版本在内容整合、升级价值和产品定位上未能达到预期。",
+          "my_sentences": [
+            "IGN在评测中称，《死或生6：最终回合》是一个「包裹在非常糟糕的包装中的优秀格斗游戏」，并于上周登陆了PC、PS5和XBOX Series。",
+            "我们补充道，它「几乎没有给出任何足以说明为什么这次再版不只是一个DLC包的理由」。",
+            "IGN给原版游戏打出了……。"
+          ],
+          "your_sentences": [
+            "IGN近日为《死或生6：Last Round》打出6分，评价其是「一款优秀格斗游戏，但被糟糕的包装拖累」。",
+            "该作上周登陆PC、PS5和Xbox Series。",
+            "IGN在评测中表示，《死或生6：Last Round》本身仍具备扎实的格斗基础，但作为一次重新发行，它并没有充分证明自己为何不能只以DLC更新包的形式推出。",
+            "相比之下，IGN此前曾为原版《死或生6》打出7.7分。",
+            "本次《Last Round》评分下滑，主要原因并非核心玩法明显退步，而是重新发行版本在内容整合、升级价值和产品定位上未能达到预期。"
+          ]
+        }
+      ],
+      "dictionary_candidates": [
+        {
+          "id": "dict_candidate_dead_or_alive_6_last_round_f65c2c58f0ee",
+          "category": "dictionary",
+          "type": "dictionary_candidate",
+          "dict_category": "games",
+          "en": "Dead or Alive 6: Last Round",
+          "cn": "死或生6：Last Round",
+          "title": "词库候选：Dead or Alive 6: Last Round → 死或生6：Last Round",
+          "rule": "建议将「Dead or Alive 6: Last Round」加入词库，译为「死或生6：Last Round」。",
+          "status": "ready_for_review",
+          "confidence": "high",
+          "date": "2026-06-30",
+          "article_id": 7,
+          "article_title": "《死或生6：Last Round》遭差评轰炸，光荣特库摩要求玩家重购DLC",
+          "url": "https://www.ign.com/articles/dead-or-alive-6-last-round-pummeled-by-negative-reviews-as-koei-tecmo-asks-players-to-rebuy-dlc",
+          "evidence": "用户将标题和正文中的副标题从直译改为保留官方英文副标题 Last Round。",
+          "latest_evidence_summary": "用户将标题和正文中的副标题从直译改为保留官方英文副标题 Last Round。"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "cn_title": "《辐射：新维加斯》总监盛赞剧集：最佳改编之一",
+      "en_title": "Fallout: New Vegas Director Says Amazon's Fallout Show Is 'One of the Best Adaptations of a Video Game Franchise' — and No, He Isn't Bothered by Dinky Facing the Wrong Way",
+      "url": "https://www.ign.com/articles/fallout-new-vegas-director-says-amazons-fallout-show-is-one-of-the-best-adaptations-of-a-video-game-franchise-and-no-he-isnt-bothered-by-dinky-facing-the-wrong-way",
+      "category": "影视资讯",
+      "has_translation": true,
+      "title_diff": {
+        "mine": "《辐射：新维加斯》导演盛赞剧集：最佳改编之一，不纠结恐龙朝向",
+        "yours": "《辐射：新维加斯》总监盛赞剧集：最佳改编之一"
+      },
+      "subtitle_diff": {
+        "mine": "转个身怎么了？",
+        "yours": "别在意那条恐龙"
+      },
+      "body_diffs": [
+        {
+          "index": 0,
+          "mine": "《辐射：新维加斯》导演 Josh Sawyer 对亚马逊的《辐射》剧集竖起大拇指，称其为有史以来最出色的游戏改编影视作品之一。",
+          "yours": "《辐射：新维加斯》总监Josh Sawyer 对亚马逊的《辐射》剧集竖起大拇指，称其为有史以来最出色的游戏改编影视作品之一。",
+          "my_sentences": [
+            "《辐射：新维加斯》导演 Josh Sawyer 对亚马逊的《辐射》剧集竖起大拇指，称其为有史以来最出色的游戏改编影视作品之一。"
+          ],
+          "your_sentences": [
+            "《辐射：新维加斯》总监Josh Sawyer 对亚马逊的《辐射》剧集竖起大拇指，称其为有史以来最出色的游戏改编影视作品之一。"
+          ]
+        },
+        {
+          "index": 1,
+          "mine": "《辐射》第二季背景设定在新维加斯，正是 Obsidian 2010 年那部备受喜爱的《辐射：新维加斯》的故事发生地和标题。Sawyer 当时担任该游戏的导演兼设计师，因此他对亚马逊的改编剧集很有发言权。而《The 41st Precinct》在最新一期关于 Sawyer 职业生涯的视频采访中，恰好就向他提出了这个问题。",
+          "yours": "《辐射》第二季背景设定在新维加斯，正是Obsidian 2010年那部备受喜爱的《辐射：新维加斯》的故事发生地和标题。Sawyer 当时担任该游戏的总监兼设计师，因此他对亚马逊的改编剧集很有发言权。而《The 41st Precinct》在最新一期关于 Sawyer 职业生涯的视频采访中，恰好就向他提出了这个问题。",
+          "my_sentences": [
+            "《辐射》第二季背景设定在新维加斯，正是 Obsidian 2010 年那部备受喜爱的《辐射：新维加斯》的故事发生地和标题。",
+            "Sawyer 当时担任该游戏的导演兼设计师，因此他对亚马逊的改编剧集很有发言权。",
+            "而《The 41st Precinct》在最新一期关于 Sawyer 职业生涯的视频采访中，恰好就向他提出了这个问题。"
+          ],
+          "your_sentences": [
+            "《辐射》第二季背景设定在新维加斯，正是Obsidian 2010年那部备受喜爱的《辐射：新维加斯》的故事发生地和标题。",
+            "Sawyer 当时担任该游戏的总监兼设计师，因此他对亚马逊的改编剧集很有发言权。",
+            "而《The 41st Precinct》在最新一期关于 Sawyer 职业生涯的视频采访中，恰好就向他提出了这个问题。"
+          ]
+        },
+        {
+          "index": 3,
+          "mine": "「我觉得这是一部了不起的改编作品，」Sawyer 开场说道，「真的，说实在的。我知道电子游戏改编影视剧的水准常常不太高，但这绝对是我看过的最好的之一。」",
+          "yours": "「我觉得这是一部了不起的改编作品，」Sawyer说道，「真的，说实在的。我知道电子游戏改编影视剧的水准常常不太高，但这绝对是我看过的最好的之一。」",
+          "my_sentences": [
+            "「我觉得这是一部了不起的改编作品，」Sawyer 开场说道，「真的，说实在的。",
+            "我知道电子游戏改编影视剧的水准常常不太高，但这绝对是我看过的最好的之一。",
+            "」"
+          ],
+          "your_sentences": [
+            "「我觉得这是一部了不起的改编作品，」Sawyer说道，「真的，说实在的。",
+            "我知道电子游戏改编影视剧的水准常常不太高，但这绝对是我看过的最好的之一。",
+            "」"
+          ]
+        },
+        {
+          "index": 5,
+          "mine": "「至于豪斯先生的处理方式——先说明一下，豪斯先生不是我写的，也不是我创造的，那是首席编剧 John Gonzalez 的作品——我很喜欢 Justin Theroux，他演什么我都爱，我个人觉得他饰的豪斯先生很棒。我特别好奇后续会怎样发展。」",
+          "yours": "「至于豪斯先生的处理方式——先说明一下，豪斯先生不是我写的，也不是我创造的，那是首席编剧John Gonzalez的作品——我很喜欢Justin Theroux，他演什么我都爱，我个人觉得他饰的豪斯先生很棒。我特别好奇后续会怎样发展。」",
+          "my_sentences": [
+            "「至于豪斯先生的处理方式——先说明一下，豪斯先生不是我写的，也不是我创造的，那是首席编剧 John Gonzalez 的作品——我很喜欢 Justin Theroux，他演什么我都爱，我个人觉得他饰的豪斯先生很棒。",
+            "我特别好奇后续会怎样发展。",
+            "」"
+          ],
+          "your_sentences": [
+            "「至于豪斯先生的处理方式——先说明一下，豪斯先生不是我写的，也不是我创造的，那是首席编剧John Gonzalez的作品——我很喜欢Justin Theroux，他演什么我都爱，我个人觉得他饰的豪斯先生很棒。",
+            "我特别好奇后续会怎样发展。",
+            "」"
+          ]
+        },
+        {
+          "index": 8,
+          "mine": "说到这里，Sawyer提到了部分玩家对Novac镇那只名为Dinky的恐龙雕像提出的不满。在《辐射：新维加斯》里，Dinky背对小镇，充当狙击制高点。而在《辐射》剧集中，亚马逊把它旋转了180度，让雕像面朝汽车旅馆。这一改动是为了让第二季第一集中的女主角露西能以狙击手身份出场，朝旅馆外的敌人射击，但一些《辐射》玩家并不满意Dinky——用他们的话说——面朝了错误的方向。",
+          "yours": "说到这里，Sawyer提到了部分玩家对Novac镇那只名为Dinky的恐龙雕像提出的不满。在《辐射：新维加斯》里，Dinky背对小镇，充当狙击制高点。而在《辐射》剧集中，亚马逊把它旋转了180度，让雕像面朝汽车旅馆。这一改动是为了让第二季第一集中的女主角露西能以狙击手身份出场，朝旅馆外的敌人射击，但一些《辐射》玩家并不满意Dinky——用他们的话说，恐龙面朝了错误的方向。",
+          "my_sentences": [
+            "说到这里，Sawyer提到了部分玩家对Novac镇那只名为Dinky的恐龙雕像提出的不满。",
+            "在《辐射：新维加斯》里，Dinky背对小镇，充当狙击制高点。",
+            "而在《辐射》剧集中，亚马逊把它旋转了180度，让雕像面朝汽车旅馆。",
+            "这一改动是为了让第二季第一集中的女主角露西能以狙击手身份出场，朝旅馆外的敌人射击，但一些《辐射》玩家并不满意Dinky——用他们的话说——面朝了错误的方向。"
+          ],
+          "your_sentences": [
+            "说到这里，Sawyer提到了部分玩家对Novac镇那只名为Dinky的恐龙雕像提出的不满。",
+            "在《辐射：新维加斯》里，Dinky背对小镇，充当狙击制高点。",
+            "而在《辐射》剧集中，亚马逊把它旋转了180度，让雕像面朝汽车旅馆。",
+            "这一改动是为了让第二季第一集中的女主角露西能以狙击手身份出场，朝旅馆外的敌人射击，但一些《辐射》玩家并不满意Dinky——用他们的话说，恐龙面朝了错误的方向。"
+          ]
+        },
+        {
+          "index": 16,
+          "mine": "贝塞斯达负责人陶德·霍华德近期透露，第三季前期制作已在进行，本月将在洛杉矶开拍。亚马逊宣布了多位加入第三季的演员，包括来自《星球大战》剧集《侍僧》的Manny Jacinto、《乔乔的异想世界》的Thomasin McKenzie、《新闻编辑室》的Emily Mortimer，以及Aaron Paul。霍华德称Paul是「资深《辐射》粉丝」。",
+          "yours": "贝塞斯达负责人陶德·霍华德近期透露，第三季前期制作已在进行，本月将在洛杉矶开拍。亚马逊宣布了多位加入第三季的演员，包括来自《星球大战》剧集的Manny Jacinto、《乔乔的异想世界》的Thomasin McKenzie、《新闻编辑室》的Emily Mortimer，以及Aaron Paul。霍华德称Paul是「资深《辐射》粉丝」。",
+          "my_sentences": [
+            "贝塞斯达负责人陶德·霍华德近期透露，第三季前期制作已在进行，本月将在洛杉矶开拍。",
+            "亚马逊宣布了多位加入第三季的演员，包括来自《星球大战》剧集《侍僧》的Manny Jacinto、《乔乔的异想世界》的Thomasin McKenzie、《新闻编辑室》的Emily Mortimer，以及Aaron Paul。",
+            "霍华德称Paul是「资深《辐射》粉丝」。"
+          ],
+          "your_sentences": [
+            "贝塞斯达负责人陶德·霍华德近期透露，第三季前期制作已在进行，本月将在洛杉矶开拍。",
+            "亚马逊宣布了多位加入第三季的演员，包括来自《星球大战》剧集的Manny Jacinto、《乔乔的异想世界》的Thomasin McKenzie、《新闻编辑室》的Emily Mortimer，以及Aaron Paul。",
+            "霍华德称Paul是「资深《辐射》粉丝」。"
+          ]
+        },
+        {
+          "index": 17,
+          "mine": "Wesley是IGN新闻总监。你可以在Twitter上找到他@wyp100，或通过wesley_yinpoole@ign.com以及保密邮箱wyp100@proton.me联系他。",
+          "yours": "",
+          "my_sentences": [
+            "Wesley是IGN新闻总监。",
+            "你可以在Twitter上找到他@wyp100，或通过wesley_yinpoole@ign.com以及保密邮箱wyp100@proton.me联系他。"
+          ],
+          "your_sentences": []
+        }
+      ],
+      "dictionary_candidates": [
+        {
+          "id": "dict_candidate_fallout_new_vegas_361180538b91",
+          "category": "dictionary",
+          "type": "dictionary_candidate",
+          "dict_category": "games",
+          "en": "Fallout: New Vegas",
+          "cn": "辐射：新维加斯",
+          "title": "词库候选：Fallout: New Vegas → 辐射：新维加斯",
+          "rule": "建议将「Fallout: New Vegas」加入词库，译为「辐射：新维加斯」。",
+          "status": "ready_for_review",
+          "confidence": "high",
+          "date": "2026-06-30",
+          "article_id": 8,
+          "article_title": "《辐射：新维加斯》总监盛赞剧集：最佳改编之一",
+          "url": "https://www.ign.com/articles/fallout-new-vegas-director-says-amazons-fallout-show-is-one-of-the-best-adaptations-of-a-video-game-franchise-and-no-he-isnt-bothered-by-dinky-facing-the-wrong-way",
+          "evidence": "英文标题专名 Fallout: New Vegas 与用户润色标题《辐射：新维加斯》稳定对应。",
+          "latest_evidence_summary": "英文标题专名 Fallout: New Vegas 与用户润色标题《辐射：新维加斯》稳定对应。"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "cn_title": "Quantic Dream员工罢工，力保《星球大战：日蚀》",
+      "en_title": "With the Threat of Layoffs Looming, Quantic Dream Staff Say They're Going on Strike to Save Star Wars Eclipse From Cancelation",
+      "url": "https://www.ign.com/articles/with-the-threat-of-layoffs-looming-quantic-dream-staff-say-theyre-going-on-strike-to-save-star-wars-eclipse-from-cancelation",
+      "category": "行业动态",
+      "has_translation": true,
+      "title_diff": {
+        "mine": "QD员工罢工，力保《星球大战：日食》",
+        "yours": "Quantic Dream员工罢工，力保《星球大战：日蚀》"
+      },
+      "subtitle_diff": null,
+      "body_diffs": [
+        {
+          "index": 0,
+          "mine": "一份新报道揭示了法国工作室Quantic Dream的内部动态，并透露了人们对《星球大战：日食》未来的担忧。",
+          "yours": "一份新报道揭示了法国工作室Quantic Dream的内部动态，并透露了人们对《星球大战：日蚀》未来的担忧。",
+          "my_sentences": [
+            "一份新报道揭示了法国工作室Quantic Dream的内部动态，并透露了人们对《星球大战：日食》未来的担忧。"
+          ],
+          "your_sentences": [
+            "一份新报道揭示了法国工作室Quantic Dream的内部动态，并透露了人们对《星球大战：日蚀》未来的担忧。"
+          ]
+        },
+        {
+          "index": 1,
+          "mine": "上个月，Quantic Dream取消了其服务型游戏《咒术编年史》，距其抢先体验上线仅三个月。这家以成功制作单机剧情驱动游戏而闻名的工作室，曾推出《暴雨》《超凡双生》和《底特律：成为人类》等作品，表示取消《咒术编年史》将导致裁员，但尚未透露受影响的具体人数。",
+          "yours": "上个月，Quantic Dream取消了其服务型游戏《Spellcasters Chronicles》，距其抢先体验上线仅三个月。这家以成功制作单机剧情驱动游戏而闻名的工作室，曾推出《暴雨》《超凡双生》和《底特律：成为人类》等作品。工作室表示取消《Spellcasters Chronicles》将导致裁员，但尚未透露受影响的具体人数。",
+          "my_sentences": [
+            "上个月，Quantic Dream取消了其服务型游戏《咒术编年史》，距其抢先体验上线仅三个月。",
+            "这家以成功制作单机剧情驱动游戏而闻名的工作室，曾推出《暴雨》《超凡双生》和《底特律：成为人类》等作品，表示取消《咒术编年史》将导致裁员，但尚未透露受影响的具体人数。"
+          ],
+          "your_sentences": [
+            "上个月，Quantic Dream取消了其服务型游戏《Spellcasters Chronicles》，距其抢先体验上线仅三个月。",
+            "这家以成功制作单机剧情驱动游戏而闻名的工作室，曾推出《暴雨》《超凡双生》和《底特律：成为人类》等作品。",
+            "工作室表示取消《Spellcasters Chronicles》将导致裁员，但尚未透露受影响的具体人数。"
+          ]
+        },
+        {
+          "index": 2,
+          "mine": "在取消《咒术编年史》时，Quantic Dream坚称《星球大战：日食》的开发「不受此决定影响，并继续按计划进行」。但据法国网站Gamekult报道，《日食》正面临「资源、愿景和进展方面的不足」。IGN已向Quantic Dream寻求置评。",
+          "yours": "在取消《Spellcasters Chronicles》时，Quantic Dream坚称《星球大战：日蚀》的开发「不受此决定影响，并继续按计划进行」。但据法国网站Gamekult报道，《日蚀》正面临「资源、愿景和进展方面的问题」。IGN已向Quantic Dream寻求置评。",
+          "my_sentences": [
+            "在取消《咒术编年史》时，Quantic Dream坚称《星球大战：日食》的开发「不受此决定影响，并继续按计划进行」。",
+            "但据法国网站Gamekult报道，《日食》正面临「资源、愿景和进展方面的不足」。",
+            "IGN已向Quantic Dream寻求置评。"
+          ],
+          "your_sentences": [
+            "在取消《Spellcasters Chronicles》时，Quantic Dream坚称《星球大战：日蚀》的开发「不受此决定影响，并继续按计划进行」。",
+            "但据法国网站Gamekult报道，《日蚀》正面临「资源、愿景和进展方面的问题」。",
+            "IGN已向Quantic Dream寻求置评。"
+          ]
+        },
+        {
+          "index": 3,
+          "mine": "于2021年通过一支华丽的电影式预告片公布后，《星球大战：日食》此后数年一直低调。游戏设定在系列的高共和国时期，《日食》预计将融合Quantic Dream传统的叙事导向玩法与《星球大战》宇宙中的动作冒险游戏体验。",
+          "yours": "于2021年通过一支华丽的电影式预告片公布后，《星球大战：日蚀》此后数年一直沉寂。游戏设定在系列的高共和国时期，《日蚀》预计将融合Quantic Dream传统的叙事导向玩法与《星球大战》宇宙中的动作冒险游戏体验。",
+          "my_sentences": [
+            "于2021年通过一支华丽的电影式预告片公布后，《星球大战：日食》此后数年一直低调。",
+            "游戏设定在系列的高共和国时期，《日食》预计将融合Quantic Dream传统的叙事导向玩法与《星球大战》宇宙中的动作冒险游戏体验。"
+          ],
+          "your_sentences": [
+            "于2021年通过一支华丽的电影式预告片公布后，《星球大战：日蚀》此后数年一直沉寂。",
+            "游戏设定在系列的高共和国时期，《日蚀》预计将融合Quantic Dream传统的叙事导向玩法与《星球大战》宇宙中的动作冒险游戏体验。"
+          ]
+        },
+        {
+          "index": 4,
+          "mine": "除此之外，关于游戏细节仍然寥寥无几，而Quantic Dream在过去几年中对这个项目的表态，仅限于辟谣开发困境和延期传闻，当时有迹象表明该工作室因早前的职场指控而难以招聘人员。即使距离公布已过去五年，《星球大战：日食》至今仍无发售窗口。",
+          "yours": "除此之外，关于游戏细节仍然寥寥无几，而Quantic Dream在过去几年中对这个项目的表态，仅限于辟谣开发困境和延期传闻，当时有迹象表明该工作室因早前的职场指控而难以招聘人员。即使距离公布已过去五年，《星球大战：日蚀》至今仍无发售窗口。",
+          "my_sentences": [
+            "除此之外，关于游戏细节仍然寥寥无几，而Quantic Dream在过去几年中对这个项目的表态，仅限于辟谣开发困境和延期传闻，当时有迹象表明该工作室因早前的职场指控而难以招聘人员。",
+            "即使距离公布已过去五年，《星球大战：日食》至今仍无发售窗口。"
+          ],
+          "your_sentences": [
+            "除此之外，关于游戏细节仍然寥寥无几，而Quantic Dream在过去几年中对这个项目的表态，仅限于辟谣开发困境和延期传闻，当时有迹象表明该工作室因早前的职场指控而难以招聘人员。",
+            "即使距离公布已过去五年，《星球大战：日蚀》至今仍无发售窗口。"
+          ]
+        },
+        {
+          "index": 5,
+          "mine": "Gamekult称，据报道，Quantic Dream正考虑在取消《咒术编年史》后裁员115人——据说占公司员工总数的四分之一。此事件本身引发了由STJV工会组织的罢工，在工作室巴黎总部前举行。Gamekult表示，罢工员工正在试图挽救《星球大战：日食》。他们认为，至少有一部分面临失业的《咒术编年史》开发者，对于在不承受加班压力的情况下让《星球大战：日食》成为现实，仍是必不可缺的。",
+          "yours": "Gamekult称，据报道，Quantic Dream正考虑在取消《Spellcasters Chronicles》后裁员115人——据说占公司员工总数的四分之一。此事件本身引发了由STJV工会组织的罢工，抗议在工作室的巴黎总部前举行。据Gamekult消息，参与罢工的员工希望保住正在开发中的Star Wars Eclipse。他们认为，即将因裁员离开的部分《Spellcasters Chronicles》开发人员，对于推动《星球大战：日蚀》顺利完成至关重要，也有助于避免项目开发后期出现高强度加班和人员透支的问题。截至目前，Quantic Dream尚未就相关裁员传闻作出正式回应，《星球大战：日蚀》的开发进度也仍未公布更多官方信息。",
+          "my_sentences": [
+            "Gamekult称，据报道，Quantic Dream正考虑在取消《咒术编年史》后裁员115人——据说占公司员工总数的四分之一。",
+            "此事件本身引发了由STJV工会组织的罢工，在工作室巴黎总部前举行。",
+            "Gamekult表示，罢工员工正在试图挽救《星球大战：日食》。",
+            "他们认为，至少有一部分面临失业的《咒术编年史》开发者，对于在不承受加班压力的情况下让《星球大战：日食》成为现实，仍是必不可缺的。"
+          ],
+          "your_sentences": [
+            "Gamekult称，据报道，Quantic Dream正考虑在取消《Spellcasters Chronicles》后裁员115人——据说占公司员工总数的四分之一。",
+            "此事件本身引发了由STJV工会组织的罢工，抗议在工作室的巴黎总部前举行。",
+            "据Gamekult消息，参与罢工的员工希望保住正在开发中的Star Wars Eclipse。",
+            "他们认为，即将因裁员离开的部分《Spellcasters Chronicles》开发人员，对于推动《星球大战：日蚀》顺利完成至关重要，也有助于避免项目开发后期出现高强度加班和人员透支的问题。",
+            "截至目前，Quantic Dream尚未就相关裁员传闻作出正式回应，《星球大战：日蚀》的开发进度也仍未公布更多官方信息。"
+          ]
+        },
+        {
+          "index": 6,
+          "mine": "据悉，在罢工当天（6月25日），卢卡斯影业的一个代表团原定到访Quantic Dream，检视《星球大战：日食》的开发进展。罢工员工希望传达一个明确信息：在目前情况下，如果裁员计划得以实施，《日食》将无法完成。或者如Gamekult所说：「这是为了拯救公司，避免一次极其痛苦的取消——这件事目前就像达摩克利斯之剑悬在员工头顶。」",
+          "yours": "据悉，在罢工当天（6月25日），卢卡斯影业的一个代表团原定到访Quantic Dream，检视《星球大战：日蚀》的开发进展。罢工员工希望传达一个明确信息：在目前情况下，如果裁员计划得以实施，《日蚀》将无法完成。或者如Gamekult所说：「拯救公司免于一次极其痛苦的取消决定——这件事目前就像达摩克利斯之剑悬在员工头顶。」",
+          "my_sentences": [
+            "据悉，在罢工当天（6月25日），卢卡斯影业的一个代表团原定到访Quantic Dream，检视《星球大战：日食》的开发进展。",
+            "罢工员工希望传达一个明确信息：在目前情况下，如果裁员计划得以实施，《日食》将无法完成。",
+            "或者如Gamekult所说：「这是为了拯救公司，避免一次极其痛苦的取消——这件事目前就像达摩克利斯之剑悬在员工头顶。",
+            "」"
+          ],
+          "your_sentences": [
+            "据悉，在罢工当天（6月25日），卢卡斯影业的一个代表团原定到访Quantic Dream，检视《星球大战：日蚀》的开发进展。",
+            "罢工员工希望传达一个明确信息：在目前情况下，如果裁员计划得以实施，《日蚀》将无法完成。",
+            "或者如Gamekult所说：「拯救公司免于一次极其痛苦的取消决定——这件事目前就像达摩克利斯之剑悬在员工头顶。",
+            "」"
+          ]
+        },
+        {
+          "index": 7,
+          "mine": "在中国所有者网易对西方游戏公司收缩投资的背景下，Quantic Dream去年被迫回应关于工作室关闭的担忧。",
+          "yours": "在网易对西方游戏公司收缩投资的背景下，Quantic Dream去年被迫回应关于工作室关闭的担忧。",
+          "my_sentences": [
+            "在中国所有者网易对西方游戏公司收缩投资的背景下，Quantic Dream去年被迫回应关于工作室关闭的担忧。"
+          ],
+          "your_sentences": [
+            "在网易对西方游戏公司收缩投资的背景下，Quantic Dream去年被迫回应关于工作室关闭的担忧。"
+          ]
+        },
+        {
+          "index": 8,
+          "mine": "Quantic Dream首席执行官兼发行负责人Guillaume de Fondaumière在LinkedIn发布声明称，他「得知网易集团部分部门近期的裁员和工作室关闭深感悲痛」，但向玩家保证，Quantic在巴黎和蒙特利尔的工作室仍然「未受影响」。",
+          "yours": "Quantic Dream首席执行官兼发行负责人Guillaume de Fondaumière在LinkedIn发布声明称，他「对网易部分部门近期的裁员和工作室关闭深感悲痛」，但向玩家保证，Quantic在巴黎和蒙特利尔的工作室仍然「未受影响」。",
+          "my_sentences": [
+            "Quantic Dream首席执行官兼发行负责人Guillaume de Fondaumière在LinkedIn发布声明称，他「得知网易集团部分部门近期的裁员和工作室关闭深感悲痛」，但向玩家保证，Quantic在巴黎和蒙特利尔的工作室仍然「未受影响」。"
+          ],
+          "your_sentences": [
+            "Quantic Dream首席执行官兼发行负责人Guillaume de Fondaumière在LinkedIn发布声明称，他「对网易部分部门近期的裁员和工作室关闭深感悲痛」，但向玩家保证，Quantic在巴黎和蒙特利尔的工作室仍然「未受影响」。"
+          ]
+        },
+        {
+          "index": 9,
+          "mine": "de Fondaumière写道：「[Quantic总裁]David Cage和我，向最近几天就Quantic Dream联系我们表达的粉丝与朋友致以感激。我们想向大家保证，我们在巴黎和蒙特利尔的工作室仍然未受影响。我们正全速推进各项目，两处地点均有多个开放职位。」",
+          "yours": "de Fondaumière写道：「（Quantic总裁）David Cage和我，向最近几天就Quantic Dream联系我们表达的粉丝与朋友致以感激。我们想向大家保证，我们在巴黎和蒙特利尔的工作室仍然未受影响。我们正全速推进各项目，两处地点均有多个开放职位。」",
+          "my_sentences": [
+            "de Fondaumière写道：「[Quantic总裁]David Cage和我，向最近几天就Quantic Dream联系我们表达的粉丝与朋友致以感激。",
+            "我们想向大家保证，我们在巴黎和蒙特利尔的工作室仍然未受影响。",
+            "我们正全速推进各项目，两处地点均有多个开放职位。",
+            "」"
+          ],
+          "your_sentences": [
+            "de Fondaumière写道：「（Quantic总裁）David Cage和我，向最近几天就Quantic Dream联系我们表达的粉丝与朋友致以感激。",
+            "我们想向大家保证，我们在巴黎和蒙特利尔的工作室仍然未受影响。",
+            "我们正全速推进各项目，两处地点均有多个开放职位。",
+            "」"
+          ]
+        },
+        {
+          "index": 12,
+          "mine": "「我们当前项目的开发正按计划推进，我们也全力投入，将来交付并推出这些创新、高品质的作品。」de Fondaumière 说道，但并未提供关于其正在开发中的《星球大战：日食》的任何具体新进展。",
+          "yours": "「我们当前项目的开发正按计划推进，我们也全力投入，将来交付并推出这些创新、高品质的作品。」de Fondaumière 说道，但并未提供关于其正在开发中的《星球大战：日蚀》的任何具体新进展。",
+          "my_sentences": [
+            "「我们当前项目的开发正按计划推进，我们也全力投入，将来交付并推出这些创新、高品质的作品。",
+            "」de Fondaumière 说道，但并未提供关于其正在开发中的《星球大战：日食》的任何具体新进展。"
+          ],
+          "your_sentences": [
+            "「我们当前项目的开发正按计划推进，我们也全力投入，将来交付并推出这些创新、高品质的作品。",
+            "」de Fondaumière 说道，但并未提供关于其正在开发中的《星球大战：日蚀》的任何具体新进展。"
+          ]
+        },
+        {
+          "index": 13,
+          "mine": "今年3月曾有消息称，网易已切断对《如龙》系列创作者名越稔洋所领导工作室的资金支持，作为其缩减游戏开发业务计划的一部分。名越稔洋的新作《Gang of Dragon》现在看来已被取消。《星球大战：日食》会否面临同样的命运？",
+          "yours": "今年3月曾有消息称，网易已切断对《如龙》系列创作者名越稔洋所领导工作室的资金支持，作为其缩减游戏开发业务计划的一部分。名越稔洋的新作《Gang of Dragon》现在看来已被取消。《星球大战：日蚀》会否面临同样的命运？",
+          "my_sentences": [
+            "今年3月曾有消息称，网易已切断对《如龙》系列创作者名越稔洋所领导工作室的资金支持，作为其缩减游戏开发业务计划的一部分。",
+            "名越稔洋的新作《Gang of Dragon》现在看来已被取消。",
+            "《星球大战：日食》会否面临同样的命运？"
+          ],
+          "your_sentences": [
+            "今年3月曾有消息称，网易已切断对《如龙》系列创作者名越稔洋所领导工作室的资金支持，作为其缩减游戏开发业务计划的一部分。",
+            "名越稔洋的新作《Gang of Dragon》现在看来已被取消。",
+            "《星球大战：日蚀》会否面临同样的命运？"
+          ]
+        },
+        {
+          "index": 14,
+          "mine": "至于 Quantic Dream 的员工，工会协商据称仍在进行中。STJV 希望工作室与工会签署一份多数协议，以减轻损失并继续推进工作——理论上，这将使更少的员工丢掉工作，剩下的员工则协助把《日食》推出市面。",
+          "yours": "至于 Quantic Dream 的员工，工会协商据称仍在进行中。STJV希望工作室与工会签署一份多数协议，以减轻损失并继续推进工作——理论上，这将使更少的员工丢掉工作，剩下的员工则协助继续开发《日蚀》。",
+          "my_sentences": [
+            "至于 Quantic Dream 的员工，工会协商据称仍在进行中。",
+            "STJV 希望工作室与工会签署一份多数协议，以减轻损失并继续推进工作——理论上，这将使更少的员工丢掉工作，剩下的员工则协助把《日食》推出市面。"
+          ],
+          "your_sentences": [
+            "至于 Quantic Dream 的员工，工会协商据称仍在进行中。",
+            "STJV希望工作室与工会签署一份多数协议，以减轻损失并继续推进工作——理论上，这将使更少的员工丢掉工作，剩下的员工则协助继续开发《日蚀》。"
+          ]
+        },
+        {
+          "index": 15,
+          "mine": "Wesley 是 IGN 新闻总监。你可以在 X 上通过 @wyp100 找到他，也可通过 wesley_yinpoole@ign.com 或机密邮箱 wyp100@proton.me 联系 Wesley。",
+          "yours": "",
+          "my_sentences": [
+            "Wesley 是 IGN 新闻总监。",
+            "你可以在 X 上通过 @wyp100 找到他，也可通过 wesley_yinpoole@ign.com 或机密邮箱 wyp100@proton.me 联系 Wesley。"
+          ],
+          "your_sentences": []
+        }
+      ],
+      "dictionary_candidates": [
+        {
+          "id": "dict_candidate_spellcasters_chronicles_4b1e9e989b50",
+          "category": "dictionary",
+          "type": "dictionary_candidate",
+          "dict_category": "terms",
+          "en": "Spellcasters Chronicles",
+          "cn": "咒术编年史",
+          "title": "词库候选：Spellcasters Chronicles → 咒术编年史",
+          "rule": "建议将「Spellcasters Chronicles」加入词库，译为「咒术编年史」。",
+          "status": "ready_for_review",
+          "confidence": "high",
+          "date": "2026-06-30",
+          "article_id": 9,
+          "article_title": "Quantic Dream员工罢工，力保《星球大战：日蚀》",
+          "url": "https://www.ign.com/articles/with-the-threat-of-layoffs-looming-quantic-dream-staff-say-theyre-going-on-strike-to-save-star-wars-eclipse-from-cancelation",
+          "evidence": "来自文章页未确认新词候选。"
+        },
+        {
+          "id": "dict_candidate_star_wars_eclipse_710171cd8cd4",
+          "category": "dictionary",
+          "type": "dictionary_candidate",
+          "dict_category": "games",
+          "en": "Star Wars: Eclipse",
+          "cn": "星球大战：日蚀",
+          "title": "词库候选：Star Wars: Eclipse → 星球大战：日蚀",
+          "rule": "建议将「Star Wars: Eclipse」加入词库，译为「星球大战：日蚀」。",
+          "status": "ready_for_review",
+          "confidence": "high",
+          "date": "2026-06-30",
+          "article_id": 9,
+          "article_title": "Quantic Dream员工罢工，力保《星球大战：日蚀》",
+          "url": "https://www.ign.com/articles/with-the-threat-of-layoffs-looming-quantic-dream-staff-say-theyre-going-on-strike-to-save-star-wars-eclipse-from-cancelation",
+          "evidence": "用户将标题中的《星球大战：日食》修正为《星球大战：日蚀》。",
+          "latest_evidence_summary": "用户将标题中的《星球大战：日食》修正为《星球大战：日蚀》。"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "cn_title": "索尼声称PS6将实现客厅之外的无缝体验",
+      "en_title": "Will PS6 Be Like a Nintendo Switch? Sony Says Its Next-Gen Console Will Enable 'A Seamless Experience That Can Be Enjoyed Naturally Beyond the Living Room'",
+      "url": "https://www.ign.com/articles/will-ps6-be-like-a-nintendo-switch-sony-says-its-next-gen-console-will-enable-a-seamless-experience-that-can-be-enjoyed-naturally-beyond-the-living-room",
+      "category": "行业动态",
+      "has_translation": true,
+      "title_diff": {
+        "mine": "《任天堂》索尼：PS6将实现客厅之外的无缝体验",
+        "yours": "索尼声称PS6将实现客厅之外的无缝体验"
+      },
+      "subtitle_diff": {
+        "mine": "不再限于客厅",
+        "yours": "就像Switch一样？"
+      },
+      "body_diffs": [
+        {
+          "index": 0,
+          "mine": "索尼暗示，其下一代主机——外界普遍认为将是 PS6——可能会像 Switch 那样，带来「客厅之外也能自然享受的无缝体验」。",
+          "yours": "索尼暗示，其下一代主机——外界普遍认为是PS6——可能会像任天堂Switch一样，提供「一种可在客厅之外自然享受的无缝体验」。",
+          "my_sentences": [
+            "索尼暗示，其下一代主机——外界普遍认为将是 PS6——可能会像 Switch 那样，带来「客厅之外也能自然享受的无缝体验」。"
+          ],
+          "your_sentences": [
+            "索尼暗示，其下一代主机——外界普遍认为是PS6——可能会像任天堂Switch一样，提供「一种可在客厅之外自然享受的无缝体验」。"
+          ]
+        },
+        {
+          "index": 1,
+          "mine": "这些评论来自索尼自己以英文发布的一份近期问答，受访者是索尼互动娱乐总裁兼CEO西野秀明。在问答中，他被问及索尼打算如何重新吸引那些在疫情封锁期间转向PC游戏的PlayStation用户，以及将如何通过下一代平台实现重大变革。",
+          "yours": "相关说法来自索尼近期以英文发布的一份问答，受访者是索尼互动娱乐总裁兼CEO西野秀明。在问答中，这位高管被问及索尼计划如何重新吸引疫情封锁期间流向PC游戏的PlayStation用户，以及将如何在下一代平台上作出重大改变。",
+          "my_sentences": [
+            "这些评论来自索尼自己以英文发布的一份近期问答，受访者是索尼互动娱乐总裁兼CEO西野秀明。",
+            "在问答中，他被问及索尼打算如何重新吸引那些在疫情封锁期间转向PC游戏的PlayStation用户，以及将如何通过下一代平台实现重大变革。"
+          ],
+          "your_sentences": [
+            "相关说法来自索尼近期以英文发布的一份问答，受访者是索尼互动娱乐总裁兼CEO西野秀明。",
+            "在问答中，这位高管被问及索尼计划如何重新吸引疫情封锁期间流向PC游戏的PlayStation用户，以及将如何在下一代平台上作出重大改变。"
+          ]
+        },
+        {
+          "index": 2,
+          "mine": "西野秀明回应称，索尼正试图通过推出通常用于PC配置的PlayStation显示器和音箱，来改变「PlayStation即客厅」的固有印象。",
+          "yours": "西野秀明在回答中指出，索尼正试图通过推出PlayStation显示器和音箱，改变「PlayStation等于客厅」的认知，而这些设备通常会被人们用于PC配置。",
+          "my_sentences": [
+            "西野秀明回应称，索尼正试图通过推出通常用于PC配置的PlayStation显示器和音箱，来改变「PlayStation即客厅」的固有印象。"
+          ],
+          "your_sentences": [
+            "西野秀明在回答中指出，索尼正试图通过推出PlayStation显示器和音箱，改变「PlayStation等于客厅」的认知，而这些设备通常会被人们用于PC配置。"
+          ]
+        },
+        {
+          "index": 3,
+          "mine": "「PlayStation长久以来都与在客厅玩游戏紧密联系在一起，」西野秀明说道。「然而，近年来，全球越来越多的用户开始使用个人显示器。为此，我们正在销售显示器和音箱等外设，以打破‘PlayStation等于客厅’的固有印象，并拓展使用场景。」",
+          "yours": "西野秀明表示：「长期以来，PlayStation一直与‘在客厅游玩’这一概念高度绑定。不过，近年来，全球有更多用户开始使用个人显示器。作为回应，我们正在销售显示器和音箱等外设，以摆脱‘PlayStation等于客厅’这一固定认知，并拓展使用场景。」",
+          "my_sentences": [
+            "「PlayStation长久以来都与在客厅玩游戏紧密联系在一起，」西野秀明说道。",
+            "「然而，近年来，全球越来越多的用户开始使用个人显示器。",
+            "为此，我们正在销售显示器和音箱等外设，以打破‘PlayStation等于客厅’的固有印象，并拓展使用场景。",
+            "」"
+          ],
+          "your_sentences": [
+            "西野秀明表示：「长期以来，PlayStation一直与‘在客厅游玩’这一概念高度绑定。",
+            "不过，近年来，全球有更多用户开始使用个人显示器。",
+            "作为回应，我们正在销售显示器和音箱等外设，以摆脱‘PlayStation等于客厅’这一固定认知，并拓展使用场景。",
+            "」"
+          ]
+        },
+        {
+          "index": 4,
+          "mine": "随后，西野秀明谈到了索尼的下一代平台，但没有提及名称或任何具体细节。",
+          "yours": "随后，西野秀明谈到了索尼的下一代平台，但没有说出名称，也没有提供任何具体细节。",
+          "my_sentences": [
+            "随后，西野秀明谈到了索尼的下一代平台，但没有提及名称或任何具体细节。"
+          ],
+          "your_sentences": [
+            "随后，西野秀明谈到了索尼的下一代平台，但没有说出名称，也没有提供任何具体细节。"
+          ]
+        },
+        {
+          "index": 5,
+          "mine": "「对于下一代平台，我们不希望它仅仅是PC的替代品，而是要提供PlayStation独有的价值，」他说。「这不仅包括技术进步，还包括使用方式的扩展，实现一种在客厅之外也能自然享受的无缝体验。」",
+          "yours": "他说：「对于下一代平台，我们的目标不是简单地充当PC的替代品，而是提供PlayStation独有的价值。这不仅包括技术进步，也包括使用方式的扩展，从而实现一种可在客厅之外自然享受的无缝体验。」",
+          "my_sentences": [
+            "「对于下一代平台，我们不希望它仅仅是PC的替代品，而是要提供PlayStation独有的价值，」他说。",
+            "「这不仅包括技术进步，还包括使用方式的扩展，实现一种在客厅之外也能自然享受的无缝体验。",
+            "」"
+          ],
+          "your_sentences": [
+            "他说：「对于下一代平台，我们的目标不是简单地充当PC的替代品，而是提供PlayStation独有的价值。",
+            "这不仅包括技术进步，也包括使用方式的扩展，从而实现一种可在客厅之外自然享受的无缝体验。",
+            "」"
+          ]
+        },
+        {
+          "index": 6,
+          "mine": "正是这一点引发外界猜测，索尼是否计划推出类似任天堂Switch的混合主机。一台承诺「客厅之外仍能自然体验无缝游戏」的主机，听起来确实像是可以随身携带的设备，正如Switch那样。但这究竟会是怎样的形态？",
+          "yours": "正是最后这部分内容，让人们开始猜测索尼是否计划推出一款类似任天堂Switch的PlayStation混合主机。一台能提供「可在客厅之外自然享受的无缝体验」的主机，听起来确实像是某种可以随身携带的设备，就像Switch一样。但它会是什么样子？",
+          "my_sentences": [
+            "正是这一点引发外界猜测，索尼是否计划推出类似任天堂Switch的混合主机。",
+            "一台承诺「客厅之外仍能自然体验无缝游戏」的主机，听起来确实像是可以随身携带的设备，正如Switch那样。",
+            "但这究竟会是怎样的形态？"
+          ],
+          "your_sentences": [
+            "正是最后这部分内容，让人们开始猜测索尼是否计划推出一款类似任天堂Switch的PlayStation混合主机。",
+            "一台能提供「可在客厅之外自然享受的无缝体验」的主机，听起来确实像是某种可以随身携带的设备，就像Switch一样。",
+            "但它会是什么样子？"
+          ]
+        },
+        {
+          "index": 7,
+          "mine": "索尼有多种选择。传闻索尼正在研发一款专用的PS6掌机。这款设备能否像Switch一样，充当可插底座的PS6主机与控制器混合体？又或者，索尼正在开发的PS6不过是下一代PlayStation Portal的微升级版——西野表示该设备销量强劲。",
+          "yours": "可能性有很多。长期以来，有大量传闻称索尼正在开发一款专用PS6掌机。它是否可能兼作PS6主机/手柄混合设备，并像Switch一样接入底座？或者，索尼也许正在开发一款更接近下一代PlayStation Portal的PS6，而西野秀明表示PS Portal销量强劲。",
+          "my_sentences": [
+            "索尼有多种选择。",
+            "传闻索尼正在研发一款专用的PS6掌机。",
+            "这款设备能否像Switch一样，充当可插底座的PS6主机与控制器混合体？",
+            "又或者，索尼正在开发的PS6不过是下一代PlayStation Portal的微升级版——西野表示该设备销量强劲。"
+          ],
+          "your_sentences": [
+            "可能性有很多。",
+            "长期以来，有大量传闻称索尼正在开发一款专用PS6掌机。",
+            "它是否可能兼作PS6主机/手柄混合设备，并像Switch一样接入底座？",
+            "或者，索尼也许正在开发一款更接近下一代PlayStation Portal的PS6，而西野秀明表示PS Portal销量强劲。"
+          ]
+        },
+        {
+          "index": 8,
+          "mine": "无论如何，西野指出，云游戏可能是索尼应对当前内存短缺危机（RAMpocalypse）的一个潜在解决方案。",
+          "yours": "无论如何，西野秀明都将云游戏指向为索尼应对当前内存困境的一个潜在解决方案。",
+          "my_sentences": [
+            "无论如何，西野指出，云游戏可能是索尼应对当前内存短缺危机（RAMpocalypse）的一个潜在解决方案。"
+          ],
+          "your_sentences": [
+            "无论如何，西野秀明都将云游戏指向为索尼应对当前内存困境的一个潜在解决方案。"
+          ]
+        },
+        {
+          "index": 9,
+          "mine": "「至于云游戏，自2013年推出服务以来，我们的首要任务一直是确保用户从首次使用服务起就能获得高品质体验，因为性能很大程度上取决于网络条件，而糟糕的体验会迅速侵蚀用户信任。」西野解释道。",
+          "yours": "西野秀明解释说：「关于云游戏，自2013年推出服务以来，我们的首要任务一直是确保用户从首次使用服务起就能获得高质量体验，因为性能高度依赖网络条件，而糟糕的质量会迅速削弱信任。」",
+          "my_sentences": [
+            "「至于云游戏，自2013年推出服务以来，我们的首要任务一直是确保用户从首次使用服务起就能获得高品质体验，因为性能很大程度上取决于网络条件，而糟糕的体验会迅速侵蚀用户信任。",
+            "」西野解释道。"
+          ],
+          "your_sentences": [
+            "西野秀明解释说：「关于云游戏，自2013年推出服务以来，我们的首要任务一直是确保用户从首次使用服务起就能获得高质量体验，因为性能高度依赖网络条件，而糟糕的质量会迅速削弱信任。",
+            "」"
+          ]
+        },
+        {
+          "index": 10,
+          "mine": "「正因如此，我们才将PS Portal设计为专用设备，以可靠地提供建立在手柄操控和大屏幕之上的PlayStation游戏体验。由于通过智能手机触控或PC键鼠难以提供足够高品质的体验，我们的云策略不是快速扩展至手机和PC，而是专注于能够确保质量的环境。」",
+          "yours": "「因此，我们将PS Portal设计为一款专用设备，用于稳定提供PlayStation游戏体验，而这种体验以手柄操作和大屏幕为前提。由于通过智能手机触控操作或PC的键盘鼠标很难提供足够高质量的体验，我们的云战略并不是快速扩展到智能手机和PC，而是专注于能够确保质量的环境。」",
+          "my_sentences": [
+            "「正因如此，我们才将PS Portal设计为专用设备，以可靠地提供建立在手柄操控和大屏幕之上的PlayStation游戏体验。",
+            "由于通过智能手机触控或PC键鼠难以提供足够高品质的体验，我们的云策略不是快速扩展至手机和PC，而是专注于能够确保质量的环境。",
+            "」"
+          ],
+          "your_sentences": [
+            "「因此，我们将PS Portal设计为一款专用设备，用于稳定提供PlayStation游戏体验，而这种体验以手柄操作和大屏幕为前提。",
+            "由于通过智能手机触控操作或PC的键盘鼠标很难提供足够高质量的体验，我们的云战略并不是快速扩展到智能手机和PC，而是专注于能够确保质量的环境。",
+            "」"
+          ]
+        },
+        {
+          "index": 11,
+          "mine": "「尽管我们不公布具体销量数据，但PS Portal在北美、欧洲和日本需求强劲，最近一个圣诞假期期间服务器甚至满负荷运转。云串流对内存的需求极低，在当前内存价格攀升的市场环境中，它正成为越来越有吸引力的低成本瘦客户端设备。展望未来，我们计划在保持现有品质的基础上，进一步拓展云游戏体验。」",
+          "yours": "「虽然我们不披露设备销量数据，但PS Portal在北美、欧洲和日本需求强劲，服务器在最近一个假日季达到满负载。云串流对内存的需求也很低，在当前内存价格上涨的市场环境下，使其作为低成本瘦客户端设备变得越来越有吸引力。展望未来，我们的目标是在维持迄今所培养质量的同时，扩展云游戏体验。」",
+          "my_sentences": [
+            "「尽管我们不公布具体销量数据，但PS Portal在北美、欧洲和日本需求强劲，最近一个圣诞假期期间服务器甚至满负荷运转。",
+            "云串流对内存的需求极低，在当前内存价格攀升的市场环境中，它正成为越来越有吸引力的低成本瘦客户端设备。",
+            "展望未来，我们计划在保持现有品质的基础上，进一步拓展云游戏体验。",
+            "」"
+          ],
+          "your_sentences": [
+            "「虽然我们不披露设备销量数据，但PS Portal在北美、欧洲和日本需求强劲，服务器在最近一个假日季达到满负载。",
+            "云串流对内存的需求也很低，在当前内存价格上涨的市场环境下，使其作为低成本瘦客户端设备变得越来越有吸引力。",
+            "展望未来，我们的目标是在维持迄今所培养质量的同时，扩展云游戏体验。",
+            "」"
+          ]
+        },
+        {
+          "index": 12,
+          "mine": "在我看来，索尼正在开发多款价格各异的PS6机型。我确信会有一款传统家用主机版PS6，性能最强但定价也最高。但之后看到索尼推出更便宜、性能稍低的PS6我也不会意外，就像微软推出XBOX Series S那样。此外，我怀疑索尼确实在开发一款可能类似Switch的PS6掌机。另外还有一款可能由云游戏驱动的下一代PlayStation Portal，这可能是所有选项中最便宜的一个。",
+          "yours": "IGN的看法是，索尼正在开发多种PS6方案，每种方案价格不同。我相信会有传统家用主机版本的PS6，它能提供最强性能，但价格也会更高。不过，如果索尼推出一款更便宜、性能较弱的PS6，我也不会感到意外，就像微软推出XBOX Series S那样。除此之外，我怀疑索尼确实正在开发一款可能像Switch一样运作的PS6掌机。然后还有一款可能由云游戏驱动的下一代PlayStation Portal，它或许是其中最便宜的选择。",
+          "my_sentences": [
+            "在我看来，索尼正在开发多款价格各异的PS6机型。",
+            "我确信会有一款传统家用主机版PS6，性能最强但定价也最高。",
+            "但之后看到索尼推出更便宜、性能稍低的PS6我也不会意外，就像微软推出XBOX Series S那样。",
+            "此外，我怀疑索尼确实在开发一款可能类似Switch的PS6掌机。",
+            "另外还有一款可能由云游戏驱动的下一代PlayStation Portal，这可能是所有选项中最便宜的一个。"
+          ],
+          "your_sentences": [
+            "IGN的看法是，索尼正在开发多种PS6方案，每种方案价格不同。",
+            "我相信会有传统家用主机版本的PS6，它能提供最强性能，但价格也会更高。",
+            "不过，如果索尼推出一款更便宜、性能较弱的PS6，我也不会感到意外，就像微软推出XBOX Series S那样。",
+            "除此之外，我怀疑索尼确实正在开发一款可能像Switch一样运作的PS6掌机。",
+            "然后还有一款可能由云游戏驱动的下一代PlayStation Portal，它或许是其中最便宜的选择。"
+          ]
+        },
+        {
+          "index": 13,
+          "mine": "微软已承诺推出代号 Project Helix 的超强下一代主机，该主机还可运行 PC 游戏，但公司似乎也有类似的规划，准备提供多种选择。本月早些时候，XBOX 负责人 Asha Sharma 表示，新主机和现有主机的成本不断飙升，未来一代将需要「彻底不同的商业模式」。",
+          "yours": "微软已承诺推出一款以Project Helix为名的超强下一代主机，它也将能运行PC游戏，但微软可能同样计划提供一系列选择。本月早些时候，XBOX负责人Asha Sharma表示，新旧主机不断攀升的成本，将要求下一代采用「完全不同的商业模式」。",
+          "my_sentences": [
+            "微软已承诺推出代号 Project Helix 的超强下一代主机，该主机还可运行 PC 游戏，但公司似乎也有类似的规划，准备提供多种选择。",
+            "本月早些时候，XBOX 负责人 Asha Sharma 表示，新主机和现有主机的成本不断飙升，未来一代将需要「彻底不同的商业模式」。"
+          ],
+          "your_sentences": [
+            "微软已承诺推出一款以Project Helix为名的超强下一代主机，它也将能运行PC游戏，但微软可能同样计划提供一系列选择。",
+            "本月早些时候，XBOX负责人Asha Sharma表示，新旧主机不断攀升的成本，将要求下一代采用「完全不同的商业模式」。"
+          ]
+        },
+        {
+          "index": 14,
+          "mine": "[MANUAL_TRANSLATION_REQUIRED] Wesley is Director, News at IGN. Find him on Twitter at @wyp100. You can reach Wesley at wesley_yinpoole@ign.com or confidentially at wyp100@proton.me.",
+          "yours": "",
+          "my_sentences": [
+            "[MANUAL_TRANSLATION_REQUIRED] Wesley is Director, News at IGN. Find him on Twitter at @wyp100. You can reach Wesley at wesley_yinpoole@ign.com or confidentially at wyp100@proton.me."
+          ],
+          "your_sentences": []
+        }
+      ],
+      "dictionary_candidates": []
+    },
+    {
+      "id": 19,
+      "cn_title": "索尼称不会以「重大」亏本卖硬件，PS6定价引担忧",
+      "en_title": "'It Is Not Realistic for Us to Absorb All Component Cost Increases' — Sony Says It Won't Sell Hardware at a 'Significant' Loss as Concern Grows Over PS6 Price",
+      "url": "https://www.ign.com/articles/it-is-not-realistic-for-us-to-absorb-all-component-cost-increases-sony-says-it-wont-sell-hardware-at-a-significant-loss-as-concern-grows-over-ps6-price",
+      "category": "行业动态",
+      "has_translation": true,
+      "title_diff": {
+        "mine": "索尼称不会以重大亏损卖硬件，PS6定价引担忧",
+        "yours": "索尼称不会以「重大」亏本卖硬件，PS6定价引担忧"
+      },
+      "subtitle_diff": {
+        "mine": "不差钱",
+        "yours": "价格也要次世代"
+      },
+      "body_diffs": [
+        {
+          "index": 0,
+          "mine": "索尼坚称不打算以「重大」亏损销售硬件，随着当前「内存危机」持续，外界对PlayStation 6潜在定价的担忧日益加剧。",
+          "yours": "索尼坚称不打算以「重大」亏损销售硬件，随着当前「内存危机」持续，外界对PS6潜在定价的担忧日益加剧。",
+          "my_sentences": [
+            "索尼坚称不打算以「重大」亏损销售硬件，随着当前「内存危机」持续，外界对PlayStation 6潜在定价的担忧日益加剧。"
+          ],
+          "your_sentences": [
+            "索尼坚称不打算以「重大」亏损销售硬件，随着当前「内存危机」持续，外界对PS6潜在定价的担忧日益加剧。"
+          ]
+        },
+        {
+          "index": 1,
+          "mine": "当前世代的主机价格已经上涨，索尼、微软和任天堂都在努力应对由AI热潮引发的元器件短缺。索尼在4月上调了PS5的售价，标准版PS5涨至649.99美元(约合人民币4420元)，PS5数字版涨至599.99美元(约合人民币4080元)，PS5 Pro涨至899.99美元(约合人民币6120元)。索尼将此归咎于「全球经济形势的持续压力」。",
+          "yours": "当前世代的主机价格已经上涨，索尼、微软和任天堂都在努力应对由AI热潮引发的元器件短缺。索尼在4月上调了PS5的售价，标准版PS5涨至649.99美元（约合人民币4420元），PS5数字版涨至599.99美元（约合人民币4080元），PS5 Pro涨至899.99美元（约合人民币6120元）。索尼将此归咎于「全球经济形势的持续压力」。",
+          "my_sentences": [
+            "当前世代的主机价格已经上涨，索尼、微软和任天堂都在努力应对由AI热潮引发的元器件短缺。",
+            "索尼在4月上调了PS5的售价，标准版PS5涨至649.99美元(约合人民币4420元)，PS5数字版涨至599.99美元(约合人民币4080元)，PS5 Pro涨至899.99美元(约合人民币6120元)。",
+            "索尼将此归咎于「全球经济形势的持续压力」。"
+          ],
+          "your_sentences": [
+            "当前世代的主机价格已经上涨，索尼、微软和任天堂都在努力应对由AI热潮引发的元器件短缺。",
+            "索尼在4月上调了PS5的售价，标准版PS5涨至649.99美元（约合人民币4420元），PS5数字版涨至599.99美元（约合人民币4080元），PS5 Pro涨至899.99美元（约合人民币6120元）。",
+            "索尼将此归咎于「全球经济形势的持续压力」。"
+          ]
+        },
+        {
+          "index": 3,
+          "mine": "人们不仅担心索尼将被迫再次上调PS5价格，还担心下一代主机——迄今尚未公布的PS6和微软的Project Helix——售价至少为1000美元(约合人民币6800元)，除非两家公司愿意在每台售价上承受重大亏损。",
+          "yours": "人们不仅担心索尼将被迫再次上调PS5价格，还担心下一代主机——迄今尚未公布的PS6和微软的Project Helix——售价至少为1000美元，除非两家公司愿意在每台售价上承受重大亏损。",
+          "my_sentences": [
+            "人们不仅担心索尼将被迫再次上调PS5价格，还担心下一代主机——迄今尚未公布的PS6和微软的Project Helix——售价至少为1000美元(约合人民币6800元)，除非两家公司愿意在每台售价上承受重大亏损。"
+          ],
+          "your_sentences": [
+            "人们不仅担心索尼将被迫再次上调PS5价格，还担心下一代主机——迄今尚未公布的PS6和微软的Project Helix——售价至少为1000美元，除非两家公司愿意在每台售价上承受重大亏损。"
+          ]
+        },
+        {
+          "index": 6,
+          "mine": "「首先，我们将硬件视为提供游戏体验的基础，通过推出 PlayStation Portal Remote Player（PS Portal）等产品，我们旨在提供超越客厅——这一传统上被视为主要使用环境——的、适应玩家游玩风格的体验。",
+          "yours": "「首先，我们将硬件视为提供游戏体验的基础，通过推出PlayStation Portal Remote Player（PS Portal）等产品，我们旨在提供超越客厅——这一传统上被视为主要使用环境——的、适应玩家游玩风格的体验。",
+          "my_sentences": [
+            "「首先，我们将硬件视为提供游戏体验的基础，通过推出 PlayStation Portal Remote Player（PS Portal）等产品，我们旨在提供超越客厅——这一传统上被视为主要使用环境——的、适应玩家游玩风格的体验。"
+          ],
+          "your_sentences": [
+            "「首先，我们将硬件视为提供游戏体验的基础，通过推出PlayStation Portal Remote Player（PS Portal）等产品，我们旨在提供超越客厅——这一传统上被视为主要使用环境——的、适应玩家游玩风格的体验。"
+          ]
+        },
+        {
+          "index": 9,
+          "mine": "这里面有几处值得剖析。西野提到 PlayStation Portal 以及提供「超越客厅的、适应玩家游玩风格的体验」，这或许可被视为对传闻已久的 PS6 掌机或混合主机（hybrid console）的又一暗示。另外，索尼也承认会将部分零部件成本上涨转嫁给消费者，并且已经通过 PS5 涨价落实了这一点。简而言之，玩家得为此买单。",
+          "yours": "这里面有几处值得剖析。西野提到PlayStation Portal以及提供「超越客厅的、适应玩家游玩风格的体验」，这或许可被视为对传闻已久的PS6掌机或混合主机（hybrid console）的又一暗示。另外，索尼也承认会将部分零部件成本上涨转嫁给消费者，并且已经通过PS5涨价落实了这一点。简而言之，玩家得为此买单。",
+          "my_sentences": [
+            "这里面有几处值得剖析。",
+            "西野提到 PlayStation Portal 以及提供「超越客厅的、适应玩家游玩风格的体验」，这或许可被视为对传闻已久的 PS6 掌机或混合主机（hybrid console）的又一暗示。",
+            "另外，索尼也承认会将部分零部件成本上涨转嫁给消费者，并且已经通过 PS5 涨价落实了这一点。",
+            "简而言之，玩家得为此买单。"
+          ],
+          "your_sentences": [
+            "这里面有几处值得剖析。",
+            "西野提到PlayStation Portal以及提供「超越客厅的、适应玩家游玩风格的体验」，这或许可被视为对传闻已久的PS6掌机或混合主机（hybrid console）的又一暗示。",
+            "另外，索尼也承认会将部分零部件成本上涨转嫁给消费者，并且已经通过PS5涨价落实了这一点。",
+            "简而言之，玩家得为此买单。"
+          ]
+        },
+        {
+          "index": 10,
+          "mine": "而且，尽管有这些涨价，销售仍按计划推进的说法也存在。但美国的数据或许显示出相反情况。正如 IGN 上周报道的那样，5 月对美国 PlayStation 和 XBOX 的销售而言是灾难性的一个月，涨价显然已经对消费者购买新主机的兴趣产生了重大影响。据 Circana 最新数据，PS5 消费支出同比下降 43%，销量暴跌 58%。事实上，PlayStation 硬件销量跌至自 2000 年 5 月以来的最低 5 月总量，而 XBOX 硬件销量则创下美国有史以来 5 月单月的最低纪录。",
+          "yours": "而且，尽管有这些涨价，销售仍按计划推进的说法也存在。但美国的数据或许显示出相反情况。正如 IGN 上周报道的那样，5月对美国PlayStation和XBOX的销售而言是灾难性的一个月，涨价显然已经对消费者购买新主机的兴趣产生了重大影响。据 Circana最新数据，PS5消费支出同比下降43%，销量暴跌58%。事实上，PlayStation 硬件销量跌至自2000年5月以来的同期最低水平，而XBOX硬件销量则创下美国有史以来5月单月的最低纪录。",
+          "my_sentences": [
+            "而且，尽管有这些涨价，销售仍按计划推进的说法也存在。",
+            "但美国的数据或许显示出相反情况。",
+            "正如 IGN 上周报道的那样，5 月对美国 PlayStation 和 XBOX 的销售而言是灾难性的一个月，涨价显然已经对消费者购买新主机的兴趣产生了重大影响。",
+            "据 Circana 最新数据，PS5 消费支出同比下降 43%，销量暴跌 58%。",
+            "事实上，PlayStation 硬件销量跌至自 2000 年 5 月以来的最低 5 月总量，而 XBOX 硬件销量则创下美国有史以来 5 月单月的最低纪录。"
+          ],
+          "your_sentences": [
+            "而且，尽管有这些涨价，销售仍按计划推进的说法也存在。",
+            "但美国的数据或许显示出相反情况。",
+            "正如 IGN 上周报道的那样，5月对美国PlayStation和XBOX的销售而言是灾难性的一个月，涨价显然已经对消费者购买新主机的兴趣产生了重大影响。",
+            "据 Circana最新数据，PS5消费支出同比下降43%，销量暴跌58%。",
+            "事实上，PlayStation 硬件销量跌至自2000年5月以来的同期最低水平，而XBOX硬件销量则创下美国有史以来5月单月的最低纪录。"
+          ]
+        },
+        {
+          "index": 11,
+          "mine": "索尼正在艰难应对内存价格危机（RAMpocalypse）之际，其表示尚未决定何时推出 PS6。即将年满六周岁的 PS5 正接近 1 亿销量大关（9370 万台），但仍落后于 PS4。值得注意的是，PS4 在生命周期相同阶段已多次降价，使其成为极具吸引力的冲动型消费选择。然而，本世代却走向了相反方向，限制了潜在装机量。甚至有人担心，索尼和微软可能无法在圣诞季向零售渠道供应足够的主机，以满足由《GTA6》——这一铁定能带动主机销售的大作——所引爆的需求。在 5 月的一次财务问答中，索尼总裁十时裕树坚称，索尼有足够的物料支撑 2026 年剩余时间的生产。",
+          "yours": "索尼在艰难应对内存价格危机时表示尚未决定何时推出PS6。即将年满六周岁的PS5 正接近1亿销量大关（9370万台），但仍落后于PS4。值得注意的是，PS4 在生命周期相同阶段已多次降价，使其成为极具吸引力的冲动型消费选择。然而，本世代却走向了相反方向，限制了潜在装机量。甚至有人担心，索尼和微软可能无法在圣诞季向零售渠道供应足够的主机，以满足由《GTA6》这一铁定能带动主机销售的大作所引爆的需求。在 5 月的一次财务问答中，索尼总裁十时裕树坚称，索尼有足够的物料支撑 2026 年剩余时间的生产。",
+          "my_sentences": [
+            "索尼正在艰难应对内存价格危机（RAMpocalypse）之际，其表示尚未决定何时推出 PS6。",
+            "即将年满六周岁的 PS5 正接近 1 亿销量大关（9370 万台），但仍落后于 PS4。",
+            "值得注意的是，PS4 在生命周期相同阶段已多次降价，使其成为极具吸引力的冲动型消费选择。",
+            "然而，本世代却走向了相反方向，限制了潜在装机量。",
+            "甚至有人担心，索尼和微软可能无法在圣诞季向零售渠道供应足够的主机，以满足由《GTA6》——这一铁定能带动主机销售的大作——所引爆的需求。",
+            "在 5 月的一次财务问答中，索尼总裁十时裕树坚称，索尼有足够的物料支撑 2026 年剩余时间的生产。"
+          ],
+          "your_sentences": [
+            "索尼在艰难应对内存价格危机时表示尚未决定何时推出PS6。",
+            "即将年满六周岁的PS5 正接近1亿销量大关（9370万台），但仍落后于PS4。",
+            "值得注意的是，PS4 在生命周期相同阶段已多次降价，使其成为极具吸引力的冲动型消费选择。",
+            "然而，本世代却走向了相反方向，限制了潜在装机量。",
+            "甚至有人担心，索尼和微软可能无法在圣诞季向零售渠道供应足够的主机，以满足由《GTA6》这一铁定能带动主机销售的大作所引爆的需求。",
+            "在 5 月的一次财务问答中，索尼总裁十时裕树坚称，索尼有足够的物料支撑 2026 年剩余时间的生产。"
+          ]
+        },
+        {
+          "index": 13,
+          "mine": "[MANUAL_TRANSLATION_REQUIRED] Wesley is Director, News at IGN. Find him on Twitter at @wyp100. You can reach Wesley at wesley_yinpoole@ign.com or confidentially at wyp100@proton.me.",
+          "yours": "",
+          "my_sentences": [
+            "[MANUAL_TRANSLATION_REQUIRED] Wesley is Director, News at IGN. Find him on Twitter at @wyp100. You can reach Wesley at wesley_yinpoole@ign.com or confidentially at wyp100@proton.me."
+          ],
+          "your_sentences": []
+        }
+      ],
+      "dictionary_candidates": []
+    }
+  ]
+}

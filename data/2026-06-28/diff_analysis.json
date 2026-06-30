@@ -1,14 +1,71 @@
 {
   "date": "2026-06-28",
-  "generated_at": "2026-06-29T22:38:52.251846",
-  "total_articles": 4,
+  "generated_at": "2026-06-30T22:38:19.888279",
+  "total_articles": 5,
+  "dictionary_candidate_count": 3,
+  "dictionary_candidates": [
+    {
+      "id": "dict_candidate_scorpion_2d428cfaa537",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "games",
+      "en": "Scorpion",
+      "cn": "蝎子",
+      "title": "词库候选：Scorpion → 蝎子",
+      "rule": "建议将「Scorpion」加入词库，译为「蝎子」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "date": "2026-06-28",
+      "article_id": 11,
+      "article_title": "《无敌少侠VS》开发者渴望与《真人快打》联动",
+      "url": "https://www.ign.com/articles/invincible-vs-devs-are-really-interested-in-a-mortal-kombat-crossover",
+      "evidence": "来自文章页未确认新词候选。"
+    },
+    {
+      "id": "dict_candidate_immortal_846234610dbe",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "games",
+      "en": "Immortal",
+      "cn": "不朽者",
+      "title": "词库候选：Immortal → 不朽者",
+      "rule": "建议将「Immortal」加入词库，译为「不朽者」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "date": "2026-06-28",
+      "article_id": 11,
+      "article_title": "《无敌少侠VS》开发者渴望与《真人快打》联动",
+      "url": "https://www.ign.com/articles/invincible-vs-devs-are-really-interested-in-a-mortal-kombat-crossover",
+      "evidence": "来自文章页未确认新词候选。"
+    },
+    {
+      "id": "dict_candidate_atom_eve_a04a16ee5f01",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "games",
+      "en": "Atom Eve",
+      "cn": "原子夏娃",
+      "title": "词库候选：Atom Eve → 原子夏娃",
+      "rule": "建议将「Atom Eve」加入词库，译为「原子夏娃」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "date": "2026-06-28",
+      "article_id": 11,
+      "article_title": "《无敌少侠VS》开发者渴望与《真人快打》联动",
+      "url": "https://www.ign.com/articles/invincible-vs-devs-are-really-interested-in-a-mortal-kombat-crossover",
+      "evidence": "来自文章页未确认新词候选。"
+    }
+  ],
+  "learning_evidence_updated": true,
+  "daily_learning_updated": true,
   "articles": [
     {
       "id": 1,
-      "cn_title": "《GTA6》确认不发售实体光盘",
+      "cn_title": "《GTA6》确认不会发售实体光盘",
       "en_title": "No, There Is No GTA 6 Physical Disc Coming Out at Launch or the Months After — Those Reports and Social Media Posts Are Incorrect",
       "url": "https://www.ign.com/articles/no-there-is-no-gta-6-physical-disc-coming-out-at-launch-or-the-months-after-those-reports-and-social-media-posts-are-incorrect",
-      "category": null,
+      "category": "游戏新闻",
+      "has_translation": true,
       "title_diff": {
         "mine": "《GTA6》确认不发售实体光盘",
         "yours": "《GTA6》确认不会发售实体光盘"
@@ -48,10 +105,10 @@
         },
         {
           "index": 8,
-          "mine": "昨天，IGN报道了自家发起的一项调查结果，问大家打算购买100美元(约合人民币681元)的终极版还是80美元(约合人民币545元)的标准版。稍显意外的是，超过70%的人倾向于更贵的版本。",
+          "mine": "昨天，IGN报道了自家发起的一项调查结果，问大家打算购买100美元(约合人民币680元)的终极版还是80美元(约合人民币544元)的标准版。稍显意外的是，超过70%的人倾向于更贵的版本。",
           "yours": "",
           "my_sentences": [
-            "昨天，IGN报道了自家发起的一项调查结果，问大家打算购买100美元(约合人民币681元)的终极版还是80美元(约合人民币545元)的标准版。",
+            "昨天，IGN报道了自家发起的一项调查结果，问大家打算购买100美元(约合人民币680元)的终极版还是80美元(约合人民币544元)的标准版。",
             "稍显意外的是，超过70%的人倾向于更贵的版本。"
           ],
           "your_sentences": []
@@ -67,14 +124,16 @@
           ],
           "your_sentences": []
         }
-      ]
+      ],
+      "dictionary_candidates": []
     },
     {
       "id": 4,
       "cn_title": "《小丑回魂》编剧加盟《玩具熊的五夜后宫3》",
       "en_title": "Five Nights at Freddy's 3 Enlists It and Annabelle Writer for Its Script",
       "url": "https://www.ign.com/articles/five-nights-at-freddys-3-enlists-it-and-annabelle-writer-for-its-script",
-      "category": null,
+      "category": "影视资讯",
+      "has_translation": true,
       "title_diff": null,
       "subtitle_diff": {
         "mine": "新鲜血液",
@@ -177,14 +236,16 @@
             "IGN则给第一部打了4分，第二部3分。"
           ]
         }
-      ]
+      ],
+      "dictionary_candidates": []
     },
     {
       "id": 7,
-      "cn_title": "《PlayStation》索尼将删除PSN用户超550部数字电影",
+      "cn_title": "索尼将删除PSN用户超550部数字电影",
       "en_title": "Sony to Delete Movies Owned by PlayStation Users, List Includes More Than 550 Digital Titles",
       "url": "https://www.ign.com/articles/sony-to-delete-movies-owned-by-playstation-users-list-includes-more-than-550-digital-titles",
-      "category": null,
+      "category": "行业动态",
+      "has_translation": true,
       "title_diff": {
         "mine": "《PlayStation》索尼将删除PSN用户超550部数字电影",
         "yours": "索尼将删除PSN用户超550部数字电影"
@@ -217,10 +278,10 @@
         },
         {
           "index": 3,
-          "mine": "「2025年利润75.35亿美元(约合人民币513亿元)，但索尼逮着机会就会坑自己客户。」（附图片）",
+          "mine": "「2025年利润75.35亿美元(约合人民币512亿元)，但索尼逮着机会就会坑自己客户。」（附图片）",
           "yours": "索尼的信息直截了当：「自2026年9月1日起，由于我们的内容许可协议，您将无法再访问此前从Studio Canal购买的内容，它也将从您的视频库中移除。感谢您使用PlayStation Store。」",
           "my_sentences": [
-            "「2025年利润75.35亿美元(约合人民币513亿元)，但索尼逮着机会就会坑自己客户。",
+            "「2025年利润75.35亿美元(约合人民币512亿元)，但索尼逮着机会就会坑自己客户。",
             "」（附图片）"
           ],
           "your_sentences": [
@@ -326,14 +387,16 @@
           ],
           "your_sentences": []
         }
-      ]
+      ],
+      "dictionary_candidates": []
     },
     {
       "id": 10,
-      "cn_title": "GTA6黄牛eBay叫卖，无视Rockstar数字版承诺",
+      "cn_title": "在官方宣布《GTA6》实体版无光盘后，仍有黄牛加价售卖",
       "en_title": "GTA 6 Scalpers Are Finding Buyers on eBay Despite Rockstar's Commitment to a Digital Release",
       "url": "https://www.ign.com/articles/gta-6-scalpers-are-finding-buyers-on-ebay-despite-rockstars-commitment-to-a-digital-release",
-      "category": null,
+      "category": "游戏新闻",
+      "has_translation": true,
       "title_diff": {
         "mine": "GTA6黄牛eBay叫卖，无视Rockstar数字版承诺",
         "yours": "在官方宣布《GTA6》实体版无光盘后，仍有黄牛加价售卖"
@@ -356,11 +419,11 @@
         },
         {
           "index": 1,
-          "mine": "6月25日全面开启预购后，这款《侠盗猎车手》新作的加价转卖便已出现在eBay上。标准版零售价目前锁定在80美元(约合人民币545元)，一些黄牛成功以约90美元(约合人民币613元)转手，有的甚至更高。",
+          "mine": "6月25日全面开启预购后，这款《侠盗猎车手》新作的加价转卖便已出现在eBay上。标准版零售价目前锁定在80美元(约合人民币544元)，一些黄牛成功以约90美元(约合人民币612元)转手，有的甚至更高。",
           "yours": "6月25日全面开启预购后，这款《GTA》新作的加价转卖便已出现在eBay上。标准版零售价目前锁定在80美元（约合人民币544元），一些黄牛成功以约90美元（约合人民币612元）转手，有的甚至更高。",
           "my_sentences": [
             "6月25日全面开启预购后，这款《侠盗猎车手》新作的加价转卖便已出现在eBay上。",
-            "标准版零售价目前锁定在80美元(约合人民币545元)，一些黄牛成功以约90美元(约合人民币613元)转手，有的甚至更高。"
+            "标准版零售价目前锁定在80美元(约合人民币544元)，一些黄牛成功以约90美元(约合人民币612元)转手，有的甚至更高。"
           ],
           "your_sentences": [
             "6月25日全面开启预购后，这款《GTA》新作的加价转卖便已出现在eBay上。",
@@ -420,6 +483,173 @@
           "your_sentences": [
             "无论你是直接从Rockstar购买，还是出于某种原因在eBay上多花点钱，《GTA6》都将于2026年11月19日登陆PS5和XBOX Series。"
           ]
+        }
+      ],
+      "dictionary_candidates": []
+    },
+    {
+      "id": 11,
+      "cn_title": "《无敌少侠VS》开发者渴望与《真人快打》联动",
+      "en_title": "The Invincible VS Devs Would Love a Mortal Kombat Crossover",
+      "url": "https://www.ign.com/articles/invincible-vs-devs-are-really-interested-in-a-mortal-kombat-crossover",
+      "category": "游戏新闻",
+      "has_translation": true,
+      "title_diff": {
+        "mine": "《无敌少侠：对决》开发者渴望与《真人快打》联动",
+        "yours": "《无敌少侠VS》开发者渴望与《真人快打》联动"
+      },
+      "subtitle_diff": {
+        "mine": "放马过来？",
+        "yours": "放马过来"
+      },
+      "body_diffs": [
+        {
+          "index": 0,
+          "mine": "《无敌少侠：对决》的开发团队对与其他类型及IP展开合作持开放态度，尤其欢迎可能来自《真人快打》系列的客串角色。",
+          "yours": "《无敌少侠VS》的开发团队对与其他类型及IP展开合作持开放态度，尤其欢迎可能来自《真人快打》系列的客串角色。",
+          "my_sentences": [
+            "《无敌少侠：对决》的开发团队对与其他类型及IP展开合作持开放态度，尤其欢迎可能来自《真人快打》系列的客串角色。"
+          ],
+          "your_sentences": [
+            "《无敌少侠VS》的开发团队对与其他类型及IP展开合作持开放态度，尤其欢迎可能来自《真人快打》系列的客串角色。"
+          ]
+        },
+        {
+          "index": 4,
+          "mine": "这自然让我们提议加入同样血腥的《真人快打》角色，两位开发者立刻热切点头赞同。「NetherRealm，他们是最棒的。那会非常棒。」Hall说道。「如果有机会，我不会对蝎子说不。」Bautista补充道，「需要记住的是，《无敌少侠》漫画里本来就有大量客串和跨界内容，所以这并非不可能。要是有这个机会，我绝对会抓住。」",
+          "yours": "这自然让我们提议加入同样血腥的《真人快打》角色，两位开发者立刻热切点头赞同。「NetherRealm，他们是最棒的工作室。（如果能联动）那会非常棒。」Hall说道。「如果有机会，我不会对蝎子说不。」Bautista补充道，「需要记住的是，《无敌少侠》漫画里本来就有大量客串和跨界内容，所以这并非不可能。要是有这个机会，我绝对会抓住。」",
+          "my_sentences": [
+            "这自然让我们提议加入同样血腥的《真人快打》角色，两位开发者立刻热切点头赞同。",
+            "「NetherRealm，他们是最棒的。",
+            "那会非常棒。",
+            "」Hall说道。",
+            "「如果有机会，我不会对蝎子说不。",
+            "」Bautista补充道，「需要记住的是，《无敌少侠》漫画里本来就有大量客串和跨界内容，所以这并非不可能。",
+            "要是有这个机会，我绝对会抓住。",
+            "」"
+          ],
+          "your_sentences": [
+            "这自然让我们提议加入同样血腥的《真人快打》角色，两位开发者立刻热切点头赞同。",
+            "「NetherRealm，他们是最棒的工作室。",
+            "（如果能联动）那会非常棒。",
+            "」Hall说道。",
+            "「如果有机会，我不会对蝎子说不。",
+            "」Bautista补充道，「需要记住的是，《无敌少侠》漫画里本来就有大量客串和跨界内容，所以这并非不可能。",
+            "要是有这个机会，我绝对会抓住。",
+            "」"
+          ]
+        },
+        {
+          "index": 5,
+          "mine": "客串角色近来在格斗游戏社区中是个热门话题，《铁拳8》刚刚揭晓第三季加入范马勇次郎，《饿狼传说：群狼之城》也将在今夏迎来拳四郎的参战，更不用说《最终幻想7》的蒂法·洛克哈特预计于2027年初登陆《街头霸王6》了。《真人快打》系列本就以引入其他媒体的疯狂客串角色而闻名，从《异形》中的异形，到《黑袍纠察队》的祖国人，甚至包括全能人本人。",
+          "yours": "客串角色近来在格斗游戏社区中是个热门话题，《铁拳8》刚刚揭晓第三季加入范马勇次郎，《饿狼传说：群狼之城》也将在今夏迎来拳四郎的参战，更不用说《最终幻想7》的蒂法·洛克哈特预计于2027年初登陆《街头霸王6》了。《真人快打》系列本就以引入其他媒体的疯狂客串角色而闻名，从《异形》到《黑袍纠察队》的祖国人，甚至包括无敌少侠本人。",
+          "my_sentences": [
+            "客串角色近来在格斗游戏社区中是个热门话题，《铁拳8》刚刚揭晓第三季加入范马勇次郎，《饿狼传说：群狼之城》也将在今夏迎来拳四郎的参战，更不用说《最终幻想7》的蒂法·洛克哈特预计于2027年初登陆《街头霸王6》了。",
+            "《真人快打》系列本就以引入其他媒体的疯狂客串角色而闻名，从《异形》中的异形，到《黑袍纠察队》的祖国人，甚至包括全能人本人。"
+          ],
+          "your_sentences": [
+            "客串角色近来在格斗游戏社区中是个热门话题，《铁拳8》刚刚揭晓第三季加入范马勇次郎，《饿狼传说：群狼之城》也将在今夏迎来拳四郎的参战，更不用说《最终幻想7》的蒂法·洛克哈特预计于2027年初登陆《街头霸王6》了。",
+            "《真人快打》系列本就以引入其他媒体的疯狂客串角色而闻名，从《异形》到《黑袍纠察队》的祖国人，甚至包括无敌少侠本人。"
+          ]
+        },
+        {
+          "index": 6,
+          "mine": "这是当下席卷整个格斗游戏界的潮流，而《无敌少侠：对决》团队显然也愿意在时机成熟时加入。鉴于《真人快打1》已经在这方面打下基础，Skybound这边愿意促成这场联动也并非异想天开。",
+          "yours": "这是当下席卷整个格斗游戏界的潮流，而《无敌少侠VS》团队显然也愿意在时机成熟时加入。鉴于《真人快打1》已经在这方面打下基础，Skybound这边愿意促成这场联动也并非异想天开。",
+          "my_sentences": [
+            "这是当下席卷整个格斗游戏界的潮流，而《无敌少侠：对决》团队显然也愿意在时机成熟时加入。",
+            "鉴于《真人快打1》已经在这方面打下基础，Skybound这边愿意促成这场联动也并非异想天开。"
+          ],
+          "your_sentences": [
+            "这是当下席卷整个格斗游戏界的潮流，而《无敌少侠VS》团队显然也愿意在时机成熟时加入。",
+            "鉴于《真人快打1》已经在这方面打下基础，Skybound这边愿意促成这场联动也并非异想天开。"
+          ]
+        },
+        {
+          "index": 11,
+          "mine": "当被问及是否愿意在未来的更新中为她添加这个机制时，Bautista似乎持开放态度，但前提是游戏的Meta先被玩家社群稳定下来。",
+          "yours": "当被问及未来是否会把这一能力加入角色技能组时，Bautista表示并不排斥这一可能，但会等玩家社群先将游戏环境和主流玩法逐渐稳定下来后再进行评估。",
+          "my_sentences": [
+            "当被问及是否愿意在未来的更新中为她添加这个机制时，Bautista似乎持开放态度，但前提是游戏的Meta先被玩家社群稳定下来。"
+          ],
+          "your_sentences": [
+            "当被问及未来是否会把这一能力加入角色技能组时，Bautista表示并不排斥这一可能，但会等玩家社群先将游戏环境和主流玩法逐渐稳定下来后再进行评估。"
+          ]
+        },
+        {
+          "index": 15,
+          "mine": "说到「推出更多模式」，这两位开发者向我们保证，他们「还没做完」《无敌少侠：对决》的单人内容，并承诺后续会陆续加入更多内容。",
+          "yours": "说到「推出更多模式」，这两位开发者向我们保证，他们「还没做完」《无敌少侠VS》的单人内容，并承诺后续会陆续加入更多内容。",
+          "my_sentences": [
+            "说到「推出更多模式」，这两位开发者向我们保证，他们「还没做完」《无敌少侠：对决》的单人内容，并承诺后续会陆续加入更多内容。"
+          ],
+          "your_sentences": [
+            "说到「推出更多模式」，这两位开发者向我们保证，他们「还没做完」《无敌少侠VS》的单人内容，并承诺后续会陆续加入更多内容。"
+          ]
+        },
+        {
+          "index": 19,
+          "mine": "Virginia（she/her）是IGN的新闻编辑。她拥有十年游戏和娱乐报道经验，以格斗游戏社区、网红新闻和网络流行趋势方面的深厚背景而闻名。可以在X上找到她 @TheeMissGlaze。",
+          "yours": "",
+          "my_sentences": [
+            "Virginia（she/her）是IGN的新闻编辑。",
+            "她拥有十年游戏和娱乐报道经验，以格斗游戏社区、网红新闻和网络流行趋势方面的深厚背景而闻名。",
+            "可以在X上找到她 @TheeMissGlaze。"
+          ],
+          "your_sentences": []
+        }
+      ],
+      "dictionary_candidates": [
+        {
+          "id": "dict_candidate_scorpion_2d428cfaa537",
+          "category": "dictionary",
+          "type": "dictionary_candidate",
+          "dict_category": "games",
+          "en": "Scorpion",
+          "cn": "蝎子",
+          "title": "词库候选：Scorpion → 蝎子",
+          "rule": "建议将「Scorpion」加入词库，译为「蝎子」。",
+          "status": "ready_for_review",
+          "confidence": "high",
+          "date": "2026-06-28",
+          "article_id": 11,
+          "article_title": "《无敌少侠VS》开发者渴望与《真人快打》联动",
+          "url": "https://www.ign.com/articles/invincible-vs-devs-are-really-interested-in-a-mortal-kombat-crossover",
+          "evidence": "来自文章页未确认新词候选。"
+        },
+        {
+          "id": "dict_candidate_immortal_846234610dbe",
+          "category": "dictionary",
+          "type": "dictionary_candidate",
+          "dict_category": "games",
+          "en": "Immortal",
+          "cn": "不朽者",
+          "title": "词库候选：Immortal → 不朽者",
+          "rule": "建议将「Immortal」加入词库，译为「不朽者」。",
+          "status": "ready_for_review",
+          "confidence": "high",
+          "date": "2026-06-28",
+          "article_id": 11,
+          "article_title": "《无敌少侠VS》开发者渴望与《真人快打》联动",
+          "url": "https://www.ign.com/articles/invincible-vs-devs-are-really-interested-in-a-mortal-kombat-crossover",
+          "evidence": "来自文章页未确认新词候选。"
+        },
+        {
+          "id": "dict_candidate_atom_eve_a04a16ee5f01",
+          "category": "dictionary",
+          "type": "dictionary_candidate",
+          "dict_category": "games",
+          "en": "Atom Eve",
+          "cn": "原子夏娃",
+          "title": "词库候选：Atom Eve → 原子夏娃",
+          "rule": "建议将「Atom Eve」加入词库，译为「原子夏娃」。",
+          "status": "ready_for_review",
+          "confidence": "high",
+          "date": "2026-06-28",
+          "article_id": 11,
+          "article_title": "《无敌少侠VS》开发者渴望与《真人快打》联动",
+          "url": "https://www.ign.com/articles/invincible-vs-devs-are-really-interested-in-a-mortal-kombat-crossover",
+          "evidence": "来自文章页未确认新词候选。"
         }
       ]
     }

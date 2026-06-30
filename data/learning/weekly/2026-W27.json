@@ -1,18 +1,158 @@
 {
   "week_id": "2026-W27",
-  "generated_at": "2026-06-30T08:23:29+08:00",
+  "generated_at": "2026-06-30T22:40:36+08:00",
   "published_by": "weekly_learning_report",
   "range": {
     "start": "2026-06-29",
     "end": "2026-07-05"
   },
   "summary": {
-    "candidate_count": 4,
-    "ready_for_review": 2,
+    "candidate_count": 12,
+    "ready_for_review": 9,
     "confirmed_by_feedback": 0,
-    "pending": 0
+    "pending": 1
   },
   "candidates": [
+    {
+      "id": "dict_candidate_dead_or_alive_6_last_round_f65c2c58f0ee",
+      "title": "词库候选：Dead or Alive 6: Last Round → 死或生6：Last Round",
+      "rule": "建议将「Dead or Alive 6: Last Round」加入词库，译为「死或生6：Last Round」。",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "games",
+      "scope": "all",
+      "status": "ready_for_review",
+      "days": [
+        "2026-06-30"
+      ],
+      "days_seen": 1,
+      "articles_seen": 1,
+      "contradictions": 0,
+      "examples": [
+        {
+          "date": "2026-06-30",
+          "article_id": 7,
+          "before": "Dead or Alive 6: Last Round",
+          "after": "死或生6：Last Round",
+          "evidence": "用户将标题和正文中的副标题从直译改为保留官方英文副标题 Last Round。"
+        }
+      ],
+      "created_at": "2026-06-30T22:40:29+08:00",
+      "last_seen": "2026-06-30",
+      "confidence": 0.8,
+      "latest_evidence_summary": "用户将标题和正文中的副标题从直译改为保留官方英文副标题 Last Round。",
+      "candidate_payload": {
+        "en": "Dead or Alive 6: Last Round",
+        "cn": "死或生6：Last Round",
+        "cat": "games",
+        "source": "user"
+      }
+    },
+    {
+      "id": "dict_candidate_fallout_new_vegas_361180538b91",
+      "title": "词库候选：Fallout: New Vegas → 辐射：新维加斯",
+      "rule": "建议将「Fallout: New Vegas」加入词库，译为「辐射：新维加斯」。",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "games",
+      "scope": "all",
+      "status": "ready_for_review",
+      "days": [
+        "2026-06-30"
+      ],
+      "days_seen": 1,
+      "articles_seen": 1,
+      "contradictions": 0,
+      "examples": [
+        {
+          "date": "2026-06-30",
+          "article_id": 8,
+          "before": "Fallout: New Vegas",
+          "after": "辐射：新维加斯",
+          "evidence": "英文标题专名 Fallout: New Vegas 与用户润色标题《辐射：新维加斯》稳定对应。"
+        }
+      ],
+      "created_at": "2026-06-30T22:40:29+08:00",
+      "last_seen": "2026-06-30",
+      "confidence": 0.8,
+      "latest_evidence_summary": "英文标题专名 Fallout: New Vegas 与用户润色标题《辐射：新维加斯》稳定对应。",
+      "candidate_payload": {
+        "en": "Fallout: New Vegas",
+        "cn": "辐射：新维加斯",
+        "cat": "games",
+        "source": "user"
+      }
+    },
+    {
+      "id": "dict_candidate_star_wars_eclipse_710171cd8cd4",
+      "title": "词库候选：Star Wars: Eclipse → 星球大战：日蚀",
+      "rule": "建议将「Star Wars: Eclipse」加入词库，译为「星球大战：日蚀」。",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "games",
+      "scope": "all",
+      "status": "ready_for_review",
+      "days": [
+        "2026-06-30"
+      ],
+      "days_seen": 1,
+      "articles_seen": 1,
+      "contradictions": 0,
+      "examples": [
+        {
+          "date": "2026-06-30",
+          "article_id": 9,
+          "before": "Star Wars: Eclipse",
+          "after": "星球大战：日蚀",
+          "evidence": "用户将标题中的《星球大战：日食》修正为《星球大战：日蚀》。"
+        }
+      ],
+      "created_at": "2026-06-30T22:40:29+08:00",
+      "last_seen": "2026-06-30",
+      "confidence": 0.8,
+      "latest_evidence_summary": "用户将标题中的《星球大战：日食》修正为《星球大战：日蚀》。",
+      "candidate_payload": {
+        "en": "Star Wars: Eclipse",
+        "cn": "星球大战：日蚀",
+        "cat": "games",
+        "source": "user"
+      }
+    },
+    {
+      "id": "dict_candidate_atom_eve_a04a16ee5f01",
+      "title": "词库候选：Atom Eve → 原子夏娃",
+      "rule": "建议将「Atom Eve」加入词库，译为「原子夏娃」。",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "games",
+      "scope": "all",
+      "status": "ready_for_review",
+      "days": [
+        "2026-06-28"
+      ],
+      "days_seen": 1,
+      "articles_seen": 1,
+      "contradictions": 0,
+      "examples": [
+        {
+          "date": "2026-06-28",
+          "article_id": 11,
+          "before": "Atom Eve",
+          "after": "原子夏娃",
+          "evidence": "来自文章页未确认新词候选。"
+        }
+      ],
+      "created_at": "2026-06-30T22:38:19+08:00",
+      "last_seen": "2026-06-28",
+      "confidence": 0.8,
+      "latest_evidence_summary": "来自文章页未确认新词候选。",
+      "candidate_payload": {
+        "en": "Atom Eve",
+        "cn": "原子夏娃",
+        "cat": "games",
+        "source": "user"
+      }
+    },
     {
       "id": "dict_candidate_christopher_nolan_02d3503e27b6",
       "title": "词库候选：Christopher Nolan → 克里斯托弗·诺兰",
@@ -80,6 +220,111 @@
         "en": "Cyberpunk: Edgerunners 2",
         "cn": "赛博朋克：边缘行者2",
         "cat": "movies_tv",
+        "source": "user"
+      }
+    },
+    {
+      "id": "dict_candidate_immortal_846234610dbe",
+      "title": "词库候选：Immortal → 不朽者",
+      "rule": "建议将「Immortal」加入词库，译为「不朽者」。",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "games",
+      "scope": "all",
+      "status": "ready_for_review",
+      "days": [
+        "2026-06-28"
+      ],
+      "days_seen": 1,
+      "articles_seen": 1,
+      "contradictions": 0,
+      "examples": [
+        {
+          "date": "2026-06-28",
+          "article_id": 11,
+          "before": "Immortal",
+          "after": "不朽者",
+          "evidence": "来自文章页未确认新词候选。"
+        }
+      ],
+      "created_at": "2026-06-30T22:38:19+08:00",
+      "last_seen": "2026-06-28",
+      "confidence": 0.8,
+      "latest_evidence_summary": "来自文章页未确认新词候选。",
+      "candidate_payload": {
+        "en": "Immortal",
+        "cn": "不朽者",
+        "cat": "games",
+        "source": "user"
+      }
+    },
+    {
+      "id": "dict_candidate_scorpion_2d428cfaa537",
+      "title": "词库候选：Scorpion → 蝎子",
+      "rule": "建议将「Scorpion」加入词库，译为「蝎子」。",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "games",
+      "scope": "all",
+      "status": "ready_for_review",
+      "days": [
+        "2026-06-28"
+      ],
+      "days_seen": 1,
+      "articles_seen": 1,
+      "contradictions": 0,
+      "examples": [
+        {
+          "date": "2026-06-28",
+          "article_id": 11,
+          "before": "Scorpion",
+          "after": "蝎子",
+          "evidence": "来自文章页未确认新词候选。"
+        }
+      ],
+      "created_at": "2026-06-30T22:38:19+08:00",
+      "last_seen": "2026-06-28",
+      "confidence": 0.8,
+      "latest_evidence_summary": "来自文章页未确认新词候选。",
+      "candidate_payload": {
+        "en": "Scorpion",
+        "cn": "蝎子",
+        "cat": "games",
+        "source": "user"
+      }
+    },
+    {
+      "id": "dict_candidate_spellcasters_chronicles_4b1e9e989b50",
+      "title": "词库候选：Spellcasters Chronicles → 咒术编年史",
+      "rule": "建议将「Spellcasters Chronicles」加入词库，译为「咒术编年史」。",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "terms",
+      "scope": "all",
+      "status": "ready_for_review",
+      "days": [
+        "2026-06-30"
+      ],
+      "days_seen": 1,
+      "articles_seen": 1,
+      "contradictions": 0,
+      "examples": [
+        {
+          "date": "2026-06-30",
+          "article_id": 9,
+          "before": "Spellcasters Chronicles",
+          "after": "咒术编年史",
+          "evidence": "来自文章页未确认新词候选。"
+        }
+      ],
+      "created_at": "2026-06-30T22:38:20+08:00",
+      "last_seen": "2026-06-30",
+      "confidence": 0.8,
+      "latest_evidence_summary": "来自文章页未确认新词候选。",
+      "candidate_payload": {
+        "en": "Spellcasters Chronicles",
+        "cn": "咒术编年史",
+        "cat": "terms",
         "source": "user"
       }
     },
@@ -388,6 +633,59 @@
       "last_seen": "2026-06-29",
       "confidence": 0.93,
       "latest_evidence_summary": "6/29 money edit keeps Chinese full-width parentheses for CNY conversion."
+    },
+    {
+      "id": "prefer_established_official_game_titles",
+      "title": "优先使用稳定官方或通行译名",
+      "rule": "游戏、影视、角色和系统名有稳定官方或通行中文译名时应统一使用；没有稳定译名时保留原文，不自行创造译名。",
+      "category": "dictionary",
+      "scope": "games|movies_tv",
+      "status": "pending",
+      "days": [
+        "2026-05-30",
+        "2026-06-24",
+        "2026-06-30"
+      ],
+      "days_seen": 3,
+      "articles_seen": 5,
+      "contradictions": 0,
+      "examples": [
+        {
+          "date": "2026-06-24",
+          "article_id": 3,
+          "before": "??????2?",
+          "after": "?????? ????"
+        },
+        {
+          "date": "2026-06-24",
+          "article_id": 34,
+          "before": "?????2?",
+          "after": "?????2?"
+        },
+        {
+          "date": "2026-05-30",
+          "article_id": 18,
+          "before": "Bungie与旗下知名科幻射击游戏《命运2》的问题始于去年夏天的「命运之刃」资料片——据报道该资料片表现不佳。关停的决定据称是在「今年早些时候」做出的，因为他们最终决定不以「Destiny Infinity」的名义重新启动该系列。",
+          "after": "Bungie与旗下知名科幻射击游戏《命运2》的问题始于去年夏天的《宿命边缘》资料片——据报道该资料片表现不佳。关停的决定据称是在「今年早些时候」做出的，因为他们最终决定不以《命运 Infinity》的名义重新启动该系列。"
+        },
+        {
+          "date": "2026-06-30",
+          "article_id": 7,
+          "before": "死或生6：最终回合",
+          "after": "死或生6：Last Round"
+        },
+        {
+          "date": "2026-06-30",
+          "article_id": 9,
+          "before": "星球大战：日食",
+          "after": "星球大战：日蚀"
+        }
+      ],
+      "feedback": [],
+      "created_at": "2026-06-25T21:53:01+08:00",
+      "last_seen": "2026-06-30",
+      "confidence": 0.78,
+      "latest_evidence_summary": "6/30 润色继续倾向使用稳定官方/通行译名：保留 Last Round，且将 Star Wars: Eclipse 统一为《星球大战：日蚀》。"
     }
   ],
   "instructions_for_user": [
@@ -395,5 +693,6 @@
     "Reject: this is not your preference and should not be proposed again.",
     "Limit: this rule only applies to a specific article type or context.",
     "Hold: keep observing; do not promote it into the formal style profile yet."
-  ]
+  ],
+  "updated_at": "2026-06-30T22:40:36+08:00"
 }

@@ -5,7 +5,7 @@
   "status": "observed",
   "source_hash": "codex-nightly-2026-06-28-4-articles",
   "signal_count": 5,
-  "candidate_count": 0,
+  "candidate_count": 3,
   "signals": [
     {
       "article_ids": [
@@ -46,11 +46,71 @@
       "summary": "Articles #4 and #10 keep CNY conversions in full-width Chinese parentheses."
     }
   ],
-  "candidates": [],
+  "candidates": [
+    {
+      "id": "dict_candidate_scorpion_2d428cfaa537",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：Scorpion → 蝎子",
+      "rule": "建议将「Scorpion」加入词库，译为「蝎子」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-06-28",
+          "article_id": 11,
+          "before": "Scorpion",
+          "after": "蝎子",
+          "evidence": "来自文章页未确认新词候选。"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id": "dict_candidate_immortal_846234610dbe",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：Immortal → 不朽者",
+      "rule": "建议将「Immortal」加入词库，译为「不朽者」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-06-28",
+          "article_id": 11,
+          "before": "Immortal",
+          "after": "不朽者",
+          "evidence": "来自文章页未确认新词候选。"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id": "dict_candidate_atom_eve_a04a16ee5f01",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：Atom Eve → 原子夏娃",
+      "rule": "建议将「Atom Eve」加入词库，译为「原子夏娃」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-06-28",
+          "article_id": 11,
+          "before": "Atom Eve",
+          "after": "原子夏娃",
+          "evidence": "来自文章页未确认新词候选。"
+        }
+      ],
+      "contradiction": ""
+    }
+  ],
   "notes": [
     "Imported 4 high-confidence Tencent polish files and generated diff_analysis.",
     "Only existing confirmed/pending evidence was updated; no new formal rule was promoted.",
-    "No STYLE_PROFILE.md change: there was no new explicit weekly adoption feedback."
+    "No STYLE_PROFILE.md change: there was no new explicit weekly adoption feedback.",
+    "Added source+polished dictionary candidates for GPT/Tencent workflow.",
+    "Codex filtered low-confidence title-fragment dictionary candidates during backfill."
   ],
-  "updated_at": "2026-06-29T22:41:39+08:00"
+  "updated_at": "2026-06-30T22:40:29+08:00"
 }

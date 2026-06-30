@@ -1,0 +1,94 @@
+{
+  "date": "2026-06-30",
+  "observer": "codex",
+  "model": "codex",
+  "status": "observed",
+  "signals": [],
+  "candidates": [
+    {
+      "id": "dict_candidate_spellcasters_chronicles_4b1e9e989b50",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：Spellcasters Chronicles → 咒术编年史",
+      "rule": "建议将「Spellcasters Chronicles」加入词库，译为「咒术编年史」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-06-30",
+          "article_id": 9,
+          "before": "Spellcasters Chronicles",
+          "after": "咒术编年史",
+          "evidence": "来自文章页未确认新词候选。"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id": "dict_candidate_dead_or_alive_6_last_round_f65c2c58f0ee",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：Dead or Alive 6: Last Round → 死或生6：Last Round",
+      "rule": "建议将「Dead or Alive 6: Last Round」加入词库，译为「死或生6：Last Round」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-06-30",
+          "article_id": 7,
+          "before": "Dead or Alive 6: Last Round",
+          "after": "死或生6：Last Round",
+          "evidence": "用户将标题和正文中的副标题从直译改为保留官方英文副标题 Last Round。"
+        }
+      ],
+      "contradiction": "",
+      "latest_evidence_summary": "用户将标题和正文中的副标题从直译改为保留官方英文副标题 Last Round。"
+    },
+    {
+      "id": "dict_candidate_fallout_new_vegas_361180538b91",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：Fallout: New Vegas → 辐射：新维加斯",
+      "rule": "建议将「Fallout: New Vegas」加入词库，译为「辐射：新维加斯」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-06-30",
+          "article_id": 8,
+          "before": "Fallout: New Vegas",
+          "after": "辐射：新维加斯",
+          "evidence": "英文标题专名 Fallout: New Vegas 与用户润色标题《辐射：新维加斯》稳定对应。"
+        }
+      ],
+      "contradiction": "",
+      "latest_evidence_summary": "英文标题专名 Fallout: New Vegas 与用户润色标题《辐射：新维加斯》稳定对应。"
+    },
+    {
+      "id": "dict_candidate_star_wars_eclipse_710171cd8cd4",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：Star Wars: Eclipse → 星球大战：日蚀",
+      "rule": "建议将「Star Wars: Eclipse」加入词库，译为「星球大战：日蚀」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-06-30",
+          "article_id": 9,
+          "before": "Star Wars: Eclipse",
+          "after": "星球大战：日蚀",
+          "evidence": "用户将标题中的《星球大战：日食》修正为《星球大战：日蚀》。"
+        }
+      ],
+      "contradiction": "",
+      "latest_evidence_summary": "用户将标题中的《星球大战：日食》修正为《星球大战：日蚀》。"
+    }
+  ],
+  "notes": [
+    "Added source+polished dictionary candidates for GPT/Tencent workflow.",
+    "Codex filtered low-confidence title-fragment dictionary candidates during backfill."
+  ],
+  "candidate_count": 4,
+  "updated_at": "2026-06-30T22:40:29+08:00"
+}
