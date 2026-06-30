@@ -5,7 +5,7 @@
   "status": "observed",
   "source_hash": "codex-nightly-2026-06-29-2-articles",
   "signal_count": 2,
-  "candidate_count": 0,
+  "candidate_count": 2,
   "signals": [
     {
       "article_ids": [
@@ -22,11 +22,51 @@
       "summary": "Article #3 keeps the CNY conversion in full-width Chinese parentheses."
     }
   ],
-  "candidates": [],
+  "candidates": [
+    {
+      "id": "dict_candidate_cyberpunk_edgerunners_2_b769903811b5",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：Cyberpunk: Edgerunners 2 → 赛博朋克：边缘行者2",
+      "rule": "建议将「Cyberpunk: Edgerunners 2」加入词库，译为「赛博朋克：边缘行者2」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-06-29",
+          "article_id": 1,
+          "before": "Cyberpunk: Edgerunners 2",
+          "after": "赛博朋克：边缘行者2",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id": "dict_candidate_christopher_nolan_02d3503e27b6",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：Christopher Nolan → 克里斯托弗·诺兰",
+      "rule": "建议将「Christopher Nolan」加入词库，译为「克里斯托弗·诺兰」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-06-29",
+          "article_id": 3,
+          "before": "Christopher Nolan",
+          "after": "克里斯托弗·诺兰",
+          "evidence": "英文标题人名与中文标题冒号前译名对应。"
+        }
+      ],
+      "contradiction": ""
+    }
+  ],
   "notes": [
     "Imported 2 high-confidence Tencent polish files and generated diff_analysis.",
     "Article #1 mostly reorganizes paragraph flow and removes non-body media embed residue, so it was kept as observe-only context.",
-    "No STYLE_PROFILE.md change: there was no new explicit weekly adoption feedback."
+    "No STYLE_PROFILE.md change: there was no new explicit weekly adoption feedback.",
+    "Added source+polished dictionary candidates for GPT/Tencent workflow."
   ],
-  "updated_at": "2026-06-29T22:40:20+08:00"
+  "updated_at": "2026-06-30T08:23:16+08:00"
 }

@@ -63,13 +63,22 @@ newest date. Treat this as a small backfill pass, not a broad rewrite:
    the configured Tencent documents to backfill missed dates incrementally.
 2. Run `python scripts/nightly_polish_diff.py {date}` for dates with polished
    files when a fresh `diff_analysis.json` is useful.
-3. Compare original translation against the user's polished version.
-4. Separate durable style preference from one-off article fixes.
-5. Treat feedback on the learning page as higher priority than your own guess.
-6. Add or update candidate rules in `data/learning/style-evidence.json`.
-7. Update `data/learning/weekly/{week}.json` and `latest.json` when the evidence
+3. If `translations/NN.json` exists, compare original translation against the
+   user's polished version.
+4. If `translations/NN.json` does not exist, still compare `sources/NN.json`
+   with the Tencent-polished final Chinese稿 for dictionary learning only:
+   identify high-confidence proper-name pairs, check whether the English term
+   already exists in `data/dict.json`, and write missing terms as
+   `dictionary_candidate` learning candidates. Do not auto-write them to
+   `data/dict.json`.
+5. Separate durable style preference from one-off article fixes. For
+   source+polished-only articles, do not learn broad prose style; only learn
+   dictionary candidates and very low-risk formatting evidence.
+6. Treat feedback on the learning page as higher priority than your own guess.
+7. Add or update candidate rules in `data/learning/style-evidence.json`.
+8. Update `data/learning/weekly/{week}.json` and `latest.json` when the evidence
    pool changes enough to show the user.
-8. Only update `STYLE_PROFILE.md` when weekly feedback explicitly confirms or
+9. Only update `STYLE_PROFILE.md` when weekly feedback explicitly confirms or
    adopts a rule.
 
 ## Output Rules

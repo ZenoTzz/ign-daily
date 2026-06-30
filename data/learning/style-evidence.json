@@ -2509,6 +2509,76 @@
       "last_seen": "2026-06-24",
       "confidence": 0.78,
       "latest_evidence_summary": "Backfilled 5/30 Destiny edits favor established Chinese names for expansions and franchise titles."
+    },
+    "dict_candidate_cyberpunk_edgerunners_2_b769903811b5": {
+      "id": "dict_candidate_cyberpunk_edgerunners_2_b769903811b5",
+      "title": "词库候选：Cyberpunk: Edgerunners 2 → 赛博朋克：边缘行者2",
+      "rule": "建议将「Cyberpunk: Edgerunners 2」加入词库，译为「赛博朋克：边缘行者2」。",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "movies_tv",
+      "scope": "all",
+      "status": "ready_for_review",
+      "days": [
+        "2026-06-29"
+      ],
+      "days_seen": 1,
+      "articles_seen": 1,
+      "contradictions": 0,
+      "examples": [
+        {
+          "date": "2026-06-29",
+          "article_id": 1,
+          "before": "Cyberpunk: Edgerunners 2",
+          "after": "赛博朋克：边缘行者2",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "created_at": "2026-06-30T08:23:16+08:00",
+      "last_seen": "2026-06-29",
+      "confidence": 0.8,
+      "latest_evidence_summary": "英文标题开头专名与中文标题书名号对应。",
+      "candidate_payload": {
+        "en": "Cyberpunk: Edgerunners 2",
+        "cn": "赛博朋克：边缘行者2",
+        "cat": "movies_tv",
+        "source": "user"
+      }
+    },
+    "dict_candidate_christopher_nolan_02d3503e27b6": {
+      "id": "dict_candidate_christopher_nolan_02d3503e27b6",
+      "title": "词库候选：Christopher Nolan → 克里斯托弗·诺兰",
+      "rule": "建议将「Christopher Nolan」加入词库，译为「克里斯托弗·诺兰」。",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "people",
+      "scope": "all",
+      "status": "ready_for_review",
+      "days": [
+        "2026-06-29"
+      ],
+      "days_seen": 1,
+      "articles_seen": 1,
+      "contradictions": 0,
+      "examples": [
+        {
+          "date": "2026-06-29",
+          "article_id": 3,
+          "before": "Christopher Nolan",
+          "after": "克里斯托弗·诺兰",
+          "evidence": "英文标题人名与中文标题冒号前译名对应。"
+        }
+      ],
+      "created_at": "2026-06-30T08:23:16+08:00",
+      "last_seen": "2026-06-29",
+      "confidence": 0.8,
+      "latest_evidence_summary": "英文标题人名与中文标题冒号前译名对应。",
+      "candidate_payload": {
+        "en": "Christopher Nolan",
+        "cn": "克里斯托弗·诺兰",
+        "cat": "people",
+        "source": "user"
+      }
     }
   },
   "updated_at": "2026-06-29T22:41:39+08:00"

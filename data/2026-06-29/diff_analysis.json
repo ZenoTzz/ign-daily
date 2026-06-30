@@ -1,14 +1,54 @@
 {
   "date": "2026-06-29",
-  "generated_at": "2026-06-29T22:38:52.296963",
+  "generated_at": "2026-06-30T08:23:16.434513",
   "total_articles": 2,
+  "dictionary_candidate_count": 2,
+  "dictionary_candidates": [
+    {
+      "id": "dict_candidate_cyberpunk_edgerunners_2_b769903811b5",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "movies_tv",
+      "en": "Cyberpunk: Edgerunners 2",
+      "cn": "赛博朋克：边缘行者2",
+      "title": "词库候选：Cyberpunk: Edgerunners 2 → 赛博朋克：边缘行者2",
+      "rule": "建议将「Cyberpunk: Edgerunners 2」加入词库，译为「赛博朋克：边缘行者2」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "date": "2026-06-29",
+      "article_id": 1,
+      "article_title": "《赛博朋克：边缘行者2》定档2026年秋季，四名新角色曝光",
+      "url": "https://www.ign.com/articles/cyberpunk-edgerunners-2-sets-fall-2026-release-with-first-look-at-4-new-characters",
+      "evidence": "英文标题开头专名与中文标题书名号对应。"
+    },
+    {
+      "id": "dict_candidate_christopher_nolan_02d3503e27b6",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "people",
+      "en": "Christopher Nolan",
+      "cn": "克里斯托弗·诺兰",
+      "title": "词库候选：Christopher Nolan → 克里斯托弗·诺兰",
+      "rule": "建议将「Christopher Nolan」加入词库，译为「克里斯托弗·诺兰」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "date": "2026-06-29",
+      "article_id": 3,
+      "article_title": "克里斯托弗·诺兰：主流电影想成功就别走安全牌",
+      "url": "https://www.ign.com/articles/christopher-nolan-says-mainstream-movies-that-play-it-safe-should-take-more-risks-if-they-want-to-succeed",
+      "evidence": "英文标题人名与中文标题冒号前译名对应。"
+    }
+  ],
+  "learning_evidence_updated": true,
+  "daily_learning_updated": true,
   "articles": [
     {
       "id": 1,
       "cn_title": "《赛博朋克：边缘行者2》定档2026年秋季，四名新角色曝光",
       "en_title": "Cyberpunk: Edgerunners 2 Sets Fall 2026 Release With First Look at 4 New Characters",
       "url": "https://www.ign.com/articles/cyberpunk-edgerunners-2-sets-fall-2026-release-with-first-look-at-4-new-characters",
-      "category": null,
+      "category": "影视资讯",
+      "has_translation": true,
       "title_diff": null,
       "subtitle_diff": null,
       "body_diffs": [
@@ -134,14 +174,34 @@
             "关于《赛博朋克：边缘行者2》的具体剧情我们知之甚少，但考虑到第一季的走向，大多数粉丝已经为这群新的主角们做好了最坏的打算。"
           ]
         }
+      ],
+      "dictionary_candidates": [
+        {
+          "id": "dict_candidate_cyberpunk_edgerunners_2_b769903811b5",
+          "category": "dictionary",
+          "type": "dictionary_candidate",
+          "dict_category": "movies_tv",
+          "en": "Cyberpunk: Edgerunners 2",
+          "cn": "赛博朋克：边缘行者2",
+          "title": "词库候选：Cyberpunk: Edgerunners 2 → 赛博朋克：边缘行者2",
+          "rule": "建议将「Cyberpunk: Edgerunners 2」加入词库，译为「赛博朋克：边缘行者2」。",
+          "status": "ready_for_review",
+          "confidence": "high",
+          "date": "2026-06-29",
+          "article_id": 1,
+          "article_title": "《赛博朋克：边缘行者2》定档2026年秋季，四名新角色曝光",
+          "url": "https://www.ign.com/articles/cyberpunk-edgerunners-2-sets-fall-2026-release-with-first-look-at-4-new-characters",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
       ]
     },
     {
       "id": 3,
-      "cn_title": "诺兰：主流电影想成功就别走安全牌",
+      "cn_title": "克里斯托弗·诺兰：主流电影想成功就别走安全牌",
       "en_title": "Christopher Nolan Says Mainstream Movies That 'Play It Safe' Should Take More Risks if They Want to Succeed",
       "url": "https://www.ign.com/articles/christopher-nolan-says-mainstream-movies-that-play-it-safe-should-take-more-risks-if-they-want-to-succeed",
-      "category": null,
+      "category": "影视资讯",
+      "has_translation": true,
       "title_diff": {
         "mine": "诺兰：主流电影想成功就别走安全牌",
         "yours": "克里斯托弗·诺兰：主流电影想成功就别走安全牌"
@@ -216,6 +276,25 @@
           "your_sentences": [
             "诺兰将在今年7月携《奥德赛》重返大银幕，这部近三小时的电影改编自荷马的古希腊史诗，定于2026年7月17日首映（中国大陆地区08月14日上映）。"
           ]
+        }
+      ],
+      "dictionary_candidates": [
+        {
+          "id": "dict_candidate_christopher_nolan_02d3503e27b6",
+          "category": "dictionary",
+          "type": "dictionary_candidate",
+          "dict_category": "people",
+          "en": "Christopher Nolan",
+          "cn": "克里斯托弗·诺兰",
+          "title": "词库候选：Christopher Nolan → 克里斯托弗·诺兰",
+          "rule": "建议将「Christopher Nolan」加入词库，译为「克里斯托弗·诺兰」。",
+          "status": "ready_for_review",
+          "confidence": "high",
+          "date": "2026-06-29",
+          "article_id": 3,
+          "article_title": "克里斯托弗·诺兰：主流电影想成功就别走安全牌",
+          "url": "https://www.ign.com/articles/christopher-nolan-says-mainstream-movies-that-play-it-safe-should-take-more-risks-if-they-want-to-succeed",
+          "evidence": "英文标题人名与中文标题冒号前译名对应。"
         }
       ]
     }
