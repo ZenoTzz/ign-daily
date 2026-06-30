@@ -22,31 +22,6 @@
       "translation_path": "translations/08.json",
       "retry_policy": "manual_only"
     },
-    "9": {
-      "id": 9,
-      "url": "https://www.ign.com/articles/with-the-threat-of-layoffs-looming-quantic-dream-staff-say-theyre-going-on-strike-to-save-star-wars-eclipse-from-cancelation",
-      "en_title": "With the Threat of Layoffs Looming, Quantic Dream Staff Say They're Going on Strike to Save Star Wars Eclipse From Cancelation",
-      "cn_title": "QD员工罢工，力保《星球大战：日食》",
-      "model": "deepseek-v4-pro",
-      "status": "needs_manual_review",
-      "failed_at": "2026-06-30T00:55:23.858980+08:00",
-      "reason": "paragraph 16 missing cn",
-      "audit_issues": [
-        {
-          "type": "dictionary",
-          "detail": "source contains 'Dreams', but required dictionary translation '梦想大创造' is missing",
-          "en": "Dreams",
-          "expected_cn": "梦想大创造"
-        },
-        {
-          "type": "translation_noise",
-          "detail": "translation contains likely navigation/footer text: 联系我们"
-        }
-      ],
-      "fingerprint": "6ca69e231cba65d17dbf7a6bd0d2ca2520d67743",
-      "translation_path": "translations/09.json",
-      "retry_policy": "manual_only"
-    },
     "13": {
       "id": 13,
       "url": "https://www.ign.com/articles/will-ps6-be-like-a-nintendo-switch-sony-says-its-next-gen-console-will-enable-a-seamless-experience-that-can-be-enjoyed-naturally-beyond-the-living-room",
@@ -86,5 +61,5 @@
       "retry_policy": "manual_only"
     }
   },
-  "updated_at": "2026-06-30T01:07:35.662157+08:00"
+  "updated_at": "2026-06-30T01:52:47.797Z"
 }
