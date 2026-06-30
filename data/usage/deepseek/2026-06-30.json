@@ -1656,6 +1656,126 @@
       "total_tokens_including_reasoning": 12777,
       "prompt_cache_hit_tokens": 8320,
       "prompt_cache_miss_tokens": 1004
+    },
+    {
+      "time_cn": "2026-06-30 20:32:31",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 6,
+      "article_title": "'Like Frodo Going Into Mordor': Zach Cregger's Resident Evil 'Feels Like 1 Gigantic Sequence' Following an 'Everyman' Character Burdened by a Sacred Mission",
+      "article_url": "https://www.ign.com/articles/like-frodo-going-into-mordor-zach-creggers-resident-evil-feels-like-1-gigantic-sequence-following-an-everyman-character-burdened-by-a-sacred-mission",
+      "article_date": "2026-07-01",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.0003642,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9133,
+      "completion_tokens": 545,
+      "reasoning_tokens": 266,
+      "output_tokens_including_reasoning": 811,
+      "total_tokens": 9678,
+      "total_tokens_including_reasoning": 9944,
+      "prompt_cache_hit_tokens": 8320,
+      "prompt_cache_miss_tokens": 813
+    },
+    {
+      "time_cn": "2026-06-30 20:32:45",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 7,
+      "article_title": "Obsession Just Landed on Digital, Now Available to Preorder on Blu-ray",
+      "article_url": "https://www.ign.com/articles/obsession-digital-streaming-4k-blu-ray",
+      "article_date": "2026-07-01",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00069082,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8994,
+      "completion_tokens": 1096,
+      "reasoning_tokens": 951,
+      "output_tokens_including_reasoning": 2047,
+      "total_tokens": 10090,
+      "total_tokens_including_reasoning": 11041,
+      "prompt_cache_hit_tokens": 8320,
+      "prompt_cache_miss_tokens": 674
+    },
+    {
+      "time_cn": "2026-06-30 20:32:58",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 8,
+      "article_title": "'I Don't Want to See Any of Them': James Bond Ex-Casting Director Who Picked Timothy Dalton, Pierce Brosnan and Daniel Craig Shoots Down Current 007 Frontrunners",
+      "article_url": "https://www.ign.com/articles/i-dont-want-to-see-any-of-them-james-bond-ex-casting-director-who-picked-timothy-dalton-pierce-brosnan-and-daniel-craig-shoots-down-current-007-frontrunners",
+      "article_date": "2026-07-01",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00057714,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9260,
+      "completion_tokens": 839,
+      "reasoning_tokens": 669,
+      "output_tokens_including_reasoning": 1508,
+      "total_tokens": 10099,
+      "total_tokens_including_reasoning": 10768,
+      "prompt_cache_hit_tokens": 8320,
+      "prompt_cache_miss_tokens": 940
+    },
+    {
+      "time_cn": "2026-06-30 20:33:13",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 9,
+      "article_title": "The Co-Lead Designer of Baldur's Gate 2 Turned Baldur's Gate 4 Down and I Don't Blame Him — Baldur's Gate 3 Is Pretty Much Impossible to Follow",
+      "article_url": "https://www.ign.com/articles/the-co-lead-designer-of-baldurs-gate-2-turned-baldurs-gate-4-down-and-i-dont-blame-him-baldurs-gate-3-is-pretty-much-impossible-to-follow",
+      "article_date": "2026-07-01",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.0008227,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9948,
+      "completion_tokens": 1199,
+      "reasoning_tokens": 842,
+      "output_tokens_including_reasoning": 2041,
+      "total_tokens": 11147,
+      "total_tokens_including_reasoning": 11989,
+      "prompt_cache_hit_tokens": 8320,
+      "prompt_cache_miss_tokens": 1628
+    },
+    {
+      "time_cn": "2026-06-30 20:33:23",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 10,
+      "article_title": "Everything Coming to Netflix in July 2026",
+      "article_url": "https://www.ign.com/articles/whats-new-on-netflix-july-2026",
+      "article_date": "2026-07-01",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00055558,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9374,
+      "completion_tokens": 758,
+      "reasoning_tokens": 616,
+      "output_tokens_including_reasoning": 1374,
+      "total_tokens": 10132,
+      "total_tokens_including_reasoning": 10748,
+      "prompt_cache_hit_tokens": 8320,
+      "prompt_cache_miss_tokens": 1054
     }
   ]
 }
