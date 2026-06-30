@@ -635,7 +635,7 @@
       "publish_time_cn": "2026-06-29 18:35",
       "pub_date": "2026-06-29 18:35",
       "cover_image": "https://assets-prd.ignimgs.com/2026/06/29/filters-quality80-1782729314809.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "needs_review",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/29/filters-quality80-1782729314809.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/29/filters-quality80-1782729314809.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -648,8 +648,6 @@
       ],
       "source_status": "cached",
       "source_fetched_at": "2026-06-29T19:49:32+08:00",
-      "translation_error": "paragraph 16 missing cn",
-      "translation_failed_at": "2026-06-30T00:55:23.858980+08:00",
       "translator": "api",
       "translator_provider": "openai-compatible",
       "translator_model": "deepseek-v4-pro",
