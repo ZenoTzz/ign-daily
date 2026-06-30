@@ -324,7 +324,7 @@
       "publish_time_cn": "2026-06-29 22:56",
       "pub_date": "2026-06-29 22:56",
       "cover_image": "https://assets-prd.ignimgs.com/2023/08/23/playstationportalhandson-36190303-playstationq-thumbnail-1692760353361.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "needs_review",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2023/08/23/playstationportalhandson-36190303-playstationq-thumbnail-1692760353361.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/04/17/ps5-slim-refurb-1776424110936.png",
@@ -335,8 +335,6 @@
       ],
       "source_status": "cached",
       "source_fetched_at": "2026-06-30T00:13:24+08:00",
-      "translation_error": "paragraph 15 missing cn",
-      "translation_failed_at": "2026-06-30T00:59:28.406260+08:00",
       "translator": "api",
       "translator_provider": "openai-compatible",
       "translator_model": "deepseek-v4-pro",
