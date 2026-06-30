@@ -720,6 +720,102 @@
       "total_tokens_including_reasoning": 11695,
       "prompt_cache_hit_tokens": 8320,
       "prompt_cache_miss_tokens": 2096
+    },
+    {
+      "time_cn": "2026-07-01 06:58:23",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 48,
+      "article_title": "Civilization 7 Review Update",
+      "article_url": "https://www.ign.com/articles/civilization-7-review-update",
+      "article_date": "2026-07-01",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00074094,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9944,
+      "completion_tokens": 940,
+      "reasoning_tokens": 811,
+      "output_tokens_including_reasoning": 1751,
+      "total_tokens": 10884,
+      "total_tokens_including_reasoning": 11695,
+      "prompt_cache_hit_tokens": 8320,
+      "prompt_cache_miss_tokens": 1624
+    },
+    {
+      "time_cn": "2026-07-01 06:58:41",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 49,
+      "article_title": "Everything Coming to Disney+ in July",
+      "article_url": "https://www.ign.com/articles/whats-new-on-disney-plus-july-2026",
+      "article_date": "2026-07-01",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00094478,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9810,
+      "completion_tokens": 1400,
+      "reasoning_tokens": 1146,
+      "output_tokens_including_reasoning": 2546,
+      "total_tokens": 11210,
+      "total_tokens_including_reasoning": 12356,
+      "prompt_cache_hit_tokens": 8320,
+      "prompt_cache_miss_tokens": 1490
+    },
+    {
+      "time_cn": "2026-07-01 06:58:47",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 50,
+      "article_title": "Daigo Says 'Random' State of Street Fighter 6 Is Good for Casuals, but Makes It Hard to Crown a GOAT",
+      "article_url": "https://www.ign.com/articles/daigo-says-random-state-of-street-fighter-6-is-good-for-casuals-but-makes-it-hard-to-crown-a-goat",
+      "article_date": "2026-07-01",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00042006,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9866,
+      "completion_tokens": 400,
+      "reasoning_tokens": 244,
+      "output_tokens_including_reasoning": 644,
+      "total_tokens": 10266,
+      "total_tokens_including_reasoning": 10510,
+      "prompt_cache_hit_tokens": 8320,
+      "prompt_cache_miss_tokens": 1546
+    },
+    {
+      "time_cn": "2026-07-01 06:58:57",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 51,
+      "article_title": "Christopher Nolan's The Odyssey Gets Official Roblox Tie-In Game",
+      "article_url": "https://www.ign.com/articles/christopher-nolans-the-odyssey-gets-official-roblox-tie-in-game",
+      "article_date": "2026-07-01",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.0004076,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8963,
+      "completion_tokens": 606,
+      "reasoning_tokens": 445,
+      "output_tokens_including_reasoning": 1051,
+      "total_tokens": 9569,
+      "total_tokens_including_reasoning": 10014,
+      "prompt_cache_hit_tokens": 8320,
+      "prompt_cache_miss_tokens": 643
     }
   ]
 }
