@@ -1536,6 +1536,126 @@
       "total_tokens_including_reasoning": 10655,
       "prompt_cache_hit_tokens": 8576,
       "prompt_cache_miss_tokens": 401
+    },
+    {
+      "time_cn": "2026-06-30 18:19:48",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 1,
+      "article_title": "State of Decay 3, Which Was at Xbox Games Showcase and Is Currently Running Playtests, Reportedly at Risk of Cancelation as Buyer Sought for Undead Labs",
+      "article_url": "https://www.ign.com/articles/state-of-decay-3-which-was-at-xbox-games-showcase-and-is-currently-running-playtests-reportedly-at-risk-of-cancelation-as-buyer-sought-for-undead-labs",
+      "article_date": "2026-07-01",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00061802,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9686,
+      "completion_tokens": 884,
+      "reasoning_tokens": 557,
+      "output_tokens_including_reasoning": 1441,
+      "total_tokens": 10570,
+      "total_tokens_including_reasoning": 11127,
+      "prompt_cache_hit_tokens": 8320,
+      "prompt_cache_miss_tokens": 1366
+    },
+    {
+      "time_cn": "2026-06-30 18:20:10",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 2,
+      "article_title": "Dexter: Resurrection Season 2 Is Bringing Back a Dead Villain",
+      "article_url": "https://www.ign.com/articles/dexter-resurrection-season-2-is-bringing-back-a-dead-villain",
+      "article_date": "2026-07-01",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00086848,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9075,
+      "completion_tokens": 1447,
+      "reasoning_tokens": 1194,
+      "output_tokens_including_reasoning": 2641,
+      "total_tokens": 10522,
+      "total_tokens_including_reasoning": 11716,
+      "prompt_cache_hit_tokens": 8320,
+      "prompt_cache_miss_tokens": 755
+    },
+    {
+      "time_cn": "2026-06-30 18:20:36",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 3,
+      "article_title": "Tekken 8 Roger Jr. Trailer Inspired by Viral, Kangaroo-Punching Clip Was Prompted by Former Tekken Director Katsuhiro Harada",
+      "article_url": "https://www.ign.com/articles/tekken-8-roger-jr-trailer-inspired-by-viral-kangaroo-punching-clip-was-prompted-by-former-tekken-director-katsuhiro-harada",
+      "article_date": "2026-07-01",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00121792,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9117,
+      "completion_tokens": 2027,
+      "reasoning_tokens": 1841,
+      "output_tokens_including_reasoning": 3868,
+      "total_tokens": 11144,
+      "total_tokens_including_reasoning": 12985,
+      "prompt_cache_hit_tokens": 8320,
+      "prompt_cache_miss_tokens": 797
+    },
+    {
+      "time_cn": "2026-06-30 18:20:54",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 4,
+      "article_title": "Resident Evil 2 Director Wants Leon to Return for a Cozy Game About His Retirement — And It Sounds Very Different to Resident Evil Requiem",
+      "article_url": "https://www.ign.com/articles/resident-evil-2-director-wants-leon-to-return-for-a-cozy-game-about-his-retirement-and-it-sounds-very-different-to-resident-evil-requiem",
+      "article_date": "2026-07-01",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00080506,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9156,
+      "completion_tokens": 1293,
+      "reasoning_tokens": 1081,
+      "output_tokens_including_reasoning": 2374,
+      "total_tokens": 10449,
+      "total_tokens_including_reasoning": 11530,
+      "prompt_cache_hit_tokens": 8320,
+      "prompt_cache_miss_tokens": 836
+    },
+    {
+      "time_cn": "2026-06-30 18:21:17",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 5,
+      "article_title": "MTG Marvel Super Heroes' Most Valuable Cards",
+      "article_url": "https://www.ign.com/articles/mtg-marvel-super-heroes-most-valuable-cards",
+      "article_date": "2026-07-01",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.0011307,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9324,
+      "completion_tokens": 1789,
+      "reasoning_tokens": 1664,
+      "output_tokens_including_reasoning": 3453,
+      "total_tokens": 11113,
+      "total_tokens_including_reasoning": 12777,
+      "prompt_cache_hit_tokens": 8320,
+      "prompt_cache_miss_tokens": 1004
     }
   ]
 }
