@@ -73,6 +73,11 @@
             title="复制中文全文（自动全角标点，去 markdown）">
             <span x-text="copyBtnText"></span>
           </button>
+          <button @click="copyGptTranslationPack()"
+            class="article-desktop-action text-xs px-2 py-1 rounded bg-violet-50 text-violet-700 hover:bg-violet-100 border border-violet-200"
+            title="复制英文原文、命中词库和翻译规则，粘贴到 GPTs 使用">
+            <span x-text="gptCopyBtnText"></span>
+          </button>
           <button @click="document.querySelector('.fab-btn')?.click()"
             class="article-mobile-more text-xs px-2 py-1 rounded border" title="更多操作">
             ⋯
@@ -99,6 +104,9 @@
         </button>
         <button @click="copyArticle(); fabOpen=false" class="fab-item">
           <span x-text="copyBtnText"></span>
+        </button>
+        <button @click="copyGptTranslationPack(); fabOpen=false" class="fab-item">
+          <span x-text="gptCopyBtnText"></span>
         </button>
         <button @click="toggleTheme(); fabOpen=false" class="fab-item">
           <span x-text="themeIcon"></span> 主题
@@ -549,6 +557,8 @@
         // ---- 复制按钮 ----
         copyBtnText: '📋 复制全文',
         summaryBtnText: '📋 复制总结',
+        gptCopyBtnText: '🤖 复制GPT包',
+        sourceArticle: null,
         // ---- 润色编辑 ----
         polishData: { title: '', subtitle: '', body: '', updated_at: null },
         polishDirty: false,
@@ -1534,6 +1544,198 @@
             }
           }
           return data;
+        },
+
+        currentArticleParams() {
+          const params = new URLSearchParams(location.search);
+          const date = params.get('date') || '';
+          const id = params.get('id') || '';
+          return { date, id, padded: String(id).padStart(2, '0') };
+        },
+
+        async loadSourceArticle() {
+          if (this.sourceArticle) return this.sourceArticle;
+          const { date, padded } = this.currentArticleParams();
+          if (!date || !padded) return null;
+          try {
+            const res = await fetch(`data/${date}/sources/${padded}.json?t=${Date.now()}`);
+            if (!res.ok) return null;
+            this.sourceArticle = await res.json();
+            return this.sourceArticle;
+          } catch (_) {
+            return null;
+          }
+        },
+
+        sourceTitle(source) {
+          return (source?.title_en || source?.en_title || source?.title || this.article?.en_title || this.article?.title_en || '').trim();
+        },
+
+        sourceSummary(source) {
+          return (source?.summary_en || source?.description_en || this.article?.summary_en || '').trim();
+        },
+
+        sourceParagraphs(source) {
+          if (Array.isArray(source?.paragraphs_en) && source.paragraphs_en.length) {
+            return source.paragraphs_en.map(p => String(p || '').trim()).filter(Boolean);
+          }
+          if (source?.body_en) {
+            return String(source.body_en).split(/\n+/).map(p => p.trim()).filter(Boolean);
+          }
+          const fromTranslation = (this.article?.paragraphs || [])
+            .map(p => String(p?.en || p?.source || '').trim())
+            .filter(Boolean);
+          if (fromTranslation.length) return fromTranslation;
+          if (this.article?.body_en) {
+            return String(this.article.body_en).split(/\n+/).map(p => p.trim()).filter(Boolean);
+          }
+          return [];
+        },
+
+        escapeRegExp(text) {
+          return String(text).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        },
+
+        dictEntryCn(entry) {
+          if (!entry) return '';
+          if (typeof entry === 'string') return entry;
+          return String(entry.cn || entry.zh || '').trim();
+        },
+
+        matchDictionaryTerms(text) {
+          if (!this.dictData || !text) return [];
+          const matches = [];
+          const seen = new Set();
+          const haystack = String(text);
+          for (const [cat, terms] of Object.entries(this.dictData)) {
+            if (cat === '_meta' || !terms || typeof terms !== 'object') continue;
+            for (const [en, entry] of Object.entries(terms)) {
+              const term = String(en || '').trim();
+              const cn = this.dictEntryCn(entry);
+              if (!term || !cn || term.length < 2) continue;
+              const key = `${cat}\u0000${term}`;
+              if (seen.has(key)) continue;
+              const pattern = new RegExp(this.escapeRegExp(term), 'i');
+              if (!pattern.test(haystack)) continue;
+              seen.add(key);
+              matches.push({
+                cat,
+                en: term,
+                cn,
+                source: typeof entry === 'object' ? (entry.source || '') : '',
+              });
+            }
+          }
+          return matches.sort((a, b) => b.en.length - a.en.length || a.en.localeCompare(b.en)).slice(0, 80);
+        },
+
+        pendingDictLines() {
+          return (this.article?.pending_dict || [])
+            .map(c => ({ en: String(c.en || '').trim(), cn: String(c.cn || '').trim(), cat: c.cat || 'pending' }))
+            .filter(c => c.en && c.cn)
+            .slice(0, 40);
+        },
+
+        buildGptTranslationPack(source) {
+          const title = this.sourceTitle(source);
+          const summary = this.sourceSummary(source);
+          const paragraphs = this.sourceParagraphs(source);
+          const sourceText = [title, summary, ...paragraphs].filter(Boolean).join('\n\n');
+          const dictHits = this.matchDictionaryTerms(sourceText);
+          const pendingHits = this.pendingDictLines();
+          const { date, id } = this.currentArticleParams();
+          const dictLines = dictHits.length
+            ? dictHits.map(t => `- ${t.en} => ${t.cn}${t.source ? `（${t.source}）` : ''}`).join('\n')
+            : '- 本文未命中已确认词库；遇到专名时优先保留英文或使用通行译名，不要自造译名。';
+          const pendingLines = pendingHits.length
+            ? '\n\n本文还有以下未确认新词候选，仅作参考；如果明显不合适，不要强行采用：\n' +
+              pendingHits.map(t => `- ${t.en} => ${t.cn}`).join('\n')
+            : '';
+          const paragraphLines = paragraphs.map((p, i) => `[${i + 1}] ${p}`).join('\n\n');
+          return [
+            '你是 IGN Daily 的中文翻译助手。请把下面英文文章翻译成简体中文。',
+            '',
+            '硬性要求：',
+            '- 严格遵从英文原意，不要扩写，不要改写成自己的观点，不要为了流畅而改变事实关系。',
+            '- 标题和摘要可以自然，但仍必须忠于原文。',
+            '- 正文按段落编号逐段翻译，输出段落数量必须与原文一致。',
+            '- 英文双引号和弯引号在中文里统一使用「」；不要使用中文里的英文直引号。',
+            '- Xbox 一律写作 XBOX。',
+            '- 游戏、影视、公司、人物、平台、服务等专名必须优先遵守下方词库。',
+            '- 金额、日期、平台名、游戏名、引语归属必须准确。',
+            '',
+            '输出格式：',
+            '标题：',
+            '摘要：（70字以内）',
+            '正文：',
+            '[1] ...',
+            '[2] ...',
+            '',
+            `文章：${date} #${id}`,
+            this.article?.url ? `原文链接：${this.article.url}` : '',
+            '',
+            '本篇命中词库：',
+            dictLines,
+            pendingLines,
+            '',
+            '英文标题：',
+            title || '（无）',
+            '',
+            '英文摘要：',
+            summary || '（无）',
+            '',
+            '英文正文：',
+            paragraphLines || '（无正文段落）',
+          ].filter(part => part !== '').join('\n');
+        },
+
+        async copyPlainText(text) {
+          try {
+            await navigator.clipboard.writeText(text);
+            return true;
+          } catch (_) {
+            const ta = document.createElement('textarea');
+            ta.value = text;
+            ta.style.position = 'fixed';
+            ta.style.opacity = '0';
+            document.body.appendChild(ta);
+            ta.select();
+            try {
+              document.execCommand('copy');
+              return true;
+            } finally {
+              document.body.removeChild(ta);
+            }
+          }
+        },
+
+        async copyGptTranslationPack() {
+          if (!this.article) {
+            this.flash('❌ 文章未加载', 2000);
+            return;
+          }
+          if (!this.dictData) {
+            try {
+              const dictRes = await fetch('data/dict.json?t=' + Date.now());
+              this.dictData = await dictRes.json();
+            } catch (_) {}
+          }
+          const source = await this.loadSourceArticle();
+          const paragraphs = this.sourceParagraphs(source);
+          if (!paragraphs.length && !this.sourceTitle(source)) {
+            this.flash('⚠️ 没有找到可复制的英文原文', 3000);
+            return;
+          }
+          const text = this.buildGptTranslationPack(source);
+          const reset = () => setTimeout(() => { this.gptCopyBtnText = '🤖 复制GPT包'; }, 2000);
+          try {
+            await this.copyPlainText(text);
+            this.gptCopyBtnText = '✅ 已复制GPT包';
+            this.flash('✅ 已复制 GPT 翻译包，可直接粘贴到你的 GPTs', 2500);
+            reset();
+          } catch (e) {
+            this.flash('❌ 复制失败：' + (e?.message || e), 3000);
+          }
         },
 
         async copyArticle() {
