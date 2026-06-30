@@ -214,8 +214,8 @@
       "url": "https://www.ign.com/articles/60fps-feels-like-a-bridge-too-far-tech-experts-cast-doubt-on-those-gta-6-quality-and-performance-mode-leaks",
       "publish_time_cn": "2026-06-30 01:06",
       "pub_date": "2026-06-30 01:06",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/06/24/ultimate-edition-stock-305-04-1782295792400.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/24/ultimate-edition-stock-305-04-1782295792400.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/24/ultimate-edition-stock-305-04-1782295792400.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/24/ultimate-edition-stock-305-04-1782295792400.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -224,7 +224,11 @@
         "https://assets-prd.ignimgs.com/2026/06/24/ultimate-edition-stock-305-04-1782295792400.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-30T02:25:32+08:00"
+      "source_fetched_at": "2026-06-30T02:25:32+08:00",
+      "translation_path": "translations/25.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro"
     },
     {
       "id": 26,

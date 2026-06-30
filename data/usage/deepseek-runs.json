@@ -1,5 +1,60 @@
 [
   {
+    "run_id": "28413699469",
+    "workflow": "API Translation",
+    "event": "workflow_dispatch",
+    "sha": "bdbdfe0b9ff2c3261cc28466131c5a8b9f191be0",
+    "recorded_at_cn": "2026-06-30 09:22:27",
+    "start_balance": 30.15,
+    "end_balance": 30.15,
+    "currency": "CNY",
+    "actual_platform_cost": 0.0,
+    "balance_delta_status": "pending_or_delayed",
+    "estimated_cost_usd": 0.02750602,
+    "api_call_count": 7,
+    "total_tokens": 93845,
+    "output_tokens": 28919,
+    "by_model": {
+      "deepseek-v4-pro": {
+        "calls": 7,
+        "estimated_cost_usd": 0.02750602,
+        "total_tokens": 93845,
+        "output_tokens": 28919
+      }
+    },
+    "by_task": {
+      "fulltext": {
+        "calls": 1,
+        "estimated_cost_usd": 0.01355045,
+        "total_tokens": 25010
+      },
+      "fulltext_chunk": {
+        "calls": 6,
+        "estimated_cost_usd": 0.01395557,
+        "total_tokens": 68835
+      }
+    },
+    "retry_articles": [
+      {
+        "article_id": 25,
+        "article_date": "2026-06-30",
+        "article_title": "《GTA6》60帧模式遭技术专家质疑",
+        "article_url": "https://www.ign.com/articles/60fps-feels-like-a-bridge-too-far-tech-experts-cast-doubt-on-those-gta-6-quality-and-performance-mode-leaks",
+        "calls": 7,
+        "estimated_cost_usd": 0.02750602,
+        "total_tokens": 93845,
+        "tasks": {
+          "fulltext": 1,
+          "fulltext_chunk": 6
+        },
+        "models": {
+          "deepseek-v4-pro": 7
+        }
+      }
+    ],
+    "snapshot_ok": true
+  },
+  {
     "run_id": "28411637053",
     "workflow": "API Translation",
     "event": "workflow_dispatch",
@@ -5243,29 +5298,6 @@
     "api_call_count": 0,
     "total_tokens": 0,
     "by_model": {},
-    "snapshot_ok": true
-  },
-  {
-    "run_id": "27635654455",
-    "workflow": "Hourly RSS",
-    "event": "schedule",
-    "sha": "bdd04b86eab667c094af9950216425705540ecf8",
-    "recorded_at_cn": "2026-06-17 01:24:58",
-    "start_balance": 43.76,
-    "end_balance": 43.76,
-    "currency": "CNY",
-    "actual_platform_cost": 0.0,
-    "balance_delta_status": "pending_or_delayed",
-    "estimated_cost_usd": 0.00423996,
-    "api_call_count": 11,
-    "total_tokens": 104616,
-    "by_model": {
-      "deepseek-v4-flash": {
-        "calls": 11,
-        "estimated_cost_usd": 0.00423996,
-        "total_tokens": 104616
-      }
-    },
     "snapshot_ok": true
   }
 ]
