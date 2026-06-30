@@ -1,6 +1,32 @@
 {
   "date": "2026-06-30",
-  "requested_ids": [],
-  "requested_articles": [],
-  "requested_at": "2026-06-29T16:46:57.109Z"
+  "requested_ids": [
+    24,
+    31,
+    32
+  ],
+  "requested_articles": [
+    {
+      "id": 24,
+      "url": "https://www.ign.com/articles/steam-machine-companion-cube-canceled-because-dbrand-didnt-ask-valve-for-permission",
+      "en_title": "Steam Machine Companion Cube Canceled Because Dbrand Didn't Ask Valve for Permission",
+      "cn_title": "dbrand 因未获 Valve 许可，被迫取消 Steam Machine Companion Cube",
+      "publish_time_cn": "2026-06-30 01:12"
+    },
+    {
+      "id": 31,
+      "url": "https://www.ign.com/articles/were-done-paying-for-executives-failures-unionized-xbox-developers-hold-press-conference-to-make-their-point-as-microsoft-reportedly-readies-massive-layoffs",
+      "en_title": "'We're Done Paying for Executives' Failures' — Unionized Xbox Developers Hold Press Conference to Make Their Point as Microsoft Reportedly Readies Massive Layoffs",
+      "cn_title": "《微软》XBOX工会召开发布会抗议裁员：拒绝为高管失败买单",
+      "publish_time_cn": "2026-06-30 04:49"
+    },
+    {
+      "id": 32,
+      "url": "https://www.ign.com/articles/persona-live-action-tv-show-in-the-works-at-netflix",
+      "en_title": "Persona Live-Action TV Show in the Works at Netflix",
+      "cn_title": "Netflix《女神异闻录》真人剧集正在开发中",
+      "publish_time_cn": "2026-06-30 06:17"
+    }
+  ],
+  "requested_at": "2026-06-30T00:22:43.808Z"
 }
