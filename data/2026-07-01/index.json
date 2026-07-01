@@ -608,7 +608,7 @@
       "publish_time_cn": "2026-07-01 01:10",
       "pub_date": "2026-07-01 01:10",
       "cover_image": "https://assets-prd.ignimgs.com/2026/06/22/marvels-blade-game-1782147140341.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "needs_review",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/22/marvels-blade-game-1782147140341.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/22/marvels-blade-game-1782147140341.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -627,8 +627,6 @@
           "reason": "官方中文译名未确认"
         }
       ],
-      "translation_error": "[dictionary] source contains 'Bethesda', but required dictionary translation 'B社/贝塞斯达' is missing",
-      "translation_failed_at": "2026-07-01T08:24:48.958239+08:00",
       "translator": "api",
       "translator_provider": "openai-compatible",
       "translator_model": "deepseek-v4-pro",
