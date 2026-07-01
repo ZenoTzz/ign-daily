@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-01 06:58:08 +08:00",
+  "updated_at": "2026-07-01 08:10:55 +08:00",
   "source": "multi-source median",
   "base": "USD",
   "rates_to_cny": {
@@ -23,15 +23,15 @@
       },
       "EUR": {
         "source_count": 4,
-        "median_raw": 7.75258,
-        "max_cross_source_deviation": 0.002727,
-        "previous_deviation": 0.000333
+        "median_raw": 7.748154,
+        "max_cross_source_deviation": 0.002537,
+        "previous_deviation": 0.000238
       },
       "JPY_100": {
         "source_count": 4,
-        "median_raw": 4.194264,
-        "max_cross_source_deviation": 0.00406,
-        "previous_deviation": 0.001018
+        "median_raw": 4.18638,
+        "max_cross_source_deviation": 0.003994,
+        "previous_deviation": 0.000864
       },
       "GBP": {
         "source_count": 4,
@@ -41,9 +41,9 @@
       },
       "KRW_100": {
         "source_count": 4,
-        "median_raw": 0.439816,
-        "max_cross_source_deviation": 0.005214,
-        "previous_deviation": 0.000417
+        "median_raw": 0.438851,
+        "max_cross_source_deviation": 0.005615,
+        "previous_deviation": 0.002611
       }
     },
     "sources": [
@@ -63,10 +63,10 @@
         "url": "https://api.exchangerate-api.com/v4/latest/USD",
         "rates_to_cny": {
           "USD": 6.8,
-          "EUR": 7.762557,
-          "JPY_100": 4.200383,
+          "EUR": 7.753706,
+          "JPY_100": 4.184615,
           "GBP": 9.006623,
-          "KRW_100": 0.441029
+          "KRW_100": 0.439098
         }
       },
       {

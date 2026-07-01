@@ -816,6 +816,102 @@
       "total_tokens_including_reasoning": 10014,
       "prompt_cache_hit_tokens": 8320,
       "prompt_cache_miss_tokens": 643
+    },
+    {
+      "time_cn": "2026-07-01 08:11:16",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 52,
+      "article_title": "Ex-PlayStation Boss Defends PC Strategy as Sony Pivots Away from Multiplatform Releases",
+      "article_url": "https://www.ign.com/articles/ex-playstation-boss-defends-pc-strategy-as-sony-pivots-away-from-multiplatform-releases",
+      "article_date": "2026-07-01",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00113238,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9160,
+      "completion_tokens": 1943,
+      "reasoning_tokens": 1598,
+      "output_tokens_including_reasoning": 3541,
+      "total_tokens": 11103,
+      "total_tokens_including_reasoning": 12701,
+      "prompt_cache_hit_tokens": 8320,
+      "prompt_cache_miss_tokens": 840
+    },
+    {
+      "time_cn": "2026-07-01 08:11:24",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 53,
+      "article_title": "Everything Coming to Amazon Prime Video in July",
+      "article_url": "https://www.ign.com/articles/whats-new-on-amazon-prime-video-july-2026",
+      "article_date": "2026-07-01",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00044512,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9321,
+      "completion_tokens": 592,
+      "reasoning_tokens": 414,
+      "output_tokens_including_reasoning": 1006,
+      "total_tokens": 9913,
+      "total_tokens_including_reasoning": 10327,
+      "prompt_cache_hit_tokens": 8320,
+      "prompt_cache_miss_tokens": 1001
+    },
+    {
+      "time_cn": "2026-07-01 08:11:37",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 54,
+      "article_title": "The New Rick & Morty GLD Jewelry Drop Is Here and the Pickle Rick Pendant Already Sold Out",
+      "article_url": "https://www.ign.com/articles/the-new-rick-morty-gld-jewelry-drop-is-here-and-the-pickle-pendant-is-already-sold",
+      "article_date": "2026-07-01",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00080198,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9084,
+      "completion_tokens": 1272,
+      "reasoning_tokens": 1127,
+      "output_tokens_including_reasoning": 2399,
+      "total_tokens": 10356,
+      "total_tokens_including_reasoning": 11483,
+      "prompt_cache_hit_tokens": 8320,
+      "prompt_cache_miss_tokens": 764
+    },
+    {
+      "time_cn": "2026-07-01 08:12:02",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 55,
+      "article_title": "House of the Dragon Season 3, Episode 2 Recap and Review",
+      "article_url": "https://www.ign.com/articles/house-of-the-dragon-season-3-episode-2-recap-and-review",
+      "article_date": "2026-07-01",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00149344,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 10043,
+      "completion_tokens": 2382,
+      "reasoning_tokens": 2007,
+      "output_tokens_including_reasoning": 4389,
+      "total_tokens": 12425,
+      "total_tokens_including_reasoning": 14432,
+      "prompt_cache_hit_tokens": 8320,
+      "prompt_cache_miss_tokens": 1723
     }
   ]
 }
