@@ -1032,7 +1032,7 @@
       "publish_time_cn": "2026-06-30 22:21",
       "pub_date": "2026-06-30 22:21",
       "cover_image": "https://assets-prd.ignimgs.com/2026/05/06/nintendo-switch-2-system-and-accessories-gallery-982b-1778079086668.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "needs_review",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/05/06/nintendo-switch-2-system-and-accessories-gallery-982b-1778079086668.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/05/06/nintendo-switch-2-system-and-accessories-gallery-982b-1778079086668.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -1065,8 +1065,6 @@
           "reason": "社交媒体平台，无官方中文名，保留原文。"
         }
       ],
-      "translation_error": "🚨 subtitle 含逗号且偏长，太像句子: 「并非OLED，但或许更清晰」",
-      "translation_failed_at": "2026-07-01T08:20:51.146185+08:00",
       "translator": "api",
       "translator_provider": "openai-compatible",
       "translator_model": "deepseek-v4-pro",
