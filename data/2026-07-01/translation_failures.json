@@ -15,20 +15,6 @@
       "translation_path": "",
       "retry_policy": "manual_only"
     },
-    "11": {
-      "id": 11,
-      "url": "https://www.ign.com/articles/an-updated-nintendo-switch-2-screen-has-reportedly-surfaced-online-as-fans-hope-for-ghosting-issue-fix-but-this-isnt-the-oled-upgrade-weve-been-waiting-for",
-      "en_title": "An Updated Nintendo Switch 2 Screen Has Reportedly Surfaced Online as Fans Hope for Ghosting Issue Fix — But This Isn't the OLED Upgrade We've Been Waiting For",
-      "cn_title": "《任天堂》《Nintendo Switch 2》Switch 2新屏曝光，有望解决残影问题",
-      "model": "deepseek-v4-pro",
-      "status": "needs_manual_review",
-      "failed_at": "2026-07-01T08:20:51.146185+08:00",
-      "reason": "🚨 subtitle 含逗号且偏长，太像句子: 「并非OLED，但或许更清晰」",
-      "audit_issues": [],
-      "fingerprint": "37188af501c2c345ce352cd961f7df7992e7e987",
-      "translation_path": "translations/11.json",
-      "retry_policy": "manual_only"
-    },
     "24": {
       "id": 24,
       "url": "https://www.ign.com/articles/microsoft-reportedly-considering-canceling-marvels-blade-and-shutting-arkane-down",
@@ -51,5 +37,5 @@
       "retry_policy": "manual_only"
     }
   },
-  "updated_at": "2026-07-01T08:24:48.958239+08:00"
+  "updated_at": "2026-07-01T01:38:17.110Z"
 }
