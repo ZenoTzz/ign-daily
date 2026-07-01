@@ -5,53 +5,155 @@
     "2026-07-01"
   ],
   "changed_dates": [
-    "2026-07-02"
+    "2026-07-02",
+    "2026-07-01"
   ],
   "new_target_dates": [
     "2026-07-02"
   ],
-  "new_count": 1,
-  "filtered_count": 0,
+  "new_count": 3,
+  "filtered_count": 3,
   "cleanup_count": 0,
-  "changed_count": 1,
+  "changed_count": 6,
   "articles": [
     {
-      "title": "Reacher Season 4 Returns in August, Neagley Spin-Off Lands the Following Month",
-      "url": "https://www.ign.com/articles/reacher-season-4-returns-in-august-neagley-spin-off-lands-the-following-month",
-      "pubDate_cst": "2026-07-01 08:57",
+      "title": "Mario Kart World Surprise Update Adds New Knockout Tour Routes",
+      "url": "https://www.ign.com/articles/mario-kart-world-surprise-update-adds-new-knockout-tour-routes",
+      "pubDate_cst": "2026-07-01 16:32",
+      "category": "游戏新闻",
+      "emoji": "🎮",
+      "source_type": "rss"
+    },
+    {
+      "title": "X-Men '97 Season 2, Episodes 1-3 Review & Recap (Full Spoilers)",
+      "url": "https://www.ign.com/articles/x-men-97-season-2-episodes-1-3-review-recap-full-spoilers",
+      "pubDate_cst": "2026-07-01 15:00",
+      "category": "游戏评测",
+      "emoji": "⭐",
+      "source_type": "rss"
+    },
+    {
+      "title": "Spider-Man: Brand New Day Trailer References Tobey Maguire, and Shows Tom Holland's Wrists Shooting Webs",
+      "url": "https://www.ign.com/articles/spider-man-brand-new-day-trailer-references-tobey-maguire-and-shows-tom-hollands-wrists-shooting-webs",
+      "pubDate_cst": "2026-07-01 17:53",
       "category": "游戏新闻",
       "emoji": "🎮",
       "source_type": "rss"
     }
   ],
-  "filtered_articles": [],
+  "filtered_articles": [
+    {
+      "title": "Iron Soul: Dungeon Codes for July 2026",
+      "url": "https://www.ign.com/articles/iron-soul-dungeon-codes",
+      "pubDate_cst": "2026-07-01 17:09",
+      "description": "Get the latest codes for Iron Soul: Dungeon and redeem free rewards including race rerolls.",
+      "categories": "",
+      "reason": "url:-codes",
+      "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
+      "filtered_at_cn": "2026-07-01 18:17:07",
+      "status": "filtered"
+    },
+    {
+      "title": "Microsoft Is Reminding Xbox Game Pass Members That They'll Have to Buy Call of Duty: Modern Warfare 4 if They Want to Play Day One",
+      "url": "https://www.ign.com/articles/microsoft-is-reminding-xbox-game-pass-members-that-theyll-have-to-buy-call-of-duty-modern-warfare-4-if-they-want-to-play-day-one",
+      "pubDate_cst": "2026-07-01 17:07",
+      "description": "Microsoft is sending notifications out to Xbox Game Pass members reminding them that Call of Duty: Modern Warfare 4 won’t be in the subscription service this year, so if they want to play the game at launch, they’ll have to buy it.",
+      "categories": "",
+      "reason": "text:\\bbuy .+ (?:at|from)\\b",
+      "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
+      "filtered_at_cn": "2026-07-01 18:17:07",
+      "status": "filtered"
+    },
+    {
+      "title": "Grow a Garden 2 Codes (July 2026)",
+      "url": "https://www.ign.com/articles/grow-a-garden-2-codes",
+      "pubDate_cst": "2026-07-01 00:41",
+      "description": "Redeem these codes for Grow a Garden 2 to earn free rewards including seeds.",
+      "categories": "",
+      "reason": "text:\\bcodes?\\s*\\([a-z]+\\s+\\d{4}\\)",
+      "rss_url": "https://www.ign.com/rss/articles/feed?start=20&count=20",
+      "filtered_at_cn": "2026-07-01 18:17:07",
+      "status": "filtered"
+    }
+  ],
   "runs": [
     {
       "target_date": "2026-07-02",
-      "new_count": 1,
-      "filtered_count": 0,
-      "changed_count": 1,
-      "next_id": 2,
+      "new_count": 3,
+      "filtered_count": 2,
+      "changed_count": 5,
+      "next_id": 5,
       "articles": [
         {
-          "title": "Reacher Season 4 Returns in August, Neagley Spin-Off Lands the Following Month",
-          "url": "https://www.ign.com/articles/reacher-season-4-returns-in-august-neagley-spin-off-lands-the-following-month",
-          "pubDate_cst": "2026-07-01 08:57",
+          "title": "Mario Kart World Surprise Update Adds New Knockout Tour Routes",
+          "url": "https://www.ign.com/articles/mario-kart-world-surprise-update-adds-new-knockout-tour-routes",
+          "pubDate_cst": "2026-07-01 16:32",
+          "category": "游戏新闻",
+          "emoji": "🎮",
+          "source_type": "rss"
+        },
+        {
+          "title": "X-Men '97 Season 2, Episodes 1-3 Review & Recap (Full Spoilers)",
+          "url": "https://www.ign.com/articles/x-men-97-season-2-episodes-1-3-review-recap-full-spoilers",
+          "pubDate_cst": "2026-07-01 15:00",
+          "category": "游戏评测",
+          "emoji": "⭐",
+          "source_type": "rss"
+        },
+        {
+          "title": "Spider-Man: Brand New Day Trailer References Tobey Maguire, and Shows Tom Holland's Wrists Shooting Webs",
+          "url": "https://www.ign.com/articles/spider-man-brand-new-day-trailer-references-tobey-maguire-and-shows-tom-hollands-wrists-shooting-webs",
+          "pubDate_cst": "2026-07-01 17:53",
           "category": "游戏新闻",
           "emoji": "🎮",
           "source_type": "rss"
         }
       ],
-      "filtered_articles": []
+      "filtered_articles": [
+        {
+          "title": "Iron Soul: Dungeon Codes for July 2026",
+          "url": "https://www.ign.com/articles/iron-soul-dungeon-codes",
+          "pubDate_cst": "2026-07-01 17:09",
+          "description": "Get the latest codes for Iron Soul: Dungeon and redeem free rewards including race rerolls.",
+          "categories": "",
+          "reason": "url:-codes",
+          "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
+          "filtered_at_cn": "2026-07-01 18:17:07",
+          "status": "filtered"
+        },
+        {
+          "title": "Microsoft Is Reminding Xbox Game Pass Members That They'll Have to Buy Call of Duty: Modern Warfare 4 if They Want to Play Day One",
+          "url": "https://www.ign.com/articles/microsoft-is-reminding-xbox-game-pass-members-that-theyll-have-to-buy-call-of-duty-modern-warfare-4-if-they-want-to-play-day-one",
+          "pubDate_cst": "2026-07-01 17:07",
+          "description": "Microsoft is sending notifications out to Xbox Game Pass members reminding them that Call of Duty: Modern Warfare 4 won’t be in the subscription service this year, so if they want to play the game at launch, they’ll have to buy it.",
+          "categories": "",
+          "reason": "text:\\bbuy .+ (?:at|from)\\b",
+          "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
+          "filtered_at_cn": "2026-07-01 18:17:07",
+          "status": "filtered"
+        }
+      ]
     },
     {
       "target_date": "2026-07-01",
       "new_count": 0,
-      "filtered_count": 0,
-      "changed_count": 0,
+      "filtered_count": 1,
+      "changed_count": 1,
       "next_id": 56,
       "articles": [],
-      "filtered_articles": []
+      "filtered_articles": [
+        {
+          "title": "Grow a Garden 2 Codes (July 2026)",
+          "url": "https://www.ign.com/articles/grow-a-garden-2-codes",
+          "pubDate_cst": "2026-07-01 00:41",
+          "description": "Redeem these codes for Grow a Garden 2 to earn free rewards including seeds.",
+          "categories": "",
+          "reason": "text:\\bcodes?\\s*\\([a-z]+\\s+\\d{4}\\)",
+          "rss_url": "https://www.ign.com/rss/articles/feed?start=20&count=20",
+          "filtered_at_cn": "2026-07-01 18:17:07",
+          "status": "filtered"
+        }
+      ]
     }
   ]
 }

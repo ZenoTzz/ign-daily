@@ -2064,6 +2064,78 @@
       "total_tokens_including_reasoning": 12571,
       "prompt_cache_hit_tokens": 8576,
       "prompt_cache_miss_tokens": 581
+    },
+    {
+      "time_cn": "2026-07-01 18:17:25",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 2,
+      "article_title": "Mario Kart World Surprise Update Adds New Knockout Tour Routes",
+      "article_url": "https://www.ign.com/articles/mario-kart-world-surprise-update-adds-new-knockout-tour-routes",
+      "article_date": "2026-07-02",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00118435,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9113,
+      "completion_tokens": 502,
+      "reasoning_tokens": 363,
+      "output_tokens_including_reasoning": 865,
+      "total_tokens": 9615,
+      "total_tokens_including_reasoning": 9978,
+      "prompt_cache_hit_tokens": 2432,
+      "prompt_cache_miss_tokens": 6681
+    },
+    {
+      "time_cn": "2026-07-01 18:17:36",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 3,
+      "article_title": "X-Men '97 Season 2, Episodes 1-3 Review & Recap (Full Spoilers)",
+      "article_url": "https://www.ign.com/articles/x-men-97-season-2-episodes-1-3-review-recap-full-spoilers",
+      "article_date": "2026-07-02",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.0005366,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9765,
+      "completion_tokens": 706,
+      "reasoning_tokens": 342,
+      "output_tokens_including_reasoning": 1048,
+      "total_tokens": 10471,
+      "total_tokens_including_reasoning": 10813,
+      "prompt_cache_hit_tokens": 8192,
+      "prompt_cache_miss_tokens": 1573
+    },
+    {
+      "time_cn": "2026-07-01 18:17:46",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 4,
+      "article_title": "Spider-Man: Brand New Day Trailer References Tobey Maguire, and Shows Tom Holland's Wrists Shooting Webs",
+      "article_url": "https://www.ign.com/articles/spider-man-brand-new-day-trailer-references-tobey-maguire-and-shows-tom-hollands-wrists-shooting-webs",
+      "article_date": "2026-07-02",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00048635,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9287,
+      "completion_tokens": 740,
+      "reasoning_tokens": 493,
+      "output_tokens_including_reasoning": 1233,
+      "total_tokens": 10027,
+      "total_tokens_including_reasoning": 10520,
+      "prompt_cache_hit_tokens": 8448,
+      "prompt_cache_miss_tokens": 839
     }
   ]
 }
