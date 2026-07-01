@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-07-01 21:14:22 +08:00",
+  "updated_at": "2026-07-01 23:57:54 +08:00",
   "source": "multi-source median",
   "base": "USD",
   "rates_to_cny": {
-    "USD": 6.79,
+    "USD": 6.8,
     "EUR": 7.75,
     "JPY_100": 4.18,
     "GBP": 9.0,
@@ -17,32 +17,32 @@
     "checks": {
       "USD": {
         "source_count": 4,
-        "median_raw": 6.794406,
-        "max_cross_source_deviation": 0.001311,
-        "previous_deviation": 0.000649
+        "median_raw": 6.795501,
+        "max_cross_source_deviation": 0.000662,
+        "previous_deviation": 0.00081
       },
       "EUR": {
         "source_count": 4,
         "median_raw": 7.74783,
-        "max_cross_source_deviation": 0.002115,
+        "max_cross_source_deviation": 0.001758,
         "previous_deviation": 0.00028
       },
       "JPY_100": {
         "source_count": 4,
         "median_raw": 4.183542,
-        "max_cross_source_deviation": 0.001508,
+        "max_cross_source_deviation": 0.001842,
         "previous_deviation": 0.000847
       },
       "GBP": {
         "source_count": 4,
-        "median_raw": 8.996302,
-        "max_cross_source_deviation": 0.002771,
-        "previous_deviation": 0.000411
+        "median_raw": 8.999657,
+        "max_cross_source_deviation": 0.001152,
+        "previous_deviation": 3.8e-05
       },
       "KRW_100": {
         "source_count": 4,
         "median_raw": 0.438738,
-        "max_cross_source_deviation": 0.00277,
+        "max_cross_source_deviation": 0.006061,
         "previous_deviation": 0.002868
       }
     },
@@ -73,11 +73,11 @@
         "name": "frankfurter",
         "url": "https://api.frankfurter.app/latest?from=USD&to=CNY,EUR,JPY,GBP,KRW",
         "rates_to_cny": {
-          "USD": 6.7855,
-          "EUR": 7.731442,
-          "JPY_100": 4.177235,
-          "GBP": 8.971376,
-          "KRW_100": 0.437523
+          "USD": 6.7945,
+          "EUR": 7.734206,
+          "JPY_100": 4.175834,
+          "GBP": 8.996001,
+          "KRW_100": 0.436079
         }
       },
       {

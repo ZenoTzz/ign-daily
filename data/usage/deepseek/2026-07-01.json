@@ -2376,6 +2376,126 @@
       "total_tokens_including_reasoning": 10455,
       "prompt_cache_hit_tokens": 8448,
       "prompt_cache_miss_tokens": 1359
+    },
+    {
+      "time_cn": "2026-07-01 23:58:11",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 15,
+      "article_title": "Stranger Things' Millie Bobby Brown Reveals the Unusual Way She Plays Grand Theft Auto Games — and That She Can't Wait for GTA 6",
+      "article_url": "https://www.ign.com/articles/stranger-things-millie-bobby-brown-reveals-the-unusual-way-she-plays-grand-theft-auto-games-and-that-she-cant-wait-for-gta-6",
+      "article_date": "2026-07-02",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00088563,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9215,
+      "completion_tokens": 1448,
+      "reasoning_tokens": 1247,
+      "output_tokens_including_reasoning": 2695,
+      "total_tokens": 10663,
+      "total_tokens_including_reasoning": 11910,
+      "prompt_cache_hit_tokens": 8448,
+      "prompt_cache_miss_tokens": 767
+    },
+    {
+      "time_cn": "2026-07-01 23:58:18",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 16,
+      "article_title": "Subnautica 2 Developer's Entire Staff Get Their Bonuses After Krafton Agrees to Settlement, but CEO Steps Down",
+      "article_url": "https://www.ign.com/articles/subnautica-2-developers-entire-staff-get-their-bonuses-after-krafton-agrees-to-settlement-but-ceo-steps-down",
+      "article_date": "2026-07-02",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00039941,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9512,
+      "completion_tokens": 490,
+      "reasoning_tokens": 320,
+      "output_tokens_including_reasoning": 810,
+      "total_tokens": 10002,
+      "total_tokens_including_reasoning": 10322,
+      "prompt_cache_hit_tokens": 8448,
+      "prompt_cache_miss_tokens": 1064
+    },
+    {
+      "time_cn": "2026-07-01 23:58:28",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 17,
+      "article_title": "Pokémon TCG: First Partner Illustration Collection Series 2 is Back in Stock at Amazon",
+      "article_url": "https://www.ign.com/articles/pokemon-tcg-first-partner-illustration-collection-series-2-is-back-in-stock-at-amazon",
+      "article_date": "2026-07-02",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00044505,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9136,
+      "completion_tokens": 678,
+      "reasoning_tokens": 483,
+      "output_tokens_including_reasoning": 1161,
+      "total_tokens": 9814,
+      "total_tokens_including_reasoning": 10297,
+      "prompt_cache_hit_tokens": 8448,
+      "prompt_cache_miss_tokens": 688
+    },
+    {
+      "time_cn": "2026-07-01 23:58:46",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 18,
+      "article_title": "Fable's Genius Is Rooted In The Elder Scrolls 4: Oblivion's Ground-breaking NPCs",
+      "article_url": "https://www.ign.com/articles/fables-genius-is-rooted-in-the-elder-scrolls-4-oblivions-ground-breaking-npcs",
+      "article_date": "2026-07-02",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00105321,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 10356,
+      "completion_tokens": 1452,
+      "reasoning_tokens": 1271,
+      "output_tokens_including_reasoning": 2723,
+      "total_tokens": 11808,
+      "total_tokens_including_reasoning": 13079,
+      "prompt_cache_hit_tokens": 8448,
+      "prompt_cache_miss_tokens": 1908
+    },
+    {
+      "time_cn": "2026-07-01 23:59:08",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 19,
+      "article_title": "Doom: The Dark Ages Revelations DLC Targets 10-12 Hours, With 40% of That Being Endgame Content",
+      "article_url": "https://www.ign.com/articles/doom-the-dark-ages-revelations-dlc-preview",
+      "article_date": "2026-07-02",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00119181,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9750,
+      "completion_tokens": 1879,
+      "reasoning_tokens": 1642,
+      "output_tokens_including_reasoning": 3521,
+      "total_tokens": 11629,
+      "total_tokens_including_reasoning": 13271,
+      "prompt_cache_hit_tokens": 8448,
+      "prompt_cache_miss_tokens": 1302
     }
   ]
 }
