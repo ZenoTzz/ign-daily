@@ -10,103 +10,263 @@
   "new_target_dates": [
     "2026-07-02"
   ],
-  "new_count": 5,
-  "filtered_count": 0,
-  "cleanup_count": 0,
-  "changed_count": 5,
+  "new_count": 8,
+  "filtered_count": 5,
+  "cleanup_count": 1,
+  "changed_count": 14,
   "articles": [
     {
-      "title": "Stranger Things' Millie Bobby Brown Reveals the Unusual Way She Plays Grand Theft Auto Games — and That She Can't Wait for GTA 6",
-      "url": "https://www.ign.com/articles/stranger-things-millie-bobby-brown-reveals-the-unusual-way-she-plays-grand-theft-auto-games-and-that-she-cant-wait-for-gta-6",
-      "pubDate_cst": "2026-07-01 23:05",
+      "title": "Project Hail Mary Is Coming to Prime Video This Friday",
+      "url": "https://www.ign.com/articles/project-hail-mary-streaming-release-date-prime-video",
+      "pubDate_cst": "2026-07-02 00:59",
       "category": "游戏新闻",
       "emoji": "🎮",
       "source_type": "rss"
     },
     {
-      "title": "Subnautica 2 Developer's Entire Staff Get Their Bonuses After Krafton Agrees to Settlement, but CEO Steps Down",
-      "url": "https://www.ign.com/articles/subnautica-2-developers-entire-staff-get-their-bonuses-after-krafton-agrees-to-settlement-but-ceo-steps-down",
-      "pubDate_cst": "2026-07-01 22:53",
+      "title": "'This Is Borderline Evil' - Minecraft Creator Speaks Out Against ESA Calling Private Servers 'Illegal'",
+      "url": "https://www.ign.com/articles/this-is-borderline-evil-minecraft-creator-speaks-out-against-esa-calling-private-servers-illegal",
+      "pubDate_cst": "2026-07-02 00:24",
       "category": "游戏新闻",
       "emoji": "🎮",
       "source_type": "rss"
     },
     {
-      "title": "Pokémon TCG: First Partner Illustration Collection Series 2 is Back in Stock at Amazon",
-      "url": "https://www.ign.com/articles/pokemon-tcg-first-partner-illustration-collection-series-2-is-back-in-stock-at-amazon",
-      "pubDate_cst": "2026-07-01 22:31",
+      "title": "Get Everything in Assassin's Creed Games with One Month of Free IGN Guides Checklists",
+      "url": "https://www.ign.com/articles/assassins-creed-games-one-month-of-free-ign-guides-checklists",
+      "pubDate_cst": "2026-07-02 00:23",
       "category": "游戏新闻",
       "emoji": "🎮",
       "source_type": "rss"
     },
     {
-      "title": "Fable's Genius Is Rooted In The Elder Scrolls 4: Oblivion's Ground-breaking NPCs",
-      "url": "https://www.ign.com/articles/fables-genius-is-rooted-in-the-elder-scrolls-4-oblivions-ground-breaking-npcs",
-      "pubDate_cst": "2026-07-01 22:15",
+      "title": "The Blood of Dawnwalker: 8 Minutes of Quest Gameplay | IGN First",
+      "url": "https://www.ign.com/articles/the-blood-of-dawnwalker-8-minutes-of-quest-gameplay",
+      "pubDate_cst": "2026-07-02 00:00",
       "category": "游戏新闻",
       "emoji": "🎮",
       "source_type": "rss"
     },
     {
-      "title": "Doom: The Dark Ages Revelations DLC Targets 10-12 Hours, With 40% of That Being Endgame Content",
-      "url": "https://www.ign.com/articles/doom-the-dark-ages-revelations-dlc-preview",
-      "pubDate_cst": "2026-07-01 22:00",
+      "title": "Sony Confirms PlayStation Plus Monthly Games for July 2026, Headlined by Call of Duty: Modern Warfare 3",
+      "url": "https://www.ign.com/articles/sony-confirms-playstation-plus-monthly-games-for-july-2026-headlined-by-call-of-duty-modern-warfare-3",
+      "pubDate_cst": "2026-07-01 23:56",
+      "category": "游戏新闻",
+      "emoji": "🎮",
+      "source_type": "rss"
+    },
+    {
+      "title": "The Super Mario Galaxy Movie Is Coming to Peacock at the End of July",
+      "url": "https://www.ign.com/articles/the-super-mario-galaxy-movie-streaming-release-date-peacock",
+      "pubDate_cst": "2026-07-01 23:54",
+      "category": "游戏新闻",
+      "emoji": "🎮",
+      "source_type": "rss"
+    },
+    {
+      "title": "Xbox's New Console, Project Helix, Will Reportedly Not Have a Disc Drive; Microsoft Exploring Ways to Digitize Physical Games",
+      "url": "https://www.ign.com/articles/xboxs-new-console-project-helix-will-reportedly-not-have-a-disc-drive-microsoft-exploring-ways-to-digitize-physical-games",
+      "pubDate_cst": "2026-07-02 02:08",
+      "category": "游戏新闻",
+      "emoji": "🎮",
+      "source_type": "rss"
+    },
+    {
+      "title": "Zach Cregger to Produce Siren Head Movie Backed by Warner Bros.",
+      "url": "https://www.ign.com/articles/zach-cregger-to-produce-siren-head-movie-backed-by-warner-bros",
+      "pubDate_cst": "2026-07-02 01:40",
       "category": "游戏新闻",
       "emoji": "🎮",
       "source_type": "rss"
     }
   ],
-  "filtered_articles": [],
+  "filtered_articles": [
+    {
+      "title": "Save $2,500 Off an Alienware Area-51 Gaming PC With GeForce RTX 5090 GPU, 64GB of RAM, and a 4TB SSD",
+      "url": "https://www.ign.com/articles/alienware-area-51-geforce-rtx-5090-gaming-pc-deal-with-64gb-of-ram-and-4tb-ssd",
+      "pubDate_cst": "2026-07-02 01:10",
+      "description": "Warning: it's still expensive",
+      "categories": "",
+      "reason": "text:\\bsave \\$\\d",
+      "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
+      "filtered_at_cn": "2026-07-02 02:18:16",
+      "status": "filtered"
+    },
+    {
+      "title": "Steven Spielberg’s Disclosure Day Is Getting a 4K Steelbook – Here’s Where You Can Grab a Copy",
+      "url": "https://www.ign.com/articles/disclosure-day-4k-steelbook-where-to-preorder",
+      "pubDate_cst": "2026-07-02 01:00",
+      "description": "Steven Spielberg’s Disclosure Day is now available to preorder as a 4K steelbook, on standard 4K, and Blu-ray. We've broken down which retailers have copies available now ahead of its release.",
+      "categories": "",
+      "reason": "url:preorder",
+      "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
+      "filtered_at_cn": "2026-07-02 02:18:16",
+      "status": "filtered"
+    },
+    {
+      "title": "Resident Evil Requiem Has Dropped to Its Prime Day Price at Best Buy – Hurry To Grab It for $56",
+      "url": "https://www.ign.com/articles/resident-evil-requiem-best-buy-deal",
+      "pubDate_cst": "2026-07-02 00:00",
+      "description": "As part of Best Buy's 4th of July Sale, Resident Evil Requiem is on sale for $55.99 across PlayStation 5, Xbox Series X, and Nintendo Switch 2. That's $14 off its list price of $69.99.",
+      "categories": "",
+      "reason": "text:\\bon sale\\b",
+      "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
+      "filtered_at_cn": "2026-07-02 02:18:16",
+      "status": "filtered"
+    },
+    {
+      "title": "Every New LEGO Set Now Available in July 2026",
+      "url": "https://www.ign.com/articles/every-new-lego-set-now-available-in-july-2026",
+      "pubDate_cst": "2026-07-01 23:58",
+      "description": "LEGO only has five new sets out in July 2026, but each one is worth checking out.",
+      "categories": "",
+      "reason": "text:\\blego sets?\\b",
+      "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
+      "filtered_at_cn": "2026-07-02 02:18:16",
+      "status": "filtered"
+    },
+    {
+      "title": "Save $300 Off the New Apple iPad Pro 13\" M5 (Even Cheaper Than the MSRP Before Apple Raised Prices)",
+      "url": "https://www.ign.com/articles/save-300-off-the-new-apple-ipad-pro-13-m5-even-cheaper-than-the-msrp-before-apple-raised-prices",
+      "pubDate_cst": "2026-07-02 01:50",
+      "description": "The most powerful tablet.",
+      "categories": "",
+      "reason": "text:\\bsave \\$\\d",
+      "rss_url": "https://www.ign.com/rss/v2/articles/feed?vertical=movies&start=0&count=20",
+      "filtered_at_cn": "2026-07-02 02:18:16",
+      "status": "filtered"
+    }
+  ],
   "runs": [
     {
       "target_date": "2026-07-02",
-      "new_count": 5,
-      "filtered_count": 0,
-      "changed_count": 5,
-      "next_id": 20,
+      "new_count": 8,
+      "filtered_count": 5,
+      "changed_count": 13,
+      "next_id": 28,
       "articles": [
         {
-          "title": "Stranger Things' Millie Bobby Brown Reveals the Unusual Way She Plays Grand Theft Auto Games — and That She Can't Wait for GTA 6",
-          "url": "https://www.ign.com/articles/stranger-things-millie-bobby-brown-reveals-the-unusual-way-she-plays-grand-theft-auto-games-and-that-she-cant-wait-for-gta-6",
-          "pubDate_cst": "2026-07-01 23:05",
+          "title": "Project Hail Mary Is Coming to Prime Video This Friday",
+          "url": "https://www.ign.com/articles/project-hail-mary-streaming-release-date-prime-video",
+          "pubDate_cst": "2026-07-02 00:59",
           "category": "游戏新闻",
           "emoji": "🎮",
           "source_type": "rss"
         },
         {
-          "title": "Subnautica 2 Developer's Entire Staff Get Their Bonuses After Krafton Agrees to Settlement, but CEO Steps Down",
-          "url": "https://www.ign.com/articles/subnautica-2-developers-entire-staff-get-their-bonuses-after-krafton-agrees-to-settlement-but-ceo-steps-down",
-          "pubDate_cst": "2026-07-01 22:53",
+          "title": "'This Is Borderline Evil' - Minecraft Creator Speaks Out Against ESA Calling Private Servers 'Illegal'",
+          "url": "https://www.ign.com/articles/this-is-borderline-evil-minecraft-creator-speaks-out-against-esa-calling-private-servers-illegal",
+          "pubDate_cst": "2026-07-02 00:24",
           "category": "游戏新闻",
           "emoji": "🎮",
           "source_type": "rss"
         },
         {
-          "title": "Pokémon TCG: First Partner Illustration Collection Series 2 is Back in Stock at Amazon",
-          "url": "https://www.ign.com/articles/pokemon-tcg-first-partner-illustration-collection-series-2-is-back-in-stock-at-amazon",
-          "pubDate_cst": "2026-07-01 22:31",
+          "title": "Get Everything in Assassin's Creed Games with One Month of Free IGN Guides Checklists",
+          "url": "https://www.ign.com/articles/assassins-creed-games-one-month-of-free-ign-guides-checklists",
+          "pubDate_cst": "2026-07-02 00:23",
           "category": "游戏新闻",
           "emoji": "🎮",
           "source_type": "rss"
         },
         {
-          "title": "Fable's Genius Is Rooted In The Elder Scrolls 4: Oblivion's Ground-breaking NPCs",
-          "url": "https://www.ign.com/articles/fables-genius-is-rooted-in-the-elder-scrolls-4-oblivions-ground-breaking-npcs",
-          "pubDate_cst": "2026-07-01 22:15",
+          "title": "The Blood of Dawnwalker: 8 Minutes of Quest Gameplay | IGN First",
+          "url": "https://www.ign.com/articles/the-blood-of-dawnwalker-8-minutes-of-quest-gameplay",
+          "pubDate_cst": "2026-07-02 00:00",
           "category": "游戏新闻",
           "emoji": "🎮",
           "source_type": "rss"
         },
         {
-          "title": "Doom: The Dark Ages Revelations DLC Targets 10-12 Hours, With 40% of That Being Endgame Content",
-          "url": "https://www.ign.com/articles/doom-the-dark-ages-revelations-dlc-preview",
-          "pubDate_cst": "2026-07-01 22:00",
+          "title": "Sony Confirms PlayStation Plus Monthly Games for July 2026, Headlined by Call of Duty: Modern Warfare 3",
+          "url": "https://www.ign.com/articles/sony-confirms-playstation-plus-monthly-games-for-july-2026-headlined-by-call-of-duty-modern-warfare-3",
+          "pubDate_cst": "2026-07-01 23:56",
+          "category": "游戏新闻",
+          "emoji": "🎮",
+          "source_type": "rss"
+        },
+        {
+          "title": "The Super Mario Galaxy Movie Is Coming to Peacock at the End of July",
+          "url": "https://www.ign.com/articles/the-super-mario-galaxy-movie-streaming-release-date-peacock",
+          "pubDate_cst": "2026-07-01 23:54",
+          "category": "游戏新闻",
+          "emoji": "🎮",
+          "source_type": "rss"
+        },
+        {
+          "title": "Xbox's New Console, Project Helix, Will Reportedly Not Have a Disc Drive; Microsoft Exploring Ways to Digitize Physical Games",
+          "url": "https://www.ign.com/articles/xboxs-new-console-project-helix-will-reportedly-not-have-a-disc-drive-microsoft-exploring-ways-to-digitize-physical-games",
+          "pubDate_cst": "2026-07-02 02:08",
+          "category": "游戏新闻",
+          "emoji": "🎮",
+          "source_type": "rss"
+        },
+        {
+          "title": "Zach Cregger to Produce Siren Head Movie Backed by Warner Bros.",
+          "url": "https://www.ign.com/articles/zach-cregger-to-produce-siren-head-movie-backed-by-warner-bros",
+          "pubDate_cst": "2026-07-02 01:40",
           "category": "游戏新闻",
           "emoji": "🎮",
           "source_type": "rss"
         }
       ],
-      "filtered_articles": []
+      "filtered_articles": [
+        {
+          "title": "Save $2,500 Off an Alienware Area-51 Gaming PC With GeForce RTX 5090 GPU, 64GB of RAM, and a 4TB SSD",
+          "url": "https://www.ign.com/articles/alienware-area-51-geforce-rtx-5090-gaming-pc-deal-with-64gb-of-ram-and-4tb-ssd",
+          "pubDate_cst": "2026-07-02 01:10",
+          "description": "Warning: it's still expensive",
+          "categories": "",
+          "reason": "text:\\bsave \\$\\d",
+          "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
+          "filtered_at_cn": "2026-07-02 02:18:16",
+          "status": "filtered"
+        },
+        {
+          "title": "Steven Spielberg’s Disclosure Day Is Getting a 4K Steelbook – Here’s Where You Can Grab a Copy",
+          "url": "https://www.ign.com/articles/disclosure-day-4k-steelbook-where-to-preorder",
+          "pubDate_cst": "2026-07-02 01:00",
+          "description": "Steven Spielberg’s Disclosure Day is now available to preorder as a 4K steelbook, on standard 4K, and Blu-ray. We've broken down which retailers have copies available now ahead of its release.",
+          "categories": "",
+          "reason": "url:preorder",
+          "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
+          "filtered_at_cn": "2026-07-02 02:18:16",
+          "status": "filtered"
+        },
+        {
+          "title": "Resident Evil Requiem Has Dropped to Its Prime Day Price at Best Buy – Hurry To Grab It for $56",
+          "url": "https://www.ign.com/articles/resident-evil-requiem-best-buy-deal",
+          "pubDate_cst": "2026-07-02 00:00",
+          "description": "As part of Best Buy's 4th of July Sale, Resident Evil Requiem is on sale for $55.99 across PlayStation 5, Xbox Series X, and Nintendo Switch 2. That's $14 off its list price of $69.99.",
+          "categories": "",
+          "reason": "text:\\bon sale\\b",
+          "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
+          "filtered_at_cn": "2026-07-02 02:18:16",
+          "status": "filtered"
+        },
+        {
+          "title": "Every New LEGO Set Now Available in July 2026",
+          "url": "https://www.ign.com/articles/every-new-lego-set-now-available-in-july-2026",
+          "pubDate_cst": "2026-07-01 23:58",
+          "description": "LEGO only has five new sets out in July 2026, but each one is worth checking out.",
+          "categories": "",
+          "reason": "text:\\blego sets?\\b",
+          "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
+          "filtered_at_cn": "2026-07-02 02:18:16",
+          "status": "filtered"
+        },
+        {
+          "title": "Save $300 Off the New Apple iPad Pro 13\" M5 (Even Cheaper Than the MSRP Before Apple Raised Prices)",
+          "url": "https://www.ign.com/articles/save-300-off-the-new-apple-ipad-pro-13-m5-even-cheaper-than-the-msrp-before-apple-raised-prices",
+          "pubDate_cst": "2026-07-02 01:50",
+          "description": "The most powerful tablet.",
+          "categories": "",
+          "reason": "text:\\bsave \\$\\d",
+          "rss_url": "https://www.ign.com/rss/v2/articles/feed?vertical=movies&start=0&count=20",
+          "filtered_at_cn": "2026-07-02 02:18:16",
+          "status": "filtered"
+        }
+      ]
     },
     {
       "target_date": "2026-07-01",
