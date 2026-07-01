@@ -14,28 +14,7 @@
       "fingerprint": "7d691184867cc9a84b6b33a48d99010eecc46f5d",
       "translation_path": "",
       "retry_policy": "manual_only"
-    },
-    "24": {
-      "id": 24,
-      "url": "https://www.ign.com/articles/microsoft-reportedly-considering-canceling-marvels-blade-and-shutting-arkane-down",
-      "en_title": "Microsoft Reportedly Considering Canceling Marvel's Blade and Shutting Arkane Down",
-      "cn_title": "微软据称考虑取消《Marvel's Blade》并关闭Arkane",
-      "model": "deepseek-v4-pro",
-      "status": "needs_manual_review",
-      "failed_at": "2026-07-01T08:24:48.958239+08:00",
-      "reason": "[dictionary] source contains 'Bethesda', but required dictionary translation 'B社/贝塞斯达' is missing",
-      "audit_issues": [
-        {
-          "type": "dictionary",
-          "detail": "source contains 'Bethesda', but required dictionary translation 'B社/贝塞斯达' is missing",
-          "en": "Bethesda",
-          "expected_cn": "B社/贝塞斯达"
-        }
-      ],
-      "fingerprint": "2e266f12000adf12bf73995c3222a0f6784596b8",
-      "translation_path": "translations/24.json",
-      "retry_policy": "manual_only"
     }
   },
-  "updated_at": "2026-07-01T01:38:17.110Z"
+  "updated_at": "2026-07-01T03:37:42.735Z"
 }
