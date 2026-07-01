@@ -317,7 +317,7 @@ function appData() {
     oauthStatus: '',
     automationConfig: {
       title_translator: 'openclaw',
-      fulltext_translator: 'openclaw',
+      fulltext_translator: 'codex',
       nightly_learner: 'openclaw',
       api_provider: 'openai-compatible',
       api_model: 'deepseek-v4-flash',
@@ -789,7 +789,7 @@ function appData() {
     statusLabel(art) {
       if (this.polishedIds.has(art?.id)) return '已润色';
       if (art?.translation_status === 'done') return '已翻译';
-      if (art?.translation_status === 'requested') return '翻译中';
+      if (art?.translation_status === 'requested') return this.requestedQueueText();
       if (art?.translation_status === 'needs_review') return '需复核';
       if (art?.comparison_status === 'requested') return '对比中';
       if (art?.comparison_status === 'done') return '已对比';
@@ -808,7 +808,9 @@ function appData() {
 
     preferredModelLabel(art) {
       if (art?.translation_status === 'requested') {
-        return this.formatTranslatorModel(this.automationConfig.api_fulltext_model || 'deepseek-v4-pro');
+        return this.isApiMode('fulltext_translator')
+          ? this.formatTranslatorModel(this.automationConfig.api_fulltext_model || 'deepseek-v4-pro')
+          : `${this.fulltextQueueOwner()} 待处理`;
       }
       if (art?.translation_status === 'done') {
         return this.translatorLabel(art) || '已完成';
@@ -1235,7 +1237,7 @@ function appData() {
         const apiModels = this.normalizeApiModels(cfg.api_models);
         this.automationConfig = {
           title_translator: cfg.title_translator || 'openclaw',
-          fulltext_translator: cfg.fulltext_translator || 'openclaw',
+          fulltext_translator: cfg.fulltext_translator || 'codex',
           nightly_learner: cfg.nightly_learner || 'openclaw',
           api_provider: cfg.api_provider || 'openai-compatible',
           api_model: cfg.api_model || 'deepseek-v4-flash',
@@ -1263,7 +1265,7 @@ function appData() {
         const apiModels = this.normalizeApiModels(this.automationConfig.api_models);
         const cfg = {
           title_translator: this.automationConfig.title_translator || 'openclaw',
-          fulltext_translator: this.automationConfig.fulltext_translator || 'openclaw',
+          fulltext_translator: this.automationConfig.fulltext_translator || 'codex',
           nightly_learner: this.automationConfig.nightly_learner || 'openclaw',
           api_provider: 'openai-compatible',
           api_model: this.automationConfig.api_title_model || this.automationConfig.api_model || 'deepseek-v4-flash',
@@ -1305,7 +1307,7 @@ function appData() {
         fulltext_limit: '5',
         time_budget_seconds: '1200',
         title_translator: this.automationConfig.title_translator || 'openclaw',
-        fulltext_translator: this.automationConfig.fulltext_translator || 'openclaw',
+        fulltext_translator: this.automationConfig.fulltext_translator || 'codex',
         api_title_model: titleModel.model,
         api_fulltext_model: fulltextModel.model,
         api_base_url: this.automationConfig.api_base_url || 'https://api.deepseek.com',
@@ -1332,6 +1334,17 @@ function appData() {
       if (titleApi) parts.push(`标题/摘要：${this.formatTranslatorModel(this.automationConfig.api_title_model || this.automationConfig.api_model)}`);
       if (fulltextApi) parts.push(`正文：${this.formatTranslatorModel(this.automationConfig.api_fulltext_model)}`);
       return parts.join('，');
+    },
+
+    fulltextQueueOwner() {
+      const mode = this.automationConfig?.fulltext_translator || 'codex';
+      if (mode === 'api' || mode === 'deepseek') return 'API';
+      if (mode === 'openclaw') return 'OpenClaw';
+      return 'Codex';
+    },
+
+    requestedQueueText() {
+      return this.isApiMode('fulltext_translator') ? '翻译中' : `等待${this.fulltextQueueOwner()}`;
     },
 
     apiComparisonInputs(article) {
@@ -1763,7 +1776,7 @@ function appData() {
         localStorage.setItem('ign_active_job_id', data.job_id);
         await this.pollTranslationJobs(true);
       }
-      const suffix = data?.triggered ? '，API Actions 已触发' : '';
+      const suffix = data?.triggered ? '，API Actions 已触发' : `，等待${this.fulltextQueueOwner()}处理`;
       this.flash(`已进入翻译池 ${selIds.length} 篇${suffix}`);
       return data;
     },
@@ -2073,7 +2086,7 @@ function appData() {
             this.flash(`⚠️ 已进入翻译池 ${selIds.length} 篇，但立即触发失败，将由定时任务继续处理：${dispatchError.message}`, 6500);
           }
         } else {
-          this.flash(`✅ 已进入翻译池 ${selIds.length} 篇，OpenClaw 会处理`);
+          this.flash(`✅ 已进入翻译池 ${selIds.length} 篇，等待${this.fulltextQueueOwner()}处理`);
         }
       } catch (e) {
         this.flash('提交失败：' + (e?.message || '服务器连接失败，请重试'), 6500);

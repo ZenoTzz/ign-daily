@@ -525,6 +525,7 @@ workspace/
 - `openclaw`：保留队列给 OpenClaw；`api`：GitHub Actions 调用 OpenAI-compatible API；`codex`：由 Codex 对比润色稿并更新证据池和周报。
 - API 模式需要 GitHub Secret `TRANSLATOR_API_KEY`（兼容旧名 `DEEPSEEK_API_KEY`）。网页会把 `api_title_model`、`api_fulltext_model`、`api_nightly_model` 和 `api_base_url` 写入 `data/automation-config.json`；建议标题摘要用 Flash，正文用 Pro，夜间学习用 Flash。
 - 网页设置面板的“立即运行 API 翻译”按钮会先保存 `data/automation-config.json`，再触发 GitHub Actions `api-translation.yml` 的 `workflow_dispatch`；按钮依赖浏览器本地 PAT 具备 Actions 写权限。
+- 当前静态站阶段，正文默认由 Codex 人工接管：`data/automation-config.json.fulltext_translator` 应保持 `codex`。首页提交只写 `requests.json` 并显示“等待 Codex”；不要自动触发正文 API，除非用户在设置中明确切回 API 或点击备用 API 按钮。
 - 当 `fulltext_translator=api` 时，首页勾选文章并提交翻译会写 `requests.json`，随后立刻触发 `api-translation.yml`；无需等待下一次半小时定时。
 - 首页提交全文翻译时必须合并而不是覆盖现有 `requests.json`；GitHub 文件写入成功即视为已进入翻译池并立即显示 `requested`。后续 Actions 触发失败只能提示等待定时任务，不得把已成功入池误报为“提交失败”。
 - 首页加载/刷新会尝试触发 `hourly-rss.yml` 抓最新 RSS 和缓存 `sources/NN.json`，浏览器本地 10 分钟节流；没有 PAT 或 PAT 缺少 Actions 写权限时只会等待 GitHub Actions 自己的每小时定时。

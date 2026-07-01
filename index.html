@@ -216,7 +216,7 @@
             <span> · </span>
             <span x-text="`${pendingSelectionCount} 条待选择`"></span>
             <span> · </span>
-            <span x-text="`${requestedCount} 篇翻译中`"></span>
+            <span x-text="`${requestedCount} 篇${requestedQueueText()}`"></span>
             <span> · </span>
             <span x-text="`${polishedIds.size} 篇已润色`"></span>
           </p>
@@ -228,7 +228,7 @@
           </div>
           <div class="metric-card metric-blue">
             <strong x-text="requestedCount"></strong>
-            <span>翻译中</span>
+            <span x-text="requestedQueueText()"></span>
           </div>
           <div class="metric-card metric-green">
             <strong x-text="polishedIds.size"></strong>
@@ -280,7 +280,7 @@
           <div class="panel-heading">
             <div>
               <h2>文章队列</h2>
-              <p>勾选需要翻译的文章，确认模型与费用后提交。</p>
+              <p>勾选需要翻译的文章后提交到队列；默认等待 Codex 处理，API 仅作备用。</p>
             </div>
             <div class="queue-actions">
               <span class="selected-count">已选 <strong x-text="selected.length"></strong></span>
@@ -302,7 +302,7 @@
             <div class="status-tabs">
               <button @click="filterCat = 'all'" :class="filterCat === 'all' ? 'active' : ''">全部 <span x-text="allArticleCount"></span></button>
               <button @click="filterCat = '__pending__'" :class="filterCat === '__pending__' ? 'active' : ''">待选 <span x-text="pendingSelectionCount"></span></button>
-              <button @click="filterCat = '__requested__'" :class="filterCat === '__requested__' ? 'active' : ''">翻译中 <span x-text="requestedCount"></span></button>
+              <button @click="filterCat = '__requested__'" :class="filterCat === '__requested__' ? 'active' : ''"><span x-text="requestedQueueText()"></span> <span x-text="requestedCount"></span></button>
               <button @click="filterCat = '__translated__'" :class="filterCat === '__translated__' ? 'active' : ''">已完成 <span x-text="translatedCount"></span></button>
               <button @click="filterCat = '__polished__'" :class="filterCat === '__polished__' ? 'active' : ''">已润色 <span x-text="polishedIds.size"></span></button>
             </div>
@@ -424,7 +424,7 @@
               <i><b :style="`width:${queuePercent(Math.max(0, allArticleCount - pendingSelectionCount), allArticleCount)}%`"></b></i>
             </div>
             <div class="progress-item">
-              <div><span>全文翻译</span><strong x-text="`${requestedCount} 篇进行中`"></strong></div>
+              <div><span>全文翻译</span><strong x-text="`${requestedCount} 篇${requestedQueueText()}`"></strong></div>
               <i><b :style="`width:${queuePercent(requestedCount, Math.max(allArticleCount, 1))}%`"></b></i>
             </div>
             <div class="progress-item">
@@ -748,7 +748,7 @@
             </label>
             <label>正文
               <select x-model="automationConfig.fulltext_translator" style="width:100%; margin-top:0.35rem;">
-                <option value="openclaw">OpenClaw</option>
+                <option value="codex">Codex</option>
                 <option value="api">API</option>
               </select>
             </label>
@@ -856,7 +856,7 @@
               <span x-text="automationSaving ? '保存中...' : '保存自动化开关'"></span>
             </button>
             <button @click="runApiTranslationNow()" :disabled="automationSaving || automationTriggering" class="btn btn-green">
-              <span x-text="automationTriggering ? '触发中...' : '立即运行 API 翻译'"></span>
+              <span x-text="automationTriggering ? '触发中...' : '备用：立即运行 API 翻译'"></span>
             </button>
           </div>
         </div>
