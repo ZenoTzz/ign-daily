@@ -33,6 +33,7 @@ from chinese_punctuation import normalize_chinese_quotes
 from currency_utils import normalize_currency_text
 from dict_matcher import (
     flatten_dict_terms as shared_flatten_dict_terms,
+    iter_dict_terms,
     matched_terms_for_article,
     normalize_pending_dict,
     restore_dictionary_spacing,
@@ -87,9 +88,22 @@ def matched_terms(text: str, limit: int = 30, article: dict[str, Any] | None = N
 
 
 def apply_title_dictionary(en_title: str, cn_title: str) -> str:
-    """Force dictionary names into a title when the English title contains them."""
+    """Force only work-title dictionary names into a title.
+
+    Do not prepend companies/platforms/people. The old behavior wrapped every
+    dictionary hit in 《》, which produced titles such as 《PlayStation》前高管
+    and 《Rockstar》《GTA6》开发者.
+    """
     title = cn_title or ""
-    for en_term, cn_term in sorted(flatten_dict_terms().items(), key=lambda kv: len(kv[0]), reverse=True):
+    work_terms = [
+        (en, cn, cat)
+        for en, cn, cat in iter_dict_terms()
+        if cat in {"games", "movies_tv"}
+        and cn
+        and cn.casefold() != en.casefold()
+        and re.search(r"[\u4e00-\u9fff]", cn)
+    ]
+    for en_term, cn_term, _cat in sorted(work_terms, key=lambda row: len(row[0]), reverse=True):
         if not term_in_text(en_term, en_title or "") or not cn_term or cn_term in title:
             continue
         prefix = cn_term.split("：", 1)[0].split(":", 1)[0]
@@ -98,6 +112,7 @@ def apply_title_dictionary(en_title: str, cn_title: str) -> str:
             if cn_term in title:
                 continue
         title = f"《{cn_term}》{title}"
+    title = re.sub(r"《([^》]*?(?:PlayStation|Nintendo Switch|Switch 2|PC|Steam|Epic|Rockstar|Bethesda|Microsoft|Sony)[^》]*?)》", r"\1", title)
     return title
 
 
