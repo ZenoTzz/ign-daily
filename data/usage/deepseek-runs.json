@@ -1,5 +1,38 @@
 [
   {
+    "run_id": "28486754934",
+    "workflow": "Hourly RSS",
+    "event": "workflow_dispatch",
+    "sha": "ab8312016d1d403fa76ea7642a910b7bb83b5cd7",
+    "recorded_at_cn": "2026-07-01 09:17:38",
+    "start_balance": 29.06,
+    "end_balance": 29.06,
+    "currency": "CNY",
+    "actual_platform_cost": 0.0,
+    "balance_delta_status": "pending_or_delayed",
+    "estimated_cost_usd": 0.00081906,
+    "api_call_count": 1,
+    "total_tokens": 11496,
+    "output_tokens": 2508,
+    "by_model": {
+      "deepseek-v4-flash": {
+        "calls": 1,
+        "estimated_cost_usd": 0.00081906,
+        "total_tokens": 11496,
+        "output_tokens": 2508
+      }
+    },
+    "by_task": {
+      "title": {
+        "calls": 1,
+        "estimated_cost_usd": 0.00081906,
+        "total_tokens": 11496
+      }
+    },
+    "retry_articles": [],
+    "snapshot_ok": true
+  },
+  {
     "run_id": "28484329848",
     "workflow": "API Translation",
     "event": "workflow_dispatch",
@@ -5525,34 +5558,6 @@
     "api_call_count": 0,
     "total_tokens": 0,
     "by_model": {},
-    "snapshot_ok": true
-  },
-  {
-    "run_id": "27659267978",
-    "workflow": "API Translation",
-    "event": "workflow_dispatch",
-    "sha": "8149663cadfb43405ee4c98d7260136b9bcfd205",
-    "recorded_at_cn": "2026-06-17 09:21:40",
-    "start_balance": 43.12,
-    "end_balance": 43.12,
-    "currency": "CNY",
-    "actual_platform_cost": 0.0,
-    "balance_delta_status": "pending_or_delayed",
-    "estimated_cost_usd": 0.00458984,
-    "api_call_count": 11,
-    "total_tokens": 98842,
-    "by_model": {
-      "deepseek-v4-pro": {
-        "calls": 1,
-        "estimated_cost_usd": 0.0017204,
-        "total_tokens": 11426
-      },
-      "deepseek-v4-flash": {
-        "calls": 10,
-        "estimated_cost_usd": 0.00286944,
-        "total_tokens": 87416
-      }
-    },
     "snapshot_ok": true
   }
 ]
