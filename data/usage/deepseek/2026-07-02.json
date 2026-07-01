@@ -216,6 +216,126 @@
       "total_tokens_including_reasoning": 11005,
       "prompt_cache_hit_tokens": 8448,
       "prompt_cache_miss_tokens": 655
+    },
+    {
+      "time_cn": "2026-07-02 04:30:19",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 28,
+      "article_title": "Next Metroid Game for Switch 2 Reportedly Leaked in Age Rating From Brazilian Government",
+      "article_url": "https://www.ign.com/articles/next-metroid-game-for-switch-2-reportedly-leaked-in-age-rating-from-brazilian-government",
+      "article_date": "2026-07-02",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00035027,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9043,
+      "completion_tokens": 531,
+      "reasoning_tokens": 338,
+      "output_tokens_including_reasoning": 869,
+      "total_tokens": 9574,
+      "total_tokens_including_reasoning": 9912,
+      "prompt_cache_hit_tokens": 8448,
+      "prompt_cache_miss_tokens": 595
+    },
+    {
+      "time_cn": "2026-07-02 04:30:29",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 29,
+      "article_title": "Virtua Fighter Crossroads Producer Says the Game Was Inspired by HBO's Watchmen Series",
+      "article_url": "https://www.ign.com/articles/virtua-fighter-crossroads-producer-says-the-game-was-inspired-by-hbos-watchmen-series",
+      "article_date": "2026-07-02",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00043609,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9240,
+      "completion_tokens": 646,
+      "reasoning_tokens": 431,
+      "output_tokens_including_reasoning": 1077,
+      "total_tokens": 9886,
+      "total_tokens_including_reasoning": 10317,
+      "prompt_cache_hit_tokens": 8448,
+      "prompt_cache_miss_tokens": 792
+    },
+    {
+      "time_cn": "2026-07-02 04:30:43",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 30,
+      "article_title": "Avatar: The Last Airbender Showrunner Explains How the Netflix Show Adapted the Biggest Season 2 Moments From the Original Series",
+      "article_url": "https://www.ign.com/articles/avatar-the-last-airbender-season-2-showrunner-interview-christine-boylan",
+      "article_date": "2026-07-02",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00077951,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 10699,
+      "completion_tokens": 861,
+      "reasoning_tokens": 713,
+      "output_tokens_including_reasoning": 1574,
+      "total_tokens": 11560,
+      "total_tokens_including_reasoning": 12273,
+      "prompt_cache_hit_tokens": 8448,
+      "prompt_cache_miss_tokens": 2251
+    },
+    {
+      "time_cn": "2026-07-02 04:30:51",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 31,
+      "article_title": "Honeycomb's Wacky Flight Gamepad Is Coming to the Xbox",
+      "article_url": "https://www.ign.com/articles/honeycombs-wacky-flight-gamepad-is-coming-to-the-xbox",
+      "article_date": "2026-07-02",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00032213,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9204,
+      "completion_tokens": 405,
+      "reasoning_tokens": 283,
+      "output_tokens_including_reasoning": 688,
+      "total_tokens": 9609,
+      "total_tokens_including_reasoning": 9892,
+      "prompt_cache_hit_tokens": 8448,
+      "prompt_cache_miss_tokens": 756
+    },
+    {
+      "time_cn": "2026-07-02 04:31:07",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 32,
+      "article_title": "Video Game Release Dates: The Biggest Games of July 2026 and Beyond",
+      "article_url": "https://www.ign.com/articles/video-game-release-dates-ps4-ps5-xbox-one-series-x-nintendo-switch",
+      "article_date": "2026-07-02",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00072491,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 8883,
+      "completion_tokens": 1289,
+      "reasoning_tokens": 998,
+      "output_tokens_including_reasoning": 2287,
+      "total_tokens": 10172,
+      "total_tokens_including_reasoning": 11170,
+      "prompt_cache_hit_tokens": 8448,
+      "prompt_cache_miss_tokens": 435
     }
   ]
 }

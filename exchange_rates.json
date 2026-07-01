@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-02 02:18:27 +08:00",
+  "updated_at": "2026-07-02 04:30:10 +08:00",
   "source": "multi-source median",
   "base": "USD",
   "rates_to_cny": {
@@ -23,27 +23,27 @@
       },
       "EUR": {
         "source_count": 4,
-        "median_raw": 7.74783,
-        "max_cross_source_deviation": 0.001758,
-        "previous_deviation": 0.00028
+        "median_raw": 7.75063,
+        "max_cross_source_deviation": 0.002119,
+        "previous_deviation": 8.1e-05
       },
       "JPY_100": {
         "source_count": 4,
-        "median_raw": 4.183542,
-        "max_cross_source_deviation": 0.001842,
-        "previous_deviation": 0.000847
+        "median_raw": 4.179152,
+        "max_cross_source_deviation": 0.001341,
+        "previous_deviation": 0.000203
       },
       "GBP": {
         "source_count": 4,
         "median_raw": 8.999657,
-        "max_cross_source_deviation": 0.001152,
+        "max_cross_source_deviation": 0.000958,
         "previous_deviation": 3.8e-05
       },
       "KRW_100": {
         "source_count": 4,
-        "median_raw": 0.438738,
-        "max_cross_source_deviation": 0.006061,
-        "previous_deviation": 0.002868
+        "median_raw": 0.43769,
+        "max_cross_source_deviation": 0.003681,
+        "previous_deviation": 0.00525
       }
     },
     "sources": [
@@ -84,11 +84,11 @@
         "name": "currency-api-jsdelivr",
         "url": "https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/usd.json",
         "rates_to_cny": {
-          "USD": 6.79231,
-          "EUR": 7.742603,
-          "JPY_100": 4.188145,
-          "GBP": 8.989292,
-          "KRW_100": 0.438604
+          "USD": 6.794075,
+          "EUR": 7.748203,
+          "JPY_100": 4.17355,
+          "GBP": 8.991034,
+          "KRW_100": 0.436508
         }
       }
     ]
