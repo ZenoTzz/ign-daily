@@ -1992,6 +1992,78 @@
       "total_tokens_including_reasoning": 11496,
       "prompt_cache_hit_tokens": 8320,
       "prompt_cache_miss_tokens": 668
+    },
+    {
+      "time_cn": "2026-07-01 09:18:24",
+      "task": "fulltext",
+      "model": "deepseek-v4-pro",
+      "article_id": 52,
+      "article_title": "《PlayStation》前索尼高管为PC策略辩护，公司却放弃单机PC",
+      "article_url": "https://www.ign.com/articles/ex-playstation-boss-defends-pc-strategy-as-sony-pivots-away-from-multiplatform-releases",
+      "article_date": "2026-07-01",
+      "detail": "",
+      "estimated_cost_usd": 0.0045577,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 10188,
+      "completion_tokens": 2998,
+      "reasoning_tokens": 1399,
+      "output_tokens_including_reasoning": 4397,
+      "total_tokens": 13186,
+      "total_tokens_including_reasoning": 14585,
+      "prompt_cache_hit_tokens": 8576,
+      "prompt_cache_miss_tokens": 1612
+    },
+    {
+      "time_cn": "2026-07-01 09:18:45",
+      "task": "fulltext_chunk",
+      "model": "deepseek-v4-pro",
+      "article_id": 52,
+      "article_title": "《PlayStation》前索尼高管为PC策略辩护，公司却放弃单机PC",
+      "article_url": "https://www.ign.com/articles/ex-playstation-boss-defends-pc-strategy-as-sony-pivots-away-from-multiplatform-releases",
+      "article_date": "2026-07-01",
+      "detail": "paragraphs 1-6",
+      "estimated_cost_usd": 0.00332099,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 9295,
+      "completion_tokens": 1917,
+      "reasoning_tokens": 1505,
+      "output_tokens_including_reasoning": 3422,
+      "total_tokens": 11212,
+      "total_tokens_including_reasoning": 12717,
+      "prompt_cache_hit_tokens": 8576,
+      "prompt_cache_miss_tokens": 719
+    },
+    {
+      "time_cn": "2026-07-01 09:19:08",
+      "task": "fulltext_chunk",
+      "model": "deepseek-v4-pro",
+      "article_id": 52,
+      "article_title": "《PlayStation》前索尼高管为PC策略辩护，公司却放弃单机PC",
+      "article_url": "https://www.ign.com/articles/ex-playstation-boss-defends-pc-strategy-as-sony-pivots-away-from-multiplatform-releases",
+      "article_date": "2026-07-01",
+      "detail": "paragraphs 7-10",
+      "estimated_cost_usd": 0.003254,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.003625,
+        "prompt_cache_miss_tokens": 0.435,
+        "completion_tokens": 0.87
+      },
+      "prompt_tokens": 9157,
+      "completion_tokens": 1854,
+      "reasoning_tokens": 1560,
+      "output_tokens_including_reasoning": 3414,
+      "total_tokens": 11011,
+      "total_tokens_including_reasoning": 12571,
+      "prompt_cache_hit_tokens": 8576,
+      "prompt_cache_miss_tokens": 581
     }
   ]
 }

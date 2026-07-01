@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-01 09:17:21 +08:00",
+  "updated_at": "2026-07-01 09:17:50 +08:00",
   "source": "multi-source median",
   "base": "USD",
   "rates_to_cny": {
@@ -19,7 +19,7 @@
         "source_count": 4,
         "median_raw": 6.794406,
         "max_cross_source_deviation": 0.001311,
-        "previous_deviation": 0.000823
+        "previous_deviation": 0.000649
       },
       "EUR": {
         "source_count": 4,
@@ -31,7 +31,7 @@
         "source_count": 4,
         "median_raw": 4.183542,
         "max_cross_source_deviation": 0.001508,
-        "previous_deviation": 0.001541
+        "previous_deviation": 0.000847
       },
       "GBP": {
         "source_count": 4,

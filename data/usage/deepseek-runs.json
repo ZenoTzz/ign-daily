@@ -1,5 +1,60 @@
 [
   {
+    "run_id": "28486767233",
+    "workflow": "API Translation",
+    "event": "workflow_dispatch",
+    "sha": "d6988f651fc569d31ec15566d5c4d084fe73e1ca",
+    "recorded_at_cn": "2026-07-01 09:19:09",
+    "start_balance": 29.06,
+    "end_balance": 29.06,
+    "currency": "CNY",
+    "actual_platform_cost": 0.0,
+    "balance_delta_status": "pending_or_delayed",
+    "estimated_cost_usd": 0.01113269,
+    "api_call_count": 3,
+    "total_tokens": 39873,
+    "output_tokens": 11233,
+    "by_model": {
+      "deepseek-v4-pro": {
+        "calls": 3,
+        "estimated_cost_usd": 0.01113269,
+        "total_tokens": 39873,
+        "output_tokens": 11233
+      }
+    },
+    "by_task": {
+      "fulltext": {
+        "calls": 1,
+        "estimated_cost_usd": 0.0045577,
+        "total_tokens": 14585
+      },
+      "fulltext_chunk": {
+        "calls": 2,
+        "estimated_cost_usd": 0.00657499,
+        "total_tokens": 25288
+      }
+    },
+    "retry_articles": [
+      {
+        "article_id": 52,
+        "article_date": "2026-07-01",
+        "article_title": "《PlayStation》前索尼高管为PC策略辩护，公司却放弃单机PC",
+        "article_url": "https://www.ign.com/articles/ex-playstation-boss-defends-pc-strategy-as-sony-pivots-away-from-multiplatform-releases",
+        "calls": 3,
+        "estimated_cost_usd": 0.01113269,
+        "total_tokens": 39873,
+        "tasks": {
+          "fulltext": 1,
+          "fulltext_chunk": 2
+        },
+        "models": {
+          "deepseek-v4-pro": 3
+        }
+      }
+    ],
+    "snapshot_ok": true
+  },
+  {
     "run_id": "28486754934",
     "workflow": "Hourly RSS",
     "event": "workflow_dispatch",
@@ -5541,23 +5596,6 @@
         "total_tokens": 33871
       }
     },
-    "snapshot_ok": true
-  },
-  {
-    "run_id": "27660129142",
-    "workflow": "API Translation",
-    "event": "schedule",
-    "sha": "102210ef90d7d5058df8da0cfd530bac4b76ba1a",
-    "recorded_at_cn": "2026-06-17 09:43:53",
-    "start_balance": 43.08,
-    "end_balance": 43.08,
-    "currency": "CNY",
-    "actual_platform_cost": 0.0,
-    "balance_delta_status": "ok",
-    "estimated_cost_usd": 0,
-    "api_call_count": 0,
-    "total_tokens": 0,
-    "by_model": {},
     "snapshot_ok": true
   }
 ]
