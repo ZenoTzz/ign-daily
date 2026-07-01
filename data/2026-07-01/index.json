@@ -497,8 +497,8 @@
       "url": "https://www.ign.com/articles/gta-6-developers-ask-rockstar-for-union-recognition-and-theyre-prepared-to-go-to-the-uk-government-if-necessary",
       "publish_time_cn": "2026-07-01 01:58",
       "pub_date": "2026-07-01 01:58",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/06/30/screenshot-2026-06-30-185712-1782842269571.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/30/screenshot-2026-06-30-185712-1782842269571.png",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/30/screenshot-2026-06-30-185712-1782842269571.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/30/screenshot-2026-06-30-185712-1782842269571.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -507,7 +507,11 @@
         "https://assets-prd.ignimgs.com/2026/06/30/screenshot-2026-06-30-185712-1782842269571.png"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-07-01T03:25:16+08:00"
+      "source_fetched_at": "2026-07-01T03:25:16+08:00",
+      "translation_path": "translations/28.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro"
     },
     {
       "id": 29,
@@ -542,8 +546,8 @@
       "url": "https://www.ign.com/articles/007-first-light-hitman-developer-io-interactive-announces-layoffs-after-relationship-with-an-external-partner-on-fantasy-project-ends",
       "publish_time_cn": "2026-07-01 01:51",
       "pub_date": "2026-07-01 01:51",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/06/30/project-fantasy-1782841195525.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/30/project-fantasy-1782841195525.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/30/project-fantasy-1782841195525.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/30/project-fantasy-1782841195525.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -552,7 +556,11 @@
         "https://assets-prd.ignimgs.com/2026/06/30/project-fantasy-1782841195525.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-07-01T03:25:17+08:00"
+      "source_fetched_at": "2026-07-01T03:25:17+08:00",
+      "translation_path": "translations/30.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro"
     },
     {
       "id": 31,
@@ -591,12 +599,12 @@
       "emoji": "🎮",
       "en_title": "Microsoft Reportedly Considering Canceling Marvel's Blade and Shutting Arkane Down",
       "cn_title": "微软据称考虑取消《Marvel's Blade》并关闭Arkane",
-      "summary": "微软据称正考虑取消《Marvel's Blade》项目，并关闭其开发商Arkane工作室。原定2026年底发售的《Marvel's Blade》已内部延期至2027年底且预算超支，致使Arkane成为XBOX考虑关闭的五家工作室之一。此外，《意航员》《午夜之南》等开发商也面临被出售或关闭的风险。IGN已向微软和漫威游戏寻求置评，尚未收到回应。",
+      "summary": "微软据称正考虑取消《Marvel's Blade》并关闭Arkane。该作内部延期至2027年底且超支。Arkane或被出售，多家XBOX工作室面临关闭或分拆。",
       "url": "https://www.ign.com/articles/microsoft-reportedly-considering-canceling-marvels-blade-and-shutting-arkane-down",
       "publish_time_cn": "2026-07-01 01:10",
       "pub_date": "2026-07-01 01:10",
       "cover_image": "https://assets-prd.ignimgs.com/2026/06/22/marvels-blade-game-1782147140341.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/22/marvels-blade-game-1782147140341.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/22/marvels-blade-game-1782147140341.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -614,7 +622,13 @@
           "source": "ai_guess",
           "reason": "官方中文译名未确认"
         }
-      ]
+      ],
+      "translation_error": "[dictionary] source contains 'Bethesda', but required dictionary translation 'B社/贝塞斯达' is missing",
+      "translation_failed_at": "2026-07-01T08:24:48.958239+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro",
+      "translation_path": "translations/24.json"
     },
     {
       "id": 25,
@@ -787,7 +801,7 @@
       "publish_time_cn": "2026-07-01 00:03",
       "pub_date": "2026-07-01 00:03",
       "cover_image": "https://assets-prd.ignimgs.com/2026/06/30/the-elder-scrolls-iv-oblivion-remastered-nintendo-switch-2-date-reveal-00-00-18-1782834895296.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/30/the-elder-scrolls-iv-oblivion-remastered-nintendo-switch-2-date-reveal-00-00-18-1782834895296.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/30/818cnqkh4hl-sl1500-1782835930002.jpg",
@@ -800,7 +814,11 @@
         "https://assets-prd.ignimgs.com/2024/05/02/elder-scrolls-skyrim-button-2017-1629409446732-1714671148445.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-07-01T01:30:49+08:00"
+      "source_fetched_at": "2026-07-01T01:30:49+08:00",
+      "translation_path": "translations/21.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro"
     },
     {
       "id": 22,
@@ -1004,13 +1022,13 @@
       "category": "游戏新闻",
       "emoji": "🕹️",
       "en_title": "An Updated Nintendo Switch 2 Screen Has Reportedly Surfaced Online as Fans Hope for Ghosting Issue Fix — But This Isn't the OLED Upgrade We've Been Waiting For",
-      "cn_title": "《任天堂》Nintendo Switch 2屏幕更新曝光 非OLED但或改善残影",
-      "summary": "据网络曝光的图片显示，任天堂可能正在为Switch 2更新屏幕，新面板由夏普制造，尺寸和分辨率不变，仍为7.9英寸1080p LCD，但有望改善部分玩家反馈的残影问题。这并非玩家期待的OLED升级。目前尚不清楚何时上市，任天堂也未官宣。Switch 2上市首年已成为美国史上第二畅销硬件。",
+      "cn_title": "《任天堂》《Nintendo Switch 2》Switch 2新屏曝光，有望解决残影问题",
+      "summary": "任天堂或为Switch 2换装夏普新LCD，7.9英寸1080p规格不变，旨在改善残影问题，并非OLED。上市时间未定。该主机首年已成美国史上第二畅销硬件，且为任天堂全球最快售出硬件。",
       "url": "https://www.ign.com/articles/an-updated-nintendo-switch-2-screen-has-reportedly-surfaced-online-as-fans-hope-for-ghosting-issue-fix-but-this-isnt-the-oled-upgrade-weve-been-waiting-for",
       "publish_time_cn": "2026-06-30 22:21",
       "pub_date": "2026-06-30 22:21",
       "cover_image": "https://assets-prd.ignimgs.com/2026/05/06/nintendo-switch-2-system-and-accessories-gallery-982b-1778079086668.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2026/05/06/nintendo-switch-2-system-and-accessories-gallery-982b-1778079086668.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/05/06/nintendo-switch-2-system-and-accessories-gallery-982b-1778079086668.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -1042,7 +1060,13 @@
           "source": "ai_guess",
           "reason": "社交媒体平台，无官方中文名，保留原文。"
         }
-      ]
+      ],
+      "translation_error": "🚨 subtitle 含逗号且偏长，太像句子: 「并非OLED，但或许更清晰」",
+      "translation_failed_at": "2026-07-01T08:20:51.146185+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro",
+      "translation_path": "translations/11.json"
     },
     {
       "id": 12,
@@ -1294,7 +1318,7 @@
       "publish_time_cn": "2026-06-30 18:55",
       "pub_date": "2026-06-30 18:55",
       "cover_image": "https://assets-prd.ignimgs.com/2026/06/30/gettyimages-2234060170-1782816512795.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/30/gettyimages-2234060170-1782816512795.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/30/gettyimages-2234060170-1782816512795.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -1303,7 +1327,11 @@
         "https://assets-prd.ignimgs.com/2026/06/30/gettyimages-2234060170-1782816512795.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-06-30T20:32:21+08:00"
+      "source_fetched_at": "2026-06-30T20:32:21+08:00",
+      "translation_path": "translations/08.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro"
     },
     {
       "id": 35,
@@ -1345,7 +1373,7 @@
       "publish_time_cn": "2026-06-30 18:31",
       "pub_date": "2026-06-30 18:31",
       "cover_image": "https://assets-prd.ignimgs.com/2023/12/22/baldursgatesettingsing-1703240574230.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2023/12/22/baldursgatesettingsing-1703240574230.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2023/12/22/baldursgatesettingsing-1703240574230.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -1387,7 +1415,11 @@
           "source": "ai_guess",
           "reason": "无稳定中文译名，保留原文"
         }
-      ]
+      ],
+      "translation_path": "translations/09.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro"
     },
     {
       "id": 5,
@@ -1429,7 +1461,7 @@
       "publish_time_cn": "2026-06-30 17:45",
       "pub_date": "2026-06-30 17:45",
       "cover_image": "https://assets-prd.ignimgs.com/2026/06/30/leon-kennedy-resident-evil-9-1782811207025.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/30/leon-kennedy-resident-evil-9-1782811207025.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/30/leon-kennedy-resident-evil-9-1782811207025.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -1447,7 +1479,11 @@
           "source": "ai_guess",
           "reason": "词库中无此条目，根据系列惯用译名建议。"
         }
-      ]
+      ],
+      "translation_path": "translations/04.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro"
     },
     {
       "id": 1,
@@ -1460,7 +1496,7 @@
       "publish_time_cn": "2026-06-30 17:06",
       "pub_date": "2026-06-30 17:06",
       "cover_image": "https://assets-prd.ignimgs.com/2026/06/30/ss-654f0ab4ae45d9237a35dd66adb476ed33939825-1920x1080-1782809947660.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/30/ss-654f0ab4ae45d9237a35dd66adb476ed33939825-1920x1080-1782809947660.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/30/ss-654f0ab4ae45d9237a35dd66adb476ed33939825-1920x1080-1782809947660.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -1499,7 +1535,12 @@
           "source": "ai_guess",
           "reason": "无中文译名，保留英文"
         }
-      ]
+      ],
+      "translation_error": "model returned empty paragraphs",
+      "translation_failed_at": "2026-07-01T08:14:19.560582+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "deepseek-v4-pro"
     },
     {
       "id": 2,
