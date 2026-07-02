@@ -168,6 +168,30 @@
       "total_tokens_including_reasoning": 11170,
       "prompt_cache_hit_tokens": 10496,
       "prompt_cache_miss_tokens": 24
+    },
+    {
+      "time_cn": "2026-07-03 04:09:39",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 15,
+      "article_title": "Hellraiser: Revival Is a Horror-Action Game That Borrows from Resident Evil and P.T. | IGN Preview",
+      "article_url": "https://www.ign.com/articles/hellraiser-revival-preview-horror-action-resident-evil-pt",
+      "article_date": "2026-07-03",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00121416,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 11166,
+      "completion_tokens": 1888,
+      "reasoning_tokens": 1632,
+      "output_tokens_including_reasoning": 3520,
+      "total_tokens": 13054,
+      "total_tokens_including_reasoning": 14686,
+      "prompt_cache_hit_tokens": 9728,
+      "prompt_cache_miss_tokens": 1438
     }
   ]
 }

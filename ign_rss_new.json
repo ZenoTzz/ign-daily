@@ -7,109 +7,85 @@
   "changed_dates": [
     "2026-07-03"
   ],
-  "new_target_dates": [],
-  "new_count": 0,
-  "filtered_count": 4,
+  "new_target_dates": [
+    "2026-07-03"
+  ],
+  "new_count": 1,
+  "filtered_count": 2,
   "cleanup_count": 0,
-  "changed_count": 4,
-  "articles": [],
+  "changed_count": 3,
+  "articles": [
+    {
+      "title": "Hellraiser: Revival Is a Horror-Action Game That Borrows from Resident Evil and P.T. | IGN Preview",
+      "url": "https://www.ign.com/articles/hellraiser-revival-preview-horror-action-resident-evil-pt",
+      "pubDate_cst": "2026-07-03 03:44",
+      "category": "游戏新闻",
+      "emoji": "🎮",
+      "source_type": "rss"
+    }
+  ],
   "filtered_articles": [
     {
-      "title": "Get the Alienware Aurora RTX 5070 Gaming PC for $1,437 at Dell Outlet Before It Goes Out of Stock",
-      "url": "https://www.ign.com/articles/alienware-aurora-rtx-5070-gaming-pc-deal-at-dell-outlet-updated",
-      "pubDate_cst": "2026-07-03 01:25",
-      "description": "Excellent1080p and 1440p gaming rig.",
+      "title": "The Coslus C20 Cordless Rechargeable Water Flosser Drops 83% to Just $6.99",
+      "url": "https://www.ign.com/articles/coslus-c20-cordless-rechargeable-water-flosser-deal",
+      "pubDate_cst": "2026-07-03 02:40",
+      "description": "Even gamers should practice good oral hygiene.",
       "categories": "",
       "reason": "url:deal",
       "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
-      "filtered_at_cn": "2026-07-03 02:20:19",
+      "filtered_at_cn": "2026-07-03 04:09:11",
       "status": "filtered"
     },
     {
-      "title": "Amazon's Audible Prime Day Deal Ends on July 5: Pay Just $1 Per Month and Get $20 in Audible Credit",
-      "url": "https://www.ign.com/articles/amazon-prime-day-audible-deal-for-june-2026",
-      "pubDate_cst": "2026-07-03 01:10",
-      "description": "Catch up on the latest audiobooks from Rebecca Yarros, Brandon Sanderson, Suzanne Collins, and more.",
+      "title": "Walmart Has the Lowest Price on a GeForce RTX 5070 Prebuilt Gaming PC in 2026",
+      "url": "https://www.ign.com/articles/walmart-has-the-lowest-price-on-a-geforce-rtx-5070-prebuilt-gaming-pc-in-2026",
+      "pubDate_cst": "2026-07-03 02:30",
+      "description": "The CyberPowerPC Gamer Xtreme even has the new 2026 Intel Arrow Lake Refresh CPU.",
       "categories": "",
-      "reason": "text:\\bprime.day\\b",
+      "reason": "text:\\blowest price\\b",
       "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
-      "filtered_at_cn": "2026-07-03 02:20:19",
-      "status": "filtered"
-    },
-    {
-      "title": "Save $300 Off the New Apple iPad Pro 13\" M5 (Even Cheaper Than the MSRP Before Apple Raised Prices)",
-      "url": "https://www.ign.com/articles/save-300-off-the-new-apple-ipad-pro-13-m5-even-cheaper-than-the-msrp-before-apple-raised-prices",
-      "pubDate_cst": "2026-07-03 01:05",
-      "description": "The most powerful tablet.",
-      "categories": "",
-      "reason": "text:\\bsave \\$\\d",
-      "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
-      "filtered_at_cn": "2026-07-03 02:20:19",
-      "status": "filtered"
-    },
-    {
-      "title": "Today’s Top Deals: Invincible Omnibus, LEGO Botanicals, and Death Stranding 2 for PC",
-      "url": "https://www.ign.com/articles/best-deals-for-july-2-2026",
-      "pubDate_cst": "2026-07-03 01:45",
-      "description": "And don’t miss discounts on a Dreame bladeless fan, Final Fantasy VII Remake Intergrade, and more.",
-      "categories": "",
-      "reason": "url:deal",
-      "rss_url": "https://www.ign.com/rss/v2/articles/feed?vertical=movies&start=0&count=20",
-      "filtered_at_cn": "2026-07-03 02:20:19",
+      "filtered_at_cn": "2026-07-03 04:09:11",
       "status": "filtered"
     }
   ],
   "runs": [
     {
       "target_date": "2026-07-03",
-      "new_count": 0,
-      "filtered_count": 4,
-      "changed_count": 4,
-      "next_id": 15,
-      "articles": [],
+      "new_count": 1,
+      "filtered_count": 2,
+      "changed_count": 3,
+      "next_id": 16,
+      "articles": [
+        {
+          "title": "Hellraiser: Revival Is a Horror-Action Game That Borrows from Resident Evil and P.T. | IGN Preview",
+          "url": "https://www.ign.com/articles/hellraiser-revival-preview-horror-action-resident-evil-pt",
+          "pubDate_cst": "2026-07-03 03:44",
+          "category": "游戏新闻",
+          "emoji": "🎮",
+          "source_type": "rss"
+        }
+      ],
       "filtered_articles": [
         {
-          "title": "Get the Alienware Aurora RTX 5070 Gaming PC for $1,437 at Dell Outlet Before It Goes Out of Stock",
-          "url": "https://www.ign.com/articles/alienware-aurora-rtx-5070-gaming-pc-deal-at-dell-outlet-updated",
-          "pubDate_cst": "2026-07-03 01:25",
-          "description": "Excellent1080p and 1440p gaming rig.",
+          "title": "The Coslus C20 Cordless Rechargeable Water Flosser Drops 83% to Just $6.99",
+          "url": "https://www.ign.com/articles/coslus-c20-cordless-rechargeable-water-flosser-deal",
+          "pubDate_cst": "2026-07-03 02:40",
+          "description": "Even gamers should practice good oral hygiene.",
           "categories": "",
           "reason": "url:deal",
           "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
-          "filtered_at_cn": "2026-07-03 02:20:19",
+          "filtered_at_cn": "2026-07-03 04:09:11",
           "status": "filtered"
         },
         {
-          "title": "Amazon's Audible Prime Day Deal Ends on July 5: Pay Just $1 Per Month and Get $20 in Audible Credit",
-          "url": "https://www.ign.com/articles/amazon-prime-day-audible-deal-for-june-2026",
-          "pubDate_cst": "2026-07-03 01:10",
-          "description": "Catch up on the latest audiobooks from Rebecca Yarros, Brandon Sanderson, Suzanne Collins, and more.",
+          "title": "Walmart Has the Lowest Price on a GeForce RTX 5070 Prebuilt Gaming PC in 2026",
+          "url": "https://www.ign.com/articles/walmart-has-the-lowest-price-on-a-geforce-rtx-5070-prebuilt-gaming-pc-in-2026",
+          "pubDate_cst": "2026-07-03 02:30",
+          "description": "The CyberPowerPC Gamer Xtreme even has the new 2026 Intel Arrow Lake Refresh CPU.",
           "categories": "",
-          "reason": "text:\\bprime.day\\b",
+          "reason": "text:\\blowest price\\b",
           "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
-          "filtered_at_cn": "2026-07-03 02:20:19",
-          "status": "filtered"
-        },
-        {
-          "title": "Save $300 Off the New Apple iPad Pro 13\" M5 (Even Cheaper Than the MSRP Before Apple Raised Prices)",
-          "url": "https://www.ign.com/articles/save-300-off-the-new-apple-ipad-pro-13-m5-even-cheaper-than-the-msrp-before-apple-raised-prices",
-          "pubDate_cst": "2026-07-03 01:05",
-          "description": "The most powerful tablet.",
-          "categories": "",
-          "reason": "text:\\bsave \\$\\d",
-          "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
-          "filtered_at_cn": "2026-07-03 02:20:19",
-          "status": "filtered"
-        },
-        {
-          "title": "Today’s Top Deals: Invincible Omnibus, LEGO Botanicals, and Death Stranding 2 for PC",
-          "url": "https://www.ign.com/articles/best-deals-for-july-2-2026",
-          "pubDate_cst": "2026-07-03 01:45",
-          "description": "And don’t miss discounts on a Dreame bladeless fan, Final Fantasy VII Remake Intergrade, and more.",
-          "categories": "",
-          "reason": "url:deal",
-          "rss_url": "https://www.ign.com/rss/v2/articles/feed?vertical=movies&start=0&count=20",
-          "filtered_at_cn": "2026-07-03 02:20:19",
+          "filtered_at_cn": "2026-07-03 04:09:11",
           "status": "filtered"
         }
       ]
