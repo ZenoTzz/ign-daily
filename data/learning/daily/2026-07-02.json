@@ -1,0 +1,109 @@
+{
+  "date": "2026-07-02",
+  "observer": "codex",
+  "model": "codex",
+  "status": "observed",
+  "signals": [],
+  "candidates": [
+    {
+      "id": "dict_candidate_collector_leviathan_9e1f8b89cd6b",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：Collector Leviathan → Collector Leviathan",
+      "rule": "建议将「Collector Leviathan」加入词库，译为「Collector Leviathan」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-07-02",
+          "article_id": 16,
+          "before": "Collector Leviathan",
+          "after": "Collector Leviathan",
+          "evidence": "来自文章页未确认新词候选。"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id": "dict_candidate_metroid_ravenous_f5c28d782e5a",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：Metroid Ravenous → Metroid Ravenous",
+      "rule": "建议将「Metroid Ravenous」加入词库，译为「Metroid Ravenous」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-07-02",
+          "article_id": 28,
+          "before": "Metroid Ravenous",
+          "after": "Metroid Ravenous",
+          "evidence": "来自文章页未确认新词候选。"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id": "dict_candidate_raven_beak_6de7a945e549",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：Raven Beak → Raven Beak",
+      "rule": "建议将「Raven Beak」加入词库，译为「Raven Beak」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-07-02",
+          "article_id": 28,
+          "before": "Raven Beak",
+          "after": "Raven Beak",
+          "evidence": "来自文章页未确认新词候选。"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id": "dict_candidate_18_bravo_7beb607dcd7e",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：//18.bravo → //18.bravo",
+      "rule": "建议将「//18.bravo」加入词库，译为「//18.bravo」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-07-02",
+          "article_id": 33,
+          "before": "//18.bravo",
+          "after": "//18.bravo",
+          "evidence": "来自文章页未确认新词候选。"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id": "dict_candidate_lost_in_cult_49f3a2914d22",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：Lost in Cult → Lost in Cult",
+      "rule": "建议将「Lost in Cult」加入词库，译为「Lost in Cult」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-07-02",
+          "article_id": 36,
+          "before": "Lost in Cult",
+          "after": "Lost in Cult",
+          "evidence": "来自文章页未确认新词候选。"
+        }
+      ],
+      "contradiction": ""
+    }
+  ],
+  "notes": [
+    "Added source+polished dictionary candidates for GPT/Tencent workflow."
+  ],
+  "candidate_count": 5,
+  "updated_at": "2026-07-02T22:36:47+08:00"
+}
