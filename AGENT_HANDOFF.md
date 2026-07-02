@@ -29,7 +29,7 @@
 
 完成正文翻译并推送后，需要同步到 `data/google-polish-config.json` 指向的
 Google Doc。同步是把译文写入 Google Docs；导入是夜间学习把用户润色后的
-Google Docs 内容读回 `data/{date}/polished/`。不要混淆这两个方向。
+Google Docs 内容读回 `data/{date}/polished/`。不要混淆这两个方向。注意：`sync_google_ign_doc.py` 中正文段落目前硬编码设置了 `spaceAbove/spaceBelow = 12pt`，后续应根据用户手排格式要求进行对比核对与调整。
 
 多人协作时，先看 `docs/AGENT_COLLABORATION.md` 和
 `data/agent-worklog.jsonl`。不要回滚不属于自己的本地或远端新内容。

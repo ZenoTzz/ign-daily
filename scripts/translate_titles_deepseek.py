@@ -341,6 +341,7 @@ def normalize_result(result: dict[str, Any]) -> dict[str, Any]:
         "category": category,
         "emoji": emoji,
         "pending_dict": pending,
+        "style_self_check": result.get("style_self_check"),
     })
 
 

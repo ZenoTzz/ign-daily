@@ -523,6 +523,7 @@ def normalize_translation(article: dict[str, Any], result: dict[str, Any], parag
         "translated_terms": result.get("translated_terms") if isinstance(result.get("translated_terms"), dict) else {},
         "cover": str(result.get("cover") or article.get("cover_image") or "").strip(),
         "images": result.get("images") if isinstance(result.get("images"), list) else [],
+        "style_self_check": result.get("style_self_check"),
     }))))
 
 
@@ -700,6 +701,7 @@ def translate_date(date: str, limit: int = 2) -> int:
         text = ""
         data: dict[str, Any] | None = None
         audit_issues: list[dict[str, str]] = []
+        require_self_check = True
         try:
             set_article_step(article_id, date=date, step="source", progress=12, message="抓取正文与缓存")
             text = source_text(source) or fetch_article_text(article["url"])
@@ -726,6 +728,7 @@ def translate_date(date: str, limit: int = 2) -> int:
             except Exception as exc:
                 print(f"[RETRY] fulltext #{article['id']} returned invalid JSON: {exc}; falling back to paragraph chunks")
                 set_article_step(article_id, date=date, step="model", progress=50, message="分段重试翻译")
+                require_self_check = False
                 result = {
                     "cn_title": article.get("cn_title") or article.get("en_title") or "",
                     "subtitle": article.get("subtitle") or "",
@@ -741,6 +744,7 @@ def translate_date(date: str, limit: int = 2) -> int:
             except ValueError as exc:
                 print(f"[RETRY] fulltext #{article['id']} paragraph format issue: {exc}")
                 set_article_step(article_id, date=date, step="model", progress=58, message="段落格式修复")
+                require_self_check = False
                 data = normalize_translation(article, {**result, "paragraphs": translate_paragraph_chunks(api_key, model, base_url, article, paragraphs_en, terms, article_date=date)}, paragraphs_en)
             data = enforce_literal_dictionary_terms(data, paragraphs_en, terms)
             data["opus_summary"] = trim_summary_to_limit(data.get("opus_summary", ""))
@@ -755,6 +759,7 @@ def translate_date(date: str, limit: int = 2) -> int:
             set_article_step(article_id, date=date, step="audit", progress=76, message="质量检查")
             audit_issues = check_translation(article=article, paragraphs_en=paragraphs_en, data=data, required_terms=terms)
             if audit_issues and os.environ.get("TRANSLATOR_FULLTEXT_REPAIR", "1") != "0":
+                require_self_check = False
                 set_article_step(article_id, date=date, step="repair", progress=84, message="修复质检问题")
                 summary_only = all(issue.get("type") == "summary_length" for issue in audit_issues)
                 if summary_only:
@@ -801,8 +806,9 @@ def translate_date(date: str, limit: int = 2) -> int:
                         details=details,
                         draft=data,
                     )
+                    continue
             # Validation of style self-check and local checks
-            validation_errors = validate_style_check(data, article, is_fulltext=True)
+            validation_errors = validate_style_check(data, article, is_fulltext=True, require_self_check=require_self_check)
             if validation_errors:
                 details = "; ".join(validation_errors)
                 print(f"[REJECT] #{article_id} style check failed: {details}")

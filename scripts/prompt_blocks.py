@@ -295,32 +295,33 @@ def nightly_user_payload(date: str, current_profile: str, samples: list[dict[str
     }
 
 
-def validate_style_check(result: dict[str, Any], article: dict[str, Any], is_fulltext: bool = True) -> list[str]:
+def validate_style_check(result: dict[str, Any], article: dict[str, Any], is_fulltext: bool = True, require_self_check: bool = True) -> list[str]:
     import re
     errors = []
     
     # 1. style_self_check validation
-    self_check = result.get("style_self_check")
-    if not self_check:
-        errors.append("style_self_check field is missing")
-    elif not isinstance(self_check, dict):
-        errors.append("style_self_check must be a JSON object")
-    else:
-        required_keys = [
-            "read_style_profile",
-            "no_english_syntax",
-            "title_rewritten",
-            "subtitle_rewritten",
-            "xbox_normalized",
-            "xbox_series_normalized",
-            "quotes_checked",
-            "currency_checked",
-            "dictionary_checked"
-        ]
-        for key in required_keys:
-            val = self_check.get(key)
-            if val is not True:
-                errors.append(f"style_self_check key '{key}' is not true (got {val})")
+    if require_self_check:
+        self_check = result.get("style_self_check")
+        if not self_check:
+            errors.append("style_self_check field is missing")
+        elif not isinstance(self_check, dict):
+            errors.append("style_self_check must be a JSON object")
+        else:
+            required_keys = [
+                "read_style_profile",
+                "no_english_syntax",
+                "title_rewritten",
+                "subtitle_rewritten",
+                "xbox_normalized",
+                "xbox_series_normalized",
+                "quotes_checked",
+                "currency_checked",
+                "dictionary_checked"
+            ]
+            for key in required_keys:
+                val = self_check.get(key)
+                if val is not True:
+                    errors.append(f"style_self_check key '{key}' is not true (got {val})")
 
     # 2. Local hard-checks
     cn_title = str(result.get("cn_title") or "").strip()
