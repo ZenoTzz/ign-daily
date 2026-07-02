@@ -4,133 +4,23 @@
     "2026-07-03",
     "2026-07-02"
   ],
-  "changed_dates": [
-    "2026-07-03"
-  ],
-  "new_target_dates": [
-    "2026-07-03"
-  ],
-  "new_count": 5,
-  "filtered_count": 1,
-  "cleanup_count": 1,
-  "changed_count": 7,
-  "articles": [
-    {
-      "title": "Crossfire Is Being Built by One of Gaming’s Best Design Duos",
-      "url": "https://www.ign.com/articles/crossfire-is-being-built-by-one-of-gamings-best-design-duos",
-      "pubDate_cst": "2026-07-02 23:15",
-      "category": "游戏新闻",
-      "emoji": "🎮",
-      "source_type": "rss"
-    },
-    {
-      "title": "College Football 27 Review So Far",
-      "url": "https://www.ign.com/articles/college-football-27-review",
-      "pubDate_cst": "2026-07-02 23:00",
-      "category": "游戏评测",
-      "emoji": "⭐",
-      "source_type": "rss"
-    },
-    {
-      "title": "The Most OP Players in Football Game History",
-      "url": "https://www.ign.com/articles/the-most-op-players-in-football-game-history",
-      "pubDate_cst": "2026-07-02 22:30",
-      "category": "游戏新闻",
-      "emoji": "🎮",
-      "source_type": "rss"
-    },
-    {
-      "title": "Final Fantasy 7 Revelation Getting Story Expansion Pass, Store Leak Suggests",
-      "url": "https://www.ign.com/articles/final-fantasy-7-revelation-getting-story-expansion-pass-store-leak-suggests",
-      "pubDate_cst": "2026-07-02 22:17",
-      "category": "游戏新闻",
-      "emoji": "🎮",
-      "source_type": "rss"
-    },
-    {
-      "title": "Pokémon TCG: Chaos Rising Sealed Boosters Are Back in Stock at Amazon",
-      "url": "https://www.ign.com/articles/pokemon-tcg-chaos-rising-sealed-boosters-are-back-in-stock-at-amazon",
-      "pubDate_cst": "2026-07-03 00:00",
-      "category": "游戏新闻",
-      "emoji": "🎮",
-      "source_type": "rss"
-    }
-  ],
-  "filtered_articles": [
-    {
-      "title": "Amazon Has Knocked the LEGO Marvel Spider-Man vs. Oscorp Set Down to a New Low Price",
-      "url": "https://www.ign.com/articles/amazon-has-knocked-the-lego-marvel-spider-man-vs-oscorp-set-down-to-a-new-low-price",
-      "pubDate_cst": "2026-07-02 22:10",
-      "description": "Amazon has slashed the price of the LEGO Marvel Spider-Man vs. Oscorp set from $139.95 to $95.99. The full discount can be seen at checkout.",
-      "categories": "",
-      "reason": "text:\\bdiscount\\b",
-      "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
-      "filtered_at_cn": "2026-07-03 00:24:11",
-      "status": "filtered"
-    }
-  ],
+  "changed_dates": [],
+  "new_target_dates": [],
+  "new_count": 0,
+  "filtered_count": 0,
+  "cleanup_count": 0,
+  "changed_count": 0,
+  "articles": [],
+  "filtered_articles": [],
   "runs": [
     {
       "target_date": "2026-07-03",
-      "new_count": 5,
-      "filtered_count": 1,
-      "changed_count": 6,
+      "new_count": 0,
+      "filtered_count": 0,
+      "changed_count": 0,
       "next_id": 15,
-      "articles": [
-        {
-          "title": "Crossfire Is Being Built by One of Gaming’s Best Design Duos",
-          "url": "https://www.ign.com/articles/crossfire-is-being-built-by-one-of-gamings-best-design-duos",
-          "pubDate_cst": "2026-07-02 23:15",
-          "category": "游戏新闻",
-          "emoji": "🎮",
-          "source_type": "rss"
-        },
-        {
-          "title": "College Football 27 Review So Far",
-          "url": "https://www.ign.com/articles/college-football-27-review",
-          "pubDate_cst": "2026-07-02 23:00",
-          "category": "游戏评测",
-          "emoji": "⭐",
-          "source_type": "rss"
-        },
-        {
-          "title": "The Most OP Players in Football Game History",
-          "url": "https://www.ign.com/articles/the-most-op-players-in-football-game-history",
-          "pubDate_cst": "2026-07-02 22:30",
-          "category": "游戏新闻",
-          "emoji": "🎮",
-          "source_type": "rss"
-        },
-        {
-          "title": "Final Fantasy 7 Revelation Getting Story Expansion Pass, Store Leak Suggests",
-          "url": "https://www.ign.com/articles/final-fantasy-7-revelation-getting-story-expansion-pass-store-leak-suggests",
-          "pubDate_cst": "2026-07-02 22:17",
-          "category": "游戏新闻",
-          "emoji": "🎮",
-          "source_type": "rss"
-        },
-        {
-          "title": "Pokémon TCG: Chaos Rising Sealed Boosters Are Back in Stock at Amazon",
-          "url": "https://www.ign.com/articles/pokemon-tcg-chaos-rising-sealed-boosters-are-back-in-stock-at-amazon",
-          "pubDate_cst": "2026-07-03 00:00",
-          "category": "游戏新闻",
-          "emoji": "🎮",
-          "source_type": "rss"
-        }
-      ],
-      "filtered_articles": [
-        {
-          "title": "Amazon Has Knocked the LEGO Marvel Spider-Man vs. Oscorp Set Down to a New Low Price",
-          "url": "https://www.ign.com/articles/amazon-has-knocked-the-lego-marvel-spider-man-vs-oscorp-set-down-to-a-new-low-price",
-          "pubDate_cst": "2026-07-02 22:10",
-          "description": "Amazon has slashed the price of the LEGO Marvel Spider-Man vs. Oscorp set from $139.95 to $95.99. The full discount can be seen at checkout.",
-          "categories": "",
-          "reason": "text:\\bdiscount\\b",
-          "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
-          "filtered_at_cn": "2026-07-03 00:24:11",
-          "status": "filtered"
-        }
-      ]
+      "articles": [],
+      "filtered_articles": []
     },
     {
       "target_date": "2026-07-02",

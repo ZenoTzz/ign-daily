@@ -120,6 +120,54 @@
       "total_tokens_including_reasoning": 13422,
       "prompt_cache_hit_tokens": 9728,
       "prompt_cache_miss_tokens": 792
+    },
+    {
+      "time_cn": "2026-07-03 00:29:39",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 11,
+      "article_title": "College Football 27 Review So Far",
+      "article_url": "https://www.ign.com/articles/college-football-27-review",
+      "article_date": "2026-07-03",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00023306,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 11140,
+      "completion_tokens": 469,
+      "reasoning_tokens": 250,
+      "output_tokens_including_reasoning": 719,
+      "total_tokens": 11609,
+      "total_tokens_including_reasoning": 11859,
+      "prompt_cache_hit_tokens": 11136,
+      "prompt_cache_miss_tokens": 4
+    },
+    {
+      "time_cn": "2026-07-03 00:29:47",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 14,
+      "article_title": "Pokémon TCG: Chaos Rising Sealed Boosters Are Back in Stock at Amazon",
+      "article_url": "https://www.ign.com/articles/pokemon-tcg-chaos-rising-sealed-boosters-are-back-in-stock-at-amazon",
+      "article_date": "2026-07-03",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00021475,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 10520,
+      "completion_tokens": 440,
+      "reasoning_tokens": 210,
+      "output_tokens_including_reasoning": 650,
+      "total_tokens": 10960,
+      "total_tokens_including_reasoning": 11170,
+      "prompt_cache_hit_tokens": 10496,
+      "prompt_cache_miss_tokens": 24
     }
   ]
 }
