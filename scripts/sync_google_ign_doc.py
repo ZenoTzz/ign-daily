@@ -618,6 +618,320 @@ def verify_tab(service: Any, tab_id: str, expected_prefix: str) -> int:
     raise RuntimeError(f"Tab not found during verification: {tab_id}")
 
 
+def sync_incremental(service: Any, target_date: str, *, dry_run: bool = False) -> None:
+    # 1. Load config
+    from common_paths import DATA_DIR
+    config_path = DATA_DIR / "google-polish-config.json"
+    config = {}
+    if config_path.exists():
+        try:
+            config = json.loads(config_path.read_text(encoding="utf-8"))
+        except Exception:
+            pass
+
+    global DOC_ID
+    doc_id = config.get("document_id", DOC_ID)
+    DOC_ID = doc_id
+
+    # Target month
+    # E.g. target_date = "2026-07-02" -> month is "2026-07"
+    month = target_date[:7]
+
+    # Resolve tab title
+    tab_title = None
+    for tab_cfg in config.get("tabs", []):
+        if tab_cfg.get("month") == month:
+            tab_title = tab_cfg.get("title")
+            break
+
+    # Fallback to MONTHS tab_title if not in config
+    if not tab_title:
+        tab_title = MONTHS.get(month, {}).get("tab_title")
+
+    if not tab_title:
+        raise ValueError(f"No Google Doc tab title configured for month {month}")
+
+    print(f"[*] Incremental sync for {target_date} into tab '{tab_title}'")
+
+    # 2. Find translations on target_date
+    translations_dir = DATA_DIR / target_date / "translations"
+    if not translations_dir.exists():
+        print(f"[WARN] No translations directory found for {target_date}")
+        return
+
+    translation_files = list(translations_dir.glob("*.json"))
+    if not translation_files:
+        print(f"[WARN] No translation files found in {translations_dir}")
+        return
+
+    # Load translation details
+    articles = []
+    for filepath in translation_files:
+        try:
+            data = json.loads(filepath.read_text(encoding="utf-8"))
+            articles.append(data)
+        except Exception as e:
+            print(f"[ERR] Failed to load {filepath}: {e}")
+
+    if not articles:
+        print("[*] No valid articles found to sync.")
+        return
+
+    # Sort articles by publish_time_cn ascending
+    # (oldest first so prepending puts the newest at the top)
+    def get_pub_time(a):
+        return a.get("publish_time_cn") or ""
+    articles.sort(key=get_pub_time)
+
+    # Get current Google Doc content to check for duplicates
+    document = get_document(service)
+    tab_id, last_end = resolve_tab(document, tab_title)
+    content = tab_content(document, tab_id)
+
+    # Extract existing titles to avoid duplication
+    existing_titles = set()
+    for item in content:
+        para = item.get("paragraph")
+        if para:
+            text = "".join(
+                el.get("textRun", {}).get("content", "")
+                for el in para.get("elements", [])
+            ).strip()
+            if text:
+                existing_titles.add(text)
+
+    # Build text to prepend
+    for article in articles:
+        pub_time = article.get("publish_time_cn") or ""
+        if pub_time:
+            parts = pub_time.split(" ")[0].split("-")
+            if len(parts) == 3:
+                yy = parts[0][2:]
+                mm = parts[1]
+                dd = parts[2]
+                date_prefix = f"{yy}/{mm}/{dd}"
+            else:
+                date_prefix = target_date[2:].replace("-", "/")
+        else:
+            date_prefix = target_date[2:].replace("-", "/")
+
+        title = article.get("cn_title", "").strip()
+        subtitle = article.get("subtitle", "").strip()
+
+        # Heading 1 string
+        title_line = f"{date_prefix} {title}\n"
+        subtitle_line = f"{subtitle}\n"
+
+        # Check if already exists in Doc
+        dup_found = False
+        for ext in existing_titles:
+            if title_line.strip() in ext or title in ext:
+                dup_found = True
+                break
+
+        if dup_found:
+            print(f"[ ] Skipping '{title_line.strip()}' (already exists in Google Doc)")
+            continue
+
+        print(f"[+] Syncing '{title_line.strip()}' into Google Doc")
+        if dry_run:
+            continue
+
+        body_parts = []
+        for p in article.get("paragraphs", []):
+            cn_text = p.get("cn", "").strip()
+            if cn_text:
+                body_parts.append(f"{cn_text}\n")
+
+        article_text = title_line + subtitle_line + "".join(body_parts)
+        article_units = utf16_len(article_text)
+
+        # Step A: Insert text at index 1 of the tab
+        execute_batch(
+            service,
+            [
+                {
+                    "insertText": {
+                        "location": {"tabId": tab_id, "index": 1},
+                        "text": article_text,
+                    }
+                }
+            ]
+        )
+
+        # Step B: Re-fetch document content to get updated index ranges for styling
+        document = get_document(service)
+        content = tab_content(document, tab_id)
+
+        new_para_items = []
+        old_first_title_start = None
+
+        for item in content:
+            start = int(item.get("startIndex", 0))
+            end = int(item.get("endIndex", 0))
+            if start >= 1 and end <= 1 + article_units + 1:
+                if item.get("paragraph"):
+                    new_para_items.append(item)
+            elif start >= 1 + article_units:
+                if item.get("paragraph") and old_first_title_start is None:
+                    text = "".join(el.get("textRun", {}).get("content", "") for el in item.get("paragraph", {}).get("elements", [])).strip()
+                    if text:
+                        old_first_title_start = start
+
+        requests = []
+
+        # Style Heading 1
+        if new_para_items:
+            first_item = new_para_items[0]
+            requests.extend([
+                {
+                    "updateParagraphStyle": {
+                        "range": {
+                            "tabId": tab_id,
+                            "startIndex": first_item["startIndex"],
+                            "endIndex": first_item["endIndex"],
+                        },
+                        "paragraphStyle": {
+                            "namedStyleType": "HEADING_1",
+                            "alignment": "JUSTIFIED",
+                            "spaceAbove": {"magnitude": 3, "unit": "PT"},
+                            "spaceBelow": {"magnitude": 3, "unit": "PT"},
+                            "lineSpacing": 115,
+                            "pageBreakBefore": False,
+                        },
+                        "fields": "namedStyleType,alignment,spaceAbove,spaceBelow,lineSpacing,pageBreakBefore"
+                    }
+                },
+                {
+                    "updateTextStyle": {
+                        "range": {
+                            "tabId": tab_id,
+                            "startIndex": first_item["startIndex"],
+                            "endIndex": first_item["endIndex"] - 1,
+                        },
+                        "textStyle": {
+                            "weightedFontFamily": {"fontFamily": "Microsoft YaHei"},
+                            "fontSize": {"magnitude": 18, "unit": "PT"},
+                            "bold": True,
+                            "italic": False,
+                            "foregroundColor": {
+                                "color": {"rgbColor": {"red": 0.2, "green": 0.2, "blue": 0.2}}
+                            },
+                        },
+                        "fields": "weightedFontFamily,fontSize,bold,italic,foregroundColor"
+                    }
+                }
+            ])
+
+        # Style Heading 2 (Subtitle)
+        if len(new_para_items) > 1:
+            second_item = new_para_items[1]
+            requests.extend([
+                {
+                    "updateParagraphStyle": {
+                        "range": {
+                            "tabId": tab_id,
+                            "startIndex": second_item["startIndex"],
+                            "endIndex": second_item["endIndex"],
+                        },
+                        "paragraphStyle": {
+                            "namedStyleType": "HEADING_2",
+                            "alignment": "JUSTIFIED",
+                            "spaceAbove": {"magnitude": 3, "unit": "PT"},
+                            "spaceBelow": {"magnitude": 3, "unit": "PT"},
+                            "lineSpacing": 115,
+                        },
+                        "fields": "namedStyleType,alignment,spaceAbove,spaceBelow,lineSpacing"
+                    }
+                },
+                {
+                    "updateTextStyle": {
+                        "range": {
+                            "tabId": tab_id,
+                            "startIndex": second_item["startIndex"],
+                            "endIndex": second_item["endIndex"] - 1,
+                        },
+                        "textStyle": {
+                            "weightedFontFamily": {"fontFamily": "Microsoft YaHei"},
+                            "fontSize": {"magnitude": 15, "unit": "PT"},
+                            "bold": False,
+                            "italic": True,
+                            "foregroundColor": {
+                                "color": {"rgbColor": {"red": 0.5, "green": 0.5, "blue": 0.5}}
+                            },
+                        },
+                        "fields": "weightedFontFamily,fontSize,bold,italic,foregroundColor"
+                    }
+                }
+            ])
+
+        # Style Body Paragraphs
+        for item in new_para_items[2:]:
+            requests.extend([
+                {
+                    "updateParagraphStyle": {
+                        "range": {
+                            "tabId": tab_id,
+                            "startIndex": item["startIndex"],
+                            "endIndex": item["endIndex"],
+                        },
+                        "paragraphStyle": {
+                            "namedStyleType": "NORMAL_TEXT",
+                            "alignment": "JUSTIFIED",
+                            "lineSpacing": 115,
+                            "spaceAbove": {"magnitude": 12, "unit": "PT"},
+                            "spaceBelow": {"magnitude": 12, "unit": "PT"},
+                        },
+                        "fields": "namedStyleType,alignment,lineSpacing,spaceAbove,spaceBelow",
+                    }
+                },
+                {
+                    "updateTextStyle": {
+                        "range": {
+                            "tabId": tab_id,
+                            "startIndex": item["startIndex"],
+                            "endIndex": item["endIndex"] - 1,
+                        },
+                        "textStyle": {
+                            "weightedFontFamily": {"fontFamily": "Microsoft YaHei"},
+                            "fontSize": {"magnitude": 11, "unit": "PT"},
+                            "bold": False,
+                            "italic": False,
+                            "foregroundColor": {"color": {"rgbColor": {}}},
+                        },
+                        "fields": "weightedFontFamily,fontSize,bold,italic,foregroundColor"
+                    }
+                }
+            ])
+
+        # Step C: Update the previous first article's Heading 1 style to have pageBreakBefore = True
+        if old_first_title_start is not None:
+            old_first_title_end = None
+            for item in content:
+                if int(item.get("startIndex", 0)) == old_first_title_start:
+                    old_first_title_end = int(item.get("endIndex", 0))
+                    break
+            if old_first_title_end is not None:
+                requests.append({
+                    "updateParagraphStyle": {
+                        "range": {
+                            "tabId": tab_id,
+                            "startIndex": old_first_title_start,
+                            "endIndex": old_first_title_end,
+                        },
+                        "paragraphStyle": {
+                            "pageBreakBefore": True,
+                        },
+                        "fields": "pageBreakBefore"
+                    }
+                })
+
+        if requests:
+            execute_batch(service, requests)
+
+    print(f"[*] Incremental sync completed for {target_date}")
+
+
 def sync_month(service: Any, month: str, *, dry_run: bool = False) -> None:
     config = MONTHS[month]
     payload = fetch_month_payload(month, config["url"])
@@ -640,14 +954,55 @@ def sync_month(service: Any, month: str, *, dry_run: bool = False) -> None:
 
 def main() -> int:
     parser = argparse.ArgumentParser()
-    parser.add_argument("months", nargs="*", choices=sorted(MONTHS), default=sorted(MONTHS, reverse=True))
+    parser.add_argument(
+        "--incremental",
+        metavar="YYYY-MM-DD",
+        help="Incremental sync for a specific date (e.g. 2026-07-02)"
+    )
+    parser.add_argument(
+        "--replace-month",
+        action="store_true",
+        help="Dangerously replace and overwrite the entire Google Doc month tab contents from Tencent Docs"
+    )
+    parser.add_argument(
+        "months",
+        nargs="*",
+        choices=sorted(MONTHS),
+        default=[],
+        help="Months to rebuild (requires --replace-month)"
+    )
     parser.add_argument("--dry-run", action="store_true")
     args = parser.parse_args()
 
+    # Read doc id from config if possible
+    from common_paths import DATA_DIR
+    config_path = DATA_DIR / "google-polish-config.json"
+    if config_path.exists():
+        try:
+            config = json.loads(config_path.read_text(encoding="utf-8"))
+            global DOC_ID
+            DOC_ID = config.get("document_id", DOC_ID)
+        except Exception:
+            pass
+
+    if not args.incremental and not args.replace_month:
+        parser.print_help()
+        print("\n[ERR] Please specify either --incremental <YYYY-MM-DD> or --replace-month [months].")
+        return 1
+
     creds = load_credentials()
     service = build("docs", "v1", credentials=creds)
-    for month in args.months:
-        sync_month(service, month, dry_run=args.dry_run)
+
+    if args.incremental:
+        sync_incremental(service, args.incremental, dry_run=args.dry_run)
+    elif args.replace_month:
+        if not args.months:
+            args.months = sorted(MONTHS, reverse=True)
+        print(f"[WARNING] You are about to replace and overwrite the entire tabs for {args.months}!")
+        print("This will clear the tabs content in the Google Doc and mirror it from Tencent Docs.")
+        for month in args.months:
+            sync_month(service, month, dry_run=args.dry_run)
+
     print("Done.")
     return 0
 
