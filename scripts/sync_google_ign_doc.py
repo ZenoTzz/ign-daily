@@ -1,0 +1,656 @@
+"""Sync polished IGN daily news text into a tabbed Google Doc.
+
+This script reads public Tencent Docs, parses the established IGN news layout,
+and writes the resulting content into existing Google Docs tabs.
+"""
+from __future__ import annotations
+
+import argparse
+import json
+import re
+import shutil
+import sys
+import time
+from dataclasses import dataclass
+from pathlib import Path
+from typing import Any
+
+from google.auth.transport.requests import Request
+from google.oauth2.credentials import Credentials
+from google_auth_oauthlib.flow import InstalledAppFlow
+from googleapiclient.discovery import build
+from googleapiclient.errors import HttpError
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import import_tencent_polish as tencent  # noqa: E402
+
+
+DOC_ID = "14a6hFPk8Mbw-FICiFa7icEiyv1BmhkWltf_xOon7uIs"
+CREDENTIALS_PATH = Path(r"D:\Daily News\credentials.json")
+TOKEN_PATH = Path(r"D:\Daily News\token.json")
+SCOPES = ["https://www.googleapis.com/auth/documents"]
+
+MONTHS = {
+    "2026-07": {
+        "url": "https://docs.qq.com/doc/DUFFzSmVQdUFEbG1T",
+        "tab_title": "2026年7月",
+    },
+    "2026-06": {
+        "url": "https://docs.qq.com/doc/DUGthbk1CYW9NSmNF",
+        "tab_title": "2026年6月",
+    },
+    "2026-05": {
+        "url": "https://docs.qq.com/doc/DUFVmQ3ZPb2RDaVdo",
+        "tab_title": "2026年5月",
+    },
+}
+
+DATE_HEADING_RE = re.compile(r"^\d{2}/\d{2}/\d{2}\s+")
+
+
+@dataclass(frozen=True)
+class TextRange:
+    start: int
+    end: int
+
+
+@dataclass(frozen=True)
+class MonthPayload:
+    text: str
+    title_ranges: list[TextRange]
+    subtitle_ranges: list[TextRange]
+    article_count: int
+
+
+def utf16_len(value: str) -> int:
+    return len(value.encode("utf-16-le")) // 2
+
+
+def chunk_text(value: str, max_units: int = 24_000) -> list[str]:
+    chunks: list[str] = []
+    current: list[str] = []
+    units = 0
+    for char in value:
+        char_units = utf16_len(char)
+        if current and units + char_units > max_units:
+            chunks.append("".join(current))
+            current = []
+            units = 0
+        current.append(char)
+        units += char_units
+    if current:
+        chunks.append("".join(current))
+    return chunks
+
+
+def load_credentials() -> Credentials:
+    creds: Credentials | None = None
+    token_scopes: set[str] = set()
+    if TOKEN_PATH.exists():
+        try:
+            token_payload = json.loads(TOKEN_PATH.read_text(encoding="utf-8"))
+            raw_scopes = token_payload.get("scopes") or token_payload.get("scope") or []
+            if isinstance(raw_scopes, str):
+                token_scopes = set(raw_scopes.split())
+            else:
+                token_scopes = {str(scope) for scope in raw_scopes}
+            creds = Credentials.from_authorized_user_file(str(TOKEN_PATH), SCOPES)
+        except (OSError, ValueError, json.JSONDecodeError):
+            creds = None
+
+    has_required_scope = set(SCOPES).issubset(token_scopes)
+    if creds and creds.valid and has_required_scope:
+        return creds
+    if creds and creds.expired and creds.refresh_token and has_required_scope:
+        creds.refresh(Request())
+        TOKEN_PATH.write_text(creds.to_json(), encoding="utf-8")
+        return creds
+
+    if TOKEN_PATH.exists():
+        backup = TOKEN_PATH.with_suffix(".readonly.backup.json")
+        if not backup.exists():
+            shutil.copy2(TOKEN_PATH, backup)
+        TOKEN_PATH.unlink()
+
+    flow = InstalledAppFlow.from_client_secrets_file(str(CREDENTIALS_PATH), SCOPES)
+    creds = flow.run_local_server(port=0, prompt="consent")
+    TOKEN_PATH.write_text(creds.to_json(), encoding="utf-8")
+    return creds
+
+
+def fetch_month_payload(month: str, url: str) -> MonthPayload:
+    _title, raw_payload = tencent.fetch_document_payload(url)
+    text = tencent.find_document_text(raw_payload)
+    articles = [
+        article
+        for article in tencent.parse_document_articles(text)
+        if article.date.startswith(month)
+    ]
+    articles.sort(key=lambda article: article.date, reverse=True)
+
+    parts: list[str] = []
+    title_ranges: list[TextRange] = []
+    subtitle_ranges: list[TextRange] = []
+    index = 1
+
+    for article in articles:
+        yy, mm, dd = article.date[2:4], article.date[5:7], article.date[8:10]
+        title_line = f"{yy}/{mm}/{dd} {article.title}\n"
+        subtitle_line = f"{article.subtitle}\n"
+
+        title_start = index
+        title_end = title_start + utf16_len(title_line)
+        title_ranges.append(TextRange(title_start, title_end))
+        parts.append(title_line)
+        index = title_end
+
+        subtitle_start = index
+        subtitle_end = subtitle_start + utf16_len(subtitle_line)
+        subtitle_ranges.append(TextRange(subtitle_start, subtitle_end))
+        parts.append(subtitle_line)
+        index = subtitle_end
+
+        for paragraph in article.paragraphs:
+            line = f"{paragraph}\n"
+            parts.append(line)
+            index += utf16_len(line)
+
+    return MonthPayload(
+        text="".join(parts).rstrip() + "\n",
+        title_ranges=title_ranges,
+        subtitle_ranges=subtitle_ranges,
+        article_count=len(articles),
+    )
+
+
+def execute_batch(service: Any, requests: list[dict[str, Any]]) -> None:
+    if not requests:
+        return
+    for attempt in range(6):
+        try:
+            service.documents().batchUpdate(
+                documentId=DOC_ID,
+                body={"requests": requests},
+            ).execute()
+            return
+        except HttpError as exc:
+            if exc.resp.status != 429 or attempt == 5:
+                raise
+            time.sleep(20 + attempt * 10)
+
+
+def get_document(service: Any) -> dict[str, Any]:
+    return (
+        service.documents()
+        .get(
+            documentId=DOC_ID,
+            includeTabsContent=True,
+            fields=(
+                "documentId,title,revisionId,"
+                "tabs(tabProperties(tabId,title,index),"
+                "documentTab(body(content(startIndex,endIndex,"
+                "paragraph(elements(textRun(content)),paragraphStyle(namedStyleType))))))"
+            ),
+        )
+        .execute()
+    )
+
+
+def tab_content(document: dict[str, Any], tab_id: str) -> list[dict[str, Any]]:
+    for tab in document.get("tabs", []):
+        props = tab.get("tabProperties", {})
+        if props.get("tabId") == tab_id:
+            return tab.get("documentTab", {}).get("body", {}).get("content", [])
+    raise RuntimeError(f"Google Doc tab not found: {tab_id}")
+
+
+def tab_last_end(service: Any, tab_id: str) -> int:
+    content = tab_content(get_document(service), tab_id)
+    return max((item.get("endIndex", 1) for item in content), default=1)
+
+
+def resolve_tab(document: dict[str, Any], title: str) -> tuple[str, int]:
+    for tab in document.get("tabs", []):
+        props = tab.get("tabProperties", {})
+        if props.get("title") != title:
+            continue
+        body = tab.get("documentTab", {}).get("body", {})
+        content = body.get("content", [])
+        last_end = max((item.get("endIndex", 1) for item in content), default=1)
+        return props["tabId"], last_end
+    raise RuntimeError(f"Google Doc tab not found: {title}")
+
+
+def clear_tab(service: Any, tab_id: str, last_end: int) -> None:
+    if last_end <= 2:
+        return
+    execute_batch(
+        service,
+        [
+            {
+                "deleteContentRange": {
+                    "range": {
+                        "tabId": tab_id,
+                        "startIndex": 1,
+                        "endIndex": last_end - 1,
+                    }
+                }
+            }
+        ],
+    )
+
+
+def insert_text(service: Any, tab_id: str, text: str) -> None:
+    for chunk in chunk_text(text):
+        index = max(1, tab_last_end(service, tab_id) - 1)
+        execute_batch(
+            service,
+            [
+                {
+                    "insertText": {
+                        "location": {"tabId": tab_id, "index": index},
+                        "text": chunk,
+                    }
+                }
+            ],
+        )
+
+
+def paragraph_text(item: dict[str, Any]) -> str:
+    para = item.get("paragraph") or {}
+    return "".join(
+        element.get("textRun", {}).get("content", "")
+        for element in para.get("elements", [])
+    )
+
+
+def style_requests(tab_id: str, content: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    paragraph_items = [
+        item
+        for item in content
+        if item.get("startIndex") is not None and item.get("paragraph")
+    ]
+    if not paragraph_items:
+        return []
+
+    full_range = {
+        "tabId": tab_id,
+        "startIndex": paragraph_items[0]["startIndex"],
+        "endIndex": paragraph_items[-1]["endIndex"] - 1,
+    }
+    title_ranges: list[TextRange] = []
+    subtitle_ranges: list[TextRange] = []
+    special_ranges: list[TextRange] = []
+    expect_subtitle = False
+
+    for item in paragraph_items:
+        text = paragraph_text(item)
+        stripped = text.strip()
+        if not stripped:
+            continue
+        start = int(item["startIndex"])
+        end = int(item["endIndex"])
+        if DATE_HEADING_RE.match(stripped):
+            text_range = TextRange(start, end)
+            title_ranges.append(text_range)
+            special_ranges.append(text_range)
+            expect_subtitle = True
+            continue
+        if expect_subtitle:
+            text_range = TextRange(start, end)
+            subtitle_ranges.append(text_range)
+            special_ranges.append(text_range)
+            expect_subtitle = False
+
+    if not title_ranges:
+        raise RuntimeError("No dated title paragraphs found after insertion")
+
+    requests: list[dict[str, Any]] = [
+        {
+            "updateParagraphStyle": {
+                "range": full_range,
+                "paragraphStyle": {
+                    "namedStyleType": "NORMAL_TEXT",
+                    "alignment": "JUSTIFIED",
+                    "lineSpacing": 115,
+                },
+                "fields": (
+                    "namedStyleType,alignment,lineSpacing"
+                ),
+            }
+        },
+    ]
+
+    special_keys = {(item.start, item.end) for item in special_ranges}
+    for item in paragraph_items:
+        text = paragraph_text(item)
+        stripped = text.strip()
+        if not stripped:
+            continue
+        start = int(item["startIndex"])
+        end = int(item["endIndex"])
+        if (start, end) in special_keys:
+            continue
+        requests.extend(
+            [
+                {
+                    "updateParagraphStyle": {
+                        "range": {
+                            "tabId": tab_id,
+                            "startIndex": start,
+                            "endIndex": end,
+                        },
+                        "paragraphStyle": {
+                            "namedStyleType": "NORMAL_TEXT",
+                            "alignment": "JUSTIFIED",
+                            "lineSpacing": 115,
+                        },
+                        "fields": "namedStyleType,alignment,lineSpacing",
+                    }
+                },
+                {
+                    "updateParagraphStyle": {
+                        "range": {
+                            "tabId": tab_id,
+                            "startIndex": start,
+                            "endIndex": end,
+                        },
+                        "paragraphStyle": {},
+                        "fields": "spaceAbove,spaceBelow",
+                    }
+                },
+                {
+                    "updateTextStyle": {
+                        "range": {
+                            "tabId": tab_id,
+                            "startIndex": start,
+                            "endIndex": end - 1,
+                        },
+                        "textStyle": {},
+                        "fields": (
+                            "weightedFontFamily,fontSize,bold,italic,"
+                            "foregroundColor"
+                        ),
+                    }
+                },
+            ]
+        )
+
+    for index, item in enumerate(title_ranges):
+        requests.extend(
+            [
+                {
+                    "updateParagraphStyle": {
+                        "range": {
+                            "tabId": tab_id,
+                            "startIndex": item.start,
+                            "endIndex": item.end,
+                        },
+                        "paragraphStyle": {
+                            "namedStyleType": "HEADING_1",
+                            "alignment": "JUSTIFIED",
+                            "spaceAbove": {"magnitude": 3, "unit": "PT"},
+                            "spaceBelow": {"magnitude": 3, "unit": "PT"},
+                            "lineSpacing": 115,
+                            "pageBreakBefore": index > 0,
+                        },
+                        "fields": (
+                            "namedStyleType,alignment,spaceAbove,spaceBelow,"
+                            "lineSpacing,pageBreakBefore"
+                        ),
+                    }
+                },
+                {
+                    "updateTextStyle": {
+                        "range": {
+                            "tabId": tab_id,
+                            "startIndex": item.start,
+                            "endIndex": item.end - 1,
+                        },
+                        "textStyle": {
+                            "weightedFontFamily": {"fontFamily": "Microsoft YaHei"},
+                            "fontSize": {"magnitude": 18, "unit": "PT"},
+                            "bold": True,
+                            "italic": False,
+                            "foregroundColor": {
+                                "color": {
+                                    "rgbColor": {
+                                        "red": 0.2,
+                                        "green": 0.2,
+                                        "blue": 0.2,
+                                    }
+                                }
+                            },
+                        },
+                        "fields": (
+                            "weightedFontFamily,fontSize,bold,italic,"
+                            "foregroundColor"
+                        ),
+                    }
+                },
+            ]
+        )
+
+    for item in subtitle_ranges:
+        requests.extend(
+            [
+                {
+                    "updateParagraphStyle": {
+                        "range": {
+                            "tabId": tab_id,
+                            "startIndex": item.start,
+                            "endIndex": item.end,
+                        },
+                        "paragraphStyle": {
+                            "namedStyleType": "HEADING_2",
+                            "alignment": "JUSTIFIED",
+                            "spaceAbove": {"magnitude": 3, "unit": "PT"},
+                            "spaceBelow": {"magnitude": 3, "unit": "PT"},
+                            "lineSpacing": 115,
+                        },
+                        "fields": (
+                            "namedStyleType,alignment,spaceAbove,spaceBelow,"
+                            "lineSpacing"
+                        ),
+                    }
+                },
+                {
+                    "updateTextStyle": {
+                        "range": {
+                            "tabId": tab_id,
+                            "startIndex": item.start,
+                            "endIndex": item.end - 1,
+                        },
+                        "textStyle": {
+                            "weightedFontFamily": {"fontFamily": "Microsoft Yahei"},
+                            "fontSize": {"magnitude": 15, "unit": "PT"},
+                            "bold": False,
+                            "italic": True,
+                            "foregroundColor": {
+                                "color": {
+                                    "rgbColor": {
+                                        "red": 0.5,
+                                        "green": 0.5,
+                                        "blue": 0.5,
+                                    }
+                                }
+                            },
+                        },
+                        "fields": (
+                            "weightedFontFamily,fontSize,bold,italic,"
+                            "foregroundColor"
+                        ),
+                    }
+                },
+            ]
+        )
+    return requests
+
+
+def apply_styles(service: Any, tab_id: str) -> None:
+    execute_batch(
+        service,
+        [
+            {
+                "updateNamedStyle": {
+                    "tabId": tab_id,
+                    "namedStyle": {
+                        "namedStyleType": "NORMAL_TEXT",
+                        "textStyle": {
+                            "weightedFontFamily": {
+                                "fontFamily": "Microsoft Yahei",
+                            },
+                            "fontSize": {"magnitude": 11, "unit": "PT"},
+                            "bold": False,
+                            "italic": False,
+                            "foregroundColor": {
+                                "color": {"rgbColor": {}}
+                            },
+                        },
+                        "paragraphStyle": {
+                            "lineSpacing": 115,
+                            "spaceAbove": {"magnitude": 12, "unit": "PT"},
+                            "spaceBelow": {"magnitude": 12, "unit": "PT"},
+                        },
+                    },
+                    "fields": (
+                        "namedStyleType,textStyle.weightedFontFamily,"
+                        "textStyle.fontSize,textStyle.bold,textStyle.italic,"
+                        "textStyle.foregroundColor,paragraphStyle.lineSpacing,"
+                        "paragraphStyle.spaceAbove,paragraphStyle.spaceBelow"
+                    ),
+                }
+            },
+            {
+                "updateNamedStyle": {
+                    "tabId": tab_id,
+                    "namedStyle": {
+                        "namedStyleType": "HEADING_1",
+                        "textStyle": {
+                            "weightedFontFamily": {
+                                "fontFamily": "Microsoft YaHei",
+                            },
+                            "bold": True,
+                        },
+                    },
+                    "fields": (
+                        "namedStyleType,textStyle.weightedFontFamily,"
+                        "textStyle.bold"
+                    ),
+                }
+            },
+            {
+                "updateNamedStyle": {
+                    "tabId": tab_id,
+                    "namedStyle": {
+                        "namedStyleType": "HEADING_2",
+                        "textStyle": {
+                            "weightedFontFamily": {
+                                "fontFamily": "Microsoft Yahei",
+                            },
+                            "fontSize": {"magnitude": 15, "unit": "PT"},
+                            "bold": False,
+                            "italic": True,
+                            "foregroundColor": {
+                                "color": {
+                                    "rgbColor": {
+                                        "red": 0.5,
+                                        "green": 0.5,
+                                        "blue": 0.5,
+                                    }
+                                }
+                            },
+                        },
+                    },
+                    "fields": (
+                        "namedStyleType,textStyle.weightedFontFamily,"
+                        "textStyle.fontSize,textStyle.bold,textStyle.italic,"
+                        "textStyle.foregroundColor"
+                    ),
+                }
+            },
+        ],
+    )
+    content = tab_content(get_document(service), tab_id)
+    requests = style_requests(tab_id, content)
+    batch_size = 180
+    for start in range(0, len(requests), batch_size):
+        execute_batch(service, requests[start : start + batch_size])
+
+
+def verify_tab(service: Any, tab_id: str, expected_prefix: str) -> int:
+    result = (
+        service.documents()
+        .get(
+            documentId=DOC_ID,
+            includeTabsContent=True,
+            fields=(
+                "tabs(tabProperties(tabId,title),"
+                "documentTab(body(content(startIndex,endIndex,"
+                "paragraph(elements(textRun(content)),paragraphStyle(namedStyleType))))))"
+            ),
+        )
+        .execute()
+    )
+    for tab in result.get("tabs", []):
+        props = tab.get("tabProperties", {})
+        if props.get("tabId") != tab_id:
+            continue
+        count = 0
+        first_text = ""
+        for item in tab.get("documentTab", {}).get("body", {}).get("content", []):
+            para = item.get("paragraph")
+            if not para:
+                continue
+            text = "".join(
+                element.get("textRun", {}).get("content", "")
+                for element in para.get("elements", [])
+            )
+            if not first_text and text.strip():
+                first_text = text.strip()
+            if text.startswith(expected_prefix):
+                count += 1
+        if not first_text.startswith(expected_prefix):
+            raise RuntimeError(
+                f"Unexpected first line in {props.get('title')}: {first_text[:80]}"
+            )
+        return count
+    raise RuntimeError(f"Tab not found during verification: {tab_id}")
+
+
+def sync_month(service: Any, month: str, *, dry_run: bool = False) -> None:
+    config = MONTHS[month]
+    payload = fetch_month_payload(month, config["url"])
+    print(
+        f"{month}: parsed {payload.article_count} articles, "
+        f"{utf16_len(payload.text)} UTF-16 units"
+    )
+    if dry_run:
+        return
+
+    document = get_document(service)
+    tab_id, last_end = resolve_tab(document, config["tab_title"])
+    clear_tab(service, tab_id, last_end)
+    insert_text(service, tab_id, payload.text)
+    apply_styles(service, tab_id)
+    yy, mm = month[2:4], month[5:7]
+    count = verify_tab(service, tab_id, f"{yy}/{mm}/")
+    print(f"{month}: synced {count} headings into {config['tab_title']}")
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("months", nargs="*", choices=sorted(MONTHS), default=sorted(MONTHS, reverse=True))
+    parser.add_argument("--dry-run", action="store_true")
+    args = parser.parse_args()
+
+    creds = load_credentials()
+    service = build("docs", "v1", credentials=creds)
+    for month in args.months:
+        sync_month(service, month, dry_run=args.dry_run)
+    print("Done.")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
