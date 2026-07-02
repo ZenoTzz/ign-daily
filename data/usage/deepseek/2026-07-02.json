@@ -528,6 +528,78 @@
       "total_tokens_including_reasoning": 10368,
       "prompt_cache_hit_tokens": 8448,
       "prompt_cache_miss_tokens": 687
+    },
+    {
+      "time_cn": "2026-07-02 17:35:18",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 40,
+      "article_title": "Civilization 7 Review Update",
+      "article_url": "https://www.ign.com/articles/civilization-7-review-update",
+      "article_date": "2026-07-02",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00199164,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 11330,
+      "completion_tokens": 837,
+      "reasoning_tokens": 611,
+      "output_tokens_including_reasoning": 1448,
+      "total_tokens": 12167,
+      "total_tokens_including_reasoning": 12778,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 11330
+    },
+    {
+      "time_cn": "2026-07-02 17:35:37",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 41,
+      "article_title": "The Ghost in the Shell Episodes 1 & 2 Review",
+      "article_url": "https://www.ign.com/articles/the-ghost-in-the-shell-2026-episodes-1-2-review-prime-video",
+      "article_date": "2026-07-02",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00146336,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 10681,
+      "completion_tokens": 1163,
+      "reasoning_tokens": 918,
+      "output_tokens_including_reasoning": 2081,
+      "total_tokens": 11844,
+      "total_tokens_including_reasoning": 12762,
+      "prompt_cache_hit_tokens": 4480,
+      "prompt_cache_miss_tokens": 6201
+    },
+    {
+      "time_cn": "2026-07-02 17:35:55",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 42,
+      "article_title": "Minions & Monsters Review",
+      "article_url": "https://www.ign.com/articles/minions-monsters-review",
+      "article_date": "2026-07-02",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.0007019,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 11387,
+      "completion_tokens": 931,
+      "reasoning_tokens": 649,
+      "output_tokens_including_reasoning": 1580,
+      "total_tokens": 12318,
+      "total_tokens_including_reasoning": 12967,
+      "prompt_cache_hit_tokens": 9728,
+      "prompt_cache_miss_tokens": 1659
     }
   ]
 }

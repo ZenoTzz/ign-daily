@@ -5,112 +5,175 @@
     "2026-07-02"
   ],
   "changed_dates": [
-    "2026-07-03",
     "2026-07-02"
   ],
   "new_target_dates": [
-    "2026-07-03",
     "2026-07-02"
   ],
   "new_count": 3,
-  "filtered_count": 1,
+  "filtered_count": 4,
   "cleanup_count": 0,
-  "changed_count": 4,
+  "changed_count": 7,
   "articles": [
     {
-      "title": "Onimusha: Way of the Sword Release Date Moved Forward",
-      "url": "https://www.ign.com/articles/onimusha-way-of-the-sword-release-date-moved-forward",
-      "pubDate_cst": "2026-07-02 08:41",
-      "category": "游戏新闻",
-      "emoji": "🎮",
-      "source_type": "rss"
+      "title": "Civilization 7 Review Update",
+      "url": "https://www.ign.com/articles/civilization-7-review-update",
+      "pubDate_cst": "2026-07-01 17:34",
+      "category": "游戏评测",
+      "emoji": "⭐",
+      "source_type": "review"
     },
     {
-      "title": "Marvel Super Heroes Comes to Magic: The Gathering",
-      "url": "https://www.ign.com/articles/marvel-super-heroes-comes-to-magic-the-gathering",
-      "pubDate_cst": "2026-07-02 07:55",
-      "category": "游戏新闻",
-      "emoji": "🎮",
-      "source_type": "rss"
+      "title": "The Ghost in the Shell Episodes 1 & 2 Review",
+      "url": "https://www.ign.com/articles/the-ghost-in-the-shell-2026-episodes-1-2-review-prime-video",
+      "pubDate_cst": "2026-07-01 17:34",
+      "category": "电影评测",
+      "emoji": "⭐",
+      "source_type": "review"
     },
     {
-      "title": "Marvel Refused to Tell Sadie Sink About Her Spider-Man: Brand New Day Character Until Filming Started",
-      "url": "https://www.ign.com/articles/marvel-refused-to-tell-sadie-sink-about-her-spider-man-brand-new-day-character-until-filming-started",
-      "pubDate_cst": "2026-07-02 07:46",
-      "category": "游戏新闻",
-      "emoji": "🎮",
-      "source_type": "rss"
+      "title": "Minions & Monsters Review",
+      "url": "https://www.ign.com/articles/minions-monsters-review",
+      "pubDate_cst": "2026-07-01 17:34",
+      "category": "电影评测",
+      "emoji": "⭐",
+      "source_type": "review"
     }
   ],
   "filtered_articles": [
     {
-      "title": "The $1,800 Power Lift Recliner and Massage Chair Is $380 During the Wayfair 4th of July Sale",
-      "url": "https://www.ign.com/articles/wayfair-4th-of-july-sale-power-lift-recliner-and-massage-chair-deal",
-      "pubDate_cst": "2026-07-02 08:20",
-      "description": "A chair you don't want to get it out of, even if it's designed to help you do so.",
+      "title": "Universal Tower Defense X Codes (July 2026)",
+      "url": "https://www.ign.com/articles/universal-tower-defense-codes",
+      "pubDate_cst": "2026-07-02 00:00",
+      "description": "We've got the latest codes here for Universal Tower Defense X on Roblox, giving you free rewards including Trait Rerolls and Gems.",
       "categories": "",
-      "reason": "url:deal",
-      "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
-      "filtered_at_cn": "2026-07-02 09:17:49",
+      "reason": "text:\\bcodes?\\s*\\([a-z]+\\s+\\d{4}\\)",
+      "rss_url": "https://www.ign.com/rss/articles/feed?start=20&count=20",
+      "filtered_at_cn": "2026-07-02 17:34:55",
+      "status": "filtered"
+    },
+    {
+      "title": "Anime Astral Simulator Codes (July 2026)",
+      "url": "https://www.ign.com/articles/anime-astral-simulator-codes",
+      "pubDate_cst": "2026-07-01 21:05",
+      "description": "Use these working and active Anime Astral Simulator codes to claim free rewards including potions and F2P Tickets.",
+      "categories": "",
+      "reason": "text:\\bcodes?\\s*\\([a-z]+\\s+\\d{4}\\)",
+      "rss_url": "https://www.ign.com/rss/articles/feed?start=40&count=20",
+      "filtered_at_cn": "2026-07-02 17:34:55",
+      "status": "filtered"
+    },
+    {
+      "title": "Hunty Zombie Codes (July 2026)",
+      "url": "https://www.ign.com/articles/hunty-zombie-codes",
+      "pubDate_cst": "2026-07-01 20:43",
+      "description": "Keep up to date with the newest Hunty Zombie codes using our list.",
+      "categories": "",
+      "reason": "text:\\bcodes?\\s*\\([a-z]+\\s+\\d{4}\\)",
+      "rss_url": "https://www.ign.com/rss/articles/feed?start=40&count=20",
+      "filtered_at_cn": "2026-07-02 17:34:55",
+      "status": "filtered"
+    },
+    {
+      "title": "Dress to Impress Codes (July 2026)",
+      "url": "https://www.ign.com/articles/dress-to-impress-codes",
+      "pubDate_cst": "2026-07-01 17:00",
+      "description": "Use these working and active Dress to Impress codes to claim free rewards in DTI, including clothes, shoes, and accessories.",
+      "categories": "",
+      "reason": "text:\\bcodes?\\s*\\([a-z]+\\s+\\d{4}\\)",
+      "rss_url": "https://www.ign.com/rss/articles/feed?start=40&count=20",
+      "filtered_at_cn": "2026-07-02 17:34:55",
       "status": "filtered"
     }
   ],
   "runs": [
     {
       "target_date": "2026-07-03",
-      "new_count": 1,
-      "filtered_count": 1,
-      "changed_count": 2,
+      "new_count": 0,
+      "filtered_count": 0,
+      "changed_count": 0,
       "next_id": 2,
+      "articles": [],
+      "filtered_articles": []
+    },
+    {
+      "target_date": "2026-07-02",
+      "new_count": 3,
+      "filtered_count": 4,
+      "changed_count": 7,
+      "next_id": 43,
       "articles": [
         {
-          "title": "Onimusha: Way of the Sword Release Date Moved Forward",
-          "url": "https://www.ign.com/articles/onimusha-way-of-the-sword-release-date-moved-forward",
-          "pubDate_cst": "2026-07-02 08:41",
-          "category": "游戏新闻",
-          "emoji": "🎮",
-          "source_type": "rss"
+          "title": "Civilization 7 Review Update",
+          "url": "https://www.ign.com/articles/civilization-7-review-update",
+          "pubDate_cst": "2026-07-01 17:34",
+          "category": "游戏评测",
+          "emoji": "⭐",
+          "source_type": "review"
+        },
+        {
+          "title": "The Ghost in the Shell Episodes 1 & 2 Review",
+          "url": "https://www.ign.com/articles/the-ghost-in-the-shell-2026-episodes-1-2-review-prime-video",
+          "pubDate_cst": "2026-07-01 17:34",
+          "category": "电影评测",
+          "emoji": "⭐",
+          "source_type": "review"
+        },
+        {
+          "title": "Minions & Monsters Review",
+          "url": "https://www.ign.com/articles/minions-monsters-review",
+          "pubDate_cst": "2026-07-01 17:34",
+          "category": "电影评测",
+          "emoji": "⭐",
+          "source_type": "review"
         }
       ],
       "filtered_articles": [
         {
-          "title": "The $1,800 Power Lift Recliner and Massage Chair Is $380 During the Wayfair 4th of July Sale",
-          "url": "https://www.ign.com/articles/wayfair-4th-of-july-sale-power-lift-recliner-and-massage-chair-deal",
-          "pubDate_cst": "2026-07-02 08:20",
-          "description": "A chair you don't want to get it out of, even if it's designed to help you do so.",
+          "title": "Universal Tower Defense X Codes (July 2026)",
+          "url": "https://www.ign.com/articles/universal-tower-defense-codes",
+          "pubDate_cst": "2026-07-02 00:00",
+          "description": "We've got the latest codes here for Universal Tower Defense X on Roblox, giving you free rewards including Trait Rerolls and Gems.",
           "categories": "",
-          "reason": "url:deal",
-          "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
-          "filtered_at_cn": "2026-07-02 09:17:49",
+          "reason": "text:\\bcodes?\\s*\\([a-z]+\\s+\\d{4}\\)",
+          "rss_url": "https://www.ign.com/rss/articles/feed?start=20&count=20",
+          "filtered_at_cn": "2026-07-02 17:34:55",
+          "status": "filtered"
+        },
+        {
+          "title": "Anime Astral Simulator Codes (July 2026)",
+          "url": "https://www.ign.com/articles/anime-astral-simulator-codes",
+          "pubDate_cst": "2026-07-01 21:05",
+          "description": "Use these working and active Anime Astral Simulator codes to claim free rewards including potions and F2P Tickets.",
+          "categories": "",
+          "reason": "text:\\bcodes?\\s*\\([a-z]+\\s+\\d{4}\\)",
+          "rss_url": "https://www.ign.com/rss/articles/feed?start=40&count=20",
+          "filtered_at_cn": "2026-07-02 17:34:55",
+          "status": "filtered"
+        },
+        {
+          "title": "Hunty Zombie Codes (July 2026)",
+          "url": "https://www.ign.com/articles/hunty-zombie-codes",
+          "pubDate_cst": "2026-07-01 20:43",
+          "description": "Keep up to date with the newest Hunty Zombie codes using our list.",
+          "categories": "",
+          "reason": "text:\\bcodes?\\s*\\([a-z]+\\s+\\d{4}\\)",
+          "rss_url": "https://www.ign.com/rss/articles/feed?start=40&count=20",
+          "filtered_at_cn": "2026-07-02 17:34:55",
+          "status": "filtered"
+        },
+        {
+          "title": "Dress to Impress Codes (July 2026)",
+          "url": "https://www.ign.com/articles/dress-to-impress-codes",
+          "pubDate_cst": "2026-07-01 17:00",
+          "description": "Use these working and active Dress to Impress codes to claim free rewards in DTI, including clothes, shoes, and accessories.",
+          "categories": "",
+          "reason": "text:\\bcodes?\\s*\\([a-z]+\\s+\\d{4}\\)",
+          "rss_url": "https://www.ign.com/rss/articles/feed?start=40&count=20",
+          "filtered_at_cn": "2026-07-02 17:34:55",
           "status": "filtered"
         }
       ]
-    },
-    {
-      "target_date": "2026-07-02",
-      "new_count": 2,
-      "filtered_count": 0,
-      "changed_count": 2,
-      "next_id": 40,
-      "articles": [
-        {
-          "title": "Marvel Super Heroes Comes to Magic: The Gathering",
-          "url": "https://www.ign.com/articles/marvel-super-heroes-comes-to-magic-the-gathering",
-          "pubDate_cst": "2026-07-02 07:55",
-          "category": "游戏新闻",
-          "emoji": "🎮",
-          "source_type": "rss"
-        },
-        {
-          "title": "Marvel Refused to Tell Sadie Sink About Her Spider-Man: Brand New Day Character Until Filming Started",
-          "url": "https://www.ign.com/articles/marvel-refused-to-tell-sadie-sink-about-her-spider-man-brand-new-day-character-until-filming-started",
-          "pubDate_cst": "2026-07-02 07:46",
-          "category": "游戏新闻",
-          "emoji": "🎮",
-          "source_type": "rss"
-        }
-      ],
-      "filtered_articles": []
     }
   ]
 }
