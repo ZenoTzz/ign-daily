@@ -5,29 +5,52 @@
     "2026-07-02"
   ],
   "changed_dates": [
-    "2026-07-03",
-    "2026-07-02"
+    "2026-07-03"
   ],
   "new_target_dates": [
     "2026-07-03"
   ],
-  "new_count": 2,
-  "filtered_count": 2,
-  "cleanup_count": 0,
-  "changed_count": 4,
+  "new_count": 5,
+  "filtered_count": 1,
+  "cleanup_count": 1,
+  "changed_count": 7,
   "articles": [
     {
-      "title": "Even KFC is Dunking on Sony, as the Dust Settles on PlayStation's Shock Decision to Kill Physical Game Discs",
-      "url": "https://www.ign.com/articles/even-kfc-is-dunking-on-sony-as-the-dust-settles-on-playstations-shock-decision-to-kill-physical-game-discs",
-      "pubDate_cst": "2026-07-02 21:15",
+      "title": "Crossfire Is Being Built by One of Gaming’s Best Design Duos",
+      "url": "https://www.ign.com/articles/crossfire-is-being-built-by-one-of-gamings-best-design-duos",
+      "pubDate_cst": "2026-07-02 23:15",
       "category": "游戏新闻",
       "emoji": "🎮",
       "source_type": "rss"
     },
     {
-      "title": "Avowed, The Outer Worlds, and Fallout: New Vegas Developer Obsidian Entertainment Reportedly Also at Risk of Closure Amid Xbox 'Reset'",
-      "url": "https://www.ign.com/articles/avowed-the-outer-worlds-and-fallout-new-vegas-developer-obsidian-entertainment-reportedly-also-at-risk-of-closure-amid-xbox-reset",
-      "pubDate_cst": "2026-07-02 21:56",
+      "title": "College Football 27 Review So Far",
+      "url": "https://www.ign.com/articles/college-football-27-review",
+      "pubDate_cst": "2026-07-02 23:00",
+      "category": "游戏评测",
+      "emoji": "⭐",
+      "source_type": "rss"
+    },
+    {
+      "title": "The Most OP Players in Football Game History",
+      "url": "https://www.ign.com/articles/the-most-op-players-in-football-game-history",
+      "pubDate_cst": "2026-07-02 22:30",
+      "category": "游戏新闻",
+      "emoji": "🎮",
+      "source_type": "rss"
+    },
+    {
+      "title": "Final Fantasy 7 Revelation Getting Story Expansion Pass, Store Leak Suggests",
+      "url": "https://www.ign.com/articles/final-fantasy-7-revelation-getting-story-expansion-pass-store-leak-suggests",
+      "pubDate_cst": "2026-07-02 22:17",
+      "category": "游戏新闻",
+      "emoji": "🎮",
+      "source_type": "rss"
+    },
+    {
+      "title": "Pokémon TCG: Chaos Rising Sealed Boosters Are Back in Stock at Amazon",
+      "url": "https://www.ign.com/articles/pokemon-tcg-chaos-rising-sealed-boosters-are-back-in-stock-at-amazon",
+      "pubDate_cst": "2026-07-03 00:00",
       "category": "游戏新闻",
       "emoji": "🎮",
       "source_type": "rss"
@@ -35,48 +58,61 @@
   ],
   "filtered_articles": [
     {
-      "title": "Get 10 Months of Xbox Game Pass Ultimate for £73 in Today's Best UK Deals",
-      "url": "https://www.ign.com/articles/get-10-months-of-xbox-game-pass-ultimate-for-73-in-todays-best-uk-deals",
-      "pubDate_cst": "2026-07-02 21:01",
-      "description": "Score 10 months of Xbox Game Pass Ultimate for just £73 using an improved EA Play loophole, plus check out massive UK deals on Corsair, Sony, and Apple tech.",
+      "title": "Amazon Has Knocked the LEGO Marvel Spider-Man vs. Oscorp Set Down to a New Low Price",
+      "url": "https://www.ign.com/articles/amazon-has-knocked-the-lego-marvel-spider-man-vs-oscorp-set-down-to-a-new-low-price",
+      "pubDate_cst": "2026-07-02 22:10",
+      "description": "Amazon has slashed the price of the LEGO Marvel Spider-Man vs. Oscorp set from $139.95 to $95.99. The full discount can be seen at checkout.",
       "categories": "",
-      "reason": "text:\\bbest .+ deals?\\b",
+      "reason": "text:\\bdiscount\\b",
       "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
-      "filtered_at_cn": "2026-07-02 22:30:59",
-      "status": "filtered"
-    },
-    {
-      "title": "Upcoming LEGO Sets: Release Dates for July 2026 and Beyond",
-      "url": "https://www.ign.com/articles/upcoming-lego-set-release-dates",
-      "pubDate_cst": "2026-07-02 00:30",
-      "description": "A frequently updated list of all the biggest upcoming LEGO sets, along with their release dates, pricing, and more.",
-      "categories": "",
-      "reason": "text:\\blego sets?\\b",
-      "rss_url": "https://www.ign.com/rss/articles/feed?start=20&count=20",
-      "filtered_at_cn": "2026-07-02 22:30:59",
+      "filtered_at_cn": "2026-07-03 00:24:11",
       "status": "filtered"
     }
   ],
   "runs": [
     {
       "target_date": "2026-07-03",
-      "new_count": 2,
+      "new_count": 5,
       "filtered_count": 1,
-      "changed_count": 3,
-      "next_id": 10,
+      "changed_count": 6,
+      "next_id": 15,
       "articles": [
         {
-          "title": "Even KFC is Dunking on Sony, as the Dust Settles on PlayStation's Shock Decision to Kill Physical Game Discs",
-          "url": "https://www.ign.com/articles/even-kfc-is-dunking-on-sony-as-the-dust-settles-on-playstations-shock-decision-to-kill-physical-game-discs",
-          "pubDate_cst": "2026-07-02 21:15",
+          "title": "Crossfire Is Being Built by One of Gaming’s Best Design Duos",
+          "url": "https://www.ign.com/articles/crossfire-is-being-built-by-one-of-gamings-best-design-duos",
+          "pubDate_cst": "2026-07-02 23:15",
           "category": "游戏新闻",
           "emoji": "🎮",
           "source_type": "rss"
         },
         {
-          "title": "Avowed, The Outer Worlds, and Fallout: New Vegas Developer Obsidian Entertainment Reportedly Also at Risk of Closure Amid Xbox 'Reset'",
-          "url": "https://www.ign.com/articles/avowed-the-outer-worlds-and-fallout-new-vegas-developer-obsidian-entertainment-reportedly-also-at-risk-of-closure-amid-xbox-reset",
-          "pubDate_cst": "2026-07-02 21:56",
+          "title": "College Football 27 Review So Far",
+          "url": "https://www.ign.com/articles/college-football-27-review",
+          "pubDate_cst": "2026-07-02 23:00",
+          "category": "游戏评测",
+          "emoji": "⭐",
+          "source_type": "rss"
+        },
+        {
+          "title": "The Most OP Players in Football Game History",
+          "url": "https://www.ign.com/articles/the-most-op-players-in-football-game-history",
+          "pubDate_cst": "2026-07-02 22:30",
+          "category": "游戏新闻",
+          "emoji": "🎮",
+          "source_type": "rss"
+        },
+        {
+          "title": "Final Fantasy 7 Revelation Getting Story Expansion Pass, Store Leak Suggests",
+          "url": "https://www.ign.com/articles/final-fantasy-7-revelation-getting-story-expansion-pass-store-leak-suggests",
+          "pubDate_cst": "2026-07-02 22:17",
+          "category": "游戏新闻",
+          "emoji": "🎮",
+          "source_type": "rss"
+        },
+        {
+          "title": "Pokémon TCG: Chaos Rising Sealed Boosters Are Back in Stock at Amazon",
+          "url": "https://www.ign.com/articles/pokemon-tcg-chaos-rising-sealed-boosters-are-back-in-stock-at-amazon",
+          "pubDate_cst": "2026-07-03 00:00",
           "category": "游戏新闻",
           "emoji": "🎮",
           "source_type": "rss"
@@ -84,14 +120,14 @@
       ],
       "filtered_articles": [
         {
-          "title": "Get 10 Months of Xbox Game Pass Ultimate for £73 in Today's Best UK Deals",
-          "url": "https://www.ign.com/articles/get-10-months-of-xbox-game-pass-ultimate-for-73-in-todays-best-uk-deals",
-          "pubDate_cst": "2026-07-02 21:01",
-          "description": "Score 10 months of Xbox Game Pass Ultimate for just £73 using an improved EA Play loophole, plus check out massive UK deals on Corsair, Sony, and Apple tech.",
+          "title": "Amazon Has Knocked the LEGO Marvel Spider-Man vs. Oscorp Set Down to a New Low Price",
+          "url": "https://www.ign.com/articles/amazon-has-knocked-the-lego-marvel-spider-man-vs-oscorp-set-down-to-a-new-low-price",
+          "pubDate_cst": "2026-07-02 22:10",
+          "description": "Amazon has slashed the price of the LEGO Marvel Spider-Man vs. Oscorp set from $139.95 to $95.99. The full discount can be seen at checkout.",
           "categories": "",
-          "reason": "text:\\bbest .+ deals?\\b",
+          "reason": "text:\\bdiscount\\b",
           "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
-          "filtered_at_cn": "2026-07-02 22:30:59",
+          "filtered_at_cn": "2026-07-03 00:24:11",
           "status": "filtered"
         }
       ]
@@ -99,23 +135,11 @@
     {
       "target_date": "2026-07-02",
       "new_count": 0,
-      "filtered_count": 1,
-      "changed_count": 1,
+      "filtered_count": 0,
+      "changed_count": 0,
       "next_id": 43,
       "articles": [],
-      "filtered_articles": [
-        {
-          "title": "Upcoming LEGO Sets: Release Dates for July 2026 and Beyond",
-          "url": "https://www.ign.com/articles/upcoming-lego-set-release-dates",
-          "pubDate_cst": "2026-07-02 00:30",
-          "description": "A frequently updated list of all the biggest upcoming LEGO sets, along with their release dates, pricing, and more.",
-          "categories": "",
-          "reason": "text:\\blego sets?\\b",
-          "rss_url": "https://www.ign.com/rss/articles/feed?start=20&count=20",
-          "filtered_at_cn": "2026-07-02 22:30:59",
-          "status": "filtered"
-        }
-      ]
+      "filtered_articles": []
     }
   ]
 }

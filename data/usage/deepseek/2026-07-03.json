@@ -1,0 +1,125 @@
+{
+  "date": "2026-07-03",
+  "records": [
+    {
+      "time_cn": "2026-07-03 00:24:31",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 10,
+      "article_title": "Crossfire Is Being Built by One of Gaming’s Best Design Duos",
+      "article_url": "https://www.ign.com/articles/crossfire-is-being-built-by-one-of-gamings-best-design-duos",
+      "article_date": "2026-07-03",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.0006032,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 11460,
+      "completion_tokens": 710,
+      "reasoning_tokens": 481,
+      "output_tokens_including_reasoning": 1191,
+      "total_tokens": 12170,
+      "total_tokens_including_reasoning": 12651,
+      "prompt_cache_hit_tokens": 9728,
+      "prompt_cache_miss_tokens": 1732
+    },
+    {
+      "time_cn": "2026-07-03 00:24:43",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 11,
+      "article_title": "College Football 27 Review So Far",
+      "article_url": "https://www.ign.com/articles/college-football-27-review",
+      "article_date": "2026-07-03",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00069308,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 11140,
+      "completion_tokens": 954,
+      "reasoning_tokens": 718,
+      "output_tokens_including_reasoning": 1672,
+      "total_tokens": 12094,
+      "total_tokens_including_reasoning": 12812,
+      "prompt_cache_hit_tokens": 9728,
+      "prompt_cache_miss_tokens": 1412
+    },
+    {
+      "time_cn": "2026-07-03 00:24:51",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 12,
+      "article_title": "The Most OP Players in Football Game History",
+      "article_url": "https://www.ign.com/articles/the-most-op-players-in-football-game-history",
+      "article_date": "2026-07-03",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00064058,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 11943,
+      "completion_tokens": 652,
+      "reasoning_tokens": 431,
+      "output_tokens_including_reasoning": 1083,
+      "total_tokens": 12595,
+      "total_tokens_including_reasoning": 13026,
+      "prompt_cache_hit_tokens": 9728,
+      "prompt_cache_miss_tokens": 2215
+    },
+    {
+      "time_cn": "2026-07-03 00:25:06",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 13,
+      "article_title": "Final Fantasy 7 Revelation Getting Story Expansion Pass, Store Leak Suggests",
+      "article_url": "https://www.ign.com/articles/final-fantasy-7-revelation-getting-story-expansion-pass-store-leak-suggests",
+      "article_date": "2026-07-03",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00070246,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 10339,
+      "completion_tokens": 1237,
+      "reasoning_tokens": 869,
+      "output_tokens_including_reasoning": 2106,
+      "total_tokens": 11576,
+      "total_tokens_including_reasoning": 12445,
+      "prompt_cache_hit_tokens": 9728,
+      "prompt_cache_miss_tokens": 611
+    },
+    {
+      "time_cn": "2026-07-03 00:25:27",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 14,
+      "article_title": "Pokémon TCG: Chaos Rising Sealed Boosters Are Back in Stock at Amazon",
+      "article_url": "https://www.ign.com/articles/pokemon-tcg-chaos-rising-sealed-boosters-are-back-in-stock-at-amazon",
+      "article_date": "2026-07-03",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00095068,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 10520,
+      "completion_tokens": 1595,
+      "reasoning_tokens": 1307,
+      "output_tokens_including_reasoning": 2902,
+      "total_tokens": 12115,
+      "total_tokens_including_reasoning": 13422,
+      "prompt_cache_hit_tokens": 9728,
+      "prompt_cache_miss_tokens": 792
+    }
+  ]
+}
