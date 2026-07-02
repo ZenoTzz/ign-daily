@@ -41,7 +41,7 @@ from dict_matcher import (
 )
 from normalize_currency_files import normalize_date as normalize_currency_date
 from platform_names import normalize_platform_names_in_translation
-from prompt_blocks import stable_json, title_user_payload, translation_system_prompt
+from prompt_blocks import stable_json, title_user_payload, translation_system_prompt, validate_style_check
 from usage_logger import record_deepseek_usage_safe
 
 
@@ -419,6 +419,9 @@ def translate_date(date: str, limit: int = 8) -> int:
                         continue
                     raise ValueError(f"model output remained truncated at {max_tokens} tokens")
                 result = normalize_result(extract_json(raw))
+                validation_errors = validate_style_check(result, article, is_fulltext=False)
+                if validation_errors:
+                    raise ValueError(f"style check failed: {'; '.join(validation_errors)}")
                 break
             if result is None:
                 raise ValueError("model output remained truncated after retry")

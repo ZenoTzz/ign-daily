@@ -4,6 +4,36 @@
 
 ---
 
+## 2026-07-02 当前接手入口
+
+新 agent 先读：
+
+1. `docs/AGENT_START.md`
+2. `docs/TRANSLATION_REQUIREMENTS.md`
+3. `docs/AGENT_COLLABORATION.md`
+4. `AGENT_BOOTSTRAP.md`
+5. `TRANSLATION_GUIDE.md`
+6. `STYLE_PROFILE.md`
+7. `AGENT_NIGHTLY_LEARNER.md`
+8. `data/automation-config.json`
+9. `data/dict.json`
+
+当前人工正文翻译由 Codex 接管：`data/automation-config.json.fulltext_translator`
+应保持 `codex`，除非用户明确要求调用 API。用户提交全文翻译后，必须按
+`requested_articles[].url` 匹配当前 `index.json`，复用
+`data/{date}/sources/NN.json`，写入 `translations/NN.json`，更新
+`index.json` 并从 `requests.json` 移除完成项。通过
+`python scripts/pre_push_check.py {date}` 后，用 `scripts/git_push.py` 推送。
+正文翻译时，`cn_title`、`subtitle` 和 `summary` 必须由 Codex 重新拟定；
+不要沿用标题摘要自动化已有结果，DeepSeek V4 Flash 的标题质量不作为终稿标准。
+
+完成正文翻译并推送后，需要同步到 `data/google-polish-config.json` 指向的
+Google Doc。同步是把译文写入 Google Docs；导入是夜间学习把用户润色后的
+Google Docs 内容读回 `data/{date}/polished/`。不要混淆这两个方向。
+
+多人协作时，先看 `docs/AGENT_COLLABORATION.md` 和
+`data/agent-worklog.jsonl`。不要回滚不属于自己的本地或远端新内容。
+
 ## 2026-06-02 权威流程摘要（新 agent 先读这里）
 
 下面这几条是当前唯一可信的自动化分工；如果本文档旧段落出现“主 session 心跳”“Opus 必须处理标题/正文”等旧说法，以本节为准。
@@ -551,3 +581,17 @@ workspace/
 - `scripts/translate_pipeline.py` post 阶段会校验译文 JSON 的 `url`/`en_title` 与 index 文章一致，不一致必须停止，避免 A 文请求错写到 B 文。
 - 日期归属固定按 8:00 CST 分界：`data/YYYY-MM-DD` 覆盖前一天 08:00 到当天 08:00，左闭右开。例：`data/2026-06-02` 只能放 `2026-06-01 08:00 <= publish_time_cn < 2026-06-02 08:00`。
 - `scripts/rss_queue_check.py` 和 `scripts/agent_doctor.py` 会检查最新/目标 index 的 `publish_time_cn` 是否落在对应日期窗口内。
+
+## 2026-07-02 风格自检与本地硬质检机制
+
+- **STYLE_PROFILE.md 完整注入**：API 翻译（标题、正文、对比）已取消字符限制（提高至 100,000），每次都必须完整读取 `STYLE_PROFILE.md` 并注入 prompt。
+- **style_self_check 自检**：
+  - Gemini 输出 JSON 中必须包含 `style_self_check` 对象，确认自身已阅读并落实各项风格指南（包括 Xbox 规范、直角引号、重写标题副标题摘要、词库匹配等）。
+  - 如果 API 返回的 JSON 中缺失 `style_self_check` 或其中任何一项为 `false`，脚本会直接**拒收**（拒收时不会写入翻译 JSON，也不会从 `requests.json` 移除该文章，保证其在队列中等待下次处理）。
+- **本地硬校验规则**：不只依赖模型自检，脚本在写入前执行硬校验：
+  - 中文内容中严禁出现 `"Xbox"` 字符，必须全部写成大写的 `"XBOX"`。
+  - `"Xbox Series X|S"` 或 `"Xbox Series X/S"` 必须写为 `"XBOX Series"`；且严禁出现 `"XBOX Series X|S"`。
+  - 中文标题、副标题、摘要中不得残留英文双引号 `"`。
+  - 全文翻译拟定的标题和摘要，严禁直接沿用 index.json 中的旧 API 自动化标题摘要。
+  - 副标题（subtitle）不得为空，且不能明显复述标题内容。
+

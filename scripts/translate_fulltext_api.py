@@ -42,6 +42,7 @@ from prompt_blocks import (
     stable_json,
     translation_system_prompt,
     with_translation_style,
+    validate_style_check,
 )
 from translate_titles_deepseek import apply_title_dictionary, call_deepseek_response, extract_article_text, extract_json, flatten_dict_terms
 from usage_logger import record_deepseek_usage_safe
@@ -800,7 +801,14 @@ def translate_date(date: str, limit: int = 2) -> int:
                         details=details,
                         draft=data,
                     )
-                    continue
+            # Validation of style self-check and local checks
+            validation_errors = validate_style_check(data, article, is_fulltext=True)
+            if validation_errors:
+                details = "; ".join(validation_errors)
+                print(f"[REJECT] #{article_id} style check failed: {details}")
+                set_article_step(article_id, date=date, step="failed", progress=100, status="failed", message=f"风格拒收: {details}")
+                continue
+
             set_article_step(article_id, date=date, step="write", progress=92, message="写入译文文件")
             trans_path = DATA_DIR / date / "translations" / f"{article['id']:02d}.json"
             write_json(trans_path, data)

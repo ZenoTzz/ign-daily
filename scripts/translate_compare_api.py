@@ -157,6 +157,12 @@ def translate_once(
     data["translator"] = "api"
     data["translator_provider"] = "openai-compatible"
     data["translator_model"] = model
+    
+    from prompt_blocks import validate_style_check
+    validation_errors = validate_style_check(result, article, is_fulltext=True)
+    if validation_errors:
+        print(f"[WARN] compare #{article['id']} model {model} style check failed: {'; '.join(validation_errors)}")
+        
     return normalize_translation_currency(data)
 
 

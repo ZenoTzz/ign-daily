@@ -14,7 +14,7 @@ from typing import Any
 from common_paths import REPO_ROOT
 
 CACHE_PREFIX_VERSION = "ign-daily-translation-v7"
-TRANSLATION_STYLE_CHARS = 9000
+TRANSLATION_STYLE_CHARS = 100000
 FIXED_TRANSLATION_INSTRUCTION = (
     "你正在为 IGN Daily 翻译英文游戏/影视新闻。必须遵守词库、翻译指南和风格画像。"
     "中文标点使用全角；作品名用《》。人物原话和引用只用「」，禁止使用英文双引号或中文弯引号。"
@@ -104,7 +104,7 @@ def with_translation_style(payload: dict[str, Any]) -> dict[str, Any]:
     }
 
 
-def shared_rules_block(guide_chars: int = 14000, style_chars: int = 9000) -> dict[str, str]:
+def shared_rules_block(guide_chars: int = 14000, style_chars: int = 100000) -> dict[str, str]:
     return {
         "project": "IGN Daily",
         "fixed_instruction": FIXED_TRANSLATION_INSTRUCTION,
@@ -135,6 +135,7 @@ def title_user_payload(
         "task": {
             "name": "title_summary",
             "instructions": [
+                "你必须先阅读并执行 STYLE_PROFILE.md。翻译完成后，逐条按 STYLE_PROFILE.md 自检，再输出最终译文。",
                 "只生成首页元数据，不翻译全文。",
                 "标题要自然、有新闻感。",
                 "标题必须保留原文的主体、动作和归因；不要为了变短而改写成另一层意思。",
@@ -148,6 +149,17 @@ def title_user_payload(
             ],
             "allowed_categories": allowed_categories,
             "required_json_schema": {
+                "style_self_check": {
+                    "read_style_profile": True,
+                    "no_english_syntax": True,
+                    "title_rewritten": True,
+                    "subtitle_rewritten": True,
+                    "xbox_normalized": True,
+                    "xbox_series_normalized": True,
+                    "quotes_checked": True,
+                    "currency_checked": True,
+                    "dictionary_checked": True
+                },
                 "cn_title": "中文标题",
                 "summary": "中文摘要，80-160字",
                 "category": "必须从 allowed_categories 选一个",
@@ -176,6 +188,7 @@ def fulltext_user_payload(
         "task": {
             "name": "fulltext_translation",
             "instructions": [
+                "你必须先阅读并执行 STYLE_PROFILE.md。翻译完成后，逐条按 STYLE_PROFILE.md 自检，再输出最终译文。",
                 "逐段翻译 paragraphs_en。",
                 "必须保持段落数量和顺序一致。",
                 *FULLTEXT_SEMANTIC_INSTRUCTIONS,
@@ -186,6 +199,17 @@ def fulltext_user_payload(
             ],
             "paragraphs_en": paragraphs,
             "required_json_schema": {
+                "style_self_check": {
+                    "read_style_profile": True,
+                    "no_english_syntax": True,
+                    "title_rewritten": True,
+                    "subtitle_rewritten": True,
+                    "xbox_normalized": True,
+                    "xbox_series_normalized": True,
+                    "quotes_checked": True,
+                    "currency_checked": True,
+                    "dictionary_checked": True
+                },
                 "id": article.get("id"),
                 "url": article.get("url"),
                 "en_title": article.get("en_title"),
@@ -221,6 +245,7 @@ def chunk_user_payload(
         "task": {
             "name": "fulltext_chunk_retry",
             "instructions": [
+                "你必须先阅读并执行 STYLE_PROFILE.md。翻译完成后，逐条按 STYLE_PROFILE.md 自检，再输出最终译文。",
                 "只翻译本批 paragraphs_en。",
                 "必须返回与 paragraphs_en 数量完全一致的 paragraphs 数组。",
                 "每个元素必须包含 index 和 cn。",
@@ -228,7 +253,20 @@ def chunk_user_payload(
                 "每个 cn 里的外币金额必须补人民币换算。",
             ],
             "paragraphs_en": [{"index": idx, "en": en} for idx, en in chunk],
-            "required_json_schema": {"paragraphs": [{"index": 1, "cn": "中文译文"}]},
+            "required_json_schema": {
+                "style_self_check": {
+                    "read_style_profile": True,
+                    "no_english_syntax": True,
+                    "title_rewritten": True,
+                    "subtitle_rewritten": True,
+                    "xbox_normalized": True,
+                    "xbox_series_normalized": True,
+                    "quotes_checked": True,
+                    "currency_checked": True,
+                    "dictionary_checked": True
+                },
+                "paragraphs": [{"index": 1, "cn": "中文译文"}]
+            },
         },
         "matched_dictionary_terms": terms,
         "article_context": article_context_block(article, ""),
@@ -255,3 +293,88 @@ def nightly_user_payload(date: str, current_profile: str, samples: list[dict[str
             },
         },
     }
+
+
+def validate_style_check(result: dict[str, Any], article: dict[str, Any], is_fulltext: bool = True) -> list[str]:
+    import re
+    errors = []
+    
+    # 1. style_self_check validation
+    self_check = result.get("style_self_check")
+    if not self_check:
+        errors.append("style_self_check field is missing")
+    elif not isinstance(self_check, dict):
+        errors.append("style_self_check must be a JSON object")
+    else:
+        required_keys = [
+            "read_style_profile",
+            "no_english_syntax",
+            "title_rewritten",
+            "subtitle_rewritten",
+            "xbox_normalized",
+            "xbox_series_normalized",
+            "quotes_checked",
+            "currency_checked",
+            "dictionary_checked"
+        ]
+        for key in required_keys:
+            val = self_check.get(key)
+            if val is not True:
+                errors.append(f"style_self_check key '{key}' is not true (got {val})")
+
+    # 2. Local hard-checks
+    cn_title = str(result.get("cn_title") or "").strip()
+    subtitle = str(result.get("subtitle") or "").strip()
+    
+    summary_key = "opus_summary" if is_fulltext else "summary"
+    summary = str(result.get(summary_key) or "").strip()
+    
+    cn_texts = [cn_title, summary]
+    if is_fulltext:
+        cn_texts.append(subtitle)
+        for p in result.get("paragraphs", []):
+            if isinstance(p, dict):
+                cn_texts.append(str(p.get("cn") or "").strip())
+            else:
+                cn_texts.append(str(p).strip())
+                
+    full_cn_text = "\n".join(cn_texts)
+    lower_cn = full_cn_text.lower()
+    
+    # - 中文译文中不得出现 Xbox，必须写 XBOX
+    xbox_ci_count = lower_cn.count("xbox")
+    xbox_cs_count = full_cn_text.count("XBOX")
+    if xbox_ci_count != xbox_cs_count:
+        errors.append("Chinese translation contains invalid case variant of 'XBOX' (must write exactly 'XBOX')")
+        
+    # - Xbox Series X|S / Xbox Series X/S 必须写 XBOX Series
+    # - 不得出现 XBOX Series X|S
+    for forbidden in ["xbox series x|s", "xbox series x/s", "xbox series x", "xbox series s", "xbox series x|s"]:
+        if forbidden in lower_cn:
+            errors.append(f"Chinese translation contains forbidden platform spelling: '{forbidden}' (must write exactly 'XBOX Series')")
+            
+    # - 中文内容不得残留英文双引号
+    for text_val in cn_texts:
+        if '"' in text_val:
+            errors.append(f"Chinese text contains English double quotes: '{text_val}'")
+            
+    # - 标题、副标题、摘要不得直接沿用旧 API 标题摘要结果
+    old_cn_title = str(article.get("cn_title") or "").strip()
+    old_summary = str(article.get("summary") or "").strip()
+    
+    if cn_title and cn_title == old_cn_title:
+        errors.append(f"cn_title directly reuses the old title: '{cn_title}'")
+    if summary and summary == old_summary:
+        errors.append(f"summary directly reuses the old summary: '{summary}'")
+        
+    # - 副标题不能为空，也不能明显复述标题
+    if is_fulltext:
+        if not subtitle:
+            errors.append("subtitle is empty")
+        else:
+            clean_title = re.sub(r'[^\w]', '', cn_title)
+            clean_subtitle = re.sub(r'[^\w]', '', subtitle)
+            if clean_subtitle in clean_title or clean_title in clean_subtitle:
+                errors.append(f"subtitle '{subtitle}' repeats the title '{cn_title}'")
+                
+    return errors

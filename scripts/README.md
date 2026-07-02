@@ -185,6 +185,17 @@ python3 scripts/import_tencent_polish.py --all
 
 API prompt 的长规则块必须通过 `scripts/prompt_blocks.py` 生成。标题、全文、分段重试、全文修复和摘要修复统一使用 `translation_system_prompt()`；用户消息必须按“风格画像、固定任务规则、词库/文章动态数据”的顺序构造，并用 `stable_json()` 序列化。不要在各脚本里复制粘贴不同版本的 `TRANSLATION_GUIDE.md` / `STYLE_PROFILE.md` prompt，也不要随意调整稳定字段顺序，否则会让 DeepSeek 前缀缓存整体失效。
 
+## API 翻译双重风格校验 (Style self-check & Local checks)
+
+API 标题翻译、正文翻译和对比翻译已加入强风格自检与本地强质检：
+1. **模型端自检 (`style_self_check`)**：每次翻译均会完整读入 `STYLE_PROFILE.md`（无字数限制）。模型输出的 JSON 必须包含 `style_self_check` 字段，确认自身落实了风格指导项（包括 XBOX 规范、标点符号规范、标题重写等）。缺失或任一项不为 `true` 则脚本直接拒收。
+2. **本地硬校验**：脚本在写入译文前执行以下强校验：
+   - 中文内容中严禁出现 `"Xbox"`（必须写成 `"XBOX"`）；`"Xbox Series X|S"` 或 `"Xbox Series X/S"` 必须写为 `"XBOX Series"`（禁止出现 `"XBOX Series X|S"`）。
+   - 中文标点：标题、摘要、段落等中文内容中严禁残留英文双引号 `"`。
+   - 首页标题/摘要：全文翻译拟定的标题和摘要，严禁直接沿用 index.json 中的旧 API 自动化标题和摘要。
+   - 副标题：副标题（subtitle）不能为空，且不能明显复述标题内容。
+3. **拒收机制**：任何校验不通过均执行“拒收”（`[REJECT]`）：不写入 `translations/` 译文文件，且不从 `requests.json` 队列中移除文章，保留在任务列表中以便分析或重新发起翻译。
+
 所有会写仓库数据的 Actions（RSS、API 翻译、DeepSeek 用量快照、夜间学习）
 必须使用同一个 `concurrency.group: ign-daily-write-main`，避免多个任务同时写
 `data/*.json` 造成 rebase 冲突。

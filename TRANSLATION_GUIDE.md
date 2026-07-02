@@ -378,3 +378,25 @@ for cat in ['games','movies_tv','companies','people','media','terms']:
 ---
 
 *本文件是翻译风格的唯一权威来源。有冲突以本文件为准。*
+
+---
+
+## 🔍 风格自检与本地校验机制 (Style Self-Check & Hard Checks)
+
+为保证模型严格执行风格规范，翻译流程实施双重风格质检：
+
+### 1. 模型端风格自检 (Style Self-Check)
+在向 Gemini/API 发起标题翻译、全文翻译及对比翻译时，模型 prompt 中会**完整注入** `STYLE_PROFILE.md` 的内容（不受长度截断）。Gemini 在翻译完毕后会比对风格特征进行自检，并在输出 JSON 中包含 `style_self_check` 字段：
+- `read_style_profile`: 是否完整阅读并落实风格画像。
+- `no_english_syntax`: 是否排除了英文机翻语序。
+- `title_rewritten` 与 `subtitle_rewritten`: 是否重新拟定了标题与副标题（而非沿用原自动化产物）。
+- `xbox_normalized` 与 `xbox_series_normalized`: 是否完成 XBOX 与 XBOX Series 的平台名规范化。
+- `quotes_checked`、`currency_checked` 与 `dictionary_checked`: 是否核对了直角引号、外币金额换算和词库。
+
+### 2. 脚本本地硬校验规则 (Local Hard-Checks)
+本地脚本对模型产出的 JSON 执行强校验，任何不合规项将直接**拒收**（拒收时不会覆盖已有译文，且不从 `requests.json` 中移除文章）：
+- **XBOX 规范化**：中文译文里严禁出现 `"Xbox"`（必须写成 `"XBOX"`）；`"Xbox Series X|S"` 必须写为 `"XBOX Series"`（禁止出现 `"XBOX Series X|S"`）。
+- **英文标点**：中文文本中严禁残留英文双引号 `"`。
+- **标题与摘要重写**：全文翻译拟定的标题和摘要，严禁直接沿用 index.json 中的旧 API 自动化标题和摘要。
+- **副标题校验**：副标题（subtitle）不能为空，且不能明显复述或直接包含在标题内容中。
+
