@@ -744,6 +744,78 @@
       "total_tokens_including_reasoning": 13660,
       "prompt_cache_hit_tokens": 9728,
       "prompt_cache_miss_tokens": 2298
+    },
+    {
+      "time_cn": "2026-07-02 22:31:12",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 6,
+      "article_title": "ESRB Leaks Warhammer 40,000: Space Marine - Master Crafted Edition for PS5 and Nintendo Switch 2",
+      "article_url": "https://www.ign.com/articles/esrb-leaks-warhammer-40000-space-marine-master-crafted-edition-for-ps5-and-nintendo-switch-2",
+      "article_date": "2026-07-03",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00022405,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 10395,
+      "completion_tokens": 503,
+      "reasoning_tokens": 180,
+      "output_tokens_including_reasoning": 683,
+      "total_tokens": 10898,
+      "total_tokens_including_reasoning": 11078,
+      "prompt_cache_hit_tokens": 10368,
+      "prompt_cache_miss_tokens": 27
+    },
+    {
+      "time_cn": "2026-07-02 22:31:21",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 8,
+      "article_title": "Even KFC is Dunking on Sony, as the Dust Settles on PlayStation's Shock Decision to Kill Physical Game Discs",
+      "article_url": "https://www.ign.com/articles/even-kfc-is-dunking-on-sony-as-the-dust-settles-on-playstations-shock-decision-to-kill-physical-game-discs",
+      "article_date": "2026-07-03",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00045438,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 10841,
+      "completion_tokens": 633,
+      "reasoning_tokens": 336,
+      "output_tokens_including_reasoning": 969,
+      "total_tokens": 11474,
+      "total_tokens_including_reasoning": 11810,
+      "prompt_cache_hit_tokens": 9728,
+      "prompt_cache_miss_tokens": 1113
+    },
+    {
+      "time_cn": "2026-07-02 22:31:36",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 9,
+      "article_title": "Avowed, The Outer Worlds, and Fallout: New Vegas Developer Obsidian Entertainment Reportedly Also at Risk of Closure Amid Xbox 'Reset'",
+      "article_url": "https://www.ign.com/articles/avowed-the-outer-worlds-and-fallout-new-vegas-developer-obsidian-entertainment-reportedly-also-at-risk-of-closure-amid-xbox-reset",
+      "article_date": "2026-07-03",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00092254,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 11287,
+      "completion_tokens": 1339,
+      "reasoning_tokens": 1079,
+      "output_tokens_including_reasoning": 2418,
+      "total_tokens": 12626,
+      "total_tokens_including_reasoning": 13705,
+      "prompt_cache_hit_tokens": 9728,
+      "prompt_cache_miss_tokens": 1559
     }
   ]
 }

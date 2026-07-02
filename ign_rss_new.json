@@ -5,133 +5,117 @@
     "2026-07-02"
   ],
   "changed_dates": [
-    "2026-07-03"
+    "2026-07-03",
+    "2026-07-02"
   ],
   "new_target_dates": [
     "2026-07-03"
   ],
-  "new_count": 6,
-  "filtered_count": 0,
+  "new_count": 2,
+  "filtered_count": 2,
   "cleanup_count": 0,
-  "changed_count": 6,
+  "changed_count": 4,
   "articles": [
     {
-      "title": "'He Was on the Valium or Something': Matt Smith Can't Believe Keanu Reeves Was Spotted Watching the Infamously Terrible Movie Morbius on a Flight",
-      "url": "https://www.ign.com/articles/he-was-on-the-valium-or-something-matt-smith-cant-believe-keanu-reeves-was-spotted-watching-the-infamously-terrible-movie-morbius-on-a-flight",
-      "pubDate_cst": "2026-07-02 19:30",
+      "title": "Even KFC is Dunking on Sony, as the Dust Settles on PlayStation's Shock Decision to Kill Physical Game Discs",
+      "url": "https://www.ign.com/articles/even-kfc-is-dunking-on-sony-as-the-dust-settles-on-playstations-shock-decision-to-kill-physical-game-discs",
+      "pubDate_cst": "2026-07-02 21:15",
       "category": "游戏新闻",
       "emoji": "🎮",
       "source_type": "rss"
     },
     {
-      "title": "Apple TV Teases Neuromancer Adaptation With an Iconic Line From William Gibson's Influential Cyberpunk Novel",
-      "url": "https://www.ign.com/articles/apple-tv-teases-neuromancer-adaptation-with-an-iconic-line-from-william-gibsons-influential-cyberpunk-novel",
-      "pubDate_cst": "2026-07-02 19:28",
-      "category": "游戏新闻",
-      "emoji": "🎮",
-      "source_type": "rss"
-    },
-    {
-      "title": "PlayStation’s Physical Media-Free Future Isn’t Just Concerning, It’s Offensive",
-      "url": "https://www.ign.com/articles/playstations-physical-media-free-future-isnt-just-concerning-its-offensive",
-      "pubDate_cst": "2026-07-02 19:00",
-      "category": "游戏新闻",
-      "emoji": "🎮",
-      "source_type": "rss"
-    },
-    {
-      "title": "'I'll Do a Time Capsule for Them': How Long Will Hugh Jackman Play Wolverine? Marvel Star Suggests There's No Need to Think About Handing Over The Role Just Yet",
-      "url": "https://www.ign.com/articles/ill-do-a-time-capsule-for-them-how-long-will-hugh-jackman-play-wolverine-marvel-star-suggests-theres-no-need-to-think-about-handing-over-the-role-just-yet",
-      "pubDate_cst": "2026-07-02 18:05",
-      "category": "游戏新闻",
-      "emoji": "🎮",
-      "source_type": "rss"
-    },
-    {
-      "title": "ESRB Leaks Warhammer 40,000: Space Marine - Master Crafted Edition for PS5 and Nintendo Switch 2",
-      "url": "https://www.ign.com/articles/esrb-leaks-warhammer-40000-space-marine-master-crafted-edition-for-ps5-and-nintendo-switch-2",
-      "pubDate_cst": "2026-07-02 17:45",
-      "category": "游戏新闻",
-      "emoji": "🎮",
-      "source_type": "rss"
-    },
-    {
-      "title": "Pokémon TCG: Full Release Schedule for 2026 and Beyond",
-      "url": "https://www.ign.com/articles/pokemon-tcg-full-release-schedule-calendar-2026",
-      "pubDate_cst": "2026-07-02 17:45",
+      "title": "Avowed, The Outer Worlds, and Fallout: New Vegas Developer Obsidian Entertainment Reportedly Also at Risk of Closure Amid Xbox 'Reset'",
+      "url": "https://www.ign.com/articles/avowed-the-outer-worlds-and-fallout-new-vegas-developer-obsidian-entertainment-reportedly-also-at-risk-of-closure-amid-xbox-reset",
+      "pubDate_cst": "2026-07-02 21:56",
       "category": "游戏新闻",
       "emoji": "🎮",
       "source_type": "rss"
     }
   ],
-  "filtered_articles": [],
+  "filtered_articles": [
+    {
+      "title": "Get 10 Months of Xbox Game Pass Ultimate for £73 in Today's Best UK Deals",
+      "url": "https://www.ign.com/articles/get-10-months-of-xbox-game-pass-ultimate-for-73-in-todays-best-uk-deals",
+      "pubDate_cst": "2026-07-02 21:01",
+      "description": "Score 10 months of Xbox Game Pass Ultimate for just £73 using an improved EA Play loophole, plus check out massive UK deals on Corsair, Sony, and Apple tech.",
+      "categories": "",
+      "reason": "text:\\bbest .+ deals?\\b",
+      "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
+      "filtered_at_cn": "2026-07-02 22:30:59",
+      "status": "filtered"
+    },
+    {
+      "title": "Upcoming LEGO Sets: Release Dates for July 2026 and Beyond",
+      "url": "https://www.ign.com/articles/upcoming-lego-set-release-dates",
+      "pubDate_cst": "2026-07-02 00:30",
+      "description": "A frequently updated list of all the biggest upcoming LEGO sets, along with their release dates, pricing, and more.",
+      "categories": "",
+      "reason": "text:\\blego sets?\\b",
+      "rss_url": "https://www.ign.com/rss/articles/feed?start=20&count=20",
+      "filtered_at_cn": "2026-07-02 22:30:59",
+      "status": "filtered"
+    }
+  ],
   "runs": [
     {
       "target_date": "2026-07-03",
-      "new_count": 6,
-      "filtered_count": 0,
-      "changed_count": 6,
-      "next_id": 8,
+      "new_count": 2,
+      "filtered_count": 1,
+      "changed_count": 3,
+      "next_id": 10,
       "articles": [
         {
-          "title": "'He Was on the Valium or Something': Matt Smith Can't Believe Keanu Reeves Was Spotted Watching the Infamously Terrible Movie Morbius on a Flight",
-          "url": "https://www.ign.com/articles/he-was-on-the-valium-or-something-matt-smith-cant-believe-keanu-reeves-was-spotted-watching-the-infamously-terrible-movie-morbius-on-a-flight",
-          "pubDate_cst": "2026-07-02 19:30",
+          "title": "Even KFC is Dunking on Sony, as the Dust Settles on PlayStation's Shock Decision to Kill Physical Game Discs",
+          "url": "https://www.ign.com/articles/even-kfc-is-dunking-on-sony-as-the-dust-settles-on-playstations-shock-decision-to-kill-physical-game-discs",
+          "pubDate_cst": "2026-07-02 21:15",
           "category": "游戏新闻",
           "emoji": "🎮",
           "source_type": "rss"
         },
         {
-          "title": "Apple TV Teases Neuromancer Adaptation With an Iconic Line From William Gibson's Influential Cyberpunk Novel",
-          "url": "https://www.ign.com/articles/apple-tv-teases-neuromancer-adaptation-with-an-iconic-line-from-william-gibsons-influential-cyberpunk-novel",
-          "pubDate_cst": "2026-07-02 19:28",
-          "category": "游戏新闻",
-          "emoji": "🎮",
-          "source_type": "rss"
-        },
-        {
-          "title": "PlayStation’s Physical Media-Free Future Isn’t Just Concerning, It’s Offensive",
-          "url": "https://www.ign.com/articles/playstations-physical-media-free-future-isnt-just-concerning-its-offensive",
-          "pubDate_cst": "2026-07-02 19:00",
-          "category": "游戏新闻",
-          "emoji": "🎮",
-          "source_type": "rss"
-        },
-        {
-          "title": "'I'll Do a Time Capsule for Them': How Long Will Hugh Jackman Play Wolverine? Marvel Star Suggests There's No Need to Think About Handing Over The Role Just Yet",
-          "url": "https://www.ign.com/articles/ill-do-a-time-capsule-for-them-how-long-will-hugh-jackman-play-wolverine-marvel-star-suggests-theres-no-need-to-think-about-handing-over-the-role-just-yet",
-          "pubDate_cst": "2026-07-02 18:05",
-          "category": "游戏新闻",
-          "emoji": "🎮",
-          "source_type": "rss"
-        },
-        {
-          "title": "ESRB Leaks Warhammer 40,000: Space Marine - Master Crafted Edition for PS5 and Nintendo Switch 2",
-          "url": "https://www.ign.com/articles/esrb-leaks-warhammer-40000-space-marine-master-crafted-edition-for-ps5-and-nintendo-switch-2",
-          "pubDate_cst": "2026-07-02 17:45",
-          "category": "游戏新闻",
-          "emoji": "🎮",
-          "source_type": "rss"
-        },
-        {
-          "title": "Pokémon TCG: Full Release Schedule for 2026 and Beyond",
-          "url": "https://www.ign.com/articles/pokemon-tcg-full-release-schedule-calendar-2026",
-          "pubDate_cst": "2026-07-02 17:45",
+          "title": "Avowed, The Outer Worlds, and Fallout: New Vegas Developer Obsidian Entertainment Reportedly Also at Risk of Closure Amid Xbox 'Reset'",
+          "url": "https://www.ign.com/articles/avowed-the-outer-worlds-and-fallout-new-vegas-developer-obsidian-entertainment-reportedly-also-at-risk-of-closure-amid-xbox-reset",
+          "pubDate_cst": "2026-07-02 21:56",
           "category": "游戏新闻",
           "emoji": "🎮",
           "source_type": "rss"
         }
       ],
-      "filtered_articles": []
+      "filtered_articles": [
+        {
+          "title": "Get 10 Months of Xbox Game Pass Ultimate for £73 in Today's Best UK Deals",
+          "url": "https://www.ign.com/articles/get-10-months-of-xbox-game-pass-ultimate-for-73-in-todays-best-uk-deals",
+          "pubDate_cst": "2026-07-02 21:01",
+          "description": "Score 10 months of Xbox Game Pass Ultimate for just £73 using an improved EA Play loophole, plus check out massive UK deals on Corsair, Sony, and Apple tech.",
+          "categories": "",
+          "reason": "text:\\bbest .+ deals?\\b",
+          "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
+          "filtered_at_cn": "2026-07-02 22:30:59",
+          "status": "filtered"
+        }
+      ]
     },
     {
       "target_date": "2026-07-02",
       "new_count": 0,
-      "filtered_count": 0,
-      "changed_count": 0,
+      "filtered_count": 1,
+      "changed_count": 1,
       "next_id": 43,
       "articles": [],
-      "filtered_articles": []
+      "filtered_articles": [
+        {
+          "title": "Upcoming LEGO Sets: Release Dates for July 2026 and Beyond",
+          "url": "https://www.ign.com/articles/upcoming-lego-set-release-dates",
+          "pubDate_cst": "2026-07-02 00:30",
+          "description": "A frequently updated list of all the biggest upcoming LEGO sets, along with their release dates, pricing, and more.",
+          "categories": "",
+          "reason": "text:\\blego sets?\\b",
+          "rss_url": "https://www.ign.com/rss/articles/feed?start=20&count=20",
+          "filtered_at_cn": "2026-07-02 22:30:59",
+          "status": "filtered"
+        }
+      ]
     }
   ]
 }
