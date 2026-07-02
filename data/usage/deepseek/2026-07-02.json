@@ -456,6 +456,78 @@
       "total_tokens_including_reasoning": 11473,
       "prompt_cache_hit_tokens": 8448,
       "prompt_cache_miss_tokens": 1380
+    },
+    {
+      "time_cn": "2026-07-02 09:18:05",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 1,
+      "article_title": "Onimusha: Way of the Sword Release Date Moved Forward",
+      "article_url": "https://www.ign.com/articles/onimusha-way-of-the-sword-release-date-moved-forward",
+      "article_date": "2026-07-03",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00048845,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9044,
+      "completion_tokens": 792,
+      "reasoning_tokens": 570,
+      "output_tokens_including_reasoning": 1362,
+      "total_tokens": 9836,
+      "total_tokens_including_reasoning": 10406,
+      "prompt_cache_hit_tokens": 8448,
+      "prompt_cache_miss_tokens": 596
+    },
+    {
+      "time_cn": "2026-07-02 09:18:16",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 38,
+      "article_title": "Marvel Super Heroes Comes to Magic: The Gathering",
+      "article_url": "https://www.ign.com/articles/marvel-super-heroes-comes-to-magic-the-gathering",
+      "article_date": "2026-07-02",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00073093,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 10638,
+      "completion_tokens": 807,
+      "reasoning_tokens": 624,
+      "output_tokens_including_reasoning": 1431,
+      "total_tokens": 11445,
+      "total_tokens_including_reasoning": 12069,
+      "prompt_cache_hit_tokens": 8448,
+      "prompt_cache_miss_tokens": 2190
+    },
+    {
+      "time_cn": "2026-07-02 09:18:25",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 39,
+      "article_title": "Marvel Refused to Tell Sadie Sink About Her Spider-Man: Brand New Day Character Until Filming Started",
+      "article_url": "https://www.ign.com/articles/marvel-refused-to-tell-sadie-sink-about-her-spider-man-brand-new-day-character-until-filming-started",
+      "article_date": "2026-07-02",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00046507,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 9135,
+      "completion_tokens": 732,
+      "reasoning_tokens": 501,
+      "output_tokens_including_reasoning": 1233,
+      "total_tokens": 9867,
+      "total_tokens_including_reasoning": 10368,
+      "prompt_cache_hit_tokens": 8448,
+      "prompt_cache_miss_tokens": 687
     }
   ]
 }
