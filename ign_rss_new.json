@@ -10,82 +10,114 @@
   "new_target_dates": [
     "2026-07-03"
   ],
-  "new_count": 1,
+  "new_count": 3,
   "filtered_count": 2,
   "cleanup_count": 0,
-  "changed_count": 3,
+  "changed_count": 5,
   "articles": [
     {
-      "title": "Hellraiser: Revival Is a Horror-Action Game That Borrows from Resident Evil and P.T. | IGN Preview",
-      "url": "https://www.ign.com/articles/hellraiser-revival-preview-horror-action-resident-evil-pt",
-      "pubDate_cst": "2026-07-03 03:44",
+      "title": "GTA 6 Would Probably Run on the Steam Machine",
+      "url": "https://www.ign.com/articles/gta-6-would-probably-run-on-the-steam-machine",
+      "pubDate_cst": "2026-07-03 04:03",
       "category": "游戏新闻",
       "emoji": "🎮",
+      "source_type": "rss"
+    },
+    {
+      "title": "Silent Hill: Townfall Continues To Revitalize the Series in New, Horrifying Ways | IGN Preview",
+      "url": "https://www.ign.com/articles/silent-hill-townfall-continues-to-revitalize-the-series-in-new-horrifying-ways-ign-preview",
+      "pubDate_cst": "2026-07-03 04:50",
+      "category": "游戏新闻",
+      "emoji": "🎮",
+      "source_type": "rss"
+    },
+    {
+      "title": "Silo Season 3 Review",
+      "url": "https://www.ign.com/articles/silo-season-3-review",
+      "pubDate_cst": "2026-07-03 04:45",
+      "category": "游戏评测",
+      "emoji": "⭐",
       "source_type": "rss"
     }
   ],
   "filtered_articles": [
     {
-      "title": "The Coslus C20 Cordless Rechargeable Water Flosser Drops 83% to Just $6.99",
-      "url": "https://www.ign.com/articles/coslus-c20-cordless-rechargeable-water-flosser-deal",
-      "pubDate_cst": "2026-07-03 02:40",
-      "description": "Even gamers should practice good oral hygiene.",
+      "title": "Get a 48V 500W Adult Electric Scooter with 22-Mile Range and a Top Speed of 22mph for $155",
+      "url": "https://www.ign.com/articles/aovopro-tmax-48v-500w-adult-electric-scooter-deal-aliexpress-fourth-of-july-day-sale",
+      "pubDate_cst": "2026-07-03 04:15",
+      "description": "The most powerful e-scooter I've seen for under $200.",
       "categories": "",
-      "reason": "url:deal",
+      "reason": "text:\\bunder \\$\\d+",
       "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
-      "filtered_at_cn": "2026-07-03 04:09:11",
+      "filtered_at_cn": "2026-07-03 05:34:59",
       "status": "filtered"
     },
     {
-      "title": "Walmart Has the Lowest Price on a GeForce RTX 5070 Prebuilt Gaming PC in 2026",
-      "url": "https://www.ign.com/articles/walmart-has-the-lowest-price-on-a-geforce-rtx-5070-prebuilt-gaming-pc-in-2026",
-      "pubDate_cst": "2026-07-03 02:30",
-      "description": "The CyberPowerPC Gamer Xtreme even has the new 2026 Intel Arrow Lake Refresh CPU.",
+      "title": "6 Standout TV Deals From Best Buy’s 4th of July Sale",
+      "url": "https://www.ign.com/articles/best-buy-4th-of-july-tv-sale-2026",
+      "pubDate_cst": "2026-07-03 04:05",
+      "description": "Celebrate America’s birthday with a major screen upgrade for less.",
       "categories": "",
-      "reason": "text:\\blowest price\\b",
+      "reason": "url:sale",
       "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
-      "filtered_at_cn": "2026-07-03 04:09:11",
+      "filtered_at_cn": "2026-07-03 05:34:59",
       "status": "filtered"
     }
   ],
   "runs": [
     {
       "target_date": "2026-07-03",
-      "new_count": 1,
+      "new_count": 3,
       "filtered_count": 2,
-      "changed_count": 3,
-      "next_id": 16,
+      "changed_count": 5,
+      "next_id": 19,
       "articles": [
         {
-          "title": "Hellraiser: Revival Is a Horror-Action Game That Borrows from Resident Evil and P.T. | IGN Preview",
-          "url": "https://www.ign.com/articles/hellraiser-revival-preview-horror-action-resident-evil-pt",
-          "pubDate_cst": "2026-07-03 03:44",
+          "title": "GTA 6 Would Probably Run on the Steam Machine",
+          "url": "https://www.ign.com/articles/gta-6-would-probably-run-on-the-steam-machine",
+          "pubDate_cst": "2026-07-03 04:03",
           "category": "游戏新闻",
           "emoji": "🎮",
+          "source_type": "rss"
+        },
+        {
+          "title": "Silent Hill: Townfall Continues To Revitalize the Series in New, Horrifying Ways | IGN Preview",
+          "url": "https://www.ign.com/articles/silent-hill-townfall-continues-to-revitalize-the-series-in-new-horrifying-ways-ign-preview",
+          "pubDate_cst": "2026-07-03 04:50",
+          "category": "游戏新闻",
+          "emoji": "🎮",
+          "source_type": "rss"
+        },
+        {
+          "title": "Silo Season 3 Review",
+          "url": "https://www.ign.com/articles/silo-season-3-review",
+          "pubDate_cst": "2026-07-03 04:45",
+          "category": "游戏评测",
+          "emoji": "⭐",
           "source_type": "rss"
         }
       ],
       "filtered_articles": [
         {
-          "title": "The Coslus C20 Cordless Rechargeable Water Flosser Drops 83% to Just $6.99",
-          "url": "https://www.ign.com/articles/coslus-c20-cordless-rechargeable-water-flosser-deal",
-          "pubDate_cst": "2026-07-03 02:40",
-          "description": "Even gamers should practice good oral hygiene.",
+          "title": "Get a 48V 500W Adult Electric Scooter with 22-Mile Range and a Top Speed of 22mph for $155",
+          "url": "https://www.ign.com/articles/aovopro-tmax-48v-500w-adult-electric-scooter-deal-aliexpress-fourth-of-july-day-sale",
+          "pubDate_cst": "2026-07-03 04:15",
+          "description": "The most powerful e-scooter I've seen for under $200.",
           "categories": "",
-          "reason": "url:deal",
+          "reason": "text:\\bunder \\$\\d+",
           "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
-          "filtered_at_cn": "2026-07-03 04:09:11",
+          "filtered_at_cn": "2026-07-03 05:34:59",
           "status": "filtered"
         },
         {
-          "title": "Walmart Has the Lowest Price on a GeForce RTX 5070 Prebuilt Gaming PC in 2026",
-          "url": "https://www.ign.com/articles/walmart-has-the-lowest-price-on-a-geforce-rtx-5070-prebuilt-gaming-pc-in-2026",
-          "pubDate_cst": "2026-07-03 02:30",
-          "description": "The CyberPowerPC Gamer Xtreme even has the new 2026 Intel Arrow Lake Refresh CPU.",
+          "title": "6 Standout TV Deals From Best Buy’s 4th of July Sale",
+          "url": "https://www.ign.com/articles/best-buy-4th-of-july-tv-sale-2026",
+          "pubDate_cst": "2026-07-03 04:05",
+          "description": "Celebrate America’s birthday with a major screen upgrade for less.",
           "categories": "",
-          "reason": "text:\\blowest price\\b",
+          "reason": "url:sale",
           "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
-          "filtered_at_cn": "2026-07-03 04:09:11",
+          "filtered_at_cn": "2026-07-03 05:34:59",
           "status": "filtered"
         }
       ]

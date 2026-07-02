@@ -192,6 +192,78 @@
       "total_tokens_including_reasoning": 14686,
       "prompt_cache_hit_tokens": 9728,
       "prompt_cache_miss_tokens": 1438
+    },
+    {
+      "time_cn": "2026-07-03 05:35:19",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 16,
+      "article_title": "GTA 6 Would Probably Run on the Steam Machine",
+      "article_url": "https://www.ign.com/articles/gta-6-would-probably-run-on-the-steam-machine",
+      "article_date": "2026-07-03",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00068314,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 11385,
+      "completion_tokens": 884,
+      "reasoning_tokens": 630,
+      "output_tokens_including_reasoning": 1514,
+      "total_tokens": 12269,
+      "total_tokens_including_reasoning": 12899,
+      "prompt_cache_hit_tokens": 9728,
+      "prompt_cache_miss_tokens": 1657
+    },
+    {
+      "time_cn": "2026-07-03 05:35:37",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 17,
+      "article_title": "Silent Hill: Townfall Continues To Revitalize the Series in New, Horrifying Ways | IGN Preview",
+      "article_url": "https://www.ign.com/articles/silent-hill-townfall-continues-to-revitalize-the-series-in-new-horrifying-ways-ign-preview",
+      "article_date": "2026-07-03",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00091162,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 11209,
+      "completion_tokens": 1322,
+      "reasoning_tokens": 1096,
+      "output_tokens_including_reasoning": 2418,
+      "total_tokens": 12531,
+      "total_tokens_including_reasoning": 13627,
+      "prompt_cache_hit_tokens": 9728,
+      "prompt_cache_miss_tokens": 1481
+    },
+    {
+      "time_cn": "2026-07-03 05:35:49",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 18,
+      "article_title": "Silo Season 3 Review",
+      "article_url": "https://www.ign.com/articles/silo-season-3-review",
+      "article_date": "2026-07-03",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00055014,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 11001,
+      "completion_tokens": 734,
+      "reasoning_tokens": 497,
+      "output_tokens_including_reasoning": 1231,
+      "total_tokens": 11735,
+      "total_tokens_including_reasoning": 12232,
+      "prompt_cache_hit_tokens": 9728,
+      "prompt_cache_miss_tokens": 1273
     }
   ]
 }
