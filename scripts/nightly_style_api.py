@@ -357,7 +357,8 @@ def build_weekly_report(evidence: dict[str, Any], date: str) -> dict[str, Any]:
         if not isinstance(entry, dict):
             continue
         days = set(entry.get("days", []))
-        if days.intersection(week_dates) or entry.get("status") in ("ready_for_review", "confirmed_by_feedback"):
+        status = entry.get("status")
+        if days.intersection(week_dates) or status in ("ready_for_review", "confirmed_by_feedback", "confirmed"):
             candidates.append(entry)
     candidates.sort(key=lambda r: (
         0 if r.get("status") == "ready_for_review" else 1,
@@ -372,7 +373,7 @@ def build_weekly_report(evidence: dict[str, Any], date: str) -> dict[str, Any]:
         "summary": {
             "candidate_count": len(candidates),
             "ready_for_review": sum(1 for r in candidates if r.get("status") == "ready_for_review"),
-            "confirmed_by_feedback": sum(1 for r in candidates if r.get("status") == "confirmed_by_feedback"),
+            "confirmed_by_feedback": sum(1 for r in candidates if r.get("status") in ("confirmed_by_feedback", "confirmed")),
             "pending": sum(1 for r in candidates if r.get("status") == "pending"),
         },
         "candidates": candidates[:40],

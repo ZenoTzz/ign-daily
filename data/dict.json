@@ -2,7 +2,7 @@
   "_meta": {
     "description": "游戏/影视名称中英文对照词库，翻译时必须查询此词库，有匹配则直接使用",
     "source": "IGN中国 (ign.com.cn) + B站IGN中国 (space.bilibili.com/652239032) + 中国玩家圈公认译名",
-    "last_updated": "2026-07-01",
+    "last_updated": "2026-07-02",
     "source_legend": {
       "ign_cn": "IGN中国官网 ign.com.cn 确认",
       "bilibili": "B站IGN中国主页视频标题/简介确认",
@@ -1356,6 +1356,18 @@
     "Marvel's Blade": {
       "cn": "漫威刀锋战士",
       "source": "user"
+    },
+    "Dead or Alive 6: Last Round": {
+      "cn": "死或生6：Last Round",
+      "source": "user"
+    },
+    "Fallout: New Vegas": {
+      "cn": "辐射：新维加斯",
+      "source": "user"
+    },
+    "Star Wars: Eclipse": {
+      "cn": "星球大战：日蚀",
+      "source": "user"
     }
   },
   "movies_tv": {
@@ -1539,6 +1551,10 @@
     },
     "Friday the 13th": {
       "cn": "十三号星期五",
+      "source": "user"
+    },
+    "Cyberpunk: Edgerunners 2": {
+      "cn": "赛博朋克：边缘行者2",
       "source": "user"
     }
   },
@@ -1879,6 +1895,10 @@
     },
     "Keisuke Nakashima": {
       "cn": "中岛启辅",
+      "source": "user"
+    },
+    "Christopher Nolan": {
+      "cn": "克里斯托弗·诺兰",
       "source": "user"
     }
   },
@@ -2537,6 +2557,38 @@
     },
     "Summer Game Fest": {
       "cn": "夏日游戏节",
+      "source": "user"
+    },
+    "Xbox": {
+      "cn": "XBOX",
+      "source": "user"
+    },
+    "XBOX": {
+      "cn": "XBOX",
+      "source": "user"
+    },
+    "Xbox Series X/S": {
+      "cn": "XBOX Series",
+      "source": "user"
+    },
+    "Xbox Series X|S": {
+      "cn": "XBOX Series",
+      "source": "user"
+    },
+    "Xbox Series": {
+      "cn": "XBOX Series",
+      "source": "user"
+    },
+    "PlayStation 5": {
+      "cn": "PS5",
+      "source": "user"
+    },
+    "Nintendo Switch 2": {
+      "cn": "Switch 2",
+      "source": "user"
+    },
+    "Twitter": {
+      "cn": "X",
       "source": "user"
     }
   },
