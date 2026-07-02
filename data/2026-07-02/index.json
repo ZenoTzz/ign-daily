@@ -37,13 +37,13 @@
       "category": "行业动态",
       "emoji": "😢",
       "en_title": "'We Are Deeply Saddened' - Games Retailers and Historians Respond to PlayStation Abandoning Physical Media",
-      "cn_title": "零售商和历史学家回应PlayStation放弃实体光盘：感到「深切悲伤」",
-      "summary": "PlayStation宣布将于2028年1月停止生产游戏光盘，引发游戏零售商和历史学家的强烈反响。游戏历史保护组织对缺乏数字内容的长期保存方案表示失望，实体媒体倡导者Lost in Cult称这是「深切悲伤」的消息。与此同时，GameStop顾客用XBOX 360老游戏兑换了逾1000美元(约合人民币6800元)积分购买PS5游戏，讽刺的是，这些游戏可能在未来也无光驱可读。另有报道称下一代XBOX将取消光驱。",
+      "cn_title": "PlayStation放弃实体光盘，零售商和历史学家深感悲伤",
+      "summary": "PlayStation将于2028年1月停止生产游戏光盘，引发游戏历史保存组织、实体媒介倡导者Lost in Cult、GOG和GameStop等回应。多方担忧数字游戏长期保存与下一代主机实体媒介前景。",
       "url": "https://www.ign.com/articles/we-are-deeply-saddened-games-retailers-and-historians-respond-to-playstation-abandoning-physical-media",
       "publish_time_cn": "2026-07-02 06:53",
       "pub_date": "2026-07-02 06:53",
-      "cover_image": "https://assets-prd.ignimgs.com/2023/10/09/ps5console-1696871037273.jpeg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2023/10/09/ps5console-1696871037273.jpeg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2023/10/09/ps5console-1696871037273.jpeg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2023/10/09/ps5console-1696871037273.jpeg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -61,20 +61,21 @@
           "source": "ai_guess",
           "reason": "小众出版社，无通用中文译名"
         }
-      ]
+      ],
+      "translation_path": "translations/36.json"
     },
     {
       "id": 33,
       "category": "游戏新闻",
       "emoji": "🎮",
       "en_title": "Ex-Modern Warfare Creative Strategist Launches New Studio, Pushing Back Against Live Service Trends",
-      "cn_title": "前《使命召唤：现代战争》创意策略师成立新工作室，抵制服务型游戏",
-      "summary": "Robert Bowling（前《使命召唤：现代战争》三部曲创意策略师）宣布成立新工作室//18.bravo，首款作品为一款包含单人剧情与PvP的第一人称射击游戏。工作室明确反对服务型游戏模式，强调即使工作室倒闭，游戏也能通过P2P架构继续游玩，且所有代码和资产将开源。此外，领导层薪酬与员工成功挂钩，并推行利润分享计划。",
+      "cn_title": "前《现代战争》创意策划成立新工作室，反击服务型游戏潮流",
+      "summary": "前Infinity Ward创意策划Robert Bowling成立新工作室//18.bravo，首作是一款含单人剧情和PvP的FPS。工作室反对服务型游戏模式，并承诺若关闭将开源资产和代码。",
       "url": "https://www.ign.com/articles/ex-modern-warfare-creative-strategist-launches-new-studio-pushing-back-against-live-service-trends",
       "publish_time_cn": "2026-07-02 04:33",
       "pub_date": "2026-07-02 04:33",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/07/01/modern-warfare-2-2009-key-art-1782937714574.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/07/01/modern-warfare-2-2009-key-art-1782937714574.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/07/01/modern-warfare-2-2009-key-art-1782937714574.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/07/01/modern-warfare-2-2009-key-art-1782937714574.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -83,20 +84,21 @@
         "https://assets-prd.ignimgs.com/2026/07/01/modern-warfare-2-2009-key-art-1782937714574.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-07-02T06:08:24+08:00"
+      "source_fetched_at": "2026-07-02T06:08:24+08:00",
+      "translation_path": "translations/33.json"
     },
     {
       "id": 28,
       "category": "游戏新闻",
       "emoji": "🎮",
       "en_title": "Next Metroid Game for Switch 2 Reportedly Leaked in Age Rating From Brazilian Government",
-      "cn_title": "《密特罗德》新作疑似遭巴西政府评级泄露",
-      "summary": "巴西司法与公共安全部的一份年龄分级文件疑似泄露了下一款《密特罗德》游戏，文件标题为《Metroid Ravenous》，制作年份显示为2026年，建议评级为「12岁以下不推荐」。该截图在网络上迅速传播，IGN无法证实其真实性。玩家猜测本作可能是《密特罗德 恐惧》的续作，与反派鸟人士官长有关。",
+      "cn_title": "《密特罗德》新作疑遭巴西评级泄露，或登陆Switch 2",
+      "summary": "巴西司法与公共安全部的年龄评级文件疑似泄露了下一款《密特罗德》游戏《Metroid Ravenous》。IGN无法确认文件真伪，但玩家猜测它可能是《密特罗德：生存恐惧》的续作。",
       "url": "https://www.ign.com/articles/next-metroid-game-for-switch-2-reportedly-leaked-in-age-rating-from-brazilian-government",
       "publish_time_cn": "2026-07-02 03:31",
       "pub_date": "2026-07-02 03:31",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/06/23/metroid-prime-4-ign-prime-day-deal-4-1782216788899.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/23/metroid-prime-4-ign-prime-day-deal-4-1782216788899.png",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/23/metroid-prime-4-ign-prime-day-deal-4-1782216788899.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/23/metroid-prime-4-ign-prime-day-deal-4-1782216788899.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -115,14 +117,15 @@
           "source": "ai_guess",
           "reason": "官方译名待确认"
         }
-      ]
+      ],
+      "translation_path": "translations/28.json"
     },
     {
       "id": 29,
       "category": "游戏新闻",
       "emoji": "🥊",
       "en_title": "Virtua Fighter Crossroads Producer Says the Game Was Inspired by HBO's Watchmen Series",
-      "cn_title": "《VR战士》新作制作人称受《守望者》剧集启发",
+      "cn_title": "《VR战士》新作制作人称受HBO《守望者》启发",
       "summary": "《VR战士：十字路口》(Virtua Fighter Crossroads)制作人Riichiro Yamada透露，《守望者》(Watchmen)剧集给了他最大启发——并非因为故事本身，而是它成功让一部33年前的老漫画回归主流。游戏设定在《VR战士5》事件10-20年后，聚焦经典角色的「复出」，将以剧情驱动模式并注重通过玩法叙事，而非依赖过场动画。本作预定2027年发售。",
       "url": "https://www.ign.com/articles/virtua-fighter-crossroads-producer-says-the-game-was-inspired-by-hbos-watchmen-series",
       "publish_time_cn": "2026-07-02 02:28",
@@ -197,13 +200,13 @@
       "category": "行业动态",
       "emoji": "💿",
       "en_title": "Xbox's New Console, Project Helix, Will Reportedly Not Have a Disc Drive; Microsoft Exploring Ways to Digitize Physical Games",
-      "cn_title": "XBOX新主机Project Helix据称无光驱，微软探索光盘转数字功能",
-      "summary": "据最新报道，微软下一代XBOX主机Project Helix将不配备光驱。同时，微软正在探索一项光盘转数字功能，允许玩家将实体光盘转换为数字许可证，但转换后无法转售或借出。该功能仅适用于XBOX One和XBOX Series X|S游戏。XBOX尚未官方表态。",
+      "cn_title": "XBOX新主机Project Helix据称无光驱，微软探索实体盘数字化",
+      "summary": "新报道称，代号Project Helix的下一代XBOX可能不配备光驱。微软还在探索光盘转数字授权功能，让玩家把实体盘转为数字许可，但这也会限制转售和借出。",
       "url": "https://www.ign.com/articles/xboxs-new-console-project-helix-will-reportedly-not-have-a-disc-drive-microsoft-exploring-ways-to-digitize-physical-games",
       "publish_time_cn": "2026-07-02 02:08",
       "pub_date": "2026-07-02 02:08",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/05/06/screenshot-2026-05-06-162907-1778081413883.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/05/06/screenshot-2026-05-06-162907-1778081413883.png",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/05/06/screenshot-2026-05-06-162907-1778081413883.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/05/06/screenshot-2026-05-06-162907-1778081413883.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -212,7 +215,8 @@
         "https://assets-prd.ignimgs.com/2026/05/06/screenshot-2026-05-06-162907-1778081413883.png"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-07-02T02:18:20+08:00"
+      "source_fetched_at": "2026-07-02T02:18:20+08:00",
+      "translation_path": "translations/26.json"
     },
     {
       "id": 27,
@@ -308,13 +312,13 @@
       "category": "行业动态",
       "emoji": "💥",
       "en_title": "'This Is Borderline Evil' - Minecraft Creator Speaks Out Against ESA Calling Private Servers 'Illegal'",
-      "cn_title": "「这是近乎邪恶」《我的世界》创造者痛批ESA称私人服务器非法",
-      "summary": "《我的世界》创造者Notch公开谴责娱乐软件协会（ESA），因其在加州参议院听证会上声称私人服务器属于「非法」和「盗版」。Notch表示ESA此举「近乎邪恶」，并强调我的世界官方实际鼓励玩家自建服务器。ESA随后发表声明软化立场。",
+      "cn_title": "《我的世界》创始人痛批ESA：称私服非法「近乎邪恶」",
+      "summary": "《我的世界》创始人Notch反对ESA称私人服务器「非法」的说法，称这种做法「极其卑劣」且「近乎邪恶」。ESA随后给出更新声明，弱化了此前评论的绝对语气。",
       "url": "https://www.ign.com/articles/this-is-borderline-evil-minecraft-creator-speaks-out-against-esa-calling-private-servers-illegal",
       "publish_time_cn": "2026-07-02 00:24",
       "pub_date": "2026-07-02 00:24",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/07/01/new-key-art-01-1782922658372.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/07/01/new-key-art-01-1782922658372.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/07/01/new-key-art-01-1782922658372.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/07/01/new-key-art-01-1782922658372.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -323,7 +327,8 @@
         "https://assets-prd.ignimgs.com/2026/07/01/new-key-art-01-1782922658372.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-07-02T02:18:22+08:00"
+      "source_fetched_at": "2026-07-02T02:18:22+08:00",
+      "translation_path": "translations/21.json"
     },
     {
       "id": 22,
@@ -387,13 +392,13 @@
       "category": "游戏新闻",
       "emoji": "🎮",
       "en_title": "Sony Confirms PlayStation Plus Monthly Games for July 2026, Headlined by Call of Duty: Modern Warfare 3",
-      "cn_title": "索尼确认7月PS Plus会免：《使命召唤：现代战争3》领衔",
-      "summary": "索尼公布7月PlayStation Plus会免游戏阵容，《使命召唤：现代战争3》(2023年版)领衔。该作因战役模式遭批评，IGN仅评4/10。另外两款为《为了国王2》和《穿越代码》。会免游戏将于7月7日至8月3日开放领取。",
+      "cn_title": "索尼公布7月PlayStation Plus会免：《使命召唤：现代战争3》领衔",
+      "summary": "索尼确认2026年7月PlayStation Plus月度游戏阵容，包括2023年版《使命召唤：现代战争3》《For the King 2》和《CrossCode》。三款游戏将于7月7日至8月3日开放领取。",
       "url": "https://www.ign.com/articles/sony-confirms-playstation-plus-monthly-games-for-july-2026-headlined-by-call-of-duty-modern-warfare-3",
       "publish_time_cn": "2026-07-01 23:56",
       "pub_date": "2026-07-01 23:56",
-      "cover_image": "https://assets-prd.ignimgs.com/2023/10/11/pspremiumthumb-1697040053191.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2023/10/11/pspremiumthumb-1697040053191.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2023/10/11/pspremiumthumb-1697040053191.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2023/10/11/pspremiumthumb-1697040053191.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -418,7 +423,8 @@
           "source": "ai_guess",
           "reason": "词库无此条目，社区译名常见"
         }
-      ]
+      ],
+      "translation_path": "translations/24.json"
     },
     {
       "id": 25,
@@ -447,13 +453,13 @@
       "category": "游戏新闻",
       "emoji": "🎮",
       "en_title": "Stranger Things' Millie Bobby Brown Reveals the Unusual Way She Plays Grand Theft Auto Games — and That She Can't Wait for GTA 6",
-      "cn_title": "《侠盗猎车手》《怪奇物语》女主揭露GTA独特玩法：遵纪守法，期待GTA6",
-      "summary": "《怪奇物语》主演Millie Bobby Brown透露了她玩《侠盗猎车手》的独特方式：她像遵守现实交规一样在游戏中等红灯、不撞行人，丈夫笑称她像在玩《模拟人生》。她自称是「侠客」而非杀手，并表达了对今年11月发售的GTA6的期待。",
+      "cn_title": "《怪奇物语》女星自曝《侠盗猎车手》守法玩法，期待GTA6",
+      "summary": "Millie Bobby Brown表示自己热爱《GTA》，并很期待《GTA6》。不过她玩这个系列的方式很特别：遵守交通规则、等红灯、不撞人，还把角色当成上下班通勤者来玩。",
       "url": "https://www.ign.com/articles/stranger-things-millie-bobby-brown-reveals-the-unusual-way-she-plays-grand-theft-auto-games-and-that-she-cant-wait-for-gta-6",
       "publish_time_cn": "2026-07-01 23:05",
       "pub_date": "2026-07-01 23:05",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/07/01/gettyimages-2283363483-1782917501829.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/07/01/gettyimages-2283363483-1782917501829.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/07/01/gettyimages-2283363483-1782917501829.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/07/01/gettyimages-2283363483-1782917501829.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -471,20 +477,21 @@
           "source": "ai_guess",
           "reason": "知名演员，但有多个中文译名，需人工确认统一用法"
         }
-      ]
+      ],
+      "translation_path": "translations/15.json"
     },
     {
       "id": 16,
       "category": "游戏新闻",
       "emoji": "🐟",
       "en_title": "Subnautica 2 Developer's Entire Staff Get Their Bonuses After Krafton Agrees to Settlement, but CEO Steps Down",
-      "cn_title": "《深海迷航2》开发商全员获发奖金，CEO辞职",
-      "summary": "《深海迷航2》开发商Unknown Worlds全员将获得奖金，此前母公司Krafton与工作室领导达成和解。CEO Ted Gill辞职，公司正在寻找继任者。该作自5月14日抢先体验以来已售出400万份，Steam同时在线峰值超过46.7万。此前Krafton曾炒掉Gill等人以避发2.5亿美元(约合人民币17亿元)(约合18亿人民币)奖金，引发诉讼，法院3月判令恢复职务并发放奖金。据彭博社报道，和解后奖金将兑现。",
+      "cn_title": "《深海迷航2》团队全员获奖金，Krafton和解但CEO离职",
+      "summary": "Krafton与Unknown Worlds管理层达成和解，《深海迷航2》全体员工将获得奖金，但CEO Ted Gill已离职。双方同意撤销所有待决法律程序，游戏仍由Unknown Worlds继续开发。",
       "url": "https://www.ign.com/articles/subnautica-2-developers-entire-staff-get-their-bonuses-after-krafton-agrees-to-settlement-but-ceo-steps-down",
       "publish_time_cn": "2026-07-01 22:53",
       "pub_date": "2026-07-01 22:53",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/07/01/ss-787e2315a1eb5aaba73c4f75e6f7d7d8835fa260-1920x1080-1782917220492.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/07/01/ss-787e2315a1eb5aaba73c4f75e6f7d7d8835fa260-1920x1080-1782917220492.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/07/01/ss-787e2315a1eb5aaba73c4f75e6f7d7d8835fa260-1920x1080-1782917220492.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/07/01/ss-787e2315a1eb5aaba73c4f75e6f7d7d8835fa260-1920x1080-1782917220492.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -493,7 +500,8 @@
         "https://assets-prd.ignimgs.com/2026/07/01/ss-787e2315a1eb5aaba73c4f75e6f7d7d8835fa260-1920x1080-1782917220492.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-07-01T23:57:50+08:00"
+      "source_fetched_at": "2026-07-01T23:57:50+08:00",
+      "translation_path": "translations/16.json"
     },
     {
       "id": 17,
@@ -629,7 +637,7 @@
       "category": "游戏新闻",
       "emoji": "💿",
       "en_title": "Remembering Sony's Iconic 'This is How You Share Games on PS4' Video, as PlayStation Kills Discs 13 Years Later",
-      "cn_title": "索尼经典PS4分享视频13年后终结光盘",
+      "cn_title": "索尼PlayStation经典PS4分享视频13年后终结光盘",
       "summary": "2013年，索尼凭借一段21秒的「这就是你在PS4上分享游戏的方式」视频巧妙嘲讽XBOX One的数字版权政策，展示PS4简单的实体游戏分享方式，成为主机战争经典瞬间。13年后，索尼宣布从2028年起新PS5游戏不再发行光盘，全部数字发行，PS6也可能取消光驱。昔日嘲讽对手的政策如今成为自己的选择。",
       "url": "https://www.ign.com/articles/remembering-sonys-iconic-this-is-how-you-share-games-on-ps4-video-as-playstation-kills-discs-13-years-later",
       "publish_time_cn": "2026-07-01 21:02",
@@ -651,7 +659,7 @@
       "category": "行业动态",
       "emoji": "🎮",
       "en_title": "Sony's Shock Decision to Kill Discs on PlayStation From Jan 2028 Tells Us a Lot About PS6, Analysts Believe — Including When It Will Be Released",
-      "cn_title": "索尼宣布2028年停止光盘游戏，分析师解读PS6信号",
+      "cn_title": "索尼PlayStation宣布2028年停止光盘游戏，分析师解读PS6信号",
       "summary": "索尼震撼宣布，自2028年1月起PlayStation主机将不再支持实体光盘游戏。分析师认为，这一决定强烈暗示PS6最早要到2028年底才会发售，且标准版很可能不配备光驱。此外，索尼互动娱乐CEO西野秀明暗示，下一代PlayStation或将像Switch一样支持便携游玩，并借助云游戏降低成本。",
       "url": "https://www.ign.com/articles/sonys-shock-decision-to-kill-discs-on-playstation-from-jan-2028-tells-us-a-lot-about-ps6-analysts-believe-including-when-it-will-be-released",
       "publish_time_cn": "2026-07-01 20:54",
@@ -673,7 +681,7 @@
       "category": "游戏新闻",
       "emoji": "🛑",
       "en_title": "Sony Shutting Down PlayStation Store for New Purchases on PS3 and Vita",
-      "cn_title": "索尼宣布关闭PS3与PS Vita商店",
+      "cn_title": "索尼PlayStation宣布关闭PS3与PS Vita商店",
       "summary": "索尼宣布将于下月起在部分国家关闭PS3与PS Vita上的PlayStation商店，停止新内容购买，但用户仍可下载已购内容。同日，索尼还宣布从2028年1月起，PS5新游戏将不再发行实体光盘，仅通过数字商店销售，部分零售版将附带下载码。",
       "url": "https://www.ign.com/articles/sony-shutting-down-playstation-store-for-new-purchases-on-ps3-and-vita",
       "publish_time_cn": "2026-07-01 20:25",
@@ -696,7 +704,7 @@
       "category": "行业动态",
       "emoji": "💿",
       "en_title": "Sony Just Killed Discs: Physical Disc Production to End January 2028 for New Games Releasing on PlayStation Consoles",
-      "cn_title": "索尼：2028年起PS新游戏将不再推出实体盘",
+      "cn_title": "索尼PlayStation：2028年起PS新游戏将不再推出实体盘",
       "summary": "索尼宣布，自2028年1月起，所有在PlayStation主机上发售的新游戏将停止生产实体光盘，仅提供数字版本。此举紧随Rockstar决定不为《GTA6》发行光盘版之后，引发行业震动。分析师指出，数字版已占PS平台游戏销量的近80%，这是实体媒体在主机游戏领域的终局信号。",
       "url": "https://www.ign.com/articles/sony-just-killed-discs-physical-disc-production-to-end-january-2028-for-new-games-releasing-on-playstation-consoles",
       "publish_time_cn": "2026-07-01 20:08",
@@ -780,7 +788,7 @@
       "category": "游戏新闻",
       "emoji": "🏈",
       "en_title": "Warhammer Blood Bowl Video Game Franchise Saved From Nacon Collapse by Warhammer 40,000: Battlesector Publisher",
-      "cn_title": "《战锤：血碗》系列易主，Slitherine接手开发新作",
+      "cn_title": "《战锤：血碗》系列易主，Nacon交棒Slitherine",
       "summary": "由于 Nacon 申请破产，《战锤：血碗》视频游戏系列的版权与发行权被《战锤40K：战场》发行商 Slitherine 收购。Slitherine 表示将继续推进 Nacon 此前公布的新作，并与长期开发商 Cyanide 合作开发下一款《血碗》游戏。",
       "url": "https://www.ign.com/articles/warhammer-blood-bowl-video-game-franchise-saved-from-nacon-collapse-by-warhammer-40000-battlesector-publisher",
       "publish_time_cn": "2026-07-01 19:43",
@@ -892,13 +900,13 @@
       "category": "游戏新闻",
       "emoji": "🎮",
       "en_title": "With Xbox Speeding Up Work on New Fallout Games, One Former Bethesda Dev Warns Faster Sequels 'Risk Fan Fatigue' — but Could New Vegas Developer Obsidian Be Drafted in to Help?",
-      "cn_title": "XBOX加速《辐射》新作开发，前开发者警告风险",
-      "summary": "新XBOX负责人Asha Sharma计划加速《辐射》《上古卷轴》等大作开发，前B社开发者Bruce Nesmith警告快速续作可能导致粉丝疲劳。与此同时，曾在《辐射：新维加斯》大获成功的Obsidian是否会被调来协助制作，引发广泛猜测。",
+      "cn_title": "XBOX加速《辐射》新作，前B社/贝塞斯达开发者警告粉丝疲劳",
+      "summary": "微软据称正加速《辐射》等核心系列开发，前B社开发者Bruce Nesmith警告，缩短周期可能牺牲质量并让续作令粉丝失望。Obsidian是否会再参与《辐射》也引发猜测。",
       "url": "https://www.ign.com/articles/with-xbox-speeding-up-work-on-new-fallout-games-one-former-bethesda-dev-warns-faster-sequels-risk-fan-fatigue-but-could-new-vegas-developer-obsidian-be-drafted-in-to-help",
       "publish_time_cn": "2026-07-01 18:24",
       "pub_date": "2026-07-01 18:24",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/07/01/ss-ac7dbb6b5d1353ec1e66110fe652883b957a70e3-1920x1080-1782901210982.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/07/01/ss-ac7dbb6b5d1353ec1e66110fe652883b957a70e3-1920x1080-1782901210982.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/07/01/ss-ac7dbb6b5d1353ec1e66110fe652883b957a70e3-1920x1080-1782901210982.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/07/01/ss-ac7dbb6b5d1353ec1e66110fe652883b957a70e3-1920x1080-1782901210982.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -907,7 +915,8 @@
         "https://assets-prd.ignimgs.com/2026/07/01/ss-ac7dbb6b5d1353ec1e66110fe652883b957a70e3-1920x1080-1782901210982.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-07-01T21:14:19+08:00"
+      "source_fetched_at": "2026-07-01T21:14:19+08:00",
+      "translation_path": "translations/12.json"
     },
     {
       "id": 4,
@@ -1091,5 +1100,6 @@
       ]
     }
   ],
-  "total": 37
+  "total": 37,
+  "translated": 9
 }
