@@ -8,7 +8,7 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 from common_paths import DATA_DIR, configure_utf8_stdio
-from currency_utils import find_missing_currency, load_rates, normalize_currency_text
+from currency_utils import find_malformed_currency, find_missing_currency, load_rates, normalize_currency_text
 
 
 configure_utf8_stdio()
@@ -32,6 +32,15 @@ def suggestion(found: str) -> str:
 
 
 def add_issues(issues: list[dict], source: str, text: str, label: str = "") -> None:
+    for found, expected, context in find_malformed_currency(text):
+        issues.append({
+            "source": source,
+            "label": label,
+            "found": found,
+            "suggestion": expected,
+            "context": context,
+            "type": "bad_format",
+        })
     for found, context in find_missing_currency(text):
         issues.append({
             "source": source,
@@ -39,6 +48,7 @@ def add_issues(issues: list[dict], source: str, text: str, label: str = "") -> N
             "found": found,
             "suggestion": suggestion(found),
             "context": context,
+            "type": "missing_conversion",
         })
 
 
@@ -93,10 +103,11 @@ def main() -> int:
             check_comparison_file(path, issues)
 
     if issues:
-        print(f"CURRENCY_CHECK: {len(issues)} amount(s) missing CNY conversion in {date_str}:")
+        print(f"CURRENCY_CHECK: {len(issues)} currency issue(s) in {date_str}:")
         for issue in issues:
             label = f" {issue['label']}" if issue.get("label") else ""
-            print(f"  {issue['source']}{label}: {issue['found']} -> suggest: {issue['suggestion']}")
+            issue_type = issue.get("type") or "currency"
+            print(f"  {issue['source']}{label} [{issue_type}]: {issue['found']} -> suggest: {issue['suggestion']}")
             print(f"    context: ...{issue['context']}...")
         print("\nFix these before pushing.")
         return 1

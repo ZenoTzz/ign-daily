@@ -169,6 +169,32 @@ def normalize_translation_currency(data: dict[str, Any]) -> dict[str, Any]:
     return data
 
 
+STRICT_CONVERSION_TAIL_RE = re.compile(r"^\(约合人民币[^()（）]+\)")
+
+
+def find_malformed_currency(text: str) -> list[tuple[str, str, str]]:
+    """Find foreign-currency amounts whose CNY conversion is present but not in fixed format.
+
+    Required format: 10亿美元(约合人民币68亿元)
+    The conversion must immediately follow the foreign amount and use half-width parentheses.
+    """
+    if not text:
+        return []
+    text = normalize_currency_symbols(str(text))
+    issues = []
+    for match in CURRENCY_RE.finditer(text):
+        tail = text[match.end():match.end() + 40]
+        if STRICT_CONVERSION_TAIL_RE.match(tail):
+            continue
+        if "约合" in tail and "人民币" in tail:
+            issues.append((
+                match.group(0),
+                normalize_currency_text(match.group(0), rates=load_rates()),
+                text[max(0, match.start() - 16):match.end() + 40],
+            ))
+    return issues
+
+
 def find_missing_currency(text: str) -> list[tuple[str, str]]:
     if not text:
         return []
