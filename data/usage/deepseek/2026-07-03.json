@@ -408,6 +408,78 @@
       "total_tokens_including_reasoning": 11584,
       "prompt_cache_hit_tokens": 9728,
       "prompt_cache_miss_tokens": 567
+    },
+    {
+      "time_cn": "2026-07-03 08:08:16",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 25,
+      "article_title": "Do You Use Your PS5 to Watch 4K Blu-ray Discs?",
+      "article_url": "https://www.ign.com/articles/do-you-use-your-ps5-to-watch-4k-blu-ray-discs",
+      "article_date": "2026-07-03",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00041504,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 10270,
+      "completion_tokens": 669,
+      "reasoning_tokens": 445,
+      "output_tokens_including_reasoning": 1114,
+      "total_tokens": 10939,
+      "total_tokens_including_reasoning": 11384,
+      "prompt_cache_hit_tokens": 9728,
+      "prompt_cache_miss_tokens": 542
+    },
+    {
+      "time_cn": "2026-07-03 08:08:31",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 26,
+      "article_title": "Rhythm Heaven Groove Review",
+      "article_url": "https://www.ign.com/articles/rhythm-heaven-groove-review",
+      "article_date": "2026-07-03",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00071968,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 11584,
+      "completion_tokens": 881,
+      "reasoning_tokens": 664,
+      "output_tokens_including_reasoning": 1545,
+      "total_tokens": 12465,
+      "total_tokens_including_reasoning": 13129,
+      "prompt_cache_hit_tokens": 9728,
+      "prompt_cache_miss_tokens": 1856
+    },
+    {
+      "time_cn": "2026-07-03 08:09:12",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 27,
+      "article_title": "X-Men '97 Season 2, Episodes 1-3 Review & Recap (Full Spoilers)",
+      "article_url": "https://www.ign.com/articles/x-men-97-season-2-episodes-1-3-review-recap-full-spoilers",
+      "article_date": "2026-07-03",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00204982,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 11003,
+      "completion_tokens": 3407,
+      "reasoning_tokens": 3179,
+      "output_tokens_including_reasoning": 6586,
+      "total_tokens": 14410,
+      "total_tokens_including_reasoning": 17589,
+      "prompt_cache_hit_tokens": 9728,
+      "prompt_cache_miss_tokens": 1275
     }
   ]
 }
