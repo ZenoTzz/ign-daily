@@ -672,6 +672,126 @@
       "total_tokens_including_reasoning": 11790,
       "prompt_cache_hit_tokens": 9728,
       "prompt_cache_miss_tokens": 888
+    },
+    {
+      "time_cn": "2026-07-03 21:24:24",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 5,
+      "article_title": "Assassin's Creed Black Flag Resynced Global Release and Preload Times Confirmed",
+      "article_url": "https://www.ign.com/articles/assassins-creed-black-flag-resynced-global-release-and-preload-times-confirmed",
+      "article_date": "2026-07-04",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00035803,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 10402,
+      "completion_tokens": 707,
+      "reasoning_tokens": 451,
+      "output_tokens_including_reasoning": 1158,
+      "total_tokens": 11109,
+      "total_tokens_including_reasoning": 11560,
+      "prompt_cache_hit_tokens": 10368,
+      "prompt_cache_miss_tokens": 34
+    },
+    {
+      "time_cn": "2026-07-03 21:24:44",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 6,
+      "article_title": "'I Am Getting at Least 5x More Offers for Video Game Adaptations Than Comic Book Adaptations' — The Batman 2 Co-Writer Says Hollywood Is Shifting From Superheroes to Video Games",
+      "article_url": "https://www.ign.com/articles/i-am-getting-at-least-5x-more-offers-for-video-game-adaptations-than-comic-book-adaptations-the-batman-2-co-writer-says-hollywood-is-shifting-from-superheroes-to-video-games",
+      "article_date": "2026-07-04",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00102012,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 10991,
+      "completion_tokens": 1951,
+      "reasoning_tokens": 1528,
+      "output_tokens_including_reasoning": 3479,
+      "total_tokens": 12942,
+      "total_tokens_including_reasoning": 14470,
+      "prompt_cache_hit_tokens": 10880,
+      "prompt_cache_miss_tokens": 111
+    },
+    {
+      "time_cn": "2026-07-03 21:24:53",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 9,
+      "article_title": "After Sony Kills PS5 Discs and GTA 6 is Just a Code in a Box, Xbox Is Using Halo: Campaign Evolved's Physical Disc as a Selling Point",
+      "article_url": "https://www.ign.com/articles/after-sony-kills-ps5-discs-and-gta-6-is-just-a-code-in-a-box-xbox-is-using-halo-campaign-evolveds-physical-disc-as-a-selling-point",
+      "article_date": "2026-07-04",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00050324,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 10784,
+      "completion_tokens": 702,
+      "reasoning_tokens": 470,
+      "output_tokens_including_reasoning": 1172,
+      "total_tokens": 11486,
+      "total_tokens_including_reasoning": 11956,
+      "prompt_cache_hit_tokens": 9728,
+      "prompt_cache_miss_tokens": 1056
+    },
+    {
+      "time_cn": "2026-07-03 21:25:04",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 10,
+      "article_title": "Anne Hathaway Quit Knocked Up Because 'She Didn't Want the Crowning of the Baby to Be Visually Representative,' Seth Rogen Says",
+      "article_url": "https://www.ign.com/articles/anne-hathaway-quit-knocked-up-because-she-didnt-want-the-crowning-of-the-baby-to-be-visually-representative-seth-rogen-says",
+      "article_date": "2026-07-04",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00061496,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 10536,
+      "completion_tokens": 989,
+      "reasoning_tokens": 706,
+      "output_tokens_including_reasoning": 1695,
+      "total_tokens": 11525,
+      "total_tokens_including_reasoning": 12231,
+      "prompt_cache_hit_tokens": 9728,
+      "prompt_cache_miss_tokens": 808
+    },
+    {
+      "time_cn": "2026-07-03 21:25:12",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 11,
+      "article_title": "Over 90% of IGN's Audience Do Not Want an All-Digital Gaming Future, but PlayStation Is Unlikely to U-Turn on Its Decision to Kill Discs",
+      "article_url": "https://www.ign.com/articles/over-90-of-igns-audience-do-not-want-an-all-digital-gaming-future-but-playstation-is-unlikely-to-u-turn-on-its-decision-to-kill-discs",
+      "article_date": "2026-07-04",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00045494,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 10961,
+      "completion_tokens": 563,
+      "reasoning_tokens": 348,
+      "output_tokens_including_reasoning": 911,
+      "total_tokens": 11524,
+      "total_tokens_including_reasoning": 11872,
+      "prompt_cache_hit_tokens": 9728,
+      "prompt_cache_miss_tokens": 1233
     }
   ]
 }

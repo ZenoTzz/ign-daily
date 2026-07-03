@@ -2,6 +2,83 @@
   "date": "2026-07-04",
   "articles": [
     {
+      "id": 9,
+      "category": "游戏新闻",
+      "emoji": "💿",
+      "en_title": "After Sony Kills PS5 Discs and GTA 6 is Just a Code in a Box, Xbox Is Using Halo: Campaign Evolved's Physical Disc as a Selling Point",
+      "cn_title": "索尼弃光盘、GTA6无盘，XBOX用《光环：战役进化》实体版当卖点",
+      "summary": "在索尼宣布2028年起新游戏停止推出光盘版、以及Rockstar确认《GTA6》首发仅提供数字码后，XBOX借《光环：战役进化》的实体光盘作为差异化卖点。微软在社交媒体和官方FAQ中明确强调，该游戏的实体版将包含光盘，以回应玩家对实体版内容缩水的担忧。",
+      "url": "https://www.ign.com/articles/after-sony-kills-ps5-discs-and-gta-6-is-just-a-code-in-a-box-xbox-is-using-halo-campaign-evolveds-physical-disc-as-a-selling-point",
+      "publish_time_cn": "2026-07-03 20:40",
+      "pub_date": "2026-07-03 20:40",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/10/halothumb-1781104289843.png?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/10/halothumb-1781104289843.png?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/10/halothumb-1781104289843.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/10/halothumb-1781104289843.png?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/10/halothumb-1781104289843.png?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/10/halothumb-1781104289843.png"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-07-03T21:24:12+08:00"
+    },
+    {
+      "id": 10,
+      "category": "影视资讯",
+      "emoji": "🎬",
+      "en_title": "Anne Hathaway Quit Knocked Up Because 'She Didn't Want the Crowning of the Baby to Be Visually Representative,' Seth Rogen Says",
+      "cn_title": "Seth Rogen 称安妮·海瑟薇因分娩戏退出《一夜大肚》",
+      "summary": "Seth Rogen 在受访时证实，安妮·海瑟薇当年退出电影《一夜大肚》的原因是她不愿拍摄婴儿露冠的分娩画面。海瑟薇本人曾表示该镜头对故事并不必要，并非因为个人裸露问题。最终由 Katherine Heigl 接替出演该角色。",
+      "url": "https://www.ign.com/articles/anne-hathaway-quit-knocked-up-because-she-didnt-want-the-crowning-of-the-baby-to-be-visually-representative-seth-rogen-says",
+      "publish_time_cn": "2026-07-03 20:15",
+      "pub_date": "2026-07-03 20:15",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/07/03/gettyimages-55374515-1783080570182.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/07/03/gettyimages-55374515-1783080570182.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/07/03/gettyimages-55374515-1783080570182.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/07/03/gettyimages-55374515-1783080570182.jpg?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/07/03/gettyimages-55374515-1783080570182.jpg?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/07/03/gettyimages-55374515-1783080570182.jpg",
+        "https://assets-prd.ignimgs.com/2026/07/03/gettyimages-55374515-1783080550548.jpg",
+        "https://assets-prd.ignimgs.com/2026/07/03/gettyimages-115000495-1783080630358.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-07-03T21:24:13+08:00",
+      "pending_dict": [
+        {
+          "en": "Knocked Up",
+          "cn": "《一夜大肚》",
+          "cat": "movies_tv",
+          "source": "ai_guess",
+          "reason": "通用译名，但未确认是否为 IGN 中国官方译名"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "category": "行业动态",
+      "emoji": "💿",
+      "en_title": "Over 90% of IGN's Audience Do Not Want an All-Digital Gaming Future, but PlayStation Is Unlikely to U-Turn on Its Decision to Kill Discs",
+      "cn_title": "Sony坚持全数字化，IGN读者超九成反对",
+      "summary": "Sony宣布2028年起PlayStation主机取消光盘驱动，引发玩家强烈反对。IGN调查显示，超过1.3万名受访者中90.2%不支持全数字化未来。分析师指出，数字游戏销售占比已近80%，且利润更高，Sony不太可能改变决定。多家快餐品牌和名人也在调侃此举。",
+      "url": "https://www.ign.com/articles/over-90-of-igns-audience-do-not-want-an-all-digital-gaming-future-but-playstation-is-unlikely-to-u-turn-on-its-decision-to-kill-discs",
+      "publish_time_cn": "2026-07-03 19:12",
+      "pub_date": "2026-07-03 19:12",
+      "cover_image": "https://assets-prd.ignimgs.com/2024/09/25/ps5-pro-handsonpreview-blogroll-1727223976585.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2024/09/25/ps5-pro-handsonpreview-blogroll-1727223976585.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2024/09/25/ps5-pro-handsonpreview-blogroll-1727223976585.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2024/09/25/ps5-pro-handsonpreview-blogroll-1727223976585.jpg?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2024/09/25/ps5-pro-handsonpreview-blogroll-1727223976585.jpg?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2024/09/25/ps5-pro-handsonpreview-blogroll-1727223976585.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-07-03T21:24:13+08:00"
+    },
+    {
       "id": 8,
       "category": "游戏新闻",
       "emoji": "📀",
@@ -50,10 +127,10 @@
     {
       "id": 5,
       "category": "游戏新闻",
-      "emoji": "🎮",
+      "emoji": "⛵",
       "en_title": "Assassin's Creed Black Flag Resynced Global Release and Preload Times Confirmed",
-      "cn_title": "Assassin's Creed Black Flag Resynced Global Release and Preload Times Confirmed",
-      "summary": "",
+      "cn_title": "《刺客信条：黑旗 记忆重置》全球发售及预载时间公布",
+      "summary": "育碧确认《刺客信条：黑旗 记忆重置》全球发售与预载时间。XBOX Series现已开放预载，PC和PS5预载将于7月7日UTC 14:00/北京时间22:00开启。主机版7月7日午夜本地时间解锁，PC版（育碧、Steam、Epic）及云流服务GeForce、Blacknut则于7月7日上午10点东部时间/下午3点英国时间起逐步解锁。",
       "url": "https://www.ign.com/articles/assassins-creed-black-flag-resynced-global-release-and-preload-times-confirmed",
       "publish_time_cn": "2026-07-03 17:57",
       "pub_date": "2026-07-03 17:57",
@@ -72,11 +149,11 @@
     },
     {
       "id": 6,
-      "category": "游戏新闻",
-      "emoji": "🎮",
+      "category": "行业动态",
+      "emoji": "🎬",
       "en_title": "'I Am Getting at Least 5x More Offers for Video Game Adaptations Than Comic Book Adaptations' — The Batman 2 Co-Writer Says Hollywood Is Shifting From Superheroes to Video Games",
-      "cn_title": "'I Am Getting at Least 5x More Offers for Video Game Adaptations Than Comic Book Adaptations' — The Batman 2 Co-Writer Says Hollywood Is Shifting From Superheroes to Video Games",
-      "summary": "",
+      "cn_title": "《新蝙蝠侠》《蝙蝠侠2》编剧：游戏改编邀约是漫画5倍以上，好莱坞转向游戏",
+      "summary": "《蝙蝠侠2》联合编剧Mattson Tomlin透露，今年他接到的游戏改编邀约数量是漫画改编的至少5倍，认为好莱坞正从超级英雄转向游戏改编。近年来《超级马力欧兄弟大电影》等游戏电影票房大卖，而超英电影除少数大片外表现疲软。未来将有《生化危机》《街头霸王》《塞尔达传说》等大量游戏改编项目。",
       "url": "https://www.ign.com/articles/i-am-getting-at-least-5x-more-offers-for-video-game-adaptations-than-comic-book-adaptations-the-batman-2-co-writer-says-hollywood-is-shifting-from-superheroes-to-video-games",
       "publish_time_cn": "2026-07-03 17:57",
       "pub_date": "2026-07-03 17:57",
@@ -90,7 +167,30 @@
         "https://assets-prd.ignimgs.com/2025/07/17/zelda-liveaction-blogroll-1752771074908.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-07-03T19:18:23+08:00"
+      "source_fetched_at": "2026-07-03T19:18:23+08:00",
+      "pending_dict": [
+        {
+          "en": "Mega Man",
+          "cn": "洛克人",
+          "cat": "games",
+          "source": "ai_guess",
+          "reason": "常见中文译名，需确认是否为官方采用"
+        },
+        {
+          "en": "Helldivers",
+          "cn": "绝地潜兵",
+          "cat": "games",
+          "source": "ai_guess",
+          "reason": "索尼游戏，中文官方名称为《绝地潜兵》，但未在词库中确认"
+        },
+        {
+          "en": "Donkey Kong",
+          "cn": "大金刚",
+          "cat": "games",
+          "source": "ai_guess",
+          "reason": "任天堂角色，中文常见译名为‘大金刚’或‘森喜刚’，需确认"
+        }
+      ]
     },
     {
       "id": 7,
@@ -244,5 +344,5 @@
       "source_fetched_at": "2026-07-03T16:29:34+08:00"
     }
   ],
-  "total": 8
+  "total": 11
 }
