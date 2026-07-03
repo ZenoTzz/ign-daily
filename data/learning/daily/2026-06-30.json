@@ -83,12 +83,88 @@
       ],
       "contradiction": "",
       "latest_evidence_summary": "用户将标题中的《星球大战：日食》修正为《星球大战：日蚀》。"
+    },
+    {
+      "id": "dict_candidate_new_vegas_director_d87b0272b86c",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：New Vegas Director → 辐射：新维加斯",
+      "rule": "建议将「New Vegas Director」加入词库，译为「辐射：新维加斯」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-06-30",
+          "article_id": 8,
+          "before": "New Vegas Director",
+          "after": "辐射：新维加斯",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id": "dict_candidate_fallout_new_vegas_director_says_amazon_s_c4e9cdd4e72c",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：Fallout: New Vegas Director Says Amazon's → 辐射：新维加斯",
+      "rule": "建议将「Fallout: New Vegas Director Says Amazon's」加入词库，译为「辐射：新维加斯」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-06-30",
+          "article_id": 8,
+          "before": "Fallout: New Vegas Director Says Amazon's",
+          "after": "辐射：新维加斯",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id": "dict_candidate_netflix_is_reportedly_working_e3fbaf4a6c4b",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：Netflix Is Reportedly Working → 女神异闻录",
+      "rule": "建议将「Netflix Is Reportedly Working」加入词库，译为「女神异闻录」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-06-30",
+          "article_id": 32,
+          "before": "Netflix Is Reportedly Working",
+          "after": "女神异闻录",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id": "dict_candidate_toru_nakahara_2b2914ae3857",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：Toru Nakahara → 中原徹",
+      "rule": "建议将「Toru Nakahara」加入词库，译为「中原徹」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-06-30",
+          "article_id": 32,
+          "before": "Toru Nakahara",
+          "after": "中原徹",
+          "evidence": "来自文章页未确认新词候选。"
+        }
+      ],
+      "contradiction": ""
     }
   ],
   "notes": [
     "Added source+polished dictionary candidates for GPT/Tencent workflow.",
     "Codex filtered low-confidence title-fragment dictionary candidates during backfill."
   ],
-  "candidate_count": 4,
-  "updated_at": "2026-06-30T22:40:29+08:00"
+  "candidate_count": 8,
+  "updated_at": "2026-07-01T22:36:51+08:00"
 }

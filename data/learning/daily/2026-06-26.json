@@ -5,7 +5,7 @@
   "status": "observed",
   "source_hash": "codex-nightly-2026-06-26-8-articles",
   "signal_count": 3,
-  "candidate_count": 0,
+  "candidate_count": 5,
   "signals": [
     {
       "article_ids": [
@@ -50,11 +50,108 @@
       "summary": "Article #24 continues compact XBOX Series platform naming."
     }
   ],
-  "candidates": [],
+  "candidates": [
+    {
+      "id": "dict_candidate_new_dlc_character_coming_ed140b99a919",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：New DLC Character Coming → 苍翼默示录：神观之梦",
+      "rule": "建议将「New DLC Character Coming」加入词库，译为「苍翼默示录：神观之梦」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-06-26",
+          "article_id": 1,
+          "before": "New DLC Character Coming",
+          "after": "苍翼默示录：神观之梦",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id": "dict_candidate_ps5_now_features_custom_gta_5c69fe23a9f2",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：PS5 Now Features Custom GTA → GTA6",
+      "rule": "建议将「PS5 Now Features Custom GTA」加入词库，译为「GTA6」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-06-26",
+          "article_id": 7,
+          "before": "PS5 Now Features Custom GTA",
+          "after": "GTA6",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id": "dict_candidate_insomniac_responds_cb8a346f8200",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：Insomniac Responds → 漫威金刚狼",
+      "rule": "建议将「Insomniac Responds」加入词库，译为「漫威金刚狼」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-06-26",
+          "article_id": 10,
+          "before": "Insomniac Responds",
+          "after": "漫威金刚狼",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id": "dict_candidate_sony_confirms_c404dc21ce1f",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：Sony Confirms → 命运2",
+      "rule": "建议将「Sony Confirms」加入词库，译为「命运2」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-06-26",
+          "article_id": 16,
+          "before": "Sony Confirms",
+          "after": "命运2",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id": "dict_candidate_deltarune_chapter_5ceff3914620",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：Deltarune Chapter → 三角符文",
+      "rule": "建议将「Deltarune Chapter」加入词库，译为「三角符文」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-06-26",
+          "article_id": 29,
+          "before": "Deltarune Chapter",
+          "after": "三角符文",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "contradiction": ""
+    }
+  ],
   "notes": [
     "Imported 8 high-confidence Tencent polish files and generated diff_analysis.",
     "No STYLE_PROFILE.md change: W26 held the broader brand-wrapper rule.",
-    "Only existing confirmed/pending evidence was updated; no new formal rule was promoted."
+    "Only existing confirmed/pending evidence was updated; no new formal rule was promoted.",
+    "Added source+polished dictionary candidates for GPT/Tencent workflow."
   ],
-  "updated_at": "2026-06-26T22:47:00+08:00"
+  "updated_at": "2026-07-01T22:36:50+08:00"
 }

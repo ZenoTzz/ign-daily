@@ -1,6 +1,8 @@
 # Agent Bootstrap - IGN Daily
 
-先读 `docs/AGENT_START.md`，再读本文件。`AGENT_HANDOFF.md` 和 `TRANSLATION_GUIDE.md` 只在需要查细节时打开。目标是少靠记忆，多靠脚本检查。
+先读 `docs/AGENT_START.md`，再读 `docs/TRANSLATION_REQUIREMENTS.md` 和
+`docs/AGENT_COLLABORATION.md`，然后读本文件。`AGENT_HANDOFF.md` 和
+`TRANSLATION_GUIDE.md` 只在需要查细节时打开。目标是少靠记忆，多靠脚本检查。
 
 ## 这个项目做什么
 
@@ -25,6 +27,11 @@ IGN Daily 是一个个人化 IGN 英文新闻翻译工作流：
 8. push 前跑：`python3 scripts/pre_push_check.py {date}`。
 9. 日期归属按 8:00 分界：`data/2026-06-02` 只能放 `2026-06-01 08:00 <= publish_time_cn < 2026-06-02 08:00` 的文章。
 10. RSS 过滤命中的文章先放 `filtered_rss.json` 隔离区，不要硬删；网页恢复后才进 `index.json`/`need_titles.json`。
+11. 多 agent 协作时先看 `docs/AGENT_COLLABORATION.md` 和
+    `data/agent-worklog.jsonl`，不要回滚别人做的新内容。
+12. Codex 完成正文翻译并 push 后，要把完成稿同步到
+    `data/google-polish-config.json` 指向的 Google Doc；夜间学习再从该
+    Google Doc 导入用户润色稿。
 
 ## 项目层级
 

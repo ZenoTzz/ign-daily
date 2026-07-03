@@ -3,7 +3,7 @@
   "model": "codex",
   "source_hash": "411625b1d435badd6095b145636b4c78a7b0d4b4",
   "signal_count": 4,
-  "candidate_count": 5,
+  "candidate_count": 8,
   "signals": [
     {
       "type": "user_polish",
@@ -304,15 +304,73 @@
         }
       ],
       "contradiction": ""
+    },
+    {
+      "id": "dict_candidate_star_wars_zero_company_features_brutal_0baa32f1d66e",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：Star Wars: Zero Company Features Brutal → 星球大战 零号连队",
+      "rule": "建议将「Star Wars: Zero Company Features Brutal」加入词库，译为「星球大战 零号连队」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-06-08",
+          "article_id": 12,
+          "before": "Star Wars: Zero Company Features Brutal",
+          "after": "星球大战 零号连队",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id": "dict_candidate_the_super_mario_galaxy_movie_becomes_a9d6d069ec24",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：The Super Mario Galaxy Movie Becomes → 超级马力欧银河大电影",
+      "rule": "建议将「The Super Mario Galaxy Movie Becomes」加入词库，译为「超级马力欧银河大电影」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-06-08",
+          "article_id": 29,
+          "before": "The Super Mario Galaxy Movie Becomes",
+          "after": "超级马力欧银河大电影",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id": "dict_candidate_tomb_raider_remake_star_alix_wilton_180cd4e4dcc2",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：Tomb Raider Remake Star Alix Wilton → 古墓丽影：亚特兰蒂斯遗迹",
+      "rule": "建议将「Tomb Raider Remake Star Alix Wilton」加入词库，译为「古墓丽影：亚特兰蒂斯遗迹」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-06-08",
+          "article_id": 37,
+          "before": "Tomb Raider Remake Star Alix Wilton",
+          "after": "古墓丽影：亚特兰蒂斯遗迹",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "contradiction": ""
     }
   ],
   "notes": [
     "Codex补跑腾讯文档润色，只提取跨篇可复用规律；单篇特例不直接升级为长期规则。",
     "未学习汇率数值、国区售价、额外上映信息及“今日/昨晚”等时效性补充，避免脱离原文或随时间失效。",
     "所有候选仍需在学习页确认后才能进入STYLE_PROFILE.md。",
-    "已处理2026-W24学习页反馈：明确采纳的规则进入长期配置，暂缓项继续观察；未重复提取候选。"
+    "已处理2026-W24学习页反馈：明确采纳的规则进入长期配置，暂缓项继续观察；未重复提取候选。",
+    "Added source+polished dictionary candidates for GPT/Tencent workflow."
   ],
-  "updated_at": "2026-06-15T21:48:32+08:00",
+  "updated_at": "2026-07-01T22:36:49+08:00",
   "observer": "codex",
   "status": "observed"
 }

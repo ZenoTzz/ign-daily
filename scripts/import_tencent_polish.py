@@ -469,6 +469,7 @@ def import_matches(
     *,
     dry_run: bool,
     replace_existing: bool,
+    source_type: str = "tencent_docs",
 ) -> tuple[int, int, list[str]]:
     polished_dir = DATA_DIR / date / "polished"
     index_path = polished_dir / "_index.json"
@@ -489,11 +490,11 @@ def import_matches(
         output_path = polished_dir / filename
         existing = load_json(output_path, {})
         existing_import = existing.get("import_source") if isinstance(existing, dict) else None
-        imported_by_tencent = (
+        imported_by_same_source = (
             isinstance(existing_import, dict)
-            and existing_import.get("type") == "tencent_docs"
+            and existing_import.get("type") == source_type
         )
-        if existing and not replace_existing and not imported_by_tencent:
+        if existing and not replace_existing and not imported_by_same_source:
             unchanged += 1
             messages.append(f"SKIP {date} #{article_id:02d}: existing manual polish")
             continue
@@ -520,7 +521,7 @@ def import_matches(
             "updated_at": now,
             "paragraphs": match.source.paragraphs,
             "import_source": {
-                "type": "tencent_docs",
+                "type": source_type,
                 "document_url": document_url,
                 "document_title": document_title,
                 "document_date": match.source.date,

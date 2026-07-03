@@ -1,14 +1,105 @@
 {
   "date": "2026-06-26",
-  "generated_at": "2026-06-26T22:38:27.477236",
+  "generated_at": "2026-07-01T22:36:50.900388",
   "total_articles": 8,
+  "dictionary_candidate_count": 5,
+  "dictionary_candidates": [
+    {
+      "id": "dict_candidate_new_dlc_character_coming_ed140b99a919",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "games",
+      "en": "New DLC Character Coming",
+      "cn": "苍翼默示录：神观之梦",
+      "title": "词库候选：New DLC Character Coming → 苍翼默示录：神观之梦",
+      "rule": "建议将「New DLC Character Coming」加入词库，译为「苍翼默示录：神观之梦」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "date": "2026-06-26",
+      "article_id": 1,
+      "article_title": "《苍翼默示录：神观之梦》发售近十年后突曝新DLC角色",
+      "url": "https://www.ign.com/articles/new-dlc-character-coming-to-blazblue-central-fiction-a-decade-after-it-was-released",
+      "evidence": "英文标题开头专名与中文标题书名号对应。"
+    },
+    {
+      "id": "dict_candidate_ps5_now_features_custom_gta_5c69fe23a9f2",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "games",
+      "en": "PS5 Now Features Custom GTA",
+      "cn": "GTA6",
+      "title": "词库候选：PS5 Now Features Custom GTA → GTA6",
+      "rule": "建议将「PS5 Now Features Custom GTA」加入词库，译为「GTA6」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "date": "2026-06-26",
+      "article_id": 7,
+      "article_title": "PS5推出《GTA6》定制界面，索尼全面押注Rockstar合作",
+      "url": "https://www.ign.com/articles/playstation-5-now-features-custom-gta-6-ui-as-sony-goes-all-in-on-rockstar-partnership",
+      "evidence": "英文标题开头专名与中文标题书名号对应。"
+    },
+    {
+      "id": "dict_candidate_insomniac_responds_cb8a346f8200",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "games",
+      "en": "Insomniac Responds",
+      "cn": "漫威金刚狼",
+      "title": "词库候选：Insomniac Responds → 漫威金刚狼",
+      "rule": "建议将「Insomniac Responds」加入词库，译为「漫威金刚狼」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "date": "2026-06-26",
+      "article_id": 10,
+      "article_title": "Insomniac确认《漫威金刚狼》实体版含光盘",
+      "url": "https://www.ign.com/articles/insomniac-responds-to-wolverine-fan-to-confirm-physical-edition-includes-a-disc-in-the-box-and-i-suspect-more-devs-will-have-to-answer-this-question-in-a-post-gta-6-world",
+      "evidence": "英文标题开头专名与中文标题书名号对应。"
+    },
+    {
+      "id": "dict_candidate_sony_confirms_c404dc21ce1f",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "terms",
+      "en": "Sony Confirms",
+      "cn": "命运2",
+      "title": "词库候选：Sony Confirms → 命运2",
+      "rule": "建议将「Sony Confirms」加入词库，译为「命运2」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "date": "2026-06-26",
+      "article_id": 16,
+      "article_title": "Bungie宣布裁员，承认《命运2》未达预期",
+      "url": "https://www.ign.com/articles/bungie-announces-layoffs-as-it-admits-destiny-2-fell-short-of-expectations",
+      "evidence": "英文标题开头专名与中文标题书名号对应。"
+    },
+    {
+      "id": "dict_candidate_deltarune_chapter_5ceff3914620",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "games",
+      "en": "Deltarune Chapter",
+      "cn": "三角符文",
+      "title": "词库候选：Deltarune Chapter → 三角符文",
+      "rule": "建议将「Deltarune Chapter」加入词库，译为「三角符文」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "date": "2026-06-26",
+      "article_id": 29,
+      "article_title": "《三角符文》第6章2027年发售，第5章打破Steam在线纪录",
+      "url": "https://www.ign.com/articles/deltarune-chapter-6-will-release-in-2027-chapter-5-shatters-concurrent-player-records-on-steam",
+      "evidence": "英文标题开头专名与中文标题书名号对应。"
+    }
+  ],
+  "learning_evidence_updated": true,
+  "daily_learning_updated": true,
   "articles": [
     {
       "id": 1,
-      "cn_title": "《苍翼默示录》发售近十年后突曝新DLC角色",
+      "cn_title": "《苍翼默示录：神观之梦》发售近十年后突曝新DLC角色",
       "en_title": "New DLC Character Coming to BlazBlue: Central Fiction a Decade After It Was Released",
       "url": "https://www.ign.com/articles/new-dlc-character-coming-to-blazblue-central-fiction-a-decade-after-it-was-released",
-      "category": null,
+      "category": "游戏新闻",
+      "has_translation": true,
       "title_diff": {
         "mine": "《苍翼默示录》发售近十年后突曝新DLC角色",
         "yours": "《苍翼默示录：神观之梦》发售近十年后突曝新DLC角色"
@@ -68,14 +159,34 @@
           ],
           "your_sentences": []
         }
+      ],
+      "dictionary_candidates": [
+        {
+          "id": "dict_candidate_new_dlc_character_coming_ed140b99a919",
+          "category": "dictionary",
+          "type": "dictionary_candidate",
+          "dict_category": "games",
+          "en": "New DLC Character Coming",
+          "cn": "苍翼默示录：神观之梦",
+          "title": "词库候选：New DLC Character Coming → 苍翼默示录：神观之梦",
+          "rule": "建议将「New DLC Character Coming」加入词库，译为「苍翼默示录：神观之梦」。",
+          "status": "ready_for_review",
+          "confidence": "high",
+          "date": "2026-06-26",
+          "article_id": 1,
+          "article_title": "《苍翼默示录：神观之梦》发售近十年后突曝新DLC角色",
+          "url": "https://www.ign.com/articles/new-dlc-character-coming-to-blazblue-central-fiction-a-decade-after-it-was-released",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
       ]
     },
     {
       "id": 7,
-      "cn_title": "《PlayStation》PS5推出《GTA6》定制界面，索尼全面押注Rockstar合作",
+      "cn_title": "PS5推出《GTA6》定制界面，索尼全面押注Rockstar合作",
       "en_title": "PlayStation 5 Now Features Custom GTA 6 UI, as Sony Goes All In on Rockstar Partnership",
       "url": "https://www.ign.com/articles/playstation-5-now-features-custom-gta-6-ui-as-sony-goes-all-in-on-rockstar-partnership",
-      "category": null,
+      "category": "游戏新闻",
+      "has_translation": true,
       "title_diff": {
         "mine": "《PlayStation》PS5推出《GTA6》定制界面，索尼全面押注Rockstar合作",
         "yours": "PS5推出《GTA6》定制界面，索尼全面押注Rockstar合作"
@@ -204,14 +315,34 @@
           ],
           "your_sentences": []
         }
+      ],
+      "dictionary_candidates": [
+        {
+          "id": "dict_candidate_ps5_now_features_custom_gta_5c69fe23a9f2",
+          "category": "dictionary",
+          "type": "dictionary_candidate",
+          "dict_category": "games",
+          "en": "PS5 Now Features Custom GTA",
+          "cn": "GTA6",
+          "title": "词库候选：PS5 Now Features Custom GTA → GTA6",
+          "rule": "建议将「PS5 Now Features Custom GTA」加入词库，译为「GTA6」。",
+          "status": "ready_for_review",
+          "confidence": "high",
+          "date": "2026-06-26",
+          "article_id": 7,
+          "article_title": "PS5推出《GTA6》定制界面，索尼全面押注Rockstar合作",
+          "url": "https://www.ign.com/articles/playstation-5-now-features-custom-gta-6-ui-as-sony-goes-all-in-on-rockstar-partnership",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
       ]
     },
     {
       "id": 10,
-      "cn_title": "《GTA6》Insomniac确认《金刚狼》实体版含光盘",
+      "cn_title": "Insomniac确认《漫威金刚狼》实体版含光盘",
       "en_title": "Insomniac Responds to Wolverine Fan to Confirm Physical Edition Includes a Disc in the Box and I Suspect More Devs Will Have to Answer This Question in a Post-GTA 6 World",
       "url": "https://www.ign.com/articles/insomniac-responds-to-wolverine-fan-to-confirm-physical-edition-includes-a-disc-in-the-box-and-i-suspect-more-devs-will-have-to-answer-this-question-in-a-post-gta-6-world",
-      "category": null,
+      "category": "游戏新闻",
+      "has_translation": true,
       "title_diff": {
         "mine": "《GTA6》Insomniac确认《金刚狼》实体版含光盘",
         "yours": "Insomniac确认《漫威金刚狼》实体版含光盘"
@@ -262,6 +393,25 @@
           ],
           "your_sentences": []
         }
+      ],
+      "dictionary_candidates": [
+        {
+          "id": "dict_candidate_insomniac_responds_cb8a346f8200",
+          "category": "dictionary",
+          "type": "dictionary_candidate",
+          "dict_category": "games",
+          "en": "Insomniac Responds",
+          "cn": "漫威金刚狼",
+          "title": "词库候选：Insomniac Responds → 漫威金刚狼",
+          "rule": "建议将「Insomniac Responds」加入词库，译为「漫威金刚狼」。",
+          "status": "ready_for_review",
+          "confidence": "high",
+          "date": "2026-06-26",
+          "article_id": 10,
+          "article_title": "Insomniac确认《漫威金刚狼》实体版含光盘",
+          "url": "https://www.ign.com/articles/insomniac-responds-to-wolverine-fan-to-confirm-physical-edition-includes-a-disc-in-the-box-and-i-suspect-more-devs-will-have-to-answer-this-question-in-a-post-gta-6-world",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
       ]
     },
     {
@@ -269,7 +419,8 @@
       "cn_title": "苹果全线涨价，AI内存成本作祟",
       "en_title": "Apple is the Latest Company to Raise Prices Because of AI",
       "url": "https://www.ign.com/articles/apple-is-the-latest-company-to-raise-prices-because-of-ai",
-      "category": null,
+      "category": "科技新闻",
+      "has_translation": true,
       "title_diff": null,
       "subtitle_diff": null,
       "body_diffs": [
@@ -326,14 +477,16 @@
           ],
           "your_sentences": []
         }
-      ]
+      ],
+      "dictionary_candidates": []
     },
     {
       "id": 16,
       "cn_title": "Bungie宣布裁员，承认《命运2》未达预期",
       "en_title": "Bungie Announces Layoffs as It Admits 'Destiny 2 Fell Short of Expectations'",
       "url": "https://www.ign.com/articles/bungie-announces-layoffs-as-it-admits-destiny-2-fell-short-of-expectations",
-      "category": null,
+      "category": "行业动态",
+      "has_translation": true,
       "title_diff": null,
       "subtitle_diff": null,
       "body_diffs": [
@@ -359,14 +512,34 @@
           ],
           "your_sentences": []
         }
+      ],
+      "dictionary_candidates": [
+        {
+          "id": "dict_candidate_sony_confirms_c404dc21ce1f",
+          "category": "dictionary",
+          "type": "dictionary_candidate",
+          "dict_category": "terms",
+          "en": "Sony Confirms",
+          "cn": "命运2",
+          "title": "词库候选：Sony Confirms → 命运2",
+          "rule": "建议将「Sony Confirms」加入词库，译为「命运2」。",
+          "status": "ready_for_review",
+          "confidence": "high",
+          "date": "2026-06-26",
+          "article_id": 16,
+          "article_title": "Bungie宣布裁员，承认《命运2》未达预期",
+          "url": "https://www.ign.com/articles/bungie-announces-layoffs-as-it-admits-destiny-2-fell-short-of-expectations",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
       ]
     },
     {
       "id": 24,
-      "cn_title": "微软宣布XBOX主机涨价，2TB停产",
+      "cn_title": "微软宣布XBOX主机涨价，2TB版本停产",
       "en_title": "Microsoft Announces Significant Price Rises for Xbox Series X and S, 2TB Model Discontinued",
       "url": "https://www.ign.com/articles/microsoft-announces-significant-price-rises-for-xbox-series-x-and-s-2tb-model-discontinued",
-      "category": null,
+      "category": "行业动态",
+      "has_translation": true,
       "title_diff": {
         "mine": "微软宣布XBOX主机涨价，2TB停产",
         "yours": "微软宣布XBOX主机涨价，2TB版本停产"
@@ -476,14 +649,16 @@
           ],
           "your_sentences": []
         }
-      ]
+      ],
+      "dictionary_candidates": []
     },
     {
       "id": 29,
-      "cn_title": "《Deltarune》第6章2027年发售，第5章打破Steam在线纪录",
+      "cn_title": "《三角符文》第6章2027年发售，第5章打破Steam在线纪录",
       "en_title": "Deltarune Chapter 6 Will Release in 2027, Chapter 5 Shatters Concurrent Player Records on Steam",
       "url": "https://www.ign.com/articles/deltarune-chapter-6-will-release-in-2027-chapter-5-shatters-concurrent-player-records-on-steam",
-      "category": null,
+      "category": "游戏新闻",
+      "has_translation": true,
       "title_diff": {
         "mine": "《Deltarune》第6章2027年发售，第5章打破Steam在线纪录",
         "yours": "《三角符文》第6章2027年发售，第5章打破Steam在线纪录"
@@ -588,14 +763,34 @@
           ],
           "your_sentences": []
         }
+      ],
+      "dictionary_candidates": [
+        {
+          "id": "dict_candidate_deltarune_chapter_5ceff3914620",
+          "category": "dictionary",
+          "type": "dictionary_candidate",
+          "dict_category": "games",
+          "en": "Deltarune Chapter",
+          "cn": "三角符文",
+          "title": "词库候选：Deltarune Chapter → 三角符文",
+          "rule": "建议将「Deltarune Chapter」加入词库，译为「三角符文」。",
+          "status": "ready_for_review",
+          "confidence": "high",
+          "date": "2026-06-26",
+          "article_id": 29,
+          "article_title": "《三角符文》第6章2027年发售，第5章打破Steam在线纪录",
+          "url": "https://www.ign.com/articles/deltarune-chapter-6-will-release-in-2027-chapter-5-shatters-concurrent-player-records-on-steam",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
       ]
     },
     {
       "id": 31,
-      "cn_title": "Valve改口：Steam Machine仅「最高4K」",
+      "cn_title": "Valve改口：Steam Machine仅「最高4K」分辨率进行游戏",
       "en_title": "Valve Now Claims Steam Machine Is Capable of 'Up To' 4K",
       "url": "https://www.ign.com/articles/valve-now-claims-steam-machine-is-capable-of-up-to-4k",
-      "category": null,
+      "category": "游戏新闻",
+      "has_translation": true,
       "title_diff": {
         "mine": "Valve改口：Steam Machine仅「最高4K」",
         "yours": "Valve改口：Steam Machine仅「最高4K」分辨率进行游戏"
@@ -658,7 +853,8 @@
           ],
           "your_sentences": []
         }
-      ]
+      ],
+      "dictionary_candidates": []
     }
   ]
 }

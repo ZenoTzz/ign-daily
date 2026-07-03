@@ -1034,6 +1034,12 @@
           "text": "采纳，进入长期规则。",
           "classified_as": "confirmed",
           "created_at": "2026-06-07T02:52:19+08:00"
+        },
+        {
+          "week_id": "2026-W27",
+          "text": "采纳，进入长期规则。",
+          "classified_as": "confirmed",
+          "created_at": "2026-07-03T22:40:04+08:00"
         }
       ],
       "created_at": "2026-06-03T16:03:40+08:00",
@@ -1506,6 +1512,12 @@
           "text": "采纳，进入长期规则。",
           "classified_as": "confirmed",
           "created_at": "2026-06-15T21:48:32+08:00"
+        },
+        {
+          "week_id": "2026-W27",
+          "text": "采纳，进入长期规则。",
+          "classified_as": "confirmed",
+          "created_at": "2026-07-03T22:40:04+08:00"
         }
       ],
       "created_at": "2026-06-04T06:38:54+08:00",
@@ -2476,7 +2488,7 @@
       "rule": "游戏、影视、角色和系统名有稳定官方或通行中文译名时应统一使用；没有稳定译名时保留原文，不自行创造译名。",
       "category": "dictionary",
       "scope": "games|movies_tv",
-      "status": "pending",
+      "status": "confirmed",
       "days": [
         "2026-05-30",
         "2026-06-24",
@@ -2517,7 +2529,14 @@
           "after": "星球大战：日蚀"
         }
       ],
-      "feedback": [],
+      "feedback": [
+        {
+          "week_id": "2026-W27",
+          "text": "采纳，进入长期规则。",
+          "classified_as": "confirmed",
+          "created_at": "2026-07-03T22:40:04+08:00"
+        }
+      ],
       "created_at": "2026-06-25T21:53:01+08:00",
       "last_seen": "2026-06-30",
       "confidence": 0.78,
@@ -2531,7 +2550,7 @@
       "type": "dictionary_candidate",
       "dict_category": "movies_tv",
       "scope": "all",
-      "status": "ready_for_review",
+      "status": "confirmed",
       "days": [
         "2026-06-29"
       ],
@@ -2556,7 +2575,15 @@
         "cn": "赛博朋克：边缘行者2",
         "cat": "movies_tv",
         "source": "user"
-      }
+      },
+      "feedback": [
+        {
+          "week_id": "2026-W27",
+          "text": "采纳，进入长期规则。",
+          "classified_as": "confirmed",
+          "created_at": "2026-07-03T22:40:04+08:00"
+        }
+      ]
     },
     "dict_candidate_christopher_nolan_02d3503e27b6": {
       "id": "dict_candidate_christopher_nolan_02d3503e27b6",
@@ -2566,7 +2593,7 @@
       "type": "dictionary_candidate",
       "dict_category": "people",
       "scope": "all",
-      "status": "ready_for_review",
+      "status": "confirmed",
       "days": [
         "2026-06-29"
       ],
@@ -2591,7 +2618,15 @@
         "cn": "克里斯托弗·诺兰",
         "cat": "people",
         "source": "user"
-      }
+      },
+      "feedback": [
+        {
+          "week_id": "2026-W27",
+          "text": "采纳，进入长期规则。",
+          "classified_as": "confirmed",
+          "created_at": "2026-07-03T22:40:04+08:00"
+        }
+      ]
     },
     "dict_candidate_scorpion_2d428cfaa537": {
       "id": "dict_candidate_scorpion_2d428cfaa537",
@@ -2601,7 +2636,7 @@
       "type": "dictionary_candidate",
       "dict_category": "games",
       "scope": "all",
-      "status": "ready_for_review",
+      "status": "pending",
       "days": [
         "2026-06-28"
       ],
@@ -2626,7 +2661,15 @@
         "cn": "蝎子",
         "cat": "games",
         "source": "user"
-      }
+      },
+      "feedback": [
+        {
+          "week_id": "2026-W27",
+          "text": "暂缓，继续观察。",
+          "classified_as": "pending",
+          "created_at": "2026-07-03T22:38:43+08:00"
+        }
+      ]
     },
     "dict_candidate_immortal_846234610dbe": {
       "id": "dict_candidate_immortal_846234610dbe",
@@ -2636,7 +2679,7 @@
       "type": "dictionary_candidate",
       "dict_category": "games",
       "scope": "all",
-      "status": "ready_for_review",
+      "status": "pending",
       "days": [
         "2026-06-28"
       ],
@@ -2661,7 +2704,15 @@
         "cn": "不朽者",
         "cat": "games",
         "source": "user"
-      }
+      },
+      "feedback": [
+        {
+          "week_id": "2026-W27",
+          "text": "暂缓，继续观察。",
+          "classified_as": "pending",
+          "created_at": "2026-07-03T22:38:43+08:00"
+        }
+      ]
     },
     "dict_candidate_atom_eve_a04a16ee5f01": {
       "id": "dict_candidate_atom_eve_a04a16ee5f01",
@@ -2671,7 +2722,7 @@
       "type": "dictionary_candidate",
       "dict_category": "games",
       "scope": "all",
-      "status": "ready_for_review",
+      "status": "pending",
       "days": [
         "2026-06-28"
       ],
@@ -2696,7 +2747,15 @@
         "cn": "原子夏娃",
         "cat": "games",
         "source": "user"
-      }
+      },
+      "feedback": [
+        {
+          "week_id": "2026-W27",
+          "text": "暂缓，继续观察。",
+          "classified_as": "pending",
+          "created_at": "2026-07-03T22:38:43+08:00"
+        }
+      ]
     },
     "dict_candidate_spellcasters_chronicles_4b1e9e989b50": {
       "id": "dict_candidate_spellcasters_chronicles_4b1e9e989b50",
@@ -2706,7 +2765,7 @@
       "type": "dictionary_candidate",
       "dict_category": "terms",
       "scope": "all",
-      "status": "ready_for_review",
+      "status": "pending",
       "days": [
         "2026-06-30"
       ],
@@ -2731,7 +2790,15 @@
         "cn": "咒术编年史",
         "cat": "terms",
         "source": "user"
-      }
+      },
+      "feedback": [
+        {
+          "week_id": "2026-W27",
+          "text": "暂缓，继续观察。",
+          "classified_as": "pending",
+          "created_at": "2026-07-03T22:38:43+08:00"
+        }
+      ]
     },
     "dict_candidate_dead_or_alive_6_last_round_f65c2c58f0ee": {
       "id": "dict_candidate_dead_or_alive_6_last_round_f65c2c58f0ee",
@@ -2741,7 +2808,7 @@
       "type": "dictionary_candidate",
       "dict_category": "games",
       "scope": "all",
-      "status": "ready_for_review",
+      "status": "confirmed",
       "days": [
         "2026-06-30"
       ],
@@ -2766,7 +2833,15 @@
         "cn": "死或生6：Last Round",
         "cat": "games",
         "source": "user"
-      }
+      },
+      "feedback": [
+        {
+          "week_id": "2026-W27",
+          "text": "采纳，进入长期规则。",
+          "classified_as": "confirmed",
+          "created_at": "2026-07-03T22:40:04+08:00"
+        }
+      ]
     },
     "dict_candidate_fallout_new_vegas_361180538b91": {
       "id": "dict_candidate_fallout_new_vegas_361180538b91",
@@ -2776,7 +2851,7 @@
       "type": "dictionary_candidate",
       "dict_category": "games",
       "scope": "all",
-      "status": "ready_for_review",
+      "status": "confirmed",
       "days": [
         "2026-06-30"
       ],
@@ -2801,7 +2876,15 @@
         "cn": "辐射：新维加斯",
         "cat": "games",
         "source": "user"
-      }
+      },
+      "feedback": [
+        {
+          "week_id": "2026-W27",
+          "text": "采纳，进入长期规则。",
+          "classified_as": "confirmed",
+          "created_at": "2026-07-03T22:40:04+08:00"
+        }
+      ]
     },
     "dict_candidate_star_wars_eclipse_710171cd8cd4": {
       "id": "dict_candidate_star_wars_eclipse_710171cd8cd4",
@@ -2811,7 +2894,7 @@
       "type": "dictionary_candidate",
       "dict_category": "games",
       "scope": "all",
-      "status": "ready_for_review",
+      "status": "confirmed",
       "days": [
         "2026-06-30"
       ],
@@ -2836,7 +2919,15 @@
         "cn": "星球大战：日蚀",
         "cat": "games",
         "source": "user"
-      }
+      },
+      "feedback": [
+        {
+          "week_id": "2026-W27",
+          "text": "采纳，进入长期规则。",
+          "classified_as": "confirmed",
+          "created_at": "2026-07-03T22:40:04+08:00"
+        }
+      ]
     },
     "dict_candidate_rambo_prequel_starring_noah_centineo_get_7810a9bb5733": {
       "id": "dict_candidate_rambo_prequel_starring_noah_centineo_get_7810a9bb5733",
@@ -6143,7 +6234,42 @@
         "cat": "terms",
         "source": "user"
       }
+    },
+    "dict_candidate_capcom_keeps_winning_37bbd5d87279": {
+      "id": "dict_candidate_capcom_keeps_winning_37bbd5d87279",
+      "title": "词库候选：Capcom Keeps Winning → 鬼武者：剑之道",
+      "rule": "建议将「Capcom Keeps Winning」加入词库，译为「鬼武者：剑之道」。",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "games",
+      "scope": "all",
+      "status": "ready_for_review",
+      "days": [
+        "2026-07-03"
+      ],
+      "days_seen": 1,
+      "articles_seen": 1,
+      "contradictions": 0,
+      "examples": [
+        {
+          "date": "2026-07-03",
+          "article_id": 1,
+          "before": "Capcom Keeps Winning",
+          "after": "鬼武者：剑之道",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "created_at": "2026-07-03T22:37:21+08:00",
+      "last_seen": "2026-07-03",
+      "confidence": 0.8,
+      "latest_evidence_summary": "英文标题开头专名与中文标题书名号对应。",
+      "candidate_payload": {
+        "en": "Capcom Keeps Winning",
+        "cn": "鬼武者：剑之道",
+        "cat": "games",
+        "source": "user"
+      }
     }
   },
-  "updated_at": "2026-06-30T22:41:39+08:00"
+  "updated_at": "2026-07-03T22:40:04+08:00"
 }

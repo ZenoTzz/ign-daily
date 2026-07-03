@@ -26,25 +26,32 @@ If `nightly_learner` is not `codex`, stop with a short note.
 
 Use these sources, in this order:
 
-1. Tencent polish documents listed in `data/tencent-polish-config.json`
-2. `data/{date}/polished/_index.json` and `data/{date}/polished/*.json`
-3. `data/{date}/translations/NN.json`
-4. `data/learning_log/{date}_feedback.json`
-5. `data/learning/weekly/*_feedback.json`
-6. Existing `data/learning/style-evidence.json`
-7. Existing weekly reports in `data/learning/weekly/`
-8. Current `STYLE_PROFILE.md`
+1. Google Docs polish document listed in `data/google-polish-config.json`
+2. Tencent polish documents listed in `data/tencent-polish-config.json` for
+   historical compatibility only
+3. `data/{date}/polished/_index.json` and `data/{date}/polished/*.json`
+4. `data/{date}/translations/NN.json`
+5. `data/learning_log/{date}_feedback.json`
+6. `data/learning/weekly/*_feedback.json`
+7. Existing `data/learning/style-evidence.json`
+8. Existing weekly reports in `data/learning/weekly/`
+9. Current `STYLE_PROFILE.md`
 
 Prefer recent dates with polished files or new feedback. If there is no new
 polish or feedback, do not invent learning notes.
+
+Google Docs import means reading the user's polished final copy back into
+`data/{date}/polished/` for learning. It is different from Google Docs sync,
+which writes newly completed translations into the user's monthly document.
 
 ## Backfill Check
 
 Every run must first check for missed historical work before handling only the
 newest date. Treat this as a small backfill pass, not a broad rewrite:
 
-1. Import all configured Tencent polish documents with the normal importer so
-   previously missed dates can be filled in.
+1. Import the configured Google Docs polish document with the normal importer
+   so previously missed dates can be filled in. Use Tencent import only as a
+   fallback for historical documents that are not represented in Google Docs.
 2. Use `data/index-list.json` and existing `data/{date}/` directories to find
    historical dates, then look across `data/{date}/polished/`,
    `data/learning_log/`, and `data/learning/weekly/*_feedback.json` inputs for
@@ -58,15 +65,18 @@ newest date. Treat this as a small backfill pass, not a broad rewrite:
 
 ## Method
 
-1. Run `python scripts/import_tencent_polish.py --all` first. Only accept
+1. Run `python scripts/import_google_docs_polish.py --all` first. Only accept
    high-confidence date/article matches, preserve manual polish files, and use
-   the configured Tencent documents to backfill missed dates incrementally.
+   the configured Google Docs tabs to backfill missed dates incrementally.
+   If Google Docs import fails or a historical month is missing from
+   `data/google-polish-config.json`, run `python scripts/import_tencent_polish.py --all`
+   as a compatibility fallback.
 2. Run `python scripts/nightly_polish_diff.py {date}` for dates with polished
    files when a fresh `diff_analysis.json` is useful.
 3. If `translations/NN.json` exists, compare original translation against the
    user's polished version.
 4. If `translations/NN.json` does not exist, still compare `sources/NN.json`
-   with the Tencent-polished final Chinese稿 for dictionary learning only:
+   with the Google Docs-polished final Chinese copy for dictionary learning only:
    identify high-confidence proper-name pairs, check whether the English term
    already exists in `data/dict.json`, and write missing terms as
    `dictionary_candidate` learning candidates. Do not auto-write them to

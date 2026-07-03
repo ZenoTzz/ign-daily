@@ -1,9 +1,43 @@
 {
   "date": "2026-06-30",
-  "generated_at": "2026-06-30T22:38:20.057764",
-  "total_articles": 5,
-  "dictionary_candidate_count": 4,
+  "generated_at": "2026-07-01T22:36:51.078329",
+  "total_articles": 9,
+  "dictionary_candidate_count": 5,
   "dictionary_candidates": [
+    {
+      "id": "dict_candidate_new_vegas_director_d87b0272b86c",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "movies_tv",
+      "en": "New Vegas Director",
+      "cn": "辐射：新维加斯",
+      "title": "词库候选：New Vegas Director → 辐射：新维加斯",
+      "rule": "建议将「New Vegas Director」加入词库，译为「辐射：新维加斯」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "date": "2026-06-30",
+      "article_id": 8,
+      "article_title": "《辐射：新维加斯》总监盛赞剧集：最佳改编之一",
+      "url": "https://www.ign.com/articles/fallout-new-vegas-director-says-amazons-fallout-show-is-one-of-the-best-adaptations-of-a-video-game-franchise-and-no-he-isnt-bothered-by-dinky-facing-the-wrong-way",
+      "evidence": "英文标题开头专名与中文标题书名号对应。"
+    },
+    {
+      "id": "dict_candidate_fallout_new_vegas_director_says_amazon_s_c4e9cdd4e72c",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "movies_tv",
+      "en": "Fallout: New Vegas Director Says Amazon's",
+      "cn": "辐射：新维加斯",
+      "title": "词库候选：Fallout: New Vegas Director Says Amazon's → 辐射：新维加斯",
+      "rule": "建议将「Fallout: New Vegas Director Says Amazon's」加入词库，译为「辐射：新维加斯」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "date": "2026-06-30",
+      "article_id": 8,
+      "article_title": "《辐射：新维加斯》总监盛赞剧集：最佳改编之一",
+      "url": "https://www.ign.com/articles/fallout-new-vegas-director-says-amazons-fallout-show-is-one-of-the-best-adaptations-of-a-video-game-franchise-and-no-he-isnt-bothered-by-dinky-facing-the-wrong-way",
+      "evidence": "英文标题开头专名与中文标题书名号对应。"
+    },
     {
       "id": "dict_candidate_spellcasters_chronicles_4b1e9e989b50",
       "category": "dictionary",
@@ -22,58 +56,38 @@
       "evidence": "来自文章页未确认新词候选。"
     },
     {
-      "id": "dict_candidate_dead_or_alive_6_last_round_f65c2c58f0ee",
+      "id": "dict_candidate_netflix_is_reportedly_working_e3fbaf4a6c4b",
       "category": "dictionary",
       "type": "dictionary_candidate",
-      "dict_category": "games",
-      "en": "Dead or Alive 6: Last Round",
-      "cn": "死或生6：Last Round",
-      "title": "词库候选：Dead or Alive 6: Last Round → 死或生6：Last Round",
-      "rule": "建议将「Dead or Alive 6: Last Round」加入词库，译为「死或生6：Last Round」。",
+      "dict_category": "people",
+      "en": "Netflix Is Reportedly Working",
+      "cn": "女神异闻录",
+      "title": "词库候选：Netflix Is Reportedly Working → 女神异闻录",
+      "rule": "建议将「Netflix Is Reportedly Working」加入词库，译为「女神异闻录」。",
       "status": "ready_for_review",
       "confidence": "high",
       "date": "2026-06-30",
-      "article_id": 7,
-      "article_title": "",
-      "url": "",
-      "evidence": "用户将标题和正文中的副标题从直译改为保留官方英文副标题 Last Round。",
-      "latest_evidence_summary": "用户将标题和正文中的副标题从直译改为保留官方英文副标题 Last Round。"
+      "article_id": 32,
+      "article_title": "Netflix《女神异闻录》真人剧集正在开发中",
+      "url": "https://www.ign.com/articles/persona-live-action-tv-show-in-the-works-at-netflix",
+      "evidence": "英文标题开头专名与中文标题书名号对应。"
     },
     {
-      "id": "dict_candidate_fallout_new_vegas_361180538b91",
+      "id": "dict_candidate_toru_nakahara_2b2914ae3857",
       "category": "dictionary",
       "type": "dictionary_candidate",
-      "dict_category": "games",
-      "en": "Fallout: New Vegas",
-      "cn": "辐射：新维加斯",
-      "title": "词库候选：Fallout: New Vegas → 辐射：新维加斯",
-      "rule": "建议将「Fallout: New Vegas」加入词库，译为「辐射：新维加斯」。",
+      "dict_category": "people",
+      "en": "Toru Nakahara",
+      "cn": "中原徹",
+      "title": "词库候选：Toru Nakahara → 中原徹",
+      "rule": "建议将「Toru Nakahara」加入词库，译为「中原徹」。",
       "status": "ready_for_review",
       "confidence": "high",
       "date": "2026-06-30",
-      "article_id": 8,
-      "article_title": "",
-      "url": "",
-      "evidence": "英文标题专名 Fallout: New Vegas 与用户润色标题《辐射：新维加斯》稳定对应。",
-      "latest_evidence_summary": "英文标题专名 Fallout: New Vegas 与用户润色标题《辐射：新维加斯》稳定对应。"
-    },
-    {
-      "id": "dict_candidate_star_wars_eclipse_710171cd8cd4",
-      "category": "dictionary",
-      "type": "dictionary_candidate",
-      "dict_category": "games",
-      "en": "Star Wars: Eclipse",
-      "cn": "星球大战：日蚀",
-      "title": "词库候选：Star Wars: Eclipse → 星球大战：日蚀",
-      "rule": "建议将「Star Wars: Eclipse」加入词库，译为「星球大战：日蚀」。",
-      "status": "ready_for_review",
-      "confidence": "high",
-      "date": "2026-06-30",
-      "article_id": 9,
-      "article_title": "",
-      "url": "",
-      "evidence": "用户将标题中的《星球大战：日食》修正为《星球大战：日蚀》。",
-      "latest_evidence_summary": "用户将标题中的《星球大战：日食》修正为《星球大战：日蚀》。"
+      "article_id": 32,
+      "article_title": "Netflix《女神异闻录》真人剧集正在开发中",
+      "url": "https://www.ign.com/articles/persona-live-action-tv-show-in-the-works-at-netflix",
+      "evidence": "来自文章页未确认新词候选。"
     }
   ],
   "learning_evidence_updated": true,
@@ -273,26 +287,7 @@
           ]
         }
       ],
-      "dictionary_candidates": [
-        {
-          "id": "dict_candidate_dead_or_alive_6_last_round_f65c2c58f0ee",
-          "category": "dictionary",
-          "type": "dictionary_candidate",
-          "dict_category": "games",
-          "en": "Dead or Alive 6: Last Round",
-          "cn": "死或生6：Last Round",
-          "title": "词库候选：Dead or Alive 6: Last Round → 死或生6：Last Round",
-          "rule": "建议将「Dead or Alive 6: Last Round」加入词库，译为「死或生6：Last Round」。",
-          "status": "ready_for_review",
-          "confidence": "high",
-          "date": "2026-06-30",
-          "article_id": 7,
-          "article_title": "《死或生6：Last Round》遭差评轰炸，光荣特库摩要求玩家重购DLC",
-          "url": "https://www.ign.com/articles/dead-or-alive-6-last-round-pummeled-by-negative-reviews-as-koei-tecmo-asks-players-to-rebuy-dlc",
-          "evidence": "用户将标题和正文中的副标题从直译改为保留官方英文副标题 Last Round。",
-          "latest_evidence_summary": "用户将标题和正文中的副标题从直译改为保留官方英文副标题 Last Round。"
-        }
-      ]
+      "dictionary_candidates": []
     },
     {
       "id": 8,
@@ -411,22 +406,38 @@
       ],
       "dictionary_candidates": [
         {
-          "id": "dict_candidate_fallout_new_vegas_361180538b91",
+          "id": "dict_candidate_new_vegas_director_d87b0272b86c",
           "category": "dictionary",
           "type": "dictionary_candidate",
-          "dict_category": "games",
-          "en": "Fallout: New Vegas",
+          "dict_category": "movies_tv",
+          "en": "New Vegas Director",
           "cn": "辐射：新维加斯",
-          "title": "词库候选：Fallout: New Vegas → 辐射：新维加斯",
-          "rule": "建议将「Fallout: New Vegas」加入词库，译为「辐射：新维加斯」。",
+          "title": "词库候选：New Vegas Director → 辐射：新维加斯",
+          "rule": "建议将「New Vegas Director」加入词库，译为「辐射：新维加斯」。",
           "status": "ready_for_review",
           "confidence": "high",
           "date": "2026-06-30",
           "article_id": 8,
           "article_title": "《辐射：新维加斯》总监盛赞剧集：最佳改编之一",
           "url": "https://www.ign.com/articles/fallout-new-vegas-director-says-amazons-fallout-show-is-one-of-the-best-adaptations-of-a-video-game-franchise-and-no-he-isnt-bothered-by-dinky-facing-the-wrong-way",
-          "evidence": "英文标题专名 Fallout: New Vegas 与用户润色标题《辐射：新维加斯》稳定对应。",
-          "latest_evidence_summary": "英文标题专名 Fallout: New Vegas 与用户润色标题《辐射：新维加斯》稳定对应。"
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        },
+        {
+          "id": "dict_candidate_fallout_new_vegas_director_says_amazon_s_c4e9cdd4e72c",
+          "category": "dictionary",
+          "type": "dictionary_candidate",
+          "dict_category": "movies_tv",
+          "en": "Fallout: New Vegas Director Says Amazon's",
+          "cn": "辐射：新维加斯",
+          "title": "词库候选：Fallout: New Vegas Director Says Amazon's → 辐射：新维加斯",
+          "rule": "建议将「Fallout: New Vegas Director Says Amazon's」加入词库，译为「辐射：新维加斯」。",
+          "status": "ready_for_review",
+          "confidence": "high",
+          "date": "2026-06-30",
+          "article_id": 8,
+          "article_title": "《辐射：新维加斯》总监盛赞剧集：最佳改编之一",
+          "url": "https://www.ign.com/articles/fallout-new-vegas-director-says-amazons-fallout-show-is-one-of-the-best-adaptations-of-a-video-game-franchise-and-no-he-isnt-bothered-by-dinky-facing-the-wrong-way",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
         }
       ]
     },
@@ -652,24 +663,6 @@
           "article_title": "Quantic Dream员工罢工，力保《星球大战：日蚀》",
           "url": "https://www.ign.com/articles/with-the-threat-of-layoffs-looming-quantic-dream-staff-say-theyre-going-on-strike-to-save-star-wars-eclipse-from-cancelation",
           "evidence": "来自文章页未确认新词候选。"
-        },
-        {
-          "id": "dict_candidate_star_wars_eclipse_710171cd8cd4",
-          "category": "dictionary",
-          "type": "dictionary_candidate",
-          "dict_category": "games",
-          "en": "Star Wars: Eclipse",
-          "cn": "星球大战：日蚀",
-          "title": "词库候选：Star Wars: Eclipse → 星球大战：日蚀",
-          "rule": "建议将「Star Wars: Eclipse」加入词库，译为「星球大战：日蚀」。",
-          "status": "ready_for_review",
-          "confidence": "high",
-          "date": "2026-06-30",
-          "article_id": 9,
-          "article_title": "Quantic Dream员工罢工，力保《星球大战：日蚀》",
-          "url": "https://www.ign.com/articles/with-the-threat-of-layoffs-looming-quantic-dream-staff-say-theyre-going-on-strike-to-save-star-wars-eclipse-from-cancelation",
-          "evidence": "用户将标题中的《星球大战：日食》修正为《星球大战：日蚀》。",
-          "latest_evidence_summary": "用户将标题中的《星球大战：日食》修正为《星球大战：日蚀》。"
         }
       ]
     },
@@ -1031,6 +1024,473 @@
         }
       ],
       "dictionary_candidates": []
+    },
+    {
+      "id": 24,
+      "cn_title": "未获Valve许可，dbrand取消Steam Machine外壳",
+      "en_title": "Steam Machine Companion Cube Canceled Because Dbrand Didn't Ask Valve for Permission",
+      "url": "https://www.ign.com/articles/steam-machine-companion-cube-canceled-because-dbrand-didnt-ask-valve-for-permission",
+      "category": "行业动态",
+      "has_translation": true,
+      "title_diff": {
+        "mine": "《Valve》未获许可，dbrand取消Steam Machine外壳",
+        "yours": "未获Valve许可，dbrand取消Steam Machine外壳"
+      },
+      "subtitle_diff": {
+        "mine": "先斩后奏，一场空",
+        "yours": "一场空"
+      },
+      "body_diffs": [
+        {
+          "index": 0,
+          "mine": "科技外设公司dbrand已即日起取消Steam Machine的Companion Cube外壳，原因是该公司从一开始就未征得Valve许可。",
+          "yours": "科技外设公司dbrand已即日起取消Steam Machine的「同伴方块」外壳，原因是该公司从一开始就未征得Valve许可。",
+          "my_sentences": [
+            "科技外设公司dbrand已即日起取消Steam Machine的Companion Cube外壳，原因是该公司从一开始就未征得Valve许可。"
+          ],
+          "your_sentences": [
+            "科技外设公司dbrand已即日起取消Steam Machine的「同伴方块」外壳，原因是该公司从一开始就未征得Valve许可。"
+          ]
+        },
+        {
+          "index": 1,
+          "mine": "该公司在其subreddit上发布长篇解释与致歉。退款今天已开始处理，若买家本周结束前仍未收到退款，建议主动联系。",
+          "yours": "该公司在其subreddit上发布长篇解释与致歉。退款今天已开始处理，若买家本周结束前仍未收到退款，建议主动联系dbrand客服。",
+          "my_sentences": [
+            "该公司在其subreddit上发布长篇解释与致歉。",
+            "退款今天已开始处理，若买家本周结束前仍未收到退款，建议主动联系。"
+          ],
+          "your_sentences": [
+            "该公司在其subreddit上发布长篇解释与致歉。",
+            "退款今天已开始处理，若买家本周结束前仍未收到退款，建议主动联系dbrand客服。"
+          ]
+        },
+        {
+          "index": 2,
+          "mine": "遗憾的是，dbrand对这场Companion Cube风波的叙述直白得令人心痛：「我们把这个想法变成了实物，却从未问过Valve是否允许。」",
+          "yours": "遗憾的是，dbrand对这场同伴方块风波的叙述直白得令人心痛：「我们把这个想法变成了实物，却从未问过Valve是否允许。」",
+          "my_sentences": [
+            "遗憾的是，dbrand对这场Companion Cube风波的叙述直白得令人心痛：「我们把这个想法变成了实物，却从未问过Valve是否允许。",
+            "」"
+          ],
+          "your_sentences": [
+            "遗憾的是，dbrand对这场同伴方块风波的叙述直白得令人心痛：「我们把这个想法变成了实物，却从未问过Valve是否允许。",
+            "」"
+          ]
+        },
+        {
+          "index": 4,
+          "mine": "这家外设公司回顾了2025年11月12日的事件——那天Valve公布了其PC与主机混合设备Steam Machine。感兴趣的玩家，尤其是《传送门》粉丝，应该还记得看到过这款外壳的概念渲染图和注册页面，该配件正是从《传送门》汲取了标志性模型。结果，尽管此事一度「小火一把」，Valve自始至终从未允许dbrand这么做。",
+          "yours": "这家外设公司回顾了2025年11月12日的事件——那天Valve公布了其PC与主机混合设备Steam Machine。感兴趣的玩家，尤其是《传送门》粉丝，应该还记得看到过这款外壳的概念渲染图，该配件正是《传送门》中出现的标志性模型。结果，尽管此事一度「小火一把」，Valve自始至终从未允许dbrand这么做。",
+          "my_sentences": [
+            "这家外设公司回顾了2025年11月12日的事件——那天Valve公布了其PC与主机混合设备Steam Machine。",
+            "感兴趣的玩家，尤其是《传送门》粉丝，应该还记得看到过这款外壳的概念渲染图和注册页面，该配件正是从《传送门》汲取了标志性模型。",
+            "结果，尽管此事一度「小火一把」，Valve自始至终从未允许dbrand这么做。"
+          ],
+          "your_sentences": [
+            "这家外设公司回顾了2025年11月12日的事件——那天Valve公布了其PC与主机混合设备Steam Machine。",
+            "感兴趣的玩家，尤其是《传送门》粉丝，应该还记得看到过这款外壳的概念渲染图，该配件正是《传送门》中出现的标志性模型。",
+            "结果，尽管此事一度「小火一把」，Valve自始至终从未允许dbrand这么做。"
+          ]
+        },
+        {
+          "index": 5,
+          "mine": "dbrand表示，他们为Steam Machine的Companion Cube「倾注了灵魂」，耗费「数千小时」打磨细节，期望成品看起来就像直接从光圈科技实验室里拿出来的。他们还「不止一次」从零重新设计，确保外壳能完美贴合Valve的设备。",
+          "yours": "dbrand表示，他们为Steam Machine的同伴方块「倾注了灵魂」，耗费「数千小时」打磨细节，期望成品看起来就像直接从光圈科技实验室里拿出来的。他们还「不止一次」从零重新设计，确保外壳能完美贴合Valve的设备。",
+          "my_sentences": [
+            "dbrand表示，他们为Steam Machine的Companion Cube「倾注了灵魂」，耗费「数千小时」打磨细节，期望成品看起来就像直接从光圈科技实验室里拿出来的。",
+            "他们还「不止一次」从零重新设计，确保外壳能完美贴合Valve的设备。"
+          ],
+          "your_sentences": [
+            "dbrand表示，他们为Steam Machine的同伴方块「倾注了灵魂」，耗费「数千小时」打磨细节，期望成品看起来就像直接从光圈科技实验室里拿出来的。",
+            "他们还「不止一次」从零重新设计，确保外壳能完美贴合Valve的设备。"
+          ]
+        },
+        {
+          "index": 6,
+          "mine": "dbrand甚至补充说，每售出一个99美元(约合人民币673元)的「贫穷立方体」替代品，他们都要亏钱。然而，对于全身心投入这封《传送门》情书的团队来说，「这并不重要」，因为「这已演变为整个公司的热爱项目」。",
+          "yours": "dbrand甚至补充说，每售出一个99美元（约合人民币673元）的「贫穷立方体」替代品，他们都要亏钱。然而，对于全身心投入这封《传送门》情书的团队来说，「这并不重要」，因为「这已演变为整个公司的热爱项目」。",
+          "my_sentences": [
+            "dbrand甚至补充说，每售出一个99美元(约合人民币673元)的「贫穷立方体」替代品，他们都要亏钱。",
+            "然而，对于全身心投入这封《传送门》情书的团队来说，「这并不重要」，因为「这已演变为整个公司的热爱项目」。"
+          ],
+          "your_sentences": [
+            "dbrand甚至补充说，每售出一个99美元（约合人民币673元）的「贫穷立方体」替代品，他们都要亏钱。",
+            "然而，对于全身心投入这封《传送门》情书的团队来说，「这并不重要」，因为「这已演变为整个公司的热爱项目」。"
+          ]
+        },
+        {
+          "index": 8,
+          "mine": "上周开启预购时，Steam Machine的Companion Cube即成为该公司有史以来第二畅销的产品。随后，Valve找上门来。",
+          "yours": "上周开启预购时，Steam Machine的「同伴方块」外壳即成为该公司有史以来第二畅销的产品。随后，Valve找上门来。",
+          "my_sentences": [
+            "上周开启预购时，Steam Machine的Companion Cube即成为该公司有史以来第二畅销的产品。",
+            "随后，Valve找上门来。"
+          ],
+          "your_sentences": [
+            "上周开启预购时，Steam Machine的「同伴方块」外壳即成为该公司有史以来第二畅销的产品。",
+            "随后，Valve找上门来。"
+          ]
+        },
+        {
+          "index": 9,
+          "mine": "「他们指出Companion Cube是Valve的知识产权，dbrand并未获得许可，」dbrand的声明继续写道，「他们要求我们立即下架该产品及发布视频。这完全是他们的合法权利，而且他们全程直截了当、公平且尊重。」",
+          "yours": "「他们指出同伴方块是Valve的知识产权，dbrand并未获得许可，」dbrand的声明继续写道，「他们要求我们立即下架该产品及发布视频。这完全是他们的合法权利，而且他们全程直截了当、公平且尊重。」",
+          "my_sentences": [
+            "「他们指出Companion Cube是Valve的知识产权，dbrand并未获得许可，」dbrand的声明继续写道，「他们要求我们立即下架该产品及发布视频。",
+            "这完全是他们的合法权利，而且他们全程直截了当、公平且尊重。",
+            "」"
+          ],
+          "your_sentences": [
+            "「他们指出同伴方块是Valve的知识产权，dbrand并未获得许可，」dbrand的声明继续写道，「他们要求我们立即下架该产品及发布视频。",
+            "这完全是他们的合法权利，而且他们全程直截了当、公平且尊重。",
+            "」"
+          ]
+        },
+        {
+          "index": 12,
+          "mine": "dbrand的网站和社交媒体上已清除了所有Steam Machine Companion Cube的相关内容。清理之彻底，连指向其原有商店页面的链接现在都直接跳转至那篇Reddit帖子。",
+          "yours": "dbrand的网站和社交媒体上已清除了所有Steam Machine同伴方块外壳的相关内容。清理之彻底，连指向其原有商店页面的链接现在都直接跳转至那篇Reddit帖子。",
+          "my_sentences": [
+            "dbrand的网站和社交媒体上已清除了所有Steam Machine Companion Cube的相关内容。",
+            "清理之彻底，连指向其原有商店页面的链接现在都直接跳转至那篇Reddit帖子。"
+          ],
+          "your_sentences": [
+            "dbrand的网站和社交媒体上已清除了所有Steam Machine同伴方块外壳的相关内容。",
+            "清理之彻底，连指向其原有商店页面的链接现在都直接跳转至那篇Reddit帖子。"
+          ]
+        },
+        {
+          "index": 16,
+          "mine": "Valve上周开放了Steam Machine的预订，并立即面临黄牛抢购。",
+          "yours": "",
+          "my_sentences": [
+            "Valve上周开放了Steam Machine的预订，并立即面临黄牛抢购。"
+          ],
+          "your_sentences": []
+        }
+      ],
+      "dictionary_candidates": []
+    },
+    {
+      "id": 25,
+      "cn_title": "《GTA6》60帧模式遭数毛社技术专家质疑",
+      "en_title": "'60fps Feels Like a Bridge Too far' — Tech Experts Cast Doubt on Those GTA 6 Quality and Performance Mode 'Leaks'",
+      "url": "https://www.ign.com/articles/60fps-feels-like-a-bridge-too-far-tech-experts-cast-doubt-on-those-gta-6-quality-and-performance-mode-leaks",
+      "category": "游戏新闻",
+      "has_translation": true,
+      "title_diff": {
+        "mine": "《GTA6》60帧模式遭技术专家质疑",
+        "yours": "《GTA6》60帧模式遭数毛社技术专家质疑"
+      },
+      "subtitle_diff": {
+        "mine": "60帧？别想了",
+        "yours": "2026年可能还是30帧"
+      },
+      "body_diffs": [
+        {
+          "index": 0,
+          "mine": "你可能已经看到网上流传的报道，称根据网上出现的零售商列表，《GTA6》将自带一个可以以每秒60帧运行的模式。然而，就像围绕Rockstar这款即将推出的游戏巨作的许多事情一样，不要轻信你读到的一切。",
+          "yours": "你可能已经看到网上流传的报道，称根据网上出现的零售商列表，《GTA6》将自带一个可以以每秒60帧运行的模式。然而，就像围绕Rockstar这款即将推出的游戏巨作的许多流言一样，不要轻信你读到的一切。",
+          "my_sentences": [
+            "你可能已经看到网上流传的报道，称根据网上出现的零售商列表，《GTA6》将自带一个可以以每秒60帧运行的模式。",
+            "然而，就像围绕Rockstar这款即将推出的游戏巨作的许多事情一样，不要轻信你读到的一切。"
+          ],
+          "your_sentences": [
+            "你可能已经看到网上流传的报道，称根据网上出现的零售商列表，《GTA6》将自带一个可以以每秒60帧运行的模式。",
+            "然而，就像围绕Rockstar这款即将推出的游戏巨作的许多流言一样，不要轻信你读到的一切。"
+          ]
+        },
+        {
+          "index": 1,
+          "mine": "Digital Foundry的技术专家表示，目前为止他们看到的《GTA6》所有内容——包括最近发布的截图和短视频片段——都不表明在现世代主机上实现60帧模式是可能的，当然，Rockstar尚未公布任何官方信息。",
+          "yours": "数毛社（Digital Foundry）的技术专家表示，目前为止他们看到的《GTA6》所有内容——包括最近发布的截图和短视频片段，都不表明在现世代主机上实现60帧模式是板上钉钉的，当然，Rockstar尚未公布任何官方信息。",
+          "my_sentences": [
+            "Digital Foundry的技术专家表示，目前为止他们看到的《GTA6》所有内容——包括最近发布的截图和短视频片段——都不表明在现世代主机上实现60帧模式是可能的，当然，Rockstar尚未公布任何官方信息。"
+          ],
+          "your_sentences": [
+            "数毛社（Digital Foundry）的技术专家表示，目前为止他们看到的《GTA6》所有内容——包括最近发布的截图和短视频片段，都不表明在现世代主机上实现60帧模式是板上钉钉的，当然，Rockstar尚未公布任何官方信息。"
+          ]
+        },
+        {
+          "index": 2,
+          "mine": "DF的Will Judd说：「遗憾的是，预告片、预购截图及其他近期画面中显而易见的细节水平，要想缩减到能实现60帧模式的程度似乎极其困难。」",
+          "yours": "数毛社的Will Judd说：「遗憾的是，预告片、预购截图及其他近期画面中显而易见的细节水平，要想缩减到能实现60帧模式的程度似乎极其困难。」",
+          "my_sentences": [
+            "DF的Will Judd说：「遗憾的是，预告片、预购截图及其他近期画面中显而易见的细节水平，要想缩减到能实现60帧模式的程度似乎极其困难。",
+            "」"
+          ],
+          "your_sentences": [
+            "数毛社的Will Judd说：「遗憾的是，预告片、预购截图及其他近期画面中显而易见的细节水平，要想缩减到能实现60帧模式的程度似乎极其困难。",
+            "」"
+          ]
+        },
+        {
+          "index": 3,
+          "mine": "这一评估基于仿真度高的游戏对服役近六年的主机CPU的公认要求（「《GTA6》的世界看起来比《龙之信条2》或《博德之门3》之类的游戏高一个数量级的挑战」）。对于《GTA6》来说，挑战更加艰巨，因为你在开放世界中移动的速度很快。DF预测《GTA6》在主机上均为30帧，并表示「60帧感觉要求太高了」。",
+          "yours": "这一判断基于游戏对主机CPU性能的既有需求，而当前主机世代已经接近六年历史。数毛社指出：「《GTA6》的世界规模和复杂度看起来比《龙之信条2》或《博德之门3》高出一个量级。」而《GTA6》面临的挑战还要更大，因为玩家能够以极高速度在开放世界中移动。数毛社预测，《GTA6》在所有主机平台上都将以30fps运行，并表示「实现60fps似乎过于遥远」。",
+          "my_sentences": [
+            "这一评估基于仿真度高的游戏对服役近六年的主机CPU的公认要求（「《GTA6》的世界看起来比《龙之信条2》或《博德之门3》之类的游戏高一个数量级的挑战」）。",
+            "对于《GTA6》来说，挑战更加艰巨，因为你在开放世界中移动的速度很快。",
+            "DF预测《GTA6》在主机上均为30帧，并表示「60帧感觉要求太高了」。"
+          ],
+          "your_sentences": [
+            "这一判断基于游戏对主机CPU性能的既有需求，而当前主机世代已经接近六年历史。",
+            "数毛社指出：「《GTA6》的世界规模和复杂度看起来比《龙之信条2》或《博德之门3》高出一个量级。",
+            "」而《GTA6》面临的挑战还要更大，因为玩家能够以极高速度在开放世界中移动。",
+            "数毛社预测，《GTA6》在所有主机平台上都将以30fps运行，并表示「实现60fps似乎过于遥远」。"
+          ]
+        },
+        {
+          "index": 4,
+          "mine": "DF认为，即便是性能更强的PS5 Pro也难以让《GTA6》以60帧输出，因为它相对于基础版PS5仅提供了「微小的CPU性能提升」（Pro更侧重于改进光线追踪和对PSSR升级技术的支持，而非更高的帧率）。DF指出，最好情况下PS5 Pro可能实现40帧模式，但同样，目前这并未得到确认。",
+          "yours": "数毛社认为，即便是性能更强的PS5 Pro，在运行《GTA6》时也难以达到60fps，因为它相比标准版PS5仅提供了「有限的CPU性能提升」。PS5 Pro的优势更多体现在增强光线追踪效果以及支持PSSR超分辨率技术，而非提升帧率。DF推测，PS5 Pro最多可能支持40fps模式，但目前仍未获得官方确认。",
+          "my_sentences": [
+            "DF认为，即便是性能更强的PS5 Pro也难以让《GTA6》以60帧输出，因为它相对于基础版PS5仅提供了「微小的CPU性能提升」（Pro更侧重于改进光线追踪和对PSSR升级技术的支持，而非更高的帧率）。",
+            "DF指出，最好情况下PS5 Pro可能实现40帧模式，但同样，目前这并未得到确认。"
+          ],
+          "your_sentences": [
+            "数毛社认为，即便是性能更强的PS5 Pro，在运行《GTA6》时也难以达到60fps，因为它相比标准版PS5仅提供了「有限的CPU性能提升」。",
+            "PS5 Pro的优势更多体现在增强光线追踪效果以及支持PSSR超分辨率技术，而非提升帧率。",
+            "DF推测，PS5 Pro最多可能支持40fps模式，但目前仍未获得官方确认。"
+          ]
+        },
+        {
+          "index": 5,
+          "mine": "值得注意的是，Rockstar自身的发行历史也表明《GTA6》不太可能有60帧。《GTA4》、《GTA5》和《荒野大镖客：救赎2》在主机上均以60帧发布，但重点还是在30帧下的画质表现。这家开发商通常不会发布以60帧为核心打造的游戏。",
+          "yours": "此外，Rockstar过往作品的发行历史也表明，《GTA6》实现60fps的可能性并不高。《GTA4》、《GTA5》以及《荒野大镖客：救赎2》在主机首发时均以30fps为目标，重点放在画面表现上。Rockstar一向并不倾向于围绕60fps体验来打造旗下作品。",
+          "my_sentences": [
+            "值得注意的是，Rockstar自身的发行历史也表明《GTA6》不太可能有60帧。",
+            "《GTA4》、《GTA5》和《荒野大镖客：救赎2》在主机上均以60帧发布，但重点还是在30帧下的画质表现。",
+            "这家开发商通常不会发布以60帧为核心打造的游戏。"
+          ],
+          "your_sentences": [
+            "此外，Rockstar过往作品的发行历史也表明，《GTA6》实现60fps的可能性并不高。",
+            "《GTA4》、《GTA5》以及《荒野大镖客：救赎2》在主机首发时均以30fps为目标，重点放在画面表现上。",
+            "Rockstar一向并不倾向于围绕60fps体验来打造旗下作品。"
+          ]
+        },
+        {
+          "index": 7,
+          "mine": "上周，IGN报道了我们自己的一项调查结果，询问玩家是打算购买100美元(约合人民币680元)的终极版，还是80美元(约合人民币544元)的标准版。结果有点出乎意料：超过70%的人打算购买更昂贵的版本。",
+          "yours": "上周，IGN进行了一项调查，询问玩家是打算购买100美元（约合人民币680元）的终极版，还是80美元（约合人民币544元）的标准版。结果有点出乎意料：超过70%的人打算购买更昂贵的版本。",
+          "my_sentences": [
+            "上周，IGN报道了我们自己的一项调查结果，询问玩家是打算购买100美元(约合人民币680元)的终极版，还是80美元(约合人民币544元)的标准版。",
+            "结果有点出乎意料：超过70%的人打算购买更昂贵的版本。"
+          ],
+          "your_sentences": [
+            "上周，IGN进行了一项调查，询问玩家是打算购买100美元（约合人民币680元）的终极版，还是80美元（约合人民币544元）的标准版。",
+            "结果有点出乎意料：超过70%的人打算购买更昂贵的版本。"
+          ]
+        },
+        {
+          "index": 9,
+          "mine": "Wesley是IGN的新闻总监。你可以在Twitter上关注他 @wyp100，或通过wesley_yinpoole@ign.com联系他，也可私下通过wyp100@proton.me联系。",
+          "yours": "",
+          "my_sentences": [
+            "Wesley是IGN的新闻总监。",
+            "你可以在Twitter上关注他 @wyp100，或通过wesley_yinpoole@ign.com联系他，也可私下通过wyp100@proton.me联系。"
+          ],
+          "your_sentences": []
+        }
+      ],
+      "dictionary_candidates": []
+    },
+    {
+      "id": 31,
+      "cn_title": "XBOX工会召开发布会：拒绝为高管失败买单",
+      "en_title": "'We're Done Paying for Executives' Failures' — Unionized Xbox Developers Hold Press Conference to Make Their Point as Microsoft Reportedly Readies Massive Layoffs",
+      "url": "https://www.ign.com/articles/were-done-paying-for-executives-failures-unionized-xbox-developers-hold-press-conference-to-make-their-point-as-microsoft-reportedly-readies-massive-layoffs",
+      "category": "行业动态",
+      "has_translation": true,
+      "title_diff": {
+        "mine": "《微软》XBOX工会召开发布会：拒绝为高管失败买单",
+        "yours": "XBOX工会召开发布会：拒绝为高管失败买单"
+      },
+      "subtitle_diff": null,
+      "body_diffs": [
+        {
+          "index": 3,
+          "mine": "据报道，即将到来的裁员将使更多工作室面临关闭风险，例如Double Fine和Ninja Theory。《午夜之南》开发商Complusion Games据称也面临关闭，尽管今年早些时候赢得了皮博迪奖。新任XBOX负责人Asha Sharma当时在社交媒体上庆祝了这一成就，几个月后，该工作室就传出了关闭消息：「真正重要的叙事，实至名归的认可！」",
+          "yours": "据报道，即将到来的裁员将使更多工作室面临关闭风险，例如Double Fine和Ninja Theory。《午夜之南》开发商Complusion Games据称也面临关闭，尽管今年早些时候赢得了皮博迪奖。新任XBOX负责人Asha Sharma当时在社交媒体上庆祝了这一成就，几个月后，该工作室就传出了关闭消息。",
+          "my_sentences": [
+            "据报道，即将到来的裁员将使更多工作室面临关闭风险，例如Double Fine和Ninja Theory。",
+            "《午夜之南》开发商Complusion Games据称也面临关闭，尽管今年早些时候赢得了皮博迪奖。",
+            "新任XBOX负责人Asha Sharma当时在社交媒体上庆祝了这一成就，几个月后，该工作室就传出了关闭消息：「真正重要的叙事，实至名归的认可！",
+            "」"
+          ],
+          "your_sentences": [
+            "据报道，即将到来的裁员将使更多工作室面临关闭风险，例如Double Fine和Ninja Theory。",
+            "《午夜之南》开发商Complusion Games据称也面临关闭，尽管今年早些时候赢得了皮博迪奖。",
+            "新任XBOX负责人Asha Sharma当时在社交媒体上庆祝了这一成就，几个月后，该工作室就传出了关闭消息。"
+          ]
+        },
+        {
+          "index": 7,
+          "mine": "一位微软发言人告诉IGN，该公司正在与CWA合作，以达成适当的协议。「我们尊重团队成员表达意见的权利，」发言人表示，「我们与劳工组织有着长期的良好合作记录，我们的团队与CWA达成的几项最终谈判协议以及我们的劳动原则就证明了这一点。我们正在与CWA真诚谈判，以在整个XBOX达成协议。」",
+          "yours": "一位微软发言人告诉IGN，公司正在与CWA合作，以达成适当的协议。「我们尊重团队成员表达意见的权利，」发言人表示，「我们与劳工组织有着长期的良好合作记录，我们的团队与CWA达成的几项最终谈判协议以及我们的劳动原则就证明了这一点。我们正在与CWA真诚谈判，以在整个XBOX达成协议。」",
+          "my_sentences": [
+            "一位微软发言人告诉IGN，该公司正在与CWA合作，以达成适当的协议。",
+            "「我们尊重团队成员表达意见的权利，」发言人表示，「我们与劳工组织有着长期的良好合作记录，我们的团队与CWA达成的几项最终谈判协议以及我们的劳动原则就证明了这一点。",
+            "我们正在与CWA真诚谈判，以在整个XBOX达成协议。",
+            "」"
+          ],
+          "your_sentences": [
+            "一位微软发言人告诉IGN，公司正在与CWA合作，以达成适当的协议。",
+            "「我们尊重团队成员表达意见的权利，」发言人表示，「我们与劳工组织有着长期的良好合作记录，我们的团队与CWA达成的几项最终谈判协议以及我们的劳动原则就证明了这一点。",
+            "我们正在与CWA真诚谈判，以在整个XBOX达成协议。",
+            "」"
+          ]
+        },
+        {
+          "index": 12,
+          "mine": "《暗黑破坏神》高级环境美术师Mahreen Fatima表达了同样的观点，指出微软在AI上的投资证明这家科技巨头资金充裕。「领导层拿收入和利润率来证明裁掉我们是合理的，然后[上周]，自2025年以来第三次提高游戏机价格，」Fatima说，「他们不缺钱。看看他们用来投资AI的数十亿美元。他们只是选择不保护我们。」",
+          "yours": "《暗黑破坏神》高级环境美术师Mahreen Fatima表达了同样的观点，指出微软在AI上的投资证明这家科技巨头资金充裕。「领导层拿收入和利润率来证明裁掉我们是合理的，然后（上周），自2025年以来第三次提高游戏机价格，」Fatima说，「他们不缺钱。看看他们用来投资AI的数十亿美元。他们只是选择不保护我们。」",
+          "my_sentences": [
+            "《暗黑破坏神》高级环境美术师Mahreen Fatima表达了同样的观点，指出微软在AI上的投资证明这家科技巨头资金充裕。",
+            "「领导层拿收入和利润率来证明裁掉我们是合理的，然后[上周]，自2025年以来第三次提高游戏机价格，」Fatima说，「他们不缺钱。",
+            "看看他们用来投资AI的数十亿美元。",
+            "他们只是选择不保护我们。",
+            "」"
+          ],
+          "your_sentences": [
+            "《暗黑破坏神》高级环境美术师Mahreen Fatima表达了同样的观点，指出微软在AI上的投资证明这家科技巨头资金充裕。",
+            "「领导层拿收入和利润率来证明裁掉我们是合理的，然后（上周），自2025年以来第三次提高游戏机价格，」Fatima说，「他们不缺钱。",
+            "看看他们用来投资AI的数十亿美元。",
+            "他们只是选择不保护我们。",
+            "」"
+          ]
+        },
+        {
+          "index": 17,
+          "mine": "Cade Onder是IGN新闻团队的自由撰稿人。他报道所有娱乐相关内容，包括游戏、电影等。你可以在X上找到他 @Cade_Onder。",
+          "yours": "",
+          "my_sentences": [
+            "Cade Onder是IGN新闻团队的自由撰稿人。",
+            "他报道所有娱乐相关内容，包括游戏、电影等。",
+            "你可以在X上找到他 @Cade_Onder。"
+          ],
+          "your_sentences": []
+        }
+      ],
+      "dictionary_candidates": []
+    },
+    {
+      "id": 32,
+      "cn_title": "Netflix《女神异闻录》真人剧集正在开发中",
+      "en_title": "Persona Live-Action TV Show in the Works at Netflix",
+      "url": "https://www.ign.com/articles/persona-live-action-tv-show-in-the-works-at-netflix",
+      "category": "影视资讯",
+      "has_translation": true,
+      "title_diff": null,
+      "subtitle_diff": null,
+      "body_diffs": [
+        {
+          "index": 2,
+          "mine": "21 Laps的Shawn Levy和Robert Atwood也将担任执行制片人，Story Kitchen的Dmitri M. Johnson、迈克尔Lawrence Goldberg和Timothy I. Stevenson同样参与执行制作。世嘉制作人中原徹也将协助担任执行制片人。Netflix拒绝对《综艺》的置评请求作出回应。",
+          "yours": "21 Laps的Shawn Levy和Robert Atwood也将担任执行制片人，Story Kitchen的Dmitri M. Johnson、Michael Lawrence Goldberg和Timothy I. Stevenson同样参与执行制作。世嘉制作人中原亨将协助担任执行制片人。Netflix拒绝对《综艺》的置评请求作出回应。",
+          "my_sentences": [
+            "21 Laps的Shawn Levy和Robert Atwood也将担任执行制片人，Story Kitchen的Dmitri M. Johnson、迈克尔Lawrence Goldberg和Timothy I. Stevenson同样参与执行制作。",
+            "世嘉制作人中原徹也将协助担任执行制片人。",
+            "Netflix拒绝对《综艺》的置评请求作出回应。"
+          ],
+          "your_sentences": [
+            "21 Laps的Shawn Levy和Robert Atwood也将担任执行制片人，Story Kitchen的Dmitri M. Johnson、Michael Lawrence Goldberg和Timothy I. Stevenson同样参与执行制作。",
+            "世嘉制作人中原亨将协助担任执行制片人。",
+            "Netflix拒绝对《综艺》的置评请求作出回应。"
+          ]
+        },
+        {
+          "index": 3,
+          "mine": "目前尚不清楚剧情是直接取材于某部具体作品，还是会讲述一个全新的故事。自1996年系列诞生以来，已推出5部主线游戏、大量衍生作品甚至几款重制版，为《女神异闻录》真人剧集提供了丰富的素材。最新一部编号作品《女神异闻录5》在2016年首次发售时向粉丝们介绍了「怪盗团」，并于2024年通过《女神异闻录5皇家版》拓展了剧情。",
+          "yours": "目前尚不清楚剧情是直接取材于某部具体作品，还是会讲述一个全新的故事。自1996年系列诞生以来，《女神异闻录》已推出5部主线游戏、大量衍生作品甚至几款重制版，为《女神异闻录》真人剧集提供了丰富的素材。最新一部编号作品《女神异闻录5》在2016年首次发售时向粉丝们介绍了「怪盗团」，并于2024年通过《女神异闻录5皇家版》拓展了剧情。",
+          "my_sentences": [
+            "目前尚不清楚剧情是直接取材于某部具体作品，还是会讲述一个全新的故事。",
+            "自1996年系列诞生以来，已推出5部主线游戏、大量衍生作品甚至几款重制版，为《女神异闻录》真人剧集提供了丰富的素材。",
+            "最新一部编号作品《女神异闻录5》在2016年首次发售时向粉丝们介绍了「怪盗团」，并于2024年通过《女神异闻录5皇家版》拓展了剧情。"
+          ],
+          "your_sentences": [
+            "目前尚不清楚剧情是直接取材于某部具体作品，还是会讲述一个全新的故事。",
+            "自1996年系列诞生以来，《女神异闻录》已推出5部主线游戏、大量衍生作品甚至几款重制版，为《女神异闻录》真人剧集提供了丰富的素材。",
+            "最新一部编号作品《女神异闻录5》在2016年首次发售时向粉丝们介绍了「怪盗团」，并于2024年通过《女神异闻录5皇家版》拓展了剧情。"
+          ]
+        },
+        {
+          "index": 5,
+          "mine": "Netflix最著名的合作是与21 Laps共同打造的科幻巨制《怪奇物语》，该剧已于去年年底完结。此外，还参与了《完美伴侣》和《最后一人》等其他电视剧项目的制作。其电影作品包括《死侍与金刚狼》（Levy执导）和《后室》，未来还有《星球大战：星际战斗机》（同样由Levy执导）等项目在计划中。",
+          "yours": "Netflix与21 Laps最知名的合作项目是科幻热门剧集《怪奇物语》，该剧已于去年底完结。21 Laps还参与制作了《完美伴侣》和《最后的男人》等电视剧项目。电影方面，其作品包括Levy执导的《死侍与金刚狼》以及《后室》，未来还将参与《星球大战：星际战士》等项目，而该片同样由Levy执导。",
+          "my_sentences": [
+            "Netflix最著名的合作是与21 Laps共同打造的科幻巨制《怪奇物语》，该剧已于去年年底完结。",
+            "此外，还参与了《完美伴侣》和《最后一人》等其他电视剧项目的制作。",
+            "其电影作品包括《死侍与金刚狼》（Levy执导）和《后室》，未来还有《星球大战：星际战斗机》（同样由Levy执导）等项目在计划中。"
+          ],
+          "your_sentences": [
+            "Netflix与21 Laps最知名的合作项目是科幻热门剧集《怪奇物语》，该剧已于去年底完结。",
+            "21 Laps还参与制作了《完美伴侣》和《最后的男人》等电视剧项目。",
+            "电影方面，其作品包括Levy执导的《死侍与金刚狼》以及《后室》，未来还将参与《星球大战：星际战士》等项目，而该片同样由Levy执导。"
+          ]
+        },
+        {
+          "index": 6,
+          "mine": "Story Kitchen过去曾致力于多部游戏改编项目。该公司最著名的是支持世嘉的真人《刺猬索尼克》电影，但其未来计划还包括基于《师父》《双人成行》《正当防卫》《奇异人生》等作品的改编项目。",
+          "yours": "Story Kitchen过去曾致力于多部游戏改编项目。该公司最著名的是支持世嘉的真人《刺猬索尼克》电影，但其未来计划还包括基于《师父》、《双人成行》、《正当防卫》、《奇异人生》等作品的改编项目。",
+          "my_sentences": [
+            "Story Kitchen过去曾致力于多部游戏改编项目。",
+            "该公司最著名的是支持世嘉的真人《刺猬索尼克》电影，但其未来计划还包括基于《师父》《双人成行》《正当防卫》《奇异人生》等作品的改编项目。"
+          ],
+          "your_sentences": [
+            "Story Kitchen过去曾致力于多部游戏改编项目。",
+            "该公司最著名的是支持世嘉的真人《刺猬索尼克》电影，但其未来计划还包括基于《师父》、《双人成行》、《正当防卫》、《奇异人生》等作品的改编项目。"
+          ]
+        },
+        {
+          "index": 7,
+          "mine": "可能还需要一段时间，Netflix的《女神异闻录》真人剧集才会进一步成型。",
+          "yours": "可能还需要一段时间，Netflix的《女神异闻录》真人剧集才会有进一步的消息。",
+          "my_sentences": [
+            "可能还需要一段时间，Netflix的《女神异闻录》真人剧集才会进一步成型。"
+          ],
+          "your_sentences": [
+            "可能还需要一段时间，Netflix的《女神异闻录》真人剧集才会有进一步的消息。"
+          ]
+        }
+      ],
+      "dictionary_candidates": [
+        {
+          "id": "dict_candidate_netflix_is_reportedly_working_e3fbaf4a6c4b",
+          "category": "dictionary",
+          "type": "dictionary_candidate",
+          "dict_category": "people",
+          "en": "Netflix Is Reportedly Working",
+          "cn": "女神异闻录",
+          "title": "词库候选：Netflix Is Reportedly Working → 女神异闻录",
+          "rule": "建议将「Netflix Is Reportedly Working」加入词库，译为「女神异闻录」。",
+          "status": "ready_for_review",
+          "confidence": "high",
+          "date": "2026-06-30",
+          "article_id": 32,
+          "article_title": "Netflix《女神异闻录》真人剧集正在开发中",
+          "url": "https://www.ign.com/articles/persona-live-action-tv-show-in-the-works-at-netflix",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        },
+        {
+          "id": "dict_candidate_toru_nakahara_2b2914ae3857",
+          "category": "dictionary",
+          "type": "dictionary_candidate",
+          "dict_category": "people",
+          "en": "Toru Nakahara",
+          "cn": "中原徹",
+          "title": "词库候选：Toru Nakahara → 中原徹",
+          "rule": "建议将「Toru Nakahara」加入词库，译为「中原徹」。",
+          "status": "ready_for_review",
+          "confidence": "high",
+          "date": "2026-06-30",
+          "article_id": 32,
+          "article_title": "Netflix《女神异闻录》真人剧集正在开发中",
+          "url": "https://www.ign.com/articles/persona-live-action-tv-show-in-the-works-at-netflix",
+          "evidence": "来自文章页未确认新词候选。"
+        }
+      ]
     }
   ]
 }

@@ -1,14 +1,14 @@
 {
   "week_id": "2026-W27",
-  "generated_at": "2026-07-02T22:38:27+08:00",
+  "generated_at": "2026-07-03T22:40:09+08:00",
   "published_by": "weekly_learning_report",
   "range": {
     "start": "2026-06-29",
     "end": "2026-07-05"
   },
   "summary": {
-    "candidate_count": 106,
-    "ready_for_review": 103,
+    "candidate_count": 104,
+    "ready_for_review": 95,
     "confirmed_by_feedback": 0,
     "pending": 1
   },
@@ -275,41 +275,6 @@
       }
     },
     {
-      "id": "dict_candidate_atom_eve_a04a16ee5f01",
-      "title": "词库候选：Atom Eve → 原子夏娃",
-      "rule": "建议将「Atom Eve」加入词库，译为「原子夏娃」。",
-      "category": "dictionary",
-      "type": "dictionary_candidate",
-      "dict_category": "games",
-      "scope": "all",
-      "status": "ready_for_review",
-      "days": [
-        "2026-06-28"
-      ],
-      "days_seen": 1,
-      "articles_seen": 1,
-      "contradictions": 0,
-      "examples": [
-        {
-          "date": "2026-06-28",
-          "article_id": 11,
-          "before": "Atom Eve",
-          "after": "原子夏娃",
-          "evidence": "来自文章页未确认新词候选。"
-        }
-      ],
-      "created_at": "2026-06-30T22:38:19+08:00",
-      "last_seen": "2026-06-28",
-      "confidence": 0.8,
-      "latest_evidence_summary": "来自文章页未确认新词候选。",
-      "candidate_payload": {
-        "en": "Atom Eve",
-        "cn": "原子夏娃",
-        "cat": "games",
-        "source": "user"
-      }
-    },
-    {
       "id": "dict_candidate_bank_balances_rolled_back_75c65b398a19",
       "title": "词库候选：Bank Balances Rolled Back → 极限竞速：地平线6",
       "rule": "建议将「Bank Balances Rolled Back」加入词库，译为「极限竞速：地平线6」。",
@@ -485,37 +450,37 @@
       }
     },
     {
-      "id": "dict_candidate_christopher_nolan_02d3503e27b6",
-      "title": "词库候选：Christopher Nolan → 克里斯托弗·诺兰",
-      "rule": "建议将「Christopher Nolan」加入词库，译为「克里斯托弗·诺兰」。",
+      "id": "dict_candidate_capcom_keeps_winning_37bbd5d87279",
+      "title": "词库候选：Capcom Keeps Winning → 鬼武者：剑之道",
+      "rule": "建议将「Capcom Keeps Winning」加入词库，译为「鬼武者：剑之道」。",
       "category": "dictionary",
       "type": "dictionary_candidate",
-      "dict_category": "people",
+      "dict_category": "games",
       "scope": "all",
       "status": "ready_for_review",
       "days": [
-        "2026-06-29"
+        "2026-07-03"
       ],
       "days_seen": 1,
       "articles_seen": 1,
       "contradictions": 0,
       "examples": [
         {
-          "date": "2026-06-29",
-          "article_id": 3,
-          "before": "Christopher Nolan",
-          "after": "克里斯托弗·诺兰",
-          "evidence": "英文标题人名与中文标题冒号前译名对应。"
+          "date": "2026-07-03",
+          "article_id": 1,
+          "before": "Capcom Keeps Winning",
+          "after": "鬼武者：剑之道",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
         }
       ],
-      "created_at": "2026-06-30T08:23:16+08:00",
-      "last_seen": "2026-06-29",
+      "created_at": "2026-07-03T22:37:21+08:00",
+      "last_seen": "2026-07-03",
       "confidence": 0.8,
-      "latest_evidence_summary": "英文标题人名与中文标题冒号前译名对应。",
+      "latest_evidence_summary": "英文标题开头专名与中文标题书名号对应。",
       "candidate_payload": {
-        "en": "Christopher Nolan",
-        "cn": "克里斯托弗·诺兰",
-        "cat": "people",
+        "en": "Capcom Keeps Winning",
+        "cn": "鬼武者：剑之道",
+        "cat": "games",
         "source": "user"
       }
     },
@@ -655,76 +620,6 @@
       "candidate_payload": {
         "en": "Cory Barlog",
         "cn": "Cory Barlog",
-        "cat": "games",
-        "source": "user"
-      }
-    },
-    {
-      "id": "dict_candidate_cyberpunk_edgerunners_2_b769903811b5",
-      "title": "词库候选：Cyberpunk: Edgerunners 2 → 赛博朋克：边缘行者2",
-      "rule": "建议将「Cyberpunk: Edgerunners 2」加入词库，译为「赛博朋克：边缘行者2」。",
-      "category": "dictionary",
-      "type": "dictionary_candidate",
-      "dict_category": "movies_tv",
-      "scope": "all",
-      "status": "ready_for_review",
-      "days": [
-        "2026-06-29"
-      ],
-      "days_seen": 1,
-      "articles_seen": 1,
-      "contradictions": 0,
-      "examples": [
-        {
-          "date": "2026-06-29",
-          "article_id": 1,
-          "before": "Cyberpunk: Edgerunners 2",
-          "after": "赛博朋克：边缘行者2",
-          "evidence": "英文标题开头专名与中文标题书名号对应。"
-        }
-      ],
-      "created_at": "2026-06-30T08:23:16+08:00",
-      "last_seen": "2026-06-29",
-      "confidence": 0.8,
-      "latest_evidence_summary": "英文标题开头专名与中文标题书名号对应。",
-      "candidate_payload": {
-        "en": "Cyberpunk: Edgerunners 2",
-        "cn": "赛博朋克：边缘行者2",
-        "cat": "movies_tv",
-        "source": "user"
-      }
-    },
-    {
-      "id": "dict_candidate_dead_or_alive_6_last_round_f65c2c58f0ee",
-      "title": "词库候选：Dead or Alive 6: Last Round → 死或生6：Last Round",
-      "rule": "建议将「Dead or Alive 6: Last Round」加入词库，译为「死或生6：Last Round」。",
-      "category": "dictionary",
-      "type": "dictionary_candidate",
-      "dict_category": "games",
-      "scope": "all",
-      "status": "ready_for_review",
-      "days": [
-        "2026-06-30"
-      ],
-      "days_seen": 1,
-      "articles_seen": 1,
-      "contradictions": 0,
-      "examples": [
-        {
-          "date": "2026-06-30",
-          "article_id": 7,
-          "before": "Dead or Alive 6: Last Round",
-          "after": "死或生6：Last Round",
-          "evidence": "用户将标题和正文中的副标题从直译改为保留官方英文副标题 Last Round。"
-        }
-      ],
-      "created_at": "2026-06-30T22:40:29+08:00",
-      "last_seen": "2026-06-30",
-      "confidence": 0.8,
-      "latest_evidence_summary": "用户将标题和正文中的副标题从直译改为保留官方英文副标题 Last Round。",
-      "candidate_payload": {
-        "en": "Dead or Alive 6: Last Round",
-        "cn": "死或生6：Last Round",
         "cat": "games",
         "source": "user"
       }
@@ -1080,41 +975,6 @@
       }
     },
     {
-      "id": "dict_candidate_fallout_new_vegas_361180538b91",
-      "title": "词库候选：Fallout: New Vegas → 辐射：新维加斯",
-      "rule": "建议将「Fallout: New Vegas」加入词库，译为「辐射：新维加斯」。",
-      "category": "dictionary",
-      "type": "dictionary_candidate",
-      "dict_category": "games",
-      "scope": "all",
-      "status": "ready_for_review",
-      "days": [
-        "2026-06-30"
-      ],
-      "days_seen": 1,
-      "articles_seen": 1,
-      "contradictions": 0,
-      "examples": [
-        {
-          "date": "2026-06-30",
-          "article_id": 8,
-          "before": "Fallout: New Vegas",
-          "after": "辐射：新维加斯",
-          "evidence": "英文标题专名 Fallout: New Vegas 与用户润色标题《辐射：新维加斯》稳定对应。"
-        }
-      ],
-      "created_at": "2026-06-30T22:40:29+08:00",
-      "last_seen": "2026-06-30",
-      "confidence": 0.8,
-      "latest_evidence_summary": "英文标题专名 Fallout: New Vegas 与用户润色标题《辐射：新维加斯》稳定对应。",
-      "candidate_payload": {
-        "en": "Fallout: New Vegas",
-        "cn": "辐射：新维加斯",
-        "cat": "games",
-        "source": "user"
-      }
-    },
-    {
       "id": "dict_candidate_final_fantasy_vii_remake_part_1ae4ec005d1a",
       "title": "词库候选：Final Fantasy VII Remake Part → 最终幻想7 重制版",
       "rule": "建议将「Final Fantasy VII Remake Part」加入词库，译为「最终幻想7 重制版」。",
@@ -1425,6 +1285,146 @@
       "candidate_payload": {
         "en": "Halo: Campaign Evolved Collector's Edition Includes",
         "cn": "光环：战役进化",
+        "cat": "games",
+        "source": "user"
+      }
+    },
+    {
+      "id": "dict_candidate_harry_potter_tv_series_casts_peter_0dd0c500ece1",
+      "title": "词库候选：Harry Potter TV Series Casts Peter → 哈利·波特",
+      "rule": "建议将「Harry Potter TV Series Casts Peter」加入词库，译为「哈利·波特」。",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "people",
+      "scope": "all",
+      "status": "ready_for_review",
+      "days": [
+        "2026-06-17"
+      ],
+      "days_seen": 1,
+      "articles_seen": 1,
+      "contradictions": 0,
+      "examples": [
+        {
+          "date": "2026-06-17",
+          "article_id": 3,
+          "before": "Harry Potter TV Series Casts Peter",
+          "after": "哈利·波特",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "created_at": "2026-07-01T22:36:50+08:00",
+      "last_seen": "2026-06-17",
+      "confidence": 0.8,
+      "latest_evidence_summary": "英文标题开头专名与中文标题书名号对应。",
+      "candidate_payload": {
+        "en": "Harry Potter TV Series Casts Peter",
+        "cn": "哈利·波特",
+        "cat": "people",
+        "source": "user"
+      }
+    },
+    {
+      "id": "dict_candidate_hell_let_loose_vietnam_has_been_b02f18e29bd2",
+      "title": "词库候选：Hell Let Loose: Vietnam Has Been → 人间地狱：越南",
+      "rule": "建议将「Hell Let Loose: Vietnam Has Been」加入词库，译为「人间地狱：越南」。",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "games",
+      "scope": "all",
+      "status": "ready_for_review",
+      "days": [
+        "2026-06-04"
+      ],
+      "days_seen": 1,
+      "articles_seen": 1,
+      "contradictions": 0,
+      "examples": [
+        {
+          "date": "2026-06-04",
+          "article_id": 7,
+          "before": "Hell Let Loose: Vietnam Has Been",
+          "after": "人间地狱：越南",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "created_at": "2026-07-01T22:36:48+08:00",
+      "last_seen": "2026-06-04",
+      "confidence": 0.8,
+      "latest_evidence_summary": "英文标题开头专名与中文标题书名号对应。",
+      "candidate_payload": {
+        "en": "Hell Let Loose: Vietnam Has Been",
+        "cn": "人间地狱：越南",
+        "cat": "games",
+        "source": "user"
+      }
+    },
+    {
+      "id": "dict_candidate_io_interactive_won_t_self_publish_future_996dd291dd87",
+      "title": "词库候选：IO Interactive Won't Self-Publish Future James → 007 初露锋芒",
+      "rule": "建议将「IO Interactive Won't Self-Publish Future James」加入词库，译为「007 初露锋芒」。",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "terms",
+      "scope": "all",
+      "status": "ready_for_review",
+      "days": [
+        "2026-06-05"
+      ],
+      "days_seen": 1,
+      "articles_seen": 1,
+      "contradictions": 0,
+      "examples": [
+        {
+          "date": "2026-06-05",
+          "article_id": 1,
+          "before": "IO Interactive Won't Self-Publish Future James",
+          "after": "007 初露锋芒",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "created_at": "2026-07-01T22:36:49+08:00",
+      "last_seen": "2026-06-05",
+      "confidence": 0.8,
+      "latest_evidence_summary": "英文标题开头专名与中文标题书名号对应。",
+      "candidate_payload": {
+        "en": "IO Interactive Won't Self-Publish Future James",
+        "cn": "007 初露锋芒",
+        "cat": "terms",
+        "source": "user"
+      }
+    },
+    {
+      "id": "dict_candidate_insomniac_responds_cb8a346f8200",
+      "title": "词库候选：Insomniac Responds → 漫威金刚狼",
+      "rule": "建议将「Insomniac Responds」加入词库，译为「漫威金刚狼」。",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "games",
+      "scope": "all",
+      "status": "ready_for_review",
+      "days": [
+        "2026-06-26"
+      ],
+      "days_seen": 1,
+      "articles_seen": 1,
+      "contradictions": 0,
+      "examples": [
+        {
+          "date": "2026-06-26",
+          "article_id": 10,
+          "before": "Insomniac Responds",
+          "after": "漫威金刚狼",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "created_at": "2026-07-01T22:36:50+08:00",
+      "last_seen": "2026-06-26",
+      "confidence": 0.8,
+      "latest_evidence_summary": "英文标题开头专名与中文标题书名号对应。",
+      "candidate_payload": {
+        "en": "Insomniac Responds",
+        "cn": "漫威金刚狼",
         "cat": "games",
         "source": "user"
       }

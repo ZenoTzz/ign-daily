@@ -1,0 +1,512 @@
+{
+  "date": "2026-06-08",
+  "generated_at": "2026-07-01T22:36:49.561165",
+  "total_articles": 4,
+  "dictionary_candidate_count": 3,
+  "dictionary_candidates": [
+    {
+      "id": "dict_candidate_star_wars_zero_company_features_brutal_0baa32f1d66e",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "games",
+      "en": "Star Wars: Zero Company Features Brutal",
+      "cn": "星球大战 零号连队",
+      "title": "词库候选：Star Wars: Zero Company Features Brutal → 星球大战 零号连队",
+      "rule": "建议将「Star Wars: Zero Company Features Brutal」加入词库，译为「星球大战 零号连队」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "date": "2026-06-08",
+      "article_id": 12,
+      "article_title": "《星球大战 零号连队》开发者谈剧情与自定义角色",
+      "url": "https://www.ign.com/articles/star-wars-zero-company-canon-customization",
+      "evidence": "英文标题开头专名与中文标题书名号对应。"
+    },
+    {
+      "id": "dict_candidate_the_super_mario_galaxy_movie_becomes_a9d6d069ec24",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "people",
+      "en": "The Super Mario Galaxy Movie Becomes",
+      "cn": "超级马力欧银河大电影",
+      "title": "词库候选：The Super Mario Galaxy Movie Becomes → 超级马力欧银河大电影",
+      "rule": "建议将「The Super Mario Galaxy Movie Becomes」加入词库，译为「超级马力欧银河大电影」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "date": "2026-06-08",
+      "article_id": 29,
+      "article_title": "《超级马力欧银河大电影》全球票房突破10亿美元",
+      "url": "https://www.ign.com/articles/the-super-mario-galaxy-movie-crosses-1-billion-at-the-box-office",
+      "evidence": "英文标题开头专名与中文标题书名号对应。"
+    },
+    {
+      "id": "dict_candidate_tomb_raider_remake_star_alix_wilton_180cd4e4dcc2",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "games",
+      "en": "Tomb Raider Remake Star Alix Wilton",
+      "cn": "古墓丽影：亚特兰蒂斯遗迹",
+      "title": "词库候选：Tomb Raider Remake Star Alix Wilton → 古墓丽影：亚特兰蒂斯遗迹",
+      "rule": "建议将「Tomb Raider Remake Star Alix Wilton」加入词库，译为「古墓丽影：亚特兰蒂斯遗迹」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "date": "2026-06-08",
+      "article_id": 37,
+      "article_title": "《古墓丽影：亚特兰蒂斯遗迹》新劳拉配音演员亮相",
+      "url": "https://www.ign.com/articles/alix-wilton-regan-on-becoming-lara-croft-in-tomb-raider-legacy-of-atlantis-ign-live-2026",
+      "evidence": "英文标题开头专名与中文标题书名号对应。"
+    }
+  ],
+  "learning_evidence_updated": true,
+  "daily_learning_updated": true,
+  "articles": [
+    {
+      "id": 12,
+      "cn_title": "《星球大战 零号连队》开发者谈剧情与自定义角色",
+      "en_title": "Star Wars: Zero Company Creators Talk Canon, Character Customization and More | IGN Live 2026",
+      "url": "https://www.ign.com/articles/star-wars-zero-company-canon-customization",
+      "category": "游戏新闻",
+      "has_translation": true,
+      "title_diff": null,
+      "subtitle_diff": {
+        "mine": "克隆人战争的暗流",
+        "yours": "「你得玩了才知道！」"
+      },
+      "body_diffs": [
+        {
+          "index": 0,
+          "mine": "在大型官方故事预告片（如下所示）首播后，IGN Live 周日的《星球大战 零号连队》座谈小组感受到了原力，总监 Greg Foertsch 和首席设计师 James Brawley 出席了活动。",
+          "yours": "在大型官方故事预告片首播后，总监Greg Foertsch和首席设计师James Brawley出席了IGN Live活动并谈了谈他们的游戏。",
+          "my_sentences": [
+            "在大型官方故事预告片（如下所示）首播后，IGN Live 周日的《星球大战 零号连队》座谈小组感受到了原力，总监 Greg Foertsch 和首席设计师 James Brawley 出席了活动。"
+          ],
+          "your_sentences": [
+            "在大型官方故事预告片首播后，总监Greg Foertsch和首席设计师James Brawley出席了IGN Live活动并谈了谈他们的游戏。"
+          ]
+        },
+        {
+          "index": 1,
+          "mine": "这款即将推出的单人回合制战术游戏设定在克隆人战争的末期，Foertsch 详细阐述了玩家如何在克隆人战争的背景下作战（并置身其中），而非直接沉浸其中。他说：「有太多事情在发生。大量幕后交易，许多政治博弈。在克隆人战争进行的同时，还有另一场战争在战争之下进行。」",
+          "yours": "这款即将推出的单人回合制战术游戏设定在克隆人战争的末期，Foertsch详细阐述了玩家如何在克隆人战争的背景下作战（并置身其中），而非直接沉浸其中。他说：「有太多事情在发生。大量幕后交易，许多政治博弈。在克隆人战争进行的同时，还有另一场战争在战争之下进行。」",
+          "my_sentences": [
+            "这款即将推出的单人回合制战术游戏设定在克隆人战争的末期，Foertsch 详细阐述了玩家如何在克隆人战争的背景下作战（并置身其中），而非直接沉浸其中。",
+            "他说：「有太多事情在发生。",
+            "大量幕后交易，许多政治博弈。",
+            "在克隆人战争进行的同时，还有另一场战争在战争之下进行。",
+            "」"
+          ],
+          "your_sentences": [
+            "这款即将推出的单人回合制战术游戏设定在克隆人战争的末期，Foertsch详细阐述了玩家如何在克隆人战争的背景下作战（并置身其中），而非直接沉浸其中。",
+            "他说：「有太多事情在发生。",
+            "大量幕后交易，许多政治博弈。",
+            "在克隆人战争进行的同时，还有另一场战争在战争之下进行。",
+            "」"
+          ]
+        },
+        {
+          "index": 3,
+          "mine": "Brawley 指出，虽然「战术任务本身是大部分游戏玩法的核心，也是所有战斗发生的地方」，但他也很期待玩家体验「巢穴」。他描述道，「巢穴」是「你和你的特工在任务之间运作的地方。你不仅有机会与团队的不同成员交谈，了解他们的状况，以及他们是否希望你帮忙处理某事，还可以处理许多管理任务。你可以在黑市购买物品。你可以选择修改角色的装备——他们使用的武器和实用物品——然后根据自己的选择自定义和升级他们的技能。」",
+          "yours": "Brawley指出，虽然「战术任务本身是大部分游戏玩法的核心，也是所有战斗发生的地方」，但他也很期待玩家体验「巢穴（The Den）」。他描述道，「巢穴」是「你和你的特工在任务之间运作的地方。你不仅有机会与团队的不同成员交谈，了解他们的状况，以及他们是否希望你帮忙处理某事，还可以处理许多管理任务。你可以在黑市购买物品。你可以选择修改角色的装备——他们使用的武器和实用物品——然后根据自己的选择自定义和升级他们的技能。」",
+          "my_sentences": [
+            "Brawley 指出，虽然「战术任务本身是大部分游戏玩法的核心，也是所有战斗发生的地方」，但他也很期待玩家体验「巢穴」。",
+            "他描述道，「巢穴」是「你和你的特工在任务之间运作的地方。",
+            "你不仅有机会与团队的不同成员交谈，了解他们的状况，以及他们是否希望你帮忙处理某事，还可以处理许多管理任务。",
+            "你可以在黑市购买物品。",
+            "你可以选择修改角色的装备——他们使用的武器和实用物品——然后根据自己的选择自定义和升级他们的技能。",
+            "」"
+          ],
+          "your_sentences": [
+            "Brawley指出，虽然「战术任务本身是大部分游戏玩法的核心，也是所有战斗发生的地方」，但他也很期待玩家体验「巢穴（The Den）」。",
+            "他描述道，「巢穴」是「你和你的特工在任务之间运作的地方。",
+            "你不仅有机会与团队的不同成员交谈，了解他们的状况，以及他们是否希望你帮忙处理某事，还可以处理许多管理任务。",
+            "你可以在黑市购买物品。",
+            "你可以选择修改角色的装备——他们使用的武器和实用物品——然后根据自己的选择自定义和升级他们的技能。",
+            "」"
+          ]
+        },
+        {
+          "index": 4,
+          "mine": "之后，你会进入银河地图，在那里「你可以派遣你的队员执行非战斗任务，帮助他们收集情报和新资源。」",
+          "yours": "之后，玩家会进入银河地图，在那里「你可以派遣你的队员执行非战斗任务，帮助他们收集情报和新资源。」在完成这些事务后，游戏将进入下一个循环阶段。「届时你将接受并选择任务，挑选出战成员，并观看他们离开The Den执行任务的过场演出。」",
+          "my_sentences": [
+            "之后，你会进入银河地图，在那里「你可以派遣你的队员执行非战斗任务，帮助他们收集情报和新资源。",
+            "」"
+          ],
+          "your_sentences": [
+            "之后，玩家会进入银河地图，在那里「你可以派遣你的队员执行非战斗任务，帮助他们收集情报和新资源。",
+            "」在完成这些事务后，游戏将进入下一个循环阶段。",
+            "「届时你将接受并选择任务，挑选出战成员，并观看他们离开The Den执行任务的过场演出。",
+            "」"
+          ]
+        },
+        {
+          "index": 5,
+          "mine": "这些任务完成后，循环结束，Brawley 解释说，这时你可以「接受并选择任务，挑选你的小队成员，然后看到你离开巢穴的序列。」",
+          "yours": "关于你组建的团队，Brawley指出，《星球大战 零号连队》包含「一批精心设计的固定角色，不过玩家也可以创建任意数量的自定义角色，并且他们能够与其他角色一样参与所有战斗互动。」",
+          "my_sentences": [
+            "这些任务完成后，循环结束，Brawley 解释说，这时你可以「接受并选择任务，挑选你的小队成员，然后看到你离开巢穴的序列。",
+            "」"
+          ],
+          "your_sentences": [
+            "关于你组建的团队，Brawley指出，《星球大战 零号连队》包含「一批精心设计的固定角色，不过玩家也可以创建任意数量的自定义角色，并且他们能够与其他角色一样参与所有战斗互动。",
+            "」"
+          ]
+        },
+        {
+          "index": 6,
+          "mine": "关于你组建的团队，Brawley 指出，《星球大战 零号连队》包含「一批定制角色，但玩家也可以创建任意数量的自定义角色，并且他们可以与其他角色进行同等水平的战斗互动。」",
+          "yours": "团队合作至关重要，因为游戏包含Brawley所称的「羁绊系统（Bond System）」，「行动和战斗可以改善团队中两个角色之间的关系。这确实是角色成长的核心。随着关系的发展，他们会获得越来越多的专注点数，用于提升技能。」",
+          "my_sentences": [
+            "关于你组建的团队，Brawley 指出，《星球大战 零号连队》包含「一批定制角色，但玩家也可以创建任意数量的自定义角色，并且他们可以与其他角色进行同等水平的战斗互动。",
+            "」"
+          ],
+          "your_sentences": [
+            "团队合作至关重要，因为游戏包含Brawley所称的「羁绊系统（Bond System）」，「行动和战斗可以改善团队中两个角色之间的关系。",
+            "这确实是角色成长的核心。",
+            "随着关系的发展，他们会获得越来越多的专注点数，用于提升技能。",
+            "」"
+          ]
+        },
+        {
+          "index": 7,
+          "mine": "团队合作至关重要，因为游戏包含 Brawley 所称的「羁绊系统」，「行动和战斗可以改善团队中两个角色之间的关系。这确实是角色成长的核心。随着关系的发展，他们会获得越来越多的专注点数，用于提升技能。」",
+          "yours": "在游戏中，你扮演前共和国军官Hawks，默认是人类男性，但Foertsch指出：「Hawks 可以是你想要的任何样子。你可以让Hawks成为特威勒克人或扎布拉克人，男性或女性……它应该能让你以任何方式表达自己作为玩家的个性。」",
+          "my_sentences": [
+            "团队合作至关重要，因为游戏包含 Brawley 所称的「羁绊系统」，「行动和战斗可以改善团队中两个角色之间的关系。",
+            "这确实是角色成长的核心。",
+            "随着关系的发展，他们会获得越来越多的专注点数，用于提升技能。",
+            "」"
+          ],
+          "your_sentences": [
+            "在游戏中，你扮演前共和国军官Hawks，默认是人类男性，但Foertsch指出：「Hawks 可以是你想要的任何样子。",
+            "你可以让Hawks成为特威勒克人或扎布拉克人，男性或女性……它应该能让你以任何方式表达自己作为玩家的个性。",
+            "」"
+          ]
+        },
+        {
+          "index": 8,
+          "mine": "在游戏中，你扮演前共和国军官 Hawks，默认是人类男性，但 Foertsch 指出：「Hawks 可以是你想要的任何样子。你可以让 Hawks 成为提列克人或扎布拉克人，男性或女性……它应该能让你以任何方式表达自己作为玩家的个性。」",
+          "yours": "预告片显示安纳金·天行者将出现在游戏中，但也出现了一个手持红色光剑的未知人物。鉴于我们知道《零号连队》设定在克隆人战争接近尾声时，Foertsch和Brawley被问及安纳金是善是恶，或者是否已经更偏向黑暗面——或者你会在之前和之后都遇到他？Foertsch回答说：「你得玩了才知道！」",
+          "my_sentences": [
+            "在游戏中，你扮演前共和国军官 Hawks，默认是人类男性，但 Foertsch 指出：「Hawks 可以是你想要的任何样子。",
+            "你可以让 Hawks 成为提列克人或扎布拉克人，男性或女性……它应该能让你以任何方式表达自己作为玩家的个性。",
+            "」"
+          ],
+          "your_sentences": [
+            "预告片显示安纳金·天行者将出现在游戏中，但也出现了一个手持红色光剑的未知人物。",
+            "鉴于我们知道《零号连队》设定在克隆人战争接近尾声时，Foertsch和Brawley被问及安纳金是善是恶，或者是否已经更偏向黑暗面——或者你会在之前和之后都遇到他？",
+            "Foertsch回答说：「你得玩了才知道！",
+            "」"
+          ]
+        },
+        {
+          "index": 9,
+          "mine": "预告片显示安纳金·天行者将出现在游戏中，但也闪现了一个手持红色光剑的未知人物。鉴于我们知道《零号连队》设定在克隆人战争接近尾声时，Foertsch 和 Brawley 被问及安纳金是善是恶，或者是否已经更偏向黑暗面——或者你会在之前和之后都遇到他？Foertsch 回答说：「你得玩了才知道！」",
+          "yours": "《星球大战零号连队》将于8月27日登陆PC、PS5和Xbox Series。",
+          "my_sentences": [
+            "预告片显示安纳金·天行者将出现在游戏中，但也闪现了一个手持红色光剑的未知人物。",
+            "鉴于我们知道《零号连队》设定在克隆人战争接近尾声时，Foertsch 和 Brawley 被问及安纳金是善是恶，或者是否已经更偏向黑暗面——或者你会在之前和之后都遇到他？",
+            "Foertsch 回答说：「你得玩了才知道！",
+            "」"
+          ],
+          "your_sentences": [
+            "《星球大战零号连队》将于8月27日登陆PC、PS5和Xbox Series。"
+          ]
+        },
+        {
+          "index": 10,
+          "mine": "《星球大战 零号连队》将于8月27日登陆PC、PlayStation 5（PS5）和Xbox Series X/S。",
+          "yours": "",
+          "my_sentences": [
+            "《星球大战 零号连队》将于8月27日登陆PC、PlayStation 5（PS5）和Xbox Series X/S。"
+          ],
+          "your_sentences": []
+        },
+        {
+          "index": 11,
+          "mine": "请务必关注IGN Live 2026的所有动态。你可以查看完整日程，了解游戏、电影、电视、流媒体等更多内容。",
+          "yours": "",
+          "my_sentences": [
+            "请务必关注IGN Live 2026的所有动态。",
+            "你可以查看完整日程，了解游戏、电影、电视、流媒体等更多内容。"
+          ],
+          "your_sentences": []
+        }
+      ],
+      "dictionary_candidates": [
+        {
+          "id": "dict_candidate_star_wars_zero_company_features_brutal_0baa32f1d66e",
+          "category": "dictionary",
+          "type": "dictionary_candidate",
+          "dict_category": "games",
+          "en": "Star Wars: Zero Company Features Brutal",
+          "cn": "星球大战 零号连队",
+          "title": "词库候选：Star Wars: Zero Company Features Brutal → 星球大战 零号连队",
+          "rule": "建议将「Star Wars: Zero Company Features Brutal」加入词库，译为「星球大战 零号连队」。",
+          "status": "ready_for_review",
+          "confidence": "high",
+          "date": "2026-06-08",
+          "article_id": 12,
+          "article_title": "《星球大战 零号连队》开发者谈剧情与自定义角色",
+          "url": "https://www.ign.com/articles/star-wars-zero-company-canon-customization",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "cn_title": "Xbox确认《战争机器：事变日》等作永久独占，永不上架PlayStation",
+      "en_title": "Gears of War: E-Day and Clockwork Revolution Are 'Not Timed Exclusives,' Xbox Says — So They'll Never Launch on PlayStation",
+      "url": "https://www.ign.com/articles/gears-of-war-e-day-and-clockwork-revolution-are-not-timed-exclusives-xbox-says-so-theyll-never-launch-on-playstation",
+      "category": "游戏新闻",
+      "has_translation": true,
+      "title_diff": null,
+      "subtitle_diff": {
+        "mine": "永久独占，绝不限时",
+        "yours": "回归独占"
+      },
+      "body_diffs": [
+        {
+          "index": 1,
+          "mine": "今日Xbox展示会直播中最令人意外的消息，莫过于确认多款即将推出的重磅大作将作为Xbox主机独占游戏保留——也就是说，它们虽会登陆PC，但不会出现在PS5或任天堂Switch 2上。",
+          "yours": "今日Xbox展示会直播中最令人意外的消息，莫过于确认多款即将推出的重磅大作将作为Xbox主机独占游戏保留——也就是说，它们虽会登陆PC，但不会出现在PS5或Switch 2上。",
+          "my_sentences": [
+            "今日Xbox展示会直播中最令人意外的消息，莫过于确认多款即将推出的重磅大作将作为Xbox主机独占游戏保留——也就是说，它们虽会登陆PC，但不会出现在PS5或任天堂Switch 2上。"
+          ],
+          "your_sentences": [
+            "今日Xbox展示会直播中最令人意外的消息，莫过于确认多款即将推出的重磅大作将作为Xbox主机独占游戏保留——也就是说，它们虽会登陆PC，但不会出现在PS5或Switch 2上。"
+          ]
+        },
+        {
+          "index": 3,
+          "mine": "此前被问及Xbox独占是否会回归时，夏尔玛一直含糊其辞——但现在，很明显公司正在重拾这一理念，尽管未来具体规则仍不明朗。",
+          "yours": "此前被问及Xbox独占是否会回归时，Sharma一直含糊其辞——但现在，很明显公司正在重拾这一理念，尽管未来具体规则仍不明朗。",
+          "my_sentences": [
+            "此前被问及Xbox独占是否会回归时，夏尔玛一直含糊其辞——但现在，很明显公司正在重拾这一理念，尽管未来具体规则仍不明朗。"
+          ],
+          "your_sentences": [
+            "此前被问及Xbox独占是否会回归时，Sharma一直含糊其辞——但现在，很明显公司正在重拾这一理念，尽管未来具体规则仍不明朗。"
+          ]
+        },
+        {
+          "index": 7,
+          "mine": "「我们希望人们因为出色的游戏和体验而选择Xbox。这也意味着为你提供专为Xbox打造的内容，」夏尔玛在X上写道，并未透露更多细节。「《战争机器：事变日》和《发条革命》将是Xbox主机独占游戏！」",
+          "yours": "「我们希望人们因为出色的游戏和体验而选择Xbox。这也意味着为你提供专为Xbox打造的内容，」Sharma在X上写道，并未透露更多细节。「《战争机器：事变日》和《发条革命》将是Xbox主机独占游戏！」",
+          "my_sentences": [
+            "「我们希望人们因为出色的游戏和体验而选择Xbox。",
+            "这也意味着为你提供专为Xbox打造的内容，」夏尔玛在X上写道，并未透露更多细节。",
+            "「《战争机器：事变日》和《发条革命》将是Xbox主机独占游戏！",
+            "」"
+          ],
+          "your_sentences": [
+            "「我们希望人们因为出色的游戏和体验而选择Xbox。",
+            "这也意味着为你提供专为Xbox打造的内容，」Sharma在X上写道，并未透露更多细节。",
+            "「《战争机器：事变日》和《发条革命》将是Xbox主机独占游戏！",
+            "」"
+          ]
+        },
+        {
+          "index": 8,
+          "mine": "欲了解更多信息，请务必查看IGN对Xbox 2026展示会所有公告的汇总。",
+          "yours": "",
+          "my_sentences": [
+            "欲了解更多信息，请务必查看IGN对Xbox 2026展示会所有公告的汇总。"
+          ],
+          "your_sentences": []
+        },
+        {
+          "index": 9,
+          "mine": "Tom Phillips是IGN新闻编辑。可通过tom_phillips@ign.com联系他，或在Bluesky上找到他。",
+          "yours": "",
+          "my_sentences": [
+            "Tom Phillips是IGN新闻编辑。",
+            "可通过tom_phillips@ign.com联系他，或在Bluesky上找到他。"
+          ],
+          "your_sentences": []
+        }
+      ],
+      "dictionary_candidates": []
+    },
+    {
+      "id": 29,
+      "cn_title": "《超级马力欧银河大电影》全球票房突破10亿美元",
+      "en_title": "The Super Mario Galaxy Movie Crosses $1 Billion at the Box Office",
+      "url": "https://www.ign.com/articles/the-super-mario-galaxy-movie-crosses-1-billion-at-the-box-office",
+      "category": "影视资讯",
+      "has_translation": true,
+      "title_diff": {
+        "mine": "《超级马力欧银河大电影》全球票房突破10亿美元(约合人民币68亿元)",
+        "yours": "《超级马力欧银河大电影》全球票房突破10亿美元"
+      },
+      "subtitle_diff": {
+        "mine": "马力欧再创纪录",
+        "yours": "没有蓝龟壳捣乱"
+      },
+      "body_diffs": [
+        {
+          "index": 0,
+          "mine": "虽然花了一些时间，但《超级马力欧银河大电影》终于在全球票房突破了10亿美元(约合人民币68亿元)大关。",
+          "yours": "虽然花了一些时间，但《超级马力欧银河大电影》终于在全球票房突破了10亿美元（约合人民币68亿元）大关。",
+          "my_sentences": [
+            "虽然花了一些时间，但《超级马力欧银河大电影》终于在全球票房突破了10亿美元(约合人民币68亿元)大关。"
+          ],
+          "your_sentences": [
+            "虽然花了一些时间，但《超级马力欧银河大电影》终于在全球票房突破了10亿美元（约合人民币68亿元）大关。"
+          ]
+        },
+        {
+          "index": 1,
+          "mine": "任天堂与照明娱乐的这部马力欧电影续集用了10个周末才达到这一令人垂涎的票房里程碑（据Deadline报道）。虽然这意味着它达到10亿美元(约合人民币68亿元)的速度远慢于前作（前作仅用26天），但《超级马力欧银河大电影》仍是2026年首部且唯一一部突破10亿美元(约合人民币68亿元)票房的影片。",
+          "yours": "任天堂与照明娱乐的这部马力欧电影续集用了10个周末才达到这一令人垂涎的票房里程碑（据Deadline报道）。虽然这意味着它达到10亿美元的速度远慢于前作（前作仅用26天），但《超级马力欧银河大电影》仍是2026年首部且唯一一部突破10亿美元票房的影片。",
+          "my_sentences": [
+            "任天堂与照明娱乐的这部马力欧电影续集用了10个周末才达到这一令人垂涎的票房里程碑（据Deadline报道）。",
+            "虽然这意味着它达到10亿美元(约合人民币68亿元)的速度远慢于前作（前作仅用26天），但《超级马力欧银河大电影》仍是2026年首部且唯一一部突破10亿美元(约合人民币68亿元)票房的影片。"
+          ],
+          "your_sentences": [
+            "任天堂与照明娱乐的这部马力欧电影续集用了10个周末才达到这一令人垂涎的票房里程碑（据Deadline报道）。",
+            "虽然这意味着它达到10亿美元的速度远慢于前作（前作仅用26天），但《超级马力欧银河大电影》仍是2026年首部且唯一一部突破10亿美元票房的影片。"
+          ]
+        },
+        {
+          "index": 2,
+          "mine": "随着两部动画改编电影在影院大获成功，两部《超级马力欧》电影累计票房已超过23亿美元(约合人民币156亿元)。这使它们在全球十大动画系列电影排行榜中位列第九，其中《神偷奶爸》以56.4亿美元(约合人民币384亿元)位居第一，《怪物史莱克》以39.8亿美元(约合人民币271亿元)位居第二，《玩具总动员》以32.8亿美元(约合人民币223亿元)位居第三。考虑到榜单中有些系列多达六部电影，如果更多续集获得批准，马力欧系列大有希望改变格局。",
+          "yours": "随着两部动画改编电影在影院大获成功，两部《超级马力欧》电影累计票房已超过23亿美元（约合人民币156亿元）。这使它们在全球十大动画系列电影排行榜中位列第九，其中《神偷奶爸》以56.4亿美元（约合人民币384亿元）位居第一，《怪物史莱克》以39.8亿美元（约合人民币271亿元）位居第二，《玩具总动员》以32.8亿美元（约合人民币223亿元）位居第三。考虑到榜单中有些系列多达六部电影，如果更多续集获得批准，马力欧系列大有希望改变格局。",
+          "my_sentences": [
+            "随着两部动画改编电影在影院大获成功，两部《超级马力欧》电影累计票房已超过23亿美元(约合人民币156亿元)。",
+            "这使它们在全球十大动画系列电影排行榜中位列第九，其中《神偷奶爸》以56.4亿美元(约合人民币384亿元)位居第一，《怪物史莱克》以39.8亿美元(约合人民币271亿元)位居第二，《玩具总动员》以32.8亿美元(约合人民币223亿元)位居第三。",
+            "考虑到榜单中有些系列多达六部电影，如果更多续集获得批准，马力欧系列大有希望改变格局。"
+          ],
+          "your_sentences": [
+            "随着两部动画改编电影在影院大获成功，两部《超级马力欧》电影累计票房已超过23亿美元（约合人民币156亿元）。",
+            "这使它们在全球十大动画系列电影排行榜中位列第九，其中《神偷奶爸》以56.4亿美元（约合人民币384亿元）位居第一，《怪物史莱克》以39.8亿美元（约合人民币271亿元）位居第二，《玩具总动员》以32.8亿美元（约合人民币223亿元）位居第三。",
+            "考虑到榜单中有些系列多达六部电影，如果更多续集获得批准，马力欧系列大有希望改变格局。"
+          ]
+        },
+        {
+          "index": 3,
+          "mine": "《超级马力欧银河大电影》于2026年4月1日上映，将马力欧、路易吉、碧姬、耀西，甚至还有《星际火狐》中的福克斯·麦克劳德带入了一场星际冒险。褒贬不一的评论并未阻止任天堂这部最新电影取得开门红，仅在周三上映当天就收获了3400万美元(约合人民币2.3亿元)票房。",
+          "yours": "《超级马力欧银河大电影》于2026年4月1日上映，将马力欧、路易吉、碧姬、耀西，甚至还有《星际火狐》中的福克斯带入了一场星际冒险。褒贬不一的评论并未阻止任天堂这部最新电影取得开门红，仅在周三上映当天就收获了3400万美元（约合人民币2.3亿元）票房。",
+          "my_sentences": [
+            "《超级马力欧银河大电影》于2026年4月1日上映，将马力欧、路易吉、碧姬、耀西，甚至还有《星际火狐》中的福克斯·麦克劳德带入了一场星际冒险。",
+            "褒贬不一的评论并未阻止任天堂这部最新电影取得开门红，仅在周三上映当天就收获了3400万美元(约合人民币2.3亿元)票房。"
+          ],
+          "your_sentences": [
+            "《超级马力欧银河大电影》于2026年4月1日上映，将马力欧、路易吉、碧姬、耀西，甚至还有《星际火狐》中的福克斯带入了一场星际冒险。",
+            "褒贬不一的评论并未阻止任天堂这部最新电影取得开门红，仅在周三上映当天就收获了3400万美元（约合人民币2.3亿元）票房。"
+          ]
+        },
+        {
+          "index": 4,
+          "mine": "此后，该片在美国国内获得4.285亿美元(约合人民币29.2亿元)票房，国际票房为5.715亿美元(约合人民币38.9亿元)。相比之下，《超级马力欧兄弟大电影》最终国内票房为5.749亿美元(约合人民币39.1亿元)，国际票房为7.858亿美元(约合人民币53.5亿元)，总票房约13.6亿美元(约合人民币92.6亿元)（据Box Office Mojo）。",
+          "yours": "此后，该片在美国国内获得4.285亿美元（约合人民币29.2亿元）票房，国际票房为5.715亿美元（约合人民币38.9亿元）。相比之下，《超级马力欧兄弟大电影》最终国内票房为5.749亿美元（约合人民币39.1亿元），国际票房为7.858亿美元（约合人民币53.5亿元），总票房约13.6亿美元（约合人民币92.6亿元）。",
+          "my_sentences": [
+            "此后，该片在美国国内获得4.285亿美元(约合人民币29.2亿元)票房，国际票房为5.715亿美元(约合人民币38.9亿元)。",
+            "相比之下，《超级马力欧兄弟大电影》最终国内票房为5.749亿美元(约合人民币39.1亿元)，国际票房为7.858亿美元(约合人民币53.5亿元)，总票房约13.6亿美元(约合人民币92.6亿元)（据Box Office Mojo）。"
+          ],
+          "your_sentences": [
+            "此后，该片在美国国内获得4.285亿美元（约合人民币29.2亿元）票房，国际票房为5.715亿美元（约合人民币38.9亿元）。",
+            "相比之下，《超级马力欧兄弟大电影》最终国内票房为5.749亿美元（约合人民币39.1亿元），国际票房为7.858亿美元（约合人民币53.5亿元），总票房约13.6亿美元（约合人民币92.6亿元）。"
+          ]
+        }
+      ],
+      "dictionary_candidates": [
+        {
+          "id": "dict_candidate_the_super_mario_galaxy_movie_becomes_a9d6d069ec24",
+          "category": "dictionary",
+          "type": "dictionary_candidate",
+          "dict_category": "people",
+          "en": "The Super Mario Galaxy Movie Becomes",
+          "cn": "超级马力欧银河大电影",
+          "title": "词库候选：The Super Mario Galaxy Movie Becomes → 超级马力欧银河大电影",
+          "rule": "建议将「The Super Mario Galaxy Movie Becomes」加入词库，译为「超级马力欧银河大电影」。",
+          "status": "ready_for_review",
+          "confidence": "high",
+          "date": "2026-06-08",
+          "article_id": 29,
+          "article_title": "《超级马力欧银河大电影》全球票房突破10亿美元",
+          "url": "https://www.ign.com/articles/the-super-mario-galaxy-movie-crosses-1-billion-at-the-box-office",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "cn_title": "《古墓丽影：亚特兰蒂斯遗迹》新劳拉配音演员亮相",
+      "en_title": "Alix Wilton Regan on Becoming Lara Croft in Tomb Raider: Legacy of Atlantis | IGN Live 2026",
+      "url": "https://www.ign.com/articles/alix-wilton-regan-on-becoming-lara-croft-in-tomb-raider-legacy-of-atlantis-ign-live-2026",
+      "category": "游戏新闻",
+      "has_translation": true,
+      "title_diff": null,
+      "subtitle_diff": {
+        "mine": "经典重启，声线传承",
+        "yours": "这位女演员谈到了如何将“那种90年代的俏皮”带入原版游戏的新重制版"
+      },
+      "body_diffs": [
+        {
+          "index": 0,
+          "mine": "劳拉·克劳馥将在即将推出的《古墓丽影：亚特兰蒂斯遗迹》中回归原点，这是1996年初代《古墓丽影》的全新重制版。本次为劳拉·克劳馥这一备受喜爱的角色献声的是Alix Wilton Regan（《刺客信条：起源》《Dota：龙之血》），她今天在IGN Live上谈到了这款游戏和她饰演的著名角色。",
+          "yours": "劳拉·克劳馥将在即将推出的《古墓丽影：亚特兰蒂斯遗迹》中回归原点，这是1996年初代《古墓丽影》的全新重制版。本次为劳拉·克劳馥这一备受喜爱的角色献声的是Alix Wilton Regan，她今天在IGN Live上谈到了这款游戏和她饰演的著名角色。",
+          "my_sentences": [
+            "劳拉·克劳馥将在即将推出的《古墓丽影：亚特兰蒂斯遗迹》中回归原点，这是1996年初代《古墓丽影》的全新重制版。",
+            "本次为劳拉·克劳馥这一备受喜爱的角色献声的是Alix Wilton Regan（《刺客信条：起源》《Dota：龙之血》），她今天在IGN Live上谈到了这款游戏和她饰演的著名角色。"
+          ],
+          "your_sentences": [
+            "劳拉·克劳馥将在即将推出的《古墓丽影：亚特兰蒂斯遗迹》中回归原点，这是1996年初代《古墓丽影》的全新重制版。",
+            "本次为劳拉·克劳馥这一备受喜爱的角色献声的是Alix Wilton Regan，她今天在IGN Live上谈到了这款游戏和她饰演的著名角色。"
+          ]
+        },
+        {
+          "index": 1,
+          "mine": "在座谈环节中，IGN首次公开了一段名为「遇见劳拉·克劳馥」的短片片段，片中Regan与游戏创作者们畅谈了该角色的悠久传承，以及如何将她的最新化身栩栩如生地呈现出来。你可以在上方观看完整视频。",
+          "yours": "在座谈环节中，IGN首次公开了一段名为「遇见劳拉·克劳馥」的短片片段，片中Regan与游戏创作者们畅谈了该角色的悠久传承，以及如何将她的最新化身栩栩如生地呈现出来。",
+          "my_sentences": [
+            "在座谈环节中，IGN首次公开了一段名为「遇见劳拉·克劳馥」的短片片段，片中Regan与游戏创作者们畅谈了该角色的悠久传承，以及如何将她的最新化身栩栩如生地呈现出来。",
+            "你可以在上方观看完整视频。"
+          ],
+          "your_sentences": [
+            "在座谈环节中，IGN首次公开了一段名为「遇见劳拉·克劳馥」的短片片段，片中Regan与游戏创作者们畅谈了该角色的悠久传承，以及如何将她的最新化身栩栩如生地呈现出来。"
+          ]
+        },
+        {
+          "index": 7,
+          "mine": "《古墓丽影：亚特兰蒂斯遗迹》将于2027年2月12日登陆任天堂Switch 2、PS5、PC和Xbox Series X/S。",
+          "yours": "《古墓丽影：亚特兰蒂斯遗迹》将于2027年2月12日登陆、PS5、Xbox Series、Switch 2和PC。",
+          "my_sentences": [
+            "《古墓丽影：亚特兰蒂斯遗迹》将于2027年2月12日登陆任天堂Switch 2、PS5、PC和Xbox Series X/S。"
+          ],
+          "your_sentences": [
+            "《古墓丽影：亚特兰蒂斯遗迹》将于2027年2月12日登陆、PS5、Xbox Series、Switch 2和PC。"
+          ]
+        },
+        {
+          "index": 8,
+          "mine": "请务必关注IGN Live 2026的所有动态。你可以查看完整日程，了解游戏、电影、电视、流媒体等更多精彩内容。",
+          "yours": "",
+          "my_sentences": [
+            "请务必关注IGN Live 2026的所有动态。",
+            "你可以查看完整日程，了解游戏、电影、电视、流媒体等更多精彩内容。"
+          ],
+          "your_sentences": []
+        }
+      ],
+      "dictionary_candidates": [
+        {
+          "id": "dict_candidate_tomb_raider_remake_star_alix_wilton_180cd4e4dcc2",
+          "category": "dictionary",
+          "type": "dictionary_candidate",
+          "dict_category": "games",
+          "en": "Tomb Raider Remake Star Alix Wilton",
+          "cn": "古墓丽影：亚特兰蒂斯遗迹",
+          "title": "词库候选：Tomb Raider Remake Star Alix Wilton → 古墓丽影：亚特兰蒂斯遗迹",
+          "rule": "建议将「Tomb Raider Remake Star Alix Wilton」加入词库，译为「古墓丽影：亚特兰蒂斯遗迹」。",
+          "status": "ready_for_review",
+          "confidence": "high",
+          "date": "2026-06-08",
+          "article_id": 37,
+          "article_title": "《古墓丽影：亚特兰蒂斯遗迹》新劳拉配音演员亮相",
+          "url": "https://www.ign.com/articles/alix-wilton-regan-on-becoming-lara-croft-in-tomb-raider-legacy-of-atlantis-ign-live-2026",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ]
+    }
+  ]
+}

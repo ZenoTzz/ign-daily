@@ -1,0 +1,128 @@
+{
+  "date": "2026-07-01",
+  "observer": "codex",
+  "model": "codex",
+  "status": "observed",
+  "signals": [],
+  "candidates": [
+    {
+      "id": "dict_candidate_the_co_lead_designer_b6adc5557eeb",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：The Co-Lead Designer → 博德之门2",
+      "rule": "建议将「The Co-Lead Designer」加入词库，译为「博德之门2」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-07-01",
+          "article_id": 9,
+          "before": "The Co-Lead Designer",
+          "after": "博德之门2",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id": "dict_candidate_microsoft_reportedly_considering_canceli_06c05fdb9bfc",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：Microsoft Reportedly Considering Canceling Marvel's Blade → 漫威刀锋战士",
+      "rule": "建议将「Microsoft Reportedly Considering Canceling Marvel's Blade」加入词库，译为「漫威刀锋战士」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-07-01",
+          "article_id": 24,
+          "before": "Microsoft Reportedly Considering Canceling Marvel's Blade",
+          "after": "漫威刀锋战士",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id": "dict_candidate_marvel_s_blade_c054d24019ec",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：Marvel's Blade → 漫威刀锋战士",
+      "rule": "建议将「Marvel's Blade」加入词库，译为「漫威刀锋战士」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-07-01",
+          "article_id": 24,
+          "before": "Marvel's Blade",
+          "after": "漫威刀锋战士",
+          "evidence": "来自文章页未确认新词候选。"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id": "dict_candidate_gta_82a2cf34af76",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：GTA → GTA6",
+      "rule": "建议将「GTA」加入词库，译为「GTA6」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-07-01",
+          "article_id": 28,
+          "before": "GTA",
+          "after": "GTA6",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id": "dict_candidate_007_first_light_hitman_developer_io_inte_38098d5d577c",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：007 First Light, Hitman Developer IO Interactive → 007 初露锋芒",
+      "rule": "建议将「007 First Light, Hitman Developer IO Interactive」加入词库，译为「007 初露锋芒」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-07-01",
+          "article_id": 30,
+          "before": "007 First Light, Hitman Developer IO Interactive",
+          "after": "007 初露锋芒",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id": "dict_candidate_intergalactic_48869693140f",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：Intergalactic → Intergalactic",
+      "rule": "建议将「Intergalactic」加入词库，译为「Intergalactic」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-07-01",
+          "article_id": 52,
+          "before": "Intergalactic",
+          "after": "Intergalactic",
+          "evidence": "来自文章页未确认新词候选。"
+        }
+      ],
+      "contradiction": ""
+    }
+  ],
+  "notes": [
+    "Added source+polished dictionary candidates for GPT/Tencent workflow."
+  ],
+  "candidate_count": 6,
+  "updated_at": "2026-07-01T22:36:51+08:00"
+}

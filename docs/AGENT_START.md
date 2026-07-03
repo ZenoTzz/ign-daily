@@ -12,6 +12,16 @@ python3 scripts/agent_doctor.py
 Do not rely on memory. If this fails, fix the failed invariant before editing
 workflow data.
 
+## First Reading
+
+For translation or review work, read these compact current documents first:
+
+- `docs/TRANSLATION_REQUIREMENTS.md`
+- `docs/AGENT_COLLABORATION.md`
+
+Then open `AGENT_HANDOFF.md`, `TRANSLATION_GUIDE.md`, and `STYLE_PROFILE.md`
+when the task needs deeper detail.
+
 ## Current Owners
 
 | Area | Source of truth | Notes |
@@ -19,7 +29,7 @@ workflow data.
 | RSS fetch | `.github/workflows/hourly-rss.yml` | Writes `index.json`, `need_titles.json`, `sources/NN.json`, `filtered_rss.json`. |
 | Title/summary | `data/automation-config.json.title_translator` | `api` means Actions; `openclaw` means OpenClaw. |
 | Fulltext | `data/automation-config.json.fulltext_translator` | API reuses `sources/NN.json`; never ask a model to scrape the page. |
-| Nightly learning | `data/automation-config.json.nightly_learner` | API scans recently changed polished/feedback dates, not just today. |
+| Nightly learning | `data/automation-config.json.nightly_learner` | Codex mode imports Google Docs polish first, Tencent Docs only as historical fallback. |
 | OpenClaw guard | `scripts/automation_guard.py` | OpenClaw must run this before touching queues. |
 | Validation | `scripts/pre_push_check.py {date}` | Required before pushing translated article data. |
 
@@ -34,6 +44,9 @@ workflow data.
 - Polish edits: `data/{date}/polished/*.json`
 - Learning reports: `data/learning/weekly/*.json`
 - API usage: `data/usage/deepseek/*.json`, `data/usage/deepseek-runs.json`
+- Current translation requirements: `docs/TRANSLATION_REQUIREMENTS.md`
+- Multi-agent attribution: `docs/AGENT_COLLABORATION.md`,
+  `data/agent-worklog.jsonl`
 
 ## Do Not
 
@@ -43,6 +56,8 @@ workflow data.
 - Do not use whole-page HTML as article body. Use `article_cache.py`.
 - Do not repeatedly retry `translation_status=needs_review`; wait for user re-submit or manual release.
 - Do not update `STYLE_PROFILE.md` directly from a single day of edits.
+- Do not assume unfamiliar local changes are wrong; another agent may be
+  collaborating. Check `data/agent-worklog.jsonl` and git history first.
 
 ## Where To Self-Check
 
@@ -51,6 +66,8 @@ workflow data.
 | Which script should I use? | `scripts/README.md` |
 | What should OpenClaw do? | `AGENT_TITLE_TRANSLATOR.md`, `AGENT_NIGHTLY_STYLE.md` if present |
 | What are translation rules? | `TRANSLATION_GUIDE.md`, then `STYLE_PROFILE.md` |
+| What are the newest queue/Google Docs rules? | `docs/TRANSLATION_REQUIREMENTS.md` |
+| How do I separate my changes from another agent's? | `docs/AGENT_COLLABORATION.md` |
 | Why did API/OpenClaw skip? | `data/automation-config.json`, `scripts/automation_guard.py` |
 | Why did RSS miss/filter an article? | `data/rss-filter-config.json`, `data/{date}/filtered_rss.json` |
 | Why did usage/cost look wrong? | `usage.html`, `scripts/usage_logger.py`, `scripts/record_deepseek_run_cost.py` |

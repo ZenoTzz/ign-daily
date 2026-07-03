@@ -1,9 +1,129 @@
 {
   "date": "2026-06-17",
-  "generated_at": "2026-06-30T22:38:19.718148",
+  "generated_at": "2026-07-01T22:36:50.217017",
   "total_articles": 8,
-  "dictionary_candidate_count": 0,
-  "dictionary_candidates": [],
+  "dictionary_candidate_count": 7,
+  "dictionary_candidates": [
+    {
+      "id": "dict_candidate_harry_potter_tv_series_casts_peter_0dd0c500ece1",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "people",
+      "en": "Harry Potter TV Series Casts Peter",
+      "cn": "哈利·波特",
+      "title": "词库候选：Harry Potter TV Series Casts Peter → 哈利·波特",
+      "rule": "建议将「Harry Potter TV Series Casts Peter」加入词库，译为「哈利·波特」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "date": "2026-06-17",
+      "article_id": 3,
+      "article_title": "HBO《哈利·波特》剧集皮皮鬼演员敲定",
+      "url": "https://www.ign.com/articles/harry-potter-tv-series-casts-peter-serafinowicz-in-role-not-featured-in-the-films",
+      "evidence": "英文标题开头专名与中文标题书名号对应。"
+    },
+    {
+      "id": "dict_candidate_life_1944eacabd64",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "terms",
+      "en": "Life",
+      "cn": "奇异人生",
+      "title": "词库候选：Life → 奇异人生",
+      "rule": "建议将「Life」加入词库，译为「奇异人生」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "date": "2026-06-17",
+      "article_id": 5,
+      "article_title": "《奇异人生》开发商Don't Nod资金年内耗尽",
+      "url": "https://www.ign.com/articles/life-is-strange-creator-dont-nod-warned-it-will-run-out-of-funds-this-year",
+      "evidence": "英文标题开头专名与中文标题书名号对应。"
+    },
+    {
+      "id": "dict_candidate_bank_balances_rolled_back_75c65b398a19",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "games",
+      "en": "Bank Balances Rolled Back",
+      "cn": "极限竞速：地平线6",
+      "title": "词库候选：Bank Balances Rolled Back → 极限竞速：地平线6",
+      "rule": "建议将「Bank Balances Rolled Back」加入词库，译为「极限竞速：地平线6」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "date": "2026-06-17",
+      "article_id": 6,
+      "article_title": "《极限竞速：地平线6》封堵刷钱漏洞",
+      "url": "https://www.ign.com/articles/bank-balances-rolled-back-for-forza-horizon-6-players-who-used-exploit-to-amass-a-billion-credits",
+      "evidence": "英文标题开头专名与中文标题书名号对应。"
+    },
+    {
+      "id": "dict_candidate_double_fine_responds_ec15bd5f59a0",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "terms",
+      "en": "Double Fine Responds",
+      "cn": "意航员",
+      "title": "词库候选：Double Fine Responds → 意航员",
+      "rule": "建议将「Double Fine Responds」加入词库，译为「意航员」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "date": "2026-06-17",
+      "article_id": 10,
+      "article_title": "《意航员》开发商用emoji回应关闭传闻",
+      "url": "https://www.ign.com/articles/psychonauts-developer-double-fine-responds-to-closure-reports-with-a-single-emoji",
+      "evidence": "英文标题开头专名与中文标题书名号对应。"
+    },
+    {
+      "id": "dict_candidate_fortnite_behind_the_scenes_video_e9e5192e0c30",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "terms",
+      "en": "Fortnite Behind the Scenes Video",
+      "cn": "堡垒之夜",
+      "title": "词库候选：Fortnite Behind the Scenes Video → 堡垒之夜",
+      "rule": "建议将「Fortnite Behind the Scenes Video」加入词库，译为「堡垒之夜」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "date": "2026-06-17",
+      "article_id": 11,
+      "article_title": "Epic Games证实AI参与《堡垒之夜》皮肤概念设计",
+      "url": "https://www.ign.com/articles/fortnite-maker-confirms-how-it-uses-generative-ai-to-help-create-concept-art-and-designs-for-new-skins",
+      "evidence": "英文标题开头专名与中文标题书名号对应。"
+    },
+    {
+      "id": "dict_candidate_resident_evil_lore_master_reveals_the_b694fbfeae28",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "games",
+      "en": "Resident Evil Lore Master Reveals The",
+      "cn": "生化危机",
+      "title": "词库候选：Resident Evil Lore Master Reveals The → 生化危机",
+      "rule": "建议将「Resident Evil Lore Master Reveals The」加入词库，译为「生化危机」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "date": "2026-06-17",
+      "article_id": 23,
+      "article_title": "《生化危机》剧情大师揭示《维罗妮卡》重制版需解答的5大疑问",
+      "url": "https://www.ign.com/articles/resident-evil-lore-master-reveals-the-5-burning-questions-veronica-needs-to-answer",
+      "evidence": "英文标题开头专名与中文标题书名号对应。"
+    },
+    {
+      "id": "dict_candidate_preorders_are_up_0e331180709b",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "games",
+      "en": "Preorders Are Up",
+      "cn": "黎明行者之血",
+      "title": "词库候选：Preorders Are Up → 黎明行者之血",
+      "rule": "建议将「Preorders Are Up」加入词库，译为「黎明行者之血」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "date": "2026-06-17",
+      "article_id": 28,
+      "article_title": "《黎明行者之血》预购开启，各版本内容一览",
+      "url": "https://www.ign.com/articles/the-blood-of-dawnwalker-where-to-preorder",
+      "evidence": "英文标题开头专名与中文标题书名号对应。"
+    }
+  ],
   "learning_evidence_updated": true,
   "daily_learning_updated": true,
   "articles": [
@@ -71,7 +191,25 @@
           "your_sentences": []
         }
       ],
-      "dictionary_candidates": []
+      "dictionary_candidates": [
+        {
+          "id": "dict_candidate_harry_potter_tv_series_casts_peter_0dd0c500ece1",
+          "category": "dictionary",
+          "type": "dictionary_candidate",
+          "dict_category": "people",
+          "en": "Harry Potter TV Series Casts Peter",
+          "cn": "哈利·波特",
+          "title": "词库候选：Harry Potter TV Series Casts Peter → 哈利·波特",
+          "rule": "建议将「Harry Potter TV Series Casts Peter」加入词库，译为「哈利·波特」。",
+          "status": "ready_for_review",
+          "confidence": "high",
+          "date": "2026-06-17",
+          "article_id": 3,
+          "article_title": "HBO《哈利·波特》剧集皮皮鬼演员敲定",
+          "url": "https://www.ign.com/articles/harry-potter-tv-series-casts-peter-serafinowicz-in-role-not-featured-in-the-films",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ]
     },
     {
       "id": 5,
@@ -170,7 +308,25 @@
           "your_sentences": []
         }
       ],
-      "dictionary_candidates": []
+      "dictionary_candidates": [
+        {
+          "id": "dict_candidate_life_1944eacabd64",
+          "category": "dictionary",
+          "type": "dictionary_candidate",
+          "dict_category": "terms",
+          "en": "Life",
+          "cn": "奇异人生",
+          "title": "词库候选：Life → 奇异人生",
+          "rule": "建议将「Life」加入词库，译为「奇异人生」。",
+          "status": "ready_for_review",
+          "confidence": "high",
+          "date": "2026-06-17",
+          "article_id": 5,
+          "article_title": "《奇异人生》开发商Don't Nod资金年内耗尽",
+          "url": "https://www.ign.com/articles/life-is-strange-creator-dont-nod-warned-it-will-run-out-of-funds-this-year",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ]
     },
     {
       "id": 6,
@@ -297,7 +453,25 @@
           "your_sentences": []
         }
       ],
-      "dictionary_candidates": []
+      "dictionary_candidates": [
+        {
+          "id": "dict_candidate_bank_balances_rolled_back_75c65b398a19",
+          "category": "dictionary",
+          "type": "dictionary_candidate",
+          "dict_category": "games",
+          "en": "Bank Balances Rolled Back",
+          "cn": "极限竞速：地平线6",
+          "title": "词库候选：Bank Balances Rolled Back → 极限竞速：地平线6",
+          "rule": "建议将「Bank Balances Rolled Back」加入词库，译为「极限竞速：地平线6」。",
+          "status": "ready_for_review",
+          "confidence": "high",
+          "date": "2026-06-17",
+          "article_id": 6,
+          "article_title": "《极限竞速：地平线6》封堵刷钱漏洞",
+          "url": "https://www.ign.com/articles/bank-balances-rolled-back-for-forza-horizon-6-players-who-used-exploit-to-amass-a-billion-credits",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ]
     },
     {
       "id": 10,
@@ -400,7 +574,25 @@
           "your_sentences": []
         }
       ],
-      "dictionary_candidates": []
+      "dictionary_candidates": [
+        {
+          "id": "dict_candidate_double_fine_responds_ec15bd5f59a0",
+          "category": "dictionary",
+          "type": "dictionary_candidate",
+          "dict_category": "terms",
+          "en": "Double Fine Responds",
+          "cn": "意航员",
+          "title": "词库候选：Double Fine Responds → 意航员",
+          "rule": "建议将「Double Fine Responds」加入词库，译为「意航员」。",
+          "status": "ready_for_review",
+          "confidence": "high",
+          "date": "2026-06-17",
+          "article_id": 10,
+          "article_title": "《意航员》开发商用emoji回应关闭传闻",
+          "url": "https://www.ign.com/articles/psychonauts-developer-double-fine-responds-to-closure-reports-with-a-single-emoji",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ]
     },
     {
       "id": 11,
@@ -525,7 +717,25 @@
           "your_sentences": []
         }
       ],
-      "dictionary_candidates": []
+      "dictionary_candidates": [
+        {
+          "id": "dict_candidate_fortnite_behind_the_scenes_video_e9e5192e0c30",
+          "category": "dictionary",
+          "type": "dictionary_candidate",
+          "dict_category": "terms",
+          "en": "Fortnite Behind the Scenes Video",
+          "cn": "堡垒之夜",
+          "title": "词库候选：Fortnite Behind the Scenes Video → 堡垒之夜",
+          "rule": "建议将「Fortnite Behind the Scenes Video」加入词库，译为「堡垒之夜」。",
+          "status": "ready_for_review",
+          "confidence": "high",
+          "date": "2026-06-17",
+          "article_id": 11,
+          "article_title": "Epic Games证实AI参与《堡垒之夜》皮肤概念设计",
+          "url": "https://www.ign.com/articles/fortnite-maker-confirms-how-it-uses-generative-ai-to-help-create-concept-art-and-designs-for-new-skins",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ]
     },
     {
       "id": 17,
@@ -1127,7 +1337,25 @@
           ]
         }
       ],
-      "dictionary_candidates": []
+      "dictionary_candidates": [
+        {
+          "id": "dict_candidate_resident_evil_lore_master_reveals_the_b694fbfeae28",
+          "category": "dictionary",
+          "type": "dictionary_candidate",
+          "dict_category": "games",
+          "en": "Resident Evil Lore Master Reveals The",
+          "cn": "生化危机",
+          "title": "词库候选：Resident Evil Lore Master Reveals The → 生化危机",
+          "rule": "建议将「Resident Evil Lore Master Reveals The」加入词库，译为「生化危机」。",
+          "status": "ready_for_review",
+          "confidence": "high",
+          "date": "2026-06-17",
+          "article_id": 23,
+          "article_title": "《生化危机》剧情大师揭示《维罗妮卡》重制版需解答的5大疑问",
+          "url": "https://www.ign.com/articles/resident-evil-lore-master-reveals-the-5-burning-questions-veronica-needs-to-answer",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ]
     },
     {
       "id": 28,
@@ -1330,7 +1558,25 @@
           ]
         }
       ],
-      "dictionary_candidates": []
+      "dictionary_candidates": [
+        {
+          "id": "dict_candidate_preorders_are_up_0e331180709b",
+          "category": "dictionary",
+          "type": "dictionary_candidate",
+          "dict_category": "games",
+          "en": "Preorders Are Up",
+          "cn": "黎明行者之血",
+          "title": "词库候选：Preorders Are Up → 黎明行者之血",
+          "rule": "建议将「Preorders Are Up」加入词库，译为「黎明行者之血」。",
+          "status": "ready_for_review",
+          "confidence": "high",
+          "date": "2026-06-17",
+          "article_id": 28,
+          "article_title": "《黎明行者之血》预购开启，各版本内容一览",
+          "url": "https://www.ign.com/articles/the-blood-of-dawnwalker-where-to-preorder",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ]
     }
   ]
 }

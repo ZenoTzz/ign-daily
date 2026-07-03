@@ -1,6 +1,7 @@
 # IGN Daily News
 
-> 📖 **AI Agent / 开发者？请先读 [→ AGENT_HANDOFF.md](AGENT_HANDOFF.md)** — 完整的项目交接文档，包含架构、数据格式、翻译规则、常见坑、脚本说明等一切。
+> 📖 **AI Agent / 开发者？请先读 [→ docs/AGENT_START.md](docs/AGENT_START.md)**。
+> 翻译任务优先看 [docs/TRANSLATION_REQUIREMENTS.md](docs/TRANSLATION_REQUIREMENTS.md)，多人协作归属看 [docs/AGENT_COLLABORATION.md](docs/AGENT_COLLABORATION.md)，完整交接再看 [AGENT_HANDOFF.md](AGENT_HANDOFF.md)。
 
 ---
 
@@ -124,6 +125,7 @@ python -m http.server 8000
 - **2026-06-02**: 正文 API 单轮处理上限从 2 篇调到 5 篇，避免一次勾选多篇时只翻译前两篇、剩余请求继续留在 `requests.json`。
 - **2026-06-02**: 首页新增 Excel 导出篮。用户可以勾选已翻译或未翻译文章，跨日期加入导出篮，并按 `# / 英文标题 / 中文标题 / 分类 / 发布时间(北京) / 摘要 / 链接` 格式导出 `.xlsx`；导出在浏览器本地完成，不读写 GitHub、requests 或 API 队列。
 - **2026-06-02**: 正文 API 支持手动批量模式：普通 5 篇、批量 10 篇、尽量全部。`api-translation.yml` 接收 `workflow_dispatch` 输入并由 `translate_fulltext_api.py` 按时间预算自动暂停，避免 Actions 超时。
+- **2026-07-02**: 新增当前翻译要求速查 `docs/TRANSLATION_REQUIREMENTS.md` 与多 agent 协作协议 `docs/AGENT_COLLABORATION.md`；正文翻译当前由 Codex 处理，完成后同步 Google Docs，夜间学习从 Google Docs 导入用户润色稿，Tencent Docs 仅作历史 fallback。
 - **2026-06-02**: 新增 `scripts/prompt_blocks.py`，标题摘要、正文、夜间学习共享稳定 prompt 前缀，提升 DeepSeek 自动上下文缓存命中率，并可在 `usage.html` 观察命中/未命中 tokens。
 
 ## 📝 License

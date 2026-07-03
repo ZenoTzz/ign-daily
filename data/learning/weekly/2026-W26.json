@@ -1,1195 +1,1433 @@
 {
   "week_id": "2026-W26",
-  "generated_at": "2026-06-29T22:41:42+08:00",
+  "generated_at": "2026-07-01T22:37:30+08:00",
   "published_by": "weekly_learning_report",
   "range": {
     "start": "2026-06-22",
     "end": "2026-06-28"
   },
   "summary": {
-    "candidate_count": 15,
-    "ready_for_review": 0,
+    "candidate_count": 113,
+    "ready_for_review": 98,
     "confirmed_by_feedback": 0,
     "pending": 3
   },
   "candidates": [
     {
-      "id": "subtitle_avoid_concrete_detail",
-      "title": "副标题简短、有记忆点但不增添事实",
-      "rule": "副标题保持2至15字，优先用简短短语、双关或原文引语，不机械复述标题；不得补充原文没有的事实或改变立场。",
-      "category": "subtitle",
-      "scope": "all",
-      "status": "confirmed",
-      "days": [
-        "2026-05-30",
-        "2026-06-01",
-        "2026-06-03",
-        "2026-06-04",
-        "2026-06-05",
-        "2026-06-08",
-        "2026-06-09",
-        "2026-06-10",
-        "2026-06-11",
-        "2026-06-12",
-        "2026-06-16",
-        "2026-06-17",
-        "2026-06-19",
-        "2026-06-25",
-        "2026-06-26",
-        "2026-06-28",
-        "2026-06-29"
-      ],
-      "days_seen": 17,
-      "articles_seen": 21,
-      "contradictions": 0,
-      "examples": [
-        {
-          "date": "2026-06-11",
-          "article_id": 31,
-          "before": "艰难抉择",
-          "after": "重新开始"
-        },
-        {
-          "date": "2026-06-12",
-          "article_id": 3,
-          "before": "剑指史上最佳",
-          "after": "登舰"
-        },
-        {
-          "date": "2026-06-12",
-          "article_id": 16,
-          "before": "十年杀机，日活百万",
-          "after": "足够恐怖"
-        },
-        {
-          "date": "2026-06-12",
-          "article_id": 21,
-          "before": "漫长停播期",
-          "after": "已经够久了"
-        },
-        {
-          "date": "2026-06-16",
-          "article_id": 7,
-          "before": "赛场即广告牌",
-          "after": "游戏即广告平台"
-        },
-        {
-          "date": "2026-06-16",
-          "article_id": 8,
-          "before": "微交易退场",
-          "after": "一份礼物"
-        },
-        {
-          "date": "2026-06-16",
-          "article_id": 39,
-          "before": "Xbox大洗牌",
-          "after": "下一个是谁？"
-        },
-        {
-          "date": "2026-06-17",
-          "article_id": 6,
-          "before": "10亿信用币清零",
-          "after": "不会有进一步的处罚"
-        },
-        {
-          "date": "2026-06-01",
-          "article_id": 3,
-          "before": "纯绿照片的玄机",
-          "after": "照片另有玄机"
-        },
-        {
-          "date": "2026-06-25",
-          "article_id": 18,
-          "before": "老兵回归，双赢策略",
-          "after": "钱包危险了"
-        },
-        {
-          "date": "2026-06-25",
-          "article_id": 24,
-          "before": "看点来了",
-          "after": "「我觉得很多发行商很快就会吃这个亏」"
-        },
-        {
-          "date": "2026-06-26",
-          "article_id": 10,
-          "before": "光盘还在",
-          "after": "「实体版盒内会有一张光盘。」"
-        },
-        {
-          "date": "2026-06-26",
-          "article_id": 31,
-          "before": "预期管理",
-          "after": "牛皮吹破"
-        },
-        {
-          "date": "2026-05-30",
-          "article_id": 18,
-          "before": "再见了，老朋友",
-          "after": "彻底再见"
-        },
-        {
-          "date": "2026-05-30",
-          "article_id": 21,
-          "before": "邦德出道即巅峰",
-          "after": "出道即巅峰"
-        },
-        {
-          "date": "2026-05-30",
-          "article_id": 24,
-          "before": "新官上任三把火",
-          "after": "艰难转型"
-        },
-        {
-          "date": "2026-05-30",
-          "article_id": 26,
-          "before": "说好的免费呢？",
-          "after": "「附加费」"
-        },
-        {
-          "date": "2026-06-28",
-          "article_id": 1,
-          "before": "只有兑换码，没有盘",
-          "after": "「发售时不印，数月后也不会印」"
-        },
-        {
-          "date": "2026-06-28",
-          "article_id": 4,
-          "before": "新鲜血液",
-          "after": "添些新花样"
-        },
-        {
-          "date": "2026-06-28",
-          "article_id": 10,
-          "before": "黄牛狂喜",
-          "after": "乐当冤大头"
-        },
-        {
-          "date": "2026-06-29",
-          "article_id": 3,
-          "before": "求稳才是最大的风险",
-          "after": "「最大的风险就是求稳。」"
-        }
-      ],
-      "feedback": [
-        {
-          "week_id": "2026-W24",
-          "text": "采纳，进入长期规则。",
-          "classified_as": "confirmed",
-          "created_at": "2026-06-15T21:48:32+08:00"
-        }
-      ],
-      "created_at": "2026-06-04T06:38:54+08:00",
-      "last_seen": "2026-06-29",
-      "confidence": 0.92,
-      "latest_evidence_summary": "6/29 Nolan subtitle uses a concise direct quote, reinforcing quote-like subtitle hooks."
-    },
-    {
-      "id": "prefer_confirmed_chinese_game_titles",
-      "title": "优先使用已确认的官方或通行中文名",
-      "rule": "游戏、影视、角色和系统名有稳定官方或通行中文译名时应统一使用；没有稳定译名时保留原文，不自行创造译名。",
+      "id": "dict_candidate_gta_82a2cf34af76",
+      "title": "词库候选：GTA → GTA6",
+      "rule": "建议将「GTA」加入词库，译为「GTA6」。",
       "category": "dictionary",
-      "scope": "games|movies_tv",
-      "status": "confirmed",
-      "days": [
-        "2026-06-03",
-        "2026-06-04",
-        "2026-06-10",
-        "2026-06-12",
-        "2026-06-16",
-        "2026-06-17",
-        "2026-06-18",
-        "2026-06-25",
-        "2026-06-26",
-        "2026-06-27",
-        "2026-06-28"
-      ],
-      "days_seen": 11,
-      "articles_seen": 17,
-      "contradictions": 1,
-      "examples": [
-        {
-          "date": "2026-06-12",
-          "article_id": 4,
-          "before": "开发者承认《1666: Amsterdam》使用AI资产并道歉",
-          "after": "开发者承认《1666：阿姆斯特丹》使用AI资产并道歉"
-        },
-        {
-          "date": "2026-06-12",
-          "article_id": 11,
-          "before": "《Stranger Than Heaven》导演回应Tupac风波",
-          "after": "《异于天堂》制作组回应Tupac风波"
-        },
-        {
-          "date": "2026-06-16",
-          "article_id": 13,
-          "before": "《刺客信条：影》的最终内容更新将为直江与弥助的故事添加最后一章、一个高难度新挑战模式，并允许玩家装扮为《刺客信条：黑旗 记忆重置》中的爱德华·肯威。",
-          "after": "《刺客信条：影》的最终内容更新将为奈绪江与弥助的故事添加最后一章、一个高难度新挑战模式，并允许玩家装扮为《刺客信条：黑旗 记忆重置》中的爱德华·肯威。"
-        },
-        {
-          "date": "2026-06-16",
-          "article_id": 22,
-          "before": "在《Final Fantasy 7 Revelation》公开预告片的前几分钟里，开发商史克威尔艾尼克斯让我们重新见到了飞空艇Highwind。原作PlayStation游戏的粉丝会满怀深情地回忆起它那多螺旋桨的壮丽身姿；正是这艘载具，为《最终幻想7》的世界地图解锁了想去哪里就去哪里的完全自由。不受河流、海洋或山脉的限制，你可以高速翱翔全球。而且，只要有能安全降落的地方，你就能探索任何吸引你的地点。",
-          "after": "在《最终幻想7 Revelation》公开预告片的前几分钟里，开发商史克威尔艾尼克斯让我们重新见到了高风号（Highwind）飞空艇。原作游戏的粉丝会满怀深情地回忆起它那多螺旋桨的壮丽身姿；正是这艘载具，为《最终幻想7》的世界地图解锁了想去哪里就去哪里的完全自由。不受河流、海洋或山脉的限制，你可以高速翱翔全球。而且，只要有能安全降落的地方，你就能探索任何吸引你的地点。"
-        },
-        {
-          "date": "2026-06-16",
-          "article_id": 34,
-          "before": "目前尚不清楚Treyarch是否在制作另一款《黑色行动》游戏。尽管《黑色行动6》取得了成功，但《黑色行动7》被认为商业表现令人失望，标志着该系列声誉下滑。与此同时，有各种传闻称Activision和Treyarch计划在现代平台重制《黑色行动1》和《黑色行动2》。Activision尚未确认任何消息，但粉丝们在PlayStation后台发现了这些游戏的列表。",
-          "after": "目前尚不清楚Treyarch是否在制作另一款《黑色行动》游戏。尽管《黑色行动6》取得了成功，但《黑色行动7》被认为商业表现令人失望，标志着该系列声誉下滑。与此同时，有各种传闻称动视和Treyarch计划在现代平台重制《黑色行动1》和《黑色行动2》。动视尚未确认任何消息，但粉丝们在PlayStation后台发现了这些游戏的列表。"
-        },
-        {
-          "date": "2026-06-16",
-          "article_id": 37,
-          "before": "「我仍然相信，即便是在当下，即使对于像素美术的回合制游戏，也依然有成长、进化和发展的空间。」Nakashima告诉我，「当然，这类体验深深植根于经典，倾向于让人感到熟悉。然而，通过融入一些新技术，我仍然相信这类体验是有前途的。即使你在今天这样一个现代环境下玩它，这类RPG也未必会让人觉得过时。这些游戏仍然大有未来，或许这就是这一切的源头。」",
-          "after": "「我仍然相信，即便是在当下，即使对于像素美术的回合制游戏，也依然有成长、进化和发展的空间。」中岛启辅告诉我，「当然，这类体验深深植根于经典，倾向于让人感到熟悉。然而，通过融入一些新技术，我仍然相信这类体验是有前途的。即使你在今天这样一个现代环境下玩它，这类RPG也未必会让人觉得过时。这些游戏仍然大有未来，或许这就是这一切的源头。」"
-        },
-        {
-          "date": "2026-06-25",
-          "article_id": 4,
-          "before": "《Epic Games》Epic CEO谈UE6 AI集成与游戏成功困境",
-          "after": "Epic CEO谈虚幻引擎6 AI集成与游戏成功困境"
-        },
-        {
-          "date": "2026-06-26",
-          "article_id": 1,
-          "before": "《苍翼默示录》发售近十年后突曝新DLC角色",
-          "after": "《苍翼默示录：神观之梦》发售近十年后突曝新DLC角色"
-        },
-        {
-          "date": "2026-06-26",
-          "article_id": 29,
-          "before": "《Deltarune》第6章2027年发售，第5章打破Steam在线纪录",
-          "after": "《三角符文》第6章2027年发售，第5章打破Steam在线纪录"
-        },
-        {
-          "date": "2026-06-27",
-          "article_id": 4,
-          "before": "《料理鼠王2》永远不会拍，导演布拉德·伯德确认",
-          "after": "导演布拉德·伯德确认《美食总动员2》永远不会拍"
-        },
-        {
-          "date": "2026-06-28",
-          "article_id": 4,
-          "before": "Dauberman的作品履历包括2017年《小丑回魂》重启版及其续集，以及2014年的《安娜贝尔》。他还参与了《修女》和去年上映的《直到黎明》电影的编剧工作，并且已确认加盟即将推出的《街头霸王》和《地狱潜者》电影。",
-          "after": "Dauberman的作品履历包括2017年《小丑回魂》重启版及其续集，以及2014年的《安娜贝尔》。他还参与了《修女》和去年上映的《直到黎明》电影的编剧工作，并且已确认加盟即将推出的《街头霸王》和《绝地潜兵》电影。"
-        }
-      ],
-      "feedback": [
-        {
-          "week_id": "2026-W24",
-          "text": "采纳，进入长期规则。",
-          "classified_as": "confirmed",
-          "created_at": "2026-06-15T21:48:32+08:00"
-        }
-      ],
-      "created_at": "2026-06-12T17:45:36+08:00",
-      "last_seen": "2026-06-28",
-      "confidence": 0.93,
-      "latest_evidence_summary": "6/28 edit normalizes Helldivers to the established Chinese title ?????? in a movie-context mention.",
-      "contradiction_notes": []
-    },
-    {
-      "id": "remove_author_bio_and_image_credit",
-      "title": "删除作者简介和非正文署名",
-      "rule": "成稿不保留IGN作者简介、联系方式、社交账号、图片来源等非正文尾注。",
-      "category": "structure",
+      "type": "dictionary_candidate",
+      "dict_category": "terms",
       "scope": "all",
-      "status": "confirmed",
-      "days": [
-        "2026-06-03",
-        "2026-06-11",
-        "2026-06-12",
-        "2026-06-16",
-        "2026-06-17",
-        "2026-06-18",
-        "2026-06-25",
-        "2026-06-26",
-        "2026-06-27",
-        "2026-06-28"
-      ],
-      "days_seen": 10,
-      "articles_seen": 11,
-      "contradictions": 0,
-      "examples": [
-        {
-          "date": "2026-06-11",
-          "article_id": 13,
-          "before": "Tom Phillips是IGN的新闻编辑。你可以通过tom_phillips@ign.com联系他，或在Bluesky上找到他。",
-          "after": "PlayStation Plus 升级/高级:"
-        },
-        {
-          "date": "2026-06-16",
-          "article_id": 7,
-          "before": "Tom Phillips是IGN的新闻编辑。可以通过tom_phillips@ign.com联系Tom，或在Bluesky上找到他。",
-          "after": ""
-        },
-        {
-          "date": "2026-06-16",
-          "article_id": 8,
-          "before": "Wesley是IGN新闻总监。可在Twitter @wyp100找到他。可通过wesley_yinpoole@ign.com或wyp100@proton.me联系Wesley。",
-          "after": ""
-        },
-        {
-          "date": "2026-06-16",
-          "article_id": 25,
-          "before": "图片由Christian Petersen/Getty Images提供。",
-          "after": ""
-        },
-        {
-          "date": "2026-06-16",
-          "article_id": 34,
-          "before": "Cade Onder是IGN新闻团队的自由撰稿人，负责报道游戏、影视等各类娱乐资讯。你可以在X上找到他 @Cade_Onder。",
-          "after": ""
-        },
-        {
-          "date": "2026-06-17",
-          "article_id": 6,
-          "before": "Luke是IGN评测团队的高级编辑，你可以在Bluesky上通过 @mrlukereilly向他提问。",
-          "after": ""
-        },
-        {
-          "date": "2026-06-25",
-          "article_id": 29,
-          "before": "Cade Onder是IGN新闻团队的自由撰稿人，报道游戏、电影等娱乐内容。你可以在X上找到他，账号为@Cade_Onder。",
-          "after": ""
-        },
-        {
-          "date": "2026-06-26",
-          "article_id": 7,
-          "before": "Tom Phillips是IGN的新闻编辑。你可以通过tom_phillips@ign.com联系Tom，或在Bluesky上找到他。",
-          "after": ""
-        },
-        {
-          "date": "2026-06-26",
-          "article_id": 24,
-          "before": "Wesley是IGN的新闻总监，可在Twitter上关注他 @wyp100，也可通过wesley_yinpoole@ign.com或保密邮箱wyp100@proton.me联系他。",
-          "after": ""
-        },
-        {
-          "date": "2026-06-27",
-          "article_id": 4,
-          "before": "Cade Onder是IGN新闻团队的自由撰稿人，报道游戏、电影等各类娱乐内容。你可以在Twitter @Cade_Onder上找到他。",
-          "after": ""
-        },
-        {
-          "date": "2026-06-28",
-          "article_id": 1,
-          "before": "Wesley是IGN新闻总监。你可以在X上找到他：@wyp100。也可通过wesley_yinpoole@ign.com或保密邮箱wyp100@proton.me联系。",
-          "after": ""
-        }
-      ],
-      "feedback": [
-        {
-          "week_id": "2026-W24",
-          "text": "采纳，进入长期规则。",
-          "classified_as": "confirmed",
-          "created_at": "2026-06-15T21:48:32+08:00"
-        }
-      ],
-      "created_at": "2026-06-12T17:45:36+08:00",
-      "last_seen": "2026-06-28",
-      "confidence": 0.97,
-      "latest_evidence_summary": "6/28 GTA6 polish again removes the author bio, social handle, and contact emails from the article tail."
-    },
-    {
-      "id": "remove_redundant_title_prefixes",
-      "title": "标题删除重复品牌堆叠",
-      "rule": "中文标题只保留识别新闻所需的作品、公司或平台名，删除重复的品牌书名号和无意义前缀，但不能删掉主体或关键限定。",
-      "category": "title",
-      "scope": "all",
-      "status": "confirmed",
+      "status": "ready_for_review",
       "days": [
         "2026-06-04",
-        "2026-06-05",
-        "2026-06-10",
-        "2026-06-11",
-        "2026-06-12",
         "2026-06-25",
-        "2026-06-26",
-        "2026-06-28"
-      ],
-      "days_seen": 8,
-      "articles_seen": 12,
-      "contradictions": 0,
-      "examples": [
-        {
-          "date": "2026-06-04",
-          "article_id": 9,
-          "before": "《PlayStation》顽皮狗缺席State of Play，玩家担忧《星际：异端先知》遥遥无期",
-          "after": "顽皮狗缺席State of Play，玩家担忧《星际：异端先知》遥遥无期"
-        },
-        {
-          "date": "2026-06-05",
-          "article_id": 1,
-          "before": "《詹姆斯·邦德》《IO Interactive》《007初露锋芒》续作发行权易主，亚马逊将掌控更多话语权",
-          "after": "《007 初露锋芒》续作发行权易主，亚马逊将掌控更多话语权"
-        },
-        {
-          "date": "2026-06-05",
-          "article_id": 9,
-          "before": "《战神》《劳菲》之后，PlayStation承诺奎托斯还有更多故事",
-          "after": "《战神：劳菲》之后，PlayStation承诺奎托斯还有更多故事"
-        },
-        {
-          "date": "2026-06-05",
-          "article_id": 17,
-          "before": "《任天堂》《Nintendo Switch 2》《艾尔登法环》褪色者版8月28日登陆Switch 2",
-          "after": "Switch 2版《艾尔登法环 褪色版》将于8月28日发售"
-        },
-        {
-          "date": "2026-06-10",
-          "article_id": 1,
-          "before": "《Project Helix》Xbox因组件短缺无法满足主机需求，重新审视下一代主机策略",
-          "after": "Xbox难以满足主机需求，微软重新评估Project Helix计划"
-        },
-        {
-          "date": "2026-06-11",
-          "article_id": 13,
-          "before": "《PlayStation》《最终幻想16》《天国：拯救》领衔6月PS Plus游戏阵容",
-          "after": "PS Plus六月二三档会免更新"
-        },
-        {
-          "date": "2026-06-12",
-          "article_id": 1,
-          "before": "《任天堂》《Nintendo Switch 2》《马力欧卡丁车世界》遭冷落，Switch 2首发一年无大型DLC",
-          "after": "《马力欧卡丁车世界》遭冷落，Switch 2首发一年无大型DLC"
-        },
-        {
-          "date": "2026-06-25",
-          "article_id": 4,
-          "before": "《Epic Games》Epic CEO谈UE6 AI集成与游戏成功困境",
-          "after": "Epic CEO谈虚幻引擎6 AI集成与游戏成功困境"
-        },
-        {
-          "date": "2026-06-25",
-          "article_id": 9,
-          "before": "《侠盗猎车手》索尼称《GTA6》在PS5上表现最佳，并解释原因",
-          "after": "索尼称《GTA6》在PS5上表现最佳，并解释原因"
-        },
-        {
-          "date": "2026-06-26",
-          "article_id": 7,
-          "before": "《PlayStation》PS5推出《GTA6》定制界面，索尼全面押注Rockstar合作",
-          "after": "PS5推出《GTA6》定制界面，索尼全面押注Rockstar合作"
-        },
-        {
-          "date": "2026-06-26",
-          "article_id": 10,
-          "before": "《GTA6》Insomniac确认《金刚狼》实体版含光盘",
-          "after": "Insomniac确认《漫威金刚狼》实体版含光盘"
-        },
-        {
-          "date": "2026-06-28",
-          "article_id": 7,
-          "before": "《PlayStation》索尼将删除PSN用户超550部数字电影",
-          "after": "索尼将删除PSN用户超550部数字电影"
-        }
-      ],
-      "feedback": [
-        {
-          "week_id": "2026-W24",
-          "text": "采纳，进入长期规则。",
-          "classified_as": "confirmed",
-          "created_at": "2026-06-15T21:48:32+08:00"
-        }
-      ],
-      "created_at": "2026-06-12T17:45:36+08:00",
-      "last_seen": "2026-06-28",
-      "confidence": 0.93,
-      "latest_evidence_summary": "6/28 PlayStation title removes the redundant platform wrapper while keeping the Sony/PSN subject clear."
-    },
-    {
-      "id": "currency_conversion_refined",
-      "title": "金额换算采用统一中文格式",
-      "rule": "正文金额首次出现时可给出人民币换算，使用中文全角括号并保持同文一致；标题通常不放人民币换算。汇率数值属于时效数据，不作为固定翻译规则。",
-      "category": "currency",
-      "scope": "all",
-      "status": "confirmed",
-      "days": [
-        "2026-06-02",
-        "2026-06-04",
-        "2026-06-05",
-        "2026-06-25",
-        "2026-06-26",
-        "2026-06-28",
-        "2026-06-29"
-      ],
-      "days_seen": 7,
-      "articles_seen": 12,
-      "contradictions": 0,
-      "examples": [
-        {
-          "date": "2026-06-02",
-          "article_id": 22,
-          "before": "13亿丹麦克朗（约合2.02亿美元(约合人民币14亿元)）",
-          "after": "13亿丹麦克朗（约合13.7亿元人民币）"
-        },
-        {
-          "date": "2026-06-04",
-          "article_id": 3,
-          "before": "2026年，Valve屡屡成为法律靶心。在上述反垄断诉讼进行的同时，今年1月，英国一家法庭批准了一项针对Valve的6.56亿英镑(约合人民币60亿元)集体诉讼，涉及垄断问题。除此之外，纽约州总检察长Letitia James在2月采取了行动，4月澳大利亚政府向Valve发出了具有法律效力的透明度通知，要求该公司详细说明其系统如何防止Steam平台上的儿童诱骗和极端化行为。",
-          "after": "2026年，Valve屡屡成为法律靶心。在上述反垄断诉讼进行的同时，今年1月，英国一家法庭批准了一项针对Valve的6.56亿英镑（约合人民币60亿元）集体诉讼，涉及垄断问题。除此之外，纽约州总检察长Letitia James在2月采取了行动，4月澳大利亚政府向Valve发出了具有法律效力的透明度通知，要求该公司详细说明其系统如何防止Steam平台上的儿童诱骗和极端化行为。"
-        },
-        {
-          "date": "2026-06-04",
-          "article_id": 38,
-          "before": "目前，Best Buy已上线《控制：共振》实体版的预购页面，PS5和Xbox Series X版本均标价59.99美元(约合人民币430元)。随着更多零售商加入并开放预购，我们会及时更新。",
-          "after": "PS5和Xbox Series标准版售价59.99美元（约合人民币406.17元），铁盒版售价69.99美元（约合人民币473.86元）。"
-        },
-        {
-          "date": "2026-06-05",
-          "article_id": 17,
-          "before": "79.99美元(约合人民币572元)的褪色者版包含游戏本体、《黄金树之影》DLC、新武器、以及为玩家忠实的灵马托雷特更换护甲皮肤的功能。此外还包含两个新初始职业。",
-          "after": "Switch 2版《艾尔登法环 褪色版》定价79.99美元（约合541.84元人民币），日区Nintendo Store定价9020日元（约合382.04元人民币）。包含游戏本体、《黄金树之影》DLC、新武器、以及为玩家忠实的灵马托雷特更换皮肤的功能。此外还包含两个新初始职业。"
-        },
-        {
-          "date": "2026-06-05",
-          "article_id": 34,
-          "before": "据《综艺》指出，诺兰的其他暑期档电影（如《黑暗骑士》三部曲）多为PG-13级，但R级并未阻碍《奥本海默》本土票房突破3.3亿美元(约合人民币23.6亿元)。",
-          "after": "据《综艺》指出，诺兰的其他暑期档电影（如《黑暗骑士》三部曲）多为PG-13级，但R级并未阻碍《奥本海默》本土票房突破3.3亿美元（约合人民币22.35亿元）。"
-        },
-        {
-          "date": "2026-06-25",
-          "article_id": 1,
-          "before": "750美元(约合人民币5092元)；1049美元(约合人民币7123元)",
-          "after": "750美元（约合人民币5092元）；1049美元（约合人民币7123元）"
-        },
-        {
-          "date": "2026-06-25",
-          "article_id": 24,
-          "before": "《GTA6》80美元(约合人民币545元)定价会带涨游戏价格吗？",
-          "after": "《GTA6》的80美元定价会带涨游戏价格吗？"
-        },
-        {
-          "date": "2026-06-26",
-          "article_id": 15,
-          "before": "从MacBook Neo到Apple Vision Pro，苹果官网上的产品价格全面上涨，后者的涨幅高达200美元(约合人民币1362元)。今年早些时候以599美元(约合人民币4079元)发售的MacBook Neo，旨在帮助苹果从低端Windows笔记本和Chromebook手中抢占部分预算市场，如今涨价100美元(约合人民币681元)。不过，涨幅最大的还是搭载M3 Ultra的顶级Mac Studio，从3,999美元(约合人民币3万元)涨到了5,299美元(约合人民币4万元)，整整涨了1,300美元(约合人民币8853元)。",
-          "after": "从MacBook Neo到Apple Vision Pro，苹果官网上的产品价格全面上涨，后者的涨幅高达200美元（约合人民币1362元）。今年早些时候以599美元（约合人民币4079元）发售的MacBook Neo，旨在帮助苹果从低端Windows笔记本和Chromebook手中抢占部分预算市场，如今涨价100美元（约合人民币681元）。不过，涨幅最大的还是搭载M3 Ultra的顶级Mac Studio，从3,999美元（约合人民币3万元）涨到了5,299美元（约合人民币4万元），整整涨了1,300美元（约合人民币8853元）。"
-        },
-        {
-          "date": "2026-06-26",
-          "article_id": 24,
-          "before": "「去年10月，我们在美国已经将XBOX主机的价格上调了20至70美元(约合人民币136至477元)(约合136至477元)，」微软表示，「我们原本希望不必再次涨价，过去几个月也一直在与供应商商讨应对方案。不幸的是，主机存储与内存芯片价格已上涨超过2.5倍，而且我们预计到2027年秋季还会再翻一番。」",
-          "after": "「去年10月，我们在美国已经将XBOX主机的价格上调了20至70美元（约合人民币136至477元），」微软表示，「我们原本希望不必再次涨价，过去几个月也一直在与供应商商讨应对方案。不幸的是，主机存储与内存芯片价格已上涨超过2.5倍，而且我们预计到2027年秋季还会再翻一番。」"
-        },
-        {
-          "date": "2026-06-28",
-          "article_id": 4,
-          "before": "《玩具熊的五夜后宫3》尚未正式公布，但倘若获得绿灯也并不令人意外。前两部电影都取得了巨大成功，第一部迅速成为Blumhouse当时票房最高的影片，续集同样收获了相当可观的开画成绩。据Box Office Mojo数据，第一部全球票房达2.915亿美元(约合人民币20亿元)，第二部达到2.385亿美元(约合人民币16亿元)。",
-          "after": "《玩具熊的五夜后宫3》尚未正式公布，但倘若获得绿灯也并不令人意外。前两部电影都取得了巨大成功，第一部迅速成为Blumhouse当时票房最高的影片，续集同样收获了相当可观的开画成绩。据Box Office Mojo数据，第一部全球票房达2.915亿美元（约合人民币20亿元），第二部达到2.385亿美元（约合人民币16亿元）。"
-        },
-        {
-          "date": "2026-06-28",
-          "article_id": 10,
-          "before": "6月25日全面开启预购后，这款《侠盗猎车手》新作的加价转卖便已出现在eBay上。标准版零售价目前锁定在80美元(约合人民币545元)，一些黄牛成功以约90美元(约合人民币613元)转手，有的甚至更高。",
-          "after": "6月25日全面开启预购后，这款《GTA》新作的加价转卖便已出现在eBay上。标准版零售价目前锁定在80美元（约合人民币544元），一些黄牛成功以约90美元（约合人民币612元）转手，有的甚至更高。"
-        },
-        {
-          "date": "2026-06-29",
-          "article_id": 3,
-          "before": "诺兰没有点明他指的是哪些主流电影，但不可否认，他拥有一批铁杆粉丝，即便他拍出最离经叛道的作品也会捧场。2023年上映的《奥本海默》就是最近的例子，这部传记片讲述了原子弹之父J·罗伯特·奥本海默的真实故事，尽管采用非线性叙事且片长三小时，仍然斩获近10亿美元(约合人民币68亿元)的全球票房（数据来自Box Office Mojo）。",
-          "after": "诺兰没有点明他指的是哪些主流电影，但不可否认，他拥有一批铁杆粉丝，即便他拍出最离经叛道的作品也会捧场。2023年上映的《奥本海默》就是最近的例子，这部传记片讲述了原子弹之父J·罗伯特·奥本海默的真实故事，尽管采用非线性叙事且片长三小时，仍然斩获近10亿美元（约合人民币68亿元）的全球票房。"
-        }
-      ],
-      "feedback": [
-        {
-          "week_id": "2026-W23",
-          "text": "采纳，进入长期规则。",
-          "classified_as": "confirmed",
-          "created_at": "2026-06-04T06:38:24+08:00"
-        },
-        {
-          "week_id": "2026-W23",
-          "text": "采纳，进入长期规则。",
-          "classified_as": "confirmed",
-          "created_at": "2026-06-04T06:38:54+08:00"
-        },
-        {
-          "week_id": "2026-W23",
-          "text": "采纳，进入长期规则。",
-          "classified_as": "confirmed",
-          "created_at": "2026-06-04T06:39:36+08:00"
-        },
-        {
-          "week_id": "2026-W23",
-          "text": "采纳，进入长期规则。",
-          "classified_as": "confirmed",
-          "created_at": "2026-06-05T05:07:48+08:00"
-        },
-        {
-          "week_id": "2026-W23",
-          "text": "采纳，进入长期规则。",
-          "classified_as": "confirmed",
-          "created_at": "2026-06-06T04:56:39+08:00"
-        },
-        {
-          "week_id": "2026-W23",
-          "text": "采纳，进入长期规则。",
-          "classified_as": "confirmed",
-          "created_at": "2026-06-07T02:52:19+08:00"
-        }
-      ],
-      "created_at": "2026-06-03T16:03:40+08:00",
-      "last_seen": "2026-06-29",
-      "confidence": 0.93,
-      "latest_evidence_summary": "6/29 money edit keeps Chinese full-width parentheses for CNY conversion."
-    },
-    {
-      "id": "platform_name_compact",
-      "title": "平台名称使用简洁统一写法",
-      "rule": "平台枚举中可将“Xbox Series X|S”统一简写为“XBOX Series”，Nintendo Switch 2在语境明确时可写“Switch 2”；不要改变实际登陆平台范围。所有面向读者的译文中，Xbox 统一写作 XBOX。",
-      "category": "dictionary",
-      "scope": "games",
-      "status": "confirmed",
-      "days": [
-        "2026-05-30",
-        "2026-06-08",
-        "2026-06-09",
-        "2026-06-10",
-        "2026-06-18",
-        "2026-06-24",
-        "2026-06-26"
-      ],
-      "days_seen": 7,
-      "articles_seen": 11,
-      "contradictions": 0,
-      "examples": [
-        {
-          "date": "2026-06-08",
-          "article_id": 16,
-          "before": "今日Xbox展示会直播中最令人意外的消息，莫过于确认多款即将推出的重磅大作将作为Xbox主机独占游戏保留——也就是说，它们虽会登陆PC，但不会出现在PS5或任天堂Switch 2上。",
-          "after": "今日Xbox展示会直播中最令人意外的消息，莫过于确认多款即将推出的重磅大作将作为Xbox主机独占游戏保留——也就是说，它们虽会登陆PC，但不会出现在PS5或Switch 2上。"
-        },
-        {
-          "date": "2026-06-08",
-          "article_id": 37,
-          "before": "《古墓丽影：亚特兰蒂斯遗迹》将于2027年2月12日登陆任天堂Switch 2、PS5、PC和Xbox Series X/S。",
-          "after": "《古墓丽影：亚特兰蒂斯遗迹》将于2027年2月12日登陆、PS5、Xbox Series、Switch 2和PC。"
-        },
-        {
-          "date": "2026-06-09",
-          "article_id": 21,
-          "before": "Game Pass曾是Xbox One、Xbox Series X|S和PC端Xbox玩家的首选，但去年年底宣布涨价后，这一地位受到了冲击。微软在2025年10月初确认，Xbox Game Pass Ultimate月费将从19.99美元（约合人民币143元）大幅上涨至29.99美元（约合人民币215元）。涨幅高达50%，年费达到120美元（约合人民币859元）。",
-          "after": "Game Pass曾是Xbox One、Xbox Series和PC端Xbox玩家的首选，但去年年底宣布涨价后，这一地位受到了冲击。微软在2025年10月初确认，Xbox Game Pass Ultimate月费将从19.99美元（约合人民币136元）大幅上涨至29.99美元（约合人民币203元）。涨幅高达50%，年费达到120美元（约合人民币814元）。"
-        },
-        {
-          "date": "2026-06-10",
-          "article_id": 6,
-          "before": "《战争机器：事变日》仅通过Steam和Xbox应用登陆PC，以及Xbox Cloud和Xbox Series X|S。微软坚称，从未打算将该作带到PS5。",
-          "after": "《战争机器：事变日》仅通过Steam和Xbox应用登陆PC，以及Xbox Cloud和Xbox Series。微软坚称，从未打算将该作带到PS5。"
-        },
-        {
-          "date": "2026-06-10",
-          "article_id": 7,
-          "before": "《光环：战役进化》将于7月28日登陆Xbox Series X|S、PS5和PC。高级版和典藏版玩家还将获得五天的抢先体验资格。",
-          "after": "《光环：战役进化》将于7月28日登陆Xbox Series、PS5和PC。高级版和典藏版玩家还将获得五天的抢先体验资格。"
-        },
-        {
-          "date": "2026-06-24",
-          "article_id": 5,
-          "before": "??XBOX Series?PS5",
-          "after": "??XBOX Series?PS5"
-        },
-        {
-          "date": "2026-06-24",
-          "article_id": 14,
-          "before": "Xbox Series X/S",
-          "after": "XBOX Series"
-        },
-        {
-          "date": "2026-06-26",
-          "article_id": 24,
-          "before": "XBOX主机涨价的消息公布于11月《GTA6》发售前夕，该作预计将大幅拉高PS5和XBOX Series X|S的需求。然而，外界担忧索尼和微软可能都无法满足《GTA6》所带来的需求，因为人工智能热潮正让硬件厂商不仅难以采购组件，更难以用亲民的价格推出产品。",
-          "after": "XBOX主机涨价的消息公布于11月《GTA6》发售前夕，该作预计将大幅拉高PS5和XBOX Series的需求。然而，外界担忧索尼和微软可能都无法满足《GTA6》所带来的需求，因为人工智能热潮正让硬件厂商不仅难以采购组件，更难以用亲民的价格推出产品。"
-        },
-        {
-          "date": "2026-05-30",
-          "article_id": 21,
-          "before": "Alinea Analytics市场分析主管Rhys Elliott表示，《007 初露锋芒》仅在Steam平台就售出约50万份，在Valve平台创造了约2500万美元(约合人民币2亿元)收入。",
-          "after": "Alinea Analytics市场分析主管Rhys Elliott表示，《007 初露锋芒》仅在Steam平台就售出约50万份，在Valve平台创造了约2500万美元（约合1.7亿元人民币）的收入。"
-        },
-        {
-          "date": "2026-05-30",
-          "article_id": 26,
-          "before": "「如果你在4月30日至5月27日期间在Xbox One或PlayStation 4上购买了基础版，或在升级中遇到任何问题，请联系我们的客服团队，我们会妥善解决。再次为此事带来的困扰致歉。」",
-          "after": "「如果你在4月30日至5月27日期间在Xbox One或PS4上购买了基础版，或在升级中遇到任何问题，请联系我们的客服团队，我们会妥善解决。再次为此事带来的困扰致歉。」"
-        }
-      ],
-      "feedback": [
-        {
-          "week_id": "2026-W24",
-          "text": "采纳，进入长期规则。",
-          "classified_as": "confirmed",
-          "created_at": "2026-06-15T21:48:32+08:00"
-        }
-      ],
-      "created_at": "2026-06-12T21:51:19+08:00",
-      "last_seen": "2026-06-26",
-      "confidence": 0.86,
-      "latest_evidence_summary": "Backfilled 5/30 edits also compact platform names, including Nintendo Switch 2 -> Switch 2 and Xbox Series X/S -> Xbox Series."
-    },
-    {
-      "id": "remove_promotional_related_links",
-      "title": "删除站内推广和相关阅读引导",
-      "rule": "正文末尾的“查看更多”“阅读我们的采访或汇总”等站内引流句应删除，但不得删除承载新闻事实的正文。",
-      "category": "structure",
-      "scope": "all",
-      "status": "confirmed",
-      "days": [
-        "2026-06-01",
-        "2026-06-03",
-        "2026-06-23",
-        "2026-06-24",
-        "2026-06-25",
-        "2026-06-26"
-      ],
-      "days_seen": 6,
-      "articles_seen": 10,
-      "contradictions": 0,
-      "examples": [
-        {
-          "date": "2026-06-03",
-          "article_id": 19,
-          "before": "所以，如果你想降低《漫威金刚狼》的暴力程度，你可以做到。请务必查看我们对Insomniac的完整采访，了解《漫威金刚狼》的实际玩法。",
-          "after": "所以，如果你想降低《漫威金刚狼》的暴力程度，你可以做到。"
-        },
-        {
-          "date": "2026-06-23",
-          "article_id": 20,
-          "before": "在等待这些问题的答案之余，不妨看看IGN对《GTA6》封面艺术的分析...",
-          "after": ""
-        },
-        {
-          "date": "2026-06-23",
-          "article_id": 42,
-          "before": "欲了解更多关于Steam Machine的信息，请查阅我们的完整评测。",
-          "after": ""
-        },
-        {
-          "date": "2026-06-23",
-          "article_id": 44,
-          "before": "Tom Phillips是IGN的新闻编辑。可通过tom_phillips@ign.com联系Tom...",
-          "after": ""
-        },
-        {
-          "date": "2026-06-24",
-          "article_id": 4,
-          "before": "??????????IGN???????????????????????????????2??????????????????????????",
-          "after": ""
-        },
-        {
-          "date": "2026-06-24",
-          "article_id": 5,
-          "before": "Cade Onder?IGN???????????????????????????????????X???? @Cade_Onder?",
-          "after": ""
-        },
-        {
-          "date": "2026-06-24",
-          "article_id": 34,
-          "before": "Cade Onder?IGN??????????????????????????????X???? @Cade_Onder?",
-          "after": ""
-        },
-        {
-          "date": "2026-06-25",
-          "article_id": 1,
-          "before": "????IGN???Valve????????Steam Machine???????????",
-          "after": ""
-        },
-        {
-          "date": "2026-06-25",
-          "article_id": 1,
-          "before": "你可以在IGN近期对Valve的采访中了解有关Steam Machine价格和性能的更多信息。",
-          "after": ""
-        },
-        {
-          "date": "2026-06-25",
-          "article_id": 1,
-          "before": "Luke是IGN评测团队的资深编辑。你可以在Bluesky上找到他@mrlukereilly，向他询问各种事情。",
-          "after": ""
-        },
-        {
-          "date": "2026-06-26",
-          "article_id": 7,
-          "before": "需要了解所有《GTA6》消息吗？Rockstar现已公布了《GTA6》的售价，还推出了更昂贵的100美元(约合人民币681元)终极版，发布了63张全新的《GTA6》截图，并确认游戏的实体版包装盒内将不再附带光盘。",
-          "after": ""
-        },
-        {
-          "date": "2026-06-26",
-          "article_id": 10,
-          "before": "关于GTA6的预订，我们还有海量内容，包括分析师对GTA6 80美元(约合人民币545元)（约合576元人民币）定价对其他游戏影响的看法，以及科技专家对63张GTA6新截图的评测。",
-          "after": ""
-        }
-      ],
-      "feedback": [
-        {
-          "week_id": "2026-W23",
-          "text": "采纳，进入长期规则。",
-          "classified_as": "confirmed",
-          "created_at": "2026-06-04T06:38:24+08:00"
-        },
-        {
-          "week_id": "2026-W23",
-          "text": "采纳，进入长期规则。",
-          "classified_as": "confirmed",
-          "created_at": "2026-06-04T06:38:54+08:00"
-        },
-        {
-          "week_id": "2026-W23",
-          "text": "采纳，进入长期规则。",
-          "classified_as": "confirmed",
-          "created_at": "2026-06-04T06:39:36+08:00"
-        },
-        {
-          "week_id": "2026-W23",
-          "text": "采纳，进入长期规则。",
-          "classified_as": "confirmed",
-          "created_at": "2026-06-05T05:07:48+08:00"
-        },
-        {
-          "week_id": "2026-W23",
-          "text": "采纳，进入长期规则。",
-          "classified_as": "confirmed",
-          "created_at": "2026-06-06T04:56:39+08:00"
-        },
-        {
-          "week_id": "2026-W23",
-          "text": "采纳，进入长期规则。",
-          "classified_as": "confirmed",
-          "created_at": "2026-06-07T02:52:19+08:00"
-        },
-        {
-          "week_id": "2026-W26",
-          "text": "采纳，进入长期规则。",
-          "classified_as": "confirmed",
-          "created_at": "2026-06-25T22:47:05+08:00"
-        }
-      ],
-      "created_at": "2026-06-03T16:01:56+08:00",
-      "last_seen": "2026-06-26",
-      "confidence": 0.95,
-      "latest_evidence_summary": "6/26 edits delete site-recirc paragraphs such as more-GTA6 coverage links."
-    },
-    {
-      "id": "use_live_exchange_rate_for_cny",
-      "title": "金额换算采用实时汇率",
-      "rule": "金额换算应使用当日或近期汇率给出人民币约合值，不沿用固定 7:1 粗算；同时保持全文金额格式统一。汇率数值属于时效数据，不作为固定翻译规则。",
-      "category": "currency",
-      "scope": "all",
-      "status": "confirmed",
-      "days": [
-        "2026-06-16",
-        "2026-06-17",
-        "2026-06-18",
-        "2026-06-23",
-        "2026-06-24"
-      ],
-      "days_seen": 5,
-      "articles_seen": 4,
-      "contradictions": 0,
-      "examples": [
-        {
-          "date": "2026-06-16",
-          "article_id": 8,
-          "before": "《龙之信条2》在2024年首发时因其微交易而受到批评，发售当天就提供了超过21种微交易项目。这些项目的价格从0.99美元(约合人民币7元)到4.99美元(约合人民币34元)不等，包括售价2.99美元(约合人民币20元)的探险家露营套装、0.99美元(约合人民币7元)的牢狱钥匙（可让玩家越狱，但用一次就坏）、2.99美元(约合人民币20元)的传送基石（传送点标记），以及0.99美元(约合人民币7元)的复活石，能复活死者。",
-          "after": "《龙之信条2》在2024年首发时因其微交易而受到批评，发售当天就提供了超过21种微交易项目。这些项目的价格从0.99美元（约合人民币6.76元）到4.99美元（约合人民币33.8元）不等，包括售价2.99美元（约合人民币20.28元）的「露营套装」、0.99美元（约合人民币6.76元）的「监狱简易钥匙」（可让玩家越狱，但用一次就坏）、2.99美元的「返回的基石」（传送点标记），以及0.99美元的复活石，能复活死者。"
-        },
-        {
-          "date": "2026-06-23",
-          "article_id": 39,
-          "before": "1049美元(约合人民币7112元)",
-          "after": "1049美元（约合人民币7112元）"
-        },
-        {
-          "date": "2026-06-23",
-          "article_id": 42,
-          "before": "1799美元(约合人民币1万元)",
-          "after": "1799美元（约合12187元人民币）"
-        },
-        {
-          "date": "2026-06-24",
-          "article_id": 14,
-          "before": "1049??",
-          "after": "1049????????7123??"
-        }
-      ],
-      "feedback": [
-        {
-          "week_id": "2026-W26",
-          "text": "采纳，进入长期规则。",
-          "classified_as": "confirmed",
-          "created_at": "2026-06-25T22:47:05+08:00"
-        }
-      ],
-      "created_at": "2026-06-17T10:11:25+08:00",
-      "last_seen": "2026-06-24",
-      "confidence": 0.91,
-      "latest_evidence_summary": "W26 反馈采纳该规则；6/25 的金额改动只作为格式证据，不计入实时汇率证据。"
-    },
-    {
-      "id": "remove_redundant_brand_wrappers",
-      "title": "标题避免重复品牌套壳",
-      "rule": "标题中已有品牌、平台或作品名时，避免再用重复的《品牌/平台》套壳写法；保留核心事件，让标题更自然。",
-      "category": "title",
-      "scope": "titles",
-      "status": "pending",
-      "days": [
-        "2026-06-21",
-        "2026-06-22",
-        "2026-06-23",
-        "2026-06-25",
-        "2026-06-26"
-      ],
-      "days_seen": 5,
-      "articles_seen": 2,
-      "contradictions": 0,
-      "examples": [
-        {
-          "date": "2026-06-23",
-          "article_id": 35,
-          "before": "《B社/贝塞斯达》陶德·霍华德：最近看过《漫威刀锋》，做得非常出色",
-          "after": "陶德·霍华德：最近看过《漫威刀锋战士》，做得非常出色"
-        }
-      ],
-      "feedback": [
-        {
-          "week_id": "2026-W26",
-          "text": "暂缓，继续观察。",
-          "classified_as": "pending",
-          "created_at": "2026-06-25T22:47:05+08:00"
-        }
-      ],
-      "created_at": "2026-06-22T21:49:02+08:00",
-      "last_seen": "2026-06-26",
-      "confidence": 0.86,
-      "latest_evidence_summary": "Additional 6/25-6/26 wrapper evidence exists, but W26 feedback held this broader rule for observation."
-    },
-    {
-      "id": "keep_person_names_latin",
-      "title": "无通行中文译名的人名保留拉丁字母",
-      "rule": "海外人物没有稳定通行中文译名时保留拉丁字母姓名，不自行音译；已有公认中文名时使用公认译名。",
-      "category": "names",
-      "scope": "all",
-      "status": "confirmed",
-      "days": [
-        "2026-06-08",
-        "2026-06-11",
-        "2026-06-24"
+        "2026-07-01"
       ],
       "days_seen": 3,
-      "articles_seen": 5,
-      "contradictions": 0,
-      "examples": [
-        {
-          "date": "2026-06-08",
-          "article_id": 16,
-          "before": "此前被问及Xbox独占是否会回归时，夏尔玛一直含糊其辞——但现在，很明显公司正在重拾这一理念，尽管未来具体规则仍不明朗。",
-          "after": "此前被问及Xbox独占是否会回归时，Sharma一直含糊其辞——但现在，很明显公司正在重拾这一理念，尽管未来具体规则仍不明朗。"
-        },
-        {
-          "date": "2026-06-11",
-          "article_id": 31,
-          "before": "据彭博社今日早些时候报道，Xbox CEOAsha Sharma已制定计划，在传出「重大」裁员和预算削减的消息之际「重置」业务。",
-          "after": "据彭博社今日早些时候报道，Xbox首席执行官Asha Sharma已制定计划，在传出「重大」裁员和预算削减的消息之际「重置」业务。"
-        },
-        {
-          "date": "2026-06-24",
-          "article_id": 3,
-          "before": "Mod??Speclizer",
-          "after": "Mod???Speclizer"
-        },
-        {
-          "date": "2026-06-24",
-          "article_id": 4,
-          "before": "Megan Everett?",
-          "after": "Megan Everett??"
-        },
-        {
-          "date": "2026-06-24",
-          "article_id": 37,
-          "before": "?Bungie????Liana Ruppert",
-          "after": "?Bungie????Liana Ruppert"
-        }
-      ],
-      "feedback": [
-        {
-          "week_id": "2026-W24",
-          "text": "采纳，进入长期规则。",
-          "classified_as": "confirmed",
-          "created_at": "2026-06-15T21:48:32+08:00"
-        }
-      ],
-      "created_at": "2026-06-12T21:51:19+08:00",
-      "last_seen": "2026-06-24",
-      "confidence": 0.86,
-      "latest_evidence_summary": "6/24 Speclizer?Megan Everett?Brett Gipson?Robert Brookes ????????"
-    },
-    {
-      "id": "inner_quote_single_marks",
-      "title": "中文引号内再引用用单引号",
-      "rule": "中文直引号内部再次出现短语、问题或强调词时，内层引用使用‘ ’，避免连续使用「」造成层级不清。",
-      "category": "punctuation",
-      "scope": "quoted_speech",
-      "status": "confirmed",
-      "days": [
-        "2026-06-23",
-        "2026-06-25"
-      ],
-      "days_seen": 2,
       "articles_seen": 3,
       "contradictions": 0,
       "examples": [
         {
-          "date": "2026-06-23",
-          "article_id": 43,
-          "before": "我想超越其他游戏达到的「恐怖」极限。",
-          "after": "我想超越其他游戏达到的‘恐怖’极限。"
-        },
-        {
-          "date": "2026-06-23",
-          "article_id": 44,
-          "before": "不会是「主角是谁？剧情是什么？」。",
-          "after": "不会是‘主角是谁？剧情是什么？’。"
+          "date": "2026-06-04",
+          "article_id": 25,
+          "before": "GTA",
+          "after": "GTA6",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
         },
         {
           "date": "2026-06-25",
-          "article_id": 1,
-          "before": "然后说『你们可以买这么多，行还是不行』。",
-          "after": "然后说‘你们可以买这么多，行还是不行’。"
-        }
-      ],
-      "feedback": [
+          "article_id": 29,
+          "before": "GTA",
+          "after": "GTA6",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        },
         {
-          "week_id": "2026-W26",
-          "text": "采纳，进入长期规则。",
-          "classified_as": "confirmed",
-          "created_at": "2026-06-25T22:47:05+08:00"
+          "date": "2026-07-01",
+          "article_id": 28,
+          "before": "GTA",
+          "after": "GTA6",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
         }
       ],
-      "created_at": "2026-06-23T21:48:32.060+08:00",
-      "last_seen": "2026-06-25",
-      "confidence": 0.82,
-      "latest_evidence_summary": "6/25 Valve 引语继续把直引语内部的二级引用改为中文单引号。"
+      "created_at": "2026-07-01T22:36:48+08:00",
+      "last_seen": "2026-07-01",
+      "confidence": 0.8,
+      "latest_evidence_summary": "英文标题开头专名与中文标题书名号对应。",
+      "candidate_payload": {
+        "en": "GTA",
+        "cn": "GTA6",
+        "cat": "terms",
+        "source": "user"
+      }
     },
     {
-      "id": "prefer_established_official_game_titles",
-      "title": "优先使用稳定官方或通行译名",
-      "rule": "游戏、影视、角色和系统名有稳定官方或通行中文译名时应统一使用；没有稳定译名时保留原文，不自行创造译名。",
+      "id": "dict_candidate_007_first_light_hitman_developer_io_inte_38098d5d577c",
+      "title": "词库候选：007 First Light, Hitman Developer IO Interactive → 007 初露锋芒",
+      "rule": "建议将「007 First Light, Hitman Developer IO Interactive」加入词库，译为「007 初露锋芒」。",
       "category": "dictionary",
-      "scope": "games|movies_tv",
-      "status": "pending",
-      "days": [
-        "2026-05-30",
-        "2026-06-24"
-      ],
-      "days_seen": 2,
-      "articles_seen": 3,
-      "contradictions": 0,
-      "examples": [
-        {
-          "date": "2026-06-24",
-          "article_id": 3,
-          "before": "??????2?",
-          "after": "?????? ????"
-        },
-        {
-          "date": "2026-06-24",
-          "article_id": 34,
-          "before": "?????2?",
-          "after": "?????2?"
-        },
-        {
-          "date": "2026-05-30",
-          "article_id": 18,
-          "before": "Bungie与旗下知名科幻射击游戏《命运2》的问题始于去年夏天的「命运之刃」资料片——据报道该资料片表现不佳。关停的决定据称是在「今年早些时候」做出的，因为他们最终决定不以「Destiny Infinity」的名义重新启动该系列。",
-          "after": "Bungie与旗下知名科幻射击游戏《命运2》的问题始于去年夏天的《宿命边缘》资料片——据报道该资料片表现不佳。关停的决定据称是在「今年早些时候」做出的，因为他们最终决定不以《命运 Infinity》的名义重新启动该系列。"
-        }
-      ],
-      "feedback": [],
-      "created_at": "2026-06-25T21:53:01+08:00",
-      "last_seen": "2026-06-24",
-      "confidence": 0.78,
-      "latest_evidence_summary": "Backfilled 5/30 Destiny edits favor established Chinese names for expansions and franchise titles."
-    },
-    {
-      "id": "subtitle_trim_generic_hook",
-      "title": "副标题保持短钩子，避免复述标题",
-      "rule": "副标题优先写成简短、有信息密度的钩子；不要机械复述标题，也不要堆泛泛而谈的背景。",
-      "category": "subtitle",
-      "scope": "subtitles",
-      "status": "confirmed",
-      "days": [
-        "2026-06-22"
-      ],
-      "days_seen": 1,
-      "articles_seen": 2,
-      "contradictions": 0,
-      "examples": [],
-      "feedback": [
-        {
-          "week_id": "2026-W26",
-          "text": "采纳，进入长期规则。",
-          "classified_as": "confirmed",
-          "created_at": "2026-06-25T22:47:05+08:00"
-        }
-      ],
-      "created_at": "2026-06-22T21:49:02+08:00",
-      "last_seen": "2026-06-22",
-      "confidence": 0.58,
-      "latest_evidence_summary": "6/22 多篇润色把重复或泛泛的副标题改短。"
-    },
-    {
-      "id": "numbered_franchise_titles",
-      "title": "系列作品标题补充直观编号",
-      "rule": "涉及系列作品、合集或续作时，可使用读者容易识别的编号写法，如 1&2、5、3+4；但不得新增原文没有的事实。",
-      "category": "title",
-      "scope": "franchise_titles",
-      "status": "pending",
-      "days": [
-        "2026-06-22"
-      ],
-      "days_seen": 1,
-      "articles_seen": 2,
-      "contradictions": 0,
-      "examples": [],
-      "feedback": [
-        {
-          "week_id": "2026-W26",
-          "text": "暂缓，继续观察。",
-          "classified_as": "pending",
-          "created_at": "2026-06-25T22:47:05+08:00"
-        }
-      ],
-      "created_at": "2026-06-22T21:49:02+08:00",
-      "last_seen": "2026-06-22",
-      "confidence": 0.7,
-      "latest_evidence_summary": "6/22 的标题润色倾向用更直观的系列编号表达。"
-    },
-    {
-      "id": "dedupe_currency_conversion",
-      "title": "金额换算去重",
-      "rule": "同一金额不要同时出现两套人民币换算或重复括号；保留一个准确、格式统一的中文换算。",
-      "category": "currency",
+      "type": "dictionary_candidate",
+      "dict_category": "terms",
       "scope": "all",
-      "status": "confirmed",
+      "status": "ready_for_review",
       "days": [
-        "2026-06-22"
+        "2026-07-01"
       ],
       "days_seen": 1,
       "articles_seen": 1,
       "contradictions": 0,
-      "examples": [],
-      "feedback": [
+      "examples": [
         {
-          "week_id": "2026-W26",
-          "text": "采纳，进入长期规则。",
-          "classified_as": "confirmed",
-          "created_at": "2026-06-25T22:47:05+08:00"
+          "date": "2026-07-01",
+          "article_id": 30,
+          "before": "007 First Light, Hitman Developer IO Interactive",
+          "after": "007 初露锋芒",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
         }
       ],
-      "created_at": "2026-06-22T21:49:02+08:00",
-      "last_seen": "2026-06-22",
-      "confidence": 0.9,
-      "latest_evidence_summary": "6/22 润色删除了重复人民币换算括号。"
+      "created_at": "2026-07-01T22:36:51+08:00",
+      "last_seen": "2026-07-01",
+      "confidence": 0.8,
+      "latest_evidence_summary": "英文标题开头专名与中文标题书名号对应。",
+      "candidate_payload": {
+        "en": "007 First Light, Hitman Developer IO Interactive",
+        "cn": "007 初露锋芒",
+        "cat": "terms",
+        "source": "user"
+      }
+    },
+    {
+      "id": "dict_candidate_ahead_of_sony_s_state_of_play_showcase_n_887427dc192f",
+      "title": "词库候选：Ahead of Sony's State of Play Showcase, New Data → 羊蹄山之魂",
+      "rule": "建议将「Ahead of Sony's State of Play Showcase, New Data」加入词库，译为「羊蹄山之魂」。",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "terms",
+      "scope": "all",
+      "status": "ready_for_review",
+      "days": [
+        "2026-06-03"
+      ],
+      "days_seen": 1,
+      "articles_seen": 1,
+      "contradictions": 0,
+      "examples": [
+        {
+          "date": "2026-06-03",
+          "article_id": 11,
+          "before": "Ahead of Sony's State of Play Showcase, New Data",
+          "after": "羊蹄山之魂",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "created_at": "2026-07-01T22:36:48+08:00",
+      "last_seen": "2026-06-03",
+      "confidence": 0.8,
+      "latest_evidence_summary": "英文标题开头专名与中文标题书名号对应。",
+      "candidate_payload": {
+        "en": "Ahead of Sony's State of Play Showcase, New Data",
+        "cn": "羊蹄山之魂",
+        "cat": "terms",
+        "source": "user"
+      }
+    },
+    {
+      "id": "dict_candidate_aquatic_e3f91c6131de",
+      "title": "词库候选：Aquatic → 动物园之星2",
+      "rule": "建议将「Aquatic」加入词库，译为「动物园之星2」。",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "games",
+      "scope": "all",
+      "status": "ready_for_review",
+      "days": [
+        "2026-05-29"
+      ],
+      "days_seen": 1,
+      "articles_seen": 1,
+      "contradictions": 0,
+      "examples": [
+        {
+          "date": "2026-05-29",
+          "article_id": 10,
+          "before": "Aquatic",
+          "after": "动物园之星2",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "created_at": "2026-07-01T22:36:47+08:00",
+      "last_seen": "2026-05-29",
+      "confidence": 0.8,
+      "latest_evidence_summary": "英文标题开头专名与中文标题书名号对应。",
+      "candidate_payload": {
+        "en": "Aquatic",
+        "cn": "动物园之星2",
+        "cat": "games",
+        "source": "user"
+      }
+    },
+    {
+      "id": "dict_candidate_ariel_lawrence_4cbe8126f49c",
+      "title": "词库候选：Ariel Lawrence → Ariel Lawrence",
+      "rule": "建议将「Ariel Lawrence」加入词库，译为「Ariel Lawrence」。",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "games",
+      "scope": "all",
+      "status": "ready_for_review",
+      "days": [
+        "2026-06-05"
+      ],
+      "days_seen": 1,
+      "articles_seen": 1,
+      "contradictions": 0,
+      "examples": [
+        {
+          "date": "2026-06-05",
+          "article_id": 9,
+          "before": "Ariel Lawrence",
+          "after": "Ariel Lawrence",
+          "evidence": "来自文章页未确认新词候选。"
+        }
+      ],
+      "created_at": "2026-07-01T22:36:49+08:00",
+      "last_seen": "2026-06-05",
+      "confidence": 0.8,
+      "latest_evidence_summary": "来自文章页未确认新词候选。",
+      "candidate_payload": {
+        "en": "Ariel Lawrence",
+        "cn": "Ariel Lawrence",
+        "cat": "games",
+        "source": "user"
+      }
+    },
+    {
+      "id": "dict_candidate_assassin_s_creed_co_creator_re_reveals_1_c3bc7998a00e",
+      "title": "词库候选：Assassin's Creed Co-Creator Re-Reveals 1666 Amsterdam → 刺客信条",
+      "rule": "建议将「Assassin's Creed Co-Creator Re-Reveals 1666 Amsterdam」加入词库，译为「刺客信条」。",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "games",
+      "scope": "all",
+      "status": "ready_for_review",
+      "days": [
+        "2026-06-06"
+      ],
+      "days_seen": 1,
+      "articles_seen": 1,
+      "contradictions": 0,
+      "examples": [
+        {
+          "date": "2026-06-06",
+          "article_id": 53,
+          "before": "Assassin's Creed Co-Creator Re-Reveals 1666 Amsterdam",
+          "after": "刺客信条",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "created_at": "2026-07-01T22:36:49+08:00",
+      "last_seen": "2026-06-06",
+      "confidence": 0.8,
+      "latest_evidence_summary": "英文标题开头专名与中文标题书名号对应。",
+      "candidate_payload": {
+        "en": "Assassin's Creed Co-Creator Re-Reveals 1666 Amsterdam",
+        "cn": "刺客信条",
+        "cat": "games",
+        "source": "user"
+      }
+    },
+    {
+      "id": "dict_candidate_atom_eve_a04a16ee5f01",
+      "title": "词库候选：Atom Eve → 原子夏娃",
+      "rule": "建议将「Atom Eve」加入词库，译为「原子夏娃」。",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "games",
+      "scope": "all",
+      "status": "ready_for_review",
+      "days": [
+        "2026-06-28"
+      ],
+      "days_seen": 1,
+      "articles_seen": 1,
+      "contradictions": 0,
+      "examples": [
+        {
+          "date": "2026-06-28",
+          "article_id": 11,
+          "before": "Atom Eve",
+          "after": "原子夏娃",
+          "evidence": "来自文章页未确认新词候选。"
+        }
+      ],
+      "created_at": "2026-06-30T22:38:19+08:00",
+      "last_seen": "2026-06-28",
+      "confidence": 0.8,
+      "latest_evidence_summary": "来自文章页未确认新词候选。",
+      "candidate_payload": {
+        "en": "Atom Eve",
+        "cn": "原子夏娃",
+        "cat": "games",
+        "source": "user"
+      }
+    },
+    {
+      "id": "dict_candidate_bank_balances_rolled_back_75c65b398a19",
+      "title": "词库候选：Bank Balances Rolled Back → 极限竞速：地平线6",
+      "rule": "建议将「Bank Balances Rolled Back」加入词库，译为「极限竞速：地平线6」。",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "games",
+      "scope": "all",
+      "status": "ready_for_review",
+      "days": [
+        "2026-06-17"
+      ],
+      "days_seen": 1,
+      "articles_seen": 1,
+      "contradictions": 0,
+      "examples": [
+        {
+          "date": "2026-06-17",
+          "article_id": 6,
+          "before": "Bank Balances Rolled Back",
+          "after": "极限竞速：地平线6",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "created_at": "2026-07-01T22:36:50+08:00",
+      "last_seen": "2026-06-17",
+      "confidence": 0.8,
+      "latest_evidence_summary": "英文标题开头专名与中文标题书名号对应。",
+      "candidate_payload": {
+        "en": "Bank Balances Rolled Back",
+        "cn": "极限竞速：地平线6",
+        "cat": "games",
+        "source": "user"
+      }
+    },
+    {
+      "id": "dict_candidate_blood_rain_dev_f82c6fec762b",
+      "title": "词库候选：Blood Rain Dev → 剑星：血雨",
+      "rule": "建议将「Blood Rain Dev」加入词库，译为「剑星：血雨」。",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "games",
+      "scope": "all",
+      "status": "ready_for_review",
+      "days": [
+        "2026-06-07"
+      ],
+      "days_seen": 1,
+      "articles_seen": 1,
+      "contradictions": 0,
+      "examples": [
+        {
+          "date": "2026-06-07",
+          "article_id": 15,
+          "before": "Blood Rain Dev",
+          "after": "剑星：血雨",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "created_at": "2026-07-01T22:36:49+08:00",
+      "last_seen": "2026-06-07",
+      "confidence": 0.8,
+      "latest_evidence_summary": "英文标题开头专名与中文标题书名号对应。",
+      "candidate_payload": {
+        "en": "Blood Rain Dev",
+        "cn": "剑星：血雨",
+        "cat": "games",
+        "source": "user"
+      }
+    },
+    {
+      "id": "dict_candidate_bluesky_0890d26b588c",
+      "title": "词库候选：Bluesky → Bluesky",
+      "rule": "建议将「Bluesky」加入词库，译为「Bluesky」。",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "terms",
+      "scope": "all",
+      "status": "ready_for_review",
+      "days": [
+        "2026-06-11"
+      ],
+      "days_seen": 1,
+      "articles_seen": 1,
+      "contradictions": 0,
+      "examples": [
+        {
+          "date": "2026-06-11",
+          "article_id": 11,
+          "before": "Bluesky",
+          "after": "Bluesky",
+          "evidence": "来自文章页未确认新词候选。"
+        }
+      ],
+      "created_at": "2026-07-01T22:36:50+08:00",
+      "last_seen": "2026-06-11",
+      "confidence": 0.8,
+      "latest_evidence_summary": "来自文章页未确认新词候选。",
+      "candidate_payload": {
+        "en": "Bluesky",
+        "cn": "Bluesky",
+        "cat": "terms",
+        "source": "user"
+      }
+    },
+    {
+      "id": "dict_candidate_call_a4cabed0475e",
+      "title": "词库候选：Call → 使命召唤：战区",
+      "rule": "建议将「Call」加入词库，译为「使命召唤：战区」。",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "games",
+      "scope": "all",
+      "status": "ready_for_review",
+      "days": [
+        "2026-05-29"
+      ],
+      "days_seen": 1,
+      "articles_seen": 1,
+      "contradictions": 0,
+      "examples": [
+        {
+          "date": "2026-05-29",
+          "article_id": 7,
+          "before": "Call",
+          "after": "使命召唤：战区",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "created_at": "2026-07-01T22:36:47+08:00",
+      "last_seen": "2026-05-29",
+      "confidence": 0.8,
+      "latest_evidence_summary": "英文标题开头专名与中文标题书名号对应。",
+      "candidate_payload": {
+        "en": "Call",
+        "cn": "使命召唤：战区",
+        "cat": "games",
+        "source": "user"
+      }
+    },
+    {
+      "id": "dict_candidate_capcom_explains_how_tifa_from_final_5d5336926bab",
+      "title": "词库候选：Capcom Explains How Tifa From Final → 街头霸王6",
+      "rule": "建议将「Capcom Explains How Tifa From Final」加入词库，译为「街头霸王6」。",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "games",
+      "scope": "all",
+      "status": "ready_for_review",
+      "days": [
+        "2026-06-11"
+      ],
+      "days_seen": 1,
+      "articles_seen": 1,
+      "contradictions": 0,
+      "examples": [
+        {
+          "date": "2026-06-11",
+          "article_id": 18,
+          "before": "Capcom Explains How Tifa From Final",
+          "after": "街头霸王6",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "created_at": "2026-07-01T22:36:50+08:00",
+      "last_seen": "2026-06-11",
+      "confidence": 0.8,
+      "latest_evidence_summary": "英文标题开头专名与中文标题书名号对应。",
+      "candidate_payload": {
+        "en": "Capcom Explains How Tifa From Final",
+        "cn": "街头霸王6",
+        "cat": "games",
+        "source": "user"
+      }
+    },
+    {
+      "id": "dict_candidate_christopher_nolan_02d3503e27b6",
+      "title": "词库候选：Christopher Nolan → 克里斯托弗·诺兰",
+      "rule": "建议将「Christopher Nolan」加入词库，译为「克里斯托弗·诺兰」。",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "people",
+      "scope": "all",
+      "status": "ready_for_review",
+      "days": [
+        "2026-06-29"
+      ],
+      "days_seen": 1,
+      "articles_seen": 1,
+      "contradictions": 0,
+      "examples": [
+        {
+          "date": "2026-06-29",
+          "article_id": 3,
+          "before": "Christopher Nolan",
+          "after": "克里斯托弗·诺兰",
+          "evidence": "英文标题人名与中文标题冒号前译名对应。"
+        }
+      ],
+      "created_at": "2026-06-30T08:23:16+08:00",
+      "last_seen": "2026-06-29",
+      "confidence": 0.8,
+      "latest_evidence_summary": "英文标题人名与中文标题冒号前译名对应。",
+      "candidate_payload": {
+        "en": "Christopher Nolan",
+        "cn": "克里斯托弗·诺兰",
+        "cat": "people",
+        "source": "user"
+      }
+    },
+    {
+      "id": "dict_candidate_christopher_nolan_s_the_odyssey_sparks_o_c2d4c7ca884a",
+      "title": "词库候选：Christopher Nolan's The Odyssey Sparks Online → 奥德赛",
+      "rule": "建议将「Christopher Nolan's The Odyssey Sparks Online」加入词库，译为「奥德赛」。",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "people",
+      "scope": "all",
+      "status": "ready_for_review",
+      "days": [
+        "2026-06-05"
+      ],
+      "days_seen": 1,
+      "articles_seen": 1,
+      "contradictions": 0,
+      "examples": [
+        {
+          "date": "2026-06-05",
+          "article_id": 34,
+          "before": "Christopher Nolan's The Odyssey Sparks Online",
+          "after": "奥德赛",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "created_at": "2026-07-01T22:36:49+08:00",
+      "last_seen": "2026-06-05",
+      "confidence": 0.8,
+      "latest_evidence_summary": "英文标题开头专名与中文标题书名号对应。",
+      "candidate_payload": {
+        "en": "Christopher Nolan's The Odyssey Sparks Online",
+        "cn": "奥德赛",
+        "cat": "people",
+        "source": "user"
+      }
+    },
+    {
+      "id": "dict_candidate_confirmed_spider_man_is_not_74eba4174ab9",
+      "title": "词库候选：Confirmed: Spider-Man Is NOT → 漫威金刚狼",
+      "rule": "建议将「Confirmed: Spider-Man Is NOT」加入词库，译为「漫威金刚狼」。",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "games",
+      "scope": "all",
+      "status": "ready_for_review",
+      "days": [
+        "2026-06-03"
+      ],
+      "days_seen": 1,
+      "articles_seen": 1,
+      "contradictions": 0,
+      "examples": [
+        {
+          "date": "2026-06-03",
+          "article_id": 18,
+          "before": "Confirmed: Spider-Man Is NOT",
+          "after": "漫威金刚狼",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "created_at": "2026-07-01T22:36:48+08:00",
+      "last_seen": "2026-06-03",
+      "confidence": 0.8,
+      "latest_evidence_summary": "英文标题开头专名与中文标题书名号对应。",
+      "candidate_payload": {
+        "en": "Confirmed: Spider-Man Is NOT",
+        "cn": "漫威金刚狼",
+        "cat": "games",
+        "source": "user"
+      }
+    },
+    {
+      "id": "dict_candidate_cory_barlog_0c35d52b47f2",
+      "title": "词库候选：Cory Barlog → Cory Barlog",
+      "rule": "建议将「Cory Barlog」加入词库，译为「Cory Barlog」。",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "games",
+      "scope": "all",
+      "status": "ready_for_review",
+      "days": [
+        "2026-06-05"
+      ],
+      "days_seen": 1,
+      "articles_seen": 1,
+      "contradictions": 0,
+      "examples": [
+        {
+          "date": "2026-06-05",
+          "article_id": 9,
+          "before": "Cory Barlog",
+          "after": "Cory Barlog",
+          "evidence": "来自文章页未确认新词候选。"
+        }
+      ],
+      "created_at": "2026-07-01T22:36:49+08:00",
+      "last_seen": "2026-06-05",
+      "confidence": 0.8,
+      "latest_evidence_summary": "来自文章页未确认新词候选。",
+      "candidate_payload": {
+        "en": "Cory Barlog",
+        "cn": "Cory Barlog",
+        "cat": "games",
+        "source": "user"
+      }
+    },
+    {
+      "id": "dict_candidate_cyberpunk_edgerunners_2_b769903811b5",
+      "title": "词库候选：Cyberpunk: Edgerunners 2 → 赛博朋克：边缘行者2",
+      "rule": "建议将「Cyberpunk: Edgerunners 2」加入词库，译为「赛博朋克：边缘行者2」。",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "movies_tv",
+      "scope": "all",
+      "status": "ready_for_review",
+      "days": [
+        "2026-06-29"
+      ],
+      "days_seen": 1,
+      "articles_seen": 1,
+      "contradictions": 0,
+      "examples": [
+        {
+          "date": "2026-06-29",
+          "article_id": 1,
+          "before": "Cyberpunk: Edgerunners 2",
+          "after": "赛博朋克：边缘行者2",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "created_at": "2026-06-30T08:23:16+08:00",
+      "last_seen": "2026-06-29",
+      "confidence": 0.8,
+      "latest_evidence_summary": "英文标题开头专名与中文标题书名号对应。",
+      "candidate_payload": {
+        "en": "Cyberpunk: Edgerunners 2",
+        "cn": "赛博朋克：边缘行者2",
+        "cat": "movies_tv",
+        "source": "user"
+      }
+    },
+    {
+      "id": "dict_candidate_dead_or_alive_6_last_round_f65c2c58f0ee",
+      "title": "词库候选：Dead or Alive 6: Last Round → 死或生6：Last Round",
+      "rule": "建议将「Dead or Alive 6: Last Round」加入词库，译为「死或生6：Last Round」。",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "games",
+      "scope": "all",
+      "status": "ready_for_review",
+      "days": [
+        "2026-06-30"
+      ],
+      "days_seen": 1,
+      "articles_seen": 1,
+      "contradictions": 0,
+      "examples": [
+        {
+          "date": "2026-06-30",
+          "article_id": 7,
+          "before": "Dead or Alive 6: Last Round",
+          "after": "死或生6：Last Round",
+          "evidence": "用户将标题和正文中的副标题从直译改为保留官方英文副标题 Last Round。"
+        }
+      ],
+      "created_at": "2026-06-30T22:40:29+08:00",
+      "last_seen": "2026-06-30",
+      "confidence": 0.8,
+      "latest_evidence_summary": "用户将标题和正文中的副标题从直译改为保留官方英文副标题 Last Round。",
+      "candidate_payload": {
+        "en": "Dead or Alive 6: Last Round",
+        "cn": "死或生6：Last Round",
+        "cat": "games",
+        "source": "user"
+      }
+    },
+    {
+      "id": "dict_candidate_death_stranding_movie_targeting_2027_sho_8d9383d8f663",
+      "title": "词库候选：Death Stranding Movie Targeting 2027 Shoot → 死亡搁浅",
+      "rule": "建议将「Death Stranding Movie Targeting 2027 Shoot」加入词库，译为「死亡搁浅」。",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "movies_tv",
+      "scope": "all",
+      "status": "ready_for_review",
+      "days": [
+        "2026-06-18"
+      ],
+      "days_seen": 1,
+      "articles_seen": 1,
+      "contradictions": 0,
+      "examples": [
+        {
+          "date": "2026-06-18",
+          "article_id": 3,
+          "before": "Death Stranding Movie Targeting 2027 Shoot",
+          "after": "死亡搁浅",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "created_at": "2026-07-01T22:36:50+08:00",
+      "last_seen": "2026-06-18",
+      "confidence": 0.8,
+      "latest_evidence_summary": "英文标题开头专名与中文标题书名号对应。",
+      "candidate_payload": {
+        "en": "Death Stranding Movie Targeting 2027 Shoot",
+        "cn": "死亡搁浅",
+        "cat": "movies_tv",
+        "source": "user"
+      }
+    },
+    {
+      "id": "dict_candidate_deltarune_chapter_5ceff3914620",
+      "title": "词库候选：Deltarune Chapter → 三角符文",
+      "rule": "建议将「Deltarune Chapter」加入词库，译为「三角符文」。",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "games",
+      "scope": "all",
+      "status": "ready_for_review",
+      "days": [
+        "2026-06-26"
+      ],
+      "days_seen": 1,
+      "articles_seen": 1,
+      "contradictions": 0,
+      "examples": [
+        {
+          "date": "2026-06-26",
+          "article_id": 29,
+          "before": "Deltarune Chapter",
+          "after": "三角符文",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "created_at": "2026-07-01T22:36:50+08:00",
+      "last_seen": "2026-06-26",
+      "confidence": 0.8,
+      "latest_evidence_summary": "英文标题开头专名与中文标题书名号对应。",
+      "candidate_payload": {
+        "en": "Deltarune Chapter",
+        "cn": "三角符文",
+        "cat": "games",
+        "source": "user"
+      }
+    },
+    {
+      "id": "dict_candidate_developer_67381769e019",
+      "title": "词库候选：Developer → 平行人生",
+      "rule": "建议将「Developer」加入词库，译为「平行人生」。",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "games",
+      "scope": "all",
+      "status": "ready_for_review",
+      "days": [
+        "2026-05-29"
+      ],
+      "days_seen": 1,
+      "articles_seen": 1,
+      "contradictions": 0,
+      "examples": [
+        {
+          "date": "2026-05-29",
+          "article_id": 13,
+          "before": "Developer",
+          "after": "平行人生",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "created_at": "2026-07-01T22:36:47+08:00",
+      "last_seen": "2026-05-29",
+      "confidence": 0.8,
+      "latest_evidence_summary": "英文标题开头专名与中文标题书名号对应。",
+      "candidate_payload": {
+        "en": "Developer",
+        "cn": "平行人生",
+        "cat": "games",
+        "source": "user"
+      }
+    },
+    {
+      "id": "dict_candidate_doctor_who_showrunner_says_bbc_will_aa21a8e45ad6",
+      "title": "词库候选：Doctor Who Showrunner Says BBC Will → 神秘博士",
+      "rule": "建议将「Doctor Who Showrunner Says BBC Will」加入词库，译为「神秘博士」。",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "terms",
+      "scope": "all",
+      "status": "ready_for_review",
+      "days": [
+        "2026-06-02"
+      ],
+      "days_seen": 1,
+      "articles_seen": 1,
+      "contradictions": 0,
+      "examples": [
+        {
+          "date": "2026-06-02",
+          "article_id": 5,
+          "before": "Doctor Who Showrunner Says BBC Will",
+          "after": "神秘博士",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "created_at": "2026-07-01T22:36:48+08:00",
+      "last_seen": "2026-06-02",
+      "confidence": 0.8,
+      "latest_evidence_summary": "英文标题开头专名与中文标题书名号对应。",
+      "candidate_payload": {
+        "en": "Doctor Who Showrunner Says BBC Will",
+        "cn": "神秘博士",
+        "cat": "terms",
+        "source": "user"
+      }
+    },
+    {
+      "id": "dict_candidate_double_fine_responds_ec15bd5f59a0",
+      "title": "词库候选：Double Fine Responds → 意航员",
+      "rule": "建议将「Double Fine Responds」加入词库，译为「意航员」。",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "terms",
+      "scope": "all",
+      "status": "ready_for_review",
+      "days": [
+        "2026-06-17"
+      ],
+      "days_seen": 1,
+      "articles_seen": 1,
+      "contradictions": 0,
+      "examples": [
+        {
+          "date": "2026-06-17",
+          "article_id": 10,
+          "before": "Double Fine Responds",
+          "after": "意航员",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "created_at": "2026-07-01T22:36:50+08:00",
+      "last_seen": "2026-06-17",
+      "confidence": 0.8,
+      "latest_evidence_summary": "英文标题开头专名与中文标题书名号对应。",
+      "candidate_payload": {
+        "en": "Double Fine Responds",
+        "cn": "意航员",
+        "cat": "terms",
+        "source": "user"
+      }
+    },
+    {
+      "id": "dict_candidate_edward_catway_45d7e812ef7f",
+      "title": "词库候选：Edward Catway → 爱德华喵喵",
+      "rule": "建议将「Edward Catway」加入词库，译为「爱德华喵喵」。",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "games",
+      "scope": "all",
+      "status": "ready_for_review",
+      "days": [
+        "2026-06-18"
+      ],
+      "days_seen": 1,
+      "articles_seen": 1,
+      "contradictions": 0,
+      "examples": [
+        {
+          "date": "2026-06-18",
+          "article_id": 22,
+          "before": "Edward Catway",
+          "after": "爱德华喵喵",
+          "evidence": "来自文章页未确认新词候选。"
+        }
+      ],
+      "created_at": "2026-07-01T22:36:50+08:00",
+      "last_seen": "2026-06-18",
+      "confidence": 0.8,
+      "latest_evidence_summary": "来自文章页未确认新词候选。",
+      "candidate_payload": {
+        "en": "Edward Catway",
+        "cn": "爱德华喵喵",
+        "cat": "games",
+        "source": "user"
+      }
+    },
+    {
+      "id": "dict_candidate_elden_ring_tarnished_edition_has_378a631ddf10",
+      "title": "词库候选：Elden Ring Tarnished Edition Has → 艾尔登法环 褪色版",
+      "rule": "建议将「Elden Ring Tarnished Edition Has」加入词库，译为「艾尔登法环 褪色版」。",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "games",
+      "scope": "all",
+      "status": "ready_for_review",
+      "days": [
+        "2026-06-05"
+      ],
+      "days_seen": 1,
+      "articles_seen": 1,
+      "contradictions": 0,
+      "examples": [
+        {
+          "date": "2026-06-05",
+          "article_id": 17,
+          "before": "Elden Ring Tarnished Edition Has",
+          "after": "艾尔登法环 褪色版",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "created_at": "2026-07-01T22:36:49+08:00",
+      "last_seen": "2026-06-05",
+      "confidence": 0.8,
+      "latest_evidence_summary": "英文标题开头专名与中文标题书名号对应。",
+      "candidate_payload": {
+        "en": "Elden Ring Tarnished Edition Has",
+        "cn": "艾尔登法环 褪色版",
+        "cat": "games",
+        "source": "user"
+      }
+    },
+    {
+      "id": "dict_candidate_entire_luna_abyss_development_team_laid_b45da8d3c2d9",
+      "title": "词库候选：Entire Luna Abyss Development Team Laid → 月之深渊",
+      "rule": "建议将「Entire Luna Abyss Development Team Laid」加入词库，译为「月之深渊」。",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "terms",
+      "scope": "all",
+      "status": "ready_for_review",
+      "days": [
+        "2026-06-18"
+      ],
+      "days_seen": 1,
+      "articles_seen": 1,
+      "contradictions": 0,
+      "examples": [
+        {
+          "date": "2026-06-18",
+          "article_id": 4,
+          "before": "Entire Luna Abyss Development Team Laid",
+          "after": "月之深渊",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "created_at": "2026-07-01T22:36:50+08:00",
+      "last_seen": "2026-06-18",
+      "confidence": 0.8,
+      "latest_evidence_summary": "英文标题开头专名与中文标题书名号对应。",
+      "candidate_payload": {
+        "en": "Entire Luna Abyss Development Team Laid",
+        "cn": "月之深渊",
+        "cat": "terms",
+        "source": "user"
+      }
+    },
+    {
+      "id": "dict_candidate_everything_can_t_be_a_live_service_forme_06148e53ea7f",
+      "title": "词库候选：Everything Can't Be a Live-Service': Former Dragon Age Boss → 龙腾世纪",
+      "rule": "建议将「Everything Can't Be a Live-Service': Former Dragon Age Boss」加入词库，译为「龙腾世纪」。",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "terms",
+      "scope": "all",
+      "status": "ready_for_review",
+      "days": [
+        "2026-06-02"
+      ],
+      "days_seen": 1,
+      "articles_seen": 1,
+      "contradictions": 0,
+      "examples": [
+        {
+          "date": "2026-06-02",
+          "article_id": 4,
+          "before": "Everything Can't Be a Live-Service': Former Dragon Age Boss",
+          "after": "龙腾世纪",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "created_at": "2026-07-01T22:36:48+08:00",
+      "last_seen": "2026-06-02",
+      "confidence": 0.8,
+      "latest_evidence_summary": "英文标题开头专名与中文标题书名号对应。",
+      "candidate_payload": {
+        "en": "Everything Can't Be a Live-Service': Former Dragon Age Boss",
+        "cn": "龙腾世纪",
+        "cat": "terms",
+        "source": "user"
+      }
+    },
+    {
+      "id": "dict_candidate_fallout_new_vegas_director_says_amazon_s_c4e9cdd4e72c",
+      "title": "词库候选：Fallout: New Vegas Director Says Amazon's → 辐射：新维加斯",
+      "rule": "建议将「Fallout: New Vegas Director Says Amazon's」加入词库，译为「辐射：新维加斯」。",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "movies_tv",
+      "scope": "all",
+      "status": "ready_for_review",
+      "days": [
+        "2026-06-30"
+      ],
+      "days_seen": 1,
+      "articles_seen": 1,
+      "contradictions": 0,
+      "examples": [
+        {
+          "date": "2026-06-30",
+          "article_id": 8,
+          "before": "Fallout: New Vegas Director Says Amazon's",
+          "after": "辐射：新维加斯",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "created_at": "2026-07-01T22:36:51+08:00",
+      "last_seen": "2026-06-30",
+      "confidence": 0.8,
+      "latest_evidence_summary": "英文标题开头专名与中文标题书名号对应。",
+      "candidate_payload": {
+        "en": "Fallout: New Vegas Director Says Amazon's",
+        "cn": "辐射：新维加斯",
+        "cat": "movies_tv",
+        "source": "user"
+      }
+    },
+    {
+      "id": "dict_candidate_fallout_new_vegas_361180538b91",
+      "title": "词库候选：Fallout: New Vegas → 辐射：新维加斯",
+      "rule": "建议将「Fallout: New Vegas」加入词库，译为「辐射：新维加斯」。",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "games",
+      "scope": "all",
+      "status": "ready_for_review",
+      "days": [
+        "2026-06-30"
+      ],
+      "days_seen": 1,
+      "articles_seen": 1,
+      "contradictions": 0,
+      "examples": [
+        {
+          "date": "2026-06-30",
+          "article_id": 8,
+          "before": "Fallout: New Vegas",
+          "after": "辐射：新维加斯",
+          "evidence": "英文标题专名 Fallout: New Vegas 与用户润色标题《辐射：新维加斯》稳定对应。"
+        }
+      ],
+      "created_at": "2026-06-30T22:40:29+08:00",
+      "last_seen": "2026-06-30",
+      "confidence": 0.8,
+      "latest_evidence_summary": "英文标题专名 Fallout: New Vegas 与用户润色标题《辐射：新维加斯》稳定对应。",
+      "candidate_payload": {
+        "en": "Fallout: New Vegas",
+        "cn": "辐射：新维加斯",
+        "cat": "games",
+        "source": "user"
+      }
+    },
+    {
+      "id": "dict_candidate_final_fantasy_vii_remake_part_1ae4ec005d1a",
+      "title": "词库候选：Final Fantasy VII Remake Part → 最终幻想7 重制版",
+      "rule": "建议将「Final Fantasy VII Remake Part」加入词库，译为「最终幻想7 重制版」。",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "games",
+      "scope": "all",
+      "status": "ready_for_review",
+      "days": [
+        "2026-06-06"
+      ],
+      "days_seen": 1,
+      "articles_seen": 1,
+      "contradictions": 0,
+      "examples": [
+        {
+          "date": "2026-06-06",
+          "article_id": 43,
+          "before": "Final Fantasy VII Remake Part",
+          "after": "最终幻想7 重制版",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "created_at": "2026-07-01T22:36:49+08:00",
+      "last_seen": "2026-06-06",
+      "confidence": 0.8,
+      "latest_evidence_summary": "英文标题开头专名与中文标题书名号对应。",
+      "candidate_payload": {
+        "en": "Final Fantasy VII Remake Part",
+        "cn": "最终幻想7 重制版",
+        "cat": "games",
+        "source": "user"
+      }
+    },
+    {
+      "id": "dict_candidate_former_dragon_age_boss_ced1f127dc8b",
+      "title": "词库候选：Former Dragon Age Boss → 龙腾世纪",
+      "rule": "建议将「Former Dragon Age Boss」加入词库，译为「龙腾世纪」。",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "terms",
+      "scope": "all",
+      "status": "ready_for_review",
+      "days": [
+        "2026-06-02"
+      ],
+      "days_seen": 1,
+      "articles_seen": 1,
+      "contradictions": 0,
+      "examples": [
+        {
+          "date": "2026-06-02",
+          "article_id": 4,
+          "before": "Former Dragon Age Boss",
+          "after": "龙腾世纪",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "created_at": "2026-07-01T22:36:48+08:00",
+      "last_seen": "2026-06-02",
+      "confidence": 0.8,
+      "latest_evidence_summary": "英文标题开头专名与中文标题书名号对应。",
+      "candidate_payload": {
+        "en": "Former Dragon Age Boss",
+        "cn": "龙腾世纪",
+        "cat": "terms",
+        "source": "user"
+      }
+    },
+    {
+      "id": "dict_candidate_fortnite_begins_reselling_old_battle_pas_829172bd2d7a",
+      "title": "词库候选：Fortnite Begins Reselling Old Battle Pass → 堡垒之夜",
+      "rule": "建议将「Fortnite Begins Reselling Old Battle Pass」加入词库，译为「堡垒之夜」。",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "games",
+      "scope": "all",
+      "status": "ready_for_review",
+      "days": [
+        "2026-06-25"
+      ],
+      "days_seen": 1,
+      "articles_seen": 1,
+      "contradictions": 0,
+      "examples": [
+        {
+          "date": "2026-06-25",
+          "article_id": 18,
+          "before": "Fortnite Begins Reselling Old Battle Pass",
+          "after": "堡垒之夜",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "created_at": "2026-07-01T22:36:50+08:00",
+      "last_seen": "2026-06-25",
+      "confidence": 0.8,
+      "latest_evidence_summary": "英文标题开头专名与中文标题书名号对应。",
+      "candidate_payload": {
+        "en": "Fortnite Begins Reselling Old Battle Pass",
+        "cn": "堡垒之夜",
+        "cat": "games",
+        "source": "user"
+      }
+    },
+    {
+      "id": "dict_candidate_fortnite_behind_the_scenes_video_e9e5192e0c30",
+      "title": "词库候选：Fortnite Behind the Scenes Video → 堡垒之夜",
+      "rule": "建议将「Fortnite Behind the Scenes Video」加入词库，译为「堡垒之夜」。",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "terms",
+      "scope": "all",
+      "status": "ready_for_review",
+      "days": [
+        "2026-06-17"
+      ],
+      "days_seen": 1,
+      "articles_seen": 1,
+      "contradictions": 0,
+      "examples": [
+        {
+          "date": "2026-06-17",
+          "article_id": 11,
+          "before": "Fortnite Behind the Scenes Video",
+          "after": "堡垒之夜",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "created_at": "2026-07-01T22:36:50+08:00",
+      "last_seen": "2026-06-17",
+      "confidence": 0.8,
+      "latest_evidence_summary": "英文标题开头专名与中文标题书名号对应。",
+      "candidate_payload": {
+        "en": "Fortnite Behind the Scenes Video",
+        "cn": "堡垒之夜",
+        "cat": "terms",
+        "source": "user"
+      }
+    },
+    {
+      "id": "dict_candidate_friend_to_all_b27292f307c1",
+      "title": "词库候选：Friend to All → 全员好友",
+      "rule": "建议将「Friend to All」加入词库，译为「全员好友」。",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "games",
+      "scope": "all",
+      "status": "ready_for_review",
+      "days": [
+        "2026-06-18"
+      ],
+      "days_seen": 1,
+      "articles_seen": 1,
+      "contradictions": 0,
+      "examples": [
+        {
+          "date": "2026-06-18",
+          "article_id": 22,
+          "before": "Friend to All",
+          "after": "全员好友",
+          "evidence": "来自文章页未确认新词候选。"
+        }
+      ],
+      "created_at": "2026-07-01T22:36:50+08:00",
+      "last_seen": "2026-06-18",
+      "confidence": 0.8,
+      "latest_evidence_summary": "来自文章页未确认新词候选。",
+      "candidate_payload": {
+        "en": "Friend to All",
+        "cn": "全员好友",
+        "cat": "games",
+        "source": "user"
+      }
+    },
+    {
+      "id": "dict_candidate_god_of_war_laufey_eeaf876695f1",
+      "title": "词库候选：God of War Laufey → 战神：劳菲",
+      "rule": "建议将「God of War Laufey」加入词库，译为「战神：劳菲」。",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "games",
+      "scope": "all",
+      "status": "ready_for_review",
+      "days": [
+        "2026-06-05"
+      ],
+      "days_seen": 1,
+      "articles_seen": 1,
+      "contradictions": 0,
+      "examples": [
+        {
+          "date": "2026-06-05",
+          "article_id": 9,
+          "before": "God of War Laufey",
+          "after": "战神：劳菲",
+          "evidence": "来自文章页未确认新词候选。"
+        }
+      ],
+      "created_at": "2026-07-01T22:36:49+08:00",
+      "last_seen": "2026-06-05",
+      "confidence": 0.8,
+      "latest_evidence_summary": "来自文章页未确认新词候选。",
+      "candidate_payload": {
+        "en": "God of War Laufey",
+        "cn": "战神：劳菲",
+        "cat": "games",
+        "source": "user"
+      }
+    },
+    {
+      "id": "dict_candidate_god_of_war_trilogy_remake_59d342600304",
+      "title": "词库候选：God of War Trilogy Remake → 战神三部曲重制版",
+      "rule": "建议将「God of War Trilogy Remake」加入词库，译为「战神三部曲重制版」。",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "games",
+      "scope": "all",
+      "status": "ready_for_review",
+      "days": [
+        "2026-06-05"
+      ],
+      "days_seen": 1,
+      "articles_seen": 1,
+      "contradictions": 0,
+      "examples": [
+        {
+          "date": "2026-06-05",
+          "article_id": 9,
+          "before": "God of War Trilogy Remake",
+          "after": "战神三部曲重制版",
+          "evidence": "来自文章页未确认新词候选。"
+        }
+      ],
+      "created_at": "2026-07-01T22:36:49+08:00",
+      "last_seen": "2026-06-05",
+      "confidence": 0.8,
+      "latest_evidence_summary": "来自文章页未确认新词候选。",
+      "candidate_payload": {
+        "en": "God of War Trilogy Remake",
+        "cn": "战神三部曲重制版",
+        "cat": "games",
+        "source": "user"
+      }
+    },
+    {
+      "id": "dict_candidate_god_1d5c3e53e6cc",
+      "title": "词库候选：God → 战神：劳菲",
+      "rule": "建议将「God」加入词库，译为「战神：劳菲」。",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "games",
+      "scope": "all",
+      "status": "ready_for_review",
+      "days": [
+        "2026-06-03"
+      ],
+      "days_seen": 1,
+      "articles_seen": 1,
+      "contradictions": 0,
+      "examples": [
+        {
+          "date": "2026-06-03",
+          "article_id": 25,
+          "before": "God",
+          "after": "战神：劳菲",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "created_at": "2026-07-01T22:36:48+08:00",
+      "last_seen": "2026-06-03",
+      "confidence": 0.8,
+      "latest_evidence_summary": "英文标题开头专名与中文标题书名号对应。",
+      "candidate_payload": {
+        "en": "God",
+        "cn": "战神：劳菲",
+        "cat": "games",
+        "source": "user"
+      }
+    },
+    {
+      "id": "dict_candidate_halo_campaign_evolved_collector_s_editio_10aa765b758b",
+      "title": "词库候选：Halo: Campaign Evolved Collector's Edition Includes → 光环：战役进化",
+      "rule": "建议将「Halo: Campaign Evolved Collector's Edition Includes」加入词库，译为「光环：战役进化」。",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "games",
+      "scope": "all",
+      "status": "ready_for_review",
+      "days": [
+        "2026-06-10"
+      ],
+      "days_seen": 1,
+      "articles_seen": 1,
+      "contradictions": 0,
+      "examples": [
+        {
+          "date": "2026-06-10",
+          "article_id": 7,
+          "before": "Halo: Campaign Evolved Collector's Edition Includes",
+          "after": "光环：战役进化",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "created_at": "2026-07-01T22:36:49+08:00",
+      "last_seen": "2026-06-10",
+      "confidence": 0.8,
+      "latest_evidence_summary": "英文标题开头专名与中文标题书名号对应。",
+      "candidate_payload": {
+        "en": "Halo: Campaign Evolved Collector's Edition Includes",
+        "cn": "光环：战役进化",
+        "cat": "games",
+        "source": "user"
+      }
+    },
+    {
+      "id": "dict_candidate_harry_potter_tv_series_casts_peter_0dd0c500ece1",
+      "title": "词库候选：Harry Potter TV Series Casts Peter → 哈利·波特",
+      "rule": "建议将「Harry Potter TV Series Casts Peter」加入词库，译为「哈利·波特」。",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "people",
+      "scope": "all",
+      "status": "ready_for_review",
+      "days": [
+        "2026-06-17"
+      ],
+      "days_seen": 1,
+      "articles_seen": 1,
+      "contradictions": 0,
+      "examples": [
+        {
+          "date": "2026-06-17",
+          "article_id": 3,
+          "before": "Harry Potter TV Series Casts Peter",
+          "after": "哈利·波特",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "created_at": "2026-07-01T22:36:50+08:00",
+      "last_seen": "2026-06-17",
+      "confidence": 0.8,
+      "latest_evidence_summary": "英文标题开头专名与中文标题书名号对应。",
+      "candidate_payload": {
+        "en": "Harry Potter TV Series Casts Peter",
+        "cn": "哈利·波特",
+        "cat": "people",
+        "source": "user"
+      }
+    },
+    {
+      "id": "dict_candidate_hell_let_loose_vietnam_has_been_b02f18e29bd2",
+      "title": "词库候选：Hell Let Loose: Vietnam Has Been → 人间地狱：越南",
+      "rule": "建议将「Hell Let Loose: Vietnam Has Been」加入词库，译为「人间地狱：越南」。",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "games",
+      "scope": "all",
+      "status": "ready_for_review",
+      "days": [
+        "2026-06-04"
+      ],
+      "days_seen": 1,
+      "articles_seen": 1,
+      "contradictions": 0,
+      "examples": [
+        {
+          "date": "2026-06-04",
+          "article_id": 7,
+          "before": "Hell Let Loose: Vietnam Has Been",
+          "after": "人间地狱：越南",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "created_at": "2026-07-01T22:36:48+08:00",
+      "last_seen": "2026-06-04",
+      "confidence": 0.8,
+      "latest_evidence_summary": "英文标题开头专名与中文标题书名号对应。",
+      "candidate_payload": {
+        "en": "Hell Let Loose: Vietnam Has Been",
+        "cn": "人间地狱：越南",
+        "cat": "games",
+        "source": "user"
+      }
     }
   ],
   "instructions_for_user": [

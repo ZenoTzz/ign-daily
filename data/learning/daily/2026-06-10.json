@@ -3,7 +3,7 @@
   "model": "codex",
   "source_hash": "2d2680079a98c8cd954df48ff750aaf0b1257a44",
   "signal_count": 9,
-  "candidate_count": 6,
+  "candidate_count": 10,
   "signals": [
     {
       "type": "user_polish",
@@ -552,15 +552,92 @@
         }
       ],
       "contradiction": ""
+    },
+    {
+      "id": "dict_candidate_this_is_not_true_xbox_0994ff727318",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：This Is Not True' — Xbox → 战争机器：事变日",
+      "rule": "建议将「This Is Not True' — Xbox」加入词库，译为「战争机器：事变日」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-06-10",
+          "article_id": 6,
+          "before": "This Is Not True' — Xbox",
+          "after": "战争机器：事变日",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id": "dict_candidate_halo_campaign_evolved_collector_s_editio_10aa765b758b",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：Halo: Campaign Evolved Collector's Edition Includes → 光环：战役进化",
+      "rule": "建议将「Halo: Campaign Evolved Collector's Edition Includes」加入词库，译为「光环：战役进化」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-06-10",
+          "article_id": 7,
+          "before": "Halo: Campaign Evolved Collector's Edition Includes",
+          "after": "光环：战役进化",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id": "dict_candidate_pok_b0db9be78a86",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：Pok → 宝可梦 Pokopia",
+      "rule": "建议将「Pok」加入词库，译为「宝可梦 Pokopia」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-06-10",
+          "article_id": 21,
+          "before": "Pok",
+          "after": "宝可梦 Pokopia",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id": "dict_candidate_the_wolf_among_us_630b3705d74e",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：The Wolf Among Us → 与狼同行2",
+      "rule": "建议将「The Wolf Among Us」加入词库，译为「与狼同行2」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-06-10",
+          "article_id": 24,
+          "before": "The Wolf Among Us",
+          "after": "与狼同行2",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "contradiction": ""
     }
   ],
   "notes": [
     "Codex补跑腾讯文档润色，只提取跨篇可复用规律；单篇特例不直接升级为长期规则。",
     "未学习汇率数值、国区售价、额外上映信息及“今日/昨晚”等时效性补充，避免脱离原文或随时间失效。",
     "所有候选仍需在学习页确认后才能进入STYLE_PROFILE.md。",
-    "已处理2026-W24学习页反馈：明确采纳的规则进入长期配置，暂缓项继续观察；未重复提取候选。"
+    "已处理2026-W24学习页反馈：明确采纳的规则进入长期配置，暂缓项继续观察；未重复提取候选。",
+    "Added source+polished dictionary candidates for GPT/Tencent workflow."
   ],
-  "updated_at": "2026-06-15T21:48:32+08:00",
+  "updated_at": "2026-07-01T22:36:49+08:00",
   "observer": "codex",
   "status": "observed"
 }

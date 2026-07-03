@@ -5,7 +5,7 @@
   "status": "observed",
   "source_hash": "a26b8fcf37fbbc1956861ae68cf1582e2c39cc15",
   "signal_count": 5,
-  "candidate_count": 2,
+  "candidate_count": 7,
   "signals": [
     {
       "type": "user_polish",
@@ -282,11 +282,107 @@
         }
       ],
       "contradiction": ""
+    },
+    {
+      "id": "dict_candidate_no_rest_acd92c5646ba",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：No Rest → 恶意不息",
+      "rule": "建议将「No Rest」加入词库，译为「恶意不息」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-06-06",
+          "article_id": 4,
+          "before": "No Rest",
+          "after": "恶意不息",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id": "dict_candidate_teenage_mutant_ninja_turtles_the_last_870c1d7d68f1",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：Teenage Mutant Ninja Turtles: The Last → 忍者神龟：最后的浪人",
+      "rule": "建议将「Teenage Mutant Ninja Turtles: The Last」加入词库，译为「忍者神龟：最后的浪人」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-06-06",
+          "article_id": 37,
+          "before": "Teenage Mutant Ninja Turtles: The Last",
+          "after": "忍者神龟：最后的浪人",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id": "dict_candidate_final_fantasy_vii_remake_part_1ae4ec005d1a",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：Final Fantasy VII Remake Part → 最终幻想7 重制版",
+      "rule": "建议将「Final Fantasy VII Remake Part」加入词库，译为「最终幻想7 重制版」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-06-06",
+          "article_id": 43,
+          "before": "Final Fantasy VII Remake Part",
+          "after": "最终幻想7 重制版",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id": "dict_candidate_medieval_chronicles_wants_9486344bcd81",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：Medieval: Chronicles Wants → 编年史：中世纪",
+      "rule": "建议将「Medieval: Chronicles Wants」加入词库，译为「编年史：中世纪」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-06-06",
+          "article_id": 45,
+          "before": "Medieval: Chronicles Wants",
+          "after": "编年史：中世纪",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id": "dict_candidate_assassin_s_creed_co_creator_re_reveals_1_c3bc7998a00e",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：Assassin's Creed Co-Creator Re-Reveals 1666 Amsterdam → 刺客信条",
+      "rule": "建议将「Assassin's Creed Co-Creator Re-Reveals 1666 Amsterdam」加入词库，译为「刺客信条」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-06-06",
+          "article_id": 53,
+          "before": "Assassin's Creed Co-Creator Re-Reveals 1666 Amsterdam",
+          "after": "刺客信条",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "contradiction": ""
     }
   ],
   "notes": [
     "Only Tencent Docs imported polished drafts were used.",
-    "Single-article specifics were kept as observe-level evidence and not written to STYLE_PROFILE.md."
+    "Single-article specifics were kept as observe-level evidence and not written to STYLE_PROFILE.md.",
+    "Added source+polished dictionary candidates for GPT/Tencent workflow."
   ],
-  "updated_at": "2026-06-22T21:49:02+08:00"
+  "updated_at": "2026-07-01T22:36:49+08:00"
 }

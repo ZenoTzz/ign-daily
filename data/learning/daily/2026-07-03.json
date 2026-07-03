@@ -1,0 +1,33 @@
+{
+  "date": "2026-07-03",
+  "observer": "codex",
+  "model": "codex",
+  "status": "observed",
+  "signals": [],
+  "candidates": [
+    {
+      "id": "dict_candidate_capcom_keeps_winning_37bbd5d87279",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：Capcom Keeps Winning → 鬼武者：剑之道",
+      "rule": "建议将「Capcom Keeps Winning」加入词库，译为「鬼武者：剑之道」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-07-03",
+          "article_id": 1,
+          "before": "Capcom Keeps Winning",
+          "after": "鬼武者：剑之道",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "contradiction": ""
+    }
+  ],
+  "notes": [
+    "Added source+polished dictionary candidates for GPT/Tencent workflow."
+  ],
+  "candidate_count": 1,
+  "updated_at": "2026-07-03T22:37:21+08:00"
+}

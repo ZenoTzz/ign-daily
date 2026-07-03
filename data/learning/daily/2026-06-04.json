@@ -5,7 +5,7 @@
   "status": "observed",
   "source_hash": "86f6d4f1e809374f898a5b93c28f1996445a04d5",
   "signal_count": 7,
-  "candidate_count": 5,
+  "candidate_count": 9,
   "signals": [
     {
       "type": "user_polish",
@@ -425,12 +425,89 @@
         }
       ],
       "contradiction": ""
+    },
+    {
+      "id": "dict_candidate_hell_let_loose_vietnam_has_been_b02f18e29bd2",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：Hell Let Loose: Vietnam Has Been → 人间地狱：越南",
+      "rule": "建议将「Hell Let Loose: Vietnam Has Been」加入词库，译为「人间地狱：越南」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-06-04",
+          "article_id": 7,
+          "before": "Hell Let Loose: Vietnam Has Been",
+          "after": "人间地狱：越南",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id": "dict_candidate_naughty_dog_no_show_29ddf86ec553",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：Naughty Dog No-Show → 星际：异端先知",
+      "rule": "建议将「Naughty Dog No-Show」加入词库，译为「星际：异端先知」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-06-04",
+          "article_id": 9,
+          "before": "Naughty Dog No-Show",
+          "after": "星际：异端先知",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id": "dict_candidate_gta_82a2cf34af76",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：GTA → GTA6",
+      "rule": "建议将「GTA」加入词库，译为「GTA6」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-06-04",
+          "article_id": 25,
+          "before": "GTA",
+          "after": "GTA6",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id": "dict_candidate_preorders_are_live_3b562a7d5228",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：Preorders Are Live → 控制：共振",
+      "rule": "建议将「Preorders Are Live」加入词库，译为「控制：共振」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-06-04",
+          "article_id": 38,
+          "before": "Preorders Are Live",
+          "after": "控制：共振",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "contradiction": ""
     }
   ],
   "notes": [
     "Codex补跑腾讯文档润色，只提取跨篇可复用规律；单篇特例不直接升级为长期规则。",
     "未学习汇率数值、国区售价、额外上映信息及“今日/昨晚”等时效性补充，避免脱离原文或随时间失效。",
-    "所有候选仍需在学习页确认后才能进入STYLE_PROFILE.md。"
+    "所有候选仍需在学习页确认后才能进入STYLE_PROFILE.md。",
+    "Added source+polished dictionary candidates for GPT/Tencent workflow."
   ],
-  "updated_at": "2026-06-12T21:51:19+08:00"
+  "updated_at": "2026-07-01T22:36:48+08:00"
 }

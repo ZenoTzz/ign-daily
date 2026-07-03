@@ -1,0 +1,426 @@
+{
+  "date": "2026-06-22",
+  "generated_at": "2026-07-01T22:36:50.552825",
+  "total_articles": 4,
+  "dictionary_candidate_count": 2,
+  "dictionary_candidates": [
+    {
+      "id": "dict_candidate_super_yooka_laylee_kart_00bf15c57af5",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "games",
+      "en": "Super Yooka-Laylee Kart",
+      "cn": "Super Yooka-Laylee Kart",
+      "title": "词库候选：Super Yooka-Laylee Kart → Super Yooka-Laylee Kart",
+      "rule": "建议将「Super Yooka-Laylee Kart」加入词库，译为「Super Yooka-Laylee Kart」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "date": "2026-06-22",
+      "article_id": 4,
+      "article_title": "《Super Yooka-Laylee Kart》前瞻：前Rare成员续写《迪迪刚赛车》传奇",
+      "url": "https://www.ign.com/articles/super-yooka-laylee-kart-preview-ex-rare-devs-take-aim-at-reviving-the-spirit-of-diddy-kong-racing",
+      "evidence": "英文标题开头专名与中文标题书名号对应。"
+    },
+    {
+      "id": "dict_candidate_sesame_street_movie_fc47f18314af",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "people",
+      "en": "Sesame Street Movie",
+      "cn": "芝麻街",
+      "title": "词库候选：Sesame Street Movie → 芝麻街",
+      "rule": "建议将「Sesame Street Movie」加入词库，译为「芝麻街」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "date": "2026-06-22",
+      "article_id": 5,
+      "article_title": "Netflix据称赢得《芝麻街》电影改编权",
+      "url": "https://www.ign.com/articles/sesame-street-movie-in-the-works-at-netflix-following-bidding-war",
+      "evidence": "英文标题开头专名与中文标题书名号对应。"
+    }
+  ],
+  "learning_evidence_updated": true,
+  "daily_learning_updated": true,
+  "articles": [
+    {
+      "id": 2,
+      "cn_title": "《复仇者联盟5：毁灭之日》泄漏片段被下架，但已传遍社交网络",
+      "en_title": "Avengers: Doomsday 'Leak' Pulled Offline Just as it Spreads Across Social Media",
+      "url": "https://www.ign.com/articles/avengers-doomsday-leak-pulled-offline-just-as-it-spreads-across-social-media",
+      "category": "影视资讯",
+      "has_translation": true,
+      "title_diff": {
+        "mine": "《复仇者联盟：毁灭之日》泄漏片段被下架，但已传遍社交网络",
+        "yours": "《复仇者联盟5：毁灭之日》泄漏片段被下架，但已传遍社交网络"
+      },
+      "subtitle_diff": null,
+      "body_diffs": [
+        {
+          "index": 0,
+          "mine": "一段似乎是《复仇者联盟：毁灭之日》中X战警片段的短视频已被下架，但在此之前已在社交媒体上疯传。",
+          "yours": "一段似乎是《复仇者联盟5：毁灭之日》中X战警片段的短视频已被下架，但在此之前已在社交媒体上疯传。",
+          "my_sentences": [
+            "一段似乎是《复仇者联盟：毁灭之日》中X战警片段的短视频已被下架，但在此之前已在社交媒体上疯传。"
+          ],
+          "your_sentences": [
+            "一段似乎是《复仇者联盟5：毁灭之日》中X战警片段的短视频已被下架，但在此之前已在社交媒体上疯传。"
+          ]
+        },
+        {
+          "index": 1,
+          "mine": "对《复仇者联盟：毁灭之日》的漫长等待让漫威电影宇宙（MCU）粉丝急切渴望新消息。因此，当几周前网上出现一段似乎是该片未完成场景的低像素视频时，他们立刻抓住了它，即使它只展示了X战警与复仇者联手对抗毁灭博士的极其模糊的画面。",
+          "yours": "对《复仇者联盟5：毁灭之日》的漫长等待让漫威电影宇宙（MCU）粉丝急切渴望新消息。因此，当几周前网上出现一段似乎是该片未完成场景的低像素视频时，他们立刻抓住了它，即使它只展示了X战警与复仇者联手对抗毁灭博士的极其模糊的画面。",
+          "my_sentences": [
+            "对《复仇者联盟：毁灭之日》的漫长等待让漫威电影宇宙（MCU）粉丝急切渴望新消息。",
+            "因此，当几周前网上出现一段似乎是该片未完成场景的低像素视频时，他们立刻抓住了它，即使它只展示了X战警与复仇者联手对抗毁灭博士的极其模糊的画面。"
+          ],
+          "your_sentences": [
+            "对《复仇者联盟5：毁灭之日》的漫长等待让漫威电影宇宙（MCU）粉丝急切渴望新消息。",
+            "因此，当几周前网上出现一段似乎是该片未完成场景的低像素视频时，他们立刻抓住了它，即使它只展示了X战警与复仇者联手对抗毁灭博士的极其模糊的画面。"
+          ]
+        },
+        {
+          "index": 2,
+          "mine": "那段视频随后未受管制，在X/Twitter和Reddit上疯传，各种理论层出不穷。然而，周末社交媒体上开始出现一个更清晰的版本。这一次，就在粉丝们刚看清新版毁灭博士以及夜行者、野兽、镭射眼、史蒂夫·罗杰斯、牌皇、尚气等角色的回归时，这段视频迅速被下架。",
+          "yours": "那段视频随后未受管制，在X和Reddit上疯传，各种理论层出不穷。然而，周末社交媒体上开始出现一个更清晰的版本。这一次，就在粉丝们刚看清新版毁灭博士以及夜行者、野兽、镭射眼、史蒂夫·罗杰斯、牌皇、尚气等角色的回归时，这段视频迅速被下架。",
+          "my_sentences": [
+            "那段视频随后未受管制，在X/Twitter和Reddit上疯传，各种理论层出不穷。",
+            "然而，周末社交媒体上开始出现一个更清晰的版本。",
+            "这一次，就在粉丝们刚看清新版毁灭博士以及夜行者、野兽、镭射眼、史蒂夫·罗杰斯、牌皇、尚气等角色的回归时，这段视频迅速被下架。"
+          ],
+          "your_sentences": [
+            "那段视频随后未受管制，在X和Reddit上疯传，各种理论层出不穷。",
+            "然而，周末社交媒体上开始出现一个更清晰的版本。",
+            "这一次，就在粉丝们刚看清新版毁灭博士以及夜行者、野兽、镭射眼、史蒂夫·罗杰斯、牌皇、尚气等角色的回归时，这段视频迅速被下架。"
+          ]
+        },
+        {
+          "index": 3,
+          "mine": "数十条原本包含这段长于一分钟视频的帖子，现在只显示一条内容已被移除的通知。上面写着：「此媒体因版权所有者举报而被禁用。」这表明漫威影业可能已察觉到这可能是来自《复仇者联盟：毁灭之日》的真实片段。",
+          "yours": "数十条原本包含这段长于一分钟视频的帖子，现在只显示一条内容已被移除的通知。上面写着：「此媒体因版权所有者举报而被禁用。」这表明漫威影业可能已察觉到这可能是来自《复仇者联盟5：毁灭之日》的真实片段。",
+          "my_sentences": [
+            "数十条原本包含这段长于一分钟视频的帖子，现在只显示一条内容已被移除的通知。",
+            "上面写着：「此媒体因版权所有者举报而被禁用。",
+            "」这表明漫威影业可能已察觉到这可能是来自《复仇者联盟：毁灭之日》的真实片段。"
+          ],
+          "your_sentences": [
+            "数十条原本包含这段长于一分钟视频的帖子，现在只显示一条内容已被移除的通知。",
+            "上面写着：「此媒体因版权所有者举报而被禁用。",
+            "」这表明漫威影业可能已察觉到这可能是来自《复仇者联盟5：毁灭之日》的真实片段。"
+          ]
+        },
+        {
+          "index": 4,
+          "mine": "IGN在视频被下架前看过，但你并没错过多少。无论这段据称的泄漏内容有多少超级英雄或MCU彩蛋，它展示的都是未完成的特效镜头，看起来可能是一个动作戏很重的场景。画面并不好看，远非导演罗素兄弟可能为最终成品所设想的模样——前提是它甚至是真的。",
+          "yours": "IGN在视频被下架前看过，可以说你并没错过多少。无论这段据称的泄漏内容有多少超级英雄或MCU彩蛋，它展示的都是未完成的特效镜头，看起来可能是一个动作戏很重的场景。画面并不好看，远非导演罗素兄弟可能为最终成品所设想的模样——前提是它甚至是真的。",
+          "my_sentences": [
+            "IGN在视频被下架前看过，但你并没错过多少。",
+            "无论这段据称的泄漏内容有多少超级英雄或MCU彩蛋，它展示的都是未完成的特效镜头，看起来可能是一个动作戏很重的场景。",
+            "画面并不好看，远非导演罗素兄弟可能为最终成品所设想的模样——前提是它甚至是真的。"
+          ],
+          "your_sentences": [
+            "IGN在视频被下架前看过，可以说你并没错过多少。",
+            "无论这段据称的泄漏内容有多少超级英雄或MCU彩蛋，它展示的都是未完成的特效镜头，看起来可能是一个动作戏很重的场景。",
+            "画面并不好看，远非导演罗素兄弟可能为最终成品所设想的模样——前提是它甚至是真的。"
+          ]
+        },
+        {
+          "index": 5,
+          "mine": "在AI时代，很难说哪些泄漏是真的，尤其是对于《复仇者联盟：毁灭之日》这样备受瞩目的电影。有些人利用新技术故意误导网友，而另一些人则只是粉丝试图想象那些受欢迎的角色在大银幕上重聚时的样子。",
+          "yours": "在AI时代，很难说哪些泄漏是真的，尤其是对于《复仇者联盟5：毁灭之日》这样备受瞩目的电影。有些人利用新技术故意误导网友，而另一些人则只是粉丝试图想象那些受欢迎的角色在大银幕上重聚时的样子。",
+          "my_sentences": [
+            "在AI时代，很难说哪些泄漏是真的，尤其是对于《复仇者联盟：毁灭之日》这样备受瞩目的电影。",
+            "有些人利用新技术故意误导网友，而另一些人则只是粉丝试图想象那些受欢迎的角色在大银幕上重聚时的样子。"
+          ],
+          "your_sentences": [
+            "在AI时代，很难说哪些泄漏是真的，尤其是对于《复仇者联盟5：毁灭之日》这样备受瞩目的电影。",
+            "有些人利用新技术故意误导网友，而另一些人则只是粉丝试图想象那些受欢迎的角色在大银幕上重聚时的样子。"
+          ]
+        },
+        {
+          "index": 6,
+          "mine": "在《复仇者联盟：毁灭之日》12月首映之前，我们仍面临不确定性，即使这次最新的泄漏片段被下架似乎表明漫威进行了干预。泄漏的视频在网上存在的时间足够长，粉丝们可以复制并截图，所以未来几个月如果你遇到剧透，不要惊讶。",
+          "yours": "在《复仇者联盟5：毁灭之日》首映之前，我们仍面临不确定性，即使这次最新的泄漏片段被下架似乎表明漫威进行了干预。泄漏的视频在网上存在的时间足够长，粉丝们可以复制并截图，所以未来几个月如果你遇到剧透，不要惊讶。",
+          "my_sentences": [
+            "在《复仇者联盟：毁灭之日》12月首映之前，我们仍面临不确定性，即使这次最新的泄漏片段被下架似乎表明漫威进行了干预。",
+            "泄漏的视频在网上存在的时间足够长，粉丝们可以复制并截图，所以未来几个月如果你遇到剧透，不要惊讶。"
+          ],
+          "your_sentences": [
+            "在《复仇者联盟5：毁灭之日》首映之前，我们仍面临不确定性，即使这次最新的泄漏片段被下架似乎表明漫威进行了干预。",
+            "泄漏的视频在网上存在的时间足够长，粉丝们可以复制并截图，所以未来几个月如果你遇到剧透，不要惊讶。"
+          ]
+        },
+        {
+          "index": 7,
+          "mine": "无论如何，我们肯定早该看到《复仇者联盟：毁灭之日》的预告片了。该片定于2026年12月18日首映，但截至目前，公众看到的唯一（官方）预告片几乎没有透露其实际故事和角色。在等待更确切消息的同时，你可以看看汤姆·赫兰德如何极力避免未来漫威项目的剧透，还可以看看饰演琴·葛蕾的Famke Janssen对未能出演新的《复仇者联盟》电影有何说法。",
+          "yours": "无论如何，我们肯定早该看到《复仇者联盟5：毁灭之日》的预告片了。该片定于2026年12月18日首映，中国大陆地区尚未定档。但截至目前，公众看到的唯一（官方）预告几乎没有透露其实际故事和角色。",
+          "my_sentences": [
+            "无论如何，我们肯定早该看到《复仇者联盟：毁灭之日》的预告片了。",
+            "该片定于2026年12月18日首映，但截至目前，公众看到的唯一（官方）预告片几乎没有透露其实际故事和角色。",
+            "在等待更确切消息的同时，你可以看看汤姆·赫兰德如何极力避免未来漫威项目的剧透，还可以看看饰演琴·葛蕾的Famke Janssen对未能出演新的《复仇者联盟》电影有何说法。"
+          ],
+          "your_sentences": [
+            "无论如何，我们肯定早该看到《复仇者联盟5：毁灭之日》的预告片了。",
+            "该片定于2026年12月18日首映，中国大陆地区尚未定档。",
+            "但截至目前，公众看到的唯一（官方）预告几乎没有透露其实际故事和角色。"
+          ]
+        }
+      ],
+      "dictionary_candidates": []
+    },
+    {
+      "id": 4,
+      "cn_title": "《Super Yooka-Laylee Kart》前瞻：前Rare成员续写《迪迪刚赛车》传奇",
+      "en_title": "Super Yooka-Laylee Kart Preview: Ex-Rare Devs Take Aim at Reviving the Spirit of Diddy Kong Racing",
+      "url": "https://www.ign.com/articles/super-yooka-laylee-kart-preview-ex-rare-devs-take-aim-at-reviving-the-spirit-of-diddy-kong-racing",
+      "category": "游戏新闻",
+      "has_translation": true,
+      "title_diff": null,
+      "subtitle_diff": null,
+      "body_diffs": [
+        {
+          "index": 4,
+          "mine": "除了试玩早期版本，我们还有幸采访了开发团队成员、曾经来自Rare工作室的Gavin Price（Playtonic创始人兼《Super Yooka-Laylee Kart》工作室/创意总监）以及游戏首席软件工程师Chris Sutherland。两人参与过的作品包括一些史上最佳的平台游戏，如《大金刚国度1&2》、《Grabbed By the Ghoulies》、《班卓熊》系列，当然还有《Yooka-Laylee》系列！",
+          "yours": "除了试玩早期版本，我们还有幸采访了开发团队成员、曾经来自Rare工作室的Gavin Price（Playtonic创始人兼《Super Yooka-Laylee Kart》工作室/创意总监）以及游戏首席软件工程师Chris Sutherland。两人参与过的作品包括一些史上最佳的平台游戏，如《咚奇刚国度1&2》、《Grabbed By the Ghoulies》、《班卓熊》系列，当然还有《Yooka-Laylee》系列！",
+          "my_sentences": [
+            "除了试玩早期版本，我们还有幸采访了开发团队成员、曾经来自Rare工作室的Gavin Price（Playtonic创始人兼《Super Yooka-Laylee Kart》工作室/创意总监）以及游戏首席软件工程师Chris Sutherland。",
+            "两人参与过的作品包括一些史上最佳的平台游戏，如《大金刚国度1&2》、《Grabbed By the Ghoulies》、《班卓熊》系列，当然还有《Yooka-Laylee》系列！"
+          ],
+          "your_sentences": [
+            "除了试玩早期版本，我们还有幸采访了开发团队成员、曾经来自Rare工作室的Gavin Price（Playtonic创始人兼《Super Yooka-Laylee Kart》工作室/创意总监）以及游戏首席软件工程师Chris Sutherland。",
+            "两人参与过的作品包括一些史上最佳的平台游戏，如《咚奇刚国度1&2》、《Grabbed By the Ghoulies》、《班卓熊》系列，当然还有《Yooka-Laylee》系列！"
+          ]
+        },
+        {
+          "index": 25,
+          "mine": "Gavin Price：我们非常想要一个属于自己的醒目艺术风格，能反映出愤怒与复仇机制、格斗游戏式的特殊动作和输入，并能配合紧凑、高速卡丁车赛道的感受。同时还要有极高的辨识度，与其他卡丁车竞速游戏区别开来。",
+          "yours": "Gavin Price：我们非常想要一个属于自己的醒目艺术风格，能反映出愤怒与复仇机制、格斗游戏式必杀技与搓招操作，并能配合紧凑、高速卡丁车赛道的感受。同时还要有极高的辨识度，与其他卡丁车竞速游戏区别开来。",
+          "my_sentences": [
+            "Gavin Price：我们非常想要一个属于自己的醒目艺术风格，能反映出愤怒与复仇机制、格斗游戏式的特殊动作和输入，并能配合紧凑、高速卡丁车赛道的感受。",
+            "同时还要有极高的辨识度，与其他卡丁车竞速游戏区别开来。"
+          ],
+          "your_sentences": [
+            "Gavin Price：我们非常想要一个属于自己的醒目艺术风格，能反映出愤怒与复仇机制、格斗游戏式必杀技与搓招操作，并能配合紧凑、高速卡丁车赛道的感受。",
+            "同时还要有极高的辨识度，与其他卡丁车竞速游戏区别开来。"
+          ]
+        },
+        {
+          "index": 30,
+          "mine": "Gavin Price：Dr Quack和Vendi，原因很简单：我们已经在纠结他们到底怎么能物理上操控卡丁车上花了太多时间……！",
+          "yours": "IGN：你们最喜欢的角色是谁？",
+          "my_sentences": [
+            "Gavin Price：Dr Quack和Vendi，原因很简单：我们已经在纠结他们到底怎么能物理上操控卡丁车上花了太多时间……！"
+          ],
+          "your_sentences": [
+            "IGN：你们最喜欢的角色是谁？"
+          ]
+        },
+        {
+          "index": 31,
+          "mine": "Chris Sutherland：我的首选车手是Yooka，但这有一部分开发特定的原因！Yooka是最早动起来并驾驶的角色之一，所以我们在开发过程中有一段时间默认角色一直是他，因此他对我来说最为熟悉。而且他的语音是我配的——这也是Laylee是我第二喜欢的原因！",
+          "yours": "Gavin Price：Dr Quack和Vendi，单纯因为我们已经浪费了太多时间去思考一个问题：他们到底是怎么在物理层面上成功驾驶卡丁车的……！",
+          "my_sentences": [
+            "Chris Sutherland：我的首选车手是Yooka，但这有一部分开发特定的原因！",
+            "Yooka是最早动起来并驾驶的角色之一，所以我们在开发过程中有一段时间默认角色一直是他，因此他对我来说最为熟悉。",
+            "而且他的语音是我配的——这也是Laylee是我第二喜欢的原因！"
+          ],
+          "your_sentences": [
+            "Gavin Price：Dr Quack和Vendi，单纯因为我们已经浪费了太多时间去思考一个问题：他们到底是怎么在物理层面上成功驾驶卡丁车的……！"
+          ]
+        },
+        {
+          "index": 32,
+          "mine": "",
+          "yours": "Chris Sutherland：我的首选车手是Yooka，但这有一部分开发特定的原因！Yooka是最早动起来并驾驶的角色之一，所以我们在开发过程中有一段时间默认角色一直是他，因此他对我来说最为熟悉。",
+          "my_sentences": [],
+          "your_sentences": [
+            "Chris Sutherland：我的首选车手是Yooka，但这有一部分开发特定的原因！",
+            "Yooka是最早动起来并驾驶的角色之一，所以我们在开发过程中有一段时间默认角色一直是他，因此他对我来说最为熟悉。"
+          ]
+        }
+      ],
+      "dictionary_candidates": [
+        {
+          "id": "dict_candidate_super_yooka_laylee_kart_00bf15c57af5",
+          "category": "dictionary",
+          "type": "dictionary_candidate",
+          "dict_category": "games",
+          "en": "Super Yooka-Laylee Kart",
+          "cn": "Super Yooka-Laylee Kart",
+          "title": "词库候选：Super Yooka-Laylee Kart → Super Yooka-Laylee Kart",
+          "rule": "建议将「Super Yooka-Laylee Kart」加入词库，译为「Super Yooka-Laylee Kart」。",
+          "status": "ready_for_review",
+          "confidence": "high",
+          "date": "2026-06-22",
+          "article_id": 4,
+          "article_title": "《Super Yooka-Laylee Kart》前瞻：前Rare成员续写《迪迪刚赛车》传奇",
+          "url": "https://www.ign.com/articles/super-yooka-laylee-kart-preview-ex-rare-devs-take-aim-at-reviving-the-spirit-of-diddy-kong-racing",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "cn_title": "Netflix据称赢得《芝麻街》电影改编权",
+      "en_title": "Sesame Street Movie in the Works at Netflix Following Bidding War",
+      "url": "https://www.ign.com/articles/sesame-street-movie-in-the-works-at-netflix-following-bidding-war",
+      "category": "影视资讯",
+      "has_translation": true,
+      "title_diff": null,
+      "subtitle_diff": {
+        "mine": "Netflix拿下童年回忆",
+        "yours": "童年回忆"
+      },
+      "body_diffs": [
+        {
+          "index": 4,
+          "mine": "在环球影业退出前，它曾承诺《瞬息全宇宙》的导演关家永和丹尼尔·施纳特会以制片人身份加盟。而《乐高大电影》的主创Phil Lord和Chris Miller据称也会以制片人身份参与环球的交易。不过，《好莱坞报道者》的消息源称，这两组搭档都从未被安排担任导演。",
+          "yours": "在环球影业退出前，它曾承诺《瞬息全宇宙》的导演关家永和Daniel Scheinert会以制片人身份加盟。而《乐高大电影》的主创Phil Lord和Chris Miller据称也会以制片人身份参与环球的交易。不过，《好莱坞报道者》的消息源称，这两组搭档都从未被安排担任导演。",
+          "my_sentences": [
+            "在环球影业退出前，它曾承诺《瞬息全宇宙》的导演关家永和丹尼尔·施纳特会以制片人身份加盟。",
+            "而《乐高大电影》的主创Phil Lord和Chris Miller据称也会以制片人身份参与环球的交易。",
+            "不过，《好莱坞报道者》的消息源称，这两组搭档都从未被安排担任导演。"
+          ],
+          "your_sentences": [
+            "在环球影业退出前，它曾承诺《瞬息全宇宙》的导演关家永和Daniel Scheinert会以制片人身份加盟。",
+            "而《乐高大电影》的主创Phil Lord和Chris Miller据称也会以制片人身份参与环球的交易。",
+            "不过，《好莱坞报道者》的消息源称，这两组搭档都从未被安排担任导演。"
+          ]
+        }
+      ],
+      "dictionary_candidates": [
+        {
+          "id": "dict_candidate_sesame_street_movie_fc47f18314af",
+          "category": "dictionary",
+          "type": "dictionary_candidate",
+          "dict_category": "people",
+          "en": "Sesame Street Movie",
+          "cn": "芝麻街",
+          "title": "词库候选：Sesame Street Movie → 芝麻街",
+          "rule": "建议将「Sesame Street Movie」加入词库，译为「芝麻街」。",
+          "status": "ready_for_review",
+          "confidence": "high",
+          "date": "2026-06-22",
+          "article_id": 5,
+          "article_title": "Netflix据称赢得《芝麻街》电影改编权",
+          "url": "https://www.ign.com/articles/sesame-street-movie-in-the-works-at-netflix-following-bidding-war",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "cn_title": "《使命召唤：黑色行动1&2》的定价引发讨论，玩家担忧高价移植",
+      "en_title": "Call of Duty: Black Ops 1 and 2 Listings Have Fans Fearing Pricey PlayStation Ports",
+      "url": "https://www.ign.com/articles/call-of-duty-black-ops-1-and-2-listings-have-fans-fearing-pricey-playstation-ports",
+      "category": "游戏新闻",
+      "has_translation": true,
+      "title_diff": {
+        "mine": "《PlayStation》《使命召唤：黑色行动》移植版标价40美元(约合人民币271元)(约271元)引不满",
+        "yours": "《使命召唤：黑色行动1&2》的定价引发讨论，玩家担忧高价移植"
+      },
+      "subtitle_diff": {
+        "mine": "粉丝炸了",
+        "yours": "冷饭也贵"
+      },
+      "body_diffs": [
+        {
+          "index": 0,
+          "mine": "在微软将《使命召唤：黑色行动1》和《黑色行动2》定价为40美元(约合人民币271元)且不含DLC后，PlayStation玩家开始担心最坏的情况。",
+          "yours": "在微软将《使命召唤：黑色行动1&2》定价为40美元（约合人民币271元）且不含DLC后，PlayStation玩家开始担心最坏的情况。",
+          "my_sentences": [
+            "在微软将《使命召唤：黑色行动1》和《黑色行动2》定价为40美元(约合人民币271元)且不含DLC后，PlayStation玩家开始担心最坏的情况。"
+          ],
+          "your_sentences": [
+            "在微软将《使命召唤：黑色行动1&2》定价为40美元（约合人民币271元）且不含DLC后，PlayStation玩家开始担心最坏的情况。"
+          ]
+        },
+        {
+          "index": 1,
+          "mine": "据CharlieIntel报道，PC和Xbox商城最近更新了DLC价格，同时将这两款2010年和2012年的《使命召唤》游戏锁定在每款39.99美元(约合人民币271元)。得益于微软主机广泛提供向后兼容支持，《黑色行动1》和《黑色行动2》在Xbox上已经可以游玩多时，真正的变化在于单个DLC——现在似乎从15美元(约合人民币102元)降到了10美元(约合人民币68元)，而季票价格也从50美元(约合人民币339元)降到了30美元(约合人民币203元)。",
+          "yours": "据CharlieIntel报道，PC和Xbox商城最近更新了游戏的DLC价格，同时将这两款2010年和2012年的《使命召唤》游戏锁定在每款39.99美元（约合人民币271元）。得益于微软主机广泛提供向后兼容支持，《黑色行动1》和《黑色行动2》在Xbox上已经可以游玩多时，真正的变化在于单个DLC——现在似乎从15美元（约合人民币102元）降到了10美元（约合人民币68元），而季票价格也从50美元（约合人民币339元）降到了30美元（约合人民币203元）。",
+          "my_sentences": [
+            "据CharlieIntel报道，PC和Xbox商城最近更新了DLC价格，同时将这两款2010年和2012年的《使命召唤》游戏锁定在每款39.99美元(约合人民币271元)。",
+            "得益于微软主机广泛提供向后兼容支持，《黑色行动1》和《黑色行动2》在Xbox上已经可以游玩多时，真正的变化在于单个DLC——现在似乎从15美元(约合人民币102元)降到了10美元(约合人民币68元)，而季票价格也从50美元(约合人民币339元)降到了30美元(约合人民币203元)。"
+          ],
+          "your_sentences": [
+            "据CharlieIntel报道，PC和Xbox商城最近更新了游戏的DLC价格，同时将这两款2010年和2012年的《使命召唤》游戏锁定在每款39.99美元（约合人民币271元）。",
+            "得益于微软主机广泛提供向后兼容支持，《黑色行动1》和《黑色行动2》在Xbox上已经可以游玩多时，真正的变化在于单个DLC——现在似乎从15美元（约合人民币102元）降到了10美元（约合人民币68元），而季票价格也从50美元（约合人民币339元）降到了30美元（约合人民币203元）。"
+          ]
+        },
+        {
+          "index": 3,
+          "mine": "「不含DLC还要对奥巴马第一任期时的游戏收40美元(约合人民币271元)，这吃相也太难看了。」一名X/Twitter用户这样回应。",
+          "yours": "「不含DLC还要对奥巴马第一任期时的游戏收40美元，这吃相也太难看了。」一名X用户这样回应。",
+          "my_sentences": [
+            "「不含DLC还要对奥巴马第一任期时的游戏收40美元(约合人民币271元)，这吃相也太难看了。",
+            "」一名X/Twitter用户这样回应。"
+          ],
+          "your_sentences": [
+            "「不含DLC还要对奥巴马第一任期时的游戏收40美元，这吃相也太难看了。",
+            "」一名X用户这样回应。"
+          ]
+        },
+        {
+          "index": 4,
+          "mine": "「这么老的游戏，就算带上DLC最多也只该卖20美元(约合人民币136元)。」另一条热门帖子认为。",
+          "yours": "「这么老的游戏，就算带上DLC最多也只该卖20美元。」另一条热门帖子认为。",
+          "my_sentences": [
+            "「这么老的游戏，就算带上DLC最多也只该卖20美元(约合人民币136元)。",
+            "」另一条热门帖子认为。"
+          ],
+          "your_sentences": [
+            "「这么老的游戏，就算带上DLC最多也只该卖20美元。",
+            "」另一条热门帖子认为。"
+          ]
+        },
+        {
+          "index": 6,
+          "mine": "如果微软商城上的价格延续到PlayStation移植版上，那么想同时入手两款游戏的玩家可能就得掏出80美元(约合人民币542元)。再把两张季票的费用算上，整套下来总共要花140美元(约合人民币949元)。同样，由于动视尚未确认，很难说最终的售价和内容会如何，但正是这种信息的缺失让粉丝们如此激动。",
+          "yours": "如果微软商城上的价格延续到PlayStation移植版上，那么想同时入手两款游戏的玩家可能就得掏出80美元（约合人民币542元）。再把两张季票的费用算上，整套下来总共要花140美元（约合人民币949元）。同样，由于动视尚未确认，很难说最终的售价和内容会如何，但正是这种信息的缺失让粉丝们如此激动。",
+          "my_sentences": [
+            "如果微软商城上的价格延续到PlayStation移植版上，那么想同时入手两款游戏的玩家可能就得掏出80美元(约合人民币542元)。",
+            "再把两张季票的费用算上，整套下来总共要花140美元(约合人民币949元)。",
+            "同样，由于动视尚未确认，很难说最终的售价和内容会如何，但正是这种信息的缺失让粉丝们如此激动。"
+          ],
+          "your_sentences": [
+            "如果微软商城上的价格延续到PlayStation移植版上，那么想同时入手两款游戏的玩家可能就得掏出80美元（约合人民币542元）。",
+            "再把两张季票的费用算上，整套下来总共要花140美元（约合人民币949元）。",
+            "同样，由于动视尚未确认，很难说最终的售价和内容会如何，但正是这种信息的缺失让粉丝们如此激动。"
+          ]
+        },
+        {
+          "index": 7,
+          "mine": "「等等，这什么鬼，太离谱了吧哈哈。」一位Reddit用户说道，「这顶多值个二三十美元(约合人民币136-203元)，还得带上全部DLC。要是重制版或者复刻版含DLC，我或许还会说40美元(约合人民币271元)，撑死50美元(约合人民币339元)。」",
+          "yours": "「等等，这什么鬼，太离谱了吧哈哈。」一位Reddit用户说道，「这顶多值个二三十美元，还得带上全部DLC。要是重制版或者复刻版含DLC，我或许还会说40美元，撑死50美元。」",
+          "my_sentences": [
+            "「等等，这什么鬼，太离谱了吧哈哈。",
+            "」一位Reddit用户说道，「这顶多值个二三十美元(约合人民币136-203元)，还得带上全部DLC。",
+            "要是重制版或者复刻版含DLC，我或许还会说40美元(约合人民币271元)，撑死50美元(约合人民币339元)。",
+            "」"
+          ],
+          "your_sentences": [
+            "「等等，这什么鬼，太离谱了吧哈哈。",
+            "」一位Reddit用户说道，「这顶多值个二三十美元，还得带上全部DLC。",
+            "要是重制版或者复刻版含DLC，我或许还会说40美元，撑死50美元。",
+            "」"
+          ]
+        },
+        {
+          "index": 9,
+          "mine": "「花40美元(约合人民币271元)买我们早就买过的游戏（而且据说还没有任何增强），简直是一种暴行。」另有人表示。",
+          "yours": "「花40美元买我们早就买过的游戏（而且据说还没有任何增强），简直是一种暴行。」另有人表示。",
+          "my_sentences": [
+            "「花40美元(约合人民币271元)买我们早就买过的游戏（而且据说还没有任何增强），简直是一种暴行。",
+            "」另有人表示。"
+          ],
+          "your_sentences": [
+            "「花40美元买我们早就买过的游戏（而且据说还没有任何增强），简直是一种暴行。",
+            "」另有人表示。"
+          ]
+        }
+      ],
+      "dictionary_candidates": []
+    }
+  ]
+}

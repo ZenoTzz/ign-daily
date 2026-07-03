@@ -1,0 +1,843 @@
+{
+  "date": "2026-06-02",
+  "generated_at": "2026-07-01T22:36:48.500860",
+  "total_articles": 7,
+  "dictionary_candidate_count": 4,
+  "dictionary_candidates": [
+    {
+      "id": "dict_candidate_official_baldur_s_gate_0e11cc90e005",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "terms",
+      "en": "Official Baldur's Gate",
+      "cn": "博德之门2",
+      "title": "词库候选：Official Baldur's Gate → 博德之门2",
+      "rule": "建议将「Official Baldur's Gate」加入词库，译为「博德之门2」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "date": "2026-06-02",
+      "article_id": 3,
+      "article_title": "《博德之门2》重制版据报已在开发中",
+      "url": "https://www.ign.com/articles/official-baldurs-gate-2-remake-reportedly-in-development-at-wizards-of-the-coast",
+      "evidence": "英文标题开头专名与中文标题书名号对应。"
+    },
+    {
+      "id": "dict_candidate_former_dragon_age_boss_ced1f127dc8b",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "terms",
+      "en": "Former Dragon Age Boss",
+      "cn": "龙腾世纪",
+      "title": "词库候选：Former Dragon Age Boss → 龙腾世纪",
+      "rule": "建议将「Former Dragon Age Boss」加入词库，译为「龙腾世纪」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "date": "2026-06-02",
+      "article_id": 4,
+      "article_title": "前《龙腾世纪》制作人：游戏可学电影植入广告降成本",
+      "url": "https://www.ign.com/articles/video-games-could-have-movie-style-product-placement-to-counter-rising-costs-ex-dragon-age-boss-says",
+      "evidence": "英文标题开头专名与中文标题书名号对应。"
+    },
+    {
+      "id": "dict_candidate_everything_can_t_be_a_live_service_forme_06148e53ea7f",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "terms",
+      "en": "Everything Can't Be a Live-Service': Former Dragon Age Boss",
+      "cn": "龙腾世纪",
+      "title": "词库候选：Everything Can't Be a Live-Service': Former Dragon Age Boss → 龙腾世纪",
+      "rule": "建议将「Everything Can't Be a Live-Service': Former Dragon Age Boss」加入词库，译为「龙腾世纪」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "date": "2026-06-02",
+      "article_id": 4,
+      "article_title": "前《龙腾世纪》制作人：游戏可学电影植入广告降成本",
+      "url": "https://www.ign.com/articles/video-games-could-have-movie-style-product-placement-to-counter-rising-costs-ex-dragon-age-boss-says",
+      "evidence": "英文标题开头专名与中文标题书名号对应。"
+    },
+    {
+      "id": "dict_candidate_doctor_who_showrunner_says_bbc_will_aa21a8e45ad6",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "terms",
+      "en": "Doctor Who Showrunner Says BBC Will",
+      "cn": "神秘博士",
+      "title": "词库候选：Doctor Who Showrunner Says BBC Will → 神秘博士",
+      "rule": "建议将「Doctor Who Showrunner Says BBC Will」加入词库，译为「神秘博士」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "date": "2026-06-02",
+      "article_id": 5,
+      "article_title": "《神秘博士》命运即将揭晓，剧集主管称BBC声明在即",
+      "url": "https://www.ign.com/articles/bbc-update-on-doctor-who-future-imminent-showrunner-states-amid-concern-its-return-has-now-been-scrapped-or-postponed",
+      "evidence": "英文标题开头专名与中文标题书名号对应。"
+    }
+  ],
+  "learning_evidence_updated": true,
+  "daily_learning_updated": true,
+  "articles": [
+    {
+      "id": 3,
+      "cn_title": "《博德之门2》重制版据报已在开发中",
+      "en_title": "Official Baldur's Gate 2 Remake Reportedly in Development at Wizards of the Coast",
+      "url": "https://www.ign.com/articles/official-baldurs-gate-2-remake-reportedly-in-development-at-wizards-of-the-coast",
+      "category": "",
+      "has_translation": true,
+      "title_diff": {
+        "mine": "《威世智》《博德之门2》重制版据报已在开发中",
+        "yours": "《博德之门2》重制版据报已在开发中"
+      },
+      "subtitle_diff": null,
+      "body_diffs": [
+        {
+          "index": 1,
+          "mine": "报道称，BioWare的《博德之门》1和2很可能都会在《博德之门4》发售前推出重制版。该媒体表示，前BioWare开发者、《博德之门2》联合主设计师Kevin Martens正在负责重制工作。有迹象表明，两款重制版将同步推出。",
+          "yours": "报道称，BioWare的《博德之门》1代和2代很可能都会在《博德之门4》发售前推出重制版。该媒体表示，前BioWare开发者、《博德之门2》联合主设计师Kevin Martens正在负责重制工作。有迹象表明，两款重制版将同步推出。",
+          "my_sentences": [
+            "报道称，BioWare的《博德之门》1和2很可能都会在《博德之门4》发售前推出重制版。",
+            "该媒体表示，前BioWare开发者、《博德之门2》联合主设计师Kevin Martens正在负责重制工作。",
+            "有迹象表明，两款重制版将同步推出。"
+          ],
+          "your_sentences": [
+            "报道称，BioWare的《博德之门》1代和2代很可能都会在《博德之门4》发售前推出重制版。",
+            "该媒体表示，前BioWare开发者、《博德之门2》联合主设计师Kevin Martens正在负责重制工作。",
+            "有迹象表明，两款重制版将同步推出。"
+          ]
+        },
+        {
+          "index": 5,
+          "mine": "《博德之门》是BioWare的第二款游戏，于1998年在PC上发行，由Interplay发行。游戏表现足够出色，催生了续作——2000年的《博德之门II：安姆的阴影》，与前作一样，故事发生在被遗忘的国度。两款原作都采用等距视角和可暂停的实时制玩法，玩家最多可控制六名角色。重制版会效仿《博德之门3》，采用完全回合制战斗吗？或者也许应该采用一种混合系统。",
+          "yours": "《博德之门》是BioWare的第二款游戏，于1998年在PC上发行，由Interplay发行。游戏表现足够出色，催生了续作——2000年的《博德之门2：安姆的阴影》，与前作一样，故事发生在被遗忘的国度。两款原作都采用等距视角和可暂停的实时制玩法，玩家最多可控制六名角色。重制版会效仿《博德之门3》，采用完全回合制战斗吗？或者也许应该采用一种混合系统。",
+          "my_sentences": [
+            "《博德之门》是BioWare的第二款游戏，于1998年在PC上发行，由Interplay发行。",
+            "游戏表现足够出色，催生了续作——2000年的《博德之门II：安姆的阴影》，与前作一样，故事发生在被遗忘的国度。",
+            "两款原作都采用等距视角和可暂停的实时制玩法，玩家最多可控制六名角色。",
+            "重制版会效仿《博德之门3》，采用完全回合制战斗吗？",
+            "或者也许应该采用一种混合系统。"
+          ],
+          "your_sentences": [
+            "《博德之门》是BioWare的第二款游戏，于1998年在PC上发行，由Interplay发行。",
+            "游戏表现足够出色，催生了续作——2000年的《博德之门2：安姆的阴影》，与前作一样，故事发生在被遗忘的国度。",
+            "两款原作都采用等距视角和可暂停的实时制玩法，玩家最多可控制六名角色。",
+            "重制版会效仿《博德之门3》，采用完全回合制战斗吗？",
+            "或者也许应该采用一种混合系统。"
+          ]
+        },
+        {
+          "index": 6,
+          "mine": "尽管续作需要漫长等待，但《博德之门》的世界里依然热闹非凡。一部《博德之门3》HBO电视剧正在制作中，该剧将延续游戏的故事——这让粉丝们大为惊讶。甚至还有一部前传小说，描绘了阿斯代伦侍奉吸血鬼领主卡扎多尔·萨尔的岁月，此外还有一本官方《博德之门3》食谱和一本涂色书。",
+          "yours": "尽管续作需要漫长等待，但《博德之门》的世界里依然热闹非凡。一部《博德之门3》HBO电视剧正在制作中，该剧将延续游戏的故事——这让粉丝们大为惊讶。甚至还有一部前传小说，描绘了阿斯代伦侍奉吸血鬼领主卡扎多尔的岁月，此外还有一本官方《博德之门3》食谱和一本填色书。",
+          "my_sentences": [
+            "尽管续作需要漫长等待，但《博德之门》的世界里依然热闹非凡。",
+            "一部《博德之门3》HBO电视剧正在制作中，该剧将延续游戏的故事——这让粉丝们大为惊讶。",
+            "甚至还有一部前传小说，描绘了阿斯代伦侍奉吸血鬼领主卡扎多尔·萨尔的岁月，此外还有一本官方《博德之门3》食谱和一本涂色书。"
+          ],
+          "your_sentences": [
+            "尽管续作需要漫长等待，但《博德之门》的世界里依然热闹非凡。",
+            "一部《博德之门3》HBO电视剧正在制作中，该剧将延续游戏的故事——这让粉丝们大为惊讶。",
+            "甚至还有一部前传小说，描绘了阿斯代伦侍奉吸血鬼领主卡扎多尔的岁月，此外还有一本官方《博德之门3》食谱和一本填色书。"
+          ]
+        },
+        {
+          "index": 7,
+          "mine": "Wesley是IGN新闻总监。你可以在Twitter上找到他，账号是@wyp100。你可以通过wesley_yinpoole@ign.com联系Wesley，或通过wyp100@proton.me进行保密联系。",
+          "yours": "",
+          "my_sentences": [
+            "Wesley是IGN新闻总监。",
+            "你可以在Twitter上找到他，账号是@wyp100。",
+            "你可以通过wesley_yinpoole@ign.com联系Wesley，或通过wyp100@proton.me进行保密联系。"
+          ],
+          "your_sentences": []
+        }
+      ],
+      "dictionary_candidates": [
+        {
+          "id": "dict_candidate_official_baldur_s_gate_0e11cc90e005",
+          "category": "dictionary",
+          "type": "dictionary_candidate",
+          "dict_category": "terms",
+          "en": "Official Baldur's Gate",
+          "cn": "博德之门2",
+          "title": "词库候选：Official Baldur's Gate → 博德之门2",
+          "rule": "建议将「Official Baldur's Gate」加入词库，译为「博德之门2」。",
+          "status": "ready_for_review",
+          "confidence": "high",
+          "date": "2026-06-02",
+          "article_id": 3,
+          "article_title": "《博德之门2》重制版据报已在开发中",
+          "url": "https://www.ign.com/articles/official-baldurs-gate-2-remake-reportedly-in-development-at-wizards-of-the-coast",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "cn_title": "前《龙腾世纪》制作人：游戏可学电影植入广告降成本",
+      "en_title": "Video Games Could Have Movie-Style Product Placement to Counter Rising Costs, Ex-Dragon Age Boss Says",
+      "url": "https://www.ign.com/articles/video-games-could-have-movie-style-product-placement-to-counter-rising-costs-ex-dragon-age-boss-says",
+      "category": "",
+      "has_translation": true,
+      "title_diff": null,
+      "subtitle_diff": {
+        "mine": "不差钱",
+        "yours": "新经济"
+      },
+      "body_diffs": [
+        {
+          "index": 4,
+          "mine": "他接着说，Xbox Game Pass和PlayStation Plus这类订阅服务也并非万能药，并指出「很多游戏从加入订阅中赚到的钱非常少」，还暗示这些服务可能助长「为了刷数据而进行的退化性设计」。",
+          "yours": "他接着说，XGP和PS Plus这类订阅服务也并非万能药，并指出「很多游戏从加入订阅中赚到的钱非常少」，还暗示这些服务可能助长「为了刷数据而进行的退化性设计」。",
+          "my_sentences": [
+            "他接着说，Xbox Game Pass和PlayStation Plus这类订阅服务也并非万能药，并指出「很多游戏从加入订阅中赚到的钱非常少」，还暗示这些服务可能助长「为了刷数据而进行的退化性设计」。"
+          ],
+          "your_sentences": [
+            "他接着说，XGP和PS Plus这类订阅服务也并非万能药，并指出「很多游戏从加入订阅中赚到的钱非常少」，还暗示这些服务可能助长「为了刷数据而进行的退化性设计」。"
+          ]
+        },
+        {
+          "index": 8,
+          "mine": "Darrah在BioWare近二十年的职业生涯中，担任了每一款主要《龙腾世纪》游戏的执行制作人。此前，他曾讨论过口碑不佳的《龙腾世纪：影障守护者》最初是一款服务型游戏，后来才被重启——尽管该项目的这一版本仍保留了一些元素。讽刺的是，《帷幕守护者》的商业失败最终促使发行商考虑转向服务型游戏——而系列粉丝对此强烈反对。",
+          "yours": "Darrah在BioWare近二十年的职业生涯中，担任了每一款主要《龙腾世纪》游戏的执行制作人。此前，他曾讨论过口碑不佳的《龙腾世纪：影障守护者》最初是一款服务型游戏，后来才被重启——尽管该项目的这一版本仍保留了一些元素。讽刺的是，《龙腾世纪：影障守护者》的商业失败最终促使发行商考虑转向服务型游戏——而系列粉丝对此强烈反对。",
+          "my_sentences": [
+            "Darrah在BioWare近二十年的职业生涯中，担任了每一款主要《龙腾世纪》游戏的执行制作人。",
+            "此前，他曾讨论过口碑不佳的《龙腾世纪：影障守护者》最初是一款服务型游戏，后来才被重启——尽管该项目的这一版本仍保留了一些元素。",
+            "讽刺的是，《帷幕守护者》的商业失败最终促使发行商考虑转向服务型游戏——而系列粉丝对此强烈反对。"
+          ],
+          "your_sentences": [
+            "Darrah在BioWare近二十年的职业生涯中，担任了每一款主要《龙腾世纪》游戏的执行制作人。",
+            "此前，他曾讨论过口碑不佳的《龙腾世纪：影障守护者》最初是一款服务型游戏，后来才被重启——尽管该项目的这一版本仍保留了一些元素。",
+            "讽刺的是，《龙腾世纪：影障守护者》的商业失败最终促使发行商考虑转向服务型游戏——而系列粉丝对此强烈反对。"
+          ]
+        },
+        {
+          "index": 9,
+          "mine": "不过，很难想象《帷幕守护者》能靠植入广告挽救——或者能植入些什么。也许Rook可以在最终决战时召唤Old Spice广告里骑马的男人？或者灌下一杯激爽的美年达口味费雷登麦酒来提升能力？或者穿上贝斯卡战斗盔甲来宣传《曼达洛人与古古》？也许服务型《龙腾世纪》终究没那么糟。",
+          "yours": "",
+          "my_sentences": [
+            "不过，很难想象《帷幕守护者》能靠植入广告挽救——或者能植入些什么。",
+            "也许Rook可以在最终决战时召唤Old Spice广告里骑马的男人？",
+            "或者灌下一杯激爽的美年达口味费雷登麦酒来提升能力？",
+            "或者穿上贝斯卡战斗盔甲来宣传《曼达洛人与古古》？",
+            "也许服务型《龙腾世纪》终究没那么糟。"
+          ],
+          "your_sentences": []
+        },
+        {
+          "index": 10,
+          "mine": "Darrah现已离开BioWare，但工作室仍在继续——专注于制作一款全新的《质量效应》游戏，该作目前尚未公布发售日期。",
+          "yours": "",
+          "my_sentences": [
+            "Darrah现已离开BioWare，但工作室仍在继续——专注于制作一款全新的《质量效应》游戏，该作目前尚未公布发售日期。"
+          ],
+          "your_sentences": []
+        },
+        {
+          "index": 11,
+          "mine": "Tom Phillips是IGN的新闻编辑。您可以通过tom_phillips@ign.com联系Tom，或在Bluesky上找到他。",
+          "yours": "",
+          "my_sentences": [
+            "Tom Phillips是IGN的新闻编辑。",
+            "您可以通过tom_phillips@ign.com联系Tom，或在Bluesky上找到他。"
+          ],
+          "your_sentences": []
+        }
+      ],
+      "dictionary_candidates": [
+        {
+          "id": "dict_candidate_former_dragon_age_boss_ced1f127dc8b",
+          "category": "dictionary",
+          "type": "dictionary_candidate",
+          "dict_category": "terms",
+          "en": "Former Dragon Age Boss",
+          "cn": "龙腾世纪",
+          "title": "词库候选：Former Dragon Age Boss → 龙腾世纪",
+          "rule": "建议将「Former Dragon Age Boss」加入词库，译为「龙腾世纪」。",
+          "status": "ready_for_review",
+          "confidence": "high",
+          "date": "2026-06-02",
+          "article_id": 4,
+          "article_title": "前《龙腾世纪》制作人：游戏可学电影植入广告降成本",
+          "url": "https://www.ign.com/articles/video-games-could-have-movie-style-product-placement-to-counter-rising-costs-ex-dragon-age-boss-says",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        },
+        {
+          "id": "dict_candidate_everything_can_t_be_a_live_service_forme_06148e53ea7f",
+          "category": "dictionary",
+          "type": "dictionary_candidate",
+          "dict_category": "terms",
+          "en": "Everything Can't Be a Live-Service': Former Dragon Age Boss",
+          "cn": "龙腾世纪",
+          "title": "词库候选：Everything Can't Be a Live-Service': Former Dragon Age Boss → 龙腾世纪",
+          "rule": "建议将「Everything Can't Be a Live-Service': Former Dragon Age Boss」加入词库，译为「龙腾世纪」。",
+          "status": "ready_for_review",
+          "confidence": "high",
+          "date": "2026-06-02",
+          "article_id": 4,
+          "article_title": "前《龙腾世纪》制作人：游戏可学电影植入广告降成本",
+          "url": "https://www.ign.com/articles/video-games-could-have-movie-style-product-placement-to-counter-rising-costs-ex-dragon-age-boss-says",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "cn_title": "《神秘博士》命运即将揭晓，剧集主管称BBC声明在即",
+      "en_title": "BBC Update on Doctor Who Future Imminent, Showrunner States, Amid Concern Its Return Has Now Been Scrapped or Postponed",
+      "url": "https://www.ign.com/articles/bbc-update-on-doctor-who-future-imminent-showrunner-states-amid-concern-its-return-has-now-been-scrapped-or-postponed",
+      "category": "",
+      "has_translation": true,
+      "title_diff": null,
+      "subtitle_diff": {
+        "mine": "急急急急急",
+        "yours": "在不远的将来"
+      },
+      "body_diffs": [
+        {
+          "index": 0,
+          "mine": "《神秘博士》剧集主管拉塞尔·T·戴维斯确认，关于该剧未来的官方声明将在本月发布，此前有报道称原定的圣诞特辑将不再制作。",
+          "yours": "《神秘博士》剧集主管Russell T Davies确认，关于该剧未来的官方声明将在本月发布，此前有报道称原定的圣诞特辑将不再制作。",
+          "my_sentences": [
+            "《神秘博士》剧集主管拉塞尔·T·戴维斯确认，关于该剧未来的官方声明将在本月发布，此前有报道称原定的圣诞特辑将不再制作。"
+          ],
+          "your_sentences": [
+            "《神秘博士》剧集主管Russell T Davies确认，关于该剧未来的官方声明将在本月发布，此前有报道称原定的圣诞特辑将不再制作。"
+          ]
+        },
+        {
+          "index": 1,
+          "mine": "上周，英国小报《太阳报》报道称，由于BBC仍在寻找新任主演，该剧的回归很可能推迟至2027年，甚至被彻底取消。",
+          "yours": "上周，《太阳报》报道称，由于BBC仍在寻找新任主演，该剧的回归很可能推迟至2027年，甚至被彻底取消。",
+          "my_sentences": [
+            "上周，英国小报《太阳报》报道称，由于BBC仍在寻找新任主演，该剧的回归很可能推迟至2027年，甚至被彻底取消。"
+          ],
+          "your_sentences": [
+            "上周，《太阳报》报道称，由于BBC仍在寻找新任主演，该剧的回归很可能推迟至2027年，甚至被彻底取消。"
+          ]
+        },
+        {
+          "index": 3,
+          "mine": "今天，戴维斯在BBC广播2台被问及该剧以及新主演何时揭晓。他回答如下：",
+          "yours": "今天，Davies在BBC广播2台被问及该剧以及新主演何时揭晓。他回答如下：",
+          "my_sentences": [
+            "今天，戴维斯在BBC广播2台被问及该剧以及新主演何时揭晓。",
+            "他回答如下："
+          ],
+          "your_sentences": [
+            "今天，Davies在BBC广播2台被问及该剧以及新主演何时揭晓。",
+            "他回答如下："
+          ]
+        },
+        {
+          "index": 4,
+          "mine": "「你们会看到一份声明……有一份新闻稿正在BBC内部缓慢推进，你们也知道，这就像侏罗纪时期一样，每个字都得57个人签字。所以我向你们保证，大概一到两周内，会有一份新闻稿。甚至在我说话这会儿，我都能听见齿轮慢下来的声音。」",
+          "yours": "「你们会收到一个公告……现在有一份新闻稿正在BBC内部慢吞吞地推进。你也知道，BBC就像侏罗纪时代一样古老迟缓，而且每一个字都得有57个人签字批准。所以我保证，大概一两周后会有新闻稿。我现在说这话的时候，仿佛都能听见那台机器的齿轮又慢下来了」",
+          "my_sentences": [
+            "「你们会看到一份声明……有一份新闻稿正在BBC内部缓慢推进，你们也知道，这就像侏罗纪时期一样，每个字都得57个人签字。",
+            "所以我向你们保证，大概一到两周内，会有一份新闻稿。",
+            "甚至在我说话这会儿，我都能听见齿轮慢下来的声音。",
+            "」"
+          ],
+          "your_sentences": [
+            "「你们会收到一个公告……现在有一份新闻稿正在BBC内部慢吞吞地推进。",
+            "你也知道，BBC就像侏罗纪时代一样古老迟缓，而且每一个字都得有57个人签字批准。",
+            "所以我保证，大概一两周后会有新闻稿。",
+            "我现在说这话的时候，仿佛都能听见那台机器的齿轮又慢下来了」"
+          ]
+        },
+        {
+          "index": 6,
+          "mine": "该剧的现状正被粉丝们细致入微地分析，他们长时间讨论戴维斯最近接受英国广播电台LBC的另一场采访，他在采访中提到自己现在「2027年之前不会拍摄任何东西」。",
+          "yours": "该剧的现状正被粉丝们细致入微地分析，他们长时间讨论Davies最近接受英国广播电台LBC的另一场采访，他在采访中提到自己现在「2027年之前不会拍摄任何东西」。",
+          "my_sentences": [
+            "该剧的现状正被粉丝们细致入微地分析，他们长时间讨论戴维斯最近接受英国广播电台LBC的另一场采访，他在采访中提到自己现在「2027年之前不会拍摄任何东西」。"
+          ],
+          "your_sentences": [
+            "该剧的现状正被粉丝们细致入微地分析，他们长时间讨论Davies最近接受英国广播电台LBC的另一场采访，他在采访中提到自己现在「2027年之前不会拍摄任何东西」。"
+          ]
+        },
+        {
+          "index": 8,
+          "mine": "与此同时，前《神秘博士》杂志编辑Tom Spilsbury在私密论坛Gallifrey Base上写道（其言论后被其他用户转发至社交媒体），他也对特辑最终能否制作表示怀疑，并指出BBC当前的资金问题是原因所在。",
+          "yours": "与此同时，前《神秘博士杂志》编辑Tom Spilsbury在私密论坛Gallifrey Base上写道（其言论后被其他用户转发至社交媒体），他也对特辑最终能否制作表示怀疑，并指出BBC当前的资金问题是原因所在。",
+          "my_sentences": [
+            "与此同时，前《神秘博士》杂志编辑Tom Spilsbury在私密论坛Gallifrey Base上写道（其言论后被其他用户转发至社交媒体），他也对特辑最终能否制作表示怀疑，并指出BBC当前的资金问题是原因所在。"
+          ],
+          "your_sentences": [
+            "与此同时，前《神秘博士杂志》编辑Tom Spilsbury在私密论坛Gallifrey Base上写道（其言论后被其他用户转发至社交媒体），他也对特辑最终能否制作表示怀疑，并指出BBC当前的资金问题是原因所在。"
+          ]
+        },
+        {
+          "index": 10,
+          "mine": "Tom Phillips是IGN的新闻编辑。您可以通过tom_phillips@ign.com联系Tom，或在Bluesky上找到他。",
+          "yours": "",
+          "my_sentences": [
+            "Tom Phillips是IGN的新闻编辑。",
+            "您可以通过tom_phillips@ign.com联系Tom，或在Bluesky上找到他。"
+          ],
+          "your_sentences": []
+        }
+      ],
+      "dictionary_candidates": [
+        {
+          "id": "dict_candidate_doctor_who_showrunner_says_bbc_will_aa21a8e45ad6",
+          "category": "dictionary",
+          "type": "dictionary_candidate",
+          "dict_category": "terms",
+          "en": "Doctor Who Showrunner Says BBC Will",
+          "cn": "神秘博士",
+          "title": "词库候选：Doctor Who Showrunner Says BBC Will → 神秘博士",
+          "rule": "建议将「Doctor Who Showrunner Says BBC Will」加入词库，译为「神秘博士」。",
+          "status": "ready_for_review",
+          "confidence": "high",
+          "date": "2026-06-02",
+          "article_id": 5,
+          "article_title": "《神秘博士》命运即将揭晓，剧集主管称BBC声明在即",
+          "url": "https://www.ign.com/articles/bbc-update-on-doctor-who-future-imminent-showrunner-states-amid-concern-its-return-has-now-been-scrapped-or-postponed",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "cn_title": "《异星工厂》将迎来最后一次重大更新",
+      "en_title": "Factorio Set for Its Last Major Update, a Decade After Launch",
+      "url": "https://www.ign.com/articles/factorio-set-for-its-last-major-update-a-decade-after-launch",
+      "category": "",
+      "has_translation": true,
+      "title_diff": {
+        "mine": "《异星工厂》十年后迎来最后一次重大更新",
+        "yours": "《异星工厂》将迎来最后一次重大更新"
+      },
+      "subtitle_diff": {
+        "mine": "再见了，老朋友",
+        "yours": "再见，老友"
+      },
+      "body_diffs": [
+        {
+          "index": 2,
+          "mine": "「我无法想象如果没有《异星工厂》，Steam的游戏格局会有多大的不同，」《幻兽帕鲁》开发商Pocketpair的传播总监兼发行经理John “Bucky” Buckley在社交媒体上发帖说，「感谢你们制作了这款不可思议的游戏！」",
+          "yours": "「我无法想象如果没有《异星工厂》，Steam的游戏格局会有多大的不同，」《幻兽帕鲁》开发商Pocketpair的传播总监兼发行经理John Buckley在社交媒体上发帖说，「感谢你们制作了这款不可思议的游戏！」",
+          "my_sentences": [
+            "「我无法想象如果没有《异星工厂》，Steam的游戏格局会有多大的不同，」《幻兽帕鲁》开发商Pocketpair的传播总监兼发行经理John “Bucky” Buckley在社交媒体上发帖说，「感谢你们制作了这款不可思议的游戏！",
+            "」"
+          ],
+          "your_sentences": [
+            "「我无法想象如果没有《异星工厂》，Steam的游戏格局会有多大的不同，」《幻兽帕鲁》开发商Pocketpair的传播总监兼发行经理John Buckley在社交媒体上发帖说，「感谢你们制作了这款不可思议的游戏！",
+            "」"
+          ]
+        },
+        {
+          "index": 3,
+          "mine": "在管理玩家对2.1更新规模的预期时，Wube表示：「总的来说，我们对《异星工厂》和《太空时代》的游戏设计感到满意。游戏进程很好，各方面大多平衡良好（有一两个例外），我们不觉得有什么重大缺失。也就是说，我们并没有带着推出大型新内容或庞大功能的宏伟计划来开发2.1。」",
+          "yours": "在管理玩家对2.1更新规模的预期时，Wube表示：「总的来说，我们对《异星工厂》和DLC《太空时代》的游戏设计感到满意。游戏进程很好，各方面大多平衡良好（有一两个例外），我们不觉得有什么重大缺失。也就是说，我们并没有带着推出大型新内容或庞大功能的宏伟计划来开发2.1。」",
+          "my_sentences": [
+            "在管理玩家对2.1更新规模的预期时，Wube表示：「总的来说，我们对《异星工厂》和《太空时代》的游戏设计感到满意。",
+            "游戏进程很好，各方面大多平衡良好（有一两个例外），我们不觉得有什么重大缺失。",
+            "也就是说，我们并没有带着推出大型新内容或庞大功能的宏伟计划来开发2.1。",
+            "」"
+          ],
+          "your_sentences": [
+            "在管理玩家对2.1更新规模的预期时，Wube表示：「总的来说，我们对《异星工厂》和DLC《太空时代》的游戏设计感到满意。",
+            "游戏进程很好，各方面大多平衡良好（有一两个例外），我们不觉得有什么重大缺失。",
+            "也就是说，我们并没有带着推出大型新内容或庞大功能的宏伟计划来开发2.1。",
+            "」"
+          ]
+        },
+        {
+          "index": 8,
+          "mine": "因此，《异星工厂》的一个时代结束了，但Wube已经在着手其他项目。只是别指望短期内能听到相关消息（「老实说，很长一段时间内都不会有任何东西可以分享」）。",
+          "yours": "因此，《异星工厂》的一个时代结束了，但Wube已经在着手其他项目。只是别指望短期内能听到相关消息（老实说，很长一段时间内都不会有任何东西可以分享）。",
+          "my_sentences": [
+            "因此，《异星工厂》的一个时代结束了，但Wube已经在着手其他项目。",
+            "只是别指望短期内能听到相关消息（「老实说，很长一段时间内都不会有任何东西可以分享」）。"
+          ],
+          "your_sentences": [
+            "因此，《异星工厂》的一个时代结束了，但Wube已经在着手其他项目。",
+            "只是别指望短期内能听到相关消息（老实说，很长一段时间内都不会有任何东西可以分享）。"
+          ]
+        },
+        {
+          "index": 9,
+          "mine": "Wesley是IGN的新闻总监。你可以在Twitter上找到他，账号是@wyp100。你可以通过wesley_yinpoole@ign.com联系Wesley，或通过wyp100@proton.me进行保密联系。",
+          "yours": "",
+          "my_sentences": [
+            "Wesley是IGN的新闻总监。",
+            "你可以在Twitter上找到他，账号是@wyp100。",
+            "你可以通过wesley_yinpoole@ign.com联系Wesley，或通过wyp100@proton.me进行保密联系。"
+          ],
+          "your_sentences": []
+        }
+      ],
+      "dictionary_candidates": []
+    },
+    {
+      "id": 9,
+      "cn_title": "《铁拳7》《铁拳8》总监离职万代南梦宫",
+      "en_title": "Hot on the Heels of Katsuhiro Harada's Exit From Bandai Namco, the Director of Tekken 7 and 8 Has Left Too",
+      "url": "https://www.ign.com/articles/hot-on-the-heels-of-katsuhiro-haradas-exit-from-bandai-namco-the-director-of-tekken-7-and-8-has-left-too",
+      "category": "",
+      "has_translation": true,
+      "title_diff": {
+        "mine": "《铁拳7》铁拳8总监离职万代南梦宫",
+        "yours": "《铁拳7》《铁拳8》总监离职万代南梦宫"
+      },
+      "subtitle_diff": {
+        "mine": "铁拳的未来何去何从",
+        "yours": "《铁拳》的未来何去何从"
+      },
+      "body_diffs": [
+        {
+          "index": 0,
+          "mine": "《铁拳7》和铁拳8的游戏总监池田幸平（Kohei 'Nakatsu' Ikeda）已离开万代南梦宫，结束了在该公司20年的任职。",
+          "yours": "《铁拳7》和《铁拳8》的游戏总监池田幸平已离开万代南梦宫，结束了在该公司20年的任职。",
+          "my_sentences": [
+            "《铁拳7》和铁拳8的游戏总监池田幸平（Kohei 'Nakatsu' Ikeda）已离开万代南梦宫，结束了在该公司20年的任职。"
+          ],
+          "your_sentences": [
+            "《铁拳7》和《铁拳8》的游戏总监池田幸平已离开万代南梦宫，结束了在该公司20年的任职。"
+          ]
+        },
+        {
+          "index": 3,
+          "mine": "铁拳社区现在不禁要问，这个格斗游戏系列的未来会怎样。就在上周，万代南梦宫还让粉丝们兴奋不已，宣布《刃牙》漫画及动画系列中的范马勇次郎将作为铁拳8第三赛季季票的客串角色登场，该赛季将持续到2027年初，以他的到来作为收尾。但随着原田和池田先后离开万代南梦宫，玩家还能等到《铁拳9》吗？如果能，它又会是什么样子？",
+          "yours": "《铁拳》社区现在不禁要问，这个格斗游戏系列的未来会怎样。就在上周，万代南梦宫还让粉丝们兴奋不已，宣布《刃牙》漫画及动画系列中的范马勇次郎将作为《铁拳8》第三赛季季票的客串角色登场，该赛季将持续到2027年初，以他的到来作为收尾。但随着原田和池田先后离开万代南梦宫，玩家还能等到《铁拳9》吗？如果能，它又会是什么样子？",
+          "my_sentences": [
+            "铁拳社区现在不禁要问，这个格斗游戏系列的未来会怎样。",
+            "就在上周，万代南梦宫还让粉丝们兴奋不已，宣布《刃牙》漫画及动画系列中的范马勇次郎将作为铁拳8第三赛季季票的客串角色登场，该赛季将持续到2027年初，以他的到来作为收尾。",
+            "但随着原田和池田先后离开万代南梦宫，玩家还能等到《铁拳9》吗？",
+            "如果能，它又会是什么样子？"
+          ],
+          "your_sentences": [
+            "《铁拳》社区现在不禁要问，这个格斗游戏系列的未来会怎样。",
+            "就在上周，万代南梦宫还让粉丝们兴奋不已，宣布《刃牙》漫画及动画系列中的范马勇次郎将作为《铁拳8》第三赛季季票的客串角色登场，该赛季将持续到2027年初，以他的到来作为收尾。",
+            "但随着原田和池田先后离开万代南梦宫，玩家还能等到《铁拳9》吗？",
+            "如果能，它又会是什么样子？"
+          ]
+        },
+        {
+          "index": 4,
+          "mine": "毫无疑问，铁拳粉丝近年来与万代南梦宫的关系并不融洽，他们对游戏的诸多方面和平衡性调整都提出过批评。原田也曾公开谈及自己与铁拳系列以及万代南梦宫之间的复杂关系，多次在社交媒体上回应粉丝的担忧，包括那次他针对高级场景DLC销售争议做出的解释。",
+          "yours": "毫无疑问，《铁拳》粉丝近年来与万代南梦宫的关系并不融洽，他们对游戏的诸多方面和平衡性调整都提出过批评。原田也曾公开谈及自己与铁拳系列以及万代南梦宫之间的复杂关系，多次在社交媒体上回应粉丝的担忧，包括那次他针对高级场景DLC销售争议做出的解释。",
+          "my_sentences": [
+            "毫无疑问，铁拳粉丝近年来与万代南梦宫的关系并不融洽，他们对游戏的诸多方面和平衡性调整都提出过批评。",
+            "原田也曾公开谈及自己与铁拳系列以及万代南梦宫之间的复杂关系，多次在社交媒体上回应粉丝的担忧，包括那次他针对高级场景DLC销售争议做出的解释。"
+          ],
+          "your_sentences": [
+            "毫无疑问，《铁拳》粉丝近年来与万代南梦宫的关系并不融洽，他们对游戏的诸多方面和平衡性调整都提出过批评。",
+            "原田也曾公开谈及自己与铁拳系列以及万代南梦宫之间的复杂关系，多次在社交媒体上回应粉丝的担忧，包括那次他针对高级场景DLC销售争议做出的解释。"
+          ]
+        },
+        {
+          "index": 6,
+          "mine": "万代南梦宫方面尚未透露铁拳8第三赛季之后，铁拳系列还会有何安排。",
+          "yours": "万代南梦宫方面尚未透露《铁拳8》第三赛季之后，《铁拳》系列还会有何安排。",
+          "my_sentences": [
+            "万代南梦宫方面尚未透露铁拳8第三赛季之后，铁拳系列还会有何安排。"
+          ],
+          "your_sentences": [
+            "万代南梦宫方面尚未透露《铁拳8》第三赛季之后，《铁拳》系列还会有何安排。"
+          ]
+        },
+        {
+          "index": 7,
+          "mine": "Wesley是IGN新闻总监。你可以在Twitter上找到他，账号是@wyp100。也可以通过wesley_yinpoole@ign.com联系Wesley，或通过wyp100@proton.me进行私密联络。",
+          "yours": "",
+          "my_sentences": [
+            "Wesley是IGN新闻总监。",
+            "你可以在Twitter上找到他，账号是@wyp100。",
+            "也可以通过wesley_yinpoole@ign.com联系Wesley，或通过wyp100@proton.me进行私密联络。"
+          ],
+          "your_sentences": []
+        }
+      ],
+      "dictionary_candidates": []
+    },
+    {
+      "id": 22,
+      "cn_title": "《007 初露锋芒》开发成本超2亿美元",
+      "en_title": "007 First Light Budget Reportedly More Than $200 Million",
+      "url": "https://www.ign.com/articles/007-first-light-budget-reportedly-more-than-200-million",
+      "category": "",
+      "has_translation": true,
+      "title_diff": {
+        "mine": "《007初露锋芒》开发成本超2亿美元(约合人民币14亿元)",
+        "yours": "《007 初露锋芒》开发成本超2亿美元"
+      },
+      "subtitle_diff": {
+        "mine": "史上最贵丹麦娱乐产品",
+        "yours": "史上成本最高丹麦娱乐产品"
+      },
+      "body_diffs": [
+        {
+          "index": 0,
+          "mine": "据报导，开发商IO Interactive的《007初露锋芒》开发成本超过2亿美元(约合人民币14亿元)，耗时七年打造。",
+          "yours": "据报道，开发商IO Interactive的《007 初露锋芒》开发成本超过2亿美元，耗时七年打造。",
+          "my_sentences": [
+            "据报导，开发商IO Interactive的《007初露锋芒》开发成本超过2亿美元(约合人民币14亿元)，耗时七年打造。"
+          ],
+          "your_sentences": [
+            "据报道，开发商IO Interactive的《007 初露锋芒》开发成本超过2亿美元，耗时七年打造。"
+          ]
+        },
+        {
+          "index": 1,
+          "mine": "丹麦广播公司在一篇报导中分享了这家丹麦工作室新作的幕后细节。据该媒体称，这款詹姆斯·邦德游戏的开发成本高达13亿丹麦克朗（约合2.02亿美元(约合人民币14亿元)），制作费用尤为高昂。",
+          "yours": "丹麦广播公司在一篇报道中分享了这家丹麦工作室新作的幕后细节。据该媒体称，这款詹姆斯·邦德游戏的开发成本高达13亿丹麦克朗（约合13.7亿元人民币），制作费用尤为高昂。",
+          "my_sentences": [
+            "丹麦广播公司在一篇报导中分享了这家丹麦工作室新作的幕后细节。",
+            "据该媒体称，这款詹姆斯·邦德游戏的开发成本高达13亿丹麦克朗（约合2.02亿美元(约合人民币14亿元)），制作费用尤为高昂。"
+          ],
+          "your_sentences": [
+            "丹麦广播公司在一篇报道中分享了这家丹麦工作室新作的幕后细节。",
+            "据该媒体称，这款詹姆斯·邦德游戏的开发成本高达13亿丹麦克朗（约合13.7亿元人民币），制作费用尤为高昂。"
+          ]
+        },
+        {
+          "index": 2,
+          "mine": "据丹麦TV 2报导，这使得《007初露锋芒》成为该国历史上最贵的娱乐产品。IGN联系IO时，对方未对预算传闻发表评论。",
+          "yours": "据丹麦TV 2报道，这使得《007 初露锋芒》成为该国历史上最贵的娱乐产品。IGN联系IO时，对方未对预算传闻发表评论。",
+          "my_sentences": [
+            "据丹麦TV 2报导，这使得《007初露锋芒》成为该国历史上最贵的娱乐产品。",
+            "IGN联系IO时，对方未对预算传闻发表评论。"
+          ],
+          "your_sentences": [
+            "据丹麦TV 2报道，这使得《007 初露锋芒》成为该国历史上最贵的娱乐产品。",
+            "IGN联系IO时，对方未对预算传闻发表评论。"
+          ]
+        },
+        {
+          "index": 3,
+          "mine": "有必要将2亿美元(约合人民币14亿元)这个数字放在大背景下看待。大多数登上头条的3A游戏预算都在数亿美元级别。例如，据Kotaku报导，《星鸣特攻》的初期开发合约约为2亿美元(约合人民币14亿元)。2023年，Xbox联邦贸易委员会案件中提交的文件意外透露，《最后生还者 第二部》和《地平线：西之绝境》的开发成本均超过2亿美元(约合人民币14亿元)。因此，007的2亿美元(约合人民币14亿元)在这个背景下算是常规水平。",
+          "yours": "有必要将2亿美元这个数字放在大背景下看待。大多数登上头条的3A游戏预算都在数亿美元级别。例如，据Kotaku报道，《星鸣特攻》的初期开发合约约为2亿美元（约合13.53亿元人民币）。2023年，Xbox联邦贸易委员会案件中提交的文件意外透露，《最后生还者 第二部》和《地平线：西之绝境》的开发成本均超过2亿美元。因此，007的2亿美元在这个背景下算是常规水平。",
+          "my_sentences": [
+            "有必要将2亿美元(约合人民币14亿元)这个数字放在大背景下看待。",
+            "大多数登上头条的3A游戏预算都在数亿美元级别。",
+            "例如，据Kotaku报导，《星鸣特攻》的初期开发合约约为2亿美元(约合人民币14亿元)。",
+            "2023年，Xbox联邦贸易委员会案件中提交的文件意外透露，《最后生还者 第二部》和《地平线：西之绝境》的开发成本均超过2亿美元(约合人民币14亿元)。",
+            "因此，007的2亿美元(约合人民币14亿元)在这个背景下算是常规水平。"
+          ],
+          "your_sentences": [
+            "有必要将2亿美元这个数字放在大背景下看待。",
+            "大多数登上头条的3A游戏预算都在数亿美元级别。",
+            "例如，据Kotaku报道，《星鸣特攻》的初期开发合约约为2亿美元（约合13.53亿元人民币）。",
+            "2023年，Xbox联邦贸易委员会案件中提交的文件意外透露，《最后生还者 第二部》和《地平线：西之绝境》的开发成本均超过2亿美元。",
+            "因此，007的2亿美元在这个背景下算是常规水平。"
+          ]
+        },
+        {
+          "index": 4,
+          "mine": "有些游戏的预算更是天文数字，远超007。例如，去年法庭文件首次披露了《使命召唤》游戏的开发预算，确认Activision仅在《黑色行动 冷战》一款游戏上就投入了7亿美元(约合人民币47亿元)，不过这是该射击游戏整个生命周期内的总投入。站在金字塔顶端的是《GTA6》，它很可能是有史以来最昂贵的电子游戏；其母公司Take-Two据估计已为其开发投入了10亿至15亿美元(约合人民币102亿元)。",
+          "yours": "有些游戏的预算更是天文数字，远超《007 初露锋芒》。例如，去年法庭文件首次披露了《使命召唤》游戏的开发预算，确认动视仅在《使命召唤：黑色行动 冷战》一款游戏上就投入了7亿美元（约合47.36亿元人民币），不过这是该射击游戏整个生命周期内的总投入。站在金字塔顶端的是《GTA6》，它很可能是有史以来最昂贵的电子游戏；其母公司Take-Two据估计已为其开发投入了10亿至15亿美元（约合67.65至101.48亿元人民币）。",
+          "my_sentences": [
+            "有些游戏的预算更是天文数字，远超007。",
+            "例如，去年法庭文件首次披露了《使命召唤》游戏的开发预算，确认Activision仅在《黑色行动 冷战》一款游戏上就投入了7亿美元(约合人民币47亿元)，不过这是该射击游戏整个生命周期内的总投入。",
+            "站在金字塔顶端的是《GTA6》，它很可能是有史以来最昂贵的电子游戏；",
+            "其母公司Take-Two据估计已为其开发投入了10亿至15亿美元(约合人民币102亿元)。"
+          ],
+          "your_sentences": [
+            "有些游戏的预算更是天文数字，远超《007 初露锋芒》。",
+            "例如，去年法庭文件首次披露了《使命召唤》游戏的开发预算，确认动视仅在《使命召唤：黑色行动 冷战》一款游戏上就投入了7亿美元（约合47.36亿元人民币），不过这是该射击游戏整个生命周期内的总投入。",
+            "站在金字塔顶端的是《GTA6》，它很可能是有史以来最昂贵的电子游戏；",
+            "其母公司Take-Two据估计已为其开发投入了10亿至15亿美元（约合67.65至101.48亿元人民币）。"
+          ]
+        },
+        {
+          "index": 5,
+          "mine": "至于IO这款新邦德游戏的开发时间线，我们已知该项目于2020年底正式公布。如果丹麦广播公司的报导准确，这意味着《杀手》工作室在项目公布前大约一年就已进入某种形式的开发阶段。",
+          "yours": "至于IO这款新邦德游戏的开发时间线，我们已知该项目于2020年底正式公布。如果丹麦广播公司的报道准确，这意味着工作室在项目公布前大约一年就已进入某种形式的开发阶段。",
+          "my_sentences": [
+            "至于IO这款新邦德游戏的开发时间线，我们已知该项目于2020年底正式公布。",
+            "如果丹麦广播公司的报导准确，这意味着《杀手》工作室在项目公布前大约一年就已进入某种形式的开发阶段。"
+          ],
+          "your_sentences": [
+            "至于IO这款新邦德游戏的开发时间线，我们已知该项目于2020年底正式公布。",
+            "如果丹麦广播公司的报道准确，这意味着工作室在项目公布前大约一年就已进入某种形式的开发阶段。"
+          ]
+        },
+        {
+          "index": 6,
+          "mine": "IO于上周（5月27日）在PC、PS5和Xbox Series X|S上推出了《007初露锋芒》。目前尚不清楚工作室需要达到怎样的销量才能收回成本，也不清楚那2亿美元(约合人民币14亿元)预算的具体构成，但我们已经知道它开局强劲。",
+          "yours": "IO于上周（5月27日）在PC、PS5和Xbox Series上推出了《007 初露锋芒》。目前尚不清楚工作室需要达到怎样的销量才能收回成本，也不清楚那2亿美元预算的具体构成，但我们已经知道它开局强劲。",
+          "my_sentences": [
+            "IO于上周（5月27日）在PC、PS5和Xbox Series X|S上推出了《007初露锋芒》。",
+            "目前尚不清楚工作室需要达到怎样的销量才能收回成本，也不清楚那2亿美元(约合人民币14亿元)预算的具体构成，但我们已经知道它开局强劲。"
+          ],
+          "your_sentences": [
+            "IO于上周（5月27日）在PC、PS5和Xbox Series上推出了《007 初露锋芒》。",
+            "目前尚不清楚工作室需要达到怎样的销量才能收回成本，也不清楚那2亿美元预算的具体构成，但我们已经知道它开局强劲。"
+          ]
+        },
+        {
+          "index": 7,
+          "mine": "5月29日，也就是发售仅两天后，IO宣布该游戏已成为其史上销售最快的作品，24小时内售出150万份。据Alinea Analytics市场分析主管Rhys Elliot称，其中Valve的Steam平台贡献了50万份，仅该平台就产生了约2500万美元（约合人民币1.79亿元）的收入。",
+          "yours": "5月29日，也就是发售仅两天后，IO宣布该游戏已成为其史上销售最快的作品，24小时内售出150万份。据Alinea Analytics市场分析主管Rhys Elliot称，其中Steam平台贡献了50万份，仅该平台就产生了约2500万美元（约合人民币1.79亿元）的收入。",
+          "my_sentences": [
+            "5月29日，也就是发售仅两天后，IO宣布该游戏已成为其史上销售最快的作品，24小时内售出150万份。",
+            "据Alinea Analytics市场分析主管Rhys Elliot称，其中Valve的Steam平台贡献了50万份，仅该平台就产生了约2500万美元（约合人民币1.79亿元）的收入。"
+          ],
+          "your_sentences": [
+            "5月29日，也就是发售仅两天后，IO宣布该游戏已成为其史上销售最快的作品，24小时内售出150万份。",
+            "据Alinea Analytics市场分析主管Rhys Elliot称，其中Steam平台贡献了50万份，仅该平台就产生了约2500万美元（约合人民币1.79亿元）的收入。"
+          ]
+        },
+        {
+          "index": 8,
+          "mine": "《007初露锋芒》的成功尚未借助Nintendo Switch 2版本，该版本预计将于今年夏末推出。如果IO的这款第三人称冒险游戏足够成功，它可能会催生续作，不过官方尚未提及相关细节。",
+          "yours": "《007初露锋芒》的成功尚未借助Switch 2，该平台的版本预计将于今年夏末推出。如果IO的这款第三人称冒险游戏足够成功，它可能会催生续作，不过官方尚未提及相关细节。",
+          "my_sentences": [
+            "《007初露锋芒》的成功尚未借助Nintendo Switch 2版本，该版本预计将于今年夏末推出。",
+            "如果IO的这款第三人称冒险游戏足够成功，它可能会催生续作，不过官方尚未提及相关细节。"
+          ],
+          "your_sentences": [
+            "《007初露锋芒》的成功尚未借助Switch 2，该平台的版本预计将于今年夏末推出。",
+            "如果IO的这款第三人称冒险游戏足够成功，它可能会催生续作，不过官方尚未提及相关细节。"
+          ]
+        },
+        {
+          "index": 9,
+          "mine": "IGN在9/10分的评测中称《007初露锋芒》「令人惊叹」。我们评价道：「《007初露锋芒》显然痴迷于以前所未有的方式将邦德幻想变为现实，这是我玩过的最好的邦德游戏。」",
+          "yours": "",
+          "my_sentences": [
+            "IGN在9/10分的评测中称《007初露锋芒》「令人惊叹」。",
+            "我们评价道：「《007初露锋芒》显然痴迷于以前所未有的方式将邦德幻想变为现实，这是我玩过的最好的邦德游戏。",
+            "」"
+          ],
+          "your_sentences": []
+        },
+        {
+          "index": 10,
+          "mine": "我们的《007初露锋芒》攻略包含完成首次任务所需的所有基本技巧，以及6条潜行精通技巧，助你保持隐蔽。游戏中有大量成就和收集品等待解锁，请查看我们的全收集品位置指南，确保不错过任何内容。如需任务协助，请参阅我们的进行中图文攻略，以及所有保险箱密码和键盘密码指南。",
+          "yours": "",
+          "my_sentences": [
+            "我们的《007初露锋芒》攻略包含完成首次任务所需的所有基本技巧，以及6条潜行精通技巧，助你保持隐蔽。",
+            "游戏中有大量成就和收集品等待解锁，请查看我们的全收集品位置指南，确保不错过任何内容。",
+            "如需任务协助，请参阅我们的进行中图文攻略，以及所有保险箱密码和键盘密码指南。"
+          ],
+          "your_sentences": []
+        }
+      ],
+      "dictionary_candidates": []
+    },
+    {
+      "id": 27,
+      "cn_title": "英伟达公布RTX Spark，称其将重塑PC",
+      "en_title": "Nvidia Announces the RTX Spark, Its First SoC for Regular People",
+      "url": "https://www.ign.com/articles/nvidia-announces-the-rtx-spark-its-first-soc-for-regular-people",
+      "category": "",
+      "has_translation": true,
+      "title_diff": {
+        "mine": "英伟达发布RTX Spark，面向普通用户的AI芯片",
+        "yours": "英伟达公布RTX Spark，称其将重塑PC"
+      },
+      "subtitle_diff": {
+        "mine": "AI PC时代来了？",
+        "yours": "新时代？"
+      },
+      "body_diffs": [
+        {
+          "index": 0,
+          "mine": "英伟达终于在Computex 2026上发布了RTX Spark，这是一款为Agentic AI量身打造的SoC，将驱动「新一代」PC，而且几乎所有主流笔记本厂商都将推出搭载该芯片的笔记本电脑。",
+          "yours": "英伟达终于在Computex 2026上公布了RTX Spark。这是一款SoC芯片，将为「新一代」PC提供动力，专为智能体AI打造。基本上，所有主流笔记本厂商都将推出搭载这款芯片的笔记本电脑。",
+          "my_sentences": [
+            "英伟达终于在Computex 2026上发布了RTX Spark，这是一款为Agentic AI量身打造的SoC，将驱动「新一代」PC，而且几乎所有主流笔记本厂商都将推出搭载该芯片的笔记本电脑。"
+          ],
+          "your_sentences": [
+            "英伟达终于在Computex 2026上公布了RTX Spark。",
+            "这是一款SoC芯片，将为「新一代」PC提供动力，专为智能体AI打造。",
+            "基本上，所有主流笔记本厂商都将推出搭载这款芯片的笔记本电脑。"
+          ]
+        },
+        {
+          "index": 1,
+          "mine": "与在CES 2025上首次亮相的DGX Spark一样，RTX Spark也是一款为Agentic AI打造的SoC。该芯片将配备20核ARM CPU、拥有6144个CUDA核心的Blackwell GPU，以及最高128GB的共享显存。英伟达宣称，这款芯片的AI算力最高可达1 petaflop，并能在1440p分辨率下以最高100fps运行游戏。",
+          "yours": "就像在CES 2025上首次亮相的DGX Spark一样，RTX Spark也是一款为智能体AI打造的SoC芯片。这款芯片将配备20核ARM CPU、一颗拥有6144个CUDA核心的Blackwell GPU，以及最高128GB的VRAM，并由CPU和GPU共享。英伟达声称，这款芯片最高可提供1petaflop的AI算力，并能以最高100fps的帧率运行1440p游戏。",
+          "my_sentences": [
+            "与在CES 2025上首次亮相的DGX Spark一样，RTX Spark也是一款为Agentic AI打造的SoC。",
+            "该芯片将配备20核ARM CPU、拥有6144个CUDA核心的Blackwell GPU，以及最高128GB的共享显存。",
+            "英伟达宣称，这款芯片的AI算力最高可达1 petaflop，并能在1440p分辨率下以最高100fps运行游戏。"
+          ],
+          "your_sentences": [
+            "就像在CES 2025上首次亮相的DGX Spark一样，RTX Spark也是一款为智能体AI打造的SoC芯片。",
+            "这款芯片将配备20核ARM CPU、一颗拥有6144个CUDA核心的Blackwell GPU，以及最高128GB的VRAM，并由CPU和GPU共享。",
+            "英伟达声称，这款芯片最高可提供1petaflop的AI算力，并能以最高100fps的帧率运行1440p游戏。"
+          ]
+        },
+        {
+          "index": 2,
+          "mine": "英伟达希望RTX Spark与Windows携手，带来一种全新的计算方式。微软对此已暗示多时，但在英伟达台北发布会上，CEO黄仁勋亲自挑明：「四十年来，你启动应用，点击，打字。有了RTX Spark和微软Windows，你只需开口提问——PC就会完成工作。」我不确定自己是否准备好迎接一个对着电脑大喊大叫让它干活的年代，不过话说回来，我现在好像也没少这么干。",
+          "yours": "英伟达希望RTX Spark与Windows一起带来一种全新的计算方式。微软此前已经暗示过一段时间类似的方向，但在英伟达台北发布会上，CEO黄仁勋亲自把话说得很明白：「四十年来，你都是启动应用。点击。打字。有了RTX Spark和Microsoft Windows之后，你只需要提出要求——PC就会完成工作。」",
+          "my_sentences": [
+            "英伟达希望RTX Spark与Windows携手，带来一种全新的计算方式。",
+            "微软对此已暗示多时，但在英伟达台北发布会上，CEO黄仁勋亲自挑明：「四十年来，你启动应用，点击，打字。",
+            "有了RTX Spark和微软Windows，你只需开口提问——PC就会完成工作。",
+            "」我不确定自己是否准备好迎接一个对着电脑大喊大叫让它干活的年代，不过话说回来，我现在好像也没少这么干。"
+          ],
+          "your_sentences": [
+            "英伟达希望RTX Spark与Windows一起带来一种全新的计算方式。",
+            "微软此前已经暗示过一段时间类似的方向，但在英伟达台北发布会上，CEO黄仁勋亲自把话说得很明白：「四十年来，你都是启动应用。",
+            "点击。",
+            "打字。",
+            "有了RTX Spark和Microsoft Windows之后，你只需要提出要求——PC就会完成工作。",
+            "」"
+          ]
+        },
+        {
+          "index": 3,
+          "mine": "同样需要牢记的是，尽管DGX Spark的GPU纸面参数令人印象深刻，但它将绑定ARM处理器。虽然英伟达凭借近乎无限的资源很可能解决兼容性问题，但ARM处理器在PC游戏领域历来表现不佳。早在2024年Copilot+笔记本上市时，就有大量游戏根本无法在高通芯片上运行，因为它们都是为x86平台打造的。英伟达能否绕过这一难题，只有时间能给出答案，但即便可以，我也不会专门去买一台RTX Spark系统当游戏本用。",
+          "yours": "同样需要注意的是，尽管DGX Spark中的GPU从纸面规格来看相当亮眼，但它将与一颗ARM处理器绑定在一起。凭借近乎无限的资源，英伟达很可能有能力解决兼容性方面的小问题，但ARM处理器传统上并不擅长PC游戏。即便Copilot+笔记本早在2024年就已经推出，当时仍有大量游戏甚至无法在高通芯片上运行，因为这些游戏是为x86平台打造的。英伟达能否绕过这个问题，还需要时间来证明；但即使它真的做到了，我也不会真的把一台搭载RTX Spark的设备当作游戏笔记本来购买。",
+          "my_sentences": [
+            "同样需要牢记的是，尽管DGX Spark的GPU纸面参数令人印象深刻，但它将绑定ARM处理器。",
+            "虽然英伟达凭借近乎无限的资源很可能解决兼容性问题，但ARM处理器在PC游戏领域历来表现不佳。",
+            "早在2024年Copilot+笔记本上市时，就有大量游戏根本无法在高通芯片上运行，因为它们都是为x86平台打造的。",
+            "英伟达能否绕过这一难题，只有时间能给出答案，但即便可以，我也不会专门去买一台RTX Spark系统当游戏本用。"
+          ],
+          "your_sentences": [
+            "同样需要注意的是，尽管DGX Spark中的GPU从纸面规格来看相当亮眼，但它将与一颗ARM处理器绑定在一起。",
+            "凭借近乎无限的资源，英伟达很可能有能力解决兼容性方面的小问题，但ARM处理器传统上并不擅长PC游戏。",
+            "即便Copilot+笔记本早在2024年就已经推出，当时仍有大量游戏甚至无法在高通芯片上运行，因为这些游戏是为x86平台打造的。",
+            "英伟达能否绕过这个问题，还需要时间来证明；",
+            "但即使它真的做到了，我也不会真的把一台搭载RTX Spark的设备当作游戏笔记本来购买。"
+          ]
+        },
+        {
+          "index": 4,
+          "mine": "相反，这些系统将更侧重于创意和AI工作负载，价格也很可能与之匹配。英伟达和所有将推出RTX Spark笔记本及迷你PC的厂商均未公布价格，但可以想见它们会相当昂贵——尤其是配备完整128GB内存的版本。据The Verge报道，英伟达声称未来某个时候会推出仅16GB内存的低价版本，但尚不清楚要等多久。",
+          "yours": "相反，这些系统将更偏向创作和AI工作负载，价格很可能也会与之匹配。英伟达以及任何将推出RTX Spark笔记本和迷你PC的厂商目前都还没有公布价格，但可以安全地推测，它们会相当昂贵——尤其是如果搭载完整128GB内存的话。据The Verge报道，英伟达称未来某个时候会推出更便宜的版本，只配备16GB RAM，但目前还不清楚需要等多久。",
+          "my_sentences": [
+            "相反，这些系统将更侧重于创意和AI工作负载，价格也很可能与之匹配。",
+            "英伟达和所有将推出RTX Spark笔记本及迷你PC的厂商均未公布价格，但可以想见它们会相当昂贵——尤其是配备完整128GB内存的版本。",
+            "据The Verge报道，英伟达声称未来某个时候会推出仅16GB内存的低价版本，但尚不清楚要等多久。"
+          ],
+          "your_sentences": [
+            "相反，这些系统将更偏向创作和AI工作负载，价格很可能也会与之匹配。",
+            "英伟达以及任何将推出RTX Spark笔记本和迷你PC的厂商目前都还没有公布价格，但可以安全地推测，它们会相当昂贵——尤其是如果搭载完整128GB内存的话。",
+            "据The Verge报道，英伟达称未来某个时候会推出更便宜的版本，只配备16GB RAM，但目前还不清楚需要等多久。"
+          ]
+        },
+        {
+          "index": 5,
+          "mine": "无论如何，搭载RTX Spark的笔记本预计将在2026年秋季上架，所以如果你想为英伟达的Agentic未来愿景买单，不用等太久。",
+          "yours": "无论如何，搭载RTX Spark的笔记本应该会在2026年秋季上架销售。因此，如果你确实想买入英伟达所描绘的智能体未来，也不用等待太久。",
+          "my_sentences": [
+            "无论如何，搭载RTX Spark的笔记本预计将在2026年秋季上架，所以如果你想为英伟达的Agentic未来愿景买单，不用等太久。"
+          ],
+          "your_sentences": [
+            "无论如何，搭载RTX Spark的笔记本应该会在2026年秋季上架销售。",
+            "因此，如果你确实想买入英伟达所描绘的智能体未来，也不用等待太久。"
+          ]
+        },
+        {
+          "index": 6,
+          "mine": "Jackie Thomas是IGN硬件与购买指南编辑，也是PC组件女王。你可以在@Jackiecobra关注她。",
+          "yours": "",
+          "my_sentences": [
+            "Jackie Thomas是IGN硬件与购买指南编辑，也是PC组件女王。",
+            "你可以在@Jackiecobra关注她。"
+          ],
+          "your_sentences": []
+        }
+      ],
+      "dictionary_candidates": []
+    }
+  ]
+}

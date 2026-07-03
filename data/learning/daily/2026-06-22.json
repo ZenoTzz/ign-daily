@@ -5,7 +5,7 @@
   "status": "observed",
   "source_hash": "7af74cb5e0ef987447c426b4d0ed3cf406028036",
   "signal_count": 4,
-  "candidate_count": 4,
+  "candidate_count": 6,
   "signals": [
     {
       "type": "user_polish",
@@ -246,11 +246,50 @@
         }
       ],
       "contradiction": ""
+    },
+    {
+      "id": "dict_candidate_super_yooka_laylee_kart_00bf15c57af5",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：Super Yooka-Laylee Kart → Super Yooka-Laylee Kart",
+      "rule": "建议将「Super Yooka-Laylee Kart」加入词库，译为「Super Yooka-Laylee Kart」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-06-22",
+          "article_id": 4,
+          "before": "Super Yooka-Laylee Kart",
+          "after": "Super Yooka-Laylee Kart",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id": "dict_candidate_sesame_street_movie_fc47f18314af",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：Sesame Street Movie → 芝麻街",
+      "rule": "建议将「Sesame Street Movie」加入词库，译为「芝麻街」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-06-22",
+          "article_id": 5,
+          "before": "Sesame Street Movie",
+          "after": "芝麻街",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "contradiction": ""
     }
   ],
   "notes": [
     "Only Tencent Docs imported polished drafts were used.",
-    "Single-article specifics were kept as observe-level evidence and not written to STYLE_PROFILE.md."
+    "Single-article specifics were kept as observe-level evidence and not written to STYLE_PROFILE.md.",
+    "Added source+polished dictionary candidates for GPT/Tencent workflow."
   ],
-  "updated_at": "2026-06-22T21:49:02+08:00"
+  "updated_at": "2026-07-01T22:36:50+08:00"
 }

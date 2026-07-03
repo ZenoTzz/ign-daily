@@ -3,7 +3,7 @@
   "model": "codex",
   "source_hash": "cc47813b35b76f8819cfdc1502130f25017bbff0",
   "signal_count": 8,
-  "candidate_count": 4,
+  "candidate_count": 6,
   "signals": [
     {
       "type": "user_polish",
@@ -458,15 +458,54 @@
         }
       ],
       "contradiction": ""
+    },
+    {
+      "id": "dict_candidate_the_wait_cadaf1e411d0",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：The Wait → 上古卷轴6",
+      "rule": "建议将「The Wait」加入词库，译为「上古卷轴6」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-06-09",
+          "article_id": 18,
+          "before": "The Wait",
+          "after": "上古卷轴6",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id": "dict_candidate_spider_man_brand_new_day_will_be_76ae8718b88c",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：Spider-Man: Brand New Day Will Be → 蜘蛛侠：崭新之日",
+      "rule": "建议将「Spider-Man: Brand New Day Will Be」加入词库，译为「蜘蛛侠：崭新之日」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-06-09",
+          "article_id": 30,
+          "before": "Spider-Man: Brand New Day Will Be",
+          "after": "蜘蛛侠：崭新之日",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "contradiction": ""
     }
   ],
   "notes": [
     "Codex补跑腾讯文档润色，只提取跨篇可复用规律；单篇特例不直接升级为长期规则。",
     "未学习汇率数值、国区售价、额外上映信息及“今日/昨晚”等时效性补充，避免脱离原文或随时间失效。",
     "所有候选仍需在学习页确认后才能进入STYLE_PROFILE.md。",
-    "已处理2026-W24学习页反馈：明确采纳的规则进入长期配置，暂缓项继续观察；未重复提取候选。"
+    "已处理2026-W24学习页反馈：明确采纳的规则进入长期配置，暂缓项继续观察；未重复提取候选。",
+    "Added source+polished dictionary candidates for GPT/Tencent workflow."
   ],
-  "updated_at": "2026-06-15T21:48:32+08:00",
+  "updated_at": "2026-07-01T22:36:49+08:00",
   "observer": "codex",
   "status": "observed"
 }

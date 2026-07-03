@@ -5,7 +5,7 @@
   "status": "observed",
   "source_hash": "d65f18ee9b9fc6fda70b44059a4b051d3adc613b",
   "signal_count": 8,
-  "candidate_count": 5,
+  "candidate_count": 14,
   "signals": [
     {
       "type": "user_polish",
@@ -400,12 +400,184 @@
         }
       ],
       "contradiction": ""
+    },
+    {
+      "id": "dict_candidate_saros_developer_housemarque_wants_7ba0eee11189",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：Saros Developer Housemarque Wants → 沙罗周期",
+      "rule": "建议将「Saros Developer Housemarque Wants」加入词库，译为「沙罗周期」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-06-18",
+          "article_id": 2,
+          "before": "Saros Developer Housemarque Wants",
+          "after": "沙罗周期",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id": "dict_candidate_death_stranding_movie_targeting_2027_sho_8d9383d8f663",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：Death Stranding Movie Targeting 2027 Shoot → 死亡搁浅",
+      "rule": "建议将「Death Stranding Movie Targeting 2027 Shoot」加入词库，译为「死亡搁浅」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-06-18",
+          "article_id": 3,
+          "before": "Death Stranding Movie Targeting 2027 Shoot",
+          "after": "死亡搁浅",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id": "dict_candidate_entire_luna_abyss_development_team_laid_b45da8d3c2d9",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：Entire Luna Abyss Development Team Laid → 月之深渊",
+      "rule": "建议将「Entire Luna Abyss Development Team Laid」加入词库，译为「月之深渊」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-06-18",
+          "article_id": 4,
+          "before": "Entire Luna Abyss Development Team Laid",
+          "after": "月之深渊",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id": "dict_candidate_microsoft_allegedly_revealed_ninja_theor_e5e9afb3127d",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：Microsoft Allegedly Revealed Ninja Theory's New → 地狱之刃：塞娜",
+      "rule": "建议将「Microsoft Allegedly Revealed Ninja Theory's New」加入词库，译为「地狱之刃：塞娜」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-06-18",
+          "article_id": 7,
+          "before": "Microsoft Allegedly Revealed Ninja Theory's New",
+          "after": "地狱之刃：塞娜",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id": "dict_candidate_ubisoft_says_assassin_s_creed_black_flag_43de47e20664",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：Ubisoft Says Assassin's Creed Black Flag → 刺客信条：黑旗 记忆重置",
+      "rule": "建议将「Ubisoft Says Assassin's Creed Black Flag」加入词库，译为「刺客信条：黑旗 记忆重置」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-06-18",
+          "article_id": 22,
+          "before": "Ubisoft Says Assassin's Creed Black Flag",
+          "after": "刺客信条：黑旗 记忆重置",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id": "dict_candidate_edward_catway_45d7e812ef7f",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：Edward Catway → 爱德华喵喵",
+      "rule": "建议将「Edward Catway」加入词库，译为「爱德华喵喵」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-06-18",
+          "article_id": 22,
+          "before": "Edward Catway",
+          "after": "爱德华喵喵",
+          "evidence": "来自文章页未确认新词候选。"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id": "dict_candidate_friend_to_all_b27292f307c1",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：Friend to All → 全员好友",
+      "rule": "建议将「Friend to All」加入词库，译为「全员好友」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-06-18",
+          "article_id": 22,
+          "before": "Friend to All",
+          "after": "全员好友",
+          "evidence": "来自文章页未确认新词候选。"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id": "dict_candidate_rockstar_dishes_out_free_gta_45a1416583d4",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：Rockstar Dishes Out Free GTA → GTA5",
+      "rule": "建议将「Rockstar Dishes Out Free GTA」加入词库，译为「GTA5」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-06-18",
+          "article_id": 29,
+          "before": "Rockstar Dishes Out Free GTA",
+          "after": "GTA5",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id": "dict_candidate_tim_sweeney_details_vision_1d0876ad7cc0",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：Tim Sweeney Details Vision → 堡垒之夜",
+      "rule": "建议将「Tim Sweeney Details Vision」加入词库，译为「堡垒之夜」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-06-18",
+          "article_id": 30,
+          "before": "Tim Sweeney Details Vision",
+          "after": "堡垒之夜",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "contradiction": ""
     }
   ],
   "notes": [
     "???2026-06-18????????????source_hash?????????????",
     "????????????????????????????????",
-    "????? data/learning/* ?????? STYLE_PROFILE.md?"
+    "????? data/learning/* ?????? STYLE_PROFILE.md?",
+    "Added source+polished dictionary candidates for GPT/Tencent workflow."
   ],
-  "updated_at": "2026-06-18T21:48:32+08:00"
+  "updated_at": "2026-07-01T22:36:50+08:00"
 }

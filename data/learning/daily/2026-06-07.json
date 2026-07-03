@@ -5,7 +5,7 @@
   "status": "observed",
   "source_hash": "4e867bfc7365c6223f3d9a7d69e265ada85a218b",
   "signal_count": 2,
-  "candidate_count": 2,
+  "candidate_count": 4,
   "signals": [
     {
       "type": "user_polish",
@@ -146,11 +146,50 @@
         }
       ],
       "contradiction": ""
+    },
+    {
+      "id": "dict_candidate_square_enix_picks_critical_role_star_7a703e3f4271",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：Square Enix Picks Critical Role Star → 最终幻想7 重制版 启示录",
+      "rule": "建议将「Square Enix Picks Critical Role Star」加入词库，译为「最终幻想7 重制版 启示录」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-06-07",
+          "article_id": 7,
+          "before": "Square Enix Picks Critical Role Star",
+          "after": "最终幻想7 重制版 启示录",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id": "dict_candidate_blood_rain_dev_f82c6fec762b",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：Blood Rain Dev → 剑星：血雨",
+      "rule": "建议将「Blood Rain Dev」加入词库，译为「剑星：血雨」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-06-07",
+          "article_id": 15,
+          "before": "Blood Rain Dev",
+          "after": "剑星：血雨",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "contradiction": ""
     }
   ],
   "notes": [
     "Only Tencent Docs imported polished drafts were used.",
-    "Single-article specifics were kept as observe-level evidence and not written to STYLE_PROFILE.md."
+    "Single-article specifics were kept as observe-level evidence and not written to STYLE_PROFILE.md.",
+    "Added source+polished dictionary candidates for GPT/Tencent workflow."
   ],
-  "updated_at": "2026-06-22T21:49:02+08:00"
+  "updated_at": "2026-07-01T22:36:49+08:00"
 }

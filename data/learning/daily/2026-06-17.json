@@ -5,7 +5,7 @@
   "status": "observed",
   "source_hash": "244e2e0311ce61e3cb20570fcd6dd6b6d3a9cdd1",
   "signal_count": 8,
-  "candidate_count": 5,
+  "candidate_count": 12,
   "signals": [
     {
       "type": "user_polish",
@@ -502,6 +502,139 @@
         }
       ],
       "contradiction": "?XGP??????????????????????????????????????"
+    },
+    {
+      "id": "dict_candidate_harry_potter_tv_series_casts_peter_0dd0c500ece1",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：Harry Potter TV Series Casts Peter → 哈利·波特",
+      "rule": "建议将「Harry Potter TV Series Casts Peter」加入词库，译为「哈利·波特」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-06-17",
+          "article_id": 3,
+          "before": "Harry Potter TV Series Casts Peter",
+          "after": "哈利·波特",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id": "dict_candidate_life_1944eacabd64",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：Life → 奇异人生",
+      "rule": "建议将「Life」加入词库，译为「奇异人生」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-06-17",
+          "article_id": 5,
+          "before": "Life",
+          "after": "奇异人生",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id": "dict_candidate_bank_balances_rolled_back_75c65b398a19",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：Bank Balances Rolled Back → 极限竞速：地平线6",
+      "rule": "建议将「Bank Balances Rolled Back」加入词库，译为「极限竞速：地平线6」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-06-17",
+          "article_id": 6,
+          "before": "Bank Balances Rolled Back",
+          "after": "极限竞速：地平线6",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id": "dict_candidate_double_fine_responds_ec15bd5f59a0",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：Double Fine Responds → 意航员",
+      "rule": "建议将「Double Fine Responds」加入词库，译为「意航员」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-06-17",
+          "article_id": 10,
+          "before": "Double Fine Responds",
+          "after": "意航员",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id": "dict_candidate_fortnite_behind_the_scenes_video_e9e5192e0c30",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：Fortnite Behind the Scenes Video → 堡垒之夜",
+      "rule": "建议将「Fortnite Behind the Scenes Video」加入词库，译为「堡垒之夜」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-06-17",
+          "article_id": 11,
+          "before": "Fortnite Behind the Scenes Video",
+          "after": "堡垒之夜",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id": "dict_candidate_resident_evil_lore_master_reveals_the_b694fbfeae28",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：Resident Evil Lore Master Reveals The → 生化危机",
+      "rule": "建议将「Resident Evil Lore Master Reveals The」加入词库，译为「生化危机」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-06-17",
+          "article_id": 23,
+          "before": "Resident Evil Lore Master Reveals The",
+          "after": "生化危机",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id": "dict_candidate_preorders_are_up_0e331180709b",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：Preorders Are Up → 黎明行者之血",
+      "rule": "建议将「Preorders Are Up」加入词库，译为「黎明行者之血」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-06-17",
+          "article_id": 28,
+          "before": "Preorders Are Up",
+          "after": "黎明行者之血",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "contradiction": ""
     }
   ],
   "notes": [
@@ -511,5 +644,5 @@
     "Added source+polished dictionary candidates for GPT/Tencent workflow.",
     "Codex filtered low-confidence title-fragment dictionary candidates during backfill."
   ],
-  "updated_at": "2026-06-30T22:40:29+08:00"
+  "updated_at": "2026-07-01T22:36:50+08:00"
 }

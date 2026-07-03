@@ -5,7 +5,7 @@
   "status": "observed",
   "source_hash": "f7d6bb38644b39bd642d6799df5a90cacb641641",
   "signal_count": 17,
-  "candidate_count": 0,
+  "candidate_count": 6,
   "signals": [
     {
       "type": "user_polish",
@@ -526,11 +526,127 @@
       }
     }
   ],
-  "candidates": [],
+  "candidates": [
+    {
+      "id": "dict_candidate_rambo_prequel_starring_noah_centineo_get_7810a9bb5733",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：Rambo Prequel Starring Noah Centineo Gets → 第一滴血",
+      "rule": "建议将「Rambo Prequel Starring Noah Centineo Gets」加入词库，译为「第一滴血」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-05-29",
+          "article_id": 2,
+          "before": "Rambo Prequel Starring Noah Centineo Gets",
+          "after": "第一滴血",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id": "dict_candidate_call_a4cabed0475e",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：Call → 使命召唤：战区",
+      "rule": "建议将「Call」加入词库，译为「使命召唤：战区」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-05-29",
+          "article_id": 7,
+          "before": "Call",
+          "after": "使命召唤：战区",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id": "dict_candidate_aquatic_e3f91c6131de",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：Aquatic → 动物园之星2",
+      "rule": "建议将「Aquatic」加入词库，译为「动物园之星2」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-05-29",
+          "article_id": 10,
+          "before": "Aquatic",
+          "after": "动物园之星2",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id": "dict_candidate_take_two_boss_cc6c8bf5ed7e",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：Take-Two Boss → GTA",
+      "rule": "建议将「Take-Two Boss」加入词库，译为「GTA」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-05-29",
+          "article_id": 11,
+          "before": "Take-Two Boss",
+          "after": "GTA",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id": "dict_candidate_they_haven_t_been_able_to_do_it_take_two_96dc99e302de",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：They Haven't Been Able to Do It': Take-Two Boss → GTA",
+      "rule": "建议将「They Haven't Been Able to Do It': Take-Two Boss」加入词库，译为「GTA」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-05-29",
+          "article_id": 11,
+          "before": "They Haven't Been Able to Do It': Take-Two Boss",
+          "after": "GTA",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id": "dict_candidate_developer_67381769e019",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：Developer → 平行人生",
+      "rule": "建议将「Developer」加入词库，译为「平行人生」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-05-29",
+          "article_id": 13,
+          "before": "Developer",
+          "after": "平行人生",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "contradiction": ""
+    }
+  ],
   "notes": [
     "??? Codex ??? source_hash ?????????",
     "source_hash ???? polished/feedback/weekly feedback ?????????????",
-    "API returned malformed JSON; automatic repair did not produce valid JSON."
+    "API returned malformed JSON; automatic repair did not produce valid JSON.",
+    "Added source+polished dictionary candidates for GPT/Tencent workflow."
   ],
-  "updated_at": "2026-06-17T21:49:47+08:00"
+  "updated_at": "2026-07-01T22:36:47+08:00"
 }

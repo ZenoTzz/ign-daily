@@ -3,7 +3,7 @@
   "model": "codex",
   "source_hash": "77e60b5c014564c2e70026c4ca1c97cb2d17bb99",
   "signal_count": 8,
-  "candidate_count": 6,
+  "candidate_count": 14,
   "signals": [
     {
       "type": "user_polish",
@@ -488,15 +488,168 @@
         }
       ],
       "contradiction": ""
+    },
+    {
+      "id": "dict_candidate_ubisoft_leaves_assassin_s_creed_shadows__d483f91c3f92",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：Ubisoft Leaves Assassin's Creed Shadows With → 刺客信条：影",
+      "rule": "建议将「Ubisoft Leaves Assassin's Creed Shadows With」加入词库，译为「刺客信条：影」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-06-11",
+          "article_id": 4,
+          "before": "Ubisoft Leaves Assassin's Creed Shadows With",
+          "after": "刺客信条：影",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id": "dict_candidate_red_storm_entertainment_295f89dc1a68",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：Red Storm Entertainment → Red Storm Entertainment",
+      "rule": "建议将「Red Storm Entertainment」加入词库，译为「Red Storm Entertainment」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-06-11",
+          "article_id": 11,
+          "before": "Red Storm Entertainment",
+          "after": "Red Storm Entertainment",
+          "evidence": "来自文章页未确认新词候选。"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id": "dict_candidate_redlynx_715d770f092c",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：RedLynx → RedLynx",
+      "rule": "建议将「RedLynx」加入词库，译为「RedLynx」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-06-11",
+          "article_id": 11,
+          "before": "RedLynx",
+          "after": "RedLynx",
+          "evidence": "来自文章页未确认新词候选。"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id": "dict_candidate_massive_entertainment_0333d1eee032",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：Massive Entertainment → Massive Entertainment",
+      "rule": "建议将「Massive Entertainment」加入词库，译为「Massive Entertainment」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-06-11",
+          "article_id": 11,
+          "before": "Massive Entertainment",
+          "after": "Massive Entertainment",
+          "evidence": "来自文章页未确认新词候选。"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id": "dict_candidate_bluesky_0890d26b588c",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：Bluesky → Bluesky",
+      "rule": "建议将「Bluesky」加入词库，译为「Bluesky」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-06-11",
+          "article_id": 11,
+          "before": "Bluesky",
+          "after": "Bluesky",
+          "evidence": "来自文章页未确认新词候选。"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id": "dict_candidate_with_a_zelda_movie_9382686fcfdf",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：With a Zelda Movie → 塞尔达传说 时之笛",
+      "rule": "建议将「With a Zelda Movie」加入词库，译为「塞尔达传说 时之笛」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-06-11",
+          "article_id": 14,
+          "before": "With a Zelda Movie",
+          "after": "塞尔达传说 时之笛",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id": "dict_candidate_capcom_explains_how_tifa_from_final_5d5336926bab",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：Capcom Explains How Tifa From Final → 街头霸王6",
+      "rule": "建议将「Capcom Explains How Tifa From Final」加入词库，译为「街头霸王6」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-06-11",
+          "article_id": 18,
+          "before": "Capcom Explains How Tifa From Final",
+          "after": "街头霸王6",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id": "dict_candidate_resident_evil_veronica_is_966a3333c277",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：Resident Evil Veronica Is → 生化危机 维罗妮卡 重制版",
+      "rule": "建议将「Resident Evil Veronica Is」加入词库，译为「生化危机 维罗妮卡 重制版」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-06-11",
+          "article_id": 23,
+          "before": "Resident Evil Veronica Is",
+          "after": "生化危机 维罗妮卡 重制版",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "contradiction": ""
     }
   ],
   "notes": [
     "Codex补跑腾讯文档润色，只提取跨篇可复用规律；单篇特例不直接升级为长期规则。",
     "未学习汇率数值、国区售价、额外上映信息及“今日/昨晚”等时效性补充，避免脱离原文或随时间失效。",
     "所有候选仍需在学习页确认后才能进入STYLE_PROFILE.md。",
-    "已处理2026-W24学习页反馈：明确采纳的规则进入长期配置，暂缓项继续观察；未重复提取候选。"
+    "已处理2026-W24学习页反馈：明确采纳的规则进入长期配置，暂缓项继续观察；未重复提取候选。",
+    "Added source+polished dictionary candidates for GPT/Tencent workflow."
   ],
-  "updated_at": "2026-06-15T21:48:32+08:00",
+  "updated_at": "2026-07-01T22:36:50+08:00",
   "observer": "codex",
   "status": "observed"
 }

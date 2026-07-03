@@ -1,14 +1,88 @@
 {
   "date": "2026-06-25",
-  "generated_at": "2026-06-26T22:43:30.729147",
+  "generated_at": "2026-07-01T22:36:50.728942",
   "total_articles": 9,
+  "dictionary_candidate_count": 4,
+  "dictionary_candidates": [
+    {
+      "id": "dict_candidate_sony_boasts_that_gta_76c6064cb21b",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "games",
+      "en": "Sony Boasts That GTA",
+      "cn": "GTA6",
+      "title": "词库候选：Sony Boasts That GTA → GTA6",
+      "rule": "建议将「Sony Boasts That GTA」加入词库，译为「GTA6」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "date": "2026-06-25",
+      "article_id": 9,
+      "article_title": "索尼称《GTA6》在PS5上表现最佳，并解释原因",
+      "url": "https://www.ign.com/articles/grand-theft-auto-6-plays-best-on-ps5-sony-boasts-heres-why",
+      "evidence": "英文标题开头专名与中文标题书名号对应。"
+    },
+    {
+      "id": "dict_candidate_kadokawa_ceo_accused_f9f8d58f4c5c",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "terms",
+      "en": "Kadokawa CEO Accused",
+      "cn": "艾尔登法环",
+      "title": "词库候选：Kadokawa CEO Accused → 艾尔登法环",
+      "rule": "建议将「Kadokawa CEO Accused」加入词库，译为「艾尔登法环」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "date": "2026-06-25",
+      "article_id": 14,
+      "article_title": "投资者称角川应从《艾尔登法环》中赚更多",
+      "url": "https://www.ign.com/articles/kadokawa-should-be-making-more-money-from-elden-ring-activist-investor-says-as-ceo-survives-shareholder-vote",
+      "evidence": "英文标题开头专名与中文标题书名号对应。"
+    },
+    {
+      "id": "dict_candidate_fortnite_begins_reselling_old_battle_pas_829172bd2d7a",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "games",
+      "en": "Fortnite Begins Reselling Old Battle Pass",
+      "cn": "堡垒之夜",
+      "title": "词库候选：Fortnite Begins Reselling Old Battle Pass → 堡垒之夜",
+      "rule": "建议将「Fortnite Begins Reselling Old Battle Pass」加入词库，译为「堡垒之夜」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "date": "2026-06-25",
+      "article_id": 18,
+      "article_title": "《堡垒之夜》下个更新开始复售旧战斗通行证皮肤",
+      "url": "https://www.ign.com/articles/fortnite-begins-reselling-old-battle-pass-skins-in-next-update",
+      "evidence": "英文标题开头专名与中文标题书名号对应。"
+    },
+    {
+      "id": "dict_candidate_gta_82a2cf34af76",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "games",
+      "en": "GTA",
+      "cn": "GTA6",
+      "title": "词库候选：GTA → GTA6",
+      "rule": "建议将「GTA」加入词库，译为「GTA6」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "date": "2026-06-25",
+      "article_id": 29,
+      "article_title": "《GTA6》或借鉴《荒野大镖客：救赎2》的游戏机制",
+      "url": "https://www.ign.com/articles/gta-6-may-be-borrowing-a-major-mechanic-from-red-dead-redemption-2",
+      "evidence": "英文标题开头专名与中文标题书名号对应。"
+    }
+  ],
+  "learning_evidence_updated": true,
+  "daily_learning_updated": true,
   "articles": [
     {
       "id": 1,
       "cn_title": "Valve自曝在内存采购上毫无议价权",
       "en_title": "Valve: RAM Companies State Prices Monthly, ‘If We Say No, Then They Never Talk to Us Again’",
       "url": "https://www.ign.com/articles/valve-ram-companies-state-prices-monthly-if-we-say-no-then-they-never-talk-to-us-again",
-      "category": null,
+      "category": "行业动态",
+      "has_translation": true,
       "title_diff": null,
       "subtitle_diff": null,
       "body_diffs": [
@@ -57,14 +131,16 @@
           ],
           "your_sentences": []
         }
-      ]
+      ],
+      "dictionary_candidates": []
     },
     {
       "id": 4,
-      "cn_title": "《Epic Games》Epic CEO谈UE6 AI集成与游戏成功困境",
+      "cn_title": "Epic CEO谈虚幻引擎6 AI集成与游戏成功困境",
       "en_title": "Tim Sweeney Interview: Epic Games CEO on AI in UE6 and Why Games Struggle to Find Success",
       "url": "https://www.ign.com/articles/tim-sweeney-interview-epic-games-ceo-on-ai-in-ue6-and-why-games-struggle-to-find-success",
-      "category": null,
+      "category": "行业动态",
+      "has_translation": true,
       "title_diff": {
         "mine": "《Epic Games》Epic CEO谈UE6 AI集成与游戏成功困境",
         "yours": "Epic CEO谈虚幻引擎6 AI集成与游戏成功困境"
@@ -680,14 +756,16 @@
             "我们必须更稳定地做出更好的游戏，而且开发效率必须大幅提升。"
           ]
         }
-      ]
+      ],
+      "dictionary_candidates": []
     },
     {
       "id": 9,
-      "cn_title": "《侠盗猎车手》索尼称《GTA6》在PS5上表现最佳，并解释原因",
+      "cn_title": "索尼称《GTA6》在PS5上表现最佳，并解释原因",
       "en_title": "Grand Theft Auto 6 'Plays Best on PS5,' Sony Boasts — Here's Why",
       "url": "https://www.ign.com/articles/grand-theft-auto-6-plays-best-on-ps5-sony-boasts-heres-why",
-      "category": null,
+      "category": "游戏新闻",
+      "has_translation": true,
       "title_diff": {
         "mine": "《侠盗猎车手》索尼称《GTA6》在PS5上表现最佳，并解释原因",
         "yours": "索尼称《GTA6》在PS5上表现最佳，并解释原因"
@@ -741,14 +819,34 @@
           ],
           "your_sentences": []
         }
+      ],
+      "dictionary_candidates": [
+        {
+          "id": "dict_candidate_sony_boasts_that_gta_76c6064cb21b",
+          "category": "dictionary",
+          "type": "dictionary_candidate",
+          "dict_category": "games",
+          "en": "Sony Boasts That GTA",
+          "cn": "GTA6",
+          "title": "词库候选：Sony Boasts That GTA → GTA6",
+          "rule": "建议将「Sony Boasts That GTA」加入词库，译为「GTA6」。",
+          "status": "ready_for_review",
+          "confidence": "high",
+          "date": "2026-06-25",
+          "article_id": 9,
+          "article_title": "索尼称《GTA6》在PS5上表现最佳，并解释原因",
+          "url": "https://www.ign.com/articles/grand-theft-auto-6-plays-best-on-ps5-sony-boasts-heres-why",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
       ]
     },
     {
       "id": 14,
-      "cn_title": "投资者称角川应从《艾尔登法环》赚更多，CEO涉险过关",
+      "cn_title": "投资者称角川应从《艾尔登法环》中赚更多",
       "en_title": "Kadokawa Should Be Making More Money From Elden Ring, Activist Investor Says as CEO Survives Shareholder Vote",
       "url": "https://www.ign.com/articles/kadokawa-should-be-making-more-money-from-elden-ring-activist-investor-says-as-ceo-survives-shareholder-vote",
-      "category": null,
+      "category": "行业动态",
+      "has_translation": true,
       "title_diff": {
         "mine": "投资者称角川应从《艾尔登法环》赚更多，CEO涉险过关",
         "yours": "投资者称角川应从《艾尔登法环》中赚更多"
@@ -794,6 +892,25 @@
           ],
           "your_sentences": []
         }
+      ],
+      "dictionary_candidates": [
+        {
+          "id": "dict_candidate_kadokawa_ceo_accused_f9f8d58f4c5c",
+          "category": "dictionary",
+          "type": "dictionary_candidate",
+          "dict_category": "terms",
+          "en": "Kadokawa CEO Accused",
+          "cn": "艾尔登法环",
+          "title": "词库候选：Kadokawa CEO Accused → 艾尔登法环",
+          "rule": "建议将「Kadokawa CEO Accused」加入词库，译为「艾尔登法环」。",
+          "status": "ready_for_review",
+          "confidence": "high",
+          "date": "2026-06-25",
+          "article_id": 14,
+          "article_title": "投资者称角川应从《艾尔登法环》中赚更多",
+          "url": "https://www.ign.com/articles/kadokawa-should-be-making-more-money-from-elden-ring-activist-investor-says-as-ceo-survives-shareholder-vote",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
       ]
     },
     {
@@ -801,7 +918,8 @@
       "cn_title": "《堡垒之夜》下个更新开始复售旧战斗通行证皮肤",
       "en_title": "Fortnite Begins Reselling Old Battle Pass Skins in Next Update",
       "url": "https://www.ign.com/articles/fortnite-begins-reselling-old-battle-pass-skins-in-next-update",
-      "category": null,
+      "category": "游戏新闻",
+      "has_translation": true,
       "title_diff": null,
       "subtitle_diff": {
         "mine": "老兵回归，双赢策略",
@@ -873,14 +991,34 @@
           ],
           "your_sentences": []
         }
+      ],
+      "dictionary_candidates": [
+        {
+          "id": "dict_candidate_fortnite_begins_reselling_old_battle_pas_829172bd2d7a",
+          "category": "dictionary",
+          "type": "dictionary_candidate",
+          "dict_category": "games",
+          "en": "Fortnite Begins Reselling Old Battle Pass",
+          "cn": "堡垒之夜",
+          "title": "词库候选：Fortnite Begins Reselling Old Battle Pass → 堡垒之夜",
+          "rule": "建议将「Fortnite Begins Reselling Old Battle Pass」加入词库，译为「堡垒之夜」。",
+          "status": "ready_for_review",
+          "confidence": "high",
+          "date": "2026-06-25",
+          "article_id": 18,
+          "article_title": "《堡垒之夜》下个更新开始复售旧战斗通行证皮肤",
+          "url": "https://www.ign.com/articles/fortnite-begins-reselling-old-battle-pass-skins-in-next-update",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
       ]
     },
     {
       "id": 24,
-      "cn_title": "《GTA6》80美元(约合人民币545元)定价会带涨游戏价格吗？",
+      "cn_title": "《GTA6》的80美元定价会带涨游戏价格吗？",
       "en_title": "Has $80 GTA 6 Opened the Door to More Expensive Games? Analysts Respond",
       "url": "https://www.ign.com/articles/has-80-gta-6-opened-the-door-to-more-expensive-games-analysts-respond",
-      "category": null,
+      "category": "行业动态",
+      "has_translation": true,
       "title_diff": {
         "mine": "《GTA6》80美元(约合人民币545元)定价会带涨游戏价格吗？",
         "yours": "《GTA6》的80美元定价会带涨游戏价格吗？"
@@ -1232,14 +1370,16 @@
           ],
           "your_sentences": []
         }
-      ]
+      ],
+      "dictionary_candidates": []
     },
     {
       "id": 26,
-      "cn_title": "部分零售商拒绝销售《GTA6》实体版：因不含光盘",
+      "cn_title": "部分零售商因不含光盘而拒绝销售《GTA6》实体版",
       "en_title": "Some Retailers Are Refusing to Sell GTA 6 Due to the Lack of a Disc",
       "url": "https://www.ign.com/articles/some-retailers-are-refusing-to-sell-gta-6-due-to-the-lack-of-a-disc",
-      "category": null,
+      "category": "游戏新闻",
+      "has_translation": true,
       "title_diff": {
         "mine": "部分零售商拒绝销售《GTA6》实体版：因不含光盘",
         "yours": "部分零售商因不含光盘而拒绝销售《GTA6》实体版"
@@ -1286,14 +1426,16 @@
           ],
           "your_sentences": []
         }
-      ]
+      ],
+      "dictionary_candidates": []
     },
     {
       "id": 29,
-      "cn_title": "GTA6或借鉴《荒野大镖客：救赎2》机制",
+      "cn_title": "《GTA6》或借鉴《荒野大镖客：救赎2》的游戏机制",
       "en_title": "GTA 6 May Be Borrowing a Major Mechanic from Red Dead Redemption 2",
       "url": "https://www.ign.com/articles/gta-6-may-be-borrowing-a-major-mechanic-from-red-dead-redemption-2",
-      "category": null,
+      "category": "游戏新闻",
+      "has_translation": true,
       "title_diff": {
         "mine": "GTA6或借鉴《荒野大镖客：救赎2》机制",
         "yours": "《GTA6》或借鉴《荒野大镖客：救赎2》的游戏机制"
@@ -1402,6 +1544,25 @@
           ],
           "your_sentences": []
         }
+      ],
+      "dictionary_candidates": [
+        {
+          "id": "dict_candidate_gta_82a2cf34af76",
+          "category": "dictionary",
+          "type": "dictionary_candidate",
+          "dict_category": "games",
+          "en": "GTA",
+          "cn": "GTA6",
+          "title": "词库候选：GTA → GTA6",
+          "rule": "建议将「GTA」加入词库，译为「GTA6」。",
+          "status": "ready_for_review",
+          "confidence": "high",
+          "date": "2026-06-25",
+          "article_id": 29,
+          "article_title": "《GTA6》或借鉴《荒野大镖客：救赎2》的游戏机制",
+          "url": "https://www.ign.com/articles/gta-6-may-be-borrowing-a-major-mechanic-from-red-dead-redemption-2",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
       ]
     },
     {
@@ -1409,7 +1570,8 @@
       "cn_title": "美光CEO：内存短缺至2027年，2028年起缓解",
       "en_title": "Micron CEO Expects RAM Shortage to Last Through 2027, Start to Ease in 2028",
       "url": "https://www.ign.com/articles/micron-ceo-expects-ram-shortage-to-last-through-2027-start-to-ease-in-2028",
-      "category": null,
+      "category": "行业动态",
+      "has_translation": true,
       "title_diff": null,
       "subtitle_diff": null,
       "body_diffs": [
@@ -1463,7 +1625,8 @@
           ],
           "your_sentences": []
         }
-      ]
+      ],
+      "dictionary_candidates": []
     }
   ]
 }

@@ -3,7 +3,7 @@
   "model": "codex",
   "source_hash": "6b841e29fba800e52364e9c6c66bafc88b5d23a0",
   "signal_count": 9,
-  "candidate_count": 5,
+  "candidate_count": 13,
   "signals": [
     {
       "type": "user_polish",
@@ -533,14 +533,167 @@
         }
       ],
       "contradiction": ""
+    },
+    {
+      "id": "dict_candidate_io_interactive_won_t_self_publish_future_996dd291dd87",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：IO Interactive Won't Self-Publish Future James → 007 初露锋芒",
+      "rule": "建议将「IO Interactive Won't Self-Publish Future James」加入词库，译为「007 初露锋芒」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-06-05",
+          "article_id": 1,
+          "before": "IO Interactive Won't Self-Publish Future James",
+          "after": "007 初露锋芒",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id": "dict_candidate_you_can_now_fight_take_two_ceo_8e7bec7dc75e",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：You Can Now Fight Take-Two CEO → WWE 2K26",
+      "rule": "建议将「You Can Now Fight Take-Two CEO」加入词库，译为「WWE 2K26」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-06-05",
+          "article_id": 2,
+          "before": "You Can Now Fight Take-Two CEO",
+          "after": "WWE 2K26",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id": "dict_candidate_cory_barlog_0c35d52b47f2",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：Cory Barlog → Cory Barlog",
+      "rule": "建议将「Cory Barlog」加入词库，译为「Cory Barlog」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-06-05",
+          "article_id": 9,
+          "before": "Cory Barlog",
+          "after": "Cory Barlog",
+          "evidence": "来自文章页未确认新词候选。"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id": "dict_candidate_ariel_lawrence_4cbe8126f49c",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：Ariel Lawrence → Ariel Lawrence",
+      "rule": "建议将「Ariel Lawrence」加入词库，译为「Ariel Lawrence」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-06-05",
+          "article_id": 9,
+          "before": "Ariel Lawrence",
+          "after": "Ariel Lawrence",
+          "evidence": "来自文章页未确认新词候选。"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id": "dict_candidate_god_of_war_laufey_eeaf876695f1",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：God of War Laufey → 战神：劳菲",
+      "rule": "建议将「God of War Laufey」加入词库，译为「战神：劳菲」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-06-05",
+          "article_id": 9,
+          "before": "God of War Laufey",
+          "after": "战神：劳菲",
+          "evidence": "来自文章页未确认新词候选。"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id": "dict_candidate_god_of_war_trilogy_remake_59d342600304",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：God of War Trilogy Remake → 战神三部曲重制版",
+      "rule": "建议将「God of War Trilogy Remake」加入词库，译为「战神三部曲重制版」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-06-05",
+          "article_id": 9,
+          "before": "God of War Trilogy Remake",
+          "after": "战神三部曲重制版",
+          "evidence": "来自文章页未确认新词候选。"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id": "dict_candidate_elden_ring_tarnished_edition_has_378a631ddf10",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：Elden Ring Tarnished Edition Has → 艾尔登法环 褪色版",
+      "rule": "建议将「Elden Ring Tarnished Edition Has」加入词库，译为「艾尔登法环 褪色版」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-06-05",
+          "article_id": 17,
+          "before": "Elden Ring Tarnished Edition Has",
+          "after": "艾尔登法环 褪色版",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id": "dict_candidate_christopher_nolan_s_the_odyssey_sparks_o_c2d4c7ca884a",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：Christopher Nolan's The Odyssey Sparks Online → 奥德赛",
+      "rule": "建议将「Christopher Nolan's The Odyssey Sparks Online」加入词库，译为「奥德赛」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-06-05",
+          "article_id": 34,
+          "before": "Christopher Nolan's The Odyssey Sparks Online",
+          "after": "奥德赛",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "contradiction": ""
     }
   ],
   "notes": [
     "Codex补跑腾讯文档润色，只提取跨篇可复用规律；单篇特例不直接升级为长期规则。",
     "未学习汇率数值、国区售价、额外上映信息及“今日/昨晚”等时效性补充，避免脱离原文或随时间失效。",
-    "所有候选仍需在学习页确认后才能进入STYLE_PROFILE.md。"
+    "所有候选仍需在学习页确认后才能进入STYLE_PROFILE.md。",
+    "Added source+polished dictionary candidates for GPT/Tencent workflow."
   ],
-  "updated_at": "2026-06-12T21:51:19+08:00",
+  "updated_at": "2026-07-01T22:36:49+08:00",
   "observer": "codex",
   "status": "observed"
 }

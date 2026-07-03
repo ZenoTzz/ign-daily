@@ -5,7 +5,7 @@
   "status": "observed",
   "source_hash": "4e2b5acfb7f03defefab8f7344d2701c57393b05",
   "signal_count": 7,
-  "candidate_count": 0,
+  "candidate_count": 4,
   "signals": [
     {
       "type": "user_polish",
@@ -283,10 +283,88 @@
       ]
     }
   ],
-  "candidates": [],
+  "candidates": [
+    {
+      "id": "dict_candidate_official_baldur_s_gate_0e11cc90e005",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：Official Baldur's Gate → 博德之门2",
+      "rule": "建议将「Official Baldur's Gate」加入词库，译为「博德之门2」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-06-02",
+          "article_id": 3,
+          "before": "Official Baldur's Gate",
+          "after": "博德之门2",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id": "dict_candidate_former_dragon_age_boss_ced1f127dc8b",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：Former Dragon Age Boss → 龙腾世纪",
+      "rule": "建议将「Former Dragon Age Boss」加入词库，译为「龙腾世纪」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-06-02",
+          "article_id": 4,
+          "before": "Former Dragon Age Boss",
+          "after": "龙腾世纪",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id": "dict_candidate_everything_can_t_be_a_live_service_forme_06148e53ea7f",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：Everything Can't Be a Live-Service': Former Dragon Age Boss → 龙腾世纪",
+      "rule": "建议将「Everything Can't Be a Live-Service': Former Dragon Age Boss」加入词库，译为「龙腾世纪」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-06-02",
+          "article_id": 4,
+          "before": "Everything Can't Be a Live-Service': Former Dragon Age Boss",
+          "after": "龙腾世纪",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id": "dict_candidate_doctor_who_showrunner_says_bbc_will_aa21a8e45ad6",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：Doctor Who Showrunner Says BBC Will → 神秘博士",
+      "rule": "建议将「Doctor Who Showrunner Says BBC Will」加入词库，译为「神秘博士」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-06-02",
+          "article_id": 5,
+          "before": "Doctor Who Showrunner Says BBC Will",
+          "after": "神秘博士",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "contradiction": ""
+    }
+  ],
   "notes": [
     "??? Codex ??? source_hash ?????????",
-    "source_hash ???? polished/feedback/weekly feedback ?????????????"
+    "source_hash ???? polished/feedback/weekly feedback ?????????????",
+    "Added source+polished dictionary candidates for GPT/Tencent workflow."
   ],
-  "updated_at": "2026-06-17T21:49:47+08:00"
+  "updated_at": "2026-07-01T22:36:48+08:00"
 }

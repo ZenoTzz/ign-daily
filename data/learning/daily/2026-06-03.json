@@ -4,7 +4,7 @@
   "status": "observed",
   "source_hash": "d507cc07032920fc5eac0ed2f626796198f991a4",
   "signal_count": 10,
-  "candidate_count": 6,
+  "candidate_count": 14,
   "signals": [
     {
       "type": "user_polish",
@@ -505,13 +505,166 @@
       "evidence_summary": "多篇稿件一致删除作者简介和社交账号尾注。",
       "examples": [],
       "contradiction": ""
+    },
+    {
+      "id": "dict_candidate_nintendo_music_adds_much_requested_mario_2900c43eeb50",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：Nintendo Music Adds Much-Requested Mario Kart → 马力欧卡丁车世界",
+      "rule": "建议将「Nintendo Music Adds Much-Requested Mario Kart」加入词库，译为「马力欧卡丁车世界」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-06-03",
+          "article_id": 5,
+          "before": "Nintendo Music Adds Much-Requested Mario Kart",
+          "after": "马力欧卡丁车世界",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id": "dict_candidate_subnautica_2_s_latest_patch_just_made_a47b4e006d03",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：Subnautica 2's Latest Patch Just Made → 深海迷航2",
+      "rule": "建议将「Subnautica 2's Latest Patch Just Made」加入词库，译为「深海迷航2」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-06-03",
+          "article_id": 8,
+          "before": "Subnautica 2's Latest Patch Just Made",
+          "after": "深海迷航2",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id": "dict_candidate_ahead_of_sony_s_state_of_play_showcase_n_887427dc192f",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：Ahead of Sony's State of Play Showcase, New Data → 羊蹄山之魂",
+      "rule": "建议将「Ahead of Sony's State of Play Showcase, New Data」加入词库，译为「羊蹄山之魂」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-06-03",
+          "article_id": 11,
+          "before": "Ahead of Sony's State of Play Showcase, New Data",
+          "after": "羊蹄山之魂",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id": "dict_candidate_confirmed_spider_man_is_not_74eba4174ab9",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：Confirmed: Spider-Man Is NOT → 漫威金刚狼",
+      "rule": "建议将「Confirmed: Spider-Man Is NOT」加入词库，译为「漫威金刚狼」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-06-03",
+          "article_id": 18,
+          "before": "Confirmed: Spider-Man Is NOT",
+          "after": "漫威金刚狼",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id": "dict_candidate_teaming_up_with_sabretooth_d9aaa035ec2f",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：Teaming Up With Sabretooth → 漫威金刚狼",
+      "rule": "建议将「Teaming Up With Sabretooth」加入词库，译为「漫威金刚狼」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-06-03",
+          "article_id": 20,
+          "before": "Teaming Up With Sabretooth",
+          "after": "漫威金刚狼",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id": "dict_candidate_god_1d5c3e53e6cc",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：God → 战神：劳菲",
+      "rule": "建议将「God」加入词库，译为「战神：劳菲」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-06-03",
+          "article_id": 25,
+          "before": "God",
+          "after": "战神：劳菲",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id": "dict_candidate_tom_holland_reveals_he_delayed_spider_ma_734a2984c461",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：Tom Holland Reveals He Delayed Spider-Man → 奥德赛",
+      "rule": "建议将「Tom Holland Reveals He Delayed Spider-Man」加入词库，译为「奥德赛」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-06-03",
+          "article_id": 46,
+          "before": "Tom Holland Reveals He Delayed Spider-Man",
+          "after": "奥德赛",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id": "dict_candidate_tom_holland_reveals_he_delayed_spider_ma_b00a0e187fc6",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：Tom Holland Reveals He Delayed Spider-Man → 汤姆·霍兰德",
+      "rule": "建议将「Tom Holland Reveals He Delayed Spider-Man」加入词库，译为「汤姆·霍兰德」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-06-03",
+          "article_id": 46,
+          "before": "Tom Holland Reveals He Delayed Spider-Man",
+          "after": "汤姆·霍兰德",
+          "evidence": "英文标题人名与中文标题冒号前译名对应。"
+        }
+      ],
+      "contradiction": ""
     }
   ],
   "notes": [
     "Codex补跑腾讯文档润色，只提取跨篇可复用规律；单篇特例不直接升级为长期规则。",
     "未学习汇率数值、国区售价、额外上映信息及“今日/昨晚”等时效性补充，避免脱离原文或随时间失效。",
-    "所有候选仍需在学习页确认后才能进入STYLE_PROFILE.md。"
+    "所有候选仍需在学习页确认后才能进入STYLE_PROFILE.md。",
+    "Added source+polished dictionary candidates for GPT/Tencent workflow."
   ],
-  "updated_at": "2026-06-12T21:51:19+08:00",
+  "updated_at": "2026-07-01T22:36:48+08:00",
   "observer": "codex"
 }
