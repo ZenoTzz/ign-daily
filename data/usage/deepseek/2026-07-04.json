@@ -72,6 +72,30 @@
       "total_tokens_including_reasoning": 15232,
       "prompt_cache_hit_tokens": 10112,
       "prompt_cache_miss_tokens": 1388
+    },
+    {
+      "time_cn": "2026-07-04 02:41:20",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 21,
+      "article_title": "Marvel Rivals Fans Think the New Captain America Skin Is a Mod, But It's Actually Just His Rod",
+      "article_url": "https://www.ign.com/articles/marvel-rivals-fans-think-the-new-captain-america-skin-is-a-mod-but-its-actually-just-his-rod",
+      "article_date": "2026-07-04",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00067553,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 11055,
+      "completion_tokens": 1061,
+      "reasoning_tokens": 779,
+      "output_tokens_including_reasoning": 1840,
+      "total_tokens": 12116,
+      "total_tokens_including_reasoning": 12895,
+      "prompt_cache_hit_tokens": 10112,
+      "prompt_cache_miss_tokens": 943
     }
   ]
 }

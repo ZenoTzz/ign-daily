@@ -2,6 +2,37 @@
   "date": "2026-07-04",
   "articles": [
     {
+      "id": 21,
+      "category": "游戏新闻",
+      "emoji": "🏖️",
+      "en_title": "Marvel Rivals Fans Think the New Captain America Skin Is a Mod, But It's Actually Just His Rod",
+      "cn_title": "《漫威争锋》美队泳装被误认Mod",
+      "summary": "网易为庆祝美国独立日，在《漫威争锋》中为美国队长推出泳装皮肤「海滨哨兵」，造型火辣，其充气小鸭盾牌和紧身泳裤让玩家震惊，一度以为是Mod。官方确认该皮肤真实存在且已在商城上架。同时洛基、白狐等角色也获得了泳装皮肤。",
+      "url": "https://www.ign.com/articles/marvel-rivals-fans-think-the-new-captain-america-skin-is-a-mod-but-its-actually-just-his-rod",
+      "publish_time_cn": "2026-07-04 01:41",
+      "pub_date": "2026-07-04 01:41",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/07/03/marvel-rivals-captain-america-swimsuit-seaside-sentinel-1783099485139.png?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/07/03/marvel-rivals-captain-america-swimsuit-seaside-sentinel-1783099485139.png?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/07/03/marvel-rivals-captain-america-swimsuit-seaside-sentinel-1783099485139.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/07/03/marvel-rivals-captain-america-swimsuit-seaside-sentinel-1783099485139.png?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/07/03/marvel-rivals-captain-america-swimsuit-seaside-sentinel-1783099485139.png?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/07/03/marvel-rivals-captain-america-swimsuit-seaside-sentinel-1783099485139.png"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-07-04T02:41:03+08:00",
+      "pending_dict": [
+        {
+          "en": "Seaside Sentinel",
+          "cn": "海滨哨兵",
+          "cat": "terms",
+          "source": "ai_guess",
+          "reason": "皮肤名，无官方中文，建议确认后入库"
+        }
+      ]
+    },
+    {
       "id": 20,
       "category": "影视资讯",
       "emoji": "🎬",
@@ -185,7 +216,7 @@
       "emoji": "🎴",
       "en_title": "Pokémon TCG: 30th Celebration Product Lineup Revealed",
       "cn_title": "《宝可梦TCG》30周年庆典产品阵容揭晓",
-      "summary": "《宝可梦TCG》30周年庆典系列将于9月16日率先推出第一波产品，包括精英训练盒（49.99美元(约合人民币339元)，约合360元）、海报合集（14.99美元(约合人民币102元)，约合108元）等，共五款新品。后续还有第二波迷你铁罐、第三波对战卡组，以及超豪华合集（179.99美元(约合人民币1222元)，约合1296元），所有产品均附有纪念闪卡。",
+      "summary": "《宝可梦TCG》30周年庆典系列将于9月16日率先推出第一波产品，包括精英训练盒（49.99美元(约合人民币340元)，约合360元）、海报合集（14.99美元(约合人民币102元)，约合108元）等，共五款新品。后续还有第二波迷你铁罐、第三波对战卡组，以及超豪华合集（179.99美元(约合人民币1224元)，约合1296元），所有产品均附有纪念闪卡。",
       "url": "https://www.ign.com/articles/pokemon-tcg-30th-celebration-product-lineup",
       "publish_time_cn": "2026-07-03 22:21",
       "pub_date": "2026-07-03 22:21",
@@ -351,7 +382,7 @@
       "emoji": "🃏",
       "en_title": "Magic's Marvel Super Heroes Sealed Collector Boosters Are Back In Stock at Amazon",
       "cn_title": "《万智牌》漫威超级英雄珍藏包在亚马逊补货",
-      "summary": "万智牌与漫威联动的第二弹超级英雄珍藏包刚发售数日，亚马逊便补货了备受追捧的珍藏包，售价474.99美元(约合人民币3225元)。每包含5张稀有度以上卡牌，全部为闪卡或特殊处理版本，开出高价值卡牌的概率远高于普通包。",
+      "summary": "万智牌与漫威联动的第二弹超级英雄珍藏包刚发售数日，亚马逊便补货了备受追捧的珍藏包，售价474.99美元(约合人民币3230元)。每包含5张稀有度以上卡牌，全部为闪卡或特殊处理版本，开出高价值卡牌的概率远高于普通包。",
       "url": "https://www.ign.com/articles/mtg-marvel-collector-boosters-amazon-sealed-in-stock",
       "publish_time_cn": "2026-07-03 17:59",
       "pub_date": "2026-07-03 17:59",
@@ -589,5 +620,5 @@
       "source_fetched_at": "2026-07-03T16:29:34+08:00"
     }
   ],
-  "total": 20
+  "total": 21
 }
