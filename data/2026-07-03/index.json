@@ -6,13 +6,13 @@
       "category": "行业动态",
       "emoji": "📀",
       "en_title": "Do You Use Your PS5 to Watch 4K Blu-ray Discs?",
-      "cn_title": "索尼2028年停产光盘，你还在用PS5看4K蓝光吗？",
-      "summary": "索尼宣布将于2028年停止生产物理光盘，玩家正面临全数字未来。PS5是当前最入门的4K蓝光播放器之一，若PS6不再配备光驱，将影响收藏实体电影的玩家。IGN希望了解有多少读者仍依赖PS5观看4K蓝光电影，以及这对实体媒体行业意味着什么。",
+      "cn_title": "你现在还会用PS5看4K蓝光电影吗？",
+      "summary": "索尼计划2028年停止生产实体游戏光盘，PS6大概率不会内置光驱。作者想知道，仍收藏4K蓝光电影和剧集的IGN读者，有多少其实正在用PS5观看这些实体影像。",
       "url": "https://www.ign.com/articles/do-you-use-your-ps5-to-watch-4k-blu-ray-discs",
       "publish_time_cn": "2026-07-03 07:15",
       "pub_date": "2026-07-03 07:15",
-      "cover_image": "https://assets-prd.ignimgs.com/2025/04/10/ps5-disc-drive-1744284345491.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2025/04/10/ps5-disc-drive-1744284345491.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2025/04/10/ps5-disc-drive-1744284345491.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2025/04/10/ps5-disc-drive-1744284345491.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -21,7 +21,11 @@
         "https://assets-prd.ignimgs.com/2025/04/10/ps5-disc-drive-1744284345491.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-07-03T08:08:02+08:00"
+      "source_fetched_at": "2026-07-03T08:08:02+08:00",
+      "translation_path": "translations/25.json",
+      "translator": "codex",
+      "translator_provider": "manual",
+      "translator_model": "gpt-5-codex"
     },
     {
       "id": 19,
@@ -592,12 +596,12 @@
       "emoji": "🎮",
       "en_title": "ESRB Leaks Warhammer 40,000: Space Marine - Master Crafted Edition for PS5 and Nintendo Switch 2",
       "cn_title": "ESRB泄露《战锤40K：星际战士》大师工艺版将登陆PS5和任天堂Switch 2",
-      "summary": "ESRB列表显示，《战锤40K：星际战士》大师工艺版即将登陆PS5和Switch 2。该作去年6月已在PC、XBOX Series和XBOX Game Pass上发布，但因定价过高、改动不佳等问题遭到玩家批评，Steam评价一度为「多半差评」。世嘉随后推出了退款政策升级折扣和补丁路线图，目前评价已回升至「褒贬不一」。",
+      "summary": "ESRB评级页面短暂显示《战锤40K：星际战士》大师工艺版将登陆PS5和任天堂Switch 2。本作去年已登陆PC、XBOX Series和XBOX Game Pass，但上线时因价格和改动受到玩家批评。",
       "url": "https://www.ign.com/articles/esrb-leaks-warhammer-40000-space-marine-master-crafted-edition-for-ps5-and-nintendo-switch-2",
       "publish_time_cn": "2026-07-02 17:45",
       "pub_date": "2026-07-02 17:45",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/07/02/ss-bc64b8e07c6634094e25a1cccdfbe1eaa8ef8aa7-1920x1080-1782984648790.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/07/02/ss-bc64b8e07c6634094e25a1cccdfbe1eaa8ef8aa7-1920x1080-1782984648790.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/07/02/ss-bc64b8e07c6634094e25a1cccdfbe1eaa8ef8aa7-1920x1080-1782984648790.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/07/02/ss-bc64b8e07c6634094e25a1cccdfbe1eaa8ef8aa7-1920x1080-1782984648790.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -615,7 +619,11 @@
           "source": "ai_guess",
           "reason": "确认官方中文译名，词库中无此条目"
         }
-      ]
+      ],
+      "translation_path": "translations/06.json",
+      "translator": "codex",
+      "translator_provider": "manual",
+      "translator_model": "gpt-5-codex"
     },
     {
       "id": 7,
