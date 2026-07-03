@@ -552,6 +552,126 @@
       "total_tokens_including_reasoning": 14202,
       "prompt_cache_hit_tokens": 9728,
       "prompt_cache_miss_tokens": 728
+    },
+    {
+      "time_cn": "2026-07-03 19:18:34",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 4,
+      "article_title": "Magic's Marvel Super Heroes Sealed Collector Boosters Are Back In Stock at Amazon",
+      "article_url": "https://www.ign.com/articles/mtg-marvel-collector-boosters-amazon-sealed-in-stock",
+      "article_date": "2026-07-04",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00043562,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 10217,
+      "completion_tokens": 718,
+      "reasoning_tokens": 496,
+      "output_tokens_including_reasoning": 1214,
+      "total_tokens": 10935,
+      "total_tokens_including_reasoning": 11431,
+      "prompt_cache_hit_tokens": 9728,
+      "prompt_cache_miss_tokens": 489
+    },
+    {
+      "time_cn": "2026-07-03 19:18:46",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 5,
+      "article_title": "Assassin's Creed Black Flag Resynced Global Release and Preload Times Confirmed",
+      "article_url": "https://www.ign.com/articles/assassins-creed-black-flag-resynced-global-release-and-preload-times-confirmed",
+      "article_date": "2026-07-04",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00064968,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 10402,
+      "completion_tokens": 1097,
+      "reasoning_tokens": 789,
+      "output_tokens_including_reasoning": 1886,
+      "total_tokens": 11499,
+      "total_tokens_including_reasoning": 12288,
+      "prompt_cache_hit_tokens": 9728,
+      "prompt_cache_miss_tokens": 674
+    },
+    {
+      "time_cn": "2026-07-03 19:19:02",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 6,
+      "article_title": "'I Am Getting at Least 5x More Offers for Video Game Adaptations Than Comic Book Adaptations' — The Batman 2 Co-Writer Says Hollywood Is Shifting From Superheroes to Video Games",
+      "article_url": "https://www.ign.com/articles/i-am-getting-at-least-5x-more-offers-for-video-game-adaptations-than-comic-book-adaptations-the-batman-2-co-writer-says-hollywood-is-shifting-from-superheroes-to-video-games",
+      "article_date": "2026-07-04",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00090658,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 10991,
+      "completion_tokens": 1384,
+      "reasoning_tokens": 1125,
+      "output_tokens_including_reasoning": 2509,
+      "total_tokens": 12375,
+      "total_tokens_including_reasoning": 13500,
+      "prompt_cache_hit_tokens": 9728,
+      "prompt_cache_miss_tokens": 1263
+    },
+    {
+      "time_cn": "2026-07-03 19:19:17",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 7,
+      "article_title": "Spider-Man: Brand New Day Director Gives Best Look Yet at Villains Boomerang and the Hand — but Are the Photos a Misdirect?",
+      "article_url": "https://www.ign.com/articles/spider-man-brand-new-day-director-gives-best-look-yet-at-villains-boomerang-and-the-hand-but-are-the-photos-a-misdirect",
+      "article_date": "2026-07-04",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00082258,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 10693,
+      "completion_tokens": 1413,
+      "reasoning_tokens": 945,
+      "output_tokens_including_reasoning": 2358,
+      "total_tokens": 12106,
+      "total_tokens_including_reasoning": 13051,
+      "prompt_cache_hit_tokens": 9728,
+      "prompt_cache_miss_tokens": 965
+    },
+    {
+      "time_cn": "2026-07-03 19:19:26",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 8,
+      "article_title": "As Sony Kills Physical PS5 Games, Disc Production Factory Workers Are Set to be Reassigned",
+      "article_url": "https://www.ign.com/articles/as-sony-kills-physical-ps5-games-disc-production-factory-workers-are-set-to-be-reassigned",
+      "article_date": "2026-07-04",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00048028,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 10616,
+      "completion_tokens": 695,
+      "reasoning_tokens": 479,
+      "output_tokens_including_reasoning": 1174,
+      "total_tokens": 11311,
+      "total_tokens_including_reasoning": 11790,
+      "prompt_cache_hit_tokens": 9728,
+      "prompt_cache_miss_tokens": 888
     }
   ]
 }
