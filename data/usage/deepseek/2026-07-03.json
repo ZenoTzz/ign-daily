@@ -480,6 +480,54 @@
       "total_tokens_including_reasoning": 17589,
       "prompt_cache_hit_tokens": 9728,
       "prompt_cache_miss_tokens": 1275
+    },
+    {
+      "time_cn": "2026-07-03 16:30:00",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 1,
+      "article_title": "Cape Fear Episode 6 Recap and Review – 'Possum'",
+      "article_url": "https://www.ign.com/articles/cape-fear-episode-6-recap-and-review-possum",
+      "article_date": "2026-07-04",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00119498,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 11363,
+      "completion_tokens": 1824,
+      "reasoning_tokens": 1529,
+      "output_tokens_including_reasoning": 3353,
+      "total_tokens": 13187,
+      "total_tokens_including_reasoning": 14716,
+      "prompt_cache_hit_tokens": 9728,
+      "prompt_cache_miss_tokens": 1635
+    },
+    {
+      "time_cn": "2026-07-03 16:30:10",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 2,
+      "article_title": "Suicide Squad: Kill the Justice League Developers Wanted to Quit the Industry After the Game Was Released",
+      "article_url": "https://www.ign.com/articles/suicide-squad-kill-the-justice-league-developers-wanted-to-quit-the-industry-after-the-game-was-released",
+      "article_date": "2026-07-04",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00048014,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 10421,
+      "completion_tokens": 784,
+      "reasoning_tokens": 487,
+      "output_tokens_including_reasoning": 1271,
+      "total_tokens": 11205,
+      "total_tokens_including_reasoning": 11692,
+      "prompt_cache_hit_tokens": 9728,
+      "prompt_cache_miss_tokens": 693
     }
   ]
 }

@@ -5,84 +5,92 @@
     "2026-07-03"
   ],
   "changed_dates": [
-    "2026-07-03"
+    "2026-07-04"
   ],
   "new_target_dates": [
-    "2026-07-03"
+    "2026-07-04"
   ],
-  "new_count": 3,
-  "filtered_count": 0,
+  "new_count": 2,
+  "filtered_count": 1,
   "cleanup_count": 0,
   "changed_count": 3,
   "articles": [
     {
-      "title": "Do You Use Your PS5 to Watch 4K Blu-ray Discs?",
-      "url": "https://www.ign.com/articles/do-you-use-your-ps5-to-watch-4k-blu-ray-discs",
-      "pubDate_cst": "2026-07-03 07:15",
-      "category": "游戏新闻",
-      "emoji": "🎮",
+      "title": "Cape Fear Episode 6 Recap and Review – 'Possum'",
+      "url": "https://www.ign.com/articles/cape-fear-episode-6-recap-and-review-possum",
+      "pubDate_cst": "2026-07-03 15:00",
+      "category": "游戏评测",
+      "emoji": "⭐",
       "source_type": "rss"
     },
     {
-      "title": "Rhythm Heaven Groove Review",
-      "url": "https://www.ign.com/articles/rhythm-heaven-groove-review",
-      "pubDate_cst": "2026-07-02 08:07",
-      "category": "游戏评测",
-      "emoji": "⭐",
-      "source_type": "review"
-    },
-    {
-      "title": "X-Men '97 Season 2, Episodes 1-3 Review & Recap (Full Spoilers)",
-      "url": "https://www.ign.com/articles/x-men-97-season-2-episodes-1-3-review-recap-full-spoilers",
-      "pubDate_cst": "2026-07-02 08:07",
-      "category": "剧集评测",
-      "emoji": "⭐",
-      "source_type": "review"
+      "title": "Suicide Squad: Kill the Justice League Developers Wanted to Quit the Industry After the Game Was Released",
+      "url": "https://www.ign.com/articles/suicide-squad-kill-the-justice-league-developers-wanted-to-quit-the-industry-after-the-game-was-released",
+      "pubDate_cst": "2026-07-03 15:41",
+      "category": "游戏新闻",
+      "emoji": "🎮",
+      "source_type": "rss"
     }
   ],
-  "filtered_articles": [],
+  "filtered_articles": [
+    {
+      "title": "The $1,800 Power Lift Recliner and Massage Chair Is $370 During the Wayfair 4th of July Sale",
+      "url": "https://www.ign.com/articles/wayfair-4th-of-july-sale-power-lift-recliner-and-massage-chair-deal",
+      "pubDate_cst": "2026-07-03 14:55",
+      "description": "A chair you don't want to get it out of, even if it's designed to help you do so.",
+      "categories": "",
+      "reason": "url:deal",
+      "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
+      "filtered_at_cn": "2026-07-03 16:29:26",
+      "status": "filtered"
+    }
+  ],
   "runs": [
     {
       "target_date": "2026-07-04",
-      "new_count": 0,
-      "filtered_count": 0,
-      "changed_count": 0,
-      "next_id": 1,
-      "articles": [],
-      "filtered_articles": []
-    },
-    {
-      "target_date": "2026-07-03",
-      "new_count": 3,
-      "filtered_count": 0,
+      "new_count": 2,
+      "filtered_count": 1,
       "changed_count": 3,
-      "next_id": 28,
+      "next_id": 3,
       "articles": [
         {
-          "title": "Do You Use Your PS5 to Watch 4K Blu-ray Discs?",
-          "url": "https://www.ign.com/articles/do-you-use-your-ps5-to-watch-4k-blu-ray-discs",
-          "pubDate_cst": "2026-07-03 07:15",
-          "category": "游戏新闻",
-          "emoji": "🎮",
+          "title": "Cape Fear Episode 6 Recap and Review – 'Possum'",
+          "url": "https://www.ign.com/articles/cape-fear-episode-6-recap-and-review-possum",
+          "pubDate_cst": "2026-07-03 15:00",
+          "category": "游戏评测",
+          "emoji": "⭐",
           "source_type": "rss"
         },
         {
-          "title": "Rhythm Heaven Groove Review",
-          "url": "https://www.ign.com/articles/rhythm-heaven-groove-review",
-          "pubDate_cst": "2026-07-02 08:07",
-          "category": "游戏评测",
-          "emoji": "⭐",
-          "source_type": "review"
-        },
-        {
-          "title": "X-Men '97 Season 2, Episodes 1-3 Review & Recap (Full Spoilers)",
-          "url": "https://www.ign.com/articles/x-men-97-season-2-episodes-1-3-review-recap-full-spoilers",
-          "pubDate_cst": "2026-07-02 08:07",
-          "category": "剧集评测",
-          "emoji": "⭐",
-          "source_type": "review"
+          "title": "Suicide Squad: Kill the Justice League Developers Wanted to Quit the Industry After the Game Was Released",
+          "url": "https://www.ign.com/articles/suicide-squad-kill-the-justice-league-developers-wanted-to-quit-the-industry-after-the-game-was-released",
+          "pubDate_cst": "2026-07-03 15:41",
+          "category": "游戏新闻",
+          "emoji": "🎮",
+          "source_type": "rss"
         }
       ],
+      "filtered_articles": [
+        {
+          "title": "The $1,800 Power Lift Recliner and Massage Chair Is $370 During the Wayfair 4th of July Sale",
+          "url": "https://www.ign.com/articles/wayfair-4th-of-july-sale-power-lift-recliner-and-massage-chair-deal",
+          "pubDate_cst": "2026-07-03 14:55",
+          "description": "A chair you don't want to get it out of, even if it's designed to help you do so.",
+          "categories": "",
+          "reason": "url:deal",
+          "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
+          "filtered_at_cn": "2026-07-03 16:29:26",
+          "status": "filtered"
+        }
+      ]
+    },
+    {
+      "target_date": "2026-07-03",
+      "new_count": 0,
+      "filtered_count": 0,
+      "changed_count": 0,
+      "next_id": 28,
+      "articles": [],
       "filtered_articles": []
     }
   ]
