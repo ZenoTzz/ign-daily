@@ -7,42 +7,46 @@
   "changed_dates": [
     "2026-07-04"
   ],
-  "new_target_dates": [
-    "2026-07-04"
-  ],
-  "new_count": 1,
-  "filtered_count": 0,
+  "new_target_dates": [],
+  "new_count": 0,
+  "filtered_count": 1,
   "cleanup_count": 0,
   "changed_count": 1,
-  "articles": [
+  "articles": [],
+  "filtered_articles": [
     {
-      "title": "Marvel Rivals Fans Think the New Captain America Skin Is a Mod, But It's Actually Just His Rod",
-      "url": "https://www.ign.com/articles/marvel-rivals-fans-think-the-new-captain-america-skin-is-a-mod-but-its-actually-just-his-rod",
-      "pubDate_cst": "2026-07-04 01:41",
-      "category": "游戏新闻",
-      "emoji": "🎮",
-      "source_type": "rss"
+      "title": "Today's Top Deals: $150 Nintendo eShop Gift Card, Bose QuietComfort Headphones, and DJI Osmo Pocket 3 Camera",
+      "url": "https://www.ign.com/articles/best-deals-for-july-3-2026",
+      "pubDate_cst": "2026-07-04 02:55",
+      "description": "And the 4th of July weekend savings don’t stop there.",
+      "categories": "",
+      "reason": "url:deal",
+      "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
+      "filtered_at_cn": "2026-07-04 04:04:38",
+      "status": "filtered"
     }
   ],
-  "filtered_articles": [],
   "runs": [
     {
       "target_date": "2026-07-04",
-      "new_count": 1,
-      "filtered_count": 0,
+      "new_count": 0,
+      "filtered_count": 1,
       "changed_count": 1,
       "next_id": 22,
-      "articles": [
+      "articles": [],
+      "filtered_articles": [
         {
-          "title": "Marvel Rivals Fans Think the New Captain America Skin Is a Mod, But It's Actually Just His Rod",
-          "url": "https://www.ign.com/articles/marvel-rivals-fans-think-the-new-captain-america-skin-is-a-mod-but-its-actually-just-his-rod",
-          "pubDate_cst": "2026-07-04 01:41",
-          "category": "游戏新闻",
-          "emoji": "🎮",
-          "source_type": "rss"
+          "title": "Today's Top Deals: $150 Nintendo eShop Gift Card, Bose QuietComfort Headphones, and DJI Osmo Pocket 3 Camera",
+          "url": "https://www.ign.com/articles/best-deals-for-july-3-2026",
+          "pubDate_cst": "2026-07-04 02:55",
+          "description": "And the 4th of July weekend savings don’t stop there.",
+          "categories": "",
+          "reason": "url:deal",
+          "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
+          "filtered_at_cn": "2026-07-04 04:04:38",
+          "status": "filtered"
         }
-      ],
-      "filtered_articles": []
+      ]
     },
     {
       "target_date": "2026-07-03",
