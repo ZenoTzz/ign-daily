@@ -52,13 +52,13 @@
       "category": "影视资讯",
       "emoji": "🌊",
       "en_title": "Moana 3 Is in the Works, According to The Rock",
-      "cn_title": "《海洋奇缘3》正在开发，巨石强森证实",
-      "summary": "道恩·强森在宣传真人版《海洋奇缘》时透露，《海洋奇缘3》已在开发中。影片将由Jared Bush与Dana Ledoux Miller执笔剧本，二人此前曾共同创作《海洋奇缘2》及真人版剧本。真人版《海洋奇缘》将于下周末上映，尽管预告片反响平平，但《海洋奇缘2》票房已突破十亿美元，为续集开发奠定基础。",
+      "cn_title": "巨石强森透露《海洋奇缘3》正在开发",
+      "summary": "道恩·强森在真人版《海洋奇缘》发布会上确认《海洋奇缘3》已在筹备，Jared Bush与Dana Ledoux Miller将继续执笔，但动画制作周期意味着影片还要等几年。",
       "url": "https://www.ign.com/articles/moana-3-is-in-the-works-according-to-the-rock",
       "publish_time_cn": "2026-07-03 05:54",
       "pub_date": "2026-07-03 05:54",
-      "cover_image": "https://assets-prd.ignimgs.com/2024/11/19/moana2-1732018916669.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2024/11/19/moana2-1732018916669.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2024/11/19/moana2-1732018916669.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2024/11/19/moana2-1732018916669.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -76,7 +76,11 @@
           "source": "ai_guess",
           "reason": "无稳定官方中文译名"
         }
-      ]
+      ],
+      "translation_path": "translations/20.json",
+      "translator": "codex",
+      "translator_provider": "manual",
+      "translator_model": "gpt-5-codex"
     },
     {
       "id": 21,
@@ -186,13 +190,13 @@
       "category": "游戏新闻",
       "emoji": "👻",
       "en_title": "Silent Hill: Townfall Continues To Revitalize the Series in New, Horrifying Ways | IGN Preview",
-      "cn_title": "《寂静岭：城镇陨落》预览：系列复兴恐怖新作",
-      "summary": "《寂静岭》系列复兴新作《寂静岭：城镇陨落》放出预览。本作由Screen Burn（原No Code）开发，设定于苏格兰港口小镇圣阿米莉亚。玩家扮演Simon Ordell，使用CRTV设备潜行探索、解谜，营造系列标志性恐怖氛围。游戏将于9月24日登陆PS5和PC。",
+      "cn_title": "《寂静岭：城镇陨落》预览：系列复兴又添恐怖新作",
+      "summary": "《寂静岭：城镇陨落》把舞台放在苏格兰港口小镇圣阿米莉亚，玩家用CRTV追踪信号、解谜和潜行。IGN看过演示后认为它抓住了系列恐怖气质。",
       "url": "https://www.ign.com/articles/silent-hill-townfall-continues-to-revitalize-the-series-in-new-horrifying-ways-ign-preview",
       "publish_time_cn": "2026-07-03 04:50",
       "pub_date": "2026-07-03 04:50",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/07/02/sh-townfall-3-screenshot-2-1783025146621.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/07/02/sh-townfall-3-screenshot-2-1783025146621.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/07/02/sh-townfall-3-screenshot-2-1783025146621.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/07/02/sh-townfall-3-screenshot-2-1783025146621.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -201,7 +205,11 @@
         "https://assets-prd.ignimgs.com/2026/07/02/sh-townfall-3-screenshot-2-1783025146621.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-07-03T05:35:04+08:00"
+      "source_fetched_at": "2026-07-03T05:35:04+08:00",
+      "translation_path": "translations/17.json",
+      "translator": "codex",
+      "translator_provider": "manual",
+      "translator_model": "gpt-5-codex"
     },
     {
       "id": 18,
@@ -231,13 +239,13 @@
       "category": "游戏新闻",
       "emoji": "🎮",
       "en_title": "GTA 6 Would Probably Run on the Steam Machine",
-      "cn_title": "《GTA6》大概率能在 Steam Machine 上运行",
-      "summary": "Steam Machine 售价 1049美元(约合人民币7133元)（约合7600元人民币），性能虽不及 PS5，但 Rockstar 的 PC 游戏向来优化出色。根据 Digital Foundry 分析，《GTA6》在主机上可能锁定30帧，但 PC 版上线后玩家可自行调节画质。不过 Rockstar 优先照顾主机玩家，PC 版可能迟到一年以上。此外，GTA Online 的反作弊系统不兼容 SteamOS，届时 Linux 用户可能只能玩单人模式。",
+      "cn_title": "《GTA6》大概率能跑在Steam Machine上，但需要调低设置",
+      "summary": "Valve的Steam Machine售价1049美元，约合人民币7133元。作者认为等《GTA6》PC版推出后，单人模式大概率能运行，但SteamOS和反作弊可能让GTA Online缺席。",
       "url": "https://www.ign.com/articles/gta-6-would-probably-run-on-the-steam-machine",
       "publish_time_cn": "2026-07-03 04:03",
       "pub_date": "2026-07-03 04:03",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/07/02/gta6-onsteammachine-blogroll-1783022174583.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/07/02/gta6-onsteammachine-blogroll-1783022174583.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/07/02/gta6-onsteammachine-blogroll-1783022174583.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/07/02/gta6-onsteammachine-blogroll-1783022174583.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -247,7 +255,11 @@
         "https://assets-prd.ignimgs.com/2026/06/21/call-of-duty-black-ops-1782070244037.png"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-07-03T05:35:05+08:00"
+      "source_fetched_at": "2026-07-03T05:35:05+08:00",
+      "translation_path": "translations/16.json",
+      "translator": "codex",
+      "translator_provider": "manual",
+      "translator_model": "gpt-5-codex"
     },
     {
       "id": 15,
@@ -305,13 +317,13 @@
       "category": "游戏新闻",
       "emoji": "🎮",
       "en_title": "Crossfire Is Being Built by One of Gaming’s Best Design Duos",
-      "cn_title": "《穿越火线》新作由业界顶尖双人组操刀",
-      "summary": "在夏日游戏节上，《穿越火线》新作公布由前顽皮狗叙事设计主管Taylor Kurosaki和设计总监Jacob Minkoff领衔开发。两人曾参与《神秘海域》系列及《使命召唤：无限战争》《现代战争》等作品，以角色驱动叙事和创新关卡设计闻名。新作将强调动态掩体系统和临时同盟的生存玩法。",
+      "cn_title": "《穿越火线》值得关注，幕后是两位顶级设计师",
+      "summary": "《穿越火线》新作由Taylor Kurosaki与Jacob Minkoff领衔。两人曾打造《神秘海域》经典场面和《使命召唤：现代战争》重启，IGN作者认为他们能把设计与叙事再次拧在一起。",
       "url": "https://www.ign.com/articles/crossfire-is-being-built-by-one-of-gamings-best-design-duos",
       "publish_time_cn": "2026-07-02 23:15",
       "pub_date": "2026-07-02 23:15",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/06/26/crossfire-blogroll-1782486490466.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/26/crossfire-blogroll-1782486490466.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/26/crossfire-blogroll-1782486490466.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/26/crossfire-blogroll-1782486490466.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -320,7 +332,11 @@
         "https://assets-prd.ignimgs.com/2026/06/26/crossfire-blogroll-1782486490466.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-07-03T00:24:18+08:00"
+      "source_fetched_at": "2026-07-03T00:24:18+08:00",
+      "translation_path": "translations/10.json",
+      "translator": "codex",
+      "translator_provider": "manual",
+      "translator_model": "gpt-5-codex"
     },
     {
       "id": 11,
@@ -379,13 +395,13 @@
       "category": "游戏新闻",
       "emoji": "🎮",
       "en_title": "Final Fantasy 7 Revelation Getting Story Expansion Pass, Store Leak Suggests",
-      "cn_title": "商店泄露暗示《Final Fantasy 7 Revelation》将推出故事扩展通行证",
-      "summary": "Epic Games商店数据库泄露显示，《Final Fantasy 7 Revelation》将推出「故事扩展通行证」，内含最多9个DLC占位符。具体内容未知，但至少部分DLC将包含全新剧情。粉丝猜测可能改编自动画电影《最终幻想7：圣子降临》或第三人称射击游戏《地狱犬的挽歌》。本作是《最终幻想7》重制三部曲的终章，预计明年上半年登陆PS5、PC、Switch 2和XBOX Series。",
+      "cn_title": "《Final Fantasy 7 Revelation》或将推出剧情扩展通行证",
+      "summary": "Epic Games Store数据库出现《最终幻想7 重制版 启示录》剧情扩展通行证和最多9个DLC占位符，粉丝猜测可能涉及《圣子降临》或《地狱犬的挽歌》。",
       "url": "https://www.ign.com/articles/final-fantasy-7-revelation-getting-story-expansion-pass-store-leak-suggests",
       "publish_time_cn": "2026-07-02 22:17",
       "pub_date": "2026-07-02 22:17",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/06/09/final-fantasy-7-revelation-story-ending-1780985150731.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/09/final-fantasy-7-revelation-story-ending-1780985150731.png",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/09/final-fantasy-7-revelation-story-ending-1780985150731.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/09/final-fantasy-7-revelation-story-ending-1780985150731.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -410,20 +426,24 @@
           "source": "ai_guess",
           "reason": "直译，待确认官方名称"
         }
-      ]
+      ],
+      "translation_path": "translations/13.json",
+      "translator": "codex",
+      "translator_provider": "manual",
+      "translator_model": "gpt-5-codex"
     },
     {
       "id": 9,
       "category": "行业动态",
       "emoji": "⚠️",
       "en_title": "Avowed, The Outer Worlds, and Fallout: New Vegas Developer Obsidian Entertainment Reportedly Also at Risk of Closure Amid Xbox 'Reset'",
-      "cn_title": "《宣誓》《天外世界》《辐射：新维加斯》据报黑曜石也面临关闭风险，XBOX「重置」波及多款大作开发商",
-      "summary": "据多家媒体报道，微软旗下黑曜石工作室（《宣誓》《天外世界》《辐射：新维加斯》开发商）也面临关闭风险，成为XBOX「重置」计划的最新目标。黑曜石与其他多家工作室正与XBOX领导层谈判以避免关闭，但可能被出售而非关闭。XBOX新负责人Asha Sharma此前发布「重置」备忘录，称微软游戏业务盈利空间仅3%，引发业界震动。微软表示正在重新评估投资方向，但整体游戏投资规模不变。",
+      "cn_title": "XBOX重组波及《宣誓》《天外世界》《辐射：新维加斯》开发商黑曜石",
+      "summary": "据报道，黑曜石正与XBOX领导层谈判以避免关闭，相关工作室也可能被出售。微软称游戏投资总额不会减少，但正在重新评估资金去向。",
       "url": "https://www.ign.com/articles/avowed-the-outer-worlds-and-fallout-new-vegas-developer-obsidian-entertainment-reportedly-also-at-risk-of-closure-amid-xbox-reset",
       "publish_time_cn": "2026-07-02 21:56",
       "pub_date": "2026-07-02 21:56",
-      "cover_image": "https://assets-prd.ignimgs.com/2024/04/15/fallout-new-vegas-season-2-thumb-1713210577643.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2024/04/15/fallout-new-vegas-season-2-thumb-1713210577643.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2024/04/15/fallout-new-vegas-season-2-thumb-1713210577643.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2024/04/15/fallout-new-vegas-season-2-thumb-1713210577643.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -432,14 +452,18 @@
         "https://assets-prd.ignimgs.com/2024/04/15/fallout-new-vegas-season-2-thumb-1713210577643.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-07-02T22:31:03+08:00"
+      "source_fetched_at": "2026-07-02T22:31:03+08:00",
+      "translation_path": "translations/09.json",
+      "translator": "codex",
+      "translator_provider": "manual",
+      "translator_model": "gpt-5-codex"
     },
     {
       "id": 8,
       "category": "游戏新闻",
       "emoji": "🎮",
       "en_title": "Even KFC is Dunking on Sony, as the Dust Settles on PlayStation's Shock Decision to Kill Physical Game Discs",
-      "cn_title": "索尼2028年起停发实体游戏光盘，肯德基也来嘲讽",
+      "cn_title": "索尼PlayStation停发实体游戏光盘后，连肯德基都来嘲讽",
       "summary": "索尼宣布从2028年起停止发行新PlayStation游戏光盘，引发全网激烈反弹，连肯德基西班牙官方号、达美乐英国和脱口秀主持人Trevor Noah等圈外品牌与名人也加入嘲讽。肯德基模仿索尼公告，称即日起停止提供实物炸鸡，只能通过App消费「假PNG格式」。达美乐吐槽这与「改做数字披萨」一样荒谬。Trevor Noah则指出数字版无法分享二手游戏，且索尼刚因版权问题从用户账户中删除已购电影，证明数字内容可随时被剥夺。此事被视为PS6将完全舍弃光驱的信号，微软下一代主机Project Helix也被曝不会配备光驱。",
       "url": "https://www.ign.com/articles/even-kfc-is-dunking-on-sony-as-the-dust-settles-on-playstations-shock-decision-to-kill-physical-game-discs",
       "publish_time_cn": "2026-07-02 21:15",
@@ -515,13 +539,13 @@
       "category": "行业动态",
       "emoji": "🎮",
       "en_title": "PlayStation’s Physical Media-Free Future Isn’t Just Concerning, It’s Offensive",
-      "cn_title": "PlayStation宣布2028年起全面转向数字发行",
-      "summary": "PlayStation 在毫无预警地删除用户已购的550部 Studio Canal 电影后，又宣布从2028年起所有内容将仅提供数字版本。作者认为此举不仅令人担忧，更是一种冒犯，并指出数字购买本质上只是许可，无法保障消费者权益。此举将对实体收藏、向后兼容和游戏保存产生深远影响。",
+      "cn_title": "PlayStation的无实体未来不只是令人担忧，而是在冒犯玩家",
+      "summary": "索尼刚通知用户将从PSN移除550多部已购电影，又确认2028年后PlayStation内容全面转向数字发行。作者认为这证明数字购买只是可撤销许可，也会伤害实体收藏、向后兼容与游戏保存。",
       "url": "https://www.ign.com/articles/playstations-physical-media-free-future-isnt-just-concerning-its-offensive",
       "publish_time_cn": "2026-07-02 19:00",
       "pub_date": "2026-07-02 19:00",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/07/02/ps5-disc-blogroll-1782989968132.webp?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/07/02/ps5-disc-blogroll-1782989968132.webp",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/07/02/ps5-disc-blogroll-1782989968132.webp?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/07/02/ps5-disc-blogroll-1782989968132.webp?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -530,20 +554,24 @@
         "https://assets-prd.ignimgs.com/2026/07/02/ps5-disc-blogroll-1782989968132.webp"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-07-02T19:57:38+08:00"
+      "source_fetched_at": "2026-07-02T19:57:38+08:00",
+      "translation_path": "translations/04.json",
+      "translator": "codex",
+      "translator_provider": "manual",
+      "translator_model": "gpt-5-codex"
     },
     {
       "id": 5,
       "category": "影视资讯",
       "emoji": "💪",
       "en_title": "'I'll Do a Time Capsule for Them': How Long Will Hugh Jackman Play Wolverine? Marvel Star Suggests There's No Need to Think About Handing Over The Role Just Yet",
-      "cn_title": "休·杰克曼：金刚狼演到90岁，给接任者留个「时间胶囊」",
-      "summary": "休·杰克曼表示不打算很快告别金刚狼一角。他在接受PBS采访时调侃称会演到90岁，并为未来的接任者准备一个「小时间胶囊」。尽管《金刚狼3》后他曾宣布不再出演，但《死侍与金刚狼》的成功让他回归，该片全球票房超10亿美元(约合人民币68亿元)。目前漫威的《X战警》重启和《复仇者联盟：末日》《复仇者联盟：秘密战争》箭在弦上，粉丝猜测金刚狼是否会再次登场。",
+      "cn_title": "休·杰克曼还不急着交出金刚狼",
+      "summary": "漫威正在推进《X战警》重启，但休·杰克曼暗示自己暂时不会告别金刚狼。他开玩笑说要演到90岁，并会给未来接任者留下一个「小时间胶囊」。",
       "url": "https://www.ign.com/articles/ill-do-a-time-capsule-for-them-how-long-will-hugh-jackman-play-wolverine-marvel-star-suggests-theres-no-need-to-think-about-handing-over-the-role-just-yet",
       "publish_time_cn": "2026-07-02 18:05",
       "pub_date": "2026-07-02 18:05",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/07/02/gettyimages-2280332020-1782986422918.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/07/02/gettyimages-2280332020-1782986422918.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/07/02/gettyimages-2280332020-1782986422918.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/07/02/gettyimages-2280332020-1782986422918.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -552,14 +580,18 @@
         "https://assets-prd.ignimgs.com/2026/07/02/gettyimages-2280332020-1782986422918.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-07-02T19:57:38+08:00"
+      "source_fetched_at": "2026-07-02T19:57:38+08:00",
+      "translation_path": "translations/05.json",
+      "translator": "codex",
+      "translator_provider": "manual",
+      "translator_model": "gpt-5-codex"
     },
     {
       "id": 6,
       "category": "游戏新闻",
       "emoji": "🎮",
       "en_title": "ESRB Leaks Warhammer 40,000: Space Marine - Master Crafted Edition for PS5 and Nintendo Switch 2",
-      "cn_title": "ESRB泄露《战锤40K：星际战士》大师工艺版将登陆PS5和Switch 2",
+      "cn_title": "ESRB泄露《战锤40K：星际战士》大师工艺版将登陆PS5和任天堂Switch 2",
       "summary": "ESRB列表显示，《战锤40K：星际战士》大师工艺版即将登陆PS5和Switch 2。该作去年6月已在PC、XBOX Series和XBOX Game Pass上发布，但因定价过高、改动不佳等问题遭到玩家批评，Steam评价一度为「多半差评」。世嘉随后推出了退款政策升级折扣和补丁路线图，目前评价已回升至「褒贬不一」。",
       "url": "https://www.ign.com/articles/esrb-leaks-warhammer-40000-space-marine-master-crafted-edition-for-ps5-and-nintendo-switch-2",
       "publish_time_cn": "2026-07-02 17:45",
