@@ -528,6 +528,30 @@
       "total_tokens_including_reasoning": 11692,
       "prompt_cache_hit_tokens": 9728,
       "prompt_cache_miss_tokens": 693
+    },
+    {
+      "time_cn": "2026-07-03 17:37:32",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 3,
+      "article_title": "Nintendo Brain Training Professor Explains Why Driving a Manual Transmission Car Is Better for Your Brain Than an Automatic",
+      "article_url": "https://www.ign.com/articles/nintendo-brain-training-professor-explains-why-driving-a-manual-transmission-car-is-better-for-your-brain-than-an-automatic",
+      "article_date": "2026-07-04",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00117804,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 10456,
+      "completion_tokens": 2081,
+      "reasoning_tokens": 1665,
+      "output_tokens_including_reasoning": 3746,
+      "total_tokens": 12537,
+      "total_tokens_including_reasoning": 14202,
+      "prompt_cache_hit_tokens": 9728,
+      "prompt_cache_miss_tokens": 728
     }
   ]
 }

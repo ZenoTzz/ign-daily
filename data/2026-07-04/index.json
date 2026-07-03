@@ -2,6 +2,53 @@
   "date": "2026-07-04",
   "articles": [
     {
+      "id": 3,
+      "category": "人物新闻",
+      "emoji": "🧠",
+      "en_title": "Nintendo Brain Training Professor Explains Why Driving a Manual Transmission Car Is Better for Your Brain Than an Automatic",
+      "cn_title": "川岛隆太教授：手动挡驾驶比自动挡更健脑，或可预防痴呆",
+      "summary": "任天堂《脑力锻炼》系列游戏开发者川岛隆太教授领导的研究发现，驾驶手动挡汽车需要判断路况、选择档位并协调手脚操作，这一过程能有效激活前额叶皮层，对认知功能有积极影响，有助于预防痴呆。尽管手动挡汽车正逐渐被自动挡取代，但研究建议手动驾驶能锻炼大脑；如果不开手动挡，玩《集合啦 动物森友会》等游戏也有助于保持大脑健康。",
+      "url": "https://www.ign.com/articles/nintendo-brain-training-professor-explains-why-driving-a-manual-transmission-car-is-better-for-your-brain-than-an-automatic",
+      "publish_time_cn": "2026-07-03 16:14",
+      "pub_date": "2026-07-03 16:14",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/07/03/gettyimages-2241184027-1783066422693.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/07/03/gettyimages-2241184027-1783066422693.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/07/03/gettyimages-2241184027-1783066422693.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/07/03/gettyimages-2241184027-1783066422693.jpg?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/07/03/gettyimages-2241184027-1783066422693.jpg?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/07/03/gettyimages-2241184027-1783066422693.jpg",
+        "https://assets-prd.ignimgs.com/2026/07/03/gettyimages-2241184027-1783066438267.jpg",
+        "https://assets-prd.ignimgs.com/2026/07/03/gettyimages-79419290-1783066193450.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-07-03T17:37:06+08:00",
+      "pending_dict": [
+        {
+          "en": "Brain Age",
+          "cn": "脑力锻炼",
+          "cat": "games",
+          "source": "ai_guess",
+          "reason": "常用译名，需要确认"
+        },
+        {
+          "en": "Dr Kawashima's Brain Training",
+          "cn": "川岛博士的脑力训练",
+          "cat": "games",
+          "source": "ai_guess",
+          "reason": "推测译名，需要确认"
+        },
+        {
+          "en": "Ryuta Kawashima",
+          "cn": "川岛隆太",
+          "cat": "people",
+          "source": "ai_guess",
+          "reason": "日本教授汉字名，需要确认"
+        }
+      ]
+    },
+    {
       "id": 2,
       "category": "游戏新闻",
       "emoji": "🎮",
@@ -59,5 +106,5 @@
       "source_fetched_at": "2026-07-03T16:29:34+08:00"
     }
   ],
-  "total": 2
+  "total": 3
 }
