@@ -120,6 +120,30 @@
       "total_tokens_including_reasoning": 16590,
       "prompt_cache_hit_tokens": 10112,
       "prompt_cache_miss_tokens": 954
+    },
+    {
+      "time_cn": "2026-07-04 06:45:00",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 23,
+      "article_title": "Danganronpa 2x2 Delayed to Early 2027",
+      "article_url": "https://www.ign.com/articles/danganronpa-2x2-delayed-to-early-2027",
+      "article_date": "2026-07-04",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00074427,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 10786,
+      "completion_tokens": 1283,
+      "reasoning_tokens": 937,
+      "output_tokens_including_reasoning": 2220,
+      "total_tokens": 12069,
+      "total_tokens_including_reasoning": 13006,
+      "prompt_cache_hit_tokens": 10112,
+      "prompt_cache_miss_tokens": 674
     }
   ]
 }

@@ -2,6 +2,37 @@
   "date": "2026-07-04",
   "articles": [
     {
+      "id": 23,
+      "category": "游戏新闻",
+      "emoji": "🎮",
+      "en_title": "Danganronpa 2x2 Delayed to Early 2027",
+      "cn_title": "《弹丸论破2x2》延期至2027年初",
+      "summary": "Spike Chunsoft宣布《弹丸论破2x2》不再按原计划于2026年发售，延期至2027年初。制作人Sakakibara在声明中确认了这一消息，并表示将稍后公布具体发售日。游戏将加入全新模式Slayhem Mode，讲述与原作完全不同的故事线，包含新受害者和凶手，内容量比原作多约20%。此外还确认采用3D世界地图并更新了角色肖像。本作将登陆PC、Switch、Switch 2、PS5和XBOX Series。",
+      "url": "https://www.ign.com/articles/danganronpa-2x2-delayed-to-early-2027",
+      "publish_time_cn": "2026-07-04 05:24",
+      "pub_date": "2026-07-04 05:24",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/07/03/danganronpa-2x2-delay-1783113725626.png?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/07/03/danganronpa-2x2-delay-1783113725626.png?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/07/03/danganronpa-2x2-delay-1783113725626.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/07/03/danganronpa-2x2-delay-1783113725626.png?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/07/03/danganronpa-2x2-delay-1783113725626.png?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/07/03/danganronpa-2x2-delay-1783113725626.png"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-07-04T06:44:43+08:00",
+      "pending_dict": [
+        {
+          "en": "Danganronpa 2x2",
+          "cn": "《弹丸论破2x2》",
+          "cat": "games",
+          "source": "ai_guess",
+          "reason": "系列有官方中文名《弹丸论破》，但副标题2x2的写法及中文译名需确认"
+        }
+      ]
+    },
+    {
       "id": 22,
       "category": "影视资讯",
       "emoji": "🎬",
@@ -655,5 +686,5 @@
       "source_fetched_at": "2026-07-03T16:29:34+08:00"
     }
   ],
-  "total": 22
+  "total": 23
 }
