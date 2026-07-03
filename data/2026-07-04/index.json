@@ -2,6 +2,29 @@
   "date": "2026-07-04",
   "articles": [
     {
+      "id": 20,
+      "category": "影视资讯",
+      "emoji": "🎬",
+      "en_title": "People Are Worried They’ll Only See Half of The Odyssey If They Miss Out on Imax, But Should They Be?",
+      "cn_title": "不看IMAX只能看到半部《奥德赛》？别慌，故事完整",
+      "summary": "克里斯托弗·诺兰执导的《奥德赛》是首部全片使用IMAX摄像机拍摄的电影，将于7月17日上映。由于不同影院格式的宽高比不同，部分观众担忧不在70mm IMAX影院观看会错过大量画面。但文章指出，尽管70mm IMAX版画面最完整（1.43:1），其他格式如标准IMAX（1.90:1）或35mm（2.39:1）会裁切上下部分，影片核心剧情始终集中在画面中央，故事完整性不受影响。",
+      "url": "https://www.ign.com/articles/people-are-worried-theyll-only-see-half-of-the-odyssey-if-they-miss-out-on-imax-but-should-they-be",
+      "publish_time_cn": "2026-07-04 00:37",
+      "pub_date": "2026-07-04 00:37",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/07/02/odysseythumb-1783019960744.png?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/07/02/odysseythumb-1783019960744.png?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/07/02/odysseythumb-1783019960744.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/07/02/odysseythumb-1783019960744.png?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/07/02/odysseythumb-1783019960744.png?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/07/02/odysseythumb-1783019960744.png",
+        "https://assets-prd.ignimgs.com/2026/07/03/odyssey-1783095845235.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-07-04T01:06:04+08:00"
+    },
+    {
       "id": 12,
       "category": "行业动态",
       "emoji": "😟",
@@ -58,10 +81,10 @@
     {
       "id": 14,
       "category": "游戏新闻",
-      "emoji": "🎮",
+      "emoji": "📚",
       "en_title": "'Significant' Pay Rises Offered by Professor Layton Studio — if You Correctly Answer Quizzes About the Company's Games",
-      "cn_title": "'Significant' Pay Rises Offered by Professor Layton Studio — if You Correctly Answer Quizzes About the Company's Games",
-      "summary": "",
+      "cn_title": "《雷顿教授》开发商推「大幅」加薪，员工须通过游戏知识测验",
+      "summary": "Level-5社长日野晃博宣布，公司推出「大幅」加薪计划，但员工必须通过关于自家游戏的知识测验才能获得涨幅（具体金额未公开）。日野表示，此举旨在提升效率，让对产品了解深入的员工承担更多工作。Level-5旗下拥有《雷顿教授》《妖怪手表》《闪电十一人》《二之国》等知名系列。",
       "url": "https://www.ign.com/articles/significant-pay-rises-offered-by-professor-layton-studio-if-you-correctly-answer-quizzes-about-the-companys-games",
       "publish_time_cn": "2026-07-03 23:13",
       "pub_date": "2026-07-03 23:13",
@@ -79,11 +102,11 @@
     },
     {
       "id": 15,
-      "category": "游戏新闻",
-      "emoji": "🎮",
+      "category": "科技新闻",
+      "emoji": "💻",
       "en_title": "Think You Know Windows 11? Here’s Why A Copilot+ PC Can Level Up Your Productivity",
-      "cn_title": "Think You Know Windows 11? Here’s Why A Copilot+ PC Can Level Up Your Productivity",
-      "summary": "",
+      "cn_title": "Copilot+ PC：本地AI让Windows 11更高效",
+      "summary": "微软Copilot+ PC搭载NPU，每秒可执行40万亿次运算，在本地运行AI任务，无需频繁联网即可提升工作效率、保护数据安全，同时减轻CPU与GPU负担，延长电池续航。其内置Click to Do功能可一键总结文档、翻译文字或调整格式，Copilot Vision与Voice则降低使用门槛。Windows 11与Copilot紧密集成，为办公和创作带来显著生产力提升。",
       "url": "https://www.ign.com/articles/copilot-pc-buying-guide-windows-11-worth-it",
       "publish_time_cn": "2026-07-03 23:10",
       "pub_date": "2026-07-03 23:10",
@@ -162,7 +185,7 @@
       "emoji": "🎴",
       "en_title": "Pokémon TCG: 30th Celebration Product Lineup Revealed",
       "cn_title": "《宝可梦TCG》30周年庆典产品阵容揭晓",
-      "summary": "《宝可梦TCG》30周年庆典系列将于9月16日率先推出第一波产品，包括精英训练盒（49.99美元(约合人民币340元)，约合360元）、海报合集（14.99美元(约合人民币102元)，约合108元）等，共五款新品。后续还有第二波迷你铁罐、第三波对战卡组，以及超豪华合集（179.99美元(约合人民币1224元)，约合1296元），所有产品均附有纪念闪卡。",
+      "summary": "《宝可梦TCG》30周年庆典系列将于9月16日率先推出第一波产品，包括精英训练盒（49.99美元(约合人民币339元)，约合360元）、海报合集（14.99美元(约合人民币102元)，约合108元）等，共五款新品。后续还有第二波迷你铁罐、第三波对战卡组，以及超豪华合集（179.99美元(约合人民币1222元)，约合1296元），所有产品均附有纪念闪卡。",
       "url": "https://www.ign.com/articles/pokemon-tcg-30th-celebration-product-lineup",
       "publish_time_cn": "2026-07-03 22:21",
       "pub_date": "2026-07-03 22:21",
@@ -328,7 +351,7 @@
       "emoji": "🃏",
       "en_title": "Magic's Marvel Super Heroes Sealed Collector Boosters Are Back In Stock at Amazon",
       "cn_title": "《万智牌》漫威超级英雄珍藏包在亚马逊补货",
-      "summary": "万智牌与漫威联动的第二弹超级英雄珍藏包刚发售数日，亚马逊便补货了备受追捧的珍藏包，售价474.99美元(约合人民币3230元)。每包含5张稀有度以上卡牌，全部为闪卡或特殊处理版本，开出高价值卡牌的概率远高于普通包。",
+      "summary": "万智牌与漫威联动的第二弹超级英雄珍藏包刚发售数日，亚马逊便补货了备受追捧的珍藏包，售价474.99美元(约合人民币3225元)。每包含5张稀有度以上卡牌，全部为闪卡或特殊处理版本，开出高价值卡牌的概率远高于普通包。",
       "url": "https://www.ign.com/articles/mtg-marvel-collector-boosters-amazon-sealed-in-stock",
       "publish_time_cn": "2026-07-03 17:59",
       "pub_date": "2026-07-03 17:59",
@@ -566,5 +589,5 @@
       "source_fetched_at": "2026-07-03T16:29:34+08:00"
     }
   ],
-  "total": 19
+  "total": 20
 }

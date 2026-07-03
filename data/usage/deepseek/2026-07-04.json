@@ -1,0 +1,77 @@
+{
+  "date": "2026-07-04",
+  "records": [
+    {
+      "time_cn": "2026-07-04 01:06:17",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 14,
+      "article_title": "'Significant' Pay Rises Offered by Professor Layton Studio — if You Correctly Answer Quizzes About the Company's Games",
+      "article_url": "https://www.ign.com/articles/significant-pay-rises-offered-by-professor-layton-studio-if-you-correctly-answer-quizzes-about-the-companys-games",
+      "article_date": "2026-07-04",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00049372,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 10933,
+      "completion_tokens": 930,
+      "reasoning_tokens": 698,
+      "output_tokens_including_reasoning": 1628,
+      "total_tokens": 11863,
+      "total_tokens_including_reasoning": 12561,
+      "prompt_cache_hit_tokens": 10880,
+      "prompt_cache_miss_tokens": 53
+    },
+    {
+      "time_cn": "2026-07-04 01:06:26",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 15,
+      "article_title": "Think You Know Windows 11? Here’s Why A Copilot+ PC Can Level Up Your Productivity",
+      "article_url": "https://www.ign.com/articles/copilot-pc-buying-guide-windows-11-worth-it",
+      "article_date": "2026-07-04",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00042764,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 10961,
+      "completion_tokens": 807,
+      "reasoning_tokens": 571,
+      "output_tokens_including_reasoning": 1378,
+      "total_tokens": 11768,
+      "total_tokens_including_reasoning": 12339,
+      "prompt_cache_hit_tokens": 10880,
+      "prompt_cache_miss_tokens": 81
+    },
+    {
+      "time_cn": "2026-07-04 01:06:47",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 20,
+      "article_title": "People Are Worried They’ll Only See Half of The Odyssey If They Miss Out on Imax, But Should They Be?",
+      "article_url": "https://www.ign.com/articles/people-are-worried-theyll-only-see-half-of-the-odyssey-if-they-miss-out-on-imax-but-should-they-be",
+      "article_date": "2026-07-04",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00126759,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 11500,
+      "completion_tokens": 2001,
+      "reasoning_tokens": 1731,
+      "output_tokens_including_reasoning": 3732,
+      "total_tokens": 13501,
+      "total_tokens_including_reasoning": 15232,
+      "prompt_cache_hit_tokens": 10112,
+      "prompt_cache_miss_tokens": 1388
+    }
+  ]
+}
