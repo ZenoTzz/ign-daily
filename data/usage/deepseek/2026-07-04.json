@@ -144,6 +144,30 @@
       "total_tokens_including_reasoning": 13006,
       "prompt_cache_hit_tokens": 10112,
       "prompt_cache_miss_tokens": 674
+    },
+    {
+      "time_cn": "2026-07-04 07:48:37",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 24,
+      "article_title": "Supergirl Reportedly Faced Creative Differences Between DC Studios and Craig Gillespie",
+      "article_url": "https://www.ign.com/articles/supergirl-reportedly-faced-creative-differences-between-dc-studios-and-craig-gillespie",
+      "article_date": "2026-07-04",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00072271,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 11118,
+      "completion_tokens": 1100,
+      "reasoning_tokens": 877,
+      "output_tokens_including_reasoning": 1977,
+      "total_tokens": 12218,
+      "total_tokens_including_reasoning": 13095,
+      "prompt_cache_hit_tokens": 10112,
+      "prompt_cache_miss_tokens": 1006
     }
   ]
 }
