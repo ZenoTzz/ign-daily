@@ -2,6 +2,41 @@
   "date": "2026-07-05",
   "articles": [
     {
+      "id": 2,
+      "category": "评测评分",
+      "emoji": "🎬",
+      "en_title": "The Devil’s Rain Review",
+      "cn_title": "IGN评《The Devil's Rain》4K版：邪典恐怖片的经典与缺憾",
+      "summary": "IGN发布1975年邪教恐怖片《The Devil's Rain》4K版评测。影片由威廉·夏特纳、欧内斯特·博格宁主演，拥有惊艳的实际特效和令人难忘的结局，但剧情略显单薄，主角塑造存在性别盲点。尽管如此，其对后世恐怖片（如迈克尔·迈尔斯面具）的影响仍值得影迷关注。",
+      "url": "https://www.ign.com/articles/the-devils-rain-review",
+      "publish_time_cn": "2026-07-04 20:00",
+      "pub_date": "2026-07-04 20:00",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/07/01/devilsrainthumbnail-1782866319266.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/07/01/devilsrainthumbnail-1782866319266.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/07/01/devilsrainthumbnail-1782866319266.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/07/01/devilsrainthumbnail-1782866319266.jpg?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/07/01/devilsrainthumbnail-1782866319266.jpg?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/07/01/devilsrainthumbnail-1782866319266.jpg",
+        "https://assets-prd.ignimgs.com/2026/07/01/devilsrainhero-1782866283647.jpg",
+        "https://assets-prd.ignimgs.com/2026/07/01/devilsrain-shatneraltar-1782867099871.jpg",
+        "https://assets-prd.ignimgs.com/2026/07/01/devilsrain-borgnine-1782866906791.jpg",
+        "https://assets-prd.ignimgs.com/2026/07/01/devilsrain-ladies-1782866970388.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-07-04T20:36:36+08:00",
+      "pending_dict": [
+        {
+          "en": "The Devil's Rain",
+          "cn": "魔鬼雨",
+          "cat": "movies_tv",
+          "source": "ai_guess",
+          "reason": "暂无官方中文译名，此为常见译名"
+        }
+      ]
+    },
+    {
       "id": 1,
       "category": "影视资讯",
       "emoji": "🦸",
@@ -47,5 +82,5 @@
       ]
     }
   ],
-  "total": 1
+  "total": 2
 }
