@@ -1,14 +1,14 @@
 {
   "week_id": "2026-W27",
-  "generated_at": "2026-07-03T22:40:09+08:00",
+  "generated_at": "2026-07-04T22:39:08+08:00",
   "published_by": "weekly_learning_report",
   "range": {
     "start": "2026-06-29",
     "end": "2026-07-05"
   },
   "summary": {
-    "candidate_count": 104,
-    "ready_for_review": 95,
+    "candidate_count": 103,
+    "ready_for_review": 94,
     "confirmed_by_feedback": 0,
     "pending": 1
   },
@@ -445,41 +445,6 @@
       "candidate_payload": {
         "en": "Capcom Explains How Tifa From Final",
         "cn": "街头霸王6",
-        "cat": "games",
-        "source": "user"
-      }
-    },
-    {
-      "id": "dict_candidate_capcom_keeps_winning_37bbd5d87279",
-      "title": "词库候选：Capcom Keeps Winning → 鬼武者：剑之道",
-      "rule": "建议将「Capcom Keeps Winning」加入词库，译为「鬼武者：剑之道」。",
-      "category": "dictionary",
-      "type": "dictionary_candidate",
-      "dict_category": "games",
-      "scope": "all",
-      "status": "ready_for_review",
-      "days": [
-        "2026-07-03"
-      ],
-      "days_seen": 1,
-      "articles_seen": 1,
-      "contradictions": 0,
-      "examples": [
-        {
-          "date": "2026-07-03",
-          "article_id": 1,
-          "before": "Capcom Keeps Winning",
-          "after": "鬼武者：剑之道",
-          "evidence": "英文标题开头专名与中文标题书名号对应。"
-        }
-      ],
-      "created_at": "2026-07-03T22:37:21+08:00",
-      "last_seen": "2026-07-03",
-      "confidence": 0.8,
-      "latest_evidence_summary": "英文标题开头专名与中文标题书名号对应。",
-      "candidate_payload": {
-        "en": "Capcom Keeps Winning",
-        "cn": "鬼武者：剑之道",
         "cat": "games",
         "source": "user"
       }
@@ -1425,6 +1390,41 @@
       "candidate_payload": {
         "en": "Insomniac Responds",
         "cn": "漫威金刚狼",
+        "cat": "games",
+        "source": "user"
+      }
+    },
+    {
+      "id": "dict_candidate_intergalactic_48869693140f",
+      "title": "词库候选：Intergalactic → Intergalactic",
+      "rule": "建议将「Intergalactic」加入词库，译为「Intergalactic」。",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "games",
+      "scope": "all",
+      "status": "ready_for_review",
+      "days": [
+        "2026-07-01"
+      ],
+      "days_seen": 1,
+      "articles_seen": 1,
+      "contradictions": 0,
+      "examples": [
+        {
+          "date": "2026-07-01",
+          "article_id": 52,
+          "before": "Intergalactic",
+          "after": "Intergalactic",
+          "evidence": "来自文章页未确认新词候选。"
+        }
+      ],
+      "created_at": "2026-07-01T22:36:51+08:00",
+      "last_seen": "2026-07-01",
+      "confidence": 0.8,
+      "latest_evidence_summary": "来自文章页未确认新词候选。",
+      "candidate_payload": {
+        "en": "Intergalactic",
+        "cn": "Intergalactic",
         "cat": "games",
         "source": "user"
       }

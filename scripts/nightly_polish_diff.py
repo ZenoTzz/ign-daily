@@ -187,14 +187,9 @@ def source_title_candidates(title):
         clean = token.strip(" -—:;,.!?\"'“”‘’[]()")
         if i > 0 and clean in TITLE_VERBS:
             candidate = clean_english_candidate(' '.join(tokens[:i]))
-            if likely_english_candidate(candidate):
+            if ':' in candidate and likely_english_candidate(candidate):
                 out.append(candidate)
             break
-    m = re.match(r"^([A-Z][A-Za-z0-9'.-]+(?:\s*:\s*[A-Z0-9][A-Za-z0-9'.-]+|\s+[A-Z0-9][A-Za-z0-9'.-]+){0,5})", title)
-    if m:
-        candidate = clean_english_candidate(m.group(1))
-        if likely_english_candidate(candidate):
-            out.append(candidate)
     return drop_prefix_duplicates(unique_keep_order(out))
 
 def extract_english_candidates(text):
