@@ -4,23 +4,85 @@
     "2026-07-05",
     "2026-07-04"
   ],
-  "changed_dates": [],
-  "new_target_dates": [],
-  "new_count": 0,
-  "filtered_count": 0,
-  "cleanup_count": 1,
-  "changed_count": 1,
-  "articles": [],
-  "filtered_articles": [],
+  "changed_dates": [
+    "2026-07-05"
+  ],
+  "new_target_dates": [
+    "2026-07-05"
+  ],
+  "new_count": 2,
+  "filtered_count": 1,
+  "cleanup_count": 0,
+  "changed_count": 3,
+  "articles": [
+    {
+      "title": "Young Washington Review",
+      "url": "https://www.ign.com/articles/young-washington-review",
+      "pubDate_cst": "2026-07-05 03:28",
+      "category": "游戏评测",
+      "emoji": "⭐",
+      "source_type": "rss"
+    },
+    {
+      "title": "First Look at Ghost of Tsushima Legends Anime Character Art",
+      "url": "https://www.ign.com/articles/first-look-at-ghost-of-tsushima-legends-anime-character-art",
+      "pubDate_cst": "2026-07-05 03:03",
+      "category": "游戏新闻",
+      "emoji": "🎮",
+      "source_type": "rss"
+    }
+  ],
+  "filtered_articles": [
+    {
+      "title": "The Best Deals Today: Cyberpunk 2077, Criterion Collection Sale, Nintendo Switch 2 Camera, and More",
+      "url": "https://www.ign.com/articles/best-deals-for-july-4-2026",
+      "pubDate_cst": "2026-07-05 03:01",
+      "description": "",
+      "categories": "",
+      "reason": "url:deal",
+      "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
+      "filtered_at_cn": "2026-07-05 03:57:54",
+      "status": "filtered"
+    }
+  ],
   "runs": [
     {
       "target_date": "2026-07-05",
-      "new_count": 0,
-      "filtered_count": 0,
-      "changed_count": 0,
-      "next_id": 3,
-      "articles": [],
-      "filtered_articles": []
+      "new_count": 2,
+      "filtered_count": 1,
+      "changed_count": 3,
+      "next_id": 5,
+      "articles": [
+        {
+          "title": "Young Washington Review",
+          "url": "https://www.ign.com/articles/young-washington-review",
+          "pubDate_cst": "2026-07-05 03:28",
+          "category": "游戏评测",
+          "emoji": "⭐",
+          "source_type": "rss"
+        },
+        {
+          "title": "First Look at Ghost of Tsushima Legends Anime Character Art",
+          "url": "https://www.ign.com/articles/first-look-at-ghost-of-tsushima-legends-anime-character-art",
+          "pubDate_cst": "2026-07-05 03:03",
+          "category": "游戏新闻",
+          "emoji": "🎮",
+          "source_type": "rss"
+        }
+      ],
+      "filtered_articles": [
+        {
+          "title": "The Best Deals Today: Cyberpunk 2077, Criterion Collection Sale, Nintendo Switch 2 Camera, and More",
+          "url": "https://www.ign.com/articles/best-deals-for-july-4-2026",
+          "pubDate_cst": "2026-07-05 03:01",
+          "description": "",
+          "categories": "",
+          "reason": "url:deal",
+          "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
+          "filtered_at_cn": "2026-07-05 03:57:54",
+          "status": "filtered"
+        }
+      ]
     },
     {
       "target_date": "2026-07-04",

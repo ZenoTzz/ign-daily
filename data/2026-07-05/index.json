@@ -2,6 +2,60 @@
   "date": "2026-07-05",
   "articles": [
     {
+      "id": 3,
+      "category": "评测评分",
+      "emoji": "🎬",
+      "en_title": "Young Washington Review",
+      "cn_title": "《Young Washington》评测",
+      "summary": "IGN评测了Angel Studios出品的《Young Washington》，这部传记片聚焦华盛顿的早年岁月，虽有真诚刻画和富有质感的战斗场景，但受限于公式化剧本和明显预算不足，整体更像一部尚可但平庸的电视电影。影片在历史准确性上做了较大自由发挥，并刻意回避了对奴隶制等复杂议题的探讨。",
+      "url": "https://www.ign.com/articles/young-washington-review",
+      "publish_time_cn": "2026-07-05 03:28",
+      "pub_date": "2026-07-05 03:28",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/07/04/ynw-key-angelstudios-main-dig1sht-27x40-157-f4-1783192134444.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/07/04/ynw-key-angelstudios-main-dig1sht-27x40-157-f4-1783192134444.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/07/04/ynw-key-angelstudios-main-dig1sht-27x40-157-f4-1783192134444.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/07/04/ynw-key-angelstudios-main-dig1sht-27x40-157-f4-1783192134444.jpg?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/07/04/ynw-key-angelstudios-main-dig1sht-27x40-157-f4-1783192134444.jpg?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/07/04/ynw-key-angelstudios-main-dig1sht-27x40-157-f4-1783192134444.jpg",
+        "https://assets-prd.ignimgs.com/2026/07/04/ynw-key-angelstudios-main-dig1sht-27x40-157-f4-1783192157674.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-07-05T03:58:01+08:00"
+    },
+    {
+      "id": 4,
+      "category": "影视资讯",
+      "emoji": "🎬",
+      "en_title": "First Look at Ghost of Tsushima Legends Anime Character Art",
+      "cn_title": "《对马岛之魂》动漫角色艺术图首曝",
+      "summary": "在Anime Expo上，Crunchyroll首次展示了《对马岛之魂：传奇》动漫改编的角色艺术图，包括刺客、浪人和猎人角色。该动画由《爆炸头武士》作者冈崎能士负责角色设计，《鬼灭之刃》《刀剑神域》制作公司Aniplex操刀，预计2027年独家登陆Crunchyroll。",
+      "url": "https://www.ign.com/articles/first-look-at-ghost-of-tsushima-legends-anime-character-art",
+      "publish_time_cn": "2026-07-05 03:03",
+      "pub_date": "2026-07-05 03:03",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/07/04/hunter-1783191592822.png?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/07/04/hunter-1783191592822.png?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/07/04/hunter-1783191592822.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/07/04/hunter-1783191592822.png?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/07/04/hunter-1783191592822.png?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/07/04/hunter-1783191592822.png"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-07-05T03:58:02+08:00",
+      "pending_dict": [
+        {
+          "en": "Takashi Okazaki",
+          "cn": "冈崎能士",
+          "cat": "people",
+          "source": "ai_guess",
+          "reason": "知名漫画家，有通行中文名，建议加入词库"
+        }
+      ]
+    },
+    {
       "id": 2,
       "category": "评测评分",
       "emoji": "🎬",
@@ -82,5 +136,5 @@
       ]
     }
   ],
-  "total": 2
+  "total": 4
 }

@@ -1,0 +1,53 @@
+{
+  "date": "2026-07-05",
+  "records": [
+    {
+      "time_cn": "2026-07-05 03:58:19",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 3,
+      "article_title": "Young Washington Review",
+      "article_url": "https://www.ign.com/articles/young-washington-review",
+      "article_date": "2026-07-05",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00068673,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 11271,
+      "completion_tokens": 992,
+      "reasoning_tokens": 780,
+      "output_tokens_including_reasoning": 1772,
+      "total_tokens": 12263,
+      "total_tokens_including_reasoning": 13043,
+      "prompt_cache_hit_tokens": 10112,
+      "prompt_cache_miss_tokens": 1159
+    },
+    {
+      "time_cn": "2026-07-05 03:58:32",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 4,
+      "article_title": "First Look at Ghost of Tsushima Legends Anime Character Art",
+      "article_url": "https://www.ign.com/articles/first-look-at-ghost-of-tsushima-legends-anime-character-art",
+      "article_date": "2026-07-05",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00055443,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 10706,
+      "completion_tokens": 935,
+      "reasoning_tokens": 647,
+      "output_tokens_including_reasoning": 1582,
+      "total_tokens": 11641,
+      "total_tokens_including_reasoning": 12288,
+      "prompt_cache_hit_tokens": 10112,
+      "prompt_cache_miss_tokens": 594
+    }
+  ]
+}
