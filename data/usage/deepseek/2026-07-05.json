@@ -48,6 +48,30 @@
       "total_tokens_including_reasoning": 12288,
       "prompt_cache_hit_tokens": 10112,
       "prompt_cache_miss_tokens": 594
+    },
+    {
+      "time_cn": "2026-07-05 05:15:13",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 5,
+      "article_title": "Solo Leveling: Beyond the System Movie Announced at Anime Expo",
+      "article_url": "https://www.ign.com/articles/solo-leveling-beyond-the-system-movie-announced-at-anime-expo",
+      "article_date": "2026-07-05",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00075939,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 10710,
+      "completion_tokens": 1333,
+      "reasoning_tokens": 979,
+      "output_tokens_including_reasoning": 2312,
+      "total_tokens": 12043,
+      "total_tokens_including_reasoning": 13022,
+      "prompt_cache_hit_tokens": 10112,
+      "prompt_cache_miss_tokens": 598
     }
   ]
 }

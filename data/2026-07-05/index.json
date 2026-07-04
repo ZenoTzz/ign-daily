@@ -2,6 +2,45 @@
   "date": "2026-07-05",
   "articles": [
     {
+      "id": 5,
+      "category": "影视资讯",
+      "emoji": "🎬",
+      "en_title": "Solo Leveling: Beyond the System Movie Announced at Anime Expo",
+      "cn_title": "《我独自升级》电影《Beyond the System》公布",
+      "summary": "在Anime Expo上，Crunchyroll宣布动画《我独自升级》将推出电影版《Solo Leveling: Beyond the System》，由主角成振宇的英文配音演员Aleks Le揭晓。该电影接续第二季剧情，A-1 Pictures等工作室参与制作。目前未公布上映日期及第三季信息，但已放出概念视频和氛围艺术图。",
+      "url": "https://www.ign.com/articles/solo-leveling-beyond-the-system-movie-announced-at-anime-expo",
+      "publish_time_cn": "2026-07-05 03:44",
+      "pub_date": "2026-07-05 03:44",
+      "cover_image": "https://assets-prd.ignimgs.com/2024/10/31/sololevelingreawakeningenglishsubbedtrailer-ign-blogroll-1730399940873.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2024/10/31/sololevelingreawakeningenglishsubbedtrailer-ign-blogroll-1730399940873.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2024/10/31/sololevelingreawakeningenglishsubbedtrailer-ign-blogroll-1730399940873.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2024/10/31/sololevelingreawakeningenglishsubbedtrailer-ign-blogroll-1730399940873.jpg?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2024/10/31/sololevelingreawakeningenglishsubbedtrailer-ign-blogroll-1730399940873.jpg?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2024/10/31/sololevelingreawakeningenglishsubbedtrailer-ign-blogroll-1730399940873.jpg",
+        "https://assets-prd.ignimgs.com/2026/07/04/solo-leveling-beyond-the-system-key-visual-horizontal-1783194123449.png"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-07-05T05:14:58+08:00",
+      "pending_dict": [
+        {
+          "en": "Solo Leveling: Beyond the System",
+          "cn": "我独自升级：超越系统",
+          "cat": "movies_tv",
+          "source": "ai_guess",
+          "reason": "电影副标题尚无官方中文译名，建议意译"
+        },
+        {
+          "en": "Sung Jinwoo",
+          "cn": "成振宇",
+          "cat": "people",
+          "source": "ai_guess",
+          "reason": "角色常用译名，但未在词库中确认"
+        }
+      ]
+    },
+    {
       "id": 3,
       "category": "评测评分",
       "emoji": "🎬",
@@ -136,5 +175,5 @@
       ]
     }
   ],
-  "total": 4
+  "total": 5
 }
