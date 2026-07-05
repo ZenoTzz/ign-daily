@@ -2,6 +2,37 @@
   "date": "2026-07-06",
   "articles": [
     {
+      "id": 3,
+      "category": "影视资讯",
+      "emoji": "🎵",
+      "en_title": "Green Yuri Anime Confirms Nirvana Song for Its Opening Theme, and Dave Grohl Says Kurt Cobain Would Have Loved It",
+      "cn_title": "Nirvana歌曲成《Green Yuri》OP，Dave Grohl称Cobain会喜欢",
+      "summary": "CloverWorks宣布改编自人气网络漫画的动画《Green Yuri》（《The Guy She Was Interested in Wasn't a Guy at All》）将于2027年1月播出，并确认使用Nirvana名曲《Breed》作为片头曲。鼓手Dave Grohl在接受作者采访时表示，已故主唱Kurt Cobain一定会喜欢这部作品。Grohl还透露动画将收录Soundgarden、Radiohead、Korn等多支乐队的歌曲。",
+      "url": "https://www.ign.com/articles/green-yuri-anime-confirms-nirvana-song-for-its-opening-theme-and-dave-grohl-says-kurt-cobain-would-have-loved-it",
+      "publish_time_cn": "2026-07-06 00:06",
+      "pub_date": "2026-07-06 00:06",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/07/05/dave-grohl-green-yuri-1783267002971.png?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/07/05/dave-grohl-green-yuri-1783267002971.png?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/07/05/dave-grohl-green-yuri-1783267002971.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/07/05/dave-grohl-green-yuri-1783267002971.png?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/07/05/dave-grohl-green-yuri-1783267002971.png?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/07/05/dave-grohl-green-yuri-1783267002971.png"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-07-06T01:47:35+08:00",
+      "pending_dict": [
+        {
+          "en": "The Guy She Was Interested in Wasn't a Guy at All",
+          "cn": "她感兴趣的不是男人",
+          "cat": "movies_tv",
+          "source": "ai_guess",
+          "reason": "官方中文译名未确认，此为直译"
+        }
+      ]
+    },
+    {
       "id": 2,
       "category": "游戏新闻",
       "emoji": "🔍",
@@ -63,5 +94,5 @@
       ]
     }
   ],
-  "total": 2
+  "total": 3
 }

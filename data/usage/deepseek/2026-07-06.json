@@ -24,6 +24,30 @@
       "total_tokens_including_reasoning": 13378,
       "prompt_cache_hit_tokens": 10112,
       "prompt_cache_miss_tokens": 2358
+    },
+    {
+      "time_cn": "2026-07-06 01:47:51",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 3,
+      "article_title": "Green Yuri Anime Confirms Nirvana Song for Its Opening Theme, and Dave Grohl Says Kurt Cobain Would Have Loved It",
+      "article_url": "https://www.ign.com/articles/green-yuri-anime-confirms-nirvana-song-for-its-opening-theme-and-dave-grohl-says-kurt-cobain-would-have-loved-it",
+      "article_date": "2026-07-06",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00093019,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 11398,
+      "completion_tokens": 1451,
+      "reasoning_tokens": 1127,
+      "output_tokens_including_reasoning": 2578,
+      "total_tokens": 12849,
+      "total_tokens_including_reasoning": 13976,
+      "prompt_cache_hit_tokens": 10112,
+      "prompt_cache_miss_tokens": 1286
     }
   ]
 }
