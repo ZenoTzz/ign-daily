@@ -72,6 +72,30 @@
       "total_tokens_including_reasoning": 13511,
       "prompt_cache_hit_tokens": 10112,
       "prompt_cache_miss_tokens": 1154
+    },
+    {
+      "time_cn": "2026-07-06 04:42:48",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 5,
+      "article_title": "Marvel Tokon Blocked in 132 Countries, and It Looks Like PSN Requirements Are to Blame",
+      "article_url": "https://www.ign.com/articles/marvel-tokon-blocked-in-132-countries-and-it-looks-like-psn-requirements-are-to-blame",
+      "article_date": "2026-07-06",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00065621,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 10845,
+      "completion_tokens": 1062,
+      "reasoning_tokens": 814,
+      "output_tokens_including_reasoning": 1876,
+      "total_tokens": 11907,
+      "total_tokens_including_reasoning": 12721,
+      "prompt_cache_hit_tokens": 10112,
+      "prompt_cache_miss_tokens": 733
     }
   ]
 }
