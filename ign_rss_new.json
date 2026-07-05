@@ -7,42 +7,46 @@
   "changed_dates": [
     "2026-07-06"
   ],
-  "new_target_dates": [
-    "2026-07-06"
-  ],
-  "new_count": 1,
-  "filtered_count": 0,
+  "new_target_dates": [],
+  "new_count": 0,
+  "filtered_count": 1,
   "cleanup_count": 0,
   "changed_count": 1,
-  "articles": [
+  "articles": [],
+  "filtered_articles": [
     {
-      "title": "Marvel Tokon Blocked in 132 Countries, and It Looks Like PSN Requirements Are to Blame",
-      "url": "https://www.ign.com/articles/marvel-tokon-blocked-in-132-countries-and-it-looks-like-psn-requirements-are-to-blame",
-      "pubDate_cst": "2026-07-06 03:47",
-      "category": "游戏新闻",
-      "emoji": "🎮",
-      "source_type": "rss"
+      "title": "The Best Deals Today: M2 iPad Air, Criterion Collection, Ys X: Nordics, and More",
+      "url": "https://www.ign.com/articles/best-deals-for-july-5-2026",
+      "pubDate_cst": "2026-07-06 04:17",
+      "description": "",
+      "categories": "",
+      "reason": "url:deal",
+      "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
+      "filtered_at_cn": "2026-07-06 05:43:37",
+      "status": "filtered"
     }
   ],
-  "filtered_articles": [],
   "runs": [
     {
       "target_date": "2026-07-06",
-      "new_count": 1,
-      "filtered_count": 0,
+      "new_count": 0,
+      "filtered_count": 1,
       "changed_count": 1,
       "next_id": 6,
-      "articles": [
+      "articles": [],
+      "filtered_articles": [
         {
-          "title": "Marvel Tokon Blocked in 132 Countries, and It Looks Like PSN Requirements Are to Blame",
-          "url": "https://www.ign.com/articles/marvel-tokon-blocked-in-132-countries-and-it-looks-like-psn-requirements-are-to-blame",
-          "pubDate_cst": "2026-07-06 03:47",
-          "category": "游戏新闻",
-          "emoji": "🎮",
-          "source_type": "rss"
+          "title": "The Best Deals Today: M2 iPad Air, Criterion Collection, Ys X: Nordics, and More",
+          "url": "https://www.ign.com/articles/best-deals-for-july-5-2026",
+          "pubDate_cst": "2026-07-06 04:17",
+          "description": "",
+          "categories": "",
+          "reason": "url:deal",
+          "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
+          "filtered_at_cn": "2026-07-06 05:43:37",
+          "status": "filtered"
         }
-      ],
-      "filtered_articles": []
+      ]
     },
     {
       "target_date": "2026-07-05",
