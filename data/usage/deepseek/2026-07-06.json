@@ -48,6 +48,30 @@
       "total_tokens_including_reasoning": 13976,
       "prompt_cache_hit_tokens": 10112,
       "prompt_cache_miss_tokens": 1286
+    },
+    {
+      "time_cn": "2026-07-06 03:44:45",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 4,
+      "article_title": "Hideo Kojima Warns of 'Frightening' Digital Future After PlayStation Reveals Plan to End Physical Disc Production",
+      "article_url": "https://www.ign.com/articles/hideo-kojima-warns-of-frightening-digital-future-after-playstation-reveals-plan-to-end-physical-disc-production",
+      "article_date": "2026-07-06",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00081847,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 11266,
+      "completion_tokens": 1240,
+      "reasoning_tokens": 1005,
+      "output_tokens_including_reasoning": 2245,
+      "total_tokens": 12506,
+      "total_tokens_including_reasoning": 13511,
+      "prompt_cache_hit_tokens": 10112,
+      "prompt_cache_miss_tokens": 1154
     }
   ]
 }
