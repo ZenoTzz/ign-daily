@@ -2,6 +2,58 @@
   "date": "2026-07-06",
   "articles": [
     {
+      "id": 7,
+      "category": "影视资讯",
+      "emoji": "🎬",
+      "en_title": "Supergirl Inches Past $100 Million at the Global Box Office After One of the Biggest Second Weekend Drops in Superhero Movie History",
+      "cn_title": "《超女》全球票房艰难突破1亿美元(约合人民币7亿元)，第二周末跌幅创超级英雄电影史之最",
+      "summary": "《超女》(Supergirl) 全球票房累计1.0047亿美元(约合人民币7亿元)，勉强突破1亿美元(约合人民币7亿元)大关，但第二周末跌幅高达74%，位列超级英雄电影史上最大跌幅之一。该片制作成本1.7亿美元(约合人民币12亿元)，营销1.2亿美元(约合人民币8亿元)，需约3亿美元(约合人民币20亿元)才能回本，目前预计亏损超1亿美元(约合人民币7亿元)。DC影业联合CEO萨弗兰表示，未达预期但仍是长期战略的一部分。主演米莉·阿尔考克将继续在《超人：明日之人》中亮相。",
+      "url": "https://www.ign.com/articles/supergirl-inches-past-100-million-at-the-global-box-office-after-one-of-the-biggest-second-weekend-drops-in-superhero-movie-history",
+      "publish_time_cn": "2026-07-06 07:25",
+      "pub_date": "2026-07-06 07:25",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/04/14/supergirl-blogroll-1765471696333-1776205448211.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/04/14/supergirl-blogroll-1765471696333-1776205448211.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/04/14/supergirl-blogroll-1765471696333-1776205448211.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/04/14/supergirl-blogroll-1765471696333-1776205448211.jpg?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/04/14/supergirl-blogroll-1765471696333-1776205448211.jpg?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/04/14/supergirl-blogroll-1765471696333-1776205448211.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-07-06T07:47:53+08:00",
+      "pending_dict": [
+        {
+          "en": "Supergirl",
+          "cn": "《超女》",
+          "cat": "movies_tv",
+          "source": "ai_guess",
+          "reason": "社区常用译名，但需确认官方中文名称"
+        },
+        {
+          "en": "Clayface",
+          "cn": "《泥面人》",
+          "cat": "movies_tv",
+          "source": "ai_guess",
+          "reason": "DC角色，有待确认中文译名"
+        },
+        {
+          "en": "Man of Tomorrow",
+          "cn": "《明日之人》",
+          "cat": "movies_tv",
+          "source": "ai_guess",
+          "reason": "超人续集，暂无官方中文译名"
+        },
+        {
+          "en": "Lanterns",
+          "cn": "《绿灯军团》",
+          "cat": "movies_tv",
+          "source": "ai_guess",
+          "reason": "DC剧集，常见译名，待确认"
+        }
+      ]
+    },
+    {
       "id": 6,
       "category": "影视资讯",
       "emoji": "🎬",
@@ -162,5 +214,5 @@
       ]
     }
   ],
-  "total": 6
+  "total": 7
 }
