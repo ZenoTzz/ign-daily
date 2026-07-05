@@ -2,6 +2,35 @@
   "date": "2026-07-06",
   "articles": [
     {
+      "id": 2,
+      "category": "游戏新闻",
+      "emoji": "🔍",
+      "en_title": "The Mario 64 Bounty That Took 30 Years to Settle",
+      "cn_title": "30年悬赏落幕，《马力欧64》路易吉真相大白",
+      "summary": "1996年，IGN曾悬赏100美元(约合人民币679元)寻找《超级马力欧64》中路易吉存在的证据，但30年来无人能破解。直到2020年任天堂源代码泄露事件（Gigaleak）爆发，玩家通过挖掘隐藏数据终于证实：路易吉确实存在于游戏中，只是因内存限制被移除。这场横跨三十年的悬赏，如今终于尘埃落定。",
+      "url": "https://www.ign.com/articles/the-mario-64-bounty-that-took-30-years-to-settle",
+      "publish_time_cn": "2026-07-06 00:00",
+      "pub_date": "2026-07-06 00:00",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/30/luigi-thumb-new-1782826689873.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/30/luigi-thumb-new-1782826689873.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/30/luigi-thumb-new-1782826689873.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/30/luigi-thumb-new-1782826689873.jpg?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/30/luigi-thumb-new-1782826689873.jpg?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/30/luigi-thumb-new-1782826689873.jpg",
+        "https://assets-prd.ignimgs.com/2026/07/02/courtyard-sign-1782989693560.jpg",
+        "https://assets-prd.ignimgs.com/2026/07/02/luigi-in-sm64-ds-1782989765091.jpg",
+        "https://assets-prd.ignimgs.com/2026/07/02/bounty-1782989826740.jpg",
+        "https://assets-prd.ignimgs.com/2026/07/02/nitnendo-letter-1782989917797.jpg",
+        "https://assets-prd.ignimgs.com/2026/07/02/dylan-tweet-1782990018823.jpg",
+        "https://assets-prd.ignimgs.com/2026/07/02/luigi-mark-1782990117529.jpg",
+        "https://assets-prd.ignimgs.com/2026/07/02/100-donation-1782990245506.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-07-06T00:29:08+08:00"
+    },
+    {
       "id": 1,
       "category": "游戏新闻",
       "emoji": "🎵",
@@ -34,5 +63,5 @@
       ]
     }
   ],
-  "total": 1
+  "total": 2
 }
