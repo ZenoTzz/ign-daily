@@ -6,13 +6,13 @@
       "category": "影视资讯",
       "emoji": "🎬",
       "en_title": "Supergirl Reportedly Faced Creative Differences Between DC Studios and Craig Gillespie",
-      "cn_title": "《超级少女》据称因创作分歧测试双版本",
-      "summary": "据《好莱坞报道者》报道，DC影业与导演Craig Gillespie在《超级少女》上存在创作分歧，双方各制作了一个剪辑版本进行测试。最终DC影业版本胜出，于6月底上映。影片上映后票房不佳，预计亏损超1亿美元(约合人民币7亿元)。IGN为本片打出6/10分。",
+      "cn_title": "《超级少女》据报因创作分歧测试两个剪辑版本",
+      "summary": "据报道，DC Studios与导演Craig Gillespie在《超级少女》上存在创作分歧，发行前数月曾测试导演版和工作室版两个剪辑。最终工作室版仅以2分优势胜出并进入院线。",
       "url": "https://www.ign.com/articles/supergirl-reportedly-faced-creative-differences-between-dc-studios-and-craig-gillespie",
       "publish_time_cn": "2026-07-04 07:14",
       "pub_date": "2026-07-04 07:14",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/06/03/supergirlthumb-1780509491632.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/03/supergirlthumb-1780509491632.png",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/03/supergirlthumb-1780509491632.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/03/supergirlthumb-1780509491632.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -21,7 +21,11 @@
         "https://assets-prd.ignimgs.com/2026/06/03/supergirlthumb-1780509491632.png"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-07-04T07:48:22+08:00"
+      "source_fetched_at": "2026-07-04T07:48:22+08:00",
+      "translation_path": "translations/24.json",
+      "translator": "codex",
+      "translator_provider": "manual",
+      "translator_model": "gpt-5-codex"
     },
     {
       "id": 23,
@@ -29,12 +33,12 @@
       "emoji": "🎮",
       "en_title": "Danganronpa 2x2 Delayed to Early 2027",
       "cn_title": "《弹丸论破2x2》延期至2027年初",
-      "summary": "Spike Chunsoft宣布《弹丸论破2x2》不再按原计划于2026年发售，延期至2027年初。制作人Sakakibara在声明中确认了这一消息，并表示将稍后公布具体发售日。游戏将加入全新模式Slayhem Mode，讲述与原作完全不同的故事线，包含新受害者和凶手，内容量比原作多约20%。此外还确认采用3D世界地图并更新了角色肖像。本作将登陆PC、Switch、Switch 2、PS5和XBOX Series。",
+      "summary": "Spike Chunsoft宣布《弹丸论破2x2》从原计划2026年延期至2027年初，并首次介绍新故事混编模式Slayhem Mode，该模式将提供不同受害者、凶手和诡计。",
       "url": "https://www.ign.com/articles/danganronpa-2x2-delayed-to-early-2027",
       "publish_time_cn": "2026-07-04 05:24",
       "pub_date": "2026-07-04 05:24",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/07/03/danganronpa-2x2-delay-1783113725626.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/07/03/danganronpa-2x2-delay-1783113725626.png",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/07/03/danganronpa-2x2-delay-1783113725626.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/07/03/danganronpa-2x2-delay-1783113725626.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -52,7 +56,11 @@
           "source": "ai_guess",
           "reason": "系列有官方中文名《弹丸论破》，但副标题2x2的写法及中文译名需确认"
         }
-      ]
+      ],
+      "translation_path": "translations/23.json",
+      "translator": "codex",
+      "translator_provider": "manual",
+      "translator_model": "gpt-5-codex"
     },
     {
       "id": 22,
@@ -94,13 +102,13 @@
       "category": "游戏新闻",
       "emoji": "🏖️",
       "en_title": "Marvel Rivals Fans Think the New Captain America Skin Is a Mod, But It's Actually Just His Rod",
-      "cn_title": "《漫威争锋》美队泳装被误认Mod",
-      "summary": "网易为庆祝美国独立日，在《漫威争锋》中为美国队长推出泳装皮肤「海滨哨兵」，造型火辣，其充气小鸭盾牌和紧身泳裤让玩家震惊，一度以为是Mod。官方确认该皮肤真实存在且已在商城上架。同时洛基、白狐等角色也获得了泳装皮肤。",
+      "cn_title": "《漫威争锋》美队泳装皮肤被玩家误认成Mod",
+      "summary": "网易为《漫威争锋》推出美国队长泳装皮肤「海滨哨兵」，造型夸张到不少玩家以为是粉丝Mod。IGN确认该皮肤确实真实存在，并可在游戏商店购买。",
       "url": "https://www.ign.com/articles/marvel-rivals-fans-think-the-new-captain-america-skin-is-a-mod-but-its-actually-just-his-rod",
       "publish_time_cn": "2026-07-04 01:41",
       "pub_date": "2026-07-04 01:41",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/07/03/marvel-rivals-captain-america-swimsuit-seaside-sentinel-1783099485139.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/07/03/marvel-rivals-captain-america-swimsuit-seaside-sentinel-1783099485139.png",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/07/03/marvel-rivals-captain-america-swimsuit-seaside-sentinel-1783099485139.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/07/03/marvel-rivals-captain-america-swimsuit-seaside-sentinel-1783099485139.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -118,7 +126,11 @@
           "source": "ai_guess",
           "reason": "皮肤名，无官方中文，建议确认后入库"
         }
-      ]
+      ],
+      "translation_path": "translations/21.json",
+      "translator": "codex",
+      "translator_provider": "manual",
+      "translator_model": "gpt-5-codex"
     },
     {
       "id": 20,
@@ -148,13 +160,13 @@
       "category": "行业动态",
       "emoji": "😟",
       "en_title": "The View From Japan: PlayStation's Push for an All-Digital Future Raises Concerns From Gamers and Developers — Including a Well-Timed Retweet From Hideo Kojima",
-      "cn_title": "索尼全面数字化引担忧，小岛秀夫转发旧帖",
-      "summary": "索尼宣布2028年起新游戏不再发行实体光盘，引发日本玩家和开发者对游戏保存与所有权的担忧。小岛秀夫转发2021年推文，警告数字独占可能使用户失去访问权。Shueisha Games制作人表示无光盘可多出1.5个月打磨时间。IGN民调显示90%读者反对全数字未来。",
+      "cn_title": "PlayStation全数字未来引日本担忧，小岛秀夫转发旧帖",
+      "summary": "索尼宣布2028年1月起新PlayStation游戏不再发行光盘后，日本玩家和开发者也表达担忧。小岛秀夫适时转发旧帖，重申数字内容可能随时失去访问权。",
       "url": "https://www.ign.com/articles/the-view-from-japan-playstations-push-for-an-all-digital-future-raises-concerns-from-gamers-and-developers-including-a-well-timed-retweet-from-hideo-kojima",
       "publish_time_cn": "2026-07-03 23:32",
       "pub_date": "2026-07-03 23:32",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/07/03/gettyimages-2174642102-1783092726708.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/07/03/gettyimages-2174642102-1783092726708.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/07/03/gettyimages-2174642102-1783092726708.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/07/03/gettyimages-2174642102-1783092726708.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -167,20 +179,24 @@
         "https://assets-prd.ignimgs.com/2022/11/23/aerith-1669223120737.png"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-07-03T23:44:43+08:00"
+      "source_fetched_at": "2026-07-03T23:44:43+08:00",
+      "translation_path": "translations/12.json",
+      "translator": "codex",
+      "translator_provider": "manual",
+      "translator_model": "gpt-5-codex"
     },
     {
       "id": 13,
       "category": "游戏新闻",
       "emoji": "📜",
       "en_title": "The Complicated History of GTA Controversies",
-      "cn_title": "《侠盗猎车手》争议史：道德恐慌与Hot Coffee",
-      "summary": "从1997年发行前英国议员抗议，到杰克·汤普森（Jack Thompson）长达十年的诉讼大战，再到「Hot Coffee」性内容MOD引发ESRB调查和2000万美元(约合人民币1亿元)和解金（约合人民币1.46亿元），《侠盗猎车手》系列始终伴随着巨大争议。尽管多项研究未能证实暴力游戏与现实犯罪之间的关联，争议本身却成为该系列成功历史中不可分割的一部分。",
+      "cn_title": "从道德恐慌到Hot Coffee，GTA争议史有多复杂",
+      "summary": "《GTA》从1997年初代起就伴随道德恐慌、诉讼和媒体围攻。从Jack Thompson到Hot Coffee，再到《GTA5》的酷刑任务和名人肖像官司，争议反而塑造了系列的文化地位。",
       "url": "https://www.ign.com/articles/grand-theft-auto-controversies",
       "publish_time_cn": "2026-07-03 23:30",
       "pub_date": "2026-07-03 23:30",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/07/03/gta-controversy-blog-1783081582978.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/07/03/gta-controversy-blog-1783081582978.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/07/03/gta-controversy-blog-1783081582978.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/07/03/gta-controversy-blog-1783081582978.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -195,7 +211,11 @@
         "https://assets-prd.ignimgs.com/2026/05/20/gta-5-bikini-girl-1779287342983.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-07-03T23:44:44+08:00"
+      "source_fetched_at": "2026-07-03T23:44:44+08:00",
+      "translation_path": "translations/13.json",
+      "translator": "codex",
+      "translator_provider": "manual",
+      "translator_model": "gpt-5-codex"
     },
     {
       "id": 14,
@@ -277,13 +297,13 @@
       "category": "行业动态",
       "emoji": "🃏",
       "en_title": "Nintendo President Says The Pokémon Company Will 'Take Measures' to Respond to Widespread Card Scalping Issues",
-      "cn_title": "任天堂社长表态：宝可梦公司将采取措施应对卡牌倒卖问题",
-      "summary": "任天堂社长古川俊太郎在股东大会上回应宝可梦卡牌缺货与倒卖问题，表示宝可梦公司正采取订单生产、与平台合作等措施，并计划利用日本My Number Card进行身份验证。尽管2025年产量已达100亿张，累计生产850亿张，但需求依然旺盛，即将到来的30周年系列或令情况进一步紧张。",
+      "cn_title": "任天堂社长称宝可梦公司将应对卡牌倒卖问题",
+      "summary": "任天堂社长古川俊太郎回应宝可梦卡牌短缺和倒卖问题，称宝可梦公司正采取按单生产、与平台合作、抽选验证等措施。该系列仅2025年就生产了100亿张卡。",
       "url": "https://www.ign.com/articles/nintendo-president-says-the-pokemon-company-will-take-measures-to-respond-to-widespread-card-scalping-issues",
       "publish_time_cn": "2026-07-03 22:21",
       "pub_date": "2026-07-03 22:21",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/07/03/gettyimages-2257874242-1783088289737.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/07/03/gettyimages-2257874242-1783088289737.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/07/03/gettyimages-2257874242-1783088289737.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/07/03/gettyimages-2257874242-1783088289737.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -296,7 +316,11 @@
         "https://assets-prd.ignimgs.com/2026/07/02/918tqxfpc9l-ac-sl1500-1782982645356.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-07-03T23:44:46+08:00"
+      "source_fetched_at": "2026-07-03T23:44:46+08:00",
+      "translation_path": "translations/17.json",
+      "translator": "codex",
+      "translator_provider": "manual",
+      "translator_model": "gpt-5-codex"
     },
     {
       "id": 18,
@@ -332,13 +356,13 @@
       "category": "游戏新闻",
       "emoji": "🎮",
       "en_title": "'A Great Foundation for Our Upcoming Projects in This Universe' — CD Projekt Hails Cyberpunk 2077 as It Hits an Incredible 40 Million Copies Sold",
-      "cn_title": "《赛博朋克2077》销量破4000万",
-      "summary": "《赛博朋克2077》全球销量已突破4000万份，较去年11月的3500万增长500万份。CD Projekt联合CEO Michał Nowakowski称这一成绩为系列后续项目「奠定坚实基础」，包括今秋推出的动画《赛博朋克：边缘行者2》及正在开发的《赛博朋克2》。这款游戏曾因首发灾难性品质被索尼下架，但经多年修复成功实现游戏史上最伟大逆转之一。",
+      "cn_title": "《赛博朋克2077》销量突破4000万份",
+      "summary": "CD Projekt宣布《赛博朋克2077》销量已达4000万份，比去年11月公布3500万份时又增加500万。公司称这为《赛博朋克：边缘行者2》和《赛博朋克2》等后续项目打下基础。",
       "url": "https://www.ign.com/articles/a-great-foundation-for-our-upcoming-projects-in-this-universe-cd-projekt-hails-cyberpunk-2077-as-it-hits-an-incredible-40-million-copies-sold",
       "publish_time_cn": "2026-07-03 21:09",
       "pub_date": "2026-07-03 21:09",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/07/03/ss-b20689e73e3ac19bcc5fad2c18d0353c769de144-1920x1080-1783084183253.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/07/03/ss-b20689e73e3ac19bcc5fad2c18d0353c769de144-1920x1080-1783084183253.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/07/03/ss-b20689e73e3ac19bcc5fad2c18d0353c769de144-1920x1080-1783084183253.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/07/03/ss-b20689e73e3ac19bcc5fad2c18d0353c769de144-1920x1080-1783084183253.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -363,20 +387,24 @@
           "source": "ai_guess",
           "reason": "未正式定名，暂用系列惯称"
         }
-      ]
+      ],
+      "translation_path": "translations/19.json",
+      "translator": "codex",
+      "translator_provider": "manual",
+      "translator_model": "gpt-5-codex"
     },
     {
       "id": 9,
       "category": "游戏新闻",
       "emoji": "💿",
       "en_title": "After Sony Kills PS5 Discs and GTA 6 is Just a Code in a Box, Xbox Is Using Halo: Campaign Evolved's Physical Disc as a Selling Point",
-      "cn_title": "索尼弃光盘、GTA6无盘，XBOX用《光环：战役进化》实体版当卖点",
-      "summary": "在索尼宣布2028年起新游戏停止推出光盘版、以及Rockstar确认《GTA6》首发仅提供数字码后，XBOX借《光环：战役进化》的实体光盘作为差异化卖点。微软在社交媒体和官方FAQ中明确强调，该游戏的实体版将包含光盘，以回应玩家对实体版内容缩水的担忧。",
+      "cn_title": "索尼停产PS5光盘、《GTA6》盒内给码后，XBOX把《光环：战役进化》实体盘当卖点",
+      "summary": "在索尼计划停产PS5实体游戏、Rockstar让《GTA6》实体版只含兑换码之后，微软开始强调《光环：战役进化》实体版盒内会包含真正的游戏光盘。",
       "url": "https://www.ign.com/articles/after-sony-kills-ps5-discs-and-gta-6-is-just-a-code-in-a-box-xbox-is-using-halo-campaign-evolveds-physical-disc-as-a-selling-point",
       "publish_time_cn": "2026-07-03 20:40",
       "pub_date": "2026-07-03 20:40",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/06/10/halothumb-1781104289843.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/10/halothumb-1781104289843.png",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/10/halothumb-1781104289843.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/10/halothumb-1781104289843.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -385,7 +413,11 @@
         "https://assets-prd.ignimgs.com/2026/06/10/halothumb-1781104289843.png"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-07-03T21:24:12+08:00"
+      "source_fetched_at": "2026-07-03T21:24:12+08:00",
+      "translation_path": "translations/09.json",
+      "translator": "codex",
+      "translator_provider": "manual",
+      "translator_model": "gpt-5-codex"
     },
     {
       "id": 10,
@@ -425,7 +457,7 @@
       "category": "行业动态",
       "emoji": "💿",
       "en_title": "Over 90% of IGN's Audience Do Not Want an All-Digital Gaming Future, but PlayStation Is Unlikely to U-Turn on Its Decision to Kill Discs",
-      "cn_title": "Sony坚持全数字化，IGN读者超九成反对",
+      "cn_title": "Sony坚持PlayStation全数字化，IGN读者超九成反对",
       "summary": "Sony宣布2028年起PlayStation主机取消光盘驱动，引发玩家强烈反对。IGN调查显示，超过1.3万名受访者中90.2%不支持全数字化未来。分析师指出，数字游戏销售占比已近80%，且利润更高，Sony不太可能改变决定。多家快餐品牌和名人也在调侃此举。",
       "url": "https://www.ign.com/articles/over-90-of-igns-audience-do-not-want-an-all-digital-gaming-future-but-playstation-is-unlikely-to-u-turn-on-its-decision-to-kill-discs",
       "publish_time_cn": "2026-07-03 19:12",
@@ -447,13 +479,13 @@
       "category": "游戏新闻",
       "emoji": "📀",
       "en_title": "As Sony Kills Physical PS5 Games, Disc Production Factory Workers Are Set to be Reassigned",
-      "cn_title": "索尼终止PS5实体游戏生产，光盘厂工人面临转岗",
-      "summary": "索尼宣布从2028年1月起所有新PS5游戏将仅发行数字版，位于奥地利塔尔高的光盘工厂约300名员工将接受培训转产微光学器件。分析师指出，此举预示着PS6也可能取消光驱。与此同时，微软代号Project Helix的下一代XBOX据报也将无光驱上市。",
+      "cn_title": "索尼停产PS5实体游戏，光盘厂员工将被转岗",
+      "summary": "索尼宣布2028年起新PS5游戏将全面数字化后，奥地利Thalgau光盘工厂员工将转向微光学产品生产。该厂目前每天生产60万张光盘，其中一半来自PS5游戏。",
       "url": "https://www.ign.com/articles/as-sony-kills-physical-ps5-games-disc-production-factory-workers-are-set-to-be-reassigned",
       "publish_time_cn": "2026-07-03 18:51",
       "pub_date": "2026-07-03 18:51",
-      "cover_image": "https://assets-prd.ignimgs.com/2025/04/10/ps5-disc-drive-1744284345491.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2025/04/10/ps5-disc-drive-1744284345491.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2025/04/10/ps5-disc-drive-1744284345491.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2025/04/10/ps5-disc-drive-1744284345491.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -462,7 +494,11 @@
         "https://assets-prd.ignimgs.com/2025/04/10/ps5-disc-drive-1744284345491.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-07-03T19:18:21+08:00"
+      "source_fetched_at": "2026-07-03T19:18:21+08:00",
+      "translation_path": "translations/08.json",
+      "translator": "codex",
+      "translator_provider": "manual",
+      "translator_model": "gpt-5-codex"
     },
     {
       "id": 4,
@@ -608,7 +644,7 @@
       "category": "人物新闻",
       "emoji": "🧠",
       "en_title": "Nintendo Brain Training Professor Explains Why Driving a Manual Transmission Car Is Better for Your Brain Than an Automatic",
-      "cn_title": "川岛隆太教授：手动挡驾驶比自动挡更健脑，或可预防痴呆",
+      "cn_title": "任天堂《脑锻炼》教授：手动挡驾驶比自动挡更健脑，或可预防痴呆",
       "summary": "任天堂《脑力锻炼》系列游戏开发者川岛隆太教授领导的研究发现，驾驶手动挡汽车需要判断路况、选择档位并协调手脚操作，这一过程能有效激活前额叶皮层，对认知功能有积极影响，有助于预防痴呆。尽管手动挡汽车正逐渐被自动挡取代，但研究建议手动驾驶能锻炼大脑；如果不开手动挡，玩《集合啦 动物森友会》等游戏也有助于保持大脑健康。",
       "url": "https://www.ign.com/articles/nintendo-brain-training-professor-explains-why-driving-a-manual-transmission-car-is-better-for-your-brain-than-an-automatic",
       "publish_time_cn": "2026-07-03 16:14",
@@ -655,13 +691,13 @@
       "category": "游戏新闻",
       "emoji": "🎮",
       "en_title": "Suicide Squad: Kill the Justice League Developers Wanted to Quit the Industry After the Game Was Released",
-      "cn_title": "《自杀小队》开发者自述：游戏发售后曾想离开游戏行业",
-      "summary": "两名前Rocksteady员工在访谈中透露，开发《自杀小队：杀死正义联盟》让他们对行业失去信心。华纳兄弟要求做成服务型游戏，开发过程像在「填表格」。设计师Johnny Armstrong称自己「精疲力尽」，甚至想过彻底退出。两人现已离职，并为新作《Secret of Circadia》发起众筹，目标1.1万美元(约合人民币7万元)（约合7.9万人民币）。",
+      "cn_title": "《自杀小队》开发者称游戏发售后曾想离开行业",
+      "summary": "两名前Rocksteady员工谈到《自杀小队：消灭正义联盟》的开发经历，称华纳要求做成服务型游戏后，团队压力转向复玩和用户参与，甚至让他们一度想离开游戏行业。",
       "url": "https://www.ign.com/articles/suicide-squad-kill-the-justice-league-developers-wanted-to-quit-the-industry-after-the-game-was-released",
       "publish_time_cn": "2026-07-03 15:41",
       "pub_date": "2026-07-03 15:41",
-      "cover_image": "https://assets-prd.ignimgs.com/2022/12/09/batman-suicidesquad-blogroll-1670550363735.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2022/12/09/batman-suicidesquad-blogroll-1670550363735.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2022/12/09/batman-suicidesquad-blogroll-1670550363735.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2022/12/09/batman-suicidesquad-blogroll-1670550363735.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -679,7 +715,11 @@
           "source": "ai_guess",
           "reason": "无官方中文译名，保留英文等待确认"
         }
-      ]
+      ],
+      "translation_path": "translations/02.json",
+      "translator": "codex",
+      "translator_provider": "manual",
+      "translator_model": "gpt-5-codex"
     },
     {
       "id": 1,
