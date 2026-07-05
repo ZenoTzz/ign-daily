@@ -72,6 +72,30 @@
       "total_tokens_including_reasoning": 13022,
       "prompt_cache_hit_tokens": 10112,
       "prompt_cache_miss_tokens": 598
+    },
+    {
+      "time_cn": "2026-07-05 09:26:39",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 1,
+      "article_title": "Exclusive: First Details and Trailer Revealed for BEYOND BORDERS Vol.1: EMERGE MODE MIKU, a New EP Featuring Hatsune Miku Singing With Grimes, slayr, and More",
+      "article_url": "https://www.ign.com/articles/exclusive-first-details-and-trailer-revealed-for-beyond-borders-vol1-emerge-mode-miku-a-new-ep-featuring-hatsune-miku-singing-with-grimes-slayr-and-more",
+      "article_date": "2026-07-06",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00129811,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 10828,
+      "completion_tokens": 2284,
+      "reasoning_tokens": 1893,
+      "output_tokens_including_reasoning": 4177,
+      "total_tokens": 13112,
+      "total_tokens_including_reasoning": 15005,
+      "prompt_cache_hit_tokens": 10112,
+      "prompt_cache_miss_tokens": 716
     }
   ]
 }
