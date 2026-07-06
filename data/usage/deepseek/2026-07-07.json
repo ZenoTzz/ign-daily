@@ -336,6 +336,102 @@
       "total_tokens_including_reasoning": 12820,
       "prompt_cache_hit_tokens": 10112,
       "prompt_cache_miss_tokens": 1145
+    },
+    {
+      "time_cn": "2026-07-07 04:34:47",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 19,
+      "article_title": "Fans Mourn Starfield Amid Xbox Layoffs, With Bethesda Now Seemingly Focused on Fallout, Elder Scrolls, Wolfenstein, Doom, and Quake",
+      "article_url": "https://www.ign.com/articles/fans-mourn-starfield-amid-xbox-layoffs-with-bethesda-now-seemingly-focused-on-fallout-elder-scrolls-wolfenstein-doom-and-quake",
+      "article_date": "2026-07-07",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00055534,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 11140,
+      "completion_tokens": 1079,
+      "reasoning_tokens": 791,
+      "output_tokens_including_reasoning": 1870,
+      "total_tokens": 12219,
+      "total_tokens_including_reasoning": 13010,
+      "prompt_cache_hit_tokens": 11136,
+      "prompt_cache_miss_tokens": 4
+    },
+    {
+      "time_cn": "2026-07-07 04:34:59",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 21,
+      "article_title": "'We Need to Change Course' — Bethesda Boss Tells Staff the Company Must Focus on 'Our Strongest Franchises' as Xbox Layoffs Hit Hard",
+      "article_url": "https://www.ign.com/articles/we-need-to-change-course-bethesda-boss-tells-staff-the-company-must-focus-on-our-strongest-franchises-as-xbox-layoffs-hit-hard",
+      "article_date": "2026-07-07",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00059209,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 11303,
+      "completion_tokens": 889,
+      "reasoning_tokens": 529,
+      "output_tokens_including_reasoning": 1418,
+      "total_tokens": 12192,
+      "total_tokens_including_reasoning": 12721,
+      "prompt_cache_hit_tokens": 10112,
+      "prompt_cache_miss_tokens": 1191
+    },
+    {
+      "time_cn": "2026-07-07 04:35:06",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 22,
+      "article_title": "Pokémon Go Hosting Major 10th Anniversary Broadcast This Week",
+      "article_url": "https://www.ign.com/articles/pokmon-go-hosting-major-10th-anniversary-broadcast-this-week",
+      "article_date": "2026-07-07",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00034093,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 10741,
+      "completion_tokens": 510,
+      "reasoning_tokens": 292,
+      "output_tokens_including_reasoning": 802,
+      "total_tokens": 11251,
+      "total_tokens_including_reasoning": 11543,
+      "prompt_cache_hit_tokens": 10112,
+      "prompt_cache_miss_tokens": 629
+    },
+    {
+      "time_cn": "2026-07-07 04:35:19",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 23,
+      "article_title": "The Elder Scrolls Online Has Reportedly Lost 'As Much as Half' of Its Development Team as Its Roadmap Is Being Re-Evaluated",
+      "article_url": "https://www.ign.com/articles/the-elder-scrolls-online-has-reportedly-lost-as-much-as-half-of-its-development-team-as-its-roadmap-is-being-re-evaluated",
+      "article_date": "2026-07-07",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00074049,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 11213,
+      "completion_tokens": 1120,
+      "reasoning_tokens": 873,
+      "output_tokens_including_reasoning": 1993,
+      "total_tokens": 12333,
+      "total_tokens_including_reasoning": 13206,
+      "prompt_cache_hit_tokens": 10112,
+      "prompt_cache_miss_tokens": 1101
     }
   ]
 }
