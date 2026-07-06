@@ -600,6 +600,30 @@
       "total_tokens_including_reasoning": 12503,
       "prompt_cache_hit_tokens": 10112,
       "prompt_cache_miss_tokens": 967
+    },
+    {
+      "time_cn": "2026-07-07 07:33:06",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 27,
+      "article_title": "Disney Lorcana TCG: Attack of the Vine! Set First Impressions",
+      "article_url": "https://www.ign.com/articles/disney-lorcana-tcg-attack-of-the-vine-set-first-impressions",
+      "article_date": "2026-07-07",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00055083,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 11819,
+      "completion_tokens": 1148,
+      "reasoning_tokens": 680,
+      "output_tokens_including_reasoning": 1828,
+      "total_tokens": 12967,
+      "total_tokens_including_reasoning": 13647,
+      "prompt_cache_hit_tokens": 11776,
+      "prompt_cache_miss_tokens": 43
     }
   ]
 }

@@ -7,127 +7,65 @@
   "changed_dates": [
     "2026-07-07"
   ],
-  "new_target_dates": [
-    "2026-07-07"
-  ],
-  "new_count": 5,
-  "filtered_count": 1,
+  "new_target_dates": [],
+  "new_count": 0,
+  "filtered_count": 2,
   "cleanup_count": 0,
-  "changed_count": 6,
-  "articles": [
-    {
-      "title": "Steam Machine vs PS5: How Does Valve's New Mini PC Stack Up?",
-      "url": "https://www.ign.com/articles/steam-machine-vs-ps5-how-does-valves-new-mini-pc-stack-up",
-      "pubDate_cst": "2026-07-07 05:45",
-      "category": "游戏新闻",
-      "emoji": "🎮",
-      "source_type": "rss"
-    },
-    {
-      "title": "How to Build a Better Steam Machine for (Slightly) Less",
-      "url": "https://www.ign.com/articles/how-to-build-a-better-steam-machine-for-slightly-less",
-      "pubDate_cst": "2026-07-07 05:25",
-      "category": "游戏新闻",
-      "emoji": "🎮",
-      "source_type": "rss"
-    },
-    {
-      "title": "GKIDS Reveals 3 New Collector’s Editions of Beloved Films and Blu-ray Remaster of Hideaki Anno’s Love & Pop at Anime Expo 2026",
-      "url": "https://www.ign.com/articles/gkids-anime-expo-2026-4k-blu-ray-announcements",
-      "pubDate_cst": "2026-07-07 05:22",
-      "category": "游戏新闻",
-      "emoji": "🎮",
-      "source_type": "rss"
-    },
-    {
-      "title": "Disney Lorcana TCG: Attack of the Vine! Set First Impressions",
-      "url": "https://www.ign.com/articles/disney-lorcana-tcg-attack-of-the-vine-set-first-impressions",
-      "pubDate_cst": "2026-07-07 04:55",
-      "category": "游戏新闻",
-      "emoji": "🎮",
-      "source_type": "rss"
-    },
-    {
-      "title": "U.S. Helps Vietnam Arrest 7 People Allegedly Involved in One of the Largest and Most Popular Free Streaming Sites for Anime",
-      "url": "https://www.ign.com/articles/us-helps-vietnam-arrest-7-people-allegedly-involved-in-one-of-the-largest-and-most-popular-free-streaming-sites-for-anime",
-      "pubDate_cst": "2026-07-07 04:34",
-      "category": "游戏新闻",
-      "emoji": "🎮",
-      "source_type": "rss"
-    }
-  ],
+  "changed_count": 2,
+  "articles": [],
   "filtered_articles": [
     {
-      "title": "Meccha Chameleon Hits an Astonishing 15 Million Sales, Teases Collaboration With Famous Japanese Star — and Fans Have Theories for Who It Might Be",
-      "url": "https://www.ign.com/articles/meccha-chameleon-hits-an-astonishing-15-million-sales-teases-collaboration-with-famous-japanese-star-and-fans-have-theories-for-who-it-might-be",
-      "pubDate_cst": "2026-07-07 04:56",
-      "description": "Skyrocketing Japanese indie hit Meccha Chameleon just surpassed 15 million sales, despite launching on Steam less than a month ago. Now, the paint-and-seek multiplayer game is getting a collaboration with a well-known Japanese star, and fans are abuzz with excitement over who it might be.",
+      "title": "Save 50% Off the Lokithor J2250 Pro Cordless Car Jump Starter With LiFePO4 Batteries",
+      "url": "https://www.ign.com/articles/lokithor-j2250-pro-cordless-car-jump-starter-deal",
+      "pubDate_cst": "2026-07-07 06:15",
+      "description": "LiFePO4 jump starters are safer, last longer, and work better in cold weather than traditional lithium models.",
       "categories": "",
-      "reason": "url:sale",
+      "reason": "text:\\bsave \\d+%",
       "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
-      "filtered_at_cn": "2026-07-07 06:07:41",
+      "filtered_at_cn": "2026-07-07 07:32:46",
+      "status": "filtered"
+    },
+    {
+      "title": "Walmart Has a Decent 512GB Nintendo Switch 2 Memory Card Deal Despite the Price Hikes",
+      "url": "https://www.ign.com/articles/best-nintendo-switch-2-microsd-express-memory-card-deal-july-2026",
+      "pubDate_cst": "2026-07-07 06:55",
+      "description": "You can hold out for as long as you want, but sooner or later you'll need more space.",
+      "categories": "",
+      "reason": "url:deal",
+      "rss_url": "https://www.ign.com/rss/v2/articles/feed?vertical=movies&start=0&count=20",
+      "filtered_at_cn": "2026-07-07 07:32:46",
       "status": "filtered"
     }
   ],
   "runs": [
     {
       "target_date": "2026-07-07",
-      "new_count": 5,
-      "filtered_count": 1,
-      "changed_count": 6,
+      "new_count": 0,
+      "filtered_count": 2,
+      "changed_count": 2,
       "next_id": 29,
-      "articles": [
-        {
-          "title": "Steam Machine vs PS5: How Does Valve's New Mini PC Stack Up?",
-          "url": "https://www.ign.com/articles/steam-machine-vs-ps5-how-does-valves-new-mini-pc-stack-up",
-          "pubDate_cst": "2026-07-07 05:45",
-          "category": "游戏新闻",
-          "emoji": "🎮",
-          "source_type": "rss"
-        },
-        {
-          "title": "How to Build a Better Steam Machine for (Slightly) Less",
-          "url": "https://www.ign.com/articles/how-to-build-a-better-steam-machine-for-slightly-less",
-          "pubDate_cst": "2026-07-07 05:25",
-          "category": "游戏新闻",
-          "emoji": "🎮",
-          "source_type": "rss"
-        },
-        {
-          "title": "GKIDS Reveals 3 New Collector’s Editions of Beloved Films and Blu-ray Remaster of Hideaki Anno’s Love & Pop at Anime Expo 2026",
-          "url": "https://www.ign.com/articles/gkids-anime-expo-2026-4k-blu-ray-announcements",
-          "pubDate_cst": "2026-07-07 05:22",
-          "category": "游戏新闻",
-          "emoji": "🎮",
-          "source_type": "rss"
-        },
-        {
-          "title": "Disney Lorcana TCG: Attack of the Vine! Set First Impressions",
-          "url": "https://www.ign.com/articles/disney-lorcana-tcg-attack-of-the-vine-set-first-impressions",
-          "pubDate_cst": "2026-07-07 04:55",
-          "category": "游戏新闻",
-          "emoji": "🎮",
-          "source_type": "rss"
-        },
-        {
-          "title": "U.S. Helps Vietnam Arrest 7 People Allegedly Involved in One of the Largest and Most Popular Free Streaming Sites for Anime",
-          "url": "https://www.ign.com/articles/us-helps-vietnam-arrest-7-people-allegedly-involved-in-one-of-the-largest-and-most-popular-free-streaming-sites-for-anime",
-          "pubDate_cst": "2026-07-07 04:34",
-          "category": "游戏新闻",
-          "emoji": "🎮",
-          "source_type": "rss"
-        }
-      ],
+      "articles": [],
       "filtered_articles": [
         {
-          "title": "Meccha Chameleon Hits an Astonishing 15 Million Sales, Teases Collaboration With Famous Japanese Star — and Fans Have Theories for Who It Might Be",
-          "url": "https://www.ign.com/articles/meccha-chameleon-hits-an-astonishing-15-million-sales-teases-collaboration-with-famous-japanese-star-and-fans-have-theories-for-who-it-might-be",
-          "pubDate_cst": "2026-07-07 04:56",
-          "description": "Skyrocketing Japanese indie hit Meccha Chameleon just surpassed 15 million sales, despite launching on Steam less than a month ago. Now, the paint-and-seek multiplayer game is getting a collaboration with a well-known Japanese star, and fans are abuzz with excitement over who it might be.",
+          "title": "Save 50% Off the Lokithor J2250 Pro Cordless Car Jump Starter With LiFePO4 Batteries",
+          "url": "https://www.ign.com/articles/lokithor-j2250-pro-cordless-car-jump-starter-deal",
+          "pubDate_cst": "2026-07-07 06:15",
+          "description": "LiFePO4 jump starters are safer, last longer, and work better in cold weather than traditional lithium models.",
           "categories": "",
-          "reason": "url:sale",
+          "reason": "text:\\bsave \\d+%",
           "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
-          "filtered_at_cn": "2026-07-07 06:07:41",
+          "filtered_at_cn": "2026-07-07 07:32:46",
+          "status": "filtered"
+        },
+        {
+          "title": "Walmart Has a Decent 512GB Nintendo Switch 2 Memory Card Deal Despite the Price Hikes",
+          "url": "https://www.ign.com/articles/best-nintendo-switch-2-microsd-express-memory-card-deal-july-2026",
+          "pubDate_cst": "2026-07-07 06:55",
+          "description": "You can hold out for as long as you want, but sooner or later you'll need more space.",
+          "categories": "",
+          "reason": "url:deal",
+          "rss_url": "https://www.ign.com/rss/v2/articles/feed?vertical=movies&start=0&count=20",
+          "filtered_at_cn": "2026-07-07 07:32:46",
           "status": "filtered"
         }
       ]

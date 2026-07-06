@@ -93,10 +93,10 @@
     {
       "id": 27,
       "category": "游戏新闻",
-      "emoji": "🎮",
+      "emoji": "🃏",
       "en_title": "Disney Lorcana TCG: Attack of the Vine! Set First Impressions",
-      "cn_title": "Disney Lorcana TCG: Attack of the Vine! Set First Impressions",
-      "summary": "",
+      "cn_title": "《迪士尼Lorcana》新系列《藤蔓突袭》预览",
+      "summary": "《迪士尼Lorcana》TCG即将迎来第13个扩展包《藤蔓突袭》。该系列将于7月17日开启预发布，7月24日正式发售，首次加入《怪兽电力公司》《青春变形记》《飞屋环游记》等皮克斯角色，并引入「组合转换」机制，允许将两名角色合体为强力双人卡牌。此外，新卡组还强化了「蜂蜜」和「洪水诞生」等分类，带来环境重大变革。",
       "url": "https://www.ign.com/articles/disney-lorcana-tcg-attack-of-the-vine-set-first-impressions",
       "publish_time_cn": "2026-07-07 04:55",
       "pub_date": "2026-07-07 04:55",
@@ -112,7 +112,37 @@
         "https://assets-prd.ignimgs.com/2026/07/06/aotv2-1783366405339.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-07-07T06:07:47+08:00"
+      "source_fetched_at": "2026-07-07T06:07:47+08:00",
+      "pending_dict": [
+        {
+          "en": "Attack of the Vine!",
+          "cn": "藤蔓突袭",
+          "cat": "games",
+          "source": "ai_guess",
+          "reason": "暂译，无官方中文名，需确认"
+        },
+        {
+          "en": "Combo Shift",
+          "cn": "组合转换",
+          "cat": "terms",
+          "source": "ai_guess",
+          "reason": "游戏机制新词，暂译，需确认"
+        },
+        {
+          "en": "Hunny",
+          "cn": "蜂蜜",
+          "cat": "terms",
+          "source": "ai_guess",
+          "reason": "游戏内分类，暂译，需确认"
+        },
+        {
+          "en": "Vineling",
+          "cn": "藤蔓化身",
+          "cat": "terms",
+          "source": "ai_guess",
+          "reason": "游戏内分类，暂译，需确认"
+        }
+      ]
     },
     {
       "id": 28,
