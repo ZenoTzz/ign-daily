@@ -144,6 +144,54 @@
       "total_tokens_including_reasoning": 14656,
       "prompt_cache_hit_tokens": 10112,
       "prompt_cache_miss_tokens": 847
+    },
+    {
+      "time_cn": "2026-07-06 10:20:36",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 1,
+      "article_title": "House of the Dragon Season 3, Episode 3 Recap and Review",
+      "article_url": "https://www.ign.com/articles/house-of-the-dragon-season-3-episode-3-recap-and-review",
+      "article_date": "2026-07-07",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00087111,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 11720,
+      "completion_tokens": 1222,
+      "reasoning_tokens": 984,
+      "output_tokens_including_reasoning": 2206,
+      "total_tokens": 12942,
+      "total_tokens_including_reasoning": 13926,
+      "prompt_cache_hit_tokens": 10112,
+      "prompt_cache_miss_tokens": 1608
+    },
+    {
+      "time_cn": "2026-07-06 10:20:44",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 2,
+      "article_title": "The Vampire Lestat Showrunner Explains How Lestat's Musical Journey Is 'Just as Important' as the Queen of the Damned's Awakening",
+      "article_url": "https://www.ign.com/articles/the-vampire-lestat-showrunner-interview-episode-5-new-york",
+      "article_date": "2026-07-07",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00045307,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 11702,
+      "completion_tokens": 480,
+      "reasoning_tokens": 242,
+      "output_tokens_including_reasoning": 722,
+      "total_tokens": 12182,
+      "total_tokens_including_reasoning": 12424,
+      "prompt_cache_hit_tokens": 10112,
+      "prompt_cache_miss_tokens": 1590
     }
   ]
 }

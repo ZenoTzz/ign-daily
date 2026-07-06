@@ -1,24 +1,32 @@
 {
-  "target_date": "2026-07-06",
+  "target_date": "2026-07-07",
   "target_dates": [
-    "2026-07-06",
-    "2026-07-05"
+    "2026-07-07",
+    "2026-07-06"
   ],
   "changed_dates": [
-    "2026-07-06"
+    "2026-07-07"
   ],
   "new_target_dates": [
-    "2026-07-06"
+    "2026-07-07"
   ],
-  "new_count": 1,
+  "new_count": 2,
   "filtered_count": 0,
   "cleanup_count": 0,
-  "changed_count": 1,
+  "changed_count": 2,
   "articles": [
     {
-      "title": "Supergirl Inches Past $100 Million at the Global Box Office After One of the Biggest Second Weekend Drops in Superhero Movie History",
-      "url": "https://www.ign.com/articles/supergirl-inches-past-100-million-at-the-global-box-office-after-one-of-the-biggest-second-weekend-drops-in-superhero-movie-history",
-      "pubDate_cst": "2026-07-06 07:25",
+      "title": "House of the Dragon Season 3, Episode 3 Recap and Review",
+      "url": "https://www.ign.com/articles/house-of-the-dragon-season-3-episode-3-recap-and-review",
+      "pubDate_cst": "2026-07-06 10:00",
+      "category": "游戏评测",
+      "emoji": "⭐",
+      "source_type": "rss"
+    },
+    {
+      "title": "The Vampire Lestat Showrunner Explains How Lestat's Musical Journey Is 'Just as Important' as the Queen of the Damned's Awakening",
+      "url": "https://www.ign.com/articles/the-vampire-lestat-showrunner-interview-episode-5-new-york",
+      "pubDate_cst": "2026-07-06 10:00",
       "category": "游戏新闻",
       "emoji": "🎮",
       "source_type": "rss"
@@ -27,16 +35,24 @@
   "filtered_articles": [],
   "runs": [
     {
-      "target_date": "2026-07-06",
-      "new_count": 1,
+      "target_date": "2026-07-07",
+      "new_count": 2,
       "filtered_count": 0,
-      "changed_count": 1,
-      "next_id": 8,
+      "changed_count": 2,
+      "next_id": 3,
       "articles": [
         {
-          "title": "Supergirl Inches Past $100 Million at the Global Box Office After One of the Biggest Second Weekend Drops in Superhero Movie History",
-          "url": "https://www.ign.com/articles/supergirl-inches-past-100-million-at-the-global-box-office-after-one-of-the-biggest-second-weekend-drops-in-superhero-movie-history",
-          "pubDate_cst": "2026-07-06 07:25",
+          "title": "House of the Dragon Season 3, Episode 3 Recap and Review",
+          "url": "https://www.ign.com/articles/house-of-the-dragon-season-3-episode-3-recap-and-review",
+          "pubDate_cst": "2026-07-06 10:00",
+          "category": "游戏评测",
+          "emoji": "⭐",
+          "source_type": "rss"
+        },
+        {
+          "title": "The Vampire Lestat Showrunner Explains How Lestat's Musical Journey Is 'Just as Important' as the Queen of the Damned's Awakening",
+          "url": "https://www.ign.com/articles/the-vampire-lestat-showrunner-interview-episode-5-new-york",
+          "pubDate_cst": "2026-07-06 10:00",
           "category": "游戏新闻",
           "emoji": "🎮",
           "source_type": "rss"
@@ -45,11 +61,11 @@
       "filtered_articles": []
     },
     {
-      "target_date": "2026-07-05",
+      "target_date": "2026-07-06",
       "new_count": 0,
       "filtered_count": 0,
       "changed_count": 0,
-      "next_id": 6,
+      "next_id": 8,
       "articles": [],
       "filtered_articles": []
     }
