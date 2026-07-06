@@ -660,6 +660,26 @@ def sync_incremental(service: Any, target_date: str, *, dry_run: bool = False) -
         return
 
     translation_files = list(translations_dir.glob("*.json"))
+    index_path = DATA_DIR / target_date / "index.json"
+    if index_path.exists():
+        try:
+            index_data = json.loads(index_path.read_text(encoding="utf-8"))
+            allowed_paths = {
+                str(article.get("translation_path") or "").replace("\\", "/")
+                for article in index_data.get("articles", [])
+                if article.get("translation_status") == "done"
+                and article.get("translation_path")
+            }
+            if allowed_paths:
+                translation_files = [
+                    path
+                    for path in translation_files
+                    if f"translations/{path.name}" in allowed_paths
+                ]
+            else:
+                translation_files = []
+        except Exception as e:
+            print(f"[WARN] Failed to read {index_path}: {e}")
     if not translation_files:
         print(f"[WARN] No translation files found in {translations_dir}")
         return
