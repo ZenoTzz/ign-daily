@@ -2,6 +2,51 @@
   "date": "2026-07-07",
   "articles": [
     {
+      "id": 3,
+      "category": "行业动态",
+      "emoji": "🤖",
+      "en_title": "ChatGPT Fiction Prompt Researchers Accidentally Stumble Upon a Super User Repeatedly Requesting Stories Featuring Pregnant Characters From Doki Doki Literature Club",
+      "cn_title": "ChatGPT小说研究意外发现超级用户：反复要求生成《心跳文学部》怀孕同人",
+      "summary": "研究人员在分析ChatGPT小说生成行为时，意外发现一位超级用户反复要求AI生成《心跳文学部！》角色怀孕的粉丝小说。该用户是研究数据集WildChat中最活跃的fiction生成者，其提示常以长篇对话中断为特征，要求AI续写。研究显示，34%的对话用于创作小说，其中49%为同人、29%为情色内容，而2%的重度用户贡献了80%的fiction提示。",
+      "url": "https://www.ign.com/articles/chatgpt-fiction-prompt-researchers-accidentally-stumble-upon-a-super-user-repeatedly-requesting-stories-featuring-pregnant-characters-from-doki-doki-literature-club",
+      "publish_time_cn": "2026-07-06 16:28",
+      "pub_date": "2026-07-06 16:28",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/07/06/ss-3030d47cf865cb5910746bc3897217c9cc8ce5fb-1920x1080-1783326477721.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/07/06/ss-3030d47cf865cb5910746bc3897217c9cc8ce5fb-1920x1080-1783326477721.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/07/06/ss-3030d47cf865cb5910746bc3897217c9cc8ce5fb-1920x1080-1783326477721.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/07/06/ss-3030d47cf865cb5910746bc3897217c9cc8ce5fb-1920x1080-1783326477721.jpg?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/07/06/ss-3030d47cf865cb5910746bc3897217c9cc8ce5fb-1920x1080-1783326477721.jpg?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/07/06/ss-3030d47cf865cb5910746bc3897217c9cc8ce5fb-1920x1080-1783326477721.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-07-06T16:52:29+08:00",
+      "pending_dict": [
+        {
+          "en": "Doki Doki Literature Club",
+          "cn": "《心跳文学部！》",
+          "cat": "games",
+          "source": "ai_guess",
+          "reason": "词库未收录，中文社区常用译名为《心跳文学部！》，需人工确认"
+        },
+        {
+          "en": "WildChat",
+          "cn": "WildChat",
+          "cat": "terms",
+          "source": "ai_guess",
+          "reason": "数据集名称，保留英文更准确"
+        },
+        {
+          "en": "Automaton",
+          "cn": "Automaton",
+          "cat": "media",
+          "source": "ai_guess",
+          "reason": "媒体名称，暂无官方中文译名，保留英文"
+        }
+      ]
+    },
+    {
       "id": 1,
       "category": "评测评分",
       "emoji": "🐉",
@@ -47,5 +92,5 @@
       "source_fetched_at": "2026-07-06T10:20:14+08:00"
     }
   ],
-  "total": 2
+  "total": 3
 }

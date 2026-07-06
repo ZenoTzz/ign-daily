@@ -192,6 +192,30 @@
       "total_tokens_including_reasoning": 12424,
       "prompt_cache_hit_tokens": 10112,
       "prompt_cache_miss_tokens": 1590
+    },
+    {
+      "time_cn": "2026-07-06 16:52:41",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 3,
+      "article_title": "ChatGPT Fiction Prompt Researchers Accidentally Stumble Upon a Super User Repeatedly Requesting Stories Featuring Pregnant Characters From Doki Doki Literature Club",
+      "article_url": "https://www.ign.com/articles/chatgpt-fiction-prompt-researchers-accidentally-stumble-upon-a-super-user-repeatedly-requesting-stories-featuring-pregnant-characters-from-doki-doki-literature-club",
+      "article_date": "2026-07-07",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00044593,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 11097,
+      "completion_tokens": 712,
+      "reasoning_tokens": 287,
+      "output_tokens_including_reasoning": 999,
+      "total_tokens": 11809,
+      "total_tokens_including_reasoning": 12096,
+      "prompt_cache_hit_tokens": 10112,
+      "prompt_cache_miss_tokens": 985
     }
   ]
 }
