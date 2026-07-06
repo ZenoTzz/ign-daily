@@ -264,6 +264,78 @@
       "total_tokens_including_reasoning": 12341,
       "prompt_cache_hit_tokens": 10112,
       "prompt_cache_miss_tokens": 1319
+    },
+    {
+      "time_cn": "2026-07-07 02:33:25",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 13,
+      "article_title": "Xbox Is ‘Not Healthy’, But Losing All of This Talent Isn’t the Cure",
+      "article_url": "https://www.ign.com/articles/xbox-is-not-healthy-but-losing-all-of-this-talent-isnt-the-cure",
+      "article_date": "2026-07-07",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00097689,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 12338,
+      "completion_tokens": 1780,
+      "reasoning_tokens": 1561,
+      "output_tokens_including_reasoning": 3341,
+      "total_tokens": 14118,
+      "total_tokens_including_reasoning": 15679,
+      "prompt_cache_hit_tokens": 12288,
+      "prompt_cache_miss_tokens": 50
+    },
+    {
+      "time_cn": "2026-07-07 02:33:47",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 19,
+      "article_title": "Fans Mourn Starfield Amid Xbox Layoffs, With Bethesda Now Seemingly Focused on Fallout, Elder Scrolls, Wolfenstein, Doom, and Quake",
+      "article_url": "https://www.ign.com/articles/fans-mourn-starfield-amid-xbox-layoffs-with-bethesda-now-seemingly-focused-on-fallout-elder-scrolls-wolfenstein-doom-and-quake",
+      "article_date": "2026-07-07",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00124603,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 11140,
+      "completion_tokens": 2036,
+      "reasoning_tokens": 1799,
+      "output_tokens_including_reasoning": 3835,
+      "total_tokens": 13176,
+      "total_tokens_including_reasoning": 14975,
+      "prompt_cache_hit_tokens": 10112,
+      "prompt_cache_miss_tokens": 1028
+    },
+    {
+      "time_cn": "2026-07-07 02:33:58",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 20,
+      "article_title": "As Xbox Tries to Sell or Close Arkane, the Future of Marvel's Blade Remains Unclear, With Reports Suggesting It Was Delayed Internally and Is Running Over Budget",
+      "article_url": "https://www.ign.com/articles/as-xbox-tries-to-sell-or-close-arkane-the-future-of-marvels-blade-remains-unclear-with-reports-suggesting-it-was-delayed-internally-and-is-running-over-budget",
+      "article_date": "2026-07-07",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00062625,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 11257,
+      "completion_tokens": 899,
+      "reasoning_tokens": 664,
+      "output_tokens_including_reasoning": 1563,
+      "total_tokens": 12156,
+      "total_tokens_including_reasoning": 12820,
+      "prompt_cache_hit_tokens": 10112,
+      "prompt_cache_miss_tokens": 1145
     }
   ]
 }
