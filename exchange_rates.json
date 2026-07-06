@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-07-06 21:00:06 +08:00",
+  "updated_at": "2026-07-07 00:31:30 +08:00",
   "source": "multi-source median",
   "base": "USD",
   "rates_to_cny": {
-    "USD": 6.78,
+    "USD": 6.79,
     "EUR": 7.76,
-    "JPY_100": 4.21,
+    "JPY_100": 4.2,
     "GBP": 9.06,
     "KRW_100": 0.44
   },
@@ -17,33 +17,33 @@
     "checks": {
       "USD": {
         "source_count": 4,
-        "median_raw": 6.783509,
-        "max_cross_source_deviation": 0.000957,
-        "previous_deviation": 0.000518
+        "median_raw": 6.787741,
+        "max_cross_source_deviation": 0.001173,
+        "previous_deviation": 0.001142
       },
       "EUR": {
         "source_count": 4,
-        "median_raw": 7.76209,
-        "max_cross_source_deviation": 0.000875,
-        "previous_deviation": 0.000269
+        "median_raw": 7.759956,
+        "max_cross_source_deviation": 0.00115,
+        "previous_deviation": 6e-06
       },
       "JPY_100": {
         "source_count": 4,
-        "median_raw": 4.205824,
-        "max_cross_source_deviation": 0.000716,
-        "previous_deviation": 0.000992
+        "median_raw": 4.20363,
+        "max_cross_source_deviation": 0.004172,
+        "previous_deviation": 0.001513
       },
       "GBP": {
         "source_count": 4,
-        "median_raw": 9.057588,
-        "max_cross_source_deviation": 0.000865,
-        "previous_deviation": 0.000266
+        "median_raw": 9.061999,
+        "max_cross_source_deviation": 0.00075,
+        "previous_deviation": 0.000221
       },
       "KRW_100": {
         "source_count": 4,
-        "median_raw": 0.443359,
-        "max_cross_source_deviation": 0.001465,
-        "previous_deviation": 0.007633
+        "median_raw": 0.44368,
+        "max_cross_source_deviation": 0.001058,
+        "previous_deviation": 0.008363
       }
     },
     "sources": [
@@ -73,11 +73,11 @@
         "name": "frankfurter",
         "url": "https://api.frankfurter.app/latest?from=USD&to=CNY,EUR,JPY,GBP,KRW",
         "rates_to_cny": {
-          "USD": 6.7814,
-          "EUR": 7.763303,
-          "JPY_100": 4.208129,
-          "GBP": 9.056599,
-          "KRW_100": 0.442873
+          "USD": 6.7957,
+          "EUR": 7.757294,
+          "JPY_100": 4.186091,
+          "GBP": 9.068793,
+          "KRW_100": 0.443853
         }
       },
       {
