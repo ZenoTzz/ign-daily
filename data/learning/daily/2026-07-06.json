@@ -1,0 +1,163 @@
+{
+  "date": "2026-07-06",
+  "observer": "codex",
+  "model": "codex",
+  "status": "observed",
+  "signals": [
+    {
+      "type": "google_docs_polish_import",
+      "date": "2026-07-06",
+      "article_count": 4
+    },
+    {
+      "type": "polish_diff",
+      "date": "2026-07-06",
+      "article_count": 4,
+      "diff_path": "data/2026-07-06/diff_analysis.json"
+    }
+  ],
+  "candidates": [
+    {
+      "id": "prefer_established_official_game_titles",
+      "category": "dictionary",
+      "type": "existing_rule_evidence",
+      "title": "优先使用稳定官方或通行译名",
+      "rule": "游戏、影视、角色和系统名有稳定官方或通行中文译名时应统一使用；没有稳定译名时保留原文，不自行创造译名。",
+      "status": "confirmed",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-07-06",
+          "article_id": 5,
+          "before": "?Marvel Tokon??132????????PSN????",
+          "after": "???????132????????PSN????",
+          "evidence": "?????????? Marvel Tokon: Fighting Souls ???????????????????????????"
+        },
+        {
+          "date": "2026-07-06",
+          "article_id": 7,
+          "before": "?Man of Tomorrow?/?Lanterns?",
+          "after": "??????/??????",
+          "evidence": "??? DC ?????????????????????????"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id": "subtitle_avoid_concrete_detail",
+      "category": "subtitle",
+      "type": "existing_rule_evidence",
+      "title": "副标题简短、有记忆点但不增添事实",
+      "rule": "副标题保持2至15字，优先用简短短语、双关或原文引语，不机械复述标题；不得补充原文没有的事实或改变立场。",
+      "status": "confirmed",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-07-06",
+          "article_id": 4,
+          "before": "????????",
+          "after": "??????????",
+          "evidence": "???????????????????????"
+        },
+        {
+          "date": "2026-07-06",
+          "article_id": 7,
+          "before": "????",
+          "after": "???Super",
+          "evidence": "?????????????????????????"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id": "currency_conversion_refined",
+      "category": "currency",
+      "type": "existing_rule_evidence",
+      "title": "金额换算采用统一中文格式",
+      "rule": "正文金额首次出现时可给出人民币换算，使用中文全角括号并保持同文一致；标题通常不放人民币换算。汇率数值属于时效数据，不作为固定翻译规则。",
+      "status": "confirmed",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-07-06",
+          "article_id": 7,
+          "before": "1??????????????2??????????4???",
+          "after": "1?????????7.8????2?????????13.6???",
+          "evidence": "?????????????????????????"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id": "remove_author_bio_and_image_credit",
+      "category": "structure",
+      "type": "existing_rule_evidence",
+      "title": "删除作者简介和非正文署名",
+      "rule": "成稿不保留IGN作者简介、联系方式、社交账号、图片来源等非正文尾注。",
+      "status": "confirmed",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-07-06",
+          "article_id": 4,
+          "before": "?????Rosdiana Ciaravolo/Getty Images?",
+          "after": "",
+          "evidence": "?????????????????????????"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id": "remove_promotional_related_links",
+      "category": "structure",
+      "type": "existing_rule_evidence",
+      "title": "删除站内推广和相关阅读引导",
+      "rule": "正文末尾的“查看更多”“阅读我们的采访或汇总”等站内引流句应删除，但不得删除承载新闻事实的正文。",
+      "status": "confirmed",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-07-06",
+          "article_id": 4,
+          "before": "???????????????IGN????PlayStation???????????????",
+          "after": "",
+          "evidence": "????????????????????????"
+        },
+        {
+          "date": "2026-07-06",
+          "article_id": 7,
+          "before": "????????IGN??????????6????????????????",
+          "after": "",
+          "evidence": "????????/????????"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id": "inner_quote_single_marks",
+      "category": "punctuation",
+      "type": "existing_rule_evidence",
+      "title": "中文引号内再引用用单引号",
+      "rule": "中文直引号内部再次出现短语、问题或强调词时，内层引用使用‘ ’，避免连续使用「」造成层级不清。",
+      "status": "confirmed",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-07-06",
+          "article_id": 4,
+          "before": "????????????????????????????????",
+          "after": "????????????????????????????????",
+          "evidence": "???????????????????????????"
+        }
+      ],
+      "contradiction": ""
+    }
+  ],
+  "notes": [
+    "Google Docs import added four high-confidence polished articles for 2026-07-06.",
+    "No new broad style rule was promoted from a single day; evidence was attached to existing confirmed rules.",
+    "No STYLE_PROFILE.md update was needed because no new weekly feedback was newly confirmed in this run."
+  ],
+  "candidate_count": 6,
+  "updated_at": "2026-07-06T22:38:50+08:00"
+}
