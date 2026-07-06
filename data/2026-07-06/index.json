@@ -80,13 +80,13 @@
       "category": "游戏新闻",
       "emoji": "🚫",
       "en_title": "Marvel Tokon Blocked in 132 Countries, and It Looks Like PSN Requirements Are to Blame",
-      "cn_title": "《Marvel Tokon》132国遭锁区，PSN要求疑为主因",
-      "summary": "索尼与Arc System Works合作的格斗游戏《Marvel Tokon: Fighting Souls》在Steam上被锁区，多达132个国家无法游玩。玩家发现锁区名单与PSN支持地区高度吻合，怀疑是索尼的PSN账户要求所致。2024年《绝地潜兵2》曾因类似原因遭遇大规模锁区，后索尼改弦更张。本作将于2026年8月6日登陆PC和PS5。",
+      "cn_title": "《Marvel Tokon》在132个国家锁区，疑似PSN要求导致",
+      "summary": "PlayStation与Arc System Works的《Marvel Tokon: Fighting Souls》在132个国家被Steam锁区，玩家认为原因是这些地区无法访问PSN。类似争议曾在《绝地潜兵2》上发生。",
       "url": "https://www.ign.com/articles/marvel-tokon-blocked-in-132-countries-and-it-looks-like-psn-requirements-are-to-blame",
       "publish_time_cn": "2026-07-06 03:47",
       "pub_date": "2026-07-06 03:47",
-      "cover_image": "https://assets-prd.ignimgs.com/2025/07/31/marvelthumb-1753984065837.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2025/07/31/marvelthumb-1753984065837.png",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2025/07/31/marvelthumb-1753984065837.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2025/07/31/marvelthumb-1753984065837.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -96,20 +96,24 @@
         "https://assets-prd.ignimgs.com/2026/07/05/screenshot-2026-07-05-141039-1783280602968.png"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-07-06T04:42:33+08:00"
+      "source_fetched_at": "2026-07-06T04:42:33+08:00",
+      "translation_path": "translations/05.json",
+      "translator": "codex",
+      "translator_provider": "manual",
+      "translator_model": "gpt-5-codex"
     },
     {
       "id": 4,
       "category": "行业动态",
       "emoji": "😱",
       "en_title": "Hideo Kojima Warns of 'Frightening' Digital Future After PlayStation Reveals Plan to End Physical Disc Production",
-      "cn_title": "小岛秀夫警告数字未来「可怕」 索尼2028年停止光盘生产",
-      "summary": "小岛秀夫在罗马电影节上回应索尼将于2028年停止PlayStation光盘生产的决定，表示深感悲伤，并警告数字流媒体时代可能导致用户失去对内容的控制。他提到，近期Rockstar《GTA6》实体版取消光盘、索尼删除550部已购买数字电影等事件，都预示着用户将无法真正拥有自己购买的作品。小岛呼吁玩家警惕这一趋势。",
+      "cn_title": "小岛秀夫警告「可怕」数字未来：索尼将停产PlayStation实体光盘",
+      "summary": "索尼宣布将停止生产PlayStation实体光盘后，小岛秀夫在罗马电影节谈到全数字未来的风险。他认为一旦内容转向流媒体，用户只剩访问权，喜欢的电影和游戏可能随时无法观看或游玩。",
       "url": "https://www.ign.com/articles/hideo-kojima-warns-of-frightening-digital-future-after-playstation-reveals-plan-to-end-physical-disc-production",
       "publish_time_cn": "2026-07-06 01:47",
       "pub_date": "2026-07-06 01:47",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/07/05/hideo-kojima-1783273421850.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/07/05/hideo-kojima-1783273421850.png",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/07/05/hideo-kojima-1783273421850.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/07/05/hideo-kojima-1783273421850.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -119,7 +123,11 @@
         "https://assets-prd.ignimgs.com/2026/07/05/hideo-kojima-1783273368904.png"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-07-06T03:44:30+08:00"
+      "source_fetched_at": "2026-07-06T03:44:30+08:00",
+      "translation_path": "translations/04.json",
+      "translator": "codex",
+      "translator_provider": "manual",
+      "translator_model": "gpt-5-codex"
     },
     {
       "id": 3,
@@ -157,13 +165,13 @@
       "category": "游戏新闻",
       "emoji": "🔍",
       "en_title": "The Mario 64 Bounty That Took 30 Years to Settle",
-      "cn_title": "30年悬赏落幕，《马力欧64》路易吉真相大白",
-      "summary": "1996年，IGN曾悬赏100美元(约合人民币679元)寻找《超级马力欧64》中路易吉存在的证据，但30年来无人能破解。直到2020年任天堂源代码泄露事件（Gigaleak）爆发，玩家通过挖掘隐藏数据终于证实：路易吉确实存在于游戏中，只是因内存限制被移除。这场横跨三十年的悬赏，如今终于尘埃落定。",
+      "cn_title": "IGN三十年前悬赏寻找《马力欧64》里的路易吉，现在该还债了",
+      "summary": "IGN曾在1996年悬赏100美元(约合人民币679元)，要求玩家证明路易吉存在于《超级马力欧64》中。三十年后，Gigaleak泄露的源码和材质终于让这桩旧案有了答案。",
       "url": "https://www.ign.com/articles/the-mario-64-bounty-that-took-30-years-to-settle",
       "publish_time_cn": "2026-07-06 00:00",
       "pub_date": "2026-07-06 00:00",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/06/30/luigi-thumb-new-1782826689873.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/30/luigi-thumb-new-1782826689873.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/30/luigi-thumb-new-1782826689873.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/30/luigi-thumb-new-1782826689873.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -179,7 +187,11 @@
         "https://assets-prd.ignimgs.com/2026/07/02/100-donation-1782990245506.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-07-06T00:29:08+08:00"
+      "source_fetched_at": "2026-07-06T00:29:08+08:00",
+      "translation_path": "translations/02.json",
+      "translator": "codex",
+      "translator_provider": "manual",
+      "translator_model": "gpt-5-codex"
     },
     {
       "id": 1,
