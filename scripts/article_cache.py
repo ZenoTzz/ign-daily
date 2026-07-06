@@ -129,7 +129,12 @@ def extract_images(html: str) -> tuple[str, list[str]]:
 
 def split_paragraphs(text: str) -> list[str]:
     paragraphs = [p.strip() for p in re.split(r"\n{1,}", text) if p.strip()]
-    return [p for p in paragraphs if len(p) >= 35][:45]
+    def keep(p: str) -> bool:
+        if len(p) >= 35:
+            return True
+        return bool(re.match(r"^\d+[\.)]\s+\S", p))
+
+    return [p for p in paragraphs if keep(p)][:45]
 
 
 def fetch_source(date: str, article: dict[str, Any]) -> dict[str, Any]:

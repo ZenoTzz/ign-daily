@@ -181,17 +181,44 @@ def clean_article_text(text: str, max_chars: int) -> str:
     return re.sub(r"\n{3,}", "\n\n", "\n".join(lines)).strip()[:max_chars]
 
 
+def looks_article_subheading(text: str) -> bool:
+    text = re.sub(r"\s+", " ", text).strip()
+    if is_noise_line(text):
+        return False
+    if not (3 <= len(text) <= 140):
+        return False
+    return bool(re.match(r"^\d+[\.)]\s+\S", text)) or text.endswith(":")
+
+
 def extract_article_text(html: str, max_chars: int) -> str:
     html = remove_html_noise(html)
-    paragraph_hits = []
-    for match in re.finditer(r"(?is)<p\b([^>]*)>(.*?)</p>", html):
-        attrs, body = match.group(1), match.group(2)
-        if re.search(r'data-cy=["\']paragraph["\']', attrs, re.I) or re.search(r'class=["\'][^"\']*\bparagraph\b', attrs, re.I):
+    article_blocks: list[str] = []
+    article_paragraph_count = 0
+    inside_article_body = False
+    for match in re.finditer(r"(?is)<(h[2-3]|p)\b([^>]*)>(.*?)</\1>", html):
+        tag, attrs, body = match.group(1).lower(), match.group(2), match.group(3)
+        if tag == "p":
+            is_article_paragraph = (
+                re.search(r'data-cy=["\']paragraph["\']', attrs, re.I)
+                or re.search(r'class=["\'][^"\']*\bparagraph\b', attrs, re.I)
+            )
+            if not is_article_paragraph:
+                continue
             line = clean_article_text(html_to_text(body), max_chars=max_chars)
             if line:
-                paragraph_hits.append(line)
-    if len(paragraph_hits) >= 2:
-        return clean_article_text("\n\n".join(paragraph_hits), max_chars=max_chars)
+                article_blocks.append(line)
+                article_paragraph_count += 1
+                inside_article_body = True
+            continue
+
+        if not inside_article_body:
+            continue
+        line = clean_article_text(html_to_text(body), max_chars=max_chars)
+        if line and looks_article_subheading(line):
+            article_blocks.append(line)
+
+    if article_paragraph_count >= 2:
+        return clean_article_text("\n\n".join(article_blocks), max_chars=max_chars)
 
     candidates = []
     for pattern in (

@@ -267,7 +267,15 @@ def split_paragraphs(text: str) -> list[str]:
         "mapgenie",
         "ign youtube",
     )
-    return [p for p in chunks if len(p) >= 40 and not any(b in p.lower() for b in bad)][:35]
+    def keep(p: str) -> bool:
+        lower = p.lower()
+        if any(b in lower for b in bad):
+            return False
+        if len(p) >= 40:
+            return True
+        return bool(re.match(r"^\d+[\.)]\s+\S", p))
+
+    return [p for p in chunks if keep(p)][:35]
 
 
 def matched_terms(text: str, limit: int = 60, article: dict[str, Any] | None = None) -> dict[str, str]:
