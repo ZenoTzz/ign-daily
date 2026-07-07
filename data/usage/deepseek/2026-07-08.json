@@ -240,6 +240,54 @@
       "total_tokens_including_reasoning": 13725,
       "prompt_cache_hit_tokens": 10368,
       "prompt_cache_miss_tokens": 585
+    },
+    {
+      "time_cn": "2026-07-08 07:39:24",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 19,
+      "article_title": "EVE Vanguard Reinvented Its Gameplay With Some Notes from Battlefield 6 | Hands-On Preview",
+      "article_url": "https://www.ign.com/articles/eve-vanguard-reinvented-its-gameplay-with-some-notes-from-battlefield-6-hands-on-preview",
+      "article_date": "2026-07-08",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00040844,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 11575,
+      "completion_tokens": 821,
+      "reasoning_tokens": 495,
+      "output_tokens_including_reasoning": 1316,
+      "total_tokens": 12396,
+      "total_tokens_including_reasoning": 12891,
+      "prompt_cache_hit_tokens": 11520,
+      "prompt_cache_miss_tokens": 55
+    },
+    {
+      "time_cn": "2026-07-08 07:39:36",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 21,
+      "article_title": "Call of Duty: Black Ops 1 and 2's Leaked PS5 Trophy List Indicates Some Content May Be Missing",
+      "article_url": "https://www.ign.com/articles/call-of-duty-black-ops-1-and-2s-leaked-ps5-trophy-list-indicates-some-content-may-be-missing",
+      "article_date": "2026-07-08",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00066729,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 11069,
+      "completion_tokens": 1084,
+      "reasoning_tokens": 845,
+      "output_tokens_including_reasoning": 1929,
+      "total_tokens": 12153,
+      "total_tokens_including_reasoning": 12998,
+      "prompt_cache_hit_tokens": 10368,
+      "prompt_cache_miss_tokens": 701
     }
   ]
 }

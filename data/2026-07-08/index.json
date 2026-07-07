@@ -2,6 +2,28 @@
   "date": "2026-07-08",
   "articles": [
     {
+      "id": 21,
+      "category": "游戏新闻",
+      "emoji": "🎮",
+      "en_title": "Call of Duty: Black Ops 1 and 2's Leaked PS5 Trophy List Indicates Some Content May Be Missing",
+      "cn_title": "《使命召唤》《黑色行动1/2》PS5奖杯泄露，部分内容或缺失",
+      "summary": "《使命召唤：黑色行动1》和《黑色行动2》PS5版奖杯列表泄露，显示剧院模式、联赛模式及赌注比赛的相关奖杯被移除，暗示这些功能可能不会包含在7月登陆PS4/PS5的重新发布版中。赌注比赛中的经典模式如Gun Game和One in the Chamber或保留但去掉赌博机制。动视尚未公布具体发售日期。",
+      "url": "https://www.ign.com/articles/call-of-duty-black-ops-1-and-2s-leaked-ps5-trophy-list-indicates-some-content-may-be-missing",
+      "publish_time_cn": "2026-07-08 06:26",
+      "pub_date": "2026-07-08 06:26",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/21/call-of-duty-black-ops-1782070244037.png?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/21/call-of-duty-black-ops-1782070244037.png?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/21/call-of-duty-black-ops-1782070244037.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/21/call-of-duty-black-ops-1782070244037.png?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/21/call-of-duty-black-ops-1782070244037.png?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/21/call-of-duty-black-ops-1782070244037.png"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-07-08T07:39:12+08:00"
+    },
+    {
       "id": 20,
       "category": "游戏新闻",
       "emoji": "🪑",
@@ -28,8 +50,8 @@
       "category": "游戏新闻",
       "emoji": "🎮",
       "en_title": "EVE Vanguard Reinvented Its Gameplay With Some Notes from Battlefield 6 | Hands-On Preview",
-      "cn_title": "EVE Vanguard Reinvented Its Gameplay With Some Notes from Battlefield 6 | Hands-On Preview",
-      "summary": "",
+      "cn_title": "EVE Vanguard玩法大改，借鉴《战地风云6》",
+      "summary": "《EVE Online》FPS模式《EVE Vanguard》迎来重大更新「Operation Avalon」，玩法重做为撤离射击风格，新增手绘地图、蓝图制造及芯片系统，并计划今年年底与《EVE Online》实现全天候连接。上手体验显示，枪感和角色重量感均有显著提升。",
       "url": "https://www.ign.com/articles/eve-vanguard-reinvented-its-gameplay-with-some-notes-from-battlefield-6-hands-on-preview",
       "publish_time_cn": "2026-07-08 03:23",
       "pub_date": "2026-07-08 03:23",
@@ -43,7 +65,23 @@
         "https://assets-prd.ignimgs.com/2026/07/07/evevanguard-preview-blogroll-1783452192445.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-07-08T06:32:53+08:00"
+      "source_fetched_at": "2026-07-08T06:32:53+08:00",
+      "pending_dict": [
+        {
+          "en": "EVE Vanguard",
+          "cn": "EVE 先锋",
+          "cat": "games",
+          "source": "ai_guess",
+          "reason": "无官方中文译名，建议人工确认"
+        },
+        {
+          "en": "Operation Avalon",
+          "cn": "阿瓦隆行动",
+          "cat": "games",
+          "source": "ai_guess",
+          "reason": "游戏内更新名称，建议人工确认"
+        }
+      ]
     },
     {
       "id": 18,
@@ -541,5 +579,5 @@
       "source_fetched_at": "2026-07-07T18:02:27+08:00"
     }
   ],
-  "total": 20
+  "total": 21
 }

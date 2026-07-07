@@ -10,23 +10,15 @@
   "new_target_dates": [
     "2026-07-08"
   ],
-  "new_count": 2,
+  "new_count": 1,
   "filtered_count": 1,
   "cleanup_count": 0,
-  "changed_count": 3,
+  "changed_count": 2,
   "articles": [
     {
-      "title": "EVE Vanguard Reinvented Its Gameplay With Some Notes from Battlefield 6 | Hands-On Preview",
-      "url": "https://www.ign.com/articles/eve-vanguard-reinvented-its-gameplay-with-some-notes-from-battlefield-6-hands-on-preview",
-      "pubDate_cst": "2026-07-08 03:23",
-      "category": "游戏新闻",
-      "emoji": "🎮",
-      "source_type": "rss"
-    },
-    {
-      "title": "New Minecraft Update Finally Allows Players to Sit Down",
-      "url": "https://www.ign.com/articles/new-minecraft-update-finally-allows-players-to-sit-down",
-      "pubDate_cst": "2026-07-08 06:09",
+      "title": "Call of Duty: Black Ops 1 and 2's Leaked PS5 Trophy List Indicates Some Content May Be Missing",
+      "url": "https://www.ign.com/articles/call-of-duty-black-ops-1-and-2s-leaked-ps5-trophy-list-indicates-some-content-may-be-missing",
+      "pubDate_cst": "2026-07-08 06:26",
       "category": "游戏新闻",
       "emoji": "🎮",
       "source_type": "rss"
@@ -34,37 +26,29 @@
   ],
   "filtered_articles": [
     {
-      "title": "Beat the Summer Heat With This $7 Portable Turbo Fan",
-      "url": "https://www.ign.com/articles/lerat-portable-turbo-fan-deal",
-      "pubDate_cst": "2026-07-08 05:20",
-      "description": "Stay frosty.",
+      "title": "The Alienware 18 Area-51 RTX 5090 Gaming Laptop With 64GB of RAM Drops to $3,000 at Dell Outlet",
+      "url": "https://www.ign.com/articles/alienware-area-51-18-gaming-laptop-deal-at-dell-outlet-in-july",
+      "pubDate_cst": "2026-07-08 06:40",
+      "description": "Alienware's biggest and most powerful ultra high-end gaming laptop.",
       "categories": "",
-      "reason": "url:deal",
+      "reason": "text:\\bdrops? to \\$",
       "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
-      "filtered_at_cn": "2026-07-08 06:32:45",
+      "filtered_at_cn": "2026-07-08 07:39:09",
       "status": "filtered"
     }
   ],
   "runs": [
     {
       "target_date": "2026-07-08",
-      "new_count": 2,
+      "new_count": 1,
       "filtered_count": 1,
-      "changed_count": 3,
-      "next_id": 21,
+      "changed_count": 2,
+      "next_id": 22,
       "articles": [
         {
-          "title": "EVE Vanguard Reinvented Its Gameplay With Some Notes from Battlefield 6 | Hands-On Preview",
-          "url": "https://www.ign.com/articles/eve-vanguard-reinvented-its-gameplay-with-some-notes-from-battlefield-6-hands-on-preview",
-          "pubDate_cst": "2026-07-08 03:23",
-          "category": "游戏新闻",
-          "emoji": "🎮",
-          "source_type": "rss"
-        },
-        {
-          "title": "New Minecraft Update Finally Allows Players to Sit Down",
-          "url": "https://www.ign.com/articles/new-minecraft-update-finally-allows-players-to-sit-down",
-          "pubDate_cst": "2026-07-08 06:09",
+          "title": "Call of Duty: Black Ops 1 and 2's Leaked PS5 Trophy List Indicates Some Content May Be Missing",
+          "url": "https://www.ign.com/articles/call-of-duty-black-ops-1-and-2s-leaked-ps5-trophy-list-indicates-some-content-may-be-missing",
+          "pubDate_cst": "2026-07-08 06:26",
           "category": "游戏新闻",
           "emoji": "🎮",
           "source_type": "rss"
@@ -72,14 +56,14 @@
       ],
       "filtered_articles": [
         {
-          "title": "Beat the Summer Heat With This $7 Portable Turbo Fan",
-          "url": "https://www.ign.com/articles/lerat-portable-turbo-fan-deal",
-          "pubDate_cst": "2026-07-08 05:20",
-          "description": "Stay frosty.",
+          "title": "The Alienware 18 Area-51 RTX 5090 Gaming Laptop With 64GB of RAM Drops to $3,000 at Dell Outlet",
+          "url": "https://www.ign.com/articles/alienware-area-51-18-gaming-laptop-deal-at-dell-outlet-in-july",
+          "pubDate_cst": "2026-07-08 06:40",
+          "description": "Alienware's biggest and most powerful ultra high-end gaming laptop.",
           "categories": "",
-          "reason": "url:deal",
+          "reason": "text:\\bdrops? to \\$",
           "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
-          "filtered_at_cn": "2026-07-08 06:32:45",
+          "filtered_at_cn": "2026-07-08 07:39:09",
           "status": "filtered"
         }
       ]
