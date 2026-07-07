@@ -2,6 +2,57 @@
   "date": "2026-07-08",
   "articles": [
     {
+      "id": 18,
+      "category": "游戏新闻",
+      "emoji": "🎮",
+      "en_title": "Upcoming Nintendo Switch 2 Games: Release Dates for 2026 and Beyond",
+      "cn_title": "Switch 2 游戏阵容大盘点：2026 年及之后新作一览",
+      "summary": "任天堂 Switch 2 游戏阵容日渐丰富，涵盖第一方独占如《斯普拉遁》新作、第三方大作如《艾尔登法环 褪色者版》《火焰纹章》新作，以及经典重制《雷曼：传奇》3D 重制等。从 2026 年下半年起，玩家可期待大量新作登陆新主机。",
+      "url": "https://www.ign.com/articles/all-upcoming-nintendo-switch-2-games",
+      "publish_time_cn": "2026-07-08 01:32",
+      "pub_date": "2026-07-08 01:32",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/01/23/switch2games-1769208267817.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/01/23/switch2games-1769208267817.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/07/06/the-elder-scrolls-iv-oblivion-remastered-nintendo-switch-21-1783348299797.jpg",
+        "https://assets-prd.ignimgs.com/2026/04/09/eldenringtarnished-1775744945423.jpg",
+        "https://assets-prd.ignimgs.com/2026/06/09/fire-emblem-fortune-s-weave-nintendo-switch-2-edition-4bcaa3d7-0e76-4c43-addf-d9ce5ae2a7bb-49c64c393b433924e989f08b74bc7d90-1781041364244.jpeg",
+        "https://assets-prd.ignimgs.com/2026/06/09/81dkb7kdbfl-sl1500-1781036910228.jpg",
+        "https://assets-prd.ignimgs.com/2026/01/23/switch2games-1769208267817.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/01/23/switch2games-1769208267817.jpg?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/01/23/switch2games-1769208267817.jpg?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/01/23/switch2games-1769208267817.jpg",
+        "https://assets-prd.ignimgs.com/2026/04/28/splatoon-1777386346925.jpg",
+        "https://assets-prd.ignimgs.com/2026/04/28/007-1777386112597.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-07-08T03:27:14+08:00",
+      "pending_dict": [
+        {
+          "en": "The Duskbloods",
+          "cn": "The Duskbloods",
+          "cat": "games",
+          "source": "ai_guess",
+          "reason": "FromSoftware Switch 2 独占新作，暂无官方中文名，建议保留英文待确认。"
+        },
+        {
+          "en": "Orbitals",
+          "cn": "Orbitals",
+          "cat": "games",
+          "source": "ai_guess",
+          "reason": "独立游戏，暂无中文名，保留英文。"
+        },
+        {
+          "en": "Another Eden Begins",
+          "cn": "Another Eden Begins",
+          "cat": "games",
+          "source": "ai_guess",
+          "reason": "RPG新作，暂无官方译名，建议保留英文。"
+        }
+      ]
+    },
+    {
       "id": 17,
       "category": "影视资讯",
       "emoji": "🎬",
@@ -446,5 +497,5 @@
       "source_fetched_at": "2026-07-07T18:02:27+08:00"
     }
   ],
-  "total": 17
+  "total": 18
 }

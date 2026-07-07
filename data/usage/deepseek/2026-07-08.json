@@ -168,6 +168,30 @@
       "total_tokens_including_reasoning": 12963,
       "prompt_cache_hit_tokens": 10368,
       "prompt_cache_miss_tokens": 840
+    },
+    {
+      "time_cn": "2026-07-08 03:27:28",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 18,
+      "article_title": "Upcoming Nintendo Switch 2 Games: Release Dates for 2026 and Beyond",
+      "article_url": "https://www.ign.com/articles/all-upcoming-nintendo-switch-2-games",
+      "article_date": "2026-07-08",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00081485,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 12677,
+      "completion_tokens": 1035,
+      "reasoning_tokens": 617,
+      "output_tokens_including_reasoning": 1652,
+      "total_tokens": 13712,
+      "total_tokens_including_reasoning": 14329,
+      "prompt_cache_hit_tokens": 10368,
+      "prompt_cache_miss_tokens": 2309
     }
   ]
 }
