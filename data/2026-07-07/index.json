@@ -180,8 +180,8 @@
       "url": "https://www.ign.com/articles/pokmon-go-hosting-major-10th-anniversary-broadcast-this-week",
       "publish_time_cn": "2026-07-07 04:00",
       "pub_date": "2026-07-07 04:00",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/07/03/discover-pokmon-in-the-real-world-with-pokmon-go-00-02-36-1783093287762.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/07/03/discover-pokmon-in-the-real-world-with-pokmon-go-00-02-36-1783093287762.png",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/07/03/discover-pokmon-in-the-real-world-with-pokmon-go-00-02-36-1783093287762.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/07/03/discover-pokmon-in-the-real-world-with-pokmon-go-00-02-36-1783093287762.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -190,7 +190,11 @@
         "https://assets-prd.ignimgs.com/2026/07/03/discover-pokmon-in-the-real-world-with-pokmon-go-00-02-36-1783093287762.png"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-07-07T04:34:31+08:00"
+      "source_fetched_at": "2026-07-07T04:34:31+08:00",
+      "translation_path": "translations/22.json",
+      "translator": "codex",
+      "translator_provider": "manual",
+      "translator_model": "gpt-5-codex"
     },
     {
       "id": 23,
