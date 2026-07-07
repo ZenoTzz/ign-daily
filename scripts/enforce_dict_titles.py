@@ -49,6 +49,8 @@ def enforce(index_path, dict_terms):
     
     fixes = []
     for a in data['articles']:
+        if a.get('translation_status') != 'done':
+            continue
         en_title = a['en_title']
         cn_title = a['cn_title']
         en_lower = en_title.lower()

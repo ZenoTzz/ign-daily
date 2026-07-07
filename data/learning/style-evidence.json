@@ -1079,10 +1079,11 @@
       "status": "pending",
       "days": [
         "2026-06-02",
-        "2026-06-03"
+        "2026-06-03",
+        "2026-07-01"
       ],
-      "days_seen": 2,
-      "articles_seen": 3,
+      "days_seen": 3,
+      "articles_seen": 4,
       "contradictions": 0,
       "examples": [
         {
@@ -1102,6 +1103,13 @@
           "article_id": 20,
           "before": "在State of Play之前，我提前观看了预告片，并有机会与创意总监Marcus Smith和游戏总监Mike Daly聊了30分钟，尽可能多地了解《漫威金刚狼》的信息。没错，我问了能不能竖中指。",
           "after": "在State of Play之前，IGN有机会与创意总监Marcus Smith和游戏总监Mike Daly聊了30分钟，尽可能多地了解《漫威金刚狼》的信息。"
+        },
+        {
+          "date": "2026-07-01",
+          "article_id": 11,
+          "before": "这里的「残影」并不是指你的Switch 2收拾东西再也不理你，而是指主机的显示屏上短暂留下的图像残留，导致一种类似动态模糊的效果。自任天堂最新主机去年发售以来，已有部分玩家反映过这个问题。",
+          "after": "这里的「残影」是指主机的显示屏上短暂留下的图像残留，导致一种类似动态模糊的效果。自任天堂最新主机去年发售以来，已有部分玩家反映过这个问题。",
+          "evidence": "Polish removed a throwaway joke while preserving the factual definition."
         }
       ],
       "feedback": [
@@ -1143,9 +1151,9 @@
         }
       ],
       "created_at": "2026-06-03T16:03:40+08:00",
-      "last_seen": "2026-06-03",
+      "last_seen": "2026-07-01",
       "confidence": 0.72,
-      "latest_evidence_summary": "多篇新闻稿删除了不影响信息的作者随口评论。"
+      "latest_evidence_summary": "Polish removed a throwaway joke while preserving the factual definition."
     },
     "unify_baodao": {
       "id": "unify_baodao",
@@ -1219,10 +1227,11 @@
       "scope": "all",
       "status": "confirmed",
       "days": [
-        "2026-06-05"
+        "2026-06-05",
+        "2026-07-07"
       ],
-      "days_seen": 1,
-      "articles_seen": 1,
+      "days_seen": 2,
+      "articles_seen": 2,
       "contradictions": 0,
       "examples": [
         {
@@ -1230,6 +1239,13 @@
           "article_id": 9,
           "before": "「奎托斯就是战神——我们还有更多关于他的故事要讲，」圣莫妮卡工作室官方X/Twitter账号昨晚发文写道。「目前，我们很高兴能带领玩家与劳菲一起踏上众神来世之旅，希望你们能一同前往！」",
           "after": "「奎托斯就是战神——我们还有更多关于他的故事要讲，」圣莫尼卡工作室官方X账号昨晚发文写道。「目前，我们很高兴能带领玩家与劳菲一起踏上众神来世之旅，希望你们能一同前往！」"
+        },
+        {
+          "date": "2026-07-07",
+          "article_id": 11,
+          "before": "该公司在X/Twitter上发布并由Schafer共同署名的声明中表示：「Double Fine Productions将再次成为一家独立工作室。我们感谢XBOX的每一个人，感谢这七年来的美好合作，也感谢他们与我们一起达成了一个能够保留我们历史和文化、并将游戏所有权归还给我们的结果。」",
+          "after": "该公司在X上发布并由Schafer共同署名的声明中表示：「Double Fine Productions将再次成为一家独立工作室。我们感谢XBOX的每一个人，感谢这七年来的美好合作，也感谢他们与我们一起达成了一个能够保留我们历史和文化、并将游戏所有权归还给我们的结果。」",
+          "evidence": "Polish again preferred the current platform name X without the legacy Twitter alias."
         }
       ],
       "feedback": [
@@ -1271,9 +1287,9 @@
         }
       ],
       "created_at": "2026-06-03T16:04:46+08:00",
-      "last_seen": "2026-06-05",
+      "last_seen": "2026-07-07",
       "confidence": 0.86,
-      "latest_evidence_summary": "账号名称多次由X/Twitter统一为X。"
+      "latest_evidence_summary": "Polish again preferred the current platform name X without the legacy Twitter alias."
     },
     "playstation_store_english": {
       "id": "playstation_store_english",
@@ -1397,10 +1413,12 @@
         "2026-06-26",
         "2026-06-28",
         "2026-06-29",
-        "2026-07-06"
+        "2026-07-06",
+        "2026-07-01",
+        "2026-07-07"
       ],
-      "days_seen": 18,
-      "articles_seen": 23,
+      "days_seen": 20,
+      "articles_seen": 26,
       "contradictions": 0,
       "examples": [
         {
@@ -1542,6 +1560,27 @@
           "before": "????",
           "after": "???Super",
           "evidence": "?????????????????????????"
+        },
+        {
+          "date": "2026-07-01",
+          "article_id": 30,
+          "before": "奇幻项目突遭变故",
+          "after": "此次裁员与《007 初露锋芒》的成功发售无关",
+          "evidence": "Subtitle was rewritten to a concise hook tied to the article angle rather than a vague generic line."
+        },
+        {
+          "date": "2026-07-07",
+          "article_id": 20,
+          "before": "报道称项目已内部延期并超出预算",
+          "after": "还能活下来吗",
+          "evidence": "Subtitle was shortened into a compact hook while the body retained the detailed reporting."
+        },
+        {
+          "date": "2026-07-07",
+          "article_id": 21,
+          "before": "裁员重创B社",
+          "after": "裁员重创",
+          "evidence": "Polish trimmed a subtitle to avoid over-specific repetition of the title context."
         }
       ],
       "feedback": [
@@ -1559,9 +1598,9 @@
         }
       ],
       "created_at": "2026-06-04T06:38:54+08:00",
-      "last_seen": "2026-07-06",
+      "last_seen": "2026-07-07",
       "confidence": 0.92,
-      "latest_evidence_summary": "?????????????????????????"
+      "latest_evidence_summary": "Polish trimmed a subtitle to avoid over-specific repetition of the title context."
     },
     "hex_color_no_space_before_punctuation": {
       "id": "hex_color_no_space_before_punctuation",
@@ -1771,10 +1810,12 @@
         "2026-06-12",
         "2026-06-16",
         "2026-06-17",
-        "2026-06-18"
+        "2026-06-18",
+        "2026-07-01",
+        "2026-07-07"
       ],
-      "days_seen": 10,
-      "articles_seen": 15,
+      "days_seen": 12,
+      "articles_seen": 17,
       "contradictions": 0,
       "examples": [
         {
@@ -1818,6 +1859,20 @@
           "article_id": 6,
           "before": "与此同时，最新更新还带来了多项有用的修复，包括对道路探索和在线模式Horizon Play升级所需经验的调整。",
           "after": "与此同时，最新更新还带来了多项有用的修复，包括对道路探索和在线模式Horizon Play升级所需经验的调整。区域概览中现已添加「已驾驶路段」百分比，这将让你更容易地在屏幕地图上追踪那些难以发现的剩余道路。"
+        },
+        {
+          "date": "2026-07-01",
+          "article_id": 30,
+          "before": "尽管IO Interactive未明确提及该外部合作伙伴的名称，但「Project Fantasy」据报道原计划由XBOX发行。根据2023年FTC诉微软案中泄露的文件，微软曾将该游戏（当时代号「Project Dragon」）列为XBOX与PC独占作品，并称该游戏将由XBOX Game Studios发行。",
+          "after": "IO Interactive完整声明如下：",
+          "evidence": "Polish restored the article structure around the full company statement instead of skipping into later context."
+        },
+        {
+          "date": "2026-07-07",
+          "article_id": 10,
+          "before": "一家独立零售商发起请愿，呼吁索尼撤回在PlayStation主机上放弃光盘的决定。目前该请愿已获得超过11.5万个签名。",
+          "after": "一家独立零售商发起请愿，呼吁索尼撤回在PlayStation主机上放弃光盘的决定。目前该请愿已获得超过16万个签名。",
+          "evidence": "Polish corrected a concrete numeric fact from the source/current polished copy; treat as accuracy evidence, not a style rule."
         }
       ],
       "feedback": [
@@ -1829,9 +1884,9 @@
         }
       ],
       "created_at": "2026-06-12T17:45:36+08:00",
-      "last_seen": "2026-06-18",
+      "last_seen": "2026-07-07",
       "confidence": 0.97,
-      "latest_evidence_summary": "长文、访谈和清单稿反复显示：忠实、完整和顺序准确优先。"
+      "latest_evidence_summary": "Polish corrected a concrete numeric fact from the source/current polished copy; treat as accuracy evidence, not a style rule."
     },
     "remove_redundant_title_prefixes": {
       "id": "remove_redundant_title_prefixes",
@@ -1848,10 +1903,12 @@
         "2026-06-12",
         "2026-06-25",
         "2026-06-26",
-        "2026-06-28"
+        "2026-06-28",
+        "2026-07-01",
+        "2026-07-07"
       ],
-      "days_seen": 8,
-      "articles_seen": 12,
+      "days_seen": 10,
+      "articles_seen": 15,
       "contradictions": 0,
       "examples": [
         {
@@ -1925,6 +1982,27 @@
           "article_id": 7,
           "before": "《PlayStation》索尼将删除PSN用户超550部数字电影",
           "after": "索尼将删除PSN用户超550部数字电影"
+        },
+        {
+          "date": "2026-07-01",
+          "article_id": 11,
+          "before": "《任天堂》《Nintendo Switch 2》Switch 2新屏曝光，有望解决残影问题",
+          "after": "Switch 2新屏幕曝光，有望解决残影问题",
+          "evidence": "Google Docs polish removed duplicated platform/brand wrappers while keeping the news subject."
+        },
+        {
+          "date": "2026-07-07",
+          "article_id": 11,
+          "before": "XBOX裁员后Double Fine和Compulsion独立，保留《意航员》《午夜之南》",
+          "after": "XBOX裁员后Double Fine和Compulsion工作室转为独立运营",
+          "evidence": "Polish removed extra title payload and kept the core event clear."
+        },
+        {
+          "date": "2026-07-07",
+          "article_id": 20,
+          "before": "XBOX或出售Arkane，漫威刀锋战士未来不明",
+          "after": "XBOX或出售Arkane Lyon，《漫威刀锋战士》未来不明",
+          "evidence": "Polish kept the specific studio name and normalized the work title without adding redundant wrappers."
         }
       ],
       "feedback": [
@@ -1936,9 +2014,9 @@
         }
       ],
       "created_at": "2026-06-12T17:45:36+08:00",
-      "last_seen": "2026-06-28",
+      "last_seen": "2026-07-07",
       "confidence": 0.93,
-      "latest_evidence_summary": "6/28 PlayStation title removes the redundant platform wrapper while keeping the Sony/PSN subject clear."
+      "latest_evidence_summary": "Polish kept the specific studio name and normalized the work title without adding redundant wrappers."
     },
     "prefer_confirmed_chinese_game_titles": {
       "id": "prefer_confirmed_chinese_game_titles",
@@ -2133,10 +2211,11 @@
         "2026-06-10",
         "2026-06-18",
         "2026-06-24",
-        "2026-06-26"
+        "2026-06-26",
+        "2026-07-01"
       ],
-      "days_seen": 7,
-      "articles_seen": 11,
+      "days_seen": 8,
+      "articles_seen": 12,
       "contradictions": 0,
       "examples": [
         {
@@ -2198,6 +2277,13 @@
           "article_id": 26,
           "before": "「如果你在4月30日至5月27日期间在Xbox One或PlayStation 4上购买了基础版，或在升级中遇到任何问题，请联系我们的客服团队，我们会妥善解决。再次为此事带来的困扰致歉。」",
           "after": "「如果你在4月30日至5月27日期间在Xbox One或PS4上购买了基础版，或在升级中遇到任何问题，请联系我们的客服团队，我们会妥善解决。再次为此事带来的困扰致歉。」"
+        },
+        {
+          "date": "2026-07-01",
+          "article_id": 21,
+          "before": "B社将于8月11日在Nintendo Switch 2上推出《上古卷轴4：湮灭 复刻版》，通过eShop提供数字版，同时推出实体版，卡带内包含完整的游戏本体。",
+          "after": "贝塞斯达将于8月11日在Switch 2上推出《上古卷轴4：湮灭 复刻版》，通过eShop提供数字版，同时推出实体版，卡带内包含完整的游戏本体。",
+          "evidence": "In a Switch 2 article, the polished copy used compact platform naming in body copy."
         }
       ],
       "feedback": [
@@ -2209,9 +2295,9 @@
         }
       ],
       "created_at": "2026-06-12T21:51:19+08:00",
-      "last_seen": "2026-06-26",
+      "last_seen": "2026-07-01",
       "confidence": 0.86,
-      "latest_evidence_summary": "Backfilled 5/30 edits also compact platform names, including Nintendo Switch 2 -> Switch 2 and Xbox Series X/S -> Xbox Series."
+      "latest_evidence_summary": "In a Switch 2 article, the polished copy used compact platform naming in body copy."
     },
     "keep_person_names_latin": {
       "id": "keep_person_names_latin",
@@ -2223,10 +2309,11 @@
       "days": [
         "2026-06-08",
         "2026-06-11",
-        "2026-06-24"
+        "2026-06-24",
+        "2026-07-01"
       ],
-      "days_seen": 3,
-      "articles_seen": 5,
+      "days_seen": 4,
+      "articles_seen": 6,
       "contradictions": 0,
       "examples": [
         {
@@ -2258,6 +2345,13 @@
           "article_id": 37,
           "before": "?Bungie????Liana Ruppert",
           "after": "?Bungie????Liana Ruppert"
+        },
+        {
+          "date": "2026-07-01",
+          "article_id": 52,
+          "before": "前索尼互动娱乐美国分公司总裁兼CEO肖恩·莱登(Shawn Layden)解释了PlayStation的PC策略为何有其道理。",
+          "after": "前索尼互动娱乐美国分公司总裁兼CEO Shawn Layden解释了PlayStation的PC策略为何有其道理。",
+          "evidence": "Polish kept an overseas executive name in Latin letters rather than adding an ad hoc Chinese transliteration."
         }
       ],
       "feedback": [
@@ -2269,9 +2363,9 @@
         }
       ],
       "created_at": "2026-06-12T21:51:19+08:00",
-      "last_seen": "2026-06-24",
+      "last_seen": "2026-07-01",
       "confidence": 0.86,
-      "latest_evidence_summary": "6/24 Speclizer?Megan Everett?Brett Gipson?Robert Brookes ????????"
+      "latest_evidence_summary": "Polish kept an overseas executive name in Latin letters rather than adding an ad hoc Chinese transliteration."
     },
     "use_live_exchange_rate_for_cny": {
       "id": "use_live_exchange_rate_for_cny",
@@ -2547,10 +2641,12 @@
         "2026-05-30",
         "2026-06-24",
         "2026-06-30",
-        "2026-07-06"
+        "2026-07-06",
+        "2026-07-01",
+        "2026-07-07"
       ],
-      "days_seen": 4,
-      "articles_seen": 7,
+      "days_seen": 6,
+      "articles_seen": 10,
       "contradictions": 0,
       "examples": [
         {
@@ -2596,6 +2692,34 @@
           "before": "?Man of Tomorrow?/?Lanterns?",
           "after": "??????/??????",
           "evidence": "??? DC ?????????????????????????"
+        },
+        {
+          "date": "2026-07-01",
+          "article_id": 24,
+          "before": "微软据称考虑取消《Marvel's Blade》并关闭Arkane",
+          "after": "微软据称考虑取消《漫威刀锋战士》并关闭开发商Arkane",
+          "evidence": "Polish normalized a work title to the established Chinese rendering."
+        },
+        {
+          "date": "2026-07-07",
+          "article_id": 13,
+          "before": "如果XBOX想专注于有潜力同时赢得口碑和商业成功的大型单人AAA游戏，那么漫威刀锋战士看起来是一个相对稳妥的选择。它由Arkane开发，而Arkane是世界上最聪明、最有创造力的游戏工作室之一，这个项目的前景非常诱人。可参考的蓝图也已经存在。看看IO Interactive最近凭《《007 初露锋芒》》做到的事情：它把自己在数十年《杀手》开发中打磨出的创造性潜行系统，转化到詹姆斯·邦德这个极受欢迎的成熟IP上。再想象一下，打造过《耻辱》《掠食》和《死亡循环》的开发者，能为《刀锋战士》的世界带来什么；它同样可以把自身聪明的潜行系统与21世纪最大的流行文化宇宙结合起来。PlayStation的竞争对手已经凭Insomniac的《蜘蛛侠》游戏取得巨大成功，并且大概率会在即将推出的《金刚狼》上再次成功，这对XBOX来说似乎是一条稳妥的成功路径。",
+          "after": "如果XBOX想专注于有潜力同时赢得口碑和商业成功的大型单人AAA游戏，那么《漫威刀锋战士》看起来是一个相对稳妥的选择。它由Arkane开发，而Arkane是世界上最聪明、最有创造力的游戏工作室之一，这个项目的前景非常诱人。可参考的蓝图也已经存在。看看IO Interactive最近凭《007 初露锋芒》做到的事情：它把自己在数十年《杀手》开发中打磨出的创造性潜行系统，转化到詹姆斯·邦德这个极受欢迎的成熟IP上。再想象一下，打造过《耻辱》《掠食》和《死亡循环》的开发者，能为《漫威刀锋战士》的世界带来什么；它同样可以把自身聪明的潜行系统与21世纪最大的流行文化宇宙结合起来。PlayStation已经凭Insomniac的《漫威蜘蛛侠》游戏取得巨大成功，并且大概率会在即将推出的《漫威金刚狼》上再次成功，这对XBOX来说似乎是一条稳妥的成功路径。",
+          "evidence": "Polish marked the game title consistently with book-title brackets."
+        },
+        {
+          "date": "2026-07-07",
+          "article_id": 22,
+          "before": "《宝可梦GO》十周年特别广播本周四举行",
+          "after": "《宝可梦 GO》十周年特别广播将于本周四举行",
+          "evidence": "Polish normalized official title spacing for Pokemon GO."
+        },
+        {
+          "date": "2026-07-07",
+          "article_id": 22,
+          "before": "《宝可梦GO》十周年特别广播本周四举行",
+          "after": "《宝可梦 GO》十周年特别广播将于本周四举行",
+          "evidence": "Polish normalized official title spacing for Pokemon GO."
         }
       ],
       "feedback": [
@@ -2607,9 +2731,9 @@
         }
       ],
       "created_at": "2026-06-25T21:53:01+08:00",
-      "last_seen": "2026-07-06",
+      "last_seen": "2026-07-07",
       "confidence": 0.78,
-      "latest_evidence_summary": "??? DC ?????????????????????????"
+      "latest_evidence_summary": "Polish normalized official title spacing for Pokemon GO."
     },
     "dict_candidate_cyberpunk_edgerunners_2_b769903811b5": {
       "id": "dict_candidate_cyberpunk_edgerunners_2_b769903811b5",

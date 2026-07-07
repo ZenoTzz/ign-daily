@@ -1,0 +1,132 @@
+{
+  "date": "2026-07-07",
+  "observer": "codex",
+  "model": "codex",
+  "status": "observed",
+  "signals": [
+    {
+      "type": "polish_diff",
+      "date": "2026-07-07",
+      "article_count": 11,
+      "diff_path": "data/2026-07-07/diff_analysis.json"
+    }
+  ],
+  "candidates": [
+    {
+      "id": "prefer_established_official_game_titles",
+      "category": "dictionary",
+      "type": "existing_rule_evidence",
+      "title": "优先使用稳定官方或通行译名",
+      "rule": "游戏、影视、角色和系统名有稳定官方或通行中文译名时应统一使用；没有稳定译名时保留原文，不自行创造译名。",
+      "status": "confirmed",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-07-07",
+          "article_id": 22,
+          "before": "《宝可梦GO》十周年特别广播本周四举行",
+          "after": "《宝可梦 GO》十周年特别广播将于本周四举行",
+          "evidence": "Polish normalized official title spacing."
+        },
+        {
+          "date": "2026-07-07",
+          "article_id": 13,
+          "before": "如果XBOX想专注于有潜力同时赢得口碑和商业成功的大型单人AAA游戏，那么漫威刀锋战士看起来是一个相对稳妥的选择。它由Arkane开发，而Arkane是世界上最聪明、最有创造力的游戏工作室之一，这个项目的前景非常诱人。可参考的蓝图也已经存在。看看IO Interactive最近凭《《007 初露锋芒》》做到的事情：它把自己在数十年《杀手》开发中打磨出的创造性潜行系统，转化到詹姆斯·邦德这个极受欢迎的成熟IP上。再想象一下，打造过《耻辱》《掠食》和《死亡循环》的开发者，能为《刀锋战士》的世界带来什么；它同样可以把自身聪明的潜行系统与21世纪最大的流行文化宇宙结合起来。PlayStation的竞争对手已经凭Insomniac的《蜘蛛侠》游戏取得巨大成功，并且大概率会在即将推出的《金刚狼》上再次成功，这对XBOX来说似乎是一条稳妥的成功路径。",
+          "after": "如果XBOX想专注于有潜力同时赢得口碑和商业成功的大型单人AAA游戏，那么《漫威刀锋战士》看起来是一个相对稳妥的选择。它由Arkane开发，而Arkane是世界上最聪明、最有创造力的游戏工作室之一，这个项目的前景非常诱人。可参考的蓝图也已经存在。看看IO Interactive最近凭《007 初露锋芒》做到的事情：它把自己在数十年《杀手》开发中打磨出的创造性潜行系统，转化到詹姆斯·邦德这个极受欢迎的成熟IP上。再想象一下，打造过《耻辱》《掠食》和《死亡循环》的开发者，能为《漫威刀锋战士》的世界带来什么；它同样可以把自身聪明的潜行系统与21世纪最大的流行文化宇宙结合起来。PlayStation已经凭Insomniac的《漫威蜘蛛侠》游戏取得巨大成功，并且大概率会在即将推出的《漫威金刚狼》上再次成功，这对XBOX来说似乎是一条稳妥的成功路径。",
+          "evidence": "Polish treated the work title consistently."
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id": "subtitle_avoid_concrete_detail",
+      "category": "subtitle",
+      "type": "existing_rule_evidence",
+      "title": "副标题简短、有记忆点但不增添事实",
+      "rule": "副标题保持2至15字，优先用简短短语、双关或原文引语，不机械复述标题；不得补充原文没有的事实或改变立场。",
+      "status": "confirmed",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-07-07",
+          "article_id": 20,
+          "before": "报道称项目已内部延期并超出预算",
+          "after": "还能活下来吗",
+          "evidence": "Subtitle became a short hook while detailed facts stayed in body."
+        },
+        {
+          "date": "2026-07-07",
+          "article_id": 21,
+          "before": "裁员重创B社",
+          "after": "裁员重创",
+          "evidence": "Subtitle trimmed repeated context."
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id": "remove_redundant_title_prefixes",
+      "category": "title",
+      "type": "existing_rule_evidence",
+      "title": "标题删除重复品牌堆叠",
+      "rule": "中文标题只保留识别新闻所需的作品、公司或平台名，删除重复的品牌书名号和无意义前缀，但不能删掉主体或关键限定。",
+      "status": "confirmed",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-07-07",
+          "article_id": 11,
+          "before": "XBOX裁员后Double Fine和Compulsion独立，保留《意航员》《午夜之南》",
+          "after": "XBOX裁员后Double Fine和Compulsion工作室转为独立运营",
+          "evidence": "Polish removed extra title payload."
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id": "social_media_platform_latest_name",
+      "category": "names",
+      "type": "existing_rule_evidence",
+      "title": "社交媒体平台使用当前官方名称",
+      "rule": "正文直接写“X”，不再并列旧称“Twitter”；仅在原文需要解释历史名称时例外。",
+      "status": "confirmed",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-07-07",
+          "article_id": 11,
+          "before": "该公司在X/Twitter上发布并由Schafer共同署名的声明中表示：「Double Fine Productions将再次成为一家独立工作室。我们感谢XBOX的每一个人，感谢这七年来的美好合作，也感谢他们与我们一起达成了一个能够保留我们历史和文化、并将游戏所有权归还给我们的结果。」",
+          "after": "该公司在X上发布并由Schafer共同署名的声明中表示：「Double Fine Productions将再次成为一家独立工作室。我们感谢XBOX的每一个人，感谢这七年来的美好合作，也感谢他们与我们一起达成了一个能够保留我们历史和文化、并将游戏所有权归还给我们的结果。」",
+          "evidence": "Polish preferred current platform name."
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id": "preserve_source_information_and_order",
+      "category": "body",
+      "type": "existing_rule_evidence",
+      "title": "完整保留原文信息与论述顺序",
+      "rule": "正文翻译必须逐段覆盖原文事实、引语和列表，并保持论述顺序；润色可以改善中文，但不能擅自删减、合并错位或扩写成原文没有的内容。",
+      "status": "confirmed",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-07-07",
+          "article_id": 10,
+          "before": "一家独立零售商发起请愿，呼吁索尼撤回在PlayStation主机上放弃光盘的决定。目前该请愿已获得超过11.5万个签名。",
+          "after": "一家独立零售商发起请愿，呼吁索尼撤回在PlayStation主机上放弃光盘的决定。目前该请愿已获得超过16万个签名。",
+          "evidence": "Polish corrected a concrete number; accuracy evidence only."
+        }
+      ],
+      "contradiction": ""
+    }
+  ],
+  "notes": [
+    "Google Docs import added 12 polished files for 2026-07-07; 11 had translation diffs.",
+    "Conservative learning: updated existing evidence only and did not create a broad new rule from one day.",
+    "No STYLE_PROFILE.md change: no new explicit weekly adoption feedback was present."
+  ],
+  "candidate_count": 5,
+  "updated_at": "2026-07-07T22:39:34+08:00"
+}

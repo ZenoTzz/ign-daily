@@ -36,6 +36,7 @@ from common_paths import DATA_DIR, REPO_ROOT, configure_utf8_stdio
 
 DEFAULT_CONFIG = DATA_DIR / "tencent-polish-config.json"
 DATE_LINE_RE = re.compile(r"^(\d{2})/(\d{2})/(\d{2})\s+(.+)$")
+SECTION_HEADING_RE = re.compile(r"^20\d{2}年\d{1,2}月(?:\d{1,2}日)?$")
 SHARE_ID_RE = re.compile(r"^[A-Za-z0-9_-]{8,}$")
 USER_AGENT = (
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
@@ -274,12 +275,17 @@ def parse_document_articles(text: str) -> list[DocumentArticle]:
             continue
         year, month, day, title = match.groups()
         date = f"20{year}-{month}-{day}"
+        paragraphs = [
+            paragraph
+            for paragraph in content[1:]
+            if not SECTION_HEADING_RE.match(paragraph)
+        ]
         articles.append(
             DocumentArticle(
                 date=date,
                 title=title.strip(),
                 subtitle=content[0],
-                paragraphs=content[1:],
+                paragraphs=paragraphs,
             )
         )
     return articles

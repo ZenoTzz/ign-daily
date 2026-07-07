@@ -112,7 +112,15 @@ def find_misses(date: str) -> list[dict[str, str]]:
         translated_text = translation_blob(translation)
 
         for en_term, cn_term, category in terms:
-            if not en_pattern(en_term).search(source_text):
+            match = en_pattern(en_term).search(source_text)
+            if not match:
+                continue
+            if (
+                category in ("games", "movies_tv")
+                and " " not in en_term
+                and not en_term.islower()
+                and match.group(0).islower()
+            ):
                 continue
             if any(variant in translated_text for variant in cn_variants(cn_term)):
                 continue

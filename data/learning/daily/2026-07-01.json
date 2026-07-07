@@ -3,7 +3,14 @@
   "observer": "codex",
   "model": "codex",
   "status": "observed",
-  "signals": [],
+  "signals": [
+    {
+      "type": "polish_diff",
+      "date": "2026-07-01",
+      "article_count": 8,
+      "diff_path": "data/2026-07-01/diff_analysis.json"
+    }
+  ],
   "candidates": [
     {
       "id": "dict_candidate_the_co_lead_designer_b6adc5557eeb",
@@ -118,11 +125,70 @@
         }
       ],
       "contradiction": ""
+    },
+    {
+      "id": "remove_redundant_title_prefixes",
+      "category": "title",
+      "type": "existing_rule_evidence",
+      "title": "标题删除重复品牌堆叠",
+      "rule": "中文标题只保留识别新闻所需的作品、公司或平台名，删除重复的品牌书名号和无意义前缀，但不能删掉主体或关键限定。",
+      "status": "confirmed",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-07-01",
+          "article_id": 11,
+          "before": "《任天堂》《Nintendo Switch 2》Switch 2新屏曝光，有望解决残影问题",
+          "after": "Switch 2新屏幕曝光，有望解决残影问题",
+          "evidence": "Backfilled Google Docs polish added another title wrapper removal example."
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id": "remove_personal_commentary",
+      "category": "body",
+      "type": "existing_rule_evidence",
+      "title": "删除不影响事实的作者调侃",
+      "rule": "可删除括号内的随口调侃、编辑自我评论等非事实性旁白；涉及作者判断、体验或原文论证时必须保留。",
+      "status": "pending",
+      "confidence": "medium",
+      "examples": [
+        {
+          "date": "2026-07-01",
+          "article_id": 11,
+          "before": "这里的「残影」并不是指你的Switch 2收拾东西再也不理你，而是指主机的显示屏上短暂留下的图像残留，导致一种类似动态模糊的效果。自任天堂最新主机去年发售以来，已有部分玩家反映过这个问题。",
+          "after": "这里的「残影」是指主机的显示屏上短暂留下的图像残留，导致一种类似动态模糊的效果。自任天堂最新主机去年发售以来，已有部分玩家反映过这个问题。",
+          "evidence": "One more example of trimming a throwaway joke; still pending broader confirmation."
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id": "keep_person_names_latin",
+      "category": "names",
+      "type": "existing_rule_evidence",
+      "title": "无通行中文译名的人名保留拉丁字母",
+      "rule": "海外人物没有稳定通行中文译名时保留拉丁字母姓名，不自行音译；已有公认中文名时使用公认译名。",
+      "status": "confirmed",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-07-01",
+          "article_id": 52,
+          "before": "前索尼互动娱乐美国分公司总裁兼CEO肖恩·莱登(Shawn Layden)解释了PlayStation的PC策略为何有其道理。",
+          "after": "前索尼互动娱乐美国分公司总裁兼CEO Shawn Layden解释了PlayStation的PC策略为何有其道理。",
+          "evidence": "Polish kept an overseas executive name in Latin letters."
+        }
+      ],
+      "contradiction": ""
     }
   ],
   "notes": [
-    "Added source+polished dictionary candidates for GPT/Tencent workflow."
+    "Added source+polished dictionary candidates for GPT/Tencent workflow.",
+    "Backfill import added/refreshed 2026-07-01 #11, then diff_analysis was regenerated.",
+    "Only attached evidence to existing rules; no STYLE_PROFILE.md update without new weekly adoption feedback."
   ],
-  "candidate_count": 6,
-  "updated_at": "2026-07-01T22:36:51+08:00"
+  "candidate_count": 9,
+  "updated_at": "2026-07-07T22:39:34+08:00"
 }
