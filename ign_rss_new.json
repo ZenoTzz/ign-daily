@@ -7,107 +7,87 @@
   "changed_dates": [
     "2026-07-08"
   ],
-  "new_target_dates": [
-    "2026-07-08"
-  ],
-  "new_count": 1,
+  "new_target_dates": [],
+  "new_count": 0,
   "filtered_count": 3,
   "cleanup_count": 0,
-  "changed_count": 4,
-  "articles": [
-    {
-      "title": "Upcoming Nintendo Switch 2 Games: Release Dates for 2026 and Beyond",
-      "url": "https://www.ign.com/articles/all-upcoming-nintendo-switch-2-games",
-      "pubDate_cst": "2026-07-08 01:32",
-      "category": "游戏新闻",
-      "emoji": "🎮",
-      "source_type": "rss"
-    }
-  ],
+  "changed_count": 3,
+  "articles": [],
   "filtered_articles": [
     {
-      "title": "Preorder SPECS, Snap's First Ever AR Glasses",
-      "url": "https://www.ign.com/articles/preorder-the-specs-ar-glasses-from-snap",
-      "pubDate_cst": "2026-07-08 02:25",
-      "description": "Lightweight and stylish personal wearable computer.",
+      "title": "Every LEGO Pokémon Set You Can Buy Right Now",
+      "url": "https://www.ign.com/articles/all-lego-pokemon-sets",
+      "pubDate_cst": "2026-07-08 04:23",
+      "description": "Here's where to buy every Pokémon-themed LEGO set.",
       "categories": "",
-      "reason": "url:preorder",
+      "reason": "text:\\bwhere to buy\\b",
       "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
-      "filtered_at_cn": "2026-07-08 03:27:08",
+      "filtered_at_cn": "2026-07-08 05:10:36",
       "status": "filtered"
     },
     {
-      "title": "Save 36% Off the TP-Link Deco 7 Pro BE10000 Wi-Fi 7 Whole Home Mesh System",
-      "url": "https://www.ign.com/articles/tp-link-whole-home-mesh-system-wifi-7-router-deal-for-july",
-      "pubDate_cst": "2026-07-08 01:45",
-      "description": "Amazon's best selling WiFi 7 router.",
+      "title": "The Popular Bluetti AC70 768Wh 1,000W LiFePO4 Power Station With 5 Year Warranty Drops Below $250",
+      "url": "https://www.ign.com/articles/bluetti-ac70-768wh-1000w-lifepo4-power-station-deal-in-july",
+      "pubDate_cst": "2026-07-08 03:05",
+      "description": "Lowest price of the year (even beats out Amazon Prime Day).",
       "categories": "",
-      "reason": "text:\\bsave \\d+%",
+      "reason": "text:\\bprime.day\\b",
       "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
-      "filtered_at_cn": "2026-07-08 03:27:08",
+      "filtered_at_cn": "2026-07-08 05:10:36",
       "status": "filtered"
     },
     {
-      "title": "Today’s Best Deals: Crimson Desert for PS5, Samsung Galaxy Buds 4 Pro, and 4K Steelbooks",
-      "url": "https://www.ign.com/articles/best-deals-for-july-7-2026",
-      "pubDate_cst": "2026-07-08 01:05",
-      "description": "And don’t miss discounts on MTG x Marvel, an Anker charging block, a mini fight pad, and more.",
+      "title": "Walmart Has a Decent 512GB Nintendo Switch 2 Memory Card Deal Despite the Price Hikes",
+      "url": "https://www.ign.com/articles/best-nintendo-switch-2-microsd-express-memory-card-deal-july-2026",
+      "pubDate_cst": "2026-07-08 02:50",
+      "description": "You can hold out for as long as you want, but sooner or later you'll need more space.",
       "categories": "",
       "reason": "url:deal",
       "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
-      "filtered_at_cn": "2026-07-08 03:27:08",
+      "filtered_at_cn": "2026-07-08 05:10:36",
       "status": "filtered"
     }
   ],
   "runs": [
     {
       "target_date": "2026-07-08",
-      "new_count": 1,
+      "new_count": 0,
       "filtered_count": 3,
-      "changed_count": 4,
+      "changed_count": 3,
       "next_id": 19,
-      "articles": [
-        {
-          "title": "Upcoming Nintendo Switch 2 Games: Release Dates for 2026 and Beyond",
-          "url": "https://www.ign.com/articles/all-upcoming-nintendo-switch-2-games",
-          "pubDate_cst": "2026-07-08 01:32",
-          "category": "游戏新闻",
-          "emoji": "🎮",
-          "source_type": "rss"
-        }
-      ],
+      "articles": [],
       "filtered_articles": [
         {
-          "title": "Preorder SPECS, Snap's First Ever AR Glasses",
-          "url": "https://www.ign.com/articles/preorder-the-specs-ar-glasses-from-snap",
-          "pubDate_cst": "2026-07-08 02:25",
-          "description": "Lightweight and stylish personal wearable computer.",
+          "title": "Every LEGO Pokémon Set You Can Buy Right Now",
+          "url": "https://www.ign.com/articles/all-lego-pokemon-sets",
+          "pubDate_cst": "2026-07-08 04:23",
+          "description": "Here's where to buy every Pokémon-themed LEGO set.",
           "categories": "",
-          "reason": "url:preorder",
+          "reason": "text:\\bwhere to buy\\b",
           "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
-          "filtered_at_cn": "2026-07-08 03:27:08",
+          "filtered_at_cn": "2026-07-08 05:10:36",
           "status": "filtered"
         },
         {
-          "title": "Save 36% Off the TP-Link Deco 7 Pro BE10000 Wi-Fi 7 Whole Home Mesh System",
-          "url": "https://www.ign.com/articles/tp-link-whole-home-mesh-system-wifi-7-router-deal-for-july",
-          "pubDate_cst": "2026-07-08 01:45",
-          "description": "Amazon's best selling WiFi 7 router.",
+          "title": "The Popular Bluetti AC70 768Wh 1,000W LiFePO4 Power Station With 5 Year Warranty Drops Below $250",
+          "url": "https://www.ign.com/articles/bluetti-ac70-768wh-1000w-lifepo4-power-station-deal-in-july",
+          "pubDate_cst": "2026-07-08 03:05",
+          "description": "Lowest price of the year (even beats out Amazon Prime Day).",
           "categories": "",
-          "reason": "text:\\bsave \\d+%",
+          "reason": "text:\\bprime.day\\b",
           "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
-          "filtered_at_cn": "2026-07-08 03:27:08",
+          "filtered_at_cn": "2026-07-08 05:10:36",
           "status": "filtered"
         },
         {
-          "title": "Today’s Best Deals: Crimson Desert for PS5, Samsung Galaxy Buds 4 Pro, and 4K Steelbooks",
-          "url": "https://www.ign.com/articles/best-deals-for-july-7-2026",
-          "pubDate_cst": "2026-07-08 01:05",
-          "description": "And don’t miss discounts on MTG x Marvel, an Anker charging block, a mini fight pad, and more.",
+          "title": "Walmart Has a Decent 512GB Nintendo Switch 2 Memory Card Deal Despite the Price Hikes",
+          "url": "https://www.ign.com/articles/best-nintendo-switch-2-microsd-express-memory-card-deal-july-2026",
+          "pubDate_cst": "2026-07-08 02:50",
+          "description": "You can hold out for as long as you want, but sooner or later you'll need more space.",
           "categories": "",
           "reason": "url:deal",
           "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
-          "filtered_at_cn": "2026-07-08 03:27:08",
+          "filtered_at_cn": "2026-07-08 05:10:36",
           "status": "filtered"
         }
       ]
