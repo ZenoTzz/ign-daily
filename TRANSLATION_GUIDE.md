@@ -400,3 +400,9 @@ for cat in ['games','movies_tv','companies','people','media','terms']:
 - **标题与摘要重写**：全文翻译拟定的标题和摘要，严禁直接沿用 index.json 中的旧 API 自动化标题和摘要。
 - **副标题校验**：副标题（subtitle）不能为空，且不能明显复述或直接包含在标题内容中。
 
+## 2026-07-07 补充：全文词库硬校验
+
+- `scripts/pre_push_check.py {date}` 现在会额外调用 `scripts/check_dict_fulltext.py {date}`。
+- 校验逻辑：读取当天 `sources/NN.json` 的英文标题、摘要、正文；只要命中 `data/dict.json` 里的 `games`、`movies_tv`、`companies`、`people` 词条，正式译文的标题、摘要、副标题、正文或 `translated_terms` 中必须出现对应中文译名。
+- 这项检查用于防止只检查标题而漏掉正文专名，例如 `Dishonored` 必须按词库写作《耻辱》，`Gears of War: E-Day` 必须写作《战争机器：事变日》。
+- 翻译完成后不要只看 `enforce_dict_titles.py` 通过；必须以 `pre_push_check.py` 全部通过为准。

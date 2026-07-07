@@ -595,3 +595,8 @@ workspace/
   - 全文翻译拟定的标题和摘要，严禁直接沿用 index.json 中的旧 API 自动化标题摘要。
   - 副标题（subtitle）不得为空，且不能明显复述标题内容。
 
+## 2026-07-07 维护补充：全文词库硬校验
+
+- `scripts/pre_push_check.py {date}` 已接入 `scripts/check_dict_fulltext.py {date}`。
+- 该脚本会对当天 `translation_status=done` 的文章做全文级词库核对：源文命中 `data/dict.json` 的 `games`、`movies_tv`、`companies`、`people` 词条时，译文标题、摘要、副标题、正文或 `translated_terms` 中必须出现词库中文译名。
+- 这弥补了 `enforce_dict_titles.py` 只检查 `cn_title` 的缺口。以后翻译长文时，不能靠记忆处理游戏名、公司名和人名；以 `pre_push_check.py` 全部通过为最终 push 条件。
