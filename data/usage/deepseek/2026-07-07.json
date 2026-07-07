@@ -624,6 +624,54 @@
       "total_tokens_including_reasoning": 13647,
       "prompt_cache_hit_tokens": 11776,
       "prompt_cache_miss_tokens": 43
+    },
+    {
+      "time_cn": "2026-07-07 18:02:44",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 1,
+      "article_title": "Microsoft Expected Game Pass Would Have 77 Million Subscribers by Now but It Reportedly Only Has 30 Million, as Xbox Boss Admits the Strategy Has Failed",
+      "article_url": "https://www.ign.com/articles/microsoft-expected-game-pass-would-have-77-million-subscribers-by-now-but-it-reportedly-only-has-30-million-as-xbox-boss-admits-the-strategy-has-failed",
+      "article_date": "2026-07-08",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00217602,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 11549,
+      "completion_tokens": 1136,
+      "reasoning_tokens": 861,
+      "output_tokens_including_reasoning": 1997,
+      "total_tokens": 12685,
+      "total_tokens_including_reasoning": 13546,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 11549
+    },
+    {
+      "time_cn": "2026-07-07 18:02:53",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 2,
+      "article_title": "Nintendo Confirms Switch 1 Global Availability After Announcing European Withdrawal",
+      "article_url": "https://www.ign.com/articles/nintendo-confirms-switch-1-global-availability-after-announcing-european-withdrawal",
+      "article_date": "2026-07-08",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00123198,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 10986,
+      "completion_tokens": 785,
+      "reasoning_tokens": 568,
+      "output_tokens_including_reasoning": 1353,
+      "total_tokens": 11771,
+      "total_tokens_including_reasoning": 12339,
+      "prompt_cache_hit_tokens": 4992,
+      "prompt_cache_miss_tokens": 5994
     }
   ]
 }

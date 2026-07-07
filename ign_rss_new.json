@@ -1,81 +1,71 @@
 {
-  "target_date": "2026-07-07",
+  "target_date": "2026-07-08",
   "target_dates": [
-    "2026-07-07",
-    "2026-07-06"
-  ],
-  "changed_dates": [
+    "2026-07-08",
     "2026-07-07"
   ],
-  "new_target_dates": [],
-  "new_count": 0,
-  "filtered_count": 2,
+  "changed_dates": [
+    "2026-07-08"
+  ],
+  "new_target_dates": [
+    "2026-07-08"
+  ],
+  "new_count": 2,
+  "filtered_count": 0,
   "cleanup_count": 0,
   "changed_count": 2,
-  "articles": [],
-  "filtered_articles": [
+  "articles": [
     {
-      "title": "Save 50% Off the Lokithor J2250 Pro Cordless Car Jump Starter With LiFePO4 Batteries",
-      "url": "https://www.ign.com/articles/lokithor-j2250-pro-cordless-car-jump-starter-deal",
-      "pubDate_cst": "2026-07-07 06:15",
-      "description": "LiFePO4 jump starters are safer, last longer, and work better in cold weather than traditional lithium models.",
-      "categories": "",
-      "reason": "text:\\bsave \\d+%",
-      "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
-      "filtered_at_cn": "2026-07-07 07:32:46",
-      "status": "filtered"
+      "title": "Microsoft Expected Game Pass Would Have 77 Million Subscribers by Now but It Reportedly Only Has 30 Million, as Xbox Boss Admits the Strategy Has Failed",
+      "url": "https://www.ign.com/articles/microsoft-expected-game-pass-would-have-77-million-subscribers-by-now-but-it-reportedly-only-has-30-million-as-xbox-boss-admits-the-strategy-has-failed",
+      "pubDate_cst": "2026-07-07 17:37",
+      "category": "游戏新闻",
+      "emoji": "🎮",
+      "source_type": "rss"
     },
     {
-      "title": "Walmart Has a Decent 512GB Nintendo Switch 2 Memory Card Deal Despite the Price Hikes",
-      "url": "https://www.ign.com/articles/best-nintendo-switch-2-microsd-express-memory-card-deal-july-2026",
-      "pubDate_cst": "2026-07-07 06:55",
-      "description": "You can hold out for as long as you want, but sooner or later you'll need more space.",
-      "categories": "",
-      "reason": "url:deal",
-      "rss_url": "https://www.ign.com/rss/v2/articles/feed?vertical=movies&start=0&count=20",
-      "filtered_at_cn": "2026-07-07 07:32:46",
-      "status": "filtered"
+      "title": "Nintendo Confirms Switch 1 Global Availability After Announcing European Withdrawal",
+      "url": "https://www.ign.com/articles/nintendo-confirms-switch-1-global-availability-after-announcing-european-withdrawal",
+      "pubDate_cst": "2026-07-07 17:20",
+      "category": "游戏新闻",
+      "emoji": "🎮",
+      "source_type": "rss"
     }
   ],
+  "filtered_articles": [],
   "runs": [
+    {
+      "target_date": "2026-07-08",
+      "new_count": 2,
+      "filtered_count": 0,
+      "changed_count": 2,
+      "next_id": 3,
+      "articles": [
+        {
+          "title": "Microsoft Expected Game Pass Would Have 77 Million Subscribers by Now but It Reportedly Only Has 30 Million, as Xbox Boss Admits the Strategy Has Failed",
+          "url": "https://www.ign.com/articles/microsoft-expected-game-pass-would-have-77-million-subscribers-by-now-but-it-reportedly-only-has-30-million-as-xbox-boss-admits-the-strategy-has-failed",
+          "pubDate_cst": "2026-07-07 17:37",
+          "category": "游戏新闻",
+          "emoji": "🎮",
+          "source_type": "rss"
+        },
+        {
+          "title": "Nintendo Confirms Switch 1 Global Availability After Announcing European Withdrawal",
+          "url": "https://www.ign.com/articles/nintendo-confirms-switch-1-global-availability-after-announcing-european-withdrawal",
+          "pubDate_cst": "2026-07-07 17:20",
+          "category": "游戏新闻",
+          "emoji": "🎮",
+          "source_type": "rss"
+        }
+      ],
+      "filtered_articles": []
+    },
     {
       "target_date": "2026-07-07",
       "new_count": 0,
-      "filtered_count": 2,
-      "changed_count": 2,
-      "next_id": 29,
-      "articles": [],
-      "filtered_articles": [
-        {
-          "title": "Save 50% Off the Lokithor J2250 Pro Cordless Car Jump Starter With LiFePO4 Batteries",
-          "url": "https://www.ign.com/articles/lokithor-j2250-pro-cordless-car-jump-starter-deal",
-          "pubDate_cst": "2026-07-07 06:15",
-          "description": "LiFePO4 jump starters are safer, last longer, and work better in cold weather than traditional lithium models.",
-          "categories": "",
-          "reason": "text:\\bsave \\d+%",
-          "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
-          "filtered_at_cn": "2026-07-07 07:32:46",
-          "status": "filtered"
-        },
-        {
-          "title": "Walmart Has a Decent 512GB Nintendo Switch 2 Memory Card Deal Despite the Price Hikes",
-          "url": "https://www.ign.com/articles/best-nintendo-switch-2-microsd-express-memory-card-deal-july-2026",
-          "pubDate_cst": "2026-07-07 06:55",
-          "description": "You can hold out for as long as you want, but sooner or later you'll need more space.",
-          "categories": "",
-          "reason": "url:deal",
-          "rss_url": "https://www.ign.com/rss/v2/articles/feed?vertical=movies&start=0&count=20",
-          "filtered_at_cn": "2026-07-07 07:32:46",
-          "status": "filtered"
-        }
-      ]
-    },
-    {
-      "target_date": "2026-07-06",
-      "new_count": 0,
       "filtered_count": 0,
       "changed_count": 0,
-      "next_id": 8,
+      "next_id": 29,
       "articles": [],
       "filtered_articles": []
     }
