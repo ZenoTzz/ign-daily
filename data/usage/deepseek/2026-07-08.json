@@ -192,6 +192,54 @@
       "total_tokens_including_reasoning": 14329,
       "prompt_cache_hit_tokens": 10368,
       "prompt_cache_miss_tokens": 2309
+    },
+    {
+      "time_cn": "2026-07-08 06:33:08",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 19,
+      "article_title": "EVE Vanguard Reinvented Its Gameplay With Some Notes from Battlefield 6 | Hands-On Preview",
+      "article_url": "https://www.ign.com/articles/eve-vanguard-reinvented-its-gameplay-with-some-notes-from-battlefield-6-hands-on-preview",
+      "article_date": "2026-07-08",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00070313,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 11575,
+      "completion_tokens": 1022,
+      "reasoning_tokens": 782,
+      "output_tokens_including_reasoning": 1804,
+      "total_tokens": 12597,
+      "total_tokens_including_reasoning": 13379,
+      "prompt_cache_hit_tokens": 10368,
+      "prompt_cache_miss_tokens": 1207
+    },
+    {
+      "time_cn": "2026-07-08 06:33:25",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 20,
+      "article_title": "New Minecraft Update Finally Allows Players to Sit Down",
+      "article_url": "https://www.ign.com/articles/new-minecraft-update-finally-allows-players-to-sit-down",
+      "article_date": "2026-07-08",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00088709,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 10953,
+      "completion_tokens": 1491,
+      "reasoning_tokens": 1281,
+      "output_tokens_including_reasoning": 2772,
+      "total_tokens": 12444,
+      "total_tokens_including_reasoning": 13725,
+      "prompt_cache_hit_tokens": 10368,
+      "prompt_cache_miss_tokens": 585
     }
   ]
 }
