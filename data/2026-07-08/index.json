@@ -6,13 +6,13 @@
       "category": "游戏新闻",
       "emoji": "🎮",
       "en_title": "Call of Duty: Black Ops 1 and 2's Leaked PS5 Trophy List Indicates Some Content May Be Missing",
-      "cn_title": "《使命召唤》《黑色行动1/2》PS5奖杯泄露，部分内容或缺失",
-      "summary": "《使命召唤：黑色行动1》和《黑色行动2》PS5版奖杯列表泄露，显示剧院模式、联赛模式及赌注比赛的相关奖杯被移除，暗示这些功能可能不会包含在7月登陆PS4/PS5的重新发布版中。赌注比赛中的经典模式如Gun Game和One in the Chamber或保留但去掉赌博机制。动视尚未公布具体发售日期。",
+      "cn_title": "《使命召唤：黑色行动1/2》PS5奖杯疑似泄露",
+      "summary": "《使命召唤：黑色行动1/2》PS4和PS5复刻版奖杯列表泄露，显示剧场模式、League Play和赌注比赛等内容可能被删减。",
       "url": "https://www.ign.com/articles/call-of-duty-black-ops-1-and-2s-leaked-ps5-trophy-list-indicates-some-content-may-be-missing",
       "publish_time_cn": "2026-07-08 06:26",
       "pub_date": "2026-07-08 06:26",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/06/21/call-of-duty-black-ops-1782070244037.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/21/call-of-duty-black-ops-1782070244037.png",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/21/call-of-duty-black-ops-1782070244037.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/21/call-of-duty-black-ops-1782070244037.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -21,20 +21,24 @@
         "https://assets-prd.ignimgs.com/2026/06/21/call-of-duty-black-ops-1782070244037.png"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-07-08T07:39:12+08:00"
+      "source_fetched_at": "2026-07-08T07:39:12+08:00",
+      "translation_path": "translations/21.json",
+      "translator": "codex",
+      "translator_provider": "manual",
+      "translator_model": "gpt-5-codex"
     },
     {
       "id": 20,
       "category": "游戏新闻",
       "emoji": "🪑",
       "en_title": "New Minecraft Update Finally Allows Players to Sit Down",
-      "cn_title": "《我的世界》新更新：玩家终于能坐下了",
-      "summary": "《我的世界》新更新终于加入了一项玩家期盼17年的功能：坐下。此外，微软本周启动XBOX重组，Minecraft领导层将直接向XBOX CEO Asha Sharma汇报，她认为该IP投资严重不足。玩家对坐下功能反响热烈，该更新将于今年秋季正式上线。",
+      "cn_title": "《我的世界》新更新终于能让玩家坐下",
+      "summary": "《我的世界》新更新加入玩家期待已久的坐下功能，不再需要模组或临时办法。该功能今天可在预览版本中体验，正式更新预计今年秋季推出。",
       "url": "https://www.ign.com/articles/new-minecraft-update-finally-allows-players-to-sit-down",
       "publish_time_cn": "2026-07-08 06:09",
       "pub_date": "2026-07-08 06:09",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/07/01/new-key-art-01-1782922658372.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/07/01/new-key-art-01-1782922658372.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/07/01/new-key-art-01-1782922658372.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/07/01/new-key-art-01-1782922658372.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -43,20 +47,24 @@
         "https://assets-prd.ignimgs.com/2026/07/01/new-key-art-01-1782922658372.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-07-08T06:32:52+08:00"
+      "source_fetched_at": "2026-07-08T06:32:52+08:00",
+      "translation_path": "translations/20.json",
+      "translator": "codex",
+      "translator_provider": "manual",
+      "translator_model": "gpt-5-codex"
     },
     {
       "id": 19,
       "category": "游戏新闻",
       "emoji": "🎮",
       "en_title": "EVE Vanguard Reinvented Its Gameplay With Some Notes from Battlefield 6 | Hands-On Preview",
-      "cn_title": "EVE Vanguard玩法大改，借鉴《战地风云6》",
-      "summary": "《EVE Online》FPS模式《EVE Vanguard》迎来重大更新「Operation Avalon」，玩法重做为撤离射击风格，新增手绘地图、蓝图制造及芯片系统，并计划今年年底与《EVE Online》实现全天候连接。上手体验显示，枪感和角色重量感均有显著提升。",
+      "cn_title": "《EVE Vanguard》借鉴《战地风云6》重塑玩法",
+      "summary": "《EVE Vanguard》最新版本「Operation Avalon」强化了撤离射击核心，并计划在今年底前与《EVE Online》全天候连接。",
       "url": "https://www.ign.com/articles/eve-vanguard-reinvented-its-gameplay-with-some-notes-from-battlefield-6-hands-on-preview",
       "publish_time_cn": "2026-07-08 03:23",
       "pub_date": "2026-07-08 03:23",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/07/07/evevanguard-preview-blogroll-1783452192445.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/07/07/evevanguard-preview-blogroll-1783452192445.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/07/07/evevanguard-preview-blogroll-1783452192445.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/07/07/evevanguard-preview-blogroll-1783452192445.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -81,20 +89,24 @@
           "source": "ai_guess",
           "reason": "游戏内更新名称，建议人工确认"
         }
-      ]
+      ],
+      "translation_path": "translations/19.json",
+      "translator": "codex",
+      "translator_provider": "manual",
+      "translator_model": "gpt-5-codex"
     },
     {
       "id": 18,
       "category": "游戏新闻",
       "emoji": "🎮",
       "en_title": "Upcoming Nintendo Switch 2 Games: Release Dates for 2026 and Beyond",
-      "cn_title": "Switch 2 游戏阵容大盘点：2026 年及之后新作一览",
-      "summary": "任天堂 Switch 2 游戏阵容日渐丰富，涵盖第一方独占如《斯普拉遁》新作、第三方大作如《艾尔登法环 褪色者版》《火焰纹章》新作，以及经典重制《雷曼：传奇》3D 重制等。从 2026 年下半年起，玩家可期待大量新作登陆新主机。",
+      "cn_title": "任天堂Nintendo Switch 2后续游戏阵容",
+      "summary": "Nintendo Switch 2后续游戏阵容已经逐渐成形。2026年下半年及之后，平台将迎来独占作品、第三方移植和跨世代新作。",
       "url": "https://www.ign.com/articles/all-upcoming-nintendo-switch-2-games",
       "publish_time_cn": "2026-07-08 01:32",
       "pub_date": "2026-07-08 01:32",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/01/23/switch2games-1769208267817.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/01/23/switch2games-1769208267817.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/01/23/switch2games-1769208267817.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/07/06/the-elder-scrolls-iv-oblivion-remastered-nintendo-switch-21-1783348299797.jpg",
@@ -132,20 +144,24 @@
           "source": "ai_guess",
           "reason": "RPG新作，暂无官方译名，建议保留英文。"
         }
-      ]
+      ],
+      "translation_path": "translations/18.json",
+      "translator": "codex",
+      "translator_provider": "manual",
+      "translator_model": "gpt-5-codex"
     },
     {
       "id": 17,
       "category": "影视资讯",
       "emoji": "🎬",
       "en_title": "Christopher Nolan's The Prestige Is Returning to Theaters",
-      "cn_title": "诺兰《致命魔术》20周年重返影院",
-      "summary": "克里斯托弗·诺兰执导的《致命魔术》将于2027年1月21日重返影院，庆祝上映20周年。影片由休·杰克曼、克里斯蒂安·贝尔、斯嘉丽·约翰逊、大卫·鲍伊等主演，讲述两位魔术师为争夺终极幻术而相互较量的故事。IGN在2006年为本片打出9/10高分，称其「如同完成一场复杂魔术」。目前尚不确定是否会推出IMAX重映。",
+      "cn_title": "克里斯托弗·诺兰《致命魔术》将重返影院",
+      "summary": "克里斯托弗·诺兰确认，《致命魔术》将在20周年之际于2027年1月21日重返影院。目前尚不清楚是否会推出IMAX版本，但重映已正式确定。",
       "url": "https://www.ign.com/articles/christopher-nolans-the-prestige-is-returning-to-theaters",
       "publish_time_cn": "2026-07-08 00:48",
       "pub_date": "2026-07-08 00:48",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/07/07/the-prestige-1783442353143.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/07/07/the-prestige-1783442353143.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/07/07/the-prestige-1783442353143.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/07/07/the-prestige-1783442353143.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -154,7 +170,11 @@
         "https://assets-prd.ignimgs.com/2026/07/07/the-prestige-1783442353143.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-07-08T01:45:38+08:00"
+      "source_fetched_at": "2026-07-08T01:45:38+08:00",
+      "translation_path": "translations/17.json",
+      "translator": "codex",
+      "translator_provider": "manual",
+      "translator_model": "gpt-5-codex"
     },
     {
       "id": 14,
@@ -258,13 +278,13 @@
       "category": "游戏新闻",
       "emoji": "🎮",
       "en_title": "Bond and Hitman Developer Closing a Studio and Laying Off Staff After Xbox Pulls Funding",
-      "cn_title": "XBOX撤资致《杀手》开发商IOI关闭工作室裁员",
-      "summary": "IO Interactive（《杀手》《007》开发商）宣布关闭伊斯坦布尔工作室，并裁减部分员工，原因是XBOX终止了对未公开项目Project Fantasy的资助。IOI表示将自主继续开发该作。此举发生在XBOX大规模重组之后，XBOX CEO Asha Sharma此前承认游戏战略失败，Game Pass订阅量远低于预期。",
+      "cn_title": "XBOX撤资后《杀手》开发商IO Interactive关闭工作室",
+      "summary": "《杀手》和《007：曙光乍现》开发商IO Interactive确认，在XBOX撤回项目资金后，公司将关闭伊斯坦布尔工作室并启动裁员。",
       "url": "https://www.ign.com/articles/bond-and-hitman-developer-closing-a-studio-and-laying-off-staff-after-xbox-pulls-funding",
       "publish_time_cn": "2026-07-07 22:18",
       "pub_date": "2026-07-07 22:18",
-      "cover_image": "https://assets-prd.ignimgs.com/2023/02/28/iointo-1677602598131.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2023/02/28/iointo-1677602598131.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2023/02/28/iointo-1677602598131.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2023/02/28/iointo-1677602598131.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -273,20 +293,24 @@
         "https://assets-prd.ignimgs.com/2023/02/28/iointo-1677602598131.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-07-07T23:36:29+08:00"
+      "source_fetched_at": "2026-07-07T23:36:29+08:00",
+      "translation_path": "translations/06.json",
+      "translator": "codex",
+      "translator_provider": "manual",
+      "translator_model": "gpt-5-codex"
     },
     {
       "id": 7,
       "category": "行业动态",
       "emoji": "😬",
       "en_title": "PlayStation's First Tweet Since It Announced Plans to Kill Discs Is Going About as Well as You'd Expect",
-      "cn_title": "PlayStation宣布停止光盘后首条推文，玩家：先解释光盘再说",
-      "summary": "索尼此前宣布将于2028年起停止为PlayStation新游戏生产实体光盘，此举引发巨大争议。时隔六日后，PlayStation官方X账号首度发声，却是为宣传一款无线摇杆。玩家评论区瞬间被批评淹没，要求索尼就光盘停产作出回应。市场分析师指出，索尼股价反而上涨，数字游戏带来的利润远超实体销售，公司不太可能改变决策。",
+      "cn_title": "PlayStation停售实体光盘后首条推文遭玩家围攻",
+      "summary": "索尼宣布2028年起停止新PlayStation游戏实体光盘生产后，PlayStation首条新推文只是推广摇杆，评论区随即被玩家抗议淹没。",
       "url": "https://www.ign.com/articles/playstations-first-tweet-since-it-announced-plans-to-kill-discs-is-going-about-as-well-as-youd-expect",
       "publish_time_cn": "2026-07-07 21:42",
       "pub_date": "2026-07-07 21:42",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/07/07/screenshot-2026-07-07-143836-1783431540914.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/07/07/screenshot-2026-07-07-143836-1783431540914.png",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/07/07/screenshot-2026-07-07-143836-1783431540914.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/07/07/screenshot-2026-07-07-143836-1783431540914.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -295,20 +319,24 @@
         "https://assets-prd.ignimgs.com/2026/07/07/screenshot-2026-07-07-143836-1783431540914.png"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-07-07T23:36:30+08:00"
+      "source_fetched_at": "2026-07-07T23:36:30+08:00",
+      "translation_path": "translations/07.json",
+      "translator": "codex",
+      "translator_provider": "manual",
+      "translator_model": "gpt-5-codex"
     },
     {
       "id": 8,
       "category": "游戏新闻",
       "emoji": "🎮",
       "en_title": "Xbox Makes First Game Pass Lineup Announcement Following Layoffs — and CEO Asha Sharma's Admission That Microsoft's Gaming Strategy Failed to Work Out",
-      "cn_title": "微软承认XBOX战略失败，裁员后公布Game Pass七月阵容",
-      "summary": "微软在昨日裁减1600名XBOX员工后，公布了Game Pass七月首批游戏阵容，包括《托尼·霍克职业滑板1+2》和《幻兽帕鲁》1.0正式版等。CEO Asha Sharma坦言公司业务不健康，Game Pass订阅量远未达预期，当前仅约3000万用户，远低于今年目标的7700万。",
+      "cn_title": "微软Asha Sharma承认失败后XBOX公布Game Pass阵容",
+      "summary": "微软在XBOX裁员与Asha Sharma承认游戏战略失败后，首次公布Game Pass七月阵容，包括《托尼霍克职业滑板1+2》等作品。",
       "url": "https://www.ign.com/articles/xbox-makes-first-game-pass-lineup-announcement-following-layoffs-and-ceo-asha-sharmas-admission-that-microsofts-gaming-strategy-failed-to-work-out",
       "publish_time_cn": "2026-07-07 21:18",
       "pub_date": "2026-07-07 21:18",
-      "cover_image": "https://assets-prd.ignimgs.com/2023/05/03/xbox-showcase-1683121552988.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2023/05/03/xbox-showcase-1683121552988.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2023/05/03/xbox-showcase-1683121552988.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2023/05/03/xbox-showcase-1683121552988.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -333,7 +361,11 @@
           "source": "ai_guess",
           "reason": "无官方中文名，待确认"
         }
-      ]
+      ],
+      "translation_path": "translations/08.json",
+      "translator": "codex",
+      "translator_provider": "manual",
+      "translator_model": "gpt-5-codex"
     },
     {
       "id": 9,
@@ -448,13 +480,13 @@
       "category": "行业动态",
       "emoji": "💔",
       "en_title": "'My Heart's With All of You' — John Romero Says id Software Has 'Done a Great Job' Moving the Studio's Legacy Forward and Hopes Someone Is Working to Preserve It All Amid Xbox Layoffs",
-      "cn_title": "John Romero回应id Software裁员：希望保留工作室遗产",
-      "summary": "id Software联合创始人John Romero就微软XBOX裁员波及id Software一事发声，对受影响的员工表示支持，并呼吁保护工作室的数字遗产。作为微软XBOX大规模裁员的一部分（共计3200人），id Software裁撤了95名员工，包括曾参与《毁灭战士：黑暗纪元》《毁灭战士：永恒》的首席角色艺术家Denzil O'Neill。Romero表示，id Software的员工「在推进遗产方面做得很好」，并希望有人能继续保存公司的代码、资产和故事。此次裁员也重创了贝塞斯达旗下的ZeniMax Online Studios。",
+      "cn_title": "John Romero声援XBOX裁员中的id Software员工",
+      "summary": "id Software联合创始人John Romero谈及XBOX裁员波及这家老牌工作室，称团队很好地延续了遗产，并呼吁保护其历史资料。",
       "url": "https://www.ign.com/articles/my-hearts-with-all-of-you-john-romero-says-id-software-has-done-a-great-job-moving-the-studios-legacy-forward-and-hopes-someone-is-working-to-preserve-it-all-amid-xbox-layoffs",
       "publish_time_cn": "2026-07-07 19:49",
       "pub_date": "2026-07-07 19:49",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/07/07/gettyimages-2237390783-1783424510044.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/07/07/gettyimages-2237390783-1783424510044.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/07/07/gettyimages-2237390783-1783424510044.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/07/07/gettyimages-2237390783-1783424510044.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -464,20 +496,24 @@
         "https://assets-prd.ignimgs.com/2026/07/07/gettyimages-2237390783-1783424536128.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-07-07T20:39:48+08:00"
+      "source_fetched_at": "2026-07-07T20:39:48+08:00",
+      "translation_path": "translations/05.json",
+      "translator": "codex",
+      "translator_provider": "manual",
+      "translator_model": "gpt-5-codex"
     },
     {
       "id": 3,
       "category": "行业动态",
       "emoji": "💼",
       "en_title": "Staff at Fallout: New Vegas Developer Obsidian Reportedly Left Unsure How 'Huge List of Projects' Can Continue After Xbox Layoffs Hit Hard",
-      "cn_title": "《辐射：新维加斯》黑曜石员工忧心裁员后项目前景，据悉大量项目存疑",
-      "summary": "据报道，微软XBOX裁撤约3200个岗位，黑曜石工作室（《辐射：新维加斯》《天外世界》《禁闭求生》开发商）遭重创，约60-70人离职。员工对工作室「大量项目」能否继续表示担忧。黑曜石尚未公布新作，但仍在开发《禁闭求生2》和《天外世界2》DLC。",
+      "cn_title": "XBOX裁员后《辐射：新维加斯》开发商黑曜石忧项目难继",
+      "summary": "据报道，XBOX裁员重创《辐射：新维加斯》开发商黑曜石，约60到70人离职。部分员工担心，工作室庞大的项目列表已难以继续推进。",
       "url": "https://www.ign.com/articles/staff-at-fallout-new-vegas-developer-obsidian-reportedly-left-unsure-how-huge-list-of-projects-can-continue-after-xbox-layoffs-hit-hard",
       "publish_time_cn": "2026-07-07 18:57",
       "pub_date": "2026-07-07 18:57",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/07/07/ss-28c22a02a2c6341d94372826b24e163e59d4154c-1920x1080-1783421720603.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/07/07/ss-28c22a02a2c6341d94372826b24e163e59d4154c-1920x1080-1783421720603.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/07/07/ss-28c22a02a2c6341d94372826b24e163e59d4154c-1920x1080-1783421720603.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/07/07/ss-28c22a02a2c6341d94372826b24e163e59d4154c-1920x1080-1783421720603.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -486,7 +522,11 @@
         "https://assets-prd.ignimgs.com/2026/07/07/ss-28c22a02a2c6341d94372826b24e163e59d4154c-1920x1080-1783421720603.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-07-07T20:39:48+08:00"
+      "source_fetched_at": "2026-07-07T20:39:48+08:00",
+      "translation_path": "translations/03.json",
+      "translator": "codex",
+      "translator_provider": "manual",
+      "translator_model": "gpt-5-codex"
     },
     {
       "id": 12,
@@ -537,13 +577,13 @@
       "category": "行业动态",
       "emoji": "📉",
       "en_title": "Microsoft Expected Game Pass Would Have 77 Million Subscribers by Now but It Reportedly Only Has 30 Million, as Xbox Boss Admits the Strategy Has Failed",
-      "cn_title": "XBOX Game Pass壮志未酬：预期7700万订阅，实际仅3000万",
-      "summary": "据《华尔街日报》报道，微软原预期XBOX Game Pass今年订阅量达7700万，但目前仅约3000万。XBOX CEO Asha Sharma在内部邮件中承认战略失败，称业务不健康。为控制成本，微软已开始大规模裁员，并剥离了包括《腐烂国度3》开发商Undead Labs在内的四家工作室。此前微软投入690亿美元(约合人民币4692亿元)收购动视暴雪以扩充Game Pass阵容，但订阅增长仍停滞。Sharma近期已下调Game Pass价格并将《使命召唤》移出首发阵容。",
+      "cn_title": "微软XBOX Game Pass订阅量远低预期",
+      "summary": "微软曾预计Game Pass今年订阅用户达到7700万，但据称目前只有3000万。XBOX负责人承认，这一战略没有达到预期。",
       "url": "https://www.ign.com/articles/microsoft-expected-game-pass-would-have-77-million-subscribers-by-now-but-it-reportedly-only-has-30-million-as-xbox-boss-admits-the-strategy-has-failed",
       "publish_time_cn": "2026-07-07 17:37",
       "pub_date": "2026-07-07 17:37",
-      "cover_image": "https://assets-prd.ignimgs.com/2023/10/11/game-pass-deal-ign-prime-day-2-2023-new-october-1697037530962.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2023/10/11/game-pass-deal-ign-prime-day-2-2023-new-october-1697037530962.png",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2023/10/11/game-pass-deal-ign-prime-day-2-2023-new-october-1697037530962.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2023/10/11/game-pass-deal-ign-prime-day-2-2023-new-october-1697037530962.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -553,20 +593,24 @@
         "https://assets-prd.ignimgs.com/2026/07/07/xbox-path-to-leadership-in-gaming-hd-scaled-1783416526798.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-07-07T18:02:27+08:00"
+      "source_fetched_at": "2026-07-07T18:02:27+08:00",
+      "translation_path": "translations/01.json",
+      "translator": "codex",
+      "translator_provider": "manual",
+      "translator_model": "gpt-5-codex"
     },
     {
       "id": 2,
       "category": "游戏新闻",
       "emoji": "🎮",
       "en_title": "Nintendo Confirms Switch 1 Global Availability After Announcing European Withdrawal",
-      "cn_title": "任天堂确认Switch 1全球继续销售",
-      "summary": "任天堂向IGN确认，尽管此前宣布将在欧洲停售Switch 1，但该主机仍会在北美和日本等地区继续销售。欧洲市场将于2027年2月中旬停止供货，而Switch 2则将于今年秋季推出可更换电池的新版本。Switch 1平台仍有新作发售，包括本月推出的《节奏天国 奇迹之星》。",
+      "cn_title": "任天堂确认Switch 1仍会在欧洲外销售",
+      "summary": "任天堂确认，Switch 1将在欧洲停售后继续于其他地区销售。欧洲市场则会在新电池法规下转向新版Switch 2硬件，但全球下架暂未发生。",
       "url": "https://www.ign.com/articles/nintendo-confirms-switch-1-global-availability-after-announcing-european-withdrawal",
       "publish_time_cn": "2026-07-07 17:20",
       "pub_date": "2026-07-07 17:20",
-      "cover_image": "https://assets1.ignimgs.com/2017/01/20/console-nintendoswitch-hardware-boxart-01-1484875067820.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets1.ignimgs.com/2017/01/20/console-nintendoswitch-hardware-boxart-01-1484875067820.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets1.ignimgs.com/2017/01/20/console-nintendoswitch-hardware-boxart-01-1484875067820.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets1.ignimgs.com/2017/01/20/console-nintendoswitch-hardware-boxart-01-1484875067820.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -576,7 +620,11 @@
         "http://assets1.ignimgs.com/2017/01/20/console-nintendoswitch-hardware-boxart-01-1484875067820.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-07-07T18:02:27+08:00"
+      "source_fetched_at": "2026-07-07T18:02:27+08:00",
+      "translation_path": "translations/02.json",
+      "translator": "codex",
+      "translator_provider": "manual",
+      "translator_model": "gpt-5-codex"
     },
     {
       "id": 22,
