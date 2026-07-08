@@ -11,54 +11,100 @@
     "2026-07-09"
   ],
   "new_count": 2,
-  "filtered_count": 0,
+  "filtered_count": 2,
   "cleanup_count": 0,
-  "changed_count": 2,
+  "changed_count": 4,
   "articles": [
     {
-      "title": "Dune: Part Three's New Trailer Highlights the Rift Between Paul Atreides and Chani",
-      "url": "https://www.ign.com/articles/dune-part-threes-new-trailer-highlights-the-rift-between-paul-atreides-and-chani",
-      "pubDate_cst": "2026-07-09 02:50",
+      "title": "Dune: Part Three Trailer Event Reveals Intense Battle Sequence Screening Before The Odyssey",
+      "url": "https://www.ign.com/articles/dune-part-three-trailer-battle-sequence-the-odyssey",
+      "pubDate_cst": "2026-07-09 04:16",
       "category": "游戏新闻",
       "emoji": "🎮",
       "source_type": "rss"
     },
     {
-      "title": "Obsidian Reportedly Cancels Avowed 2 to Focus on a New Fallout Game",
-      "url": "https://www.ign.com/articles/obsidian-cancels-avowed-2-to-focus-on-new-fallout-game",
-      "pubDate_cst": "2026-07-09 02:48",
+      "title": "The Best Gaming Headsets for Every Budget in 2026",
+      "url": "https://www.ign.com/articles/best-gaming-headset",
+      "pubDate_cst": "2026-07-09 00:00",
       "category": "游戏新闻",
       "emoji": "🎮",
       "source_type": "rss"
     }
   ],
-  "filtered_articles": [],
+  "filtered_articles": [
+    {
+      "title": "This 48V 500W Adult Electric Scooter and Bike Hybrid With 22.5Ah Battery (49 Mile Range) Drops to $151.63",
+      "url": "https://www.ign.com/articles/daily-deals-aovopro-48v-500w-electric-scooter-bike-hybrid-deal",
+      "pubDate_cst": "2026-07-09 05:05",
+      "description": "Additional features include a foldable design, 21mph top speed, and 14\" wheels for tackling uneven terrain.",
+      "categories": "",
+      "reason": "text:\\bdrops? to \\$",
+      "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
+      "filtered_at_cn": "2026-07-09 05:50:13",
+      "status": "filtered"
+    },
+    {
+      "title": "Save 50% Off the Flexispot XL6 Air Power Lift Recliner and Massage Chair, Now Less Than $300 Shipped",
+      "url": "https://www.ign.com/articles/flexispot-xl6-air-power-lift-recliner-and-massage-chair-deal",
+      "pubDate_cst": "2026-07-09 04:15",
+      "description": "So comfy that it needs to power lift you out of it.",
+      "categories": "",
+      "reason": "text:\\bsave \\d+%",
+      "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
+      "filtered_at_cn": "2026-07-09 05:50:13",
+      "status": "filtered"
+    }
+  ],
   "runs": [
     {
       "target_date": "2026-07-09",
       "new_count": 2,
-      "filtered_count": 0,
-      "changed_count": 2,
-      "next_id": 36,
+      "filtered_count": 2,
+      "changed_count": 4,
+      "next_id": 38,
       "articles": [
         {
-          "title": "Dune: Part Three's New Trailer Highlights the Rift Between Paul Atreides and Chani",
-          "url": "https://www.ign.com/articles/dune-part-threes-new-trailer-highlights-the-rift-between-paul-atreides-and-chani",
-          "pubDate_cst": "2026-07-09 02:50",
+          "title": "Dune: Part Three Trailer Event Reveals Intense Battle Sequence Screening Before The Odyssey",
+          "url": "https://www.ign.com/articles/dune-part-three-trailer-battle-sequence-the-odyssey",
+          "pubDate_cst": "2026-07-09 04:16",
           "category": "游戏新闻",
           "emoji": "🎮",
           "source_type": "rss"
         },
         {
-          "title": "Obsidian Reportedly Cancels Avowed 2 to Focus on a New Fallout Game",
-          "url": "https://www.ign.com/articles/obsidian-cancels-avowed-2-to-focus-on-new-fallout-game",
-          "pubDate_cst": "2026-07-09 02:48",
+          "title": "The Best Gaming Headsets for Every Budget in 2026",
+          "url": "https://www.ign.com/articles/best-gaming-headset",
+          "pubDate_cst": "2026-07-09 00:00",
           "category": "游戏新闻",
           "emoji": "🎮",
           "source_type": "rss"
         }
       ],
-      "filtered_articles": []
+      "filtered_articles": [
+        {
+          "title": "This 48V 500W Adult Electric Scooter and Bike Hybrid With 22.5Ah Battery (49 Mile Range) Drops to $151.63",
+          "url": "https://www.ign.com/articles/daily-deals-aovopro-48v-500w-electric-scooter-bike-hybrid-deal",
+          "pubDate_cst": "2026-07-09 05:05",
+          "description": "Additional features include a foldable design, 21mph top speed, and 14\" wheels for tackling uneven terrain.",
+          "categories": "",
+          "reason": "text:\\bdrops? to \\$",
+          "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
+          "filtered_at_cn": "2026-07-09 05:50:13",
+          "status": "filtered"
+        },
+        {
+          "title": "Save 50% Off the Flexispot XL6 Air Power Lift Recliner and Massage Chair, Now Less Than $300 Shipped",
+          "url": "https://www.ign.com/articles/flexispot-xl6-air-power-lift-recliner-and-massage-chair-deal",
+          "pubDate_cst": "2026-07-09 04:15",
+          "description": "So comfy that it needs to power lift you out of it.",
+          "categories": "",
+          "reason": "text:\\bsave \\d+%",
+          "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
+          "filtered_at_cn": "2026-07-09 05:50:13",
+          "status": "filtered"
+        }
+      ]
     },
     {
       "target_date": "2026-07-08",

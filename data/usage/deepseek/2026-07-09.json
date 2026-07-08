@@ -432,6 +432,54 @@
       "total_tokens_including_reasoning": 13054,
       "prompt_cache_hit_tokens": 10368,
       "prompt_cache_miss_tokens": 639
+    },
+    {
+      "time_cn": "2026-07-09 05:50:37",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 36,
+      "article_title": "Dune: Part Three Trailer Event Reveals Intense Battle Sequence Screening Before The Odyssey",
+      "article_url": "https://www.ign.com/articles/dune-part-three-trailer-battle-sequence-the-odyssey",
+      "article_date": "2026-07-09",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00069823,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 11258,
+      "completion_tokens": 1113,
+      "reasoning_tokens": 832,
+      "output_tokens_including_reasoning": 1945,
+      "total_tokens": 12371,
+      "total_tokens_including_reasoning": 13203,
+      "prompt_cache_hit_tokens": 10368,
+      "prompt_cache_miss_tokens": 890
+    },
+    {
+      "time_cn": "2026-07-09 05:50:49",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 37,
+      "article_title": "The Best Gaming Headsets for Every Budget in 2026",
+      "article_url": "https://www.ign.com/articles/best-gaming-headset",
+      "article_date": "2026-07-09",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00071489,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 12521,
+      "completion_tokens": 821,
+      "reasoning_tokens": 552,
+      "output_tokens_including_reasoning": 1373,
+      "total_tokens": 13342,
+      "total_tokens_including_reasoning": 13894,
+      "prompt_cache_hit_tokens": 10368,
+      "prompt_cache_miss_tokens": 2153
     }
   ]
 }
