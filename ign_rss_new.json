@@ -7,65 +7,95 @@
   "changed_dates": [
     "2026-07-09"
   ],
-  "new_target_dates": [],
-  "new_count": 0,
-  "filtered_count": 2,
+  "new_target_dates": [
+    "2026-07-09"
+  ],
+  "new_count": 3,
+  "filtered_count": 1,
   "cleanup_count": 0,
-  "changed_count": 2,
-  "articles": [],
-  "filtered_articles": [
+  "changed_count": 4,
+  "articles": [
     {
-      "title": "Amazon's Audible Prime Day Deal Has Been Extended: Pay Just $1 Per Month and Get $20 in Audible Credit",
-      "url": "https://www.ign.com/articles/amazon-prime-day-audible-deal-for-june-2026",
-      "pubDate_cst": "2026-07-08 14:15",
-      "description": "Catch up on the latest audiobooks from Rebecca Yarros, Brandon Sanderson, Suzanne Collins, and more.",
-      "categories": "",
-      "reason": "text:\\bprime.day\\b",
-      "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
-      "filtered_at_cn": "2026-07-08 15:17:02",
-      "status": "filtered"
+      "title": "Nintendo Confirms Mario Kart Tour Shutdown After 7 Years, No Offline Version Offered",
+      "url": "https://www.ign.com/articles/nintendo-confirms-mario-kart-tour-shutdown-after-7-years-no-offline-version-offered",
+      "pubDate_cst": "2026-07-08 16:42",
+      "category": "游戏新闻",
+      "emoji": "🎮",
+      "source_type": "rss"
     },
     {
-      "title": "Fast & Furious 11 Reportedly Not in Production Yet",
-      "url": "https://www.ign.com/articles/fast-furious-11-reportedly-not-in-production-yet",
-      "pubDate_cst": "2026-07-08 12:23",
-      "description": "On-set update from Vin Diesel appears related to a FIFA World Cup promo.",
+      "title": "Terminator 2: Judgment Day Returning to Cinemas Worldwide to Mark 35th Anniversary",
+      "url": "https://www.ign.com/articles/terminator-2-judgment-day-returning-to-cinemas-worldwide-to-mark-35th-anniversary",
+      "pubDate_cst": "2026-07-08 15:52",
+      "category": "游戏新闻",
+      "emoji": "🎮",
+      "source_type": "rss"
+    },
+    {
+      "title": "Nintendo Switch Online July Additions Include a Wario Classic",
+      "url": "https://www.ign.com/articles/nintendo-switch-online-july-additions-include-a-wario-classic",
+      "pubDate_cst": "2026-07-08 17:01",
+      "category": "游戏新闻",
+      "emoji": "🎮",
+      "source_type": "rss"
+    }
+  ],
+  "filtered_articles": [
+    {
+      "title": "Gakuran Codes for July 2026",
+      "url": "https://www.ign.com/articles/gakuran-codes",
+      "pubDate_cst": "2026-07-08 15:22",
+      "description": "Use these working Gakuran codes to earn free rewards including rerolls.",
       "categories": "",
-      "reason": "text:\\bpromo(?:tion)?\\b",
+      "reason": "url:-codes",
       "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
-      "filtered_at_cn": "2026-07-08 15:17:02",
+      "filtered_at_cn": "2026-07-08 17:42:04",
       "status": "filtered"
     }
   ],
   "runs": [
     {
       "target_date": "2026-07-09",
-      "new_count": 0,
-      "filtered_count": 2,
-      "changed_count": 2,
-      "next_id": 1,
-      "articles": [],
-      "filtered_articles": [
+      "new_count": 3,
+      "filtered_count": 1,
+      "changed_count": 4,
+      "next_id": 4,
+      "articles": [
         {
-          "title": "Amazon's Audible Prime Day Deal Has Been Extended: Pay Just $1 Per Month and Get $20 in Audible Credit",
-          "url": "https://www.ign.com/articles/amazon-prime-day-audible-deal-for-june-2026",
-          "pubDate_cst": "2026-07-08 14:15",
-          "description": "Catch up on the latest audiobooks from Rebecca Yarros, Brandon Sanderson, Suzanne Collins, and more.",
-          "categories": "",
-          "reason": "text:\\bprime.day\\b",
-          "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
-          "filtered_at_cn": "2026-07-08 15:17:02",
-          "status": "filtered"
+          "title": "Nintendo Confirms Mario Kart Tour Shutdown After 7 Years, No Offline Version Offered",
+          "url": "https://www.ign.com/articles/nintendo-confirms-mario-kart-tour-shutdown-after-7-years-no-offline-version-offered",
+          "pubDate_cst": "2026-07-08 16:42",
+          "category": "游戏新闻",
+          "emoji": "🎮",
+          "source_type": "rss"
         },
         {
-          "title": "Fast & Furious 11 Reportedly Not in Production Yet",
-          "url": "https://www.ign.com/articles/fast-furious-11-reportedly-not-in-production-yet",
-          "pubDate_cst": "2026-07-08 12:23",
-          "description": "On-set update from Vin Diesel appears related to a FIFA World Cup promo.",
+          "title": "Terminator 2: Judgment Day Returning to Cinemas Worldwide to Mark 35th Anniversary",
+          "url": "https://www.ign.com/articles/terminator-2-judgment-day-returning-to-cinemas-worldwide-to-mark-35th-anniversary",
+          "pubDate_cst": "2026-07-08 15:52",
+          "category": "游戏新闻",
+          "emoji": "🎮",
+          "source_type": "rss"
+        },
+        {
+          "title": "Nintendo Switch Online July Additions Include a Wario Classic",
+          "url": "https://www.ign.com/articles/nintendo-switch-online-july-additions-include-a-wario-classic",
+          "pubDate_cst": "2026-07-08 17:01",
+          "category": "游戏新闻",
+          "emoji": "🎮",
+          "source_type": "rss"
+        }
+      ],
+      "filtered_articles": [
+        {
+          "title": "Gakuran Codes for July 2026",
+          "url": "https://www.ign.com/articles/gakuran-codes",
+          "pubDate_cst": "2026-07-08 15:22",
+          "description": "Use these working Gakuran codes to earn free rewards including rerolls.",
           "categories": "",
-          "reason": "text:\\bpromo(?:tion)?\\b",
+          "reason": "url:-codes",
           "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
-          "filtered_at_cn": "2026-07-08 15:17:02",
+          "filtered_at_cn": "2026-07-08 17:42:04",
           "status": "filtered"
         }
       ]

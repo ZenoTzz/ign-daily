@@ -336,6 +336,78 @@
       "total_tokens_including_reasoning": 14299,
       "prompt_cache_hit_tokens": 11904,
       "prompt_cache_miss_tokens": 21
+    },
+    {
+      "time_cn": "2026-07-08 17:42:29",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 1,
+      "article_title": "Nintendo Confirms Mario Kart Tour Shutdown After 7 Years, No Offline Version Offered",
+      "article_url": "https://www.ign.com/articles/nintendo-confirms-mario-kart-tour-shutdown-after-7-years-no-offline-version-offered",
+      "article_date": "2026-07-09",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00075381,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 11123,
+      "completion_tokens": 1276,
+      "reasoning_tokens": 935,
+      "output_tokens_including_reasoning": 2211,
+      "total_tokens": 12399,
+      "total_tokens_including_reasoning": 13334,
+      "prompt_cache_hit_tokens": 10368,
+      "prompt_cache_miss_tokens": 755
+    },
+    {
+      "time_cn": "2026-07-08 17:42:38",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 2,
+      "article_title": "Terminator 2: Judgment Day Returning to Cinemas Worldwide to Mark 35th Anniversary",
+      "article_url": "https://www.ign.com/articles/terminator-2-judgment-day-returning-to-cinemas-worldwide-to-mark-35th-anniversary",
+      "article_date": "2026-07-09",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00039177,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 10799,
+      "completion_tokens": 671,
+      "reasoning_tokens": 409,
+      "output_tokens_including_reasoning": 1080,
+      "total_tokens": 11470,
+      "total_tokens_including_reasoning": 11879,
+      "prompt_cache_hit_tokens": 10368,
+      "prompt_cache_miss_tokens": 431
+    },
+    {
+      "time_cn": "2026-07-08 17:43:06",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 3,
+      "article_title": "Nintendo Switch Online July Additions Include a Wario Classic",
+      "article_url": "https://www.ign.com/articles/nintendo-switch-online-july-additions-include-a-wario-classic",
+      "article_date": "2026-07-09",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00145171,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 10858,
+      "completion_tokens": 2650,
+      "reasoning_tokens": 2186,
+      "output_tokens_including_reasoning": 4836,
+      "total_tokens": 13508,
+      "total_tokens_including_reasoning": 15694,
+      "prompt_cache_hit_tokens": 10368,
+      "prompt_cache_miss_tokens": 490
     }
   ]
 }
