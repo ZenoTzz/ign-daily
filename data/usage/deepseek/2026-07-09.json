@@ -480,6 +480,54 @@
       "total_tokens_including_reasoning": 13894,
       "prompt_cache_hit_tokens": 10368,
       "prompt_cache_miss_tokens": 2153
+    },
+    {
+      "time_cn": "2026-07-09 07:51:31",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 38,
+      "article_title": "College Football 27 Review",
+      "article_url": "https://www.ign.com/articles/college-football-27-review",
+      "article_date": "2026-07-09",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00084103,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 12526,
+      "completion_tokens": 1026,
+      "reasoning_tokens": 795,
+      "output_tokens_including_reasoning": 1821,
+      "total_tokens": 13552,
+      "total_tokens_including_reasoning": 14347,
+      "prompt_cache_hit_tokens": 10368,
+      "prompt_cache_miss_tokens": 2158
+    },
+    {
+      "time_cn": "2026-07-09 07:51:45",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 39,
+      "article_title": "Doom: The Dark Ages - Revelations Review So Far",
+      "article_url": "https://www.ign.com/articles/doom-the-dark-ages-revelations-review",
+      "article_date": "2026-07-09",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00081373,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 11775,
+      "completion_tokens": 1177,
+      "reasoning_tokens": 922,
+      "output_tokens_including_reasoning": 2099,
+      "total_tokens": 12952,
+      "total_tokens_including_reasoning": 13874,
+      "prompt_cache_hit_tokens": 10368,
+      "prompt_cache_miss_tokens": 1407
     }
   ]
 }
