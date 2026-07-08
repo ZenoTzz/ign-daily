@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-08 08:18:11 +08:00",
+  "updated_at": "2026-07-08 08:54:54 +08:00",
   "source": "multi-source median",
   "base": "USD",
   "rates_to_cny": {
@@ -18,32 +18,32 @@
       "USD": {
         "source_count": 4,
         "median_raw": 6.79675,
-        "max_cross_source_deviation": 0.000741,
+        "max_cross_source_deviation": 0.000755,
         "previous_deviation": 0.000478
       },
       "EUR": {
         "source_count": 4,
-        "median_raw": 7.768341,
-        "max_cross_source_deviation": 0.001075,
-        "previous_deviation": 0.000214
+        "median_raw": 7.766722,
+        "max_cross_source_deviation": 0.000536,
+        "previous_deviation": 0.000422
       },
       "JPY_100": {
         "source_count": 4,
-        "median_raw": 4.195831,
-        "max_cross_source_deviation": 0.000274,
-        "previous_deviation": 0.000993
+        "median_raw": 4.196116,
+        "max_cross_source_deviation": 0.000342,
+        "previous_deviation": 0.000925
       },
       "GBP": {
         "source_count": 4,
-        "median_raw": 9.093665,
-        "max_cross_source_deviation": 0.00033,
-        "previous_deviation": 0.000403
+        "median_raw": 9.092278,
+        "max_cross_source_deviation": 0.000482,
+        "previous_deviation": 0.000251
       },
       "KRW_100": {
         "source_count": 4,
-        "median_raw": 0.447203,
-        "max_cross_source_deviation": 0.006429,
-        "previous_deviation": 0.006216
+        "median_raw": 0.448345,
+        "max_cross_source_deviation": 0.004955,
+        "previous_deviation": 0.003678
       }
     },
     "sources": [
@@ -51,11 +51,11 @@
         "name": "open-er-api",
         "url": "https://open.er-api.com/v6/latest/USD",
         "rates_to_cny": {
-          "USD": 6.801784,
-          "EUR": 7.776694,
-          "JPY_100": 4.195294,
-          "GBP": 9.093683,
-          "KRW_100": 0.444328
+          "USD": 6.801883,
+          "EUR": 7.766427,
+          "JPY_100": 4.195864,
+          "GBP": 9.089914,
+          "KRW_100": 0.448407
         }
       },
       {
