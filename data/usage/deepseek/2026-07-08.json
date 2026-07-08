@@ -576,6 +576,78 @@
       "total_tokens_including_reasoning": 13124,
       "prompt_cache_hit_tokens": 10368,
       "prompt_cache_miss_tokens": 856
+    },
+    {
+      "time_cn": "2026-07-08 21:17:18",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 7,
+      "article_title": "Assassin’s Creed Black Flag Resynced Review",
+      "article_url": "https://www.ign.com/articles/assassins-creed-black-flag-resynced-review",
+      "article_date": "2026-07-09",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00045343,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 12409,
+      "completion_tokens": 840,
+      "reasoning_tokens": 596,
+      "output_tokens_including_reasoning": 1436,
+      "total_tokens": 13249,
+      "total_tokens_including_reasoning": 13845,
+      "prompt_cache_hit_tokens": 12288,
+      "prompt_cache_miss_tokens": 121
+    },
+    {
+      "time_cn": "2026-07-08 21:17:27",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 10,
+      "article_title": "Subnautica 2 Early Access 1.1 Update Improves Creature Flinches So You'll Know When You've Hit Them With the Survival Multitool — but No, You Still Can't Kill Fish",
+      "article_url": "https://www.ign.com/articles/subnautica-2-early-access-11-update-improves-creature-flinches-so-youll-know-when-youve-hit-them-with-the-survival-multitool-but-no-you-still-cant-kill-fish",
+      "article_date": "2026-07-09",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00051147,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 11514,
+      "completion_tokens": 709,
+      "reasoning_tokens": 441,
+      "output_tokens_including_reasoning": 1150,
+      "total_tokens": 12223,
+      "total_tokens_including_reasoning": 12664,
+      "prompt_cache_hit_tokens": 10368,
+      "prompt_cache_miss_tokens": 1146
+    },
+    {
+      "time_cn": "2026-07-08 21:17:40",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 11,
+      "article_title": "'They Now Wait for This Storm to Pass' — PS5 Owners Are Cancelling PlayStation Plus Subscriptions to Protest Sony Killing Discs, but Analysts Say It Won't Make Any Difference",
+      "article_url": "https://www.ign.com/articles/they-now-wait-for-this-storm-to-pass-ps5-owners-are-cancelling-playstation-plus-subscriptions-to-protest-sony-killing-discs-but-analysts-say-it-wont-make-any-difference",
+      "article_date": "2026-07-09",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00066505,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 11363,
+      "completion_tokens": 1008,
+      "reasoning_tokens": 766,
+      "output_tokens_including_reasoning": 1774,
+      "total_tokens": 12371,
+      "total_tokens_including_reasoning": 13137,
+      "prompt_cache_hit_tokens": 10368,
+      "prompt_cache_miss_tokens": 995
     }
   ]
 }
