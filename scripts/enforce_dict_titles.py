@@ -10,6 +10,7 @@ Usage:
 import json
 import sys
 import os
+import re
 from datetime import datetime, timezone, timedelta
 from common_paths import DATA_DIR, dict_path, configure_utf8_stdio
 
@@ -43,6 +44,14 @@ def load_dict(dict_path):
     sorted_terms = sorted(all_terms.items(), key=lambda x: len(x[0]), reverse=True)
     return sorted_terms
 
+def en_pattern(term):
+    """Match dictionary terms with punctuation-only variants in English titles."""
+    pieces = [re.escape(part) for part in re.split(r'[\s:：\-]+', term) if part]
+    if not pieces:
+        return re.compile(r'a^')
+    flexible = r'[\s:：\-]+'.join(pieces)
+    return re.compile(rf'(?<![A-Za-z0-9]){flexible}(?![A-Za-z0-9])', re.I)
+
 def enforce(index_path, dict_terms):
     with open(index_path, 'r', encoding='utf-8') as f:
         data = json.load(f)
@@ -53,28 +62,11 @@ def enforce(index_path, dict_terms):
             continue
         en_title = a['en_title']
         cn_title = a['cn_title']
-        en_lower = en_title.lower()
         new_cn = cn_title
         
         for en_term, cn_term in dict_terms:
-            term_lower = en_term.lower()
-            # Skip if this is a substring match inside a longer word
-            # e.g. "Doom" matching "Doomsday" should be skipped
-            pos = en_lower.find(term_lower)
-            if pos == -1:
+            if not en_pattern(en_term).search(en_title):
                 continue
-            
-            # Verify it's a proper word boundary match
-            end_pos = pos + len(term_lower)
-            # Check char before
-            if pos > 0 and en_lower[pos-1].isalnum():
-                continue
-            # Check char after
-            if end_pos < len(en_lower) and en_lower[end_pos].isalnum():
-                # Allow if next char is common suffix like 's, 'period, colon, etc.
-                next_char = en_lower[end_pos]
-                if next_char not in ("'", "'", ":", ",", ".", " ", "-", "!"):
-                    continue
             
             # cn_term should be in the cn_title
             if cn_term not in new_cn:

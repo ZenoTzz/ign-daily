@@ -47,8 +47,17 @@ def load_terms() -> list[tuple[str, str, str]]:
 
 
 def en_pattern(term: str) -> re.Pattern[str]:
-    escaped = re.escape(term)
-    return re.compile(rf"(?<![A-Za-z0-9]){escaped}(?![A-Za-z0-9])", re.I)
+    """Match dictionary terms while tolerating punctuation-only source variants.
+
+    IGN titles often vary punctuation around subtitles, for example
+    "007 First Light" vs. "007: First Light". The dictionary term remains
+    canonical, but source matching must still trigger enforcement.
+    """
+    pieces = [re.escape(part) for part in re.split(r"[\s:：\\-]+", term) if part]
+    if not pieces:
+        return re.compile(r"a^")
+    flexible = r"[\s:：\\-]+".join(pieces)
+    return re.compile(rf"(?<![A-Za-z0-9]){flexible}(?![A-Za-z0-9])", re.I)
 
 
 def cn_variants(cn_term: str) -> list[str]:
