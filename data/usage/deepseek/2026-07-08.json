@@ -288,6 +288,30 @@
       "total_tokens_including_reasoning": 12998,
       "prompt_cache_hit_tokens": 10368,
       "prompt_cache_miss_tokens": 701
+    },
+    {
+      "time_cn": "2026-07-08 08:18:22",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 22,
+      "article_title": "House of the Dragon Season 3, Episode 3 Recap and Review",
+      "article_url": "https://www.ign.com/articles/house-of-the-dragon-season-3-episode-3-recap-and-review",
+      "article_date": "2026-07-08",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00062837,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 11925,
+      "completion_tokens": 820,
+      "reasoning_tokens": 542,
+      "output_tokens_including_reasoning": 1362,
+      "total_tokens": 12745,
+      "total_tokens_including_reasoning": 13287,
+      "prompt_cache_hit_tokens": 10368,
+      "prompt_cache_miss_tokens": 1557
     }
   ]
 }

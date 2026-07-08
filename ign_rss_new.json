@@ -1,8 +1,8 @@
 {
-  "target_date": "2026-07-08",
+  "target_date": "2026-07-09",
   "target_dates": [
-    "2026-07-08",
-    "2026-07-07"
+    "2026-07-09",
+    "2026-07-08"
   ],
   "changed_dates": [
     "2026-07-08"
@@ -11,71 +11,93 @@
     "2026-07-08"
   ],
   "new_count": 1,
-  "filtered_count": 1,
+  "filtered_count": 2,
   "cleanup_count": 0,
-  "changed_count": 2,
+  "changed_count": 3,
   "articles": [
     {
-      "title": "Call of Duty: Black Ops 1 and 2's Leaked PS5 Trophy List Indicates Some Content May Be Missing",
-      "url": "https://www.ign.com/articles/call-of-duty-black-ops-1-and-2s-leaked-ps5-trophy-list-indicates-some-content-may-be-missing",
-      "pubDate_cst": "2026-07-08 06:26",
-      "category": "游戏新闻",
-      "emoji": "🎮",
-      "source_type": "rss"
+      "title": "House of the Dragon Season 3, Episode 3 Recap and Review",
+      "url": "https://www.ign.com/articles/house-of-the-dragon-season-3-episode-3-recap-and-review",
+      "pubDate_cst": "2026-07-07 08:18",
+      "category": "剧集评测",
+      "emoji": "⭐",
+      "source_type": "review"
     }
   ],
   "filtered_articles": [
     {
-      "title": "The Alienware 18 Area-51 RTX 5090 Gaming Laptop With 64GB of RAM Drops to $3,000 at Dell Outlet",
-      "url": "https://www.ign.com/articles/alienware-area-51-18-gaming-laptop-deal-at-dell-outlet-in-july",
-      "pubDate_cst": "2026-07-08 06:40",
-      "description": "Alienware's biggest and most powerful ultra high-end gaming laptop.",
+      "title": "The Coslus C20 Cordless Rechargeable Water Flosser Drops 83% to Just $6.99",
+      "url": "https://www.ign.com/articles/coslus-c20-cordless-rechargeable-water-flosser-deal",
+      "pubDate_cst": "2026-07-08 07:45",
+      "description": "Even gamers should practice good oral hygiene.",
       "categories": "",
-      "reason": "text:\\bdrops? to \\$",
+      "reason": "url:deal",
       "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
-      "filtered_at_cn": "2026-07-08 07:39:09",
+      "filtered_at_cn": "2026-07-08 08:18:04",
+      "status": "filtered"
+    },
+    {
+      "title": "The Corsair TC100 Relaxed Is the Best Gaming Chair Priced Under $150",
+      "url": "https://www.ign.com/articles/corsair-tc100-relaxed-gaming-chair-deal-in-july",
+      "pubDate_cst": "2026-07-08 07:20",
+      "description": "One of our favorite budget gaming chairs of 2026 is an extra 45% off for this week only.",
+      "categories": "",
+      "reason": "text:\\bunder \\$\\d+",
+      "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
+      "filtered_at_cn": "2026-07-08 08:18:04",
       "status": "filtered"
     }
   ],
   "runs": [
     {
+      "target_date": "2026-07-09",
+      "new_count": 0,
+      "filtered_count": 0,
+      "changed_count": 0,
+      "next_id": 1,
+      "articles": [],
+      "filtered_articles": []
+    },
+    {
       "target_date": "2026-07-08",
       "new_count": 1,
-      "filtered_count": 1,
-      "changed_count": 2,
-      "next_id": 22,
+      "filtered_count": 2,
+      "changed_count": 3,
+      "next_id": 23,
       "articles": [
         {
-          "title": "Call of Duty: Black Ops 1 and 2's Leaked PS5 Trophy List Indicates Some Content May Be Missing",
-          "url": "https://www.ign.com/articles/call-of-duty-black-ops-1-and-2s-leaked-ps5-trophy-list-indicates-some-content-may-be-missing",
-          "pubDate_cst": "2026-07-08 06:26",
-          "category": "游戏新闻",
-          "emoji": "🎮",
-          "source_type": "rss"
+          "title": "House of the Dragon Season 3, Episode 3 Recap and Review",
+          "url": "https://www.ign.com/articles/house-of-the-dragon-season-3-episode-3-recap-and-review",
+          "pubDate_cst": "2026-07-07 08:18",
+          "category": "剧集评测",
+          "emoji": "⭐",
+          "source_type": "review"
         }
       ],
       "filtered_articles": [
         {
-          "title": "The Alienware 18 Area-51 RTX 5090 Gaming Laptop With 64GB of RAM Drops to $3,000 at Dell Outlet",
-          "url": "https://www.ign.com/articles/alienware-area-51-18-gaming-laptop-deal-at-dell-outlet-in-july",
-          "pubDate_cst": "2026-07-08 06:40",
-          "description": "Alienware's biggest and most powerful ultra high-end gaming laptop.",
+          "title": "The Coslus C20 Cordless Rechargeable Water Flosser Drops 83% to Just $6.99",
+          "url": "https://www.ign.com/articles/coslus-c20-cordless-rechargeable-water-flosser-deal",
+          "pubDate_cst": "2026-07-08 07:45",
+          "description": "Even gamers should practice good oral hygiene.",
           "categories": "",
-          "reason": "text:\\bdrops? to \\$",
+          "reason": "url:deal",
           "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
-          "filtered_at_cn": "2026-07-08 07:39:09",
+          "filtered_at_cn": "2026-07-08 08:18:04",
+          "status": "filtered"
+        },
+        {
+          "title": "The Corsair TC100 Relaxed Is the Best Gaming Chair Priced Under $150",
+          "url": "https://www.ign.com/articles/corsair-tc100-relaxed-gaming-chair-deal-in-july",
+          "pubDate_cst": "2026-07-08 07:20",
+          "description": "One of our favorite budget gaming chairs of 2026 is an extra 45% off for this week only.",
+          "categories": "",
+          "reason": "text:\\bunder \\$\\d+",
+          "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
+          "filtered_at_cn": "2026-07-08 08:18:04",
           "status": "filtered"
         }
       ]
-    },
-    {
-      "target_date": "2026-07-07",
-      "new_count": 0,
-      "filtered_count": 0,
-      "changed_count": 0,
-      "next_id": 29,
-      "articles": [],
-      "filtered_articles": []
     }
   ]
 }
