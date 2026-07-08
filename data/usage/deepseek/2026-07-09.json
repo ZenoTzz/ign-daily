@@ -360,6 +360,78 @@
       "total_tokens_including_reasoning": 12643,
       "prompt_cache_hit_tokens": 10368,
       "prompt_cache_miss_tokens": 701
+    },
+    {
+      "time_cn": "2026-07-09 04:38:55",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 28,
+      "article_title": "Skybound Unveils Surprise G.I. Joe and Tomb Raider Comic Crossover",
+      "article_url": "https://www.ign.com/articles/skybound-unveils-surprise-gi-joe-and-tomb-raider-comic-crossover",
+      "article_date": "2026-07-09",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00053378,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 11142,
+      "completion_tokens": 994,
+      "reasoning_tokens": 798,
+      "output_tokens_including_reasoning": 1792,
+      "total_tokens": 12136,
+      "total_tokens_including_reasoning": 12934,
+      "prompt_cache_hit_tokens": 11136,
+      "prompt_cache_miss_tokens": 6
+    },
+    {
+      "time_cn": "2026-07-09 04:39:11",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 34,
+      "article_title": "Dune: Part Three's New Trailer Highlights the Rift Between Paul Atreides and Chani",
+      "article_url": "https://www.ign.com/articles/dune-part-threes-new-trailer-highlights-the-rift-between-paul-atreides-and-chani",
+      "article_date": "2026-07-09",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00084159,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 10940,
+      "completion_tokens": 1450,
+      "reasoning_tokens": 1166,
+      "output_tokens_including_reasoning": 2616,
+      "total_tokens": 12390,
+      "total_tokens_including_reasoning": 13556,
+      "prompt_cache_hit_tokens": 10368,
+      "prompt_cache_miss_tokens": 572
+    },
+    {
+      "time_cn": "2026-07-09 04:39:23",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 35,
+      "article_title": "Obsidian Reportedly Cancels Avowed 2 to Focus on a New Fallout Game",
+      "article_url": "https://www.ign.com/articles/obsidian-cancels-avowed-2-to-focus-on-new-fallout-game",
+      "article_date": "2026-07-09",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00069165,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 11007,
+      "completion_tokens": 1182,
+      "reasoning_tokens": 865,
+      "output_tokens_including_reasoning": 2047,
+      "total_tokens": 12189,
+      "total_tokens_including_reasoning": 13054,
+      "prompt_cache_hit_tokens": 10368,
+      "prompt_cache_miss_tokens": 639
     }
   ]
 }

@@ -2,12 +2,65 @@
   "date": "2026-07-09",
   "articles": [
     {
-      "id": 28,
+      "id": 34,
+      "category": "影视资讯",
+      "emoji": "🎬",
+      "en_title": "Dune: Part Three's New Trailer Highlights the Rift Between Paul Atreides and Chani",
+      "cn_title": "《沙丘3》新预告揭示保罗与查尼的裂痕",
+      "summary": "《沙丘3》新预告片突出保罗·厄崔迪（提莫西·查拉梅饰）与查尼（赞达亚饰）之间的深刻裂痕。故事设定在第二部二十年后，保罗被权力腐蚀成为暴君，查尼与斯凯特尔（罗伯特·帕丁森饰）联手试图推翻他。本片被称为「史诗结局」，定档2026年12月18日，将与《复仇者联盟：毁灭日》正面交锋，并率先独占IMAX银幕数周。导演丹尼斯·维伦纽瓦无意续拍沙丘，已瞄准下一部詹姆斯·邦德电影。",
+      "url": "https://www.ign.com/articles/dune-part-threes-new-trailer-highlights-the-rift-between-paul-atreides-and-chani",
+      "publish_time_cn": "2026-07-09 02:50",
+      "pub_date": "2026-07-09 02:50",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/03/16/timothee-chalamet-dune-3-paul-1773697704577.png?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/03/16/timothee-chalamet-dune-3-paul-1773697704577.png?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/03/16/timothee-chalamet-dune-3-paul-1773697704577.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/03/16/timothee-chalamet-dune-3-paul-1773697704577.png?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/03/16/timothee-chalamet-dune-3-paul-1773697704577.png?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/03/16/timothee-chalamet-dune-3-paul-1773697704577.png"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-07-09T04:38:40+08:00"
+    },
+    {
+      "id": 35,
       "category": "游戏新闻",
       "emoji": "🎮",
+      "en_title": "Obsidian Reportedly Cancels Avowed 2 to Focus on a New Fallout Game",
+      "cn_title": "据称黑曜石取消《宣誓2》开发 专注新《辐射》游戏",
+      "summary": "据彭博社报道，黑曜石已取消《宣誓2》及其他未公布项目的计划，转而专注于开发一款由 Josh Sawyer 领导的新《辐射》游戏。Sawyer 曾担任《辐射：新维加斯》首席设计师，贝塞斯达将合作开发。与此同时，受微软裁员影响，黑曜石约四分之一的员工被裁。新《辐射》游戏的消息让自 2015 年《辐射4》后就一直渴望单人续作的粉丝们兴奋不已。",
+      "url": "https://www.ign.com/articles/obsidian-cancels-avowed-2-to-focus-on-new-fallout-game",
+      "publish_time_cn": "2026-07-09 02:48",
+      "pub_date": "2026-07-09 02:48",
+      "cover_image": "https://assets-prd.ignimgs.com/2024/04/15/fallout-new-vegas-season-2-thumb-1713210577643.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2024/04/15/fallout-new-vegas-season-2-thumb-1713210577643.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2024/04/15/fallout-new-vegas-season-2-thumb-1713210577643.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2024/04/15/fallout-new-vegas-season-2-thumb-1713210577643.jpg?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2024/04/15/fallout-new-vegas-season-2-thumb-1713210577643.jpg?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2024/04/15/fallout-new-vegas-season-2-thumb-1713210577643.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-07-09T04:38:41+08:00",
+      "pending_dict": [
+        {
+          "en": "Josh Sawyer",
+          "cn": "乔什·索耶",
+          "cat": "people",
+          "source": "ai_guess",
+          "reason": "辐射系列知名人物，词库未收录，建议人工确认"
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "category": "游戏新闻",
+      "emoji": "💥",
       "en_title": "Skybound Unveils Surprise G.I. Joe and Tomb Raider Comic Crossover",
-      "cn_title": "Skybound Unveils Surprise G.I. Joe and Tomb Raider Comic Crossover",
-      "summary": "",
+      "cn_title": "Skybound 公开《特种部队》与《古墓丽影》跨界漫画",
+      "summary": "Skybound 宣布《特种部队》与《古墓丽影》将推出漫画跨界联动。劳拉·克劳馥已在《特种部队：真正的美国英雄》第330期中意外登场，为今年10月启动的五期限定系列《特种部队：真正的美国英雄/古墓丽影》拉开序幕。该系列由Kyle Higgins编剧，Elena Casagrande绘制。",
       "url": "https://www.ign.com/articles/skybound-unveils-surprise-gi-joe-and-tomb-raider-comic-crossover",
       "publish_time_cn": "2026-07-09 02:47",
       "pub_date": "2026-07-09 02:47",
@@ -901,5 +954,5 @@
       "source_fetched_at": "2026-07-08T17:42:13+08:00"
     }
   ],
-  "total": 33
+  "total": 35
 }
