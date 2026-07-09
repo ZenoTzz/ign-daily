@@ -199,7 +199,8 @@ const ServerAPI = {
     return localStorage.getItem('ign_api_token') || '';
   },
   enabledByHost() {
-    return !['zenotzz.github.io', 'localhost', '127.0.0.1'].includes(location.hostname);
+    const staticHosts = ['zenotzz.github.io', 'igndaily.site', 'www.igndaily.site', 'localhost', '127.0.0.1'];
+    return !staticHosts.includes(location.hostname);
   },
   async request(path, options = {}) {
     const attempts = Number(options.retryAttempts || 3);
