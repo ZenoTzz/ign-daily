@@ -1,0 +1,94 @@
+name: Deploy Static Server Mirror
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ign-daily-static-server-deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      SERVER_HOST: ${{ secrets.IGN_DAILY_SERVER_HOST }}
+      SERVER_PORT: ${{ secrets.IGN_DAILY_SERVER_PORT || '22' }}
+      SERVER_USER: ${{ secrets.IGN_DAILY_SERVER_USER }}
+      SERVER_PATH: ${{ secrets.IGN_DAILY_SERVER_PATH || '/srv/ign-daily' }}
+
+    steps:
+      - name: Check deployment secrets
+        id: check
+        env:
+          SERVER_SSH_KEY: ${{ secrets.IGN_DAILY_SERVER_SSH_KEY }}
+        run: |
+          set -euo pipefail
+          missing=0
+          for name in SERVER_HOST SERVER_USER SERVER_SSH_KEY; do
+            if [ -z "${!name:-}" ]; then
+              echo "::notice::Missing GitHub Actions secret: IGN_DAILY_${name}; static server deployment will be skipped."
+              missing=1
+            fi
+          done
+          if [ "$missing" -eq 0 ]; then
+            echo "configured=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "configured=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Checkout
+        if: steps.check.outputs.configured == 'true'
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Package tracked site files
+        if: steps.check.outputs.configured == 'true'
+        run: git archive --format=tar.gz -o /tmp/ign-daily-site.tar.gz HEAD
+
+      - name: Configure SSH
+        if: steps.check.outputs.configured == 'true'
+        env:
+          SERVER_SSH_KEY: ${{ secrets.IGN_DAILY_SERVER_SSH_KEY }}
+        run: |
+          set -euo pipefail
+          mkdir -p ~/.ssh
+          printf '%s\n' "$SERVER_SSH_KEY" > ~/.ssh/ign_daily_server_key
+          chmod 600 ~/.ssh/ign_daily_server_key
+          ssh-keyscan -p "$SERVER_PORT" -H "$SERVER_HOST" >> ~/.ssh/known_hosts
+
+      - name: Upload package
+        if: steps.check.outputs.configured == 'true'
+        run: |
+          set -euo pipefail
+          scp -P "$SERVER_PORT" -i ~/.ssh/ign_daily_server_key \
+            /tmp/ign-daily-site.tar.gz \
+            "$SERVER_USER@$SERVER_HOST:/tmp/ign-daily-site-${GITHUB_SHA}.tar.gz"
+
+      - name: Deploy static mirror
+        if: steps.check.outputs.configured == 'true'
+        run: |
+          set -euo pipefail
+          ssh -p "$SERVER_PORT" -i ~/.ssh/ign_daily_server_key "$SERVER_USER@$SERVER_HOST" "
+            set -euo pipefail
+            deploy_dir='/tmp/ign-daily-deploy-${GITHUB_SHA}'
+            archive='/tmp/ign-daily-site-${GITHUB_SHA}.tar.gz'
+            server_path='$SERVER_PATH'
+            rm -rf \"\$deploy_dir\"
+            mkdir -p \"\$deploy_dir\"
+            tar -xzf \"\$archive\" -C \"\$deploy_dir\"
+            sudo rsync -a --delete \
+              --exclude '.git/' \
+              --exclude '.env' \
+              --exclude 'server_api/.env' \
+              \"\$deploy_dir\"/ \"\$server_path\"/
+            sudo chown -R www-data:www-data \"\$server_path\"
+            rm -rf \"\$deploy_dir\" \"\$archive\"
+          "
