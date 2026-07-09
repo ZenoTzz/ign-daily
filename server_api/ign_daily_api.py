@@ -75,7 +75,7 @@ class UpdateAccountRequest(BaseModel):
 class TranslationRequest(BaseModel):
     date: str = Field(pattern=r"^\d{4}-\d{2}-\d{2}$")
     ids: list[int] = Field(min_length=1)
-    trigger_workflow: bool = True
+    trigger_workflow: bool = False
 
 
 class ManualApproveRequest(BaseModel):
@@ -112,6 +112,23 @@ class JobCreate(BaseModel):
     date: str | None = None
     ids: list[int] = Field(default_factory=list)
     message: str = ""
+
+
+class CodexJobProgressRequest(BaseModel):
+    status: str | None = None
+    message: str = ""
+    progress: int | None = Field(default=None, ge=0, le=100)
+    article_id: int | None = Field(default=None, ge=1)
+    step: str | None = None
+    step_label: str | None = None
+
+
+class CodexJobCompleteRequest(BaseModel):
+    message: str = "Codex batch completed"
+
+
+class CodexJobFailRequest(BaseModel):
+    message: str = Field(min_length=1, max_length=1000)
 
 
 class FileWriteRequest(BaseModel):
@@ -456,6 +473,84 @@ def serialize_job(row: sqlite3.Row) -> dict[str, Any]:
         "updated_at": row["updated_at"],
         "finished_at": row["finished_at"],
     }
+
+
+def load_job_row(job_id: str) -> sqlite3.Row:
+    with db() as conn:
+        row = conn.execute("SELECT * FROM jobs WHERE id = ?", (job_id,)).fetchone()
+    if not row:
+        raise HTTPException(status_code=404, detail="Job not found")
+    return row
+
+
+def write_job_progress_item(
+    job_id: str,
+    *,
+    date: str | None,
+    article_id: int,
+    status: str,
+    step: str,
+    step_label: str,
+    progress: int,
+    message: str,
+) -> None:
+    path = APP_DIR / "data" / "job-progress" / f"{job_id}.json"
+    path.parent.mkdir(parents=True, exist_ok=True)
+    try:
+        data = json.loads(path.read_text(encoding="utf-8-sig")) if path.exists() else {}
+    except Exception:
+        data = {}
+    if not isinstance(data, dict):
+        data = {}
+    now = int(time.time())
+    data.setdefault("job_id", job_id)
+    articles = data.setdefault("articles", {})
+    item = articles.setdefault(str(int(article_id)), {})
+    item.setdefault("started_at", now)
+    clamped = max(0, min(100, int(progress)))
+    item.update(
+        {
+            "id": int(article_id),
+            "date": date,
+            "status": status,
+            "step": step,
+            "step_label": step_label,
+            "progress": clamped,
+            "message": message or step_label,
+            "updated_at": now,
+        }
+    )
+    if status in {"done", "failed"} or clamped >= 100:
+        item["finished_at"] = now
+        item["eta_seconds"] = 0
+    data["updated_at"] = now
+    path.write_text(json_text(data), encoding="utf-8")
+
+
+def article_payload_for_job(date: str, ids: list[int]) -> list[dict[str, Any]]:
+    index = read_json(APP_DIR / "data" / date / "index.json", {"articles": []})
+    by_id = {
+        int(item.get("id")): item
+        for item in index.get("articles", [])
+        if isinstance(item, dict) and str(item.get("id", "")).isdigit()
+    }
+    items: list[dict[str, Any]] = []
+    for article_id in ids:
+        item = by_id.get(int(article_id))
+        if not item:
+            continue
+        source_path = APP_DIR / "data" / date / "sources" / f"{int(article_id):02d}.json"
+        source = read_json(source_path, {}) if source_path.exists() else {}
+        items.append(
+            {
+                "id": int(article_id),
+                "date": date,
+                "article": item,
+                "source": source,
+                "translation_path": f"data/{date}/translations/{int(article_id):02d}.json",
+            }
+        )
+    return items
 
 
 def safe_repo_path(path: str) -> Path:
@@ -1016,11 +1111,106 @@ def list_jobs(kind: str | None = None, limit: int = 10, user: sqlite3.Row = Depe
 
 @app.get("/jobs/{job_id}")
 def get_job(job_id: str, user: sqlite3.Row = Depends(current_user)) -> dict[str, Any]:
-    with db() as conn:
-        row = conn.execute("SELECT * FROM jobs WHERE id = ?", (job_id,)).fetchone()
-    if not row:
-        raise HTTPException(status_code=404, detail="Job not found")
+    row = load_job_row(job_id)
     return {"ok": True, "job": serialize_job(row)}
+
+
+@app.get("/codex/jobs/pending")
+def codex_pending_jobs(limit: int = 5, user: sqlite3.Row = Depends(current_user)) -> dict[str, Any]:
+    limit = max(1, min(20, int(limit)))
+    with db() as conn:
+        rows = conn.execute(
+            """
+            SELECT * FROM jobs
+            WHERE kind = 'translation' AND status IN ('queued', 'running')
+            ORDER BY created_at ASC
+            LIMIT ?
+            """,
+            (limit,),
+        ).fetchall()
+    jobs = []
+    for row in rows:
+        job = serialize_job(row)
+        if job.get("date") and job.get("ids"):
+            job["items"] = article_payload_for_job(str(job["date"]), [int(x) for x in job["ids"]])
+        jobs.append(job)
+    return {"ok": True, "jobs": jobs}
+
+
+@app.post("/codex/jobs/{job_id}/claim")
+def codex_claim_job(job_id: str, user: sqlite3.Row = Depends(current_user)) -> dict[str, Any]:
+    row = load_job_row(job_id)
+    if row["kind"] != "translation":
+        raise HTTPException(status_code=400, detail="Only translation jobs can be claimed by Codex")
+    if row["status"] not in {"queued", "running"}:
+        raise HTTPException(status_code=409, detail=f"Job is already {row['status']}")
+    update_job(job_id, "running", f"Claimed by Codex: {user['username']}", 10)
+    claimed = serialize_job(load_job_row(job_id))
+    if claimed.get("date") and claimed.get("ids"):
+        claimed["items"] = article_payload_for_job(str(claimed["date"]), [int(x) for x in claimed["ids"]])
+    return {"ok": True, "job": claimed}
+
+
+@app.post("/codex/jobs/{job_id}/progress")
+def codex_update_job_progress(
+    job_id: str,
+    payload: CodexJobProgressRequest,
+    user: sqlite3.Row = Depends(current_user),
+) -> dict[str, Any]:
+    row = load_job_row(job_id)
+    status = payload.status or row["status"] or "running"
+    if status not in {"queued", "running", "done", "failed"}:
+        raise HTTPException(status_code=400, detail="Invalid job status")
+    progress = payload.progress if payload.progress is not None else int(row["progress"] or 0)
+    update_job(job_id, status, payload.message or None, progress)
+    if payload.article_id:
+        step = payload.step or ("done" if status == "done" else "failed" if status == "failed" else "codex")
+        step_label = payload.step_label or payload.message or step
+        write_job_progress_item(
+            job_id,
+            date=row["date"],
+            article_id=int(payload.article_id),
+            status=status,
+            step=step,
+            step_label=step_label,
+            progress=progress,
+            message=payload.message or step_label,
+        )
+    return {"ok": True, "job": serialize_job(load_job_row(job_id))}
+
+
+@app.post("/codex/jobs/{job_id}/complete")
+def codex_complete_job(
+    job_id: str,
+    payload: CodexJobCompleteRequest,
+    user: sqlite3.Row = Depends(current_user),
+) -> dict[str, Any]:
+    row = load_job_row(job_id)
+    ids = json.loads(row["ids_json"] or "[]")
+    for article_id in ids:
+        write_job_progress_item(
+            job_id,
+            date=row["date"],
+            article_id=int(article_id),
+            status="done",
+            step="done",
+            step_label="Codex completed",
+            progress=100,
+            message=payload.message,
+        )
+    update_job(job_id, "done", payload.message, 100)
+    sync_from_github()
+    return {"ok": True, "job": serialize_job(load_job_row(job_id))}
+
+
+@app.post("/codex/jobs/{job_id}/fail")
+def codex_fail_job(
+    job_id: str,
+    payload: CodexJobFailRequest,
+    user: sqlite3.Row = Depends(current_user),
+) -> dict[str, Any]:
+    update_job(job_id, "failed", payload.message, 100)
+    return {"ok": True, "job": serialize_job(load_job_row(job_id))}
 
 
 @app.post("/workflows/dispatch")

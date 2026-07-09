@@ -199,7 +199,7 @@ const ServerAPI = {
     return localStorage.getItem('ign_api_token') || '';
   },
   enabledByHost() {
-    const staticHosts = ['zenotzz.github.io', 'igndaily.site', 'www.igndaily.site', 'localhost', '127.0.0.1'];
+    const staticHosts = ['zenotzz.github.io', 'localhost', '127.0.0.1'];
     return !staticHosts.includes(location.hostname);
   },
   async request(path, options = {}) {
@@ -259,11 +259,14 @@ const ServerAPI = {
       body: JSON.stringify(payload)
     });
   },
+  async articles(date) {
+    return this.request(`/articles?date=${encodeURIComponent(date)}`);
+  },
   async getJob(jobId) {
     return this.request(`/jobs/${encodeURIComponent(jobId)}`);
   },
-  async listJobs(kind = 'translation') {
-    return this.request(`/jobs?kind=${encodeURIComponent(kind)}&limit=5`);
+  async listJobs(kind = 'translation', limit = 5) {
+    return this.request(`/jobs?kind=${encodeURIComponent(kind)}&limit=${encodeURIComponent(limit)}`);
   }
 };
 window.ServerAPI = ServerAPI;
@@ -446,14 +449,27 @@ function appData() {
         } catch (_) {}
         this.currentDate = date;
         this.datePickerMonth = date.slice(0, 7);
-        const res = await fetch(`data/${date}/index.json?t=${Date.now()}`, { cache: 'no-store' });
-        if (!res.ok) {
-          // 找不到今日，回退尝试最近一天
-          this.error = `${date} 还没有数据，请等待早晨8:30的cron推送，或访问 历史 页面查看过往内容。`;
-          this.loading = false;
-          return;
+        let apiData = null;
+        if (this.shouldUseServerApi()) {
+          try {
+            apiData = await ServerAPI.articles(date);
+          } catch (e) {
+            if (e.status === 401) localStorage.removeItem('ign_api_token');
+            else throw e;
+          }
         }
-        this.data = await res.json();
+        if (apiData) {
+          this.data = apiData;
+        } else {
+          const res = await fetch(`data/${date}/index.json?t=${Date.now()}`, { cache: 'no-store' });
+          if (!res.ok) {
+            // 找不到今日，回退尝试最近一天
+            this.error = `${date} 还没有数据，请等待早晨8:30的cron推送，或访问 历史 页面查看过往内容。`;
+            this.loading = false;
+            return;
+          }
+          this.data = await res.json();
+        }
         // 按发布时间从新到旧排序
         if (this.data && this.data.articles) {
           this.data.articles.sort((a, b) => (b.publish_time_cn || b.pub_date || b.pubDate_cst || '').localeCompare(a.publish_time_cn || a.pub_date || a.pubDate_cst || ''));

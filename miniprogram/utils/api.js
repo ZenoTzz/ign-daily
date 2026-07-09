@@ -89,7 +89,7 @@ function requestTranslation(date, ids) {
     data: {
       date,
       ids,
-      trigger_workflow: true
+      trigger_workflow: false
     }
   });
 }

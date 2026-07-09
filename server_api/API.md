@@ -45,7 +45,7 @@ Response:
 {
   "date": "2026-06-25",
   "ids": [2],
-  "trigger_workflow": true
+  "trigger_workflow": false
 }
 ```
 
@@ -57,7 +57,7 @@ Response:
   "date": "2026-06-25",
   "requested_ids": [2],
   "job_id": "translation-...",
-  "triggered": true
+  "triggered": false
 }
 ```
 
@@ -86,6 +86,34 @@ Status values are `queued`, `running`, `done`, and `failed`.
 
 `GET /jobs?kind=translation&limit=5` returns recent jobs, useful when a client needs to recover state after reopening.
 
+## Codex Queue
+
+These endpoints are for Codex batch runs. They use the same bearer token as the
+web and mini program login.
+
+`GET /codex/jobs/pending?limit=5` returns queued/running translation jobs with
+article metadata and cached source payloads.
+
+`POST /codex/jobs/{job_id}/claim` marks a queued job as running.
+
+`POST /codex/jobs/{job_id}/progress`
+
+```json
+{
+  "article_id": 30,
+  "status": "running",
+  "step": "codex",
+  "step_label": "Codex translating",
+  "progress": 45,
+  "message": "Drafting paragraphs"
+}
+```
+
+`POST /codex/jobs/{job_id}/complete` marks a job complete after Codex has written
+the translation files.
+
+`POST /codex/jobs/{job_id}/fail` records a job-level failure.
+
 ## Filtered RSS
 
 `POST /filtered/restore` restores one article from `data/{date}/filtered_rss.json` into that day's `index.json`, queues it in `need_titles.json`, updates `data/index-list.json`, and removes it from the filtered list.
@@ -94,7 +122,7 @@ Status values are `queued`, `running`, `done`, and `failed`.
 {
   "date": "2026-06-26",
   "url": "https://www.ign.com/articles/example",
-  "trigger_workflow": true
+  "trigger_workflow": false
 }
 ```
 
@@ -108,6 +136,6 @@ Response:
   "filtered_count": 3,
   "duplicate": false,
   "queued": true,
-  "triggered": true
+  "triggered": false
 }
 ```
