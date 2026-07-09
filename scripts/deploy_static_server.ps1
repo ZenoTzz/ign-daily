@@ -25,7 +25,9 @@ sudo rsync -a --delete \
   --exclude '.env' \
   --exclude 'server_api/.env' \
   "`$deploy_dir"/ "$ServerPath"/
-sudo chown -R www-data:www-data "$ServerPath"
+sudo chown -R ${User}:${User} "$ServerPath"
+sudo find "$ServerPath" -type d -exec chmod 755 {} +
+sudo find "$ServerPath" -type f -exec chmod 644 {} +
 rm -rf "`$deploy_dir" /tmp/ign-daily-static.tar
 "@
 }

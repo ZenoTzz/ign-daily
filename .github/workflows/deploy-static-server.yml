@@ -89,6 +89,8 @@ jobs:
               --exclude '.env' \
               --exclude 'server_api/.env' \
               \"\$deploy_dir\"/ \"\$server_path\"/
-            sudo chown -R www-data:www-data \"\$server_path\"
+            sudo chown -R $SERVER_USER:$SERVER_USER \"\$server_path\"
+            sudo find \"\$server_path\" -type d -exec chmod 755 {} +
+            sudo find \"\$server_path\" -type f -exec chmod 644 {} +
             rm -rf \"\$deploy_dir\" \"\$archive\"
           "
