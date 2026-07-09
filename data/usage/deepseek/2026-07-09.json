@@ -552,6 +552,30 @@
       "total_tokens_including_reasoning": 13849,
       "prompt_cache_hit_tokens": 10368,
       "prompt_cache_miss_tokens": 755
+    },
+    {
+      "time_cn": "2026-07-09 18:04:40",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 2,
+      "article_title": "Sony Settles With Fired Marathon Game Director Who Sued PlayStation and Bungie for More Than $200 Million, Adds Name to Credits",
+      "article_url": "https://www.ign.com/articles/sony-settles-with-fired-marathon-game-director-who-sued-playstation-and-bungie-for-more-than-200-million-adds-name-to-credits",
+      "article_date": "2026-07-10",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00105719,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 11914,
+      "completion_tokens": 1571,
+      "reasoning_tokens": 1328,
+      "output_tokens_including_reasoning": 2899,
+      "total_tokens": 13485,
+      "total_tokens_including_reasoning": 14813,
+      "prompt_cache_hit_tokens": 10368,
+      "prompt_cache_miss_tokens": 1546
     }
   ]
 }
