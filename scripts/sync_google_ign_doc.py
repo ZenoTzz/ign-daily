@@ -618,7 +618,13 @@ def verify_tab(service: Any, tab_id: str, expected_prefix: str) -> int:
     raise RuntimeError(f"Tab not found during verification: {tab_id}")
 
 
-def sync_incremental(service: Any, target_date: str, *, dry_run: bool = False) -> None:
+def sync_incremental(
+    service: Any,
+    target_date: str,
+    *,
+    article_ids: set[int] | None = None,
+    dry_run: bool = False,
+) -> None:
     # 1. Load config
     from common_paths import DATA_DIR
     config_path = DATA_DIR / "google-polish-config.json"
@@ -696,6 +702,19 @@ def sync_incremental(service: Any, target_date: str, *, dry_run: bool = False) -
     if not articles:
         print("[*] No valid articles found to sync.")
         return
+
+    if article_ids:
+        articles = [
+            article
+            for article in articles
+            if int(article.get("id") or article.get("json_id") or -1) in article_ids
+        ]
+        if not articles:
+            print(
+                f"[*] No matching translated articles found for ids: "
+                f"{sorted(article_ids)}"
+            )
+            return
 
     # Sort articles by publish_time_cn ascending
     # (oldest first so prepending puts the newest at the top)
@@ -1013,6 +1032,16 @@ def main() -> int:
         help="Incremental sync for a specific date (e.g. 2026-07-02)"
     )
     parser.add_argument(
+        "--article-id",
+        action="append",
+        type=int,
+        default=[],
+        help=(
+            "Only sync the specified translated article id. Can be repeated; "
+            "requires --incremental."
+        ),
+    )
+    parser.add_argument(
         "--replace-month",
         action="store_true",
         help="Dangerously replace and overwrite the entire Google Doc month tab contents from Tencent Docs"
@@ -1047,7 +1076,12 @@ def main() -> int:
     service = build("docs", "v1", credentials=creds)
 
     if args.incremental:
-        sync_incremental(service, args.incremental, dry_run=args.dry_run)
+        sync_incremental(
+            service,
+            args.incremental,
+            article_ids=set(args.article_id) if args.article_id else None,
+            dry_run=args.dry_run,
+        )
     elif args.replace_month:
         if not args.months:
             args.months = sorted(MONTHS, reverse=True)

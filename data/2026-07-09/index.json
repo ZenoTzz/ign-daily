@@ -724,8 +724,8 @@
       "url": "https://www.ign.com/articles/it-never-trickles-down-bernie-sanders-hits-out-at-microsoft-over-xbox-layoffs-and-console-price-rises-says-they-prove-corporate-tax-breaks-do-not-create-jobs",
       "publish_time_cn": "2026-07-08 21:26",
       "pub_date": "2026-07-08 21:26",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/07/08/gettyimages-2281441639-1783516468265.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/07/08/gettyimages-2281441639-1783516468265.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/07/08/gettyimages-2281441639-1783516468265.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/07/08/gettyimages-2281441639-1783516468265.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -735,7 +735,11 @@
         "https://assets-prd.ignimgs.com/2026/07/08/gettyimages-2281441639-1783516484727.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-07-08T23:38:47+08:00"
+      "source_fetched_at": "2026-07-08T23:38:47+08:00",
+      "translation_path": "translations/16.json",
+      "translator": "codex",
+      "translator_provider": "manual",
+      "translator_model": "gpt-5-codex"
     },
     {
       "id": 17,

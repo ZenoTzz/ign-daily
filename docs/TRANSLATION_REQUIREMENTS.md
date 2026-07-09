@@ -159,6 +159,9 @@ Current document requirements:
 - Subtitle line: Heading 2, Microsoft YaHei, 15 pt, italic, gray.
 - Body: Normal text, Microsoft YaHei, 11 pt, justified, 1.15 line spacing, with
   paragraph spacing matching the user's manually formatted July sample.
+- When adding one extra article to an already edited day, run incremental sync
+  with `--article-id NN` so the script does not scan and reinsert other done
+  articles whose titles may have been manually polished in Google Docs.
 
 Do not overwrite the user's manual edits unless the task explicitly says to
 resync or replace a month.
