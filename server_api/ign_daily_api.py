@@ -45,7 +45,11 @@ def load_env_files() -> None:
     for path in ENV_PATHS:
         if not path.exists():
             continue
-        for line in path.read_text(encoding="utf-8-sig").splitlines():
+        try:
+            lines = path.read_text(encoding="utf-8-sig").splitlines()
+        except OSError:
+            continue
+        for line in lines:
             line = line.strip()
             if not line or line.startswith("#") or "=" not in line:
                 continue
