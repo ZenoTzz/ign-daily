@@ -96,13 +96,13 @@
       "category": "游戏新闻",
       "emoji": "🎮",
       "en_title": "Obsidian Reportedly Cancels Avowed 2 to Focus on a New Fallout Game",
-      "cn_title": "据称黑曜石取消《宣誓2》开发 专注新《辐射》游戏",
-      "summary": "据彭博社报道，黑曜石已取消《宣誓2》及其他未公布项目的计划，转而专注于开发一款由 Josh Sawyer 领导的新《辐射》游戏。Sawyer 曾担任《辐射：新维加斯》首席设计师，贝塞斯达将合作开发。与此同时，受微软裁员影响，黑曜石约四分之一的员工被裁。新《辐射》游戏的消息让自 2015 年《辐射4》后就一直渴望单人续作的粉丝们兴奋不已。",
+      "cn_title": "黑曜石据称取消《宣誓2》转向新《辐射》",
+      "summary": "彭博社报道称，黑曜石已取消《宣誓2》等未公布项目，转而专注由Josh Sawyer领导的新《辐射》游戏，贝塞斯达也将参与。",
       "url": "https://www.ign.com/articles/obsidian-cancels-avowed-2-to-focus-on-new-fallout-game",
       "publish_time_cn": "2026-07-09 02:48",
       "pub_date": "2026-07-09 02:48",
-      "cover_image": "https://assets-prd.ignimgs.com/2024/04/15/fallout-new-vegas-season-2-thumb-1713210577643.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2024/04/15/fallout-new-vegas-season-2-thumb-1713210577643.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2024/04/15/fallout-new-vegas-season-2-thumb-1713210577643.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2024/04/15/fallout-new-vegas-season-2-thumb-1713210577643.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -120,7 +120,11 @@
           "source": "ai_guess",
           "reason": "辐射系列知名人物，词库未收录，建议人工确认"
         }
-      ]
+      ],
+      "translation_path": "translations/35.json",
+      "translator": "codex",
+      "translator_provider": "manual",
+      "translator_model": "gpt-5-codex"
     },
     {
       "id": 28,
@@ -289,13 +293,13 @@
       "category": "游戏新闻",
       "emoji": "🎮",
       "en_title": "More Than 8 Years on From Its Announcement, The Elder Scrolls 6 Is Reportedly Still at Least 2 More Years From Release",
-      "cn_title": "《上古卷轴6》至少还需两年才能发售",
-      "summary": "据彭博社记者Jason Schreier透露，距正式公布已超过八年的《上古卷轴6》至少还需两年才能发售。此前贝塞斯达在XBOX大规模裁员中表示将聚焦最强IP，陶德·霍华德也多次承认公布过早。游戏目前仍处于开发中，XBOX内容主管Matt Booty称进展顺利，但具体亮相时间未定。",
+      "cn_title": "《上古卷轴6》据称至少还要两年发售",
+      "summary": "彭博社记者Jason Schreier称，《上古卷轴6》距离发售至少还有两年。该作已公布超过8年，且贝塞斯达也受到XBOX裁员影响。",
       "url": "https://www.ign.com/articles/more-than-8-years-on-from-its-announcement-the-elder-scrolls-6-is-reportedly-still-at-least-2-more-years-from-release",
       "publish_time_cn": "2026-07-09 00:43",
       "pub_date": "2026-07-09 00:43",
-      "cover_image": "https://assets1.ignimgs.com/2019/06/17/5-es6-1560804827894.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets1.ignimgs.com/2019/06/17/5-es6-1560804827894.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets1.ignimgs.com/2019/06/17/5-es6-1560804827894.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets1.ignimgs.com/2019/06/17/5-es6-1560804827894.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -304,7 +308,11 @@
         "https://assets1.ignimgs.com/2019/06/17/5-es6-1560804827894.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-07-09T01:12:21+08:00"
+      "source_fetched_at": "2026-07-09T01:12:21+08:00",
+      "translation_path": "translations/21.json",
+      "translator": "codex",
+      "translator_provider": "manual",
+      "translator_model": "gpt-5-codex"
     },
     {
       "id": 22,
@@ -420,13 +428,13 @@
       "category": "游戏新闻",
       "emoji": "🎮",
       "en_title": "Destiny 2 Players Get One Last Surprise from Bungie, Developer Reveals Limited Support Plans",
-      "cn_title": "《命运2》玩家获Bungie最后惊喜，开发者披露有限支持计划",
-      "summary": "Bungie为《命运2》推出最后一个惊喜：发放一枚命运Logo徽章兑换码作为告别礼。Bungie沟通经理Dylan Gafner确认团队仅会进行服务器维护和紧急修复，不再有重大更新。此前Bungie已发布《命运2》最终更新，因游戏参与度不足且公司重心转向新作《失落星船：马拉松》，并导致数百名员工被裁。第三方报告称《命运3》暂未列入开发计划。索尼2022年以36亿美元(约合人民币245亿元)收购Bungie，近期因Bungie表现不佳计提7.65亿美元(约合人民币52亿元)减值损失。",
+      "cn_title": "《命运2》玩家收到Bungie最后惊喜",
+      "summary": "Bungie向《命运2》玩家送出最后一份惊喜，并说明后续有限支持计划。游戏只会继续进行维护和重大问题修复，不会再有重要更新。",
       "url": "https://www.ign.com/articles/destiny-2-players-get-one-last-surprise-from-bungie-developer-reveals-limited-support-plans",
       "publish_time_cn": "2026-07-08 23:56",
       "pub_date": "2026-07-08 23:56",
-      "cover_image": "https://assets-prd.ignimgs.com/2024/05/23/destiny2thumb-1716471330076.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2024/05/23/destiny2thumb-1716471330076.png",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2024/05/23/destiny2thumb-1716471330076.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2024/05/23/destiny2thumb-1716471330076.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -435,7 +443,11 @@
         "https://assets-prd.ignimgs.com/2024/05/23/destiny2thumb-1716471330076.png"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-07-09T01:12:25+08:00"
+      "source_fetched_at": "2026-07-09T01:12:25+08:00",
+      "translation_path": "translations/25.json",
+      "translator": "codex",
+      "translator_provider": "manual",
+      "translator_model": "gpt-5-codex"
     },
     {
       "id": 26,
@@ -665,13 +677,13 @@
       "category": "游戏新闻",
       "emoji": "🏎️",
       "en_title": "Nintendo Switch 2 Leak Reveals The Crew Motorfest, With Physical Launch Via Game-Key Card",
-      "cn_title": "爆料：《飙酷车神：轰鸣盛典》Switch 2 版实体版采用密钥卡",
-      "summary": "据 Dealabs 爆料，育碧即将正式公布 Switch 2 版《飙酷车神：轰鸣盛典》，该版本将于 2026 年 10 月 8 日发售，定价 49.99美元(约合人民币340元)，实体版采用 Game-Key Card 卡带，需下载完整游戏。游戏最初于 2023 年 9 月登陆 PC、PS4、PS5、XBOX One 和 XBOX Series，IGN 给予 7/10 评分。",
+      "cn_title": "任天堂Nintendo Switch 2版《The Crew Motorfest》爆料泄露",
+      "summary": "爆料称育碧即将公布《The Crew Motorfest》Nintendo Switch 2版，10月8日发售，实体版将采用Game-Key Card形式。",
       "url": "https://www.ign.com/articles/nintendo-switch-2-leak-reveals-the-crew-motorfest-with-physical-launch-via-game-key-card",
       "publish_time_cn": "2026-07-08 21:38",
       "pub_date": "2026-07-08 21:38",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/02/25/nascarthumb-1772032608796.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/02/25/nascarthumb-1772032608796.png",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/02/25/nascarthumb-1772032608796.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/02/25/nascarthumb-1772032608796.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -696,7 +708,11 @@
           "source": "ai_guess",
           "reason": "特定商业模式术语，暂无标准中文译名。"
         }
-      ]
+      ],
+      "translation_path": "translations/15.json",
+      "translator": "codex",
+      "translator_provider": "manual",
+      "translator_model": "gpt-5-codex"
     },
     {
       "id": 16,
@@ -778,13 +794,13 @@
       "category": "游戏新闻",
       "emoji": "💿",
       "en_title": "'They Now Wait for This Storm to Pass' — PS5 Owners Are Cancelling PlayStation Plus Subscriptions to Protest Sony Killing Discs, but Analysts Say It Won't Make Any Difference",
-      "cn_title": "PS5玩家退订PS Plus抗议索尼取消实体盘",
-      "summary": "为抗议索尼从2028年起停止发行PS5实体游戏的决定，部分PS5玩家取消PlayStation Plus订阅以示不满，相关请愿已获超20万签名。但游戏行业分析师指出，即使50万人退订，仅占PS Plus用户总数约1%，对索尼利润影响微乎其微。索尼从数字销售中获益更高，第一方游戏保留100%收入，第三方抽成30%（约21美元(约合人民币143元)），预计不会改变决策。",
+      "cn_title": "索尼遭PS5玩家退订PlayStation Plus抗议停实体盘",
+      "summary": "PS5玩家正退订PlayStation Plus，抗议索尼停止实体光盘计划。但分析师认为，即使50万人退订，也不足以迫使索尼改变决定。",
       "url": "https://www.ign.com/articles/they-now-wait-for-this-storm-to-pass-ps5-owners-are-cancelling-playstation-plus-subscriptions-to-protest-sony-killing-discs-but-analysts-say-it-wont-make-any-difference",
       "publish_time_cn": "2026-07-08 19:58",
       "pub_date": "2026-07-08 19:58",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/07/08/gettyimages-1242720567-1783510645374.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/07/08/gettyimages-1242720567-1783510645374.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/07/08/gettyimages-1242720567-1783510645374.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/07/08/gettyimages-1242720567-1783510645374.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -793,20 +809,24 @@
         "https://assets-prd.ignimgs.com/2026/07/08/gettyimages-1242720567-1783510645374.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-07-08T21:17:06+08:00"
+      "source_fetched_at": "2026-07-08T21:17:06+08:00",
+      "translation_path": "translations/11.json",
+      "translator": "codex",
+      "translator_provider": "manual",
+      "translator_model": "gpt-5-codex"
     },
     {
       "id": 9,
       "category": "游戏新闻",
       "emoji": "🎮",
       "en_title": "Palworld Hits an Incredible 40 Million Players 2.5 Years After Early Access Launch, and With 1.0 Right Around the Corner",
-      "cn_title": "《幻兽帕鲁》玩家数突破4000万，1.0即将上线",
-      "summary": "Pocketpair宣布，《幻兽帕鲁》在Early Access上线2.5年后玩家数突破4000万，1.0正式版将于7月10日推出。该数字包含订阅玩家，游戏仍在XBOX Game Pass中。Pocketpair与索尼合作成立了Palworld Entertainment以拓展IP，并将游戏带到了PS5。此外，任天堂与宝可梦公司就专利侵权提起的诉讼仍在进行中，判决预计今年晚些时候作出。",
+      "cn_title": "《幻兽帕鲁》玩家数突破4000万",
+      "summary": "Pocketpair宣布《幻兽帕鲁》玩家数已突破4000万。游戏1.0版本将于7月10日推出，官方建议老玩家新开存档体验改动。",
       "url": "https://www.ign.com/articles/palworld-hits-an-incredible-40-million-players-25-years-after-early-access-launch-and-with-10-right-around-the-corner",
       "publish_time_cn": "2026-07-08 19:02",
       "pub_date": "2026-07-08 19:02",
-      "cover_image": "https://assets-prd.ignimgs.com/2023/06/08/palwordreleasedateannouncementtrailer-ign-blogroll-1686257398374.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2023/06/08/palwordreleasedateannouncementtrailer-ign-blogroll-1686257398374.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2023/06/08/palwordreleasedateannouncementtrailer-ign-blogroll-1686257398374.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2023/06/08/palwordreleasedateannouncementtrailer-ign-blogroll-1686257398374.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -815,7 +835,11 @@
         "https://assets-prd.ignimgs.com/2023/06/08/palwordreleasedateannouncementtrailer-ign-blogroll-1686257398374.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-07-08T19:31:53+08:00"
+      "source_fetched_at": "2026-07-08T19:31:53+08:00",
+      "translation_path": "translations/09.json",
+      "translator": "codex",
+      "translator_provider": "manual",
+      "translator_model": "gpt-5-codex"
     },
     {
       "id": 4,
@@ -895,13 +919,13 @@
       "category": "评测评分",
       "emoji": "⛵",
       "en_title": "Assassin’s Creed Black Flag Resynced Review",
-      "cn_title": "《刺客信条4：黑旗 重制版》评测：航海传奇再升级",
-      "summary": "育碧新加坡打造的《刺客信条4：黑旗 重制版》在画面、战斗、航海和潜行系统上全面升级，并以更简洁的地图和改进的跑酷带来流畅体验。爱德华·肯威的故事依旧动人，新增剧情和终章内容，但取消了现代剧情线，潜行机制与敌人AI的博弈也偶有失衡。虽有小缺憾，它仍是系列顶尖的重制之作。",
+      "cn_title": "《刺客信条4：黑旗Resynced》评测：经典海盗冒险全面升级",
+      "summary": "《刺客信条4：黑旗Resynced》以新画面、现代潜行和战斗、强化海战重塑系列经典。它牺牲部分电影感，却换来更清晰互动的体验。",
       "url": "https://www.ign.com/articles/assassins-creed-black-flag-resynced-review",
       "publish_time_cn": "2026-07-08 18:00",
       "pub_date": "2026-07-08 18:00",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/07/07/assassinscreedblackflagresynced-review-blogroll-1783462366214.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/07/07/assassinscreedblackflagresynced-review-blogroll-1783462366214.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/07/07/assassinscreedblackflagresynced-review-blogroll-1783462366214.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/07/07/assassinscreedblackflagresynced-review-blogroll-1783462366214.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -910,20 +934,24 @@
         "https://assets-prd.ignimgs.com/2026/07/07/assassinscreedblackflagresynced-review-blogroll-1783462366214.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-07-08T19:31:57+08:00"
+      "source_fetched_at": "2026-07-08T19:31:57+08:00",
+      "translation_path": "translations/07.json",
+      "translator": "codex",
+      "translator_provider": "manual",
+      "translator_model": "gpt-5-codex"
     },
     {
       "id": 8,
       "category": "行业动态",
       "emoji": "🎮",
       "en_title": "Microsoft Reportedly Plans to Make More of Its Best Games Console Exclusive So People Have a Reason to Buy an Xbox — So What Could Skip PlayStation?",
-      "cn_title": "微软据报将扩大XBOX独占阵容 多个大作或跳过PS5",
-      "summary": "据彭博社报道，微软计划进一步推动第一方大作成为XBOX独占，以提振主机销量。XBOX新负责人Asha Sharma已着手此调整，将《战争机器：事变日》和《发条革命》定为XBOX Series及PC独占，跳过PS5。不过大型多人游戏仍将跨平台。与此同时，微软游戏部门宣布裁员1600人，Sharma坦承战略失败，包括Game Pass和跨平台策略未达预期。",
+      "cn_title": "微软据称扩大XBOX独占，哪些游戏会跳过PlayStation？",
+      "summary": "据彭博社报道，微软计划让更多顶级作品成为XBOX主机独占，以给玩家购买主机的理由。《上古卷轴6》和下一部《光环》都可能引发关注。",
       "url": "https://www.ign.com/articles/microsoft-reportedly-plans-to-make-more-of-its-best-games-console-exclusive-so-people-have-a-reason-to-buy-an-xbox-so-what-could-skip-playstation",
       "publish_time_cn": "2026-07-08 17:25",
       "pub_date": "2026-07-08 17:25",
-      "cover_image": "https://assets1.ignimgs.com/2019/06/17/5-es6-1560804827894.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets1.ignimgs.com/2019/06/17/5-es6-1560804827894.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets1.ignimgs.com/2019/06/17/5-es6-1560804827894.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets1.ignimgs.com/2019/06/17/5-es6-1560804827894.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -941,7 +969,11 @@
           "source": "ai_guess",
           "reason": "词库未收录，但社区通行译名为《上古卷轴6》，待确认"
         }
-      ]
+      ],
+      "translation_path": "translations/08.json",
+      "translator": "codex",
+      "translator_provider": "manual",
+      "translator_model": "gpt-5-codex"
     },
     {
       "id": 3,
@@ -1000,13 +1032,13 @@
       "category": "游戏新闻",
       "emoji": "🚗",
       "en_title": "Nintendo Confirms Mario Kart Tour Shutdown After 7 Years, No Offline Version Offered",
-      "cn_title": "《马力欧卡丁车巡回赛》运营7年后将于9月停服，无离线版",
-      "summary": "任天堂宣布，手游《马力欧卡丁车巡回赛》(Mario Kart Tour) 将于2026年9月29日停服，结束长达7年的运营。游戏内购已于今日停止销售，Gold Pass订阅自动续费也已关闭，剩余时间里所有玩家均可享受订阅福利。与《动物森友会：口袋营地》不同，任天堂明确表示不会推出离线版，意味着部分独占赛道将永久消失。该作曾是任天堂最赚钱的手游之一，后因扭蛋机制争议而改为道具商店模式。",
+      "cn_title": "任天堂《马力欧卡丁车巡回赛》9月停服",
+      "summary": "任天堂确认，手机游戏《马力欧卡丁车巡回赛》将于9月29日停服。官方不会推出离线版，部分独占赛道也将随服务器关闭而无法游玩。",
       "url": "https://www.ign.com/articles/nintendo-confirms-mario-kart-tour-shutdown-after-7-years-no-offline-version-offered",
       "publish_time_cn": "2026-07-08 16:42",
       "pub_date": "2026-07-08 16:42",
-      "cover_image": "https://assets-prd.ignimgs.com/2023/05/23/mktour-1684846847510.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2023/05/23/mktour-1684846847510.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2023/05/23/mktour-1684846847510.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2023/05/23/mktour-1684846847510.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -1024,7 +1056,11 @@
           "source": "ai_guess",
           "reason": "词库中无此条目，此为社区通用译名，需确认是否与官方中文一致。"
         }
-      ]
+      ],
+      "translation_path": "translations/01.json",
+      "translator": "codex",
+      "translator_provider": "manual",
+      "translator_model": "gpt-5-codex"
     },
     {
       "id": 2,
