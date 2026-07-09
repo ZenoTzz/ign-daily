@@ -1,45 +1,10 @@
 {
   "date": "2026-07-09",
-  "generated_at": "2026-07-09T09:48:54.216057",
-  "total_articles": 2,
-  "dictionary_candidate_count": 2,
-  "dictionary_candidates": [
-    {
-      "id": "dict_candidate_bernie_sanders_c7c409e38638",
-      "category": "dictionary",
-      "type": "dictionary_candidate",
-      "dict_category": "people",
-      "en": "Bernie Sanders",
-      "cn": "伯尼·桑德斯",
-      "title": "词库候选：Bernie Sanders → 伯尼·桑德斯",
-      "rule": "建议将「Bernie Sanders」加入词库，译为「伯尼·桑德斯」。",
-      "status": "ready_for_review",
-      "confidence": "high",
-      "date": "2026-07-09",
-      "article_id": 16,
-      "article_title": "伯尼·桑德斯怒批微软XBOX裁员涨价",
-      "url": "https://www.ign.com/articles/it-never-trickles-down-bernie-sanders-hits-out-at-microsoft-over-xbox-layoffs-and-console-price-rises-says-they-prove-corporate-tax-breaks-do-not-create-jobs",
-      "evidence": "来自文章页未确认新词候选。"
-    },
-    {
-      "id": "dict_candidate_satya_nadella_b84c6b7b5aa1",
-      "category": "dictionary",
-      "type": "dictionary_candidate",
-      "dict_category": "terms",
-      "en": "Satya Nadella",
-      "cn": "Satya Nadella",
-      "title": "词库候选：Satya Nadella → Satya Nadella",
-      "rule": "建议将「Satya Nadella」加入词库，译为「Satya Nadella」。",
-      "status": "ready_for_review",
-      "confidence": "high",
-      "date": "2026-07-09",
-      "article_id": 16,
-      "article_title": "伯尼·桑德斯怒批微软XBOX裁员涨价",
-      "url": "https://www.ign.com/articles/it-never-trickles-down-bernie-sanders-hits-out-at-microsoft-over-xbox-layoffs-and-console-price-rises-says-they-prove-corporate-tax-breaks-do-not-create-jobs",
-      "evidence": "来自文章页未确认新词候选。"
-    }
-  ],
-  "learning_evidence_updated": true,
+  "generated_at": "2026-07-09T22:37:57.437697",
+  "total_articles": 6,
+  "dictionary_candidate_count": 0,
+  "dictionary_candidates": [],
+  "learning_evidence_updated": false,
   "daily_learning_updated": true,
   "articles": [
     {
@@ -128,51 +93,378 @@
       "dictionary_candidates": []
     },
     {
+      "id": 8,
+      "cn_title": "微软称要扩大XBOX独占，哪些游戏会跳过PlayStation？",
+      "en_title": "Microsoft Reportedly Plans to Make More of Its Best Games Console Exclusive So People Have a Reason to Buy an Xbox — So What Could Skip PlayStation?",
+      "url": "https://www.ign.com/articles/microsoft-reportedly-plans-to-make-more-of-its-best-games-console-exclusive-so-people-have-a-reason-to-buy-an-xbox-so-what-could-skip-playstation",
+      "category": "行业动态",
+      "has_translation": true,
+      "title_diff": {
+        "mine": "微软据称扩大XBOX独占，哪些游戏会跳过PlayStation？",
+        "yours": "微软称要扩大XBOX独占，哪些游戏会跳过PlayStation？"
+      },
+      "subtitle_diff": null,
+      "body_diffs": [
+        {
+          "index": 3,
+          "mine": "这就引出了一个问题：哪些作品算是XBOX最优秀的游戏，因此可能跳过PS5？一些符合条件的游戏已经确认登陆PS5。例如，Playground的《极限竞速：地平线6》仍计划登陆PlayStation，虽然目前还没有索尼主机版发售日。Playground的奇幻RPG《神鬼寓言》定于2027年2月23日登陆PS5、XBOX Series和PC。Mojang的《我的世界：地下城2》将于2026年9月29日登陆PC、Nintendo Switch、Nintendo Switch 2、PS5和XBOX Series。",
+          "yours": "这就引出了一个问题：哪些作品算是XBOX最优秀的游戏，因此可能跳过PS5？一些符合条件的游戏已经确认登陆PS5。例如，Playground的《极限竞速：地平线6》仍计划登陆PlayStation，虽然目前还没有索尼主机版发售日。Playground的奇幻RPG《神鬼寓言》定于2027年2月23日登陆PS5、XBOX Series和PC。Mojang的《我的世界：地下城2》将于2026年9月29日登陆PC、Switch、Switch 2、PS5和XBOX Series。",
+          "my_sentences": [
+            "这就引出了一个问题：哪些作品算是XBOX最优秀的游戏，因此可能跳过PS5？",
+            "一些符合条件的游戏已经确认登陆PS5。",
+            "例如，Playground的《极限竞速：地平线6》仍计划登陆PlayStation，虽然目前还没有索尼主机版发售日。",
+            "Playground的奇幻RPG《神鬼寓言》定于2027年2月23日登陆PS5、XBOX Series和PC。",
+            "Mojang的《我的世界：地下城2》将于2026年9月29日登陆PC、Nintendo Switch、Nintendo Switch 2、PS5和XBOX Series。"
+          ],
+          "your_sentences": [
+            "这就引出了一个问题：哪些作品算是XBOX最优秀的游戏，因此可能跳过PS5？",
+            "一些符合条件的游戏已经确认登陆PS5。",
+            "例如，Playground的《极限竞速：地平线6》仍计划登陆PlayStation，虽然目前还没有索尼主机版发售日。",
+            "Playground的奇幻RPG《神鬼寓言》定于2027年2月23日登陆PS5、XBOX Series和PC。",
+            "Mojang的《我的世界：地下城2》将于2026年9月29日登陆PC、Switch、Switch 2、PS5和XBOX Series。"
+          ]
+        },
+        {
+          "index": 4,
+          "mine": "当我们开始考虑微软手里的超级大作时，事情就变得有趣了。我预计《使命召唤》永远不会成为XBOX主机独占，因为它属于大型多人游戏类别。但贝塞斯达的《上古卷轴6》是一款严格意义上的单人游戏。因此，它是否可能跳过PS5？",
+          "yours": "当我们开始考虑微软手里的超级大作时，事情就变得有趣了。我预计《使命召唤》永远不会成为XBOX主机独占，因为它属于大型多人游戏类别。但贝塞斯达的《上古卷轴6》是一款严格意义上的单人游戏。因此，它是否可能跳过PS5（或PS6）？",
+          "my_sentences": [
+            "当我们开始考虑微软手里的超级大作时，事情就变得有趣了。",
+            "我预计《使命召唤》永远不会成为XBOX主机独占，因为它属于大型多人游戏类别。",
+            "但贝塞斯达的《上古卷轴6》是一款严格意义上的单人游戏。",
+            "因此，它是否可能跳过PS5？"
+          ],
+          "your_sentences": [
+            "当我们开始考虑微软手里的超级大作时，事情就变得有趣了。",
+            "我预计《使命召唤》永远不会成为XBOX主机独占，因为它属于大型多人游戏类别。",
+            "但贝塞斯达的《上古卷轴6》是一款严格意义上的单人游戏。",
+            "因此，它是否可能跳过PS5（或PS6）？"
+          ]
+        },
+        {
+          "index": 7,
+          "mine": "还有一个也许最重要的问题：下一部《光环》主线作品会不会回到XBOX独占根源，跳过PS5？今年夏天的《光环：战役进化》是多平台作品，但那是在Sharma接管业务并开始「重置」之前确认的。新的《光环》会被视为大型多人游戏并坚持多平台发行吗？还是会作为XBOX主机独占推出？",
+          "yours": "还有一个也许最重要的问题：下一部《光环》主线作品会不会回到XBOX独占，跳过PS5？今年夏天的《光环：战役进化》是多平台作品，但那是在Sharma接管业务并开始「重置」之前确认的。新的《光环》会被视为大型多人游戏并坚持多平台发行吗？还是会作为XBOX主机独占推出？",
+          "my_sentences": [
+            "还有一个也许最重要的问题：下一部《光环》主线作品会不会回到XBOX独占根源，跳过PS5？",
+            "今年夏天的《光环：战役进化》是多平台作品，但那是在Sharma接管业务并开始「重置」之前确认的。",
+            "新的《光环》会被视为大型多人游戏并坚持多平台发行吗？",
+            "还是会作为XBOX主机独占推出？"
+          ],
+          "your_sentences": [
+            "还有一个也许最重要的问题：下一部《光环》主线作品会不会回到XBOX独占，跳过PS5？",
+            "今年夏天的《光环：战役进化》是多平台作品，但那是在Sharma接管业务并开始「重置」之前确认的。",
+            "新的《光环》会被视为大型多人游戏并坚持多平台发行吗？",
+            "还是会作为XBOX主机独占推出？"
+          ]
+        }
+      ],
+      "dictionary_candidates": []
+    },
+    {
+      "id": 9,
+      "cn_title": "《幻兽帕鲁》玩家数突破4000万",
+      "en_title": "Palworld Hits an Incredible 40 Million Players 2.5 Years After Early Access Launch, and With 1.0 Right Around the Corner",
+      "url": "https://www.ign.com/articles/palworld-hits-an-incredible-40-million-players-25-years-after-early-access-launch-and-with-10-right-around-the-corner",
+      "category": "游戏新闻",
+      "has_translation": true,
+      "title_diff": null,
+      "subtitle_diff": null,
+      "body_diffs": [
+        {
+          "index": 1,
+          "mine": "开发商Pocketpair表示，《幻兽帕鲁》玩家数已经突破4000万，1.0版本定于7月10日上线。如果你想知道什么时候能玩，我们也整理了《幻兽帕鲁》1.0全球解锁时间。",
+          "yours": "开发商Pocketpair表示，《幻兽帕鲁》玩家数已经突破4000万，1.0版本定于7月10日上线。",
+          "my_sentences": [
+            "开发商Pocketpair表示，《幻兽帕鲁》玩家数已经突破4000万，1.0版本定于7月10日上线。",
+            "如果你想知道什么时候能玩，我们也整理了《幻兽帕鲁》1.0全球解锁时间。"
+          ],
+          "your_sentences": [
+            "开发商Pocketpair表示，《幻兽帕鲁》玩家数已经突破4000万，1.0版本定于7月10日上线。"
+          ]
+        },
+        {
+          "index": 6,
+          "mine": "至于《幻兽帕鲁》1.0，Pocketpair发行与传播负责人John「Bucky」Buckley已经预告，更新说明会有27页改动和新增内容。Bucky还告诉现有《幻兽帕鲁》玩家，1.0并不要求清除存档，「但你应该这么做」。",
+          "yours": "至于《幻兽帕鲁》1.0，Pocketpair发行与传播负责人John「Bucky」Buckley已经预告，更新说明会有27页改动和新增内容。Bucky还告诉现有《幻兽帕鲁》玩家，1.0版本并不要求玩家重开新档，「但你应该这么做」。",
+          "my_sentences": [
+            "至于《幻兽帕鲁》1.0，Pocketpair发行与传播负责人John「Bucky」Buckley已经预告，更新说明会有27页改动和新增内容。",
+            "Bucky还告诉现有《幻兽帕鲁》玩家，1.0并不要求清除存档，「但你应该这么做」。"
+          ],
+          "your_sentences": [
+            "至于《幻兽帕鲁》1.0，Pocketpair发行与传播负责人John「Bucky」Buckley已经预告，更新说明会有27页改动和新增内容。",
+            "Bucky还告诉现有《幻兽帕鲁》玩家，1.0版本并不要求玩家重开新档，「但你应该这么做」。"
+          ]
+        },
+        {
+          "index": 8,
+          "mine": "他最后说：「我们会把选择权留给各位帕鲁驯兽师！」",
+          "yours": "他最后说：「我们会把选择权留给各位帕鲁训练家！」",
+          "my_sentences": [
+            "他最后说：「我们会把选择权留给各位帕鲁驯兽师！",
+            "」"
+          ],
+          "your_sentences": [
+            "他最后说：「我们会把选择权留给各位帕鲁训练家！",
+            "」"
+          ]
+        }
+      ],
+      "dictionary_candidates": []
+    },
+    {
+      "id": 11,
+      "cn_title": "索尼遭PS5玩家退订PlayStation Plus抗议停实体盘",
+      "en_title": "'They Now Wait for This Storm to Pass' — PS5 Owners Are Cancelling PlayStation Plus Subscriptions to Protest Sony Killing Discs, but Analysts Say It Won't Make Any Difference",
+      "url": "https://www.ign.com/articles/they-now-wait-for-this-storm-to-pass-ps5-owners-are-cancelling-playstation-plus-subscriptions-to-protest-sony-killing-discs-but-analysts-say-it-wont-make-any-difference",
+      "category": "游戏新闻",
+      "has_translation": true,
+      "title_diff": null,
+      "subtitle_diff": {
+        "mine": "等风暴过去",
+        "yours": "收效甚微"
+      },
+      "body_diffs": [],
+      "dictionary_candidates": []
+    },
+    {
       "id": 16,
-      "cn_title": "伯尼·桑德斯怒批微软XBOX裁员涨价",
+      "cn_title": "美国参议员Bernie Sanders怒批微软XBOX裁员涨价",
       "en_title": "'It Never Trickles Down' — Bernie Sanders Hits Out at Microsoft Over Xbox Layoffs and Console Price Rises, Says They Prove Corporate Tax Breaks Do Not Create Jobs",
       "url": "https://www.ign.com/articles/it-never-trickles-down-bernie-sanders-hits-out-at-microsoft-over-xbox-layoffs-and-console-price-rises-says-they-prove-corporate-tax-breaks-do-not-create-jobs",
       "category": "行业动态",
       "has_translation": true,
-      "title_diff": null,
-      "subtitle_diff": null,
-      "body_diffs": [],
-      "dictionary_candidates": [
+      "title_diff": {
+        "mine": "伯尼·桑德斯怒批微软XBOX裁员涨价",
+        "yours": "美国参议员Bernie Sanders怒批微软XBOX裁员涨价"
+      },
+      "subtitle_diff": {
+        "mine": "滴漏神话",
+        "yours": "「请不要告诉我企业减税会创造就业」"
+      },
+      "body_diffs": [
         {
-          "id": "dict_candidate_bernie_sanders_c7c409e38638",
-          "category": "dictionary",
-          "type": "dictionary_candidate",
-          "dict_category": "people",
-          "en": "Bernie Sanders",
-          "cn": "伯尼·桑德斯",
-          "title": "词库候选：Bernie Sanders → 伯尼·桑德斯",
-          "rule": "建议将「Bernie Sanders」加入词库，译为「伯尼·桑德斯」。",
-          "status": "ready_for_review",
-          "confidence": "high",
-          "date": "2026-07-09",
-          "article_id": 16,
-          "article_title": "伯尼·桑德斯怒批微软XBOX裁员涨价",
-          "url": "https://www.ign.com/articles/it-never-trickles-down-bernie-sanders-hits-out-at-microsoft-over-xbox-layoffs-and-console-price-rises-says-they-prove-corporate-tax-breaks-do-not-create-jobs",
-          "evidence": "来自文章页未确认新词候选。"
+          "index": 0,
+          "mine": "美国参议员伯尼·桑德斯批评微软近期在XBOX裁员以及上调主机价格，并坚称这些事情证明企业减税不会创造就业。",
+          "yours": "美国参议员Bernie Sanders批评微软近期在XBOX裁员以及上调主机价格，并坚称这些事情证明企业减税不会创造就业。",
+          "my_sentences": [
+            "美国参议员伯尼·桑德斯批评微软近期在XBOX裁员以及上调主机价格，并坚称这些事情证明企业减税不会创造就业。"
+          ],
+          "your_sentences": [
+            "美国参议员Bernie Sanders批评微软近期在XBOX裁员以及上调主机价格，并坚称这些事情证明企业减税不会创造就业。"
+          ]
         },
         {
-          "id": "dict_candidate_satya_nadella_b84c6b7b5aa1",
-          "category": "dictionary",
-          "type": "dictionary_candidate",
-          "dict_category": "terms",
-          "en": "Satya Nadella",
-          "cn": "Satya Nadella",
-          "title": "词库候选：Satya Nadella → Satya Nadella",
-          "rule": "建议将「Satya Nadella」加入词库，译为「Satya Nadella」。",
-          "status": "ready_for_review",
-          "confidence": "high",
-          "date": "2026-07-09",
-          "article_id": 16,
-          "article_title": "伯尼·桑德斯怒批微软XBOX裁员涨价",
-          "url": "https://www.ign.com/articles/it-never-trickles-down-bernie-sanders-hits-out-at-microsoft-over-xbox-layoffs-and-console-price-rises-says-they-prove-corporate-tax-breaks-do-not-create-jobs",
-          "evidence": "来自文章页未确认新词候选。"
+          "index": 2,
+          "mine": "桑德斯在推文中写道：「去年，微软赚取1010亿美元(约合人民币6870亿元)利润，从特朗普那里获得125亿美元(约合人民币850亿元)减税，并向CEO支付9600万美元(约合人民币6.5亿元)。今年，它把一台XBOX涨价150美元(约合人民币1020元)，并裁掉3200个岗位。请不要告诉我企业减税会创造就业。它永远不会向下滴漏。」",
+          "yours": "Sanders在推文中写道：「去年，微软赚取1010亿美元(约合人民币6870亿元)利润，从特朗普那里获得125亿美元(约合人民币850亿元)减税，并向CEO支付9600万美元(约合人民币6.5亿元)。今年，它把一台XBOX涨价150美元(约合人民币1020元)，并裁掉3200个岗位。请不要告诉我企业减税会创造就业。它永远不会向下滴漏。」",
+          "my_sentences": [
+            "桑德斯在推文中写道：「去年，微软赚取1010亿美元(约合人民币6870亿元)利润，从特朗普那里获得125亿美元(约合人民币850亿元)减税，并向CEO支付9600万美元(约合人民币6.5亿元)。",
+            "今年，它把一台XBOX涨价150美元(约合人民币1020元)，并裁掉3200个岗位。",
+            "请不要告诉我企业减税会创造就业。",
+            "它永远不会向下滴漏。",
+            "」"
+          ],
+          "your_sentences": [
+            "Sanders在推文中写道：「去年，微软赚取1010亿美元(约合人民币6870亿元)利润，从特朗普那里获得125亿美元(约合人民币850亿元)减税，并向CEO支付9600万美元(约合人民币6.5亿元)。",
+            "今年，它把一台XBOX涨价150美元(约合人民币1020元)，并裁掉3200个岗位。",
+            "请不要告诉我企业减税会创造就业。",
+            "它永远不会向下滴漏。",
+            "」"
+          ]
+        },
+        {
+          "index": 7,
+          "mine": "Sharma在宣布裁员的博客文章中说：「我们的利润率比可比的平台和发行企业低3到10倍。进入第9世代时，我们的装机基础更小，成本结构更高。为了增长，我们押注Game Pass、多平台和更广泛的内容组合。虽然这些业务创造了有意义的价值，但它们没有按我们预期的速度增长。随着这种情况发生，我们的核心业务变弱，而我们增加了更多团队、更多投资和更多时间，希望取得更好的结果。现在，行业正面临史上最严重的硬件危机。我们必须重置XBOX。」",
+          "yours": "Sharma在宣布裁员的Blog中说：「我们的利润率比可比的平台和发行企业低3到10倍。进入第9世代时，我们的装机基础更小，成本结构更高。为了增长，我们押注Game Pass、多平台和更广泛的内容组合。虽然这些业务创造了有意义的价值，但它们没有按我们预期的速度增长。随着这种情况发生，我们的核心业务变弱，而我们增加了更多团队、更多投资和更多时间，希望取得更好的结果。现在，行业正面临史上最严重的硬件危机。我们必须重置XBOX。」",
+          "my_sentences": [
+            "Sharma在宣布裁员的博客文章中说：「我们的利润率比可比的平台和发行企业低3到10倍。",
+            "进入第9世代时，我们的装机基础更小，成本结构更高。",
+            "为了增长，我们押注Game Pass、多平台和更广泛的内容组合。",
+            "虽然这些业务创造了有意义的价值，但它们没有按我们预期的速度增长。",
+            "随着这种情况发生，我们的核心业务变弱，而我们增加了更多团队、更多投资和更多时间，希望取得更好的结果。",
+            "现在，行业正面临史上最严重的硬件危机。",
+            "我们必须重置XBOX。",
+            "」"
+          ],
+          "your_sentences": [
+            "Sharma在宣布裁员的Blog中说：「我们的利润率比可比的平台和发行企业低3到10倍。",
+            "进入第9世代时，我们的装机基础更小，成本结构更高。",
+            "为了增长，我们押注Game Pass、多平台和更广泛的内容组合。",
+            "虽然这些业务创造了有意义的价值，但它们没有按我们预期的速度增长。",
+            "随着这种情况发生，我们的核心业务变弱，而我们增加了更多团队、更多投资和更多时间，希望取得更好的结果。",
+            "现在，行业正面临史上最严重的硬件危机。",
+            "我们必须重置XBOX。",
+            "」"
+          ]
+        },
+        {
+          "index": 8,
+          "mine": "关于XBOX主机涨价，微软表示主机存储和内存价格已经上涨超过2.5倍，并预计到2027年秋季还会再翻一番。微软在宣布涨价时表示：「整个消费电子行业都在当前组件危机中挣扎，但这种影响对主机尤其严重。」",
+          "yours": "关于XBOX主机涨价，微软表示主机存储和内存价格已经上涨超过2.5倍，并预计到2027年秋季还会再翻一番。微软在宣布涨价时表示：「整个消费电子行业都在当前的组件危机中挣扎，但这种影响对主机尤其严重。」",
+          "my_sentences": [
+            "关于XBOX主机涨价，微软表示主机存储和内存价格已经上涨超过2.5倍，并预计到2027年秋季还会再翻一番。",
+            "微软在宣布涨价时表示：「整个消费电子行业都在当前组件危机中挣扎，但这种影响对主机尤其严重。",
+            "」"
+          ],
+          "your_sentences": [
+            "关于XBOX主机涨价，微软表示主机存储和内存价格已经上涨超过2.5倍，并预计到2027年秋季还会再翻一番。",
+            "微软在宣布涨价时表示：「整个消费电子行业都在当前的组件危机中挣扎，但这种影响对主机尤其严重。",
+            "」"
+          ]
+        },
+        {
+          "index": 10,
+          "mine": "当然，桑德斯的表态并不完全针对XBOX本身，更多是针对微软以及他对美国企业界的看法。但值得注意的是，本周XBOX裁员只是微软更广泛裁员的一部分。微软实际上宣布计划裁撤4800个岗位，约占员工总数2.1%，不过XBOX显然承担了这次重组的主要冲击。",
+          "yours": "当然，Sanders的表态并不完全针对XBOX本身，更多是针对微软以及他对美国企业界的看法。但值得注意的是，本周XBOX裁员只是微软更广泛裁员的一部分。微软实际上宣布计划裁撤4800个岗位，约占员工总数2.1%，不过XBOX显然承担了这次重组的主要冲击。",
+          "my_sentences": [
+            "当然，桑德斯的表态并不完全针对XBOX本身，更多是针对微软以及他对美国企业界的看法。",
+            "但值得注意的是，本周XBOX裁员只是微软更广泛裁员的一部分。",
+            "微软实际上宣布计划裁撤4800个岗位，约占员工总数2.1%，不过XBOX显然承担了这次重组的主要冲击。"
+          ],
+          "your_sentences": [
+            "当然，Sanders的表态并不完全针对XBOX本身，更多是针对微软以及他对美国企业界的看法。",
+            "但值得注意的是，本周XBOX裁员只是微软更广泛裁员的一部分。",
+            "微软实际上宣布计划裁撤4800个岗位，约占员工总数2.1%，不过XBOX显然承担了这次重组的主要冲击。"
+          ]
+        },
+        {
+          "index": 11,
+          "mine": "这并不是桑德斯第一次就游戏行业事件发声。2022年，桑德斯和另外3名美国参议员曾对微软当时拟议收购动视暴雪一事表达担忧。Elizabeth Warren、伯尼·桑德斯、Cory Booker和Sheldon Whitehouse当时写道：「我们对科技行业整合及其对劳动者的影响深感担忧。」",
+          "yours": "这并不是Sanders第一次就游戏行业事件发声。2022年，Sanders和另外3名美国参议员曾对微软当时拟议收购动视暴雪一事表达担忧。Elizabeth Warren、Bernie Sanders、Cory Booker和Sheldon Whitehouse当时写道：「我们对科技行业整合及其对劳动者的影响深感担忧。」",
+          "my_sentences": [
+            "这并不是桑德斯第一次就游戏行业事件发声。",
+            "2022年，桑德斯和另外3名美国参议员曾对微软当时拟议收购动视暴雪一事表达担忧。",
+            "Elizabeth Warren、伯尼·桑德斯、Cory Booker和Sheldon Whitehouse当时写道：「我们对科技行业整合及其对劳动者的影响深感担忧。",
+            "」"
+          ],
+          "your_sentences": [
+            "这并不是Sanders第一次就游戏行业事件发声。",
+            "2022年，Sanders和另外3名美国参议员曾对微软当时拟议收购动视暴雪一事表达担忧。",
+            "Elizabeth Warren、Bernie Sanders、Cory Booker和Sheldon Whitehouse当时写道：「我们对科技行业整合及其对劳动者的影响深感担忧。",
+            "」"
+          ]
         }
-      ]
+      ],
+      "dictionary_candidates": []
+    },
+    {
+      "id": 21,
+      "cn_title": "《上古卷轴6》据称至少还要两年发售",
+      "en_title": "More Than 8 Years on From Its Announcement, The Elder Scrolls 6 Is Reportedly Still at Least 2 More Years From Release",
+      "url": "https://www.ign.com/articles/more-than-8-years-on-from-its-announcement-the-elder-scrolls-6-is-reportedly-still-at-least-2-more-years-from-release",
+      "category": "游戏新闻",
+      "has_translation": true,
+      "title_diff": null,
+      "subtitle_diff": null,
+      "body_diffs": [
+        {
+          "index": 0,
+          "mine": "《上古卷轴6》公布至今已经超过8年，但据报道，这款贝塞斯达RPG距离发售至少还有两年。",
+          "yours": "《上古卷轴6》公布至今已经超过8年，但据报道，这款贝塞斯达RPG距离发售至少还有两年。彭博社记者Jason Schreier在回答读者关于XBOX近期裁员的问题时提到了这一点。",
+          "my_sentences": [
+            "《上古卷轴6》公布至今已经超过8年，但据报道，这款贝塞斯达RPG距离发售至少还有两年。"
+          ],
+          "your_sentences": [
+            "《上古卷轴6》公布至今已经超过8年，但据报道，这款贝塞斯达RPG距离发售至少还有两年。",
+            "彭博社记者Jason Schreier在回答读者关于XBOX近期裁员的问题时提到了这一点。"
+          ]
+        },
+        {
+          "index": 1,
+          "mine": "彭博社记者Jason Schreier在回答读者关于XBOX近期裁员的问题时提到了这一点。微软游戏部门本周已裁员1600人，据称未来一年还计划再裁1600人。",
+          "yours": "微软游戏部门本周已裁员1600人，据称未来一年还计划再裁1600人。Schreier报道称，id Software和ZeniMax Online Studios都受到重创，贝塞斯达也在内部邮件中表示，公司将更加聚焦「最强系列」。IGN了解到，贝塞斯达游戏工作室中参与《上古卷轴6》的部分员工也受到裁员影响。",
+          "my_sentences": [
+            "彭博社记者Jason Schreier在回答读者关于XBOX近期裁员的问题时提到了这一点。",
+            "微软游戏部门本周已裁员1600人，据称未来一年还计划再裁1600人。"
+          ],
+          "your_sentences": [
+            "微软游戏部门本周已裁员1600人，据称未来一年还计划再裁1600人。",
+            "Schreier报道称，id Software和ZeniMax Online Studios都受到重创，贝塞斯达也在内部邮件中表示，公司将更加聚焦「最强系列」。",
+            "IGN了解到，贝塞斯达游戏工作室中参与《上古卷轴6》的部分员工也受到裁员影响。"
+          ]
+        },
+        {
+          "index": 2,
+          "mine": "Schreier报道称，id Software和ZeniMax Online Studios都受到重创，贝塞斯达也在内部邮件中表示，公司将更加聚焦「最强系列」。IGN了解到，贝塞斯达游戏工作室中参与《上古卷轴6》的部分员工也受到裁员影响。",
+          "yours": "在这种背景下，一个直接的问题是：《上古卷轴6》到底什么时候发售？微软是否有办法在不进一步牺牲质量或员工的情况下加快它的进度？",
+          "my_sentences": [
+            "Schreier报道称，id Software和ZeniMax Online Studios都受到重创，贝塞斯达也在内部邮件中表示，公司将更加聚焦「最强系列」。",
+            "IGN了解到，贝塞斯达游戏工作室中参与《上古卷轴6》的部分员工也受到裁员影响。"
+          ],
+          "your_sentences": [
+            "在这种背景下，一个直接的问题是：《上古卷轴6》到底什么时候发售？",
+            "微软是否有办法在不进一步牺牲质量或员工的情况下加快它的进度？"
+          ]
+        },
+        {
+          "index": 3,
+          "mine": "在这种背景下，一个直接的问题是：《上古卷轴6》到底什么时候发售？微软是否有办法在不进一步牺牲质量或员工的情况下加快它的进度？",
+          "yours": "陶德·霍华德最早在2018年6月的E3发布会上公布《上古卷轴6》，当时只有一段极短的CG预告。8年过去，玩家几乎没有看到新的实机内容，这也让等待变得越来越焦虑。",
+          "my_sentences": [
+            "在这种背景下，一个直接的问题是：《上古卷轴6》到底什么时候发售？",
+            "微软是否有办法在不进一步牺牲质量或员工的情况下加快它的进度？"
+          ],
+          "your_sentences": [
+            "陶德·霍华德最早在2018年6月的E3发布会上公布《上古卷轴6》，当时只有一段极短的CG预告。",
+            "8年过去，玩家几乎没有看到新的实机内容，这也让等待变得越来越焦虑。"
+          ]
+        },
+        {
+          "index": 4,
+          "mine": "陶德·霍华德最早在2018年6月的E3发布会上公布《上古卷轴6》，当时只有一段极短的CG预告。8年过去，玩家几乎没有看到新的实机内容，这也让等待变得越来越焦虑。",
+          "yours": "贝塞斯达最近一次较明确地谈到本作是在今年3月。当时霍华德开玩笑说，他希望大家「假装它从未公布过」。他也在2月表示，如果可以重来，他可能不会那么早公布这款游戏。",
+          "my_sentences": [
+            "陶德·霍华德最早在2018年6月的E3发布会上公布《上古卷轴6》，当时只有一段极短的CG预告。",
+            "8年过去，玩家几乎没有看到新的实机内容，这也让等待变得越来越焦虑。"
+          ],
+          "your_sentences": [
+            "贝塞斯达最近一次较明确地谈到本作是在今年3月。",
+            "当时霍华德开玩笑说，他希望大家「假装它从未公布过」。",
+            "他也在2月表示，如果可以重来，他可能不会那么早公布这款游戏。"
+          ]
+        },
+        {
+          "index": 5,
+          "mine": "贝塞斯达最近一次较明确地谈到本作是在今年3月。当时霍华德开玩笑说，他希望大家「假装它从未公布过」。他也在2月表示，如果可以重来，他可能不会那么早公布这款游戏。",
+          "yours": "去年11月，霍华德还称《上古卷轴6》距离发售仍然「很远」。不过他也暗示，贝塞斯达内部已经能玩到游戏，并且达成了一个重要里程碑；目前工作室大部分人和合作伙伴都在参与该项目。",
+          "my_sentences": [
+            "贝塞斯达最近一次较明确地谈到本作是在今年3月。",
+            "当时霍华德开玩笑说，他希望大家「假装它从未公布过」。",
+            "他也在2月表示，如果可以重来，他可能不会那么早公布这款游戏。"
+          ],
+          "your_sentences": [
+            "去年11月，霍华德还称《上古卷轴6》距离发售仍然「很远」。",
+            "不过他也暗示，贝塞斯达内部已经能玩到游戏，并且达成了一个重要里程碑；",
+            "目前工作室大部分人和合作伙伴都在参与该项目。"
+          ]
+        },
+        {
+          "index": 6,
+          "mine": "去年11月，霍华德还称《上古卷轴6》距离发售仍然「很远」。不过他也暗示，贝塞斯达内部已经能玩到游戏，并且达成了一个重要里程碑；目前工作室大部分人和合作伙伴都在参与该项目。",
+          "yours": "微软游戏内容与工作室总裁Matt Booty此前接受《综艺》采访时表示，正式展示一款游戏通常意味着它已经接近发售。他说自己已经看过《上古卷轴6》的可玩版本，项目进展良好，但贝塞斯达会在「合适的时间」展示它。",
+          "my_sentences": [
+            "去年11月，霍华德还称《上古卷轴6》距离发售仍然「很远」。",
+            "不过他也暗示，贝塞斯达内部已经能玩到游戏，并且达成了一个重要里程碑；",
+            "目前工作室大部分人和合作伙伴都在参与该项目。"
+          ],
+          "your_sentences": [
+            "微软游戏内容与工作室总裁Matt Booty此前接受《综艺》采访时表示，正式展示一款游戏通常意味着它已经接近发售。",
+            "他说自己已经看过《上古卷轴6》的可玩版本，项目进展良好，但贝塞斯达会在「合适的时间」展示它。"
+          ]
+        },
+        {
+          "index": 7,
+          "mine": "微软游戏内容与工作室总裁Matt Booty此前接受《综艺》采访时表示，正式展示一款游戏通常意味着它已经接近发售。他说自己已经看过《上古卷轴6》的可玩版本，项目进展良好，但贝塞斯达会在「合适的时间」展示它。",
+          "yours": "",
+          "my_sentences": [
+            "微软游戏内容与工作室总裁Matt Booty此前接受《综艺》采访时表示，正式展示一款游戏通常意味着它已经接近发售。",
+            "他说自己已经看过《上古卷轴6》的可玩版本，项目进展良好，但贝塞斯达会在「合适的时间」展示它。"
+          ],
+          "your_sentences": []
+        }
+      ],
+      "dictionary_candidates": []
     }
   ]
 }
