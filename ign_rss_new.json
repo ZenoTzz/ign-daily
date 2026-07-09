@@ -1,183 +1,55 @@
 {
-  "target_date": "2026-07-09",
+  "target_date": "2026-07-10",
   "target_dates": [
-    "2026-07-09",
-    "2026-07-08"
+    "2026-07-10",
+    "2026-07-09"
   ],
   "changed_dates": [
-    "2026-07-09"
+    "2026-07-10"
   ],
   "new_target_dates": [
-    "2026-07-09"
+    "2026-07-10"
   ],
-  "new_count": 2,
-  "filtered_count": 5,
+  "new_count": 1,
+  "filtered_count": 0,
   "cleanup_count": 0,
-  "changed_count": 7,
+  "changed_count": 1,
   "articles": [
     {
-      "title": "College Football 27 Review",
-      "url": "https://www.ign.com/articles/college-football-27-review",
-      "pubDate_cst": "2026-07-09 07:40",
-      "category": "游戏评测",
-      "emoji": "⭐",
-      "source_type": "rss"
-    },
-    {
-      "title": "Doom: The Dark Ages - Revelations Review So Far",
-      "url": "https://www.ign.com/articles/doom-the-dark-ages-revelations-review",
-      "pubDate_cst": "2026-07-09 07:20",
-      "category": "游戏评测",
-      "emoji": "⭐",
+      "title": "id Software Was Reportedly 'Toying With' Pitches for a New Perfect Dark, a John Wick-Inspired Game, and More Before Layoffs",
+      "url": "https://www.ign.com/articles/id-software-was-reportedly-toying-with-pitches-for-a-new-perfect-dark-a-john-wick-inspired-game-and-more-before-layoffs",
+      "pubDate_cst": "2026-07-09 08:08",
+      "category": "游戏新闻",
+      "emoji": "🎮",
       "source_type": "rss"
     }
   ],
-  "filtered_articles": [
-    {
-      "title": "You Can Still Save 34% off the Garmin Forerunner 265 Smartwatch at AliExpress",
-      "url": "https://www.ign.com/articles/save-on-the-garmin-forerunner-265-smartwatch-ahead-of-the-4th-of-july",
-      "pubDate_cst": "2026-07-09 07:32",
-      "description": "",
-      "categories": "",
-      "reason": "text:\\bsave \\d+%",
-      "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
-      "filtered_at_cn": "2026-07-09 07:51:10",
-      "status": "filtered"
-    },
-    {
-      "title": "Dell Outlet Has a Refurb Alienware 18 Area-51 RTX 5070 Ti Gaming Laptop for $2013",
-      "url": "https://www.ign.com/articles/alienware-area-51-18-rtx-5070-ti-gaming-laptop-deal-at-dell-outlet-in-july",
-      "pubDate_cst": "2026-07-09 07:30",
-      "description": "Same 1 year warranty as buying brand new.",
-      "categories": "",
-      "reason": "url:deal",
-      "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
-      "filtered_at_cn": "2026-07-09 07:51:10",
-      "status": "filtered"
-    },
-    {
-      "title": "Save 36% Off the TP-Link Deco 7 Pro BE10000 Wi-Fi 7 Whole Home Mesh System",
-      "url": "https://www.ign.com/articles/tp-link-whole-home-mesh-system-wifi-7-router-deal-for-july",
-      "pubDate_cst": "2026-07-09 07:15",
-      "description": "Amazon's best selling WiFi 7 router.",
-      "categories": "",
-      "reason": "text:\\bsave \\d+%",
-      "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
-      "filtered_at_cn": "2026-07-09 07:51:10",
-      "status": "filtered"
-    },
-    {
-      "title": "LEGO Insiders Days 2026 Is Live",
-      "url": "https://www.ign.com/articles/lego-insiders-days-2026-best-deals",
-      "pubDate_cst": "2026-07-09 07:06",
-      "description": "Grab exclusive deals and freebies in the LEGO Insiders Days sale 2026.",
-      "categories": "",
-      "reason": "url:deal",
-      "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
-      "filtered_at_cn": "2026-07-09 07:51:10",
-      "status": "filtered"
-    },
-    {
-      "title": "The Coslus C20 Cordless Rechargeable Water Flosser Drops 83% to Just $6.99",
-      "url": "https://www.ign.com/articles/coslus-c20-cordless-rechargeable-water-flosser-deal-updated",
-      "pubDate_cst": "2026-07-09 06:50",
-      "description": "I compared it first-hand with the popular $100 Waterpik Aquarius.",
-      "categories": "",
-      "reason": "url:deal",
-      "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
-      "filtered_at_cn": "2026-07-09 07:51:10",
-      "status": "filtered"
-    }
-  ],
+  "filtered_articles": [],
   "runs": [
     {
-      "target_date": "2026-07-09",
-      "new_count": 2,
-      "filtered_count": 5,
-      "changed_count": 7,
-      "next_id": 40,
+      "target_date": "2026-07-10",
+      "new_count": 1,
+      "filtered_count": 0,
+      "changed_count": 1,
+      "next_id": 2,
       "articles": [
         {
-          "title": "College Football 27 Review",
-          "url": "https://www.ign.com/articles/college-football-27-review",
-          "pubDate_cst": "2026-07-09 07:40",
-          "category": "游戏评测",
-          "emoji": "⭐",
-          "source_type": "rss"
-        },
-        {
-          "title": "Doom: The Dark Ages - Revelations Review So Far",
-          "url": "https://www.ign.com/articles/doom-the-dark-ages-revelations-review",
-          "pubDate_cst": "2026-07-09 07:20",
-          "category": "游戏评测",
-          "emoji": "⭐",
+          "title": "id Software Was Reportedly 'Toying With' Pitches for a New Perfect Dark, a John Wick-Inspired Game, and More Before Layoffs",
+          "url": "https://www.ign.com/articles/id-software-was-reportedly-toying-with-pitches-for-a-new-perfect-dark-a-john-wick-inspired-game-and-more-before-layoffs",
+          "pubDate_cst": "2026-07-09 08:08",
+          "category": "游戏新闻",
+          "emoji": "🎮",
           "source_type": "rss"
         }
       ],
-      "filtered_articles": [
-        {
-          "title": "You Can Still Save 34% off the Garmin Forerunner 265 Smartwatch at AliExpress",
-          "url": "https://www.ign.com/articles/save-on-the-garmin-forerunner-265-smartwatch-ahead-of-the-4th-of-july",
-          "pubDate_cst": "2026-07-09 07:32",
-          "description": "",
-          "categories": "",
-          "reason": "text:\\bsave \\d+%",
-          "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
-          "filtered_at_cn": "2026-07-09 07:51:10",
-          "status": "filtered"
-        },
-        {
-          "title": "Dell Outlet Has a Refurb Alienware 18 Area-51 RTX 5070 Ti Gaming Laptop for $2013",
-          "url": "https://www.ign.com/articles/alienware-area-51-18-rtx-5070-ti-gaming-laptop-deal-at-dell-outlet-in-july",
-          "pubDate_cst": "2026-07-09 07:30",
-          "description": "Same 1 year warranty as buying brand new.",
-          "categories": "",
-          "reason": "url:deal",
-          "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
-          "filtered_at_cn": "2026-07-09 07:51:10",
-          "status": "filtered"
-        },
-        {
-          "title": "Save 36% Off the TP-Link Deco 7 Pro BE10000 Wi-Fi 7 Whole Home Mesh System",
-          "url": "https://www.ign.com/articles/tp-link-whole-home-mesh-system-wifi-7-router-deal-for-july",
-          "pubDate_cst": "2026-07-09 07:15",
-          "description": "Amazon's best selling WiFi 7 router.",
-          "categories": "",
-          "reason": "text:\\bsave \\d+%",
-          "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
-          "filtered_at_cn": "2026-07-09 07:51:10",
-          "status": "filtered"
-        },
-        {
-          "title": "LEGO Insiders Days 2026 Is Live",
-          "url": "https://www.ign.com/articles/lego-insiders-days-2026-best-deals",
-          "pubDate_cst": "2026-07-09 07:06",
-          "description": "Grab exclusive deals and freebies in the LEGO Insiders Days sale 2026.",
-          "categories": "",
-          "reason": "url:deal",
-          "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
-          "filtered_at_cn": "2026-07-09 07:51:10",
-          "status": "filtered"
-        },
-        {
-          "title": "The Coslus C20 Cordless Rechargeable Water Flosser Drops 83% to Just $6.99",
-          "url": "https://www.ign.com/articles/coslus-c20-cordless-rechargeable-water-flosser-deal-updated",
-          "pubDate_cst": "2026-07-09 06:50",
-          "description": "I compared it first-hand with the popular $100 Waterpik Aquarius.",
-          "categories": "",
-          "reason": "url:deal",
-          "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
-          "filtered_at_cn": "2026-07-09 07:51:10",
-          "status": "filtered"
-        }
-      ]
+      "filtered_articles": []
     },
     {
-      "target_date": "2026-07-08",
+      "target_date": "2026-07-09",
       "new_count": 0,
       "filtered_count": 0,
       "changed_count": 0,
-      "next_id": 23,
+      "next_id": 40,
       "articles": [],
       "filtered_articles": []
     }

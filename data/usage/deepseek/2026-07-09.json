@@ -528,6 +528,30 @@
       "total_tokens_including_reasoning": 13874,
       "prompt_cache_hit_tokens": 10368,
       "prompt_cache_miss_tokens": 1407
+    },
+    {
+      "time_cn": "2026-07-09 09:12:52",
+      "task": "title",
+      "model": "deepseek-v4-flash",
+      "article_id": 1,
+      "article_title": "id Software Was Reportedly 'Toying With' Pitches for a New Perfect Dark, a John Wick-Inspired Game, and More Before Layoffs",
+      "article_url": "https://www.ign.com/articles/id-software-was-reportedly-toying-with-pitches-for-a-new-perfect-dark-a-john-wick-inspired-game-and-more-before-layoffs",
+      "article_date": "2026-07-10",
+      "detail": "attempt=1; max_tokens=4000; finish_reason=stop",
+      "estimated_cost_usd": 0.00089801,
+      "pricing_usd_per_million": {
+        "prompt_cache_hit_tokens": 0.0028,
+        "prompt_cache_miss_tokens": 0.14,
+        "completion_tokens": 0.28
+      },
+      "prompt_tokens": 11123,
+      "completion_tokens": 1477,
+      "reasoning_tokens": 1249,
+      "output_tokens_including_reasoning": 2726,
+      "total_tokens": 12600,
+      "total_tokens_including_reasoning": 13849,
+      "prompt_cache_hit_tokens": 10368,
+      "prompt_cache_miss_tokens": 755
     }
   ]
 }
