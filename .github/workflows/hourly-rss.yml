@@ -1,8 +1,8 @@
 name: Hourly RSS
 
 on:
-  schedule:
-    - cron: "17,47 * * * *"
+  # The production server owns scheduled RSS ingestion. Keep this workflow
+  # manual-only so the GitHub Pages backup cannot spend API tokens twice.
   workflow_dispatch:
 
 permissions:
