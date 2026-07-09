@@ -1,0 +1,52 @@
+{
+  "date": "2026-07-09",
+  "observer": "codex",
+  "model": "codex",
+  "status": "observed",
+  "signals": [],
+  "candidates": [
+    {
+      "id": "dict_candidate_bernie_sanders_c7c409e38638",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：Bernie Sanders → 伯尼·桑德斯",
+      "rule": "建议将「Bernie Sanders」加入词库，译为「伯尼·桑德斯」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-07-09",
+          "article_id": 16,
+          "before": "Bernie Sanders",
+          "after": "伯尼·桑德斯",
+          "evidence": "来自文章页未确认新词候选。"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id": "dict_candidate_satya_nadella_b84c6b7b5aa1",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：Satya Nadella → Satya Nadella",
+      "rule": "建议将「Satya Nadella」加入词库，译为「Satya Nadella」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-07-09",
+          "article_id": 16,
+          "before": "Satya Nadella",
+          "after": "Satya Nadella",
+          "evidence": "来自文章页未确认新词候选。"
+        }
+      ],
+      "contradiction": ""
+    }
+  ],
+  "notes": [
+    "Added source+polished dictionary candidates for GPT/Tencent workflow."
+  ],
+  "candidate_count": 2,
+  "updated_at": "2026-07-09T09:48:54+08:00"
+}

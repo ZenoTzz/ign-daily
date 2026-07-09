@@ -1,14 +1,14 @@
 {
   "week_id": "2026-W28",
-  "generated_at": "2026-07-07T22:42:42+08:00",
+  "generated_at": "2026-07-09T09:49:15+08:00",
   "published_by": "weekly_learning_report",
   "range": {
     "start": "2026-07-06",
     "end": "2026-07-12"
   },
   "summary": {
-    "candidate_count": 103,
-    "ready_for_review": 94,
+    "candidate_count": 105,
+    "ready_for_review": 96,
     "confirmed_by_feedback": 0,
     "pending": 0
   },
@@ -306,6 +306,41 @@
         "en": "Bank Balances Rolled Back",
         "cn": "极限竞速：地平线6",
         "cat": "games",
+        "source": "user"
+      }
+    },
+    {
+      "id": "dict_candidate_bernie_sanders_c7c409e38638",
+      "title": "词库候选：Bernie Sanders → 伯尼·桑德斯",
+      "rule": "建议将「Bernie Sanders」加入词库，译为「伯尼·桑德斯」。",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "people",
+      "scope": "all",
+      "status": "ready_for_review",
+      "days": [
+        "2026-07-09"
+      ],
+      "days_seen": 1,
+      "articles_seen": 1,
+      "contradictions": 0,
+      "examples": [
+        {
+          "date": "2026-07-09",
+          "article_id": 16,
+          "before": "Bernie Sanders",
+          "after": "伯尼·桑德斯",
+          "evidence": "来自文章页未确认新词候选。"
+        }
+      ],
+      "created_at": "2026-07-09T09:48:54+08:00",
+      "last_seen": "2026-07-09",
+      "confidence": 0.8,
+      "latest_evidence_summary": "来自文章页未确认新词候选。",
+      "candidate_payload": {
+        "en": "Bernie Sanders",
+        "cn": "伯尼·桑德斯",
+        "cat": "people",
         "source": "user"
       }
     },
@@ -1390,41 +1425,6 @@
       "candidate_payload": {
         "en": "Insomniac Responds",
         "cn": "漫威金刚狼",
-        "cat": "games",
-        "source": "user"
-      }
-    },
-    {
-      "id": "dict_candidate_intergalactic_48869693140f",
-      "title": "词库候选：Intergalactic → Intergalactic",
-      "rule": "建议将「Intergalactic」加入词库，译为「Intergalactic」。",
-      "category": "dictionary",
-      "type": "dictionary_candidate",
-      "dict_category": "games",
-      "scope": "all",
-      "status": "ready_for_review",
-      "days": [
-        "2026-07-01"
-      ],
-      "days_seen": 1,
-      "articles_seen": 1,
-      "contradictions": 0,
-      "examples": [
-        {
-          "date": "2026-07-01",
-          "article_id": 52,
-          "before": "Intergalactic",
-          "after": "Intergalactic",
-          "evidence": "来自文章页未确认新词候选。"
-        }
-      ],
-      "created_at": "2026-07-01T22:36:51+08:00",
-      "last_seen": "2026-07-01",
-      "confidence": 0.8,
-      "latest_evidence_summary": "来自文章页未确认新词候选。",
-      "candidate_payload": {
-        "en": "Intergalactic",
-        "cn": "Intergalactic",
         "cat": "games",
         "source": "user"
       }

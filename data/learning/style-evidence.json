@@ -6427,6 +6427,76 @@
         "cat": "terms",
         "source": "user"
       }
+    },
+    "dict_candidate_bernie_sanders_c7c409e38638": {
+      "id": "dict_candidate_bernie_sanders_c7c409e38638",
+      "title": "词库候选：Bernie Sanders → 伯尼·桑德斯",
+      "rule": "建议将「Bernie Sanders」加入词库，译为「伯尼·桑德斯」。",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "people",
+      "scope": "all",
+      "status": "ready_for_review",
+      "days": [
+        "2026-07-09"
+      ],
+      "days_seen": 1,
+      "articles_seen": 1,
+      "contradictions": 0,
+      "examples": [
+        {
+          "date": "2026-07-09",
+          "article_id": 16,
+          "before": "Bernie Sanders",
+          "after": "伯尼·桑德斯",
+          "evidence": "来自文章页未确认新词候选。"
+        }
+      ],
+      "created_at": "2026-07-09T09:48:54+08:00",
+      "last_seen": "2026-07-09",
+      "confidence": 0.8,
+      "latest_evidence_summary": "来自文章页未确认新词候选。",
+      "candidate_payload": {
+        "en": "Bernie Sanders",
+        "cn": "伯尼·桑德斯",
+        "cat": "people",
+        "source": "user"
+      }
+    },
+    "dict_candidate_satya_nadella_b84c6b7b5aa1": {
+      "id": "dict_candidate_satya_nadella_b84c6b7b5aa1",
+      "title": "词库候选：Satya Nadella → Satya Nadella",
+      "rule": "建议将「Satya Nadella」加入词库，译为「Satya Nadella」。",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "terms",
+      "scope": "all",
+      "status": "ready_for_review",
+      "days": [
+        "2026-07-09"
+      ],
+      "days_seen": 1,
+      "articles_seen": 1,
+      "contradictions": 0,
+      "examples": [
+        {
+          "date": "2026-07-09",
+          "article_id": 16,
+          "before": "Satya Nadella",
+          "after": "Satya Nadella",
+          "evidence": "来自文章页未确认新词候选。"
+        }
+      ],
+      "created_at": "2026-07-09T09:48:54+08:00",
+      "last_seen": "2026-07-09",
+      "confidence": 0.8,
+      "latest_evidence_summary": "来自文章页未确认新词候选。",
+      "candidate_payload": {
+        "en": "Satya Nadella",
+        "cn": "Satya Nadella",
+        "cat": "terms",
+        "source": "user"
+      }
     }
   },
   "updated_at": "2026-07-06T22:38:50+08:00"

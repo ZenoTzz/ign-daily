@@ -1,0 +1,178 @@
+{
+  "date": "2026-07-09",
+  "generated_at": "2026-07-09T09:48:54.216057",
+  "total_articles": 2,
+  "dictionary_candidate_count": 2,
+  "dictionary_candidates": [
+    {
+      "id": "dict_candidate_bernie_sanders_c7c409e38638",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "people",
+      "en": "Bernie Sanders",
+      "cn": "伯尼·桑德斯",
+      "title": "词库候选：Bernie Sanders → 伯尼·桑德斯",
+      "rule": "建议将「Bernie Sanders」加入词库，译为「伯尼·桑德斯」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "date": "2026-07-09",
+      "article_id": 16,
+      "article_title": "伯尼·桑德斯怒批微软XBOX裁员涨价",
+      "url": "https://www.ign.com/articles/it-never-trickles-down-bernie-sanders-hits-out-at-microsoft-over-xbox-layoffs-and-console-price-rises-says-they-prove-corporate-tax-breaks-do-not-create-jobs",
+      "evidence": "来自文章页未确认新词候选。"
+    },
+    {
+      "id": "dict_candidate_satya_nadella_b84c6b7b5aa1",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "terms",
+      "en": "Satya Nadella",
+      "cn": "Satya Nadella",
+      "title": "词库候选：Satya Nadella → Satya Nadella",
+      "rule": "建议将「Satya Nadella」加入词库，译为「Satya Nadella」。",
+      "status": "ready_for_review",
+      "confidence": "high",
+      "date": "2026-07-09",
+      "article_id": 16,
+      "article_title": "伯尼·桑德斯怒批微软XBOX裁员涨价",
+      "url": "https://www.ign.com/articles/it-never-trickles-down-bernie-sanders-hits-out-at-microsoft-over-xbox-layoffs-and-console-price-rises-says-they-prove-corporate-tax-breaks-do-not-create-jobs",
+      "evidence": "来自文章页未确认新词候选。"
+    }
+  ],
+  "learning_evidence_updated": true,
+  "daily_learning_updated": true,
+  "articles": [
+    {
+      "id": 1,
+      "cn_title": "任天堂手游《马力欧卡丁车巡回赛》将于9月停服",
+      "en_title": "Nintendo Confirms Mario Kart Tour Shutdown After 7 Years, No Offline Version Offered",
+      "url": "https://www.ign.com/articles/nintendo-confirms-mario-kart-tour-shutdown-after-7-years-no-offline-version-offered",
+      "category": "游戏新闻",
+      "has_translation": true,
+      "title_diff": {
+        "mine": "任天堂《马力欧卡丁车巡回赛》9月停服",
+        "yours": "任天堂手游《马力欧卡丁车巡回赛》将于9月停服"
+      },
+      "subtitle_diff": null,
+      "body_diffs": [
+        {
+          "index": 1,
+          "mine": "官方今天早上在社交媒体发布公告，确认这款iPhone和Android游戏将于太平洋时间9月29日晚上11点停止运营。本作最初于2019年9月推出，是任天堂目前仍在运营的少数移动游戏之一。",
+          "yours": "官方今天早上在社交媒体发布公告，确认这款iPhone和Android游戏将于太平洋时间9月29日晚上11点（北京时间9月30日下午2点）停止运营。本作最初于2019年9月推出，是任天堂目前仍在运营的少数移动游戏之一。",
+          "my_sentences": [
+            "官方今天早上在社交媒体发布公告，确认这款iPhone和Android游戏将于太平洋时间9月29日晚上11点停止运营。",
+            "本作最初于2019年9月推出，是任天堂目前仍在运营的少数移动游戏之一。"
+          ],
+          "your_sentences": [
+            "官方今天早上在社交媒体发布公告，确认这款iPhone和Android游戏将于太平洋时间9月29日晚上11点（北京时间9月30日下午2点）停止运营。",
+            "本作最初于2019年9月推出，是任天堂目前仍在运营的少数移动游戏之一。"
+          ]
+        },
+        {
+          "index": 6,
+          "mine": "然而，与《集合啦 动物森友会 口袋露营广场》停服不同，任天堂并没有准备一款独立离线版，让玩家在《马力欧卡丁车巡回赛》服务器关闭后迁移过去。官方极简FAQ页面写道：「目前没有发布离线版的计划。」这很遗憾，因为这会让几条本作独占的《马力欧卡丁车》赛道永远无法游玩。",
+          "yours": "然而，与《动物森友会 口袋露营广场》的停服不同，任天堂并没有准备一款独立离线版，让玩家在《马力欧卡丁车巡回赛》服务器关闭后迁移过去。官方极简FAQ页面写道：「目前没有发布离线版的计划。」这很遗憾，因为这会让几条本作独占的《马力欧卡丁车》赛道永远无法游玩。",
+          "my_sentences": [
+            "然而，与《集合啦 动物森友会 口袋露营广场》停服不同，任天堂并没有准备一款独立离线版，让玩家在《马力欧卡丁车巡回赛》服务器关闭后迁移过去。",
+            "官方极简FAQ页面写道：「目前没有发布离线版的计划。",
+            "」这很遗憾，因为这会让几条本作独占的《马力欧卡丁车》赛道永远无法游玩。"
+          ],
+          "your_sentences": [
+            "然而，与《动物森友会 口袋露营广场》的停服不同，任天堂并没有准备一款独立离线版，让玩家在《马力欧卡丁车巡回赛》服务器关闭后迁移过去。",
+            "官方极简FAQ页面写道：「目前没有发布离线版的计划。",
+            "」这很遗憾，因为这会让几条本作独占的《马力欧卡丁车》赛道永远无法游玩。"
+          ]
+        },
+        {
+          "index": 7,
+          "mine": "或许没有离线版，是因为《马力欧卡丁车世界》被视为推动Switch 2普及的关键作品。任天堂显然更希望你买一台主机去玩它，而全新的《集合啦 动物森友会》看起来仍要等很多年。",
+          "yours": "或许没有离线版，是因为《马力欧卡丁车世界》被视为推动Switch 2普及的关键作品。任天堂显然更希望你买一台主机去玩它，而新一作的《动物森友会》看起来仍要等很多年。",
+          "my_sentences": [
+            "或许没有离线版，是因为《马力欧卡丁车世界》被视为推动Switch 2普及的关键作品。",
+            "任天堂显然更希望你买一台主机去玩它，而全新的《集合啦 动物森友会》看起来仍要等很多年。"
+          ],
+          "your_sentences": [
+            "或许没有离线版，是因为《马力欧卡丁车世界》被视为推动Switch 2普及的关键作品。",
+            "任天堂显然更希望你买一台主机去玩它，而新一作的《动物森友会》看起来仍要等很多年。"
+          ]
+        },
+        {
+          "index": 8,
+          "mine": "无论如何，随着《马力欧卡丁车巡回赛》停服，任天堂的手机游戏目录会进一步收缩。《火焰纹章 英雄》和《Fire Emblem Shadows》仍在运营，《超级马力欧跑酷》也还活着。此外还有《Pikmin Bloom》，这款游戏主要由《宝可梦GO》开发商Niantic运营。",
+          "yours": "无论如何，随着《马力欧卡丁车巡回赛》停服，任天堂的手机游戏列表会进一步收缩。《火焰纹章 英雄》和《火焰纹章 暗影》仍在运营，《超级马力欧跑酷》也还活着。此外还有《皮克敏 Bloom》，这款游戏主要由《宝可梦GO》开发商Niantic运营。",
+          "my_sentences": [
+            "无论如何，随着《马力欧卡丁车巡回赛》停服，任天堂的手机游戏目录会进一步收缩。",
+            "《火焰纹章 英雄》和《Fire Emblem Shadows》仍在运营，《超级马力欧跑酷》也还活着。",
+            "此外还有《Pikmin Bloom》，这款游戏主要由《宝可梦GO》开发商Niantic运营。"
+          ],
+          "your_sentences": [
+            "无论如何，随着《马力欧卡丁车巡回赛》停服，任天堂的手机游戏列表会进一步收缩。",
+            "《火焰纹章 英雄》和《火焰纹章 暗影》仍在运营，《超级马力欧跑酷》也还活着。",
+            "此外还有《皮克敏 Bloom》，这款游戏主要由《宝可梦GO》开发商Niantic运营。"
+          ]
+        },
+        {
+          "index": 9,
+          "mine": "不过，任天堂并没有完全放弃智能手机野心。今年早些时候，它推出了《Pictonico!》，这款应用可以把相册里的图片变成《瓦力欧制造》风格小游戏。",
+          "yours": "不过，任天堂并没有完全放弃智能手机市场。今年早些时候，它推出了《Pictonico!》，这款应用可以把相册里的图片变成《瓦力欧制造》风格的小游戏。",
+          "my_sentences": [
+            "不过，任天堂并没有完全放弃智能手机野心。",
+            "今年早些时候，它推出了《Pictonico!》，这款应用可以把相册里的图片变成《瓦力欧制造》风格小游戏。"
+          ],
+          "your_sentences": [
+            "不过，任天堂并没有完全放弃智能手机市场。",
+            "今年早些时候，它推出了《Pictonico!》，这款应用可以把相册里的图片变成《瓦力欧制造》风格的小游戏。"
+          ]
+        }
+      ],
+      "dictionary_candidates": []
+    },
+    {
+      "id": 16,
+      "cn_title": "伯尼·桑德斯怒批微软XBOX裁员涨价",
+      "en_title": "'It Never Trickles Down' — Bernie Sanders Hits Out at Microsoft Over Xbox Layoffs and Console Price Rises, Says They Prove Corporate Tax Breaks Do Not Create Jobs",
+      "url": "https://www.ign.com/articles/it-never-trickles-down-bernie-sanders-hits-out-at-microsoft-over-xbox-layoffs-and-console-price-rises-says-they-prove-corporate-tax-breaks-do-not-create-jobs",
+      "category": "行业动态",
+      "has_translation": true,
+      "title_diff": null,
+      "subtitle_diff": null,
+      "body_diffs": [],
+      "dictionary_candidates": [
+        {
+          "id": "dict_candidate_bernie_sanders_c7c409e38638",
+          "category": "dictionary",
+          "type": "dictionary_candidate",
+          "dict_category": "people",
+          "en": "Bernie Sanders",
+          "cn": "伯尼·桑德斯",
+          "title": "词库候选：Bernie Sanders → 伯尼·桑德斯",
+          "rule": "建议将「Bernie Sanders」加入词库，译为「伯尼·桑德斯」。",
+          "status": "ready_for_review",
+          "confidence": "high",
+          "date": "2026-07-09",
+          "article_id": 16,
+          "article_title": "伯尼·桑德斯怒批微软XBOX裁员涨价",
+          "url": "https://www.ign.com/articles/it-never-trickles-down-bernie-sanders-hits-out-at-microsoft-over-xbox-layoffs-and-console-price-rises-says-they-prove-corporate-tax-breaks-do-not-create-jobs",
+          "evidence": "来自文章页未确认新词候选。"
+        },
+        {
+          "id": "dict_candidate_satya_nadella_b84c6b7b5aa1",
+          "category": "dictionary",
+          "type": "dictionary_candidate",
+          "dict_category": "terms",
+          "en": "Satya Nadella",
+          "cn": "Satya Nadella",
+          "title": "词库候选：Satya Nadella → Satya Nadella",
+          "rule": "建议将「Satya Nadella」加入词库，译为「Satya Nadella」。",
+          "status": "ready_for_review",
+          "confidence": "high",
+          "date": "2026-07-09",
+          "article_id": 16,
+          "article_title": "伯尼·桑德斯怒批微软XBOX裁员涨价",
+          "url": "https://www.ign.com/articles/it-never-trickles-down-bernie-sanders-hits-out-at-microsoft-over-xbox-layoffs-and-console-price-rises-says-they-prove-corporate-tax-breaks-do-not-create-jobs",
+          "evidence": "来自文章页未确认新词候选。"
+        }
+      ]
+    }
+  ]
+}
