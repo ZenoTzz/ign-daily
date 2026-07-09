@@ -109,6 +109,9 @@ const GH = {
         body: JSON.stringify({ content, message })
       });
     }
+    if (typeof ServerAPI !== 'undefined' && ServerAPI.enabledByHost()) {
+      throw new Error('请先登录服务器账号');
+    }
     const token = localStorage.getItem('gh_token');
     if (!token) throw new Error('未配置 GitHub Token，请在右上角 ⚙️ 设置');
 
@@ -147,6 +150,9 @@ const GH = {
         body: JSON.stringify({ sha, message })
       });
     }
+    if (typeof ServerAPI !== 'undefined' && ServerAPI.enabledByHost()) {
+      throw new Error('请先登录服务器账号');
+    }
     const token = localStorage.getItem('gh_token');
     if (!token) throw new Error('未配置 GitHub Token，请在右上角 ⚙️ 设置');
     const res = await fetch(`${this.apiBase}/repos/${this.owner}/${this.repo}/contents/${path}`, {
@@ -170,6 +176,9 @@ const GH = {
         method: 'POST',
         body: JSON.stringify({ workflow: workflowFile, inputs })
       });
+    }
+    if (typeof ServerAPI !== 'undefined' && ServerAPI.enabledByHost()) {
+      throw new Error('请先登录服务器账号');
     }
     const token = localStorage.getItem('gh_token');
     if (!token) throw new Error('未配置 GitHub Token，请在右上角 ⚙️ 设置');
@@ -2027,18 +2036,23 @@ function appData() {
       try {
         const date = this.data.date;
         const selIds = [...this.selected].map(x => Number(x)).sort((a,b) => a-b);
-        if (this.shouldUseServerApi()) {
+        if (ServerAPI.enabledByHost()) {
+          if (!ServerAPI.token()) {
+            this.showSettings = true;
+            this.flash('请先登录服务器账号，再提交翻译', 5000);
+            return;
+          }
           try {
             await this.submitRequestWithServerApi(date, selIds);
             return;
           } catch (apiError) {
             if (apiError.status === 401) {
+              localStorage.removeItem('ign_api_token');
               this.showSettings = true;
               this.flash('请先登录服务器账号，再提交翻译', 5000);
               return;
             }
-            if (ServerAPI.enabledByHost()) throw apiError;
-            console.warn('Server API unavailable, falling back to GitHub PAT', apiError);
+            throw apiError;
           }
         }
         // Build URL map so heartbeat can match by URL even if IDs shift
