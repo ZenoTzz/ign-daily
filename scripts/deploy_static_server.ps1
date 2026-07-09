@@ -23,6 +23,8 @@ tar -xf /tmp/ign-daily-static.tar -C "`$deploy_dir"
 sudo rsync -a --delete \
   --exclude '.git/' \
   --exclude '.env' \
+  --exclude 'data/' \
+  --exclude 'exchange_rates.json' \
   --exclude 'server_api/.env' \
   "`$deploy_dir"/ "$ServerPath"/
 sudo chown -R ${User}:${User} "$ServerPath"

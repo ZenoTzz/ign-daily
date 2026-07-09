@@ -87,6 +87,8 @@ jobs:
             sudo rsync -a --delete \
               --exclude '.git/' \
               --exclude '.env' \
+              --exclude 'data/' \
+              --exclude 'exchange_rates.json' \
               --exclude 'server_api/.env' \
               \"\$deploy_dir\"/ \"\$server_path\"/
             sudo chown -R $SERVER_USER:$SERVER_USER \"\$server_path\"
