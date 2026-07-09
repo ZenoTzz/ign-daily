@@ -81,16 +81,34 @@ jobs:
             deploy_dir='/tmp/ign-daily-deploy-${GITHUB_SHA}'
             archive='/tmp/ign-daily-site-${GITHUB_SHA}.tar.gz'
             server_path='$SERVER_PATH'
+            preserve_dir='/tmp/ign-daily-preserve-${GITHUB_SHA}'
+            restore_preserved() {
+              if [ -d \"\$preserve_dir/data\" ]; then
+                sudo rm -rf \"\$server_path/data\"
+                sudo mv \"\$preserve_dir/data\" \"\$server_path/data\"
+              fi
+              if [ -f \"\$preserve_dir/exchange_rates.json\" ]; then
+                sudo mv \"\$preserve_dir/exchange_rates.json\" \"\$server_path/exchange_rates.json\"
+              fi
+              sudo rm -rf \"\$preserve_dir\"
+            }
+            trap restore_preserved EXIT
             rm -rf \"\$deploy_dir\"
-            mkdir -p \"\$deploy_dir\"
+            mkdir -p \"\$deploy_dir\" \"\$preserve_dir\"
+            if [ -d \"\$server_path/data\" ]; then
+              sudo mv \"\$server_path/data\" \"\$preserve_dir/data\"
+            fi
+            if [ -f \"\$server_path/exchange_rates.json\" ]; then
+              sudo mv \"\$server_path/exchange_rates.json\" \"\$preserve_dir/exchange_rates.json\"
+            fi
             tar -xzf \"\$archive\" -C \"\$deploy_dir\"
             sudo rsync -a --delete \
               --exclude '.git/' \
               --exclude '.env' \
-              --exclude 'data/' \
-              --exclude 'exchange_rates.json' \
               --exclude 'server_api/.env' \
               \"\$deploy_dir\"/ \"\$server_path\"/
+            restore_preserved
+            trap - EXIT
             sudo chown -R $SERVER_USER:$SERVER_USER \"\$server_path\"
             sudo find \"\$server_path\" -type d -exec chmod 755 {} +
             sudo find \"\$server_path\" -type f -exec chmod 644 {} +
