@@ -153,7 +153,6 @@ def title_user_payload(
                     "read_style_profile": True,
                     "no_english_syntax": True,
                     "title_rewritten": True,
-                    "subtitle_rewritten": True,
                     "xbox_normalized": True,
                     "xbox_series_normalized": True,
                     "quotes_checked": True,
@@ -311,13 +310,14 @@ def validate_style_check(result: dict[str, Any], article: dict[str, Any], is_ful
                 "read_style_profile",
                 "no_english_syntax",
                 "title_rewritten",
-                "subtitle_rewritten",
                 "xbox_normalized",
                 "xbox_series_normalized",
                 "quotes_checked",
                 "currency_checked",
                 "dictionary_checked"
             ]
+            if is_fulltext:
+                required_keys.insert(3, "subtitle_rewritten")
             for key in required_keys:
                 val = self_check.get(key)
                 if val is not True:
