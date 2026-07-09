@@ -1,6 +1,6 @@
 # IGN Daily Translation Requirements
 
-Last updated: 2026-07-02
+Last updated: 2026-07-09
 
 This is the compact source of truth for day-to-day translation work. If this
 file conflicts with older handoff notes, follow this file, then check
@@ -152,6 +152,10 @@ Current document requirements:
 - Sort order: newest to oldest.
 - One article per page, separated with page breaks.
 - Title line: `YY/MM/DD 标题`, Heading 1, Microsoft YaHei, 18 pt, bold, dark gray.
+  The date prefix is the news-day date from `data/{date}`, not the article's
+  raw `publish_time_cn` calendar date. Example: articles published after 08:00
+  on 2026-07-08 belong to `data/2026-07-09` and must display `26/07/09` in
+  Google Docs.
 - Subtitle line: Heading 2, Microsoft YaHei, 15 pt, italic, gray.
 - Body: Normal text, Microsoft YaHei, 11 pt, justified, 1.15 line spacing, with
   paragraph spacing matching the user's manually formatted July sample.

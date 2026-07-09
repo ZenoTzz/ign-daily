@@ -710,6 +710,7 @@ def sync_incremental(service: Any, target_date: str, *, dry_run: bool = False) -
 
     # Extract existing titles to avoid duplication
     existing_titles = set()
+    existing_title_items = []
     for item in content:
         para = item.get("paragraph")
         if para:
@@ -719,22 +720,18 @@ def sync_incremental(service: Any, target_date: str, *, dry_run: bool = False) -
             ).strip()
             if text:
                 existing_titles.add(text)
+                if DATE_HEADING_RE.match(text):
+                    existing_title_items.append(
+                        {
+                            "text": text,
+                            "startIndex": int(item.get("startIndex", 0)),
+                            "endIndex": int(item.get("endIndex", 0)),
+                        }
+                    )
 
     # Build text to prepend
+    date_prefix = target_date[2:].replace("-", "/")
     for article in articles:
-        pub_time = article.get("publish_time_cn") or ""
-        if pub_time:
-            parts = pub_time.split(" ")[0].split("-")
-            if len(parts) == 3:
-                yy = parts[0][2:]
-                mm = parts[1]
-                dd = parts[2]
-                date_prefix = f"{yy}/{mm}/{dd}"
-            else:
-                date_prefix = target_date[2:].replace("-", "/")
-        else:
-            date_prefix = target_date[2:].replace("-", "/")
-
         title = article.get("cn_title", "").strip()
         subtitle = article.get("subtitle", "").strip()
 
@@ -744,9 +741,45 @@ def sync_incremental(service: Any, target_date: str, *, dry_run: bool = False) -
 
         # Check if already exists in Doc
         dup_found = False
-        for ext in existing_titles:
-            if title_line.strip() in ext or title in ext:
+        for existing in existing_title_items:
+            ext = existing["text"]
+            if title_line.strip() in ext:
                 dup_found = True
+                break
+            if title in ext:
+                dup_found = True
+                if not ext.startswith(f"{date_prefix} "):
+                    print(
+                        f"[~] Updating date prefix '{ext[:8]}' -> '{date_prefix}' "
+                        f"for '{title}'"
+                    )
+                    if not dry_run:
+                        execute_batch(
+                            service,
+                            [
+                                {
+                                    "deleteContentRange": {
+                                        "range": {
+                                            "tabId": tab_id,
+                                            "startIndex": existing["startIndex"],
+                                            "endIndex": existing["endIndex"] - 1,
+                                        }
+                                    }
+                                },
+                                {
+                                    "insertText": {
+                                        "location": {
+                                            "tabId": tab_id,
+                                            "index": existing["startIndex"],
+                                        },
+                                        "text": title_line.strip(),
+                                    }
+                                },
+                            ],
+                        )
+                    existing["text"] = title_line.strip()
+                    existing_titles.discard(ext)
+                    existing_titles.add(title_line.strip())
                 break
 
         if dup_found:

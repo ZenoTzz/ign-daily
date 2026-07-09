@@ -581,6 +581,7 @@ workspace/
 - `scripts/translate_pipeline.py` post 阶段会校验译文 JSON 的 `url`/`en_title` 与 index 文章一致，不一致必须停止，避免 A 文请求错写到 B 文。
 - 日期归属固定按 8:00 CST 分界：`data/YYYY-MM-DD` 覆盖前一天 08:00 到当天 08:00，左闭右开。例：`data/2026-06-02` 只能放 `2026-06-01 08:00 <= publish_time_cn < 2026-06-02 08:00`。
 - `scripts/rss_queue_check.py` 和 `scripts/agent_doctor.py` 会检查最新/目标 index 的 `publish_time_cn` 是否落在对应日期窗口内。
+- Google Docs 增量同步的标题日期前缀必须使用新闻日 `data/{date}`，不是文章原始 `publish_time_cn` 的自然日。例：2026-07-08 08:00 后发布、归入 `data/2026-07-09` 的文章，在 Google Docs 标题前缀必须写 `26/07/09`。
 
 ## 2026-07-02 风格自检与本地硬质检机制
 
