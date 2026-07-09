@@ -21,8 +21,6 @@
   }
 
   function renderComplianceFooter(config) {
-    if (document.querySelector('.site-compliance-footer')) return;
-
     const icpNumber = clean(config.icpNumber);
     const icpUrl = clean(config.icpUrl) || 'https://beian.miit.gov.cn/';
     const mpsNumber = clean(config.mpsNumber);
@@ -32,23 +30,34 @@
 
     if (!icpNumber && !mpsNumber && !copyright) return;
 
-    const footer = document.createElement('footer');
-    footer.className = 'site-compliance-footer';
-    footer.setAttribute('aria-label', '备案信息');
+    let footer = document.querySelector('.site-compliance-footer');
+    let inner = footer ? footer.querySelector('.site-compliance-inner') : null;
+    if (!footer) {
+      footer = document.createElement('footer');
+      footer.className = 'site-compliance-footer';
+      footer.setAttribute('aria-label', '备案信息');
+      inner = document.createElement('div');
+      inner.className = 'site-compliance-inner';
+      footer.appendChild(inner);
+      document.body.appendChild(footer);
+    }
+    if (!inner) return;
 
-    const inner = document.createElement('div');
-    inner.className = 'site-compliance-inner';
+    if (copyright && !inner.querySelector('[data-compliance="copyright"]')) {
+      const copy = addText(inner, copyright);
+      copy.dataset.compliance = 'copyright';
+    }
 
-    if (copyright) addText(inner, copyright);
-
-    if (icpNumber) {
+    if (icpNumber && !inner.querySelector('[data-compliance="icp"]')) {
       const icp = externalLink(icpUrl);
+      icp.dataset.compliance = 'icp';
       icp.textContent = icpNumber;
       inner.appendChild(icp);
     }
 
-    if (mpsNumber) {
+    if (mpsNumber && !inner.querySelector('[data-compliance="mps"]')) {
       const mps = mpsUrl ? externalLink(mpsUrl) : document.createElement('span');
+      mps.dataset.compliance = 'mps';
       mps.className = 'site-compliance-mps';
       if (mpsIcon) {
         const icon = document.createElement('img');
@@ -62,9 +71,6 @@
       mps.appendChild(text);
       inner.appendChild(mps);
     }
-
-    footer.appendChild(inner);
-    document.body.appendChild(footer);
   }
 
   async function loadComplianceConfig() {
