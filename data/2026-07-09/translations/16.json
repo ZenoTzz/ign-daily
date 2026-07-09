@@ -113,17 +113,10 @@
   },
   "pending_dict": [
     {
-      "en": "Bernie Sanders",
-      "cn": "伯尼·桑德斯",
-      "cat": "people",
-      "source": "manual_candidate",
-      "reason": "美国参议员常见中文译名，词库未见稳定条目。"
-    },
-    {
       "en": "Satya Nadella",
       "cn": "Satya Nadella",
       "cat": "people",
-      "source": "manual_candidate",
+      "source": "ai_guess",
       "reason": "词库未收录；为避免误译，正文暂保留英文名。"
     }
   ]
