@@ -12,6 +12,7 @@
 | `pre_push_check.py` | 包装三连校验，防止忘跑某一步 | 每次 push 前 |
 | `rss_queue_check.py` | 校验 RSS-only 自动化写出的 index/need_titles 队列 | GitHub Actions RSS 提交前 |
 | `article_cache.py` | 抓取并缓存干净英文正文、封面图、正文图 | RSS 后、API 翻译前 |
+| `ensure_translation_media.py` | 从 `sources/NN.json` 补回遗漏或损坏的译文封面与配图 | Codex/人工翻译写回后、标记任务完成前 |
 | `translate_titles_deepseek.py` | OpenAI-compatible API 标题摘要翻译，只处理 need_titles 队列 | `title_translator=api` |
 | `translate_fulltext_api.py` | 可选 OpenAI-compatible API 正文翻译，强制跑后处理和校验 | `fulltext_translator=api` |
 | `translate_compare_api.py` | 手动把同一篇文章交给一个或多个模型各翻一次，写入 comparisons/NN.json，不覆盖正式译文 | 网页“对比翻译”按钮 |
