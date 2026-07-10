@@ -3,11 +3,11 @@
   "articles": [
     {
       "id": 14,
-      "category": "游戏评测",
-      "emoji": "⭐",
+      "category": "评测评分",
+      "emoji": "🎮",
       "en_title": "HyperMegaTech Super Pocket Rare Edition Review",
-      "cn_title": "HyperMegaTech Super Pocket Rare Edition Review",
-      "summary": "",
+      "cn_title": "HyperMegaTech Super Pocket Rare Edition 评测",
+      "summary": "Blaze Entertainment 推出第七款 Super Pocket 掌机「Rare Edition」，内置14款Rare经典游戏，包括《班卓熊大冒险》《忍者蛙》等，并兼容Evercade卡带。2.8英寸IPS屏幕、续航约4小时，售价69.99美元(约合人民币476元)（约合503元人民币），虽控制方案需适应，但便携体验扎实。",
       "url": "https://www.ign.com/articles/hypermegatech-super-pocket-rare-edition-review",
       "publish_time_cn": "2026-07-10 07:44",
       "pub_date": "2026-07-10 07:44",
@@ -28,7 +28,7 @@
         "https://assets-prd.ignimgs.com/2026/07/09/10-2026-06-27-12-38-08-1783639628721.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-07-10T09:43:13+08:00"
+      "source_fetched_at": "2026-07-10T08:49:45+08:00"
     },
     {
       "id": 15,
@@ -52,7 +52,11 @@
         "https://assets-prd.ignimgs.com/2021/12/07/doom-game-new-1638838395325.jpeg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-07-10T08:49:47+08:00"
+      "source_fetched_at": "2026-07-10T08:49:47+08:00",
+      "translator": "codex",
+      "translator_provider": "manual",
+      "translator_model": "gpt-5-codex",
+      "translation_path": "translations/15.json"
     },
     {
       "id": 16,
@@ -76,15 +80,19 @@
         "https://assets-prd.ignimgs.com/2024/02/23/naruto-button-1708724815128.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-07-10T08:49:48+08:00"
+      "source_fetched_at": "2026-07-10T08:49:48+08:00",
+      "translator": "codex",
+      "translator_provider": "manual",
+      "translator_model": "gpt-5-codex",
+      "translation_path": "translations/16.json"
     },
     {
       "id": 17,
       "category": "行业动态",
       "emoji": "🤖",
       "en_title": "Xbox CEO Asha Sharma Is Advising the Federal Reserve on the Economic Impact of AI as Part of a 'Productivity and Jobs' Taskforce",
-      "cn_title": "XBOX CEO Asha Sharma 加入美联储「生产力与就业」工作组，评估AI经济影响",
-      "summary": "美联储宣布任命XBOX CEO Asha Sharma为「生产力与就业」工作组成员，协助评估人工智能等新技术的经济影响。Sharma此前在微软核心AI组工作，今年年初接替菲尔·斯宾塞掌管XBOX业务。美联储主席Kevin Warsh表示，各工作组将审视政策工具与方法能否改进。XBOX近期宣布裁员约3200人，并关闭多个工作室。",
+      "cn_title": "XBOX CEO Asha Sharma 加入美联储 AI 经济影响工作组",
+      "summary": "XBOX CEO Asha Sharma 将加入美联储「生产力与就业」工作组，评估人工智能等新技术对经济的影响。就在几天前，XBOX 宣布新一轮裁员，约1600名员工失业。Sharma 此前发布的「Reset」备忘录中强调将聚焦《光环》《我的世界》等核心IP，并计划将管理层级从最多14层削减至5层以下。",
       "url": "https://www.ign.com/articles/xbox-ceo-asha-sharma-is-advising-the-federal-reserve-on-the-economic-impact-of-ai-as-part-of-a-productivity-and-jobs-taskforce",
       "publish_time_cn": "2026-07-10 05:44",
       "pub_date": "2026-07-10 05:44",
@@ -99,15 +107,15 @@
         "https://assets-prd.ignimgs.com/2022/09/22/xbox-game-pass-button-2-1663817481985.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-07-10T09:43:15+08:00"
+      "source_fetched_at": "2026-07-10T08:49:51+08:00"
     },
     {
       "id": 18,
       "category": "游戏新闻",
-      "emoji": "📜",
+      "emoji": "🎮",
       "en_title": "How to Play the Fallout Games in Chronological Order",
-      "cn_title": "《辐射》系列按时间线游玩指南",
-      "summary": "《辐射》系列拥有九部主线游戏及多款扩展包，时间线从《辐射76》的核战后25年延续至《辐射4》的2287年。本文梳理了游戏内的历史顺序，包括《辐射》、《辐射2》、《辐射3》及资料片，帮助新老玩家更好地体验这部后末日经典。",
+      "cn_title": "按时间顺序畅玩《辐射》系列",
+      "summary": "随着Obsidian新《辐射》游戏的传闻，再次探索废土的最佳时机已到。本文梳理了整个系列的时间线，从《辐射76》到《辐射4》，涵盖主线作品及大型扩展内容，并说明哪些衍生作品因时间冲突或非正史而未列入。无论是老玩家重温还是新玩家入坑，这份指南都能帮你找到最佳起点。",
       "url": "https://www.ign.com/articles/fallout-games-in-order",
       "publish_time_cn": "2026-07-10 02:47",
       "pub_date": "2026-07-10 02:47",
@@ -128,7 +136,30 @@
         "https://assets2.ignimgs.com/2008/06/25/fallout-3-screenshots-20080625101551901-2447176.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-07-10T09:43:15+08:00"
+      "source_fetched_at": "2026-07-10T08:49:53+08:00",
+      "pending_dict": [
+        {
+          "en": "Obsidian",
+          "cn": "黑曜石",
+          "cat": "companies",
+          "source": "ai_guess",
+          "reason": "Obsidian Entertainment 中文圈常用译名，但词库中未见，需确认是否作为公司名加入。"
+        },
+        {
+          "en": "Micro Forté",
+          "cn": "Micro Forté",
+          "cat": "companies",
+          "source": "ai_guess",
+          "reason": "较少见，保留英文，无通行中文译名。"
+        },
+        {
+          "en": "Black Isle Studios",
+          "cn": "黑岛工作室",
+          "cat": "companies",
+          "source": "ai_guess",
+          "reason": "中文圈常用译名，但词库中未见，需确认。"
+        }
+      ]
     },
     {
       "id": 19,
@@ -151,7 +182,11 @@
         "https://assets-prd.ignimgs.com/2021/12/30/call-of-duty-black-ops-1-button-1640898530662.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-07-10T08:49:55+08:00"
+      "source_fetched_at": "2026-07-10T08:49:55+08:00",
+      "translator": "codex",
+      "translator_provider": "manual",
+      "translator_model": "gpt-5-codex",
+      "translation_path": "translations/19.json"
     },
     {
       "id": 20,
@@ -174,15 +209,19 @@
         "https://assets-prd.ignimgs.com/2026/04/23/0962bc91a4952e6433367fcfec38b7e0655c6bd29b431712-1776975059736.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-07-10T08:49:57+08:00"
+      "source_fetched_at": "2026-07-10T08:49:57+08:00",
+      "translator": "codex",
+      "translator_provider": "manual",
+      "translator_model": "gpt-5-codex",
+      "translation_path": "translations/20.json"
     },
     {
       "id": 21,
       "category": "游戏新闻",
       "emoji": "🃏",
       "en_title": "Pokémon TCG's New Chaos Rising ETBs Are Back in Stock, and at Market Price",
-      "cn_title": "《宝可梦卡牌》新扩展包 Chaos Rising 精英训练家礼盒亚马逊补货，价格回归市场价",
-      "summary": "亚马逊近日补货了《宝可梦卡牌》最新扩展包 Chaos Rising 精英训练家礼盒，Prime 会员价仅为 79.99英镑(约合人民币729元)，与 TCGplayer 等平台市场价持平。该礼盒包含 9 包补充包、全闪 promo 卡等，是目前性价比较高的入手渠道。此外，亚马逊还以 179美元(约合人民币1217元)的价格补货了 Prismatic Evolutions 精英训练家礼盒，低于 TCGplayer 市场价。",
+      "cn_title": "《宝可梦卡牌：Chaos Rising》精英宝盒补货市价",
+      "summary": "亚马逊补货了《宝可梦卡牌：Chaos Rising》精英训练家宝盒，Prime会员售价79.99英镑(约合人民币729元)(约合728元人民币)，接近市场价75-80美元(约合人民币544元)(约540-576元人民币)。该扩展包开包率友好，约42.3%含ex卡及以上，全画卡约8.3%。棱镜进化精英训练家宝盒也同步降价至179美元(约合人民币1217元)(约合1289元人民币)。",
       "url": "https://www.ign.com/articles/pokemon-tcg-chaos-rising-etb-in-stock-amazon-market-price",
       "publish_time_cn": "2026-07-10 00:48",
       "pub_date": "2026-07-10 00:48",
@@ -203,15 +242,31 @@
         "https://assets-prd.ignimgs.com/2026/07/01/81ve1kto-pl-ac-sl1500-1782914564905.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-07-10T09:43:17+08:00"
+      "source_fetched_at": "2026-07-10T08:50:00+08:00",
+      "pending_dict": [
+        {
+          "en": "Chaos Rising",
+          "cn": "混沌崛起",
+          "cat": "games",
+          "source": "ai_guess",
+          "reason": "宝可梦卡牌扩展包，暂无官方中文译名确认"
+        },
+        {
+          "en": "Prismatic Evolutions",
+          "cn": "棱镜进化",
+          "cat": "games",
+          "source": "ai_guess",
+          "reason": "宝可梦卡牌扩展包，暂无官方中文译名确认"
+        }
+      ]
     },
     {
       "id": 22,
       "category": "游戏新闻",
       "emoji": "💔",
       "en_title": "Love and Deepspace Fans Continue Calls for Valko's Return After Update Excludes Him",
-      "cn_title": "《恋与深空》粉丝持续呼吁新角色Valko回归",
-      "summary": "尽管粉丝发起热情运动，《恋与深空》开发商Infold似乎坚持移除新角色Valko的决定。该角色原定7月9日上线，因部分中国玩家反对而取消。全球粉丝通过社交媒体、同人艺术和慈善捐赠等方式请愿，但最新更新仍未见Valko。玩家反应从心碎到愤怒不等，Infold此前表示将不再引入新恋爱对象。",
+      "cn_title": "《恋与深空》新角色Valko遭弃，玩家呼吁回归",
+      "summary": "《恋与深空》开发商Infold在更新中仍将新可攻略角色Valko排除在外，引发全球玩家持续请愿。此前该角色因部分中国玩家负面反应被取消，国际玩家通过社交媒体、慈善捐款等方式表达支持，但更新后游戏界面中Valko的「即将推出」标签被移除，取而代之的是空白位。玩家反应从悲伤到愤怒不一，另有未经证实的泄露称Valko在剧情中原本扮演核心角色。Infold在沉默近十天后就下载问题发声，但未提及Valko。该游戏自2024年1月上线以来收入已超过10亿美元(约合人民币68亿元)(约合72亿元人民币)。",
       "url": "https://www.ign.com/articles/love-and-deepspace-fans-continue-calls-for-valkos-return-after-update-excludes-him",
       "publish_time_cn": "2026-07-10 00:39",
       "pub_date": "2026-07-10 00:39",
@@ -227,16 +282,66 @@
         "https://assets-prd.ignimgs.com/2025/01/14/love-and-deepspace-button-1736874339835.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-07-10T09:43:17+08:00"
+      "source_fetched_at": "2026-07-10T08:50:01+08:00",
+      "pending_dict": [
+        {
+          "en": "Love and Deepspace",
+          "cn": "《恋与深空》",
+          "cat": "games",
+          "source": "ai_guess",
+          "reason": "该游戏在中文区以《恋与深空》通行，但词库中未收录"
+        },
+        {
+          "en": "Valko",
+          "cn": "瓦尔科",
+          "cat": "people",
+          "source": "ai_guess",
+          "reason": "角色名，无稳定官方译名，暂建议音译"
+        },
+        {
+          "en": "Infold",
+          "cn": "叠纸",
+          "cat": "companies",
+          "source": "ai_guess",
+          "reason": "Infold Games是叠纸的国际品牌，中文母公司名称为叠纸"
+        }
+      ]
     },
     {
       "id": 23,
       "category": "游戏新闻",
-      "emoji": "🎉",
+      "emoji": "🎮",
       "en_title": "Pokémon Go 10 Year Anniversary Celebration Livestream — Updating Live",
-      "cn_title": "《宝可梦GO》十周年：超梦降临时代广场",
-      "summary": "宝可梦GO十周年庆典直播在纽约时代广场举行，超梦以Mega进化形态现身，超过1000名玩家联手将其击败并收入精灵球。开发商Scopely Explore（原Niantic）在活动中简要介绍了未来三大重点：重新思考基础交互、拓展真实世界社交功能、重新构想道馆系统。活动虽未来内容公布不多，但现场盛况展示了游戏当下的活力。",
+      "cn_title": "《宝可梦GO》十周年庆典：时代广场超梦突袭上演",
+      "summary": "为庆祝《宝可梦GO》上线十周年，开发商Scopely Explore（原Niantic）在纽约时代广场举办特别直播活动。现场千名玩家参与了大型超梦（Mega超梦Y）实时突袭战，时代广场大屏幕被游戏画面全面覆盖。官方还透露了游戏未来十年的三大发展方向：社交功能增强、道馆系统重做以及更深度的AR体验。",
       "url": "https://www.ign.com/articles/pokemon-go-10-year-anniversary-celebration-event-updating-live",
+      "publish_time_cn": "2026-07-10 00:09",
+      "pub_date": "2026-07-10 00:09",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/07/09/pokemongo10thanniversary-live-blogroll-1783606528665.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/07/09/pokemongo10thanniversary-live-blogroll-1783606528665.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/07/09/pokemongo10thanniversary-live-blogroll-1783606528665.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/07/09/pokemongo10thanniversary-live-blogroll-1783606528665.jpg?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/07/09/pokemongo10thanniversary-live-blogroll-1783606528665.jpg?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/07/09/pokemongo10thanniversary-live-blogroll-1783606528665.jpg",
+        "https://assets-prd.ignimgs.com/2026/07/10/screenshot-2026-07-10-013837-1783643986161.png",
+        "https://assets-prd.ignimgs.com/2026/07/10/screenshot-2026-07-10-013357-1783643645437.png",
+        "https://assets-prd.ignimgs.com/2026/07/09/screenshot-2026-07-09-235500-1783638156630.png",
+        "https://assets-prd.ignimgs.com/2026/07/09/screenshot-2026-07-09-232820-1783636119686.png",
+        "https://assets-prd.ignimgs.com/2026/07/09/gettyimages-2281685587-1783636430290.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-07-10T08:50:03+08:00"
+    },
+    {
+      "id": 27,
+      "category": "游戏新闻",
+      "emoji": "🎉",
+      "en_title": "Everything Announced at the Pokémon Go 10 Year Anniversary Celebration Livestream",
+      "cn_title": "《宝可梦GO》十周年庆典直播汇总",
+      "summary": "《宝可梦GO》在十周年直播中于纽约时代广场举办大型超梦团体战，超过千名玩家参与。开发商Niantic现已更名为Scopely Explore，并在发布会上透露未来三大方向：重新设计道馆、改善社交体验、增强现实玩法升级。现场还确认了穿着博士服装的皮卡丘毛绒玩具。",
+      "url": "https://www.ign.com/articles/everything-announced-at-the-pokmon-go-10-year-anniversary-celebration-livestream",
       "publish_time_cn": "2026-07-10 00:09",
       "pub_date": "2026-07-10 00:09",
       "cover_image": "https://assets-prd.ignimgs.com/2026/07/10/hmkdzkgxwaasgc-1783646321810.jpg?width=1280&format=jpg&auto=webp&quality=80",
@@ -254,15 +359,15 @@
         "https://assets-prd.ignimgs.com/2026/07/09/gettyimages-2281685587-1783636430290.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-07-10T09:43:18+08:00"
+      "source_fetched_at": "2026-07-10T10:06:46+08:00"
     },
     {
       "id": 24,
       "category": "游戏新闻",
-      "emoji": "⚔️",
+      "emoji": "🧛",
       "en_title": "Witches, Swords, and Vampires: The Blood of Dawnwalker’s Skill Trees Explained",
-      "cn_title": "《黎明行者之血》技能树详解：女巫、剑术与吸血鬼的搭配之道",
-      "summary": "《黎明行者之血》拥有女巫、剑术和吸血鬼三大技能树，每个都有独特主动技能和被动增益。玩家需根据白天/夜晚的使用限制巧妙搭配，打造专属战斗风格。游戏总监Konrad Tomaszkiewicz详解设计理念，强调技能间的协同与平衡。",
+      "cn_title": "女巫、长剑与吸血鬼：《黎明行者之血》技能树",
+      "summary": "《黎明行者之血》拥有巫术、剑术和吸血鬼三系独立技能树，分别包含多项主动技能与被动天赋。巫术仅在白天使用，吸血鬼能力只能在夜间激活，剑术则不受时间限制。开发者透露技能树间存在协同效应，玩家可专精一系或三系兼修，不同流派将影响战斗风格与剧情走向。",
       "url": "https://www.ign.com/articles/the-blood-of-dawnwalker-combat-skill-trees-ign-first",
       "publish_time_cn": "2026-07-10 00:00",
       "pub_date": "2026-07-10 00:00",
@@ -283,15 +388,15 @@
         "https://assets-prd.ignimgs.com/2026/07/08/crimson-rush-1783518603984.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-07-10T09:43:18+08:00"
+      "source_fetched_at": "2026-07-10T08:50:05+08:00"
     },
     {
       "id": 25,
       "category": "游戏新闻",
-      "emoji": "💎",
+      "emoji": "🎮",
       "en_title": "GTA Online's Next Big Update, the Kortz Center Heist, Releases Next Week, and Fans Have Already Spotted a Few Rockstar-Related Easter Eggs",
-      "cn_title": "《GTA Online》科兹中心抢劫案下周上线，粉丝发现多处Rockstar彩蛋",
-      "summary": "《GTA Online》最新大型更新「科兹中心抢劫案」将于7月14日正式上线，玩家将抢劫科兹艺术博物馆。行动可选择高调或隐秘，完全隐秘将获得巨额奖励。玩家还能收藏名画并展示在豪宅中，这些画作包含大量Rockstar游戏彩蛋，如《GTA4》罗曼死亡场景画、荒野大镖客风格画作以及历代角色群像。这可能是《GTA6》11月发售前最后一次大型更新。",
+      "cn_title": "《GTA Online》科茨中心劫案下周上线，彩蛋曝光",
+      "summary": "《GTA Online》大型更新「科茨中心劫案」将于7月14日上线，玩家可抢劫艺术博物馆并收藏画作。画作包含对《GTA4》《Red Dead》等Rockstar作品的彩蛋。本次更新或为《GTA6》发售前最后一次大型内容更新。",
       "url": "https://www.ign.com/articles/gta-onlines-next-big-update-the-kortz-center-heist-releases-next-week-and-fans-have-already-spotted-a-few-rockstar-related-easter-eggs",
       "publish_time_cn": "2026-07-09 23:27",
       "pub_date": "2026-07-09 23:27",
@@ -306,31 +411,24 @@
         "https://assets-prd.ignimgs.com/2023/06/06/gtaonlinej-1686068755694.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-07-10T09:43:19+08:00",
+      "source_fetched_at": "2026-07-10T08:50:07+08:00",
       "pending_dict": [
         {
           "en": "Kortz Center Heist",
-          "cn": "科兹中心抢劫案",
+          "cn": "科茨中心劫案",
           "cat": "terms",
           "source": "ai_guess",
-          "reason": "Kortz Center 无官方中文译名，暂按音译建议"
-        },
-        {
-          "en": "Roman",
-          "cn": "罗曼",
-          "cat": "people",
-          "source": "ai_guess",
-          "reason": "GTA4角色，中文社区常用译名，建议确认"
+          "reason": "更新名称暂无官方中文译名，建议人工确认"
         }
       ]
     },
     {
       "id": 13,
       "category": "影视资讯",
-      "emoji": "🦖",
+      "emoji": "💥",
       "en_title": "Godzilla Minus Zero Teaser Trailer Shows That Dropping a Nuke on the Legendary King of the Monsters Might Just Make It Angry",
-      "cn_title": "《哥斯拉-1.0》新预告：核弹或许只会激怒它",
-      "summary": "《哥斯拉-1.0》发布新预告，展现人类向哥斯拉投掷核弹的绝望举措。该片是首部采用IMAX拍摄的日本哥斯拉电影，接续奥斯卡获奖作《哥斯拉-1.0》，山崎贵回归执导。预告暗示核弹攻击的道德困境，东宝同时宣布将打造类似「怪兽宇宙」的「哥斯拉世界」跨媒体计划。影片将于2026年11月6日在美国上映。",
+      "cn_title": "《哥斯拉Minus Zero》新预告：核弹只会激怒哥斯拉？",
+      "summary": "《哥斯拉-1.0》续集《哥斯拉Minus Zero》发布新预告片，展现人类绝望地向哥斯拉投掷核弹，但后果可能适得其反。预告暗示核打击反而激怒了巨兽。影片设定在1949年，主角敷岛一家回归。同时，东宝证实正在推进「哥斯拉世界」计划，旨在像好莱坞怪兽宇宙那样打造互联的日本哥斯拉宇宙，拓展游戏、剧集、动画等多媒介形式。",
       "url": "https://www.ign.com/articles/godzilla-minus-zero-teaser-trailer-shows-that-dropping-a-nuke-on-the-legendary-king-of-the-monsters-might-just-make-it-angry",
       "publish_time_cn": "2026-07-09 22:50",
       "pub_date": "2026-07-09 22:50",
@@ -345,31 +443,24 @@
         "https://assets-prd.ignimgs.com/2026/04/14/zero-button-1776183936496.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-07-09T23:43:36+08:00",
+      "source_fetched_at": "2026-07-09T23:30:11+08:00",
       "pending_dict": [
         {
           "en": "Godzilla Minus Zero",
-          "cn": "《哥斯拉-1.0》",
+          "cn": "《哥斯拉Minus Zero》",
           "cat": "movies_tv",
           "source": "ai_guess",
-          "reason": "官方中文译名待确认，沿用《哥斯拉-1.0》系列格式"
-        },
-        {
-          "en": "Keiji Ota",
-          "cn": "太田圭二",
-          "cat": "people",
-          "source": "ai_guess",
-          "reason": "东宝首席哥斯拉官，音译需确认"
+          "reason": "续集正式中文译名待确认，暂用英文+书名号"
         }
       ]
     },
     {
       "id": 3,
-      "category": "游戏新闻",
+      "category": "观点推荐",
       "emoji": "⚽",
       "en_title": "The Weirdest Soccer Games of All Time",
-      "cn_title": "史上最奇葩的足球游戏盘点",
-      "summary": "在《FIFA》《PES》等主流足球游戏之外，还存在大量不走寻常路的足球题材作品。从《Go! Go! Beckham! Adventure on Soccer Island》这样贝克汉姆主演的2D平台跳跃游戏，到《Inazuma Eleven Go》中用足球对抗独裁者的RPG，再到因1986年世界杯「上帝之手」而诞生的《Peter Shilton's Handball Maradona》——玩家只能扮演门将防守预设场景。此外还有允许暴力犯规的《RedCard》、融入《洛克人》元素的《Mega Man Soccer》、解说员克里斯·卡马拉亲自配音的《Chris Kamara's Street Soccer》，以及汇集奥特曼、高达、哥斯拉等日本角色的《Battle Soccer: Field No Hasha》。这些作品要么玩法猎奇，要么背景荒诞，堪称足球游戏史上最奇葩的存在。",
+      "cn_title": "盘点史上最奇葩足球游戏：贝克汉姆闯关，洛克人上场",
+      "summary": "除了《FIFA》《实况足球》等硬核模拟游戏，还有许多画风清奇的足球题材作品。本文盘点了一批最另类的足球游戏，包括《侠盗猎车手》创始人制作的GBA平台动作游戏《Go! Go! Beckham! Adventure on Soccer Island》、Level-5开发的RPG系列《闪电十一人》、因报复英格兰而诞生的《Peter Shilton's Handball Maradona》、允许暴力犯规的《RedCard》、融合平台跳跃与足球的《洛克人足球》、由英国名嘴解说的《Chris Kamara's Street Soccer》、日本特摄角色乱斗的《Battle Soccer: Field No Hasha》，以及经典平台跳跃游戏《Soccer Kid》。",
       "url": "https://www.ign.com/articles/the-weirdest-soccer-games-of-all-time",
       "publish_time_cn": "2026-07-09 22:30",
       "pub_date": "2026-07-09 22:30",
@@ -390,15 +481,15 @@
         "https://assets-prd.ignimgs.com/2026/07/07/kamara-1783430863884.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-07-09T23:43:37+08:00"
+      "source_fetched_at": "2026-07-09T23:30:26+08:00"
     },
     {
       "id": 4,
       "category": "影视资讯",
-      "emoji": "💚",
+      "emoji": "🎮",
       "en_title": "Nickelodeon’s San Diego Comic-Con 2026 Plans Include a Slime-Fueled Outdoor Experience",
-      "cn_title": "Nickelodeon 公布 SDCC 2026 计划：绿色黏液户外体验",
-      "summary": "Nickelodeon 重返本年度圣迭戈国际动漫展（SDCC），带来以绿色黏液为主题的户外体验「Fun Flows Here」。展厅内设有「Fun-Ergy Factory」互动展位（#4113），包含《海绵宝宝》《降世神通》和《忍者神龟》等 IP 主题挑战与合影区。户外活动免费向公众开放，时间为 7 月 23 日至 26 日。",
+      "cn_title": "Nickelodeon公布SDCC计划：粘液主题户外体验",
+      "summary": "Nickelodeon将参加今年圣地亚哥国际动漫展（SDCC），在展厅#4113展位设立「Fun-Ergy Factory」，提供基于《海绵宝宝》《降世神通：最后的气宗》和《忍者神龟》的互动挑战和拍照体验。此外，还将在新儿童博物馆公园打造免费户外活动「Fun Flows Here」，时间为7月23日至26日。",
       "url": "https://www.ign.com/articles/nickelodeon-san-diego-comic-con-2026-plans",
       "publish_time_cn": "2026-07-09 22:00",
       "pub_date": "2026-07-09 22:00",
@@ -414,7 +505,7 @@
         "https://assets-prd.ignimgs.com/2026/07/08/nick-sdcc-2026-fun-flows-here-render-1783539343805.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-07-09T23:43:38+08:00"
+      "source_fetched_at": "2026-07-09T23:30:49+08:00"
     },
     {
       "id": 5,
@@ -446,15 +537,19 @@
           "source": "ai_guess",
           "reason": "无稳定中文译名，根据游戏内容直译，需用户确认"
         }
-      ]
+      ],
+      "translator": "codex",
+      "translator_provider": "manual",
+      "translator_model": "gpt-5-codex",
+      "translation_path": "translations/05.json"
     },
     {
       "id": 6,
       "category": "影视资讯",
       "emoji": "🎬",
       "en_title": "MobLand Season 2 Trailer Confirms Paramount+ Release Date and a First Look at the Returning Tom Hardy — but Will He Appear in Season 3?",
-      "cn_title": "《MobLand》第二季预告发布 汤姆·哈迪回归第三季成谜",
-      "summary": "《MobLand》第二季预告正式发布，确认将于9月18日上线Paramount+。预告中汤姆·哈迪回归饰演Harry Da Souza，哈迪根家族濒临内战边缘。此前《好莱坞报道者》称哈迪因片场冲突未被邀请回归，第三季未来悬而未决；但《综艺》报道近期伦敦会议已出现转机，哈迪有望继续出演。",
+      "cn_title": "《MobLand》第二季预告：哈迪回归，第三季待定",
+      "summary": "剧集《MobLand》发布第二季正式预告，宣布将于9月18日在Paramount+上线。预告中汤姆·哈迪饰演的Harry Da Souza回归，此前有报道称其因片场冲突可能不再出演，但Variety称哈迪已与剧组达成一致，预计回归第三季。第三季命运尚未正式确认。",
       "url": "https://www.ign.com/articles/mobland-season-2-trailer-confirms-paramount-release-date-and-a-first-look-at-the-returning-tom-hardy-but-will-he-appear-in-season-3",
       "publish_time_cn": "2026-07-09 21:36",
       "pub_date": "2026-07-09 21:36",
@@ -469,15 +564,15 @@
         "https://assets-prd.ignimgs.com/2025/06/24/mobland-xlg-1750772638148.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-07-09T23:43:39+08:00"
+      "source_fetched_at": "2026-07-09T23:31:02+08:00"
     },
     {
       "id": 7,
       "category": "影视资讯",
-      "emoji": "🎬",
+      "emoji": "🏜️",
       "en_title": "Zendaya's Chani Is the X-Factor That Makes Dune: Part Three So Exciting",
-      "cn_title": "赞达亚版契妮成《沙丘3》最大看点",
-      "summary": "《沙丘3》预告片揭示契妮角色将大幅偏离原著：在丹尼斯·维伦纽瓦的改编中，赞达亚饰演的契妮不再是保罗忠诚的妾室，而是因背叛愤怒离去、可能加入反叛联盟的关键人物。她的孩子（双胞胎）也可能提前登场，让故事融合《沙丘神帝》元素。",
+      "cn_title": "赞达亚版契妮：《沙丘3》X因素",
+      "summary": "《沙丘：第三部》新预告揭示赞达亚饰演的契妮角色发生根本转变。第二部结尾契妮因保罗称帝迎娶伊勒琅而决裂，独自回归沙漠，不再是原著中顺从的情妇。导演丹尼斯·维伦纽瓦大幅改编，契妮可能成为抵抗保罗甚至与图谋推翻皇帝的联盟合作的关键变量。影片还将引入契妮与保罗的双胞胎儿女，剧情融合《沙丘：弥赛亚》与《沙丘儿女》元素，契妮成为改变整个故事走向的X因素。",
       "url": "https://www.ign.com/articles/zendaya-chani-dune-part-three-exciting-children",
       "publish_time_cn": "2026-07-09 21:00",
       "pub_date": "2026-07-09 21:00",
@@ -492,15 +587,15 @@
         "https://assets-prd.ignimgs.com/2026/03/18/dune-part-three-xlg-1773853750592.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-07-09T23:43:40+08:00"
+      "source_fetched_at": "2026-07-09T23:31:21+08:00"
     },
     {
       "id": 8,
       "category": "游戏新闻",
       "emoji": "🧟",
       "en_title": "Zeverland Is a Zombie-Survival Game That Looks Like Funko Pops but Has a Serious Dark Side | IGN Preview",
-      "cn_title": "《Zeverland》试玩报告：Funko画风的生存游戏暗藏严肃内核",
-      "summary": "IGN近日体验了《Zeverland》的试玩。这款僵尸生存冒险游戏画风酷似Funko Pop玩具，却包裹着严肃的生存故事。开发商已确认放弃免费MMO模式，改为买断制PvE体验，支持单人与私人服务器合作。尽管画风滑稽，但游戏在战斗、资源管理和感染风险上毫不留情，带来一种独特的反差趣味。",
+      "cn_title": "《Zeverland》试玩前瞻：Funko Pop画风下的硬核生存",
+      "summary": "受《Zeverland》独家抢先试玩邀请，我们发现这款僵尸生存游戏外表看似可爱的Funko Pop玩具，实则拥有硬核的生存机制和黑暗叙事。开发商宣布放弃免费MMO模式，改为买断制PvE生存游戏（支持单人及合作）。游戏包含深度技能树、可招募NPC同伴、创意武器制作等要素，画风与残酷世界的反差令人印象深刻。",
       "url": "https://www.ign.com/articles/zeverland-first-hands-on-preview",
       "publish_time_cn": "2026-07-09 21:00",
       "pub_date": "2026-07-09 21:00",
@@ -519,7 +614,7 @@
         "https://assets-prd.ignimgs.com/2026/07/08/ss-df9d37d8c8030a14fb145ad520c1efdb1aefc967-1920x1080-1783553915442.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-07-09T23:43:40+08:00"
+      "source_fetched_at": "2026-07-09T23:31:29+08:00"
     },
     {
       "id": 9,
@@ -565,7 +660,11 @@
           "source": "ai_guess",
           "reason": "新关键词，暂译「赋能」，待官方确认。"
         }
-      ]
+      ],
+      "translator": "codex",
+      "translator_provider": "manual",
+      "translator_model": "gpt-5-codex",
+      "translation_path": "translations/09.json"
     },
     {
       "id": 10,
@@ -588,7 +687,11 @@
         "https://assets-prd.ignimgs.com/2025/04/02/mindseye-1743620470162.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-07-09T23:31:37+08:00"
+      "source_fetched_at": "2026-07-09T23:31:37+08:00",
+      "translator": "codex",
+      "translator_provider": "manual",
+      "translator_model": "gpt-5-codex",
+      "translation_path": "translations/10.json"
     },
     {
       "id": 11,
@@ -622,15 +725,19 @@
           "source": "ai_guess",
           "reason": "词库中暂无此条目，但为玩家普遍认知的官方译名"
         }
-      ]
+      ],
+      "translator": "codex",
+      "translator_provider": "manual",
+      "translator_model": "gpt-5-codex",
+      "translation_path": "translations/11.json"
     },
     {
       "id": 12,
       "category": "人物新闻",
-      "emoji": "🎤",
+      "emoji": "🎵",
       "en_title": "Total Eclipse of the Heart Singer Bonnie Tyler Has Died Aged of 75",
-      "cn_title": "《Total Eclipse of the Heart》歌手Bonnie Tyler去世，享年75岁",
-      "summary": "以《Total Eclipse of the Heart》和《Holding Out for a Hero》等经典歌曲闻名的歌手Bonnie Tyler在葡萄牙医院因治疗中的疾病意外去世，享年75岁。她今年5月曾因紧急肠道手术入院并陷入昏迷，上个月苏醒但情况仍不稳定。其代表作《Total Eclipse of the Heart》今年在Spotify播放量突破10亿次，据BBC报道，去年Spotify为她的音乐目录支付了约140万美元(约合人民币952万元)的版税。",
+      "cn_title": "演唱《Total Eclipse of the Heart》的歌手Bonnie Tyler去世，享年75岁",
+      "summary": "以《Total Eclipse of the Heart》和《Holding Out for a Hero》等歌曲闻名的歌手Bonnie Tyler去世，享年75岁。据官方声明，她在葡萄牙医院因治疗中的疾病意外去世。她的歌曲在Spotify播放量超10亿次，并被《战地4》《黑道圣徒3》等多款游戏采用，Sony Music等持有其作品版权。",
       "url": "https://www.ign.com/articles/total-eclipse-of-the-heart-singer-bonnie-tyler-has-died-aged-of-75",
       "publish_time_cn": "2026-07-09 18:07",
       "pub_date": "2026-07-09 18:07",
@@ -646,7 +753,7 @@
         "https://assets-prd.ignimgs.com/2021/12/21/battlefield-4-button-fin-1640126393727.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-07-09T23:43:43+08:00"
+      "source_fetched_at": "2026-07-09T23:31:43+08:00"
     },
     {
       "id": 2,
@@ -668,18 +775,22 @@
         "https://assets-prd.ignimgs.com/2023/05/24/marathon-blogroll-02-1684962151922.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-07-09T18:04:11+08:00"
+      "source_fetched_at": "2026-07-09T18:04:11+08:00",
+      "translator": "codex",
+      "translator_provider": "manual",
+      "translator_model": "gpt-5-codex",
+      "translation_path": "translations/02.json"
     },
     {
       "id": 26,
       "category": "评测评分",
-      "emoji": "⚓",
+      "emoji": "⛵",
       "en_title": "Assassin’s Creed Black Flag Resynced Review",
-      "cn_title": "《刺客信条4：黑旗》重制版评测",
-      "summary": "育碧新加坡工作室打造的《刺客信条4：黑旗》重制版在画面、战斗、潜行和探索系统上进行了全面升级。此外，新增了蹲伏潜行、更流畅的跑酷和重新设计的潜行关卡，并删除了现代剧情部分，改以Animus裂隙活动替代。这款经典海盗冒险游戏在各项关键体验上都变得更好。",
+      "cn_title": "《刺客信条：黑旗 重同步》评测：经典海盗传奇的全方位升级",
+      "summary": "育碧新加坡打造的《刺客信条4：黑旗》完全重制版归来，画面借助光追与60帧焕然一新，近战与海战系统全面重做，探索和潜行机制也向现代系列看齐。爱德华·肯威的海盗冒险故事仍是其最大魅力，新增的后日谈章节填补了原版遗憾，但删除了现代剧情改为「裂隙」系统，部分潜行活动简化后稍失沉浸感。整体上，这是一次诚意十足且实质提升的重制。",
       "url": "https://www.ign.com/articles/assassins-creed-black-flag-resynced-review",
-      "publish_time_cn": "2026-07-09 09:43",
-      "pub_date": "2026-07-09 09:43",
+      "publish_time_cn": "2026-07-09 08:49",
+      "pub_date": "2026-07-09 08:49",
       "cover_image": "https://assets-prd.ignimgs.com/2026/07/07/assassinscreedblackflagresynced-review-blogroll-1783462366214.jpg?width=1280&format=jpg&auto=webp&quality=80",
       "translation_status": "none",
       "images": [
@@ -691,7 +802,16 @@
         "https://assets-prd.ignimgs.com/2026/07/07/assassinscreedblackflagresynced-review-blogroll-1783462366214.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-07-10T09:43:20+08:00"
+      "source_fetched_at": "2026-07-10T08:50:10+08:00",
+      "pending_dict": [
+        {
+          "en": "Assassin's Creed Black Flag Resynced",
+          "cn": "《刺客信条：黑旗 重同步》",
+          "cat": "games",
+          "source": "ai_guess",
+          "reason": "官方中文名尚未确认，Resynced 可能另有定名，需人工确认。"
+        }
+      ]
     },
     {
       "id": 1,
@@ -713,8 +833,12 @@
         "https://assets-prd.ignimgs.com/2026/07/08/doomthumb-1783524521667.png"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-07-09T09:12:34+08:00"
+      "source_fetched_at": "2026-07-09T09:12:34+08:00",
+      "translator": "codex",
+      "translator_provider": "manual",
+      "translator_model": "gpt-5-codex",
+      "translation_path": "translations/01.json"
     }
   ],
-  "total": 26
+  "total": 27
 }

@@ -72,6 +72,10 @@ def sync(date, article_id=None):
         if cover and not art.get('cover_image'):
             art['cover_image'] = cover
             changed = True
+        translation_path = f'translations/{aid:02d}.json'
+        if art.get('translation_path') != translation_path:
+            art['translation_path'] = translation_path
+            changed = True
         for meta_key in ('translator', 'translator_provider', 'translator_model'):
             if trans.get(meta_key) and art.get(meta_key) != trans[meta_key]:
                 art[meta_key] = trans[meta_key]
