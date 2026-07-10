@@ -10,6 +10,12 @@ Authorization: Bearer <token>
 
 The token is returned by `POST /auth/login`. This header-based auth is suitable for iOS apps and WeChat mini programs.
 
+The generic `/files/{path}` endpoints are intentionally limited to JSON files
+under `data/`. They cannot read secrets or modify application code.
+
+Failed logins are limited per client address. Eight failures in a 15-minute
+window temporarily block further attempts from that address.
+
 ## Auth
 
 `POST /auth/login`

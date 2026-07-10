@@ -18,31 +18,29 @@ import time
 import urllib.error
 import urllib.request
 import uuid
+from contextlib import contextmanager
 from datetime import datetime, timedelta, timezone
-from pathlib import Path
-from typing import Any
+from pathlib import Path, PurePosixPath
+from typing import Any, Iterator
 
-from fastapi import Cookie, Depends, FastAPI, Header, HTTPException, Response
+from fastapi import Cookie, Depends, FastAPI, Header, HTTPException, Request, Response
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
 
 
 CST = timezone(timedelta(hours=8))
-APP_DIR = Path(os.environ.get("IGN_DAILY_REPO_PATH", "/srv/ign-daily")).resolve()
-API_DIR = Path(os.environ.get("IGN_DAILY_API_DIR", "/srv/ign-daily-api")).resolve()
-DB_PATH = Path(os.environ.get("IGN_DAILY_API_DB", API_DIR / "auth.sqlite3")).resolve()
-ENV_PATHS = [APP_DIR / ".env", API_DIR / ".env"]
-SESSION_COOKIE = "ign_daily_session"
-SESSION_TTL_SECONDS = 60 * 60 * 24 * 14
-PBKDF2_ROUNDS = 210_000
-GITHUB_OWNER = os.environ.get("IGN_DAILY_GITHUB_OWNER", "ZenoTzz")
-GITHUB_REPO = os.environ.get("IGN_DAILY_GITHUB_REPO", "ign-daily")
-GITHUB_BRANCH = os.environ.get("IGN_DAILY_GITHUB_BRANCH", "main")
-STORAGE_MODE = os.environ.get("IGN_DAILY_STORAGE_MODE", "local").strip().lower()
+DEFAULT_APP_DIR = Path(os.environ.get("IGN_DAILY_REPO_PATH", "/srv/ign-daily")).resolve()
+DEFAULT_API_DIR = Path(os.environ.get("IGN_DAILY_API_DIR", "/srv/ign-daily-api")).resolve()
 
 
-def load_env_files() -> None:
-    for path in ENV_PATHS:
+def load_env_files(paths: list[Path]) -> None:
+    """Load deployment settings before deriving any module-level configuration.
+
+    Uvicorn imports this module before FastAPI starts.  Reading the two private
+    env files here prevents values such as storage mode and CORS origins from
+    being silently ignored until the next process restart.
+    """
+    for path in paths:
         if not path.exists():
             continue
         try:
@@ -56,8 +54,23 @@ def load_env_files() -> None:
             key, value = line.split("=", 1)
             os.environ.setdefault(key.strip(), value.strip().strip('"').strip("'"))
 
+load_env_files([DEFAULT_APP_DIR / ".env", DEFAULT_API_DIR / ".env"])
 
-load_env_files()
+APP_DIR = Path(os.environ.get("IGN_DAILY_REPO_PATH", DEFAULT_APP_DIR)).resolve()
+API_DIR = Path(os.environ.get("IGN_DAILY_API_DIR", DEFAULT_API_DIR)).resolve()
+# A custom repo/API path can itself be declared in the default env files. Read
+# the resolved locations once more, without overriding process-level settings.
+load_env_files([APP_DIR / ".env", API_DIR / ".env"])
+DB_PATH = Path(os.environ.get("IGN_DAILY_API_DB", API_DIR / "auth.sqlite3")).resolve()
+SESSION_COOKIE = "ign_daily_session"
+SESSION_TTL_SECONDS = 60 * 60 * 24 * 14
+PBKDF2_ROUNDS = 210_000
+LOGIN_WINDOW_SECONDS = 15 * 60
+LOGIN_MAX_FAILURES = 8
+GITHUB_OWNER = os.environ.get("IGN_DAILY_GITHUB_OWNER", "ZenoTzz")
+GITHUB_REPO = os.environ.get("IGN_DAILY_GITHUB_REPO", "ign-daily")
+GITHUB_BRANCH = os.environ.get("IGN_DAILY_GITHUB_BRANCH", "main")
+STORAGE_MODE = os.environ.get("IGN_DAILY_STORAGE_MODE", "local").strip().lower()
 
 
 class LoginRequest(BaseModel):
@@ -78,7 +91,7 @@ class UpdateAccountRequest(BaseModel):
 
 class TranslationRequest(BaseModel):
     date: str = Field(pattern=r"^\d{4}-\d{2}-\d{2}$")
-    ids: list[int] = Field(min_length=1)
+    ids: list[int] = Field(min_length=1, max_length=100)
     trigger_workflow: bool = False
 
 
@@ -146,11 +159,17 @@ class FileDeleteRequest(BaseModel):
     sha: str | None = None
 
 
-def db() -> sqlite3.Connection:
+@contextmanager
+def db() -> Iterator[sqlite3.Connection]:
     API_DIR.mkdir(parents=True, exist_ok=True)
-    conn = sqlite3.connect(DB_PATH)
+    conn = sqlite3.connect(DB_PATH, timeout=15)
     conn.row_factory = sqlite3.Row
-    return conn
+    conn.execute("PRAGMA busy_timeout = 15000")
+    conn.execute("PRAGMA foreign_keys = ON")
+    try:
+        yield conn
+    finally:
+        conn.close()
 
 
 def hash_password(password: str, salt: bytes | None = None) -> str:
@@ -174,6 +193,9 @@ def verify_password(password: str, stored: str) -> bool:
         return hmac.compare_digest(actual, expected)
     except Exception:
         return False
+
+
+DUMMY_PASSWORD_HASH = hash_password(secrets.token_urlsafe(32), b"\0" * 16)
 
 
 def init_db() -> None:
@@ -213,6 +235,16 @@ def init_db() -> None:
               updated_at INTEGER NOT NULL,
               finished_at INTEGER,
               log_path TEXT
+            )
+            """
+        )
+        conn.execute(
+            """
+            CREATE TABLE IF NOT EXISTS login_attempts (
+              client_key TEXT PRIMARY KEY,
+              failed_count INTEGER NOT NULL,
+              last_failed_at INTEGER NOT NULL,
+              blocked_until INTEGER NOT NULL DEFAULT 0
             )
             """
         )
@@ -528,7 +560,7 @@ def write_job_progress_item(
         item["finished_at"] = now
         item["eta_seconds"] = 0
     data["updated_at"] = now
-    path.write_text(json_text(data), encoding="utf-8")
+    write_local_file(path, json_text(data))
 
 
 def article_payload_for_job(date: str, ids: list[int]) -> list[dict[str, Any]]:
@@ -558,18 +590,66 @@ def article_payload_for_job(date: str, ids: list[int]) -> list[dict[str, Any]]:
 
 
 def safe_repo_path(path: str) -> Path:
-    target = (APP_DIR / path).resolve()
-    if APP_DIR not in target.parents and target != APP_DIR:
+    """Resolve a user-facing project path limited to editable runtime JSON.
+
+    Browser and mini-program tokens must never be able to read deployment
+    secrets or overwrite executable files.  The UI only needs JSON under
+    ``data/``; keeping that boundary explicit also blocks encoded traversal.
+    """
+    normalized = str(path or "").replace("\\", "/")
+    relative = PurePosixPath(normalized)
+    if (
+        not normalized
+        or not relative.parts
+        or relative.is_absolute()
+        or any(part in {"", ".", ".."} for part in relative.parts)
+        or relative.parts[0] != "data"
+        or relative.suffix.lower() != ".json"
+        or any(part.startswith(".") for part in relative.parts)
+    ):
+        raise HTTPException(status_code=400, detail="Only data JSON files may be accessed")
+    data_root = (APP_DIR / "data").resolve()
+    target = (APP_DIR / Path(*relative.parts)).resolve()
+    if data_root not in target.parents:
         raise HTTPException(status_code=400, detail="Invalid repository path")
     return target
 
 
-def write_project_file(path: str, content: str, message: str = "") -> Any:
+def content_sha(content: str) -> str:
+    return hashlib.sha1(content.encode("utf-8")).hexdigest()
+
+
+def validate_json_content(content: str) -> None:
+    try:
+        json.loads(content.lstrip("\ufeff"))
+    except (TypeError, json.JSONDecodeError) as exc:
+        raise HTTPException(status_code=400, detail=f"Invalid JSON content: {exc}") from exc
+
+
+def write_local_file(target: Path, content: str, expected_sha: str | None = None) -> None:
+    """Atomically replace a runtime JSON file and optionally enforce its revision."""
+    if expected_sha is not None:
+        if not target.exists() or not target.is_file():
+            raise HTTPException(status_code=409, detail="File changed before it could be saved")
+        current = target.read_text(encoding="utf-8-sig")
+        if not hmac.compare_digest(content_sha(current), expected_sha):
+            raise HTTPException(status_code=409, detail="File changed before it could be saved")
+    target.parent.mkdir(parents=True, exist_ok=True)
+    temporary = target.with_name(f".{target.name}.{uuid.uuid4().hex}.tmp")
+    try:
+        temporary.write_text(content, encoding="utf-8")
+        os.replace(temporary, target)
+    finally:
+        if temporary.exists():
+            temporary.unlink(missing_ok=True)
+
+
+def write_project_file(path: str, content: str, message: str = "", expected_sha: str | None = None) -> Any:
+    target = safe_repo_path(path)
+    validate_json_content(content)
     if STORAGE_MODE == "github":
         return gh_put_file(path, content, message)
-    target = safe_repo_path(path)
-    target.parent.mkdir(parents=True, exist_ok=True)
-    target.write_text(content, encoding="utf-8")
+    write_local_file(target, content, expected_sha)
     return {"ok": True, "path": path, "mode": "local", "message": message}
 
 
@@ -698,6 +778,64 @@ def auth_from_token(token: str) -> sqlite3.Row:
     return row
 
 
+def login_client_key(request: Request) -> str:
+    client = getattr(request, "client", None)
+    host = str(getattr(client, "host", "") or "unknown").strip()
+    return host[:200]
+
+
+def enforce_login_rate_limit(client_key: str) -> None:
+    now = int(time.time())
+    with db() as conn:
+        conn.execute(
+            "DELETE FROM login_attempts WHERE last_failed_at < ?",
+            (now - LOGIN_WINDOW_SECONDS * 4,),
+        )
+        row = conn.execute(
+            "SELECT blocked_until FROM login_attempts WHERE client_key = ?",
+            (client_key,),
+        ).fetchone()
+        conn.commit()
+    if row and int(row["blocked_until"] or 0) > now:
+        retry_after = int(row["blocked_until"]) - now
+        raise HTTPException(
+            status_code=429,
+            detail=f"Too many login attempts. Try again in {retry_after} seconds.",
+        )
+
+
+def record_login_failure(client_key: str) -> None:
+    now = int(time.time())
+    with db() as conn:
+        row = conn.execute(
+            "SELECT failed_count, last_failed_at FROM login_attempts WHERE client_key = ?",
+            (client_key,),
+        ).fetchone()
+        if not row or int(row["last_failed_at"] or 0) < now - LOGIN_WINDOW_SECONDS:
+            failed_count = 1
+        else:
+            failed_count = int(row["failed_count"] or 0) + 1
+        blocked_until = now + LOGIN_WINDOW_SECONDS if failed_count >= LOGIN_MAX_FAILURES else 0
+        conn.execute(
+            """
+            INSERT INTO login_attempts (client_key, failed_count, last_failed_at, blocked_until)
+            VALUES (?, ?, ?, ?)
+            ON CONFLICT(client_key) DO UPDATE SET
+              failed_count = excluded.failed_count,
+              last_failed_at = excluded.last_failed_at,
+              blocked_until = excluded.blocked_until
+            """,
+            (client_key, failed_count, now, blocked_until),
+        )
+        conn.commit()
+
+
+def clear_login_failures(client_key: str) -> None:
+    with db() as conn:
+        conn.execute("DELETE FROM login_attempts WHERE client_key = ?", (client_key,))
+        conn.commit()
+
+
 def current_user(
     ign_daily_session: str | None = Cookie(default=None, alias=SESSION_COOKIE),
     authorization: str | None = Header(default=None),
@@ -741,11 +879,17 @@ def health() -> dict[str, Any]:
 
 
 @app.post("/auth/login")
-def login(payload: LoginRequest, response: Response) -> dict[str, Any]:
+def login(payload: LoginRequest, request: Request, response: Response) -> dict[str, Any]:
+    client_key = login_client_key(request)
+    enforce_login_rate_limit(client_key)
     with db() as conn:
         row = conn.execute("SELECT * FROM users WHERE username = ?", (payload.username,)).fetchone()
-        if not row or not verify_password(payload.password, row["password_hash"]):
-            raise HTTPException(status_code=401, detail="Invalid username or password")
+    password_hash = row["password_hash"] if row else DUMMY_PASSWORD_HASH
+    password_valid = verify_password(payload.password, password_hash)
+    if not row or not password_valid:
+        record_login_failure(client_key)
+        raise HTTPException(status_code=401, detail="Invalid username or password")
+    with db() as conn:
         token = secrets.token_urlsafe(32)
         now = int(time.time())
         conn.execute(
@@ -753,6 +897,7 @@ def login(payload: LoginRequest, response: Response) -> dict[str, Any]:
             (token, row["id"], now, now + SESSION_TTL_SECONDS),
         )
         conn.commit()
+    clear_login_failures(client_key)
     response.set_cookie(
         SESSION_COOKIE,
         token,
@@ -961,20 +1106,24 @@ def get_project_file(path: str, user: sqlite3.Row = Depends(current_user)) -> di
 
 @app.put("/files/{path:path}")
 def put_project_file(path: str, payload: FileWriteRequest, user: sqlite3.Row = Depends(current_user)) -> dict[str, Any]:
-    result = write_project_file(path, payload.content, payload.message)
+    result = write_project_file(path, payload.content, payload.message, payload.sha)
     sync_from_github()
     return {"ok": True, "path": path, "result": result}
 
 
 @app.delete("/files/{path:path}")
 def delete_project_file(path: str, payload: FileDeleteRequest, user: sqlite3.Row = Depends(current_user)) -> dict[str, Any]:
+    target = safe_repo_path(path)
     if STORAGE_MODE == "github":
         result = gh_delete_file(path, payload.message)
         sync_from_github()
         return {"ok": True, "path": path, "result": result}
-    target = safe_repo_path(path)
     if not target.exists() or not target.is_file():
         raise HTTPException(status_code=404, detail="File not found")
+    if payload.sha is not None:
+        current = target.read_text(encoding="utf-8-sig")
+        if not hmac.compare_digest(content_sha(current), payload.sha):
+            raise HTTPException(status_code=409, detail="File changed before it could be deleted")
     target.unlink()
     return {"ok": True, "path": path, "message": payload.message}
 
@@ -1006,7 +1155,8 @@ def add_dict_term(payload: DictTermRequest, user: sqlite3.Row = Depends(current_
 def request_translation(payload: TranslationRequest, user: sqlite3.Row = Depends(current_user)) -> dict[str, Any]:
     index = read_json(APP_DIR / "data" / payload.date / "index.json")
     by_id = {int(a.get("id")): a for a in index.get("articles", []) if str(a.get("id", "")).isdigit()}
-    selected = [by_id[i] for i in payload.ids if i in by_id]
+    requested_ids = list(dict.fromkeys(int(article_id) for article_id in payload.ids))
+    selected = [by_id[i] for i in requested_ids if i in by_id]
     if not selected:
         raise HTTPException(status_code=404, detail="No matching articles")
 
@@ -1028,7 +1178,7 @@ def request_translation(payload: TranslationRequest, user: sqlite3.Row = Depends
         "requested_at": datetime.now(timezone.utc).isoformat(),
         "requested_by": user["username"],
     }
-    write_project_file(path, json_text(updated), f"request translation for {payload.date}: {','.join(map(str, payload.ids))}")
+    write_project_file(path, json_text(updated), f"request translation for {payload.date}: {','.join(map(str, requested_ids))}")
     job_id = create_job(
         "translation",
         payload.date,
@@ -1190,7 +1340,19 @@ def codex_complete_job(
     user: sqlite3.Row = Depends(current_user),
 ) -> dict[str, Any]:
     row = load_job_row(job_id)
+    if row["kind"] != "translation":
+        raise HTTPException(status_code=400, detail="Only translation jobs can be completed by Codex")
     ids = json.loads(row["ids_json"] or "[]")
+    missing = [
+        int(article_id)
+        for article_id in ids
+        if not (APP_DIR / "data" / str(row["date"]) / "translations" / f"{int(article_id):02d}.json").is_file()
+    ]
+    if missing:
+        raise HTTPException(
+            status_code=409,
+            detail=f"Translation files are missing for article ids: {','.join(map(str, missing))}",
+        )
     for article_id in ids:
         write_job_progress_item(
             job_id,

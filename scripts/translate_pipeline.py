@@ -31,9 +31,12 @@ IGN Daily Translation Pipeline - 统一自动化管道
   python3 scripts/translate_pipeline.py 2026-05-31 15 --post
 """
 
-import json, os, sys, re, urllib.request, urllib.parse
-from datetime import datetime, timezone, timedelta
-from pathlib import Path
+import json
+import re
+import sys
+import urllib.parse
+import urllib.request
+from datetime import timedelta, timezone
 from common_paths import REPO_ROOT, dict_path, exchange_rates_path, configure_utf8_stdio
 from platform_names import normalize_platform_names_in_translation
 
@@ -286,10 +289,10 @@ def prep_mode(date_str, article_ref):
         print("  No matches in title/summary (will need full article text)")
 
     # 3. 输出模板
-    print(f"\n📝 Template JSON fields to fill:")
+    print("\n📝 Template JSON fields to fill:")
     print(f'  "cover": "{cover or ""}"')
     print(f'  "images": {json.dumps(images[:3], ensure_ascii=False)}')
-    print(f"  // (还需要: paragraphs, opus_summary, subtitle, translated_terms, pending_dict)")
+    print("  // (还需要: paragraphs, opus_summary, subtitle, translated_terms, pending_dict)")
 
     return True
 
@@ -371,7 +374,7 @@ def post_mode(date_str, article_ref):
             parsed = urllib.parse.urlparse(cover)
             data['cover'] = parsed._replace(query='', fragment='').geturl()
             changed = True
-            print(f"  🔧 Stripped query params from cover")
+            print("  🔧 Stripped query params from cover")
 
     # 2. 补 images
     if not data.get('images') or len(data['images']) == 0:
@@ -380,7 +383,7 @@ def post_mode(date_str, article_ref):
         else:
             data['images'] = [{"url": data['cover'], "caption": ""}]
             changed = True
-            print(f"  ✅ Added cover to images array")
+            print("  ✅ Added cover to images array")
 
     # 3. 自动生成 translated_terms
     if not data.get('translated_terms'):
@@ -437,45 +440,7 @@ def post_mode(date_str, article_ref):
     if quote_issues:
         print(f"\n⚠️ ASCII double quotes found in {len(quote_issues)} fields! Manual fix needed.")
 
-    # 6. 保存翻译文件
-    if changed:
-        with open(trans_path, 'w', encoding='utf-8') as f:
-            json.dump(data, f, ensure_ascii=False, indent=2)
-        print(f"\n💾 Saved {trans_path.name}")
-
-    # 7. 同步 index.json
-    idx_changed = False
-    for a in idx['articles']:
-        if a['id'] == article_id:
-            if a.get('translation_status') != 'done':
-                a['translation_status'] = 'done'
-                idx_changed = True
-            if a.get('translation_path') != f'translations/{article_id:02d}.json':
-                a['translation_path'] = f'translations/{article_id:02d}.json'
-                idx_changed = True
-            if data.get('cover') and a.get('cover_image') != data['cover']:
-                a['cover_image'] = data['cover']
-                idx_changed = True
-            for meta_key in ('translator', 'translator_provider', 'translator_model'):
-                if data.get(meta_key) and a.get(meta_key) != data[meta_key]:
-                    a[meta_key] = data[meta_key]
-                    idx_changed = True
-            for stale_key in ('translation_error', 'translation_failed_at'):
-                if stale_key in a:
-                    a.pop(stale_key, None)
-                    idx_changed = True
-            break
-
-    if idx_changed:
-        with open(idx_path, 'w', encoding='utf-8') as f:
-            json.dump(idx, f, ensure_ascii=False, indent=2)
-        print(f"  ✅ index.json synced")
-
-    # 8. 同步 index-list.json
-    n_dates = update_index_list(date_str)
-    print(f"  ✅ index-list.json updated ({n_dates} dates)")
-
-    # 9. 最终校验总结
+    # 6. 最终校验总结。所有校验通过前绝不能写入 index 的 done 状态。
     issues = []
     if not data.get('cover'):
         issues.append("MISSING cover")
@@ -509,9 +474,46 @@ def post_mode(date_str, article_ref):
     if issues:
         print(f"\n🟡 Remaining issues: {', '.join(issues)}")
         return False
-    else:
-        print(f"\n✅ Article #{article_id} fully validated!")
-        return True
+
+    # 7. 保存通过校验的翻译文件。
+    if changed:
+        with open(trans_path, 'w', encoding='utf-8') as f:
+            json.dump(data, f, ensure_ascii=False, indent=2)
+        print(f"\n💾 Saved {trans_path.name}")
+
+    # 8. 同步 index.json。
+    idx_changed = False
+    for a in idx['articles']:
+        if a['id'] == article_id:
+            if a.get('translation_status') != 'done':
+                a['translation_status'] = 'done'
+                idx_changed = True
+            if a.get('translation_path') != f'translations/{article_id:02d}.json':
+                a['translation_path'] = f'translations/{article_id:02d}.json'
+                idx_changed = True
+            if data.get('cover') and a.get('cover_image') != data['cover']:
+                a['cover_image'] = data['cover']
+                idx_changed = True
+            for meta_key in ('translator', 'translator_provider', 'translator_model'):
+                if data.get(meta_key) and a.get(meta_key) != data[meta_key]:
+                    a[meta_key] = data[meta_key]
+                    idx_changed = True
+            for stale_key in ('translation_error', 'translation_failed_at'):
+                if stale_key in a:
+                    a.pop(stale_key, None)
+                    idx_changed = True
+            break
+
+    if idx_changed:
+        with open(idx_path, 'w', encoding='utf-8') as f:
+            json.dump(idx, f, ensure_ascii=False, indent=2)
+        print("  ✅ index.json synced")
+
+    # 9. 同步 index-list.json。
+    n_dates = update_index_list(date_str)
+    print(f"  ✅ index-list.json updated ({n_dates} dates)")
+    print(f"\n✅ Article #{article_id} fully validated!")
+    return True
 
 
 def main():

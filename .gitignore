@@ -15,4 +15,7 @@ __pycache__/
 !scripts/.env.example
 !server_api/.env.example
 *.pat
+credentials.json
+token.json
+*.readonly.backup.json
 

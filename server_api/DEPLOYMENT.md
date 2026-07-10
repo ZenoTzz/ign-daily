@@ -44,6 +44,10 @@ bash /srv/ign-daily/server_api/deploy/backup_data.sh
 
 This creates a tarball under `/srv/ign-daily-backups`.
 
+Fresh installs also schedule this backup every day at 03:35. The backup uses
+SQLite's online backup API and waits for the server write-job lock. Check
+`/var/log/ign-daily/backup.log` after installation.
+
 By default, secrets are not included. To include `.env` files:
 
 ```bash
@@ -83,6 +87,10 @@ Then set secure cookies:
 sudo sed -i 's/^IGN_DAILY_COOKIE_SECURE=.*/IGN_DAILY_COOKIE_SECURE=1/' /srv/ign-daily-api/.env
 sudo systemctl restart ign-daily-api
 ```
+
+Static deployments update both the site tree and the independently running
+API copy under `/srv/ign-daily-api`. Runtime `data/`, `exchange_rates.json`,
+`ign_rss_new.json`, both `.env` files, and the API database are preserved.
 
 ## Useful checks
 

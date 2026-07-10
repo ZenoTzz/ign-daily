@@ -182,6 +182,11 @@ python3 scripts/import_tencent_polish.py --all --dry-run
 python3 scripts/import_tencent_polish.py --all
 ```
 
+Google Docs 同步与润色导入共用 `data/google-polish-config.json` 中的
+`document_id`、`credentials_path` 和 `token_path`。换机器时也可设置
+`IGN_DAILY_GOOGLE_CREDENTIALS_PATH` 与 `IGN_DAILY_GOOGLE_TOKEN_PATH`；相对路径按
+仓库根目录解析。OAuth 客户端文件和 token 不得提交到 Git。
+
 脚本会结合标题和正文匹配 `translations/NN.json`，只写入高置信度结果。已有网页手工润色默认不会被覆盖；先前由腾讯文档导入的记录只在文档内容发生变化时更新。
 
 API prompt 的长规则块必须通过 `scripts/prompt_blocks.py` 生成。标题、全文、分段重试、全文修复和摘要修复统一使用 `translation_system_prompt()`；用户消息必须按“风格画像、固定任务规则、词库/文章动态数据”的顺序构造，并用 `stable_json()` 序列化。不要在各脚本里复制粘贴不同版本的 `TRANSLATION_GUIDE.md` / `STYLE_PROFILE.md` prompt，也不要随意调整稳定字段顺序，否则会让 DeepSeek 前缀缓存整体失效。

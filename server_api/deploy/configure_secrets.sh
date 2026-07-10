@@ -116,5 +116,8 @@ if [ -n "$api_key" ]; then
   update_env "$APP_DIR/.env" TRANSLATOR_BASE_URL "$base_url"
 fi
 
+# Runtime configuration contains API credentials and must not be world-readable.
+chmod 600 "$APP_DIR/.env" "$API_DIR/.env" 2>/dev/null || true
+
 sudo systemctl restart ign-daily-api
 echo "Secrets configured. API service restarted."

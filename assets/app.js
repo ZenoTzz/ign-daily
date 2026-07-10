@@ -104,10 +104,19 @@ const GH = {
 
   async putFile(path, content, message, retry = 2) {
     if (this.canUseServer()) {
-      return ServerAPI.request(`/files/${this.serverPath(path)}`, {
-        method: 'PUT',
-        body: JSON.stringify({ content, message })
-      });
+      const existing = await this.getFile(path);
+      try {
+        return await ServerAPI.request(`/files/${this.serverPath(path)}`, {
+          method: 'PUT',
+          body: JSON.stringify({ content, message, ...(existing ? { sha: existing.sha } : {}) })
+        });
+      } catch (e) {
+        if (e.status === 409 && retry > 0) {
+          await new Promise(resolve => setTimeout(resolve, 300));
+          return this.putFile(path, content, message, retry - 1);
+        }
+        throw e;
+      }
     }
     if (typeof ServerAPI !== 'undefined' && ServerAPI.enabledByHost()) {
       throw new Error('请先登录服务器账号');

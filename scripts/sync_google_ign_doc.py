@@ -1,12 +1,14 @@
-"""Sync polished IGN daily news text into a tabbed Google Doc.
+"""Sync completed IGN Daily translations into the configured Google Doc tabs.
 
-This script reads public Tencent Docs, parses the established IGN news layout,
-and writes the resulting content into existing Google Docs tabs.
+Incremental mode is the normal workflow: it reads completed local translation
+JSON files and prepends only missing articles to the appropriate monthly tab.
+The legacy month-replacement mode remains explicitly opt-in.
 """
 from __future__ import annotations
 
 import argparse
 import json
+import os
 import re
 import shutil
 import sys
@@ -23,11 +25,12 @@ from googleapiclient.errors import HttpError
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import import_tencent_polish as tencent  # noqa: E402
+from common_paths import DATA_DIR, REPO_ROOT  # noqa: E402
 
 
 DOC_ID = "14a6hFPk8Mbw-FICiFa7icEiyv1BmhkWltf_xOon7uIs"
-CREDENTIALS_PATH = Path(r"D:\Daily News\credentials.json")
-TOKEN_PATH = Path(r"D:\Daily News\token.json")
+DEFAULT_CREDENTIALS_PATH = Path(r"D:\Daily News\credentials.json")
+DEFAULT_TOKEN_PATH = Path(r"D:\Daily News\token.json")
 SCOPES = ["https://www.googleapis.com/auth/documents"]
 
 MONTHS = {
@@ -62,6 +65,47 @@ class MonthPayload:
     article_count: int
 
 
+def load_google_config() -> dict[str, Any]:
+    """Read the optional shared Google Docs configuration once and safely."""
+    path = DATA_DIR / "google-polish-config.json"
+    if not path.exists():
+        return {}
+    try:
+        data = json.loads(path.read_text(encoding="utf-8-sig"))
+    except (OSError, json.JSONDecodeError) as exc:
+        raise RuntimeError(f"Invalid Google Docs config: {path}: {exc}") from exc
+    if not isinstance(data, dict):
+        raise RuntimeError(f"Google Docs config must be a JSON object: {path}")
+    return data
+
+
+def configured_path(value: Any, default: Path) -> Path:
+    candidate = Path(str(value)).expanduser() if value else default
+    return candidate if candidate.is_absolute() else (REPO_ROOT / candidate).resolve()
+
+
+def credential_paths(config: dict[str, Any]) -> tuple[Path, Path]:
+    """Resolve credential locations from env/config before falling back locally."""
+    credentials = configured_path(
+        os.environ.get("IGN_DAILY_GOOGLE_CREDENTIALS_PATH") or config.get("credentials_path"),
+        DEFAULT_CREDENTIALS_PATH,
+    )
+    token = configured_path(
+        os.environ.get("IGN_DAILY_GOOGLE_TOKEN_PATH") or config.get("token_path"),
+        DEFAULT_TOKEN_PATH,
+    )
+    return credentials, token
+
+
+def write_private_token(path: Path, content: str) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(content, encoding="utf-8")
+    try:
+        path.chmod(0o600)
+    except OSError:
+        pass
+
+
 def utf16_len(value: str) -> int:
     return len(value.encode("utf-16-le")) // 2
 
@@ -83,18 +127,19 @@ def chunk_text(value: str, max_units: int = 24_000) -> list[str]:
     return chunks
 
 
-def load_credentials() -> Credentials:
+def load_credentials(config: dict[str, Any]) -> Credentials:
+    credentials_path, token_path = credential_paths(config)
     creds: Credentials | None = None
     token_scopes: set[str] = set()
-    if TOKEN_PATH.exists():
+    if token_path.exists():
         try:
-            token_payload = json.loads(TOKEN_PATH.read_text(encoding="utf-8"))
+            token_payload = json.loads(token_path.read_text(encoding="utf-8"))
             raw_scopes = token_payload.get("scopes") or token_payload.get("scope") or []
             if isinstance(raw_scopes, str):
                 token_scopes = set(raw_scopes.split())
             else:
                 token_scopes = {str(scope) for scope in raw_scopes}
-            creds = Credentials.from_authorized_user_file(str(TOKEN_PATH), SCOPES)
+            creds = Credentials.from_authorized_user_file(str(token_path), SCOPES)
         except (OSError, ValueError, json.JSONDecodeError):
             creds = None
 
@@ -103,18 +148,25 @@ def load_credentials() -> Credentials:
         return creds
     if creds and creds.expired and creds.refresh_token and has_required_scope:
         creds.refresh(Request())
-        TOKEN_PATH.write_text(creds.to_json(), encoding="utf-8")
+        write_private_token(token_path, creds.to_json())
         return creds
 
-    if TOKEN_PATH.exists():
-        backup = TOKEN_PATH.with_suffix(".readonly.backup.json")
-        if not backup.exists():
-            shutil.copy2(TOKEN_PATH, backup)
-        TOKEN_PATH.unlink()
+    if not credentials_path.exists():
+        raise FileNotFoundError(
+            "Google OAuth credentials not found: "
+            f"{credentials_path}. Set credentials_path in data/google-polish-config.json "
+            "or IGN_DAILY_GOOGLE_CREDENTIALS_PATH."
+        )
 
-    flow = InstalledAppFlow.from_client_secrets_file(str(CREDENTIALS_PATH), SCOPES)
+    if token_path.exists():
+        backup = token_path.with_suffix(".readonly.backup.json")
+        if not backup.exists():
+            shutil.copy2(token_path, backup)
+        token_path.unlink()
+
+    flow = InstalledAppFlow.from_client_secrets_file(str(credentials_path), SCOPES)
     creds = flow.run_local_server(port=0, prompt="consent")
-    TOKEN_PATH.write_text(creds.to_json(), encoding="utf-8")
+    write_private_token(token_path, creds.to_json())
     return creds
 
 
@@ -626,14 +678,7 @@ def sync_incremental(
     dry_run: bool = False,
 ) -> None:
     # 1. Load config
-    from common_paths import DATA_DIR
-    config_path = DATA_DIR / "google-polish-config.json"
-    config = {}
-    if config_path.exists():
-        try:
-            config = json.loads(config_path.read_text(encoding="utf-8"))
-        except Exception:
-            pass
+    config = load_google_config()
 
     global DOC_ID
     doc_id = config.get("document_id", DOC_ID)
@@ -1056,23 +1101,16 @@ def main() -> int:
     parser.add_argument("--dry-run", action="store_true")
     args = parser.parse_args()
 
-    # Read doc id from config if possible
-    from common_paths import DATA_DIR
-    config_path = DATA_DIR / "google-polish-config.json"
-    if config_path.exists():
-        try:
-            config = json.loads(config_path.read_text(encoding="utf-8"))
-            global DOC_ID
-            DOC_ID = config.get("document_id", DOC_ID)
-        except Exception:
-            pass
+    config = load_google_config()
+    global DOC_ID
+    DOC_ID = str(config.get("document_id") or DOC_ID)
 
     if not args.incremental and not args.replace_month:
         parser.print_help()
         print("\n[ERR] Please specify either --incremental <YYYY-MM-DD> or --replace-month [months].")
         return 1
 
-    creds = load_credentials()
+    creds = load_credentials(config)
     service = build("docs", "v1", credentials=creds)
 
     if args.incremental:

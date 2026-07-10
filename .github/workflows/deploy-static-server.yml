@@ -22,6 +22,7 @@ jobs:
       SERVER_PORT: ${{ secrets.IGN_DAILY_SERVER_PORT || '22' }}
       SERVER_USER: ${{ secrets.IGN_DAILY_SERVER_USER }}
       SERVER_PATH: ${{ secrets.IGN_DAILY_SERVER_PATH || '/srv/ign-daily' }}
+      SERVER_API_PATH: ${{ secrets.IGN_DAILY_SERVER_API_PATH || '/srv/ign-daily-api' }}
 
     steps:
       - name: Check deployment secrets
@@ -81,6 +82,12 @@ jobs:
             deploy_dir='/tmp/ign-daily-deploy-${GITHUB_SHA}'
             archive='/tmp/ign-daily-site-${GITHUB_SHA}.tar.gz'
             server_path='$SERVER_PATH'
+            api_path='$SERVER_API_PATH'
+            deploy_user='$SERVER_USER'
+            server_path=\"\$(realpath -m \"\$server_path\")\"
+            api_path=\"\$(realpath -m \"\$api_path\")\"
+            case "\$server_path" in /srv/*) ;; *) echo 'Refusing unsafe server path.' >&2; exit 2;; esac
+            case "\$api_path" in /srv/*) ;; *) echo 'Refusing unsafe API path.' >&2; exit 2;; esac
             preserve_dir='/tmp/ign-daily-preserve-${GITHUB_SHA}'
             restore_preserved() {
               if [ -d \"\$preserve_dir/data\" ]; then
@@ -89,6 +96,9 @@ jobs:
               fi
               if [ -f \"\$preserve_dir/exchange_rates.json\" ]; then
                 sudo mv \"\$preserve_dir/exchange_rates.json\" \"\$server_path/exchange_rates.json\"
+              fi
+              if [ -f \"\$preserve_dir/ign_rss_new.json\" ]; then
+                sudo mv \"\$preserve_dir/ign_rss_new.json\" \"\$server_path/ign_rss_new.json\"
               fi
               sudo rm -rf \"\$preserve_dir\"
             }
@@ -101,6 +111,9 @@ jobs:
             if [ -f \"\$server_path/exchange_rates.json\" ]; then
               sudo mv \"\$server_path/exchange_rates.json\" \"\$preserve_dir/exchange_rates.json\"
             fi
+            if [ -f \"\$server_path/ign_rss_new.json\" ]; then
+              sudo mv \"\$server_path/ign_rss_new.json\" \"\$preserve_dir/ign_rss_new.json\"
+            fi
             tar -xzf \"\$archive\" -C \"\$deploy_dir\"
             sudo rsync -a --delete \
               --exclude '.git/' \
@@ -109,8 +122,32 @@ jobs:
               \"\$deploy_dir\"/ \"\$server_path\"/
             restore_preserved
             trap - EXIT
-            sudo chown -R $SERVER_USER:$SERVER_USER \"\$server_path\"
-            sudo find \"\$server_path\" -type d -exec chmod 755 {} +
-            sudo find \"\$server_path\" -type f -exec chmod 644 {} +
+            sudo chown -R \"\$deploy_user:\$deploy_user\" \"\$server_path\"
+            sudo find \"\$server_path\" -path \"\$server_path/.git\" -prune -o -type d -exec chmod 755 {} +
+            sudo find \"\$server_path\" -path \"\$server_path/.git\" -prune -o -type f ! -name '.env' -exec chmod 644 {} +
+            if [ -f \"\$server_path/.env\" ]; then
+              sudo chmod 600 \"\$server_path/.env\"
+            fi
+            if [ ! -x \"\$api_path/venv/bin/pip\" ]; then
+              echo \"IGN Daily API virtualenv is missing: \$api_path/venv/bin/pip\" >&2
+              exit 1
+            fi
+            if ! cmp -s \"\$server_path/server_api/requirements.txt\" \"\$api_path/requirements.txt\"; then
+              sudo -u \"\$deploy_user\" \"\$api_path/venv/bin/pip\" install -r \"\$server_path/server_api/requirements.txt\"
+              sudo install -o \"\$deploy_user\" -g \"\$deploy_user\" -m 644 \
+                \"\$server_path/server_api/requirements.txt\" \"\$api_path/requirements.txt\"
+            fi
+            api_backup=\"/tmp/ign-daily-api-${GITHUB_SHA}.py\"
+            sudo cp \"\$api_path/ign_daily_api.py\" \"\$api_backup\"
+            sudo install -o \"\$deploy_user\" -g \"\$deploy_user\" -m 644 \
+              \"\$server_path/server_api/ign_daily_api.py\" \"\$api_path/ign_daily_api.py\"
+            if ! sudo systemctl restart ign-daily-api || \
+               ! curl --retry 10 --retry-delay 1 --retry-connrefused --max-time 5 -fsS http://127.0.0.1:8010/health >/dev/null; then
+              echo 'API health check failed; restoring the previous API module.' >&2
+              sudo install -o \"\$deploy_user\" -g \"\$deploy_user\" -m 644 \"\$api_backup\" \"\$api_path/ign_daily_api.py\"
+              sudo systemctl restart ign-daily-api
+              exit 1
+            fi
+            sudo rm -f \"\$api_backup\"
             rm -rf \"\$deploy_dir\" \"\$archive\"
           "

@@ -16,6 +16,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import shutil
 import sys
 from datetime import datetime
@@ -30,7 +31,7 @@ from googleapiclient.discovery import build
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import import_tencent_polish as polish  # noqa: E402
-from common_paths import DATA_DIR, configure_utf8_stdio  # noqa: E402
+from common_paths import DATA_DIR, REPO_ROOT, configure_utf8_stdio  # noqa: E402
 
 
 DEFAULT_CONFIG = DATA_DIR / "google-polish-config.json"
@@ -57,9 +58,29 @@ def load_config(path: Path) -> dict[str, Any]:
     return config
 
 
+def configured_path(value: Any, default: Path) -> Path:
+    candidate = Path(str(value)).expanduser() if value else default
+    return candidate if candidate.is_absolute() else (REPO_ROOT / candidate).resolve()
+
+
+def write_private_token(path: Path, content: str) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(content, encoding="utf-8")
+    try:
+        path.chmod(0o600)
+    except OSError:
+        pass
+
+
 def load_credentials(config: dict[str, Any]) -> Credentials:
-    credentials_path = Path(config.get("credentials_path") or DEFAULT_CREDENTIALS_PATH)
-    token_path = Path(config.get("token_path") or DEFAULT_TOKEN_PATH)
+    credentials_path = configured_path(
+        os.environ.get("IGN_DAILY_GOOGLE_CREDENTIALS_PATH") or config.get("credentials_path"),
+        DEFAULT_CREDENTIALS_PATH,
+    )
+    token_path = configured_path(
+        os.environ.get("IGN_DAILY_GOOGLE_TOKEN_PATH") or config.get("token_path"),
+        DEFAULT_TOKEN_PATH,
+    )
     creds: Credentials | None = None
     token_scopes: set[str] = set()
 
@@ -80,8 +101,15 @@ def load_credentials(config: dict[str, Any]) -> Credentials:
         return creds
     if creds and creds.expired and creds.refresh_token and has_required_scope:
         creds.refresh(Request())
-        token_path.write_text(creds.to_json(), encoding="utf-8")
+        write_private_token(token_path, creds.to_json())
         return creds
+
+    if not credentials_path.exists():
+        raise FileNotFoundError(
+            "Google OAuth credentials not found: "
+            f"{credentials_path}. Configure credentials_path or "
+            "IGN_DAILY_GOOGLE_CREDENTIALS_PATH."
+        )
 
     if token_path.exists():
         backup = token_path.with_suffix(".readonly.backup.json")
@@ -89,11 +117,9 @@ def load_credentials(config: dict[str, Any]) -> Credentials:
             shutil.copy2(token_path, backup)
         token_path.unlink()
 
-    from google_auth_oauthlib.flow import InstalledAppFlow
-
     flow = InstalledAppFlow.from_client_secrets_file(str(credentials_path), SCOPES)
     creds = flow.run_local_server(port=0, prompt="consent")
-    token_path.write_text(creds.to_json(), encoding="utf-8")
+    write_private_token(token_path, creds.to_json())
     return creds
 
 

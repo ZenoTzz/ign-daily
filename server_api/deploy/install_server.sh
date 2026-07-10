@@ -9,6 +9,17 @@ API_PORT="${API_PORT:-8010}"
 SERVER_NAME="${SERVER_NAME:-_}"
 RUN_USER="${RUN_USER:-${SUDO_USER:-ubuntu}}"
 
+APP_DIR="$(realpath -m "$APP_DIR")"
+APP_VENV="$(realpath -m "$APP_VENV")"
+API_DIR="$(realpath -m "$API_DIR")"
+
+for managed_path in "$APP_DIR" "$API_DIR" "$APP_VENV"; do
+  case "$managed_path" in
+    /srv/*) ;;
+    *) echo "Refusing unsafe managed path: $managed_path" >&2; exit 1 ;;
+  esac
+done
+
 if ! id "$RUN_USER" >/dev/null 2>&1; then
   RUN_USER="$(id -un)"
 fi
@@ -21,13 +32,16 @@ fi
 sudo apt-get update
 sudo apt-get install -y git nginx python3 python3-venv python3-pip curl unzip
 
-sudo mkdir -p "$(dirname "$APP_DIR")" "$API_DIR" /var/log/ign-daily /srv/ign-daily-ops
-sudo chown -R "$RUN_USER:$RUN_USER" "$(dirname "$APP_DIR")" "$API_DIR" /var/log/ign-daily /srv/ign-daily-ops
+sudo mkdir -p "$APP_DIR" "$APP_VENV" "$API_DIR" /var/log/ign-daily /srv/ign-daily-ops
+sudo chown -R "$RUN_USER:$RUN_USER" "$APP_DIR" "$APP_VENV" "$API_DIR" /var/log/ign-daily /srv/ign-daily-ops
 
 if [ -d "$APP_DIR/.git" ]; then
   sudo -u "$RUN_USER" git -C "$APP_DIR" pull --ff-only origin main
 else
-  sudo rm -rf "$APP_DIR"
+  if find "$APP_DIR" -mindepth 1 -maxdepth 1 -print -quit | grep -q .; then
+    echo "Refusing to replace non-empty directory without a Git repository: $APP_DIR" >&2
+    exit 1
+  fi
   sudo -u "$RUN_USER" git clone "$REPO_URL" "$APP_DIR"
 fi
 
@@ -55,7 +69,7 @@ IGN_DAILY_STORAGE_MODE=local
 IGN_DAILY_COOKIE_SECURE=0
 IGN_DAILY_CORS_ORIGINS=
 EOF
-  chmod 600 "$API_DIR/.env"
+  sudo chmod 600 "$API_DIR/.env"
   echo "Generated temporary API admin password: $admin_password"
   echo "Run server_api/deploy/configure_secrets.sh to replace it."
 fi
@@ -70,6 +84,7 @@ Type=simple
 User=$RUN_USER
 Group=$RUN_USER
 WorkingDirectory=$API_DIR
+EnvironmentFile=-$API_DIR/.env
 ExecStart=$API_DIR/venv/bin/uvicorn ign_daily_api:app --host 127.0.0.1 --port $API_PORT
 Restart=always
 RestartSec=3
@@ -273,7 +288,7 @@ sudo -u "$RUN_USER" mv /tmp/ign-daily-run-exchange.sh /srv/ign-daily-ops/run-exc
 sudo -u "$RUN_USER" mv /tmp/ign-daily-run-balance.sh /srv/ign-daily-ops/run-balance.sh
 chmod +x /srv/ign-daily-ops/*.sh
 
-cat >/tmp/ign-daily-cron <<'EOF'
+cat >/tmp/ign-daily-cron <<EOF
 SHELL=/bin/bash
 PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 
@@ -281,6 +296,7 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 20,50 * * * * /srv/ign-daily-ops/run-api-translation.sh >> /var/log/ign-daily/api-translation.log 2>&1
 20 8 * * * /srv/ign-daily-ops/run-exchange.sh >> /var/log/ign-daily/exchange.log 2>&1
 */30 * * * * /srv/ign-daily-ops/run-balance.sh >> /var/log/ign-daily/balance.log 2>&1
+35 3 * * * $APP_DIR/server_api/deploy/backup_data.sh >> /var/log/ign-daily/backup.log 2>&1
 EOF
 sudo -u "$RUN_USER" crontab /tmp/ign-daily-cron
 rm -f /tmp/ign-daily-cron
