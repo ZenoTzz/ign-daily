@@ -1,5 +1,7 @@
 # IGN Daily 后端审查报告（2026-07-10）
 
+> 这是点时审计记录，不是当前操作手册。当前架构以 `docs/ARCHITECTURE.md` 为准，agent 从根目录 `AGENTS.md` 开始。
+
 ## 审查边界
 
 本次审查覆盖私有 FastAPI、SQLite 鉴权与任务队列、RSS/翻译脚本、Google Docs

@@ -4,15 +4,15 @@
 Usage:
   python3 scripts/pre_push_check.py [YYYY-MM-DD]
 
-This is the memory-saver wrapper for agents: run one command, get the same
-three checks required by the handoff docs.
+This is the memory-saver wrapper for agents: run one command to execute all
+four publication checks.
 """
+
 from __future__ import annotations
 
 import subprocess
 import sys
 from datetime import datetime, timedelta, timezone
-from pathlib import Path
 
 from common_paths import REPO_ROOT, configure_utf8_stdio
 
@@ -54,4 +54,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

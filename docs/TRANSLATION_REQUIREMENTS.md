@@ -1,178 +1,153 @@
-# IGN Daily Translation Requirements
+# Fulltext Translation and Publish Workflow
 
-Last updated: 2026-07-09
+这是网站选文后由 Codex 完成全文翻译、发布和 Google Docs 同步的唯一操作手册。语言风格细节不在这里重复，分别以 `TRANSLATION_GUIDE.md` 和 `STYLE_PROFILE.md` 为准。
 
-This is the compact source of truth for day-to-day translation work. If this
-file conflicts with older handoff notes, follow this file, then check
-`TRANSLATION_GUIDE.md` and `STYLE_PROFILE.md` for style detail.
+## 开始前
 
-## Required Reading
-
-Before handling a translation queue, read:
-
-1. `docs/AGENT_START.md`
-2. `AGENT_BOOTSTRAP.md`
-3. `AGENT_HANDOFF.md`
-4. `TRANSLATION_GUIDE.md`
-5. `STYLE_PROFILE.md`
-6. `AGENT_NIGHTLY_LEARNER.md`
-7. `data/automation-config.json`
-8. `data/dict.json`
-
-## Current Automation Ownership
-
-- `title_translator=api`: title and summary translation are handled by Actions/API.
-- `fulltext_translator=codex`: full article translation is handled by Codex when
-  the user says they submitted or selected articles.
-- `nightly_learner=codex`: nightly learning is handled by Codex, using Google
-  Docs polish import first and Tencent Docs only as historical fallback.
-
-Do not call DeepSeek, Gemini, or OpenAI APIs from Codex unless the user
-explicitly asks for API translation. Do not print or ask for PATs or API keys.
-
-## Queue Handling
-
-When the user says `处理翻译队列`, `我刚刚提交了一批翻译`, or equivalent:
-
-1. Pull or fetch the newest `main` state before trusting local queue files.
-2. Read every `data/*/requests.json` that may contain queued requests.
-3. Match each requested article by `requested_articles[].url` against the
-   current `data/{date}/index.json`. `requested_ids` is only a compatibility
-   hint and must not be the only matching key.
-4. Read the source article from `data/{date}/sources/NN.json`.
-5. Refresh or verify exchange rates before translating any batch:
-   `python scripts/fetch_exchange_rates.py`. If the network is unavailable,
-   use `exchange_rates.json` only when it is multi-source verified and still
-   fresh under the script's freshness rule.
-6. Run `python scripts/translate_pipeline.py {date} {id} --prep`.
-7. Recreate the reader-facing Chinese title, subtitle, and summary yourself.
-   Do not simply reuse existing `index.json.cn_title`, `index.json.summary`, or
-   API/DeepSeek V4 Flash output. Those fields may be low-quality placeholders
-   and are only references.
-8. Write `data/{date}/translations/NN.json`, with two-digit zero padding.
-9. Update the matching `index.json` article:
-   - `translation_status: "done"`
-   - `translation_path: "translations/NN.json"`
-   - `cn_title`
-   - `summary`
-10. Remove completed articles from `requests.json`; keep only unfinished items.
-11. Normalize and verify currency before final validation:
-   - `python scripts/normalize_currency_files.py {date}`
-12. Run:
-   - `python scripts/translate_pipeline.py {date} {id} --post`
-   - `python scripts/pre_push_check.py {date}`
-13. Commit only the queue/translation files touched by this task.
-14. Push `main` with `python scripts/git_push.py`.
-15. Sync completed articles into the configured Google Doc, newest first.
-
-## Translation Hard Rules
-
-- Be faithful to the original. Do not add motives, certainty, timing, causes,
-  evaluations, or background that the source did not state.
-- Translate every real body paragraph. Do not merge article paragraphs unless
-  the source paragraph itself requires sentence-level restructuring inside the
-  same paragraph.
-- Delete IGN navigation, ads, author bios, social handles, image credits,
-  recommendation cards, and updated-time boilerplate.
-- Use Chinese corner quotes `「」` for quoted speech and emphasis. Do not leave
-  ASCII double quotes or Chinese curly double quotes in Chinese text.
-- Use `《》` for games, films, TV shows, books, and other works.
-- Do not insert spaces between Chinese and English/alphanumeric terms:
-  `XBOX宣布`, `PS5版本`, `IGN报道`.
-- Write Xbox as `XBOX` in user-facing Chinese output.
-- Use `PS5`, `Switch 2`, and `PC` where the context is clear.
-- Write `Xbox Series X|S` and `Xbox Series X/S` as `XBOX Series` in all
-  user-facing translations.
-- Unknown people normally keep their Latin names unless `data/dict.json`
-  provides a Chinese form or there is a stable widely recognized Chinese name.
-- Company names with stable Chinese names may be translated; uncertain studio
-  names stay in English.
-- Dates and amounts must be accurate. Foreign currency amounts need CNY
-  conversion on first body mention. Use freshly fetched multi-source exchange
-  rates when possible; otherwise use `exchange_rates.json` only if it is
-  verified and not stale. Do not use remembered rates or rough 7:1 estimates.
-- For uncertainty, keep uncertainty: `may`, `might`, `reportedly`, `seems`,
-  `could`, `expected`, and similar wording must not become confirmed fact.
-
-## Dictionary Rules
-
-`data/dict.json` is the only canonical dictionary.
-
-- Load it before translating titles, summaries, or full text.
-- If a term matches the dictionary, use the dictionary value.
-- Do not silently add guessed terms to `data/dict.json`.
-- New uncertain terms go into the translation file's `pending_dict`.
-- User-confirmed corrections use `source: "user"` and have highest priority.
-- Dictionary candidates learned from Google Docs polish go into learning
-  evidence first; they are not auto-promoted into `data/dict.json`.
-
-## Required Translation JSON Fields
-
-Every `translations/NN.json` must include:
-
-- `id`
-- `en_title`
-- `cn_title`
-- `subtitle`
-- `url`
-- `category`
-- `emoji`
-- `publish_time_cn`
-- `translated_at`
-- `cover`
-- `images`
-- `opus_summary`
-- `paragraphs`
-- `translated_terms`
-- `pending_dict` when needed
-
-`subtitle` is a short second headline, not `cn_subtitle` and not
-`paragraphs[0]`.
-
-When Codex handles fulltext translation, `cn_title`, `subtitle`, and `summary`
-must be newly written by Codex. Existing title/summary fields from title-only
-automation are not authoritative enough for final publication.
-
-## Google Docs Output
-
-After completed Codex translations are pushed, sync the final translated text to
-the Google Doc configured in `data/google-polish-config.json`.
-
-Important distinction:
-
-- Google Docs **sync** means writing newly completed translations into the
-  monthly Google Doc tab for the user's editorial workflow.
-- Google Docs **import** means reading the user's polished final copy back into
-  `data/{date}/polished/` for nightly learning.
-
-Current document requirements:
-
-- Document title: `每日新闻（IGN）七月`
-- Tabs: `2026年7月`, `2026年6月`, `2026年5月`
-- Sort order: newest to oldest.
-- One article per page, separated with page breaks.
-- Title line: `YY/MM/DD 标题`, Heading 1, Microsoft YaHei, 18 pt, bold, dark gray.
-  The date prefix is the news-day date from `data/{date}`, not the article's
-  raw `publish_time_cn` calendar date. Example: articles published after 08:00
-  on 2026-07-08 belong to `data/2026-07-09` and must display `26/07/09` in
-  Google Docs.
-- Subtitle line: Heading 2, Microsoft YaHei, 15 pt, italic, gray.
-- Body: Normal text, Microsoft YaHei, 11 pt, justified, 1.15 line spacing, with
-  paragraph spacing matching the user's manually formatted July sample.
-- When adding one extra article to an already edited day, run incremental sync
-  with `--article-id NN` so the script does not scan and reinsert other done
-  articles whose titles may have been manually polished in Google Docs.
-
-Do not overwrite the user's manual edits unless the task explicitly says to
-resync or replace a month.
-
-## Validation
-
-Before pushing translation work:
+1. 阅读根目录 `AGENTS.md`。
+2. 运行：
 
 ```bash
+git status --short --branch
+python scripts/agent_doctor.py
+```
+
+3. 读取 `data/automation-config.json`。只有 `fulltext_translator=codex` 时才按本流程接管正常 Codex 队列；用户明确要求其他模式时按其要求执行。
+4. 不打印、询问或提交 PAT、API key、服务器密码和 OAuth token。
+
+## 1. 获取并认领任务
+
+生产服务器是刚提交任务的来源。配置了 `IGN_DAILY_API_TOKEN` 时使用：
+
+```bash
+python scripts/codex_job_client.py pending --limit 5
+python scripts/codex_job_client.py claim JOB_ID
+```
+
+也可以按 `server_api/API.md` 调用同一组接口。
+
+- 任务中的 `requested_articles[].url` 或 job item URL 是稳定身份。
+- 必须用 URL 对照当天 `index.json`；旧 ID 和网页展示序号只作提示。
+- 同时检查任务是否已经有译文或被其他 agent 认领，避免重复处理。
+
+## 2. 准备原文与参考
+
+每篇文章读取：
+
+- job payload / `data/{date}/index.json`
+- `data/{date}/sources/NN.json`
+- `data/dict.json`
+- `TRANSLATION_GUIDE.md`
+- `STYLE_PROFILE.md`
+
+原文和图片以 `sources/NN.json` 为首选。缓存缺失或明显损坏时才运行：
+
+```bash
+python scripts/article_cache.py YYYY-MM-DD --missing
+```
+
+不要把整页 HTML、导航、广告、作者简介或推荐卡交给模型。
+
+涉及外币时先刷新汇率：
+
+```bash
+python scripts/fetch_exchange_rates.py
+```
+
+网络不可用时，只能使用仍在新鲜期且多源验证通过的 `exchange_rates.json`。
+
+## 3. 翻译
+
+可先运行预处理：
+
+```bash
+python scripts/translate_pipeline.py YYYY-MM-DD ID --prep
+```
+
+写入 `data/{date}/translations/NN.json`，文件名两位补零。最低字段集合见 `data/README.md`。
+
+必须做到：
+
+- 忠于正文事实、主体、指代、不确定语气和段落覆盖。
+- 标题、`subtitle`、`opus_summary` 由 Codex 重新撰写，不能直接把标题 API 占位稿当终稿。
+- 词库命中使用 `data/dict.json`；不确定新译名放入 `pending_dict`。
+- 保留 source cache 中有效的 `cover` 和 `images`。
+- 不翻译 IGN 导航、广告、作者信息、图片署名、社交账号和推荐卡。
+
+详细标点、XBOX、作品名、人名、金额和语气规则只看 `TRANSLATION_GUIDE.md`。
+
+## 4. 更新发布状态
+
+同一篇完成后同步：
+
+- `translations/NN.json`
+- `index.json` 中的 `translation_status`、`translation_path`、`cn_title`、`summary` 和翻译器元数据
+- `requests.json`：只移除真正完成的 URL，保留未完成项
+- job progress：按文章上报当前步骤
+
+必要时从 source cache 修复媒体：
+
+```bash
+python scripts/ensure_translation_media.py YYYY-MM-DD --id ID
+```
+
+不要先把 job 标记完成再写文件。后端会拒绝缺少译文文件的完成请求。
+
+## 5. 校验
+
+逐篇后处理并对整天做统一校验：
+
+```bash
+python scripts/translate_pipeline.py YYYY-MM-DD ID --post
+python scripts/normalize_currency_files.py YYYY-MM-DD
 python scripts/pre_push_check.py YYYY-MM-DD
 ```
 
-Do not treat `No index.json`, `No translations dir`, dictionary mismatches, or
-currency failures as pass conditions.
+`pre_push_check.py` 当前运行四项：译文结构/媒体与标点、金额、标题词库、全文词库。只以最终 `ALL PRE-PUSH CHECKS PASSED` 为通过。
+
+以下都不是通过：
+
+- `No index.json`
+- `No translations dir`
+- 词库或金额检查失败
+- 副标题、摘要、正文、媒体缺失
+- URL/英文标题与 index 不一致
+
+## 6. 同步服务器与 GitHub
+
+发布必须保持同一批文件在服务器运行时和 GitHub 内容快照中一致，但不要用整仓覆盖服务器 `data/`。
+
+1. 通过私有 API 写回服务器相关 JSON，保留内容 SHA 冲突检查。
+2. 在本地只提交本任务相关文件。
+3. push 前再次看 `git status`，避免带入其他 agent 或运行时生成文件。
+4. 使用 `python scripts/git_push.py` 推送 GitHub 快照。
+
+如果服务器和 GitHub 已经不同，先按 URL 和 job 状态判断本次任务的权威侧，再做文件级合并；禁止 `reset --hard`。
+
+## 7. 增量同步 Google Docs
+
+配置来自 `data/google-polish-config.json`，不要在文档中硬编码月份、tab 或 document id。
+
+仅同步本次文章：
+
+```bash
+python scripts/sync_google_ign_doc.py --incremental YYYY-MM-DD --article-id ID
+```
+
+- sync 是把完成译文写入 Google Docs。
+- import 是把用户润色稿读回 `polished/`，两者不能混淆。
+- 默认只增量添加缺失文章，不覆盖用户已有编辑。
+- `--replace-month` 会清空并重建整月 tab，只有用户明确要求时才允许使用。
+- Google Docs 标题日期使用新闻日目录日期，不使用文章自然日。
+
+## 8. 完成任务
+
+所有文章文件和同步都成功后：
+
+```bash
+python scripts/codex_job_client.py complete JOB_ID --message "Codex batch completed"
+```
+
+失败时使用 `fail` 或保留可恢复的 progress，说明具体文章和阻塞原因。不要为了让进度显示为 100% 而吞掉失败。
+
+最终报告至少包含：文章 ID/标题、校验结果、服务器/GitHub/Google Docs 同步结果和提交哈希。

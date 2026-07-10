@@ -1,133 +1,94 @@
 # IGN Daily News
 
-> 📖 **AI Agent / 开发者？请先读 [→ docs/AGENT_START.md](docs/AGENT_START.md)**。
-> 翻译任务优先看 [docs/TRANSLATION_REQUIREMENTS.md](docs/TRANSLATION_REQUIREMENTS.md)，多人协作归属看 [docs/AGENT_COLLABORATION.md](docs/AGENT_COLLABORATION.md)，完整交接再看 [AGENT_HANDOFF.md](AGENT_HANDOFF.md)。
+IGN Daily 是一个个人化的 IGN 新闻采集、翻译、校验和编辑协作系统。
 
----
+- 生产主站：[igndaily.site](https://igndaily.site)
+- GitHub：代码与已提交内容快照
+- Google Docs：完成译文的编辑与润色副本
 
-一个个人化的IGN每日新闻翻译协作平台。每天早晨自动抓取IGN新闻，在网页上选择需要翻译的文章，翻译完成后以左译文-右原文的对照形式呈现，并支持词库的在线编辑。
+Agent 或开发者从 [AGENTS.md](AGENTS.md) 开始，不要从历史 Handoff 或审计报告推断当前流程。
 
-🌐 **在线访问**: https://zenotzz.github.io/ign-daily/
+## 核心功能
 
-## ✨ 功能
+- 定时抓取 IGN RSS，并缓存干净英文正文、封面和正文图片。
+- 在网页选择文章后创建 Codex 翻译任务并显示进度。
+- 中文译文与英文原文左右对照阅读。
+- 在线管理游戏、影视、公司、人物和媒体词库。
+- 翻译前后执行词库、金额、标点、段落和媒体完整性校验。
+- 将完成稿增量同步到 Google Docs，再导回用户润色稿用于长期学习。
+- 保留每日索引、译文、润色、学习证据和 API 用量记录。
 
-- 📰 **每日新闻列表**：每天早晨8:30自动抓取IGN前24小时新闻
-- ✅ **翻译选择**：在网页上勾选需要翻译的文章，无需在聊天里发编号
-- 🔀 **左右对照**：PC端打开译文时左侧显示中文翻译、右侧显示IGN原文
-- 📚 **历史记录**：保留每日新闻和翻译归档
-- 📖 **词库管理**：在线查看、编辑游戏/影视/公司/人物/媒体名称的中英对照
-- 📤 **Excel 导出**：首页可勾选任意文章加入导出篮，支持跨日期导出为“IGN翻译精选”格式
-- 📱 **响应式**：移动端和PC端均适配
+## 当前架构
 
-## 📁 目录结构
+生产服务器保存实时运行数据；GitHub 保存代码和内容快照；Google Docs 是下游编辑副本。三者不是可以互相任意覆盖的同一份存储。
 
-```
-ign-daily/
-├── index.html              # 首页（当日新闻列表 + 翻译选择）
-├── article.html            # 单篇译文阅读页（左译文右原文）
-├── dict.html               # 词库管理页
-├── history.html            # 历史归档页
-├── assets/
-│   ├── app.js              # 前端逻辑
-│   ├── style.css           # 样式
-│   ├── alpine.min.js       # 本地托管 AlpineJS
-│   └── exceljs.min.js      # 本地托管 Excel 导出库
-├── data/
-│   ├── dict.json           # 词库
-│   ├── 2026-05-28/         # 每日数据目录
-│   │   ├── index.json      # 当日新闻索引
-│   │   ├── requests.json   # 用户翻译请求记录
-│   │   ├── filtered_rss.json # RSS 过滤隔离区，可在首页恢复
-│   │   └── translations/
-│   │       ├── 05.json     # 单篇译文（含中英对照段落）
-│   │       └── ...
-│   └── ...
-└── scripts/
-    ├── ign_rss_incremental.py # RSS 增量抓取
-    ├── translate_pipeline.py  # 翻译预处理/后处理
-    └── git_push.py            # PAT 推送工具
-```
+完整边界与数据流见 [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)。
 
-## 🚀 本地预览
+## 快速开始
+
+### 本地查看静态页面
 
 ```bash
-# 用任意静态服务器，例如 Python
 python -m http.server 8000
-# 然后访问 http://localhost:8000
 ```
 
-## 🔧 GitHub Pages 部署
+然后访问 `http://localhost:8000`。
 
-1. 在仓库 Settings → Pages 中：
-   - Source 选 `Deploy from a branch`
-   - Branch 选 `main` / `(root)`
-2. 等待几分钟 GitHub 自动部署
-3. 访问 https://zenotzz.github.io/ign-daily/
+### 仓库健康检查
 
-## 🔑 写回功能（在网页上修改词库等）
+```bash
+python scripts/agent_doctor.py
+```
 
-需要 GitHub Personal Access Token (PAT)：
-- 创建：Settings → Developer settings → Personal access tokens → Fine-grained tokens
-- 权限：`Contents: Read and write`、目标仓库 `ign-daily`
-- 在网页右上角设置图标里粘贴 token（保存在浏览器 localStorage，不上传任何服务器）
+### 翻译校验
 
-## 📜 数据规范
+```bash
+python scripts/pre_push_check.py YYYY-MM-DD
+```
 
-详见 [data/README.md](data/README.md)。
+## 主要目录
 
-## ⚙️ 技术说明
+```text
+assets/          前端资源
+data/            每日索引、source cache、译文、润色和学习数据
+docs/            当前架构、任务手册和专项排障
+miniprogram/     微信小程序客户端
+scripts/         抓取、翻译、校验、同步和运维脚本
+server_api/      私有 FastAPI 与服务器部署/备份工具
+```
 
-### 为什么 AlpineJS 是本地托管而非 CDN？
+## 文档地图
 
-`assets/alpine.min.js` 是从 unpkg.com 下载后本地托管的。原因：
+| 读者/任务 | 文档 |
+|---|---|
+| Agent 唯一入口 | [AGENTS.md](AGENTS.md) |
+| 当前系统边界 | [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) |
+| 全文翻译与发布 | [docs/TRANSLATION_REQUIREMENTS.md](docs/TRANSLATION_REQUIREMENTS.md) |
+| 翻译语言规范 | [TRANSLATION_GUIDE.md](TRANSLATION_GUIDE.md) |
+| 用户确认风格 | [STYLE_PROFILE.md](STYLE_PROFILE.md) |
+| 数据 Schema | [data/README.md](data/README.md) |
+| 脚本目录 | [scripts/README.md](scripts/README.md) |
+| API 合约 | [server_api/API.md](server_api/API.md) |
+| 部署、备份与恢复 | [server_api/DEPLOYMENT.md](server_api/DEPLOYMENT.md) |
+| RSS 网络故障 | [docs/rss-network-fallback.md](docs/rss-network-fallback.md) |
+| 小程序 | [miniprogram/README.md](miniprogram/README.md) |
 
-1. **Tracking Prevention / 广告拦截器**：某些浏览器（如 Edge）和插件会屏蔽 `unpkg.com`、`cdn.jsdelivr.net` 等 CDN 域名，导致 AlpineJS 加载失败，`article.html` 的所有 `x-show`、`x-text`、`x-for` 等 Alpine 指令全部失效，页面按钮和右侧对照区域不渲染。
-2. **企业内网**：部分企业网络也会限制外部 CDN 资源。
+点时审计报告只记录当时发现，不是当前操作手册。
 
-### 文章页右侧空白怎么办？
+## 数据与安全原则
 
-`article.html` 的右侧面板（IGN 原文 / 降级英文段落）和所有功能按钮（对照、润色、词库等）依赖 AlpineJS 正常工作。如果右侧空白，请检查：
+- 所有历史 `data/{date}/` 永久保留。
+- `data/dict.json` 是词库唯一主来源。
+- `.env`、PAT、API key、OAuth credentials 和 token 不得提交到 Git。
+- 服务器部署保留运行时数据，不用 GitHub `data/` 整体覆盖生产内容。
+- 前端生产写入通过私有 API；GitHub PAT 直写只保留为非生产兼容路径。
 
-1. **浏览器 Console**（F12）是否有 `Alpine Expression Error`？如有，说明 `article` 数据的某个字段在渲染时仍为 `null`，需要加 `?.` 可选链。
-2. **浏览器是否屏蔽了 CDN 资源**（Console 中是否有 `Tracking Prevention blocked access to storage` 警告）？本项目的 AlpineJS 已本地托管，通常无需担心。
-3. **浏览器缓存**：按 `Ctrl+F5` 强制刷新。
+## 部署
 
-右侧 IGN 原文默认通过 iframe 加载，由于 IGN 设置了 `X-Frame-Options: DENY`，iframe 会被浏览器拒绝。5 秒后将自动降级为显示抓取的英文原文段落（与左侧中文译文一一对应）。
+- 主站服务器部署：`server_api/DEPLOYMENT.md`
+- `main` push 会触发静态服务器镜像部署并更新独立 API 副本。
+- GitHub Pages 可以作为静态兼容镜像，但不是当前生产数据源。
 
-### 关键变更记录
-
-- **2026-06-01**: 修复 article.html 中 `article.pending_dict` 缺少可选链 `?.` 导致的 Alpine 表达式异常；所有按钮和右侧 pane 移除 `hidden sm:inline / lg:inline-flex / hidden lg:block` 响应式隐藏类；AlpineJS 从 unpkg CDN 改为 `assets/alpine.min.js` 本地托管。修复旧翻译 JSON 缺少 `url`/`en_title` 导致 iframe 右侧空白的问题；pipeline `--post` 模式新增自动补 `url`/`en_title`。
-- **2026-06-01**: 脚本统一从仓库根目录推导路径，三连校验不再扫描 `repo/ign-daily/data` 或旧 `C:\Users\Administrator\.openclaw\workspace`；词库统一优先使用 `data/dict.json`；副标题字段统一为 `subtitle`。
-- **2026-06-01**: 「复制全文」改为同时写入纯文本和 HTML 段落，粘贴到腾讯文档/Word/飞书时保留原译文分段。
-- **2026-06-01**: 首页发布时间兼容 `pub_date`，并回填 2026-06-01 数据的 `publish_time_cn`；`agent_doctor.py` 新增缺失发布时间检查。
-- **2026-06-01**: RSS 增量抓取迁移到 GitHub Actions `.github/workflows/hourly-rss.yml`；CI 使用 `IGN_DAILY_SKIP_GIT=1` 让脚本只写数据，再由 workflow 跑 `rss_queue_check.py`/`agent_doctor.py` 后提交。
-- **2026-06-02**: 新增网页可视化自动化开关 `data/automation-config.json`。标题摘要和正文可分别选择 `openclaw` 或 `api`，并可切换 `deepseek-v4-flash`/`deepseek-v4-pro`；API 模式读取 GitHub Secret `TRANSLATOR_API_KEY`，严格跑现有校验脚本，不通过不 push。
-- **2026-06-02**: 设置面板新增“立即运行 API 翻译”按钮，会先保存当前开关，再触发 GitHub Actions `api-translation.yml` 的 `workflow_dispatch`。浏览器里保存的 GitHub PAT 需要具备 Actions 写权限。
-- **2026-06-02**: 每小时 RSS 后新增 `scripts/article_cache.py`，把干净英文正文、封面图、正文图缓存到 `data/{date}/sources/NN.json`。API 标题摘要和正文翻译优先复用缓存，减少重复抓取和 token 浪费。
-- **2026-06-02**: 夜间学习也接入 `data/automation-config.json.nightly_learner`，可在网页里切换 `openclaw` / `api`。API 路径由 `.github/workflows/nightly-style.yml` 调用 `scripts/nightly_style_api.py` 更新 `STYLE_PROFILE.md`。
-- **2026-06-02**: API 夜间学习改为长期证据池机制。每天 22:30 只观察用户润色、学习批注和反馈，写入 `data/learning/daily/` 与 `data/learning/style-evidence.json`；每周生成 `data/learning/weekly/{week}.json` 供学习页批注。`STYLE_PROFILE.md` 只会在用户对周报规则明确“采纳/确认”后更新，避免 API 被当天样本带偏。
-- **2026-06-12**: 夜间学习新增 `codex` 模式。腾讯文档润色稿同步后由 Codex 分析原译差异，不再调用 DeepSeek 夜间学习 API；候选规律仍进入证据池和周报，需用户确认后才写入长期风格规则。
-- **2026-06-02**: API 正文模式下，用户勾选文章并提交翻译后，网页会立即触发 `api-translation.yml`。网页加载/刷新时会通过 `workflow_dispatch` 触发 `hourly-rss.yml` 抓最新 RSS 和缓存图片/正文；浏览器本地 10 分钟节流，避免连续刷新堆积 Actions。
-- **2026-06-12**: 全文翻译提交改为合并现有请求池，避免新提交覆盖旧请求；请求文件写入后页面立即显示“翻译中”。若 Actions 立即触发失败，请求仍保留在池中并由定时任务继续处理。
-- **2026-06-02**: 标题摘要 API 单轮处理上限从 8 篇调到 30 篇，避免一次 RSS 抓到多篇时只翻译前 8 篇、后续文章留在 `need_titles.json`。
-- **2026-06-02**: API 正文翻译会在 `translations/NN.json` 写入 `translator_model`，并同步到首页 `index.json`；首页卡片和文章页会显示“由 DeepSeek V4 Pro/Flash 翻译”。
-- **2026-06-02**: 新增 `usage.html` DeepSeek API 用量看板。API 脚本会记录 `usage` 中的总 tokens、输入/输出 tokens、`prompt_cache_hit_tokens`、`prompt_cache_miss_tokens`；`.github/workflows/deepseek-usage.yml` 定期查询 DeepSeek `/user/balance` 写入余额快照。用量记录是旁路数据，不影响正常翻译工作流。
-- **2026-06-02**: RSS 过滤补强为“购物意图”过滤，会跳过促销、导购、预购、亚马逊独占、手办/周边/LEGO set 等商业稿；所有会写仓库数据的 Actions 统一使用 `ign-daily-write-main` 并发组，避免 API 翻译和 RSS/用量快照同时 push 时冲突。
-- **2026-06-02**: RSS 过滤改为“隔离区”机制。疑似促销/导购稿不再静默丢弃，而是写入 `data/{date}/filtered_rss.json`；首页会显示“被过滤”入口，用户可一键恢复入库并进入标题摘要队列。`data/rss-filter-config.json.filtered_retention_days` 控制旧隔离文件保留天数，超期由 RSS workflow 自动删除。
-- **2026-06-02**: 首页默认日期改为和 RSS 一致的“新闻日”：北京时间 08:00 后自动打开下一天的数据目录，例如 2026-06-02 08:00 后默认展示 `data/2026-06-03`。
-- **2026-06-02**: API 翻译金额换算改为“提示词 + 脚本后处理 + 校验”三层保证。API workflow 和 hourly RSS 标题翻译前会刷新 `exchange_rates.json`；`currency_utils.py` 会自动补 `2.5亿美元(约合人民币18亿元)` 这类换算；`check_currency.py` 同时检查首页摘要、正式译文和多模型对比译文。
-- **2026-06-02**: API 正文翻译新增硬性审计与局部返修。`scripts/api_translation_audit.py` 会检查词库命中、外币人民币换算、段落数量和网页导航/页脚噪音；首次翻译不通过时，`translate_fulltext_api.py` 只把问题清单交给模型返修一次，返修后仍不通过则阻止提交并保留翻译请求。
-- **2026-06-02**: DeepSeek 用量看板新增估算成本和按文章成本。成本按 DeepSeek 官方每 1M tokens 价格估算，分别计算缓存命中输入、缓存未命中输入和输出 tokens；真实扣费仍以 DeepSeek 账户余额为准。
-- **2026-06-02**: DeepSeek 用量看板新增“平台实际扣费”对照。API workflow 会在运行前后各查询一次 DeepSeek 余额，并把余额差写入 `data/usage/deepseek-runs.json`；看板同时显示脚本估算成本和 DeepSeek 平台实际扣费，方便排查价格表、四舍五入或平台计费差异。
-- **2026-06-02**: 手动触发 API 翻译时，网页会把本次选择的标题模型、正文模型、API Base URL 和 API/OpenClaw 开关作为 `workflow_dispatch` inputs 传给 `api-translation.yml`。手动运行优先使用本次 inputs，定时运行继续读取 `data/automation-config.json`，避免刚切 Pro/Flash 后立刻翻译时读到旧配置。
-- **2026-06-02**: 新增手动“多模型翻译对比”。`data/automation-config.json.api_models` 保存可选模型目录，用户可勾选任意数量模型参与对比；文章卡片触发后会让选中模型各翻一版，结果写入 `data/{date}/comparisons/NN.json` 并通过 `comparison.html` 并排查看。该流程不覆盖正式译文，也不参与定时自动化。
-- **2026-06-02**: API 模型目录补全价格接口。每个模型可配置显示名、Model ID、Base URL、缓存命中输入价、缓存未命中输入价和输出价；正式翻译、夜间学习、多模型对比和用量看板都从同一模型目录读取。未配置价格的模型仍可翻译，但用量看板成本显示“未配置”。
-- **2026-06-02**: 正文 API 单轮处理上限从 2 篇调到 5 篇，避免一次勾选多篇时只翻译前两篇、剩余请求继续留在 `requests.json`。
-- **2026-06-02**: 首页新增 Excel 导出篮。用户可以勾选已翻译或未翻译文章，跨日期加入导出篮，并按 `# / 英文标题 / 中文标题 / 分类 / 发布时间(北京) / 摘要 / 链接` 格式导出 `.xlsx`；导出在浏览器本地完成，不读写 GitHub、requests 或 API 队列。
-- **2026-06-02**: 正文 API 支持手动批量模式：普通 5 篇、批量 10 篇、尽量全部。`api-translation.yml` 接收 `workflow_dispatch` 输入并由 `translate_fulltext_api.py` 按时间预算自动暂停，避免 Actions 超时。
-- **2026-07-02**: 新增当前翻译要求速查 `docs/TRANSLATION_REQUIREMENTS.md` 与多 agent 协作协议 `docs/AGENT_COLLABORATION.md`；正文翻译当前由 Codex 处理，完成后同步 Google Docs，夜间学习从 Google Docs 导入用户润色稿，Tencent Docs 仅作历史 fallback。
-- **2026-06-02**: 新增 `scripts/prompt_blocks.py`，标题摘要、正文、夜间学习共享稳定 prompt 前缀，提升 DeepSeek 自动上下文缓存命中率，并可在 `usage.html` 观察命中/未命中 tokens。
-
-## 📝 License
+## License
 
 MIT

@@ -28,7 +28,7 @@ Cron 仅负责创建新日期文件夹，不得覆盖/清理/合并旧日期。
       "summary": "...",
       "url": "https://www.ign.com/articles/...",
       "publish_time_cn": "2026-05-27 14:30",
-      "translation_status": "none|requested|done",
+      "translation_status": "none|requested|needs_review|done",
       "translation_path": "translations/01.json"
     }
   ]
@@ -36,13 +36,14 @@ Cron 仅负责创建新日期文件夹，不得覆盖/清理/合并旧日期。
 ```
 
 字段说明：
-- `id` 推送顺序编号（1开始，与网页和聊天里的编号完全一致）
+- `id` 是日期目录内当前使用的存储 ID，用于 URL 参数和 `translations/NN.json`；RSS 重建或插入时它可能变化。跨版本匹配以文章 URL 为稳定键，网页筛选/排序后的展示序号也不保证与 `id` 相同。
 - `json_id` 原始 ign_daily_index.json 中的 id（备查）
 - `publish_time_cn` 是发布时间主字段；旧 `pub_date` 只做兼容读取。
 - 所有新写入文章都必须包含 `publish_time_cn`，否则首页时间会空白，排序也可能失效。
 - `translation_status`:
   - `none`：未翻译
-  - `requested`：用户已请求翻译，主session待处理
+  - `requested`：用户已请求翻译，等待当前 owner 处理
+  - `needs_review`：自动质检未通过，等待用户重新提交或人工放行
   - `done`：翻译已完成
 
 ## sources/NN.json（英文原文缓存）
@@ -104,7 +105,7 @@ data/usage/deepseek-balance.json
   "url": "https://www.ign.com/...",
   "translated_at": "2026-05-28T11:30+08:00",
   "subtitle": "急急急急急",
-  "opus_summary": "50-70字总结",
+  "opus_summary": "目标约70-80字、允许60-110字的总结",
   "translated_terms": {},
   "translator": "api",
   "translator_provider": "openai-compatible",

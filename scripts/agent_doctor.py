@@ -8,16 +8,24 @@ This script checks the invariants agents most often forget: expected files,
 active dictionary location, stale hard-coded paths, and basic JSON/Python
 parseability. It does not modify files.
 """
+
 from __future__ import annotations
 
 import ast
 import json
+import re
 import subprocess
 import sys
 from datetime import datetime, timedelta, timezone
-from pathlib import Path
+from urllib.parse import unquote
 
-from common_paths import DATA_DIR, REPO_ROOT, configure_utf8_stdio, dict_path, exchange_rates_path
+from common_paths import (
+    DATA_DIR,
+    REPO_ROOT,
+    configure_utf8_stdio,
+    dict_path,
+    exchange_rates_path,
+)
 from dict_matcher import DICT_CATEGORIES
 
 
@@ -43,7 +51,9 @@ def fail(errors: list[str], msg: str) -> None:
 
 
 def date_window(date: str) -> tuple[datetime, datetime]:
-    end = datetime.strptime(date, "%Y-%m-%d").replace(tzinfo=CST, hour=8, minute=0, second=0, microsecond=0)
+    end = datetime.strptime(date, "%Y-%m-%d").replace(
+        tzinfo=CST, hour=8, minute=0, second=0, microsecond=0
+    )
     return end - timedelta(days=1), end
 
 
@@ -51,9 +61,13 @@ def main() -> int:
     errors: list[str] = []
 
     required = [
-        "AGENT_BOOTSTRAP.md",
-        "AGENT_HANDOFF.md",
+        "AGENTS.md",
+        "docs/ARCHITECTURE.md",
+        "docs/TRANSLATION_REQUIREMENTS.md",
         "TRANSLATION_GUIDE.md",
+        "STYLE_PROFILE.md",
+        "data/README.md",
+        "scripts/README.md",
         "scripts/common_paths.py",
         "scripts/pre_push_check.py",
         "scripts/article_cache.py",
@@ -86,7 +100,10 @@ def main() -> int:
         dictionary = json.loads(active_dict.read_text(encoding="utf-8-sig"))
         unknown_categories = sorted(set(dictionary) - {"_meta", *DICT_CATEGORIES})
         if unknown_categories:
-            fail(errors, f"dictionary has unknown categories: {', '.join(unknown_categories)}")
+            fail(
+                errors,
+                f"dictionary has unknown categories: {', '.join(unknown_categories)}",
+            )
         else:
             ok("dictionary categories are canonical")
 
@@ -98,13 +115,18 @@ def main() -> int:
             exchange_data = json.loads(exchange_path.read_text(encoding="utf-8-sig"))
             validation = exchange_data.get("validation") or {}
             rates = exchange_data.get("rates_to_cny") or {}
-            if validation.get("verified") is True and int(validation.get("source_count") or 0) >= 2:
+            if (
+                validation.get("verified") is True
+                and int(validation.get("source_count") or 0) >= 2
+            ):
                 ok("exchange rates are multi-source verified")
             else:
                 fail(errors, "exchange rates are not multi-source verified")
             updated_at = str(exchange_data.get("updated_at") or "")
             try:
-                updated_dt = datetime.strptime(updated_at, "%Y-%m-%d %H:%M:%S +08:00").replace(tzinfo=CST)
+                updated_dt = datetime.strptime(
+                    updated_at, "%Y-%m-%d %H:%M:%S +08:00"
+                ).replace(tzinfo=CST)
                 age = datetime.now(CST) - updated_dt
                 if age <= timedelta(hours=MAX_RATE_AGE_HOURS):
                     ok("exchange rates are fresh")
@@ -183,23 +205,40 @@ def main() -> int:
         window_start, window_end = date_window(index_path.parent.name)
         for article in data.get("articles", []):
             if not article.get("publish_time_cn"):
-                fail(errors, f"latest index missing publish_time_cn: {index_path.parent.name} #{article.get('id')}")
+                fail(
+                    errors,
+                    f"latest index missing publish_time_cn: {index_path.parent.name} #{article.get('id')}",
+                )
                 break
             try:
-                publish_dt = datetime.strptime(article["publish_time_cn"], "%Y-%m-%d %H:%M").replace(tzinfo=CST)
+                publish_dt = datetime.strptime(
+                    article["publish_time_cn"], "%Y-%m-%d %H:%M"
+                ).replace(tzinfo=CST)
             except ValueError:
-                fail(errors, f"latest index invalid publish_time_cn: {index_path.parent.name} #{article.get('id')}")
+                fail(
+                    errors,
+                    f"latest index invalid publish_time_cn: {index_path.parent.name} #{article.get('id')}",
+                )
                 continue
             if publish_dt < window_start or publish_dt >= window_end:
-                fail(errors, f"latest index publish_time outside date window: {index_path.parent.name} #{article.get('id')}")
+                fail(
+                    errors,
+                    f"latest index publish_time outside date window: {index_path.parent.name} #{article.get('id')}",
+                )
         for article in data.get("articles", []):
             if article.get("translation_status") != "done":
                 continue
             aid = article.get("id")
             if article.get("cn_title") == article.get("en_title"):
-                fail(errors, f"latest done article title still English: {index_path.parent.name} #{aid}")
+                fail(
+                    errors,
+                    f"latest done article title still English: {index_path.parent.name} #{aid}",
+                )
             if not article.get("summary"):
-                fail(errors, f"latest done article missing summary: {index_path.parent.name} #{aid}")
+                fail(
+                    errors,
+                    f"latest done article missing summary: {index_path.parent.name} #{aid}",
+                )
 
     stale_patterns = [
         "IGN_TRANSLATE_INSTRUCTIONS.md",
@@ -207,16 +246,37 @@ def main() -> int:
         "assets/github-api.js",
         "scripts/push_daily.py",
     ]
+    ignored_doc_parts = {".git", ".venv", "node_modules", "tmp", "__pycache__"}
     scan_files = [
-        *REPO_ROOT.glob("*.md"),
-        *(REPO_ROOT / "scripts").glob("*.md"),
-        *(REPO_ROOT / "data").glob("*.md"),
+        path
+        for path in REPO_ROOT.rglob("*.md")
+        if not ignored_doc_parts.intersection(path.relative_to(REPO_ROOT).parts)
     ]
     for p in scan_files:
         text = p.read_text(encoding="utf-8")
         for pattern in stale_patterns:
             if pattern in text:
-                fail(errors, f"stale doc reference {pattern}: {p.relative_to(REPO_ROOT)}")
+                fail(
+                    errors, f"stale doc reference {pattern}: {p.relative_to(REPO_ROOT)}"
+                )
+
+        for raw_target in re.findall(r"!?\[[^\]]*\]\(([^)]+)\)", text):
+            target = raw_target.strip()
+            if target.startswith("<") and target.endswith(">"):
+                target = target[1:-1]
+            else:
+                target = target.split(maxsplit=1)[0]
+            if not target or target.startswith(
+                ("#", "http://", "https://", "mailto:", "app://")
+            ):
+                continue
+            target = unquote(target.split("#", 1)[0])
+            linked = (p.parent / target).resolve()
+            if not linked.exists():
+                fail(
+                    errors,
+                    f"broken Markdown link {raw_target}: {p.relative_to(REPO_ROOT)}",
+                )
 
     if errors:
         print(f"\nAGENT_DOCTOR_FAILED: {len(errors)} issue(s)")
