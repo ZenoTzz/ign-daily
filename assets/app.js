@@ -321,6 +321,8 @@ function appData() {
     exportBasket: [],
     copyBtnText: '📋 复制摘要',
     filterCat: 'all',
+    queueSearch: '',
+    queueSort: 'latest',
     showSettings: false,
     apiUsername: localStorage.getItem('ign_api_username') || 'admin',
     apiPassword: '',
@@ -421,6 +423,13 @@ function appData() {
 
     // 润色过的文章 ID 集合
     polishedIds: new Set(),
+    usageSummary: {
+      loaded: false,
+      costCny: 0,
+      tokens: 0,
+      cacheHitRate: null
+    },
+    learningRules: [],
 
     async init() {
       // 初始主题图标
@@ -539,6 +548,8 @@ function appData() {
           }
         } catch (_) { /* 没有润色索引是正常的 */ }
 
+        await this.loadHomeInsights(date);
+
         this.loading = false;
 
         // 恢复之前的筛选/滚动状态
@@ -552,6 +563,58 @@ function appData() {
         this.loading = false;
       } finally {
         clearTimeout(loadingGuard);
+      }
+    },
+
+    async loadHomeInsights(date) {
+      const cacheBust = Date.now();
+      this.usageSummary = { loaded: false, costCny: 0, tokens: 0, cacheHitRate: null };
+      this.learningRules = [];
+
+      const [usageResult, ratesResult, learningResult] = await Promise.allSettled([
+        fetch(`data/usage/deepseek/${date}.json?t=${cacheBust}`, { cache: 'no-store' }),
+        fetch(`exchange_rates.json?t=${cacheBust}`, { cache: 'no-store' }),
+        fetch(`data/learning/weekly/latest.json?t=${cacheBust}`, { cache: 'no-store' })
+      ]);
+
+      let usdToCny = 0;
+      if (ratesResult.status === 'fulfilled' && ratesResult.value.ok) {
+        try {
+          const rates = await ratesResult.value.json();
+          usdToCny = Number(rates?.rates_to_cny?.USD || 0);
+        } catch (_) {}
+      }
+
+      if (usageResult.status === 'fulfilled' && usageResult.value.ok) {
+        try {
+          const usage = await usageResult.value.json();
+          const records = Array.isArray(usage?.records) ? usage.records : [];
+          const totals = records.reduce((sum, record) => {
+            sum.costUsd += Number(record.estimated_cost_usd || 0);
+            sum.tokens += Number(record.total_tokens_including_reasoning || record.total_tokens || 0);
+            sum.hit += Number(record.prompt_cache_hit_tokens || 0);
+            sum.miss += Number(record.prompt_cache_miss_tokens || 0);
+            return sum;
+          }, { costUsd: 0, tokens: 0, hit: 0, miss: 0 });
+          const cacheTotal = totals.hit + totals.miss;
+          this.usageSummary = {
+            loaded: true,
+            costCny: totals.costUsd * usdToCny,
+            tokens: totals.tokens,
+            cacheHitRate: cacheTotal ? Math.round((totals.hit / cacheTotal) * 100) : null
+          };
+        } catch (_) {}
+      }
+
+      if (learningResult.status === 'fulfilled' && learningResult.value.ok) {
+        try {
+          const weekly = await learningResult.value.json();
+          const confirmedStatuses = new Set(['confirmed', 'adopted', 'accepted']);
+          this.learningRules = (Array.isArray(weekly?.candidates) ? weekly.candidates : [])
+            .filter(rule => confirmedStatuses.has(String(rule?.status || '').toLowerCase()))
+            .sort((a, b) => String(b.last_seen || b.updated_at || '').localeCompare(String(a.last_seen || a.updated_at || '')))
+            .slice(0, 3);
+        } catch (_) {}
       }
     },
 
@@ -682,42 +745,66 @@ function appData() {
       return this.data.articles.filter(a => !['done', 'requested', 'needs_review'].includes(a.translation_status)).length;
     },
 
-    get todayCostEstimate() {
-      const selectedBase = Math.max(this.selected?.length || 0, this.requestedCount || 0);
-      const articleCount = selectedBase || Math.max(this.pendingSelectionCount, 1);
-      const estimate = articleCount * 0.18 + Math.max(this.needsReviewCount, 0) * 0.08;
-      return `¥${estimate.toFixed(2)}`;
+    get todayCostDisplay() {
+      return this.usageSummary.loaded ? `¥${this.usageSummary.costCny.toFixed(2)}` : '暂无记录';
     },
 
-    get todayTokensEstimate() {
-      const selectedBase = Math.max(this.selected?.length || 0, this.requestedCount || 0, 1);
-      const tokens = selectedBase * 21500 + this.translatedCount * 3200;
+    get todayTokensDisplay() {
+      const tokens = Number(this.usageSummary.tokens || 0);
       if (tokens >= 1000) return `${Math.round(tokens / 1000)}K`;
       return String(tokens);
     },
 
-    get todayCacheHitEstimate() {
-      const base = this.translatedCount + this.requestedCount;
-      const pct = Math.min(78, Math.max(42, 48 + base * 3));
-      return `${pct}%`;
+    get todayCacheHitDisplay() {
+      return this.usageSummary.cacheHitRate === null
+        ? '—'
+        : `${this.usageSummary.cacheHitRate}%`;
     },
 
     get filteredArticles() {
       if (!this.data) return [];
-      if (this.filterCat === 'all') return this.data.articles;
+      let articles = this.data.articles;
       if (this.filterCat === '__pending__') {
-        return this.data.articles.filter(a => !['done', 'requested', 'needs_review'].includes(a.translation_status));
+        articles = articles.filter(a => !['done', 'requested', 'needs_review'].includes(a.translation_status));
+      } else if (this.filterCat === '__requested__') {
+        articles = articles.filter(a => a.translation_status === 'requested');
+      } else if (this.filterCat === '__review__') {
+        articles = articles.filter(a => a.translation_status === 'needs_review');
+      } else if (this.filterCat === '__translated__') {
+        articles = articles.filter(a => a.translation_status === 'done');
+      } else if (this.filterCat === '__polished__') {
+        articles = articles.filter(a => this.polishedIds.has(a.id));
+      } else if (this.filterCat !== 'all') {
+        articles = articles.filter(a => a.category === this.filterCat);
       }
-      if (this.filterCat === '__requested__') {
-        return this.data.articles.filter(a => a.translation_status === 'requested');
+
+      const query = String(this.queueSearch || '').trim().toLowerCase();
+      if (query) {
+        articles = articles.filter(a => [a.cn_title, a.en_title, a.summary, a.category, a.id]
+          .some(value => String(value || '').toLowerCase().includes(query)));
       }
-      if (this.filterCat === '__translated__') {
-        return this.data.articles.filter(a => a.translation_status === 'done');
+
+      const result = [...articles];
+      if (this.queueSort === 'oldest') {
+        result.sort((a, b) => this.articlePublishTime(a).localeCompare(this.articlePublishTime(b)));
+      } else if (this.queueSort === 'id') {
+        result.sort((a, b) => Number(a.id || 0) - Number(b.id || 0));
+      } else {
+        result.sort((a, b) => this.articlePublishTime(b).localeCompare(this.articlePublishTime(a)));
       }
-      if (this.filterCat === '__polished__') {
-        return this.data.articles.filter(a => this.polishedIds.has(a.id));
-      }
-      return this.data.articles.filter(a => a.category === this.filterCat);
+      return result;
+    },
+
+    articlePublishTime(article) {
+      return String(article?.publish_time_cn || article?.pub_date || article?.pubDate_cst || '');
+    },
+
+    toggleArticleSelection(article) {
+      const id = Number(article?.id);
+      if (!Number.isFinite(id)) return;
+      this.selected = this.selected.includes(id)
+        ? this.selected.filter(item => item !== id)
+        : [...this.selected, id];
     },
 
     queuePercent(value, total) {
@@ -1825,6 +1912,13 @@ function appData() {
         return job.current_article_id ? `#${job.current_article_id} ${job.current_step_label}` : job.current_step_label;
       }
       return job.message || '正在翻译';
+    },
+
+    jobToneClass(job = this.activeJob) {
+      if (job?.status === 'done') return 'job-success';
+      if (job?.status === 'failed') return 'job-failed';
+      if (job?.status === 'running') return 'job-running';
+      return 'job-queued';
     },
 
     jobProgress(job = this.activeJob) {

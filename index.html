@@ -35,8 +35,9 @@
     @media (max-width:640px){.header-inner{align-items:flex-start}.brand{flex-wrap:wrap;min-width:0}.brand-title{font-size:16px}.nav-actions{margin-left:auto}.nav-actions .hidden{display:none!important}}
   </style>
   <link rel="stylesheet" href="assets/style.css?v=20260625articlejob2">
+  <link rel="stylesheet" href="assets/home.css?v=20260710redesign1">
   <script defer src="assets/exceljs.min.js"></script>
-  <script defer src="assets/app.js?v=20260709serverauth1"></script>
+  <script defer src="assets/app.js?v=20260710redesign1"></script>
   <script defer src="assets/alpine.min.js"></script>
   <link rel="stylesheet" href="assets/compliance.css?v=20260710beian2">
   <script defer src="assets/compliance.js?v=20260709beian1"></script>
@@ -169,34 +170,29 @@
             </div>
           </div>
         </div>
-        <nav class="nav-actions">
-          <button @click="showGlobalSearch=true" class="nav-btn" title="搜索历史文章">
+        <nav class="nav-actions" aria-label="主要导航">
+          <div class="desktop-nav-links">
+            <a href="index.html" class="desktop-nav-link active" aria-current="page">工作台</a>
+            <a href="dict.html" class="desktop-nav-link">词库</a>
+            <a href="learning.html" class="desktop-nav-link">学习</a>
+            <a href="usage.html" class="desktop-nav-link">用量</a>
+            <a href="calendar.html" class="desktop-nav-link">日历</a>
+          </div>
+          <button @click="showGlobalSearch=true" class="nav-btn" title="搜索历史文章" aria-label="搜索历史文章">
             <svg><use href="#icon-search"/></svg>
           </button>
-          <button @click="refreshAll()" :disabled="loading" class="nav-btn" title="刷新">
+          <button @click="refreshAll()" :disabled="loading" class="nav-btn desktop-utility" title="刷新" aria-label="刷新">
             <svg><use href="#icon-refresh"/></svg>
           </button>
-          <a href="dict.html" class="nav-btn hidden sm:flex">
-            <svg><use href="#icon-book"/></svg>
-            <span>词库</span>
-          </a>
-          <a href="learning.html" class="nav-btn hidden sm:flex" title="学习记录">
-            <svg><use href="#icon-chart"/></svg>
-            <span>学习</span>
-          </a>
-          <a href="usage.html" class="nav-btn hidden sm:flex" title="DeepSeek API 用量">
-            <svg><use href="#icon-chart"/></svg>
-            <span>用量</span>
-          </a>
-          <a href="calendar.html" class="nav-btn hidden sm:flex" title="游戏日历">
-            <svg><use href="#icon-calendar"/></svg>
-            <span>日历</span>
-          </a>
-          <button @click="toggleTheme()" class="nav-btn hidden sm:flex" title="主题切换">
+          <button @click="toggleTheme()" class="nav-btn desktop-utility" title="主题切换" aria-label="主题切换">
             <span x-text="themeIcon"></span>
           </button>
-          <button @click="showSettings = true" class="nav-btn hidden sm:flex">
+          <button @click="showSettings = true" class="nav-btn desktop-utility" title="设置" aria-label="设置">
             <svg><use href="#icon-settings"/></svg>
+          </button>
+          <span class="account-status" :class="apiUser ? 'online' : ''" :title="apiUser ? `已登录：${apiUser}` : '未登录'"></span>
+          <button @click="fabOpen = !fabOpen" class="nav-btn mobile-tools-trigger" title="更多工具" aria-label="更多工具">
+            <svg><use href="#icon-plus"/></svg>
           </button>
         </nav>
       </div>
@@ -214,13 +210,7 @@
           <p class="workbench-kicker" x-text="currentDate + ' 新闻日'"></p>
           <h1 class="workbench-title">今日翻译工作台</h1>
           <p class="workbench-subtitle">
-            <span x-text="`${data?.total ?? data?.articles?.length ?? 0} 条 RSS`"></span>
-            <span> · </span>
-            <span x-text="`${pendingSelectionCount} 条待选择`"></span>
-            <span> · </span>
-            <span x-text="`${requestedCount} 篇${requestedQueueText()}`"></span>
-            <span> · </span>
-            <span x-text="`${polishedIds.size} 篇已润色`"></span>
+            <span x-text="`${allArticleCount} 条 RSS 已完成标题摘要，等待选择需要翻译的文章`"></span>
           </p>
         </div>
         <div class="workbench-metrics">
@@ -230,18 +220,18 @@
           </div>
           <div class="metric-card metric-blue">
             <strong x-text="requestedCount"></strong>
-            <span x-text="requestedQueueText()"></span>
-          </div>
-          <div class="metric-card metric-green">
-            <strong x-text="polishedIds.size"></strong>
-            <span>已润色</span>
+            <span>翻译中</span>
           </div>
           <div class="metric-card metric-red">
-            <strong x-text="todayCostEstimate"></strong>
-            <span>预估成本</span>
+            <strong x-text="needsReviewCount"></strong>
+            <span>待复核</span>
+          </div>
+          <div class="metric-card metric-green">
+            <strong x-text="translatedCount"></strong>
+            <span>已完成</span>
           </div>
         </div>
-        <div x-show="activeJobs.length || activeJob" class="live-job-card">
+        <div x-show="activeJobs.length || activeJob" class="live-job-card hero-job-strip" :class="jobToneClass(activeJob)">
           <div class="live-job-head">
             <div>
               <strong x-text="activeJobs.length > 1 ? `${activeJobs.length} 个翻译任务运行中` : jobStatusLabel(activeJob)"></strong>
@@ -274,25 +264,21 @@
               </p>
             </template>
           </div>
+          <a href="#queue" class="job-result-link">查看结果</a>
         </div>
       </section>
 
       <section x-show="data && !loading" x-cloak class="workbench-layout">
-        <div class="workbench-main">
+        <div class="workbench-main" id="queue">
           <div class="panel-heading">
             <div>
               <h2>文章队列</h2>
               <p>勾选需要翻译的文章后提交到队列；默认等待 Codex 处理，API 仅作备用。</p>
             </div>
             <div class="queue-actions">
-              <span class="selected-count">已选 <strong x-text="selected.length"></strong></span>
-              <span class="export-basket-count" :class="exportBasket.length ? 'has-items' : ''">
-                导出篮 <strong x-text="exportBasket.length"></strong>
-              </span>
-              <button @click="addSelectedToExportBasket()" :disabled="selected.length === 0" class="btn btn-ghost">加入导出篮</button>
-              <button x-show="exportBasket.length > 0" @click="clearExportBasket()" class="btn btn-ghost">清空导出篮</button>
-              <button @click="exportSelectedExcel()" :disabled="selected.length === 0 && exportBasket.length === 0" class="btn btn-green">导出Excel</button>
-              <button @click="copyDigest()" class="btn btn-ghost" x-text="copyBtnText"></button>
+              <button @click="exportSelectedExcel()" :disabled="exportBasket.length === 0" class="btn btn-ghost">
+                导出篮 <span x-text="exportBasket.length"></span>
+              </button>
               <button @click="submitRequest()" :disabled="selected.length === 0" class="btn btn-primary">
                 <svg><use href="#icon-send"/></svg>
                 提交翻译
@@ -305,12 +291,23 @@
               <button @click="filterCat = 'all'" :class="filterCat === 'all' ? 'active' : ''">全部 <span x-text="allArticleCount"></span></button>
               <button @click="filterCat = '__pending__'" :class="filterCat === '__pending__' ? 'active' : ''">待选 <span x-text="pendingSelectionCount"></span></button>
               <button @click="filterCat = '__requested__'" :class="filterCat === '__requested__' ? 'active' : ''"><span x-text="requestedQueueText()"></span> <span x-text="requestedCount"></span></button>
+              <button @click="filterCat = '__review__'" :class="filterCat === '__review__' ? 'active' : ''">待复核 <span x-text="needsReviewCount"></span></button>
               <button @click="filterCat = '__translated__'" :class="filterCat === '__translated__' ? 'active' : ''">已完成 <span x-text="translatedCount"></span></button>
-              <button @click="filterCat = '__polished__'" :class="filterCat === '__polished__' ? 'active' : ''">已润色 <span x-text="polishedIds.size"></span></button>
+              <button x-show="filteredRssCount > 0" @click="showFilteredPanel=true" class="filtered-entry">
+                被过滤 <span x-text="filteredRssCount"></span>
+              </button>
             </div>
-            <button x-show="filteredRssCount > 0" @click="showFilteredPanel=true" class="filtered-entry">
-              被过滤 <span x-text="filteredRssCount"></span>
-            </button>
+            <div class="queue-tools">
+              <label class="queue-search">
+                <svg><use href="#icon-search"/></svg>
+                <input type="search" x-model="queueSearch" placeholder="搜索当前新闻日" aria-label="搜索当前新闻日">
+              </label>
+              <select x-model="queueSort" class="queue-sort" aria-label="文章排序">
+                <option value="latest">最新发布</option>
+                <option value="oldest">最早发布</option>
+                <option value="id">文章编号</option>
+              </select>
+            </div>
           </div>
 
           <div class="queue-table">
@@ -322,7 +319,7 @@
               <span></span>
             </div>
             <template x-for="(art, idx) in filteredArticles" :key="art.id">
-              <article class="queue-row" :class="{ selected: selected.includes(Number(art.id)) }">
+              <article class="queue-row" :class="{ selected: selected.includes(Number(art.id)) }" @click="toggleArticleSelection(art)" :data-article-id="art.id">
                 <label class="queue-check" @click.stop>
                   <input type="checkbox" :value="art.id" x-model.number="selected">
                 </label>
@@ -333,8 +330,9 @@
                     <span x-show="!art.cover_image">IGN</span>
                   </div>
                   <div class="queue-copy">
+                    <span class="queue-article-id" x-text="`#${String(art.id).padStart(2, '0')}`"></span>
                     <template x-if="isArticleReadable(art)">
-                      <a :href="`article.html?date=${data.date}&id=${art.id}`" @click="saveState()" class="queue-title" x-text="art.cn_title"></a>
+                      <a :href="`article.html?date=${data.date}&id=${art.id}`" @click.stop="saveState()" class="queue-title" x-text="art.cn_title"></a>
                     </template>
                     <template x-if="!isArticleReadable(art)">
                       <h3 class="queue-title" x-text="art.cn_title"></h3>
@@ -370,7 +368,9 @@
                     </ul>
                   </template>
                 </div>
-                <div class="queue-more">
+                <details class="queue-more" @click.stop>
+                  <summary title="更多操作" aria-label="更多操作">•••</summary>
+                  <div class="queue-more-popover">
                   <a :href="art.url" target="_blank" rel="noopener" @click.stop title="IGN原文">
                     <svg><use href="#icon-external"/></svg>
                     <span>原文</span>
@@ -397,11 +397,22 @@
                     <svg><use href="#icon-send"/></svg>
                     <span>对比</span>
                   </button>
-                </div>
+                  </div>
+                </details>
               </article>
             </template>
             <div x-show="filteredArticles.length === 0" class="empty-queue">
               当前筛选下没有文章。
+            </div>
+          </div>
+
+          <div x-show="selected.length > 0" x-cloak class="selection-bar">
+            <span>已选择 <strong x-text="selected.length"></strong> 篇</span>
+            <div class="selection-actions">
+              <button @click="addSelectedToExportBasket()" class="btn btn-ghost">加入导出篮</button>
+              <button @click="exportSelectedExcel()" class="btn btn-ghost">导出Excel</button>
+              <button @click="copyDigest()" class="btn btn-ghost" x-text="copyBtnText"></button>
+              <button @click="submitRequest()" class="btn btn-primary">提交翻译</button>
             </div>
           </div>
 
@@ -418,8 +429,8 @@
         <aside class="workbench-rail">
           <section class="rail-panel">
             <div class="rail-heading">
-              <h3>翻译队列</h3>
-              <p>当前运行与待处理任务一眼可见。</p>
+              <h3>当前任务</h3>
+              <p>只保留真正需要关注的运行状态。</p>
             </div>
             <div class="progress-item">
               <div><span>标题摘要</span><strong x-text="`${Math.max(0, allArticleCount - pendingSelectionCount)} / ${allArticleCount}`"></strong></div>
@@ -448,15 +459,13 @@
           <section class="rail-panel usage-panel">
             <div class="rail-heading">
               <h3>今日用量</h3>
-              <p>按当前队列给出轻量估算，真实扣费仍以用量页为准。</p>
+              <p>来自当前新闻日的真实 API 用量记录。</p>
             </div>
-            <strong class="usage-number" x-text="todayCostEstimate"></strong>
-            <p class="usage-copy" x-text="`${todayTokensEstimate} tokens · 缓存命中估算 ${todayCacheHitEstimate}`"></p>
-            <div class="usage-bars">
-              <template x-for="(h, i) in [24,42,30,52,38,64,46,34,58]" :key="i">
-                <span :class="i === 5 ? 'hot' : ''" :style="`height:${h}px`"></span>
-              </template>
+            <div class="usage-real-stats">
+              <div><strong class="usage-number" x-text="todayCostDisplay"></strong><small x-text="`${todayTokensDisplay} tokens`"></small></div>
+              <div class="usage-cache"><small>缓存命中</small><strong x-text="todayCacheHitDisplay"></strong></div>
             </div>
+            <a href="usage.html" class="rail-link">打开用量看板 →</a>
           </section>
 
           <section class="rail-panel">
@@ -482,15 +491,18 @@
 
           <section class="rail-panel">
             <div class="rail-heading">
-              <h3>学习笔记</h3>
-              <p>来自最近润色差异的风格信号。</p>
+              <h3>最近确认的规则</h3>
+              <p>只显示学习记录中已经确认的真实规则。</p>
             </div>
-            <ul class="learning-notes">
-              <li>每篇文章主动补一个 2-15 字副标题。</li>
-              <li>IGN subheadline 不直接当正文首段。</li>
-              <li>标题中游戏名统一使用书名号。</li>
-              <li>不知名人物优先保留英文名。</li>
+            <ul x-show="learningRules.length" class="learning-notes">
+              <template x-for="rule in learningRules.slice(0, 3)" :key="rule.id || rule.title">
+                <li>
+                  <strong x-text="rule.title || rule.rule"></strong>
+                  <small x-text="rule.last_seen || rule.updated_at || ''"></small>
+                </li>
+              </template>
             </ul>
+            <div x-show="!learningRules.length" class="rail-empty">暂无已确认规则。</div>
             <a href="learning.html" class="btn btn-ghost rail-note-action">打开周报</a>
           </section>
         </aside>
@@ -500,7 +512,7 @@
     <!-- Mobile FAB Menu -->
     <div class="fab-container sm:hidden">
       <div x-show="fabOpen" x-cloak x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 scale-90" x-transition:enter-end="opacity-100 scale-100" x-transition:leave="transition ease-in duration-100" x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-90"
-           class="fab-menu">
+           class="fab-menu" @click.away="fabOpen=false">
         <a href="dict.html" class="fab-item"><svg width="14" height="14"><use href="#icon-book"/></svg> 词库</a>
         <a href="learning.html" class="fab-item"><svg width="14" height="14"><use href="#icon-chart"/></svg> 学习</a>
         <a href="usage.html" class="fab-item"><svg width="14" height="14"><use href="#icon-chart"/></svg> API 用量</a>
@@ -508,11 +520,18 @@
         <button @click="toggleTheme(); fabOpen=false" class="fab-item"><span x-text="themeIcon"></span> 主题</button>
         <button @click="showSettings=true; fabOpen=false" class="fab-item"><svg width="14" height="14"><use href="#icon-settings"/></svg> 设置</button>
       </div>
-      <button @click="fabOpen = !fabOpen" @click.away="fabOpen = false"
-              class="fab-btn" :class="fabOpen ? 'fab-open' : ''">
-        <svg><use href="#icon-plus"/></svg>
-      </button>
     </div>
+
+    <button x-show="selected.length > 0" x-cloak @click="submitRequest()" class="mobile-submit-bar">
+      提交翻译 <span x-text="selected.length"></span>
+    </button>
+
+    <nav class="mobile-bottom-nav" aria-label="移动端导航">
+      <a href="#queue" class="active"><svg><use href="#icon-list"/></svg><span>工作台</span></a>
+      <button @click="showGlobalSearch=true"><svg><use href="#icon-search"/></svg><span>搜索</span></button>
+      <a href="dict.html"><svg><use href="#icon-book"/></svg><span>词库</span></a>
+      <button @click="fabOpen = !fabOpen"><svg><use href="#icon-plus"/></svg><span>工具</span></button>
+    </nav>
 
     <!-- Pending Words FAB -->
     <button x-show="globalPending.length > 0" x-cloak
@@ -709,6 +728,7 @@
             </button>
             <span x-show="accountStatus" style="font-size:0.7rem; color:var(--text-muted);" x-text="accountStatus"></span>
           </div>
+
         </div>
         <div style="height:1px; background:var(--border); margin:1rem 0;"></div>
         <label>GitHub Personal Access Token</label>
