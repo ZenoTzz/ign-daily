@@ -74,7 +74,7 @@ Docs 正文均未被批量改写。线上仅新增了一份备份，并将两个
 ## 验证结果
 
 - Python `compileall` 通过。
-- 16 个单元/回归测试通过。
+- 17 个单元/回归测试通过。
 - 使用锁定版本 FastAPI 0.124.2 的真实 TestClient 集成验证通过。
 - Ruff 检查通过。
 - GitHub Actions YAML 解析通过。
