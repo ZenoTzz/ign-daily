@@ -69,6 +69,7 @@ python scripts/translate_pipeline.py YYYY-MM-DD ID --prep
 必须做到：
 
 - 忠于正文事实、主体、指代、不确定语气和段落覆盖。
+- **正文绝不是摘要。** 对 `sources/NN.json` 中每一个正文 `paragraphs_en` 段落，`translations/NN.json` 必须保留一个、且仅一个同序 `{en, cn}` 对；`en` 必须逐字复制该 source 段落，`cn` 必须完整翻译其全部事实、引语和限定条件。不得合并、拆借、删减或以概述替代段落。仅可排除明确的作者简介、图片署名和站内导航/广告噪音；无法确定时保留并翻译。
 - 标题、`subtitle`、`opus_summary` 由 Codex 重新撰写，不能直接把标题 API 占位稿当终稿。
 - 词库命中使用 `data/dict.json`；不确定新译名放入 `pending_dict`。
 - 保留 source cache 中有效的 `cover` 和 `images`。
@@ -102,6 +103,8 @@ python scripts/translate_pipeline.py YYYY-MM-DD ID --post
 python scripts/normalize_currency_files.py YYYY-MM-DD
 python scripts/pre_push_check.py YYYY-MM-DD
 ```
+
+`pre_push_check.py` 的 source alignment 为阻断性检查：它会逐段比对 source 与译文中的英文锚点、顺序和中文字段。任何不一致都必须先修复，不能将文章标记为 `done`，也不能同步到 Google Docs 或 GitHub。
 
 `pre_push_check.py` 当前运行四项：译文结构/媒体与标点、金额、标题词库、全文词库。只以最终 `ALL PRE-PUSH CHECKS PASSED` 为通过。
 

@@ -5,7 +5,7 @@ Usage:
   python3 scripts/pre_push_check.py [YYYY-MM-DD]
 
 This is the memory-saver wrapper for agents: run one command to execute all
-four publication checks.
+required publication checks.
 """
 
 from __future__ import annotations
@@ -39,6 +39,7 @@ def run_check(script: str, date: str) -> int:
 def main() -> int:
     date = sys.argv[1] if len(sys.argv) > 1 else default_date()
     checks = [
+        "check_source_alignment.py",
         "post_translate_check.py",
         "check_currency.py",
         "enforce_dict_titles.py",

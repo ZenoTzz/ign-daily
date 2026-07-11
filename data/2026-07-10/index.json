@@ -41,7 +41,7 @@
       "publish_time_cn": "2026-07-10 07:02",
       "pub_date": "2026-07-10 07:02",
       "cover_image": "https://assets-prd.ignimgs.com/2026/07/09/gettyimages-1171364359-1783637953882.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "done",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2026/07/09/gettyimages-1171364359-1783637953882.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/07/09/gettyimages-1171364359-1783637953882.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -56,7 +56,8 @@
       "translator": "codex",
       "translator_provider": "manual",
       "translator_model": "gpt-5-codex",
-      "translation_path": "translations/15.json"
+      "translation_path": "translations/15.json",
+      "translation_review_reason": "2026-07-11 source-alignment audit failed: paragraphs were omitted, merged, or their English anchors were rewritten; requires faithful paragraph-by-paragraph retranslation."
     },
     {
       "id": 16,
@@ -69,7 +70,7 @@
       "publish_time_cn": "2026-07-10 06:00",
       "pub_date": "2026-07-10 06:00",
       "cover_image": "https://assets-prd.ignimgs.com/2026/07/09/naruto-sasuke-sakura-1280-1783557987936.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "done",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2026/07/09/naruto-sasuke-sakura-1280-1783557987936.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/07/09/naruto-sasuke-sakura-1280-1783557987936.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -84,7 +85,8 @@
       "translator": "codex",
       "translator_provider": "manual",
       "translator_model": "gpt-5-codex",
-      "translation_path": "translations/16.json"
+      "translation_path": "translations/16.json",
+      "translation_review_reason": "2026-07-11 source-alignment audit failed: paragraphs were omitted, merged, or their English anchors were rewritten; requires faithful paragraph-by-paragraph retranslation."
     },
     {
       "id": 17,
@@ -172,7 +174,7 @@
       "publish_time_cn": "2026-07-10 01:26",
       "pub_date": "2026-07-10 01:26",
       "cover_image": "https://assets-prd.ignimgs.com/2026/06/08/black-ops-2-key-art-1780955021839.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "done",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/08/black-ops-2-key-art-1780955021839.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/08/black-ops-2-key-art-1780955021839.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -186,7 +188,8 @@
       "translator": "codex",
       "translator_provider": "manual",
       "translator_model": "gpt-5-codex",
-      "translation_path": "translations/19.json"
+      "translation_path": "translations/19.json",
+      "translation_review_reason": "2026-07-11 source-alignment audit failed: paragraphs were omitted, merged, or their English anchors were rewritten; requires faithful paragraph-by-paragraph retranslation."
     },
     {
       "id": 20,
@@ -199,7 +202,7 @@
       "publish_time_cn": "2026-07-10 00:53",
       "pub_date": "2026-07-10 00:53",
       "cover_image": "https://assets-prd.ignimgs.com/2026/06/30/kenway-site-1782819248796.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "done",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/30/kenway-site-1782819248796.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/30/kenway-site-1782819248796.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -213,7 +216,8 @@
       "translator": "codex",
       "translator_provider": "manual",
       "translator_model": "gpt-5-codex",
-      "translation_path": "translations/20.json"
+      "translation_path": "translations/20.json",
+      "translation_review_reason": "2026-07-11 source-alignment audit failed: paragraphs were omitted, merged, or their English anchors were rewritten; requires faithful paragraph-by-paragraph retranslation."
     },
     {
       "id": 21,
@@ -304,6 +308,63 @@
           "cat": "companies",
           "source": "ai_guess",
           "reason": "Infold Games是叠纸的国际品牌，中文母公司名称为叠纸"
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "category": "评测评分",
+      "emoji": "🔥",
+      "en_title": "Doom: The Dark Ages - Revelations Review So Far",
+      "cn_title": "《毁灭战士：黑暗时代》「Revelations」DLC 评测预览：新武器让战斗逼近永恒水准",
+      "summary": "IGN 编辑在体验《毁灭战士：黑暗时代》DLC「Revelations」约5小时后表示，新加入的链枪和冲刺能力令战斗节奏大幅提升，已接近《毁灭战士：永恒》的高度。尽管双武器切换和操作需要适应，但整体战斗表现力值得称道。完整评测将在通关后发布。",
+      "url": "https://www.ign.com/articles/doom-the-dark-ages-revelations-review",
+      "publish_time_cn": "2026-07-10 00:17",
+      "pub_date": "2026-07-10 00:17",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/07/08/doom-the-dark-ages-revelations-blogroll-01-1783552195718.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/07/08/doom-the-dark-ages-revelations-blogroll-01-1783552195718.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/07/08/doom-the-dark-ages-revelations-blogroll-01-1783552195718.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/07/08/doom-the-dark-ages-revelations-blogroll-01-1783552195718.jpg?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/07/08/doom-the-dark-ages-revelations-blogroll-01-1783552195718.jpg?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/07/08/doom-the-dark-ages-revelations-blogroll-01-1783552195718.jpg",
+        "https://assets-prd.ignimgs.com/2026/07/08/doom-the-dark-ages-revelations-yt-01-1783552187102.jpg",
+        "https://assets-prd.ignimgs.com/2026/06/07/doomthedarkages-1780856916529.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-07-11T00:18:27+08:00"
+    },
+    {
+      "id": 33,
+      "category": "评测评分",
+      "emoji": "🏈",
+      "en_title": "College Football 27 Review",
+      "cn_title": "《College Football 27》评测：场上精彩场外繁琐",
+      "summary": "《College Football 27》延续了系列出色的球场表现和视觉呈现，新增技能训练师、动态天气及防守调整等改进，使比赛体验更加丰富。但Road to Glory模式依旧被菜单和数值管理主导，缺乏沉浸感；新的计时接球系统虽有创意，但存在不稳定问题。EA在球场上的打磨值得肯定，但场外体验仍有提升空间。",
+      "url": "https://www.ign.com/articles/college-football-27-review",
+      "publish_time_cn": "2026-07-10 00:17",
+      "pub_date": "2026-07-10 00:17",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/07/02/ea-sports-college-football-27-blogroll-2-1782954185145.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/07/02/ea-sports-college-football-27-blogroll-2-1782954185145.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/07/02/ea-sports-college-football-27-blogroll-2-1782954185145.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/07/02/ea-sports-college-football-27-blogroll-2-1782954185145.jpg?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/07/02/ea-sports-college-football-27-blogroll-2-1782954185145.jpg?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/05/college-football-27-button-1780671855909.jpg",
+        "https://assets-prd.ignimgs.com/2026/07/02/ea-sports-college-football-27-blogroll-2-1782954185145.jpg",
+        "https://assets-prd.ignimgs.com/2026/07/02/ea-sports-college-football-27-yt-1782954123812.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-07-11T00:19:02+08:00",
+      "pending_dict": [
+        {
+          "en": "Road to Glory",
+          "cn": "荣耀之路",
+          "cat": "terms",
+          "source": "ai_guess",
+          "reason": "系列常见模式名，需要确认官方或通行译名。"
         }
       ]
     },
@@ -518,7 +579,7 @@
       "publish_time_cn": "2026-07-09 22:00",
       "pub_date": "2026-07-09 22:00",
       "cover_image": "https://assets-prd.ignimgs.com/2026/07/08/screamoperator-blogroll-1783549785162.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "done",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2026/07/08/screamoperator-blogroll-1783549785162.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/07/08/screamoperator-blogroll-1783549785162.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -541,7 +602,8 @@
       "translator": "codex",
       "translator_provider": "manual",
       "translator_model": "gpt-5-codex",
-      "translation_path": "translations/05.json"
+      "translation_path": "translations/05.json",
+      "translation_review_reason": "2026-07-11 source-alignment audit failed: paragraphs were omitted, merged, or their English anchors were rewritten; requires faithful paragraph-by-paragraph retranslation."
     },
     {
       "id": 6,
@@ -627,7 +689,7 @@
       "publish_time_cn": "2026-07-09 19:58",
       "pub_date": "2026-07-09 19:58",
       "cover_image": "https://assets-prd.ignimgs.com/2026/07/02/riftb-gangp-excloo-1783017035270.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "done",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2026/07/02/riftb-gangp-excloo-1783017035270.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/07/02/riftb-gangp-excloo-1783017035270.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -664,7 +726,8 @@
       "translator": "codex",
       "translator_provider": "manual",
       "translator_model": "gpt-5-codex",
-      "translation_path": "translations/09.json"
+      "translation_path": "translations/09.json",
+      "translation_review_reason": "2026-07-11 source-alignment audit failed: paragraphs were omitted, merged, or their English anchors were rewritten; requires faithful paragraph-by-paragraph retranslation."
     },
     {
       "id": 10,
@@ -677,7 +740,7 @@
       "publish_time_cn": "2026-07-09 19:51",
       "pub_date": "2026-07-09 19:51",
       "cover_image": "https://assets-prd.ignimgs.com/2025/06/05/ss-c161f11c9eb64b673ec976f95383f924991cecb5-1920x1080-1749122336673.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "done",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2025/06/05/ss-c161f11c9eb64b673ec976f95383f924991cecb5-1920x1080-1749122336673.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2025/06/05/ss-c161f11c9eb64b673ec976f95383f924991cecb5-1920x1080-1749122336673.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -691,7 +754,8 @@
       "translator": "codex",
       "translator_provider": "manual",
       "translator_model": "gpt-5-codex",
-      "translation_path": "translations/10.json"
+      "translation_path": "translations/10.json",
+      "translation_review_reason": "2026-07-11 source-alignment audit failed: paragraphs were omitted, merged, or their English anchors were rewritten; requires faithful paragraph-by-paragraph retranslation."
     },
     {
       "id": 11,
@@ -704,7 +768,7 @@
       "publish_time_cn": "2026-07-09 19:30",
       "pub_date": "2026-07-09 19:30",
       "cover_image": "https://assets-prd.ignimgs.com/2026/07/09/skyrim-shouts-1783596573641.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "done",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2026/07/09/skyrim-shouts-1783596573641.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/07/09/skyrim-shouts-1783596573641.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -729,7 +793,8 @@
       "translator": "codex",
       "translator_provider": "manual",
       "translator_model": "gpt-5-codex",
-      "translation_path": "translations/11.json"
+      "translation_path": "translations/11.json",
+      "translation_review_reason": "2026-07-11 source-alignment audit failed: paragraphs were omitted, merged, or their English anchors were rewritten; requires faithful paragraph-by-paragraph retranslation."
     },
     {
       "id": 12,
@@ -766,7 +831,7 @@
       "publish_time_cn": "2026-07-09 16:52",
       "pub_date": "2026-07-09 16:52",
       "cover_image": "https://assets-prd.ignimgs.com/2023/05/24/marathon-blogroll-02-1684962151922.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "done",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2023/05/24/marathon-blogroll-02-1684962151922.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2023/05/24/marathon-blogroll-02-1684962151922.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -779,7 +844,119 @@
       "translator": "codex",
       "translator_provider": "manual",
       "translator_model": "gpt-5-codex",
-      "translation_path": "translations/02.json"
+      "translation_path": "translations/02.json",
+      "translation_review_reason": "2026-07-11 source-alignment audit failed: paragraphs were omitted, merged, or their English anchors were rewritten; requires faithful paragraph-by-paragraph retranslation."
+    },
+    {
+      "id": 28,
+      "category": "评测评分",
+      "emoji": "🗡️",
+      "en_title": "Echoes of Aincrad Review",
+      "cn_title": "《刀剑神域：Echoes of Aincrad》评测",
+      "summary": "《刀剑神域》衍生作《Echoes of Aincrad》是一款单人动作RPG，讲述原创新角色在艾恩葛朗特中冒险的故事。游戏战斗系统出色，招架与闪避反击爽快且有深度，武器与技能定制丰富。然而，其半开放世界设计空洞，探索受限，怪物重复度高，环境缺乏多样性，严重拖累叙事节奏。整体而言，战斗是最大亮点，但开放世界部分令人失望。",
+      "url": "https://www.ign.com/articles/echoes-of-aincrad-review",
+      "publish_time_cn": "2026-07-09 16:17",
+      "pub_date": "2026-07-09 16:17",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/07/07/79jhbegroxxs4gzrayafnukfecdovcxbc2gghpbvan0-1783461824150.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/07/07/79jhbegroxxs4gzrayafnukfecdovcxbc2gghpbvan0-1783461824150.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/07/07/79jhbegroxxs4gzrayafnukfecdovcxbc2gghpbvan0-1783461824150.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/07/07/79jhbegroxxs4gzrayafnukfecdovcxbc2gghpbvan0-1783461824150.jpg?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/07/07/79jhbegroxxs4gzrayafnukfecdovcxbc2gghpbvan0-1783461824150.jpg?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/03/06/echoes-of-aincrad-button-1772820376524.jpg",
+        "https://assets-prd.ignimgs.com/2026/07/07/79jhbegroxxs4gzrayafnukfecdovcxbc2gghpbvan0-1783461824150.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-07-10T16:18:27+08:00"
+    },
+    {
+      "id": 29,
+      "category": "评测评分",
+      "emoji": "🌊",
+      "en_title": "Moana Live-Action Review",
+      "cn_title": "《海洋奇缘》真人版：逐帧复刻，灵魂缺失",
+      "summary": "迪士尼第25部动画真人重制《海洋奇缘》于7月10日上映，由百老汇导演托马斯·凯尔执导，凯瑟琳·拉加艾阿与道恩·强森主演。影片逐帧复刻原作，视觉效果壮观，音乐和舞蹈呈现出色，但强森饰演的毛伊因假发违和、表演缺乏活力而成为短板。整体而言，影片虽非最差迪士尼真人重制，但未能证明自身存在的必要。",
+      "url": "https://www.ign.com/articles/moana-live-action-review",
+      "publish_time_cn": "2026-07-09 16:17",
+      "pub_date": "2026-07-09 16:17",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/03/23/maui-1774298895211.png?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/03/23/maui-1774298895211.png?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/03/23/maui-1774298895211.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/03/23/maui-1774298895211.png?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/03/23/maui-1774298895211.png?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2025/11/17/moana-live-action-teaser-button-1763401222534.jpg",
+        "https://assets-prd.ignimgs.com/2026/03/23/maui-1774298895211.png"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-07-10T16:18:30+08:00"
+    },
+    {
+      "id": 30,
+      "category": "评测评分",
+      "emoji": "🔥",
+      "en_title": "Evil Dead Burn Review",
+      "cn_title": "《Evil Dead Burn》评测：血腥有余，深度不足",
+      "summary": "法国导演Sébastien Vaniček执导的《Evil Dead Burn》作为系列新作，故事围绕刚刚丧夫的Alice及其婆家展开，Deadites为夺取家族遗物发起猛攻。影片在血腥场面上毫不吝啬，特效令人作呕，但主题挖掘流于表面，角色塑造单薄，喜剧与恐怖节奏失衡，整体未能超越2013年重启版或《鬼玩人：崛起》。",
+      "url": "https://www.ign.com/articles/evil-dead-burn-review",
+      "publish_time_cn": "2026-07-09 16:17",
+      "pub_date": "2026-07-09 16:17",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/23/evil-dead-oo-1782251025078.png?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/23/evil-dead-oo-1782251025078.png?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/23/evil-dead-oo-1782251025078.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/23/evil-dead-oo-1782251025078.png?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/23/evil-dead-oo-1782251025078.png?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/05/05/evil-dead-burns-button-1778003625876.jpg",
+        "https://assets-prd.ignimgs.com/2026/06/23/evil-dead-oo-1782251025078.png"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-07-10T16:18:35+08:00",
+      "pending_dict": [
+        {
+          "en": "Evil Dead Burn",
+          "cn": "《鬼玩人：燃烧》",
+          "cat": "movies_tv",
+          "source": "ai_guess",
+          "reason": "系列官方中文译名为《鬼玩人》，此片尚未有正式中文译名，建议人工确认。"
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "category": "评测评分",
+      "emoji": "🔥",
+      "en_title": "X-Men '97 Season 2, Episode 4 Review & Recap: 'Rise of Apocalypse, Part II'",
+      "cn_title": "《X战警97》第四集剧评：天启崛起（下）",
+      "summary": "《X战警97》第二季第四集「天启崛起（下）」深入刻画了天启的起源与人性的悲剧一面，万磁王为赎罪牺牲自己，X教授在绝望中动摇信念，为经典反派注入全新情感深度。片尾彩蛋引出金刚狼主导的故事线。本集堪称系列最佳之一，角色塑造与情怀输出皆属上乘。",
+      "url": "https://www.ign.com/articles/x-men-97-season-2-episode-4-review-recap-rise-of-apocalypse-part-ii",
+      "publish_time_cn": "2026-07-09 16:17",
+      "pub_date": "2026-07-09 16:17",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/07/07/x-men-97-s2e4-blogroll-1783448897872.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/07/07/x-men-97-s2e4-blogroll-1783448897872.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/07/07/x-men-97-s2e4-blogroll-1783448897872.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/07/07/x-men-97-s2e4-blogroll-1783448897872.jpg?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/07/07/x-men-97-s2e4-blogroll-1783448897872.jpg?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2021/11/12/xmen-97-button-1636738021246.jpg",
+        "https://assets-prd.ignimgs.com/2026/07/07/x-men-97-s2e4-blogroll-1783448897872.jpg",
+        "https://assets-prd.ignimgs.com/2026/05/27/mixcollage-27-may-2026-04-16-pm-4938-1779913105760.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-07-10T16:18:56+08:00",
+      "pending_dict": [
+        {
+          "en": "Externals",
+          "cn": "外部者",
+          "cat": "terms",
+          "source": "ai_guess",
+          "reason": "Mar Comics组织，无稳定官方中文译名，建议人工确认"
+        }
+      ]
     },
     {
       "id": 26,
@@ -824,7 +1001,7 @@
       "publish_time_cn": "2026-07-09 08:08",
       "pub_date": "2026-07-09 08:08",
       "cover_image": "https://assets-prd.ignimgs.com/2026/07/08/doomthumb-1783524521667.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "done",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2026/07/08/doomthumb-1783524521667.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/07/08/doomthumb-1783524521667.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -837,8 +1014,9 @@
       "translator": "codex",
       "translator_provider": "manual",
       "translator_model": "gpt-5-codex",
-      "translation_path": "translations/01.json"
+      "translation_path": "translations/01.json",
+      "translation_review_reason": "2026-07-11 source-alignment audit failed: paragraphs were omitted, merged, or their English anchors were rewritten; requires faithful paragraph-by-paragraph retranslation."
     }
   ],
-  "total": 27
+  "total": 33
 }

@@ -7,7 +7,7 @@
 | 脚本 | 用途 | 常用命令 |
 |---|---|---|
 | `agent_doctor.py` | 仓库、文档链接、JSON、Python 和关键不变量检查 | `python scripts/agent_doctor.py` |
-| `pre_push_check.py` | 翻译发布总校验（四项） | `python scripts/pre_push_check.py DATE` |
+| `pre_push_check.py` | 翻译发布总校验（含 source alignment） | `python scripts/pre_push_check.py DATE` |
 | `codex_job_client.py` | 查询、认领、更新服务器 Codex job | `python scripts/codex_job_client.py --help` |
 | `git_push.py` | 使用环境中的 PAT 安全 pull/rebase/push | `python scripts/git_push.py` |
 
@@ -37,6 +37,7 @@
 | `ensure_translation_media.py` | 从 source cache 补回译文封面和图片 |
 | `normalize_currency_files.py` | 统一当天 index/translation/comparison 金额格式 |
 | `post_translate_check.py` | 译文结构、媒体、标点和摘要检查 |
+| `check_source_alignment.py` | 阻断正文段落遗漏、合并或英文锚点改写 |
 | `check_currency.py` | 外币与人民币换算检查 |
 | `enforce_dict_titles.py` | 首页标题词库检查 |
 | `check_dict_fulltext.py` | 全文词库检查 |

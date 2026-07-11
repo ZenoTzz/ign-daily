@@ -54,8 +54,9 @@ python scripts/agent_doctor.py
 
 1. 服务器任务/请求与文章 URL 对应正确。
 2. `translations/NN.json` 字段完整，`index.json` 和 `requests.json` 状态一致。
+   - 全文翻译的 `paragraphs` 必须与 `sources/NN.json` 中的正文段落一一对应：不得摘要、合并、改写英文锚点或省略事实。仅可排除明确的作者简介、图片署名和站内导航噪音；有疑问时保留并翻译。
 3. 媒体从 `sources/NN.json` 保留或修复。
-4. 对涉及日期运行：
+4. 对涉及日期运行（其中 source alignment 失败即禁止标记 `done`、同步或提交）：
 
 ```bash
 python scripts/pre_push_check.py YYYY-MM-DD
