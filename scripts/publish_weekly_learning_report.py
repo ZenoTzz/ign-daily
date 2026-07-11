@@ -57,12 +57,18 @@ def build_report(evidence: dict[str, Any], anchor_date: str) -> dict[str, Any]:
     week_dates = week_dates_for(anchor_date)
     rules = evidence.get("rules", {}) if isinstance(evidence, dict) else {}
     candidates: list[dict[str, Any]] = []
+    confirmed_rules: list[dict[str, Any]] = []
+    observations: list[dict[str, Any]] = []
     for entry in rules.values():
         if not isinstance(entry, dict):
             continue
         days = set(str(d) for d in entry.get("days", []))
-        if days.intersection(week_dates) or entry.get("status") in ("ready_for_review", "confirmed_by_feedback"):
+        if entry.get("status") == "ready_for_review":
             candidates.append(entry)
+        elif entry.get("status") in ("confirmed_by_feedback", "confirmed"):
+            confirmed_rules.append(entry)
+        elif days.intersection(week_dates) and entry.get("status") == "observed":
+            observations.append(entry)
     candidates.sort(key=lambda r: (
         0 if r.get("status") == "ready_for_review" else 1,
         -int(r.get("days_seen", 0) or 0),
@@ -77,10 +83,13 @@ def build_report(evidence: dict[str, Any], anchor_date: str) -> dict[str, Any]:
         "summary": {
             "candidate_count": len(candidates),
             "ready_for_review": sum(1 for r in candidates if r.get("status") == "ready_for_review"),
-            "confirmed_by_feedback": sum(1 for r in candidates if r.get("status") == "confirmed_by_feedback"),
+            "confirmed_by_feedback": len(confirmed_rules),
             "pending": sum(1 for r in candidates if r.get("status") == "pending"),
+            "observing": len(observations),
         },
         "candidates": candidates[:40],
+        "confirmed_rules": confirmed_rules[:40],
+        "observations": observations[:12],
         "instructions_for_user": [
             "Adopt: this rule can enter STYLE_PROFILE.md.",
             "Reject: this is not your preference and should not be proposed again.",

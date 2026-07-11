@@ -72,7 +72,8 @@ newest date. Treat this as a small backfill pass, not a broad rewrite:
    `data/google-polish-config.json`, run `python scripts/import_tencent_polish.py --all`
    as a compatibility fallback.
 2. Run `python scripts/nightly_polish_diff.py {date}` for dates with polished
-   files when a fresh `diff_analysis.json` is useful.
+   files when a fresh `diff_analysis.json` is useful. This script creates
+   evidence only; its output is never a reviewed rule.
 3. If `translations/NN.json` exists, compare original translation against the
    user's polished version.
 4. If `translations/NN.json` does not exist, still compare `sources/NN.json`
@@ -85,10 +86,17 @@ newest date. Treat this as a small backfill pass, not a broad rewrite:
    source+polished-only articles, do not learn broad prose style; only learn
    dictionary candidates and very low-risk formatting evidence.
 6. Treat feedback on the learning page as higher priority than your own guess.
-7. Add or update candidate rules in `data/learning/style-evidence.json`.
-8. Update `data/learning/weekly/{week}.json` and `latest.json` when the evidence
+7. Run `python scripts/prepare_codex_learning_review.py`. Read every queued item
+   with its source context, examples, alternatives and contradictions. Write
+   `data/learning/semantic-review-results.json` using this schema:
+   `{"results":[{"id":"...","decision":"approve|reject|observe|one_off|fact_correction","rationale":"...","refined_rule":"...","scope":"...","counterexamples":[],"misuse_risk":"..."}]}`.
+   Approval requires a real entity/context match or a durable, executable style
+   preference. A textual before/after difference alone is not enough.
+8. Run `python scripts/apply_codex_learning_review.py`. Do not edit statuses by
+   hand and do not bypass its promotion thresholds.
+9. Update `data/learning/weekly/{week}.json` and `latest.json` when the evidence
    pool changes enough to show the user.
-9. Only update `STYLE_PROFILE.md` when weekly feedback explicitly confirms or
+10. Only update `STYLE_PROFILE.md` when weekly feedback explicitly confirms or
    adopts a rule.
 
 ## Output Rules
@@ -100,6 +108,11 @@ Candidate rules should include:
 - examples with date, article id, before, and after;
 - status showing whether it is pending, confirmed, rejected, or limited;
 - enough evidence count to avoid over-learning from a single edit.
+
+New evidence starts as `observed`. It can become `ready_for_review` only after
+Codex semantic approval and evidence from at least 3 articles across 2 days,
+with no unresolved contradiction. One-off edits and factual corrections are
+archived as observations, never style rules.
 
 Keep all JSON UTF-8, pretty-printed, and stable. Preserve unrelated existing
 learning data.

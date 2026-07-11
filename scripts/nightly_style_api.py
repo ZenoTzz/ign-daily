@@ -27,6 +27,7 @@ from api_provider import api_key_help, resolve_api_key
 from prompt_blocks import nightly_user_payload
 from translate_titles_deepseek import call_deepseek_response, extract_json
 from usage_logger import record_deepseek_usage_safe
+from learning_quality import promotion_status
 
 
 configure_utf8_stdio()
@@ -293,6 +294,7 @@ def merge_candidates(evidence: dict[str, Any], date: str, candidates: list[dict[
             "category": cand.get("category") or "other",
             "scope": cand.get("scope") or "all",
             "status": "pending",
+            "semantic_review": "pending",
             "days": [],
             "days_seen": 0,
             "articles_seen": 0,
@@ -330,10 +332,12 @@ def merge_candidates(evidence: dict[str, Any], date: str, candidates: list[dict[
         elif suggestion == "confirm":
             entry["status"] = "confirmed_by_feedback"
         elif entry.get("status") not in ("confirmed_by_feedback", "confirmed", "rejected"):
-            if entry["days_seen"] >= 3 and entry["articles_seen"] >= 5 and not entry.get("contradictions"):
-                entry["status"] = "ready_for_review"
-            else:
-                entry["status"] = "pending"
+            entry["status"] = promotion_status(
+                days_seen=entry["days_seen"],
+                articles_seen=entry["articles_seen"],
+                contradictions=int(entry.get("contradictions", 0) or 0),
+                semantic_review=str(entry.get("semantic_review") or "pending"),
+            )
         entry["confidence"] = max(float(entry.get("confidence") or 0), float(cand.get("confidence") or 0))
         if cand.get("evidence_summary"):
             entry["latest_evidence_summary"] = cand.get("evidence_summary")
@@ -353,13 +357,19 @@ def build_weekly_report(evidence: dict[str, Any], date: str) -> dict[str, Any]:
     week_dates = [(week_start + timedelta(days=i)).strftime("%Y-%m-%d") for i in range(7)]
     rules = evidence.get("rules", {})
     candidates = []
+    confirmed_rules = []
+    observations = []
     for entry in rules.values():
         if not isinstance(entry, dict):
             continue
         days = set(entry.get("days", []))
         status = entry.get("status")
-        if days.intersection(week_dates) or status in ("ready_for_review", "confirmed_by_feedback", "confirmed"):
+        if status == "ready_for_review":
             candidates.append(entry)
+        elif status in ("confirmed_by_feedback", "confirmed"):
+            confirmed_rules.append(entry)
+        elif days.intersection(week_dates) and status == "observed":
+            observations.append(entry)
     candidates.sort(key=lambda r: (
         0 if r.get("status") == "ready_for_review" else 1,
         -int(r.get("days_seen", 0)),
@@ -373,10 +383,13 @@ def build_weekly_report(evidence: dict[str, Any], date: str) -> dict[str, Any]:
         "summary": {
             "candidate_count": len(candidates),
             "ready_for_review": sum(1 for r in candidates if r.get("status") == "ready_for_review"),
-            "confirmed_by_feedback": sum(1 for r in candidates if r.get("status") in ("confirmed_by_feedback", "confirmed")),
+            "confirmed_by_feedback": len(confirmed_rules),
             "pending": sum(1 for r in candidates if r.get("status") == "pending"),
+            "observing": len(observations),
         },
         "candidates": candidates[:40],
+        "confirmed_rules": confirmed_rules[:40],
+        "observations": observations[:12],
         "instructions_for_user": [
             "采纳：表示这条可以进入长期 STYLE_PROFILE.md。",
             "否定：表示这条不是你的偏好，后续不要再提。",

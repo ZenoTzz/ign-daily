@@ -1,0 +1,13 @@
+{
+  "schema_version": 2,
+  "generated_at": "2026-07-11T10:29:20+08:00",
+  "instructions": "Codex must write semantic-review-results.json; mechanical scripts cannot approve candidates.",
+  "allowed_decisions": [
+    "approve",
+    "reject",
+    "observe",
+    "one_off",
+    "fact_correction"
+  ],
+  "items": []
+}

@@ -10,7 +10,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script defer src="assets/alpine.min.js"></script>
   <link rel="stylesheet" href="assets/style.css?v=20260616theme2">
-  <link rel="stylesheet" href="assets/workspace-ui.css?v=20260711refactor1">
+  <link rel="stylesheet" href="assets/workspace-ui.css?v=20260711learning2">
   <script src="assets/app.js?v=20260709serverauth1"></script>
   <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet">
   <script>
@@ -38,74 +38,48 @@
     <!-- Main -->
     <main class="flex-1 max-w-4xl w-full mx-auto px-4 py-6">
       <p class="text-sm text-white/40 mb-6">
-        每天 22:30 自动整理你润色过的文章；每周汇总成学习报告，只列出候选规律，等你决定采纳、否定、限定或暂缓后，才会进入长期风格规则。
+        每晚先对齐润色差异，再由 Codex 判断它是事实纠错、一次性修改、词库实体还是稳定偏好。只有跨文章验证过的规律才会请你确认。
       </p>
 
-      <!-- Weekly long-term learning report -->
-      <section class="mb-8 bg-[#14141f]/70 rounded-lg border border-white/5 overflow-hidden">
-        <header class="bg-[#08080f] px-5 py-3 border-b border-white/5 flex items-center gap-3">
-          <h2 class="text-lg font-bold text-white/80">每周学习报告</h2>
-          <span class="text-xs text-white/35" x-text="weeklyReport ? `${weeklyReport.week_id} · ${weeklyRangeText(weeklyReport)} · ${weeklyReport.summary?.candidate_count || 0} 条候选规律` : '等待夜间学习生成'"></span>
-          <div class="flex-1"></div>
-          <button @click="weeklyExpanded = !weeklyExpanded" class="text-sm text-red-500 hover:underline" x-text="weeklyExpanded ? '收起' : '展开'"></button>
-        </header>
-        <div x-show="weeklyExpanded" class="p-5">
-          <template x-if="weeklyLoading">
-            <div class="text-center text-white/30 py-4">加载每周报告...</div>
-          </template>
-          <template x-if="!weeklyLoading && !weeklyReport">
-            <div class="text-white/40 text-sm">还没有每周学习报告。夜间学习会先积累每日观察，再生成周报。</div>
-          </template>
-          <template x-if="!weeklyLoading && weeklyReport">
-            <div class="space-y-4">
-              <div class="text-sm text-white/45 bg-[#08080f] rounded p-3 border border-white/5">
-                本周范围：<span class="text-white/70" x-text="weeklyRangeText(weeklyReport)"></span>。下面是我从润色稿里提取的候选学习成果，不会自动写入正式规则；你点「采纳 / 否定 / 限定 / 暂缓」后，夜间学习才会按你的决定处理。
-              </div>
-              <div class="grid grid-cols-2 md:grid-cols-4 gap-3 text-sm">
-                <div class="bg-[#08080f] rounded p-3 border border-white/5"><div class="text-white/35">候选规律</div><div class="text-xl font-bold" x-text="weeklyReport.summary?.candidate_count || 0"></div></div>
-                <div class="bg-[#08080f] rounded p-3 border border-white/5"><div class="text-white/35">待你确认</div><div class="text-xl font-bold" x-text="weeklyReport.summary?.ready_for_review || 0"></div></div>
-                <div class="bg-[#08080f] rounded p-3 border border-white/5"><div class="text-white/35">已确认</div><div class="text-xl font-bold" x-text="weeklyReport.summary?.confirmed_by_feedback || 0"></div></div>
-                <div class="bg-[#08080f] rounded p-3 border border-white/5"><div class="text-white/35">观察中</div><div class="text-xl font-bold" x-text="weeklyReport.summary?.pending || 0"></div></div>
-              </div>
-              <div class="space-y-3">
+      <!-- Learning v2: decisions, evidence and impact are separated. -->
+      <section class="learning-v2-panel mb-8">
+        <div class="learning-v2-head">
+          <div><h2>本周学习结论</h2><p x-text="weeklyReport ? `${weeklyReport.week_id} · ${weeklyRangeText(weeklyReport)}` : '等待夜间学习生成'"></p></div>
+          <span class="learning-v2-badge">语义复核后展示</span>
+        </div>
+        <div x-show="weeklyLoading" class="learning-v2-empty">加载每周报告...</div>
+        <template x-if="!weeklyLoading && weeklyReport">
+          <div class="learning-v2-body">
+            <div class="learning-v2-stats">
+              <div><strong x-text="weeklyReport.summary?.ready_for_review || 0"></strong><span>需要你决定</span></div>
+              <div><strong x-text="weeklyReport.summary?.observing || 0"></strong><span>仍在观察</span></div>
+              <div><strong x-text="weeklyReport.summary?.confirmed_by_feedback || 0"></strong><span>已确认规则</span></div>
+            </div>
+
+            <section class="learning-v2-section">
+              <div class="learning-v2-section-head"><div><h3>需要你决定</h3><p>只有通过 Codex 语义复核并达到跨文章证据门槛的规律才会出现在这里。</p></div><button x-show="(weeklyReport.candidates || []).length > 1" @click="batchRejectCandidates()" class="learning-v2-secondary">批量否定本组</button></div>
+              <div x-show="!(weeklyReport.candidates || []).length" class="learning-v2-empty success">本周没有需要你审核的新规律。低质量替换已被过滤。</div>
+              <div class="learning-v2-list">
                 <template x-for="rule in (weeklyReport.candidates || [])" :key="rule.id">
-                  <article class="bg-[#08080f] rounded p-4 border border-white/5">
-                    <header class="flex items-start gap-2 mb-2">
-                      <span class="text-xs px-2 py-0.5 rounded bg-white/10 text-white/60" x-text="rule.status || 'pending'"></span>
-                      <h3 class="font-semibold flex-1 text-white/90" x-text="rule.title"></h3>
-                      <span class="text-xs text-white/35" x-text="`${rule.days_seen || 0}天 / ${rule.articles_seen || 0}篇`"></span>
-                    </header>
-                    <p class="text-sm text-white/65 mb-2" x-text="rule.rule"></p>
-                    <p class="text-xs text-white/40 mb-3" x-text="rule.latest_evidence_summary || ''"></p>
-                    <details class="text-xs text-white/45 mb-3" x-show="rule.examples && rule.examples.length">
-                      <summary class="cursor-pointer hover:text-white/80">查看证据</summary>
-                      <div class="space-y-2 mt-2">
-                        <template x-for="ex in rule.examples || []">
-                          <div class="bg-[#14141f] rounded p-2">
-                            <div class="text-white/35" x-text="`${ex.date || ''} #${ex.article_id || ''}`"></div>
-                            <div x-show="ex.before" class="text-white/45">原：<span x-text="ex.before"></span></div>
-                            <div x-show="ex.after" class="text-emerald-300/80">改：<span x-text="ex.after"></span></div>
-                          </div>
-                        </template>
-                      </div>
-                    </details>
-                    <div class="border-t border-white/5 pt-3">
-                      <template x-if="weeklyFeedback[rule.id]">
-                        <div class="text-sm bg-amber-100 text-slate-900 rounded p-2 mb-2"><span class="font-bold">你的批注：</span><span x-text="weeklyFeedback[rule.id]"></span></div>
-                      </template>
-                      <div class="flex flex-wrap gap-2">
-                        <button @click="saveWeeklyFeedback(rule.id, '采纳，进入长期规则。')" class="text-xs px-3 py-1 rounded bg-emerald-600 hover:bg-emerald-500">采纳</button>
-                        <button @click="saveWeeklyFeedback(rule.id, '否定，这不是我的长期偏好。')" class="text-xs px-3 py-1 rounded bg-rose-600 hover:bg-rose-500">否定</button>
-                        <button @click="editWeeklyFeedback(rule)" class="text-xs px-3 py-1 rounded bg-blue-600 hover:bg-blue-500">限定/改写</button>
-                        <button @click="saveWeeklyFeedback(rule.id, '暂缓，继续观察。')" class="text-xs px-3 py-1 rounded bg-white/10 hover:bg-white/15">暂缓</button>
-                      </div>
-                    </div>
+                  <article class="learning-v2-card">
+                    <div class="learning-v2-card-head"><span x-text="rule.category || 'style'"></span><strong x-text="rule.title"></strong><small x-text="`${rule.days_seen || 0}天 / ${rule.articles_seen || 0}篇`"></small></div>
+                    <p class="learning-v2-rule" x-text="rule.rule"></p>
+                    <dl class="learning-v2-reasoning">
+                      <div><dt>为什么可能是规律</dt><dd x-text="rule.semantic_rationale || rule.latest_evidence_summary || '等待说明'"></dd></div>
+                      <div><dt>误用风险</dt><dd x-text="rule.misuse_risk || '尚未发现明确风险'"></dd></div>
+                      <div><dt>适用范围</dt><dd x-text="rule.scope || 'all'"></dd></div>
+                    </dl>
+                    <details class="learning-v2-evidence" x-show="rule.examples && rule.examples.length"><summary>查看证据与反例</summary><template x-for="ex in rule.examples || []"><div><small x-text="`${ex.date || ''} #${ex.article_id || ''}`"></small><p><b>原：</b><span x-text="ex.before"></span></p><p><b>改：</b><span x-text="ex.after"></span></p></div></template><p x-show="(rule.counterexamples || []).length"><b>反例：</b><span x-text="(rule.counterexamples || []).join('；')"></span></p></details>
+                    <div class="learning-v2-actions"><button @click="saveWeeklyFeedback(rule.id, '采纳，进入长期规则。')" class="accept">采纳</button><button @click="saveWeeklyFeedback(rule.id, '否定，这不是我的长期偏好。')" class="reject">否定</button><button @click="editWeeklyFeedback(rule)">限定/改写</button><button @click="saveWeeklyFeedback(rule.id, '暂缓，继续观察。')">继续观察</button></div>
                   </article>
                 </template>
               </div>
-            </div>
-          </template>
-        </div>
+            </section>
+
+            <details class="learning-v2-collapsible"><summary>已确认的长期规则 <span x-text="weeklyReport.summary?.confirmed_by_feedback || 0"></span></summary><div class="learning-v2-compact-list"><template x-for="rule in (weeklyReport.confirmed_rules || [])" :key="rule.id"><div><strong x-text="rule.title"></strong><span x-text="rule.rule"></span></div></template></div></details>
+            <details class="learning-v2-collapsible"><summary>观察中的证据 <span x-text="weeklyReport.summary?.observing || 0"></span></summary><p>这些内容不会要求你审核，也不会写入正式规则；系统会继续寻找跨文章证据和反例。</p></details>
+          </div>
+        </template>
       </section>
 
       <!-- Loading -->
@@ -127,7 +101,7 @@
         <section class="mb-8 bg-[#14141f]/70 rounded-lg border border-white/5 overflow-hidden">
           <header class="bg-[#08080f] px-5 py-3 border-b border-white/5 flex items-center gap-3">
             <h2 class="text-lg font-bold text-white/80" x-text="`📅 ${date}`"></h2>
-            <span class="text-sm text-white/40" x-text="logs[date] ? `分析了 ${logs[date].articles_analyzed} 篇` : ''"></span>
+            <span class="text-sm text-white/40" x-text="logs[date] ? `分析了 ${logs[date].articles_analyzed ?? logs[date].total_articles ?? 0} 篇` : ''"></span>
             <div class="flex-1"></div>
             <button @click="expanded[date] = !expanded[date]"
                     class="text-sm text-red-500 hover:underline"
@@ -139,7 +113,7 @@
             <div>
               <h3 class="text-base font-semibold text-white/80 mb-3 flex items-center gap-2">
                 ✅ 已确认的规则
-                <span class="text-xs text-white/30 font-normal" x-text="`（${logs[date].rules_confirmed.length} 条）`"></span>
+                <span class="text-xs text-white/30 font-normal" x-text="`（${(logs[date].rules_confirmed || []).length} 条）`"></span>
               </h3>
               <div class="space-y-3">
                 <template x-for="rule in logs[date].rules_confirmed" :key="rule.id">
@@ -193,7 +167,7 @@
             <div x-show="logs[date].dict_updates && logs[date].dict_updates.length">
               <h3 class="text-base font-semibold text-white/80 mb-3 flex items-center gap-2">
                 📚 词库更新
-                <span class="text-xs text-white/30 font-normal" x-text="`（${logs[date].dict_updates.length} 条）`"></span>
+                <span class="text-xs text-white/30 font-normal" x-text="`（${(logs[date].dict_updates || []).length} 条）`"></span>
               </h3>
               <table class="w-full text-sm border-collapse">
                 <thead>
@@ -386,6 +360,20 @@
           } catch (e) {
             this.flash('保存失败：' + e.message);
             console.error(e);
+          }
+        },
+
+        async batchRejectCandidates() {
+          const rules = this.weeklyReport?.candidates || [];
+          if (!rules.length || !confirm(`否定当前 ${rules.length} 条候选规律？`)) return;
+          for (const rule of rules) this.weeklyFeedback[rule.id] = '否定，这不是我的长期偏好。';
+          const path = `data/learning/weekly/${this.weeklyReport.week_id}_feedback.json`;
+          try {
+            await GH.putFile(path, JSON.stringify(this.weeklyFeedback, null, 2),
+              `weekly learning batch reject ${this.weeklyReport.week_id}`);
+            this.flash(`已否定 ${rules.length} 条候选规律。`);
+          } catch (e) {
+            this.flash('批量保存失败：' + e.message);
           }
         },
 
