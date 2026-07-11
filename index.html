@@ -46,7 +46,7 @@
   </style>
   <link rel="stylesheet" href="assets/style.css?v=20260625articlejob2">
   <link rel="stylesheet" href="assets/home.css?v=20260710redesign1">
-  <link rel="stylesheet" href="assets/workspace-ui.css?v=20260711refactor1">
+  <link rel="stylesheet" href="assets/workspace-ui.css?v=20260711loginfix1">
   <script defer src="assets/exceljs.min.js"></script>
   <script defer src="assets/app.js?v=20260710redesign1"></script>
   <script defer src="assets/alpine.min.js"></script>
@@ -202,6 +202,11 @@
             <svg><use href="#icon-settings"/></svg>
           </button>
           <span class="account-status" :class="apiUser ? 'online' : ''" :title="apiUser ? `已登录：${apiUser}` : '未登录'"></span>
+          <button @click="showSettings = true" class="nav-btn mobile-account-trigger" :class="apiUser ? 'is-online' : ''"
+                  :title="apiUser ? `账号：${apiUser}` : '登录服务器'" :aria-label="apiUser ? `账号：${apiUser}` : '登录服务器'">
+            <svg><use href="#icon-settings"/></svg>
+            <span class="mobile-account-dot" aria-hidden="true"></span>
+          </button>
           <button @click="fabOpen = !fabOpen" class="nav-btn mobile-tools-trigger" title="更多工具" aria-label="更多工具">
             <svg><use href="#icon-plus"/></svg>
           </button>
@@ -526,11 +531,11 @@
       <div class="tool-sheet-handle"></div>
       <p class="tool-sheet-title">更多工具</p>
       <div class="tool-sheet-grid">
+        <button @click="showSettings=true; fabOpen=false" class="fab-item tool-sheet-account"><svg width="14" height="14"><use href="#icon-settings"/></svg> 登录与设置</button>
         <a href="learning.html" class="fab-item"><svg width="14" height="14"><use href="#icon-chart"/></svg> 学习</a>
         <a href="usage.html" class="fab-item"><svg width="14" height="14"><use href="#icon-chart"/></svg> API 用量</a>
         <a href="calendar.html" class="fab-item"><svg width="14" height="14"><use href="#icon-calendar"/></svg> 游戏日历</a>
         <button @click="toggleTheme(); fabOpen=false" class="fab-item"><span x-text="themeIcon"></span> 主题</button>
-        <button @click="showSettings=true; fabOpen=false" class="fab-item"><svg width="14" height="14"><use href="#icon-settings"/></svg> 设置</button>
       </div>
     </div>
 

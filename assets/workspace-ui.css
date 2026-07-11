@@ -57,9 +57,9 @@ body.workspace-page {
 .workspace-page .article-summary-card p { color:#e9e5df !important; }
 .workspace-page .article-summary-card .text-amber-700 { color:#f5c34f !important; }
 
-.tool-sheet-backdrop { position:fixed; inset:0; z-index:70; background:rgba(0,0,0,.58); }
+.tool-sheet-backdrop { position:fixed; inset:0; z-index:190; background:rgba(0,0,0,.58); }
 .tool-sheet {
-  position:fixed; left:0; right:0; bottom:0; z-index:71; padding:10px 16px calc(20px + env(safe-area-inset-bottom));
+  position:fixed; left:0; right:0; bottom:0; z-index:200; padding:10px 16px calc(20px + env(safe-area-inset-bottom));
   background:var(--workspace-surface); border-top:1px solid var(--workspace-border); border-radius:18px 18px 0 0;
   box-shadow:var(--workspace-shadow);
 }
@@ -67,6 +67,9 @@ body.workspace-page {
 .tool-sheet-title { margin:0 0 10px; font-size:13px; color:var(--workspace-muted); font-weight:700; }
 .tool-sheet-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; }
 .tool-sheet .fab-item { position:static !important; transform:none !important; width:100%; min-height:46px; justify-content:flex-start; border-radius:10px; background:var(--workspace-surface-raised); border:1px solid var(--workspace-border); box-shadow:none; color:var(--workspace-text) !important; }
+.mobile-account-trigger { display:none !important; position:relative; }
+.mobile-account-dot { position:absolute; right:6px; bottom:6px; width:7px; height:7px; border-radius:50%; background:#777; border:2px solid var(--workspace-bg); }
+.mobile-account-trigger.is-online .mobile-account-dot { background:#21b77a; }
 
 .settings-modal { width:min(520px,calc(100vw - 24px)) !important; max-height:min(780px,calc(100dvh - 24px)); overflow:auto; padding:18px !important; background:var(--workspace-surface) !important; color:var(--workspace-text) !important; border-color:var(--workspace-border) !important; }
 .settings-modal label, .settings-modal .modal-title { color:var(--workspace-text) !important; }
@@ -92,6 +95,8 @@ body[data-host-mode="legacy"] .settings-legacy { display:block; }
   .workspace-topbar { min-height:56px; padding:10px 14px; }
   .workspace-subtitle { display:none; }
   .tool-sheet-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .mobile-account-trigger { display:inline-flex !important; }
+  .tool-sheet-account { grid-column:1 / -1; }
   .settings-modal { width:100% !important; max-height:calc(100dvh - 12px); margin-top:auto; border-radius:18px 18px 0 0 !important; }
   .settings-body { padding:16px; }
   .settings-head { padding:15px 16px; }
