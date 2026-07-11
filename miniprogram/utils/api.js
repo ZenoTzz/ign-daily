@@ -99,7 +99,29 @@ function job(jobId) {
 }
 
 function jobs() {
-  return request('/jobs?kind=translation&limit=5');
+  return request('/jobs?kind=translation&limit=20');
+}
+
+function dictionary() {
+  return request('/dict');
+}
+
+function addDictTerm(en, cn, category, note) {
+  return request('/dict/terms', {
+    method: 'POST',
+    data: { en, cn, category, note: note || '', source: 'user' }
+  });
+}
+
+function updateAccount(currentPassword, newUsername, newPassword) {
+  return request('/auth/account', {
+    method: 'POST',
+    data: {
+      current_password: currentPassword,
+      new_username: newUsername || null,
+      new_password: newPassword || null
+    }
+  });
 }
 
 module.exports = {
@@ -111,5 +133,8 @@ module.exports = {
   article,
   requestTranslation,
   job,
-  jobs
+  jobs,
+  dictionary,
+  addDictTerm,
+  updateAccount
 };

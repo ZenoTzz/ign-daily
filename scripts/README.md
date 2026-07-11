@@ -62,6 +62,7 @@ python scripts/pre_push_check.py YYYY-MM-DD
 | `prepare_codex_learning_review.py` | 把机械证据整理为 Codex 必须语义复核的队列 |
 | `apply_codex_learning_review.py` | 校验并应用 Codex 的语义结论，不允许脚本直接晋级 |
 | `migrate_learning_v2.py` | 可逆隔离旧版未经审核的低质量候选 |
+| `test_miniprogram.py` | 微信小程序页面注册、WXML 结构和 tabBar 导航回归检查 |
 | `nightly_style_api.py` | API 学习模式的证据池与周报 |
 | `publish_weekly_learning_report.py` | 生成/刷新学习周报 |
 | `generate_annotation_response.py` | 为学习页批注生成回复 |

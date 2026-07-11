@@ -8,9 +8,13 @@
       <view class="subtitle">{{article.en_title || article.title_en}}</view>
     </view>
 
-    <view class="panel section">
+    <scroll-view wx:if="{{images.length}}" class="image-strip" scroll-x enhanced show-scrollbar="{{false}}">
+      <image wx:for="{{images}}" wx:key="*this" src="{{item}}" mode="aspectFill" data-src="{{item}}" bindtap="previewImage"></image>
+    </scroll-view>
+
+    <view class="panel section summary-panel">
       <view class="section-title">摘要</view>
-      <view class="body-text">{{article.summary || article.cn_summary || article.description || '暂无摘要'}}</view>
+      <view class="body-text">{{article.opus_summary || article.summary || article.cn_summary || article.description || '暂无摘要'}}</view>
     </view>
 
     <view class="panel section" wx:if="{{bodyText}}">
@@ -18,6 +22,6 @@
       <view class="body-text">{{bodyText}}</view>
     </view>
 
-    <button class="btn btn-ghost" bindtap="copyUrl">复制原文链接</button>
+    <view class="article-actions"><button class="btn btn-primary" bindtap="copyArticle">复制译文</button><button class="btn btn-ghost" bindtap="copyUrl">复制原文链接</button></view>
   </view>
 </view>

@@ -19,6 +19,12 @@ Page({
   data: {
     date: todayNewsDate(),
     articles: [],
+    visibleArticles: [],
+    filter: 'all',
+    filters: [
+      { key:'all', label:'全部' }, { key:'pending', label:'待选' },
+      { key:'requested', label:'翻译中' }, { key:'needs_review', label:'待复核' }, { key:'done', label:'已完成' }
+    ],
     selectedIds: [],
     submitText: '提交翻译',
     pendingCount: 0,
@@ -40,6 +46,16 @@ Page({
     }
     await this.restoreJob();
     await this.loadData();
+  },
+
+  onShow() {
+    if (!api.token()) return;
+    const targetDate = wx.getStorageSync('ign_target_date');
+    if (targetDate) {
+      wx.removeStorageSync('ign_target_date');
+      this.setData({ date: targetDate, selectedIds: [], submitText: '提交翻译' });
+      this.loadData();
+    }
   },
 
   onUnload() {
@@ -77,6 +93,7 @@ Page({
         requestedCount: articles.filter((a) => a.translation_status === 'requested').length,
         doneCount: articles.filter((a) => a.translation_status === 'done').length
       });
+      this.applyFilter(this.data.filter, articles);
     } catch (err) {
       if (err.statusCode === 401) {
         wx.removeStorageSync('ign_token');
@@ -98,17 +115,38 @@ Page({
     else current.add(id);
     const selectedIds = Array.from(current).sort((a, b) => a - b);
     const selected = new Set(selectedIds);
+    const articles = this.data.articles.map((item) => {
+      const isSelected = selected.has(Number(item.id));
+      return Object.assign({}, item, {
+        selected: isSelected,
+        select_label: item.select_disabled ? '完成' : (isSelected ? '已选' : '选择')
+      });
+    });
     this.setData({
       selectedIds,
       submitText: selectedIds.length ? `提交翻译 (${selectedIds.length})` : '提交翻译',
-      articles: this.data.articles.map((item) => {
-        const isSelected = selected.has(Number(item.id));
-        return Object.assign({}, item, {
-          selected: isSelected,
-          select_label: item.select_disabled ? '完成' : (isSelected ? '已选' : '选择')
-        });
-      })
+      articles
     });
+    this.applyFilter(this.data.filter, articles);
+  },
+
+  setFilter(e) { const filter=e.currentTarget.dataset.filter; this.setData({filter}); this.applyFilter(filter); },
+
+  applyFilter(filter, source) {
+    const articles=source || this.data.articles;
+    let visible=articles;
+    if(filter==='pending') visible=articles.filter((a)=>!['done','requested','needs_review'].includes(a.translation_status));
+    else if(filter!=='all') visible=articles.filter((a)=>a.translation_status===filter);
+    this.setData({visibleArticles:visible});
+  },
+
+  selectAllPending() {
+    const ids=this.data.visibleArticles.filter((a)=>!a.select_disabled).map((a)=>Number(a.id));
+    const selectedIds=ids.length && ids.every((id)=>this.data.selectedIds.includes(id)) ? [] : ids;
+    const selected=new Set(selectedIds);
+    const articles=this.data.articles.map((item)=>Object.assign({},item,{selected:selected.has(Number(item.id)),select_label:item.select_disabled?'完成':(selected.has(Number(item.id))?'已选':'选择')}));
+    this.setData({selectedIds,articles,submitText:selectedIds.length?`提交翻译 (${selectedIds.length})`:'提交翻译'});
+    this.applyFilter(this.data.filter,articles);
   },
 
   async submitSelected() {
@@ -198,8 +236,5 @@ Page({
     this.loadData();
   },
 
-  logout() {
-    wx.removeStorageSync('ign_token');
-    wx.redirectTo({ url: '/pages/login/login' });
-  }
+  openJobs() { wx.switchTab({url:'/pages/jobs/jobs'}); }
 });

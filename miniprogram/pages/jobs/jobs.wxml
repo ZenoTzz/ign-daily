@@ -1,0 +1,16 @@
+<view class="page">
+  <view class="page-title">翻译任务</view>
+  <view class="page-subtitle">查看最近提交的 Codex 翻译进度与结果</view>
+  <view wx:if="{{error}}" class="error-state">{{error}}</view>
+  <view wx:if="{{loading && !jobs.length}}" class="empty-state">正在加载任务...</view>
+  <view wx:elif="{{!jobs.length}}" class="empty-state panel">还没有翻译任务。<br/>从工作台选择文章后提交即可。</view>
+  <view wx:else class="job-list">
+    <view wx:for="{{jobs}}" wx:key="id" class="panel job-item" bindtap="openDate" data-date="{{item.date}}">
+      <view class="job-top"><text class="job-date">{{item.date}}</text><text class="job-status {{item.status_class}}">{{item.status_label}}</text></view>
+      <view class="job-ids">{{item.ids_text || '未记录文章编号'}}</view>
+      <view class="job-message">{{item.message || '等待处理'}}</view>
+      <view class="job-progress"><view style="width:{{item.progress_value}}%"></view></view>
+      <view class="job-foot"><text>{{item.progress_value}}%</text><text wx:if="{{item.errors.length}}">{{item.errors.length}} 个问题</text></view>
+    </view>
+  </view>
+</view>

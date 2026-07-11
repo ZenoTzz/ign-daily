@@ -9,7 +9,7 @@ Page({
 
   onLoad() {
     if (api.token()) {
-      wx.redirectTo({ url: '/pages/index/index' });
+      wx.switchTab({ url: '/pages/index/index' });
     }
   },
 
@@ -33,7 +33,7 @@ Page({
       const res = await api.login(username, password);
       wx.setStorageSync('ign_token', res.token);
       wx.setStorageSync('ign_username', res.user && res.user.username ? res.user.username : username);
-      wx.redirectTo({ url: '/pages/index/index' });
+      wx.switchTab({ url: '/pages/index/index' });
     } catch (err) {
       wx.showToast({ title: err.message || '登录失败', icon: 'none' });
     } finally {

@@ -17,6 +17,7 @@ Page({
     date: '',
     id: '',
     article: {},
+    images: [],
     bodyText: '',
     loading: true,
     error: ''
@@ -33,7 +34,8 @@ Page({
       const article = await api.article(this.data.date, this.data.id);
       this.setData({
         article,
-        bodyText: bodyFromArticle(article)
+        bodyText: bodyFromArticle(article),
+        images: Array.isArray(article.images) ? article.images : (article.cover_image ? [article.cover_image] : [])
       });
     } catch (err) {
       if (err.statusCode === 401) {
@@ -54,5 +56,17 @@ Page({
       return;
     }
     wx.setClipboardData({ data: url });
+  },
+
+  copyArticle() {
+    const article=this.data.article;
+    const text=[article.cn_title || article.title_cn || '', article.subtitle || article.cn_subtitle || '', article.opus_summary || article.summary || '', this.data.bodyText].filter(Boolean).join('\n\n');
+    if(!text){wx.showToast({title:'暂无可复制内容',icon:'none'});return;}
+    wx.setClipboardData({data:text});
+  },
+
+  previewImage(e) {
+    const current=e.currentTarget.dataset.src;
+    if(current) wx.previewImage({current,urls:this.data.images});
   }
 });

@@ -1,0 +1,19 @@
+<view class="page">
+  <view class="account-hero">
+    <view class="avatar">IGN</view><view><view class="page-title">{{username || '账号'}}</view><view class="page-subtitle">已连接 igndaily.site</view></view>
+  </view>
+  <view class="panel account-status"><view><text class="status-dot"></text><text>服务器登录正常</text></view><text class="muted">Bearer Token</text></view>
+  <view class="section-label">账号管理</view>
+  <view class="panel menu-panel">
+    <view class="menu-row" bindtap="toggleEdit"><text>修改用户名或密码</text><text class="muted">{{showEdit ? '收起' : '打开'}} ›</text></view>
+    <view wx:if="{{showEdit}}" class="edit-form">
+      <input class="input" placeholder="新用户名" value="{{newUsername}}" data-field="newUsername" bindinput="onField"/>
+      <input class="input" password placeholder="当前密码（必填）" value="{{currentPassword}}" data-field="currentPassword" bindinput="onField"/>
+      <input class="input" password placeholder="新密码（不修改可留空）" value="{{newPassword}}" data-field="newPassword" bindinput="onField"/>
+      <input class="input" password placeholder="确认新密码" value="{{confirmPassword}}" data-field="confirmPassword" bindinput="onField"/>
+      <button class="btn btn-primary" loading="{{saving}}" disabled="{{saving}}" bindtap="saveAccount">保存并重新登录</button>
+    </view>
+  </view>
+  <button class="logout-btn" bindtap="logout">退出登录</button>
+  <view class="version">IGN Daily 小程序 · API https://igndaily.site</view>
+</view>

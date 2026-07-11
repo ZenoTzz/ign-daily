@@ -1,6 +1,9 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/jobs/jobs",
+    "pages/dict/dict",
+    "pages/account/account",
     "pages/login/login",
     "pages/article/article"
   ],
@@ -9,6 +12,18 @@
     "navigationBarBackgroundColor": "#0b0b14",
     "navigationBarTextStyle": "white",
     "backgroundColor": "#0b0b14"
+  },
+  "tabBar": {
+    "color": "#8f9199",
+    "selectedColor": "#ed1c24",
+    "backgroundColor": "#101012",
+    "borderStyle": "black",
+    "list": [
+      { "pagePath": "pages/index/index", "text": "工作台" },
+      { "pagePath": "pages/jobs/jobs", "text": "任务" },
+      { "pagePath": "pages/dict/dict", "text": "词库" },
+      { "pagePath": "pages/account/account", "text": "账号" }
+    ]
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"

@@ -5,7 +5,7 @@
       <view class="headline">翻译工作台</view>
       <view class="subline">{{articles.length}} 条文章 · {{requestedCount}} 篇进行中</view>
     </view>
-    <button class="logout" bindtap="logout">退出</button>
+    <button class="logout" bindtap="openJobs">任务</button>
   </view>
 
   <view class="date-row">
@@ -45,10 +45,18 @@
     <button class="refresh-btn" disabled="{{loading}}" loading="{{loading}}" bindtap="loadData">刷新</button>
   </view>
 
+  <scroll-view class="filter-scroll" scroll-x enhanced show-scrollbar="{{false}}">
+    <view class="filter-row">
+      <button wx:for="{{filters}}" wx:key="key" class="filter-btn {{filter === item.key ? 'active' : ''}}" data-filter="{{item.key}}" bindtap="setFilter">{{item.label}}</button>
+    </view>
+  </scroll-view>
+  <view class="queue-head"><text>文章队列 · {{visibleArticles.length}}</text><button bindtap="selectAllPending">全选可用</button></view>
+
   <view wx:if="{{error}}" class="error">{{error}}</view>
 
   <view class="list">
-    <view wx:for="{{articles}}" wx:key="id" class="article-card" bindtap="openArticle" data-id="{{item.id}}">
+    <view wx:if="{{!loading && !visibleArticles.length}}" class="empty-state">当前筛选下没有文章</view>
+    <view wx:for="{{visibleArticles}}" wx:key="id" class="article-card {{item.selected ? 'selected-card' : ''}}" bindtap="openArticle" data-id="{{item.id}}">
       <view class="thumb-wrap">
         <image wx:if="{{item.cover_image}}" class="thumb" src="{{item.cover_image}}" mode="aspectFill"></image>
         <view wx:else class="thumb thumb-empty">IGN</view>
