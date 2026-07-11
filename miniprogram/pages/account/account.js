@@ -1,14 +1,14 @@
 const api = require('../../utils/api');
 
 Page({
-  data: { username:'', loading:true, showEdit:false, saving:false, currentPassword:'', newUsername:'', newPassword:'', confirmPassword:'' },
+  data: { username:'', wechatBound:false, loading:true, showEdit:false, saving:false, currentPassword:'', newUsername:'', newPassword:'', confirmPassword:'' },
   onShow() {
     if (!api.token()) { wx.redirectTo({ url:'/pages/login/login' }); return; }
     this.loadMe();
   },
   async loadMe() {
     this.setData({ loading:true });
-    try { const result=await api.me(); const username=(result.user && result.user.username) || wx.getStorageSync('ign_username') || ''; this.setData({ username, newUsername:username }); }
+    try { const result=await api.me(); const username=(result.user && result.user.username) || wx.getStorageSync('ign_username') || ''; this.setData({ username, newUsername:username, wechatBound:!!(result.user && result.user.wechat_bound) }); }
     catch (err) { if(err.statusCode===401) this.logout(); else wx.showToast({title:err.message||'账号加载失败',icon:'none'}); }
     finally { this.setData({loading:false}); }
   },

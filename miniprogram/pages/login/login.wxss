@@ -36,6 +36,7 @@
   display: flex;
   flex-direction: column;
 }
+.wechat-status{display:flex;align-items:center;gap:14rpx;margin:0 0 20rpx;color:#a7a9b1;font-size:24rpx}.wechat-dot{width:14rpx;height:14rpx;border-radius:50%;background:#21b77a;box-shadow:0 0 0 7rpx rgba(33,183,122,.12)}.wechat-dot.pending{background:#f0b429;box-shadow:0 0 0 7rpx rgba(240,180,41,.12)}.retry-btn{height:64rpx;margin-top:14rpx;background:transparent;color:#8f9199;font-size:23rpx;line-height:64rpx}
 
 .login-panel .input,
 .login-panel .login-btn,

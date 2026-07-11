@@ -94,6 +94,18 @@ function requestTranslation(date, ids) {
   });
 }
 
+function wechatLogin(code) {
+  return request('/auth/wechat/login', { method: 'POST', data: { code }, retryAttempts: 1 });
+}
+
+function bindWechat(bindToken, username, password) {
+  return request('/auth/wechat/bind', {
+    method: 'POST',
+    data: { bind_token: bindToken, username, password },
+    retryAttempts: 1
+  });
+}
+
 function job(jobId) {
   return request(`/jobs/${encodeURIComponent(jobId)}`);
 }
@@ -128,6 +140,8 @@ module.exports = {
   token,
   request,
   login,
+  wechatLogin,
+  bindWechat,
   me,
   articles,
   article,

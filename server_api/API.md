@@ -41,6 +41,19 @@ Response:
 
 `GET /auth/me` returns the current user.
 
+### WeChat administrator binding
+
+`POST /auth/wechat/login` accepts the temporary `code` returned by `wx.login`.
+The server exchanges it with WeChat and never sends the AppSecret to the mini
+program. If the OpenID is already bound, the response contains the normal
+Bearer token. An unbound OpenID receives a short-lived `bind_token` instead.
+
+`POST /auth/wechat/bind` accepts `bind_token`, `username`, and `password`.
+Valid administrator credentials bind that OpenID to the existing server user
+and return a Bearer token. The one-time binding challenge expires after ten
+minutes. Configure `IGN_DAILY_WECHAT_APPID` and
+`IGN_DAILY_WECHAT_APP_SECRET` only in `/srv/ign-daily-api/.env`.
+
 `POST /auth/account` updates username and/or password. It requires the current password.
 
 ## Translation Jobs

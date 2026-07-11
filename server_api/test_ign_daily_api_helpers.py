@@ -193,6 +193,51 @@ class PrivateApiFileGuardsTest(unittest.TestCase):
             self.assertTrue(result["ok"])
             self.assertEqual(result["job"]["status"], "done")
 
+    def test_wechat_binding_tables_and_session_issue(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            repo = root / "repo"
+            api_dir = root / "api"
+            repo.mkdir()
+            api_dir.mkdir()
+            module = load_api(repo, api_dir, {
+                "IGN_DAILY_STORAGE_MODE": "local",
+                "IGN_DAILY_ADMIN_USER": "admin",
+                "IGN_DAILY_ADMIN_PASSWORD": "a-secure-test-password",
+            })
+            module.init_db()
+            with module.db() as conn:
+                tables = {row["name"] for row in conn.execute("SELECT name FROM sqlite_master WHERE type='table'")}
+                conn.execute(
+                    "INSERT INTO users (username, password_hash, created_at) VALUES (?, ?, ?)",
+                    ("wechat-admin", module.hash_password("a-secure-test-password"), 1),
+                )
+                conn.commit()
+                user_id = conn.execute("SELECT id FROM users WHERE username='wechat-admin'").fetchone()["id"]
+            self.assertIn("wechat_bindings", tables)
+            self.assertIn("wechat_bind_challenges", tables)
+            token = module.issue_session(user_id)
+            self.assertEqual(module.auth_from_token(token)["username"], "wechat-admin")
+
+    def test_wechat_code_exchange_never_returns_session_key(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            repo = root / "repo"
+            api_dir = root / "api"
+            repo.mkdir()
+            api_dir.mkdir()
+            module = load_api(repo, api_dir, {
+                "IGN_DAILY_WECHAT_APPID": "wx-test",
+                "IGN_DAILY_WECHAT_APP_SECRET": "secret-test",
+            })
+            response = Mock()
+            response.read.return_value = b'{"openid":"openid-1","unionid":"union-1","session_key":"private"}'
+            response.__enter__ = Mock(return_value=response)
+            response.__exit__ = Mock(return_value=False)
+            with patch.object(module.urllib.request, "urlopen", return_value=response):
+                identity = module.exchange_wechat_code("temporary-code")
+            self.assertEqual(identity, {"openid": "openid-1", "unionid": "union-1"})
+
 
 if __name__ == "__main__":
     unittest.main()

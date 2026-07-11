@@ -16,6 +16,7 @@ import sqlite3
 import subprocess
 import time
 import urllib.error
+import urllib.parse
 import urllib.request
 import uuid
 from contextlib import contextmanager
@@ -71,9 +72,22 @@ GITHUB_OWNER = os.environ.get("IGN_DAILY_GITHUB_OWNER", "ZenoTzz")
 GITHUB_REPO = os.environ.get("IGN_DAILY_GITHUB_REPO", "ign-daily")
 GITHUB_BRANCH = os.environ.get("IGN_DAILY_GITHUB_BRANCH", "main")
 STORAGE_MODE = os.environ.get("IGN_DAILY_STORAGE_MODE", "local").strip().lower()
+WECHAT_APPID = os.environ.get("IGN_DAILY_WECHAT_APPID", "").strip()
+WECHAT_APP_SECRET = os.environ.get("IGN_DAILY_WECHAT_APP_SECRET", "").strip()
+WECHAT_BIND_TTL_SECONDS = 10 * 60
 
 
 class LoginRequest(BaseModel):
+    username: str = Field(min_length=1, max_length=80)
+    password: str = Field(min_length=1, max_length=200)
+
+
+class WeChatLoginRequest(BaseModel):
+    code: str = Field(min_length=4, max_length=256)
+
+
+class WeChatBindRequest(BaseModel):
+    bind_token: str = Field(min_length=20, max_length=256)
     username: str = Field(min_length=1, max_length=80)
     password: str = Field(min_length=1, max_length=200)
 
@@ -247,6 +261,25 @@ def init_db() -> None:
               blocked_until INTEGER NOT NULL DEFAULT 0
             )
             """
+        )
+        conn.execute(
+            """CREATE TABLE IF NOT EXISTS wechat_bindings (
+              openid TEXT PRIMARY KEY,
+              user_id INTEGER NOT NULL,
+              unionid TEXT,
+              created_at INTEGER NOT NULL,
+              last_login_at INTEGER NOT NULL,
+              FOREIGN KEY(user_id) REFERENCES users(id) ON DELETE CASCADE
+            )"""
+        )
+        conn.execute(
+            """CREATE TABLE IF NOT EXISTS wechat_bind_challenges (
+              token_hash TEXT PRIMARY KEY,
+              openid TEXT NOT NULL,
+              unionid TEXT,
+              created_at INTEGER NOT NULL,
+              expires_at INTEGER NOT NULL
+            )"""
         )
         user_count = conn.execute("SELECT COUNT(*) AS n FROM users").fetchone()["n"]
         admin_password = os.environ.get("IGN_DAILY_ADMIN_PASSWORD", "")
@@ -778,6 +811,38 @@ def auth_from_token(token: str) -> sqlite3.Row:
     return row
 
 
+def issue_session(user_id: int) -> str:
+    token = secrets.token_urlsafe(32)
+    now = int(time.time())
+    with db() as conn:
+        conn.execute(
+            "INSERT INTO sessions (token, user_id, created_at, expires_at) VALUES (?, ?, ?, ?)",
+            (token, user_id, now, now + SESSION_TTL_SECONDS),
+        )
+        conn.commit()
+    return token
+
+
+def exchange_wechat_code(code: str) -> dict[str, str]:
+    if not WECHAT_APPID or not WECHAT_APP_SECRET:
+        raise HTTPException(status_code=503, detail="WeChat login is not configured")
+    query = urllib.parse.urlencode({
+        "appid": WECHAT_APPID,
+        "secret": WECHAT_APP_SECRET,
+        "js_code": code,
+        "grant_type": "authorization_code",
+    })
+    try:
+        with urllib.request.urlopen(f"https://api.weixin.qq.com/sns/jscode2session?{query}", timeout=12) as response:
+            payload = json.loads(response.read().decode("utf-8"))
+    except (OSError, ValueError, urllib.error.URLError) as exc:
+        raise HTTPException(status_code=502, detail="WeChat login service is unavailable") from exc
+    openid = str(payload.get("openid") or "").strip()
+    if not openid:
+        raise HTTPException(status_code=401, detail="WeChat login code is invalid or expired")
+    return {"openid": openid, "unionid": str(payload.get("unionid") or "").strip()}
+
+
 def login_client_key(request: Request) -> str:
     client = getattr(request, "client", None)
     host = str(getattr(client, "host", "") or "unknown").strip()
@@ -909,6 +974,60 @@ def login(payload: LoginRequest, request: Request, response: Response) -> dict[s
     return {"ok": True, "token": token, "user": {"username": payload.username}}
 
 
+@app.post("/auth/wechat/login")
+def wechat_login(payload: WeChatLoginRequest) -> dict[str, Any]:
+    identity = exchange_wechat_code(payload.code)
+    now = int(time.time())
+    with db() as conn:
+        conn.execute("DELETE FROM wechat_bind_challenges WHERE expires_at < ?", (now,))
+        binding = conn.execute(
+            """SELECT users.id, users.username FROM wechat_bindings
+               JOIN users ON users.id = wechat_bindings.user_id
+               WHERE wechat_bindings.openid = ?""",
+            (identity["openid"],),
+        ).fetchone()
+        if binding:
+            conn.execute("UPDATE wechat_bindings SET last_login_at = ? WHERE openid = ?", (now, identity["openid"]))
+            conn.commit()
+            return {"ok": True, "bound": True, "token": issue_session(binding["id"]), "user": {"username": binding["username"]}}
+        raw_token = secrets.token_urlsafe(32)
+        token_hash = hashlib.sha256(raw_token.encode("utf-8")).hexdigest()
+        conn.execute(
+            "INSERT INTO wechat_bind_challenges (token_hash, openid, unionid, created_at, expires_at) VALUES (?, ?, ?, ?, ?)",
+            (token_hash, identity["openid"], identity["unionid"] or None, now, now + WECHAT_BIND_TTL_SECONDS),
+        )
+        conn.commit()
+    return {"ok": True, "bound": False, "needs_binding": True, "bind_token": raw_token, "expires_in": WECHAT_BIND_TTL_SECONDS}
+
+
+@app.post("/auth/wechat/bind")
+def wechat_bind(payload: WeChatBindRequest, request: Request) -> dict[str, Any]:
+    client_key = login_client_key(request)
+    enforce_login_rate_limit(client_key)
+    token_hash = hashlib.sha256(payload.bind_token.encode("utf-8")).hexdigest()
+    now = int(time.time())
+    with db() as conn:
+        challenge = conn.execute(
+            "SELECT openid, unionid FROM wechat_bind_challenges WHERE token_hash = ? AND expires_at >= ?",
+            (token_hash, now),
+        ).fetchone()
+        user = conn.execute("SELECT * FROM users WHERE username = ?", (payload.username,)).fetchone()
+        if not challenge or not user or not verify_password(payload.password, user["password_hash"]):
+            verify_password(payload.password, DUMMY_PASSWORD_HASH)
+            record_login_failure(client_key)
+            raise HTTPException(status_code=401, detail="Binding token or administrator credentials are invalid")
+        conn.execute(
+            """INSERT INTO wechat_bindings (openid, user_id, unionid, created_at, last_login_at)
+               VALUES (?, ?, ?, ?, ?)
+               ON CONFLICT(openid) DO UPDATE SET user_id=excluded.user_id, unionid=excluded.unionid, last_login_at=excluded.last_login_at""",
+            (challenge["openid"], user["id"], challenge["unionid"], now, now),
+        )
+        conn.execute("DELETE FROM wechat_bind_challenges WHERE token_hash = ?", (token_hash,))
+        conn.commit()
+    clear_login_failures(client_key)
+    return {"ok": True, "bound": True, "token": issue_session(user["id"]), "user": {"username": user["username"]}}
+
+
 @app.post("/auth/logout")
 def logout(
     response: Response,
@@ -927,7 +1046,9 @@ def logout(
 
 @app.get("/auth/me")
 def me(user: sqlite3.Row = Depends(current_user)) -> dict[str, Any]:
-    return {"ok": True, "user": {"username": user["username"]}}
+    with db() as conn:
+        wechat_bound = conn.execute("SELECT 1 FROM wechat_bindings WHERE user_id = ? LIMIT 1", (user["id"],)).fetchone() is not None
+    return {"ok": True, "user": {"username": user["username"], "wechat_bound": wechat_bound}}
 
 
 @app.post("/auth/change-password")

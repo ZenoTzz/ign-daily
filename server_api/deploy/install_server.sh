@@ -68,6 +68,8 @@ IGN_DAILY_ADMIN_PASSWORD=$admin_password
 IGN_DAILY_STORAGE_MODE=local
 IGN_DAILY_COOKIE_SECURE=0
 IGN_DAILY_CORS_ORIGINS=
+IGN_DAILY_WECHAT_APPID=
+IGN_DAILY_WECHAT_APP_SECRET=
 EOF
   sudo chmod 600 "$API_DIR/.env"
   echo "Generated temporary API admin password: $admin_password"

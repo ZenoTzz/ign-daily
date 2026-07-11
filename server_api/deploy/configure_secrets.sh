@@ -58,11 +58,17 @@ base_url="$(prompt_value 'Translator base URL, default https://api.deepseek.com'
 base_url="${base_url:-https://api.deepseek.com}"
 cookie_secure="$(prompt_value 'Use secure cookies? 1 for HTTPS, 0 for HTTP, default 0' 0)"
 cookie_secure="${cookie_secure:-0}"
+wechat_appid="$(prompt_value 'WeChat Mini Program AppID, leave blank to skip' 0)"
+wechat_secret="$(prompt_value 'WeChat Mini Program AppSecret, leave blank to skip' 1)"
 
 update_env "$API_DIR/.env" IGN_DAILY_ADMIN_USER "$admin_user"
 update_env "$API_DIR/.env" IGN_DAILY_ADMIN_PASSWORD "$admin_password"
 update_env "$API_DIR/.env" IGN_DAILY_STORAGE_MODE "local"
 update_env "$API_DIR/.env" IGN_DAILY_COOKIE_SECURE "$cookie_secure"
+if [ -n "$wechat_appid" ] && [ -n "$wechat_secret" ]; then
+  update_env "$API_DIR/.env" IGN_DAILY_WECHAT_APPID "$wechat_appid"
+  update_env "$API_DIR/.env" IGN_DAILY_WECHAT_APP_SECRET "$wechat_secret"
+fi
 
 python_bin="$API_DIR/venv/bin/python"
 if [ ! -x "$python_bin" ]; then

@@ -2,7 +2,7 @@
   <view class="account-hero">
     <view class="avatar">IGN</view><view><view class="page-title">{{username || '账号'}}</view><view class="page-subtitle">已连接 igndaily.site</view></view>
   </view>
-  <view class="panel account-status"><view><text class="status-dot"></text><text>服务器登录正常</text></view><text class="muted">Bearer Token</text></view>
+  <view class="panel account-status"><view><text class="status-dot"></text><text>服务器登录正常</text></view><text class="muted">{{wechatBound ? '微信管理员已绑定' : '账号登录'}}</text></view>
   <view class="section-label">账号管理</view>
   <view class="panel menu-panel">
     <view class="menu-row" bindtap="toggleEdit"><text>修改用户名或密码</text><text class="muted">{{showEdit ? '收起' : '打开'}} ›</text></view>
