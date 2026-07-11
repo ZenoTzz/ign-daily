@@ -46,6 +46,7 @@
   </style>
   <link rel="stylesheet" href="assets/style.css?v=20260625articlejob2">
   <link rel="stylesheet" href="assets/home.css?v=20260710redesign1">
+  <link rel="stylesheet" href="assets/workspace-ui.css?v=20260711refactor1">
   <script defer src="assets/exceljs.min.js"></script>
   <script defer src="assets/app.js?v=20260710redesign1"></script>
   <script defer src="assets/alpine.min.js"></script>
@@ -519,11 +520,12 @@
       </section>
     </main>
 
-    <!-- Mobile FAB Menu -->
-    <div class="fab-container sm:hidden">
-      <div x-show="fabOpen" x-cloak x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 scale-90" x-transition:enter-end="opacity-100 scale-100" x-transition:leave="transition ease-in duration-100" x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-90"
-           class="fab-menu" @click.away="fabOpen=false">
-        <a href="dict.html" class="fab-item"><svg width="14" height="14"><use href="#icon-book"/></svg> 词库</a>
+    <!-- Mobile tools sheet; dictionary stays in the primary navigation. -->
+    <div x-show="fabOpen" x-cloak class="tool-sheet-backdrop sm:hidden" @click="fabOpen=false"></div>
+    <div x-show="fabOpen" x-cloak x-transition class="tool-sheet sm:hidden" @keydown.escape.window="fabOpen=false">
+      <div class="tool-sheet-handle"></div>
+      <p class="tool-sheet-title">更多工具</p>
+      <div class="tool-sheet-grid">
         <a href="learning.html" class="fab-item"><svg width="14" height="14"><use href="#icon-chart"/></svg> 学习</a>
         <a href="usage.html" class="fab-item"><svg width="14" height="14"><use href="#icon-chart"/></svg> API 用量</a>
         <a href="calendar.html" class="fab-item"><svg width="14" height="14"><use href="#icon-calendar"/></svg> 游戏日历</a>
@@ -741,6 +743,7 @@
 
         </div>
         <div style="height:1px; background:var(--border); margin:1rem 0;"></div>
+        <div x-show="location.hostname !== 'igndaily.site'" class="settings-legacy-fallback">
         <label>GitHub Personal Access Token</label>
         <p style="font-size:0.7rem; color:var(--text-muted); margin-bottom:0.5rem;">用于把翻译请求和词库改动提交回仓库。仅保存在本地浏览器。</p>
         <input type="password" x-model="token" placeholder="ghp_xxx 或 github_pat_xxx">
@@ -748,19 +751,9 @@
           <button @click="saveToken()" class="btn btn-primary">保存</button>
           <button @click="clearToken()" class="btn btn-ghost">清除</button>
         </div>
-        <div style="height:1px; background:var(--border); margin:1rem 0;"></div>
-        <label>GitHub OAuth Client ID</label>
-        <p style="font-size:0.7rem; color:var(--text-muted); margin-bottom:0.5rem;">
-          GitHub OAuth cannot complete directly from this static page. It needs a small proxy/Worker to exchange the token safely.
-        </p>
-        <input type="text" x-model="oauthClientId" placeholder="Ov23li...">
-        <div style="display:flex; gap:0.5rem; align-items:center; margin-top:0.75rem; flex-wrap:wrap;">
-          <button @click="loginWithGithubOAuth()" class="btn btn-primary" :disabled="oauthLoggingIn">
-            <span>OAuth needs proxy</span>
-          </button>
-          <span x-show="oauthStatus" style="font-size:0.7rem; color:var(--text-muted);" x-text="oauthStatus"></span>
         </div>
         <div style="height:1px; background:var(--border); margin:1rem 0;"></div>
+        <!-- GitHub OAuth was removed from the UI: a static page cannot safely complete the flow. -->
         <button @click="automationExpanded = !automationExpanded"
                 class="btn btn-ghost"
                 style="width:100%; justify-content:space-between;">

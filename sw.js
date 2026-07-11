@@ -1,4 +1,4 @@
-const CACHE_NAME = 'ign-daily-v9';
+const CACHE_NAME = 'ign-daily-v10';
 const BASE_PATH = self.location.pathname.replace(/sw\.js$/, '');
 const STATIC_ASSETS = [
   '',
@@ -7,6 +7,7 @@ const STATIC_ASSETS = [
   'calendar.html',
   'assets/style.css',
   'assets/home.css',
+  'assets/workspace-ui.css',
   'assets/app.js',
 ].map((path) => `${BASE_PATH}${path}`);
 
