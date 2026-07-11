@@ -11,6 +11,10 @@
       <view class="job-message">{{item.message || '等待处理'}}</view>
       <view class="job-progress"><view style="width:{{item.progress_value}}%"></view></view>
       <view class="job-foot"><text>{{item.progress_value}}%</text><text wx:if="{{item.errors.length}}">{{item.errors.length}} 个问题</text></view>
+      <view class="job-foot"><text>{{item.done_count}} / {{item.result_items.length}} 篇完成</text><text wx:if="{{item.eta_text}}">{{item.eta_text}}</text></view>
+      <view wx:for="{{item.result_items}}" wx:for-item="result" wx:key="id" class="job-foot" data-date="{{item.date}}" data-id="{{result.id}}" catchtap="openArticle">
+        <text>#{{result.id}} · {{result.label}}</text><text class="{{result.item_class}}">{{result.message || '查看文章 ›'}}</text>
+      </view>
     </view>
   </view>
 </view>

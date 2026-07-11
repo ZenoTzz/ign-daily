@@ -37,6 +37,7 @@ Page({
     jobLabel: '',
     jobIdsText: '',
     jobTimer: null
+    ,todayDate: todayNewsDate(), isToday: true
   },
 
   async onLoad() {
@@ -73,22 +74,26 @@ Page({
     try {
       await api.me();
       const data = await api.articles(this.data.date);
-      const selected = new Set(this.data.selectedIds.map(Number));
+      const storedIds = wx.getStorageSync(`ign_selected_${this.data.date}`) || [];
+      const selected = new Set(storedIds.map(Number));
       const articles = (data.articles || []).map((item) => {
         const status = item.translation_status || 'none';
         const isDone = status === 'done';
+        const selectDisabled = ['done', 'requested', 'needs_review'].includes(status);
         const isSelected = selected.has(Number(item.id));
         return Object.assign({}, item, {
           selected: isSelected,
           cover_image: item.cover_image || (item.images && item.images[0]) || '',
           status_label: statusLabel(status),
           status_class: statusClass(status),
-          select_disabled: isDone,
-          select_label: isDone ? '完成' : (isSelected ? '已选' : '选择')
+          select_disabled: selectDisabled,
+          select_label: isDone ? '完成' : (selectDisabled ? statusLabel(status) : (isSelected ? '已选' : '选择'))
         });
       });
       this.setData({
-        articles,
+        articles, selectedIds: Array.from(selected),
+        submitText: selected.size ? `提交翻译 (${selected.size})` : '提交翻译',
+        isToday: this.data.date >= todayNewsDate(),
         pendingCount: articles.filter((a) => !['done', 'requested', 'needs_review'].includes(a.translation_status)).length,
         requestedCount: articles.filter((a) => a.translation_status === 'requested').length,
         doneCount: articles.filter((a) => a.translation_status === 'done').length
@@ -109,7 +114,7 @@ Page({
   toggleSelect(e) {
     const id = Number(e.currentTarget.dataset.id);
     const article = this.data.articles.find((item) => Number(item.id) === id);
-    if (!article || article.translation_status === 'done') return;
+    if (!article || article.select_disabled) return;
     const current = new Set(this.data.selectedIds.map(Number));
     if (current.has(id)) current.delete(id);
     else current.add(id);
@@ -127,6 +132,7 @@ Page({
       submitText: selectedIds.length ? `提交翻译 (${selectedIds.length})` : '提交翻译',
       articles
     });
+    wx.setStorageSync(`ign_selected_${this.data.date}`, selectedIds);
     this.applyFilter(this.data.filter, articles);
   },
 
@@ -146,13 +152,30 @@ Page({
     const selected=new Set(selectedIds);
     const articles=this.data.articles.map((item)=>Object.assign({},item,{selected:selected.has(Number(item.id)),select_label:item.select_disabled?'完成':(selected.has(Number(item.id))?'已选':'选择')}));
     this.setData({selectedIds,articles,submitText:selectedIds.length?`提交翻译 (${selectedIds.length})`:'提交翻译'});
+    wx.setStorageSync(`ign_selected_${this.data.date}`, selectedIds);
     this.applyFilter(this.data.filter,articles);
   },
 
   async submitSelected() {
     if (!this.data.selectedIds.length) return;
+    const titles = this.data.articles.filter((item) => this.data.selectedIds.includes(Number(item.id))).map((item) => `#${item.id} ${item.cn_title || item.en_title}`).join('\n');
+    const confirmed = await new Promise((resolve) => wx.showModal({
+      title: `确认翻译 ${this.data.selectedIds.length} 篇？`,
+      content: titles.length > 180 ? `${titles.slice(0, 180)}…` : titles,
+      confirmText: '确认提交', success: (res) => resolve(res.confirm), fail: () => resolve(false)
+    }));
+    if (!confirmed) return;
     this.setData({ submitting: true });
     try {
+      try {
+        const config = await api.wechatConfig();
+        if (config.enabled && config.job_template_id) {
+          const consent = await new Promise((resolve) => wx.requestSubscribeMessage({
+            tmplIds: [config.job_template_id], success: resolve, fail: () => resolve({})
+          }));
+          if (consent[config.job_template_id] === 'accept') await api.registerSubscription(config.job_template_id);
+        }
+      } catch (_) {}
       const res = await api.requestTranslation(this.data.date, this.data.selectedIds);
       if (res.job_id) {
         wx.setStorageSync('ign_job_id', res.job_id);
@@ -160,6 +183,7 @@ Page({
       }
       wx.showToast({ title: '已提交翻译', icon: 'success' });
       this.setData({ selectedIds: [], submitText: '提交翻译' });
+      wx.removeStorageSync(`ign_selected_${this.data.date}`);
       await this.loadData();
     } catch (err) {
       wx.showToast({ title: err.message || '提交失败', icon: 'none' });
@@ -218,6 +242,7 @@ Page({
 
   openArticle(e) {
     const id = e.currentTarget.dataset.id;
+    wx.setStorageSync('ign_article_nav', { date: this.data.date, ids: this.data.visibleArticles.map((item) => Number(item.id)) });
     wx.navigateTo({ url: `/pages/article/article?date=${this.data.date}&id=${id}` });
   },
 
@@ -227,12 +252,20 @@ Page({
   },
 
   nextDate() {
+    if (this.data.date >= todayNewsDate()) return;
     this.setData({ date: shiftDate(this.data.date, 1), selectedIds: [], submitText: '提交翻译' });
     this.loadData();
   },
 
   today() {
     this.setData({ date: todayNewsDate(), selectedIds: [], submitText: '提交翻译' });
+    this.loadData();
+  },
+
+  onDateChange(e) {
+    const date = e.detail.value;
+    if (!date || date > todayNewsDate()) return;
+    this.setData({ date, selectedIds: [], submitText: '提交翻译' });
     this.loadData();
   },
 

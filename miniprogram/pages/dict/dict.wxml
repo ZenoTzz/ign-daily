@@ -1,11 +1,12 @@
 <view class="page">
-  <view class="dict-head"><view><view class="page-title">词库</view><view class="page-subtitle">已确认专名与固定译法</view></view><button class="add-btn" bindtap="toggleForm">{{showForm ? '取消' : '新增'}}</button></view>
+  <view class="dict-head"><view><view class="page-title">词库</view><view class="page-subtitle">查询已确认译法，提交新译名候选</view></view><button class="add-btn" bindtap="toggleForm">{{showForm ? '取消' : '提交候选'}}</button></view>
   <view wx:if="{{showForm}}" class="panel add-form">
     <input class="input" placeholder="英文原名" value="{{en}}" data-field="en" bindinput="onField"/>
     <input class="input" placeholder="中文译名" value="{{cn}}" data-field="cn" bindinput="onField"/>
     <picker mode="selector" range="{{categories}}" bindchange="onCategory"><view class="input picker-value">分类：{{categoryLabels[category]}}</view></picker>
     <input class="input" placeholder="备注（可选）" value="{{note}}" data-field="note" bindinput="onField"/>
-    <button class="btn btn-primary" loading="{{saving}}" disabled="{{saving}}" bindtap="saveTerm">保存词条</button>
+    <view class="page-subtitle">候选不会直接改写正式词库，需要在主站复核后采纳。</view>
+    <button class="btn btn-primary" loading="{{saving}}" disabled="{{saving}}" bindtap="saveTerm">提交审核</button>
   </view>
   <view class="search-box"><text>⌕</text><input placeholder="搜索英文、中文或备注" value="{{query}}" bindinput="onSearch"/></view>
   <view wx:if="{{error}}" class="error-state">{{error}}</view>

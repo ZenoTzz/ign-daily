@@ -75,6 +75,8 @@ STORAGE_MODE = os.environ.get("IGN_DAILY_STORAGE_MODE", "local").strip().lower()
 WECHAT_APPID = os.environ.get("IGN_DAILY_WECHAT_APPID", "").strip()
 WECHAT_APP_SECRET = os.environ.get("IGN_DAILY_WECHAT_APP_SECRET", "").strip()
 WECHAT_BIND_TTL_SECONDS = 10 * 60
+WECHAT_JOB_TEMPLATE_ID = os.environ.get("IGN_DAILY_WECHAT_JOB_TEMPLATE_ID", "").strip()
+_WECHAT_ACCESS_TOKEN: dict[str, Any] = {"value": "", "expires_at": 0}
 
 
 class LoginRequest(BaseModel):
@@ -90,6 +92,17 @@ class WeChatBindRequest(BaseModel):
     bind_token: str = Field(min_length=20, max_length=256)
     username: str = Field(min_length=1, max_length=80)
     password: str = Field(min_length=1, max_length=200)
+
+
+class WeChatSubscriptionRequest(BaseModel):
+    template_id: str = Field(min_length=8, max_length=256)
+
+
+class DictCandidateRequest(BaseModel):
+    category: str = "terms"
+    en: str = Field(min_length=1, max_length=240)
+    cn: str = Field(min_length=1, max_length=240)
+    note: str = Field(default="", max_length=1000)
 
 
 class ChangePasswordRequest(BaseModel):
@@ -279,6 +292,25 @@ def init_db() -> None:
               unionid TEXT,
               created_at INTEGER NOT NULL,
               expires_at INTEGER NOT NULL
+            )"""
+        )
+        conn.execute(
+            """CREATE TABLE IF NOT EXISTS wechat_subscriptions (
+              openid TEXT NOT NULL,
+              template_id TEXT NOT NULL,
+              credits INTEGER NOT NULL DEFAULT 0,
+              updated_at INTEGER NOT NULL,
+              PRIMARY KEY(openid, template_id)
+            )"""
+        )
+        conn.execute(
+            """CREATE TABLE IF NOT EXISTS wechat_notification_log (
+              event_key TEXT PRIMARY KEY,
+              openid TEXT NOT NULL,
+              template_id TEXT NOT NULL,
+              status TEXT NOT NULL,
+              detail TEXT,
+              created_at INTEGER NOT NULL
             )"""
         )
         user_count = conn.execute("SELECT COUNT(*) AS n FROM users").fetchone()["n"]
@@ -843,6 +875,74 @@ def exchange_wechat_code(code: str) -> dict[str, str]:
     return {"openid": openid, "unionid": str(payload.get("unionid") or "").strip()}
 
 
+def wechat_access_token() -> str:
+    now = int(time.time())
+    if _WECHAT_ACCESS_TOKEN["value"] and int(_WECHAT_ACCESS_TOKEN["expires_at"]) > now + 60:
+        return str(_WECHAT_ACCESS_TOKEN["value"])
+    if not WECHAT_APPID or not WECHAT_APP_SECRET:
+        raise RuntimeError("WeChat login is not configured")
+    query = urllib.parse.urlencode({"grant_type": "client_credential", "appid": WECHAT_APPID, "secret": WECHAT_APP_SECRET})
+    with urllib.request.urlopen(f"https://api.weixin.qq.com/cgi-bin/token?{query}", timeout=12) as response:
+        payload = json.loads(response.read().decode("utf-8"))
+    token = str(payload.get("access_token") or "")
+    if not token:
+        raise RuntimeError(str(payload.get("errmsg") or "WeChat access token failed"))
+    _WECHAT_ACCESS_TOKEN.update(value=token, expires_at=now + int(payload.get("expires_in") or 7200))
+    return token
+
+
+def send_job_completion_notification(job: dict[str, Any]) -> bool:
+    if not WECHAT_JOB_TEMPLATE_ID:
+        return False
+    event_key = f"job-complete:{job.get('id')}"
+    with db() as conn:
+        if conn.execute("SELECT 1 FROM wechat_notification_log WHERE event_key = ?", (event_key,)).fetchone():
+            return False
+        row = conn.execute(
+            """SELECT s.openid FROM wechat_subscriptions s
+               WHERE s.template_id = ? AND s.credits > 0 ORDER BY s.updated_at DESC LIMIT 1""",
+            (WECHAT_JOB_TEMPLATE_ID,),
+        ).fetchone()
+    if not row:
+        return False
+    openid = row["openid"]
+    data = {
+        "thing1": {"value": "翻译任务已完成"},
+        "date2": {"value": str(job.get("date") or now_cn())[:20]},
+        "number3": {"value": int(job.get("done_count") or len(job.get("ids") or []))},
+        "thing4": {"value": f"待复核 {int(job.get('failed_count') or 0)} 篇"},
+    }
+    payload = json.dumps({
+        "touser": openid,
+        "template_id": WECHAT_JOB_TEMPLATE_ID,
+        "page": "pages/jobs/jobs",
+        "miniprogram_state": os.environ.get("IGN_DAILY_WECHAT_STATE", "formal"),
+        "lang": "zh_CN",
+        "data": data,
+    }, ensure_ascii=False).encode("utf-8")
+    status, detail = "failed", ""
+    try:
+        request = urllib.request.Request(
+            f"https://api.weixin.qq.com/cgi-bin/message/subscribe/send?access_token={wechat_access_token()}",
+            data=payload, headers={"Content-Type": "application/json"}, method="POST",
+        )
+        with urllib.request.urlopen(request, timeout=12) as response:
+            result = json.loads(response.read().decode("utf-8"))
+        detail = json.dumps(result, ensure_ascii=False)
+        status = "sent" if int(result.get("errcode") or 0) == 0 else "failed"
+    except Exception as exc:
+        detail = str(exc)[:500]
+    with db() as conn:
+        conn.execute(
+            "INSERT OR IGNORE INTO wechat_notification_log (event_key, openid, template_id, status, detail, created_at) VALUES (?, ?, ?, ?, ?, ?)",
+            (event_key, openid, WECHAT_JOB_TEMPLATE_ID, status, detail, int(time.time())),
+        )
+        if status == "sent":
+            conn.execute("UPDATE wechat_subscriptions SET credits = MAX(0, credits - 1), updated_at = ? WHERE openid = ? AND template_id = ?", (int(time.time()), openid, WECHAT_JOB_TEMPLATE_ID))
+        conn.commit()
+    return status == "sent"
+
+
 def login_client_key(request: Request) -> str:
     client = getattr(request, "client", None)
     host = str(getattr(client, "host", "") or "unknown").strip()
@@ -1026,6 +1126,29 @@ def wechat_bind(payload: WeChatBindRequest, request: Request) -> dict[str, Any]:
         conn.commit()
     clear_login_failures(client_key)
     return {"ok": True, "bound": True, "token": issue_session(user["id"]), "user": {"username": user["username"]}}
+
+
+@app.get("/wechat/config")
+def wechat_config(user: sqlite3.Row = Depends(current_user)) -> dict[str, Any]:
+    return {"ok": True, "job_template_id": WECHAT_JOB_TEMPLATE_ID, "enabled": bool(WECHAT_JOB_TEMPLATE_ID and WECHAT_APPID and WECHAT_APP_SECRET)}
+
+
+@app.post("/wechat/subscriptions")
+def register_wechat_subscription(payload: WeChatSubscriptionRequest, user: sqlite3.Row = Depends(current_user)) -> dict[str, Any]:
+    if not WECHAT_JOB_TEMPLATE_ID or payload.template_id != WECHAT_JOB_TEMPLATE_ID:
+        raise HTTPException(status_code=400, detail="Subscription template is not configured")
+    with db() as conn:
+        binding = conn.execute("SELECT openid FROM wechat_bindings WHERE user_id = ? ORDER BY last_login_at DESC LIMIT 1", (user["id"],)).fetchone()
+        if not binding:
+            raise HTTPException(status_code=409, detail="Bind a WeChat administrator before subscribing")
+        conn.execute(
+            """INSERT INTO wechat_subscriptions (openid, template_id, credits, updated_at) VALUES (?, ?, 1, ?)
+               ON CONFLICT(openid, template_id) DO UPDATE SET credits=credits+1, updated_at=excluded.updated_at""",
+            (binding["openid"], payload.template_id, int(time.time())),
+        )
+        credits = conn.execute("SELECT credits FROM wechat_subscriptions WHERE openid=? AND template_id=?", (binding["openid"], payload.template_id)).fetchone()["credits"]
+        conn.commit()
+    return {"ok": True, "credits": credits}
 
 
 @app.post("/auth/logout")
@@ -1272,6 +1395,33 @@ def add_dict_term(payload: DictTermRequest, user: sqlite3.Row = Depends(current_
     return {"ok": True, "category": category, "en": payload.en, "message": message}
 
 
+@app.post("/dict/candidates")
+def submit_dict_candidate(payload: DictCandidateRequest, user: sqlite3.Row = Depends(current_user)) -> dict[str, Any]:
+    """Collect a proposed term without mutating the production dictionary."""
+    path = "data/dict_candidates.json"
+    target = APP_DIR / path
+    document = read_json(target, {"version": 1, "candidates": []})
+    category = payload.category if payload.category in {"games", "movies_tv", "companies", "people", "media", "terms"} else "terms"
+    en, cn = payload.en.strip(), payload.cn.strip()
+    if not en or not cn:
+        raise HTTPException(status_code=400, detail="English and Chinese terms are required")
+    candidate_id = hashlib.sha1(f"{en.casefold()}\0{cn}\0{category}".encode("utf-8")).hexdigest()[:16]
+    candidates = [item for item in document.get("candidates", []) if isinstance(item, dict)]
+    existing = next((item for item in candidates if item.get("id") == candidate_id), None)
+    if existing:
+        return {"ok": True, "candidate": existing, "duplicate": True}
+    candidate = {
+        "id": candidate_id, "en": en, "cn": cn, "category": category,
+        "note": payload.note.strip(), "source": "miniprogram", "status": "pending",
+        "submitted_at": datetime.now(timezone.utc).isoformat(), "submitted_by": user["username"],
+    }
+    candidates.append(candidate)
+    document.update(version=1, updated_at=datetime.now(timezone.utc).isoformat(), candidates=candidates)
+    write_project_file(path, json_text(document), f"dict: propose {en}")
+    sync_from_github()
+    return {"ok": True, "candidate": candidate, "duplicate": False}
+
+
 @app.post("/translations/request")
 def request_translation(payload: TranslationRequest, user: sqlite3.Row = Depends(current_user)) -> dict[str, Any]:
     index = read_json(APP_DIR / "data" / payload.date / "index.json")
@@ -1487,7 +1637,12 @@ def codex_complete_job(
         )
     update_job(job_id, "done", payload.message, 100)
     sync_from_github()
-    return {"ok": True, "job": serialize_job(load_job_row(job_id))}
+    job = serialize_job(load_job_row(job_id))
+    try:
+        notification_sent = send_job_completion_notification(job)
+    except Exception:
+        notification_sent = False
+    return {"ok": True, "job": job, "notification_sent": notification_sent}
 
 
 @app.post("/codex/jobs/{job_id}/fail")

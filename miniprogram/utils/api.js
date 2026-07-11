@@ -118,11 +118,17 @@ function dictionary() {
   return request('/dict');
 }
 
-function addDictTerm(en, cn, category, note) {
-  return request('/dict/terms', {
+function submitDictCandidate(en, cn, category, note) {
+  return request('/dict/candidates', {
     method: 'POST',
-    data: { en, cn, category, note: note || '', source: 'user' }
+    data: { en, cn, category, note: note || '' }
   });
+}
+
+function wechatConfig() { return request('/wechat/config'); }
+
+function registerSubscription(templateId) {
+  return request('/wechat/subscriptions', { method: 'POST', data: { template_id: templateId } });
 }
 
 function updateAccount(currentPassword, newUsername, newPassword) {
@@ -149,6 +155,8 @@ module.exports = {
   job,
   jobs,
   dictionary,
-  addDictTerm,
+  submitDictCandidate,
+  wechatConfig,
+  registerSubscription,
   updateAccount
 };

@@ -158,3 +158,17 @@ Response:
   "triggered": false
 }
 ```
+
+## WeChat completion subscriptions
+
+`GET /wechat/config` returns the configured translation-complete template ID.
+`POST /wechat/subscriptions` records one accepted one-time subscription credit
+for the bound WeChat administrator. Completing a Codex translation job consumes
+at most one credit and sends one deduplicated message linking to the task page.
+No new-article or general news notifications are sent.
+
+## Dictionary candidates
+
+`POST /dict/candidates` accepts `{en, cn, category, note}` from the mini program.
+It writes a pending candidate to `data/dict_candidates.json`; it never changes
+the production `data/dict.json` until the candidate is reviewed elsewhere.

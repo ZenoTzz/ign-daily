@@ -44,10 +44,9 @@ Page({
     if (!en || !cn) { wx.showToast({ title:'请填写英文和中文', icon:'none' }); return; }
     this.setData({ saving: true });
     try {
-      await api.addDictTerm(en, cn, this.data.category, this.data.note.trim());
-      wx.showToast({ title:'已加入词库', icon:'success' });
+      const result = await api.submitDictCandidate(en, cn, this.data.category, this.data.note.trim());
+      wx.showToast({ title:result.duplicate ? '候选已存在' : '候选已提交', icon:'success' });
       this.setData({ en:'', cn:'', note:'', showForm:false });
-      await this.loadDictionary();
     } catch (err) { wx.showToast({ title:err.message || '保存失败', icon:'none' }); }
     finally { this.setData({ saving:false }); }
   }

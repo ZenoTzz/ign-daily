@@ -10,8 +10,8 @@
 
   <view class="date-row">
     <button class="date-btn" bindtap="prevDate">前一天</button>
-    <button class="date-btn today-btn" bindtap="today">今天</button>
-    <button class="date-btn" bindtap="nextDate">后一天</button>
+    <picker mode="date" value="{{date}}" end="{{todayDate}}" bindchange="onDateChange"><view class="date-btn today-btn">{{date}}</view></picker>
+    <button class="date-btn" disabled="{{isToday}}" bindtap="nextDate">后一天</button>
   </view>
 
   <view wx:if="{{job}}" class="job-card">

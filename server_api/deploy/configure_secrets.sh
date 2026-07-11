@@ -60,6 +60,7 @@ cookie_secure="$(prompt_value 'Use secure cookies? 1 for HTTPS, 0 for HTTP, defa
 cookie_secure="${cookie_secure:-0}"
 wechat_appid="$(prompt_value 'WeChat Mini Program AppID, leave blank to skip' 0)"
 wechat_secret="$(prompt_value 'WeChat Mini Program AppSecret, leave blank to skip' 1)"
+wechat_job_template="$(prompt_value 'WeChat translation-complete subscription template ID, leave blank to skip' 0)"
 
 update_env "$API_DIR/.env" IGN_DAILY_ADMIN_USER "$admin_user"
 update_env "$API_DIR/.env" IGN_DAILY_ADMIN_PASSWORD "$admin_password"
@@ -68,6 +69,10 @@ update_env "$API_DIR/.env" IGN_DAILY_COOKIE_SECURE "$cookie_secure"
 if [ -n "$wechat_appid" ] && [ -n "$wechat_secret" ]; then
   update_env "$API_DIR/.env" IGN_DAILY_WECHAT_APPID "$wechat_appid"
   update_env "$API_DIR/.env" IGN_DAILY_WECHAT_APP_SECRET "$wechat_secret"
+fi
+if [ -n "$wechat_job_template" ]; then
+  update_env "$API_DIR/.env" IGN_DAILY_WECHAT_JOB_TEMPLATE_ID "$wechat_job_template"
+  update_env "$API_DIR/.env" IGN_DAILY_WECHAT_STATE "trial"
 fi
 
 python_bin="$API_DIR/venv/bin/python"

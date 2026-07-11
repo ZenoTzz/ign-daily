@@ -6,9 +6,12 @@
       <view class="tag">#{{article.id}}</view>
       <view class="title">{{article.cn_title || article.title_cn || article.en_title}}</view>
       <view class="subtitle">{{article.en_title || article.title_en}}</view>
+      <view class="tag">{{reviewLabel}}</view>
+      <view wx:if="{{reviewReason}}" class="subtitle">复核信息：{{reviewReason}}</view>
     </view>
 
-    <scroll-view wx:if="{{images.length}}" class="image-strip" scroll-x enhanced show-scrollbar="{{false}}">
+    <button wx:if="{{images.length}}" class="btn btn-ghost" bindtap="toggleImages"><text wx:if="{{showImages}}">收起配图</text><text wx:else>查看配图（{{images.length}}）</text></button>
+    <scroll-view wx:if="{{images.length && showImages}}" class="image-strip" scroll-x enhanced show-scrollbar="{{false}}">
       <image wx:for="{{images}}" wx:key="*this" src="{{item}}" mode="aspectFill" data-src="{{item}}" bindtap="previewImage"></image>
     </scroll-view>
 
@@ -23,5 +26,6 @@
     </view>
 
     <view class="article-actions"><button class="btn btn-primary" bindtap="copyArticle">复制译文</button><button class="btn btn-ghost" bindtap="copyUrl">复制原文链接</button></view>
+    <view class="article-actions"><button class="btn btn-ghost" disabled="{{!prevId}}" data-id="{{prevId}}" bindtap="goSibling">上一篇</button><button class="btn btn-ghost" disabled="{{!nextId}}" data-id="{{nextId}}" bindtap="goSibling">下一篇</button></view>
   </view>
 </view>
