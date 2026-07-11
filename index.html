@@ -3,12 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    // Older iOS home-screen installs used the former GitHub Pages start URL
+    // (/ign-daily/). On the custom domain, resolve that legacy launch back to
+    // the site root before any relative CSS, JS, manifest, or data URL loads.
+    if (location.hostname === 'igndaily.site' && location.pathname.startsWith('/ign-daily/')) {
+      const base = document.createElement('base');
+      base.href = '/';
+      document.head.appendChild(base);
+    }
+  </script>
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="IGN Daily">
   <meta name="theme-color" content="#08080f">
-  <link rel="manifest" href="manifest.json">
+  <link rel="manifest" href="manifest.json?v=20260711pwa1">
   <link rel="apple-touch-icon" href="assets/icon-192.png">
   <title>IGN Daily News</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">

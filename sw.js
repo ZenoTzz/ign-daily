@@ -1,4 +1,4 @@
-const CACHE_NAME = 'ign-daily-v8';
+const CACHE_NAME = 'ign-daily-v9';
 const BASE_PATH = self.location.pathname.replace(/sw\.js$/, '');
 const STATIC_ASSETS = [
   '',
@@ -30,9 +30,22 @@ function htmlFallback(message) {
 async function cacheFresh(request, response) {
   if (response && response.ok) {
     const cache = await caches.open(CACHE_NAME);
-    await cache.put(request, response.clone());
+    const canonicalUrl = new URL(request.url);
+    canonicalUrl.search = '';
+    await Promise.all([
+      cache.put(request, response.clone()),
+      cache.put(canonicalUrl.toString(), response.clone()),
+    ]);
   }
   return response;
+}
+
+async function matchCached(request) {
+  const exact = await caches.match(request);
+  if (exact) return exact;
+  const canonicalUrl = new URL(request.url);
+  canonicalUrl.search = '';
+  return caches.match(canonicalUrl.toString());
 }
 
 // Install: cache static shell
@@ -64,7 +77,7 @@ self.addEventListener('fetch', (e) => {
       fetch(e.request)
         .then((res) => cacheFresh(e.request, res))
         .catch(async () =>
-          (await caches.match(e.request)) ||
+          (await matchCached(e.request)) ||
           (await caches.match(`${BASE_PATH}index.html`)) ||
           (await caches.match(`${BASE_PATH}`)) ||
           htmlFallback('IGN Daily 暂时无法连接，请稍后刷新。')
@@ -78,7 +91,7 @@ self.addEventListener('fetch', (e) => {
     e.respondWith(
       fetch(e.request)
         .then((res) => cacheFresh(e.request, res))
-        .catch(async () => (await caches.match(e.request)) || jsonFallback('数据暂时无法连接，请稍后刷新。'))
+        .catch(async () => (await matchCached(e.request)) || jsonFallback('数据暂时无法连接，请稍后刷新。'))
     );
     return;
   }
@@ -89,7 +102,7 @@ self.addEventListener('fetch', (e) => {
       fetch(e.request)
         .then((res) => cacheFresh(e.request, res))
         .catch(async () =>
-          (await caches.match(e.request)) ||
+          (await matchCached(e.request)) ||
           (url.pathname.endsWith('.html') ? htmlFallback('页面暂时无法连接，请稍后刷新。') : new Response('', { status: 503 }))
         )
     );
@@ -98,6 +111,6 @@ self.addEventListener('fetch', (e) => {
 
   // Everything else: network with fallback
   e.respondWith(
-    fetch(e.request).catch(async () => (await caches.match(e.request)) || new Response('', { status: 503 }))
+    fetch(e.request).catch(async () => (await matchCached(e.request)) || new Response('', { status: 503 }))
   );
 });
