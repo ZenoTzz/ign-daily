@@ -1,12 +1,12 @@
 {
-  "updated_at": "2026-07-11 22:36:03 +08:00",
+  "updated_at": "2026-07-12 12:00:58 +08:00",
   "source": "multi-source median",
   "base": "USD",
   "rates_to_cny": {
-    "USD": 6.78,
+    "USD": 6.79,
     "EUR": 7.75,
     "JPY_100": 4.19,
-    "GBP": 9.09,
+    "GBP": 9.1,
     "KRW_100": 0.45
   },
   "validation": {
@@ -17,33 +17,33 @@
     "checks": {
       "USD": {
         "source_count": 4,
-        "median_raw": 6.780158,
-        "max_cross_source_deviation": 0.000834,
-        "previous_deviation": 0.002918
+        "median_raw": 6.785484,
+        "max_cross_source_deviation": 0.001619,
+        "previous_deviation": 0.000809
       },
       "EUR": {
         "source_count": 4,
-        "median_raw": 7.746136,
-        "max_cross_source_deviation": 0.002447,
-        "previous_deviation": 0.003071
+        "median_raw": 7.749435,
+        "max_cross_source_deviation": 0.001642,
+        "previous_deviation": 7.3e-05
       },
       "JPY_100": {
         "source_count": 4,
-        "median_raw": 4.192639,
-        "max_cross_source_deviation": 0.001787,
-        "previous_deviation": 0.00063
+        "median_raw": 4.194706,
+        "max_cross_source_deviation": 0.002278,
+        "previous_deviation": 0.001123
       },
       "GBP": {
         "source_count": 4,
-        "median_raw": 9.094335,
-        "max_cross_source_deviation": 0.002176,
-        "previous_deviation": 0.00172
+        "median_raw": 9.097522,
+        "max_cross_source_deviation": 0.001419,
+        "previous_deviation": 0.000827
       },
       "KRW_100": {
         "source_count": 4,
-        "median_raw": 0.45063,
-        "max_cross_source_deviation": 0.002922,
-        "previous_deviation": 0.001401
+        "median_raw": 0.452187,
+        "max_cross_source_deviation": 0.004491,
+        "previous_deviation": 0.004861
       }
     },
     "sources": [
@@ -51,22 +51,22 @@
         "name": "open-er-api",
         "url": "https://open.er-api.com/v6/latest/USD",
         "rates_to_cny": {
-          "USD": 6.784818,
-          "EUR": 7.749012,
-          "JPY_100": 4.194142,
-          "GBP": 9.095503,
-          "KRW_100": 0.451424
+          "USD": 6.78999,
+          "EUR": 7.75561,
+          "JPY_100": 4.196855,
+          "GBP": 9.102608,
+          "KRW_100": 0.452187
         }
       },
       {
         "name": "exchangerate-api-v4",
         "url": "https://api.exchangerate-api.com/v4/latest/USD",
         "rates_to_cny": {
-          "USD": 6.78,
-          "EUR": 7.739726,
-          "JPY_100": 4.191136,
-          "GBP": 9.088472,
-          "KRW_100": 0.451104
+          "USD": 6.79,
+          "EUR": 7.76,
+          "JPY_100": 4.196798,
+          "GBP": 9.101877,
+          "KRW_100": 0.452187
         }
       },
       {
@@ -84,11 +84,11 @@
         "name": "currency-api-jsdelivr",
         "url": "https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/usd.json",
         "rates_to_cny": {
-          "USD": 6.780316,
-          "EUR": 7.765088,
-          "JPY_100": 4.19921,
-          "GBP": 9.11412,
-          "KRW_100": 0.449314
+          "USD": 6.780978,
+          "EUR": 7.736707,
+          "JPY_100": 4.192613,
+          "GBP": 9.084608,
+          "KRW_100": 0.452231
         }
       }
     ]
