@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-07-12T22:38:09+08:00",
+  "generated_at": "2026-07-12T23:28:10+08:00",
   "instructions": "Codex must write semantic-review-results.json; mechanical scripts cannot approve candidates.",
   "allowed_decisions": [
     "approve",
@@ -9,62 +9,5 @@
     "one_off",
     "fact_correction"
   ],
-  "items": [
-    {
-      "id": "dict_candidate_god_of_war_laufey_2e0ef0beabfb",
-      "type": "dictionary_candidate",
-      "title": "词库候选：God of War Laufey → 战神：Laufey",
-      "proposed_rule": "建议将「God of War Laufey」加入词库，译为「战神：Laufey」。",
-      "scope": "all",
-      "days_seen": 1,
-      "articles_seen": 1,
-      "contradictions": 0,
-      "alternatives": {
-        "战神：Laufey": 1
-      },
-      "examples": [
-        {
-          "date": "2026-07-12",
-          "article_id": 1,
-          "before": "God of War Laufey",
-          "after": "战神：Laufey",
-          "evidence": "来自文章页未确认新词候选。"
-        }
-      ],
-      "questions": [
-        "这是稳定偏好、事实纠错、词库实体、格式偏好还是一次性修改？",
-        "英文和中文是否在上下文中指向同一实体？",
-        "是否存在反例或更合理解释？",
-        "规则能否明确执行，误用风险是什么？"
-      ]
-    },
-    {
-      "id": "dict_candidate_ryse_son_of_rome_e2605424dbe6",
-      "type": "dictionary_candidate",
-      "title": "词库候选：Ryse: Son of Rome → Ryse：罗马之子",
-      "proposed_rule": "建议将「Ryse: Son of Rome」加入词库，译为「Ryse：罗马之子」。",
-      "scope": "all",
-      "days_seen": 1,
-      "articles_seen": 1,
-      "contradictions": 0,
-      "alternatives": {
-        "Ryse：罗马之子": 1
-      },
-      "examples": [
-        {
-          "date": "2026-07-12",
-          "article_id": 2,
-          "before": "Ryse: Son of Rome",
-          "after": "Ryse：罗马之子",
-          "evidence": "来自文章页未确认新词候选。"
-        }
-      ],
-      "questions": [
-        "这是稳定偏好、事实纠错、词库实体、格式偏好还是一次性修改？",
-        "英文和中文是否在上下文中指向同一实体？",
-        "是否存在反例或更合理解释？",
-        "规则能否明确执行，误用风险是什么？"
-      ]
-    }
-  ]
+  "items": []
 }
