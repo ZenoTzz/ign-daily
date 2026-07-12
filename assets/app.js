@@ -62,7 +62,8 @@ const GH = {
   branch: 'main',
   apiBase: 'https://api.github.com',
   canUseServer() {
-    return typeof ServerAPI !== 'undefined' && ServerAPI.enabledByHost() && Boolean(ServerAPI.token());
+    // Production also supports an HttpOnly session cookie.
+    return typeof ServerAPI !== 'undefined' && ServerAPI.enabledByHost();
   },
   serverPath(path) {
     return String(path || '').split('/').map(encodeURIComponent).join('/');
@@ -1137,7 +1138,7 @@ function appData() {
 
     // ---- 一键复制今日摘要（中文标点 + 去 markdown）----
     shouldUseServerApi() {
-      return ServerAPI.enabledByHost() && Boolean(localStorage.getItem('ign_api_token'));
+      return ServerAPI.enabledByHost();
     },
 
     async checkServerSession() {
@@ -2396,10 +2397,12 @@ function appData() {
     async processGlobalQueue() {
       if (this.pendingProcessing) return;
       this.pendingProcessing = true;
+      let activeBatch = [];
       try {
         while (this.pendingQueue.length > 0) {
           // 批量拿出队列里全部任务
           const batch = this.pendingQueue.splice(0, this.pendingQueue.length);
+          activeBatch = batch;
           const approves = batch.filter(x => x.type === 'approve').map(x => x.candidate);
           // 1. 批量入库
           if (approves.length > 0) {
@@ -2415,11 +2418,18 @@ function appData() {
           for (const [aid, removed] of Object.entries(byArticle)) {
             await this.removeFromArticlePending(parseInt(aid), removed);
           }
+          activeBatch = [];
         }
         if (this.globalPending.length === 0) {
           this.flash('✅ 全部处理完成');
         }
       } catch (e) {
+        const existing = new Set(this.globalPending.map(c => [c._articleId, c.en, c.cat || c.category || 'terms'].join('|')));
+        for (const item of activeBatch) {
+          const c = item.candidate;
+          const key = [c._articleId, c.en, c.cat || c.category || 'terms'].join('|');
+          if (!existing.has(key)) { this.globalPending.push(c); existing.add(key); }
+        }
         this.flash('❌ 后台保存失败：' + e.message, 5000);
       } finally {
         this.pendingProcessing = false;
@@ -2428,6 +2438,9 @@ function appData() {
 
     async batchApproveDict(approves) {
       const fresh = await GH.getFile('data/dict.json');
+      if (!fresh || typeof fresh.content !== 'string' || !fresh.content.trim()) {
+        throw new Error('无法读取服务器词库，请重新登录后重试');
+      }
       const dict = JSON.parse(fresh.content);
       for (const rawCandidate of approves) {
         const c = normalizeApprovedDictCandidate(rawCandidate);
@@ -2449,6 +2462,9 @@ function appData() {
       const padded = String(articleId).padStart(2, '0');
       const path = `data/${this.data.date}/translations/${padded}.json`;
       const fresh = await GH.getFile(path);
+      if (!fresh || typeof fresh.content !== 'string' || !fresh.content.trim()) {
+        throw new Error(`无法读取文章 #${articleId} 的译文，词库已保存但候选尚未移除`);
+      }
       const data = JSON.parse(fresh.content);
       // 从 pending_dict 里移除这些候选（按 en+cat 匹配）
       const removeSet = new Set(removedCandidates.map(c => {
