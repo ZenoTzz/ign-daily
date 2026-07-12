@@ -25,6 +25,7 @@ CST = timezone(timedelta(hours=8))
 NON_BODY_PATTERNS = (
     re.compile(r"^Photographer:\s*", re.I),
     re.compile(r"^Image Credit:\s*", re.I),
+    re.compile(r"^Photo by\b", re.I),
     re.compile(r"\b(?:is|serves as) (?:a|an|the) .{0,90}\b(?:at|for) IGN\b", re.I),
     re.compile(r"\bis a freelance writer\b", re.I),
     re.compile(r"\b(?:find|reach|follow) .{0,80}\b(?:Twitter|Bluesky|X|@)\b", re.I),
