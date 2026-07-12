@@ -1,0 +1,54 @@
+{
+  "date": "2026-07-12",
+  "observer": "codex",
+  "model": "codex",
+  "status": "observed",
+  "signals": [],
+  "candidates": [
+    {
+      "id": "dict_candidate_god_of_war_laufey_2e0ef0beabfb",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：God of War Laufey → 战神：Laufey",
+      "rule": "建议将「God of War Laufey」加入词库，译为「战神：Laufey」。",
+      "status": "observed",
+      "semantic_review": "pending",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-07-12",
+          "article_id": 1,
+          "before": "God of War Laufey",
+          "after": "战神：Laufey",
+          "evidence": "来自文章页未确认新词候选。"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id": "dict_candidate_ryse_son_of_rome_e2605424dbe6",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：Ryse: Son of Rome → Ryse：罗马之子",
+      "rule": "建议将「Ryse: Son of Rome」加入词库，译为「Ryse：罗马之子」。",
+      "status": "observed",
+      "semantic_review": "pending",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-07-12",
+          "article_id": 2,
+          "before": "Ryse: Son of Rome",
+          "after": "Ryse：罗马之子",
+          "evidence": "来自文章页未确认新词候选。"
+        }
+      ],
+      "contradiction": ""
+    }
+  ],
+  "notes": [
+    "Added source+polished dictionary candidates for GPT/Tencent workflow."
+  ],
+  "candidate_count": 2,
+  "updated_at": "2026-07-12T22:38:01+08:00"
+}

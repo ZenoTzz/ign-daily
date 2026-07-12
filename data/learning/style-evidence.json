@@ -2949,6 +2949,92 @@
           "created_at": "2026-07-03T22:40:04+08:00"
         }
       ]
+    },
+    "dict_candidate_god_of_war_laufey_2e0ef0beabfb": {
+      "id": "dict_candidate_god_of_war_laufey_2e0ef0beabfb",
+      "title": "词库候选：God of War Laufey → 战神：Laufey",
+      "rule": "Observe whether 「God of War Laufey」 should be treated as a work title and whether the Chinese form should use 「Laufey」 or the existing 「劳菲」 mapping.",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "terms",
+      "scope": "dictionary_candidates",
+      "status": "observed",
+      "semantic_review": "observe",
+      "days": [
+        "2026-07-12"
+      ],
+      "days_seen": 1,
+      "articles_seen": 1,
+      "contradictions": 0,
+      "alternatives": {
+        "战神：Laufey": 1
+      },
+      "examples": [
+        {
+          "date": "2026-07-12",
+          "article_id": 1,
+          "before": "God of War Laufey",
+          "after": "战神：Laufey",
+          "evidence": "来自文章页未确认新词候选。"
+        }
+      ],
+      "created_at": "2026-07-12T22:38:01+08:00",
+      "last_seen": "2026-07-12",
+      "confidence": 0.8,
+      "latest_evidence_summary": "来自文章页未确认新词候选。",
+      "candidate_payload": {
+        "en": "God of War Laufey",
+        "cn": "战神：Laufey",
+        "cat": "terms",
+        "source": "user"
+      },
+      "semantic_rationale": "The source mentions God of War Laufey and the polished article uses 《战神：Laufey》, but this is a single article-page pending_dict guess and the active dictionary already maps Laufey to 劳菲. Keep as evidence only until a user-confirmed title or repeated usage resolves the naming.",
+      "counterexamples": [
+        "data/dict.json already maps Laufey to 劳菲."
+      ],
+      "misuse_risk": "Approving now could promote an unconfirmed title form and conflict with the existing character-name dictionary entry."
+    },
+    "dict_candidate_ryse_son_of_rome_e2605424dbe6": {
+      "id": "dict_candidate_ryse_son_of_rome_e2605424dbe6",
+      "title": "词库候选：Ryse: Son of Rome → Ryse：罗马之子",
+      "rule": "Observe 「Ryse: Son of Rome」 as a game-title candidate translated as 「Ryse：罗马之子」 pending user confirmation or repeated evidence.",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "games",
+      "scope": "dictionary_candidates",
+      "status": "observed",
+      "semantic_review": "observe",
+      "days": [
+        "2026-07-12"
+      ],
+      "days_seen": 1,
+      "articles_seen": 1,
+      "contradictions": 0,
+      "alternatives": {
+        "Ryse：罗马之子": 1
+      },
+      "examples": [
+        {
+          "date": "2026-07-12",
+          "article_id": 2,
+          "before": "Ryse: Son of Rome",
+          "after": "Ryse：罗马之子",
+          "evidence": "来自文章页未确认新词候选。"
+        }
+      ],
+      "created_at": "2026-07-12T22:38:01+08:00",
+      "last_seen": "2026-07-12",
+      "confidence": 0.8,
+      "latest_evidence_summary": "来自文章页未确认新词候选。",
+      "candidate_payload": {
+        "en": "Ryse: Son of Rome",
+        "cn": "Ryse：罗马之子",
+        "cat": "games",
+        "source": "user"
+      },
+      "semantic_rationale": "The English and Chinese forms point to the same game in the 2026-07-12 article, but the candidate is explicitly marked as a pending/community translation and has only one article/day of evidence. It is useful dictionary evidence but not enough for approval.",
+      "counterexamples": [],
+      "misuse_risk": "Low if kept as a candidate; approving prematurely could add a non-confirmed community title to the dictionary."
     }
   },
   "updated_at": "2026-07-06T22:38:50+08:00",

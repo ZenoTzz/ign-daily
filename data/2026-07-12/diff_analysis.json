@@ -1,0 +1,134 @@
+{
+  "date": "2026-07-12",
+  "generated_at": "2026-07-12T22:38:01.007738",
+  "total_articles": 2,
+  "dictionary_candidate_count": 2,
+  "dictionary_candidates": [
+    {
+      "id": "dict_candidate_god_of_war_laufey_2e0ef0beabfb",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "terms",
+      "en": "God of War Laufey",
+      "cn": "战神：Laufey",
+      "title": "词库候选：God of War Laufey → 战神：Laufey",
+      "rule": "建议将「God of War Laufey」加入词库，译为「战神：Laufey」。",
+      "status": "observed",
+      "semantic_review": "pending",
+      "quality": {
+        "accepted_as_evidence": true,
+        "status": "observed",
+        "reasons": [],
+        "requires_semantic_review": true
+      },
+      "confidence": "high",
+      "date": "2026-07-12",
+      "article_id": 1,
+      "article_title": "欧盟称无权阻止索尼放弃PlayStation游戏光盘",
+      "url": "https://www.ign.com/articles/eu-says-its-powerless-to-stop-playstation-from-killing-discs-companies-are-free-to-offer-games-and-services-in-the-manner-they-see-fit",
+      "evidence": "来自文章页未确认新词候选。"
+    },
+    {
+      "id": "dict_candidate_ryse_son_of_rome_e2605424dbe6",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "games",
+      "en": "Ryse: Son of Rome",
+      "cn": "Ryse：罗马之子",
+      "title": "词库候选：Ryse: Son of Rome → Ryse：罗马之子",
+      "rule": "建议将「Ryse: Son of Rome」加入词库，译为「Ryse：罗马之子」。",
+      "status": "observed",
+      "semantic_review": "pending",
+      "quality": {
+        "accepted_as_evidence": true,
+        "status": "observed",
+        "reasons": [],
+        "requires_semantic_review": true
+      },
+      "confidence": "high",
+      "date": "2026-07-12",
+      "article_id": 2,
+      "article_title": "XBOX《Ryse：罗马之子》曾计划跨越多个时代",
+      "url": "https://www.ign.com/articles/ryse-son-of-rome-had-plans-to-be-xboxs-assassins-creed",
+      "evidence": "来自文章页未确认新词候选。"
+    }
+  ],
+  "learning_evidence_updated": true,
+  "daily_learning_updated": true,
+  "articles": [
+    {
+      "id": 1,
+      "cn_title": "欧盟称无权阻止索尼放弃PlayStation游戏光盘",
+      "en_title": "EU Says It's Powerless to Stop PlayStation From Killing Discs: 'Companies Are Free to Offer Games and Services in the Manner They See Fit'",
+      "url": "https://www.ign.com/articles/eu-says-its-powerless-to-stop-playstation-from-killing-discs-companies-are-free-to-offer-games-and-services-in-the-manner-they-see-fit",
+      "category": "行业动态",
+      "has_translation": true,
+      "title_diff": null,
+      "subtitle_diff": null,
+      "body_diffs": [],
+      "dictionary_candidates": [
+        {
+          "id": "dict_candidate_god_of_war_laufey_2e0ef0beabfb",
+          "category": "dictionary",
+          "type": "dictionary_candidate",
+          "dict_category": "terms",
+          "en": "God of War Laufey",
+          "cn": "战神：Laufey",
+          "title": "词库候选：God of War Laufey → 战神：Laufey",
+          "rule": "建议将「God of War Laufey」加入词库，译为「战神：Laufey」。",
+          "status": "observed",
+          "semantic_review": "pending",
+          "quality": {
+            "accepted_as_evidence": true,
+            "status": "observed",
+            "reasons": [],
+            "requires_semantic_review": true
+          },
+          "confidence": "high",
+          "date": "2026-07-12",
+          "article_id": 1,
+          "article_title": "欧盟称无权阻止索尼放弃PlayStation游戏光盘",
+          "url": "https://www.ign.com/articles/eu-says-its-powerless-to-stop-playstation-from-killing-discs-companies-are-free-to-offer-games-and-services-in-the-manner-they-see-fit",
+          "evidence": "来自文章页未确认新词候选。"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "cn_title": "XBOX《Ryse：罗马之子》曾计划跨越多个时代",
+      "en_title": "Ryse: Son of Rome Had Plans To Be Xbox’s Assassin’s Creed",
+      "url": "https://www.ign.com/articles/ryse-son-of-rome-had-plans-to-be-xboxs-assassins-creed",
+      "category": "游戏新闻",
+      "has_translation": true,
+      "title_diff": null,
+      "subtitle_diff": null,
+      "body_diffs": [],
+      "dictionary_candidates": [
+        {
+          "id": "dict_candidate_ryse_son_of_rome_e2605424dbe6",
+          "category": "dictionary",
+          "type": "dictionary_candidate",
+          "dict_category": "games",
+          "en": "Ryse: Son of Rome",
+          "cn": "Ryse：罗马之子",
+          "title": "词库候选：Ryse: Son of Rome → Ryse：罗马之子",
+          "rule": "建议将「Ryse: Son of Rome」加入词库，译为「Ryse：罗马之子」。",
+          "status": "observed",
+          "semantic_review": "pending",
+          "quality": {
+            "accepted_as_evidence": true,
+            "status": "observed",
+            "reasons": [],
+            "requires_semantic_review": true
+          },
+          "confidence": "high",
+          "date": "2026-07-12",
+          "article_id": 2,
+          "article_title": "XBOX《Ryse：罗马之子》曾计划跨越多个时代",
+          "url": "https://www.ign.com/articles/ryse-son-of-rome-had-plans-to-be-xboxs-assassins-creed",
+          "evidence": "来自文章页未确认新词候选。"
+        }
+      ]
+    }
+  ]
+}

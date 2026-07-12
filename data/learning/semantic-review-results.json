@@ -1,3 +1,24 @@
 {
-  "results": []
+  "results": [
+    {
+      "id": "dict_candidate_god_of_war_laufey_2e0ef0beabfb",
+      "decision": "observe",
+      "rationale": "The source mentions God of War Laufey and the polished article uses 《战神：Laufey》, but this is a single article-page pending_dict guess and the active dictionary already maps Laufey to 劳菲. Keep as evidence only until a user-confirmed title or repeated usage resolves the naming.",
+      "refined_rule": "Observe whether 「God of War Laufey」 should be treated as a work title and whether the Chinese form should use 「Laufey」 or the existing 「劳菲」 mapping.",
+      "scope": "dictionary_candidates",
+      "counterexamples": [
+        "data/dict.json already maps Laufey to 劳菲."
+      ],
+      "misuse_risk": "Approving now could promote an unconfirmed title form and conflict with the existing character-name dictionary entry."
+    },
+    {
+      "id": "dict_candidate_ryse_son_of_rome_e2605424dbe6",
+      "decision": "observe",
+      "rationale": "The English and Chinese forms point to the same game in the 2026-07-12 article, but the candidate is explicitly marked as a pending/community translation and has only one article/day of evidence. It is useful dictionary evidence but not enough for approval.",
+      "refined_rule": "Observe 「Ryse: Son of Rome」 as a game-title candidate translated as 「Ryse：罗马之子」 pending user confirmation or repeated evidence.",
+      "scope": "dictionary_candidates",
+      "counterexamples": [],
+      "misuse_risk": "Low if kept as a candidate; approving prematurely could add a non-confirmed community title to the dictionary."
+    }
+  ]
 }
