@@ -67,10 +67,10 @@ html.dark .site-header {
   padding: 0 34px;
 }
 
-.brand { gap: 10px; }
+.brand { gap: 10px; flex-wrap: nowrap; min-width: 0; }
 .brand-logo { width: 30px !important; height: 30px !important; flex: 0 0 30px; }
 .brand-title { color: var(--home-text); font-size: 18px; letter-spacing: -0.02em; }
-.date-nav { margin-left: 10px; gap: 9px; }
+.date-nav { min-height: 34px; margin-left: 10px; gap: 9px; flex: 0 0 auto; }
 .date-nav-btn,
 .nav-btn {
   width: 34px;
@@ -82,6 +82,8 @@ html.dark .site-header {
   box-shadow: none;
 }
 .date-nav-label { color: var(--home-text-2); font-size: 13px; }
+.date-nav-btn svg { width: 18px !important; height: 18px !important; flex-basis: 18px; overflow: visible; }
+.date-nav-btn:disabled { background: transparent; color: var(--home-text-3); opacity: .42; }
 .nav-actions { gap: 8px; }
 .desktop-nav-links { display: flex; align-items: center; gap: 4px; margin-right: 6px; }
 .desktop-nav-link {
@@ -428,7 +430,8 @@ html.dark .site-header {
   body { padding-bottom: 74px; overflow-x: hidden; }
   .site-header,
   .header-inner { height: 60px; }
-  .header-inner { padding: 0 16px; }
+  .header-inner { padding: 0 16px; align-items: center; }
+  .brand { flex-wrap: nowrap; align-items: center; }
   .brand-logo { width: 28px !important; height: 28px !important; flex-basis: 28px; }
   .brand-title { font-size: 16px; }
   .date-nav { margin-left: 0; }
