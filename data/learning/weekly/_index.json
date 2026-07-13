@@ -9,5 +9,24 @@
     "2026-W28"
   ],
   "latest": "2026-W28",
-  "latest_published_at": "2026-07-12T23:28:10+08:00"
+  "latest_published_at": "2026-07-13T12:05:14+08:00",
+  "schema_version": 3,
+  "summaries": {
+    "2026-W28": {
+      "week_id": "2026-W28",
+      "range": {
+        "start": "2026-07-06",
+        "end": "2026-07-12"
+      },
+      "generated_at": "2026-07-13T12:05:14+08:00",
+      "summary": {
+        "ready_for_review": 0,
+        "conflicts": 0,
+        "dictionary_candidates": 0,
+        "observing": 0,
+        "confirmed_this_week": 0,
+        "archived_this_week": 10
+      }
+    }
+  }
 }

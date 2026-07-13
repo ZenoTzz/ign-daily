@@ -1,0 +1,760 @@
+{
+  "generated_at": "2026-07-13T12:05:14+08:00",
+  "count": 25,
+  "rules": [
+    {
+      "id": "preserve_source_information_and_order",
+      "title": "完整保留原文信息与论述顺序",
+      "rule": "正文翻译必须逐段覆盖原文事实、引语和列表，并保持论述顺序；润色可以改善中文，但不能擅自删减、合并错位或扩写成原文没有的内容。",
+      "category": "body",
+      "scope": "all",
+      "status": "confirmed",
+      "type": "style_rule",
+      "days_seen": 12,
+      "articles_seen": 17,
+      "contradictions": 0,
+      "last_seen": "2026-07-07",
+      "semantic_rationale": "Polish corrected a concrete numeric fact from the source/current polished copy; treat as accuracy evidence, not a style rule.",
+      "misuse_risk": "",
+      "examples": [
+        {
+          "date": "2026-06-17",
+          "article_id": 6,
+          "before": "与此同时，最新更新还带来了多项有用的修复，包括对道路探索和在线模式Horizon Play升级所需经验的调整。",
+          "after": "与此同时，最新更新还带来了多项有用的修复，包括对道路探索和在线模式Horizon Play升级所需经验的调整。区域概览中现已添加「已驾驶路段」百分比，这将让你更容易地在屏幕地图上追踪那些难以发现的剩余道路。"
+        },
+        {
+          "date": "2026-07-01",
+          "article_id": 30,
+          "before": "尽管IO Interactive未明确提及该外部合作伙伴的名称，但「Project Fantasy」据报道原计划由XBOX发行。根据2023年FTC诉微软案中泄露的文件，微软曾将该游戏（当时代号「Project Dragon」）列为XBOX与PC独占作品，并称该游戏将由XBOX Game Studios发行。",
+          "after": "IO Interactive完整声明如下：",
+          "evidence": "Polish restored the article structure around the full company statement instead of skipping into later context."
+        },
+        {
+          "date": "2026-07-07",
+          "article_id": 10,
+          "before": "一家独立零售商发起请愿，呼吁索尼撤回在PlayStation主机上放弃光盘的决定。目前该请愿已获得超过11.5万个签名。",
+          "after": "一家独立零售商发起请愿，呼吁索尼撤回在PlayStation主机上放弃光盘的决定。目前该请愿已获得超过16万个签名。",
+          "evidence": "Polish corrected a concrete numeric fact from the source/current polished copy; treat as accuracy evidence, not a style rule."
+        }
+      ]
+    },
+    {
+      "id": "add_china_release_info",
+      "title": "补充中国大陆上映信息",
+      "rule": "在文中提及电影定档日期时，如有中国大陆地区信息，应以括号补充“（中国大陆地区暂未定档）”等说明。",
+      "category": "body",
+      "scope": "movies_tv",
+      "status": "confirmed",
+      "type": "style_rule",
+      "days_seen": 1,
+      "articles_seen": 1,
+      "contradictions": 0,
+      "last_seen": "2026-06-01",
+      "semantic_rationale": "用户在第6段补充了“（中国大陆地区暂未定档）”，可能旨在为中国读者提供相关信息。",
+      "misuse_risk": "",
+      "examples": [
+        {
+          "date": "2026-06-01",
+          "article_id": 3,
+          "before": "影片仍定档2026年12月18日，希望官方预告片不会让我们等太久。",
+          "after": "影片仍定档2026年12月18日（中国大陆地区暂未定档），希望官方预告片不会让我们等太久。"
+        }
+      ]
+    },
+    {
+      "id": "dedupe_currency_conversion",
+      "title": "金额换算去重",
+      "rule": "同一金额不要同时出现两套人民币换算或重复括号；保留一个准确、格式统一的中文换算。",
+      "category": "currency",
+      "scope": "all",
+      "status": "confirmed",
+      "type": "style_rule",
+      "days_seen": 1,
+      "articles_seen": 1,
+      "contradictions": 0,
+      "last_seen": "2026-06-22",
+      "semantic_rationale": "6/22 润色删除了重复人民币换算括号。",
+      "misuse_risk": "",
+      "examples": []
+    },
+    {
+      "id": "use_live_exchange_rate_for_cny",
+      "title": "金额换算采用实时汇率",
+      "rule": "金额换算应使用当日或近期汇率给出人民币约合值，不沿用固定 7:1 粗算；同时保持全文金额格式统一。汇率数值属于时效数据，不作为固定翻译规则。",
+      "category": "currency",
+      "scope": "all",
+      "status": "confirmed",
+      "type": "style_rule",
+      "days_seen": 5,
+      "articles_seen": 4,
+      "contradictions": 0,
+      "last_seen": "2026-06-24",
+      "semantic_rationale": "W26 反馈采纳该规则；6/25 的金额改动只作为格式证据，不计入实时汇率证据。",
+      "misuse_risk": "",
+      "examples": [
+        {
+          "date": "2026-06-23",
+          "article_id": 39,
+          "before": "1049美元(约合人民币7112元)",
+          "after": "1049美元（约合人民币7112元）"
+        },
+        {
+          "date": "2026-06-23",
+          "article_id": 42,
+          "before": "1799美元(约合人民币1万元)",
+          "after": "1799美元（约合12187元人民币）"
+        },
+        {
+          "date": "2026-06-24",
+          "article_id": 14,
+          "before": "1049??",
+          "after": "1049????????7123??"
+        }
+      ]
+    },
+    {
+      "id": "currency_conversion_refined",
+      "title": "金额换算采用统一中文格式",
+      "rule": "正文金额首次出现时可给出人民币换算，使用中文全角括号并保持同文一致；标题通常不放人民币换算。汇率数值属于时效数据，不作为固定翻译规则。",
+      "category": "currency",
+      "scope": "all",
+      "status": "confirmed",
+      "type": "style_rule",
+      "days_seen": 8,
+      "articles_seen": 13,
+      "contradictions": 0,
+      "last_seen": "2026-07-06",
+      "semantic_rationale": "?????????????????????????",
+      "misuse_risk": "",
+      "examples": [
+        {
+          "date": "2026-06-28",
+          "article_id": 10,
+          "before": "6月25日全面开启预购后，这款《侠盗猎车手》新作的加价转卖便已出现在eBay上。标准版零售价目前锁定在80美元(约合人民币545元)，一些黄牛成功以约90美元(约合人民币613元)转手，有的甚至更高。",
+          "after": "6月25日全面开启预购后，这款《GTA》新作的加价转卖便已出现在eBay上。标准版零售价目前锁定在80美元（约合人民币544元），一些黄牛成功以约90美元（约合人民币612元）转手，有的甚至更高。"
+        },
+        {
+          "date": "2026-06-29",
+          "article_id": 3,
+          "before": "诺兰没有点明他指的是哪些主流电影，但不可否认，他拥有一批铁杆粉丝，即便他拍出最离经叛道的作品也会捧场。2023年上映的《奥本海默》就是最近的例子，这部传记片讲述了原子弹之父J·罗伯特·奥本海默的真实故事，尽管采用非线性叙事且片长三小时，仍然斩获近10亿美元(约合人民币68亿元)的全球票房（数据来自Box Office Mojo）。",
+          "after": "诺兰没有点明他指的是哪些主流电影，但不可否认，他拥有一批铁杆粉丝，即便他拍出最离经叛道的作品也会捧场。2023年上映的《奥本海默》就是最近的例子，这部传记片讲述了原子弹之父J·罗伯特·奥本海默的真实故事，尽管采用非线性叙事且片长三小时，仍然斩获近10亿美元（约合人民币68亿元）的全球票房。"
+        },
+        {
+          "date": "2026-07-06",
+          "article_id": 7,
+          "before": "1??????????????2??????????4???",
+          "after": "1?????????7.8????2?????????13.6???",
+          "evidence": "?????????????????????????"
+        }
+      ]
+    },
+    {
+      "id": "summer_game_fest",
+      "title": "Summer Game Fest 译名",
+      "rule": "Summer Game Fest 译为「夏日游戏节」，不使用「夏季游戏节」等。",
+      "category": "dictionary",
+      "scope": "all",
+      "status": "confirmed",
+      "type": "style_rule",
+      "days_seen": 1,
+      "articles_seen": 1,
+      "contradictions": 0,
+      "last_seen": "2026-05-28",
+      "semantic_rationale": "用户将原文'Summer Game Fest'改为'夏日游戏节'，符合专有活动惯用译名。",
+      "misuse_risk": "",
+      "examples": [
+        {
+          "date": "2026-05-28",
+          "article_id": 22,
+          "before": "Summer Game Fest",
+          "after": "夏日游戏节"
+        }
+      ]
+    },
+    {
+      "id": "product_name_order",
+      "title": "产品名+型号顺序",
+      "rule": "英文产品名与型号组合时，按中文习惯将型号后置，如 'Steam Deck OLED' 而非 'OLED Steam Deck'。",
+      "category": "dictionary",
+      "scope": "all",
+      "status": "confirmed",
+      "type": "style_rule",
+      "days_seen": 1,
+      "articles_seen": 1,
+      "contradictions": 0,
+      "last_seen": "2026-05-28",
+      "semantic_rationale": "用户明确反馈'这个以后都一律按这样排序'，且所有类似情况均如此处理。",
+      "misuse_risk": "",
+      "examples": [
+        {
+          "date": "2026-05-28",
+          "article_id": 6,
+          "before": "OLED Steam Deck",
+          "after": "Steam Deck OLED"
+        }
+      ]
+    },
+    {
+      "id": "prefer_confirmed_chinese_game_titles",
+      "title": "优先使用已确认的官方或通行中文名",
+      "rule": "游戏、影视、角色和系统名有稳定官方或通行中文译名时应统一使用；没有稳定译名时保留原文，不自行创造译名。",
+      "category": "dictionary",
+      "scope": "games|movies_tv",
+      "status": "confirmed",
+      "type": "style_rule",
+      "days_seen": 11,
+      "articles_seen": 17,
+      "contradictions": 1,
+      "last_seen": "2026-06-28",
+      "semantic_rationale": "6/28 edit normalizes Helldivers to the established Chinese title ?????? in a movie-context mention.",
+      "misuse_risk": "",
+      "examples": [
+        {
+          "date": "2026-06-26",
+          "article_id": 29,
+          "before": "《Deltarune》第6章2027年发售，第5章打破Steam在线纪录",
+          "after": "《三角符文》第6章2027年发售，第5章打破Steam在线纪录"
+        },
+        {
+          "date": "2026-06-27",
+          "article_id": 4,
+          "before": "《料理鼠王2》永远不会拍，导演布拉德·伯德确认",
+          "after": "导演布拉德·伯德确认《美食总动员2》永远不会拍"
+        },
+        {
+          "date": "2026-06-28",
+          "article_id": 4,
+          "before": "Dauberman的作品履历包括2017年《小丑回魂》重启版及其续集，以及2014年的《安娜贝尔》。他还参与了《修女》和去年上映的《直到黎明》电影的编剧工作，并且已确认加盟即将推出的《街头霸王》和《地狱潜者》电影。",
+          "after": "Dauberman的作品履历包括2017年《小丑回魂》重启版及其续集，以及2014年的《安娜贝尔》。他还参与了《修女》和去年上映的《直到黎明》电影的编剧工作，并且已确认加盟即将推出的《街头霸王》和《绝地潜兵》电影。"
+        }
+      ]
+    },
+    {
+      "id": "prefer_established_official_game_titles",
+      "title": "优先使用稳定官方或通行译名",
+      "rule": "游戏、影视、角色和系统名有稳定官方或通行中文译名时应统一使用；没有稳定译名时保留原文，不自行创造译名。",
+      "category": "dictionary",
+      "scope": "games|movies_tv",
+      "status": "confirmed",
+      "type": "style_rule",
+      "days_seen": 6,
+      "articles_seen": 10,
+      "contradictions": 0,
+      "last_seen": "2026-07-07",
+      "semantic_rationale": "Polish normalized official title spacing for Pokemon GO.",
+      "misuse_risk": "",
+      "examples": [
+        {
+          "date": "2026-07-07",
+          "article_id": 13,
+          "before": "如果XBOX想专注于有潜力同时赢得口碑和商业成功的大型单人AAA游戏，那么漫威刀锋战士看起来是一个相对稳妥的选择。它由Arkane开发，而Arkane是世界上最聪明、最有创造力的游戏工作室之一，这个项目的前景非常诱人。可参考的蓝图也已经存在。看看IO Interactive最近凭《《007 初露锋芒》》做到的事情：它把自己在数十年《杀手》开发中打磨出的创造性潜行系统，转化到詹姆斯·邦德这个极受欢迎的成熟IP上。再想象一下，打造过《耻辱》《掠食》和《死亡循环》的开发者，能为《刀锋战士》的世界带来什么；它同样可以把自身聪明的潜行系统与21世纪最大的流行文化宇宙结合起来。PlayStation的竞争对手已经凭Insomniac的《蜘蛛侠》游戏取得巨大成功，并且大概率会在即将推出的《金刚狼》上再次成功，这对XBOX来说似乎是一条稳妥的成功路径。",
+          "after": "如果XBOX想专注于有潜力同时赢得口碑和商业成功的大型单人AAA游戏，那么《漫威刀锋战士》看起来是一个相对稳妥的选择。它由Arkane开发，而Arkane是世界上最聪明、最有创造力的游戏工作室之一，这个项目的前景非常诱人。可参考的蓝图也已经存在。看看IO Interactive最近凭《007 初露锋芒》做到的事情：它把自己在数十年《杀手》开发中打磨出的创造性潜行系统，转化到詹姆斯·邦德这个极受欢迎的成熟IP上。再想象一下，打造过《耻辱》《掠食》和《死亡循环》的开发者，能为《漫威刀锋战士》的世界带来什么；它同样可以把自身聪明的潜行系统与21世纪最大的流行文化宇宙结合起来。PlayStation已经凭Insomniac的《漫威蜘蛛侠》游戏取得巨大成功，并且大概率会在即将推出的《漫威金刚狼》上再次成功，这对XBOX来说似乎是一条稳妥的成功路径。",
+          "evidence": "Polish marked the game title consistently with book-title brackets."
+        },
+        {
+          "date": "2026-07-07",
+          "article_id": 22,
+          "before": "《宝可梦GO》十周年特别广播本周四举行",
+          "after": "《宝可梦 GO》十周年特别广播将于本周四举行",
+          "evidence": "Polish normalized official title spacing for Pokemon GO."
+        },
+        {
+          "date": "2026-07-07",
+          "article_id": 22,
+          "before": "《宝可梦GO》十周年特别广播本周四举行",
+          "after": "《宝可梦 GO》十周年特别广播将于本周四举行",
+          "evidence": "Polish normalized official title spacing for Pokemon GO."
+        }
+      ]
+    },
+    {
+      "id": "platform_name_compact",
+      "title": "平台名称使用简洁统一写法",
+      "rule": "平台枚举中可将“Xbox Series X|S”统一简写为“XBOX Series”，Nintendo Switch 2在语境明确时可写“Switch 2”；不要改变实际登陆平台范围。所有面向读者的译文中，Xbox 统一写作 XBOX。",
+      "category": "dictionary",
+      "scope": "games",
+      "status": "confirmed",
+      "type": "style_rule",
+      "days_seen": 8,
+      "articles_seen": 12,
+      "contradictions": 0,
+      "last_seen": "2026-07-01",
+      "semantic_rationale": "In a Switch 2 article, the polished copy used compact platform naming in body copy.",
+      "misuse_risk": "",
+      "examples": [
+        {
+          "date": "2026-05-30",
+          "article_id": 21,
+          "before": "Alinea Analytics市场分析主管Rhys Elliott表示，《007 初露锋芒》仅在Steam平台就售出约50万份，在Valve平台创造了约2500万美元(约合人民币2亿元)收入。",
+          "after": "Alinea Analytics市场分析主管Rhys Elliott表示，《007 初露锋芒》仅在Steam平台就售出约50万份，在Valve平台创造了约2500万美元（约合1.7亿元人民币）的收入。"
+        },
+        {
+          "date": "2026-05-30",
+          "article_id": 26,
+          "before": "「如果你在4月30日至5月27日期间在Xbox One或PlayStation 4上购买了基础版，或在升级中遇到任何问题，请联系我们的客服团队，我们会妥善解决。再次为此事带来的困扰致歉。」",
+          "after": "「如果你在4月30日至5月27日期间在Xbox One或PS4上购买了基础版，或在升级中遇到任何问题，请联系我们的客服团队，我们会妥善解决。再次为此事带来的困扰致歉。」"
+        },
+        {
+          "date": "2026-07-01",
+          "article_id": 21,
+          "before": "B社将于8月11日在Nintendo Switch 2上推出《上古卷轴4：湮灭 复刻版》，通过eShop提供数字版，同时推出实体版，卡带内包含完整的游戏本体。",
+          "after": "贝塞斯达将于8月11日在Switch 2上推出《上古卷轴4：湮灭 复刻版》，通过eShop提供数字版，同时推出实体版，卡带内包含完整的游戏本体。",
+          "evidence": "In a Switch 2 article, the polished copy used compact platform naming in body copy."
+        }
+      ]
+    },
+    {
+      "id": "retain_original_for_unconfirmed_names",
+      "title": "无稳定中文名的专名保留原文",
+      "rule": "项目代号、未正式定名作品和没有稳定官方中文名的作品或角色，应保留拉丁字母原名，避免自行音译或意译。",
+      "category": "dictionary",
+      "scope": "all",
+      "status": "confirmed",
+      "type": "style_rule",
+      "days_seen": 5,
+      "articles_seen": 9,
+      "contradictions": 0,
+      "last_seen": "2026-06-17",
+      "semantic_rationale": "Hadar、Evie等未确认中文名的专名被恢复为原文。",
+      "misuse_risk": "",
+      "examples": [
+        {
+          "date": "2026-06-16",
+          "article_id": 37,
+          "before": "《最终幻想：共鸣》制作人谈回合制RPG复兴",
+          "after": "《最终幻想 RESONANCE》制作人谈回合制RPG复兴"
+        },
+        {
+          "date": "2026-06-16",
+          "article_id": 22,
+          "before": "在《Final Fantasy 7 Revelation》公开预告片的前几分钟里，开发商史克威尔艾尼克斯让我们重新见到了飞空艇Highwind。原作PlayStation游戏的粉丝会满怀深情地回忆起它那多螺旋桨的壮丽身姿；正是这艘载具，为《最终幻想7》的世界地图解锁了想去哪里就去哪里的完全自由。不受河流、海洋或山脉的限制，你可以高速翱翔全球。而且，只要有能安全降落的地方，你就能探索任何吸引你的地点。",
+          "after": "在《最终幻想7 Revelation》公开预告片的前几分钟里，开发商史克威尔艾尼克斯让我们重新见到了高风号（Highwind）飞空艇。原作游戏的粉丝会满怀深情地回忆起它那多螺旋桨的壮丽身姿；正是这艘载具，为《最终幻想7》的世界地图解锁了想去哪里就去哪里的完全自由。不受河流、海洋或山脉的限制，你可以高速翱翔全球。而且，只要有能安全降落的地方，你就能探索任何吸引你的地点。"
+        },
+        {
+          "date": "2026-06-16",
+          "article_id": 34,
+          "before": "Treyarch最近还为《黑色行动7》更新了一个名为「Black Ops Classic」的新播放列表。该列表包含了经典的《黑色行动》地图，并对游戏玩法进行了重大调整，使其更贴近原版《黑色行动》游戏。有人猜测这可能是在为重制版铺路。",
+          "after": "Treyarch最近还为《黑色行动7》更新了一个名为「黑色行动经典（Black Ops Classic）」的新列表。该列表包含了经典的《黑色行动》地图，并对游戏玩法进行了重大调整，使其更贴近原版《黑色行动》游戏。有人猜测这可能是在为重制版铺路。"
+        }
+      ]
+    },
+    {
+      "id": "roman_to_arabic_game_title",
+      "title": "游戏标题罗马数字转阿拉伯数字",
+      "rule": "游戏名中的罗马数字（如II）统一转为阿拉伯数字（如2），例如《博德之门II》→《博德之门2》。",
+      "category": "dictionary",
+      "scope": "games",
+      "status": "confirmed",
+      "type": "style_rule",
+      "days_seen": 1,
+      "articles_seen": 1,
+      "contradictions": 0,
+      "last_seen": "2026-06-02",
+      "semantic_rationale": "文章3将《博德之门II：安姆的阴影》改为《博德之门2：安姆的阴影》，且与已有风格（平台简写、数字偏好）一致，用户倾向阿拉伯数字更直观。",
+      "misuse_risk": "",
+      "examples": [
+        {
+          "date": "2026-06-02",
+          "article_id": 3,
+          "before": "《博德之门II：安姆的阴影》",
+          "after": "《博德之门2：安姆的阴影》"
+        }
+      ]
+    },
+    {
+      "id": "add_english_term_for_uncommon_translation",
+      "title": "生僻术语首次出现附原文",
+      "rule": "不常见的系统名、地点名或机制名首次出现时采用“中文（英文）”，后文可用中文或原文简称；不得对通行名称重复注释。",
+      "category": "dictionary",
+      "scope": "all",
+      "status": "confirmed",
+      "type": "style_rule",
+      "days_seen": 1,
+      "articles_seen": 1,
+      "contradictions": 0,
+      "last_seen": "2026-06-08",
+      "semantic_rationale": "The Den、Bond System等生僻术语首次出现时保留英文。",
+      "misuse_risk": "",
+      "examples": [
+        {
+          "date": "2026-06-08",
+          "article_id": 12,
+          "before": "Brawley 指出，虽然「战术任务本身是大部分游戏玩法的核心，也是所有战斗发生的地方」，但他也很期待玩家体验「巢穴」。他描述道，「巢穴」是「你和你的特工在任务之间运作的地方。你不仅有机会与团队的不同成员交谈，了解他们的状况，以及他们是否希望你帮忙处理某事，还可以处理许多管理任务。你可以在黑市购买物品。你可以选择修改角色的装备——他们使用的武器和实用物品——然后根据自己的选择自定义和升级他们的技能。」",
+          "after": "Brawley指出，虽然「战术任务本身是大部分游戏玩法的核心，也是所有战斗发生的地方」，但他也很期待玩家体验「巢穴（The Den）」。他描述道，「巢穴」是「你和你的特工在任务之间运作的地方。你不仅有机会与团队的不同成员交谈，了解他们的状况，以及他们是否希望你帮忙处理某事，还可以处理许多管理任务。你可以在黑市购买物品。你可以选择修改角色的装备——他们使用的武器和实用物品——然后根据自己的选择自定义和升级他们的技能。」"
+        }
+      ]
+    },
+    {
+      "id": "unify_baodao",
+      "title": "统一使用“报道”",
+      "rule": "正文中的“报导”一词统一改为“报道”。",
+      "category": "dictionary",
+      "scope": "all",
+      "status": "confirmed",
+      "type": "style_rule",
+      "days_seen": 1,
+      "articles_seen": 1,
+      "contradictions": 0,
+      "last_seen": "2026-06-02",
+      "semantic_rationale": "文章22将多处“报导”改为“报道”，符合现代汉语规范，且与用户过往严谨风格一致。",
+      "misuse_risk": "",
+      "examples": [
+        {
+          "date": "2026-06-02",
+          "article_id": 22,
+          "before": "据报导",
+          "after": "据报道"
+        }
+      ]
+    },
+    {
+      "id": "use_common_nickname_for_character",
+      "title": "使用角色常用绰号",
+      "rule": "对于有广为人知中文绰号的超级英雄/反派角色，正文中优先使用绰号而非全名（如用毁灭博士而不是维克多·冯·杜姆）。",
+      "category": "names",
+      "scope": "all",
+      "status": "confirmed",
+      "type": "style_rule",
+      "days_seen": 1,
+      "articles_seen": 1,
+      "contradictions": 1,
+      "last_seen": "2026-06-01",
+      "semantic_rationale": "article 3 paragraph 3 用户将全名改为绰号，与现有 pending 规律一致且本次无矛盾。",
+      "misuse_risk": "",
+      "examples": [
+        {
+          "date": "2026-06-01",
+          "article_id": 3,
+          "before": "维克多·冯·杜姆",
+          "after": "毁灭博士"
+        }
+      ]
+    },
+    {
+      "id": "keep_person_names_latin",
+      "title": "无通行中文译名的人名保留拉丁字母",
+      "rule": "海外人物没有稳定通行中文译名时保留拉丁字母姓名，不自行音译；已有公认中文名时使用公认译名。",
+      "category": "names",
+      "scope": "all",
+      "status": "confirmed",
+      "type": "style_rule",
+      "days_seen": 4,
+      "articles_seen": 6,
+      "contradictions": 0,
+      "last_seen": "2026-07-01",
+      "semantic_rationale": "Polish kept an overseas executive name in Latin letters rather than adding an ad hoc Chinese transliteration.",
+      "misuse_risk": "",
+      "examples": [
+        {
+          "date": "2026-06-24",
+          "article_id": 4,
+          "before": "Megan Everett?",
+          "after": "Megan Everett??"
+        },
+        {
+          "date": "2026-06-24",
+          "article_id": 37,
+          "before": "?Bungie????Liana Ruppert",
+          "after": "?Bungie????Liana Ruppert"
+        },
+        {
+          "date": "2026-07-01",
+          "article_id": 52,
+          "before": "前索尼互动娱乐美国分公司总裁兼CEO肖恩·莱登(Shawn Layden)解释了PlayStation的PC策略为何有其道理。",
+          "after": "前索尼互动娱乐美国分公司总裁兼CEO Shawn Layden解释了PlayStation的PC策略为何有其道理。",
+          "evidence": "Polish kept an overseas executive name in Latin letters rather than adding an ad hoc Chinese transliteration."
+        }
+      ]
+    },
+    {
+      "id": "japanese_name_no_romaji",
+      "title": "日文开发者直接使用汉字姓名",
+      "rule": "对于日本开发商或制作人，若官方已提供汉字姓名，直接使用汉字，不附加罗马音或英文注音。",
+      "category": "names",
+      "scope": "games",
+      "status": "confirmed",
+      "type": "style_rule",
+      "days_seen": 1,
+      "articles_seen": 1,
+      "contradictions": 0,
+      "last_seen": "2026-06-02",
+      "semantic_rationale": "文章9将池田幸平的罗马音注音删除，符合中文环境下对日文人名的直接引用习惯，与之前保留西方人英文名的规则互补。",
+      "misuse_risk": "",
+      "examples": [
+        {
+          "date": "2026-06-02",
+          "article_id": 9,
+          "before": "池田幸平（Kohei 'Nakatsu' Ikeda）",
+          "after": "池田幸平"
+        }
+      ]
+    },
+    {
+      "id": "social_media_platform_latest_name",
+      "title": "社交媒体平台使用当前官方名称",
+      "rule": "正文直接写“X”，不再并列旧称“Twitter”；仅在原文需要解释历史名称时例外。",
+      "category": "names",
+      "scope": "all",
+      "status": "confirmed",
+      "type": "style_rule",
+      "days_seen": 2,
+      "articles_seen": 2,
+      "contradictions": 0,
+      "last_seen": "2026-07-07",
+      "semantic_rationale": "Polish again preferred the current platform name X without the legacy Twitter alias.",
+      "misuse_risk": "",
+      "examples": [
+        {
+          "date": "2026-06-05",
+          "article_id": 9,
+          "before": "「奎托斯就是战神——我们还有更多关于他的故事要讲，」圣莫妮卡工作室官方X/Twitter账号昨晚发文写道。「目前，我们很高兴能带领玩家与劳菲一起踏上众神来世之旅，希望你们能一同前往！」",
+          "after": "「奎托斯就是战神——我们还有更多关于他的故事要讲，」圣莫尼卡工作室官方X账号昨晚发文写道。「目前，我们很高兴能带领玩家与劳菲一起踏上众神来世之旅，希望你们能一同前往！」"
+        },
+        {
+          "date": "2026-07-07",
+          "article_id": 11,
+          "before": "该公司在X/Twitter上发布并由Schafer共同署名的声明中表示：「Double Fine Productions将再次成为一家独立工作室。我们感谢XBOX的每一个人，感谢这七年来的美好合作，也感谢他们与我们一起达成了一个能够保留我们历史和文化、并将游戏所有权归还给我们的结果。」",
+          "after": "该公司在X上发布并由Schafer共同署名的声明中表示：「Double Fine Productions将再次成为一家独立工作室。我们感谢XBOX的每一个人，感谢这七年来的美好合作，也感谢他们与我们一起达成了一个能够保留我们历史和文化、并将游戏所有权归还给我们的结果。」",
+          "evidence": "Polish again preferred the current platform name X without the legacy Twitter alias."
+        }
+      ]
+    },
+    {
+      "id": "inner_quote_single_marks",
+      "title": "中文引号内再引用用单引号",
+      "rule": "中文直引号内部再次出现短语、问题或强调词时，内层引用使用‘ ’，避免连续使用「」造成层级不清。",
+      "category": "punctuation",
+      "scope": "quoted_speech",
+      "status": "confirmed",
+      "type": "style_rule",
+      "days_seen": 3,
+      "articles_seen": 4,
+      "contradictions": 0,
+      "last_seen": "2026-07-06",
+      "semantic_rationale": "???????????????????????????",
+      "misuse_risk": "",
+      "examples": [
+        {
+          "date": "2026-06-23",
+          "article_id": 44,
+          "before": "不会是「主角是谁？剧情是什么？」。",
+          "after": "不会是‘主角是谁？剧情是什么？’。"
+        },
+        {
+          "date": "2026-06-25",
+          "article_id": 1,
+          "before": "然后说『你们可以买这么多，行还是不行』。",
+          "after": "然后说‘你们可以买这么多，行还是不行’。"
+        },
+        {
+          "date": "2026-07-06",
+          "article_id": 4,
+          "before": "????????????????????????????????",
+          "after": "????????????????????????????????",
+          "evidence": "???????????????????????????"
+        }
+      ]
+    },
+    {
+      "id": "remove_author_bio_and_image_credit",
+      "title": "删除作者简介和非正文署名",
+      "rule": "成稿不保留IGN作者简介、联系方式、社交账号、图片来源等非正文尾注。",
+      "category": "structure",
+      "scope": "all",
+      "status": "confirmed",
+      "type": "style_rule",
+      "days_seen": 11,
+      "articles_seen": 12,
+      "contradictions": 0,
+      "last_seen": "2026-07-06",
+      "semantic_rationale": "?????????????????????????",
+      "misuse_risk": "",
+      "examples": [
+        {
+          "date": "2026-06-27",
+          "article_id": 4,
+          "before": "Cade Onder是IGN新闻团队的自由撰稿人，报道游戏、电影等各类娱乐内容。你可以在Twitter @Cade_Onder上找到他。",
+          "after": ""
+        },
+        {
+          "date": "2026-06-28",
+          "article_id": 1,
+          "before": "Wesley是IGN新闻总监。你可以在X上找到他：@wyp100。也可通过wesley_yinpoole@ign.com或保密邮箱wyp100@proton.me联系。",
+          "after": ""
+        },
+        {
+          "date": "2026-07-06",
+          "article_id": 4,
+          "before": "?????Rosdiana Ciaravolo/Getty Images?",
+          "after": "",
+          "evidence": "?????????????????????????"
+        }
+      ]
+    },
+    {
+      "id": "remove_promotional_related_links",
+      "title": "删除站内推广和相关阅读引导",
+      "rule": "正文末尾的“查看更多”“阅读我们的采访或汇总”等站内引流句应删除，但不得删除承载新闻事实的正文。",
+      "category": "structure",
+      "scope": "all",
+      "status": "confirmed",
+      "type": "style_rule",
+      "days_seen": 7,
+      "articles_seen": 12,
+      "contradictions": 0,
+      "last_seen": "2026-07-06",
+      "semantic_rationale": "????????/????????",
+      "misuse_risk": "",
+      "examples": [
+        {
+          "date": "2026-06-26",
+          "article_id": 10,
+          "before": "关于GTA6的预订，我们还有海量内容，包括分析师对GTA6 80美元(约合人民币545元)（约合576元人民币）定价对其他游戏影响的看法，以及科技专家对63张GTA6新截图的评测。",
+          "after": ""
+        },
+        {
+          "date": "2026-07-06",
+          "article_id": 4,
+          "before": "???????????????IGN????PlayStation???????????????",
+          "after": "",
+          "evidence": "????????????????????????"
+        },
+        {
+          "date": "2026-07-06",
+          "article_id": 7,
+          "before": "????????IGN??????????6????????????????",
+          "after": "",
+          "evidence": "????????/????????"
+        }
+      ]
+    },
+    {
+      "id": "subtitle_trim_generic_hook",
+      "title": "副标题保持短钩子，避免复述标题",
+      "rule": "副标题优先写成简短、有信息密度的钩子；不要机械复述标题，也不要堆泛泛而谈的背景。",
+      "category": "subtitle",
+      "scope": "subtitles",
+      "status": "confirmed",
+      "type": "style_rule",
+      "days_seen": 1,
+      "articles_seen": 2,
+      "contradictions": 0,
+      "last_seen": "2026-06-22",
+      "semantic_rationale": "6/22 多篇润色把重复或泛泛的副标题改短。",
+      "misuse_risk": "",
+      "examples": []
+    },
+    {
+      "id": "subtitle_avoid_concrete_detail",
+      "title": "副标题简短、有记忆点但不增添事实",
+      "rule": "副标题保持2至15字，优先用简短短语、双关或原文引语，不机械复述标题；不得补充原文没有的事实或改变立场。",
+      "category": "subtitle",
+      "scope": "all",
+      "status": "confirmed",
+      "type": "style_rule",
+      "days_seen": 20,
+      "articles_seen": 26,
+      "contradictions": 0,
+      "last_seen": "2026-07-07",
+      "semantic_rationale": "Polish trimmed a subtitle to avoid over-specific repetition of the title context.",
+      "misuse_risk": "",
+      "examples": [
+        {
+          "date": "2026-07-01",
+          "article_id": 30,
+          "before": "奇幻项目突遭变故",
+          "after": "此次裁员与《007 初露锋芒》的成功发售无关",
+          "evidence": "Subtitle was rewritten to a concise hook tied to the article angle rather than a vague generic line."
+        },
+        {
+          "date": "2026-07-07",
+          "article_id": 20,
+          "before": "报道称项目已内部延期并超出预算",
+          "after": "还能活下来吗",
+          "evidence": "Subtitle was shortened into a compact hook while the body retained the detailed reporting."
+        },
+        {
+          "date": "2026-07-07",
+          "article_id": 21,
+          "before": "裁员重创B社",
+          "after": "裁员重创",
+          "evidence": "Polish trimmed a subtitle to avoid over-specific repetition of the title context."
+        }
+      ]
+    },
+    {
+      "id": "preserve_claim_attribution_and_modality",
+      "title": "标题保留消息来源与不确定性",
+      "rule": "标题必须保留原文中的“据称、可能、预计、表示、逐案决定”等归因和情态信息，不得把推测改成确定事实，也不得夸大结论。",
+      "category": "title",
+      "scope": "all",
+      "status": "confirmed",
+      "type": "style_rule",
+      "days_seen": 2,
+      "articles_seen": 4,
+      "contradictions": 0,
+      "last_seen": "2026-06-12",
+      "semantic_rationale": "标题样本反复补回消息来源、可能性和条件限制。",
+      "misuse_risk": "",
+      "examples": [
+        {
+          "date": "2026-06-12",
+          "article_id": 16,
+          "before": "《黎明杀机》成史上最热恐怖游戏",
+          "after": "开发商称《黎明杀机》成史上最热恐怖游戏"
+        },
+        {
+          "date": "2026-06-12",
+          "article_id": 21,
+          "before": "《神秘博士》或停播长达五年",
+          "after": "《神秘博士》或将停播长达五年"
+        },
+        {
+          "date": "2026-06-12",
+          "article_id": 26,
+          "before": "《最后生还者》第三季引入游戏未出现角色",
+          "after": "《最后生还者》第三季将引入游戏未出现角色"
+        }
+      ]
+    },
+    {
+      "id": "remove_redundant_title_prefixes",
+      "title": "标题删除重复品牌堆叠",
+      "rule": "中文标题只保留识别新闻所需的作品、公司或平台名，删除重复的品牌书名号和无意义前缀，但不能删掉主体或关键限定。",
+      "category": "title",
+      "scope": "all",
+      "status": "confirmed",
+      "type": "style_rule",
+      "days_seen": 10,
+      "articles_seen": 15,
+      "contradictions": 0,
+      "last_seen": "2026-07-07",
+      "semantic_rationale": "Polish kept the specific studio name and normalized the work title without adding redundant wrappers.",
+      "misuse_risk": "",
+      "examples": [
+        {
+          "date": "2026-07-01",
+          "article_id": 11,
+          "before": "《任天堂》《Nintendo Switch 2》Switch 2新屏曝光，有望解决残影问题",
+          "after": "Switch 2新屏幕曝光，有望解决残影问题",
+          "evidence": "Google Docs polish removed duplicated platform/brand wrappers while keeping the news subject."
+        },
+        {
+          "date": "2026-07-07",
+          "article_id": 11,
+          "before": "XBOX裁员后Double Fine和Compulsion独立，保留《意航员》《午夜之南》",
+          "after": "XBOX裁员后Double Fine和Compulsion工作室转为独立运营",
+          "evidence": "Polish removed extra title payload and kept the core event clear."
+        },
+        {
+          "date": "2026-07-07",
+          "article_id": 20,
+          "before": "XBOX或出售Arkane，漫威刀锋战士未来不明",
+          "after": "XBOX或出售Arkane Lyon，《漫威刀锋战士》未来不明",
+          "evidence": "Polish kept the specific studio name and normalized the work title without adding redundant wrappers."
+        }
+      ]
+    }
+  ]
+}

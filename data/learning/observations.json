@@ -1,0 +1,355 @@
+{
+  "generated_at": "2026-07-13T12:05:14+08:00",
+  "active": [
+    {
+      "id": "remove_personal_commentary",
+      "title": "删除不影响事实的作者调侃",
+      "rule": "可删除括号内的随口调侃、编辑自我评论等非事实性旁白；涉及作者判断、体验或原文论证时必须保留。",
+      "category": "body",
+      "scope": "news",
+      "status": "pending",
+      "type": "style_rule",
+      "days_seen": 3,
+      "articles_seen": 4,
+      "contradictions": 0,
+      "last_seen": "2026-07-01",
+      "semantic_rationale": "Polish removed a throwaway joke while preserving the factual definition.",
+      "misuse_risk": "",
+      "examples": [
+        {
+          "date": "2026-06-03",
+          "article_id": 5,
+          "before": "现在，除了原有的智能手机专用应用外，你还可以通过PC、平板或车载屏幕上的浏览器播放该流媒体服务。（没错，我打字这会儿正听着呢。）只需访问music.nintendo.com即可开始。",
+          "after": "现在，除了原有的智能手机专用应用外，你还可以通过PC、平板或车载屏幕上的浏览器播放该流媒体服务。只需访问music.nintendo.com即可开始。"
+        },
+        {
+          "date": "2026-06-03",
+          "article_id": 20,
+          "before": "在State of Play之前，我提前观看了预告片，并有机会与创意总监Marcus Smith和游戏总监Mike Daly聊了30分钟，尽可能多地了解《漫威金刚狼》的信息。没错，我问了能不能竖中指。",
+          "after": "在State of Play之前，IGN有机会与创意总监Marcus Smith和游戏总监Mike Daly聊了30分钟，尽可能多地了解《漫威金刚狼》的信息。"
+        },
+        {
+          "date": "2026-07-01",
+          "article_id": 11,
+          "before": "这里的「残影」并不是指你的Switch 2收拾东西再也不理你，而是指主机的显示屏上短暂留下的图像残留，导致一种类似动态模糊的效果。自任天堂最新主机去年发售以来，已有部分玩家反映过这个问题。",
+          "after": "这里的「残影」是指主机的显示屏上短暂留下的图像残留，导致一种类似动态模糊的效果。自任天堂最新主机去年发售以来，已有部分玩家反映过这个问题。",
+          "evidence": "Polish removed a throwaway joke while preserving the factual definition."
+        }
+      ]
+    },
+    {
+      "id": "remove_redundant_brand_wrappers",
+      "title": "标题避免重复品牌套壳",
+      "rule": "标题中已有品牌、平台或作品名时，避免再用重复的《品牌/平台》套壳写法；保留核心事件，让标题更自然。",
+      "category": "title",
+      "scope": "titles",
+      "status": "pending",
+      "type": "style_rule",
+      "days_seen": 5,
+      "articles_seen": 2,
+      "contradictions": 0,
+      "last_seen": "2026-06-26",
+      "semantic_rationale": "Additional 6/25-6/26 wrapper evidence exists, but W26 feedback held this broader rule for observation.",
+      "misuse_risk": "",
+      "examples": [
+        {
+          "date": "2026-06-23",
+          "article_id": 35,
+          "before": "《B社/贝塞斯达》陶德·霍华德：最近看过《漫威刀锋》，做得非常出色",
+          "after": "陶德·霍华德：最近看过《漫威刀锋战士》，做得非常出色"
+        }
+      ]
+    },
+    {
+      "id": "numbered_franchise_titles",
+      "title": "系列作品标题补充直观编号",
+      "rule": "涉及系列作品、合集或续作时，可使用读者容易识别的编号写法，如 1&2、5、3+4；但不得新增原文没有的事实。",
+      "category": "title",
+      "scope": "franchise_titles",
+      "status": "pending",
+      "type": "style_rule",
+      "days_seen": 1,
+      "articles_seen": 2,
+      "contradictions": 0,
+      "last_seen": "2026-06-22",
+      "semantic_rationale": "6/22 的标题润色倾向用更直观的系列编号表达。",
+      "misuse_risk": "",
+      "examples": []
+    },
+    {
+      "id": "wrap_media_source_names",
+      "title": "媒体来源名可用书名号标识",
+      "rule": "正文引用媒体、网站或行业出版物作为消息来源时，可用书名号标识来源名，并保留英文原名。",
+      "category": "names",
+      "scope": "reporting_attribution",
+      "status": "pending",
+      "type": "style_rule",
+      "days_seen": 1,
+      "articles_seen": 2,
+      "contradictions": 0,
+      "last_seen": "2026-06-16",
+      "semantic_rationale": "6/16 的润色将 The Game Business 等来源名改为带书名号的来源写法。",
+      "misuse_risk": "",
+      "examples": [
+        {
+          "date": "2026-06-16",
+          "article_id": 25,
+          "before": "The Game Business今天率先报道了离职消息。两人共同离职的原因并未给出，不过这一事件发生之际，正值外界对Xbox Game Studios及其众多员工未来深感担忧——此前新上任的Xbox负责人Asha Sharma对该部门微薄的利润率发出了严厉警告。",
+          "after": "《The Game Business》今天率先报道了离职消息。两人共同离职的原因并未给出，不过这一事件发生之际，正值外界对Xbox Game Studios及其众多员工未来深感担忧——此前新上任的Xbox负责人Asha Sharma对该部门微薄的利润率发出了严厉警告。"
+        },
+        {
+          "date": "2026-06-16",
+          "article_id": 39,
+          "before": "今天早些时候，The Game Business报道Xbox Game Studios负责人Craig Duncan已离职，随后Kotaku报道《午夜之南》开发商Compulsion面临关闭威胁。现在彭博社又称，几乎所有微软旗下工作室都忧心于下一步走向，其中Ninja Theory和Double Fine被点名正与母公司协商。",
+          "after": "今天稍早，《The Game Business》报道称Xbox Game Studios负责人Craig Duncan已经离职，随后Kotaku又报道《午夜之南》开发商Compulsion面临关闭风险。如今，彭博社进一步指出，几乎所有微软旗下游戏工作室都在担忧自己的未来，而Ninja Theory和Double Fine则已被点名正在与母公司进行谈判。"
+        }
+      ]
+    }
+  ],
+  "archived": [
+    {
+      "id": "playstation_store_english",
+      "title": "PlayStation 商店写作“PlayStation Store”",
+      "rule": "在提到 PlayStation 数字商店时，直接使用“PlayStation Store”而非“PlayStation商店”或“PlayStation 商店”。",
+      "category": "names",
+      "scope": "all",
+      "status": "archived_stale",
+      "type": "style_rule",
+      "days_seen": 1,
+      "articles_seen": 1,
+      "contradictions": 0,
+      "last_seen": "2026-06-03",
+      "semantic_rationale": "用户将“快速浏览PlayStation商店”改为“粗略查看PlayStation Store”，将“商店”替换为英文 Store。",
+      "misuse_risk": "",
+      "examples": [
+        {
+          "date": "2026-06-03",
+          "article_id": 1,
+          "before": "PlayStation商店",
+          "after": "PlayStation Store"
+        }
+      ],
+      "archive_reason": "39 days without new supporting evidence"
+    },
+    {
+      "id": "series_number_with_dai",
+      "title": "系列代数用“代”表达",
+      "rule": "提及游戏系列代数时，用“X代”而非“X和X”，如“1代和2代”而非“1和2”。",
+      "category": "body",
+      "scope": "games",
+      "status": "archived_stale",
+      "type": "style_rule",
+      "days_seen": 1,
+      "articles_seen": 1,
+      "contradictions": 0,
+      "last_seen": "2026-06-02",
+      "semantic_rationale": "文章3一处将“1和2”改为“1代和2代”，使表达更清晰，但仅出现一次，需观察是否常态。",
+      "misuse_risk": "",
+      "examples": [
+        {
+          "date": "2026-06-02",
+          "article_id": 3,
+          "before": "《博德之门》1和2",
+          "after": "《博德之门》1代和2代"
+        }
+      ],
+      "archive_reason": "40 days without new supporting evidence"
+    },
+    {
+      "id": "subscription_service_abbreviation",
+      "title": "订阅服务缩写",
+      "rule": "将Xbox Game Pass缩写为“XGP”，PlayStation Plus缩写为“PS Plus”，用于正文中可接受缩写以提高流畅度。",
+      "category": "dictionary",
+      "scope": "games",
+      "status": "archived_stale",
+      "type": "style_rule",
+      "days_seen": 1,
+      "articles_seen": 1,
+      "contradictions": 0,
+      "last_seen": "2026-06-02",
+      "semantic_rationale": "文章4将“Xbox Game Pass和PlayStation Plus”改为“XGP和PS Plus”，此为社区常用缩写，但仅出现一次，建议观察后续是否持续使用。",
+      "misuse_risk": "",
+      "examples": [
+        {
+          "date": "2026-06-02",
+          "article_id": 4,
+          "before": "Xbox Game Pass和PlayStation Plus",
+          "after": "XGP和PS Plus"
+        }
+      ],
+      "archive_reason": "40 days without new supporting evidence"
+    },
+    {
+      "id": "add_sequel_number_to_title",
+      "title": "系列电影标题加序号",
+      "rule": "对具有明确序数的系列电影（如漫威电影），在官方中文片名前加上数字序号，如《复仇者联盟5：毁灭之日》。",
+      "category": "title",
+      "scope": "movies_tv",
+      "status": "archived_stale",
+      "type": "style_rule",
+      "days_seen": 1,
+      "articles_seen": 1,
+      "contradictions": 0,
+      "last_seen": "2026-06-01",
+      "semantic_rationale": "article 3 标题中用户手动加了序号5；此前另一篇文章也有类似修改，符合现有 pending 规律且无矛盾。",
+      "misuse_risk": "",
+      "examples": [
+        {
+          "date": "2026-06-01",
+          "article_id": 3,
+          "before": "《复仇者联盟：毁灭之日》",
+          "after": "《复仇者联盟5：毁灭之日》"
+        }
+      ],
+      "archive_reason": "41 days without new supporting evidence"
+    },
+    {
+      "id": "hex_color_no_space_before_punctuation",
+      "title": "十六进制色码后紧接标点",
+      "rule": "十六进制色码后不应有空格，直接跟中文标点。",
+      "category": "punctuation",
+      "scope": "only_when_...",
+      "status": "archived_stale",
+      "type": "style_rule",
+      "days_seen": 1,
+      "articles_seen": 1,
+      "contradictions": 0,
+      "last_seen": "2026-06-01",
+      "semantic_rationale": "article 3 paragraph 5 用户去掉了色码后的空格。",
+      "misuse_risk": "",
+      "examples": [
+        {
+          "date": "2026-06-01",
+          "article_id": 3,
+          "before": "#71826a ，",
+          "after": "#71826a，"
+        }
+      ],
+      "archive_reason": "41 days without new supporting evidence"
+    },
+    {
+      "id": "title_use_comma_between_clauses",
+      "title": "标题中使用逗号分隔分句",
+      "rule": "当标题包含两个或多个短语或分句时，使用全角逗号（，）分隔，而不是空格或直接连接。",
+      "category": "punctuation",
+      "scope": "all",
+      "status": "archived_stale",
+      "type": "style_rule",
+      "days_seen": 1,
+      "articles_seen": 1,
+      "contradictions": 0,
+      "last_seen": "2026-05-31",
+      "semantic_rationale": "第3篇文章标题添加逗号，使语义更清晰。",
+      "misuse_risk": "",
+      "examples": [
+        {
+          "date": "2026-05-31",
+          "article_id": 3,
+          "before": "游戏保存运动获新进展 加州议会通过保护法案",
+          "after": "游戏保存运动获新进展，加州议会通过保护法案"
+        }
+      ],
+      "archive_reason": "42 days without new supporting evidence"
+    },
+    {
+      "id": "add_china_market_info_when_relevant",
+      "title": "补充中国大陆地区相关信息",
+      "rule": "对于电影上映、游戏发售等新闻，如果原文未提及中国大陆情况，可酌情补充如「中国大陆地区尚未定档」或「Steam国区售价」等信息。",
+      "category": "body",
+      "scope": "movies_tv|games",
+      "status": "archived_stale",
+      "type": "style_rule",
+      "days_seen": 1,
+      "articles_seen": 1,
+      "contradictions": 0,
+      "last_seen": "2026-05-31",
+      "semantic_rationale": "第6篇文章末尾补充「虽然中国大陆地区尚未定档」，延续了之前补充国区 Steam 定价的观察。",
+      "misuse_risk": "",
+      "examples": [
+        {
+          "date": "2026-05-31",
+          "article_id": 6,
+          "before": "...我们只需等待电影于2027年7月23日首映。",
+          "after": "...我们只需等待电影于2027年7月23日首映，虽然中国大陆地区尚未定档。"
+        }
+      ],
+      "archive_reason": "42 days without new supporting evidence"
+    },
+    {
+      "id": "translator_note_in_parentheses",
+      "title": "插入译者注释提供备选翻译",
+      "rule": "当原文表达难以直译时，可在正文中用括号形式插入译者建议，如「(或许可以翻译成...)」。",
+      "category": "body",
+      "scope": "all",
+      "status": "archived_stale",
+      "type": "style_rule",
+      "days_seen": 1,
+      "articles_seen": 1,
+      "contradictions": 0,
+      "last_seen": "2026-05-31",
+      "semantic_rationale": "第6篇文章对电影标题「Minecraft Movie Squared」的翻译，用户添加了注释「或许可以翻译成《我的世界大电影²》」。",
+      "misuse_risk": "",
+      "examples": [
+        {
+          "date": "2026-05-31",
+          "article_id": 6,
+          "before": "确认续集正式定名为「我的世界大电影 Squared」。",
+          "after": "确认续集正式定名为《我的世界大电影 Squared》（或许可以翻译成《我的世界大电影²》）。"
+        }
+      ],
+      "archive_reason": "42 days without new supporting evidence"
+    },
+    {
+      "id": "company_name_with_chinese",
+      "title": "知名公司首次出现加中文注释",
+      "rule": "当外国公司有通用中文译名时，第一次出现采用'中文名（英文名）'格式，之后直接用中文名。",
+      "category": "names",
+      "scope": "all",
+      "status": "archived_stale",
+      "type": "style_rule",
+      "days_seen": 1,
+      "articles_seen": 1,
+      "contradictions": 0,
+      "last_seen": "2026-05-28",
+      "semantic_rationale": "文章#31中，Warhorse Studios 首次出现写作'战马工作室（Warhorse Studios）'，之后用'战马工作室'。该规则可能与现有'英文注释三档规则'类似，但原规则仅针对游戏名。",
+      "misuse_risk": "",
+      "examples": [
+        {
+          "date": "2026-05-28",
+          "article_id": 31,
+          "before": "Warhorse Studios",
+          "after": "战马工作室（Warhorse Studios）"
+        }
+      ],
+      "archive_reason": "45 days without new supporting evidence"
+    },
+    {
+      "id": "first_person_to_ign",
+      "title": "正文避免第一人称，改用机构名",
+      "rule": "翻译时，将正文中的第一人称'我'改为'IGN'，以保持客观口吻。",
+      "category": "body",
+      "scope": "all",
+      "status": "archived_stale",
+      "type": "style_rule",
+      "days_seen": 1,
+      "articles_seen": 1,
+      "contradictions": 2,
+      "last_seen": "2026-05-28",
+      "semantic_rationale": "#12中将'我'改为'IGN'，但#14中保留了'我'，可能并非所有文章都适用。",
+      "misuse_risk": "",
+      "examples": [
+        {
+          "date": "2026-05-28",
+          "article_id": 12,
+          "before": "我",
+          "after": "IGN"
+        }
+      ],
+      "archive_reason": "45 days without new supporting evidence"
+    }
+  ],
+  "summary": {
+    "active": 4,
+    "archived": 10
+  }
+}

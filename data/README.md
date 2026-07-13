@@ -157,3 +157,14 @@ data/usage/deepseek-balance.json
 ```
 
 新请求必须尽量写入 `requested_articles`，这样后端可按 URL 重新匹配当前 ID，避免增量抓取插入新文章后出现 ID 偏移。`requested_ids` 只作为旧格式兼容。
+
+## learning（夜间学习）
+
+- `learning/style-evidence.json`：完整证据主来源，包含历史状态与例子。
+- `learning/active-rules.json`：供页面和 Agent 使用的已确认规则轻量视图。
+- `learning/observations.json`：活跃观察与已归档观察；归档不会删除证据。
+- `learning/weekly/{YYYY-Www}.json`：当周变化快照。已结束周默认不可覆盖。
+- `learning/weekly/latest.json`：最新周报的兼容入口。
+- `learning/weekly/_index.json`：周报清单与紧凑摘要。
+
+周报只保存当周待决定规则、冲突、确认、词库候选和归档变化，不复制全部长期规则。未确认观察连续 28 天没有新证据时转为 `archived_stale`；词库候选转交词库工作台，不进入风格规则审核。

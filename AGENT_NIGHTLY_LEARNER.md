@@ -94,8 +94,12 @@ newest date. Treat this as a small backfill pass, not a broad rewrite:
    preference. A textual before/after difference alone is not enough.
 8. Run `python scripts/apply_codex_learning_review.py`. Do not edit statuses by
    hand and do not bypass its promotion thresholds.
-9. Update `data/learning/weekly/{week}.json` and `latest.json` when the evidence
-   pool changes enough to show the user.
+9. Publish the compact weekly change set with
+   `python scripts/publish_weekly_learning_report.py`. Closed weekly snapshots
+   are immutable unless an explicit maintenance migration uses `--force`.
+   `active-rules.json` contains confirmed rules for the active context;
+   `observations.json` contains active and archived observations. Dictionary
+   candidates belong in the dictionary workbench, not the style-rule inbox.
 10. Only update `STYLE_PROFILE.md` when weekly feedback explicitly confirms or
    adopts a rule.
 

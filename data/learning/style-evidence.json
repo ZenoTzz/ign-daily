@@ -147,7 +147,7 @@
       "rule": "当外国公司有通用中文译名时，第一次出现采用'中文名（英文名）'格式，之后直接用中文名。",
       "category": "names",
       "scope": "all",
-      "status": "pending",
+      "status": "archived_stale",
       "days": [
         "2026-05-28"
       ],
@@ -166,7 +166,10 @@
       "created_at": "2026-06-03T15:55:24+08:00",
       "last_seen": "2026-05-28",
       "confidence": 0.5,
-      "latest_evidence_summary": "文章#31中，Warhorse Studios 首次出现写作'战马工作室（Warhorse Studios）'，之后用'战马工作室'。该规则可能与现有'英文注释三档规则'类似，但原规则仅针对游戏名。"
+      "latest_evidence_summary": "文章#31中，Warhorse Studios 首次出现写作'战马工作室（Warhorse Studios）'，之后用'战马工作室'。该规则可能与现有'英文注释三档规则'类似，但原规则仅针对游戏名。",
+      "archived_at": "2026-07-13T12:05:14+08:00",
+      "archive_reason": "45 days without new supporting evidence",
+      "previous_status": "pending"
     },
     "first_person_to_ign": {
       "id": "first_person_to_ign",
@@ -174,7 +177,7 @@
       "rule": "翻译时，将正文中的第一人称'我'改为'IGN'，以保持客观口吻。",
       "category": "body",
       "scope": "all",
-      "status": "pending",
+      "status": "archived_stale",
       "days": [
         "2026-05-28"
       ],
@@ -203,7 +206,10 @@
         }
       ],
       "confidence": 0.3,
-      "latest_evidence_summary": "#12中将'我'改为'IGN'，但#14中保留了'我'，可能并非所有文章都适用。"
+      "latest_evidence_summary": "#12中将'我'改为'IGN'，但#14中保留了'我'，可能并非所有文章都适用。",
+      "archived_at": "2026-07-13T12:05:14+08:00",
+      "archive_reason": "45 days without new supporting evidence",
+      "previous_status": "pending"
     },
     "title_use_comma_between_clauses": {
       "id": "title_use_comma_between_clauses",
@@ -211,7 +217,7 @@
       "rule": "当标题包含两个或多个短语或分句时，使用全角逗号（，）分隔，而不是空格或直接连接。",
       "category": "punctuation",
       "scope": "all",
-      "status": "pending",
+      "status": "archived_stale",
       "days": [
         "2026-05-31"
       ],
@@ -230,7 +236,10 @@
       "created_at": "2026-06-03T16:01:10+08:00",
       "last_seen": "2026-05-31",
       "confidence": 0.7,
-      "latest_evidence_summary": "第3篇文章标题添加逗号，使语义更清晰。"
+      "latest_evidence_summary": "第3篇文章标题添加逗号，使语义更清晰。",
+      "archived_at": "2026-07-13T12:05:14+08:00",
+      "archive_reason": "42 days without new supporting evidence",
+      "previous_status": "pending"
     },
     "add_china_market_info_when_relevant": {
       "id": "add_china_market_info_when_relevant",
@@ -238,7 +247,7 @@
       "rule": "对于电影上映、游戏发售等新闻，如果原文未提及中国大陆情况，可酌情补充如「中国大陆地区尚未定档」或「Steam国区售价」等信息。",
       "category": "body",
       "scope": "movies_tv|games",
-      "status": "pending",
+      "status": "archived_stale",
       "days": [
         "2026-05-31"
       ],
@@ -257,7 +266,10 @@
       "created_at": "2026-06-03T16:01:10+08:00",
       "last_seen": "2026-05-31",
       "confidence": 0.6,
-      "latest_evidence_summary": "第6篇文章末尾补充「虽然中国大陆地区尚未定档」，延续了之前补充国区 Steam 定价的观察。"
+      "latest_evidence_summary": "第6篇文章末尾补充「虽然中国大陆地区尚未定档」，延续了之前补充国区 Steam 定价的观察。",
+      "archived_at": "2026-07-13T12:05:14+08:00",
+      "archive_reason": "42 days without new supporting evidence",
+      "previous_status": "pending"
     },
     "translator_note_in_parentheses": {
       "id": "translator_note_in_parentheses",
@@ -265,7 +277,7 @@
       "rule": "当原文表达难以直译时，可在正文中用括号形式插入译者建议，如「(或许可以翻译成...)」。",
       "category": "body",
       "scope": "all",
-      "status": "pending",
+      "status": "archived_stale",
       "days": [
         "2026-05-31"
       ],
@@ -284,7 +296,10 @@
       "created_at": "2026-06-03T16:01:10+08:00",
       "last_seen": "2026-05-31",
       "confidence": 0.5,
-      "latest_evidence_summary": "第6篇文章对电影标题「Minecraft Movie Squared」的翻译，用户添加了注释「或许可以翻译成《我的世界大电影²》」。"
+      "latest_evidence_summary": "第6篇文章对电影标题「Minecraft Movie Squared」的翻译，用户添加了注释「或许可以翻译成《我的世界大电影²》」。",
+      "archived_at": "2026-07-13T12:05:14+08:00",
+      "archive_reason": "42 days without new supporting evidence",
+      "previous_status": "pending"
     },
     "add_sequel_number_to_title": {
       "id": "add_sequel_number_to_title",
@@ -292,7 +307,7 @@
       "rule": "对具有明确序数的系列电影（如漫威电影），在官方中文片名前加上数字序号，如《复仇者联盟5：毁灭之日》。",
       "category": "title",
       "scope": "movies_tv",
-      "status": "pending",
+      "status": "archived_stale",
       "days": [
         "2026-06-01"
       ],
@@ -354,7 +369,10 @@
       "created_at": "2026-06-03T16:01:56+08:00",
       "last_seen": "2026-06-01",
       "confidence": 0.8,
-      "latest_evidence_summary": "article 3 标题中用户手动加了序号5；此前另一篇文章也有类似修改，符合现有 pending 规律且无矛盾。"
+      "latest_evidence_summary": "article 3 标题中用户手动加了序号5；此前另一篇文章也有类似修改，符合现有 pending 规律且无矛盾。",
+      "archived_at": "2026-07-13T12:05:14+08:00",
+      "archive_reason": "41 days without new supporting evidence",
+      "previous_status": "pending"
     },
     "use_common_nickname_for_character": {
       "id": "use_common_nickname_for_character",
@@ -664,7 +682,7 @@
       "rule": "提及游戏系列代数时，用“X代”而非“X和X”，如“1代和2代”而非“1和2”。",
       "category": "body",
       "scope": "games",
-      "status": "pending",
+      "status": "archived_stale",
       "days": [
         "2026-06-02"
       ],
@@ -720,7 +738,10 @@
       "created_at": "2026-06-03T16:03:40+08:00",
       "last_seen": "2026-06-02",
       "confidence": 0.5,
-      "latest_evidence_summary": "文章3一处将“1和2”改为“1代和2代”，使表达更清晰，但仅出现一次，需观察是否常态。"
+      "latest_evidence_summary": "文章3一处将“1和2”改为“1代和2代”，使表达更清晰，但仅出现一次，需观察是否常态。",
+      "archived_at": "2026-07-13T12:05:14+08:00",
+      "archive_reason": "40 days without new supporting evidence",
+      "previous_status": "pending"
     },
     "roman_to_arabic_game_title": {
       "id": "roman_to_arabic_game_title",
@@ -798,7 +819,7 @@
       "rule": "将Xbox Game Pass缩写为“XGP”，PlayStation Plus缩写为“PS Plus”，用于正文中可接受缩写以提高流畅度。",
       "category": "dictionary",
       "scope": "games",
-      "status": "pending",
+      "status": "archived_stale",
       "days": [
         "2026-06-02"
       ],
@@ -854,7 +875,10 @@
       "created_at": "2026-06-03T16:03:40+08:00",
       "last_seen": "2026-06-02",
       "confidence": 0.7,
-      "latest_evidence_summary": "文章4将“Xbox Game Pass和PlayStation Plus”改为“XGP和PS Plus”，此为社区常用缩写，但仅出现一次，建议观察后续是否持续使用。"
+      "latest_evidence_summary": "文章4将“Xbox Game Pass和PlayStation Plus”改为“XGP和PS Plus”，此为社区常用缩写，但仅出现一次，建议观察后续是否持续使用。",
+      "archived_at": "2026-07-13T12:05:14+08:00",
+      "archive_reason": "40 days without new supporting evidence",
+      "previous_status": "pending"
     },
     "japanese_name_no_romaji": {
       "id": "japanese_name_no_romaji",
@@ -1297,7 +1321,7 @@
       "rule": "在提到 PlayStation 数字商店时，直接使用“PlayStation Store”而非“PlayStation商店”或“PlayStation 商店”。",
       "category": "names",
       "scope": "all",
-      "status": "pending",
+      "status": "archived_stale",
       "days": [
         "2026-06-03"
       ],
@@ -1316,7 +1340,10 @@
       "created_at": "2026-06-03T16:04:46+08:00",
       "last_seen": "2026-06-03",
       "confidence": 0.5,
-      "latest_evidence_summary": "用户将“快速浏览PlayStation商店”改为“粗略查看PlayStation Store”，将“商店”替换为英文 Store。"
+      "latest_evidence_summary": "用户将“快速浏览PlayStation商店”改为“粗略查看PlayStation Store”，将“商店”替换为英文 Store。",
+      "archived_at": "2026-07-13T12:05:14+08:00",
+      "archive_reason": "39 days without new supporting evidence",
+      "previous_status": "pending"
     },
     "add_english_term_for_uncommon_translation": {
       "id": "add_english_term_for_uncommon_translation",
@@ -1608,7 +1635,7 @@
       "rule": "十六进制色码后不应有空格，直接跟中文标点。",
       "category": "punctuation",
       "scope": "only_when_...",
-      "status": "pending",
+      "status": "archived_stale",
       "days": [
         "2026-06-01"
       ],
@@ -1627,7 +1654,10 @@
       "created_at": "2026-06-04T06:38:54+08:00",
       "last_seen": "2026-06-01",
       "confidence": 0.2,
-      "latest_evidence_summary": "article 3 paragraph 5 用户去掉了色码后的空格。"
+      "latest_evidence_summary": "article 3 paragraph 5 用户去掉了色码后的空格。",
+      "archived_at": "2026-07-13T12:05:14+08:00",
+      "archive_reason": "41 days without new supporting evidence",
+      "previous_status": "pending"
     },
     "remove_author_bio_and_image_credit": {
       "id": "remove_author_bio_and_image_credit",
@@ -2951,7 +2981,7 @@
       ]
     }
   },
-  "updated_at": "2026-07-12T23:27:59+08:00",
+  "updated_at": "2026-07-13T12:05:14+08:00",
   "migration": {
     "at": "2026-07-11T10:29:20+08:00",
     "quarantined": 100,

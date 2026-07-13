@@ -4,510 +4,117 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-  <meta http-equiv="Pragma" content="no-cache">
-  <meta http-equiv="Expires" content="0">
-  <title>学习日志 — IGN Daily</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script defer src="assets/alpine.min.js"></script>
-  <link rel="stylesheet" href="assets/style.css?v=20260616theme2">
-  <link rel="stylesheet" href="assets/workspace-ui.css?v=20260711learning2">
-  <script src="assets/app.js?v=20260713darkonly1"></script>
+  <title>学习控制台 — IGN Daily</title>
   <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet">
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: { extend: { colors: { brand: { 600:'#e50914',700:'#b91c1c' }}}}
-    }
-  </script>
+  <link rel="stylesheet" href="assets/learning-console.css?v=20260713learning3">
   <link rel="stylesheet" href="assets/compliance.css?v=20260709beian1">
+  <script src="assets/app.js?v=20260713darkonly1"></script>
+  <script defer src="assets/learning-console.js?v=20260713learning3"></script>
+  <script defer src="assets/alpine.min.js"></script>
   <script defer src="assets/compliance.js?v=20260709beian1"></script>
 </head>
-<body class="workspace-page antialiased dark">
-  <div x-data="learningData()" x-init="init()" class="min-h-screen flex flex-col">
-    <!-- Header -->
-    <header class="bg-[#0f0f1a]/90 border-b border-white/5 sticky top-0 z-10 backdrop-blur-xl">
-      <div class="max-w-4xl mx-auto px-4 py-3 flex items-center gap-3">
-        <a href="index.html" class="text-2xl font-bold bg-gradient-to-r from-red-600 to-orange-500 bg-clip-text text-transparent">IGN Daily</a>
-        <span class="text-white/20">|</span>
-        <span class="text-white/60 font-medium">📊 学习日志</span>
-        <div class="flex-1"></div>
-        <a href="index.html" class="text-sm text-white/40 hover:text-red-500">← 返回首页</a>
-      </div>
+<body>
+  <div class="lc-shell" x-data="learningConsole()" x-init="init()" x-cloak>
+    <header class="lc-topbar">
+      <a class="lc-brand" href="index.html"><span class="lc-brand-mark">IGN</span><span>IGN Daily</span></a>
+      <nav class="lc-nav" aria-label="主导航">
+        <a href="index.html">工作台</a><a href="dict.html">词库</a><a class="active" href="learning.html">学习</a><a href="usage.html">用量</a><a href="calendar.html">日历</a>
+      </nav>
     </header>
 
-    <!-- Main -->
-    <main class="flex-1 max-w-4xl w-full mx-auto px-4 py-6">
-      <p class="text-sm text-white/40 mb-6">
-        每晚先对齐润色差异，再由 Codex 判断它是事实纠错、一次性修改、词库实体还是稳定偏好。只有跨文章验证过的规律才会请你确认。
-      </p>
+    <main class="lc-main">
+      <div class="lc-heading">
+        <h1>学习控制台</h1>
+        <nav class="lc-tabs" aria-label="学习视图">
+          <button class="lc-tab" :class="{active: tab === 'week'}" @click="tab='week'">本周待办<span class="lc-tab-count" x-text="decisions.length + conflicts.length"></span></button>
+          <button class="lc-tab" :class="{active: tab === 'active'}" @click="tab='active'">有效规则<span class="lc-tab-count" x-text="activeRules.length"></span></button>
+          <button class="lc-tab" :class="{active: tab === 'observe'}" @click="tab='observe'">观察中<span class="lc-tab-count" x-text="observations.active?.length || 0"></span></button>
+          <button class="lc-tab" :class="{active: tab === 'history'}" @click="tab='history'">历史<span class="lc-tab-count" x-text="history.length"></span></button>
+        </nav>
+      </div>
 
-      <!-- Learning v2: decisions, evidence and impact are separated. -->
-      <section class="learning-v2-panel mb-8">
-        <div class="learning-v2-head">
-          <div><h2>本周学习结论</h2><p x-text="weeklyReport ? `${weeklyReport.week_id} · ${weeklyRangeText(weeklyReport)}` : '等待夜间学习生成'"></p></div>
-          <span class="learning-v2-badge">语义复核后展示</span>
-        </div>
-        <div x-show="weeklyLoading" class="learning-v2-empty">加载每周报告...</div>
-        <template x-if="!weeklyLoading && weeklyReport">
-          <div class="learning-v2-body">
-            <div class="learning-v2-stats">
-              <div><strong x-text="weeklyReport.summary?.ready_for_review || 0"></strong><span>需要你决定</span></div>
-              <div><strong x-text="weeklyReport.summary?.observing || 0"></strong><span>仍在观察</span></div>
-              <div><strong x-text="weeklyReport.summary?.confirmed_by_feedback || 0"></strong><span>已确认规则</span></div>
+      <div x-show="loading" class="lc-empty"><strong>正在读取学习状态</strong>只加载活跃规则和最新周报。</div>
+      <div x-show="!loading && error" class="lc-empty"><strong x-text="error"></strong>历史证据仍然保留，不会被删除。</div>
+
+      <template x-if="!loading && weekly && tab === 'week'">
+        <div class="lc-workspace">
+          <section class="lc-panel">
+            <div class="lc-summary">
+              <div class="lc-summary-period"><span x-text="weekly.week_id"></span> · <span x-text="weekRange"></span></div>
+              <div class="lc-metric"><span>待决定</span><strong x-text="decisions.length"></strong></div>
+              <div class="lc-metric"><span>新冲突</span><strong x-text="conflicts.length"></strong></div>
+              <div class="lc-metric"><span>词库候选</span><strong x-text="dictionaryCandidates.length"></strong></div>
             </div>
 
-            <section class="learning-v2-section">
-              <div class="learning-v2-section-head"><div><h3>需要你决定</h3><p>只有通过 Codex 语义复核并达到跨文章证据门槛的规律才会出现在这里。</p></div><button x-show="(weeklyReport.candidates || []).length > 1" @click="batchRejectCandidates()" class="learning-v2-secondary">批量否定本组</button></div>
-              <div x-show="!(weeklyReport.candidates || []).length" class="learning-v2-empty success">本周没有需要你审核的新规律。低质量替换已被过滤。</div>
-              <div class="learning-v2-list">
-                <template x-for="rule in (weeklyReport.candidates || [])" :key="rule.id">
-                  <article class="learning-v2-card">
-                    <div class="learning-v2-card-head"><span x-text="rule.category || 'style'"></span><strong x-text="rule.title"></strong><small x-text="`${rule.days_seen || 0}天 / ${rule.articles_seen || 0}篇`"></small></div>
-                    <p class="learning-v2-rule" x-text="rule.rule"></p>
-                    <dl class="learning-v2-reasoning">
-                      <div><dt>为什么可能是规律</dt><dd x-text="rule.semantic_rationale || rule.latest_evidence_summary || '等待说明'"></dd></div>
-                      <div><dt>误用风险</dt><dd x-text="rule.misuse_risk || '尚未发现明确风险'"></dd></div>
-                      <div><dt>适用范围</dt><dd x-text="rule.scope || 'all'"></dd></div>
-                    </dl>
-                    <details class="learning-v2-evidence" x-show="rule.examples && rule.examples.length"><summary>查看证据与反例</summary><template x-for="ex in rule.examples || []"><div><small x-text="`${ex.date || ''} #${ex.article_id || ''}`"></small><p><b>原：</b><span x-text="ex.before"></span></p><p><b>改：</b><span x-text="ex.after"></span></p></div></template><p x-show="(rule.counterexamples || []).length"><b>反例：</b><span x-text="(rule.counterexamples || []).join('；')"></span></p></details>
-                    <div class="learning-v2-actions"><button @click="saveWeeklyFeedback(rule.id, '采纳，进入长期规则。')" class="accept">采纳</button><button @click="saveWeeklyFeedback(rule.id, '否定，这不是我的长期偏好。')" class="reject">否定</button><button @click="editWeeklyFeedback(rule)">限定/改写</button><button @click="saveWeeklyFeedback(rule.id, '暂缓，继续观察。')">继续观察</button></div>
+            <div class="lc-section-head"><h2 x-text="readOnlyHistory ? '历史规则快照' : '待决定的规则'"></h2><p x-text="readOnlyHistory ? '已结束周只读，不再参与当前学习' : '只显示达到跨文章证据门槛的内容'"></p></div>
+            <div class="lc-table-head"><span>规则</span><span>适用范围</span><span>证据数</span><span>最后出现</span><span>决定</span></div>
+            <template x-for="rule in decisions" :key="rule.id">
+              <article class="lc-rule-row">
+                <div><div class="lc-rule-title" x-text="rule.title"></div><div class="lc-rule-copy" x-text="rule.rule"></div></div>
+                <div class="lc-rule-scope"><span x-text="rule.scope"></span><div class="lc-rule-meta" x-text="rule.category"></div></div>
+                <div><strong x-text="rule.articles_seen || 0"></strong><div class="lc-rule-meta" x-text="`${rule.days_seen || 0} 天`"></div></div>
+                <div class="lc-rule-meta" x-text="rule.last_seen || '—'"></div>
+                <div class="lc-actions" x-show="!readOnlyHistory">
+                  <button class="lc-button primary" @click="saveDecision(rule,'accept')">采纳</button><button class="lc-button" @click="saveDecision(rule,'limit')">限定</button><button class="lc-button" @click="saveDecision(rule,'reject')">否定</button><button class="lc-button" @click="saveDecision(rule,'observe')">继续观察</button>
+                </div>
+              </article>
+            </template>
+            <div class="lc-empty" x-show="!decisions.length"><strong>本周没有需要你决定的新规则</strong>旧观察不会再反复占据周报。</div>
+
+            <template x-if="conflicts.length">
+              <div>
+                <div class="lc-section-head"><h2>需要复核的冲突</h2><p>新反例不会自动覆盖已有规则</p></div>
+                <template x-for="rule in conflicts" :key="`conflict-${rule.id}`">
+                  <article class="lc-rule-row">
+                    <div><div class="lc-rule-title" x-text="rule.title"></div><div class="lc-rule-copy" x-text="rule.semantic_rationale || rule.rule"></div></div>
+                    <div class="lc-rule-scope" x-text="rule.scope"></div><div x-text="rule.contradictions"></div><div class="lc-rule-meta" x-text="rule.last_seen"></div>
+                    <div class="lc-actions"><button class="lc-button" @click="saveDecision(rule,'limit')">限定范围</button><button class="lc-button" @click="saveDecision(rule,'observe')">继续观察</button></div>
                   </article>
                 </template>
               </div>
-            </section>
+            </template>
+          </section>
 
-            <details class="learning-v2-collapsible"><summary>已确认的长期规则 <span x-text="weeklyReport.summary?.confirmed_by_feedback || 0"></span></summary><div class="learning-v2-compact-list"><template x-for="rule in (weeklyReport.confirmed_rules || [])" :key="rule.id"><div><strong x-text="rule.title"></strong><span x-text="rule.rule"></span></div></template></div></details>
-            <details class="learning-v2-collapsible"><summary>观察中的证据 <span x-text="weeklyReport.summary?.observing || 0"></span></summary><p>这些内容不会要求你审核，也不会写入正式规则；系统会继续寻找跨文章证据和反例。</p></details>
-          </div>
-        </template>
+          <aside class="lc-rail">
+            <h2>本周变化</h2>
+            <div class="lc-change-group"><div class="lc-change-row"><span>新增观察</span><strong x-text="weekSummary.observing || 0"></strong></div><div class="lc-change-row"><span>新冲突</span><strong x-text="weekSummary.conflicts || 0"></strong></div></div>
+            <div class="lc-change-group"><div class="lc-change-row"><span>本周确认</span><strong x-text="weekSummary.confirmed_this_week || 0"></strong></div><div class="lc-change-row"><span>转入词库</span><strong x-text="weekSummary.dictionary_candidates || 0"></strong></div></div>
+            <div class="lc-change-group"><div class="lc-change-row"><span>自动归档</span><strong x-text="weekSummary.archived_this_week || 0"></strong></div><button class="lc-history-link" @click="tab='history'">查看历史周报 →</button></div>
+          </aside>
+        </div>
+      </template>
+
+      <section class="lc-view" x-show="!loading && tab === 'active'">
+        <div class="lc-toolbar"><div><h2>当前有效规则</h2><p>这里只保留真正参与翻译的长期偏好。</p></div><input class="lc-search" x-model="query" placeholder="搜索规则、范围或分类"></div>
+        <div class="lc-list">
+          <template x-for="rule in filtered(activeRules)" :key="rule.id"><article class="lc-simple-row"><div><div class="lc-rule-title" x-text="rule.title"></div><div class="lc-rule-meta" x-text="rule.category"></div></div><div class="lc-rule-copy" x-text="rule.rule"></div><div class="lc-rule-scope" x-text="rule.scope"></div><div class="lc-status">已确认</div></article></template>
+          <div class="lc-empty" x-show="!filtered(activeRules).length"><strong>没有匹配的有效规则</strong>修改搜索词后再试。</div>
+        </div>
       </section>
 
-      <!-- Loading -->
-      <template x-if="loading">
-        <div class="text-center text-white/30 py-20">加载中...</div>
-      </template>
+      <section class="lc-view" x-show="!loading && tab === 'observe'">
+        <div class="lc-toolbar"><div><h2>观察池</h2><p>28 天没有新证据的项目会自动移入历史，不再进入 Agent 活跃上下文。</p></div><input class="lc-search" x-model="query" placeholder="搜索观察内容"></div>
+        <div class="lc-list">
+          <template x-for="rule in filtered(observations.active || [])" :key="rule.id"><article class="lc-simple-row"><div><div class="lc-rule-title" x-text="rule.title"></div><div class="lc-rule-meta" x-text="`${rule.days_seen || 0} 天 · ${rule.articles_seen || 0} 篇`"></div></div><div class="lc-rule-copy" x-text="rule.rule"></div><div class="lc-rule-meta" x-text="rule.last_seen || '—'"></div><div class="lc-status observed" x-text="rule.status === 'pending' ? '暂缓观察' : '收集证据'"></div></article></template>
+          <div class="lc-empty" x-show="!(observations.active || []).length"><strong>当前没有活跃观察</strong>陈旧内容已安全归档，但没有被删除。</div>
+        </div>
+      </section>
 
-      <!-- Error -->
-      <template x-if="error">
-        <div class="bg-rose-50 border border-rose-200 text-rose-800 rounded p-4" x-text="error"></div>
-      </template>
-
-      <!-- Date list -->
-      <template x-if="!loading && !error && dates.length === 0">
-        <div class="text-center text-white/40 py-20">还没有学习日志。等今晚 22:30 自动跑完就有了～</div>
-      </template>
-
-      <template x-for="date in dates" :key="date">
-        <section class="mb-8 bg-[#14141f]/70 rounded-lg border border-white/5 overflow-hidden">
-          <header class="bg-[#08080f] px-5 py-3 border-b border-white/5 flex items-center gap-3">
-            <h2 class="text-lg font-bold text-white/80" x-text="`📅 ${date}`"></h2>
-            <span class="text-sm text-white/40" x-text="logs[date] ? `分析了 ${logs[date].articles_analyzed ?? logs[date].total_articles ?? 0} 篇` : ''"></span>
-            <div class="flex-1"></div>
-            <button @click="expanded[date] = !expanded[date]"
-                    class="text-sm text-red-500 hover:underline"
-                    x-text="expanded[date] ? '收起' : '展开'"></button>
-          </header>
-
-          <div x-show="expanded[date] && logs[date]" class="p-5 space-y-6">
-            <!-- 已确认的规则 -->
-            <div>
-              <h3 class="text-base font-semibold text-white/80 mb-3 flex items-center gap-2">
-                ✅ 已确认的规则
-                <span class="text-xs text-white/30 font-normal" x-text="`（${(logs[date].rules_confirmed || []).length} 条）`"></span>
-              </h3>
-              <div class="space-y-3">
-                <template x-for="rule in logs[date].rules_confirmed" :key="rule.id">
-                  <article class="bg-[#08080f] rounded p-4 border border-white/5">
-                    <header class="flex items-start gap-2 mb-2">
-                      <span class="bg-emerald-100 text-emerald-700 text-xs px-2 py-0.5 rounded font-medium" x-text="rule.category"></span>
-                      <h4 class="font-semibold flex-1" x-text="rule.title"></h4>
-                      <span class="text-xs text-white/40" x-text="rule.evidence"></span>
-                    </header>
-                    <p class="text-sm text-white/60 mb-2" x-text="rule.detail"></p>
-                    <details class="text-xs text-white/40" x-show="rule.examples && rule.examples.length">
-                      <summary class="cursor-pointer hover:text-white/80">📝 案例 (<span x-text="rule.examples.length"></span>)</summary>
-                      <ul class="list-disc list-inside ml-2 mt-1 space-y-1">
-                        <template x-for="ex in rule.examples"><li x-text="ex"></li></template>
-                      </ul>
-                    </details>
-                    <!-- 批注区 -->
-                    <div class="mt-3 pt-3 border-t border-white/5">
-                      <template x-if="getFeedback(date, rule.id)">
-                        <div>
-                          <div class="bg-amber-100 border-l-4 border-amber-500 p-2 mb-2 text-sm">
-                            <span class="text-amber-900 font-bold">💬 你的批注：</span>
-                            <span class="text-slate-900 font-medium" x-text="getFeedback(date, rule.id)"></span>
-                            <button @click="editFeedback(date, rule.id)" class="text-xs text-blue-600 hover:underline ml-2">修改</button>
-                            <button @click="deleteFeedback(date, rule.id)" class="text-xs text-rose-600 hover:underline ml-2">删除</button>
-                          </div>
-                          <template x-if="getResponse(date, rule.id)">
-                            <div :class="{
-                              'bg-emerald-100 border-l-4 border-emerald-500': getResponse(date, rule.id).kind === 'confirm',
-                              'bg-rose-100 border-l-4 border-rose-500': getResponse(date, rule.id).kind === 'reject',
-                              'bg-blue-100 border-l-4 border-blue-500': getResponse(date, rule.id).kind === 'refine',
-                              'bg-[#0f0f1a] border-l-4 border-slate-500': getResponse(date, rule.id).kind === 'unclear'
-                            }" class="p-2 text-sm">
-                              <span class="font-bold text-slate-900 mr-1">🤖 我的回复：</span>
-                              <span class="text-slate-900" x-text="getResponse(date, rule.id).text"></span>
-                            </div>
-                          </template>
-                        </div>
-                      </template>
-                      <template x-if="!getFeedback(date, rule.id)">
-                        <button @click="addFeedback(date, rule.id, rule.title)"
-                                class="text-xs text-blue-600 hover:underline">💬 添加批注</button>
-                      </template>
-                    </div>
-                  </article>
-                </template>
-              </div>
-            </div>
-
-            <!-- 词库更新 -->
-            <div x-show="logs[date].dict_updates && logs[date].dict_updates.length">
-              <h3 class="text-base font-semibold text-white/80 mb-3 flex items-center gap-2">
-                📚 词库更新
-                <span class="text-xs text-white/30 font-normal" x-text="`（${(logs[date].dict_updates || []).length} 条）`"></span>
-              </h3>
-              <table class="w-full text-sm border-collapse">
-                <thead>
-                  <tr class="bg-[#0f0f1a] text-left">
-                    <th class="px-3 py-2 border border-white/5">英文</th>
-                    <th class="px-3 py-2 border border-white/5">原中文</th>
-                    <th class="px-3 py-2 border border-white/5">新中文</th>
-                    <th class="px-3 py-2 border border-white/5">来源</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <template x-for="up in logs[date].dict_updates">
-                    <tr class="hover:bg-[#08080f]">
-                      <td class="px-3 py-2 border border-white/5 font-mono text-xs" x-text="up.en"></td>
-                      <td class="px-3 py-2 border border-white/5 text-white/30" x-text="up.old_cn"></td>
-                      <td class="px-3 py-2 border border-white/5 font-medium text-emerald-700" x-text="up.new_cn"></td>
-                      <td class="px-3 py-2 border border-white/5 text-xs text-white/40" x-text="up.source"></td>
-                    </tr>
-                  </template>
-                </tbody>
-              </table>
-            </div>
-
-            <!-- 待观察 -->
-            <div x-show="logs[date].observations && logs[date].observations.length">
-              <h3 class="text-base font-semibold text-white/80 mb-3 flex items-center gap-2">
-                👀 待观察
-                <span class="text-xs text-white/30 font-normal">（出现次数不够，需要更多样本）</span>
-              </h3>
-              <div class="space-y-2">
-                <template x-for="obs in logs[date].observations" :key="obs.id">
-                  <article class="bg-yellow-50 border border-yellow-200 rounded p-3">
-                    <header class="flex items-start gap-2 mb-1">
-                      <h4 class="text-sm font-medium flex-1" x-text="obs.title"></h4>
-                      <span class="text-xs text-white/40" x-text="`出现 ${obs.occurrences} 次`"></span>
-                    </header>
-                    <p class="text-xs text-white/60 mb-2" x-text="obs.detail"></p>
-                    <!-- 批注 -->
-                    <template x-if="getFeedback(date, obs.id)">
-                      <div>
-                        <div class="bg-[#14141f]/70 p-2 rounded text-xs mb-1">
-                          <span class="text-amber-700 font-medium">💬</span>
-                          <span class="text-slate-900 font-medium" x-text="getFeedback(date, obs.id)"></span>
-                          <button @click="editFeedback(date, obs.id)" class="text-blue-600 hover:underline ml-2">修改</button>
-                          <button @click="deleteFeedback(date, obs.id)" class="text-rose-600 hover:underline ml-2">删除</button>
-                        </div>
-                        <template x-if="getResponse(date, obs.id)">
-                          <div :class="{
-                            'bg-emerald-100 border-l-4 border-emerald-500': getResponse(date, obs.id).kind === 'confirm',
-                            'bg-rose-100 border-l-4 border-rose-500': getResponse(date, obs.id).kind === 'reject',
-                            'bg-blue-100 border-l-4 border-blue-500': getResponse(date, obs.id).kind === 'refine',
-                            'bg-[#0f0f1a] border-l-4 border-slate-500': getResponse(date, obs.id).kind === 'unclear'
-                          }" class="p-2 text-xs">
-                            <span class="font-bold text-slate-900 mr-1">🤖 我的回复：</span>
-                            <span class="text-slate-900" x-text="getResponse(date, obs.id).text"></span>
-                          </div>
-                        </template>
-                      </div>
-                    </template>
-                    <template x-if="!getFeedback(date, obs.id)">
-                      <button @click="addFeedback(date, obs.id, obs.title)"
-                              class="text-xs text-blue-600 hover:underline">💬 添加批注</button>
-                    </template>
-                  </article>
-                </template>
-              </div>
-            </div>
-          </div>
-        </section>
-      </template>
+      <section class="lc-view" x-show="!loading && tab === 'history'">
+        <div class="lc-toolbar"><div><h2>周报历史</h2><p>已结束周是固定快照，后续学习不会再覆盖。</p></div></div>
+        <div class="lc-list">
+          <template x-for="week in history" :key="week.week_id"><article class="lc-week-row"><div class="lc-week-id" x-text="week.week_id"></div><div class="lc-week-range" x-text="week.range?.start ? `${week.range.start} — ${week.range.end}` : '旧版历史快照'"></div><div class="lc-week-stat" x-text="`待决定 ${week.summary?.ready_for_review ?? '—'}`"></div><div class="lc-week-stat" x-text="`冲突 ${week.summary?.conflicts ?? '—'}`"></div><div class="lc-week-stat" x-text="`归档 ${week.summary?.archived_this_week ?? '—'}`"></div><button class="lc-week-open" @click="selectWeek(week.week_id)">打开</button></article></template>
+        </div>
+        <div class="lc-toolbar" style="margin-top:28px"><div><h2>已归档观察</h2><p>保留审计证据，但不会继续污染每晚学习上下文。</p></div></div>
+        <div class="lc-list">
+          <template x-for="rule in (observations.archived || []).slice(0,40)" :key="`archived-${rule.id}`"><article class="lc-simple-row"><div><div class="lc-rule-title" x-text="rule.title"></div><div class="lc-rule-meta" x-text="rule.previous_status || rule.status"></div></div><div class="lc-rule-copy" x-text="rule.rule"></div><div class="lc-rule-meta" x-text="rule.last_seen || '—'"></div><div class="lc-rule-meta" x-text="rule.archive_reason || '历史记录'"></div></article></template>
+          <div class="lc-empty" x-show="!(observations.archived || []).length"><strong>暂无归档观察</strong>历史周报仍可在上方查看。</div>
+        </div>
+      </section>
     </main>
 
-    <!-- Toast -->
-    <div x-show="toast" x-transition
-         class="fixed bottom-4 right-4 bg-slate-800 text-white px-4 py-2 rounded shadow-lg z-50"
-         x-text="toast"></div>
+    <div class="lc-toast" x-show="toast" x-transition x-text="toast"></div>
   </div>
-
-  <script>
-    function learningData() {
-      return {
-        loading: true,
-        error: '',
-        dates: [],
-        logs: {},
-        feedback: {},  // { 'YYYY-MM-DD': { rule_id: text } }
-        responses: {}, // { 'YYYY-MM-DD': { rule_id: { kind, text, ... } } }
-        expanded: {},
-        toast: '',
-        weeklyExpanded: true,
-        weeklyLoading: true,
-        weeklyReport: null,
-        weeklyFeedback: {},
-
-        async init() {
-          this.loading = true;
-          this.loadWeeklyReport();
-          try {
-            // 拉学习日志清单
-            const idxRes = await fetch('data/learning_log/_index.json?t=' + Date.now(), { cache: 'no-store' });
-            if (!idxRes.ok) throw new Error('暂无学习日志');
-            const idx = await idxRes.json();
-            this.dates = (idx.dates || []).slice().reverse();
-
-            // 拉每天的日志
-            for (const d of this.dates) {
-              try {
-                const r = await fetch(`data/learning_log/${d}.json?t=${Date.now()}`, { cache: 'no-store' });
-                if (r.ok) this.logs[d] = await r.json();
-              } catch (_) {}
-              // 拉每天的批注
-              try {
-                const fr = await fetch(`data/learning_log/${d}_feedback.json?t=${Date.now()}`, { cache: 'no-store' });
-                if (fr.ok) this.feedback[d] = await fr.json();
-              } catch (_) {}
-              // 拉每天的机器人响应
-              try {
-                const rr = await fetch(`data/learning_log/${d}_response.json?t=${Date.now()}`, { cache: 'no-store' });
-                if (rr.ok) this.responses[d] = await rr.json();
-              } catch (_) {}
-            }
-
-            // 默认展开第一项
-            if (this.dates.length) this.expanded[this.dates[0]] = true;
-            this.loading = false;
-          } catch (e) {
-            this.error = e.message;
-            this.loading = false;
-          }
-        },
-
-        getFeedback(date, ruleId) {
-          return (this.feedback[date] || {})[ruleId];
-        },
-
-        getResponse(date, ruleId) {
-          return (this.responses[date] || {})[ruleId];
-        },
-
-        weeklyRangeText(report) {
-          const range = report?.range || {};
-          if (range.start && range.end) return `${range.start} 到 ${range.end}`;
-          return '日期范围待生成';
-        },
-
-        async loadWeeklyReport() {
-          this.weeklyLoading = true;
-          try {
-            const latestRes = await fetch('data/learning/weekly/latest.json?t=' + Date.now(), { cache: 'no-store' });
-            if (latestRes.ok) {
-              this.weeklyReport = await latestRes.json();
-              const latestWeekId = this.weeklyReport?.week_id;
-              if (latestWeekId) {
-                const feedbackRes = await fetch(`data/learning/weekly/${latestWeekId}_feedback.json?t=${Date.now()}`, { cache: 'no-store' });
-                if (feedbackRes.ok) this.weeklyFeedback = await feedbackRes.json();
-              }
-              this.weeklyLoading = false;
-              return;
-            }
-            const idxRes = await fetch('data/learning/weekly/_index.json?t=' + Date.now(), { cache: 'no-store' });
-            if (!idxRes.ok) {
-              this.weeklyLoading = false;
-              return;
-            }
-            const idx = await idxRes.json();
-            const weeks = idx.weeks || [];
-            if (!weeks.length) {
-              this.weeklyLoading = false;
-              return;
-            }
-            const weekId = idx.latest || weeks[weeks.length - 1];
-            const reportRes = await fetch(`data/learning/weekly/${weekId}.json?t=${Date.now()}`, { cache: 'no-store' });
-            if (reportRes.ok) this.weeklyReport = await reportRes.json();
-            const feedbackRes = await fetch(`data/learning/weekly/${weekId}_feedback.json?t=${Date.now()}`, { cache: 'no-store' });
-            if (feedbackRes.ok) this.weeklyFeedback = await feedbackRes.json();
-          } catch (e) {
-            console.warn('Failed to load weekly learning report:', e);
-          }
-          this.weeklyLoading = false;
-        },
-
-        async saveWeeklyFeedback(ruleId, text) {
-          if (!this.weeklyReport) return;
-          this.weeklyFeedback[ruleId] = text;
-          const path = `data/learning/weekly/${this.weeklyReport.week_id}_feedback.json`;
-          try {
-            await GH.putFile(path, JSON.stringify(this.weeklyFeedback, null, 2),
-              `weekly learning feedback ${this.weeklyReport.week_id}: ${ruleId}`);
-            this.flash('已保存周报批注。夜间学习下次会读取它。');
-          } catch (e) {
-            this.flash('保存失败：' + e.message);
-            console.error(e);
-          }
-        },
-
-        async batchRejectCandidates() {
-          const rules = this.weeklyReport?.candidates || [];
-          if (!rules.length || !confirm(`否定当前 ${rules.length} 条候选规律？`)) return;
-          for (const rule of rules) this.weeklyFeedback[rule.id] = '否定，这不是我的长期偏好。';
-          const path = `data/learning/weekly/${this.weeklyReport.week_id}_feedback.json`;
-          try {
-            await GH.putFile(path, JSON.stringify(this.weeklyFeedback, null, 2),
-              `weekly learning batch reject ${this.weeklyReport.week_id}`);
-            this.flash(`已否定 ${rules.length} 条候选规律。`);
-          } catch (e) {
-            this.flash('批量保存失败：' + e.message);
-          }
-        },
-
-        async editWeeklyFeedback(rule) {
-          const current = this.weeklyFeedback[rule.id] || '';
-          const text = prompt(`给「${rule.title}」写批注：\n例如：采纳 / 否定 / 只适用于影视新闻 / 改成……`, current);
-          if (text === null) return;
-          if (!text.trim()) return;
-          await this.saveWeeklyFeedback(rule.id, text.trim());
-        },
-
-        async addFeedback(date, ruleId, ruleTitle) {
-          const text = prompt(`为「${ruleTitle}」添加批注：\n（你的反馈会用于改进未来翻译）`);
-          if (!text || !text.trim()) return;
-          await this.saveFeedback(date, ruleId, text.trim());
-        },
-
-        async editFeedback(date, ruleId) {
-          const cur = this.getFeedback(date, ruleId) || '';
-          const text = prompt('修改批注：', cur);
-          if (text === null) return;  // 取消
-          if (!text.trim()) {
-            await this.deleteFeedback(date, ruleId, true);
-            return;
-          }
-          await this.saveFeedback(date, ruleId, text.trim());
-        },
-
-        async deleteFeedback(date, ruleId, silent) {
-          if (!silent && !confirm('删除这条批注？')) return;
-          if (this.feedback[date]) delete this.feedback[date][ruleId];
-          await this.persistFeedback(date);
-          await this.deleteResponseEntry(date, ruleId);
-          this.flash('🗑 批注已删除');
-        },
-
-        async saveFeedback(date, ruleId, text) {
-          if (!this.feedback[date]) this.feedback[date] = {};
-          this.feedback[date][ruleId] = text;
-          await this.persistFeedback(date);
-          // 同步生成响应
-          await this.generateAndSaveResponse(date, ruleId, text);
-          this.flash('✅ 批注已保存，我已回复');
-        },
-
-        async persistFeedback(date) {
-          const path = `data/learning_log/${date}_feedback.json`;
-          const data = this.feedback[date] || {};
-          try {
-            await GH.putFile(path, JSON.stringify(data, null, 2),
-              `learning feedback on ${date}`);
-          } catch (e) {
-            this.flash('❌ 保存失败：' + e.message);
-            console.error(e);
-          }
-        },
-
-        // 前端生成响应并保存到 _response.json。与后端 Python 脚本逻辑保持一致。
-        classifyFeedback(text) {
-          const t = (text || '').trim();
-          const NEG = ['不需要','不要','不对','不是','错了','错误','例外','取消','不适用','不适合','不该','不能','重新','广州'];
-          const POS = ['这个好','这样好','按这样','按这么','同意','对的','可以','不错','这个可以','以后都','一律'];
-          const hasNeg = NEG.some(w => t.includes(w));
-          const hasPos = POS.some(w => t.includes(w));
-          if (hasNeg && !hasPos) return 'reject';
-          if (hasPos && !hasNeg) return 'confirm';
-          if (hasNeg && hasPos) return 'refine';
-          if (t.length > 10) return 'refine';
-          return 'unclear';
-        },
-
-        findRuleById(date, ruleId) {
-          const log = this.logs[date];
-          if (!log) return null;
-          const all = (log.rules_confirmed || []).concat(log.observations || []);
-          return all.find(r => r.id === ruleId);
-        },
-
-        genResponseText(rule, feedbackText, kind) {
-          const title = (rule && (rule.title || rule.id)) || '该规则';
-          // 避免嵌套：标题已含「」《》『』时不再包
-          const hasInner = /[「」『』《》]/.test(title);
-          const wrapped = hasInner ? title : `「${title}」`;
-          if (kind === 'confirm') return '✅ 好，后面都这样译。';
-          if (kind === 'reject') return `❌ 收到，${wrapped}不当作通用规则。`;
-          if (kind === 'refine') return `✏️ 记下了：${feedbackText}`;
-          return '🤔 这条我没看懂，可以点「修改」再写详细点。';
-        },
-
-        async generateAndSaveResponse(date, ruleId, feedbackText) {
-          const rule = this.findRuleById(date, ruleId);
-          if (!rule) return;
-          const kind = this.classifyFeedback(feedbackText);
-          const text = this.genResponseText(rule, feedbackText, kind);
-          if (!this.responses[date]) this.responses[date] = {};
-          this.responses[date][ruleId] = {
-            kind, text,
-            feedback_snapshot: feedbackText,
-            generated_at: new Date().toISOString(),
-          };
-          // 保存 _response.json
-          const path = `data/learning_log/${date}_response.json`;
-          try {
-            await GH.putFile(path, JSON.stringify(this.responses[date], null, 2),
-              `learning response on ${date}: ${ruleId}`);
-          } catch (e) {
-            console.error('save response failed:', e);
-          }
-        },
-
-        async deleteResponseEntry(date, ruleId) {
-          if (!this.responses[date]) return;
-          delete this.responses[date][ruleId];
-          const path = `data/learning_log/${date}_response.json`;
-          try {
-            await GH.putFile(path, JSON.stringify(this.responses[date], null, 2),
-              `learning response on ${date}: remove ${ruleId}`);
-          } catch (e) {
-            console.error('save response failed:', e);
-          }
-        },
-
-        flash(msg, ms = 2000) {
-          this.toast = msg;
-          setTimeout(() => this.toast = '', ms);
-        }
-      };
-    }
-  </script>
-  <footer class="site-compliance-footer" aria-label="备案信息">
-    <div class="site-compliance-inner">
-      <span data-compliance="copyright">Copyright © 2026 IGN Daily</span>
-      <a data-compliance="icp" href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">粤ICP备2026092594号</a>
-    </div>
-  </footer>
+  <footer class="site-compliance-footer" aria-label="备案信息"><div class="site-compliance-inner"><span data-compliance="copyright">Copyright © 2026 IGN Daily</span><a data-compliance="icp" href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">粤ICP备2026092594号</a></div></footer>
 </body>
 </html>

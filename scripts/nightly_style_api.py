@@ -28,6 +28,13 @@ from prompt_blocks import nightly_user_payload
 from translate_titles_deepseek import call_deepseek_response, extract_json
 from usage_logger import record_deepseek_usage_safe
 from learning_quality import promotion_status
+from learning_weekly import (
+    apply_lifecycle,
+    build_active_rules,
+    build_observation_pool,
+    build_report as build_compact_weekly_report,
+    report_summary,
+)
 
 
 configure_utf8_stdio()
@@ -351,57 +358,33 @@ def week_id_for(date: str) -> str:
 
 
 def build_weekly_report(evidence: dict[str, Any], date: str) -> dict[str, Any]:
-    week_id = week_id_for(date)
-    today = datetime.strptime(date, "%Y-%m-%d").date()
-    week_start = today - timedelta(days=today.weekday())
-    week_dates = [(week_start + timedelta(days=i)).strftime("%Y-%m-%d") for i in range(7)]
-    rules = evidence.get("rules", {})
-    candidates = []
-    confirmed_rules = []
-    observations = []
-    for entry in rules.values():
-        if not isinstance(entry, dict):
-            continue
-        days = set(entry.get("days", []))
-        status = entry.get("status")
-        if status == "ready_for_review":
-            candidates.append(entry)
-        elif status in ("confirmed_by_feedback", "confirmed"):
-            confirmed_rules.append(entry)
-        elif days.intersection(week_dates) and status == "observed":
-            observations.append(entry)
-    candidates.sort(key=lambda r: (
-        0 if r.get("status") == "ready_for_review" else 1,
-        -int(r.get("days_seen", 0)),
-        -int(r.get("articles_seen", 0)),
-        str(r.get("title") or ""),
-    ))
-    report = {
-        "week_id": week_id,
-        "generated_at": datetime.now(CST).isoformat(timespec="seconds"),
-        "range": {"start": week_dates[0], "end": week_dates[-1]},
-        "summary": {
-            "candidate_count": len(candidates),
-            "ready_for_review": sum(1 for r in candidates if r.get("status") == "ready_for_review"),
-            "confirmed_by_feedback": len(confirmed_rules),
-            "pending": sum(1 for r in candidates if r.get("status") == "pending"),
-            "observing": len(observations),
-        },
-        "candidates": candidates[:40],
-        "confirmed_rules": confirmed_rules[:40],
-        "observations": observations[:12],
-        "instructions_for_user": [
-            "采纳：表示这条可以进入长期 STYLE_PROFILE.md。",
-            "否定：表示这条不是你的偏好，后续不要再提。",
-            "限定：说明只适用于某类文章，例如影视新闻/评测/标题。",
-            "暂缓：继续观察，不写入正式规则。",
-        ],
-    }
-    write_json(WEEKLY_DIR / f"{week_id}.json", report)
+    archived = apply_lifecycle(evidence, date)
+    report = build_compact_weekly_report(evidence, date, archived)
+    week_id = report["week_id"]
+    write_json(EVIDENCE_PATH, evidence)
+    write_json(LEARNING_DIR / "active-rules.json", build_active_rules(evidence))
+    write_json(LEARNING_DIR / "observations.json", build_observation_pool(evidence))
+    report_path = WEEKLY_DIR / f"{week_id}.json"
+    current_year, current_week, _ = datetime.now(CST).date().isocalendar()
+    current_week_id = f"{current_year}-W{current_week:02d}"
+    if report_path.exists() and week_id != current_week_id:
+        # Backfill may add evidence, but a closed weekly audit snapshot must not
+        # be rewritten with today's global evidence pool.
+        return load_json(report_path, report) or report
+    write_json(report_path, report)
+    write_json(WEEKLY_DIR / "latest.json", report)
     index = load_json(WEEKLY_DIR / "_index.json", {"weeks": []}) or {"weeks": []}
     if week_id not in index.setdefault("weeks", []):
         index["weeks"].append(week_id)
         index["weeks"] = sorted(index["weeks"])
+    summaries = index.get("summaries") if isinstance(index.get("summaries"), dict) else {}
+    summaries[week_id] = report_summary(report)
+    index.update({
+        "schema_version": 3,
+        "latest": week_id,
+        "latest_published_at": report["generated_at"],
+        "summaries": summaries,
+    })
     write_json(WEEKLY_DIR / "_index.json", index)
     return report
 
