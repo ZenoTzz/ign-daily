@@ -305,6 +305,15 @@ function todayBeijingDate() {
   return `${y}-${m}-${d}`;
 }
 
+function nextTranslationWindowLabel(now = new Date()) {
+  const beijing = new Date(now.getTime() + 8 * 3600 * 1000);
+  const minutes = beijing.getUTCHours() * 60 + beijing.getUTCMinutes();
+  const nextMinutes = (Math.floor(minutes / 120) + 1) * 120;
+  const nextDay = nextMinutes >= 1440;
+  const hour = Math.floor((nextMinutes % 1440) / 60);
+  return `${nextDay ? '明天' : '今天'} ${String(hour).padStart(2, '0')}:00`;
+}
+
 // ---- Main app state (Alpine) ----
 function appData() {
   return {
@@ -849,6 +858,10 @@ function appData() {
     get requestedCount() {
       if (!this.data) return 0;
       return this.data.articles.filter(a => a.translation_status === 'requested').length;
+    },
+
+    nextTranslationWindow() {
+      return nextTranslationWindowLabel();
     },
 
     get requestedArticles() {

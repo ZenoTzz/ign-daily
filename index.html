@@ -48,7 +48,7 @@
   <link rel="stylesheet" href="assets/home.css?v=20260710redesign1">
   <link rel="stylesheet" href="assets/workspace-ui.css?v=20260711loginfix1">
   <script defer src="assets/exceljs.min.js"></script>
-  <script defer src="assets/app.js?v=20260712dictfix1"></script>
+  <script defer src="assets/app.js?v=20260713queuewindow1"></script>
   <script defer src="assets/alpine.min.js"></script>
   <link rel="stylesheet" href="assets/compliance.css?v=20260710beian2">
   <script defer src="assets/compliance.js?v=20260709beian1"></script>
@@ -228,6 +228,7 @@
           <p class="workbench-subtitle">
             <span x-text="`${allArticleCount} 条 RSS 已完成标题摘要，等待选择需要翻译的文章`"></span>
           </p>
+          <p class="workbench-subtitle">下次自动翻译窗口：<strong x-text="nextTranslationWindow()"></strong>（紧急任务可直接通知翻译 Agent）</p>
         </div>
         <div class="workbench-metrics">
           <div class="metric-card metric-amber">

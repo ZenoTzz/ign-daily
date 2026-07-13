@@ -15,6 +15,15 @@ function statusClass(status) {
   return '';
 }
 
+function nextTranslationWindowLabel(now = new Date()) {
+  const beijing = new Date(now.getTime() + 8 * 3600 * 1000);
+  const minutes = beijing.getUTCHours() * 60 + beijing.getUTCMinutes();
+  const nextMinutes = (Math.floor(minutes / 120) + 1) * 120;
+  const nextDay = nextMinutes >= 1440;
+  const hour = Math.floor((nextMinutes % 1440) / 60);
+  return `${nextDay ? '明天' : '今天'} ${String(hour).padStart(2, '0')}:00`;
+}
+
 Page({
   data: {
     date: todayNewsDate(),
@@ -37,7 +46,8 @@ Page({
     jobLabel: '',
     jobIdsText: '',
     jobTimer: null
-    ,todayDate: todayNewsDate(), isToday: true
+    ,todayDate: todayNewsDate(), isToday: true,
+    nextTranslationWindow: nextTranslationWindowLabel()
   },
 
   async onLoad() {
@@ -51,6 +61,7 @@ Page({
 
   onShow() {
     if (!api.token()) return;
+    this.setData({ nextTranslationWindow: nextTranslationWindowLabel() });
     const targetDate = wx.getStorageSync('ign_target_date');
     if (targetDate) {
       wx.removeStorageSync('ign_target_date');

@@ -4,6 +4,7 @@
       <view class="kicker">{{date}} 新闻日</view>
       <view class="headline">翻译工作台</view>
       <view class="subline">{{articles.length}} 条文章 · {{requestedCount}} 篇进行中</view>
+      <view class="window-line">下次自动翻译窗口：{{nextTranslationWindow}}</view>
     </view>
     <button class="logout" bindtap="openJobs">任务</button>
   </view>
