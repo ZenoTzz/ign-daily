@@ -103,6 +103,41 @@ const GH = {
     };
   },
 
+  async getRequiredFile(path, label = '文件') {
+    const file = await this.getFile(path);
+    if (!file || typeof file.content !== 'string' || !file.content.trim()) {
+      throw new Error(`${label}不存在或暂时不可读取，请刷新并确认服务器登录状态：${path}`);
+    }
+    return file;
+  },
+
+  async writeDictTerms(terms, message = 'dict: update terms') {
+    const normalized = (terms || []).map(item => normalizeApprovedDictCandidate(item)).filter(item => item.en && item.cn);
+    if (!normalized.length) throw new Error('没有可保存的有效词条');
+    if (this.canUseServer()) {
+      for (const item of normalized) {
+        await ServerAPI.request('/dict/terms', {
+          method: 'POST',
+          body: JSON.stringify({ en: item.en, cn: item.cn, category: item.cat, source: item.source, note: item.note || '' })
+        });
+      }
+      return null;
+    }
+    const fresh = await this.getRequiredFile('data/dict.json', '词库');
+    const dict = JSON.parse(fresh.content);
+    for (const item of normalized) {
+      for (const cat of DICT_CATEGORIES) {
+        if (cat !== item.cat && dict[cat]?.[item.en]) delete dict[cat][item.en];
+      }
+      if (!dict[item.cat]) dict[item.cat] = {};
+      dict[item.cat][item.en] = { cn: item.cn, source: item.source };
+    }
+    dict._meta = dict._meta || {};
+    dict._meta.last_updated = new Date().toISOString().slice(0, 10);
+    await this.putFile('data/dict.json', JSON.stringify(dict, null, 2), message);
+    return dict;
+  },
+
   async putFile(path, content, message, retry = 2) {
     if (this.canUseServer()) {
       const existing = await this.getFile(path);
@@ -2450,25 +2485,10 @@ function appData() {
     },
 
     async batchApproveDict(approves) {
-      const fresh = await GH.getFile('data/dict.json');
-      if (!fresh || typeof fresh.content !== 'string' || !fresh.content.trim()) {
-        throw new Error('无法读取服务器词库，请重新登录后重试');
-      }
-      const dict = JSON.parse(fresh.content);
-      for (const rawCandidate of approves) {
-        const c = normalizeApprovedDictCandidate(rawCandidate);
-        for (const cat of DICT_CATEGORIES) {
-          if (cat !== c.cat && dict[cat]?.[c.en]) delete dict[cat][c.en];
-        }
-        if (!dict[c.cat]) dict[c.cat] = {};
-        dict[c.cat][c.en] = { cn: c.cn, source: c.source };
-      }
-      dict._meta = dict._meta || {};
-      dict._meta.last_updated = new Date().toISOString().slice(0,10);
       const msg = approves.length === 1
         ? `dict: approve ${approves[0].en} → ${approves[0].cn}`
         : `dict: approve ${approves.length} entries (global panel)`;
-      await GH.putFile('data/dict.json', JSON.stringify(dict, null, 2), msg);
+      await GH.writeDictTerms(approves, msg);
     },
 
     async removeFromArticlePending(articleId, removedCandidates) {

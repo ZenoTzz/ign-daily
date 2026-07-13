@@ -21,7 +21,7 @@
   <link rel="stylesheet" href="assets/style.css?v=20260616theme2">
   <link rel="stylesheet" href="assets/article-dark.css?v=20260616theme2">
   <link rel="stylesheet" href="assets/workspace-ui.css?v=20260711refactor1">
-  <script src="assets/app.js?v=20260713queuewindow1"></script>
+  <script src="assets/app.js?v=20260713dictapi3"></script>
   <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
   <script>
     tailwind.config = {
@@ -673,35 +673,21 @@
           this.flash(`入库中: ${form.en} → ${form.cn}`);
           this.dictSaving = true;
           try {
-            // 拉最新词库（避免覆盖别人的修改）
-            const fresh = await GH.getFile('data/dict.json');
-            const dict = JSON.parse(fresh.content);
-
-            // 如果该词在别的分类里存在，先删掉旧的
-            for (const cat of ['games','movies_tv','companies','people','media','terms']) {
-              if (cat !== form.cat && dict[cat]?.[form.en]) {
-                delete dict[cat][form.en];
-              }
+            const savedDict = await GH.writeDictTerms([form], `dict: add ${form.en} → ${form.cn} (${form.source})`);
+            if (savedDict) this.dictData = savedDict;
+            else {
+              if (!this.dictData) this.dictData = {};
+              if (!this.dictData[form.cat]) this.dictData[form.cat] = {};
+              this.dictData[form.cat][form.en] = { cn: form.cn, source: form.source };
             }
 
-            if (!dict[form.cat]) dict[form.cat] = {};
-            dict[form.cat][form.en] = {
-              cn: form.cn,
-              source: form.source
-            };
-            dict._meta = dict._meta || {};
-            dict._meta.last_updated = new Date().toISOString().slice(0,10);
-
-            await GH.putFile('data/dict.json', JSON.stringify(dict, null, 2),
-              `dict: add ${form.en} → ${form.cn} (${form.source})`);
-            this.dictData = dict;
-
-            // 同步到当前译文
-            const synced = await this.syncSingleToCurrentArticle(form.en, form.cn, oldCn);
-            if (synced > 0) {
-              this.flash(`✅ 已入库，译文同步了 ${synced} 处`);
-            } else {
-              this.flash(`✅ 已入库：${form.en} → ${form.cn}`);
+            // 词库保存和当前文章同步是两个结果，不能把同步失败误报成入库失败。
+            try {
+              const synced = await this.syncSingleToCurrentArticle(form.en, form.cn, oldCn);
+              if (synced > 0) this.flash(`✅ 已入库，译文同步了 ${synced} 处`);
+              else this.flash(`✅ 已入库：${form.en} → ${form.cn}`);
+            } catch (syncError) {
+              this.flash(`⚠️ 词条已入库，但当前译文同步失败：${syncError.message}`, 6000);
             }
           } catch (e) {
             this.flash('❌ 保存失败：' + e.message, 5000);
@@ -733,7 +719,7 @@
             const id = params.get('id');
             const padded = String(id).padStart(2, '0');
             const path = `data/${date}/translations/${padded}.json`;
-            const fresh = await GH.getFile(path);
+            const fresh = await GH.getRequiredFile(path, '当前译文');
             const data = JSON.parse(fresh.content);
             data.paragraphs = this.article.paragraphs;
             await GH.putFile(path, JSON.stringify(data, null, 2),
@@ -855,23 +841,19 @@
         },
 
         async batchApproveToDict(approves) {
-          const fresh = await GH.getFile('data/dict.json');
-          const dict = JSON.parse(fresh.content);
-          for (const rawCandidate of approves) {
-            const c = normalizeApprovedDictCandidate(rawCandidate);
-            for (const cat of ['games','movies_tv','companies','people','media','terms']) {
-              if (cat !== c.cat && dict[cat]?.[c.en]) delete dict[cat][c.en];
-            }
-            if (!dict[c.cat]) dict[c.cat] = {};
-            dict[c.cat][c.en] = { cn: c.cn, source: c.source };
-          }
-          dict._meta = dict._meta || {};
-          dict._meta.last_updated = new Date().toISOString().slice(0,10);
           const msg = approves.length === 1
             ? `dict: approve ${approves[0].en} → ${approves[0].cn}`
             : `dict: approve ${approves.length} entries`;
-          await GH.putFile('data/dict.json', JSON.stringify(dict, null, 2), msg);
-          this.dictData = dict;
+          const savedDict = await GH.writeDictTerms(approves, msg);
+          if (savedDict) this.dictData = savedDict;
+          else {
+            if (!this.dictData) this.dictData = {};
+            for (const rawCandidate of approves) {
+              const c = normalizeApprovedDictCandidate(rawCandidate);
+              if (!this.dictData[c.cat]) this.dictData[c.cat] = {};
+              this.dictData[c.cat][c.en] = { cn: c.cn, source: c.source };
+            }
+          }
           if (approves.length === 1) {
             this.flash(`✅ 已入库：${approves[0].en} → ${approves[0].cn}`);
           } else {
@@ -906,7 +888,7 @@
           const id = params.get('id');
           const padded = String(id).padStart(2, '0');
           const path = `data/${date}/translations/${padded}.json`;
-          const fresh = await GH.getFile(path);
+          const fresh = await GH.getRequiredFile(path, '当前译文');
           const data = JSON.parse(fresh.content);
           data.pending_dict = newPending;
           // 同步本地 paragraphs 修改（如果有）
@@ -943,7 +925,7 @@
             }
 
             // 2. 拉取本文 translation
-            const fresh = await GH.getFile(path);
+            const fresh = await GH.getRequiredFile(path, '当前译文');
             const data = JSON.parse(fresh.content);
 
             // 3. 构建两阶段替换集
@@ -1275,7 +1257,7 @@
             const id = params.get('id');
             const padded = String(id).padStart(2, '0');
             const path = `data/${date}/translations/${padded}.json`;
-            const fresh = await GH.getFile(path);
+            const fresh = await GH.getRequiredFile(path, '当前译文');
             const data = JSON.parse(fresh.content);
             data.paragraphs = this.article.paragraphs;
             await GH.putFile(path, JSON.stringify(data, null, 2),
