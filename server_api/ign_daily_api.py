@@ -423,17 +423,35 @@ def clamp_progress(value: Any, default: int = 0) -> int:
         return default
 
 
-def eta_from_progress(started_at: Any, progress: int, *, now: int) -> int | None:
-    if progress <= 0 or progress >= 100:
-        return 0 if progress >= 100 else None
-    try:
-        started = int(started_at)
-    except Exception:
-        return None
-    elapsed = max(0, now - started)
-    if elapsed < 3:
-        return None
-    return int(elapsed * (100 - progress) / progress)
+STAGE_REMAINING_SECONDS: dict[str, tuple[int, int]] = {
+    "source": (10 * 60, 25 * 60),
+    "extract": (8 * 60, 22 * 60),
+    "model": (8 * 60, 20 * 60),
+    "parse": (4 * 60, 10 * 60),
+    "audit": (3 * 60, 8 * 60),
+    "repair": (8 * 60, 25 * 60),
+    "write": (60, 3 * 60),
+}
+DEFAULT_ARTICLE_SECONDS = (8 * 60, 20 * 60)
+
+
+def stable_translation_estimate(status: str, step: str | None, remaining_articles: int = 1) -> dict[str, Any]:
+    """Return a broad estimate that only changes with workflow stage."""
+    if status in {"done", "failed"}:
+        return {"estimate_kind": "complete", "eta_min_seconds": 0, "eta_max_seconds": 0, "eta_seconds": 0}
+    if status == "queued" or step == "queued":
+        return {"estimate_kind": "scheduled", "eta_min_seconds": None, "eta_max_seconds": None, "eta_seconds": None}
+    count = max(1, int(remaining_articles or 1))
+    current_min, current_max = STAGE_REMAINING_SECONDS.get(str(step or ""), DEFAULT_ARTICLE_SECONDS)
+    future_count = max(0, count - 1)
+    minimum = current_min + future_count * DEFAULT_ARTICLE_SECONDS[0]
+    maximum = current_max + future_count * DEFAULT_ARTICLE_SECONDS[1]
+    return {
+        "estimate_kind": "uncertain" if step == "repair" else "range",
+        "eta_min_seconds": minimum,
+        "eta_max_seconds": maximum,
+        "eta_seconds": int((minimum + maximum) / 2),
+    }
 
 
 def infer_translation_job(row: sqlite3.Row) -> dict[str, Any]:
@@ -442,14 +460,12 @@ def infer_translation_job(row: sqlite3.Row) -> dict[str, Any]:
     status = row["status"]
     message = row["message"]
     progress = int(row["progress"] or 0)
-    now = int(time.time())
     results: list[dict[str, Any]] = []
     errors: list[dict[str, Any]] = []
     done = 0
     failed = 0
     progress_sum = 0
     current_item: dict[str, Any] | None = None
-    eta_seconds: int | None = None
     if date and ids:
         failures = read_json(APP_DIR / "data" / date / "translation_failures.json", {"items": {}})
         failure_items = failures.get("items", {}) if isinstance(failures, dict) else {}
@@ -493,9 +509,6 @@ def infer_translation_job(row: sqlite3.Row) -> dict[str, Any]:
                 })
                 continue
             item_progress = clamp_progress(progress_item.get("progress"), 5 if status == "queued" else progress or 10)
-            item_eta = progress_item.get("eta_seconds")
-            if item_eta is None:
-                item_eta = eta_from_progress(progress_item.get("started_at") or row["created_at"], item_progress, now=now)
             result_item = {
                 "id": int(article_id),
                 "status": progress_item.get("status", "queued" if status == "queued" else "running"),
@@ -505,8 +518,8 @@ def infer_translation_job(row: sqlite3.Row) -> dict[str, Any]:
                 "message": progress_item.get("message", message or "正在翻译"),
                 "updated_at": progress_item.get("updated_at"),
                 "started_at": progress_item.get("started_at"),
-                "eta_seconds": item_eta,
             }
+            result_item.update(stable_translation_estimate(result_item["status"], result_item["step"], 1))
             progress_sum += item_progress
             if result_item["status"] not in {"done", "failed"}:
                 if current_item is None or int(result_item.get("updated_at") or 0) >= int(current_item.get("updated_at") or 0):
@@ -518,16 +531,9 @@ def infer_translation_job(row: sqlite3.Row) -> dict[str, Any]:
     if total:
         article_progress = int(progress_sum / total) if progress_sum else 0
         progress = max(progress, min(95, article_progress))
-        completed_units = max(0.0, min(float(total), progress_sum / 100.0))
-        if status in {"queued", "running"} and completed_units > 0:
-            elapsed = max(0, now - int(row["created_at"] or now))
-            remaining_units = max(0.0, float(total) - completed_units)
-            if elapsed >= 3 and remaining_units > 0:
-                eta_seconds = int((elapsed / completed_units) * remaining_units)
         if done + failed == total:
             status = "failed" if failed and not done else "done"
             progress = 100
-            eta_seconds = 0
             message = "翻译失败" if status == "failed" else "翻译完成"
             if row["status"] != status:
                 update_job(row["id"], status, message, progress)
@@ -542,6 +548,12 @@ def infer_translation_job(row: sqlite3.Row) -> dict[str, Any]:
                 message = message or "正在翻译"
             if progress != int(row["progress"] or 0) or message != row["message"]:
                 update_job(row["id"], status, message, progress)
+    remaining_articles = max(0, total - done - failed)
+    estimate = stable_translation_estimate(
+        status,
+        current_item.get("step") if current_item else ("queued" if status == "queued" else None),
+        remaining_articles,
+    )
     return {
         "id": row["id"],
         "kind": row["kind"],
@@ -560,7 +572,7 @@ def infer_translation_job(row: sqlite3.Row) -> dict[str, Any]:
         "current_article_id": current_item.get("id") if current_item else None,
         "current_step": current_item.get("step") if current_item else None,
         "current_step_label": current_item.get("step_label") if current_item else None,
-        "eta_seconds": eta_seconds,
+        **estimate,
         "results": results,
         "errors": errors,
     }

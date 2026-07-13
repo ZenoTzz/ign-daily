@@ -73,13 +73,9 @@ def set_article_step(
         item["finished_at"] = now
         item["eta_seconds"] = 0
     else:
-        started_at = int(item.get("started_at") or now)
-        elapsed = max(0, now - started_at)
-        item["eta_seconds"] = (
-            int(elapsed * (100 - clamped_progress) / clamped_progress)
-            if clamped_progress > 0 and elapsed >= 3
-            else None
-        )
+        # The API derives a stable range from the workflow stage. Do not
+        # persist a volatile elapsed/progress extrapolation here.
+        item["eta_seconds"] = None
     item.update(
         {
             "id": int(article_id),

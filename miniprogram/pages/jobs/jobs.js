@@ -14,6 +14,20 @@ function decorate(job) {
     const done = results.some((item) => Number(item.article_id || item.id) === Number(id)) || progress.status === 'done' || job.status === 'done';
     return { id, label: error ? '失败' : (done ? '完成' : (progress.step_label || '等待')), message: error ? (error.message || error.error) : (progress.message || ''), item_class: error ? 'status-failed' : (done ? 'status-done' : 'status-running') };
   });
+  const etaMin = Number(job.eta_min_seconds);
+  const etaMax = Number(job.eta_max_seconds);
+  let etaText = '';
+  if (job.status === 'queued' || job.estimate_kind === 'scheduled') etaText = '等待下一翻译窗口';
+  else if (job.status === 'running' && Number.isFinite(etaMin) && Number.isFinite(etaMax) && etaMax > 0) {
+    const minMinutes = Math.max(1, Math.floor(etaMin / 60));
+    const maxMinutes = Math.max(minMinutes, Math.ceil(etaMax / 60));
+    const range = maxMinutes < 60
+      ? `${minMinutes}–${maxMinutes} 分钟`
+      : `${Math.max(1, Math.floor(minMinutes / 60))}–${Math.max(1, Math.ceil(maxMinutes / 60))} 小时`;
+    etaText = job.estimate_kind === 'uncertain'
+      ? `修复中，通常还需 ${range}，可能延长`
+      : `通常还需 ${range}`;
+  }
   return Object.assign({}, job, {
     status_label: statusMap[job.status] || job.status || '未知',
     ids_text: ids.map((id) => `#${id}`).join('、'),
@@ -22,7 +36,7 @@ function decorate(job) {
     errors,
     result_items: resultItems,
     done_count: resultItems.filter((item) => item.label === '完成').length,
-    eta_text: job.status === 'running' && job.eta_seconds ? `约剩 ${Math.max(1, Math.ceil(Number(job.eta_seconds) / 60))} 分钟` : ''
+    eta_text: etaText
   });
 }
 

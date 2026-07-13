@@ -1960,22 +1960,30 @@ function appData() {
       return Math.max(0, Math.min(100, Number(job?.progress || 0)));
     },
 
-    formatEta(seconds) {
-      const value = Number(seconds);
-      if (!Number.isFinite(value) || value < 0) return '';
-      if (value <= 0) return '即将完成';
-      if (value < 60) return '不到 1 分钟';
-      const minutes = Math.ceil(value / 60);
-      if (minutes < 60) return `约 ${minutes} 分钟`;
-      const hours = Math.floor(minutes / 60);
-      const rest = minutes % 60;
-      return rest ? `约 ${hours} 小时 ${rest} 分钟` : `约 ${hours} 小时`;
+    formatEtaRange(minSeconds, maxSeconds) {
+      const minValue = Number(minSeconds);
+      const maxValue = Number(maxSeconds);
+      if (!Number.isFinite(minValue) || !Number.isFinite(maxValue) || maxValue <= 0) return '';
+      const minMinutes = Math.max(1, Math.floor(minValue / 60));
+      const maxMinutes = Math.max(minMinutes, Math.ceil(maxValue / 60));
+      if (maxMinutes < 60) return `${minMinutes}–${maxMinutes} 分钟`;
+      const minHours = Math.max(1, Math.floor(minMinutes / 60));
+      const maxHours = Math.max(minHours, Math.ceil(maxMinutes / 60));
+      return minHours === maxHours ? `约 ${minHours} 小时` : `${minHours}–${maxHours} 小时`;
+    },
+
+    estimateLabel(item) {
+      if (!item || ['done', 'failed'].includes(item.status)) return '';
+      if (item.estimate_kind === 'scheduled' || item.status === 'queued') return '等待下一翻译窗口';
+      const range = this.formatEtaRange(item.eta_min_seconds, item.eta_max_seconds);
+      if (item.estimate_kind === 'uncertain') {
+        return range ? `正在修复，通常还需 ${range}，可能延长` : '正在修复，耗时可能延长';
+      }
+      return range ? `通常还需 ${range}` : '正在估算时间';
     },
 
     jobEtaLabel(job = this.activeJob) {
-      if (!job || ['done', 'failed'].includes(job.status)) return '';
-      const eta = this.formatEta(job.eta_seconds);
-      return eta ? `预计还需 ${eta}` : '正在估算时间';
+      return this.estimateLabel(job);
     },
 
     jobProgressSummary(job = this.activeJob) {
@@ -2089,9 +2097,9 @@ function appData() {
         failed: result.reason || '需要人工复核'
       };
       const detail = detailByStep[step] || '';
-      const eta = this.formatEta(result.eta_seconds);
-      if (eta && !['done', 'failed'].includes(result.status)) {
-        return detail ? `${detail} · 预计还需 ${eta}` : `预计还需 ${eta}`;
+      const estimate = this.estimateLabel(result);
+      if (estimate && !['done', 'failed'].includes(result.status)) {
+        return detail ? `${detail} · ${estimate}` : estimate;
       }
       return detail;
     },

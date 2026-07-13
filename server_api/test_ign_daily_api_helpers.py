@@ -208,7 +208,27 @@ class PrivateApiFileGuardsTest(unittest.TestCase):
 
             self.assertEqual(job["status"], "queued")
             self.assertEqual(job["current_step"], "queued")
+            self.assertEqual(job["estimate_kind"], "scheduled")
+            self.assertIsNone(job["eta_seconds"])
             self.assertEqual(module.load_job_row(job_id)["status"], "queued")
+
+    def test_translation_estimate_is_stage_stable_range(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            repo = root / "repo"
+            api_dir = root / "api"
+            repo.mkdir()
+            api_dir.mkdir()
+            module = load_api(repo, api_dir, {"IGN_DAILY_STORAGE_MODE": "local"})
+
+            first = module.stable_translation_estimate("running", "model", 2)
+            second = module.stable_translation_estimate("running", "model", 2)
+            repair = module.stable_translation_estimate("running", "repair", 1)
+
+            self.assertEqual(first, second)
+            self.assertEqual(first["eta_min_seconds"], 16 * 60)
+            self.assertEqual(first["eta_max_seconds"], 40 * 60)
+            self.assertEqual(repair["estimate_kind"], "uncertain")
 
     def test_wechat_binding_tables_and_session_issue(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:

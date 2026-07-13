@@ -93,8 +93,11 @@ Response:
     "ids": [2],
     "message": "服务器正在翻译",
     "progress": 10,
+    "estimate_kind": "range",
+    "eta_min_seconds": 480,
+    "eta_max_seconds": 1200,
     "results": [
-      { "id": 2, "status": "running" }
+      { "id": 2, "status": "running", "step": "model", "estimate_kind": "range", "eta_min_seconds": 480, "eta_max_seconds": 1200 }
     ],
     "errors": []
   }
@@ -102,6 +105,12 @@ Response:
 ```
 
 Status values are `queued`, `running`, `done`, and `failed`.
+
+Completion estimates are intentionally coarse and stage-based. `estimate_kind`
+is `scheduled` while queued, `range` during normal processing, `uncertain`
+during repair, and `complete` after completion. Clients should display the
+`eta_min_seconds`–`eta_max_seconds` range instead of treating `eta_seconds` as
+a precise countdown; the legacy midpoint remains only for older clients.
 
 `GET /jobs?kind=translation&limit=5` returns recent jobs, useful when a client needs to recover state after reopening.
 
