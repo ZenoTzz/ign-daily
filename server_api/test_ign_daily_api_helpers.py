@@ -193,6 +193,23 @@ class PrivateApiFileGuardsTest(unittest.TestCase):
             self.assertTrue(result["ok"])
             self.assertEqual(result["job"]["status"], "done")
 
+    def test_reading_job_does_not_claim_queued_translation(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            repo = root / "repo"
+            api_dir = root / "api"
+            repo.mkdir()
+            api_dir.mkdir()
+            module = load_api(repo, api_dir, {"IGN_DAILY_STORAGE_MODE": "local"})
+            module.init_db()
+            job_id = module.create_job("translation", "2026-07-14", [2], "tester", "已加入翻译队列")
+
+            job = module.serialize_job(module.load_job_row(job_id))
+
+            self.assertEqual(job["status"], "queued")
+            self.assertEqual(job["current_step"], "queued")
+            self.assertEqual(module.load_job_row(job_id)["status"], "queued")
+
     def test_wechat_binding_tables_and_session_issue(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)

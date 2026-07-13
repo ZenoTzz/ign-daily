@@ -21,6 +21,7 @@
   margin-bottom: 22rpx;
 }
 .summary-panel{border-left:6rpx solid #f2b91d;background:#201d18}.image-strip{width:100%;margin-bottom:24rpx;white-space:nowrap}.image-strip image{display:inline-block;width:360rpx;height:220rpx;margin-right:14rpx;border-radius:16rpx;background:#202024}.article-actions{display:flex;gap:14rpx;padding-bottom:24rpx}.article-actions button{flex:1;margin:0;font-size:25rpx}
+.summary-hint{margin:-6rpx 0 14rpx;color:#a9a18f;font-size:21rpx;line-height:1.5}.translation-wait{margin-bottom:22rpx;padding:28rpx;border:1rpx dashed #34343a;border-radius:18rpx;color:#8f9199;background:#151517;text-align:center;font-size:24rpx;line-height:1.6}.article-actions button[disabled]{color:#777981;background:#202023;opacity:1}
 
 .section-title {
   margin-bottom: 16rpx;

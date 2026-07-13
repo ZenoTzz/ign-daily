@@ -498,7 +498,7 @@ def infer_translation_job(row: sqlite3.Row) -> dict[str, Any]:
                 item_eta = eta_from_progress(progress_item.get("started_at") or row["created_at"], item_progress, now=now)
             result_item = {
                 "id": int(article_id),
-                "status": progress_item.get("status", "running"),
+                "status": progress_item.get("status", "queued" if status == "queued" else "running"),
                 "step": progress_item.get("step", "queued" if status == "queued" else "model"),
                 "step_label": progress_item.get("step_label", "排队等待" if status == "queued" else "模型翻译/质检中"),
                 "progress": item_progress,
@@ -532,13 +532,15 @@ def infer_translation_job(row: sqlite3.Row) -> dict[str, Any]:
             if row["status"] != status:
                 update_job(row["id"], status, message, progress)
         elif row["status"] in {"queued", "running"}:
-            status = "running"
+            # Reading a job must not claim it.  A queued job only becomes
+            # running through the explicit Codex claim/progress endpoints.
+            status = row["status"]
             if current_item:
                 current_label = current_item.get("step_label") or current_item.get("message") or "正在翻译"
                 message = f"#{current_item.get('id')} {current_label}"
             else:
                 message = message or "正在翻译"
-            if row["status"] != "running" or progress != int(row["progress"] or 0):
+            if progress != int(row["progress"] or 0) or message != row["message"]:
                 update_job(row["id"], status, message, progress)
     return {
         "id": row["id"],

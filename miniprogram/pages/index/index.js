@@ -45,7 +45,9 @@ Page({
     job: null,
     jobLabel: '',
     jobIdsText: '',
-    jobTimer: null
+    jobTimer: null,
+    confirmOpen: false,
+    confirmArticles: []
     ,todayDate: todayNewsDate(), latestDate: '', availableDates: [], isToday: true,
     nextTranslationWindow: nextTranslationWindowLabel()
   },
@@ -180,14 +182,20 @@ Page({
 
   async submitSelected() {
     if (!this.data.selectedIds.length || this.data.submitting) return;
-    const titles = this.data.articles.filter((item) => this.data.selectedIds.includes(Number(item.id))).map((item) => `#${item.id} ${item.cn_title || item.en_title}`).join('\n');
-    const confirmed = await new Promise((resolve) => wx.showModal({
-      title: `确认翻译 ${this.data.selectedIds.length} 篇？`,
-      content: titles.length > 180 ? `${titles.slice(0, 180)}…` : titles,
-      confirmText: '确认提交', success: (res) => resolve(res.confirm), fail: () => resolve(false)
-    }));
-    if (!confirmed) return;
-    this.setData({ submitting: true });
+    const confirmArticles = this.data.articles
+      .filter((item) => this.data.selectedIds.includes(Number(item.id)))
+      .map((item) => ({ id: item.id, title: item.cn_title || item.en_title }));
+    this.setData({ confirmOpen: true, confirmArticles });
+  },
+
+  closeSubmitConfirm() {
+    if (this.data.submitting) return;
+    this.setData({ confirmOpen: false, confirmArticles: [] });
+  },
+
+  async confirmSubmit() {
+    if (!this.data.selectedIds.length || this.data.submitting) return;
+    this.setData({ submitting: true, confirmOpen: false });
     try {
       try {
         const config = await api.wechatConfig();
@@ -204,7 +212,7 @@ Page({
         await this.loadJob(res.job_id, true);
       }
       wx.showToast({ title: '已提交翻译', icon: 'success' });
-      this.setData({ selectedIds: [], submitText: '提交翻译' });
+      this.setData({ selectedIds: [], submitText: '提交翻译', confirmArticles: [] });
       wx.removeStorageSync(`ign_selected_${this.data.date}`);
       await this.loadData();
     } catch (err) {
@@ -234,7 +242,13 @@ Page({
     try {
       const res = await api.job(jobId);
       const job = res.job;
-      const jobLabel = job.status === 'done' ? '翻译完成' : job.status === 'failed' ? '翻译失败' : (job.message || '正在翻译');
+      const currentLabel = job.current_step_label && job.current_article_id
+        ? `#${job.current_article_id} ${job.current_step_label}`
+        : '';
+      const jobLabel = job.status === 'done' ? '翻译完成'
+        : job.status === 'failed' ? '翻译失败'
+        : job.status === 'queued' ? (currentLabel || job.message || '等待翻译 Agent')
+        : (currentLabel || job.message || '正在翻译');
       this.setData({
         job,
         jobLabel,

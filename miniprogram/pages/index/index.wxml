@@ -79,4 +79,22 @@
       </view>
     </view>
   </view>
+
+  <view wx:if="{{confirmOpen}}" class="confirm-mask" catchtap="closeSubmitConfirm">
+    <view class="confirm-sheet" catchtap="noop">
+      <view class="confirm-handle"></view>
+      <view class="confirm-title">确认提交 {{confirmArticles.length}} 篇？</view>
+      <view class="confirm-subtitle">提交后会进入 Codex 翻译队列</view>
+      <scroll-view class="confirm-list" scroll-y enhanced show-scrollbar="{{false}}">
+        <view wx:for="{{confirmArticles}}" wx:key="id" class="confirm-item">
+          <text class="confirm-id">#{{item.id}}</text>
+          <text class="confirm-item-title">{{item.title}}</text>
+        </view>
+      </scroll-view>
+      <view class="confirm-actions">
+        <view class="confirm-btn cancel" role="button" bindtap="closeSubmitConfirm">取消</view>
+        <view class="confirm-btn primary" role="button" bindtap="confirmSubmit">确认提交</view>
+      </view>
+    </view>
+  </view>
 </view>

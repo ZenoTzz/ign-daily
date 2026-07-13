@@ -16,7 +16,8 @@
     </scroll-view>
 
     <view class="panel section summary-panel">
-      <view class="section-title">摘要</view>
+      <view class="section-title">{{summaryLabel}}</view>
+      <view wx:if="{{summaryHint}}" class="summary-hint">{{summaryHint}}</view>
       <view class="body-text">{{article.opus_summary || article.summary || article.cn_summary || article.description || '暂无摘要'}}</view>
     </view>
 
@@ -24,8 +25,9 @@
       <view class="section-title">正文</view>
       <view class="body-text">{{bodyText}}</view>
     </view>
+    <view class="translation-wait" wx:else>{{waitingText}}</view>
 
-    <view class="article-actions"><button class="btn btn-primary" bindtap="copyArticle">复制译文</button><button class="btn btn-ghost" bindtap="copyUrl">复制原文链接</button></view>
+    <view class="article-actions"><button class="btn btn-primary" disabled="{{!canCopyTranslation}}" bindtap="copyArticle">{{canCopyTranslation ? '复制译文' : '全文完成后可复制'}}</button><button class="btn btn-ghost" bindtap="copyUrl">复制原文链接</button></view>
     <view class="article-actions"><button class="btn btn-ghost" disabled="{{!prevId}}" data-id="{{prevId}}" bindtap="goSibling">上一篇</button><button class="btn btn-ghost" disabled="{{!nextId}}" data-id="{{nextId}}" bindtap="goSibling">下一篇</button></view>
   </view>
 </view>

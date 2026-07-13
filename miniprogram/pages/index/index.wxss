@@ -157,6 +157,19 @@
 .queue-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16rpx; color: #fff; font-size: 28rpx; font-weight: 800; }
 .select-all { height: 52rpx; padding: 0 18rpx; border-radius: 10rpx; background: #222226; color: #a9abb3; font-size: 21rpx; font-weight: 700; line-height: 52rpx; }
 .selected-card { border-color: rgba(237,28,36,.55); background: rgba(237,28,36,.055); }
+.confirm-mask{position:fixed;z-index:100;inset:0;display:flex;align-items:flex-end;background:rgba(0,0,0,.72)}
+.confirm-sheet{box-sizing:border-box;width:100%;padding:16rpx 30rpx calc(32rpx + env(safe-area-inset-bottom));border:1rpx solid #303036;border-bottom:0;border-radius:28rpx 28rpx 0 0;background:#171719;box-shadow:0 -18rpx 60rpx rgba(0,0,0,.42)}
+.confirm-handle{width:72rpx;height:7rpx;margin:0 auto 24rpx;border-radius:999rpx;background:#4a4a50}
+.confirm-title{color:#fff;font-size:34rpx;line-height:44rpx;font-weight:900;text-align:center}
+.confirm-subtitle{margin-top:8rpx;color:#8f9199;font-size:22rpx;line-height:32rpx;text-align:center}
+.confirm-list{max-height:360rpx;margin:24rpx 0;border-top:1rpx solid #2c2c31;border-bottom:1rpx solid #2c2c31}
+.confirm-item{display:flex;align-items:flex-start;gap:16rpx;padding:20rpx 4rpx;border-bottom:1rpx solid #29292d}
+.confirm-item:last-child{border-bottom:0}
+.confirm-id{flex:0 0 auto;padding:4rpx 10rpx;border-radius:999rpx;background:#2a2a2e;color:#b7b8c0;font-size:20rpx;line-height:28rpx}
+.confirm-item-title{flex:1;min-width:0;color:#f4f4f5;font-size:25rpx;line-height:36rpx;font-weight:700}
+.confirm-actions{display:flex;gap:14rpx}
+.confirm-btn{display:flex;align-items:center;justify-content:center;flex:1;height:78rpx;border-radius:14rpx;background:#28282c;color:#f3f3f5;font-size:26rpx;font-weight:800}
+.confirm-btn.primary{background:#ed1c24;color:#fff}
 
 .submit-btn {
   flex: 1;
