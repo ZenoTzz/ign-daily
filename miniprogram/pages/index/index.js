@@ -179,7 +179,7 @@ Page({
   },
 
   async submitSelected() {
-    if (!this.data.selectedIds.length) return;
+    if (!this.data.selectedIds.length || this.data.submitting) return;
     const titles = this.data.articles.filter((item) => this.data.selectedIds.includes(Number(item.id))).map((item) => `#${item.id} ${item.cn_title || item.en_title}`).join('\n');
     const confirmed = await new Promise((resolve) => wx.showModal({
       title: `确认翻译 ${this.data.selectedIds.length} 篇？`,

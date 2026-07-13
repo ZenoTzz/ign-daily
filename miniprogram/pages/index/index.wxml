@@ -6,13 +6,13 @@
       <view class="subline">{{articles.length}} 条文章 · {{requestedCount}} 篇进行中</view>
       <view class="window-line">下次自动翻译窗口：{{nextTranslationWindow}}</view>
     </view>
-    <button class="logout" bindtap="openJobs">任务</button>
+    <view class="logout" role="button" bindtap="openJobs">任务</view>
   </view>
 
   <view class="date-row">
-    <button class="date-btn" bindtap="prevDate">前一天</button>
-    <picker mode="date" value="{{date}}" end="{{todayDate}}" bindchange="onDateChange"><view class="date-btn today-btn">{{date}}</view></picker>
-    <button class="date-btn" disabled="{{isToday}}" bindtap="nextDate">后一天</button>
+    <view class="date-btn" role="button" bindtap="prevDate">前一天</view>
+    <picker class="date-picker" mode="date" value="{{date}}" end="{{todayDate}}" bindchange="onDateChange"><view class="date-btn today-btn">{{date}}</view></picker>
+    <view class="date-btn {{isToday ? 'control-disabled' : ''}}" role="button" bindtap="nextDate">后一天</view>
   </view>
 
   <view wx:if="{{job}}" class="job-card">
@@ -40,18 +40,16 @@
   </view>
 
   <view class="actions">
-    <button class="submit-btn" disabled="{{selectedIds.length === 0 || submitting}}" loading="{{submitting}}" bindtap="submitSelected">
-      {{submitText}}
-    </button>
-    <button class="refresh-btn" disabled="{{loading}}" loading="{{loading}}" bindtap="loadData">刷新</button>
+    <view class="submit-btn {{selectedIds.length === 0 || submitting ? 'control-disabled' : ''}}" role="button" bindtap="submitSelected">{{submitting ? '提交中…' : submitText}}</view>
+    <view class="refresh-btn {{loading ? 'control-disabled' : ''}}" role="button" bindtap="loadData">{{loading ? '刷新中…' : '刷新'}}</view>
   </view>
 
   <scroll-view class="filter-scroll" scroll-x enhanced show-scrollbar="{{false}}">
     <view class="filter-row">
-      <button wx:for="{{filters}}" wx:key="key" class="filter-btn {{filter === item.key ? 'active' : ''}}" data-filter="{{item.key}}" bindtap="setFilter">{{item.label}}</button>
+      <view wx:for="{{filters}}" wx:key="key" class="filter-btn {{filter === item.key ? 'active' : ''}}" role="button" data-filter="{{item.key}}" bindtap="setFilter">{{item.label}}</view>
     </view>
   </scroll-view>
-  <view class="queue-head"><text>文章队列 · {{visibleArticles.length}}</text><button bindtap="selectAllPending">全选可用</button></view>
+  <view class="queue-head"><text>文章队列 · {{visibleArticles.length}}</text><view class="select-all" role="button" bindtap="selectAllPending">全选可用</view></view>
 
   <view wx:if="{{error}}" class="error">{{error}}</view>
 
@@ -71,12 +69,12 @@
         <view class="article-subtitle">{{item.en_title}}</view>
         <view class="article-footer">
           <text class="status {{item.status_class}}">{{item.status_label}}</text>
-          <button class="select-btn {{item.selected ? 'selected' : ''}} {{item.translation_status === 'done' ? 'disabled' : ''}}"
-            disabled="{{item.select_disabled}}"
+          <view class="select-btn {{item.selected ? 'selected' : ''}} {{item.select_disabled ? 'control-disabled' : ''}}"
+            role="button"
             data-id="{{item.id}}"
             catchtap="toggleSelect">
             {{item.select_label}}
-          </button>
+          </view>
         </view>
       </view>
     </view>
