@@ -28,7 +28,7 @@ page {
   border-radius: 14rpx;
   font-size: 30rpx;
   font-weight: 700;
-  line-height: 84rpx;
+  line-height: 1.2;
 }
 
 .btn-primary {
@@ -50,6 +50,19 @@ page {
   color: #fff;
   border: 1rpx solid #303136;
 }
+
+/* Normalize native button metrics across simulator, iOS and style-v2. */
+button {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  line-height: 1.2;
+  text-align: center;
+}
+
+button::after { border: 0; }
 
 .page-title { color:#fff; font-size:44rpx; line-height:1.2; font-weight:900; }
 .page-subtitle { margin-top:10rpx; color:#8f9199; font-size:24rpx; line-height:1.5; }
