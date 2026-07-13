@@ -2979,6 +2979,92 @@
           "created_at": "2026-07-03T22:40:04+08:00"
         }
       ]
+    },
+    "dict_candidate_god_of_war_laufey_2e0ef0beabfb": {
+      "id": "dict_candidate_god_of_war_laufey_2e0ef0beabfb",
+      "title": "词库候选：God of War Laufey → 战神：Laufey",
+      "rule": "Observe the title rendering for God of War Laufey; do not add it to the dictionary without entity confirmation.",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "terms",
+      "scope": "dictionary_candidate",
+      "status": "observed",
+      "semantic_review": "observe",
+      "days": [
+        "2026-07-12"
+      ],
+      "days_seen": 1,
+      "articles_seen": 1,
+      "contradictions": 0,
+      "alternatives": {
+        "战神：Laufey": 1
+      },
+      "examples": [
+        {
+          "date": "2026-07-12",
+          "article_id": 1,
+          "before": "God of War Laufey",
+          "after": "战神：Laufey",
+          "evidence": "来自文章页未确认新词候选。"
+        }
+      ],
+      "created_at": "2026-07-13T22:38:11+08:00",
+      "last_seen": "2026-07-12",
+      "confidence": 0.8,
+      "latest_evidence_summary": "来自文章页未确认新词候选。",
+      "candidate_payload": {
+        "en": "God of War Laufey",
+        "cn": "战神：Laufey",
+        "cat": "terms",
+        "source": "user"
+      },
+      "semantic_rationale": "The polished title is a single-article rendering and conflicts with the established Chinese name for Laufey. Keep it as an observation until a source-context match resolves whether this is a distinct title or an inconsistent rendering.",
+      "counterexamples": [
+        "Existing usage maps Laufey to 劳菲 rather than retaining Laufey in English."
+      ],
+      "misuse_risk": "Could create an incorrect dictionary entry for a title or character reference."
+    },
+    "dict_candidate_ryse_son_of_rome_e2605424dbe6": {
+      "id": "dict_candidate_ryse_son_of_rome_e2605424dbe6",
+      "title": "词库候选：Ryse: Son of Rome → Ryse：罗马之子",
+      "rule": "Observe Ryse: Son of Rome → 崛起：罗马之子 pending corroborating user-polished examples or explicit feedback.",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "games",
+      "scope": "dictionary_candidate",
+      "status": "observed",
+      "semantic_review": "observe",
+      "days": [
+        "2026-07-12"
+      ],
+      "days_seen": 1,
+      "articles_seen": 1,
+      "contradictions": 0,
+      "alternatives": {
+        "Ryse：罗马之子": 1
+      },
+      "examples": [
+        {
+          "date": "2026-07-12",
+          "article_id": 2,
+          "before": "Ryse: Son of Rome",
+          "after": "Ryse：罗马之子",
+          "evidence": "来自文章页未确认新词候选。"
+        }
+      ],
+      "created_at": "2026-07-13T22:38:11+08:00",
+      "last_seen": "2026-07-12",
+      "confidence": 0.8,
+      "latest_evidence_summary": "来自文章页未确认新词候选。",
+      "candidate_payload": {
+        "en": "Ryse: Son of Rome",
+        "cn": "Ryse：罗马之子",
+        "cat": "games",
+        "source": "user"
+      },
+      "semantic_rationale": "The user consistently changed this article to 崛起：罗马之子, but the candidate pair itself is only supported by one article on one day. Retain it for future corroboration rather than promoting it to the dictionary.",
+      "counterexamples": [],
+      "misuse_risk": "A single article-level normalization may not establish the intended canonical game title."
     }
   },
   "updated_at": "2026-07-13T12:05:14+08:00",

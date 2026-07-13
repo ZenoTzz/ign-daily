@@ -1,3 +1,24 @@
 {
-  "results": []
+  "results": [
+    {
+      "id": "dict_candidate_god_of_war_laufey_2e0ef0beabfb",
+      "decision": "observe",
+      "rationale": "The polished title is a single-article rendering and conflicts with the established Chinese name for Laufey. Keep it as an observation until a source-context match resolves whether this is a distinct title or an inconsistent rendering.",
+      "refined_rule": "Observe the title rendering for God of War Laufey; do not add it to the dictionary without entity confirmation.",
+      "scope": "dictionary_candidate",
+      "counterexamples": [
+        "Existing usage maps Laufey to 劳菲 rather than retaining Laufey in English."
+      ],
+      "misuse_risk": "Could create an incorrect dictionary entry for a title or character reference."
+    },
+    {
+      "id": "dict_candidate_ryse_son_of_rome_e2605424dbe6",
+      "decision": "observe",
+      "rationale": "The user consistently changed this article to 崛起：罗马之子, but the candidate pair itself is only supported by one article on one day. Retain it for future corroboration rather than promoting it to the dictionary.",
+      "refined_rule": "Observe Ryse: Son of Rome → 崛起：罗马之子 pending corroborating user-polished examples or explicit feedback.",
+      "scope": "dictionary_candidate",
+      "counterexamples": [],
+      "misuse_risk": "A single article-level normalization may not establish the intended canonical game title."
+    }
+  ]
 }

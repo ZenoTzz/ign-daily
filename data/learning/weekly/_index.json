@@ -6,10 +6,11 @@
     "2026-W25",
     "2026-W26",
     "2026-W27",
-    "2026-W28"
+    "2026-W28",
+    "2026-W29"
   ],
-  "latest": "2026-W28",
-  "latest_published_at": "2026-07-13T12:05:14+08:00",
+  "latest": "2026-W29",
+  "latest_published_at": "2026-07-13T22:39:01+08:00",
   "schema_version": 3,
   "summaries": {
     "2026-W28": {
@@ -26,6 +27,22 @@
         "observing": 0,
         "confirmed_this_week": 0,
         "archived_this_week": 10
+      }
+    },
+    "2026-W29": {
+      "week_id": "2026-W29",
+      "range": {
+        "start": "2026-07-13",
+        "end": "2026-07-19"
+      },
+      "generated_at": "2026-07-13T22:39:01+08:00",
+      "summary": {
+        "ready_for_review": 0,
+        "conflicts": 0,
+        "dictionary_candidates": 2,
+        "observing": 0,
+        "confirmed_this_week": 0,
+        "archived_this_week": 0
       }
     }
   }
