@@ -30,18 +30,19 @@ Page({
   data: { jobs: [], loading: false, error: '' },
   onShow() {
     if (!api.token()) { wx.redirectTo({ url: '/pages/login/login' }); return; }
-    this.loadJobs();
+    this.loadJobs(!this.data.jobs.length);
   },
-  onPullDownRefresh() { this.loadJobs().finally(() => wx.stopPullDownRefresh()); },
-  async loadJobs() {
-    this.setData({ loading: true, error: '' });
+  onPullDownRefresh() { this.loadJobs(false).finally(() => wx.stopPullDownRefresh()); },
+  async loadJobs(showLoading = false) {
+    if (showLoading) this.setData({ loading: true });
+    this.setData({ error: '' });
     try {
       const result = await api.jobs();
       this.setData({ jobs: (result.jobs || []).map(decorate) });
     } catch (err) {
       if (err.statusCode === 401) { wx.removeStorageSync('ign_token'); wx.redirectTo({ url: '/pages/login/login' }); return; }
       this.setData({ error: err.message || '任务加载失败' });
-    } finally { this.setData({ loading: false }); }
+    } finally { if (showLoading) this.setData({ loading: false }); }
   },
   openDate(e) {
     const date = e.currentTarget.dataset.date;
