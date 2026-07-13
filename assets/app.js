@@ -2,30 +2,21 @@
 
 // ====== 暗黑模式（全局，所有页面必须在加载时调用） ======
 function initDarkMode() {
-  const saved = getThemePreference();
-  localStorage.setItem('theme', saved);
-  applyTheme(saved);
+  localStorage.setItem('theme', 'dark');
+  applyTheme('dark');
 }
 function getThemePreference() {
-  const saved = localStorage.getItem('theme');
-  return saved === 'light' || saved === 'dark' ? saved : 'light';
+  return 'dark';
 }
 function applyTheme(theme) {
   const html = document.documentElement;
-  let isDark = false;
-  if (theme === 'dark') isDark = true;
-  else if (theme === 'light') isDark = false;
-  else { isDark = window.matchMedia('(prefers-color-scheme: dark)').matches; }
-  html.classList.toggle('dark', isDark);
+  html.classList.add('dark');
 }
 function toggleTheme() {
-  const cur = getThemePreference();
-  const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  const isDark = cur === 'dark' || (cur === 'auto' && systemDark);
-  const next = isDark ? 'light' : 'dark';
-  localStorage.setItem('theme', next);
-  applyTheme(next);
-  return next;
+  // Compatibility no-op: the product now has one canonical dark theme.
+  localStorage.setItem('theme', 'dark');
+  applyTheme('dark');
+  return 'dark';
 }
 (function(){ try { initDarkMode(); } catch(_){} })();
 window.appTheme = { initDarkMode, getThemePreference, applyTheme, toggleTheme };
@@ -456,8 +447,6 @@ function appData() {
     pendingQueue: [],
     pendingProcessing: false,
 
-    // 主题
-    themeIcon: '🌗',
     // 全局搜索
     showGlobalSearch: false,
     searchQuery: '',
@@ -477,9 +466,6 @@ function appData() {
     learningRules: [],
 
     async init() {
-      // 初始主题图标
-      const cur = window.appTheme.getThemePreference();
-      this.themeIcon = cur === 'dark' ? '☀️' : (cur === 'light' ? '🌒' : '🌗');
       this.loadExportBasket();
       const loadingGuard = setTimeout(() => {
         if (this.loading) {
@@ -2305,13 +2291,6 @@ function appData() {
     flash(msg, ms = 2500) {
       this.toast = msg;
       setTimeout(() => { this.toast = ''; }, ms);
-    },
-
-    // ---- 主题 ----
-    toggleTheme() {
-      const next = window.appTheme.toggleTheme();
-      this.themeIcon = next === 'dark' ? '☀️' : (next === 'light' ? '🌒' : '🌗');
-      this.flash('主题：' + (next === 'auto' ? '跟随系统' : (next === 'dark' ? '深色' : '浅色')));
     },
 
     // ---- 全局搜索 ----

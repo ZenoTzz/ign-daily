@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" class="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,7 +21,7 @@
   <link rel="stylesheet" href="assets/style.css?v=20260616theme2">
   <link rel="stylesheet" href="assets/article-dark.css?v=20260616theme2">
   <link rel="stylesheet" href="assets/workspace-ui.css?v=20260711refactor1">
-  <script src="assets/app.js?v=20260713dictapi3"></script>
+  <script src="assets/app.js?v=20260713darkonly1"></script>
   <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
   <script>
     tailwind.config = {
@@ -50,9 +50,6 @@
           <!-- 桌面端显示所有按钮 -->
           <a x-show="article?.url" :href="article?.url" target="_blank" rel="noopener"
             class="hidden lg:inline text-xs text-slate-500 hover:text-brand-600">🔗 IGN</a>
-          <button @click="toggleTheme()" class="article-desktop-action text-xs text-slate-500 hover:text-brand-600" title="主题切换">
-            <span x-text="themeIcon"></span>
-          </button>
           <button @click="mode = mode === 'compare' ? 'cn' : 'compare'"
             class="hidden lg:inline-flex text-xs px-2 py-1 rounded border hover:bg-slate-50">
             <span x-text="mode === 'compare' ? '🔄 切换' : '↔ 对照'"></span>
@@ -84,7 +81,6 @@
     <div class="article-mobile-actions">
       <button @click="history.back()">返回</button>
       <button @click="copyArticle()" x-text="copyBtnText.replace('📋 ', '').replace('✅ ', '')"></button>
-      <button @click="toggleTheme()"><span x-text="themeIcon"></span> 主题</button>
     </div>
 
     <!-- Body -->
@@ -501,7 +497,6 @@
 
         // 视图模式（手机端）
         viewMode: 'cn',  // cn | en | both
-        themeIcon: '🌗',
 
         // 段落编辑
         showEditPara: false,
@@ -537,9 +532,6 @@
 
 
         async init() {
-          // 主题图标
-          const cur = window.appTheme.getThemePreference();
-          this.themeIcon = cur === 'dark' ? '☀️' : (cur === 'light' ? '🌒' : '🌗');
           this.mode = window.innerWidth < 1024 ? 'cn' : 'compare';
           this.iframeLoaded = false;
           this.iframeFailed = false;
@@ -1029,13 +1021,6 @@
             console.error(e);
             this.flash('❌ 重新应用失败：' + e.message, 5000);
           }
-        },
-
-        // ---- 主题 ----
-        toggleTheme() {
-          const next = window.appTheme.toggleTheme();
-          this.themeIcon = next === 'dark' ? '☀️' : (next === 'light' ? '🌒' : '🌗');
-          this.flash('主题：' + (next === 'auto' ? '跟随系统' : (next === 'dark' ? '深色' : '浅色')));
         },
 
         // ---- 未入库英文词高亮 ----

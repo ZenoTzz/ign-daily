@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" class="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +8,7 @@
   <script defer src="assets/alpine.min.js"></script>
   <link rel="stylesheet" href="assets/style.css?v=20260616theme2">
   <link rel="stylesheet" href="assets/workspace-ui.css?v=20260711refactor1">
-  <script src="assets/app.js?v=20260709serverauth1"></script>
+  <script src="assets/app.js?v=20260713darkonly1"></script>
   <script>
     tailwind.config = { theme: { extend: { colors: { brand: { 600:'#a01620',700:'#7e1219' }}}}}
   </script>
@@ -21,7 +21,6 @@
       <div class="max-w-5xl mx-auto px-4 py-3 flex items-center gap-3">
         <a href="index.html" class="text-slate-500 hover:text-brand-600">←</a>
         <h1 class="text-lg font-bold">📅 历史归档</h1>
-        <button @click="window.appTheme.toggleTheme()" class="text-slate-500 hover:text-brand-600 text-sm ml-auto" title="主题切换">🌗</button>
       </div>
     </header>
 

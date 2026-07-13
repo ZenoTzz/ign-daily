@@ -6,14 +6,14 @@
   <title>词库工作台 — IGN Daily</title>
   <link rel="stylesheet" href="assets/style.css?v=20260713dict2">
   <link rel="stylesheet" href="assets/dict-workbench.css?v=20260713dict2">
-  <script src="assets/app.js?v=20260713dict2"></script>
+  <script src="assets/app.js?v=20260713darkonly1"></script>
   <script defer src="assets/alpine.min.js"></script>
 </head>
 <body class="dict-page">
   <div x-data="dictWorkbench()" x-init="init()" x-cloak>
     <header class="dict-topbar">
       <a class="dict-brand" href="index.html"><span class="ign-mark">IGN</span><span>IGN Daily</span></a>
-      <div class="dict-top-actions"><span class="save-state" x-text="saveState"></span><button class="icon-button" @click="window.appTheme.toggleTheme()" aria-label="切换主题">☀</button></div>
+      <div class="dict-top-actions"><span class="save-state" x-text="saveState"></span></div>
     </header>
 
     <main class="dict-shell">

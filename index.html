@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" class="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -48,7 +48,7 @@
   <link rel="stylesheet" href="assets/home.css?v=20260710redesign1">
   <link rel="stylesheet" href="assets/workspace-ui.css?v=20260711loginfix1">
   <script defer src="assets/exceljs.min.js"></script>
-  <script defer src="assets/app.js?v=20260713activejob1"></script>
+  <script defer src="assets/app.js?v=20260713darkonly1"></script>
   <script defer src="assets/alpine.min.js"></script>
   <link rel="stylesheet" href="assets/compliance.css?v=20260710beian2">
   <script defer src="assets/compliance.js?v=20260709beian1"></script>
@@ -194,9 +194,6 @@
           </button>
           <button @click="refreshAll()" :disabled="loading" class="nav-btn desktop-utility" title="刷新" aria-label="刷新">
             <svg><use href="#icon-refresh"/></svg>
-          </button>
-          <button @click="toggleTheme()" class="nav-btn desktop-utility" title="主题切换" aria-label="主题切换">
-            <span x-text="themeIcon"></span>
           </button>
           <button @click="showSettings = true" class="nav-btn desktop-utility" title="设置" aria-label="设置">
             <svg><use href="#icon-settings"/></svg>
@@ -536,7 +533,6 @@
         <a href="learning.html" class="fab-item"><svg width="14" height="14"><use href="#icon-chart"/></svg> 学习</a>
         <a href="usage.html" class="fab-item"><svg width="14" height="14"><use href="#icon-chart"/></svg> API 用量</a>
         <a href="calendar.html" class="fab-item"><svg width="14" height="14"><use href="#icon-calendar"/></svg> 游戏日历</a>
-        <button @click="toggleTheme(); fabOpen=false" class="fab-item"><span x-text="themeIcon"></span> 主题</button>
       </div>
     </div>
 
