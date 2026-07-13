@@ -21,6 +21,7 @@
   <link rel="stylesheet" href="assets/style.css?v=20260616theme2">
   <link rel="stylesheet" href="assets/article-dark.css?v=20260616theme2">
   <link rel="stylesheet" href="assets/workspace-ui.css?v=20260711refactor1">
+  <link rel="stylesheet" href="assets/article-workbench.css?v=20260713article1">
   <script src="assets/app.js?v=20260713darkonly1"></script>
   <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
   <script>
@@ -33,54 +34,38 @@
 </head>
 <body class="workspace-page antialiased">
   <div x-data="articleData()" x-init="init()" class="min-h-screen flex flex-col">
-    <!-- Header -->
-    <header class="bg-white border-b shrink-0">
-      <div class="px-4 py-2 flex items-center justify-between">
-        <div class="flex items-center gap-3 min-w-0">
-          <a href="index.html" class="text-slate-500 hover:text-brand-600 shrink-0">← 返回</a>
-          <h1 class="font-semibold text-sm sm:text-base truncate" x-text="article?.cn_title || '加载中...'"></h1>
+    <header class="article-topbar"><div class="article-topbar-inner">
+      <a href="index.html" class="article-brand"><span>IGN</span><b>IGN Daily</b></a>
+      <nav><a href="index.html">工作台</a><a href="dict.html">词库</a><a href="learning.html">学习</a><a href="usage.html">用量</a><a href="calendar.html">日历</a></nav>
+    </div></header>
+
+    <section class="article-intro" x-show="article">
+      <a href="index.html#queue" class="article-back">← 返回文章队列</a>
+      <div class="article-intro-row">
+        <div class="article-title-block">
+          <h1 x-text="article?.cn_title || '加载中…'"></h1>
+          <p class="article-subtitle" x-show="article?.subtitle" x-text="article?.subtitle"></p>
+          <p class="article-en-title" x-show="article?.en_title" x-text="article?.en_title"></p>
+          <div class="article-meta"><span>译文</span><span x-text="article?.translated_at || '时间未记录'"></span><span x-show="translatorLabel(article)" x-text="translatorLabel(article)"></span><span class="status" x-text="needsManualReview() ? '待复核' : '已完成'"></span></div>
         </div>
-        <div class="article-header-actions flex items-center gap-2 shrink-0">
-          <!-- 桌面端以下不显示原文视图：手机只保留中文译文 -->
-          <select x-model="viewMode" class="hidden text-xs px-2 py-1 rounded border">
-            <option value="cn">中文</option>
-            <option value="en">原文</option>
-            <option value="both">双语</option>
-          </select>
-          <!-- 桌面端显示所有按钮 -->
-          <a x-show="article?.url" :href="article?.url" target="_blank" rel="noopener"
-            class="hidden lg:inline text-xs text-slate-500 hover:text-brand-600">🔗 IGN</a>
-          <button @click="mode = mode === 'compare' ? 'cn' : 'compare'"
-            class="hidden lg:inline-flex text-xs px-2 py-1 rounded border hover:bg-slate-50">
-            <span x-text="mode === 'compare' ? '🔄 切换' : '↔ 对照'"></span>
-          </button>
-          <button @click="openPolish()"
-            class="article-desktop-action text-xs px-2 py-1 rounded bg-amber-100 text-amber-800 hover:bg-amber-200 border border-amber-300">
-            <span x-text="polishStatus"></span>
-          </button>
-          <button @click="reapplyDict()"
-            class="article-desktop-action text-xs px-2 py-1 rounded bg-blue-50 text-blue-700 hover:bg-blue-100 border border-blue-200"
-            title="按最新词库重新扫描译文、替换中文名">
-            🔄 重新应用词库
-          </button>
-          <button x-show="needsManualReview()" @click="approveManualReview()"
-            class="article-desktop-action text-xs px-2 py-1 rounded bg-red-50 text-red-700 hover:bg-red-100 border border-red-200"
-            title="确认这篇草稿可作为正式译文发布">
-            ✅ 人工放行
-          </button>
-          <button @click="copyArticle()"
-            class="article-desktop-action text-xs px-2 py-1 rounded bg-emerald-50 text-emerald-700 hover:bg-emerald-100 border border-emerald-200"
-            title="复制中文全文（自动全角标点，去 markdown）">
-            <span x-text="copyBtnText"></span>
-          </button>
+        <div class="article-toolbar">
+          <button @click="openPolish()" x-text="polishStatus"></button>
+          <button @click="reapplyDict()">重新应用词库</button>
+          <button @click="copyArticle()" x-text="copyBtnText"></button>
+          <button @click="showFeedbackModal=true">反馈问题</button>
+          <a x-show="article?.url" :href="article?.url" target="_blank" rel="noopener">打开 IGN 原文</a>
+          <button x-show="needsManualReview()" class="danger" @click="approveManualReview()">人工放行</button>
         </div>
       </div>
-    </header>
+      <nav class="article-mode-tabs" aria-label="阅读模式"><button @click="mode='cn'" :class="{active:mode==='cn'}">译文</button><button @click="mode='en'" :class="{active:mode==='en'}">原文</button><button @click="mode='compare'" :class="{active:mode==='compare'}">对照</button></nav>
+    </section>
 
     <!-- Mobile primary actions stay compact and never cover article text. -->
     <div class="article-mobile-actions">
-      <button @click="history.back()">返回</button>
-      <button @click="copyArticle()" x-text="copyBtnText.replace('📋 ', '').replace('✅ ', '')"></button>
+      <button @click="mode='cn'" :class="{active:mode==='cn'}">译文</button>
+      <button @click="mode='en'" :class="{active:mode==='en'}">原文</button>
+      <button @click="mode='compare'" :class="{active:mode==='compare'}">对照</button>
+      <button @click="copyArticle()">复制</button>
     </div>
 
     <!-- Body -->
@@ -193,7 +178,7 @@
          class="fixed inset-0 bg-black/40 flex items-center justify-center z-40 p-4"
          @click.self="showFeedbackModal=false">
       <div class="bg-white rounded-xl p-5 max-w-md w-full">
-        <h3 class="text-base font-bold mb-3">👎 反馈问题</h3>
+        <h3 class="text-base font-bold mb-3">反馈问题</h3>
         <textarea x-model="feedbackInput" rows="4" placeholder="什么地方译得不好？希望怎么调整？"
           class="w-full px-3 py-2 border rounded-lg text-sm"></textarea>
         <div class="flex gap-2 mt-3 justify-end">
@@ -209,7 +194,7 @@
          x-text="toast"></div>
 
     <div x-show="article" class="flex-1 min-h-0 article-reader-layout">
-      <!-- Two-pane: 左译文 / 右原文iframe -->
+      <!-- Two-pane: 左译文 / 右侧提取后的英文原文 -->
       <div x-show="mode === 'compare'" class="reader-grid h-full">
         <!-- 左：中文译文（按段落对照） -->
         <div class="reader-pane cn">
@@ -222,36 +207,17 @@
               <span x-show="translatorLabel(article)" x-text="` · ${translatorLabel(article)}`"></span>
             </p>
 
-            <!-- AI 极简总结 -->
-            <div x-show="article?.opus_summary" x-cloak
-                 class="article-summary-card bg-gradient-to-br from-amber-50 to-orange-50 border-l-4 border-amber-400 p-3 mb-4 rounded">
-              <div class="flex items-start gap-2">
-                <span class="text-amber-600 text-sm font-bold">🎯</span>
-                <div class="flex-1">
-                  <div class="flex items-center gap-2 mb-1">
-                    <div class="text-xs text-amber-700 font-medium">极简总结（AI 生成）</div>
-                    <button @click="copyOpusSummary()"
-                            class="text-xs px-2 py-0.5 rounded bg-amber-100 text-amber-800 hover:bg-amber-200 border border-amber-300"
-                            title="复制 70-80 字总结">
-                      <span x-text="summaryBtnText"></span>
-                    </button>
-                  </div>
-                  <p class="text-sm text-slate-700 leading-relaxed" x-text="article?.opus_summary"></p>
-                </div>
-              </div>
-            </div>
-
             <!-- 评分条 -->
             <div class="feedback-bar mb-4">
-              <button :class="feedback === 'good' ? 'active' : ''" @click="submitFeedback('good')">👍 不错</button>
-              <button :class="feedback === 'bad' ? 'active' : ''" @click="submitFeedback('bad')">👎 有问题</button>
+              <button :class="feedback === 'good' ? 'active' : ''" @click="submitFeedback('good')">翻译准确</button>
+              <button :class="feedback === 'bad' ? 'active' : ''" @click="submitFeedback('bad')">需要调整</button>
               <span x-show="feedbackComment" class="text-xs text-slate-500 self-center ml-2" x-text="`：${feedbackComment}`"></span>
             </div>
 
             <!-- 图片面板 -->
             <div x-show="article?.images?.length > 0" x-cloak class="bg-slate-50 border rounded-lg mb-4">
               <div class="p-2 border-b flex items-center justify-between">
-                <div class="text-sm font-semibold">📸 文章配图 (<span x-text="article?.images?.length"></span>)</div>
+                <div class="text-sm font-semibold">文章配图 (<span x-text="article?.images?.length"></span>)</div>
                 <div class="flex gap-1">
                   <button @click="showImagesPanel = !showImagesPanel" class="text-xs text-slate-500 hover:text-brand-600">
                     <span x-text="showImagesPanel ? '收起' : '展开'"></span>
@@ -259,7 +225,7 @@
                   <button @click="downloadAllImages()" :disabled="imageDownloading"
                     class="text-xs px-2 py-0.5 bg-brand-600 text-white rounded disabled:bg-slate-300"
                     title="打包 ZIP 下载所有图片">
-                    <span x-show="!imageDownloading">⬇ 打包下载</span>
+                    <span x-show="!imageDownloading">打包下载</span>
                     <span x-show="imageDownloading" x-text="`打包中 ${imageProgress}/${article?.images?.length}`"></span>
                   </button>
                 </div>
@@ -286,7 +252,7 @@
                  class="bg-amber-50 border border-amber-200 rounded-lg p-3 mb-4">
               <div class="flex items-center justify-between mb-2">
                 <h3 class="text-sm font-semibold text-amber-900">
-                  📝 本文新词候选 (<span x-text="article?.pending_dict?.length"></span>)
+                  本文新词候选 (<span x-text="article?.pending_dict?.length"></span>)
                 </h3>
                 <span class="text-xs text-amber-700">你决定是否入库</span>
               </div>
@@ -326,11 +292,11 @@
                       <div class="flex gap-1 shrink-0">
                         <button @click="approvePending(i)"
                           class="px-2 py-1 bg-green-600 text-white rounded text-xs hover:bg-green-700">
-                          ✅ 入库
+                          入库
                         </button>
                         <button @click="ignorePending(i)"
                           class="px-2 py-1 border border-slate-300 text-slate-600 rounded text-xs hover:bg-slate-100">
-                          🗑 忽略
+                          忽略
                         </button>
                       </div>
                     </div>
@@ -340,11 +306,11 @@
               <div x-show="article?.pending_dict?.length > 1" class="mt-2 flex gap-2">
                 <button @click="approveAllPending()"
                   class="px-2 py-1 bg-green-600 text-white rounded text-xs hover:bg-green-700">
-                  ✅✅ 全部入库
+                  全部入库
                 </button>
                 <button @click="ignoreAllPending()"
                   class="px-2 py-1 border text-slate-600 rounded text-xs hover:bg-slate-100">
-                  🗑 全部忽略
+                  全部忽略
                 </button>
               </div>
             </div>
@@ -352,7 +318,7 @@
               <div class="para-row" :class="{'mobile-hide-en': viewMode==='cn', 'mobile-hide-cn': viewMode==='en'}">
                 <div class="para-cn-wrap">
                   <p class="para-cn" x-html="highlightMissEn(paragraphCn(p))"></p>
-                  <button class="para-edit-btn" @click="openEditPara(idx)" title="编辑该段译文">✏️</button>
+                  <button class="para-edit-btn" @click="openEditPara(idx)" title="编辑该段译文">编辑</button>
                 </div>
                 <p class="para-en lg:block" :class="{'lg:hidden': viewMode==='cn' || viewMode==='en'}" x-text="p.en"></p>
               </div>
@@ -360,26 +326,12 @@
           </div>
         </div>
 
-        <!-- 右：IGN 原文 iframe（可能被IGN拒绝） -->
-        <div class="reader-pane en p-0 relative">
-          <div x-show="!iframeLoaded && !iframeFailed" class="absolute inset-0 flex items-center justify-center text-slate-400 text-sm">
-            正在尝试加载 IGN 原网页...
-          </div>
-          <div x-show="iframeFailed" class="p-4">
-            <div class="bg-amber-50 border border-amber-200 text-amber-800 rounded-lg p-3 text-sm mb-3">
-              ⚠️ IGN 不允许在 iframe 中嵌入。下方显示的是抓取的英文原文段落（与左侧译文一一对应）。
-              <a x-show="article?.url" :href="article?.url" target="_blank" class="underline">在新标签打开IGN原文</a>
-            </div>
-            <h2 class="text-xl font-bold mb-1" x-text="article?.en_title"></h2>
-            <template x-for="(p, idx) in article?.paragraphs || []" :key="idx">
-              <p class="mb-3 leading-relaxed text-sm text-slate-700" x-text="p.en"></p>
-            </template>
-          </div>
-          <iframe x-show="!iframeFailed && article?.url" :src="article?.url"
-            class="w-full h-full border-0"
-            @load="iframeLoaded = true"
-            @error="iframeFailed = true"
-            sandbox="allow-same-origin allow-scripts allow-forms allow-popups"></iframe>
+        <!-- 右：从 sources 缓存提取的英文原文，与译文逐段对应。 -->
+        <div class="reader-pane en extracted-source">
+          <div class="source-pane-head"><strong>英文原文（提取）</strong><span x-text="`${article?.paragraphs?.length || 0} 段`"></span></div>
+          <template x-for="(p, idx) in article?.paragraphs || []" :key="idx">
+            <div class="source-paragraph"><span x-text="idx + 1"></span><p x-text="p.en"></p></div>
+          </template>
         </div>
       </div>
 
@@ -393,31 +345,19 @@
             <span x-text="`翻译于 ${article?.translated_at || ''}`"></span>
             <span x-show="translatorLabel(article)" x-text="` · ${translatorLabel(article)}`"></span>
           </p>
-          <!-- AI 极简总结 -->
-          <div x-show="article?.opus_summary" x-cloak
-                 class="article-summary-card bg-gradient-to-br from-amber-50 to-orange-50 border-l-4 border-amber-400 p-3 mb-4 rounded">
-            <div class="flex items-start gap-2">
-              <span class="text-amber-600 text-sm font-bold">🎯</span>
-              <div class="flex-1">
-                <div class="flex items-center gap-2 mb-1">
-                  <div class="text-xs text-amber-700 font-medium">极简总结（AI 生成）</div>
-                  <button @click="copyOpusSummary()"
-                          class="text-xs px-2 py-0.5 rounded bg-amber-100 text-amber-800 hover:bg-amber-200 border border-amber-300"
-                          title="复制 70-80 字总结">
-                    <span x-text="summaryBtnText"></span>
-                  </button>
-                </div>
-                <p class="text-sm text-slate-700 leading-relaxed" x-text="article?.opus_summary"></p>
-              </div>
-            </div>
-          </div>
           <template x-for="(p, idx) in article?.paragraphs || []" :key="idx">
             <div class="para-cn-wrap">
               <p class="para-cn mb-4 leading-relaxed" x-html="highlightMissEn(paragraphCn(p))"></p>
-              <button class="para-edit-btn" @click="openEditPara(idx)" title="编辑该段译文">✏️</button>
+              <button class="para-edit-btn" @click="openEditPara(idx)" title="编辑该段译文">编辑</button>
             </div>
           </template>
         </div>
+      </div>
+
+      <!-- 仅英文原文模式 -->
+      <div x-show="mode === 'en'" class="reader-pane en extracted-source single-source">
+        <div class="source-pane-head"><strong x-text="article?.en_title || '英文原文'"></strong><span x-text="`${article?.paragraphs?.length || 0} 段`"></span></div>
+        <template x-for="(p, idx) in article?.paragraphs || []" :key="idx"><div class="source-paragraph"><span x-text="idx + 1"></span><p x-text="p.en"></p></div></template>
       </div>
 
       <!-- 润色编辑模式（仅桌面端） -->
@@ -476,9 +416,7 @@
       return {
         article: null,
         error: '',
-        iframeLoaded: false,
-        iframeFailed: false,
-        mode: 'compare',  // compare | cn
+        mode: 'compare',  // compare | cn | en | polish
 
         // 加词相关
         selectionText: '',
@@ -516,8 +454,7 @@
         imageDownloading: false,
         imageProgress: 0,
         // ---- 复制按钮 ----
-        copyBtnText: '📋 复制全文',
-        summaryBtnText: '📋 复制总结',
+        copyBtnText: '复制全文',
         gptCopyBtnText: '🤖 复制GPT包',
         sourceArticle: null,
         // ---- 润色编辑 ----
@@ -525,7 +462,7 @@
         polishDirty: false,
         polishSaving: false,
         polishSavedAt: '',
-        polishStatus: '✏️ 润色',
+        polishStatus: '润色',
         polishExists: false,
         polishSaveTimer: null,
         manualReviewApproving: false,
@@ -533,8 +470,6 @@
 
         async init() {
           this.mode = window.innerWidth < 1024 ? 'cn' : 'compare';
-          this.iframeLoaded = false;
-          this.iframeFailed = false;
           this.polishDirty = false;
           this.polishSaving = false;
           const params = new URLSearchParams(location.search);
@@ -552,15 +487,6 @@
             this.article.pending_dict = (this.article.pending_dict || [])
               .map(c => normalizeDictCandidate(c))
               .filter(c => c.en && c.cn);
-            // 如果没有原文 URL（旧数据缺少 url 字段），直接降级
-            if (!this.article?.url) {
-              this.iframeFailed = true;
-            } else {
-              // 有 url 则 5 秒超时降级
-              setTimeout(() => {
-                if (!this.iframeLoaded) this.iframeFailed = true;
-              }, 5000);
-            }
           } catch (e) {
             if (String(e.message || '').includes('HTTP 404')) {
               this.error = '没有可复核草稿：这篇翻译失败时未生成 translations 草稿，请返回首页重新提交翻译。';
@@ -1706,7 +1632,7 @@
             '</article>'
           ].join('');
 
-          const reset = () => setTimeout(() => { this.copyBtnText = '📋 复制全文'; }, 2000);
+          const reset = () => setTimeout(() => { this.copyBtnText = '复制全文'; }, 2000);
           try {
             if (navigator.clipboard?.write && window.ClipboardItem) {
               await navigator.clipboard.write([
@@ -1718,7 +1644,7 @@
             } else {
               await navigator.clipboard.writeText(text);
             }
-            this.copyBtnText = '✅ 已复制';
+            this.copyBtnText = '已复制';
             reset();
           } catch (e) {
             const holder = document.createElement('div');
@@ -1735,48 +1661,13 @@
             sel.addRange(range);
             try {
               document.execCommand('copy');
-              this.copyBtnText = '✅ 已复制';
+              this.copyBtnText = '已复制';
               reset();
             } catch (err) {
               this.flash('❌ 复制失败：' + (err?.message || err), 3000);
             } finally {
               sel.removeAllRanges();
               document.body.removeChild(holder);
-            }
-          }
-        },
-
-        async copyOpusSummary() {
-          if (!this.article) {
-            this.flash('❌ 译文未加载', 2000);
-            return;
-          }
-          const summary = (this.article.opus_summary || '').trim();
-          if (!summary) {
-            this.flash('⚠️ 该文章暂无 70-80 字总结', 2500);
-            return;
-          }
-          const text = this.normalizePunctuation(summary);
-          const reset = () => setTimeout(() => { this.summaryBtnText = '📋 复制总结'; }, 2000);
-          try {
-            await navigator.clipboard.writeText(text);
-            this.summaryBtnText = '✅ 已复制';
-            reset();
-          } catch (e) {
-            const ta = document.createElement('textarea');
-            ta.value = text;
-            ta.style.position = 'fixed';
-            ta.style.opacity = '0';
-            document.body.appendChild(ta);
-            ta.select();
-            try {
-              document.execCommand('copy');
-              this.summaryBtnText = '✅ 已复制';
-              reset();
-            } catch (err) {
-              this.flash('❌ 复制失败：' + (err?.message || err), 3000);
-            } finally {
-              document.body.removeChild(ta);
             }
           }
         },
@@ -1863,7 +1754,7 @@
                 updated_at: d.updated_at || null,
               };
               this.polishExists = true;
-              this.polishStatus = '✏️ 已润色';
+              this.polishStatus = '已润色';
               if (d.updated_at) {
                 this.polishSavedAt = this.fmtTime(d.updated_at);
               }
@@ -1871,7 +1762,7 @@
               // 没润色版 → 用翻译版预填
               this.fillPolishFromTranslation();
               this.polishExists = false;
-              this.polishStatus = '✏️ 润色';
+              this.polishStatus = '润色';
             }
           } catch (e) {
             this.fillPolishFromTranslation();
@@ -1889,7 +1780,7 @@
           // 1. 本地状态重置
           this.fillPolishFromTranslation();
           this.polishDirty = false;
-          this.polishStatus = '✏️ 润色';
+          this.polishStatus = '润色';
 
           // 2. 删除 GitHub 上的润色文件 + 从 _index.json 中移除
           try {
@@ -2009,7 +1900,7 @@
             await GH.putFile(idxPath, JSON.stringify(idx, null, 2), `polish index: #${this.article.id}`);
             this.polishDirty = false;
             this.polishExists = true;
-            this.polishStatus = '✏️ 已润色';
+            this.polishStatus = '已润色';
             this.polishSavedAt = this.fmtTime(now);
             if (manual) this.flash('✅ 润色已保存');
           } catch (e) {
