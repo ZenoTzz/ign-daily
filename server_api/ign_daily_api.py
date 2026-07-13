@@ -105,6 +105,12 @@ class DictCandidateRequest(BaseModel):
     note: str = Field(default="", max_length=1000)
 
 
+class DictCandidateReviewRequest(BaseModel):
+    cn: str | None = Field(default=None, min_length=1, max_length=240)
+    category: str | None = None
+    note: str | None = Field(default=None, max_length=1000)
+
+
 class ChangePasswordRequest(BaseModel):
     current_password: str = Field(min_length=1, max_length=200)
     new_password: str = Field(min_length=12, max_length=200)
@@ -1434,6 +1440,71 @@ def submit_dict_candidate(payload: DictCandidateRequest, user: sqlite3.Row = Dep
     write_project_file(path, json_text(document), f"dict: propose {en}")
     sync_from_github()
     return {"ok": True, "candidate": candidate, "duplicate": False}
+
+
+@app.get("/dict/candidates")
+def list_dict_candidates(status: str = "pending", user: sqlite3.Row = Depends(current_user)) -> dict[str, Any]:
+    document = read_json(APP_DIR / "data" / "dict_candidates.json", {"version": 1, "candidates": []})
+    dictionary = read_json(APP_DIR / "data" / "dict.json", {})
+    candidates = [item for item in document.get("candidates", []) if isinstance(item, dict)]
+    if status != "all":
+        candidates = [item for item in candidates if item.get("status", "pending") == status]
+    enriched = []
+    for item in candidates:
+        matches = []
+        for category in {"games", "movies_tv", "companies", "people", "media", "terms"}:
+            entry = dictionary.get(category, {}).get(item.get("en"))
+            if entry is not None:
+                value = entry if isinstance(entry, dict) else {"cn": entry}
+                matches.append({"category": category, "cn": value.get("cn", "")})
+        enriched.append({**item, "official_matches": matches, "has_conflict": any(match["cn"] != item.get("cn") for match in matches)})
+    enriched.sort(key=lambda item: item.get("submitted_at", ""), reverse=True)
+    return {"ok": True, "candidates": enriched, "count": len(enriched)}
+
+
+@app.post("/dict/candidates/{candidate_id}/approve")
+def approve_dict_candidate(candidate_id: str, payload: DictCandidateReviewRequest, user: sqlite3.Row = Depends(current_user)) -> dict[str, Any]:
+    path = "data/dict_candidates.json"
+    document = read_json(APP_DIR / path, {"version": 1, "candidates": []})
+    candidates = [item for item in document.get("candidates", []) if isinstance(item, dict)]
+    candidate = next((item for item in candidates if item.get("id") == candidate_id), None)
+    if candidate is None:
+        raise HTTPException(status_code=404, detail="Candidate not found")
+    category = payload.category or candidate.get("category", "terms")
+    if category not in {"games", "movies_tv", "companies", "people", "media", "terms"}:
+        category = "terms"
+    cn = (payload.cn or candidate.get("cn", "")).strip()
+    dictionary = read_json(APP_DIR / "data" / "dict.json")
+    for group in {"games", "movies_tv", "companies", "people", "media", "terms"}:
+        if group != category:
+            dictionary.get(group, {}).pop(candidate["en"], None)
+    entry: dict[str, Any] = {"cn": cn, "source": "user"}
+    note = payload.note if payload.note is not None else candidate.get("note", "")
+    if note:
+        entry["note"] = note
+    dictionary.setdefault(category, {})[candidate["en"]] = entry
+    dictionary.setdefault("_meta", {})["last_updated"] = datetime.now(CST).strftime("%Y-%m-%d")
+    write_project_file("data/dict.json", json_text(dictionary), f"dict: approve {candidate['en']}")
+    candidate.update(status="approved", category=category, cn=cn, note=note, reviewed_at=datetime.now(timezone.utc).isoformat(), reviewed_by=user["username"])
+    document.update(updated_at=datetime.now(timezone.utc).isoformat(), candidates=candidates)
+    write_project_file(path, json_text(document), f"dict: archive approved candidate {candidate['en']}")
+    sync_from_github()
+    return {"ok": True, "candidate": candidate}
+
+
+@app.post("/dict/candidates/{candidate_id}/reject")
+def reject_dict_candidate(candidate_id: str, user: sqlite3.Row = Depends(current_user)) -> dict[str, Any]:
+    path = "data/dict_candidates.json"
+    document = read_json(APP_DIR / path, {"version": 1, "candidates": []})
+    candidates = [item for item in document.get("candidates", []) if isinstance(item, dict)]
+    candidate = next((item for item in candidates if item.get("id") == candidate_id), None)
+    if candidate is None:
+        raise HTTPException(status_code=404, detail="Candidate not found")
+    candidate.update(status="rejected", reviewed_at=datetime.now(timezone.utc).isoformat(), reviewed_by=user["username"])
+    document.update(updated_at=datetime.now(timezone.utc).isoformat(), candidates=candidates)
+    write_project_file(path, json_text(document), f"dict: reject candidate {candidate['en']}")
+    sync_from_github()
+    return {"ok": True, "candidate": candidate}
 
 
 @app.post("/translations/request")

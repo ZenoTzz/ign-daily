@@ -127,6 +127,10 @@ function submitDictCandidate(en, cn, category, note) {
   });
 }
 
+function dictCandidates() {
+  return request('/dict/candidates?status=pending');
+}
+
 function wechatConfig() { return request('/wechat/config'); }
 
 function registerSubscription(templateId) {
@@ -159,6 +163,7 @@ module.exports = {
   jobs,
   dictionary,
   submitDictCandidate,
+  dictCandidates,
   wechatConfig,
   registerSubscription,
   updateAccount

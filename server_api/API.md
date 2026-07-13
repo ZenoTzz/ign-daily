@@ -172,3 +172,11 @@ No new-article or general news notifications are sent.
 `POST /dict/candidates` accepts `{en, cn, category, note}` from the mini program.
 It writes a pending candidate to `data/dict_candidates.json`; it never changes
 the production `data/dict.json` until the candidate is reviewed elsewhere.
+
+`GET /dict/candidates?status=pending` returns candidates with any matching
+official entries and a derived `has_conflict` flag. Review actions are explicit:
+
+- `POST /dict/candidates/{id}/approve` accepts optional `{cn, category, note}`,
+  writes the reviewed term to `data/dict.json`, and archives the candidate.
+- `POST /dict/candidates/{id}/reject` archives the candidate without changing
+  the production dictionary.

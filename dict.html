@@ -1,497 +1,72 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
+<!doctype html>
+<html lang="zh-CN" class="dark">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>词库 — IGN Daily</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>词库工作台 — IGN Daily</title>
+  <link rel="stylesheet" href="assets/style.css?v=20260713dict2">
+  <link rel="stylesheet" href="assets/dict-workbench.css?v=20260713dict2">
+  <script src="assets/app.js?v=20260713dict2"></script>
   <script defer src="assets/alpine.min.js"></script>
-  <link rel="stylesheet" href="assets/style.css?v=20260616theme2">
-  <link rel="stylesheet" href="assets/workspace-ui.css?v=20260711refactor1">
-  <script src="assets/app.js?v=20260709serverauth1"></script>
-  <script>
-    tailwind.config = { theme: { extend: { colors: { brand: { 600:'#a01620',700:'#7e1219' }}}}}
-  </script>
-  <link rel="stylesheet" href="assets/compliance.css?v=20260709beian1">
-  <script defer src="assets/compliance.js?v=20260709beian1"></script>
 </head>
-<body class="workspace-page antialiased">
-  <div x-data="dictData()" x-init="init()" class="min-h-screen">
-    <!-- Header -->
-    <header class="bg-white border-b sticky top-0 z-10">
-      <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-        <div class="flex items-center gap-3">
-          <a href="index.html" class="text-slate-500 hover:text-brand-600">←</a>
-          <h1 class="text-lg font-bold">📖 词库管理</h1>
-          <span class="text-xs text-slate-400" x-show="data" x-text="`v ${data?._meta?.last_updated}`"></span>
-        </div>
-        <div class="flex items-center gap-2">
-          <button @click="window.appTheme.toggleTheme()" class="text-slate-500 hover:text-brand-600 text-sm" title="主题切换">🌗</button>
-          <span x-show="changedKeys.length > 0" class="text-xs text-amber-600">
-            <span x-text="changedKeys.length"></span> 项待保存
-          </span>
-          <button @click="saveAll()" :disabled="changedKeys.length === 0"
-            class="px-3 py-1.5 bg-brand-600 text-white rounded-lg disabled:bg-slate-300 text-xs sm:text-sm">
-            💾 保存
-          </button>
-        </div>
-      </div>
+<body class="dict-page">
+  <div x-data="dictWorkbench()" x-init="init()" x-cloak>
+    <header class="dict-topbar">
+      <a class="dict-brand" href="index.html"><span class="ign-mark">IGN</span><span>IGN Daily</span></a>
+      <div class="dict-top-actions"><span class="save-state" x-text="saveState"></span><button class="icon-button" @click="window.appTheme.toggleTheme()" aria-label="切换主题">☀</button></div>
     </header>
 
-    <main class="max-w-6xl mx-auto px-4 py-4">
-      <!-- Search + filter -->
-      <div class="bg-white rounded-xl border p-3 mb-4 flex flex-col sm:flex-row gap-2">
-        <input type="text" x-model="search" placeholder="🔍 搜索英文/中文..."
-          class="flex-1 px-3 py-2 border rounded-lg text-sm">
-        <div class="flex gap-2 overflow-x-auto">
-          <template x-for="cat in categories" :key="cat.key">
-            <button @click="filterCat = cat.key"
-              :class="filterCat === cat.key ? 'bg-brand-600 text-white' : 'bg-slate-100 text-slate-700'"
-              class="px-3 py-1.5 rounded-lg text-xs whitespace-nowrap">
-              <span x-text="cat.label"></span>
-              <span class="ml-1 opacity-70" x-text="`(${cat.count})`"></span>
-            </button>
-          </template>
+    <main class="dict-shell">
+      <section class="dict-hero">
+        <div><p class="eyebrow">TRANSLATION MEMORY</p><h1>词库工作台</h1><p>先搜索，再编辑；新译名先进入候选审核，不会直接污染正式词库。</p></div>
+        <button class="primary-action" @click="openCandidate()">＋ 提交候选</button>
+      </section>
+
+      <section class="search-panel">
+        <label class="main-search"><span>⌕</span><input x-ref="search" x-model.debounce.150ms="query" @input="page=0" placeholder="搜索英文、中文或备注…"><kbd>⌘ K</kbd></label>
+        <nav class="view-tabs" aria-label="词库视图">
+          <button @click="view='official'" :class="{active:view==='official'}">正式词库 <b x-text="entries.length"></b></button>
+          <button @click="view='pending'" :class="{active:view==='pending'}">待审核 <b x-text="pending.length"></b></button>
+          <button @click="view='conflicts'" :class="{active:view==='conflicts'}">冲突 <b x-text="conflicts.length"></b></button>
+          <button @click="view='insights'" :class="{active:view==='insights'}">词库概览</button>
+        </nav>
+      </section>
+
+      <div class="category-row" x-show="view==='official'">
+        <template x-for="cat in categories" :key="cat.key"><button @click="category=cat.key;page=0" :class="{active:category===cat.key}"><span x-text="cat.label"></span><b x-text="cat.count"></b></button></template>
+      </div>
+
+      <section class="dict-content" x-show="view==='official'">
+        <div class="term-table">
+          <div class="table-head"><span>英文原名</span><span>标准译名</span><span>分类 / 来源</span><span></span></div>
+          <template x-for="entry in pagedEntries" :key="entry.key"><button class="term-row" @click="selectEntry(entry)"><span class="term-en" x-text="entry.en"></span><span class="term-cn" x-text="entry.cn"></span><span class="term-meta"><i x-text="categoryLabel(entry.category)"></i><small x-text="sourceLabel(entry.source)"></small></span><span class="row-arrow">›</span></button></template>
+          <div class="empty-panel" x-show="!loading && !filteredEntries.length">没有找到匹配词条。可以直接提交为候选。</div>
+          <div class="loading-panel" x-show="loading">正在加载词库…</div>
+          <footer class="pager" x-show="filteredEntries.length"><span>显示 <b x-text="pageStart"></b>–<b x-text="pageEnd"></b>，共 <b x-text="filteredEntries.length"></b> 条</span><div><button @click="page=Math.max(0,page-1)" :disabled="page===0">←</button><button @click="page=Math.min(pageCount-1,page+1)" :disabled="page>=pageCount-1">→</button></div></footer>
         </div>
-      </div>
+      </section>
 
-      <!-- Source filter -->
-      <div class="flex gap-1 mb-3 text-xs flex-wrap">
-        <span class="text-slate-500">来源：</span>
-        <template x-for="src in ['all','user','ign_cn','bilibili','consensus','ai_guess']">
-          <button @click="filterSource = src"
-            :class="filterSource === src ? 'bg-slate-700 text-white' : 'bg-slate-100 text-slate-600'"
-            class="px-2 py-0.5 rounded">
-            <span x-text="src"></span>
-          </button>
-        </template>
-      </div>
+      <section class="review-grid" x-show="view==='pending' || view==='conflicts'">
+        <template x-for="item in (view==='conflicts'?conflicts:filteredCandidates)" :key="item.id"><article class="candidate-card" :class="{conflict:item.has_conflict}"><div><span class="status-chip" x-text="item.has_conflict?'与正式词库冲突':'待审核'"></span><h3 x-text="item.en"></h3><p><strong x-text="item.cn"></strong><span x-text="categoryLabel(item.category)"></span></p><small x-text="item.note || '无备注'"></small><div class="conflict-copy" x-show="item.official_matches?.length">正式词库：<span x-text="item.official_matches?.map(x=>x.cn).join(' / ')"></span></div></div><div class="candidate-actions"><button @click="rejectCandidate(item)">驳回</button><button class="approve" @click="reviewCandidate(item)">检查并采纳</button></div></article></template>
+        <div class="empty-panel" x-show="!(view==='conflicts'?conflicts:filteredCandidates).length">这里暂时没有内容。</div>
+      </section>
 
-      <!-- Loading -->
-      <div x-show="!data" class="text-center py-12 text-slate-400">加载中...</div>
-
-      <!-- Table -->
-      <div x-show="data" class="bg-white rounded-xl border overflow-x-auto">
-        <table class="w-full text-sm">
-          <thead class="bg-slate-50 text-xs text-slate-500 uppercase">
-            <tr>
-              <th class="text-left px-3 py-2 w-1/3">英文</th>
-              <th class="text-left px-3 py-2 w-1/3">中文</th>
-              <th class="text-left px-3 py-2 w-24">来源</th>
-              <th class="text-left px-3 py-2 w-24">分类</th>
-              <th class="px-3 py-2 w-12"></th>
-            </tr>
-          </thead>
-          <tbody>
-            <template x-for="entry in pagedEntries" :key="entry.key">
-              <tr class="dict-row border-t" :class="changedKeys.includes(entry.key) ? 'changed' : ''">
-                <td class="font-mono text-xs sm:text-sm" x-text="entry.en"></td>
-                <td>
-                  <input type="text" class="dict-input" :value="entry.cn"
-                    @input="updateCn(entry, $event.target.value)">
-                </td>
-                <td>
-                  <select class="dict-input text-xs" :value="entry.source"
-                    @change="updateSource(entry, $event.target.value)">
-                    <option value="user">user</option>
-                    <option value="ign_cn">ign_cn</option>
-                    <option value="bilibili">bilibili</option>
-                    <option value="consensus">consensus</option>
-                    <option value="ai_guess">ai_guess</option>
-                  </select>
-                </td>
-                <td>
-                  <select class="dict-input text-xs" :value="entry.cat"
-                    @change="moveEntry(entry, $event.target.value)">
-                    <template x-for="cat in ['games','movies_tv','companies','people','media','terms']" :key="cat">
-                      <option :value="cat" :selected="cat === entry.cat" x-text="cat"></option>
-                    </template>
-                  </select>
-                </td>
-                <td>
-                  <button @click="removeEntry(entry)" class="text-red-500 hover:text-red-700 text-sm" title="删除">🗑️</button>
-                </td>
-              </tr>
-            </template>
-          </tbody>
-        </table>
-        <!-- Pagination -->
-        <div class="flex items-center justify-between p-3 border-t text-xs text-slate-500">
-          <span>共 <span x-text="filteredEntries.length"></span> 条 / 总 <span x-text="allEntries.length"></span> 条</span>
-          <div class="flex items-center gap-2">
-            <button @click="page = Math.max(0, page - 1)" :disabled="page === 0"
-              class="px-2 py-1 border rounded disabled:opacity-30">←</button>
-            <span x-text="`${page + 1} / ${Math.ceil(filteredEntries.length / pageSize) || 1}`"></span>
-            <button @click="page = Math.min(Math.ceil(filteredEntries.length / pageSize) - 1, page + 1)"
-              :disabled="(page + 1) * pageSize >= filteredEntries.length"
-              class="px-2 py-1 border rounded disabled:opacity-30">→</button>
-          </div>
-        </div>
-      </div>
+      <section class="insights" x-show="view==='insights'">
+        <div class="stat-grid"><div><b x-text="entries.length"></b><span>正式词条</span></div><div><b x-text="pending.length"></b><span>待审核</span></div><div><b x-text="conflicts.length"></b><span>待处理冲突</span></div><div><b x-text="sourceCounts.user||0"></b><span>人工确认</span></div></div>
+        <article class="cloud-card"><div><h2>词库分布</h2><p>词云仅用于快速观察分类规模，不代替搜索和审核。</p></div><div class="word-cloud"><template x-for="cat in categories.filter(x=>x.key!=='all')" :key="cat.key"><button @click="category=cat.key;view='official'" :style="`font-size:${cloudSize(cat.count)}px`"><span x-text="cat.label"></span><small x-text="cat.count"></small></button></template></div></article>
+      </section>
     </main>
 
-    <!-- Toast -->
-    <div x-show="toast" x-cloak x-transition.opacity
-         class="fixed bottom-4 left-1/2 -translate-x-1/2 bg-slate-900 text-white px-4 py-2 rounded-lg shadow-lg text-sm z-30"
-         x-text="toast"></div>
-
-    <!-- 译文同步预览弹窗 -->
-    <div x-show="showSyncDialog" x-cloak
-         @keydown.escape.window="showSyncDialog=false"
-         class="fixed inset-0 bg-black/50 flex items-center justify-center z-40 p-4"
-         @click.self="showSyncDialog=false">
-      <div class="bg-white rounded-xl max-w-3xl w-full max-h-[85vh] flex flex-col">
-        <div class="p-4 border-b">
-          <h2 class="text-base font-bold mb-1">🔄 词库已保存，是否同步译文？</h2>
-          <p class="text-xs text-slate-500">以下是检测到的需要替换的位置，勾选后点「同步选中项」。</p>
-        </div>
-        <div class="p-3 flex-1 overflow-y-auto space-y-3">
-          <div x-show="syncImpact.length === 0" class="text-center text-slate-400 py-6">
-            未在译文中检测到需要同步的内容。
-          </div>
-          <template x-for="(impact, idx) in syncImpact" :key="`${impact.articleId}-${impact.en}-${idx}`">
-            <div class="border rounded-lg p-2">
-              <div class="flex items-start gap-2">
-                <input type="checkbox" x-model="impact.selected" class="mt-1">
-                <div class="flex-1 min-w-0">
-                  <div class="text-xs text-slate-500 mb-1">
-                    文章 <span class="font-mono" x-text="`#${impact.articleId}`"></span>
-                    | 词条 <span class="font-semibold" x-text="impact.en"></span>
-                    → <span class="text-green-700" x-text="impact.newCn"></span>
-                    <span x-show="impact.oldCn" class="text-slate-400">（原：<span x-text="impact.oldCn"></span>）</span>
-                  </div>
-                  <div class="text-xs space-y-1">
-                    <template x-for="(loc, j) in impact.locations" :key="j">
-                      <div class="bg-slate-50 rounded p-1.5">
-                        <div class="text-slate-400 text-[10px] mb-0.5">段落 <span x-text="loc.paraIdx + 1"></span>:</div>
-                        <div x-html="loc.preview"></div>
-                      </div>
-                    </template>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </template>
-        </div>
-        <div class="p-3 border-t flex justify-between items-center bg-slate-50">
-          <div class="flex gap-2 text-xs">
-            <button @click="toggleAllSync(true)" class="text-slate-600 hover:text-brand-600">全选</button>
-            <button @click="toggleAllSync(false)" class="text-slate-600 hover:text-brand-600">全不选</button>
-            <span class="text-slate-400" x-text="`已选 ${selectedSyncCount} 项`"></span>
-          </div>
-          <div class="flex gap-2">
-            <button @click="showSyncDialog=false" class="px-3 py-1.5 text-slate-500 text-sm">取消（不同步）</button>
-            <button @click="applySyncToTranslations()" :disabled="selectedSyncCount === 0 || syncSaving"
-              class="px-3 py-1.5 bg-brand-600 text-white rounded-lg text-sm disabled:bg-slate-300">
-              <span x-show="!syncSaving">同步选中项 (<span x-text="selectedSyncCount"></span>)</span>
-              <span x-show="syncSaving">同步中...</span>
-            </button>
-          </div>
-        </div>
-      </div>
+    <div class="drawer-backdrop" x-show="drawer" @click.self="closeDrawer()" @keydown.escape.window="closeDrawer()">
+      <aside class="detail-drawer">
+        <button class="drawer-close" @click="closeDrawer()">×</button>
+        <template x-if="drawer==='entry'"><form @submit.prevent="saveEntry()"><p class="eyebrow">OFFICIAL TERM</p><h2 x-text="form.en"></h2><label>标准译名<input x-model="form.cn" required></label><label>分类<select x-model="form.category"><template x-for="cat in categoryKeys"><option :value="cat" x-text="categoryLabel(cat)"></option></template></select></label><label>来源<select x-model="form.source"><option value="user">人工确认</option><option value="ign_cn">IGN 中国</option><option value="bilibili">IGN B站</option><option value="consensus">通行译名</option><option value="ai_guess">AI 待核实</option></select></label><label>备注<textarea x-model="form.note" rows="4" placeholder="可记录命名依据"></textarea></label><button class="drawer-primary" :disabled="saving">保存修改</button></form></template>
+        <template x-if="drawer==='candidate'"><form @submit.prevent="submitCandidate()"><p class="eyebrow">NEW CANDIDATE</p><h2>提交新译名</h2><p class="drawer-help">候选通过审核后才会进入正式词库。</p><label>英文原名<input x-model="form.en" @input="checkDuplicate()" required placeholder="例如 Death Stranding 2"></label><div class="duplicate-warning" x-show="duplicate"><b>已存在相似词条</b><span x-text="duplicate?.en+' → '+duplicate?.cn"></span></div><label>建议译名<input x-model="form.cn" required placeholder="例如 死亡搁浅2"></label><label>分类<select x-model="form.category"><template x-for="cat in categoryKeys"><option :value="cat" x-text="categoryLabel(cat)"></option></template></select></label><label>备注<textarea x-model="form.note" rows="4" placeholder="来源、上下文或采用理由（可选）"></textarea></label><button class="drawer-primary" :disabled="saving">提交候选</button></form></template>
+        <template x-if="drawer==='review'"><form @submit.prevent="approveCandidate()"><p class="eyebrow">REVIEW CANDIDATE</p><h2 x-text="form.en"></h2><label>采纳译名<input x-model="form.cn" required></label><label>分类<select x-model="form.category"><template x-for="cat in categoryKeys"><option :value="cat" x-text="categoryLabel(cat)"></option></template></select></label><label>审核备注<textarea x-model="form.note" rows="4"></textarea></label><div class="duplicate-warning" x-show="selectedCandidate?.official_matches?.length"><b>当前正式译名</b><span x-text="selectedCandidate?.official_matches?.map(x=>x.cn).join(' / ')"></span></div><button class="drawer-primary" :disabled="saving">确认采纳</button></form></template>
+      </aside>
     </div>
+    <div class="dict-toast" x-show="toast" x-transition x-text="toast"></div>
   </div>
-
-  <script>
-    function dictData() {
-      return {
-        data: null,
-        originalData: null,
-        search: '',
-        filterCat: 'all',
-        filterSource: 'all',
-        page: 0,
-        pageSize: 50,
-        changedKeys: [],  // 形如 'games::Final Fantasy Tactics'
-        toast: '',
-
-        // 译文同步模式
-        showSyncDialog: false,
-        syncImpact: [],  // [{ articleId, en, newCn, oldCn, locations: [{paraIdx, preview}], selected }]
-        syncSaving: false,
-        pendingChanges: [],  // 保存词库后的变更详情
-
-        async init() {
-          try {
-            const res = await fetch(`data/dict.json?t=${Date.now()}`);
-            this.data = await res.json();
-            this.originalData = JSON.parse(JSON.stringify(this.data));
-          } catch (e) {
-            console.error(e);
-          }
-        },
-
-        get categories() {
-          if (!this.data) return [];
-          const cats = ['games','movies_tv','companies','people','media','terms'];
-          const counts = { all: 0 };
-          for (const c of cats) {
-            const n = Object.keys(this.data[c] || {}).length;
-            counts[c] = n;
-            counts.all += n;
-          }
-          const labels = { all:'全部', games:'游戏', movies_tv:'影视', companies:'公司', people:'人物', media:'媒体', terms:'术语' };
-          return [
-            { key: 'all', label: labels.all, count: counts.all },
-            ...cats.filter(c => counts[c]).map(c => ({ key: c, label: labels[c], count: counts[c] }))
-          ];
-        },
-
-        get allEntries() {
-          if (!this.data) return [];
-          const cats = ['games','movies_tv','companies','people','media','terms'];
-          const list = [];
-          for (const c of cats) {
-            for (const [en, info] of Object.entries(this.data[c] || {})) {
-              list.push({
-                key: `${c}::${en}`,
-                en, cat: c,
-                cn: info?.cn || '',
-                source: info?.source || ''
-              });
-            }
-          }
-          return list;
-        },
-
-        get filteredEntries() {
-          let list = this.allEntries;
-          if (this.filterCat !== 'all') list = list.filter(e => e.cat === this.filterCat);
-          if (this.filterSource !== 'all') list = list.filter(e => e.source === this.filterSource);
-          if (this.search.trim()) {
-            const q = this.search.trim().toLowerCase();
-            list = list.filter(e => e.en.toLowerCase().includes(q) || e.cn.includes(this.search.trim()));
-          }
-          return list;
-        },
-
-        get pagedEntries() {
-          const start = this.page * this.pageSize;
-          return this.filteredEntries.slice(start, start + this.pageSize);
-        },
-
-        markChanged(key) {
-          if (!this.changedKeys.includes(key)) this.changedKeys.push(key);
-        },
-
-        updateCn(entry, val) {
-          this.data[entry.cat][entry.en].cn = val;
-          this.markChanged(entry.key);
-        },
-
-        updateSource(entry, val) {
-          this.data[entry.cat][entry.en].source = val;
-          this.markChanged(entry.key);
-        },
-
-        moveEntry(entry, newCat) {
-          if (!newCat || newCat === entry.cat) return;
-          if (!this.data[newCat]) this.data[newCat] = {};
-          const value = this.data[entry.cat][entry.en];
-          delete this.data[entry.cat][entry.en];
-          this.data[newCat][entry.en] = value;
-          this.markChanged(entry.key);
-          this.markChanged(`${newCat}::${entry.en}`);
-          this.page = 0;
-        },
-
-        removeEntry(entry) {
-          if (!confirm(`确定删除 "${entry.en}"？`)) return;
-          delete this.data[entry.cat][entry.en];
-          this.markChanged(entry.key);
-        },
-
-        async saveAll() {
-          if (this.changedKeys.length === 0) return;
-          // 1. 记录变更详情（后续扫描译文要用）
-          this.pendingChanges = this.changedKeys.map(key => {
-            const [cat, en] = key.split('::');
-            const newEntry = this.data[cat]?.[en];
-            const oldEntry = this.originalData[cat]?.[en];
-            return {
-              key, cat, en,
-              newCn: newEntry?.cn || null,  // null = 被删除
-              oldCn: oldEntry?.cn || ''
-            };
-          });
-          // 2. 保存词库
-          try {
-            const today = new Date().toISOString().slice(0, 10);
-            this.data._meta.last_updated = today;
-            const json = JSON.stringify(this.data, null, 2);
-            await GH.putFile('data/dict.json', json,
-              `update dict: ${this.changedKeys.length} entries (${today})`);
-            this.flash(`✅ 词库已保存 ${this.changedKeys.length} 项变更，扫描译文中...`);
-            this.changedKeys = [];
-            this.originalData = JSON.parse(JSON.stringify(this.data));
-            // 3. 扫描译文查看是否需要同步
-            await this.scanTranslationImpact();
-          } catch (e) {
-            this.flash('❌ 保存失败：' + e.message, 4000);
-          }
-        },
-
-        async scanTranslationImpact() {
-          // 扫描所有日期下的译文（仅今日+最近7天，避免量过大）
-          this.flash('🔍 扫描译文中...');
-          try {
-            const histRes = await fetch(`data/index-list.json?t=${Date.now()}`);
-            const hist = histRes.ok ? await histRes.json() : [];
-            const recent = hist.slice(0, 7);  // 只扫近7天
-
-            const impacts = [];
-            for (const day of recent) {
-              const date = day.date;
-              try {
-                const idxRes = await fetch(`data/${date}/index.json?t=${Date.now()}`);
-                if (!idxRes.ok) continue;
-                const dayIdx = await idxRes.json();
-                const translated = dayIdx.articles.filter(a => a.translation_status === 'done');
-                // 并发拉取当日译文
-                await Promise.all(translated.map(async (a) => {
-                  const padded = String(a.id).padStart(2, '0');
-                  const trRes = await fetch(`data/${date}/translations/${padded}.json?t=${Date.now()}`);
-                  if (!trRes.ok) return;
-                  const tr = await trRes.json();
-                  for (const change of this.pendingChanges) {
-                    if (!change.newCn) continue;  // 删除不同步
-                    if (change.newCn === change.oldCn) continue;  // 译名没变
-                    const impact = this.findInArticle(tr, change, date, a.id);
-                    if (impact) impacts.push(impact);
-                  }
-                }));
-              } catch (_) {}
-            }
-
-            this.pendingChanges = [];
-            if (impacts.length === 0) {
-              this.flash(`✅ 译文中未检测到需同步的内容`);
-              return;
-            }
-            this.syncImpact = impacts;
-            this.showSyncDialog = true;
-          } catch (e) {
-            console.error(e);
-            this.flash('❌ 扫描失败：' + e.message, 4000);
-          }
-        },
-
-        findInArticle(tr, change, date, articleId) {
-          // 在译文的 paragraphs[].cn 或 paragraphs[].en 里查找 原oldCn 或 en 出现位置
-          const locations = [];
-          const oldCn = change.oldCn;
-          const en = change.en;
-          const newCn = change.newCn;
-          if (!Array.isArray(tr.paragraphs)) return null;
-
-          for (let i = 0; i < tr.paragraphs.length; i++) {
-            const p = tr.paragraphs[i];
-            const cn = p.cn || '';
-            // 优先查找原中文译名（如果有）
-            let matched = false;
-            let preview = '';
-            if (oldCn && oldCn !== newCn && cn.includes(oldCn)) {
-              matched = true;
-              preview = this.makePreview(cn, oldCn, newCn);
-            } else if (cn.includes(en) && !cn.includes(newCn)) {
-              // 译文里还在用英文（没被译）→ 可选同步为中文
-              matched = true;
-              preview = this.makePreview(cn, en, newCn);
-            }
-            if (matched) {
-              locations.push({ paraIdx: i, preview });
-            }
-          }
-          if (locations.length === 0) return null;
-          return {
-            articleId, date, en,
-            newCn, oldCn,
-            locations,
-            selected: true,
-          };
-        },
-
-        makePreview(text, oldStr, newStr) {
-          // 生成高亮预览：oldStr 标红删除线，newStr 标绿下划线
-          const idx = text.indexOf(oldStr);
-          if (idx < 0) return this.escapeHtml(text);
-          const start = Math.max(0, idx - 30);
-          const end = Math.min(text.length, idx + oldStr.length + 30);
-          const before = (start > 0 ? '…' : '') + this.escapeHtml(text.slice(start, idx));
-          const oldHtml = `<span class="bg-red-100 line-through text-red-700">${this.escapeHtml(oldStr)}</span>`;
-          const newHtml = `<span class="bg-green-100 text-green-700">${this.escapeHtml(newStr)}</span>`;
-          const after = this.escapeHtml(text.slice(idx + oldStr.length, end)) + (end < text.length ? '…' : '');
-          return before + oldHtml + newHtml + after;
-        },
-
-        escapeHtml(s) {
-          return s.replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-        },
-
-        get selectedSyncCount() {
-          return this.syncImpact.filter(x => x.selected).length;
-        },
-
-        toggleAllSync(val) {
-          for (const i of this.syncImpact) i.selected = val;
-        },
-
-        async applySyncToTranslations() {
-          const selected = this.syncImpact.filter(x => x.selected);
-          if (selected.length === 0) return;
-          this.syncSaving = true;
-          try {
-            // 按 articleId+date 分组
-            const groups = {};
-            for (const it of selected) {
-              const key = `${it.date}::${it.articleId}`;
-              if (!groups[key]) groups[key] = { date: it.date, articleId: it.articleId, items: [] };
-              groups[key].items.push(it);
-            }
-
-            // 逐个文章更新
-            for (const g of Object.values(groups)) {
-              const padded = String(g.articleId).padStart(2, '0');
-              const path = `data/${g.date}/translations/${padded}.json`;
-              const fresh = await GH.getFile(path);
-              const tr = JSON.parse(fresh.content);
-              for (const it of g.items) {
-                for (const loc of it.locations) {
-                  const p = tr.paragraphs[loc.paraIdx];
-                  if (!p) continue;
-                  const cn = p.cn || '';
-                  if (it.oldCn && it.oldCn !== it.newCn && cn.includes(it.oldCn)) {
-                    p.cn = cn.replaceAll(it.oldCn, it.newCn);
-                  } else if (cn.includes(it.en) && !cn.includes(it.newCn)) {
-                    p.cn = cn.replaceAll(it.en, it.newCn);
-                  }
-                }
-              }
-              await GH.putFile(path, JSON.stringify(tr, null, 2),
-                `sync dict: update #${g.articleId} (${g.items.length} entries)`);
-            }
-            this.flash(`✅ 已同步 ${selected.length} 项到 ${Object.keys(groups).length} 篇译文`);
-            this.showSyncDialog = false;
-            this.syncImpact = [];
-          } catch (e) {
-            this.flash('❌ 同步失败：' + e.message, 5000);
-          } finally {
-            this.syncSaving = false;
-          }
-        },
-
-        flash(msg, ms = 2500) {
-          this.toast = msg;
-          setTimeout(() => { this.toast = ''; }, ms);
-        }
-      }
-    }
-  </script>
-  <footer class="site-compliance-footer" aria-label="备案信息">
-    <div class="site-compliance-inner">
-      <span data-compliance="copyright">Copyright © 2026 IGN Daily</span>
-      <a data-compliance="icp" href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">粤ICP备2026092594号</a>
-    </div>
-  </footer>
+  <script src="assets/dict-workbench.js?v=20260713dict2"></script>
 </body>
 </html>

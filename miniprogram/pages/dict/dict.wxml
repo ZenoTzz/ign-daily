@@ -1,22 +1,10 @@
 <view class="page">
-  <view class="dict-head"><view><view class="page-title">词库</view><view class="page-subtitle">查询已确认译法，提交新译名候选</view></view><button class="add-btn" bindtap="toggleForm">{{showForm ? '取消' : '提交候选'}}</button></view>
-  <view wx:if="{{showForm}}" class="panel add-form">
-    <input class="input" placeholder="英文原名" value="{{en}}" data-field="en" bindinput="onField"/>
-    <input class="input" placeholder="中文译名" value="{{cn}}" data-field="cn" bindinput="onField"/>
-    <picker mode="selector" range="{{categories}}" bindchange="onCategory"><view class="input picker-value">分类：{{categoryLabels[category]}}</view></picker>
-    <input class="input" placeholder="备注（可选）" value="{{note}}" data-field="note" bindinput="onField"/>
-    <view class="page-subtitle">候选不会直接改写正式词库，需要在主站复核后采纳。</view>
-    <button class="btn btn-primary" loading="{{saving}}" disabled="{{saving}}" bindtap="saveTerm">提交审核</button>
-  </view>
+  <view class="dict-head"><view><view class="page-title">词库</view><view class="page-subtitle">快速查询标准译名</view></view><button class="add-btn" bindtap="openForm">＋ 候选</button></view>
   <view class="search-box"><text>⌕</text><input placeholder="搜索英文、中文或备注" value="{{query}}" bindinput="onSearch"/></view>
+  <view class="dict-tabs"><button data-tab="official" class="{{tab==='official'?'active':''}}" bindtap="changeTab">正式词库 {{rows.length}}</button><button data-tab="pending" class="{{tab==='pending'?'active':''}}" bindtap="changeTab">待审核 {{pending.length}}</button></view>
   <view wx:if="{{error}}" class="error-state">{{error}}</view>
   <view wx:if="{{loading && !rows.length}}" class="empty-state">正在加载词库...</view>
-  <view wx:elif="{{!visibleRows.length}}" class="empty-state panel">没有匹配的词条</view>
-  <view wx:else class="dict-list">
-    <view wx:for="{{visibleRows}}" wx:key="en" class="dict-row">
-      <view class="dict-copy"><text class="dict-en">{{item.en}}</text><text class="dict-cn">{{item.cn}}</text><text wx:if="{{item.note}}" class="dict-note">{{item.note}}</text></view>
-      <text class="dict-cat">{{item.category_label}}</text>
-    </view>
-    <view wx:if="{{rows.length > 100}}" class="list-note">为保持流畅，仅显示前100条；可通过搜索定位其他词条。</view>
-  </view>
+  <block wx:elif="{{tab==='official'}}"><view wx:if="{{!visibleRows.length}}" class="empty-state panel">没有匹配词条，可提交候选。</view><view wx:else class="dict-list"><view wx:for="{{visibleRows}}" wx:key="en" class="dict-row"><view class="dict-copy"><text class="dict-en">{{item.en}}</text><text class="dict-cn">{{item.cn}}</text><text wx:if="{{item.note}}" class="dict-note">{{item.note}}</text></view><text class="dict-cat">{{item.category_label}}</text></view></view></block>
+  <block wx:else><view wx:if="{{!visiblePending.length}}" class="empty-state panel">没有待审核候选。</view><view wx:else class="candidate-list"><view wx:for="{{visiblePending}}" wx:key="id" class="candidate-row {{item.has_conflict?'conflict':''}}"><view class="candidate-top"><text class="dict-en">{{item.en}}</text><text class="candidate-state">{{item.has_conflict?'冲突':'待审核'}}</text></view><text class="dict-cn">{{item.cn}}</text><text wx:if="{{item.note}}" class="dict-note">{{item.note}}</text><text wx:if="{{item.has_conflict}}" class="conflict-note">正式词库已有不同译名，请在主站处理</text></view></view></block>
 </view>
+<view wx:if="{{showForm}}" class="sheet-mask" bindtap="closeForm"><view class="candidate-sheet" catchtap="stopBubble"><view class="sheet-handle"></view><view class="sheet-head"><view><view class="sheet-title">提交候选</view><view class="page-subtitle">审核通过后才进入正式词库</view></view><button class="sheet-close" bindtap="closeForm">×</button></view><input class="input" placeholder="英文原名" value="{{en}}" data-field="en" bindinput="onField"/><view wx:if="{{duplicate}}" class="duplicate-warning">已存在：{{duplicate.en}} → {{duplicate.cn}}</view><input class="input" placeholder="建议译名" value="{{cn}}" data-field="cn" bindinput="onField"/><picker mode="selector" range="{{categories}}" bindchange="onCategory"><view class="input picker-value">分类：{{categoryLabels[category]}}</view></picker><textarea class="input note-input" placeholder="来源、上下文或理由（可选）" value="{{note}}" data-field="note" bindinput="onField"/><button class="submit-btn" loading="{{saving}}" disabled="{{saving}}" bindtap="saveTerm">提交审核</button></view></view>
