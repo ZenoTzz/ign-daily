@@ -22,6 +22,7 @@
   <link rel="stylesheet" href="assets/article-dark.css?v=20260616theme2">
   <link rel="stylesheet" href="assets/workspace-ui.css?v=20260711refactor1">
   <link rel="stylesheet" href="assets/article-workbench.css?v=20260713article1">
+  <link rel="stylesheet" href="assets/article-fidelity.css?v=20260713article2">
   <script src="assets/app.js?v=20260713darkonly1"></script>
   <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
   <script>
@@ -35,7 +36,7 @@
 <body class="workspace-page antialiased">
   <div x-data="articleData()" x-init="init()" class="min-h-screen flex flex-col">
     <header class="article-topbar"><div class="article-topbar-inner">
-      <a href="index.html" class="article-brand"><span>IGN</span><b>IGN Daily</b></a>
+      <div class="article-topbar-left"><a href="index.html" class="article-brand"><span>IGN</span><b>IGN Daily</b></a><div class="article-date-nav"><a x-show="prevArticle" :href="articleLink(prevArticle)">←</a><span x-text="new URLSearchParams(location.search).get('date')"></span><a x-show="nextArticle" :href="articleLink(nextArticle)">→</a></div></div>
       <nav><a href="index.html">工作台</a><a href="dict.html">词库</a><a href="learning.html">学习</a><a href="usage.html">用量</a><a href="calendar.html">日历</a></nav>
     </div></header>
 
@@ -46,7 +47,7 @@
           <h1 x-text="article?.cn_title || '加载中…'"></h1>
           <p class="article-subtitle" x-show="article?.subtitle" x-text="article?.subtitle"></p>
           <p class="article-en-title" x-show="article?.en_title" x-text="article?.en_title"></p>
-          <div class="article-meta"><span>译文</span><span x-text="article?.translated_at || '时间未记录'"></span><span x-show="translatorLabel(article)" x-text="translatorLabel(article)"></span><span class="status" x-text="needsManualReview() ? '待复核' : '已完成'"></span></div>
+          <div class="article-meta"><span>来源：IGN</span><span x-text="article?.translated_at || '时间未记录'"></span><span x-show="translatorLabel(article)" x-text="translatorLabel(article)"></span><span class="status" x-text="needsManualReview() ? '待复核' : '已完成'"></span></div>
         </div>
         <div class="article-toolbar">
           <button @click="openPolish()" x-text="polishStatus"></button>
@@ -196,9 +197,18 @@
     <div x-show="article" class="flex-1 min-h-0 article-reader-layout">
       <!-- Two-pane: 左译文 / 右侧提取后的英文原文 -->
       <div x-show="mode === 'compare'" class="reader-grid h-full">
+        <aside class="article-media-rail">
+          <div class="media-rail-head"><strong>文章配图</strong><span x-text="article?.images?.length || 0"></span></div>
+          <div class="media-rail-grid" x-show="article?.images?.length">
+            <template x-for="(img, i) in article?.images || []" :key="i"><a :href="imgUrl(img)" target="_blank" rel="noopener"><img :src="imgUrl(img)" :alt="imgAlt(img)" loading="lazy" referrerpolicy="no-referrer"><span x-show="i===0">封面</span></a></template>
+          </div>
+          <div class="media-empty" x-show="!article?.images?.length">本文没有缓存配图</div>
+          <button class="media-download" x-show="article?.images?.length" @click="downloadAllImages()" :disabled="imageDownloading"><span x-show="!imageDownloading">打包下载</span><span x-show="imageDownloading" x-text="`${imageProgress}/${article?.images?.length}`"></span></button>
+        </aside>
         <!-- 左：中文译文（按段落对照） -->
         <div class="reader-pane cn">
           <div class="w-full">
+            <div class="translation-pane-head"><strong>中文译文</strong><span x-text="`共 ${article?.paragraphs?.length || 0} 段`"></span><div><i></i>已修改 <b></b>术语/词库</div></div>
             <h2 class="text-xl font-bold mb-1" x-text="article?.cn_title"></h2>
             <p x-show="article?.subtitle" class="text-base text-slate-600 leading-snug mb-2" x-text="article?.subtitle"></p>
             <p x-show="article?.en_title" class="text-sm text-slate-400 italic mb-1" x-text="article?.en_title"></p>
@@ -212,39 +222,6 @@
               <button :class="feedback === 'good' ? 'active' : ''" @click="submitFeedback('good')">翻译准确</button>
               <button :class="feedback === 'bad' ? 'active' : ''" @click="submitFeedback('bad')">需要调整</button>
               <span x-show="feedbackComment" class="text-xs text-slate-500 self-center ml-2" x-text="`：${feedbackComment}`"></span>
-            </div>
-
-            <!-- 图片面板 -->
-            <div x-show="article?.images?.length > 0" x-cloak class="bg-slate-50 border rounded-lg mb-4">
-              <div class="p-2 border-b flex items-center justify-between">
-                <div class="text-sm font-semibold">文章配图 (<span x-text="article?.images?.length"></span>)</div>
-                <div class="flex gap-1">
-                  <button @click="showImagesPanel = !showImagesPanel" class="text-xs text-slate-500 hover:text-brand-600">
-                    <span x-text="showImagesPanel ? '收起' : '展开'"></span>
-                  </button>
-                  <button @click="downloadAllImages()" :disabled="imageDownloading"
-                    class="text-xs px-2 py-0.5 bg-brand-600 text-white rounded disabled:bg-slate-300"
-                    title="打包 ZIP 下载所有图片">
-                    <span x-show="!imageDownloading">打包下载</span>
-                    <span x-show="imageDownloading" x-text="`打包中 ${imageProgress}/${article?.images?.length}`"></span>
-                  </button>
-                </div>
-              </div>
-              <div x-show="showImagesPanel" class="p-2 grid grid-cols-2 sm:grid-cols-3 gap-2">
-                <template x-for="(img, i) in article?.images || []" :key="i">
-                  <div class="relative group bg-white rounded border overflow-hidden">
-                    <img :src="imgUrl(img)" :alt="imgAlt(img)" class="w-full h-24 object-cover" loading="lazy"
-                         referrerpolicy="no-referrer"
-                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                    <div class="hidden h-24 items-center justify-center text-xs text-slate-400 bg-slate-100">加载失败</div>
-                    <button @click="downloadOneImage(imgUrl(img), i)"
-                      class="absolute bottom-1 right-1 bg-black/60 hover:bg-black/80 text-white rounded text-xs px-2 py-0.5 opacity-0 group-hover:opacity-100">⬇</button>
-                    <a :href="imgUrl(img)" target="_blank" rel="noopener"
-                      class="absolute top-1 right-1 bg-black/60 hover:bg-black/80 text-white rounded text-xs px-1 py-0.5 opacity-0 group-hover:opacity-100" title="原图查看">🔍</a>
-                    <div x-show="i === 0" class="absolute top-1 left-1 bg-amber-500 text-white text-[10px] px-1 rounded">封面</div>
-                  </div>
-                </template>
-              </div>
             </div>
 
             <!-- 待入库候选词面板 -->
@@ -316,6 +293,7 @@
             </div>
             <template x-for="(p, idx) in article?.paragraphs || []" :key="idx">
               <div class="para-row" :class="{'mobile-hide-en': viewMode==='cn', 'mobile-hide-cn': viewMode==='en'}">
+                <span class="para-index" x-text="idx + 1"></span>
                 <div class="para-cn-wrap">
                   <p class="para-cn" x-html="highlightMissEn(paragraphCn(p))"></p>
                   <button class="para-edit-btn" @click="openEditPara(idx)" title="编辑该段译文">编辑</button>
@@ -345,6 +323,7 @@
             <span x-text="`翻译于 ${article?.translated_at || ''}`"></span>
             <span x-show="translatorLabel(article)" x-text="` · ${translatorLabel(article)}`"></span>
           </p>
+          <div class="mobile-media-strip" x-show="article?.images?.length"><template x-for="(img,i) in article?.images || []" :key="i"><a :href="imgUrl(img)" target="_blank"><img :src="imgUrl(img)" :alt="imgAlt(img)"></a></template></div>
           <template x-for="(p, idx) in article?.paragraphs || []" :key="idx">
             <div class="para-cn-wrap">
               <p class="para-cn mb-4 leading-relaxed" x-html="highlightMissEn(paragraphCn(p))"></p>
@@ -359,6 +338,11 @@
         <div class="source-pane-head"><strong x-text="article?.en_title || '英文原文'"></strong><span x-text="`${article?.paragraphs?.length || 0} 段`"></span></div>
         <template x-for="(p, idx) in article?.paragraphs || []" :key="idx"><div class="source-paragraph"><span x-text="idx + 1"></span><p x-text="p.en"></p></div></template>
       </div>
+
+      <nav class="article-sibling-nav" x-show="mode !== 'polish'">
+        <a x-show="prevArticle" :href="articleLink(prevArticle)"><span>← 上一篇</span><b x-text="prevArticle?.cn_title || prevArticle?.en_title"></b></a>
+        <a x-show="nextArticle" :href="articleLink(nextArticle)"><b x-text="nextArticle?.cn_title || nextArticle?.en_title"></b><span>下一篇 →</span></a>
+      </nav>
 
       <!-- 润色编辑模式（仅桌面端） -->
       <div x-show="mode === 'polish'" class="reader-grid polish-grid h-full">
@@ -466,6 +450,8 @@
         polishExists: false,
         polishSaveTimer: null,
         manualReviewApproving: false,
+        prevArticle: null,
+        nextArticle: null,
 
 
         async init() {
@@ -487,6 +473,7 @@
             this.article.pending_dict = (this.article.pending_dict || [])
               .map(c => normalizeDictCandidate(c))
               .filter(c => c.en && c.cn);
+            await this.loadArticleSiblings(date, Number(id));
           } catch (e) {
             if (String(e.message || '').includes('HTTP 404')) {
               this.error = '没有可复核草稿：这篇翻译失败时未生成 translations 草稿，请返回首页重新提交翻译。';
@@ -515,6 +502,23 @@
 
           // 监听选中文本
           this.bindSelection();
+        },
+
+        async loadArticleSiblings(date, id) {
+          try {
+            const res = await fetch(`data/${date}/index.json?t=${Date.now()}`);
+            if (!res.ok) return;
+            const index = await res.json();
+            const articles = index.articles || [];
+            const position = articles.findIndex(item => Number(item.id) === Number(id));
+            this.prevArticle = position > 0 ? articles[position - 1] : null;
+            this.nextArticle = position >= 0 && position < articles.length - 1 ? articles[position + 1] : null;
+          } catch (_) {}
+        },
+
+        articleLink(item) {
+          const date = new URLSearchParams(location.search).get('date');
+          return `article.html?date=${encodeURIComponent(date)}&id=${encodeURIComponent(item?.id || '')}`;
         },
 
         bindSelection() {
