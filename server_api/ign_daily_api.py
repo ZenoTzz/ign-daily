@@ -1230,6 +1230,20 @@ def articles(date: str, user: sqlite3.Row = Depends(current_user)) -> Any:
     return data
 
 
+@app.get("/dates")
+def available_dates(limit: int = 60, user: sqlite3.Row = Depends(current_user)) -> dict[str, Any]:
+    """Return dates that actually have an index, independent of index-list drift."""
+    limit = max(1, min(365, int(limit)))
+    data_root = APP_DIR / "data"
+    dates = []
+    if data_root.exists():
+        for child in data_root.iterdir():
+            if child.is_dir() and re.fullmatch(r"\d{4}-\d{2}-\d{2}", child.name) and (child / "index.json").is_file():
+                dates.append(child.name)
+    dates.sort(reverse=True)
+    return {"ok": True, "dates": dates[:limit], "latest": dates[0] if dates else None}
+
+
 @app.get("/articles/{date}/{article_id}")
 def article(date: str, article_id: int, user: sqlite3.Row = Depends(current_user)) -> Any:
     padded = f"{article_id:02d}"

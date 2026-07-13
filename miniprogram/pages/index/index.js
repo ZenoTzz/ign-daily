@@ -46,7 +46,7 @@ Page({
     jobLabel: '',
     jobIdsText: '',
     jobTimer: null
-    ,todayDate: todayNewsDate(), isToday: true,
+    ,todayDate: todayNewsDate(), latestDate: '', availableDates: [], isToday: true,
     nextTranslationWindow: nextTranslationWindowLabel()
   },
 
@@ -55,6 +55,7 @@ Page({
       wx.redirectTo({ url: '/pages/login/login' });
       return;
     }
+    await this.resolveInitialDate();
     await this.restoreJob();
     await this.loadData();
   },
@@ -80,6 +81,16 @@ Page({
 
   noop() {},
 
+  async resolveInitialDate() {
+    try {
+      const result = await api.dates();
+      const latestDate = result.latest || '';
+      if (!latestDate) return;
+      const date = (result.dates || []).includes(this.data.date) ? this.data.date : latestDate;
+      this.setData({ date, latestDate, availableDates: result.dates || [], todayDate: latestDate, isToday: date >= latestDate });
+    } catch (_) {}
+  },
+
   async loadData() {
     this.setData({ loading: true, error: '' });
     try {
@@ -104,7 +115,7 @@ Page({
       this.setData({
         articles, selectedIds: Array.from(selected),
         submitText: selected.size ? `提交翻译 (${selected.size})` : '提交翻译',
-        isToday: this.data.date >= todayNewsDate(),
+        isToday: this.data.latestDate ? this.data.date >= this.data.latestDate : this.data.date >= todayNewsDate(),
         pendingCount: articles.filter((a) => !['done', 'requested', 'needs_review'].includes(a.translation_status)).length,
         requestedCount: articles.filter((a) => a.translation_status === 'requested').length,
         doneCount: articles.filter((a) => a.translation_status === 'done').length
@@ -258,24 +269,35 @@ Page({
   },
 
   prevDate() {
-    this.setData({ date: shiftDate(this.data.date, -1), selectedIds: [], submitText: '提交翻译' });
+    const dates = this.data.availableDates || [];
+    const index = dates.indexOf(this.data.date);
+    const date = index >= 0 && index < dates.length - 1 ? dates[index + 1] : shiftDate(this.data.date, -1);
+    this.setData({ date, selectedIds: [], submitText: '提交翻译' });
     this.loadData();
   },
 
   nextDate() {
-    if (this.data.date >= todayNewsDate()) return;
-    this.setData({ date: shiftDate(this.data.date, 1), selectedIds: [], submitText: '提交翻译' });
+    const dates = this.data.availableDates || [];
+    const index = dates.indexOf(this.data.date);
+    const next = index > 0 ? dates[index - 1] : shiftDate(this.data.date, 1);
+    if (this.data.latestDate && next > this.data.latestDate) return;
+    if (!this.data.latestDate && this.data.date >= todayNewsDate()) return;
+    this.setData({ date: next, selectedIds: [], submitText: '提交翻译' });
     this.loadData();
   },
 
   today() {
-    this.setData({ date: todayNewsDate(), selectedIds: [], submitText: '提交翻译' });
+    this.setData({ date: this.data.latestDate || todayNewsDate(), selectedIds: [], submitText: '提交翻译' });
     this.loadData();
   },
 
   onDateChange(e) {
     const date = e.detail.value;
-    if (!date || date > todayNewsDate()) return;
+    if (!date || (this.data.latestDate && date > this.data.latestDate)) return;
+    if (this.data.availableDates.length && !this.data.availableDates.includes(date)) {
+      wx.showToast({ title: '该新闻日尚未生成', icon: 'none' });
+      return;
+    }
     this.setData({ date, selectedIds: [], submitText: '提交翻译' });
     this.loadData();
   },

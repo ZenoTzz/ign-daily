@@ -79,6 +79,8 @@ function articles(date) {
   return request(`/articles?date=${encodeURIComponent(date)}`);
 }
 
+function dates() { return request('/dates?limit=90'); }
+
 function article(date, id) {
   return request(`/articles/${encodeURIComponent(date)}/${encodeURIComponent(id)}`);
 }
@@ -150,6 +152,7 @@ module.exports = {
   bindWechat,
   me,
   articles,
+  dates,
   article,
   requestTranslation,
   job,
