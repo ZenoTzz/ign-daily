@@ -68,7 +68,7 @@ html.dark .site-header {
 }
 
 .brand { gap: 10px; flex-wrap: nowrap; min-width: 0; }
-.brand-logo { width: 30px !important; height: 30px !important; flex: 0 0 30px; }
+.brand-logo { display: block; width: 30px !important; height: 30px !important; flex: 0 0 30px; object-fit: contain; }
 .brand-title { color: var(--home-text); font-size: 18px; letter-spacing: -0.02em; }
 .date-nav { min-height: 34px; margin-left: 10px; gap: 9px; flex: 0 0 auto; }
 .date-nav-btn,
