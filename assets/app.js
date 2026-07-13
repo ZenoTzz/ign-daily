@@ -2144,7 +2144,9 @@ function appData() {
         const data = await ServerAPI.listJobs('translation', 10);
         const jobs = data?.jobs || [];
         this.activeJobs = jobs.filter(job => ['queued', 'running'].includes(job.status));
-        this.activeJob = this.activeJobs[0] || jobs[0] || null;
+        // 首页横幅只代表当前仍需关注的任务。历史完成/失败任务留在任务中心，
+        // 不能回填到 activeJob，否则它会跨新闻日永久显示“翻译完成”。
+        this.activeJob = this.activeJobs[0] || null;
         if (this.activeJobs[0]?.id) {
           this.activeJobId = this.activeJobs[0].id;
           localStorage.setItem('ign_active_job_id', this.activeJobId);
