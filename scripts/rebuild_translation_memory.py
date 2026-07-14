@@ -30,6 +30,7 @@ from translation_memory import (
 configure_utf8_stdio()
 CST = timezone(timedelta(hours=8))
 MIN_ALIGNMENT_RATIO = 0.45
+AUTO_APPROVAL_MIN_RATIO = 0.80
 GAP_PENALTY = -0.42
 _CN_QUOTE_RE = re.compile(r"「([^」]+)」")
 _NOISE_MARKERS = (
@@ -221,10 +222,23 @@ def collect_candidates(data_dir: Path = DATA_DIR) -> tuple[list[dict[str, Any]],
                     "polished_at": _source_time(polished),
                     "alignment_ratio": round(ratio, 4),
                 }
-                candidates.append({"kind": "paragraph", "en": english, "cn": chinese, "source": evidence})
+                auto_approve = ratio >= AUTO_APPROVAL_MIN_RATIO
+                candidates.append({
+                    "kind": "paragraph",
+                    "en": english,
+                    "cn": chinese,
+                    "source": evidence,
+                    "auto_approve": auto_approve,
+                })
                 stats["aligned_paragraphs"] += 1
                 for quote_en, quote_cn in quote_candidates(english, chinese):
-                    candidates.append({"kind": "quote", "en": quote_en, "cn": quote_cn, "source": evidence})
+                    candidates.append({
+                        "kind": "quote",
+                        "en": quote_en,
+                        "cn": quote_cn,
+                        "source": evidence,
+                        "auto_approve": auto_approve,
+                    })
                     stats["quote_pairs"] += 1
     return candidates, stats
 
@@ -257,8 +271,12 @@ def build_document(
             continue
         group = grouped.setdefault(identity, {"kind": identity[0], "key": identity[1], "en": candidate["en"], "variants": {}})
         normalized_cn = normalize_chinese(candidate["cn"])
-        variant = group["variants"].setdefault(normalized_cn, {"cn": candidate["cn"], "sources": []})
+        variant = group["variants"].setdefault(
+            normalized_cn,
+            {"cn": candidate["cn"], "sources": [], "auto_approve": False},
+        )
         variant["sources"].append(candidate["source"])
+        variant["auto_approve"] = variant["auto_approve"] or bool(candidate.get("auto_approve", True))
 
     generated: list[dict[str, Any]] = []
     conflicts = 0
@@ -269,15 +287,20 @@ def build_document(
         if len(variants) == 1:
             variant = variants[0]
             sources = sorted(variant["sources"], key=lambda item: (item.get("polished_at") or "", item.get("date") or ""))
+            status = "approved" if variant["auto_approve"] else "candidate"
             generated.append({
                 "key": group["key"],
                 "kind": group["kind"],
                 "en": group["en"],
                 "cn": variant["cn"],
-                "status": "approved",
+                "status": status,
                 "origin": "polished_auto",
-                "approved_by": "user_polish",
-                "approved_at": sources[-1].get("polished_at") or now,
+                **({
+                    "approved_by": "user_polish",
+                    "approved_at": sources[-1].get("polished_at") or now,
+                } if status == "approved" else {
+                    "review_reason": f"alignment_below_{AUTO_APPROVAL_MIN_RATIO:.2f}",
+                }),
                 "active_from": active_from,
                 "updated_at": now,
                 "source": sources[-1],
@@ -304,6 +327,7 @@ def build_document(
             "builder": "rebuild_translation_memory.py",
             "last_rebuilt": now,
             "approved_auto_entries": sum(1 for entry in generated if entry.get("status") == "approved"),
+            "candidate_auto_entries": sum(1 for entry in generated if entry.get("status") == "candidate"),
             "conflicts": conflicts,
             "stats": stats,
         },

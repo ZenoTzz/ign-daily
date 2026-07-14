@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - main
+    paths-ignore:
+      - 'data/**'
   workflow_dispatch:
 
 permissions:
@@ -14,7 +16,29 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  quality:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - name: Install test dependencies
+        run: python -m pip install -r server_api/requirements.txt
+      - name: Run repository checks
+        env:
+          PYTHONPATH: scripts
+        run: |
+          set -euo pipefail
+          python -m unittest discover -s scripts -p 'test_*.py'
+          python -m unittest discover -s server_api -p 'test_*.py'
+          python scripts/test_miniprogram.py
+          python scripts/agent_doctor.py
+
   deploy:
+    needs: quality
     runs-on: ubuntu-latest
     timeout-minutes: 10
     env:
@@ -88,47 +112,30 @@ jobs:
             api_path=\"\$(realpath -m \"\$api_path\")\"
             case "\$server_path" in /srv/*) ;; *) echo 'Refusing unsafe server path.' >&2; exit 2;; esac
             case "\$api_path" in /srv/*) ;; *) echo 'Refusing unsafe API path.' >&2; exit 2;; esac
-            preserve_dir='/tmp/ign-daily-preserve-${GITHUB_SHA}'
-            restore_preserved() {
-              if [ -d \"\$preserve_dir/data\" ]; then
-                sudo rm -rf \"\$server_path/data\"
-                sudo mv \"\$preserve_dir/data\" \"\$server_path/data\"
-              fi
-              if [ -f \"\$preserve_dir/exchange_rates.json\" ]; then
-                sudo mv \"\$preserve_dir/exchange_rates.json\" \"\$server_path/exchange_rates.json\"
-              fi
-              if [ -f \"\$preserve_dir/ign_rss_new.json\" ]; then
-                sudo mv \"\$preserve_dir/ign_rss_new.json\" \"\$server_path/ign_rss_new.json\"
-              fi
-              sudo rm -rf \"\$preserve_dir\"
-            }
-            trap restore_preserved EXIT
+            sudo touch /var/lock/ign-daily-write.lock
+            sudo chown \"\$deploy_user:\$deploy_user\" /var/lock/ign-daily-write.lock
+            sudo chmod 0664 /var/lock/ign-daily-write.lock
+            exec 9>/var/lock/ign-daily-write.lock
+            flock -w 180 9
             rm -rf \"\$deploy_dir\"
-            mkdir -p \"\$deploy_dir\" \"\$preserve_dir\"
-            if [ -d \"\$server_path/data\" ]; then
-              sudo mv \"\$server_path/data\" \"\$preserve_dir/data\"
-            fi
-            if [ -f \"\$server_path/exchange_rates.json\" ]; then
-              sudo mv \"\$server_path/exchange_rates.json\" \"\$preserve_dir/exchange_rates.json\"
-            fi
-            if [ -f \"\$server_path/ign_rss_new.json\" ]; then
-              sudo mv \"\$server_path/ign_rss_new.json\" \"\$preserve_dir/ign_rss_new.json\"
-            fi
+            mkdir -p \"\$deploy_dir\"
             tar -xzf \"\$archive\" -C \"\$deploy_dir\"
             sudo rsync -a --delete \
               --exclude '.git/' \
               --exclude '.env' \
               --exclude 'server_api/.env' \
+              --exclude 'data/' \
+              --exclude 'exchange_rates.json' \
+              --exclude 'ign_rss_new.json' \
               \"\$deploy_dir\"/ \"\$server_path\"/
-            restore_preserved
-            trap - EXIT
-            if [ ! -f \"\$server_path/data/translation-memory.json\" ] && [ -f \"\$deploy_dir/data/translation-memory.json\" ]; then
+            if [ -f \"\$deploy_dir/data/translation-memory.json\" ]; then
               sudo install -o \"\$deploy_user\" -g \"\$deploy_user\" -m 0644 \
                 \"\$deploy_dir/data/translation-memory.json\" \"\$server_path/data/translation-memory.json\"
             fi
             sudo chown -R \"\$deploy_user:\$deploy_user\" \"\$server_path\"
             sudo find \"\$server_path\" -path \"\$server_path/.git\" -prune -o -type d -exec chmod 755 {} +
             sudo find \"\$server_path\" -path \"\$server_path/.git\" -prune -o -type f ! -name '.env' -exec chmod 644 {} +
+            sudo find \"\$server_path/server_api/deploy\" -type f -name '*.sh' -exec chmod 755 {} +
             if [ -f \"\$server_path/.env\" ]; then
               sudo chmod 600 \"\$server_path/.env\"
             fi

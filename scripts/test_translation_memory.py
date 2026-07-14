@@ -86,6 +86,19 @@ class TranslationMemoryTest(unittest.TestCase):
         self.assertEqual(rebuilt["entries"][0]["status"], "conflict")
         self.assertEqual(len(translation_memory.approved_entries(rebuilt)), 0)
 
+    def test_low_confidence_polish_requires_review(self) -> None:
+        candidates = [{
+            "kind": "paragraph",
+            "en": "A complete source paragraph that must not be partially remembered.",
+            "cn": "这是一段需要人工确认的润色译文。",
+            "source": {"date": "2026-07-13", "alignment_ratio": 0.61},
+            "auto_approve": False,
+        }]
+        rebuilt = build_document(document(), candidates, {}, now="2026-07-14T12:00:00+08:00")
+        self.assertEqual(rebuilt["entries"][0]["status"], "candidate")
+        self.assertEqual(rebuilt["_meta"]["candidate_auto_entries"], 1)
+        self.assertEqual(len(translation_memory.approved_entries(rebuilt)), 0)
+
     def test_new_memory_does_not_retroactively_fail_old_translation(self) -> None:
         hit = {"active_from": "2026-07-14T12:00:00+08:00"}
         old = {"translated_at": "2026-07-14T08:20:00+08:00"}

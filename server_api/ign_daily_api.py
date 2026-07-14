@@ -28,6 +28,11 @@ from fastapi import Cookie, Depends, FastAPI, Header, HTTPException, Request, Re
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
 
+try:
+    import fcntl
+except ImportError:  # Windows development and unit tests
+    fcntl = None
+
 
 CST = timezone(timedelta(hours=8))
 DEFAULT_APP_DIR = Path(os.environ.get("IGN_DAILY_REPO_PATH", "/srv/ign-daily")).resolve()
@@ -63,6 +68,7 @@ API_DIR = Path(os.environ.get("IGN_DAILY_API_DIR", DEFAULT_API_DIR)).resolve()
 # the resolved locations once more, without overriding process-level settings.
 load_env_files([APP_DIR / ".env", API_DIR / ".env"])
 DB_PATH = Path(os.environ.get("IGN_DAILY_API_DB", API_DIR / "auth.sqlite3")).resolve()
+WRITE_LOCK_PATH = Path(os.environ.get("IGN_DAILY_WRITE_LOCK", "/var/lock/ign-daily-write.lock"))
 SESSION_COOKIE = "ign_daily_session"
 SESSION_TTL_SECONDS = 60 * 60 * 24 * 14
 PBKDF2_ROUNDS = 210_000
@@ -711,6 +717,35 @@ def validate_json_content(content: str) -> None:
         raise HTTPException(status_code=400, detail=f"Invalid JSON content: {exc}") from exc
 
 
+@contextmanager
+def runtime_write_lock(timeout_seconds: float = 30.0) -> Iterator[None]:
+    """Serialize API file writes with cron jobs and deployments on Linux."""
+    if fcntl is None:
+        yield
+        return
+    try:
+        WRITE_LOCK_PATH.parent.mkdir(parents=True, exist_ok=True)
+        handle = WRITE_LOCK_PATH.open("a+", encoding="utf-8")
+    except OSError as exc:
+        raise HTTPException(status_code=503, detail="Runtime write lock is unavailable") from exc
+    deadline = time.monotonic() + timeout_seconds
+    try:
+        while True:
+            try:
+                fcntl.flock(handle.fileno(), fcntl.LOCK_EX | fcntl.LOCK_NB)
+                break
+            except BlockingIOError:
+                if time.monotonic() >= deadline:
+                    raise HTTPException(status_code=503, detail="Another server write is still running")
+                time.sleep(0.05)
+        yield
+    finally:
+        try:
+            fcntl.flock(handle.fileno(), fcntl.LOCK_UN)
+        finally:
+            handle.close()
+
+
 def write_local_file(target: Path, content: str, expected_sha: str | None = None) -> None:
     """Atomically replace a runtime JSON file and optionally enforce its revision."""
     if expected_sha is not None:
@@ -734,7 +769,8 @@ def write_project_file(path: str, content: str, message: str = "", expected_sha:
     validate_json_content(content)
     if STORAGE_MODE == "github":
         return gh_put_file(path, content, message)
-    write_local_file(target, content, expected_sha)
+    with runtime_write_lock():
+        write_local_file(target, content, expected_sha)
     return {"ok": True, "path": path, "mode": "local", "message": message}
 
 

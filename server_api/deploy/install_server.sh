@@ -34,6 +34,9 @@ sudo apt-get install -y git nginx python3 python3-venv python3-pip curl unzip
 
 sudo mkdir -p "$APP_DIR" "$APP_VENV" "$API_DIR" /var/log/ign-daily /srv/ign-daily-ops
 sudo chown -R "$RUN_USER:$RUN_USER" "$APP_DIR" "$APP_VENV" "$API_DIR" /var/log/ign-daily /srv/ign-daily-ops
+sudo touch /var/lock/ign-daily-write.lock
+sudo chown "$RUN_USER:$RUN_USER" /var/lock/ign-daily-write.lock
+sudo chmod 0664 /var/lock/ign-daily-write.lock
 
 if [ -d "$APP_DIR/.git" ]; then
   sudo -u "$RUN_USER" git -C "$APP_DIR" pull --ff-only origin main
@@ -298,7 +301,7 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 20,50 * * * * /srv/ign-daily-ops/run-api-translation.sh >> /var/log/ign-daily/api-translation.log 2>&1
 20 8 * * * /srv/ign-daily-ops/run-exchange.sh >> /var/log/ign-daily/exchange.log 2>&1
 */30 * * * * /srv/ign-daily-ops/run-balance.sh >> /var/log/ign-daily/balance.log 2>&1
-35 3 * * * $APP_DIR/server_api/deploy/backup_data.sh >> /var/log/ign-daily/backup.log 2>&1
+35 3 * * * /bin/bash $APP_DIR/server_api/deploy/backup_data.sh >> /var/log/ign-daily/backup.log 2>&1
 EOF
 sudo -u "$RUN_USER" crontab /tmp/ign-daily-cron
 rm -f /tmp/ign-daily-cron

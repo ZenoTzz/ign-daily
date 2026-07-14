@@ -29,47 +29,30 @@ try {
   ssh -i $KeyPath -o StrictHostKeyChecking=accept-new -o BatchMode=yes -o ConnectTimeout=15 "${User}@${HostName}" @"
 set -euo pipefail
 deploy_dir="/tmp/ign-daily-static-deploy"
-preserve_dir="/tmp/ign-daily-static-preserve-`$`$"
-restore_preserved() {
-  if [ -d "`$preserve_dir/data" ]; then
-    sudo rm -rf "$ServerPath/data"
-    sudo mv "`$preserve_dir/data" "$ServerPath/data"
-  fi
-  if [ -f "`$preserve_dir/exchange_rates.json" ]; then
-    sudo mv "`$preserve_dir/exchange_rates.json" "$ServerPath/exchange_rates.json"
-  fi
-  if [ -f "`$preserve_dir/ign_rss_new.json" ]; then
-    sudo mv "`$preserve_dir/ign_rss_new.json" "$ServerPath/ign_rss_new.json"
-  fi
-  sudo rm -rf "`$preserve_dir"
-}
-trap restore_preserved EXIT
+sudo touch /var/lock/ign-daily-write.lock
+sudo chown ${User}:${User} /var/lock/ign-daily-write.lock
+sudo chmod 0664 /var/lock/ign-daily-write.lock
+exec 9>/var/lock/ign-daily-write.lock
+flock -w 180 9
 rm -rf "`$deploy_dir"
-mkdir -p "`$deploy_dir" "`$preserve_dir"
-if [ -d "$ServerPath/data" ]; then
-  sudo mv "$ServerPath/data" "`$preserve_dir/data"
-fi
-if [ -f "$ServerPath/exchange_rates.json" ]; then
-  sudo mv "$ServerPath/exchange_rates.json" "`$preserve_dir/exchange_rates.json"
-fi
-if [ -f "$ServerPath/ign_rss_new.json" ]; then
-  sudo mv "$ServerPath/ign_rss_new.json" "`$preserve_dir/ign_rss_new.json"
-fi
+mkdir -p "`$deploy_dir"
 tar -xf /tmp/ign-daily-static.tar -C "`$deploy_dir"
 sudo rsync -a --delete \
   --exclude '.git/' \
   --exclude '.env' \
   --exclude 'server_api/.env' \
+  --exclude 'data/' \
+  --exclude 'exchange_rates.json' \
+  --exclude 'ign_rss_new.json' \
   "`$deploy_dir"/ "$ServerPath"/
-restore_preserved
-trap - EXIT
-if [ ! -f "$ServerPath/data/translation-memory.json" ] && [ -f "`$deploy_dir/data/translation-memory.json" ]; then
+if [ -f "`$deploy_dir/data/translation-memory.json" ]; then
   sudo install -o ${User} -g ${User} -m 0644 \
     "`$deploy_dir/data/translation-memory.json" "$ServerPath/data/translation-memory.json"
 fi
 sudo chown -R ${User}:${User} "$ServerPath"
 sudo find "$ServerPath" -path "$ServerPath/.git" -prune -o -type d -exec chmod 755 {} +
 sudo find "$ServerPath" -path "$ServerPath/.git" -prune -o -type f ! -name '.env' -exec chmod 644 {} +
+sudo find "$ServerPath/server_api/deploy" -type f -name '*.sh' -exec chmod 755 {} +
 if [ -f "$ServerPath/.env" ]; then
   sudo chmod 600 "$ServerPath/.env"
 fi
