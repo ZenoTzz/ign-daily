@@ -73,6 +73,7 @@ def main() -> int:
         "scripts/article_cache.py",
         "scripts/prompt_blocks.py",
         "scripts/translation_memory.py",
+        "scripts/rebuild_translation_memory.py",
         "scripts/check_translation_memory.py",
         "scripts/nightly_style_api.py",
         ".github/workflows/hourly-rss.yml",

@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import json
 import sys
+from datetime import datetime
 from pathlib import Path
 
 from common_paths import DATA_DIR, configure_utf8_stdio
@@ -19,6 +20,29 @@ def load_json(path: Path) -> dict:
     except (OSError, json.JSONDecodeError):
         return {}
     return value if isinstance(value, dict) else {}
+
+
+def parse_time(value: object) -> datetime | None:
+    text = str(value or "").strip()
+    if not text:
+        return None
+    try:
+        return datetime.fromisoformat(text.replace("Z", "+00:00"))
+    except ValueError:
+        return None
+
+
+def hits_active_for_translation(hits: list[dict], translation: dict) -> list[dict]:
+    """Grandfather translations created before a memory rule became active."""
+    translated_at = parse_time(translation.get("translated_at"))
+    if translated_at is None:
+        return hits
+    active: list[dict] = []
+    for hit in hits:
+        active_from = parse_time(hit.get("active_from"))
+        if active_from is None or translated_at >= active_from:
+            active.append(hit)
+    return active
 
 
 def check_date(date: str) -> list[str]:
@@ -38,6 +62,7 @@ def check_date(date: str) -> list[str]:
         if not isinstance(paragraphs_en, list):
             continue
         hits = find_hits(str(value) for value in paragraphs_en)
+        hits = hits_active_for_translation(hits, translation)
         for error in validate_locks(translation, hits):
             errors.append(f"#{article_id:02d}: {error}")
     return errors

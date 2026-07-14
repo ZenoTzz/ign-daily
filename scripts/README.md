@@ -65,8 +65,9 @@ python scripts/translation_memory.py approve --date YYYY-MM-DD --article-id ID -
 | 脚本 | 用途 |
 |---|---|
 | `sync_google_ign_doc.py` | 完成译文 → Google Docs；正常使用 `--incremental` |
-| `import_google_docs_polish.py` | Google Docs 用户润色 → `polished/` |
+| `import_google_docs_polish.py` | Google Docs 用户润色 → `polished/`，并刷新精确句段记忆 |
 | `import_tencent_polish.py` | 历史腾讯文档 fallback |
+| `rebuild_translation_memory.py` | 从已导入润色稿高置信对齐英文锚点；唯一译法批准、冲突译法隔离 |
 | `nightly_polish_diff.py` | 原译/润色差异 → `diff_analysis.json` |
 | `learning_quality.py` | 夜间学习 v2 的段落对齐、词库质量门禁与晋级状态机 |
 | `prepare_codex_learning_review.py` | 把机械证据整理为 Codex 必须语义复核的队列 |

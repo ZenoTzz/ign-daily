@@ -7,6 +7,8 @@ import unittest
 from pathlib import Path
 
 import translation_memory
+from check_translation_memory import hits_active_for_translation
+from rebuild_translation_memory import align_polished, build_document
 
 
 def document(*entries):
@@ -66,7 +68,30 @@ class TranslationMemoryTest(unittest.TestCase):
             saved = json.loads(path.read_text(encoding="utf-8"))
             self.assertEqual(entry["status"], "approved")
             self.assertEqual(saved["entries"][0]["approved_by"], "user")
+            self.assertTrue(saved["entries"][0]["active_from"])
             self.assertEqual(saved["entries"][0]["source"]["article_id"], 1)
+
+    def test_polish_alignment_survives_deleted_noise(self) -> None:
+        before = ["第一段译文。", "需要删除的作者简介。", "第三段译文。"]
+        after = ["第一段润色稿。", "第三段润色稿。"]
+        pairs = align_polished(before, after)
+        self.assertEqual([(left, right) for left, right, _ in pairs], [(0, 0), (2, 1)])
+
+    def test_conflicting_polished_versions_are_quarantined(self) -> None:
+        candidates = [
+            {"kind": "paragraph", "en": "Same source.", "cn": "版本甲。", "source": {"date": "2026-07-12"}},
+            {"kind": "paragraph", "en": "Same source.", "cn": "版本乙。", "source": {"date": "2026-07-13"}},
+        ]
+        rebuilt = build_document(document(), candidates, {}, now="2026-07-14T12:00:00+08:00")
+        self.assertEqual(rebuilt["entries"][0]["status"], "conflict")
+        self.assertEqual(len(translation_memory.approved_entries(rebuilt)), 0)
+
+    def test_new_memory_does_not_retroactively_fail_old_translation(self) -> None:
+        hit = {"active_from": "2026-07-14T12:00:00+08:00"}
+        old = {"translated_at": "2026-07-14T08:20:00+08:00"}
+        new = {"translated_at": "2026-07-14T12:20:00+08:00"}
+        self.assertEqual(hits_active_for_translation([hit], old), [])
+        self.assertEqual(hits_active_for_translation([hit], new), [hit])
 
     def test_conflicting_approved_translations_are_rejected(self) -> None:
         memory = document(

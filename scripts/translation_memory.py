@@ -47,8 +47,8 @@ def memory_key(english: str) -> str:
 def empty_document() -> dict[str, Any]:
     return {
         "_meta": {
-            "schema_version": 1,
-            "description": "Human-approved exact paragraph and quote translations.",
+            "schema_version": 2,
+            "description": "Exact paragraph and quote translations approved directly or through user-polished copies.",
         },
         "entries": [],
     }
@@ -157,6 +157,7 @@ def _hit(paragraph_index: int, entry: dict[str, Any]) -> dict[str, Any]:
         "key": entry["key"],
         "en": entry["en"],
         "cn": entry["cn"],
+        "active_from": entry.get("active_from") or "",
         "source": entry.get("source") or {},
     }
 
@@ -240,6 +241,7 @@ def upsert_approved(
         "source": source or {},
         "approved_by": "user",
         "approved_at": now,
+        "active_from": now,
         "updated_at": now,
         "note": note,
     }

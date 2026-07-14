@@ -68,6 +68,10 @@ newest date. Treat this as a small backfill pass, not a broad rewrite:
 1. Run `python scripts/import_google_docs_polish.py --all` first. Only accept
    high-confidence date/article matches, preserve manual polish files, and use
    the configured Google Docs tabs to backfill missed dates incrementally.
+   The importer also rebuilds exact translation memory from the imported user
+   polish. Unique high-confidence alignments become approved future locks;
+   conflicting polished variants stay quarantined and historical translations
+   are never rewritten.
    If Google Docs import fails or a historical month is missing from
    `data/google-polish-config.json`, run `python scripts/import_tencent_polish.py --all`
    as a compatibility fallback.

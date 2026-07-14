@@ -144,13 +144,13 @@ data/usage/deepseek-balance.json
 - `consensus` 玩家圈公认（待用户确认）
 - `ai_guess` AI推测（必须用户确认）
 
-## translation-memory.json（人工确认句段记忆）
+## translation-memory.json（用户确认句段记忆）
 
 词库负责专名，句段记忆只负责英文完全一致的重复段落或直接引语。它不保存模糊自动替换规则。
 
 ```json
 {
-  "_meta": {"schema_version": 1},
+  "_meta": {"schema_version": 2},
   "entries": [
     {
       "key": "normalized-English SHA-256",
@@ -161,6 +161,7 @@ data/usage/deepseek-balance.json
       "source": {"date": "2026-07-14", "article_id": 1, "article_url": "..."},
       "approved_by": "user",
       "approved_at": "ISO-8601",
+      "active_from": "ISO-8601",
       "updated_at": "ISO-8601",
       "note": ""
     }
@@ -171,7 +172,8 @@ data/usage/deepseek-balance.json
 - 只有 `status=approved` 且中英文均非空的记录参与翻译。
 - `paragraph` 完全匹配可由脚本直接回填；`quote` 完全匹配由模型复用并在发布前验证。
 - 规范化只处理 Unicode 引号、不可见空格和连续空白，不忽略数字、否定词、时态或标点语义。
-- 普通文章润色不会自动写入；必须经过用户明确确认。
+- Google Docs 导回的用户润色终稿会由 `rebuild_translation_memory.py` 自动进行英文锚点校验和有序段落对齐；高置信唯一译法写为 `approved_by=user_polish`。
+- 同一英文出现多个不同润色版本时写为 `status=conflict`，不会自动复用；记忆只从 `active_from` 起约束新译文，不回写历史文章。
 
 ## requests.json（待翻译请求）
 

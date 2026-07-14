@@ -32,6 +32,7 @@ from googleapiclient.discovery import build
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import import_tencent_polish as polish  # noqa: E402
 from common_paths import DATA_DIR, REPO_ROOT, configure_utf8_stdio  # noqa: E402
+from rebuild_translation_memory import rebuild_memory  # noqa: E402
 
 
 DEFAULT_CONFIG = DATA_DIR / "google-polish-config.json"
@@ -322,6 +323,7 @@ def main() -> int:
         f"\nSUMMARY {action}={total_imported} unchanged={total_unchanged} "
         f"matched={total_matched} skipped={total_skipped}"
     )
+    rebuild_memory(dry_run=args.dry_run)
     return 0
 
 

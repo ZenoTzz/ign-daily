@@ -40,7 +40,7 @@ python scripts/codex_job_client.py claim JOB_ID
 - `TRANSLATION_GUIDE.md`
 - `STYLE_PROFILE.md`
 
-运行 `--prep` 时还会读取 `data/translation-memory.json`，但只返回当前文章命中的人工确认记录，不会把历史文章或整份记忆库交给模型。
+运行 `--prep` 时还会读取 `data/translation-memory.json`，但只返回当前文章命中的已批准记录，不会把历史文章或整份记忆库交给模型。批准来源包括用户显式批准，以及从 Google Docs 用户润色终稿高置信对齐后自动生成的记录。
 
 原文和图片以 `sources/NN.json` 为首选。缓存缺失或明显损坏时才运行：
 
@@ -70,7 +70,8 @@ python scripts/translate_pipeline.py YYYY-MM-DD ID --prep
 
 - 完整英文段落完全一致时，后处理脚本会直接复用人工确认译文。
 - 英文直接引语完全一致时，译文必须逐字复用锁定中文；脚本不会对相似引语做猜测替换。
-- 只有 `status=approved` 的记录生效；机器候选和模糊匹配不参与自动复用。
+- 只有 `status=approved` 的记录生效；机器候选、存在多个润色版本的冲突项和模糊匹配不参与自动复用。
+- 记忆项从 `active_from` 起约束新译文，不追溯改写此前已经完成的历史文章。
 - 新记录必须由用户明确确认后通过 `translation_memory.py approve` 加入，普通润色不会静默升级为全局标准。
 
 写入 `data/{date}/translations/NN.json`，文件名两位补零。最低字段集合见 `data/README.md`。
