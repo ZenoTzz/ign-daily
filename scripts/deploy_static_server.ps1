@@ -25,7 +25,9 @@ $archive = Join-Path $env:TEMP "ign-daily-static-$([guid]::NewGuid().ToString('N
 Push-Location $repoRoot
 try {
   git archive --format=tar -o $archive HEAD
+  if ($LASTEXITCODE -ne 0) { throw "git archive failed with exit code $LASTEXITCODE" }
   scp -i $KeyPath -o StrictHostKeyChecking=accept-new -o ConnectTimeout=15 $archive "${User}@${HostName}:/tmp/ign-daily-static.tar"
+  if ($LASTEXITCODE -ne 0) { throw "static archive upload failed with exit code $LASTEXITCODE" }
   ssh -i $KeyPath -o StrictHostKeyChecking=accept-new -o BatchMode=yes -o ConnectTimeout=15 "${User}@${HostName}" @"
 set -euo pipefail
 deploy_dir="/tmp/ign-daily-static-deploy"
@@ -79,6 +81,7 @@ fi
 sudo rm -f "`$api_backup"
 rm -rf "`$deploy_dir" /tmp/ign-daily-static.tar
 "@
+  if ($LASTEXITCODE -ne 0) { throw "remote deployment failed with exit code $LASTEXITCODE" }
 }
 finally {
   Pop-Location
