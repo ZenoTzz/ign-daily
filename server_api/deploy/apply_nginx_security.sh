@@ -40,16 +40,14 @@ site = Path(sys.argv[1])
 snippet = sys.argv[2]
 include = f"    include {snippet};"
 text = site.read_text(encoding="utf-8")
-if include not in text:
-    lines = text.splitlines()
-    for index, line in enumerate(lines):
-        if line.strip().startswith("server_name "):
-            lines.insert(index + 1, "")
-            lines.insert(index + 2, include)
-            break
-    else:
-        raise SystemExit("server_name directive not found")
-    site.write_text("\n".join(lines).rstrip() + "\n", encoding="utf-8")
+lines = [line for line in text.splitlines() if line.strip() != include.strip()]
+server_names = [index for index, line in enumerate(lines) if line.strip().startswith("server_name ")]
+if not server_names:
+    raise SystemExit("server_name directive not found")
+for index in reversed(server_names):
+    lines.insert(index + 1, "")
+    lines.insert(index + 2, include)
+site.write_text("\n".join(lines).rstrip() + "\n", encoding="utf-8")
 PY
 
 nginx -t
