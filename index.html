@@ -287,8 +287,11 @@
               <p>勾选需要翻译的文章后提交到队列；默认等待 Codex 处理，API 仅作备用。</p>
             </div>
             <div class="queue-actions">
-              <button @click="exportSelectedExcel()" :disabled="exportBasket.length === 0" class="btn btn-ghost">
+              <button @click="exportSelectedExcel()" :disabled="exportBasket.length === 0" class="btn btn-ghost export-basket-action">
                 导出篮 <span x-text="exportBasket.length"></span>
+              </button>
+              <button x-show="exportBasket.length > 0" x-cloak @click="clearExportBasket()" class="btn btn-ghost clear-export-action">
+                清空导出篮
               </button>
               <button @click="submitRequest()" :disabled="selected.length === 0" class="btn btn-primary">
                 <svg><use href="#icon-send"/></svg>

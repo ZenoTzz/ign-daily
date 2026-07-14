@@ -463,7 +463,8 @@ html.dark .site-header {
   .panel-heading { align-items: center; flex-direction: row; }
   .panel-heading h2 { font-size: 16px; }
   .panel-heading p { display: none; }
-  .queue-actions .btn:first-child { display: none; }
+  .queue-actions .export-basket-action,
+  .queue-actions .clear-export-action { display: inline-flex; padding-inline: 10px; }
   .queue-actions .btn-primary { display: none; }
   .queue-toolbar { align-items: stretch; gap: 10px; margin-top: 11px; }
   .status-tabs { flex-wrap: nowrap; overflow-x: auto; padding-bottom: 3px; scrollbar-width: none; }
