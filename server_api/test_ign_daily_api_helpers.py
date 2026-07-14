@@ -171,6 +171,29 @@ class PrivateApiFileGuardsTest(unittest.TestCase):
             module.clear_login_failures("127.0.0.1")
             module.enforce_login_rate_limit("127.0.0.1")
 
+    def test_browser_login_never_returns_bearer_token(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            repo = root / "repo"
+            api_dir = root / "api"
+            repo.mkdir()
+            api_dir.mkdir()
+            module = load_api(repo, api_dir, {"IGN_DAILY_STORAGE_MODE": "local"})
+            module.init_db()
+            with module.db() as conn:
+                conn.execute(
+                    "INSERT INTO users (username, password_hash, created_at) VALUES (?, ?, ?)",
+                    ("admin", module.hash_password("correct-password"), 1),
+                )
+                conn.commit()
+            response = types.SimpleNamespace(set_cookie=Mock())
+            payload = types.SimpleNamespace(username="admin", password="correct-password")
+
+            result = module.browser_login(payload, types.SimpleNamespace(client=None), response)
+
+            self.assertEqual(result, {"ok": True, "user": {"username": "admin"}})
+            response.set_cookie.assert_called_once()
+
     def test_codex_job_cannot_complete_before_translation_file_exists(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)

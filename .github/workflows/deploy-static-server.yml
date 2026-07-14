@@ -136,6 +136,7 @@ jobs:
             sudo find \"\$server_path\" -path \"\$server_path/.git\" -prune -o -type d -exec chmod 755 {} +
             sudo find \"\$server_path\" -path \"\$server_path/.git\" -prune -o -type f ! -name '.env' -exec chmod 644 {} +
             sudo find \"\$server_path/server_api/deploy\" -type f -name '*.sh' -exec chmod 755 {} +
+            sudo bash \"\$server_path/server_api/deploy/apply_nginx_security.sh\"
             if [ -f \"\$server_path/.env\" ]; then
               sudo chmod 600 \"\$server_path/.env\"
             fi

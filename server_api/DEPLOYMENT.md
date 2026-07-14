@@ -48,6 +48,11 @@ Fresh installs also schedule this backup every day at 03:35. The backup uses
 SQLite's online backup API and waits for the server write-job lock. Check
 `/var/log/ign-daily/backup.log` after installation.
 
+At 04:10 the server creates a data-only GitHub snapshot from an explicit
+whitelist. It uses a disposable clone, never deletes historical article files,
+and does not copy automation or external-document configuration. Check
+`/var/log/ign-daily/snapshot.log` when diagnosing it.
+
 By default, secrets are not included. To include `.env` files:
 
 ```bash
@@ -91,8 +96,12 @@ sudo systemctl restart ign-daily-api
 Static deployments update both the site tree and the independently running
 API copy under `/srv/ign-daily-api`. Runtime `data/`, `exchange_rates.json`,
 `ign_rss_new.json`, both `.env` files, and the API database are preserved.
-When a new runtime data schema seed is introduced, deployment may create that
-single file only when it is missing; it never overwrites the server copy.
+The versioned `translation-memory.json` is the one controlled data exception.
+
+Nginx denies anonymous access to automation configuration, translation memory,
+learning evidence and usage/balance data. Authenticated pages read those files
+through `/api/files/...`. Browser login uses only an HttpOnly same-origin
+cookie; bearer tokens remain available for the mini program and native clients.
 
 ## Useful checks
 

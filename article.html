@@ -656,17 +656,14 @@
         },
 
         canWriteProject() {
-          return Boolean(
-            (typeof GH !== 'undefined' && GH.canUseServer && GH.canUseServer()) ||
-            localStorage.getItem('gh_token')
-          );
+          return Boolean(typeof GH !== 'undefined' && GH.canUseServer && GH.canUseServer());
         },
 
         writePermissionMessage() {
           if (typeof ServerAPI !== 'undefined' && ServerAPI.enabledByHost && ServerAPI.enabledByHost()) {
             return '请先在首页登录服务器账号';
           }
-          return '未配置 GitHub Token，请在首页右上角设置';
+          return '请在 igndaily.site 登录服务器账号后操作';
         },
 
         // 待入库候选词——本地立即移除 + 后台异步保存

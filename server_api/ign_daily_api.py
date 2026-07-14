@@ -1130,6 +1130,13 @@ def login(payload: LoginRequest, request: Request, response: Response) -> dict[s
     return {"ok": True, "token": token, "user": {"username": payload.username}}
 
 
+@app.post("/auth/browser/login")
+def browser_login(payload: LoginRequest, request: Request, response: Response) -> dict[str, Any]:
+    """Create the same session without exposing its bearer token to JavaScript."""
+    result = login(payload, request, response)
+    return {"ok": True, "user": result["user"]}
+
+
 @app.post("/auth/wechat/login")
 def wechat_login(payload: WeChatLoginRequest) -> dict[str, Any]:
     identity = exchange_wechat_code(payload.code)

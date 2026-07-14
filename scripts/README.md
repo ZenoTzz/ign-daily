@@ -10,8 +10,11 @@
 | `pre_push_check.py` | 翻译发布总校验（含 source alignment） | `python scripts/pre_push_check.py DATE` |
 | `codex_job_client.py` | 查询、认领、更新服务器 Codex job | `python scripts/codex_job_client.py --help` |
 | `git_push.py` | 使用环境中的 PAT 安全 pull/rebase/push | `python scripts/git_push.py` |
+| `snapshot_runtime_to_github.py` | 服务器运行时白名单数据 → GitHub 数据快照 | `python scripts/snapshot_runtime_to_github.py --app-dir /srv/ign-daily` |
 
 `git_push.py` 通过进程环境中的 HTTP header 传递 PAT，不把 token 放进远程 URL。PAT 来自未跟踪的 `.env` 或进程环境。
+
+`snapshot_runtime_to_github.py` 使用一次性 clone，只复制日期目录、词库、日期索引和站点合规信息；不会复制翻译记忆、学习、用量、自动化、Google/Tencent 或部署配置，也不会删除 GitHub 中已有的历史文章。纯数据提交不会触发静态部署。
 
 ## RSS 与 source cache
 

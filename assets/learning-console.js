@@ -14,9 +14,9 @@ function learningConsole() {
 
     async fetchJson(path, fallback = null) {
       try {
-        const response = await fetch(`${path}${path.includes('?') ? '&' : '?'}t=${Date.now()}`, { cache: 'no-store' });
-        if (!response.ok) return fallback;
-        return await response.json();
+        const file = await GH.getFile(path);
+        if (!file?.content) return fallback;
+        return JSON.parse(file.content);
       } catch (_) {
         return fallback;
       }

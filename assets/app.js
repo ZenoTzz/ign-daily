@@ -21,6 +21,11 @@ function toggleTheme() {
 (function(){ try { initDarkMode(); } catch(_){} })();
 window.appTheme = { initDarkMode, getThemePreference, applyTheme, toggleTheme };
 
+// Authentication now uses a same-origin HttpOnly cookie. Purge credentials
+// left by older browser builds so JavaScript can no longer read them.
+['gh_token', 'gh_token_type', 'github_oauth_client_id', 'ign_api_token', 'ign_api_enabled']
+  .forEach(key => localStorage.removeItem(key));
+
 const DICT_CATEGORIES = ['games','movies_tv','companies','people','media','terms'];
 const DICT_SOURCES = ['user','ign_cn','bilibili','consensus','ai_guess'];
 
@@ -60,11 +65,7 @@ const GH = {
     return String(path || '').split('/').map(encodeURIComponent).join('/');
   },
   authHeader() {
-    const token = localStorage.getItem('gh_token') || '';
-    if (!token) return '';
-    const type = localStorage.getItem('gh_token_type') || '';
-    if (type === 'oauth' || /^(gho_|ghu_|ghs_|ghr_)/.test(token)) return `Bearer ${token}`;
-    return `token ${token}`;
+    return '';
   },
 
   async getFile(path) {
@@ -145,38 +146,7 @@ const GH = {
         throw e;
       }
     }
-    if (typeof ServerAPI !== 'undefined' && ServerAPI.enabledByHost()) {
-      throw new Error('请先登录服务器账号');
-    }
-    const token = localStorage.getItem('gh_token');
-    if (!token) throw new Error('未配置 GitHub Token，请在右上角 ⚙️ 设置');
-
-    const existing = await this.getFile(path);
-    const body = {
-      message,
-      content: btoa(unescape(encodeURIComponent(content))),
-      branch: this.branch,
-      ...(existing ? { sha: existing.sha } : {})
-    };
-
-    const res = await fetch(`${this.apiBase}/repos/${this.owner}/${this.repo}/contents/${path}`, {
-      method: 'PUT',
-      headers: {
-        Authorization: this.authHeader(),
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(body)
-    });
-    if (!res.ok) {
-      // 409 sha mismatch → 重试（拿最新sha再PUT）
-      if (res.status === 409 && retry > 0) {
-        await new Promise(r => setTimeout(r, 300));
-        return this.putFile(path, content, message, retry - 1);
-      }
-      const err = await res.json().catch(() => ({}));
-      throw new Error(`PUT ${path} failed: ${res.status} ${err.message || ''}`);
-    }
-    return res.json();
+    throw new Error('请在 igndaily.site 登录服务器账号后操作');
   },
 
   async deleteFile(path, sha, message) {
@@ -186,24 +156,7 @@ const GH = {
         body: JSON.stringify({ sha, message })
       });
     }
-    if (typeof ServerAPI !== 'undefined' && ServerAPI.enabledByHost()) {
-      throw new Error('请先登录服务器账号');
-    }
-    const token = localStorage.getItem('gh_token');
-    if (!token) throw new Error('未配置 GitHub Token，请在右上角 ⚙️ 设置');
-    const res = await fetch(`${this.apiBase}/repos/${this.owner}/${this.repo}/contents/${path}`, {
-      method: 'DELETE',
-      headers: {
-        Authorization: this.authHeader(),
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({ message, sha, branch: this.branch })
-    });
-    if (!res.ok) {
-      const err = await res.json().catch(() => ({}));
-      throw new Error(`DELETE ${path} failed: ${res.status} ${err.message || ''}`);
-    }
-    return res.json();
+    throw new Error('请在 igndaily.site 登录服务器账号后操作');
   },
 
   async dispatchWorkflow(workflowFile, inputs = {}) {
@@ -213,25 +166,7 @@ const GH = {
         body: JSON.stringify({ workflow: workflowFile, inputs })
       });
     }
-    if (typeof ServerAPI !== 'undefined' && ServerAPI.enabledByHost()) {
-      throw new Error('请先登录服务器账号');
-    }
-    const token = localStorage.getItem('gh_token');
-    if (!token) throw new Error('未配置 GitHub Token，请在右上角 ⚙️ 设置');
-    const res = await fetch(`${this.apiBase}/repos/${this.owner}/${this.repo}/actions/workflows/${workflowFile}/dispatches`, {
-      method: 'POST',
-      headers: {
-        Authorization: this.authHeader(),
-        Accept: 'application/vnd.github+json',
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({ ref: this.branch, inputs })
-    });
-    if (!res.ok) {
-      const err = await res.json().catch(() => ({}));
-      throw new Error(`触发 ${workflowFile} 失败: ${res.status} ${err.message || ''}`);
-    }
-    return true;
+    throw new Error('请在 igndaily.site 登录服务器账号后操作');
   }
 };
 
@@ -241,7 +176,7 @@ const ServerAPI = {
     return localStorage.getItem('ign_api_base') || '/api';
   },
   token() {
-    return localStorage.getItem('ign_api_token') || '';
+    return '';
   },
   enabledByHost() {
     const staticHosts = ['zenotzz.github.io', 'localhost', '127.0.0.1'];
@@ -287,7 +222,7 @@ const ServerAPI = {
     throw lastError;
   },
   async login(username, password) {
-    return this.request('/auth/login', {
+    return this.request('/auth/browser/login', {
       method: 'POST',
       body: JSON.stringify({ username, password })
     });
@@ -371,10 +306,6 @@ function appData() {
     accountConfirmPassword: '',
     accountSaving: false,
     accountStatus: '',
-    token: localStorage.getItem('gh_token') || '',
-    oauthClientId: localStorage.getItem('github_oauth_client_id') || '',
-    oauthLoggingIn: false,
-    oauthStatus: '',
     automationConfig: {
       title_translator: 'openclaw',
       fulltext_translator: 'codex',
@@ -603,9 +534,9 @@ function appData() {
       this.learningRules = [];
 
       const [usageResult, ratesResult, learningResult] = await Promise.allSettled([
-        fetch(`data/usage/deepseek/${date}.json?t=${cacheBust}`, { cache: 'no-store' }),
+        GH.getFile(`data/usage/deepseek/${date}.json`).then(file => file?.content ? JSON.parse(file.content) : null),
         fetch(`exchange_rates.json?t=${cacheBust}`, { cache: 'no-store' }),
-        fetch(`data/learning/weekly/latest.json?t=${cacheBust}`, { cache: 'no-store' })
+        GH.getFile('data/learning/weekly/latest.json').then(file => file?.content ? JSON.parse(file.content) : null)
       ]);
 
       let usdToCny = 0;
@@ -616,9 +547,9 @@ function appData() {
         } catch (_) {}
       }
 
-      if (usageResult.status === 'fulfilled' && usageResult.value.ok) {
+      if (usageResult.status === 'fulfilled' && usageResult.value) {
         try {
-          const usage = await usageResult.value.json();
+          const usage = usageResult.value;
           const records = Array.isArray(usage?.records) ? usage.records : [];
           const totals = records.reduce((sum, record) => {
             sum.costUsd += Number(record.estimated_cost_usd || 0);
@@ -637,9 +568,9 @@ function appData() {
         } catch (_) {}
       }
 
-      if (learningResult.status === 'fulfilled' && learningResult.value.ok) {
+      if (learningResult.status === 'fulfilled' && learningResult.value) {
         try {
-          const weekly = await learningResult.value.json();
+          const weekly = learningResult.value;
           const confirmedStatuses = new Set(['confirmed', 'adopted', 'accepted']);
           this.learningRules = (Array.isArray(weekly?.candidates) ? weekly.candidates : [])
             .filter(rule => confirmedStatuses.has(String(rule?.status || '').toLowerCase()))
@@ -1156,20 +1087,6 @@ function appData() {
       if (!silent) this.flash('🔄 已刷新');
     },
 
-    saveToken() {
-      localStorage.setItem('gh_token', this.token.trim());
-      localStorage.removeItem('gh_token_type');
-      this.flash('Token 已保存到本地');
-      this.showSettings = false;
-    },
-
-    clearToken() {
-      localStorage.removeItem('gh_token');
-      localStorage.removeItem('gh_token_type');
-      this.token = '';
-      this.flash('Token 已清除');
-    },
-
     // ---- 一键复制今日摘要（中文标点 + 去 markdown）----
     shouldUseServerApi() {
       return ServerAPI.enabledByHost();
@@ -1197,7 +1114,7 @@ function appData() {
       this.apiStatus = '登录中...';
       try {
         const data = await ServerAPI.login(this.apiUsername.trim(), this.apiPassword);
-        if (data?.token) localStorage.setItem('ign_api_token', data.token);
+        localStorage.removeItem('ign_api_token');
         localStorage.setItem('ign_api_username', this.apiUsername.trim());
         localStorage.setItem('ign_api_enabled', '1');
         this.apiUser = data?.user?.username || this.apiUsername.trim();
@@ -1217,7 +1134,6 @@ function appData() {
       try {
         await ServerAPI.logout();
       } catch (_) {}
-      localStorage.removeItem('ign_api_token');
       localStorage.removeItem('ign_api_enabled');
       this.apiUser = '';
       this.accountCurrentPassword = '';
@@ -1286,13 +1202,6 @@ function appData() {
       } finally {
         this.accountSaving = false;
       }
-    },
-
-    async loginWithGithubOAuth() {
-      const clientId = String(this.oauthClientId || '').trim();
-      if (clientId) localStorage.setItem('github_oauth_client_id', clientId);
-      this.oauthStatus = 'GitHub OAuth cannot run directly from a static page. It needs a tiny proxy/Worker because GitHub blocks browser fetches to OAuth token endpoints.';
-      this.flash('OAuth needs a proxy/Worker; use PAT for now.', 6000);
     },
 
     defaultApiModels() {
@@ -1388,9 +1297,9 @@ function appData() {
 
     async loadAutomationConfig() {
       try {
-        const res = await fetch('data/automation-config.json?t=' + Date.now(), { cache: 'no-store' });
-        if (!res.ok) return;
-        const cfg = await res.json();
+        const file = await GH.getFile('data/automation-config.json');
+        if (!file?.content) return;
+        const cfg = JSON.parse(file.content);
         const apiModels = this.normalizeApiModels(cfg.api_models);
         this.automationConfig = {
           title_translator: cfg.title_translator || 'openclaw',
@@ -1618,7 +1527,7 @@ function appData() {
     },
 
     async triggerRssOnRefresh(force = false) {
-      if (!(GH.canUseServer() || localStorage.getItem('gh_token')) || this.rssTriggering) return false;
+      if (!GH.canUseServer() || this.rssTriggering) return false;
       const key = 'ign_daily_last_rss_dispatch_at';
       const now = Date.now();
       const last = Number(localStorage.getItem(key) || 0);
@@ -2390,7 +2299,7 @@ function appData() {
         this.flash('❌ 译名不能为空', 3000);
         return;
       }
-      if (!(GH.canUseServer() || localStorage.getItem('gh_token'))) {
+      if (!GH.canUseServer()) {
         this.flash('请先登录服务器账号', 4000);
         return;
       }
@@ -2404,13 +2313,13 @@ function appData() {
     ignoreGlobalPending(idx) {
       const c = this.globalPending[idx];
       this.globalPending.splice(idx, 1);
-      if (!(GH.canUseServer() || localStorage.getItem('gh_token'))) return;
+      if (!GH.canUseServer()) return;
       this.pendingQueue.push({ type: 'ignore', candidate: c });
       this.processGlobalQueue();
     },
 
     approveAllGlobal() {
-      if (!(GH.canUseServer() || localStorage.getItem('gh_token'))) {
+      if (!GH.canUseServer()) {
         this.flash('请先登录服务器账号', 4000);
         return;
       }
@@ -2426,7 +2335,7 @@ function appData() {
     ignoreAllGlobal() {
       const all = [...this.globalPending];
       this.globalPending = [];
-      if (!(GH.canUseServer() || localStorage.getItem('gh_token'))) return;
+      if (!GH.canUseServer()) return;
       for (const c of all) this.pendingQueue.push({ type: 'ignore', candidate: c });
       this.processGlobalQueue();
     },

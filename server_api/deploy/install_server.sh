@@ -146,6 +146,8 @@ server {
         try_files \$uri =404;
     }
 
+    include /etc/nginx/snippets/ign-daily-private-data.conf;
+
     location ~* \\.(?:js|css|png|jpg|jpeg|webp|gif|svg|ico|xlsx)$ {
         expires 7d;
         add_header Cache-Control "public";
@@ -158,6 +160,7 @@ server {
 }
 EOF
 sudo mv /tmp/ign-daily-nginx /etc/nginx/sites-available/ign-daily
+sudo bash "$APP_DIR/server_api/deploy/apply_nginx_security.sh"
 sudo rm -f /etc/nginx/sites-enabled/default
 sudo ln -sfn /etc/nginx/sites-available/ign-daily /etc/nginx/sites-enabled/ign-daily
 
@@ -302,6 +305,7 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 20 8 * * * /srv/ign-daily-ops/run-exchange.sh >> /var/log/ign-daily/exchange.log 2>&1
 */30 * * * * /srv/ign-daily-ops/run-balance.sh >> /var/log/ign-daily/balance.log 2>&1
 35 3 * * * /bin/bash $APP_DIR/server_api/deploy/backup_data.sh >> /var/log/ign-daily/backup.log 2>&1
+10 4 * * * cd $APP_DIR && $PY scripts/snapshot_runtime_to_github.py --app-dir $APP_DIR >> /var/log/ign-daily/snapshot.log 2>&1
 EOF
 sudo -u "$RUN_USER" crontab /tmp/ign-daily-cron
 rm -f /tmp/ign-daily-cron

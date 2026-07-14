@@ -745,16 +745,6 @@
 
         </div>
         <div style="height:1px; background:var(--border); margin:1rem 0;"></div>
-        <div x-show="location.hostname !== 'igndaily.site'" class="settings-legacy-fallback">
-        <label>GitHub Personal Access Token</label>
-        <p style="font-size:0.7rem; color:var(--text-muted); margin-bottom:0.5rem;">用于把翻译请求和词库改动提交回仓库。仅保存在本地浏览器。</p>
-        <input type="password" x-model="token" placeholder="ghp_xxx 或 github_pat_xxx">
-        <div style="display:flex; gap:0.5rem; margin-top:0.75rem;">
-          <button @click="saveToken()" class="btn btn-primary">保存</button>
-          <button @click="clearToken()" class="btn btn-ghost">清除</button>
-        </div>
-        </div>
-        <div style="height:1px; background:var(--border); margin:1rem 0;"></div>
         <!-- GitHub OAuth was removed from the UI: a static page cannot safely complete the flow. -->
         <button @click="automationExpanded = !automationExpanded"
                 class="btn btn-ghost"

@@ -55,6 +55,7 @@ sudo chown -R ${User}:${User} "$ServerPath"
 sudo find "$ServerPath" -path "$ServerPath/.git" -prune -o -type d -exec chmod 755 {} +
 sudo find "$ServerPath" -path "$ServerPath/.git" -prune -o -type f ! -name '.env' -exec chmod 644 {} +
 sudo find "$ServerPath/server_api/deploy" -type f -name '*.sh' -exec chmod 755 {} +
+sudo bash "$ServerPath/server_api/deploy/apply_nginx_security.sh"
 if [ -f "$ServerPath/.env" ]; then
   sudo chmod 600 "$ServerPath/.env"
 fi

@@ -36,6 +36,7 @@ igndaily.site server
 - 部署通过 `rsync` 排除项原地保留服务器的 `data/`、`exchange_rates.json`、`ign_rss_new.json`、`.env` 和鉴权数据库，不再临时搬移运行时数据；版本化的 `translation-memory.json` 是唯一受控同步例外。
 - RSS、翻译、汇率等 Actions 当前是手动入口；是否有 schedule 必须直接查看 workflow，不能依据旧文档猜测。
 - GitHub 与服务器不是自动双向复制。发生内容差异时，先确认哪一侧是本次任务的来源，禁止用 `reset --hard` 粗暴解决。
+- 服务器每天通过 `snapshot_runtime_to_github.py` 把白名单运行时内容写成数据快照；该流程使用一次性 worktree、保留 GitHub 历史且不复制自动化或外部文档配置。
 
 ### Google Docs
 
