@@ -78,30 +78,60 @@ def copy_runtime_snapshot(source: Path, destination: Path) -> list[str]:
     return copied
 
 
+def clone_with_retries(url: str, branch: str, checkout: Path, reference: Path | None = None) -> None:
+    command = ["git", "clone", "--depth", "1", "--branch", branch]
+    if reference and reference.is_dir():
+        command.extend(["--reference-if-able", str(reference)])
+    command.extend([url, str(checkout)])
+    last_error = 1
+    for attempt in range(3):
+        shutil.rmtree(checkout, ignore_errors=True)
+        result = run(command, check=False)
+        last_error = result.returncode
+        if last_error == 0:
+            return
+        time.sleep(5 * (attempt + 1))
+    raise RuntimeError(f"runtime snapshot clone failed after 3 attempts: {last_error}")
+
+
 def snapshot(app_dir: Path, *, dry_run: bool = False) -> bool:
     data_dir = app_dir / "data"
     if not data_dir.is_dir():
         raise FileNotFoundError(f"runtime data directory is missing: {data_dir}")
+
+    if dry_run:
+        with tempfile.TemporaryDirectory(prefix="ign-daily-snapshot-dry-") as temporary:
+            with write_lock():
+                copied = copy_runtime_snapshot(data_dir, Path(temporary) / "data")
+            if not copied:
+                raise RuntimeError("snapshot whitelist matched no runtime content")
+            print(f"RUNTIME_SNAPSHOT changed=0 dry_run=1 copied={len(copied)}")
+            return False
 
     settings = load_env(next((path for path in env_paths() if path.exists()), env_paths()[0]))
     token = settings.get("GITHUB_PAT_IGN_DAILY") or os.environ.get("GITHUB_PAT_IGN_DAILY", "")
     owner = settings.get("GITHUB_USER_IGN_DAILY") or os.environ.get("GITHUB_USER_IGN_DAILY", "ZenoTzz")
     repo = os.environ.get("IGN_DAILY_GITHUB_REPO", "ign-daily")
     branch = os.environ.get("IGN_DAILY_GITHUB_BRANCH", "main")
-    if not token and not dry_run:
+    if not token:
         raise RuntimeError("GITHUB_PAT_IGN_DAILY is required for runtime snapshots")
 
     with tempfile.TemporaryDirectory(prefix="ign-daily-snapshot-") as temporary:
         checkout = Path(temporary) / "repo"
-        run(["git", "clone", "--depth", "1", "--branch", branch, f"https://github.com/{owner}/{repo}.git", str(checkout)])
+        clone_with_retries(
+            f"https://github.com/{owner}/{repo}.git",
+            branch,
+            checkout,
+            app_dir / ".git",
+        )
         with write_lock():
             copied = copy_runtime_snapshot(data_dir, checkout / "data")
         if not copied:
             raise RuntimeError("snapshot whitelist matched no runtime content")
         run(["git", "add", "--", "data"], cwd=checkout)
         changed = subprocess.run(["git", "diff", "--cached", "--quiet"], cwd=checkout).returncode != 0
-        if not changed or dry_run:
-            print(f"RUNTIME_SNAPSHOT changed={int(changed)} dry_run={int(dry_run)} copied={len(copied)}")
+        if not changed:
+            print(f"RUNTIME_SNAPSHOT changed=0 dry_run=0 copied={len(copied)}")
             return changed
         run(["git", "config", "user.name", "IGN Daily Server Snapshot"], cwd=checkout)
         run(["git", "config", "user.email", "ign-daily-snapshot@users.noreply.github.com"], cwd=checkout)

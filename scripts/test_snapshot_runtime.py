@@ -4,7 +4,9 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from snapshot_runtime_to_github import copy_runtime_snapshot
+from unittest.mock import patch
+
+from snapshot_runtime_to_github import clone_with_retries, copy_runtime_snapshot
 
 
 class RuntimeSnapshotTest(unittest.TestCase):
@@ -29,6 +31,17 @@ class RuntimeSnapshotTest(unittest.TestCase):
             self.assertTrue((destination / "dict.json").exists())
             self.assertFalse((destination / "automation-config.json").exists())
             self.assertFalse((destination / "google-polish-config.json").exists())
+
+    def test_clone_retries_transient_failures(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            checkout = Path(temporary) / "checkout"
+            results = [
+                type("Result", (), {"returncode": 128})(),
+                type("Result", (), {"returncode": 0})(),
+            ]
+            with patch("snapshot_runtime_to_github.run", side_effect=results) as runner, patch("snapshot_runtime_to_github.time.sleep"):
+                clone_with_retries("https://example.invalid/repo.git", "main", checkout)
+            self.assertEqual(runner.call_count, 2)
 
 
 if __name__ == "__main__":
