@@ -45,6 +45,12 @@ from prompt_blocks import (
     validate_style_check,
 )
 from translate_titles_deepseek import apply_title_dictionary, call_deepseek_response, extract_article_text, extract_json, flatten_dict_terms
+from translation_memory import (
+    apply_paragraph_locks,
+    find_hits as find_memory_hits,
+    prompt_payload as translation_memory_prompt,
+    validate_locks as validate_memory_locks,
+)
 from usage_logger import record_deepseek_usage_safe
 
 
@@ -317,6 +323,9 @@ def hard_checklist(paragraphs: list[str], terms: dict[str, str]) -> dict[str, An
 def build_messages(article: dict[str, Any], paragraphs: list[str], terms: dict[str, str]) -> list[dict[str, str]]:
     user = fulltext_user_payload(article=article, paragraphs=paragraphs, terms=terms)
     user["hard_checklist"] = hard_checklist(paragraphs, terms)
+    memory = translation_memory_prompt(find_memory_hits(paragraphs))
+    if memory:
+        user["translation_memory"] = memory
     return [
         {"role": "system", "content": translation_system_prompt()},
         {"role": "user", "content": stable_json(user)},
@@ -364,6 +373,9 @@ def build_repair_messages(
             "images": [],
         },
     })
+    memory = translation_memory_prompt(find_memory_hits(paragraphs_en))
+    if memory:
+        payload["translation_memory"] = memory
     return [
         {"role": "system", "content": translation_system_prompt()},
         {"role": "user", "content": stable_json(payload)},
@@ -439,6 +451,13 @@ def normalize_paragraphs(result: dict[str, Any], paragraphs_en: list[str]) -> li
 
 def build_chunk_messages(article: dict[str, Any], chunk: list[tuple[int, str]], terms: dict[str, str]) -> list[dict[str, str]]:
     user = chunk_user_payload(article=article, chunk=chunk, terms=terms)
+    hits = find_memory_hits(en for _, en in chunk)
+    for hit in hits:
+        local_index = int(hit["paragraph_index"]) - 1
+        hit["paragraph_index"] = chunk[local_index][0]
+    memory = translation_memory_prompt(hits)
+    if memory:
+        user["translation_memory"] = memory
     return [
         {"role": "system", "content": translation_system_prompt()},
         {"role": "user", "content": stable_json(user)},
@@ -533,6 +552,25 @@ def normalize_translation(article: dict[str, Any], result: dict[str, Any], parag
         "images": result.get("images") if isinstance(result.get("images"), list) else [],
         "style_self_check": result.get("style_self_check"),
     }))))
+
+
+def enforce_translation_memory(data: dict[str, Any], paragraphs_en: list[str]) -> list[str]:
+    """Apply safe full-paragraph locks and validate all exact approved hits."""
+    hits = find_memory_hits(paragraphs_en)
+    apply_paragraph_locks(data, hits)
+    if hits:
+        data["translation_memory"] = {
+            "schema_version": 1,
+            "locked": [
+                {
+                    "paragraph_index": hit["paragraph_index"],
+                    "kind": hit["kind"],
+                    "key": hit["key"],
+                }
+                for hit in hits
+            ],
+        }
+    return validate_memory_locks(data, hits)
 
 
 def trim_summary_to_limit(summary: str, target_max: int = SUMMARY_TARGET_MAX) -> str:
@@ -755,6 +793,7 @@ def translate_date(date: str, limit: int = 2) -> int:
                 require_self_check = False
                 data = normalize_translation(article, {**result, "paragraphs": translate_paragraph_chunks(api_key, model, base_url, article, paragraphs_en, terms, article_date=date)}, paragraphs_en)
             data = enforce_literal_dictionary_terms(data, paragraphs_en, terms)
+            memory_errors = enforce_translation_memory(data, paragraphs_en)
             data["opus_summary"] = trim_summary_to_limit(data.get("opus_summary", ""))
             data["translator"] = "api"
             data["translator_provider"] = "openai-compatible"
@@ -766,6 +805,7 @@ def translate_date(date: str, limit: int = 2) -> int:
                     data["images"] = source["images"]
             set_article_step(article_id, date=date, step="audit", progress=76, message="质量检查")
             audit_issues = check_translation(article=article, paragraphs_en=paragraphs_en, data=data, required_terms=terms)
+            audit_issues.extend({"type": "translation_memory", "detail": error} for error in memory_errors)
             if audit_issues and os.environ.get("TRANSLATOR_FULLTEXT_REPAIR", "1") != "0":
                 require_self_check = False
                 set_article_step(article_id, date=date, step="repair", progress=84, message="修复质检问题")
@@ -777,6 +817,7 @@ def translate_date(date: str, limit: int = 2) -> int:
                     print(f"[REPAIR] fulltext #{article['id']} audit found {len(audit_issues)} issue(s); asking {repair_model} for focused repair")
                     data = repair_translation_once(api_key, repair_model, base_url, article, paragraphs_en, terms, data, audit_issues, date)
                 data = enforce_literal_dictionary_terms(data, paragraphs_en, terms)
+                memory_errors = enforce_translation_memory(data, paragraphs_en)
                 data["opus_summary"] = trim_summary_to_limit(data.get("opus_summary", ""))
                 data["translator"] = "api"
                 data["translator_provider"] = "openai-compatible"
@@ -787,15 +828,19 @@ def translate_date(date: str, limit: int = 2) -> int:
                     if not data.get("images") and isinstance(source.get("images"), list):
                         data["images"] = source["images"]
                 audit_issues = check_translation(article=article, paragraphs_en=paragraphs_en, data=data, required_terms=terms)
+                audit_issues.extend({"type": "translation_memory", "detail": error} for error in memory_errors)
             if audit_issues:
-                doctor = diagnose_audit_failure(
-                    article=article,
-                    paragraphs_en=paragraphs_en,
-                    issues=audit_issues,
-                    api_key=api_key,
-                    model=model,
-                    base_url=base_url,
-                )
+                memory_blocked = any(issue.get("type") == "translation_memory" for issue in audit_issues)
+                doctor = {"verdict": "needs_human", "confidence": "high", "reason": "approved translation memory mismatch"}
+                if not memory_blocked:
+                    doctor = diagnose_audit_failure(
+                        article=article,
+                        paragraphs_en=paragraphs_en,
+                        issues=audit_issues,
+                        api_key=api_key,
+                        model=model,
+                        base_url=base_url,
+                    )
                 if doctor.get("verdict") == "false_positive" and doctor.get("confidence") in {"medium", "high"}:
                     data["audit_doctor"] = doctor
                     print(f"[DOCTOR] fulltext #{article['id']} accepted audit false positive: {doctor.get('reason', '')}")

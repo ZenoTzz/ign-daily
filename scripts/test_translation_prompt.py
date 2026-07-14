@@ -2,8 +2,10 @@
 from __future__ import annotations
 
 import sys
+import json
 import unittest
 from pathlib import Path
+from unittest.mock import patch
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
@@ -14,6 +16,7 @@ from prompt_blocks import (
     translation_system_prompt,
 )
 from api_translation_audit import check_translation
+from translate_fulltext_api import build_messages, enforce_translation_memory
 
 
 class TranslationPromptTests(unittest.TestCase):
@@ -62,6 +65,51 @@ class TranslationPromptTests(unittest.TestCase):
         )
         style_issues = [item for item in issues if item.get("type") == "translation_style_calque"]
         self.assertEqual(len(style_issues), 3)
+
+    def test_fulltext_prompt_only_includes_current_exact_memory_hits(self) -> None:
+        hit = {
+            "paragraph_index": 1,
+            "kind": "quote",
+            "key": "abc",
+            "en": "An exact quote from the current article.",
+            "cn": "人工确认引语。",
+            "source": {},
+        }
+        with patch("translate_fulltext_api.find_memory_hits", return_value=[hit]):
+            messages = build_messages(
+                {"id": 1, "en_title": "Example"},
+                ['He said, "An exact quote from the current article."'],
+                {},
+            )
+        payload = json.loads(messages[1]["content"])
+        locked = payload["translation_memory"]["locked_translations"]
+        self.assertEqual(len(locked), 1)
+        self.assertEqual(locked[0]["required_cn"], "人工确认引语。")
+
+    def test_fulltext_prompt_has_zero_memory_overhead_without_a_hit(self) -> None:
+        with patch("translate_fulltext_api.find_memory_hits", return_value=[]):
+            messages = build_messages(
+                {"id": 1, "en_title": "Example"},
+                ["A new paragraph with no approved historical match."],
+                {},
+            )
+        payload = json.loads(messages[1]["content"])
+        self.assertNotIn("translation_memory", payload)
+
+    def test_api_memory_enforcement_reports_unreused_quote(self) -> None:
+        hit = {
+            "paragraph_index": 1,
+            "kind": "quote",
+            "key": "abc",
+            "en": "An exact quote from the current article.",
+            "cn": "人工确认引语。",
+            "source": {},
+        }
+        data = {"paragraphs": [{"cn": "模型使用了另一种说法。"}]}
+        with patch("translate_fulltext_api.find_memory_hits", return_value=[hit]):
+            errors = enforce_translation_memory(data, ["source"])
+        self.assertEqual(len(errors), 1)
+        self.assertIn("approved quote", errors[0])
 
 
 if __name__ == "__main__":

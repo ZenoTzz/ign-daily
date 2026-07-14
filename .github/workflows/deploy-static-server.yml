@@ -122,6 +122,10 @@ jobs:
               \"\$deploy_dir\"/ \"\$server_path\"/
             restore_preserved
             trap - EXIT
+            if [ ! -f \"\$server_path/data/translation-memory.json\" ] && [ -f \"\$deploy_dir/data/translation-memory.json\" ]; then
+              sudo install -o \"\$deploy_user\" -g \"\$deploy_user\" -m 0644 \
+                \"\$deploy_dir/data/translation-memory.json\" \"\$server_path/data/translation-memory.json\"
+            fi
             sudo chown -R \"\$deploy_user:\$deploy_user\" \"\$server_path\"
             sudo find \"\$server_path\" -path \"\$server_path/.git\" -prune -o -type d -exec chmod 755 {} +
             sudo find \"\$server_path\" -path \"\$server_path/.git\" -prune -o -type f ! -name '.env' -exec chmod 644 {} +

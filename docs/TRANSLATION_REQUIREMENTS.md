@@ -40,6 +40,8 @@ python scripts/codex_job_client.py claim JOB_ID
 - `TRANSLATION_GUIDE.md`
 - `STYLE_PROFILE.md`
 
+运行 `--prep` 时还会读取 `data/translation-memory.json`，但只返回当前文章命中的人工确认记录，不会把历史文章或整份记忆库交给模型。
+
 原文和图片以 `sources/NN.json` 为首选。缓存缺失或明显损坏时才运行：
 
 ```bash
@@ -63,6 +65,13 @@ python scripts/fetch_exchange_rates.py
 ```bash
 python scripts/translate_pipeline.py YYYY-MM-DD ID --prep
 ```
+
+若输出 `Approved translation memory` 命中：
+
+- 完整英文段落完全一致时，后处理脚本会直接复用人工确认译文。
+- 英文直接引语完全一致时，译文必须逐字复用锁定中文；脚本不会对相似引语做猜测替换。
+- 只有 `status=approved` 的记录生效；机器候选和模糊匹配不参与自动复用。
+- 新记录必须由用户明确确认后通过 `translation_memory.py approve` 加入，普通润色不会静默升级为全局标准。
 
 写入 `data/{date}/translations/NN.json`，文件名两位补零。最低字段集合见 `data/README.md`。
 
@@ -106,7 +115,7 @@ python scripts/pre_push_check.py YYYY-MM-DD
 
 `pre_push_check.py` 的 source alignment 为阻断性检查：它会逐段比对 source 与译文中的英文锚点、顺序和中文字段。任何不一致都必须先修复，不能将文章标记为 `done`，也不能同步到 Google Docs 或 GitHub。
 
-`pre_push_check.py` 当前运行四项：译文结构/媒体与标点、金额、标题词库、全文词库。只以最终 `ALL PRE-PUSH CHECKS PASSED` 为通过。
+`pre_push_check.py` 当前运行六项：source alignment、译文结构/媒体与标点、金额、标题词库、全文词库和句段翻译记忆。相同的人工确认英文若没有复用锁定中文，也会阻止发布。只以最终 `ALL PRE-PUSH CHECKS PASSED` 为通过。
 
 以下都不是通过：
 

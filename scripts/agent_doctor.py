@@ -72,6 +72,8 @@ def main() -> int:
         "scripts/pre_push_check.py",
         "scripts/article_cache.py",
         "scripts/prompt_blocks.py",
+        "scripts/translation_memory.py",
+        "scripts/check_translation_memory.py",
         "scripts/nightly_style_api.py",
         ".github/workflows/hourly-rss.yml",
         ".github/workflows/api-translation.yml",
@@ -81,6 +83,7 @@ def main() -> int:
         "data/usage/deepseek/index.json",
         "data/usage/deepseek-balance.json",
         "data/dict.json",
+        "data/translation-memory.json",
         "data/index-list.json",
     ]
     for rel in required:

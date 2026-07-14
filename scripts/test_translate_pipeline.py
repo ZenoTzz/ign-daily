@@ -63,6 +63,60 @@ class PostPipelineTest(unittest.TestCase):
             self.assertEqual(index_path.read_text(encoding="utf-8"), before_index)
             self.assertEqual(index_list_path.read_text(encoding="utf-8"), before_index_list)
 
+    def test_approved_exact_paragraph_is_reused_before_publish(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            day = root / "data" / "2026-07-10"
+            translations = day / "translations"
+            sources = day / "sources"
+            translations.mkdir(parents=True)
+            sources.mkdir(parents=True)
+            english = "This exact paragraph is repeated in another IGN article."
+            source_url = "https://www.ign.com/articles/repeated"
+            (sources / "01.json").write_text(json.dumps({
+                "url": source_url,
+                "paragraphs_en": [english],
+            }), encoding="utf-8")
+            (translations / "01.json").write_text(json.dumps({
+                "id": 1,
+                "url": source_url,
+                "en_title": "Repeated",
+                "cn_title": "重复报道",
+                "cover": "https://images.example/cover.jpg",
+                "images": [{"url": "https://images.example/cover.jpg", "caption": ""}],
+                "translated_terms": {"IGN": "IGN"},
+                "subtitle": "再次引用",
+                "opus_summary": "这是一段符合允许长度范围的文章摘要，用来验证经过人工确认的相同英文段落会在正式发布之前自动复用标准中文译文，并保持跨文章表达完全一致。",
+                "paragraphs": [{"en": english, "cn": "模型给出的不同译文。"}],
+            }, ensure_ascii=False), encoding="utf-8")
+            (day / "index.json").write_text(json.dumps({
+                "date": "2026-07-10",
+                "articles": [{"id": 1, "url": source_url, "en_title": "Repeated", "translation_status": "requested"}],
+            }), encoding="utf-8")
+            (root / "data" / "index-list.json").write_text("[]", encoding="utf-8")
+            (root / "data" / "translation-memory.json").write_text(json.dumps({
+                "_meta": {"schema_version": 1},
+                "entries": [{
+                    "kind": "paragraph",
+                    "en": english,
+                    "cn": "人工确认的标准译文。",
+                    "status": "approved",
+                }],
+            }, ensure_ascii=False), encoding="utf-8")
+
+            original_root = translate_pipeline.IGN_DAILY
+            translate_pipeline.IGN_DAILY = root
+            try:
+                with contextlib.redirect_stdout(io.StringIO()):
+                    result = translate_pipeline.post_mode("2026-07-10", "1")
+            finally:
+                translate_pipeline.IGN_DAILY = original_root
+
+            self.assertTrue(result)
+            saved = json.loads((translations / "01.json").read_text(encoding="utf-8"))
+            self.assertEqual(saved["paragraphs"][0]["cn"], "人工确认的标准译文。")
+            self.assertEqual(saved["translation_memory"]["locked"][0]["kind"], "paragraph")
+
 
 if __name__ == "__main__":
     unittest.main()

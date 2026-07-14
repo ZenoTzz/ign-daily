@@ -63,6 +63,10 @@ sudo rsync -a --delete \
   "`$deploy_dir"/ "$ServerPath"/
 restore_preserved
 trap - EXIT
+if [ ! -f "$ServerPath/data/translation-memory.json" ] && [ -f "`$deploy_dir/data/translation-memory.json" ]; then
+  sudo install -o ${User} -g ${User} -m 0644 \
+    "`$deploy_dir/data/translation-memory.json" "$ServerPath/data/translation-memory.json"
+fi
 sudo chown -R ${User}:${User} "$ServerPath"
 sudo find "$ServerPath" -path "$ServerPath/.git" -prune -o -type d -exec chmod 755 {} +
 sudo find "$ServerPath" -path "$ServerPath/.git" -prune -o -type f ! -name '.env' -exec chmod 644 {} +

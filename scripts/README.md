@@ -41,12 +41,22 @@
 | `check_currency.py` | 外币与人民币换算检查 |
 | `enforce_dict_titles.py` | 首页标题词库检查 |
 | `check_dict_fulltext.py` | 全文词库检查 |
+| `translation_memory.py` | 管理用户明确确认的精确段落/引语译文；翻译时只检索当前文章命中 |
+| `check_translation_memory.py` | 阻止已批准的相同英文出现不同中文 |
 
 统一校验入口：
 
 ```bash
 python scripts/pre_push_check.py YYYY-MM-DD
 ```
+
+明确批准整段现有译文：
+
+```bash
+python scripts/translation_memory.py approve --date YYYY-MM-DD --article-id ID --paragraph N
+```
+
+批准一条直接引语时显式提供完整英文和标准中文，并使用 `--kind quote`。不要将模型候选或未经用户确认的普通润色直接批准。
 
 不要单独跑其中一项后声称整批通过。
 

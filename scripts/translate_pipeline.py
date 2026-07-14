@@ -39,6 +39,7 @@ import urllib.request
 from datetime import timedelta, timezone
 from common_paths import REPO_ROOT, dict_path, exchange_rates_path, configure_utf8_stdio
 from platform_names import normalize_platform_names_in_translation
+from translation_memory import apply_paragraph_locks, find_hits as find_memory_hits, load_memory, validate_locks
 
 configure_utf8_stdio()
 
@@ -245,6 +246,23 @@ def resolve_article(articles, article_ref):
     return (art.get('id') if art else None), art
 
 
+def source_paragraphs(date_str, article_id):
+    path = IGN_DAILY / 'data' / date_str / 'sources' / f'{int(article_id):02d}.json'
+    if not path.exists():
+        return []
+    try:
+        source = json.loads(path.read_text(encoding='utf-8-sig'))
+    except (OSError, json.JSONDecodeError):
+        return []
+    paragraphs = source.get('paragraphs_en') if isinstance(source, dict) else []
+    return [str(value) for value in paragraphs] if isinstance(paragraphs, list) else []
+
+
+def memory_hits_for_source(date_str, article_id):
+    memory = load_memory(IGN_DAILY / 'data' / 'translation-memory.json')
+    return find_memory_hits(source_paragraphs(date_str, article_id), memory)
+
+
 def prep_mode(date_str, article_ref):
     """预处理模式: 抓图+词库匹配"""
     idx_path = IGN_DAILY / 'data' / date_str / 'index.json'
@@ -288,7 +306,19 @@ def prep_mode(date_str, article_ref):
     else:
         print("  No matches in title/summary (will need full article text)")
 
-    # 3. 输出模板
+    # 3. 人工确认的精确句段记忆。只输出本篇命中，不加载历史文章。
+    memory_hits = memory_hits_for_source(date_str, article_id)
+    print("\n🧠 Approved translation memory...")
+    if memory_hits:
+        print(f"  Found {len(memory_hits)} exact approved match(es):")
+        for hit in memory_hits:
+            print(f"    🔒 paragraph {hit['paragraph_index']} [{hit['kind']}]")
+            print(f"       EN: {hit['en']}")
+            print(f"       CN: {hit['cn']}")
+    else:
+        print("  No exact approved matches")
+
+    # 4. 输出模板
     print("\n📝 Template JSON fields to fill:")
     print(f'  "cover": "{cover or ""}"')
     print(f'  "images": {json.dumps(images[:3], ensure_ascii=False)}')
@@ -356,6 +386,34 @@ def post_mode(date_str, article_ref):
             data.pop(key, None)
         changed = True
         print("\n🔧 Cleared resolved manual-review metadata")
+
+    # 0. 对人工确认的完整段落做确定性回填；引语命中只校验，不猜测替换位置。
+    memory_hits = memory_hits_for_source(date_str, article_id)
+    applied_memory = apply_paragraph_locks(data, memory_hits)
+    if applied_memory:
+        changed = True
+        print(f"\n🧠 Applied {applied_memory} approved paragraph translation(s)")
+    memory_errors = validate_locks(data, memory_hits)
+    if memory_errors:
+        print("\n🟡 Translation memory check failed:")
+        for error in memory_errors:
+            print(f"  - {error}")
+        return False
+    if memory_hits:
+        memory_meta = {
+            "schema_version": 1,
+            "locked": [
+                {
+                    "paragraph_index": hit["paragraph_index"],
+                    "kind": hit["kind"],
+                    "key": hit["key"],
+                }
+                for hit in memory_hits
+            ],
+        }
+        if data.get("translation_memory") != memory_meta:
+            data["translation_memory"] = memory_meta
+            changed = True
 
     # 1. 补 cover
     if not data.get('cover'):

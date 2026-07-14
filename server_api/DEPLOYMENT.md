@@ -91,6 +91,8 @@ sudo systemctl restart ign-daily-api
 Static deployments update both the site tree and the independently running
 API copy under `/srv/ign-daily-api`. Runtime `data/`, `exchange_rates.json`,
 `ign_rss_new.json`, both `.env` files, and the API database are preserved.
+When a new runtime data schema seed is introduced, deployment may create that
+single file only when it is missing; it never overwrites the server copy.
 
 ## Useful checks
 
