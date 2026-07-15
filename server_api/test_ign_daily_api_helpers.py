@@ -298,6 +298,26 @@ class PrivateApiFileGuardsTest(unittest.TestCase):
                 identity = module.exchange_wechat_code("temporary-code")
             self.assertEqual(identity, {"openid": "openid-1", "unionid": "union-1"})
 
+    def test_wechat_job_message_matches_configured_template_fields(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            repo = root / "repo"
+            api_dir = root / "api"
+            repo.mkdir()
+            api_dir.mkdir()
+            module = load_api(repo, api_dir)
+            data = module.wechat_job_message_data({
+                "ids": [1, 2, 3],
+                "done_count": 2,
+                "failed_count": 1,
+                "created_at": 1_784_064_000,
+                "finished_at": 1_784_067_600,
+            })
+            self.assertEqual(set(data), {"time1", "time2", "thing3", "thing12", "thing11"})
+            self.assertEqual(data["thing3"]["value"], "IGN Daily 翻译任务")
+            self.assertEqual(data["thing12"]["value"], "完成 2 篇，待复核 1 篇")
+            self.assertEqual(data["thing11"]["value"], "请进入任务页查看译文")
+
 
 if __name__ == "__main__":
     unittest.main()

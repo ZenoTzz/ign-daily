@@ -51,6 +51,7 @@ from translation_memory import (
     prompt_payload as translation_memory_prompt,
     validate_locks as validate_memory_locks,
 )
+from translation_media import merge_images
 from usage_logger import record_deepseek_usage_safe
 
 
@@ -801,8 +802,7 @@ def translate_date(date: str, limit: int = 2) -> int:
             if source:
                 if not data.get("cover") and source.get("cover_image"):
                     data["cover"] = source["cover_image"]
-                if not data.get("images") and isinstance(source.get("images"), list):
-                    data["images"] = source["images"]
+                data["images"] = merge_images(data.get("images"), source.get("images"))
             set_article_step(article_id, date=date, step="audit", progress=76, message="质量检查")
             audit_issues = check_translation(article=article, paragraphs_en=paragraphs_en, data=data, required_terms=terms)
             audit_issues.extend({"type": "translation_memory", "detail": error} for error in memory_errors)
@@ -825,8 +825,7 @@ def translate_date(date: str, limit: int = 2) -> int:
                 if source:
                     if not data.get("cover") and source.get("cover_image"):
                         data["cover"] = source["cover_image"]
-                    if not data.get("images") and isinstance(source.get("images"), list):
-                        data["images"] = source["images"]
+                    data["images"] = merge_images(data.get("images"), source.get("images"))
                 audit_issues = check_translation(article=article, paragraphs_en=paragraphs_en, data=data, required_terms=terms)
                 audit_issues.extend({"type": "translation_memory", "detail": error} for error in memory_errors)
             if audit_issues:

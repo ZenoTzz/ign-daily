@@ -19,6 +19,8 @@ import json
 from pathlib import Path
 from typing import Any
 
+from translation_media import image_url, merge_images, valid_image_url
+
 
 REPO = Path(__file__).resolve().parents[1]
 
@@ -34,21 +36,8 @@ def write_json(path: Path, value: dict[str, Any]) -> None:
         handle.write("\n")
 
 
-def image_url(value: Any) -> str:
-    if isinstance(value, str):
-        return value.strip()
-    if isinstance(value, dict):
-        return str(value.get("url") or "").strip()
-    return ""
-
-
 def valid_url(value: Any) -> bool:
-    url = image_url(value)
-    return url.startswith(("https://", "http://")) and ")width=" not in url
-
-
-def valid_images(value: Any) -> bool:
-    return isinstance(value, list) and any(valid_url(item) for item in value)
+    return valid_image_url(value) and ")width=" not in image_url(value)
 
 
 def numeric_id(path: Path) -> int:
@@ -88,8 +77,9 @@ def repair(date: str, article_id: int | None, dry_run: bool) -> int:
         if source_cover and not valid_url(translation.get("cover")):
             translation["cover"] = source_cover
             changed = True
-        if source_images and not valid_images(translation.get("images")):
-            translation["images"] = source_images
+        merged_translation_images = merge_images(translation.get("images"), source_images)
+        if source_images and merged_translation_images != translation.get("images"):
+            translation["images"] = merged_translation_images
             changed = True
 
         article = articles.get(aid)
@@ -97,8 +87,9 @@ def repair(date: str, article_id: int | None, dry_run: bool) -> int:
             if source_cover and not valid_url(article.get("cover_image")):
                 article["cover_image"] = source_cover
                 index_changed = True
-            if source_images and not valid_images(article.get("images")):
-                article["images"] = source_images
+            merged_article_images = merge_images(article.get("images"), source_images)
+            if source_images and merged_article_images != article.get("images"):
+                article["images"] = merged_article_images
                 index_changed = True
 
         if changed:

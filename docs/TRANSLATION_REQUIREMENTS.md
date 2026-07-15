@@ -96,7 +96,7 @@ python scripts/translate_pipeline.py YYYY-MM-DD ID --prep
 - `requests.json`：只移除真正完成的 URL，保留未完成项
 - job progress：按文章上报当前步骤
 
-必要时从 source cache 修复媒体：
+译文落盘后必须从 source cache 合并媒体；脚本会按原始资源 URL 去重，保留已有图片说明，并补齐正文图片：
 
 ```bash
 python scripts/ensure_translation_media.py YYYY-MM-DD --id ID

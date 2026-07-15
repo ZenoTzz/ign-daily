@@ -947,6 +947,26 @@ def wechat_access_token() -> str:
     return token
 
 
+def format_wechat_time(value: Any) -> str:
+    try:
+        timestamp = int(value)
+    except (TypeError, ValueError):
+        timestamp = int(time.time())
+    return datetime.fromtimestamp(timestamp, CST).strftime("%Y年%m月%d日 %H:%M")
+
+
+def wechat_job_message_data(job: dict[str, Any]) -> dict[str, dict[str, Any]]:
+    done_count = int(job.get("done_count") or len(job.get("ids") or []))
+    failed_count = int(job.get("failed_count") or 0)
+    return {
+        "time1": {"value": format_wechat_time(job.get("created_at"))},
+        "time2": {"value": format_wechat_time(job.get("finished_at") or job.get("updated_at"))},
+        "thing3": {"value": "IGN Daily 翻译任务"},
+        "thing12": {"value": f"完成 {done_count} 篇，待复核 {failed_count} 篇"},
+        "thing11": {"value": "请进入任务页查看译文"},
+    }
+
+
 def send_job_completion_notification(job: dict[str, Any]) -> bool:
     if not WECHAT_JOB_TEMPLATE_ID:
         return False
@@ -962,12 +982,7 @@ def send_job_completion_notification(job: dict[str, Any]) -> bool:
     if not row:
         return False
     openid = row["openid"]
-    data = {
-        "thing1": {"value": "翻译任务已完成"},
-        "date2": {"value": str(job.get("date") or now_cn())[:20]},
-        "number3": {"value": int(job.get("done_count") or len(job.get("ids") or []))},
-        "thing4": {"value": f"待复核 {int(job.get('failed_count') or 0)} 篇"},
-    }
+    data = wechat_job_message_data(job)
     payload = json.dumps({
         "touser": openid,
         "template_id": WECHAT_JOB_TEMPLATE_ID,
