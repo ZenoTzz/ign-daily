@@ -2,6 +2,22 @@
   "date": "2026-07-17",
   "articles": [
     {
+      "id": 37,
+      "category": "游戏新闻",
+      "emoji": "🎮",
+      "en_title": "Assassin's Creed Black Flag Resynced Director Reveals Why Ubisoft Ditched Edward's Hidden Blade Combat",
+      "cn_title": "育碧《刺客信条：黑旗 记忆重置》导演解释为何取消袖剑战斗",
+      "summary": "导演Richard Knight表示，多武器击杀动画的重制成本过高，因此《刺客信条：黑旗 记忆重置》优先采用双弯刀核心战斗，但团队仍在听取玩家意见。",
+      "url": "https://www.ign.com/articles/assassins-creed-black-flag-resynced-director-reveals-why-ubisoft-ditched-edwards-hidden-blade-combat",
+      "publish_time_cn": "2026-07-17 07:52",
+      "pub_date": "2026-07-17 07:52",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/07/07/assassinscreedblackflagresynced-review-blogroll-1783462366214.jpg",
+      "translation_status": "done",
+      "translation_path": "translations/37.json",
+      "translator": "codex-gpt5",
+      "translated_at": "2026-07-17T14:00:00+08:00"
+    },
+    {
       "id": 32,
       "category": "科技新闻",
       "emoji": "📱",
@@ -393,13 +409,13 @@
       "category": "行业动态",
       "emoji": "🏙️",
       "en_title": "Marvel Comics to Leave New York City for Hollywood After 90 Years",
-      "cn_title": "漫威漫画告别纽约，90年后搬往好莱坞",
-      "summary": "运营近90年的漫威漫画即将告别纽约，搬迁至好莱坞。这一变动是出版部门重组的一部分，现任主编C.B. Cebulski将转任日本分部编辑，由曾负责《神奇蜘蛛侠》《鹰眼》等系列的Steve Wacker接替。搬迁预计在未来12个月内完成，公司表示希望纽约员工能随迁加州。",
+      "cn_title": "漫威漫画扎根纽约近90年后迁往好莱坞",
+      "summary": "漫威漫画将结束近90年的纽约运营史，迁往好莱坞并重组出版部门。Steve Wacker将接任总编辑，C.B. Cebulski则赴日本负责亚洲原创内容。",
       "url": "https://www.ign.com/articles/marvel-comics-to-leave-new-york-city-for-hollywood-after-90-years",
       "publish_time_cn": "2026-07-17 01:38",
       "pub_date": "2026-07-17 01:38",
-      "cover_image": "https://assets-prd.ignimgs.com/2025/01/30/spiderthumb-1738253300634.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2025/01/30/spiderthumb-1738253300634.png",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2025/01/30/spiderthumb-1738253300634.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2025/01/30/spiderthumb-1738253300634.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -408,7 +424,10 @@
         "https://assets-prd.ignimgs.com/2025/01/30/spiderthumb-1738253300634.png"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-07-17T02:47:33+08:00"
+      "source_fetched_at": "2026-07-17T02:47:33+08:00",
+      "translation_path": "translations/20.json",
+      "translator": "codex-gpt5",
+      "translated_at": "2026-07-17T14:00:00+08:00"
     },
     {
       "id": 17,
@@ -1075,7 +1094,59 @@
           "reason": "有通行中文名，但未收录于词库"
         }
       ]
+    },
+    {
+      "id": 38,
+      "category": "评测评分",
+      "emoji": "🏺",
+      "en_title": "The Mound: Omen of Cthulhu Review",
+      "cn_title": "《The Mound: Omen of Cthulhu》评测",
+      "summary": "《The Mound: Omen of Cthulhu》是一款以17世纪智利荒野为背景的合作生存恐怖游戏，玩家扮演西班牙征服者探索克苏鲁神话的诡异秘密。游戏在氛围营造和怪物设计上表现出色，但极端的难度和不够灵活的难度选项严重影响了体验，即便有经验的合作玩家也常感到挫败。尽管有后期更新调整，但整体仍过于严苛，不推荐单人游玩。",
+      "url": "https://www.ign.com/articles/the-mound-omen-of-cthulhu-review",
+      "publish_time_cn": "2026-07-16 09:17",
+      "pub_date": "2026-07-16 09:17",
+      "cover_image": "",
+      "translation_status": "none"
+    },
+    {
+      "id": 39,
+      "category": "评测评分",
+      "emoji": "🚂",
+      "en_title": "Denshattack! Review",
+      "cn_title": "《Denshattack!》评测：火车特技也能如此疯狂",
+      "summary": "《Denshattack!》是一款结合了《托尼霍克职业滑板》和《Jet Set Radio》精神的火车特技游戏。玩家驾驶火车穿越气候灾变后的日本，完成ollie、kickflip等高难度动作，挑战邪恶企业Miraido。游戏操作深度十足，右摇杆搓招系统带来丰富连击组合，关卡设计创意无限（包括被鲨鱼吞食、穿越火山等疯狂体验），BOSS战更是精彩纷呈。IGN评测给出了极高评价，称赞其「毫无道理的好玩」，堪称独立游戏领域的宝藏之作。",
+      "url": "https://www.ign.com/articles/denshattack-review",
+      "publish_time_cn": "2026-07-16 09:17",
+      "pub_date": "2026-07-16 09:17",
+      "cover_image": "",
+      "translation_status": "none"
+    },
+    {
+      "id": 40,
+      "category": "评测评分",
+      "emoji": "🎬",
+      "en_title": "The Odyssey Review",
+      "cn_title": "《奥德赛》影评：史诗壮丽，叙事稍显仓促",
+      "summary": "克里斯托弗·诺兰执导的《奥德赛》将于7月17日上映。影片以史诗规模讲述奥德修斯归乡之旅，融入战争创伤与现代反思。马特·达蒙主演奥德修斯，安妮·海瑟薇、汤姆·赫兰德等群星出演。影评称该片是一部「必看又令人沮丧」的电影，场面震撼但节奏仓促，在叙事上偶有失足，但仍充满高光时刻。",
+      "url": "https://www.ign.com/articles/the-odyssey-movie-review-2026",
+      "publish_time_cn": "2026-07-16 09:17",
+      "pub_date": "2026-07-16 09:17",
+      "cover_image": "",
+      "translation_status": "none"
+    },
+    {
+      "id": 41,
+      "category": "评测评分",
+      "emoji": "🦸",
+      "en_title": "X-Men '97 Season 2, Episode 5 Review & Recap: \"Weapon X, Lies, and DVDs\"",
+      "cn_title": "《X战警97》第二季第5集评测：武器X、谎言与DVD",
+      "summary": "《X战警97》第二季第5集中，金刚狼组建团队潜入新的武器X设施，但隐藏着个人动机。本集致敬经典动作片，并重点刻画Morph与金刚狼的独特羁绊。然而，金刚狼失去艾德曼金属后的心理挣扎被仓促带过，反派Brood沦为推动剧情的工具。评测认为，本集娱乐性十足，但节奏过快，未能深入挖掘潜力。",
+      "url": "https://www.ign.com/articles/x-men-97-season-2-episode-5-review-recap-weapon-x-lies-and-dvds",
+      "publish_time_cn": "2026-07-16 09:17",
+      "pub_date": "2026-07-16 09:17",
+      "cover_image": "",
+      "translation_status": "none"
     }
   ],
-  "total": 36
+  "total": 41
 }
