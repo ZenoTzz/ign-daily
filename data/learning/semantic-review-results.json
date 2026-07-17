@@ -19,6 +19,28 @@
       "scope": "dictionary_candidate",
       "counterexamples": [],
       "misuse_risk": "A single article-level normalization may not establish the intended canonical game title."
+    },
+    {
+      "id": "dict_candidate_new_vegas_lead_designer_3faff8e21716",
+      "decision": "reject",
+      "rationale": "The English source phrase is a role description, not the game title. Mapping it to Fallout: New Vegas drops the person/role information and creates an invalid entity pair.",
+      "refined_rule": "Do not create a dictionary candidate from a title phrase when its English anchor includes a role description rather than the named work alone.",
+      "scope": "dictionary_candidate",
+      "counterexamples": [
+        "New Vegas Lead Designer refers to a person’s role, while Fallout: New Vegas is a game title."
+      ],
+      "misuse_risk": "Would cause role phrases to be replaced by game titles and corrupt factual meaning."
+    },
+    {
+      "id": "dict_candidate_deborah_ann_woll_701bef400360",
+      "decision": "reject",
+      "rationale": "Deborah Ann Woll is the actor named in the English title; the Chinese title identifies the God of War: Laufey project. These are not the same entity.",
+      "refined_rule": "Reject candidate pairs that map a person’s name to a work title without an explicit person-name translation.",
+      "scope": "dictionary_candidate",
+      "counterexamples": [
+        "Deborah Ann Woll is an actor; God of War: Laufey is a game/project title."
+      ],
+      "misuse_risk": "Would replace personal names with unrelated titles in future translations."
     }
   ]
 }

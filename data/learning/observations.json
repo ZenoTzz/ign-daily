@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-13T22:39:01+08:00",
+  "generated_at": "2026-07-17T22:36:59+08:00",
   "active": [
     {
       "id": "remove_personal_commentary",
@@ -75,14 +75,16 @@
       "semantic_rationale": "6/22 的标题润色倾向用更直观的系列编号表达。",
       "misuse_risk": "",
       "examples": []
-    },
+    }
+  ],
+  "archived": [
     {
       "id": "wrap_media_source_names",
       "title": "媒体来源名可用书名号标识",
       "rule": "正文引用媒体、网站或行业出版物作为消息来源时，可用书名号标识来源名，并保留英文原名。",
       "category": "names",
       "scope": "reporting_attribution",
-      "status": "pending",
+      "status": "archived_stale",
       "type": "style_rule",
       "days_seen": 1,
       "articles_seen": 2,
@@ -103,10 +105,9 @@
           "before": "今天早些时候，The Game Business报道Xbox Game Studios负责人Craig Duncan已离职，随后Kotaku报道《午夜之南》开发商Compulsion面临关闭威胁。现在彭博社又称，几乎所有微软旗下工作室都忧心于下一步走向，其中Ninja Theory和Double Fine被点名正与母公司协商。",
           "after": "今天稍早，《The Game Business》报道称Xbox Game Studios负责人Craig Duncan已经离职，随后Kotaku又报道《午夜之南》开发商Compulsion面临关闭风险。如今，彭博社进一步指出，几乎所有微软旗下游戏工作室都在担忧自己的未来，而Ninja Theory和Double Fine则已被点名正在与母公司进行谈判。"
         }
-      ]
-    }
-  ],
-  "archived": [
+      ],
+      "archive_reason": "31 days without new supporting evidence"
+    },
     {
       "id": "playstation_store_english",
       "title": "PlayStation 商店写作“PlayStation Store”",
@@ -349,7 +350,7 @@
     }
   ],
   "summary": {
-    "active": 4,
-    "archived": 10
+    "active": 3,
+    "archived": 11
   }
 }

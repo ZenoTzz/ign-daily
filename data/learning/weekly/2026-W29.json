@@ -1,7 +1,7 @@
 {
   "schema_version": 3,
   "week_id": "2026-W29",
-  "generated_at": "2026-07-13T22:39:01+08:00",
+  "generated_at": "2026-07-17T22:36:59+08:00",
   "range": {
     "start": "2026-07-13",
     "end": "2026-07-19"
@@ -12,7 +12,7 @@
     "dictionary_candidates": 2,
     "observing": 0,
     "confirmed_this_week": 0,
-    "archived_this_week": 0
+    "archived_this_week": 1
   },
   "decisions": [],
   "conflicts": [],
@@ -68,7 +68,37 @@
       ]
     }
   ],
-  "archived_changes": [],
+  "archived_changes": [
+    {
+      "id": "wrap_media_source_names",
+      "title": "媒体来源名可用书名号标识",
+      "rule": "正文引用媒体、网站或行业出版物作为消息来源时，可用书名号标识来源名，并保留英文原名。",
+      "category": "names",
+      "scope": "reporting_attribution",
+      "status": "archived_stale",
+      "type": "style_rule",
+      "days_seen": 1,
+      "articles_seen": 2,
+      "contradictions": 0,
+      "last_seen": "2026-06-16",
+      "semantic_rationale": "6/16 的润色将 The Game Business 等来源名改为带书名号的来源写法。",
+      "misuse_risk": "",
+      "examples": [
+        {
+          "date": "2026-06-16",
+          "article_id": 25,
+          "before": "The Game Business今天率先报道了离职消息。两人共同离职的原因并未给出，不过这一事件发生之际，正值外界对Xbox Game Studios及其众多员工未来深感担忧——此前新上任的Xbox负责人Asha Sharma对该部门微薄的利润率发出了严厉警告。",
+          "after": "《The Game Business》今天率先报道了离职消息。两人共同离职的原因并未给出，不过这一事件发生之际，正值外界对Xbox Game Studios及其众多员工未来深感担忧——此前新上任的Xbox负责人Asha Sharma对该部门微薄的利润率发出了严厉警告。"
+        },
+        {
+          "date": "2026-06-16",
+          "article_id": 39,
+          "before": "今天早些时候，The Game Business报道Xbox Game Studios负责人Craig Duncan已离职，随后Kotaku报道《午夜之南》开发商Compulsion面临关闭威胁。现在彭博社又称，几乎所有微软旗下工作室都忧心于下一步走向，其中Ninja Theory和Double Fine被点名正与母公司协商。",
+          "after": "今天稍早，《The Game Business》报道称Xbox Game Studios负责人Craig Duncan已经离职，随后Kotaku又报道《午夜之南》开发商Compulsion面临关闭风险。如今，彭博社进一步指出，几乎所有微软旗下游戏工作室都在担忧自己的未来，而Ninja Theory和Double Fine则已被点名正在与母公司进行谈判。"
+        }
+      ]
+    }
+  ],
   "candidates": [],
   "confirmed_rules": []
 }

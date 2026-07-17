@@ -1,0 +1,609 @@
+{
+  "date": "2026-07-17",
+  "generated_at": "2026-07-17T22:36:23.061319",
+  "total_articles": 10,
+  "dictionary_candidate_count": 1,
+  "dictionary_candidates": [
+    {
+      "id": "dict_candidate_deborah_ann_woll_701bef400360",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "games",
+      "en": "Deborah Ann Woll",
+      "cn": "战神：劳菲",
+      "title": "词库候选：Deborah Ann Woll → 战神：劳菲",
+      "rule": "建议将「Deborah Ann Woll」加入词库，译为「战神：劳菲」。",
+      "status": "observed",
+      "semantic_review": "pending",
+      "quality": {
+        "accepted_as_evidence": true,
+        "status": "observed",
+        "reasons": [],
+        "requires_semantic_review": true
+      },
+      "confidence": "medium",
+      "date": "2026-07-17",
+      "article_id": 24,
+      "article_title": "《战神：劳菲》主演回应网络恶评：完全不在意",
+      "url": "https://www.ign.com/articles/god-of-war-laufey-star-deborah-ann-woll-totally-unbothered-by-online-hate-surrounding-the-game",
+      "evidence": "英文标题开头专名与中文标题书名号对应。"
+    }
+  ],
+  "learning_evidence_updated": true,
+  "daily_learning_updated": true,
+  "articles": [
+    {
+      "id": 5,
+      "cn_title": "《电车炫客》卷入PlayStation取消光盘抵制",
+      "en_title": "Great New Games Are Getting Caught Up in the Online Backlash Against PlayStation Killing Discs",
+      "url": "https://www.ign.com/articles/great-new-games-are-getting-caught-up-in-the-online-backlash-against-playstation-killing-discs",
+      "category": "游戏新闻",
+      "has_translation": true,
+      "title_diff": {
+        "mine": "新游戏卷入PlayStation取消光盘抵制",
+        "yours": "《电车炫客》卷入PlayStation取消光盘抵制"
+      },
+      "subtitle_diff": null,
+      "body_diffs": [
+        {
+          "operation": "replace",
+          "before_range": [
+            0,
+            2
+          ],
+          "after_range": [
+            0,
+            2
+          ],
+          "before": [
+            "自索尼宣布从2028年起取消新PlayStation游戏实体光盘后，愤怒玩家便涌入其社交平台要求撤回决定。这也盖过了PlayStation其他网络活动，甚至让宣布消息后首条社交帖中的无关人员承受了抵制怒火。",
+            "如今，优秀新游戏也被卷入交火。独立开发商Undercoders的纯数字游戏《Denshattack!》昨日发售，PlayStation在社交渠道宣传了它。游戏口碑极佳，IGN给出9分，本应享受高光时刻；但索尼取消光盘的决定给所有PlayStation内容蒙上阴影，核心玩家拒绝就此罢休。"
+          ],
+          "after": [
+            "自索尼宣布从2028年起取消新PlayStation游戏的实体光盘后，愤怒的玩家便涌入其社交平台要求撤回这一决定。这也波及到了PlayStation的其他网络活动，甚至让宣布消息后首条社交帖中的无关人员承受了来自玩家的怒火。",
+            "如今，一个优秀的新游戏也被卷入交火。独立开发商Undercoders的纯数字游戏《电车炫客》昨日发售，PlayStation在社交渠道宣传了它。游戏口碑极佳，IGN给出9分，它本应享受高光时刻；但索尼取消光盘的决定让它受到了影响。"
+          ]
+        },
+        {
+          "operation": "replace",
+          "before_range": [
+            5,
+            7
+          ],
+          "after_range": [
+            5,
+            7
+          ],
+          "before": [
+            "PlayStation宣传帖下的回复同样激烈。抵制行动核心账号Does it play?写道：「宣布攻击实体媒介和游戏文化时，PlayStation所有人都该去踩老板。这会给游戏业乃至更广领域造成灾难性后果。短期利润不值得，希望你们及时醒悟。」",
+            "抵制是否会影响PlayStation版《Denshattack!》销量，只有索尼知道。Undercoders开发者大概只希望玩家在自己喜欢的平台享受游戏。新作仅因时机不佳就被卷入争议绝非理想状况。索尼没有撤回迹象，近期在PlayStation发售新作的开发者恐怕都得接受类似反应。"
+          ],
+          "after": [
+            "PlayStation宣传帖下的回复同样激烈。抵制Does it play?写道：「宣布攻击实体媒介和游戏文化时，PlayStation所有人都该去踩老板。这会给游戏业乃至更广领域造成灾难性后果。短期利润不值得，希望你们及时醒悟。」",
+            "抵制是否会影响PlayStation版《电车炫客》销量，只有索尼知道。Undercoders开发者大概只希望玩家在自己喜欢的平台享受游戏。新作仅因时机不佳就被卷入争议绝非理想状况。但是，就目前来看，索尼没有撤回他们「去光盘计划」的迹象，近期在PlayStation发售新作的开发者恐怕都得接受类似反应。"
+          ]
+        },
+        {
+          "operation": "delete",
+          "before_range": [
+            14,
+            16
+          ],
+          "after_range": [
+            14,
+            14
+          ],
+          "before": [
+            "一名分析师表示，实体媒体粉丝曾经有机会却错过了，因此已经没有回头路。Bernstein游戏分析师Robin Zhu告诉《金融时报》：「如果玩家和保存主义者当初购买更多实体游戏，索尼就不会看到足以证明这一决定合理的数字销售比例。」",
+            "「数字游戏销售基本拥有100%的增量利润……实体包装、运输和零售商利润的成本，可能超过标价的20%。」"
+          ],
+          "after": []
+        }
+      ],
+      "dictionary_candidates": []
+    },
+    {
+      "id": 11,
+      "cn_title": "《幻兽帕鲁》新鲸鱼帕鲁再引《宝可梦》抄袭争议",
+      "en_title": "'Similar Art Styles Make the Comparisons Inevitable' — Palworld and Pokémon Fans Are Arguing Over Whether New Whale Pal Panthalus Copies Kyogre",
+      "url": "https://www.ign.com/articles/clearly-inspired-by-kyogre-palworld-creature-panthalus-renews-pokemon-copying-debate",
+      "category": "游戏新闻",
+      "has_translation": true,
+      "title_diff": null,
+      "subtitle_diff": {
+        "mine": "设计边界之争",
+        "yours": "「显然受盖欧卡启发」"
+      },
+      "body_diffs": [
+        {
+          "operation": "replace",
+          "before_range": [
+            0,
+            3
+          ],
+          "after_range": [
+            0,
+            3
+          ],
+          "before": [
+            "《幻兽帕鲁》和《宝可梦》粉丝正在争论：名为Panthalus的新鲸鱼帕鲁是否抄袭宝可梦盖欧卡。",
+            "Panthalus是体型庞大的蓝绿色传说鲸鱼，拥有白色腹部、展开的鳍、部族风格纹样和大型青铜装饰。盖欧卡同样是带白色腹部、展开鳍和部族纹样的传说蓝鲸，只是没有青铜装饰。",
+            "一些粉丝称Panthalus的设计「显然受盖欧卡启发」，尽管神话鲸鱼并非《宝可梦》独有。一人称设计「明目张胆」，另一些人则认为两者在法律上「足够不同」。"
+          ],
+          "after": [
+            "《幻兽帕鲁》和《宝可梦》粉丝正在争论：名为奥沧鲸的新鲸鱼帕鲁是否抄袭宝可梦盖欧卡。",
+            "奥沧鲸是体型庞大的蓝绿色传说鲸鱼，拥有白色腹部、展开的鳍、部族风格纹样和大型青铜装饰。盖欧卡同样是带白色腹部、展开鳍和部族纹样的传说蓝鲸，只是没有青铜装饰。",
+            "一些粉丝称奥沧鲸的设计「显然受盖欧卡启发」，尽管神话鲸鱼并非《宝可梦》独有。一人称设计「明目张胆」，另一些人则认为两者在法律上「足够不同」。"
+          ]
+        },
+        {
+          "operation": "replace",
+          "before_range": [
+            4,
+            9
+          ],
+          "after_range": [
+            4,
+            6
+          ],
+          "before": [
+            "也有人否定比较。一名粉丝说：「它们唯一的共同点就是都是鲸鱼。」另一人补充：「Panthalus一点也不像盖欧卡。概念相似，但视觉上很容易区分。」",
+            "我的天，那些说Panthalus甚至不像盖欧卡的人，未免自我安慰得太拼命了。",
+            "这只帕鲁显然受盖欧卡启发，本身并非坏事。但《幻兽帕鲁》的生物大多从宝可梦汲取灵感，令设计显得缺乏创意。若从《宝可梦》之外获取更多灵感，设计会好得多。",
+            "Panthalus，一只来自Pocketpair《幻兽帕鲁》的帕鲁；盖欧卡，一只来自Game Freak和任天堂《宝可梦》的宝可梦。",
+            "Panthalus登场之际，粉丝刚发现《幻兽帕鲁》1.0更新悄然修改了多只帕鲁的设计。Pocketpair补丁说明列出数百项更新，却未提到疾旋鼬、羽箭射手、云海鹿和趴趴鲶的改动；它们此前与闪焰王牌、狙射树枭、勾帕路翁和伽勒尔喵喵存在更明显的相似之处。"
+          ],
+          "after": [
+            "也有人否定比较。一名粉丝说：「它们唯一的共同点就是都是鲸鱼。」另一人补充：「奥沧鲸一点也不像盖欧卡。概念相似，但视觉上很容易区分。」",
+            "奥沧鲸登场之际，粉丝刚发现《幻兽帕鲁》1.0更新悄然修改了多只帕鲁的设计。Pocketpair补丁说明列出数百项更新，却未提到疾旋鼬、羽箭射手、云海鹿和趴趴鲶的改动；它们此前与宝可梦中闪焰王牌、狙射树枭、勾帕路翁和喵喵（伽勒尔形态）存在更明显的相似之处。"
+          ]
+        },
+        {
+          "operation": "replace",
+          "before_range": [
+            12,
+            13
+          ],
+          "after_range": [
+            9,
+            10
+          ],
+          "before": [
+            "《幻兽帕鲁》1.0版本于本月早些时候推出，正式结束抢先体验。Pocketpair表示不会把售价提高到29.99美元(约合人民币203元)以上，因为游戏「取得了远超我们最疯狂想象的成功」。自抢先体验上线以来，已有超过4000万名玩家进入《幻兽帕鲁》的世界。"
+          ],
+          "after": [
+            "《幻兽帕鲁》1.0版本于本月早些时候推出，正式结束抢先体验。Pocketpair表示不会把售价提高到29.99美元以上，因为游戏「取得了远超我们最疯狂想象的成功」。自抢先体验上线以来，已有超过4000万名玩家进入《幻兽帕鲁》的世界。"
+          ]
+        }
+      ],
+      "dictionary_candidates": []
+    },
+    {
+      "id": 13,
+      "cn_title": "阿斯顿·马丁为《使命召唤：现代战争4》打造战术SUV「无畏号」",
+      "en_title": "Call of Duty: Modern Warfare 4 Has a Bespoke Tactical SUV Designed by Aston Martin — It's Called Dreadnought, and We've Got a First Look",
+      "url": "https://www.ign.com/articles/call-of-duty-modern-warfare-4-has-a-bespoke-tactical-suv-designed-by-aston-martin-its-called-dreadnought-and-weve-got-a-first-look",
+      "category": "游戏新闻",
+      "has_translation": true,
+      "title_diff": null,
+      "subtitle_diff": null,
+      "body_diffs": [
+        {
+          "operation": "replace",
+          "before_range": [
+            0,
+            2
+          ],
+          "after_range": [
+            0,
+            2
+          ],
+          "before": [
+            "《使命召唤：现代战争4》加入一款名为「无畏号」的新载具。这辆定制战术SUV由阿斯顿·马丁专为游戏设计、Infinity Ward开发，IGN现已获得首批图片。",
+            "「无畏号」将在这款第一人称射击游戏首发时登场，玩家可在DMZ模式（《现代战争4》对撤离射击玩法的演绎）的特定地标，以及大逃杀模式《战区》中找到它。动视打趣道：「阿斯顿·马丁的天然栖息地是豪宅与秀丽风光之间。无畏号只是通勤路线稍微更冒险一些。」"
+          ],
+          "after": [
+            "《使命召唤：现代战争4》加入一款名为「无畏号」的新载具。这辆定制战术SUV由阿斯顿·马丁专为游戏设计、Infinity Ward开发。",
+            "「无畏号」将在这款第一人称射击游戏首发时登场，玩家可在DMZ模式的特定地标，以及大逃杀模式《战区》中找到它。动视打趣道：「阿斯顿·马丁的天然栖息地是豪宅与秀丽风光之间。无畏号只是通勤路线稍微更冒险一些。」"
+          ]
+        },
+        {
+          "operation": "insert",
+          "before_range": [
+            4,
+            4
+          ],
+          "after_range": [
+            4,
+            5
+          ],
+          "before": [],
+          "after": [
+            "「无畏号」将超级跑车的性能、先进的装甲技术和自适应作战区域情报系统融为一体，打造出令人惊艳的造型。从优化的空气动力学设计到完全集成的数字化指挥界面，每一个细节都旨在实现卓越的战术性能。精致的设计细节彰显了「无畏号」的奢华血统：从人字纹碳纤维外饰到牛津棕皮革仪表板和门板，再到金属金色的换挡杆，无不体现着极致的奢华。这些细节与阿斯顿·马丁车型中罕见的军用级装甲等配置形成了鲜明的对比。"
+          ]
+        },
+        {
+          "operation": "replace",
+          "before_range": [
+            5,
+            6
+          ],
+          "after_range": [
+            6,
+            7
+          ],
+          "before": [
+            "如果本周末身处纽约Fanatics Fest，便可在《使命召唤》展台看到「无畏号」全尺寸模型。《使命召唤：现代战争4》将于2026年10月23日星期五登陆XBOX Series X|S、PlayStation 5、任天堂Switch 2和PC，PC版将通过Battle.net、XBOX PC应用及Steam发行。"
+          ],
+          "after": [
+            "如果本周末身处纽约Fanatics Fest，便可在《使命召唤》展台看到「无畏号」的全尺寸模型。《使命召唤：现代战争4》将于2026年10月23日星期五登陆XBOX Series、PS5、Switch 2和PC，PC版将通过Battle.net、XBOX PC应用及Steam发行。"
+          ]
+        }
+      ],
+      "dictionary_candidates": []
+    },
+    {
+      "id": 20,
+      "cn_title": "漫威漫画扎根纽约近90年后迁往好莱坞",
+      "en_title": "Marvel Comics to Leave New York City for Hollywood After 90 Years",
+      "url": "https://www.ign.com/articles/marvel-comics-to-leave-new-york-city-for-hollywood-after-90-years",
+      "category": "行业动态",
+      "has_translation": true,
+      "title_diff": null,
+      "subtitle_diff": null,
+      "body_diffs": [
+        {
+          "operation": "replace",
+          "before_range": [
+            4,
+            5
+          ],
+          "after_range": [
+            4,
+            5
+          ],
+          "before": [
+            "《好莱坞报道者》获得的员工备忘录写道：「纽约对漫威公司的塑造以及漫画内容都发挥了巨大作用。尽管作家和艺术家网络如今已遍布全球，纽约仍刻在我们的DNA里，这永远不会改变。纽约同事帮助塑造了几代故事和角色，他们对漫威传承的贡献怎么强调都不为过。我们真诚希望他们选择与我们一同前往加州继续旅程。未来12个月完成过渡期间，我们承诺支持每一位受影响员工。」"
+          ],
+          "after": [
+            "《好莱坞报道者》获得的员工备忘录写道：「纽约对漫威公司的塑造以及漫画内容都发挥了巨大作用。尽管作家和艺术家网络如今已遍布全球，纽约仍刻在我们的DNA里，这永远不会改变。纽约同事帮助塑造了几代故事和角色，他们对漫威传承的贡献怎么强调都不为过。我们真诚希望他们选择与我们一同前往加州继续旅程。在未来12个月完成过渡期间，我们承诺支持每一位受影响员工。」"
+          ]
+        },
+        {
+          "operation": "delete",
+          "before_range": [
+            6,
+            7
+          ],
+          "after_range": [
+            6,
+            6
+          ],
+          "before": [
+            "其他漫威消息方面，可以阅读IGN对《迈尔斯·莫拉莱斯：蜘蛛侠》编剧Bryan Edward Hill的独家采访，以及《万智牌：漫威超级英雄》扩展包的上手体验。"
+          ],
+          "after": []
+        }
+      ],
+      "dictionary_candidates": []
+    },
+    {
+      "id": 24,
+      "cn_title": "《战神：劳菲》主演回应网络恶评：完全不在意",
+      "en_title": "God of War Laufey Star Deborah Ann Woll 'Totally Unbothered' by Online Hate Surrounding the Game",
+      "url": "https://www.ign.com/articles/god-of-war-laufey-star-deborah-ann-woll-totally-unbothered-by-online-hate-surrounding-the-game",
+      "category": "游戏新闻",
+      "has_translation": true,
+      "title_diff": null,
+      "subtitle_diff": null,
+      "body_diffs": [
+        {
+          "operation": "replace",
+          "before_range": [
+            1,
+            2
+          ],
+          "after_range": [
+            1,
+            2
+          ],
+          "before": [
+            "开发商圣莫妮卡工作室上月在State of Play发布会上公布了这款平行故事作品，随即遭到网络批评。许多玩家期待体验这款《战神》新作，但也有人高调表达不满，批评内容包括由《黑袍纠察队》演员Jack Quaid配音的新立方体伙伴、游戏的战斗系统，以及由Woll饰演主角劳菲。"
+          ],
+          "after": [
+            "开发商圣莫尼卡工作室上月在State of Play发布会上公布了这款平行故事作品，随即遭到网络批评。许多玩家期待体验这款《战神》新作，但也有人高调表达不满，批评内容包括由《黑袍纠察队》演员Jack Quaid配音的新立方体伙伴、游戏的战斗系统，以及由Woll饰演的主角劳菲。"
+          ]
+        },
+        {
+          "operation": "replace",
+          "before_range": [
+            4,
+            5
+          ],
+          "after_range": [
+            4,
+            5
+          ],
+          "before": [
+            "尽管索尼只正式展示过一次《战神：劳菲》，我们已经看到了不少内容。首秀带来了足足20分钟实机演示，展示劳菲如何舍弃奎托斯的利维坦之斧，改用全新的魔法能力和一把致命长剑作战。"
+          ],
+          "after": [
+            "尽管索尼只正式展示过一次《战神：劳菲》，但我们已经看到了不少内容。首秀带来了足足20分钟实机演示，展示劳菲如何舍弃奎托斯的利维坦之斧，改用全新的魔法能力和一把致命长剑作战。"
+          ]
+        },
+        {
+          "operation": "replace",
+          "before_range": [
+            6,
+            8
+          ],
+          "after_range": [
+            6,
+            7
+          ],
+          "before": [
+            "《战神：劳菲》尚未确定发售日期，预计将于2027年登陆PS5。奎托斯会在游戏中至少一个场景里现身，圣莫妮卡工作室也向粉丝保证，这位弑神主角未来还会在更多作品中回归。",
+            "如需了解更多内容，可以阅读《战神：劳菲》导演Ariel Lawrence对新作公布后质疑者的回应，也可以查看IGN对开发团队的采访。"
+          ],
+          "after": [
+            "《战神：劳菲》尚未确定发售日期，不过因为确定会有实体盘，所以预计将于2027年登陆PS5。奎托斯会在游戏中至少一个场景里现身，圣莫妮卡工作室也向粉丝保证，这位主角未来还会在更多作品中回归。"
+          ]
+        }
+      ],
+      "dictionary_candidates": [
+        {
+          "id": "dict_candidate_deborah_ann_woll_701bef400360",
+          "category": "dictionary",
+          "type": "dictionary_candidate",
+          "dict_category": "games",
+          "en": "Deborah Ann Woll",
+          "cn": "战神：劳菲",
+          "title": "词库候选：Deborah Ann Woll → 战神：劳菲",
+          "rule": "建议将「Deborah Ann Woll」加入词库，译为「战神：劳菲」。",
+          "status": "observed",
+          "semantic_review": "pending",
+          "quality": {
+            "accepted_as_evidence": true,
+            "status": "observed",
+            "reasons": [],
+            "requires_semantic_review": true
+          },
+          "confidence": "medium",
+          "date": "2026-07-17",
+          "article_id": 24,
+          "article_title": "《战神：劳菲》主演回应网络恶评：完全不在意",
+          "url": "https://www.ign.com/articles/god-of-war-laufey-star-deborah-ann-woll-totally-unbothered-by-online-hate-surrounding-the-game",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "cn_title": "一加退出美国和欧洲手机市场",
+      "en_title": "OnePlus Is Exiting the US Market",
+      "url": "https://www.ign.com/articles/oneplus-is-exiting-the-us-market",
+      "category": "行业动态",
+      "has_translation": true,
+      "title_diff": null,
+      "subtitle_diff": null,
+      "body_diffs": [
+        {
+          "operation": "replace",
+          "before_range": [
+            0,
+            2
+          ],
+          "after_range": [
+            0,
+            2
+          ],
+          "before": [
+            "目前最出色的Android手机——一加15——的制造商即将告别欧美市场。一加宣布退出美国和欧洲手机市场，这意味着其新机将不再于这两个市场发售，不过在现有库存售罄前，消费者仍可购买目前在售的机型。",
+            "对现有一加用户而言，消息并非全是坏事。一加表示，在适用情况下，已经售出的设备「将继续获得软件更新、安全补丁和售后支持」。一加客服将继续提供服务，现有保修仍然有效，维修服务也会继续向用户开放。已在支持名单中的手机仍可升级至下一版定制Android系统ColorOS 17。"
+          ],
+          "after": [
+            "目前最出色的安卓手机制造商之一即将告别欧美市场。一加宣布退出美国和欧洲手机市场，这意味着其新机将不再于这两个市场发售，不过在现有库存售罄前，消费者仍可购买目前在售的机型。",
+            "对现有一加用户而言，消息并非全是坏事。一加表示，在适用情况下，已经售出的设备「将继续获得软件更新、安全补丁和售后支持」。一加客服将继续提供服务，现有保修仍然有效，维修服务也会继续向用户开放。已在支持名单中的手机仍可升级至下一版定制安卓系统ColorOS 17。"
+          ]
+        },
+        {
+          "operation": "delete",
+          "before_range": [
+            3,
+            4
+          ],
+          "after_range": [
+            3,
+            3
+          ],
+          "before": [
+            "这也意味着我们得另寻新的心仪手机。三星预计将在下周发布新一代Galaxy Z Flip和Galaxy Z Fold设备，向这一位置发起挑战。与此同时，Pixel 11将于8月12日的下一场Made by Google活动上亮相。"
+          ],
+          "after": []
+        }
+      ],
+      "dictionary_candidates": []
+    },
+    {
+      "id": 28,
+      "cn_title": "《街头霸王6》推出朱莉、爱德和英格丽德官方香氛",
+      "en_title": "Official Street Fighter 6 Fragrances Let You Smell Just Like Juri, Ed, and Ingrid",
+      "url": "https://www.ign.com/articles/official-street-fighter-6-fragrances-let-you-smell-just-like-juri-ed-and-ingrid",
+      "category": "游戏新闻",
+      "has_translation": true,
+      "title_diff": {
+        "mine": "《街头霸王6》推出朱莉、艾德和英格丽德官方香氛",
+        "yours": "《街头霸王6》推出朱莉、爱德和英格丽德官方香氛"
+      },
+      "subtitle_diff": null,
+      "body_diffs": [
+        {
+          "operation": "replace",
+          "before_range": [
+            1,
+            3
+          ],
+          "after_range": [
+            1,
+            3
+          ],
+          "before": [
+            "卡普空正式授权的三款特制香氛油套装，让「世界格斗家」可以闻起来像艾德、英格丽德和朱莉。每套包含木质扩香器和一瓶香氛油，香调均针对角色的独特特征调制。",
+            "艾德香氛混合佛手柑、香根草、丁香、留兰香和迷迭香，并以「清爽的木质琥珀」收尾。Gaming Fragrances称，这种香味最适合「让你打出反击牵制，又不会因挥空遭到惩罚」。"
+          ],
+          "after": [
+            "卡普空正式授权的三款特制香氛油套装，让「世界格斗家」可以闻起来像爱德、英格丽德和朱莉。每套包含木质扩香器和一瓶香氛油，香调均针对角色的独特特征调制。",
+            "爱德香氛混合佛手柑、香根草、丁香、留兰香和迷迭香，并以「清爽的木质琥珀」收尾。Gaming Fragrances称，这种香味最适合「让你打出反击牵制，又不会因挥空遭到惩罚」。"
+          ]
+        },
+        {
+          "operation": "replace",
+          "before_range": [
+            7,
+            8
+          ],
+          "after_range": [
+            7,
+            8
+          ],
+          "before": [
+            "这并非卡普空首次呈现《街头霸王》角色的气味。多年来，公司已与该品牌合作过数次，尤其在2024年于卡普空咖啡馆推出卢克、杰米和艾德三款角色专属香水，据称每款都「充满角色个性」。"
+          ],
+          "after": [
+            "这并非卡普空首次呈现《街头霸王》角色的气味。多年来，公司已与该品牌合作过数次，尤其在2024年于卡普空咖啡馆推出卢克、杰米和爱德三款角色专属香水，据称每款都「充满角色个性」。"
+          ]
+        }
+      ],
+      "dictionary_candidates": []
+    },
+    {
+      "id": 32,
+      "cn_title": "谷歌将于8月发布Pixel 11系列，但规格已经提前泄露",
+      "en_title": "Google Pixel 11 Specs Leak Ahead of Next Month’s Unveiling",
+      "url": "https://www.ign.com/articles/google-pixel-11-specs-leak-ahead-of-next-months-unveiling",
+      "category": "科技新闻",
+      "has_translation": true,
+      "title_diff": {
+        "mine": "Pixel 11规格提前泄露，谷歌8月发布",
+        "yours": "谷歌将于8月发布Pixel 11系列，但规格已经提前泄露"
+      },
+      "subtitle_diff": {
+        "mine": "参数仍有疑点",
+        "yours": "小道消息"
+      },
+      "body_diffs": [
+        {
+          "operation": "replace",
+          "before_range": [
+            2,
+            3
+          ],
+          "after_range": [
+            2,
+            3
+          ],
+          "before": [
+            "次日，Android Authority称看到了更多商品页面截图，并据此确认新机将拥有120Hz刷新率、1300万像素前置摄像头，并支持蓝牙6和Wi-Fi 6E。有趣的是，该媒体称基础款Pixel 11分辨率为2,856×1,280，与9to5Google报道的1,080×2,424相冲突。（笔者没有在Android Authority公布的截图中看到这一参数；与往常一样，对泄露规格最好持保留态度。）"
+          ],
+          "after": [
+            "次日，Android Authority称看到了更多商品页面截图，并据此确认新机将拥有120Hz刷新率、1300万像素前置摄像头，并支持蓝牙6和Wi-Fi 6E。有趣的是，该媒体称基础款Pixel 11分辨率为2,856×1,280，与9to5Google报道的1,080×2,424相冲突。（但没有在Android Authority公布的截图中看到这一参数；与往常一样，对泄露规格最好持保留态度。）"
+          ]
+        },
+        {
+          "operation": "replace",
+          "before_range": [
+            4,
+            5
+          ],
+          "after_range": [
+            4,
+            5
+          ],
+          "before": [
+            "最后，Pixel 11 Pro Fold可能配备6.5英寸120Hz外部OLED屏幕，分辨率2,342×1,080。泄露信息还称其拥有4,750mAh电池、1300万像素前置摄像头，并支持蓝牙6和Wi-Fi 6E。256GB版售价可能为1,899美元(约合人民币1.3万元)，高于上代基础款的1,799美元(约合人民币1.2万元)；512GB版则为2,019美元(约合人民币1.4万元)。报道作者指出，10 Pro Fold配备容量更大的5,015mAh电池，因此截图中的较小容量可能只是错误的占位文字。当然，这些已被删除的提前上架页面中，其他信息同样可能不准确。"
+          ],
+          "after": [
+            "最后，Pixel 11 Pro Fold可能配备6.5英寸120Hz OLED屏幕，分辨率2,342×1,080。泄露信息还称其拥有4,750mAh电池、1300万像素前置摄像头，并支持蓝牙6和Wi-Fi 6E。256GB版售价可能为1,899美元(约合人民币1.3万元)，高于上代基础款的1,799美元(约合人民币1.2万元)；512GB版则为2,019美元(约合人民币1.4万元)。报道作者指出，10 Pro Fold配备容量更大的5,015mAh电池，因此截图中的较小容量可能只是错误的占位文字。当然，这些已被删除的提前上架页面中，其他信息同样可能不准确。"
+          ]
+        }
+      ],
+      "dictionary_candidates": []
+    },
+    {
+      "id": 35,
+      "cn_title": "《GTA6》黑客转入普通监狱，等待重新审判",
+      "en_title": "GTA 6 Hacker Moved to Prison for Retrial Two Years After Indefinite Sentence to Secure Hospital",
+      "url": "https://www.ign.com/articles/gta-6-hacker-moved-to-prison-for-retrial-two-years-after-indefinite-sentence-to-secure-hospital",
+      "category": "游戏新闻",
+      "has_translation": true,
+      "title_diff": null,
+      "subtitle_diff": {
+        "mine": "泄露案再开庭",
+        "yours": "这一天终于到来"
+      },
+      "body_diffs": [
+        {
+          "operation": "replace",
+          "before_range": [
+            8,
+            9
+          ],
+          "after_range": [
+            8,
+            9
+          ],
+          "before": [
+            "《GTA6》将于2026年11月19日登陆PlayStation 5和XBOX Series。有关这款十年来最受期待作品的更多信息，可在IGN专题页面查看。"
+          ],
+          "after": [
+            "《GTA6》将于2026年11月19日登陆PS5和XBOX Series。"
+          ]
+        }
+      ],
+      "dictionary_candidates": []
+    },
+    {
+      "id": 37,
+      "cn_title": "《刺客信条：黑旗 记忆重置》总监解释为何取消袖剑战斗",
+      "en_title": "Assassin's Creed Black Flag Resynced Director Reveals Why Ubisoft Ditched Edward's Hidden Blade Combat",
+      "url": "https://www.ign.com/articles/assassins-creed-black-flag-resynced-director-reveals-why-ubisoft-ditched-edwards-hidden-blade-combat",
+      "category": "游戏新闻",
+      "has_translation": true,
+      "title_diff": {
+        "mine": "育碧《刺客信条：黑旗 记忆重置》导演解释为何取消袖剑战斗",
+        "yours": "《刺客信条：黑旗 记忆重置》总监解释为何取消袖剑战斗"
+      },
+      "subtitle_diff": null,
+      "body_diffs": [
+        {
+          "operation": "replace",
+          "before_range": [
+            0,
+            6
+          ],
+          "after_range": [
+            0,
+            6
+          ],
+          "before": [
+            "《刺客信条：黑旗 记忆重置》导演Richard Knight解释了为何爱德华·肯威缺少一些深受喜爱的战斗招式，并表示粉丝不必彻底放弃这些动作回归的希望。",
+            "《黑旗 记忆重置》与原作存在大量差异，其中最明显的是战斗。例如，敌人现在会显示生命条和防御条，玩家必须先击破防御才能造成伤害。",
+            "重制版改写了原作的反击连杀系统。旧系统能让玩家轻松得近乎滑稽地扫清成群敌人，还提供火枪、袖剑等大量武器，让玩家以各种富有创意的方式解决对手。",
+            "Knight接受YouTuber JorRaptor采访时解释，团队为何放弃这种风格，改以双弯刀为核心：为大量不同武器和击杀制作额外动画，在优先级列表上相对靠后。",
+            "他说：「开发期间，如果看看爱德华——他现在太强了，工具也太多，因此我们优先做好核心战斗，因为必须把它打磨到位。」",
+            "「投掷武器确实很酷，但他已经有十种杀人方式。考虑到用今天的角色、骨骼和动画从头重新设计、重建功能的成本，背后涉及的工作多得多，所以对我们而言优先级较低。」"
+          ],
+          "after": [
+            "《刺客信条：黑旗 记忆重置》总监Richard Knight解释了为何爱德华·肯威缺少一些他最受欢迎的战斗招式，并表示粉丝不必彻底放弃这些动作回归的希望。",
+            "《黑旗：重制版》与其前作相比有诸多不同，其中最显著的差异体现在战斗系统方面。例如，重制版为敌人添加了可见的生命值条和防御条，玩家必须先打破防御条才能对其造成伤害。",
+            "重制版改写了原作的反击连杀系统。旧系统能让玩家轻松地扫清成群敌人——更不用说游戏中种类繁多的武器，包括火枪和袖剑，玩家可以从中选择以无穷无尽的创意方式终结对手。",
+            "Knight接受YouTuber JorRaptor采访时解释，团队为何放弃这种风格，改以双弯刀为核心。他说：「为大量不同武器和击杀添加额外的动画效果在开发优先级列表上相对靠后。」",
+            "他说：「在开发过程中，如果你观察爱德华——他现在太强了，并且拥有很多技能，因此我们优先做好核心战斗体验。」",
+            "「投掷武器确实很酷，但他已经有数十种杀人方式。考虑到用今天的角色、骨骼和动画从头重新设计、重建功能的成本，这背后涉及的工作要多得多，所以对我们而言优先级较低。」"
+          ]
+        }
+      ],
+      "dictionary_candidates": []
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "date": "2026-07-16",
+  "observer": "codex",
+  "model": "codex",
+  "status": "observed",
+  "signals": [],
+  "candidates": [
+    {
+      "id": "dict_candidate_new_vegas_lead_designer_3faff8e21716",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：New Vegas Lead Designer → 辐射：新维加斯",
+      "rule": "建议将「New Vegas Lead Designer」加入词库，译为「辐射：新维加斯」。",
+      "status": "observed",
+      "semantic_review": "pending",
+      "confidence": "medium",
+      "examples": [
+        {
+          "date": "2026-07-16",
+          "article_id": 32,
+          "before": "New Vegas Lead Designer",
+          "after": "辐射：新维加斯",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "contradiction": ""
+    }
+  ],
+  "notes": [
+    "Added source+polished dictionary candidates for GPT/Tencent workflow."
+  ],
+  "candidate_count": 1,
+  "updated_at": "2026-07-17T22:36:19+08:00"
+}
