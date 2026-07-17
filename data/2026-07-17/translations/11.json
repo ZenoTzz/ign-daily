@@ -84,7 +84,7 @@
     {
       "type": "text",
       "en": "Palworld's 1.0 launch landed earlier this month, finally bringing the game out of early access. Pocketpair said at the time that it would not raise the game's price beyond $29.99 as Palworld has \"become a success beyond our wildest dreams.\" That statement likely reflects the fact that more than 40 million players have dipped their paws into Palworld since its early access launch.",
-      "cn": "《幻兽帕鲁》1.0版本月早些时候推出，正式结束抢先体验。Pocketpair表示不会把售价提高到29.99美元(约合人民币203元)以上，因为游戏「取得了远超我们最疯狂想象的成功」。自抢先体验上线以来，玩家已超过4000万。"
+      "cn": "《幻兽帕鲁》1.0版本于本月早些时候推出，正式结束抢先体验。Pocketpair表示不会把售价提高到29.99美元(约合人民币203元)以上，因为游戏「取得了远超我们最疯狂想象的成功」。自抢先体验上线以来，已有超过4000万名玩家进入《幻兽帕鲁》的世界。"
     }
   ],
   "translated_terms": {
@@ -100,5 +100,12 @@
       "cat": "terms",
       "reason": "暂无官方中文名"
     }
-  ]
+  ],
+  "translator": "codex",
+  "translator_provider": "openai",
+  "translator_model": "gpt-5.6-sol",
+  "reasoning_effort": "low",
+  "reviewer_model": "gpt-5.6-sol",
+  "reviewed_at": "2026-07-17T02:47:01.358Z",
+  "prompt_version": "codex-bilingual-review-2026-07-17-v1"
 }

@@ -29,7 +29,7 @@
     {
       "type": "text",
       "en": "Dreadnought is in the first-person shooter at launch, and can be found at select points of interest in the DMZ mode (Modern Warfare 4's take on an extraction shooter), as well as the battle royale, Warzone. \"An Aston Martin’s natural habitat is amongst luxury properties and landscapes,\" Activision teased. \"Dreadnought simply has a slightly more adventurous commute.\"",
-      "cn": "「无畏号」将在这款第一人称射击游戏首发时登场，玩家可在DMZ模式（《现代战争4》对撤离射击玩法的演绎）的部分兴趣点，以及大逃杀模式《战区》中找到它。动视打趣道：「阿斯顿·马丁的天然栖息地是豪华房产与风景之间。无畏号只是通勤路线稍微更冒险一些。」"
+      "cn": "「无畏号」将在这款第一人称射击游戏首发时登场，玩家可在DMZ模式（《现代战争4》对撤离射击玩法的演绎）的特定地标，以及大逃杀模式《战区》中找到它。动视打趣道：「阿斯顿·马丁的天然栖息地是豪宅与秀丽风光之间。无畏号只是通勤路线稍微更冒险一些。」"
     },
     {
       "type": "text",
@@ -44,19 +44,26 @@
     {
       "type": "text",
       "en": "The name, Dreadnought, is a nod to the early 20th Century British warship, HMS Dreadnought. Aston Martin Chief Creative Officer, Marek Reichman, said: “To me, Dreadnought is unmistakably an Aston Martin — amplified without restraint. The quality of the details we have been able to include, right down to the iconic Chiltern Green paint colour so synonymous with this marque, underscores our dedication to delivering a truly authentic Aston Martin experience. Features as diverse as the carbon fibre chassis right through to exquisite elements such as the door hinges in anodised Satin Gold, reflect our real-world determination to be the most desirable ultra-luxury brand in the automotive sector, and beyond.”",
-      "cn": "「无畏号」这一名字致敬20世纪初的英国战舰「无畏号」。阿斯顿·马丁首席创意官Marek Reichman说：「在我看来，无畏号一眼就是阿斯顿·马丁，只是毫无克制地放大了品牌特征。我们得以加入的细节品质——甚至包括与品牌密不可分的经典奇尔特恩绿车漆——彰显了提供真正纯正阿斯顿·马丁体验的决心。从碳纤维底盘到阳极氧化缎面金车门铰链等精致元素，各类设计都体现了我们在现实世界中立志成为汽车行业乃至更广领域最令人向往的超豪华品牌。」"
+      "cn": "「无畏号」这一名字致敬20世纪初的英国皇家海军战列舰「无畏号」。阿斯顿·马丁首席创意官Marek Reichman说：「在我看来，无畏号一眼就是阿斯顿·马丁，只是毫无克制地放大了品牌特征。我们得以加入的细节品质——甚至包括与品牌密不可分的经典奇尔特恩绿车漆——彰显了提供真正纯正阿斯顿·马丁体验的决心。从碳纤维底盘到阳极氧化缎面金车门铰链等精致元素，各类设计都体现了我们在现实世界中立志成为汽车行业乃至更广领域最令人向往的超豪华品牌。」"
     },
     {
       "type": "text",
       "en": "If you're at Fanatics Fest in New York this weekend you'll be able to a full-size model of Dreadnought on the Call of Duty stand. Call of Duty: Modern Warfare 4 launches across Xbox Series X and S, PlayStation 5 and PC via Battle.net, Xbox on PC, Steam, and Nintendo Switch 2 on Friday, October 23, 2026.",
-      "cn": "如果本周末身处纽约Fanatics Fest，便可在《使命召唤》展台看到「无畏号」全尺寸模型。《使命召唤：现代战争4》将于2026年10月23日星期五登陆XBOX Series、PlayStation 5，以及通过Battle.net、XBOX PC版、Steam发行的PC版和任天堂Switch 2。"
+      "cn": "如果本周末身处纽约Fanatics Fest，便可在《使命召唤》展台看到「无畏号」全尺寸模型。《使命召唤：现代战争4》将于2026年10月23日星期五登陆XBOX Series X|S、PlayStation 5、任天堂Switch 2和PC，PC版将通过Battle.net、XBOX PC应用及Steam发行。"
     }
   ],
   "translated_terms": {
     "Call of Duty": "《使命召唤》",
-    "Xbox Series X and S": "XBOX Series",
+    "Xbox Series X and S": "XBOX Series X|S",
     "Nintendo Switch 2": "Nintendo Switch 2",
     "Aston Martin": "阿斯顿·马丁"
   },
-  "pending_dict": []
+  "pending_dict": [],
+  "translator": "codex",
+  "translator_provider": "openai",
+  "translator_model": "gpt-5.6-sol",
+  "reasoning_effort": "low",
+  "reviewer_model": "gpt-5.6-sol",
+  "reviewed_at": "2026-07-17T02:47:01.358Z",
+  "prompt_version": "codex-bilingual-review-2026-07-17-v1"
 }

@@ -24,7 +24,7 @@
     {
       "type": "text",
       "en": "The maker of the best Android phone around – the OnePlus 15 – is not long for these shores. OnePlus has announced that it is departing the U.S. and European mobile phone markets. That means none of its new phones will be released in either market, although you'll still be able to buy existing for-sale models while their stock holds out.",
-      "cn": "目前最佳Android手机之一一加15的制造商即将告别欧美市场。一加宣布退出美国和欧洲手机市场，这意味着其新机将不再于这两个市场发售，不过在现有库存售罄前，消费者仍可购买目前在售的机型。"
+      "cn": "目前最出色的Android手机——一加15——的制造商即将告别欧美市场。一加宣布退出美国和欧洲手机市场，这意味着其新机将不再于这两个市场发售，不过在现有库存售罄前，消费者仍可购买目前在售的机型。"
     },
     {
       "type": "text",
@@ -47,5 +47,12 @@
     "ColorOS 17": "ColorOS 17",
     "Pixel 11": "Pixel 11"
   },
-  "pending_dict": []
+  "pending_dict": [],
+  "translator": "codex",
+  "translator_provider": "openai",
+  "translator_model": "gpt-5.6-sol",
+  "reasoning_effort": "low",
+  "reviewer_model": "gpt-5.6-sol",
+  "reviewed_at": "2026-07-17T02:47:01.358Z",
+  "prompt_version": "codex-bilingual-review-2026-07-17-v1"
 }
