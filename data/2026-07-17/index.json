@@ -1068,6 +1068,38 @@
       "source_fetched_at": "2026-07-16T15:18:07+08:00"
     },
     {
+      "id": 42,
+      "category": "评测评分",
+      "emoji": "⚾",
+      "en_title": "Backyard Baseball Review",
+      "cn_title": "《Backyard Baseball》评测：新瓶装旧酒，核心玩法倒退",
+      "summary": "《Backyard Baseball》系列重启作由Mega Cat Studios开发，试图保留经典魅力，却在投打防守等核心机制上过度简化，导致击球过于轻松、投手无敌、防守无力，比赛常出现悬殊比分。尽管画质和动画有提升，卡片商店玩法带来一丝新意，但手感失衡让游戏体验大打折扣。目前暂无双人对战模式，单机赛季模式单调乏味。",
+      "url": "https://www.ign.com/articles/backyard-baseball-review-2026",
+      "publish_time_cn": "2026-07-16 11:47",
+      "pub_date": "2026-07-16 11:47",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/07/10/backyard-baseball-blogroll-1783713368856.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/07/10/backyard-baseball-blogroll-1783713368856.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/07/10/backyard-baseball-blogroll-1783713368856.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/07/10/backyard-baseball-blogroll-1783713368856.jpg?width=1200&canvas=1200%2C900&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/07/10/backyard-baseball-blogroll-1783713368856.jpg?width=1280&canvas=1280%2C720&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/04/27/backyardbaseball-1777329622308.jpg",
+        "https://assets-prd.ignimgs.com/2026/07/10/backyard-baseball-blogroll-1783713368856.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-07-17T11:47:39+08:00",
+      "pending_dict": [
+        {
+          "en": "Backyard Baseball",
+          "cn": "后院棒球",
+          "cat": "games",
+          "source": "ai_guess",
+          "reason": "无官方中文译名，根据系列惯例推测，需人工确认。"
+        }
+      ]
+    },
+    {
       "id": 1,
       "category": "游戏新闻",
       "emoji": "⚔️",
@@ -1174,5 +1206,5 @@
       "translation_status": "none"
     }
   ],
-  "total": 41
+  "total": 42
 }
