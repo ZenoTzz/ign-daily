@@ -298,6 +298,9 @@ class PrivateApiFileGuardsTest(unittest.TestCase):
                 module.public_translation_file_status("2026-07-18", 1)["status"],
                 "available",
             )
+            with self.assertRaises(FakeHTTPException) as raised:
+                module.translation_file_status("../invalid", 1)
+            self.assertEqual(raised.exception.status_code, 400)
 
     def test_reading_job_does_not_claim_queued_translation(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
