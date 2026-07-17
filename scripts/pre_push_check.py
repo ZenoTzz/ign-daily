@@ -45,6 +45,7 @@ def main() -> int:
         "enforce_dict_titles.py",
         "check_dict_fulltext.py",
         "check_translation_memory.py",
+        "check_translation_quality.py",
     ]
     failures = [script for script in checks if run_check(script, date) != 0]
     if failures:

@@ -13,6 +13,7 @@ import json
 import os
 import secrets
 import sqlite3
+import stat
 import subprocess
 import time
 import urllib.error
@@ -27,6 +28,7 @@ from typing import Any, Iterator
 from fastapi import Cookie, Depends, FastAPI, Header, HTTPException, Request, Response
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
+from translation_quality import QUALITY_GATE_VERSION, validate_translation_quality
 
 try:
     import fcntl
@@ -83,6 +85,7 @@ WECHAT_APP_SECRET = os.environ.get("IGN_DAILY_WECHAT_APP_SECRET", "").strip()
 WECHAT_BIND_TTL_SECONDS = 10 * 60
 WECHAT_JOB_TEMPLATE_ID = os.environ.get("IGN_DAILY_WECHAT_JOB_TEMPLATE_ID", "").strip()
 _WECHAT_ACCESS_TOKEN: dict[str, Any] = {"value": "", "expires_at": 0}
+MAX_TRANSLATION_JOB_ARTICLES = 2
 
 
 class LoginRequest(BaseModel):
@@ -349,6 +352,32 @@ def read_json(path: Path, default: Any = None) -> Any:
         return json.loads(path.read_text(encoding="utf-8-sig"))
     except Exception as exc:
         raise HTTPException(status_code=500, detail=f"Invalid JSON: {path.relative_to(APP_DIR)}: {exc}") from exc
+
+
+def public_translation_file_status(date: str, article_id: int) -> dict[str, Any]:
+    """Report whether Nginx can traverse and read a public translation file."""
+    padded = f"{int(article_id):02d}"
+    relative = f"data/{date}/translations/{padded}.json"
+    target = APP_DIR / relative
+    if not target.exists():
+        return {"status": "missing", "path": relative}
+    data_root = (APP_DIR / "data").resolve()
+    try:
+        resolved = target.resolve()
+        if data_root not in resolved.parents or not resolved.is_file():
+            return {"status": "invalid", "path": relative}
+        if not (resolved.stat().st_mode & stat.S_IROTH):
+            return {"status": "permission_denied", "path": relative}
+        current = resolved.parent
+        while True:
+            if not (current.stat().st_mode & stat.S_IXOTH):
+                return {"status": "permission_denied", "path": relative}
+            if current == data_root:
+                break
+            current = current.parent
+    except OSError:
+        return {"status": "permission_denied", "path": relative}
+    return {"status": "available", "path": relative}
 
 
 def json_text(data: Any) -> str:
@@ -755,10 +784,21 @@ def write_local_file(target: Path, content: str, expected_sha: str | None = None
         if not hmac.compare_digest(content_sha(current), expected_sha):
             raise HTTPException(status_code=409, detail="File changed before it could be saved")
     target.parent.mkdir(parents=True, exist_ok=True)
+    data_root = (APP_DIR / "data").resolve()
+    resolved_parent = target.parent.resolve()
+    if resolved_parent == data_root or data_root in resolved_parent.parents:
+        current = resolved_parent
+        while True:
+            os.chmod(current, 0o755)
+            if current == data_root:
+                break
+            current = current.parent
     temporary = target.with_name(f".{target.name}.{uuid.uuid4().hex}.tmp")
     try:
         temporary.write_text(content, encoding="utf-8")
+        os.chmod(temporary, 0o644)
         os.replace(temporary, target)
+        os.chmod(target, 0o644)
     finally:
         if temporary.exists():
             temporary.unlink(missing_ok=True)
@@ -1335,6 +1375,16 @@ def article(date: str, article_id: int, user: sqlite3.Row = Depends(current_user
     raise HTTPException(status_code=404, detail="Article not found")
 
 
+@app.get("/translations/file-status")
+def translation_file_status(
+    date: str,
+    article_id: int,
+) -> dict[str, Any]:
+    if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", date):
+        raise HTTPException(status_code=400, detail="Invalid date")
+    return {"ok": True, **public_translation_file_status(date, article_id)}
+
+
 @app.post("/filtered/restore")
 def restore_filtered_article(payload: FilteredRestoreRequest, user: sqlite3.Row = Depends(current_user)) -> dict[str, Any]:
     date = payload.date
@@ -1607,24 +1657,40 @@ def request_translation(payload: TranslationRequest, user: sqlite3.Row = Depends
         "requested_by": user["username"],
     }
     write_project_file(path, json_text(updated), f"request translation for {payload.date}: {','.join(map(str, requested_ids))}")
-    job_id = create_job(
-        "translation",
-        payload.date,
-        [int(a["id"]) for a in selected],
-        user["username"],
-        "翻译请求已提交",
-    )
+    selected_ids = [int(a["id"]) for a in selected]
+    job_ids = [
+        create_job(
+            "translation",
+            payload.date,
+            selected_ids[offset : offset + MAX_TRANSLATION_JOB_ARTICLES],
+            user["username"],
+            "翻译请求已提交",
+        )
+        for offset in range(0, len(selected_ids), MAX_TRANSLATION_JOB_ARTICLES)
+    ]
+    job_id = job_ids[0]
     if payload.trigger_workflow:
         if STORAGE_MODE == "github":
             gh_dispatch_workflow("api-translation.yml", {})
-            update_job(job_id, "running", "已触发 GitHub 翻译流程", 10)
+            for created_job_id in job_ids:
+                update_job(created_job_id, "running", "已触发 GitHub 翻译流程", 10)
         else:
-            update_job(job_id, "running", "服务器正在翻译", 10)
+            for created_job_id in job_ids:
+                update_job(created_job_id, "running", "服务器正在翻译", 10)
             run_local_job(["/srv/ign-daily-ops/run-api-translation.sh"], job_id)
     else:
-        update_job(job_id, "queued", "已加入翻译队列", 5)
+        for created_job_id in job_ids:
+            update_job(created_job_id, "queued", "已加入翻译队列", 5)
     sync_from_github()
-    return {"ok": True, "date": payload.date, "requested_ids": merged_ids, "job_id": job_id, "triggered": payload.trigger_workflow}
+    return {
+        "ok": True,
+        "date": payload.date,
+        "requested_ids": merged_ids,
+        "job_id": job_id,
+        "job_ids": job_ids,
+        "job_batch_size": MAX_TRANSLATION_JOB_ARTICLES,
+        "triggered": payload.trigger_workflow,
+    }
 
 
 @app.post("/translations/approve")
@@ -1647,9 +1713,29 @@ def approve_translation(payload: ManualApproveRequest, user: sqlite3.Row = Depen
     data["manual_approved_by"] = user["username"]
     data["manual_approved_reason"] = "user approved API audit draft"
     data["manual_approved_issues"] = data.get("audit_issues", [])
+    data["reviewer_model"] = "human"
+    data["reviewed_at"] = now
+    data["quality_gate_version"] = QUALITY_GATE_VERSION
+    data["quality_review"] = {
+        "status": "passed",
+        "reviewer_model": "human",
+        "reviewed_at": now,
+        "checks": {
+            "source_coverage": True,
+            "quote_attribution": True,
+            "numeric_facts": True,
+        },
+        "reviewed_by": user["username"],
+    }
     data.pop("audit_issues", None)
     data.pop("audit_failed_at", None)
     data.pop("audit_failure_reason", None)
+    quality_errors = validate_translation_quality(data)
+    if quality_errors:
+        raise HTTPException(
+            status_code=409,
+            detail=f"Translation quality gate failed: {'; '.join(quality_errors)}",
+        )
     write_project_file(trans_rel, json_text(data), f"manual approve translation #{article_id}")
 
     idx = read_json(APP_DIR / index_rel)
@@ -1662,6 +1748,14 @@ def approve_translation(payload: ManualApproveRequest, user: sqlite3.Row = Depen
             art["translator"] = data.get("translator") or art.get("translator")
             art["translator_provider"] = data.get("translator_provider") or art.get("translator_provider")
             art["translator_model"] = data.get("translator_model") or art.get("translator_model")
+            for meta_key in (
+                "reasoning_effort",
+                "reviewer_model",
+                "reviewed_at",
+                "prompt_version",
+                "quality_gate_version",
+            ):
+                art[meta_key] = data.get(meta_key)
             art.pop("translation_error", None)
             art.pop("translation_failed_at", None)
             break
@@ -1771,15 +1865,42 @@ def codex_complete_job(
     if row["kind"] != "translation":
         raise HTTPException(status_code=400, detail="Only translation jobs can be completed by Codex")
     ids = json.loads(row["ids_json"] or "[]")
-    missing = [
-        int(article_id)
-        for article_id in ids
-        if not (APP_DIR / "data" / str(row["date"]) / "translations" / f"{int(article_id):02d}.json").is_file()
-    ]
+    if len(ids) > MAX_TRANSLATION_JOB_ARTICLES:
+        raise HTTPException(
+            status_code=409,
+            detail=f"Translation job exceeds hard batch limit of {MAX_TRANSLATION_JOB_ARTICLES} articles",
+        )
+    missing: list[int] = []
+    quality_failures: list[str] = []
+    index = read_json(APP_DIR / "data" / str(row["date"]) / "index.json", {"articles": []})
+    by_id = {
+        int(item.get("id")): item
+        for item in index.get("articles", [])
+        if isinstance(item, dict) and str(item.get("id", "")).isdigit()
+    }
+    for article_id in ids:
+        article_id = int(article_id)
+        path = APP_DIR / "data" / str(row["date"]) / "translations" / f"{article_id:02d}.json"
+        if not path.is_file():
+            missing.append(article_id)
+            continue
+        data = read_json(path)
+        errors = validate_translation_quality(data)
+        if by_id.get(article_id, {}).get("translation_status") != "done":
+            errors.append("index translation_status must be done")
+        expected_path = f"translations/{article_id:02d}.json"
+        if by_id.get(article_id, {}).get("translation_path") != expected_path:
+            errors.append(f"index translation_path must be {expected_path}")
+        quality_failures.extend(f"#{article_id}: {error}" for error in errors)
     if missing:
         raise HTTPException(
             status_code=409,
             detail=f"Translation files are missing for article ids: {','.join(map(str, missing))}",
+        )
+    if quality_failures:
+        raise HTTPException(
+            status_code=409,
+            detail=f"Translation quality gate failed: {'; '.join(quality_failures)}",
         )
     for article_id in ids:
         write_job_progress_item(

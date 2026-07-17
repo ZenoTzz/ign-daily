@@ -76,7 +76,16 @@ def sync(date, article_id=None):
         if art.get('translation_path') != translation_path:
             art['translation_path'] = translation_path
             changed = True
-        for meta_key in ('translator', 'translator_provider', 'translator_model'):
+        for meta_key in (
+            'translator',
+            'translator_provider',
+            'translator_model',
+            'reasoning_effort',
+            'reviewer_model',
+            'reviewed_at',
+            'prompt_version',
+            'quality_gate_version',
+        ):
             if trans.get(meta_key) and art.get(meta_key) != trans[meta_key]:
                 art[meta_key] = trans[meta_key]
                 changed = True

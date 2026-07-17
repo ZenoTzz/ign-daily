@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import importlib.util
+import json
 import os
 import sys
 import tempfile
@@ -12,6 +13,8 @@ from unittest.mock import Mock, patch
 
 
 MODULE_PATH = Path(__file__).with_name("ign_daily_api.py")
+if str(MODULE_PATH.parent) not in sys.path:
+    sys.path.insert(0, str(MODULE_PATH.parent))
 
 
 class FakeHTTPException(Exception):
@@ -211,10 +214,90 @@ class PrivateApiFileGuardsTest(unittest.TestCase):
 
             translation = repo / "data" / "2026-07-10" / "translations" / "01.json"
             translation.parent.mkdir(parents=True)
-            translation.write_text("{}\n", encoding="utf-8")
+            reviewed_at = "2026-07-10T10:00:00+00:00"
+            translation.write_text(json.dumps({
+                "translator": "codex",
+                "translator_provider": "openai",
+                "translator_model": "gpt-5.6-sol",
+                "reasoning_effort": "low",
+                "reviewer_model": "gpt-5.6-sol",
+                "reviewed_at": reviewed_at,
+                "prompt_version": "codex-fulltext-v2",
+                "quality_gate_version": 1,
+                "quality_review": {
+                    "status": "passed",
+                    "reviewer_model": "gpt-5.6-sol",
+                    "reviewed_at": reviewed_at,
+                    "checks": {
+                        "source_coverage": True,
+                        "quote_attribution": True,
+                        "numeric_facts": True,
+                    },
+                },
+                "paragraphs": [{"en": "A complete source paragraph.", "cn": "完整的译文段落。"}],
+            }), encoding="utf-8")
+            (repo / "data" / "2026-07-10" / "index.json").write_text(json.dumps({
+                "articles": [{
+                    "id": 1,
+                    "translation_status": "done",
+                    "translation_path": "translations/01.json",
+                }]
+            }), encoding="utf-8")
             result = module.codex_complete_job(job_id, payload, {"username": "tester"})
             self.assertTrue(result["ok"])
             self.assertEqual(result["job"]["status"], "done")
+
+    def test_translation_requests_are_split_into_two_article_jobs(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            repo = root / "repo"
+            api_dir = root / "api"
+            day = repo / "data" / "2026-07-18"
+            day.mkdir(parents=True)
+            api_dir.mkdir()
+            articles = [
+                {"id": article_id, "url": f"https://example.com/{article_id}", "en_title": str(article_id)}
+                for article_id in range(1, 6)
+            ]
+            (day / "index.json").write_text(json.dumps({"articles": articles}), encoding="utf-8")
+            module = load_api(repo, api_dir, {"IGN_DAILY_STORAGE_MODE": "local"})
+            module.init_db()
+            payload = types.SimpleNamespace(date="2026-07-18", ids=[1, 2, 3, 4, 5], trigger_workflow=False)
+
+            result = module.request_translation(payload, {"username": "tester"})
+
+            self.assertEqual(result["job_batch_size"], 2)
+            self.assertEqual(len(result["job_ids"]), 3)
+            with module.db() as conn:
+                rows = conn.execute("SELECT ids_json FROM jobs ORDER BY created_at, id").fetchall()
+            self.assertEqual(sorted(len(json.loads(row["ids_json"])) for row in rows), [1, 2, 2])
+
+    def test_public_translation_status_distinguishes_missing_and_permissions(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            repo = root / "repo"
+            api_dir = root / "api"
+            repo.mkdir()
+            api_dir.mkdir()
+            module = load_api(repo, api_dir, {"IGN_DAILY_STORAGE_MODE": "local"})
+            self.assertEqual(
+                module.public_translation_file_status("2026-07-18", 1)["status"],
+                "missing",
+            )
+            translation = repo / "data" / "2026-07-18" / "translations" / "01.json"
+            translation.parent.mkdir(parents=True)
+            translation.write_text("{}\n", encoding="utf-8")
+            if os.name != "nt":
+                os.chmod(translation, 0o600)
+                self.assertEqual(
+                    module.public_translation_file_status("2026-07-18", 1)["status"],
+                    "permission_denied",
+                )
+            os.chmod(translation, 0o644)
+            self.assertEqual(
+                module.public_translation_file_status("2026-07-18", 1)["status"],
+                "available",
+            )
 
     def test_reading_job_does_not_claim_queued_translation(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:

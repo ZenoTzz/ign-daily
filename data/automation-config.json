@@ -12,7 +12,7 @@
   "api_nightly_thinking": "max",
   "api_compare_thinking": "disabled",
   "api_base_url": "https://api.deepseek.com",
-  "api_fulltext_batch": "all",
+  "api_fulltext_batch": "2",
   "compare_models": [
     "deepseek-v4-pro",
     "deepseek-v4-flash"

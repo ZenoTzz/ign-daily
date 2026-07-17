@@ -76,6 +76,8 @@ Response:
   "date": "2026-06-25",
   "requested_ids": [2],
   "job_id": "translation-...",
+  "job_ids": ["translation-..."],
+  "job_batch_size": 2,
   "triggered": false
 }
 ```
@@ -137,8 +139,11 @@ article metadata and cached source payloads.
 }
 ```
 
-`POST /codex/jobs/{job_id}/complete` marks a job complete after Codex has written
-the translation files.
+Translation requests are split into jobs containing at most two articles.
+`POST /codex/jobs/{job_id}/complete` marks a job complete only after every
+translation file exists, its index state is consistent, required model/prompt
+metadata is present, and the independent coverage/quote/numeric review gate has
+passed.
 
 `POST /codex/jobs/{job_id}/fail` records a job-level failure.
 

@@ -53,6 +53,7 @@ sudo -u "$RUN_USER" "$APP_VENV/bin/pip" install --upgrade pip
 sudo -u "$RUN_USER" "$APP_VENV/bin/pip" install requests beautifulsoup4 lxml python-dotenv openpyxl
 
 sudo -u "$RUN_USER" cp "$APP_DIR/server_api/ign_daily_api.py" "$API_DIR/ign_daily_api.py"
+sudo -u "$RUN_USER" cp "$APP_DIR/server_api/translation_quality.py" "$API_DIR/translation_quality.py"
 sudo -u "$RUN_USER" cp "$APP_DIR/server_api/requirements.txt" "$API_DIR/requirements.txt"
 sudo -u "$RUN_USER" python3 -m venv "$API_DIR/venv"
 sudo -u "$RUN_USER" "$API_DIR/venv/bin/pip" install --upgrade pip
@@ -327,6 +328,8 @@ sudo systemctl restart ign-daily-api
 sudo nginx -t
 sudo systemctl enable nginx
 sudo systemctl reload nginx
+sudo APP_DIR="$APP_DIR" RUN_USER="$RUN_USER" \
+  bash "$APP_DIR/server_api/deploy/install_runtime_permission_guard.sh"
 
 echo "Install complete."
 echo "Visit: http://$SERVER_NAME/"

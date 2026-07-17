@@ -84,6 +84,7 @@ python scripts/translate_pipeline.py YYYY-MM-DD ID --prep
 - 词库命中使用 `data/dict.json`；不确定新译名放入 `pending_dict`。
 - 保留 source cache 中有效的 `cover` 和 `images`。
 - 不翻译 IGN 导航、广告、作者信息、图片署名、社交账号和推荐卡。
+- 首译后必须进行一次独立双语复核，重新对照英文和中文检查：逐句覆盖、引语说话者/归属、所有数字与单位。新译文写入 `quality_gate_version=1`、`quality_review` 及完整模型/提示词元数据，不能用首译时的自检代替。
 
 详细标点、XBOX、作品名、人名、金额和语气规则只看 `TRANSLATION_GUIDE.md`。
 
@@ -102,7 +103,7 @@ python scripts/translate_pipeline.py YYYY-MM-DD ID --prep
 python scripts/ensure_translation_media.py YYYY-MM-DD --id ID
 ```
 
-不要先把 job 标记完成再写文件。后端会拒绝缺少译文文件的完成请求。
+不要先把 job 标记完成再写文件。每个 job 最多两篇；后端会拒绝超过两篇、缺少译文、索引状态不一致、元数据不完整或独立复核未通过的完成请求。
 
 ## 5. 校验
 
@@ -116,7 +117,7 @@ python scripts/pre_push_check.py YYYY-MM-DD
 
 `pre_push_check.py` 的 source alignment 为阻断性检查：它会逐段比对 source 与译文中的英文锚点、顺序和中文字段。任何不一致都必须先修复，不能将文章标记为 `done`，也不能同步到 Google Docs 或 GitHub。
 
-`pre_push_check.py` 当前运行六项：source alignment、译文结构/媒体与标点、金额、标题词库、全文词库和句段翻译记忆。相同的人工确认英文若没有复用锁定中文，也会阻止发布。只以最终 `ALL PRE-PUSH CHECKS PASSED` 为通过。
+`pre_push_check.py` 当前运行七项：source alignment、译文结构/媒体与标点、金额、标题词库、全文词库、句段翻译记忆和版本化独立复核门禁。相同的人工确认英文若没有复用锁定中文，也会阻止发布。只以最终 `ALL PRE-PUSH CHECKS PASSED` 为通过。
 
 以下都不是通过：
 

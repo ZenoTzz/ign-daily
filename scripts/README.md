@@ -46,6 +46,7 @@
 | `check_dict_fulltext.py` | 全文词库检查 |
 | `translation_memory.py` | 管理用户明确确认的精确段落/引语译文；翻译时只检索当前文章命中 |
 | `check_translation_memory.py` | 阻止已批准的相同英文出现不同中文 |
+| `check_translation_quality.py` | 校验新译文的模型元数据、独立复核声明、数字与高置信度漏译风险 |
 
 统一校验入口：
 

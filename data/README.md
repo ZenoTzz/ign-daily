@@ -110,6 +110,21 @@ data/usage/deepseek-balance.json
   "translator": "api",
   "translator_provider": "openai-compatible",
   "translator_model": "deepseek-v4-pro",
+  "reasoning_effort": "high",
+  "reviewer_model": "deepseek-v4-pro",
+  "reviewed_at": "2026-07-17T10:00:00Z",
+  "prompt_version": "api-fulltext-2026-07-v2",
+  "quality_gate_version": 1,
+  "quality_review": {
+    "status": "passed",
+    "reviewer_model": "deepseek-v4-pro",
+    "reviewed_at": "2026-07-17T10:00:00Z",
+    "checks": {
+      "source_coverage": true,
+      "quote_attribution": true,
+      "numeric_facts": true
+    }
+  },
   "pending_dict": [],
   "cover": "https://assets-prd.ignimgs.com/...",
   "images": [{"url": "https://assets-prd.ignimgs.com/...", "caption": ""}],
@@ -122,6 +137,10 @@ data/usage/deepseek-balance.json
 ```
 
 副标题字段统一使用 `subtitle`。旧字段 `cn_subtitle` 仅作为历史兼容读取，不再作为新译文写入字段。
+
+新译文必须写入上述模型、提示词和独立复核元数据。`quality_review`
+表示审校者重新对照英文和中文检查漏译、引语归属与数字事实；它不是首译模型的
+自我检查字段。缺失或任一检查不为 `true` 时，后端拒绝完成新任务。历史译文不追溯改写。
 
 ## dict.json（词库）
 

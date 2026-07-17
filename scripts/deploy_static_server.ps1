@@ -56,6 +56,8 @@ sudo find "$ServerPath" -path "$ServerPath/.git" -prune -o -type d -exec chmod 7
 sudo find "$ServerPath" -path "$ServerPath/.git" -prune -o -type f ! -name '.env' -exec chmod 644 {} +
 sudo find "$ServerPath/server_api/deploy" -type f -name '*.sh' -exec chmod 755 {} +
 sudo bash "$ServerPath/server_api/deploy/apply_nginx_security.sh"
+sudo APP_DIR="$ServerPath" RUN_USER="${User}" \
+  bash "$ServerPath/server_api/deploy/install_runtime_permission_guard.sh"
 if [ -f "$ServerPath/.env" ]; then
   sudo chmod 600 "$ServerPath/.env"
 fi
@@ -72,6 +74,8 @@ api_backup="/tmp/ign-daily-api-backup-`$`$.py"
 sudo cp "$ApiPath/ign_daily_api.py" "`$api_backup"
 sudo install -o ${User} -g ${User} -m 644 \
   "$ServerPath/server_api/ign_daily_api.py" "$ApiPath/ign_daily_api.py"
+sudo install -o ${User} -g ${User} -m 644 \
+  "$ServerPath/server_api/translation_quality.py" "$ApiPath/translation_quality.py"
 if ! sudo systemctl restart ign-daily-api || \
    ! curl --retry 10 --retry-delay 1 --retry-connrefused --max-time 5 -fsS http://127.0.0.1:8010/health >/dev/null; then
   echo 'API health check failed; restoring the previous API module.' >&2

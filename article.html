@@ -468,15 +468,31 @@
           const padded = String(id).padStart(2, '0');
           try {
             const res = await fetch(`data/${date}/translations/${padded}.json?t=${Date.now()}`);
-            if (!res.ok) throw new Error(`HTTP ${res.status}`);
+            if (!res.ok) {
+              const error = new Error(`HTTP ${res.status}`);
+              error.status = res.status;
+              throw error;
+            }
             this.article = await res.json();
             this.article.pending_dict = (this.article.pending_dict || [])
               .map(c => normalizeDictCandidate(c))
               .filter(c => c.en && c.cn);
             await this.loadArticleSiblings(date, Number(id));
           } catch (e) {
-            if (String(e.message || '').includes('HTTP 404')) {
-              this.error = '没有可复核草稿：这篇翻译失败时未生成 translations 草稿，请返回首页重新提交翻译。';
+            let fileStatus = e?.status === 403 ? 'permission_denied' : '';
+            if (e?.status === 404) {
+              try {
+                const probe = await fetch(
+                  `/api/translations/file-status?date=${encodeURIComponent(date)}&article_id=${encodeURIComponent(id)}`,
+                  { credentials: 'include', cache: 'no-store' }
+                );
+                if (probe.ok) fileStatus = (await probe.json()).status || '';
+              } catch (_) {}
+            }
+            if (fileStatus === 'permission_denied') {
+              this.error = '服务器无权读取译文文件：文件已经存在，但目录或 JSON 权限不正确。请运行权限修复后刷新页面，不要重新提交翻译。';
+            } else if (e?.status === 404 || fileStatus === 'missing') {
+              this.error = '没有可复核草稿：服务器上不存在这篇文章的 translations 译文文件，请返回首页重新提交翻译。';
             } else {
               this.error = '加载译文失败：' + e.message;
             }

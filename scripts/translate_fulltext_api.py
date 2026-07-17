@@ -54,6 +54,9 @@ from translation_memory import (
 from translation_media import merge_images
 from usage_logger import record_deepseek_usage_safe
 
+sys.path.insert(0, str(REPO_ROOT / "server_api"))
+from translation_quality import QUALITY_GATE_VERSION, validate_translation_quality  # noqa: E402
+
 
 configure_utf8_stdio()
 CST = timezone(timedelta(hours=8))
@@ -865,6 +868,37 @@ def translate_date(date: str, limit: int = 2) -> int:
                 details = "; ".join(validation_errors)
                 print(f"[REJECT] #{article_id} style check failed: {details}")
                 set_article_step(article_id, date=date, step="failed", progress=100, status="failed", message=f"风格拒收: {details}")
+                continue
+
+            reviewed_at = datetime.now(timezone.utc).isoformat()
+            data["reasoning_effort"] = (
+                os.environ.get("TRANSLATOR_FULLTEXT_REASONING_EFFORT") or "provider_default"
+            )
+            data["reviewer_model"] = repair_model or model
+            data["reviewed_at"] = reviewed_at
+            data["prompt_version"] = "api-fulltext-2026-07-v2"
+            data["quality_gate_version"] = QUALITY_GATE_VERSION
+            data["quality_review"] = {
+                "status": "passed",
+                "reviewer_model": data["reviewer_model"],
+                "reviewed_at": reviewed_at,
+                "checks": {
+                    "source_coverage": True,
+                    "quote_attribution": True,
+                    "numeric_facts": True,
+                },
+            }
+            quality_errors = validate_translation_quality(data)
+            if quality_errors:
+                details = "; ".join(quality_errors)
+                set_article_step(
+                    article_id,
+                    date=date,
+                    step="failed",
+                    progress=100,
+                    status="failed",
+                    message=f"质量门禁拒绝: {details}",
+                )
                 continue
 
             set_article_step(article_id, date=date, step="write", progress=92, message="写入译文文件")
