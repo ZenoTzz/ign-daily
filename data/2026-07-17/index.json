@@ -245,13 +245,13 @@
       "category": "游戏新闻",
       "emoji": "🌸",
       "en_title": "Official Street Fighter 6 Fragrances Let You Smell Just Like Juri, Ed, and Ingrid",
-      "cn_title": "《街头霸王6》三款角色香氛油正式公布",
-      "summary": "卡普空与Gaming Fragrances合作，为《街头霸王6》的朱莉、艾德和英格丽德推出官方授权香氛油扩散器套装。每套包含木质扩散器和角色专属香氛油，香调根据角色特点调制。每套售价42.15美元(约合人民币285元)，将于2026年10月发货。",
+      "cn_title": "《街头霸王6》推出朱莉、艾德和英格丽德官方香氛",
+      "summary": "卡普空与Gaming Fragrances合作，为《街头霸王6》的朱莉、艾德和英格丽德推出角色香氛油扩散器，每套售价6,850日元(约合人民币286元)，10月发货。",
       "url": "https://www.ign.com/articles/official-street-fighter-6-fragrances-let-you-smell-just-like-juri-ed-and-ingrid",
       "publish_time_cn": "2026-07-17 03:49",
       "pub_date": "2026-07-17 03:49",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/07/16/street-fighter-6-fragrances-1784221504266.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/07/16/street-fighter-6-fragrances-1784221504266.png",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/07/16/street-fighter-6-fragrances-1784221504266.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/07/16/street-fighter-6-fragrances-1784221504266.png?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -261,7 +261,10 @@
         "https://assets-prd.ignimgs.com/2023/06/03/sf6-1685752562145.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-07-17T04:17:36+08:00"
+      "source_fetched_at": "2026-07-17T04:17:36+08:00",
+      "translation_path": "translations/28.json",
+      "translator": "codex-gpt5",
+      "translated_at": "2026-07-17T14:30:00+08:00"
     },
     {
       "id": 29,
@@ -768,13 +771,13 @@
       "category": "游戏新闻",
       "emoji": "🚗",
       "en_title": "Call of Duty: Modern Warfare 4 Has a Bespoke Tactical SUV Designed by Aston Martin — It's Called Dreadnought, and We've Got a First Look",
-      "cn_title": "阿斯顿·马丁为《使命召唤：现代战争4》定制战术SUV「无畏号」首发亮相",
-      "summary": "阿斯顿·马丁为《使命召唤：现代战争4》设计了一款名为「无畏号」的定制战术SUV，配备V12引擎，将在DMZ模式和战区中登场。本周末纽约Fanatics Fest将展出实物模型，游戏将于10月23日登陆XBOX Series、PS5、PC和Switch 2。",
+      "cn_title": "阿斯顿·马丁为《使命召唤：现代战争4》打造战术SUV「无畏号」",
+      "summary": "阿斯顿·马丁为《使命召唤：现代战争4》设计定制战术SUV「无畏号」，载具搭载V12引擎，将在DMZ和《战区》中登场，并于纽约Fanatics Fest展出全尺寸模型。",
       "url": "https://www.ign.com/articles/call-of-duty-modern-warfare-4-has-a-bespoke-tactical-suv-designed-by-aston-martin-its-called-dreadnought-and-weve-got-a-first-look",
       "publish_time_cn": "2026-07-16 22:15",
       "pub_date": "2026-07-16 22:15",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/07/16/in-game-astonmartin-dreadnought-01-1-1784209819819.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/07/16/in-game-astonmartin-dreadnought-01-1-1784209819819.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/07/16/in-game-astonmartin-dreadnought-01-1-1784209819819.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/07/16/in-game-astonmartin-dreadnought-01-1-1784209819819.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -793,7 +796,10 @@
           "source": "ai_guess",
           "reason": "车辆专有名词，历史上为战舰名，游戏中为SUV名称，建议确认译名"
         }
-      ]
+      ],
+      "translation_path": "translations/13.json",
+      "translator": "codex-gpt5",
+      "translated_at": "2026-07-17T14:30:00+08:00"
     },
     {
       "id": 8,
