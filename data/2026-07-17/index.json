@@ -585,13 +585,13 @@
       "category": "游戏新闻",
       "emoji": "💿",
       "en_title": "The Special PS5-Only Physical Revered Edition of Mortal Shell 2 Has Sold Out, and Fans Are Sending the News Sony's Way as They Continue to Push for a U-Turn on Killing Discs",
-      "cn_title": "PS5版《致命躯壳2》限定版售罄，玩家呼吁索尼放弃停止光盘",
-      "summary": "《致命躯壳2》PS5独占实体限定版Revered Edition在预购开启仅8天后宣告售罄。玩家将这一消息大量转发给索尼，继续施压要求其放弃2028年起停止生产PlayStation新游戏实体光盘的决定。分析师普遍认为索尼不会逆转这一政策，因为数字版利润更高，且购买趋势已转向数字。",
+      "cn_title": "索尼取消光盘争议中，《致命躯壳2》PS5实体限定版售罄",
+      "summary": "《致命躯壳2》PS5实体崇敬版预购八天基本售罄，玩家借此继续要求索尼撤回2028年停止新游戏光盘生产的决定，但分析师认为索尼不会让步。",
       "url": "https://www.ign.com/articles/the-special-ps5-only-physical-revered-edition-of-mortal-shell-2-has-sold-out-and-fans-are-sending-the-news-sonys-way-as-they-continue-to-push-for-a-u-turn-on-killing-discs",
       "publish_time_cn": "2026-07-16 23:45",
       "pub_date": "2026-07-16 23:45",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/07/16/ss-9603a790d6379358d9c3f058204adaf8296ff464-1920x1080-1784216618901.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/07/16/ss-9603a790d6379358d9c3f058204adaf8296ff464-1920x1080-1784216618901.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/07/16/ss-9603a790d6379358d9c3f058204adaf8296ff464-1920x1080-1784216618901.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/07/16/ss-9603a790d6379358d9c3f058204adaf8296ff464-1920x1080-1784216618901.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -611,7 +611,10 @@
           "source": "ai_guess",
           "reason": "社区通用译名，但词库中未收录，需人工确认是否采用官方译名"
         }
-      ]
+      ],
+      "translation_path": "translations/15.json",
+      "translator": "codex-gpt5",
+      "translated_at": "2026-07-17T12:30:00+08:00"
     },
     {
       "id": 16,
@@ -714,13 +717,13 @@
       "category": "游戏新闻",
       "emoji": "😔",
       "en_title": "We Want Fallout New Vegas 2, But Not Like This",
-      "cn_title": "我们想要《辐射：新维加斯2》，但不是这样",
-      "summary": "据彭博社Jason Schreier报道，Obsidian正在开发一款由《辐射：新维加斯》总监Josh Sawyer领衔的新《辐射》游戏。然而，XBOX在CEO Asha Sharma领导下推行「XBOX Reset」战略，大规模裁员并强制工作室开发续作，使得这一消息的喜悦被裁员阴霾所覆盖。文章尖锐批评XBOX多年管理不善导致行业人才流失，呼吁更人性化的商业决策。",
+      "cn_title": "我们想要《辐射：新维加斯2》，但不该以裁员为代价",
+      "summary": "报道称黑曜石正由Josh Sawyer领衔开发新《辐射》，却恰逢XBOX大规模裁员。作者认为系列回归本应令人振奋，但管理失当与AI投入让这份期待变得苦涩。",
       "url": "https://www.ign.com/articles/we-want-fallout-new-vegas-2-but-not-like-this",
       "publish_time_cn": "2026-07-16 22:30",
       "pub_date": "2026-07-16 22:30",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/07/15/site-thumb-1784142025783.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/07/15/site-thumb-1784142025783.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/07/15/site-thumb-1784142025783.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/07/15/site-thumb-1784142025783.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -736,7 +739,10 @@
         "https://assets-prd.ignimgs.com/2026/06/22/marvels-blade-game-1782147140341.png"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-07-16T23:18:37+08:00"
+      "source_fetched_at": "2026-07-16T23:18:37+08:00",
+      "translation_path": "translations/12.json",
+      "translator": "codex-gpt5",
+      "translated_at": "2026-07-17T13:00:00+08:00"
     },
     {
       "id": 13,
@@ -880,13 +886,13 @@
       "category": "游戏新闻",
       "emoji": "🎮",
       "en_title": "Great New Games Are Getting Caught Up in the Online Backlash Against PlayStation Killing Discs",
-      "cn_title": "新游戏卷入索尼取消光盘的抗议风波",
-      "summary": "索尼宣布2028年起新PlayStation游戏不再推出光盘版，引发玩家强烈抗议。这一风波波及了新发售的独立游戏《Denshattack!》，其PS5版推广帖遭到大量玩家抵制，呼吁改买PC、Switch 2或XBOX Series版。分析师认为索尼不会逆转决定，数字版利润率远高于实体版。",
+      "cn_title": "新游戏卷入PlayStation取消光盘抵制",
+      "summary": "索尼宣布2028年起停止为新PlayStation游戏生产光盘后，抵制行动波及高分新作《Denshattack!》。分析师认为数字销售利润巨大，索尼不会撤回决定。",
       "url": "https://www.ign.com/articles/great-new-games-are-getting-caught-up-in-the-online-backlash-against-playstation-killing-discs",
       "publish_time_cn": "2026-07-16 19:57",
       "pub_date": "2026-07-16 19:57",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/07/14/denshattack-blogroll-01-1784072895276.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/07/14/denshattack-blogroll-01-1784072895276.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/07/14/denshattack-blogroll-01-1784072895276.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/07/14/denshattack-blogroll-01-1784072895276.jpg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -896,7 +902,10 @@
         "https://assets-prd.ignimgs.com/2025/08/19/denshattack-1755636755403.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-07-16T20:17:49+08:00"
+      "source_fetched_at": "2026-07-16T20:17:49+08:00",
+      "translation_path": "translations/05.json",
+      "translator": "codex-gpt5",
+      "translated_at": "2026-07-17T12:00:00+08:00"
     },
     {
       "id": 4,
