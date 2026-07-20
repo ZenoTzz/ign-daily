@@ -111,7 +111,9 @@ server {
     charset utf-8;
     client_max_body_size 20m;
 
-    location /api/ {
+    # API file routes may end in .json. ^~ keeps the generic static .json
+    # location below from intercepting authenticated /api/files/... requests.
+    location ^~ /api/ {
         proxy_pass http://127.0.0.1:$API_PORT/;
         proxy_http_version 1.1;
         proxy_set_header Host \$host;
