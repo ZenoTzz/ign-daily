@@ -422,8 +422,8 @@
       "url": "https://www.ign.com/articles/should-we-fear-consoles-going-all-digital-or-does-the-pc-status-quo-prove-it-works",
       "publish_time_cn": "2026-07-18 00:00",
       "pub_date": "2026-07-18 00:00",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/07/14/steam-digital-1784026545856.jpeg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/07/14/steam-digital-1784026545856.jpeg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/07/14/steam-digital-1784026545856.jpeg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/07/14/steam-digital-1784026545856.jpeg?width=1200&canvas=1200%2C1200&format=jpg&auto=webp&quality=80",
@@ -432,7 +432,16 @@
         "https://assets-prd.ignimgs.com/2026/07/14/steam-digital-1784026545856.jpeg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-07-18T00:18:23+08:00"
+      "source_fetched_at": "2026-07-18T00:18:23+08:00",
+      "translation_path": "translations/22.json",
+      "translator": "codex",
+      "translator_provider": "openai",
+      "translator_model": "gpt-5.6-sol",
+      "reasoning_effort": "low",
+      "reviewer_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-20T03:50:00Z",
+      "prompt_version": "codex-bilingual-review-2026-07-17-v1",
+      "quality_gate_version": 1
     },
     {
       "id": 23,
