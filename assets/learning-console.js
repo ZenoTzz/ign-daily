@@ -22,6 +22,9 @@ function learningConsole() {
       this.loading = true;
       this.error = '';
       try {
+        if (GH.canUseServer()) {
+          await ServerAPI.me();
+        }
         const [weekly, active, observations, index] = await Promise.all([
           this.fetchJson('data/learning/weekly/latest.json'),
           this.fetchJson('data/learning/active-rules.json', { rules: [] }),
