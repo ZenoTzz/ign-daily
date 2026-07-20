@@ -30,13 +30,15 @@ const DICT_CATEGORIES = ['games','movies_tv','companies','people','media','terms
 const DICT_SOURCES = ['user','ign_cn','bilibili','consensus','ai_guess'];
 
 function normalizeDictCandidate(candidate, defaults = {}) {
+  const legacyEnglish = typeof candidate === 'string' ? candidate.trim() : '';
   const item = candidate && typeof candidate === 'object' ? candidate : {};
   const requestedCat = item.cat || item.category || defaults.cat || 'terms';
   const requestedSource = item.source || defaults.source || 'ai_guess';
   return {
+    ...defaults,
     ...item,
-    en: String(item.en || '').trim(),
-    cn: String(item.cn || '').trim(),
+    en: String(item.en || legacyEnglish || defaults.en || '').trim(),
+    cn: String(item.cn || defaults.cn || '').trim(),
     cat: DICT_CATEGORIES.includes(requestedCat) ? requestedCat : 'terms',
     source: DICT_SOURCES.includes(requestedSource) ? requestedSource : 'ai_guess',
   };
@@ -2270,6 +2272,7 @@ function appData() {
     async loadGlobalPending() {
       if (!this.data) return;
       const pending = [];
+      const seen = new Set();
       const translated = this.data.articles.filter(a => a.translation_status === 'done');
       // 并发拉取所有译文
       await Promise.all(translated.map(async (a) => {
@@ -2279,12 +2282,24 @@ function appData() {
           if (!res.ok) return;
           const tr = await res.json();
           if (Array.isArray(tr.pending_dict) && tr.pending_dict.length > 0) {
+            const articleCandidates = Array.isArray(a.pending_dict)
+              ? a.pending_dict.map(item => normalizeDictCandidate(item)).filter(item => item.en)
+              : [];
             for (const rawCandidate of tr.pending_dict) {
-              const c = normalizeDictCandidate(rawCandidate);
+              const rawEnglish = typeof rawCandidate === 'string'
+                ? rawCandidate.trim()
+                : String(rawCandidate?.en || '').trim();
+              const indexed = articleCandidates.find(item => item.en.toLowerCase() === rawEnglish.toLowerCase());
+              const c = normalizeDictCandidate(rawCandidate, indexed || {});
+              if (!c.en) continue;
+              const candidateKey = `${a.id}|${c.en.toLowerCase()}|${c.cat}`;
+              if (seen.has(candidateKey)) continue;
+              seen.add(candidateKey);
+              const articleTitle = String(a.cn_title || a.en_title || `文章 #${a.id}`);
               pending.push({
                 ...c,
                 _articleId: a.id,
-                _articleTitle: a.cn_title.length > 16 ? a.cn_title.slice(0,16)+'…' : a.cn_title
+                _articleTitle: articleTitle.length > 16 ? articleTitle.slice(0,16)+'…' : articleTitle
               });
             }
           }
@@ -2324,9 +2339,13 @@ function appData() {
         return;
       }
       const candidates = this.globalPending
-        .map(c => normalizeApprovedDictCandidate(c))
-        .filter(c => c.en && c.cn);
-      this.globalPending = [];
+        .filter(c => c.en && c.cn)
+        .map(c => normalizeApprovedDictCandidate(c));
+      this.globalPending = this.globalPending.filter(c => !c.en || !c.cn);
+      if (!candidates.length) {
+        this.flash('请先填写至少一个候选译名', 3500);
+        return;
+      }
       this.flash(`入库中: ${candidates.length} 条...`);
       for (const c of candidates) this.pendingQueue.push({ type: 'approve', candidate: c });
       this.processGlobalQueue();

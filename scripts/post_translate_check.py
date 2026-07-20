@@ -75,6 +75,26 @@ for aid in done_ids:
     if not data.get("translated_terms"):
         errors.append(f"#{aid}: MISSING translated_terms snapshot")
 
+    # Dictionary candidates must use the object schema consumed by the review UI.
+    pending_dict = data.get("pending_dict", [])
+    if not isinstance(pending_dict, list):
+        errors.append(f"#{aid}: pending_dict must be a list")
+    else:
+        for index, candidate in enumerate(pending_dict):
+            if not isinstance(candidate, dict):
+                errors.append(
+                    f"#{aid}: pending_dict[{index}] must be an object, not {type(candidate).__name__}"
+                )
+                continue
+            if not str(candidate.get("en") or "").strip():
+                errors.append(f"#{aid}: pending_dict[{index}] is missing en")
+            if not str(candidate.get("cn") or "").strip():
+                errors.append(f"#{aid}: pending_dict[{index}] is missing cn")
+            if not str(candidate.get("cat") or candidate.get("category") or "").strip():
+                errors.append(f"#{aid}: pending_dict[{index}] is missing cat")
+            if not str(candidate.get("source") or "").strip():
+                errors.append(f"#{aid}: pending_dict[{index}] is missing source")
+
     # Check 3: paragraphs must not be empty
     if not data.get("paragraphs") or len(data["paragraphs"]) == 0:
         errors.append(f"#{aid}: paragraphs is EMPTY")

@@ -15,6 +15,21 @@
     {"type":"text","en":"For more, you can read about how Activision is combating exploits in its new ports . You can also learn about how crossplay works here .","cn":"如需了解更多，可以阅读动视如何打击新移植版中的漏洞利用，以及跨平台联机的运作方式。"}
   ],
   "translated_terms":{"Call of Duty":"《使命召唤》","Xbox":"XBOX","XBOX":"XBOX","Twitter":"X","Black Ops":"《黑色行动》"},
-  "pending_dict":["Call of Duty Ambience","Mike Wing"],
+  "pending_dict":[
+    {
+      "en":"Call of Duty Ambience",
+      "cn":"《使命召唤》氛围",
+      "cat":"terms",
+      "source":"ai_guess",
+      "reason":"网站名称，需确认保留英文名还是采用建议译名"
+    },
+    {
+      "en":"Mike Wing",
+      "cn":"迈克·温",
+      "cat":"people",
+      "source":"ai_guess",
+      "reason":"开发者姓名，需确认标准中文译名"
+    }
+  ],
   "translator":"codex","translator_provider":"openai","translator_model":"gpt-5.6-sol","reasoning_effort":"low","reviewer_model":"gpt-5.6-sol","reviewed_at":"2026-07-20T03:15:00Z","prompt_version":"codex-bilingual-review-2026-07-17-v1","quality_gate_version":1,"quality_review":{"status":"passed","checks":{"source_coverage":true,"quote_attribution":true,"numeric_facts":true},"reviewer_model":"gpt-5.6-sol","reviewed_at":"2026-07-20T03:15:00Z"}
 }

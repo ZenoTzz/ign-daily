@@ -13,34 +13,46 @@ function learningConsole() {
     latestWeekId: '',
 
     async fetchJson(path, fallback = null) {
-      try {
-        const file = await GH.getFile(path);
-        if (!file?.content) return fallback;
-        return JSON.parse(file.content);
-      } catch (_) {
-        return fallback;
-      }
+      const file = await GH.getFile(path);
+      if (!file?.content) return fallback;
+      return JSON.parse(file.content);
     },
 
     async init() {
       this.loading = true;
-      const [weekly, active, observations, index] = await Promise.all([
-        this.fetchJson('data/learning/weekly/latest.json'),
-        this.fetchJson('data/learning/active-rules.json', { rules: [] }),
-        this.fetchJson('data/learning/observations.json', { active: [], archived: [] }),
-        this.fetchJson('data/learning/weekly/_index.json', { weeks: [] }),
-      ]);
-      this.weekly = weekly;
-      this.activeRules = active?.rules || [];
-      this.observations = observations || { active: [], archived: [] };
-      const summaries = index?.summaries || {};
-      this.latestWeekId = index?.latest || weekly?.week_id || '';
-      this.history = (index?.weeks || []).slice().reverse().map(weekId => summaries[weekId] || { week_id: weekId, summary: {} });
-      if (weekly?.week_id) {
-        this.feedback = await this.fetchJson(`data/learning/weekly/${weekly.week_id}_feedback.json`, {}) || {};
+      this.error = '';
+      try {
+        const [weekly, active, observations, index] = await Promise.all([
+          this.fetchJson('data/learning/weekly/latest.json'),
+          this.fetchJson('data/learning/active-rules.json', { rules: [] }),
+          this.fetchJson('data/learning/observations.json', { active: [], archived: [] }),
+          this.fetchJson('data/learning/weekly/_index.json', { weeks: [] }),
+        ]);
+        this.weekly = weekly;
+        this.activeRules = active?.rules || [];
+        this.observations = observations || { active: [], archived: [] };
+        const summaries = index?.summaries || {};
+        this.latestWeekId = index?.latest || weekly?.week_id || '';
+        this.history = (index?.weeks || []).slice().reverse().map(weekId => summaries[weekId] || { week_id: weekId, summary: {} });
+        if (weekly?.week_id) {
+          this.feedback = await this.fetchJson(`data/learning/weekly/${weekly.week_id}_feedback.json`, {}) || {};
+        }
+        if (!weekly) this.error = '服务器上尚未生成学习周报。';
+      } catch (error) {
+        this.weekly = null;
+        this.activeRules = [];
+        this.observations = { active: [], archived: [] };
+        this.history = [];
+        if (error?.status === 401) {
+          this.error = '登录已失效，请返回工作台登录服务器账号后重试。';
+        } else if (error?.status === 403) {
+          this.error = '当前账号无权读取学习数据。';
+        } else {
+          this.error = `学习数据读取失败：${error?.message || '未知错误'}`;
+        }
+      } finally {
+        this.loading = false;
       }
-      this.loading = false;
-      if (!weekly) this.error = '尚未生成新版学习周报。';
     },
 
     get decisions() { return this.weekly?.decisions || this.weekly?.candidates || []; },
