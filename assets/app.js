@@ -2016,7 +2016,7 @@ function appData() {
     },
 
     async pollActiveJob(startTimer = false) {
-      if (!this.activeJobId || !this.shouldUseServerApi() || !ServerAPI.token()) return;
+      if (!this.activeJobId || !this.shouldUseServerApi()) return;
       try {
         const data = await ServerAPI.getJob(this.activeJobId);
         this.activeJob = data?.job || null;
@@ -2044,7 +2044,7 @@ function appData() {
     },
 
     async pollTranslationJobs(startTimer = false) {
-      if (!this.shouldUseServerApi() || !ServerAPI.token()) return;
+      if (!this.shouldUseServerApi()) return;
       try {
         const data = await ServerAPI.listJobs('translation', 10);
         const jobs = data?.jobs || [];
@@ -2086,7 +2086,7 @@ function appData() {
     },
 
     async restoreActiveJob() {
-      if (!this.shouldUseServerApi() || !ServerAPI.token()) return;
+      if (!this.shouldUseServerApi()) return;
       await this.pollTranslationJobs(true);
     },
 
@@ -2096,11 +2096,6 @@ function appData() {
         const date = this.data.date;
         const selIds = [...this.selected].map(x => Number(x)).sort((a,b) => a-b);
         if (ServerAPI.enabledByHost()) {
-          if (!ServerAPI.token()) {
-            this.showSettings = true;
-            this.flash('请先登录服务器账号，再提交翻译', 5000);
-            return;
-          }
           try {
             await this.submitRequestWithServerApi(date, selIds);
             return;
