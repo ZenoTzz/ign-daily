@@ -13,6 +13,7 @@ from __future__ import annotations
 
 import ast
 import json
+import os
 import re
 import subprocess
 import sys
@@ -48,6 +49,10 @@ def ok(msg: str) -> None:
 def fail(errors: list[str], msg: str) -> None:
     errors.append(msg)
     print(f"[FAIL] {msg}")
+
+
+def warn(msg: str) -> None:
+    print(f"[WARN] {msg}")
 
 
 def date_window(date: str) -> tuple[datetime, datetime]:
@@ -134,6 +139,8 @@ def main() -> int:
                 age = datetime.now(CST) - updated_dt
                 if age <= timedelta(hours=MAX_RATE_AGE_HOURS):
                     ok("exchange rates are fresh")
+                elif os.environ.get("ALLOW_STALE_EXCHANGE_RATES") == "1":
+                    warn(f"exchange rates are stale: {age}")
                 else:
                     fail(errors, f"exchange rates are stale: {age}")
             except ValueError:

@@ -2,6 +2,9 @@ name: Exchange Rates
 
 on:
   workflow_dispatch:
+  schedule:
+    # Monday 08:15 Asia/Shanghai (GitHub cron uses UTC).
+    - cron: '15 0 * * 1'
 
 permissions:
   contents: write

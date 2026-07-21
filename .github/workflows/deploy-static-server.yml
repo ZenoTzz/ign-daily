@@ -6,6 +6,7 @@ on:
       - main
     paths-ignore:
       - 'data/**'
+      - 'exchange_rates.json'
   workflow_dispatch:
 
 permissions:
@@ -30,6 +31,7 @@ jobs:
       - name: Run repository checks
         env:
           PYTHONPATH: scripts
+          ALLOW_STALE_EXCHANGE_RATES: '1'
         run: |
           set -euo pipefail
           python -m unittest discover -s scripts -p 'test_*.py'
