@@ -11,7 +11,7 @@ Description=Repair IGN Daily runtime data permissions
 [Service]
 Type=oneshot
 User=root
-ExecStart=$APP_DIR/server_api/deploy/fix_runtime_permissions.sh $APP_DIR/data
+ExecStart=$APP_DIR/server_api/deploy/fix_runtime_permissions.sh $APP_DIR/data $RUN_USER
 EOF
 
 sudo tee /etc/systemd/system/ign-daily-runtime-permissions.path >/dev/null <<EOF
@@ -20,6 +20,7 @@ Description=Watch IGN Daily runtime data permissions
 
 [Path]
 PathChanged=$APP_DIR/data
+PathChanged=$APP_DIR/exchange_rates.json
 Unit=ign-daily-runtime-permissions.service
 
 [Install]
