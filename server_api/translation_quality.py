@@ -22,6 +22,7 @@ REQUIRED_REVIEW_CHECKS = (
 )
 
 _NUMBER_RE = re.compile(r"(?<![A-Za-z])\d[\d,]*(?:\.\d+)?%?")
+_CHINESE_UNIT_RE = re.compile(r"(?<![A-Za-z])(?P<number>\d[\d,]*(?:\.\d+)?)\s*(?P<unit>万|亿)")
 _DIRECT_QUOTE_RE = re.compile(r'(?:"[^"\n]{8,}"|“[^”\n]{8,}”)')
 _QUOTE_ATTRIBUTION_RE = re.compile(
     r"\b(?:said|says|told|wrote|added|replied|explained|according to)\b",
@@ -36,6 +37,21 @@ def _number_tokens(text: str) -> set[str]:
         digits = re.sub(r"\D", "", token)
         if "%" in token or "." in token or len(digits) >= 2:
             tokens.add(token)
+    # Chinese translations commonly preserve an English magnitude using 万/亿
+    # rather than repeating the source's raw number (for example 120 million as
+    # 1.2亿, or 500,000 as 50万). Add exact-value and common English-unit
+    # candidates so the deterministic gate recognizes those equivalents while
+    # still rejecting genuinely missing or changed numbers.
+    for match in _CHINESE_UNIT_RE.finditer(text or ""):
+        value = float(match.group("number").replace(",", ""))
+        absolute = value * (10_000 if match.group("unit") == "万" else 100_000_000)
+        candidates = (absolute, absolute / 1_000_000, absolute / 1_000_000_000)
+        for candidate in candidates:
+            if candidate <= 0:
+                continue
+            rendered = f"{candidate:.12f}".rstrip("0").rstrip(".")
+            if rendered:
+                tokens.add(rendered)
     return tokens
 
 
