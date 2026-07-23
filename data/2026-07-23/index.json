@@ -275,22 +275,24 @@
     {
       "id": 25,
       "category": "影视资讯",
-      "emoji": "🎬",
+      "emoji": "🦸",
       "en_title": "Kevin Feige Says Marvel Has Movies Planned 'All the Way Up to 2042,' Including a Major X-Men Push and Live-Action Miles Morales",
-      "cn_title": "凯文·费奇谈漫威规划至2042年：X战警领衔，真人迈尔斯·莫拉莱斯安排上",
-      "summary": "漫威影业总裁凯文·费奇在上海透露，漫威电影计划已排至2042年。《复仇者联盟：秘密战争》将作为多宇宙传奇的终局，并为更精简的单宇宙铺路。费奇强调X战警将成为下一阶段核心，并确认已为真人版迈尔斯·莫拉莱斯制定计划，预计在《蜘蛛侠：纵横宇宙》系列结束后引入。他表示正在规划《蜘蛛侠》后续多部电影。漫威将在本周SDCC上公布更多未来项目。",
+      "cn_title": "漫威电影规划已排至2042年，X战警将成核心",
+      "summary": "Kevin Feige透露漫威影业已规划至2042年的电影蓝图。《复仇者联盟：秘密战争》后，MCU将整合为更精简的单一宇宙，X战警会成为新篇章核心，真人版Miles Morales也在计划中。",
       "url": "https://www.ign.com/articles/kevin-feige-says-marvel-has-movies-planned-all-the-way-up-to-2042-including-a-major-x-men-push-and-live-action-miles-morales",
       "publish_time_cn": "2026-07-22 23:21",
       "pub_date": "2026-07-22 23:21",
-      "cover_image": "https://assets-prd.ignimgs.com/2024/08/01/deadpoolthumb-1722529000468.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2024/08/01/deadpoolthumb-1722529000468.png",
+      "translation_status": "done",
       "images": [
-        "https://assets-prd.ignimgs.com/2024/08/01/deadpoolthumb-1722529000468.png?width=1280&format=jpg&auto=webp&quality=80",
-        "https://assets-prd.ignimgs.com/2024/08/01/deadpoolthumb-1722529000468.png?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
-        "https://assets-prd.ignimgs.com/2024/08/01/deadpoolthumb-1722529000468.png?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
-        "https://assets-prd.ignimgs.com/2024/08/01/deadpoolthumb-1722529000468.png?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
-        "https://assets-prd.ignimgs.com/2024/08/01/deadpoolthumb-1722529000468.png",
-        "https://assets-prd.ignimgs.com/2026/07/21/doomsday-button-update-1784644439273.jpg"
+        {
+          "url": "https://assets-prd.ignimgs.com/2024/08/01/deadpoolthumb-1722529000468.png?width=1280&format=jpg&auto=webp&quality=80",
+          "caption": ""
+        },
+        {
+          "url": "https://assets-prd.ignimgs.com/2026/07/21/doomsday-button-update-1784644439273.jpg",
+          "caption": ""
+        }
       ],
       "source_status": "cached",
       "source_fetched_at": "2026-07-22T23:49:34+08:00",
@@ -302,7 +304,16 @@
           "source": "ai_guess",
           "reason": "漫威官方未正式定名，暂译需人工确认"
         }
-      ]
+      ],
+      "translation_path": "translations/25.json",
+      "translator": "codex",
+      "translator_provider": "openai",
+      "translator_model": "gpt-5.6-sol",
+      "reasoning_effort": "low",
+      "reviewer_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-23T02:03:36Z",
+      "prompt_version": "codex-bilingual-review-2026-07-17-v1",
+      "quality_gate_version": 1
     },
     {
       "id": 22,
@@ -310,7 +321,7 @@
       "emoji": "🎮",
       "en_title": "Hasbro's The Legend of Zelda Figures Have Been Revealed, and They Look Amazing | Comic Con 2026",
       "cn_title": "孩之宝《塞尔达传说》首批人偶惊艳公布",
-      "summary": "孩之宝获得任天堂《塞尔达传说》授权，在SDCC 2026上公布了首批三款6英寸可动人偶：林克、塞尔达和加农多夫，造型基于《旷野之息》及续作。林克和塞尔达定价27.99美元(约合人民币189元)，加农多夫42.99美元(约合人民币291元)，均于2027年春季发售，7月22日开启预订。IGN独家发布全套照片。",
+      "summary": "孩之宝获得任天堂《塞尔达传说》授权，在SDCC 2026上公布了首批三款6英寸可动人偶：林克、塞尔达和加农多夫，造型基于《旷野之息》及续作。林克和塞尔达定价27.99美元(约合人民币190元)，加农多夫42.99美元(约合人民币291元)，均于2027年春季发售，7月22日开启预订。IGN独家发布全套照片。",
       "url": "https://www.ign.com/articles/hasbros-the-legend-of-zelda-figures-have-been-revealed-and-they-look-amazing-comic-con-2026",
       "publish_time_cn": "2026-07-22 23:00",
       "pub_date": "2026-07-22 23:00",
@@ -776,8 +787,8 @@
       "category": "行业动态",
       "emoji": "💿",
       "en_title": "The Global Second-Hand Video Game Market Is Valued at $7.2 Billion, but Sony's Decision to Kill PlayStation Discs Threatens to Destroy It, Analysts Say",
-      "cn_title": "索尼停产PlayStation光盘或重创72亿美元(约合人民币487亿元)二手市场",
-      "summary": "索尼将从2028年起停止为PlayStation新游戏生产光盘。分析师认为，此举可能让去年估值72亿美元(约合人民币487亿元)、预计到2034年增至138亿美元(约合人民币934亿元)的全球二手游戏市场不断萎缩并最终消失。",
+      "cn_title": "索尼停产PlayStation光盘或重创72亿美元(约合人民币488亿元)二手市场",
+      "summary": "索尼将从2028年起停止为PlayStation新游戏生产光盘。分析师认为，此举可能让去年估值72亿美元(约合人民币488亿元)、预计到2034年增至138亿美元(约合人民币936亿元)的全球二手游戏市场不断萎缩并最终消失。",
       "url": "https://www.ign.com/articles/the-global-second-hand-video-game-market-is-valued-at-72-billion-but-sonys-decision-to-kill-playstation-discs-threatens-to-destroy-it-analysts-say",
       "publish_time_cn": "2026-07-22 17:51",
       "pub_date": "2026-07-22 17:51",
