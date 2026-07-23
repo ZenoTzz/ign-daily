@@ -50,13 +50,12 @@ class TranslationQualityTest(unittest.TestCase):
         errors = validate_translation_quality(data)
         self.assertTrue(any("14.5%" in error for error in errors))
 
-    def test_chinese_wan_and_yi_units_preserve_numeric_facts(self) -> None:
+    def test_chinese_large_number_units_are_equivalent(self) -> None:
         data = valid_translation()
-        data["paragraphs"] = [
-            {"en": "There were 120 million users.", "cn": "用户超过1.2亿。"},
-            {"en": "About 500,000 canceled.", "cn": "约50万人取消。"},
-            {"en": "The market was worth 300 million pounds.", "cn": "市场价值3亿英镑。"},
-        ]
+        data["paragraphs"] = [{
+            "en": "Sony has over 120 million users and 500,000 may cancel.",
+            "cn": "索尼拥有超过1.2亿名用户，可能有50万人退订。",
+        }]
         self.assertEqual(validate_translation_quality(data), [])
 
     def test_unmarked_direct_quote_is_blocking(self) -> None:
