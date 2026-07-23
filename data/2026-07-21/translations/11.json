@@ -92,22 +92,7 @@
     "Fallout 76": "《辐射76》",
     "Raven Rock": "渡鸦岩"
   },
-  "pending_dict": [
-    {
-      "en": "Asha Sharma",
-      "cn": "Asha Sharma",
-      "cat": "people",
-      "source": "ai_guess",
-      "reason": "XBOX首席执行官姓名，词库要求保留英文"
-    },
-    {
-      "en": "GamerLove1",
-      "cn": "GamerLove1",
-      "cat": "people",
-      "source": "ai_guess",
-      "reason": "Reddit用户名，保留英文"
-    }
-  ],
+  "pending_dict": [],
   "translator": "codex",
   "translator_provider": "openai",
   "translator_model": "gpt-5.6-sol",

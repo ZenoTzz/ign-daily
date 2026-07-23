@@ -722,6 +722,12 @@
           "source": "ai_guess",
           "reason": "游戏中的地点名，意译，但官方译名未知"
         }
+      ],
+      "comparison_status": "requested",
+      "comparison_requested_at_cn": "2026/7/22 09:27:26",
+      "comparison_models": [
+        "deepseek-v4-pro",
+        "deepseek-v4-flash"
       ]
     },
     {
