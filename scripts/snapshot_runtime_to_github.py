@@ -116,37 +116,41 @@ def snapshot(app_dir: Path, *, dry_run: bool = False) -> bool:
     if not token:
         raise RuntimeError("GITHUB_PAT_IGN_DAILY is required for runtime snapshots")
 
+    repository_url = f"https://github.com/{owner}/{repo}.git"
+    auth_env = git_auth_env(token, owner)
+    last_error = 1
     with tempfile.TemporaryDirectory(prefix="ign-daily-snapshot-") as temporary:
-        checkout = Path(temporary) / "repo"
-        clone_with_retries(
-            f"https://github.com/{owner}/{repo}.git",
-            branch,
-            checkout,
-            app_dir / ".git",
-        )
-        with write_lock():
-            copied = copy_runtime_snapshot(data_dir, checkout / "data")
-        if not copied:
-            raise RuntimeError("snapshot whitelist matched no runtime content")
-        run(["git", "add", "--", "data"], cwd=checkout)
-        changed = subprocess.run(["git", "diff", "--cached", "--quiet"], cwd=checkout).returncode != 0
-        if not changed:
-            print(f"RUNTIME_SNAPSHOT changed=0 dry_run=0 copied={len(copied)}")
-            return changed
-        run(["git", "config", "user.name", "IGN Daily Server Snapshot"], cwd=checkout)
-        run(["git", "config", "user.email", "ign-daily-snapshot@users.noreply.github.com"], cwd=checkout)
-        run(["git", "commit", "-m", f"data: runtime snapshot {time.strftime('%Y-%m-%d')}"] , cwd=checkout)
-        auth_env = git_auth_env(token, owner)
-        last_error = 1
         for attempt in range(3):
-            pull = run(["git", "-c", "credential.helper=", "pull", "--rebase", "origin", branch], cwd=checkout, env=auth_env, check=False)
-            push = run(["git", "-c", "credential.helper=", "push", "origin", branch], cwd=checkout, env=auth_env, check=False) if pull.returncode == 0 else pull
+            # Always retry from a fresh clone of the latest remote branch. A
+            # pull --rebase after copying runtime files can refuse to run when
+            # Git detects a dirty worktree, and reusing that checkout makes all
+            # later retries fail for the same reason.
+            checkout = Path(temporary) / f"repo-{attempt + 1}"
+            clone_with_retries(repository_url, branch, checkout, app_dir / ".git")
+            with write_lock():
+                copied = copy_runtime_snapshot(data_dir, checkout / "data")
+            if not copied:
+                raise RuntimeError("snapshot whitelist matched no runtime content")
+            run(["git", "add", "--", "data"], cwd=checkout)
+            changed = subprocess.run(["git", "diff", "--cached", "--quiet"], cwd=checkout).returncode != 0
+            if not changed:
+                print(f"RUNTIME_SNAPSHOT changed=0 dry_run=0 copied={len(copied)}")
+                return False
+            run(["git", "config", "user.name", "IGN Daily Server Snapshot"], cwd=checkout)
+            run(["git", "config", "user.email", "ign-daily-snapshot@users.noreply.github.com"], cwd=checkout)
+            run(["git", "commit", "-m", f"data: runtime snapshot {time.strftime('%Y-%m-%d')}"] , cwd=checkout)
+            push = run(
+                ["git", "-c", "credential.helper=", "push", "origin", f"HEAD:{branch}"],
+                cwd=checkout,
+                env=auth_env,
+                check=False,
+            )
             last_error = push.returncode
             if last_error == 0:
                 print(f"RUNTIME_SNAPSHOT_OK copied={len(copied)}")
                 return True
             time.sleep(5 * (attempt + 1))
-        raise RuntimeError(f"runtime snapshot push failed after 3 attempts: {last_error}")
+        raise RuntimeError(f"runtime snapshot push failed after 3 fresh-clone attempts: {last_error}")
 
 
 def main() -> int:
