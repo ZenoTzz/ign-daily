@@ -20,7 +20,7 @@ python scripts/agent_doctor.py
 生产服务器是刚提交任务的来源。配置了 `IGN_DAILY_API_TOKEN` 时使用：
 
 ```bash
-python scripts/codex_job_client.py pending --limit 5
+python scripts/codex_job_client.py pending --limit 100
 python scripts/codex_job_client.py claim JOB_ID
 ```
 
@@ -29,6 +29,10 @@ python scripts/codex_job_client.py claim JOB_ID
 - 任务中的 `requested_articles[].url` 或 job item URL 是稳定身份。
 - 必须用 URL 对照当天 `index.json`；旧 ID 和网页展示序号只作提示。
 - 同时检查任务是否已经有译文或被其他 agent 认领，避免重复处理。
+- 每次队列运行必须取得全部 `queued` 和可恢复的停滞 `running` job，按 `created_at` 从旧到新逐个处理；不能只处理最新或第一条后结束。
+- 每个 job 仍是独立的 1～2 篇质量批次。完成一个 job 后重新查询队列，持续循环直到为空。
+- 只有当前 job 自身的文章全部落盘、验证和同步成功后才能标记该 job `done`；同日期的兄弟 job 不得被连带完成。
+- 遇到阻塞或运行时间不足时，未完成 job 保持 `queued`/`running` 并记录具体原因和剩余数量，不得为了清空界面而批量标记完成。
 
 ## 2. 准备原文与参考
 
