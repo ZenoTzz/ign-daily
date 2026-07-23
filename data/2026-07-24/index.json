@@ -30,12 +30,12 @@
       "emoji": "🕹️",
       "en_title": "LEGO Donkey Kong Arcade Set Officially Announced",
       "cn_title": "乐高正式公布《大金刚》街机套装",
-      "summary": "乐高正式公布了基于经典《大金刚》街机框体设计的套装。该套装包含1367块零件，售价199.99美元(约合人民币1356元)，将于8月1日发售。组装后可通过操纵杆和按钮实现互动，还原游戏第一关场景，适合18岁以上玩家。",
+      "summary": "乐高正式公布由1,367块零件组成的《大金刚》街机套装，售价199.99美元(约合人民币1,356元)，将于8月1日发售；成品可通过控制杆、摇杆和按钮重现经典第一关的互动玩法。",
       "url": "https://www.ign.com/articles/lego-donkey-kong-arcade-set-officially-announced",
       "publish_time_cn": "2026-07-23 08:15",
       "pub_date": "2026-07-23 08:15",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/07/20/lego-donkey-kong-arcade-blogroll-1784575792093.jpeg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/07/20/lego-donkey-kong-arcade-blogroll-1784575792093.jpeg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/07/20/lego-donkey-kong-arcade-blogroll-1784575792093.jpeg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/07/20/72051-box1-v29-1784574847358.png",
@@ -46,7 +46,16 @@
         "https://assets-prd.ignimgs.com/2022/08/24/lego-button-2-1661351794140.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-07-23T08:47:28+08:00"
+      "source_fetched_at": "2026-07-23T08:47:28+08:00",
+      "translation_path": "translations/01.json",
+      "translator": "codex",
+      "translator_provider": "openai",
+      "translator_model": "gpt-5.6-sol",
+      "reasoning_effort": "low",
+      "reviewer_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-23T06:28:49Z",
+      "prompt_version": "codex-bilingual-review-2026-07-17-v1",
+      "quality_gate_version": 1
     }
   ],
   "total": 2
