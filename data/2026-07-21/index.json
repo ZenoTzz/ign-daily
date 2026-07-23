@@ -948,17 +948,83 @@
     {
       "id": 9,
       "category": "游戏新闻",
-      "emoji": "🎮",
+      "emoji": "🃏",
       "en_title": "MTG Star Trek Bundle Is the Easiest Way to Get a Collector Booster",
-      "cn_title": "MTG Star Trek Bundle Is the Easiest Way to Get a Collector Booster",
-      "summary": "",
+      "cn_title": "万智牌《星际迷航》捆绑包预购：唯一入手收藏家补充包",
+      "summary": "万智牌跨界系列《星际迷航》现已开放预购。官方推出Draft Night捆绑包，内含一个收藏家补充包（单包售价37.99美元(约合人民币258元)，约合人民币275元）、12包游戏补充包及90张基本地等，总价119.99美元(约合人民币814元)，是目前唯一能以官方渠道获得该系列珍稀卡牌和签名卡的方式。此外，四副指挥官套牌捆绑包预售价225美元(约合人民币1526元)，比单买节省75美元(约合人民币508元)。受黄牛抢购影响，收藏家补充包单独购买渠道已近乎枯竭，此套装成为收藏者的最佳选择。",
       "url": "https://www.ign.com/articles/mtg-star-trek-collector-booster-bundle",
       "publish_time_cn": "2026-07-20 19:36",
       "pub_date": "2026-07-20 19:36",
-      "cover_image": "",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/07/23/draft-night-mtg-bundle-ign-deal-collector-booster-where-to-buy-sealed-2-1784799292325.png?width=1280&format=jpg&auto=webp&quality=80",
       "translation_status": "none",
-      "source_status": "failed",
-      "source_error": "HTTP Error 404: Not Found"
+      "source_status": "cached",
+      "source_error": "HTTP Error 404: Not Found",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/07/23/draft-night-mtg-bundle-ign-deal-collector-booster-where-to-buy-sealed-2-1784799292325.png?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/07/14/dn-1784056096010.jpg",
+        "https://assets-prd.ignimgs.com/2026/07/23/draft-night-mtg-bundle-ign-deal-collector-booster-where-to-buy-sealed-2-1784799292325.png?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/07/23/draft-night-mtg-bundle-ign-deal-collector-booster-where-to-buy-sealed-2-1784799292325.png?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/07/23/draft-night-mtg-bundle-ign-deal-collector-booster-where-to-buy-sealed-2-1784799292325.png?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/07/23/draft-night-mtg-bundle-ign-deal-collector-booster-where-to-buy-sealed-2-1784799292325.png",
+        "https://assets1.ignimgs.com/2018/11/02/magic-the-gathering-masters-25ver-button-1541197783965.jpg",
+        "https://assets-prd.ignimgs.com/2026/07/14/screenshot-2026-07-14-111450-1784052907043.png",
+        "https://assets-prd.ignimgs.com/2026/07/14/81gtst2fcpl-ac-sl1500-1784052689374.jpg",
+        "https://assets-prd.ignimgs.com/2026/07/14/810zb7wlddl-ac-sl1500-1784052160759.jpg",
+        "https://assets-prd.ignimgs.com/2026/07/14/71qlfbc17rl-ac-sl1500-1784052439139.jpg",
+        "https://assets-prd.ignimgs.com/2026/07/14/81sf4hwyt6l-ac-sl1500-1784052231932.jpg"
+      ],
+      "source_fetched_at": "2026-07-23T22:18:03+08:00",
+      "pending_dict": [
+        {
+          "en": "MTG",
+          "cn": "《万智牌》",
+          "cat": "games",
+          "source": "ai_guess",
+          "reason": "词库未收录，但国内普遍使用《万智牌》作为Magic: The Gathering的中文名"
+        },
+        {
+          "en": "Star Trek",
+          "cn": "《星际迷航》",
+          "cat": "movies_tv",
+          "source": "ai_guess",
+          "reason": "词库未收录，但为公认译名"
+        },
+        {
+          "en": "Draft Night",
+          "cn": "轮抽之夜",
+          "cat": "terms",
+          "source": "ai_guess",
+          "reason": "万智牌产品线名称，暂不确定官方译名"
+        },
+        {
+          "en": "Collector Booster",
+          "cn": "收藏家补充包",
+          "cat": "terms",
+          "source": "ai_guess",
+          "reason": "万智牌官方术语，需确认"
+        },
+        {
+          "en": "Play Booster",
+          "cn": "游戏补充包",
+          "cat": "terms",
+          "source": "ai_guess",
+          "reason": "万智牌官方术语，需确认"
+        },
+        {
+          "en": "Commander Deck Bundle",
+          "cn": "指挥官套牌捆绑包",
+          "cat": "terms",
+          "source": "ai_guess",
+          "reason": "万智牌产品名，需确认官方译法"
+        },
+        {
+          "en": "Headliner",
+          "cn": "头条卡",
+          "cat": "terms",
+          "source": "ai_guess",
+          "reason": "万智牌特殊卡牌类型，暂不确定官方译名"
+        }
+      ]
     },
     {
       "id": 10,
