@@ -53,10 +53,19 @@ class TranslationQualityTest(unittest.TestCase):
     def test_chinese_large_number_units_are_equivalent(self) -> None:
         data = valid_translation()
         data["paragraphs"] = [{
-            "en": "Sony has over 120 million users and 500,000 may cancel.",
-            "cn": "索尼拥有超过1.2亿名用户，可能有50万人退订。",
+            "en": "Sony has over 120 million users, the market is worth 13.8 billion, and 500,000 may cancel.",
+            "cn": "索尼拥有超过1.2亿名用户，市场价值138亿，可能有50万人退订。",
         }]
         self.assertEqual(validate_translation_quality(data), [])
+
+    def test_raw_english_currency_annotation_is_blocking(self) -> None:
+        data = valid_translation()
+        data["paragraphs"] = [{
+            "en": "The market may grow to $13.8 billion by 2034.",
+            "cn": "该市场到2034年可能增至138亿美元(约合人民币934亿元)（原文13.8 billion美元）。",
+        }]
+        errors = validate_translation_quality(data)
+        self.assertTrue(any("raw-English currency annotation" in error for error in errors))
 
     def test_unmarked_direct_quote_is_blocking(self) -> None:
         data = valid_translation()

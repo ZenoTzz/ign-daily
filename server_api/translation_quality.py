@@ -27,6 +27,10 @@ _QUOTE_ATTRIBUTION_RE = re.compile(
     r"\b(?:said|says|told|wrote|added|replied|explained|according to)\b",
     re.IGNORECASE,
 )
+_RAW_ENGLISH_CURRENCY_NOTE_RE = re.compile(
+    r"(?:原文\s*)?\d[\d,]*(?:\.\d+)?\s*(?:million|billion|trillion)\s*(?:美元|欧元|英镑)",
+    re.IGNORECASE,
+)
 
 
 def _number_tokens(text: str) -> set[str]:
@@ -41,6 +45,7 @@ def _number_tokens(text: str) -> set[str]:
     # faithful locked translation such as 120 million -> 1.2亿 is accepted.
     for match in re.finditer(r"(\d[\d,]*(?:\.\d+)?)\s*亿", text or ""):
         value = float(match.group(1).replace(",", ""))
+        tokens.add(f"{value / 10:g}")
         tokens.add(f"{value * 100:g}")
         tokens.add(f"{value * 100_000_000:g}")
     for match in re.finditer(r"(\d[\d,]*(?:\.\d+)?)\s*万", text or ""):
@@ -73,6 +78,10 @@ def deterministic_review_errors(data: dict[str, Any]) -> list[str]:
             ("「" in chinese and "」" in chinese) or ("『" in chinese and "』" in chinese)
         ):
             errors.append(f"paragraph {position} contains a direct quote without Chinese quote marks")
+        if _RAW_ENGLISH_CURRENCY_NOTE_RE.search(chinese):
+            errors.append(
+                f"paragraph {position} contains a redundant raw-English currency annotation"
+            )
     return errors
 
 
