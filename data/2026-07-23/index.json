@@ -311,29 +311,31 @@
       "translator_model": "gpt-5.6-sol",
       "reasoning_effort": "low",
       "reviewer_model": "gpt-5.6-sol",
-      "reviewed_at": "2026-07-23T02:03:36Z",
+      "reviewed_at": "2026-07-23T02:07:54Z",
       "prompt_version": "codex-bilingual-review-2026-07-17-v1",
       "quality_gate_version": 1
     },
     {
       "id": 22,
       "category": "游戏新闻",
-      "emoji": "🎮",
+      "emoji": "🗡️",
       "en_title": "Hasbro's The Legend of Zelda Figures Have Been Revealed, and They Look Amazing | Comic Con 2026",
-      "cn_title": "孩之宝《塞尔达传说》首批人偶惊艳公布",
-      "summary": "孩之宝获得任天堂《塞尔达传说》授权，在SDCC 2026上公布了首批三款6英寸可动人偶：林克、塞尔达和加农多夫，造型基于《旷野之息》及续作。林克和塞尔达定价27.99美元(约合人民币190元)，加农多夫42.99美元(约合人民币291元)，均于2027年春季发售，7月22日开启预订。IGN独家发布全套照片。",
+      "cn_title": "孩之宝《塞尔达传说》首批可动人偶亮相",
+      "summary": "孩之宝公开《塞尔达传说：海拉鲁英雄》首批三款人偶，包括林克、塞尔达公主和盖侬多夫。产品以《旷野之息》及其续作为原型，预计2027年春季上市。",
       "url": "https://www.ign.com/articles/hasbros-the-legend-of-zelda-figures-have-been-revealed-and-they-look-amazing-comic-con-2026",
       "publish_time_cn": "2026-07-22 23:00",
       "pub_date": "2026-07-22 23:00",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/07/20/mixcollage-20-jul-2026-02-41-pm-3462-1784572914339.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/07/20/mixcollage-20-jul-2026-02-41-pm-3462-1784572914339.jpg",
+      "translation_status": "done",
       "images": [
-        "https://assets-prd.ignimgs.com/2026/07/20/mixcollage-20-jul-2026-02-41-pm-3462-1784572914339.jpg?width=1280&format=jpg&auto=webp&quality=80",
-        "https://assets-prd.ignimgs.com/2026/07/20/mixcollage-20-jul-2026-02-41-pm-3462-1784572914339.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
-        "https://assets-prd.ignimgs.com/2026/07/20/mixcollage-20-jul-2026-02-41-pm-3462-1784572914339.jpg?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
-        "https://assets-prd.ignimgs.com/2026/07/20/mixcollage-20-jul-2026-02-41-pm-3462-1784572914339.jpg?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
-        "https://assets-prd.ignimgs.com/2026/07/20/mixcollage-20-jul-2026-02-41-pm-3462-1784572914339.jpg",
-        "https://assets-prd.ignimgs.com/2023/11/07/zelda-1699396593899.jpg"
+        {
+          "url": "https://assets-prd.ignimgs.com/2026/07/20/mixcollage-20-jul-2026-02-41-pm-3462-1784572914339.jpg?width=1280&format=jpg&auto=webp&quality=80",
+          "caption": ""
+        },
+        {
+          "url": "https://assets-prd.ignimgs.com/2023/11/07/zelda-1699396593899.jpg",
+          "caption": ""
+        }
       ],
       "source_status": "cached",
       "source_fetched_at": "2026-07-22T23:17:53+08:00",
@@ -352,7 +354,16 @@
           "source": "ai_guess",
           "reason": "塞尔达系列经典反派，中文社区通用译名，但未在词库中确认。"
         }
-      ]
+      ],
+      "translation_path": "translations/22.json",
+      "translator": "codex",
+      "translator_provider": "openai",
+      "translator_model": "gpt-5.6-sol",
+      "reasoning_effort": "low",
+      "reviewer_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-23T02:07:54Z",
+      "prompt_version": "codex-bilingual-review-2026-07-17-v1",
+      "quality_gate_version": 1
     },
     {
       "id": 19,
@@ -396,25 +407,36 @@
     {
       "id": 21,
       "category": "影视资讯",
-      "emoji": "😈",
+      "emoji": "🎭",
       "en_title": "Avengers: Doomsday Trailer Has Some Fans Saying Marvel Should Have Built Up Towards Doctor Doom's Appearance Like It Did for Thanos — but There's a Clear Counterpoint",
-      "cn_title": "《毁灭战士》《复仇者联盟：毁灭之日》《复联：末日》引争议：粉丝不满毁灭博士铺垫仓促，但作者提出反证",
-      "summary": "《复仇者联盟：末日》预告片发布后，部分粉丝批评毁灭博士出场缺乏像灭霸那样的多年铺垫。灭霸自2012年《复仇者联盟》起就多次客串，而毁灭博士仅在上月《神奇四侠：第一步》片尾短暂现身。但作者指出，达斯·维达、汉尼拔、奥创等经典反派均未提前铺垫却大获成功，认为最终成败取决于故事本身而非预告片的多寡。电影将于2026年12月18日上映。",
+      "cn_title": "《复仇者联盟：毁灭之日》毁灭博士登场是否太仓促？",
+      "summary": "《复仇者联盟：毁灭之日》预告引发争论：部分粉丝认为毁灭博士缺少类似灭霸的多年铺垫，但也有人指出，许多经典反派无需前作预热，角色成败最终取决于故事与表演。",
       "url": "https://www.ign.com/articles/avengers-doomsday-trailer-has-some-fans-saying-marvel-should-have-built-up-towards-doctor-dooms-appearance-like-it-did-for-thanos-but-theres-a-clear-counterpoint",
       "publish_time_cn": "2026-07-22 21:54",
       "pub_date": "2026-07-22 21:54",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/07/20/avengersthumb2-1784553231625.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/07/20/avengersthumb2-1784553231625.png",
+      "translation_status": "done",
       "images": [
-        "https://assets-prd.ignimgs.com/2026/07/20/avengersthumb2-1784553231625.png?width=1280&format=jpg&auto=webp&quality=80",
-        "https://assets-prd.ignimgs.com/2026/07/20/avengersthumb2-1784553231625.png?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
-        "https://assets-prd.ignimgs.com/2026/07/20/avengersthumb2-1784553231625.png?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
-        "https://assets-prd.ignimgs.com/2026/07/20/avengersthumb2-1784553231625.png?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
-        "https://assets-prd.ignimgs.com/2026/07/20/avengersthumb2-1784553231625.png",
-        "https://assets-prd.ignimgs.com/2026/07/21/doomsday-button-update-1784644439273.jpg"
+        {
+          "url": "https://assets-prd.ignimgs.com/2026/07/20/avengersthumb2-1784553231625.png?width=1280&format=jpg&auto=webp&quality=80",
+          "caption": ""
+        },
+        {
+          "url": "https://assets-prd.ignimgs.com/2026/07/21/doomsday-button-update-1784644439273.jpg",
+          "caption": ""
+        }
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-07-22T22:18:54+08:00"
+      "source_fetched_at": "2026-07-22T22:18:54+08:00",
+      "translation_path": "translations/21.json",
+      "translator": "codex",
+      "translator_provider": "openai",
+      "translator_model": "gpt-5.6-sol",
+      "reasoning_effort": "low",
+      "reviewer_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-23T02:07:54Z",
+      "prompt_version": "codex-bilingual-review-2026-07-17-v1",
+      "quality_gate_version": 1
     },
     {
       "id": 31,

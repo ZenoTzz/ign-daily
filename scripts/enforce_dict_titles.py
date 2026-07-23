@@ -63,9 +63,19 @@ def enforce(index_path, dict_terms):
         en_title = a['en_title']
         cn_title = a['cn_title']
         new_cn = cn_title
+        matched_terms = [
+            en_term for en_term, _ in dict_terms
+            if en_pattern(en_term).search(en_title)
+        ]
         
         for en_term, cn_term in dict_terms:
             if not en_pattern(en_term).search(en_title):
+                continue
+            if any(
+                en_term.lower() != longer.lower()
+                and re.search(rf'(?<![A-Za-z0-9]){re.escape(en_term)}(?![A-Za-z0-9])', longer, re.I)
+                for longer in matched_terms
+            ):
                 continue
             
             # cn_term should be in the cn_title

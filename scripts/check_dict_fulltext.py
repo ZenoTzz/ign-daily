@@ -119,10 +119,20 @@ def find_misses(date: str) -> list[dict[str, str]]:
         translation = json.loads(translation_path.read_text(encoding="utf-8"))
         source_text = source_blob(source)
         translated_text = translation_blob(translation)
+        matched_terms = [
+            en_term for en_term, _, _ in terms
+            if en_pattern(en_term).search(source_text)
+        ]
 
         for en_term, cn_term, category in terms:
             match = en_pattern(en_term).search(source_text)
             if not match:
+                continue
+            if any(
+                en_term.lower() != longer.lower()
+                and re.search(rf"(?<![A-Za-z0-9]){re.escape(en_term)}(?![A-Za-z0-9])", longer, re.I)
+                for longer in matched_terms
+            ):
                 continue
             if (
                 category in ("games", "movies_tv")
