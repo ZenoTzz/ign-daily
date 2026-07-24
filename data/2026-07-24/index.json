@@ -316,13 +316,13 @@
       "category": "影视资讯",
       "emoji": "🎬",
       "en_title": "Supergirl Sets Digital Release Date After Disappointing Run in Theaters",
-      "cn_title": "《超级少女》数字版7月28日上线，院线票房仅1.21亿美元(约合人民币8亿元)",
-      "summary": "DC超级英雄电影《超级少女》在院线成绩惨淡，全球票房仅1.21亿美元(约合人民币8亿元)，远低于其约3亿美元(约合人民币20亿元)的回本线。影片将于7月28日登陆数字平台，9月8日发行4K超高清蓝光及DVD。DC影业联合CEO Peter Safran表示将继续推进长期规划。",
+      "cn_title": "《超级少女》院线失利后定档7月28日上线数字平台",
+      "summary": "《超级少女》全球票房仅1.21亿美元(约合人民币8亿元)，远低于约3亿美元(约合人民币20亿元)的回本门槛。影片将于7月28日上线数字平台，9月8日发行4K超高清、蓝光和DVD版本。",
       "url": "https://www.ign.com/articles/supergirl-sets-digital-release-date-after-disappointing-run-in-theaters",
       "publish_time_cn": "2026-07-24 00:58",
       "pub_date": "2026-07-24 00:58",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/07/23/supergirl-1784825634876.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/07/23/supergirl-1784825634876.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/07/23/supergirl-1784825634876.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/07/23/supergirl-1784825634876.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -332,7 +332,16 @@
         "https://assets-prd.ignimgs.com/2026/06/03/supergirl-ver7-xlg-1780495367347.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-07-24T01:18:07+08:00"
+      "source_fetched_at": "2026-07-24T01:18:07+08:00",
+      "translation_path": "translations/37.json",
+      "translator": "codex",
+      "translator_provider": "openai",
+      "translator_model": "gpt-5.6-sol",
+      "reasoning_effort": "low",
+      "reviewer_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-24T01:10:00Z",
+      "prompt_version": "codex-bilingual-review-2026-07-17-v1",
+      "quality_gate_version": 1
     },
     {
       "id": 38,
@@ -368,13 +377,13 @@
       "category": "行业动态",
       "emoji": "💿",
       "en_title": "Disgaea Creator Slams Sony for Scrapping Discs, Says PlayStation Might as Well 'Go All the Way' and Scrap Consoles Too",
-      "cn_title": "魔界战记制作人抨击索尼放弃光盘：主机不如一起砍",
-      "summary": "《魔界战记》制作人、前日本一软件CEO新川宗平公开抨击索尼从2028年起停止生产新游戏光盘的决定，称决策者「不理解粉丝的感受」，并讽刺道：既然要放弃物理介质，不如『一不做二不休』连主机也砍掉。此番言论引发热议，小岛秀夫等日本游戏人也纷纷对数字-only未来下的游戏保存问题表示担忧。",
+      "cn_title": "《魔界战记》创作者抨击索尼放弃光盘：不如连PlayStation主机也取消",
+      "summary": "《魔界战记》创作者新川宗平批评索尼放弃实体光盘，认为决策高管不理解实体版对粉丝的意义，并讽刺既然取消实体游戏，不如连PlayStation主机也一起取消。",
       "url": "https://www.ign.com/articles/disgaea-creator-slams-sony-for-scrapping-discs-says-playstation-might-as-well-go-all-the-way-and-scrap-consoles-too",
       "publish_time_cn": "2026-07-24 00:35",
       "pub_date": "2026-07-24 00:35",
-      "cover_image": "https://assets-prd.ignimgs.com/2023/10/09/ps5console-1696871037273.jpeg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2023/10/09/ps5console-1696871037273.jpeg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2023/10/09/ps5console-1696871037273.jpeg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2023/10/09/ps5console-1696871037273.jpeg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -393,7 +402,16 @@
           "source": "ai_guess",
           "reason": "已有通行中文译名，建议正式入库"
         }
-      ]
+      ],
+      "translation_path": "translations/34.json",
+      "translator": "codex",
+      "translator_provider": "openai",
+      "translator_model": "gpt-5.6-sol",
+      "reasoning_effort": "low",
+      "reviewer_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-24T01:10:00Z",
+      "prompt_version": "codex-bilingual-review-2026-07-17-v1",
+      "quality_gate_version": 1
     },
     {
       "id": 35,
