@@ -89,13 +89,13 @@
       "category": "行业动态",
       "emoji": "🦸",
       "en_title": "After the Avengers Fall, Marvel Will Introduce the Maximum X-Men | Comic Con 2026",
-      "cn_title": "《复仇者联盟》陨落后，漫威公布《X战警：Maximum X-Men》",
-      "summary": "漫威在SDCC 2026上宣布，在《复仇者联盟：决战》事件后复仇者联盟分崩离析，由风暴女领衔的全新X战警系列《Maximum X-Men》将接替捍卫地球。该系列由Chris Yost编剧、Tony Daniel作画，首期将于2026年12月发售。",
+      "cn_title": "复仇者联盟陨落后，漫威将推出《Maximum X-Men》",
+      "summary": "漫威公布全新连载《Maximum X-Men》：在《复仇者联盟：决战》导致复仇者联盟分崩离析后，风暴女将率领金刚狼、钢力士、毕肖普等X战警成员守护世界。首期于2026年12月发售。",
       "url": "https://www.ign.com/articles/after-the-avengers-fall-marvel-will-introduce-the-maximum-x-men-comic-con-2026",
       "publish_time_cn": "2026-07-24 05:45",
       "pub_date": "2026-07-24 05:45",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/07/23/mixcollage-23-jul-2026-12-08-pm-4938-1784822962910.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/07/23/mixcollage-23-jul-2026-12-08-pm-4938-1784822962910.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/07/23/mixcollage-23-jul-2026-12-08-pm-4938-1784822962910.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/07/23/mixcollage-23-jul-2026-12-08-pm-4938-1784822962910.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -106,7 +106,16 @@
         "https://assets-prd.ignimgs.com/2026/07/23/maxxmen2026001-cover-1784822884371.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-07-24T06:17:29+08:00"
+      "source_fetched_at": "2026-07-24T06:17:29+08:00",
+      "translation_path": "translations/46.json",
+      "translator": "codex",
+      "translator_provider": "openai",
+      "translator_model": "gpt-5.6-sol",
+      "reasoning_effort": "low",
+      "reviewer_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-24T01:35:00Z",
+      "prompt_version": "codex-bilingual-review-2026-07-17-v1",
+      "quality_gate_version": 1
     },
     {
       "id": 45,
@@ -258,13 +267,13 @@
       "category": "科技新闻",
       "emoji": "📉",
       "en_title": "The Steam Deck's Demand Has Reportedly Cratered",
-      "cn_title": "Steam Deck 需求据称暴跌，销量较去年下滑 82%",
-      "summary": "据报道，Valve 掌机 Steam Deck 需求大幅下滑，销量较去年暴跌 82%，其在 Steam 畅销榜上的排名从第 5 位跌至第 14 位。当前 Steam Deck 售价为 789美元(约合人民币5349元)，已高于部分竞品。不过，随着其他厂商也可能跟进涨价，Steam Deck 或有望重新获得竞争力。",
+      "cn_title": "Steam Deck需求据称暴跌，销量同比下滑82%",
+      "summary": "Boiling Steam估算Steam Deck销量较去年最多下滑82%，其Steam畅销榜排名从第5位附近跌至约第14位，理论收入降幅达72%。涨价至789美元(约合人民币5,349元)后，设备竞争力受到明显影响。",
       "url": "https://www.ign.com/articles/the-steam-decks-demand-has-reportedly-cratered",
       "publish_time_cn": "2026-07-24 01:12",
       "pub_date": "2026-07-24 01:12",
-      "cover_image": "https://assets-prd.ignimgs.com/2023/11/09/vlcsnap-2023-11-08-15h13m58s271-1699488141465.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2023/11/09/vlcsnap-2023-11-08-15h13m58s271-1699488141465.png",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2023/11/09/vlcsnap-2023-11-08-15h13m58s271-1699488141465.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2023/11/09/vlcsnap-2023-11-08-15h13m58s271-1699488141465.png?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -274,7 +283,16 @@
         "https://assets-prd.ignimgs.com/2021/07/15/steam-deck-button-1626368482359.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-07-24T01:47:44+08:00"
+      "source_fetched_at": "2026-07-24T01:47:44+08:00",
+      "translation_path": "translations/39.json",
+      "translator": "codex",
+      "translator_provider": "openai",
+      "translator_model": "gpt-5.6-sol",
+      "reasoning_effort": "low",
+      "reviewer_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-24T01:35:00Z",
+      "prompt_version": "codex-bilingual-review-2026-07-17-v1",
+      "quality_gate_version": 1
     },
     {
       "id": 40,
