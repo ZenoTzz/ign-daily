@@ -478,13 +478,13 @@
       "category": "行业动态",
       "emoji": "🎮",
       "en_title": "Microsoft Launches Test for Ad-Supported Xbox Game Streaming, Promises the Ads Will Not 'Interrupt the Flow of Gameplay'",
-      "cn_title": "微软启动广告支持XBOX游戏流媒体测试，承诺广告不打断游戏",
-      "summary": "微软已启动广告支持的XBOX游戏流媒体测试，允许XBOX Insiders无需订阅即可免费流播部分游戏，但需在每次1小时会话前观看约2分钟广告。微软强调广告仅在会话前播放，不会中断游戏过程。该测试旨在为主机涨价的背景下提供更廉价的游玩方式，玩家可自愿参与。",
+      "cn_title": "微软测试广告支持的XBOX游戏流媒体，承诺不打断游戏",
+      "summary": "微软正测试广告支持的XBOX游戏流媒体：无需订阅，观看约两分钟广告后可免费游玩一小时，广告不会中断游戏。测试推出之际，主机价格因组件危机持续上涨，微软也正经历XBOX史上最大规模重组。",
       "url": "https://www.ign.com/articles/microsoft-launches-test-for-ad-supported-xbox-game-streaming-promises-the-ads-will-not-interrupt-the-flow-of-gameplay",
       "publish_time_cn": "2026-07-24 00:00",
       "pub_date": "2026-07-24 00:00",
-      "cover_image": "https://assets-prd.ignimgs.com/2023/05/03/xbox-showcase-1683121552988.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2023/05/03/xbox-showcase-1683121552988.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2023/05/03/xbox-showcase-1683121552988.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2023/05/03/xbox-showcase-1683121552988.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -494,7 +494,16 @@
         "https://assets-prd.ignimgs.com/2020/10/22/xbox-series-x-button-02-1603393193921.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-07-24T00:18:37+08:00"
+      "source_fetched_at": "2026-07-24T00:18:37+08:00",
+      "translation_path": "translations/32.json",
+      "translator": "codex",
+      "translator_provider": "openai",
+      "translator_model": "gpt-5.6-sol",
+      "reasoning_effort": "low",
+      "reviewer_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-24T00:45:00Z",
+      "prompt_version": "codex-bilingual-review-2026-07-17-v1",
+      "quality_gate_version": 1
     },
     {
       "id": 33,
@@ -526,13 +535,13 @@
       "category": "人物新闻",
       "emoji": "🔥",
       "en_title": "Former Assassin's Creed, Watch Dogs Director Likens Large-Scale Game Development to Working With 'Flaming Barrels Falling Down From a Construction Site,' Months After Parting Ways With Ubisoft",
-      "cn_title": "前《刺客信条》《看门狗》总监将大型游戏开发比作「燃烧桶从工地滚落」",
-      "summary": "前育碧资深开发者Clint Hocking在离开公司后接受播客采访，将领导千人团队开发大型游戏比作《大金刚》中不断从工地滚落的燃烧桶。他曾在育碧领导《看门狗：军团》及《刺客信条：Hexe》的开发，今年初因《刺客信条》品牌高层重组而突然离职。据悉，《刺客信条：Hexe》仍计划于2027年发售。",
+      "cn_title": "前育碧《刺客信条》《看门狗》总监：大型游戏开发如同躲避燃烧木桶",
+      "summary": "前育碧创意总监Clint Hocking表示，当游戏团队扩大到1,000人时，反馈往往要经过会议、记录和任务系统，六周后才能看到迭代；这种失控感就像《大金刚》中不断从工地滚下来的燃烧木桶。",
       "url": "https://www.ign.com/articles/former-assassins-creed-watch-dogs-director-likens-large-scale-game-development-to-working-with-flaming-barrels-falling-down-from-a-construction-site-months-after-parting-ways-with-ubisoft",
       "publish_time_cn": "2026-07-23 23:19",
       "pub_date": "2026-07-23 23:19",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/07/23/gettyimages-1148983351-1784819966354.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/07/23/gettyimages-1148983351-1784819966354.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/07/23/gettyimages-1148983351-1784819966354.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/07/23/gettyimages-1148983351-1784819966354.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -543,7 +552,16 @@
         "https://assets-prd.ignimgs.com/2022/09/10/assassins-creed-codename-hexe-button-00-1662844482582.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-07-23T23:47:39+08:00"
+      "source_fetched_at": "2026-07-23T23:47:39+08:00",
+      "translation_path": "translations/30.json",
+      "translator": "codex",
+      "translator_provider": "openai",
+      "translator_model": "gpt-5.6-sol",
+      "reasoning_effort": "low",
+      "reviewer_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-24T00:45:00Z",
+      "prompt_version": "codex-bilingual-review-2026-07-17-v1",
+      "quality_gate_version": 1
     },
     {
       "id": 25,
