@@ -146,8 +146,8 @@
       "url": "https://www.ign.com/articles/dont-play-halo-campaign-evolved-on-steam-deck-or-xbox-ally",
       "publish_time_cn": "2026-07-25 05:14",
       "pub_date": "2026-07-25 05:14",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/07/24/halo-campaign-evolved-7-24-2026-10-42-14-am-1784922344483.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/07/24/halo-campaign-evolved-7-24-2026-10-42-14-am-1784922344483.png",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/07/24/halo-campaign-evolved-7-24-2026-10-42-14-am-1784922344483.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/07/24/halo-campaign-evolved-7-24-2026-10-42-14-am-1784922344483.png?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -157,7 +157,16 @@
         "https://assets-prd.ignimgs.com/2025/10/24/halo-1761339042403.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-07-25T05:47:34+08:00"
+      "source_fetched_at": "2026-07-25T05:47:34+08:00",
+      "translation_path": "translations/25.json",
+      "translator": "codex",
+      "translator_provider": "openai",
+      "translator_model": "gpt-5.6-sol",
+      "reasoning_effort": "low",
+      "reviewer_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-27T04:05:00Z",
+      "prompt_version": "codex-bilingual-review-2026-07-17-v1",
+      "quality_gate_version": 1
     },
     {
       "id": 26,
@@ -284,8 +293,8 @@
       "url": "https://www.ign.com/articles/halo-campaign-evolved-secret-ending-cutscene-suggests-a-halo-2-remake-is-on-the-way",
       "publish_time_cn": "2026-07-25 03:43",
       "pub_date": "2026-07-25 03:43",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/07/09/halo-ce-operation-meteorite-1783609603807.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/07/09/halo-ce-operation-meteorite-1783609603807.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/07/09/halo-ce-operation-meteorite-1783609603807.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/07/09/halo-ce-operation-meteorite-1783609603807.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -295,7 +304,16 @@
         "https://assets-prd.ignimgs.com/2021/12/06/halo2-1638834496220.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-07-25T04:17:39+08:00"
+      "source_fetched_at": "2026-07-25T04:17:39+08:00",
+      "translation_path": "translations/22.json",
+      "translator": "codex",
+      "translator_provider": "openai",
+      "translator_model": "gpt-5.6-sol",
+      "reasoning_effort": "low",
+      "reviewer_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-27T04:05:00Z",
+      "prompt_version": "codex-bilingual-review-2026-07-17-v1",
+      "quality_gate_version": 1
     },
     {
       "id": 21,
