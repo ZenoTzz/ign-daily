@@ -506,13 +506,13 @@
       "category": "行业动态",
       "emoji": "📀",
       "en_title": "Even the Resident Evil Movie Isn't Safe from the PlayStation Physical Disc Controversy",
-      "cn_title": "连《生化危机》电影也逃不过PS实体光盘争议",
-      "summary": "索尼宣布2028年停止生产实体游戏盘后引发玩家持续抗议。最新《生化危机》真人电影预告片在PlayStation YouTube频道发布后，评论区被负面评论淹没，玩家借机表达对实体光盘政策的不满。尽管该片是电影而非游戏，仍未能幸免。影片由Zach Cregger执导，将于2026年9月18日上映。",
+      "cn_title": "《生化危机》电影预告也被PlayStation实体版争议淹没",
+      "summary": "《生化危机》真人电影预告在PlayStation频道发布后，评论区被反对索尼停止实体游戏光盘的玩家淹没。1,800条评论中，大量热门留言借电影情节调侃「最后一份实体游戏」，显示争议已经从游戏公告蔓延到电影内容。",
       "url": "https://www.ign.com/articles/even-the-resident-evil-movie-isnt-safe-from-the-playstation-physical-disc-controversy",
       "publish_time_cn": "2026-07-25 00:02",
       "pub_date": "2026-07-25 00:02",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/07/24/resident-evil-movie-trailer-comments-1784908375651.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/07/24/resident-evil-movie-trailer-comments-1784908375651.png",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/07/24/resident-evil-movie-trailer-comments-1784908375651.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/07/24/resident-evil-movie-trailer-comments-1784908375651.png?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -522,7 +522,16 @@
         "https://assets-prd.ignimgs.com/2026/05/25/resident-evil-xlg-1779720604849.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-07-25T00:47:50+08:00"
+      "source_fetched_at": "2026-07-25T00:47:50+08:00",
+      "translation_path": "translations/15.json",
+      "translator": "codex",
+      "translator_provider": "openai",
+      "translator_model": "gpt-5.6-sol",
+      "reasoning_effort": "low",
+      "reviewer_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-27T03:35:00Z",
+      "prompt_version": "codex-bilingual-review-2026-07-17-v1",
+      "quality_gate_version": 1
     },
     {
       "id": 13,
@@ -759,13 +768,13 @@
       "category": "游戏新闻",
       "emoji": "💿",
       "en_title": "PlayStation Killing Discs Has Upsides, Ubisoft Boss Yves Guillemot Says, Pointing to Cheaper Consoles Without Disc Drives",
-      "cn_title": "育碧CEO谈索尼停光盘：无光驱主机更便宜",
-      "summary": "索尼宣布从2028年1月起所有新PS5游戏仅提供数字版，育碧CEO Yves Guillemot在投资者问答中表示，此举有助于降低主机成本，类似PC数字化的趋势，且不会对行业造成太大冲击。尽管玩家强烈反对，但分析师认为索尼因数字版利润更高，不可能回心转意。",
+      "cn_title": "育碧CEO称PlayStation放弃光盘也有积极一面",
+      "summary": "育碧CEO伊夫·吉耶莫认为，PlayStation停止为新游戏生产光盘虽有利弊，但纯数字主机可降低硬件成本并扩大市场。索尼数字销售分成远高于实体版，因此即使遭遇强烈抗议，也几乎没有改变决定的财务动机。",
       "url": "https://www.ign.com/articles/playstation-killing-discs-has-upsides-ubisoft-boss-yves-guillemot-says-pointing-to-cheaper-consoles-without-disc-drives",
       "publish_time_cn": "2026-07-24 17:45",
       "pub_date": "2026-07-24 17:45",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/07/24/gettyimages-1246763414-1784884199131.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/07/24/gettyimages-1246763414-1784884199131.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/07/24/gettyimages-1246763414-1784884199131.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/07/24/gettyimages-1246763414-1784884199131.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -775,7 +784,16 @@
         "https://assets-prd.ignimgs.com/2024/09/10/ps5-1725981325370.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-07-24T18:17:53+08:00"
+      "source_fetched_at": "2026-07-24T18:17:53+08:00",
+      "translation_path": "translations/06.json",
+      "translator": "codex",
+      "translator_provider": "openai",
+      "translator_model": "gpt-5.6-sol",
+      "reasoning_effort": "low",
+      "reviewer_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-27T03:25:00Z",
+      "prompt_version": "codex-bilingual-review-2026-07-17-v1",
+      "quality_gate_version": 1
     },
     {
       "id": 5,
