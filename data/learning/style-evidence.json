@@ -2560,7 +2560,7 @@
       "rule": "涉及系列作品、合集或续作时，可使用读者容易识别的编号写法，如 1&2、5、3+4；但不得新增原文没有的事实。",
       "category": "title",
       "scope": "franchise_titles",
-      "status": "pending",
+      "status": "archived_stale",
       "days": [
         "2026-06-22"
       ],
@@ -2579,7 +2579,10 @@
       "created_at": "2026-06-22T21:49:02+08:00",
       "last_seen": "2026-06-22",
       "confidence": 0.7,
-      "latest_evidence_summary": "6/22 的标题润色倾向用更直观的系列编号表达。"
+      "latest_evidence_summary": "6/22 的标题润色倾向用更直观的系列编号表达。",
+      "archived_at": "2026-07-27T12:05:42+08:00",
+      "archive_reason": "31 days without new supporting evidence",
+      "previous_status": "pending"
     },
     "subtitle_trim_generic_hook": {
       "id": "subtitle_trim_generic_hook",
@@ -2986,13 +2989,13 @@
     "dict_candidate_god_of_war_laufey_2e0ef0beabfb": {
       "id": "dict_candidate_god_of_war_laufey_2e0ef0beabfb",
       "title": "词库候选：God of War Laufey → 战神：Laufey",
-      "rule": "Observe the title rendering for God of War Laufey; do not add it to the dictionary without entity confirmation.",
+      "rule": "Prefer the existing user-confirmed dictionary entry; do not create a duplicate from an incomplete title alignment.",
       "category": "dictionary",
       "type": "dictionary_candidate",
       "dict_category": "terms",
       "scope": "dictionary_candidate",
-      "status": "observed",
-      "semantic_review": "observe",
+      "status": "rejected",
+      "semantic_review": "rejected",
       "days": [
         "2026-07-12"
       ],
@@ -3021,16 +3024,16 @@
         "cat": "terms",
         "source": "user"
       },
-      "semantic_rationale": "The polished title is a single-article rendering and conflicts with the established Chinese name for Laufey. Keep it as an observation until a source-context match resolves whether this is a distinct title or an inconsistent rendering.",
+      "semantic_rationale": "The candidate keeps Laufey in English and conflicts with the existing user-confirmed dictionary entries for God of War Laufey and Laufey.",
       "counterexamples": [
-        "Existing usage maps Laufey to 劳菲 rather than retaining Laufey in English."
+        "The active dictionary already maps God of War Laufey to the complete Chinese title and Laufey to its confirmed Chinese name."
       ],
-      "misuse_risk": "Could create an incorrect dictionary entry for a title or character reference."
+      "misuse_risk": "A duplicate would reintroduce an inconsistent mixed-language title."
     },
     "dict_candidate_ryse_son_of_rome_e2605424dbe6": {
       "id": "dict_candidate_ryse_son_of_rome_e2605424dbe6",
       "title": "词库候选：Ryse: Son of Rome → Ryse：罗马之子",
-      "rule": "Observe Ryse: Son of Rome → 崛起：罗马之子 pending corroborating user-polished examples or explicit feedback.",
+      "rule": "Observe the canonical Chinese title for Ryse: Son of Rome until another user-polished example or explicit confirmation is available.",
       "category": "dictionary",
       "type": "dictionary_candidate",
       "dict_category": "games",
@@ -3065,9 +3068,9 @@
         "cat": "games",
         "source": "user"
       },
-      "semantic_rationale": "The user consistently changed this article to 崛起：罗马之子, but the candidate pair itself is only supported by one article on one day. Retain it for future corroboration rather than promoting it to the dictionary.",
+      "semantic_rationale": "The game-title rendering is plausible, but it is supported by only one unconfirmed article-level candidate and the proposed alternatives are inconsistent.",
       "counterexamples": [],
-      "misuse_risk": "A single article-level normalization may not establish the intended canonical game title."
+      "misuse_risk": "Promoting a one-off title rendering could establish the wrong canonical game name."
     },
     "dict_candidate_new_vegas_lead_designer_3faff8e21716": {
       "id": "dict_candidate_new_vegas_lead_designer_3faff8e21716",
@@ -3156,9 +3159,183 @@
         "Deborah Ann Woll is an actor; God of War: Laufey is a game/project title."
       ],
       "misuse_risk": "Would replace personal names with unrelated titles in future translations."
+    },
+    "dict_candidate_call_of_duty_ambience_651356b0d3bb": {
+      "id": "dict_candidate_call_of_duty_ambience_651356b0d3bb",
+      "title": "词库候选：Call of Duty Ambience → 使命召唤》氛围",
+      "rule": "Do not derive dictionary entries from descriptive title fragments or malformed bracket alignment.",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "games",
+      "scope": "dictionary_candidate",
+      "status": "rejected",
+      "semantic_review": "rejected",
+      "days": [
+        "2026-07-20"
+      ],
+      "days_seen": 1,
+      "articles_seen": 1,
+      "contradictions": 0,
+      "alternatives": {
+        "使命召唤》氛围": 1
+      },
+      "examples": [
+        {
+          "date": "2026-07-20",
+          "article_id": 5,
+          "before": "Call of Duty Ambience",
+          "after": "使命召唤》氛围",
+          "evidence": "来自文章页未确认新词候选。"
+        }
+      ],
+      "created_at": "2026-07-27T12:03:22+08:00",
+      "last_seen": "2026-07-20",
+      "confidence": 0.8,
+      "latest_evidence_summary": "来自文章页未确认新词候选。",
+      "candidate_payload": {
+        "en": "Call of Duty Ambience",
+        "cn": "使命召唤》氛围",
+        "cat": "games",
+        "source": "user"
+      },
+      "semantic_rationale": "Call of Duty Ambience is a descriptive phrase, while the proposed Chinese value is a malformed fragment with an unmatched book-title bracket. It is not a stable entity pair.",
+      "counterexamples": [
+        "Call of Duty can be a franchise title, but ambience describes the subject of this specific article."
+      ],
+      "misuse_risk": "The entry would inject broken punctuation and replace ordinary descriptive text."
+    },
+    "dict_candidate_mike_wing_f6d9885666dc": {
+      "id": "dict_candidate_mike_wing_f6d9885666dc",
+      "title": "词库候选：Mike Wing → 迈克·温",
+      "rule": "Observe Mike Wing and its proposed transliteration until the person identity or another user-polished occurrence confirms it.",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "people",
+      "scope": "dictionary_candidate",
+      "status": "observed",
+      "semantic_review": "observe",
+      "days": [
+        "2026-07-20"
+      ],
+      "days_seen": 1,
+      "articles_seen": 1,
+      "contradictions": 0,
+      "alternatives": {
+        "迈克·温": 1
+      },
+      "examples": [
+        {
+          "date": "2026-07-20",
+          "article_id": 5,
+          "before": "Mike Wing",
+          "after": "迈克·温",
+          "evidence": "来自文章页未确认新词候选。"
+        }
+      ],
+      "created_at": "2026-07-27T12:03:22+08:00",
+      "last_seen": "2026-07-20",
+      "confidence": 0.8,
+      "latest_evidence_summary": "来自文章页未确认新词候选。",
+      "candidate_payload": {
+        "en": "Mike Wing",
+        "cn": "迈克·温",
+        "cat": "people",
+        "source": "user"
+      },
+      "semantic_rationale": "The transliteration is plausible, but only one article supplies it and the candidate has no verified person identity or repeated user-polished evidence.",
+      "counterexamples": [],
+      "misuse_risk": "A name collision or different preferred transliteration could make a one-sample entry incorrect."
+    },
+    "dict_candidate_hbo_cinematographer_1861aa36fb2e": {
+      "id": "dict_candidate_hbo_cinematographer_1861aa36fb2e",
+      "title": "词库候选：HBO Cinematographer → 哈利·波特",
+      "rule": "Reject title-alignment candidates that map a role description to a work title.",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "people",
+      "scope": "dictionary_candidate",
+      "status": "rejected",
+      "semantic_review": "rejected",
+      "days": [
+        "2026-07-23"
+      ],
+      "days_seen": 1,
+      "articles_seen": 1,
+      "contradictions": 0,
+      "alternatives": {
+        "哈利·波特": 1
+      },
+      "examples": [
+        {
+          "date": "2026-07-23",
+          "article_id": 16,
+          "before": "HBO Cinematographer",
+          "after": "哈利·波特",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "created_at": "2026-07-27T12:03:29+08:00",
+      "last_seen": "2026-07-23",
+      "confidence": 0.65,
+      "latest_evidence_summary": "英文标题开头专名与中文标题书名号对应。",
+      "candidate_payload": {
+        "en": "HBO Cinematographer",
+        "cn": "哈利·波特",
+        "cat": "people",
+        "source": "user"
+      },
+      "semantic_rationale": "HBO Cinematographer is a role phrase; Harry Potter is a work title. The English and Chinese anchors do not identify the same entity.",
+      "counterexamples": [
+        "A cinematographer is a person or role, not the Harry Potter property."
+      ],
+      "misuse_risk": "The entry would replace occupations with unrelated franchise names."
+    },
+    "dict_candidate_studio_founder_344c57b896d6": {
+      "id": "dict_candidate_studio_founder_344c57b896d6",
+      "title": "词库候选：Studio Founder → 潜行者2",
+      "rule": "Reject title-alignment candidates that map a role description to a game title.",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "terms",
+      "scope": "dictionary_candidate",
+      "status": "rejected",
+      "semantic_review": "rejected",
+      "days": [
+        "2026-07-23"
+      ],
+      "days_seen": 1,
+      "articles_seen": 1,
+      "contradictions": 0,
+      "alternatives": {
+        "潜行者2": 1
+      },
+      "examples": [
+        {
+          "date": "2026-07-23",
+          "article_id": 24,
+          "before": "Studio Founder",
+          "after": "潜行者2",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "created_at": "2026-07-27T12:03:29+08:00",
+      "last_seen": "2026-07-23",
+      "confidence": 0.65,
+      "latest_evidence_summary": "英文标题开头专名与中文标题书名号对应。",
+      "candidate_payload": {
+        "en": "Studio Founder",
+        "cn": "潜行者2",
+        "cat": "terms",
+        "source": "user"
+      },
+      "semantic_rationale": "Studio Founder is a role phrase; Stalker 2 is a game title. They are not the same entity.",
+      "counterexamples": [
+        "Studio Founder describes a person, while Stalker 2 names a game."
+      ],
+      "misuse_risk": "The entry would corrupt future sentences by replacing a role with a game title."
     }
   },
-  "updated_at": "2026-07-17T22:36:59+08:00",
+  "updated_at": "2026-07-27T12:05:42+08:00",
   "migration": {
     "at": "2026-07-11T10:29:20+08:00",
     "quarantined": 100,

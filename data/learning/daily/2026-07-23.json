@@ -1,0 +1,54 @@
+{
+  "date": "2026-07-23",
+  "observer": "codex",
+  "model": "codex",
+  "status": "observed",
+  "signals": [],
+  "candidates": [
+    {
+      "id": "dict_candidate_hbo_cinematographer_1861aa36fb2e",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：HBO Cinematographer → 哈利·波特",
+      "rule": "建议将「HBO Cinematographer」加入词库，译为「哈利·波特」。",
+      "status": "observed",
+      "semantic_review": "pending",
+      "confidence": "medium",
+      "examples": [
+        {
+          "date": "2026-07-23",
+          "article_id": 16,
+          "before": "HBO Cinematographer",
+          "after": "哈利·波特",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id": "dict_candidate_studio_founder_344c57b896d6",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：Studio Founder → 潜行者2",
+      "rule": "建议将「Studio Founder」加入词库，译为「潜行者2」。",
+      "status": "observed",
+      "semantic_review": "pending",
+      "confidence": "medium",
+      "examples": [
+        {
+          "date": "2026-07-23",
+          "article_id": 24,
+          "before": "Studio Founder",
+          "after": "潜行者2",
+          "evidence": "英文标题开头专名与中文标题书名号对应。"
+        }
+      ],
+      "contradiction": ""
+    }
+  ],
+  "notes": [
+    "Added source+polished dictionary candidates for GPT/Tencent workflow."
+  ],
+  "candidate_count": 2,
+  "updated_at": "2026-07-27T12:03:29+08:00"
+}

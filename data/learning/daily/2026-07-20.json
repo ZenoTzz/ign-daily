@@ -1,0 +1,54 @@
+{
+  "date": "2026-07-20",
+  "observer": "codex",
+  "model": "codex",
+  "status": "observed",
+  "signals": [],
+  "candidates": [
+    {
+      "id": "dict_candidate_call_of_duty_ambience_651356b0d3bb",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：Call of Duty Ambience → 使命召唤》氛围",
+      "rule": "建议将「Call of Duty Ambience」加入词库，译为「使命召唤》氛围」。",
+      "status": "observed",
+      "semantic_review": "pending",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-07-20",
+          "article_id": 5,
+          "before": "Call of Duty Ambience",
+          "after": "使命召唤》氛围",
+          "evidence": "来自文章页未确认新词候选。"
+        }
+      ],
+      "contradiction": ""
+    },
+    {
+      "id": "dict_candidate_mike_wing_f6d9885666dc",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "title": "词库候选：Mike Wing → 迈克·温",
+      "rule": "建议将「Mike Wing」加入词库，译为「迈克·温」。",
+      "status": "observed",
+      "semantic_review": "pending",
+      "confidence": "high",
+      "examples": [
+        {
+          "date": "2026-07-20",
+          "article_id": 5,
+          "before": "Mike Wing",
+          "after": "迈克·温",
+          "evidence": "来自文章页未确认新词候选。"
+        }
+      ],
+      "contradiction": ""
+    }
+  ],
+  "notes": [
+    "Added source+polished dictionary candidates for GPT/Tencent workflow."
+  ],
+  "candidate_count": 2,
+  "updated_at": "2026-07-27T12:03:22+08:00"
+}

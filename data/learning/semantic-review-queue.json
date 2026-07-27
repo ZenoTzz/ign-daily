@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-07-17T22:36:29+08:00",
+  "generated_at": "2026-07-27T12:03:50+08:00",
   "instructions": "Codex must write semantic-review-results.json; mechanical scripts cannot approve candidates.",
   "allowed_decisions": [
     "approve",
@@ -67,23 +67,79 @@
       ]
     },
     {
-      "id": "dict_candidate_new_vegas_lead_designer_3faff8e21716",
+      "id": "dict_candidate_call_of_duty_ambience_651356b0d3bb",
       "type": "dictionary_candidate",
-      "title": "词库候选：New Vegas Lead Designer → 辐射：新维加斯",
-      "proposed_rule": "建议将「New Vegas Lead Designer」加入词库，译为「辐射：新维加斯」。",
+      "title": "词库候选：Call of Duty Ambience → 使命召唤》氛围",
+      "proposed_rule": "建议将「Call of Duty Ambience」加入词库，译为「使命召唤》氛围」。",
       "scope": "all",
       "days_seen": 1,
       "articles_seen": 1,
       "contradictions": 0,
       "alternatives": {
-        "辐射：新维加斯": 1
+        "使命召唤》氛围": 1
       },
       "examples": [
         {
-          "date": "2026-07-16",
-          "article_id": 32,
-          "before": "New Vegas Lead Designer",
-          "after": "辐射：新维加斯",
+          "date": "2026-07-20",
+          "article_id": 5,
+          "before": "Call of Duty Ambience",
+          "after": "使命召唤》氛围",
+          "evidence": "来自文章页未确认新词候选。"
+        }
+      ],
+      "questions": [
+        "这是稳定偏好、事实纠错、词库实体、格式偏好还是一次性修改？",
+        "英文和中文是否在上下文中指向同一实体？",
+        "是否存在反例或更合理解释？",
+        "规则能否明确执行，误用风险是什么？"
+      ]
+    },
+    {
+      "id": "dict_candidate_mike_wing_f6d9885666dc",
+      "type": "dictionary_candidate",
+      "title": "词库候选：Mike Wing → 迈克·温",
+      "proposed_rule": "建议将「Mike Wing」加入词库，译为「迈克·温」。",
+      "scope": "all",
+      "days_seen": 1,
+      "articles_seen": 1,
+      "contradictions": 0,
+      "alternatives": {
+        "迈克·温": 1
+      },
+      "examples": [
+        {
+          "date": "2026-07-20",
+          "article_id": 5,
+          "before": "Mike Wing",
+          "after": "迈克·温",
+          "evidence": "来自文章页未确认新词候选。"
+        }
+      ],
+      "questions": [
+        "这是稳定偏好、事实纠错、词库实体、格式偏好还是一次性修改？",
+        "英文和中文是否在上下文中指向同一实体？",
+        "是否存在反例或更合理解释？",
+        "规则能否明确执行，误用风险是什么？"
+      ]
+    },
+    {
+      "id": "dict_candidate_hbo_cinematographer_1861aa36fb2e",
+      "type": "dictionary_candidate",
+      "title": "词库候选：HBO Cinematographer → 哈利·波特",
+      "proposed_rule": "建议将「HBO Cinematographer」加入词库，译为「哈利·波特」。",
+      "scope": "all",
+      "days_seen": 1,
+      "articles_seen": 1,
+      "contradictions": 0,
+      "alternatives": {
+        "哈利·波特": 1
+      },
+      "examples": [
+        {
+          "date": "2026-07-23",
+          "article_id": 16,
+          "before": "HBO Cinematographer",
+          "after": "哈利·波特",
           "evidence": "英文标题开头专名与中文标题书名号对应。"
         }
       ],
@@ -95,23 +151,23 @@
       ]
     },
     {
-      "id": "dict_candidate_deborah_ann_woll_701bef400360",
+      "id": "dict_candidate_studio_founder_344c57b896d6",
       "type": "dictionary_candidate",
-      "title": "词库候选：Deborah Ann Woll → 战神：劳菲",
-      "proposed_rule": "建议将「Deborah Ann Woll」加入词库，译为「战神：劳菲」。",
+      "title": "词库候选：Studio Founder → 潜行者2",
+      "proposed_rule": "建议将「Studio Founder」加入词库，译为「潜行者2」。",
       "scope": "all",
       "days_seen": 1,
       "articles_seen": 1,
       "contradictions": 0,
       "alternatives": {
-        "战神：劳菲": 1
+        "潜行者2": 1
       },
       "examples": [
         {
-          "date": "2026-07-17",
+          "date": "2026-07-23",
           "article_id": 24,
-          "before": "Deborah Ann Woll",
-          "after": "战神：劳菲",
+          "before": "Studio Founder",
+          "after": "潜行者2",
           "evidence": "英文标题开头专名与中文标题书名号对应。"
         }
       ],

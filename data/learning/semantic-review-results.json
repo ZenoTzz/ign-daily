@@ -2,45 +2,65 @@
   "results": [
     {
       "id": "dict_candidate_god_of_war_laufey_2e0ef0beabfb",
-      "decision": "observe",
-      "rationale": "The polished title is a single-article rendering and conflicts with the established Chinese name for Laufey. Keep it as an observation until a source-context match resolves whether this is a distinct title or an inconsistent rendering.",
-      "refined_rule": "Observe the title rendering for God of War Laufey; do not add it to the dictionary without entity confirmation.",
+      "decision": "reject",
+      "rationale": "The candidate keeps Laufey in English and conflicts with the existing user-confirmed dictionary entries for God of War Laufey and Laufey.",
+      "refined_rule": "Prefer the existing user-confirmed dictionary entry; do not create a duplicate from an incomplete title alignment.",
       "scope": "dictionary_candidate",
       "counterexamples": [
-        "Existing usage maps Laufey to 劳菲 rather than retaining Laufey in English."
+        "The active dictionary already maps God of War Laufey to the complete Chinese title and Laufey to its confirmed Chinese name."
       ],
-      "misuse_risk": "Could create an incorrect dictionary entry for a title or character reference."
+      "misuse_risk": "A duplicate would reintroduce an inconsistent mixed-language title."
     },
     {
       "id": "dict_candidate_ryse_son_of_rome_e2605424dbe6",
       "decision": "observe",
-      "rationale": "The user consistently changed this article to 崛起：罗马之子, but the candidate pair itself is only supported by one article on one day. Retain it for future corroboration rather than promoting it to the dictionary.",
-      "refined_rule": "Observe Ryse: Son of Rome → 崛起：罗马之子 pending corroborating user-polished examples or explicit feedback.",
+      "rationale": "The game-title rendering is plausible, but it is supported by only one unconfirmed article-level candidate and the proposed alternatives are inconsistent.",
+      "refined_rule": "Observe the canonical Chinese title for Ryse: Son of Rome until another user-polished example or explicit confirmation is available.",
       "scope": "dictionary_candidate",
       "counterexamples": [],
-      "misuse_risk": "A single article-level normalization may not establish the intended canonical game title."
+      "misuse_risk": "Promoting a one-off title rendering could establish the wrong canonical game name."
     },
     {
-      "id": "dict_candidate_new_vegas_lead_designer_3faff8e21716",
+      "id": "dict_candidate_call_of_duty_ambience_651356b0d3bb",
       "decision": "reject",
-      "rationale": "The English source phrase is a role description, not the game title. Mapping it to Fallout: New Vegas drops the person/role information and creates an invalid entity pair.",
-      "refined_rule": "Do not create a dictionary candidate from a title phrase when its English anchor includes a role description rather than the named work alone.",
+      "rationale": "Call of Duty Ambience is a descriptive phrase, while the proposed Chinese value is a malformed fragment with an unmatched book-title bracket. It is not a stable entity pair.",
+      "refined_rule": "Do not derive dictionary entries from descriptive title fragments or malformed bracket alignment.",
       "scope": "dictionary_candidate",
       "counterexamples": [
-        "New Vegas Lead Designer refers to a person’s role, while Fallout: New Vegas is a game title."
+        "Call of Duty can be a franchise title, but ambience describes the subject of this specific article."
       ],
-      "misuse_risk": "Would cause role phrases to be replaced by game titles and corrupt factual meaning."
+      "misuse_risk": "The entry would inject broken punctuation and replace ordinary descriptive text."
     },
     {
-      "id": "dict_candidate_deborah_ann_woll_701bef400360",
+      "id": "dict_candidate_mike_wing_f6d9885666dc",
+      "decision": "observe",
+      "rationale": "The transliteration is plausible, but only one article supplies it and the candidate has no verified person identity or repeated user-polished evidence.",
+      "refined_rule": "Observe Mike Wing and its proposed transliteration until the person identity or another user-polished occurrence confirms it.",
+      "scope": "dictionary_candidate",
+      "counterexamples": [],
+      "misuse_risk": "A name collision or different preferred transliteration could make a one-sample entry incorrect."
+    },
+    {
+      "id": "dict_candidate_hbo_cinematographer_1861aa36fb2e",
       "decision": "reject",
-      "rationale": "Deborah Ann Woll is the actor named in the English title; the Chinese title identifies the God of War: Laufey project. These are not the same entity.",
-      "refined_rule": "Reject candidate pairs that map a person’s name to a work title without an explicit person-name translation.",
+      "rationale": "HBO Cinematographer is a role phrase; Harry Potter is a work title. The English and Chinese anchors do not identify the same entity.",
+      "refined_rule": "Reject title-alignment candidates that map a role description to a work title.",
       "scope": "dictionary_candidate",
       "counterexamples": [
-        "Deborah Ann Woll is an actor; God of War: Laufey is a game/project title."
+        "A cinematographer is a person or role, not the Harry Potter property."
       ],
-      "misuse_risk": "Would replace personal names with unrelated titles in future translations."
+      "misuse_risk": "The entry would replace occupations with unrelated franchise names."
+    },
+    {
+      "id": "dict_candidate_studio_founder_344c57b896d6",
+      "decision": "reject",
+      "rationale": "Studio Founder is a role phrase; Stalker 2 is a game title. They are not the same entity.",
+      "refined_rule": "Reject title-alignment candidates that map a role description to a game title.",
+      "scope": "dictionary_candidate",
+      "counterexamples": [
+        "Studio Founder describes a person, while Stalker 2 names a game."
+      ],
+      "misuse_risk": "The entry would corrupt future sentences by replacing a role with a game title."
     }
   ]
 }

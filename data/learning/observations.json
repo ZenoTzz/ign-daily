@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-17T22:36:59+08:00",
+  "generated_at": "2026-07-27T12:05:42+08:00",
   "active": [
     {
       "id": "remove_personal_commentary",
@@ -59,14 +59,16 @@
           "after": "陶德·霍华德：最近看过《漫威刀锋战士》，做得非常出色"
         }
       ]
-    },
+    }
+  ],
+  "archived": [
     {
       "id": "numbered_franchise_titles",
       "title": "系列作品标题补充直观编号",
       "rule": "涉及系列作品、合集或续作时，可使用读者容易识别的编号写法，如 1&2、5、3+4；但不得新增原文没有的事实。",
       "category": "title",
       "scope": "franchise_titles",
-      "status": "pending",
+      "status": "archived_stale",
       "type": "style_rule",
       "days_seen": 1,
       "articles_seen": 2,
@@ -74,10 +76,9 @@
       "last_seen": "2026-06-22",
       "semantic_rationale": "6/22 的标题润色倾向用更直观的系列编号表达。",
       "misuse_risk": "",
-      "examples": []
-    }
-  ],
-  "archived": [
+      "examples": [],
+      "archive_reason": "31 days without new supporting evidence"
+    },
     {
       "id": "wrap_media_source_names",
       "title": "媒体来源名可用书名号标识",
@@ -350,7 +351,7 @@
     }
   ],
   "summary": {
-    "active": 3,
-    "archived": 11
+    "active": 2,
+    "archived": 12
   }
 }

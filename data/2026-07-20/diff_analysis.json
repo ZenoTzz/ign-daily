@@ -1,0 +1,299 @@
+{
+  "date": "2026-07-20",
+  "generated_at": "2026-07-27T12:03:22.370148",
+  "total_articles": 3,
+  "dictionary_candidate_count": 2,
+  "dictionary_candidates": [
+    {
+      "id": "dict_candidate_call_of_duty_ambience_651356b0d3bb",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "games",
+      "en": "Call of Duty Ambience",
+      "cn": "使命召唤》氛围",
+      "title": "词库候选：Call of Duty Ambience → 使命召唤》氛围",
+      "rule": "建议将「Call of Duty Ambience」加入词库，译为「使命召唤》氛围」。",
+      "status": "observed",
+      "semantic_review": "pending",
+      "quality": {
+        "accepted_as_evidence": true,
+        "status": "observed",
+        "reasons": [],
+        "requires_semantic_review": true
+      },
+      "confidence": "high",
+      "date": "2026-07-20",
+      "article_id": 5,
+      "article_title": "《使命召唤》环境音网站重现经典多人大厅争吵声",
+      "url": "https://www.ign.com/articles/call-of-duty-ambience-website-lets-you-fall-asleep-to-nostalgic-black-ops-and-mw2-lobbies",
+      "evidence": "来自文章页未确认新词候选。"
+    },
+    {
+      "id": "dict_candidate_mike_wing_f6d9885666dc",
+      "category": "dictionary",
+      "type": "dictionary_candidate",
+      "dict_category": "people",
+      "en": "Mike Wing",
+      "cn": "迈克·温",
+      "title": "词库候选：Mike Wing → 迈克·温",
+      "rule": "建议将「Mike Wing」加入词库，译为「迈克·温」。",
+      "status": "observed",
+      "semantic_review": "pending",
+      "quality": {
+        "accepted_as_evidence": true,
+        "status": "observed",
+        "reasons": [],
+        "requires_semantic_review": true
+      },
+      "confidence": "high",
+      "date": "2026-07-20",
+      "article_id": 5,
+      "article_title": "《使命召唤》环境音网站重现经典多人大厅争吵声",
+      "url": "https://www.ign.com/articles/call-of-duty-ambience-website-lets-you-fall-asleep-to-nostalgic-black-ops-and-mw2-lobbies",
+      "evidence": "来自文章页未确认新词候选。"
+    }
+  ],
+  "learning_evidence_updated": true,
+  "daily_learning_updated": true,
+  "articles": [
+    {
+      "id": 2,
+      "cn_title": "《奥德赛》全球首周末票房2.641亿美元，创诺兰新高",
+      "en_title": "The Odyssey Blows Box Office Expectations Out of the Water With $264.1 Million Opening Weekend",
+      "url": "https://www.ign.com/articles/the-odyssey-blows-box-office-expectations-out-of-the-water-with-2641-million-opening-weekend",
+      "category": "影视资讯",
+      "has_translation": true,
+      "title_diff": {
+        "mine": "《奥德赛》全球首周末票房2.641亿美元(约合人民币18亿元)，创诺兰新高",
+        "yours": "《奥德赛》全球首周末票房2.641亿美元，创诺兰新高"
+      },
+      "subtitle_diff": null,
+      "body_diffs": [
+        {
+          "operation": "replace",
+          "before_range": [
+            0,
+            2
+          ],
+          "after_range": [
+            0,
+            2
+          ],
+          "before": [
+            "导演克里斯托弗·诺兰的《奥德赛》远超票房预期，全球首周末斩获惊人的2.641亿美元(约合人民币18亿元)，即264.1百万美元(约合人民币18亿元)。",
+            "据Deadline报道，这部改编电影在北美取得1.245亿美元(约合人民币8亿元)，即124.5百万美元(约合人民币8亿元)，国际市场贡献另外1.396亿美元(约合人民币9亿元)，即139.6百万美元(约合人民币9亿元)。全球总成绩创下诺兰职业生涯最高首周末票房，超过《蝙蝠侠：黑暗骑士崛起》的2.49亿美元(约合人民币17亿元)，即249百万美元(约合人民币17亿元)，以及《蝙蝠侠：黑暗骑士》的1.98亿美元(约合人民币13亿元)，即198百万美元(约合人民币13亿元)。"
+          ],
+          "after": [
+            "导演克里斯托弗·诺兰的《奥德赛》远超票房预期，全球首周末斩获惊人的2.641亿美元(约合人民币18亿元)。",
+            "据Deadline报道，这部改编电影在北美取得1.245亿美元(约合人民币8亿元)，国际市场贡献另外1.396亿美元(约合人民币9亿元)。全球总成绩创下诺兰职业生涯最高首周末票房，超过《蝙蝠侠：黑暗骑士崛起》的2.49亿美元(约合人民币17亿元)，以及《蝙蝠侠：黑暗骑士》的1.98亿美元(约合人民币13亿元)。"
+          ]
+        },
+        {
+          "operation": "replace",
+          "before_range": [
+            3,
+            11
+          ],
+          "after_range": [
+            3,
+            8
+          ],
+          "before": [
+            "早期报道预计，《奥德赛》北美票房将达到90百万至100百万美元(约合人民币6亿至7亿元)，全球票房为257.8百万美元(约合人民币17亿元)。最终北美124.5百万美元(约合人民币8亿元)、全球264.1百万美元(约合人民币18亿元)的成绩，显然已驶过这些预测。",
+            "《综艺》报道称，影片制作成本为250百万美元(约合人民币17亿元)，宣传费用为125百万美元(约合人民币8亿元)，是今年迄今成本较高的院线作品之一。不过上映头几天的票房已超过制作成本，完全收回各项投入应该不会等太久。",
+            "《奥德赛》是诺兰执导的第13部长片，于7月17日上映。马特·达蒙饰演奥德修斯，安妮·海瑟薇饰演佩涅洛佩，汤姆·赫兰德饰演忒勒马科斯，赞达亚饰演雅典娜，罗伯特·帕丁森饰演安提诺俄斯，Elliot Page饰演西农，露皮塔·尼永奥饰演海伦／克吕泰涅斯特拉，另有众多演员加盟。影片时长接近三小时，是对荷马希腊史诗的现代改编，也是这位奥斯卡最佳影片得主专为IMAX打造的最新项目，外界期待值自然极高。",
+            "尽管如此，影片上映前的营销还经历了持续数月的抵制行动，被网络「争议」笼罩，但诺兰似乎仍稳稳胜出。接下来，这部群星云集的冒险片需要在后续每个周末维持势头。最终走势仍有待观察，但许多人已预计其至少会突破传说中的10亿美元(约合人民币68亿元)大关。",
+            "作为对比，诺兰上一部作品、2023年的《奥本海默》首周末取得180.4百万美元(约合人民币12亿元)。「芭比海默」现象帮助这部R级J. Robert Oppenheimer传记片在院线周期结束时接近10亿美元(约合人民币68亿元)，全球总票房达到975.8百万美元(约合人民币66亿元)，数据来自Box Office Mojo。《奥德赛》最终能航行多远仍需时间揭晓，但从已观看影片并在烂番茄留下评价的观众来看，它似乎值得走进影院。",
+            "与此同时，据《综艺》报道，迪士尼真人版《海洋奇缘》位列第二，累计票房178百万美元(约合人民币12亿元)。《小黄人与怪兽》和《玩具总动员5》并列第三，前者全球票房323百万美元(约合人民币22亿元)，后者已达958百万美元(约合人民币65亿元)。《超级少女》全球票房则仅为120百万美元(约合人民币8亿元)。",
+            "IGN为《奥德赛》给出8/10评分：「《奥德赛》以全新视角改编荷马史诗，为故事注入恐怖感、存在主义焦虑，也带来一些幽默。它或许并不完美，但仍是相当出色的观影体验。」",
+            "《奥德赛》已经上映，但这个开画周末远不会是我们最后一次听到它——或其导演——的消息。罗伯特·帕丁森还曾回忆，拍摄期间他一度以为自己听见达蒙经历了一次「非常糟糕的如厕体验」。"
+          ],
+          "after": [
+            "《综艺》报道称，影片制作成本为2.5亿美元(约合人民币17亿元)，宣传费用为1.25亿美元(约合人民币8亿元)，是今年迄今成本较高的院线作品之一。不过上映头几天的票房已超过制作成本，完全收回各项投入应该不会等太久。",
+            "《奥德赛》是诺兰执导的第13部长片，于7月17日上映（中国大陆地区于8月14日上映）。马特·达蒙饰演奥德修斯，安妮·海瑟薇饰演佩涅洛佩，汤姆·赫兰德饰演忒勒马科斯，赞达亚饰演雅典娜，罗伯特·帕丁森饰演安提诺俄斯，艾略特·佩吉饰演西农，露皮塔·尼永奥饰演海伦／克吕泰涅斯特拉，另有众多演员加盟。影片时长接近三小时，是对荷马希腊史诗的现代改编，也是这位奥斯卡最佳影片得主专为IMAX打造的最新项目，外界期待值自然极高。",
+            "尽管如此，影片上映前的营销还经历了持续数月的抵制行动，被网络「争议」笼罩，但诺兰似乎仍稳稳胜出。接下来，这部群星云集的冒险片需要在后续每个周末维持势头。最终走势仍有待观察，但许多人已预计其至少会突破传说中的10亿美元大关。",
+            "作为对比，诺兰上一部作品、2023年的《奥本海默》首周末取得1.8亿美元(约合人民币12亿元)票房。「芭本海默（Barbenheimer）」现象帮助这部R级传记片在院线周期结束时接近10亿美元(约合人民币68亿元)，全球总票房达到9.75亿美元(约合人民币66亿元)，《奥德赛》最终能航行多远仍需时间揭晓，但从已观看影片并在烂番茄留下评价的观众来看，它似乎值得走进影院。",
+            "IGN为《奥德赛》给出8分：「《奥德赛》以全新视角改编荷马史诗，为故事注入恐怖感、存在主义焦虑，也带来一些幽默。它或许并不完美，但仍是相当出色的观影体验。」"
+          ]
+        }
+      ],
+      "dictionary_candidates": []
+    },
+    {
+      "id": 3,
+      "cn_title": "XBOX确认将有更多独占，但单机游戏并非固定标准",
+      "en_title": "Xbox Says More Exclusives Are Coming But Tells Players Not to 'Overly Fixate on Single-Player' Games",
+      "url": "https://www.ign.com/articles/xbox-says-more-exclusives-are-coming-but-tells-players-not-to-overly-fixate-on-single-player-games",
+      "category": "行业动态",
+      "has_translation": true,
+      "title_diff": null,
+      "subtitle_diff": null,
+      "body_diffs": [
+        {
+          "operation": "replace",
+          "before_range": [
+            7,
+            8
+          ],
+          "after_range": [
+            7,
+            8
+          ],
+          "before": [
+            "他继续说道：「我们管理着20多个生命周期收入达到10亿美元(约合人民币68亿元)的游戏系列。我们的产品组合中有许多不同游戏，必须思考不同作品在其中承担的不同作用。」"
+          ],
+          "after": [
+            "他继续说道：「我们管理着20多个生命周期收入达到10亿美元的游戏系列。我们的产品组合中有许多不同游戏，必须思考不同作品在其中承担的不同作用。」"
+          ]
+        },
+        {
+          "operation": "replace",
+          "before_range": [
+            10,
+            12
+          ],
+          "after_range": [
+            10,
+            11
+          ],
+          "before": [
+            "他说：「几乎没有证据表明，任何平台能在没有独占内容的情况下建立起来，更不用说长期维持。无论是有线电视网、流媒体视频频道、广播、地面电台、好莱坞制片厂还是唱片公司，都需要独占内容。」",
+            "XBOX的新策略仍处于早期阶段，因此很难判断它会如何在未来数月乃至数年改变这个困境重重的生态。公司一边尝试澄清新的独占策略，一边仍在处理裁员后果；这轮裁员伴随着Sharma所称的公司史上「最重大重组」。此次重组于本月早些时候发生，并导致[原文此处缺失内容]。"
+          ],
+          "after": [
+            "他说：「几乎没有证据表明，任何平台能在没有独占内容的情况下建立起来，更不用说长期维持。无论是有线电视网、流媒体视频频道、广播、好莱坞制片厂还是唱片公司，都需要独占内容。」"
+          ]
+        }
+      ],
+      "dictionary_candidates": []
+    },
+    {
+      "id": 5,
+      "cn_title": "《使命召唤》环境音网站重现经典多人大厅争吵声",
+      "en_title": "Call of Duty Ambience Website Lets You Fall Asleep to Nostalgic Black Ops and MW2 Lobbies",
+      "url": "https://www.ign.com/articles/call-of-duty-ambience-website-lets-you-fall-asleep-to-nostalgic-black-ops-and-mw2-lobbies",
+      "category": "游戏新闻",
+      "has_translation": true,
+      "title_diff": null,
+      "subtitle_diff": null,
+      "body_diffs": [
+        {
+          "operation": "replace",
+          "before_range": [
+            0,
+            1
+          ],
+          "after_range": [
+            0,
+            1
+          ],
+          "before": [
+            "你是否曾想伴着《使命召唤》玩家用5美元(约合人民币34元)麦克风对着你耳朵大喊的声音入睡？没有？无论如何，「Call of Duty Ambience」网站还是来了。"
+          ],
+          "after": [
+            "你是否曾想伴着《使命召唤》玩家用廉价麦克风对着你耳朵大喊的声音入睡？没有？无论如何，「Call of Duty Ambience」网站还是来了。(网站地址：https://www.appdrop.com/immike_wing/call-of-duty-ambience）"
+          ]
+        },
+        {
+          "operation": "delete",
+          "before_range": [
+            3,
+            6
+          ],
+          "after_range": [
+            3,
+            3
+          ],
+          "before": [
+            "大多数人听着白噪音入睡。",
+            "我听着成年人在《使命召唤》大厅里争吵入睡。",
+            "所以我做了一个24/7播放《使命召唤》语音聊天的网站。"
+          ],
+          "after": []
+        },
+        {
+          "operation": "replace",
+          "before_range": [
+            7,
+            8
+          ],
+          "after_range": [
+            4,
+            5
+          ],
+          "before": [
+            "许多老派《使命召唤》粉丝对「多人大厅」的记忆，或许比对游戏本身还深。在Infinity Ward和Treyarch作品的多人模式早期，玩家会在比赛间隙留在大厅聊天。这些交流几乎总会演变成毫无来由的垃圾话吼叫大战。体验很糟，但对某些人来说，也自有一种安宁。"
+          ],
+          "after": [
+            "许多老派《使命召唤》粉丝对「多人大厅」的记忆，或许比对游戏本身还深。在Infinity Ward和Treyarch作品的多人模式早期，玩家会在比赛间隙留在大厅聊天。这些交流几乎总会演变成毫无来由的垃圾话吼叫大战。体验很糟，但对某些人来说，也自有一种安宁（吗）。"
+          ]
+        },
+        {
+          "operation": "delete",
+          "before_range": [
+            9,
+            10
+          ],
+          "after_range": [
+            6,
+            6
+          ],
+          "before": [
+            "如需了解更多，可以阅读动视如何打击新移植版中的漏洞利用，以及跨平台联机的运作方式。"
+          ],
+          "after": []
+        }
+      ],
+      "dictionary_candidates": [
+        {
+          "id": "dict_candidate_call_of_duty_ambience_651356b0d3bb",
+          "category": "dictionary",
+          "type": "dictionary_candidate",
+          "dict_category": "games",
+          "en": "Call of Duty Ambience",
+          "cn": "使命召唤》氛围",
+          "title": "词库候选：Call of Duty Ambience → 使命召唤》氛围",
+          "rule": "建议将「Call of Duty Ambience」加入词库，译为「使命召唤》氛围」。",
+          "status": "observed",
+          "semantic_review": "pending",
+          "quality": {
+            "accepted_as_evidence": true,
+            "status": "observed",
+            "reasons": [],
+            "requires_semantic_review": true
+          },
+          "confidence": "high",
+          "date": "2026-07-20",
+          "article_id": 5,
+          "article_title": "《使命召唤》环境音网站重现经典多人大厅争吵声",
+          "url": "https://www.ign.com/articles/call-of-duty-ambience-website-lets-you-fall-asleep-to-nostalgic-black-ops-and-mw2-lobbies",
+          "evidence": "来自文章页未确认新词候选。"
+        },
+        {
+          "id": "dict_candidate_mike_wing_f6d9885666dc",
+          "category": "dictionary",
+          "type": "dictionary_candidate",
+          "dict_category": "people",
+          "en": "Mike Wing",
+          "cn": "迈克·温",
+          "title": "词库候选：Mike Wing → 迈克·温",
+          "rule": "建议将「Mike Wing」加入词库，译为「迈克·温」。",
+          "status": "observed",
+          "semantic_review": "pending",
+          "quality": {
+            "accepted_as_evidence": true,
+            "status": "observed",
+            "reasons": [],
+            "requires_semantic_review": true
+          },
+          "confidence": "high",
+          "date": "2026-07-20",
+          "article_id": 5,
+          "article_title": "《使命召唤》环境音网站重现经典多人大厅争吵声",
+          "url": "https://www.ign.com/articles/call-of-duty-ambience-website-lets-you-fall-asleep-to-nostalgic-black-ops-and-mw2-lobbies",
+          "evidence": "来自文章页未确认新词候选。"
+        }
+      ]
+    }
+  ]
+}
