@@ -182,21 +182,38 @@
       "category": "影视资讯",
       "emoji": "🎬",
       "en_title": "Everything Announced at the Marvel Studios SDCC Panel | Comic Con 2026",
-      "cn_title": "漫威SDCC发布会：《复仇者联盟：毁灭日》新预告及未来规划",
-      "summary": "漫威影业在圣地亚哥国际动漫展（SDCC）的Hall H发布会正式登场。据IGN现场报道，发布会上不仅展示了《复仇者联盟：毁灭日》的全新预告，漫威影业总裁凯文·费奇还透露了MCU直至2042年的电影规划，涵盖《秘密战争》后的重置、X战警及真人版迈尔斯·莫拉莱斯的初步构想。更多发布会内容持续更新中。",
+      "cn_title": "漫威SDCC发布会全情报",
+      "summary": "漫威影业SDCC发布会确认：瑞恩·高斯林主演《恶灵骑士》、死侍与佩吉·卡特加入《复仇者联盟：毁灭之日》、David Jonsson成为新任黑豹，《黑豹3》将于2028年12月15日上映。现场还播放了《毁灭之日》和《蜘蛛侠：崭新之日》片段，但未公布《秘密战争》或《X战警》电影详情。",
       "url": "https://www.ign.com/articles/everything-announced-at-the-marvel-studios-sdcc-panel-comic-con-2026",
       "publish_time_cn": "2026-07-26 05:04",
       "pub_date": "2026-07-26 05:04",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/07/25/marvel-hall-h-sdcc-live-blogroll-1785013178405.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/07/25/marvel-hall-h-sdcc-live-blogroll-1785013178405.jpg",
+      "translation_status": "done",
       "images": [
-        "https://assets-prd.ignimgs.com/2026/07/25/marvel-hall-h-sdcc-live-blogroll-1785013178405.jpg?width=1280&format=jpg&auto=webp&quality=80",
-        "https://assets-prd.ignimgs.com/2026/07/25/marvel-hall-h-sdcc-live-blogroll-1785013178405.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
-        "https://assets-prd.ignimgs.com/2026/07/25/marvel-hall-h-sdcc-live-blogroll-1785013178405.jpg?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
-        "https://assets-prd.ignimgs.com/2026/07/25/marvel-hall-h-sdcc-live-blogroll-1785013178405.jpg?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
-        "https://assets-prd.ignimgs.com/2026/07/25/marvel-hall-h-sdcc-live-blogroll-1785013178405.jpg",
-        "https://assets-prd.ignimgs.com/2026/07/25/marvel-hall-h-sdcc-live-blogroll-1785013164356.jpg",
-        "https://assets-prd.ignimgs.com/2026/07/21/doomsday-button-update-1784644439273.jpg"
+        {
+          "url": "https://assets-prd.ignimgs.com/2026/07/25/marvel-hall-h-sdcc-live-blogroll-1785013178405.jpg?width=1280&format=jpg&auto=webp&quality=80",
+          "caption": ""
+        },
+        {
+          "url": "https://assets-prd.ignimgs.com/2026/07/25/marvel-hall-h-sdcc-live-blogroll-1785013164356.jpg",
+          "caption": ""
+        },
+        {
+          "url": "https://assets-prd.ignimgs.com/2026/07/21/doomsday-button-update-1784644439273.jpg",
+          "caption": ""
+        },
+        {
+          "url": "https://assets-prd.ignimgs.com/2026/07/26/marvel-hall-h-sdcc-blogroll-1785030502555.jpg?width=1280&format=jpg&auto=webp&quality=80",
+          "caption": ""
+        },
+        {
+          "url": "https://assets-prd.ignimgs.com/2026/07/26/marvel-hall-h-sdcc-blogroll-1785030516763.jpg",
+          "caption": ""
+        },
+        {
+          "url": "https://assets-prd.ignimgs.com/2026/07/26/doomsday-button-update1-1785072206433.jpg",
+          "caption": ""
+        }
       ],
       "source_status": "cached",
       "source_fetched_at": "2026-07-26T05:47:34+08:00",
@@ -229,7 +246,16 @@
           "source": "ai_guess",
           "reason": "需确认官方中文译名"
         }
-      ]
+      ],
+      "translation_path": "translations/17.json",
+      "translator": "codex",
+      "translator_provider": "openai",
+      "translator_model": "gpt-5.6",
+      "reasoning_effort": "high",
+      "reviewer_model": "gpt-5.6",
+      "reviewed_at": "2026-07-27T05:20:00Z",
+      "prompt_version": "codex-bilingual-review-2026-07-17-v1",
+      "quality_gate_version": 1
     },
     {
       "id": 13,
