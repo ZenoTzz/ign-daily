@@ -219,8 +219,8 @@
       "url": "https://www.ign.com/articles/marvel-knew-david-jonsson-would-be-the-next-black-panther-6-months-ago-after-secret-meeting-with-ryan-coogler",
       "publish_time_cn": "2026-07-27 03:36",
       "pub_date": "2026-07-27 03:36",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/07/26/david-jonsson-1785094436375.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/07/26/david-jonsson-1785094436375.png",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/07/26/david-jonsson-1785094436375.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/07/26/david-jonsson-1785094436375.png?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -231,7 +231,16 @@
         "https://assets-prd.ignimgs.com/2026/07/26/david-jonsson-1785094293981.png"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-07-27T03:47:28+08:00"
+      "source_fetched_at": "2026-07-27T03:47:28+08:00",
+      "translation_path": "translations/17.json",
+      "translator": "codex",
+      "translator_provider": "openai",
+      "translator_model": "gpt-5.6-sol",
+      "reasoning_effort": "low",
+      "reviewer_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-27T02:30:00Z",
+      "prompt_version": "codex-bilingual-review-2026-07-17-v1",
+      "quality_gate_version": 1
     },
     {
       "id": 15,
