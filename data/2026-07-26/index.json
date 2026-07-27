@@ -98,8 +98,8 @@
       "url": "https://www.ign.com/articles/dungeons-dragons-movie-sequel-has-a-script-but-financial-reasons-might-keep-it-from-ever-coming-out",
       "publish_time_cn": "2026-07-26 05:34",
       "pub_date": "2026-07-26 05:34",
-      "cover_image": "https://assets-prd.ignimgs.com/2023/02/10/dungeonsanddragonshonoramongthievesbiggamespot-ign-blogroll-1676038812746.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2023/02/10/dungeonsanddragonshonoramongthievesbiggamespot-ign-blogroll-1676038812746.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2023/02/10/dungeonsanddragonshonoramongthievesbiggamespot-ign-blogroll-1676038812746.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2023/02/10/dungeonsanddragonshonoramongthievesbiggamespot-ign-blogroll-1676038812746.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -118,7 +118,16 @@
           "source": "ai_guess",
           "reason": "词库未收录该电影译名，建议确认后入库。"
         }
-      ]
+      ],
+      "translation_path": "translations/14.json",
+      "translator": "codex",
+      "translator_provider": "openai",
+      "translator_model": "gpt-5.6-sol",
+      "reasoning_effort": "low",
+      "reviewer_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-27T03:05:00Z",
+      "prompt_version": "codex-bilingual-review-2026-07-17-v1",
+      "quality_gate_version": 1
     },
     {
       "id": 15,
