@@ -316,8 +316,8 @@
       "url": "https://www.ign.com/articles/which-ghost-rider-is-ryan-gosling-playing-in-the-mcu-marvel-comic-con-2026",
       "publish_time_cn": "2026-07-27 00:37",
       "pub_date": "2026-07-27 00:37",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/07/26/gosling-ghost-rider-1280-1785082213382.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/07/26/gosling-ghost-rider-1280-1785082213382.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/07/26/gosling-ghost-rider-1280-1785082213382.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/07/26/gosling-ghost-rider-1280-1785082213382.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -346,7 +346,16 @@
           "source": "ai_guess",
           "reason": "第二代恶灵骑士，通行译名但未入词库"
         }
-      ]
+      ],
+      "translation_path": "translations/13.json",
+      "translator": "codex",
+      "translator_provider": "openai",
+      "translator_model": "gpt-5.6-sol",
+      "reasoning_effort": "low",
+      "reviewer_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-27T02:15:00Z",
+      "prompt_version": "codex-bilingual-review-2026-07-17-v1",
+      "quality_gate_version": 1
     },
     {
       "id": 14,
@@ -417,8 +426,8 @@
       "url": "https://www.ign.com/articles/resident-evil-director-knows-re2-didnt-have-snow-or-iphones-but-he-took-liberties-to-make-the-movie-better",
       "publish_time_cn": "2026-07-26 22:38",
       "pub_date": "2026-07-26 22:38",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/04/28/residentevil-thumb-1777417521520.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/04/28/residentevil-thumb-1777417521520.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/04/28/residentevil-thumb-1777417521520.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/04/28/residentevil-thumb-1777417521520.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -428,7 +437,16 @@
         "https://assets-prd.ignimgs.com/2026/05/25/resident-evil-xlg-1779720604849.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-07-26T23:17:55+08:00"
+      "source_fetched_at": "2026-07-26T23:17:55+08:00",
+      "translation_path": "translations/11.json",
+      "translator": "codex",
+      "translator_provider": "openai",
+      "translator_model": "gpt-5.6-sol",
+      "reasoning_effort": "low",
+      "reviewer_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-27T02:05:00Z",
+      "prompt_version": "codex-bilingual-review-2026-07-17-v1",
+      "quality_gate_version": 1
     },
     {
       "id": 10,
