@@ -18,6 +18,7 @@ from pathlib import Path
 from typing import Any
 
 from google.auth.transport.requests import Request
+from google.auth.exceptions import RefreshError
 from google.oauth2.credentials import Credentials
 from google_auth_oauthlib.flow import InstalledAppFlow
 from googleapiclient.discovery import build
@@ -49,6 +50,9 @@ MONTHS = {
 }
 
 DATE_HEADING_RE = re.compile(r"^\d{2}/\d{2}/\d{2}\s+")
+MISSING_SOURCE_MARKER_RE = re.compile(
+    r"\[原文[^\]\r\n]*(?:缺失|缺句)[^\]\r\n]*\]"
+)
 
 
 @dataclass(frozen=True)
@@ -147,9 +151,16 @@ def load_credentials(config: dict[str, Any]) -> Credentials:
     if creds and creds.valid and has_required_scope:
         return creds
     if creds and creds.expired and creds.refresh_token and has_required_scope:
-        creds.refresh(Request())
-        write_private_token(token_path, creds.to_json())
-        return creds
+        try:
+            creds.refresh(Request())
+        except RefreshError:
+            # A revoked/expired refresh token cannot recover itself. Continue
+            # into the installed-app consent flow below instead of aborting the
+            # whole Docs sync with ``invalid_grant``.
+            creds = None
+        else:
+            write_private_token(token_path, creds.to_json())
+            return creds
 
     if not credentials_path.exists():
         raise FileNotFoundError(
@@ -314,6 +325,52 @@ def paragraph_text(item: dict[str, Any]) -> str:
         element.get("textRun", {}).get("content", "")
         for element in para.get("elements", [])
     )
+
+
+def missing_source_ranges(text: str, start_index: int) -> list[TextRange]:
+    """Return Google Docs UTF-16 ranges for explicit source-gap markers."""
+    ranges: list[TextRange] = []
+    for match in MISSING_SOURCE_MARKER_RE.finditer(text):
+        start = start_index + utf16_len(text[: match.start()])
+        end = start + utf16_len(match.group(0))
+        ranges.append(TextRange(start, end))
+    return ranges
+
+
+def missing_source_highlight_requests(
+    tab_id: str,
+    paragraph_items: list[dict[str, Any]],
+) -> list[dict[str, Any]]:
+    """Highlight source-gap markers with a bright yellow background."""
+    requests: list[dict[str, Any]] = []
+    for item in paragraph_items:
+        text = paragraph_text(item)
+        start_index = int(item.get("startIndex", 0))
+        for marker_range in missing_source_ranges(text, start_index):
+            requests.append(
+                {
+                    "updateTextStyle": {
+                        "range": {
+                            "tabId": tab_id,
+                            "startIndex": marker_range.start,
+                            "endIndex": marker_range.end,
+                        },
+                        "textStyle": {
+                            "backgroundColor": {
+                                "color": {
+                                    "rgbColor": {
+                                        "red": 1.0,
+                                        "green": 1.0,
+                                        "blue": 0.0,
+                                    }
+                                }
+                            }
+                        },
+                        "fields": "backgroundColor",
+                    }
+                }
+            )
+    return requests
 
 
 def style_requests(tab_id: str, content: list[dict[str, Any]]) -> list[dict[str, Any]]:
@@ -536,6 +593,7 @@ def style_requests(tab_id: str, content: list[dict[str, Any]]) -> list[dict[str,
                 },
             ]
         )
+    requests.extend(missing_source_highlight_requests(tab_id, paragraph_items))
     return requests
 
 
@@ -1020,6 +1078,10 @@ def sync_incremental(
                     }
                 }
             ])
+
+        requests.extend(
+            missing_source_highlight_requests(tab_id, new_para_items[2:])
+        )
 
         # Step C: Update the previous first article's Heading 1 style to have pageBreakBefore = True
         if old_first_title_start is not None:
