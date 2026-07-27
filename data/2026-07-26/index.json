@@ -284,8 +284,8 @@
       "url": "https://www.ign.com/articles/george-rr-martin-working-on-dunk-and-egg-book-four-a-knight-of-the-seven-kingdoms-showrunner-says",
       "publish_time_cn": "2026-07-26 03:55",
       "pub_date": "2026-07-26 03:55",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/07/25/george-r-r-martin-dunk-and-egg-book-four-1785008570690.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/07/25/george-r-r-martin-dunk-and-egg-book-four-1785008570690.png",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/07/25/george-r-r-martin-dunk-and-egg-book-four-1785008570690.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/07/25/george-r-r-martin-dunk-and-egg-book-four-1785008570690.png?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -296,7 +296,16 @@
         "https://assets-prd.ignimgs.com/2026/07/25/george-r-r-martin-dunk-and-egg-book-four-1785008512950.png"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-07-26T04:17:52+08:00"
+      "source_fetched_at": "2026-07-26T04:17:52+08:00",
+      "translation_path": "translations/11.json",
+      "translator": "codex",
+      "translator_provider": "openai",
+      "translator_model": "gpt-5.6-sol",
+      "reasoning_effort": "low",
+      "reviewer_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-27T02:52:00Z",
+      "prompt_version": "codex-bilingual-review-2026-07-17-v1",
+      "quality_gate_version": 1
     },
     {
       "id": 10,
@@ -375,8 +384,8 @@
       "url": "https://www.ign.com/articles/final-fantasy-7-director-kept-open-world-fatigue-in-mind-as-new-remake-chapter-promises-bigger-world-than-rebirth",
       "publish_time_cn": "2026-07-26 02:05",
       "pub_date": "2026-07-26 02:05",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/07/25/final-fantasy-7-revelation-open-world-fatigue-1785002427557.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/07/25/final-fantasy-7-revelation-open-world-fatigue-1785002427557.png",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/07/25/final-fantasy-7-revelation-open-world-fatigue-1785002427557.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/07/25/final-fantasy-7-revelation-open-world-fatigue-1785002427557.png?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -395,7 +404,16 @@
           "source": "ai_guess",
           "reason": "暂译名，尚无官方中文译名，需确认"
         }
-      ]
+      ],
+      "translation_path": "translations/09.json",
+      "translator": "codex",
+      "translator_provider": "openai",
+      "translator_model": "gpt-5.6-sol",
+      "reasoning_effort": "low",
+      "reviewer_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-27T02:45:00Z",
+      "prompt_version": "codex-bilingual-review-2026-07-17-v1",
+      "quality_gate_version": 1
     },
     {
       "id": 8,
