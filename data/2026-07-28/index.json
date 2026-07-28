@@ -58,18 +58,29 @@
       "url": "https://www.ign.com/articles/call-of-duty-black-ops-fans-discover-cut-zombies-content-over-15-years-after-release",
       "publish_time_cn": "2026-07-28 06:59",
       "pub_date": "2026-07-28 06:59",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/07/27/black-ops-zombies-1785192840551.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/07/27/black-ops-zombies-1785192840551.jpg",
+      "translation_status": "done",
       "images": [
-        "https://assets-prd.ignimgs.com/2026/07/27/black-ops-zombies-1785192840551.jpg?width=1280&format=jpg&auto=webp&quality=80",
-        "https://assets-prd.ignimgs.com/2026/07/27/black-ops-zombies-1785192840551.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
-        "https://assets-prd.ignimgs.com/2026/07/27/black-ops-zombies-1785192840551.jpg?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
-        "https://assets-prd.ignimgs.com/2026/07/27/black-ops-zombies-1785192840551.jpg?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
-        "https://assets-prd.ignimgs.com/2026/07/27/black-ops-zombies-1785192840551.jpg",
-        "https://assets-prd.ignimgs.com/2021/12/30/call-of-duty-black-ops-1-button-1640898530662.jpg"
+        {
+          "url": "https://assets-prd.ignimgs.com/2026/07/27/black-ops-zombies-1785192840551.jpg?width=1280&format=jpg&auto=webp&quality=80",
+          "caption": ""
+        },
+        {
+          "url": "https://assets-prd.ignimgs.com/2021/12/30/call-of-duty-black-ops-1-button-1640898530662.jpg",
+          "caption": ""
+        }
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-07-28T07:17:27+08:00"
+      "source_fetched_at": "2026-07-28T07:17:27+08:00",
+      "translation_path": "translations/36.json",
+      "translator": "codex",
+      "translator_provider": "openai",
+      "translator_model": "gpt-5.6",
+      "reasoning_effort": "high",
+      "reviewer_model": "gpt-5.6",
+      "reviewed_at": "2026-07-28T04:00:00Z",
+      "prompt_version": "codex-bilingual-review-2026-07-17-v1",
+      "quality_gate_version": 1
     },
     {
       "id": 34,
@@ -81,18 +92,29 @@
       "url": "https://www.ign.com/articles/ubisoft-gives-free-pc-copies-to-xbox-owners-of-select-games",
       "publish_time_cn": "2026-07-28 06:04",
       "pub_date": "2026-07-28 06:04",
-      "cover_image": "https://assets-prd.ignimgs.com/2025/12/04/avbr-1764891639099.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2025/12/04/avbr-1764891639099.jpg",
+      "translation_status": "done",
       "images": [
-        "https://assets-prd.ignimgs.com/2025/12/04/avbr-1764891639099.jpg?width=1280&format=jpg&auto=webp&quality=80",
-        "https://assets-prd.ignimgs.com/2025/12/04/avbr-1764891639099.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
-        "https://assets-prd.ignimgs.com/2025/12/04/avbr-1764891639099.jpg?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
-        "https://assets-prd.ignimgs.com/2025/12/04/avbr-1764891639099.jpg?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
-        "https://assets-prd.ignimgs.com/2025/12/04/avbr-1764891639099.jpg",
-        "https://assets1.ignimgs.com/2020/04/30/assassins-creed-valhalla---button-fin-1588268099443.jpg"
+        {
+          "url": "https://assets-prd.ignimgs.com/2025/12/04/avbr-1764891639099.jpg?width=1280&format=jpg&auto=webp&quality=80",
+          "caption": ""
+        },
+        {
+          "url": "https://assets1.ignimgs.com/2020/04/30/assassins-creed-valhalla---button-fin-1588268099443.jpg",
+          "caption": ""
+        }
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-07-28T06:17:31+08:00"
+      "source_fetched_at": "2026-07-28T06:17:31+08:00",
+      "translation_path": "translations/34.json",
+      "translator": "codex",
+      "translator_provider": "openai",
+      "translator_model": "gpt-5.6",
+      "reasoning_effort": "high",
+      "reviewer_model": "gpt-5.6",
+      "reviewed_at": "2026-07-28T04:00:00Z",
+      "prompt_version": "codex-bilingual-review-2026-07-17-v1",
+      "quality_gate_version": 1
     },
     {
       "id": 35,
