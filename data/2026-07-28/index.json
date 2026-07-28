@@ -130,18 +130,29 @@
       "url": "https://www.ign.com/articles/the-marvel-tokon-fighting-souls-beta-proves-fans-still-really-want-that-blade-movie",
       "publish_time_cn": "2026-07-28 05:13",
       "pub_date": "2026-07-28 05:13",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/07/22/bladethumb-1784756019372.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/07/22/bladethumb-1784756019372.png",
+      "translation_status": "done",
       "images": [
-        "https://assets-prd.ignimgs.com/2026/07/22/bladethumb-1784756019372.png?width=1280&format=jpg&auto=webp&quality=80",
-        "https://assets-prd.ignimgs.com/2026/07/22/bladethumb-1784756019372.png?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
-        "https://assets-prd.ignimgs.com/2026/07/22/bladethumb-1784756019372.png?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
-        "https://assets-prd.ignimgs.com/2026/07/22/bladethumb-1784756019372.png?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
-        "https://assets-prd.ignimgs.com/2026/07/22/bladethumb-1784756019372.png",
-        "https://assets-prd.ignimgs.com/2025/06/04/tokon-1749076098123.jpg"
+        {
+          "url": "https://assets-prd.ignimgs.com/2026/07/22/bladethumb-1784756019372.png?width=1280&format=jpg&auto=webp&quality=80",
+          "caption": ""
+        },
+        {
+          "url": "https://assets-prd.ignimgs.com/2025/06/04/tokon-1749076098123.jpg",
+          "caption": ""
+        }
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-07-28T05:47:41+08:00"
+      "source_fetched_at": "2026-07-28T05:47:41+08:00",
+      "translation_path": "translations/33.json",
+      "translator": "codex",
+      "translator_provider": "openai",
+      "translator_model": "gpt-5.6",
+      "reasoning_effort": "high",
+      "reviewer_model": "gpt-5.6",
+      "reviewed_at": "2026-07-28T03:45:00Z",
+      "prompt_version": "codex-bilingual-review-2026-07-17-v1",
+      "quality_gate_version": 1
     },
     {
       "id": 31,
@@ -254,18 +265,29 @@
       "url": "https://www.ign.com/articles/physical-copies-of-gta-6-will-expire-170-days-after-launch-date-in-japan",
       "publish_time_cn": "2026-07-28 02:40",
       "pub_date": "2026-07-28 02:40",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/06/24/gta-6-preorders-top-tips-ign-1782304717533.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/24/gta-6-preorders-top-tips-ign-1782304717533.png",
+      "translation_status": "done",
       "images": [
-        "https://assets-prd.ignimgs.com/2026/06/24/gta-6-preorders-top-tips-ign-1782304717533.png?width=1280&format=jpg&auto=webp&quality=80",
-        "https://assets-prd.ignimgs.com/2026/06/24/gta-6-preorders-top-tips-ign-1782304717533.png?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
-        "https://assets-prd.ignimgs.com/2026/06/24/gta-6-preorders-top-tips-ign-1782304717533.png?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
-        "https://assets-prd.ignimgs.com/2026/06/24/gta-6-preorders-top-tips-ign-1782304717533.png?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
-        "https://assets-prd.ignimgs.com/2026/06/24/gta-6-preorders-top-tips-ign-1782304717533.png",
-        "https://assets-prd.ignimgs.com/2026/07/20/9f51f0ccdb65bd29c36a0907a738c2902a712f03e2fd6470-1784587649326.jpg"
+        {
+          "url": "https://assets-prd.ignimgs.com/2026/06/24/gta-6-preorders-top-tips-ign-1782304717533.png?width=1280&format=jpg&auto=webp&quality=80",
+          "caption": ""
+        },
+        {
+          "url": "https://assets-prd.ignimgs.com/2026/07/20/9f51f0ccdb65bd29c36a0907a738c2902a712f03e2fd6470-1784587649326.jpg",
+          "caption": ""
+        }
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-07-28T02:47:35+08:00"
+      "source_fetched_at": "2026-07-28T02:47:35+08:00",
+      "translation_path": "translations/27.json",
+      "translator": "codex",
+      "translator_provider": "openai",
+      "translator_model": "gpt-5.6",
+      "reasoning_effort": "high",
+      "reviewer_model": "gpt-5.6",
+      "reviewed_at": "2026-07-28T03:40:00Z",
+      "prompt_version": "codex-bilingual-review-2026-07-17-v1",
+      "quality_gate_version": 1
     },
     {
       "id": 28,
