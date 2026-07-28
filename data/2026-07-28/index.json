@@ -410,43 +410,56 @@
       "category": "游戏新闻",
       "emoji": "🎮",
       "en_title": "Final Fantasy 14 Will Be The Biggest Game on Nintendo Switch 2 by Install Size, and Take Up Almost Half of the Console's Entire Memory",
-      "cn_title": "《最终幻想14》Switch 2版安装容量曝光，占主机近半存储空间",
-      "summary": "《最终幻想14》Switch 2版将于8月4日发售，安装容量高达117.2GB，几乎占满主机256GB存储空间的一半。该版本包含全部五个现有资料片（苍穹之禁城、红莲之狂潮、暗影之逆焰、晓月之终途、金曦之遗辉），首月免费游玩，无需订阅。游戏总监吉田直树在柏林粉丝节上公布了这一消息。",
+      "cn_title": "《最终幻想14》Switch 2版占近半存储",
+      "summary": "《最终幻想14》将于8月4日登陆Switch 2，117.2GB的安装容量将占去256GB主机近半空间。文件已含五部资料片，但第六部资料片Evercold明年1月推出后，玩家还需更多空间。",
       "url": "https://www.ign.com/articles/final-fantasy-14-will-be-the-biggest-game-on-nintendo-switch-2-by-install-size-and-take-up-almost-half-of-the-consoles-entire-memory",
       "publish_time_cn": "2026-07-28 01:01",
       "pub_date": "2026-07-28 01:01",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/07/27/bd6f2957d0e9dcf9d8b77200d22e34b752f61749cfd177231e0ca528258be174-1785170282450.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/07/27/bd6f2957d0e9dcf9d8b77200d22e34b752f61749cfd177231e0ca528258be174-1785170282450.jpg",
+      "translation_status": "done",
       "images": [
-        "https://assets-prd.ignimgs.com/2026/07/27/bd6f2957d0e9dcf9d8b77200d22e34b752f61749cfd177231e0ca528258be174-1785170282450.jpg?width=1280&format=jpg&auto=webp&quality=80",
-        "https://assets-prd.ignimgs.com/2026/07/27/bd6f2957d0e9dcf9d8b77200d22e34b752f61749cfd177231e0ca528258be174-1785170282450.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
-        "https://assets-prd.ignimgs.com/2026/07/27/bd6f2957d0e9dcf9d8b77200d22e34b752f61749cfd177231e0ca528258be174-1785170282450.jpg?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
-        "https://assets-prd.ignimgs.com/2026/07/27/bd6f2957d0e9dcf9d8b77200d22e34b752f61749cfd177231e0ca528258be174-1785170282450.jpg?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
-        "https://assets-prd.ignimgs.com/2026/07/27/bd6f2957d0e9dcf9d8b77200d22e34b752f61749cfd177231e0ca528258be174-1785170282450.jpg",
-        "https://assets-prd.ignimgs.com/2023/01/02/ff14realmreborn-1672703221562.jpg"
+        {
+          "url": "https://assets-prd.ignimgs.com/2026/07/27/bd6f2957d0e9dcf9d8b77200d22e34b752f61749cfd177231e0ca528258be174-1785170282450.jpg?width=1280&format=jpg&auto=webp&quality=80",
+          "caption": ""
+        },
+        {
+          "url": "https://assets-prd.ignimgs.com/2023/01/02/ff14realmreborn-1672703221562.jpg",
+          "caption": ""
+        }
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-07-28T01:17:44+08:00"
+      "source_fetched_at": "2026-07-28T01:17:44+08:00",
+      "translation_path": "translations/22.json",
+      "translator": "codex",
+      "translator_provider": "openai",
+      "translator_model": "gpt-5.6",
+      "reasoning_effort": "high",
+      "reviewer_model": "gpt-5.6",
+      "reviewed_at": "2026-07-28T03:20:00Z",
+      "prompt_version": "codex-bilingual-review-2026-07-17-v1",
+      "quality_gate_version": 1
     },
     {
       "id": 21,
       "category": "行业动态",
       "emoji": "🎬",
       "en_title": "Benedict Cumberbatch Joins Marvel Stars Calling on UK Government to Block 'Dangerous' Paramount-Warner Bros Merger Before It Causes a Disastrous 'TV and Cinema Calamity'",
-      "cn_title": "《本尼迪克特·康伯巴奇等漫威明星呼吁英国政府阻止派拉蒙收购华纳兄弟》",
-      "summary": "本尼迪克特·康伯巴奇、艾伦·卡明和Benedict Wong在《卫报》联合发文，呼吁英国文化大臣阻止派拉蒙以1100亿美元(约合人民币7447亿元)收购华纳兄弟探索。他们警告称这笔交易将导致大规模裁员、内容同质化并威胁新闻独立性，给英国影视业带来灾难性后果。目前该收购在英国仍处于正式审查阶段。",
+      "cn_title": "康伯巴奇等促英国阻止派拉蒙收购华纳",
+      "summary": "康伯巴奇、卡明和王联名呼吁英国政府阻止派拉蒙以1100亿美元(约合人民币7447亿元)收购华纳兄弟，称这会带来裁员、内容同质化及新闻独立性风险。交易已获多国放行，但英国仍在审查之列。",
       "url": "https://www.ign.com/articles/benedict-cumberbatch-joins-marvel-stars-calling-on-uk-government-to-block-dangerous-paramount-warner-bros-merger-before-it-causes-a-disastrous-tv-and-cinema-calamity",
       "publish_time_cn": "2026-07-28 00:15",
       "pub_date": "2026-07-28 00:15",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/07/27/gettyimages-2282221809-1785166019082.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/07/27/gettyimages-2282221809-1785166019082.jpg",
+      "translation_status": "done",
       "images": [
-        "https://assets-prd.ignimgs.com/2026/07/27/gettyimages-2282221809-1785166019082.jpg?width=1280&format=jpg&auto=webp&quality=80",
-        "https://assets-prd.ignimgs.com/2026/07/27/gettyimages-2282221809-1785166019082.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
-        "https://assets-prd.ignimgs.com/2026/07/27/gettyimages-2282221809-1785166019082.jpg?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
-        "https://assets-prd.ignimgs.com/2026/07/27/gettyimages-2282221809-1785166019082.jpg?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
-        "https://assets-prd.ignimgs.com/2026/07/27/gettyimages-2282221809-1785166019082.jpg",
-        "https://assets-prd.ignimgs.com/2026/07/26/doomsday-button-update1-1785072206433.jpg"
+        {
+          "url": "https://assets-prd.ignimgs.com/2026/07/27/gettyimages-2282221809-1785166019082.jpg?width=1280&format=jpg&auto=webp&quality=80",
+          "caption": ""
+        },
+        {
+          "url": "https://assets-prd.ignimgs.com/2026/07/26/doomsday-button-update1-1785072206433.jpg",
+          "caption": ""
+        }
       ],
       "source_status": "cached",
       "source_fetched_at": "2026-07-28T00:47:58+08:00",
@@ -458,7 +471,16 @@
           "source": "ai_guess",
           "reason": "常见译名，但未在词库中确认"
         }
-      ]
+      ],
+      "translation_path": "translations/21.json",
+      "translator": "codex",
+      "translator_provider": "openai",
+      "translator_model": "gpt-5.6",
+      "reasoning_effort": "high",
+      "reviewer_model": "gpt-5.6",
+      "reviewed_at": "2026-07-28T03:20:00Z",
+      "prompt_version": "codex-bilingual-review-2026-07-17-v1",
+      "quality_gate_version": 1
     },
     {
       "id": 19,
