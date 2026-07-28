@@ -372,6 +372,7 @@ function appData() {
     activeJob: null,
     activeJobs: [],
     jobPollingTimer: null,
+    translationSubmitting: false,
     toast: '',
 
     // 全局待确认词库
@@ -1825,14 +1826,24 @@ function appData() {
     },
 
     async submitRequestWithServerApi(date, selIds) {
-      const data = await ServerAPI.request('/translations/request', {
-        method: 'POST',
-        body: JSON.stringify({
-          date,
-          ids: selIds,
-          trigger_workflow: this.isApiMode('fulltext_translator')
-        })
-      });
+      let data = null;
+      for (let attempt = 0; attempt < 2; attempt++) {
+        try {
+          data = await ServerAPI.request('/translations/request', {
+            method: 'POST',
+            body: JSON.stringify({
+              date,
+              ids: selIds,
+              trigger_workflow: this.isApiMode('fulltext_translator')
+            })
+          });
+          break;
+        } catch (error) {
+          if (error?.status !== 503 || attempt > 0) throw error;
+          this.flash('服务器正在写入，正在自动重试…', 2500);
+          await new Promise(resolve => setTimeout(resolve, 900));
+        }
+      }
       for (const id of selIds) {
         const a = this.data.articles.find(x => Number(x.id) === id);
         if (a && a.translation_status !== 'done') a.translation_status = 'requested';
@@ -1845,7 +1856,8 @@ function appData() {
         await this.pollTranslationJobs(true);
       }
       const suffix = data?.triggered ? '，API Actions 已触发' : `，等待${this.fulltextQueueOwner()}处理`;
-      this.flash(`已进入翻译池 ${selIds.length} 篇${suffix}`);
+      const prefix = data?.deduplicated ? '任务已在队列中' : `已进入翻译池 ${selIds.length} 篇`;
+      this.flash(`${prefix}${suffix}`);
       return data;
     },
 
@@ -2091,7 +2103,8 @@ function appData() {
     },
 
     async submitRequest() {
-      if (this.selected.length === 0) return;
+      if (this.selected.length === 0 || this.translationSubmitting) return;
+      this.translationSubmitting = true;
       try {
         const date = this.data.date;
         const selIds = [...this.selected].map(x => Number(x)).sort((a,b) => a-b);
@@ -2175,6 +2188,8 @@ function appData() {
         }
       } catch (e) {
         this.flash('提交失败：' + (e?.message || '服务器连接失败，请重试'), 6500);
+      } finally {
+        this.translationSubmitting = false;
       }
     },
 

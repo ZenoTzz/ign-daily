@@ -77,10 +77,17 @@ Response:
   "requested_ids": [2],
   "job_id": "translation-...",
   "job_ids": ["translation-..."],
+  "created_job_ids": ["translation-..."],
+  "reused_job_ids": [],
+  "deduplicated": false,
   "job_batch_size": 2,
   "triggered": false
 }
 ```
+
+Active `queued` or `running` jobs are idempotent by date and article ID. A
+repeated request reuses the existing job instead of creating duplicate work;
+mixed requests create jobs only for article IDs that are not already active.
 
 `GET /jobs/{job_id}` returns progress for one job.
 

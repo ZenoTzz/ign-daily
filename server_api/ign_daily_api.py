@@ -418,6 +418,59 @@ def create_job(kind: str, date: str | None, ids: list[int], user: str, message: 
     return job_id
 
 
+def create_or_reuse_translation_jobs(
+    date: str,
+    ids: list[int],
+    user: str,
+    message: str = "",
+) -> tuple[list[str], list[str], list[str]]:
+    """Atomically reuse active article jobs and create jobs only for uncovered IDs."""
+    selected_ids = list(dict.fromkeys(int(article_id) for article_id in ids))
+    now = int(time.time())
+    reused_job_ids: list[str] = []
+    created_job_ids: list[str] = []
+    covered_ids: set[int] = set()
+
+    with db() as conn:
+        conn.execute("BEGIN IMMEDIATE")
+        rows = conn.execute(
+            """
+            SELECT id, ids_json
+            FROM jobs
+            WHERE kind = 'translation' AND date = ? AND status IN ('queued', 'running')
+            ORDER BY created_at, id
+            """,
+            (date,),
+        ).fetchall()
+        selected_set = set(selected_ids)
+        for row in rows:
+            try:
+                active_ids = {int(value) for value in json.loads(row["ids_json"])}
+            except (TypeError, ValueError, json.JSONDecodeError):
+                continue
+            overlap = active_ids & selected_set
+            if not overlap:
+                continue
+            reused_job_ids.append(row["id"])
+            covered_ids.update(overlap)
+
+        uncovered_ids = [article_id for article_id in selected_ids if article_id not in covered_ids]
+        for offset in range(0, len(uncovered_ids), MAX_TRANSLATION_JOB_ARTICLES):
+            batch_ids = uncovered_ids[offset : offset + MAX_TRANSLATION_JOB_ARTICLES]
+            job_id = f"translation-{uuid.uuid4().hex[:12]}"
+            conn.execute(
+                """
+                INSERT INTO jobs (id, kind, status, date, ids_json, message, progress, created_by, created_at, updated_at)
+                VALUES (?, 'translation', 'queued', ?, ?, ?, 5, ?, ?, ?)
+                """,
+                (job_id, date, json.dumps(batch_ids), message, user, now, now),
+            )
+            created_job_ids.append(job_id)
+        conn.commit()
+
+    return created_job_ids + reused_job_ids, created_job_ids, reused_job_ids
+
+
 def update_job(job_id: str, status: str, message: str | None = None, progress: int | None = None) -> None:
     fields = ["status = ?", "updated_at = ?"]
     values: list[Any] = [status, int(time.time())]
@@ -1659,28 +1712,24 @@ def request_translation(payload: TranslationRequest, user: sqlite3.Row = Depends
     }
     write_project_file(path, json_text(updated), f"request translation for {payload.date}: {','.join(map(str, requested_ids))}")
     selected_ids = [int(a["id"]) for a in selected]
-    job_ids = [
-        create_job(
-            "translation",
-            payload.date,
-            selected_ids[offset : offset + MAX_TRANSLATION_JOB_ARTICLES],
-            user["username"],
-            "翻译请求已提交",
-        )
-        for offset in range(0, len(selected_ids), MAX_TRANSLATION_JOB_ARTICLES)
-    ]
+    job_ids, created_job_ids, reused_job_ids = create_or_reuse_translation_jobs(
+        payload.date,
+        selected_ids,
+        user["username"],
+        "翻译请求已提交",
+    )
     job_id = job_ids[0]
-    if payload.trigger_workflow:
+    if payload.trigger_workflow and created_job_ids:
         if STORAGE_MODE == "github":
             gh_dispatch_workflow("api-translation.yml", {})
-            for created_job_id in job_ids:
+            for created_job_id in created_job_ids:
                 update_job(created_job_id, "running", "已触发 GitHub 翻译流程", 10)
         else:
-            for created_job_id in job_ids:
+            for created_job_id in created_job_ids:
                 update_job(created_job_id, "running", "服务器正在翻译", 10)
-            run_local_job(["/srv/ign-daily-ops/run-api-translation.sh"], job_id)
+            run_local_job(["/srv/ign-daily-ops/run-api-translation.sh"], created_job_ids[0])
     else:
-        for created_job_id in job_ids:
+        for created_job_id in created_job_ids:
             update_job(created_job_id, "queued", "已加入翻译队列", 5)
     sync_from_github()
     return {
@@ -1689,8 +1738,11 @@ def request_translation(payload: TranslationRequest, user: sqlite3.Row = Depends
         "requested_ids": merged_ids,
         "job_id": job_id,
         "job_ids": job_ids,
+        "created_job_ids": created_job_ids,
+        "reused_job_ids": reused_job_ids,
+        "deduplicated": bool(reused_job_ids),
         "job_batch_size": MAX_TRANSLATION_JOB_ARTICLES,
-        "triggered": payload.trigger_workflow,
+        "triggered": payload.trigger_workflow and bool(created_job_ids),
     }
 
 

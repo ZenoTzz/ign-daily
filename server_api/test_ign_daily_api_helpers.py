@@ -272,6 +272,64 @@ class PrivateApiFileGuardsTest(unittest.TestCase):
                 rows = conn.execute("SELECT ids_json FROM jobs ORDER BY created_at, id").fetchall()
             self.assertEqual(sorted(len(json.loads(row["ids_json"])) for row in rows), [1, 2, 2])
 
+    def test_repeated_translation_request_reuses_active_job(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            repo = root / "repo"
+            api_dir = root / "api"
+            day = repo / "data" / "2026-07-28"
+            day.mkdir(parents=True)
+            api_dir.mkdir()
+            (day / "index.json").write_text(json.dumps({
+                "articles": [{"id": 38, "url": "https://example.com/38", "en_title": "38"}]
+            }), encoding="utf-8")
+            module = load_api(repo, api_dir, {"IGN_DAILY_STORAGE_MODE": "local"})
+            module.init_db()
+            payload = types.SimpleNamespace(date="2026-07-28", ids=[38], trigger_workflow=False)
+
+            first = module.request_translation(payload, {"username": "tester"})
+            second = module.request_translation(payload, {"username": "tester"})
+
+            self.assertEqual(second["job_ids"], first["job_ids"])
+            self.assertEqual(second["created_job_ids"], [])
+            self.assertEqual(second["reused_job_ids"], first["job_ids"])
+            self.assertTrue(second["deduplicated"])
+            with module.db() as conn:
+                count = conn.execute("SELECT COUNT(*) FROM jobs").fetchone()[0]
+            self.assertEqual(count, 1)
+
+    def test_translation_request_only_creates_jobs_for_uncovered_articles(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            repo = root / "repo"
+            api_dir = root / "api"
+            day = repo / "data" / "2026-07-28"
+            day.mkdir(parents=True)
+            api_dir.mkdir()
+            (day / "index.json").write_text(json.dumps({
+                "articles": [
+                    {"id": 37, "url": "https://example.com/37", "en_title": "37"},
+                    {"id": 38, "url": "https://example.com/38", "en_title": "38"},
+                ]
+            }), encoding="utf-8")
+            module = load_api(repo, api_dir, {"IGN_DAILY_STORAGE_MODE": "local"})
+            module.init_db()
+            module.request_translation(
+                types.SimpleNamespace(date="2026-07-28", ids=[38], trigger_workflow=False),
+                {"username": "tester"},
+            )
+
+            result = module.request_translation(
+                types.SimpleNamespace(date="2026-07-28", ids=[37, 38], trigger_workflow=False),
+                {"username": "tester"},
+            )
+
+            self.assertEqual(len(result["created_job_ids"]), 1)
+            self.assertEqual(len(result["reused_job_ids"]), 1)
+            with module.db() as conn:
+                rows = conn.execute("SELECT ids_json FROM jobs ORDER BY created_at, id").fetchall()
+            self.assertEqual(sorted(json.loads(row["ids_json"]) for row in rows), [[37], [38]])
+
     def test_public_translation_status_distinguishes_missing_and_permissions(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
