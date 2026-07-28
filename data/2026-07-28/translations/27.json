@@ -23,12 +23,12 @@
     {
       "type": "text",
       "en": "If you’re buying ‘physical’ copies of GTA 6 in Japan, you’d better act fast and download that code lickety-split, else it might expire while you’re not looking.",
-      "cn": "若你在日本购买《GTA6》的“实体版”，最好尽快兑换下载码，否则它可能在你没留意时过期。"
+      "cn": "若你在日本购买《GTA6》的「实体版」，最好尽快兑换下载码，否则它可能在你没留意时过期。"
     },
     {
       "type": "text",
       "en": "Rockstar already ruffled some feathers after revealing that ‘physical’ copies of Grand Theft Auto 6 would be that in name only. You get a cool box, but a disc won’t be inside it; instead, you’ll get a digital download code, which, in some regions, will expire after a certain period of time has passed.",
-      "cn": "Rockstar此前透露，《GTA6》的“实体版”只是名义上的实体版，引发不满。盒子很酷，但里面没有光盘，只有数字下载码；在部分地区，该码会在一段时间后失效。"
+      "cn": "Rockstar此前透露，《GTA6》的「实体版」只是名义上的实体版，引发不满。盒子很酷，但里面没有光盘，只有数字下载码；在部分地区，该码会在一段时间后失效。"
     },
     {
       "type": "text",
@@ -109,6 +109,8 @@
   "quality_gate_version": 1,
   "quality_review": {
     "status": "passed",
+    "reviewer_model": "gpt-5.6",
+    "reviewed_at": "2026-07-28T03:40:00Z",
     "checks": {
       "source_coverage": true,
       "quote_attribution": true,
