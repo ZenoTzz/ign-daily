@@ -61,13 +61,13 @@
       "category": "影视资讯",
       "emoji": "🕷️",
       "en_title": "Tom Holland Reveals How He Brought Finishing Moves From Sony's Spider-Man Games to Brand New Day",
-      "cn_title": "汤姆·霍兰德自曝将游戏终结技搬进《蜘蛛侠：品牌新日》",
-      "summary": "汤姆·霍兰德透露，他在《蜘蛛侠：品牌新日》中融入了Insomniac《蜘蛛侠》游戏的终结技。导演Destin Daniel Cretton表示，特技团队也从游戏中截图参考动作。该片7月31日上映，预计北美首周末票房1.8亿至2.5亿美元(约合人民币17亿元)，IGN评分7/10。",
+      "cn_title": "霍兰德将索尼《蜘蛛侠》终结技搬进《蜘蛛侠：崭新之日》",
+      "summary": "汤姆·霍兰德与导演Destin Daniel Cretton透露，《蜘蛛侠：崭新之日》的动作借鉴索尼游戏，并把终结技和Peter Parker的招式带上银幕。影片7月31日上映。",
       "url": "https://www.ign.com/articles/tom-holland-reveals-how-he-brought-finishing-moves-from-sonys-spider-man-games-to-brand-new-day",
       "publish_time_cn": "2026-07-29 06:30",
       "pub_date": "2026-07-29 06:30",
-      "cover_image": "https://assets-prd.ignimgs.com/2025/08/02/spidermanthumb-1754148182830.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2025/08/02/spidermanthumb-1754148182830.png",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2025/08/02/spidermanthumb-1754148182830.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2025/08/02/spidermanthumb-1754148182830.png?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -86,7 +86,16 @@
           "source": "ai_guess",
           "reason": "电影官方中文译名待确认"
         }
-      ]
+      ],
+      "translation_path": "translations/26.json",
+      "translator": "codex",
+      "translator_provider": "openai",
+      "translator_model": "gpt-5.6-terra",
+      "reasoning_effort": "high",
+      "reviewer_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-29T08:55:45+08:00",
+      "prompt_version": "codex-fulltext-2026-07-29-v1",
+      "quality_gate_version": 1
     },
     {
       "id": 27,
