@@ -215,8 +215,8 @@
       "url": "https://www.ign.com/articles/xbox-speaks-out-after-double-fine-lays-off-25-percent-of-staff-in-transition-to-independent-status",
       "publish_time_cn": "2026-07-29 03:53",
       "pub_date": "2026-07-29 03:53",
-      "cover_image": "https://assets-prd.ignimgs.com/2023/05/03/xbox-showcase-1683121552988.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2023/05/03/xbox-showcase-1683121552988.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2023/05/03/xbox-showcase-1683121552988.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2023/05/03/xbox-showcase-1683121552988.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -226,7 +226,16 @@
         "https://assets-prd.ignimgs.com/2020/07/23/psychonauts-2-button-2020-1595540304087.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-07-29T04:17:29+08:00"
+      "source_fetched_at": "2026-07-29T04:17:29+08:00",
+      "translation_path": "translations/22.json",
+      "translator": "codex",
+      "translator_provider": "openai",
+      "translator_model": "gpt-5.6-terra",
+      "reasoning_effort": "high",
+      "reviewer_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-29T08:48:21+08:00",
+      "prompt_version": "codex-fulltext-v2",
+      "quality_gate_version": 1
     },
     {
       "id": 20,
@@ -335,13 +344,24 @@
       "category": "游戏新闻",
       "emoji": "🎮",
       "en_title": "Call of Duty: Black Ops Fans Can't Agree on Which Map to Play",
-      "cn_title": "《使命召唤：黑色行动》玩家因地图投票起分歧",
-      "summary": "《使命召唤：黑色行动》玩家因地图投票机制产生分歧。尽管游戏拥有数十张地图，但多数玩家只愿投票选择Nuketown、Hijacked等少数经典地图，甚至因不满结果而退出对局。部分玩家呼吁移除Nuketown等图的标准轮换，但也有人理解忙碌玩家只想快速体验热门地图的需求。这一现象反映出《使命召唤》社区对旧图的偏爱已成习惯，导致游戏循环愈发重复。",
+      "cn_title": "《使命召唤：黑色行动》玩家为地图投票争执不休",
+      "summary": "《使命召唤：黑色行动》玩家不满地图投票令Nuketown等经典图反复胜出，冷门地图无人问津，甚至有人因结果不满而退出对局。也有玩家认为，下班后时间有限，集中玩节奏更快的热门地图很有吸引力；争论显示社区对旧图的偏好正在固化。",
       "url": "https://www.ign.com/articles/call-of-duty-black-ops-fans-cant-agree-on-which-map-to-play",
       "publish_time_cn": "2026-07-29 00:32",
       "pub_date": "2026-07-29 00:32",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/07/10/ss-e3ad24dd02143ffbbbf17467fde104b462c9120e-1920x1080-1783688439479.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/07/10/ss-e3ad24dd02143ffbbbf17467fde104b462c9120e-1920x1080-1783688439479.jpg",
+      "translation_status": "done",
+      "translation_path": "translations/17.json",
+      "translator": "codex",
+      "translator_provider": "openai",
+      "translator_model": "gpt-5.6-terra",
+      "reasoning_effort": "high",
+      "prompt_version": "codex-fulltext-v2",
+      "quality_gate_version": 1,
+      "quality_review": {
+        "status": "pending",
+        "reviewer_model": "gpt-5.6-sol"
+      },
       "images": [
         "https://assets-prd.ignimgs.com/2026/07/10/ss-e3ad24dd02143ffbbbf17467fde104b462c9120e-1920x1080-1783688439479.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/07/10/ss-e3ad24dd02143ffbbbf17467fde104b462c9120e-1920x1080-1783688439479.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -351,7 +371,9 @@
         "https://assets-prd.ignimgs.com/2021/12/30/call-of-duty-black-ops-1-button-1640898530662.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-07-29T00:48:01+08:00"
+      "source_fetched_at": "2026-07-29T00:48:01+08:00",
+      "reviewer_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-29T08:48:21+08:00"
     },
     {
       "id": 18,
