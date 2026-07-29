@@ -455,13 +455,13 @@
       "category": "游戏新闻",
       "emoji": "🎮",
       "en_title": "Sony Confirms PlayStation Plus Monthly Games for August 2026, Headlined by Dying Light 2: Stay Human",
-      "cn_title": "索尼公布8月PS+会免游戏：《消逝的光芒2》领衔",
-      "summary": "索尼公布8月PS+会免游戏阵容，8月4日至31日可领取。领衔作品为《消逝的光芒2：重装上阵版》（PS4/PS5，IGN 7/10），此外还有合作冒险游戏《Big Walk》（来自《鹅作剧》开发商）和心理生存恐怖游戏《Signalis》。漫威格斗粉丝还可于8月6日起领取包含角色头像和姿势的PS+礼包。",
+      "cn_title": "索尼公布8月PlayStation Plus会免：《消逝的光芒2》领衔",
+      "summary": "索尼公布8月PS+会免阵容：8月4日至31日可领取《消逝的光芒2：重装上阵版》、合作冒险游戏《Big Walk》及《Signalis》。另有《Marvel Tōkon》头像与姿势礼包，8月6日起向订阅者开放一年。",
       "url": "https://www.ign.com/articles/sony-confirms-playstation-plus-monthly-games-for-august-2026-headlined-by-dying-light-2-stay-human",
       "publish_time_cn": "2026-07-28 23:51",
       "pub_date": "2026-07-28 23:51",
-      "cover_image": "https://assets-prd.ignimgs.com/2023/10/11/pspremiumthumb-1697040053191.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2023/10/11/pspremiumthumb-1697040053191.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2023/10/11/pspremiumthumb-1697040053191.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2023/10/11/pspremiumthumb-1697040053191.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -471,7 +471,16 @@
         "https://assets-prd.ignimgs.com/2025/03/17/dying2-1742247865824.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-07-29T00:18:38+08:00"
+      "source_fetched_at": "2026-07-29T00:18:38+08:00",
+      "translation_path": "translations/15.json",
+      "translator": "codex",
+      "translator_provider": "openai",
+      "translator_model": "gpt-5.6-terra",
+      "reasoning_effort": "high",
+      "reviewer_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-29T08:32:52+08:00",
+      "prompt_version": "codex-fulltext-2026-07-29-v1",
+      "quality_gate_version": 1
     },
     {
       "id": 13,
@@ -502,13 +511,13 @@
       "category": "游戏新闻",
       "emoji": "🎮",
       "en_title": "Cyberpunk: Edgerunners 2.5 Brawler Reportedly in Development From CD Projekt and Shantae Studio WayForward",
-      "cn_title": "据传《赛博朋克：边缘行者2》2.5D格斗游戏由CD Projekt与WayForward开发",
-      "summary": "据MP1st报道，CD Projekt与《桑塔》开发商WayForward正联合开发一款代号「Gemini」的《赛博朋克：边缘行者》2.5D格斗游戏，风格类似WayForward的《热血少女》系列。项目目前处于研究与设计阶段，是否仍在推进尚不确定。此外，《边缘行者》第二季将于今年秋季在Netflix上线。",
+      "cn_title": "传《赛博朋克：边缘行者》2.5D游戏开发中",
+      "summary": "据MP1st报道，WayForward自2025年起开发代号「Gemini」的《赛博朋克：边缘行者》2.5D清版动作游戏，项目仍处研究设计阶段，是否延续尚不明朗。第二季计划今秋在Netflix首播。",
       "url": "https://www.ign.com/articles/cyberpunk-edgerunners-25-brawler-reportedly-in-development-from-cd-projekt-and-shantae-studio-wayforward",
       "publish_time_cn": "2026-07-28 22:18",
       "pub_date": "2026-07-28 22:18",
-      "cover_image": "https://assets-prd.ignimgs.com/2022/06/07/untitled-1-1654597014758.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2022/06/07/untitled-1-1654597014758.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2022/06/07/untitled-1-1654597014758.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2022/06/07/untitled-1-1654597014758.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -518,7 +527,16 @@
         "https://assets-prd.ignimgs.com/2020/06/25/cyberpunk-edgerunners-button-002-1593104186760.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-07-28T22:48:09+08:00"
+      "source_fetched_at": "2026-07-28T22:48:09+08:00",
+      "translation_path": "translations/12.json",
+      "translator": "codex",
+      "translator_provider": "openai",
+      "translator_model": "gpt-5.6-terra",
+      "reasoning_effort": "high",
+      "reviewer_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-29T08:32:52+08:00",
+      "prompt_version": "codex-fulltext-2026-07-29-v1",
+      "quality_gate_version": 1
     },
     {
       "id": 11,

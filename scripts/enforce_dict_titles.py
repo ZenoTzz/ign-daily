@@ -50,7 +50,11 @@ def en_pattern(term):
     if not pieces:
         return re.compile(r'a^')
     flexible = r'[\s:：\-]+'.join(pieces)
-    return re.compile(rf'(?<![A-Za-z0-9]){flexible}(?![A-Za-z0-9])', re.I)
+    numeric_suffix = r'(?!\.\d)' if term[-1:].isdigit() else ''
+    return re.compile(
+        rf'(?<![A-Za-z0-9]){flexible}(?![A-Za-z0-9]){numeric_suffix}',
+        re.I,
+    )
 
 def enforce(index_path, dict_terms):
     with open(index_path, 'r', encoding='utf-8') as f:

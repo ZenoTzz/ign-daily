@@ -57,7 +57,25 @@ def en_pattern(term: str) -> re.Pattern[str]:
     if not pieces:
         return re.compile(r"a^")
     flexible = r"[\s:：\\-]+".join(pieces)
-    return re.compile(rf"(?<![A-Za-z0-9]){flexible}(?![A-Za-z0-9])", re.I)
+    numeric_suffix = r"(?!\.\d)" if term[-1:].isdigit() else ""
+    return re.compile(
+        rf"(?<![A-Za-z0-9]){flexible}(?![A-Za-z0-9]){numeric_suffix}",
+        re.I,
+    )
+
+
+def is_lowercase_common_noun_match(
+    category: str,
+    en_term: str,
+    match: re.Match[str],
+) -> bool:
+    """Reject lowercase prose that only case-insensitively resembles a name."""
+    return (
+        category in ("games", "movies_tv", "companies")
+        and " " not in en_term
+        and not en_term.islower()
+        and match.group(0).islower()
+    )
 
 
 def cn_variants(cn_term: str) -> list[str]:
@@ -134,12 +152,7 @@ def find_misses(date: str) -> list[dict[str, str]]:
                 for longer in matched_terms
             ):
                 continue
-            if (
-                category in ("games", "movies_tv")
-                and " " not in en_term
-                and not en_term.islower()
-                and match.group(0).islower()
-            ):
+            if is_lowercase_common_noun_match(category, en_term, match):
                 continue
             if any(variant in translated_text for variant in cn_variants(cn_term)):
                 continue
