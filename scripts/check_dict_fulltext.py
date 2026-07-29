@@ -78,6 +78,37 @@ def is_lowercase_common_noun_match(
     )
 
 
+def is_known_homonym_context(
+    category: str,
+    en_term: str,
+    source_text: str,
+    match: re.Match[str],
+) -> bool:
+    """Reject narrowly proven non-title uses of ambiguous game names."""
+    if category != "games":
+        return False
+
+    if en_term == "Doom":
+        # Once the article introduces Doctor Doom, later bare "Doom" mentions
+        # are normal character coreference, not the id Software game.
+        return bool(re.search(r"\b(?:Dr\.?|Doctor)\s+Doom\b", source_text, re.I))
+
+    if en_term == "Blur":
+        # Blur is also the animation studio credited on Amazon productions.
+        context_start = max(0, match.start() - 40)
+        context_end = min(len(source_text), match.end() + 60)
+        context = source_text[context_start:context_end]
+        return bool(
+            re.search(
+                r"(?:\bstudio\s+Blur\b|\bBlur\b.{0,40}\banimat(?:e|es|ed|ing|ion)\b)",
+                context,
+                re.I,
+            )
+        )
+
+    return False
+
+
 def cn_variants(cn_term: str) -> list[str]:
     variants = [cn_term]
     if "/" in cn_term:
@@ -153,6 +184,8 @@ def find_misses(date: str) -> list[dict[str, str]]:
             ):
                 continue
             if is_lowercase_common_noun_match(category, en_term, match):
+                continue
+            if is_known_homonym_context(category, en_term, source_text, match):
                 continue
             if any(variant in translated_text for variant in cn_variants(cn_term)):
                 continue

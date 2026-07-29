@@ -21,6 +21,37 @@ class EnglishTermBoundaryTests(unittest.TestCase):
             checker.is_lowercase_common_noun_match("companies", "Rockstar", match)
         )
 
+    def test_doctor_doom_context_does_not_trigger_game_title(self) -> None:
+        source = "Dr Doom became the MCU villain. Later, Doom raised an army."
+        for match in re.finditer(r"\bDoom\b", source):
+            self.assertTrue(
+                checker.is_known_homonym_context("games", "Doom", source, match)
+            )
+
+    def test_doom_game_context_still_triggers_game_title(self) -> None:
+        source = "Doom is a landmark first-person shooter."
+        match = re.search(r"\bDoom\b", source)
+        assert match is not None
+        self.assertFalse(
+            checker.is_known_homonym_context("games", "Doom", source, match)
+        )
+
+    def test_blur_animation_studio_context_does_not_trigger_game_title(self) -> None:
+        source = "The series will be written by John Orloff, with Blur again animating."
+        match = re.search(r"\bBlur\b", source)
+        assert match is not None
+        self.assertTrue(
+            checker.is_known_homonym_context("games", "Blur", source, match)
+        )
+
+    def test_blur_game_context_still_triggers_game_title(self) -> None:
+        source = "Blur was released for consoles in 2010."
+        match = re.search(r"\bBlur\b", source)
+        assert match is not None
+        self.assertFalse(
+            checker.is_known_homonym_context("games", "Blur", source, match)
+        )
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -34,8 +34,8 @@
       "url": "https://www.ign.com/articles/sony-battling-spider-man-brand-new-day-post-credit-scene-leaks-scrubbing-social-media-via-copyright-claims",
       "publish_time_cn": "2026-07-29 06:45",
       "pub_date": "2026-07-29 06:45",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/06/17/spiderthumb-1781723266727.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/17/spiderthumb-1781723266727.png",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/17/spiderthumb-1781723266727.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/17/spiderthumb-1781723266727.png?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -54,7 +54,16 @@
           "source": "ai_guess",
           "reason": "电影副标题，无官方中文译名，保留英文"
         }
-      ]
+      ],
+      "translation_path": "translations/25.json",
+      "translator": "codex",
+      "translator_provider": "openai",
+      "translator_model": "gpt-5.6-sol",
+      "reasoning_effort": "medium",
+      "reviewer_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-29T10:08:58+08:00",
+      "prompt_version": "job_b173cc415550_manual_v1",
+      "quality_gate_version": 1
     },
     {
       "id": 26,
@@ -66,7 +75,7 @@
       "url": "https://www.ign.com/articles/tom-holland-reveals-how-he-brought-finishing-moves-from-sonys-spider-man-games-to-brand-new-day",
       "publish_time_cn": "2026-07-29 06:30",
       "pub_date": "2026-07-29 06:30",
-      "cover_image": "https://assets-prd.ignimgs.com/2025/08/02/spidermanthumb-1754148182830.png",
+      "cover_image": "https://assets-prd.ignimgs.com/2025/08/02/spidermanthumb-1754148182830.png?width=1280&format=jpg&auto=webp&quality=80",
       "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2025/08/02/spidermanthumb-1754148182830.png?width=1280&format=jpg&auto=webp&quality=80",
@@ -219,12 +228,12 @@
       "category": "行业动态",
       "emoji": "📉",
       "en_title": "Xbox Speaks Out After Double Fine Lays Off 25 Percent of Staff in Transition to Independent Status",
-      "cn_title": "XBOX回应Double Fine裁员25%，工作室转型独立状态",
-      "summary": "《意航员》开发商Double Fine在XBOX重组后裁员约25.6%，工作室已正式成为独立公司，保留旗下IP和项目。XBOX发言人确认此事，并表示这是7月初XBOX史上最大规模重组的一部分，共裁员3200人。",
+      "cn_title": "Double Fine独立后裁员25.6%，XBOX回应",
+      "summary": "《意航员》开发商Double Fine重归独立后裁员约25.6%。XBOX称工作室保留IP、作品目录及后续游戏资源；约90人的团队正缩减至独立运营能承受的规模。",
       "url": "https://www.ign.com/articles/xbox-speaks-out-after-double-fine-lays-off-25-percent-of-staff-in-transition-to-independent-status",
       "publish_time_cn": "2026-07-29 03:53",
       "pub_date": "2026-07-29 03:53",
-      "cover_image": "https://assets-prd.ignimgs.com/2023/05/03/xbox-showcase-1683121552988.jpg",
+      "cover_image": "https://assets-prd.ignimgs.com/2023/05/03/xbox-showcase-1683121552988.jpg?width=1280&format=jpg&auto=webp&quality=80",
       "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2023/05/03/xbox-showcase-1683121552988.jpg?width=1280&format=jpg&auto=webp&quality=80",
@@ -354,23 +363,12 @@
       "emoji": "🎮",
       "en_title": "Call of Duty: Black Ops Fans Can't Agree on Which Map to Play",
       "cn_title": "《使命召唤：黑色行动》玩家为地图投票争执不休",
-      "summary": "《使命召唤：黑色行动》玩家不满地图投票令Nuketown等经典图反复胜出，冷门地图无人问津，甚至有人因结果不满而退出对局。也有玩家认为，下班后时间有限，集中玩节奏更快的热门地图很有吸引力；争论显示社区对旧图的偏好正在固化。",
+      "summary": "《使命召唤：黑色行动》地图投票让Nuketown、Hijacked和Raid等经典地图频繁胜出，冷门图常被跳过，部分玩家甚至因结果不满而退出。有人呼吁调整标准轮换，也有人认为忙碌玩家更愿在有限时间里玩节奏紧凑的热门地图。",
       "url": "https://www.ign.com/articles/call-of-duty-black-ops-fans-cant-agree-on-which-map-to-play",
       "publish_time_cn": "2026-07-29 00:32",
       "pub_date": "2026-07-29 00:32",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/07/10/ss-e3ad24dd02143ffbbbf17467fde104b462c9120e-1920x1080-1783688439479.jpg",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/07/10/ss-e3ad24dd02143ffbbbf17467fde104b462c9120e-1920x1080-1783688439479.jpg?width=1280&format=jpg&auto=webp&quality=80",
       "translation_status": "done",
-      "translation_path": "translations/17.json",
-      "translator": "codex",
-      "translator_provider": "openai",
-      "translator_model": "gpt-5.6-terra",
-      "reasoning_effort": "high",
-      "prompt_version": "codex-fulltext-v2",
-      "quality_gate_version": 1,
-      "quality_review": {
-        "status": "pending",
-        "reviewer_model": "gpt-5.6-sol"
-      },
       "images": [
         "https://assets-prd.ignimgs.com/2026/07/10/ss-e3ad24dd02143ffbbbf17467fde104b462c9120e-1920x1080-1783688439479.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/07/10/ss-e3ad24dd02143ffbbbf17467fde104b462c9120e-1920x1080-1783688439479.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -381,8 +379,15 @@
       ],
       "source_status": "cached",
       "source_fetched_at": "2026-07-29T00:48:01+08:00",
+      "translation_path": "translations/17.json",
+      "translator": "codex",
+      "translator_provider": "openai",
+      "translator_model": "gpt-5.6-terra",
+      "reasoning_effort": "high",
       "reviewer_model": "gpt-5.6-sol",
-      "reviewed_at": "2026-07-29T08:48:21+08:00"
+      "reviewed_at": "2026-07-29T08:48:21+08:00",
+      "prompt_version": "codex-fulltext-v2",
+      "quality_gate_version": 1
     },
     {
       "id": 18,
@@ -491,7 +496,7 @@
       "url": "https://www.ign.com/articles/sony-confirms-playstation-plus-monthly-games-for-august-2026-headlined-by-dying-light-2-stay-human",
       "publish_time_cn": "2026-07-28 23:51",
       "pub_date": "2026-07-28 23:51",
-      "cover_image": "https://assets-prd.ignimgs.com/2023/10/11/pspremiumthumb-1697040053191.jpg",
+      "cover_image": "https://assets-prd.ignimgs.com/2023/10/11/pspremiumthumb-1697040053191.jpg?width=1280&format=jpg&auto=webp&quality=80",
       "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2023/10/11/pspremiumthumb-1697040053191.jpg?width=1280&format=jpg&auto=webp&quality=80",
@@ -547,7 +552,7 @@
       "url": "https://www.ign.com/articles/cyberpunk-edgerunners-25-brawler-reportedly-in-development-from-cd-projekt-and-shantae-studio-wayforward",
       "publish_time_cn": "2026-07-28 22:18",
       "pub_date": "2026-07-28 22:18",
-      "cover_image": "https://assets-prd.ignimgs.com/2022/06/07/untitled-1-1654597014758.jpg",
+      "cover_image": "https://assets-prd.ignimgs.com/2022/06/07/untitled-1-1654597014758.jpg?width=1280&format=jpg&auto=webp&quality=80",
       "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2022/06/07/untitled-1-1654597014758.jpg?width=1280&format=jpg&auto=webp&quality=80",
@@ -686,12 +691,12 @@
       "category": "游戏新闻",
       "emoji": "📊",
       "en_title": "After 15 Years, Resident Evil 5 Has Finally Been Dethroned as The Series' Best-Selling Game",
-      "cn_title": "15年后，《生化危机5》最畅销宝座终被《生化危机2 重制版》超越",
-      "summary": "卡普空公布的最新销售数据显示，《生化危机》系列最畅销游戏易主。《生化危机2 重制版》以1975万份销量超越《生化危机5》的1901万份，终结后者长达15年的统治。系列总销量已达2.13亿，超越史克威尔艾尼克斯的《最终幻想》系列。此外，《生化危机4 重制版》销量达1600万份，《生化危机：安魂曲》达800万份。",
+      "cn_title": "15年后《生化危机2重制版》登顶",
+      "summary": "卡普空称，《生化危机2重制版》以1,975万份销量超越《生化危机5》的1,901万份，成为系列最畅销作品。系列累计销量达2.13亿份，略高于《最终幻想》的2.12亿份；《生化危机：安魂曲》已售800万份。",
       "url": "https://www.ign.com/articles/after-15-years-resident-evil-5-has-finally-been-dethroned-as-the-series-best-selling-game",
       "publish_time_cn": "2026-07-28 19:22",
       "pub_date": "2026-07-28 19:22",
-      "cover_image": "https://assets-prd.ignimgs.com/2024/03/14/re5-blog-1710427916498.jpg",
+      "cover_image": "https://assets-prd.ignimgs.com/2024/03/14/re5-blog-1710427916498.jpg?width=1280&format=jpg&auto=webp&quality=80",
       "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2024/03/14/re5-blog-1710427916498.jpg?width=1280&format=jpg&auto=webp&quality=80",
@@ -708,10 +713,10 @@
       "translator_provider": "openai",
       "translator_model": "gpt-5.6-terra",
       "reasoning_effort": "high",
-      "prompt_version": "codex-fulltext-v2",
-      "quality_gate_version": 1,
       "reviewer_model": "gpt-5.6-sol",
-      "reviewed_at": "2026-07-29T08:21:34+08:00"
+      "reviewed_at": "2026-07-29T08:21:34+08:00",
+      "prompt_version": "codex-fulltext-v2",
+      "quality_gate_version": 1
     },
     {
       "id": 6,
@@ -742,21 +747,12 @@
       "emoji": "🎬",
       "en_title": "Live-Action Link Actor Discusses The Legend of Zelda Movie, Says He Was Too Young to Play Breath of the Wild When It Launched",
       "cn_title": "林克演员太小没玩《塞尔达传说：旷野之息》",
-      "summary": "17岁的Benjamin Evan Ainsworth为真人《塞尔达传说》电影饰演林克，正补完角色与系列历史。他称《旷野之息》2017年推出时自己只有8岁，只能看别人游玩。影片已在新西兰杀青，定档2027年4月30日。",
+      "summary": "真人《塞尔达传说》电影林克演员称，《旷野之息》2017年发售时自己仅8岁，只能看别人游玩。影片已在新西兰正式杀青，2027年4月30日上映。",
       "url": "https://www.ign.com/articles/live-action-link-actor-discusses-the-legend-of-zelda-movie-says-he-was-too-young-to-play-breath-of-the-wild-when-it-launched",
       "publish_time_cn": "2026-07-28 17:41",
       "pub_date": "2026-07-28 17:41",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/07/28/screenshot-2026-07-28-103056-1785231070707.png",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/07/28/screenshot-2026-07-28-103056-1785231070707.png?width=1280&format=jpg&auto=webp&quality=80",
       "translation_status": "done",
-      "translation_path": "translations/04.json",
-      "translator": "codex",
-      "translator_provider": "openai",
-      "translator_model": "gpt-5.6-terra",
-      "reasoning_effort": "high",
-      "reviewer_model": "gpt-5.6-sol",
-      "reviewed_at": "2026-07-29T08:18:00+08:00",
-      "prompt_version": "codex-fulltext-v2",
-      "quality_gate_version": 1,
       "images": [
         "https://assets-prd.ignimgs.com/2026/07/28/screenshot-2026-07-28-103056-1785231070707.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/07/28/screenshot-2026-07-28-103056-1785231070707.png?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -767,7 +763,16 @@
         "https://assets-prd.ignimgs.com/2023/11/07/zelda-1699396593899.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-07-28T17:47:33+08:00"
+      "source_fetched_at": "2026-07-28T17:47:33+08:00",
+      "translation_path": "translations/04.json",
+      "translator": "codex",
+      "translator_provider": "openai",
+      "translator_model": "gpt-5.6-terra",
+      "reasoning_effort": "high",
+      "reviewer_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-29T08:18:00+08:00",
+      "prompt_version": "codex-fulltext-v2",
+      "quality_gate_version": 1
     },
     {
       "id": 5,
@@ -775,11 +780,11 @@
       "emoji": "🎮",
       "en_title": "Square Enix Dev Yoshi-P Says Final Fantasy 6, 8, and 9 Remakes Would Probably Have to Be Released in Four or Even Five Installments",
       "cn_title": "吉田直树：史克威尔艾尼克斯称《最终幻想7 重制版》式重制FF6等或分5部",
-      "summary": "在《最终幻想14》粉丝节上，制作人吉田直树与《最终幻想7 重制版》系列总监滨口直树对谈。吉田表示，若以《最终幻想7 重制版》的规模重制《最终幻想6》《最终幻想8》《最终幻想9》，可能需要分成4至5部才能完成。滨口也坦言无法轻易承诺重制FF6。",
+      "summary": "吉田直树称，若以《最终幻想7重制版》的规模重制《最终幻想6》《最终幻想8》或《最终幻想9》，可能需分4至5部推出。滨口直树表示，三部曲团队连续十余年投入开发近乎奇迹，不能轻易承诺重制FF6。",
       "url": "https://www.ign.com/articles/square-enix-dev-yoshi-p-says-final-fantasy-6-8-and-9-remakes-would-probably-have-to-be-released-in-four-or-even-five-installments",
       "publish_time_cn": "2026-07-28 17:31",
       "pub_date": "2026-07-28 17:31",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/07/28/ff6-1785230791477.jpg",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/07/28/ff6-1785230791477.jpg?width=1280&format=jpg&auto=webp&quality=80",
       "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/07/28/ff6-1785230791477.jpg?width=1280&format=jpg&auto=webp&quality=80",
@@ -796,10 +801,10 @@
       "translator_provider": "openai",
       "translator_model": "gpt-5.6-terra",
       "reasoning_effort": "high",
-      "prompt_version": "codex-fulltext-v2",
-      "quality_gate_version": 1,
       "reviewer_model": "gpt-5.6-sol",
-      "reviewed_at": "2026-07-29T08:21:34+08:00"
+      "reviewed_at": "2026-07-29T08:21:34+08:00",
+      "prompt_version": "codex-fulltext-v2",
+      "quality_gate_version": 1
     },
     {
       "id": 2,
@@ -811,8 +816,8 @@
       "url": "https://www.ign.com/articles/henry-cavills-warhammer-40000-cinematic-universe-finally-gets-a-meaningful-update-as-games-workshop-makes-significant-amazon-announcements",
       "publish_time_cn": "2026-07-28 16:55",
       "pub_date": "2026-07-28 16:55",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/07/28/henrycavillwarhammershowblogroll-1639133656381-1749468238633-1785228334218.jpeg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/07/28/henrycavillwarhammershowblogroll-1639133656381-1749468238633-1785228334218.jpeg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/07/28/henrycavillwarhammershowblogroll-1639133656381-1749468238633-1785228334218.jpeg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/07/28/henrycavillwarhammershowblogroll-1639133656381-1749468238633-1785228334218.jpeg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -839,7 +844,16 @@
           "source": "ai_guess",
           "reason": "战锤40K中的组织，社区常用译名，但无官方确认"
         }
-      ]
+      ],
+      "translation_path": "translations/02.json",
+      "translator": "codex",
+      "translator_provider": "openai",
+      "translator_model": "gpt-5.6-sol",
+      "reasoning_effort": "medium",
+      "reviewer_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-29T10:08:58+08:00",
+      "prompt_version": "job_b173cc415550_manual_v1",
+      "quality_gate_version": 1
     },
     {
       "id": 3,
@@ -862,21 +876,12 @@
       "emoji": "⚠️",
       "en_title": "Xbox Executive Explains Outage, Vows to 'Do Better'",
       "cn_title": "XBOX技术主管解释宕机原因，承诺改进",
-      "summary": "XBOX首席技术官Scott Van Vliet称，影响游戏库、登录和游戏启动的服务中断源于微软内部一项共享许可服务故障。XBOX将全面复盘，降低单点故障风险，改善检测、控制与沟通。",
+      "summary": "XBOX服务中断影响玩家的游戏库、登录和启动游戏。Scott Van Vliet称故障源于微软内部共享许可服务，承诺全面复盘，降低单点故障风险，并改进检测、控制和沟通。",
       "url": "https://www.ign.com/articles/xbox-executive-explains-outage-vows-to-do-better",
       "publish_time_cn": "2026-07-28 09:05",
       "pub_date": "2026-07-28 09:05",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/07/28/800-450-1785200769751.jpg",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/07/28/800-450-1785200769751.jpg?width=1280&format=jpg&auto=webp&quality=80",
       "translation_status": "done",
-      "translation_path": "translations/01.json",
-      "translator": "codex",
-      "translator_provider": "openai",
-      "translator_model": "gpt-5.6-terra",
-      "reasoning_effort": "high",
-      "reviewer_model": "gpt-5.6-sol",
-      "reviewed_at": "2026-07-29T08:18:00+08:00",
-      "prompt_version": "codex-fulltext-v2",
-      "quality_gate_version": 1,
       "images": [
         "https://assets-prd.ignimgs.com/2026/07/28/800-450-1785200769751.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/07/28/800-450-1785200769751.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -886,8 +891,73 @@
         "https://assets-prd.ignimgs.com/2020/10/22/xbox-series-x-button-02-1603393193921.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-07-28T09:47:56+08:00"
+      "source_fetched_at": "2026-07-28T09:47:56+08:00",
+      "translation_path": "translations/01.json",
+      "translator": "codex",
+      "translator_provider": "openai",
+      "translator_model": "gpt-5.6-terra",
+      "reasoning_effort": "high",
+      "reviewer_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-29T08:18:00+08:00",
+      "prompt_version": "codex-fulltext-v2",
+      "quality_gate_version": 1
+    },
+    {
+      "id": 30,
+      "category": "评测评分",
+      "emoji": "🐉",
+      "en_title": "House of the Dragon Season 3, Episode 6 Recap and Review",
+      "cn_title": "《龙之家族》第三季第六集回顾与点评",
+      "summary": "《龙之家族》第三季第六集以血腥的「屠夫之球」战役开场，克里斯顿·科尔战死。雷妮拉与阿莉森的信任彻底破裂，雷妮拉要求阿莉森刺杀其子伊蒙德。多位龙骑士陷入困境：贝拉濒临崩溃、雷娜在谷地边缘、伊蒙德犹豫不决。奥蒙德·海塔尔在君临散播混乱，并设伏俘虏了科利斯·瓦列利安。本集剧情紧凑多线并进，展现了战争全面升级前的暗流涌动。",
+      "url": "https://www.ign.com/articles/house-of-the-dragon-season-3-episode-6-recap-and-review",
+      "publish_time_cn": "2026-07-28 08:17",
+      "pub_date": "2026-07-28 08:17",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/07/24/house-of-the-dragon-s3-ep6-thumb-1784929501805.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/07/24/house-of-the-dragon-s3-ep6-thumb-1784929501805.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/07/24/house-of-the-dragon-s3-ep6-thumb-1784929501805.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/07/24/house-of-the-dragon-s3-ep6-thumb-1784929501805.jpg?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/07/24/house-of-the-dragon-s3-ep6-thumb-1784929501805.jpg?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2022/02/18/house-of-the-dragon-button-02-1645217002655.jpg",
+        "https://assets-prd.ignimgs.com/2026/07/24/house-of-the-dragon-s3-ep6-thumb-1784929501805.jpg",
+        "https://assets-prd.ignimgs.com/2026/07/24/james-norton-1-1784929693596.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-07-29T08:17:50+08:00"
+    },
+    {
+      "id": 31,
+      "category": "评测评分",
+      "emoji": "💀",
+      "en_title": "Rick and Morty Season 9 Finale Review & Recap: \"Field of Dreams\"",
+      "cn_title": "《梦想大创造》《瑞克和莫蒂》第九季终局：渴望温暖却坠入深渊",
+      "summary": "剧评（含剧透）。第九季收官集《梦幻之地》中，Morty因渴望被爱而穿梭于多重宇宙的葬礼，Rick的遗产拍卖引发连锁反应，最终所有人都在自我毁灭中沉沦。本集延续高概念幽默与存在主义悲剧，是整季的又一高光。",
+      "url": "https://www.ign.com/articles/rick-and-morty-season-9-finale-review-recap-field-of-dreams",
+      "publish_time_cn": "2026-07-28 08:17",
+      "pub_date": "2026-07-28 08:17",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/07/24/rick-and-morty-s9-finale-blogroll-1784918153864.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/07/24/rick-and-morty-s9-finale-blogroll-1784918153864.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/07/24/rick-and-morty-s9-finale-blogroll-1784918153864.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/07/24/rick-and-morty-s9-finale-blogroll-1784918153864.jpg?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/07/24/rick-and-morty-s9-finale-blogroll-1784918153864.jpg?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2025/07/26/rick-and-morty-button-replacement-1753534728622.jpg",
+        "https://assets-prd.ignimgs.com/2026/07/24/rick-and-morty-s9-finale-blogroll-1784918153864.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-07-29T08:17:52+08:00",
+      "pending_dict": [
+        {
+          "en": "Field of Dreams",
+          "cn": "《梦幻之地》",
+          "cat": "movies_tv",
+          "source": "ai_guess",
+          "reason": "剧集标题，暂无正式中文译名，根据电影《梦幻之地》推测"
+        }
+      ]
     }
   ],
-  "total": 29
+  "total": 31
 }
