@@ -642,8 +642,8 @@
       "url": "https://www.ign.com/articles/after-15-years-resident-evil-5-has-finally-been-dethroned-as-the-series-best-selling-game",
       "publish_time_cn": "2026-07-28 19:22",
       "pub_date": "2026-07-28 19:22",
-      "cover_image": "https://assets-prd.ignimgs.com/2024/03/14/re5-blog-1710427916498.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2024/03/14/re5-blog-1710427916498.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2024/03/14/re5-blog-1710427916498.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2024/03/14/re5-blog-1710427916498.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -653,7 +653,16 @@
         "https://assets1.ignimgs.com/2018/11/30/resident-evil-2-remake---button-fin-1543614996402.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-07-28T19:48:00+08:00"
+      "source_fetched_at": "2026-07-28T19:48:00+08:00",
+      "translation_path": "translations/08.json",
+      "translator": "codex",
+      "translator_provider": "openai",
+      "translator_model": "gpt-5.6-terra",
+      "reasoning_effort": "high",
+      "prompt_version": "codex-fulltext-v2",
+      "quality_gate_version": 1,
+      "reviewer_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-29T08:21:34+08:00"
     },
     {
       "id": 6,
@@ -716,13 +725,13 @@
       "category": "游戏新闻",
       "emoji": "🎮",
       "en_title": "Square Enix Dev Yoshi-P Says Final Fantasy 6, 8, and 9 Remakes Would Probably Have to Be Released in Four or Even Five Installments",
-      "cn_title": "吉田直树称《最终幻想6》《最终幻想8》《最终幻想9》重制可能需要分4-5部",
+      "cn_title": "吉田直树：史克威尔艾尼克斯称《最终幻想7 重制版》式重制FF6等或分5部",
       "summary": "在《最终幻想14》粉丝节上，制作人吉田直树与《最终幻想7 重制版》系列总监滨口直树对谈。吉田表示，若以《最终幻想7 重制版》的规模重制《最终幻想6》《最终幻想8》《最终幻想9》，可能需要分成4至5部才能完成。滨口也坦言无法轻易承诺重制FF6。",
       "url": "https://www.ign.com/articles/square-enix-dev-yoshi-p-says-final-fantasy-6-8-and-9-remakes-would-probably-have-to-be-released-in-four-or-even-five-installments",
       "publish_time_cn": "2026-07-28 17:31",
       "pub_date": "2026-07-28 17:31",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/07/28/ff6-1785230791477.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/07/28/ff6-1785230791477.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/07/28/ff6-1785230791477.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/07/28/ff6-1785230791477.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -732,7 +741,16 @@
         "https://assets-prd.ignimgs.com/2021/12/20/ffix-art-1640032353038.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-07-28T17:47:38+08:00"
+      "source_fetched_at": "2026-07-28T17:47:38+08:00",
+      "translation_path": "translations/05.json",
+      "translator": "codex",
+      "translator_provider": "openai",
+      "translator_model": "gpt-5.6-terra",
+      "reasoning_effort": "high",
+      "prompt_version": "codex-fulltext-v2",
+      "quality_gate_version": 1,
+      "reviewer_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-29T08:21:34+08:00"
     },
     {
       "id": 2,
