@@ -1,0 +1,77 @@
+{
+  "id": 1,
+  "url": "https://www.ign.com/articles/xbox-executive-explains-outage-vows-to-do-better",
+  "cn_title": "XBOX技术主管解释宕机原因，承诺改进",
+  "summary": "XBOX首席技术官Scott Van Vliet称，影响游戏库、登录和游戏启动的服务中断源于微软内部一项共享许可服务故障。XBOX将全面复盘，降低单点故障风险，改善检测、控制与沟通。",
+  "subtitle": "别再一挂全挂",
+  "paragraphs": [
+    {
+      "en": "Xbox's Chief Technology Officer, Scott Van Vliet, has offered transparency and an explanation for the system and service outage that affected game libraries, sign-in, and game launching for many players from late Sunday night and well into Monday, vowing to \"do better.\"",
+      "cn": "XBOX首席技术官Scott Van Vliet就近日系统与服务中断作出说明。这次中断从周日深夜持续到周一很晚，影响了许多玩家的游戏库、登录与启动游戏；他承诺「会做得更好」。"
+    },
+    {
+      "en": "In a post on X , Van Vliet attributed the issue to a failure of \"a licensing service that sits outside of Xbox, but which Xbox depends upon.\" He did not name the service, but said it was \"an internal service at Microsoft that is shared across multiple products, not some random system.\" He continued: \"This caused some sign-in scenarios to fail, and it caused many scenarios that require an entitlement check to also fail, such as listing out your Full Library and launching games that you own,\" he continued. \"It also affected several of our publishing and store partners who depend on those same systems which is why some of you saw issues in specific games and not others.\" He called it \"an unacceptable situation\" and that Xbox \"must do better to support you.\"",
+      "cn": "Van Vliet在X发文称，问题源于「位于XBOX体系之外、但XBOX依赖的一项许可服务」故障。他没有点名该服务，但表示它是「微软内部供多款产品共用的服务，不是什么随便的系统」。他继续说明：「这导致部分登录场景失败，也让许多需要进行权益验证的场景无法使用，例如列出你的完整游戏库、启动你拥有的游戏。」他补充道：「它还影响了数家同样依赖这些系统的发行与商店合作伙伴，所以有些玩家只在特定游戏里遇到问题，其他游戏却没有。」他称这是「不可接受的情况」，并表示XBOX「必须做得更好，才能支持你们」。"
+    },
+    {
+      "en": "To address the problem, the Xbox CTO said, \"Our on-call teams caught the first signals overnight through automated monitoring and declared a major incident. Once we isolated the failing infrastructure, we shifted traffic onto the healthy parts of the system while the team continued to work towards a root cause. Service came back unevenly across regions which is why some of you recovered hours before others.\"",
+      "cn": "为解决问题，XBOX首席技术官表示：「我们的值班团队在夜间通过自动监控捕捉到最初信号，并宣布重大事故。一旦隔离出发生故障的基础设施，我们便将流量切换至系统健康部分，同时团队继续查找根本原因。各地区服务恢复并不均衡，因此有些人比其他人早数小时恢复。」"
+    },
+    {
+      "en": "Van Vliet said that for the company's next step, \"We're running a full post-incident review. I care less about the one-line root cause and more about the real questions: why a failure in one service was able to take down this much, why recovery took as long as it did, and what we change so a single point of failure can't ruin your night again. That means hardening the dependencies underneath sign in and game launch, improving how we detect and contain this class of failure, and being faster and clearer with you when something breaks.\"",
+      "cn": "Van Vliet说，公司的下一步是「进行全面的事故后审查。我不太在意一行字的根本原因，更关注真正的问题：为什么一项服务故障能让如此多功能瘫痪，为什么恢复花了这么久，以及我们要如何改变，才能让单点故障不再毁掉你的夜晚。这意味着要加固支撑登录和启动游戏的底层依赖项，改善我们检测和控制这类故障的方式，并在出现问题时更快、更清晰地与你们沟通。」"
+    },
+    {
+      "en": "He concluded by thanking Xbox gamers for their patience, and said, \"We'll do better.\"",
+      "cn": "最后，他感谢XBOX玩家的耐心，并表示：「我们会做得更好。」"
+    },
+    {
+      "en": "This incident follows PlayStation suffering its own prolonged system and service outage, while Xbox prepares for this week's wide launch of Halo: Campaign Evolved, the Unreal Engine 5-based remake and 25th anniversary celebration of the original Xbox's killer app. IGN gave Campaign Evolved a 7 out of 10 in our review .",
+      "cn": "此次事件之前，PlayStation也遭遇过自身长时间的系统与服务中断。与此同时，XBOX正准备在本周广泛推出《光环：战役进化》——这款基于Unreal Engine 5的重制版既重制了初代XBOX的招牌游戏，也庆祝其25周年。IGN评测给《光环：战役进化》打出7/10分。"
+    },
+    {
+      "en": "Ryan McCaffrey is IGN's executive editor of previews and host of both IGN's weekly Xbox show, Podcast Unlocked , as well as our semi-retired interview show, IGN Unfiltered . He's a North Jersey guy, so it's \"Taylor ham,\" not \"pork roll.\" Debate it with him on Twitter at @DMC_Ryan .",
+      "cn": "Ryan McCaffrey是IGN预览执行编辑，也是IGN每周XBOX节目《Podcast Unlocked》和半退休访谈节目《IGN Unfiltered》的主持人。他来自新泽西北部，所以他说的是「Taylor ham」，不是「pork roll」。你可以在X上通过@DMC_Ryan和他讨论这个问题。"
+    }
+  ],
+  "opus_summary": "XBOX服务中断影响玩家的游戏库、登录和启动游戏。Scott Van Vliet称故障源于微软内部共享许可服务，承诺全面复盘，降低单点故障风险，并改进检测、控制和沟通。",
+  "translated_terms": {
+    "Xbox": "XBOX",
+    "Microsoft": "微软",
+    "PlayStation": "PlayStation",
+    "Halo: Campaign Evolved": "《光环：战役进化》",
+    "Unreal Engine 5": "Unreal Engine 5",
+    "Scott Van Vliet": "Scott Van Vliet",
+    "X": "X"
+  },
+  "pending_dict": [],
+  "cover": "https://assets-prd.ignimgs.com/2026/07/28/800-450-1785200769751.jpg",
+  "images": [
+    {
+      "url": "https://assets-prd.ignimgs.com/2026/07/28/800-450-1785200769751.jpg",
+      "caption": ""
+    },
+    {
+      "url": "https://assets-prd.ignimgs.com/2020/10/22/xbox-series-x-button-02-1603393193921.jpg",
+      "caption": ""
+    }
+  ],
+  "translator": "codex",
+  "translator_provider": "openai",
+  "translator_model": "gpt-5.6-terra",
+  "reasoning_effort": "high",
+  "reviewer_model": "gpt-5.6-sol",
+  "reviewed_at": "2026-07-29T08:18:00+08:00",
+  "prompt_version": "codex-fulltext-v2",
+  "quality_gate_version": 1,
+  "quality_review": {
+    "status": "passed",
+    "reviewer_model": "gpt-5.6-sol",
+    "reviewed_at": "2026-07-29T08:18:00+08:00",
+    "checks": {
+      "source_coverage": true,
+      "quote_attribution": true,
+      "numeric_facts": true
+    }
+  }
+}
