@@ -1262,7 +1262,35 @@
       "reviewed_at": "2026-07-29T10:20:18+08:00",
       "prompt_version": "manual-codex-fulltext-2026-07",
       "quality_gate_version": 1
+    },
+    {
+      "id": 43,
+      "category": "游戏新闻",
+      "emoji": "🎮",
+      "en_title": "Pragmata 2 Likely After Sales Success, Publisher Capcom Says",
+      "cn_title": "卡普空称《识质存在》续作有望",
+      "summary": "卡普空称，《识质存在》在发售三个月内全球销量达251万份，续作推出的可能性很高。该公司财报超出预期，旗下《生化危机》与《怪物猎人》系列也持续带动业绩。",
+      "url": "https://www.ign.com/articles/pragmata-2-likely-after-sales-success-publisher-capcom-says",
+      "publish_time_cn": "2026-07-29 18:15",
+      "pub_date": "2026-07-29 18:15",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/05/07/ss-9699288b90d0aad320e998f107b59edd27e9ea61-1920x1080-1778147420246.jpg",
+      "translation_status": "done",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/05/07/ss-9699288b90d0aad320e998f107b59edd27e9ea61-1920x1080-1778147420246.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2025/12/12/pragmata-1765500443070.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-07-30T09:43:25+08:00",
+      "translation_path": "translations/43.json",
+      "translator": "codex",
+      "translator_provider": "openai",
+      "translator_model": "gpt-5.6-terra",
+      "reasoning_effort": "high",
+      "reviewer_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-30T10:09:34+08:00",
+      "prompt_version": "fulltext-manual-2026-07-30",
+      "quality_gate_version": 1
     }
   ],
-  "total": 42
+  "total": 43
 }
