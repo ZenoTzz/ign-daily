@@ -37,24 +37,35 @@
       "id": 40,
       "category": "游戏新闻",
       "emoji": "💰",
-      "en_title": "Battlefield 6's Record-Breaking Success Earns EA CEO $38 Million Payday, But Laid-Off Devs Aren't Around to Celebrate",
+      "en_title": "Battlefield 6's Successful Launch Nets EA CEO $38 Million Payday After Layoffs to Development Team",
       "cn_title": "《战地风云6》大获成功，EA CEO获3800万美元(约合人民币3亿元)奖金",
-      "summary": "EA CEO Andrew Wilson 2026财年总薪酬高达38649984美元(约合人民币3亿元)，较上年增加800万美元(约合人民币5416万元)，主要得益于《战地风云6》破纪录的成功。该作发售3天内销量超700万份，击败《使命召唤：黑色行动7》和NBA 2K26成为当季最畅销游戏。然而仅5个月前，EA裁掉了多个战地团队的部分员工，这些开发者无缘分享成功的果实。",
+      "summary": "EA CEO Andrew Wilson 2026财年总薪酬高达38649984美元(约合人民币3亿元)，较上年增加800万美元(约合人民币5424万元)，主要得益于《战地风云6》破纪录的成功。该作发售3天内销量超700万份，击败《使命召唤：黑色行动7》和NBA 2K26成为当季最畅销游戏。然而仅5个月前，EA裁掉了多个战地团队的部分员工，这些开发者无缘分享成功的果实。",
       "url": "https://www.ign.com/articles/battlefield-6s-record-breaking-success-earns-ea-ceo-38-million-payday-but-laid-off-devs-arent-around-to-celebrate",
       "publish_time_cn": "2026-07-30 06:44",
       "pub_date": "2026-07-30 06:44",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/07/29/ea-president-38-million-payday-battlefield-6-layoffs-1785364585828.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/07/29/ea-president-38-million-payday-battlefield-6-layoffs-1785364585828.jpg",
+      "translation_status": "done",
       "images": [
-        "https://assets-prd.ignimgs.com/2026/07/29/ea-president-38-million-payday-battlefield-6-layoffs-1785364585828.jpg?width=1280&format=jpg&auto=webp&quality=80",
-        "https://assets-prd.ignimgs.com/2026/07/29/ea-president-38-million-payday-battlefield-6-layoffs-1785364585828.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
-        "https://assets-prd.ignimgs.com/2026/07/29/ea-president-38-million-payday-battlefield-6-layoffs-1785364585828.jpg?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
-        "https://assets-prd.ignimgs.com/2026/07/29/ea-president-38-million-payday-battlefield-6-layoffs-1785364585828.jpg?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
-        "https://assets-prd.ignimgs.com/2026/07/29/ea-president-38-million-payday-battlefield-6-layoffs-1785364585828.jpg",
-        "https://assets-prd.ignimgs.com/2025/07/23/battlefield6-1753290173215.jpg"
+        {
+          "url": "https://assets-prd.ignimgs.com/2026/07/29/ea-president-38-million-payday-battlefield-6-layoffs-1785364585828.jpg?width=1280&format=jpg&auto=webp&quality=80",
+          "caption": ""
+        },
+        {
+          "url": "https://assets-prd.ignimgs.com/2025/07/23/battlefield6-1753290173215.jpg",
+          "caption": ""
+        }
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-07-30T07:17:40+08:00"
+      "source_fetched_at": "2026-07-30T07:17:40+08:00",
+      "translation_path": "translations/40.json",
+      "translator": "codex",
+      "translator_provider": "openai",
+      "translator_model": "gpt-5.6-terra",
+      "reasoning_effort": "high",
+      "reviewer_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-30T09:06:49+08:00",
+      "prompt_version": "api-fulltext-2026-07-v2",
+      "quality_gate_version": 1
     },
     {
       "id": 37,
