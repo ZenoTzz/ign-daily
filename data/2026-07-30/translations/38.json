@@ -1,0 +1,162 @@
+{
+  "id": 38,
+  "en_title": "'There's Things to Navigate' — Marvel Studios Boss Suggests Kingpin Appearing in a Spider-Man Movie Isn't as Complicated as Fans Think",
+  "cn_title": "漫威高层：金并进《蜘蛛侠》没想象中难",
+  "url": "https://www.ign.com/articles/marvel-studios-boss-suggests-kingpin-appearing-in-a-spider-man-movie-isnt-as-complicated-as-fans-think",
+  "translated_at": "2026-07-30T08:55:52+08:00",
+  "subtitle": "「还有事要协调」",
+  "opus_summary": "漫威影业负责人凯文·费奇称，金并加入《蜘蛛侠》电影虽有权利协调事项，却不像外界以为那般棘手。他表示曾讨论过金并与夜魔侠登场的可能；若故事需要，未来仍有机会促成。",
+  "translated_terms": {
+    "Spider-Man": "蜘蛛侠",
+    "Daredevil: Born Again": "夜魔侠：重生",
+    "Spider-Man: Brand New Day": "蜘蛛侠：崭新之日",
+    "Sony": "索尼",
+    "Marvel Studios": "漫威影业",
+    "Kevin Feige": "凯文·费奇",
+    "Kingpin": "金并",
+    "Disney": "迪士尼",
+    "Hulk": "绿巨人",
+    "Universal Pictures": "环球影业",
+    "Wilson Fisk": "威尔逊·菲斯克",
+    "X-Men": "X战警",
+    "Fantastic Four": "神奇四侠",
+    "MCU": "漫威电影宇宙",
+    "Vincent D'Onofrio": "Vincent D'Onofrio",
+    "Josh Horowitz": "Josh Horowitz"
+  },
+  "translator": "codex",
+  "translator_provider": "openai",
+  "translator_model": "gpt-5.6-terra",
+  "reasoning_effort": "high",
+  "reviewer_model": "gpt-5.6-sol",
+  "reviewed_at": "2026-07-30T00:55:52Z",
+  "prompt_version": "codex-production-fulltext-2026-07-30",
+  "quality_gate_version": 1,
+  "quality_review": {
+    "status": "passed",
+    "reviewer_model": "gpt-5.6-sol",
+    "reviewed_at": "2026-07-30T00:55:52Z",
+    "checks": {
+      "source_coverage": true,
+      "quote_attribution": true,
+      "numeric_facts": true
+    }
+  },
+  "pending_dict": [
+    {
+      "en": "Marvel Studios",
+      "cn": "漫威影业",
+      "cat": "companies",
+      "source": "ai_guess",
+      "note": "常用中文名，待用户确认。"
+    },
+    {
+      "en": "Kevin Feige",
+      "cn": "凯文·费奇",
+      "cat": "people",
+      "source": "ai_guess",
+      "note": "常用中文名，待用户确认。"
+    },
+    {
+      "en": "Kingpin",
+      "cn": "金并",
+      "cat": "terms",
+      "source": "ai_guess",
+      "note": "角色常用中文名，待用户确认。"
+    },
+    {
+      "en": "Disney",
+      "cn": "迪士尼",
+      "cat": "companies",
+      "source": "ai_guess",
+      "note": "常用中文名，待用户确认。"
+    },
+    {
+      "en": "Hulk",
+      "cn": "绿巨人",
+      "cat": "terms",
+      "source": "ai_guess",
+      "note": "角色常用中文名，待用户确认。"
+    },
+    {
+      "en": "Universal Pictures",
+      "cn": "环球影业",
+      "cat": "companies",
+      "source": "ai_guess",
+      "note": "常用中文名，待用户确认。"
+    },
+    {
+      "en": "Wilson Fisk",
+      "cn": "威尔逊·菲斯克",
+      "cat": "people",
+      "source": "ai_guess",
+      "note": "角色本名常用译法，待用户确认。"
+    },
+    {
+      "en": "X-Men",
+      "cn": "X战警",
+      "cat": "movies_tv",
+      "source": "ai_guess",
+      "note": "系列常用中文名，待用户确认。"
+    },
+    {
+      "en": "Fantastic Four",
+      "cn": "神奇四侠",
+      "cat": "movies_tv",
+      "source": "ai_guess",
+      "note": "系列常用中文名，待用户确认。"
+    },
+    {
+      "en": "MCU",
+      "cn": "漫威电影宇宙",
+      "cat": "terms",
+      "source": "ai_guess",
+      "note": "常用中文名，待用户确认。"
+    }
+  ],
+  "cover": "https://assets-prd.ignimgs.com/2026/03/25/daredevil-season-2-ep-1-thumb-1774482954303.jpg",
+  "images": [
+    {
+      "url": "https://assets-prd.ignimgs.com/2026/03/25/daredevil-season-2-ep-1-thumb-1774482954303.jpg",
+      "caption": ""
+    },
+    {
+      "url": "https://assets-prd.ignimgs.com/2026/05/15/spiderman-brand-new-day-ver3-xlg-1778847268600.jpg",
+      "caption": ""
+    }
+  ],
+  "translation_memory": {
+    "schema_version": 1,
+    "locked": []
+  },
+  "paragraphs": [
+    {
+      "en": "Marvel Studios boss Kevin Feige has given fans hope about the possibility of Kingpin showing up in a Spider-Man movie.",
+      "cn": "漫威影业负责人凯文·费奇让影迷看到金并可能现身《蜘蛛侠》电影的一线希望。"
+    },
+    {
+      "en": "For years, some of our favorite Marvel characters have been wrapped up in complicated rights issues. Although Disney owns the bulk of the Marvel universe, there are some characters who are tied up elsewhere. Spider-Man's film rights are still owned by Sony, but are essentially loaned out to Marvel Studios for new live-action films and crossover events. The Hulk's solo films belong to Universal Pictures, which is why there hasn't been a new Hulk movie since 2008. And Kingpin is also apparently in some kind of legal purgatory.",
+      "cn": "多年来，我们喜爱的部分漫威角色一直被复杂的权利问题缠住。尽管迪士尼拥有漫威宇宙的大部分角色，仍有些角色的权利归属他处。《蜘蛛侠》的电影权利仍由索尼持有，但索尼实质上将其借给漫威影业，用于新的真人电影和跨界活动。绿巨人的个人电影权利属于环球影业，这也是自2008年以来一直没有新绿巨人电影的原因。显然，金并也陷在某种法律炼狱中。"
+    },
+    {
+      "en": "Wilson Fisk actor Vincent D'Onofrio has expressed interest in playing the character in a Spider-Man film or even in his own spin-off movie, but has said it's not possible. In 2025, he claimed his character is only permitted to show up in TV shows .",
+      "cn": "金并的饰演者Vincent D'Onofrio曾表示，有意在《蜘蛛侠》电影甚至金并自己的衍生电影中继续出演该角色，但他称这并不可行。2025年，他声称这个角色只获准出现在电视剧中。"
+    },
+    {
+      "en": "\"It's a very hard thing to do, for Marvel to use my character,\" said the Daredevil: Born Again actor. \"It's a very hard thing to do, because of ownership and stuff. I’m only usable for television shows. Not even a one-off Wilson Fisk movie. It’s all caught up in rights and stuff. I don’t know when that would work out — or if it ever would work out at all.”",
+      "cn": "《夜魔侠：重生》的这名演员说：「漫威要使用我饰演的角色非常困难。因为所有权之类的问题，这件事很难办。我只能用于电视剧，连单独拍一部威尔逊·菲斯克电影都不行。一切都卡在权利之类的问题上。我不知道何时能解决——甚至不知道究竟能否解决。」"
+    },
+    {
+      "en": "However, Marvel Studios boss Kevin Feige suggests it's not as big of a deal as people may think. When speaking with Josh Horowitz , Feige was asked whether or not Kingpin and Daredevil were ever considered for roles in Spider-Man: Brand New Day. Feige downplayed D'Onofrio's concern over rights issues and stated that the characters were actually considered",
+      "cn": "不过，漫威影业负责人凯文·费奇认为，事情或许不像人们想象得那么严重。接受Josh Horowitz采访时，有人问费奇，在《蜘蛛侠：崭新之日》中是否曾考虑让金并和夜魔侠登场。费奇淡化了Vincent D'Onofrio对权利问题的担忧，并称这些角色实际上曾被纳入考虑。"
+    },
+    {
+      "en": "\"There are things to navigate like everything else,\" said Feige. \"We talked about all those characters at one point.\"",
+      "cn": "费奇说：「和其他事情一样，总有一些事需要协调。我们曾在某个阶段讨论过所有那些角色。」"
+    },
+    {
+      "en": "Ultimately, it sounds like Feige could get the job done if the story demanded it. Will that ever happen? Who's to say! It would be awesome to see Fisk and Spidey duke it out on the big screen, though. However, Feige has managed to not only usher in Spider-Man into the MCU despite rights issues, but he also managed to bring the X-Men, Fantastic Four, and Daredevil into the MCU after years of rights issues and different ownership. Maybe Feige will work his magic for New York's notorious crime boss one day.",
+      "cn": "归根结底，听起来只要故事需要，费奇就能把事情办成。会发生吗？谁说得准！不过，看到金并和蜘蛛侠在大银幕上大打出手肯定很棒。尽管存在权利问题，费奇不仅成功让蜘蛛侠进入漫威电影宇宙；在历经多年的权利问题和不同所有权后，他还成功把X战警、神奇四侠与夜魔侠带进漫威电影宇宙。也许有一天，费奇会为这位臭名昭著的纽约犯罪头目施展魔法。"
+    }
+  ]
+}
