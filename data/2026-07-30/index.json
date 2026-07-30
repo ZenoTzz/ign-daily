@@ -254,33 +254,44 @@
       "id": 30,
       "category": "游戏新闻",
       "emoji": "🎮",
-      "en_title": "Final Fantasy 7 Revelation Director Is Pushing for a Physical Edition, But Nothing Has Been Decided",
-      "cn_title": "滨口直树争取《Final Fantasy 7 Revelation》实体版，但尚未定论",
-      "summary": "《Final Fantasy 7 Revelation》导演滨口直树在接受采访时表示，他正在积极推动游戏推出实体版本，但具体SKU阵容仍在内部讨论中，尚未做出最终决定。他强调实体载体能让玩家珍藏并留下纪念，并希望最终能拿出接近粉丝期望的方案。尽管PlayStation计划2028年转向纯数字，GTA6也已取消光盘，滨口仍对实体版存有信心。",
+      "en_title": "'I Want That To Remain' — Final Fantasy 7 Revelation Director Is Pushing for a Physical Edition, But Nothing Has Been Decided",
+      "cn_title": "《最终幻想7 重制版 启示录》实体版未定",
+      "summary": "《最终幻想7 重制版 启示录》导演滨口直树在接受采访时表示，他正在积极推动游戏推出实体版本，但具体SKU阵容仍在内部讨论中，尚未做出最终决定。他强调实体载体能让玩家珍藏并留下纪念，并希望最终能拿出接近粉丝期望的方案。尽管PlayStation计划2028年转向纯数字，GTA6也已取消光盘，滨口仍对实体版存有信心。",
       "url": "https://www.ign.com/articles/final-fantasy-7-revelation-director-is-pushing-for-a-physical-edition-but-nothing-has-been-decided",
       "publish_time_cn": "2026-07-30 03:17",
       "pub_date": "2026-07-30 03:17",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/06/06/final-fantasy-7-revelation-mini-games-1780776380058.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/06/final-fantasy-7-revelation-mini-games-1780776380058.png",
+      "translation_status": "done",
       "images": [
-        "https://assets-prd.ignimgs.com/2026/06/06/final-fantasy-7-revelation-mini-games-1780776380058.png?width=1280&format=jpg&auto=webp&quality=80",
-        "https://assets-prd.ignimgs.com/2026/06/06/final-fantasy-7-revelation-mini-games-1780776380058.png?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
-        "https://assets-prd.ignimgs.com/2026/06/06/final-fantasy-7-revelation-mini-games-1780776380058.png?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
-        "https://assets-prd.ignimgs.com/2026/06/06/final-fantasy-7-revelation-mini-games-1780776380058.png?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
-        "https://assets-prd.ignimgs.com/2026/06/06/final-fantasy-7-revelation-mini-games-1780776380058.png",
-        "https://assets-prd.ignimgs.com/2026/06/05/ff7revelation-1780699972546.jpg"
+        {
+          "url": "https://assets-prd.ignimgs.com/2026/06/06/final-fantasy-7-revelation-mini-games-1780776380058.png?width=1280&format=jpg&auto=webp&quality=80",
+          "caption": ""
+        },
+        {
+          "url": "https://assets-prd.ignimgs.com/2026/06/05/ff7revelation-1780699972546.jpg",
+          "caption": ""
+        }
       ],
       "source_status": "cached",
       "source_fetched_at": "2026-07-30T04:17:32+08:00",
       "pending_dict": [
         {
           "en": "Final Fantasy 7 Revelation",
-          "cn": "最终幻想7：启示录",
+          "cn": "最终幻想7 重制版 启示录",
           "cat": "games",
           "source": "ai_guess",
           "reason": "游戏副标题Revelation暂无官方中文译名，直译仅供参考"
         }
-      ]
+      ],
+      "translation_path": "translations/30.json",
+      "translator": "codex",
+      "translator_provider": "openai",
+      "translator_model": "gpt-5.6",
+      "reasoning_effort": "high",
+      "reviewer_model": "codex-gpt-5.6-sol",
+      "reviewed_at": "2026-07-30T08:44:12+08:00",
+      "prompt_version": "codex-manual-fulltext-v1",
+      "quality_gate_version": 1
     },
     {
       "id": 31,
@@ -424,18 +435,29 @@
       "url": "https://www.ign.com/articles/biowares-former-dragon-age-boss-says-a-mass-effect-style-remaster-trilogy-is-pretty-much-impossible",
       "publish_time_cn": "2026-07-30 01:19",
       "pub_date": "2026-07-30 01:19",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/07/29/da-1785345393700.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/07/29/da-1785345393700.jpg",
+      "translation_status": "done",
       "images": [
-        "https://assets-prd.ignimgs.com/2026/07/29/da-1785345393700.jpg?width=1280&format=jpg&auto=webp&quality=80",
-        "https://assets-prd.ignimgs.com/2026/07/29/da-1785345393700.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
-        "https://assets-prd.ignimgs.com/2026/07/29/da-1785345393700.jpg?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
-        "https://assets-prd.ignimgs.com/2026/07/29/da-1785345393700.jpg?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
-        "https://assets-prd.ignimgs.com/2026/07/29/da-1785345393700.jpg",
-        "https://assets-prd.ignimgs.com/2022/01/05/dragon-age-origins-button-edit-v2a-1641426662026.jpg"
+        {
+          "url": "https://assets-prd.ignimgs.com/2026/07/29/da-1785345393700.jpg?width=1280&format=jpg&auto=webp&quality=80",
+          "caption": ""
+        },
+        {
+          "url": "https://assets-prd.ignimgs.com/2022/01/05/dragon-age-origins-button-edit-v2a-1641426662026.jpg",
+          "caption": ""
+        }
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-07-30T02:17:50+08:00"
+      "source_fetched_at": "2026-07-30T02:17:50+08:00",
+      "translation_path": "translations/26.json",
+      "translator": "codex",
+      "translator_provider": "openai",
+      "translator_model": "gpt-5.6",
+      "reasoning_effort": "high",
+      "reviewer_model": "codex-gpt-5.6-sol",
+      "reviewed_at": "2026-07-30T08:44:12+08:00",
+      "prompt_version": "codex-manual-fulltext-v1",
+      "quality_gate_version": 1
     },
     {
       "id": 23,
