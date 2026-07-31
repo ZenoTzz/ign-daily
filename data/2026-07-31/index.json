@@ -528,13 +528,13 @@
       "category": "影视资讯",
       "emoji": "🎬",
       "en_title": "'I'm Blown Away' — Hideo Kojima Can't Get Enough of Kane Parsons' Backrooms Movie",
-      "cn_title": "小岛秀夫盛赞《后室》：「我被震撼了」",
-      "summary": "小岛秀夫近日在X上盛赞21岁导演Kane Parsons执导的恐怖新片《后室》，称「被震撼了」。该片改编自同名网络怪谈，于2026年5月上映，收获影评界好评。小岛表示，影片让他想起早期2D时代的伪3D游戏，那种迷宫般的封闭感与焦虑在真人电影中得以重现。",
+      "cn_title": "小岛秀夫盛赞Kane Parsons《后室》",
+      "summary": "小岛秀夫盛赞Kane Parsons执导的《后室》，称影片的迷宫式空间和多边形观感令他想起早期游戏开发。影片今年5月上映后广受好评并打破多项纪录，成功也为其他网络恐怖故事改编电影打开机会。",
       "url": "https://www.ign.com/articles/im-blown-away-hideo-kojima-cant-get-enough-of-kane-parsons-backrooms-movie",
       "publish_time_cn": "2026-07-31 03:01",
       "pub_date": "2026-07-31 03:01",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/07/30/hideo-kojima-praises-backrooms-1785437960944.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/07/30/hideo-kojima-praises-backrooms-1785437960944.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/07/30/hideo-kojima-praises-backrooms-1785437960944.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/07/30/hideo-kojima-praises-backrooms-1785437960944.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -553,7 +553,16 @@
           "source": "ai_guess",
           "reason": "社区通用译名，建议人工确认"
         }
-      ]
+      ],
+      "translation_path": "translations/31.json",
+      "translator": "codex",
+      "translator_provider": "openai",
+      "translator_model": "gpt-5.6-terra",
+      "reasoning_effort": "high",
+      "reviewer_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-31T08:39:28+08:00",
+      "prompt_version": "codex-fulltext-2026-07-v1",
+      "quality_gate_version": 1
     },
     {
       "id": 26,
@@ -659,8 +668,8 @@
       "url": "https://www.ign.com/articles/dead-cells-developer-motion-twin-responds-after-guillermo-del-toro-begs-for-version-without-respawns",
       "publish_time_cn": "2026-07-31 02:00",
       "pub_date": "2026-07-31 02:00",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/07/30/gdt-dead-cells-motion-twin-reponse-1785434386235.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/07/30/gdt-dead-cells-motion-twin-reponse-1785434386235.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/07/30/gdt-dead-cells-motion-twin-reponse-1785434386235.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/07/30/gdt-dead-cells-motion-twin-reponse-1785434386235.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -670,7 +679,16 @@
         "https://assets1.ignimgs.com/2019/06/10/dead-cells---button-fin-1560125633132.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-07-31T02:17:33+08:00"
+      "source_fetched_at": "2026-07-31T02:17:33+08:00",
+      "translation_path": "translations/24.json",
+      "translator": "codex",
+      "translator_provider": "openai",
+      "translator_model": "gpt-5.6-terra",
+      "reasoning_effort": "high",
+      "reviewer_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-31T08:39:28+08:00",
+      "prompt_version": "codex-fulltext-2026-07-v1",
+      "quality_gate_version": 1
     },
     {
       "id": 25,
