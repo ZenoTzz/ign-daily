@@ -1,5 +1,38 @@
 [
   {
+    "title": "PlayStation 5 Video Games Are Heavily Discounted During Best Buy's Back to School Sale",
+    "url": "https://www.ign.com/articles/best-buy-back-to-school-sale-playstation-5-video-game-deals",
+    "pubDate_cst": "2026-07-31 07:25",
+    "description": "Amazon has already price matched many of the deals.",
+    "categories": "",
+    "reason": "text:\\bbest .+ deals?\\b",
+    "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
+    "filtered_at_cn": "2026-07-31 08:17:02",
+    "status": "filtered"
+  },
+  {
+    "title": "The Grade A Refurb Nintendo Switch 2 Mario Kart World Console Bundle Just Dropped to $419 at Woot",
+    "url": "https://www.ign.com/articles/nintendo-switch-2-mario-kart-world-gaming-console-deal-july-2026",
+    "pubDate_cst": "2026-07-31 03:55",
+    "description": "This deal ends on July 31.",
+    "categories": "",
+    "reason": "url:deal",
+    "rss_url": "https://www.ign.com/rss/v2/articles/feed?vertical=movies&start=0&count=20",
+    "filtered_at_cn": "2026-07-31 04:17:01",
+    "status": "filtered"
+  },
+  {
+    "title": "There's an Easy Way to Save $220 Off Sonos' Flagship Arc Ultra Soundbar With Dolby Atmos",
+    "url": "https://www.ign.com/articles/sonos-arc-ultra-soundbar-deal-july-2026",
+    "pubDate_cst": "2026-07-31 03:05",
+    "description": "Pristine condition with the exact same Sonos warranty as buying new.",
+    "categories": "",
+    "reason": "text:\\bsave \\$\\d",
+    "rss_url": "https://www.ign.com/rss/articles/feed?start=0&count=20",
+    "filtered_at_cn": "2026-07-31 04:17:01",
+    "status": "filtered"
+  },
+  {
     "title": "Dell Outlet Has a Like New Alienware RTX 5070 Ti Gaming PC With 64GB of DDR5 RAM for $2,466",
     "url": "https://www.ign.com/articles/alienware-aurora-r16-rtx-5070-ti-gaming-pc-deal-at-dell-outlet-july-2026",
     "pubDate_cst": "2026-07-31 02:00",
@@ -52,6 +85,17 @@
     "reason": "text:\\bbuy .+ (?:at|from)\\b",
     "rss_url": "https://www.ign.com/rss/v2/articles/feed?vertical=games&start=0&count=20",
     "filtered_at_cn": "2026-07-30 20:17:01",
+    "status": "filtered"
+  },
+  {
+    "title": "Save 50% Off a Brand New Samsung Galaxy S25 Edge, Samsung's 2025 Ultra-Slim Flagship Smartphone",
+    "url": "https://www.ign.com/articles/samsung-galaxy-s25-edge-smartphone-deal-july-2026",
+    "pubDate_cst": "2026-07-30 08:40",
+    "description": "50% off a one generation old model (brand new with warranty) is some serious depreciation.",
+    "categories": "",
+    "reason": "text:\\bsave \\d+%",
+    "rss_url": "https://www.ign.com/rss/articles/feed?start=40&count=20",
+    "filtered_at_cn": "2026-07-31 08:47:01",
     "status": "filtered"
   }
 ]

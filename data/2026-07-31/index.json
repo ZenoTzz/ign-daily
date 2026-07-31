@@ -2,6 +2,42 @@
   "date": "2026-07-31",
   "articles": [
     {
+      "id": 48,
+      "category": "影视资讯",
+      "emoji": "🎬",
+      "en_title": "Elden Ring Movie Officially Wraps Filming as Producers Thank Crew for 'Bringing Unique Project to Life'",
+      "cn_title": "《艾尔登法环》真人电影正式杀青，制片人致谢剧组",
+      "summary": "A24出品的《艾尔登法环》真人电影已正式杀青。道具师Sean Schofield在一则随后删除的Instagram帖文中分享了导演与制片人写给剧组的致辞。影片计划于2028年3月3日上映，此前泄露的片场照暗示故事可能发生在游戏主线之前。",
+      "url": "https://www.ign.com/articles/elden-ring-movie-officially-wraps-filming-as-producers-thank-crew-for-bringing-unique-project-to-life",
+      "publish_time_cn": "2026-07-31 07:10",
+      "pub_date": "2026-07-31 07:10",
+      "cover_image": "https://assets-prd.ignimgs.com/2025/10/23/eldenringtarnishededition-03-1761230762239.jpg",
+      "translation_status": "done",
+      "translation_path": "translations/48.json",
+      "translator": "codex",
+      "translator_provider": "openai",
+      "translator_model": "gpt-5.6",
+      "reasoning_effort": "low",
+      "reviewer_model": "gpt-5.6",
+      "reviewed_at": "2026-07-31T09:30:52+08:00",
+      "prompt_version": "fulltext-translation-manual-2026-07-31",
+      "quality_gate_version": 1,
+      "images": [
+        {
+          "url": "https://assets-prd.ignimgs.com/2025/10/23/eldenringtarnishededition-03-1761230762239.jpg?width=1280&format=jpg&auto=webp&quality=80",
+          "caption": ""
+        },
+        {
+          "url": "https://assets-prd.ignimgs.com/2025/05/23/elden-ring-button1-1748009071355.jpg",
+          "caption": ""
+        },
+        {
+          "url": "https://assets-prd.ignimgs.com/2026/07/30/gwrf9u2vsfgh1-1785452570600.png",
+          "caption": ""
+        }
+      ]
+    },
+    {
       "id": 45,
       "category": "游戏新闻",
       "emoji": "🎲",
@@ -1429,7 +1465,56 @@
           "reason": "车型名，霍顿为品牌通行译名，Commodore保留英文"
         }
       ]
+    },
+    {
+      "id": 49,
+      "category": "评测评分",
+      "emoji": "🎬",
+      "en_title": "Tony Review",
+      "cn_title": "《Tony》评测：少年波登的厨房青春",
+      "summary": "马特·约翰逊执导的传记片《Tony》改编自安东尼·波登回忆录《厨房机密》，聚焦少年波登在科德角暑期打工的经历，展现他从洗碗工到发现美食热情的蜕变。多米尼克·塞萨精准演绎了波登的傲慢与执着，影片融合传记与青春喜剧风格，将于8月7日率先在北美部分影院上映，8月21日扩映。",
+      "url": "https://www.ign.com/articles/tony-review-anthony-bourdain-movie",
+      "publish_time_cn": "2026-07-30 08:54",
+      "pub_date": "2026-07-30 08:54",
+      "cover_image": "",
+      "translation_status": "none"
+    },
+    {
+      "id": 50,
+      "category": "评测评分",
+      "emoji": "🎬",
+      "en_title": "X-Men '97 Season 2, Episode 7 Review & Recap: \"Strange Land, Savage Heart\"",
+      "cn_title": "《X战警97》S2E7：奇异之地，野蛮之心",
+      "summary": "《X战警97》第二季第7集聚焦科洛索斯与夜行者。伊利亚娜之死促使科洛索斯加入门徒，X-Corp为阻止格雷顿·克里德被处决在野蛮之地与Exodus率领的门徒展开理念交锋，最终科洛索斯回归X学院。片尾X-Force发现天启残骸，为季终两集埋下伏笔。",
+      "url": "https://www.ign.com/articles/x-men-97-season-2-episode-7-review-recap-strange-land-savage-heart",
+      "publish_time_cn": "2026-07-30 08:54",
+      "pub_date": "2026-07-30 08:54",
+      "cover_image": "",
+      "translation_status": "none",
+      "pending_dict": [
+        {
+          "en": "Colossus",
+          "cn": "钢力士",
+          "cat": "people",
+          "source": "ai_guess",
+          "reason": "X战警系列常见角色，建议确认通行中文译名后入库"
+        },
+        {
+          "en": "Nightcrawler",
+          "cn": "夜行者",
+          "cat": "people",
+          "source": "ai_guess",
+          "reason": "X战警系列常见角色，建议确认通行中文译名后入库"
+        },
+        {
+          "en": "Exodus",
+          "cn": "Exodus",
+          "cat": "people",
+          "source": "ai_guess",
+          "reason": "现有词条未提供中文译名，保留英文"
+        }
+      ]
     }
   ],
-  "total": 47
+  "total": 50
 }
