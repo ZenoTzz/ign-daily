@@ -429,8 +429,8 @@
       "url": "https://www.ign.com/articles/nvidia-graphics-cards-are-about-to-get-even-more-expensive",
       "publish_time_cn": "2026-07-31 03:48",
       "pub_date": "2026-07-31 03:48",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/03/23/jensen-gpu-1774306276198.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/03/23/jensen-gpu-1774306276198.png",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/03/23/jensen-gpu-1774306276198.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/03/23/jensen-gpu-1774306276198.png?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -440,7 +440,16 @@
         "https://assets-prd.ignimgs.com/2025/01/07/geforce-rtx-5070-button-1736259623671.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-07-31T04:17:36+08:00"
+      "source_fetched_at": "2026-07-31T04:17:36+08:00",
+      "translation_path": "translations/33.json",
+      "translator": "codex",
+      "translator_provider": "openai",
+      "translator_model": "gpt-5.6-terra",
+      "reasoning_effort": "high",
+      "reviewer_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-31T00:48:02+00:00",
+      "prompt_version": "codex-fulltext-v2",
+      "quality_gate_version": 1
     },
     {
       "id": 29,
