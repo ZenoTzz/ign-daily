@@ -1,0 +1,72 @@
+{
+  "id": 17,
+  "en_title": "Valve Says Steam Machine Reservations Will Be Filled By End of 2026",
+  "cn_title": "Valve称Steam Machine预约订单将在年底前兑现",
+  "url": "https://www.ign.com/articles/valve-says-steam-machine-reservations-will-be-filled-by-end-of-2026",
+  "translated_at": "2026-07-31T08:22:25+08:00",
+  "subtitle": "等到年末",
+  "opus_summary": "Valve表示，收到预约邮件的用户可在2026年底前购买Steam Machine。该设备受内存危机和高定价影响，供货承压；Valve还公布了外壳CAD文件，并为Proton实验分支加入FSR4.1支持。",
+  "translated_terms": {
+    "Valve": "Valve"
+  },
+  "translator": "codex",
+  "translator_provider": "openai",
+  "translator_model": "gpt-5.6",
+  "reasoning_effort": "high",
+  "reviewer_model": "gpt-5.6",
+  "reviewed_at": "2026-07-31T08:22:25+08:00",
+  "prompt_version": "codex-fulltext-2026-07-v2",
+  "quality_gate_version": 1,
+  "quality_review": {
+    "status": "passed",
+    "reviewer_model": "gpt-5.6",
+    "reviewed_at": "2026-07-31T08:22:25+08:00",
+    "checks": {
+      "source_coverage": true,
+      "quote_attribution": true,
+      "numeric_facts": true
+    }
+  },
+  "pending_dict": [],
+  "cover": "https://assets-prd.ignimgs.com/2026/06/18/steam-machine-3-1781800160250.jpg",
+  "images": [
+    {
+      "url": "https://assets-prd.ignimgs.com/2026/06/18/steam-machine-3-1781800160250.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "caption": ""
+    },
+    {
+      "url": "https://assets-prd.ignimgs.com/2025/11/10/machine1-1762804332938.jpg",
+      "caption": ""
+    }
+  ],
+  "translation_memory": {
+    "schema_version": 1,
+    "locked": []
+  },
+  "paragraphs": [
+    {
+      "en": "The Steam Machine has been out for about a month, but despite the eye-watering price, the console-PC hybrid has quite an extensive reservation list. And now Valve has come out with a blog post , saying anyone currently with a reservation list email will be able to buy the Steam Machine by the end of the year.",
+      "cn": "Steam Machine上市约一个月，尽管价格高得惊人，这款主机与PC混合设备的预约名单依然相当长。Valve如今在博文中表示，目前收到预约名单邮件的所有用户，都能在年底前购买Steam Machine。"
+    },
+    {
+      "en": "When the Steam Machine first came out, Valve put up a page allowing people to reserve the Steam Machine. Then, accounts were chosen at random and either placed on a reservation list or a waitlist. It's not clear how many people signed up for a Steam Machine, but it was apparently enough that it's going to take Valve the rest of the year to fulfill the orders.",
+      "cn": "Steam Machine刚推出时，Valve上线了一个供用户预约Steam Machine的页面。随后，系统随机抽取账号，将其列入预约名单或候补名单。目前尚不清楚有多少人登记购买Steam Machine，但人数显然足以让Valve花到今年年底才能完成这些订单。"
+    },
+    {
+      "en": "It doesn't seem like every region has the same level of demand, though. Valve said in its blog that some people might move off of the waitlist and onto the reservation list depending on the region. In some regions, even, Valve has fulfilled its reservation list.",
+      "cn": "不过，各地区的需求程度似乎并不相同。Valve在博文中称，视地区而定，部分用户可能会从候补名单转入预约名单；在某些地区，Valve甚至已完成预约名单中的订单。"
+    },
+    {
+      "en": "Valve told me in June that it expected to struggle to fulfill demand for the Steam Machine due to the ongoing RAM crisis. I don't know how much demand is there, but at least in my region, the Steam Machine is at the top of the Top Sellers list. Valve will probably never reveal exactly how many units it sells.",
+      "cn": "Valve在6月告诉我，由于持续的内存危机，预计满足Steam Machine的需求会很困难。我不知道实际需求有多大，但至少在我所在地区，Steam Machine位居畅销榜首。Valve或许永远不会公布其确切销量。"
+    },
+    {
+      "en": "The company also took the opportunity to release the CAD files for the Steam Machine's exterior, so you can finally 3D print your own skins and face plates. Valve has also released FSR 4.1 support onto the experimental fork of Proton, for games that support FSR upgrade.",
+      "cn": "该公司还借此发布了Steam Machine外壳的CAD文件，用户终于可以自行3D打印外观装饰件和前面板。Valve还在Proton的实验分支中加入了FSR 4.1支持，面向支持FSR升级的游戏。"
+    },
+    {
+      "en": "The Steam Machine has had a bit of a rocky launch. Not only did the RAM crisis – which is getting worse – force Valve to release the mini PC for a much higher price than it originally planned , but the company has had to reword its performance claims, too . It doesn't help that the Steam Machine is only about as powerful as the base PS5 , but you can easily build a PC with SteamOS and better performance , if you don't mind a bigger machine.",
+      "cn": "Steam Machine的上市过程颇为坎坷。日益恶化的内存危机不仅迫使Valve以远高于原计划的价格推出这款迷你PC，公司还不得不改写其性能宣传说法。Steam Machine的性能也只与基础版PS5大致相当；如果不介意机身更大，你很容易就能组装一台运行SteamOS且性能更强的PC。"
+    }
+  ]
+}

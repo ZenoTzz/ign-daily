@@ -830,18 +830,29 @@
       "url": "https://www.ign.com/articles/the-elder-scrolls-online-content-delayed-to-2027-following-xbox-layoffs",
       "publish_time_cn": "2026-07-30 23:50",
       "pub_date": "2026-07-30 23:50",
-      "cover_image": "https://assets-prd.ignimgs.com/2025/07/09/blogroll-esov2-1752053529913.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2025/07/09/blogroll-esov2-1752053529913.png",
+      "translation_status": "done",
       "images": [
-        "https://assets-prd.ignimgs.com/2025/07/09/blogroll-esov2-1752053529913.png?width=1280&format=jpg&auto=webp&quality=80",
-        "https://assets-prd.ignimgs.com/2025/07/09/blogroll-esov2-1752053529913.png?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
-        "https://assets-prd.ignimgs.com/2025/07/09/blogroll-esov2-1752053529913.png?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
-        "https://assets-prd.ignimgs.com/2025/07/09/blogroll-esov2-1752053529913.png?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
-        "https://assets-prd.ignimgs.com/2025/07/09/blogroll-esov2-1752053529913.png",
-        "https://assets-prd.ignimgs.com/2022/01/05/elderscrollsonline-1641413357689.jpg"
+        {
+          "url": "https://assets-prd.ignimgs.com/2025/07/09/blogroll-esov2-1752053529913.png?width=1280&format=jpg&auto=webp&quality=80",
+          "caption": ""
+        },
+        {
+          "url": "https://assets-prd.ignimgs.com/2022/01/05/elderscrollsonline-1641413357689.jpg",
+          "caption": ""
+        }
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-07-31T00:02:24+08:00"
+      "source_fetched_at": "2026-07-31T00:02:24+08:00",
+      "translation_path": "translations/18.json",
+      "translator": "codex",
+      "translator_provider": "openai",
+      "translator_model": "gpt-5.6",
+      "reasoning_effort": "high",
+      "reviewer_model": "gpt-5.6",
+      "reviewed_at": "2026-07-31T08:22:25+08:00",
+      "prompt_version": "codex-fulltext-2026-07-v2",
+      "quality_gate_version": 1
     },
     {
       "id": 17,
@@ -853,18 +864,29 @@
       "url": "https://www.ign.com/articles/valve-says-steam-machine-reservations-will-be-filled-by-end-of-2026",
       "publish_time_cn": "2026-07-30 23:37",
       "pub_date": "2026-07-30 23:37",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/06/18/steam-machine-3-1781800160250.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/18/steam-machine-3-1781800160250.jpg",
+      "translation_status": "done",
       "images": [
-        "https://assets-prd.ignimgs.com/2026/06/18/steam-machine-3-1781800160250.jpg?width=1280&format=jpg&auto=webp&quality=80",
-        "https://assets-prd.ignimgs.com/2026/06/18/steam-machine-3-1781800160250.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
-        "https://assets-prd.ignimgs.com/2026/06/18/steam-machine-3-1781800160250.jpg?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
-        "https://assets-prd.ignimgs.com/2026/06/18/steam-machine-3-1781800160250.jpg?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
-        "https://assets-prd.ignimgs.com/2026/06/18/steam-machine-3-1781800160250.jpg",
-        "https://assets-prd.ignimgs.com/2025/11/10/machine1-1762804332938.jpg"
+        {
+          "url": "https://assets-prd.ignimgs.com/2026/06/18/steam-machine-3-1781800160250.jpg?width=1280&format=jpg&auto=webp&quality=80",
+          "caption": ""
+        },
+        {
+          "url": "https://assets-prd.ignimgs.com/2025/11/10/machine1-1762804332938.jpg",
+          "caption": ""
+        }
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-07-31T00:02:41+08:00"
+      "source_fetched_at": "2026-07-31T00:02:41+08:00",
+      "translation_path": "translations/17.json",
+      "translator": "codex",
+      "translator_provider": "openai",
+      "translator_model": "gpt-5.6",
+      "reasoning_effort": "high",
+      "reviewer_model": "gpt-5.6",
+      "reviewed_at": "2026-07-31T08:22:25+08:00",
+      "prompt_version": "codex-fulltext-2026-07-v2",
+      "quality_gate_version": 1
     },
     {
       "id": 16,
