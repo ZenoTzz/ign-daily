@@ -728,8 +728,8 @@
       "url": "https://www.ign.com/articles/ant-man-4-could-still-happen-kathryn-newton-says-if-fans-want-it-enough",
       "publish_time_cn": "2026-07-31 01:07",
       "pub_date": "2026-07-31 01:07",
-      "cover_image": "https://assets-prd.ignimgs.com/2023/02/03/antmanandthewaspquantumaniacassielangfeaturette-ign-blogroll-1675458208467.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2023/02/03/antmanandthewaspquantumaniacassielangfeaturette-ign-blogroll-1675458208467.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2023/02/03/antmanandthewaspquantumaniacassielangfeaturette-ign-blogroll-1675458208467.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2023/02/03/antmanandthewaspquantumaniacassielangfeaturette-ign-blogroll-1675458208467.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -748,7 +748,16 @@
           "source": "ai_guess",
           "reason": "角色名，常见译名但未入词库"
         }
-      ]
+      ],
+      "translation_path": "translations/23.json",
+      "quality_gate_version": 1,
+      "translator": "codex",
+      "translator_provider": "openai",
+      "translator_model": "gpt-5.6-terra",
+      "reasoning_effort": "high",
+      "reviewer_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-31T08:34:49+08:00",
+      "prompt_version": "codex-fulltext-2026-07-v2"
     },
     {
       "id": 21,
@@ -783,8 +792,8 @@
       "url": "https://www.ign.com/articles/bethesda-has-a-new-logo-to-celebrate-its-40th-anniversary-and-it-harkens-back-to-the-studios-old-terminator-games",
       "publish_time_cn": "2026-07-31 00:48",
       "pub_date": "2026-07-31 00:48",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/07/30/bethesda-1785429757188.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/07/30/bethesda-1785429757188.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/07/30/bethesda-1785429757188.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/07/30/bethesda-1785429757188.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -795,7 +804,16 @@
         "https://assets-prd.ignimgs.com/2022/02/19/futureshock-sq-1645235967876.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-07-31T01:17:54+08:00"
+      "source_fetched_at": "2026-07-31T01:17:54+08:00",
+      "translation_path": "translations/20.json",
+      "quality_gate_version": 1,
+      "translator": "codex",
+      "translator_provider": "openai",
+      "translator_model": "gpt-5.6-terra",
+      "reasoning_effort": "high",
+      "reviewer_model": "gpt-5.6-sol",
+      "reviewed_at": "2026-07-31T08:34:49+08:00",
+      "prompt_version": "codex-fulltext-2026-07-v2"
     },
     {
       "id": 19,
