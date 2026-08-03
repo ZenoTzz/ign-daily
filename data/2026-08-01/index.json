@@ -499,18 +499,23 @@
       "url": "https://www.ign.com/articles/square-enix-says-controversial-kingdom-hearts-collection-art-was-the-result-of-human-error-not-generative-ai",
       "publish_time_cn": "2026-07-31 23:53",
       "pub_date": "2026-07-31 23:53",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/07/31/kingdom-hearts-collection-1-3-art-ai-1785512630482.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/07/31/kingdom-hearts-collection-1-3-art-ai-1785512630482.png",
+      "translation_status": "done",
       "images": [
-        "https://assets-prd.ignimgs.com/2026/07/31/kingdom-hearts-collection-1-3-art-ai-1785512630482.png?width=1280&format=jpg&auto=webp&quality=80",
-        "https://assets-prd.ignimgs.com/2026/07/31/kingdom-hearts-collection-1-3-art-ai-1785512630482.png?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
-        "https://assets-prd.ignimgs.com/2026/07/31/kingdom-hearts-collection-1-3-art-ai-1785512630482.png?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
-        "https://assets-prd.ignimgs.com/2026/07/31/kingdom-hearts-collection-1-3-art-ai-1785512630482.png?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
-        "https://assets-prd.ignimgs.com/2026/07/31/kingdom-hearts-collection-1-3-art-ai-1785512630482.png",
-        "https://assets-prd.ignimgs.com/2026/06/09/nintendoswitch2-kingdom-hearts-collection-1-3-keyart-square-1781026445602.png"
+        {
+          "url": "https://assets-prd.ignimgs.com/2026/07/31/kingdom-hearts-collection-1-3-art-ai-1785512630482.png?width=1280&format=jpg&auto=webp&quality=80",
+          "caption": ""
+        },
+        {
+          "url": "https://assets-prd.ignimgs.com/2026/06/09/nintendoswitch2-kingdom-hearts-collection-1-3-keyart-square-1781026445602.png",
+          "caption": ""
+        }
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-08-01T00:18:21+08:00"
+      "source_fetched_at": "2026-08-01T00:18:21+08:00",
+      "translation_path": "translations/18.json",
+      "translator_model": "Codex",
+      "quality_gate_version": 1
     },
     {
       "id": 15,
@@ -522,17 +527,19 @@
       "url": "https://www.ign.com/articles/its-official-mahershala-alis-blade-movie-is-dead-and-he-has-moved-on",
       "publish_time_cn": "2026-07-31 23:39",
       "pub_date": "2026-07-31 23:39",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/07/20/gettyimages-1163270878-1784561339842.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/07/20/gettyimages-1163270878-1784561339842.jpg",
+      "translation_status": "done",
       "images": [
-        "https://assets-prd.ignimgs.com/2026/07/20/gettyimages-1163270878-1784561339842.jpg?width=1280&format=jpg&auto=webp&quality=80",
-        "https://assets-prd.ignimgs.com/2026/07/20/gettyimages-1163270878-1784561339842.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
-        "https://assets-prd.ignimgs.com/2026/07/20/gettyimages-1163270878-1784561339842.jpg?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
-        "https://assets-prd.ignimgs.com/2026/07/20/gettyimages-1163270878-1784561339842.jpg?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
-        "https://assets-prd.ignimgs.com/2026/07/20/gettyimages-1163270878-1784561339842.jpg"
+        {
+          "url": "https://assets-prd.ignimgs.com/2026/07/20/gettyimages-1163270878-1784561339842.jpg?width=1280&format=jpg&auto=webp&quality=80",
+          "caption": ""
+        }
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-08-01T00:18:32+08:00"
+      "source_fetched_at": "2026-08-01T00:18:32+08:00",
+      "translation_path": "translations/15.json",
+      "translator_model": "Codex",
+      "quality_gate_version": 1
     },
     {
       "id": 16,
