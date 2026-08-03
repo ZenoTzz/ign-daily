@@ -86,15 +86,17 @@
       "url": "https://www.ign.com/articles/tom-holland-says-spider-man-5-is-unclear-teases-he-knows-when-miles-morales-will-join-the-mcu",
       "publish_time_cn": "2026-08-03 05:25",
       "pub_date": "2026-08-03 05:25",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/03/19/spider-man-brand-new-day-1773955154050.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/03/19/spider-man-brand-new-day-1773955154050.png",
+      "translation_status": "done",
       "images": [
-        "https://assets-prd.ignimgs.com/2026/03/19/spider-man-brand-new-day-1773955154050.png?width=1280&format=jpg&auto=webp&quality=80",
-        "https://assets-prd.ignimgs.com/2026/03/19/spider-man-brand-new-day-1773955154050.png?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
-        "https://assets-prd.ignimgs.com/2026/03/19/spider-man-brand-new-day-1773955154050.png?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
-        "https://assets-prd.ignimgs.com/2026/03/19/spider-man-brand-new-day-1773955154050.png?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
-        "https://assets-prd.ignimgs.com/2026/03/19/spider-man-brand-new-day-1773955154050.png",
-        "https://assets-prd.ignimgs.com/2026/05/15/spiderman-brand-new-day-ver3-xlg-1778847268600.jpg"
+        {
+          "url": "https://assets-prd.ignimgs.com/2026/03/19/spider-man-brand-new-day-1773955154050.png?width=1280&format=jpg&auto=webp&quality=80",
+          "caption": ""
+        },
+        {
+          "url": "https://assets-prd.ignimgs.com/2026/05/15/spiderman-brand-new-day-ver3-xlg-1778847268600.jpg",
+          "caption": ""
+        }
       ],
       "source_status": "cached",
       "source_fetched_at": "2026-08-03T06:17:31+08:00",
@@ -113,7 +115,16 @@
           "source": "ai_guess",
           "reason": "电影官方中文译名待确认，需核对漫威官方及院线译名"
         }
-      ]
+      ],
+      "translation_path": "translations/05.json",
+      "translator": "codex",
+      "translator_provider": "local-manual",
+      "translator_model": "codex-manual",
+      "reasoning_effort": "high",
+      "reviewer_model": "codex-manual-independent-review",
+      "reviewed_at": "2026-08-03T09:40:33+08:00",
+      "prompt_version": "manual-isolated-job-f3eff5a05d98",
+      "quality_gate_version": 1
     },
     {
       "id": 3,
