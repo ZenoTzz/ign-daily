@@ -1,0 +1,123 @@
+{
+  "id": 29,
+  "en_title": "The $500 Console Is Dead",
+  "cn_title": "500美元(约合人民币3380元)主机时代彻底落幕",
+  "url": "https://www.ign.com/articles/the-500-console-is-dead",
+  "translated_at": "2026-08-03T10:27:29+08:00",
+  "subtitle": "回不去了",
+  "opus_summary": "作者认为，疫情、关税与RAM危机推高主机和PC硬件价格。即使供应恢复、关税取消，消费者仍会习惯接近1000美元(约合人民币6760元)的定价，厂商无意降价，500美元(约合人民币3380元)主机时代恐将结束。",
+  "translated_terms": {
+    "Nintendo": "任天堂",
+    "Sony": "索尼",
+    "Microsoft": "微软",
+    "Valve": "Valve",
+    "PlayStation": "PlayStation",
+    "Xbox": "XBOX",
+    "Xbox Series X": "XBOX Series",
+    "Project Helix": "Project Helix",
+    "Switch 2": "Switch 2",
+    "PS5": "PS5",
+    "PS5 Pro": "PS5 Pro",
+    "PS6": "PS6",
+    "PS3": "PS3",
+    "Steam Machine": "Steam Machine",
+    "Steam Deck": "Steam Deck",
+    "Micron": "Micron",
+    "GPU": "GPU",
+    "RAM": "RAM",
+    "MSRP": "建议零售价（MSRP）",
+    "PC": "PC"
+  },
+  "translator": "codex",
+  "translator_provider": "openai",
+  "translator_model": "gpt-5.6",
+  "reasoning_effort": "high",
+  "prompt_version": "manual-fulltext-2026-08",
+  "quality_gate_version": 1,
+  "reviewer_model": "codex-manual-independent-review",
+  "reviewed_at": "2026-08-03T10:34:00+08:00",
+  "quality_review": {
+    "status": "passed",
+    "reviewer_model": "codex-manual-independent-review",
+    "reviewed_at": "2026-08-03T10:34:00+08:00",
+    "checks": {
+      "source_coverage": true,
+      "quote_attribution": true,
+      "numeric_facts": true
+    }
+  },
+  "pending_dict": [],
+  "cover": "https://assets-prd.ignimgs.com/2026/07/31/gaminghardwarenevercheapagain-blogroll-1785528740411.jpg",
+  "images": [
+    {
+      "url": "https://assets-prd.ignimgs.com/2026/07/31/gaminghardwarenevercheapagain-blogroll-1785528740411.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "caption": ""
+    },
+    {
+      "url": "https://assets-prd.ignimgs.com/2023/05/24/playstation-1-blogroll-1684939066488.jpg",
+      "caption": ""
+    }
+  ],
+  "translation_memory": {
+    "schema_version": 1,
+    "locked": []
+  },
+  "paragraphs": [
+    {
+      "en": "Gaming hardware is more expensive than ever. There’s a few different reasons things are as bad as they are, and I’ll get into them in a moment, but regardless of how we got here, there’s no denying it’s an absolutely terrible time to be in the market for a new gaming console or PC.",
+      "cn": "游戏硬件比以往任何时候都贵。造成当前困境的原因有好几种，我稍后会逐一说明；但无论事情是如何走到这一步的，不可否认的是，现在想买一台新游戏主机或PC，实在是个糟糕透顶的时机。"
+    },
+    {
+      "en": "Even worse is the realization that there’s no going back.",
+      "cn": "更糟的是，我们得承认已经回不去了。"
+    },
+    {
+      "en": "For the past 20 years, the rough price of entry for console gaming has maxed out around $500. The Xbox and PlayStation consoles of the last three generations all launched in the $400–$500 range, and then typically got cheaper over the course of the generation thanks to less-expensive “Slim” console variants and inevitable holiday discounts.",
+      "cn": "过去20年，进入主机游戏的门槛价最高大致也就500美元(约合人民币3380元)。过去三代的XBOX和PlayStation主机首发价均在400至500美元(约合人民币2704至3380元)区间，随后通常会在一个世代周期中降价，原因是更便宜的「Slim」主机版本推出，以及节日折扣终会到来。"
+    },
+    {
+      "en": "This generation has played out differently. The PS5 and Xbox Series X both launched in 2020 at that $500 sweet spot, but in the nearly six years since have only grown more expensive. First, their launches were hampered by COVID-19 pandemic-related supply chain disruptions, leading to stock shortages that kept the price locked at or above MSRP for more than two years.",
+      "cn": "这一代的走向却不同。PS5和XBOX Series都在2020年以那个500美元(约合人民币3380元)的甜蜜价位上市，但近六年来只越来越贵。首先，它们的上市受到COVID-19疫情引发的供应链中断拖累，导致库存短缺，使价格在两年多里一直维持在建议零售价（MSRP）或更高水平。"
+    },
+    {
+      "en": "Supply finally started to catch up with demand around three years in, and for a brief moment it looked like we were heading into the mid-cycle point you would expect things to start getting cheaper – only for President Trump to upend the global economy with a draconian tariff regime. Sony and Microsoft raised their prices as a result, and even Nintendo, long king of the lower-performance budget-friendly realm, had to launch the Switch 2 at $449 .",
+      "cn": "大约三年后，供应终于开始赶上需求；短暂一刻，我们似乎正进入本应开始降价的世代中期，特朗普总统却用严苛的关税体系搅乱了全球经济。索尼和微软因此上调价格，就连长期称霸低性能、亲民价位领域的任天堂，也不得不以449美元(约合人民币3035元)推出Switch 2。"
+    },
+    {
+      "en": "This storm, too, could have been weathered, but then came the chip shortage. Percolating in the background this entire generation has been a massive buildout of AI data center infrastructure, which directly caused a shortage of the memory chips used to make graphics cards , storage , and RAM . We’ve written a great deal here at IGN about this ongoing RAM crisis – how it’s the reason for an $899 PS5 Pro , $749 Xbox Series X , and why the Steam Machine costs $1,049 instead of $750 . We’ve also written about how things aren’t going to get better any time soon. Valve says the memory crisis is “still getting worse,” and the CEO of RAM-maker Micron expects the shortage to last well into 2028 .",
+      "cn": "这场风波原本也能挺过去，但接着芯片短缺又来了。整个世代的幕后一直在大规模建设AI数据中心，这直接造成制造显卡、存储设备和RAM所需的内存芯片短缺。IGN已多次报道这场持续的RAM危机：它如何导致PS5 Pro售价899美元(约合人民币6077元)、XBOX Series售价749美元(约合人民币5063元)，以及Steam Machine为何不是750美元(约合人民币5070元)而是1049美元(约合人民币7091元)。我们也写过，情况短期内不会好转。Valve称内存危机「仍在恶化」，RAM制造商Micron的CEO则预计，短缺将持续到2028年很长一段时间。"
+    },
+    {
+      "en": "So, 2029? Maybe then we’ll see a $500 console again?",
+      "cn": "那么，2029年呢？到时也许会再次见到500美元(约合人民币3380元)主机？"
+    },
+    {
+      "en": "I fear the days of a $500 game console are long gone. For one thing, by 2029 we should be talking about the PlayStation 6 and whatever Xbox’s Project Helix ends up being called. Sure, we might see a discount on the 9-year-old PS5 and Series X by then, but I don't think the new generation has a chance of landing anywhere near the $500 launch price we’ve come to know and love.",
+      "cn": "我担心500美元(约合人民币3380元)游戏主机的日子早已一去不返。首先，到2029年，我们讨论的应该是PlayStation 6，以及XBOX的Project Helix最终会叫什么。届时，上市9年的PS5和XBOX Series或许会降价，但我不认为新一代产品有任何可能接近人们早已习以为常、也乐于接受的500美元(约合人民币3380元)首发价。"
+    },
+    {
+      "en": "The unfortunate reality is that by the time those next generation consoles launch, the market will have adjusted to these new, higher prices. Even if supply chains return to normal, tariffs are rescinded for good, and the RAM crisis works itself out (maybe supply catches up with demand, maybe the AI bubble bursts – who’s to say?), consumers will be used to paying close to $1,000 for their gaming hardware by then. Given that, Sony and Microsoft will have little incentive to price their new consoles any less.",
+      "cn": "令人遗憾的现实是，等这些次世代主机上市时，市场已经适应了这些更高的新价格。即使供应链恢复正常、关税被永久取消，RAM危机也自行化解（也许供应赶上需求，也许AI泡沫破裂——谁说得准呢？），到那时消费者也会习惯为游戏硬件支付接近1000美元(约合人民币6760元)。鉴于此，索尼和微软几乎没有动力把新主机定得更低。"
+    },
+    {
+      "en": "Just look at how the GPU market responded to its own series of supply-related price shocks. In 2017 and again in 2020, the boom in cryptocurrency mining led to GPU shortages and scalper-driven prices well above MSRP . Both times, GPUs eventually returned to normal stock levels, but the subsequent GPU generation also saw their launch prices heavily pushed up by the inflated numbers people had grown used to forking over to scalpers.",
+      "cn": "看看GPU市场如何应对自身一系列与供应有关的价格冲击就知道了。2017年以及2020年，加密货币挖矿热潮都造成GPU短缺，黄牛推动的价格远高于建议零售价。两次GPU最终都恢复了正常库存水平，但消费者已经习惯向黄牛支付虚高价格，后续一代GPU的首发价也因此被大幅抬高。"
+    },
+    {
+      "en": "I see no reason that things will be any different this time around.",
+      "cn": "我看不出这次有什么理由会不同。"
+    },
+    {
+      "en": "Of course, there’s no guarantee that consumers will come out as fervently for a $1,000 console as they have for previous generations, but I have little doubt the demand will be there. The Switch 2 is the second fastest-selling console in U.S. history , despite its higher launch price. Then again, demand for the Steam Deck has cratered in the wake of its large price hikes, but that doesn’t surprise me given that there are currently better and cheaper options on the market.",
+      "cn": "当然，消费者是否会像迎接前几代产品那样热切购买1000美元(约合人民币6760元)主机，并没有保证；但我几乎不怀疑需求仍会存在。尽管首发价更高，Switch 2仍是美国历史上销量增速第二快的主机。话虽如此，Steam Deck在大幅涨价后需求已断崖式下跌；鉴于目前市面上有更好且更便宜的选择，这并不令我意外。"
+    },
+    {
+      "en": "I’m not confident there will be much competition to keep the next-gen consoles in check though. Sony says it doesn’t plan to subsidize the cost of the PS6 . Meanwhile, Xbox’s future is murkier than ever , but all signs point to Project Helix being more like a PC than a traditional console, and PC graphics cards aren’t getting any cheaper . That’s not even to mention that everything feels more expensive these days, as evidenced by U.S. inflation hitting a 40-year record high in 2022 and holding well above normal rates in the years since.",
+      "cn": "不过，我并不确信会有足够竞争来牵制次世代主机。索尼表示不打算补贴PS6的成本。与此同时，XBOX的未来比以往任何时候都更不明朗，但种种迹象显示，Project Helix会更像一台PC而非传统主机，而PC显卡也没有变得更便宜。更不用说，如今什么都感觉更贵了：美国通胀在2022年触及40年新高，此后数年一直明显高于正常水平。"
+    },
+    {
+      "en": "Adjusted for inflation, the 60GB PS3’s launch price of $600 would be close to $1,000 in today’s dollars. Viewed through that lens, perhaps we’re lucky that console prices have remained so cheap for so long. Whatever the case, the party seems to well and truly be over. Like it or not, the $500 console is gone for good.",
+      "cn": "经通胀调整后，60GB PS3的600美元(约合人民币4056元)首发价按今天的币值计算会接近1000美元(约合人民币6760元)。从这个角度看，主机价格能长期保持这么低，也许已经算幸运。无论如何，这场盛宴似乎已经真正结束。无论你愿不愿意，500美元(约合人民币3380元)主机都将一去不复返。"
+    }
+  ]
+}
