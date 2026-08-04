@@ -118,13 +118,13 @@
       "category": "影视资讯",
       "emoji": "🕷️",
       "en_title": "Sony's Spider-Man Spinoff Universe Might Be Dead as Company Confirms It Has No Movies in Active Development",
-      "cn_title": "蜘蛛侠衍生宇宙或终结，索尼确认无新片开发",
-      "summary": "索尼影业主席兼CEO Tom Rothman向《综艺》确认，蜘蛛侠衍生宇宙目前没有任何处于积极开发阶段的电影。在《莫比亚斯》《蜘蛛夫人》《猎人克莱文》等片反响不佳后，索尼正重新考虑如何运用这些角色；相比之下，《毒液》三部曲票房大体成功。",
+      "cn_title": "索尼《蜘蛛侠》衍生宇宙或已终结",
+      "summary": "索尼影业高管Tom Rothman确认，索尼漫威电影业务没有处于积极开发阶段的电影。随着《Madame Web》《Morbius》和《Kraven the Hunter》等作品表现不佳，索尼可能重新考虑蜘蛛侠衍生角色的未来。",
       "url": "https://www.ign.com/articles/sonys-spider-man-spinoff-universe-might-be-dead-as-company-confirms-it-has-no-movies-in-active-development",
       "publish_time_cn": "2026-08-04 05:28",
       "pub_date": "2026-08-04 05:28",
-      "cover_image": "https://assets-prd.ignimgs.com/2024/02/13/madameweb-review-blogroll-1707831175936.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2024/02/13/madameweb-review-blogroll-1707831175936.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2024/02/13/madameweb-review-blogroll-1707831175936.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2024/02/13/madameweb-review-blogroll-1707831175936.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -157,20 +157,29 @@
           "source": "ai_guess",
           "reason": "中文社区通行译名，建议人工确认"
         }
-      ]
+      ],
+      "translation_path": "translations/31.json",
+      "translator": "codex",
+      "translator_provider": "codex",
+      "translator_model": "gpt-5.6-luna",
+      "reasoning_effort": "high",
+      "reviewer_model": "gpt-5.6-luna",
+      "reviewed_at": "2026-08-04T01:45:00Z",
+      "prompt_version": "codex-fulltext-2026-08-v1",
+      "quality_gate_version": 1
     },
     {
       "id": 27,
       "category": "影视资讯",
       "emoji": "📺",
       "en_title": "Dave Bautista in Talks to Join God of War TV Series as Kratos",
-      "cn_title": "戴夫·巴蒂斯塔洽谈出演《战神》真人剧奎托斯",
-      "summary": "据Variety和Deadline报道，戴夫·巴蒂斯塔正在洽谈出演Prime Video真人剧《战神》中的奎托斯。此前饰演该角色的Ryan Hurst因二头肌受伤需手术而退出，制作方选择重新选角。若巴蒂斯塔签约，剧集计划于秋季恢复制作。另据传，第二季可能更换阿特柔斯演员，同时《战神：劳菲》定于明年2月发售。",
+      "cn_title": "Dave Bautista或将饰演《战神》奎托斯",
+      "summary": "Dave Bautista据称正在洽谈出演Prime Video真人剧《战神》中的奎托斯，此前饰演该角色的Ryan Hurst因肱二头肌受伤退出。若谈判顺利，剧集计划在秋季恢复制作，第二季还可能更换Atreus演员。",
       "url": "https://www.ign.com/articles/dave-bautista-in-talks-to-join-god-of-war-tv-series-as-kratos",
       "publish_time_cn": "2026-08-04 04:49",
       "pub_date": "2026-08-04 04:49",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/08/03/dave-bautista-1785790032895.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/08/03/dave-bautista-1785790032895.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/08/03/dave-bautista-1785790032895.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/08/03/dave-bautista-1785790032895.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -196,7 +205,16 @@
           "source": "ai_guess",
           "reason": "《战神》系列角色通行译名，待确认是否入词库"
         }
-      ]
+      ],
+      "translation_path": "translations/27.json",
+      "translator": "codex",
+      "translator_provider": "codex",
+      "translator_model": "gpt-5.6-luna",
+      "reasoning_effort": "high",
+      "reviewer_model": "gpt-5.6-luna",
+      "reviewed_at": "2026-08-04T01:45:00Z",
+      "prompt_version": "codex-fulltext-2026-08-v1",
+      "quality_gate_version": 1
     },
     {
       "id": 28,
