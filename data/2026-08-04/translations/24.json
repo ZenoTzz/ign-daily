@@ -1,0 +1,109 @@
+{
+  "id": 24,
+  "en_title": "The Steam Frame Might End Up More Expensive Than the Steam Machine",
+  "cn_title": "Steam Frame可能比Steam Machine还贵",
+  "url": "https://www.ign.com/articles/the-steam-frame-might-end-up-more-expensive-than-the-steam-machine",
+  "translated_at": "2026-08-04T01:20:00Z",
+  "subtitle": "价格先失控？",
+  "opus_summary": "Steam Frame的泄露信息显示，其售价可能达到或超过1100美元(约合人民币7436元)，甚至高于Steam Machine。受内存危机、VR硬件规格和复杂设计影响，Valve的新头显最终定价仍要等正式发售才能确认。",
+  "translated_terms": {
+    "Steam Frame": "Steam Frame",
+    "Steam Machine": "Steam Machine",
+    "Valve": "Valve",
+    "Steam Controller": "Steam Controller",
+    "Valve Index": "Valve Index",
+    "Snapdragon 8 Gen 3": "Snapdragon 8 Gen 3",
+    "UFS": "UFS"
+  },
+  "pending_dict": [
+    {
+      "en": "Steam Frame",
+      "cn": "Steam Frame",
+      "cat": "games",
+      "source": "ai_guess",
+      "note": "暂未查到正式中文译名，保留英文"
+    },
+    {
+      "en": "Steam Machine",
+      "cn": "Steam Machine",
+      "cat": "games",
+      "source": "ai_guess",
+      "note": "暂未查到正式中文译名，保留英文"
+    }
+  ],
+  "translator": "codex",
+  "translator_provider": "codex",
+  "translator_model": "gpt-5.6-luna",
+  "reasoning_effort": "high",
+  "reviewer_model": "gpt-5.6-luna",
+  "reviewed_at": "2026-08-04T01:20:00Z",
+  "prompt_version": "codex-fulltext-2026-08-v1",
+  "quality_gate_version": 1,
+  "quality_review": {
+    "status": "passed",
+    "reviewer_model": "gpt-5.6-luna",
+    "reviewed_at": "2026-08-04T01:20:00Z",
+    "checks": {
+      "source_coverage": true,
+      "quote_attribution": true,
+      "numeric_facts": true
+    }
+  },
+  "cover": "https://assets-prd.ignimgs.com/2025/11/11/steamframe-handson-blogroll-1762903444744.jpg",
+  "images": [
+    {
+      "url": "https://assets-prd.ignimgs.com/2025/11/11/steamframe-handson-blogroll-1762903444744.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "caption": ""
+    },
+    {
+      "url": "https://assets-prd.ignimgs.com/2025/11/11/steamframe-handson-blogroll-1762903444744.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
+      "caption": ""
+    },
+    {
+      "url": "https://assets-prd.ignimgs.com/2025/11/11/steamframe-handson-blogroll-1762903444744.jpg?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
+      "caption": ""
+    },
+    {
+      "url": "https://assets-prd.ignimgs.com/2025/11/11/steamframe-handson-blogroll-1762903444744.jpg?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
+      "caption": ""
+    },
+    {
+      "url": "https://assets-prd.ignimgs.com/2025/11/11/steamframe-handson-blogroll-1762903444744.jpg",
+      "caption": ""
+    },
+    {
+      "url": "https://assets-prd.ignimgs.com/2025/11/12/sf-headsetcontrollers-button-1762953396656.jpg",
+      "caption": ""
+    }
+  ],
+  "translation_memory": {
+    "schema_version": 2,
+    "locked": []
+  },
+  "paragraphs": [
+    {
+      "en": "The Steam Machine launched a little over a month ago, and it came with quite a controversial price tag. But it seems like the Steam Frame might end up even more expensive than Valve's mini gaming PC .",
+      "cn": "Steam Machine在一个多月前发售，并伴随着颇具争议的定价。但现在看来，Steam Frame最终的价格可能还会高于Valve的迷你游戏PC。"
+    },
+    {
+      "en": "According to a now-deleted Stream by Valve leaker Tyler Mcvicker , and spotted by NotebookCheck , the Steam Frame could end up at a price at or above $1100. The deleted stream also apparently suggested the VR headset would come out as early as today, so I'd take all of this with a massive grain of salt. But even if I wouldn't necessarily put a lot of stock in the actual number reported by McVicker, it's entirely possible that the Steam Frame is going to be much more expensive than the Steam Machine, and that's due to the ongoing RAM crisis .",
+      "cn": "据Valve爆料者Tyler Mcvicker发布、后被删除的一场直播（NotebookCheck发现了相关内容），Steam Frame的最终售价可能达到或超过1100美元(约合人民币7436元)。这场被删除的直播似乎还暗示VR头显最快会在今天发售，因此这些信息都必须抱着极大的怀疑态度看待。不过，即便我不会特别相信Mcvicker爆料的具体数字，Steam Frame很可能远比Steam Machine昂贵，而原因就在于持续中的RAM危机。"
+    },
+    {
+      "en": "The Steam Frame is going to be equipped with a Snapdragon 8 Gen 3 SoC with 16GB of memory and either a 256GB or 1TB of UFS (universal flash storage). Even though the Snapdragon 8 Gen 3 is a couple years old at this point, it's still a relatively powerful mobile processor. And it's being paired with 16GB of DDR5, and we all know how that went for the Steam Machine. It doesn't help that the Steam Frame has design considerations that the Steam Machine just didn't have to deal with.",
+      "cn": "Steam Frame将搭载配备16GB内存的Snapdragon 8 Gen 3SoC，并提供256GB或1TB的UFS（通用闪存存储）选项。虽然Snapdragon 8 Gen 3如今已经推出了两年左右，但它仍是一款相对强大的移动处理器；此外，它还搭配了16GB DDR5，而Steam Machine的内存情况大家也都知道。更不利的是，Steam Frame还要面对Steam Machine无需处理的设计层面考量。"
+    },
+    {
+      "en": "Each eye will have a 2160x2160 LCD display with a 144Hz refresh rate, and there are a total of six cameras strapped onto the headset, to track head and eye movement when you're playing games. Plus, Valve engineered an impressive wireless transmission method, that can intelligently render games based on what you're looking at.",
+      "cn": "头显为每只眼睛配备一块2160x2160分辨率、144Hz刷新率的LCD显示屏，设备上总共装有六枚摄像头，用于在游戏时追踪头部和眼睛的移动。此外，Valve还设计了一套出色的无线传输方案，能够根据玩家正在注视的内容智能渲染游戏画面。"
+    },
+    {
+      "en": "So, even if the Steam Frame struggles to run a lot of games locally – which Valve's engineers basically told us it would back in October – there's a lot more than just a GPU and some RAM to consider. It's important to keep in mind, too, that the Valve Index was quite expensive for its time, costing a whopping $999 when it came out in 2019. So, it's not that much of a stretch to imagine that the Frame will be even more expensive whenever it eventually comes out.",
+      "cn": "所以，即便Steam Frame在本地运行许多游戏时会遇到困难——Valve的工程师基本上已经在去年10月告诉过我们这一点——需要考虑的也远不只是GPU和一些RAM。还要记住，Valve Index在当时就相当昂贵，2019年发售时售价高达999美元(约合人民币6753元)。因此，想象一下Frame最终发售时价格更高，并不算太过牵强。"
+    },
+    {
+      "en": "At the end of the day, no one will know exactly how much the Steam Frame is going to cost until Valve actually launches the thing. However, the Steam Machine did come out roughly 7 weeks after the Steam Controller launched on May 4. If Valve keeps up that same timing, we could see the new VR headset's Steam page open up as early as August 10.",
+      "cn": "归根结底，在Valve正式推出Steam Frame之前，没人会确切知道它的售价。不过，Steam Machine是在Steam Controller于5月4日发售约7周后推出的。如果Valve保持相同的时间安排，我们最快可能在8月10日看到这款新VR头显的Steam页面上线。"
+    }
+  ]
+}
