@@ -1,0 +1,120 @@
+{
+  "id": 27,
+  "en_title": "Halo: Campaign Evolved Reportedly Had a Troubled Development That Impacted a Now-Canceled Multiplayer Project",
+  "cn_title": "《光环：战役进化》开发曾遇麻烦",
+  "url": "https://www.ign.com/articles/halo-campaign-evolved-reportedly-had-a-troubled-development-that-impacted-a-now-canceled-multiplayer-project",
+  "translated_at": "2026-08-05T08:10:33+08:00",
+  "subtitle": "多人项目因此取消",
+  "opus_summary": "据报道，《光环：战役进化》开发期间经历多次改动与管理问题，外包团队Abstraction被提前撤出，其工作被推倒重来，并可能影响了另一款光环多人项目。",
+  "translated_terms": {
+    "Halo: Campaign Evolved": "???????",
+    "Unreal Engine 5": "Unreal Engine 5",
+    "Unreal Engine": "Unreal Engine",
+    "Halo": "??",
+    "Twitter": "X"
+  },
+  "pending_dict": [],
+  "cover": "https://assets-prd.ignimgs.com/2026/07/22/halocampaignevolved-review-blogroll-1784759127552.jpg",
+  "images": [
+    {
+      "url": "https://assets-prd.ignimgs.com/2026/07/22/halocampaignevolved-review-blogroll-1784759127552.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "caption": ""
+    },
+    {
+      "url": "https://assets-prd.ignimgs.com/2026/07/22/halocampaignevolved-review-blogroll-1784759127552.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
+      "caption": ""
+    },
+    {
+      "url": "https://assets-prd.ignimgs.com/2026/07/22/halocampaignevolved-review-blogroll-1784759127552.jpg?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
+      "caption": ""
+    },
+    {
+      "url": "https://assets-prd.ignimgs.com/2026/07/22/halocampaignevolved-review-blogroll-1784759127552.jpg?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
+      "caption": ""
+    },
+    {
+      "url": "https://assets-prd.ignimgs.com/2026/07/22/halocampaignevolved-review-blogroll-1784759127552.jpg",
+      "caption": ""
+    },
+    {
+      "url": "https://assets-prd.ignimgs.com/2025/10/24/halo-1761339042403.jpg",
+      "caption": ""
+    }
+  ],
+  "translator": "codex",
+  "translator_provider": "local-manual",
+  "translator_model": "gpt-5.6-luna",
+  "reasoning_effort": "high",
+  "reviewer_model": "gpt-5.6-luna",
+  "reviewed_at": "2026-08-05T08:10:33+08:00",
+  "prompt_version": "codex-production-fulltext-2026-08-05-luna-high-v1",
+  "quality_gate_version": 1,
+  "quality_review": {
+    "status": "passed",
+    "reviewer_model": "gpt-5.6-luna",
+    "reviewed_at": "2026-08-05T08:10:33+08:00",
+    "source_paragraph_count": 9,
+    "translated_paragraph_count": 8,
+    "excluded_non_body_paragraphs": [
+      9
+    ],
+    "risk_paragraphs_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "checks": {
+      "source_coverage": true,
+      "quote_attribution": true,
+      "numeric_facts": true,
+      "dictionary": true,
+      "translation_memory": true,
+      "media": true,
+      "metadata": true
+    },
+    "review_notes": "Independent bilingual self-review completed for coverage, attribution, uncertainty, numbers, dates, currency, units, names, media, and natural Chinese news style."
+  },
+  "translation_memory": {
+    "schema_version": 1,
+    "locked": []
+  },
+  "paragraphs": [
+    {
+      "en": "A new report suggests that Halo: Campaign Evolved had a fairly troubled development.",
+      "cn": "一份新报告称，《光环：战役进化》的开发过程颇为坎坷。"
+    },
+    {
+      "en": "According to Rebs Gaming , a popular Halo insider whose reporting journalists have corroborated in the past, the recent Halo remake underwent major changes during its development. Halo Studios works with a bevy of external teams and contractors, something that may have led to issues during Campaign Evolved's development. A studio known as Abstraction was recruited around 2023 to help modify the original game's work and make it compatible with a new engine and new features.",
+      "cn": "据Rebs Gaming报道，这名过去的报道曾获记者证实的知名《光环》内部消息人士称，最近这款《光环》重制版在开发期间经历了重大改动。Halo Studios与大量外部团队和承包商合作，这可能导致《光环：战役进化》的开发出现问题。约在2023年，一家名为Abstraction的工作室受邀协助修改原版游戏的工作，使其兼容新引擎和新功能。"
+    },
+    {
+      "en": "Halo Studios opted to utilize Unreal Engine 5, which created issues since the original game was designed on a rather ancient engine known as Blam. Abstraction worked to gel the two together and make it so new elements like sprinting, four-player co-op, and more all felt organic in Campaign Evolved. The original levels and combat encounters weren't designed for these things, so not accounting for them could have created all kinds of issues.",
+      "cn": "Halo Studios选择使用Unreal Engine 5，由于原版游戏是用一种名为Blam的相当古老的引擎设计的，这带来了问题。Abstraction努力将两者整合，让冲刺、四人合作等新元素在《光环：战役进化》中都显得自然。原有的关卡和战斗遭遇并非为这些功能设计，因此不考虑它们可能引发各种问题。"
+    },
+    {
+      "en": "Unfortunately, Rebs Gaming reportedly discovered that Abstraction was prematurely kicked off the remake after Halo Studios imposed unrealistic deadlines and expectations on a technically complex project. The studio wasn't credited in the game's credits, but individual staff members were given special thanks. A source told Rebs Gaming that Abstraction's work was thrown out and redone quickly, which is believed to have caused bugs and AI problems.",
+      "cn": "遗憾的是，Rebs Gaming据称发现，在Halo Studios为这个技术复杂的项目设定不切实际的期限和预期后，Abstraction被提前踢出重制项目。该工作室没有出现在游戏制作人员名单中，但个别员工获得了特别鸣谢。一名消息人士告诉Rebs Gaming，Abstraction的工作被推翻后又被迅速重做，这被认为导致了漏洞和AI问题。"
+    },
+    {
+      "en": "The insider went on to claim that the studio's hubris led to further setbacks down the line. It was believed that the pivot to Unreal Engine 5 would have made things easier, but that wasn't the case. The team was led to believe by leadership that they could port assets into Unreal; instead, 100% of those assets had to reportedly be rebuilt in the engine, which the team didn't account for.",
+      "cn": "这名内部人士随后声称，该工作室的自负还导致后续出现更多延误。人们原以为转向Unreal Engine 5会让事情更容易，但事实并非如此。团队领导层让团队相信，他们可以将资源移植到Unreal；然而，据称所有这些资源100%都必须在该引擎中重建，而团队此前没有把这一点纳入考虑。"
+    },
+    {
+      "en": "Rebs Gaming went on to allege that overall mismanagement created multiple obstacles for the team and even led to the cancellation of a multiplayer Halo project , as the Campaign Evolved team needed its staff and resources. In the final year of the game's development, the team had to crunch in order to get it out on time.",
+      "cn": "Rebs Gaming随后声称，整体管理不善给团队制造了多个障碍，甚至导致一款光环多人项目被取消，因为《光环：战役进化》团队需要其员工和资源。在游戏开发的最后一年，团队不得不加班赶工，以便按时推出游戏。"
+    },
+    {
+      "en": "Additionally, the game was planned to utilize real-time cutscenes, which would've allowed players to see their custom armor and weapons. This unfortunately had to be scrapped, as the external team working on the game's cinematics \"struggled\" and barely made it in time for release.",
+      "cn": "此外，游戏原计划采用实时过场动画，让玩家能够看到自己定制的护甲和武器。但这一计划遗憾地被取消，因为负责游戏过场动画的外部团队「举步维艰」，几乎没能赶上发售。"
+    },
+    {
+      "en": "Ultimately, Halo: Campaign Evolved is being received fairly well , but it has also left some fans feeling like there was more to be desired with its various issues. It's unclear how the game is selling yet, but we'll likely know within the next few weeks as sales data comes out. The team did tease a Halo 2 remake at the end of this one, so perhaps there is more to come. We can only hope it's not as messy as this game's development, though.",
+      "cn": "最终，《光环：战役进化》的评价相当不错，但由于各种问题，也让一些玩家觉得作品仍有遗憾。目前尚不清楚游戏销量如何；随着销售数据公布，我们可能会在未来几周内得知。团队确实在本作结尾预告了《Halo 2》重制版，所以或许还有更多内容即将到来。不过，我们只能希望它的开发不要像本作那样混乱。"
+    }
+  ]
+}
