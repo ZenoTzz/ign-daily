@@ -344,7 +344,17 @@
                     <span x-show="!art.cover_image">IGN</span>
                   </div>
                   <div class="queue-copy">
-                    <span class="queue-article-id" x-text="`#${String(art.id).padStart(2, '0')}`"></span>
+                    <div class="queue-kicker">
+                      <span class="queue-article-id" x-text="`#${String(art.id).padStart(2, '0')}`"></span>
+                      <button
+                        type="button"
+                        class="queue-copy-source"
+                        @click.stop="copyArticleSource(art)"
+                        :disabled="sourceCopyingId === Number(art.id)"
+                        :title="'\u590d\u5236 #' + art.id + ' \u7684\u82f1\u6587\u539f\u6587'"
+                        x-text="sourceCopyButtonLabel(art)">
+                      </button>
+                    </div>
                     <template x-if="isArticleReadable(art)">
                       <a :href="`article.html?date=${data.date}&id=${art.id}`" @click.stop="saveState()" class="queue-title" x-text="art.cn_title"></a>
                     </template>

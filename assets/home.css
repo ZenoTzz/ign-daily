@@ -321,6 +321,26 @@ html.dark .site-header {
 .queue-title-cell { grid-column: 1; grid-template-columns: 112px minmax(0, 1fr); gap: 13px; }
 .queue-thumb { width: 112px; height: 63px; border: 1px solid var(--home-line); border-radius: 9px; }
 .queue-article-id { display: block; color: var(--home-text-3); font: 11px/1.2 ui-monospace, monospace; }
+.queue-kicker { display: flex; align-items: center; gap: 8px; min-width: 0; }
+.queue-copy-source {
+  min-height: 24px;
+  padding: 0 7px;
+  border: 1px solid var(--home-line);
+  border-radius: 6px;
+  background: transparent;
+  color: var(--home-text-3);
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1;
+  cursor: pointer;
+  transition: color 120ms ease, border-color 120ms ease, background 120ms ease;
+}
+.queue-copy-source:hover:not(:disabled) {
+  border-color: color-mix(in srgb, var(--home-red) 48%, var(--home-line));
+  background: var(--home-red-soft);
+  color: var(--home-red-2);
+}
+.queue-copy-source:disabled { cursor: wait; opacity: 0.62; }
 .queue-title { margin-top: 4px; color: var(--home-text); font-size: 14px; line-height: 1.45; font-weight: 750; }
 .queue-copy p { margin-top: 5px; color: var(--home-text-3); font-size: 12px; line-height: 1.45; }
 .queue-meta { grid-column: 2; color: var(--home-text-2); font-size: 12px; }

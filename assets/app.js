@@ -293,6 +293,8 @@ function appData() {
     selected: [],
     exportBasket: [],
     copyBtnText: '📋 复制摘要',
+    sourceCopyingId: null,
+    sourceCopiedId: null,
     filterCat: 'all',
     queueSearch: '',
     queueSort: 'latest',
@@ -1822,6 +1824,74 @@ function appData() {
         setTimeout(() => { this.copyBtnText = '📋 复制摘要'; }, 2000);
       } catch (e) {
         this.flash('❌ 复制失败：' + e.message, 3000);
+      }
+    },
+
+    sourceCopyButtonLabel(article) {
+      const id = Number(article?.id);
+      if (this.sourceCopyingId === id) return '\u590d\u5236\u4e2d\u2026';
+      if (this.sourceCopiedId === id) return '\u5df2\u590d\u5236';
+      return '\u590d\u5236\u539f\u6587';
+    },
+
+    sourceParagraphs(source) {
+      if (Array.isArray(source?.paragraphs_en) && source.paragraphs_en.length) {
+        return source.paragraphs_en.map(value => String(value || '').trim()).filter(Boolean);
+      }
+      if (source?.body_en) {
+        return String(source.body_en).split(/\n+/).map(value => value.trim()).filter(Boolean);
+      }
+      return [];
+    },
+
+    async writeClipboardText(text) {
+      if (navigator.clipboard && window.isSecureContext) {
+        await navigator.clipboard.writeText(text);
+        return;
+      }
+      const textarea = document.createElement('textarea');
+      textarea.value = text;
+      textarea.style.position = 'fixed';
+      textarea.style.left = '-9999px';
+      document.body.appendChild(textarea);
+      textarea.select();
+      const copied = document.execCommand('copy');
+      document.body.removeChild(textarea);
+      if (!copied) throw new Error('\u6d4f\u89c8\u5668\u672a\u5141\u8bb8\u5199\u5165\u526a\u8d34\u677f');
+    },
+
+    async copyArticleSource(article) {
+      const id = Number(article?.id);
+      const date = this.data?.date || this.currentDate;
+      if (!Number.isFinite(id) || !date || this.sourceCopyingId !== null) return;
+
+      this.sourceCopyingId = id;
+      this.sourceCopiedId = null;
+      try {
+        const padded = String(id).padStart(2, '0');
+        const response = await fetch(`data/${encodeURIComponent(date)}/sources/${padded}.json?t=${Date.now()}`);
+        if (!response.ok) {
+          throw new Error(response.status === 404
+            ? '\u670d\u52a1\u5668\u5c1a\u672a\u7f13\u5b58\u8fd9\u7bc7\u6587\u7ae0\u7684\u82f1\u6587\u539f\u6587'
+            : `\u8bfb\u53d6\u539f\u6587\u5931\u8d25\uff08HTTP ${response.status}\uff09`);
+        }
+        const source = await response.json();
+        const title = String(source?.title_en || source?.en_title || source?.title || article?.en_title || '').trim();
+        const summary = String(source?.summary_en || source?.description_en || '').trim();
+        const paragraphs = this.sourceParagraphs(source);
+        const text = [title, summary, ...paragraphs].filter(Boolean).join('\n\n');
+        if (!text) throw new Error('\u7f13\u5b58\u6587\u4ef6\u4e2d\u6ca1\u6709\u53ef\u590d\u5236\u7684\u82f1\u6587\u6b63\u6587');
+
+        await this.writeClipboardText(text);
+        this.sourceCopiedId = id;
+        this.flash(`\u2705 \u5df2\u590d\u5236 #${id} \u82f1\u6587\u539f\u6587\uff08${paragraphs.length} \u6bb5\uff09`, 2600);
+        setTimeout(() => {
+          if (this.sourceCopiedId === id) this.sourceCopiedId = null;
+        }, 2200);
+      } catch (error) {
+        this.flash(`\u274c \u590d\u5236\u539f\u6587\u5931\u8d25\uff1a${error?.message || error}`, 4500);
+      } finally {
+        this.sourceCopyingId = null;
       }
     },
 
