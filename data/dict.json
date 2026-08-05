@@ -2,7 +2,7 @@
   "_meta": {
     "description": "游戏/影视名称中英文对照词库，翻译时必须查询此词库，有匹配则直接使用",
     "source": "IGN中国 (ign.com.cn) + B站IGN中国 (space.bilibili.com/652239032) + 中国玩家圈公认译名",
-    "last_updated": "2026-07-31",
+    "last_updated": "2026-08-04",
     "source_legend": {
       "ign_cn": "IGN中国官网 ign.com.cn 确认",
       "bilibili": "B站IGN中国主页视频标题/简介确认",
@@ -1401,6 +1401,26 @@
       "cn": "巫师4",
       "source": "user",
       "note": "系列续作名；正文实际使用。"
+    },
+    "Warhammer 40,000": {
+      "cn": "战锤40K",
+      "source": "user",
+      "note": "暂未查到本项目正式中文译名，保留英文"
+    },
+    "Warhammer: Age of Sigmar": {
+      "cn": "战锤：西格玛时代",
+      "source": "user",
+      "note": "暂未确认官方中文译名，保留英文"
+    },
+    "Steam Frame": {
+      "cn": "Steam Frame",
+      "source": "user",
+      "note": "暂未查到正式中文译名，保留英文"
+    },
+    "Steam Machine": {
+      "cn": "Steam Machine",
+      "source": "user",
+      "note": "暂未查到正式中文译名，保留英文"
     }
   },
   "movies_tv": {
@@ -1626,6 +1646,16 @@
       "cn": "少年复仇者",
       "source": "user",
       "note": "未在当前词库中找到对应条目。"
+    },
+    "Secret Level": {
+      "cn": "秘密关卡",
+      "source": "user",
+      "note": "暂未确认官方中文译名，保留英文"
+    },
+    "Life of Strange": {
+      "cn": "奇异人生",
+      "source": "user",
+      "note": "暂未确认官方中文译名，保留英文"
     }
   },
   "companies": {
@@ -2665,6 +2695,11 @@
     "Twitter": {
       "cn": "X",
       "source": "user"
+    },
+    "The Deathwatch": {
+      "cn": "死亡守望",
+      "source": "user",
+      "note": "暂未确认官方译名，保留英文"
     }
   },
   "media": {

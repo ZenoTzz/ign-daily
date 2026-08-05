@@ -96,6 +96,10 @@
     "status": "passed",
     "reviewer_model": "codex-manual-independent-review",
     "reviewed_at": "2026-08-03T10:25:00+08:00",
-    "checks": {"source_coverage": true, "quote_attribution": true, "numeric_facts": true}
+    "checks": {
+      "source_coverage": true,
+      "quote_attribution": true,
+      "numeric_facts": true
+    }
   }
 }

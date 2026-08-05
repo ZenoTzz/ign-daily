@@ -15,22 +15,7 @@
     "Snapdragon 8 Gen 3": "Snapdragon 8 Gen 3",
     "UFS": "UFS"
   },
-  "pending_dict": [
-    {
-      "en": "Steam Frame",
-      "cn": "Steam Frame",
-      "cat": "games",
-      "source": "ai_guess",
-      "note": "暂未查到正式中文译名，保留英文"
-    },
-    {
-      "en": "Steam Machine",
-      "cn": "Steam Machine",
-      "cat": "games",
-      "source": "ai_guess",
-      "note": "暂未查到正式中文译名，保留英文"
-    }
-  ],
+  "pending_dict": [],
   "translator": "codex",
   "translator_provider": "codex",
   "translator_model": "gpt-5.6-luna",
