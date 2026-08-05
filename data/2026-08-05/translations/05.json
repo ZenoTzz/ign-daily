@@ -1,0 +1,120 @@
+{
+  "id": 5,
+  "en_title": "Game of Thrones Author George R.R. Martin Shares Personal Update, Discusses Health and 'Falling Further and Further Behind'",
+  "cn_title": "《权力的游戏》作者谈健康近况",
+  "url": "https://www.ign.com/articles/game-of-thrones-author-george-rr-martin-shares-personal-update-discusses-health-and-falling-further-and-further-behind",
+  "translated_at": "2026-08-05T09:45:23+08:00",
+  "subtitle": "老去并不好玩",
+  "opus_summary": "《权力的游戏》作者George R.R. Martin谈及健康近况，承认今年压力重重、工作越积越多。他仍希望继续更新博客，并庆祝《七王国的骑士》获得九项艾美奖提名。",
+  "translated_terms": {
+    "Game of Thrones": "《权力的游戏》",
+    "A Knight of the Seven Kingdoms": "《七王国的骑士》",
+    "House of the Dragon": "《龙之家族》",
+    "Dark Winds": "《Dark Winds》",
+    "The Winds of Winter": "《凛冬的寒风》",
+    "A Song of Ice and Fire": "《冰与火之歌》"
+  },
+  "pending_dict": [
+    {
+      "en": "A Knight of the Seven Kingdoms",
+      "cn": "七王国的骑士",
+      "cat": "movies_tv",
+      "source": "consensus",
+      "note": "HBO剧集通行中文译名，待用户确认入库"
+    }
+  ],
+  "cover": "https://assets-prd.ignimgs.com/2026/08/04/gettyimages-2255544035-1785842821133.jpg",
+  "images": [
+    {
+      "url": "https://assets-prd.ignimgs.com/2026/08/04/gettyimages-2255544035-1785842821133.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "caption": ""
+    },
+    {
+      "url": "https://assets-prd.ignimgs.com/2022/10/25/ironthronejpg-89c446-160w-1666727969794.jpeg",
+      "caption": ""
+    },
+    {
+      "url": "https://assets-prd.ignimgs.com/2026/08/04/gettyimages-2255544035-1785842832118.jpg",
+      "caption": ""
+    }
+  ],
+  "translator": "codex",
+  "translator_provider": "local-manual",
+  "translator_model": "gpt-5.6-sol",
+  "reasoning_effort": "low",
+  "reviewer_model": "gpt-5.6-sol",
+  "reviewed_at": "2026-08-05T09:45:23+08:00",
+  "prompt_version": "codex-production-fulltext-2026-08-05-sol-low-v1",
+  "quality_gate_version": 1,
+  "quality_review": {
+    "status": "passed",
+    "reviewer_model": "gpt-5.6-sol",
+    "reviewed_at": "2026-08-05T09:45:23+08:00",
+    "source_paragraph_count": 9,
+    "translated_paragraph_count": 9,
+    "excluded_non_body_paragraphs": [
+      10,
+      11
+    ],
+    "risk_paragraphs_reviewed": [
+      3,
+      4,
+      6,
+      7,
+      8,
+      9
+    ],
+    "checks": {
+      "source_coverage": true,
+      "quote_attribution": true,
+      "numeric_facts": true,
+      "dictionary": true,
+      "translation_memory": true,
+      "media": true,
+      "metadata": true
+    },
+    "review_notes": "Refetched the IGN page after repairing anchor-text extraction. The unmatched closing quotation mark in paragraph 3 was checked against Martin's linked primary blog; Chinese quotation boundaries follow the verified quoted passage without changing the English anchor."
+  },
+  "translation_memory": {
+    "schema_version": 1,
+    "locked": []
+  },
+  "paragraphs": [
+    {
+      "en": "77-year-old Game of Thrones author George R.R. Martin has shared a candid update on his health, and discussed \"falling further and further behind.\"",
+      "cn": "77岁的《权力的游戏》作者George R.R. Martin坦率分享了自己的健康近况，并谈到自己正在「越来越落后」。"
+    },
+    {
+      "en": "Penning his first entry in six months on his personal blog, Martin acknowledged the lack of recent updates and described the year so far as having been \"stressful, to say the least.\"",
+      "cn": "Martin在个人博客发布了六个月来的首篇文章。他承认自己最近鲜少更新，并表示今年到目前为止「至少可以说，压力很大」。"
+    },
+    {
+      "en": "\"So much has been happening, it's been overwhelming,\" Martin wrote in a post titled 'Better Late Than Never.' \"Some great things, exciting things. Dreams coming true. But there have been nightmares too. I have lost friends. Battled sadness and depression. The worst may be yet to come.",
+      "cn": "Martin在题为《迟到总比不到好》的文章中写道：「发生了太多事情，让人应接不暇。有些是好事、令人兴奋的事，梦想正在成真。但也有噩梦。我失去了一些朋友，与悲伤和抑郁抗争。最糟糕的事情也许还在后面。」"
+    },
+    {
+      "en": "\"I turned 77 last September, and I tell you, getting old is no fun,\" Martin continued. \"But there have been amazing times as well.\"",
+      "cn": "Martin接着说：「去年9月我满77岁了。我告诉你，变老一点也不好玩。不过，也有过一些很美妙的时刻。」"
+    },
+    {
+      "en": "Ending the blog on a more positive note, Martin celebrated the nine Emmy nominations recently secured by Game of Thrones spinoff A Knight of the Seven Kingdoms and said he \"will try and catch up some\" on posting in future.",
+      "cn": "Martin在博客结尾转向了更积极的话题，庆祝《权力的游戏》衍生剧《七王国的骑士》近日获得九项艾美奖提名，并表示今后会「努力补上一些」博客更新。"
+    },
+    {
+      "en": "No mention was made in the post on what Martin has been working on recently, and there was (perhaps unsurprisingly) also no mention of House of the Dragon, after Martin previously described his working relationship with showrunner Ryan Condal as \"abysmal.\"",
+      "cn": "这篇文章没有提到Martin最近在忙什么；或许并不意外的是，他也没有提及《龙之家族》。Martin此前曾形容自己与剧集主管Ryan Condal的合作关系「糟透了」。"
+    },
+    {
+      "en": "Martin has previously discussed losing fellow authors and peers, as well as his friend, Hollywood legend Robert Redford , who came out of retirement last year for a brief cameo with Martin in his AMC series Dark Winds. Speaking earlier this year, Martin also said that if he never completes Game of Thrones sequel Winds of Winter (or the book after that), there's no plan for anyone else to step in. Instead, his Song of Ice and Fire series simply \"won't be finished.\"",
+      "cn": "Martin此前谈到过多位作家同行的离世，其中也包括他的朋友、好莱坞传奇Robert Redford。Redford去年一度复出，在Martin参与制作的AMC剧集《Dark Winds》中短暂客串。Martin今年早些时候还表示，如果自己始终无法完成《权力的游戏》续作小说《凛冬的寒风》（或再下一部），也没有让其他人接手的计划；《冰与火之歌》系列只会「无法完结」。"
+    },
+    {
+      "en": "Speaking to The Hollywood Reporter about his lack of progress on his next novel, Martin said he would \"hate\" to give up on the series — though admitted he had made little progress in recent years. At the same time, Martin has served as a producer on Game of Thrones' various TV spinoffs and Dark Winds, and continued publishing of various A Song of Ice and Fire companion novels — with at least two new Dunk and Egg adventures also currently left part-finished.",
+      "cn": "Martin在接受《好莱坞报道》采访、谈到新小说进展不佳时表示，他「不愿」放弃这个系列，但也承认自己近几年几乎没有取得进展。与此同时，他还担任多部《权力的游戏》电视衍生剧和《Dark Winds》的制片人，并继续出版《冰与火之歌》的相关读物；目前至少还有两篇新的Dunk and Egg冒险故事尚未完成。"
+    },
+    {
+      "en": "The Game of Thrones franchise shows no sign of slowing down, however, with a new stage play set to begin soon in the UK , and early plans for a potential HBO Game of Thrones sequel series starring Arya Stark .",
+      "cn": "不过，《权力的游戏》系列并没有放慢脚步。全新舞台剧即将在英国上演，HBO也在初步筹划一部可能由Arya Stark主演的《权力的游戏》续集剧集。"
+    }
+  ]
+}

@@ -52,6 +52,22 @@ class EnglishTermBoundaryTests(unittest.TestCase):
             checker.is_known_homonym_context("games", "Blur", source, match)
         )
 
+    def test_dreams_coming_true_is_common_prose(self) -> None:
+        source = "Some great things, exciting things. Dreams coming true."
+        match = re.search(r"\bDreams\b", source)
+        assert match is not None
+        self.assertTrue(
+            checker.is_known_homonym_context("games", "Dreams", source, match)
+        )
+
+    def test_dreams_game_context_still_triggers_game_title(self) -> None:
+        source = "Dreams was released for PlayStation 4."
+        match = re.search(r"\bDreams\b", source)
+        assert match is not None
+        self.assertFalse(
+            checker.is_known_homonym_context("games", "Dreams", source, match)
+        )
+
 
 if __name__ == "__main__":
     unittest.main()

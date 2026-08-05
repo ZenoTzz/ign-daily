@@ -1,0 +1,86 @@
+{
+  "id": 17,
+  "en_title": "The RAM Crisis Seems to Be Expanding to Motherboards Now",
+  "cn_title": "主板或成内存危机下个受害者",
+  "url": "https://www.ign.com/articles/the-ram-crisis-seems-to-be-expanding-to-motherboards-now",
+  "translated_at": "2026-08-05T09:45:23+08:00",
+  "subtitle": "PCB据称最高涨50%",
+  "opus_summary": "消息称，受原料涨价和DIY市场疲软影响，主板PCB价格可能在第三季度最多上涨50%。目前零售价尚未变化，消息仅来自Board Channels论坛，仍需谨慎看待。",
+  "translated_terms": {
+    "PCB": "印刷电路板（PCB）",
+    "DIY market": "DIY市场",
+    "Valve": "Valve",
+    "Xbox Series X": "XBOX Series X"
+  },
+  "pending_dict": [],
+  "cover": "https://assets-prd.ignimgs.com/2023/11/07/auros-x-gen-blog-1699382869811.jpg",
+  "images": [
+    {
+      "url": "https://assets-prd.ignimgs.com/2023/11/07/auros-x-gen-blog-1699382869811.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "caption": ""
+    },
+    {
+      "url": "https://assets-prd.ignimgs.com/2026/08/04/screenshot-2026-08-04-at-12-41-04-pm-1785862097156.jpg",
+      "caption": ""
+    }
+  ],
+  "translator": "codex",
+  "translator_provider": "local-manual",
+  "translator_model": "gpt-5.6-sol",
+  "reasoning_effort": "low",
+  "reviewer_model": "gpt-5.6-sol",
+  "reviewed_at": "2026-08-05T09:45:23+08:00",
+  "prompt_version": "codex-production-fulltext-2026-08-05-sol-low-v1",
+  "quality_gate_version": 1,
+  "quality_review": {
+    "status": "passed",
+    "reviewer_model": "gpt-5.6-sol",
+    "reviewed_at": "2026-08-05T09:45:23+08:00",
+    "source_paragraph_count": 5,
+    "translated_paragraph_count": 5,
+    "excluded_non_body_paragraphs": [
+      6
+    ],
+    "risk_paragraphs_reviewed": [
+      2,
+      3,
+      5
+    ],
+    "checks": {
+      "source_coverage": true,
+      "quote_attribution": true,
+      "numeric_facts": true,
+      "dictionary": true,
+      "translation_memory": true,
+      "media": true,
+      "metadata": true
+    },
+    "review_notes": "Refetched the IGN page after repairing anchor-text extraction. Board Channels, VideoCardz, and the linked Asus motherboard text were restored and checked before translation."
+  },
+  "translation_memory": {
+    "schema_version": 1,
+    "locked": []
+  },
+  "paragraphs": [
+    {
+      "en": "So far, 2026 is no stranger to price increases . Since the calendar flipped over to the new year, RAM, graphics cards, SSDs and processors have all seen price jumps at the hands of AI, and now a leak suggests motherboards are next on the list.",
+      "cn": "2026年至今，各类硬件涨价已不新鲜。进入新年以来，受AI需求影响，内存、显卡、SSD和处理器价格纷纷上涨；如今一则爆料称，主板可能就是下一个。"
+    },
+    {
+      "en": "Take this with a grain of salt, but according to a post on Board Channels , a Chinese tech forum known for industry leaks, and spotted by VideoCardz , prices for PCBs (printed circuit boards) will be going up by as much as 50% in Q3 2026. On top of the raw materials used in motherboards also going up, it seems like prices will see a major increase in the near future. The post also references the fact that the DIY market continues to weaken, which exacerbates the need for companies like MSI, Asus and Gigabyte to raise prices to make up for less volume.",
+      "cn": "这则消息仍需谨慎看待。VideoCardz发现，以行业爆料闻名的中国科技论坛Board Channels有帖子称，印刷电路板（PCB）价格将在2026年第三季度最多上涨50%。加上主板所用原材料也在涨价，主板价格近期似乎将出现明显上调。帖子还提到DIY市场持续疲软，MSI、Asus和Gigabyte等厂商更需要通过涨价弥补销量下滑。"
+    },
+    {
+      "en": "It's not clear when these price increases will actually be reflected on store shelves. We are technically in Q3 right now, and the prices haven't gone up yet. In fact, just looking at the Asus ROG Strix X870E Gaming motherboard on Amazon , it seems like its price has actually gone down over the last year. However, it is just a post on Board Channels, so you should take it with a grain of salt regardless.",
+      "cn": "目前尚不清楚这轮涨价何时会真正反映到零售价上。严格来说现在已是第三季度，但价格还没有上涨。以Amazon上的Asus ROG Strix X870E Gaming主板为例，其价格相比一年前似乎反而有所下降。归根结底，这一消息只来自Board Channels的一篇帖子，仍应谨慎看待。"
+    },
+    {
+      "en": "It's not surprising that the DIY market is shrinking, though. Due to the ongoing RAM crisis, pretty much every component that goes into a gaming PC has sharply increased in price, and now the prospect of building your own computer is a costly one.",
+      "cn": "不过，DIY市场萎缩并不令人意外。持续至今的内存危机已让游戏PC几乎所有零部件的价格大幅上涨，如今自行组装电脑已经变成一项高昂开支。"
+    },
+    {
+      "en": "If motherboards also go up in cost, the total price to build a PC is going to go up even more, as another step in PC gaming even more of a luxury hobby. After all, RAM has only continued to get more expensive since the RAM crisis kicked off in earnest at the beginning of 2026. That crisis hasn't shown any signs of slowing down, either. Valve engineers have come out and said that prices are only getting worse , and even the Xbox Series X just got a price jump up to $799 for the 1TB model with a disk drive .",
+      "cn": "如果主板也涨价，组装PC的总成本还会进一步上升，让PC游戏离普通玩家更远一步。毕竟，自2026年初内存危机全面爆发以来，内存价格只涨不跌，危机也没有任何缓和迹象。Valve工程师已经表示，价格形势只会变得更糟；就连配备光驱的1TB版XBOX Series X也刚刚涨至799美元(约合人民币5401元)。"
+    }
+  ]
+}

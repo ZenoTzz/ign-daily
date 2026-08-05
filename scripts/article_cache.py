@@ -6,7 +6,7 @@ translation, so the page is fetched once and later translation jobs reuse the
 same cleaned English body and images.
 
 Usage:
-  python3 scripts/article_cache.py YYYY-MM-DD [--missing] [--limit N]
+  python3 scripts/article_cache.py YYYY-MM-DD [--missing] [--limit N] [--id ID ...]
   python3 scripts/article_cache.py --all [--missing]
 """
 from __future__ import annotations
@@ -184,7 +184,13 @@ def queued_keys(day_dir: Path) -> tuple[set[int], set[str]]:
     return ids, urls
 
 
-def cache_date(date: str, missing_only: bool = True, limit: int = 20, queued_only: bool = False) -> int:
+def cache_date(
+    date: str,
+    missing_only: bool = True,
+    limit: int = 20,
+    queued_only: bool = False,
+    target_ids: set[int] | None = None,
+) -> int:
     day_dir = DATA_DIR / date
     index_path = day_dir / "index.json"
     if not index_path.exists():
@@ -198,6 +204,8 @@ def cache_date(date: str, missing_only: bool = True, limit: int = 20, queued_onl
         if cached >= limit:
             break
         if not article.get("url") or not article.get("id"):
+            continue
+        if target_ids and int(article["id"]) not in target_ids:
             continue
         if queued_only and int(article["id"]) not in keep_ids and article["url"] not in keep_urls:
             continue
@@ -236,14 +244,31 @@ def main() -> int:
         pos = args.index("--limit")
         if pos + 1 < len(args):
             limit = int(args[pos + 1])
+    target_ids = {
+        int(args[pos + 1])
+        for pos, arg in enumerate(args)
+        if arg == "--id" and pos + 1 < len(args) and args[pos + 1].isdigit()
+    }
 
     if target == "--all":
         total = 0
         for index_path in sorted(DATA_DIR.glob("20??-??-??/index.json")):
-            total += cache_date(index_path.parent.name, missing_only=missing_only, limit=limit, queued_only="--queued" in args)
+            total += cache_date(
+                index_path.parent.name,
+                missing_only=missing_only,
+                limit=limit,
+                queued_only="--queued" in args,
+                target_ids=target_ids,
+            )
         print(f"ARTICLE_CACHE_ALL_DONE: cached={total}")
     else:
-        cache_date(target, missing_only=missing_only, limit=limit, queued_only="--queued" in args)
+        cache_date(
+            target,
+            missing_only=missing_only,
+            limit=limit,
+            queued_only="--queued" in args,
+            target_ids=target_ids,
+        )
     return 0
 
 

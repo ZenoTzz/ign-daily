@@ -106,6 +106,11 @@ def is_known_homonym_context(
             )
         )
 
+    if en_term == "Dreams":
+        # "Dreams coming true" is ordinary prose, not Media Molecule's game.
+        context_end = min(len(source_text), match.end() + 40)
+        return bool(re.match(r"\s+(?:are\s+)?coming\s+true\b", source_text[match.end():context_end], re.I))
+
     return False
 
 

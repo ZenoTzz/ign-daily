@@ -147,7 +147,17 @@ def remove_html_noise(html: str) -> str:
     html = re.sub(r"(?is)<script\b.*?</script>|<style\b.*?</style>|<noscript\b.*?</noscript>", " ", html)
     html = re.sub(r"(?is)<svg\b.*?</svg>|<picture\b.*?</picture>|<figure\b.*?</figure>", " ", html)
     html = re.sub(r"(?is)<(header|nav|footer|aside|form|button)\b.*?</\1>", " ", html)
-    html = re.sub(r"(?is)<[^>]+(?:nav|footer|header|sidebar|menu|breadcrumb|social|share|newsletter|promo|ad-|advert|recommend)[^>]*>.*?</[^>]+>", " ", html)
+    # Only treat structural containers as removable noise. Searching every
+    # byte of every tag also matched article-link URLs containing ``ad-`` and
+    # deleted their visible anchor text.
+    html = re.sub(
+        r"(?is)<(div|section)\b"
+        r"(?=[^>]*(?:class|id|role|data-cy)=[\"'][^\"']*"
+        r"(?:nav|footer|header|sidebar|menu|breadcrumb|social|share|newsletter|promo|advert|recommend|(?:^|[\s_-])ad(?:[\s_-]|$))"
+        r"[^\"']*[\"'])[^>]*>.*?</\1>",
+        " ",
+        html,
+    )
     return html
 
 
