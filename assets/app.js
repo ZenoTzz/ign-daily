@@ -1844,6 +1844,27 @@ function appData() {
       return [];
     },
 
+    sourceSubtitle(source, article) {
+      const candidates = [
+        source?.subtitle_en,
+        source?.subheadline_en,
+        source?.dek_en,
+        source?.summary_en,
+        source?.description_en,
+        source?.subtitle,
+        source?.subheadline,
+        source?.dek,
+        article?.en_subtitle,
+        article?.subtitle_en,
+        article?.en_summary,
+        article?.summary_en,
+        article?.en_description,
+        article?.description_en,
+      ];
+      const value = candidates.find(candidate => String(candidate || '').trim());
+      return String(value || '').trim();
+    },
+
     async writeClipboardText(text) {
       if (navigator.clipboard && window.isSecureContext) {
         await navigator.clipboard.writeText(text);
@@ -1877,9 +1898,9 @@ function appData() {
         }
         const source = await response.json();
         const title = String(source?.title_en || source?.en_title || source?.title || article?.en_title || '').trim();
-        const summary = String(source?.summary_en || source?.description_en || '').trim();
+        const subtitle = this.sourceSubtitle(source, article);
         const paragraphs = this.sourceParagraphs(source);
-        const text = [title, summary, ...paragraphs].filter(Boolean).join('\n\n');
+        const text = [title, subtitle, ...paragraphs].filter(Boolean).join('\n\n');
         if (!text) throw new Error('\u7f13\u5b58\u6587\u4ef6\u4e2d\u6ca1\u6709\u53ef\u590d\u5236\u7684\u82f1\u6587\u6b63\u6587');
 
         await this.writeClipboardText(text);
