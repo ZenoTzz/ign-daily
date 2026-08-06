@@ -48,7 +48,8 @@
   <link rel="stylesheet" href="assets/home.css?v=20260805sourcecopy1">
   <link rel="stylesheet" href="assets/workspace-ui.css?v=20260711loginfix1">
   <script defer src="assets/exceljs.min.js"></script>
-  <script defer src="assets/app.js?v=20260806sourcecopy2"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
+  <script defer src="assets/app.js?v=20260806sourcecopy3"></script>
   <script defer src="assets/alpine.min.js"></script>
   <link rel="stylesheet" href="assets/compliance.css?v=20260710beian2">
   <script defer src="assets/compliance.js?v=20260709beian1"></script>
@@ -353,6 +354,14 @@
                         :disabled="sourceCopyingId === Number(art.id)"
                         :title="'\u590d\u5236 #' + art.id + ' \u7684\u82f1\u6587\u539f\u6587'"
                         x-text="sourceCopyButtonLabel(art)">
+                      </button>
+                      <button
+                        type="button"
+                        class="queue-copy-source"
+                        @click.stop="downloadArticleImages(art)"
+                        :disabled="imageDownloadingId === Number(art.id)"
+                        :title="'\u6253\u5305\u4e0b\u8f7d #' + art.id + ' \u7684\u6293\u53d6\u914d\u56fe'"
+                        x-text="imageDownloadButtonLabel(art)">
                       </button>
                     </div>
                     <template x-if="isArticleReadable(art)">

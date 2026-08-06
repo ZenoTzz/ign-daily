@@ -295,6 +295,8 @@ function appData() {
     copyBtnText: '📋 复制摘要',
     sourceCopyingId: null,
     sourceCopiedId: null,
+    imageDownloadingId: null,
+    imageDownloadProgress: 0,
     filterCat: 'all',
     queueSearch: '',
     queueSort: 'latest',
@@ -1913,6 +1915,100 @@ function appData() {
         this.flash(`\u274c \u590d\u5236\u539f\u6587\u5931\u8d25\uff1a${error?.message || error}`, 4500);
       } finally {
         this.sourceCopyingId = null;
+      }
+    },
+
+    imageDownloadButtonLabel(article) {
+      const id = Number(article?.id);
+      if (this.imageDownloadingId === id) {
+        return this.imageDownloadProgress > 0
+          ? `\u4e0b\u8f7d\u4e2d ${this.imageDownloadProgress}`
+          : '\u51c6\u5907\u4e2d\u2026';
+      }
+      return '\u4e0b\u8f7d\u914d\u56fe';
+    },
+
+    sourceImages(source) {
+      const images = Array.isArray(source?.images) ? source.images : [];
+      const cover = source?.cover_image ? [source.cover_image] : [];
+      return [...new Set([...cover, ...images]
+        .map(image => typeof image === 'string' ? image : (image?.url || image?.src || ''))
+        .map(value => String(value || '').trim())
+        .filter(Boolean))];
+    },
+
+    imageExtension(url, blob) {
+      const byMime = {
+        'image/avif': 'avif',
+        'image/gif': 'gif',
+        'image/jpeg': 'jpg',
+        'image/png': 'png',
+        'image/webp': 'webp',
+      };
+      if (byMime[blob?.type]) return byMime[blob.type];
+      const path = String(url || '').split('?')[0];
+      const ext = path.includes('.') ? path.split('.').pop().toLowerCase() : '';
+      return /^[a-z0-9]{2,5}$/.test(ext) ? ext : 'jpg';
+    },
+
+    async downloadArticleImages(article) {
+      const id = Number(article?.id);
+      const date = this.data?.date || this.currentDate;
+      if (!Number.isFinite(id) || !date || this.imageDownloadingId !== null) return;
+      if (!window.JSZip) {
+        this.flash('\u274c \u914d\u56fe\u6253\u5305\u7ec4\u4ef6\u52a0\u8f7d\u5931\u8d25\uff0c\u8bf7\u5237\u65b0\u540e\u91cd\u8bd5', 4500);
+        return;
+      }
+
+      this.imageDownloadingId = id;
+      this.imageDownloadProgress = 0;
+      try {
+        const padded = String(id).padStart(2, '0');
+        const response = await fetch(`data/${encodeURIComponent(date)}/sources/${padded}.json?t=${Date.now()}`);
+        if (!response.ok) {
+          throw new Error(response.status === 404
+            ? '\u670d\u52a1\u5668\u5c1a\u672a\u7f13\u5b58\u8fd9\u7bc7\u6587\u7ae0\u7684\u914d\u56fe'
+            : `\u8bfb\u53d6\u914d\u56fe\u5931\u8d25\uff08HTTP ${response.status}\uff09`);
+        }
+        const source = await response.json();
+        const images = this.sourceImages(source);
+        if (!images.length) throw new Error('\u8fd9\u7bc7\u6587\u7ae0\u6ca1\u6709\u6293\u53d6\u5230\u914d\u56fe');
+
+        const zip = new window.JSZip();
+        let okCount = 0;
+        for (let index = 0; index < images.length; index += 1) {
+          const url = images[index];
+          try {
+            const imageResponse = await fetch(url, { mode: 'cors' });
+            if (!imageResponse.ok) throw new Error(`HTTP ${imageResponse.status}`);
+            const blob = await imageResponse.blob();
+            const ext = this.imageExtension(url, blob);
+            zip.file(`${String(index + 1).padStart(2, '0')}.${ext}`, blob);
+            okCount += 1;
+          } catch (error) {
+            console.warn('Image download failed:', url, error);
+          }
+          this.imageDownloadProgress = index + 1;
+        }
+        if (!okCount) throw new Error('\u914d\u56fe\u88ab\u56fe\u7247\u670d\u52a1\u5668\u62d2\u7edd\u4e0b\u8f7d');
+
+        const safeTitle = String(article?.cn_title || source?.title_en || 'images')
+          .replace(/[^\w\u4e00-\u9fa5-]+/g, '_')
+          .slice(0, 30);
+        const blob = await zip.generateAsync({ type: 'blob' });
+        const link = document.createElement('a');
+        link.href = URL.createObjectURL(blob);
+        link.download = `${date}_${padded}_${safeTitle}.zip`;
+        document.body.appendChild(link);
+        link.click();
+        link.remove();
+        setTimeout(() => URL.revokeObjectURL(link.href), 1000);
+        this.flash(`\u2705 \u5df2\u6253\u5305 #${id} \u7684 ${okCount} \u5f20\u914d\u56fe`, 3000);
+      } catch (error) {
+        this.flash(`\u274c \u4e0b\u8f7d\u914d\u56fe\u5931\u8d25\uff1a${error?.message || error}`, 4500);
+      } finally {
+        this.imageDownloadingId = null;
+        this.imageDownloadProgress = 0;
       }
     },
 
