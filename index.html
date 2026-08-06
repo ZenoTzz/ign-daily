@@ -48,8 +48,7 @@
   <link rel="stylesheet" href="assets/home.css?v=20260805sourcecopy1">
   <link rel="stylesheet" href="assets/workspace-ui.css?v=20260711loginfix1">
   <script defer src="assets/exceljs.min.js"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
-  <script defer src="assets/app.js?v=20260806sourcecopy3"></script>
+  <script defer src="assets/app.js?v=20260806sourcecopy4"></script>
   <script defer src="assets/alpine.min.js"></script>
   <link rel="stylesheet" href="assets/compliance.css?v=20260710beian2">
   <script defer src="assets/compliance.js?v=20260709beian1"></script>
@@ -358,10 +357,10 @@
                       <button
                         type="button"
                         class="queue-copy-source"
-                        @click.stop="downloadArticleImages(art)"
-                        :disabled="imageDownloadingId === Number(art.id)"
-                        :title="'\u6253\u5305\u4e0b\u8f7d #' + art.id + ' \u7684\u6293\u53d6\u914d\u56fe'"
-                        x-text="imageDownloadButtonLabel(art)">
+                        @click.stop="openArticleImages(art)"
+                        :disabled="imageGalleryLoadingId === Number(art.id)"
+                        :title="'\u67e5\u770b #' + art.id + ' \u7684\u6293\u53d6\u914d\u56fe'"
+                        x-text="imageGalleryButtonLabel(art)">
                       </button>
                     </div>
                     <template x-if="isArticleReadable(art)">
@@ -897,6 +896,28 @@
           </div>
         </div>
       </div>
+    </div>
+
+    <div x-show="imageGalleryOpen" x-cloak @keydown.escape.window="closeArticleImages()"
+         class="overlay image-gallery-overlay" @click.self="closeArticleImages()">
+      <section class="modal image-gallery-modal" aria-modal="true" role="dialog" aria-label="文章配图">
+        <header class="image-gallery-head">
+          <div>
+            <strong x-text="imageGalleryArticle?.cn_title || '文章配图'"></strong>
+            <span x-text="imageGalleryImages.length ? `${imageGalleryImages.length} 张，点击图片打开原图` : (imageGalleryLoadingId ? '正在读取配图…' : '没有抓取到配图')"></span>
+          </div>
+          <button type="button" class="modal-close" @click="closeArticleImages()" aria-label="关闭"><svg width="18" height="18"><use href="#icon-x"/></svg></button>
+        </header>
+        <div class="image-gallery-grid" x-show="imageGalleryImages.length">
+          <template x-for="(url, index) in imageGalleryImages" :key="`${url}-${index}`">
+            <a :href="url" target="_blank" rel="noopener noreferrer" :title="`打开第 ${index + 1} 张原图`">
+              <img :src="url" :alt="`${imageGalleryArticle?.cn_title || '文章配图'} ${index + 1}`" loading="lazy" referrerpolicy="no-referrer">
+              <span x-text="index === 0 ? '封面' : `图 ${index + 1}`"></span>
+            </a>
+          </template>
+        </div>
+        <p class="image-gallery-empty" x-show="!imageGalleryImages.length && !imageGalleryLoadingId">本文没有缓存配图</p>
+      </section>
     </div>
 
     <!-- Toast -->
