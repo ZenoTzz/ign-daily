@@ -2,6 +2,331 @@
   "date": "2026-08-07",
   "articles": [
     {
+      "id": 31,
+      "category": "行业动态",
+      "emoji": "✂️",
+      "en_title": "Layoffs Hit Staff at Crossfire Developer That’s No Moon",
+      "cn_title": "《穿越火线》开发商裁员，顽迪老将创办的工作室也未能幸免",
+      "summary": "游戏行业再掀裁员潮，《穿越火线》开发商That's No Moon解雇了一批员工，具体人数尚未确定。8月6日起，前员工陆续在领英发帖确认失业，岗位涉及技术美术和环境美术。该工作室由顽皮狗、Infinity Ward资深从业者于2021年创立，今年夏日游戏节才公布了首款AAA项目《穿越火线》。",
+      "url": "https://www.ign.com/articles/layoffs-hit-crossfire-developer-thats-no-moon",
+      "publish_time_cn": "2026-08-07 07:55",
+      "pub_date": "2026-08-07 07:55",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/26/crossfire-blogroll-1782486490466.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/26/crossfire-blogroll-1782486490466.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/26/crossfire-blogroll-1782486490466.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/26/crossfire-blogroll-1782486490466.jpg?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/26/crossfire-blogroll-1782486490466.jpg?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/26/crossfire-blogroll-1782486490466.jpg",
+        "https://assets-prd.ignimgs.com/2026/06/05/crossfire-1780696022584.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-08-07T08:17:58+08:00",
+      "pending_dict": [
+        {
+          "en": "That's No Moon",
+          "cn": "That's No Moon",
+          "cat": "companies",
+          "source": "ai_guess",
+          "reason": "工作室名尚无通行中文译名，且带有星战梗，保留英文更稳妥。"
+        },
+        {
+          "en": "Crossfire",
+          "cn": "穿越火线",
+          "cat": "games",
+          "source": "ai_guess",
+          "reason": "该作与腾讯《穿越火线》是否同一作品需人工确认，避免误导读者。"
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "category": "影视资讯",
+      "emoji": "📺",
+      "en_title": "American Squid Game Spinoff Series Reportedly Canceled at Netflix",
+      "cn_title": "《鱿鱼游戏》美国衍生剧传遭Netflix取消",
+      "summary": "据知情人士透露，Netflix已取消大卫·芬奇执导的美国版《鱿鱼游戏》衍生剧。该项目定名《Squid Game: America》，原计划2026年2月在洛杉矶开拍，但此后数月毫无进展。消息称Netflix对《鱿鱼游戏》IP的规划已大幅调整，未来或转向各国际市场的地区版本，不过目前尚无任何地区版确认开发。",
+      "url": "https://www.ign.com/articles/american-squid-game-spinoff-series-reportedly-canceled-at-netflix",
+      "publish_time_cn": "2026-08-07 07:30",
+      "pub_date": "2026-08-07 07:30",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/08/06/squid-game-america-spinoff-reportedly-canceled-1786058563603.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/08/06/squid-game-america-spinoff-reportedly-canceled-1786058563603.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/06/squid-game-america-spinoff-reportedly-canceled-1786058563603.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/06/squid-game-america-spinoff-reportedly-canceled-1786058563603.jpg?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/06/squid-game-america-spinoff-reportedly-canceled-1786058563603.jpg?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/06/squid-game-america-spinoff-reportedly-canceled-1786058563603.jpg",
+        "https://assets-prd.ignimgs.com/2021/09/28/squid-games-button-1632812910836.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-08-07T08:18:02+08:00",
+      "pending_dict": [
+        {
+          "en": "Squid Game: America",
+          "cn": "《鱿鱼游戏：美国》",
+          "cat": "movies_tv",
+          "source": "ai_guess",
+          "reason": "Netflix美国衍生剧暂定名，尚无官方中文译名，需人工确认"
+        },
+        {
+          "en": "The Adventures of Cliff Booth",
+          "cn": "《克里夫·布斯冒险记》",
+          "cat": "movies_tv",
+          "source": "ai_guess",
+          "reason": "大卫·芬奇新片，尚无官方中文译名，需人工确认"
+        },
+        {
+          "en": "Mask Girl",
+          "cn": "《假面女郎》",
+          "cat": "movies_tv",
+          "source": "ai_guess",
+          "reason": "Netflix韩国剧集通行译名，建议确认后入词库"
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "category": "游戏新闻",
+      "emoji": "🎮",
+      "en_title": "Quake Gets Free New Campaign Co-Developed by MachineGames for Game's 30th Anniversary",
+      "cn_title": "《雷神之锤》30周年免费战役上线，MachineGames联手打造",
+      "summary": "在QuakeCon上，id Software与MachineGames宣布为2021年重制版《雷神之锤》推出免费新战役《Dawn of the Machine》，共19个关卡。主角Ranger被困时间循环，需用新武器（包括一把斧头）击败新敌人、解开谜题。更新还加入新原声带、死亡竞赛地图与成就，重玩关卡将解锁新路径、秘密与强化升级。",
+      "url": "https://www.ign.com/articles/quake-gets-free-new-campaign-co-developed-by-machinegames-for-games-30th-anniversary",
+      "publish_time_cn": "2026-08-07 07:04",
+      "pub_date": "2026-08-07 07:04",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/08/06/quakedawnofthemachinelaunchtrailer-ign-blogroll-1786040851247.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/08/06/quakedawnofthemachinelaunchtrailer-ign-blogroll-1786040851247.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/06/quakedawnofthemachinelaunchtrailer-ign-blogroll-1786040851247.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/06/quakedawnofthemachinelaunchtrailer-ign-blogroll-1786040851247.jpg?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/06/quakedawnofthemachinelaunchtrailer-ign-blogroll-1786040851247.jpg?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/06/quakedawnofthemachinelaunchtrailer-ign-blogroll-1786040851247.jpg",
+        "https://assets-prd.ignimgs.com/2021/08/19/quake-button-2021-1629396745144.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-08-07T07:17:32+08:00",
+      "pending_dict": [
+        {
+          "en": "Quake",
+          "cn": "雷神之锤",
+          "cat": "games",
+          "source": "ai_guess",
+          "reason": "经典FPS，中国玩家圈通行译名为《雷神之锤》，词库未收录，建议确认后入库"
+        },
+        {
+          "en": "Dawn of the Machine",
+          "cn": "机械黎明",
+          "cat": "games",
+          "source": "ai_guess",
+          "reason": "新战役名，无官方中文译名，暂保留英文，译名待确认"
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "category": "游戏新闻",
+      "emoji": "🎮",
+      "en_title": "Call of Duty: World at War Multiplayer Nearly Had a Much Larger Focus on Vehicles",
+      "cn_title": "《使命召唤：战争世界》原计划大幅强化载具战",
+      "summary": "数据挖掘发现，《使命召唤：战争世界》多人模式原计划大幅强化载具战斗：玩家在七连杀后可呼叫坦克，并能自定义武器、技能乃至加装火焰喷射器，游戏还设计了更多适配坦克的地图。但这些内容在发售前被大幅削减或移除，可能与游戏紧张的开发周期有关。此前玩家还在新版《黑色行动》移植版中发现了被删除的僵尸塔防模式。",
+      "url": "https://www.ign.com/articles/call-of-duty-world-at-war-multiplayer-nearly-had-a-much-larger-focus-on-vehicles",
+      "publish_time_cn": "2026-08-07 06:37",
+      "pub_date": "2026-08-07 06:37",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/08/06/cod-world-at-war-1786055401014.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/08/06/cod-world-at-war-1786055401014.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/06/cod-world-at-war-1786055401014.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/06/cod-world-at-war-1786055401014.jpg?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/06/cod-world-at-war-1786055401014.jpg?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/06/cod-world-at-war-1786055401014.jpg",
+        "https://assets-prd.ignimgs.com/2022/01/04/call-of-duty-world-at-war-button-edit-1641280164245.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-08-07T07:17:34+08:00"
+    },
+    {
+      "id": 26,
+      "category": "观点推荐",
+      "emoji": "👟",
+      "en_title": "7 Must-Have Sneakers to Step Into the School Year and Fall in Style",
+      "cn_title": "返校季焕新造型：7款必入潮鞋推荐",
+      "summary": "Foot Locker 返校季促销火热进行中，精选鞋款、服饰和包袋最高直降四成。推荐清单涵盖 Nike Air Force 1 '07、Adidas Campus 00s、Jordan Retro 3、New Balance 9060、Nike Zoom Vomero 5 与 ASICS GEL-1130 等经典潮鞋，兼顾日常穿搭与运动需求。FLX 会员还可享受免运费、免费退换及积分返利等福利。",
+      "url": "https://www.ign.com/articles/7-must-have-sneakers-to-step-into-the-school-year-and-fall-in-style",
+      "publish_time_cn": "2026-08-07 06:00",
+      "pub_date": "2026-08-07 06:00",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/08/04/untitled-design-21-1785877686956.png?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/08/04/untitled-design-21-1785877686956.png?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/04/untitled-design-21-1785877686956.png?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/04/untitled-design-21-1785877686956.png?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/04/untitled-design-21-1785877686956.png?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/04/untitled-design-21-1785877686956.png",
+        "https://assets-prd.ignimgs.com/2026/08/04/screenshot-2026-08-04-at-12-43-53-pm-1785872646345.png",
+        "https://assets-prd.ignimgs.com/2026/08/04/screenshot-2026-08-04-at-12-47-46-pm-1785872878959.png",
+        "https://assets-prd.ignimgs.com/2026/08/04/screenshot-2026-08-04-at-12-49-14-pm-1785872971520.png",
+        "https://assets-prd.ignimgs.com/2026/08/04/screenshot-2026-08-04-at-12-51-28-pm-1785873110940.png",
+        "https://assets-prd.ignimgs.com/2026/08/04/screenshot-2026-08-04-at-12-52-45-pm-1785873189085.png",
+        "https://assets-prd.ignimgs.com/2026/08/04/screenshot-2026-08-04-at-12-54-40-pm-1785873314302.png",
+        "https://assets-prd.ignimgs.com/2026/08/04/screenshot-2026-08-04-at-12-56-39-pm-1785873428449.png"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-08-07T06:17:29+08:00"
+    },
+    {
+      "id": 27,
+      "category": "影视资讯",
+      "emoji": "🦖",
+      "en_title": "Jurassic World Rebirth Director Exits Film Over 'Creative Differences'",
+      "cn_title": "《侏罗纪世界：重生》续集导演因创意分歧退出",
+      "summary": "加雷斯·爱德华兹因「创意分歧」退出《侏罗纪世界：重生》续集的导演工作，环球影业已确认此事并表示合作愉快。原版《侏罗纪公园》编剧大卫·凯普已完成剧本，斯嘉丽·约翰逊、马赫沙拉·阿里、乔纳森·贝利等主演预计回归。前作全球票房超7.5亿美元(约合人民币51亿元)，IGN 评分仅5分。",
+      "url": "https://www.ign.com/articles/jurassic-world-rebirth-director-exits-film-over-creative-differences",
+      "publish_time_cn": "2026-08-07 05:54",
+      "pub_date": "2026-08-07 05:54",
+      "cover_image": "https://assets-prd.ignimgs.com/2025/02/05/jurassicworldrebirth-1738760989690.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2025/02/05/jurassicworldrebirth-1738760989690.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2025/02/05/jurassicworldrebirth-1738760989690.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2025/02/05/jurassicworldrebirth-1738760989690.jpg?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2025/02/05/jurassicworldrebirth-1738760989690.jpg?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2025/02/05/jurassicworldrebirth-1738760989690.jpg",
+        "https://assets-prd.ignimgs.com/2024/08/29/jurassic-world-rebirth-button-1724948620583.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-08-07T06:17:31+08:00",
+      "pending_dict": [
+        {
+          "en": "Gareth Edwards",
+          "cn": "加雷斯·爱德华兹",
+          "cat": "people",
+          "source": "ai_guess",
+          "reason": "知名导演（《哥斯拉》《侠盗一号》），通行译名待确认"
+        },
+        {
+          "en": "David Koepp",
+          "cn": "大卫·凯普",
+          "cat": "people",
+          "source": "ai_guess",
+          "reason": "好莱坞知名编剧，通行译名待确认"
+        },
+        {
+          "en": "Mahershala Ali",
+          "cn": "马赫沙拉·阿里",
+          "cat": "people",
+          "source": "ai_guess",
+          "reason": "奥斯卡影帝，通行译名待确认"
+        },
+        {
+          "en": "Jonathan Bailey",
+          "cn": "乔纳森·贝利",
+          "cat": "people",
+          "source": "ai_guess",
+          "reason": "《布里奇顿》主演，通行译名待确认"
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "category": "影视资讯",
+      "emoji": "🎬",
+      "en_title": "Sam Neill to Play Role in Sony Pictures' Legend of Zelda Movie",
+      "cn_title": "已故萨姆·尼尔将出演《塞尔达传说》电影",
+      "summary": "据Deadline报道，已故演员萨姆·尼尔将在索尼影业《塞尔达传说》真人电影中饰演角色，具体身份暂未公布，索尼和任天堂均未回应。该片已公布本杰明·埃文·安斯沃斯饰林克、博·布拉加森饰塞尔达公主、乌利·拉图克夫饰加侬多夫，将于2027年4月30日上映。",
+      "url": "https://www.ign.com/articles/sam-neill-to-play-role-in-sony-pictures-legend-of-zelda-movie",
+      "publish_time_cn": "2026-08-07 04:48",
+      "pub_date": "2026-08-07 04:48",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/08/06/sam-neill-legend-of-zelda-1786049215910.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/08/06/sam-neill-legend-of-zelda-1786049215910.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/06/sam-neill-legend-of-zelda-1786049215910.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/06/sam-neill-legend-of-zelda-1786049215910.jpg?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/06/sam-neill-legend-of-zelda-1786049215910.jpg?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/06/sam-neill-legend-of-zelda-1786049215910.jpg",
+        "https://assets-prd.ignimgs.com/2023/11/07/zelda-1699396593899.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-08-07T05:17:28+08:00",
+      "pending_dict": [
+        {
+          "en": "Sam Neill",
+          "cn": "萨姆·尼尔",
+          "cat": "people",
+          "source": "ai_guess",
+          "reason": "著名演员，通行译名存在萨姆·尼尔/山姆·尼尔两种写法，词库未收录，需人工确认"
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "category": "游戏新闻",
+      "emoji": "🎮",
+      "en_title": "Hideki Kamiya Reveals Spider-Man 2 Scene That Inspired Key Game Sequence in Okami",
+      "cn_title": "神谷英树透露：《大神》关键场景灵感来自《蜘蛛侠2》",
+      "summary": "神谷英树透露，《大神》中一段关键玩法的灵感来自山姆·雷米执导的电影《蜘蛛侠2》。该场景由主策划Hiroshi Shibata设计，玩家需操控天照用蔓藤之力拦停顺流而下的大圆木，以免被冲下瀑布。神谷英树还提到，《大神》续作正由他离开白金工作室后创立的Clovers与卡普空合作开发。",
+      "url": "https://www.ign.com/articles/hideki-kamiya-reveals-spider-man-2-scene-that-inspired-key-game-sequence-in-okami",
+      "publish_time_cn": "2026-08-07 03:50",
+      "pub_date": "2026-08-07 03:50",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/08/06/okami-scene-inspired-by-spider-man-2-movie-1786045483234.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/08/06/okami-scene-inspired-by-spider-man-2-movie-1786045483234.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/06/okami-scene-inspired-by-spider-man-2-movie-1786045483234.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/06/okami-scene-inspired-by-spider-man-2-movie-1786045483234.jpg?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/06/okami-scene-inspired-by-spider-man-2-movie-1786045483234.jpg?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/06/okami-scene-inspired-by-spider-man-2-movie-1786045483234.jpg",
+        "https://assets-prd.ignimgs.com/2024/12/13/okami-sequel-key-art-1734067237310.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-08-07T04:17:31+08:00",
+      "pending_dict": [
+        {
+          "en": "Hiroshi Shibata",
+          "cn": "柴田洋",
+          "cat": "people",
+          "source": "ai_guess",
+          "reason": "日本开发者，官方汉字姓名待确认"
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "category": "影视资讯",
+      "emoji": "🎬",
+      "en_title": "The Legend of Zelda Movie Casts Uli Latukefu as Ganondorf",
+      "cn_title": "《塞尔达传说》电影加侬多夫由Uli Latukefu饰演",
+      "summary": "据Deadline报道，演员Uli Latukefu将在《塞尔达传说》真人电影中饰演大反派加侬多夫，并已签下多部片约。影片已于今年早些时候杀青，任天堂与索尼对内容严格保密，目前仅确认了林克与塞尔达的演员人选。该片定于2027年4月30日上映。",
+      "url": "https://www.ign.com/articles/the-legend-of-zelda-movie-casts-uli-latukefu-as-ganondorf",
+      "publish_time_cn": "2026-08-07 03:29",
+      "pub_date": "2026-08-07 03:29",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/08/06/uli-latukefu-1786044297446.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/08/06/uli-latukefu-1786044297446.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/06/uli-latukefu-1786044297446.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/06/uli-latukefu-1786044297446.jpg?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/06/uli-latukefu-1786044297446.jpg?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/06/uli-latukefu-1786044297446.jpg",
+        "https://assets-prd.ignimgs.com/2023/11/07/zelda-1699396593899.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-08-07T04:17:32+08:00",
+      "pending_dict": [
+        {
+          "en": "Ganondorf",
+          "cn": "加侬多夫",
+          "cat": "movies_tv",
+          "source": "ai_guess",
+          "reason": "词库暂无该角色译名；任天堂简体官方或作「盖侬多夫」，需人工确认后统一"
+        }
+      ]
+    },
+    {
       "id": 20,
       "category": "科技新闻",
       "emoji": "🎮",
@@ -161,6 +486,38 @@
           "cat": "people",
           "source": "ai_guess",
           "reason": "知名导演，有通行中文译名，建议确认后入词库"
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "category": "评测评分",
+      "emoji": "🥊",
+      "en_title": "Marvel Tokon: Fighting Souls Review So Far",
+      "cn_title": "《Marvel Tokon》前瞻：格斗爽快，门槛不低",
+      "summary": "《Marvel Tokon：Fighting Souls》完整评测将于下周发布，IGN编辑率先体验了公开测试中的大量在线对局。这款Arc System Works出品的4v4组队格斗游戏机制深度十足，但上手并不直观；共享血条等设计降低了传统组队格斗的入门门槛，不过辅助与主动换人系统略显繁琐生硬。",
+      "url": "https://www.ign.com/articles/marvel-tokon-fighting-souls-review",
+      "publish_time_cn": "2026-08-07 00:47",
+      "pub_date": "2026-08-07 00:47",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/08/05/marveltokon-reviewinprogress-blogroll-1785970354860.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/08/05/marveltokon-reviewinprogress-blogroll-1785970354860.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/05/marveltokon-reviewinprogress-blogroll-1785970354860.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/05/marveltokon-reviewinprogress-blogroll-1785970354860.jpg?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/05/marveltokon-reviewinprogress-blogroll-1785970354860.jpg?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/05/marveltokon-reviewinprogress-blogroll-1785970354860.jpg",
+        "https://assets-prd.ignimgs.com/2025/06/04/tokon-1749076098123.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-08-08T00:48:11+08:00",
+      "pending_dict": [
+        {
+          "en": "Marvel Tokon: Fighting Souls",
+          "cn": "漫威Tokon：Fighting Souls",
+          "cat": "games",
+          "source": "ai_guess",
+          "reason": "整部作品尚无官方中文译名；Marvel 通行译名为「漫威」，Tokon 疑似取自日文「闘魂」（Toukon），需官方或社区确认后再定名。"
         }
       ]
     },
@@ -515,6 +872,37 @@
       "source_fetched_at": "2026-08-06T20:17:46+08:00"
     },
     {
+      "id": 35,
+      "category": "人物新闻",
+      "emoji": "👮",
+      "en_title": "Japanese Anime Fan Arrested After Canceling Naruto and One Piece Merchandise Orders Worth $2.7 Million",
+      "cn_title": "日本女子取消43亿日元(约合人民币2亿元)《火影》《海贼王》周边订单被捕",
+      "summary": "东京警方逮捕了一名32岁女性餐厅员工，指控她妨碍集英社动漫周边商店经营。该女子被指在2024至2025年间用238个假账号下单超2000次，订购《火影忍者》《海贼王》等价值约43亿日元(约合人民币2亿元)的商品，却在发货后取消或拒不收款，致集英社损失约750万日元(约合人民币32万元)。嫌疑人已承认指控，称下单能满足对动漫的喜爱、缓解压力。",
+      "url": "https://www.ign.com/articles/japanese-anime-fan-arrested-after-canceling-naruto-and-one-piece-merchandise-orders-worth-27-million",
+      "publish_time_cn": "2026-08-06 18:58",
+      "pub_date": "2026-08-06 18:58",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/07/29/natoo-1785348883284.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/07/29/natoo-1785348883284.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/07/29/natoo-1785348883284.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/07/29/natoo-1785348883284.jpg?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/07/29/natoo-1785348883284.jpg?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/07/29/natoo-1785348883284.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-08-07T10:27:05+08:00",
+      "pending_dict": [
+        {
+          "en": "Sankei Shimbun",
+          "cn": "产经新闻",
+          "cat": "media",
+          "source": "ai_guess",
+          "reason": "日本媒体名称，建议人工确认通行译名"
+        }
+      ]
+    },
+    {
       "id": 7,
       "category": "行业动态",
       "emoji": "📉",
@@ -621,7 +1009,7 @@
       "emoji": "🎮",
       "en_title": "Nintendo Offers Free Repair Services to Anyone in Area Impacted by Deadly Earthquake",
       "cn_title": "任天堂为熊本地震灾区提供免费维修服务",
-      "summary": "任天堂宣布将为熊本地震灾区提供免费维修服务，活动持续至2027年2月1日，并向日本红十字会捐赠5000万日元(约合人民币214万元)用于救灾。此前宝可梦公司已捐赠1亿日元(约合人民币428万元)，索尼也承诺捐赠5000万日元(约合人民币214万元)。这场6.8级地震已造成至少38人死亡、超过120人受伤。",
+      "summary": "任天堂宣布将为熊本地震灾区提供免费维修服务，活动持续至2027年2月1日，并向日本红十字会捐赠5000万日元(约合人民币214万元)用于救灾。此前宝可梦公司已捐赠1亿日元(约合人民币427万元)，索尼也承诺捐赠5000万日元(约合人民币214万元)。这场6.8级地震已造成至少38人死亡、超过120人受伤。",
       "url": "https://www.ign.com/articles/nintendo-offers-free-repair-services-to-anyone-in-area-impacted-by-deadly-earthquake",
       "publish_time_cn": "2026-08-06 16:19",
       "pub_date": "2026-08-06 16:19",
@@ -703,6 +1091,140 @@
       ]
     },
     {
+      "id": 32,
+      "category": "评测评分",
+      "emoji": "📺",
+      "en_title": "Ted Lasso Season 4 Premiere Review",
+      "cn_title": "《足球教练》第四季首集评测",
+      "summary": "《足球教练》第四季于8月5日在Apple TV+开播，距第三季播出已隔三年。首集全程在堪萨斯城取景，泰德如今在超市担任副经理，丽贝卡、莱斯利和基利登门拜访，想请他重返伦敦执教AFC里士满女足新队。评测肯定了演员们的表现，但对泰德再度离开儿子亨利的处理提出质疑，认为解决得太轻易。",
+      "url": "https://www.ign.com/articles/ted-lasso-season-4-premiere-review",
+      "publish_time_cn": "2026-08-06 08:17",
+      "pub_date": "2026-08-06 08:17",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/08/04/ted-lasso-photo-040109-jpg-photo-modal-show-home-large-1785874216460.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/08/04/ted-lasso-photo-040109-jpg-photo-modal-show-home-large-1785874216460.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/04/ted-lasso-photo-040109-jpg-photo-modal-show-home-large-1785874216460.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/04/ted-lasso-photo-040109-jpg-photo-modal-show-home-large-1785874216460.jpg?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/04/ted-lasso-photo-040109-jpg-photo-modal-show-home-large-1785874216460.jpg?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2020/07/15/ted-lasso-button-1594830828516.jpg",
+        "https://assets-prd.ignimgs.com/2026/08/04/ted-lasso-photo-040109-jpg-photo-modal-show-home-large-1785874216460.jpg",
+        "https://assets-prd.ignimgs.com/2026/08/04/ted-lasso-photo-040203-jpg-photo-modal-show-home-large-1785874204711.jpg",
+        "https://assets-prd.ignimgs.com/2026/08/04/ted-lasso-photo-040106-jpg-photo-modal-show-home-large-1785874242833.jpg",
+        "https://assets-prd.ignimgs.com/2026/08/04/apple-tv-ted-lasso-photo-040401-jpg-photo-modal-show-home-large-1785874378375.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-08-07T08:18:23+08:00",
+      "pending_dict": [
+        {
+          "en": "Ted Lasso",
+          "cn": "《足球教练》",
+          "cat": "movies_tv",
+          "source": "ai_guess",
+          "reason": "Apple TV+剧集，通行中文译名为《足球教练》，建议人工确认后入词库"
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "category": "评测评分",
+      "emoji": "🃏",
+      "en_title": "X-Men '97 Season 2, Episode 8 Review & Recap: \"Dead Man's Hand\"",
+      "cn_title": "《X战警97》第二季第8集评测：死人之手",
+      "summary": "IGN发布《X战警97》第二季第8集「死人之手」评测（含剧透）。本集牌皇复活并召集昔日同伙，但回归缺乏当年之死的情感冲击；天启与旧情人坎德拉的过往仅靠闪回交代，略显仓促。亮点是萨默斯家族的情感戏份，以及X战警与X-Force联手迎敌却被夜行者碾压的高光场面。第二季仅剩最后一集。",
+      "url": "https://www.ign.com/articles/x-men-97-season-2-episode-8-review-recap-dead-mans-hand",
+      "publish_time_cn": "2026-08-06 08:17",
+      "pub_date": "2026-08-06 08:17",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/08/04/marvel-animations-x-men-97-official-rogue-goes-rogue-clip-8xx5-1200-1785872133222.webp?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/08/04/marvel-animations-x-men-97-official-rogue-goes-rogue-clip-8xx5-1200-1785872133222.webp?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/04/marvel-animations-x-men-97-official-rogue-goes-rogue-clip-8xx5-1200-1785872133222.webp?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/04/marvel-animations-x-men-97-official-rogue-goes-rogue-clip-8xx5-1200-1785872133222.webp?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/04/marvel-animations-x-men-97-official-rogue-goes-rogue-clip-8xx5-1200-1785872133222.webp?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2021/11/12/xmen-97-button-1636738021246.jpg",
+        "https://assets-prd.ignimgs.com/2026/08/04/marvel-animations-x-men-97-official-rogue-goes-rogue-clip-8xx5-1200-1785872133222.webp"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-08-07T08:18:42+08:00",
+      "pending_dict": [
+        {
+          "en": "Dead Man's Hand",
+          "cn": "死人之手",
+          "cat": "movies_tv",
+          "source": "ai_guess",
+          "reason": "《X战警97》第二季第8集标题，需与官方中文译法确认"
+        },
+        {
+          "en": "Gambit",
+          "cn": "牌皇",
+          "cat": "people",
+          "source": "ai_guess",
+          "reason": "漫威角色通行中文译名，词库未收录"
+        },
+        {
+          "en": "Apocalypse",
+          "cn": "天启",
+          "cat": "people",
+          "source": "ai_guess",
+          "reason": "漫威角色通行中文译名，词库未收录"
+        },
+        {
+          "en": "Candra",
+          "cn": "坎德拉",
+          "cat": "people",
+          "source": "ai_guess",
+          "reason": "该角色无通行中文译名，音译需人工确认"
+        },
+        {
+          "en": "Nightcrawler",
+          "cn": "夜行者",
+          "cat": "people",
+          "source": "ai_guess",
+          "reason": "漫威角色通行中文译名，词库未收录"
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "category": "评测评分",
+      "emoji": "🪐",
+      "en_title": "Star Wars: Visions Presents - The Ninth Jedi Season 1 Review",
+      "cn_title": "《星球大战》《第九绝地》评测：星战动画的全新时代",
+      "summary": "《星球大战：幻境》衍生剧《第九绝地》第一季共8集已上线Disney+和Hulu。故事设定在电影情节数百年后，彻底抛开天行者家族的故事包袱，开辟全新叙事时代。前期节奏略显拖沓，但后半段渐入佳境，在原力光明与黑暗的二元对立之外涉足「灰色绝地」概念，动画制作与配乐均是亮点。",
+      "url": "https://www.ign.com/articles/star-wars-visions-presents-the-ninth-jedi-season-1-review",
+      "publish_time_cn": "2026-08-06 08:17",
+      "pub_date": "2026-08-06 08:17",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/08/04/star-wars-ninth-jedi-review-blogroll-1785867320829.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/08/04/star-wars-ninth-jedi-review-blogroll-1785867320829.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/04/star-wars-ninth-jedi-review-blogroll-1785867320829.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/04/star-wars-ninth-jedi-review-blogroll-1785867320829.jpg?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/04/star-wars-ninth-jedi-review-blogroll-1785867320829.jpg?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/07/05/ninth-jedi-button-1783259969016.jpg",
+        "https://assets-prd.ignimgs.com/2026/08/04/star-wars-ninth-jedi-review-blogroll-1785867320829.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-08-07T08:18:53+08:00",
+      "pending_dict": [
+        {
+          "en": "The Ninth Jedi",
+          "cn": "第九绝地",
+          "cat": "movies_tv",
+          "source": "ai_guess",
+          "reason": "《星球大战：幻境》衍生动画，词库暂无此译名，需用户确认"
+        },
+        {
+          "en": "Star Wars: Visions",
+          "cn": "星球大战：幻境",
+          "cat": "movies_tv",
+          "source": "ai_guess",
+          "reason": "词库未收录，但官方通行译名较稳定，建议确认后入库"
+        }
+      ]
+    },
+    {
       "id": 2,
       "category": "科技新闻",
       "emoji": "🤖",
@@ -718,5 +1240,5 @@
       "source_fetched_at": "2026-08-06T08:57:45+08:00"
     }
   ],
-  "total": 22
+  "total": 36
 }
