@@ -2,6 +2,139 @@
   "date": "2026-08-16",
   "articles": [
     {
+      "id": 24,
+      "category": "游戏新闻",
+      "emoji": "🚀",
+      "en_title": "Star Wars: Smuggler's Gambit Lets You Keep Helping Hondo Ohnaka in Fortnite After You Leave Disneyland",
+      "cn_title": "《星球大战：走私者赌局》把乐园体验延至《堡垒之夜》",
+      "summary": "《星球大战：走私者赌局》是《堡垒之夜》的全新Unreal Engine项目，将迪士尼乐园「千年隼：走私者逃亡」的体验扩展为多人PvE合作任务。玩家在Ord Ryla枢纽与汉多·奥纳卡互动并组队出击，还能关联Epic与MyDisney账户，在乐园中解锁特殊体验。游戏将于8月16日上线。",
+      "url": "https://www.ign.com/articles/star-wars-smugglers-gambit-lets-you-keep-helping-hondo-ohnaka-in-fortnite-after-you-leave-disneyland",
+      "publish_time_cn": "2026-08-16 07:30",
+      "pub_date": "2026-08-16 07:30",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/08/14/nexa-1-1786738520810.png?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/08/14/nexa-1-1786738520810.png?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/14/nexa-1-1786738520810.png?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/14/nexa-1-1786738520810.png?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/14/nexa-1-1786738520810.png?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/14/nexa-1-1786738520810.png"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-08-16T08:17:30+08:00",
+      "pending_dict": [
+        {
+          "en": "Star Wars: Smuggler's Gambit",
+          "cn": "星球大战：走私者赌局",
+          "cat": "games",
+          "source": "ai_guess",
+          "reason": "新作名，中文译名需人工确认"
+        },
+        {
+          "en": "Hondo Ohnaka",
+          "cn": "汉多·奥纳卡",
+          "cat": "people",
+          "source": "ai_guess",
+          "reason": "《星球大战》角色，通行中文译名需确认"
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "category": "影视资讯",
+      "emoji": "🗝️",
+      "en_title": "Tetsuya Nomura Teases Involvement in Kingdom Hearts Anime Series, Tells Fans to Let Their 'Imagination Run Wild' | D23 2026",
+      "cn_title": "野村哲也暗示参与《王国之心》动画剧集",
+      "summary": "在D23 2026上，《王国之心》Disney+动画系列惊喜亮相，但官方只公布了一张关键艺术图，图中似乎是一位手持键刃的新角色。系列创作者野村哲也发文确认动画剧集已进入制作，并透露他与剧本团队密切磋商、还为本作设计了新角色，呼吁粉丝「让想象力尽情驰骋」。目前该剧尚未公布具体上映时间，只显示「即将推出」。",
+      "url": "https://www.ign.com/articles/tetsuya-nomura-teases-involvement-in-kingdom-hearts-anime-series-tells-fans-to-let-their-imagination-run-wild-d23-2026",
+      "publish_time_cn": "2026-08-16 06:57",
+      "pub_date": "2026-08-16 06:57",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/08/15/via-d23-16x9-dcd-1786762949244.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/08/15/via-d23-16x9-dcd-1786762949244.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/15/via-d23-16x9-dcd-1786762949244.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/15/via-d23-16x9-dcd-1786762949244.jpg?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/15/via-d23-16x9-dcd-1786762949244.jpg?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/15/via-d23-16x9-dcd-1786762949244.jpg",
+        "https://assets1.ignimgs.com/2020/05/27/kingdom-hearts-button-1590599359938.jpg",
+        "https://assets-prd.ignimgs.com/2026/08/15/kingdom-hearts-the-series-disney-1786834513750.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-08-16T07:17:31+08:00",
+      "pending_dict": [
+        {
+          "en": "Keyblade",
+          "cn": "键刃",
+          "cat": "terms",
+          "source": "ai_guess",
+          "reason": "《王国之心》系列标志性武器的常见玩家译名，官方中文化版本可能使用「钥刃」，需人工确认后决定是否统一"
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "category": "游戏新闻",
+      "emoji": "🎮",
+      "en_title": "D23 Deep Dive Into Kingdom Hearts Panel Everything Announced — Updating Live",
+      "cn_title": "D23《王国之心》专题会：情报实时更新",
+      "summary": "迪士尼D23大会举行《王国之心》专题讨论会，IGN现场报道。官方已展示索拉在《寻梦环游记》亡灵之地与无心战斗的实机画面，并宣布《王国之心》动画系列将上线Disney+，日期未定。专题会嘉宾包括迪士尼的Nana Gadd、史克威尔艾尼克斯的Tai Yasue及多位配音演员，直播于北京时间8月16日7:30开始。",
+      "url": "https://www.ign.com/articles/d23-deep-dive-into-kingdom-hearts-panel-everything-announced-updating-live",
+      "publish_time_cn": "2026-08-16 06:29",
+      "pub_date": "2026-08-16 06:29",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/08/15/kingdom-hearts-d23-panel-everything-announced-1786825722441.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/08/15/kingdom-hearts-d23-panel-everything-announced-1786825722441.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/15/kingdom-hearts-d23-panel-everything-announced-1786825722441.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/15/kingdom-hearts-d23-panel-everything-announced-1786825722441.jpg?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/15/kingdom-hearts-d23-panel-everything-announced-1786825722441.jpg?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/15/kingdom-hearts-d23-panel-everything-announced-1786825722441.jpg",
+        "https://assets-prd.ignimgs.com/2022/04/15/kingdom-hearts-iv-1650060485636.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-08-16T07:17:32+08:00"
+    },
+    {
+      "id": 21,
+      "category": "影视资讯",
+      "emoji": "🎬",
+      "en_title": "Dave Filoni Confirms Disney Isn't Making Scrapped Star Wars Movie The Hunt for Ben Solo 'Right Now' | D23 2026",
+      "cn_title": "Dave Filoni 确认《星球大战》电影《The Hunt for Ben Solo》暂不制作",
+      "summary": "卢卡斯影业总裁 Dave Filoni 在 D23 2026 上确认，迪士尼目前不会制作此前被搁置的《星球大战》电影《The Hunt for Ben Solo》。该项目由史蒂文·索德伯格执导、亚当·德赖弗主演，开发两年后被叫停。尽管粉丝多次请愿，Filoni 仅表示「我们现在不会拍那部电影」。",
+      "url": "https://www.ign.com/articles/dave-filoni-confirms-disney-isnt-making-scrapped-star-wars-movie-the-hunt-for-ben-solo-right-now-d23-2026",
+      "publish_time_cn": "2026-08-16 05:10",
+      "pub_date": "2026-08-16 05:10",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/08/15/kylo-ren-adam-driver-the-hunt-for-ben-solo-1786828031365.png?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/08/15/kylo-ren-adam-driver-the-hunt-for-ben-solo-1786828031365.png?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/15/kylo-ren-adam-driver-the-hunt-for-ben-solo-1786828031365.png?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/15/kylo-ren-adam-driver-the-hunt-for-ben-solo-1786828031365.png?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/15/kylo-ren-adam-driver-the-hunt-for-ben-solo-1786828031365.png?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/15/kylo-ren-adam-driver-the-hunt-for-ben-solo-1786828031365.png",
+        "https://assets1.ignimgs.com/2019/08/25/star-wars-rise-of-skywalker---button-082019-03-1566704469507.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-08-16T06:17:25+08:00",
+      "pending_dict": [
+        {
+          "en": "Dave Filoni",
+          "cn": "戴夫·菲洛尼",
+          "cat": "people",
+          "source": "ai_guess",
+          "reason": "卢卡斯影业总裁，星战圈常用译名，需确认是否入词库"
+        },
+        {
+          "en": "The Hunt for Ben Solo",
+          "cn": "寻找本·索罗",
+          "cat": "movies_tv",
+          "source": "ai_guess",
+          "reason": "被搁置的星战电影项目，无官方中文名，需确认译法"
+        }
+      ]
+    },
+    {
       "id": 20,
       "category": "影视资讯",
       "emoji": "🎬",
@@ -641,6 +774,91 @@
       ]
     },
     {
+      "id": 26,
+      "category": "评测评分",
+      "emoji": "🎮",
+      "en_title": "Grand Theft Auto 2 – The Legacy Review",
+      "cn_title": "《侠盗猎车手》《GTA2》回顾：时代夹缝中的进化与遗憾",
+      "summary": "在《GTA6》发售前夕，IGN开启《侠盗猎车手》系列回顾企划，本期重温1999年的《GTA2》。续作加入存档、生命值条和车载武器等改进，驾驶与镜头也更流畅；但车辆辨识度低、城市缺少初代的魅力，整体设定自相矛盾。作者坦言，同年发售的《Driver》已经展现了3D驾驶游戏的未来景象。",
+      "url": "https://www.ign.com/articles/grand-theft-auto-2-the-legacy-review",
+      "publish_time_cn": "2026-08-15 09:17",
+      "pub_date": "2026-08-15 09:17",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/08/14/gta-2-legacy-review-1280-thumb-1786690095556.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/08/14/gta-2-legacy-review-1280-thumb-1786690095556.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/14/gta-2-legacy-review-1280-thumb-1786690095556.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/14/gta-2-legacy-review-1280-thumb-1786690095556.jpg?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/14/gta-2-legacy-review-1280-thumb-1786690095556.jpg?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/14/gta-2-legacy-review-1280-thumb-1786690095556.jpg",
+        "https://assets-prd.ignimgs.com/2022/01/13/gta2box-sq-1642095668413.jpg",
+        "https://assets-prd.ignimgs.com/2026/08/14/gta-2-legacy-review-elvis-1786691298809.png",
+        "https://assets-prd.ignimgs.com/2026/08/14/gta-2-legacy-review-u-save-1786692427964.png",
+        "https://assets-prd.ignimgs.com/2026/08/14/gta-2-legacy-review-max-paynt-1786692522069.png",
+        "https://assets-prd.ignimgs.com/2026/08/14/gta-2-legacy-review-hot-dog-1786693317693.png",
+        "https://assets-prd.ignimgs.com/2026/08/14/gta2-wanted-stars-legacy-review-1786690015539.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-08-16T09:17:44+08:00",
+      "pending_dict": [
+        {
+          "en": "Driver",
+          "cn": "《车神》",
+          "cat": "games",
+          "source": "ai_guess",
+          "reason": "1999年驾驶游戏《Driver》的中文译名待确认，国内有《车神》等旧译名，需人工确认是否入词库。"
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "category": "评测评分",
+      "emoji": "🎬",
+      "en_title": "The Brink of War Review: Jeff Daniels and Jared Harris Lock Horns in Talky Cold War Drama",
+      "cn_title": "《战争边缘》影评：杰夫·丹尼尔斯与杰瑞德·哈里斯冷战交锋",
+      "summary": "《战争边缘》是编剧兼导演Michael Russell Gunn的长片处女作，讲述1986年雷克雅未克峰会期间，美国总统里根与苏联领导人戈尔巴乔夫试图达成里程碑式核裁军协议的两天会晤。影片在当年真实会谈地点拍摄，态度真诚却缺乏紧迫感，两位主演的对手戏是最大亮点，目前正在影院上映。",
+      "url": "https://www.ign.com/articles/the-brink-of-war-review",
+      "publish_time_cn": "2026-08-15 08:17",
+      "pub_date": "2026-08-15 08:17",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/08/13/the-brink-of-war-1280a-1786658158915.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/08/13/the-brink-of-war-1280a-1786658158915.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/13/the-brink-of-war-1280a-1786658158915.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/13/the-brink-of-war-1280a-1786658158915.jpg?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/13/the-brink-of-war-1280a-1786658158915.jpg?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/04/14/brinkthumb-1776193547345.png",
+        "https://assets-prd.ignimgs.com/2026/08/13/the-brink-of-war-1280a-1786658158915.jpg",
+        "https://assets-prd.ignimgs.com/2026/08/13/tbow-bw-poster-1280-1786658118247.jpg",
+        "https://assets-prd.ignimgs.com/2026/08/13/the-brink-of-war-poster-1786657100649.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-08-16T08:17:32+08:00",
+      "pending_dict": [
+        {
+          "en": "The Brink of War",
+          "cn": "战争边缘",
+          "cat": "movies_tv",
+          "source": "ai_guess",
+          "reason": "电影暂无官方中文译名，此为推测译名，需人工确认。"
+        },
+        {
+          "en": "Jeff Daniels",
+          "cn": "杰夫·丹尼尔斯",
+          "cat": "people",
+          "source": "ai_guess",
+          "reason": "知名演员，此为通行音译，需确认是否入词库。"
+        },
+        {
+          "en": "Jared Harris",
+          "cn": "杰瑞德·哈里斯",
+          "cat": "people",
+          "source": "ai_guess",
+          "reason": "知名演员，此为通行音译，需确认是否入词库。"
+        }
+      ]
+    },
+    {
       "id": 1,
       "category": "影视资讯",
       "emoji": "✨",
@@ -719,5 +937,5 @@
       ]
     }
   ],
-  "total": 20
+  "total": 26
 }
