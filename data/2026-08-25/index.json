@@ -2,6 +2,325 @@
   "date": "2026-08-25",
   "articles": [
     {
+      "id": 42,
+      "category": "科技新闻",
+      "emoji": "💻",
+      "en_title": "Newegg Has the Least Overpriced 32GB of DDR5 6000MHz CL 30 Desktop Memory",
+      "cn_title": "Newegg 32GB DDR5 6000MHz内存特价",
+      "summary": "Newegg官方AliExpress店铺限时促销V-COLOR Manta XSky DDR5内存：32GB（2x16GB）6000MHz CL30套装仅售369.59美元(约合人民币2487元)，且免运费，官网同款则要420美元(约合人民币2827元)。该内存采用SK海力士颗粒，预载AMD EXPO超频配置，6000MHz频率搭配CL30时序被视为AMD CPU的甜点配置。",
+      "url": "https://www.ign.com/articles/newegg-has-the-least-overpriced-32gb-of-ddr5-6000mhz-cl-30-desktop-memory",
+      "publish_time_cn": "2026-08-25 07:50",
+      "pub_date": "2026-08-25 07:50",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/08/24/mantavsky-1787614925661.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/08/24/mantavsky-1787614925661.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/24/vcolormantaxsky-1787614499759.jpg",
+        "https://assets-prd.ignimgs.com/2026/08/24/mantavsky-1787614925661.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/24/mantavsky-1787614925661.jpg?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/24/mantavsky-1787614925661.jpg?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/24/mantavsky-1787614925661.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-08-25T08:17:52+08:00",
+      "pending_dict": [
+        {
+          "en": "SK Hynix",
+          "cn": "SK海力士",
+          "cat": "companies",
+          "source": "ai_guess",
+          "reason": "中文通行译名，词库未收录，建议确认后入库"
+        }
+      ]
+    },
+    {
+      "id": 40,
+      "category": "游戏新闻",
+      "emoji": "🃏",
+      "en_title": "The Witcher 3 Songs of the Past Expansion Confirmed to Include More Gwent, and Everyone Is Already Celebrating",
+      "cn_title": "《巫师3》新资料片《旧时曲》确认加入更多昆特牌",
+      "summary": "CD Projekt Red确认，《巫师3：狂猎》新资料片《旧时曲》将包含更多昆特牌内容，卡牌爱好者已经开始庆祝。CDPR社区经理Marcin Łukaszewski在X上回复玩家时证实了这一消息。该资料片预计2027年推出，将作为故事前传，官方还计划在gamescom 2026开幕式之夜公布更多详情。",
+      "url": "https://www.ign.com/articles/the-witcher-3-songs-of-the-past-expansion-confirmed-to-include-more-gwent-and-everyone-is-already-celebrating",
+      "publish_time_cn": "2026-08-25 06:56",
+      "pub_date": "2026-08-25 06:56",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/08/24/the-witcher-3-gwent-songs-of-the-past-1787611131275.png?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/08/24/the-witcher-3-gwent-songs-of-the-past-1787611131275.png?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/24/the-witcher-3-gwent-songs-of-the-past-1787611131275.png?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/24/the-witcher-3-gwent-songs-of-the-past-1787611131275.png?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/24/the-witcher-3-gwent-songs-of-the-past-1787611131275.png?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/24/the-witcher-3-gwent-songs-of-the-past-1787611131275.png",
+        "https://assets1.ignimgs.com/2018/12/04/gwent---button-fin-1543964891941.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-08-25T07:17:30+08:00"
+    },
+    {
+      "id": 43,
+      "category": "行业动态",
+      "emoji": "🎮",
+      "en_title": "Xbox and PlayStation Appear to Be Publicly Backing Down from Promoting Multiplatform Releases",
+      "cn_title": "XBOX与PlayStation似乎不再高调宣传多平台发行",
+      "summary": "XBOX与PlayStation似乎正在淡化多平台发行宣传。XBOX为《我的世界：地下城2》发布的新预告片未提及PS5与Switch 2版本，此前还取消了《战争机器：事变日》的PS5版，并从State of Play撤下《光环：战役进化》预告片。据报道，PlayStation将放弃《羊蹄山之魂》等第一方单机大作的PC版，重新强调「PS5独占」定位。",
+      "url": "https://www.ign.com/articles/xbox-and-playstation-appear-to-be-publicly-backing-down-from-promoting-multiplatform-releases",
+      "publish_time_cn": "2026-08-25 06:53",
+      "pub_date": "2026-08-25 06:53",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/07/minecraft-thumb-1780854999741.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/07/minecraft-thumb-1780854999741.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/07/minecraft-thumb-1780854999741.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/07/minecraft-thumb-1780854999741.jpg?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/07/minecraft-thumb-1780854999741.jpg?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/07/minecraft-thumb-1780854999741.jpg",
+        "https://assets-prd.ignimgs.com/2024/09/10/ps5-1725981325370.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-08-25T09:39:24+08:00"
+    },
+    {
+      "id": 41,
+      "category": "游戏新闻",
+      "emoji": "🧁",
+      "en_title": "Persona Comes to Beard Papa's With Special 30th Anniversary Collaboration",
+      "cn_title": "泡芙店Beard Papa's联动《女神异闻录》庆30周年",
+      "summary": "为庆祝《女神异闻录》系列诞生30周年，日本甜品连锁Beard Papa's宣布与其展开联动。9月4日起，美国部分门店将换上系列主题装饰，并推出原味、抹茶、紫薯S'mores、曲奇奶油与双莓五款限定泡芙，四盒装与六盒装内含角色贴纸、亚克力立牌及《女神异闻录5：幻影X》游戏兑换码。活动持续至10月4日，另有马克杯、T恤等周边发售。",
+      "url": "https://www.ign.com/articles/persona-comes-to-beard-papas-with-special-30th-anniversary-collaboration",
+      "publish_time_cn": "2026-08-25 06:41",
+      "pub_date": "2026-08-25 06:41",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/08/24/persona4-creampuffs-blogroll-1787611272077.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/08/24/persona4-creampuffs-blogroll-1787611272077.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/24/persona4-creampuffs-blogroll-1787611272077.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/24/persona4-creampuffs-blogroll-1787611272077.jpg?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/24/persona4-creampuffs-blogroll-1787611272077.jpg?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/24/persona4-creampuffs-blogroll-1787611272077.jpg",
+        "https://assets-prd.ignimgs.com/2025/06/08/p4r-1749408031666.jpg",
+        "https://assets-prd.ignimgs.com/2026/08/24/6pk-persona-30th-set-beard-papas-with-gwpp30-2-1787607140866.png"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-08-25T07:17:31+08:00",
+      "pending_dict": [
+        {
+          "en": "Beard Papa's",
+          "cn": "贝尔多爸爸的泡芙工房",
+          "cat": "companies",
+          "source": "ai_guess",
+          "reason": "Beard Papa's 早期进入中国市场时曾用此中文名，但当前是否仍为通行叫法不确定，需人工确认；本文暂按规则保留英文。"
+        }
+      ]
+    },
+    {
+      "id": 38,
+      "category": "影视资讯",
+      "emoji": "😭",
+      "en_title": "'How Do We Get Them to Really Cry at This Scene' — Avengers: Infinity War Director Reveals How They Changed Spider-Man's Death Scene to Break Fans' Hearts",
+      "cn_title": "《复联3》导演揭秘：蜘蛛侠之死临场改写",
+      "summary": "《复仇者联盟3：无限战争》导演乔·罗素透露，蜘蛛侠的死亡戏在拍摄当天临时改写，只为让观众在影院落泪。原剧本中彼得·帕克只有「我感觉不太好」和「对不起」两句对白，修改后他因害怕死亡而惊恐地向托尼·斯塔克求救，成为全片最令人心碎的一幕。",
+      "url": "https://www.ign.com/articles/how-do-we-get-them-to-really-cry-at-this-scene-avengers-infinity-war-director-reveals-how-they-changed-spider-mans-death-scene-to-break-fans-hearts",
+      "publish_time_cn": "2026-08-25 05:57",
+      "pub_date": "2026-08-25 05:57",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/08/24/avengers-infinity-war-peter-death-1787608222188.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/08/24/avengers-infinity-war-peter-death-1787608222188.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/24/avengers-infinity-war-peter-death-1787608222188.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/24/avengers-infinity-war-peter-death-1787608222188.jpg?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/24/avengers-infinity-war-peter-death-1787608222188.jpg?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/24/avengers-infinity-war-peter-death-1787608222188.jpg",
+        "https://assets1.ignimgs.com/2017/11/29/avengers-infinity-war-xlg-1511914791459.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-08-25T06:17:41+08:00"
+    },
+    {
+      "id": 39,
+      "category": "游戏新闻",
+      "emoji": "💇",
+      "en_title": "Call of Duty: Modern Warfare 4 Devs Vow to Update Captain Price After Botched Haircut Goes Viral",
+      "cn_title": "《使命召唤》《现代战争4》普莱斯发型翻车，官方承诺修复",
+      "summary": "Activision和Infinity Ward承诺修复《使命召唤：现代战争4》中普莱斯上尉的发型问题。此前其翻车发型图片在网上疯传，但该问题仅在画面设定为最低画质时出现，官方已在「已知问题」列表中确认，并将在未来更新中修复。游戏将于2026年10月23日登陆PC、Switch 2、PS5和XBOX Series。",
+      "url": "https://www.ign.com/articles/call-of-duty-modern-warfare-4-devs-vow-to-update-captain-price-after-botched-haircut-goes-viral",
+      "publish_time_cn": "2026-08-25 05:13",
+      "pub_date": "2026-08-25 05:13",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/08/24/call-of-duty-modern-warfare-4-captain-price-hair-1787605087848.png?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/08/24/call-of-duty-modern-warfare-4-captain-price-hair-1787605087848.png?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/24/call-of-duty-modern-warfare-4-captain-price-hair-1787605087848.png?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/24/call-of-duty-modern-warfare-4-captain-price-hair-1787605087848.png?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/24/call-of-duty-modern-warfare-4-captain-price-hair-1787605087848.png?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/24/call-of-duty-modern-warfare-4-captain-price-hair-1787605087848.png",
+        "https://assets-prd.ignimgs.com/2026/05/28/codmw4-1779985350988.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-08-25T06:17:42+08:00",
+      "pending_dict": [
+        {
+          "en": "Captain Price",
+          "cn": "普莱斯上尉",
+          "cat": "people",
+          "source": "ai_guess",
+          "reason": "《使命召唤》系列经典角色，中国玩家圈通行译名，建议人工确认后入库"
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "category": "游戏新闻",
+      "emoji": "🎮",
+      "en_title": "Canceled Iron Man Game Footage From Just Cause and Mad Max Developer Leaks Online",
+      "cn_title": "《钢铁侠》被取消游戏实机泄露，出自《正当防卫》开发商",
+      "summary": "《正当防卫》《疯狂的麦克斯》开发商Avalanche Studios早年开发的《钢铁侠》游戏被取消后，实机画面已在网上泄露，据称来自PS3开发套件。视频显示该作完成度极低，包含飞行、空战，近战风格类似《阿卡姆》系列，环境可部分破坏。EA Motive负责的新《钢铁侠》游戏仍在开发中。",
+      "url": "https://www.ign.com/articles/canceled-iron-man-game-footage-from-just-cause-and-mad-max-developer-leaks-online",
+      "publish_time_cn": "2026-08-25 05:03",
+      "pub_date": "2026-08-25 05:03",
+      "cover_image": "https://assets-prd.ignimgs.com/2022/09/20/iron-man-ea-motive-1663686372718.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2022/09/20/iron-man-ea-motive-1663686372718.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2022/09/20/iron-man-ea-motive-1663686372718.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2022/09/20/iron-man-ea-motive-1663686372718.jpg?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2022/09/20/iron-man-ea-motive-1663686372718.jpg?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2022/09/20/iron-man-ea-motive-1663686372718.jpg",
+        "https://assets-prd.ignimgs.com/2022/09/20/iron-man-motive-button-1663693168356.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-08-25T05:17:32+08:00"
+    },
+    {
+      "id": 36,
+      "category": "行业动态",
+      "emoji": "🎢",
+      "en_title": "France and Saudi Arabia to Build $7 Billion Dragon Ball Z Theme Park Outside Paris",
+      "cn_title": "法国沙特宣布合建《龙珠Z》主题公园",
+      "summary": "法国与沙特阿拉伯宣布将在巴黎附近合建一座《龙珠Z》主题公园，预计耗资约70亿美元(约合人民币471亿元)。公园选址巴黎西北部的Cergy-Pontoise地区，有望创造约2.2万个就业岗位，由沙特Qiddiya出资，建设周期预计长达数年，开放日期尚未公布。",
+      "url": "https://www.ign.com/articles/france-and-saudi-arabia-to-build-7-billion-dragon-ball-z-theme-park-outside-paris",
+      "publish_time_cn": "2026-08-25 04:26",
+      "pub_date": "2026-08-25 04:26",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/08/24/dragon-ball-z-theme-park-shenron-1787602882240.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/08/24/dragon-ball-z-theme-park-shenron-1787602882240.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/24/dragon-ball-z-theme-park-shenron-1787602882240.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/24/dragon-ball-z-theme-park-shenron-1787602882240.jpg?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/24/dragon-ball-z-theme-park-shenron-1787602882240.jpg?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/24/dragon-ball-z-theme-park-shenron-1787602882240.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-08-25T05:17:34+08:00",
+      "pending_dict": [
+        {
+          "en": "Qiddiya",
+          "cn": "奇迪亚（Qiddiya）",
+          "cat": "companies",
+          "source": "ai_guess",
+          "reason": "沙特娱乐开发商，官方中文译名待确认"
+        },
+        {
+          "en": "Cergy-Pontoise",
+          "cn": "塞尔吉-蓬图瓦兹",
+          "cat": "terms",
+          "source": "ai_guess",
+          "reason": "法国城市群名，中文译名待确认"
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "category": "游戏新闻",
+      "emoji": "🧩",
+      "en_title": "This Legend of Zelda Brain Teaser Recreates One of the Best Side Quests From Tears of the Kingdom",
+      "cn_title": "《塞尔达》《王国之泪》经典支线被做成实体谜题",
+      "summary": "IGN曾为《塞尔达传说：王国之泪》打出10分满分成绩。游戏中帮Addison在海拉鲁各地竖起Hudson总统招牌的经典支线任务，如今被益智玩具品牌Bepuzzled做成实体谜题。玩家需用四根金属原木找到特定解法，完成后可获得金属Addison立牌，摆在桌面或书架上。该品牌还推出了海拉鲁徽章、大师剑等其他塞尔达主题拼图。",
+      "url": "https://www.ign.com/articles/this-legend-of-zelda-brain-teaser-recreates-one-of-the-best-side-quests-from-tears-of-the-kingdom",
+      "publish_time_cn": "2026-08-25 04:18",
+      "pub_date": "2026-08-25 04:18",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/08/24/zelda-puzzle-1787601281002.png?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/08/24/zelda-puzzle-1787601281002.png?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/24/zelda-puzzle-1787601281002.png?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/24/zelda-puzzle-1787601281002.png?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/24/zelda-puzzle-1787601281002.png?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/24/zelda-puzzle-1787601281002.png",
+        "https://assets-prd.ignimgs.com/2022/09/14/zelda-tears-of-the-kingdom-button-2k-1663127818777.jpg",
+        "https://assets-prd.ignimgs.com/2026/08/24/81ep96f4xal-ac-sl1500-1787599644021.jpg",
+        "https://assets-prd.ignimgs.com/2025/11/13/hh-1763059266308.jpg",
+        "https://assets-prd.ignimgs.com/2025/11/13/puzzle-1763059438745.jpg",
+        "https://assets-prd.ignimgs.com/2025/11/13/box-set-1763059361904.jpg",
+        "https://assets-prd.ignimgs.com/2025/11/13/vinyl-1763059915130.jpg",
+        "https://assets-prd.ignimgs.com/2025/11/13/keepsake-1763059968654.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-08-25T05:17:36+08:00"
+    },
+    {
+      "id": 33,
+      "category": "行业动态",
+      "emoji": "⚖️",
+      "en_title": "Amazon and Twitch Face Class Action Lawsuit After Introducing Opt-Out Setting That Uses Streamers' Content to Train AI",
+      "cn_title": "亚马逊与Twitch因默认用主播内容训练AI遭集体诉讼",
+      "summary": "Twitch与亚马逊因默认开启的AI训练设置面临集体诉讼。该平台推出了一项默认开启的功能，自动将主播的直播内容用于训练亚马逊的生成式AI，除非主播手动退出。8月20日，康涅狄格州主播Warren Pandiscia在加州北区地方法院提起诉讼，指控亚马逊未经同意非法抓取创作者内容。Twitch首席产品官回应称，若是自愿加入则无人参与。Twitch暂未对诉讼置评。",
+      "url": "https://www.ign.com/articles/amazon-and-twitch-face-class-action-lawsuit-after-introducing-opt-out-setting-that-uses-streamers-content-to-train-ai",
+      "publish_time_cn": "2026-08-25 03:40",
+      "pub_date": "2026-08-25 03:40",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/08/24/twitch-court-blogroll-1787600130347.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/08/24/twitch-court-blogroll-1787600130347.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/24/twitch-court-blogroll-1787600130347.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/24/twitch-court-blogroll-1787600130347.jpg?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/24/twitch-court-blogroll-1787600130347.jpg?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/24/twitch-court-blogroll-1787600130347.jpg",
+        "https://assets-prd.ignimgs.com/2023/03/16/twitch-button-1678994536075.jpg",
+        "https://assets-prd.ignimgs.com/2026/08/24/twitch-gen-ai-opt-out-setting-1787599375527.png"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-08-25T04:17:34+08:00"
+    },
+    {
+      "id": 34,
+      "category": "影视资讯",
+      "emoji": "🟢",
+      "en_title": "Lanterns Episode 3 Teaser Reveals First Look at Hal Jordan Wearing Iconic Green Lantern Domino Mask",
+      "cn_title": "《Lanterns》预告首曝哈尔·乔丹面具造型",
+      "summary": "HBO 发布 DCU 剧集《Lanterns》第三集预告，首度曝光 Kyle Chandler 饰演的哈尔·乔丹身着绿灯侠制服、佩戴标志性多米诺面具的造型。该镜头出现在预告第 17 秒的电视新闻画面中，一闪而过。由于首集已暗示哈尔·乔丹在 DCU 的时日无多，网友猜测这可能只是彩蛋或闪回画面。",
+      "url": "https://www.ign.com/articles/lanterns-episode-3-teaser-reveals-first-look-at-hal-jordan-wearing-iconic-green-lantern-domino-mask",
+      "publish_time_cn": "2026-08-25 03:32",
+      "pub_date": "2026-08-25 03:32",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/08/24/hal-jordan-lanterns-episode-3-1787598600178.png?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/08/24/hal-jordan-lanterns-episode-3-1787598600178.png?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/24/hal-jordan-lanterns-episode-3-1787598600178.png?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/24/hal-jordan-lanterns-episode-3-1787598600178.png?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/24/hal-jordan-lanterns-episode-3-1787598600178.png?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/24/hal-jordan-lanterns-episode-3-1787598600178.png",
+        "https://assets-prd.ignimgs.com/2026/08/12/lanterns-ver4-xlg-1786543132984.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-08-25T04:17:36+08:00",
+      "pending_dict": [
+        {
+          "en": "Lanterns",
+          "cn": "灯侠",
+          "cat": "movies_tv",
+          "source": "ai_guess",
+          "reason": "HBO DCU剧集，尚未确认官方中文译名"
+        },
+        {
+          "en": "Hal Jordan",
+          "cn": "哈尔·乔丹",
+          "cat": "people",
+          "source": "consensus",
+          "reason": "绿灯侠经典角色，通行译名，词库未收录"
+        }
+      ]
+    },
+    {
       "id": 29,
       "category": "评测评分",
       "emoji": "🦄",
@@ -1102,5 +1421,5 @@
       ]
     }
   ],
-  "total": 32
+  "total": 43
 }
