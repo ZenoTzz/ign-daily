@@ -2,6 +2,461 @@
   "date": "2026-08-26",
   "articles": [
     {
+      "id": 41,
+      "category": "科技新闻",
+      "emoji": "🏷️",
+      "en_title": "Apple's 2nd Generation AirTags Drop to a New Price Low",
+      "cn_title": "苹果第二代AirTag降至历史新低",
+      "summary": "苹果第二代AirTag追踪器在亚马逊降至新低价：四件装仅售79.99美元(约合人民币538元)，平均每个20美元(约合人民币135元)。第二代AirTag升级了精确查找功能、蓝牙范围和扬声器音量，且电池仍可自行更换。对经常弄丢钱包、钥匙等小物件的iPhone用户来说，眼下正是入手好时机。",
+      "url": "https://www.ign.com/articles/apples-2nd-generation-airtags-drop-to-a-new-price-low",
+      "publish_time_cn": "2026-08-26 05:30",
+      "pub_date": "2026-08-26 05:30",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/08/24/appleairtag-1787591594396.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/08/24/appleairtag-1787591594396.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/24/appleairtags-1787592353996.jpg",
+        "https://assets-prd.ignimgs.com/2026/08/24/appleairtag-1787591594396.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/24/appleairtag-1787591594396.jpg?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/24/appleairtag-1787591594396.jpg?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/24/appleairtag-1787591594396.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-08-26T06:17:29+08:00"
+    },
+    {
+      "id": 42,
+      "category": "游戏新闻",
+      "emoji": "⚔️",
+      "en_title": "The Witcher 3 Songs of the Past Expansion: Everything Revealed at gamescom ONL 2026",
+      "cn_title": "《巫师3》新DLC《旧时曲》亮相科隆展",
+      "summary": "CDPR在2026年科隆游戏展开幕夜直播中公布《巫师3》全新资料片《旧时曲》，预计2027年登陆PC、Switch 2、PS5和XBOX Series。杰洛特将首次使用锁链武器，前往新区域莱顿展开冒险，本作也是他在希里接棒前的最后一程。",
+      "url": "https://www.ign.com/articles/the-witcher-3-songs-of-the-past-expansion-everything-revealed-at-gamescom-onl-2026",
+      "publish_time_cn": "2026-08-26 05:25",
+      "pub_date": "2026-08-26 05:25",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/08/25/the-witcher-3-songs-of-the-past-1787692453901.png?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/08/25/the-witcher-3-songs-of-the-past-1787692453901.png?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/25/the-witcher-3-songs-of-the-past-1787692453901.png?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/25/the-witcher-3-songs-of-the-past-1787692453901.png?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/25/the-witcher-3-songs-of-the-past-1787692453901.png?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/25/the-witcher-3-songs-of-the-past-1787692453901.png",
+        "https://assets-prd.ignimgs.com/2021/12/08/witcher3-1638987659679.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-08-26T06:17:30+08:00",
+      "pending_dict": [
+        {
+          "en": "Letten",
+          "cn": "莱顿",
+          "cat": "terms",
+          "source": "ai_guess",
+          "reason": "游戏新区域名，暂无官方中文译名"
+        },
+        {
+          "en": "Miles Tost",
+          "cn": "Miles Tost",
+          "cat": "people",
+          "source": "ai_guess",
+          "reason": "CDPR关卡设计负责人，无通行中文译名，保留英文"
+        },
+        {
+          "en": "Peter Gelenscer",
+          "cn": "Peter Gelenscer",
+          "cat": "people",
+          "source": "ai_guess",
+          "reason": "资深巫师3开发者，无通行中文译名，保留英文"
+        }
+      ]
+    },
+    {
+      "id": 38,
+      "category": "科技新闻",
+      "emoji": "🎮",
+      "en_title": "Some Razer Gaming Gear Is Getting (Slightly Different) Translucent Green Options for Xbox's 25th Anniversary",
+      "cn_title": "雷蛇推出XBOX 25周年半透明绿色外设",
+      "summary": "雷蛇为XBOX 25周年推出半透明绿色纪念版外设，包括BlackWidow V4 75%机械键盘、Basilisk V3 Pro 35K鼠标和Hammerhead V3 X Hyperspeed无线耳机。键盘售价210美元(约合人民币1413元)，支持RGB灯效和热插拔轴体，比黑白色版贵20美元(约合人民币135元)；鼠标售价180美元(约合人民币1211元)，蓝牙续航最长210小时；耳机售价120美元(约合人民币808元)，后两者也均比普通版贵20美元(约合人民币135元)。",
+      "url": "https://www.ign.com/articles/some-razer-gaming-gear-is-getting-slightly-different-translucent-green-options-for-xboxs-25th-anniversary",
+      "publish_time_cn": "2026-08-26 05:09",
+      "pub_date": "2026-08-26 05:09",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/08/25/razer-xbox-25th-anniversary-edition-1787691485581.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/08/25/razer-xbox-25th-anniversary-edition-1787691485581.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/25/razer-xbox-25th-anniversary-edition-1787691485581.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/25/razer-xbox-25th-anniversary-edition-1787691485581.jpg?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/25/razer-xbox-25th-anniversary-edition-1787691485581.jpg?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/25/razer-xbox-25th-anniversary-edition-1787691485581.jpg",
+        "https://assets-prd.ignimgs.com/2022/10/25/razer-basilisk-v3-pro-button-1-1666724831765.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-08-26T05:17:30+08:00",
+      "pending_dict": [
+        {
+          "en": "BlackWidow V4 75%",
+          "cn": "黑寡妇V4 75%",
+          "cat": "terms",
+          "source": "ai_guess",
+          "reason": "雷蛇产品线名称，需确认官方中文写法"
+        },
+        {
+          "en": "Basilisk V3 Pro 35K",
+          "cn": "巴塞利斯蛇V3 Pro 35K",
+          "cat": "terms",
+          "source": "ai_guess",
+          "reason": "雷蛇产品线名称，需确认官方中文写法"
+        },
+        {
+          "en": "Hammerhead V3 X Hyperspeed",
+          "cn": "战锤狂鲨V3 X Hyperspeed",
+          "cat": "terms",
+          "source": "ai_guess",
+          "reason": "雷蛇产品线名称，需确认官方中文写法"
+        }
+      ]
+    },
+    {
+      "id": 39,
+      "category": "游戏新闻",
+      "emoji": "🌊",
+      "en_title": "Sea of Remnants Director Reveals 10 Minutes of Exclusive Gameplay, Details the Game’s Hidden Secrets",
+      "cn_title": "《遗迹之海》独家实机内容公开",
+      "summary": "《遗迹之海》公布gamescom 2026预告后，IGN独家公开超10分钟实机画面。本作由Joker Studios开发、网易游戏发行，将于2027年登陆Android、iOS、PC、PS5和XBOX Series，免费游玩，采用肉鸽回合制战斗与海陆双线探索，12月将开启封闭测试。",
+      "url": "https://www.ign.com/articles/sea-of-remnants-exclusive-gameplay-secrets",
+      "publish_time_cn": "2026-08-26 04:56",
+      "pub_date": "2026-08-26 04:56",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/08/24/seaofremnants-gameplay-blogroll-1787580343882.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/08/24/seaofremnants-gameplay-blogroll-1787580343882.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/24/seaofremnants-gameplay-blogroll-1787580343882.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/24/seaofremnants-gameplay-blogroll-1787580343882.jpg?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/24/seaofremnants-gameplay-blogroll-1787580343882.jpg?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/24/seaofremnants-gameplay-blogroll-1787580343882.jpg",
+        "https://assets-prd.ignimgs.com/2026/08/25/seaofremnants-1787690765197.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-08-26T05:17:33+08:00",
+      "pending_dict": [
+        {
+          "en": "Sea of Remnants",
+          "cn": "《遗迹之海》",
+          "cat": "games",
+          "source": "ai_guess",
+          "reason": "游戏暂无官方中文名，此为意译候选，需人工确认。"
+        },
+        {
+          "en": "Orbtopia",
+          "cn": "奥布托比亚",
+          "cat": "terms",
+          "source": "ai_guess",
+          "reason": "游戏中的虚构世界名称，音译候选，需人工确认。"
+        },
+        {
+          "en": "Forgotten Voyage",
+          "cn": "遗忘航行",
+          "cat": "terms",
+          "source": "ai_guess",
+          "reason": "游戏模式名称，意译候选，需人工确认。"
+        },
+        {
+          "en": "Joker Studios",
+          "cn": "Joker Studios",
+          "cat": "companies",
+          "source": "ai_guess",
+          "reason": "开发商名称，暂无官方中文名，保留英文，需人工确认。"
+        }
+      ]
+    },
+    {
+      "id": 40,
+      "category": "游戏新闻",
+      "emoji": "🎮",
+      "en_title": "Final Fantasy 7 Revelation Gets New Trailer at Gamescom 2026 Showing off Submarine Combat, Weapons, and More",
+      "cn_title": "《最终幻想7：Revelation》科隆展新预告 潜艇战与武器亮相",
+      "summary": "科隆游戏展开幕夜直播上，《最终幻想7：Revelation》放出新预告，展示了「武器」的更多形态，包括红宝石武器、绿宝石武器和终极武器，以及潜艇水下战斗、蒂法的黑魔法师职业装等内容。具体发售日未定，仍计划于2027年春季登陆PS5、Switch 2、XBOX Series和PC。导演滨口直树表示，希望将更多《最终幻想7》衍生作品融入最终结局。",
+      "url": "https://www.ign.com/articles/final-fantasy-7-revelations-gets-new-trailer-at-gamescom-2026-showing-off-submarine-combat-weapons-and-more",
+      "publish_time_cn": "2026-08-26 04:36",
+      "pub_date": "2026-08-26 04:36",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/08/25/final-fantasy-vii-revelations-trailer-gamescom-1787690049518.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/08/25/final-fantasy-vii-revelations-trailer-gamescom-1787690049518.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/25/final-fantasy-vii-revelations-trailer-gamescom-1787690049518.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/25/final-fantasy-vii-revelations-trailer-gamescom-1787690049518.jpg?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/25/final-fantasy-vii-revelations-trailer-gamescom-1787690049518.jpg?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/25/final-fantasy-vii-revelations-trailer-gamescom-1787690049518.jpg",
+        "https://assets-prd.ignimgs.com/2026/06/05/ff7revelation-1780699972546.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-08-26T05:17:34+08:00",
+      "pending_dict": [
+        {
+          "en": "Final Fantasy 7 Revelation",
+          "cn": "《最终幻想7：启示录》",
+          "cat": "games",
+          "source": "ai_guess",
+          "reason": "该作为系列新作，暂无确认中文译名，「启示录」为推测译名，需人工确认。"
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "category": "游戏新闻",
+      "emoji": "🐺",
+      "en_title": "The Witcher 3 Remastered Launches September, Free Upgrade For All Owners",
+      "cn_title": "《巫师3》重制版9月29日推出，免费升级",
+      "summary": "CD Projekt Red宣布，《巫师3》重制版将于9月29日上线，原版玩家免费升级。新版包含前两部资料片，并加入战斗调整、坐骑系统重做、护甲幻化、跨平台Mod支持等大量改进，同时支持PS5 Pro和XBOX Play Anywhere。第三部资料片《旧时曲》定于2027年推出，《巫师4》则目标2028年发售。",
+      "url": "https://www.ign.com/articles/the-witcher-3-remastered-launches-september-free-upgrade-for-all-owners",
+      "publish_time_cn": "2026-08-26 04:02",
+      "pub_date": "2026-08-26 04:02",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/05/28/redstreams-the-witcher-3-blood-and-wine-10th-anniversary-stream-00-57-54-1779984991876.png?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/05/28/redstreams-the-witcher-3-blood-and-wine-10th-anniversary-stream-00-57-54-1779984991876.png?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/05/28/redstreams-the-witcher-3-blood-and-wine-10th-anniversary-stream-00-57-54-1779984991876.png?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/05/28/redstreams-the-witcher-3-blood-and-wine-10th-anniversary-stream-00-57-54-1779984991876.png?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/05/28/redstreams-the-witcher-3-blood-and-wine-10th-anniversary-stream-00-57-54-1779984991876.png?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/05/28/redstreams-the-witcher-3-blood-and-wine-10th-anniversary-stream-00-57-54-1779984991876.png",
+        "https://assets-prd.ignimgs.com/2021/12/08/witcher3-1638987659679.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-08-26T04:17:29+08:00"
+    },
+    {
+      "id": 31,
+      "category": "游戏新闻",
+      "emoji": "🎮",
+      "en_title": "1001 Threads of Mizan: The First Preview",
+      "cn_title": "《1001 Threads of Mizan》试玩前瞻",
+      "summary": "《1001 Threads of Mizan》是一款取材自《一千零一夜》的动作冒险新作，由业界老兵组成的新工作室MBC Game Studio开发。在本次试玩中，其战斗融合了《王国之心》的华丽快节奏与魂类游戏的闪避机制，飞毯移动也相当有趣。游戏以单人体验为核心，并支持随时加入/退出的多人合作，整体值得期待。",
+      "url": "https://www.ign.com/articles/1001-threads-of-mizan-the-first-preview",
+      "publish_time_cn": "2026-08-26 04:00",
+      "pub_date": "2026-08-26 04:00",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/08/24/announce-screenshots-02-1787590688635.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/08/24/announce-screenshots-02-1787590688635.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/24/announce-screenshots-02-1787590688635.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/24/announce-screenshots-02-1787590688635.jpg?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/24/announce-screenshots-02-1787590688635.jpg?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/24/announce-screenshots-02-1787590688635.jpg",
+        "https://assets-prd.ignimgs.com/2026/08/24/announce-screenshots-06-1787590730100.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-08-26T04:17:31+08:00"
+    },
+    {
+      "id": 32,
+      "category": "评测评分",
+      "emoji": "🔫",
+      "en_title": "Gears of War: E-Day Campaign Hands-On Preview: To Quote Marcus Fenix, “Nice”",
+      "cn_title": "《战争机器：事变日》战役试玩前瞻：马库斯·菲利克斯「真不错」",
+      "summary": "IGN编辑试玩了《战争机器：事变日》战役模式，内容覆盖第2章早期内容。这位系列老玩家坦言，两个月前XBOX Showcase上公布的战役演示并未令他兴奋，但上手仅30秒便打消了疑虑。本次试玩展示了武器改装、战术装备、补给箱等新机制，以及线性关卡与街区式自由作战区域的结合，马库斯·菲利克斯与多姆·圣地亚哥再度并肩作战。",
+      "url": "https://www.ign.com/articles/gears-of-war-e-day-campaign-hands-on-preview-to-quote-marcus-fenix-nice",
+      "publish_time_cn": "2026-08-26 04:00",
+      "pub_date": "2026-08-26 04:00",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/08/22/gowed-blogroll-1787358129687.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/08/22/gowed-blogroll-1787358129687.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/22/gowed-blogroll-1787358129687.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/22/gowed-blogroll-1787358129687.jpg?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/22/gowed-blogroll-1787358129687.jpg?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/22/gowed-blogroll-1787358129687.jpg",
+        "https://assets-prd.ignimgs.com/2026/06/07/eday-1780856237669.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-08-26T04:17:33+08:00",
+      "pending_dict": [
+        {
+          "en": "Marcus Fenix",
+          "cn": "马库斯·菲利克斯",
+          "cat": "people",
+          "source": "ai_guess",
+          "reason": "《战争机器》系列主角，有通行中文译名，建议入库"
+        },
+        {
+          "en": "Dominic Santiago",
+          "cn": "多姆·圣地亚哥",
+          "cat": "people",
+          "source": "ai_guess",
+          "reason": "《战争机器》系列主要角色，有通行中文译名，建议入库"
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "category": "游戏新闻",
+      "emoji": "🎮",
+      "en_title": "Roco Kingdom Goes Global",
+      "cn_title": "《洛克王国》10月27日开启全球封测",
+      "summary": "2026年3月在中国上线后，《洛克王国》迅速登顶新品手游平均日活和收入榜。开发商魔方工作室在科隆游戏展开幕夜上正式公布，将于10月27日在PC、iOS和Android平台开启首次全球封闭测试。这款拥有16年历史的系列累计注册玩家已超过3.5亿。",
+      "url": "https://www.ign.com/articles/roco-kingdom-goes-global",
+      "publish_time_cn": "2026-08-26 04:00",
+      "pub_date": "2026-08-26 04:00",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/08/24/roco1-1787588674495.png?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/08/24/roco1-1787588674495.png?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/24/roco1-1787588674495.png?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/24/roco1-1787588674495.png?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/24/roco1-1787588674495.png?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/24/roco1-1787588674495.png",
+        "https://assets-prd.ignimgs.com/2026/08/24/roco1-1787588659744.png",
+        "https://assets-prd.ignimgs.com/2026/08/24/roco2-1787588584437.png",
+        "https://assets-prd.ignimgs.com/2026/08/24/roco3-1787588535182.png",
+        "https://assets-prd.ignimgs.com/2026/08/24/roco4-1787588953009.png"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-08-26T04:17:34+08:00",
+      "pending_dict": [
+        {
+          "en": "Roco Kingdom",
+          "cn": "洛克王国",
+          "cat": "games",
+          "source": "ai_guess",
+          "reason": "该作品为腾讯旗下经典IP，官方中文名为《洛克王国》，词库未收录，待确认后入库"
+        },
+        {
+          "en": "Morefun Studios",
+          "cn": "魔方工作室",
+          "cat": "companies",
+          "source": "ai_guess",
+          "reason": "该工作室为腾讯旗下魔方工作室，通行中文名待确认后入库"
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "category": "游戏新闻",
+      "emoji": "🧱",
+      "en_title": "LEGO Skylines Announced at Gamescom",
+      "cn_title": "《LEGO Skylines》亮相科隆游戏展",
+      "summary": "科隆游戏展上，Paradox Interactive正式公布了乐高版《城市：天际线》——《LEGO Skylines》。本作由Iceflake Studios开发，玩家既可以建造实用规整的理性城市，也能用乐高积木发挥创意，实现异想天开的点子，比如在每个街角开一家面包店。游戏将登陆XBOX Series、PS5、Switch 2和PC，发售日尚未公布。",
+      "url": "https://www.ign.com/articles/lego-skylines-announced-at-gamescom",
+      "publish_time_cn": "2026-08-26 03:55",
+      "pub_date": "2026-08-26 03:55",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/08/25/lego-skylines-game-screenshot-3-1787686623633.webp?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/08/25/lego-skylines-game-screenshot-3-1787686623633.webp?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/25/lego-skylines-game-screenshot-3-1787686623633.webp?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/25/lego-skylines-game-screenshot-3-1787686623633.webp?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/25/lego-skylines-game-screenshot-3-1787686623633.webp?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/25/lego-skylines-game-screenshot-3-1787686623633.webp",
+        "https://assets-prd.ignimgs.com/2026/08/25/lego-skylines-header-image-1787686134041.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-08-26T04:17:36+08:00",
+      "pending_dict": [
+        {
+          "en": "LEGO Skylines",
+          "cn": "乐高天际线",
+          "cat": "games",
+          "source": "ai_guess",
+          "reason": "官方中文名尚未公布，待用户确认"
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "category": "游戏新闻",
+      "emoji": "📅",
+      "en_title": "Path of Exile 2 Release Date Sets 1.0 Launch in December 2026",
+      "cn_title": "《流放之路2》1.0正式版12月11日发售",
+      "summary": "《流放之路2》开发商GGG在科隆游戏展开幕夜直播中宣布，1.0正式版将于2026年12月11日登陆PC（Steam和Epic游戏商城）、PS5及XBOX Series，玩家终于可以在假期前玩到完整版本。预告片混合了实机画面与过场动画。",
+      "url": "https://www.ign.com/articles/path-of-exile-2-release-date-sets-10-launch-in-december-2026",
+      "publish_time_cn": "2026-08-26 03:49",
+      "pub_date": "2026-08-26 03:49",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/08/25/path-of-exile-2-1-0-release-date-1787687331803.png?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/08/25/path-of-exile-2-1-0-release-date-1787687331803.png?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/25/path-of-exile-2-1-0-release-date-1787687331803.png?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/25/path-of-exile-2-1-0-release-date-1787687331803.png?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/25/path-of-exile-2-1-0-release-date-1787687331803.png?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/25/path-of-exile-2-1-0-release-date-1787687331803.png",
+        "https://assets-prd.ignimgs.com/2024/08/19/pathofexile-1724076955758.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-08-26T04:17:38+08:00",
+      "pending_dict": [
+        {
+          "en": "gamescom Opening Night Live",
+          "cn": "科隆游戏展开幕夜直播",
+          "cat": "terms",
+          "source": "ai_guess",
+          "reason": "游戏展会活动名的通行中文译法，建议人工确认后入库。"
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "category": "影视资讯",
+      "emoji": "🎬",
+      "en_title": "Backrooms Is Officially Coming to HBO Max in September",
+      "cn_title": "《后室》电影定档9月25日上线HBO Max",
+      "summary": "恐怖电影《后室》确定将于9月25日登陆HBO Max流媒体平台，次日在美国HBO电视频道播出。该片由年仅21岁的Kane Parsons执导，此前在影院表现惊人：首周末票房突破8000万美元(约合人民币5亿元)，成为A24影史最卖座影片，全球累计票房接近4亿美元(约合人民币27亿元)。IGN为本片打出8/10好评。",
+      "url": "https://www.ign.com/articles/backrooms-hbo-max-streaming-release-date-confirmed",
+      "publish_time_cn": "2026-08-26 03:43",
+      "pub_date": "2026-08-26 03:43",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/03/backroomsmary-1-1780515323361.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/06/03/backroomsmary-1-1780515323361.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/03/backroomsmary-1-1780515323361.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/03/backroomsmary-1-1780515323361.jpg?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/03/backroomsmary-1-1780515323361.jpg?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/03/backroomsmary-1-1780515323361.jpg",
+        "https://assets-prd.ignimgs.com/2026/02/24/backrooms-xlg-1771952239007.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-08-26T04:17:39+08:00",
+      "pending_dict": [
+        {
+          "en": "Backrooms",
+          "cn": "后室",
+          "cat": "movies_tv",
+          "source": "ai_guess",
+          "reason": "Backrooms（网络怪谈空间）在中文社区通行译名为「后室」，但未在当前词库命中，建议人工确认后入库。"
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "category": "游戏新闻",
+      "emoji": "🎮",
+      "en_title": "Crimson Desert is Becoming Crimson Desert Enhanced For Free",
+      "cn_title": "《红色沙漠》免费升级为增强版",
+      "summary": "Pearl Abyss宣布，《红色沙漠》将免费升级为《红色沙漠：增强版》。新版本在主流程中新增过场动画与剧情片段，并加入德语、法语、西班牙语、巴西葡萄牙语和日语配音，玩家只需更新至2.00.00版本即可获得。游戏自3月19日发售以来，销量已突破600万份。",
+      "url": "https://www.ign.com/articles/crimson-desert-is-becoming-crimson-desert-enhanced-for-free",
+      "publish_time_cn": "2026-08-26 03:30",
+      "pub_date": "2026-08-26 03:30",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/08/25/crimson-desert-enhanced-official-announcement-trailer-gamescom-onl-2026-00-00-46-1787686290346.png?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/08/25/crimson-desert-enhanced-official-announcement-trailer-gamescom-onl-2026-00-00-46-1787686290346.png?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/25/crimson-desert-enhanced-official-announcement-trailer-gamescom-onl-2026-00-00-46-1787686290346.png?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/25/crimson-desert-enhanced-official-announcement-trailer-gamescom-onl-2026-00-00-46-1787686290346.png?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/25/crimson-desert-enhanced-official-announcement-trailer-gamescom-onl-2026-00-00-46-1787686290346.png?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/25/crimson-desert-enhanced-official-announcement-trailer-gamescom-onl-2026-00-00-46-1787686290346.png",
+        "https://assets-prd.ignimgs.com/2026/03/19/crimsondesert-1773961260885.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-08-26T04:17:41+08:00",
+      "pending_dict": [
+        {
+          "en": "Crimson Desert Enhanced",
+          "cn": "红色沙漠：增强版",
+          "cat": "games",
+          "source": "ai_guess",
+          "reason": "官方中文译名待确认，暂译为「红色沙漠：增强版」"
+        }
+      ]
+    },
+    {
       "id": 29,
       "category": "游戏新闻",
       "emoji": "🎯",
@@ -94,8 +549,8 @@
       "category": "游戏新闻",
       "emoji": "🎮",
       "en_title": "Tides of Annihilation Trailer Confirms Resident Evil Requiem Actress Angela Sant'Albano as New Voice of Gwendolyn",
-      "cn_title": "Tides of Annihilation Trailer Confirms Resident Evil Requiem Actress Angela Sant'Albano as New Voice of Gwendolyn",
-      "summary": "",
+      "cn_title": "《湮灭潮汐》预告确认《生化危机：安魂曲》演员接任格温多琳配音",
+      "summary": "在gamescom 2026开幕夜直播中，Eclipse Glow Games发布《湮灭潮汐》新预告，确认曾出演《生化危机：安魂曲》的Angela Sant'Albano担任格温多琳的新配音。原配音Jennifer English因健康原因退出，而Sant'Albano正是粉丝此前猜测的热门人选。预告还展示了格温多琳掌握迷雾之力、召唤兰斯洛特战斗的场面。游戏尚无发售日，预计登陆PC、PS5和XBOX Series。",
       "url": "https://www.ign.com/articles/tides-of-annihilation-trailer-confirms-resident-evil-requiem-actress-angela-santalbano-as-new-voice-of-gwendolyn",
       "publish_time_cn": "2026-08-26 02:34",
       "pub_date": "2026-08-26 02:34",
@@ -110,7 +565,16 @@
         "https://assets-prd.ignimgs.com/2025/02/13/9e421ef33a521be60004a66fbbfd0f064e77130cbf42ba0c-1739405673346.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-08-26T03:17:35+08:00"
+      "source_fetched_at": "2026-08-26T03:17:35+08:00",
+      "pending_dict": [
+        {
+          "en": "Tides of Annihilation",
+          "cn": "湮灭潮汐",
+          "cat": "games",
+          "source": "ai_guess",
+          "reason": "该作中文社区已有通用译名《湮灭潮汐》，但暂无官方中文定名，需人工确认"
+        }
+      ]
     },
     {
       "id": 27,
@@ -974,7 +1438,64 @@
           "reason": "James Gunn执导的新蝙蝠侠电影，媒体常译《英勇无畏》或《勇敢与无畏》，待确认统一译名"
         }
       ]
+    },
+    {
+      "id": 43,
+      "category": "评测评分",
+      "emoji": "🦄",
+      "en_title": "Buddy Review",
+      "cn_title": "《Buddy》评测：糖衣儿童节目下的黑暗荒诞",
+      "summary": "《Too Many Cooks》导演Casper Kelly的新作《Buddy》将于8月28日周五登陆院线。影片起初呈现为一部类似《巴尼与朋友》的儿童益智节目，实则借独角兽Buddy与孩子们的互动，一步步滑向黑暗荒诞的暴力深渊。Keegan-Michael Key为Buddy配音，该片被视为《Too Many Cooks》真正意义上的精神续作。",
+      "url": "https://www.ign.com/articles/buddy-movie-review",
+      "publish_time_cn": "2026-08-25 08:17",
+      "pub_date": "2026-08-25 08:17",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/08/24/buddy-thumb-1787597586617.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/08/24/buddy-thumb-1787597586617.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/24/buddy-thumb-1787597586617.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/24/buddy-thumb-1787597586617.jpg?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/24/buddy-thumb-1787597586617.jpg?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/07/24/buddy-button-replacement-1784906183026.jpg",
+        "https://assets-prd.ignimgs.com/2026/08/24/buddy-thumb-1787597586617.jpg",
+        "https://assets-prd.ignimgs.com/2026/08/24/buddy-1787597586616.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-08-26T08:17:31+08:00"
+    },
+    {
+      "id": 44,
+      "category": "评测评分",
+      "emoji": "🟢",
+      "en_title": "Lanterns Season 1, Episode 2 Review & Recap",
+      "cn_title": "《Lanterns》第二集：分开也精彩",
+      "summary": "《Lanterns》第二集让哈尔·乔丹与约翰·斯图尔特这对搭档大部分时间分开行动，结果两人各自的部分依然精彩。本集喜剧元素比预期更浓，哈尔与警长凯瑞的对手戏火花四溅；谋杀谜案也添了新变数，Antaan正式登场。结尾哈尔首次穿上战衣，飞往欧阿星会见被囚禁的塞尼斯托。",
+      "url": "https://www.ign.com/articles/lanterns-season-1-episode-2-review-recap",
+      "publish_time_cn": "2026-08-25 08:17",
+      "pub_date": "2026-08-25 08:17",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/08/21/lanterns-s1e2-review-blogroll-1787330378523.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/08/21/lanterns-s1e2-review-blogroll-1787330378523.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/21/lanterns-s1e2-review-blogroll-1787330378523.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/21/lanterns-s1e2-review-blogroll-1787330378523.jpg?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/21/lanterns-s1e2-review-blogroll-1787330378523.jpg?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/12/lanterns-ver4-xlg-1786543132984.jpg",
+        "https://assets-prd.ignimgs.com/2026/08/21/lanterns-s1e2-review-blogroll-1787330378523.jpg",
+        "https://assets-prd.ignimgs.com/2026/08/10/lanterns-s1-review-blogroll-1786394344522.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-08-26T08:17:32+08:00",
+      "pending_dict": [
+        {
+          "en": "Lanterns",
+          "cn": "《绿灯侠》",
+          "cat": "movies_tv",
+          "source": "ai_guess",
+          "reason": "《Lanterns》为DC绿灯侠相关剧集，官方中文译名待确认，建议人工核实。"
+        }
+      ]
     }
   ],
-  "total": 29
+  "total": 44
 }
