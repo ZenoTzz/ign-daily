@@ -67,7 +67,7 @@
       "publish_time_cn": "2026-08-13 05:57",
       "pub_date": "2026-08-13 05:57",
       "cover_image": "https://assets-prd.ignimgs.com/2026/08/05/marveltokon-reviewinprogress-blogroll-1785970354860.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/08/05/marveltokon-reviewinprogress-blogroll-1785970354860.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/08/05/marveltokon-reviewinprogress-blogroll-1785970354860.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -86,7 +86,11 @@
           "source": "ai_guess",
           "reason": "该作为网易新公布的漫威格斗游戏，暂无官方或社区通行中文译名，需人工确认"
         }
-      ]
+      ],
+      "translation_path": "translations/40.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "gpt-5.6-luna"
     },
     {
       "id": 41,
@@ -99,7 +103,7 @@
       "publish_time_cn": "2026-08-13 05:22",
       "pub_date": "2026-08-13 05:22",
       "cover_image": "https://assets-prd.ignimgs.com/2025/06/06/hogwartslegacy-switch2review-blogroll-1749233453856.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2025/06/06/hogwartslegacy-switch2review-blogroll-1749233453856.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2025/06/06/hogwartslegacy-switch2review-blogroll-1749233453856.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -109,7 +113,11 @@
         "https://assets-prd.ignimgs.com/2024/09/05/hogwarts-legacy-button-fin-1653421326559-1725561152060.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-08-13T06:17:36+08:00"
+      "source_fetched_at": "2026-08-13T06:17:36+08:00",
+      "translation_path": "translations/41.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "gpt-5.6-luna"
     },
     {
       "id": 35,
@@ -245,7 +253,7 @@
       "publish_time_cn": "2026-08-13 04:12",
       "pub_date": "2026-08-13 04:12",
       "cover_image": "https://assets-prd.ignimgs.com/2026/08/12/i-cut-a-steam-machine-faceplate-from-the-same-marble-v0-rr0auyyv4yih1-1786563496636.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/08/12/i-cut-a-steam-machine-faceplate-from-the-same-marble-v0-rr0auyyv4yih1-1786563496636.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/08/12/i-cut-a-steam-machine-faceplate-from-the-same-marble-v0-rr0auyyv4yih1-1786563496636.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -255,7 +263,11 @@
         "https://assets-prd.ignimgs.com/2025/11/10/machine1-1762804332938.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-08-13T05:17:34+08:00"
+      "source_fetched_at": "2026-08-13T05:17:34+08:00",
+      "translation_path": "translations/38.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "gpt-5.6-luna"
     },
     {
       "id": 39,
@@ -268,7 +280,7 @@
       "publish_time_cn": "2026-08-13 04:11",
       "pub_date": "2026-08-13 04:11",
       "cover_image": "https://assets-prd.ignimgs.com/2024/05/03/ryan-gosling-roles-1714741014758.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2024/05/03/ryan-gosling-roles-1714741014758.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2024/05/03/ryan-gosling-roles-1714741014758.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -278,7 +290,11 @@
         "https://assets-prd.ignimgs.com/2023/04/04/barbie-new-button-1680628004864.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-08-13T05:17:36+08:00"
+      "source_fetched_at": "2026-08-13T05:17:36+08:00",
+      "translation_path": "translations/39.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "gpt-5.6-luna"
     },
     {
       "id": 46,
@@ -435,13 +451,13 @@
       "category": "人物新闻",
       "emoji": "🗣️",
       "en_title": "Christopher Judge Slams God of War TV Series Showrunners For Not Hiring Writers of the Games",
-      "cn_title": "克里斯托弗·贾奇炮轰《战神》剧集弃用游戏编剧",
-      "summary": "《战神》奎托斯配音演员克里斯托弗·贾奇在FanExpo座谈会上抨击游戏改编影视不聘请原著创作者，尤其点名《战神》剧集未任用游戏编剧。该剧上月因奎托斯演员Ryan Hurst片场受伤停拍，戴夫·巴蒂斯塔正洽谈接替。贾奇明年将在《战神：劳菲》中再次饰演奎托斯。",
+      "cn_title": "《战神》剧集弃用游戏编剧遭炮轰",
+      "summary": "《战神》游戏版奎托斯演员批评剧集弃用原作编剧，认为游戏创作者更了解这个世界。剧集因主演受伤换角，Dave Bautista正洽谈接替，预计秋季复拍。",
       "url": "https://www.ign.com/articles/christopher-judge-slams-god-of-war-tv-series-showrunners-for-not-hiring-writers-of-the-games",
       "publish_time_cn": "2026-08-13 02:50",
       "pub_date": "2026-08-13 02:50",
       "cover_image": "https://assets-prd.ignimgs.com/2022/11/09/godofwarragnarok-earlygamecombattips-blogroll-1668006863165.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2022/11/09/godofwarragnarok-earlygamecombattips-blogroll-1668006863165.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2022/11/09/godofwarragnarok-earlygamecombattips-blogroll-1668006863165.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -474,7 +490,11 @@
           "source": "ai_guess",
           "reason": "《战神》系列创意总监，知名游戏制作人，建议确认音译名"
         }
-      ]
+      ],
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "gpt-5.6-luna",
+      "translation_path": "translations/29.json"
     },
     {
       "id": 30,
@@ -721,7 +741,7 @@
       "publish_time_cn": "2026-08-13 00:31",
       "pub_date": "2026-08-13 00:31",
       "cover_image": "https://assets-prd.ignimgs.com/2026/05/27/geralt-1779876441844.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/05/27/geralt-1779876441844.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/05/27/geralt-1779876441844.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -731,20 +751,24 @@
         "https://assets-prd.ignimgs.com/2022/10/08/thewitchersirius-1665250134186.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-08-13T01:17:49+08:00"
+      "source_fetched_at": "2026-08-13T01:17:49+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "gpt-5.6-luna",
+      "translation_path": "translations/23.json"
     },
     {
       "id": 24,
       "category": "游戏新闻",
       "emoji": "🎮",
       "en_title": "PlayStation Plus Game Catalog for August 2026 Confirmed",
-      "cn_title": "《绝地潜兵2》领衔8月PS Plus游戏目录",
-      "summary": "索尼确认2026年8月PS Plus游戏目录，《绝地潜兵2》《天国：拯救2》《吸血鬼幸存者》领衔。阵容还有《Hell is Us》《双点博物馆》《赛马娘Pretty Derby - Party Dash》等。新游戏上线时间因地区而异，美英日当月分批推出，其他地区7月21日上线。此外《绝地潜兵2》还获得重大更新与《战锤40K》跨界Warbond。",
+      "cn_title": "索尼确认8月PlayStation Plus游戏目录",
+      "summary": "索尼确认2026年8月PlayStation Plus游戏目录，《绝地潜兵2》和《天国：拯救2》领衔。美国、英国、日本将分批上线，其他地区7月21日开放完整阵容。",
       "url": "https://www.ign.com/articles/playstation-plus-game-catalog-for-august-2026-confirmed",
       "publish_time_cn": "2026-08-13 00:19",
       "pub_date": "2026-08-13 00:19",
-      "cover_image": "https://assets-prd.ignimgs.com/2025/02/03/kcd2-review-blogroll-1738560654844.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2025/02/03/kcd2-review-blogroll-1738560654844.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2025/02/03/kcd2-review-blogroll-1738560654844.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2025/02/03/kcd2-review-blogroll-1738560654844.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -777,7 +801,16 @@
           "source": "ai_guess",
           "reason": "赛马娘为通行译名，但副标题及派生作名称需确认官方中文写法。"
         }
-      ]
+      ],
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "gpt-5.6-luna",
+      "translation_path": "translations/24.json",
+      "reasoning_effort": "xhigh",
+      "reviewer_model": "gpt-5.6-luna",
+      "reviewed_at": "2026-08-31T07:11:32.808631+00:00",
+      "prompt_version": "api-fulltext-2026-07-v2",
+      "quality_gate_version": 1
     },
     {
       "id": 25,

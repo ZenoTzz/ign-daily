@@ -2,6 +2,72 @@
   "date": "2026-08-31",
   "articles": [
     {
+      "id": 10,
+      "category": "游戏新闻",
+      "emoji": "🎮",
+      "en_title": "GTA 5's Michael Actor Defends GTA 6 After Doubters Say Rockstar's Games Look Too Similar",
+      "cn_title": "《迈克尔》《GTA5》麦克扮演者力挺《GTA6》：称质疑者「疯了」",
+      "summary": "《GTA5》主角麦克的演员 Ned Luke 为《GTA6》辩护，称那些认为新作与《GTA5》过于相似的人「疯了」。他特别称赞了《GTA6》的人物动作与画面细节，认为其表现已超越《GTA5》和《荒野大镖客：救赎2》。《GTA6》将于2026年11月19日登陆PS5和XBOX Series。",
+      "url": "https://www.ign.com/articles/gta-5s-michael-actor-defends-gta-6-after-doubters-say-rockstars-games-look-too-similar",
+      "publish_time_cn": "2026-08-31 06:08",
+      "pub_date": "2026-08-31 06:08",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/08/30/gta-5-michael-gta-6-1788126987774.png?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/08/30/gta-5-michael-gta-6-1788126987774.png?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/30/gta-5-michael-gta-6-1788126987774.png?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/30/gta-5-michael-gta-6-1788126987774.png?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/30/gta-5-michael-gta-6-1788126987774.png?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/30/gta-5-michael-gta-6-1788126987774.png",
+        "https://kraken.ignimgs.com/apple-touch-icon.png",
+        "https://assets-prd.ignimgs.com/2021/12/17/gta-5-button-2021-1639777058682.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-08-31T06:17:28+08:00",
+      "pending_dict": [
+        {
+          "en": "Michael De Santa",
+          "cn": "麦克·迪圣塔",
+          "cat": "games",
+          "source": "ai_guess",
+          "reason": "《GTA5》官中常用译名，待用户确认后入库"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "category": "影视资讯",
+      "emoji": "🎬",
+      "en_title": "Ridley Scott's The Dog Stars Bombs in Theaters With $19 Million Global Opening",
+      "cn_title": "雷德利·斯科特新片《The Dog Stars》首周末票房惨败",
+      "summary": "雷德利·斯科特执导的《The Dog Stars》全球首周末仅收1930万美元(约合人民币1亿元)，位列周末第五。影片口碑不佳，烂番茄新鲜度仅41%，IGN打出5/10。据《综艺》报道，该片制作成本高达8000万美元(约合人民币5亿元)，回本希望渺茫。",
+      "url": "https://www.ign.com/articles/ridley-scotts-the-dog-stars-bombs-in-theaters-with-19-million-global-opening",
+      "publish_time_cn": "2026-08-31 03:49",
+      "pub_date": "2026-08-31 03:49",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/07/14/dogstarsthumb-1784048942070.png?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/07/14/dogstarsthumb-1784048942070.png?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/07/14/dogstarsthumb-1784048942070.png?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/07/14/dogstarsthumb-1784048942070.png?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/07/14/dogstarsthumb-1784048942070.png?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/07/14/dogstarsthumb-1784048942070.png",
+        "https://kraken.ignimgs.com/apple-touch-icon.png",
+        "https://assets-prd.ignimgs.com/2026/07/29/coyotevsacme-posterart-1080x1350-300dpi-1785335474317.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-08-31T04:17:27+08:00",
+      "pending_dict": [
+        {
+          "en": "The Dog Stars",
+          "cn": "狗星",
+          "cat": "movies_tv",
+          "source": "ai_guess",
+          "reason": "改编自Peter Heller同名小说，暂未见官方或通行中文译名，需人工确认"
+        }
+      ]
+    },
+    {
       "id": 8,
       "category": "影视资讯",
       "emoji": "🎬",
@@ -323,7 +389,31 @@
           "reason": "宝可梦公司社长，官方汉字名为石原恒和，建议确认后入词库"
         }
       ]
+    },
+    {
+      "id": 11,
+      "category": "游戏新闻",
+      "emoji": "🎮",
+      "en_title": "The Pokémon Company on PokémonXP's Lottery System, Long Lines, and Limited Access to Workshops",
+      "cn_title": "宝可梦公司回应PokémonXP抽签难",
+      "summary": "2026宝可梦世界锦标赛与PokémonXP在美国旧金山举行，约5万人到场，却有超过13万人报名入场抽签。宝可梦公司国际部赛事负责人Chris Brown回应称，抽签是需求远超供应时唯一可行的处理方式，并承认部分粉丝失望，正考虑通过增加供给、按优先级分配活动名额等方式改进。",
+      "url": "https://www.ign.com/articles/the-pokemon-company-on-pokemonxps-lottery-system-long-lines-and-limited-access-to-workshops",
+      "publish_time_cn": "2026-08-30 10:42",
+      "pub_date": "2026-08-30 10:42",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/08/30/xp-blog-1788057109453.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/08/30/xp-blog-1788057109453.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/30/xp-blog-1788057109453.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/30/xp-blog-1788057109453.jpg?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/30/xp-blog-1788057109453.jpg?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/30/xp-blog-1788057109453.jpg",
+        "https://kraken.ignimgs.com/apple-touch-icon.png",
+        "https://assets-prd.ignimgs.com/2023/11/29/pokemon-button-1701274369420.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-08-31T07:17:29+08:00"
     }
   ],
-  "total": 8
+  "total": 11
 }
