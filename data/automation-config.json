@@ -1,23 +1,32 @@
 {
   "title_translator": "api",
-  "fulltext_translator": "codex",
+  "fulltext_translator": "api",
   "nightly_learner": "codex",
   "api_provider": "openai-compatible",
-  "api_model": "deepseek-v4-flash",
-  "api_title_model": "deepseek-v4-flash",
-  "api_fulltext_model": "deepseek-v4-pro",
+  "api_model": "gpt-5.6-luna",
+  "api_title_model": "gpt-5.6-luna",
+  "api_fulltext_model": "gpt-5.6-luna",
   "api_nightly_model": "deepseek-v4-flash",
   "api_title_thinking": "high",
-  "api_fulltext_thinking": "high",
+  "api_fulltext_thinking": "xhigh",
   "api_nightly_thinking": "max",
   "api_compare_thinking": "disabled",
-  "api_base_url": "https://api.deepseek.com",
-  "api_fulltext_batch": "2",
+  "api_base_url": "https://api.apikey.fun/v1",
+  "api_fulltext_batch": "all",
   "compare_models": [
     "deepseek-v4-pro",
     "deepseek-v4-flash"
   ],
   "api_models": [
+    {
+      "label": "GPT-5.6 Luna (APIKEY.FUN 外接版)",
+      "model": "gpt-5.6-luna",
+      "base_url": "https://api.apikey.fun/v1",
+      "provider": "openai-compatible",
+      "input_cache_hit_usd_per_million": 0.00857143,
+      "input_cache_miss_usd_per_million": 0.08571429,
+      "output_usd_per_million": 0.51428571
+    },
     {
       "label": "DeepSeek V4 Pro",
       "model": "deepseek-v4-pro",
@@ -55,6 +64,6 @@
       "output_usd_per_million": ""
     }
   ],
-  "updated_at": "2026-07-01T01:17:21.288Z",
-  "notes": "Public switch only. API keys must stay in GitHub Actions Secrets."
+  "updated_at": "2026-08-31T00:00:00.000Z",
+  "notes": "Production uses the APIKEY.FUN external-script group with GPT-5.6 Luna. API keys must stay in server or GitHub secrets."
 }

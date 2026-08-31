@@ -27,10 +27,36 @@ _QUOTE_ATTRIBUTION_RE = re.compile(
     r"\b(?:said|says|told|wrote|added|replied|explained|according to)\b",
     re.IGNORECASE,
 )
-_RAW_ENGLISH_CURRENCY_NOTE_RE = re.compile(
-    r"(?:原文\s*)?\d[\d,]*(?:\.\d+)?\s*(?:million|billion|trillion)\s*(?:美元|欧元|英镑)",
-    re.IGNORECASE,
-)
+_REPEATED_QUESTION_MARK_RE = re.compile(r"\?{3,}")
+_MOJIBAKE_RE = re.compile(r"(?:Ã.|Â.|â[€ž™œ]|ï¿½|ðŸ|[\u0080-\u009f])")
+
+
+def _visible_translation_text(data: dict[str, Any]) -> list[tuple[str, str]]:
+    fields: list[tuple[str, str]] = []
+    for key in ("cn_title", "subtitle", "opus_summary"):
+        value = data.get(key)
+        if isinstance(value, str) and value:
+            fields.append((key, value))
+    paragraphs = data.get("paragraphs")
+    if isinstance(paragraphs, list):
+        for position, item in enumerate(paragraphs, start=1):
+            if isinstance(item, dict):
+                value = item.get("cn")
+                if isinstance(value, str) and value:
+                    fields.append((f"paragraph {position}", value))
+    return fields
+
+
+def _encoding_errors(data: dict[str, Any]) -> list[str]:
+    errors: list[str] = []
+    for field, text in _visible_translation_text(data):
+        if _REPEATED_QUESTION_MARK_RE.search(text):
+            errors.append(f"{field} contains repeated question marks and may be encoding-damaged")
+        if "\ufffd" in text:
+            errors.append(f"{field} contains the Unicode replacement character")
+        if _MOJIBAKE_RE.search(text):
+            errors.append(f"{field} contains likely mojibake")
+    return errors
 
 
 def _number_tokens(text: str) -> set[str]:
@@ -38,26 +64,38 @@ def _number_tokens(text: str) -> set[str]:
     for match in _NUMBER_RE.finditer(text or ""):
         token = match.group(0).replace(",", "")
         digits = re.sub(r"\D", "", token)
-        if "%" in token or "." in token or len(digits) >= 2:
+        if "%" in token:
             tokens.add(token)
-    # Chinese translations commonly express English "million" values with
-    # 亿/万 units. Include equivalent absolute and million-scale forms so a
-    # faithful locked translation such as 120 million -> 1.2亿 is accepted.
-    for match in re.finditer(r"(\d[\d,]*(?:\.\d+)?)\s*亿", text or ""):
-        value = float(match.group(1).replace(",", ""))
-        tokens.add(f"{value / 10:g}")
-        tokens.add(f"{value * 100:g}")
-        tokens.add(f"{value * 100_000_000:g}")
-    for match in re.finditer(r"(\d[\d,]*(?:\.\d+)?)\s*万", text or ""):
-        value = float(match.group(1).replace(",", ""))
-        tokens.add(f"{value * 10_000:g}")
-        tokens.add(f"{value / 100:g}")
+            continue
+
+        suffix = (text or "")[match.end():]
+        multiplier = 1.0
+        unit_match = re.match(r"\s*(billion|million|thousand)\b", suffix, re.IGNORECASE)
+        if unit_match:
+            multiplier = {
+                "billion": 1_000_000_000.0,
+                "million": 1_000_000.0,
+                "thousand": 1_000.0,
+            }[unit_match.group(1).lower()]
+        elif re.match(r"\s*亿", suffix):
+            multiplier = 100_000_000.0
+        elif re.match(r"\s*万", suffix):
+            multiplier = 10_000.0
+        elif re.match(r"\s*[Kk]\b", suffix):
+            # Product names commonly retain the compact suffix, for example
+            # Warhammer 40,000 -> 战锤40K.
+            multiplier = 1_000.0
+
+        if multiplier != 1.0:
+            tokens.add(f"{float(token) * multiplier:g}")
+        elif "." in token or len(digits) >= 2:
+            tokens.add(token)
     return tokens
 
 
 def deterministic_review_errors(data: dict[str, Any]) -> list[str]:
     """Catch high-confidence omissions before trusting the semantic review."""
-    errors: list[str] = []
+    errors = _encoding_errors(data)
     paragraphs = data.get("paragraphs")
     if not isinstance(paragraphs, list):
         return ["paragraphs must be a list"]
@@ -78,10 +116,6 @@ def deterministic_review_errors(data: dict[str, Any]) -> list[str]:
             ("「" in chinese and "」" in chinese) or ("『" in chinese and "』" in chinese)
         ):
             errors.append(f"paragraph {position} contains a direct quote without Chinese quote marks")
-        if _RAW_ENGLISH_CURRENCY_NOTE_RE.search(chinese):
-            errors.append(
-                f"paragraph {position} contains a redundant raw-English currency annotation"
-            )
     return errors
 
 

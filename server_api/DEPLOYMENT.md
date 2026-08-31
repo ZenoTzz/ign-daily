@@ -9,7 +9,7 @@ and secrets stay on the server.
 - Runtime content: `data/`, `exchange_rates.json`, API auth database.
 - Secrets: `/srv/ign-daily/.env` and `/srv/ign-daily-api/.env`.
 
-Do not put DeepSeek keys, GitHub tokens, or server passwords in Git.
+Do not put translator API keys, GitHub tokens, or server passwords in Git.
 
 ## Fresh server install
 
@@ -34,7 +34,19 @@ Then configure secrets interactively:
 bash /srv/ign-daily/server_api/deploy/configure_secrets.sh
 ```
 
-Paste the DeepSeek API key only in that server prompt. Do not send it in chat.
+Paste the translator API key only in that server prompt. For APIKEY.FUN use the
+external-script group and `https://api.apikey.fun/v1`; the Codex-only group
+cannot be used by the production website. Do not send the key in chat.
+
+To rotate only the translator credential without changing the admin account,
+WeChat settings or article data, use the narrower prompt:
+
+```bash
+bash /srv/ign-daily/server_api/deploy/configure_translator_secret.sh
+```
+
+Its hidden input is passed to the updater through stdin, and only
+`TRANSLATOR_API_KEY` plus `TRANSLATOR_BASE_URL` are changed.
 
 ## Backup before replacing a server
 

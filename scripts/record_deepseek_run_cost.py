@@ -119,6 +119,9 @@ def main() -> int:
 
     before = read_json(SNAPSHOT_DIR / f"{run_id}-before.json", {})
     after = read_json(SNAPSHOT_DIR / f"{run_id}-after.json", {})
+    if not before.get("ok") or not after.get("ok"):
+        print(f"RUN_COST_SKIP: balance snapshots unavailable for run={run_id}")
+        return 0
     before_time = parse_cn_time(str(before.get("updated_at_cn") or ""))
     after_time = parse_cn_time(str(after.get("updated_at_cn") or "")) or datetime.now(CST)
     records = records_between(before_time, after_time)

@@ -196,6 +196,7 @@ PYCONF
 }
 api_key_available() {
   \$PY - <<'PYKEY'
+import os
 from pathlib import Path
 keys = {}
 p = Path('$APP_DIR/.env')
@@ -205,7 +206,14 @@ if p.exists():
         if line and not line.startswith('#') and '=' in line:
             k, v = line.split('=', 1)
             keys[k.strip()] = v.strip().strip('"').strip("'")
-print('1' if any(keys.get(k) for k in ['TRANSLATOR_API_KEY', 'DEEPSEEK_API_KEY', 'GEMINI_API_KEY', 'GOOGLE_API_KEY']) else '0')
+base_url = os.environ.get('API_BASE_URL', '').lower()
+if 'deepseek' in base_url:
+    candidates = ['TRANSLATOR_API_KEY', 'DEEPSEEK_API_KEY']
+elif 'googleapis.com' in base_url:
+    candidates = ['GEMINI_API_KEY', 'GOOGLE_API_KEY', 'TRANSLATOR_API_KEY']
+else:
+    candidates = ['TRANSLATOR_API_KEY']
+print('1' if any(keys.get(k) for k in candidates) else '0')
 PYKEY
 }
 with_write_lock() {
@@ -228,7 +236,9 @@ if [[ "$(api_key_available)" == "1" && ( "$TITLE_TRANSLATOR" == "api" || "$TITLE
   export TRANSLATOR_BASE_URL="$API_BASE_URL"
   export TRANSLATOR_MODEL="$API_TITLE_MODEL"
   export TRANSLATOR_TITLE_LIMIT=30
+  export TRANSLATOR_API_TIMEOUT_SECONDS=180
   export TRANSLATOR_THINKING_MODE="$API_TITLE_THINKING"
+  export TRANSLATOR_REASONING_EFFORT="$API_TITLE_THINKING"
   $PY scripts/fetch_exchange_rates.py
   $PY scripts/translate_titles_deepseek.py --all
 fi
@@ -250,7 +260,9 @@ if [[ "$TITLE_TRANSLATOR" == "api" || "$TITLE_TRANSLATOR" == "deepseek" ]]; then
   export TRANSLATOR_BASE_URL="$API_BASE_URL"
   export TRANSLATOR_MODEL="$API_TITLE_MODEL"
   export TRANSLATOR_TITLE_LIMIT=30
+  export TRANSLATOR_API_TIMEOUT_SECONDS=180
   export TRANSLATOR_THINKING_MODE="$API_TITLE_THINKING"
+  export TRANSLATOR_REASONING_EFFORT="$API_TITLE_THINKING"
   $PY scripts/article_cache.py --all --queued --missing --limit 30 || true
   $PY scripts/translate_titles_deepseek.py --all
 fi
@@ -258,9 +270,14 @@ if [[ "$FULLTEXT_TRANSLATOR" == "api" || "$FULLTEXT_TRANSLATOR" == "deepseek" ]]
   export TRANSLATOR_BASE_URL="$API_BASE_URL"
   export TRANSLATOR_MODEL="$API_FULLTEXT_MODEL"
   export TRANSLATOR_FULLTEXT_LIMIT="$API_FULLTEXT_LIMIT"
-  export TRANSLATOR_FULLTEXT_TIME_BUDGET_SECONDS=1200
-  export TRANSLATOR_FULLTEXT_MAX_TOKENS=12000
+  export TRANSLATOR_API_TIMEOUT_SECONDS=900
+  export TRANSLATOR_FULLTEXT_TIME_BUDGET_SECONDS=3300
+  export TRANSLATOR_FULLTEXT_MAX_TOKENS=32000
+  export TRANSLATOR_FULLTEXT_CHUNK_MAX_TOKENS=8000
+  export TRANSLATOR_FULLTEXT_REPAIR_MAX_TOKENS=32000
   export TRANSLATOR_THINKING_MODE="$API_FULLTEXT_THINKING"
+  export TRANSLATOR_REASONING_EFFORT="$API_FULLTEXT_THINKING"
+  export TRANSLATOR_FULLTEXT_REASONING_EFFORT="$API_FULLTEXT_THINKING"
   $PY scripts/fetch_exchange_rates.py
   $PY scripts/article_cache.py --all --queued --missing --limit "$TRANSLATOR_FULLTEXT_LIMIT" || true
   $PY scripts/translate_fulltext_api.py --all

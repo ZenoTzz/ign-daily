@@ -28,7 +28,14 @@ from pathlib import Path
 from typing import Any
 
 from common_paths import DATA_DIR, REPO_ROOT, configure_utf8_stdio, dict_path, env_paths
-from api_provider import api_key_help, provider_from_base_url, resolve_api_key
+from api_provider import (
+    api_key_help,
+    chat_completions_endpoint,
+    is_gpt56_model,
+    normalize_reasoning_effort,
+    provider_from_base_url,
+    resolve_api_key,
+)
 from chinese_punctuation import normalize_chinese_quotes
 from currency_utils import normalize_currency_text
 from dict_matcher import (
@@ -147,9 +154,10 @@ def remove_html_noise(html: str) -> str:
     html = re.sub(r"(?is)<script\b.*?</script>|<style\b.*?</style>|<noscript\b.*?</noscript>", " ", html)
     html = re.sub(r"(?is)<svg\b.*?</svg>|<picture\b.*?</picture>|<figure\b.*?</figure>", " ", html)
     html = re.sub(r"(?is)<(header|nav|footer|aside|form|button)\b.*?</\1>", " ", html)
-    # Only treat structural containers as removable noise. Searching every
-    # byte of every tag also matched article-link URLs containing ``ad-`` and
-    # deleted their visible anchor text.
+    # Only treat structural containers as removable noise.  The previous
+    # expression searched every byte of every opening tag, so ordinary article
+    # links such as ``.../thread-132900...`` matched the substring ``ad-`` and
+    # lost their visible anchor text (for example "Board Channels").
     html = re.sub(
         r"(?is)<(div|section)\b"
         r"(?=[^>]*(?:class|id|role|data-cy)=[\"'][^\"']*"
@@ -320,16 +328,28 @@ def apply_thinking_mode(payload: dict[str, Any]) -> None:
 
 
 def call_deepseek_response(api_key: str, model: str, base_url: str, messages: list[dict[str, str]], max_tokens: int | None = None) -> tuple[str, dict[str, Any]]:
-    endpoint = base_url.rstrip("/") + "/chat/completions"
+    endpoint = chat_completions_endpoint(base_url)
+    gpt56 = provider_from_base_url(base_url) == "generic" and is_gpt56_model(model)
     payload = {
         "model": model,
         "messages": messages,
-        "temperature": 0.2,
-        "max_tokens": max_tokens or 1200,
         "stream": False,
         "response_format": {"type": "json_object"},
     }
-    if provider_from_base_url(base_url) != "gemini":
+    if gpt56:
+        # GPT-5.6 Chat Completions uses max_completion_tokens and does not
+        # accept temperature.  Keep the requested effort exact, including
+        # xhigh/max; do not translate it through DeepSeek's thinking field.
+        payload["max_completion_tokens"] = max_tokens or 1200
+        effort = normalize_reasoning_effort()
+        if effort is not None:
+            payload["reasoning_effort"] = effort
+    else:
+        payload["temperature"] = 0.2
+        payload["max_tokens"] = max_tokens or 1200
+    if provider_from_base_url(base_url) not in {"gemini", "generic"} or (
+        provider_from_base_url(base_url) == "generic" and not gpt56
+    ):
         apply_thinking_mode(payload)
     req = urllib.request.Request(
         endpoint,
@@ -341,8 +361,31 @@ def call_deepseek_response(api_key: str, model: str, base_url: str, messages: li
             "Accept": "application/json",
         },
     )
-    with urllib.request.urlopen(req, timeout=60) as resp:
-        data = json.loads(resp.read().decode("utf-8"))
+    try:
+        api_timeout = int(os.environ.get("TRANSLATOR_API_TIMEOUT_SECONDS") or "180")
+    except ValueError:
+        api_timeout = 180
+    api_timeout = max(30, min(1800, api_timeout))
+    try:
+        api_attempts = int(os.environ.get("TRANSLATOR_API_MAX_ATTEMPTS") or "3")
+    except ValueError:
+        api_attempts = 3
+    api_attempts = max(1, min(5, api_attempts))
+    transient_codes = {408, 409, 425, 429, 500, 502, 503, 504}
+    for attempt in range(1, api_attempts + 1):
+        try:
+            with urllib.request.urlopen(req, timeout=api_timeout) as resp:
+                data = json.loads(resp.read().decode("utf-8"))
+            break
+        except urllib.error.HTTPError as exc:
+            if exc.code not in transient_codes or attempt >= api_attempts:
+                raise
+        except (urllib.error.URLError, TimeoutError):
+            if attempt >= api_attempts:
+                raise
+        delay = min(15, 2 ** attempt)
+        print(f"[RETRY] transient API failure; attempt {attempt + 1}/{api_attempts} in {delay}s")
+        time.sleep(delay)
     choice = data["choices"][0]
     usage = data.get("usage") or {}
     usage["_finish_reason"] = choice.get("finish_reason") or ""

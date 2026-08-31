@@ -10,6 +10,7 @@ from datetime import datetime, timedelta, timezone
 from typing import Any
 
 from common_paths import DATA_DIR, configure_utf8_stdio, env_paths
+from api_provider import provider_from_base_url
 
 
 configure_utf8_stdio()
@@ -84,6 +85,9 @@ def main() -> int:
     base_url = (os.environ.get("TRANSLATOR_BASE_URL") or os.environ.get("DEEPSEEK_BASE_URL") or "").strip() or DEFAULT_BASE_URL
     if not api_key:
         print("DEEPSEEK_BALANCE_SKIP: TRANSLATOR_API_KEY/DEEPSEEK_API_KEY is not set")
+        return 0
+    if provider_from_base_url(base_url) != "deepseek":
+        print(f"API_BALANCE_SKIP: {base_url} does not use the DeepSeek balance endpoint")
         return 0
 
     try:

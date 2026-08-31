@@ -53,25 +53,50 @@ class TranslationQualityTest(unittest.TestCase):
     def test_chinese_large_number_units_are_equivalent(self) -> None:
         data = valid_translation()
         data["paragraphs"] = [{
-            "en": "Sony has over 120 million users, the market is worth 13.8 billion, and 500,000 may cancel.",
-            "cn": "索尼拥有超过1.2亿名用户，市场价值138亿，可能有50万人退订。",
+            "en": "Sony has over 120 million users and 500,000 may cancel.",
+            "cn": "索尼拥有超过1.2亿名用户，可能有50万人退订。",
         }]
         self.assertEqual(validate_translation_quality(data), [])
 
-    def test_raw_english_currency_annotation_is_blocking(self) -> None:
+    def test_compact_k_suffix_is_equivalent(self) -> None:
         data = valid_translation()
         data["paragraphs"] = [{
-            "en": "The market may grow to $13.8 billion by 2034.",
-            "cn": "该市场到2034年可能增至138亿美元(约合人民币934亿元)（原文13.8 billion美元）。",
+            "en": "The update includes a Warhammer 40,000 crossover.",
+            "cn": "更新将加入《战锤40K》联动内容。",
         }]
-        errors = validate_translation_quality(data)
-        self.assertTrue(any("raw-English currency annotation" in error for error in errors))
+        self.assertEqual(validate_translation_quality(data), [])
+
+    def test_english_billion_and_chinese_yi_are_equivalent(self) -> None:
+        data = valid_translation()
+        data["paragraphs"] = [{
+            "en": "The film grossed nearly $1.5 billion.",
+            "cn": "影片票房接近15亿美元。",
+        }]
+        self.assertEqual(validate_translation_quality(data), [])
 
     def test_unmarked_direct_quote_is_blocking(self) -> None:
         data = valid_translation()
         data["paragraphs"][0]["cn"] = "Toto告诉IGN，索尼预料到了这种反应。2026年收入增长14.5%。"
         errors = validate_translation_quality(data)
         self.assertTrue(any("quote marks" in error for error in errors))
+
+    def test_repeated_question_marks_are_blocking(self) -> None:
+        data = valid_translation()
+        data["paragraphs"][0]["cn"] = "??????告诉IGN：「索尼预料到了这种反应。」2026年收入增长14.5%。"
+        errors = validate_translation_quality(data)
+        self.assertTrue(any("repeated question marks" in error for error in errors))
+
+    def test_unicode_replacement_character_is_blocking(self) -> None:
+        data = valid_translation()
+        data["subtitle"] = "角色" + chr(0xFFFD) + "归来"
+        errors = validate_translation_quality(data)
+        self.assertTrue(any("Unicode replacement character" in error for error in errors))
+
+    def test_common_mojibake_is_blocking(self) -> None:
+        data = valid_translation()
+        data["cn_title"] = "MarvelÃ¢â‚¬â„¢s new film"
+        errors = validate_translation_quality(data)
+        self.assertTrue(any("likely mojibake" in error for error in errors))
 
 
 if __name__ == "__main__":

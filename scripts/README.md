@@ -32,6 +32,7 @@
 | 脚本 | 用途 |
 |---|---|
 | `translate_pipeline.py` | `--prep` 准备，`--post` 完整性检查和索引同步 |
+| `prepare_codex_translation_batches.py` | 只读解析生产队列快照；按正文字符量分批，仅输出当前文章命中的词库/翻译记忆与高风险段落 |
 | `translate_titles_deepseek.py` | API 标题/摘要 owner 处理 `need_titles.json` |
 | `translate_fulltext_api.py` | 可选 API 正文模式，不是 Codex 正常全文入口 |
 | `translate_compare_api.py` | 手动多模型对比，只写 `comparisons/` |
@@ -53,6 +54,14 @@
 ```bash
 python scripts/pre_push_check.py YYYY-MM-DD
 ```
+
+服务器 job 只包含当天部分文章时，使用隔离校验视图，避免其他历史稿件的既有问题阻断当前 job：
+
+```bash
+python scripts/pre_push_check.py YYYY-MM-DD --ids 10 38
+```
+
+`--ids` 仍会运行完整七项检查，但临时数据视图中只包含指定文章；它不会修改或隐藏真实日期目录。整日审计仍使用不带 `--ids` 的命令。
 
 明确批准整段现有译文：
 
@@ -96,8 +105,8 @@ credentials 和 token 不得提交到 Git。`sync_google_ign_doc.py --replace-mo
 | `automation_guard.py` | OpenClaw 在写队列前检查实时 owner |
 | `job_progress.py` | 翻译脚本写文章级进度文件 |
 | `usage_logger.py` | 记录模型 token 和估算成本 |
-| `deepseek_balance.py` | 查询平台余额快照 |
-| `record_deepseek_run_cost.py` | 汇总一次运行的估算/实际扣费 |
+| `deepseek_balance.py` | DeepSeek 端点才查询余额；其他 OpenAI-compatible 提供商安全跳过 |
+| `record_deepseek_run_cost.py` | 余额快照完整时汇总一次运行的估算/实际扣费 |
 | `rebuild_index_list.py` | 数据修复时重建日期索引 |
 | `sync_translation_to_index.py` | 从译文回填 index 状态的维护工具 |
 | `sync_dict_excel.py` | JSON 词库导出到 Excel |

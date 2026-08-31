@@ -20,7 +20,7 @@ python scripts/agent_doctor.py
 生产服务器是刚提交任务的来源。配置了 `IGN_DAILY_API_TOKEN` 时使用：
 
 ```bash
-python scripts/codex_job_client.py pending --limit 100
+python scripts/codex_job_client.py pending --limit 5
 python scripts/codex_job_client.py claim JOB_ID
 ```
 
@@ -29,10 +29,6 @@ python scripts/codex_job_client.py claim JOB_ID
 - 任务中的 `requested_articles[].url` 或 job item URL 是稳定身份。
 - 必须用 URL 对照当天 `index.json`；旧 ID 和网页展示序号只作提示。
 - 同时检查任务是否已经有译文或被其他 agent 认领，避免重复处理。
-- 每次队列运行必须取得全部 `queued` 和可恢复的停滞 `running` job，按 `created_at` 从旧到新逐个处理；不能只处理最新或第一条后结束。
-- 每个 job 仍是独立的 1～2 篇质量批次。完成一个 job 后重新查询队列，持续循环直到为空。
-- 只有当前 job 自身的文章全部落盘、验证和同步成功后才能标记该 job `done`；同日期的兄弟 job 不得被连带完成。
-- 遇到阻塞或运行时间不足时，未完成 job 保持 `queued`/`running` 并记录具体原因和剩余数量，不得为了清空界面而批量标记完成。
 
 ## 2. 准备原文与参考
 
@@ -63,6 +59,14 @@ python scripts/fetch_exchange_rates.py
 网络不可用时，只能使用仍在新鲜期且多源验证通过的 `exchange_rates.json`。
 
 ## 3. 翻译
+
+Codex 队列自动化先把完整生产队列保存为临时只读快照，再运行：
+
+```bash
+python scripts/prepare_codex_translation_batches.py --jobs QUEUE_JSON --output-dir TEMP_PACKET_DIR
+```
+
+该脚本不修改文章、索引或 job。它按同一新闻日、正文总字符量和文章数形成工作批次，只把当前文章命中的正式词库、已批准翻译记忆和高风险段落写入临时 packet。每个批次由一个全新翻译 agent 完成首译与独立双语自审；普通批次使用 Luna medium，高风险密集或超长批次使用 Luna high。控制 agent 对全部文章运行机械门禁，只复读 packet 标记的风险段落；首次质量失败只允许用 Luna xhigh 重试一次，仍失败或来源损坏时才交给 Sol low 全文复核。服务器 job 仍按各自 URL 和完成条件独立结算，不因合批而合并状态。
 
 可先运行预处理：
 
@@ -118,6 +122,14 @@ python scripts/translate_pipeline.py YYYY-MM-DD ID --post
 python scripts/normalize_currency_files.py YYYY-MM-DD
 python scripts/pre_push_check.py YYYY-MM-DD
 ```
+
+当生产服务器 job 只包含当天部分文章时，发布门禁必须限定为该 job 的稳定文章编号：
+
+```bash
+python scripts/pre_push_check.py YYYY-MM-DD --ids ID [ID ...]
+```
+
+该模式通过临时隔离数据视图运行相同七项检查，防止无关历史稿件的既有问题错误阻断当前 job；不得把当前 job 自身的失败降级为警告。整日健康审计仍使用不带 `--ids` 的命令。
 
 `pre_push_check.py` 的 source alignment 为阻断性检查：它会逐段比对 source 与译文中的英文锚点、顺序和中文字段。任何不一致都必须先修复，不能将文章标记为 `done`，也不能同步到 Google Docs 或 GitHub。
 

@@ -29,6 +29,7 @@ from api_provider import api_key_help, resolve_api_key
 from api_translation_audit import SUMMARY_HARD_MAX, SUMMARY_TARGET_MAX, check_translation, compact_char_len
 from audit_doctor import diagnose as diagnose_audit_failure
 from chinese_punctuation import normalize_translation_quotes
+from check_source_alignment import expected_paragraphs
 from currency_utils import normalize_translation_currency
 from dict_matcher import restore_dictionary_spacing_in_data, term_in_text
 from dict_matcher import matched_terms_for_article
@@ -261,6 +262,13 @@ def source_text(source: dict[str, Any]) -> str:
     if isinstance(paragraphs, list):
         return "\n\n".join(str(p).strip() for p in paragraphs if str(p).strip())
     return ""
+
+
+def authoritative_source_paragraphs(source: dict[str, Any]) -> list[str]:
+    """Return the exact publishable source anchors used by the release gate."""
+    if isinstance(source.get("paragraphs_en"), list):
+        return expected_paragraphs(source)
+    return []
 
 
 def split_paragraphs(text: str) -> list[str]:
@@ -754,9 +762,10 @@ def translate_date(date: str, limit: int = 2) -> int:
         require_self_check = True
         try:
             set_article_step(article_id, date=date, step="source", progress=12, message="抓取正文与缓存")
-            text = source_text(source) or fetch_article_text(article["url"])
+            cached_paragraphs = authoritative_source_paragraphs(source)
+            text = "\n\n".join(cached_paragraphs) if cached_paragraphs else (source_text(source) or fetch_article_text(article["url"]))
             set_article_step(article_id, date=date, step="extract", progress=24, message="解析正文段落")
-            paragraphs_en = split_paragraphs(text)
+            paragraphs_en = cached_paragraphs or split_paragraphs(text)
             if not paragraphs_en:
                 raise RuntimeError(f"no paragraphs extracted for #{article['id']}")
             terms = matched_terms(article.get("en_title", "") + "\n" + text, article=article)
@@ -868,6 +877,18 @@ def translate_date(date: str, limit: int = 2) -> int:
                 details = "; ".join(validation_errors)
                 print(f"[REJECT] #{article_id} style check failed: {details}")
                 set_article_step(article_id, date=date, step="failed", progress=100, status="failed", message=f"风格拒收: {details}")
+                req = save_manual_review_failure(
+                    date=date,
+                    index=index,
+                    req_path=req_path,
+                    req=req,
+                    article=article,
+                    model=model,
+                    text=text,
+                    issues=[{"type": "style_self_check", "detail": error} for error in validation_errors],
+                    details=f"风格拒收: {details}",
+                    draft=data,
+                )
                 continue
 
             reviewed_at = datetime.now(timezone.utc).isoformat()
@@ -899,6 +920,18 @@ def translate_date(date: str, limit: int = 2) -> int:
                     status="failed",
                     message=f"质量门禁拒绝: {details}",
                 )
+                req = save_manual_review_failure(
+                    date=date,
+                    index=index,
+                    req_path=req_path,
+                    req=req,
+                    article=article,
+                    model=model,
+                    text=text,
+                    issues=[{"type": "quality_gate", "detail": error} for error in quality_errors],
+                    details=f"质量门禁拒绝: {details}",
+                    draft=data,
+                )
                 continue
 
             set_article_step(article_id, date=date, step="write", progress=92, message="写入译文文件")
@@ -921,6 +954,11 @@ def translate_date(date: str, limit: int = 2) -> int:
             article.pop("translation_error", None)
             article.pop("translation_failed_at", None)
             normalize_currency_date(date)
+            # Persist the successful article state before removing it from the
+            # request queue.  Without this write, the translation file exists
+            # but index.json remains "none", leaving the website and job view
+            # inconsistent after a successful API run.
+            write_json(DATA_DIR / date / "index.json", index)
             req = remove_completed_request(req, article)
             write_json(req_path, req)
             clear_manual_review_failure(date, int(article["id"]))

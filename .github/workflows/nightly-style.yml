@@ -56,7 +56,8 @@ jobs:
       - name: Run API nightly style learning
         if: steps.config.outputs.nightly_learner == 'api' || steps.config.outputs.nightly_learner == 'deepseek'
         env:
-          TRANSLATOR_API_KEY: ${{ secrets.TRANSLATOR_API_KEY || secrets.DEEPSEEK_API_KEY }}
+          TRANSLATOR_API_KEY: ${{ secrets.TRANSLATOR_API_KEY }}
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY || secrets.GOOGLE_API_KEY }}
           GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY || secrets.GEMINI_API_KEY }}
           NIGHTLY_STYLE_MODEL: ${{ steps.config.outputs.api_nightly_model || steps.config.outputs.api_model || vars.NIGHTLY_STYLE_MODEL || vars.TRANSLATOR_MODEL || vars.DEEPSEEK_MODEL || 'deepseek-v4-flash' }}
@@ -64,7 +65,7 @@ jobs:
           TRANSLATOR_THINKING_MODE: ${{ steps.config.outputs.api_nightly_thinking }}
         run: |
           set -euo pipefail
-          if [ -z "${TRANSLATOR_API_KEY:-}${GEMINI_API_KEY:-}${GOOGLE_API_KEY:-}" ]; then
+          if [ -z "${TRANSLATOR_API_KEY:-}${DEEPSEEK_API_KEY:-}${GEMINI_API_KEY:-}${GOOGLE_API_KEY:-}" ]; then
             echo "nightly_learner=api but TRANSLATOR_API_KEY/DEEPSEEK_API_KEY/GEMINI_API_KEY is not set."
             exit 1
           fi
