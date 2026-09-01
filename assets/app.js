@@ -315,22 +315,30 @@ function appData() {
     accountSaving: false,
     accountStatus: '',
     automationConfig: {
-      title_translator: 'openclaw',
-      fulltext_translator: 'codex',
-      nightly_learner: 'openclaw',
+      title_translator: 'api',
+      fulltext_translator: 'api',
+      nightly_learner: 'codex',
       api_provider: 'openai-compatible',
-      api_model: 'deepseek-v4-flash',
-      api_title_model: 'deepseek-v4-flash',
-      api_fulltext_model: 'deepseek-v4-pro',
+      api_model: 'gpt-5.6-luna',
+      api_title_model: 'gpt-5.6-luna',
+      api_fulltext_model: 'gpt-5.6-luna',
       api_nightly_model: 'deepseek-v4-flash',
-      api_title_thinking: 'disabled',
-      api_fulltext_thinking: 'disabled',
+      api_title_thinking: 'high',
+      api_fulltext_thinking: 'xhigh',
       api_nightly_thinking: 'disabled',
       api_compare_thinking: 'disabled',
-      api_base_url: 'https://api.deepseek.com',
-      api_fulltext_batch: '5',
+      api_base_url: 'https://api.apikey.fun/v1',
+      api_fulltext_batch: 'all',
       compare_models: ['deepseek-v4-pro', 'deepseek-v4-flash'],
       api_models: [
+        {
+          label: 'GPT-5.6 Luna',
+          model: 'gpt-5.6-luna',
+          base_url: 'https://api.apikey.fun/v1',
+          input_cache_hit_usd_per_million: 0.00857143,
+          input_cache_miss_usd_per_million: 0.08571429,
+          output_usd_per_million: 0.51428571
+        },
         {
           label: 'DeepSeek V4 Pro',
           model: 'deepseek-v4-pro',
@@ -906,13 +914,13 @@ function appData() {
     preferredModelLabel(art) {
       if (art?.translation_status === 'requested') {
         return this.isApiMode('fulltext_translator')
-          ? this.formatTranslatorModel(this.automationConfig.api_fulltext_model || 'deepseek-v4-pro')
+          ? this.formatTranslatorModel(this.automationConfig.api_fulltext_model || 'gpt-5.6-luna')
           : `${this.fulltextQueueOwner()} 待处理`;
       }
       if (art?.translation_status === 'done') {
         return this.translatorLabel(art) || '已完成';
       }
-      return this.formatTranslatorModel(this.automationConfig.api_title_model || this.automationConfig.api_model || 'deepseek-v4-flash');
+      return this.formatTranslatorModel(this.automationConfig.api_title_model || this.automationConfig.api_model || 'gpt-5.6-luna');
     },
 
     async retryTranslation(art) {
@@ -1216,6 +1224,14 @@ function appData() {
     defaultApiModels() {
       return [
         {
+          label: 'GPT-5.6 Luna',
+          model: 'gpt-5.6-luna',
+          base_url: 'https://api.apikey.fun/v1',
+          input_cache_hit_usd_per_million: 0.00857143,
+          input_cache_miss_usd_per_million: 0.08571429,
+          output_usd_per_million: 0.51428571
+        },
+        {
           label: 'DeepSeek V4 Pro',
           model: 'deepseek-v4-pro',
           base_url: 'https://api.deepseek.com',
@@ -1262,7 +1278,7 @@ function appData() {
         normalized.push({
           label: String(item?.label || this.formatTranslatorModel(model) || model).trim(),
           model,
-          base_url: String(item?.base_url || item?.baseUrl || this.automationConfig?.api_base_url || 'https://api.deepseek.com').trim(),
+          base_url: String(item?.base_url || item?.baseUrl || this.automationConfig?.api_base_url || 'https://api.apikey.fun/v1').trim(),
           provider: String(item?.provider || 'openai-compatible').trim(),
           input_cache_hit_usd_per_million: item?.input_cache_hit_usd_per_million ?? item?.pricing_usd_per_million?.prompt_cache_hit_tokens ?? '',
           input_cache_miss_usd_per_million: item?.input_cache_miss_usd_per_million ?? item?.pricing_usd_per_million?.prompt_cache_miss_tokens ?? '',
@@ -1285,7 +1301,7 @@ function appData() {
       models.push({
         label: '新模型',
         model: '',
-        base_url: this.automationConfig.api_base_url || 'https://api.deepseek.com',
+        base_url: this.automationConfig.api_base_url || 'https://api.apikey.fun/v1',
         provider: 'openai-compatible',
         input_cache_hit_usd_per_million: '',
         input_cache_miss_usd_per_million: '',
@@ -1311,20 +1327,20 @@ function appData() {
         const cfg = JSON.parse(file.content);
         const apiModels = this.normalizeApiModels(cfg.api_models);
         this.automationConfig = {
-          title_translator: cfg.title_translator || 'openclaw',
-          fulltext_translator: cfg.fulltext_translator || 'codex',
-          nightly_learner: cfg.nightly_learner || 'openclaw',
+          title_translator: cfg.title_translator || 'api',
+          fulltext_translator: cfg.fulltext_translator || 'api',
+          nightly_learner: cfg.nightly_learner || 'codex',
           api_provider: cfg.api_provider || 'openai-compatible',
-          api_model: cfg.api_model || 'deepseek-v4-flash',
-          api_title_model: cfg.api_title_model || cfg.api_model || 'deepseek-v4-flash',
-          api_fulltext_model: cfg.api_fulltext_model || 'deepseek-v4-pro',
+          api_model: cfg.api_model || 'gpt-5.6-luna',
+          api_title_model: cfg.api_title_model || cfg.api_model || 'gpt-5.6-luna',
+          api_fulltext_model: cfg.api_fulltext_model || 'gpt-5.6-luna',
           api_nightly_model: cfg.api_nightly_model || cfg.api_model || 'deepseek-v4-flash',
           api_title_thinking: cfg.api_title_thinking || 'disabled',
           api_fulltext_thinking: cfg.api_fulltext_thinking || 'disabled',
           api_nightly_thinking: cfg.api_nightly_thinking || 'disabled',
           api_compare_thinking: cfg.api_compare_thinking || 'disabled',
-          api_base_url: cfg.api_base_url || 'https://api.deepseek.com',
-          api_fulltext_batch: cfg.api_fulltext_batch || '5',
+          api_base_url: cfg.api_base_url || 'https://api.apikey.fun/v1',
+          api_fulltext_batch: cfg.api_fulltext_batch || 'all',
           compare_models: Array.isArray(cfg.compare_models)
             ? cfg.compare_models
             : [cfg.compare_model_a || 'deepseek-v4-pro', cfg.compare_model_b || 'deepseek-v4-flash'],
@@ -1339,20 +1355,20 @@ function appData() {
         this.automationSaving = true;
         const apiModels = this.normalizeApiModels(this.automationConfig.api_models);
         const cfg = {
-          title_translator: this.automationConfig.title_translator || 'openclaw',
-          fulltext_translator: this.automationConfig.fulltext_translator || 'codex',
-          nightly_learner: this.automationConfig.nightly_learner || 'openclaw',
+          title_translator: this.automationConfig.title_translator || 'api',
+          fulltext_translator: this.automationConfig.fulltext_translator || 'api',
+          nightly_learner: this.automationConfig.nightly_learner || 'codex',
           api_provider: 'openai-compatible',
-          api_model: this.automationConfig.api_title_model || this.automationConfig.api_model || 'deepseek-v4-flash',
-          api_title_model: this.automationConfig.api_title_model || this.automationConfig.api_model || 'deepseek-v4-flash',
-          api_fulltext_model: this.automationConfig.api_fulltext_model || 'deepseek-v4-pro',
+          api_model: this.automationConfig.api_title_model || this.automationConfig.api_model || 'gpt-5.6-luna',
+          api_title_model: this.automationConfig.api_title_model || this.automationConfig.api_model || 'gpt-5.6-luna',
+          api_fulltext_model: this.automationConfig.api_fulltext_model || 'gpt-5.6-luna',
           api_nightly_model: this.automationConfig.api_nightly_model || this.automationConfig.api_model || 'deepseek-v4-flash',
           api_title_thinking: this.automationConfig.api_title_thinking || 'disabled',
           api_fulltext_thinking: this.automationConfig.api_fulltext_thinking || 'disabled',
           api_nightly_thinking: this.automationConfig.api_nightly_thinking || 'disabled',
           api_compare_thinking: this.automationConfig.api_compare_thinking || 'disabled',
-          api_base_url: this.automationConfig.api_base_url || 'https://api.deepseek.com',
-          api_fulltext_batch: this.automationConfig.api_fulltext_batch || '5',
+          api_base_url: this.automationConfig.api_base_url || 'https://api.apikey.fun/v1',
+          api_fulltext_batch: this.automationConfig.api_fulltext_batch || 'all',
           compare_models: this.selectedCompareModels().map(m => m.model),
           api_models: apiModels,
           updated_at: new Date().toISOString(),
@@ -1375,23 +1391,23 @@ function appData() {
     },
 
     apiTranslationInputs() {
-      const mode = String(this.automationConfig.api_fulltext_batch || '5');
-      const titleModel = this.apiModelById(this.automationConfig.api_title_model || this.automationConfig.api_model || 'deepseek-v4-flash');
-      const fulltextModel = this.apiModelById(this.automationConfig.api_fulltext_model || 'deepseek-v4-pro');
+      const mode = String(this.automationConfig.api_fulltext_batch || 'all');
+      const titleModel = this.apiModelById(this.automationConfig.api_title_model || this.automationConfig.api_model || 'gpt-5.6-luna');
+      const fulltextModel = this.apiModelById(this.automationConfig.api_fulltext_model || 'gpt-5.6-luna');
       const inputs = {
         fulltext_limit: '5',
         time_budget_seconds: '1200',
-        title_translator: this.automationConfig.title_translator || 'openclaw',
-        fulltext_translator: this.automationConfig.fulltext_translator || 'codex',
+        title_translator: this.automationConfig.title_translator || 'api',
+        fulltext_translator: this.automationConfig.fulltext_translator || 'api',
         api_title_model: titleModel.model,
         api_fulltext_model: fulltextModel.model,
-        api_base_url: this.automationConfig.api_base_url || 'https://api.deepseek.com',
+        api_base_url: this.automationConfig.api_base_url || 'https://api.apikey.fun/v1',
         api_title_thinking: this.automationConfig.api_title_thinking || 'disabled',
         api_fulltext_thinking: this.automationConfig.api_fulltext_thinking || 'disabled',
         api_compare_thinking: this.automationConfig.api_compare_thinking || 'disabled',
         manual_payload: JSON.stringify({
-          api_title_base_url: titleModel.base_url || this.automationConfig.api_base_url || 'https://api.deepseek.com',
-          api_fulltext_base_url: fulltextModel.base_url || this.automationConfig.api_base_url || 'https://api.deepseek.com'
+          api_title_base_url: titleModel.base_url || this.automationConfig.api_base_url || 'https://api.apikey.fun/v1',
+          api_fulltext_base_url: fulltextModel.base_url || this.automationConfig.api_base_url || 'https://api.apikey.fun/v1'
         })
       };
       if (mode === '10') inputs.fulltext_limit = '10';
@@ -1427,14 +1443,14 @@ function appData() {
       return {
         title_translator: 'openclaw',
         fulltext_translator: 'openclaw',
-        api_base_url: this.automationConfig.api_base_url || 'https://api.deepseek.com',
+        api_base_url: this.automationConfig.api_base_url || 'https://api.apikey.fun/v1',
         manual_payload: JSON.stringify({
           compare_date: this.data?.date || this.currentDate,
           compare_article_id: String(article.id),
           compare_models: models.map(m => ({
             label: m.label || this.formatTranslatorModel(m.model),
             model: m.model,
-            base_url: m.base_url || this.automationConfig.api_base_url || 'https://api.deepseek.com',
+            base_url: m.base_url || this.automationConfig.api_base_url || 'https://api.apikey.fun/v1',
             provider: m.provider || 'openai-compatible'
           })),
           api_compare_thinking: this.automationConfig.api_compare_thinking || 'disabled'
@@ -1510,6 +1526,7 @@ function appData() {
       const raw = String(model || '').trim();
       if (!raw) return '';
       const lower = raw.toLowerCase();
+      if (lower.includes('gpt-5.6-luna')) return 'GPT-5.6 Luna';
       if (lower.includes('deepseek') && lower.includes('v4') && lower.includes('pro')) return 'DeepSeek V4 Pro';
       if (lower.includes('deepseek') && lower.includes('v4') && lower.includes('flash')) return 'DeepSeek V4 Flash';
       if (lower.includes('deepseek')) return raw.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());

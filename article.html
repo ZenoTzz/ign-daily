@@ -1243,6 +1243,7 @@
           const raw = String(model || '').trim();
           if (!raw) return '';
           const lower = raw.toLowerCase();
+          if (lower.includes('gpt-5.6-luna')) return 'GPT-5.6 Luna';
           if (lower.includes('deepseek') && lower.includes('v4') && lower.includes('pro')) return 'DeepSeek V4 Pro';
           if (lower.includes('deepseek') && lower.includes('v4') && lower.includes('flash')) return 'DeepSeek V4 Flash';
           if (lower.includes('deepseek')) return raw.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());

@@ -828,35 +828,35 @@
           </div>
 
           <div style="height:1px; background:var(--border); margin:1rem 0;"></div>
-          <label style="font-weight:700;">DeepSeek 思考模式</label>
+          <label style="font-weight:700;">API 推理强度</label>
           <p style="font-size:0.68rem; color:var(--text-muted); margin-top:0.35rem;">
-            关闭最省 token；high/max 更适合正文一致性检查和夜间学习，但会更慢、更贵。DeepSeek 文档中 low/medium 会等同 high，xhigh 会等同 max。
+            推理强度越高，正文一致性检查通常越充分，但耗时和 token 消耗也会增加；实际可用档位由当前模型和中转服务决定。
           </p>
           <div style="display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:0.5rem; margin-top:0.6rem;">
             <label>标题
               <select x-model="automationConfig.api_title_thinking" style="width:100%; margin-top:0.25rem;">
-                <option value="disabled">关闭</option><option value="high">high</option><option value="max">max</option>
+                <option value="disabled">关闭</option><option value="low">low</option><option value="medium">medium</option><option value="high">high</option><option value="xhigh">xhigh</option><option value="max">max</option>
               </select>
             </label>
             <label>正文
               <select x-model="automationConfig.api_fulltext_thinking" style="width:100%; margin-top:0.25rem;">
-                <option value="disabled">关闭</option><option value="high">high</option><option value="max">max</option>
+                <option value="disabled">关闭</option><option value="low">low</option><option value="medium">medium</option><option value="high">high</option><option value="xhigh">xhigh</option><option value="max">max</option>
               </select>
             </label>
             <label>学习
               <select x-model="automationConfig.api_nightly_thinking" style="width:100%; margin-top:0.25rem;">
-                <option value="disabled">关闭</option><option value="high">high</option><option value="max">max</option>
+                <option value="disabled">关闭</option><option value="low">low</option><option value="medium">medium</option><option value="high">high</option><option value="xhigh">xhigh</option><option value="max">max</option>
               </select>
             </label>
             <label>对比
               <select x-model="automationConfig.api_compare_thinking" style="width:100%; margin-top:0.25rem;">
-                <option value="disabled">关闭</option><option value="high">high</option><option value="max">max</option>
+                <option value="disabled">关闭</option><option value="low">low</option><option value="medium">medium</option><option value="high">high</option><option value="xhigh">xhigh</option><option value="max">max</option>
               </select>
             </label>
           </div>
 
           <label style="display:block; margin-top:0.75rem;">API Base URL</label>
-          <input type="text" x-model="automationConfig.api_base_url" placeholder="https://api.deepseek.com">
+          <input type="text" x-model="automationConfig.api_base_url" placeholder="https://api.apikey.fun/v1">
 
           <details style="margin-top:0.9rem;">
             <summary style="cursor:pointer; font-weight:700;">模型目录与价格</summary>
