@@ -45,17 +45,17 @@
     @media (max-width:640px){.header-inner{align-items:flex-start}.brand{flex-wrap:wrap;min-width:0}.brand-title{font-size:16px}.nav-actions{margin-left:auto}.nav-actions .hidden{display:none!important}}
   </style>
   <link rel="stylesheet" href="assets/style.css?v=20260625articlejob2">
-  <link rel="stylesheet" href="assets/home.css?v=20260806sourcecopy4">
+  <link rel="stylesheet" href="assets/home.css?v=20260906ui2">
   <link rel="stylesheet" href="assets/workspace-ui.css?v=20260711loginfix1">
   <script defer src="assets/exceljs.min.js"></script>
-  <script defer src="assets/app.js?v=20260906webfix1"></script>
+  <script defer src="assets/app.js?v=20260906ui2"></script>
   <script defer src="assets/alpine.min.js"></script>
   <link rel="stylesheet" href="assets/compliance.css?v=20260710beian2">
   <script defer src="assets/compliance.js?v=20260709beian1"></script>
-<link rel="stylesheet" href="assets/session-ui.css?v=20260906webfix1">
+<link rel="stylesheet" href="assets/session-ui.css?v=20260906ui2">
 <script defer src="assets/session-ui.js?v=20260906webfix1"></script>
 </head>
-<body>
+<body class="home-page">
   <!-- SVG Icon Definitions -->
   <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
     <symbol id="icon-gamepad" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -146,7 +146,7 @@
             <button @click="navigateDate('prev')" :disabled="!canGoPrev()" class="date-nav-btn" title="上一天">
               <svg width="14" height="14"><use href="#icon-arrow-left"/></svg>
             </button>
-            <button @click="showDatePicker = !showDatePicker" class="date-nav-label" x-text="currentDate"></button>
+            <button @click="showDatePicker = !showDatePicker" class="date-nav-label" aria-label="选择新闻日期" :aria-expanded="showDatePicker" x-text="currentDate"></button>
             <button @click="navigateDate('next')" :disabled="!canGoNext()" class="date-nav-btn" title="下一天">
               <svg width="14" height="14"><use href="#icon-arrow-right"/></svg>
             </button>
@@ -220,11 +220,11 @@
       <section x-show="data && !loading" x-cloak class="workbench-hero">
         <div>
           <p class="workbench-kicker" x-text="currentDate + ' 新闻日'"></p>
-          <h1 class="workbench-title">今日翻译工作台</h1>
+          <h1 class="workbench-title">新闻工作台</h1>
           <p class="workbench-subtitle">
             <span x-text="`${allArticleCount} 条新闻，${titleReadyCount} 条已完成标题摘要`"></span>
           </p>
-          <p class="workbench-subtitle"><span x-text="nextTranslationWindow()"></span></p>
+          <p class="workbench-subtitle workflow-hint">选择新闻，提交翻译，打开译文校对。<span x-text="nextTranslationWindow()"></span></p>
         </div>
         <div class="workbench-metrics">
           <div class="metric-card metric-amber">
@@ -286,7 +286,7 @@
           <div class="panel-heading">
             <div>
               <h2>文章队列</h2>
-              <p>勾选文章并提交翻译，服务器会继续处理。已完成的文章可打开复核或加入导出篮。</p>
+              <p>勾选要翻译的新闻；点击已完成的标题，即可阅读和校对。</p>
             </div>
             <div class="queue-actions">
               <button @click="exportSelectedExcel()" :disabled="exportBasket.length === 0" class="btn btn-ghost export-basket-action">
@@ -303,12 +303,12 @@
           </div>
 
           <div class="queue-toolbar">
-            <div class="status-tabs">
-              <button @click="filterCat = 'all'" :class="filterCat === 'all' ? 'active' : ''">全部 <span x-text="allArticleCount"></span></button>
-              <button @click="filterCat = '__pending__'" :class="filterCat === '__pending__' ? 'active' : ''">待选 <span x-text="pendingSelectionCount"></span></button>
-              <button @click="filterCat = '__requested__'" :class="filterCat === '__requested__' ? 'active' : ''"><span x-text="requestedQueueText()"></span> <span x-text="requestedCount"></span></button>
-              <button @click="filterCat = '__review__'" :class="filterCat === '__review__' ? 'active' : ''">待复核 <span x-text="needsReviewCount"></span></button>
-              <button @click="filterCat = '__translated__'" :class="filterCat === '__translated__' ? 'active' : ''">已完成 <span x-text="translatedCount"></span></button>
+            <div class="status-tabs" aria-label="按翻译状态筛选">
+              <button @click="filterCat = 'all'" :aria-pressed="filterCat === 'all'" :class="filterCat === 'all' ? 'active' : ''">全部 <span x-text="allArticleCount"></span></button>
+              <button @click="filterCat = '__pending__'" :aria-pressed="filterCat === '__pending__'" :class="filterCat === '__pending__' ? 'active' : ''">待选 <span x-text="pendingSelectionCount"></span></button>
+              <button @click="filterCat = '__requested__'" :aria-pressed="filterCat === '__requested__'" :class="filterCat === '__requested__' ? 'active' : ''"><span x-text="requestedQueueText()"></span> <span x-text="requestedCount"></span></button>
+              <button @click="filterCat = '__review__'" :aria-pressed="filterCat === '__review__'" :class="filterCat === '__review__' ? 'active' : ''">待复核 <span x-text="needsReviewCount"></span></button>
+              <button @click="filterCat = '__translated__'" :aria-pressed="filterCat === '__translated__'" :class="filterCat === '__translated__' ? 'active' : ''">已完成 <span x-text="translatedCount"></span></button>
               <button x-show="filteredRssCount > 0" @click="showFilteredPanel=true" class="filtered-entry">
                 被过滤 <span x-text="filteredRssCount"></span>
               </button>
@@ -348,28 +348,12 @@
                   <div class="queue-copy">
                     <div class="queue-kicker">
                       <span class="queue-article-id" x-text="`#${String(art.id).padStart(2, '0')}`"></span>
-                      <button
-                        type="button"
-                        class="queue-copy-source"
-                        @click.stop="copyArticleSource(art)"
-                        :disabled="sourceCopyingId === Number(art.id)"
-                        :title="'\u590d\u5236 #' + art.id + ' \u7684\u82f1\u6587\u539f\u6587'"
-                        x-text="sourceCopyButtonLabel(art)">
-                      </button>
-                      <button
-                        type="button"
-                        class="queue-copy-source"
-                        @click.stop="openArticleImages(art)"
-                        :disabled="imageGalleryLoadingId === Number(art.id)"
-                        :title="'\u67e5\u770b #' + art.id + ' \u7684\u6293\u53d6\u914d\u56fe'"
-                        x-text="imageGalleryButtonLabel(art)">
-                      </button>
                     </div>
                     <template x-if="isArticleReadable(art)">
-                      <a :href="`article.html?date=${data.date}&id=${art.id}`" @click.stop="saveState()" class="queue-title" x-text="art.cn_title"></a>
+                      <a :href="`article.html?date=${data.date}&id=${art.id}`" @click.stop="saveState()" class="queue-title" x-text="art.cn_title || art.en_title"></a>
                     </template>
                     <template x-if="!isArticleReadable(art)">
-                      <h3 class="queue-title" x-text="art.cn_title"></h3>
+                      <h3 class="queue-title" x-text="art.cn_title || art.en_title"></h3>
                     </template>
                     <p x-text="art.summary || art.en_title"></p>
                   </div>
@@ -402,9 +386,26 @@
                     </ul>
                   </template>
                 </div>
-                <details class="queue-more" @click.stop>
+                <details class="queue-more" @click.stop @click.outside="$el.open=false" @keydown.escape.stop="$el.open=false; $el.querySelector('summary').focus()">
                   <summary title="更多操作" aria-label="更多操作">•••</summary>
                   <div class="queue-more-popover">
+                      <button
+                        type="button"
+                        class="queue-copy-source"
+                        @click.stop="copyArticleSource(art)"
+                        :disabled="sourceCopyingId === Number(art.id)"
+                        :title="'\u590d\u5236 #' + art.id + ' \u7684\u82f1\u6587\u539f\u6587'"
+                        x-text="sourceCopyButtonLabel(art)">
+                      </button>
+                      <button
+                        type="button"
+                        class="queue-copy-source"
+                        @click.stop="openArticleImages(art)"
+                        :disabled="imageGalleryLoadingId === Number(art.id)"
+                        :title="'\u67e5\u770b #' + art.id + ' \u7684\u6293\u53d6\u914d\u56fe'"
+                        x-text="imageGalleryButtonLabel(art)">
+                      </button>
+
                   <a :href="art.url" target="_blank" rel="noopener" @click.stop title="IGN原文">
                     <svg><use href="#icon-external"/></svg>
                     <span>原文</span>
@@ -436,16 +437,22 @@
               </article>
             </template>
             <div x-show="filteredArticles.length === 0" class="empty-queue">
-              当前筛选下没有文章。
+              <strong>没有匹配的新闻</strong><p>试试其他状态，或清除搜索条件。</p><button class="btn btn-ghost" @click="queueSearch=''; filterCat='all'">查看全部新闻</button>
             </div>
           </div>
 
-          <div x-show="selected.length > 0" x-cloak class="selection-bar">
-            <span>已选择 <strong x-text="selected.length"></strong> 篇</span>
+          <div x-show="selected.length > 0" x-cloak class="selection-bar" role="region" aria-label="已选文章操作">
+            <span class="selection-count" role="status" aria-live="polite">已选 <strong x-text="selected.length"></strong> 篇</span>
+            <button @click="clearArticleSelection()" :disabled="translationSubmitting" class="btn btn-ghost selection-clear">取消选择</button>
             <div class="selection-actions">
-              <button @click="addSelectedToExportBasket()" class="btn btn-ghost">加入导出篮</button>
-              <button @click="exportSelectedExcel()" class="btn btn-ghost">导出Excel</button>
-              <button @click="copyDigest()" class="btn btn-ghost" x-text="copyBtnText"></button>
+              <details class="selection-more" @click.outside="$el.open=false" @keydown.escape.stop="$el.open=false; $el.querySelector('summary').focus()">
+                <summary>更多</summary>
+                <div class="selection-popover">
+                  <button @click="addSelectedToExportBasket(); $el.closest('details').open=false" class="btn btn-ghost">加入导出篮</button>
+                  <button @click="exportSelectedExcel(); $el.closest('details').open=false" class="btn btn-ghost">导出Excel</button>
+                  <button @click="copyDigest()" class="btn btn-ghost" x-text="copyBtnText"></button>
+                </div>
+              </details>
               <button @click="submitRequest()" :disabled="translationSubmitting" class="btn btn-primary" x-text="translationSubmitting ? '正在提交…' : '提交翻译'"></button>
             </div>
           </div>
@@ -558,10 +565,6 @@
         <a href="calendar.html" class="fab-item"><svg width="14" height="14"><use href="#icon-calendar"/></svg> 游戏日历</a>
       </div>
     </div>
-
-    <button x-show="selected.length > 0" x-cloak @click="submitRequest()" :disabled="translationSubmitting" class="mobile-submit-bar">
-      <span x-text="translationSubmitting ? '正在提交…' : '提交翻译'"></span> <span x-show="!translationSubmitting" x-text="selected.length"></span>
-    </button>
 
     <nav class="mobile-bottom-nav" aria-label="移动端导航">
       <a href="#queue" class="active"><svg><use href="#icon-list"/></svg><span>工作台</span></a>

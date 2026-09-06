@@ -36,6 +36,22 @@ await ctx.route('**/*',async route=>{const request=route.request();const url=new
 });
 const p=await ctx.newPage();let errors=[];p.on('pageerror',e=>errors.push(e.message));
 await p.goto(`http://ign-daily.test/index.html?date=${date}`);await p.waitForSelector('.queue-row');
+await p.locator('.queue-check input').check();
+await p.waitForSelector('.selection-bar:visible');
+for (const width of [320,390,768,1024,1440]) {
+ await p.setViewportSize({width,height:900});
+ assert.equal(await p.evaluate(()=>document.documentElement.scrollWidth),width);
+ const bar=p.locator('.selection-bar');assert.ok(await bar.isVisible());
+ const box=await bar.boundingBox();assert.ok(box.x>=0 && box.x+box.width<=width && box.y+box.height<=900);
+ assert.ok(await p.getByRole('searchbox',{name:'搜索当前新闻日'}).isVisible());
+ assert.ok((await p.locator('.queue-search').boundingBox()).width>=160);
+ if(width===390)await p.screenshot({path:'/private/tmp/ign-ui-selection-mobile.png'});
+}
+await p.getByRole('button',{name:'取消选择',exact:true}).click();await p.locator('.selection-bar').waitFor({state:'hidden'});assert.equal(await p.locator('.selection-bar').isVisible(),false);
+assert.equal(await p.locator('.queue-check input').isChecked(),false);
+await p.locator('.queue-more summary').click();assert.equal(await p.locator('.queue-check input').isChecked(),false);
+await p.locator('.queue-more summary').press('Escape');assert.equal(await p.locator('.queue-more').getAttribute('open'),null);
+await p.getByRole('searchbox',{name:'搜索当前新闻日'}).fill('no matching headline');await p.getByRole('button',{name:'查看全部新闻'}).click();await p.waitForSelector('.queue-row');
 await p.locator('.queue-check input').check();await p.getByRole('button',{name:'提交翻译',exact:true}).first().click();await p.waitForTimeout(100);
 const submitted=mutations.find(x=>x.key==='/translations/request');assert.equal(submitted.body.expected_urls['1'],article.url);assert.equal('trigger_workflow' in submitted.body,false);
 assert.equal(mutations.some(x=>x.key==='/workflows/dispatch'),false);

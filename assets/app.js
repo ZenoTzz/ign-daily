@@ -807,6 +807,12 @@ function appData() {
       this.selected = this.selectedUrls.map(url => Number(byUrl.get(url).id));
     },
 
+    clearArticleSelection() {
+      this.selectedUrls = [];
+      this.reconcileSelection();
+      this.saveState();
+    },
+
     toggleArticleSelection(article) {
       if (!article?.url) return;
       this.selectedUrls = this.selectedUrls.includes(article.url)

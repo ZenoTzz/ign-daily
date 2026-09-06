@@ -40,3 +40,15 @@
  .ign-session-tools{margin-left:0}
  .ign-page-menu .ign-menu-account{display:block;width:100%;max-width:none;margin-top:4px}
 }
+
+/* Consistent controls across account, dictionary, history and reading pages. */
+:root { --workspace-muted:#a6a8b1; }
+:where(button,input,select,textarea,summary) { font-family:inherit; }
+:where(.workspace-button,.workspace-back,.workspace-page .nav-link) { min-height:44px; }
+:where(button,a,summary) { -webkit-tap-highlight-color:transparent; touch-action:manipulation; }
+:where(button,a,summary):focus-visible { outline:3px solid #9ac5ff; outline-offset:3px; }
+.ign-page-menu nav a[aria-current=page] { background:#34343e; color:#fff!important; }
+.ign-session-dialog [type=submit] { background:#b91625; color:white; }
+@media(prefers-reduced-motion:reduce) {
+ *,*::before,*::after { scroll-behavior:auto!important; animation-duration:.01ms!important; transition-duration:.01ms!important; }
+}

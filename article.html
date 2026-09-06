@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="assets/article-dark.css?v=20260616theme2">
   <link rel="stylesheet" href="assets/workspace-ui.css?v=20260711refactor1">
   <link rel="stylesheet" href="assets/article-workbench.css?v=20260713article1">
-  <link rel="stylesheet" href="assets/article-fidelity.css?v=20260906webfix1">
+  <link rel="stylesheet" href="assets/article-fidelity.css?v=20260906ui2">
   <script src="assets/app.js?v=20260906webfix1"></script>
   <script src="assets/article-editor.js?v=20260906webfix1"></script>
   <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
@@ -34,13 +34,13 @@
   </script>
   <link rel="stylesheet" href="assets/compliance.css?v=20260710beian2">
   <script defer src="assets/compliance.js?v=20260709beian1"></script>
-<link rel="stylesheet" href="assets/session-ui.css?v=20260906webfix1">
+<link rel="stylesheet" href="assets/session-ui.css?v=20260906ui2">
 <script defer src="assets/session-ui.js?v=20260906webfix1"></script>
 </head>
 <body class="workspace-page antialiased">
-  <div x-data="articleData()" class="min-h-screen flex flex-col">
+  <div x-data="articleData()" :class="{'paragraph-editing': paragraphEditing}" class="min-h-screen flex flex-col">
     <header class="article-topbar"><div class="article-topbar-inner">
-      <div class="article-topbar-left"><a href="index.html" class="article-brand"><span>IGN</span><b>IGN Daily</b></a><div class="article-date-nav"><a x-show="prevArticle" :href="articleLink(prevArticle)">←</a><span x-text="new URLSearchParams(location.search).get('date')"></span><a x-show="nextArticle" :href="articleLink(nextArticle)">→</a></div></div>
+      <div class="article-topbar-left"><a href="index.html" class="article-brand"><span>IGN</span><b>IGN Daily</b></a><div class="article-date-nav"><a x-show="prevArticle" :href="articleLink(prevArticle)" aria-label="上一篇文章">←</a><span x-text="new URLSearchParams(location.search).get('date')"></span><a x-show="nextArticle" :href="articleLink(nextArticle)" aria-label="下一篇文章">→</a></div></div>
       <nav><a href="index.html">工作台</a><a href="dict.html">词库</a><a href="learning.html">学习</a><a href="usage.html">用量</a><a href="calendar.html">日历</a></nav>
     </div></header>
 
@@ -54,24 +54,24 @@
           <div class="article-meta"><span>来源：IGN</span><span x-text="article?.translated_at || '时间未记录'"></span><span x-show="translatorLabel(article)" x-text="translatorLabel(article)"></span><span class="status" x-text="needsManualReview() ? '待复核' : '已完成'"></span></div>
         </div>
         <div class="article-toolbar">
-          <button @click="openPolish()" x-text="polishStatus"></button>
-          <button @click="reapplyDict()">重新应用词库</button>
+          <button class="article-primary-action" @click="openPolish()" x-text="polishStatus"></button>
           <button @click="copyArticle()" x-text="copyBtnText"></button>
-          <button @click="showFeedbackModal=true">反馈问题</button>
-          <a x-show="article?.url" :href="article?.url" target="_blank" rel="noopener">打开 IGN 原文</a>
-          <button x-show="needsManualReview()" class="danger" @click="approveManualReview()">人工放行</button>
+          <details class="article-more" @keydown.escape.stop="$el.open=false; $el.querySelector('summary').focus()" @click.outside="$el.open=false">
+            <summary>更多操作</summary>
+            <div class="article-more-menu">
+              <a x-show="article?.url" :href="article?.url" target="_blank" rel="noopener">打开 IGN 原文 ↗</a>
+              <button @click="reapplyDict(); $el.closest('details').open=false">重新应用词库</button>
+              <button @click="showFeedbackModal=true; $el.closest('details').open=false">反馈问题</button>
+            </div>
+          </details>
         </div>
       </div>
-      <nav class="article-mode-tabs" aria-label="阅读模式"><button @click="mode='cn'" :class="{active:mode==='cn'}">译文</button><button @click="mode='en'" :class="{active:mode==='en'}">原文</button><button @click="mode='compare'" :class="{active:mode==='compare'}">对照</button></nav>
+      <div class="article-reading-controls">
+        <nav class="article-mode-tabs" aria-label="阅读模式"><button @click="mode='cn'" :class="{active:mode==='cn'}" :aria-pressed="mode==='cn'">译文</button><button @click="mode='en'" :class="{active:mode==='en'}" :aria-pressed="mode==='en'">原文</button><button @click="mode='compare'" :class="{active:mode==='compare'}" :aria-pressed="mode==='compare'">对照</button></nav>
+        <button class="paragraph-edit-toggle" x-show="mode==='cn' || mode==='compare'" @click="paragraphEditing=!paragraphEditing" :aria-pressed="paragraphEditing" x-text="paragraphEditing ? '完成段落编辑' : '编辑段落'"></button>
+      </div>
+      <p class="article-edit-hint" x-show="paragraphEditing && (mode==='cn' || mode==='compare')" x-cloak>选择段落下方的“编辑”修改译文；修改将在保存后同步。</p>
     </section>
-
-    <!-- Mobile primary actions stay compact and never cover article text. -->
-    <div class="article-mobile-actions">
-      <button @click="mode='cn'" :class="{active:mode==='cn'}">译文</button>
-      <button @click="mode='en'" :class="{active:mode==='en'}">原文</button>
-      <button @click="mode='compare'" :class="{active:mode==='compare'}">对照</button>
-      <button @click="copyArticle()">复制</button>
-    </div>
 
     <!-- Body -->
     <div x-show="error" class="p-6 text-red-600" x-text="error"></div>
@@ -212,7 +212,7 @@
         <!-- 左：中文译文（按段落对照） -->
         <div class="reader-pane cn">
           <div class="w-full">
-            <div class="translation-pane-head"><strong>中文译文</strong><span x-text="`共 ${article?.paragraphs?.length || 0} 段`"></span><div><i></i>已修改 <b></b>术语/词库</div></div>
+            <div class="translation-pane-head"><strong>中英逐段对照</strong><span x-text="`共 ${article?.paragraphs?.length || 0} 段`"></span><div>中文译文 · 英文原文</div></div>
             <h2 class="text-xl font-bold mb-1" x-text="article?.cn_title"></h2>
             <p x-show="article?.subtitle" class="text-base text-slate-600 leading-snug mb-2" x-text="article?.subtitle"></p>
             <p x-show="article?.en_title" class="text-sm text-slate-400 italic mb-1" x-text="article?.en_title"></p>
@@ -300,7 +300,7 @@
                 <span class="para-index" x-text="idx + 1"></span>
                 <div class="para-cn-wrap">
                   <p class="para-cn" x-html="highlightMissEn(paragraphCn(p))"></p>
-                  <button class="para-edit-btn" @click="openEditPara(idx)" title="编辑该段译文">编辑</button>
+                  <button class="para-edit-btn" x-show="paragraphEditing" :aria-label="`编辑第 ${idx + 1} 段译文`" @click="openEditPara(idx)" title="编辑该段译文">编辑</button>
                 </div>
                 <p class="para-en paired-english" x-text="p.en"></p>
                 <details class="paired-mobile-english"><summary>展开本段英文原文</summary><p x-text="p.en"></p></details>
@@ -327,7 +327,7 @@
           <template x-for="(p, idx) in article?.paragraphs || []" :key="idx">
             <div class="para-cn-wrap">
               <p class="para-cn mb-4 leading-relaxed" x-html="highlightMissEn(paragraphCn(p))"></p>
-              <button class="para-edit-btn" @click="openEditPara(idx)" title="编辑该段译文">编辑</button>
+              <button class="para-edit-btn" x-show="paragraphEditing" :aria-label="`编辑第 ${idx + 1} 段译文`" @click="openEditPara(idx)" title="编辑该段译文">编辑</button>
             </div>
           </template>
         </div>
@@ -344,7 +344,7 @@
         <a x-show="nextArticle" :href="articleLink(nextArticle)"><b x-text="nextArticle?.cn_title || nextArticle?.en_title"></b><span>下一篇 →</span></a>
       </nav>
 
-      <!-- 润色编辑模式（仅桌面端） -->
+      <!-- 润色编辑模式 -->
       <div x-show="mode === 'polish'" class="reader-grid polish-grid h-full">
         <!-- 左：原译文参考 -->
         <div class="reader-pane cn">
@@ -402,6 +402,7 @@
         article: null,
         error: '',
         mode: 'compare',  // compare | cn | en | polish
+        paragraphEditing: false,
 
         // 加词相关
         selectionText: '',
