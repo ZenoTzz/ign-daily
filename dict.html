@@ -6,11 +6,13 @@
   <title>词库工作台 — IGN Daily</title>
   <link rel="stylesheet" href="assets/style.css?v=20260713dict2">
   <link rel="stylesheet" href="assets/dict-workbench.css?v=20260713dict2">
-  <script src="assets/app.js?v=20260728submitdedupe1"></script>
+  <script src="assets/app.js?v=20260906webfix1"></script>
   <script defer src="assets/alpine.min.js"></script>
+<link rel="stylesheet" href="assets/session-ui.css?v=20260906webfix1">
+<script defer src="assets/session-ui.js?v=20260906webfix1"></script>
 </head>
 <body class="dict-page">
-  <div x-data="dictWorkbench()" x-init="init()" x-cloak>
+  <div x-data="dictWorkbench()"  x-cloak>
     <header class="dict-topbar">
       <a class="dict-brand" href="index.html"><span class="ign-mark">IGN</span><span>IGN Daily</span></a>
       <div class="dict-top-actions"><span class="save-state" x-text="saveState"></span></div>
@@ -19,10 +21,11 @@
     <main class="dict-shell">
       <section class="dict-hero">
         <div><p class="eyebrow">TRANSLATION MEMORY</p><h1>词库工作台</h1><p>先搜索，再编辑；新译名先进入候选审核，不会直接污染正式词库。</p></div>
-        <button class="primary-action" @click="openCandidate()">＋ 提交候选</button>
+        <button class="primary-action" @click="openCandidate()" :disabled="loading || !!error">＋ 提交候选</button>
       </section>
 
-      <section class="search-panel">
+      <div x-show="error" class="session-notice" role="alert"><span x-text="error"></span> <button type="button" onclick="window.IGNSession.open()">登录账号</button><button @click="reload()">重试加载</button></div>
+      <section class="search-panel" x-show="!error">
         <label class="main-search"><span>⌕</span><input x-ref="search" x-model.debounce.150ms="query" @input="page=0" placeholder="搜索英文、中文或备注…"><kbd>⌘ K</kbd></label>
         <nav class="view-tabs" aria-label="词库视图">
           <button @click="view='official'" :class="{active:view==='official'}">正式词库 <b x-text="entries.length"></b></button>
@@ -32,26 +35,26 @@
         </nav>
       </section>
 
-      <div class="category-row" x-show="view==='official'">
+      <div class="category-row" x-show="!error && view==='official'">
         <template x-for="cat in categories" :key="cat.key"><button @click="category=cat.key;page=0" :class="{active:category===cat.key}"><span x-text="cat.label"></span><b x-text="cat.count"></b></button></template>
       </div>
 
-      <section class="dict-content" x-show="view==='official'">
+      <section class="dict-content" x-show="!error && view==='official'">
         <div class="term-table">
           <div class="table-head"><span>英文原名</span><span>标准译名</span><span>分类 / 来源</span><span></span></div>
           <template x-for="entry in pagedEntries" :key="entry.key"><button class="term-row" @click="selectEntry(entry)"><span class="term-en" x-text="entry.en"></span><span class="term-cn" x-text="entry.cn"></span><span class="term-meta"><i x-text="categoryLabel(entry.category)"></i><small x-text="sourceLabel(entry.source)"></small></span><span class="row-arrow">›</span></button></template>
-          <div class="empty-panel" x-show="!loading && !filteredEntries.length">没有找到匹配词条。可以直接提交为候选。</div>
+          <div class="empty-panel" x-show="!loading && !error && !filteredEntries.length">没有找到匹配词条。可以直接提交为候选。</div>
           <div class="loading-panel" x-show="loading">正在加载词库…</div>
           <footer class="pager" x-show="filteredEntries.length"><span>显示 <b x-text="pageStart"></b>–<b x-text="pageEnd"></b>，共 <b x-text="filteredEntries.length"></b> 条</span><div><button @click="page=Math.max(0,page-1)" :disabled="page===0">←</button><button @click="page=Math.min(pageCount-1,page+1)" :disabled="page>=pageCount-1">→</button></div></footer>
         </div>
       </section>
 
-      <section class="review-grid" x-show="view==='pending' || view==='conflicts'">
+      <section class="review-grid" x-show="!error && (view==='pending' || view==='conflicts')">
         <template x-for="item in (view==='conflicts'?conflicts:filteredCandidates)" :key="item.id"><article class="candidate-card" :class="{conflict:item.has_conflict}"><div><span class="status-chip" x-text="item.has_conflict?'与正式词库冲突':'待审核'"></span><h3 x-text="item.en"></h3><p><strong x-text="item.cn"></strong><span x-text="categoryLabel(item.category)"></span></p><small x-text="item.note || '无备注'"></small><div class="conflict-copy" x-show="item.official_matches?.length">正式词库：<span x-text="item.official_matches?.map(x=>x.cn).join(' / ')"></span></div></div><div class="candidate-actions"><button @click="rejectCandidate(item)">驳回</button><button class="approve" @click="reviewCandidate(item)">检查并采纳</button></div></article></template>
         <div class="empty-panel" x-show="!(view==='conflicts'?conflicts:filteredCandidates).length">这里暂时没有内容。</div>
       </section>
 
-      <section class="insights" x-show="view==='insights'">
+      <section class="insights" x-show="!error && view==='insights'">
         <div class="stat-grid"><div><b x-text="entries.length"></b><span>正式词条</span></div><div><b x-text="pending.length"></b><span>待审核</span></div><div><b x-text="conflicts.length"></b><span>待处理冲突</span></div><div><b x-text="sourceCounts.user||0"></b><span>人工确认</span></div></div>
         <article class="cloud-card"><div><h2>词库分布</h2><p>词云仅用于快速观察分类规模，不代替搜索和审核。</p></div><div class="word-cloud"><template x-for="cat in categories.filter(x=>x.key!=='all')" :key="cat.key"><button @click="category=cat.key;view='official'" :style="`font-size:${cloudSize(cat.count)}px`"><span x-text="cat.label"></span><small x-text="cat.count"></small></button></template></div></article>
       </section>
@@ -67,6 +70,6 @@
     </div>
     <div class="dict-toast" x-show="toast" x-transition x-text="toast"></div>
   </div>
-  <script src="assets/dict-workbench.js?v=20260713dict2"></script>
+  <script src="assets/dict-workbench.js?v=20260906webfix1"></script>
 </body>
 </html>

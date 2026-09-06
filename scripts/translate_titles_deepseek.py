@@ -14,6 +14,7 @@ Usage:
 """
 from __future__ import annotations
 
+import copy
 import json
 import os
 import re
@@ -27,6 +28,7 @@ from html import unescape
 from pathlib import Path
 from typing import Any
 
+from runtime_write_lock import RuntimeConflict, write_lock, atomic_json
 from common_paths import DATA_DIR, REPO_ROOT, configure_utf8_stdio, dict_path, env_paths
 from api_provider import (
     api_key_help,
@@ -83,7 +85,7 @@ def load_json(path: Path) -> Any:
 
 
 def write_json(path: Path, data: Any) -> None:
-    path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    atomic_json(path, data)
 
 
 def flatten_dict_terms() -> dict[str, str]:
@@ -276,6 +278,8 @@ def cached_article_text(date: str, article: dict[str, Any], max_chars: int = 900
         source = load_json(path)
     except Exception:
         return ""
+    if not isinstance(source, dict) or source.get("url") != article.get("url"):
+        return ""
     body = str(source.get("body_en") or "").strip()
     if not body and isinstance(source.get("paragraphs_en"), list):
         body = "\n\n".join(str(p).strip() for p in source["paragraphs_en"] if str(p).strip())
@@ -446,8 +450,9 @@ def translate_date(date: str, limit: int = 8) -> int:
         print(f"API_TITLE_SKIP: no need_titles.json for {date}")
         return 0
 
-    index = load_json(index_path)
-    queue = load_json(queue_path)
+    with write_lock():
+        index = load_json(index_path)
+        queue = load_json(queue_path)
     if not queue:
         print(f"API_TITLE_SKIP: empty need_titles.json for {date}")
         return 0
@@ -465,6 +470,7 @@ def translate_date(date: str, limit: int = 8) -> int:
             print(f"[KEEP] queue URL not found in index: {url}")
             remaining.append(item)
             continue
+        baseline = copy.deepcopy(article)
         try:
             article_text = cached_article_text(date, article) or fetch_article_text(url)
             terms = matched_terms((article.get("en_title") or "") + "\n" + article_text, article=article)
@@ -508,22 +514,29 @@ def translate_date(date: str, limit: int = 8) -> int:
                 raise ValueError("model output remained truncated after retry")
             if not result["cn_title"] or not result["summary"]:
                 raise ValueError("model returned empty cn_title or summary")
-            article["cn_title"] = apply_title_dictionary(article.get("en_title", ""), result["cn_title"])
-            article["summary"] = result["summary"]
-            article["category"] = result["category"]
-            article["emoji"] = result["emoji"]
-            if result["pending_dict"]:
-                article["pending_dict"] = result["pending_dict"]
-            translated += 1
+            with write_lock():
+                latest = load_json(index_path)
+                current = next((a for a in latest.get("articles", []) if a.get("url") == url), None)
+                if current != baseline:
+                    raise RuntimeConflict("Title inputs changed during translation; kept newer article")
+                article = current
+                article["cn_title"] = apply_title_dictionary(article.get("en_title", ""), result["cn_title"])
+                article["summary"] = result["summary"]
+                article["category"] = result["category"]
+                article["emoji"] = result["emoji"]
+                if result["pending_dict"]:
+                    article["pending_dict"] = result["pending_dict"]
+                translated += 1
+                write_json(index_path, latest)
+                latest_queue = load_json(queue_path)
+                write_json(queue_path, [q for q in latest_queue if q != item])
             print(f"[OK] #{article.get('id')} {result['cn_title']}")
             time.sleep(0.5)
         except Exception as exc:
             print(f"[KEEP] failed to translate {url}: {exc}")
             remaining.append(item)
 
-    write_json(index_path, index)
-    write_json(queue_path, remaining)
-    normalize_currency_date(date)
+    remaining = load_json(queue_path)
     print(f"API_TITLE_TRANSLATE_DONE: date={date}, translated={translated}, remaining={len(remaining)}")
     return translated
 

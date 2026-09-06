@@ -21,6 +21,7 @@ from html import unescape
 from pathlib import Path
 from typing import Any
 
+from runtime_write_lock import RuntimeConflict, write_lock, atomic_json, file_revision
 from common_paths import DATA_DIR, configure_utf8_stdio
 from translate_titles_deepseek import extract_article_text
 
@@ -42,8 +43,7 @@ def load_json(path: Path) -> Any:
 
 
 def write_json(path: Path, data: Any) -> None:
-    path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    atomic_json(path, data)
 
 
 def source_path(date: str, article: dict[str, Any]) -> Path:
@@ -211,16 +211,28 @@ def cache_date(
             continue
         path = source_path(date, article)
         if missing_only and path.exists():
-            continue
+            try:
+                if load_json(path).get("url") == article.get("url"):
+                    continue
+            except (ValueError, AttributeError):
+                pass
+        revision = file_revision(path)
         try:
             source = fetch_source(date, article)
-            write_json(path, source)
-            if source.get("cover_image") and not article.get("cover_image"):
-                article["cover_image"] = source["cover_image"]
-            if source.get("images"):
-                article["images"] = source["images"]
-            article["source_status"] = "cached"
-            article["source_fetched_at"] = source["fetched_at"]
+            with write_lock():
+                latest = load_json(index_path)
+                current = next((a for a in latest.get("articles", []) if a.get("id") == article.get("id")), None)
+                if current != article or current.get("url") != source.get("url") or file_revision(path) != revision:
+                    raise RuntimeConflict("Source inputs changed during fetch; kept newer data")
+                article = current
+                write_json(path, source)
+                if source.get("cover_image") and not article.get("cover_image"):
+                    article["cover_image"] = source["cover_image"]
+                if source.get("images"):
+                    article["images"] = source["images"]
+                article["source_status"] = "cached"
+                article["source_fetched_at"] = source["fetched_at"]
+                write_json(index_path, latest)
             cached += 1
             print(f"[CACHE] {date} #{article.get('id')} {source['title_en'][:70]}")
             time.sleep(0.4)
@@ -229,8 +241,6 @@ def cache_date(
             article["source_error"] = str(exc)[:180]
             print(f"[KEEP] source fetch failed #{article.get('id')}: {exc}")
 
-    if cached:
-        write_json(index_path, index)
     print(f"ARTICLE_CACHE_DONE: date={date}, cached={cached}")
     return cached
 

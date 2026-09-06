@@ -47,7 +47,7 @@ function learningConsole() {
         this.observations = { active: [], archived: [] };
         this.history = [];
         if (error?.status === 401) {
-          this.error = '登录已失效，请返回工作台登录服务器账号后重试。';
+          this.error = '请点击本页的“登录账号”，登录后即可读取学习数据。';
         } else if (error?.status === 403) {
           this.error = '当前账号无权读取学习数据。';
         } else {

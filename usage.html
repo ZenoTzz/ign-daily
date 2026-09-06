@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-  <title>DeepSeek API 用量 - IGN Daily</title>
+  <title>API 用量 - IGN Daily</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -125,6 +125,8 @@
   <link rel="stylesheet" href="assets/compliance.css?v=20260710beian2">
   <link rel="stylesheet" href="assets/workspace-ui.css?v=20260711refactor1">
   <script defer src="assets/compliance.js?v=20260709beian1"></script>
+<link rel="stylesheet" href="assets/session-ui.css?v=20260906webfix1">
+<script defer src="assets/session-ui.js?v=20260906webfix1"></script>
 </head>
 <body class="workspace-page">
   <main class="shell">
@@ -133,7 +135,7 @@
         <div class="logo">IGN</div>
         <div>
           <h1>API 用量</h1>
-          <div class="sub" id="subtitle">读取本地用量日志中...</div>
+          <div class="sub" id="subtitle">正在读取服务器用量…</div>
         </div>
       </div>
       <div class="nav">
@@ -142,6 +144,8 @@
       </div>
     </div>
 
+    <div id="usageError" class="session-notice" role="alert" hidden></div>
+    <div id="usageData" hidden>
     <div class="seg" id="rangeSeg">
       <button data-range="day" class="active">今日</button>
       <button data-range="week">近 7 天</button>
@@ -308,21 +312,18 @@
         </table>
       </div>
     </section>
+    </div>
   </main>
 
+  <script src="assets/app.js?v=20260906webfix1"></script>
   <script>
-    const state = { range: 'day', dates: [], records: [], balance: null, runs: [], articleMap: {}, modelMap: {} };
+    const state = { range: 'day', dates: [], records: [], balance: null, runs: [], articleMap: {}, modelMap: {}, loadedAt: null };
     const PRICING_USD_PER_MILLION = {
       'deepseek-v4-flash': { hit: 0.0028, miss: 0.14, output: 0.28 },
       'deepseek-v4-pro': { hit: 0.003625, miss: 0.435, output: 0.87 }
     };
 
-    function todayCN() {
-      const now = new Date();
-      const utc = now.getTime() + now.getTimezoneOffset() * 60000;
-      const cn = new Date(utc + 8 * 3600000);
-      return cn.toISOString().slice(0, 10);
-    }
+    function todayCN() { return todayBeijingDate(); }
     function fmt(n) { return Number(n || 0).toLocaleString('zh-CN'); }
     function fmtUsd(n) {
       const value = Number(n || 0);
@@ -393,13 +394,14 @@
       return 'other';
     }
     async function fetchJson(path, fallback) {
-      try {
-        const res = await fetch(path + '?t=' + Date.now(), { cache: 'no-store' });
-        if (!res.ok) return fallback;
-        return await res.json();
-      } catch (_) {
-        return fallback;
+      if (path.startsWith('data/usage/') || path === 'data/automation-config.json') {
+        const file = await GH.getFile(path);
+        return file?.content ? JSON.parse(file.content) : fallback;
       }
+      const res = await fetch(path + '?t=' + Date.now(), { cache: 'no-store' });
+      if (res.status === 404) return fallback;
+      if (!res.ok) throw new Error(`读取失败（${res.status}）`);
+      return res.json();
     }
     function filterRecords() {
       const today = todayCN();
@@ -698,19 +700,48 @@
         };
       }
     }
+    let loadingUsage = false;
     async function load() {
-      state.dates = await fetchJson('data/usage/deepseek/index.json', []);
-      state.balance = await fetchJson('data/usage/deepseek-balance.json', null);
-      state.runs = await fetchJson('data/usage/deepseek-runs.json', []);
-      await loadModelConfig();
-      const loaded = [];
-      for (const date of state.dates) {
-        const data = await fetchJson(`data/usage/deepseek/${date}.json`, null);
-        if (data && Array.isArray(data.records)) loaded.push(...data.records);
+      if (loadingUsage) return;
+      loadingUsage = true;
+      const notice = document.getElementById('usageError');
+      const panel = document.getElementById('usageData');
+      document.getElementById('refreshBtn').disabled = true;
+      const previous = {...state};
+      try {
+        await ServerAPI.me();
+        const [dates, balance, runs] = await Promise.all([
+          fetchJson('data/usage/deepseek/index.json', []),
+          fetchJson('data/usage/deepseek-balance.json', null),
+          fetchJson('data/usage/deepseek-runs.json', [])
+        ]);
+        state.dates = dates; state.balance = balance; state.runs = runs;
+        await loadModelConfig();
+        const loaded = [];
+        // Bounded batches avoid a sequential waterfall and unbounded requests.
+        for (let i=0; i<dates.length; i+=6) {
+          const batch = await Promise.all(dates.slice(i,i+6).map(date => fetchJson(`data/usage/deepseek/${date}.json`, null)));
+          for (const data of batch) if (Array.isArray(data?.records)) loaded.push(...data.records);
+        }
+        state.records = loaded;
+        await loadArticleMap(loaded);
+        state.loadedAt = new Date().toLocaleTimeString('zh-CN');
+        render();
+        document.getElementById('subtitle').textContent += ` · 更新于 ${state.loadedAt}`;
+        notice.hidden = true; panel.hidden = false;
+      } catch (error) {
+        Object.assign(state, previous);
+        if (error.status === 401) {
+          state.loadedAt = null; state.records = []; state.runs = []; state.balance = null;
+          panel.hidden = true;
+        }
+        notice.textContent = (error.status === 401 ? '请点击“登录账号”后查看真实用量。' : `用量读取失败：${error.message}`) + (state.loadedAt ? ` 保留 ${state.loadedAt} 的数据。` : '');
+        notice.hidden = false;
+        document.getElementById('subtitle').textContent = state.loadedAt ? `上次成功更新 ${state.loadedAt}` : '用量尚未读取';
+      } finally {
+        loadingUsage = false;
+        document.getElementById('refreshBtn').disabled = false;
       }
-      state.records = loaded;
-      await loadArticleMap(loaded);
-      render();
     }
     document.getElementById('rangeSeg').addEventListener('click', e => {
       const btn = e.target.closest('button[data-range]');

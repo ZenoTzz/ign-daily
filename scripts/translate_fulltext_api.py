@@ -24,6 +24,7 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any
 
+from runtime_write_lock import RuntimeConflict, write_lock, atomic_json, article_snapshot, article_transaction, subprocess_lock_kwargs
 from common_paths import DATA_DIR, REPO_ROOT, configure_utf8_stdio, dict_path, env_paths
 from api_provider import api_key_help, resolve_api_key
 from api_translation_audit import SUMMARY_HARD_MAX, SUMMARY_TARGET_MAX, check_translation, compact_char_len
@@ -63,6 +64,7 @@ configure_utf8_stdio()
 CST = timezone(timedelta(hours=8))
 DEFAULT_MODEL = "deepseek-v4-pro"
 DEFAULT_BASE_URL = "https://api.deepseek.com"
+FAILED_ARTICLES = 0
 
 
 def load_env_file() -> None:
@@ -89,8 +91,7 @@ def load_json(path: Path) -> Any:
 
 
 def write_json(path: Path, data: Any) -> None:
-    path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    atomic_json(path, data)
 
 
 def now_iso() -> str:
@@ -146,7 +147,15 @@ def load_failures(date: str) -> dict[str, Any]:
     return data
 
 
-def save_manual_review_failure(
+def save_manual_review_failure(**kwargs):
+    global FAILED_ARTICLES
+    FAILED_ARTICLES += 1
+    snapshot = kwargs.pop("expected_snapshot", None)
+    with article_transaction(DATA_DIR, kwargs["date"], kwargs["article"], kwargs["index"], kwargs["req"], snapshot):
+        return _save_manual_review_failure(**kwargs)
+
+
+def _save_manual_review_failure(
     *,
     date: str,
     index: dict[str, Any],
@@ -251,7 +260,29 @@ def load_cached_source(date: str, article: dict[str, Any]) -> dict[str, Any]:
         data = load_json(path)
     except Exception:
         return {}
+    if isinstance(data, dict) and data.get("url") != article.get("url"):
+        raise RuntimeConflict("Cached source URL differs from the selected article; refresh source first")
     return data if isinstance(data, dict) else {}
+
+
+def ensure_cached_source(date: str, article: dict[str, Any]) -> tuple[dict[str, Any], dict[str, Any]]:
+    try:
+        source = load_cached_source(date, article)
+    except RuntimeConflict:
+        source = {}
+    if not authoritative_source_paragraphs(source):
+        from article_cache import cache_date
+        cache_date(date, missing_only=False, limit=1, target_ids={int(article["id"])})
+        with write_lock():
+            latest = load_json(DATA_DIR / date / "index.json")
+            current = next((a for a in latest.get("articles", []) if a.get("id") == article["id"]), None)
+            if not current or current.get("url") != article.get("url"):
+                raise RuntimeConflict("Selected article changed while caching source")
+            article = current
+            source = load_cached_source(date, article)
+    if not authoritative_source_paragraphs(source):
+        raise RuntimeError("Source cache unavailable; translation was not submitted to the model")
+    return article, source
 
 
 def source_text(source: dict[str, Any]) -> str:
@@ -712,11 +743,14 @@ def resolve_requests(date: str) -> tuple[Path, dict[str, Any], dict[str, Any], l
     requested = []
     seen = set()
     for item in req.get("requested_articles", []):
-        art = by_url.get(item.get("url")) or by_id.get(item.get("id"))
+        art = by_url.get(item.get("url")) if item.get("url") else by_id.get(item.get("id"))
         if art and art.get("translation_status") != "done" and art.get("url") not in seen:
             requested.append(art)
             seen.add(art.get("url"))
+    mapped_ids = {item.get("id") for item in req.get("requested_articles", []) if item.get("url")}
     for aid in req.get("requested_ids", []):
+        if aid in mapped_ids:
+            continue
         art = by_id.get(aid)
         if art and art.get("translation_status") != "done" and art.get("url") not in seen:
             requested.append(art)
@@ -743,7 +777,8 @@ def translate_date(date: str, limit: int = 2) -> int:
     repair_model = (os.environ.get("TRANSLATOR_REPAIR_MODEL") or "").strip()
     if not repair_model:
         repair_model = "deepseek-v4-pro" if model == "deepseek-v4-flash" else model
-    req_path, index, req, requested = resolve_requests(date)
+    with write_lock():
+        req_path, index, req, requested = resolve_requests(date)
     if not requested:
         print(f"API_FULLTEXT_SKIP: no requested articles for {date}")
         return 0
@@ -755,7 +790,12 @@ def translate_date(date: str, limit: int = 2) -> int:
         if time.monotonic() - started > budget_seconds:
             print(f"API_FULLTEXT_PAUSE: time budget reached after {translated} article(s)")
             break
-        source = load_cached_source(date, article)
+        article, source = ensure_cached_source(date, article)
+        with write_lock():
+            source = load_cached_source(date, article)
+            if not authoritative_source_paragraphs(source):
+                raise RuntimeConflict("Source changed before translation started")
+            expected_snapshot = article_snapshot(DATA_DIR, date, article)
         text = ""
         data: dict[str, Any] | None = None
         audit_issues: list[dict[str, str]] = []
@@ -763,7 +803,7 @@ def translate_date(date: str, limit: int = 2) -> int:
         try:
             set_article_step(article_id, date=date, step="source", progress=12, message="抓取正文与缓存")
             cached_paragraphs = authoritative_source_paragraphs(source)
-            text = "\n\n".join(cached_paragraphs) if cached_paragraphs else (source_text(source) or fetch_article_text(article["url"]))
+            text = "\n\n".join(cached_paragraphs)
             set_article_step(article_id, date=date, step="extract", progress=24, message="解析正文段落")
             paragraphs_en = cached_paragraphs or split_paragraphs(text)
             if not paragraphs_en:
@@ -859,6 +899,7 @@ def translate_date(date: str, limit: int = 2) -> int:
                     details = "; ".join(f"[{issue['type']}] {issue['detail']}" for issue in audit_issues[:8])
                     set_article_step(article_id, date=date, step="failed", progress=100, status="failed", message=details)
                     req = save_manual_review_failure(
+                    expected_snapshot=expected_snapshot,
                         date=date,
                         index=index,
                         req_path=req_path,
@@ -878,6 +919,7 @@ def translate_date(date: str, limit: int = 2) -> int:
                 print(f"[REJECT] #{article_id} style check failed: {details}")
                 set_article_step(article_id, date=date, step="failed", progress=100, status="failed", message=f"风格拒收: {details}")
                 req = save_manual_review_failure(
+                    expected_snapshot=expected_snapshot,
                     date=date,
                     index=index,
                     req_path=req_path,
@@ -921,6 +963,7 @@ def translate_date(date: str, limit: int = 2) -> int:
                     message=f"质量门禁拒绝: {details}",
                 )
                 req = save_manual_review_failure(
+                    expected_snapshot=expected_snapshot,
                     date=date,
                     index=index,
                     req_path=req_path,
@@ -935,40 +978,47 @@ def translate_date(date: str, limit: int = 2) -> int:
                 continue
 
             set_article_step(article_id, date=date, step="write", progress=92, message="写入译文文件")
-            trans_path = DATA_DIR / date / "translations" / f"{article['id']:02d}.json"
-            write_json(trans_path, data)
-            subprocess.run(
-                [sys.executable, str(REPO_ROOT / "scripts" / "translate_pipeline.py"), date, str(article["id"]), "--post"],
-                cwd=REPO_ROOT,
-                check=True,
-                capture_output=True,
-                text=True,
-                encoding="utf-8",
-                errors="replace",
-            )
-            article["translation_status"] = "done"
-            article["translation_path"] = f"translations/{article['id']:02d}.json"
-            article["translator"] = "api"
-            article["translator_provider"] = "openai-compatible"
-            article["translator_model"] = model
-            article.pop("translation_error", None)
-            article.pop("translation_failed_at", None)
-            normalize_currency_date(date)
-            # Persist the successful article state before removing it from the
-            # request queue.  Without this write, the translation file exists
-            # but index.json remains "none", leaving the website and job view
-            # inconsistent after a successful API run.
-            write_json(DATA_DIR / date / "index.json", index)
-            req = remove_completed_request(req, article)
-            write_json(req_path, req)
-            clear_manual_review_failure(date, int(article["id"]))
+            with article_transaction(DATA_DIR, date, article, index, req, expected_snapshot):
+                trans_path = DATA_DIR / date / "translations" / f"{article['id']:02d}.json"
+                write_json(trans_path, data)
+                subprocess.run(
+                    [sys.executable, str(REPO_ROOT / "scripts" / "translate_pipeline.py"), date, str(article["id"]), "--post"],
+                    cwd=REPO_ROOT,
+                    check=True,
+                    capture_output=True,
+                    text=True,
+                    encoding="utf-8",
+                    errors="replace",
+                    **subprocess_lock_kwargs(),
+                )
+                updated_index = load_json(DATA_DIR / date / "index.json")
+                article.update(next(a for a in updated_index["articles"] if a["id"] == article["id"]))
+                article["translation_status"] = "done"
+                article["translation_path"] = f"translations/{article['id']:02d}.json"
+                article["translator"] = "api"
+                article["translator_provider"] = "openai-compatible"
+                article["translator_model"] = model
+                article.pop("translation_error", None)
+                article.pop("translation_failed_at", None)
+                # Persist the successful article state before removing it from the
+                # request queue.  Without this write, the translation file exists
+                # but index.json remains "none", leaving the website and job view
+                # inconsistent after a successful API run.
+                write_json(DATA_DIR / date / "index.json", index)
+                req = remove_completed_request(req, article)
+                write_json(req_path, req)
+                clear_manual_review_failure(date, int(article["id"]))
             translated += 1
             set_article_step(article_id, date=date, step="done", progress=100, status="done", message="翻译完成")
             print(f"[OK] fulltext #{article['id']} {data['cn_title']}")
+        except RuntimeConflict:
+            # Never turn a concurrency conflict into a stale failure draft.
+            raise
         except subprocess.CalledProcessError as exc:
             details = readable_subprocess_failure(exc)
             set_article_step(article_id, date=date, step="failed", progress=100, status="failed", message=details)
             req = save_manual_review_failure(
+                    expected_snapshot=expected_snapshot,
                 date=date,
                 index=index,
                 req_path=req_path,
@@ -984,6 +1034,7 @@ def translate_date(date: str, limit: int = 2) -> int:
             details = str(exc)
             set_article_step(article_id, date=date, step="failed", progress=100, status="failed", message=details)
             req = save_manual_review_failure(
+                    expected_snapshot=expected_snapshot,
                 date=date,
                 index=index,
                 req_path=req_path,
@@ -1009,7 +1060,7 @@ def main() -> int:
         print(f"API_FULLTEXT_TRANSLATE_ALL_DONE: translated={total}")
     else:
         translate_date(target, limit=limit)
-    return 0
+    return 1 if FAILED_ARTICLES else 0
 
 
 if __name__ == "__main__":

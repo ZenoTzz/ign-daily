@@ -168,7 +168,17 @@ Translation requests are split into jobs containing at most two articles.
 `POST /codex/jobs/{job_id}/complete` marks a job complete only after every
 translation file exists, its index state is consistent, required model/prompt
 metadata is present, and the independent coverage/quote/numeric review gate has
-passed.
+passed. The same gate applies to `progress` requests with `status: "done"` and
+to inferred completion. Empty/malformed files, URL drift, empty paragraphs, and
+paragraphs not aligned with the source cache cannot complete a job. New jobs
+store the selected URLs, so reassigning an ID does not complete the old job.
+
+Local workers persist their PID identity, start time and associated jobs in
+SQLite. Exit without valid output or timeout marks unfinished jobs failed so
+resubmission can create fresh work. `IGN_DAILY_JOB_TIMEOUT_SECONDS` defaults to
+3600. Logs are private files under the API directory `job-logs/` (mode 0600);
+API responses do not expose raw logs. Startup reconnects to matching Linux
+process identities rather than blindly restarting a still-running worker.
 
 `POST /codex/jobs/{job_id}/fail` records a job-level failure.
 
@@ -267,3 +277,30 @@ existing browser-compatible polished schema (`id`, `url`, `cn_title`, `en_title`
 preserved. Two JSON files are serialized but are not a crash-atomic transaction.
 This saves a user polish draft only: no translation quality approval, job, Docs
 sync or style-profile update is triggered.
+
+
+## Browser concurrency contracts
+
+- `GET /files/data/dict.json` returns `content` and its SHA-1 `sha`.
+  `PUT /dict` now requires `expected_revision` containing that SHA in addition
+  to `dictionary` and optional `message`; stale snapshots return 409.
+- `PUT /dict/terms` edits or moves one entry. Send `original_category`,
+  `original_en`, `expected_entry` (the complete original JSON value), `category`,
+  `en`, `cn`, and optional `note`. It preserves other metadata and unrelated
+  entries; a changed original or occupied destination returns 409. Response:
+  `{ok, entry, revision}`. Existing `GET /dict` and `POST /dict/terms` remain
+  compatible with native clients.
+- `PUT /files/{path}` accepts `sha` for an existing-file compare-and-swap.
+  For creation, send `expected_absent: true`; an intervening create returns
+  409. Successful writes also return the new `sha`. Legacy omitted guards
+  remain supported; new browser editors must explicitly send a guard.
+- `POST /translations/approve` requires `date`, `article_id`, the selected
+  `url`, and `expected_revision` from the translation file read. The entire
+  read/modify/write is locked; changed content or identity returns 409.
+  Human approval still requires valid source alignment and nonempty output.
+- `DELETE /articles/{date}/{article_id}/polish` takes `{url, expected_revision}`.
+  It validates both under the write lock, removes the mapping and then the
+  unreferenced draft, returning `{ok:true, exists:false, revision:null}`.
+  A stale/missing draft returns 409. Other historical or unindexed drafts are
+  preserved. As with saving, mapping and file are not a crash-atomic transaction;
+  deleting the mapping first ensures interruption only leaves an unindexed file.

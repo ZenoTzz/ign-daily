@@ -37,6 +37,7 @@ import sys
 import urllib.parse
 import urllib.request
 from datetime import timedelta, timezone
+from runtime_write_lock import locked
 from common_paths import REPO_ROOT, dict_path, exchange_rates_path, configure_utf8_stdio
 from platform_names import normalize_platform_names_in_translation
 from translation_memory import apply_paragraph_locks, find_hits as find_memory_hits, load_memory, validate_locks
@@ -206,6 +207,7 @@ def generate_translated_terms(paragraphs, cn_title, opus_summary, terms_dict, pe
     return translated_terms
 
 
+@locked
 def update_index_list(data_dir):
     """更新 index-list.json"""
     index_list_path = IGN_DAILY / 'data' / 'index-list.json'
@@ -222,7 +224,7 @@ def update_index_list(data_dir):
                 articles = idx.get('articles', [])
                 total = len(articles)
                 translated = sum(1 for a in articles if a.get('translation_status') == 'done')
-                translated_titles = [a.get('cn_title', '') for a in articles if a.get('translation_status') == 'done']
+                translated_titles = [{'id': a['id'], 'cn_title': a.get('cn_title') or a.get('en_title', ''), 'url': a.get('url', '')} for a in articles if a.get('translation_status') == 'done' and isinstance(a.get('id'), int)]
                 dates.append({
                     "date": d.name,
                     "total": total,
@@ -327,6 +329,7 @@ def prep_mode(date_str, article_ref):
     return True
 
 
+@locked
 def post_mode(date_str, article_ref):
     """后处理模式: 补字段+清理+校验+同步"""
     idx_path = IGN_DAILY / 'data' / date_str / 'index.json'
@@ -418,7 +421,10 @@ def post_mode(date_str, article_ref):
     # 1. 补 cover
     if not data.get('cover'):
         print("\n📷 Cover missing, fetching...")
-        cover, images = fetch_og_image_and_images(url)
+        # Post-processing is a short commit: network fetching belongs to article_cache.
+        source_path = IGN_DAILY / 'data' / date_str / 'sources' / f'{article_id:02d}.json'
+        source = json.loads(source_path.read_text(encoding='utf-8-sig')) if source_path.exists() else {}
+        cover, images = source.get('cover_image', ''), source.get('images', [])
         if cover:
             data['cover'] = cover
             changed = True

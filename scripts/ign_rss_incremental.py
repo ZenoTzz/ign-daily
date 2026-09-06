@@ -26,6 +26,7 @@ from email.utils import parsedate_to_datetime
 from pathlib import Path
 from typing import Any
 
+from runtime_write_lock import locked
 from common_paths import REPO_ROOT, configure_utf8_stdio, env_paths
 
 configure_utf8_stdio()
@@ -130,6 +131,7 @@ def read_json(path: Path, default: Any) -> Any:
     return json.loads(path.read_text(encoding="utf-8-sig"))
 
 
+@locked
 def write_json(path: Path, data: Any) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
@@ -297,6 +299,7 @@ def news_window(date_s: str) -> tuple[datetime, datetime]:
     return end - timedelta(days=1), end
 
 
+@locked
 def prune_old_filtered(now: datetime, retention_days: int) -> int:
     cutoff = (now.date() - timedelta(days=retention_days)).isoformat()
     removed = 0
@@ -440,6 +443,7 @@ def ensure_history_row(target_date: str, total: int) -> None:
     write_json(hist_path, hist)
 
 
+@locked
 def process_target_date(target_date: str, now: datetime, filter_config: dict, rss_items: list[dict]) -> dict:
     window_start, window_end = news_window(target_date)
     print(f"Target date: {target_date} (Beijing now: {now.strftime('%Y-%m-%d %H:%M')})")

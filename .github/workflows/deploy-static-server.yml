@@ -32,17 +32,20 @@ jobs:
         env:
           PYTHONPATH: scripts
           ALLOW_STALE_EXCHANGE_RATES: '1'
+          IGN_DAILY_WRITE_LOCK: /tmp/ign-daily-ci-write.lock
         run: |
           set -euo pipefail
           python -m unittest discover -s scripts -p 'test_*.py'
           python -m unittest discover -s server_api -p 'test_*.py'
           python scripts/test_miniprogram.py
           python scripts/agent_doctor.py
+          node --test tests/*.test.cjs
+          python tests/api-http-integration.py
 
   deploy:
     needs: quality
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 25
     env:
       SERVER_HOST: ${{ secrets.IGN_DAILY_SERVER_HOST }}
       SERVER_PORT: ${{ secrets.IGN_DAILY_SERVER_PORT || '22' }}
@@ -78,7 +81,7 @@ jobs:
 
       - name: Package tracked site files
         if: steps.check.outputs.configured == 'true'
-        run: git archive --format=tar.gz -o /tmp/ign-daily-site.tar.gz HEAD
+        run: python3 scripts/package_server_release.py /tmp/ign-daily-site.tar.gz
 
       - name: Configure SSH
         if: steps.check.outputs.configured == 'true'
@@ -99,73 +102,25 @@ jobs:
             /tmp/ign-daily-site.tar.gz \
             "$SERVER_USER@$SERVER_HOST:/tmp/ign-daily-site-${GITHUB_SHA}.tar.gz"
 
-      - name: Deploy static mirror
+      - name: Deploy code and dependencies with rollback
         if: steps.check.outputs.configured == 'true'
         run: |
           set -euo pipefail
-          ssh -p "$SERVER_PORT" -i ~/.ssh/ign_daily_server_key "$SERVER_USER@$SERVER_HOST" "
-            set -euo pipefail
-            deploy_dir='/tmp/ign-daily-deploy-${GITHUB_SHA}'
-            archive='/tmp/ign-daily-site-${GITHUB_SHA}.tar.gz'
-            server_path='$SERVER_PATH'
-            api_path='$SERVER_API_PATH'
-            deploy_user='$SERVER_USER'
-            server_path=\"\$(realpath -m \"\$server_path\")\"
-            api_path=\"\$(realpath -m \"\$api_path\")\"
-            case "\$server_path" in /srv/*) ;; *) echo 'Refusing unsafe server path.' >&2; exit 2;; esac
-            case "\$api_path" in /srv/*) ;; *) echo 'Refusing unsafe API path.' >&2; exit 2;; esac
-            sudo touch /var/lock/ign-daily-write.lock
-            sudo chown \"\$deploy_user:\$deploy_user\" /var/lock/ign-daily-write.lock
-            sudo chmod 0664 /var/lock/ign-daily-write.lock
-            exec 9>/var/lock/ign-daily-write.lock
-            flock -w 180 9
-            rm -rf \"\$deploy_dir\"
-            mkdir -p \"\$deploy_dir\"
-            tar -xzf \"\$archive\" -C \"\$deploy_dir\"
-            sudo rsync -a --delete \
-              --exclude '.git/' \
-              --exclude '.env' \
-              --exclude 'server_api/.env' \
-              --exclude 'data/' \
-              --exclude 'exchange_rates.json' \
-              --exclude 'ign_rss_new.json' \
-              \"\$deploy_dir\"/ \"\$server_path\"/
-            if [ -f \"\$deploy_dir/data/translation-memory.json\" ]; then
-              sudo install -o \"\$deploy_user\" -g \"\$deploy_user\" -m 0644 \
-                \"\$deploy_dir/data/translation-memory.json\" \"\$server_path/data/translation-memory.json\"
-            fi
-            sudo chown -R \"\$deploy_user:\$deploy_user\" \"\$server_path\"
-            sudo find \"\$server_path\" -path \"\$server_path/.git\" -prune -o -type d -exec chmod 755 {} +
-            sudo find \"\$server_path\" -path \"\$server_path/.git\" -prune -o -type f ! -name '.env' -exec chmod 644 {} +
-            sudo find \"\$server_path/server_api/deploy\" -type f -name '*.sh' -exec chmod 755 {} +
-            sudo bash \"\$server_path/server_api/deploy/apply_nginx_security.sh\"
-            sudo APP_DIR=\"\$server_path\" RUN_USER=\"\$deploy_user\" \
-              bash \"\$server_path/server_api/deploy/install_runtime_permission_guard.sh\"
-            if [ -f \"\$server_path/.env\" ]; then
-              sudo chmod 600 \"\$server_path/.env\"
-            fi
-            if [ ! -x \"\$api_path/venv/bin/pip\" ]; then
-              echo \"IGN Daily API virtualenv is missing: \$api_path/venv/bin/pip\" >&2
-              exit 1
-            fi
-            if ! cmp -s \"\$server_path/server_api/requirements.txt\" \"\$api_path/requirements.txt\"; then
-              sudo -u \"\$deploy_user\" \"\$api_path/venv/bin/pip\" install -r \"\$server_path/server_api/requirements.txt\"
-              sudo install -o \"\$deploy_user\" -g \"\$deploy_user\" -m 644 \
-                \"\$server_path/server_api/requirements.txt\" \"\$api_path/requirements.txt\"
-            fi
-            api_backup=\"/tmp/ign-daily-api-${GITHUB_SHA}.py\"
-            sudo cp \"\$api_path/ign_daily_api.py\" \"\$api_backup\"
-            sudo install -o \"\$deploy_user\" -g \"\$deploy_user\" -m 644 \
-              \"\$server_path/server_api/ign_daily_api.py\" \"\$api_path/ign_daily_api.py\"
-            sudo install -o \"\$deploy_user\" -g \"\$deploy_user\" -m 644 \
-              \"\$server_path/server_api/translation_quality.py\" \"\$api_path/translation_quality.py\"
-            if ! sudo systemctl restart ign-daily-api || \
-               ! curl --retry 10 --retry-delay 1 --retry-connrefused --max-time 5 -fsS http://127.0.0.1:8010/health >/dev/null; then
-              echo 'API health check failed; restoring the previous API module.' >&2
-              sudo install -o \"\$deploy_user\" -g \"\$deploy_user\" -m 644 \"\$api_backup\" \"\$api_path/ign_daily_api.py\"
-              sudo systemctl restart ign-daily-api
-              exit 1
-            fi
-            sudo rm -f \"\$api_backup\"
-            rm -rf \"\$deploy_dir\" \"\$archive\"
-          "
+          ssh -p "$SERVER_PORT" -i ~/.ssh/ign_daily_server_key "$SERVER_USER@$SERVER_HOST" \
+            "bash -s -- '$GITHUB_SHA' '$SERVER_PATH' '$SERVER_API_PATH' '$SERVER_USER'" <<'REMOTE'
+          set -euo pipefail
+          sha="$1"
+          app="$2"
+          api="$3"
+          user="$4"
+          archive="/tmp/ign-daily-site-$sha.tar.gz"
+          stage="$(mktemp -d /tmp/ign-daily-deploy.XXXXXX)"
+          trap 'rm -rf "$stage" "$archive"' EXIT
+          tar -xzf "$archive" -C "$stage"
+          for kind in write worker maintenance; do
+            sudo touch "/var/lock/ign-daily-$kind.lock"
+            sudo chown "$user:$user" "/var/lock/ign-daily-$kind.lock"
+            sudo chmod 0664 "/var/lock/ign-daily-$kind.lock"
+          done
+          sudo APP_DIR="$app" API_DIR="$api" python3 "$stage/server_api/deploy/deploy_release.py" "$stage"
+          REMOTE

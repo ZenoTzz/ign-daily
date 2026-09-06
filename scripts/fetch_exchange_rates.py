@@ -14,6 +14,7 @@ import urllib.request
 from datetime import datetime, timedelta, timezone
 from typing import Any
 
+from runtime_write_lock import write_lock, atomic_json
 from common_paths import configure_utf8_stdio, exchange_rates_path
 
 
@@ -211,7 +212,8 @@ def main() -> int:
         "note": "CNY reference rates verified by multiple sources. Translation code must recalculate CNY amounts from this file.",
     }
 
-    OUT.write_text(json.dumps(out, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    with write_lock():
+        atomic_json(OUT, out)
 
     print(f"[OK] verified exchange rates from {len(sources)} sources: {OUT}")
     for key, value in rates.items():

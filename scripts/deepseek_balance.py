@@ -9,6 +9,7 @@ import urllib.request
 from datetime import datetime, timedelta, timezone
 from typing import Any
 
+from runtime_write_lock import locked, atomic_json
 from common_paths import DATA_DIR, configure_utf8_stdio, env_paths
 from api_provider import provider_from_base_url
 
@@ -32,9 +33,9 @@ def load_env_file() -> None:
             os.environ.setdefault(key.strip(), value.strip().strip('"').strip("'"))
 
 
+@locked
 def write_json(path, data: Any) -> None:
-    path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    atomic_json(path, data)
 
 
 def parse_balance_total(payload: dict[str, Any]) -> tuple[float | None, str]:

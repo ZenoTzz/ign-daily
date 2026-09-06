@@ -227,7 +227,8 @@ cat >/tmp/ign-daily-run-rss.sh <<'EOF'
 #!/usr/bin/env bash
 set -euo pipefail
 source /srv/ign-daily-ops/config-env.sh
-with_write_lock
+source "$APP_DIR/server_api/deploy/worker_locks.sh"
+with_worker_lock
 load_automation_config
 cd "$APP_DIR"
 $PY scripts/ign_rss_incremental.py --lookback-days 2
@@ -249,12 +250,13 @@ cat >/tmp/ign-daily-run-api-translation.sh <<'EOF'
 #!/usr/bin/env bash
 set -euo pipefail
 source /srv/ign-daily-ops/config-env.sh
-with_write_lock
+source "$APP_DIR/server_api/deploy/worker_locks.sh"
+with_worker_lock
 load_automation_config
 cd "$APP_DIR"
 if [[ "$(api_key_available)" != "1" ]]; then
   echo "API_TRANSLATION_SKIP: TRANSLATOR_API_KEY/DEEPSEEK_API_KEY/GEMINI_API_KEY is not set"
-  exit 0
+  exit 78
 fi
 if [[ "$TITLE_TRANSLATOR" == "api" || "$TITLE_TRANSLATOR" == "deepseek" ]]; then
   export TRANSLATOR_BASE_URL="$API_BASE_URL"
@@ -289,7 +291,8 @@ cat >/tmp/ign-daily-run-exchange.sh <<'EOF'
 #!/usr/bin/env bash
 set -euo pipefail
 source /srv/ign-daily-ops/config-env.sh
-with_write_lock
+source "$APP_DIR/server_api/deploy/worker_locks.sh"
+with_worker_lock
 cd "$APP_DIR"
 $PY scripts/fetch_exchange_rates.py
 $PY scripts/agent_doctor.py
@@ -299,12 +302,13 @@ cat >/tmp/ign-daily-run-balance.sh <<'EOF'
 #!/usr/bin/env bash
 set -euo pipefail
 source /srv/ign-daily-ops/config-env.sh
-with_write_lock
+source "$APP_DIR/server_api/deploy/worker_locks.sh"
+with_worker_lock
 load_automation_config
 cd "$APP_DIR"
 if [[ "$(api_key_available)" != "1" ]]; then
   echo "BALANCE_SKIP: TRANSLATOR_API_KEY/DEEPSEEK_API_KEY/GEMINI_API_KEY is not set"
-  exit 0
+  exit 78
 fi
 export TRANSLATOR_BASE_URL="$API_BASE_URL"
 $PY scripts/deepseek_balance.py
@@ -315,6 +319,11 @@ sudo -u "$RUN_USER" mv /tmp/ign-daily-run-api-translation.sh /srv/ign-daily-ops/
 sudo -u "$RUN_USER" mv /tmp/ign-daily-run-exchange.sh /srv/ign-daily-ops/run-exchange.sh
 sudo -u "$RUN_USER" mv /tmp/ign-daily-run-balance.sh /srv/ign-daily-ops/run-balance.sh
 chmod +x /srv/ign-daily-ops/*.sh
+for lock in write worker maintenance; do
+  sudo touch "/var/lock/ign-daily-$lock.lock"
+  sudo chown "$RUN_USER:$RUN_USER" "/var/lock/ign-daily-$lock.lock"
+  sudo chmod 0664 "/var/lock/ign-daily-$lock.lock"
+done
 
 cat >/tmp/ign-daily-cron <<EOF
 SHELL=/bin/bash

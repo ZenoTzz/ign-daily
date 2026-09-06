@@ -11,6 +11,7 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any
 
+from runtime_write_lock import locked
 from common_paths import DATA_DIR
 
 
@@ -139,6 +140,7 @@ def estimate_cost_usd(model: str, usage: dict[str, int]) -> tuple[float | None, 
     return round(cost, 8), pricing
 
 
+@locked
 def record_deepseek_usage(
     *,
     task: str,

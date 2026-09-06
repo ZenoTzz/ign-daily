@@ -7,6 +7,7 @@ import time
 from pathlib import Path
 from typing import Any
 
+from runtime_write_lock import locked
 from common_paths import DATA_DIR
 
 
@@ -50,6 +51,7 @@ def save_progress(job_id: str, data: dict[str, Any]) -> None:
     tmp.replace(path)
 
 
+@locked
 def set_article_step(
     article_id: int | str,
     *,

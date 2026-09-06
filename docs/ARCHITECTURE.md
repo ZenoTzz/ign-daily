@@ -66,8 +66,8 @@ igndaily.site server
 
 ### 全文翻译与发布
 
-1. 用户在主站勾选文章，FastAPI 写请求并创建 Codex job。
-2. Codex 从服务器任务读取文章和 source cache，按 URL 核对稳定身份。
+1. 用户在主站勾选文章，FastAPI 校验 URL 身份、写请求并创建 job。
+2. 服务器按实时 owner 分派 API worker 或外部执行端，读取 source cache 后处理。
 3. 译文落到 `translations/NN.json`，同步更新 `index.json` 和 `requests.json`。
 4. 校验通过后，将同一内容保存到 GitHub 快照，并增量同步 Google Docs。
 5. 只有译文文件存在且发布状态一致时，job 才能完成。
@@ -87,7 +87,7 @@ igndaily.site server
 
 ## 并发与一致性边界
 
-- 服务器写任务共享 `/var/lock/ign-daily-write.lock`；GitHub 写 workflow 共享同一 concurrency group。
-- 单个 API JSON 写入具备原子替换和内容 SHA 冲突检查。
+- 服务器数据提交共享 `/var/lock/ign-daily-write.lock`，仅在读取快照或提交时持有；模型调用不占用数据写锁。worker 另有运行锁及维护门禁，部署/恢复等待维护独占锁。GitHub 写 workflow 共享同一 concurrency group。
+- 网页与 iPhone 润色使用相同 URL/revision 业务接口。单词条修改校验原值；文件写入使用读取时 SHA，创建使用必须不存在约束，冲突不会自动覆盖。
 - 多个 JSON 文件组成的一次业务操作仍不是数据库事务；中断时应依据 URL、job 状态和校验脚本复核，不要凭单个状态字段推断全部成功。
 - 历史日期目录永久保留。恢复前先备份，任何批量覆盖必须有明确来源和回滚点。

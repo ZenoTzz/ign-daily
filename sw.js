@@ -1,4 +1,4 @@
-const CACHE_NAME = 'ign-daily-v13';
+const CACHE_NAME = 'ign-daily-v14';
 const BASE_PATH = self.location.pathname.replace(/sw\.js$/, '');
 const STATIC_ASSETS = [
   '',
@@ -9,6 +9,9 @@ const STATIC_ASSETS = [
   'assets/home.css',
   'assets/workspace-ui.css',
   'assets/app.js',
+  'assets/article-editor.js',
+  'assets/session-ui.js',
+  'assets/session-ui.css',
 ].map((path) => `${BASE_PATH}${path}`);
 
 const JSON_HEADERS = { 'Content-Type': 'application/json; charset=utf-8' };

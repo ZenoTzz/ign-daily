@@ -22,19 +22,23 @@
   <link rel="stylesheet" href="assets/article-dark.css?v=20260616theme2">
   <link rel="stylesheet" href="assets/workspace-ui.css?v=20260711refactor1">
   <link rel="stylesheet" href="assets/article-workbench.css?v=20260713article1">
-  <link rel="stylesheet" href="assets/article-fidelity.css?v=20260713article2">
-  <script src="assets/app.js?v=20260728submitdedupe1"></script>
+  <link rel="stylesheet" href="assets/article-fidelity.css?v=20260906webfix1">
+  <script src="assets/app.js?v=20260906webfix1"></script>
+  <script src="assets/article-editor.js?v=20260906webfix1"></script>
   <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
   <script>
+    window.tailwind = window.tailwind || {};
     tailwind.config = {
       theme: { extend: { colors: { brand: { 600:'#a01620',700:'#7e1219' }}}}
     }
   </script>
   <link rel="stylesheet" href="assets/compliance.css?v=20260710beian2">
   <script defer src="assets/compliance.js?v=20260709beian1"></script>
+<link rel="stylesheet" href="assets/session-ui.css?v=20260906webfix1">
+<script defer src="assets/session-ui.js?v=20260906webfix1"></script>
 </head>
 <body class="workspace-page antialiased">
-  <div x-data="articleData()" x-init="init()" class="min-h-screen flex flex-col">
+  <div x-data="articleData()" class="min-h-screen flex flex-col">
     <header class="article-topbar"><div class="article-topbar-inner">
       <div class="article-topbar-left"><a href="index.html" class="article-brand"><span>IGN</span><b>IGN Daily</b></a><div class="article-date-nav"><a x-show="prevArticle" :href="articleLink(prevArticle)">←</a><span x-text="new URLSearchParams(location.search).get('date')"></span><a x-show="nextArticle" :href="articleLink(nextArticle)">→</a></div></div>
       <nav><a href="index.html">工作台</a><a href="dict.html">词库</a><a href="learning.html">学习</a><a href="usage.html">用量</a><a href="calendar.html">日历</a></nav>
@@ -196,7 +200,7 @@
 
     <div x-show="article" class="flex-1 min-h-0 article-reader-layout">
       <!-- Two-pane: 左译文 / 右侧提取后的英文原文 -->
-      <div x-show="mode === 'compare'" class="reader-grid h-full">
+      <div x-show="mode === 'compare'" class="reader-grid paired-reader h-full">
         <aside class="article-media-rail">
           <div class="media-rail-head"><strong>文章配图</strong><span x-text="article?.images?.length || 0"></span></div>
           <div class="media-rail-grid" x-show="article?.images?.length">
@@ -292,25 +296,21 @@
               </div>
             </div>
             <template x-for="(p, idx) in article?.paragraphs || []" :key="idx">
-              <div class="para-row" :class="{'mobile-hide-en': viewMode==='cn', 'mobile-hide-cn': viewMode==='en'}">
+              <div class="para-row paired-paragraph">
                 <span class="para-index" x-text="idx + 1"></span>
                 <div class="para-cn-wrap">
                   <p class="para-cn" x-html="highlightMissEn(paragraphCn(p))"></p>
                   <button class="para-edit-btn" @click="openEditPara(idx)" title="编辑该段译文">编辑</button>
                 </div>
-                <p class="para-en lg:block" :class="{'lg:hidden': viewMode==='cn' || viewMode==='en'}" x-text="p.en"></p>
+                <p class="para-en paired-english" x-text="p.en"></p>
+                <details class="paired-mobile-english"><summary>展开本段英文原文</summary><p x-text="p.en"></p></details>
               </div>
             </template>
           </div>
         </div>
 
         <!-- 右：从 sources 缓存提取的英文原文，与译文逐段对应。 -->
-        <div class="reader-pane en extracted-source">
-          <div class="source-pane-head"><strong>英文原文（提取）</strong><span x-text="`${article?.paragraphs?.length || 0} 段`"></span></div>
-          <template x-for="(p, idx) in article?.paragraphs || []" :key="idx">
-            <div class="source-paragraph"><span x-text="idx + 1"></span><p x-text="p.en"></p></div>
-          </template>
-        </div>
+
       </div>
 
       <!-- 仅中文模式 -->
@@ -353,7 +353,7 @@
             <h2 class="text-xl font-bold mb-1" x-text="article?.cn_title"></h2>
             <p class="text-sm text-slate-500 italic mb-4" x-text="article?.cn_subtitle || article?.summary || ''"></p>
             <template x-for="(p, idx) in article?.paragraphs || []" :key="idx">
-              <p class="mb-3 leading-relaxed text-sm text-slate-700" x-text="paragraphCn(p)"></p>
+              <p class="para-cn mb-3 leading-relaxed text-sm text-slate-700" x-text="paragraphCn(p)"></p>
             </template>
           </div>
         </div>
@@ -365,27 +365,28 @@
               <div class="flex items-center gap-2">
                 <span x-show="polishDirty" class="text-xs text-orange-600">未保存</span>
                 <span x-show="polishSaving" class="text-xs text-blue-600">保存中...</span>
-                <span x-show="polishSavedAt" class="text-xs text-slate-500" x-text="`已保存 ${polishSavedAt}`"></span>
-                <button @click="resetPolishFromTranslation()"
+                <span x-show="polishSavedAt && !polishDirty" class="text-xs text-slate-500" x-text="`已保存 ${polishSavedAt}`"></span>
+                <button @click="resetPolishFromTranslation()" :disabled="!polishReady || polishResetting || polishConflict"
                   class="text-xs px-2 py-1 rounded border hover:bg-amber-100 text-slate-600"
                   title="用最新译文重置输入区（当前修改会丢失）">↻ 重置</button>
-                <button @click="savePolish(true)" :disabled="polishSaving"
+                <button @click="savePolish(true)" :disabled="polishSaving || !polishReady || polishConflict || polishResetting"
                   class="text-xs px-2 py-1 rounded bg-amber-600 text-white hover:bg-amber-700 disabled:bg-slate-300">
                   💾 保存
                 </button>
               </div>
             </div>
 
+            <div class="polish-error" x-show="polishError" role="status"><p x-text="polishError"></p><button @click="reloadPolishFromServer()" :disabled="polishSaving || polishResetting">载入服务器版本</button></div>
             <label class="block text-xs font-medium mb-1 text-slate-600">标题</label>
-            <input type="text" x-model="polishData.title" @input="onPolishInput()"
+            <input type="text" :disabled="!polishReady || polishResetting" x-model="polishData.title" @input="onPolishInput()"
               class="w-full px-3 py-2 border rounded mb-3 text-base font-bold">
 
             <label class="block text-xs font-medium mb-1 text-slate-600">副标题 / 摘要</label>
-            <input type="text" x-model="polishData.subtitle" @input="onPolishInput()"
+            <input type="text" :disabled="!polishReady || polishResetting" x-model="polishData.subtitle" @input="onPolishInput()"
               class="w-full px-3 py-2 border rounded mb-3 text-sm italic">
 
             <label class="block text-xs font-medium mb-1 text-slate-600">正文（换一行就是新段落）</label>
-            <textarea x-model="polishData.body" @input="onPolishInput()"
+            <textarea :disabled="!polishReady || polishResetting" x-model="polishData.body" @input="onPolishInput()"
               class="w-full px-3 py-2 border rounded text-sm leading-relaxed font-mono"
               rows="30"
               placeholder="按你的写作习惯：换一行就是新段落，不需要额外空一行..."></textarea>
@@ -449,12 +450,16 @@
         polishStatus: '润色',
         polishExists: false,
         polishSaveTimer: null,
+        ...articlePolishEditor(),
         manualReviewApproving: false,
         prevArticle: null,
         nextArticle: null,
 
 
         async init() {
+          if (this._initialized) return;
+          this._initialized = true;
+          this.installDraftGuard();
           this.mode = window.innerWidth < 1024 ? 'cn' : 'compare';
           this.polishDirty = false;
           this.polishSaving = false;
@@ -474,6 +479,12 @@
               throw error;
             }
             this.article = await res.json();
+            if (GH.canUseServer()) {
+              try {
+                const file = await GH.getFile(`data/${date}/translations/${padded}.json`);
+                if (file) { this.translationSnapshot = file; this.article = JSON.parse(file.content); }
+              } catch (_) { /* Reading remains available; editing requires a versioned snapshot. */ }
+            }
             this.article.pending_dict = (this.article.pending_dict || [])
               .map(c => normalizeDictCandidate(c))
               .filter(c => c.en && c.cn);
@@ -657,10 +668,10 @@
             const id = params.get('id');
             const padded = String(id).padStart(2, '0');
             const path = `data/${date}/translations/${padded}.json`;
-            const fresh = await GH.getRequiredFile(path, '当前译文');
+            const fresh = this.translationBase();
             const data = JSON.parse(fresh.content);
             data.paragraphs = this.article.paragraphs;
-            await GH.putFile(path, JSON.stringify(data, null, 2),
+            await this.writeTranslation(path, JSON.stringify(data, null, 2),
               `sync dict to article #${id}: ${en} → ${newCn}`);
           }
           return modified;
@@ -823,14 +834,14 @@
           const id = params.get('id');
           const padded = String(id).padStart(2, '0');
           const path = `data/${date}/translations/${padded}.json`;
-          const fresh = await GH.getRequiredFile(path, '当前译文');
+          const fresh = this.translationBase();
           const data = JSON.parse(fresh.content);
           data.pending_dict = newPending;
           // 同步本地 paragraphs 修改（如果有）
           if (Array.isArray(this.article?.paragraphs)) {
             data.paragraphs = this.article.paragraphs;
           }
-          await GH.putFile(path, JSON.stringify(data, null, 2),
+          await this.writeTranslation(path, JSON.stringify(data, null, 2),
             `pending_dict + paragraphs: update for #${id}`);
         },
 
@@ -860,7 +871,7 @@
             }
 
             // 2. 拉取本文 translation
-            const fresh = await GH.getRequiredFile(path, '当前译文');
+            const fresh = this.translationBase();
             const data = JSON.parse(fresh.content);
 
             // 3. 构建两阶段替换集
@@ -928,14 +939,14 @@
 
             // 6. 写回 translation
             const msg = `reapply dict: ${hits.size} terms replaced in #${id} (${paraReplaced} paragraphs)`;
-            await GH.putFile(path, JSON.stringify(data, null, 2), msg);
+            await this.writeTranslation(path, JSON.stringify(data, null, 2), msg);
 
             // 6.5 同步更新 index.json 里该文章的 cn_title / summary 让首页同步
             try {
               const idxPath = `data/${date}/index.json`;
               const idxFresh = await GH.getFile(idxPath);
               const idxData = JSON.parse(idxFresh.content);
-              const art = (idxData.articles || []).find(a => a.id === parseInt(id));
+              const art = (idxData.articles || []).find(a => a.url === data.url);
               if (art) {
                 let idxChanged = false;
                 if (data.cn_title && art.cn_title !== data.cn_title) {
@@ -1078,15 +1089,13 @@
             const id = parseInt(params.get('id'));
             const padded = String(id).padStart(2, '0');
             if (typeof ServerAPI !== 'undefined' && ServerAPI.enabledByHost()) {
-              if (!ServerAPI.token()) {
-                this.flash('❌ 请先在首页登录服务器账号，再人工放行', 5000);
-                return;
-              }
               const approved = await ServerAPI.request('/translations/approve', {
                 method: 'POST',
-                body: JSON.stringify({ date, article_id: id })
+                body: JSON.stringify({ date, article_id: id, url: this.article.url, expected_revision: this.translationBase().sha })
               });
               this.article = approved.article || this.article;
+              const current = await GH.getFile(`data/${date}/translations/${padded}.json`);
+              if (current) { this.translationSnapshot = current; this.article = JSON.parse(current.content); }
               this.flash('✅ 已人工放行为正式译文');
               return;
             }
@@ -1097,7 +1106,7 @@
             const transPath = `data/${date}/translations/${padded}.json`;
             const now = new Date().toISOString();
 
-            const transFresh = await GH.getFile(transPath);
+            const transFresh = this.translationBase();
             const data = JSON.parse(transFresh.content);
             this.normalizeTranslationQuotes(data);
             data.quality_status = 'manual_approved';
@@ -1108,7 +1117,7 @@
             delete data.audit_issues;
             delete data.audit_failed_at;
             delete data.audit_failure_reason;
-            await GH.putFile(transPath, JSON.stringify(data, null, 2), `manual approve translation #${id}`);
+            await this.writeTranslation(transPath, JSON.stringify(data, null, 2), `manual approve translation #${id}`);
 
             const indexPath = `data/${date}/index.json`;
             const idxFresh = await GH.getFile(indexPath);
@@ -1185,10 +1194,10 @@
             const id = params.get('id');
             const padded = String(id).padStart(2, '0');
             const path = `data/${date}/translations/${padded}.json`;
-            const fresh = await GH.getRequiredFile(path, '当前译文');
+            const fresh = this.translationBase();
             const data = JSON.parse(fresh.content);
             data.paragraphs = this.article.paragraphs;
-            await GH.putFile(path, JSON.stringify(data, null, 2),
+            await this.writeTranslation(path, JSON.stringify(data, null, 2),
               `edit paragraph ${idx+1} of #${id}`);
             this.flash('✅ 段落已保存');
             this.showEditPara = false;
@@ -1738,123 +1747,6 @@
         },
 
         // ---- 润色 ----
-        async loadPolish() {
-          const params = new URLSearchParams(location.search);
-          const date = params.get('date');
-          const id = params.get('id');
-          if (!date || !id) return;
-
-          // 先读索引 _index.json 查找该 id 的实际文件名
-          let actualPath = null;
-          try {
-            const idxRes = await fetch(`data/${date}/polished/_index.json?t=${Date.now()}`);
-            if (idxRes.ok) {
-              const idx = await idxRes.json();
-              actualPath = idx[String(id)];
-            }
-          } catch (_) {}
-
-          // 如果索引有则使用实际文件名；否则从当前 cn_title 推断（能匹配上则取，否则 fillFromTrans）
-          const filename = actualPath || (this.makePolishFilename() + '.json');
-          const url = `data/${date}/polished/${encodeURIComponent(filename)}?t=${Date.now()}`;
-          try {
-            const res = await fetch(url);
-            if (res.ok) {
-              const d = await res.json();
-              const fallback = this.buildPolishDraftFromTranslation();
-              const paragraphBody = Array.isArray(d.paragraphs)
-                ? d.paragraphs.map(p => typeof p === 'string' ? p : (p?.cn || p?.text || '')).filter(Boolean).join('\n')
-                : '';
-              this.polishData = {
-                title: d.title || d.cn_title || fallback.title,
-                subtitle: d.subtitle || d.cn_subtitle || d.summary || fallback.subtitle,
-                body: d.body || d.cn_body || d.content || paragraphBody || fallback.body,
-                updated_at: d.updated_at || null,
-              };
-              this.polishExists = true;
-              this.polishStatus = '已润色';
-              if (d.updated_at) {
-                this.polishSavedAt = this.fmtTime(d.updated_at);
-              }
-            } else {
-              // 没润色版 → 用翻译版预填
-              this.fillPolishFromTranslation();
-              this.polishExists = false;
-              this.polishStatus = '润色';
-            }
-          } catch (e) {
-            this.fillPolishFromTranslation();
-          }
-        },
-
-        fillPolishFromTranslation() {
-          if (!this.article) return;
-          this.polishData = this.buildPolishDraftFromTranslation();
-          this.polishDirty = false;
-        },
-
-        async resetPolishFromTranslation() {
-          if (!confirm('重置会删除本篇的润色记录（润色文件 + 索引），该文章将被视为未润色，不会计入夜间学习。继续吗？')) return;
-          // 1. 本地状态重置
-          this.fillPolishFromTranslation();
-          this.polishDirty = false;
-          this.polishStatus = '润色';
-
-          // 2. 删除 GitHub 上的润色文件 + 从 _index.json 中移除
-          try {
-            const params = new URLSearchParams(location.search);
-            const date = params.get('date');
-            const id = params.get('id');
-            const indexPath = `data/${date}/polished/_index.json`;
-
-            // 读索引找到该 id 对应的文件名
-            let filename = null;
-            try {
-              const idxFresh = await GH.getFile(indexPath);
-              const idxData = JSON.parse(idxFresh.content);
-              filename = idxData[String(id)] || idxData[id];
-              // 从索引中移除
-              delete idxData[String(id)];
-              delete idxData[id];
-              await GH.putFile(indexPath, JSON.stringify(idxData, null, 2),
-                `polish: remove #${id} from index (reset)`);
-            } catch (e) {
-              console.warn('读/写 _index.json 失败:', e);
-            }
-
-            // 删除润色文件本身
-            if (filename) {
-              try {
-                const filePath = `data/${date}/polished/${filename}`;
-                const fileFresh = await GH.getFile(filePath);
-                if (fileFresh && fileFresh.sha) {
-                  await GH.deleteFile(filePath, fileFresh.sha,
-                    `polish: delete #${id} (reset)`);
-                }
-              } catch (e) {
-                console.warn('删除润色文件失败:', e);
-              }
-            }
-
-            this.flash('✅ 润色记录已删除', 2500);
-          } catch (e) {
-            console.error(e);
-            this.flash('❌ 重置失败：' + e.message, 4000);
-          }
-        },
-
-        openPolish() {
-          if (window.innerWidth < 640) return; // 移动端不支持润色编辑
-          this.mode = 'polish';
-        },
-
-        onPolishInput() {
-          this.polishDirty = true;
-          // 防抖：3秒后自动保存
-          clearTimeout(this.polishSaveTimer);
-          this.polishSaveTimer = setTimeout(() => this.savePolish(false), 3000);
-        },
-
         makePolishFilename() {
           if (!this.article) return '';
           const id = String(this.article.id).padStart(2, '0');
@@ -1886,48 +1778,7 @@
             .filter(line => line);
         },
 
-        async savePolish(manual) {
-          if (this.polishSaving) return;
-          this.polishSaving = true;
-          const params = new URLSearchParams(location.search);
-          const date = params.get('date');
-          const filename = this.makePolishFilename() + '.json';
-          const path = `data/${date}/polished/${filename}`;
-          const now = new Date().toISOString();
-          this.polishData.updated_at = now;
-          const polishParagraphs = this.polishParagraphsFromBody(this.polishData.body);
-          const payload = {
-            id: this.article.id,
-            cn_title: this.article.cn_title,
-            en_title: this.article.en_title,
-            url: this.article.url,
-            category: this.article.category,
-            ...this.polishData,
-            paragraphs: polishParagraphs,
-          };
-          try {
-            await GH.putFile(path, JSON.stringify(payload, null, 2), `polish: ${this.article.cn_title}`);
-            // 同步更新索引文件
-            const idxPath = `data/${date}/polished/_index.json`;
-            let idx = {};
-            try {
-              const cur = await GH.getFile(idxPath);
-              idx = JSON.parse(cur.content);
-            } catch (_) {}
-            idx[String(this.article.id)] = filename;
-            await GH.putFile(idxPath, JSON.stringify(idx, null, 2), `polish index: #${this.article.id}`);
-            this.polishDirty = false;
-            this.polishExists = true;
-            this.polishStatus = '已润色';
-            this.polishSavedAt = this.fmtTime(now);
-            if (manual) this.flash('✅ 润色已保存');
-          } catch (e) {
-            console.error('Save polish failed:', e);
-            if (manual) this.flash('❌ 保存失败：' + e.message, 5000);
-          } finally {
-            this.polishSaving = false;
-          }
-        }
+
       }
     }
   </script>

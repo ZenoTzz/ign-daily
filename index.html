@@ -48,10 +48,12 @@
   <link rel="stylesheet" href="assets/home.css?v=20260806sourcecopy4">
   <link rel="stylesheet" href="assets/workspace-ui.css?v=20260711loginfix1">
   <script defer src="assets/exceljs.min.js"></script>
-  <script defer src="assets/app.js?v=20260901luna1"></script>
+  <script defer src="assets/app.js?v=20260906webfix1"></script>
   <script defer src="assets/alpine.min.js"></script>
   <link rel="stylesheet" href="assets/compliance.css?v=20260710beian2">
   <script defer src="assets/compliance.js?v=20260709beian1"></script>
+<link rel="stylesheet" href="assets/session-ui.css?v=20260906webfix1">
+<script defer src="assets/session-ui.js?v=20260906webfix1"></script>
 </head>
 <body>
   <!-- SVG Icon Definitions -->
@@ -133,7 +135,7 @@
     </symbol>
   </svg>
 
-  <div x-data="appData()" x-init="init()" class="min-h-screen">
+  <div x-data="appData()"  class="min-h-screen">
     <!-- Header -->
     <header class="site-header">
       <div class="header-inner">
@@ -220,9 +222,9 @@
           <p class="workbench-kicker" x-text="currentDate + ' 新闻日'"></p>
           <h1 class="workbench-title">今日翻译工作台</h1>
           <p class="workbench-subtitle">
-            <span x-text="`${allArticleCount} 条 RSS 已完成标题摘要，等待选择需要翻译的文章`"></span>
+            <span x-text="`${allArticleCount} 条新闻，${titleReadyCount} 条已完成标题摘要`"></span>
           </p>
-          <p class="workbench-subtitle">下次自动翻译窗口：<strong x-text="nextTranslationWindow()"></strong>（紧急任务可直接通知翻译 Agent）</p>
+          <p class="workbench-subtitle"><span x-text="nextTranslationWindow()"></span></p>
         </div>
         <div class="workbench-metrics">
           <div class="metric-card metric-amber">
@@ -284,7 +286,7 @@
           <div class="panel-heading">
             <div>
               <h2>文章队列</h2>
-              <p>勾选需要翻译的文章后提交到队列；默认等待 Codex 处理，API 仅作备用。</p>
+              <p>勾选文章并提交翻译，服务器会继续处理。已完成的文章可打开复核或加入导出篮。</p>
             </div>
             <div class="queue-actions">
               <button @click="exportSelectedExcel()" :disabled="exportBasket.length === 0" class="btn btn-ghost export-basket-action">
@@ -335,7 +337,7 @@
             <template x-for="(art, idx) in filteredArticles" :key="art.id">
               <article class="queue-row" :class="{ selected: selected.includes(Number(art.id)) }" @click="toggleArticleSelection(art)" :data-article-id="art.id">
                 <label class="queue-check" @click.stop>
-                  <input type="checkbox" :value="art.id" x-model.number="selected">
+                  <input type="checkbox" :value="art.id" :checked="selected.includes(Number(art.id))" @change="toggleArticleSelection(art)" :aria-label="`选择 ${art.cn_title || art.en_title}`">
                 </label>
                 <div class="queue-title-cell">
                   <div class="queue-thumb" :class="{ empty: !art.cover_image }">
@@ -459,14 +461,14 @@
         </div>
 
         <aside class="workbench-rail">
-          <section class="rail-panel">
+          <section class="rail-panel" id="tasks">
             <div class="rail-heading">
               <h3>当前任务</h3>
               <p>只保留真正需要关注的运行状态。</p>
             </div>
             <div class="progress-item">
-              <div><span>标题摘要</span><strong x-text="`${Math.max(0, allArticleCount - pendingSelectionCount)} / ${allArticleCount}`"></strong></div>
-              <i><b :style="`width:${queuePercent(Math.max(0, allArticleCount - pendingSelectionCount), allArticleCount)}%`"></b></i>
+              <div><span>标题摘要</span><strong x-text="`${titleReadyCount} / ${allArticleCount}`"></strong></div>
+              <i><b :style="`width:${queuePercent(titleReadyCount, allArticleCount)}%`"></b></i>
             </div>
             <div class="progress-item">
               <div><span>全文翻译</span><strong x-text="`${requestedCount} 篇${requestedQueueText()}`"></strong></div>
@@ -488,7 +490,8 @@
             </div>
           </section>
 
-          <section class="rail-panel usage-panel">
+          <details class="rail-panel usage-panel">
+            <summary>用量概览</summary>
             <div class="rail-heading">
               <h3>今日用量</h3>
               <p>来自当前新闻日的真实 API 用量记录。</p>
@@ -498,9 +501,10 @@
               <div class="usage-cache"><small>缓存命中</small><strong x-text="todayCacheHitDisplay"></strong></div>
             </div>
             <a href="usage.html" class="rail-link">打开用量看板 →</a>
-          </section>
+          </details>
 
-          <section class="rail-panel">
+          <details class="rail-panel" :open="globalPending.length > 0">
+            <summary>词库建议 <span x-text="globalPending.length || ''"></span></summary>
             <div class="rail-heading">
               <h3>词库建议</h3>
               <p>翻译过程中自动发现的新词。</p>
@@ -518,10 +522,11 @@
             <button x-show="globalPending.length > 3" @click="showPendingPanel = true" class="rail-link">
               查看全部 <span x-text="globalPending.length"></span> 个候选词
             </button>
-            <div x-show="globalPending.length === 0" class="rail-empty">暂无待确认词库。</div>
-          </section>
+            <div x-show="globalPending.length === 0" class="rail-empty" x-text="apiUser ? '暂无待确认词库。' : '登录后查看词库建议。'"></div>
+          </details>
 
-          <section class="rail-panel">
+          <details class="rail-panel">
+            <summary>最近确认的规则</summary>
             <div class="rail-heading">
               <h3>最近确认的规则</h3>
               <p>只显示学习记录中已经确认的真实规则。</p>
@@ -536,7 +541,7 @@
             </ul>
             <div x-show="!learningRules.length" class="rail-empty">暂无已确认规则。</div>
             <a href="learning.html" class="btn btn-ghost rail-note-action">打开周报</a>
-          </section>
+          </details>
         </aside>
       </section>
     </main>
@@ -891,7 +896,7 @@
               <span x-text="automationSaving ? '保存中...' : '保存自动化开关'"></span>
             </button>
             <button @click="runApiTranslationNow()" :disabled="automationSaving || automationTriggering" class="btn btn-green">
-              <span x-text="automationTriggering ? '触发中...' : '备用：立即运行 API 翻译'"></span>
+              <span x-text="automationTriggering ? '触发中...' : '立即处理翻译队列'"></span>
             </button>
           </div>
         </div>

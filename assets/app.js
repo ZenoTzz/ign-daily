@@ -59,6 +59,7 @@ const GH = {
   repo: 'ign-daily',
   branch: 'main',
   apiBase: 'https://api.github.com',
+  revisions: new Map(),
   canUseServer() {
     // Production also supports an HttpOnly session cookie.
     return typeof ServerAPI !== 'undefined' && ServerAPI.enabledByHost();
@@ -74,12 +75,13 @@ const GH = {
     if (this.canUseServer()) {
       try {
         const data = await ServerAPI.request(`/files/${this.serverPath(path)}`);
+        this.revisions.set(path, data.sha || null);
         return {
           sha: data.sha || '',
           content: data.content || ''
         };
       } catch (e) {
-        if (e.status === 404) return null;
+        if (e.status === 404) { this.revisions.set(path, null); return null; }
         throw e;
       }
     }
@@ -132,23 +134,21 @@ const GH = {
     return dict;
   },
 
-  async putFile(path, content, message, retry = 2) {
-    if (this.canUseServer()) {
-      const existing = await this.getFile(path);
-      try {
-        return await ServerAPI.request(`/files/${this.serverPath(path)}`, {
-          method: 'PUT',
-          body: JSON.stringify({ content, message, ...(existing ? { sha: existing.sha } : {}) })
-        });
-      } catch (e) {
-        if (e.status === 409 && retry > 0) {
-          await new Promise(resolve => setTimeout(resolve, 300));
-          return this.putFile(path, content, message, retry - 1);
-        }
-        throw e;
-      }
+  async putFile(path, content, message, options = {}) {
+    if (!this.canUseServer()) throw new Error('请在 igndaily.site 登录服务器账号后操作');
+    const explicit = Object.prototype.hasOwnProperty.call(options, 'expectedSha');
+    if (!explicit && !this.revisions.has(path)) {
+      throw new Error('未读取编辑版本，请重新打开内容后保存。草稿已保留。');
     }
-    throw new Error('请在 igndaily.site 登录服务器账号后操作');
+    const sha = explicit ? options.expectedSha : this.revisions.get(path);
+    const result = await ServerAPI.request(`/files/${this.serverPath(path)}`, {
+      method: 'PUT',
+      body: JSON.stringify({ content, message, sha, expected_absent: sha === null })
+    });
+    // Use the submitted snapshot's revision, never fetch a newer version here.
+    const digest = result?.sha || Array.from(new Uint8Array(await crypto.subtle.digest('SHA-1', new TextEncoder().encode(content))), b => b.toString(16).padStart(2, '0')).join('');
+    this.revisions.set(path, digest);
+    return { ...result, sha: digest };
   },
 
   async deleteFile(path, sha, message) {
@@ -185,7 +185,8 @@ const ServerAPI = {
     return !staticHosts.includes(location.hostname);
   },
   async request(path, options = {}) {
-    const attempts = Number(options.retryAttempts || 3);
+    const isRead = ['GET', 'HEAD'].includes(String(options.method || 'GET').toUpperCase());
+    const attempts = isRead ? Math.min(3, Math.max(1, Number(options.retryAttempts || 3))) : 1;
     let lastError = null;
     for (let attempt = 0; attempt < attempts; attempt++) {
       const headers = {
@@ -205,7 +206,7 @@ const ServerAPI = {
         let data = null;
         try { data = text ? JSON.parse(text) : null; } catch (_) { data = { detail: text }; }
         if (!res.ok) {
-          const detail = data?.detail || data?.message || `${res.status} ${res.statusText}`;
+          const detail = res.status === 401 ? '请登录服务器账号后继续' : res.status === 409 ? '内容已在另一处更新，请重新读取并比较后保存；当前草稿已保留。' : data?.detail || data?.message || `${res.status} ${res.statusText}`;
           const err = new Error(detail);
           err.status = res.status;
           err.data = data;
@@ -219,7 +220,9 @@ const ServerAPI = {
       }
     }
     if (lastError && !lastError.status) {
-      throw new Error('服务器连接失败，请检查 VPN/网络后重试；这次请求没有提交成功。');
+      const error = new Error(isRead ? '服务器连接失败，请检查网络后重试。' : '连接中断，操作结果待确认。请先刷新任务或读取服务器内容，确认后再重试。');
+      error.uncertain = !isRead;
+      throw error;
     }
     throw lastError;
   },
@@ -291,6 +294,8 @@ function appData() {
     showMobileMenu: false,
     fabOpen: false,
     selected: [],
+    selectedUrls: [],
+    initialized: false,
     exportBasket: [],
     copyBtnText: '📋 复制摘要',
     sourceCopyingId: null,
@@ -421,7 +426,10 @@ function appData() {
           this.loading = false;
         }
       }, 15000);
-      // 马上绑 beforeunload 保护
+      // Register once; refreshData reuses init without accumulating handlers.
+      if (!this.initialized) {
+      this.initialized = true;
+      window.addEventListener('pagehide', () => this.saveState());
       window.addEventListener('beforeunload', (e) => {
         if (this.pendingProcessing || this.pendingQueue.length > 0) {
           e.preventDefault();
@@ -429,11 +437,13 @@ function appData() {
           return e.returnValue;
         }
       });
+      }
       try {
+        this.error = '';
         await this.checkServerSession();
         await this.restoreActiveJob();
         await this.loadAutomationConfig();
-        this.triggerRssOnRefresh();
+        // Loading and refreshing the workbench are read-only.
         const requestedDate = new URLSearchParams(location.search).get('date');
         let date = requestedDate || todayBeijingDate();
         // 加载可用日期列表
@@ -470,7 +480,7 @@ function appData() {
           const res = await fetch(`data/${date}/index.json?t=${Date.now()}`, { cache: 'no-store' });
           if (!res.ok) {
             // 找不到今日，回退尝试最近一天
-            this.error = `${date} 还没有数据，请等待早晨8:30的cron推送，或访问 历史 页面查看过往内容。`;
+            this.error = `${date} 暂无新闻数据。请稍后刷新，或选择其他新闻日。`;
             this.loading = false;
             return;
           }
@@ -490,7 +500,7 @@ function appData() {
             const requested = new Set(reqData.requested_ids || []);
             const requestedUrls = new Set((reqData.requested_articles || []).map(x => x.url).filter(Boolean));
             for (const a of this.data.articles) {
-              if ((requestedUrls.has(a.url) || requested.has(a.id)) && !['done', 'needs_review'].includes(a.translation_status)) {
+              if ((requestedUrls.has(a.url) || (!requestedUrls.size && requested.has(a.id))) && !['done', 'needs_review'].includes(a.translation_status)) {
                 a.translation_status = 'requested';
               }
             }
@@ -667,6 +677,7 @@ function appData() {
     async refreshAll() {
       // 使用 location.reload 硬刷，避免状态吐不干净问题
       // 追加 cache-bust 参数并跳到不带 query的纯净 url
+      this.saveState();
       const url = new URL(location.href);
       url.searchParams.set('_t', Date.now());
       location.href = url.toString();
@@ -674,8 +685,11 @@ function appData() {
 
     saveState() {
       try {
-        sessionStorage.setItem('ign_index_state', JSON.stringify({
+        sessionStorage.setItem(`ign_index_state_${this.data?.date}`, JSON.stringify({
           filterCat: this.filterCat,
+          queueSearch: this.queueSearch,
+          queueSort: this.queueSort,
+          selectedUrls: this.selectedUrls,
           scrollY: window.scrollY,
           date: this.data?.date,
           ts: Date.now()
@@ -685,13 +699,17 @@ function appData() {
 
     restoreState() {
       try {
-        const raw = sessionStorage.getItem('ign_index_state');
+        const raw = sessionStorage.getItem(`ign_index_state_${this.data?.date}`);
         if (!raw) return;
         const s = JSON.parse(raw);
         // 超过一天过期
         if (Date.now() - s.ts > 24 * 3600 * 1000) return;
         if (s.date !== this.data?.date) return;
         if (s.filterCat) this.filterCat = s.filterCat;
+        this.queueSearch = s.queueSearch || '';
+        this.queueSort = s.queueSort || 'latest';
+        this.selectedUrls = Array.isArray(s.selectedUrls) ? s.selectedUrls : [];
+        this.reconcileSelection();
         // 等 DOM 渲染完再滚到原位置
         this.$nextTick(() => {
           setTimeout(() => {
@@ -715,6 +733,10 @@ function appData() {
       return list;
     },
 
+    get titleReadyCount() {
+      return (this.data?.articles || []).filter(a => a.cn_title?.trim() && a.summary?.trim()).length;
+    },
+
     get allArticleCount() {
       return this.data?.articles?.length || 0;
     },
@@ -725,10 +747,11 @@ function appData() {
     },
 
     get todayCostDisplay() {
-      return this.usageSummary.loaded ? `¥${this.usageSummary.costCny.toFixed(2)}` : '暂无记录';
+      return this.usageSummary.loaded ? `¥${this.usageSummary.costCny.toFixed(2)}` : (this.apiUser ? '暂无可用数据' : '登录后查看');
     },
 
     get todayTokensDisplay() {
+      if (!this.usageSummary.loaded) return '—';
       const tokens = Number(this.usageSummary.tokens || 0);
       if (tokens >= 1000) return `${Math.round(tokens / 1000)}K`;
       return String(tokens);
@@ -778,12 +801,19 @@ function appData() {
       return String(article?.publish_time_cn || article?.pub_date || article?.pubDate_cst || '');
     },
 
+    reconcileSelection() {
+      const byUrl = new Map((this.data?.articles || []).map(a => [a.url, a]));
+      this.selectedUrls = this.selectedUrls.filter(url => byUrl.has(url));
+      this.selected = this.selectedUrls.map(url => Number(byUrl.get(url).id));
+    },
+
     toggleArticleSelection(article) {
-      const id = Number(article?.id);
-      if (!Number.isFinite(id)) return;
-      this.selected = this.selected.includes(id)
-        ? this.selected.filter(item => item !== id)
-        : [...this.selected, id];
+      if (!article?.url) return;
+      this.selectedUrls = this.selectedUrls.includes(article.url)
+        ? this.selectedUrls.filter(url => url !== article.url)
+        : [...this.selectedUrls, article.url];
+      this.reconcileSelection();
+      this.saveState();
     },
 
     queuePercent(value, total) {
@@ -830,7 +860,7 @@ function appData() {
     },
 
     nextTranslationWindow() {
-      return nextTranslationWindowLabel();
+      return '提交后可离开页面，进度会自动更新';
     },
 
     get requestedArticles() {
@@ -925,7 +955,8 @@ function appData() {
 
     async retryTranslation(art) {
       if (!art?.id) return;
-      this.selected = [Number(art.id)];
+      this.selectedUrls = [art.url];
+      this.reconcileSelection();
       await this.submitRequest();
     },
 
@@ -939,6 +970,11 @@ function appData() {
 
     async loadFilteredRss(date = this.currentDate) {
       try {
+        if (this.apiUser && GH.canUseServer()) {
+          const file = await GH.getFile(`data/${date}/filtered_rss.json`);
+          this.filteredRss = file?.content ? JSON.parse(file.content) : [];
+          return;
+        }
         const res = await fetch(`data/${date}/filtered_rss.json?t=${Date.now()}`, { cache: 'no-store' });
         if (!res.ok) {
           this.filteredRss = [];
@@ -1097,9 +1133,8 @@ function appData() {
 
     async refreshData(options = {}) {
       const silent = Boolean(options?.silent);
+      this.saveState();
       this.loading = true;
-      this.data = null;
-      await this.triggerRssOnRefresh(true);
       await this.init();
       if (!silent) this.flash('🔄 已刷新');
     },
@@ -1139,6 +1174,10 @@ function appData() {
         this.apiPassword = '';
         this.apiStatus = `已登录：${this.apiUser}`;
         this.flash('服务器账号已登录');
+        await this.loadAutomationConfig();
+        await this.loadHomeInsights(this.data?.date || this.currentDate);
+        await this.loadFilteredRss(this.data?.date || this.currentDate);
+        window.dispatchEvent(new Event('ign-auth-changed'));
       } catch (e) {
         this.apiStatus = `登录失败：${e.message}`;
         this.flash(this.apiStatus, 5000);
@@ -1150,7 +1189,7 @@ function appData() {
     async logoutServerApi() {
       try {
         await ServerAPI.logout();
-      } catch (_) {}
+      } catch (error) { this.flash(error.message, 5000); return; }
       localStorage.removeItem('ign_api_enabled');
       this.apiUser = '';
       this.accountCurrentPassword = '';
@@ -1158,6 +1197,11 @@ function appData() {
       this.accountConfirmPassword = '';
       this.accountStatus = '';
       this.apiStatus = '已退出服务器账号';
+      GH.revisions.clear();
+      this.usageSummary = { loaded: false, costCny: 0, tokens: 0, cacheHitRate: null };
+      this.globalPending = [];
+      this.learningRules = [];
+      window.dispatchEvent(new Event('ign-auth-changed'));
       this.flash('已退出服务器账号');
     },
 
@@ -1485,7 +1529,7 @@ function appData() {
       const fresh = await GH.getFile(indexPath);
       if (!fresh) throw new Error(`无法读取 ${indexPath}`);
       const index = JSON.parse(fresh.content);
-      const target = (index.articles || []).find(a => Number(a.id) === Number(article.id));
+      const target = (index.articles || []).find(a => Number(a.id) === Number(article.id) && a.url === article.url);
       if (!target) throw new Error(`找不到文章 #${article.id}`);
       const now = new Date().toLocaleString('zh-CN', { hour12: false });
       target.comparison_status = 'requested';
@@ -1995,7 +2039,11 @@ function appData() {
             body: JSON.stringify({
               date,
               ids: selIds,
-              trigger_workflow: this.isApiMode('fulltext_translator')
+              expected_urls: Object.fromEntries(selIds.map(id => {
+                const article = this.data.articles.find(a => Number(a.id) === id && this.selectedUrls.includes(a.url));
+                if (!article?.url) throw new Error('所选文章已变化，请刷新后重新选择。');
+                return [String(id), article.url];
+              }))
             })
           });
           break;
@@ -2010,13 +2058,15 @@ function appData() {
         if (a && a.translation_status !== 'done') a.translation_status = 'requested';
       }
       this.selected = [];
-      await this.clearSelectedTranslationFailures(date, selIds);
+      this.selectedUrls = [];
+      this.saveState();
+      // Server updates failure state atomically with the request.
       if (data?.job_id) {
         this.activeJobId = data.job_id;
         localStorage.setItem('ign_active_job_id', data.job_id);
         await this.pollTranslationJobs(true);
       }
-      const suffix = data?.triggered ? '，API Actions 已触发' : `，等待${this.fulltextQueueOwner()}处理`;
+      const suffix = data?.triggered ? '，服务器已开始处理' : '，服务器会继续处理';
       const prefix = data?.deduplicated ? '任务已在队列中' : `已进入翻译池 ${selIds.length} 篇`;
       this.flash(`${prefix}${suffix}`);
       return data;
@@ -2332,7 +2382,9 @@ function appData() {
           if (a && a.translation_status !== 'done') a.translation_status = 'requested';
         }
         this.selected = [];
-        await this.clearSelectedTranslationFailures(date, selIds);
+      this.selectedUrls = [];
+      this.saveState();
+        // Server updates failure state atomically with the request.
         const apiFulltext = this.isApiMode('fulltext_translator');
         if (apiFulltext) {
           const saved = await this.saveAutomationConfig();

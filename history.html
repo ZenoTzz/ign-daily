@@ -8,15 +8,18 @@
   <script defer src="assets/alpine.min.js"></script>
   <link rel="stylesheet" href="assets/style.css?v=20260616theme2">
   <link rel="stylesheet" href="assets/workspace-ui.css?v=20260711refactor1">
-  <script src="assets/app.js?v=20260728submitdedupe1"></script>
+  <script src="assets/app.js?v=20260906webfix1"></script>
   <script>
+    window.tailwind = window.tailwind || {};
     tailwind.config = { theme: { extend: { colors: { brand: { 600:'#a01620',700:'#7e1219' }}}}}
   </script>
   <link rel="stylesheet" href="assets/compliance.css?v=20260710beian2">
   <script defer src="assets/compliance.js?v=20260709beian1"></script>
+<link rel="stylesheet" href="assets/session-ui.css?v=20260906webfix1">
+<script defer src="assets/session-ui.js?v=20260906webfix1"></script>
 </head>
 <body class="workspace-page antialiased">
-  <div x-data="historyData()" x-init="init()" class="min-h-screen">
+  <div x-data="historyData()"  class="min-h-screen">
     <header class="bg-white border-b sticky top-0 z-10">
       <div class="max-w-5xl mx-auto px-4 py-3 flex items-center gap-3">
         <a href="index.html" class="text-slate-500 hover:text-brand-600">←</a>
@@ -46,8 +49,8 @@
             <div x-show="d.translatedTitles.length > 0" class="text-sm space-y-1">
               <template x-for="t in d.translatedTitles">
                 <div class="flex items-center gap-2">
-                  <span class="text-xs text-slate-400" x-text="`#${t.id}`"></span>
-                  <a :href="`article.html?date=${d.date}&id=${t.id}`"
+                  <span class="text-xs text-slate-400" x-text="t.id ? `#${t.id}` : '归档'"></span>
+                  <a :href="t.id ? `article.html?date=${d.date}&id=${t.id}` : `index.html?date=${d.date}`"
                     class="text-slate-700 hover:text-brand-600" x-text="t.cn_title"></a>
                 </div>
               </template>
@@ -75,12 +78,7 @@
           } catch (e) {}
 
           // 今天的数据总是从 index.json 实时读取（保证翻译计数最新）
-          const today = new Date().toLocaleDateString('zh-CN', {
-            timeZone: 'Asia/Shanghai',
-            year: 'numeric', month: '2-digit', day: '2-digit'
-          }).replace(/\//g, '-');
-          // toLocaleDateString 可能返回 2026-05-28 或 2026/05/28，统一处理
-          const todayKey = today.split('-').map(s => s.padStart(2, '0')).join('-');
+          const todayKey = todayBeijingDate();
 
           try {
             const r = await fetch(`data/${todayKey}/index.json?t=${Date.now()}`, { cache: 'no-store' });
@@ -103,6 +101,10 @@
             }
           } catch (_) {}
 
+          baseList = baseList.map(day => ({...day, translatedTitles: (day.translatedTitles || []).map(t => {
+            if (typeof t === 'string') return {id:null, cn_title:t};
+            return { ...t, id: Number.isInteger(Number(t?.id)) && Number(t.id) > 0 ? Number(t.id) : null, cn_title: t?.cn_title || t?.title || '查看当日文章' };
+          })}));
           this.dates = baseList.sort((a, b) => b.date.localeCompare(a.date));
           this.loading = false;
         }

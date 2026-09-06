@@ -220,6 +220,7 @@ class PrivateApiFileGuardsTest(unittest.TestCase):
             translation.parent.mkdir(parents=True)
             reviewed_at = "2026-07-10T10:00:00+00:00"
             translation.write_text(json.dumps({
+                "url": "https://example.com/article",
                 "translator": "codex",
                 "translator_provider": "openai",
                 "translator_model": "gpt-5.6-sol",
@@ -243,10 +244,14 @@ class PrivateApiFileGuardsTest(unittest.TestCase):
             (repo / "data" / "2026-07-10" / "index.json").write_text(json.dumps({
                 "articles": [{
                     "id": 1,
+                    "url": "https://example.com/article",
                     "translation_status": "done",
                     "translation_path": "translations/01.json",
                 }]
             }), encoding="utf-8")
+            source = repo / "data/2026-07-10/sources/01.json"
+            source.parent.mkdir(parents=True)
+            source.write_text(json.dumps({"url": "https://example.com/article", "paragraphs_en": ["A complete source paragraph."]}))
             result = module.codex_complete_job(job_id, payload, {"username": "tester"})
             self.assertTrue(result["ok"])
             self.assertEqual(result["job"]["status"], "done")
