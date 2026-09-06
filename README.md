@@ -53,6 +53,7 @@ assets/          前端资源
 data/            每日索引、source cache、译文、润色和学习数据
 docs/            当前架构、任务手册和专项排障
 miniprogram/     微信小程序客户端
+ios/             SwiftUI iPhone 原生客户端与 Xcode 工程
 scripts/         抓取、翻译、校验、同步和运维脚本
 server_api/      私有 FastAPI 与服务器部署/备份工具
 ```
@@ -72,6 +73,7 @@ server_api/      私有 FastAPI 与服务器部署/备份工具
 | 部署、备份与恢复 | [server_api/DEPLOYMENT.md](server_api/DEPLOYMENT.md) |
 | RSS 网络故障 | [docs/rss-network-fallback.md](docs/rss-network-fallback.md) |
 | 小程序 | [miniprogram/README.md](miniprogram/README.md) |
+| iPhone 原生应用 | [ios/README.md](ios/README.md) |
 
 点时审计报告只记录当时发现，不是当前操作手册。
 

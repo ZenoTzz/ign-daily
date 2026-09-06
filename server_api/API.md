@@ -60,6 +60,24 @@ minutes. Configure `IGN_DAILY_WECHAT_APPID` and
 
 `POST /translations/request`
 
+`trigger_workflow` is optional (default `null`). Omit it in native clients so the
+server reads its live `data/automation-config.json`: `fulltext_translator: "api"`
+starts the API worker; other owners (including `codex`) queue jobs for their
+consumer. Explicit `true`/`false` retain the browser's legacy override behavior.
+
+Native clients should also send optional `expected_urls`, an object mapping every
+requested ID (as a string key) to the URL the user selected, for example
+`{"2": "https://www.ign.com/articles/example"}`. Under the same write lock as
+request/job creation, the server verifies that all requested IDs still exist and
+match those URLs. A missing mapping entry, removed article/day or changed URL
+returns HTTP 409 without writing requests or creating jobs. The client must
+refresh and reselect instead of blindly resubmitting IDs. Omitting this field
+(or sending `null`) preserves the legacy ID-only behavior.
+
+Only newly created jobs trigger execution; repeating an active request reuses
+its jobs and does not launch another worker. Dates must be real `YYYY-MM-DD`
+calendar dates and IDs must be positive.
+
 ```json
 {
   "date": "2026-06-25",
@@ -201,3 +219,51 @@ official entries and a derived `has_conflict` flag. Review actions are explicit:
   writes the reviewed term to `data/dict.json`, and archives the candidate.
 - `POST /dict/candidates/{id}/reject` archives the candidate without changing
   the production dictionary.
+
+
+## Native article polishing
+
+Authenticated `GET /articles/{date}/{article_id}/polish` and
+`PUT /articles/{date}/{article_id}/polish` require local server storage.
+Both return the same envelope:
+
+```json
+{
+  "ok": true,
+  "exists": false,
+  "revision": null,
+  "draft": {"title": "", "subtitle": "", "summary": "", "body": ""}
+}
+```
+
+An existing draft includes its content revision and `draft.updated_at`. GET reads
+`polished/_index.json` and accepts an indexed file only when its URL matches the
+current article. Otherwise it prefills from a matching translation (falling back
+to article metadata); it never returns another article's old draft after ID drift.
+PUT requires every field below, including an explicit `expected_revision`:
+
+```json
+{
+  "url": "https://www.ign.com/articles/example",
+  "expected_revision": null,
+  "title": "润色标题",
+  "subtitle": "副标题",
+  "summary": "摘要",
+  "body": "第一段\n第二段"
+}
+```
+
+Use `null` only to create an absent draft. To edit, send the exact revision from
+GET or the preceding PUT. The server verifies URL identity and revision under
+its shared write lock; stale saves and concurrent creates return HTTP 409.
+Clients must keep their unsaved text and reload/resolve the conflict rather than
+silently retrying against the new revision. Invalid dates, IDs and indexed paths
+return 400; missing articles return 404; non-local storage returns 501.
+
+PUT preserves unrelated document metadata and index entries. It writes the
+existing browser-compatible polished schema (`id`, `url`, `cn_title`, `en_title`,
+`category`, four editable text fields, nonempty line-split `paragraphs`, and
+`updated_at`), then updates `_index.json`. Unindexed or unrelated old files are
+preserved. Two JSON files are serialized but are not a crash-atomic transaction.
+This saves a user polish draft only: no translation quality approval, job, Docs
+sync or style-profile update is triggered.

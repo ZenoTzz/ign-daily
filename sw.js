@@ -1,4 +1,4 @@
-const CACHE_NAME = 'ign-daily-v12';
+const CACHE_NAME = 'ign-daily-v13';
 const BASE_PATH = self.location.pathname.replace(/sw\.js$/, '');
 const STATIC_ASSETS = [
   '',
@@ -67,11 +67,23 @@ self.addEventListener('activate', (e) => {
   self.clients.claim();
 });
 
+// Only explicitly public data belongs in an offline cache. Private configuration,
+// usage, evidence and dictionary candidates are served through the API.
+function isPublicDataPath(pathname) {
+  if (!pathname.startsWith(`${BASE_PATH}data/`)) return false;
+  const path = pathname.slice(`${BASE_PATH}data/`.length);
+  return /^(?:index-list|dict)\.json$/.test(path) ||
+    /^\d{4}-\d{2}-\d{2}\/(?:index\.json|translations\/\d+\.json)$/.test(path);
+}
+
 // Fetch: network-first for JSON data and static shell, but never return null.
 self.addEventListener('fetch', (e) => {
   if (e.request.method !== 'GET') return;
 
   const url = new URL(e.request.url);
+  // Authenticated API responses must never be intercepted or read from caches.
+  if (url.origin !== self.location.origin) return;
+  if (url.pathname === '/api' || url.pathname.startsWith('/api/')) return;
 
   if (e.request.mode === 'navigate') {
     e.respondWith(
@@ -88,7 +100,7 @@ self.addEventListener('fetch', (e) => {
   }
 
   // JSON data files: always try network first (fresh data)
-  if (url.pathname.endsWith('.json') && url.pathname.includes('/data/')) {
+  if (isPublicDataPath(url.pathname)) {
     e.respondWith(
       fetch(e.request)
         .then((res) => cacheFresh(e.request, res))

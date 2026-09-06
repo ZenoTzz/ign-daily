@@ -24,6 +24,7 @@ python scripts/agent_doctor.py
 | 脚本维护或排障 | `scripts/README.md` | 对应脚本源码、`docs/rss-network-fallback.md` |
 | 数据结构调整 | `data/README.md` | 前端消费者与校验脚本 |
 | 小程序 | `miniprogram/README.md` | `server_api/API.md` |
+| iPhone 原生应用 | `ios/README.md` | `server_api/API.md`、`data/README.md` |
 
 ## 当前系统边界
 

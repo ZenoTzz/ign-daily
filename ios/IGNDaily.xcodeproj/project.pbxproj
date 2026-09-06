@@ -1,0 +1,592 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0BB729C7FF80D2493CB34394 /* CoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF335F846C4FF358814E97E /* CoreTests.swift */; };
+		132964C26D39171EC4EEF522 /* DictionaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E775EB6358BB64C7F41B06E /* DictionaryView.swift */; };
+		1B49D8E5F879611D6FF5658E /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82A6E07D43380E75F05DB29 /* APIClient.swift */; };
+		1BC5017D2BFA4098E28A660B /* KeychainStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754AE0C42CD10CBBA1CC88F9 /* KeychainStore.swift */; };
+		208FDAFBD61861E11CD93BEE /* NewsDayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32986EE8A8FBA8B04E1D7DDF /* NewsDayTests.swift */; };
+		6512BCC5116C736B82DD26D6 /* PolishEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81063B6492B9D572676B3DD0 /* PolishEditorView.swift */; };
+		6A437D62D5AB11B214BF74F4 /* WorkspaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA65D464F715B19FB2417A3 /* WorkspaceView.swift */; };
+		70BBE0BA8ACC466E8716404C /* JobsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4630E41DC371F251038567 /* JobsView.swift */; };
+		8005E86E47EBC1DD0CEF8C3B /* AppFlowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE60AE5E571DD2E212817DC /* AppFlowTests.swift */; };
+		C8E050749BF2C1BAA387A9AA /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D08EC5CB74891A5875F47B /* Models.swift */; };
+		DB587372CE325738C65B973E /* ArticleDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB06F4FB534D51A5340A1394 /* ArticleDetailView.swift */; };
+		E2127B2A01106FF84932038C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1F0D99EE63D197D119F91E1 /* Assets.xcassets */; };
+		F276D075386CA01E1A5391AF /* DemoSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26971F079DE2E93B909EBC6 /* DemoSupport.swift */; };
+		F81754F3E35C7461C00E299C /* SharedViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60E2361F03DEBC8B5BE6C73 /* SharedViews.swift */; };
+		F83909A0886AE0F4A14BC355 /* IGNDailyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94AA2BAF57B742A0F6C75EB /* IGNDailyApp.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4728B297F8AF35DD597A3947 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 10CA7AD587A3D5ED99896069 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4233BEE25FB195DD75DC94D8;
+			remoteInfo = IGNDaily;
+		};
+		BF941DA4F6F92F41139C0E2D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 10CA7AD587A3D5ED99896069 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4233BEE25FB195DD75DC94D8;
+			remoteInfo = IGNDaily;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1A4D5789B36F4A55FAECDE1A /* IGNDaily.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = IGNDaily.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F3FDD9D0ADFA92EA0C4532B /* IGNDailyTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = IGNDailyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		32986EE8A8FBA8B04E1D7DDF /* NewsDayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDayTests.swift; sourceTree = "<group>"; };
+		4B4630E41DC371F251038567 /* JobsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsView.swift; sourceTree = "<group>"; };
+		5CF335F846C4FF358814E97E /* CoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreTests.swift; sourceTree = "<group>"; };
+		754AE0C42CD10CBBA1CC88F9 /* KeychainStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainStore.swift; sourceTree = "<group>"; };
+		81063B6492B9D572676B3DD0 /* PolishEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolishEditorView.swift; sourceTree = "<group>"; };
+		8E775EB6358BB64C7F41B06E /* DictionaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryView.swift; sourceTree = "<group>"; };
+		91D08EC5CB74891A5875F47B /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		9DA65D464F715B19FB2417A3 /* WorkspaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkspaceView.swift; sourceTree = "<group>"; };
+		B82A6E07D43380E75F05DB29 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		C60E2361F03DEBC8B5BE6C73 /* SharedViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedViews.swift; sourceTree = "<group>"; };
+		C94AA2BAF57B742A0F6C75EB /* IGNDailyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGNDailyApp.swift; sourceTree = "<group>"; };
+		CDE60AE5E571DD2E212817DC /* AppFlowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowTests.swift; sourceTree = "<group>"; };
+		DB06F4FB534D51A5340A1394 /* ArticleDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailView.swift; sourceTree = "<group>"; };
+		E1F0D99EE63D197D119F91E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F26971F079DE2E93B909EBC6 /* DemoSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoSupport.swift; sourceTree = "<group>"; };
+		FCCB21FE4829F2551236AE8E /* IGNDailyUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = IGNDailyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		05A1E432AE6941E98620CBBD /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				B82A6E07D43380E75F05DB29 /* APIClient.swift */,
+				754AE0C42CD10CBBA1CC88F9 /* KeychainStore.swift */,
+				91D08EC5CB74891A5875F47B /* Models.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		40F64140E74BCA89A258AB75 /* IGNDailyUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CDE60AE5E571DD2E212817DC /* AppFlowTests.swift */,
+			);
+			path = IGNDailyUITests;
+			sourceTree = "<group>";
+		};
+		7B1A6DC8655F603ACD4AD859 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				F26971F079DE2E93B909EBC6 /* DemoSupport.swift */,
+				C94AA2BAF57B742A0F6C75EB /* IGNDailyApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		7F0BDA87140A2A5FFE0BEF09 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				DB06F4FB534D51A5340A1394 /* ArticleDetailView.swift */,
+				8E775EB6358BB64C7F41B06E /* DictionaryView.swift */,
+				4B4630E41DC371F251038567 /* JobsView.swift */,
+				81063B6492B9D572676B3DD0 /* PolishEditorView.swift */,
+				C60E2361F03DEBC8B5BE6C73 /* SharedViews.swift */,
+				9DA65D464F715B19FB2417A3 /* WorkspaceView.swift */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		80EAE20CBF0F7E6D37F605E9 /* IGNDaily */ = {
+			isa = PBXGroup;
+			children = (
+				E1F0D99EE63D197D119F91E1 /* Assets.xcassets */,
+				7B1A6DC8655F603ACD4AD859 /* App */,
+				05A1E432AE6941E98620CBBD /* Core */,
+				7F0BDA87140A2A5FFE0BEF09 /* Features */,
+			);
+			path = IGNDaily;
+			sourceTree = "<group>";
+		};
+		835EE0C3008BAFCF7C65BE17 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1A4D5789B36F4A55FAECDE1A /* IGNDaily.app */,
+				1F3FDD9D0ADFA92EA0C4532B /* IGNDailyTests.xctest */,
+				FCCB21FE4829F2551236AE8E /* IGNDailyUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ECAE43DE911CF9C4A27016C4 /* IGNDailyTests */ = {
+			isa = PBXGroup;
+			children = (
+				5CF335F846C4FF358814E97E /* CoreTests.swift */,
+				32986EE8A8FBA8B04E1D7DDF /* NewsDayTests.swift */,
+			);
+			path = IGNDailyTests;
+			sourceTree = "<group>";
+		};
+		F01A6E7A6B72DA124785CD9B = {
+			isa = PBXGroup;
+			children = (
+				80EAE20CBF0F7E6D37F605E9 /* IGNDaily */,
+				ECAE43DE911CF9C4A27016C4 /* IGNDailyTests */,
+				40F64140E74BCA89A258AB75 /* IGNDailyUITests */,
+				835EE0C3008BAFCF7C65BE17 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4233BEE25FB195DD75DC94D8 /* IGNDaily */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F1196FACA828E01E20210C9C /* Build configuration list for PBXNativeTarget "IGNDaily" */;
+			buildPhases = (
+				920AC8E125E9483C2A3CE52E /* Sources */,
+				BB3618F568F5FC8193E46B0F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IGNDaily;
+			packageProductDependencies = (
+			);
+			productName = IGNDaily;
+			productReference = 1A4D5789B36F4A55FAECDE1A /* IGNDaily.app */;
+			productType = "com.apple.product-type.application";
+		};
+		94512D298E8B567EE2D37004 /* IGNDailyUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 654FFE11BEDCAD2F09A87ED3 /* Build configuration list for PBXNativeTarget "IGNDailyUITests" */;
+			buildPhases = (
+				FF245B24E5D5764675CCE52C /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7871C1B6E86D472C93D1B5C1 /* PBXTargetDependency */,
+			);
+			name = IGNDailyUITests;
+			packageProductDependencies = (
+			);
+			productName = IGNDailyUITests;
+			productReference = FCCB21FE4829F2551236AE8E /* IGNDailyUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		F9E4D18E1E4570F665BF96BE /* IGNDailyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3AB6D2FD40A8B009A22A6685 /* Build configuration list for PBXNativeTarget "IGNDailyTests" */;
+			buildPhases = (
+				7F8949CFD9598DC834EF2BE5 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D9EB2DC0F8942C126914CE0D /* PBXTargetDependency */,
+			);
+			name = IGNDailyTests;
+			packageProductDependencies = (
+			);
+			productName = IGNDailyTests;
+			productReference = 1F3FDD9D0ADFA92EA0C4532B /* IGNDailyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		10CA7AD587A3D5ED99896069 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					4233BEE25FB195DD75DC94D8 = {
+						DevelopmentTeam = 27V23KNM5P;
+						ProvisioningStyle = Automatic;
+					};
+					94512D298E8B567EE2D37004 = {
+						DevelopmentTeam = 27V23KNM5P;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 4233BEE25FB195DD75DC94D8;
+					};
+					F9E4D18E1E4570F665BF96BE = {
+						DevelopmentTeam = 27V23KNM5P;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = D075326E2FA65E2C745FC164 /* Build configuration list for PBXProject "IGNDaily" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = F01A6E7A6B72DA124785CD9B;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 835EE0C3008BAFCF7C65BE17 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4233BEE25FB195DD75DC94D8 /* IGNDaily */,
+				F9E4D18E1E4570F665BF96BE /* IGNDailyTests */,
+				94512D298E8B567EE2D37004 /* IGNDailyUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BB3618F568F5FC8193E46B0F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2127B2A01106FF84932038C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7F8949CFD9598DC834EF2BE5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0BB729C7FF80D2493CB34394 /* CoreTests.swift in Sources */,
+				208FDAFBD61861E11CD93BEE /* NewsDayTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		920AC8E125E9483C2A3CE52E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B49D8E5F879611D6FF5658E /* APIClient.swift in Sources */,
+				DB587372CE325738C65B973E /* ArticleDetailView.swift in Sources */,
+				F276D075386CA01E1A5391AF /* DemoSupport.swift in Sources */,
+				132964C26D39171EC4EEF522 /* DictionaryView.swift in Sources */,
+				F83909A0886AE0F4A14BC355 /* IGNDailyApp.swift in Sources */,
+				70BBE0BA8ACC466E8716404C /* JobsView.swift in Sources */,
+				1BC5017D2BFA4098E28A660B /* KeychainStore.swift in Sources */,
+				C8E050749BF2C1BAA387A9AA /* Models.swift in Sources */,
+				6512BCC5116C736B82DD26D6 /* PolishEditorView.swift in Sources */,
+				F81754F3E35C7461C00E299C /* SharedViews.swift in Sources */,
+				6A437D62D5AB11B214BF74F4 /* WorkspaceView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF245B24E5D5764675CCE52C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8005E86E47EBC1DD0CEF8C3B /* AppFlowTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7871C1B6E86D472C93D1B5C1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4233BEE25FB195DD75DC94D8 /* IGNDaily */;
+			targetProxy = BF941DA4F6F92F41139C0E2D /* PBXContainerItemProxy */;
+		};
+		D9EB2DC0F8942C126914CE0D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4233BEE25FB195DD75DC94D8 /* IGNDaily */;
+			targetProxy = 4728B297F8AF35DD597A3947 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0B3F35E0DDEB2DBE572B5D54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zenot.IGNDailyUITests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = IGNDaily;
+			};
+			name = Debug;
+		};
+		129FB9CC981487F93EA252A2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zenot.IGNDailyUITests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = IGNDaily;
+			};
+			name = Release;
+		};
+		2FA8CAB354B7AAE93D2672C5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "IGN Daily";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.news";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zenot.igndaily;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		82879F62E2AC41F5910DEF27 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zenot.IGNDailyTests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IGNDaily.app/IGNDaily";
+			};
+			name = Release;
+		};
+		85C45800AD5E9AD1CFBBE249 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 27V23KNM5P;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.9;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		8933E6787737D35F3979CA0E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "IGN Daily";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.news";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zenot.igndaily;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		ADFBBB06803DAC92AF0083FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 27V23KNM5P;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.9;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		F265E7E4A2A366FBEC0A28B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zenot.IGNDailyTests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IGNDaily.app/IGNDaily";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3AB6D2FD40A8B009A22A6685 /* Build configuration list for PBXNativeTarget "IGNDailyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F265E7E4A2A366FBEC0A28B9 /* Debug */,
+				82879F62E2AC41F5910DEF27 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		654FFE11BEDCAD2F09A87ED3 /* Build configuration list for PBXNativeTarget "IGNDailyUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0B3F35E0DDEB2DBE572B5D54 /* Debug */,
+				129FB9CC981487F93EA252A2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		D075326E2FA65E2C745FC164 /* Build configuration list for PBXProject "IGNDaily" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ADFBBB06803DAC92AF0083FD /* Debug */,
+				85C45800AD5E9AD1CFBBE249 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		F1196FACA828E01E20210C9C /* Build configuration list for PBXNativeTarget "IGNDaily" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8933E6787737D35F3979CA0E /* Debug */,
+				2FA8CAB354B7AAE93D2672C5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 10CA7AD587A3D5ED99896069 /* Project object */;
+}

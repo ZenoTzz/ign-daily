@@ -17,6 +17,7 @@ import sqlite3
 import stat
 import subprocess
 import time
+import threading
 import urllib.error
 import urllib.parse
 import urllib.request
@@ -135,7 +136,8 @@ class UpdateAccountRequest(BaseModel):
 class TranslationRequest(BaseModel):
     date: str = Field(pattern=r"^\d{4}-\d{2}-\d{2}$")
     ids: list[int] = Field(min_length=1, max_length=100)
-    trigger_workflow: bool = False
+    trigger_workflow: bool | None = None
+    expected_urls: dict[str, str] | None = None
 
 
 class ManualApproveRequest(BaseModel):
@@ -147,6 +149,15 @@ class FilteredRestoreRequest(BaseModel):
     date: str = Field(pattern=r"^\d{4}-\d{2}-\d{2}$")
     url: str = Field(min_length=1, max_length=2000)
     trigger_workflow: bool = False
+
+
+class PolishWriteRequest(BaseModel):
+    url: str = Field(min_length=1, max_length=2000)
+    expected_revision: str | None = Field(...)
+    title: str = Field(max_length=2000)
+    subtitle: str = Field(max_length=10000)
+    summary: str = Field(max_length=20000)
+    body: str = Field(max_length=2000000)
 
 
 class DictTermRequest(BaseModel):
@@ -353,6 +364,24 @@ def read_json(path: Path, default: Any = None) -> Any:
         return json.loads(path.read_text(encoding="utf-8-sig"))
     except Exception as exc:
         raise HTTPException(status_code=500, detail=f"Invalid JSON: {path.relative_to(APP_DIR)}: {exc}") from exc
+
+
+def validate_article_date(date: str) -> str:
+    if not re.fullmatch(r"[0-9]{4}-[0-9]{2}-[0-9]{2}", date):
+        raise HTTPException(status_code=400, detail="Invalid date")
+    try:
+        datetime.strptime(date, "%Y-%m-%d")
+    except ValueError as exc:
+        raise HTTPException(status_code=400, detail="Invalid date") from exc
+    return date
+
+
+def resolve_translation_trigger(requested: bool | None) -> bool:
+    """Native clients omit the override; legacy explicit booleans still work."""
+    if requested is not None:
+        return requested
+    config = read_json(APP_DIR / "data" / "automation-config.json", {})
+    return isinstance(config, dict) and config.get("fulltext_translator") == "api"
 
 
 def public_translation_file_status(date: str, article_id: int) -> dict[str, Any]:
@@ -801,7 +830,7 @@ def validate_json_content(content: str) -> None:
 
 
 @contextmanager
-def runtime_write_lock(timeout_seconds: float = 30.0) -> Iterator[None]:
+def _runtime_file_lock(timeout_seconds: float = 30.0) -> Iterator[None]:
     """Serialize API file writes with cron jobs and deployments on Linux."""
     if fcntl is None:
         yield
@@ -827,6 +856,29 @@ def runtime_write_lock(timeout_seconds: float = 30.0) -> Iterator[None]:
             fcntl.flock(handle.fileno(), fcntl.LOCK_UN)
         finally:
             handle.close()
+
+
+_RUNTIME_THREAD_LOCK = threading.RLock()
+_RUNTIME_LOCK_STATE = threading.local()
+
+
+@contextmanager
+def runtime_write_lock(timeout_seconds: float = 30.0) -> Iterator[None]:
+    """Lock a complete read/modify/write operation; nested writes reuse its flock."""
+    if not _RUNTIME_THREAD_LOCK.acquire(timeout=timeout_seconds):
+        raise HTTPException(status_code=503, detail="Another server write is still running")
+    try:
+        if getattr(_RUNTIME_LOCK_STATE, "held", False):
+            yield
+        else:
+            with _runtime_file_lock(timeout_seconds):
+                _RUNTIME_LOCK_STATE.held = True
+                try:
+                    yield
+                finally:
+                    _RUNTIME_LOCK_STATE.held = False
+    finally:
+        _RUNTIME_THREAD_LOCK.release()
 
 
 def write_local_file(target: Path, content: str, expected_sha: str | None = None) -> None:
@@ -1386,6 +1438,7 @@ def update_account(payload: UpdateAccountRequest, user: sqlite3.Row = Depends(cu
 
 @app.get("/articles")
 def articles(date: str, user: sqlite3.Row = Depends(current_user)) -> Any:
+    validate_article_date(date)
     data = read_json(APP_DIR / "data" / date / "index.json")
     req = read_json(APP_DIR / "data" / date / "requests.json", {"requested_ids": [], "requested_articles": []})
     failures = read_json(APP_DIR / "data" / date / "translation_failures.json", {"items": {}})
@@ -1418,6 +1471,9 @@ def available_dates(limit: int = 60, user: sqlite3.Row = Depends(current_user)) 
 
 @app.get("/articles/{date}/{article_id}")
 def article(date: str, article_id: int, user: sqlite3.Row = Depends(current_user)) -> Any:
+    validate_article_date(date)
+    if article_id <= 0:
+        raise HTTPException(status_code=400, detail="Article ID must be positive")
     padded = f"{article_id:02d}"
     translation = APP_DIR / "data" / date / "translations" / f"{padded}.json"
     if translation.exists():
@@ -1429,13 +1485,131 @@ def article(date: str, article_id: int, user: sqlite3.Row = Depends(current_user
     raise HTTPException(status_code=404, detail="Article not found")
 
 
+def polish_article_context(date: str, article_id: int) -> dict[str, Any]:
+    validate_article_date(date)
+    if article_id <= 0:
+        raise HTTPException(status_code=400, detail="Article ID must be positive")
+    if STORAGE_MODE != "local":
+        raise HTTPException(status_code=501, detail="Polish editing requires local server storage")
+    index = read_json(safe_repo_path(f"data/{date}/index.json"))
+    item = next((item for item in index.get("articles", [])
+                 if isinstance(item, dict) and str(item.get("id")) == str(article_id)), None)
+    if item is None:
+        raise HTTPException(status_code=404, detail="Article not found")
+    if not item.get("url"):
+        raise HTTPException(status_code=409, detail="Article has no stable URL")
+    return item
+
+
+def safe_polish_path(date: str, filename: str) -> Path:
+    if (not isinstance(filename, str) or not filename or "/" in filename or "\\" in filename
+            or filename.startswith(".") or filename == "_index.json" or not filename.endswith(".json")):
+        raise HTTPException(status_code=400, detail="Invalid polished filename")
+    target = safe_repo_path(f"data/{date}/polished/{filename}")
+    if target.parent != APP_DIR / "data" / date / "polished":
+        raise HTTPException(status_code=400, detail="Invalid polished path")
+    return target
+
+
+def load_polish_state(date: str, article_id: int, article_url: str) -> tuple[dict[str, Any], Path | None, dict[str, Any] | None, str | None]:
+    mapping = read_json(safe_repo_path(f"data/{date}/polished/_index.json"), {})
+    if not isinstance(mapping, dict):
+        raise HTTPException(status_code=500, detail="Polished index must be an object")
+    filename = mapping.get(str(article_id))
+    if filename is None:
+        return mapping, None, None, None
+    target = safe_polish_path(date, filename)
+    if not target.is_file():
+        return mapping, None, None, None
+    content = target.read_text(encoding="utf-8-sig")
+    try:
+        document = json.loads(content)
+    except ValueError as exc:
+        raise HTTPException(status_code=500, detail="Invalid polished document") from exc
+    # IDs may be reassigned by RSS. Never expose or overwrite another URL's draft.
+    if not isinstance(document, dict) or document.get("url") != article_url:
+        return mapping, None, None, None
+    return mapping, target, document, content_sha(content)
+
+
+def polish_draft(document: dict[str, Any], fallback: dict[str, Any] | None = None) -> dict[str, Any]:
+    fallback = fallback or {}
+    paragraphs = document.get("paragraphs", [])
+    paragraph_body = "\n\n".join(
+        (item if isinstance(item, str) else str(item.get("cn") or item.get("text") or "")).strip()
+        for item in paragraphs if isinstance(item, (str, dict))
+    ) if isinstance(paragraphs, list) else ""
+    values = {
+        "title": document.get("cn_title") or "",
+        "subtitle": document.get("cn_subtitle") or document.get("summary") or document.get("opus_summary") or "",
+        "summary": document.get("opus_summary") or "",
+        "body": document.get("cn_body") or document.get("body_cn") or document.get("content") or paragraph_body,
+    }
+    # An explicitly saved empty field must remain empty on the next edit.
+    draft = {field: str(document[field] if field in document and document[field] is not None
+                        else values[field] or fallback.get(field, "")) for field in values}
+    if document.get("updated_at"):
+        draft["updated_at"] = document["updated_at"]
+    return draft
+
+
+def polish_response(document: dict[str, Any], revision: str | None, fallback: dict[str, Any] | None = None) -> dict[str, Any]:
+    return {"ok": True, "exists": revision is not None, "revision": revision,
+            "draft": polish_draft(document, fallback)}
+
+
+@app.get("/articles/{date}/{article_id}/polish")
+def get_article_polish(date: str, article_id: int, user: sqlite3.Row = Depends(current_user)) -> dict[str, Any]:
+    with runtime_write_lock():
+        item = polish_article_context(date, article_id)
+        _, _, existing, revision = load_polish_state(date, article_id, item["url"])
+        translation = read_json(safe_repo_path(f"data/{date}/translations/{article_id:02d}.json"), {})
+        if not isinstance(translation, dict) or translation.get("url") != item["url"]:
+            translation = {}
+        fallback = polish_draft(translation, polish_draft(item))
+        return polish_response(existing or {}, revision, fallback)
+
+
+@app.put("/articles/{date}/{article_id}/polish")
+def put_article_polish(date: str, article_id: int, payload: PolishWriteRequest,
+                       user: sqlite3.Row = Depends(current_user)) -> dict[str, Any]:
+    with runtime_write_lock():
+        item = polish_article_context(date, article_id)
+        if payload.url != item["url"]:
+            raise HTTPException(status_code=409, detail="Article URL changed; reload the article before saving")
+        mapping, target, existing, revision = load_polish_state(date, article_id, item["url"])
+        if payload.expected_revision != revision:
+            raise HTTPException(status_code=409, detail="Polished draft changed; reload before saving")
+        if target is None:
+            title = re.sub(r"[^\u4e00-\u9fa5A-Za-z0-9]+", "_", str(item.get("cn_title") or "untitled")).strip("_")[:60] or "untitled"
+            stem = f"{article_id:02d}_{title}"
+            target = safe_polish_path(date, f"{stem}.json")
+            # Preserve unindexed files and old drafts when IDs or titles have drifted.
+            while target.exists():
+                target = safe_polish_path(date, f"{stem}_{uuid.uuid4().hex[:12]}.json")
+        document = dict(existing or {})
+        document.update(
+            id=article_id, url=item["url"], cn_title=item.get("cn_title", ""),
+            en_title=item.get("en_title", ""), category=item.get("category", ""),
+            title=payload.title, subtitle=payload.subtitle, summary=payload.summary, body=payload.body,
+            paragraphs=[line.strip() for line in payload.body.replace("\r\n", "\n").split("\n") if line.strip()],
+            updated_at=datetime.now(timezone.utc).isoformat(),
+        )
+        content = json_text(document)
+        write_project_file(str(target.relative_to(APP_DIR)), content, "polish: save native draft")
+        mapping[str(article_id)] = target.name
+        write_project_file(f"data/{date}/polished/_index.json", json_text(mapping), "polish: update native draft index")
+        return polish_response(document, content_sha(content))
+
+
 @app.get("/translations/file-status")
 def translation_file_status(
     date: str,
     article_id: int,
 ) -> dict[str, Any]:
-    if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", date):
-        raise HTTPException(status_code=400, detail="Invalid date")
+    validate_article_date(date)
+    if article_id <= 0:
+        raise HTTPException(status_code=400, detail="Article ID must be positive")
     return {"ok": True, **public_translation_file_status(date, article_id)}
 
 
@@ -1558,13 +1732,14 @@ def delete_project_file(path: str, payload: FileDeleteRequest, user: sqlite3.Row
         result = gh_delete_file(path, payload.message)
         sync_from_github()
         return {"ok": True, "path": path, "result": result}
-    if not target.exists() or not target.is_file():
-        raise HTTPException(status_code=404, detail="File not found")
-    if payload.sha is not None:
-        current = target.read_text(encoding="utf-8-sig")
-        if not hmac.compare_digest(content_sha(current), payload.sha):
-            raise HTTPException(status_code=409, detail="File changed before it could be deleted")
-    target.unlink()
+    with runtime_write_lock():
+        if not target.exists() or not target.is_file():
+            raise HTTPException(status_code=404, detail="File not found")
+        if payload.sha is not None:
+            current = target.read_text(encoding="utf-8-sig")
+            if not hmac.compare_digest(content_sha(current), payload.sha):
+                raise HTTPException(status_code=409, detail="File changed before it could be deleted")
+        target.unlink()
     return {"ok": True, "path": path, "message": payload.message}
 
 
@@ -1577,16 +1752,17 @@ def replace_dict(payload: DictReplaceRequest, user: sqlite3.Row = Depends(curren
 
 @app.post("/dict/terms")
 def add_dict_term(payload: DictTermRequest, user: sqlite3.Row = Depends(current_user)) -> dict[str, Any]:
-    dictionary = read_json(APP_DIR / "data" / "dict.json")
-    category = payload.category if payload.category in {"games", "movies_tv", "companies", "people", "media", "terms"} else "terms"
-    dictionary.setdefault(category, {})
-    entry: dict[str, Any] = {"cn": payload.cn, "source": payload.source or "user"}
-    if payload.note:
-        entry["note"] = payload.note
-    dictionary[category][payload.en] = entry
-    dictionary.setdefault("_meta", {})["last_updated"] = datetime.now(CST).strftime("%Y-%m-%d")
-    message = f"dict: add {payload.en}"
-    write_project_file("data/dict.json", json_text(dictionary), message)
+    with runtime_write_lock():
+        dictionary = read_json(APP_DIR / "data" / "dict.json")
+        category = payload.category if payload.category in {"games", "movies_tv", "companies", "people", "media", "terms"} else "terms"
+        dictionary.setdefault(category, {})
+        entry: dict[str, Any] = {"cn": payload.cn, "source": payload.source or "user"}
+        if payload.note:
+            entry["note"] = payload.note
+        dictionary[category][payload.en] = entry
+        dictionary.setdefault("_meta", {})["last_updated"] = datetime.now(CST).strftime("%Y-%m-%d")
+        message = f"dict: add {payload.en}"
+        write_project_file("data/dict.json", json_text(dictionary), message)
     sync_from_github()
     return {"ok": True, "category": category, "en": payload.en, "message": message}
 
@@ -1594,26 +1770,27 @@ def add_dict_term(payload: DictTermRequest, user: sqlite3.Row = Depends(current_
 @app.post("/dict/candidates")
 def submit_dict_candidate(payload: DictCandidateRequest, user: sqlite3.Row = Depends(current_user)) -> dict[str, Any]:
     """Collect a proposed term without mutating the production dictionary."""
-    path = "data/dict_candidates.json"
-    target = APP_DIR / path
-    document = read_json(target, {"version": 1, "candidates": []})
-    category = payload.category if payload.category in {"games", "movies_tv", "companies", "people", "media", "terms"} else "terms"
-    en, cn = payload.en.strip(), payload.cn.strip()
-    if not en or not cn:
-        raise HTTPException(status_code=400, detail="English and Chinese terms are required")
-    candidate_id = hashlib.sha1(f"{en.casefold()}\0{cn}\0{category}".encode("utf-8")).hexdigest()[:16]
-    candidates = [item for item in document.get("candidates", []) if isinstance(item, dict)]
-    existing = next((item for item in candidates if item.get("id") == candidate_id), None)
-    if existing:
-        return {"ok": True, "candidate": existing, "duplicate": True}
-    candidate = {
-        "id": candidate_id, "en": en, "cn": cn, "category": category,
-        "note": payload.note.strip(), "source": "miniprogram", "status": "pending",
-        "submitted_at": datetime.now(timezone.utc).isoformat(), "submitted_by": user["username"],
-    }
-    candidates.append(candidate)
-    document.update(version=1, updated_at=datetime.now(timezone.utc).isoformat(), candidates=candidates)
-    write_project_file(path, json_text(document), f"dict: propose {en}")
+    with runtime_write_lock():
+        path = "data/dict_candidates.json"
+        target = APP_DIR / path
+        document = read_json(target, {"version": 1, "candidates": []})
+        category = payload.category if payload.category in {"games", "movies_tv", "companies", "people", "media", "terms"} else "terms"
+        en, cn = payload.en.strip(), payload.cn.strip()
+        if not en or not cn:
+            raise HTTPException(status_code=400, detail="English and Chinese terms are required")
+        candidate_id = hashlib.sha1(f"{en.casefold()}\0{cn}\0{category}".encode("utf-8")).hexdigest()[:16]
+        candidates = [item for item in document.get("candidates", []) if isinstance(item, dict)]
+        existing = next((item for item in candidates if item.get("id") == candidate_id), None)
+        if existing:
+            return {"ok": True, "candidate": existing, "duplicate": True}
+        candidate = {
+            "id": candidate_id, "en": en, "cn": cn, "category": category,
+            "note": payload.note.strip(), "source": "miniprogram", "status": "pending",
+            "submitted_at": datetime.now(timezone.utc).isoformat(), "submitted_by": user["username"],
+        }
+        candidates.append(candidate)
+        document.update(version=1, updated_at=datetime.now(timezone.utc).isoformat(), candidates=candidates)
+        write_project_file(path, json_text(document), f"dict: propose {en}")
     sync_from_github()
     return {"ok": True, "candidate": candidate, "duplicate": False}
 
@@ -1640,86 +1817,100 @@ def list_dict_candidates(status: str = "pending", user: sqlite3.Row = Depends(cu
 
 @app.post("/dict/candidates/{candidate_id}/approve")
 def approve_dict_candidate(candidate_id: str, payload: DictCandidateReviewRequest, user: sqlite3.Row = Depends(current_user)) -> dict[str, Any]:
-    path = "data/dict_candidates.json"
-    document = read_json(APP_DIR / path, {"version": 1, "candidates": []})
-    candidates = [item for item in document.get("candidates", []) if isinstance(item, dict)]
-    candidate = next((item for item in candidates if item.get("id") == candidate_id), None)
-    if candidate is None:
-        raise HTTPException(status_code=404, detail="Candidate not found")
-    category = payload.category or candidate.get("category", "terms")
-    if category not in {"games", "movies_tv", "companies", "people", "media", "terms"}:
-        category = "terms"
-    cn = (payload.cn or candidate.get("cn", "")).strip()
-    dictionary = read_json(APP_DIR / "data" / "dict.json")
-    for group in {"games", "movies_tv", "companies", "people", "media", "terms"}:
-        if group != category:
-            dictionary.get(group, {}).pop(candidate["en"], None)
-    entry: dict[str, Any] = {"cn": cn, "source": "user"}
-    note = payload.note if payload.note is not None else candidate.get("note", "")
-    if note:
-        entry["note"] = note
-    dictionary.setdefault(category, {})[candidate["en"]] = entry
-    dictionary.setdefault("_meta", {})["last_updated"] = datetime.now(CST).strftime("%Y-%m-%d")
-    write_project_file("data/dict.json", json_text(dictionary), f"dict: approve {candidate['en']}")
-    candidate.update(status="approved", category=category, cn=cn, note=note, reviewed_at=datetime.now(timezone.utc).isoformat(), reviewed_by=user["username"])
-    document.update(updated_at=datetime.now(timezone.utc).isoformat(), candidates=candidates)
-    write_project_file(path, json_text(document), f"dict: archive approved candidate {candidate['en']}")
+    with runtime_write_lock():
+        path = "data/dict_candidates.json"
+        document = read_json(APP_DIR / path, {"version": 1, "candidates": []})
+        candidates = [item for item in document.get("candidates", []) if isinstance(item, dict)]
+        candidate = next((item for item in candidates if item.get("id") == candidate_id), None)
+        if candidate is None:
+            raise HTTPException(status_code=404, detail="Candidate not found")
+        category = payload.category or candidate.get("category", "terms")
+        if category not in {"games", "movies_tv", "companies", "people", "media", "terms"}:
+            category = "terms"
+        cn = (payload.cn or candidate.get("cn", "")).strip()
+        dictionary = read_json(APP_DIR / "data" / "dict.json")
+        for group in {"games", "movies_tv", "companies", "people", "media", "terms"}:
+            if group != category:
+                dictionary.get(group, {}).pop(candidate["en"], None)
+        entry: dict[str, Any] = {"cn": cn, "source": "user"}
+        note = payload.note if payload.note is not None else candidate.get("note", "")
+        if note:
+            entry["note"] = note
+        dictionary.setdefault(category, {})[candidate["en"]] = entry
+        dictionary.setdefault("_meta", {})["last_updated"] = datetime.now(CST).strftime("%Y-%m-%d")
+        write_project_file("data/dict.json", json_text(dictionary), f"dict: approve {candidate['en']}")
+        candidate.update(status="approved", category=category, cn=cn, note=note, reviewed_at=datetime.now(timezone.utc).isoformat(), reviewed_by=user["username"])
+        document.update(updated_at=datetime.now(timezone.utc).isoformat(), candidates=candidates)
+        write_project_file(path, json_text(document), f"dict: archive approved candidate {candidate['en']}")
     sync_from_github()
     return {"ok": True, "candidate": candidate}
 
 
 @app.post("/dict/candidates/{candidate_id}/reject")
 def reject_dict_candidate(candidate_id: str, user: sqlite3.Row = Depends(current_user)) -> dict[str, Any]:
-    path = "data/dict_candidates.json"
-    document = read_json(APP_DIR / path, {"version": 1, "candidates": []})
-    candidates = [item for item in document.get("candidates", []) if isinstance(item, dict)]
-    candidate = next((item for item in candidates if item.get("id") == candidate_id), None)
-    if candidate is None:
-        raise HTTPException(status_code=404, detail="Candidate not found")
-    candidate.update(status="rejected", reviewed_at=datetime.now(timezone.utc).isoformat(), reviewed_by=user["username"])
-    document.update(updated_at=datetime.now(timezone.utc).isoformat(), candidates=candidates)
-    write_project_file(path, json_text(document), f"dict: reject candidate {candidate['en']}")
+    with runtime_write_lock():
+        path = "data/dict_candidates.json"
+        document = read_json(APP_DIR / path, {"version": 1, "candidates": []})
+        candidates = [item for item in document.get("candidates", []) if isinstance(item, dict)]
+        candidate = next((item for item in candidates if item.get("id") == candidate_id), None)
+        if candidate is None:
+            raise HTTPException(status_code=404, detail="Candidate not found")
+        candidate.update(status="rejected", reviewed_at=datetime.now(timezone.utc).isoformat(), reviewed_by=user["username"])
+        document.update(updated_at=datetime.now(timezone.utc).isoformat(), candidates=candidates)
+        write_project_file(path, json_text(document), f"dict: reject candidate {candidate['en']}")
     sync_from_github()
     return {"ok": True, "candidate": candidate}
 
 
 @app.post("/translations/request")
 def request_translation(payload: TranslationRequest, user: sqlite3.Row = Depends(current_user)) -> dict[str, Any]:
-    index = read_json(APP_DIR / "data" / payload.date / "index.json")
-    by_id = {int(a.get("id")): a for a in index.get("articles", []) if str(a.get("id", "")).isdigit()}
-    requested_ids = list(dict.fromkeys(int(article_id) for article_id in payload.ids))
-    selected = [by_id[i] for i in requested_ids if i in by_id]
-    if not selected:
-        raise HTTPException(status_code=404, detail="No matching articles")
+    validate_article_date(payload.date)
+    if any(article_id <= 0 for article_id in payload.ids):
+        raise HTTPException(status_code=400, detail="Article IDs must be positive")
+    should_trigger = resolve_translation_trigger(payload.trigger_workflow)
+    with runtime_write_lock():
+        expected_urls = getattr(payload, "expected_urls", None)
+        index = read_json(APP_DIR / "data" / payload.date / "index.json", {} if expected_urls is not None else None)
+        by_id = {int(a.get("id")): a for a in index.get("articles", []) if str(a.get("id", "")).isdigit()}
+        requested_ids = list(dict.fromkeys(int(article_id) for article_id in payload.ids))
+        if expected_urls is not None and any(
+            article_id not in by_id or not expected_urls.get(str(article_id))
+            or by_id[article_id].get("url") != expected_urls[str(article_id)]
+            for article_id in requested_ids
+        ):
+            raise HTTPException(status_code=409, detail="Article URLs changed; refresh the selection before submitting")
+        selected = [by_id[i] for i in requested_ids if i in by_id]
+        if not selected:
+            raise HTTPException(status_code=404, detail="No matching articles")
 
-    path = f"data/{payload.date}/requests.json"
-    existing = read_json(APP_DIR / path, {"date": payload.date, "requested_ids": [], "requested_articles": []})
-    merged_ids = sorted({*(int(x) for x in existing.get("requested_ids", []) if str(x).isdigit()), *[int(a["id"]) for a in selected]})
-    merged_articles = {item.get("url"): item for item in existing.get("requested_articles", []) if isinstance(item, dict) and item.get("url")}
-    for article_item in selected:
-        merged_articles[article_item.get("url")] = {
-            "id": article_item.get("id"),
-            "url": article_item.get("url"),
-            "en_title": article_item.get("en_title"),
-            "cn_title": article_item.get("cn_title"),
+        path = f"data/{payload.date}/requests.json"
+        existing = read_json(APP_DIR / path, {"date": payload.date, "requested_ids": [], "requested_articles": []})
+        merged_ids = sorted({*(int(x) for x in existing.get("requested_ids", []) if str(x).isdigit()), *[int(a["id"]) for a in selected]})
+        merged_articles = {item.get("url"): item for item in existing.get("requested_articles", []) if isinstance(item, dict) and item.get("url")}
+        for article_item in selected:
+            merged_articles[article_item.get("url")] = {
+                "id": article_item.get("id"),
+                "url": article_item.get("url"),
+                "en_title": article_item.get("en_title"),
+                "cn_title": article_item.get("cn_title"),
+            }
+        updated = {
+            "date": payload.date,
+            "requested_ids": merged_ids,
+            "requested_articles": list(merged_articles.values()),
+            "requested_at": datetime.now(timezone.utc).isoformat(),
+            "requested_by": user["username"],
         }
-    updated = {
-        "date": payload.date,
-        "requested_ids": merged_ids,
-        "requested_articles": list(merged_articles.values()),
-        "requested_at": datetime.now(timezone.utc).isoformat(),
-        "requested_by": user["username"],
-    }
-    write_project_file(path, json_text(updated), f"request translation for {payload.date}: {','.join(map(str, requested_ids))}")
-    selected_ids = [int(a["id"]) for a in selected]
-    job_ids, created_job_ids, reused_job_ids = create_or_reuse_translation_jobs(
-        payload.date,
-        selected_ids,
-        user["username"],
-        "翻译请求已提交",
-    )
-    job_id = job_ids[0]
-    if payload.trigger_workflow and created_job_ids:
+        write_project_file(path, json_text(updated), f"request translation for {payload.date}: {','.join(map(str, requested_ids))}")
+        selected_ids = [int(a["id"]) for a in selected]
+        job_ids, created_job_ids, reused_job_ids = create_or_reuse_translation_jobs(
+            payload.date,
+            selected_ids,
+            user["username"],
+            "翻译请求已提交",
+        )
+        job_id = job_ids[0]
+    if should_trigger and created_job_ids:
         if STORAGE_MODE == "github":
             gh_dispatch_workflow("api-translation.yml", {})
             for created_job_id in created_job_ids:
@@ -1742,7 +1933,7 @@ def request_translation(payload: TranslationRequest, user: sqlite3.Row = Depends
         "reused_job_ids": reused_job_ids,
         "deduplicated": bool(reused_job_ids),
         "job_batch_size": MAX_TRANSLATION_JOB_ARTICLES,
-        "triggered": payload.trigger_workflow and bool(created_job_ids),
+        "triggered": should_trigger and bool(created_job_ids),
     }
 
 

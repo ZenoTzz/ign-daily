@@ -8,6 +8,9 @@ import sys
 import tempfile
 import types
 import unittest
+import threading
+import time
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 from unittest.mock import Mock, patch
 
@@ -70,6 +73,7 @@ def load_api(repo: Path, api_dir: Path, extra_env: dict[str, str] | None = None)
     env = {
         "IGN_DAILY_REPO_PATH": str(repo),
         "IGN_DAILY_API_DIR": str(api_dir),
+        "IGN_DAILY_WRITE_LOCK": str(api_dir / "write.lock"),
     }
     if extra_env:
         env.update(extra_env)
@@ -461,6 +465,289 @@ class PrivateApiFileGuardsTest(unittest.TestCase):
             self.assertEqual(data["thing3"]["value"], "IGN Daily 翻译任务")
             self.assertEqual(data["thing12"]["value"], "完成 2 篇，待复核 1 篇")
             self.assertEqual(data["thing11"]["value"], "请进入任务页查看译文")
+
+
+class MobileReadinessTest(unittest.TestCase):
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(self.tmp.cleanup)
+        root = Path(self.tmp.name)
+        self.repo, api_dir = root / "repo", root / "api"
+        self.day = self.repo / "data" / "2026-09-06"
+        self.day.mkdir(parents=True)
+        api_dir.mkdir()
+        self.api = load_api(self.repo, api_dir, {"IGN_DAILY_STORAGE_MODE": "local"})
+        self.api.init_db()
+        self.user = {"username": "tester"}
+        self.api.write_project_file("data/dict.json", '{}')
+        self.api.write_project_file("data/2026-09-06/index.json", json.dumps({"articles": [
+            {"id": i, "url": f"https://example.com/{i}"} for i in range(1, 9)
+        ]}))
+
+    def test_article_routes_reject_traversal_invalid_dates_and_nonpositive_ids(self):
+        for date in ("..", "../data", "%2e%2e", "2026-02-30", "2026-13-01", "2026-9-06"):
+            for route in (lambda: self.api.articles(date, self.user),
+                          lambda: self.api.article(date, 1, self.user),
+                          lambda: self.api.translation_file_status(date, 1)):
+                with self.subTest(date=date), self.assertRaises(FakeHTTPException) as error:
+                    route()
+                self.assertEqual(error.exception.status_code, 400)
+        for article_id in (0, -1):
+            with self.assertRaises(FakeHTTPException):
+                self.api.article("2026-09-06", article_id, self.user)
+            with self.assertRaises(FakeHTTPException):
+                self.api.request_translation(types.SimpleNamespace(
+                    date="2026-09-06", ids=[article_id], trigger_workflow=None), self.user)
+        self.assertEqual(self.api.validate_article_date("2024-02-29"), "2024-02-29")
+
+    def test_expected_translation_urls_reject_renumbered_selection_without_side_effects(self):
+        original = self.api.read_json(self.day / "index.json")
+        original["articles"][0]["url"], original["articles"][1]["url"] = (
+            original["articles"][1]["url"], original["articles"][0]["url"])
+        self.api.write_project_file("data/2026-09-06/index.json", json.dumps(original))
+        self.api.run_local_job = Mock()
+        payload = types.SimpleNamespace(date="2026-09-06", ids=[1, 2], trigger_workflow=True,
+                                        expected_urls={"1": "https://example.com/1", "2": "https://example.com/2"})
+        with self.assertRaises(FakeHTTPException) as error:
+            self.api.request_translation(payload, self.user)
+        self.assertEqual(error.exception.status_code, 409)
+        self.assertFalse((self.day / "requests.json").exists())
+        with self.api.db() as conn:
+            self.assertEqual(conn.execute("SELECT COUNT(*) FROM jobs").fetchone()[0], 0)
+        self.api.run_local_job.assert_not_called()
+
+    def test_expected_translation_urls_accept_matching_map_and_reject_missing_identity(self):
+        for ids, expected in (([1, 2], {"1": "https://example.com/1"}),
+                              ([99], {"99": "https://example.com/99"}), ([1], {})):
+            with self.subTest(ids=ids, expected=expected), self.assertRaises(FakeHTTPException) as error:
+                self.api.request_translation(types.SimpleNamespace(
+                    date="2026-09-06", ids=ids, trigger_workflow=False, expected_urls=expected), self.user)
+            self.assertEqual(error.exception.status_code, 409)
+        self.assertFalse((self.day / "requests.json").exists())
+        result = self.api.request_translation(types.SimpleNamespace(
+            date="2026-09-06", ids=[1, 2], trigger_workflow=False,
+            expected_urls={"1": "https://example.com/1", "2": "https://example.com/2"}), self.user)
+        self.assertEqual(result["requested_ids"], [1, 2])
+        requested = self.api.read_json(self.day / "requests.json")
+        self.assertEqual({item["url"] for item in requested["requested_articles"]},
+                         {"https://example.com/1", "https://example.com/2"})
+
+    def test_expected_translation_urls_reject_missing_day_as_conflict(self):
+        with self.assertRaises(FakeHTTPException) as error:
+            self.api.request_translation(types.SimpleNamespace(
+                date="2026-09-05", ids=[1], trigger_workflow=False,
+                expected_urls={"1": "https://example.com/1"}), self.user)
+        self.assertEqual(error.exception.status_code, 409)
+        self.assertFalse((self.repo / "data/2026-09-05/requests.json").exists())
+
+    def test_execution_defaults_follow_live_owner_and_reused_job_does_not_dispatch(self):
+        self.api.run_local_job = Mock()
+        for owner, expected in (("api", True), ("codex", False), ("openclaw", False)):
+            self.api.write_project_file("data/automation-config.json", json.dumps({"fulltext_translator": owner}))
+            self.assertEqual(self.api.resolve_translation_trigger(None), expected)
+            self.assertTrue(self.api.resolve_translation_trigger(True))
+            self.assertFalse(self.api.resolve_translation_trigger(False))
+        self.api.write_project_file("data/automation-config.json", '{"fulltext_translator":"api"}')
+        payload = types.SimpleNamespace(date="2026-09-06", ids=[1], trigger_workflow=None)
+        first = self.api.request_translation(payload, self.user)
+        second = self.api.request_translation(payload, self.user)
+        self.assertTrue(first["triggered"])
+        self.assertFalse(second["triggered"])
+        self.assertEqual(first["job_ids"], second["job_ids"])
+        self.api.run_local_job.assert_called_once()
+
+    def test_concurrent_term_and_request_additions_preserve_every_update(self):
+        read_json = self.api.read_json
+        def slow_read(path, *args):
+            value = read_json(path, *args)
+            if path.name in {"dict.json", "requests.json"}:
+                time.sleep(0.01)  # Expose stale snapshots if the lock starts only at write.
+            return value
+        self.api.read_json = slow_read
+        gate = threading.Barrier(8)
+        def add(i):
+            gate.wait(timeout=5)
+            self.api.add_dict_term(types.SimpleNamespace(
+                category="terms", en=f"term{i}", cn=f"译名{i}", source="user", note=""), self.user)
+            return self.api.request_translation(types.SimpleNamespace(
+                date="2026-09-06", ids=[i], trigger_workflow=False), self.user)
+        with ThreadPoolExecutor(max_workers=8) as pool:
+            results = list(pool.map(add, range(1, 9)))
+        self.assertEqual(len(read_json(self.repo / "data/dict.json")["terms"]), 8)
+        self.assertEqual(read_json(self.day / "requests.json")["requested_ids"], list(range(1, 9)))
+        self.assertEqual(len({job for result in results for job in result["job_ids"]}), 8)
+
+    def test_candidate_reads_writes_and_job_creation_hold_same_external_lock(self):
+        api = self.api
+        original_read, original_write = api.read_json, api.write_local_file
+        original_jobs = api.create_or_reuse_translation_jobs
+        def assert_external_lock():
+            self.assertTrue(getattr(api._RUNTIME_LOCK_STATE, "held", False))
+            if api.fcntl:
+                with api.WRITE_LOCK_PATH.open("a+") as handle:
+                    with self.assertRaises(BlockingIOError):
+                        api.fcntl.flock(handle.fileno(), api.fcntl.LOCK_EX | api.fcntl.LOCK_NB)
+        def checked_read(*args):
+            assert_external_lock()
+            return original_read(*args)
+        def checked_write(*args):
+            assert_external_lock()
+            return original_write(*args)
+        def checked_jobs(*args):
+            assert_external_lock()
+            return original_jobs(*args)
+        with patch.object(api, "read_json", checked_read), patch.object(api, "write_local_file", checked_write), patch.object(api, "create_or_reuse_translation_jobs", checked_jobs):
+            candidate = api.submit_dict_candidate(types.SimpleNamespace(
+                category="terms", en="test", cn="测试", note=""), self.user)["candidate"]
+            api.approve_dict_candidate(candidate["id"], types.SimpleNamespace(category=None, cn=None, note=None), self.user)
+            api.reject_dict_candidate(candidate["id"], self.user)
+            api.request_translation(types.SimpleNamespace(date="2026-09-06", ids=[1], trigger_workflow=False), self.user)
+
+    def test_delete_checks_revision_and_unlinks_under_one_lock(self):
+        path = "data/dict.json"
+        target = self.repo / path
+        stale = self.api.content_sha(target.read_text())
+        self.api.write_project_file(path, '{"terms":{}}')
+        with self.assertRaises(FakeHTTPException) as error:
+            self.api.delete_project_file(path, types.SimpleNamespace(sha=stale, message="test"), self.user)
+        self.assertEqual(error.exception.status_code, 409)
+        self.assertTrue(target.exists())
+        original_unlink = Path.unlink
+        def checked_unlink(target_path, *args, **kwargs):
+            self.assertTrue(getattr(self.api._RUNTIME_LOCK_STATE, "held", False))
+            return original_unlink(target_path, *args, **kwargs)
+        with patch.object(Path, "unlink", checked_unlink):
+            self.api.delete_project_file(path, types.SimpleNamespace(
+                sha=self.api.content_sha(target.read_text()), message="test"), self.user)
+        self.assertFalse(target.exists())
+
+
+class NativePolishTest(unittest.TestCase):
+    setUp = MobileReadinessTest.setUp
+
+    def payload(self, revision=None, **overrides):
+        values = dict(url="https://example.com/1", expected_revision=revision,
+                      title="润色标题", subtitle="副标题", summary="摘要", body="第一段\n\n第二段")
+        values.update(overrides)
+        return types.SimpleNamespace(**values)
+
+    def test_prefill_uses_matching_translation_and_existing_indexed_draft(self):
+        self.api.write_project_file("data/2026-09-06/translations/01.json", json.dumps({
+            "url": "https://example.com/1", "cn_title": "译文标题", "subtitle": "译文副标题",
+            "opus_summary": "译文摘要", "paragraphs": [{"en": "English", "cn": "中文段落"}, "下一段"]
+        }))
+        result = self.api.get_article_polish("2026-09-06", 1, self.user)
+        self.assertFalse(result["exists"])
+        self.assertIsNone(result["revision"])
+        self.assertEqual(result["draft"], dict(title="译文标题", subtitle="译文副标题", summary="译文摘要", body="中文段落\n\n下一段"))
+        saved = self.api.put_article_polish("2026-09-06", 1, self.payload(), self.user)
+        self.assertEqual(self.api.get_article_polish("2026-09-06", 1, self.user), saved)
+
+    def test_legacy_body_cn_prefill_preserves_an_explicitly_empty_saved_body(self):
+        self.api.write_project_file("data/2026-09-06/translations/01.json", json.dumps({
+            "url": "https://example.com/1", "cn_title": "旧格式译文", "body_cn": "旧格式正文"
+        }))
+        result = self.api.get_article_polish("2026-09-06", 1, self.user)
+        self.assertEqual(result["draft"]["body"], "旧格式正文")
+        self.api.write_project_file("data/2026-09-06/polished/01_legacy.json", json.dumps({
+            "url": "https://example.com/1", "body_cn": "旧格式润色正文"
+        }))
+        self.api.write_project_file("data/2026-09-06/polished/_index.json", '{"1":"01_legacy.json"}')
+        existing = self.api.get_article_polish("2026-09-06", 1, self.user)
+        self.assertEqual(existing["draft"]["body"], "旧格式润色正文")
+        saved = self.api.put_article_polish("2026-09-06", 1, self.payload(existing["revision"], body=""), self.user)
+        self.assertEqual(saved["draft"]["body"], "")
+        self.assertEqual(self.api.get_article_polish("2026-09-06", 1, self.user)["draft"]["body"], "")
+        document = self.api.read_json(self.day / "polished/01_legacy.json")
+        self.assertEqual(document["body_cn"], "旧格式润色正文")
+        self.assertEqual(document["paragraphs"], [])
+
+    def test_create_edit_preserve_metadata_and_other_index_entries(self):
+        self.api.write_project_file("data/2026-09-06/polished/_index.json", '{"2":"02_other.json","_meta":{"source":"web"}}')
+        first = self.api.put_article_polish("2026-09-06", 1, self.payload(), self.user)
+        mapping = self.api.read_json(self.day / "polished/_index.json")
+        path = self.day / "polished" / mapping["1"]
+        doc = self.api.read_json(path)
+        self.assertEqual(doc["paragraphs"], ["第一段", "第二段"])
+        self.assertEqual(doc["url"], "https://example.com/1")
+        self.assertEqual(doc["id"], 1)
+        self.assertTrue(mapping["1"].startswith("01_"))
+        doc["external_document_id"] = "preserve-this"
+        self.api.write_project_file(str(path.relative_to(self.repo)), json.dumps(doc))
+        current = self.api.get_article_polish("2026-09-06", 1, self.user)
+        saved = self.api.put_article_polish("2026-09-06", 1, self.payload(current["revision"], title="", body="修改后\r\n第二行", summary="", subtitle=""), self.user)
+        self.assertNotEqual(saved["revision"], first["revision"])
+        self.assertEqual(saved["draft"]["title"], "")
+        self.assertEqual(self.api.get_article_polish("2026-09-06", 1, self.user), saved)
+        self.assertEqual(self.api.read_json(path)["external_document_id"], "preserve-this")
+        self.assertEqual(self.api.read_json(path)["paragraphs"], ["修改后", "第二行"])
+        updated_index = self.api.read_json(self.day / "polished/_index.json")
+        self.assertEqual(updated_index["1"], mapping["1"])
+        self.assertEqual(updated_index["2"], "02_other.json")
+        self.assertEqual(updated_index["_meta"], {"source": "web"})
+
+    def test_stale_revision_and_null_create_conflict_leave_draft_unchanged(self):
+        first = self.api.put_article_polish("2026-09-06", 1, self.payload(), self.user)
+        second = self.api.put_article_polish("2026-09-06", 1, self.payload(first["revision"], title="最新版本"), self.user)
+        for revision in (None, first["revision"], "unknown"):
+            with self.assertRaises(FakeHTTPException) as error:
+                self.api.put_article_polish("2026-09-06", 1, self.payload(revision), self.user)
+            self.assertEqual(error.exception.status_code, 409)
+        self.assertEqual(self.api.get_article_polish("2026-09-06", 1, self.user), second)
+
+    def test_simultaneous_creates_have_one_winner(self):
+        gate = threading.Barrier(2)
+        def create(title):
+            gate.wait(timeout=5)
+            try:
+                return self.api.put_article_polish("2026-09-06", 1, self.payload(title=title), self.user)
+            except FakeHTTPException as error:
+                return error.status_code
+        with ThreadPoolExecutor(max_workers=2) as pool:
+            results = list(pool.map(create, ["first", "second"]))
+        self.assertEqual(sum(isinstance(item, dict) for item in results), 1)
+        self.assertIn(409, results)
+        self.assertEqual(len(list((self.day / "polished").glob("01_*.json"))), 1)
+
+    def test_url_drift_and_unrelated_indexed_document_never_overwrite_old_draft(self):
+        old = {"url": "https://example.com/old", "title": "unrelated private draft"}
+        self.api.write_project_file("data/2026-09-06/polished/01_untitled.json", json.dumps(old))
+        self.api.write_project_file("data/2026-09-06/polished/_index.json", '{"1":"01_untitled.json"}')
+        self.api.write_project_file("data/2026-09-06/translations/01.json", json.dumps(old))
+        draft = self.api.get_article_polish("2026-09-06", 1, self.user)
+        self.assertFalse(draft["exists"])
+        self.assertNotIn("unrelated", str(draft))
+        with self.assertRaises(FakeHTTPException) as error:
+            self.api.put_article_polish("2026-09-06", 1, self.payload(url="https://example.com/old"), self.user)
+        self.assertEqual(error.exception.status_code, 409)
+        saved = self.api.put_article_polish("2026-09-06", 1, self.payload(), self.user)
+        self.assertTrue(saved["exists"])
+        self.assertEqual(self.api.read_json(self.day / "polished/01_untitled.json"), old)
+        self.assertNotEqual(self.api.read_json(self.day / "polished/_index.json")["1"], "01_untitled.json")
+
+    def test_unsafe_index_paths_fail_before_read_or_write(self):
+        for name in ("../index.json", "../../dict.json", "/tmp/secret.json", "..\\secret.json", "_index.json", ".hidden.json"):
+            self.api.write_project_file("data/2026-09-06/polished/_index.json", json.dumps({"1": name}))
+            for action in (lambda: self.api.get_article_polish("2026-09-06", 1, self.user),
+                           lambda: self.api.put_article_polish("2026-09-06", 1, self.payload(), self.user)):
+                with self.subTest(name=name), self.assertRaises(FakeHTTPException) as error:
+                    action()
+                self.assertEqual(error.exception.status_code, 400)
+
+    def test_polish_endpoints_reject_nonlocal_storage_and_invalid_identity(self):
+        for date, article_id in (("2026-02-30", 1), ("2026-09-06", 0),
+                                 ("../data", 1), ("%2e%2e", 1), ("2026-09-06", -1)):
+            for action in (lambda: self.api.get_article_polish(date, article_id, self.user),
+                           lambda: self.api.put_article_polish(date, article_id, self.payload(), self.user)):
+                with self.subTest(date=date, article_id=article_id), self.assertRaises(FakeHTTPException) as error:
+                    action()
+                self.assertEqual(error.exception.status_code, 400)
+        self.api.STORAGE_MODE = "github"
+        for action in (lambda: self.api.get_article_polish("2026-09-06", 1, self.user),
+                       lambda: self.api.put_article_polish("2026-09-06", 1, self.payload(), self.user)):
+            with self.assertRaises(FakeHTTPException) as error:
+                action()
+            self.assertEqual(error.exception.status_code, 501)
 
 
 if __name__ == "__main__":
