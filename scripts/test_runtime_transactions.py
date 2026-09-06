@@ -15,7 +15,7 @@ from unittest.mock import patch
 from runtime_write_lock import RuntimeConflict, article_snapshot, article_transaction, atomic_json, read_json
 from package_server_release import included
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'server_api/deploy'))
-from runtime_restore import restore
+from runtime_restore import exclusive, restore
 from deploy_release import deploy
 from update_worker_wrappers import updated
 
@@ -97,6 +97,18 @@ class RuntimeTransactionsTests(unittest.TestCase):
                 raise RuntimeError('disk failure')
         self.assertFalse((self.data / self.date / 'translations/01.json').exists())
         self.assertEqual(read_json(self.data / self.date / 'index.json')['articles'][0], snapshot['article'])
+    def test_existing_maintenance_lock_never_uses_create_flag(self):
+        lock = self.root / 'shared.lock'
+        lock.touch()
+        real_open = os.open
+        def protected_open(path, flags, *args, **kwargs):
+            if Path(path) == lock and flags & os.O_CREAT:
+                raise PermissionError('Linux protected_regular')
+            return real_open(path, flags, *args, **kwargs)
+        with patch('runtime_restore.os.open', side_effect=protected_open):
+            with exclusive(lock):
+                self.assertTrue(lock.exists())
+
     def test_package_excludes_runtime_history_and_ios(self):
         for name in ['data/2026-09-06/translations/01.json', 'data/auth.json', 'ios/IGNDaily/App.swift', '.env']:
             self.assertFalse(included(name))

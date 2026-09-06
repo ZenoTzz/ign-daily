@@ -115,12 +115,12 @@ jobs:
           user="$4"
           archive="/tmp/ign-daily-site-$sha.tar.gz"
           stage="$(mktemp -d /tmp/ign-daily-deploy.XXXXXX)"
-          trap 'rm -rf "$stage" "$archive"' EXIT
+          trap 'sudo rm -rf -- "$stage" "$archive"' EXIT
           tar -xzf "$archive" -C "$stage"
           for kind in write worker maintenance; do
             sudo touch "/var/lock/ign-daily-$kind.lock"
             sudo chown "$user:$user" "/var/lock/ign-daily-$kind.lock"
             sudo chmod 0664 "/var/lock/ign-daily-$kind.lock"
           done
-          sudo APP_DIR="$app" API_DIR="$api" python3 "$stage/server_api/deploy/deploy_release.py" "$stage"
+          sudo APP_DIR="$app" API_DIR="$api" python3 -B "$stage/server_api/deploy/deploy_release.py" "$stage"
           REMOTE

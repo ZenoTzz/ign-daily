@@ -18,7 +18,19 @@ import uuid
 def exclusive(path):
     path = Path(path)
     path.parent.mkdir(parents=True, exist_ok=True)
-    with path.open('a') as lock:
+    # Linux protected_regular rejects O_CREAT on an existing file owned by
+    # another user in /run/lock, even for root. Open existing locks without it.
+    while True:
+        try:
+            descriptor = os.open(path, os.O_RDWR)
+            break
+        except FileNotFoundError:
+            try:
+                descriptor = os.open(path, os.O_RDWR | os.O_CREAT | os.O_EXCL, 0o664)
+                break
+            except FileExistsError:
+                continue
+    with os.fdopen(descriptor, 'r+') as lock:
         fcntl.flock(lock, fcntl.LOCK_EX)
         yield
 
