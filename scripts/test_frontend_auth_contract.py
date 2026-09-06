@@ -45,13 +45,13 @@ const self = {
   skipWaiting() {}, clients: {claim() {}},
 };
 const response = {ok: true, clone() {return this;}};
-vm.runInNewContext(fs.readFileSync(process.argv[1], 'utf8'), {
+const currentCache = vm.runInNewContext(fs.readFileSync(process.argv[1], 'utf8') + '\n;CACHE_NAME', {
   self, URL, Response,
   fetch: async () => response,
   caches: {
     open: async () => ({put: async request => cached.push(request), addAll: async () => {}}),
     match: async () => undefined,
-    keys: async () => ['ign-daily-v12', 'ign-daily-v13', 'ign-daily-v14'],
+    keys: async () => ['ign-daily-v12', 'ign-daily-v13', 'ign-daily-v14', currentCache],
     delete: async key => deleted.push(key),
   },
 });
@@ -82,7 +82,8 @@ async function request(path, mode = 'cors') {
   let activated;
   handlers.activate({waitUntil(promise) {activated = promise;}});
   await activated;
-  assert.deepEqual(deleted, ['ign-daily-v12', 'ign-daily-v13']);
+  assert.deepEqual(deleted, ['ign-daily-v12', 'ign-daily-v13', 'ign-daily-v14']);
+  assert.equal(deleted.includes(currentCache), false);
 })().catch(error => {console.error(error); process.exitCode = 1;});
 """
         result = subprocess.run([node, "-e", script, str(ROOT / "sw.js")], capture_output=True, text=True)
