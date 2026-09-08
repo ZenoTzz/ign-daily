@@ -2,6 +2,125 @@
   "date": "2026-09-06",
   "articles": [
     {
+      "id": 13,
+      "category": "游戏新闻",
+      "emoji": "🧟",
+      "en_title": "Left 4 Dead 2 Dev Admits Valve Intentionally Leaked Its Own Trailer After the ESRB Blocked It from Release",
+      "cn_title": "Valve承认曾故意泄露《求生之路2》预告片",
+      "summary": "前Valve编剧Chet Faliszek透露，工作室当年因娱乐软件分级委员会（ESRB）不允许发布《求生之路2》预告片，便故意提前将其泄露。相关影片于2009年10月上线，游戏发售后获IGN 9/10评价。",
+      "url": "https://www.ign.com/articles/left-4-dead-2-dev-admits-valve-intentionally-leaked-its-own-trailer-after-the-esrb-blocked-it-from-release",
+      "publish_time_cn": "2026-09-06 07:03",
+      "pub_date": "2026-09-06 07:03",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/09/05/left-4-dead-2-1788649176685.png?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "needs_review",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/09/05/left-4-dead-2-1788649176685.png?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/09/05/left-4-dead-2-1788649176685.png?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/09/05/left-4-dead-2-1788649176685.png?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/09/05/left-4-dead-2-1788649176685.png?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/09/05/left-4-dead-2-1788649176685.png",
+        "https://kraken.ignimgs.com/apple-touch-icon.png",
+        "https://assets-prd.ignimgs.com/2021/12/10/left4dead2-1639126647529.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-09-06T07:47:41+08:00",
+      "translation_error": "HTTP Error 524: <none>",
+      "translation_failed_at": "2026-09-07T09:30:06.439812+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "gpt-5.6-luna"
+    },
+    {
+      "id": 12,
+      "category": "游戏新闻",
+      "emoji": "🎮",
+      "en_title": "Insomniac Clears the Air After Marvel's Wolverine Fans Confuse Lady Deathstrike for Psylocke",
+      "cn_title": "《金刚狼》角色认错，Insomniac澄清",
+      "summary": "《漫威金刚狼》发售预告片引发玩家误认，许多人将手持紫色能量剑的反派当成灵蝶。Insomniac随后在X发文确认，该角色其实是死亡女。游戏将于2026年9月15日登陆PS5，琴·葛蕾和剑齿虎也确认登场。",
+      "url": "https://www.ign.com/articles/insomniac-clears-the-air-after-marvels-wolverine-fans-confuse-lady-deathstrike-for-psylocke",
+      "publish_time_cn": "2026-09-06 05:34",
+      "pub_date": "2026-09-06 05:34",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/09/05/marvels-wolverine-lady-deathstrike-1788643655912.png",
+      "translation_status": "done",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/09/05/marvels-wolverine-lady-deathstrike-1788643655912.png?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/09/05/marvels-wolverine-lady-deathstrike-1788643655912.png?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/09/05/marvels-wolverine-lady-deathstrike-1788643655912.png?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/09/05/marvels-wolverine-lady-deathstrike-1788643655912.png?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/09/05/marvels-wolverine-lady-deathstrike-1788643655912.png",
+        "https://kraken.ignimgs.com/apple-touch-icon.png",
+        "https://assets-prd.ignimgs.com/2025/09/29/wolverine-1759178400808.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-09-06T06:17:30+08:00",
+      "pending_dict": [
+        {
+          "en": "Marvel's Wolverine",
+          "cn": "《漫威金刚狼》",
+          "cat": "games",
+          "source": "ai_guess",
+          "reason": "该作常见中文译名为《漫威金刚狼》，但当前提供的词库匹配项未包含完整作品名，需人工确认。"
+        },
+        {
+          "en": "Lady Deathstrike",
+          "cn": "死亡女",
+          "cat": "people",
+          "source": "ai_guess",
+          "reason": "漫威角色常用中文译名，当前提供的词库匹配项未包含该角色，需人工确认。"
+        },
+        {
+          "en": "Psylocke",
+          "cn": "灵蝶",
+          "cat": "people",
+          "source": "ai_guess",
+          "reason": "漫威角色常用中文译名，当前提供的词库匹配项未包含该角色，需人工确认。"
+        }
+      ],
+      "translation_path": "translations/12.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "gpt-5.6-luna",
+      "reasoning_effort": "xhigh",
+      "reviewer_model": "gpt-5.6-luna",
+      "reviewed_at": "2026-09-07T01:33:37.515248+00:00",
+      "prompt_version": "api-fulltext-2026-07-v2",
+      "quality_gate_version": 1
+    },
+    {
+      "id": 11,
+      "category": "影视资讯",
+      "emoji": "🎬",
+      "en_title": "Zach Cregger Says He's Done With Franchise Films After Resident Evil",
+      "cn_title": "《生化危机》导演拒拍系列片",
+      "summary": "《生化危机》电影导演Zach Cregger在接受Deadline采访时表示，自己不会再主导其他知名IP改编的系列电影。他说，之所以接手《生化危机》，是因为自己热爱游戏并认可为此构思的故事；虽然未来不拍系列片，但他已经有了续作想法。影片预计于2026年9月18日上映。",
+      "url": "https://www.ign.com/articles/zach-cregger-says-hes-done-with-franchise-films-after-resident-evil",
+      "publish_time_cn": "2026-09-06 03:42",
+      "pub_date": "2026-09-06 03:42",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/09/05/zach-cregger-1788637078964.png",
+      "translation_status": "done",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/09/05/zach-cregger-1788637078964.png?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/09/05/zach-cregger-1788637078964.png?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/09/05/zach-cregger-1788637078964.png?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/09/05/zach-cregger-1788637078964.png?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/09/05/zach-cregger-1788637078964.png",
+        "https://kraken.ignimgs.com/apple-touch-icon.png",
+        "https://assets-prd.ignimgs.com/2026/09/01/resident-evil-ver4-xlg-1788277085197.jpg",
+        "https://assets-prd.ignimgs.com/2026/09/05/zach-cregger-1788637034836.png"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-09-06T04:17:28+08:00",
+      "translation_path": "translations/11.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "gpt-5.6-luna",
+      "reasoning_effort": "xhigh",
+      "reviewer_model": "gpt-5.6-luna",
+      "reviewed_at": "2026-09-07T01:38:11.638170+00:00",
+      "prompt_version": "api-fulltext-2026-07-v2",
+      "quality_gate_version": 1
+    },
+    {
       "id": 10,
       "category": "评测评分",
       "emoji": "🎬",
@@ -335,5 +454,5 @@
       "source_fetched_at": "2026-09-05T08:47:30+08:00"
     }
   ],
-  "total": 10
+  "total": 13
 }
