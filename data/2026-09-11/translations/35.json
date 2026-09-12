@@ -1,0 +1,262 @@
+{
+  "id": 35,
+  "url": "https://www.ign.com/articles/call-of-dutys-anti-cheat-boss-dispels-cheating-myths-breaks-down-review-process-and-more",
+  "en_title": "Call of Duty's Anti-Cheat Boss Dispels Cheating Myths, Breaks Down Review Process, and More",
+  "cn_title": "《使命召唤》反作弊负责人详解查挂",
+  "subtitle": "外挂攻防战",
+  "opus_summary": "《使命召唤》安全主管David Andrews接受IGN采访，说明Ricochet的查挂封禁流程。他称普通玩家遇挂率低，团队仍会打击软件、硬件外挂并防范误封。",
+  "publish_time_cn": "2026-09-11 05:02",
+  "paragraphs": [
+    {
+      "en": "Cheating in video games has turned into a multi-billon dollar industry, one that has forced franchises like Call of Duty to build entire teams to combat this epidemic. One of the people leading the charge is a man named David Andrews, a former Department of Defense contractor and member of the Air Force who made the leap into the video game industry. He began this career change working at Rockstar Games, helping combat cheating in Grand Theft Auto Online. Last year, he made the jump to Activision to become the Senior Director of Game Security for Call of Duty.",
+      "cn": "电子游戏作弊已成为规模达数十亿美元(约合人民币数百亿元)的产业，迫使《使命召唤》等系列组建专门团队来应对这一顽疾。David Andrews正是领头者之一，他曾任国防部承包商及空军成员，后来转行进入游戏业。他起初在Rockstar工作，协助打击《侠盗猎车手Online》的作弊行为。去年，他跳槽至Activision，担任《使命召唤》游戏安全高级总监。"
+    },
+    {
+      "en": "IGN had the opportunity to sit down with Andrews and peel back the layers on Call of Duty's anti-cheat system, Ricochet. Andrews disspelled myths about Call of Duty's anti-cheat, offered clarity on the process of how they investigate suspected cheaters, how they've hired cheater makers to combat the problem, and much more. It's a rare opportunity, as there's a lot of caution around publicly speaking about anti-cheat in gaming. If you say too much, you could inadvertedly give cheaters a heads-up on how to evade detective, after all.",
+      "cn": "IGN有机会与Andrews面对面交流，深入了解《使命召唤》的Ricochet反作弊系统。Andrews澄清了外界对《使命召唤》反作弊的误解，解释团队如何调查疑似作弊者、如何聘用外挂制作者来解决问题，以及更多细节。这样的机会很难得，因为游戏行业对公开谈论反作弊十分谨慎。毕竟，说得太多，可能会无意间让作弊者提前知道该如何躲避侦测。"
+    },
+    {
+      "en": "With that said, we drilled down on Call of Duty's long running issue with cheaters in an attempt to make it less mysterious. It's an important subject ahead of Modern Warfare 4's release in October and something Activision is working hard to spotlight.",
+      "cn": "为让《使命召唤》长期存在的作弊问题不再那么神秘，我们对此进行了深入追问。随着《使命召唤：现代战争4》将于10月发售，这是一项重要议题，也是Activision正努力让公众关注的问题。"
+    },
+    {
+      "en": "This interview has been lightly edited for clarity and length.",
+      "cn": "为便于理解并控制篇幅，本采访经过少量编辑。"
+    },
+    {
+      "en": "IGN: Before we dive specifically into Call of Duty, tell me the difference between working on Grand Theft Auto Online, Red Dead Online, and Call of Duty, because one's obviously hyper-competitive, while Grand Theft Auto is a completely different ecosystem.",
+      "cn": "IGN：在具体谈《使命召唤》之前，能否谈谈负责《侠盗猎车手Online》、《荒野大镖客Online》和《使命召唤》时有何不同？《使命召唤》显然竞争极其激烈，而《侠盗猎车手》则是完全不同的生态。"
+    },
+    {
+      "en": "David Andrews: I think the interesting pivot for me is that the GTA Online gameplay loop is very different. Same thing for Red Dead Online, and that's where cheat developers tend to go. They're trying to shortcut whatever that gameplay loop is for their customers. And so on GTA and Red Dead, it was much more about economic progress within the world. So we had problems with money drop lobbies and things like that in the old bad days on GTA Online, which we did eventually fix. The nature of the cheating is different there. In terms of the impact and the disruption that it can cause to the players, very similar.",
+      "cn": "David Andrews：对我而言，最有意思的转变在于《侠盗猎车手Online》的玩法循环截然不同，《荒野大镖客Online》也是如此，而外挂开发者往往就是冲着这些循环下手。他们想让客户跳过玩法循环中的过程。因此，《侠盗猎车手》和《荒野大镖客》的重点更在于游戏世界里的经济进度。《侠盗猎车手Online》早些年曾出现刷钱房间等问题，最终我们解决了。那里的作弊形式不同，但它对玩家造成的影响和干扰非常相似。"
+    },
+    {
+      "en": "[There are] persistent online sessions in GTA Online versus rolling lobbies on Call of Duty. A cheater that goes undetected for too long is going to have an impact no matter what that is. There was also lots of griefing in GTA Online powered by cheats and things like that. As different as the core gameplay loops are between the two games, and you could probably say this about anything across the industry, cheating is still just ultimately super disruptive. It's a terrible experience. It's bad for our players, and the mission is always just to try to prevent as many of them as we can from getting into the game and then get them out as quickly as we can for those that make it through.",
+      "cn": "《侠盗猎车手Online》采用持续存在的在线战局，《使命召唤》则不断更换大厅。无论在哪种游戏里，作弊者若长期未被发现，都会造成影响。《侠盗猎车手Online》也曾有许多由外挂引发的恶意骚扰。两款游戏的核心玩法循环再怎么不同，乃至放到整个行业来看，作弊归根到底都极具破坏性。这种体验很糟糕，对玩家不利。我们的目标始终是尽可能阻止他们进入游戏，并把漏网者尽快清出去。"
+    },
+    {
+      "en": "IGN: Is there something that companies can do together to solve these issues? I saw you last night talking about Wardogs and their approach. Everyone has a different strategy, but is there anything the industry can collectively do?",
+      "cn": "IGN：公司之间能否联手解决这些问题？我昨晚看到你谈了Wardogs及其应对方式。每家公司的策略都不同，但整个行业能否共同采取什么行动？"
+    },
+    {
+      "en": "David Andrews: There's a ton of overlap that we see within the industry. It is an industry-wide problem. If anybody running a live service title is going to have this kind of issue with cheating, and no matter how advanced or what your particular approach is for a particular title or whatever you're doing, cheaters are always going to get through. I thought that a really good message from that Wardogs video was that no matter how good you are at this part of the game, people are going to get through. Cheat developers are incredibly financially incentivized. It's a multi-billion dollar industry out there selling cheats, and they're all looking for their cut of it. I think in terms of what we can do as a group, we definitely all talk with each other informally, always trading war stories and maybe some approaches in terms of what's going on.",
+      "cn": "David Andrews：我们看到行业内存在大量共通之处。这是整个行业的问题，只要运营服务型游戏，就可能面对这类作弊问题。无论你的技术多先进、针对某款作品采取何种方案，作弊者总会钻进来。我认为Wardogs那段视频传递了一个很好的信息：无论你在这方面做得多好，总会有人突破防线。外挂开发者有极强的经济动机，销售外挂已是规模达数十亿美元(约合人民币数百亿元)的产业，他们都想从中分一杯羹。至于大家能共同做什么，我们确实会非正式地互相交流，分享交手经历，以及一些应对思路。"
+    },
+    {
+      "en": "Certainly I've seen in my past at Rockstar as well as here at Activision, you'll have cheat developers and cheat resellers out there that are selling not just for one title. There's very rarely somebody who's just developing for Call of Duty. They might have their fingers in Fortnite or Valorant or some other title out there, as well. There's usually opportunities for us to compare notes a little bit whenever that's possible for us to do. By and large though, we all keep pushing forward in terms of all of the things that are available to us. Different companies have different litigation strategies and things like that, but we're all marching in the same direction as much as we can.",
+      "cn": "无论是在Rockstar，还是如今的Activision，我都见过外挂开发者和外挂转售商不只销售一款游戏的外挂。专门为《使命召唤》开发外挂的人很少，他们可能也涉足《堡垒之夜》、《无畏契约》或其他作品。只要条件允许，我们通常会互相交流一些信息。不过总体而言，大家都在利用手头所有办法持续推进。不同公司有不同的诉讼策略，但我们都会尽可能朝同一方向努力。"
+    },
+    {
+      "en": "IGN: What have you learned about cheatmakers? What’s the motive? It’s hard to wrap my head around why someone would pay $70 for a game just to not really play it.",
+      "cn": "IGN：你对外挂制作者有哪些了解？他们的动机是什么？我很难理解，为什么有人会花70美元(约合人民币470元)买一款游戏，却根本不怎么真正玩它。"
+    },
+    {
+      "en": "David Andrews: Money is totally a huge motive for quite a lot of them, but there are also a strain of cheat developers, or I even call them cheat development-adjacent folks, who are just in it for the love of the game. They just really love that title and they have a technical sort of bent of mind and they want to understand how the game is working. And then that naturally leads into this place where you might be putting together a cheat to figure out ‘How does this game actually work?’",
+      "cn": "David Andrews：金钱当然是许多人的重大动机，但也有一类外挂开发者，或者说我称之为与外挂开发相关的人，他们纯粹是出于对游戏的热爱。他们非常喜欢那款作品，有技术方面的兴趣，也想了解游戏是如何运作的。随后，这种想法自然会让他们做出一个外挂，试图弄清「这款游戏究竟是如何运作的？」"
+    },
+    {
+      "en": "And in that space, I've had some success in turning some of those cheat developers or cheat-adjacent people to the light side by basically, bringing them over, and hiring them into the team. They bring a huge expertise and a really unique point of view to add to the team, and it can be a really huge value add for us. We've done that successfully a few times.",
+      "cn": "在这方面，我曾成功让一些外挂开发者或相关人士转而加入我们，把他们招进团队。他们能为团队带来丰富的专业知识和非常独特的视角，对我们很有价值。我们已数次成功这么做。"
+    },
+    {
+      "en": "I think for their users, the motivation is like you mentioned: You pay $70 or whatever it is for a title just to not play it. It's because they want to be seen to be good and they're not actually good at this game. They kind of suck, which is fair enough. I'm not the best at Call of Duty myself personally, but I wouldn't turn to a cheat to go try to do something about that. But they are in friend groups, they're in social circles that really highly prize competency at these games. And so they go out and this is their only option to be any good at them, so they go out and buy cheats.",
+      "cn": "我认为，对外挂用户来说，动机正如你所说：花70美元(约合人民币470元)或其他价格买一款游戏，却不真正玩它。因为他们想让人觉得自己很厉害，但实际并不擅长这款游戏，说白了就是玩得不怎么样，这也可以理解。我自己也不是最顶尖的《使命召唤》玩家，但不会因此用外挂来解决问题。不过，他们身处的朋友群体和社交圈非常看重这类游戏的实力。对他们而言，买外挂似乎是玩得好的唯一选择，于是他们就去买了。"
+    },
+    {
+      "en": "IGN: I’d love some insight into the cat-and-mouse game, since there’s a whack-a-mole situation that likely happens with trying to stomp out cheatmakers. There will always be cheaters, regardless of the steps you take.",
+      "cn": "IGN：我很想听你谈谈这场猫鼠游戏。你们打击外挂制作者时，很可能像在打地鼠一样，而无论采取什么措施，作弊者总会存在。"
+    },
+    {
+      "en": "David Andrews: The main mission is always just to protect the integrity of that live legitimate player experience, just making sure that they're having the best possible experience the way that our game developers intended for them to have. We do that a lot of different ways. The cat-and-mouse game is absolutely part of this, and there's some balancing efforts that go in there, in terms of figuring out when's the right time to ban a cheater once you've detected them. I think in the past, quite a lot of us in the industry indexed pretty heavily towards ban waves for a variety of reasons. One of them is that if you catch enough of the cheat customers in one big roundup, you might knock that cheat offline for a period of time and you actually get more clean running than you would otherwise by just issuing bans as you get them.",
+      "cn": "David Andrews：首要任务始终是保护正常在线玩家体验的完整性，确保他们能按游戏开发者的设想获得尽可能好的体验。我们会通过许多不同方式做到这一点，猫鼠游戏当然也是其中一环。其中需要权衡的，是侦测到作弊者后何时封禁最合适。我认为，过去行业里许多人出于各种原因，更倾向于发动封禁潮。其中一个原因是，如果一次集中抓到足够多的外挂客户，可能让那款外挂暂时失效。与发现一个封一个相比，这样反而能带来更多正常、纯净的游戏时间。"
+    },
+    {
+      "en": "That's certainly where I started out philosophically, but as the years have gone on, I don't necessarily believe that that's the most effective way anymore. I think the most effective way is shifting left, preventing cheaters from getting into the game and then once they get into the game, getting them out as quickly as possible. Every single ban that we do gives feedback to the cheat developers and it helps them troubleshoot their problem, which is how did we detect them? It gives them feedback on how to circumvent us, but then that's just a challenge for us to get better at our jobs and do a better job of creating new detections, creating new novel ways of finding cheaters, preventing them and getting them out of the game.",
+      "cn": "我起初确实认同这种理念，但这些年过去后，我不再认为这是最有效的办法。我认为最有效的方式是把防线前移，阻止作弊者进入游戏；一旦他们进来了，就尽快清除。我们的每一次封禁都会让外挂开发者得到反馈，帮助他们排查「我们是如何发现他们的？」这个问题，也让他们知道该如何绕过我们。但这也会促使我们把工作做得更好，研发新的侦测方式，以新的手段发现、阻止并清除作弊者。"
+    },
+    {
+      "en": "There are a lot of conspiracies about cheating in Call of Duty, such as maybe the perception of how bad it really is due to viral clips. From your perspective, what are some of the myths of the cheating situation in Call of Duty?",
+      "cn": "围绕《使命召唤》作弊问题存在许多猜测，例如病毒式传播的片段可能让人觉得情况比实际更严重。从你的角度看，外界对《使命召唤》作弊现状有哪些误区？"
+    },
+    {
+      "en": "David Andrews: I think you've touched on one there. The numbers that we see internally remain really, really positive. We shared during the Black Ops 7 beta that we had a very, very low match infection rate. That's maintained over the course of the title. It's incredibly low. If you're an average player and you're in ranked or you're in Warzone, you're doing whatever you want, you're not encountering a lot of cheaters. But [if] you go on social media and [watch] content creators and pros, they're having a different experience to what you're probably having, and then you're sort of internalizing that. You're seeing, ‘Well, my favorite streamer is encountering cheaters every day.’ I go online, I see something unfair or something inexplicable that I'm not quite sure what happened there. I'm just going to assume that's a cheater as well because I've seen this around. It just doesn't tend to be true for our average players.",
+      "cn": "David Andrews：我认为你刚才就提到了其中一点。我们看到的内部数据依然非常乐观。我们在《使命召唤：黑色行动7》测试期间曾公布，对局受污染率极低，而且在这款作品的整个周期内都维持在极低水平。普通玩家无论打排位、玩《使命召唤：战区》，还是进行其他模式，都不会遇到很多作弊者。但如果你去社交媒体看内容创作者和职业选手，他们的体验可能和你不同，你便会不自觉地把那种体验当成普遍情况。你会看到「我最喜欢的主播每天都遇到作弊者」。自己上网时看到不公平或难以解释的情况，又不太确定究竟发生了什么，就会因为见过类似内容而认定那也是作弊。这通常不符合普通玩家的实际情况。"
+    },
+    {
+      "en": "Our match infection rate is incredibly good still, but that does still highlight for us that there are hotspots. There are problem areas. We don't want to try to go out there and say ‘We've solved cheating, you're never going to see a cheater.’ Certainly content creators and pro players that are playing at the very tip top edge of ranked play are going to encounter more cheaters right now. We're working on it all the time to try and get them out of the game.",
+      "cn": "我们的对局受污染率依然极低，但这也提醒我们，确实存在作弊高发点和问题区域。我们不想对外宣称「我们已经解决作弊问题，你永远不会再遇到作弊者」。内容创作者和处于排位最顶尖层级的职业选手，目前确实会遇到更多作弊者。我们一直在努力把他们清出游戏。"
+    },
+    {
+      "en": "That's the biggest one I think right now. Perception is just quite prevalent that there's a huge cheating problem. It's not to say there is no cheating problem. Obviously Ricochet still exists. We're all still gainfully employed and we're still trying to work on this problem, but it's certainly taken a pretty giant step forward with Black Ops seven with the introduction of TPM and Secure Boot requirements, and we're looking to just keep making more steps forward in the next title.",
+      "cn": "我认为这是当前最大的误区。很多人觉得作弊问题极其严重，但这并不是说不存在作弊问题。Ricochet显然仍在运作，我们也仍在为解决这个问题而工作。不过，《使命召唤：黑色行动7》引入TPM和安全启动要求后，反作弊已向前迈出很大一步，我们希望在下一款作品中继续取得进展。"
+    },
+    {
+      "en": "I wanted to ask a little bit about the review process. So, say I'm suspected of cheating. I've been reported and you guys are going to take a look at my account. What does that look like? Is there a human reviewing it? Is it AI-reviewed? And how long do they spend looking at that? Because I imagine there are a lot of reports. So, how do you sift through that to make sure you guys are giving its due diligence?",
+      "cn": "我想进一步问问审核流程。假设我被怀疑作弊，也遭到举报，你们要查看我的账号，具体会怎么做？会有人类审核吗？还是由AI审核？他们会花多久查看？我想举报数量一定很多，你们会如何筛选，确保每个案例都得到充分审查？"
+    },
+    {
+      "en": "David Andrews: I'll say that things come in from a variety of different directions, and the vast majority of our bans that go out are through reviewed but automated systems. So for instance, for a particular cheat, we might deploy a signature that identifies like, ‘Oh, in running memory, if you see this string, this string only exists for this cheat.’ And then we fire that back and we'll collect that data for a little bit on all those accounts that are triggering that detection, look at them en masse, and also one by one and just make sure that those really do look like cheaters. That process is pretty involved.",
+      "cn": "David Andrews：线索来自各个不同渠道，绝大多数封禁都通过经过审核的自动化系统作出。举例来说，针对某种外挂，我们可能部署一个特征标记：如果运行内存中出现某段字符串，而它只会出现在这款外挂中，就能识别出来。随后，我们会在所有触发该侦测的账号上收集一段时间的数据，先批量查看，再逐个检查，确认这些账号确实符合作弊者的特征。这个过程相当细致。"
+    },
+    {
+      "en": "We look at game data, we have everything that you input into the game clients while you're in a match. All of that data is with us and so we can identify clear outliers there. We also look at trends and behavior, like what is your kill death ratio over time? Does it spike in certain circumstances? What's your win-loss ratio? Things like that. We also will look at replay renders. We have tooling internally that we can just recreate an entire match and look at it and see if it looks suspicious or not. These are just some of the tools that we have internally. So we'll apply that to that whole batch, that whole population of potentially detected cheaters. And if it passes through that validation stage, then we'll say, ‘Okay, that signature is good. People that are popping that signature are going to get banned from now on.’ There's also things that are more manual. All the same tools kind of apply.",
+      "cn": "我们会查看游戏数据。你在对局期间输入游戏客户端的所有操作数据，我们都掌握，因此可以找出明显的离群值。我们还会观察趋势和行为，例如你的击杀死亡比随时间如何变化，是否会在特定情况下突然飙升，以及胜负比等。我们也会查看回放渲染画面。内部工具可以重建一整场对局，再判断是否可疑。这些只是我们内部使用的部分工具。我们会把它们用于整批可能被侦测到的作弊者；若通过验证阶段，我们就会认定该特征标记有效，今后触发它的用户将被封禁。也有需要更多人工处理的情况，但同样会使用这些工具。"
+    },
+    {
+      "en": "We'll still look at the account holistically. We'll look at it per match. We'll look at it in terms of how often they are being reported. All these kinds of data points are valuable to us and then we'll make a determination. That's kind of the stuff that you might see if a social media clip is posted and they aren't already banned. These are the things that we start looking into to see, ‘Okay, well what's going on with this account? What do their last few matches look like? Let's try to make a determination here.’",
+      "cn": "我们仍会从整体审视账号，逐场查看对局，也会看它被举报的频率。所有这类数据点对我们都有价值，之后才会作出判断。如果社交媒体上出现一段片段，而涉事账号尚未被封禁，我们就会着手调查这些内容：这个账号到底怎么回事？它最近几场对局是什么样？我们会据此作出判断。"
+    },
+    {
+      "en": "IGN: There was an incident a week or two ago with a former COD pro player named FormaL, and he triggered the detection in the Modern Warfare 4 beta. Call of Duty’s social team said that wasn’t supposed to happen. Do you know what happened there? What is the percentage of people being banned that shouldn't be banned, and what's the process of making sure that doesn't happen?",
+      "cn": "IGN：一两周前，前《使命召唤》职业选手FormaL在《使命召唤：现代战争4》测试期间触发了侦测。 《使命召唤》的社交媒体团队表示，这本不该发生。你知道当时发生了什么吗？不该被封却遭封禁的比例是多少？你们如何确保这种情况不会发生？"
+    },
+    {
+      "en": "Former Call of Duty pro and legend FormaL got permanently banned in the Modern Warfare 4 beta live on stream 💀",
+      "cn": "前《使命召唤》职业选手、传奇人物FormaL在《使命召唤：现代战争4》测试期间直播时被永久封禁💀"
+    },
+    {
+      "en": "The Oris is so good it’s got pros getting their accounts flagged 🤣 pic.twitter.com/8MlHBfbH3G",
+      "cn": "Oris太强，连职业选手的账号都被系统标记了🤣"
+    },
+    {
+      "en": "David Andrews: So, the thing I'll say for that one is I think, obviously, we replied to that particular instance, but he certainly wasn't the only person that was caught up in that slight error there. Betas are for us, as well. We're constantly kind of tuning and testing our systems and transitioning from Black Ops 7 to Modern Warfare 4. There's a lot of tuning that has to take place there to make sure that all of our behavioral thresholds are accurate.",
+      "cn": "David Andrews：关于那件事，我想说的是，我们显然已回应那个具体案例，但受到那次小失误影响的绝不止他一人。测试版同样是我们的测试场。我们不断微调和测试系统，在从《使命召唤：黑色行动7》过渡到《使命召唤：现代战争4》时，有许多参数需要调整，以确保所有行为判定阈值准确。"
+    },
+    {
+      "en": "Also, someone like that player is quite high, and so very highly skilled players are kind of constantly brushing up against the threshold where we say ‘Beyond this, no human could achieve that.’ So they're just right there. They're quite close. And so we constantly are looking at this. The answer to the question is really, we're constantly reviewing the output of our systems. We don't just do that review one time and then we set it and forget it.",
+      "cn": "此外，像那名玩家一样水平极高的玩家，会不断逼近我们的阈值：超过这个阈值，我们便会认定人类不可能做到。他们恰好离这条线很近，所以我们会持续审视这类情况。对这个问题的答案就是，我们不断审核系统输出，不会只审核一次就置之不理。"
+    },
+    {
+      "en": "We're constantly looking back to see, ‘Is this thing still performant?’ Because also we want to know that we're still catching cheaters, but also is it overperforming? Is it catching people that it shouldn't be catching? We've built quite a lot of safeguards over the years. One of the things that impressed me coming in [is that] if there's some conjunction of events where a false enforcement is issued, we tend to catch it fairly quickly and then we will kind of identify systematically who were all the people impacted.",
+      "cn": "我们会不断回头检查：系统是否仍然有效？我们既要确认仍能抓到作弊者，也要确认系统会不会过度运作，误抓不该抓的人。多年来，我们建立了许多保障机制。我加入后印象很深的一点是，若一连串事件同时出现并导致误处罚，我们通常能很快发现，并系统性找出所有受影响的人。"
+    },
+    {
+      "en": "So in that one, it was one of about 200 people, I think, that were caught over the course of both beta weekends with that particular problem. We identified the problem, which won't happen again, and we restored all those people to good standing. So it's just constant review, constant monitoring, always looking at what's going on.",
+      "cn": "那次事件中，我想大约有200人在两个测试周末期间受到了这个特定问题影响。我们已经定位问题，它不会再发生，并恢复了所有受影响者账号的正常状态。所以关键就是持续审核、持续监控，时刻关注正在发生什么。"
+    },
+    {
+      "en": "Do you have any involvement with the videos of process servers showing up to people’s houses to give them a cease and desist, or are you just enjoying them?",
+      "cn": "你是否参与过法律文书送达人员上门向当事人递交停止侵权函的视频，还是只是看得开心？"
+    },
+    {
+      "en": "David Andrews: I certainly enjoy it for sure. I think that we do have a pretty comprehensive grasp on everything that's going on within the cheat community, and that extends to trying to identify devs and potentially put together actions like that. We don't necessarily initiate litigation or send cease and desists to everybody. There is some prioritization and triaging that has to happen. We do go after popular cheats obviously, but we also go after cheats that are technologically sort of more advanced than other cheats as well. And for these incredibly persistent cheat developers who are, again, just enormously financially incentivized, it kind of doesn't matter how often we detect them sometimes. And they'll gaslight their own customers into thinking like, 'Oh, it was you. It was your behavior and game that got you banned. It's not my cheat that got you banned.' And so when they're that stuck in, they're that persistent, they're that sticky, we have to do things like that and certainly the team helps contribute to that.",
+      "cn": "David Andrews：我当然看得很开心。我认为，我们确实相当全面地掌握外挂社群里发生的一切，这也包括设法识别开发者，并可能采取这类行动。我们不一定会对所有人发起诉讼或寄出停止侵权函，必须有所优先排序和筛选。我们显然会追查热门外挂，也会追查技术上比其他外挂更先进的产品。对于这些极其顽固、又有强烈经济动机的外挂开发者，有时无论我们发现他们多少次都没用。他们甚至会操纵自己的客户，让其相信「是你自己的行为和游戏方式导致被封，不是我的外挂害你被封」。当他们如此顽固、难以摆脱时，我们就必须采取这类行动，团队当然也会参与其中。"
+    },
+    {
+      "en": "IGN: I would love to know your stance on how you guys are supporting older Call of Duty games, as cheaters are out there taking advantage of the fact that nobody's really watching them because they're older games.",
+      "cn": "IGN：我很想知道你们如何支持较旧的《使命召唤》游戏。由于这些游戏年代较早，似乎没人真正盯着它们，作弊者正利用这一点。"
+    },
+    {
+      "en": "David Andrews: Yeah, that's unfortunately one that I won't be able to answer.",
+      "cn": "David Andrews：是的，很遗憾，这个问题我无法回答。"
+    },
+    {
+      "en": "Editor’s note: Activision linked IGN to a statement recently provided to Windows Central regarding an update that patched out a security issue with the original Modern Warfare 2. The statement notes that more support updates for older Call of Duty games are coming soon: \"An update released this week addressed all known vulnerabilities in Modern Warfare 2. The team continues to support our legacy titles, with additional updates coming soon. We encourage anyone aware of additional issues to report them through Activision's Bug Bounty Portal.\"",
+      "cn": "编辑注：Activision向IGN提供了一份近期交给Windows Central的声明链接，内容涉及修复初代《使命召唤：现代战争2》安全问题的更新。声明称，更多针对旧版《使命召唤》游戏的支持更新即将推出：「本周发布的更新已解决《使命召唤：现代战争2》的所有已知漏洞。团队将继续支持我们的旧作，更多更新即将到来。我们鼓励知悉其他问题的玩家通过Activision漏洞赏金平台提交报告。」"
+    },
+    {
+      "en": "How has cheating evolved since you started at Rockstar? We talked about the difference in games, but how have you seen the industry evolve? Has the financial incentive only increased over time, especially as free-to-play games get introduced?",
+      "cn": "自从你在Rockstar工作以来，作弊行为如何演变？我们谈过不同游戏之间的差异，但你看到整个行业发生了哪些变化？特别是随着免费游戏出现，经济动机是否一直在增强？"
+    },
+    {
+      "en": "David Andrews: Anytime you're dealing with a free-to-play title, the barrier of entry is just so much lower and that means a broader player population, that means more demand for that title, and more incentive. It’s definitely grown over the years. I think from my particular perspective, the sophistication of the cheat developers is definitely growing as well. [Cheat developers have] their own sort of, we call it OPSEC, operational security, in terms of protecting their identity, because they know what they're doing is not right and they know that the publisher or developer is going to come after them eventually.",
+      "cn": "David Andrews：面对免费游戏时，进入门槛低得多，玩家群体会更广，对该作品的需求更多，诱因也更大。这种趋势这些年来肯定在增长。从我的角度看，外挂开发者的技术复杂度也在提升。他们有一套保护身份的行动安全（OPSEC）措施，因为他们知道自己所做的事不对，也知道发行商或开发商最终会追究他们。"
+    },
+    {
+      "en": "So they're getting better and better at hiding themselves from us and working through intermediaries. It’s quite a complex, very interesting sort of threat landscape for us. At the end of the day, it's really evolved over the years. The other thing that's really evolved is cheats used to be pretty simplistic.",
+      "cn": "所以，他们越来越擅长躲避我们，并通过中间人行动。对我们而言，这是一种相当复杂且很有意思的威胁格局。归根到底，它这些年来确实不断演变。另一个显著变化是，过去的外挂相当简单。"
+    },
+    {
+      "en": "They're just hooking, running memory and doing X, Y, Z thing and figuring out what function does what, modifying those functions, and then off to the races. Everybody's anti-cheats have sort of very much pushed them out of the more traditional easy or straightforward ways of cheating. That's why you're seeing growth in other areas like Cronus and other scripted input devices, computer vision powered aim bots, DMA cheats, things that are either reduced in functionality or more expensive, or sometimes both, than what they used to be. The price of a cheat is definitely going up over the years as we all get more and more effective and fight them more consistently.",
+      "cn": "它们只需对运行内存进行钩挂，做些X、Y、Z之类的事，弄清各项函数的作用并加以修改，就能开始作弊。各家的反作弊系统已在很大程度上把他们从传统、简单直接的作弊路径中逼出去。这就是为什么Cronus等脚本输入设备、由计算机视觉驱动的自瞄、DMA外挂等领域正在增长。与过去相比，这些手段的功能更受限、价格更高，或两者兼有。随着大家的反作弊越来越有效、打击也更持续，外挂价格这些年来肯定一直在上涨。"
+    },
+    {
+      "en": "IGN: Obviously there's software, but there's also hardware like Cronus, physical things that you can purchase. I think Call of Duty has done a pretty good job of trying to stomp that one out, as well as hard platforms in general, like Xbox and PlayStation. How are you guys combating that kind of stuff? It's probably pretty frustrating to know that there's just stuff being sent out in the mail to people. They're just selling it right there. It's not even really hidden.",
+      "cn": "IGN：显然有软件外挂，也有Cronus这类可以买到的实体硬件。我认为《使命召唤》以及XBOX和PlayStation等硬件平台，都在努力打击这类设备。你们如何应对？知道这些设备能直接邮寄到人们手中，而且公开销售、几乎毫不遮掩，想必相当令人沮丧。"
+    },
+    {
+      "en": "David Andrews: Cronus and other scripted input devices like that are a really interesting challenge for us. At the end of the day, they do have sort of reduced functionality versus a full blown sheet. So they're usually taking advantage of things like aim assist and just giving it to you all the time or more accurately or whatever.",
+      "cn": "David Andrews：Cronus和其他类似的脚本输入设备，对我们而言是很有意思的挑战。归根到底，相较于完整外挂，它们的功能确实更受限。它们通常会利用辅助瞄准之类的功能，让它始终生效，或变得更精准，诸如此类。"
+    },
+    {
+      "en": "But absolutely the fact that you can just buy one at a big box store, you can buy one off of any popular online storefront that you might think of, have it shipped to your house and plug it in, and then you're sort of off to the races is definitely frustrating. It also means we've adjusted our enforcement strategy against Cronus as well. It's not the typical enforcement strategy that we have in other places, because we know that for some percentage of these users that are buying a Cronus and plugging it in and getting the advantage off of it, they may not fully realize that that's unauthorized hardware and that it's going to get them banned.",
+      "cn": "不过，你可以在大型零售店购买，也可以从任何知名线上商店下单，把它寄到家里、插上设备后就直接开始使用，这一点确实令人沮丧。这也意味着，我们调整了针对Cronus的处罚策略。这不同于其他场景下的常规处罚，因为我们知道，部分购买Cronus、接上设备并从中获益的用户，可能没有完全意识到这是未经授权的硬件，也不知道它会导致自己被封禁。"
+    },
+    {
+      "en": "We've actually taken an enforcement stance of, on a first strike, we'll give you a seven-day temporary suspension. We're letting you know you can't use that thing. If you use it again, you're gone forever. And then on a second strike, we catch you using it again, we do permanently suspend that account and there might be implications for your hardware as well, if it's a console or PC or whatever.",
+      "cn": "我们的实际处罚方针是，初次发现时给予七天临时封禁，明确告知你不能使用该设备；如果再次使用，就会被永久封禁。第二次再发现时，我们会永久封禁该账号；如果使用的是主机或PC等设备，硬件也可能受到影响。"
+    }
+  ],
+  "pending_dict": [],
+  "translated_terms": {
+    "Call of Duty": "《使命召唤》",
+    "Grand Theft Auto": "《侠盗猎车手》",
+    "Grand Theft Auto Online": "《侠盗猎车手Online》",
+    "Red Dead Online": "《荒野大镖客Online》",
+    "Rockstar Games": "Rockstar",
+    "Rockstar": "Rockstar",
+    "Activision": "Activision",
+    "Ricochet": "Ricochet",
+    "Fortnite": "《堡垒之夜》",
+    "Valorant": "《无畏契约》",
+    "Call of Duty: Black Ops 7": "《使命召唤：黑色行动7》",
+    "Call of Duty: Modern Warfare 4": "《使命召唤：现代战争4》",
+    "Call of Duty: Warzone": "《使命召唤：战区》",
+    "Call of Duty: Modern Warfare 2": "《使命召唤：现代战争2》",
+    "FormaL": "FormaL",
+    "Wardogs": "Wardogs",
+    "Windows Central": "Windows Central",
+    "Cronus": "Cronus",
+    "TPM": "TPM",
+    "Secure Boot": "安全启动",
+    "OPSEC": "行动安全（OPSEC）",
+    "Xbox": "XBOX",
+    "PlayStation": "PlayStation",
+    "David Andrews": "David Andrews"
+  },
+  "cover": "https://assets-prd.ignimgs.com/2026/05/27/cod-mp-preview-br2-1779914695480.jpg",
+  "images": [
+    {
+      "url": "https://assets-prd.ignimgs.com/2026/05/27/cod-mp-preview-br2-1779914695480.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "caption": ""
+    },
+    {
+      "url": "https://kraken.ignimgs.com/apple-touch-icon.png",
+      "caption": ""
+    },
+    {
+      "url": "https://assets-prd.ignimgs.com/2026/05/28/codmw4-1779985350988.jpg",
+      "caption": ""
+    }
+  ],
+  "style_self_check": {
+    "read_style_profile": true,
+    "no_english_syntax": true,
+    "title_rewritten": true,
+    "subtitle_rewritten": true,
+    "xbox_normalized": true,
+    "xbox_series_normalized": true,
+    "quotes_checked": true,
+    "currency_checked": true,
+    "dictionary_checked": true
+  },
+  "translator": "api",
+  "translator_provider": "openai-compatible",
+  "translator_model": "gpt-5.6-luna",
+  "reasoning_effort": "xhigh",
+  "reviewer_model": "gpt-5.6-luna",
+  "reviewed_at": "2026-09-11T04:27:27.853860+00:00",
+  "prompt_version": "api-fulltext-2026-07-v2",
+  "quality_gate_version": 1,
+  "quality_review": {
+    "status": "passed",
+    "reviewer_model": "gpt-5.6-luna",
+    "reviewed_at": "2026-09-11T04:27:27.853860+00:00",
+    "checks": {
+      "source_coverage": true,
+      "quote_attribution": true,
+      "numeric_facts": true
+    }
+  }
+}

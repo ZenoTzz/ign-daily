@@ -2,7 +2,7 @@
   "_meta": {
     "description": "游戏/影视名称中英文对照词库，翻译时必须查询此词库，有匹配则直接使用",
     "source": "IGN中国 (ign.com.cn) + B站IGN中国 (space.bilibili.com/652239032) + 中国玩家圈公认译名",
-    "last_updated": "2026-08-04",
+    "last_updated": "2026-09-11",
     "source_legend": {
       "ign_cn": "IGN中国官网 ign.com.cn 确认",
       "bilibili": "B站IGN中国主页视频标题/简介确认",
@@ -1421,6 +1421,26 @@
       "cn": "Steam Machine",
       "source": "user",
       "note": "暂未查到正式中文译名，保留英文"
+    },
+    "Call of Duty: Black Ops 7": {
+      "cn": "《使命召唤：黑色行动7》",
+      "source": "user"
+    },
+    "Call of Duty: Modern Warfare 4": {
+      "cn": "《使命召唤：现代战争4》",
+      "source": "user"
+    },
+    "Call of Duty: Warzone": {
+      "cn": "《使命召唤：战区》",
+      "source": "user"
+    },
+    "Grand Theft Auto Online": {
+      "cn": "《GTA Online》",
+      "source": "user"
+    },
+    "Red Dead Online": {
+      "cn": "《荒野大镖客 Online》",
+      "source": "user"
     }
   },
   "movies_tv": {
