@@ -93,7 +93,7 @@ class ApiProviderTests(unittest.TestCase):
             with patch("translate_titles_deepseek.urllib.request.urlopen", side_effect=fake_request):
                 call_deepseek_response(
                     "test-key",
-                    "gpt-5.6-luna",
+                    "gpt-5.6-terra",
                     "https://api.apikey.fan/v1",
                     [{"role": "user", "content": "{}"}],
                     max_tokens=321,
@@ -146,7 +146,7 @@ class ApiProviderTests(unittest.TestCase):
             ) as mocked, patch("translate_titles_deepseek.time.sleep") as sleep:
                 result, _usage = call_deepseek_response(
                     "test-key",
-                    "gpt-5.6-luna",
+                    "gpt-5.6-terra",
                     "https://api.apikey.fan/v1",
                     [{"role": "user", "content": "{}"}],
                 )

@@ -10,7 +10,7 @@ if [ ! -d "$APP_DIR" ]; then
   exit 1
 fi
 
-read -r -s -p "APIKEY.FUN external-script API key: " api_key
+read -r -s -p "APIKEY.FAN external-script API key: " api_key
 echo >&2
 if [ -z "$api_key" ]; then
   echo "No key entered; nothing changed." >&2

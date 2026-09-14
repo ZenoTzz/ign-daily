@@ -66,7 +66,7 @@ Codex 队列自动化先把完整生产队列保存为临时只读快照，再�
 python scripts/prepare_codex_translation_batches.py --jobs QUEUE_JSON --output-dir TEMP_PACKET_DIR
 ```
 
-该脚本不修改文章、索引或 job。它按同一新闻日、正文总字符量和文章数形成工作批次，只把当前文章命中的正式词库、已批准翻译记忆和高风险段落写入临时 packet。每个批次由一个全新翻译 agent 完成首译与独立双语自审；普通批次使用 Luna medium，高风险密集或超长批次使用 Luna high。控制 agent 对全部文章运行机械门禁，只复读 packet 标记的风险段落；首次质量失败只允许用 Luna xhigh 重试一次，仍失败或来源损坏时才交给 Sol low 全文复核。服务器 job 仍按各自 URL 和完成条件独立结算，不因合批而合并状态。
+该脚本不修改文章、索引或 job。它按同一新闻日、正文总字符量和文章数形成工作批次，只把当前文章命中的正式词库、已批准翻译记忆和高风险段落写入临时 packet。每个批次由一个全新翻译 agent 完成首译与独立双语自审；普通批次使用 Terra medium，高风险密集或超长批次使用 Terra high。控制 agent 对全部文章运行机械门禁，只复读 packet 标记的风险段落；首次质量失败只允许用 Terra xhigh 重试一次，仍失败或来源损坏时才交给 Sol low 全文复核。服务器 job 仍按各自 URL 和完成条件独立结算，不因合批而合并状态。
 
 可先运行预处理：
 

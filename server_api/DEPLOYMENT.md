@@ -34,7 +34,7 @@ Then configure secrets interactively:
 bash /srv/ign-daily/server_api/deploy/configure_secrets.sh
 ```
 
-Paste the translator API key only in that server prompt. For APIKEY.FUN use the
+Paste the translator API key only in that server prompt. For APIKEY.FAN use the
 external-script group and `https://api.apikey.fan/v1`; the Codex-only group
 cannot be used by the production website. Do not send the key in chat.
 
