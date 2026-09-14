@@ -106,7 +106,8 @@ jobs:
         if: steps.check.outputs.configured == 'true'
         run: |
           set -euo pipefail
-          ssh -p "$SERVER_PORT" -i ~/.ssh/ign_daily_server_key "$SERVER_USER@$SERVER_HOST" \
+          ssh -o ServerAliveInterval=30 -o ServerAliveCountMax=10 \
+            -p "$SERVER_PORT" -i ~/.ssh/ign_daily_server_key "$SERVER_USER@$SERVER_HOST" \
             "bash -s -- '$GITHUB_SHA' '$SERVER_PATH' '$SERVER_API_PATH' '$SERVER_USER'" <<'REMOTE'
           set -euo pipefail
           sha="$1"
@@ -123,4 +124,5 @@ jobs:
             sudo chmod 0664 "/var/lock/ign-daily-$kind.lock"
           done
           sudo APP_DIR="$app" API_DIR="$api" python3 -B "$stage/server_api/deploy/deploy_release.py" "$stage"
+          sudo APP_DIR="$app" python3 -B "$stage/server_api/deploy/migrate_luna_to_terra.py"
           REMOTE
