@@ -11,7 +11,7 @@ class DeepSeekBalanceTests(unittest.TestCase):
     def test_generic_provider_skips_deepseek_balance_endpoint(self):
         env = {
             "TRANSLATOR_API_KEY": "test-key",
-            "TRANSLATOR_BASE_URL": "https://api.apikey.fun/v1",
+            "TRANSLATOR_BASE_URL": "https://api.apikey.fan/v1",
         }
         output = io.StringIO()
         with patch.dict(os.environ, env, clear=False), redirect_stdout(output):

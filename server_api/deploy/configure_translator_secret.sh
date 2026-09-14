@@ -3,7 +3,7 @@ set -euo pipefail
 
 APP_DIR="${APP_DIR:-/srv/ign-daily}"
 ENV_FILE="$APP_DIR/.env"
-BASE_URL="${TRANSLATOR_BASE_URL:-https://api.apikey.fun/v1}"
+BASE_URL="${TRANSLATOR_BASE_URL:-https://api.apikey.fan/v1}"
 
 if [ ! -d "$APP_DIR" ]; then
   echo "Application directory does not exist: $APP_DIR" >&2

@@ -51,16 +51,16 @@ def _env(**values):
 class ApiProviderTests(unittest.TestCase):
     def test_endpoint_normalization(self):
         self.assertEqual(
-            chat_completions_endpoint("https://api.apikey.fun/v1"),
-            "https://api.apikey.fun/v1/chat/completions",
+            chat_completions_endpoint("https://api.apikey.fan/v1"),
+            "https://api.apikey.fan/v1/chat/completions",
         )
         self.assertEqual(
-            chat_completions_endpoint("https://api.apikey.fun/v1/"),
-            "https://api.apikey.fun/v1/chat/completions",
+            chat_completions_endpoint("https://api.apikey.fan/v1/"),
+            "https://api.apikey.fan/v1/chat/completions",
         )
         self.assertEqual(
-            chat_completions_endpoint("https://api.apikey.fun/v1/chat/completions"),
-            "https://api.apikey.fun/v1/chat/completions",
+            chat_completions_endpoint("https://api.apikey.fan/v1/chat/completions"),
+            "https://api.apikey.fan/v1/chat/completions",
         )
 
     def test_exact_reasoning_efforts_keep_xhigh(self):
@@ -71,7 +71,7 @@ class ApiProviderTests(unittest.TestCase):
 
     def test_generic_relay_does_not_reuse_another_provider_key(self):
         with _env(TRANSLATOR_API_KEY=None, DEEPSEEK_API_KEY="deepseek-secret", GEMINI_API_KEY="gemini-secret"):
-            self.assertEqual(resolve_api_key("https://api.apikey.fun/v1"), "")
+            self.assertEqual(resolve_api_key("https://api.apikey.fan/v1"), "")
 
     def test_gpt56_payload_uses_standard_fields(self):
         captured = {}
@@ -94,12 +94,12 @@ class ApiProviderTests(unittest.TestCase):
                 call_deepseek_response(
                     "test-key",
                     "gpt-5.6-luna",
-                    "https://api.apikey.fun/v1",
+                    "https://api.apikey.fan/v1",
                     [{"role": "user", "content": "{}"}],
                     max_tokens=321,
                 )
         payload = captured["payload"]
-        self.assertEqual(captured["url"], "https://api.apikey.fun/v1/chat/completions")
+        self.assertEqual(captured["url"], "https://api.apikey.fan/v1/chat/completions")
         self.assertEqual(payload["max_completion_tokens"], 321)
         self.assertEqual(payload["reasoning_effort"], "xhigh")
         self.assertNotIn("max_tokens", payload)
@@ -133,7 +133,7 @@ class ApiProviderTests(unittest.TestCase):
 
     def test_transient_gateway_error_is_retried(self):
         error = urllib.error.HTTPError(
-            "https://api.apikey.fun/v1/chat/completions",
+            "https://api.apikey.fan/v1/chat/completions",
             502,
             "Bad Gateway",
             {},
@@ -147,7 +147,7 @@ class ApiProviderTests(unittest.TestCase):
                 result, _usage = call_deepseek_response(
                     "test-key",
                     "gpt-5.6-luna",
-                    "https://api.apikey.fun/v1",
+                    "https://api.apikey.fan/v1",
                     [{"role": "user", "content": "{}"}],
                 )
         self.assertEqual(result, "{}")

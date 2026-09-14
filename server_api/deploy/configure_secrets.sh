@@ -54,8 +54,8 @@ if [ "${#admin_password}" -lt 12 ]; then
 fi
 
 api_key="$(prompt_value 'DeepSeek/Translator API key, leave blank to skip' 1)"
-base_url="$(prompt_value 'Translator base URL, default https://api.deepseek.com' 0)"
-base_url="${base_url:-https://api.deepseek.com}"
+base_url="$(prompt_value 'Translator base URL, default https://api.apikey.fan/v1' 0)"
+base_url="${base_url:-https://api.apikey.fan/v1}"
 cookie_secure="$(prompt_value 'Use secure cookies? 1 for HTTPS, 0 for HTTP, default 0' 0)"
 cookie_secure="${cookie_secure:-0}"
 wechat_appid="$(prompt_value 'WeChat Mini Program AppID, leave blank to skip' 0)"

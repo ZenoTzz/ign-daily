@@ -11,7 +11,7 @@
   "api_fulltext_thinking": "xhigh",
   "api_nightly_thinking": "max",
   "api_compare_thinking": "disabled",
-  "api_base_url": "https://api.apikey.fun/v1",
+  "api_base_url": "https://api.apikey.fan/v1",
   "api_fulltext_batch": "all",
   "compare_models": [
     "deepseek-v4-pro",
@@ -21,7 +21,7 @@
     {
       "label": "GPT-5.6 Luna (APIKEY.FUN 外接版)",
       "model": "gpt-5.6-luna",
-      "base_url": "https://api.apikey.fun/v1",
+      "base_url": "https://api.apikey.fan/v1",
       "provider": "openai-compatible",
       "input_cache_hit_usd_per_million": 0.00857143,
       "input_cache_miss_usd_per_million": 0.08571429,
