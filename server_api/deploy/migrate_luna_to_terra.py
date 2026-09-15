@@ -23,10 +23,15 @@ def read_env(path: Path) -> tuple[list[str], dict[str, str]]:
     return lines, values
 
 def atomic_text(path: Path, text: str) -> None:
-    mode = stat.S_IMODE(path.stat().st_mode)
+    metadata = path.stat()
+    mode = stat.S_IMODE(metadata.st_mode)
     temp = path.with_name(path.name + ".terra.tmp")
     temp.write_text(text, encoding="utf-8")
     os.chmod(temp, mode)
+    # os.replace() keeps the temporary file's ownership, not the target's.
+    # Preserve both ownership and mode so cron workers can still read secrets.
+    if hasattr(os, "chown"):
+        os.chown(temp, metadata.st_uid, metadata.st_gid)
     os.replace(temp, path)
 
 def probe(base_url: str, api_key: str) -> None:

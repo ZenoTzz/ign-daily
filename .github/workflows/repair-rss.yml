@@ -57,6 +57,10 @@ jobs:
           sudo touch /var/log/ign-daily/rss.log
           sudo chown "$user:$user" /var/log/ign-daily/rss.log
           sudo chmod 0644 /var/log/ign-daily/rss.log
+          test -f "$app/.env" || { echo 'Missing production .env' >&2; exit 2; }
+          sudo chown "$user:$user" "$app/.env"
+          sudo chmod 0600 "$app/.env"
+          sudo -u "$user" test -r "$app/.env"
           sudo systemctl enable --now cron
 
           cron_tmp="$(mktemp)"
