@@ -1,0 +1,74 @@
+name: Repair Production Source Cache
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  repair:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      SERVER_HOST: ${{ secrets.IGN_DAILY_SERVER_HOST }}
+      SERVER_PORT: ${{ secrets.IGN_DAILY_SERVER_PORT || '22' }}
+      SERVER_USER: ${{ secrets.IGN_DAILY_SERVER_USER }}
+      SERVER_PATH: ${{ secrets.IGN_DAILY_SERVER_PATH || '/srv/ign-daily' }}
+    steps:
+      - name: Check repair secrets
+        env:
+          SERVER_SSH_KEY: ${{ secrets.IGN_DAILY_SERVER_SSH_KEY }}
+        run: |
+          set -euo pipefail
+          for name in SERVER_HOST SERVER_USER SERVER_SSH_KEY; do
+            test -n "${!name:-}" || { echo "Missing required server secret: $name" >&2; exit 2; }
+          done
+
+      - name: Configure SSH
+        env:
+          SERVER_SSH_KEY: ${{ secrets.IGN_DAILY_SERVER_SSH_KEY }}
+        run: |
+          set -euo pipefail
+          mkdir -p ~/.ssh
+          printf '%s\n' "$SERVER_SSH_KEY" > ~/.ssh/ign_daily_server_key
+          chmod 600 ~/.ssh/ign_daily_server_key
+          ssh-keyscan -p "$SERVER_PORT" -H "$SERVER_HOST" >> ~/.ssh/known_hosts
+
+      - name: Cache current production news days
+        run: |
+          set -euo pipefail
+          ssh -o ServerAliveInterval=30 -o ServerAliveCountMax=10 \
+            -p "$SERVER_PORT" -i ~/.ssh/ign_daily_server_key "$SERVER_USER@$SERVER_HOST" \
+            "bash -s -- '$SERVER_PATH' '$SERVER_USER'" <<'REMOTE'
+          set -euo pipefail
+          app="$(realpath -m "$1")"
+          user="$2"
+          case "$app" in /srv/*) ;; *) echo 'Unsafe app path' >&2; exit 2;; esac
+          source /srv/ign-daily-ops/config-env.sh
+          source "$app/server_api/deploy/worker_locks.sh"
+          with_worker_lock
+          cd "$app"
+          current_day="$(TZ=Asia/Shanghai date +%F)"
+          next_day="$(TZ=Asia/Shanghai date -d 'tomorrow' +%F)"
+          sudo -u "$user" "$PY" scripts/article_cache.py "$current_day" --missing --limit 50
+          sudo -u "$user" "$PY" scripts/article_cache.py "$next_day" --missing --limit 50
+          CURRENT_DAY="$current_day" NEXT_DAY="$next_day" APP_DIR="$app" "$PY" - <<'PY'
+          import json, os
+          from pathlib import Path
+          app = Path(os.environ['APP_DIR'])
+          for day in (os.environ['CURRENT_DAY'], os.environ['NEXT_DAY']):
+              path = app / 'data' / day / 'index.json'
+              if not path.exists():
+                  print(json.dumps({'date': day, 'missing_index': True}))
+                  continue
+              items = json.loads(path.read_text(encoding='utf-8-sig')).get('articles', [])
+              print(json.dumps({
+                  'date': day,
+                  'total': len(items),
+                  'cached': sum(item.get('source_status') == 'cached' for item in items),
+                  'failed': sum(item.get('source_status') == 'failed' for item in items),
+                  'with_images': sum(bool(item.get('images')) for item in items),
+              }))
+          PY
+          REMOTE
