@@ -2,6 +2,46 @@
   "date": "2026-09-20",
   "articles": [
     {
+      "id": 13,
+      "category": "影视资讯",
+      "emoji": "⚡",
+      "en_title": "Big Bang Theory Spinoff Features Surprise Live-Action Cameos from The Flash and Mr. Freeze",
+      "cn_title": "《生活大爆炸》衍生剧：闪电侠、急冻人现身",
+      "summary": "《生活大爆炸》衍生剧《Stuart Fails to Save the Universe》第9集让真人版闪电侠与急冻人登场，主角一行也来到化为现实的哥谭市。主创Zak Penn称，原本希望绿灯侠客串，但因HBO真人剧《Lanterns》而未能成行。",
+      "url": "https://www.ign.com/articles/big-bang-theory-spinoff-features-surprise-live-action-cameos-from-the-flash-and-mr-freeze",
+      "publish_time_cn": "2026-09-20 05:29",
+      "pub_date": "2026-09-20 05:29",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/09/19/big-bang-theory-flash-1789852598772.png?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/09/19/big-bang-theory-flash-1789852598772.png?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/09/19/big-bang-theory-flash-1789852598772.png?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/09/19/big-bang-theory-flash-1789852598772.png?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/09/19/big-bang-theory-flash-1789852598772.png?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/09/19/big-bang-theory-flash-1789852598772.png",
+        "https://kraken.ignimgs.com/apple-touch-icon.png",
+        "https://assets-prd.ignimgs.com/2026/08/12/lanterns-ver4-xlg-1786543132984.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-09-20T05:47:34+08:00",
+      "pending_dict": [
+        {
+          "en": "Stuart Fails to Save the Universe",
+          "cn": "《斯图尔特未能拯救宇宙》",
+          "cat": "movies_tv",
+          "source": "ai_guess",
+          "reason": "未见稳定官方中文译名，暂保留英文名。"
+        },
+        {
+          "en": "Lanterns",
+          "cn": "《绿灯军团》",
+          "cat": "movies_tv",
+          "source": "ai_guess",
+          "reason": "HBO剧集中文名尚需人工确认，正文暂保留英文名。"
+        }
+      ]
+    },
+    {
       "id": 12,
       "category": "人物新闻",
       "emoji": "🎮",
@@ -309,5 +349,5 @@
       "source_fetched_at": "2026-09-19T09:17:38+08:00"
     }
   ],
-  "total": 12
+  "total": 13
 }
