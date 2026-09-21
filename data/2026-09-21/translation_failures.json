@@ -8,13 +8,18 @@
       "cn_title": "小岛秀夫谈索尼撤资《Physint》",
       "model": "gpt-5.6-terra",
       "status": "needs_manual_review",
-      "failed_at": "2026-09-20T23:53:28.901378+08:00",
-      "reason": "HTTP Error 524: <none>",
-      "audit_issues": [],
-      "fingerprint": "02352591001a8f977f14b4dc5151a89da5fb4dde",
-      "translation_path": "",
+      "failed_at": "2026-09-21T09:35:09.115963+08:00",
+      "reason": "风格拒收: cn_title directly reuses the old title: '小岛秀夫谈索尼撤资《Physint》'",
+      "audit_issues": [
+        {
+          "type": "style_self_check",
+          "detail": "cn_title directly reuses the old title: '小岛秀夫谈索尼撤资《Physint》'"
+        }
+      ],
+      "fingerprint": "f9590ed79e0235809fe3f4f0fa09690e191ab1d2",
+      "translation_path": "translations/01.json",
       "retry_policy": "manual_only"
     }
   },
-  "updated_at": "2026-09-20T23:53:28.901378+08:00"
+  "updated_at": "2026-09-21T09:35:09.115963+08:00"
 }
