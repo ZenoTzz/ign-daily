@@ -49,7 +49,7 @@ jobs:
           flock -w 900 -x 8
           exec 9>/var/lock/ign-daily-write.lock
           flock -w 90 -x 9
-          sudo -u "$user" env APP_DIR="$app" python3 -B "$app/server_api/deploy/switch_terra_to_sol.py"
+          sudo APP_DIR="$app" python3 -B "$app/server_api/deploy/switch_terra_to_sol.py"
           APP_DIR="$app" python3 - <<'PY'
           import json, os
           from pathlib import Path
