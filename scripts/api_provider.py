@@ -37,9 +37,10 @@ def chat_completions_endpoint(base_url: str) -> str:
     return urlunsplit((parts.scheme, parts.netloc, final_path, parts.query, parts.fragment))
 
 
-def is_gpt56_model(model: str) -> bool:
-    """Whether *model* is a GPT-5.6 model requiring the newer request shape."""
-    return (model or "").strip().casefold().startswith("gpt-5.6")
+def is_openai_reasoning_model(model: str) -> bool:
+    """Whether the configured GPT model uses reasoning Chat Completions fields."""
+    value = (model or "").strip().casefold()
+    return value == "gpt-5.6" or value.startswith("gpt-5.6-") or value == "gpt-6" or value.startswith("gpt-6-")
 
 
 def normalize_reasoning_effort(value: str | None = None) -> str | None:

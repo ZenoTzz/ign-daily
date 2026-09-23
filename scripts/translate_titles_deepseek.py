@@ -33,7 +33,7 @@ from common_paths import DATA_DIR, REPO_ROOT, configure_utf8_stdio, dict_path, e
 from api_provider import (
     api_key_help,
     chat_completions_endpoint,
-    is_gpt56_model,
+    is_openai_reasoning_model,
     normalize_reasoning_effort,
     provider_from_base_url,
     resolve_api_key,
@@ -333,17 +333,16 @@ def apply_thinking_mode(payload: dict[str, Any]) -> None:
 
 def call_deepseek_response(api_key: str, model: str, base_url: str, messages: list[dict[str, str]], max_tokens: int | None = None) -> tuple[str, dict[str, Any]]:
     endpoint = chat_completions_endpoint(base_url)
-    gpt56 = provider_from_base_url(base_url) == "generic" and is_gpt56_model(model)
+    openai_reasoning = provider_from_base_url(base_url) == "generic" and is_openai_reasoning_model(model)
     payload = {
         "model": model,
         "messages": messages,
         "stream": False,
         "response_format": {"type": "json_object"},
     }
-    if gpt56:
-        # GPT-5.6 Chat Completions uses max_completion_tokens and does not
-        # accept temperature.  Keep the requested effort exact, including
-        # xhigh/max; do not translate it through DeepSeek's thinking field.
+    if openai_reasoning:
+        # GPT-5.6/GPT-6 reasoning requests use max_completion_tokens and
+        # omit temperature and DeepSeek's proprietary thinking field.
         payload["max_completion_tokens"] = max_tokens or 1200
         effort = normalize_reasoning_effort()
         if effort is not None:
@@ -352,7 +351,7 @@ def call_deepseek_response(api_key: str, model: str, base_url: str, messages: li
         payload["temperature"] = 0.2
         payload["max_tokens"] = max_tokens or 1200
     if provider_from_base_url(base_url) not in {"gemini", "generic"} or (
-        provider_from_base_url(base_url) == "generic" and not gpt56
+        provider_from_base_url(base_url) == "generic" and not openai_reasoning
     ):
         apply_thinking_mode(payload)
     req = urllib.request.Request(

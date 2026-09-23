@@ -3,12 +3,12 @@
   "fulltext_translator": "api",
   "nightly_learner": "codex",
   "api_provider": "openai-compatible",
-  "api_model": "gpt-5.6-terra",
-  "api_title_model": "gpt-5.6-terra",
-  "api_fulltext_model": "gpt-5.6-terra",
+  "api_model": "gpt-6-sol",
+  "api_title_model": "gpt-6-sol",
+  "api_fulltext_model": "gpt-6-sol",
   "api_nightly_model": "deepseek-v4-flash",
-  "api_title_thinking": "high",
-  "api_fulltext_thinking": "xhigh",
+  "api_title_thinking": "low",
+  "api_fulltext_thinking": "low",
   "api_nightly_thinking": "max",
   "api_compare_thinking": "disabled",
   "api_base_url": "https://api.apikey.fan/v1",
@@ -19,8 +19,8 @@
   ],
   "api_models": [
     {
-      "label": "GPT-5.6 Terra (APIKEY.FAN 外接版)",
-      "model": "gpt-5.6-terra",
+      "label": "GPT-6 Sol (APIKEY.FAN 外接版)",
+      "model": "gpt-6-sol",
       "base_url": "https://api.apikey.fan/v1",
       "provider": "openai-compatible",
       "input_cache_hit_usd_per_million": "",
@@ -64,6 +64,6 @@
       "output_usd_per_million": ""
     }
   ],
-  "updated_at": "2026-09-14T00:00:00.000Z",
-  "notes": "Production uses the APIKEY.FAN external-script group with GPT-5.6 Terra. API keys must stay in server or GitHub secrets."
+  "updated_at": "2026-09-23T00:00:00.000Z",
+  "notes": "Production uses the APIKEY.FAN external-script group with GPT-6 Sol at low reasoning. API keys must stay in server or GitHub secrets."
 }

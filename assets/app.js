@@ -324,12 +324,12 @@ function appData() {
       fulltext_translator: 'api',
       nightly_learner: 'codex',
       api_provider: 'openai-compatible',
-      api_model: 'gpt-5.6-terra',
-      api_title_model: 'gpt-5.6-terra',
-      api_fulltext_model: 'gpt-5.6-terra',
+      api_model: 'gpt-6-sol',
+      api_title_model: 'gpt-6-sol',
+      api_fulltext_model: 'gpt-6-sol',
       api_nightly_model: 'deepseek-v4-flash',
-      api_title_thinking: 'high',
-      api_fulltext_thinking: 'xhigh',
+      api_title_thinking: 'low',
+      api_fulltext_thinking: 'low',
       api_nightly_thinking: 'disabled',
       api_compare_thinking: 'disabled',
       api_base_url: 'https://api.apikey.fan/v1',
@@ -337,8 +337,8 @@ function appData() {
       compare_models: ['deepseek-v4-pro', 'deepseek-v4-flash'],
       api_models: [
         {
-          label: 'GPT-5.6 Terra',
-          model: 'gpt-5.6-terra',
+          label: 'GPT-6 Sol',
+          model: 'gpt-6-sol',
           base_url: 'https://api.apikey.fan/v1',
           input_cache_hit_usd_per_million: '',
           input_cache_miss_usd_per_million: '',
@@ -950,13 +950,13 @@ function appData() {
     preferredModelLabel(art) {
       if (art?.translation_status === 'requested') {
         return this.isApiMode('fulltext_translator')
-          ? this.formatTranslatorModel(this.automationConfig.api_fulltext_model || 'gpt-5.6-terra')
+          ? this.formatTranslatorModel(this.automationConfig.api_fulltext_model || 'gpt-6-sol')
           : `${this.fulltextQueueOwner()} 待处理`;
       }
       if (art?.translation_status === 'done') {
         return this.translatorLabel(art) || '已完成';
       }
-      return this.formatTranslatorModel(this.automationConfig.api_title_model || this.automationConfig.api_model || 'gpt-5.6-terra');
+      return this.formatTranslatorModel(this.automationConfig.api_title_model || this.automationConfig.api_model || 'gpt-6-sol');
     },
 
     async retryTranslation(art) {
@@ -1274,8 +1274,8 @@ function appData() {
     defaultApiModels() {
       return [
         {
-          label: 'GPT-5.6 Terra',
-          model: 'gpt-5.6-terra',
+          label: 'GPT-6 Sol',
+          model: 'gpt-6-sol',
           base_url: 'https://api.apikey.fan/v1',
           input_cache_hit_usd_per_million: '',
           input_cache_miss_usd_per_million: '',
@@ -1381,9 +1381,9 @@ function appData() {
           fulltext_translator: cfg.fulltext_translator || 'api',
           nightly_learner: cfg.nightly_learner || 'codex',
           api_provider: cfg.api_provider || 'openai-compatible',
-          api_model: cfg.api_model || 'gpt-5.6-terra',
-          api_title_model: cfg.api_title_model || cfg.api_model || 'gpt-5.6-terra',
-          api_fulltext_model: cfg.api_fulltext_model || 'gpt-5.6-terra',
+          api_model: cfg.api_model || 'gpt-6-sol',
+          api_title_model: cfg.api_title_model || cfg.api_model || 'gpt-6-sol',
+          api_fulltext_model: cfg.api_fulltext_model || 'gpt-6-sol',
           api_nightly_model: cfg.api_nightly_model || cfg.api_model || 'deepseek-v4-flash',
           api_title_thinking: cfg.api_title_thinking || 'disabled',
           api_fulltext_thinking: cfg.api_fulltext_thinking || 'disabled',
@@ -1409,9 +1409,9 @@ function appData() {
           fulltext_translator: this.automationConfig.fulltext_translator || 'api',
           nightly_learner: this.automationConfig.nightly_learner || 'codex',
           api_provider: 'openai-compatible',
-          api_model: this.automationConfig.api_title_model || this.automationConfig.api_model || 'gpt-5.6-terra',
-          api_title_model: this.automationConfig.api_title_model || this.automationConfig.api_model || 'gpt-5.6-terra',
-          api_fulltext_model: this.automationConfig.api_fulltext_model || 'gpt-5.6-terra',
+          api_model: this.automationConfig.api_title_model || this.automationConfig.api_model || 'gpt-6-sol',
+          api_title_model: this.automationConfig.api_title_model || this.automationConfig.api_model || 'gpt-6-sol',
+          api_fulltext_model: this.automationConfig.api_fulltext_model || 'gpt-6-sol',
           api_nightly_model: this.automationConfig.api_nightly_model || this.automationConfig.api_model || 'deepseek-v4-flash',
           api_title_thinking: this.automationConfig.api_title_thinking || 'disabled',
           api_fulltext_thinking: this.automationConfig.api_fulltext_thinking || 'disabled',
@@ -1442,8 +1442,8 @@ function appData() {
 
     apiTranslationInputs() {
       const mode = String(this.automationConfig.api_fulltext_batch || 'all');
-      const titleModel = this.apiModelById(this.automationConfig.api_title_model || this.automationConfig.api_model || 'gpt-5.6-terra');
-      const fulltextModel = this.apiModelById(this.automationConfig.api_fulltext_model || 'gpt-5.6-terra');
+      const titleModel = this.apiModelById(this.automationConfig.api_title_model || this.automationConfig.api_model || 'gpt-6-sol');
+      const fulltextModel = this.apiModelById(this.automationConfig.api_fulltext_model || 'gpt-6-sol');
       const inputs = {
         fulltext_limit: '5',
         time_budget_seconds: '1200',
@@ -1576,6 +1576,7 @@ function appData() {
       const raw = String(model || '').trim();
       if (!raw) return '';
       const lower = raw.toLowerCase();
+      if (lower.includes('gpt-6-sol')) return 'GPT-6 Sol';
       if (lower.includes('gpt-5.6-terra')) return 'GPT-5.6 Terra';
       if (lower.includes('deepseek') && lower.includes('v4') && lower.includes('pro')) return 'DeepSeek V4 Pro';
       if (lower.includes('deepseek') && lower.includes('v4') && lower.includes('flash')) return 'DeepSeek V4 Flash';

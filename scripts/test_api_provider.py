@@ -12,7 +12,7 @@ from unittest.mock import patch
 
 sys.path.insert(0, os.path.dirname(__file__))
 
-from api_provider import chat_completions_endpoint, normalize_reasoning_effort, resolve_api_key  # noqa: E402
+from api_provider import chat_completions_endpoint, is_openai_reasoning_model, normalize_reasoning_effort, resolve_api_key  # noqa: E402
 from translate_titles_deepseek import call_deepseek_response  # noqa: E402
 
 
@@ -106,6 +106,28 @@ class ApiProviderTests(unittest.TestCase):
         self.assertNotIn("temperature", payload)
         self.assertNotIn("thinking", payload)
         self.assertEqual(captured["kwargs"]["timeout"], 900)
+
+    def test_gpt6_sol_low_uses_reasoning_request_shape(self):
+        captured = {}
+
+        def fake_request(request, **kwargs):
+            captured.update(payload=json.loads(request.data), url=request.full_url)
+            return _Response()
+
+        self.assertTrue(is_openai_reasoning_model("gpt-6-sol"))
+        with _env(TRANSLATOR_REASONING_EFFORT="low", TRANSLATOR_THINKING_MODE=None):
+            with patch("translate_titles_deepseek.urllib.request.urlopen", side_effect=fake_request):
+                call_deepseek_response(
+                    "test-key", "gpt-6-sol", "https://api.apikey.fan/v1",
+                    [{"role": "user", "content": "{}"}], max_tokens=321,
+                )
+        payload = captured["payload"]
+        self.assertEqual(payload["model"], "gpt-6-sol")
+        self.assertEqual(payload["reasoning_effort"], "low")
+        self.assertEqual(payload["max_completion_tokens"], 321)
+        self.assertNotIn("max_tokens", payload)
+        self.assertNotIn("temperature", payload)
+        self.assertNotIn("thinking", payload)
 
     def test_deepseek_payload_unchanged_shape(self):
         captured = {}
