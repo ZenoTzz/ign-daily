@@ -1,0 +1,115 @@
+{
+  "date": "2026-09-24",
+  "items": {
+    "7": {
+      "id": 7,
+      "url": "https://www.ign.com/articles/star-wars-zero-company-estimated-to-have-sold-1-million-with-nearly-70-on-steam",
+      "en_title": "Star Wars Zero Company Estimated to Have Sold 1 Million, With Nearly 70% on Steam",
+      "cn_title": "《星球大战》《Star Wars Zero Company》估售百万份，近七成来自Steam",
+      "model": "gpt-6-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-09-24T08:57:19.523657+08:00",
+      "reason": "风格拒收: style_self_check key 'currency_checked' is not true (got False)",
+      "audit_issues": [
+        {
+          "type": "style_self_check",
+          "detail": "style_self_check key 'currency_checked' is not true (got False)"
+        }
+      ],
+      "fingerprint": "d7da87df48dbe582b92bd07063faf0429ea720b6",
+      "translation_path": "translations/07.json",
+      "retry_policy": "manual_only"
+    },
+    "16": {
+      "id": 16,
+      "url": "https://www.ign.com/articles/xbox-mythic-achievement-will-be-microsofts-version-of-a-platinum-trophy-and-it-has-an-extravagant-unlock-sound",
+      "en_title": "Xbox Mythic Achievement Will Be Microsoft's Version of a Platinum Trophy — And It Has an Extravagant Unlock Sound",
+      "cn_title": "XBOX神话成就解锁音效曝光",
+      "model": "gpt-6-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-09-24T09:01:25.619820+08:00",
+      "reason": "质量门禁拒绝: paragraph 5 is missing numeric fact(s): 100%",
+      "audit_issues": [
+        {
+          "type": "quality_gate",
+          "detail": "paragraph 5 is missing numeric fact(s): 100%"
+        }
+      ],
+      "fingerprint": "55fb128bc09063013fbcfd231abe3aa15ddb2f59",
+      "translation_path": "translations/16.json",
+      "retry_policy": "manual_only"
+    },
+    "28": {
+      "id": 28,
+      "url": "https://www.ign.com/articles/scrapped-gta-5-story-dlc-might-have-taken-the-series-overseas-for-the-first-time-in-15-years",
+      "en_title": "Scrapped GTA 5 Story DLC Might Have Taken the Series Overseas for the First Time in 15 Years",
+      "cn_title": "《GTA5》废弃剧情DLC或曾计划前往巴黎",
+      "model": "gpt-6-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-09-24T09:08:56.497549+08:00",
+      "reason": "风格拒收: cn_title directly reuses the old title: '《GTA5》废弃剧情DLC或曾计划前往巴黎'",
+      "audit_issues": [
+        {
+          "type": "style_self_check",
+          "detail": "cn_title directly reuses the old title: '《GTA5》废弃剧情DLC或曾计划前往巴黎'"
+        }
+      ],
+      "fingerprint": "aa2d42908fc007a9f9020ad199f14b70aec1b4b0",
+      "translation_path": "translations/28.json",
+      "retry_policy": "manual_only"
+    },
+    "32": {
+      "id": 32,
+      "url": "https://www.ign.com/articles/game-of-thrones-star-kit-harington-isnt-a-gamer-but-hes-excited-for-grand-theft-auto-6",
+      "en_title": "Game of Thrones Star Kit Harington Isn't a Gamer, But He's Excited for Grand Theft Auto 6",
+      "cn_title": "《侠盗猎车手》《权力的游戏》演员想玩《GTA6》",
+      "model": "gpt-6-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-09-24T09:09:31.712950+08:00",
+      "reason": "风格拒收: style_self_check key 'currency_checked' is not true (got False)",
+      "audit_issues": [
+        {
+          "type": "style_self_check",
+          "detail": "style_self_check key 'currency_checked' is not true (got False)"
+        }
+      ],
+      "fingerprint": "3fc3360b0b9ab2733fdbd4747d5f5a3fa72d801d",
+      "translation_path": "translations/32.json",
+      "retry_policy": "manual_only"
+    },
+    "40": {
+      "id": 40,
+      "url": "https://www.ign.com/articles/halo-fans-are-divided-over-whether-activision-should-reboot-the-series-and-start-fresh",
+      "en_title": "Halo Fans Are Divided Over Whether Activision Should Reboot the Series and Start Fresh",
+      "cn_title": "《光环》该不该重启？粉丝意见不一",
+      "model": "gpt-6-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-09-24T09:11:54.502410+08:00",
+      "reason": "质量门禁拒绝: paragraph 8 is missing numeric fact(s): 20",
+      "audit_issues": [
+        {
+          "type": "quality_gate",
+          "detail": "paragraph 8 is missing numeric fact(s): 20"
+        }
+      ],
+      "fingerprint": "ec00d2e2fd756ed5a43a34b86f8fb4e7569b3c62",
+      "translation_path": "translations/40.json",
+      "retry_policy": "manual_only"
+    },
+    "47": {
+      "id": 47,
+      "url": "https://www.ign.com/articles/double-fine-founder-tim-schafer-questions-economics-of-the-game-industry-amid-mass-layoffs-and-studio-closures",
+      "en_title": "Double Fine Founder Tim Schafer Questions Economics of the Game Industry Amid Mass Layoffs and Studio Closures",
+      "cn_title": "Double Fine创始人不解游戏业经济逻辑",
+      "model": "gpt-6-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-09-24T13:40:31.654808+08:00",
+      "reason": "model returned empty paragraphs",
+      "audit_issues": [],
+      "fingerprint": "dc544b7866838bc22c5c85b6e176dcbaf3f7824f",
+      "translation_path": "",
+      "retry_policy": "manual_only"
+    }
+  },
+  "updated_at": "2026-09-24T13:40:31.654808+08:00"
+}
