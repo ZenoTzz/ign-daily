@@ -1,0 +1,97 @@
+{
+  "id": 12,
+  "url": "https://www.ign.com/articles/worlds-first-official-minecraft-hotel-revealed-for-2027-first-ever-minecraft-rollercoaster-named",
+  "en_title": "World's First Official Minecraft Hotel Revealed for 2027, First Ever Minecraft Rollercoaster Named",
+  "cn_title": "《我的世界》首家官方酒店2027年开业",
+  "subtitle": "逃离下界",
+  "opus_summary": "默林娱乐与Mojang Studios宣布，全球首家《我的世界》官方酒店及首款主题过山车将落户英国切辛顿冒险世界度假村，计划于2027年开放。过山车名为《逃离下界》，园区还将提供互动冒险、积木游乐场景和主题商品。",
+  "publish_time_cn": "2026-09-27 01:30",
+  "paragraphs": [
+    {
+      "en": "Minecraft World got two announcements at Minecraft LIVE today: the world’s first official Minecraft hotel, and the name of the first ever Minecraft rollercoaster.",
+      "cn": "《我的世界》LIVE今日公布了两项消息：全球首家《我的世界》官方酒店，以及首款《我的世界》主题过山车的名称。"
+    },
+    {
+      "en": "Minecraft World Hotel and the Escape the Nether rollercoaster are confirmed for the Minecraft experience at Chessington World of Adventures Resort, and are set to open their doors at some point next year, Merlin Entertainments and Mojang Studios announced.",
+      "cn": "默林娱乐与Mojang Studios宣布，《我的世界》世界酒店和《逃离下界》过山车将落户Chessington World of Adventures Resort的《我的世界》主题体验区，并计划于明年某个时间开放。"
+    },
+    {
+      "en": "Concept art already released for Minecraft World features wooden houses, Creepers, TNT blocks, and even a Nether dining area. Expect interactive adventures, blockbuilt playscapes, and themed retail.",
+      "cn": "此前公布的《我的世界》世界概念图展示了木屋、苦力怕、TNT方块，甚至还有下界主题用餐区。游客还将体验互动冒险、积木搭建的游乐场景和主题商品。"
+    },
+    {
+      "en": "For more, check out everything announced at Minecraft LIVE .",
+      "cn": "更多内容请查看《我的世界》LIVE公布的全部消息。"
+    }
+  ],
+  "pending_dict": [
+    {
+      "en": "Escape the Nether",
+      "cn": "逃离下界",
+      "cat": "terms",
+      "source": "ai_guess",
+      "reason": "主题过山车名称，原文未提供官方中文译名"
+    },
+    {
+      "en": "Chessington World of Adventures Resort",
+      "cn": "Chessington World of Adventures Resort",
+      "cat": "terms",
+      "source": "ai_guess",
+      "reason": "度假村名称，未确认官方中文译名"
+    }
+  ],
+  "translated_terms": {
+    "Minecraft": "《我的世界》",
+    "Minecraft LIVE": "《我的世界》LIVE",
+    "Minecraft World Hotel": "《我的世界》世界酒店",
+    "Escape the Nether": "《逃离下界》",
+    "Merlin Entertainments": "默林娱乐",
+    "Mojang Studios": "Mojang Studios",
+    "Creepers": "苦力怕",
+    "Nether": "下界"
+  },
+  "cover": "https://assets-prd.ignimgs.com/2026/09/26/htkjbgrxuaaoaiy-1790443786886.jpg",
+  "images": [
+    {
+      "url": "https://assets-prd.ignimgs.com/2026/09/26/htkjbgrxuaaoaiy-1790443786886.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "caption": ""
+    },
+    {
+      "url": "https://kraken.ignimgs.com/apple-touch-icon.png",
+      "caption": ""
+    },
+    {
+      "url": "https://assets-prd.ignimgs.com/2021/12/14/minecraft-1639513933156.jpg",
+      "caption": ""
+    }
+  ],
+  "style_self_check": {
+    "read_style_profile": true,
+    "no_english_syntax": true,
+    "title_rewritten": true,
+    "subtitle_rewritten": true,
+    "xbox_normalized": true,
+    "xbox_series_normalized": true,
+    "quotes_checked": true,
+    "currency_checked": true,
+    "dictionary_checked": true
+  },
+  "translator": "api",
+  "translator_provider": "openai-compatible",
+  "translator_model": "gpt-6-sol",
+  "reasoning_effort": "low",
+  "reviewer_model": "gpt-6-sol",
+  "reviewed_at": "2026-09-28T01:03:25.283730+00:00",
+  "prompt_version": "api-fulltext-2026-07-v2",
+  "quality_gate_version": 1,
+  "quality_review": {
+    "status": "passed",
+    "reviewer_model": "gpt-6-sol",
+    "reviewed_at": "2026-09-28T01:03:25.283730+00:00",
+    "checks": {
+      "source_coverage": true,
+      "quote_attribution": true,
+      "numeric_facts": true
+    }
+  }
+}

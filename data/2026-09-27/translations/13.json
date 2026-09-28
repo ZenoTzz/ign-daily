@@ -1,0 +1,94 @@
+{
+  "id": 13,
+  "url": "https://www.ign.com/articles/minecraft-is-getting-its-first-new-dimension-in-over-14-years",
+  "en_title": "Minecraft Is Getting Its First New Dimension in Over 14 Years",
+  "cn_title": "《我的世界》14年多来首添新维度",
+  "subtitle": "新维度登场",
+  "opus_summary": "Mojang宣布，神秘新维度Sift将于2027年加入《我的世界》Java版和基岩版。这是《我的世界》14年多来首次新增维度，并将成为继主世界、下界和末地之后的第四个官方维度。",
+  "publish_time_cn": "2026-09-27 01:28",
+  "paragraphs": [
+    {
+      "en": "Minecraft developer Mojang has announced that the Sift is coming to Java and Bedrock Edition in 2027 — the game's first new dimension in over 14 years.",
+      "cn": "《我的世界》开发商Mojang宣布，Sift将于2027年加入Java版和基岩版。这将是游戏14年多来首次新增维度。"
+    },
+    {
+      "en": "As revealed at Minecraft LIVE September 2026, the Sift, which had been announced for upcoming dungeon crawler Minecraft Dungeons 2, is also coming to Minecraft Java & Bedrock Edition next year. It joins the Overworld, The Nether, and The End as Minecraft’s official fourth dimension.",
+      "cn": "正如2026年9月《我的世界》直播节目中公布的那样，此前已宣布加入即将推出的地牢探索游戏《我的世界：地下城2》的Sift，也将于明年登陆《我的世界》Java版和基岩版。它将与主世界、下界和末地并列，成为《我的世界》官方第四个维度。"
+    },
+    {
+      "en": "The Sift is a mysterious new dimension with distinct environments, inhabitants, dangers and gameplay.",
+      "cn": "Sift是一个神秘的新维度，拥有独特的环境、居民、危险和玩法。"
+    },
+    {
+      "en": "For more, check out everything announced at Minecraft LIVE .",
+      "cn": "更多信息请查看《我的世界》直播节目公布的全部内容。"
+    }
+  ],
+  "pending_dict": [
+    {
+      "en": "Sift",
+      "cn": "Sift",
+      "cat": "games",
+      "source": "ai_guess",
+      "reason": "原文未提供稳定中文译名，暂保留英文名称"
+    }
+  ],
+  "translated_terms": {
+    "Minecraft": "《我的世界》",
+    "Minecraft Dungeons 2": "《我的世界：地下城2》",
+    "Sift": "Sift",
+    "Java Edition": "Java版",
+    "Bedrock Edition": "基岩版",
+    "Overworld": "主世界",
+    "The Nether": "下界",
+    "The End": "末地",
+    "Minecraft LIVE": "《我的世界》直播节目"
+  },
+  "cover": "https://assets-prd.ignimgs.com/2026/09/26/screenshot-2026-09-26-182752-1790443689989.png?width=1280&format=jpg&auto=webp&quality=80",
+  "images": [
+    {
+      "url": "https://assets-prd.ignimgs.com/2026/09/26/screenshot-2026-09-26-182752-1790443689989.png?width=1280&format=jpg&auto=webp&quality=80",
+      "caption": ""
+    },
+    {
+      "url": "https://kraken.ignimgs.com/apple-touch-icon.png",
+      "caption": ""
+    },
+    {
+      "url": "https://assets-prd.ignimgs.com/2026/09/26/screenshot-2026-09-26-184659-1790444828258.png",
+      "caption": ""
+    },
+    {
+      "url": "https://assets-prd.ignimgs.com/2021/12/14/minecraft-1639513933156.jpg",
+      "caption": ""
+    },
+    {
+      "url": "https://assets-prd.ignimgs.com/2026/09/26/screenshot-2026-09-26-184405-1790444659237.png",
+      "caption": ""
+    }
+  ],
+  "style_self_check": {
+    "read_style_profile": true,
+    "no_english_syntax": true,
+    "title_rewritten": true,
+    "subtitle_rewritten": true,
+    "xbox_normalized": true,
+    "xbox_series_normalized": true,
+    "quotes_checked": true,
+    "currency_checked": true,
+    "dictionary_checked": true
+  },
+  "translator": "api",
+  "translator_provider": "openai-compatible",
+  "translator_model": "gpt-6-sol",
+  "quality_status": "needs_manual_review",
+  "manual_release_required": true,
+  "audit_issues": [
+    {
+      "type": "style_self_check",
+      "detail": "cn_title directly reuses the old title: '《我的世界》14年多来首添新维度'"
+    }
+  ],
+  "audit_failed_at": "2026-09-28T09:04:16.904974+08:00",
+  "audit_failure_reason": "风格拒收: cn_title directly reuses the old title: '《我的世界》14年多来首添新维度'"
+}

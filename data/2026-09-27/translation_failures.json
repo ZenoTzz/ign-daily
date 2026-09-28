@@ -1,0 +1,44 @@
+{
+  "date": "2026-09-27",
+  "items": {
+    "9": {
+      "id": 9,
+      "url": "https://www.ign.com/articles/melissa-barrera-says-she-would-reprise-her-scream-role-reveals-conditions-for-her-return",
+      "en_title": "Melissa Barrera Says She Would Reprise Her Scream Role, Reveals Conditions for Her Return",
+      "cn_title": "Melissa Barrera愿回归《惊声尖叫》，但有条件",
+      "model": "gpt-6-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-09-28T09:01:34.014120+08:00",
+      "reason": "风格拒收: cn_title directly reuses the old title: 'Melissa Barrera愿回归《惊声尖叫》，但有条件'",
+      "audit_issues": [
+        {
+          "type": "style_self_check",
+          "detail": "cn_title directly reuses the old title: 'Melissa Barrera愿回归《惊声尖叫》，但有条件'"
+        }
+      ],
+      "fingerprint": "aca6e7210a07f5471331023568ce381aa66a64cb",
+      "translation_path": "translations/09.json",
+      "retry_policy": "manual_only"
+    },
+    "13": {
+      "id": 13,
+      "url": "https://www.ign.com/articles/minecraft-is-getting-its-first-new-dimension-in-over-14-years",
+      "en_title": "Minecraft Is Getting Its First New Dimension in Over 14 Years",
+      "cn_title": "《我的世界》14年多来首添新维度",
+      "model": "gpt-6-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-09-28T09:04:16.904974+08:00",
+      "reason": "风格拒收: cn_title directly reuses the old title: '《我的世界》14年多来首添新维度'",
+      "audit_issues": [
+        {
+          "type": "style_self_check",
+          "detail": "cn_title directly reuses the old title: '《我的世界》14年多来首添新维度'"
+        }
+      ],
+      "fingerprint": "89b60bb48f9b210c2d244ec7be83a1eb4a54606e",
+      "translation_path": "translations/13.json",
+      "retry_policy": "manual_only"
+    }
+  },
+  "updated_at": "2026-09-28T09:04:16.904974+08:00"
+}

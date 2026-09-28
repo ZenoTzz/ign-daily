@@ -2,17 +2,41 @@
   "date": "2026-09-28",
   "articles": [
     {
+      "id": 6,
+      "category": "人物新闻",
+      "emoji": "🎬",
+      "en_title": "'It Was Really Great and Really Emotional' — Anthony Mackie Remembers Chris Evans Showing Him the Avengers: Endgame Script Early to Reveal How He'd Become Captain America",
+      "cn_title": "安东尼·麦凯回忆克里斯·埃文斯提前透露美国队长交接",
+      "summary": "安东尼·麦凯回忆称，克里斯·埃文斯曾在《复仇者联盟4：终局之战》早期拍摄阶段，私下把剧本交给他阅读，让他提前得知山姆·威尔逊将接任美国队长。麦凯表示，这一举动既令人感动，也体现了两人的深厚友谊。",
+      "url": "https://www.ign.com/articles/it-was-really-great-and-really-emotional-anthony-mackie-remembers-chris-evans-showing-him-the-avengers-endgame-script-early-to-reveal-how-hed-become-captain-america",
+      "publish_time_cn": "2026-09-28 04:46",
+      "pub_date": "2026-09-28 04:46",
+      "cover_image": "https://assets-prd.ignimgs.com/2025/01/17/captainamericabravenewworldtvspotteasertrailer-ign-blogroll-1737123740587.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2025/01/17/captainamericabravenewworldtvspotteasertrailer-ign-blogroll-1737123740587.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2025/01/17/captainamericabravenewworldtvspotteasertrailer-ign-blogroll-1737123740587.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2025/01/17/captainamericabravenewworldtvspotteasertrailer-ign-blogroll-1737123740587.jpg?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2025/01/17/captainamericabravenewworldtvspotteasertrailer-ign-blogroll-1737123740587.jpg?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2025/01/17/captainamericabravenewworldtvspotteasertrailer-ign-blogroll-1737123740587.jpg",
+        "https://kraken.ignimgs.com/apple-touch-icon.png",
+        "https://assets-prd.ignimgs.com/2026/08/25/avengers-endgame-ver2-poster-button-1552573654882-1787677602165.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-09-28T05:17:37+08:00"
+    },
+    {
       "id": 5,
       "category": "影视资讯",
       "emoji": "🎬",
       "en_title": "Avengers: Endgame Encore Collects $86 Million in Theaters as New Scenes Help MCU Fans Prep for Doomsday",
-      "cn_title": "《复仇者联盟4》重映约收8600万美元(约合人民币6亿元)",
-      "summary": "《复仇者联盟4：终局之战》重映版登顶全球周末票房榜，创下影史第二高重映首周末票房，仅次于2012年的《泰坦尼克号》3D版。新增的几分钟片段直接关联今年12月上映的《Avengers: Doomsday》，导演Joe Russo此前称这些内容对新片剧情「至关重要」。",
+      "cn_title": "《复联4》重映首周末收8600万美元(约合人民币6亿元)",
+      "summary": "《复仇者联盟4：终局之战》重映版首周末全球票房预估达8600万美元(约合人民币6亿元)，登顶全球票房榜。新增片段直接关联今年12月的《复仇者联盟：毁灭之日》，推动影迷重返影院。",
       "url": "https://www.ign.com/articles/avengers-endgame-encore-collects-86-million-in-theaters-as-new-scenes-help-mcu-fans-prep-for-doomsday",
       "publish_time_cn": "2026-09-28 02:56",
       "pub_date": "2026-09-28 02:56",
       "cover_image": "https://assets-prd.ignimgs.com/2026/08/25/endgameencorethumb-1787674396466.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2026/08/25/endgameencorethumb-1787674396466.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/08/25/endgameencorethumb-1787674396466.png?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -23,7 +47,13 @@
         "https://assets-prd.ignimgs.com/2026/08/25/avengers-endgame-ver2-poster-button-1552573654882-1787677602165.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-09-28T03:17:34+08:00"
+      "source_fetched_at": "2026-09-28T03:17:34+08:00",
+      "translation_error": "风格拒收: style_self_check key 'currency_checked' is not true (got False)",
+      "translation_failed_at": "2026-09-28T09:22:37.662120+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "gpt-6-sol",
+      "translation_path": "translations/05.json"
     },
     {
       "id": 4,
@@ -83,8 +113,8 @@
       "url": "https://www.ign.com/articles/star-wars-nabs-spider-man-director-jon-watts-for-first-movie-in-disneys-new-skywalker-saga-trilogy",
       "publish_time_cn": "2026-09-27 09:55",
       "pub_date": "2026-09-27 09:55",
-      "cover_image": "https://assets-prd.ignimgs.com/2023/04/07/daisy-1680868569808.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2023/04/07/daisy-1680868569808.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2023/04/07/daisy-1680868569808.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2023/04/07/daisy-1680868569808.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -96,7 +126,16 @@
         "https://assets-prd.ignimgs.com/2026/09/27/jon-watts-1790473618579.png"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-09-27T10:17:34+08:00"
+      "source_fetched_at": "2026-09-27T10:17:34+08:00",
+      "translation_path": "translations/02.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "gpt-6-sol",
+      "reasoning_effort": "low",
+      "reviewer_model": "gpt-6-sol",
+      "reviewed_at": "2026-09-28T01:21:42.396220+00:00",
+      "prompt_version": "api-fulltext-2026-07-v2",
+      "quality_gate_version": 1
     },
     {
       "id": 1,
@@ -133,5 +172,5 @@
       ]
     }
   ],
-  "total": 5
+  "total": 6
 }

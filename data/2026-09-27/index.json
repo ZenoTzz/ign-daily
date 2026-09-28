@@ -11,8 +11,8 @@
       "url": "https://www.ign.com/articles/microsoft-ceo-says-streamlining-at-xbox-is-great-to-see-as-layoffs-affect-thousands",
       "publish_time_cn": "2026-09-27 04:52",
       "pub_date": "2026-09-27 04:52",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/09/26/satya-nadella-1790455710955.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/09/26/satya-nadella-1790455710955.png",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/09/26/satya-nadella-1790455710955.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/09/26/satya-nadella-1790455710955.png?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -23,7 +23,16 @@
         "https://assets1.ignimgs.com/2019/12/13/xbox-series-x---button-01a-1576278376804.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-09-27T05:17:30+08:00"
+      "source_fetched_at": "2026-09-27T05:17:30+08:00",
+      "translation_path": "translations/18.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "gpt-6-sol",
+      "reasoning_effort": "low",
+      "reviewer_model": "gpt-6-sol",
+      "reviewed_at": "2026-09-28T01:08:06.484174+00:00",
+      "prompt_version": "api-fulltext-2026-07-v2",
+      "quality_gate_version": 1
     },
     {
       "id": 17,
@@ -83,8 +92,8 @@
       "url": "https://www.ign.com/articles/the-last-of-us-gets-animated-background-on-ps5-as-naughty-dog-teases-announcements-for-tlou-day-2026",
       "publish_time_cn": "2026-09-27 02:29",
       "pub_date": "2026-09-27 02:29",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/09/26/the-last-of-us-background-ps5-1790446863917.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/09/26/the-last-of-us-background-ps5-1790446863917.png",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/09/26/the-last-of-us-background-ps5-1790446863917.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/09/26/the-last-of-us-background-ps5-1790446863917.png?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -95,7 +104,16 @@
         "https://assets-prd.ignimgs.com/2022/06/09/the-last-of-us-part-1-button-1654791855870.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-09-27T02:47:38+08:00"
+      "source_fetched_at": "2026-09-27T02:47:38+08:00",
+      "translation_path": "translations/16.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "gpt-6-sol",
+      "reasoning_effort": "low",
+      "reviewer_model": "gpt-6-sol",
+      "reviewed_at": "2026-09-28T01:06:25.625161+00:00",
+      "prompt_version": "api-fulltext-2026-07-v2",
+      "quality_gate_version": 1
     },
     {
       "id": 11,
@@ -107,8 +125,8 @@
       "url": "https://www.ign.com/articles/minecraft-confirms-ice-caves-as-next-game-drop-adds-frozen-zombies-ice-balls-and-more",
       "publish_time_cn": "2026-09-27 01:32",
       "pub_date": "2026-09-27 01:32",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/09/26/800-800-1790443907943.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/09/26/800-800-1790443907943.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/09/26/800-800-1790443907943.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/09/26/800-800-1790443907943.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -119,7 +137,16 @@
         "https://assets-prd.ignimgs.com/2021/12/14/minecraft-1639513933156.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-09-27T01:48:57+08:00"
+      "source_fetched_at": "2026-09-27T01:48:57+08:00",
+      "translation_path": "translations/11.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "gpt-6-sol",
+      "reasoning_effort": "low",
+      "reviewer_model": "gpt-6-sol",
+      "reviewed_at": "2026-09-28T01:02:03.936144+00:00",
+      "prompt_version": "api-fulltext-2026-07-v2",
+      "quality_gate_version": 1
     },
     {
       "id": 12,
@@ -131,8 +158,8 @@
       "url": "https://www.ign.com/articles/worlds-first-official-minecraft-hotel-revealed-for-2027-first-ever-minecraft-rollercoaster-named",
       "publish_time_cn": "2026-09-27 01:30",
       "pub_date": "2026-09-27 01:30",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/09/26/htkjbgrxuaaoaiy-1790443786886.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/09/26/htkjbgrxuaaoaiy-1790443786886.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/09/26/htkjbgrxuaaoaiy-1790443786886.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/09/26/htkjbgrxuaaoaiy-1790443786886.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -143,7 +170,16 @@
         "https://assets-prd.ignimgs.com/2021/12/14/minecraft-1639513933156.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-09-27T01:49:00+08:00"
+      "source_fetched_at": "2026-09-27T01:49:00+08:00",
+      "translation_path": "translations/12.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "gpt-6-sol",
+      "reasoning_effort": "low",
+      "reviewer_model": "gpt-6-sol",
+      "reviewed_at": "2026-09-28T01:03:25.283730+00:00",
+      "prompt_version": "api-fulltext-2026-07-v2",
+      "quality_gate_version": 1
     },
     {
       "id": 13,
@@ -151,12 +187,12 @@
       "emoji": "⛏️",
       "en_title": "Minecraft Is Getting Its First New Dimension in Over 14 Years",
       "cn_title": "《我的世界》14年多来首添新维度",
-      "summary": "Mojang宣布，全新维度Sift将于2027年加入《我的世界》Java版和基岩版，这是游戏14年多来首次新增维度。Sift此前已确定会出现在即将推出的《我的世界：地下城2》中；它将成为《我的世界》继主世界、下界和末地之后的第四个官方维度，拥有独特的环境、居民、危险和玩法。",
+      "summary": "Mojang宣布，神秘新维度Sift将于2027年加入《我的世界》Java版和基岩版。这是《我的世界》14年多来首次新增维度，并将成为继主世界、下界和末地之后的第四个官方维度。",
       "url": "https://www.ign.com/articles/minecraft-is-getting-its-first-new-dimension-in-over-14-years",
       "publish_time_cn": "2026-09-27 01:28",
       "pub_date": "2026-09-27 01:28",
       "cover_image": "https://assets-prd.ignimgs.com/2026/09/26/screenshot-2026-09-26-182752-1790443689989.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2026/09/26/screenshot-2026-09-26-182752-1790443689989.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/09/26/screenshot-2026-09-26-182752-1790443689989.png?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -169,7 +205,13 @@
         "https://assets-prd.ignimgs.com/2026/09/26/screenshot-2026-09-26-184405-1790444659237.png"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-09-27T01:49:06+08:00"
+      "source_fetched_at": "2026-09-27T01:49:06+08:00",
+      "translation_error": "风格拒收: cn_title directly reuses the old title: '《我的世界》14年多来首添新维度'",
+      "translation_failed_at": "2026-09-28T09:04:16.904974+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "gpt-6-sol",
+      "translation_path": "translations/13.json"
     },
     {
       "id": 14,
@@ -227,12 +269,12 @@
       "emoji": "🎬",
       "en_title": "Melissa Barrera Says She Would Reprise Her Scream Role, Reveals Conditions for Her Return",
       "cn_title": "Melissa Barrera愿回归《惊声尖叫》，但有条件",
-      "summary": "Melissa Barrera表示，她愿意再次出演《惊声尖叫》中的Sam Carpenter，但只要Spyglass Media仍持有系列版权，她就不会回归。她称该公司高层曾给她贴上不实标签，至今没有道歉；如果版权转到她认为更能尊重韦斯·克雷文遗产的人手中，她会考虑回归。",
+      "summary": "Melissa Barrera表示，只要Spyglass Media持有《惊声尖叫》版权，她就不会回归。若版权交由更尊重韦斯·克雷文遗产的新管理层，她愿意考虑再次出演。",
       "url": "https://www.ign.com/articles/melissa-barrera-says-she-would-reprise-her-scream-role-reveals-conditions-for-her-return",
       "publish_time_cn": "2026-09-27 00:19",
       "pub_date": "2026-09-27 00:19",
       "cover_image": "https://assets-prd.ignimgs.com/2024/03/28/melissa-barrera-comments-scream-7-1711648434561.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2024/03/28/melissa-barrera-comments-scream-7-1711648434561.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2024/03/28/melissa-barrera-comments-scream-7-1711648434561.png?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -243,7 +285,13 @@
         "https://assets-prd.ignimgs.com/2026/01/28/scream-7-scream7-dom-online-payoff-1-sheet-04-fin20-rgb-1769625362814.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-09-27T01:18:52+08:00"
+      "source_fetched_at": "2026-09-27T01:18:52+08:00",
+      "translation_error": "风格拒收: cn_title directly reuses the old title: 'Melissa Barrera愿回归《惊声尖叫》，但有条件'",
+      "translation_failed_at": "2026-09-28T09:01:34.014120+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "gpt-6-sol",
+      "translation_path": "translations/09.json"
     },
     {
       "id": 10,
@@ -294,8 +342,8 @@
       "url": "https://www.ign.com/articles/john-goodman-laura-bailey-and-ian-alexander-to-star-in-hbos-the-last-of-us-season-3",
       "publish_time_cn": "2026-09-26 23:00",
       "pub_date": "2026-09-26 23:00",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/09/25/john-goodman-laura-bailey-ian-alexander-cast-last-of-us-season-3-1790379382320.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/09/25/john-goodman-laura-bailey-ian-alexander-cast-last-of-us-season-3-1790379382320.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/09/25/john-goodman-laura-bailey-ian-alexander-cast-last-of-us-season-3-1790379382320.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/09/25/john-goodman-laura-bailey-ian-alexander-cast-last-of-us-season-3-1790379382320.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -306,7 +354,16 @@
         "https://assets-prd.ignimgs.com/2022/11/02/the-last-of-us-tv-button-1667405909077.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-09-26T23:18:54+08:00"
+      "source_fetched_at": "2026-09-26T23:18:54+08:00",
+      "translation_path": "translations/05.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "gpt-6-sol",
+      "reasoning_effort": "low",
+      "reviewer_model": "gpt-6-sol",
+      "reviewed_at": "2026-09-28T00:59:31.592708+00:00",
+      "prompt_version": "api-fulltext-2026-07-v2",
+      "quality_gate_version": 1
     },
     {
       "id": 6,

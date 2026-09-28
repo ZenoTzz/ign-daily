@@ -246,6 +246,37 @@
       "source_fetched_at": "2026-09-26T00:48:03+08:00"
     },
     {
+      "id": 31,
+      "category": "游戏新闻",
+      "emoji": "🎮",
+      "en_title": "As Resident Evil Requiem Passes $500m Revenue, Analysis Shows 8.6% Sales Were on Xbox, With Remaining 91% Shared Between PS5 and Steam",
+      "cn_title": "《生化危机：安魂曲》XBOX销量仅占8.6%",
+      "summary": "Alinea Analytics分析显示，《生化危机：安魂曲》售出850万份，其中XBOX版约73.1万份，占8.6%；PS5版占48.1%，Steam版占43.4%。人民币换算待核实。",
+      "url": "https://www.ign.com/articles/as-resident-evil-requiem-passes-500m-revenue-analysis-shows-86-sales-were-on-xbox-with-remaining-91-shared-between-ps5-and-steam",
+      "publish_time_cn": "2026-09-26 00:17",
+      "pub_date": "2026-09-26 00:17",
+      "cover_image": "https://assets-prd.ignimgs.com/2023/07/12/xbox-2-blogroll-1689179393588.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "needs_review",
+      "images": [
+        "https://assets-prd.ignimgs.com/2023/07/12/xbox-2-blogroll-1689179393588.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2023/07/12/xbox-2-blogroll-1689179393588.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2023/07/12/xbox-2-blogroll-1689179393588.jpg?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2023/07/12/xbox-2-blogroll-1689179393588.jpg?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2023/07/12/xbox-2-blogroll-1689179393588.jpg",
+        "https://kraken.ignimgs.com/apple-touch-icon.png",
+        "https://assets-prd.ignimgs.com/2026/01/13/residentevil-1768340841615.jpg",
+        "https://assets-prd.ignimgs.com/2026/09/25/htevm-ew8aa3i26-1790349126593.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-09-28T09:27:47+08:00",
+      "translation_error": "风格拒收: style_self_check key 'currency_checked' is not true (got False)",
+      "translation_failed_at": "2026-09-28T09:33:09.021665+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "gpt-6-sol",
+      "translation_path": "translations/31.json"
+    },
+    {
       "id": 19,
       "category": "观点推荐",
       "emoji": "📺",
@@ -598,8 +629,8 @@
       "url": "https://www.ign.com/articles/the-next-halo-game-from-halo-studios-was-reportedly-still-years-away-before-microsoft-handed-the-franchise-to-activision",
       "publish_time_cn": "2026-09-25 19:10",
       "pub_date": "2026-09-25 19:10",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/09/25/ss-6773ca4386fb78b10c987902bf2f66a1038d7829-1920x1080-1790334651616.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/09/25/ss-6773ca4386fb78b10c987902bf2f66a1038d7829-1920x1080-1790334651616.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/09/25/ss-6773ca4386fb78b10c987902bf2f66a1038d7829-1920x1080-1790334651616.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/09/25/ss-6773ca4386fb78b10c987902bf2f66a1038d7829-1920x1080-1790334651616.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -610,7 +641,16 @@
         "https://assets-prd.ignimgs.com/2025/10/24/halo-1761339042403.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-09-25T19:47:36+08:00"
+      "source_fetched_at": "2026-09-25T19:47:36+08:00",
+      "translation_path": "translations/06.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "gpt-6-sol",
+      "reasoning_effort": "low",
+      "reviewer_model": "gpt-6-sol",
+      "reviewed_at": "2026-09-28T01:32:18.910828+00:00",
+      "prompt_version": "api-fulltext-2026-07-v2",
+      "quality_gate_version": 1
     },
     {
       "id": 5,
@@ -765,5 +805,5 @@
       "source_fetched_at": "2026-09-25T17:17:45+08:00"
     }
   ],
-  "total": 30
+  "total": 31
 }

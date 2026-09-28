@@ -1,0 +1,25 @@
+{
+  "date": "2026-09-26",
+  "items": {
+    "31": {
+      "id": 31,
+      "url": "https://www.ign.com/articles/as-resident-evil-requiem-passes-500m-revenue-analysis-shows-86-sales-were-on-xbox-with-remaining-91-shared-between-ps5-and-steam",
+      "en_title": "As Resident Evil Requiem Passes $500m Revenue, Analysis Shows 8.6% Sales Were on Xbox, With Remaining 91% Shared Between PS5 and Steam",
+      "cn_title": "《生化危机：安魂曲》XBOX销量仅占8.6%",
+      "model": "gpt-6-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-09-28T09:33:09.021665+08:00",
+      "reason": "风格拒收: style_self_check key 'currency_checked' is not true (got False)",
+      "audit_issues": [
+        {
+          "type": "style_self_check",
+          "detail": "style_self_check key 'currency_checked' is not true (got False)"
+        }
+      ],
+      "fingerprint": "1c17f9a06c9d0abc566b07c3212224a941690348",
+      "translation_path": "translations/31.json",
+      "retry_policy": "manual_only"
+    }
+  },
+  "updated_at": "2026-09-28T09:33:09.021665+08:00"
+}

@@ -1,0 +1,25 @@
+{
+  "date": "2026-09-28",
+  "items": {
+    "5": {
+      "id": 5,
+      "url": "https://www.ign.com/articles/avengers-endgame-encore-collects-86-million-in-theaters-as-new-scenes-help-mcu-fans-prep-for-doomsday",
+      "en_title": "Avengers: Endgame Encore Collects $86 Million in Theaters as New Scenes Help MCU Fans Prep for Doomsday",
+      "cn_title": "《复联4》重映首周末收8600万美元(约合人民币6亿元)",
+      "model": "gpt-6-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-09-28T09:22:37.662120+08:00",
+      "reason": "风格拒收: style_self_check key 'currency_checked' is not true (got False)",
+      "audit_issues": [
+        {
+          "type": "style_self_check",
+          "detail": "style_self_check key 'currency_checked' is not true (got False)"
+        }
+      ],
+      "fingerprint": "f0330fe396e2823845f25114899a9e11aa5c97a6",
+      "translation_path": "translations/05.json",
+      "retry_policy": "manual_only"
+    }
+  },
+  "updated_at": "2026-09-28T09:22:37.662120+08:00"
+}
