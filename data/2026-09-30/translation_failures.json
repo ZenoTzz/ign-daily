@@ -1,0 +1,123 @@
+{
+  "date": "2026-09-30",
+  "items": {
+    "1": {
+      "id": 1,
+      "url": "https://www.ign.com/articles/naughty-dog-will-fully-reveal-intergalactic-in-2027-but-no-release-window-yet",
+      "en_title": "Naughty Dog Will 'Fully Reveal' Intergalactic in 2027, but No Release Window Yet",
+      "cn_title": "顽皮狗2027年完整公开《星际：异端先知》，发售时间未定",
+      "model": "gpt-6-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-09-29T09:13:51.828307+08:00",
+      "reason": "paragraph 6 missing cn",
+      "audit_issues": [
+        {
+          "type": "manual_translation_required",
+          "detail": "one or more paragraph chunks failed after retry; draft kept for manual review"
+        }
+      ],
+      "fingerprint": "7aa39b20048b973d78ac7f0f171115cb14ccadea",
+      "translation_path": "translations/01.json",
+      "retry_policy": "manual_only"
+    },
+    "33": {
+      "id": 33,
+      "url": "https://www.ign.com/articles/rockstar-confirms-gta-6-simulates-tropical-storms-and-hurricanes",
+      "en_title": "Rockstar Confirms GTA 6 Simulates Tropical Storms and Hurricanes",
+      "cn_title": "Rockstar确认《GTA6》模拟风暴",
+      "model": "gpt-6-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-09-30T09:35:28.116510+08:00",
+      "reason": "风格拒收: cn_title directly reuses the old title: 'Rockstar确认《GTA6》模拟风暴'",
+      "audit_issues": [
+        {
+          "type": "style_self_check",
+          "detail": "cn_title directly reuses the old title: 'Rockstar确认《GTA6》模拟风暴'"
+        }
+      ],
+      "fingerprint": "82160749e27cea564d39c007a1a37c8ae6fba33e",
+      "translation_path": "translations/33.json",
+      "retry_policy": "manual_only"
+    },
+    "35": {
+      "id": 35,
+      "url": "https://www.ign.com/articles/halos-former-franchise-creative-director-sees-3-possible-paths-for-activisions-halo",
+      "en_title": "Halo's Former Franchise Creative Director Sees 3 Possible Paths for Activision's Halo",
+      "cn_title": "《光环》前创意总监谈未来三条路",
+      "model": "gpt-6-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-09-30T09:39:11.697594+08:00",
+      "reason": "model returned empty paragraphs",
+      "audit_issues": [],
+      "fingerprint": "7869a497a807e7733c2bc18c90b628d148f3b9e8",
+      "translation_path": "",
+      "retry_policy": "manual_only"
+    },
+    "43": {
+      "id": 43,
+      "url": "https://www.ign.com/articles/gta-6s-game-of-the-year-chances-have-been-called-into-question",
+      "en_title": "GTA 6's Game of the Year Chances Have Been Called Into Question",
+      "cn_title": "《GTA6》今年或无缘年度游戏",
+      "model": "gpt-6-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-09-30T09:40:31.707987+08:00",
+      "reason": "风格拒收: cn_title directly reuses the old title: '《GTA6》今年或无缘年度游戏'",
+      "audit_issues": [
+        {
+          "type": "style_self_check",
+          "detail": "cn_title directly reuses the old title: '《GTA6》今年或无缘年度游戏'"
+        }
+      ],
+      "fingerprint": "44d78fdd82afb86ad19ded6a0f2b9a3b788e628f",
+      "translation_path": "translations/43.json",
+      "retry_policy": "manual_only"
+    },
+    "46": {
+      "id": 46,
+      "url": "https://www.ign.com/articles/the-train-isnt-stopping-diablo-4-director-promises-the-game-will-still-receive-support-well-after-diablo-5-launches",
+      "en_title": "'The Train Isn't Stopping' — Diablo 4 Director Promises the Game Will Still Receive Support Well After Diablo 5 Launches",
+      "cn_title": "《暗黑破坏神4》总监：续作发售后仍会支持本作",
+      "model": "gpt-6-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-09-30T09:44:22.466753+08:00",
+      "reason": "质量门禁拒绝: paragraph 7 contains a direct quote without Chinese quote marks",
+      "audit_issues": [
+        {
+          "type": "quality_gate",
+          "detail": "paragraph 7 contains a direct quote without Chinese quote marks"
+        }
+      ],
+      "fingerprint": "ec225eb083e2a960abe0f8133e791eadea7838db",
+      "translation_path": "translations/46.json",
+      "retry_policy": "manual_only"
+    },
+    "50": {
+      "id": 50,
+      "url": "https://www.ign.com/articles/lego-dragon-ball-shenron-goku-set-officially-announced",
+      "en_title": "LEGO Dragon Ball Shenron & Goku Set Officially Announced",
+      "cn_title": "乐高公布《龙珠》神龙与悟空套装",
+      "model": "gpt-6-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-09-30T09:53:08.306744+08:00",
+      "reason": "质量门禁拒绝: paragraph 1 is missing numeric fact(s): 18; paragraph 4 is missing numeric fact(s): 2027; paragraph 4 contains a direct quote without Chinese quote marks",
+      "audit_issues": [
+        {
+          "type": "quality_gate",
+          "detail": "paragraph 1 is missing numeric fact(s): 18"
+        },
+        {
+          "type": "quality_gate",
+          "detail": "paragraph 4 is missing numeric fact(s): 2027"
+        },
+        {
+          "type": "quality_gate",
+          "detail": "paragraph 4 contains a direct quote without Chinese quote marks"
+        }
+      ],
+      "fingerprint": "242a49e3c47d86a2d06279c8eb446f3297a49d94",
+      "translation_path": "translations/50.json",
+      "retry_policy": "manual_only"
+    }
+  },
+  "updated_at": "2026-09-30T09:53:08.306744+08:00"
+}

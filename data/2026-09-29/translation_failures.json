@@ -1,0 +1,108 @@
+{
+  "date": "2026-09-29",
+  "items": {
+    "7": {
+      "id": 7,
+      "url": "https://www.ign.com/articles/cd-projekt-releases-official-list-of-all-the-improvements-in-the-witcher-3-wild-hunt-remastered",
+      "en_title": "CD Projekt Releases Official List of All the Improvements in The Witcher 3: Wild Hunt — Remastered",
+      "cn_title": "《巫师3》复刻版改进清单公布",
+      "model": "gpt-6-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-09-29T09:03:51.182770+08:00",
+      "reason": "质量门禁拒绝: paragraph 12 is suspiciously short and may omit source content",
+      "audit_issues": [
+        {
+          "type": "quality_gate",
+          "detail": "paragraph 12 is suspiciously short and may omit source content"
+        }
+      ],
+      "fingerprint": "6a5189adcc8cdb78b99971f008cc2bb3ce2da7b5",
+      "translation_path": "translations/07.json",
+      "retry_policy": "manual_only"
+    },
+    "17": {
+      "id": 17,
+      "url": "https://www.ign.com/articles/gta-6-has-an-advanced-weather-system-but-how-will-it-work",
+      "en_title": "GTA 6 Has an 'Advanced' Weather System, but How Will It Work?",
+      "cn_title": "《GTA6》确认拥有「先进」天气系统，效果如何？",
+      "model": "gpt-6-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-09-29T09:06:14.307240+08:00",
+      "reason": "风格拒收: cn_title directly reuses the old title: '《GTA6》确认拥有「先进」天气系统，效果如何？'",
+      "audit_issues": [
+        {
+          "type": "style_self_check",
+          "detail": "cn_title directly reuses the old title: '《GTA6》确认拥有「先进」天气系统，效果如何？'"
+        }
+      ],
+      "fingerprint": "c2fb13942390207031ff2a06904e844c34f2438a",
+      "translation_path": "translations/17.json",
+      "retry_policy": "manual_only"
+    },
+    "20": {
+      "id": 20,
+      "url": "https://www.ign.com/articles/the-witcher-3-gets-30-fps-on-an-rtx-5080-with-frame-gen-disabled",
+      "en_title": "The Witcher 3 Gets 30 FPS On an RTX 5080 With Frame Gen Disabled",
+      "cn_title": "《巫师3》用RTX 5080实测仅30帧",
+      "model": "gpt-6-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-09-29T09:07:51.598097+08:00",
+      "reason": "质量门禁拒绝: paragraph 2 is missing numeric fact(s): 4000; paragraph 3 is missing numeric fact(s): 4000; paragraph 4 is missing numeric fact(s): 4000; paragraph 7 is suspiciously short and may omit source content",
+      "audit_issues": [
+        {
+          "type": "quality_gate",
+          "detail": "paragraph 2 is missing numeric fact(s): 4000"
+        },
+        {
+          "type": "quality_gate",
+          "detail": "paragraph 3 is missing numeric fact(s): 4000"
+        },
+        {
+          "type": "quality_gate",
+          "detail": "paragraph 4 is missing numeric fact(s): 4000"
+        },
+        {
+          "type": "quality_gate",
+          "detail": "paragraph 7 is suspiciously short and may omit source content"
+        }
+      ],
+      "fingerprint": "dcf9f62995637971639c30716d57b46f1812db62",
+      "translation_path": "translations/20.json",
+      "retry_policy": "manual_only"
+    },
+    "22": {
+      "id": 22,
+      "url": "https://www.ign.com/articles/the-last-of-us-day-reveals-ghost-of-yotei-collab-content-and-ambiance-video-as-fans-beg-naughty-dog-for-tlou-3",
+      "en_title": "The Last of Us Day Reveals Ghost of Yotei Collab Content and Ambience Video as Fans Beg Naughty Dog for TLOU 3",
+      "cn_title": "《羊蹄山之魂》顽皮狗公布《最后生还者》日联动内容",
+      "model": "gpt-6-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-09-29T09:08:40.384656+08:00",
+      "reason": "风格拒收: cn_title directly reuses the old title: '《羊蹄山之魂》顽皮狗公布《最后生还者》日联动内容'",
+      "audit_issues": [
+        {
+          "type": "style_self_check",
+          "detail": "cn_title directly reuses the old title: '《羊蹄山之魂》顽皮狗公布《最后生还者》日联动内容'"
+        }
+      ],
+      "fingerprint": "238cdc8b66d7a555c51891a1e9ffbd9fdb669a53",
+      "translation_path": "translations/22.json",
+      "retry_policy": "manual_only"
+    },
+    "27": {
+      "id": 27,
+      "url": "https://www.ign.com/articles/as-far-as-im-concerned-thats-a-step-in-the-right-direction-path-of-exile-dev-optimistic-about-diablo-5",
+      "en_title": "\"As Far as I'm Concerned, That's a Step in the Right Direction\" – Path of Exile Dev Optimistic About Diablo 5",
+      "cn_title": "《流放之路》前开发者谨慎看好《暗黑破坏神5》",
+      "model": "gpt-6-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-09-29T09:10:17.308597+08:00",
+      "reason": "🚨 subtitle 含逗号且偏长，太像句子: 「借鉴经典，也要面向当下」",
+      "audit_issues": [],
+      "fingerprint": "fea0da8061a958672ed53a21276574027e5a6ab5",
+      "translation_path": "translations/27.json",
+      "retry_policy": "manual_only"
+    }
+  },
+  "updated_at": "2026-09-29T09:10:17.308597+08:00"
+}

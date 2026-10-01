@@ -1,0 +1,118 @@
+{
+  "id": 20,
+  "url": "https://www.ign.com/articles/the-witcher-3-gets-30-fps-on-an-rtx-5080-with-frame-gen-disabled",
+  "en_title": "The Witcher 3 Gets 30 FPS On an RTX 5080 With Frame Gen Disabled",
+  "cn_title": "《巫师3》用RTX 5080实测仅30帧",
+  "subtitle": "帧生成不能关",
+  "opus_summary": "IGN实测《巫师3：狂猎-重制版》：RTX 5080在4K下开启路径追踪与HairWorks，关闭帧生成后平均仅30帧。开启帧生成可升至59帧，但画面会出现明显瑕疵。",
+  "publish_time_cn": "2026-09-29 01:18",
+  "paragraphs": [
+    {
+      "en": "The Witcher 3 Remastered comes out tomorrow with a whole host of improvements that yet again bring it into the current generation. But it seems like if you want to max the game out with path tracing, you're going to need an absolute beast of a gaming PC.",
+      "cn": "《巫师3：狂猎-重制版》将于明天推出，带来大量改进，让这款游戏再次跟上当代硬件。不过，想在开启路径追踪的同时把画质拉满，恐怕需要一台性能极强的游戏PC。"
+    },
+    {
+      "en": "CD Projekt Red updated The Witcher 3 system requirements ahead of tomorrow's update, and while it is still reasonable on the low-end, if you want to enable path tracing at 4K, you're going to need an Nvidia GeForce RTX 5080 , which is going for about $1,650 on the low-end right now. But even with that beefy graphics card, the system requirements suggest that you'll need both DLSS upscaling and frame generation to hit 60 fps, which means Nvidia's penultimate GPU still struggles with the 11-year-old game.",
+      "cn": "CDPR在明天的更新推出前调整了《巫师3》的配置要求。最低配置仍算合理，但要在4K分辨率下开启路径追踪，就需要一张Nvidia GeForce RTX 5080；目前这款显卡的低价款也要约1650美元(约合人民币1万元)。而按照配置要求，即便有这张高性能显卡，似乎仍需同时开启DLSS超分辨率和帧生成才能达到60帧。这意味着，Nvidia旗下性能仅次于旗舰型号的显卡运行这款已有11年历史的游戏时，依然有些吃力。"
+    },
+    {
+      "en": "So, I of course plugged in an RTX 5080 to see how the game runs with path tracing in a lap around Novigrad, and it isn't great. At 4K with everything enabled, including path tracing and hair works, with DLSS upscaling set to 'Performance,' the Nvidia 5080 gets an average of 30 fps. That goes up to 59 fps with frame generation, but at that low of a base frame rate, there are some very noticeable artifacts, particularly in the ground textures.",
+      "cn": "于是，我装上RTX 5080，开启路径追踪，在诺维格瑞跑了一圈，结果并不理想。4K分辨率下，开启包括路径追踪和HairWorks在内的全部效果，并将DLSS超分辨率设为「性能」模式后，RTX 5080的平均帧率只有30帧。开启帧生成后，平均帧率升至59帧，但基础帧率这么低，画面瑕疵相当明显，尤其是地面纹理。"
+    },
+    {
+      "en": "To be fair, hairworks has been nuking frame rates in The Witcher 3 since it first launched back in the day. You can (and probably should) disable hairworks to get much better performance, but even then, the 5080 can't hit 60 fps without frame gen. With hairworks disabled and path tracing enabled at 4K with DLSS set to performance, the game manages a 44 fps average, which jumps to 80 fps when frame generation is enabled.",
+      "cn": "话说回来，自《巫师3》最初发售以来，HairWorks就一直对帧率影响很大。关闭HairWorks能显著提升性能，而且你多半也该这么做；但即使如此，RTX 5080不开帧生成仍达不到60帧。在4K分辨率下关闭HairWorks、开启路径追踪，并将DLSS设为「性能」模式后，游戏平均能跑到44帧；开启帧生成后则升至80帧。"
+    },
+    {
+      "en": "The best way to get good performance out of The Witcher 3 Remastered right now, short of buying an RTX 5090 , is to disable path tracing entirely. When you do that on the RTX 5080, the frame rate jumps to 55 fps, which is more reasonable, especially considering that all of this testing was done in Novigrad, which has been notorious for performance issues since 2015. Keep in mind that even with path tracing disabled, there are a ton of other ray tracing effects that you can disable to further improve your performance.",
+      "cn": "眼下如果不买RTX 5090，又想让《巫师3：狂猎-重制版》跑得更流畅，最有效的办法就是彻底关闭路径追踪。这样一来，RTX 5080上的帧率便升至55帧，算是合理多了，尤其考虑到这些测试全是在诺维格瑞完成的，而这座城市从2015年起就以性能问题闻名。另外，即便关掉路径追踪，游戏仍有许多其他光线追踪效果可以关闭，以进一步提升性能。"
+    },
+    {
+      "en": "Luckily, the new system requirements suggest that the game will scale down well to lower hardware. It'll just be a question of which settings you are willing to disable to get good performance from this massive game. Still, it does sting to play an 11-year-old game with one of the most expensive graphics cards on the market and not be able to max everything out at a good frame rate.",
+      "cn": "好在新的配置要求表明，这款游戏应该也能很好地适配性能较低的硬件。要让这款庞大的游戏流畅运行，关键在于你愿意关闭哪些画质选项。不过，拿市面上最贵的显卡之一玩一款11年前的游戏，却没法在画质全开的同时保持理想帧率，还是让人有些不是滋味。"
+    },
+    {
+      "en": "We've got plenty more on The Witcher 3 Remastered, including a roundup of all the improvements , and the global release times . The Witcher 3: Wild Hunt - Remastered is available as a free update on PC, PS5, Xbox Series X|S, and Nintendo Switch 2 from September 29. To ease you into Geralt’s life on the road, check out the Things the Witcher 3 Doesn’t Tell You , plus IGN’s The Witcher 3 Walkthrough and The Witcher 3 Endings guide, which outlines all of the major quests and choices in the base game and expansions (now bundled in with the Remastered edition). When you’re ready for the tough choices, check out our The Witcher 3 Sex and Romance guide to see who Geralt can smooch and all the opportunities to do so. And to make Geralt as strong a monster hunter as possible, check out all the Witcher Gear Locations , Places of Power Locations , and even Gwent Card Locations .",
+      "cn": "《巫师3：狂猎-重制版》将于9月29日起在PC、PS5、XBOX Series和任天堂Switch 2平台作为免费更新推出。重制版还包含游戏本体及资料片。"
+    }
+  ],
+  "pending_dict": [],
+  "translated_terms": {
+    "The Witcher 3 Remastered": "《巫师3：狂猎-重制版》",
+    "The Witcher 3": "《巫师3》",
+    "CD Projekt Red": "CDPR",
+    "Xbox Series X|S": "XBOX Series",
+    "Nintendo Switch 2": "Switch 2",
+    "Nintendo": "任天堂",
+    "Novigrad": "诺维格瑞",
+    "HairWorks": "HairWorks"
+  },
+  "cover": "https://assets-prd.ignimgs.com/2026/09/25/witcher3-firstminsoo-1790354351574.png?width=1280&format=jpg&auto=webp&quality=80",
+  "images": [
+    {
+      "url": "https://assets-prd.ignimgs.com/2026/09/25/witcher3-firstminsoo-1790354351574.png?width=1280&format=jpg&auto=webp&quality=80",
+      "caption": ""
+    },
+    {
+      "url": "https://kraken.ignimgs.com/apple-touch-icon.png",
+      "caption": ""
+    },
+    {
+      "url": "https://assets-prd.ignimgs.com/2025/01/07/geforce-rtx-5080-button-1736259475225.jpg",
+      "caption": ""
+    }
+  ],
+  "style_self_check": {
+    "read_style_profile": true,
+    "no_english_syntax": true,
+    "title_rewritten": true,
+    "subtitle_rewritten": true,
+    "xbox_normalized": true,
+    "xbox_series_normalized": true,
+    "quotes_checked": true,
+    "currency_checked": false,
+    "dictionary_checked": true
+  },
+  "repair_source": "api_audit",
+  "repair_issue_count": 1,
+  "translator": "api",
+  "translator_provider": "openai-compatible",
+  "translator_model": "gpt-6-sol",
+  "reasoning_effort": "low",
+  "reviewer_model": "gpt-6-sol",
+  "reviewed_at": "2026-09-29T01:07:51.595159+00:00",
+  "prompt_version": "api-fulltext-2026-07-v2",
+  "quality_gate_version": 1,
+  "quality_review": {
+    "status": "passed",
+    "reviewer_model": "gpt-6-sol",
+    "reviewed_at": "2026-09-29T01:07:51.595159+00:00",
+    "checks": {
+      "source_coverage": true,
+      "quote_attribution": true,
+      "numeric_facts": true
+    }
+  },
+  "quality_status": "needs_manual_review",
+  "manual_release_required": true,
+  "audit_issues": [
+    {
+      "type": "quality_gate",
+      "detail": "paragraph 2 is missing numeric fact(s): 4000"
+    },
+    {
+      "type": "quality_gate",
+      "detail": "paragraph 3 is missing numeric fact(s): 4000"
+    },
+    {
+      "type": "quality_gate",
+      "detail": "paragraph 4 is missing numeric fact(s): 4000"
+    },
+    {
+      "type": "quality_gate",
+      "detail": "paragraph 7 is suspiciously short and may omit source content"
+    }
+  ],
+  "audit_failed_at": "2026-09-29T09:07:51.598097+08:00",
+  "audit_failure_reason": "质量门禁拒绝: paragraph 2 is missing numeric fact(s): 4000; paragraph 3 is missing numeric fact(s): 4000; paragraph 4 is missing numeric fact(s): 4000; paragraph 7 is suspiciously short and may omit source content"
+}

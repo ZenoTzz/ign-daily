@@ -1,0 +1,102 @@
+{
+  "id": 50,
+  "url": "https://www.ign.com/articles/lego-dragon-ball-shenron-goku-set-officially-announced",
+  "en_title": "LEGO Dragon Ball Shenron & Goku Set Officially Announced",
+  "cn_title": "乐高公布《龙珠》神龙与悟空套装",
+  "subtitle": "集齐七颗龙珠",
+  "opus_summary": "乐高与东映动画合作，公布面向１８岁及以上人群的《龙珠》神龙与悟空套装，设计以陈列为主。套装包含七颗龙珠、盘旋升起的神龙和乘筋斗云的小悟空；乐高表示，２０２７年及以后还会推出更多《龙珠》套装。",
+  "publish_time_cn": "2026-09-29 22:15",
+  "paragraphs": [
+    {
+      "en": "LEGO Dragon Ball: Shenron & Goku comes from a new partnership between LEGO and Toei Animation, the company behind the animated series, created by Akira Toriyama. The set is aimed squarely at the 18+ age group, meaning it’s intended for display rather than play. As such, the set includes a buildable black base with the Dragon Ball logo, making it easy to place on a shelf or desk.",
+      "cn": "乐高与东映动画新近展开合作，推出了《龙珠》神龙与悟空套装。东映动画负责制作鸟山明创作的《龙珠》动画系列。这款套装面向１８岁及以上人群，主要供人陈列，而非拿来玩耍。因此，套装配有可拼搭的黑色底座，上面印有《龙珠》标志，方便摆在架子或书桌上。"
+    },
+    {
+      "en": "The seven orange Dragon Balls are gathered on small translucent pedestals at the foot of the set. Lightning bolts frame the left and right sides, and Shenron rises from the center, swirling up into the air as an imposing presence. The relatively small Kid Goku minifigure swoops around on his cloud, raised into the air on an adjustable LEGO arm. It looks dramatic, just like the scene it depicts.",
+      "cn": "七颗橙色龙珠摆在套装底部的小型半透明底座上。两侧有闪电造型，神龙从中央盘旋升起，气势十足。相对小巧的幼年悟空人仔乘着筋斗云盘旋，靠一根可调节的乐高支架悬在空中。整个造型颇具戏剧张力，与它呈现的场景相称。"
+    },
+    {
+      "en": "In Dragon Ball lore, once you’ve collected all seven Dragon Balls, you can summon the eternal dragon, who will grant your wish.",
+      "cn": "在《龙珠》的设定中，集齐七颗龙珠就能召唤神龙，由它实现你的愿望。"
+    },
+    {
+      "en": "This won’t be the only Dragon Ball set LEGO releases. According to the press release , there is “more to come in 2027 and beyond.” For more, check out our updated list of release dates for every LEGO set announced so far.",
+      "cn": "这不会是乐高推出的唯一一款《龙珠》套装。新闻稿称，２０２７年及以后还会推出更多套装。"
+    }
+  ],
+  "pending_dict": [],
+  "translated_terms": {
+    "LEGO": "乐高",
+    "Dragon Ball": "《龙珠》",
+    "Toei Animation": "东映动画",
+    "Akira Toriyama": "鸟山明",
+    "Shenron": "神龙",
+    "Kid Goku": "幼年悟空"
+  },
+  "cover": "https://assets-prd.ignimgs.com/2026/09/29/lego-dragon-ball-blogroll-2-1790691227121.jpg?width=1280&format=jpg&auto=webp&quality=80",
+  "images": [
+    {
+      "url": "https://assets-prd.ignimgs.com/2026/09/29/lego-dragon-ball-blogroll-2-1790691227121.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "caption": ""
+    },
+    {
+      "url": "https://assets-prd.ignimgs.com/2026/09/29/lego-dragon-ball-shenron-goku-1790689067212.png",
+      "caption": ""
+    },
+    {
+      "url": "https://kraken.ignimgs.com/apple-touch-icon.png",
+      "caption": ""
+    },
+    {
+      "url": "https://assets-prd.ignimgs.com/2022/08/24/lego-button-2-1661351794140.jpg",
+      "caption": ""
+    }
+  ],
+  "style_self_check": {
+    "read_style_profile": true,
+    "no_english_syntax": true,
+    "title_rewritten": true,
+    "subtitle_rewritten": true,
+    "xbox_normalized": true,
+    "xbox_series_normalized": true,
+    "quotes_checked": true,
+    "currency_checked": true,
+    "dictionary_checked": true
+  },
+  "translator": "api",
+  "translator_provider": "openai-compatible",
+  "translator_model": "gpt-6-sol",
+  "reasoning_effort": "low",
+  "reviewer_model": "gpt-6-sol",
+  "reviewed_at": "2026-09-30T01:53:08.304377+00:00",
+  "prompt_version": "api-fulltext-2026-07-v2",
+  "quality_gate_version": 1,
+  "quality_review": {
+    "status": "passed",
+    "reviewer_model": "gpt-6-sol",
+    "reviewed_at": "2026-09-30T01:53:08.304377+00:00",
+    "checks": {
+      "source_coverage": true,
+      "quote_attribution": true,
+      "numeric_facts": true
+    }
+  },
+  "quality_status": "needs_manual_review",
+  "manual_release_required": true,
+  "audit_issues": [
+    {
+      "type": "quality_gate",
+      "detail": "paragraph 1 is missing numeric fact(s): 18"
+    },
+    {
+      "type": "quality_gate",
+      "detail": "paragraph 4 is missing numeric fact(s): 2027"
+    },
+    {
+      "type": "quality_gate",
+      "detail": "paragraph 4 contains a direct quote without Chinese quote marks"
+    }
+  ],
+  "audit_failed_at": "2026-09-30T09:53:08.306744+08:00",
+  "audit_failure_reason": "质量门禁拒绝: paragraph 1 is missing numeric fact(s): 18; paragraph 4 is missing numeric fact(s): 2027; paragraph 4 contains a direct quote without Chinese quote marks"
+}
