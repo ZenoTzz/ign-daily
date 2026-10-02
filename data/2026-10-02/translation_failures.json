@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-02",
+  "items": {
+    "30": {
+      "id": 30,
+      "url": "https://www.ign.com/articles/ahead-of-metro-2039-metro-2033-and-metro-last-light-are-getting-next-gen-updates",
+      "en_title": "Ahead of Metro 2039, Metro 2033 and Metro Last Light Are Getting Next-Gen Updates",
+      "cn_title": "《地铁2039》前作获更新",
+      "model": "gpt-6-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-10-02T10:05:50.179031+08:00",
+      "reason": "风格拒收: Chinese translation contains forbidden platform spelling: 'xbox series x' (must write exactly 'XBOX Series')",
+      "audit_issues": [
+        {
+          "type": "style_self_check",
+          "detail": "Chinese translation contains forbidden platform spelling: 'xbox series x' (must write exactly 'XBOX Series')"
+        }
+      ],
+      "fingerprint": "5505c94dee9d3096d07d5021bf34bc089e8acbef",
+      "translation_path": "translations/30.json",
+      "retry_policy": "manual_only"
+    }
+  },
+  "updated_at": "2026-10-02T10:05:50.179031+08:00"
+}

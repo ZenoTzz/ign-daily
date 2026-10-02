@@ -1,0 +1,167 @@
+{
+  "id": 26,
+  "url": "https://www.ign.com/articles/sony-finally-brings-ai-upscaling-to-base-ps5",
+  "en_title": "Sony Finally Brings AI Upscaling To Base PS5",
+  "cn_title": "索尼为普通版PS5带来AI超分辨率",
+  "subtitle": "画面更稳了",
+  "opus_summary": "索尼为普通版PS5推出QSSR超分辨率技术，画质细节和稳定性优于传统方案，但不及PS5 Pro的PSSR。《金刚狼》和《羊蹄山之魂》将率先支持，售价900美元(约合人民币6039元)的PS5 Pro不再是唯一选择。",
+  "publish_time_cn": "2026-10-02 00:48",
+  "paragraphs": [
+    {
+      "en": "AI upscaling continues to be a huge part of the modern graphics pipeline, and while PSSR brought this tech to the PS5 Pro, the base PS5 was left without it due to its weaker GPU. That's been remedied, though, with QSSR.",
+      "cn": "AI超分辨率技术如今已成为现代图形处理流程的重要组成部分。虽然PSSR将这项技术带到了PS5 Pro，但由于GPU性能较弱，普通版PS5此前一直无法使用。如今，QSSR解决了这个问题。"
+    },
+    {
+      "en": "In a blog post , Sony detailed a new upscaling model that runs on its base console, called Quick Spectral Super Resolution, or QSSR. Just like the PSSR that debuted earlier this year on the PS5 Pro, QSSR was born from the Project Amethyst collaboration with AMD that kicked off last year.",
+      "cn": "索尼在一篇博客文章中详细介绍了这款可运行于普通版主机的新型超分辨率模型，其全称为Quick Spectral Super Resolution，简称QSSR。和今年早些时候在PS5 Pro上首次亮相的PSSR一样，QSSR也源自索尼与AMD展开的Project Amethyst合作项目，该项目于去年启动。"
+    },
+    {
+      "en": "The new model is much more lightweight than PSSR, and so it won't be quite as good at maintaining detail as PSSR is on the PS5 Pro, but it should be much more accurate than the temporal upscaling traditionally used on the console.",
+      "cn": "这款新模型比PSSR轻量得多，因此在保持细节方面不如PS5 Pro上的PSSR，但其准确度应该会明显高于主机传统使用的时间超分辨率技术。"
+    },
+    {
+      "en": "QSSR debuts in Marvel's Wolverine and Ghost of Yotei, and the respective developers seem pretty enthused about working the technology into their games. Sony's blog quotes Insomniac Head of Technology Mike Fitzgerald, who says \"QSSR adds more pixel-level clarity and stability to our environments, bringing out extra detail amidst the busy streets of Madripoor, the dense alleyways of Shinjuku, and many other areas across Logan’s epic journey. It’s a perfect companion to the launch of Marvel’s Wolverine, and it brings a great taste of the PS5 Pro experience to our players on PS5.\"",
+      "cn": "QSSR将首次应用于《金刚狼》和《羊蹄山之魂》，两款游戏的开发团队似乎都对将这项技术加入作品感到十分兴奋。索尼博客引用了Insomniac技术主管Mike Fitzgerald的话：「QSSR能为游戏环境带来更清晰的像素级画面和更稳定的表现，让马德里坡繁忙的街道、新宿错综复杂的小巷，以及Logan史诗旅程中的众多地点呈现更多细节。它是《漫威金刚狼》发售时的完美伴侣，也能让PS5玩家体验到PS5 Pro的一部分画面效果。」"
+    },
+    {
+      "en": "Likewise, Jasmin Patry, the Lead Rendering Engineer at Sucker Punch, said: “At Sucker Punch, we’re excited to bring QSSR to Ghost of Yōtei players so that they can experience the world we’ve created with even more clarity and detail. QSSR excels at resolving the fine details in our characters and environments and does so with a level of temporal stability that hasn’t been possible on the PS5 console until now. We’ve long wished that all PS5 players could experience the incredible image quality that PSSR brings to PS5 Pro, and QSSR is a positive step towards that goal!”",
+      "cn": "同样，Sucker Punch首席渲染工程师Jasmin Patry表示：「Sucker Punch很高兴能将QSSR带给《羊蹄山之魂》玩家，让他们以更清晰、细致的画面体验我们创造的世界。QSSR尤其擅长还原角色和环境中的细微之处，并能提供迄今为止PS5主机尚未实现的时间稳定性。我们一直希望所有PS5玩家都能体验PSSR为PS5 Pro带来的惊艳画质，而QSSR正朝着这个目标迈出了积极一步！」"
+    },
+    {
+      "en": "The blog also shared a couple of clips from the respective games showing QSSR in action, compared to the standard temporal upscaling on the base PS5, and the results are promising. In Wolverine, the clip zooms in on distant buildings, and while the QSSR sample is still quite blurry – it is a watered down model, after all – it is able to maintain a lot more detail in fine objects than the standard clip on the left.",
+      "cn": "索尼还在博客中分享了两款游戏的演示片段，将启用QSSR的效果与普通版PS5上的标准时间超分辨率进行对比，结果相当令人期待。《金刚狼》的片段放大了远处的建筑。虽然QSSR画面仍然比较模糊——毕竟这是一个削弱版模型——但与左侧的标准画面相比，它能在细小物体上保留更多细节。"
+    },
+    {
+      "en": "Then, in Ghost of Yotei, the camera zooms in on foliage in the foreground. In the original PS5 sample, the grass is almost a collection of floating green lines, with aliasing that cuts it up into sections. With QSSR enabled, though, the grass maintains its actual shape, even if it's still a bit noisy.",
+      "cn": "随后，《羊蹄山之魂》的镜头放大了前景中的植被。在PS5原始画面中，草地几乎像是一堆漂浮的绿色线条，锯齿还将其切割成了不同部分。启用QSSR后，草地基本保持了真实形状，尽管画面仍然有些噪点。"
+    },
+    {
+      "en": "Obviously, the model running on the more powerful PS5 Pro is going to be better at maintaining image quality than QSSR ever will. But, the PS5 Pro will now set you back $900, and so this lighter model at least brings this upscaling to more people. Sony does say that it is making QSSR available to all developers, so I'd only expect more studios to use it going forward.",
+      "cn": "显然，运行于性能更强的PS5 Pro上的模型，在保持画面质量方面肯定会优于QSSR。但PS5 Pro如今售价高达900美元(约合人民币6039元)，因此，这款更轻量的模型至少让更多人能够用上超分辨率技术。索尼表示，QSSR将向所有开发者开放，因此未来应该会有更多工作室采用这项技术。"
+    },
+    {
+      "en": "Still, we've only seen this model in action in a couple of clips on Sony's blog, so I'm not sure exactly how well it'll perform. Luckily, the patch for Wolverine and Ghost of Yotei will be going live later today, so I'll be able to see how well it holds up. But I do hope it works well, because QSSR could help bridge the gap for anyone who won't be able to afford a likely expensive PlayStation 6 for at least an extra few months.",
+      "cn": "不过，我们目前只在索尼博客的几个片段中见过这款模型的实际表现，因此还无法确定它的效果究竟如何。好在《金刚狼》和《羊蹄山之魂》的补丁将在今天晚些时候上线，我很快就能看看它的表现是否经得起检验。但我确实希望它能发挥作用，因为对于那些至少还要再过几个月才能负担得起、预计价格不菲的PlayStation 6的人来说，QSSR或许可以暂时缩小画质体验上的差距。"
+    }
+  ],
+  "pending_dict": [
+    {
+      "en": "Quick Spectral Super Resolution",
+      "cn": "快速光谱超分辨率",
+      "cat": "terms",
+      "source": "ai_guess",
+      "reason": "原文仅提供英文全称，暂无确认的通行中文译名"
+    },
+    {
+      "en": "Project Amethyst",
+      "cn": "Project Amethyst",
+      "cat": "terms",
+      "source": "ai_guess",
+      "reason": "项目名称暂无确认的通行中文译名"
+    },
+    {
+      "en": "Madripoor",
+      "cn": "马德里坡",
+      "cat": "terms",
+      "source": "ai_guess",
+      "reason": "地点译名未在已提供词库中确认"
+    },
+    {
+      "en": "Shinjuku",
+      "cn": "新宿",
+      "cat": "terms",
+      "source": "ai_guess",
+      "reason": "地点名称未在已提供词库中确认"
+    },
+    {
+      "en": "Mike Fitzgerald",
+      "cn": "Mike Fitzgerald",
+      "cat": "people",
+      "source": "ai_guess",
+      "reason": "人物暂无确认的通行中文译名"
+    },
+    {
+      "en": "Jasmin Patry",
+      "cn": "Jasmin Patry",
+      "cat": "people",
+      "source": "ai_guess",
+      "reason": "人物暂无确认的通行中文译名"
+    },
+    {
+      "en": "Sucker Punch",
+      "cn": "Sucker Punch",
+      "cat": "companies",
+      "source": "ai_guess",
+      "reason": "公司暂无确认的官方中文译名"
+    },
+    {
+      "en": "PlayStation 6",
+      "cn": "PlayStation 6",
+      "cat": "terms",
+      "source": "ai_guess",
+      "reason": "平台名称暂无确认的中文简写"
+    }
+  ],
+  "translated_terms": {
+    "Ghost of Yotei": "《羊蹄山之魂》",
+    "PlayStation": "PlayStation",
+    "Wolverine": "《金刚狼》",
+    "Insomniac": "Insomniac",
+    "Sony": "索尼",
+    "PS5": "PS5",
+    "PS5 Pro": "PS5 Pro",
+    "QSSR": "QSSR",
+    "PSSR": "PSSR",
+    "Quick Spectral Super Resolution": "Quick Spectral Super Resolution",
+    "Project Amethyst": "Project Amethyst",
+    "Marvel's Wolverine": "《金刚狼》",
+    "Mike Fitzgerald": "Mike Fitzgerald",
+    "Jasmin Patry": "Jasmin Patry",
+    "Sucker Punch": "Sucker Punch",
+    "PlayStation 6": "PlayStation 6"
+  },
+  "cover": "https://assets-prd.ignimgs.com/2025/02/26/ps5console-1740609475402.jpeg",
+  "images": [
+    {
+      "url": "https://assets-prd.ignimgs.com/2025/02/26/ps5console-1740609475402.jpeg?width=1280&format=jpg&auto=webp&quality=80",
+      "caption": ""
+    },
+    {
+      "url": "https://kraken.ignimgs.com/apple-touch-icon.png",
+      "caption": ""
+    },
+    {
+      "url": "https://assets-prd.ignimgs.com/2024/09/24/ghostofyotei-1727220081404.jpg",
+      "caption": ""
+    }
+  ],
+  "style_self_check": {
+    "read_style_profile": true,
+    "no_english_syntax": true,
+    "title_rewritten": true,
+    "subtitle_rewritten": true,
+    "xbox_normalized": true,
+    "xbox_series_normalized": true,
+    "quotes_checked": true,
+    "currency_checked": true,
+    "dictionary_checked": true
+  },
+  "translator": "api",
+  "translator_provider": "openai-compatible",
+  "translator_model": "gpt-6-sol",
+  "reasoning_effort": "low",
+  "reviewer_model": "gpt-6-sol",
+  "reviewed_at": "2026-10-02T02:05:13.282601+00:00",
+  "prompt_version": "api-fulltext-2026-07-v2",
+  "quality_gate_version": 1,
+  "quality_review": {
+    "status": "passed",
+    "reviewer_model": "gpt-6-sol",
+    "reviewed_at": "2026-10-02T02:05:13.282601+00:00",
+    "checks": {
+      "source_coverage": true,
+      "quote_attribution": true,
+      "numeric_facts": true
+    }
+  }
+}
