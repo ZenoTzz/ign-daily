@@ -107,7 +107,7 @@ class ApiProviderTests(unittest.TestCase):
         self.assertNotIn("thinking", payload)
         self.assertEqual(captured["kwargs"]["timeout"], 900)
 
-    def test_gpt6_sol_low_uses_reasoning_request_shape(self):
+    def test_gpt61_sol_low_uses_reasoning_request_shape(self):
         captured = {}
 
         def fake_request(request, **kwargs):
@@ -115,14 +115,15 @@ class ApiProviderTests(unittest.TestCase):
             return _Response()
 
         self.assertTrue(is_openai_reasoning_model("gpt-6-sol"))
+        self.assertTrue(is_openai_reasoning_model("gpt-6.1-sol"))
         with _env(TRANSLATOR_REASONING_EFFORT="low", TRANSLATOR_THINKING_MODE=None):
             with patch("translate_titles_deepseek.urllib.request.urlopen", side_effect=fake_request):
                 call_deepseek_response(
-                    "test-key", "gpt-6-sol", "https://api.apikey.fan/v1",
+                    "test-key", "gpt-6.1-sol", "https://api.apikey.fan/v1",
                     [{"role": "user", "content": "{}"}], max_tokens=321,
                 )
         payload = captured["payload"]
-        self.assertEqual(payload["model"], "gpt-6-sol")
+        self.assertEqual(payload["model"], "gpt-6.1-sol")
         self.assertEqual(payload["reasoning_effort"], "low")
         self.assertEqual(payload["max_completion_tokens"], 321)
         self.assertNotIn("max_tokens", payload)

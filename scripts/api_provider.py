@@ -40,7 +40,7 @@ def chat_completions_endpoint(base_url: str) -> str:
 def is_openai_reasoning_model(model: str) -> bool:
     """Whether the configured GPT model uses reasoning Chat Completions fields."""
     value = (model or "").strip().casefold()
-    return value == "gpt-5.6" or value.startswith("gpt-5.6-") or value == "gpt-6" or value.startswith("gpt-6-")
+    return any(value == family or value.startswith(family + "-") for family in ("gpt-5.6", "gpt-6", "gpt-6.1"))
 
 
 def normalize_reasoning_effort(value: str | None = None) -> str | None:
