@@ -1,0 +1,101 @@
+{
+  "date": "2026-10-08",
+  "items": {
+    "4": {
+      "id": 4,
+      "url": "https://www.ign.com/articles/warhammer-40000-dawn-of-war-4-dev-says-its-got-more-single-player-content-than-any-other-rts-ever-at-launch",
+      "en_title": "Warhammer 40,000: Dawn of War 4 Dev Says It's Got More Single-Player Content Than Any Other RTS Ever at Launch",
+      "cn_title": "《战锤40K：战争黎明4》首发单人内容或超所有RTS",
+      "model": "gpt-6-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-10-08T09:01:25.111855+08:00",
+      "reason": "质量门禁拒绝: paragraph 5 is missing numeric fact(s): 100%",
+      "audit_issues": [
+        {
+          "type": "quality_gate",
+          "detail": "paragraph 5 is missing numeric fact(s): 100%"
+        }
+      ],
+      "fingerprint": "c1916fa30120fb1e694d380f6c1094480b09f0af",
+      "translation_path": "translations/04.json",
+      "retry_policy": "manual_only"
+    },
+    "12": {
+      "id": 12,
+      "url": "https://www.ign.com/articles/forza-horizon-6-ps5-release-date",
+      "en_title": "Forza Horizon 6 Reportedly Coming to PS5 in January on Disc",
+      "cn_title": "据称《极限竞速：地平线6》PS5版明年1月发售",
+      "model": "gpt-6-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-10-08T09:01:52.804274+08:00",
+      "reason": "风格拒收: style_self_check key 'currency_checked' is not true (got False)",
+      "audit_issues": [
+        {
+          "type": "style_self_check",
+          "detail": "style_self_check key 'currency_checked' is not true (got False)"
+        }
+      ],
+      "fingerprint": "98d10a0158eae3c8a6775379c053e1743b18aaea",
+      "translation_path": "translations/12.json",
+      "retry_policy": "manual_only"
+    },
+    "14": {
+      "id": 14,
+      "url": "https://www.ign.com/articles/mafia-2-mafia-3-definitive-edition-leaked",
+      "en_title": "Mafia 2 and Mafia 3 Could Be Set for PS5 and Xbox Series Upgrades After Definitive Editions Leak Online",
+      "cn_title": "《四海兄弟2》《四海兄弟3》或将推出现世代升级版",
+      "model": "gpt-6-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-10-08T09:02:24.291363+08:00",
+      "reason": "质量门禁拒绝: paragraph 3 is missing numeric fact(s): 2000",
+      "audit_issues": [
+        {
+          "type": "quality_gate",
+          "detail": "paragraph 3 is missing numeric fact(s): 2000"
+        }
+      ],
+      "fingerprint": "85eb4400edd195fe7dff28cb70aeda381ffeb956",
+      "translation_path": "translations/14.json",
+      "retry_policy": "manual_only"
+    },
+    "20": {
+      "id": 20,
+      "url": "https://www.ign.com/articles/capcom-clarifies-stance-on-ai-after-re-engine-conference-comments",
+      "en_title": "Capcom Clarifies Stance on AI After RE Engine Conference Comments",
+      "cn_title": "卡普空澄清RE引擎的AI使用计划",
+      "model": "gpt-6-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-10-08T09:18:14.854095+08:00",
+      "reason": "风格拒收: cn_title directly reuses the old title: '卡普空澄清RE引擎的AI使用计划'",
+      "audit_issues": [
+        {
+          "type": "style_self_check",
+          "detail": "cn_title directly reuses the old title: '卡普空澄清RE引擎的AI使用计划'"
+        }
+      ],
+      "fingerprint": "a45bc855b7e1f9e2c59f71c40814bc3aeaced00b",
+      "translation_path": "translations/20.json",
+      "retry_policy": "manual_only"
+    },
+    "21": {
+      "id": 21,
+      "url": "https://www.ign.com/articles/gears-of-war-e-day-is-a-natural-choice-to-be-an-exclusive-studio-head-mike-crump-claims-series-carries-the-banner-for-xbox",
+      "en_title": "Gears of War E-Day is a 'Natural Choice to Be an Exclusive' – Studio Head Mike Crump Claims Series Carries The Banner For Xbox",
+      "cn_title": "《战争机器：事变日》独占是自然之选",
+      "model": "gpt-6-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-10-08T09:49:27.873172+08:00",
+      "reason": "风格拒收: Chinese translation contains forbidden platform spelling: 'xbox series x' (must write exactly 'XBOX Series')",
+      "audit_issues": [
+        {
+          "type": "style_self_check",
+          "detail": "Chinese translation contains forbidden platform spelling: 'xbox series x' (must write exactly 'XBOX Series')"
+        }
+      ],
+      "fingerprint": "db45ff243e16d2a3060fc728f608cc5923524459",
+      "translation_path": "translations/21.json",
+      "retry_policy": "manual_only"
+    }
+  },
+  "updated_at": "2026-10-08T09:49:27.873172+08:00"
+}

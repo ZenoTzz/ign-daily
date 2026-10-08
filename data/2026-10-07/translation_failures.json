@@ -1,0 +1,77 @@
+{
+  "date": "2026-10-07",
+  "items": {
+    "15": {
+      "id": 15,
+      "url": "https://www.ign.com/articles/if-you-cant-own-it-what-are-you-buying-former-playstation-boss-questions-sonys-decision-to-kill-discs",
+      "en_title": "\"If You Can't Own It, What Are You Buying?\" – Former PlayStation Boss Questions Sony's Decision to Kill Discs",
+      "cn_title": "前PlayStation主管质疑索尼停产游戏光盘",
+      "model": "gpt-6-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-10-08T10:02:44.422379+08:00",
+      "reason": "Remote end closed connection without response",
+      "audit_issues": [],
+      "fingerprint": "ee96104420dd4bc88d225bd993a3fb5ab798d6fa",
+      "translation_path": "",
+      "retry_policy": "manual_only"
+    },
+    "28": {
+      "id": 28,
+      "url": "https://www.ign.com/articles/nolan-north-is-staying-in-shape-just-in-case-sony-calls-about-uncharted-5",
+      "en_title": "Nolan North Is Staying in Shape Just in Case Sony Calls About Uncharted 5",
+      "cn_title": "Nolan North为《神秘海域5》回归保持身材",
+      "model": "gpt-6-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-10-08T10:04:02.463698+08:00",
+      "reason": "质量门禁拒绝: paragraph 7 is missing numeric fact(s): 10",
+      "audit_issues": [
+        {
+          "type": "quality_gate",
+          "detail": "paragraph 7 is missing numeric fact(s): 10"
+        }
+      ],
+      "fingerprint": "bda875b43115fe73dc66f59071015594e263e759",
+      "translation_path": "translations/28.json",
+      "retry_policy": "manual_only"
+    },
+    "31": {
+      "id": 31,
+      "url": "https://www.ign.com/articles/previous-game-pass-strategy-sent-xbox-into-freefall-ceo-asha-sharma-reportedly-tells-staff",
+      "en_title": "Previous Game Pass Strategy Sent Xbox Into 'Freefall,' CEO Asha Sharma Reportedly Tells Staff",
+      "cn_title": "据报道，Asha Sharma称旧Game Pass策略拖累XBOX",
+      "model": "gpt-6-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-10-08T10:04:46.730097+08:00",
+      "reason": "风格拒收: style_self_check key 'currency_checked' is not true (got False)",
+      "audit_issues": [
+        {
+          "type": "style_self_check",
+          "detail": "style_self_check key 'currency_checked' is not true (got False)"
+        }
+      ],
+      "fingerprint": "faca2bf4999890f7b6ba37bd46691af063e6d936",
+      "translation_path": "translations/31.json",
+      "retry_policy": "manual_only"
+    },
+    "38": {
+      "id": 38,
+      "url": "https://www.ign.com/articles/death-stranding-movie-gets-update-as-director-scouts-beautiful-filming-locations-in-iceland",
+      "en_title": "Death Stranding Movie Gets Update as Director Scouts Beautiful Filming Locations in Iceland",
+      "cn_title": "《死亡搁浅》电影导演赴冰岛勘景",
+      "model": "gpt-6-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-10-08T10:05:14.506517+08:00",
+      "reason": "风格拒收: cn_title directly reuses the old title: '《死亡搁浅》电影导演赴冰岛勘景'",
+      "audit_issues": [
+        {
+          "type": "style_self_check",
+          "detail": "cn_title directly reuses the old title: '《死亡搁浅》电影导演赴冰岛勘景'"
+        }
+      ],
+      "fingerprint": "d6a736769464b3ae2fd67c9a1c09549055f7ba60",
+      "translation_path": "translations/38.json",
+      "retry_policy": "manual_only"
+    }
+  },
+  "updated_at": "2026-10-08T10:05:14.506517+08:00"
+}

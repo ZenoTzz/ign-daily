@@ -169,12 +169,12 @@
       "emoji": "🎬",
       "en_title": "Death Stranding Movie Gets Update as Director Scouts Beautiful Filming Locations in Iceland",
       "cn_title": "《死亡搁浅》电影导演赴冰岛勘景",
-      "summary": "《死亡搁浅》电影导演Michael Sarnoski近日在冰岛寻找拍摄地点，并分享了当地风景。影片将讲述发生在游戏世界中的原创故事，小岛秀夫参与制作。导演此前表示计划明年在冰岛和北爱尔兰拍摄；影片尚未公布上映日期，也未公布演员阵容。",
+      "summary": "《死亡搁浅》电影导演迈克尔·萨诺斯基正在冰岛勘景，影片计划明年在冰岛和北爱尔兰拍摄。电影将讲述游戏世界中的原创故事，小岛秀夫参与制作；上映日期和演员阵容尚未公布。",
       "url": "https://www.ign.com/articles/death-stranding-movie-gets-update-as-director-scouts-beautiful-filming-locations-in-iceland",
       "publish_time_cn": "2026-10-07 05:00",
       "pub_date": "2026-10-07 05:00",
       "cover_image": "https://assets-prd.ignimgs.com/2026/03/29/ds2-1774799779690.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2026/03/29/ds2-1774799779690.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/03/29/ds2-1774799779690.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -185,7 +185,13 @@
         "https://assets-prd.ignimgs.com/2022/12/15/hideo-kojima-button-1671130935288.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-10-07T06:17:45+08:00"
+      "source_fetched_at": "2026-10-07T06:17:45+08:00",
+      "translation_error": "风格拒收: cn_title directly reuses the old title: '《死亡搁浅》电影导演赴冰岛勘景'",
+      "translation_failed_at": "2026-10-08T10:05:14.506517+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "gpt-6-sol",
+      "translation_path": "translations/38.json"
     },
     {
       "id": 35,
@@ -289,13 +295,13 @@
       "category": "行业动态",
       "emoji": "📉",
       "en_title": "Previous Game Pass Strategy Sent Xbox Into 'Freefall,' CEO Asha Sharma Reportedly Tells Staff",
-      "cn_title": "据报道，Asha Sharma称旧Game Pass策略让XBOX陷入困境",
-      "summary": "据报道，XBOX负责人Asha Sharma在内部备忘录中表示，微软此前的Game Pass策略使XBOX财务状况急剧恶化。她称，业务在触及历史低点后已恢复增长；微软此前预计今年Game Pass订阅用户约达7700万，但目前只有约3000万。",
+      "cn_title": "据报道，Asha Sharma称旧Game Pass策略拖累XBOX",
+      "summary": "据报道，Asha Sharma在内部备忘录中称，微软此前的Game Pass策略让XBOX的财务状况急剧恶化。她表示，业务在跌至历史低点后已恢复增长，并预计这一势头将持续。",
       "url": "https://www.ign.com/articles/previous-game-pass-strategy-sent-xbox-into-freefall-ceo-asha-sharma-reportedly-tells-staff",
       "publish_time_cn": "2026-10-07 02:37",
       "pub_date": "2026-10-07 02:37",
       "cover_image": "https://assets-prd.ignimgs.com/2026/05/07/xbox-1778178511851.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2026/05/07/xbox-1778178511851.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/05/07/xbox-1778178511851.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -306,7 +312,13 @@
         "https://assets-prd.ignimgs.com/2025/06/17/xbox-1750193966476.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-10-07T03:17:34+08:00"
+      "source_fetched_at": "2026-10-07T03:17:34+08:00",
+      "translation_error": "风格拒收: style_self_check key 'currency_checked' is not true (got False)",
+      "translation_failed_at": "2026-10-08T10:04:46.730097+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "gpt-6-sol",
+      "translation_path": "translations/31.json"
     },
     {
       "id": 27,
@@ -337,13 +349,13 @@
       "category": "游戏新闻",
       "emoji": "🎮",
       "en_title": "Nolan North Is Staying in Shape Just in Case Sony Calls About Uncharted 5",
-      "cn_title": "Nolan North为《神秘海域5》保持身材，等索尼来电",
-      "summary": "《神秘海域》主角内森·德雷克的扮演者Nolan North表示，如果索尼邀请他出演《神秘海域5》，他很乐意回归，还一直保持身材，以备接到电话。目前索尼尚未正式公布新作；有报道称系列新作正在开发，顽皮狗也确认手头有多款游戏，但North表示自己尚未听到相关消息。",
+      "cn_title": "Nolan North为《神秘海域5》回归保持身材",
+      "summary": "据报道，《神秘海域》系列新作正在开发，但索尼尚未正式公布。主角内森·德雷克的扮演者Nolan North表示，若收到邀请，他很乐意回归，并一直保持身材，以备接到电话；他目前尚未听到新作消息。",
       "url": "https://www.ign.com/articles/nolan-north-is-staying-in-shape-just-in-case-sony-calls-about-uncharted-5",
       "publish_time_cn": "2026-10-07 01:10",
       "pub_date": "2026-10-07 01:10",
       "cover_image": "https://assets-prd.ignimgs.com/2026/10/06/gettyimages-1162869055-1791306580444.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2026/10/06/gettyimages-1162869055-1791306580444.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/10/06/gettyimages-1162869055-1791306580444.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -355,7 +367,13 @@
         "https://assets-prd.ignimgs.com/2024/12/13/intergalactic-1734062792526.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-10-07T02:17:38+08:00"
+      "source_fetched_at": "2026-10-07T02:17:38+08:00",
+      "translation_error": "质量门禁拒绝: paragraph 7 is missing numeric fact(s): 10",
+      "translation_failed_at": "2026-10-08T10:04:02.463698+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "gpt-6-sol",
+      "translation_path": "translations/28.json"
     },
     {
       "id": 29,
@@ -474,8 +492,8 @@
       "url": "https://www.ign.com/articles/sony-patent-would-let-an-ai-model-train-npcs-based-on-your-player-data",
       "publish_time_cn": "2026-10-07 00:17",
       "pub_date": "2026-10-07 00:17",
-      "cover_image": "https://assets-prd.ignimgs.com/2025/10/23/eldenringtarnishededition-03-1761230762239.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2025/10/23/eldenringtarnishededition-03-1761230762239.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2025/10/23/eldenringtarnishededition-03-1761230762239.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2025/10/23/eldenringtarnishededition-03-1761230762239.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -486,7 +504,16 @@
         "https://assets-prd.ignimgs.com/2024/09/10/ps5-1725981325370.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-10-07T01:18:04+08:00"
+      "source_fetched_at": "2026-10-07T01:18:04+08:00",
+      "translation_path": "translations/24.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "gpt-6-sol",
+      "reasoning_effort": "low",
+      "reviewer_model": "gpt-6-sol",
+      "reviewed_at": "2026-10-08T02:03:36.171532+00:00",
+      "prompt_version": "api-fulltext-2026-07-v2",
+      "quality_gate_version": 1
     },
     {
       "id": 25,
@@ -671,7 +698,7 @@
       "publish_time_cn": "2026-10-06 22:53",
       "pub_date": "2026-10-06 22:53",
       "cover_image": "https://assets-prd.ignimgs.com/2024/09/25/ps5-pro-handsonpreview-blogroll-1727223976585.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2024/09/25/ps5-pro-handsonpreview-blogroll-1727223976585.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2024/09/25/ps5-pro-handsonpreview-blogroll-1727223976585.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -682,7 +709,12 @@
         "https://assets-prd.ignimgs.com/2024/09/10/ps5-1725981325370.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-10-06T23:19:04+08:00"
+      "source_fetched_at": "2026-10-06T23:19:04+08:00",
+      "translation_error": "Remote end closed connection without response",
+      "translation_failed_at": "2026-10-08T10:02:44.422379+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "gpt-6-sol"
     },
     {
       "id": 18,

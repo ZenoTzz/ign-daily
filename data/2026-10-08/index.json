@@ -2,17 +2,229 @@
   "date": "2026-10-08",
   "articles": [
     {
+      "id": 30,
+      "category": "行业动态",
+      "emoji": "🎮",
+      "en_title": "Bit Reactor CEO Welcomes Return of Some Furloughed Staff for 'Continued Support' of Star Wars Zero Company",
+      "cn_title": "Bit Reactor召回部分员工，继续支持《星球大战 零号连队》",
+      "summary": "《星球大战 零号连队》开发商Bit Reactor在游戏发售前曾让约80%的员工无薪休假，如今已有部分员工重返团队。CEO Greg Foertsch称，这是继续支持游戏的重要一步；据GameFile消息，目前领取薪酬的员工人数已超过休假前的一半，但仍有不少员工未获薪酬。",
+      "url": "https://www.ign.com/articles/bit-reactor-ceo-welcomes-return-of-some-furloughed-staff-for-continued-support-of-star-wars-zero-company",
+      "publish_time_cn": "2026-10-08 06:52",
+      "pub_date": "2026-10-08 06:52",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/08/13/zerocompanythumb-1786638152676.png",
+      "translation_status": "done",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/08/13/zerocompanythumb-1786638152676.png?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/13/zerocompanythumb-1786638152676.png?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/13/zerocompanythumb-1786638152676.png?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/13/zerocompanythumb-1786638152676.png?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/13/zerocompanythumb-1786638152676.png",
+        "https://kraken.ignimgs.com/apple-touch-icon.png",
+        "https://assets-prd.ignimgs.com/2025/04/15/starwarszerocompany-1744732173102.jpg",
+        "https://assets-prd.ignimgs.com/2026/10/07/bit-reactor-statement-1791412530543.jpeg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-10-08T07:17:34+08:00",
+      "translation_path": "translations/30.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "gpt-6-sol",
+      "reasoning_effort": "low",
+      "reviewer_model": "gpt-6-sol",
+      "reviewed_at": "2026-10-08T02:05:43.327414+00:00",
+      "prompt_version": "api-fulltext-2026-07-v2",
+      "quality_gate_version": 1
+    },
+    {
+      "id": 28,
+      "category": "影视资讯",
+      "emoji": "🎬",
+      "en_title": "Samuel L. Jackson Confirms Nick Fury Will Return in Avengers: Secret Wars",
+      "cn_title": "《复仇者联盟6：秘密战争》塞缪尔·杰克逊确认尼克·弗瑞回归《复仇者联盟：秘密战争》",
+      "summary": "塞缪尔·杰克逊确认，尼克·弗瑞不会出现在《复仇者联盟：毁灭日》中，但会在下一部《复仇者联盟》电影《复仇者联盟：秘密战争》中回归。他表示，漫威只告知他会出演下一部电影，尚未透露角色戏份。另有多名知情人士称，该片拍摄已推迟至2027年初，原因尚不明确。",
+      "url": "https://www.ign.com/articles/samuel-l-jackson-confirms-nick-fury-will-return-in-avengers-secret-wars",
+      "publish_time_cn": "2026-10-08 06:02",
+      "pub_date": "2026-10-08 06:02",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/10/07/samuel-l-jackson-confirms-nick-fury-will-return-in-secret-wars-1791410447459.jpg",
+      "translation_status": "done",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/10/07/samuel-l-jackson-confirms-nick-fury-will-return-in-secret-wars-1791410447459.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/10/07/samuel-l-jackson-confirms-nick-fury-will-return-in-secret-wars-1791410447459.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/10/07/samuel-l-jackson-confirms-nick-fury-will-return-in-secret-wars-1791410447459.jpg?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/10/07/samuel-l-jackson-confirms-nick-fury-will-return-in-secret-wars-1791410447459.jpg?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/10/07/samuel-l-jackson-confirms-nick-fury-will-return-in-secret-wars-1791410447459.jpg",
+        "https://kraken.ignimgs.com/apple-touch-icon.png",
+        "https://assets-prd.ignimgs.com/2024/07/28/avengerssecretwars-1722132983614.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-10-08T07:17:36+08:00",
+      "translation_path": "translations/28.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "gpt-6-sol",
+      "reasoning_effort": "low",
+      "reviewer_model": "gpt-6-sol",
+      "reviewed_at": "2026-10-08T01:50:05.709793+00:00",
+      "prompt_version": "api-fulltext-2026-07-v2",
+      "quality_gate_version": 1
+    },
+    {
+      "id": 27,
+      "category": "评测评分",
+      "emoji": "🐉",
+      "en_title": "Dragon's Dogma 2: Dark Arisen Review",
+      "cn_title": "《龙之信条2：黑暗觉者》评测",
+      "summary": "《龙之信条2：黑暗觉者》带来约20小时的主线任务，并以冰雪覆盖的诺根地区、新怪物和职业技能扩展游戏内容。评测认为，新区域的立体设计和氛围令人印象深刻，支线任务与装备鉴定玩法则稍显乏力；这部资料片虽不及前作同名扩展那般具有变革性，仍展现了足够的野心。",
+      "url": "https://www.ign.com/articles/dragons-dogma-2-dark-arisen-review",
+      "publish_time_cn": "2026-10-08 06:00",
+      "pub_date": "2026-10-08 06:00",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/10/07/dragonsdogma2-darkarisen-review-blogroll-1791403117537.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/10/07/dragonsdogma2-darkarisen-review-blogroll-1791403117537.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/10/07/dragonsdogma2-darkarisen-review-blogroll-1791403117537.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/10/07/dragonsdogma2-darkarisen-review-blogroll-1791403117537.jpg?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/10/07/dragonsdogma2-darkarisen-review-blogroll-1791403117537.jpg?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/09/nintendoswitch2-dragon-s-dogma-2-dark-arisen-keyart-square-1781027878060.jpg",
+        "https://assets-prd.ignimgs.com/2026/10/07/dragonsdogma2-darkarisen-review-blogroll-1791403117537.jpg",
+        "https://kraken.ignimgs.com/apple-touch-icon.png",
+        "https://assets-prd.ignimgs.com/2026/10/07/dragonsdogma2-darkarisen-review-yt2-1791403107471.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-10-08T06:17:35+08:00",
+      "pending_dict": [
+        {
+          "en": "Dragon's Dogma 2: Dark Arisen",
+          "cn": "龙之信条2：黑暗觉者",
+          "cat": "games",
+          "source": "ai_guess",
+          "reason": "现有词库未提供该完整作品名的确认译名，需核对官方名称。"
+        },
+        {
+          "en": "Norgan",
+          "cn": "诺根",
+          "cat": "terms",
+          "source": "ai_guess",
+          "reason": "新地区名称的中文译法尚未确认。"
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "category": "游戏新闻",
+      "emoji": "🎮",
+      "en_title": "PS5 Adding Dedicated Crunchyroll Hub Next Spring",
+      "cn_title": "PS5明春将推出Crunchyroll专属入口",
+      "summary": "索尼互动娱乐总裁兼首席执行官西野秀明宣布，PS5主界面将于2027年春季推出Crunchyroll专属入口，集中展示动画及受动画启发的游戏，并方便玩家使用Crunchyroll应用。索尼表示，截至今年早些时候，PS5全球装机量已超过9200万台。",
+      "url": "https://www.ign.com/articles/ps5-adding-dedicated-crunchyroll-hub-next-spring",
+      "publish_time_cn": "2026-10-08 05:49",
+      "pub_date": "2026-10-08 05:49",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/10/07/image-1-1791411190278.png?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/10/07/image-1-1791411190278.png?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/10/07/image-1-1791411190278.png?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/10/07/image-1-1791411190278.png?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/10/07/image-1-1791411190278.png?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/10/07/image-1-1791411190278.png",
+        "https://kraken.ignimgs.com/apple-touch-icon.png",
+        "https://assets-prd.ignimgs.com/2022/09/22/service-crunchyroll-1663819467267.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-10-08T07:17:38+08:00"
+    },
+    {
+      "id": 26,
+      "category": "游戏新闻",
+      "emoji": "🥊",
+      "en_title": "Castlevania: Belmont's Curse Demo Hides Fighting Game Easter Eggs Behind Secret Weapon",
+      "cn_title": "《恶魔城：贝尔蒙特的诅咒》试玩版暗藏格斗游戏彩蛋",
+      "summary": "《恶魔城：贝尔蒙特的诅咒》试玩版中，玩家可在隐藏区域取得拳套武器Cestus。罗斯·贝尔蒙特使用它攻击后，会摆出不同的待机姿势；玩家发现，这些动作致敬了隆、春丽等经典格斗游戏角色，甚至包括《漫威大战卡普空2》中的蜘蛛侠。游戏将于10月15日正式发售。",
+      "url": "https://www.ign.com/articles/castlevania-belmonts-curse-demo-hides-fighting-game-easter-eggs-behind-secret-weapon",
+      "publish_time_cn": "2026-10-08 05:14",
+      "pub_date": "2026-10-08 05:14",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/10/07/belmonts-curse-references-fighting-games-1791407357044.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/10/07/belmonts-curse-references-fighting-games-1791407357044.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/10/07/belmonts-curse-references-fighting-games-1791407357044.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/10/07/belmonts-curse-references-fighting-games-1791407357044.jpg?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/10/07/belmonts-curse-references-fighting-games-1791407357044.jpg?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/10/07/belmonts-curse-references-fighting-games-1791407357044.jpg",
+        "https://kraken.ignimgs.com/apple-touch-icon.png",
+        "https://assets-prd.ignimgs.com/2026/02/13/07512c9a35fe00657ff33e31ae7befb268fa883a5ef81838-1770942852402.png"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-10-08T06:17:37+08:00",
+      "pending_dict": [
+        {
+          "en": "Castlevania: Belmont's Curse",
+          "cn": "恶魔城：贝尔蒙特的诅咒",
+          "cat": "games",
+          "source": "ai_guess",
+          "reason": "未提供该作的词库译名，建议译名需人工确认。"
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "category": "影视资讯",
+      "emoji": "🎬",
+      "en_title": "Guillermo del Toro on Blade 2, Working With Kojima, and Lots of Red Bull",
+      "cn_title": "吉尔莫·德尔·托罗谈《刀锋战士2》、小岛秀夫与红牛",
+      "summary": "在IGN30 Icons系列访谈中，吉尔莫·德尔·托罗回顾了与韦斯利·斯奈普斯合作拍摄《刀锋战士2》的经历，并谈及自己险些执导《生化奇兵》电影的往事。他还分享了对怪物设计的看法，以及《潘神的迷宫》苍白人形象的创作灵感。",
+      "url": "https://www.ign.com/articles/guillermo-del-toro-on-blade-2-working-with-kojima-and-lots-of-red-bull",
+      "publish_time_cn": "2026-10-08 03:55",
+      "pub_date": "2026-10-08 03:55",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/10/07/ign30-guillermo-del-toro-interview-blogroll1-1791402742538.png?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/10/07/ign30-guillermo-del-toro-interview-blogroll1-1791402742538.png?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/10/07/ign30-guillermo-del-toro-interview-blogroll1-1791402742538.png?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/10/07/ign30-guillermo-del-toro-interview-blogroll1-1791402742538.png?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/10/07/ign30-guillermo-del-toro-interview-blogroll1-1791402742538.png?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/10/07/ign30-guillermo-del-toro-interview-blogroll1-1791402742538.png",
+        "https://kraken.ignimgs.com/apple-touch-icon.png"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-10-08T04:17:37+08:00"
+    },
+    {
+      "id": 24,
+      "category": "人物新闻",
+      "emoji": "🎙️",
+      "en_title": "Call of Duty e-Sports Commentator Resigns After Pursuing Relationship With Co-Commentator's Ex-Wife",
+      "cn_title": "《使命召唤》联赛解说因与搭档前妻交往辞职",
+      "summary": "《使命召唤》联赛解说Clint「Maven」Evans宣布，因与解说搭档Joseph「MerK」DeLuca的前妻交往，他将在可预见的未来离开联赛。Evans表示，两人在DeLuca离婚后仍保持友谊，后来开始约会；他希望将来能重返联赛，但承认也可能无法如愿。DeLuca尚未就此事发表评论。",
+      "url": "https://www.ign.com/articles/call-of-duty-e-sports-commentator-resigns-after-pursuing-relationship-with-co-commentators-ex-wife",
+      "publish_time_cn": "2026-10-08 03:18",
+      "pub_date": "2026-10-08 03:18",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/08/20/mw4-mp-1787240916718.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/08/20/mw4-mp-1787240916718.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/20/mw4-mp-1787240916718.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/20/mw4-mp-1787240916718.jpg?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/20/mw4-mp-1787240916718.jpg?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/20/mw4-mp-1787240916718.jpg",
+        "https://kraken.ignimgs.com/apple-touch-icon.png",
+        "https://assets-prd.ignimgs.com/2026/05/28/codmw4-1779985350988.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-10-08T04:17:39+08:00"
+    },
+    {
       "id": 21,
       "category": "游戏新闻",
       "emoji": "🎮",
       "en_title": "Gears of War E-Day is a 'Natural Choice to Be an Exclusive' – Studio Head Mike Crump Claims Series Carries The Banner For Xbox",
-      "cn_title": "工作室负责人称《战争机器：事变日》独占顺理成章",
-      "summary": "The Coalition工作室负责人Mike Crump表示，《战争机器：事变日》选择由XBOX平台独占顺理成章，因为《战争机器》系列与该品牌有深厚联系。他称，衡量游戏是否成功不能只看销量和玩家留存率；团队也希望借这款游戏展示XBOX硬件的能力，让玩家有理由留在XBOX生态中。",
+      "cn_title": "《战争机器：事变日》独占是自然之选",
+      "summary": "The Coalition工作室负责人Mike Crump称，《战争机器：事变日》由XBOX独占是自然之选。团队不仅看销量和玩家留存率，还希望借游戏展示XBOX硬件的能力，让玩家有理由留在该平台生态中。",
       "url": "https://www.ign.com/articles/gears-of-war-e-day-is-a-natural-choice-to-be-an-exclusive-studio-head-mike-crump-claims-series-carries-the-banner-for-xbox",
       "publish_time_cn": "2026-10-08 02:32",
       "pub_date": "2026-10-08 02:32",
       "cover_image": "https://assets-prd.ignimgs.com/2026/10/01/gears-1790854472442.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2026/10/01/gears-1790854472442.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/10/01/gears-1790854472442.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -23,7 +235,13 @@
         "https://assets-prd.ignimgs.com/2026/06/07/eday-1780856237669.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-10-08T03:17:35+08:00"
+      "source_fetched_at": "2026-10-08T03:17:35+08:00",
+      "translation_error": "风格拒收: Chinese translation contains forbidden platform spelling: 'xbox series x' (must write exactly 'XBOX Series')",
+      "translation_failed_at": "2026-10-08T09:49:27.873172+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "gpt-6-sol",
+      "translation_path": "translations/21.json"
     },
     {
       "id": 22,
@@ -103,12 +321,12 @@
       "emoji": "🎮",
       "en_title": "Capcom Clarifies Stance on AI After RE Engine Conference Comments",
       "cn_title": "卡普空澄清RE引擎的AI使用计划",
-      "summary": "卡普空在接受IGN采访时澄清，将逐步改进RE引擎，并通过名为REX的计划引入AI工具，协助开发者改进工具、测试代码和分析大量数据，以提高开发效率。公司表示，不打算用生成式AI制作游戏，也不会将AI生成的素材加入游戏。",
+      "summary": "卡普空向IGN澄清，计划通过REX逐步改进RE引擎，用AI工具协助开发团队提高效率。公司表示，不打算用生成式AI制作游戏，也不会将AI生成的素材用于游戏，并将继续探索AI在开发流程中的用途。",
       "url": "https://www.ign.com/articles/capcom-clarifies-stance-on-ai-after-re-engine-conference-comments",
       "publish_time_cn": "2026-10-08 01:59",
       "pub_date": "2026-10-08 01:59",
       "cover_image": "https://assets-prd.ignimgs.com/2026/10/07/capcom-clarifies-stance-on-ai-1791395067864.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2026/10/07/capcom-clarifies-stance-on-ai-1791395067864.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/10/07/capcom-clarifies-stance-on-ai-1791395067864.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -119,7 +337,13 @@
         "https://assets-prd.ignimgs.com/2025/12/12/pragmata-1765500443070.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-10-08T02:17:34+08:00"
+      "source_fetched_at": "2026-10-08T02:17:34+08:00",
+      "translation_error": "风格拒收: cn_title directly reuses the old title: '卡普空澄清RE引擎的AI使用计划'",
+      "translation_failed_at": "2026-10-08T09:18:14.854095+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "gpt-6-sol",
+      "translation_path": "translations/20.json"
     },
     {
       "id": 19,
@@ -208,8 +432,8 @@
       "url": "https://www.ign.com/articles/gears-of-war-e-day-studio-boss-insists-the-next-game-will-not-take-nearly-as-long-to-make-responds-to-layoff-concern",
       "publish_time_cn": "2026-10-07 23:25",
       "pub_date": "2026-10-07 23:25",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/10/07/ss-5c4e91cb76281e091d1e237a9175c5787bda63d5-1920x1080-1791386653471.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/10/07/ss-5c4e91cb76281e091d1e237a9175c5787bda63d5-1920x1080-1791386653471.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/10/07/ss-5c4e91cb76281e091d1e237a9175c5787bda63d5-1920x1080-1791386653471.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/10/07/ss-5c4e91cb76281e091d1e237a9175c5787bda63d5-1920x1080-1791386653471.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -220,20 +444,29 @@
         "https://assets-prd.ignimgs.com/2026/06/07/eday-1780856237669.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-10-08T00:18:21+08:00"
+      "source_fetched_at": "2026-10-08T00:18:21+08:00",
+      "translation_path": "translations/17.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "gpt-6-sol",
+      "reasoning_effort": "low",
+      "reviewer_model": "gpt-6-sol",
+      "reviewed_at": "2026-10-08T01:02:50.063781+00:00",
+      "prompt_version": "api-fulltext-2026-07-v2",
+      "quality_gate_version": 1
     },
     {
       "id": 14,
       "category": "游戏新闻",
       "emoji": "🎮",
       "en_title": "Mafia 2 and Mafia 3 Could Be Set for PS5 and Xbox Series Upgrades After Definitive Editions Leak Online",
-      "cn_title": "评级信息显示《四海兄弟2》《四海兄弟3》或将升级登陆PS5和XBOX Series",
-      "summary": "ESRB评级信息显示，《四海兄弟2》和《四海兄弟3》可能将以升级版本登陆PS5和XBOX Series。两款游戏此前已在上世代主机推出决定版；新评级可能对应现世代升级，而非完全重制。目前尚无官方公告，升级内容和发售时间也未公布。",
+      "cn_title": "《四海兄弟2》《四海兄弟3》或将推出现世代升级版",
+      "summary": "ESRB评级信息显示，《四海兄弟2》和《四海兄弟3》可能推出PS5及XBOX Series升级版。两作此前已在上世代主机推出决定版，新版本或将升级画面，而非从头重制，具体内容尚未公布。",
       "url": "https://www.ign.com/articles/mafia-2-mafia-3-definitive-edition-leaked",
       "publish_time_cn": "2026-10-07 22:37",
       "pub_date": "2026-10-07 22:37",
       "cover_image": "https://assets1.ignimgs.com/2016/06/12/mafia3-e3trailer02jpg-c1f474.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets1.ignimgs.com/2016/06/12/mafia3-e3trailer02jpg-c1f474.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets1.ignimgs.com/2016/06/12/mafia3-e3trailer02jpg-c1f474.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -245,7 +478,13 @@
         "http://assets1.ignimgs.com/2016/06/12/mafia3-e3trailer02jpg-c1f474.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-10-07T23:19:00+08:00"
+      "source_fetched_at": "2026-10-07T23:19:00+08:00",
+      "translation_error": "质量门禁拒绝: paragraph 3 is missing numeric fact(s): 2000",
+      "translation_failed_at": "2026-10-08T09:02:24.291363+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "gpt-6-sol",
+      "translation_path": "translations/14.json"
     },
     {
       "id": 15,
@@ -279,13 +518,13 @@
       "category": "游戏新闻",
       "emoji": "🏎️",
       "en_title": "Forza Horizon 6 Reportedly Coming to PS5 in January on Disc",
-      "cn_title": "据称《极限竞速：地平线6》明年1月推出PS5实体版",
-      "summary": "据爆料人billbil-kun报道，《极限竞速：地平线6》PS5版预计于2027年1月26日推出，实体版与数字版同步发售。微软此前坚持该版本会在2026年底前推出；面对这份新报道，开发商Playground尚未作出回应。",
+      "cn_title": "据称《极限竞速：地平线6》PS5版明年1月发售",
+      "summary": "据billbil-kun报道，《极限竞速：地平线6》PS5版预计于2027年1月26日发售，实体版与数字版同步推出。微软此前坚持该版本会在2026年底前推出；面对新报道，开发商Playground尚未回应。",
       "url": "https://www.ign.com/articles/forza-horizon-6-ps5-release-date",
       "publish_time_cn": "2026-10-07 22:02",
       "pub_date": "2026-10-07 22:02",
       "cover_image": "https://assets-prd.ignimgs.com/2026/09/25/ss-383ace7815eaa8f8f5128a58fd8ca7df911d3e14-1920x1080-1790326952278.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2026/09/25/ss-383ace7815eaa8f8f5128a58fd8ca7df911d3e14-1920x1080-1790326952278.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/09/25/ss-383ace7815eaa8f8f5128a58fd8ca7df911d3e14-1920x1080-1790326952278.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -296,7 +535,13 @@
         "https://assets-prd.ignimgs.com/2026/01/22/fh6-1769112628046.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-10-07T22:19:35+08:00"
+      "source_fetched_at": "2026-10-07T22:19:35+08:00",
+      "translation_error": "风格拒收: style_self_check key 'currency_checked' is not true (got False)",
+      "translation_failed_at": "2026-10-08T09:01:52.804274+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "gpt-6-sol",
+      "translation_path": "translations/12.json"
     },
     {
       "id": 13,
@@ -542,8 +787,8 @@
       "url": "https://www.ign.com/articles/resident-evil-requiem-dlc-plans",
       "publish_time_cn": "2026-10-07 18:25",
       "pub_date": "2026-10-07 18:25",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/03/03/puzzle-site-1772543174828.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/03/03/puzzle-site-1772543174828.png",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/03/03/puzzle-site-1772543174828.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/03/03/puzzle-site-1772543174828.png?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -554,20 +799,29 @@
         "https://assets-prd.ignimgs.com/2026/01/13/residentevil-1768340841615.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-10-07T19:17:57+08:00"
+      "source_fetched_at": "2026-10-07T19:17:57+08:00",
+      "translation_path": "translations/03.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "gpt-6-sol",
+      "reasoning_effort": "low",
+      "reviewer_model": "gpt-6-sol",
+      "reviewed_at": "2026-10-08T01:00:50.765513+00:00",
+      "prompt_version": "api-fulltext-2026-07-v2",
+      "quality_gate_version": 1
     },
     {
       "id": 4,
       "category": "游戏新闻",
       "emoji": "🎮",
       "en_title": "Warhammer 40,000: Dawn of War 4 Dev Says It's Got More Single-Player Content Than Any Other RTS Ever at Launch",
-      "cn_title": "《战锤40K：战争黎明4》开发商称首发单人内容或超所有RTS",
-      "summary": "开发商King Art Games表示，《战锤40K：战争黎明4》首发将提供四条单人战役，共超过70个任务；创意总监Jan Theysen认为，其首发单人内容可能超过以往任何一款即时战略游戏。他还称，四条战役中的每一条，规模都超过初代《战争黎明》的整部战役。",
+      "cn_title": "《战锤40K：战争黎明4》首发单人内容或超所有RTS",
+      "summary": "开发商King Art Games称，《战锤40K：战争黎明4》首发包含四条单人战役，共有超过70个任务。创意总监Jan Theysen认为，其首发单人内容可能超过以往任何一款即时战略游戏。",
       "url": "https://www.ign.com/articles/warhammer-40000-dawn-of-war-4-dev-says-its-got-more-single-player-content-than-any-other-rts-ever-at-launch",
       "publish_time_cn": "2026-10-07 18:09",
       "pub_date": "2026-10-07 18:09",
       "cover_image": "https://assets-prd.ignimgs.com/2026/10/07/dreadnaught-07-1791367711058.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2026/10/07/dreadnaught-07-1791367711058.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/10/07/dreadnaught-07-1791367711058.png?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -578,7 +832,13 @@
         "https://assets-prd.ignimgs.com/2025/08/19/dawnofwar-1755638888001.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-10-07T19:18:00+08:00"
+      "source_fetched_at": "2026-10-07T19:18:00+08:00",
+      "translation_error": "质量门禁拒绝: paragraph 5 is missing numeric fact(s): 100%",
+      "translation_failed_at": "2026-10-08T09:01:25.111855+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "gpt-6-sol",
+      "translation_path": "translations/04.json"
     },
     {
       "id": 2,
@@ -605,6 +865,39 @@
       "source_fetched_at": "2026-10-07T17:47:41+08:00"
     },
     {
+      "id": 31,
+      "category": "评测评分",
+      "emoji": "✈️",
+      "en_title": "Ace Combat 8: Wings of Theve Review",
+      "cn_title": "《皇牌空战8：Theve之翼》评测",
+      "summary": "《皇牌空战8：Theve之翼》以虚构战争为舞台，让玩家接过王牌飞行员的名号，在不断变化的任务中驾驶战机作战。评测称，游戏将出色的空战、任务设计与角色故事结合起来，既展现飞行与战斗的快感，也始终提醒玩家战争的惨烈。",
+      "url": "https://www.ign.com/articles/ace-combat-8-wings-of-theve-review",
+      "publish_time_cn": "2026-10-07 15:17",
+      "pub_date": "2026-10-07 15:17",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/09/24/ace-combat-8-wings-of-theve-blogroll-01-1790292912992.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/09/24/ace-combat-8-wings-of-theve-blogroll-01-1790292912992.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/09/24/ace-combat-8-wings-of-theve-blogroll-01-1790292912992.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/09/24/ace-combat-8-wings-of-theve-blogroll-01-1790292912992.jpg?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/09/24/ace-combat-8-wings-of-theve-blogroll-01-1790292912992.jpg?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/09/10/ace-combat-8-tv-show-button-1789060689107.jpg",
+        "https://assets-prd.ignimgs.com/2026/09/24/ace-combat-8-wings-of-theve-blogroll-01-1790292912992.jpg",
+        "https://kraken.ignimgs.com/apple-touch-icon.png"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-10-08T07:17:40+08:00",
+      "pending_dict": [
+        {
+          "en": "Ace Combat 8: Wings of Theve",
+          "cn": "皇牌空战8：Theve之翼",
+          "cat": "games",
+          "source": "ai_guess",
+          "reason": "词库未提供本作译名，副标题及地名Theve的官方中文译法需要人工确认。"
+        }
+      ]
+    },
+    {
       "id": 1,
       "category": "评测评分",
       "emoji": "📺",
@@ -628,7 +921,32 @@
       ],
       "source_status": "cached",
       "source_fetched_at": "2026-10-07T15:17:53+08:00"
+    },
+    {
+      "id": 32,
+      "category": "评测评分",
+      "emoji": "🏔️",
+      "en_title": "Tenzing Review",
+      "cn_title": "《Tenzing》评测：登顶者的另一面",
+      "summary": "《Tenzing》聚焦与埃德蒙·希拉里一同登上珠峰的登山者Tenzing Norgay，讲述他登顶前经历的艰辛。影评认为，影片既拍出了登山的壮阔，也将重心放在人物及其与希拉里建立的信任上；不过，也有人可能觉得故事过于单薄或煽情。影片将于10月9日在部分影院上映，10月16日登陆Apple TV。",
+      "url": "https://www.ign.com/articles/tenzing-movie-review-apple-tv",
+      "publish_time_cn": "2026-10-07 08:17",
+      "pub_date": "2026-10-07 08:17",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/09/29/tenzing-blogroll-1790640221226.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/09/29/tenzing-blogroll-1790640221226.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/09/29/tenzing-blogroll-1790640221226.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/09/29/tenzing-blogroll-1790640221226.jpg?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/09/29/tenzing-blogroll-1790640221226.jpg?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/09/16/tenzing-button-1789582651231.jpg",
+        "https://assets-prd.ignimgs.com/2026/09/29/tenzing-blogroll-1790640221226.jpg",
+        "https://kraken.ignimgs.com/apple-touch-icon.png",
+        "https://assets-prd.ignimgs.com/2026/09/29/tenzing-blogroll-1790640174924.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-10-08T08:17:34+08:00"
     }
   ],
-  "total": 23
+  "total": 32
 }
