@@ -1,0 +1,82 @@
+{
+  "date": "2026-10-09",
+  "items": {
+    "3": {
+      "id": 3,
+      "url": "https://www.ign.com/articles/jeremy-clarkson-will-return-to-his-automotive-roots-for-one-off-special-jeremy-grows-a-car",
+      "en_title": "Jeremy Clarkson Will Return to His Automotive Roots for One-Off Special ‘Jeremy Grows a Car’",
+      "cn_title": "克拉克森将用农场产物造车",
+      "model": "gpt-6.1-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-10-09T09:18:02.492341+08:00",
+      "reason": "paragraph 6 missing cn",
+      "audit_issues": [
+        {
+          "type": "manual_translation_required",
+          "detail": "one or more paragraph chunks failed after retry; draft kept for manual review"
+        }
+      ],
+      "fingerprint": "8bcd34781503f11c3cc23c89c053413a5c94896a",
+      "translation_path": "translations/03.json",
+      "retry_policy": "manual_only"
+    },
+    "4": {
+      "id": 4,
+      "url": "https://www.ign.com/articles/tom-cruises-digger-reportedly-positioned-to-lose-250-million",
+      "en_title": "Tom Cruise’s Digger Reportedly Positioned to Lose $250 Million",
+      "cn_title": "《Digger》据称将巨亏",
+      "model": "gpt-6.1-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-10-09T09:18:29.162083+08:00",
+      "reason": "风格拒收: style_self_check key 'currency_checked' is not true (got False)",
+      "audit_issues": [
+        {
+          "type": "style_self_check",
+          "detail": "style_self_check key 'currency_checked' is not true (got False)"
+        }
+      ],
+      "fingerprint": "fa948ef70e49440242e6d9e891765d2f0c56b7b6",
+      "translation_path": "translations/04.json",
+      "retry_policy": "manual_only"
+    },
+    "12": {
+      "id": 12,
+      "url": "https://www.ign.com/articles/xbox-announces-new-xp-entertainment-division-to-make-movies-tv-and-more",
+      "en_title": "Xbox Announces New XP Entertainment Division to Make Movies, TV, and More",
+      "cn_title": "XBOX新设XP部门拓展娱乐业务",
+      "model": "gpt-6.1-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-10-09T09:19:35.938255+08:00",
+      "reason": "质量门禁拒绝: paragraph 9 is missing numeric fact(s): 75%",
+      "audit_issues": [
+        {
+          "type": "quality_gate",
+          "detail": "paragraph 9 is missing numeric fact(s): 75%"
+        }
+      ],
+      "fingerprint": "a3e6f7b4436ea57dafbe0a28c2cb87924a8f4ca3",
+      "translation_path": "translations/12.json",
+      "retry_policy": "manual_only"
+    },
+    "15": {
+      "id": 15,
+      "url": "https://www.ign.com/articles/lego-marvel-skyline-set-announced",
+      "en_title": "LEGO The Marvel Skyline Set Announced",
+      "cn_title": "乐高漫威新套装还原微缩天际线",
+      "model": "gpt-6.1-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-10-09T09:20:13.850248+08:00",
+      "reason": "风格拒收: style_self_check key 'currency_checked' is not true (got False)",
+      "audit_issues": [
+        {
+          "type": "style_self_check",
+          "detail": "style_self_check key 'currency_checked' is not true (got False)"
+        }
+      ],
+      "fingerprint": "a03e9b82cceb260d2ee248f358d38b5b5a850365",
+      "translation_path": "translations/15.json",
+      "retry_policy": "manual_only"
+    }
+  },
+  "updated_at": "2026-10-09T09:20:13.850248+08:00"
+}

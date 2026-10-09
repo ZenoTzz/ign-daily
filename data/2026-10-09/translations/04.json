@@ -1,0 +1,75 @@
+{
+  "id": 4,
+  "url": "https://www.ign.com/articles/tom-cruises-digger-reportedly-positioned-to-lose-250-million",
+  "en_title": "Tom Cruise’s Digger Reportedly Positioned to Lose $250 Million",
+  "cn_title": "《Digger》据称将巨亏",
+  "subtitle": "分歧未带动票房",
+  "opus_summary": "据TheWrap报道，《Digger》预计亏损，内部人士预期全球票房不超过四千万美元。华纳兄弟尚未回应。影片评价两极分化，似乎未能带动观众购票兴趣。",
+  "publish_time_cn": "2026-10-08 14:34",
+  "paragraphs": [
+    {
+      "en": "Divisive climate change satire Digger is set to lose $250 million by the end of its run, according to TheWrap. TheWrap claims insiders at new Warner Bros. overlords Skydance are not anticipating Digger will exceed a worldwide box office total of $40 million following its alarming opening weekend results (just $8 million in US domestic takings and a further $12 million in international receipts).",
+      "cn": "据TheWrap报道，评价两极分化的气候变化讽刺电影《Digger》预计在结束上映时亏损2.5亿美元(约合人民币17亿元)。TheWrap称，影片首周末票房表现令人担忧，美国本土仅收获800万美元(约合人民币5368万元)，海外票房则为1,200万美元(约合人民币8052万元)。华纳兄弟的新母公司Skydance内部人士因此预计，《Digger》的全球总票房不会超过4,000万美元(约合人民币3亿元)。"
+    },
+    {
+      "en": "Warner Bros. has not commented on the claims. Warner Bros., which is being acquired by Paramount in a controversial $110 billion deal, will now exist alongside the latter under parent company Skydance.",
+      "cn": "华纳兄弟尚未就这些说法发表评论。派拉蒙正在以1,100亿美元(约合人民币7381亿元)收购华纳兄弟，这笔交易颇具争议。此后，华纳兄弟将与派拉蒙一同归属母公司Skydance。"
+    },
+    {
+      "en": "Directed by back-to-back Best Director Oscar winner Alejandro G. Iñárritu (Birdman, The Revenant) and starring screen legend Tom Cruise, Digger has split both critics and audiences. Attempts have been made to weaponise the mixed reaction to its favour , but it doesn’t appear to have translated to increased interest in the film at the box office. IGN’s review notes Digger has “the budget to let some very talented artists work at the top of their game” but stresses it’s “far from a must-watch.”",
+      "cn": "《Digger》由连续两届获得奥斯卡最佳导演奖的亚历杭德罗·冈萨雷斯·伊尼亚里图（《鸟人》《荒野猎人》）执导，影坛传奇汤姆·克鲁斯主演，但影评人和观众对影片的评价都存在分歧。有人试图利用这些褒贬不一的反应为影片造势，但似乎未能让更多观众产生购票观影的兴趣。IGN在影评中指出，《Digger》有「足够的预算，让一些才华出众的艺术家发挥出最高水准」，但也强调，该片「远非必看之作」。"
+    }
+  ],
+  "pending_dict": [],
+  "translated_terms": {
+    "Digger": "《Digger》",
+    "TheWrap": "TheWrap",
+    "Warner Bros.": "华纳兄弟",
+    "Skydance": "Skydance",
+    "Paramount": "派拉蒙",
+    "Alejandro G. Iñárritu": "亚历杭德罗·冈萨雷斯·伊尼亚里图",
+    "Birdman": "《鸟人》",
+    "The Revenant": "《荒野猎人》",
+    "Tom Cruise": "汤姆·克鲁斯",
+    "IGN": "IGN"
+  },
+  "cover": "https://assets-prd.ignimgs.com/2026/09/09/diggerthumb-1788963055122.png?width=1280&format=jpg&auto=webp&quality=80",
+  "images": [
+    {
+      "url": "https://assets-prd.ignimgs.com/2026/09/09/diggerthumb-1788963055122.png?width=1280&format=jpg&auto=webp&quality=80",
+      "caption": ""
+    },
+    {
+      "url": "https://kraken.ignimgs.com/apple-touch-icon.png",
+      "caption": ""
+    },
+    {
+      "url": "https://assets-prd.ignimgs.com/2026/07/13/digger-replacement-button-1783951633760.jpg",
+      "caption": ""
+    }
+  ],
+  "style_self_check": {
+    "read_style_profile": true,
+    "no_english_syntax": true,
+    "title_rewritten": true,
+    "subtitle_rewritten": true,
+    "xbox_normalized": true,
+    "xbox_series_normalized": true,
+    "quotes_checked": true,
+    "currency_checked": false,
+    "dictionary_checked": true
+  },
+  "translator": "api",
+  "translator_provider": "openai-compatible",
+  "translator_model": "gpt-6.1-sol",
+  "quality_status": "needs_manual_review",
+  "manual_release_required": true,
+  "audit_issues": [
+    {
+      "type": "style_self_check",
+      "detail": "style_self_check key 'currency_checked' is not true (got False)"
+    }
+  ],
+  "audit_failed_at": "2026-10-09T09:18:29.162083+08:00",
+  "audit_failure_reason": "风格拒收: style_self_check key 'currency_checked' is not true (got False)"
+}

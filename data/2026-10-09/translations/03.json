@@ -1,0 +1,93 @@
+{
+  "id": 3,
+  "url": "https://www.ign.com/articles/jeremy-clarkson-will-return-to-his-automotive-roots-for-one-off-special-jeremy-grows-a-car",
+  "en_title": "Jeremy Clarkson Will Return to His Automotive Roots for One-Off Special ‘Jeremy Grows a Car’",
+  "cn_title": "克拉克森将用农场产物造车",
+  "subtitle": "从种地到造车",
+  "opus_summary": "Prime Video确认《克拉克森的农场》将推出汽车特别篇，于2027年播出。克拉克森将尝试用自家农场的产物修复并打造汽车，汽车设计师Ian Callum将协助。",
+  "publish_time_cn": "2026-10-08 13:35",
+  "paragraphs": [
+    {
+      "en": "Prime Video has confirmed a new, one-off episode of its Clarkson’s Farm series, which will see host Jeremy Clarkson temporarily return to his Top Gear and The Grand Tour roots for an automotive-themed special.",
+      "cn": "Prime Video确认，《克拉克森的农场》将推出一集汽车主题特别篇。主持人杰里米·克拉克森将暂时回归老本行，重拾他在《Top Gear》和《The Grand Tour》中主持汽车节目的经历。"
+    },
+    {
+      "en": "Jeremy Grows a Car: A Clarkson’s Farm Special will see Clarkson attempt what Prime proposes is a world first: he will grow and build his own car from produce sourced from his personal farm, Diddly Squat.",
+      "cn": "在《Jeremy Grows a Car：克拉克森的农场特别篇》中，克拉克森将尝试用自家Diddly Squat农场出产的农产品，「种」出并打造一辆属于自己的汽车。Prime称，这将是世界首创。"
+    },
+    {
+      "en": "Using the Jaguar F-Type V6S as his base, Clarkson will be restoring it using his own Diddly leather interior and wool carpets, and will also be attempting to grow a crop of flax fiber to turn into a sustainable flax-composite material – an alternative to carbon fiber Prime claims is already on the radar of major car makers.",
+      "cn": "克拉克森将以捷豹F-Type V6S为基础，用自家Diddly农场出产的皮革制作内饰，用羊毛制作地毯，来修复这辆车。他还将尝试种植亚麻，获取纤维并将其制成可持续的亚麻复合材料，用来替代碳纤维。Prime称，各大汽车制造商已经开始关注这种材料。"
+    },
+    {
+      "en": "Clarkson will be aided in his car-building quest by legendary car designer Ian Callum CBE. Callum is the designer of the original Jaguar F-Type, as well as the Jaguar XK and C-X75, plus the Aston Martin Vanquish, DB7, and DB9. He was also involved with the Ford RS200 and the Nissan R390.",
+      "cn": "传奇汽车设计师、大英帝国司令勋章获得者Ian Callum将协助克拉克森完成造车计划。Callum设计了初代捷豹F-Type，以及捷豹XK、C-X75和阿斯顿·马丁Vanquish、DB7、DB9。他还参与了福特RS200和日产R390的设计。"
+    },
+    {
+      "en": "Jeremy Grows a Car: A Clarkson’s Farm Special will air in 2027.",
+      "cn": "《Jeremy Grows a Car: A Clarkson’s Farm Special》将于2027年播出。"
+    },
+    {
+      "en": "Luke is a Senior Editor on the IGN reviews team. You can track him down on Bluesky @mrlukereilly to ask him things about stuff.",
+      "cn": "[MANUAL_TRANSLATION_REQUIRED] Luke is a Senior Editor on the IGN reviews team. You can track him down on Bluesky @mrlukereilly to ask him things about stuff."
+    }
+  ],
+  "pending_dict": [],
+  "translated_terms": {
+    "Prime Video": "Prime Video",
+    "Clarkson’s Farm": "《克拉克森的农场》",
+    "Jeremy Clarkson": "杰里米·克拉克森",
+    "Top Gear": "《Top Gear》",
+    "The Grand Tour": "《The Grand Tour》",
+    "Jeremy Grows a Car: A Clarkson’s Farm Special": "《Jeremy Grows a Car: A Clarkson’s Farm Special》",
+    "Diddly Squat": "Diddly Squat",
+    "Ian Callum": "Ian Callum",
+    "Jaguar": "捷豹",
+    "Aston Martin": "阿斯顿·马丁",
+    "Ford": "福特",
+    "Nissan": "日产"
+  },
+  "cover": "https://assets-prd.ignimgs.com/2026/10/08/jeremy-grows-a-car-1791437428760.png?width=1280&format=jpg&auto=webp&quality=80",
+  "images": [
+    {
+      "url": "https://assets-prd.ignimgs.com/2026/10/08/jeremy-grows-a-car-1791437428760.png?width=1280&format=jpg&auto=webp&quality=80",
+      "caption": ""
+    },
+    {
+      "url": "https://kraken.ignimgs.com/apple-touch-icon.png",
+      "caption": ""
+    },
+    {
+      "url": "https://assets-prd.ignimgs.com/2026/10/08/clarksons-farm-object-1791437212153.jpg",
+      "caption": ""
+    },
+    {
+      "url": "https://assets-prd.ignimgs.com/2026/10/08/download-1791437511678.png",
+      "caption": ""
+    }
+  ],
+  "style_self_check": {
+    "read_style_profile": true,
+    "no_english_syntax": true,
+    "title_rewritten": true,
+    "subtitle_rewritten": true,
+    "xbox_normalized": true,
+    "xbox_series_normalized": true,
+    "quotes_checked": true,
+    "currency_checked": true,
+    "dictionary_checked": true
+  },
+  "translator": "api",
+  "translator_provider": "openai-compatible",
+  "translator_model": "gpt-6.1-sol",
+  "quality_status": "needs_manual_review",
+  "manual_release_required": true,
+  "audit_issues": [
+    {
+      "type": "manual_translation_required",
+      "detail": "one or more paragraph chunks failed after retry; draft kept for manual review"
+    }
+  ],
+  "audit_failed_at": "2026-10-09T09:18:02.492341+08:00",
+  "audit_failure_reason": "paragraph 6 missing cn"
+}
