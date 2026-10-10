@@ -1,0 +1,183 @@
+{
+  "date": "2026-10-10",
+  "items": {
+    "7": {
+      "id": 7,
+      "url": "https://www.ign.com/articles/nier-creator-yoko-taro-says-he-would-retire-from-making-video-games-but-fear-of-dementia-keeps-him-working",
+      "en_title": "NieR Creator Yoko Taro Says He Would Retire From Making Video Games but Fear of Dementia Keeps Him Working",
+      "cn_title": "《尼尔》主创横尾太郎称怕失智而不退休",
+      "model": "gpt-6.1-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-10-10T09:01:23.312100+08:00",
+      "reason": "质量门禁拒绝: paragraph 6 is missing numeric fact(s): 20",
+      "audit_issues": [
+        {
+          "type": "quality_gate",
+          "detail": "paragraph 6 is missing numeric fact(s): 20"
+        }
+      ],
+      "fingerprint": "1bc659e8820a37ca75373ce334d3b5ad6d489b25",
+      "translation_path": "translations/07.json",
+      "retry_policy": "manual_only"
+    },
+    "10": {
+      "id": 10,
+      "url": "https://www.ign.com/articles/agents-of-shield-star-coulson-teases-zodiac-marvel-disney",
+      "en_title": "Agent Coulson Actor Teases Link to Just-Announced Marvel TV Show, Zodiac",
+      "cn_title": "科尔森演员暗示加盟《Zodiac》",
+      "model": "gpt-6.1-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-10-10T09:01:58.937754+08:00",
+      "reason": "质量门禁拒绝: paragraph 9 is missing numeric fact(s): 2026",
+      "audit_issues": [
+        {
+          "type": "quality_gate",
+          "detail": "paragraph 9 is missing numeric fact(s): 2026"
+        }
+      ],
+      "fingerprint": "a804b5ff8cdd7a97d6961584719e40cf517ca664",
+      "translation_path": "translations/10.json",
+      "retry_policy": "manual_only"
+    },
+    "15": {
+      "id": 15,
+      "url": "https://www.ign.com/articles/ai-driving-game-demo-bank-loan",
+      "en_title": "AI Driving Game Demo Forces Developer to Take Out Bank Loan to Keep It Running",
+      "cn_title": "AI驾驶试玩版靠银行贷款维持",
+      "model": "gpt-6.1-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-10-10T09:02:41.874514+08:00",
+      "reason": "风格拒收: style_self_check key 'currency_checked' is not true (got False)",
+      "audit_issues": [
+        {
+          "type": "style_self_check",
+          "detail": "style_self_check key 'currency_checked' is not true (got False)"
+        }
+      ],
+      "fingerprint": "dc5a71feb428715d41d13e3fbf0a9c8dcaf32e45",
+      "translation_path": "translations/15.json",
+      "retry_policy": "manual_only"
+    },
+    "18": {
+      "id": 18,
+      "url": "https://www.ign.com/articles/gta-6-switch-2-nintendo-president",
+      "en_title": "GTA 6 on Switch 2? 'That's a Conversation for Take-Two and Rockstar,' Nintendo Says",
+      "cn_title": "任天堂谈《GTA6》登陆新主机",
+      "model": "gpt-6.1-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-10-10T09:03:27.315425+08:00",
+      "reason": "风格拒收: Chinese translation contains forbidden platform spelling: 'xbox series s' (must write exactly 'XBOX Series')",
+      "audit_issues": [
+        {
+          "type": "style_self_check",
+          "detail": "Chinese translation contains forbidden platform spelling: 'xbox series s' (must write exactly 'XBOX Series')"
+        }
+      ],
+      "fingerprint": "b1ae76e5ddc402165055859ba482053cf03c7d2d",
+      "translation_path": "translations/18.json",
+      "retry_policy": "manual_only"
+    },
+    "21": {
+      "id": 21,
+      "url": "https://www.ign.com/articles/wardogs-dev-holding-back-certain-features-because-of-xbox-series-s-but-working-to-very-low-end-hardware-has-its-benefits",
+      "en_title": "Wardogs Dev Holding Back Certain Features Because of Xbox Series S, but Working to 'Very Low-End Hardware' Has Its Benefits",
+      "cn_title": "《Wardogs》开发商谈硬件限制",
+      "model": "gpt-6.1-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-10-10T09:04:20.750500+08:00",
+      "reason": "风格拒收: Chinese translation contains forbidden platform spelling: 'xbox series x' (must write exactly 'XBOX Series'); Chinese translation contains forbidden platform spelling: 'xbox series s' (must write exactly 'XBOX Series')",
+      "audit_issues": [
+        {
+          "type": "style_self_check",
+          "detail": "Chinese translation contains forbidden platform spelling: 'xbox series x' (must write exactly 'XBOX Series')"
+        },
+        {
+          "type": "style_self_check",
+          "detail": "Chinese translation contains forbidden platform spelling: 'xbox series s' (must write exactly 'XBOX Series')"
+        }
+      ],
+      "fingerprint": "1657e9193bb10c9572a04ac5ac67e29c7b9e01a1",
+      "translation_path": "translations/21.json",
+      "retry_policy": "manual_only"
+    },
+    "22": {
+      "id": 22,
+      "url": "https://www.ign.com/articles/wardogs-dev-says-ps6-and-xbox-project-helix-ports-should-be-relatively-straightforward",
+      "en_title": "Wardogs Dev Says PS6 and Xbox Project Helix Ports Should Be Relatively Straightforward",
+      "cn_title": "《Wardogs》团队称移植或不难",
+      "model": "gpt-6.1-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-10-10T09:04:58.943214+08:00",
+      "reason": "质量门禁拒绝: paragraph 9 is missing numeric fact(s): 10",
+      "audit_issues": [
+        {
+          "type": "quality_gate",
+          "detail": "paragraph 9 is missing numeric fact(s): 10"
+        }
+      ],
+      "fingerprint": "d652c03394dd0941e474eecbcc2eeb2aa8043ee6",
+      "translation_path": "translations/22.json",
+      "retry_policy": "manual_only"
+    },
+    "23": {
+      "id": 23,
+      "url": "https://www.ign.com/articles/wardogs-new-rain-system-will-have-a-major-effect-on-gameplay-in-season-2",
+      "en_title": "Wardogs' New Rain System Will Have a Major Effect on Gameplay in Season 2",
+      "cn_title": "《Wardogs》新雨天系统将改变玩法",
+      "model": "gpt-6.1-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-10-10T09:05:27.649172+08:00",
+      "reason": "质量门禁拒绝: paragraph 6 is suspiciously short and may omit source content",
+      "audit_issues": [
+        {
+          "type": "quality_gate",
+          "detail": "paragraph 6 is suspiciously short and may omit source content"
+        }
+      ],
+      "fingerprint": "5af1e29fefd9e78c51b1ca77ac7b4a6c675c7595",
+      "translation_path": "translations/23.json",
+      "retry_policy": "manual_only"
+    },
+    "27": {
+      "id": 27,
+      "url": "https://www.ign.com/articles/call-of-duty-modern-warfare-4-launch-rollout-adds-dmz-early-access",
+      "en_title": "Call of Duty: Modern Warfare 4 Launch Rollout Adds DMZ Early Access",
+      "cn_title": "《使命召唤：现代战争4》DMZ抢先体验",
+      "model": "gpt-6.1-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-10-10T09:30:49.626604+08:00",
+      "reason": "[dictionary] source contains 'Nintendo', but required dictionary translation '任天堂' is missing",
+      "audit_issues": [
+        {
+          "type": "dictionary",
+          "detail": "source contains 'Nintendo', but required dictionary translation '任天堂' is missing",
+          "en": "Nintendo",
+          "expected_cn": "任天堂"
+        }
+      ],
+      "fingerprint": "6a9a6a4e1c0f83fe650bd2ee62e8dd2c11df118e",
+      "translation_path": "translations/27.json",
+      "retry_policy": "manual_only"
+    },
+    "51": {
+      "id": 51,
+      "url": "https://www.ign.com/articles/gears-of-war-e-day-estimated-sales-reach-just-230000-in-first-week-analyst-says",
+      "en_title": "Gears of War: E-Day Estimated Sales Reach Just 230,000 in First Week, Analyst Says",
+      "cn_title": "《战争机器：事变日》据称首周售23万",
+      "model": "gpt-6.1-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-10-10T09:31:36.077146+08:00",
+      "reason": "风格拒收: style_self_check key 'currency_checked' is not true (got False)",
+      "audit_issues": [
+        {
+          "type": "style_self_check",
+          "detail": "style_self_check key 'currency_checked' is not true (got False)"
+        }
+      ],
+      "fingerprint": "40e1796387952afa1784ae248580f53bc97678c2",
+      "translation_path": "translations/51.json",
+      "retry_policy": "manual_only"
+    }
+  },
+  "updated_at": "2026-10-10T09:31:36.077146+08:00"
+}

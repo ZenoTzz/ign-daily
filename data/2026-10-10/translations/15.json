@@ -1,0 +1,101 @@
+{
+  "id": 15,
+  "url": "https://www.ign.com/articles/ai-driving-game-demo-bank-loan",
+  "en_title": "AI Driving Game Demo Forces Developer to Take Out Bank Loan to Keep It Running",
+  "cn_title": "AI驾驶试玩版靠银行贷款维持",
+  "subtitle": "玩家越多，账单越高",
+  "opus_summary": "AI驾驶游戏开发商因试玩人数激增，已向银行贷款维持运营。四人团队可能因资金压力提前关闭试玩版，但尚未决定；正式版拟将AI成本计入售价，不另收用量费。",
+  "publish_time_cn": "2026-10-09 21:52",
+  "paragraphs": [
+    {
+      "en": "The developer behind Teach My Little Sister How to Drive, a driving instruction sim where you instruct a generative-AI-powered, dynamic NPC, has been spending $1,000 dollars a day to keep the demo working. “Over the past month, the number of demo players has grown more than twentyfold,” the developer said , via FRVR . “This growth has also increased our operating costs considerably.”",
+      "cn": "《Teach My Little Sister How to Drive》是一款驾驶教学模拟游戏，玩家要指导由生成式AI驱动、能动态回应的NPC。为了维持试玩版运行，开发商每天要花费1,000美元(约合人民币6700元)。据FRVR报道，开发商表示：「过去一个月，试玩版玩家数量增长了20多倍。这也让我们的运营成本大幅增加。」"
+    },
+    {
+      "en": "It all seems viable and a good business model so far. According to the blog post, developer Easy Fox had to take out a bank loan to support the game, which is powered by AI models. AI models costs can soar dramatically as the number of requests users make, which consume “tokens,” increase. Teach My Little Sister constantly queries AI as players interact with the game’s NPC to progress.",
+      "cn": "到目前为止，这一切看起来都挺可行，似乎还是个不错的商业模式。根据这篇博客文章，开发商Easy Fox不得不向银行贷款，来支撑这款由AI模型驱动的游戏。用户发出的请求会消耗「词元（token）」，随着请求数量增加，AI模型的使用成本可能急剧攀升。在《Teach My Little Sister How to Drive》中，玩家与NPC互动、推进游戏时，游戏会不断向AI发出请求。"
+    },
+    {
+      "en": "The developer plans to factor this in when deciding how much to charge for the game’s full release. “For the paid release, we plan to account for expected AI usage in the game’s price,” they said. “Players will not be charged separately for their individual AI token usage after purchasing the game. This isn’t because each player is particularly expensive to support. The total cost has increased because so many people are playing, and we have taken out a bank loan to help keep the demo running.",
+      "cn": "开发商计划在制定正式版售价时考虑这笔成本。他们表示：「对于付费正式版，我们计划将预期的AI用量计入游戏售价。玩家购买游戏后，我们不会再根据个人消耗的AI词元另行收费。目前的情况并不是因为服务每位玩家的成本特别高，而是因为玩的人太多，总成本随之上升。我们已经向银行贷款，以帮助维持试玩版运行。"
+    },
+    {
+      "en": "“We want to continue operating the demo and would love for more people to enjoy it. However, we are a small team of four, and financial pressure may mean we have to close the demo earlier than expected before the full release. We have not made that decision at this time.”",
+      "cn": "「我们希望继续运营试玩版，也很希望更多人能享受这款游戏。不过，我们只是一个四人小团队，资金压力可能迫使我们在正式版推出前，比预期更早关闭试玩版。目前我们还没有作出这个决定。」"
+    },
+    {
+      "en": "The game originally launched its demo in February, but interest from streamers such as thinknoodles has given it a popularity bump. The game is also popular in Asia, where there isn’t such a stigma around generative AI, which people in the West tend to hate because it’s a theft engine that sucks up the planet’s energy like Shinra.",
+      "cn": "这款游戏的试玩版最初于2月推出，thinknoodles等主播的关注让它的人气有所提升。游戏在亚洲也很受欢迎，当地对生成式AI的负面看法没有那么强烈。西方人则往往讨厌生成式AI，因为它就是一台盗窃机器，像神罗一样吸干这个星球的能源。"
+    },
+    {
+      "en": "Teach My Little Sister How to Drive relies on Google Gemini and ChatGPT to power its dynamic NPC, which follows your instructions, reacts, and disobeys, but the developers are looking into ways of allowing local AI models to step in for players “with sufficiently capable PCs.”",
+      "cn": "《Teach My Little Sister How to Drive》依靠Google Gemini和ChatGPT驱动能动态回应的NPC。这个NPC会遵照你的指示、作出反应，也会不听话。不过，开发团队正在研究如何让「PC性能足够强」的玩家改用本地AI模型。"
+    },
+    {
+      "en": "Companies making use of generative AI are starting to face reality. In a recent Axios report , one mystery company spent $500 million on AI tokens in a single month after failing to put usage limits on its account. Elsewhere, OpenClaw’s creator burned through $1.3 million in OpenAI API tokens in a single month.",
+      "cn": "使用生成式AI的公司开始面对现实。Axios近期报道称，一家未具名公司没有为账户设置用量上限，结果一个月就在AI词元上花掉了5亿美元(约合人民币34亿元)。另一个例子是，OpenClaw的创建者在一个月内消耗了价值130万美元(约合人民币871万元)的OpenAI API词元。"
+    },
+    {
+      "en": "There have been a few high profile instances of triple-A game developers either using generative AI or being caught up in the AI debate. Recently, Capcom had to clarify comments about its proprietary RE Engine being “AI powered .”",
+      "cn": "已有几起备受关注的事件涉及3A游戏开发商：有的使用生成式AI，有的卷入了AI争论。最近，卡普空不得不澄清有关其自研RE引擎「由AI驱动」的说法。"
+    },
+    {
+      "en": "The publisher behind Arc Raiders came out in defense of AI use in Embark’s extraction shooter, but the team has since been making progress on replacing those stilted performances with human ones . Even games industry giant Activision has come under fire for AI usage in Call of Duty and its marketing materials.",
+      "cn": "《Arc Raiders》的发行商曾公开为这款由Embark开发的撤离射击游戏使用AI辩护，不过此后，开发团队一直在推进用真人表演替换那些生硬的AI表演。就连游戏行业巨头Activision，也因在《使命召唤》及其营销素材中使用AI而受到批评。"
+    }
+  ],
+  "pending_dict": [],
+  "translated_terms": {
+    "Teach My Little Sister How to Drive": "《Teach My Little Sister How to Drive》",
+    "Easy Fox": "Easy Fox",
+    "FRVR": "FRVR",
+    "thinknoodles": "thinknoodles",
+    "Shinra": "神罗",
+    "Google Gemini": "Google Gemini",
+    "ChatGPT": "ChatGPT",
+    "Axios": "Axios",
+    "OpenClaw": "OpenClaw",
+    "OpenAI": "OpenAI",
+    "Capcom": "卡普空",
+    "RE Engine": "RE引擎",
+    "Arc Raiders": "《Arc Raiders》",
+    "Embark": "Embark",
+    "Activision": "Activision",
+    "Call of Duty": "《使命召唤》"
+  },
+  "cover": "https://assets-prd.ignimgs.com/2026/10/09/ss-fc8c3671ce84d509a1b4fc95e89c0a6fa0476c0e-1920x1080-1791553124680.jpg?width=1280&format=jpg&auto=webp&quality=80",
+  "images": [
+    {
+      "url": "https://assets-prd.ignimgs.com/2026/10/09/ss-fc8c3671ce84d509a1b4fc95e89c0a6fa0476c0e-1920x1080-1791553124680.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "caption": ""
+    },
+    {
+      "url": "https://kraken.ignimgs.com/apple-touch-icon.png",
+      "caption": ""
+    }
+  ],
+  "style_self_check": {
+    "read_style_profile": true,
+    "no_english_syntax": true,
+    "title_rewritten": true,
+    "subtitle_rewritten": true,
+    "xbox_normalized": true,
+    "xbox_series_normalized": true,
+    "quotes_checked": true,
+    "currency_checked": false,
+    "dictionary_checked": true
+  },
+  "translator": "api",
+  "translator_provider": "openai-compatible",
+  "translator_model": "gpt-6.1-sol",
+  "quality_status": "needs_manual_review",
+  "manual_release_required": true,
+  "audit_issues": [
+    {
+      "type": "style_self_check",
+      "detail": "style_self_check key 'currency_checked' is not true (got False)"
+    }
+  ],
+  "audit_failed_at": "2026-10-10T09:02:41.874514+08:00",
+  "audit_failure_reason": "风格拒收: style_self_check key 'currency_checked' is not true (got False)"
+}
