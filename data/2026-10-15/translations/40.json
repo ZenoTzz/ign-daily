@@ -1,0 +1,79 @@
+{
+  "id": 40,
+  "url": "https://www.ign.com/articles/a-broken-iphone-duo-could-cost-up-to-1499-to-repair",
+  "en_title": "A Broken iPhone Duo Could Cost Up to $1,499 to Repair",
+  "cn_title": "iPhone Duo维修费或高昂",
+  "subtitle": "买得贵，修得也贵",
+  "opus_summary": "苹果首款折叠屏手机iPhone Duo下周发售，无AppleCare+保障时，背板、内屏及其他损坏的维修费用高昂。购买保障可大幅降低费用，实际耐用程度仍有待检验。",
+  "publish_time_cn": "2026-10-15 05:17",
+  "paragraphs": [
+    {
+      "en": "The iPhone Duo , Apple's first foldable, is already an incredibly expensive phone, rolling in at $1,999 to start. While the buy-in price is high, it's also going to be extremely expensive if it breaks.",
+      "cn": "苹果首款折叠屏手机iPhone Duo起售价为1,999美元(约合人民币1万元)，本就十分昂贵。不仅买起来贵，坏了之后修起来也会非常贵。"
+    },
+    {
+      "en": "Ahead of the iPhone Duo's release next week, the foldable's repair costs were found by 9to5Mac , and they're staggering if you don't have AppleCare+. They range from damage on the glass back of the phone costing you $199 to inner screen damage costing $999 to repair. Apple will apparently also charge up to $1,499 to fix \"other damage,\" though it's not clear what exactly that means.",
+      "cn": "iPhone Duo将于下周发售，9to5Mac在发售前发现了这款折叠屏手机的维修报价。如果没有AppleCare+保障，维修费相当惊人：玻璃背板损坏的维修费为199美元(约合人民币1333元)，内屏损坏则要999美元(约合人民币6693元)。苹果似乎还会对「其他损坏」收取最高1,499美元(约合人民币1万元)的维修费，不过目前还不清楚具体涵盖哪些情况。"
+    },
+    {
+      "en": "All of these prices will be drastically lowered by having AppleCare+. Because the iPhone Duo is such an expensive and complicated device, anyone dropping the cash to buy one should seriously consider bundling AppleCare with it. I'd even go further and suggest picking up an iPhone Duo case on top of that.",
+      "cn": "有AppleCare+保障，上述维修费用都会大幅降低。iPhone Duo价格高昂，结构又复杂，打算花钱购买的人都应该认真考虑同时购买AppleCare。我甚至建议在此基础上，再买一个iPhone Duo手机壳。"
+    },
+    {
+      "en": "As scary as these high repair prices look, Apple basically skipped the era of fragile foldables. Back when the first Samsung foldables were coming out, they were notoriously prone to damage, with displays that had gaps when folded, allowing particles of sand to get in there and wreak havoc on the inner screen. You could even peel the outer layer of the display off, a problem so bad that Samsung actually had to get around by putting out a statement telling people that the outer display layer was not a screen protector.",
+      "cn": "尽管这些高昂的维修报价看着吓人，但苹果基本上跳过了折叠屏手机脆弱易损的年代。三星最早几款折叠屏手机问世时，就因容易损坏而饱受诟病：屏幕折叠后留有缝隙，沙粒可能进入其中，严重损伤内屏。用户甚至能把屏幕最外面的一层揭下来。这个问题严重到三星不得不发表声明，告知大家屏幕最外层并不是保护膜。"
+    },
+    {
+      "en": "To Apple's credit, the iPhone Duo probably won't be quite as fragile as the foldables of yore, but it is still a phone with plenty of moving parts, which can always lead to unforseen damage. But we probably won't know exactly how durable it is until it actually makes its way into people's hands later this month. There's also a chance that the Duo's unique display aspect ratio will make it one of the first foldables that's actually good for gaming .",
+      "cn": "值得肯定的是，iPhone Duo可能不会像早期的折叠屏手机那样脆弱，但它仍有不少活动部件，随时可能因此出现意料之外的损坏。不过，我们恐怕得等到本月晚些时候手机真正交到用户手中，才能知道它究竟有多耐用。此外，Duo独特的屏幕宽高比，也可能让它成为首批真正适合玩游戏的折叠屏手机之一。"
+    }
+  ],
+  "pending_dict": [],
+  "translated_terms": {
+    "Apple": "苹果",
+    "Samsung": "三星",
+    "iPhone Duo": "iPhone Duo",
+    "AppleCare+": "AppleCare+",
+    "AppleCare": "AppleCare",
+    "9to5Mac": "9to5Mac"
+  },
+  "cover": "https://assets-prd.ignimgs.com/2026/09/09/screenshot-2026-09-09-105643-1788976950324.png?width=1280&format=jpg&auto=webp&quality=80",
+  "images": [
+    {
+      "url": "https://assets-prd.ignimgs.com/2026/09/09/screenshot-2026-09-09-105643-1788976950324.png?width=1280&format=jpg&auto=webp&quality=80",
+      "caption": ""
+    },
+    {
+      "url": "https://kraken.ignimgs.com/apple-touch-icon.png",
+      "caption": ""
+    },
+    {
+      "url": "https://assets-prd.ignimgs.com/2026/09/09/duo-sqr-1788976915350.png",
+      "caption": ""
+    }
+  ],
+  "style_self_check": {
+    "read_style_profile": true,
+    "no_english_syntax": true,
+    "title_rewritten": true,
+    "subtitle_rewritten": true,
+    "xbox_normalized": true,
+    "xbox_series_normalized": true,
+    "quotes_checked": true,
+    "currency_checked": false,
+    "dictionary_checked": true
+  },
+  "translator": "api",
+  "translator_provider": "openai-compatible",
+  "translator_model": "gpt-6.1-sol",
+  "quality_status": "needs_manual_review",
+  "manual_release_required": true,
+  "audit_issues": [
+    {
+      "type": "style_self_check",
+      "detail": "style_self_check key 'currency_checked' is not true (got False)"
+    }
+  ],
+  "audit_failed_at": "2026-10-15T09:00:54.560260+08:00",
+  "audit_failure_reason": "风格拒收: style_self_check key 'currency_checked' is not true (got False)"
+}

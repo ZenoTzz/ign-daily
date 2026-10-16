@@ -1,0 +1,185 @@
+{
+  "date": "2026-10-15",
+  "items": {
+    "1": {
+      "id": 1,
+      "url": "https://www.ign.com/articles/ubisoft-cuts-70-staff-from-skull-and-bones-dev-shuts-down-trials-studio-redlynx",
+      "en_title": "Ubisoft Cuts 70 Staff From Skull and Bones Dev, Shuts Down Trials Studio RedLynx",
+      "cn_title": "育碧关闭工作室，新加坡裁员70人",
+      "model": "gpt-6.1-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-10-15T08:52:45.231249+08:00",
+      "reason": "风格拒收: style_self_check key 'currency_checked' is not true (got False)",
+      "audit_issues": [
+        {
+          "type": "style_self_check",
+          "detail": "style_self_check key 'currency_checked' is not true (got False)"
+        }
+      ],
+      "fingerprint": "f991c373bc2ae23573583b6f288e6447839e5bb7",
+      "translation_path": "translations/01.json",
+      "retry_policy": "manual_only"
+    },
+    "4": {
+      "id": 4,
+      "url": "https://www.ign.com/articles/rockstar-pushes-back-on-rumor-gta-6-cost-more-than-15-billion-to-make-but-its-still-probably-the-most-expensive-video-game-of-all-time",
+      "en_title": "Rockstar Pushes Back on Rumor GTA 6 Cost More Than $1.5 Billion to Make, but It's Still Probably the Most Expensive Video Game of All Time",
+      "cn_title": "《GTA6》天价预算传闻遭否认",
+      "model": "gpt-6.1-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-10-15T08:54:19.339077+08:00",
+      "reason": "风格拒收: style_self_check key 'currency_checked' is not true (got False)",
+      "audit_issues": [
+        {
+          "type": "style_self_check",
+          "detail": "style_self_check key 'currency_checked' is not true (got False)"
+        }
+      ],
+      "fingerprint": "dce458b16e0bf2d10d7c0766624ad239f7c8cd98",
+      "translation_path": "translations/04.json",
+      "retry_policy": "manual_only"
+    },
+    "14": {
+      "id": 14,
+      "url": "https://www.ign.com/articles/we-vibe-coded-a-new-epic-games-launcher-epics-new-store-app-was-built-using-ai",
+      "en_title": "‘We Vibe Coded a New Epic Games Launcher’ – Epic’s New Store App Was Built Using AI",
+      "cn_title": "Epic用生成式AI打造新版启动器",
+      "model": "gpt-6.1-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-10-15T08:56:00.621559+08:00",
+      "reason": "paragraph 9 missing cn",
+      "audit_issues": [
+        {
+          "type": "manual_translation_required",
+          "detail": "one or more paragraph chunks failed after retry; draft kept for manual review"
+        }
+      ],
+      "fingerprint": "fb2d27c31277272fea925c65dce08a2a11debbed",
+      "translation_path": "translations/14.json",
+      "retry_policy": "manual_only"
+    },
+    "26": {
+      "id": 26,
+      "url": "https://www.ign.com/articles/microsoft-announces-xbox-nano-controller",
+      "en_title": "Microsoft Announces Xbox Nano Controller, a Tiny New Gamepad That Fits in Your Pocket",
+      "cn_title": "微软发布迷你XBOX Nano手柄",
+      "model": "gpt-6.1-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-10-15T08:57:23.227267+08:00",
+      "reason": "风格拒收: style_self_check key 'currency_checked' is not true (got False); Chinese translation contains forbidden platform spelling: 'xbox series x' (must write exactly 'XBOX Series')",
+      "audit_issues": [
+        {
+          "type": "style_self_check",
+          "detail": "style_self_check key 'currency_checked' is not true (got False)"
+        },
+        {
+          "type": "style_self_check",
+          "detail": "Chinese translation contains forbidden platform spelling: 'xbox series x' (must write exactly 'XBOX Series')"
+        }
+      ],
+      "fingerprint": "e8584b83a83a6cb1f82050ef420ab0ce9dad118c",
+      "translation_path": "translations/26.json",
+      "retry_policy": "manual_only"
+    },
+    "36": {
+      "id": 36,
+      "url": "https://www.ign.com/articles/valve-may-be-working-on-an-oled-steam-frame-according-to-datamined-source-code",
+      "en_title": "Valve May Be Working on an OLED Steam Frame, According to Datamined Source Code",
+      "cn_title": "代码暗示Valve或正开发OLED头显",
+      "model": "gpt-6.1-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-10-15T08:57:51.354047+08:00",
+      "reason": "风格拒收: style_self_check key 'currency_checked' is not true (got False)",
+      "audit_issues": [
+        {
+          "type": "style_self_check",
+          "detail": "style_self_check key 'currency_checked' is not true (got False)"
+        }
+      ],
+      "fingerprint": "15db06093ae838be04273b23c8ea98e891f59adf",
+      "translation_path": "translations/36.json",
+      "retry_policy": "manual_only"
+    },
+    "37": {
+      "id": 37,
+      "url": "https://www.ign.com/articles/zangief-actor-olivier-richters-really-wants-to-play-tyr-in-the-live-action-god-of-war-show",
+      "en_title": "Zangief Actor Olivier Richters Really Wants to Play Tyr in the Live Action God of War Show",
+      "cn_title": "桑吉尔夫演员盼出演《战神》提尔",
+      "model": "gpt-6.1-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-10-15T08:59:50.528456+08:00",
+      "reason": "paragraph 10 missing cn",
+      "audit_issues": [
+        {
+          "type": "manual_translation_required",
+          "detail": "one or more paragraph chunks failed after retry; draft kept for manual review"
+        },
+        {
+          "type": "currency_source",
+          "detail": "source mentions foreign-currency amount(s), but translation has no CNY conversion: 350 pounds"
+        }
+      ],
+      "fingerprint": "2df42f00a15823ce7318a94b7b3cf7fd3c86daad",
+      "translation_path": "translations/37.json",
+      "retry_policy": "manual_only"
+    },
+    "40": {
+      "id": 40,
+      "url": "https://www.ign.com/articles/a-broken-iphone-duo-could-cost-up-to-1499-to-repair",
+      "en_title": "A Broken iPhone Duo Could Cost Up to $1,499 to Repair",
+      "cn_title": "iPhone Duo维修费或高昂",
+      "model": "gpt-6.1-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-10-15T09:00:54.560260+08:00",
+      "reason": "风格拒收: style_self_check key 'currency_checked' is not true (got False)",
+      "audit_issues": [
+        {
+          "type": "style_self_check",
+          "detail": "style_self_check key 'currency_checked' is not true (got False)"
+        }
+      ],
+      "fingerprint": "cad17236a6ed033ec5000124b7a8ee165168968c",
+      "translation_path": "translations/40.json",
+      "retry_policy": "manual_only"
+    },
+    "49": {
+      "id": 49,
+      "url": "https://www.ign.com/articles/peter-safran-dc-studios-slate-post-merger",
+      "en_title": "DC Studios Co-Boss Peter Safran Reaffirms Franchise Slate After Skydance Acquisition",
+      "cn_title": "DC掌门重申收购后的项目计划",
+      "model": "gpt-6.1-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-10-15T09:03:32.573150+08:00",
+      "reason": "风格拒收: style_self_check key 'currency_checked' is not true (got False)",
+      "audit_issues": [
+        {
+          "type": "style_self_check",
+          "detail": "style_self_check key 'currency_checked' is not true (got False)"
+        }
+      ],
+      "fingerprint": "51a6c8fb61f104b8354ecc907403c150be3924bf",
+      "translation_path": "translations/49.json",
+      "retry_policy": "manual_only"
+    },
+    "32": {
+      "id": 32,
+      "url": "https://www.ign.com/articles/cyberpunk-edgerunners-2-creators-talk-new-child-lead-and-gory-influences-ign-fall-fan-fest-2026",
+      "en_title": "Cyberpunk: Edgerunners 2 Creators Talk New Child Lead and Gory Influences | IGN Fall Fan Fest 2026",
+      "cn_title": "《赛博朋克：边缘行者2》主创谈创作",
+      "model": "gpt-6.1-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-10-15T09:41:09.026640+08:00",
+      "reason": "质量门禁拒绝: paragraph 11 is missing numeric fact(s): 2000",
+      "audit_issues": [
+        {
+          "type": "quality_gate",
+          "detail": "paragraph 11 is missing numeric fact(s): 2000"
+        }
+      ],
+      "fingerprint": "7e4702e627def23346c4db9d9ed4d9ad1f0897d0",
+      "translation_path": "translations/32.json",
+      "retry_policy": "manual_only"
+    }
+  },
+  "updated_at": "2026-10-15T09:41:09.026640+08:00"
+}

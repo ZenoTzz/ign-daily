@@ -1,0 +1,77 @@
+{
+  "id": 36,
+  "url": "https://www.ign.com/articles/sony-just-announced-a-6000-gold-plated-walkman",
+  "en_title": "Sony Just Announced a $6,000 Gold-Plated Walkman",
+  "cn_title": "索尼公布镀金音乐播放器",
+  "subtitle": "不只是为了好看",
+  "opus_summary": "索尼公布镀金音乐播放器NW-WM1ZM3，现已开放预购，将于1月上市。索尼称，镀金无氧铜机身有助提升音质；该机配备5.5英寸屏幕，续航可达35小时。",
+  "publish_time_cn": "2026-10-16 03:04",
+  "paragraphs": [
+    {
+      "en": "Have you ever looked at your phone and thought, \"This should only play music, and it should be shinier?\" Well, good news, Sony is bringing out a $5,899 Walkman, and it's gold plated. The NW-WM1ZM3 model will be available in January, but preorders are available now.",
+      "cn": "你有没有看着手机，心想：「这东西应该只能播放音乐，而且还得更闪亮一点？」好消息来了，索尼即将推出一款售价5,899美元(约合人民币4万元)的Walkman，而且还是镀金的。这款型号为NW-WM1ZM3的播放器将于1月上市，目前已开放预购。"
+    },
+    {
+      "en": "According to Sony, the gold isn't just there for show. According to the official announcement:",
+      "cn": "索尼表示，镀金不只是为了好看。官方公告写道："
+    },
+    {
+      "en": "\"The NW-WM1ZM3 is built around a precision-machined, gold-plated oxygen-free copper (OFC) chassis, engineered specifically to further elevate the sound quality of this flagship model. It features a 99.99% (4N) purity OFC main chassis and an OFC rear chassis. These are secured with screws featuring a low-resistance gold-plated treatment applied exclusively for this model, providing a stable ground connection that delivers powerful bass, an expansive soundstage, and smooth, extended high frequencies.\"",
+      "cn": "「NW-WM1ZM3采用精密加工的镀金无氧铜（OFC）机身，专为进一步提升这款旗舰机型的音质而设计。其主机身采用纯度为99.99%（4N）的无氧铜，背部机身也采用无氧铜。两者通过螺丝固定，螺丝采用本机型专属的低电阻镀金处理，确保接地连接稳定，从而带来强劲的低音、开阔的声场，以及顺滑且延展出色的高频表现。」"
+    },
+    {
+      "en": "It also has 35 hours of battery life, a 5.5-inch screen, and uses Sony's DSD Remastering Engine for better sound quality.",
+      "cn": "这款播放器还拥有35小时续航，配备5.5英寸屏幕，并采用索尼的DSD重制引擎（DSD Remastering Engine）来提升音质。"
+    },
+    {
+      "en": "This isn't Sony's first gold-plated Walkman; it released the NW-WM1ZM2 for $3,200 back in 2022. Those now go for around $1,500 on eBay, if you're looking for a bargain.",
+      "cn": "这并不是索尼首款镀金Walkman；早在2022年，索尼就推出了售价3,200美元(约合人民币2万元)的NW-WM1ZM2。如果你想淘个便宜货，这款旧机型目前在eBay上的价格约为1,500美元(约合人民币1万元)。"
+    }
+  ],
+  "pending_dict": [],
+  "translated_terms": {
+    "Sony": "索尼",
+    "Walkman": "Walkman",
+    "DSD Remastering Engine": "DSD重制引擎",
+    "eBay": "eBay"
+  },
+  "cover": "https://assets-prd.ignimgs.com/2026/10/15/sw-1792090624924.jpg?width=1280&format=jpg&auto=webp&quality=80",
+  "images": [
+    {
+      "url": "https://assets-prd.ignimgs.com/2026/10/15/sw-1792090624924.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "caption": ""
+    },
+    {
+      "url": "https://kraken.ignimgs.com/apple-touch-icon.png",
+      "caption": ""
+    },
+    {
+      "url": "https://assets-prd.ignimgs.com/2026/10/15/untitled1-1792090750467.jpg",
+      "caption": ""
+    }
+  ],
+  "style_self_check": {
+    "read_style_profile": true,
+    "no_english_syntax": true,
+    "title_rewritten": true,
+    "subtitle_rewritten": true,
+    "xbox_normalized": true,
+    "xbox_series_normalized": true,
+    "quotes_checked": true,
+    "currency_checked": false,
+    "dictionary_checked": true
+  },
+  "translator": "api",
+  "translator_provider": "openai-compatible",
+  "translator_model": "gpt-6.1-sol",
+  "quality_status": "needs_manual_review",
+  "manual_release_required": true,
+  "audit_issues": [
+    {
+      "type": "style_self_check",
+      "detail": "style_self_check key 'currency_checked' is not true (got False)"
+    }
+  ],
+  "audit_failed_at": "2026-10-16T09:07:36.462588+08:00",
+  "audit_failure_reason": "风格拒收: style_self_check key 'currency_checked' is not true (got False)"
+}

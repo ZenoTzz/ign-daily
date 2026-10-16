@@ -31,13 +31,13 @@
       "category": "游戏新闻",
       "emoji": "🪝",
       "en_title": "Arc Raiders' 2.0 Update and 'Spider-Man' Grappling Hook Drive Player Count to Reach 7-Month High",
-      "cn_title": "《蜘蛛侠》《Arc Raiders》更新带动人数新高",
-      "summary": "《Arc Raiders》2.0更新与可让玩家像蜘蛛侠般摆荡的抓钩，推动Steam同时在线人数达到七个月新高，报道时为166,670人。此次更新于10月8日推出，加入雪山地图、新敌人与工具，另有10月8日至12日的免费试玩活动。",
+      "cn_title": "《蜘蛛侠》《Arc Raiders》人数创七月新高",
+      "summary": "《Arc Raiders》2.0更新带来雪山地图与抓钩，配合免费周末，推动Steam同时在线人数升至166,670人，创七个月新高。专属PvE模式测试也将随后展开。",
       "url": "https://www.ign.com/articles/arc-raiders-20-update-and-spider-man-grappling-hook-drive-player-count-to-reach-7-month-high",
       "publish_time_cn": "2026-10-11 05:07",
       "pub_date": "2026-10-11 05:07",
       "cover_image": "https://assets-prd.ignimgs.com/2026/10/10/arc-raiders-spider-man-grappling-hook-1791664809875.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2026/10/10/arc-raiders-spider-man-grappling-hook-1791664809875.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/10/10/arc-raiders-spider-man-grappling-hook-1791664809875.png?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -48,7 +48,13 @@
         "https://assets-prd.ignimgs.com/2021/12/15/arc-raiders-button-01-1639552157827.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-10-11T05:17:35+08:00"
+      "source_fetched_at": "2026-10-11T05:17:35+08:00",
+      "translation_error": "质量门禁拒绝: paragraph 24 is missing numeric fact(s): 50%; paragraph 25 is missing numeric fact(s): 10",
+      "translation_failed_at": "2026-10-12T09:33:59.653270+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "gpt-6.1-sol",
+      "translation_path": "translations/13.json"
     },
     {
       "id": 12,
@@ -151,13 +157,13 @@
       "category": "影视资讯",
       "emoji": "🎬",
       "en_title": "Nicolas Cage Says He'll 'Probably Never Work With' Amazon Again After Declining Spider-Noir AI Waiver",
-      "cn_title": "凯奇表示可能不再与亚马逊合作",
-      "summary": "尼古拉斯·凯奇在2026年纽约漫展上表示，他拒绝签署允许在《Spider-Noir》中使用AI的授权书，今后可能不再与亚马逊合作。他强调自己不支持AI，并赞赏坚持手工创作的年轻导演。这部蜘蛛侠剧集已于上月被取消。",
+      "cn_title": "凯奇拒签AI授权，或告别亚马逊",
+      "summary": "尼古拉斯·凯奇拒签《Spider-Noir》的AI使用授权书，称可能不再与亚马逊合作。他在纽约漫展重申反对AI的立场，并赞赏坚持亲手创作的年轻导演。",
       "url": "https://www.ign.com/articles/nicolas-cage-says-hell-probably-never-work-with-amazon-again-after-declining-spider-noir-ai-waiver",
       "publish_time_cn": "2026-10-11 01:06",
       "pub_date": "2026-10-11 01:06",
       "cover_image": "https://assets-prd.ignimgs.com/2026/10/10/nicolas-cage-ai-amazon-1791650668232.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2026/10/10/nicolas-cage-ai-amazon-1791650668232.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/10/10/nicolas-cage-ai-amazon-1791650668232.png?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -169,7 +175,13 @@
         "https://assets-prd.ignimgs.com/2026/10/10/nicolas-cage-ai-amazon-1791650445884.png"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-10-11T02:17:39+08:00"
+      "source_fetched_at": "2026-10-11T02:17:39+08:00",
+      "translation_error": "风格拒收: style_self_check key 'currency_checked' is not true (got False)",
+      "translation_failed_at": "2026-10-12T09:31:44.314653+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "gpt-6.1-sol",
+      "translation_path": "translations/09.json"
     },
     {
       "id": 7,

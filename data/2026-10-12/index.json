@@ -2,17 +2,113 @@
   "date": "2026-10-12",
   "articles": [
     {
+      "id": 9,
+      "category": "影视资讯",
+      "emoji": "🧚",
+      "en_title": "Artemis Fowl Animated TV Show Greenlit With Eoin Colfer as Executive Producer",
+      "cn_title": "《阿特米斯奇幻历险》动画获批，原作者监制",
+      "summary": "原作者Eoin Colfer在2026年纽约漫展宣布，迪士尼已批准制作《阿特米斯奇幻历险》动画剧集，他将担任执行制片人。该剧将登陆Disney Channel和Disney+，尚未公布播出日期，故事围绕13岁天才少年捕捉精灵、夺取魔法以救治母亲并拯救家庭展开。",
+      "url": "https://www.ign.com/articles/artemis-fowl-animated-tv-show-greenlit-with-eoin-colfer-as-executive-producer",
+      "publish_time_cn": "2026-10-12 06:28",
+      "pub_date": "2026-10-12 06:28",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/10/11/artemis-fowl-1791757325951.png",
+      "translation_status": "done",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/10/11/artemis-fowl-1791757325951.png?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/10/11/artemis-fowl-1791757325951.png?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/10/11/artemis-fowl-1791757325951.png?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/10/11/artemis-fowl-1791757325951.png?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/10/11/artemis-fowl-1791757325951.png",
+        "https://kraken.ignimgs.com/apple-touch-icon.png",
+        "https://assets1.ignimgs.com/2020/03/02/artemis-fowl-ver2-xlg-button-1583180125980.jpg",
+        "https://assets-prd.ignimgs.com/2026/10/11/artemis-fowl-animated-series-1791757402558.jpeg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-10-12T07:17:32+08:00",
+      "translation_path": "translations/09.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "gpt-6.1-sol",
+      "reasoning_effort": "low",
+      "reviewer_model": "gpt-6.1-sol",
+      "reviewed_at": "2026-10-12T01:47:24.960127+00:00",
+      "prompt_version": "api-fulltext-2026-07-v2",
+      "quality_gate_version": 1
+    },
+    {
+      "id": 8,
+      "category": "影视资讯",
+      "emoji": "🎬",
+      "en_title": "Resident Evil Overtakes Weapons as Zach Cregger's Highest-Grossing Film, The Social Reckoning Bombs",
+      "cn_title": "《生化危机》登顶导演票房榜",
+      "summary": "《生化危机》超越《凶器》，成为导演票房最高的作品，中国首映带动影片重返全球周末票房榜首。《社交网络》续作则票房失利，首周末仅列第七，影评人口碑也不佳。",
+      "url": "https://www.ign.com/articles/resident-evil-overtakes-weapons-as-zach-creggers-highest-grossing-film-the-social-reckoning-bombs",
+      "publish_time_cn": "2026-10-12 05:19",
+      "pub_date": "2026-10-12 05:19",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/09/01/resident-evil-090126-poster-thumb-1788295069881.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "needs_review",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/09/01/resident-evil-090126-poster-thumb-1788295069881.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/09/01/resident-evil-090126-poster-thumb-1788295069881.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/09/01/resident-evil-090126-poster-thumb-1788295069881.jpg?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/09/01/resident-evil-090126-poster-thumb-1788295069881.jpg?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/09/01/resident-evil-090126-poster-thumb-1788295069881.jpg",
+        "https://kraken.ignimgs.com/apple-touch-icon.png"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-10-12T06:17:33+08:00",
+      "pending_dict": [
+        {
+          "en": "Weapons",
+          "cn": "凶器",
+          "cat": "movies_tv",
+          "source": "ai_guess",
+          "reason": "提供的词库未包含该片，中文译名需人工确认。"
+        }
+      ],
+      "translation_error": "风格拒收: style_self_check key 'currency_checked' is not true (got False)",
+      "translation_failed_at": "2026-10-12T09:46:32.510748+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "gpt-6.1-sol",
+      "translation_path": "translations/08.json"
+    },
+    {
+      "id": 7,
+      "category": "游戏新闻",
+      "emoji": "🎮",
+      "en_title": "New NetEase FPS Sparks Warzone 'Rip-Off' Claims, But Some Call of Duty Fans Are Happy to See It",
+      "cn_title": "《使命召唤》网易新FPS被指抄袭《战区》",
+      "summary": "网易新FPS《ECC: Redline》被不少玩家指抄袭《使命召唤：战区》，枪械表现、界面与音效均遭比较。但部分《使命召唤》粉丝乐见其出现，认为它或能满足怀念早期《战区》的玩家，并带来竞争。该作将免费游玩，登陆PC及移动设备，尚未公布发售日期。",
+      "url": "https://www.ign.com/articles/new-netease-fps-sparks-warzone-rip-off-claims-but-some-call-of-duty-fans-are-happy-to-see-it",
+      "publish_time_cn": "2026-10-12 03:26",
+      "pub_date": "2026-10-12 03:26",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/10/11/ecc-redline-1791745236467.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/10/11/ecc-redline-1791745236467.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/10/11/ecc-redline-1791745236467.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/10/11/ecc-redline-1791745236467.jpg?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/10/11/ecc-redline-1791745236467.jpg?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/10/11/ecc-redline-1791745236467.jpg",
+        "https://kraken.ignimgs.com/apple-touch-icon.png",
+        "https://assets1.ignimgs.com/2020/03/09/call-of-duty-warzone---button-01-1583782814571.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-10-12T04:17:35+08:00"
+    },
+    {
       "id": 6,
       "category": "游戏新闻",
       "emoji": "🥊",
       "en_title": "Tekken 8 Yujiro Teaser Reveals Baki Rep's In-Game Render Is Just as Uncanny as Fans Expected",
-      "cn_title": "《铁拳8》预告中范马勇次郎造型诡异",
-      "summary": "万代南梦宫公布《铁拳8》中《刃牙》联动角色范马勇次郎的首段预告，其游戏内造型果然如粉丝预期般诡异，展示了标志性的露齿笑容和身体柔韧性。角色尚未确定上线日期，新预告将于2027年1月17日随铁拳世界巡回赛总决赛亮相，届时或能看到实机演示。",
+      "cn_title": "《铁拳8》勇次郎亮相，果然诡异",
+      "summary": "万代南梦宫公布《铁拳8》范马勇次郎预告，造型如粉丝预期般诡异。小罗杰将于11月推出，勇次郎尚未定档，新预告将于2027年1月17日随巡回赛总决赛亮相。",
       "url": "https://www.ign.com/articles/tekken-8-yujiro-teaser-reveals-baki-reps-in-game-render-is-just-as-uncanny-as-fans-expected",
       "publish_time_cn": "2026-10-12 00:03",
       "pub_date": "2026-10-12 00:03",
       "cover_image": "https://assets-prd.ignimgs.com/2026/10/11/tekken-8-yujiro-1791734505643.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2026/10/11/tekken-8-yujiro-1791734505643.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/10/11/tekken-8-yujiro-1791734505643.png?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -23,7 +119,13 @@
         "https://assets1.ignimgs.com/2017/08/03/baki-tv-1501801428049.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-10-12T00:18:04+08:00"
+      "source_fetched_at": "2026-10-12T00:18:04+08:00",
+      "translation_error": "风格拒收: style_self_check key 'currency_checked' is not true (got False)",
+      "translation_failed_at": "2026-10-12T09:45:18.296129+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "gpt-6.1-sol",
+      "translation_path": "translations/06.json"
     },
     {
       "id": 4,
@@ -35,8 +137,8 @@
       "url": "https://www.ign.com/articles/im-shocked-that-people-are-still-playing-how-gta-5-took-over-the-world",
       "publish_time_cn": "2026-10-11 22:30",
       "pub_date": "2026-10-11 22:30",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/10/07/gta-world-blog-1791369194587.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/10/07/gta-world-blog-1791369194587.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/10/07/gta-world-blog-1791369194587.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/10/07/gta-world-blog-1791369194587.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -52,7 +154,16 @@
         "https://assets-prd.ignimgs.com/2026/10/07/siren-gtav-1791369833761.png"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-10-11T23:18:42+08:00"
+      "source_fetched_at": "2026-10-11T23:18:42+08:00",
+      "translation_path": "translations/04.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "gpt-6.1-sol",
+      "reasoning_effort": "low",
+      "reviewer_model": "gpt-6.1-sol",
+      "reviewed_at": "2026-10-12T01:42:21.196955+00:00",
+      "prompt_version": "api-fulltext-2026-07-v2",
+      "quality_gate_version": 1
     },
     {
       "id": 5,
@@ -64,8 +175,8 @@
       "url": "https://www.ign.com/articles/marvel-tokon-dlc-roadmap-reveals-first-look-at-jane-foster-thor-venom-and-jubilee-coming-in-2027",
       "publish_time_cn": "2026-10-11 22:29",
       "pub_date": "2026-10-11 22:29",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/10/11/marvel-tokon-dlc-1791728859034.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/10/11/marvel-tokon-dlc-1791728859034.png",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/10/11/marvel-tokon-dlc-1791728859034.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/10/11/marvel-tokon-dlc-1791728859034.png?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -85,7 +196,16 @@
           "source": "ai_guess",
           "reason": "所提供词库未收录该作品，需人工确认中文译名。"
         }
-      ]
+      ],
+      "translation_path": "translations/05.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "gpt-6.1-sol",
+      "reasoning_effort": "low",
+      "reviewer_model": "gpt-6.1-sol",
+      "reviewed_at": "2026-10-12T01:44:14.539212+00:00",
+      "prompt_version": "api-fulltext-2026-07-v2",
+      "quality_gate_version": 1
     },
     {
       "id": 3,
@@ -154,8 +274,8 @@
       "url": "https://www.ign.com/articles/naruto-teasers-reveal-new-shadow-rising-manga-and-anime-crossover-series",
       "publish_time_cn": "2026-10-11 08:00",
       "pub_date": "2026-10-11 08:00",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/10/10/naruto-1791675199952.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/10/10/naruto-1791675199952.png",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/10/10/naruto-1791675199952.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/10/10/naruto-1791675199952.png?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -165,8 +285,17 @@
         "https://kraken.ignimgs.com/apple-touch-icon.png"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-10-11T09:17:37+08:00"
+      "source_fetched_at": "2026-10-11T09:17:37+08:00",
+      "translation_path": "translations/01.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "gpt-6.1-sol",
+      "reasoning_effort": "low",
+      "reviewer_model": "gpt-6.1-sol",
+      "reviewed_at": "2026-10-12T01:34:59.321993+00:00",
+      "prompt_version": "api-fulltext-2026-07-v2",
+      "quality_gate_version": 1
     }
   ],
-  "total": 6
+  "total": 9
 }

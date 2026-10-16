@@ -1,0 +1,82 @@
+{
+  "date": "2026-10-13",
+  "items": {
+    "21": {
+      "id": 21,
+      "url": "https://www.ign.com/articles/batman-star-ben-affleck-says-justice-league-reshoots-were-the-lowest-point-of-his-career",
+      "en_title": "Batman Star Ben Affleck Says Justice League Reshoots Were the Lowest Point of His Career",
+      "cn_title": "阿弗莱克痛批《正义联盟》补拍经历",
+      "model": "gpt-6.1-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-10-13T09:12:58.530760+08:00",
+      "reason": "风格拒收: style_self_check key 'currency_checked' is not true (got False)",
+      "audit_issues": [
+        {
+          "type": "style_self_check",
+          "detail": "style_self_check key 'currency_checked' is not true (got False)"
+        }
+      ],
+      "fingerprint": "14664d98ffa73593b68a0217b89451bf936cd265",
+      "translation_path": "translations/21.json",
+      "retry_policy": "manual_only"
+    },
+    "27": {
+      "id": 27,
+      "url": "https://www.ign.com/articles/beats-by-dre-x-pokemon-collaboration-announced",
+      "en_title": "Beats by Dre Teases Pokémon Collaboration With an Electrified Beats Pill Speaker",
+      "cn_title": "Beats暗示将推《宝可梦》联名",
+      "model": "gpt-6.1-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-10-13T09:13:39.295325+08:00",
+      "reason": "风格拒收: style_self_check key 'currency_checked' is not true (got False)",
+      "audit_issues": [
+        {
+          "type": "style_self_check",
+          "detail": "style_self_check key 'currency_checked' is not true (got False)"
+        }
+      ],
+      "fingerprint": "92d2cdd85b37b6c474d3d762c22b35db6dc523f1",
+      "translation_path": "translations/27.json",
+      "retry_policy": "manual_only"
+    },
+    "34": {
+      "id": 34,
+      "url": "https://www.ign.com/articles/epic-reportedly-pushing-devs-to-use-ai-delays-secret-star-wars-and-marvel-crossover-shooter",
+      "en_title": "Epic Reportedly Pushing Devs to Use AI, Delays Secret Star Wars and Marvel Crossover Shooter",
+      "cn_title": "《星球大战》Epic据报推AI开发，联动射击作延期",
+      "model": "gpt-6.1-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-10-13T09:22:37.788789+08:00",
+      "reason": "风格拒收: style_self_check key 'currency_checked' is not true (got False)",
+      "audit_issues": [
+        {
+          "type": "style_self_check",
+          "detail": "style_self_check key 'currency_checked' is not true (got False)"
+        }
+      ],
+      "fingerprint": "f598445a8cf028daa3ef7e2991dc15c0b91431d6",
+      "translation_path": "translations/34.json",
+      "retry_policy": "manual_only"
+    },
+    "26": {
+      "id": 26,
+      "url": "https://www.ign.com/articles/visionquest-release-schedule-reveals-early-premiere-for-episode-1",
+      "en_title": "VisionQuest Release Schedule Reveals Early Premiere for Episode 1",
+      "cn_title": "《VisionQuest》提前开播",
+      "model": "gpt-6.1-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-10-13T09:26:59.786103+08:00",
+      "reason": "质量门禁拒绝: paragraph 10 is missing numeric fact(s): 10, 2026",
+      "audit_issues": [
+        {
+          "type": "quality_gate",
+          "detail": "paragraph 10 is missing numeric fact(s): 10, 2026"
+        }
+      ],
+      "fingerprint": "a3de45d6487d5721722adbba3a17e229070ec768",
+      "translation_path": "translations/26.json",
+      "retry_policy": "manual_only"
+    }
+  },
+  "updated_at": "2026-10-13T09:26:59.786103+08:00"
+}

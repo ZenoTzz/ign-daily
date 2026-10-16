@@ -1,0 +1,101 @@
+{
+  "id": 4,
+  "url": "https://www.ign.com/articles/big-walk-developer-explains-why-the-game-isnt-on-xbox",
+  "en_title": "Big Walk Developer Explains Why the Game Isn't on Xbox",
+  "cn_title": "《Big Walk》为何缺席XBOX",
+  "subtitle": "抵制目标未变",
+  "opus_summary": "《Big Walk》开发商表示，游戏未登陆XBOX是为支持BDS抵制运动。在微软或XBOX不再被列为抵制目标之前，工作室不会在该平台推出游戏。IGN已向微软征求回应。",
+  "publish_time_cn": "2026-10-15 16:20",
+  "paragraphs": [
+    {
+      "en": "Big Walk developer House House has explained why it’s boycotting Xbox and thus why the game isn’t available on Microsoft's console.",
+      "cn": "《Big Walk》开发商House House解释了抵制XBOX的原因，这也是该作未登陆微软主机的原因。"
+    },
+    {
+      "en": "House House, the Australian studio behind Untitled Goose Game, released clever co-op puzzle adventure Big Walk earlier this year on PC, PlayStation 5, and Nintendo Switch 2, leaving Xbox Series X and S out in the cold. Big Walk was critically acclaimed upon release, earning a 91 rating on Metacritic and multiple appearances on Game of the Year contender lists.",
+      "cn": "开发过《捣蛋大鹅》的澳大利亚工作室House House，今年早些时候在PC、PS5和Switch 2上推出了设计巧妙的合作解谜冒险游戏《Big Walk》，唯独没有登陆XBOX Series。《Big Walk》发售后广受好评，Metacritic评分达到91分，还多次入选年度游戏候选名单。"
+    },
+    {
+      "en": "IGN’s Big Walk review returned a 9/10. We said: “Big Walk is a rewarding co-op adventure full of beautiful emergent moments as you find solutions to cleverly built puzzles and explore its vast open world with your friends.”",
+      "cn": "IGN为《Big Walk》打出了9分（满分10分）。我们在评测中写道：「《Big Walk》是一款让人收获满满的合作冒险游戏。你与好友一同探索广阔的开放世界、解开设计巧妙的谜题时，会遇到许多自然涌现的美好瞬间。」"
+    },
+    {
+      "en": "Since then, fans had wondered why the game failed to come out Xbox. In a statement published to its website , House House said it made the decision as part of its support for campaign group Boycott, Divestment, Sanctions (BDS), which describes itself as a “Palestinian-led movement for freedom, justice and equality.”",
+      "cn": "自那以后，粉丝们一直想知道，这款游戏为何没有登陆XBOX。House House在官网发布声明，表示这一决定是为了支持「抵制、撤资、制裁」（Boycott, Divestment, Sanctions，简称BDS）运动组织。该组织自称是「由巴勒斯坦人领导、争取自由、正义与平等的运动」。"
+    },
+    {
+      "en": "IGN has asked Microsoft for comment.",
+      "cn": "IGN已向微软征求回应。"
+    },
+    {
+      "en": "BDS lists Xbox as a “priority” target, and has launched a campaign calling on gamers, streamers, and developers to boycott Microsoft’s gaming efforts. As reported by the BBC , Microsoft's work with the Israeli government has been a controversial issue, including within the company itself, prompting protests by some employees.",
+      "cn": "BDS将XBOX列为「优先」抵制目标，并已发起行动，呼吁玩家、主播和开发者抵制微软的游戏业务。据BBC报道，微软与以色列政府的合作一直存在争议，公司内部也不例外，一些员工因此发起了抗议。"
+    },
+    {
+      "en": "House House indicated that it won't release Big Walk on Xbox \"until Microsoft and/or Xbox have been removed as BDS boycott targets.\"",
+      "cn": "House House表示，「在微软和／或XBOX不再被BDS列为抵制目标之前」，工作室不会在XBOX上推出《Big Walk》。"
+    },
+    {
+      "en": "House House’s statement is republished in full below:",
+      "cn": "以下为House House声明全文："
+    }
+  ],
+  "pending_dict": [],
+  "translated_terms": {
+    "Big Walk": "《Big Walk》",
+    "House House": "House House",
+    "Untitled Goose Game": "《捣蛋大鹅》",
+    "Microsoft": "微软",
+    "PlayStation 5": "PS5",
+    "Nintendo Switch 2": "Switch 2",
+    "Nintendo": "任天堂",
+    "Xbox Series": "XBOX Series",
+    "Xbox": "XBOX",
+    "Metacritic": "Metacritic",
+    "Boycott, Divestment, Sanctions": "抵制、撤资、制裁",
+    "BBC": "BBC"
+  },
+  "cover": "https://assets-prd.ignimgs.com/2026/08/07/bigwalk-blogroll-02-1786134282337.jpg?width=1280&format=jpg&auto=webp&quality=80",
+  "images": [
+    {
+      "url": "https://assets-prd.ignimgs.com/2026/08/07/bigwalk-blogroll-02-1786134282337.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "caption": ""
+    },
+    {
+      "url": "https://kraken.ignimgs.com/apple-touch-icon.png",
+      "caption": ""
+    },
+    {
+      "url": "https://assets-prd.ignimgs.com/2026/06/09/nintendoswitch2-big-walk-keyart-square-1781028068104.jpg",
+      "caption": ""
+    }
+  ],
+  "style_self_check": {
+    "read_style_profile": true,
+    "no_english_syntax": true,
+    "title_rewritten": true,
+    "subtitle_rewritten": true,
+    "xbox_normalized": true,
+    "xbox_series_normalized": true,
+    "quotes_checked": true,
+    "currency_checked": true,
+    "dictionary_checked": true
+  },
+  "repair_source": "api_audit",
+  "repair_issue_count": 1,
+  "translator": "api",
+  "translator_provider": "openai-compatible",
+  "translator_model": "gpt-6.1-sol",
+  "quality_status": "needs_manual_review",
+  "manual_release_required": true,
+  "audit_issues": [
+    {
+      "type": "dictionary",
+      "detail": "source contains 'Nintendo', but required dictionary translation '任天堂' is missing",
+      "en": "Nintendo",
+      "expected_cn": "任天堂"
+    }
+  ],
+  "audit_failed_at": "2026-10-16T08:58:58.396531+08:00",
+  "audit_failure_reason": "[dictionary] source contains 'Nintendo', but required dictionary translation '任天堂' is missing"
+}

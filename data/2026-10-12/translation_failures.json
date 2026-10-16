@@ -1,0 +1,44 @@
+{
+  "date": "2026-10-12",
+  "items": {
+    "6": {
+      "id": 6,
+      "url": "https://www.ign.com/articles/tekken-8-yujiro-teaser-reveals-baki-reps-in-game-render-is-just-as-uncanny-as-fans-expected",
+      "en_title": "Tekken 8 Yujiro Teaser Reveals Baki Rep's In-Game Render Is Just as Uncanny as Fans Expected",
+      "cn_title": "《铁拳8》勇次郎亮相，果然诡异",
+      "model": "gpt-6.1-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-10-12T09:45:18.296129+08:00",
+      "reason": "风格拒收: style_self_check key 'currency_checked' is not true (got False)",
+      "audit_issues": [
+        {
+          "type": "style_self_check",
+          "detail": "style_self_check key 'currency_checked' is not true (got False)"
+        }
+      ],
+      "fingerprint": "b37edd2b00e7e11e12ad46328efd6b3b34abbd9b",
+      "translation_path": "translations/06.json",
+      "retry_policy": "manual_only"
+    },
+    "8": {
+      "id": 8,
+      "url": "https://www.ign.com/articles/resident-evil-overtakes-weapons-as-zach-creggers-highest-grossing-film-the-social-reckoning-bombs",
+      "en_title": "Resident Evil Overtakes Weapons as Zach Cregger's Highest-Grossing Film, The Social Reckoning Bombs",
+      "cn_title": "《生化危机》登顶导演票房榜",
+      "model": "gpt-6.1-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-10-12T09:46:32.510748+08:00",
+      "reason": "风格拒收: style_self_check key 'currency_checked' is not true (got False)",
+      "audit_issues": [
+        {
+          "type": "style_self_check",
+          "detail": "style_self_check key 'currency_checked' is not true (got False)"
+        }
+      ],
+      "fingerprint": "b2c4f793cc58156e4ce61b73a01b8496c5170b31",
+      "translation_path": "translations/08.json",
+      "retry_policy": "manual_only"
+    }
+  },
+  "updated_at": "2026-10-12T09:46:32.510748+08:00"
+}

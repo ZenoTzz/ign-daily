@@ -1,0 +1,85 @@
+{
+  "id": 13,
+  "url": "https://www.ign.com/articles/gta-6-reportedly-set-for-pc-q1-2027",
+  "en_title": "GTA 6 Reportedly Set for PC Q1 2027",
+  "cn_title": "据称《GTA6》明年首季登PC",
+  "subtitle": "或只需再等数月",
+  "opus_summary": "据四名匿名消息人士透露，《GTA6》PC版计划于2027年第一季度推出，可能与多人模式的推出有关。若属实，PC版将比主机版晚数月，官方尚未回应。",
+  "publish_time_cn": "2026-10-13 22:01",
+  "paragraphs": [
+    {
+      "en": "Rockstar reportedly plans to release GTA 6 on PC during the first quarter of 2027.",
+      "cn": "据报道，Rockstar计划在2027年第一季度推出《GTA6》PC版。"
+    },
+    {
+      "en": "GamesBeat reported the news based on four sources who asked to remain anonymous. Rockstar and parent company Take-Two are yet to comment.",
+      "cn": "GamesBeat援引四名要求匿名的消息人士报道了这一消息。Rockstar及其母公司Take-Two尚未回应。"
+    },
+    {
+      "en": "If true, it would mean GTA 6 hitting PC just a few months after it launches on PlayStation 5 and Xbox Series X and S on November 19, 2026. Some had anticipated a longer wait for the game on PC, given it took nearly two years for GTA 5 to launch on PC after consoles.",
+      "cn": "如果消息属实，《GTA6》在2026年11月19日登陆PS5和XBOX Series后，只需再过几个月就会推出PC版。此前有人预计，PC玩家需要等待更久，毕竟《GTA5》在主机版发售近两年后才登陆PC。"
+    },
+    {
+      "en": "The PC launch may tie into the release of GTA 6's multiplayer mode, which fans are calling GTA Online 2 while they wait for official word from Rockstar. While Rockstar has yet to confirm an online mode for GTA 6, last month Twitch boss Dan Clancy said GTA Online 2 — or whatever GTA 6’s multiplayer mode is called — will launch next year.",
+      "cn": "PC版的推出可能与《GTA6》多人模式的上线有关。在等待Rockstar官方消息期间，粉丝们暂且将这个模式称为《GTA Online 2》。虽然Rockstar尚未确认《GTA6》会有在线模式，但Twitch负责人Dan Clancy上个月表示，《GTA Online 2》——不管《GTA6》的多人模式最终叫什么——将于明年上线。"
+    }
+  ],
+  "pending_dict": [],
+  "translated_terms": {
+    "GTA 6": "《GTA6》",
+    "GTA 5": "《GTA5》",
+    "GTA Online 2": "《GTA Online 2》",
+    "Rockstar": "Rockstar",
+    "Take-Two": "Take-Two",
+    "GamesBeat": "GamesBeat",
+    "PlayStation 5": "PS5",
+    "Xbox Series": "XBOX Series",
+    "Xbox": "XBOX",
+    "Twitch": "Twitch",
+    "Dan Clancy": "Dan Clancy"
+  },
+  "cover": "https://assets-prd.ignimgs.com/2026/08/27/gta-6-gameplay-blog-1787861652027.jpg",
+  "images": [
+    {
+      "url": "https://assets-prd.ignimgs.com/2026/08/27/gta-6-gameplay-blog-1787861652027.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "caption": ""
+    },
+    {
+      "url": "https://kraken.ignimgs.com/apple-touch-icon.png",
+      "caption": ""
+    },
+    {
+      "url": "https://assets-prd.ignimgs.com/2026/07/20/9f51f0ccdb65bd29c36a0907a738c2902a712f03e2fd6470-1784587649326.jpg",
+      "caption": ""
+    }
+  ],
+  "style_self_check": {
+    "read_style_profile": true,
+    "no_english_syntax": true,
+    "title_rewritten": true,
+    "subtitle_rewritten": true,
+    "xbox_normalized": true,
+    "xbox_series_normalized": true,
+    "quotes_checked": true,
+    "currency_checked": true,
+    "dictionary_checked": true
+  },
+  "translator": "api",
+  "translator_provider": "openai-compatible",
+  "translator_model": "gpt-6.1-sol",
+  "reasoning_effort": "low",
+  "reviewer_model": "gpt-6.1-sol",
+  "reviewed_at": "2026-10-14T01:28:39.824612+00:00",
+  "prompt_version": "api-fulltext-2026-07-v2",
+  "quality_gate_version": 1,
+  "quality_review": {
+    "status": "passed",
+    "reviewer_model": "gpt-6.1-sol",
+    "reviewed_at": "2026-10-14T01:28:39.824612+00:00",
+    "checks": {
+      "source_coverage": true,
+      "quote_attribution": true,
+      "numeric_facts": true
+    }
+  }
+}

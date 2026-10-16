@@ -1,0 +1,163 @@
+{
+  "date": "2026-10-16",
+  "items": {
+    "4": {
+      "id": 4,
+      "url": "https://www.ign.com/articles/big-walk-developer-explains-why-the-game-isnt-on-xbox",
+      "en_title": "Big Walk Developer Explains Why the Game Isn't on Xbox",
+      "cn_title": "《Big Walk》为何缺席XBOX",
+      "model": "gpt-6.1-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-10-16T08:58:58.396531+08:00",
+      "reason": "[dictionary] source contains 'Nintendo', but required dictionary translation '任天堂' is missing",
+      "audit_issues": [
+        {
+          "type": "dictionary",
+          "detail": "source contains 'Nintendo', but required dictionary translation '任天堂' is missing",
+          "en": "Nintendo",
+          "expected_cn": "任天堂"
+        }
+      ],
+      "fingerprint": "e2e473123af0e161ead6ff41b00eefe3428aeed4",
+      "translation_path": "translations/04.json",
+      "retry_policy": "manual_only"
+    },
+    "7": {
+      "id": 7,
+      "url": "https://www.ign.com/articles/gta-6s-level-of-detail-is-so-extreme-rockstar-built-an-entire-scripted-system-just-for-sweat",
+      "en_title": "GTA 6's Level of Detail Is So Extreme, Rockstar Built an Entire Scripted System Just for Sweat",
+      "cn_title": "《GTA6》连出汗都有专门系统",
+      "model": "gpt-6.1-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-10-16T08:59:31.926424+08:00",
+      "reason": "风格拒收: style_self_check key 'currency_checked' is not true (got False)",
+      "audit_issues": [
+        {
+          "type": "style_self_check",
+          "detail": "style_self_check key 'currency_checked' is not true (got False)"
+        }
+      ],
+      "fingerprint": "f3354d0bd918bc19fc4572484e227555b3de3dca",
+      "translation_path": "translations/07.json",
+      "retry_policy": "manual_only"
+    },
+    "25": {
+      "id": 25,
+      "url": "https://www.ign.com/articles/33-new-details-from-the-gta-6-launch-trailer",
+      "en_title": "33 New Details From the GTA 6 Launch Trailer",
+      "cn_title": "细看《GTA6》发售预告33处细节",
+      "model": "gpt-6.1-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-10-16T09:05:05.796881+08:00",
+      "reason": "质量门禁拒绝: paragraph 5 is missing numeric fact(s): 1940; paragraph 33 is missing numeric fact(s): 1980",
+      "audit_issues": [
+        {
+          "type": "quality_gate",
+          "detail": "paragraph 5 is missing numeric fact(s): 1940"
+        },
+        {
+          "type": "quality_gate",
+          "detail": "paragraph 33 is missing numeric fact(s): 1980"
+        }
+      ],
+      "fingerprint": "36dfdb101bb8503bef63f543e7817aa8eb247609",
+      "translation_path": "translations/25.json",
+      "retry_policy": "manual_only"
+    },
+    "26": {
+      "id": 26,
+      "url": "https://www.ign.com/articles/riot-games-louis-vuitton-kda-travel-book-announcement",
+      "en_title": "K/DA Is Getting an Official Louis Vuitton Art Book Ahead of 'Start a Fire' Comeback",
+      "cn_title": "路易威登将推K/DA回归画集",
+      "model": "gpt-6.1-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-10-16T09:05:45.289444+08:00",
+      "reason": "风格拒收: style_self_check key 'currency_checked' is not true (got False)",
+      "audit_issues": [
+        {
+          "type": "style_self_check",
+          "detail": "style_self_check key 'currency_checked' is not true (got False)"
+        }
+      ],
+      "fingerprint": "5a42b89f8959a2c8136f1c5c1ef29a3471b2eac5",
+      "translation_path": "translations/26.json",
+      "retry_policy": "manual_only"
+    },
+    "36": {
+      "id": 36,
+      "url": "https://www.ign.com/articles/sony-just-announced-a-6000-gold-plated-walkman",
+      "en_title": "Sony Just Announced a $6,000 Gold-Plated Walkman",
+      "cn_title": "索尼公布镀金音乐播放器",
+      "model": "gpt-6.1-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-10-16T09:07:36.462588+08:00",
+      "reason": "风格拒收: style_self_check key 'currency_checked' is not true (got False)",
+      "audit_issues": [
+        {
+          "type": "style_self_check",
+          "detail": "style_self_check key 'currency_checked' is not true (got False)"
+        }
+      ],
+      "fingerprint": "9cdd6cef14041aced7faf6acaf39f91cae8c825b",
+      "translation_path": "translations/36.json",
+      "retry_policy": "manual_only"
+    },
+    "45": {
+      "id": 45,
+      "url": "https://www.ign.com/articles/the-batman-part-2-brings-in-director-steven-soderbergh-to-finish-film-in-place-of-matt-reeves",
+      "en_title": "The Batman Part 2 Brings in Director Steven Soderbergh to Finish Film in Place of Matt Reeves",
+      "cn_title": "《新蝙蝠侠2》请索德伯格完成拍摄",
+      "model": "gpt-6.1-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-10-16T09:08:14.298097+08:00",
+      "reason": "质量门禁拒绝: paragraph 1 is missing numeric fact(s): 11; paragraph 2 is missing numeric fact(s): 11",
+      "audit_issues": [
+        {
+          "type": "quality_gate",
+          "detail": "paragraph 1 is missing numeric fact(s): 11"
+        },
+        {
+          "type": "quality_gate",
+          "detail": "paragraph 2 is missing numeric fact(s): 11"
+        }
+      ],
+      "fingerprint": "11720423d7305050695bd38ad92990c2023169b3",
+      "translation_path": "translations/45.json",
+      "retry_policy": "manual_only"
+    },
+    "47": {
+      "id": 47,
+      "url": "https://www.ign.com/articles/i-just-sort-of-disconnect-jeff-kaplan-is-avoiding-overwatch-at-all-costs",
+      "en_title": "'I Just Sort of Disconnect' — Jeff Kaplan is Avoiding Overwatch at all Costs",
+      "cn_title": "杰夫·卡普兰称彻底远离《守望先锋》",
+      "model": "gpt-6.1-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-10-16T09:09:44.042215+08:00",
+      "reason": "model returned empty paragraphs",
+      "audit_issues": [],
+      "fingerprint": "c6a640957ce06b527a8cfcfe77c3d341fec296f3",
+      "translation_path": "",
+      "retry_policy": "manual_only"
+    },
+    "53": {
+      "id": 53,
+      "url": "https://www.ign.com/articles/total-war-shogun-2-remaster-pulled-from-sale",
+      "en_title": "Sega Pulls Disastrous Total War: Shogun 2 Remaster From Sale Following Backlash",
+      "cn_title": "《全面战争》世嘉下架《幕府将军2》重制版",
+      "model": "gpt-6.1-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-10-16T09:29:31.687172+08:00",
+      "reason": "风格拒收: style_self_check key 'currency_checked' is not true (got False)",
+      "audit_issues": [
+        {
+          "type": "style_self_check",
+          "detail": "style_self_check key 'currency_checked' is not true (got False)"
+        }
+      ],
+      "fingerprint": "47b86bfe736b4f8d442c2e071a0018809b11a7f1",
+      "translation_path": "translations/53.json",
+      "retry_policy": "manual_only"
+    }
+  },
+  "updated_at": "2026-10-16T09:29:31.687172+08:00"
+}
