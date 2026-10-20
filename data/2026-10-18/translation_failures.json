@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-18",
+  "items": {
+    "6": {
+      "id": 6,
+      "url": "https://www.ign.com/articles/james-cameron-congratulates-marvel-after-avengers-endgame-beats-avatar-at-the-box-office-yet-again",
+      "en_title": "James Cameron Congratulates Marvel After Avengers: Endgame Beats Avatar at the Box Office Yet Again",
+      "cn_title": "漫威再夺票房榜首，卡梅隆发文祝贺",
+      "model": "gpt-6.1-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-10-19T09:32:10.458977+08:00",
+      "reason": "风格拒收: style_self_check key 'currency_checked' is not true (got False)",
+      "audit_issues": [
+        {
+          "type": "style_self_check",
+          "detail": "style_self_check key 'currency_checked' is not true (got False)"
+        }
+      ],
+      "fingerprint": "0ebefa897592df57b2470012e0c7af46c0a446e3",
+      "translation_path": "translations/06.json",
+      "retry_policy": "manual_only"
+    }
+  },
+  "updated_at": "2026-10-19T09:32:10.458977+08:00"
+}

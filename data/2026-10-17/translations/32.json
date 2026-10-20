@@ -1,0 +1,100 @@
+{
+  "id": 32,
+  "url": "https://www.ign.com/articles/playstation-6-will-likely-have-sonys-own-take-on-frame-generation-according-to-latest-patent",
+  "en_title": "PlayStation 6 Will Likely Have Sony's Own Take on Frame Generation, According to Latest Patent",
+  "cn_title": "新专利显示PS6或采用索尼帧生成",
+  "subtitle": "把手柄输入也算进去",
+  "opus_summary": "索尼新专利披露帧生成方案，或用于PS6。模型将结合手柄输入预测画面变化，以减少延迟和卡顿，也支持多帧生成的可能性，但这些技术最终能否落地仍不确定。",
+  "publish_time_cn": "2026-10-17 04:02",
+  "paragraphs": [
+    {
+      "en": "Frame generation is established tech in games at this point. We already knew that Sony was looking at the tecnology for the PlayStation 6 , but the company has filed a new patent that gives a better idea of how it'll work.",
+      "cn": "如今，帧生成在游戏中已是一项成熟技术。我们此前就知道索尼正在考虑为PlayStation 6引入这项技术，而索尼新申请的一项专利，让我们更清楚地了解了它的运作方式。"
+    },
+    {
+      "en": "The patent, titled \"Generation Super Sampling,\" (US-20260320740-A1 ), describes a mostly standard form of frame generation, where the model takes information from a traditionally rendered frame and then uses that information to generate an interpolated frame. The major difference is in how the model will be predicting how the frames will change.",
+      "cn": "这项名为「生成式超级采样」（Generation Super Sampling）的专利（US-20260320740-A1），描述的帧生成方式与常规方案大体相同：模型从以传统方式渲染的画面帧中提取信息，再利用这些信息生成插值帧。主要区别在于，模型将如何预测画面帧的变化。"
+    },
+    {
+      "en": "DLSS frame generation works by taking rendered frames and then pulling motion vector information from the game engine. The suggested PlayStation model will also take input data from your controller to more accurately predict how you're going to be moving from frame to frame. The hope, according to the patent notes, is to limit the amount of latency or 'hitching' from frame to frame.",
+      "cn": "DLSS帧生成会利用已经渲染的画面帧，并从游戏引擎中获取运动矢量信息。专利提出的PlayStation模型还会读取手柄输入数据，更准确地预测玩家在相邻帧之间会如何移动。根据专利说明，这样做是希望减少帧与帧之间的延迟或「卡顿」。"
+    },
+    {
+      "en": "The patent also leaves the door open for multi-frame generation, which was introduced on PC with the RTX 5090 back in 2025. According to the patent notes, \"In some embodiments, the predictions are not limited to an immediate next image in the image stream. The decoder system may be trained to predict any number of images before or after the input image.\"",
+      "cn": "这项专利也为多帧生成留下了空间。这项技术早在2025年就随RTX 5090登陆PC。专利说明写道：「在某些实施方式中，预测并不局限于图像流中紧接着的下一张图像。解码器系统可以经过训练，预测输入图像之前或之后的任意数量图像。」"
+    },
+    {
+      "en": "It's hard to imagine why a console that'd presumably be attached to a TV needs to generate multiple frames, though. With PC gaming, multi-frame generation is only really useful when you're playing on a super-high refresh rate gaming monitor at 144Hz or higher. Even the TVs that do support high refresh rates are limited to 120Hz, which really limits the need for multi-frame generation. Still, having the option wouldn't be terrible.",
+      "cn": "不过，一台想必会连接电视的主机，为什么需要多帧生成，实在让人难以理解。在PC上玩游戏时，只有使用刷新率达到144Hz或更高的超高刷新率游戏显示器，多帧生成才真正有用。即使是支持高刷新率的电视，刷新率也仅限于120Hz，因此对多帧生成的需求相当有限。不过，多一个选择也不是什么坏事。"
+    },
+    {
+      "en": "My only concern with bringing frame generation to consoles is whether or not users will be able to turn it on or off at will. The nightmare scenario in my head is developers using it as a crutch, forcing it on to hit 30 or 60 fps in a game that'd otherwise be getting 15–20 fps. That kind of solution would introduce a ton of latency and visual artifacts, but then again, it's possible that taking user inputs into the frame gen pipeline could alleviate that issue.",
+      "cn": "对于将帧生成引入主机，我唯一担心的是，用户能否自由开启或关闭它。我最怕的情况是，开发者过度依赖这项技术，强制开启帧生成，让原本只能跑到15至20帧的游戏达到30或60帧。这种做法会带来严重的延迟和大量画面瑕疵。不过话说回来，将用户输入纳入帧生成流程，或许能缓解这个问题。"
+    },
+    {
+      "en": "Sony has been on a tear lately with its patents, and it really does seem like the company is building up to its next generation of consoles. Last month, it filed a patent that described an AI agent keeping an eye on your system and deploying fixes before you even notice a problem. Then, there was a patent that would implement an NFC reader into your PlayStation controller and would enable tap-to-pay. Because these are all only patents, there is a chance that none of these technologies see the light of day, but either way, the PlayStation 6 is turning out to be quite the interesting console to say the least.",
+      "cn": "索尼最近接连申请专利，看起来确实在为下一代主机做准备。上个月，索尼申请的一项专利描述了一个AI智能体，它会监控系统，在用户察觉问题之前就部署修复措施。随后又有一项专利，计划在PlayStation手柄中加入NFC读卡器，实现碰一碰支付。由于这些都还只是专利，这些技术也可能一个都不会落地。但无论如何，至少从目前来看，PlayStation 6正变得相当有意思。"
+    }
+  ],
+  "pending_dict": [
+    {
+      "en": "Generation Super Sampling",
+      "cn": "生成式超级采样",
+      "cat": "terms",
+      "source": "ai_guess",
+      "reason": "专利名称的暂译，尚无已确认中文译名。"
+    }
+  ],
+  "translated_terms": {
+    "PlayStation": "PlayStation",
+    "Sony": "索尼",
+    "Generation Super Sampling": "生成式超级采样",
+    "DLSS": "DLSS",
+    "RTX 5090": "RTX 5090",
+    "NFC": "NFC"
+  },
+  "cover": "https://assets-prd.ignimgs.com/2022/07/11/untitled-3-1657552827336.jpg",
+  "images": [
+    {
+      "url": "https://assets-prd.ignimgs.com/2022/07/11/untitled-3-1657552827336.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "caption": ""
+    },
+    {
+      "url": "https://kraken.ignimgs.com/apple-touch-icon.png",
+      "caption": ""
+    },
+    {
+      "url": "https://assets-prd.ignimgs.com/2023/05/24/playstation-1-blogroll-1684939066488.jpg",
+      "caption": ""
+    }
+  ],
+  "style_self_check": {
+    "read_style_profile": true,
+    "no_english_syntax": true,
+    "title_rewritten": true,
+    "subtitle_rewritten": true,
+    "xbox_normalized": true,
+    "xbox_series_normalized": true,
+    "quotes_checked": true,
+    "currency_checked": true,
+    "dictionary_checked": true
+  },
+  "translator": "api",
+  "translator_provider": "openai-compatible",
+  "translator_model": "gpt-6.1-sol",
+  "reasoning_effort": "low",
+  "reviewer_model": "gpt-6.1-sol",
+  "reviewed_at": "2026-10-19T00:58:16.258983+00:00",
+  "prompt_version": "api-fulltext-2026-07-v2",
+  "quality_gate_version": 1,
+  "quality_review": {
+    "status": "passed",
+    "reviewer_model": "gpt-6.1-sol",
+    "reviewed_at": "2026-10-19T00:58:16.258983+00:00",
+    "checks": {
+      "source_coverage": true,
+      "quote_attribution": true,
+      "numeric_facts": true
+    }
+  }
+}

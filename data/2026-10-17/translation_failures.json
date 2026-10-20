@@ -1,0 +1,39 @@
+{
+  "date": "2026-10-17",
+  "items": {
+    "7": {
+      "id": 7,
+      "url": "https://www.ign.com/articles/cyberpunk-2077-movie-not-retelling",
+      "en_title": "The Live-Action Cyberpunk 2077 Movie Won't Retrace the Game's Steps, CD Projekt Confirms",
+      "cn_title": "《赛博朋克2077》电影另讲新故事",
+      "model": "gpt-6.1-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-10-19T10:04:16.129580+08:00",
+      "reason": "🚨 subtitle 含逗号且偏长，太像句子: 「同一个世界，不同的故事」",
+      "audit_issues": [],
+      "fingerprint": "8a98f4963fa3d8ef2c8a01e46e676f51309cd0d4",
+      "translation_path": "translations/07.json",
+      "retry_policy": "manual_only"
+    },
+    "43": {
+      "id": 43,
+      "url": "https://www.ign.com/articles/ghost-of-yotei-sales-lagging-behind-tsushima-but-still-strong-on-ps5-analyst-estimates-show",
+      "en_title": "Ghost of Yotei Sales Lag Behind Tsushima but Are Still Strong on PS5, Analyst Estimates Show",
+      "cn_title": "分析：《羊蹄山之魂》销量落后前作",
+      "model": "gpt-6.1-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-10-19T10:22:12.733125+08:00",
+      "reason": "风格拒收: style_self_check key 'currency_checked' is not true (got False)",
+      "audit_issues": [
+        {
+          "type": "style_self_check",
+          "detail": "style_self_check key 'currency_checked' is not true (got False)"
+        }
+      ],
+      "fingerprint": "4f091f97a59081c7664c237c6009e94454ec6e37",
+      "translation_path": "translations/43.json",
+      "retry_policy": "manual_only"
+    }
+  },
+  "updated_at": "2026-10-19T10:22:12.733125+08:00"
+}

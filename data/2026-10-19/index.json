@@ -2,6 +2,112 @@
   "date": "2026-10-19",
   "articles": [
     {
+      "id": 5,
+      "category": "影视资讯",
+      "emoji": "🎬",
+      "en_title": "Jesse Eisenberg Says He 'Couldn't Get Movie Studio Parts' After Winning His Batman v. Superman Razzie",
+      "cn_title": "艾森伯格称金酸莓奖让他难接大片",
+      "summary": "杰西·艾森伯格称，凭卢瑟一角获金酸莓奖后，他难以再接到大制片厂角色，因而转向编剧和导演。他认为，若想继续艺术生涯，就必须听取行业反馈，找准受认可的方向。",
+      "url": "https://www.ign.com/articles/jesse-eisenberg-says-he-couldnt-get-movie-studio-parts-after-winning-his-batman-v-superman-razzie",
+      "publish_time_cn": "2026-10-19 06:37",
+      "pub_date": "2026-10-19 06:37",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/10/18/jesse-eisenberg-lex-luthor-1792362539309.png?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "needs_review",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/10/18/jesse-eisenberg-lex-luthor-1792362539309.png?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/10/18/jesse-eisenberg-lex-luthor-1792362539309.png?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/10/18/jesse-eisenberg-lex-luthor-1792362539309.png?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/10/18/jesse-eisenberg-lex-luthor-1792362539309.png?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/10/18/jesse-eisenberg-lex-luthor-1792362539309.png",
+        "https://kraken.ignimgs.com/apple-touch-icon.png",
+        "https://assets-prd.ignimgs.com/2020/06/18/batman-v-superman-dawn-of-justice-ver8-button-1592504346901.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-10-19T07:17:35+08:00",
+      "translation_error": "🚨 subtitle 内嵌长引用: 「「行业会告诉你答案」」",
+      "translation_failed_at": "2026-10-19T10:40:38.003175+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "gpt-6.1-sol",
+      "translation_path": "translations/05.json"
+    },
+    {
+      "id": 4,
+      "category": "影视资讯",
+      "emoji": "🎬",
+      "en_title": "Taika Waititi Says His Star Wars Movie Is 'on Ice'",
+      "cn_title": "塔伊加·维迪提称其《星球大战》电影搁置",
+      "summary": "导演塔伊加·维迪提向Inverse确认，筹备多年的《星球大战》电影已搁置，他正与编剧Tony McNamara合作另一部作品。该项目于2020年官宣，曾以2023年底上映为目标。他表示还有约四部电影想拍，但未排除未来重启的可能。",
+      "url": "https://www.ign.com/articles/taika-waititi-says-his-star-wars-movie-is-on-ice",
+      "publish_time_cn": "2026-10-19 04:50",
+      "pub_date": "2026-10-19 04:50",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/10/18/taika-waititi-star-wars-1792356580858.png",
+      "translation_status": "done",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/10/18/taika-waititi-star-wars-1792356580858.png?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/10/18/taika-waititi-star-wars-1792356580858.png?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/10/18/taika-waititi-star-wars-1792356580858.png?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/10/18/taika-waititi-star-wars-1792356580858.png?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/10/18/taika-waititi-star-wars-1792356580858.png",
+        "https://kraken.ignimgs.com/apple-touch-icon.png",
+        "https://assets1.ignimgs.com/2020/05/04/star-wars-general-button-1588615545697.jpg",
+        "https://assets-prd.ignimgs.com/2026/10/18/taika-waititi-star-wars-1792356509520.png"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-10-19T05:17:34+08:00",
+      "pending_dict": [
+        {
+          "en": "Taika Waititi",
+          "cn": "塔伊加·维迪提",
+          "cat": "people",
+          "source": "ai_guess",
+          "reason": "未提供词库对应条目，采用通行译名，需人工确认。"
+        }
+      ],
+      "translation_path": "translations/04.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "gpt-6.1-sol",
+      "reasoning_effort": "low",
+      "reviewer_model": "gpt-6.1-sol",
+      "reviewed_at": "2026-10-19T02:39:58.824937+00:00",
+      "prompt_version": "api-fulltext-2026-07-v2",
+      "quality_gate_version": 1
+    },
+    {
+      "id": 3,
+      "category": "游戏新闻",
+      "emoji": "💿",
+      "en_title": "Silent Hill Remake Studio Wants to Make Physical Games 'for as Long as Possible'",
+      "cn_title": "《寂静岭》重制版开发商望尽量推出实体版",
+      "summary": "《寂静岭》重制版开发商Bloober Team的首席执行官Piotr Babieno表示，只要条件允许，公司就希望尽可能长久地推出实体版游戏。他承认数字发行更便捷、成本更低、利润更高，但认为收藏实体游戏能让玩家与作品及工作室建立情感联系，失去这种联系可能会拉远团队与粉丝的距离。",
+      "url": "https://www.ign.com/articles/silent-hill-remake-studio-wants-to-make-physical-games-for-as-long-as-possible",
+      "publish_time_cn": "2026-10-19 03:55",
+      "pub_date": "2026-10-19 03:55",
+      "cover_image": "https://assets-prd.ignimgs.com/2024/05/30/silenthill2-1717063971235.jpg",
+      "translation_status": "done",
+      "images": [
+        "https://assets-prd.ignimgs.com/2024/05/30/silenthill2-1717063971235.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2024/05/30/silenthill2-1717063971235.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2024/05/30/silenthill2-1717063971235.jpg?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2024/05/30/silenthill2-1717063971235.jpg?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2024/05/30/silenthill2-1717063971235.jpg",
+        "https://kraken.ignimgs.com/apple-touch-icon.png",
+        "https://assets-prd.ignimgs.com/2022/10/19/silent-hill-2-button-2-1666206547932.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-10-19T04:17:36+08:00",
+      "translation_path": "translations/03.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "gpt-6.1-sol",
+      "reasoning_effort": "low",
+      "reviewer_model": "gpt-6.1-sol",
+      "reviewed_at": "2026-10-19T02:23:39.419627+00:00",
+      "prompt_version": "api-fulltext-2026-07-v2",
+      "quality_gate_version": 1
+    },
+    {
       "id": 2,
       "category": "影视资讯",
       "emoji": "🎬",
@@ -11,8 +117,8 @@
       "url": "https://www.ign.com/articles/street-fighter-tops-the-box-office-with-51-million-opening-weekend-amid-lackluster-reviews",
       "publish_time_cn": "2026-10-19 02:17",
       "pub_date": "2026-10-19 02:17",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/10/18/street-fighter-chun-li-1792347311503.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/10/18/street-fighter-chun-li-1792347311503.png",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/10/18/street-fighter-chun-li-1792347311503.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/10/18/street-fighter-chun-li-1792347311503.png?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -23,7 +129,16 @@
         "https://assets-prd.ignimgs.com/2026/04/16/street-fighter-button-replacement-1776352479133.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-10-19T03:17:36+08:00"
+      "source_fetched_at": "2026-10-19T03:17:36+08:00",
+      "translation_path": "translations/02.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "gpt-6.1-sol",
+      "reasoning_effort": "low",
+      "reviewer_model": "gpt-6.1-sol",
+      "reviewed_at": "2026-10-19T01:52:52.077908+00:00",
+      "prompt_version": "api-fulltext-2026-07-v2",
+      "quality_gate_version": 1
     },
     {
       "id": 1,
@@ -35,8 +150,8 @@
       "url": "https://www.ign.com/articles/quentin-tarantino-says-hes-written-a-script-for-10th-and-final-film-but-he-wants-to-live-before-making-it",
       "publish_time_cn": "2026-10-18 23:56",
       "pub_date": "2026-10-18 23:56",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/10/18/quentin-tarantino-1792338519262.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/10/18/quentin-tarantino-1792338519262.png",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/10/18/quentin-tarantino-1792338519262.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/10/18/quentin-tarantino-1792338519262.png?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -48,8 +163,17 @@
         "https://assets-prd.ignimgs.com/2026/10/18/quentin-tarantino-1792338482200.png"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-10-19T00:18:55+08:00"
+      "source_fetched_at": "2026-10-19T00:18:55+08:00",
+      "translation_path": "translations/01.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "gpt-6.1-sol",
+      "reasoning_effort": "low",
+      "reviewer_model": "gpt-6.1-sol",
+      "reviewed_at": "2026-10-19T01:34:27.154424+00:00",
+      "prompt_version": "api-fulltext-2026-07-v2",
+      "quality_gate_version": 1
     }
   ],
-  "total": 2
+  "total": 5
 }

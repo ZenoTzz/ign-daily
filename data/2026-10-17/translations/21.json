@@ -1,0 +1,115 @@
+{
+  "id": 21,
+  "url": "https://www.ign.com/articles/nvidia-app-update-adds-support-for-agent-control-but-some-users-are-warning-to-turn-it-off",
+  "en_title": "Nvidia App Update Adds Support For Agent Control, But Some Users are Warning to Turn it Off",
+  "cn_title": "英伟达应用默认开放AI控制引用户担忧",
+  "subtitle": "开关为何默认开启",
+  "opus_summary": "英伟达应用更新后，默认允许兼容的AI智能体控制应用、调整设置或开启录像。部分用户担忧隐私与安全风险，建议关闭该功能；目前尚无相关漏洞遭利用的报告。",
+  "publish_time_cn": "2026-10-17 01:56",
+  "paragraphs": [
+    {
+      "en": "It's no secret that Nvidia loves its AI, and fresh off of launching RTX Spark – the new chipset for Agentic laptops – the Nvidia app now has a toggle that'll let AI agents control it. The problem is that it's turned on by default.",
+      "cn": "英伟达对AI的热衷早已不是秘密。刚刚推出面向智能体笔记本电脑的新芯片组RTX Spark后，英伟达又在Nvidia App中加入了一个开关，允许AI智能体控制这款应用。问题在于，这个开关默认开启。"
+    },
+    {
+      "en": "Nvidia added the option in Nvidia App 11.0.9.565 on October 13. In that update's patch notes, it says, \"Nvidia App includes a local MCP server (Model Context Protocol) that lets a compatible AI agent control the Nvidia App using natural-language requests. This means your AI assistant like Hermes, OpenClaw or Perplexity can see your installed games and apply optimal settings, or enable Shadowplay to record gameplay, all through simple conversation.\"",
+      "cn": "英伟达在10月13日发布的Nvidia App 11.0.9.565版本中加入了这个选项。更新说明写道：「Nvidia App内置了本地MCP服务器（模型上下文协议，Model Context Protocol），兼容的AI智能体可以通过自然语言请求控制Nvidia App。只需简单对话，Hermes、OpenClaw或Perplexity等AI助手就能查看你已安装的游戏并应用最佳设置，或开启Shadowplay录制游戏画面。」"
+    },
+    {
+      "en": "It's not terribly surprising that Nvidia has added this option to the Nvidia app; after all, it did just debut its RTX Spark platform, which is built entirely around AI agents, so it makes sense that the Nvidia App would let users hook those agents in. But the setting isn't exclusive to RTX Spark systems and shows up for anyone who installs the latest version of the app.",
+      "cn": "英伟达在Nvidia App中加入这个选项，并不太令人意外。毕竟，刚刚亮相的RTX Spark平台完全围绕AI智能体打造，因此，Nvidia App允许用户接入这些智能体也合乎情理。不过，这项设置并非RTX Spark系统独有，任何人安装最新版应用后都能看到它。"
+    },
+    {
+      "en": "And, of course, some people are upset and worried about the security implications of letting an AI agent control their graphics cards .",
+      "cn": "当然，也有一些人对此感到不满，担心让AI智能体控制自己的显卡会带来安全问题。"
+    },
+    {
+      "en": "Silent Hill: Ascension cinematic director Agustin Cordes tweeted about the update , saying, \"PSA: Can confirm that the Nvidia app is automatically updating and has *enabled by default* a setting which allows AI agents to control the app with very permissive rights. Besides the obnoxious privacy invasion and lame AI features, it's a high security risk you may not want.\"",
+      "cn": "《寂静岭：飞升》的过场动画导演Agustin Cordes在X上谈到了这次更新：「提醒大家：可以确认，Nvidia App正在自动更新，而且默认开启了一项设置，允许AI智能体以非常宽松的权限控制应用。除了令人反感的隐私侵犯和蹩脚的AI功能外，它还带来了你可能不想承担的严重安全风险。」"
+    },
+    {
+      "en": "Meanwhile, a swath of fans quoted his post, like user TheAcidBurns3, who says, \"Please pay attention to this. You do NOT want your graphics card being accessed like this!\"",
+      "cn": "与此同时，不少粉丝引用转发了他的帖子。其中，用户TheAcidBurns3表示：「请重视这件事。你绝对不会希望自己的显卡被这样访问！」"
+    },
+    {
+      "en": "User DATGUYCOOP, who appears to be a cybersecurity professional, urged most laypeople to turn the feature off, saying, \"Just gonna say turn this feature off. Trust from the cyber security man. If you work with AI agents, its a good way to add filtering and protections and secondary checks, but to the common folk, it adds a threat vector that is better off closed. Now, there [are] no reported exploits as of yet, but it's new and adds possible connector that could mayhaps do something later, so just turn it off.\"",
+      "cn": "用户DATGUYCOOP似乎从事网络安全工作，他敦促大多数非专业用户关闭这项功能：「我就一句话，把这项功能关掉。相信我这个做网络安全的。如果你的工作涉及AI智能体，这是添加过滤、防护和二次检查的好办法；但对普通人来说，它增加了一个威胁入口，最好还是关上。目前还没有漏洞遭利用的报告，但这毕竟是个新功能，也增加了一个可能在日后引发问题的连接入口，所以关掉就好。」"
+    },
+    {
+      "en": "The problem really seems to be that the Nvidia App update turns the setting on by default, which is almost a surefire way to get people to hate any given feature in a tech product. Nvidia isn't new to letting AI systems and agents mess with your graphics card; after all, the company revealed Project G-Assist at Computex 2024, which was essentially an LLM that helped you manage GPU settings like clock speeds, fan curves, and more.",
+      "cn": "真正的问题似乎在于，Nvidia App更新后默认开启了这项设置。科技产品里的任何功能，只要这样做，几乎都难免招人反感。让AI系统和智能体调整显卡，对英伟达来说并不是什么新鲜事。毕竟，英伟达早在2024年台北国际电脑展上就公布了Project G-Assist，它本质上是一个大语言模型，可以帮助用户管理时钟频率、风扇曲线等GPU设置。"
+    },
+    {
+      "en": "I've reached out to Nvidia about the security implications of this new Nvidia App update, and will update this article if a response is given. But regardless of what Team Green says, it's unlikely that this option is going anywhere any time soon. So, if you don't want your GPU driver to have a door open to AI agents, either install your graphics driver manually or turn off the setting by going into the Nvidia App, hit Settings, then scrolling down to 'AI Agents and App Connections' and disabling 'Allow Agents to control Nvidia App.'",
+      "cn": "我已就这次Nvidia App更新涉及的安全问题联系英伟达，如获回复，将更新本文。不过，无论英伟达如何回应，这个选项短期内都不太可能被移除。因此，如果你不希望GPU驱动向AI智能体敞开大门，可以手动安装显卡驱动，或进入Nvidia App，点击设置，向下滚动至「AI Agents and App Connections」，关闭「Allow Agents to control Nvidia App」。"
+    }
+  ],
+  "pending_dict": [
+    {
+      "en": "Silent Hill: Ascension",
+      "cn": "寂静岭：飞升",
+      "cat": "games",
+      "source": "ai_guess",
+      "reason": "系列名依照已提供词库，完整作品译名待确认。"
+    }
+  ],
+  "translated_terms": {
+    "Nvidia": "英伟达",
+    "Nvidia App": "Nvidia App",
+    "RTX Spark": "RTX Spark",
+    "Model Context Protocol": "模型上下文协议",
+    "Hermes": "Hermes",
+    "OpenClaw": "OpenClaw",
+    "Perplexity": "Perplexity",
+    "Shadowplay": "Shadowplay",
+    "Silent Hill": "寂静岭",
+    "Silent Hill: Ascension": "《寂静岭：飞升》",
+    "Agustin Cordes": "Agustin Cordes",
+    "Computex": "台北国际电脑展",
+    "Project G-Assist": "Project G-Assist"
+  },
+  "cover": "https://assets-prd.ignimgs.com/2024/11/22/best-nvidia-black-friday-deals-laptops-uk-2024-1732273493347.png",
+  "images": [
+    {
+      "url": "https://assets-prd.ignimgs.com/2024/11/22/best-nvidia-black-friday-deals-laptops-uk-2024-1732273493347.png?width=1280&format=jpg&auto=webp&quality=80",
+      "caption": ""
+    },
+    {
+      "url": "https://kraken.ignimgs.com/apple-touch-icon.png",
+      "caption": ""
+    },
+    {
+      "url": "https://assets-prd.ignimgs.com/2025/01/07/geforce-rtx-5080-button-1736259475225.jpg",
+      "caption": ""
+    }
+  ],
+  "style_self_check": {
+    "read_style_profile": true,
+    "no_english_syntax": true,
+    "title_rewritten": true,
+    "subtitle_rewritten": true,
+    "xbox_normalized": true,
+    "xbox_series_normalized": true,
+    "quotes_checked": true,
+    "currency_checked": true,
+    "dictionary_checked": true
+  },
+  "translator": "api",
+  "translator_provider": "openai-compatible",
+  "translator_model": "gpt-6.1-sol",
+  "reasoning_effort": "low",
+  "reviewer_model": "gpt-6.1-sol",
+  "reviewed_at": "2026-10-19T02:20:32.903693+00:00",
+  "prompt_version": "api-fulltext-2026-07-v2",
+  "quality_gate_version": 1,
+  "quality_review": {
+    "status": "passed",
+    "reviewer_model": "gpt-6.1-sol",
+    "reviewed_at": "2026-10-19T02:20:32.903693+00:00",
+    "checks": {
+      "source_coverage": true,
+      "quote_attribution": true,
+      "numeric_facts": true
+    }
+  }
+}

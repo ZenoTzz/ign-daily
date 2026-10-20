@@ -11,8 +11,8 @@
       "url": "https://www.ign.com/articles/dev-behind-russian-roulette-drinking-game-cancels-steam-demo-plans-following-ai-copycat-concerns",
       "publish_time_cn": "2026-10-18 07:00",
       "pub_date": "2026-10-18 07:00",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/10/17/drunken-goddess-reflux-1792277336624.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/10/17/drunken-goddess-reflux-1792277336624.png",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/10/17/drunken-goddess-reflux-1792277336624.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/10/17/drunken-goddess-reflux-1792277336624.png?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -23,7 +23,16 @@
         "https://assets-prd.ignimgs.com/2026/10/08/drunken-goddess-reflux-button-1791470040932.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-10-18T07:17:36+08:00"
+      "source_fetched_at": "2026-10-18T07:17:36+08:00",
+      "translation_path": "translations/08.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "gpt-6.1-sol",
+      "reasoning_effort": "low",
+      "reviewer_model": "gpt-6.1-sol",
+      "reviewed_at": "2026-10-19T01:33:44.422864+00:00",
+      "prompt_version": "api-fulltext-2026-07-v2",
+      "quality_gate_version": 1
     },
     {
       "id": 7,
@@ -35,8 +44,8 @@
       "url": "https://www.ign.com/articles/battlefield-6-devs-respond-after-players-take-aim-at-secuty-typo-and-cosmetic-with-5-pistols",
       "publish_time_cn": "2026-10-18 05:27",
       "pub_date": "2026-10-18 05:27",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/10/17/battlefield-6-season-5-1792272082254.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/10/17/battlefield-6-season-5-1792272082254.png",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/10/17/battlefield-6-season-5-1792272082254.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/10/17/battlefield-6-season-5-1792272082254.png?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -47,20 +56,29 @@
         "https://assets-prd.ignimgs.com/2025/07/23/battlefield6-1753290173215.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-10-18T06:17:34+08:00"
+      "source_fetched_at": "2026-10-18T06:17:34+08:00",
+      "translation_path": "translations/07.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "gpt-6.1-sol",
+      "reasoning_effort": "low",
+      "reviewer_model": "gpt-6.1-sol",
+      "reviewed_at": "2026-10-19T01:33:07.288532+00:00",
+      "prompt_version": "api-fulltext-2026-07-v2",
+      "quality_gate_version": 1
     },
     {
       "id": 6,
       "category": "影视资讯",
       "emoji": "🎬",
       "en_title": "James Cameron Congratulates Marvel After Avengers: Endgame Beats Avatar at the Box Office Yet Again",
-      "cn_title": "卡梅隆祝贺漫威再夺全球票房冠军",
-      "summary": "《复仇者联盟4：终局之战》重映后，累计票房再次超越《阿凡达》，重登全球影史票房榜首。詹姆斯·卡梅隆在Instagram发布钢铁侠被纳美人簇拥的图片，祝贺漫威影业吸引观众走进影院。两部电影多年来数次交换榜首位置，未来是否还会再度易位仍待观察。",
+      "cn_title": "漫威再夺票房榜首，卡梅隆发文祝贺",
+      "summary": "《复仇者联盟4：终局之战》重映后再超《阿凡达》，重登全球影史票房榜首。卡梅隆发文祝贺漫威，并分享钢铁侠被纳美人围住的图片。两片多年来已数次交换榜首位置。",
       "url": "https://www.ign.com/articles/james-cameron-congratulates-marvel-after-avengers-endgame-beats-avatar-at-the-box-office-yet-again",
       "publish_time_cn": "2026-10-18 04:15",
       "pub_date": "2026-10-18 04:15",
       "cover_image": "https://assets-prd.ignimgs.com/2026/10/17/james-cameron-marvel-1792267708335.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2026/10/17/james-cameron-marvel-1792267708335.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/10/17/james-cameron-marvel-1792267708335.png?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -70,7 +88,13 @@
         "https://kraken.ignimgs.com/apple-touch-icon.png"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-10-18T05:17:33+08:00"
+      "source_fetched_at": "2026-10-18T05:17:33+08:00",
+      "translation_error": "风格拒收: style_self_check key 'currency_checked' is not true (got False)",
+      "translation_failed_at": "2026-10-19T09:32:10.458977+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "gpt-6.1-sol",
+      "translation_path": "translations/06.json"
     },
     {
       "id": 5,
@@ -82,8 +106,8 @@
       "url": "https://www.ign.com/articles/ben-afflecks-batman-movie-would-have-featured-arkham-asylum-inspired-deathstroke-fight-and-dceu-batgirl-joe-manganiello-reveals",
       "publish_time_cn": "2026-10-18 02:58",
       "pub_date": "2026-10-18 02:58",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/10/17/ben-affleck-batman-1792263038732.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/10/17/ben-affleck-batman-1792263038732.png",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/10/17/ben-affleck-batman-1792263038732.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/10/17/ben-affleck-batman-1792263038732.png?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -95,7 +119,16 @@
         "https://assets-prd.ignimgs.com/2026/10/17/joe-manganiello-as-deathstroke-1792263144632.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-10-18T03:17:34+08:00"
+      "source_fetched_at": "2026-10-18T03:17:34+08:00",
+      "translation_path": "translations/05.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "gpt-6.1-sol",
+      "reasoning_effort": "low",
+      "reviewer_model": "gpt-6.1-sol",
+      "reviewed_at": "2026-10-19T01:15:41.473159+00:00",
+      "prompt_version": "api-fulltext-2026-07-v2",
+      "quality_gate_version": 1
     },
     {
       "id": 4,
@@ -107,8 +140,8 @@
       "url": "https://www.ign.com/articles/captain-price-actor-sends-message-to-fans-as-call-of-duty-modern-warfare-4-campaign-praise-rolls-in",
       "publish_time_cn": "2026-10-17 23:52",
       "pub_date": "2026-10-17 23:52",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/10/16/ss-6b8f4040a1e923f036e04d9eb21ecb0f866be57e-1920x1080-1792164596496.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/10/16/ss-6b8f4040a1e923f036e04d9eb21ecb0f866be57e-1920x1080-1792164596496.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/10/16/ss-6b8f4040a1e923f036e04d9eb21ecb0f866be57e-1920x1080-1792164596496.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/10/16/ss-6b8f4040a1e923f036e04d9eb21ecb0f866be57e-1920x1080-1792164596496.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -119,7 +152,16 @@
         "https://assets-prd.ignimgs.com/2026/05/28/codmw4-1779985350988.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-10-18T00:18:40+08:00"
+      "source_fetched_at": "2026-10-18T00:18:40+08:00",
+      "translation_path": "translations/04.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "gpt-6.1-sol",
+      "reasoning_effort": "low",
+      "reviewer_model": "gpt-6.1-sol",
+      "reviewed_at": "2026-10-19T01:14:47.640922+00:00",
+      "prompt_version": "api-fulltext-2026-07-v2",
+      "quality_gate_version": 1
     },
     {
       "id": 2,

@@ -239,8 +239,8 @@
       "url": "https://www.ign.com/articles/dragon-balls-goku-voice-actor-furious-over-ai-videos-using-her-voice-without-permission",
       "publish_time_cn": "2026-10-17 04:04",
       "pub_date": "2026-10-17 04:04",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/01/21/dbz-1540843981541-1768988406087.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/01/21/dbz-1540843981541-1768988406087.png",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/01/21/dbz-1540843981541-1768988406087.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/01/21/dbz-1540843981541-1768988406087.png?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -250,7 +250,16 @@
         "https://kraken.ignimgs.com/apple-touch-icon.png"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-10-17T05:17:44+08:00"
+      "source_fetched_at": "2026-10-17T05:17:44+08:00",
+      "translation_path": "translations/31.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "gpt-6.1-sol",
+      "reasoning_effort": "low",
+      "reviewer_model": "gpt-6.1-sol",
+      "reviewed_at": "2026-10-19T02:21:17.195545+00:00",
+      "prompt_version": "api-fulltext-2026-07-v2",
+      "quality_gate_version": 1
     },
     {
       "id": 32,
@@ -262,8 +271,8 @@
       "url": "https://www.ign.com/articles/playstation-6-will-likely-have-sonys-own-take-on-frame-generation-according-to-latest-patent",
       "publish_time_cn": "2026-10-17 04:02",
       "pub_date": "2026-10-17 04:02",
-      "cover_image": "https://assets-prd.ignimgs.com/2022/07/11/untitled-3-1657552827336.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2022/07/11/untitled-3-1657552827336.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2022/07/11/untitled-3-1657552827336.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2022/07/11/untitled-3-1657552827336.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -274,7 +283,16 @@
         "https://assets-prd.ignimgs.com/2023/05/24/playstation-1-blogroll-1684939066488.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-10-17T05:17:46+08:00"
+      "source_fetched_at": "2026-10-17T05:17:46+08:00",
+      "translation_path": "translations/32.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "gpt-6.1-sol",
+      "reasoning_effort": "low",
+      "reviewer_model": "gpt-6.1-sol",
+      "reviewed_at": "2026-10-19T00:58:16.258983+00:00",
+      "prompt_version": "api-fulltext-2026-07-v2",
+      "quality_gate_version": 1
     },
     {
       "id": 27,
@@ -299,6 +317,36 @@
       ],
       "source_status": "cached",
       "source_fetched_at": "2026-10-17T04:17:36+08:00"
+    },
+    {
+      "id": 43,
+      "category": "游戏新闻",
+      "emoji": "⚔️",
+      "en_title": "Ghost of Yotei Sales Lag Behind Tsushima but Are Still Strong on PS5, Analyst Estimates Show",
+      "cn_title": "分析：《羊蹄山之魂》销量落后前作",
+      "summary": "分析师估算，《羊蹄山之魂》首年售出约540万份，虽不及前作同期近700万份，但两作收入接近。相关数据尚未获索尼确认，分析师强调本作绝非失败之作。",
+      "url": "https://www.ign.com/articles/ghost-of-yotei-sales-lagging-behind-tsushima-but-still-strong-on-ps5-analyst-estimates-show",
+      "publish_time_cn": "2026-10-17 03:59",
+      "pub_date": "2026-10-17 03:59",
+      "cover_image": "https://assets-prd.ignimgs.com/2025/09/25/scwk6j-1758769803399.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "needs_review",
+      "images": [
+        "https://assets-prd.ignimgs.com/2025/09/25/scwk6j-1758769803399.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2025/09/25/scwk6j-1758769803399.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2025/09/25/scwk6j-1758769803399.jpg?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2025/09/25/scwk6j-1758769803399.jpg?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2025/09/25/scwk6j-1758769803399.jpg",
+        "https://kraken.ignimgs.com/apple-touch-icon.png",
+        "https://assets-prd.ignimgs.com/2024/04/02/ghost-of-tsushima-button-replacement-1712068663737.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-10-19T10:03:00+08:00",
+      "translation_error": "风格拒收: style_self_check key 'currency_checked' is not true (got False)",
+      "translation_failed_at": "2026-10-19T10:22:12.733125+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "gpt-6.1-sol",
+      "translation_path": "translations/43.json"
     },
     {
       "id": 23,
@@ -409,8 +457,8 @@
       "url": "https://www.ign.com/articles/nvidia-app-update-adds-support-for-agent-control-but-some-users-are-warning-to-turn-it-off",
       "publish_time_cn": "2026-10-17 01:56",
       "pub_date": "2026-10-17 01:56",
-      "cover_image": "https://assets-prd.ignimgs.com/2024/11/22/best-nvidia-black-friday-deals-laptops-uk-2024-1732273493347.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2024/11/22/best-nvidia-black-friday-deals-laptops-uk-2024-1732273493347.png",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2024/11/22/best-nvidia-black-friday-deals-laptops-uk-2024-1732273493347.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2024/11/22/best-nvidia-black-friday-deals-laptops-uk-2024-1732273493347.png?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -421,7 +469,16 @@
         "https://assets-prd.ignimgs.com/2025/01/07/geforce-rtx-5080-button-1736259475225.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-10-17T02:17:38+08:00"
+      "source_fetched_at": "2026-10-17T02:17:38+08:00",
+      "translation_path": "translations/21.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "gpt-6.1-sol",
+      "reasoning_effort": "low",
+      "reviewer_model": "gpt-6.1-sol",
+      "reviewed_at": "2026-10-19T02:20:32.903693+00:00",
+      "prompt_version": "api-fulltext-2026-07-v2",
+      "quality_gate_version": 1
     },
     {
       "id": 22,
@@ -545,8 +602,8 @@
       "url": "https://www.ign.com/articles/assassins-creed-destiny-leak",
       "publish_time_cn": "2026-10-16 23:56",
       "pub_date": "2026-10-16 23:56",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/05/13/edward-kenway-black-flag-blogroll-1778681529123.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/05/13/edward-kenway-black-flag-blogroll-1778681529123.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/05/13/edward-kenway-black-flag-blogroll-1778681529123.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/05/13/edward-kenway-black-flag-blogroll-1778681529123.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -566,7 +623,16 @@
           "source": "ai_guess",
           "reason": "系列名采用通行译名，副标题依据已提供的Destiny词条翻译；完整作品名尚需人工确认。"
         }
-      ]
+      ],
+      "translation_path": "translations/15.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "gpt-6.1-sol",
+      "reasoning_effort": "low",
+      "reviewer_model": "gpt-6.1-sol",
+      "reviewed_at": "2026-10-19T02:19:55.735220+00:00",
+      "prompt_version": "api-fulltext-2026-07-v2",
+      "quality_gate_version": 1
     },
     {
       "id": 16,
@@ -777,13 +843,13 @@
       "category": "影视资讯",
       "emoji": "🎬",
       "en_title": "The Live-Action Cyberpunk 2077 Movie Won't Retrace the Game's Steps, CD Projekt Confirms",
-      "cn_title": "CDPR确认《赛博朋克2077》电影不复述游戏剧情",
-      "summary": "CDPR联席CEO Michał Nowakowski确认，《赛博朋克2077》真人电影不会一比一改编游戏剧情，而将在同一世界观下讲述全新故事。影片由CDPR与派拉蒙合作打造，《变形金刚》真人电影制片人Lorenzo di Bonaventura将担任制片。",
+      "cn_title": "《赛博朋克2077》电影另讲新故事",
+      "summary": "CDPR确认，《赛博朋克2077》真人电影不会照搬游戏剧情，而将在同一世界观下讲述新故事。影片与派拉蒙合作，由《变形金刚》真人电影的制片人负责制作。",
       "url": "https://www.ign.com/articles/cyberpunk-2077-movie-not-retelling",
       "publish_time_cn": "2026-10-16 19:13",
       "pub_date": "2026-10-16 19:13",
       "cover_image": "https://assets1.ignimgs.com/2019/10/10/2077-1570745477822.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets1.ignimgs.com/2019/10/10/2077-1570745477822.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets1.ignimgs.com/2019/10/10/2077-1570745477822.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -794,7 +860,13 @@
         "https://assets-prd.ignimgs.com/2020/07/16/cyberpunk-2077-button-fin-1594877291453.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-10-16T20:18:43+08:00"
+      "source_fetched_at": "2026-10-16T20:18:43+08:00",
+      "translation_error": "🚨 subtitle 含逗号且偏长，太像句子: 「同一个世界，不同的故事」",
+      "translation_failed_at": "2026-10-19T10:04:16.129580+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "gpt-6.1-sol",
+      "translation_path": "translations/07.json"
     },
     {
       "id": 6,
@@ -1105,5 +1177,5 @@
       "source_fetched_at": "2026-10-17T08:17:44+08:00"
     }
   ],
-  "total": 42
+  "total": 43
 }

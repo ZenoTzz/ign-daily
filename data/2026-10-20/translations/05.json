@@ -1,0 +1,113 @@
+{
+  "id": 5,
+  "url": "https://www.ign.com/articles/google-ai-agents-killed-ender-dragon-minecraft",
+  "en_title": "It Took 4 Google AI Agents Over 27 Hours to Defeat the Ender Dragon in Minecraft Without Help From Humans",
+  "cn_title": "《我的世界》谷歌称AI耗时逾27小时击败末影龙",
+  "subtitle": "阵亡605次之后",
+  "opus_summary": "谷歌研究人员称，4个AI智能体在无人类协助下，耗时逾27小时击败《我的世界》末影龙。它们自行编写和调试程序，期间死亡605次，团队称这或为全球首次。",
+  "publish_time_cn": "2026-10-19 18:56",
+  "paragraphs": [
+    {
+      "en": "Google researchers have released a paper claiming that four Google Gemini 4 Argon AI agents just beat Minecraft without any help from humans. It took them just over 27 hours to take down the Ender Dragon in what is believed to be a world first.",
+      "cn": "谷歌研究人员发表论文称，4个谷歌Gemini 4 Argon AI智能体刚刚在没有任何人类协助的情况下通关了《我的世界》。它们花了27个多小时击败末影龙，据信这是全球首次。"
+    },
+    {
+      "en": "Of course, it’s not as simple as just turning up and firing arrows at the thing. To reach The End and defeat the Ender Dragon in Minecraft , there are a series of trials you have to complete.",
+      "cn": "当然，这可不是跑到末影龙面前射几箭那么简单。在《我的世界》中，玩家要前往末地并击败末影龙，必须先完成一连串考验。"
+    },
+    {
+      "en": "You have to get Ender Pearls, Ender Rods, and craft Eyes of Ender, before tracking down a Stronghold and completing a puzzle. This takes a fair bit of farming and requires you to work up through the basic Minecraft tools .",
+      "cn": "玩家得先收集末影珍珠、末影棒（Ender Rods），合成末影之眼，再去寻找要塞并解开谜题。这需要刷取不少资源，还得从《我的世界》的基础工具起步，逐步升级。"
+    },
+    {
+      "en": "To start the test, Google placed a team of four agents into a random Minecraft seed with a goal of defeating the Ender Dragon. According to Google, the agents used in-game chat to coordinate but otherwise had no strategy assigned going in — just a goal.",
+      "cn": "测试开始时，谷歌将4个智能体组成的队伍放进了一个由随机种子生成的《我的世界》世界，目标是击败末影龙。据谷歌介绍，这些智能体通过游戏内聊天协调行动，但开始时没有任何预先安排的策略，只有一个目标。"
+    },
+    {
+      "en": "\"Each agent controlled a player via an open-source library called Mineflayer and coordinated with its teammates through in-game chat and shared memory,\" the researchers said. \"No one assigned roles or wrote game logic. The agents planned, wrote, and debugged every program themselves. Researchers could watch the run on a live dashboard and pause or stop it at any time, but they had no cause to intervene.\"",
+      "cn": "研究人员表示：「每个智能体都通过名为Mineflayer的开源库控制一名玩家，并借助游戏内聊天和共享记忆与队友协调。没有人给它们分配角色，也没有人编写游戏逻辑。所有程序都由智能体自行规划、编写和调试。研究人员可以通过实时仪表板观察运行情况，随时暂停或终止测试，但整个过程中没有出现需要干预的情况。」"
+    },
+    {
+      "en": "The agents settled into roles quickly, with some building Enderman shelters for farming materials, others gathering food, and others focusing on exploration. They shared combat tips and helped each other recover lost gear when they died.",
+      "cn": "这些智能体很快就形成了分工：有的搭建用来刷取材料的末影人庇护所，有的收集食物，还有的专注探索。它们会分享战斗技巧，也会在队友死亡后帮忙找回掉落的装备。"
+    },
+    {
+      "en": "Over the playthrough, the four agents exchanged 229 messages, ran 2,783 programs, and died 605 times, which suggests worse performance than my kid when he was five. A fifth agent oversaw the process to make sure the other bots weren’t cheating, but you can tell they weren’t by how many times they died anyway.",
+      "cn": "整个通关过程中，4个智能体共互发229条消息，运行2,783个程序，死亡605次，看来表现还不如我家孩子5岁的时候。另有第5个智能体监督全程，确保其他机器人没有作弊。不过，光看它们死了多少次，也知道它们没作弊。"
+    },
+    {
+      "en": "It took around 13.5 hours to reach The End, and the remaining time was spent trying to kill the final boss (and dying a lot). The current Minecraft speedrun record is six minutes and 36 seconds, so the AI agents won’t be breaking any records any time soon. The agents used 1.35 billion input tokens, which would cost a normal user around $1,620. That’s $60 per hour, which works out at $15 an hour per agent. Not a bad salary for a group of computer ghosts who don’t need sustenance.",
+      "cn": "它们花了约13.5小时抵达末地，剩下的时间都在尝试击杀最终Boss（以及不断阵亡）。目前《我的世界》的速通纪录是6分36秒，所以这些AI智能体短期内是别想打破什么纪录了。它们消耗了13.5亿个输入词元，普通用户为此大约需要支付1,620美元(约合人民币1万元)。这相当于每小时60美元(约合人民币401元)，算下来每个智能体的时薪为15美元(约合人民币100元)。对于一群不吃不喝的电脑幽灵来说，这工资还不错。"
+    },
+    {
+      "en": "\"To our knowledge, this is the first end-to-end autonomous completion of Minecraft by AI agents, achieved using only the standard Mineflayer library without pre-scouted seeds or other game-specific tools written by humans,\" the team wrote in a paper , via Engadget . \"Winning required the agents to keep a coherent plan across thousands of dependent steps for more than a day.\"",
+      "cn": "据Engadget报道，研究团队在论文中写道：「据我们所知，这是AI智能体首次从头到尾自主通关《我的世界》。它们只使用了标准Mineflayer库，没有使用预先勘探过的种子，也没有使用人类为这款游戏专门编写的其他工具。要取得胜利，智能体必须在超过一天的时间里，执行数千个相互依赖的步骤，并始终保持计划连贯。」"
+    },
+    {
+      "en": "What is the point of all this? The researchers said they wanted to study how teams of agents coordinate in a setting where every step is visible to help understand such systems before they are trusted with real-world tasks. \"The skills required to solve Minecraft such as coordinating a team, recovering from failure, and pursuing a goal for more than a day, are also what agents need to work reliably alongside people,\" they said.",
+      "cn": "做这些到底有什么意义？研究人员表示，他们希望在每一步都清晰可见的环境中，研究智能体团队如何协调行动，以便在人们放心地将现实任务交给这类系统之前，更好地理解它们。他们表示：「通关《我的世界》所需的能力，例如团队协调、失败后重新调整，以及持续一天以上朝着目标努力，也正是智能体与人类可靠协作所需要的能力。」"
+    }
+  ],
+  "pending_dict": [
+    {
+      "en": "Ender Rods",
+      "cn": "末影棒",
+      "cat": "terms",
+      "source": "ai_guess",
+      "reason": "原文用词可能有误，暂按字面保留并附英文，未擅自改成其他道具名称。"
+    }
+  ],
+  "translated_terms": {
+    "Minecraft": "我的世界",
+    "Google": "谷歌",
+    "Google Gemini 4 Argon": "谷歌Gemini 4 Argon",
+    "Ender Dragon": "末影龙",
+    "The End": "末地",
+    "Ender Pearls": "末影珍珠",
+    "Ender Rods": "末影棒",
+    "Eyes of Ender": "末影之眼",
+    "Stronghold": "要塞",
+    "Enderman": "末影人",
+    "Mineflayer": "Mineflayer",
+    "Engadget": "Engadget"
+  },
+  "cover": "https://assets-prd.ignimgs.com/2025/04/07/herobrine-main-1744047116903.png?width=1280&format=jpg&auto=webp&quality=80",
+  "images": [
+    {
+      "url": "https://assets-prd.ignimgs.com/2025/04/07/herobrine-main-1744047116903.png?width=1280&format=jpg&auto=webp&quality=80",
+      "caption": ""
+    },
+    {
+      "url": "https://kraken.ignimgs.com/apple-touch-icon.png",
+      "caption": ""
+    },
+    {
+      "url": "https://assets-prd.ignimgs.com/2021/12/14/minecraft-1639513933156.jpg",
+      "caption": ""
+    }
+  ],
+  "style_self_check": {
+    "read_style_profile": true,
+    "no_english_syntax": true,
+    "title_rewritten": true,
+    "subtitle_rewritten": true,
+    "xbox_normalized": true,
+    "xbox_series_normalized": true,
+    "quotes_checked": true,
+    "currency_checked": false,
+    "dictionary_checked": true
+  },
+  "translator": "api",
+  "translator_provider": "openai-compatible",
+  "translator_model": "gpt-6.1-sol",
+  "quality_status": "needs_manual_review",
+  "manual_release_required": true,
+  "audit_issues": [
+    {
+      "type": "style_self_check",
+      "detail": "style_self_check key 'currency_checked' is not true (got False)"
+    }
+  ],
+  "audit_failed_at": "2026-10-20T09:11:44.257248+08:00",
+  "audit_failure_reason": "风格拒收: style_self_check key 'currency_checked' is not true (got False)"
+}

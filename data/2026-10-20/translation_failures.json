@@ -1,0 +1,81 @@
+{
+  "date": "2026-10-20",
+  "items": {
+    "5": {
+      "id": 5,
+      "url": "https://www.ign.com/articles/google-ai-agents-killed-ender-dragon-minecraft",
+      "en_title": "It Took 4 Google AI Agents Over 27 Hours to Defeat the Ender Dragon in Minecraft Without Help From Humans",
+      "cn_title": "《我的世界》谷歌称AI耗时逾27小时击败末影龙",
+      "model": "gpt-6.1-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-10-20T09:11:44.257248+08:00",
+      "reason": "风格拒收: style_self_check key 'currency_checked' is not true (got False)",
+      "audit_issues": [
+        {
+          "type": "style_self_check",
+          "detail": "style_self_check key 'currency_checked' is not true (got False)"
+        }
+      ],
+      "fingerprint": "68e83be1c8bd44f2f9f0e76fa2b62c46883353c4",
+      "translation_path": "translations/05.json",
+      "retry_policy": "manual_only"
+    },
+    "11": {
+      "id": 11,
+      "url": "https://www.ign.com/articles/is-call-of-duty-modern-warfare-4-really-the-end-of-the-rebooted-modern-warfare-story-infinity-ward-responds",
+      "en_title": "Is Call of Duty: Modern Warfare 4 Really the End of the Rebooted Modern Warfare Story? Infinity Ward Responds",
+      "cn_title": "《《使命召唤：现代战争4》》《现代战争4》是终章？IW回应",
+      "model": "gpt-6.1-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-10-20T09:13:49.501856+08:00",
+      "reason": "🚨 subtitle 内嵌长引用: 「「你不会喜欢这个答案」」",
+      "audit_issues": [],
+      "fingerprint": "0b78aeed4ba8ac3ae2ca086927c5fcae1f7d2ad9",
+      "translation_path": "translations/11.json",
+      "retry_policy": "manual_only"
+    },
+    "14": {
+      "id": 14,
+      "url": "https://www.ign.com/articles/playstation-6-ram-and-storage-alone-may-cost-680-according-to-leaker",
+      "en_title": "PlayStation 6 RAM and Storage Alone May Cost $680, According to Leaker",
+      "cn_title": "曝PS6内存与存储成本超整台PS5",
+      "model": "gpt-6.1-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-10-20T09:15:02.912736+08:00",
+      "reason": "风格拒收: style_self_check key 'currency_checked' is not true (got False)",
+      "audit_issues": [
+        {
+          "type": "style_self_check",
+          "detail": "style_self_check key 'currency_checked' is not true (got False)"
+        }
+      ],
+      "fingerprint": "9cfc8f54984004ac5b64c93451147226e7a89e6e",
+      "translation_path": "translations/14.json",
+      "retry_policy": "manual_only"
+    },
+    "24": {
+      "id": 24,
+      "url": "https://www.ign.com/articles/theres-no-one-person-that-has-this-whole-thing-in-their-head-gta-6-devs-had-freedom-to-add-cool-features-just-like-rdr2s-horse-balls",
+      "en_title": "'There's No One Person That Has This Whole Thing in Their Head' — GTA 6 Devs Had Freedom to Add Cool Features Just Like RDR2's Horse Balls",
+      "cn_title": "《GTA6》细节之多，连高层也不尽知",
+      "model": "gpt-6.1-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-10-20T09:17:09.666169+08:00",
+      "reason": "质量门禁拒绝: paragraph 11 is suspiciously short and may omit source content; paragraph 11 is missing numeric fact(s): 30",
+      "audit_issues": [
+        {
+          "type": "quality_gate",
+          "detail": "paragraph 11 is suspiciously short and may omit source content"
+        },
+        {
+          "type": "quality_gate",
+          "detail": "paragraph 11 is missing numeric fact(s): 30"
+        }
+      ],
+      "fingerprint": "1ad898a893f051a04a458d33bf9fda42d0547d2c",
+      "translation_path": "translations/24.json",
+      "retry_policy": "manual_only"
+    }
+  },
+  "updated_at": "2026-10-20T09:17:09.666169+08:00"
+}
