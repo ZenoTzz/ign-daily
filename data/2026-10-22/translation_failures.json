@@ -1,0 +1,86 @@
+{
+  "date": "2026-10-22",
+  "items": {
+    "9": {
+      "id": 9,
+      "url": "https://www.ign.com/articles/edgerunners-season-2-officially-set-after-cyberpunk-2077",
+      "en_title": "CD Projekt's Cyberpunk 2077 Loremaster Confirms Year Edgerunners 2 Is Set, Sparking Fan Speculation About Canon Endings",
+      "cn_title": "《赛博朋克2077》《边缘行者2》故事定于2078年",
+      "model": "gpt-6.1-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-10-22T09:05:28.981597+08:00",
+      "reason": "质量门禁拒绝: paragraph 2 is missing numeric fact(s): 2077",
+      "audit_issues": [
+        {
+          "type": "quality_gate",
+          "detail": "paragraph 2 is missing numeric fact(s): 2077"
+        }
+      ],
+      "fingerprint": "72c4b86fcae432c7817d7acfc5c498d97bb19f54",
+      "translation_path": "translations/09.json",
+      "retry_policy": "manual_only"
+    },
+    "16": {
+      "id": 16,
+      "url": "https://www.ign.com/articles/halo-special-edition-xbox-console-hallmark-keepsake-ornament-is-now-available",
+      "en_title": "Halo Special Edition Xbox Console Hallmark Keepsake Ornament Is Now Available",
+      "cn_title": "《光环》XBOX挂饰开售",
+      "model": "gpt-6.1-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-10-22T09:06:06.494205+08:00",
+      "reason": "风格拒收: style_self_check key 'currency_checked' is not true (got False); Chinese translation contains forbidden platform spelling: 'xbox series x' (must write exactly 'XBOX Series')",
+      "audit_issues": [
+        {
+          "type": "style_self_check",
+          "detail": "style_self_check key 'currency_checked' is not true (got False)"
+        },
+        {
+          "type": "style_self_check",
+          "detail": "Chinese translation contains forbidden platform spelling: 'xbox series x' (must write exactly 'XBOX Series')"
+        }
+      ],
+      "fingerprint": "f77d6c988476c16a53d5b9d5985d0f7e72c8dc34",
+      "translation_path": "translations/16.json",
+      "retry_policy": "manual_only"
+    },
+    "27": {
+      "id": 27,
+      "url": "https://www.ign.com/articles/ea-confirms-dice-and-respawn-are-collaborating-on-a-new-project-amidst-star-wars-battlefront-3-rumors",
+      "en_title": "EA Confirms DICE and Respawn Are Collaborating on a New Project Amidst Star Wars: Battlefront 3 Rumors",
+      "cn_title": "《星球大战》EA确认DICE与Respawn合作新项目",
+      "model": "gpt-6.1-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-10-22T09:09:08.357448+08:00",
+      "reason": "风格拒收: cn_title directly reuses the old title: '《星球大战》EA确认DICE与Respawn合作新项目'",
+      "audit_issues": [
+        {
+          "type": "style_self_check",
+          "detail": "cn_title directly reuses the old title: '《星球大战》EA确认DICE与Respawn合作新项目'"
+        }
+      ],
+      "fingerprint": "f3d9fe271a2f2efce962890c7d85d4a2aa0ae1a3",
+      "translation_path": "translations/27.json",
+      "retry_policy": "manual_only"
+    },
+    "41": {
+      "id": 41,
+      "url": "https://www.ign.com/articles/former-bioware-executive-producer-mark-darrah-says-ea-might-be-more-likely-to-sell-ips-like-mass-effect-and-dragon-age-after-studios-closure",
+      "en_title": "Former BioWare Executive Producer Mark Darrah Says EA Might Be 'More Likely' to Sell IPs Like Mass Effect and Dragon Age After Studio’s Closure",
+      "cn_title": "前高管称EA关闭BioWare后或出售IP",
+      "model": "gpt-6.1-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-10-22T09:09:39.363152+08:00",
+      "reason": "质量门禁拒绝: paragraph 6 is missing numeric fact(s): 100%",
+      "audit_issues": [
+        {
+          "type": "quality_gate",
+          "detail": "paragraph 6 is missing numeric fact(s): 100%"
+        }
+      ],
+      "fingerprint": "2400a41bedaf44ffb0a3c2af14a53939cf4f20bd",
+      "translation_path": "translations/41.json",
+      "retry_policy": "manual_only"
+    }
+  },
+  "updated_at": "2026-10-22T09:09:39.363152+08:00"
+}

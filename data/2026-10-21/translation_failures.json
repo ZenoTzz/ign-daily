@@ -1,0 +1,198 @@
+{
+  "date": "2026-10-21",
+  "items": {
+    "5": {
+      "id": 5,
+      "url": "https://www.ign.com/articles/xbox-business-strategist-claims-video-game-industry-is-pretending-to-not-use-ai-deletes-twitter-account-after-deluge-of-replies",
+      "en_title": "Xbox 'Business Strategist' Claims Video Game Industry Is 'Pretending to Not Use AI,' Deletes Twitter Account After Deluge of Replies",
+      "cn_title": "XBOX员工称业界假装不用AI",
+      "model": "gpt-6.1-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-10-21T09:04:34.941223+08:00",
+      "reason": "质量门禁拒绝: paragraph 6 is missing numeric fact(s): 10",
+      "audit_issues": [
+        {
+          "type": "quality_gate",
+          "detail": "paragraph 6 is missing numeric fact(s): 10"
+        }
+      ],
+      "fingerprint": "2bc0ecc663d7a3992e2d19527e0ec12d20084700",
+      "translation_path": "translations/05.json",
+      "retry_policy": "manual_only"
+    },
+    "7": {
+      "id": 7,
+      "url": "https://www.ign.com/articles/cyberpunk-2077-gets-surprise-official-new-update-announcement-from-cd-projekt",
+      "en_title": "Cyberpunk 2077 Gets Surprise Official New Update Announcement From CD Projekt",
+      "cn_title": "《赛博朋克2077》惊喜更新将至",
+      "model": "gpt-6.1-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-10-21T09:06:59.896414+08:00",
+      "reason": "paragraph 12 missing cn",
+      "audit_issues": [
+        {
+          "type": "dictionary",
+          "detail": "source contains 'Nintendo', but required dictionary translation '任天堂' is missing",
+          "en": "Nintendo",
+          "expected_cn": "任天堂"
+        }
+      ],
+      "fingerprint": "d39eca57fd4558fd334cf0fd26abcf124dd6cdf1",
+      "translation_path": "translations/07.json",
+      "retry_policy": "manual_only"
+    },
+    "17": {
+      "id": 17,
+      "url": "https://www.ign.com/articles/razer-announces-xbox-25th-anniversary-collection-of-peripherals-for-xbox-series-xs-and-pc",
+      "en_title": "Razer Announces Xbox 25th Anniversary Collection of Peripherals for Xbox Series X|S and PC",
+      "cn_title": "雷蛇推出XBOX25周年限定外设",
+      "model": "gpt-6.1-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-10-21T09:07:22.342434+08:00",
+      "reason": "风格拒收: Chinese translation contains forbidden platform spelling: 'xbox series x' (must write exactly 'XBOX Series')",
+      "audit_issues": [
+        {
+          "type": "style_self_check",
+          "detail": "Chinese translation contains forbidden platform spelling: 'xbox series x' (must write exactly 'XBOX Series')"
+        }
+      ],
+      "fingerprint": "821d17d6d3d73f2516e5af5eca4dcf6310f8f46f",
+      "translation_path": "translations/17.json",
+      "retry_policy": "manual_only"
+    },
+    "22": {
+      "id": 22,
+      "url": "https://www.ign.com/articles/if-hits-are-unexpected-datasets-arent-gonna-get-you-there-take-two-interactive-and-sony-bosses-say-that-ai-cannot-replace-human-creativity",
+      "en_title": "‘If Hits Are Unexpected, Datasets Aren’t Gonna Get You There’ — Take-Two Interactive and Sony Bosses Say That AI Cannot Replace Human Creativity",
+      "cn_title": "索尼等高管：AI无法取代人类创造力",
+      "model": "gpt-6.1-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-10-21T09:07:53.082159+08:00",
+      "reason": "质量门禁拒绝: paragraph 4 is missing numeric fact(s): 20",
+      "audit_issues": [
+        {
+          "type": "quality_gate",
+          "detail": "paragraph 4 is missing numeric fact(s): 20"
+        }
+      ],
+      "fingerprint": "72f8c105c8b891dac5a39406da81b0f53115cd22",
+      "translation_path": "translations/22.json",
+      "retry_policy": "manual_only"
+    },
+    "23": {
+      "id": 23,
+      "url": "https://www.ign.com/articles/call-of-duty-modern-warfare-4-dmz-extraction-shooter",
+      "en_title": "‘It Represents an Evolution of the First-Person Shooter’ — Why Infinity Ward Is Giving Extraction Shooters Another Shot in Modern Warfare 4’s DMZ Mode",
+      "cn_title": "《现代战争4》为何再试撤离射击",
+      "model": "gpt-6.1-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-10-21T09:10:10.948345+08:00",
+      "reason": "质量门禁拒绝: paragraph 13 contains a direct quote without Chinese quote marks",
+      "audit_issues": [
+        {
+          "type": "quality_gate",
+          "detail": "paragraph 13 contains a direct quote without Chinese quote marks"
+        }
+      ],
+      "fingerprint": "4da0df0d128cd4d909ae12b6b0c9da7da72a8af1",
+      "translation_path": "translations/23.json",
+      "retry_policy": "manual_only"
+    },
+    "29": {
+      "id": 29,
+      "url": "https://www.ign.com/articles/cyberpunk-edgerunners-2-producer-explains-romans-backstory",
+      "en_title": "Cyberpunk Edgerunners 2 Producer Explains Roman’s Backstory",
+      "cn_title": "制作人：Roman身世将永远保密",
+      "model": "gpt-6.1-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-10-21T09:11:24.168010+08:00",
+      "reason": "质量门禁拒绝: paragraph 10 is missing numeric fact(s): 10",
+      "audit_issues": [
+        {
+          "type": "quality_gate",
+          "detail": "paragraph 10 is missing numeric fact(s): 10"
+        }
+      ],
+      "fingerprint": "61a74812ff67a2c1140df47bb95bfba18db6c5d1",
+      "translation_path": "translations/29.json",
+      "retry_policy": "manual_only"
+    },
+    "30": {
+      "id": 30,
+      "url": "https://www.ign.com/articles/cyberpunk-edgerunners-2-producer-explains-why-this-seasons-ending-is-so-different-from-what-fans-expected",
+      "en_title": "Cyberpunk Edgerunners 2 Producer Explains Why This Season's Ending Is So Different From What Fans Expected",
+      "cn_title": "《边缘行者2》制作人解读结局反差",
+      "model": "gpt-6.1-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-10-21T09:12:40.989410+08:00",
+      "reason": "质量门禁拒绝: paragraph 5 is missing numeric fact(s): 180",
+      "audit_issues": [
+        {
+          "type": "quality_gate",
+          "detail": "paragraph 5 is missing numeric fact(s): 180"
+        }
+      ],
+      "fingerprint": "edcd1bb85dafa28531325faa29224913bcd3aa3c",
+      "translation_path": "translations/30.json",
+      "retry_policy": "manual_only"
+    },
+    "36": {
+      "id": 36,
+      "url": "https://www.ign.com/articles/shrek-2-remastered-reveal-trailer-parodies-gta-6-sets-november-release-date",
+      "en_title": "Shrek 2 Remastered Reveal Trailer Parodies GTA 6, Sets November Release Date",
+      "cn_title": "《怪物史瑞克2》重制版11月发售",
+      "model": "gpt-6.1-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-10-21T09:13:17.052348+08:00",
+      "reason": "质量门禁拒绝: paragraph 8 is suspiciously short and may omit source content",
+      "audit_issues": [
+        {
+          "type": "quality_gate",
+          "detail": "paragraph 8 is suspiciously short and may omit source content"
+        }
+      ],
+      "fingerprint": "bfb064ea050c69dcece20606b0b873aa74c0a329",
+      "translation_path": "translations/36.json",
+      "retry_policy": "manual_only"
+    },
+    "39": {
+      "id": 39,
+      "url": "https://www.ign.com/articles/xboxs-next-console-may-reportedly-cost-as-much-as-1800-new-handheld-rumored-to-launch-next-year-before-helix",
+      "en_title": "Xbox's Next Console May Reportedly Cost As Much as $1,800, New Handheld Rumored to Launch Next Year Before Helix",
+      "cn_title": "传XBOX掌机将先于新主机推出",
+      "model": "gpt-6.1-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-10-21T09:13:46.303273+08:00",
+      "reason": "风格拒收: style_self_check key 'currency_checked' is not true (got False)",
+      "audit_issues": [
+        {
+          "type": "style_self_check",
+          "detail": "style_self_check key 'currency_checked' is not true (got False)"
+        }
+      ],
+      "fingerprint": "5c24519eaa9d4ba66564cdd9bf34118ca3aeda03",
+      "translation_path": "translations/39.json",
+      "retry_policy": "manual_only"
+    },
+    "42": {
+      "id": 42,
+      "url": "https://www.ign.com/articles/amd-fsr-41-is-finally-coming-to-xbox-series-x-rivaling-ps5s-qssr",
+      "en_title": "AMD FSR 4.1 Is Finally Coming to Xbox Series X, Rivaling PS5's QSSR",
+      "cn_title": "FSR 4.1将登陆XBOX",
+      "model": "gpt-6.1-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-10-21T09:15:54.327186+08:00",
+      "reason": "风格拒收: Chinese translation contains forbidden platform spelling: 'xbox series x' (must write exactly 'XBOX Series')",
+      "audit_issues": [
+        {
+          "type": "style_self_check",
+          "detail": "Chinese translation contains forbidden platform spelling: 'xbox series x' (must write exactly 'XBOX Series')"
+        }
+      ],
+      "fingerprint": "290fdb5899074ff0b2dc45e77458fadbdbd865c8",
+      "translation_path": "translations/42.json",
+      "retry_policy": "manual_only"
+    }
+  },
+  "updated_at": "2026-10-21T09:15:54.327186+08:00"
+}

@@ -1,0 +1,79 @@
+{
+  "id": 39,
+  "url": "https://www.ign.com/articles/xboxs-next-console-may-reportedly-cost-as-much-as-1800-new-handheld-rumored-to-launch-next-year-before-helix",
+  "en_title": "Xbox's Next Console May Reportedly Cost As Much as $1,800, New Handheld Rumored to Launch Next Year Before Helix",
+  "cn_title": "传XBOX掌机将先于新主机推出",
+  "subtitle": "定价或成难题",
+  "opus_summary": "据报道，微软预计下一代XBOX主机售价高昂，目前目标为2028年发售。另有掌机计划于2027年假日季前推出，但它与Project Helix的关联尚不明确。",
+  "publish_time_cn": "2026-10-21 03:08",
+  "paragraphs": [
+    {
+      "en": "A new report claims that Xbox expects its next-generation console to cost as much as $1,800 and is currently targeting a 2028 release.",
+      "cn": "一篇新报道称，XBOX预计下一代主机售价可能高达1,800美元(约合人民币1万元)，目前目标是在2028年发售。"
+    },
+    {
+      "en": "A new article from Fortune claims that Microsoft has internally projected that its next Xbox console, codenamed Project Helix, will cost consumers between $1,200 - $1,800. The article notes that Microsoft could choose to subsidize those costs to come in at a lower price point, but unless the tech giant is will to take major losses on the console that would go beyond normal standards, it seems likely that the machine will still cost over $1,000.",
+      "cn": "Fortune的一篇新文章称，微软内部预计，代号为Project Helix的下一代XBOX主机售价将在1,200美元(约合人民币8028元)至1,800美元(约合人民币1万元)之间。文章指出，微软可以选择补贴成本，以降低售价。但除非这家科技巨头愿意在主机上承担远超常规水平的巨额亏损，否则这台机器的售价似乎仍很可能超过1,000美元(约合人民币6690元)。"
+    },
+    {
+      "en": "Of course, maybe a miracle could happen and the costs for the parts could lower in the coming years, but the odds of that seem excessively low. It's not uncommon for platform holders to take a loss on hardware, as the real money is made on games and subscriptions. However, Xbox doesn't have the same market share that it had 15 years ago. It is harder to justify big gambles, but the cost of the hardware itself may be a gamble which puts Microsoft between a rock and a hard place.",
+      "cn": "当然，也许会有奇迹发生，零部件成本在未来几年有所下降，但这种可能性似乎微乎其微。平台厂商亏本销售硬件并不罕见，因为真正赚钱的是游戏和订阅服务。然而，XBOX的市场份额已不如15年前。如今更难找到理由下大赌注，但硬件本身的成本或许就已是一场赌博，让微软陷入两难。"
+    },
+    {
+      "en": "Fortune also revealed that Xbox is also planning to release a handheld by holiday 2027, though it's unclear how linked this will be to Project Helix. Xbox CEO Asha Sharma has stated before that Helix is a \"family\" of devices , so this handheld could be the first step. While some initially thought that may mean this generation will have another Xbox Series X and S situation, with one console that is more entry level and another that is for more hardcore players, it may be a bit different.",
+      "cn": "Fortune还透露，XBOX计划最迟于2027年假日季推出一款掌机，但目前尚不清楚它与Project Helix有多大关联。XBOX首席执行官Asha Sharma此前曾表示，Helix是一个设备「家族」，因此这款掌机可能是第一步。起初有人认为，这或许意味着新一代产品会再次采用XBOX Series的X与S双机型布局，一款更偏入门，另一款面向更硬核的玩家，但实际情况可能有所不同。"
+    },
+    {
+      "en": "Instead of a weaker console, Xbox may leverage less power inside of a handheld, which may be more appealing and sensible. Xbox previously stated we would hear more about Project Helix by the end of year , so maybe we will learn more in November for the company's 25th anniversary.",
+      "cn": "XBOX或许不会推出性能较弱的主机，而是将较低的性能配置用在掌机上，这可能更有吸引力，也更合理。XBOX此前表示，年底前会公布更多Project Helix的消息，因此我们或许会在11月XBOX迎来25周年之际了解到更多信息。"
+    }
+  ],
+  "pending_dict": [],
+  "translated_terms": {
+    "Project Helix": "Project Helix",
+    "Asha Sharma": "Asha Sharma",
+    "Xbox Series": "XBOX Series",
+    "Microsoft": "微软",
+    "Xbox": "XBOX",
+    "Fortune": "Fortune"
+  },
+  "cover": "https://assets-prd.ignimgs.com/2026/05/06/screenshot-2026-05-06-162907-1778081413883.png?width=1280&format=jpg&auto=webp&quality=80",
+  "images": [
+    {
+      "url": "https://assets-prd.ignimgs.com/2026/05/06/screenshot-2026-05-06-162907-1778081413883.png?width=1280&format=jpg&auto=webp&quality=80",
+      "caption": ""
+    },
+    {
+      "url": "https://kraken.ignimgs.com/apple-touch-icon.png",
+      "caption": ""
+    },
+    {
+      "url": "https://assets-prd.ignimgs.com/2025/06/17/xbox-1750193966476.jpg",
+      "caption": ""
+    }
+  ],
+  "style_self_check": {
+    "read_style_profile": true,
+    "no_english_syntax": true,
+    "title_rewritten": true,
+    "subtitle_rewritten": true,
+    "xbox_normalized": true,
+    "xbox_series_normalized": true,
+    "quotes_checked": true,
+    "currency_checked": false,
+    "dictionary_checked": true
+  },
+  "translator": "api",
+  "translator_provider": "openai-compatible",
+  "translator_model": "gpt-6.1-sol",
+  "quality_status": "needs_manual_review",
+  "manual_release_required": true,
+  "audit_issues": [
+    {
+      "type": "style_self_check",
+      "detail": "style_self_check key 'currency_checked' is not true (got False)"
+    }
+  ],
+  "audit_failed_at": "2026-10-21T09:13:46.303273+08:00",
+  "audit_failure_reason": "风格拒收: style_self_check key 'currency_checked' is not true (got False)"
+}

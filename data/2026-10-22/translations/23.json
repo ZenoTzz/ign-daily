@@ -1,0 +1,70 @@
+{
+  "id": 23,
+  "url": "https://www.ign.com/articles/bioware-shutting-down-next-mass-effect-canceled",
+  "en_title": "BioWare Shutting Down, Next Mass Effect Canceled",
+  "cn_title": "据报《质量效应》新作取消",
+  "subtitle": "BioWare将关闭",
+  "opus_summary": "据彭博社报道，BioWare将关闭，《质量效应》新作已取消。EA此次大规模裁员导致400人失业，其中约50个岗位来自BioWare，项目在裁员期间终止。",
+  "publish_time_cn": "2026-10-22 01:10",
+  "paragraphs": [
+    {
+      "en": "BioWare is shutting down and the next Mass Effect game is canceled, according to a new report.",
+      "cn": "据最新报道，BioWare将关闭，下一部《质量效应》游戏已取消。"
+    },
+    {
+      "en": "Bloomberg said Mass Effect shuts down amid mass layoffs at Electronic Arts, which amount to 400 people losing their jobs. Roughly 50 of these roles were at BioWare.",
+      "cn": "彭博社称，《质量效应》项目在EA大规模裁员期间终止。这轮裁员导致400人失业，其中约50个岗位来自BioWare。"
+    }
+  ],
+  "pending_dict": [],
+  "translated_terms": {
+    "Electronic Arts": "EA",
+    "Bloomberg": "彭博社",
+    "BioWare": "BioWare",
+    "Mass Effect": "《质量效应》"
+  },
+  "cover": "https://assets-prd.ignimgs.com/2024/09/02/mass-1725274632546.jpg",
+  "images": [
+    {
+      "url": "https://assets-prd.ignimgs.com/2024/09/02/mass-1725274632546.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "caption": ""
+    },
+    {
+      "url": "https://kraken.ignimgs.com/apple-touch-icon.png",
+      "caption": ""
+    },
+    {
+      "url": "https://assets-prd.ignimgs.com/2020/11/07/mass-effect-next-chapter-button-1604783743528.jpg",
+      "caption": ""
+    }
+  ],
+  "style_self_check": {
+    "read_style_profile": true,
+    "no_english_syntax": true,
+    "title_rewritten": true,
+    "subtitle_rewritten": true,
+    "xbox_normalized": true,
+    "xbox_series_normalized": true,
+    "quotes_checked": true,
+    "currency_checked": true,
+    "dictionary_checked": true
+  },
+  "translator": "api",
+  "translator_provider": "openai-compatible",
+  "translator_model": "gpt-6.1-sol",
+  "reasoning_effort": "low",
+  "reviewer_model": "gpt-6.1-sol",
+  "reviewed_at": "2026-10-22T01:06:45.248554+00:00",
+  "prompt_version": "api-fulltext-2026-07-v2",
+  "quality_gate_version": 1,
+  "quality_review": {
+    "status": "passed",
+    "reviewer_model": "gpt-6.1-sol",
+    "reviewed_at": "2026-10-22T01:06:45.248554+00:00",
+    "checks": {
+      "source_coverage": true,
+      "quote_attribution": true,
+      "numeric_facts": true
+    }
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "id": 17,
+  "url": "https://www.ign.com/articles/razer-announces-xbox-25th-anniversary-collection-of-peripherals-for-xbox-series-xs-and-pc",
+  "en_title": "Razer Announces Xbox 25th Anniversary Collection of Peripherals for Xbox Series X|S and PC",
+  "cn_title": "雷蛇推出XBOX25周年限定外设",
+  "subtitle": "半透明绿回归",
+  "opus_summary": "雷蛇推出XBOX25周年限量外设，人体工学鼠标、机械键盘和无线耳塞现已开售。三款均采用半透明绿色，呼应初代主机特别版与调试机配色，但系列中没有XBOX手柄。",
+  "publish_time_cn": "2026-10-20 23:00",
+  "paragraphs": [
+    {
+      "en": "Gaming peripheral maker Razer has announced a trio of products to mark Xbox's 25th anniversary this Fall. The Xbox 25th Anniversary limited-edition collection consists of three translucent-green versions of flagship Razer products: an ergonomic mouse, a mechanical keyboard, and wireless earbuds. All three are available now.",
+      "cn": "游戏外设厂商雷蛇公布了三款产品，庆祝XBOX在今年秋季迎来25周年。这套XBOX25周年限量系列为雷蛇的三款旗舰产品换上了半透明绿色外观，分别是人体工学鼠标、机械键盘和无线耳塞。目前三款产品均已开售。"
+    },
+    {
+      "en": "The lineup, which, funnily enough, doesn't include an Xbox gamepad, nevertheless harkens back to the translucent emerald green color seen in a special-edition original-Xbox console and the original-Xbox \"debug kits\" that us media folks used to play in-development game builds. Here are the descriptions of each product, straight from Razer:",
+      "cn": "有趣的是，这个系列里居然没有XBOX手柄。不过，这套外设的半透明祖母绿配色，仍让人想起初代XBOX特别版主机，以及我们这些媒体人当年用来试玩开发中游戏的初代XBOX「调试机」。以下是雷蛇提供的各款产品介绍："
+    },
+    {
+      "en": "Microsoft itself is celebrating the Xbox's 25th anniversary with translucent green hardware of its own: a special-edition Xbox Series X console (that comes bundled with the perfectly good Halo: Campaign Evolved) and a matching controller . The actual anniversary arrives next month on November 15.",
+      "cn": "微软也推出了自己的半透明绿色硬件，庆祝XBOX25周年：一款特别版XBOX Series X主机，以及配套手柄。主机捆绑附赠了相当不错的《光环：战役进化》。XBOX25周年的正日子是下个月的11月15日。"
+    },
+    {
+      "en": "Ryan McCaffrey is IGN's executive editor of previews and host of IGN's weekly Xbox show, Podcast Unlocked , and a co-host of Next-Gen Console Watch . He's a North Jersey guy, so it's \"Taylor ham,\" not \"pork roll.\" Debate it with him on Twitter at @DMC_Ryan .",
+      "cn": "Ryan McCaffrey是IGN预览内容执行编辑、IGN每周XBOX节目Podcast Unlocked的主持人，也是Next-Gen Console Watch的联合主持人。他来自新泽西州北部，所以他管那种肉制品叫「Taylor ham」，而不是「pork roll」。你可以在X上找@DMC_Ryan，和他争论这个问题。"
+    }
+  ],
+  "pending_dict": [],
+  "translated_terms": {
+    "Razer": "雷蛇",
+    "Xbox": "XBOX",
+    "Xbox Series X|S": "XBOX Series",
+    "Xbox Series X": "XBOX Series X",
+    "Microsoft": "微软",
+    "Halo: Campaign Evolved": "《光环：战役进化》",
+    "Ryan McCaffrey": "Ryan McCaffrey",
+    "Twitter": "X"
+  },
+  "cover": "https://assets-prd.ignimgs.com/2026/10/13/mouse-1791923139918.jpg?width=1280&format=jpg&auto=webp&quality=80",
+  "images": [
+    {
+      "url": "https://assets-prd.ignimgs.com/2026/10/13/mouse-1791923139918.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "caption": ""
+    },
+    {
+      "url": "https://kraken.ignimgs.com/apple-touch-icon.png",
+      "caption": ""
+    }
+  ],
+  "style_self_check": {
+    "read_style_profile": true,
+    "no_english_syntax": true,
+    "title_rewritten": true,
+    "subtitle_rewritten": true,
+    "xbox_normalized": true,
+    "xbox_series_normalized": true,
+    "quotes_checked": true,
+    "currency_checked": true,
+    "dictionary_checked": true
+  },
+  "translator": "api",
+  "translator_provider": "openai-compatible",
+  "translator_model": "gpt-6.1-sol",
+  "quality_status": "needs_manual_review",
+  "manual_release_required": true,
+  "audit_issues": [
+    {
+      "type": "style_self_check",
+      "detail": "Chinese translation contains forbidden platform spelling: 'xbox series x' (must write exactly 'XBOX Series')"
+    }
+  ],
+  "audit_failed_at": "2026-10-21T09:07:22.342434+08:00",
+  "audit_failure_reason": "风格拒收: Chinese translation contains forbidden platform spelling: 'xbox series x' (must write exactly 'XBOX Series')"
+}
