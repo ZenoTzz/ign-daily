@@ -7,12 +7,12 @@
       "emoji": "🎬",
       "en_title": "James Gunn Defends the DCU's Approach to Interconnected Stories, Doesn't Want Movies Like Clayface to Exist Just to 'Set Up' Crossovers",
       "cn_title": "古恩：DCU单片不应只为联动铺路",
-      "summary": "詹姆斯·古恩为DCU的故事联动方式辩护，强调独立故事不必为后续联动铺路才有意义。他希望观众观看《泥面》，是因为影片本身是精彩有趣的恐怖片，而非期待角色今后登场。他也表示，《超人》的后续故事仍会纳入其他作品已引入的角色。",
+      "summary": "詹姆斯·古恩表示，DCU作品不必只为后续联动铺路，独立故事本身也应具备意义。他希望观众因为《泥面》是一部精彩的恐怖片而观看，而不是只关注角色未来会否登场。",
       "url": "https://www.ign.com/articles/james-gunn-defends-the-dcus-approach-to-interconnected-stories-doesnt-want-movies-like-clayface-to-exist-just-to-set-up-crossovers",
       "publish_time_cn": "2026-10-25 06:09",
       "pub_date": "2026-10-25 06:09",
       "cover_image": "https://assets-prd.ignimgs.com/2026/10/24/clayface-dcu-1792877179646.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2026/10/24/clayface-dcu-1792877179646.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/10/24/clayface-dcu-1792877179646.png?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -23,7 +23,13 @@
         "https://assets-prd.ignimgs.com/2023/01/31/batman-generic-button-1675192045137.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-10-25T07:17:43+08:00"
+      "source_fetched_at": "2026-10-25T07:17:43+08:00",
+      "translation_error": "风格拒收: cn_title directly reuses the old title: '古恩：DCU单片不应只为联动铺路'",
+      "translation_failed_at": "2026-10-26T09:07:04.062296+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "gpt-6.1-sol",
+      "translation_path": "translations/07.json"
     },
     {
       "id": 6,
@@ -35,8 +41,8 @@
       "url": "https://www.ign.com/articles/call-of-duty-movie-director-teases-story-that-explores-the-cost-of-war-praises-modern-warfare-characters",
       "publish_time_cn": "2026-10-25 03:45",
       "pub_date": "2026-10-25 03:45",
-      "cover_image": "https://assets-prd.ignimgs.com/2023/11/17/modern-warfare-2019-1700233908828.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2023/11/17/modern-warfare-2019-1700233908828.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2023/11/17/modern-warfare-2019-1700233908828.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2023/11/17/modern-warfare-2019-1700233908828.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -47,7 +53,16 @@
         "https://assets2.ignimgs.com/2015/11/07/call-of-duty-generic-posterjpg-a80802.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-10-25T04:18:18+08:00"
+      "source_fetched_at": "2026-10-25T04:18:18+08:00",
+      "translation_path": "translations/06.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "gpt-6.1-sol",
+      "reasoning_effort": "low",
+      "reviewer_model": "gpt-6.1-sol",
+      "reviewed_at": "2026-10-26T01:05:59.605635+00:00",
+      "prompt_version": "api-fulltext-2026-07-v2",
+      "quality_gate_version": 1
     },
     {
       "id": 5,
@@ -60,7 +75,7 @@
       "publish_time_cn": "2026-10-25 02:29",
       "pub_date": "2026-10-25 02:29",
       "cover_image": "https://assets-prd.ignimgs.com/2026/08/01/elden-ring-dlc-1785613743564.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2026/08/01/elden-ring-dlc-1785613743564.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/08/01/elden-ring-dlc-1785613743564.png?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -71,7 +86,13 @@
         "https://assets-prd.ignimgs.com/2025/05/23/elden-ring-button1-1748009071355.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-10-25T03:18:22+08:00"
+      "source_fetched_at": "2026-10-25T03:18:22+08:00",
+      "translation_error": "风格拒收: cn_title directly reuses the old title: '《艾尔登法环》电影据报耗资2亿美元(约合人民币13亿元)'; summary directly reuses the old summary: '据《华尔街日报》援引消息人士报道，Alex Garland执导的《艾尔登法环》真人电影预算接近A24此前最贵影片的三倍，若属实，将成为该公司预算最高的电影。影片已于今年7月杀青，预计于2028年3月3日上映。'",
+      "translation_failed_at": "2026-10-26T09:05:40.859834+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "gpt-6.1-sol",
+      "translation_path": "translations/05.json"
     },
     {
       "id": 4,

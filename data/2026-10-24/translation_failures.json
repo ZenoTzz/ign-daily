@@ -1,0 +1,77 @@
+{
+  "date": "2026-10-24",
+  "items": {
+    "10": {
+      "id": 10,
+      "url": "https://www.ign.com/articles/franchises-like-mass-effect-are-a-prestige-project-for-ea-and-biowares-closure-was-entirely-predictable-analysts-say",
+      "en_title": "Franchises Like Mass Effect Are a 'Prestige Project' for EA, and BioWare's Closure Was 'Entirely Predictable,' Analysts Say",
+      "cn_title": "分析师：BioWare关闭早可预见",
+      "model": "gpt-6.1-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-10-26T09:02:20.487646+08:00",
+      "reason": "风格拒收: cn_title directly reuses the old title: '分析师：BioWare关闭早可预见'",
+      "audit_issues": [
+        {
+          "type": "style_self_check",
+          "detail": "cn_title directly reuses the old title: '分析师：BioWare关闭早可预见'"
+        }
+      ],
+      "fingerprint": "77428e3debe09b0a9848e6d28591bac4694cc9c3",
+      "translation_path": "translations/10.json",
+      "retry_policy": "manual_only"
+    },
+    "16": {
+      "id": 16,
+      "url": "https://www.ign.com/articles/xbox-wants-to-close-arkane-lyon",
+      "en_title": "Arkane Lyon Reportedly Could Be Closed in Mid-November if a Buyer Isn't Found, With Marvel's Blade Still in Development",
+      "cn_title": "《漫威刀锋战士》据报Arkane里昂无买家或关闭",
+      "model": "gpt-6.1-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-10-26T09:02:53.206570+08:00",
+      "reason": "🚨 subtitle 含大数字，像摘要不像创意短句: 「悬在217人头顶的利剑」",
+      "audit_issues": [],
+      "fingerprint": "1351850320384fa38d267159920560a8e7b81469",
+      "translation_path": "translations/16.json",
+      "retry_policy": "manual_only"
+    },
+    "17": {
+      "id": 17,
+      "url": "https://www.ign.com/articles/nintendo-legend-shigeru-miyamoto-becomes-first-game-designer-to-be-awarded-japans-order-of-culture",
+      "en_title": "Nintendo Legend Shigeru Miyamoto Becomes First Game Designer to Be Awarded Japan's Order of Culture",
+      "cn_title": "宫本茂成首位获日本文化勋章的游戏设计师",
+      "model": "gpt-6.1-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-10-26T09:03:34.959142+08:00",
+      "reason": "风格拒收: cn_title directly reuses the old title: '宫本茂成首位获日本文化勋章的游戏设计师'",
+      "audit_issues": [
+        {
+          "type": "style_self_check",
+          "detail": "cn_title directly reuses the old title: '宫本茂成首位获日本文化勋章的游戏设计师'"
+        }
+      ],
+      "fingerprint": "8067893a73ba2a31942725207a925d07fce4c0ce",
+      "translation_path": "translations/17.json",
+      "retry_policy": "manual_only"
+    },
+    "34": {
+      "id": 34,
+      "url": "https://www.ign.com/articles/xboxs-first-ever-chief-operating-officer-leaves-role-just-three-months-after-it-was-created",
+      "en_title": "Xbox's First-Ever Chief Operating Officer Leaves Role Just Three Months After It Was Created",
+      "cn_title": "XBOX首任COO任职三个月后离职",
+      "model": "gpt-6.1-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-10-26T09:04:24.327575+08:00",
+      "reason": "风格拒收: cn_title directly reuses the old title: 'XBOX首任COO任职三个月后离职'",
+      "audit_issues": [
+        {
+          "type": "style_self_check",
+          "detail": "cn_title directly reuses the old title: 'XBOX首任COO任职三个月后离职'"
+        }
+      ],
+      "fingerprint": "8cb81f72de2ae51e8929bb1a07d4a2d6c9bb0a92",
+      "translation_path": "translations/34.json",
+      "retry_policy": "manual_only"
+    }
+  },
+  "updated_at": "2026-10-26T09:04:24.327575+08:00"
+}

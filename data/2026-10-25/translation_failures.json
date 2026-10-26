@@ -1,0 +1,48 @@
+{
+  "date": "2026-10-25",
+  "items": {
+    "5": {
+      "id": 5,
+      "url": "https://www.ign.com/articles/elden-ring-movies-budget-reportedly-200-million-almost-3x-more-expensive-than-a24s-marty-supreme",
+      "en_title": "Elden Ring Movie's Budget Reportedly $200 Million, Almost 3x More Expensive Than A24's Marty Supreme",
+      "cn_title": "《艾尔登法环》电影据报耗资2亿美元(约合人民币13亿元)",
+      "model": "gpt-6.1-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-10-26T09:05:40.859834+08:00",
+      "reason": "风格拒收: cn_title directly reuses the old title: '《艾尔登法环》电影据报耗资2亿美元(约合人民币13亿元)'; summary directly reuses the old summary: '据《华尔街日报》援引消息人士报道，Alex Garland执导的《艾尔登法环》真人电影预算接近A24此前最贵影片的三倍，若属实，将成为该公司预算最高的电影。影片已于今年7月杀青，预计于2028年3月3日上映。'",
+      "audit_issues": [
+        {
+          "type": "style_self_check",
+          "detail": "cn_title directly reuses the old title: '《艾尔登法环》电影据报耗资2亿美元(约合人民币13亿元)'"
+        },
+        {
+          "type": "style_self_check",
+          "detail": "summary directly reuses the old summary: '据《华尔街日报》援引消息人士报道，Alex Garland执导的《艾尔登法环》真人电影预算接近A24此前最贵影片的三倍，若属实，将成为该公司预算最高的电影。影片已于今年7月杀青，预计于2028年3月3日上映。'"
+        }
+      ],
+      "fingerprint": "3cdef615e77ba7ad3f1952c87015e56f9066ecf4",
+      "translation_path": "translations/05.json",
+      "retry_policy": "manual_only"
+    },
+    "7": {
+      "id": 7,
+      "url": "https://www.ign.com/articles/james-gunn-defends-the-dcus-approach-to-interconnected-stories-doesnt-want-movies-like-clayface-to-exist-just-to-set-up-crossovers",
+      "en_title": "James Gunn Defends the DCU's Approach to Interconnected Stories, Doesn't Want Movies Like Clayface to Exist Just to 'Set Up' Crossovers",
+      "cn_title": "古恩：DCU单片不应只为联动铺路",
+      "model": "gpt-6.1-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-10-26T09:07:04.062296+08:00",
+      "reason": "风格拒收: cn_title directly reuses the old title: '古恩：DCU单片不应只为联动铺路'",
+      "audit_issues": [
+        {
+          "type": "style_self_check",
+          "detail": "cn_title directly reuses the old title: '古恩：DCU单片不应只为联动铺路'"
+        }
+      ],
+      "fingerprint": "eb4451acbe09564d121bb62793fb9811ac39bc9f",
+      "translation_path": "translations/07.json",
+      "retry_policy": "manual_only"
+    }
+  },
+  "updated_at": "2026-10-26T09:07:04.062296+08:00"
+}

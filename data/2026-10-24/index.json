@@ -48,12 +48,12 @@
       "emoji": "👋",
       "en_title": "Xbox's First-Ever Chief Operating Officer Leaves Role Just Three Months After It Was Created",
       "cn_title": "XBOX首任COO任职三个月后离职",
-      "summary": "微软宣布，XBOX首任首席运营官Helen Chiang在该职位设立仅三个月后离职。她此前负责《我的世界》业务，并在XBOX工作了21年。CEO Asha Sharma表示，Chiang将于今日离开微软，新的COO人选和相关安排将在计划确定后公布。",
+      "summary": "XBOX首任首席运营官Helen Chiang在职位设立三个月后离职。她此前负责《我的世界》业务，并在XBOX工作了21年。微软仍在持续重组，预计今年将有3,200名员工失业。",
       "url": "https://www.ign.com/articles/xboxs-first-ever-chief-operating-officer-leaves-role-just-three-months-after-it-was-created",
       "publish_time_cn": "2026-10-24 06:56",
       "pub_date": "2026-10-24 06:56",
       "cover_image": "https://assets-prd.ignimgs.com/2026/05/06/screenshot-2026-05-06-162907-1778081413883.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2026/05/06/screenshot-2026-05-06-162907-1778081413883.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/05/06/screenshot-2026-05-06-162907-1778081413883.png?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -64,7 +64,13 @@
         "https://assets1.ignimgs.com/2019/12/13/xbox-series-x---button-01a-1576278376804.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-10-24T07:47:36+08:00"
+      "source_fetched_at": "2026-10-24T07:47:36+08:00",
+      "translation_error": "风格拒收: cn_title directly reuses the old title: 'XBOX首任COO任职三个月后离职'",
+      "translation_failed_at": "2026-10-26T09:04:24.327575+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "gpt-6.1-sol",
+      "translation_path": "translations/34.json"
     },
     {
       "id": 35,
@@ -495,12 +501,12 @@
       "emoji": "🏅",
       "en_title": "Nintendo Legend Shigeru Miyamoto Becomes First Game Designer to Be Awarded Japan's Order of Culture",
       "cn_title": "宫本茂成首位获日本文化勋章的游戏设计师",
-      "summary": "任天堂传奇设计师、73岁的宫本茂将获日本文化勋章，成为首位获此殊荣的电子游戏开发者。日本天皇将于11月3日文化日向他及另外七位获奖者颁授勋章。宫本茂表示，游戏并非由他独力创作，他将代表众多共同参与创作的人接受这份荣誉。",
+      "summary": "任天堂传奇设计师宫本茂将获日本文化勋章，成为首位获得该荣誉的游戏开发者。日本天皇将于11月3日文化日向他及另外七位获奖者颁授勋章。",
       "url": "https://www.ign.com/articles/nintendo-legend-shigeru-miyamoto-becomes-first-game-designer-to-be-awarded-japans-order-of-culture",
       "publish_time_cn": "2026-10-23 23:47",
       "pub_date": "2026-10-23 23:47",
       "cover_image": "https://assets-prd.ignimgs.com/2026/10/23/gettyimages-1478890250-1792770150535.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2026/10/23/gettyimages-1478890250-1792770150535.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/10/23/gettyimages-1478890250-1792770150535.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -513,7 +519,13 @@
         "https://assets-prd.ignimgs.com/2026/10/23/gettyimages-1467062936-1747826674822-1792770289976.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-10-24T00:47:55+08:00"
+      "source_fetched_at": "2026-10-24T00:47:55+08:00",
+      "translation_error": "风格拒收: cn_title directly reuses the old title: '宫本茂成首位获日本文化勋章的游戏设计师'",
+      "translation_failed_at": "2026-10-26T09:03:34.959142+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "gpt-6.1-sol",
+      "translation_path": "translations/17.json"
     },
     {
       "id": 18,
@@ -588,13 +600,13 @@
       "category": "行业动态",
       "emoji": "🎮",
       "en_title": "Arkane Lyon Reportedly Could Be Closed in Mid-November if a Buyer Isn't Found, With Marvel's Blade Still in Development",
-      "cn_title": "《漫威刀锋战士》据报Arkane里昂无买家或11月中旬关闭",
-      "summary": "据法国《世界报》报道，Arkane里昂寻找买家的期限将于11月13日届满，若未找到买家，工作室可能关闭。目前217名员工仍在开发《漫威刀锋战士》，工会正争取延长期限。微软表示仍在探索不同方案，并积极寻找合作伙伴，支持项目后续开发及商业化。",
+      "cn_title": "《漫威刀锋战士》据报Arkane里昂无买家或关闭",
+      "summary": "据报，Arkane里昂若未找到买家，可能于11月中旬关闭，217名员工仍在开发《漫威刀锋战士》。工会正争取延长期限，微软表示仍在寻找合作伙伴。",
       "url": "https://www.ign.com/articles/xbox-wants-to-close-arkane-lyon",
       "publish_time_cn": "2026-10-23 22:35",
       "pub_date": "2026-10-23 22:35",
       "cover_image": "https://assets-prd.ignimgs.com/2026/06/22/marvels-blade-game-1782147140341.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/22/marvels-blade-game-1782147140341.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/22/marvels-blade-game-1782147140341.png?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -614,7 +626,13 @@
           "source": "ai_guess",
           "reason": "词库未提供该工作室的固定写法，保留品牌名并以里昂区分分部，需人工确认。"
         }
-      ]
+      ],
+      "translation_error": "🚨 subtitle 含大数字，像摘要不像创意短句: 「悬在217人头顶的利剑」",
+      "translation_failed_at": "2026-10-26T09:02:53.206570+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "gpt-6.1-sol",
+      "translation_path": "translations/16.json"
     },
     {
       "id": 12,
@@ -723,12 +741,12 @@
       "emoji": "🎮",
       "en_title": "Franchises Like Mass Effect Are a 'Prestige Project' for EA, and BioWare's Closure Was 'Entirely Predictable,' Analysts Say",
       "cn_title": "分析师：BioWare关闭早可预见",
-      "summary": "行业分析师向IGN表示，BioWare关闭「完全可以预见」；对EA而言，《质量效应》等系列如今更像是维持声望的项目。分析师认为，EA对稳定现金流的追求、债务压力及工作室近期作品商业表现不佳共同促成了这一结果，其他公司接手这些IP的可能性也不大。",
+      "summary": "分析师称，BioWare关闭早在EA被收购前就已显露征兆，《质量效应》等系列如今被视为声望项目。债务压力、成本控制以及《龙腾世纪：影障守护者》等作品表现不佳，让工作室的未来愈发黯淡。",
       "url": "https://www.ign.com/articles/franchises-like-mass-effect-are-a-prestige-project-for-ea-and-biowares-closure-was-entirely-predictable-analysts-say",
       "publish_time_cn": "2026-10-23 20:10",
       "pub_date": "2026-10-23 20:10",
       "cover_image": "https://assets-prd.ignimgs.com/2026/10/23/ss-72c7f551278afbf35014628afc2dfa9a8173ec34-1920x1080-1792755691860.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2026/10/23/ss-72c7f551278afbf35014628afc2dfa9a8173ec34-1920x1080-1792755691860.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/10/23/ss-72c7f551278afbf35014628afc2dfa9a8173ec34-1920x1080-1792755691860.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -739,7 +757,13 @@
         "https://assets-prd.ignimgs.com/2024/09/25/veilguard-1727224254186.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-10-23T21:18:57+08:00"
+      "source_fetched_at": "2026-10-23T21:18:57+08:00",
+      "translation_error": "风格拒收: cn_title directly reuses the old title: '分析师：BioWare关闭早可预见'",
+      "translation_failed_at": "2026-10-26T09:02:20.487646+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "gpt-6.1-sol",
+      "translation_path": "translations/10.json"
     },
     {
       "id": 9,
