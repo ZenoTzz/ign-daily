@@ -1,0 +1,167 @@
+{
+  "id": 7,
+  "url": "https://www.ign.com/articles/50000-dollar-ps5-exploit-found-with-ai",
+  "en_title": "Sony Awarded a Hacker $50,000 for Privately Reporting a PS5 Exploit He Found With AI — Now He's Public Enemy Number One",
+  "cn_title": "黑客上报PS5漏洞领赏惹争议",
+  "subtitle": "留住漏洞，还是拿走赏金",
+  "opus_summary": "黑客Jordy用AI发现PS5漏洞，向索尼上报后领赏，引发社区争议。研究者原想等《GTA6》发售后再公开，让玩家既能购买游戏，也能保留启动Linux的能力。",
+  "publish_time_cn": "2026-10-26 20:59",
+  "paragraphs": [
+    {
+      "en": "A hacker sparked an uproar within the PlayStation 5 homebrew scene for privately reporting an exploit to Sony and cashing in on a $50,000 reward, rather than keeping it confidential for the community.",
+      "cn": "一名黑客没有为社区保留PS5漏洞，而是私下向索尼上报，领取了50,000美元(约合人民币33万元)赏金，在PS5自制软件社区引发轩然大波。"
+    },
+    {
+      "en": "A hacker who goes by the handle “Jordy” was awarded the bounty from Sony for reporting a vulnerability — found using AI — on the PS5 console. The bug was reported to HackerOne, a site that works with companies to plug issues in their products and services. Essentially, Sony pays hackers to find exploits, then pays them money not to release them until the security hole has been patched.",
+      "cn": "这名网名为「Jordy」的黑客借助AI发现了PS5主机上的漏洞，上报后获得索尼的赏金。他通过HackerOne提交了漏洞报告，这家网站与企业合作，帮助修补产品和服务中的问题。简单来说，索尼付钱请黑客寻找漏洞，并以报酬换取他们在安全漏洞修复前不将其公开。"
+    },
+    {
+      "en": "There wouldn’t normally be anything particularly unusual about a hack being reported to Sony — but in the case of this PS5 exploit, a prominent security engineer discovered it months ago but wanted to hold onto it until GTA 6 launched. Then Jordy discovered it with AI and reported it, triggering the controversy.",
+      "cn": "向索尼上报漏洞，通常不是什么稀奇事。但这次的PS5漏洞，一位知名安全工程师几个月前就已发现，只是想等《GTA6》发售后再上报。随后，Jordy借助AI发现并上报了这个漏洞，由此引发争议。"
+    },
+    {
+      "en": "The exploit in question is a ‘Hypervisor Bug’ that affects the PS5 on firmware from 13.60 up to 14.00. A hypervisor bug is a fault inside the core software or firmware layer, which allows hackers to execute kernel code to, for example, boot Linux on a machine not designed to do it.",
+      "cn": "此次涉及的是一个「虚拟机监控器漏洞（Hypervisor Bug）」，影响固件版本从13.60到14.00的PS5。此类漏洞存在于核心软件或固件层，让黑客能够执行内核代码，例如在原本并不支持Linux的设备上启动Linux。"
+    },
+    {
+      "en": "You might have seen a spate of headlines about how AI has fueled an explosion of hacks across the internet. Information security experts are calling this month ‘Black October’ due to several major security incidents and vulnerability disclosures prompted by the growing use of artificial intelligence in research.",
+      "cn": "你可能已经看到不少新闻，称AI推动了互联网上黑客活动的激增。随着研究人员越来越多地使用人工智能，多起重大安全事件接连发生，多个漏洞也随之披露，信息安全专家因此将这个月称为「黑色十月」。"
+    },
+    {
+      "en": "Google security engineer Andy Nguyen, aka theflow0, had been working on getting Linux running on PS5 for months. Indeed, back in March, theflow0 showcased the results of his work. But Jordy’s AI-powered bug report put an end to that work. “I am stepping away from the PS5 scene and stopping all my work on PS5 Linux,” he said. “After pouring my heart and months of my life into it, including plans to finish PS5 Pro support and release in 2027, it's all down the sink.",
+      "cn": "谷歌安全工程师Andy Nguyen，网名theflow0，几个月来一直在研究如何让Linux在PS5上运行。早在3月，他就展示过研究成果。但Jordy借助AI提交的漏洞报告，让这项工作就此终止。「我将退出PS5社区，停止所有与PS5 Linux有关的工作，」他说，「我倾注了心血，投入了几个月的人生，还计划完善PS5 Pro支持并在2027年发布，如今全都打了水漂。」"
+    },
+    {
+      "en": "“The scene used to be a group of highly talented researchers, but now it is just a bunch of noobs using LLMs and writing hacks they don't even understand. Slop kiddies found the only hypervisor bug left, which I had also found a while ago, and decided to report to Sony.”",
+      "cn": "「这个圈子过去聚集了一群才华横溢的研究者，如今却只剩下一群菜鸟，用大语言模型编写连他们自己都不懂的破解程序。这些AI垃圾小子找到了仅剩的那个虚拟机监控器漏洞，而我早就发现了它，他们却决定向索尼上报。」"
+    },
+    {
+      "en": "In a conversation with IGN, Jordy admitted using generative AI to find the bug that netted him $50,000. He claimed that theflow0 found the bug back in 2025 but had kept it secret. When Jordy announced he’d found a hypervisor bug himself, theflow0 reached out to see if it was the same one he found the year before. Jordy and theflow0 initially agreed to not report the bug to HackerOne, but another researcher quickly found the same bug shortly after. Jordy made the decision to report the bug as other researchers stumbled on it by using generative AI, closing the window to claim the bounty from Sony.",
+      "cn": "在与IGN交谈时，Jordy承认，他借助生成式AI发现了这个让他获得50,000美元(约合人民币33万元)赏金的漏洞。他称，theflow0早在2025年就发现了这个漏洞，但一直保密。Jordy宣布自己发现了一个虚拟机监控器漏洞后，theflow0联系了他，想确认是否就是自己前一年发现的那个。两人起初约定不向HackerOne上报，但不久后，另一名研究者也迅速找到了同一个漏洞。其他研究者正借助生成式AI陆续发现它，留给Jordy向索尼领取赏金的时间越来越少，于是他决定上报。"
+    },
+    {
+      "en": "“I decided I would report it,” Jordy said. “If I and another person can find it with LLM, so can someone else.”",
+      "cn": "「我决定上报，」Jordy说，「既然我和另一个人都能用大语言模型找到它，其他人也可以。」"
+    },
+    {
+      "en": "theflow0 couldn’t be reached for comment.",
+      "cn": "IGN未能联系到theflow0置评。"
+    },
+    {
+      "en": "It’s not just the use of AI that made Jordy’s bounty claim controversial. Players who wanted to boot Linux on their consoles are upset because of a certain video game coming out in November. Before the bug was reported, it would have been possible to load Linux onto a PS5 and still run the console through the Sony operating system, which would have allowed people running Linux to play GTA 6 when not using the jailbreak.",
+      "cn": "Jordy领取赏金引发争议，并不只是因为他使用了AI。那些想在主机上启动Linux的玩家感到不满，还与一款将在11月发售的游戏有关。在漏洞上报前，玩家原本有望在PS5上加载Linux，同时保留运行索尼操作系统的能力。这样，使用Linux的玩家就能在不启用越狱时游玩《GTA6》。"
+    },
+    {
+      "en": "“People wanted to buy and play GTA 6 legally on their normal PS5 OS without losing the ability to dual-boot Linux on the same console,” madwax0r, creator of the PS5 emulator tracker and scam blacklist Kaishaku , told IGN. “Think of the PS5 Linux project like turning your console into a high-end Steam Machine that runs off an external USB drive. It's a temporary soft-mod, so whenever you reboot the console, it goes right back to being a normal PS5.",
+      "cn": "PS5模拟器追踪及骗局黑名单网站Kaishaku的创建者madwax0r告诉IGN：「大家希望能在正常的PS5操作系统上合法购买并游玩《GTA6》，同时保留在同一台主机上双系统启动Linux的能力。你可以把PS5 Linux项目理解为，将主机变成一台通过外接USB存储设备运行的高端Steam Machine。这是一种临时的软件改装，每次重启，主机就会恢复成正常的PS5。」"
+    },
+    {
+      "en": "“The catch is that to download and play GTA 6 on November 19, Sony requires you to update to the latest system firmware and sign into PSN. theflow0 wanted researchers to hold off reporting the hypervisor bug until after November 19 so that the launch-day firmware required for GTA 6 would still have the unpatched flaw baked in. That way, players could update their PS5 on launch day, buy GTA 6 legally, and still use the exploit to boot Linux on the same machine.”",
+      "cn": "「问题在于，要在11月19日下载并游玩《GTA6》，索尼要求玩家更新到最新系统固件并登录PSN。theflow0希望研究者等到11月19日之后再上报这个虚拟机监控器漏洞，好让《GTA6》发售当天要求安装的固件仍然保留这个未修补的漏洞。这样，玩家就能在发售当天更新PS5，合法购买《GTA6》，同时仍可利用漏洞在同一台主机上启动Linux。」"
+    },
+    {
+      "en": "Presumably, some would have used the exploit for more nefarious means. There’s sentiment on the internet that Sony “deserved this” because of its policy to end physical discs by 2028. Pirating games — including GTA 6 — is a distinct possibility as those in the homebrew scene continue to point AI at the inner workings of the PS5, with Sony battling to keep up with each potential jailbreak by issuing fresh firmware updates.",
+      "cn": "想必也会有人利用这个漏洞从事更恶劣的活动。网上有一种看法认为，索尼计划到2028年终结实体光盘，因此「这是它应得的」。随着自制软件社区继续借助AI研究PS5的内部运行机制，索尼则不断发布新固件更新，竭力应对每一次潜在的越狱，包括《GTA6》在内的游戏确实有可能遭到盗版。"
+    },
+    {
+      "en": "Because Jordy — whose mother is terminally ill — reported the bug early, Sony had the chance to patch the exploit ahead of GTA 6’s launch. This leaves modders who want to run Linux stuck with a choice: keep their PS5 offline to run Linux, or update and make the console GTA 6-ready while locking themselves out of Linux.",
+      "cn": "Jordy的母亲已病入膏肓。他提前上报漏洞，让索尼有机会在《GTA6》发售前修补它。想运行Linux的改装玩家因此陷入两难：要么让PS5保持离线，以便运行Linux；要么更新主机，为游玩《GTA6》做好准备，同时放弃运行Linux的能力。"
+    },
+    {
+      "en": "“What really poured fuel on the fire is the AI angle,” said madwax0r. “Historically, hypervisor bugs were so rare that a researcher could quietly sit on one for a year. Now, with people running console code through LLMs (large language models) to hunt for flaws, multiple people are stumbling onto the same bugs at the same time. Theflow wanted to hold the bug for the community, while Jordy — seeing a third hacker also find it with AI tools, and facing heavy personal pressure with his mother's terminal illness — took the guaranteed $50,000 payout before someone else beat him to it.”",
+      "cn": "「真正火上浇油的是AI的介入，」madwax0r说，「过去，虚拟机监控器漏洞非常罕见，研究者发现后，完全可以悄悄保留一年。如今，人们把主机代码交给大语言模型寻找缺陷，多个人正在同时发现相同的漏洞。Theflow想为社区保留这个漏洞，而Jordy看到第三名黑客也用AI工具找到了它，加上母亲身患绝症带来的巨大个人压力，便赶在别人抢先之前，拿走了这笔稳稳到手的50,000美元(约合人民币33万元)赏金。」"
+    },
+    {
+      "en": "Part of the reason Jordy’s bounty claim went viral was because of his tweet announcing the win. “I can at least buy GTA with this I think,” he said on Twitter , along with a screenshot of the payout. At the time of writing, the tweet had 1.8 million views. IGN asked Jordy if he thought the tweet might have been what antagonized the audience. “Probably but that was the point,” he replied. “I’m nearly 30 years old. I could care less about people not being able to pirate a game, let alone do I want to enable modding it.”",
+      "cn": "Jordy领取赏金一事广泛传播，部分原因是他发帖宣布了这个消息。他在X上晒出付款截图，并写道：「我想，这笔钱至少够我买《GTA》了。」截至发稿，这条帖子已有180万次浏览。IGN问Jordy，他是否觉得可能正是这条帖子激怒了大家。他回答：「可能吧，但我就是这个意思。我都快30岁了，别人没法玩盗版游戏，我根本不在乎，更别说我还想帮他们改装游戏了。」"
+    },
+    {
+      "en": "Because of the timing of the bounty claim, some of the audience also believe Jordy was coached on how to find the bug by theflow0, which is another reason people are angry. The researcher denies this and claims he found it independently. “Yes, with AI,” he said. “A lot of people want to downplay that but nobody else is finding bugs like that.” Jordy added that theflow0 is “a legend” and a respectable figure in the industry.",
+      "cn": "由于领取赏金的时间点，一些人还认为，Jordy是在theflow0指导下找到漏洞的，这也是他们愤怒的另一个原因。Jordy否认了这种说法，称自己独立发现了漏洞。「对，是用AI找到的，」他说，「很多人想淡化这一点，但没有其他人在这样找漏洞。」Jordy还表示，theflow0是「传奇人物」，在业内值得尊敬。"
+    },
+    {
+      "en": "Since he announced he had received the $50,000 bounty, Jordy has faced repeated criticism on social media from those in the scene who believe he should have held off. “50k in bank but 0 friends left. Worth it?” one person asked. “You're insane to think I lost friends over reporting a bug I found myself, even flow who isn't happy with my choice I can still contact privately,” Jordy replied. “You guys act like I'm a domestic terrorist or something?”",
+      "cn": "自从宣布收到50,000美元(约合人民币33万元)赏金后，Jordy便不断在社交媒体上受到圈内人士批评，他们认为他本该再等等。有人问：「银行里多了50,000美元(约合人民币33万元)，朋友却一个不剩，值得吗？」Jordy回应：「觉得我会因为上报自己发现的漏洞而失去朋友，你真是疯了。就连不满意我这个决定的flow，我也仍然能私下联系。你们怎么搞得好像我是个本土恐怖分子似的？」"
+    },
+    {
+      "en": "Some, though, have supported Jordy cashing in on the bounty. “$50k pays the bills, your opinion doesn’t,” one person said in response to a critic. “You also would report bug to get 50k, like that’s a life changing amount of money for a lot of people,” another added. “He got paid 50k$ idiot! What did u think that he was gonna do, turn it down so you could play GTA 6 on a Nintendo DS?” commented another.",
+      "cn": "不过，也有人支持Jordy领取赏金。有人回应批评者说：「50,000美元(约合人民币33万元)能付账单，你的意见可不能。」另一人补充道：「换成你，你也会上报漏洞去拿50,000美元(约合人民币33万元)，这笔钱对很多人来说足以改变人生。」还有人评论：「他拿到了50,000美元(约合人民币33万元)，蠢货！你以为他会怎么做，拒绝这笔钱，好让你在任天堂DS上玩《GTA6》？」"
+    },
+    {
+      "en": "Last week, Sony issued a new PS5 firmware update that some believe was designed to combat the homebrew community's ongoing effort to jailbreak the console . There is a game of Whac-A-Mole at play where the homebrew scene is working to release a new jailbreak for the latest PS5 firmware, then do it all over again when Sony releases a new firmware update designed to beef up security. This in turn has sparked concern that if a PS5 jailbreak is made available for the firmware that is required by GTA 6, which comes out in less than a month, then it may be possible for Rockstar’s game to be pirated on PS5 and maybe even made available on PC.",
+      "cn": "上周，索尼发布了一次PS5固件更新，一些人认为，这是为了应对自制软件社区持续尝试破解主机的行动。双方正在上演一场打地鼠游戏：自制软件社区努力为最新版PS5固件推出新的越狱方案，等索尼发布加强安全性的新固件后，再从头来过。这也引发了担忧：《GTA6》距离发售已不足一个月，如果它要求安装的固件出现可用的PS5越狱方案，那么这款Rockstar游戏就可能在PS5上遭到盗版，甚至可能被搬到PC上。"
+    },
+    {
+      "en": "Jordy also claimed that this won’t be the last hypervisor bug people find on PS5. Cybersecurity researcher Eric Parker agreed. “I imagine there will probably be another exploit at some point,” he said. If Jordy’s claims are true, it might not be the last hypervisor bug on PS5, which means hackers could find a way around the 14.00 patch in the future. Linux is already up and running on pre-patch PS5s .",
+      "cn": "Jordy还声称，这不会是人们在PS5上发现的最后一个虚拟机监控器漏洞。网络安全研究者Eric Parker也持相同看法。「我想，将来某个时候很可能还会出现另一个可利用的漏洞，」他说。如果Jordy的说法属实，PS5上可能仍有其他虚拟机监控器漏洞，黑客未来或许能找到绕过14.00补丁的方法。目前，未安装补丁的PS5已经可以运行Linux。"
+    },
+    {
+      "en": "The question for Sony is whether it can do enough to eventually win this game of Whac-A-Mole with the homebrew scene. This is something of an existential crisis for Sony, which publishers and developers rely upon for the security of their PlayStation releases. But with the emergence of powerful AI models, the stakes have risen significantly.",
+      "cn": "索尼面临的问题是，它能否采取足够的措施，最终赢下这场与自制软件社区之间的打地鼠游戏。发行商和开发商依赖索尼保障旗下PlayStation游戏的安全，因此这对索尼而言，多少是一场关乎存亡的危机。而随着强大AI模型的出现，这场较量的成败变得更加攸关重大。"
+    },
+    {
+      "en": "For Jordy, the money represents time — time he can spend with his family and looking after his sick mother. “I will continue to research,” he said. “Just really no time lately.”",
+      "cn": "对Jordy来说，这笔钱意味着时间，让他能陪伴家人、照顾生病的母亲。「我会继续研究，」他说，「只是最近真的没什么时间。」"
+    }
+  ],
+  "pending_dict": [],
+  "translated_terms": {
+    "Steam Machine": "Steam Machine",
+    "PlayStation 5": "PS5",
+    "PlayStation": "PlayStation",
+    "Nintendo": "任天堂",
+    "Rockstar": "Rockstar",
+    "Twitter": "X",
+    "GTA 6": "《GTA6》",
+    "Sony": "索尼",
+    "Jordy": "Jordy",
+    "Andy Nguyen": "Andy Nguyen",
+    "theflow0": "theflow0",
+    "Eric Parker": "Eric Parker",
+    "HackerOne": "HackerOne",
+    "Kaishaku": "Kaishaku"
+  },
+  "cover": "https://assets-prd.ignimgs.com/2026/10/26/ps5-1793019496411.jpg?width=1280&format=jpg&auto=webp&quality=80",
+  "images": [
+    {
+      "url": "https://assets-prd.ignimgs.com/2026/10/26/ps5-1793019496411.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "caption": ""
+    },
+    {
+      "url": "https://kraken.ignimgs.com/apple-touch-icon.png",
+      "caption": ""
+    },
+    {
+      "url": "https://assets-prd.ignimgs.com/2026/10/26/ps5-1793019505508.jpg",
+      "caption": ""
+    },
+    {
+      "url": "https://assets-prd.ignimgs.com/2026/07/20/9f51f0ccdb65bd29c36a0907a738c2902a712f03e2fd6470-1784587649326.jpg",
+      "caption": ""
+    }
+  ],
+  "style_self_check": {
+    "read_style_profile": true,
+    "no_english_syntax": true,
+    "title_rewritten": true,
+    "subtitle_rewritten": true,
+    "xbox_normalized": true,
+    "xbox_series_normalized": true,
+    "quotes_checked": true,
+    "currency_checked": false,
+    "dictionary_checked": true
+  },
+  "translator": "api",
+  "translator_provider": "openai-compatible",
+  "translator_model": "gpt-6.1-sol",
+  "quality_status": "needs_manual_review",
+  "manual_release_required": true,
+  "audit_issues": [
+    {
+      "type": "style_self_check",
+      "detail": "style_self_check key 'currency_checked' is not true (got False)"
+    }
+  ],
+  "audit_failed_at": "2026-10-27T08:54:58.711296+08:00",
+  "audit_failure_reason": "风格拒收: style_self_check key 'currency_checked' is not true (got False)"
+}

@@ -1,0 +1,92 @@
+{
+  "id": 14,
+  "url": "https://www.ign.com/articles/microsoft-voluntary-exits-60000-workers",
+  "en_title": "Microsoft Offer Buyouts to 60,000 Workers as It Doubles Down on AI Investment",
+  "cn_title": "微软拟向6万人提供自愿离职补偿",
+  "subtitle": "加码AI，调整人手",
+  "opus_summary": "微软大举投资AI，拟向约6万名员工提供自愿离职补偿，以削减成本、调整人员结构，涉及总员工数逾四分之一。员工可在12月前决定是否接受，接受者将于12月31日离职。",
+  "publish_time_cn": "2026-10-27 01:50",
+  "paragraphs": [
+    {
+      "en": "Microsoft plans to offer buyouts to about 60,000 workers as part of the company’s efforts to trim costs and retool its workforce as it invests heavily in AI. That amounts to just over a quarter of its total staff.",
+      "cn": "微软计划向约6万名员工提供自愿离职补偿，在大举投资AI的同时削减成本、调整人员结构。这一人数略高于员工总数的四分之一。"
+    },
+    {
+      "en": "Select personnel in the U.S., Canada, the UK, and India at the vice president level and below will be eligible for a Voluntary Exit Offer (VEO), Amy Coleman, Executive Vice President and Chief People Officer, said in a note to staff today . Microsoft had 223,000 employees as of the end of June, a number that was down from 228,000 at the end of 2025.",
+      "cn": "微软执行副总裁兼首席人力官Amy Coleman今天在致员工的通知中表示，美国、加拿大、英国和印度的部分副总裁及以下级别员工，将有资格参与自愿离职补偿计划（Voluntary Exit Offer，简称VEO）。截至6月底，微软共有223,000名员工，低于2025年底的228,000人。"
+    },
+    {
+      "en": "According to Bloomberg , the cuts come amid a focus on AI, with costly data centers supplying cloud services to the likes of Anthropic and OpenAI. In June, Microsoft CEO Satya Nadella addressed community backlash to the company's massive AI data center buildout, which has sparked concern over power costs, environmental concerns, and the potential impact on jobs. He insisted one of Microsoft's data centers' daily water usage over the course of an entire year is roughly equivalent to what a single restaurant would use. Some staff at Microsoft, including those working on data centers, are excluded from the buyout offer.",
+      "cn": "据彭博社报道，此次人员缩减正值微软将重心放在AI之际，其耗资高昂的数据中心为Anthropic和OpenAI等公司提供云服务。微软大规模扩建AI数据中心，引发了社区对电力成本、环境问题以及就业可能受到影响的担忧。6月，微软首席执行官萨提亚·纳德拉回应了这些反对声音。他坚称，以全年计算，微软一座数据中心的日常用水量与一家餐厅大致相当。微软部分员工不在此次自愿离职补偿计划的覆盖范围内，其中包括数据中心员工。"
+    },
+    {
+      "en": "According to CNBC , employees have until December to decide whether they will take the offer, and those who do will leave Microsoft on December 31.",
+      "cn": "据CNBC报道，员工可在12月前决定是否接受这份离职补偿，接受者将于12月31日离开微软。"
+    },
+    {
+      "en": "The buyout offer comes just three months after Microsoft laid off 4,800 roles, or what was about 2.1% of its global workforce. The Xbox layoffs, which hit 1,600 staff in July as part of Asha Sharma's \"reset\" of the gaming business, formed a part of those cuts. Earlier this month, an Xbox business strategist claimed that everyone in the video games industry was using AI while pretending not to.",
+      "cn": "就在此次推出自愿离职补偿计划的三个月前，微软裁撤了4,800个岗位，约占当时全球员工总数的2.1%。其中，XBOX在7月裁员1,600人，这是Asha Sharma「重置」游戏业务的一部分。本月早些时候，一名XBOX业务策略师声称，电子游戏行业的所有人都在使用AI，却装作没有使用。"
+    },
+    {
+      "en": "And earlier this year, more than 30% of eligible employees chose to to take Microsoft's first ever voluntary retirement program.",
+      "cn": "而在今年早些时候，超过30%的符合条件员工选择参加微软首次推出的自愿退休计划。"
+    }
+  ],
+  "pending_dict": [],
+  "translated_terms": {
+    "Microsoft": "微软",
+    "Amy Coleman": "Amy Coleman",
+    "Voluntary Exit Offer": "自愿离职补偿计划",
+    "Bloomberg": "彭博社",
+    "Anthropic": "Anthropic",
+    "OpenAI": "OpenAI",
+    "Satya Nadella": "萨提亚·纳德拉",
+    "CNBC": "CNBC",
+    "Xbox": "XBOX",
+    "Asha Sharma": "Asha Sharma"
+  },
+  "cover": "https://assets-prd.ignimgs.com/2026/10/26/gettyimages-2300856092-1793036577073.jpg",
+  "images": [
+    {
+      "url": "https://assets-prd.ignimgs.com/2026/10/26/gettyimages-2300856092-1793036577073.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "caption": ""
+    },
+    {
+      "url": "https://kraken.ignimgs.com/apple-touch-icon.png",
+      "caption": ""
+    },
+    {
+      "url": "https://assets-prd.ignimgs.com/2020/10/22/xbox-series-x-button-02-1603393193921.jpg",
+      "caption": ""
+    }
+  ],
+  "style_self_check": {
+    "read_style_profile": true,
+    "no_english_syntax": true,
+    "title_rewritten": true,
+    "subtitle_rewritten": true,
+    "xbox_normalized": true,
+    "xbox_series_normalized": true,
+    "quotes_checked": true,
+    "currency_checked": true,
+    "dictionary_checked": true
+  },
+  "translator": "api",
+  "translator_provider": "openai-compatible",
+  "translator_model": "gpt-6.1-sol",
+  "reasoning_effort": "low",
+  "reviewer_model": "gpt-6.1-sol",
+  "reviewed_at": "2026-10-27T00:55:48.619629+00:00",
+  "prompt_version": "api-fulltext-2026-07-v2",
+  "quality_gate_version": 1,
+  "quality_review": {
+    "status": "passed",
+    "reviewer_model": "gpt-6.1-sol",
+    "reviewed_at": "2026-10-27T00:55:48.619629+00:00",
+    "checks": {
+      "source_coverage": true,
+      "quote_attribution": true,
+      "numeric_facts": true
+    }
+  }
+}

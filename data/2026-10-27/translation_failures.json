@@ -1,0 +1,104 @@
+{
+  "date": "2026-10-27",
+  "items": {
+    "7": {
+      "id": 7,
+      "url": "https://www.ign.com/articles/50000-dollar-ps5-exploit-found-with-ai",
+      "en_title": "Sony Awarded a Hacker $50,000 for Privately Reporting a PS5 Exploit He Found With AI — Now He's Public Enemy Number One",
+      "cn_title": "黑客上报PS5漏洞领赏惹争议",
+      "model": "gpt-6.1-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-10-27T08:54:58.711296+08:00",
+      "reason": "风格拒收: style_self_check key 'currency_checked' is not true (got False)",
+      "audit_issues": [
+        {
+          "type": "style_self_check",
+          "detail": "style_self_check key 'currency_checked' is not true (got False)"
+        }
+      ],
+      "fingerprint": "fb0325a33ee24aaa7e12f55a3431c1a04082138b",
+      "translation_path": "translations/07.json",
+      "retry_policy": "manual_only"
+    },
+    "13": {
+      "id": 13,
+      "url": "https://www.ign.com/articles/playstation-handheld-may-have-exclusive-next-gen-amd-graphics-report-suggests",
+      "en_title": "PlayStation Handheld May Have Exclusive Next-Gen AMD Graphics, Report Suggests",
+      "cn_title": "消息称索尼掌机或独占AMD新架构",
+      "model": "gpt-6.1-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-10-27T08:55:26.014742+08:00",
+      "reason": "风格拒收: Chinese translation contains forbidden platform spelling: 'xbox series x' (must write exactly 'XBOX Series'); Chinese translation contains forbidden platform spelling: 'xbox series s' (must write exactly 'XBOX Series')",
+      "audit_issues": [
+        {
+          "type": "style_self_check",
+          "detail": "Chinese translation contains forbidden platform spelling: 'xbox series x' (must write exactly 'XBOX Series')"
+        },
+        {
+          "type": "style_self_check",
+          "detail": "Chinese translation contains forbidden platform spelling: 'xbox series s' (must write exactly 'XBOX Series')"
+        }
+      ],
+      "fingerprint": "90fb294e9cd67dceefef7909902ca957a0361d5f",
+      "translation_path": "translations/13.json",
+      "retry_policy": "manual_only"
+    },
+    "26": {
+      "id": 26,
+      "url": "https://www.ign.com/articles/bioshock-movie-director-francis-lawrence-explains-why-its-taken-hollywood-so-long-to-adapt-the-game",
+      "en_title": "BioShock Movie Director Francis Lawrence Explains Why It's Taken Hollywood So Long to Adapt the Game",
+      "cn_title": "《生化奇兵》导演谈电影改编难关",
+      "model": "gpt-6.1-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-10-27T08:57:30.230682+08:00",
+      "reason": "风格拒收: style_self_check key 'currency_checked' is not true (got False); style_self_check key 'dictionary_checked' is not true (got False)",
+      "audit_issues": [
+        {
+          "type": "style_self_check",
+          "detail": "style_self_check key 'currency_checked' is not true (got False)"
+        },
+        {
+          "type": "style_self_check",
+          "detail": "style_self_check key 'dictionary_checked' is not true (got False)"
+        }
+      ],
+      "fingerprint": "2f4a5202cf4d1db28538d6a4dc93867a45a79ade",
+      "translation_path": "translations/26.json",
+      "retry_policy": "manual_only"
+    },
+    "29": {
+      "id": 29,
+      "url": "https://www.ign.com/articles/hunger-games-director-hopes-you-arent-too-distracted-with-gta-6-to-see-sunrise-on-the-reaping",
+      "en_title": "Hunger Games Director Hopes You Aren't Too Distracted With GTA 6 to See Sunrise on the Reaping",
+      "cn_title": "导演盼玩家兼顾《GTA6》与新片",
+      "model": "gpt-6.1-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-10-27T08:58:02.769671+08:00",
+      "reason": "🚨 subtitle 含逗号且偏长，太像句子: 「玩游戏，也别忘了看电影」",
+      "audit_issues": [],
+      "fingerprint": "beb8ece52468d81bada429126ab0d91e88bc0945",
+      "translation_path": "translations/29.json",
+      "retry_policy": "manual_only"
+    },
+    "31": {
+      "id": 31,
+      "url": "https://www.ign.com/articles/gta-6-causes-17-spike-in-time-off-requests-on-games-release-date",
+      "en_title": "GTA 6 Causes 17% Spike in Time Off Requests on Game's Release Date",
+      "cn_title": "据报《GTA6》带动请假量增17%",
+      "model": "gpt-6.1-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-10-27T08:58:32.164533+08:00",
+      "reason": "风格拒收: style_self_check key 'currency_checked' is not true (got False)",
+      "audit_issues": [
+        {
+          "type": "style_self_check",
+          "detail": "style_self_check key 'currency_checked' is not true (got False)"
+        }
+      ],
+      "fingerprint": "d89b07d1a0741ff403c7f49e6bad6cffc70aae00",
+      "translation_path": "translations/31.json",
+      "retry_policy": "manual_only"
+    }
+  },
+  "updated_at": "2026-10-27T08:58:32.164533+08:00"
+}

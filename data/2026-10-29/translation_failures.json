@@ -1,0 +1,86 @@
+{
+  "date": "2026-10-29",
+  "items": {
+    "3": {
+      "id": 3,
+      "url": "https://www.ign.com/articles/phantom-blade-zero-looks-like-a-hit-before-its-even-come-out-with-an-estimated-1-million-prelaunch-copies-sold",
+      "en_title": "Phantom Blade Zero Looks Like a Hit Before It's Even Come Out, With an Estimated 1 Million Prelaunch Copies Sold",
+      "cn_title": "《影之刃零》预售量估计已破百万",
+      "model": "gpt-6.1-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-10-28T20:53:54.783229+08:00",
+      "reason": "风格拒收: style_self_check key 'currency_checked' is not true (got False)",
+      "audit_issues": [
+        {
+          "type": "style_self_check",
+          "detail": "style_self_check key 'currency_checked' is not true (got False)"
+        }
+      ],
+      "fingerprint": "8fe4ac67660b39cb0905eec9179d5841c001524a",
+      "translation_path": "translations/03.json",
+      "retry_policy": "manual_only"
+    },
+    "4": {
+      "id": 4,
+      "url": "https://www.ign.com/articles/pocketpair-wants-palworld-on-nintendo-switch-2-pokemon",
+      "en_title": "Pocketpair Would Love to Release Palworld on Nintendo Switch 2, Despite Pokémon Legal Battle",
+      "cn_title": "《宝可梦》开发商盼《幻兽帕鲁》登任天堂新机",
+      "model": "gpt-6.1-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-10-28T20:54:33.299123+08:00",
+      "reason": "风格拒收: style_self_check key 'currency_checked' is not true (got False)",
+      "audit_issues": [
+        {
+          "type": "style_self_check",
+          "detail": "style_self_check key 'currency_checked' is not true (got False)"
+        }
+      ],
+      "fingerprint": "ba78b9356ffe58a5150da311134149b26803a073",
+      "translation_path": "translations/04.json",
+      "retry_policy": "manual_only"
+    },
+    "9": {
+      "id": 9,
+      "url": "https://www.ign.com/articles/the-division-series-50-million-players",
+      "en_title": "With The Division 3 Still in Active Development, Ubisoft Announces The Division Franchise Has Hit More Than 50 Million Players",
+      "cn_title": "《全境封锁》系列玩家突破5,000万",
+      "model": "gpt-6.1-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-10-28T23:46:15.102851+08:00",
+      "reason": "质量门禁拒绝: paragraph 1 is missing numeric fact(s): 10; paragraph 5 contains a direct quote without Chinese quote marks",
+      "audit_issues": [
+        {
+          "type": "quality_gate",
+          "detail": "paragraph 1 is missing numeric fact(s): 10"
+        },
+        {
+          "type": "quality_gate",
+          "detail": "paragraph 5 contains a direct quote without Chinese quote marks"
+        }
+      ],
+      "fingerprint": "385a5f8105c9118ec92874dd6ba6e7d22d5614af",
+      "translation_path": "translations/09.json",
+      "retry_policy": "manual_only"
+    },
+    "11": {
+      "id": 11,
+      "url": "https://www.ign.com/articles/blizzard-sparks-world-of-warcraft-fan-backlash-for-breaking-promise-over-housing-microtransactions",
+      "en_title": "Blizzard Sparks World of Warcraft Fan Backlash for 'Breaking Promise' Over Housing Microtransactions",
+      "cn_title": "《魔兽世界》家园收费被批食言",
+      "model": "gpt-6.1-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-10-28T23:47:06.732146+08:00",
+      "reason": "风格拒收: style_self_check key 'currency_checked' is not true (got False)",
+      "audit_issues": [
+        {
+          "type": "style_self_check",
+          "detail": "style_self_check key 'currency_checked' is not true (got False)"
+        }
+      ],
+      "fingerprint": "f484d447a81a16aacf7532d4fd1a7b907463cada",
+      "translation_path": "translations/11.json",
+      "retry_policy": "manual_only"
+    }
+  },
+  "updated_at": "2026-10-28T23:47:06.732146+08:00"
+}

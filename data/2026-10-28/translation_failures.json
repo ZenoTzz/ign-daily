@@ -1,0 +1,77 @@
+{
+  "date": "2026-10-28",
+  "items": {
+    "4": {
+      "id": 4,
+      "url": "https://www.ign.com/articles/kingdom-come-deliverance-developer-serious-cybersecurity-incident",
+      "en_title": "Kingdom Come: Deliverance Developer Hit by 'Serious' Cybersecurity Incident",
+      "cn_title": "《天国：拯救》开发商称遭严重网攻",
+      "model": "gpt-6.1-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-10-28T08:56:34.767676+08:00",
+      "reason": "质量门禁拒绝: paragraph 3 contains a direct quote without Chinese quote marks",
+      "audit_issues": [
+        {
+          "type": "quality_gate",
+          "detail": "paragraph 3 contains a direct quote without Chinese quote marks"
+        }
+      ],
+      "fingerprint": "571062910a15b1e1091382f3c9b1aaca53008b97",
+      "translation_path": "translations/04.json",
+      "retry_policy": "manual_only"
+    },
+    "22": {
+      "id": 22,
+      "url": "https://www.ign.com/articles/physical-books-but-not-physical-games-playstation-book-announcement-prompts-confusion-over-sonys-physical-media-stance",
+      "en_title": "'Physical Books, But Not Physical Games?' — PlayStation Book Announcement Prompts Confusion Over Sony's Physical Media Stance",
+      "cn_title": "索尼实体书引发玩家对光盘政策的质疑",
+      "model": "gpt-6.1-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-10-28T08:58:09.226601+08:00",
+      "reason": "风格拒收: style_self_check key 'currency_checked' is not true (got False)",
+      "audit_issues": [
+        {
+          "type": "style_self_check",
+          "detail": "style_self_check key 'currency_checked' is not true (got False)"
+        }
+      ],
+      "fingerprint": "8b27314c990f0f9d92667e629f5c80a74bfbc0c0",
+      "translation_path": "translations/22.json",
+      "retry_policy": "manual_only"
+    },
+    "28": {
+      "id": 28,
+      "url": "https://www.ign.com/articles/elden-ring-movie-runtime-could-reach-nearly-3-hours",
+      "en_title": "Elden Ring Movie Runtime Could Reach Nearly 3 Hours",
+      "cn_title": "《艾尔登法环》电影或长达近三小时",
+      "model": "gpt-6.1-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-10-28T08:59:41.590742+08:00",
+      "reason": "🚨 subtitle 含大数字，像摘要不像创意短句: 「至少180页剧本」",
+      "audit_issues": [],
+      "fingerprint": "06d6758b737a9cf93356e876866d425901af18a1",
+      "translation_path": "translations/28.json",
+      "retry_policy": "manual_only"
+    },
+    "31": {
+      "id": 31,
+      "url": "https://www.ign.com/articles/resident-evil-executive-producer-says-the-series-story-could-end-in-the-next-10-years",
+      "en_title": "Resident Evil Executive Producer Says the Series' Story Could End 'In the Next 10 Years'",
+      "cn_title": "竹内润：《生化危机》或十年内完结",
+      "model": "gpt-6.1-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-10-28T09:00:05.729484+08:00",
+      "reason": "风格拒收: style_self_check key 'currency_checked' is not true (got False)",
+      "audit_issues": [
+        {
+          "type": "style_self_check",
+          "detail": "style_self_check key 'currency_checked' is not true (got False)"
+        }
+      ],
+      "fingerprint": "f8efb5a1687ae9980019fe6a6367e991f8426626",
+      "translation_path": "translations/31.json",
+      "retry_policy": "manual_only"
+    }
+  },
+  "updated_at": "2026-10-28T09:00:05.729484+08:00"
+}
