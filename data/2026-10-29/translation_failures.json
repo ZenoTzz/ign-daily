@@ -80,7 +80,45 @@
       "fingerprint": "f484d447a81a16aacf7532d4fd1a7b907463cada",
       "translation_path": "translations/11.json",
       "retry_policy": "manual_only"
+    },
+    "18": {
+      "id": 18,
+      "url": "https://www.ign.com/articles/apple-announces-its-first-touchscreen-macbook",
+      "en_title": "Apple Announces Its First Touchscreen MacBook",
+      "cn_title": "苹果首款触屏MacBook亮相",
+      "model": "gpt-6.1-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-10-29T08:42:01.558708+08:00",
+      "reason": "风格拒收: style_self_check key 'currency_checked' is not true (got False)",
+      "audit_issues": [
+        {
+          "type": "style_self_check",
+          "detail": "style_self_check key 'currency_checked' is not true (got False)"
+        }
+      ],
+      "fingerprint": "1da81dda0246db1ad4ce1e6c28d81cb99b2223f9",
+      "translation_path": "translations/18.json",
+      "retry_policy": "manual_only"
+    },
+    "20": {
+      "id": 20,
+      "url": "https://www.ign.com/articles/playstation-channels-90s-transparent-trend-with-new-prism-collection-of-dualsense-controllers-and-ps5-covers",
+      "en_title": "Sony Channels '90s Transparent Trend With New Prism Collection of DualSense Controllers and PS5 Covers",
+      "cn_title": "索尼Prism系列重拾透明设计",
+      "model": "gpt-6.1-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-10-29T08:42:29.719104+08:00",
+      "reason": "风格拒收: style_self_check key 'currency_checked' is not true (got False)",
+      "audit_issues": [
+        {
+          "type": "style_self_check",
+          "detail": "style_self_check key 'currency_checked' is not true (got False)"
+        }
+      ],
+      "fingerprint": "0f94988426d324c850cbff22b57282cde7bc32ed",
+      "translation_path": "translations/20.json",
+      "retry_policy": "manual_only"
     }
   },
-  "updated_at": "2026-10-28T23:47:06.732146+08:00"
+  "updated_at": "2026-10-29T08:42:29.719104+08:00"
 }

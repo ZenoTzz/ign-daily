@@ -2,17 +2,280 @@
   "date": "2026-10-29",
   "articles": [
     {
+      "id": 31,
+      "category": "评测评分",
+      "emoji": "🎮",
+      "en_title": "Call of Duty: Modern Warfare 4 DMZ Review",
+      "cn_title": "《使命召唤：现代战争4》DMZ评测",
+      "summary": "本篇评测仅针对《使命召唤：现代战争4》的DMZ模式。作者认为，新版DMZ规模更大、体验更好，动态行动让每局探索更有吸引力，丰富的地图活动与逐步升级的敌人也维持了紧张感。模式兼顾多种玩法风格，但部分场景略显雷同，枪械也缺少鲜明特色。",
+      "url": "https://www.ign.com/articles/call-of-duty-modern-warfare-4-dmz-review",
+      "publish_time_cn": "2026-10-29 07:40",
+      "pub_date": "2026-10-29 07:40",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/10/21/codwf4dmz-blogroll-1792622752717.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/10/21/codwf4dmz-blogroll-1792622752717.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/10/21/codwf4dmz-blogroll-1792622752717.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/10/21/codwf4dmz-blogroll-1792622752717.jpg?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/10/21/codwf4dmz-blogroll-1792622752717.jpg?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/05/28/codmw4-1779985350988.jpg",
+        "https://assets-prd.ignimgs.com/2026/10/21/codwf4dmz-blogroll-1792622752717.jpg",
+        "https://kraken.ignimgs.com/apple-touch-icon.png",
+        "https://assets-prd.ignimgs.com/2026/10/21/codmw4dmzheader-1792622743125.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-10-29T07:47:42+08:00"
+    },
+    {
+      "id": 28,
+      "category": "影视资讯",
+      "emoji": "🎬",
+      "en_title": "Kane Parsons Confirms Meetings With Valve, But Won't Adapt Their Games If It Can't Be Done Right",
+      "cn_title": "Kane Parsons确认与Valve会面：做不好就不改编",
+      "summary": "导演Kane Parsons确认曾与Valve交流，但表示如果无法做好，就不会改编该公司的游戏。他此前曾表达拍摄《传送门》电影的意愿，不过双方目前的交流仍属开放式创意讨论，尚未确认具体合作项目。",
+      "url": "https://www.ign.com/articles/kane-parsons-confirms-meetings-with-valve-but-wont-adapt-their-games-if-it-cant-be-done-right",
+      "publish_time_cn": "2026-10-29 06:49",
+      "pub_date": "2026-10-29 06:49",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/10/28/rtexstfgzzeklc9gytpuuw-1793227468026.jpg",
+      "translation_status": "done",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/10/28/rtexstfgzzeklc9gytpuuw-1793227468026.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/10/28/rtexstfgzzeklc9gytpuuw-1793227468026.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/10/28/rtexstfgzzeklc9gytpuuw-1793227468026.jpg?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/10/28/rtexstfgzzeklc9gytpuuw-1793227468026.jpg?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/10/28/rtexstfgzzeklc9gytpuuw-1793227468026.jpg",
+        "https://kraken.ignimgs.com/apple-touch-icon.png",
+        "https://assets-prd.ignimgs.com/2026/02/24/backrooms-xlg-1771952239007.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-10-29T07:17:35+08:00",
+      "translation_path": "translations/28.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "gpt-6.1-sol",
+      "reasoning_effort": "low",
+      "reviewer_model": "gpt-6.1-sol",
+      "reviewed_at": "2026-10-29T00:43:39.391108+00:00",
+      "prompt_version": "api-fulltext-2026-07-v2",
+      "quality_gate_version": 1
+    },
+    {
+      "id": 29,
+      "category": "影视资讯",
+      "emoji": "🦇",
+      "en_title": "James Gunn Confirms Batman and Wonder Woman Are 'Diamond Characters' in the DCU Despite Their Continued Absence",
+      "cn_title": "古恩确认蝙蝠侠与神奇女侠仍是DCU核心",
+      "summary": "詹姆斯·古恩澄清，DC工作室的8至10年规划不仅涵盖故事走向，也涉及DC整体布局。尽管蝙蝠侠与神奇女侠仍未正式登场，两人仍与超人同属重点发展的「钻石角色」；团队也计划将小众角色培养成核心，并保障电影人的创作自由。",
+      "url": "https://www.ign.com/articles/james-gunn-confirms-batman-and-wonder-woman-are-diamond-characters-in-the-dcu-despite-their-continued-absence",
+      "publish_time_cn": "2026-10-29 06:35",
+      "pub_date": "2026-10-29 06:35",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/10/28/batman-superman-wonder-woman-diamond-characters-dcu-james-gunn-1793226651567.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/10/28/batman-superman-wonder-woman-diamond-characters-dcu-james-gunn-1793226651567.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/10/28/batman-superman-wonder-woman-diamond-characters-dcu-james-gunn-1793226651567.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/10/28/batman-superman-wonder-woman-diamond-characters-dcu-james-gunn-1793226651567.jpg?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/10/28/batman-superman-wonder-woman-diamond-characters-dcu-james-gunn-1793226651567.jpg?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/10/28/batman-superman-wonder-woman-diamond-characters-dcu-james-gunn-1793226651567.jpg",
+        "https://kraken.ignimgs.com/apple-touch-icon.png",
+        "https://assets-prd.ignimgs.com/2023/01/31/batman-generic-button-1675192045137.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-10-29T07:17:39+08:00"
+    },
+    {
+      "id": 30,
+      "category": "影视资讯",
+      "emoji": "🎬",
+      "en_title": "Outlander's Sam Heughan Hints at Role in Lord of the Rings: The Hunt for Gollum",
+      "cn_title": "《追寻咕噜》Sam Heughan暗示参演《追捕咕噜》",
+      "summary": "《古战场传奇》主演Sam Heughan在苏格兰威格敦图书节上暗示，自己可能参演《指环王：追捕咕噜》。他透露最近可能去过新西兰，该片正在当地拍摄。一册由影片主创等人签名的托尔金书信集也有他的签名，但他是否参演仍未确认。",
+      "url": "https://www.ign.com/articles/outlanders-sam-heughan-hints-at-role-in-lord-of-the-rings-the-hunt-for-gollum",
+      "publish_time_cn": "2026-10-29 06:32",
+      "pub_date": "2026-10-29 06:32",
+      "cover_image": "https://assets2.ignimgs.com/2015/03/31/outlander-season-1bjamie-fraser-sam-heughanjpg-52d6b4.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets2.ignimgs.com/2015/03/31/outlander-season-1bjamie-fraser-sam-heughanjpg-52d6b4.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets2.ignimgs.com/2015/03/31/outlander-season-1bjamie-fraser-sam-heughanjpg-52d6b4.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets2.ignimgs.com/2015/03/31/outlander-season-1bjamie-fraser-sam-heughanjpg-52d6b4.jpg?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets2.ignimgs.com/2015/03/31/outlander-season-1bjamie-fraser-sam-heughanjpg-52d6b4.jpg?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets2.ignimgs.com/2015/03/31/outlander-season-1bjamie-fraser-sam-heughanjpg-52d6b4.jpg",
+        "https://kraken.ignimgs.com/apple-touch-icon.png",
+        "https://assets-prd.ignimgs.com/2026/01/30/outlanderthumb-1769799212573.png",
+        "https://assets-prd.ignimgs.com/2024/05/09/gollum-button-1715271734965.jpg",
+        "http://assets2.ignimgs.com/2015/03/31/outlander-season-1bjamie-fraser-sam-heughanjpg-52d6b4.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-10-29T07:17:41+08:00",
+      "pending_dict": [
+        {
+          "en": "Outlander",
+          "cn": "古战场传奇",
+          "cat": "movies_tv",
+          "source": "ai_guess",
+          "reason": "采用通行译名，输入词库未提供对应条目，需人工确认。"
+        },
+        {
+          "en": "The Lord of the Rings: The Hunt for Gollum",
+          "cn": "指环王：追捕咕噜",
+          "cat": "movies_tv",
+          "source": "ai_guess",
+          "reason": "输入词库未提供对应条目，影片中文片名需人工确认。"
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "category": "游戏新闻",
+      "emoji": "🎭",
+      "en_title": "'Appreciate the Fans' — GTA 5 Cast Tell Jason and Lucia’s Actors the Most Important Things They Should Know Before GTA 6 Launches Them to Fame",
+      "cn_title": "《GTA5》演员寄语新主演：珍惜粉丝",
+      "summary": "《GTA6》定于11月19日发售，杰森与露西亚的演员身份尚未正式公布。《GTA5》主演及CJ配音演员在漫展采访中向两位后辈分享建议：享受过程、听取Rockstar的意见，并为成名做好准备。饰演麦克的Ned Luke强调，必须真诚珍惜粉丝，虚假的感激瞒不过他们。",
+      "url": "https://www.ign.com/articles/appreciate-the-fans-gta-5-cast-tell-jason-and-lucias-actors-the-most-important-things-they-should-know-before-gta-6-launches-them-to-fame",
+      "publish_time_cn": "2026-10-29 05:16",
+      "pub_date": "2026-10-29 05:16",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/10/28/jason-and-lucia-01-1793212840753.jpg",
+      "translation_status": "done",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/10/28/jason-and-lucia-01-1793212840753.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/10/28/jason-and-lucia-01-1793212840753.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/10/28/jason-and-lucia-01-1793212840753.jpg?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/10/28/jason-and-lucia-01-1793212840753.jpg?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/10/28/jason-and-lucia-01-1793212840753.jpg",
+        "https://kraken.ignimgs.com/apple-touch-icon.png",
+        "https://assets-prd.ignimgs.com/2026/07/20/9f51f0ccdb65bd29c36a0907a738c2902a712f03e2fd6470-1784587649326.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-10-29T06:17:39+08:00",
+      "translation_path": "translations/27.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "gpt-6.1-sol",
+      "reasoning_effort": "low",
+      "reviewer_model": "gpt-6.1-sol",
+      "reviewed_at": "2026-10-29T00:43:06.876143+00:00",
+      "prompt_version": "api-fulltext-2026-07-v2",
+      "quality_gate_version": 1
+    },
+    {
+      "id": 25,
+      "category": "影视资讯",
+      "emoji": "🏈",
+      "en_title": "Football Fans Share Their Visceral Reactions to Nicolas Cage’s John Madden: ‘A Disgraceful Portrayal of a Great Man’",
+      "cn_title": "凯奇饰演约翰·麦登遭球迷怒批",
+      "summary": "《Madden》公布尼古拉斯·凯奇饰演传奇橄榄球解说员约翰·麦登的片段，引发NFL球迷在社交媒体上激烈批评，主要不满他的声音不像麦登，有人直斥这是「对伟人的可耻演绎」。影片由大卫·O·拉塞尔执导，将于2026年11月18日在部分影院上映。",
+      "url": "https://www.ign.com/articles/nicolas-cage-madden-movie-fan-reactions",
+      "publish_time_cn": "2026-10-29 05:00",
+      "pub_date": "2026-10-29 05:00",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/10/28/nicolas-cage-john-madden-and-joel-murray-1280-1793218952997.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/10/28/nicolas-cage-john-madden-and-joel-murray-1280-1793218952997.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/10/28/nicolas-cage-john-madden-and-joel-murray-1280-1793218952997.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/10/28/nicolas-cage-john-madden-and-joel-murray-1280-1793218952997.jpg?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/10/28/nicolas-cage-john-madden-and-joel-murray-1280-1793218952997.jpg?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/10/28/nicolas-cage-john-madden-and-joel-murray-1280-1793218952997.jpg",
+        "https://kraken.ignimgs.com/apple-touch-icon.png",
+        "https://assets-prd.ignimgs.com/2026/09/24/madden-button-1790258095928.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-10-29T05:17:35+08:00"
+    },
+    {
+      "id": 26,
+      "category": "评测评分",
+      "emoji": "🎬",
+      "en_title": "Ali G: Who Iz I? Review",
+      "cn_title": "《Ali G: Who Iz I?》影评",
+      "summary": "萨莎·拜伦·科恩执导的《Ali G: Who Iz I?》在院线上映五天后登陆Prime Video。IGN认为，影片叙事松散，恶作剧既不好笑，也缺乏挑衅力度；政治讽刺流于表面，最终反而暴露了创作者的不安，以及他与当下文化的脱节。",
+      "url": "https://www.ign.com/articles/ali-g-who-iz-i-review",
+      "publish_time_cn": "2026-10-29 04:08",
+      "pub_date": "2026-10-29 04:08",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/10/28/ali-g-who-iz-i-thumb-1793217850931.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/10/28/ali-g-who-iz-i-thumb-1793217850931.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/10/28/ali-g-who-iz-i-thumb-1793217850931.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/10/28/ali-g-who-iz-i-thumb-1793217850931.jpg?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/10/28/ali-g-who-iz-i-thumb-1793217850931.jpg?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/08/25/ali-g-who-iz-i-ali-g-poster-rgb-1787671212352.jpg",
+        "https://assets-prd.ignimgs.com/2026/10/28/ali-g-who-iz-i-thumb-1793217850931.jpg",
+        "https://kraken.ignimgs.com/apple-touch-icon.png",
+        "https://assets-prd.ignimgs.com/2026/10/28/ali-g-who-iz-i-1-1793217850930.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-10-29T05:17:37+08:00"
+    },
+    {
+      "id": 24,
+      "category": "游戏新闻",
+      "emoji": "🍔",
+      "en_title": "Wendy's Is Making a Turn-Based RPG and It Actually Looks Really Good",
+      "cn_title": "Wendy’s正开发回合制RPG，卖相惊艳",
+      "summary": "美国快餐连锁Wendy’s将于Steam推出像素风回合制RPG《WendyQuest: Legend of the Four Corner Stones》。玩家将与伙伴迎战机械怪物，拯救美食王国。游戏尚未公布具体发售日期，画面收获网友好评，Steam页面强调制作过程未使用AI。",
+      "url": "https://www.ign.com/articles/wendys-is-making-a-turn-based-rpg-and-it-actually-looks-really-good",
+      "publish_time_cn": "2026-10-29 04:05",
+      "pub_date": "2026-10-29 04:05",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/10/28/wendys-makes-turn-based-rpg-1793217651123.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/10/28/wendys-makes-turn-based-rpg-1793217651123.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/10/28/wendys-makes-turn-based-rpg-1793217651123.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/10/28/wendys-makes-turn-based-rpg-1793217651123.jpg?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/10/28/wendys-makes-turn-based-rpg-1793217651123.jpg?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/10/28/wendys-makes-turn-based-rpg-1793217651123.jpg",
+        "https://kraken.ignimgs.com/apple-touch-icon.png"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-10-29T04:18:00+08:00"
+    },
+    {
+      "id": 23,
+      "category": "影视资讯",
+      "emoji": "🐻",
+      "en_title": "Winnie-the-Pooh: Blood and Honey 3 Exclusive Trailer",
+      "cn_title": "《小熊维尼：血染蜂蜜3》独家预告",
+      "summary": "IGN独家公开《小熊维尼：血染蜂蜜3》首支预告。导演Scott Chambers表示，片中20名角色的死亡均用实体特效拍摄，故事将直接衔接系列的群怪集结电影。本片围绕一名潜入诡异马戏团寻找母亲下落的孤女展开，将于2027年1月下旬发行。",
+      "url": "https://www.ign.com/articles/winnie-the-pooh-blood-and-honey-3-trailer",
+      "publish_time_cn": "2026-10-29 04:00",
+      "pub_date": "2026-10-29 04:00",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/10/28/wtp3-poster1-thumb-1793212638545.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/10/28/wtp3-poster1-thumb-1793212638545.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/10/28/wtp3-poster1-thumb-1793212638545.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/10/28/wtp3-poster1-thumb-1793212638545.jpg?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/10/28/wtp3-poster1-thumb-1793212638545.jpg?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/10/28/wtp3-poster1-thumb-1793212638545.jpg",
+        "https://kraken.ignimgs.com/apple-touch-icon.png",
+        "https://assets-prd.ignimgs.com/2024/03/29/pooh3-button-1711730439037.jpg",
+        "https://assets-prd.ignimgs.com/2026/10/28/wtp3-nobleed-70x100-1793212149884.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-10-29T04:18:03+08:00",
+      "pending_dict": [
+        {
+          "en": "Winnie-the-Pooh: Blood and Honey 3",
+          "cn": "小熊维尼：血染蜂蜜3",
+          "cat": "movies_tv",
+          "source": "ai_guess",
+          "reason": "沿用系列通行中文译名，第三部片名仍需人工确认。"
+        }
+      ]
+    },
+    {
       "id": 20,
       "category": "游戏新闻",
       "emoji": "🎮",
       "en_title": "Sony Channels '90s Transparent Trend With New Prism Collection of DualSense Controllers and PS5 Covers",
-      "cn_title": "索尼公布透明手柄与PS5外壳",
-      "summary": "索尼公布Prism系列DualSense手柄及配套PS5主机外壳，以透明设计重现上世纪90年代风潮，提供橙、绿、灰三种配色。该系列将于当地时间11月10日上午10点开放预购，定于2027年2月4日正式发售。",
+      "cn_title": "索尼Prism系列重拾透明设计",
+      "summary": "索尼公布Prism系列透明DualSense手柄及配套PS5外壳，提供橙、绿、灰三种配色。该系列将于11月10日开放预购，明年2月4日正式发售。",
       "url": "https://www.ign.com/articles/playstation-channels-90s-transparent-trend-with-new-prism-collection-of-dualsense-controllers-and-ps5-covers",
       "publish_time_cn": "2026-10-29 02:53",
       "pub_date": "2026-10-29 02:53",
       "cover_image": "https://assets-prd.ignimgs.com/2026/10/28/playstationprism-1-1793204500437.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2026/10/28/playstationprism-1-1793204500437.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/10/28/playstationprism-1-1793204500437.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -23,7 +286,13 @@
         "https://assets-prd.ignimgs.com/2024/09/10/ps5-1725981325370.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-10-29T03:18:07+08:00"
+      "source_fetched_at": "2026-10-29T03:18:07+08:00",
+      "translation_error": "风格拒收: style_self_check key 'currency_checked' is not true (got False)",
+      "translation_failed_at": "2026-10-29T08:42:29.719104+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "gpt-6.1-sol",
+      "translation_path": "translations/20.json"
     },
     {
       "id": 21,
@@ -113,13 +382,13 @@
       "category": "科技新闻",
       "emoji": "💻",
       "en_title": "Apple Announces Its First Touchscreen MacBook",
-      "cn_title": "苹果发布首款触屏MacBook",
-      "summary": "苹果发布首款触屏MacBook Pro，提供14英寸和16英寸两种机型，搭载串联OLED触控屏，最高亮度达2,000尼特。新机可选M5 Pro或M5 Max芯片，最高支持128GB内存，即日起开放预订，11月6日上市。",
+      "cn_title": "苹果首款触屏MacBook亮相",
+      "summary": "苹果公布触屏版MacBook Pro，配备串联OLED屏幕，可选M5 Pro或M5 Max芯片，最高支持128GB内存。新机即日起开放预订，11月6日上市。",
       "url": "https://www.ign.com/articles/apple-announces-its-first-touchscreen-macbook",
       "publish_time_cn": "2026-10-29 01:32",
       "pub_date": "2026-10-29 01:32",
       "cover_image": "https://assets-prd.ignimgs.com/2026/10/28/apple-macbook-pro-with-proled-xdr-display-quicktime-261028-big-jpg-large-2x-1793208640889.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2026/10/28/apple-macbook-pro-with-proled-xdr-display-quicktime-261028-big-jpg-large-2x-1793208640889.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/10/28/apple-macbook-pro-with-proled-xdr-display-quicktime-261028-big-jpg-large-2x-1793208640889.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -130,7 +399,13 @@
         "https://assets-prd.ignimgs.com/2026/10/28/apple-macbook-pro-with-proled-xdr-display-pixelmator-pro-261028-big-jpg-large-2x-1793209017157.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-10-29T02:18:07+08:00"
+      "source_fetched_at": "2026-10-29T02:18:07+08:00",
+      "translation_error": "风格拒收: style_self_check key 'currency_checked' is not true (got False)",
+      "translation_failed_at": "2026-10-29T08:42:01.558708+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "gpt-6.1-sol",
+      "translation_path": "translations/18.json"
     },
     {
       "id": 19,
@@ -568,6 +843,32 @@
       "quality_gate_version": 1
     },
     {
+      "id": 33,
+      "category": "评测评分",
+      "emoji": "🎭",
+      "en_title": "Lupin: Part 4 Review",
+      "cn_title": "《亚森·罗宾》第四季评测",
+      "summary": "《亚森·罗宾》第四季已上线Netflix，全季共8集，在叙事与风格上迎来软重启，更坦然地拥抱肥皂剧式的夸张情节。尽管季末一度原地打转，新季仍凭借盗窃诡计、家庭纠葛与更克制的剪辑，在荒诞阴谋和人物情感之间找到了恰当平衡。",
+      "url": "https://www.ign.com/articles/lupin-part-4-netflix-review",
+      "publish_time_cn": "2026-10-28 15:47",
+      "pub_date": "2026-10-28 15:47",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/10/27/lupin-part-4-thumb-1793125805252.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/10/27/lupin-part-4-thumb-1793125805252.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/10/27/lupin-part-4-thumb-1793125805252.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/10/27/lupin-part-4-thumb-1793125805252.jpg?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/10/27/lupin-part-4-thumb-1793125805252.jpg?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2021/01/23/lupin-button-02-1611365504128.jpg",
+        "https://assets-prd.ignimgs.com/2026/10/27/lupin-part-4-thumb-1793125805252.jpg",
+        "https://kraken.ignimgs.com/apple-touch-icon.png",
+        "https://assets-prd.ignimgs.com/2026/10/27/lupin-part-4-1793125977646.jpg",
+        "https://assets-prd.ignimgs.com/2026/10/27/lupin-part-4-2-1793126432738.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-10-29T15:49:06+08:00"
+    },
+    {
       "id": 2,
       "category": "游戏新闻",
       "emoji": "🎲",
@@ -615,7 +916,40 @@
       ],
       "source_status": "cached",
       "source_fetched_at": "2026-10-28T09:19:10+08:00"
+    },
+    {
+      "id": 32,
+      "category": "评测评分",
+      "emoji": "🐺",
+      "en_title": "The Wolf Among Us Remastered Review",
+      "cn_title": "《与狼同行：复刻版》评测",
+      "summary": "《与狼同行：复刻版》保留了原作扣人心弦的黑色犯罪故事，细化场景设计，进一步烘托阴郁氛围，并加入可游玩的删减场景、访谈等幕后内容。不过，僵硬动画与第四章的节奏问题仍未解决，距离决定性版本尚有差距。",
+      "url": "https://www.ign.com/articles/the-wolf-among-us-remastered-review",
+      "publish_time_cn": "2026-10-28 08:17",
+      "pub_date": "2026-10-28 08:17",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/10/27/thewolfamongus-remastered-blogroll-01-1793073503798.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/10/27/thewolfamongus-remastered-blogroll-01-1793073503798.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/10/27/thewolfamongus-remastered-blogroll-01-1793073503798.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/10/27/thewolfamongus-remastered-blogroll-01-1793073503798.jpg?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/10/27/thewolfamongus-remastered-blogroll-01-1793073503798.jpg?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/06/05/wolfamongremastered-1780699499574.jpg",
+        "https://assets-prd.ignimgs.com/2026/10/27/thewolfamongus-remastered-blogroll-01-1793073503798.jpg",
+        "https://kraken.ignimgs.com/apple-touch-icon.png"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-10-29T08:17:40+08:00",
+      "pending_dict": [
+        {
+          "en": "The Wolf Among Us Remastered",
+          "cn": "与狼同行：复刻版",
+          "cat": "games",
+          "source": "ai_guess",
+          "reason": "沿用原作通行译名《与狼同行》，复刻版完整中文名称尚需人工确认。"
+        }
+      ]
     }
   ],
-  "total": 22
+  "total": 33
 }
