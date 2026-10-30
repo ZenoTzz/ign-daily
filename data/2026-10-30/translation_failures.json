@@ -1,0 +1,101 @@
+{
+  "date": "2026-10-30",
+  "items": {
+    "14": {
+      "id": 14,
+      "url": "https://www.ign.com/articles/bloodborne-movie-gets-promising-update-from-producer-jacksepticeye",
+      "en_title": "Bloodborne Movie Gets Promising Update from Producer Jacksepticeye",
+      "cn_title": "《血源诅咒》电影已敲定编剧导演",
+      "model": "gpt-6.1-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-10-30T08:39:27.094428+08:00",
+      "reason": "风格拒收: style_self_check key 'currency_checked' is not true (got False)",
+      "audit_issues": [
+        {
+          "type": "style_self_check",
+          "detail": "style_self_check key 'currency_checked' is not true (got False)"
+        }
+      ],
+      "fingerprint": "c894f6bf4460509b7db7e3a0b52eb26e51713ed4",
+      "translation_path": "translations/14.json",
+      "retry_policy": "manual_only"
+    },
+    "25": {
+      "id": 25,
+      "url": "https://www.ign.com/articles/the-elder-scrolls-6-is-reportedly-subtitled-sentinel-new-story-details-revealed-ahead-of-rumored-announcement",
+      "en_title": "The Elder Scrolls 6 Is Reportedly Subtitled 'Sentinel,' New Story Details Revealed Ahead of Rumored Announcement",
+      "cn_title": "《上古卷轴6》据报定名Sentinel",
+      "model": "gpt-6.1-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-10-30T08:40:06.546383+08:00",
+      "reason": "质量门禁拒绝: paragraph 2 is missing numeric fact(s): 25",
+      "audit_issues": [
+        {
+          "type": "quality_gate",
+          "detail": "paragraph 2 is missing numeric fact(s): 25"
+        }
+      ],
+      "fingerprint": "e55377d0dcbdff69b39ea8956dbc0b79805fa0ff",
+      "translation_path": "translations/25.json",
+      "retry_policy": "manual_only"
+    },
+    "30": {
+      "id": 30,
+      "url": "https://www.ign.com/articles/forza-motorsport-director-and-turn-10-boss-dan-greenawalt-retiring-from-microsoft-after-27-years",
+      "en_title": "Forza Motorsport Director and Turn 10 Boss Dan Greenawalt Retiring From Microsoft After 27 Years",
+      "cn_title": "据报《极限竞速》总监将从微软退休",
+      "model": "gpt-6.1-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-10-30T08:40:50.437179+08:00",
+      "reason": "质量门禁拒绝: paragraph 5 is missing numeric fact(s): 10",
+      "audit_issues": [
+        {
+          "type": "quality_gate",
+          "detail": "paragraph 5 is missing numeric fact(s): 10"
+        }
+      ],
+      "fingerprint": "a8fdf3ee71705add7bac0edadde74a9b016fdbc6",
+      "translation_path": "translations/30.json",
+      "retry_policy": "manual_only"
+    },
+    "42": {
+      "id": 42,
+      "url": "https://www.ign.com/articles/james-gunn-says-it-wont-be-too-long-before-dcu-batman-is-cast-will-be-close-in-age-to-david-corenswets-superman",
+      "en_title": "James Gunn Says It 'Won't Be Too Long' Before DCU Batman Is Cast, Will Be Close in Age to David Corenswet's Superman",
+      "cn_title": "古恩：DCU蝙蝠侠选角不远了",
+      "model": "gpt-6.1-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-10-30T08:57:55.424503+08:00",
+      "reason": "质量门禁拒绝: paragraph 5 is missing numeric fact(s): 30",
+      "audit_issues": [
+        {
+          "type": "quality_gate",
+          "detail": "paragraph 5 is missing numeric fact(s): 30"
+        }
+      ],
+      "fingerprint": "27bb9c0662742fcac870221deda4e260380de221",
+      "translation_path": "translations/42.json",
+      "retry_policy": "manual_only"
+    },
+    "48": {
+      "id": 48,
+      "url": "https://www.ign.com/articles/gears-of-war-e-day-reportedly-sold-over-400k-copies-across-console-and-pc-a-month-after-day-one-game-pass-launch",
+      "en_title": "Gears of War: E-Day Reportedly Sold Over 400K Copies Across Console and PC a Month After Day-One Game Pass Launch",
+      "cn_title": "《战争机器：事变日》据报销量超40万",
+      "model": "gpt-6.1-sol",
+      "status": "needs_manual_review",
+      "failed_at": "2026-10-30T08:58:19.572598+08:00",
+      "reason": "风格拒收: style_self_check key 'currency_checked' is not true (got False)",
+      "audit_issues": [
+        {
+          "type": "style_self_check",
+          "detail": "style_self_check key 'currency_checked' is not true (got False)"
+        }
+      ],
+      "fingerprint": "905c2deb7e82a3de4d91969ef3d8d1f0f01b88ad",
+      "translation_path": "translations/48.json",
+      "retry_policy": "manual_only"
+    }
+  },
+  "updated_at": "2026-10-30T08:58:19.572598+08:00"
+}
