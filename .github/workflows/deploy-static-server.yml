@@ -1,128 +1,83 @@
-name: Deploy Static Server Mirror
-
+name: Read-only Title Translation Diagnostics
 on:
-  push:
-    branches:
-      - main
-    paths-ignore:
-      - 'data/**'
-      - 'exchange_rates.json'
   workflow_dispatch:
-
 permissions:
   contents: read
-
-concurrency:
-  group: ign-daily-static-server-deploy
-  cancel-in-progress: false
-
 jobs:
-  quality:
+  diagnose:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.12'
-          cache: pip
-      - name: Install test dependencies
-        run: python -m pip install -r server_api/requirements.txt
-      - name: Run repository checks
-        env:
-          PYTHONPATH: scripts
-          ALLOW_STALE_EXCHANGE_RATES: '1'
-          IGN_DAILY_WRITE_LOCK: /tmp/ign-daily-ci-write.lock
-        run: |
-          set -euo pipefail
-          python -m unittest discover -s scripts -p 'test_*.py'
-          python -m unittest discover -s server_api -p 'test_*.py'
-          python scripts/test_miniprogram.py
-          python scripts/agent_doctor.py
-          node --test tests/*.test.cjs
-          python tests/api-http-integration.py
-
-  deploy:
-    needs: quality
-    runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 8
     env:
       SERVER_HOST: ${{ secrets.IGN_DAILY_SERVER_HOST }}
       SERVER_PORT: ${{ secrets.IGN_DAILY_SERVER_PORT || '22' }}
       SERVER_USER: ${{ secrets.IGN_DAILY_SERVER_USER }}
       SERVER_PATH: ${{ secrets.IGN_DAILY_SERVER_PATH || '/srv/ign-daily' }}
-      SERVER_API_PATH: ${{ secrets.IGN_DAILY_SERVER_API_PATH || '/srv/ign-daily-api' }}
-
     steps:
-      - name: Check deployment secrets
-        id: check
-        env:
-          SERVER_SSH_KEY: ${{ secrets.IGN_DAILY_SERVER_SSH_KEY }}
-        run: |
-          set -euo pipefail
-          missing=0
-          for name in SERVER_HOST SERVER_USER SERVER_SSH_KEY; do
-            if [ -z "${!name:-}" ]; then
-              echo "::notice::Missing GitHub Actions secret: IGN_DAILY_${name}; static server deployment will be skipped."
-              missing=1
-            fi
-          done
-          if [ "$missing" -eq 0 ]; then
-            echo "configured=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "configured=false" >> "$GITHUB_OUTPUT"
-          fi
-
-      - name: Checkout
-        if: steps.check.outputs.configured == 'true'
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 1
-
-      - name: Package tracked site files
-        if: steps.check.outputs.configured == 'true'
-        run: python3 scripts/package_server_release.py /tmp/ign-daily-site.tar.gz
-
       - name: Configure SSH
-        if: steps.check.outputs.configured == 'true'
         env:
           SERVER_SSH_KEY: ${{ secrets.IGN_DAILY_SERVER_SSH_KEY }}
         run: |
           set -euo pipefail
           mkdir -p ~/.ssh
-          printf '%s\n' "$SERVER_SSH_KEY" > ~/.ssh/ign_daily_server_key
-          chmod 600 ~/.ssh/ign_daily_server_key
+          printf '%s\n' "$SERVER_SSH_KEY" > ~/.ssh/server_key
+          chmod 600 ~/.ssh/server_key
           ssh-keyscan -p "$SERVER_PORT" -H "$SERVER_HOST" >> ~/.ssh/known_hosts
-
-      - name: Upload package
-        if: steps.check.outputs.configured == 'true'
+      - name: Read runtime, cron, logs and probe API
         run: |
           set -euo pipefail
-          scp -P "$SERVER_PORT" -i ~/.ssh/ign_daily_server_key \
-            /tmp/ign-daily-site.tar.gz \
-            "$SERVER_USER@$SERVER_HOST:/tmp/ign-daily-site-${GITHUB_SHA}.tar.gz"
-
-      - name: Deploy code and dependencies with rollback
-        if: steps.check.outputs.configured == 'true'
-        run: |
-          set -euo pipefail
-          ssh -o ServerAliveInterval=30 -o ServerAliveCountMax=10 \
-            -p "$SERVER_PORT" -i ~/.ssh/ign_daily_server_key "$SERVER_USER@$SERVER_HOST" \
-            "bash -s -- '$GITHUB_SHA' '$SERVER_PATH' '$SERVER_API_PATH' '$SERVER_USER'" <<'REMOTE'
-          set -euo pipefail
-          sha="$1"
-          app="$2"
-          api="$3"
-          user="$4"
-          archive="/tmp/ign-daily-site-$sha.tar.gz"
-          stage="$(mktemp -d /tmp/ign-daily-deploy.XXXXXX)"
-          trap 'sudo rm -rf -- "$stage" "$archive"' EXIT
-          tar -xzf "$archive" -C "$stage"
-          for kind in write worker maintenance; do
-            sudo touch "/var/lock/ign-daily-$kind.lock"
-            sudo chown "$user:$user" "/var/lock/ign-daily-$kind.lock"
-            sudo chmod 0664 "/var/lock/ign-daily-$kind.lock"
-          done
-          sudo APP_DIR="$app" API_DIR="$api" python3 -B "$stage/server_api/deploy/deploy_release.py" "$stage"
-          sudo APP_DIR="$app" python3 -B "$stage/server_api/deploy/migrate_luna_to_terra.py"
-          REMOTE
+          ssh -o ServerAliveInterval=30 -o ServerAliveCountMax=5 -p "$SERVER_PORT" -i ~/.ssh/server_key "$SERVER_USER@$SERVER_HOST" \
+            "sudo APP_DIR='$SERVER_PATH' RUN_USER='$SERVER_USER' python3 -B -" <<'PY'
+          import collections, datetime, json, os, re, subprocess, urllib.request, urllib.error
+          from pathlib import Path
+          app = Path(os.environ['APP_DIR'])
+          def clean(value):
+              value = re.sub(r'sk-[A-Za-z0-9_.*-]+', '[REDACTED]', str(value))
+              value = re.sub(r'(?i)(Bearer\s+)\S+', r'\1[REDACTED]', value)
+              return value
+          def show(label, value):
+              print(label + ': ' + clean(value), flush=True)
+          config = json.loads((app/'data/automation-config.json').read_text(encoding='utf-8-sig'))
+          show('CONFIG', json.dumps({k:config.get(k) for k in ('title_translator','fulltext_translator','api_base_url','api_title_model','api_title_thinking','api_fulltext_model','api_fulltext_thinking')}))
+          show('UTC_TIME', datetime.datetime.now(datetime.timezone.utc).isoformat())
+          for command in (['crontab','-u',os.environ['RUN_USER'],'-l'], ['ps','-eo','pid,etimes,args'], ['lslocks','-n','-o','PID,COMMAND,TYPE,MODE,PATH']):
+              result=subprocess.run(command,capture_output=True,text=True)
+              lines=result.stdout.splitlines()
+              show(command[0], '\n'.join(line for line in lines if any(term in line for term in ('ign-daily','translate_titles','translate_fulltext','article_cache','fetch_exchange')))[-10000:])
+          queues=[]
+          for path in sorted((app/'data').glob('20??-??-??/need_titles.json')):
+              try:
+                  queue=json.loads(path.read_text(encoding='utf-8-sig'))
+                  if queue: queues.append((path.parent.name,len(queue)))
+              except Exception: pass
+          show('TITLE_QUEUES_TOTAL', sum(n for _,n in queues))
+          show('OLDEST_QUEUES', queues[:6])
+          show('RECENT_QUEUES', queues[-8:])
+          for directory in sorted((app/'data').glob('20??-??-??'))[-3:]:
+              path=directory/'index.json'
+              if not path.exists(): continue
+              data=json.loads(path.read_text(encoding='utf-8-sig'))
+              articles=data.get('articles',[])
+              missing=[a.get('id') for a in articles if not a.get('cn_title') or not a.get('summary')]
+              show('INDEX_'+directory.name, json.dumps({'articles':len(articles),'missing_titles_or_summaries':missing,'mtime':path.stat().st_mtime}))
+          for name in ('rss.log','api-translation.log'):
+              path=Path('/var/log/ign-daily')/name
+              if path.exists():
+                  show('LOG_'+name, '\n'.join(collections.deque(path.open(errors='replace'),maxlen=100))[-20000:])
+              else: show('LOG_'+name,'missing')
+          values={}
+          for line in (app/'.env').read_text(encoding='utf-8-sig').splitlines():
+              if line.strip() and not line.lstrip().startswith('#') and '=' in line:
+                  key,value=line.split('=',1); values[key.strip()]=value.strip().strip('"').strip("'")
+          key=values.get('TRANSLATOR_API_KEY')
+          base=str(config.get('api_base_url') or '').rstrip('/')
+          assert base=='https://api.apikey.fan/v1'
+          if not key: show('PROBE','MISSING_KEY'); raise SystemExit(0)
+          body={'model':config['api_title_model'],'reasoning_effort':config['api_title_thinking'],'max_completion_tokens':2048,'stream':False,'response_format':{'type':'json_object'},'messages':[{'role':'user','content':'Return only JSON: {"cn_title":"测试","summary":"接口连接测试成功"}'}]}
+          request=urllib.request.Request(base+'/chat/completions',data=json.dumps(body).encode(),headers={'Authorization':'Bearer '+key,'Content-Type':'application/json'})
+          try:
+              with urllib.request.urlopen(request,timeout=120) as response: result=json.loads(response.read())
+              show('PROBE',json.dumps({'model':result.get('model'),'choices':result.get('choices'),'usage':result.get('usage')},ensure_ascii=False)[:2500])
+          except urllib.error.HTTPError as exc:
+              show('PROBE_HTTP_ERROR',str(exc.code)+' '+exc.read().decode(errors='replace')[:2000])
+          except Exception as exc: show('PROBE_ERROR',type(exc).__name__+': '+str(exc))
+          PY
