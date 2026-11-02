@@ -65,6 +65,17 @@ for aid in done_ids:
     with open(fpath, "r", encoding="utf-8") as f:
         data = json.load(f)
 
+    if data.get("translator") == "api" and data.get("translation_mode") == "faithful":
+        paragraphs = data.get("paragraphs")
+        if not isinstance(paragraphs, list) or not paragraphs or any(
+            not isinstance(p, dict) or not str(p.get("cn") or "").strip()
+            for p in paragraphs
+        ):
+            errors.append(f"#{aid}: paragraphs are incomplete")
+        # Editorial checks are left to the human; source alignment is checked
+        # independently by check_source_alignment.py.
+        continue
+
     # Check 1: cover must not be empty
     if not data.get("cover"):
         errors.append(f"#{aid}: MISSING cover image (og:image not extracted)")

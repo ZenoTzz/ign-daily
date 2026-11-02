@@ -171,6 +171,8 @@ def find_misses(date: str) -> list[dict[str, str]]:
 
         source = json.loads(source_path.read_text(encoding="utf-8"))
         translation = json.loads(translation_path.read_text(encoding="utf-8"))
+        if translation.get("translator") == "api" and translation.get("translation_mode") == "faithful":
+            continue  # Confirmed terms are injected before generation; editorial review is human.
         source_text = source_blob(source)
         translated_text = translation_blob(translation)
         matched_terms = [

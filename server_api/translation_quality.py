@@ -121,6 +121,25 @@ def deterministic_review_errors(data: dict[str, Any]) -> list[str]:
 
 def validate_translation_quality(data: dict[str, Any]) -> list[str]:
     """Return blocking errors for the versioned completion contract."""
+    if data.get("translator") == "api" and data.get("translation_mode") == "faithful":
+        review = data.get("quality_review") or {}
+        if review.get("mode") == "human" and review.get("status") == "pending":
+            # Generated is not reviewed: only structural/encoding safety is a
+            # completion gate for this explicitly selected human-review mode.
+            errors = _encoding_errors(data)
+            for key in ("translator_provider", "translator_model", "reasoning_effort", "prompt_version", "cn_title"):
+                if not str(data.get(key) or "").strip():
+                    errors.append(f"missing metadata: {key}")
+            if data.get("quality_gate_version") != QUALITY_GATE_VERSION:
+                errors.append(f"quality_gate_version must be {QUALITY_GATE_VERSION}")
+            paragraphs = data.get("paragraphs")
+            if not isinstance(paragraphs, list) or not paragraphs:
+                errors.append("paragraphs must be a nonempty list")
+            else:
+                for position, item in enumerate(paragraphs, 1):
+                    if not isinstance(item, dict) or any(not isinstance(item.get(k), str) or not item[k].strip() for k in ("en", "cn")):
+                        errors.append(f"paragraph {position} is incomplete")
+            return errors
     errors = [
         f"missing metadata: {key}"
         for key in REQUIRED_METADATA

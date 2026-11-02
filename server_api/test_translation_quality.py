@@ -99,5 +99,22 @@ class TranslationQualityTest(unittest.TestCase):
         self.assertTrue(any("likely mojibake" in error for error in errors))
 
 
+class ApiHumanReviewTests(unittest.TestCase):
+    def test_pending_human_review_is_explicit_and_not_a_fake_pass(self):
+        data = valid_translation()
+        data.update(translator="api", translation_mode="faithful", cn_title="标题")
+        data.pop("reviewer_model")
+        data.pop("reviewed_at")
+        data["quality_review"] = {"mode": "human", "status": "pending", "checks": {"source_coverage": True}}
+        self.assertEqual(validate_translation_quality(data), [])
+        data["paragraphs"][0]["cn"] = ""
+        self.assertTrue(validate_translation_quality(data))
+
+    def test_codex_cannot_bypass_review_using_the_api_marker(self):
+        data = valid_translation()
+        data["translation_mode"] = "faithful"
+        data["quality_review"] = {"mode": "human", "status": "pending"}
+        self.assertTrue(validate_translation_quality(data))
+
 if __name__ == "__main__":
     unittest.main()

@@ -50,7 +50,8 @@ from dict_matcher import (
 )
 from normalize_currency_files import normalize_date as normalize_currency_date
 from platform_names import normalize_platform_names_in_translation
-from prompt_blocks import stable_json, title_user_payload, translation_system_prompt, validate_style_check
+from prompt_blocks import stable_json, validate_style_check
+from api_translation_prompt import title_user_payload, translation_system_prompt
 from usage_logger import record_deepseek_usage_safe
 
 
@@ -92,8 +93,8 @@ def flatten_dict_terms() -> dict[str, str]:
     return shared_flatten_dict_terms()
 
 
-def matched_terms(text: str, limit: int = 30, article: dict[str, Any] | None = None) -> dict[str, str]:
-    return matched_terms_for_article(text, article=article, limit=limit)
+def matched_terms(text: str, limit: int | None = None, article: dict[str, Any] | None = None) -> dict[str, str]:
+    return matched_terms_for_article(text, article=article, limit=limit, confirmed_only=True)
 
 
 def apply_title_dictionary(en_title: str, cn_title: str) -> str:
@@ -505,7 +506,7 @@ def translate_date(date: str, limit: int = 8) -> int:
                         continue
                     raise ValueError(f"model output remained truncated at {max_tokens} tokens")
                 result = normalize_result(extract_json(raw))
-                validation_errors = validate_style_check(result, article, is_fulltext=False)
+                validation_errors = []  # Editorial review is performed by the user, not model declarations.
                 if validation_errors:
                     raise ValueError(f"style check failed: {'; '.join(validation_errors)}")
                 break
@@ -519,7 +520,7 @@ def translate_date(date: str, limit: int = 8) -> int:
                 if current != baseline:
                     raise RuntimeConflict("Title inputs changed during translation; kept newer article")
                 article = current
-                article["cn_title"] = apply_title_dictionary(article.get("en_title", ""), result["cn_title"])
+                article["cn_title"] = result["cn_title"]
                 article["summary"] = result["summary"]
                 article["category"] = result["category"]
                 article["emoji"] = result["emoji"]

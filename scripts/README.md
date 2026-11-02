@@ -34,7 +34,7 @@
 | `translate_pipeline.py` | `--prep` 准备，`--post` 完整性检查和索引同步 |
 | `prepare_codex_translation_batches.py` | 只读解析生产队列快照；按正文字符量分批，仅输出当前文章命中的词库/翻译记忆与高风险段落 |
 | `translate_titles_deepseek.py` | API 标题/摘要 owner 处理 `need_titles.json` |
-| `translate_fulltext_api.py` | 可选 API 正文模式，不是 Codex 正常全文入口 |
+| `translate_fulltext_api.py` | API 忠实逐段翻译；一次生成后待人工质检，无模型修复或复核 |
 | `translate_compare_api.py` | 手动多模型对比，只写 `comparisons/` |
 | `api_translation_audit.py` | 正文词库、金额、段落、噪音审计 |
 | `audit_doctor.py` | 对疑似审计误报作受控诊断 |

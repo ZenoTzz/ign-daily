@@ -372,6 +372,7 @@ def post_mode(date_str, article_ref):
         print(f"  index: {art.get('en_title')}")
         print(f"  json : {data.get('en_title')}")
         return False
+    faithful_api = data.get('translator') == 'api' and data.get('translation_mode') == 'faithful'
     changed = False
     print(f"\n{'='*60}")
     print(f"POST: #{article_id} - {data.get('cn_title', '')[:40]}")
@@ -384,7 +385,7 @@ def post_mode(date_str, article_ref):
         "audit_failed_at",
         "audit_failure_reason",
     )
-    if any(key in data for key in review_keys):
+    if not faithful_api and any(key in data for key in review_keys):
         for key in review_keys:
             data.pop(key, None)
         changed = True
@@ -489,7 +490,8 @@ def post_mode(date_str, article_ref):
         print(f"\n🔧 Cleaned {space_fixes} spacing issues")
 
     before_platform = json.dumps(data, ensure_ascii=False, sort_keys=True)
-    data = normalize_platform_names_in_translation(data)
+    if not faithful_api:
+        data = normalize_platform_names_in_translation(data)
     if json.dumps(data, ensure_ascii=False, sort_keys=True) != before_platform:
         changed = True
         print("\n🔧 Normalized platform spelling: Xbox -> XBOX")
@@ -537,6 +539,13 @@ def post_mode(date_str, article_ref):
 
     if issues:
         print(f"\n🟡 Remaining issues: {', '.join(issues)}")
+        if not faithful_api:
+            return False
+        data.setdefault("quality_review", {}).setdefault("warnings", []).extend(
+            {"type": "format", "detail": issue} for issue in issues
+        )
+        changed = True
+    if faithful_api and (not data.get("paragraphs") or any(not str(p.get("cn") or "").strip() for p in data["paragraphs"])):
         return False
 
     # 7. 保存通过校验的翻译文件。
@@ -567,6 +576,8 @@ def post_mode(date_str, article_ref):
                 'reviewed_at',
                 'prompt_version',
                 'quality_gate_version',
+                'translation_mode',
+                'quality_status',
             ):
                 if data.get(meta_key) and a.get(meta_key) != data[meta_key]:
                     a[meta_key] = data[meta_key]

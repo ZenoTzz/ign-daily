@@ -64,6 +64,8 @@ def enforce(index_path, dict_terms):
     for a in data['articles']:
         if a.get('translation_status') != 'done':
             continue
+        if a.get('translator') == 'api' and a.get('translation_mode') == 'faithful':
+            continue  # API injects confirmed terms; broader legacy dictionary is advisory.
         en_title = a['en_title']
         cn_title = a['cn_title']
         new_cn = cn_title

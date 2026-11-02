@@ -50,6 +50,8 @@ def normalize_index(path: Path) -> bool:
 
 def normalize_translation(path: Path) -> bool:
     data = read_json(path)
+    if data.get("translator") == "api" and data.get("translation_mode") == "faithful":
+        return False
     before = json.dumps(data, ensure_ascii=False, sort_keys=True)
     normalize_translation_currency(data)
     after = json.dumps(data, ensure_ascii=False, sort_keys=True)

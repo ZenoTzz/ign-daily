@@ -146,7 +146,7 @@ def category_allows_term(dict_category: str, article: dict[str, Any] | None) -> 
 
 def term_matches(en_term: str, text: str, dict_category: str) -> bool:
     source = text or ""
-    if en_term == "Doom" and re.search(r"(?<![A-Za-z0-9])Dr\.?\s+Doom(?![A-Za-z0-9])", source):
+    if en_term == "Doom" and re.search(r"(?<![A-Za-z0-9])(?:Dr\.?|Doctor)\s+Doom(?![A-Za-z0-9])", source):
         return False
 
     title_like_categories = {"games", "movies_tv", "media"}
@@ -154,13 +154,23 @@ def term_matches(en_term: str, text: str, dict_category: str) -> bool:
     return term_in_text(en_term, source, case_sensitive=case_sensitive)
 
 
-def matched_terms_for_article(text: str, article: dict[str, Any] | None = None, limit: int = 60) -> dict[str, str]:
+def matched_terms_for_article(text: str, article: dict[str, Any] | None = None, limit: int | None = 60, *, confirmed_only: bool = False) -> dict[str, str]:
     hits: dict[str, str] = {}
+    confirmed = set()
+    if confirmed_only and dict_path().exists():
+        for items in load_json(dict_path()).values():
+            if isinstance(items, dict):
+                for en, entry in items.items():
+                    if isinstance(entry, dict) and (entry.get("source") in {"user", "ign_cn", "bilibili", "official"} or entry.get("official") is True):
+                        confirmed.add(en)
     for en, cn, cat in sorted(iter_dict_terms(), key=lambda row: len(row[0]), reverse=True):
-        if not category_allows_term(cat, article):
+        if confirmed_only and en not in confirmed:
             continue
+        if not category_allows_term(cat, article):
+            if not (article and term_matches(en, str(article.get("en_title") or ""), cat)):
+                continue
         if term_matches(en, text, cat):
             hits[en] = cn
-        if len(hits) >= limit:
+        if limit is not None and len(hits) >= limit:
             break
     return hits

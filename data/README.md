@@ -46,6 +46,13 @@ Cron 仅负责创建新日期文件夹，不得覆盖/清理/合并旧日期。
   - `needs_review`：自动质检未通过，等待用户重新提交或人工放行
   - `done`：翻译已完成
 
+API 忠实翻译使用 `translation_mode="faithful"`。其 `quality_status="pending_human_review"`、
+`quality_review={"mode":"human","status":"pending",...}` 明确表示已生成但未经人工质检，
+不是独立模型复核通过。该模式不虚构 `reviewer_model` 或 `reviewed_at`；允许 `subtitle` 为空，
+`opus_summary` 只沿用独立首页摘要（没有则为空），正文不添加原文没有的货币换算。
+本地格式观察放入 `quality_review.warnings`，不会触发付费修复；结构损坏仍进入 `needs_review`。
+旧版译文及 Codex 的独立复核契约继续保持原有要求。
+
 ## sources/NN.json（英文原文缓存）
 
 每小时 RSS 发现新文章后，`scripts/article_cache.py` 会抓取一次 IGN 页面并写入：

@@ -64,6 +64,8 @@ def check_index(day_dir: Path, issues: list[dict]) -> None:
 
 def check_translation_file(path: Path, issues: list[dict]) -> None:
     data = read_json(path)
+    if data.get("translator") == "api" and data.get("translation_mode") == "faithful":
+        return
     add_issues(issues, path.name, data.get("cn_title", ""), "cn_title")
     add_issues(issues, path.name, data.get("opus_summary", ""), "opus_summary")
     for i, para in enumerate(data.get("paragraphs", []), start=1):

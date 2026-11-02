@@ -1,11 +1,9 @@
 #!/usr/bin/env python3
-"""Translate requested full articles with an OpenAI-compatible chat API.
+"""Faithfully translate requested articles once, for human editorial review.
 
-This is a guarded automation path. Good translations are finalized as normal.
-If the deterministic audit rejects a model output, the draft is saved as a
-manual-review translation, the request is removed from the hourly queue, and the
-failure reason is written to data/YYYY-MM-DD/translation_failures.json. This
-prevents the same article/model/error from burning tokens every hour.
+No model-based audit, repair or paragraph regeneration follows the first
+generation. Structural failures are kept as recoverable drafts and removed from
+the retry queue; successful output is explicitly marked pending human review.
 
 Usage:
   TRANSLATOR_API_KEY=... python3 scripts/translate_fulltext_api.py [YYYY-MM-DD|--all]
@@ -28,7 +26,6 @@ from runtime_write_lock import RuntimeConflict, write_lock, atomic_json, article
 from common_paths import DATA_DIR, REPO_ROOT, configure_utf8_stdio, dict_path, env_paths
 from api_provider import api_key_help, resolve_api_key
 from api_translation_audit import SUMMARY_HARD_MAX, SUMMARY_TARGET_MAX, check_translation, compact_char_len
-from audit_doctor import diagnose as diagnose_audit_failure
 from chinese_punctuation import normalize_translation_quotes
 from check_source_alignment import expected_paragraphs
 from currency_utils import normalize_translation_currency
@@ -40,9 +37,7 @@ from normalize_currency_files import normalize_date as normalize_currency_date
 from platform_names import normalize_platform_names_in_translation
 from prompt_blocks import (
     chunk_user_payload,
-    fulltext_user_payload,
     stable_json,
-    translation_system_prompt,
     with_translation_style,
     validate_style_check,
 )
@@ -55,6 +50,7 @@ from translation_memory import (
 )
 from translation_media import merge_images
 from usage_logger import record_deepseek_usage_safe
+from api_translation_prompt import PROMPT_VERSION, fulltext_user_payload, translation_system_prompt
 
 sys.path.insert(0, str(REPO_ROOT / "server_api"))
 from translation_quality import QUALITY_GATE_VERSION, validate_translation_quality  # noqa: E402
@@ -327,8 +323,8 @@ def split_paragraphs(text: str) -> list[str]:
     return [p for p in chunks if keep(p)][:35]
 
 
-def matched_terms(text: str, limit: int = 60, article: dict[str, Any] | None = None) -> dict[str, str]:
-    return matched_terms_for_article(text, article=article, limit=limit)
+def matched_terms(text: str, limit: int | None = None, article: dict[str, Any] | None = None) -> dict[str, str]:
+    return matched_terms_for_article(text, article=article, limit=limit, confirmed_only=True)
 
 
 def read_optional(path: str, max_chars: int = 10000) -> str:
@@ -365,7 +361,6 @@ def hard_checklist(paragraphs: list[str], terms: dict[str, str]) -> dict[str, An
 
 def build_messages(article: dict[str, Any], paragraphs: list[str], terms: dict[str, str]) -> list[dict[str, str]]:
     user = fulltext_user_payload(article=article, paragraphs=paragraphs, terms=terms)
-    user["hard_checklist"] = hard_checklist(paragraphs, terms)
     memory = translation_memory_prompt(find_memory_hits(paragraphs))
     if memory:
         user["translation_memory"] = memory
@@ -474,13 +469,15 @@ def extract_paragraph_items(result: dict[str, Any]) -> list[Any]:
 
 def normalize_paragraphs(result: dict[str, Any], paragraphs_en: list[str]) -> list[dict[str, str]]:
     items = extract_paragraph_items(result)
-    if not items:
-        raise ValueError("model returned empty paragraphs")
+    if len(items) != len(paragraphs_en):
+        raise ValueError(f"paragraph count mismatch: {len(items)} != {len(paragraphs_en)}")
 
     normalized = []
     for i, en in enumerate(paragraphs_en):
         item = items[i] if i < len(items) else None
         if isinstance(item, dict):
+            if item.get("en") is not None and item["en"] != en:
+                raise ValueError(f"paragraph {i + 1} source anchor changed")
             cn = str(item.get("cn") or item.get("zh") or item.get("translation") or item.get("text") or "").strip()
         elif isinstance(item, str):
             cn = item.strip()
@@ -577,24 +574,22 @@ def translate_paragraph_chunks(
 
 def normalize_translation(article: dict[str, Any], result: dict[str, Any], paragraphs_en: list[str]) -> dict[str, Any]:
     normalized = normalize_paragraphs(result, paragraphs_en)
-    return normalize_platform_names_in_translation(normalize_translation_quotes(restore_dictionary_spacing_in_data(normalize_translation_currency({
+    return normalize_translation_quotes(restore_dictionary_spacing_in_data({
         "id": article["id"],
         "url": article["url"],
         "en_title": article["en_title"],
-        "cn_title": apply_title_dictionary(
-            article.get("en_title", ""),
-            str(result.get("cn_title") or article.get("cn_title") or article["en_title"]).strip(),
-        ),
-        "subtitle": str(result.get("subtitle") or article.get("subtitle") or "看点来了").strip(),
-        "opus_summary": str(result.get("opus_summary") or result.get("summary") or article.get("summary") or article.get("cn_title") or "").strip(),
+        "cn_title": str(result.get("cn_title") or "").strip(),
+        "subtitle": "",
+        # Homepage summary remains separate from the faithful article body.
+        "opus_summary": str(article.get("summary") or "").strip(),
         "publish_time_cn": article.get("publish_time_cn") or article.get("pub_date") or "",
         "paragraphs": normalized,
-        "pending_dict": normalize_pending_dict(result.get("pending_dict")),
+        "pending_dict": [],
         "translated_terms": result.get("translated_terms") if isinstance(result.get("translated_terms"), dict) else {},
-        "cover": str(result.get("cover") or article.get("cover_image") or "").strip(),
-        "images": result.get("images") if isinstance(result.get("images"), list) else [],
-        "style_self_check": result.get("style_self_check"),
-    }))))
+        "cover": str(article.get("cover_image") or "").strip(),
+        "images": [],
+        "translation_mode": "faithful",
+    }))
 
 
 def enforce_translation_memory(data: dict[str, Any], paragraphs_en: list[str]) -> list[str]:
@@ -662,7 +657,7 @@ def enforce_literal_dictionary_terms(
                 if isinstance(item, dict)
             ]
         )
-        if not en or not cn or cn in visible_text:
+        if not en or not cn or en == cn:
             continue
         pattern = re.compile(r"(?<![A-Za-z0-9])" + re.escape(en) + r"(?![A-Za-z0-9])", re.I)
         for key in fields:
@@ -675,7 +670,7 @@ def enforce_literal_dictionary_terms(
             value = item.get("cn")
             if isinstance(value, str) and pattern.search(value):
                 item["cn"] = pattern.sub(cn, value)
-    return normalize_platform_names_in_translation(restore_dictionary_spacing_in_data(repaired))
+    return restore_dictionary_spacing_in_data(repaired)
 
 
 def repair_translation_once(
@@ -774,9 +769,6 @@ def translate_date(date: str, limit: int = 2) -> int:
         print(f"API_FULLTEXT_SKIP: {api_key_help(base_url)}")
         return 0
     model = (os.environ.get("TRANSLATOR_MODEL") or os.environ.get("DEEPSEEK_MODEL") or "").strip() or DEFAULT_MODEL
-    repair_model = (os.environ.get("TRANSLATOR_REPAIR_MODEL") or "").strip()
-    if not repair_model:
-        repair_model = "deepseek-v4-pro" if model == "deepseek-v4-flash" else model
     with write_lock():
         req_path, index, req, requested = resolve_requests(date)
     if not requested:
@@ -799,7 +791,6 @@ def translate_date(date: str, limit: int = 2) -> int:
         text = ""
         data: dict[str, Any] | None = None
         audit_issues: list[dict[str, str]] = []
-        require_self_check = True
         try:
             set_article_step(article_id, date=date, step="source", progress=12, message="抓取正文与缓存")
             cached_paragraphs = authoritative_source_paragraphs(source)
@@ -822,32 +813,10 @@ def translate_date(date: str, limit: int = 2) -> int:
                 article_date=date,
             )
             set_article_step(article_id, date=date, step="parse", progress=62, message="解析模型输出")
-            try:
-                result = extract_json(raw)
-            except Exception as exc:
-                print(f"[RETRY] fulltext #{article['id']} returned invalid JSON: {exc}; falling back to paragraph chunks")
-                set_article_step(article_id, date=date, step="model", progress=50, message="分段重试翻译")
-                require_self_check = False
-                result = {
-                    "cn_title": article.get("cn_title") or article.get("en_title") or "",
-                    "subtitle": article.get("subtitle") or "",
-                    "opus_summary": article.get("summary") or article.get("cn_title") or "",
-                    "paragraphs": translate_paragraph_chunks(api_key, model, base_url, article, paragraphs_en, terms, article_date=date),
-                    "pending_dict": [],
-                    "translated_terms": {},
-                    "cover": article.get("cover_image") or "",
-                    "images": [],
-                }
-            try:
-                data = normalize_translation(article, result, paragraphs_en)
-            except ValueError as exc:
-                print(f"[RETRY] fulltext #{article['id']} paragraph format issue: {exc}")
-                set_article_step(article_id, date=date, step="model", progress=58, message="段落格式修复")
-                require_self_check = False
-                data = normalize_translation(article, {**result, "paragraphs": translate_paragraph_chunks(api_key, model, base_url, article, paragraphs_en, terms, article_date=date)}, paragraphs_en)
+            result = extract_json(raw)
+            data = normalize_translation(article, result, paragraphs_en)
             data = enforce_literal_dictionary_terms(data, paragraphs_en, terms)
             memory_errors = enforce_translation_memory(data, paragraphs_en)
-            data["opus_summary"] = trim_summary_to_limit(data.get("opus_summary", ""))
             data["translator"] = "api"
             data["translator_provider"] = "openai-compatible"
             data["translator_model"] = model
@@ -855,101 +824,22 @@ def translate_date(date: str, limit: int = 2) -> int:
                 if not data.get("cover") and source.get("cover_image"):
                     data["cover"] = source["cover_image"]
                 data["images"] = merge_images(data.get("images"), source.get("images"))
-            set_article_step(article_id, date=date, step="audit", progress=76, message="质量检查")
+            if memory_errors:
+                raise ValueError("; ".join(memory_errors))
+            # Local observations are advisory; no repair, retry or API audit is performed.
             audit_issues = check_translation(article=article, paragraphs_en=paragraphs_en, data=data, required_terms=terms)
-            audit_issues.extend({"type": "translation_memory", "detail": error} for error in memory_errors)
-            if audit_issues and os.environ.get("TRANSLATOR_FULLTEXT_REPAIR", "1") != "0":
-                require_self_check = False
-                set_article_step(article_id, date=date, step="repair", progress=84, message="修复质检问题")
-                summary_only = all(issue.get("type") == "summary_length" for issue in audit_issues)
-                if summary_only:
-                    print(f"[REPAIR] fulltext #{article['id']} only needs a summary repair; preserving all paragraphs")
-                    data = repair_summary_once(api_key, repair_model, base_url, article, paragraphs_en, data, date)
-                else:
-                    print(f"[REPAIR] fulltext #{article['id']} audit found {len(audit_issues)} issue(s); asking {repair_model} for focused repair")
-                    data = repair_translation_once(api_key, repair_model, base_url, article, paragraphs_en, terms, data, audit_issues, date)
-                data = enforce_literal_dictionary_terms(data, paragraphs_en, terms)
-                memory_errors = enforce_translation_memory(data, paragraphs_en)
-                data["opus_summary"] = trim_summary_to_limit(data.get("opus_summary", ""))
-                data["translator"] = "api"
-                data["translator_provider"] = "openai-compatible"
-                data["translator_model"] = model
-                if source:
-                    if not data.get("cover") and source.get("cover_image"):
-                        data["cover"] = source["cover_image"]
-                    data["images"] = merge_images(data.get("images"), source.get("images"))
-                audit_issues = check_translation(article=article, paragraphs_en=paragraphs_en, data=data, required_terms=terms)
-                audit_issues.extend({"type": "translation_memory", "detail": error} for error in memory_errors)
-            if audit_issues:
-                memory_blocked = any(issue.get("type") == "translation_memory" for issue in audit_issues)
-                doctor = {"verdict": "needs_human", "confidence": "high", "reason": "approved translation memory mismatch"}
-                if not memory_blocked:
-                    doctor = diagnose_audit_failure(
-                        article=article,
-                        paragraphs_en=paragraphs_en,
-                        issues=audit_issues,
-                        api_key=api_key,
-                        model=model,
-                        base_url=base_url,
-                    )
-                if doctor.get("verdict") == "false_positive" and doctor.get("confidence") in {"medium", "high"}:
-                    data["audit_doctor"] = doctor
-                    print(f"[DOCTOR] fulltext #{article['id']} accepted audit false positive: {doctor.get('reason', '')}")
-                else:
-                    details = "; ".join(f"[{issue['type']}] {issue['detail']}" for issue in audit_issues[:8])
-                    set_article_step(article_id, date=date, step="failed", progress=100, status="failed", message=details)
-                    req = save_manual_review_failure(
-                    expected_snapshot=expected_snapshot,
-                        date=date,
-                        index=index,
-                        req_path=req_path,
-                        req=req,
-                        article=article,
-                        model=model,
-                        text=text,
-                        issues=audit_issues,
-                        details=details,
-                        draft=data,
-                    )
-                    continue
-            # Validation of style self-check and local checks
-            validation_errors = validate_style_check(data, article, is_fulltext=True, require_self_check=require_self_check)
-            if validation_errors:
-                details = "; ".join(validation_errors)
-                print(f"[REJECT] #{article_id} style check failed: {details}")
-                set_article_step(article_id, date=date, step="failed", progress=100, status="failed", message=f"风格拒收: {details}")
-                req = save_manual_review_failure(
-                    expected_snapshot=expected_snapshot,
-                    date=date,
-                    index=index,
-                    req_path=req_path,
-                    req=req,
-                    article=article,
-                    model=model,
-                    text=text,
-                    issues=[{"type": "style_self_check", "detail": error} for error in validation_errors],
-                    details=f"风格拒收: {details}",
-                    draft=data,
-                )
-                continue
-
-            reviewed_at = datetime.now(timezone.utc).isoformat()
             data["reasoning_effort"] = (
-                os.environ.get("TRANSLATOR_FULLTEXT_REASONING_EFFORT") or "provider_default"
+                os.environ.get("TRANSLATOR_FULLTEXT_REASONING_EFFORT")
+                or os.environ.get("TRANSLATOR_REASONING_EFFORT") or "provider_default"
             )
-            data["reviewer_model"] = repair_model or model
-            data["reviewed_at"] = reviewed_at
-            data["prompt_version"] = "api-fulltext-2026-07-v2"
+            data["prompt_version"] = PROMPT_VERSION
             data["quality_gate_version"] = QUALITY_GATE_VERSION
+            data["quality_status"] = "pending_human_review"
             data["quality_review"] = {
-                "status": "passed",
-                "reviewer_model": data["reviewer_model"],
-                "reviewed_at": reviewed_at,
-                "checks": {
-                    "source_coverage": True,
-                    "quote_attribution": True,
-                    "numeric_facts": True,
-                },
+                "mode": "human",
+                "status": "pending",
+                "checks": {"source_coverage": True},
+                "warnings": audit_issues,
             }
             quality_errors = validate_translation_quality(data)
             if quality_errors:
