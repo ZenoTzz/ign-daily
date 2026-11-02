@@ -2,7 +2,7 @@
   "_meta": {
     "description": "游戏/影视名称中英文对照词库，翻译时必须查询此词库，有匹配则直接使用",
     "source": "IGN中国 (ign.com.cn) + B站IGN中国 (space.bilibili.com/652239032) + 中国玩家圈公认译名",
-    "last_updated": "2026-10-23",
+    "last_updated": "2026-11-02",
     "source_legend": {
       "ign_cn": "IGN中国官网 ign.com.cn 确认",
       "bilibili": "B站IGN中国主页视频标题/简介确认",
@@ -1465,6 +1465,10 @@
     "Skate": {
       "cn": "极速滑板",
       "source": "user"
+    },
+    "NetEase": {
+      "cn": "网易",
+      "source": "user"
     }
   },
   "movies_tv": {
@@ -2072,6 +2076,10 @@
     },
     "Kit Harington": {
       "cn": "基特·哈灵顿",
+      "source": "user"
+    },
+    "Zach Cregger": {
+      "cn": "扎克·克雷格",
       "source": "user"
     }
   },

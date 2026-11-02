@@ -115,7 +115,7 @@
       "publish_time_cn": "2026-10-31 05:30",
       "pub_date": "2026-10-31 05:30",
       "cover_image": "https://assets-prd.ignimgs.com/2023/05/24/marathon-blogroll-02-1684962151922.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2023/05/24/marathon-blogroll-02-1684962151922.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2023/05/24/marathon-blogroll-02-1684962151922.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -126,7 +126,12 @@
         "https://assets-prd.ignimgs.com/2025/03/12/destiny2heresy-1741800139522.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-10-31T06:17:43+08:00"
+      "source_fetched_at": "2026-10-31T06:17:43+08:00",
+      "translation_error": "HTTP Error 403: Forbidden",
+      "translation_failed_at": "2026-11-02T08:57:00.508798+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "gpt-6.1-sol"
     },
     {
       "id": 40,
@@ -346,7 +351,7 @@
       "publish_time_cn": "2026-10-31 03:26",
       "pub_date": "2026-10-31 03:26",
       "cover_image": "https://assets-prd.ignimgs.com/2022/09/16/ac-1-1663336669216.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2022/09/16/ac-1-1663336669216.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2022/09/16/ac-1-1663336669216.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -357,7 +362,12 @@
         "https://assets-prd.ignimgs.com/2026/04/23/0962bc91a4952e6433367fcfec38b7e0655c6bd29b431712-1776975059736.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-10-31T04:18:13+08:00"
+      "source_fetched_at": "2026-10-31T04:18:13+08:00",
+      "translation_error": "HTTP Error 403: Forbidden",
+      "translation_failed_at": "2026-11-02T08:56:58.448007+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "gpt-6.1-sol"
     },
     {
       "id": 29,
@@ -489,7 +499,7 @@
       "publish_time_cn": "2026-10-31 01:50",
       "pub_date": "2026-10-31 01:50",
       "cover_image": "https://assets-prd.ignimgs.com/2026/10/30/the-batman-bruce-wayne-1793381868012.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2026/10/30/the-batman-bruce-wayne-1793381868012.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/10/30/the-batman-bruce-wayne-1793381868012.png?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -500,7 +510,12 @@
         "https://assets-prd.ignimgs.com/2026/09/30/the-batman-part-ii-button-1790773846215.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-10-31T02:19:45+08:00"
+      "source_fetched_at": "2026-10-31T02:19:45+08:00",
+      "translation_error": "HTTP Error 403: Forbidden",
+      "translation_failed_at": "2026-11-02T08:56:56.770251+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "gpt-6.1-sol"
     },
     {
       "id": 27,
@@ -1099,11 +1114,11 @@
     },
     {
       "id": 47,
-      "category": "剧集评测",
-      "emoji": "⭐",
+      "category": "评测评分",
+      "emoji": "📺",
       "en_title": "South Park Season 29, Episode 4 Review: 'Guinea Pig on a Stick'",
-      "cn_title": "South Park Season 29, Episode 4 Review: 'Guinea Pig on a Stick'",
-      "summary": "",
+      "cn_title": "《南方公园》第29季第4集评测",
+      "summary": "IGN评测认为，《南方公园》第29季第4集试图延续此前剧情，以牛肉价格上涨引发的危机串联故事，但重复笑料和政治讽刺缺乏力度。小兰迪与孩子们的互动则颇具喜剧潜力。",
       "url": "https://www.ign.com/articles/south-park-america-season-29-episode-4-review-recap",
       "publish_time_cn": "2026-10-30 16:17",
       "pub_date": "2026-10-30 16:17",

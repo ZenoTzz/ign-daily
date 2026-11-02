@@ -1,0 +1,89 @@
+{
+  "id": 3,
+  "url": "https://www.ign.com/articles/yakuza-series-creator-toshiro-nagoshis-studio-has-officially-shut-down-before-releasing-a-game",
+  "en_title": "Yakuza Series Creator Toshiro Nagoshi's Studio Has Officially Shut Down Before Releasing a Game",
+  "cn_title": "Yakuza系列创作者Toshiro Nagoshi的工作室尚未推出游戏便已正式关闭",
+  "subtitle": "",
+  "opus_summary": "Gematsu报道称，Nagoshi Studio于10月31日通过股东决议关闭，消息刊登在日本政府公报Kanpo上。该工作室的首款游戏《Gang of Dragon》尚未推出。彭博社此前报道称，NetEase在得知该游戏还需至少70亿日元(约合人民币3亿元)才能完成后，决定停止对工作室的资金支持。",
+  "publish_time_cn": "2026-11-02 17:07",
+  "paragraphs": [
+    {
+      "en": "Yakuza series creator Toshiro Nagoshi’s studio has officially shut down before it had the chance to release a game.",
+      "cn": "Yakuza系列创作者Toshiro Nagoshi的工作室还没来得及推出游戏，便已正式关闭。"
+    },
+    {
+      "en": "Gematsu reported that the Tokyo-based Nagoshi Studio closed its doors via a shareholders’ resolution on October 31. The announcement was made in today’s Japanese government gazette Kanpo.",
+      "cn": "Gematsu报道称，总部位于东京的Nagoshi Studio于10月31日通过股东决议关闭。该公告刊登在今天的日本政府公报Kanpo上。"
+    },
+    {
+      "en": "The Yakuza-like Gang of Dragon was meant to be the debut game from Nagoshi Studio, which Nagoshi formed in 2022 with investment from Chinese megacorp NetEase after he departed Ryu Ga Gotoku a year earlier. But doubt was cast on its future in March when NetEase signalled its intention to cut off funding as part of a broader retreat from international video game investment.",
+      "cn": "与Yakuza类似的Gang of Dragon原本将是Nagoshi Studio的首款游戏。Nagoshi于2022年在中国巨头网易的投资下成立了这家工作室，一年前他离开了Ryu Ga Gotoku。但今年3月，网易表示打算切断资金，作为其全面收缩国际电子游戏投资的一部分，Gang of Dragon的未来因此蒙上阴影。"
+    },
+    {
+      "en": "According to Bloomberg , NetEase made the decision to cut Nagoshi’s funding after it learned Gang of Dragon needed at least another ¥7 billion (approx. $44.4 million) to be completed. Nagoshi was apparently trying to find new investors to help buy the studio out, without much luck.",
+      "cn": "据彭博社报道，网易得知Gang of Dragon还需要至少70亿日元（约4440万美元）才能完成后，决定切断对Nagoshi的资金支持。Nagoshi似乎一直在寻找新投资者，帮助买下这家工作室，但没有取得多大进展。"
+    },
+    {
+      "en": "The studio closes nearly a year after Gang of Dragon enjoyed a flashy reveal at The Game Awards in December . Now, it looks like it may never see the light of day.",
+      "cn": "工作室关闭距Gang of Dragon去年12月在The Game Awards上隆重公布已近一年。如今，这款游戏看起来可能永远无法面世。"
+    }
+  ],
+  "pending_dict": [],
+  "translated_terms": {
+    "Bloomberg": "彭博社"
+  },
+  "cover": "https://assets-prd.ignimgs.com/2026/03/07/gettyimages-1129881006-1772875636382.jpg",
+  "images": [
+    {
+      "url": "https://assets-prd.ignimgs.com/2026/03/07/gettyimages-1129881006-1772875636382.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "caption": ""
+    },
+    {
+      "url": "https://kraken.ignimgs.com/apple-touch-icon.png",
+      "caption": ""
+    },
+    {
+      "url": "https://assets-prd.ignimgs.com/2026/01/13/gangofdragon-1768342286957.jpg",
+      "caption": ""
+    }
+  ],
+  "translation_mode": "faithful",
+  "translator": "api",
+  "translator_provider": "openai-compatible",
+  "translator_model": "gpt-6.1-terra",
+  "reasoning_effort": "medium",
+  "prompt_version": "api-faithful-v1",
+  "quality_gate_version": 1,
+  "quality_status": "pending_human_review",
+  "quality_review": {
+    "mode": "human",
+    "status": "pending",
+    "checks": {
+      "source_coverage": true
+    },
+    "warnings": [
+      {
+        "type": "summary_length",
+        "detail": "opus_summary targets 70-80 non-space characters and must stay within 60-110, got 147"
+      },
+      {
+        "type": "currency_cn",
+        "detail": "translated text has foreign-currency amount without CNY conversion: 70亿日元",
+        "context": "g of Dragon还需要至少70亿日元（约4440万美元）才能完成后，决定切断对Nagoshi的资金支"
+      },
+      {
+        "type": "currency_cn",
+        "detail": "translated text has foreign-currency amount without CNY conversion: 4440万美元",
+        "context": "agon还需要至少70亿日元（约4440万美元）才能完成后，决定切断对Nagoshi的资金支持。Nagoshi"
+      },
+      {
+        "type": "format",
+        "detail": "🚨 MISSING subtitle (2-15字创意短句，必须手动写入)"
+      },
+      {
+        "type": "format",
+        "detail": "opus_summary LENGTH 147, target 70-80, allowed 60-110"
+      }
+    ]
+  }
+}

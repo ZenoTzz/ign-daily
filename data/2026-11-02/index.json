@@ -2,17 +2,41 @@
   "date": "2026-11-02",
   "articles": [
     {
+      "id": 6,
+      "category": "影视资讯",
+      "emoji": "🎬",
+      "en_title": "Clayface Comes in Second to You Can See Everything at the Domestic Box Office on Halloween Weekend",
+      "cn_title": "《泥面人》万圣节北美票房居亚军",
+      "summary": "万圣节周末，《泥面人》在北美票房榜上屈居第二，略逊于讲述伊丽莎白·霍姆斯生平的纪录片《You Can See Everything》，但位居全球票房榜首。纪录片上映第三周登顶北美，此前获得IGN满分评价；两部影片的最终排名仍可能变动。",
+      "url": "https://www.ign.com/articles/clayface-comes-in-second-to-you-can-see-everything-at-the-domestic-box-office-on-halloween-weekend",
+      "publish_time_cn": "2026-11-02 07:27",
+      "pub_date": "2026-11-02 07:27",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/09/07/ycse-blog-1788774798104.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/09/07/ycse-blog-1788774798104.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/09/07/ycse-blog-1788774798104.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/09/07/ycse-blog-1788774798104.jpg?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/09/07/ycse-blog-1788774798104.jpg?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/09/07/ycse-blog-1788774798104.jpg",
+        "https://kraken.ignimgs.com/apple-touch-icon.png",
+        "https://assets-prd.ignimgs.com/2026/09/14/clayface-button-replacement-1789405706742.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-11-02T08:17:43+08:00"
+    },
+    {
       "id": 5,
-      "category": "游戏新闻",
-      "emoji": "🎮",
+      "category": "影视资讯",
+      "emoji": "🎬",
       "en_title": "Heat Director Michael Mann Hospitalized After Accidentally Shooting Himself in the Leg",
-      "cn_title": "Heat Director Michael Mann Hospitalized After Accidentally Shooting Himself in the Leg",
-      "summary": "",
+      "cn_title": "《盗火线》导演迈克尔·曼意外枪伤腿部入院",
+      "summary": "《盗火线》导演迈克尔·曼在洛杉矶一家射击场意外枪伤腿部，伤势较轻。据其代表介绍，枪支在枪套内意外走火，曼接受治疗后正在办理出院。现年83岁的导演目前正在筹备《盗火线2》。",
       "url": "https://www.ign.com/articles/heat-director-michael-mann-hospitalized-after-accidentally-shooting-himself-in-the-leg",
       "publish_time_cn": "2026-11-02 03:02",
       "pub_date": "2026-11-02 03:02",
       "cover_image": "https://assets-prd.ignimgs.com/2026/11/01/michael-mann-1793559551134.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "translation_status": "needs_review",
       "images": [
         "https://assets-prd.ignimgs.com/2026/11/01/michael-mann-1793559551134.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/11/01/michael-mann-1793559551134.png?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -23,15 +47,20 @@
         "https://assets-prd.ignimgs.com/2026/11/01/michael-mann-1793559562072.png"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-11-02T03:17:36+08:00"
+      "source_fetched_at": "2026-11-02T03:17:36+08:00",
+      "translation_error": "HTTP Error 403: Forbidden",
+      "translation_failed_at": "2026-11-02T08:55:30.021646+08:00",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "gpt-6.1-sol"
     },
     {
       "id": 3,
-      "category": "游戏评测",
-      "emoji": "⭐",
+      "category": "影视资讯",
+      "emoji": "🎬",
       "en_title": "Taika Waititi Blasts Critics as 'Irrelevant, Out of Touch, Obsolete' Following Klara and the Sun's Negative Reviews",
-      "cn_title": "Taika Waititi Blasts Critics as 'Irrelevant, Out of Touch, Obsolete' Following Klara and the Sun's Negative Reviews",
-      "summary": "",
+      "cn_title": "《克拉拉与太阳》口碑不佳，导演怒斥影评人",
+      "summary": "《克拉拉与太阳》上映后影评不佳，导演塔伊加·维迪提在社交媒体发文抨击影评人，称他们过时且脱离现实。影片在烂番茄的影评人好评率为26%，观众好评率则为74%。",
       "url": "https://www.ign.com/articles/taika-waititi-blasts-critics-as-irrelevant-out-of-touch-obsolete-following-klara-and-the-suns-negative-reviews",
       "publish_time_cn": "2026-11-02 01:50",
       "pub_date": "2026-11-02 01:50",
@@ -53,10 +82,10 @@
     {
       "id": 4,
       "category": "游戏新闻",
-      "emoji": "🎮",
+      "emoji": "🪐",
       "en_title": "Hoyoverse’s Cozy Sim Petit Planet Coming to Nintendo Switch 2 in 2027",
-      "cn_title": "Hoyoverse’s Cozy Sim Petit Planet Coming to Nintendo Switch 2 in 2027",
-      "summary": "",
+      "cn_title": "《Petit Planet》2027年登陆Switch 2",
+      "summary": "HoYoverse宣布，免费星际生活模拟游戏《Petit Planet》将于2027年登陆Switch 2，并于2026年12月4日率先登陆PC、iOS和Android。玩家可以照料自己的星球、探索空中岛屿，还能前往银河集市参与拍卖和社区活动。",
       "url": "https://www.ign.com/articles/petit-planet-switch-2-release-date",
       "publish_time_cn": "2026-11-02 01:38",
       "pub_date": "2026-11-02 01:38",
@@ -77,11 +106,11 @@
     },
     {
       "id": 2,
-      "category": "游戏新闻",
-      "emoji": "🎮",
+      "category": "影视资讯",
+      "emoji": "🎃",
       "en_title": "Robert Downey Jr. and Pedro Pascal Swap Places for Halloween With Mister Fantastic and Doctor Doom Costumes",
-      "cn_title": "Robert Downey Jr. and Pedro Pascal Swap Places for Halloween With Mister Fantastic and Doctor Doom Costumes",
-      "summary": "",
+      "cn_title": "《毁灭战士》《毁灭博士》小罗伯特·唐尼与佩德罗·帕斯卡万圣节互换角色",
+      "summary": "小罗伯特·唐尼与佩德罗·帕斯卡在万圣节互换造型，分别扮成神奇先生和毁灭博士。两人还走上街头，与讨糖的孩子们打招呼。他们出演的《复仇者联盟：末日之战》将于2026年12月18日上映。",
       "url": "https://www.ign.com/articles/robert-downey-jr-and-pedro-pascal-swap-places-for-halloween-with-mister-fantastic-and-doctor-doom-costumes",
       "publish_time_cn": "2026-11-02 00:12",
       "pub_date": "2026-11-02 00:12",
@@ -101,11 +130,11 @@
     },
     {
       "id": 1,
-      "category": "游戏新闻",
-      "emoji": "🎮",
+      "category": "观点推荐",
+      "emoji": "🎬",
       "en_title": "Everyone Is Running a Con in You Can See Everything",
-      "cn_title": "Everyone Is Running a Con in You Can See Everything",
-      "summary": "",
+      "cn_title": "IGN观点：《You Can See Everything》中的骗局",
+      "summary": "纪录片《You Can See Everything》围绕Theranos创始人Elizabeth Holmes展开，也引发了关于真实与操纵的讨论。IGN文章认为，影片不仅审视Holmes是否理解自己的谎言，也让观众思考导演如何通过叙事塑造真相，以及人们如何区分事实与虚构。",
       "url": "https://www.ign.com/articles/everyone-is-running-a-con-in-you-can-see-everything",
       "publish_time_cn": "2026-11-01 21:00",
       "pub_date": "2026-11-01 21:00",
@@ -125,5 +154,5 @@
       "source_fetched_at": "2026-11-01T21:18:24+08:00"
     }
   ],
-  "total": 5
+  "total": 6
 }
