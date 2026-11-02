@@ -59,6 +59,18 @@ jobs:
           for article in before['articles']:
               print('TARGET_SOURCE: '+json.dumps({'id':article['id'],'url':article['url'],'en_title':article.get('en_title'),'text':title.cached_article_text(day,article)},ensure_ascii=False),flush=True)
           count=title.translate_date(day,limit=2) if queue else 0
+          expected_titles = {
+              'https://www.ign.com/articles/dave-bautista-reveals-hes-gained-20-pounds-of-muscle-to-play-kratos-in-the-god-of-war-series': ('《战神》Dave Bautista称为出演奎托斯增肌约9公斤', '《战神》剧集奎托斯演员增肌9公斤'),
+              'https://www.ign.com/articles/zach-cregger-was-frustrated-the-conversation-around-resident-evil-didnt-have-anything-to-do-with-the-movie': ('《生化危机》导演：影片讨论偏离电影本身', '《生化危机》导演：讨论偏离电影本身'),
+          }
+          with title.write_lock():
+              latest=title.load_json(path/'index.json')
+              for article in latest['articles']:
+                  prior, concise = expected_titles[article['url']]
+                  assert article['cn_title'] in (prior, concise), 'Title changed since review; preserve newer edits'
+                  assert len(concise)<=20
+                  article['cn_title']=concise
+              title.write_json(path/'index.json', latest)
           after=title.load_json(path/'index.json')
           allowed={'cn_title','summary','category','emoji','pending_dict'}
           old={a['url']:a for a in before['articles']}
