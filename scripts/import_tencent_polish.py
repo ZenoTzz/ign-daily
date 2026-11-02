@@ -255,11 +255,11 @@ def find_document_text(buffer: bytes) -> str:
     return best[2]
 
 
-def parse_document_articles(text: str) -> list[DocumentArticle]:
+def parse_document_articles(text: str, *, preserve_empty_subtitle: bool | set[tuple[str, str]] = False) -> list[DocumentArticle]:
     lines = [
         line.strip()
-        for line in re.split(r"[\r\n]+", text.replace("\u00a0", " "))
-        if line.strip()
+        for line in re.split(r"\r?\n" if preserve_empty_subtitle else r"[\r\n]+", text.replace("\u00a0", " "))
+        if preserve_empty_subtitle or line.strip()
     ]
     starts: list[tuple[int, re.Match[str]]] = []
     for index, line in enumerate(lines):
@@ -271,14 +271,16 @@ def parse_document_articles(text: str) -> list[DocumentArticle]:
     for number, (start, match) in enumerate(starts):
         end = starts[number + 1][0] if number + 1 < len(starts) else len(lines)
         content = lines[start + 1 : end]
-        if len(content) < 2:
-            continue
         year, month, day, title = match.groups()
         date = f"20{year}-{month}-{day}"
+        if isinstance(preserve_empty_subtitle, set) and (date, title.strip()) not in preserve_empty_subtitle:
+            content = [line for line in content if line]
+        if len(content) < 2:
+            continue
         paragraphs = [
             paragraph
             for paragraph in content[1:]
-            if not SECTION_HEADING_RE.match(paragraph)
+            if paragraph and not SECTION_HEADING_RE.match(paragraph)
         ]
         articles.append(
             DocumentArticle(

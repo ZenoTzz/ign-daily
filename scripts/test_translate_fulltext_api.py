@@ -95,6 +95,16 @@ class AuthoritativeSourceParagraphTests(unittest.TestCase):
                     runpy.run_path(str(fulltext.REPO_ROOT / "scripts/post_translate_check.py"), run_name="__main__")
             self.assertEqual(result.exception.code, 0)
 
+    def test_native_document_roundtrip_keeps_body_when_subtitle_is_empty(self):
+        from import_tencent_polish import parse_document_articles
+        articles = parse_document_articles("26/11/03 标题\n\n正文第一段。\n正文第二段。\n", preserve_empty_subtitle=True)
+        self.assertEqual(len(articles), 1)
+        self.assertEqual(articles[0].subtitle, "")
+        self.assertEqual(articles[0].paragraphs, ["正文第一段。", "正文第二段。"])
+        historical = parse_document_articles("26/11/03 旧稿\n\n旧副标题\n正文。\n", preserve_empty_subtitle={("2026-11-03", "另一篇新稿")})
+        self.assertEqual(historical[0].subtitle, "旧副标题")
+        self.assertEqual(historical[0].paragraphs, ["正文。"])
+
     def test_uses_same_non_body_filter_as_release_gate(self):
         body = "Sony confirmed the lineup."
         byline = "Tom Phillips is IGN's News Editor. You can reach Tom on Bluesky."

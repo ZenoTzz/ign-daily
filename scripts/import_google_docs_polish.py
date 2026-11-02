@@ -154,8 +154,29 @@ def parse_tab_articles(tab: dict[str, Any]) -> list[polish.DocumentArticle]:
         for item in content
         if item.get("paragraph")
     ]
-    text = "\n".join(line for line in lines if line)
-    return polish.parse_document_articles(text)
+    # Preserve the empty subtitle only for matching faithful API documents.
+    # Historical documents retain their existing whitespace-tolerant parser.
+    empty_subtitles: set[tuple[str, str]] = set()
+    candidates_by_date = {}
+    for position, line in enumerate(lines):
+        match = polish.DATE_LINE_RE.match(line)
+        if not match:
+            continue
+        year, month, day, title = match.groups()
+        date = f"20{year}-{month}-{day}"
+        if date not in candidates_by_date:
+            candidates_by_date[date] = polish.load_candidates(date)
+        first_body = next((value for value in lines[position + 1:] if value), "")
+        for candidate in candidates_by_date[date]:
+            data = candidate.translation
+            if data.get("translation_mode") != "faithful" or data.get("subtitle"):
+                continue
+            body = polish.translation_paragraphs(data)
+            if polish.similarity(title, data.get("cn_title", "")) >= 0.85 or (body and polish.similarity(first_body, body[0]) >= 0.8):
+                empty_subtitles.add((date, title.strip()))
+                break
+    text = "\n".join(lines)
+    return polish.parse_document_articles(text, preserve_empty_subtitle=empty_subtitles)
 
 
 def configured_tab_titles(config: dict[str, Any]) -> set[str]:
