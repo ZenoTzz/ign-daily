@@ -1,128 +1,62 @@
-name: Deploy Static Server Mirror
-
+name: Verify Deployed Faithful API Without Article Writes
 on:
-  push:
-    branches:
-      - main
-    paths-ignore:
-      - 'data/**'
-      - 'exchange_rates.json'
   workflow_dispatch:
-
 permissions:
   contents: read
-
-concurrency:
-  group: ign-daily-static-server-deploy
-  cancel-in-progress: false
-
 jobs:
-  quality:
+  verify:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.12'
-          cache: pip
-      - name: Install test dependencies
-        run: python -m pip install -r server_api/requirements.txt
-      - name: Run repository checks
-        env:
-          PYTHONPATH: scripts
-          ALLOW_STALE_EXCHANGE_RATES: '1'
-          IGN_DAILY_WRITE_LOCK: /tmp/ign-daily-ci-write.lock
-        run: |
-          set -euo pipefail
-          python -m unittest discover -s scripts -p 'test_*.py'
-          python -m unittest discover -s server_api -p 'test_*.py'
-          python scripts/test_miniprogram.py
-          python scripts/agent_doctor.py
-          node --test tests/*.test.cjs
-          python tests/api-http-integration.py
-
-  deploy:
-    needs: quality
-    runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 6
     env:
       SERVER_HOST: ${{ secrets.IGN_DAILY_SERVER_HOST }}
       SERVER_PORT: ${{ secrets.IGN_DAILY_SERVER_PORT || '22' }}
       SERVER_USER: ${{ secrets.IGN_DAILY_SERVER_USER }}
       SERVER_PATH: ${{ secrets.IGN_DAILY_SERVER_PATH || '/srv/ign-daily' }}
-      SERVER_API_PATH: ${{ secrets.IGN_DAILY_SERVER_API_PATH || '/srv/ign-daily-api' }}
-
     steps:
-      - name: Check deployment secrets
-        id: check
-        env:
-          SERVER_SSH_KEY: ${{ secrets.IGN_DAILY_SERVER_SSH_KEY }}
-        run: |
-          set -euo pipefail
-          missing=0
-          for name in SERVER_HOST SERVER_USER SERVER_SSH_KEY; do
-            if [ -z "${!name:-}" ]; then
-              echo "::notice::Missing GitHub Actions secret: IGN_DAILY_${name}; static server deployment will be skipped."
-              missing=1
-            fi
-          done
-          if [ "$missing" -eq 0 ]; then
-            echo "configured=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "configured=false" >> "$GITHUB_OUTPUT"
-          fi
-
-      - name: Checkout
-        if: steps.check.outputs.configured == 'true'
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 1
-
-      - name: Package tracked site files
-        if: steps.check.outputs.configured == 'true'
-        run: python3 scripts/package_server_release.py /tmp/ign-daily-site.tar.gz
-
       - name: Configure SSH
-        if: steps.check.outputs.configured == 'true'
         env:
           SERVER_SSH_KEY: ${{ secrets.IGN_DAILY_SERVER_SSH_KEY }}
         run: |
           set -euo pipefail
           mkdir -p ~/.ssh
-          printf '%s\n' "$SERVER_SSH_KEY" > ~/.ssh/ign_daily_server_key
-          chmod 600 ~/.ssh/ign_daily_server_key
+          printf '%s\n' "$SERVER_SSH_KEY" > ~/.ssh/server_key
+          chmod 600 ~/.ssh/server_key
           ssh-keyscan -p "$SERVER_PORT" -H "$SERVER_HOST" >> ~/.ssh/known_hosts
-
-      - name: Upload package
-        if: steps.check.outputs.configured == 'true'
+      - name: One synthetic translation using deployed prompt
         run: |
           set -euo pipefail
-          scp -P "$SERVER_PORT" -i ~/.ssh/ign_daily_server_key \
-            /tmp/ign-daily-site.tar.gz \
-            "$SERVER_USER@$SERVER_HOST:/tmp/ign-daily-site-${GITHUB_SHA}.tar.gz"
-
-      - name: Deploy code and dependencies with rollback
-        if: steps.check.outputs.configured == 'true'
-        run: |
+          ssh -p "$SERVER_PORT" -i ~/.ssh/server_key "$SERVER_USER@$SERVER_HOST" "bash -s -- '$SERVER_PATH'" <<'REMOTE'
           set -euo pipefail
-          ssh -o ServerAliveInterval=30 -o ServerAliveCountMax=10 \
-            -p "$SERVER_PORT" -i ~/.ssh/ign_daily_server_key "$SERVER_USER@$SERVER_HOST" \
-            "bash -s -- '$GITHUB_SHA' '$SERVER_PATH' '$SERVER_API_PATH' '$SERVER_USER'" <<'REMOTE'
-          set -euo pipefail
-          sha="$1"
-          app="$2"
-          api="$3"
-          user="$4"
-          archive="/tmp/ign-daily-site-$sha.tar.gz"
-          stage="$(mktemp -d /tmp/ign-daily-deploy.XXXXXX)"
-          trap 'sudo rm -rf -- "$stage" "$archive"' EXIT
-          tar -xzf "$archive" -C "$stage"
-          for kind in write worker maintenance; do
-            sudo touch "/var/lock/ign-daily-$kind.lock"
-            sudo chown "$user:$user" "/var/lock/ign-daily-$kind.lock"
-            sudo chmod 0664 "/var/lock/ign-daily-$kind.lock"
-          done
-          sudo APP_DIR="$app" API_DIR="$api" python3 -B "$stage/server_api/deploy/deploy_release.py" "$stage"
-          sudo APP_DIR="$app" python3 -B "$stage/server_api/deploy/migrate_luna_to_terra.py"
+          source /srv/ign-daily-ops/config-env.sh
+          cd "$1"
+          load_automation_config
+          export TRANSLATOR_BASE_URL="$API_BASE_URL"
+          export TRANSLATOR_MODEL="$API_FULLTEXT_MODEL"
+          export TRANSLATOR_REASONING_EFFORT="$API_FULLTEXT_THINKING"
+          "$PY" -B - <<'PY'
+          import json, os, sys, urllib.request
+          sys.path.insert(0, 'scripts')
+          import translate_fulltext_api as api
+          from api_provider import resolve_api_key
+          from api_translation_prompt import PROMPT_VERSION
+          api.load_env_file()
+          source = [
+              "Example Studio says its unannounced game may launch in 2027. The studio has not confirmed a release date.",
+              'It will cost $79.99 on Xbox Series S. Director Jane Doe said, "We are still testing."',
+          ]
+          article = {"id": 1, "url": "https://example.test/synthetic-verification", "en_title": "Example Studio says its game may launch in 2027"}
+          terms = api.matched_terms(article["en_title"] + "\n" + "\n".join(source), article=article)
+          messages = api.build_messages(article, source, terms)
+          assert len(messages[0]["content"]) < 1000
+          assert "style_profile" not in json.loads(messages[1]["content"])
+          raw, usage = api.call_deepseek_response(resolve_api_key(os.environ["TRANSLATOR_BASE_URL"]), os.environ["TRANSLATOR_MODEL"], os.environ["TRANSLATOR_BASE_URL"], messages, max_tokens=4096)
+          data = api.normalize_translation(article, api.extract_json(raw), source)
+          assert len(data["paragraphs"]) == 2
+          assert "Jane Doe" in data["paragraphs"][1]["cn"]
+          assert "人民币" not in data["paragraphs"][1]["cn"]
+          assert "Series S" in data["paragraphs"][1]["cn"]
+          print(json.dumps({"verified": True, "prompt_version": PROMPT_VERSION, "model": os.environ["TRANSLATOR_MODEL"], "reasoning_effort": os.environ["TRANSLATOR_REASONING_EFFORT"], "system_chars": len(messages[0]["content"]), "sample": data["paragraphs"]}, ensure_ascii=False))
+          with urllib.request.urlopen("http://127.0.0.1:8010/health", timeout=10) as health:
+              print("API_HEALTH: " + str(health.status))
+          PY
           REMOTE
