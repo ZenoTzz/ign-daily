@@ -170,6 +170,10 @@ data/usage/deepseek-balance.json
 - `consensus` 玩家圈公认（待用户确认）
 - `ai_guess` AI推测（必须用户确认）
 
+豆瓣公开页补词候选同样使用待确认的 `source=ai_guess`，另以 `reference_source=douban`、
+`source_url` 和 `note` 记录实际出处；不自动成为正式词条。`data/douban-lookup-cache.json`
+仅用于网络限流与候选缓存，不是第二个正式词库，翻译提示词不会直接读取它。
+
 ## translation-memory.json（用户确认句段记忆）
 
 词库负责专名，句段记忆只负责英文完全一致的重复段落或直接引语。它不保存模糊自动替换规则。

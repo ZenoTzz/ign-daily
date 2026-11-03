@@ -45,6 +45,7 @@
 | `check_currency.py` | 外币与人民币换算检查 |
 | `enforce_dict_titles.py` | 首页标题词库检查 |
 | `check_dict_fulltext.py` | 全文词库检查 |
+| `douban_terms.py` | 影视新闻中仍保留英文的专名按需查询豆瓣公开页面，只生成待确认词条，不写正式词库；可用 `python scripts/douban_terms.py "Dave Bautista" --url https://movie.douban.com/celebrity/1014003/` 手动查询 |
 | `translation_memory.py` | 管理用户明确确认的精确段落/引语译文；翻译时只检索当前文章命中 |
 | `check_translation_memory.py` | 阻止已批准的相同英文出现不同中文 |
 | `check_translation_quality.py` | 校验新译文的模型元数据、独立复核声明、数字与高置信度漏译风险 |
@@ -72,6 +73,15 @@ python scripts/translation_memory.py approve --date YYYY-MM-DD --article-id ID -
 批准一条直接引语时显式提供完整英文和标准中文，并使用 `--kind quote`。不要将模型候选或未经用户确认的普通润色直接批准。
 
 不要单独跑其中一项后声称整批通过。
+
+豆瓣补词是标题/正文生成后的旁路，不增加模型调用、不改写译文，也不把未经确认的结果注入提示词。
+生产 worker 默认启用，`IGN_DAILY_DOUBAN_LOOKUP=0` 可关闭；本地/CI 运行默认关闭，显式设为 `1` 才联网。
+每篇最多尝试一个英文词组，启发式识别并不保证发现全部专名；现有词库已收录的英文不查询。
+所有 worker 共用 `data/douban-lookup-cache.json`：全局至少间隔 10 分钟，一次最多 3 个请求、每请求超时 3 秒，
+无结果或访问受限后暂停 6 小时，成功结果缓存 30 天，最多保留 500 条缓存。
+不携带登录 Cookie、不使用私有 API、不跟随登录/安全验证重定向、不轮换代理绕过限制。
+候选沿用 `pending_dict`，`source=ai_guess` 表示尚未确认（不是声称名称由模型生成）；
+`reference_source=douban`、`source_url`、`note` 保留出处，用户确认后才进入唯一正式词库并在后续文章命中注入。
 
 ## Google Docs 与学习
 

@@ -32,6 +32,7 @@ from currency_utils import normalize_translation_currency
 from dict_matcher import restore_dictionary_spacing_in_data, term_in_text
 from dict_matcher import matched_terms_for_article
 from dict_matcher import normalize_pending_dict
+from douban_terms import pending_for_translation
 from job_progress import set_article_step
 from normalize_currency_files import normalize_date as normalize_currency_date
 from platform_names import normalize_platform_names_in_translation
@@ -815,6 +816,9 @@ def translate_date(date: str, limit: int = 2) -> int:
             set_article_step(article_id, date=date, step="parse", progress=62, message="解析模型输出")
             result = extract_json(raw)
             data = normalize_translation(article, result, paragraphs_en)
+            data["pending_dict"] = pending_for_translation(
+                text, "\n".join(p["cn"] for p in data["paragraphs"])
+            )
             data = enforce_literal_dictionary_terms(data, paragraphs_en, terms)
             memory_errors = enforce_translation_memory(data, paragraphs_en)
             data["translator"] = "api"

@@ -174,6 +174,7 @@ PY=$APP_VENV/bin/python
 export APP_DIR PY
 export PYTHONUNBUFFERED=1
 export IGN_DAILY_SKIP_GIT=1
+export IGN_DAILY_DOUBAN_LOOKUP="${IGN_DAILY_DOUBAN_LOOKUP:-1}"
 load_automation_config() {
   eval "\$(\$PY - <<'PYCONF'
 import json, shlex

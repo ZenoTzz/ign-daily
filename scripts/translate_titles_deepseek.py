@@ -53,6 +53,7 @@ from platform_names import normalize_platform_names_in_translation
 from prompt_blocks import stable_json, validate_style_check
 from api_translation_prompt import title_user_payload, translation_system_prompt
 from usage_logger import record_deepseek_usage_safe
+from douban_terms import pending_for_translation
 
 
 configure_utf8_stdio()
@@ -514,6 +515,9 @@ def translate_date(date: str, limit: int = 8) -> int:
                 raise ValueError("model output remained truncated after retry")
             if not result["cn_title"] or not result["summary"]:
                 raise ValueError("model returned empty cn_title or summary")
+            result["pending_dict"].extend(pending_for_translation(
+                article_text, result["cn_title"] + "\n" + result["summary"]
+            ))
             with write_lock():
                 latest = load_json(index_path)
                 current = next((a for a in latest.get("articles", []) if a.get("url") == url), None)
