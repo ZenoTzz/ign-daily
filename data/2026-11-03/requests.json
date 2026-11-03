@@ -1,7 +1,23 @@
 {
   "date": "2026-11-03",
-  "requested_ids": [],
-  "requested_articles": [],
-  "requested_at": "2026-11-02T09:37:45.570355+00:00",
+  "requested_ids": [
+    3,
+    4
+  ],
+  "requested_articles": [
+    {
+      "id": 3,
+      "url": "https://www.ign.com/articles/yakuza-series-creator-toshiro-nagoshis-studio-has-officially-shut-down-before-releasing-a-game",
+      "en_title": "Yakuza Series Creator Toshiro Nagoshi's Studio Has Officially Shut Down Before Releasing a Game",
+      "cn_title": "《Yakuza》系列创作者Toshiro Nagoshi的工作室正式关闭，未能推出游戏"
+    },
+    {
+      "id": 4,
+      "url": "https://www.ign.com/articles/sony-issues-yet-another-ps5-firmware-update-as-jailbreak-whac-a-mole-continues-ahead-of-gta-6-release",
+      "en_title": "Sony Issues Yet Another PS5 Firmware Update as Jailbreak Whac-a-Mole Continues Ahead of GTA 6 Release",
+      "cn_title": "《GTA 6》发售临近，Sony再推PS5固件更新应对越狱"
+    }
+  ],
+  "requested_at": "2026-11-03T02:41:19.050739+00:00",
   "requested_by": "ZenoT"
 }

@@ -1,0 +1,104 @@
+{
+  "id": 19,
+  "url": "https://www.ign.com/articles/latest-steam-hardware-survey-shows-just-how-hard-pc-gamers-have-been-hit-by-ai",
+  "en_title": "Latest Steam Hardware Survey Shows Just How Hard PC Gamers Have Been Hit by AI",
+  "cn_title": "最新Steam硬件调查显示AI对PC玩家的冲击有多大",
+  "subtitle": "",
+  "opus_summary": "10月Steam硬件调查显示，16GB内存配置升至用户占比第一，32GB配置占比下降；RTX 3060重回显卡榜首，4核CPU占比也有所上升。文章指出，PC硬件价格持续上涨，Samsung的财报则显示，内存危机明年可能进一步恶化。",
+  "publish_time_cn": "2026-11-03 02:16",
+  "paragraphs": [
+    {
+      "en": "The entirety of 2026 has been marked by continually rising hardware prices, and now, according to the latest Steam Hardware Survey, the average gaming PC is starting to embrace older hardware once more.",
+      "cn": "整个2026年，硬件价格持续上涨，而根据最新的Steam硬件调查，现在一般游戏PC开始再次采用较旧的硬件。"
+    },
+    {
+      "en": "The October Steam Hardware Survey went live yesterday, and it's clear that the state of PC hardware is causing gamers to be a bit more frugal with their builds. The biggest sign of this is in the RAM configuration, where systems using 16GB of RAM have now taken the top spot, rising 3.6% to cover 41.42% of the Steam user base. Users with a 32GB configuration have diminished at the same time, dropping 5.16%, to cover 37.06% of Steam users.",
+      "cn": "10月的Steam硬件调查昨天发布，显然，PC硬件的现状正让玩家在装机时变得更加节俭。最明显的迹象体现在内存配置上：使用16GB内存的系统如今已升至首位，上升3.6%，占Steam用户总数的41.42%。与此同时，使用32GB配置的用户有所减少，下降5.16%，占Steam用户的37.06%。"
+    },
+    {
+      "en": "But it's not just RAM that people are cutting back on. For graphics cards, the RTX 3060 has reclaimed its top spot, growing 0.08%, and now representing 3.62% of all Steam users. That doesn't seem like a lot, but considering the huge amount of GPUs that exist, it's a significant proportion. It probably doesn't hurt that you can get an RTX 3060 used on eBay for around $250–300 right now. For CPUs, 8-core CPUs saw a decline in favor of 4-core CPUs, which rose 1.57% to cover 12.36% of PCs with Steam.",
+      "cn": "但人们削减的不只是内存。在显卡方面，RTX 3060重新夺回首位，增长0.08%，目前占所有Steam用户的3.62%。这看起来不算多，但考虑到现有GPU的数量庞大，这一比例相当可观。目前在eBay上花约250至300美元就能买到一块二手RTX 3060，这可能也有帮助。在CPU方面，8核CPU的占比有所下降，4核CPU则有所上升，增长1.57%，占安装Steam的PC的12.36%。"
+    },
+    {
+      "en": "It's not hard to see why people are opting for less powerful PCs right now. Pretty much every PC component has gone up in price over the last year, to the point where high-end GPUs are flat-out disappearing from retailer's listings .",
+      "cn": "不难看出人们现在为何选择性能较弱的PC。过去一年里，几乎所有PC组件都涨了价，高端GPU甚至直接从零售商的商品列表中消失了。"
+    },
+    {
+      "en": "Meanwhile, Samsung's latest earnings report suggests that the RAM crisis is only going to get worse next year, as that company gears up to forward even more memory to AI data centers. And while all of this is going on, OpenAI CEO Sam Altman even came out and suggested that it's 'quite terrible' for people to have RAM in their own computers.",
+      "cn": "与此同时，Samsung最新的财报表明，随着该公司准备向AI数据中心供应更多内存，内存危机明年只会进一步恶化。而就在这一切发生之际，OpenAI首席执行官Sam Altman甚至公开表示，人们在自己的电脑里使用内存是「相当糟糕」的。"
+    },
+    {
+      "en": "It's not just gaming PCs that are getting hit by this ongoing RAM crisis. The PS5 Pro sold out ahead of GTA 6, prompting retailers to charge upwards of $1,399 for used consoles , and Microsoft started asking people to sell unused Xboxes . In the face of all this, it becomes less shocking when rumors appear suggesting that the next-generation Xbox is going to cost $1,800 .",
+      "cn": "受到这场持续的内存危机冲击的不只是游戏PC。PS5 Pro在《GTA6》推出前售罄，促使零售商为二手主机开出1,399美元以上的价格，而微软开始要求人们出售闲置的XBOX主机。面对这一切，当有传言称下一代XBOX售价将达到1,800美元时，也就没那么令人震惊了。"
+    },
+    {
+      "en": "But at least when faced with these higher RAM prices, PC builders have the choice to opt for a lower-end configuration, and that's exactly what's happening with the latest Steam Hardware Survey.",
+      "cn": "但至少在面对这些上涨的内存价格时，PC装机用户可以选择较低端的配置，而这正是最新Steam硬件调查所显示的情况。"
+    }
+  ],
+  "pending_dict": [],
+  "translated_terms": {
+    "Microsoft": "微软",
+    "GTA 6": "GTA6",
+    "Xbox": "XBOX"
+  },
+  "cover": "https://kraken.ignimgs.com/apple-touch-icon.png",
+  "images": [
+    {
+      "url": "https://kraken.ignimgs.com/apple-touch-icon.png",
+      "caption": ""
+    },
+    {
+      "url": "https://assets-prd.ignimgs.com/2022/11/07/61wtkpgpzul-1667837948317.jpg",
+      "caption": ""
+    }
+  ],
+  "translation_mode": "faithful",
+  "translator": "api",
+  "translator_provider": "openai-compatible",
+  "translator_model": "gpt-6.1-terra",
+  "reasoning_effort": "medium",
+  "prompt_version": "api-faithful-v3",
+  "quality_gate_version": 1,
+  "quality_status": "pending_human_review",
+  "quality_review": {
+    "mode": "human",
+    "status": "pending",
+    "checks": {
+      "source_coverage": true
+    },
+    "warnings": [
+      {
+        "type": "summary_length",
+        "detail": "opus_summary targets 70-80 non-space characters and must stay within 60-110, got 114"
+      },
+      {
+        "type": "currency_cn",
+        "detail": "translated text has foreign-currency amount without CNY conversion: 300美元",
+        "context": "观。目前在eBay上花约250至300美元就能买到一块二手RTX 3060，这可能也有帮助。在CPU方面，"
+      },
+      {
+        "type": "currency_cn",
+        "detail": "translated text has foreign-currency amount without CNY conversion: 1,399美元",
+        "context": "前售罄，促使零售商为二手主机开出1,399美元以上的价格，而微软开始要求人们出售闲置的XBOX主机。面对这一切"
+      },
+      {
+        "type": "currency_cn",
+        "detail": "translated text has foreign-currency amount without CNY conversion: 1,800美元",
+        "context": "有传言称下一代XBOX售价将达到1,800美元时，也就没那么令人震惊了。\n但至少在面对这些上涨的内存价格时，P"
+      },
+      {
+        "type": "currency_source",
+        "detail": "source mentions foreign-currency amount(s), but translation has no CNY conversion: $250, $1,399 , $1,800 "
+      },
+      {
+        "type": "format",
+        "detail": "🚨 MISSING subtitle (2-15字创意短句，必须手动写入)"
+      },
+      {
+        "type": "format",
+        "detail": "opus_summary LENGTH 114, target 70-80, allowed 60-110"
+      }
+    ]
+  }
+}

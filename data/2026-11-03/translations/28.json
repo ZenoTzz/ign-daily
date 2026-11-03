@@ -1,0 +1,123 @@
+{
+  "id": 28,
+  "url": "https://www.ign.com/articles/sony-wants-to-buy-your-ps5-console-for-400",
+  "en_title": "Sony Wants to Buy Your PS5 Console for $400",
+  "cn_title": "Sony想以400美元收购你的PS5主机",
+  "subtitle": "",
+  "opus_summary": "Sony向PlayStation应用用户推送通知，提出回收标准版PS5及两个手柄，最高支付400美元(约合人民币2660元)并直接转入银行账户。此举可能与硬件短缺或收购二手库存有关。PS5目前售价为600至650美元(约合人民币3990至4322元)，PS5 Pro售价为900美元(约合人民币5985元)。",
+  "publish_time_cn": "2026-11-03 06:08",
+  "paragraphs": [
+    {
+      "en": "Sony is offering $400 to people who are willing to part ways with their PS5 and two controllers.",
+      "cn": "Sony正向愿意卖掉PS5和两个手柄的人提供400美元。"
+    },
+    {
+      "en": "As spotted by ResetEra user Jay_Horror , PlayStation is sending out notifications to fans who have the PlayStation app on their phones. The notification tells users that they can trade in their console to Sony and have money sent directly to their bank account. This offer is valued up to $400 for anyone who has a standard PS5 and two controllers. Although trade-in programs, particularly around the holiday season, aren't uncommon for retailers like GameStop, it isn't as normal to see platform holders reaching out directly to customers like this.",
+      "cn": "正如ResetEra用户Jay_Horror所发现的，PlayStation正在向手机上安装了PlayStation应用的粉丝发送通知。通知告诉用户，他们可以将主机折价卖给Sony，并将款项直接汇入银行账户。对于拥有一台标准版PS5和两个手柄的人，这项报价最高可达400美元。虽然以旧换新活动在GameStop等零售商中并不罕见，尤其是在假日季前后，但平台持有方像这样直接联系客户就不那么常见了。"
+    },
+    {
+      "en": "It may suggest that Sony is preparing for a shortage of hardware or is interested in pre-owned stock that it can sell at a more affordable price than a brand-new unit. PlayStation 5 consoles are currently $600 - $650, depending on whether you get a disc drive. If you want the more premium PS5 Pro console, it will set you back $900. However, due to the demand for the Pro in the lead-up to GTA 6's release, it has been hard to get one at retail price. As a result, resellers and even retailers like GameStop are selling used PS5 Pros for as much as $1,400 .",
+      "cn": "这可能表明Sony正在为硬件短缺做准备，或是对二手库存感兴趣，以便将其以比全新主机更实惠的价格出售。PS5主机目前售价为600至650美元，具体取决于是否配备光驱。如果你想要更高端的PS5 Pro主机，则需要花费900美元。不过，由于GTA 6发售前对Pro的需求旺盛，人们一直很难以零售价买到一台。因此，转售商甚至GameStop这样的零售商都在以高达1400美元的价格出售二手PS5 Pro。"
+    },
+    {
+      "en": "If you're someone who bought a PS5 before prices began to jump and don't use it, this isn't a terrible deal. Given the console initially cost $500, getting $400 back (so long as you also acquired an additional controller at some point) is a solid trade-in value. At this point in the PS4's life cycle, you wouldn't have gotten anywhere near close to $400 back at a retailer like GameStop.",
+      "cn": "如果你在价格开始上涨之前买了一台PS5，而现在不用它，这笔交易还算不错。考虑到这台主机最初售价为500美元，能收回400美元（只要你也曾另外买过一个手柄）是个相当不错的以旧换新价格。在PS4生命周期的这个阶段，你在GameStop这样的零售商那里能拿回的钱远远达不到400美元。"
+    }
+  ],
+  "pending_dict": [],
+  "translated_terms": {
+    "PlayStation 5": "PS5",
+    "PlayStation": "PlayStation",
+    "GTA 6": "GTA 6",
+    "Sony": "Sony"
+  },
+  "cover": "https://assets-prd.ignimgs.com/2025/02/26/ps5console-1740609475402.jpeg",
+  "images": [
+    {
+      "url": "https://assets-prd.ignimgs.com/2025/02/26/ps5console-1740609475402.jpeg?width=1280&format=jpg&auto=webp&quality=80",
+      "caption": ""
+    },
+    {
+      "url": "https://kraken.ignimgs.com/apple-touch-icon.png",
+      "caption": ""
+    },
+    {
+      "url": "https://assets-prd.ignimgs.com/2024/09/10/ps5-1725981325370.jpg",
+      "caption": ""
+    }
+  ],
+  "translation_mode": "faithful",
+  "translator": "api",
+  "translator_provider": "openai-compatible",
+  "translator_model": "gpt-6.1-terra",
+  "reasoning_effort": "medium",
+  "prompt_version": "api-faithful-v1",
+  "quality_gate_version": 1,
+  "quality_status": "pending_human_review",
+  "quality_review": {
+    "mode": "human",
+    "status": "pending",
+    "checks": {
+      "source_coverage": true
+    },
+    "warnings": [
+      {
+        "type": "summary_length",
+        "detail": "opus_summary targets 70-80 non-space characters and must stay within 60-110, got 153"
+      },
+      {
+        "type": "currency_cn",
+        "detail": "translated text has foreign-currency amount without CNY conversion: 400美元",
+        "context": "Sony想以400美元收购你的PS5主机\n\nSony向PlayStation应用用户推"
+      },
+      {
+        "type": "currency_cn",
+        "detail": "translated text has foreign-currency amount without CNY conversion: 400美元",
+        "context": "愿意卖掉PS5和两个手柄的人提供400美元。\n正如ResetEra用户Jay_Horror所发现的，Pla"
+      },
+      {
+        "type": "currency_cn",
+        "detail": "translated text has foreign-currency amount without CNY conversion: 400美元",
+        "context": "和两个手柄的人，这项报价最高可达400美元。虽然以旧换新活动在GameStop等零售商中并不罕见，尤其是在"
+      },
+      {
+        "type": "currency_cn",
+        "detail": "translated text has foreign-currency amount without CNY conversion: 650美元",
+        "context": "售。PS5主机目前售价为600至650美元，具体取决于是否配备光驱。如果你想要更高端的PS5 Pro主机，"
+      },
+      {
+        "type": "currency_cn",
+        "detail": "translated text has foreign-currency amount without CNY conversion: 900美元",
+        "context": "的PS5 Pro主机，则需要花费900美元。不过，由于GTA 6发售前对Pro的需求旺盛，人们一直很难以零"
+      },
+      {
+        "type": "currency_cn",
+        "detail": "translated text has foreign-currency amount without CNY conversion: 1400美元",
+        "context": "eStop这样的零售商都在以高达1400美元的价格出售二手PS5 Pro。\n如果你在价格开始上涨之前买了一台"
+      },
+      {
+        "type": "currency_cn",
+        "detail": "translated text has foreign-currency amount without CNY conversion: 500美元",
+        "context": "算不错。考虑到这台主机最初售价为500美元，能收回400美元（只要你也曾另外买过一个手柄）是个相当不错的以"
+      },
+      {
+        "type": "currency_cn",
+        "detail": "translated text has foreign-currency amount without CNY conversion: 400美元",
+        "context": "主机最初售价为500美元，能收回400美元（只要你也曾另外买过一个手柄）是个相当不错的以旧换新价格。在PS"
+      },
+      {
+        "type": "currency_cn",
+        "detail": "translated text has foreign-currency amount without CNY conversion: 400美元",
+        "context": "的零售商那里能拿回的钱远远达不到400美元。"
+      },
+      {
+        "type": "format",
+        "detail": "🚨 MISSING subtitle (2-15字创意短句，必须手动写入)"
+      },
+      {
+        "type": "format",
+        "detail": "opus_summary LENGTH 153, target 70-80, allowed 60-110"
+      }
+    ]
+  }
+}
