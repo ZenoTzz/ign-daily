@@ -161,7 +161,7 @@ def matched_terms_for_article(text: str, article: dict[str, Any] | None = None, 
         for items in load_json(dict_path()).values():
             if isinstance(items, dict):
                 for en, entry in items.items():
-                    if isinstance(entry, dict) and (entry.get("source") in {"user", "ign_cn", "bilibili", "official"} or entry.get("official") is True):
+                    if isinstance(entry, dict) and (entry.get("source") in {"user", "ign_cn", "bilibili", "consensus", "official"} or entry.get("official") is True):
                         confirmed.add(en)
     for en, cn, cat in sorted(iter_dict_terms(), key=lambda row: len(row[0]), reverse=True):
         if confirmed_only and en not in confirmed:

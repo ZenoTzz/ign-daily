@@ -46,6 +46,16 @@ class AuthoritativeSourceParagraphTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             fulltext.normalize_paragraphs({"paragraphs": [{"cn": "第一"}]}, ["First", "Second"])
 
+    def test_god_of_war_consensus_entry_is_injected_for_tv_adaptation(self):
+        rows = [("God of War", "战神", "games")]
+        dictionary = {"games": {"God of War": {"cn": "战神", "source": "consensus"}}}
+        article = {"en_title": "Dave Bautista will play Kratos in God of War", "category": "影视资讯"}
+        with patch("dict_matcher.load_json", return_value=dictionary), patch("dict_matcher.iter_dict_terms", return_value=rows):
+            terms = fulltext.matched_terms(article["en_title"], article=article)
+        self.assertEqual(terms, {"God of War": "战神"})
+        messages = fulltext.build_messages(article, ["Prime Video's God of War series."], terms)
+        self.assertEqual(json.loads(messages[1]["content"])["matched_dictionary_terms"]["God of War"], "战神")
+
     def test_normalization_does_not_invent_subtitle_or_currency_conversion(self):
         article = {"id": 1, "url": "https://example.test/a", "en_title": "A"}
         data = fulltext.normalize_translation(article, {"cn_title": "标题", "paragraphs": [{"cn": "PS5游戏售价80美元，仅支持XBOX Series S。"}]}, ["The game costs $80 on Xbox Series S."])
