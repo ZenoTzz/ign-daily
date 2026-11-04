@@ -1,0 +1,92 @@
+{
+  "id": 15,
+  "url": "https://www.ign.com/articles/gta-6-preload-times-and-install-size-confirmed-rockstar-announces-physical-cover-art-poster-and-map-of-leonida",
+  "en_title": "GTA 6 Preload Times and Install Size Confirmed, Rockstar Announces Physical Cover Art Poster and Map of Leonida",
+  "cn_title": "《GTA6》预载时间和安装大小确定，Rockstar宣布推出实体封面艺术海报和Leonida地图",
+  "subtitle": "",
+  "opus_summary": "Rockstar确认，《GTA6》PS5版将于11月10日当地时间零点开启预载，XBOX Series X及S版于11月10日零点GMT开启预载，预载文件最高为212 GB。游戏将于11月19日发售，官方届时还将提供封面海报和Leonida地图的免费下载，并在发售后推出实体版。",
+  "publish_time_cn": "2026-11-03 23:08",
+  "paragraphs": [
+    {
+      "en": "Rockstar Games has confirmed the GTA 6 preload times as well as the install size of the game.",
+      "cn": "Rockstar确认了《GTA6》的预载时间以及游戏的安装大小。"
+    },
+    {
+      "en": "Digital preloading on PS5 kicks off at midnight local time in your respective timezone on Tuesday, November 10, Rockstar said . On Xbox Series X and S it’s slightly different — preloading begins on Tuesday, November 10 at 12am GMT (UK time). That's 4pm PT and 7pm ET on Novemember 9. Code-in-box versions for both consoles “should” be available from retailers beginning November 12, Rockstar added.",
+      "cn": "Rockstar表示，PS5数字版预载将于11月10日星期二各自所在时区的当地时间午夜开始。XBOX Series X和S略有不同——预载将于11月10日星期二格林尼治标准时间（英国时间）凌晨12点开始，即11月9日太平洋时间下午4点和东部时间晚上7点。Rockstar补充说，两款主机的盒装兑换码版本「应该」会从11月12日起在零售商处发售。"
+    },
+    {
+      "en": "GTA 6 itself launches globally on November 19, using the local midnight release timing strategy across PS5 and Xbox Series X and S.",
+      "cn": "《GTA6》将于11月19日在全球发售，PS5和XBOX Series X及S均采用当地时间午夜解锁的发售策略。"
+    },
+    {
+      "en": "As for the install size, Rockstar confirmed that the preload file weighs in at up to 212 GB, “depending on your device.” “So make sure you've got ample space to begin pre-loading as soon as possible,” Rockstar said.",
+      "cn": "至于安装大小，Rockstar确认预载文件最大为212 GB，「具体取决于你的设备」。Rockstar表示：「所以请确保你有足够的空间，以便尽快开始预载。」"
+    },
+    {
+      "en": "Elsewhere, Rockstar said that on November 19, the day GTA 6 comes out, it will add an official printable GTA 6 cover art poster and map of Leonida as a free digital download to the official site. A double-sided physical version of this poster will also be made available shortly after launch from the Rockstar Store — for $0.99 on its own or as a free gift with any purchase from the Rockstar Store.",
+      "cn": "此外，Rockstar表示，11月19日《GTA6》发售当天，官方将把可打印的《GTA6》封面艺术海报和Leonida地图添加到官方网站，供玩家免费下载。该海报的双面实体版也将在游戏发售后不久于Rockstar Store推出——单独购买价格为0.99美元，或在Rockstar Store购买任何商品时作为赠品免费获得。"
+    }
+  ],
+  "pending_dict": [],
+  "translated_terms": {
+    "Rockstar Games": "Rockstar",
+    "Xbox Series": "XBOX Series",
+    "Rockstar": "Rockstar",
+    "GTA 6": "GTA6",
+    "Xbox": "XBOX"
+  },
+  "cover": "https://assets-prd.ignimgs.com/2026/11/03/vintage-vice-city-pack-exclusive-looks-02-1793718447959.jpg",
+  "images": [
+    {
+      "url": "https://assets-prd.ignimgs.com/2026/11/03/vintage-vice-city-pack-exclusive-looks-02-1793718447959.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "caption": ""
+    },
+    {
+      "url": "https://kraken.ignimgs.com/apple-touch-icon.png",
+      "caption": ""
+    },
+    {
+      "url": "https://assets-prd.ignimgs.com/2026/07/20/9f51f0ccdb65bd29c36a0907a738c2902a712f03e2fd6470-1784587649326.jpg",
+      "caption": ""
+    }
+  ],
+  "translation_mode": "faithful",
+  "translator": "api",
+  "translator_provider": "openai-compatible",
+  "translator_model": "gpt-6.1-terra",
+  "reasoning_effort": "medium",
+  "prompt_version": "api-faithful-v3",
+  "quality_gate_version": 1,
+  "quality_status": "pending_human_review",
+  "quality_review": {
+    "mode": "human",
+    "status": "pending",
+    "checks": {
+      "source_coverage": true
+    },
+    "warnings": [
+      {
+        "type": "summary_length",
+        "detail": "opus_summary targets 70-80 non-space characters and must stay within 60-110, got 136"
+      },
+      {
+        "type": "currency_cn",
+        "detail": "translated text has foreign-currency amount without CNY conversion: 0.99美元",
+        "context": "Store推出——单独购买价格为0.99美元，或在Rockstar Store购买任何商品时作为赠品免费获得"
+      },
+      {
+        "type": "currency_source",
+        "detail": "source mentions foreign-currency amount(s), but translation has no CNY conversion: $0.99 "
+      },
+      {
+        "type": "format",
+        "detail": "🚨 MISSING subtitle (2-15字创意短句，必须手动写入)"
+      },
+      {
+        "type": "format",
+        "detail": "opus_summary LENGTH 136, target 70-80, allowed 60-110"
+      }
+    ]
+  }
+}

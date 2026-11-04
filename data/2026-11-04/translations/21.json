@@ -1,0 +1,86 @@
+{
+  "id": 21,
+  "url": "https://www.ign.com/articles/the-elder-scrolls-vi-sentinel-finally-got-its-name-today-but-bethesda-says-it-will-be-some-time-before-were-ready-to-share-more",
+  "en_title": "The Elder Scrolls VI: Sentinel Finally Got Its Name Today, but Bethesda Says It Will Be 'Some Time Before We’re Ready to Share More'",
+  "cn_title": "《上古卷轴6：Sentinel》今天终于公布名称，但贝塞斯达表示「还需要一段时间才能准备好分享更多内容」",
+  "subtitle": "",
+  "opus_summary": "贝塞斯达公布了《上古卷轴6：Sentinel》的名称和地点，并表示还需一段时间才会分享更多消息。彭博社记者Jason Schreier称，游戏距离发售仍有两年以上。贝塞斯达和XBOX CEO Asha Sharma此前确认，游戏已处于可玩状态。",
+  "publish_time_cn": "2026-11-04 00:59",
+  "paragraphs": [
+    {
+      "en": "Bethesda finally revealed the name for The Elder Scrolls VI: Sentinel, more than eight years after teasing it at E3 2018 , but we'll reportedly have to wait at least two more years before it comes out.",
+      "cn": "在2018年E3上预告《上古卷轴6：Sentinel》八年多后，贝塞斯达终于公布了游戏名称，但据报道，我们至少还要再等两年才能等到它发售。"
+    },
+    {
+      "en": "After releasing its 'Official Name Reveal' trailer for The Elder Scrolls VI: Sentinel, Bethesda posted on X / Twitter to say that \"Development continues, and while it’ll be some time before we’re ready to share more, it feels great to finally reveal the name and location with you.\"",
+      "cn": "发布《上古卷轴6：Sentinel》的「官方名称公布」预告片后，贝塞斯达在X上发文表示：「开发工作仍在继续，虽然还需要一段时间才能准备好分享更多内容，但终于能向大家公布名称和地点，感觉很棒。」"
+    },
+    {
+      "en": "So, if you were hoping that Bethesda breaking its silence was a sign that the game was coming out any time soon, well, you're going to have to wait a bit longer.",
+      "cn": "所以，如果你原本希望贝塞斯达打破沉默是游戏即将发售的迹象，那么，你还得再等一段时间。"
+    },
+    {
+      "en": "What's taking so long? Perhaps the better question is, why did Bethesda announced The Elder Scrolls 6 so early? Bloomberg's Jason Schreier posted on Bluesky to say that when Bethesda teased The Elder Scrolls 6 back in 2018, it was to \"to soften the blow of Fallout 76,\" rather than to suggest it was anywhere close to release. The multiplayer-focused Fallout 76 was panned by critics at launch, with most Bethesda fans expressing their dismay that the studio had veered away from its single-player roots. Schreier followed up to say that The Elder Scrolls 6 is \"still more than two years away!\"",
+      "cn": "为什么要花这么久？或许更好的问题是，贝塞斯达为什么这么早就公布《上古卷轴6》？彭博社的Jason Schreier在Bluesky发文表示，贝塞斯达早在2018年预告《上古卷轴6》，是为了「缓和《辐射76》带来的冲击」，而不是暗示游戏离发售已经不远。主打多人的《辐射76》在发售时遭到评论界批评，大多数贝塞斯达粉丝也对工作室偏离其单人游戏根基表示失望。Schreier随后补充说，《上古卷轴6》「距离发售还有两年多！」"
+    },
+    {
+      "en": "However, both Bethesda and Xbox CEO Asha Sharma have confirmed The Elder Scrolls 6 is in a playable state. In August, Sharma tweeted that she was getting a live playthrough of the game, while also teasing the subtitle with a lot of asterisks, which sent Elder Scrolls fans into a frenzy trying to figure out what the game would be called.",
+      "cn": "不过，贝塞斯达和XBOX首席执行官Asha Sharma都已确认，《上古卷轴6》目前已处于可玩状态。8月，Sharma发推称，她正在观看游戏的现场游玩演示，同时还用大量星号预告了副标题，这让《上古卷轴》粉丝疯狂猜测游戏的名称。"
+    }
+  ],
+  "pending_dict": [],
+  "translated_terms": {
+    "The Elder Scrolls VI": "上古卷轴6",
+    "Jason Schreier": "Jason Schreier",
+    "Asha Sharma": "Asha Sharma",
+    "Bloomberg": "彭博社",
+    "Bethesda": "贝塞斯达",
+    "Fallout": "辐射",
+    "Twitter": "X",
+    "Xbox": "XBOX"
+  },
+  "cover": "https://assets-prd.ignimgs.com/2026/11/03/celebrating-40-years-of-bethesda-game-studios-7-46-screenshot-1793718533009.png",
+  "images": [
+    {
+      "url": "https://assets-prd.ignimgs.com/2026/11/03/celebrating-40-years-of-bethesda-game-studios-7-46-screenshot-1793718533009.png?width=1280&format=jpg&auto=webp&quality=80",
+      "caption": ""
+    },
+    {
+      "url": "https://kraken.ignimgs.com/apple-touch-icon.png",
+      "caption": ""
+    },
+    {
+      "url": "https://assets-prd.ignimgs.com/2026/11/03/elderscrolls6-1793722986773.png",
+      "caption": ""
+    }
+  ],
+  "translation_mode": "faithful",
+  "translator": "api",
+  "translator_provider": "openai-compatible",
+  "translator_model": "gpt-6.1-terra",
+  "reasoning_effort": "medium",
+  "prompt_version": "api-faithful-v3",
+  "quality_gate_version": 1,
+  "quality_status": "pending_human_review",
+  "quality_review": {
+    "mode": "human",
+    "status": "pending",
+    "checks": {
+      "source_coverage": true
+    },
+    "warnings": [
+      {
+        "type": "summary_length",
+        "detail": "opus_summary targets 70-80 non-space characters and must stay within 60-110, got 118"
+      },
+      {
+        "type": "format",
+        "detail": "🚨 MISSING subtitle (2-15字创意短句，必须手动写入)"
+      },
+      {
+        "type": "format",
+        "detail": "opus_summary LENGTH 118, target 70-80, allowed 60-110"
+      }
+    ]
+  }
+}
