@@ -1,0 +1,80 @@
+{
+  "id": 21,
+  "url": "https://www.ign.com/articles/biowares-final-years-were-filmed-and-will-be-revealed-in-a-new-documentary",
+  "en_title": "BioWare's Final Years Were Filmed and Will Be Revealed in a New Documentary",
+  "cn_title": "BioWare最后几年的历程已被拍摄下来，并将在一部新纪录片中披露",
+  "subtitle": "",
+  "opus_summary": "纪录片《Massive Effect: The BioWare Story》将展现BioWare最后几年的历程，其中包括其最后两年的影像。Geoff Keighley确认影片将于2027年上映。纪录片还将收录Casey Hudson、Jennifer Hale等人的独家采访与见解。",
+  "publish_time_cn": "2026-11-06 03:48",
+  "paragraphs": [
+    {
+      "en": "The last two years of BioWare's life were filmed and will be shown in a new documentary about the game studio.",
+      "cn": "BioWare存续期间的最后两年已被拍摄下来，并将在一部关于这家游戏工作室的新纪录片中呈现。"
+    },
+    {
+      "en": "The documentary, titled Massive Effect: The BioWare Story, will show the studio's journey over the last few years. While it's unclear if this will include new footage of the canceled Mass Effect game, it is a rare peek behind the curtain and likely a raw one, given how the story ends. Industry veteran Geoff Keighley revealed that he was interviewed for the film earlier this year, and confirmed that it will be released sometime in 2027.",
+      "cn": "这部名为《Massive Effect: The BioWare Story》的纪录片将展现工作室过去几年的历程。目前尚不清楚其中是否会包含那款已取消的《Mass Effect》游戏的新影像，但这是一次难得的幕后窥探，考虑到故事的结局，呈现的内容很可能也会十分真实。业界资深人士Geoff Keighley透露，他在今年早些时候接受了这部纪录片的采访，并确认影片将在2027年的某个时候上映。"
+    },
+    {
+      "en": "The project is being produced by Shane Fennessey and Adam Scorgie for Canada‘s Super Channel, as BioWare was primarily a Canadian studio. It's unclear if it will also be made available online for those outside of Canada. The documentary will feature exclusive interviews and insights from BioWare talent, such as Mass Effect game director Casey Hudson, Jennifer Hale (voice actress for the female variant of General Shepherd), and many more. It should be an interesting watch whenever it is released.",
+      "cn": "由于BioWare主要是一家加拿大工作室，该项目正由Shane Fennessey和Adam Scorgie为加拿大的Super Channel制作。目前尚不清楚纪录片是否也会在线上提供给加拿大以外的观众观看。纪录片将收录对BioWare人才的独家采访和他们的见解，包括《Mass Effect》游戏总监Casey Hudson、Jennifer Hale（女性版Shepherd将军的配音演员）以及其他许多人。无论何时上映，这部纪录片应该都会值得一看。"
+    },
+    {
+      "en": "BioWare was shut down last month , much to the shock of the wider industry and fans alike. The studio had been struggling for a while; its last three games were misfires, and the next Mass Effect game was expected to still be years away. As a result, EA reportedly decided to place its bets on a new Star Wars Battlefront game from DICE and Respawn instead of continuing to fund a new Mass Effect game.",
+      "cn": "BioWare上个月被关闭，令整个业界和粉丝都大为震惊。这家工作室此前已经挣扎了一段时间；其最后三款游戏都未获成功，而下一款《Mass Effect》游戏预计还要等上好几年。据报道，因此EA决定将赌注押在由DICE和Respawn开发的一款新《Star Wars Battlefront》游戏上，而不是继续为一款新《Mass Effect》游戏提供资金。"
+    },
+    {
+      "en": "A trailer for Mass Effect 5 , which was apparently called Mass Effect Universe, did find its way online, painting a better picture of what fans could've expected from the canceled game. Some fans have held out hope that the Mass Effect IP could be acquired by another company, but as of right now, it doesn't seem like that's in the cards.",
+      "cn": "《Mass Effect 5》的一支预告片确实流传到了网上，这款游戏似乎名为《Mass Effect Universe》；预告片让粉丝更清楚地了解了这款已取消的游戏原本可能呈现的内容。一些粉丝一直抱有希望，认为《Mass Effect》IP可能会被另一家公司收购，但截至目前，这似乎不太可能发生。"
+    }
+  ],
+  "pending_dict": [],
+  "translated_terms": {
+    "Star Wars": "Star Wars",
+    "BioWare": "BioWare"
+  },
+  "cover": "https://assets-prd.ignimgs.com/2026/10/25/mass-effect-shepard-1792972518127.png",
+  "images": [
+    {
+      "url": "https://assets-prd.ignimgs.com/2026/10/25/mass-effect-shepard-1792972518127.png?width=1280&format=jpg&auto=webp&quality=80",
+      "caption": ""
+    },
+    {
+      "url": "https://kraken.ignimgs.com/apple-touch-icon.png",
+      "caption": ""
+    },
+    {
+      "url": "https://assets-prd.ignimgs.com/2020/11/07/mass-effect-next-chapter-button-1604783743528.jpg",
+      "caption": ""
+    }
+  ],
+  "translation_mode": "faithful",
+  "translator": "api",
+  "translator_provider": "openai-compatible",
+  "translator_model": "gpt-6.1-terra",
+  "reasoning_effort": "medium",
+  "prompt_version": "api-faithful-v3",
+  "quality_gate_version": 1,
+  "quality_status": "pending_human_review",
+  "quality_review": {
+    "mode": "human",
+    "status": "pending",
+    "checks": {
+      "source_coverage": true
+    },
+    "warnings": [
+      {
+        "type": "summary_length",
+        "detail": "opus_summary targets 70-80 non-space characters and must stay within 60-110, got 134"
+      },
+      {
+        "type": "format",
+        "detail": "🚨 MISSING subtitle (2-15字创意短句，必须手动写入)"
+      },
+      {
+        "type": "format",
+        "detail": "opus_summary LENGTH 134, target 70-80, allowed 60-110"
+      }
+    ]
+  }
+}
