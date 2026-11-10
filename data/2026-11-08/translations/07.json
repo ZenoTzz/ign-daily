@@ -1,0 +1,106 @@
+{
+  "id": 7,
+  "url": "https://www.ign.com/articles/i-feel-like-modding-is-kind-of-dying-mass-effect-3-multiplayer-modder-on-ais-impact-on-the-scene",
+  "en_title": "'I Feel Like Modding is Kind Of Dying' – Mass Effect 3 Multiplayer Modder on AI's Impact on the Scene",
+  "cn_title": "「我觉得Mod制作正在走向衰落」——《质量效应3》多人模式Mod制作者谈AI对Mod圈的影响",
+  "subtitle": "",
+  "opus_summary": "《Mass Effect 3》多人模组作者Mgamerz认为，AI降低了模组制作门槛，也带来了大量低质量内容。他表示，缺乏优化或未考虑兼容性的模组可能影响游戏运行及其他项目，而使用AI为自己制作内容并无问题。",
+  "publish_time_cn": "2026-11-08 01:00",
+  "paragraphs": [
+    {
+      "en": "Over the past few months, there's been an explosion of AI in the modding scene. Whether it's mashup mods on Twitter or full decompilation done by Claude , AI is everywhere in the mod community, and it could be killing the hobby.",
+      "cn": "过去几个月，AI在Mod制作圈迅速爆发。无论是X上的混搭Mod，还是由Claude完成的完整反编译，AI在Mod社区中无处不在，而它可能正在扼杀这一爱好。"
+    },
+    {
+      "en": "I got a chance to sit down with ME3Tweaks' Mgamerz to talk about his new Mass Effect Legendary Edition ME3 Multiplayer mod, where I asked him about how AI has affected the modding community. While he admits that Claude is very effective at modding games, it's causing an avalanche of low-effort content that's hard to sift through. And, while there has always been a range of quality for mods, the inherent difficulty of getting into a game's files and changing things was a natural filter that's slowly eroding.",
+      "cn": "我有机会与ME3Tweaks的Mgamerz坐下来聊聊他为《质量效应：传奇版》制作的新《质量效应3》多人模式Mod，并向他询问了AI对Mod社区的影响。他承认Claude在制作游戏Mod方面非常有效，但它正催生出大量缺乏用心的内容，让人难以从中筛选。虽然Mod的质量一直参差不齐，但进入游戏文件并进行修改本身的难度曾是一道天然的筛选门槛，而这道门槛正在慢慢消失。"
+    },
+    {
+      "en": "Mgamerz told me, \"The difficulty of making mods and getting into it filtered out a lot of low-quality stuff. You see this on stuff like the Switch eShop, I've heard. It's full of slop, because there's no quality control and you can just ship whatever, and then users have to dredge through all sorts of stuff like that.\"",
+      "cn": "Mgamerz告诉我：「制作Mod和入门的难度过滤掉了很多低质量的东西。我听说你能在Switch eShop之类的地方看到这种情况。那里充斥着粗制滥造的东西，因为没有质量管控，你想发布什么都行，然后用户就不得不在各种这样的东西里费力翻找。」"
+    },
+    {
+      "en": "Although typing in a prompt to mod your own copy of a game is one thing, the problems start to appear once you start distributing it on platforms like Nexus Mods, where you have to be mindful about how your mod will interact with other add-ons, otherwise you're likely to just break peoples' games.",
+      "cn": "输入提示词来给自己的游戏制作Mod是一回事，但一旦你开始在Nexus Mods等平台上发布它，问题就出现了：你必须留意自己的Mod会如何与其他附加内容相互作用，否则很可能会直接导致别人的游戏出问题。"
+    },
+    {
+      "en": "Mgamerz laid out that process, telling me, \"In the modding community, you have an ecosystem. For example, I have my mod manager, you deploy mods through the mod manager, it runs a bunch of checks on the mods to make sure you're not going to ship something that's just going to break someone's game immediately.\"",
+      "cn": "Mgamerz向我讲述了这一过程：「在Mod社区里，有一个生态系统。比如，我有自己的Mod管理器，你通过Mod管理器部署Mod，它会对Mod进行一系列检查，确保你不会发布一个立即导致别人游戏出问题的东西。」"
+    },
+    {
+      "en": "These AI mods can do more than just break other people's mods too — they can also make your game much harder to run if they aren't optimized properly. For example, Mgamerz says, \"There's certain knowledge, like you don't put stuff in startup files because it wastes tons of memory. If you stuff everything in there, you boot the game, oh, now the game takes an extra gigabyte of memory for your single mod to work, because you didn't want to do it the proper way.\"",
+      "cn": "这些AI Mod造成的影响也不只是让别人的Mod出问题——如果没有经过适当优化，它们还会让你的游戏运行起来困难得多。例如，Mgamerz说：「有些知识是这样的，比如你不会把东西放进启动文件，因为那会浪费大量内存。如果你把所有东西都塞进去，启动游戏之后，哦，现在游戏为了让你这一个Mod运行，就要多占用1GB内存，因为你不想用正确的方式去做。」"
+    },
+    {
+      "en": "It's hard to argue with the fact that these AI tools are introducing a whole new generation of gamers to modding, but it's doing so without making them go through the effort of figuring out how to make things effectively. We've already seen major modding communities pull their sites down because of this outbreak of AI modding tools that can take months of someone's hard work and spin it around into a 'working' mod after a couple of Claude prompts. And that might end up becoming the default for people who learn how to code exclusively through AI tools.",
+      "cn": "这些AI工具正让全新一代玩家接触到Mod制作，这一点很难否认，但它们让玩家接触Mod制作时，无须费力弄清如何有效地制作东西。我们已经看到大型Mod社区因为AI Mod制作工具的爆发而关闭网站；这些工具可以拿走某人几个月的心血，只需给Claude输入几条提示词，就能将其变成一个「能用」的Mod。对于完全通过AI工具学习编程的人来说，这最终可能成为默认的做法。"
+    },
+    {
+      "en": "When I asked Mgamerz what the pathway for people who want to get into modding these days is, his answer was grim. He told me, \"Getting into [modding]? I feel like modding is kind of dying. If you come in and you're like, 'I want to just do this, no AI. I just want to cut my teeth, find the boundaries, break over them, have a difficult, challenging task,' you pretty much have to work in secret now.\"",
+      "cn": "当我问Mgamerz，如今想要入门Mod制作的人有什么途径时，他的回答很悲观。他告诉我：「入门［Mod制作］？我觉得Mod制作正在走向衰落。如果你加入进来，说‘我只想做这个，不用AI。我只想积累经验，找到边界，突破边界，接受一项艰巨而有挑战性的任务’，那你现在基本上只能秘密开展工作。」"
+    },
+    {
+      "en": "\"Because if you essentially have an idea and someone else is like, 'Wow, that's a cool idea.' And you're like, 'Well, it's going to take me six months.' And they're like, 'I don't want to wait six months.' They can spend 20 bucks and pump this thing out in a day or two, and it'll probably work, but the user will have no understanding of how.\"",
+      "cn": "「因为如果你有一个想法，别人说‘哇，这个想法很酷’，而你说‘嗯，这要花我六个月时间’，他们就会说‘我不想等六个月’。他们可以花20美元，在一两天内把这东西赶出来，它可能也能用，但用户完全不会了解它是如何运作的。」"
+    },
+    {
+      "en": "Mgamerz understands, though, that the prevalence of these AI tools is getting a lot of people interested in modding their favorite games, and that's not a bad thing. He told me, \"If you don't release the stuff that you make, I don't see any problem. You made something cool for yourself.\"",
+      "cn": "不过，Mgamerz也理解，这些AI工具的普及正让很多人对为自己喜爱的游戏制作Mod产生兴趣，而这并不是坏事。他告诉我：「如果你不发布自己做的东西，我看不出有什么问题。你为自己做了个很酷的东西。」"
+    },
+    {
+      "en": "Instead, the problem is that, if you install it without considering how it'll interact with other software, it can really bungle other peoples' projects. \"Once you hand this product over to somebody else, share it with the world, suddenly it can become everybody's problem. And from my experience, everyone that vibe codes stuff, two weeks later, they're gone. They're not supporting it. So the people that stick around have to fix and deal with all of it.\"",
+      "cn": "真正的问题在于，如果安装它时不考虑它会如何与其他软件相互作用，就可能把别人的项目彻底弄乱。「一旦你把这个产品交给别人，与全世界分享，它就可能突然变成所有人的问题。根据我的经验，所有用氛围编程做东西的人，两周后就消失了。他们不再提供支持。所以留下来的人必须修复并处理所有这些问题。」"
+    },
+    {
+      "en": "Ever since Claude Opus 5.5 released back in September, it feels like the modding scene has been going through a rollercoaster, and it's impossible to know where exactly it's going to land. Whether the world of Nexus Mods and publicly available GitHub forks is going to start to die down like Mgamerz thinks it will is anyone's guess. But one thing's for sure: Once The Elder Scrolls VI: Sentinel drops, modding is going to be a completely different animal than the Skyrim days, if Bethesda's next game is even moddable at all.",
+      "cn": "自从Claude Opus 5.5在9月发布以来，Mod制作圈感觉就像在坐过山车，最终究竟会走向何方，根本无从得知。Nexus Mods和公开提供的GitHub分支所构成的世界是否会像Mgamerz认为的那样开始衰落，谁也说不准。但有一点可以肯定：一旦《上古卷轴6: Sentinel》推出，Mod制作将与《上古卷轴5：天际》时代截然不同——前提是贝塞斯达的下一款游戏还能制作Mod。"
+    }
+  ],
+  "pending_dict": [],
+  "translated_terms": {
+    "The Elder Scrolls VI": "上古卷轴6",
+    "Bethesda": "贝塞斯达",
+    "Twitter": "X"
+  },
+  "cover": "https://assets-prd.ignimgs.com/2026/10/29/me3-1793234529955.jpg",
+  "images": [
+    {
+      "url": "https://assets-prd.ignimgs.com/2026/10/29/me3-1793234529955.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "caption": ""
+    },
+    {
+      "url": "https://kraken.ignimgs.com/apple-touch-icon.png",
+      "caption": ""
+    },
+    {
+      "url": "https://assets-prd.ignimgs.com/2022/01/11/masseffect3-sq-1641945184920.jpg",
+      "caption": ""
+    }
+  ],
+  "translation_mode": "faithful",
+  "translator": "api",
+  "translator_provider": "openai-compatible",
+  "translator_model": "gpt-6.1-terra",
+  "reasoning_effort": "medium",
+  "prompt_version": "api-faithful-v3",
+  "quality_gate_version": 1,
+  "quality_status": "pending_human_review",
+  "quality_review": {
+    "mode": "human",
+    "status": "pending",
+    "checks": {
+      "source_coverage": true
+    },
+    "warnings": [
+      {
+        "type": "currency_cn",
+        "detail": "translated text has foreign-currency amount without CNY conversion: 20美元",
+        "context": "说‘我不想等六个月’。他们可以花20美元，在一两天内把这东西赶出来，它可能也能用，但用户完全不会了解它是"
+      },
+      {
+        "type": "format",
+        "detail": "🚨 MISSING subtitle (2-15字创意短句，必须手动写入)"
+      }
+    ]
+  }
+}

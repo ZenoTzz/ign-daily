@@ -2,6 +2,30 @@
   "date": "2026-11-08",
   "articles": [
     {
+      "id": 10,
+      "category": "游戏新闻",
+      "emoji": "🎮",
+      "en_title": "Missing Teen Saved From Alleged Kidnapper After Seeking Help in Among Us",
+      "cn_title": "失踪少女在《Among Us》中求助后获救，男子涉嫌绑架",
+      "summary": "一名犹他州少女通过《Among Us》联系上另一名未成年玩家，对方家长随后向美国联邦调查局报案。少女在俄勒冈州一处住所获救，39岁的Adam Harmel已被捕并受到指控。调查人员称，少女被囚禁了521天。",
+      "url": "https://www.ign.com/articles/missing-teen-saved-from-alleged-kidnapper-after-seeking-help-in-among-us",
+      "publish_time_cn": "2026-11-08 04:06",
+      "pub_date": "2026-11-08 04:06",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/11/07/among-us-1794081958488.png?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/11/07/among-us-1794081958488.png?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/11/07/among-us-1794081958488.png?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/11/07/among-us-1794081958488.png?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/11/07/among-us-1794081958488.png?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/11/07/among-us-1794081958488.png",
+        "https://kraken.ignimgs.com/apple-touch-icon.png",
+        "https://assets-prd.ignimgs.com/2020/12/15/among-us-button-fin-1608054673652.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-11-08T04:17:35+08:00"
+    },
+    {
       "id": 9,
       "category": "科技新闻",
       "emoji": "🔊",
@@ -11,8 +35,8 @@
       "url": "https://www.ign.com/articles/sony-announces-indefinite-delay-for-playstations-pulse-elevate-wireless-speakers-days-before-launch",
       "publish_time_cn": "2026-11-08 02:26",
       "pub_date": "2026-11-08 02:26",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/11/07/sony-playstation-pulse-elevate-wireless-speakers-1794075420373.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/11/07/sony-playstation-pulse-elevate-wireless-speakers-1794075420373.png",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/11/07/sony-playstation-pulse-elevate-wireless-speakers-1794075420373.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/11/07/sony-playstation-pulse-elevate-wireless-speakers-1794075420373.png?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -23,7 +47,16 @@
         "https://assets-prd.ignimgs.com/2025/09/25/pulse-elevate-button-1758814716029.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-11-08T03:17:31+08:00"
+      "source_fetched_at": "2026-11-08T03:17:31+08:00",
+      "translation_path": "translations/09.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "gpt-6.1-terra",
+      "reasoning_effort": "medium",
+      "prompt_version": "api-faithful-v3",
+      "quality_gate_version": 1,
+      "translation_mode": "faithful",
+      "quality_status": "pending_human_review"
     },
     {
       "id": 8,
@@ -35,8 +68,8 @@
       "url": "https://www.ign.com/articles/mass-effect-cast-celebrates-n7-day-with-video-asking-fans-to-help-save-the-franchise",
       "publish_time_cn": "2026-11-08 01:28",
       "pub_date": "2026-11-08 01:28",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/08/17/me1-blogroll-1786972844387.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/08/17/me1-blogroll-1786972844387.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/08/17/me1-blogroll-1786972844387.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/08/17/me1-blogroll-1786972844387.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -47,7 +80,16 @@
         "https://assets-prd.ignimgs.com/2020/11/07/mass-effect-next-chapter-button-1604783743528.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-11-08T02:17:31+08:00"
+      "source_fetched_at": "2026-11-08T02:17:31+08:00",
+      "translation_path": "translations/08.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "gpt-6.1-terra",
+      "reasoning_effort": "medium",
+      "prompt_version": "api-faithful-v3",
+      "quality_gate_version": 1,
+      "translation_mode": "faithful",
+      "quality_status": "pending_human_review"
     },
     {
       "id": 6,
@@ -83,8 +125,8 @@
       "url": "https://www.ign.com/articles/i-feel-like-modding-is-kind-of-dying-mass-effect-3-multiplayer-modder-on-ais-impact-on-the-scene",
       "publish_time_cn": "2026-11-08 01:00",
       "pub_date": "2026-11-08 01:00",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/10/29/me3-1793234529955.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/10/29/me3-1793234529955.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/10/29/me3-1793234529955.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/10/29/me3-1793234529955.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -95,7 +137,16 @@
         "https://assets-prd.ignimgs.com/2022/01/11/masseffect3-sq-1641945184920.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-11-08T01:18:35+08:00"
+      "source_fetched_at": "2026-11-08T01:18:35+08:00",
+      "translation_path": "translations/07.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "gpt-6.1-terra",
+      "reasoning_effort": "medium",
+      "prompt_version": "api-faithful-v3",
+      "quality_gate_version": 1,
+      "translation_mode": "faithful",
+      "quality_status": "pending_human_review"
     },
     {
       "id": 4,
@@ -181,8 +232,8 @@
       "url": "https://www.ign.com/articles/robert-pattinson-bond-26-007-screen-test-nicholas-hoult",
       "publish_time_cn": "2026-11-07 11:07",
       "pub_date": "2026-11-07 11:07",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/10/30/the-batman-bruce-wayne-1793381868012.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/10/30/the-batman-bruce-wayne-1793381868012.png",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/10/30/the-batman-bruce-wayne-1793381868012.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/10/30/the-batman-bruce-wayne-1793381868012.png?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -195,7 +246,16 @@
         "https://assets-prd.ignimgs.com/2026/06/02/robert-pattinson-tenet-1780417915411.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-11-07T11:18:20+08:00"
+      "source_fetched_at": "2026-11-07T11:18:20+08:00",
+      "translation_path": "translations/02.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "gpt-6.1-terra",
+      "reasoning_effort": "medium",
+      "prompt_version": "api-faithful-v3",
+      "quality_gate_version": 1,
+      "translation_mode": "faithful",
+      "quality_status": "pending_human_review"
     },
     {
       "id": 1,
@@ -222,5 +282,5 @@
       "source_fetched_at": "2026-11-07T10:17:50+08:00"
     }
   ],
-  "total": 9
+  "total": 10
 }

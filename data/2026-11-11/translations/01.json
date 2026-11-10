@@ -1,0 +1,72 @@
+{
+  "id": 1,
+  "url": "https://www.ign.com/articles/call-of-duty-facetime-chat-causes-plane-to-be-evacuated",
+  "en_title": "Call of Duty FaceTime Chat Causes Plane to Be Evacuated",
+  "cn_title": "《使命召唤》FaceTime聊天引发飞机疏散",
+  "subtitle": "",
+  "opus_summary": "警方称，一名乘客与朋友在FaceTime上讨论《使命召唤》时，被另一名乘客误认为涉及炸弹威胁，导致航班及机场航站楼东翼人员疏散。检查未发现爆炸物或武器后，该乘客获释，航班随后起飞。",
+  "publish_time_cn": "2026-11-10 08:08",
+  "paragraphs": [
+    {
+      "en": "A Frontier Airlines flight as well as the entire east wing of Terminal 2 at Southern California's Ontario International Airport was evacuated on Sunday night prior to departure after a passenger's FaceTime conversation with a friend was mistaken for a bomb threat by another passenger, the Ontario Police Department said. The passenger having the chat about the military first-person shooter's multiplayer component was detained and released before all passengers were able to reboard the plane and the flight commenced without further incident.",
+      "cn": "Ontario Police Department表示，周日夜间，南加州Ontario International Airport的一架Frontier Airlines航班在起飞前进行了疏散，2号航站楼整个东翼也一并疏散，原因是一名乘客与朋友的FaceTime对话被另一名乘客误认为是炸弹威胁。这名乘客当时正在谈论这款军事题材第一人称射击游戏的多人模式，他被拘留后获释，随后所有乘客得以重新登机，航班起飞，未再发生其他事件。"
+    },
+    {
+      "en": "\"Sometime before 10 p.m., the Ontario Police Department said a passenger aboard a Frontier Airlines flight waiting to depart heard someone say the words 'bomb' and 'explosion' and reported what they heard to the crew,\" CBS News reported . \"While detained, the individual explained he was on FaceTime with a friend while playing an online game of Call of Duty.\" After a check of the plane and the cabin turned up no explosives or weapons – since this ended up just being a misunderstanding – the passenger was released without charges and the plane did eventually take off with him and everyone else on board.",
+      "cn": "CBS News报道称：「Ontario Police Department表示，晚上10点之前，一名乘坐Frontier Airlines待飞航班的乘客听到有人说了『炸弹』和『爆炸』，便向机组人员报告了自己听到的内容。」「被拘留期间，此人解释说，他当时正在玩一局在线《使命召唤》，同时通过FaceTime与朋友聊天。」由于此事最终只是一场误会，对飞机和客舱的检查没有发现炸药或武器，这名乘客未被起诉便获释，飞机最终载着他和其他所有乘客起飞。"
+    },
+    {
+      "en": "The passenger and his friend were most likely discussing the recently released Call of Duty: Modern Warfare 4, which we thought was good this year, and perhaps its DMZ mode, which we found to be great . Maybe they were talking about the really bad input lag on the Switch 2 version , or perhaps the tonally jarring Halloween content , or maybe it wasn't about Modern Warfare 4 at all and they were FaceTiming about the new weather system being added to Call of Duty: Warzone.",
+      "cn": "这名乘客和他的朋友很可能在讨论最近推出的《使命召唤：现代战争4》，我们认为今年的这款游戏不错，他们或许还谈到了我们认为很出色的DMZ模式。也许他们在谈论Switch 2版本严重的输入延迟，或者是风格格格不入的万圣节内容；也许他们聊的根本不是《使命召唤：现代战争4》，而是在FaceTime上讨论即将加入《使命召唤：战区》的新天气系统。"
+    },
+    {
+      "en": "Ryan McCaffrey is IGN's executive editor of previews and host of IGN's weekly Xbox show, Podcast Unlocked , and a co-host of Next-Gen Console Watch . He's a North Jersey guy, so it's \"Taylor ham,\" not \"pork roll.\" Debate it with him on Twitter at @DMC_Ryan .",
+      "cn": "Ryan McCaffrey是IGN负责前瞻内容的执行编辑，也是IGN每周XBOX节目《Podcast Unlocked》的主持人和《Next-Gen Console Watch》的联合主持人。他是North Jersey人，所以他称其为「Taylor ham」，而不是「pork roll」。可以在X上通过@DMC_Ryan与他争论这个问题。"
+    }
+  ],
+  "pending_dict": [],
+  "translated_terms": {
+    "Call of Duty: Modern Warfare 4": "《使命召唤：现代战争4》",
+    "Call of Duty: Warzone": "《使命召唤：战区》",
+    "Ryan McCaffrey": "Ryan McCaffrey",
+    "Call of Duty": "使命召唤",
+    "Twitter": "X",
+    "Xbox": "XBOX"
+  },
+  "cover": "https://assets-prd.ignimgs.com/2026/11/10/cod-1794269315961.jpg",
+  "images": [
+    {
+      "url": "https://assets-prd.ignimgs.com/2026/11/10/cod-1794269315961.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "caption": ""
+    },
+    {
+      "url": "https://kraken.ignimgs.com/apple-touch-icon.png",
+      "caption": ""
+    },
+    {
+      "url": "https://assets-prd.ignimgs.com/2026/05/28/codmw4-1779985350988.jpg",
+      "caption": ""
+    }
+  ],
+  "translation_mode": "faithful",
+  "translator": "api",
+  "translator_provider": "openai-compatible",
+  "translator_model": "gpt-6.1-terra",
+  "reasoning_effort": "medium",
+  "prompt_version": "api-faithful-v3",
+  "quality_gate_version": 1,
+  "quality_status": "pending_human_review",
+  "quality_review": {
+    "mode": "human",
+    "status": "pending",
+    "checks": {
+      "source_coverage": true
+    },
+    "warnings": [
+      {
+        "type": "format",
+        "detail": "🚨 MISSING subtitle (2-15字创意短句，必须手动写入)"
+      }
+    ]
+  }
+}

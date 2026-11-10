@@ -141,8 +141,8 @@
       "url": "https://www.ign.com/articles/i-meant-it-when-i-said-what-i-said-nicolas-cage-is-actually-relieved-that-spider-noir-got-canceled",
       "publish_time_cn": "2026-11-07 06:04",
       "pub_date": "2026-11-07 06:04",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/05/27/spiderthumb-1779910369541.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/05/27/spiderthumb-1779910369541.png",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/05/27/spiderthumb-1779910369541.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/05/27/spiderthumb-1779910369541.png?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -153,7 +153,16 @@
         "https://assets-prd.ignimgs.com/2026/09/24/madden-button-1790258095928.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-11-07T06:17:37+08:00"
+      "source_fetched_at": "2026-11-07T06:17:37+08:00",
+      "translation_path": "translations/32.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "gpt-6.1-terra",
+      "reasoning_effort": "medium",
+      "prompt_version": "api-faithful-v3",
+      "quality_gate_version": 1,
+      "translation_mode": "faithful",
+      "quality_status": "pending_human_review"
     },
     {
       "id": 33,
@@ -238,8 +247,8 @@
       "url": "https://www.ign.com/articles/god-of-war-ragnarok-tops-list-of-10-highest-grossing-playstation-studios-games-from-the-ps5-generation",
       "publish_time_cn": "2026-11-07 03:33",
       "pub_date": "2026-11-07 03:33",
-      "cover_image": "https://assets-prd.ignimgs.com/2024/05/31/lenovo-breakout-thumb-oo-1717118604588.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2024/05/31/lenovo-breakout-thumb-oo-1717118604588.png",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2024/05/31/lenovo-breakout-thumb-oo-1717118604588.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2024/05/31/lenovo-breakout-thumb-oo-1717118604588.png?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -250,7 +259,49 @@
         "https://assets-prd.ignimgs.com/2024/05/30/astro-1717109664777.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-11-07T04:17:33+08:00"
+      "source_fetched_at": "2026-11-07T04:17:33+08:00",
+      "translation_path": "translations/29.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "gpt-6.1-terra",
+      "reasoning_effort": "medium",
+      "prompt_version": "api-faithful-v3",
+      "quality_gate_version": 1,
+      "translation_mode": "faithful",
+      "quality_status": "pending_human_review"
+    },
+    {
+      "id": 40,
+      "category": "游戏新闻",
+      "emoji": "🎮",
+      "en_title": "Canadian Politician Petitions Government to Help BioWare Buy Its Way From Under EA",
+      "cn_title": "加拿大政界人士发起请愿，呼吁政府帮助BioWare摆脱EA",
+      "summary": "EA关闭BioWare后，加拿大议员Don Davies支持一项官方请愿，呼吁政府提供资金，帮助工作室取得独立及其知识产权所有权。请愿签名已超过提交众议院讨论所需的500人门槛，但政府是否会采取行动仍有待观察。",
+      "url": "https://www.ign.com/articles/canadian-politician-petitions-government-to-help-bioware-buy-its-way-from-under-ea",
+      "publish_time_cn": "2026-11-07 03:26",
+      "pub_date": "2026-11-07 03:26",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/10/30/ss-4b2b412307b72a21f68148c32fab7a278875d139-1920x1080-1793370780028.jpg",
+      "translation_status": "done",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/10/30/ss-4b2b412307b72a21f68148c32fab7a278875d139-1920x1080-1793370780028.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/10/30/ss-4b2b412307b72a21f68148c32fab7a278875d139-1920x1080-1793370780028.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/10/30/ss-4b2b412307b72a21f68148c32fab7a278875d139-1920x1080-1793370780028.jpg?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/10/30/ss-4b2b412307b72a21f68148c32fab7a278875d139-1920x1080-1793370780028.jpg?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/10/30/ss-4b2b412307b72a21f68148c32fab7a278875d139-1920x1080-1793370780028.jpg",
+        "https://kraken.ignimgs.com/apple-touch-icon.png",
+        "https://assets-prd.ignimgs.com/2022/01/11/masseffect3-sq-1641945184920.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-11-09T09:00:08+08:00",
+      "translation_path": "translations/40.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "gpt-6.1-terra",
+      "reasoning_effort": "medium",
+      "prompt_version": "api-faithful-v3",
+      "quality_gate_version": 1,
+      "translation_mode": "faithful",
+      "quality_status": "pending_human_review"
     },
     {
       "id": 27,
@@ -979,5 +1030,5 @@
       "source_fetched_at": "2026-11-07T08:17:36+08:00"
     }
   ],
-  "total": 39
+  "total": 40
 }
