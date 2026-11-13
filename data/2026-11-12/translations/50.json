@@ -1,0 +1,73 @@
+{
+  "id": 50,
+  "url": "https://www.ign.com/articles/nvidia-board-is-preparing-to-potentially-oust-ceo-jensen-huang",
+  "en_title": "Nvidia Board is Preparing to Potentially Oust CEO Jensen Huang",
+  "cn_title": "英伟达董事会正准备可能罢免首席执行官黄仁勋",
+  "subtitle": "",
+  "opus_summary": "据《华尔街日报》报道，Nvidia董事会最早将于今日开会讨论CEO Jensen Huang的未来。《纽约时报》称，Huang曾与一名向他汇报工作的高管有婚外情。Nvidia此前已宣布对Huang展开独立调查。",
+  "publish_time_cn": "2026-11-12 07:20",
+  "paragraphs": [
+    {
+      "en": "Three days after launching an independent investigation into CEO Jensen Huang, the Nvidia board is reportedly preparing to oust the executive.",
+      "cn": "据报道，在对首席执行官黄仁勋展开独立调查三天后，英伟达董事会正准备罢免这位高管。"
+    },
+    {
+      "en": "Nvidia's board will be meeting as soon as today to discuss Huang's future after an extramarital affair with Alice Huang, a suspected Chinese spy, according to The Wall Street Journal. That affair was first reported by The New York Times , and was followed up by a statement issued by Nvidia on Sunday , saying it'd be investigating Jensen Huang. But according to a new report from The New York Times , he'd also engaged in a second affair with an executive who reported to him.",
+      "cn": "据《华尔街日报》报道，黄仁勋与涉嫌为中国间谍的Alice Huang发生婚外情后，英伟达董事会最早将于今天开会讨论他的未来。这段婚外情最初由《纽约时报》报道，随后英伟达于周日发表声明，称将对黄仁勋展开调查。但据《纽约时报》的一篇新报道，他还与一名向他汇报工作的高管发生了第二段婚外情。"
+    },
+    {
+      "en": "This meeting follows an investigation that was announced on Sunday. In that announcement, Nvidia said, \"The Board prioritizes U.S. national and economic security, which is paramount to the interests of NVIDIA and its shareholders. While the Board has no reason to believe that either national security or NVIDIA secrets were compromised, the Board's inquiry will examine all available information. Jensen fully supports the review and has committed to cooperating with it.\"",
+      "cn": "这次会议是在周日宣布展开一项调查后召开的。英伟达在当时的公告中表示：「董事会将美国国家安全和经济安全置于优先地位，这对英伟达及其股东的利益至关重要。虽然董事会没有理由认为国家安全或英伟达的秘密受到了损害，但董事会的调查将审查所有可获得的信息。Jensen全力支持此次审查，并承诺予以配合。」"
+    },
+    {
+      "en": "Huang then issued a letter to employees, obtained by The BBC , where he admitted that he was unfaithful and apologized for hurting his wife and children.",
+      "cn": "随后，黄仁勋向员工发出了一封信，BBC获得了这封信。他在信中承认自己不忠，并为伤害妻子和孩子道歉。"
+    },
+    {
+      "en": "In many ways, Jensen Huang is the face of AI in the US, and so it makes sense that Nvidia's board would want to get this situation under control. The company's chips power nearly every AI model that's currently running, and so a security breach of this scale is a massive liability. Huang is a co-founder of Nvidia, and has been running the company since 1993, so his ouster could have huge ramifications.",
+      "cn": "在很多方面，黄仁勋是美国人工智能的代表人物，因此英伟达董事会希望控制住这一局面是可以理解的。该公司的芯片为目前运行的几乎所有人工智能模型提供算力，因此这种规模的安全漏洞是一个巨大的隐患。黄仁勋是英伟达的联合创始人，自1993年以来一直执掌该公司，因此他的下台可能产生巨大的影响。"
+    },
+    {
+      "en": "IGN has reached out to Nvidia for comment, and will update this story as soon as communications have been received.",
+      "cn": "IGN已联系英伟达寻求评论，并将在收到回复后尽快更新这篇报道。"
+    }
+  ],
+  "pending_dict": [],
+  "translated_terms": {
+    "Wall Street Journal": "华尔街日报",
+    "The New York Times": "纽约时报",
+    "BBC": "BBC"
+  },
+  "cover": "https://assets-prd.ignimgs.com/2026/11/08/nvidia-ceo-jensen-huang-1794177110571.png",
+  "images": [
+    {
+      "url": "https://assets-prd.ignimgs.com/2026/11/08/nvidia-ceo-jensen-huang-1794177110571.png?width=1280&format=jpg&auto=webp&quality=80",
+      "caption": ""
+    },
+    {
+      "url": "https://kraken.ignimgs.com/apple-touch-icon.png",
+      "caption": ""
+    }
+  ],
+  "translation_mode": "faithful",
+  "translator": "api",
+  "translator_provider": "openai-compatible",
+  "translator_model": "gpt-6.1-terra",
+  "reasoning_effort": "medium",
+  "prompt_version": "api-faithful-v3",
+  "quality_gate_version": 1,
+  "quality_status": "pending_human_review",
+  "quality_review": {
+    "mode": "human",
+    "status": "pending",
+    "checks": {
+      "source_coverage": true
+    },
+    "warnings": [
+      {
+        "type": "format",
+        "detail": "🚨 MISSING subtitle (2-15字创意短句，必须手动写入)"
+      }
+    ]
+  }
+}
