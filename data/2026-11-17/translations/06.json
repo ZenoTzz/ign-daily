@@ -1,0 +1,99 @@
+{
+  "id": 6,
+  "url": "https://www.ign.com/articles/gta-6-gets-another-day-one-patch-bigger-on-xbox",
+  "en_title": "GTA 6 Gets Another Day One Patch, and It's 1GB Bigger on Xbox",
+  "cn_title": "《GTA6》又推出一个首日补丁，XBOX版大了1GB",
+  "subtitle": "",
+  "opus_summary": "《GTA6》在11月19日发售前推出第二个补丁，版本号为01.002.001，PS5版大小为602MB，XBOX版比PlayStation版大1GB。Rockstar尚未公布补丁内容；此前的01.002.000版本于11月13日发布，占用约1GB存储空间。",
+  "publish_time_cn": "2026-11-16 20:26",
+  "paragraphs": [
+    {
+      "en": "GTA 6 is finally almost here. With the November 19 launch date just around the corner, Rockstar is preparing the game for its public showing.",
+      "cn": "《GTA6》终于快要来了。随着11月19日的发售日临近，Rockstar正在为游戏的公开亮相做准备。"
+    },
+    {
+      "en": "A new patch has dropped ahead of launch day. Rockstar hasn’t released any details about what it contains, but it’s the second patch to drop ahead of launch now players have pre-installed the open world crime sim.",
+      "cn": "一个新补丁已在发售日前推出。Rockstar尚未公布补丁包含哪些内容的任何细节，但在玩家预安装这款开放世界犯罪模拟游戏后，这已经是发售前推出的第二个补丁。"
+    },
+    {
+      "en": "The patch brings GTA 6 to version 01.002.001 and comes in at 602MB on PS5. Some users are reporting that it’s available now, but rollouts generally happen in waves.",
+      "cn": "该补丁将《GTA6》更新至01.002.001版本，在PS5上的大小为602MB。一些用户表示现在已经可以下载，但补丁通常会分批推送。"
+    },
+    {
+      "en": "The patch is also live for Xbox users and is 1GB larger than the PlayStation patch.",
+      "cn": "该补丁也已面向XBOX用户推出，比PlayStation版补丁大1GB。"
+    },
+    {
+      "en": "The previous patch, version 01.002.000, was released on November 13 and took up about 1GB of storage space.",
+      "cn": "上一个补丁的版本号为01.002.000，于11月13日发布，占用约1GB存储空间。"
+    },
+    {
+      "en": "For those who have preloaded GTA 6 already, you can press Options when highlighting the game on your homescreen and choose the Check for Update option. If it says version 01.002.000, you’re golden.",
+      "cn": "对于已经预载《GTA6》的玩家，可以在主屏幕上选中游戏时按下Options键，然后选择检查更新选项。如果显示版本为01.002.000，那就没问题了。"
+    },
+    {
+      "en": "There are no patch notes for the second day-one patch at the time of writing, but Rockstar is likely just improving performance and fixing last-minute bugs ahead of launch.",
+      "cn": "截至本文撰写时，第二个首日补丁尚无更新说明，但Rockstar很可能只是在发售前改善性能并修复最后发现的漏洞。"
+    },
+    {
+      "en": "If you’re wondering what else goes into making a Rockstar game, IGN spoke to a former researcher who spent time with cops and crooks to make GTA as authentic as possible .",
+      "cn": "如果你好奇制作一款Rockstar游戏还需要做些什么，IGN采访了一位前研究员，他曾与警察和罪犯共度时间，以使《GTA》尽可能真实。"
+    },
+    {
+      "en": "GTA 6 launches on November 19, and we’ve got the global release times so you know when you can start playing . This week, IGN interviewed Take-Two boss Strauss Zelnick to talk GTA 6 expectations , Online, and what the next decade looks like. We’ve also got a report on the hunt for information dataminers are currently on following the launch of GTA 6 preload .",
+      "cn": "《GTA6》将于11月19日发售，我们整理了全球各地的解锁时间，让你知道何时可以开始游玩。本周，IGN采访了Take-Two老板Strauss Zelnick，讨论了对《GTA6》的预期、线上模式以及未来十年的展望。我们还报道了《GTA6》开放预载后，数据挖掘者目前正在搜寻信息的情况。"
+    }
+  ],
+  "pending_dict": [],
+  "translated_terms": {
+    "PlayStation": "PlayStation",
+    "Take-Two": "Take-Two",
+    "Rockstar": "Rockstar",
+    "GTA 6": "GTA6",
+    "Xbox": "XBOX"
+  },
+  "cover": "https://assets-prd.ignimgs.com/2026/11/12/vintage-vice-city-pack-exclusive-looks-01-1794487245980.jpg",
+  "images": [
+    {
+      "url": "https://assets-prd.ignimgs.com/2026/11/12/vintage-vice-city-pack-exclusive-looks-01-1794487245980.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "caption": ""
+    },
+    {
+      "url": "https://kraken.ignimgs.com/apple-touch-icon.png",
+      "caption": ""
+    },
+    {
+      "url": "https://assets-prd.ignimgs.com/2026/07/20/9f51f0ccdb65bd29c36a0907a738c2902a712f03e2fd6470-1784587649326.jpg",
+      "caption": ""
+    }
+  ],
+  "translation_mode": "faithful",
+  "translator": "api",
+  "translator_provider": "openai-compatible",
+  "translator_model": "gpt-6.1-terra",
+  "reasoning_effort": "medium",
+  "prompt_version": "api-faithful-v3",
+  "quality_gate_version": 1,
+  "quality_status": "pending_human_review",
+  "quality_review": {
+    "mode": "human",
+    "status": "pending",
+    "checks": {
+      "source_coverage": true
+    },
+    "warnings": [
+      {
+        "type": "summary_length",
+        "detail": "opus_summary targets 70-80 non-space characters and must stay within 60-110, got 128"
+      },
+      {
+        "type": "format",
+        "detail": "🚨 MISSING subtitle (2-15字创意短句，必须手动写入)"
+      },
+      {
+        "type": "format",
+        "detail": "opus_summary LENGTH 128, target 70-80, allowed 60-110"
+      }
+    ]
+  }
+}
