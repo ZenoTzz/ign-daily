@@ -1,0 +1,113 @@
+{
+  "id": 14,
+  "url": "https://www.ign.com/articles/rockstar-developer-explains-tiny-gta-5-detail-you-missed",
+  "en_title": "'I'm Certain No One Noticed This' — Former Rockstar Developer Explains Tiny GTA 5 Detail You Might Have Missed",
+  "cn_title": "「我确信没人注意到这一点」——Rockstar前开发者解释你可能错过的《GTA5》微小细节",
+  "subtitle": "",
+  "opus_summary": "前Rockstar设计师Matt Freedman透露，《GTA5》中Trevor的牛仔裤会在踩死Johnny Klebitz后溅上血迹，并随着游戏进程逐渐变干净。他还确保角色重生时血迹保持原有的清理进度，尽管他认为没人注意到这一细节。",
+  "publish_time_cn": "2026-11-17 23:09",
+  "paragraphs": [
+    {
+      "en": "Everyone remembers Red Dead Redemption 2’s horse balls . When you’re riding your stallion down in temperate regions to the south, they’re normal balls. Horse balls, but normal ones. Go into the cold, snowblasted mountains in the north and they shrink, shriveling up like a prune on an L.A. driveway.",
+      "cn": "每个人都记得《荒野大镖客：救赎2》里的马睾丸。当你骑着公马来到南方气候温和的地区时，它们就是正常的睾丸。马的睾丸，但很正常。进入北方寒冷、风雪肆虐的山区后，它们就会收缩，皱成一团，像洛杉矶车道上的一颗西梅干。"
+    },
+    {
+      "en": "How does something seemingly so innocuous make it into a big Rockstar game? It’s partly because Rockstar lets its developers add little flourishes that players might not even notice, and partly because the company hires perfectionists. Designer Matt Freedman was one such perfectionist.",
+      "cn": "这样一个看似无关紧要的细节是如何出现在Rockstar的一部大作中的？部分原因是Rockstar允许开发者添加玩家甚至可能注意不到的小点缀，另一部分原因则是这家公司会雇用完美主义者。设计师Matt Freedman就是这样一位完美主义者。"
+    },
+    {
+      "en": "Freedman worked at Rockstar for almost nine years, starting as a level designer for Max Payne 3. His biggest job on GTA 5 was implementing the in-mission camera switching mechanic, which we delved into right here . But he also had a hand in something else in the game that you probably missed.",
+      "cn": "Freedman在Rockstar工作了近九年，最初担任《Max Payne 3》的关卡设计师。他在《GTA5》中最主要的工作是实现任务中的镜头切换机制，我们曾在这里深入探讨过这一点。但他还参与了游戏中另一个你可能错过的细节。"
+    },
+    {
+      "en": "There’s a moment in GTA 5 where the player is introduced to playable character Trevor in a brutal way. He meets Johnny Klebitz, a protagonist from The Lost and the Damned DLC for GTA 4, and proceeds to stomp on his head until he’s not only dead, but unrecognizable. It’s a messy scene, and Freedman wanted to fully represent that in gameplay.",
+      "cn": "在《GTA5》的一个场景中，玩家以一种残酷的方式认识了可操作角色Trevor。他遇到了《GTA 4》的DLC《The Lost and the Damned》中的主角Johnny Klebitz，随后不断踩踏他的头部，直到他不仅死去，而且面目全非。这是一个血腥的场面，Freedman希望在游戏过程中充分呈现这一点。"
+    },
+    {
+      "en": "Freedman added a decal to Trevor’s jeans, blood spatter from the boot cuff up, as well as an algorithm that slowly made the blood fade and clean up over the course of a playthrough. Most players would never even notice, since this is a game where you can enter shops and customize the look of the characters. Most people would likely put Trevor into new clothes at the earliest opportunity. Freedman did it anyway.",
+      "cn": "Freedman在Trevor的牛仔裤上添加了一层贴花，让血迹从靴口处向上飞溅，还加入了一套算法，让血迹在整个游戏过程中慢慢褪去、消失。大多数玩家甚至永远不会注意到这一点，因为在这款游戏中，你可以进入商店并自定义角色的外观。大多数人很可能一有机会就会给Trevor换上新衣服。Freedman还是做了这个细节。"
+    },
+    {
+      "en": "“I like the players having a good time,” he said. “I take a lot of pride in my work. I always like to think that my real boss isn't like the guy who pays my paycheck. It's the guy who pays that guy's paycheck, and that's the player. So I'm always like, look, if you're coming home from a s***ty day at work, you know things are rough, you're having a hard time making ends meet. You sit down, you boot up a game I've worked on, I just want you to have a really good time.",
+      "cn": "「我喜欢看到玩家玩得开心，」他说。「我为自己的工作感到非常自豪。我一直喜欢这样想：我真正的老板不是给我发工资的人，而是给那个人发工资的人，也就是玩家。所以我总是想，听着，如果你上班过了糟***的一天才回到家，你知道日子很艰难，收支难以平衡。你坐下来，启动一款我参与制作的游戏，我只希望你能玩得非常开心。"
+    },
+    {
+      "en": "“I spend a lot of time just being like, look at like, is this a potentially reasonable thing for the player to want to do? And is the game respecting the player's choices? I spent a lot of extra cycles on Max Payne 3 just making sure that if the player had performed a gameplay interaction at some point in the level, that would be respected consistently across the level.”",
+      "cn": "「我花了很多时间去思考，玩家想做这件事是否有可能是合理的？游戏是否尊重玩家的选择？我在《Max Payne 3》上花了大量额外工夫，只为确保如果玩家在关卡的某个地方进行了一次游戏交互，这一行为在整个关卡中都会始终得到尊重。」"
+    },
+    {
+      "en": "For Trevor’s bloody jean cuff, it was more work than you might realize. As well as creating the rules and algorithm for slowly cleaning the jeans up, Freedman had to make sure it stayed at the exact same point of the clean up whenever the character respawned, which basically creates a fresh version of the model each time. Notice how your bruises and cuts disappear when you die? That wouldn’t do for the bloody jean leg.",
+      "cn": "为了实现Trevor牛仔裤裤脚上的血迹，Freedman付出的工作比你可能想到的还要多。除了为牛仔裤上的血迹慢慢消失制定规则和算法，他还必须确保角色每次重生时，血迹都保持在清除过程中的完全相同阶段，因为每次重生基本上都会创建一个全新的模型。注意到角色死亡后，身上的淤青和伤口会消失吗？牛仔裤腿上的血迹可不能这样处理。"
+    },
+    {
+      "en": "“I'm certain no one noticed this,” Freedman laughed. “In video games it's really important for people to feel that their choices and effort are respected, that the time is being respected. That's one of the great things I think with Nintendo's design is that they do such a wonderful job of making interactive and responsive worlds.”",
+      "cn": "「我确信没人注意到这一点，」Freedman笑着说。「在电子游戏中，让人们感受到他们的选择和努力受到尊重、他们的时间受到尊重，是非常重要的。我认为任天堂设计的出色之处之一，就在于他们在打造可互动、能作出回应的世界方面做得非常棒。」"
+    },
+    {
+      "en": "Things like this are what sets Rockstar apart. Horse balls are an easy one to laugh at, but that’s because it’s such a ridiculous example of the level of detail the company’s developers strive for. It’s why people come back to Rockstar’s games every time — whether it’s Red Dead Redemption or GTA, there’s a certain level of quality and competence guaranteed that no other developer on the planet has either the resources or ability to achieve.",
+      "cn": "正是这样的细节让Rockstar与众不同。马睾丸很容易让人发笑，但那是因为它作为一个例子，以一种荒诞的方式展现了这家公司的开发者所追求的细节程度。这就是人们每次都会重返Rockstar游戏的原因——无论是《荒野大镖客：救赎》还是《侠盗猎车手》，都有一定水准的品质和制作能力作为保证，而地球上没有其他开发者拥有实现这一水准的资源或能力。"
+    },
+    {
+      "en": "Players might not notice this stuff at launch, but there’s a reason I’m writing about it right now all these years later. Discovery is such a huge part of the appeal of video games. We live in a world where sometimes it feels like it’s all been done before. There are no new lands to discover, we’ve shot people into space, but we can satiate that primal drive to find new horizons through horse balls and bloody jean legs.",
+      "cn": "玩家或许在游戏发售时不会注意到这些东西，但这么多年后我现在还在写这件事，是有原因的。探索发现是电子游戏吸引力中极其重要的一部分。我们生活的世界有时让人觉得一切都已被做过。没有新的土地可供发现，我们也已经把人送上了太空，但我们可以通过马睾丸和沾血的牛仔裤腿，满足那种寻找新天地的原始冲动。"
+    },
+    {
+      "en": "GTA 6 is expected to be the biggest entertainment launch of all time, and some companies have even given staff bonus time off to play it . We've got plenty more on GTA 6 ahead of its November 19 launch, including details on the New Zealand trick people are using to play early, Gangland Tales From the Frontline of Rockstar's Real-Life Grand Theft Auto Research , and How Gaming's Top Content Creators Are Preparing for GTA 6's Launch and Beyond .",
+      "cn": "《GTA6》预计将成为有史以来规模最大的娱乐产品首发，一些公司甚至给员工额外放假，让他们玩这款游戏。在《GTA6》11月19日发售之前，我们还有大量相关报道，包括人们用来提前游玩的新西兰诀窍的详细信息、《Rockstar现实版侠盗猎车手调研前线的黑帮故事》，以及《游戏界顶级内容创作者如何为GTA6发售及之后做准备》。"
+    }
+  ],
+  "pending_dict": [],
+  "translated_terms": {
+    "Red Dead Redemption 2": "荒野大镖客：救赎2",
+    "Red Dead Redemption": "荒野大镖客：救赎",
+    "Grand Theft Auto": "侠盗猎车手",
+    "Nintendo": "任天堂",
+    "Rockstar": "Rockstar",
+    "GTA 6": "GTA6",
+    "GTA 5": "GTA5"
+  },
+  "cover": "https://assets-prd.ignimgs.com/2026/04/02/ss-f2e70b5823510daa062293ff0b03821e1dee2d37-1920x1080-1775136508858.jpg",
+  "images": [
+    {
+      "url": "https://assets-prd.ignimgs.com/2026/04/02/ss-f2e70b5823510daa062293ff0b03821e1dee2d37-1920x1080-1775136508858.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "caption": ""
+    },
+    {
+      "url": "https://kraken.ignimgs.com/apple-touch-icon.png",
+      "caption": ""
+    },
+    {
+      "url": "https://assets-prd.ignimgs.com/2021/12/17/gta-5-button-2021-1639777058682.jpg",
+      "caption": ""
+    }
+  ],
+  "translation_mode": "faithful",
+  "translator": "api",
+  "translator_provider": "openai-compatible",
+  "translator_model": "gpt-6.1-terra",
+  "reasoning_effort": "medium",
+  "prompt_version": "api-faithful-v3",
+  "quality_gate_version": 1,
+  "quality_status": "pending_human_review",
+  "quality_review": {
+    "mode": "human",
+    "status": "pending",
+    "checks": {
+      "source_coverage": true
+    },
+    "warnings": [
+      {
+        "type": "summary_length",
+        "detail": "opus_summary targets 70-80 non-space characters and must stay within 60-110, got 116"
+      },
+      {
+        "type": "format",
+        "detail": "🚨 MISSING subtitle (2-15字创意短句，必须手动写入)"
+      },
+      {
+        "type": "format",
+        "detail": "opus_summary LENGTH 116, target 70-80, allowed 60-110"
+      }
+    ]
+  }
+}
