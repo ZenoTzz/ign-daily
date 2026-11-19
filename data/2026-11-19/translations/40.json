@@ -1,0 +1,78 @@
+{
+  "id": 40,
+  "url": "https://www.ign.com/articles/gta-6-launch-causes-massive-spike-in-traffic-for-internet-provider-xfinity",
+  "en_title": "GTA 6 Launch Causes Massive Spike in Traffic for Internet Provider Xfinity",
+  "cn_title": "《GTA6》发售导致互联网服务提供商Xfinity流量大幅飙升",
+  "subtitle": "",
+  "opus_summary": "互联网服务商Xfinity称，《GTA6》在新西兰解锁前后，XBOX主机流量升至平时的四倍。美国玩家可通过更改主机地区提前游玩，大量游戏画面在社交媒体流传，Twitch称观看时长已达数千万小时。",
+  "publish_time_cn": "2026-11-19 07:31",
+  "paragraphs": [
+    {
+      "en": "Internet provider Xfinity has reported a massive spike in traffic on Xbox consoles for GTA 6's New Zealand launch.",
+      "cn": "互联网服务提供商Xfinity报告称，在《GTA6》于新西兰发售时，XBOX主机的流量大幅飙升。"
+    },
+    {
+      "en": "Xfinity says it saw a jump in Xbox hardware traffic four times more than normal around the time GTA 6 became available in New Zealand. Although Xfinity provides its services in the United States, Xbox users were able to take advantage of a loophole that let them change their console's region to New Zealand, allowing them start playing the game early despite their actual geographic location. It's one of the only real notable advantages Xbox has had over PlayStation with this game, as Rockstar secured a marketing deal to advertise GTA 6 as playing best on PS5.",
+      "cn": "Xfinity表示，在《GTA6》于新西兰解锁前后，XBOX硬件流量跃升至平时的四倍。尽管Xfinity在美国提供服务，XBOX用户仍能利用一个漏洞，将主机地区更改为新西兰，从而无论实际身处何地，都能提前开始游玩。这是XBOX在这款游戏上相较于PlayStation为数不多的真正显著优势之一，因为Rockstar达成了一项营销协议，将《GTA6》宣传为在PS5上的游玩体验最佳。"
+    },
+    {
+      "en": "However, these hours of early access have proven to be very lucrative for Xbox players. As a result, tons of footage for the game has been circulating on social media all day long. Major content creators also took advantage of the New Zealand trick, resulting in record-breaking viewership across platforms like Twitch . As of this afternoon, Twitch reported that tens of millions of watch hours had already been accumulated.",
+      "cn": "然而，这几个小时的提前游玩时间已被证明为XBOX玩家带来了丰厚回报。因此，大量游戏画面一整天都在社交媒体上流传。大型内容创作者也利用了新西兰这一技巧，使Twitch等平台的观看人数创下纪录。截至今天下午，Twitch报告称，累计观看时长已达数千万小时。"
+    },
+    {
+      "en": "Right now, we still don't know how many copies of GTA 6 have sold, but we'll likely hear something by the end of this week or very early next week, depending on how quickly Rockstar wants to boast. This is expected to be the biggest entertainment launch of all-time, after all, and the official numbers will likely be eyewatering.",
+      "cn": "目前，我们仍不知道《GTA6》卖出了多少份，但我们很可能会在本周末之前或下周初听到一些消息，这取决于Rockstar想多快炫耀一番。毕竟，这预计将是有史以来规模最大的娱乐作品发售，官方数字很可能会高得惊人。"
+    },
+    {
+      "en": "From a critical perspective, GTA 6 has received nothing but praise. IGN gave the game a 10 for its impeccable attention to detail and unprecedented depth, but we weren't alone in that analysis. The game is currently tied with The Legend of Zelda: Ocarina of Time for the highest rated game on Metacritic. It's also nominated for Game of the Year , in addition to seven other awards at The Game Awards.",
+      "cn": "从评论界的角度来看，《GTA6》获得的全是赞誉。IGN因其对细节无可挑剔的关注和前所未有的深度，为这款游戏打出了10分，但持这种看法的不止我们一家。这款游戏目前与《塞尔达传说 时之笛》并列Metacritic评分最高的游戏。它还获得了The Game Awards的年度游戏提名，以及另外七项奖项提名。"
+    }
+  ],
+  "pending_dict": [],
+  "translated_terms": {
+    "The Legend of Zelda: Ocarina of Time": "塞尔达传说 时之笛",
+    "The Legend of Zelda": "塞尔达传说",
+    "PlayStation": "PlayStation",
+    "Rockstar": "Rockstar",
+    "GTA 6": "GTA6",
+    "Zelda": "塞尔达",
+    "Meta": "Meta",
+    "Xbox": "XBOX"
+  },
+  "cover": "https://assets-prd.ignimgs.com/2026/11/18/gta-6-jason-ice-cream-1795043102913.jpg",
+  "images": [
+    {
+      "url": "https://assets-prd.ignimgs.com/2026/11/18/gta-6-jason-ice-cream-1795043102913.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "caption": ""
+    },
+    {
+      "url": "https://kraken.ignimgs.com/apple-touch-icon.png",
+      "caption": ""
+    },
+    {
+      "url": "https://assets-prd.ignimgs.com/2026/07/20/9f51f0ccdb65bd29c36a0907a738c2902a712f03e2fd6470-1784587649326.jpg",
+      "caption": ""
+    }
+  ],
+  "translation_mode": "faithful",
+  "translator": "api",
+  "translator_provider": "openai-compatible",
+  "translator_model": "gpt-6.1-terra",
+  "reasoning_effort": "medium",
+  "prompt_version": "api-faithful-v3",
+  "quality_gate_version": 1,
+  "quality_status": "pending_human_review",
+  "quality_review": {
+    "mode": "human",
+    "status": "pending",
+    "checks": {
+      "source_coverage": true
+    },
+    "warnings": [
+      {
+        "type": "format",
+        "detail": "🚨 MISSING subtitle (2-15字创意短句，必须手动写入)"
+      }
+    ]
+  }
+}

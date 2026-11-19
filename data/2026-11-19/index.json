@@ -2,6 +2,194 @@
   "date": "2026-11-19",
   "articles": [
     {
+      "id": 40,
+      "category": "游戏新闻",
+      "emoji": "🎮",
+      "en_title": "GTA 6 Launch Causes Massive Spike in Traffic for Internet Provider Xfinity",
+      "cn_title": "Xfinity称《GTA6》发售带动XBOX主机流量激增",
+      "summary": "互联网服务商Xfinity称，《GTA6》在新西兰解锁前后，XBOX主机流量升至平时的四倍。美国玩家可通过更改主机地区提前游玩，大量游戏画面在社交媒体流传，Twitch称观看时长已达数千万小时。",
+      "url": "https://www.ign.com/articles/gta-6-launch-causes-massive-spike-in-traffic-for-internet-provider-xfinity",
+      "publish_time_cn": "2026-11-19 07:31",
+      "pub_date": "2026-11-19 07:31",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/11/18/gta-6-jason-ice-cream-1795043102913.jpg",
+      "translation_status": "done",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/11/18/gta-6-jason-ice-cream-1795043102913.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/11/18/gta-6-jason-ice-cream-1795043102913.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/11/18/gta-6-jason-ice-cream-1795043102913.jpg?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/11/18/gta-6-jason-ice-cream-1795043102913.jpg?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/11/18/gta-6-jason-ice-cream-1795043102913.jpg",
+        "https://kraken.ignimgs.com/apple-touch-icon.png",
+        "https://assets-prd.ignimgs.com/2026/07/20/9f51f0ccdb65bd29c36a0907a738c2902a712f03e2fd6470-1784587649326.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-11-19T08:17:42+08:00",
+      "translation_path": "translations/40.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "gpt-6.1-terra",
+      "reasoning_effort": "medium",
+      "prompt_version": "api-faithful-v3",
+      "quality_gate_version": 1,
+      "translation_mode": "faithful",
+      "quality_status": "pending_human_review"
+    },
+    {
+      "id": 37,
+      "category": "游戏新闻",
+      "emoji": "🎮",
+      "en_title": "GTA 6 Doesn't Feature Prostitutes, But Rockstar Has a Logical Reason for It",
+      "cn_title": "《GTA6》不提供招揽妓女的功能，Rockstar解释原因",
+      "summary": "Rockstar表示，《GTA6》围绕一对逃亡中的恋人展开，游戏中的内容旨在契合故事及玩法系统，因此未保留此前作品中的部分要素，包括招揽妓女的功能。游戏中仍有脱衣舞表演，情侣可以一同前往俱乐部。",
+      "url": "https://www.ign.com/articles/gta-6-doesnt-feature-prostitutes-but-rockstar-has-a-logical-reason-for-it",
+      "publish_time_cn": "2026-11-19 07:07",
+      "pub_date": "2026-11-19 07:07",
+      "cover_image": "https://assets-prd.ignimgs.com/2023/12/07/gta6-trailer-4k-00-00-38-29-still001-1701962524689.png?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2023/12/07/gta6-trailer-4k-00-00-38-29-still001-1701962524689.png?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2023/12/07/gta6-trailer-4k-00-00-38-29-still001-1701962524689.png?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2023/12/07/gta6-trailer-4k-00-00-38-29-still001-1701962524689.png?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2023/12/07/gta6-trailer-4k-00-00-38-29-still001-1701962524689.png?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2023/12/07/gta6-trailer-4k-00-00-38-29-still001-1701962524689.png",
+        "https://kraken.ignimgs.com/apple-touch-icon.png",
+        "https://assets-prd.ignimgs.com/2026/07/20/9f51f0ccdb65bd29c36a0907a738c2902a712f03e2fd6470-1784587649326.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-11-19T07:17:36+08:00"
+    },
+    {
+      "id": 39,
+      "category": "游戏新闻",
+      "emoji": "🎮",
+      "en_title": "GTA 6 Doesn't Let Players Pick Up Prostitutes, But Rockstar Has a Logical Reason for It",
+      "cn_title": "《GTA6》不允许玩家招妓，Rockstar解释原因",
+      "summary": "Rockstar表示，《GTA6》围绕一对陷入困境、正在逃亡的恋人展开，游戏中的内容旨在支持故事及扩展玩法系统。系列自《GTA 3》以来的招妓功能不会出现在本作中，但游戏仍有脱衣舞表演，情侣也可一同前往俱乐部。",
+      "url": "https://www.ign.com/articles/gta-6-doesnt-let-players-pick-up-prostitutes-but-rockstar-has-a-logical-reason-for-it",
+      "publish_time_cn": "2026-11-19 07:07",
+      "pub_date": "2026-11-19 07:07",
+      "cover_image": "https://assets-prd.ignimgs.com/2023/12/07/gta6-trailer-4k-00-00-38-29-still001-1701962524689.png?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2023/12/07/gta6-trailer-4k-00-00-38-29-still001-1701962524689.png?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2023/12/07/gta6-trailer-4k-00-00-38-29-still001-1701962524689.png?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2023/12/07/gta6-trailer-4k-00-00-38-29-still001-1701962524689.png?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2023/12/07/gta6-trailer-4k-00-00-38-29-still001-1701962524689.png?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2023/12/07/gta6-trailer-4k-00-00-38-29-still001-1701962524689.png",
+        "https://kraken.ignimgs.com/apple-touch-icon.png",
+        "https://assets-prd.ignimgs.com/2026/07/20/9f51f0ccdb65bd29c36a0907a738c2902a712f03e2fd6470-1784587649326.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-11-19T07:47:37+08:00"
+    },
+    {
+      "id": 38,
+      "category": "游戏新闻",
+      "emoji": "🎮",
+      "en_title": "43 Army Members Reenlisted in Exchange for Paid Time Off to Play GTA 6",
+      "cn_title": "43名陆军士兵续约服役，换取带薪假期游玩《GTA6》",
+      "summary": "佐治亚州Fort Stewart的第9工兵营曾承诺，符合条件的士兵续约后可获得四天带薪假期游玩《GTA6》。Task and Purpose跟进报道称，共有43名士兵接受了这一提议。提出该活动的职业顾问表示，此举旨在吸引士兵注意，并拉近他们与高级指挥层的距离。",
+      "url": "https://www.ign.com/articles/43-army-members-reenlisted-in-exchange-for-paid-time-off-to-play-gta-6",
+      "publish_time_cn": "2026-11-19 07:00",
+      "pub_date": "2026-11-19 07:00",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/11/17/gta-6-spekulationen-beziehungssystem-1794933650291.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/11/17/gta-6-spekulationen-beziehungssystem-1794933650291.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/11/17/gta-6-spekulationen-beziehungssystem-1794933650291.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/11/17/gta-6-spekulationen-beziehungssystem-1794933650291.jpg?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/11/17/gta-6-spekulationen-beziehungssystem-1794933650291.jpg?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/11/17/gta-6-spekulationen-beziehungssystem-1794933650291.jpg",
+        "https://kraken.ignimgs.com/apple-touch-icon.png",
+        "https://assets-prd.ignimgs.com/2026/07/20/9f51f0ccdb65bd29c36a0907a738c2902a712f03e2fd6470-1784587649326.jpg",
+        "https://assets-prd.ignimgs.com/2026/11/18/gta-army-reenlistment-flyer-1787007560645-1795042223409.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-11-19T07:17:38+08:00"
+    },
+    {
+      "id": 35,
+      "category": "游戏新闻",
+      "emoji": "🎮",
+      "en_title": "A GTA 6 Location Was Teased by Rockstar All the Way Back in 2021 — And What's Inside Was Worth the Wait",
+      "cn_title": "Rockstar早在2021年就曾暗示《GTA6》中的一处地点，屋内内容值得等待",
+      "summary": "Rockstar于2021年推出的《GTA: San Andreas》重制版中出现了一张房屋照片，玩家猜测它来自《GTA6》，如今这一猜测得到证实。房屋位于Belville，玩家可以闯入车库，发现一处阴谋论者的藏身之所，墙上留有关于游戏世界及角色的各种笔记。",
+      "url": "https://www.ign.com/articles/a-gta-6-location-was-teased-by-rockstar-all-the-way-back-in-2021-and-whats-inside-was-worth-the-wait",
+      "publish_time_cn": "2026-11-19 04:56",
+      "pub_date": "2026-11-19 04:56",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/11/18/gta-6-jason-house-1795034681860.jpg",
+      "translation_status": "done",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/11/18/gta-6-jason-house-1795034681860.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/11/18/gta-6-jason-house-1795034681860.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/11/18/gta-6-jason-house-1795034681860.jpg?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/11/18/gta-6-jason-house-1795034681860.jpg?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/11/18/gta-6-jason-house-1795034681860.jpg",
+        "https://kraken.ignimgs.com/apple-touch-icon.png",
+        "https://assets-prd.ignimgs.com/2026/07/20/9f51f0ccdb65bd29c36a0907a738c2902a712f03e2fd6470-1784587649326.jpg",
+        "https://assets-prd.ignimgs.com/2026/11/18/gta-6-conspiracy-easter-egg-1795034697687.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-11-19T05:17:36+08:00",
+      "translation_path": "translations/35.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "gpt-6.1-terra",
+      "reasoning_effort": "medium",
+      "prompt_version": "api-faithful-v3",
+      "quality_gate_version": 1,
+      "translation_mode": "faithful",
+      "quality_status": "pending_human_review"
+    },
+    {
+      "id": 36,
+      "category": "行业动态",
+      "emoji": "🍔",
+      "en_title": "Burger King’s Chocolate Whopper Prank Is Being Turned Into a Real Burger",
+      "cn_title": "Burger King将把巧克力皇堡愚人节玩笑变成真正的汉堡",
+      "summary": "Burger King曾在2018年以愚人节玩笑推出巧克力皇堡，如今这款汉堡将于11月19日在韩国首尔的Flameground餐厅上市。汉堡仅限堂食，每人限购一个，每日供应数量有限，售价尚未公布。",
+      "url": "https://www.ign.com/articles/burger-kings-chocolate-whopper-prank-is-being-turned-into-a-real-burger",
+      "publish_time_cn": "2026-11-19 04:22",
+      "pub_date": "2026-11-19 04:22",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/11/18/burgerking-1795028388152.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/11/18/burgerking-1795028388152.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/11/18/burgerking-1795028388152.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/11/18/burgerking-1795028388152.jpg?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/11/18/burgerking-1795028388152.jpg?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/11/18/burgerking-1795028388152.jpg",
+        "https://kraken.ignimgs.com/apple-touch-icon.png"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-11-19T05:17:38+08:00"
+    },
+    {
+      "id": 34,
+      "category": "游戏新闻",
+      "emoji": "🏆",
+      "en_title": "DevGamm Awards 2026 Winners Revealed",
+      "cn_title": "2026年DevGAMM大奖获奖名单公布",
+      "summary": "第三届DevGAMM大奖于11月18日在葡萄牙里斯本举行，来自25个国家的70款游戏获得17个奖项类别的提名。《Phonopolis》斩获大奖和卓越视觉艺术奖。获奖者由来自40个国家的191名业内人士组成的国际评审团选出。",
+      "url": "https://www.ign.com/articles/devgamm-awards-2026-winners-revealed",
+      "publish_time_cn": "2026-11-19 04:00",
+      "pub_date": "2026-11-19 04:00",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/11/18/devegam-1792624866535-1795013597166.png?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/11/18/devegam-1792624866535-1795013597166.png?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/11/18/devegam-1792624866535-1795013597166.png?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/11/18/devegam-1792624866535-1795013597166.png?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/11/18/devegam-1792624866535-1795013597166.png?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/11/18/devegam-1792624866535-1795013597166.png",
+        "https://kraken.ignimgs.com/apple-touch-icon.png",
+        "https://assets-prd.ignimgs.com/2025/10/15/aslongasyourehere-1760486970908.jpg",
+        "https://assets-prd.ignimgs.com/2026/11/18/devegam-1792624866535-1795013587483.png"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-11-19T04:17:35+08:00"
+    },
+    {
       "id": 33,
       "category": "影视资讯",
       "emoji": "🎬",
@@ -11,8 +199,8 @@
       "url": "https://www.ign.com/articles/new-avengers-doomsday-posters-reveal-key-characters-and-tease-thors-odinforce",
       "publish_time_cn": "2026-11-19 03:14",
       "pub_date": "2026-11-19 03:14",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/11/18/avengers-doomsday-posters-blogroll-1795027693334.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/11/18/avengers-doomsday-posters-blogroll-1795027693334.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/11/18/avengers-doomsday-posters-blogroll-1795027693334.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/11/18/avengers-doomsday-posters-blogroll-1795027693334.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -23,7 +211,16 @@
         "https://assets-prd.ignimgs.com/2026/07/26/doomsday-button-update1-1785072206433.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-11-19T03:47:33+08:00"
+      "source_fetched_at": "2026-11-19T03:47:33+08:00",
+      "translation_path": "translations/33.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "gpt-6.1-terra",
+      "reasoning_effort": "medium",
+      "prompt_version": "api-faithful-v3",
+      "quality_gate_version": 1,
+      "translation_mode": "faithful",
+      "quality_status": "pending_human_review"
     },
     {
       "id": 32,
@@ -35,8 +232,8 @@
       "url": "https://www.ign.com/articles/the-wachowskis-move-to-reclaim-the-matrix-rights-from-skydance",
       "publish_time_cn": "2026-11-19 02:46",
       "pub_date": "2026-11-19 02:46",
-      "cover_image": "https://assets-prd.ignimgs.com/2024/09/09/thematrix25thanniversarytrailer2-ign-blogroll-1725901667745.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2024/09/09/thematrix25thanniversarytrailer2-ign-blogroll-1725901667745.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2024/09/09/thematrix25thanniversarytrailer2-ign-blogroll-1725901667745.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2024/09/09/thematrix25thanniversarytrailer2-ign-blogroll-1725901667745.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -47,7 +244,16 @@
         "https://assets-prd.ignimgs.com/2024/04/03/matrix-ver1-xlg-button-1712163697829.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-11-19T03:17:44+08:00"
+      "source_fetched_at": "2026-11-19T03:17:44+08:00",
+      "translation_path": "translations/32.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "gpt-6.1-terra",
+      "reasoning_effort": "medium",
+      "prompt_version": "api-faithful-v3",
+      "quality_gate_version": 1,
+      "translation_mode": "faithful",
+      "quality_status": "pending_human_review"
     },
     {
       "id": 31,
@@ -59,8 +265,8 @@
       "url": "https://www.ign.com/articles/gta-6-shatters-streaming-records-before-it-even-launches-globally",
       "publish_time_cn": "2026-11-19 02:43",
       "pub_date": "2026-11-19 02:43",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/11/18/gta-6-jason-aura-1795024506669.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/11/18/gta-6-jason-aura-1795024506669.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/11/18/gta-6-jason-aura-1795024506669.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/11/18/gta-6-jason-aura-1795024506669.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -71,7 +277,16 @@
         "https://assets-prd.ignimgs.com/2026/07/20/9f51f0ccdb65bd29c36a0907a738c2902a712f03e2fd6470-1784587649326.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-11-19T03:17:46+08:00"
+      "source_fetched_at": "2026-11-19T03:17:46+08:00",
+      "translation_path": "translations/31.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "gpt-6.1-terra",
+      "reasoning_effort": "medium",
+      "prompt_version": "api-faithful-v3",
+      "quality_gate_version": 1,
+      "translation_mode": "faithful",
+      "quality_status": "pending_human_review"
     },
     {
       "id": 30,
@@ -134,8 +349,8 @@
       "url": "https://www.ign.com/articles/ai-fueled-game-development-just-needs-a-toy-story-style-hit-to-be-accepted-former-take-two-ceo-says",
       "publish_time_cn": "2026-11-19 00:43",
       "pub_date": "2026-11-19 00:43",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/06/12/toystory-recap-blogroll-1781287059744.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/06/12/toystory-recap-blogroll-1781287059744.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/06/12/toystory-recap-blogroll-1781287059744.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/06/12/toystory-recap-blogroll-1781287059744.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -145,7 +360,16 @@
         "https://kraken.ignimgs.com/apple-touch-icon.png"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-11-19T01:18:26+08:00"
+      "source_fetched_at": "2026-11-19T01:18:26+08:00",
+      "translation_path": "translations/27.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "gpt-6.1-terra",
+      "reasoning_effort": "medium",
+      "prompt_version": "api-faithful-v3",
+      "quality_gate_version": 1,
+      "translation_mode": "faithful",
+      "quality_status": "pending_human_review"
     },
     {
       "id": 28,
@@ -157,8 +381,8 @@
       "url": "https://www.ign.com/articles/clair-obscur-expedition-33-lead-writer-left-sandfall",
       "publish_time_cn": "2026-11-19 00:35",
       "pub_date": "2026-11-19 00:35",
-      "cover_image": "https://assets-prd.ignimgs.com/2025/03/13/clairthumb-1741875039872.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2025/03/13/clairthumb-1741875039872.png",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2025/03/13/clairthumb-1741875039872.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2025/03/13/clairthumb-1741875039872.png?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -169,7 +393,16 @@
         "https://assets-prd.ignimgs.com/2025/01/23/33-1737665447926.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-11-19T01:18:31+08:00"
+      "source_fetched_at": "2026-11-19T01:18:31+08:00",
+      "translation_path": "translations/28.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "gpt-6.1-terra",
+      "reasoning_effort": "medium",
+      "prompt_version": "api-faithful-v3",
+      "quality_gate_version": 1,
+      "translation_mode": "faithful",
+      "quality_status": "pending_human_review"
     },
     {
       "id": 26,
@@ -206,8 +439,8 @@
       "url": "https://www.ign.com/articles/rockstar-president-sam-houser-issues-rare-statement-to-celebrate-gta-6-launch",
       "publish_time_cn": "2026-11-18 23:09",
       "pub_date": "2026-11-18 23:09",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/11/18/gtavi-16-1795014160533.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/11/18/gtavi-16-1795014160533.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/11/18/gtavi-16-1795014160533.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/11/18/gtavi-16-1795014160533.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -220,7 +453,16 @@
         "https://assets-prd.ignimgs.com/2026/11/18/gettyimages-853151462-1795014299836.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-11-18T23:49:06+08:00"
+      "source_fetched_at": "2026-11-18T23:49:06+08:00",
+      "translation_path": "translations/25.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "gpt-6.1-terra",
+      "reasoning_effort": "medium",
+      "prompt_version": "api-faithful-v3",
+      "quality_gate_version": 1,
+      "translation_mode": "faithful",
+      "quality_status": "pending_human_review"
     },
     {
       "id": 24,
@@ -865,6 +1107,31 @@
       "quality_status": "pending_human_review"
     },
     {
+      "id": 42,
+      "category": "评测评分",
+      "emoji": "🎬",
+      "en_title": "The Hunger Games: Sunrise on the Reaping Review",
+      "cn_title": "《饥饿游戏：鸣鸟与蛇之歌》系列新片《The Hunger Games: Sunrise on the Reaping》评测",
+      "summary": "《The Hunger Games: Sunrise on the Reaping》将于11月20日上映。影片讲述年轻的Haymitch参加第二届世纪极限赛的经历，评测称赞约瑟夫·扎达的表演、演员阵容及影片的情感冲击力，认为其结尾为系列带来了令人满意的收束。",
+      "url": "https://www.ign.com/articles/the-hunger-games-sunrise-on-the-reaping-review",
+      "publish_time_cn": "2026-11-18 16:17",
+      "pub_date": "2026-11-18 16:17",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/11/17/solstice-final-feature-grab-260910-00001rc-1794939431876.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/11/17/solstice-final-feature-grab-260910-00001rc-1794939431876.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/11/17/solstice-final-feature-grab-260910-00001rc-1794939431876.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/11/17/solstice-final-feature-grab-260910-00001rc-1794939431876.jpg?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/11/17/solstice-final-feature-grab-260910-00001rc-1794939431876.jpg?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/04/12/the-hunger-games-sunrise-on-the-reaping-button-replacement-1776015826626.jpg",
+        "https://assets-prd.ignimgs.com/2026/11/17/solstice-final-feature-grab-260910-00001rc-1794939431876.jpg",
+        "https://kraken.ignimgs.com/apple-touch-icon.png",
+        "https://assets-prd.ignimgs.com/2026/11/17/solstice-unit-250902-00423rc4-1794939149990.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-11-19T16:19:01+08:00"
+    },
+    {
       "id": 3,
       "category": "评测评分",
       "emoji": "📺",
@@ -954,7 +1221,33 @@
       "quality_gate_version": 1,
       "translation_mode": "faithful",
       "quality_status": "pending_human_review"
+    },
+    {
+      "id": 41,
+      "category": "评测评分",
+      "emoji": "🎬",
+      "en_title": "Elsinore Review",
+      "cn_title": "《Elsinore》影评",
+      "summary": "《Elsinore》将于11月20日上映，安德鲁·斯科特饰演身患艾滋病、坚持出演哈姆雷特的演员Ian Charleson。影评认为斯科特的表演出色，但影片的配角塑造、导演手法和剪辑削弱了故事的情感核心。",
+      "url": "https://www.ign.com/articles/elsinore-review",
+      "publish_time_cn": "2026-11-18 08:17",
+      "pub_date": "2026-11-18 08:17",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/09/28/elsinoretrailer-ign-blogrol-1790613067520.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "translation_status": "none",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/09/28/elsinoretrailer-ign-blogrol-1790613067520.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/09/28/elsinoretrailer-ign-blogrol-1790613067520.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/09/28/elsinoretrailer-ign-blogrol-1790613067520.jpg?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/09/28/elsinoretrailer-ign-blogrol-1790613067520.jpg?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/10/07/elsinore-button-1791395599445.jpg",
+        "https://assets-prd.ignimgs.com/2026/09/28/elsinoretrailer-ign-blogrol-1790613067520.jpg",
+        "https://kraken.ignimgs.com/apple-touch-icon.png",
+        "https://assets-prd.ignimgs.com/2026/11/16/elsinore-thumb-1794865814664.jpg",
+        "https://assets-prd.ignimgs.com/2026/11/16/elsinore-1794865814664.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-11-19T08:17:44+08:00"
     }
   ],
-  "total": 33
+  "total": 42
 }

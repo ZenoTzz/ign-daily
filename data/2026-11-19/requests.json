@@ -1,7 +1,23 @@
 {
   "date": "2026-11-19",
-  "requested_ids": [],
-  "requested_articles": [],
-  "requested_at": "2026-11-18T15:28:29.041426+00:00",
+  "requested_ids": [
+    22,
+    23
+  ],
+  "requested_articles": [
+    {
+      "id": 22,
+      "url": "https://www.ign.com/articles/build-a-rocket-boy-legal-action-against-mindseye-saboteurs-debts",
+      "en_title": "MindsEye Dev Build a Rocket Boy Says Legal Action Against 'Several Third Parties' Will Help It Pay Off Its Mountain of Debt",
+      "cn_title": "《MindsEye》开发商Build a Rocket Boy称对「多个第三方」采取法律行动将有助于偿还巨额债务"
+    },
+    {
+      "id": 23,
+      "url": "https://www.ign.com/articles/in-gta-6-doomscrolling-is-a-necessity-if-you-want-to-see-everything",
+      "en_title": "In GTA 6, Doomscrolling Is a Necessity If You Want to See Everything",
+      "cn_title": "《GTA6》中想看遍所有内容，就需要刷社交媒体"
+    }
+  ],
+  "requested_at": "2026-11-19T00:52:40.030952+00:00",
   "requested_by": "ZenoT"
 }
