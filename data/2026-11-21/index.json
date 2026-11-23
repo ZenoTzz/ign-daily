@@ -35,8 +35,8 @@
       "url": "https://www.ign.com/articles/gta-6-triggers-busiest-traffic-day-in-comcast-history",
       "publish_time_cn": "2026-11-21 07:30",
       "pub_date": "2026-11-21 07:30",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/11/19/early-weapons1-1795092418085.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/11/19/early-weapons1-1795092418085.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/11/19/early-weapons1-1795092418085.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/11/19/early-weapons1-1795092418085.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -47,7 +47,16 @@
         "https://assets-prd.ignimgs.com/2026/07/20/9f51f0ccdb65bd29c36a0907a738c2902a712f03e2fd6470-1784587649326.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-11-21T08:17:41+08:00"
+      "source_fetched_at": "2026-11-21T08:17:41+08:00",
+      "translation_path": "translations/41.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "gpt-6.1-terra",
+      "reasoning_effort": "medium",
+      "prompt_version": "api-faithful-v3",
+      "quality_gate_version": 1,
+      "translation_mode": "faithful",
+      "quality_status": "pending_human_review"
     },
     {
       "id": 39,
@@ -206,8 +215,8 @@
       "url": "https://www.ign.com/articles/macaulay-culkin-to-return-as-kevin-mccallister-in-home-alone-sequel",
       "publish_time_cn": "2026-11-21 04:19",
       "pub_date": "2026-11-21 04:19",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/11/20/macaulay-culkin-1795205628286.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/11/20/macaulay-culkin-1795205628286.png",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/11/20/macaulay-culkin-1795205628286.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/11/20/macaulay-culkin-1795205628286.png?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -218,7 +227,16 @@
         "https://assets-prd.ignimgs.com/2026/11/20/macaulay-culkin-1795205612952.png"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-11-21T04:47:37+08:00"
+      "source_fetched_at": "2026-11-21T04:47:37+08:00",
+      "translation_path": "translations/33.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "gpt-6.1-terra",
+      "reasoning_effort": "medium",
+      "prompt_version": "api-faithful-v3",
+      "quality_gate_version": 1,
+      "translation_mode": "faithful",
+      "quality_status": "pending_human_review"
     },
     {
       "id": 32,
@@ -881,6 +899,38 @@
       "source_fetched_at": "2026-11-20T19:18:00+08:00"
     },
     {
+      "id": 45,
+      "category": "游戏新闻",
+      "emoji": "🎮",
+      "en_title": "Ubisoft Says Christopher Nolan's The Odyssey Boosted Assassin's Creed Odyssey Sales",
+      "cn_title": "育碧称克里斯托弗·诺兰的《奥德赛》推动《Assassin's Creed Odyssey》销量增长",
+      "summary": "育碧表示，克里斯托弗·诺兰的电影《奥德赛》带动了《Assassin's Creed Odyssey》的持续销售。育碧还称，《Assassin’s Creed Black Flag Resynced》的表现推动了最新财报超出预期，并表示该系列将在明年迎来20周年。",
+      "url": "https://www.ign.com/articles/christopher-nolan-the-odyssey-boosts-assassins-creed-odyssey-sales",
+      "publish_time_cn": "2026-11-20 18:57",
+      "pub_date": "2026-11-20 18:57",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/11/20/ac-odyssey-kassandra-featured-1795170910441.avif",
+      "translation_status": "done",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/11/20/ac-odyssey-kassandra-featured-1795170910441.avif?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/11/20/ac-odyssey-kassandra-featured-1795170910441.avif?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/11/20/ac-odyssey-kassandra-featured-1795170910441.avif?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/11/20/ac-odyssey-kassandra-featured-1795170910441.avif?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://kraken.ignimgs.com/apple-touch-icon.png",
+        "https://assets1.ignimgs.com/2018/06/12/assassins-creed-odyssey---button-1-1528839461468.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-11-23T09:08:03+08:00",
+      "translation_path": "translations/45.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "gpt-6.1-terra",
+      "reasoning_effort": "medium",
+      "prompt_version": "api-faithful-v3",
+      "quality_gate_version": 1,
+      "translation_mode": "faithful",
+      "quality_status": "pending_human_review"
+    },
+    {
       "id": 4,
       "category": "游戏新闻",
       "emoji": "🎮",
@@ -1081,5 +1131,5 @@
       "source_fetched_at": "2026-11-20T09:17:39+08:00"
     }
   ],
-  "total": 44
+  "total": 45
 }

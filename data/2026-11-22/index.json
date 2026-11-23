@@ -11,8 +11,8 @@
       "url": "https://www.ign.com/articles/the-binding-of-isaac-dev-removes-undisclosed-ai-generated-music-from-repentance-following-creator-response-review-bombing",
       "publish_time_cn": "2026-11-22 07:42",
       "pub_date": "2026-11-22 07:42",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/11/21/the-binding-of-isaac-repentance-ai-1795303836559.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/11/21/the-binding-of-isaac-repentance-ai-1795303836559.png",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/11/21/the-binding-of-isaac-repentance-ai-1795303836559.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/11/21/the-binding-of-isaac-repentance-ai-1795303836559.png?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -23,7 +23,16 @@
         "https://assets-prd.ignimgs.com/2021/10/13/binding-of-isaac-repentance-button-fin-1634150728653.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-11-22T08:17:35+08:00"
+      "source_fetched_at": "2026-11-22T08:17:35+08:00",
+      "translation_path": "translations/10.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "gpt-6.1-terra",
+      "reasoning_effort": "medium",
+      "prompt_version": "api-faithful-v3",
+      "quality_gate_version": 1,
+      "translation_mode": "faithful",
+      "quality_status": "pending_human_review"
     },
     {
       "id": 9,
@@ -35,8 +44,8 @@
       "url": "https://www.ign.com/articles/gta-6-players-report-crashes-on-ps5-with-error-ce-108255-1",
       "publish_time_cn": "2026-11-22 05:36",
       "pub_date": "2026-11-22 05:36",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/08/27/exclusivelookbr-gtfm-1787873244868.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/08/27/exclusivelookbr-gtfm-1787873244868.png",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/08/27/exclusivelookbr-gtfm-1787873244868.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/08/27/exclusivelookbr-gtfm-1787873244868.png?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -47,7 +56,16 @@
         "https://assets-prd.ignimgs.com/2026/07/20/9f51f0ccdb65bd29c36a0907a738c2902a712f03e2fd6470-1784587649326.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-11-22T06:17:36+08:00"
+      "source_fetched_at": "2026-11-22T06:17:36+08:00",
+      "translation_path": "translations/09.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "gpt-6.1-terra",
+      "reasoning_effort": "medium",
+      "prompt_version": "api-faithful-v3",
+      "quality_gate_version": 1,
+      "translation_mode": "faithful",
+      "quality_status": "pending_human_review"
     },
     {
       "id": 8,
@@ -83,8 +101,8 @@
       "url": "https://www.ign.com/articles/neuralink-participant-showcases-what-its-like-to-play-gta-6-with-his-mind",
       "publish_time_cn": "2026-11-22 02:43",
       "pub_date": "2026-11-22 02:43",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/11/17/gta-6-spekulationen-beziehungssystem-1794933650291.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/11/17/gta-6-spekulationen-beziehungssystem-1794933650291.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/11/17/gta-6-spekulationen-beziehungssystem-1794933650291.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/11/17/gta-6-spekulationen-beziehungssystem-1794933650291.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -95,7 +113,16 @@
         "https://assets-prd.ignimgs.com/2026/07/20/9f51f0ccdb65bd29c36a0907a738c2902a712f03e2fd6470-1784587649326.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-11-22T03:17:36+08:00"
+      "source_fetched_at": "2026-11-22T03:17:36+08:00",
+      "translation_path": "translations/07.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "gpt-6.1-terra",
+      "reasoning_effort": "medium",
+      "prompt_version": "api-faithful-v3",
+      "quality_gate_version": 1,
+      "translation_mode": "faithful",
+      "quality_status": "pending_human_review"
     },
     {
       "id": 6,
@@ -107,8 +134,8 @@
       "url": "https://www.ign.com/articles/blade-director-says-he-walked-away-from-marvels-canceled-movie-because-lifes-too-short-to-make-st-films",
       "publish_time_cn": "2026-11-22 01:05",
       "pub_date": "2026-11-22 01:05",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/11/21/bassam-tariq-1795280684150.png?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/11/21/bassam-tariq-1795280684150.png",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/11/21/bassam-tariq-1795280684150.png?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/11/21/bassam-tariq-1795280684150.png?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -118,7 +145,16 @@
         "https://kraken.ignimgs.com/apple-touch-icon.png"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-11-22T01:47:53+08:00"
+      "source_fetched_at": "2026-11-22T01:47:53+08:00",
+      "translation_path": "translations/06.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "gpt-6.1-terra",
+      "reasoning_effort": "medium",
+      "prompt_version": "api-faithful-v3",
+      "quality_gate_version": 1,
+      "translation_mode": "faithful",
+      "quality_status": "pending_human_review"
     },
     {
       "id": 5,
@@ -205,8 +241,8 @@
       "url": "https://www.ign.com/articles/how-rockstar-made-every-npc-feel-alive-in-gta-6",
       "publish_time_cn": "2026-11-21 19:54",
       "pub_date": "2026-11-21 19:54",
-      "cover_image": "https://assets-prd.ignimgs.com/2026/11/19/illegal-ops1-1795093051042.jpg?width=1280&format=jpg&auto=webp&quality=80",
-      "translation_status": "none",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/11/19/illegal-ops1-1795093051042.jpg",
+      "translation_status": "done",
       "images": [
         "https://assets-prd.ignimgs.com/2026/11/19/illegal-ops1-1795093051042.jpg?width=1280&format=jpg&auto=webp&quality=80",
         "https://assets-prd.ignimgs.com/2026/11/19/illegal-ops1-1795093051042.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
@@ -217,7 +253,16 @@
         "https://assets-prd.ignimgs.com/2026/07/20/9f51f0ccdb65bd29c36a0907a738c2902a712f03e2fd6470-1784587649326.jpg"
       ],
       "source_status": "cached",
-      "source_fetched_at": "2026-11-21T20:18:52+08:00"
+      "source_fetched_at": "2026-11-21T20:18:52+08:00",
+      "translation_path": "translations/02.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "gpt-6.1-terra",
+      "reasoning_effort": "medium",
+      "prompt_version": "api-faithful-v3",
+      "quality_gate_version": 1,
+      "translation_mode": "faithful",
+      "quality_status": "pending_human_review"
     },
     {
       "id": 13,

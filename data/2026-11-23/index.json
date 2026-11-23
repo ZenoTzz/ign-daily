@@ -2,6 +2,74 @@
   "date": "2026-11-23",
   "articles": [
     {
+      "id": 6,
+      "category": "游戏新闻",
+      "emoji": "🎮",
+      "en_title": "GTA 6 Dev Honors Late Mother With In-Game Memorial That Players Can Visit",
+      "cn_title": "《GTA6》开发者以游戏内纪念碑缅怀已故母亲，玩家可前往探访",
+      "summary": "Rockstar质量保证开发者Matt Green透露，《GTA6》在Leonida的一处纪念碑上收录了他已故母亲的名字，玩家可以前往探访。制作设计师Terrance Radcliff也表示，他在游戏开发期间离世的父亲和女儿同样被铭记于游戏中。",
+      "url": "https://www.ign.com/articles/gta-6-dev-honors-late-mother-with-in-game-memorial-that-players-can-visit",
+      "publish_time_cn": "2026-11-23 07:23",
+      "pub_date": "2026-11-23 07:23",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/11/22/gta-6-memorial-1795389611043.png",
+      "translation_status": "done",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/11/22/gta-6-memorial-1795389611043.png?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/11/22/gta-6-memorial-1795389611043.png?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/11/22/gta-6-memorial-1795389611043.png?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/11/22/gta-6-memorial-1795389611043.png?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/11/22/gta-6-memorial-1795389611043.png",
+        "https://kraken.ignimgs.com/apple-touch-icon.png",
+        "https://assets-prd.ignimgs.com/2026/07/20/9f51f0ccdb65bd29c36a0907a738c2902a712f03e2fd6470-1784587649326.jpg",
+        "https://assets-prd.ignimgs.com/2026/11/22/gta-6-deep-roots-memorial-sanctuary-1-1795389674089.JPG",
+        "https://assets-prd.ignimgs.com/2026/11/22/gta-6-deep-roots-memorial-sanctuary-2-1795389679872.JPG"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-11-23T08:17:38+08:00",
+      "translation_path": "translations/06.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "gpt-6.1-terra",
+      "reasoning_effort": "medium",
+      "prompt_version": "api-faithful-v3",
+      "quality_gate_version": 1,
+      "translation_mode": "faithful",
+      "quality_status": "pending_human_review"
+    },
+    {
+      "id": 5,
+      "category": "游戏新闻",
+      "emoji": "🎯",
+      "en_title": "Rockstar Says Darts Were Cut From GTA 6 Because It Didn't Have 'Unlimited Money or Time' to Make It 'Feel Proper'",
+      "cn_title": "Rockstar称《GTA6》删去飞镖玩法：没有无限资金和时间将其做得恰到好处",
+      "summary": "Rockstar North联合工作室负责人Rob Nelson表示，《GTA6》删去了飞镖等小游戏，因为团队没有无限的资金和时间来达到所需品质。团队从《荒野大镖客：救赎2》开始更重视小游戏的真实感，台球得以完整实现，飞镖则未能完成。",
+      "url": "https://www.ign.com/articles/rockstar-says-darts-were-cut-from-gta-6-because-it-didnt-have-unlimited-money-or-time-to-make-it-feel-proper",
+      "publish_time_cn": "2026-11-23 04:37",
+      "pub_date": "2026-11-23 04:37",
+      "cover_image": "https://assets-prd.ignimgs.com/2026/11/20/ultimate-edition-wyman-car-collection-01-1795168394633.jpg",
+      "translation_status": "done",
+      "images": [
+        "https://assets-prd.ignimgs.com/2026/11/20/ultimate-edition-wyman-car-collection-01-1795168394633.jpg?width=1280&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/11/20/ultimate-edition-wyman-car-collection-01-1795168394633.jpg?width=1200&height=1200&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/11/20/ultimate-edition-wyman-car-collection-01-1795168394633.jpg?width=1200&height=900&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/11/20/ultimate-edition-wyman-car-collection-01-1795168394633.jpg?width=1280&height=720&fit=crop&format=jpg&auto=webp&quality=80",
+        "https://assets-prd.ignimgs.com/2026/11/20/ultimate-edition-wyman-car-collection-01-1795168394633.jpg",
+        "https://kraken.ignimgs.com/apple-touch-icon.png",
+        "https://assets-prd.ignimgs.com/2026/07/20/9f51f0ccdb65bd29c36a0907a738c2902a712f03e2fd6470-1784587649326.jpg"
+      ],
+      "source_status": "cached",
+      "source_fetched_at": "2026-11-23T05:17:37+08:00",
+      "translation_path": "translations/05.json",
+      "translator": "api",
+      "translator_provider": "openai-compatible",
+      "translator_model": "gpt-6.1-terra",
+      "reasoning_effort": "medium",
+      "prompt_version": "api-faithful-v3",
+      "quality_gate_version": 1,
+      "translation_mode": "faithful",
+      "quality_status": "pending_human_review"
+    },
+    {
       "id": 4,
       "category": "游戏新闻",
       "emoji": "🎮",
@@ -103,5 +171,5 @@
       "source_fetched_at": "2026-11-22T22:19:10+08:00"
     }
   ],
-  "total": 4
+  "total": 6
 }

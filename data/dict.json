@@ -2,7 +2,7 @@
   "_meta": {
     "description": "游戏/影视名称中英文对照词库，翻译时必须查询此词库，有匹配则直接使用",
     "source": "IGN中国 (ign.com.cn) + B站IGN中国 (space.bilibili.com/652239032) + 中国玩家圈公认译名",
-    "last_updated": "2026-11-16",
+    "last_updated": "2026-11-23",
     "source_legend": {
       "ign_cn": "IGN中国官网 ign.com.cn 确认",
       "bilibili": "B站IGN中国主页视频标题/简介确认",
@@ -51,22 +51,6 @@
     "Final Fantasy VII Rebirth": {
       "cn": "最终幻想7 重生",
       "source": "ign_cn"
-    },
-    "Grand Theft Auto 6": {
-      "cn": "GTA6",
-      "source": "consensus"
-    },
-    "Grand Theft Auto V": {
-      "cn": "GTA5",
-      "source": "consensus"
-    },
-    "GTA 6": {
-      "cn": "GTA6",
-      "source": "consensus"
-    },
-    "GTA 5": {
-      "cn": "GTA5",
-      "source": "consensus"
     },
     "Assassin's Creed Black Flag Resynced": {
       "cn": "刺客信条：黑旗 记忆重置",
@@ -1497,6 +1481,26 @@
     "A Link Between Worlds": {
       "cn": "塞尔达传说 众神的三角力量2",
       "source": "user"
+    },
+    "Grand Theft Auto 6": {
+      "cn": "GTA 6",
+      "source": "consensus",
+      "note": ""
+    },
+    "GTA 6": {
+      "cn": "GTA 6",
+      "source": "consensus",
+      "note": ""
+    },
+    "Grand Theft Auto V": {
+      "cn": "GTA 5",
+      "source": "consensus",
+      "note": ""
+    },
+    "GTA 5": {
+      "cn": "GTA 5",
+      "source": "consensus",
+      "note": ""
     }
   },
   "movies_tv": {
