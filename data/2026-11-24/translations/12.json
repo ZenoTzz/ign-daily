@@ -1,0 +1,93 @@
+{
+  "id": 12,
+  "url": "https://www.ign.com/articles/gta-6-update-01002002-rolling-out-now-although-there-are-no-patch-notes-yet",
+  "en_title": "GTA 6 Update 01.002.002 Rolling Out Now, Although There Are No Patch Notes Yet",
+  "cn_title": "《GTA 6》更新01.002.002现已推出，但尚无更新说明",
+  "subtitle": "",
+  "opus_summary": "《GTA 6》迎来发售后首次更新，版本号为01.002.002。更新正在PS5及XBOX Series X和S上推出，PS5版大小为603.8 MB，XBOX版为1.6 GB。Rockstar尚未公布更新内容；有关更新可能涉及安全问题的说法目前仅属猜测。",
+  "publish_time_cn": "2026-11-23 21:07",
+  "paragraphs": [
+    {
+      "en": "GTA 6 has its first post-launch update, although Rockstar has yet to release patch notes.",
+      "cn": "《GTA 6》迎来了发售后的首次更新，不过Rockstar尚未发布更新说明。"
+    },
+    {
+      "en": "Update 01.002.002 is rolling out now on PS5, where it weighs in at 603.8 MB, and Xbox Series X and S, where it is a beefier 1.6 GB?",
+      "cn": "更新01.002.002现已在PS5以及XBOX Series X和S上推出，PS5版本大小为603.8 MB，而XBOX版本则更大，为1.6 GB？"
+    },
+    {
+      "en": "What does update 01.002.002 actually do? We’ve no idea right now, as Rockstar hasn’t even announced the patch itself, let alone the patch notes. Some within the homebrew community are speculating it may have something to do with security, in the context of ongoing attempts to crack the game open and release a version that works on PC. But that’s nothing more than speculation right now.",
+      "cn": "更新01.002.002究竟做了什么？我们目前还不知道，因为Rockstar甚至尚未公布这一补丁，更不用说更新说明了。鉴于目前仍有人试图破解这款游戏并发布可在PC上运行的版本，非官方自制软件社区中的一些人猜测，这可能与安全性有关。但眼下这只不过是猜测。"
+    },
+    {
+      "en": "We will of course keep you in the loop on any news on the update, and post patch notes right here should they become available.",
+      "cn": "我们当然会继续向大家通报有关此次更新的任何消息，如果更新说明发布，我们也会在这里贴出。"
+    },
+    {
+      "en": "While you wait to find out, check out Rockstar’s explanation for why darts didn’t make it into GTA 6 , why Jason has such a lowkey personality , and much more.",
+      "cn": "在等待相关消息的同时，不妨看看Rockstar对飞镖为何没能出现在《GTA 6》中、Jason为何性格如此低调等诸多问题的解释。"
+    },
+    {
+      "en": "Just getting started in GTA 6 or wondering what to do next? Check out the Official Grand Theft Auto 6 guide right here on IGN. If you're still getting your bearings, discover GTA's new systems with the Beginner's Guide - 67 Tips and Tricks , or get all the details on the first chapters with the Chapter 1 Guide and Tips and Chapter 2 Guide and Tips . If you're already driving all around Leonida and want to know everything there is to find and do, see the Leonida interactive map .",
+      "cn": "刚开始玩《GTA 6》，或者不知道接下来该做什么？可以在IGN查看《GTA 6》官方指南。如果你还在熟悉游戏，可以通过新手指南——67条提示与技巧了解《GTA》的新系统，或者通过第1章指南与提示和第2章指南与提示了解前几章的全部细节。如果你已经开车走遍Leonida，想知道所有可以发现和完成的内容，请查看Leonida互动地图。"
+    }
+  ],
+  "pending_dict": [],
+  "translated_terms": {
+    "Grand Theft Auto 6": "GTA 6",
+    "Xbox Series": "XBOX Series",
+    "Rockstar": "Rockstar",
+    "GTA 6": "GTA 6",
+    "Xbox": "XBOX"
+  },
+  "cover": "https://assets-prd.ignimgs.com/2026/11/23/gtavi-35-1795439002195.jpg",
+  "images": [
+    {
+      "url": "https://assets-prd.ignimgs.com/2026/11/23/gtavi-35-1795439002195.jpg?width=1280&format=jpg&auto=webp&quality=80",
+      "caption": ""
+    },
+    {
+      "url": "https://kraken.ignimgs.com/apple-touch-icon.png",
+      "caption": ""
+    },
+    {
+      "url": "https://assets-prd.ignimgs.com/2026/07/20/9f51f0ccdb65bd29c36a0907a738c2902a712f03e2fd6470-1784587649326.jpg",
+      "caption": ""
+    }
+  ],
+  "translation_mode": "faithful",
+  "translator": "api",
+  "translator_provider": "openai-compatible",
+  "translator_model": "gpt-6.1-terra",
+  "reasoning_effort": "medium",
+  "prompt_version": "api-faithful-v3",
+  "quality_gate_version": 1,
+  "quality_status": "pending_human_review",
+  "quality_review": {
+    "mode": "human",
+    "status": "pending",
+    "checks": {
+      "source_coverage": true
+    },
+    "warnings": [
+      {
+        "type": "summary_length",
+        "detail": "opus_summary targets 70-80 non-space characters and must stay within 60-110, got 122"
+      },
+      {
+        "type": "dictionary",
+        "detail": "source contains 'Grand Theft Auto', but required dictionary translation '侠盗猎车手' is missing",
+        "en": "Grand Theft Auto",
+        "expected_cn": "侠盗猎车手"
+      },
+      {
+        "type": "format",
+        "detail": "🚨 MISSING subtitle (2-15字创意短句，必须手动写入)"
+      },
+      {
+        "type": "format",
+        "detail": "opus_summary LENGTH 122, target 70-80, allowed 60-110"
+      }
+    ]
+  }
+}
